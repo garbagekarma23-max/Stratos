@@ -1,5 +1,9 @@
 # Stratos
 
+## Mission
+
+Stratos is school as a social app. Students open it the way they open Instagram, but the feed is their syllabus: short cards that teach a point, then questions that prove they know it. The app tracks what each student has learned, what is weak and what is proven, and always serves the weak points first, so time spent in it is time spent on what they don't know yet. It should feel clinical and trustworthy on the surface, like a tool, with a game underneath: combos, altitude, sound and a rocket that make getting answers right feel good. Friends make it competitive through challenges, races and a weekly table, using cards and preset replies with no free typing. Money comes from cosmetics at fixed prices, such as rockets, backgrounds, exhausts and sounds. Nothing is sold by chance and user data is never sold. The long-term aim is every syllabus, broken into chapters, with study that structures itself around each student. The first tester said the first build felt like a game to use after studying, so every change should make Stratos more of a place to learn, without losing what makes it fun.
+
 A study app prototype for Australian senior students. GitHub Pages serves this repository from the main branch.
 
 - `index.html` is the first prototype, a single question feed. Leave it alone unless asked.
