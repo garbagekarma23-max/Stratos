@@ -85,15 +85,78 @@ const sound = (() => {
     rec('rocket', t + 0.04, {rate: ROAR.rate[size], vol: 0.9 * VOL[size], fadeIn: 0.05, len: ROAR.len[size], fade: ROAR.fade[size], wet: 0.1});
     if (size >= 3) rec('takeoff', t, {vol: 0.3 * VOL[size], fadeIn: 0.05, len: size === 3 ? 1.6 : 2.4, fade: 0.7});
   }
+  /* Race music: a ticking clock over a low pulse, made here in code so it needs no file.
+     It builds in three steps: 0 at the start of a race, 1 from halfway, 2 when someone is one answer from winning.
+     MUSIC sets how loud it is. It sits well under the pings, and dips for a moment each time one plays. */
+  const MUSIC = 0.5, BPM = 116;
+  let mGain = null, mTimer = 0, mLevel = -1, mStep = 0, mNext = 0, hiss = null;
+  function mTone(f, t, dur, type, vol) {
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.006); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(mGain); o.start(t); o.stop(t + dur + 0.05);
+  }
+  function mThump(t) {
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.frequency.setValueAtTime(150, t); o.frequency.exponentialRampToValueAtTime(42, t + 0.14);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.45, t + 0.004); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+    o.connect(g); g.connect(mGain); o.start(t); o.stop(t + 0.32);
+  }
+  function mHiss(t) {
+    if (!hiss) { hiss = ctx.createBuffer(1, ctx.sampleRate / 4, ctx.sampleRate); const d = hiss.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+    const s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = hiss; f.type = 'highpass'; f.frequency.value = 6000;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.12, t + 0.003); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
+    s.connect(f); f.connect(g); g.connect(mGain); s.start(t); s.stop(t + 0.1);
+  }
+  /* One sixteenth of a beat. q is the place in the bar (0 to 15). */
+  function mBeat(s, t, L) {
+    const q = s % 16, bar = Math.floor(s / 16);
+    if (q % 2 === 0 || L >= 1) mTone(q % 4 === 0 ? 2093 : 1568, t, 0.03, 'sine', q % 4 === 0 ? 0.16 : 0.07);   /* the clock ticks, twice as often from halfway */
+    if (q === 0) mTone(55, t, 0.5, 'sine', 0.35);                                                              /* a low pulse once a bar */
+    if (L >= 1 && q % 4 === 0) mThump(t);                                                                       /* a kick on every beat from halfway */
+    if (L >= 2 && q === 0) mTone(523.25 * Math.pow(2, (bar % 4) / 12), t, 1.9, 'triangle', 0.07);              /* a high note that climbs each bar */
+    if (L >= 2 && q === 12) mHiss(t);
+  }
+  /* Every 25 ms, plan the notes for the next 0.12 seconds, so the beat stays steady even if the page is busy. */
+  function mTick() {
+    if (mLevel < 0 || saved.music === false || !ac()) { stopMusic(); return; }
+    if (mNext < ctx.currentTime) mNext = ctx.currentTime + 0.05;   /* after a pause, carry on from now instead of playing the missed notes at once */
+    while (mNext < ctx.currentTime + 0.12) { mBeat(mStep, mNext, mLevel); mStep++; mNext += 60 / BPM / 4; }
+  }
+  function stopMusic() {
+    clearInterval(mTimer); mTimer = 0; mLevel = -1;
+    if (!mGain) return;
+    const g = mGain, t = ctx.currentTime;
+    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t); g.gain.linearRampToValueAtTime(0, t + 0.08);
+    setTimeout(() => g.disconnect(), 300);
+    mGain = null;
+  }
+  function duck() {
+    if (!mGain) return;
+    const g = mGain.gain, t = ctx.currentTime;
+    g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
+  }
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
+    /* Start the race music, or change how far it has built. A level below 0 stops it. */
+    music: safe(level => {
+      if (level < 0 || saved.music === false || !ac()) { stopMusic(); return; }
+      if (!mTimer) {
+        mGain = ctx.createGain(); mGain.gain.value = MUSIC; mGain.connect(bus);
+        mStep = 0; mNext = ctx.currentTime + 0.05;
+        mTimer = setInterval(mTick, 25);
+      }
+      mLevel = level;
+    }),
     correct: safe((c, tier) => {
+      duck();
       const f = 523.25 * Math.pow(2, STEPS[Math.min(Math.max(c, 1) - 1, STEPS.length - 1)] / 12);
       tone(f, 0, 0.16, 'triangle', 0.3); tone(f * 1.5, 0.07, 0.22, 'triangle', 0.24);
       if (tier >= 1) blast(Math.min(tier, 4));
     }),
-    wrong: safe(() => { tone(207.65, 0, 0.22, 'sine', 0.245); tone(155.56, 0.09, 0.3, 'sine', 0.218); }),
+    wrong: safe(() => { duck(); tone(207.65, 0, 0.22, 'sine', 0.245); tone(155.56, 0.09, 0.3, 'sine', 0.218); }),
     /* Launch again: the rocket engine on its own, with no explosion. */
     liftoff: safe(() => { const a = ac(); if (a) rec('rocket', a.currentTime + 0.02, {rate: 1.1, vol: 0.78, fadeIn: 0.03, len: 0.9, fade: 0.5, wet: 0.2}); }),
     layer: safe(() => { [0, 4, 7, 12].forEach((s, i) => tone(659.25 * Math.pow(2, s / 12), 0.2 + i * 0.09, 0.25, 'sine', 0.19)); }),

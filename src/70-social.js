@@ -219,6 +219,7 @@ function renderYou() {
       '<div class="set"><span class="t" id="setTheme">Appearance</span>' + seg('theme', [['system', 'System'], ['light', 'Light'], ['dark', 'Dark']], saved.theme, 'setTheme') + '</div>' +
       '<div class="set"><span class="t" id="setBg">Practice background</span>' + seg('bg', [['plain', 'Plain'], ['sky', 'Sky']], saved.bg, 'setBg') + '</div>' +
       '<div class="set"><span class="t" id="setSound">Sound</span><button class="switch" type="button" data-act="sound" aria-pressed="' + (saved.sound !== false) + '" aria-labelledby="setSound"><span></span></button></div>' +
+      '<div class="set"><span class="t" id="setMusic">Race music</span><button class="switch" type="button" data-act="music" aria-pressed="' + (saved.music !== false) + '" aria-labelledby="setMusic"><span></span></button></div>' +
     '</section>' +
     '<button class="textbtn danger" type="button" data-act="reset">Reset this test</button>' +
     '<p class="fine">Reset erases progress, messages and settings on this device. Nothing you do here is sent anywhere.</p></div>';
@@ -227,6 +228,7 @@ const refocus = sel => { const el = $(sel, views.you); if (el) el.focus({prevent
 ACT.theme = b => { save({theme: b.dataset.v}); applyTheme(); applyLook(); renderYou(); refocus('[data-act="theme"][data-v="' + saved.theme + '"]'); };
 ACT.bg = b => { save({bg: b.dataset.v}); applyBg(); renderYou(); refocus('[data-act="bg"][data-v="' + saved.bg + '"]'); sound.tap(); };
 ACT.sound = () => { save({sound: saved.sound === false}); renderYou(); refocus('[data-act="sound"]'); sound.tap(); };
+ACT.music = () => { save({music: saved.music === false}); renderYou(); refocus('[data-act="music"]'); sound.tap(); };
 ACT.editname = () => {
   openSheet('Call sign',
     '<label class="field"><span class="sr">Call sign</span><input id="nameIn" type="text" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Shown on results you send"></label>' +

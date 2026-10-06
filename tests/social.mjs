@@ -3,6 +3,7 @@ import { open, shot, tab, saved, pick, toLast, waiting, check } from './lib.mjs'
 const R = [];
 const {b, ctx, p, errs} = await open({clock: true});
 const text = sel => p.locator(sel).first().textContent();
+const music = () => p.evaluate(() => document.querySelector('#run').dataset.music);   // what the race music is doing: off, or how far it has built (0, 1 or 2)
 const ff = async ms => { await ctx.clock.runFor(ms); await p.waitForTimeout(60); };
 // The page clock keeps running between steps, so a screen that lasts a moment can be gone before the test looks.
 // pause() stops the clock. After it, time moves only when ff() moves it, until ctx.clock.resume().
@@ -68,13 +69,21 @@ await p.click('.mcard [data-act="play"]'); await p.waitForTimeout(80);
 check(await p.locator('#sheet[hidden]').count() === 1, 'no warning this time, because chapter 1 is no longer new', R);
 check((await text('#launchMark')).includes('Race Aisha'), 'race launch card shows', R);
 await ff(130); check((await text('#launchMark .count')) === '3', 'the countdown starts at 3', R);
+check(await music() === 'off', 'no race music during the countdown', R);
 await shot(p, 'soc-race-count');
 await ctx.clock.resume();
 await ff(3200);
 check(await p.locator('#launch[hidden]').count() === 1 && await p.locator('#lanes:not([hidden])').count() === 1, 'the race is on, with two lanes', R);
-for (let i = 0; i < 6; i++) { await pick(p, '#feed', true); if (i === 2) await shot(p, 'soc-race-mid'); await toLast(p, '#feed'); }
+check(await music() === '0', 'the race music starts on Go', R);
+for (let i = 0; i < 6; i++) {
+  await pick(p, '#feed', true);
+  if (i === 2) { await shot(p, 'soc-race-mid'); check(await music() === '1', 'the music builds at 3 correct', R); }
+  if (i === 4) check(await music() === '2', 'and again at 5, one from winning', R);
+  await toLast(p, '#feed');
+}
 sum = await text('#feed .summary');
 check(sum.includes('You won the race.') && sum.includes('6 to 0'), 'six right in a row wins 6 to 0', R);
+check(await music() === 'off', 'the music stops when the race is won', R);
 await shot(p, 'soc-race-won');
 s = await saved(p);
 check(s.th.aisha[0].state === 'done' && s.th.aisha[0].me === 6, 'Aisha\'s race card is marked done', R);
@@ -146,6 +155,8 @@ check(await p.evaluate(() => document.documentElement.getAttribute('data-theme')
 await shot(p, 'soc-you-dark');
 await p.click('[data-act="sound"]'); await p.waitForTimeout(40);
 check((await saved(p)).sound === false, 'sound can be switched off', R);
+await p.click('[data-act="music"]'); await p.waitForTimeout(40);
+check((await saved(p)).music === false && await p.locator('[data-act="music"][aria-pressed="false"]').count() === 1, 'race music can be switched off on its own', R);
 await p.click('[data-act="theme"][data-v="system"]'); await p.waitForTimeout(40);
 check(await p.evaluate(() => document.documentElement.hasAttribute('data-theme')) === false, 'System removes the override', R);
 
