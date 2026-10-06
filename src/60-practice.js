@@ -94,7 +94,7 @@ function startPractice(o) {
     race: o.mode === 'race' ? {target: 6, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
-  playLaunch(launchCard(), P.race ? raceArm : null);
+  playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
 }
 function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
@@ -129,6 +129,7 @@ function closeRun() {
   token++;
   clearTimeout(raceTimer);
   P = null;
+  raceMusic();
   feed.textContent = '';
   launch.hidden = true;
   app.dataset.tier = 0;
@@ -208,6 +209,7 @@ function paintLanes() {
   $('#laneMe').textContent = R.me; $('#laneThem').textContent = R.them;
   $('.lane.you .trk i', run).style.setProperty('--v', Math.min(1, R.me / R.target));
   $('.lane.them .trk i', run).style.setProperty('--v', Math.min(1, R.them / R.target));
+  raceMusic();
 }
 function floatGain(x, y, text) {
   const d = document.createElement('div');
@@ -267,7 +269,7 @@ function answer(sec, n) {
     if (passed) { toast(passed.toast); sound.layer(); }
     else if (t > prevTier) toast(TIERS[t].label + '. Combo ×' + P.combo);
     say('Correct. Altitude times ' + mult + '. Now ' + fmt(P.alt).long + '. Combo ' + P.combo + '.');
-    if (P.race) { P.race.me++; paintLanes(); if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); } }
+    if (P.race) { P.race.me++; paintLanes(); if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); raceMusic(); } }
     settle(c.sec, 0);
   } else {
     paintHud(false);
@@ -395,13 +397,22 @@ ACT.end = () => {
   const c = current();
   token++;
   P.cut = true;
-  if (P.race) { P.race.over = true; P.race.left = true; }
+  if (P.race) { P.race.over = true; P.race.left = true; raceMusic(); }
   if (c) c.sec.remove();
   scrollToEl(feed, appendNext(feed.lastElementChild));
 };
 
 /* ---------- a race: the sample friend scores on a timer ---------- */
 let raceTimer = 0;
+/* The race music plays from Go until the race ends, and builds as either score gets close to 6.
+   run.dataset.music says what it is doing, so the tests can check it. */
+function raceMusic() {
+  const R = P && P.race, top = R ? Math.max(R.me, R.them) : 0;
+  const level = !R || !R.go || R.over || document.hidden || saved.music === false ? -1 : top >= R.target - 1 ? 2 : top >= R.target / 2 ? 1 : 0;
+  run.dataset.music = level < 0 ? 'off' : level;
+  sound.music(level);
+}
+document.addEventListener('visibilitychange', raceMusic);
 function raceArm() {
   if (!P || !P.race || P.race.over) return;
   const t = token, ms = friend(P.friend).pace * 1000 * (0.65 + Math.random() * 0.7);
@@ -414,6 +425,7 @@ function raceArm() {
 function raceLost() {
   const c = current();
   P.race.over = true;
+  raceMusic();
   token++;                                                     /* stops a slide that was about to be added */
   if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
   const el = appendNext(feed.lastElementChild), t = token;

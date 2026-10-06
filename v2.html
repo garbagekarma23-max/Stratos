@@ -1441,15 +1441,78 @@ const sound = (() => {
     rec('rocket', t + 0.04, {rate: ROAR.rate[size], vol: 0.9 * VOL[size], fadeIn: 0.05, len: ROAR.len[size], fade: ROAR.fade[size], wet: 0.1});
     if (size >= 3) rec('takeoff', t, {vol: 0.3 * VOL[size], fadeIn: 0.05, len: size === 3 ? 1.6 : 2.4, fade: 0.7});
   }
+  /* Race music: a ticking clock over a low pulse, made here in code so it needs no file.
+     It builds in three steps: 0 at the start of a race, 1 from halfway, 2 when someone is one answer from winning.
+     MUSIC sets how loud it is. It sits well under the pings, and dips for a moment each time one plays. */
+  const MUSIC = 0.5, BPM = 116;
+  let mGain = null, mTimer = 0, mLevel = -1, mStep = 0, mNext = 0, hiss = null;
+  function mTone(f, t, dur, type, vol) {
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.006); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(mGain); o.start(t); o.stop(t + dur + 0.05);
+  }
+  function mThump(t) {
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.frequency.setValueAtTime(150, t); o.frequency.exponentialRampToValueAtTime(42, t + 0.14);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.45, t + 0.004); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+    o.connect(g); g.connect(mGain); o.start(t); o.stop(t + 0.32);
+  }
+  function mHiss(t) {
+    if (!hiss) { hiss = ctx.createBuffer(1, ctx.sampleRate / 4, ctx.sampleRate); const d = hiss.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+    const s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = hiss; f.type = 'highpass'; f.frequency.value = 6000;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.12, t + 0.003); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.08);
+    s.connect(f); f.connect(g); g.connect(mGain); s.start(t); s.stop(t + 0.1);
+  }
+  /* One sixteenth of a beat. q is the place in the bar (0 to 15). */
+  function mBeat(s, t, L) {
+    const q = s % 16, bar = Math.floor(s / 16);
+    if (q % 2 === 0 || L >= 1) mTone(q % 4 === 0 ? 2093 : 1568, t, 0.03, 'sine', q % 4 === 0 ? 0.16 : 0.07);   /* the clock ticks, twice as often from halfway */
+    if (q === 0) mTone(55, t, 0.5, 'sine', 0.35);                                                              /* a low pulse once a bar */
+    if (L >= 1 && q % 4 === 0) mThump(t);                                                                       /* a kick on every beat from halfway */
+    if (L >= 2 && q === 0) mTone(523.25 * Math.pow(2, (bar % 4) / 12), t, 1.9, 'triangle', 0.07);              /* a high note that climbs each bar */
+    if (L >= 2 && q === 12) mHiss(t);
+  }
+  /* Every 25 ms, plan the notes for the next 0.12 seconds, so the beat stays steady even if the page is busy. */
+  function mTick() {
+    if (mLevel < 0 || saved.music === false || !ac()) { stopMusic(); return; }
+    if (mNext < ctx.currentTime) mNext = ctx.currentTime + 0.05;   /* after a pause, carry on from now instead of playing the missed notes at once */
+    while (mNext < ctx.currentTime + 0.12) { mBeat(mStep, mNext, mLevel); mStep++; mNext += 60 / BPM / 4; }
+  }
+  function stopMusic() {
+    clearInterval(mTimer); mTimer = 0; mLevel = -1;
+    if (!mGain) return;
+    const g = mGain, t = ctx.currentTime;
+    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t); g.gain.linearRampToValueAtTime(0, t + 0.08);
+    setTimeout(() => g.disconnect(), 300);
+    mGain = null;
+  }
+  function duck() {
+    if (!mGain) return;
+    const g = mGain.gain, t = ctx.currentTime;
+    g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
+  }
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
+    /* Start the race music, or change how far it has built. A level below 0 stops it. */
+    music: safe(level => {
+      if (level < 0 || saved.music === false || !ac()) { stopMusic(); return; }
+      if (!mTimer) {
+        mGain = ctx.createGain(); mGain.gain.value = MUSIC; mGain.connect(bus);
+        mStep = 0; mNext = ctx.currentTime + 0.05;
+        mTimer = setInterval(mTick, 25);
+      }
+      mLevel = level;
+    }),
     correct: safe((c, tier) => {
+      duck();
       const f = 523.25 * Math.pow(2, STEPS[Math.min(Math.max(c, 1) - 1, STEPS.length - 1)] / 12);
       tone(f, 0, 0.16, 'triangle', 0.3); tone(f * 1.5, 0.07, 0.22, 'triangle', 0.24);
       if (tier >= 1) blast(Math.min(tier, 4));
     }),
-    wrong: safe(() => { tone(207.65, 0, 0.22, 'sine', 0.245); tone(155.56, 0.09, 0.3, 'sine', 0.218); }),
+    wrong: safe(() => { duck(); tone(207.65, 0, 0.22, 'sine', 0.245); tone(155.56, 0.09, 0.3, 'sine', 0.218); }),
     /* Launch again: the rocket engine on its own, with no explosion. */
     liftoff: safe(() => { const a = ac(); if (a) rec('rocket', a.currentTime + 0.02, {rate: 1.1, vol: 0.78, fadeIn: 0.03, len: 0.9, fade: 0.5, wet: 0.2}); }),
     layer: safe(() => { [0, 4, 7, 12].forEach((s, i) => tone(659.25 * Math.pow(2, s / 12), 0.2 + i * 0.09, 0.25, 'sine', 0.19)); }),
@@ -2052,7 +2115,7 @@ function startPractice(o) {
     race: o.mode === 'race' ? {target: 6, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
-  playLaunch(launchCard(), P.race ? raceArm : null);
+  playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
 }
 function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
@@ -2087,6 +2150,7 @@ function closeRun() {
   token++;
   clearTimeout(raceTimer);
   P = null;
+  raceMusic();
   feed.textContent = '';
   launch.hidden = true;
   app.dataset.tier = 0;
@@ -2166,6 +2230,7 @@ function paintLanes() {
   $('#laneMe').textContent = R.me; $('#laneThem').textContent = R.them;
   $('.lane.you .trk i', run).style.setProperty('--v', Math.min(1, R.me / R.target));
   $('.lane.them .trk i', run).style.setProperty('--v', Math.min(1, R.them / R.target));
+  raceMusic();
 }
 function floatGain(x, y, text) {
   const d = document.createElement('div');
@@ -2225,7 +2290,7 @@ function answer(sec, n) {
     if (passed) { toast(passed.toast); sound.layer(); }
     else if (t > prevTier) toast(TIERS[t].label + '. Combo ×' + P.combo);
     say('Correct. Altitude times ' + mult + '. Now ' + fmt(P.alt).long + '. Combo ' + P.combo + '.');
-    if (P.race) { P.race.me++; paintLanes(); if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); } }
+    if (P.race) { P.race.me++; paintLanes(); if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); raceMusic(); } }
     settle(c.sec, 0);
   } else {
     paintHud(false);
@@ -2353,13 +2418,22 @@ ACT.end = () => {
   const c = current();
   token++;
   P.cut = true;
-  if (P.race) { P.race.over = true; P.race.left = true; }
+  if (P.race) { P.race.over = true; P.race.left = true; raceMusic(); }
   if (c) c.sec.remove();
   scrollToEl(feed, appendNext(feed.lastElementChild));
 };
 
 /* ---------- a race: the sample friend scores on a timer ---------- */
 let raceTimer = 0;
+/* The race music plays from Go until the race ends, and builds as either score gets close to 6.
+   run.dataset.music says what it is doing, so the tests can check it. */
+function raceMusic() {
+  const R = P && P.race, top = R ? Math.max(R.me, R.them) : 0;
+  const level = !R || !R.go || R.over || document.hidden || saved.music === false ? -1 : top >= R.target - 1 ? 2 : top >= R.target / 2 ? 1 : 0;
+  run.dataset.music = level < 0 ? 'off' : level;
+  sound.music(level);
+}
+document.addEventListener('visibilitychange', raceMusic);
 function raceArm() {
   if (!P || !P.race || P.race.over) return;
   const t = token, ms = friend(P.friend).pace * 1000 * (0.65 + Math.random() * 0.7);
@@ -2372,6 +2446,7 @@ function raceArm() {
 function raceLost() {
   const c = current();
   P.race.over = true;
+  raceMusic();
   token++;                                                     /* stops a slide that was about to be added */
   if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
   const el = appendNext(feed.lastElementChild), t = token;
@@ -2601,6 +2676,7 @@ function renderYou() {
       '<div class="set"><span class="t" id="setTheme">Appearance</span>' + seg('theme', [['system', 'System'], ['light', 'Light'], ['dark', 'Dark']], saved.theme, 'setTheme') + '</div>' +
       '<div class="set"><span class="t" id="setBg">Practice background</span>' + seg('bg', [['plain', 'Plain'], ['sky', 'Sky']], saved.bg, 'setBg') + '</div>' +
       '<div class="set"><span class="t" id="setSound">Sound</span><button class="switch" type="button" data-act="sound" aria-pressed="' + (saved.sound !== false) + '" aria-labelledby="setSound"><span></span></button></div>' +
+      '<div class="set"><span class="t" id="setMusic">Race music</span><button class="switch" type="button" data-act="music" aria-pressed="' + (saved.music !== false) + '" aria-labelledby="setMusic"><span></span></button></div>' +
     '</section>' +
     '<button class="textbtn danger" type="button" data-act="reset">Reset this test</button>' +
     '<p class="fine">Reset erases progress, messages and settings on this device. Nothing you do here is sent anywhere.</p></div>';
@@ -2609,6 +2685,7 @@ const refocus = sel => { const el = $(sel, views.you); if (el) el.focus({prevent
 ACT.theme = b => { save({theme: b.dataset.v}); applyTheme(); applyLook(); renderYou(); refocus('[data-act="theme"][data-v="' + saved.theme + '"]'); };
 ACT.bg = b => { save({bg: b.dataset.v}); applyBg(); renderYou(); refocus('[data-act="bg"][data-v="' + saved.bg + '"]'); sound.tap(); };
 ACT.sound = () => { save({sound: saved.sound === false}); renderYou(); refocus('[data-act="sound"]'); sound.tap(); };
+ACT.music = () => { save({music: saved.music === false}); renderYou(); refocus('[data-act="music"]'); sound.tap(); };
 ACT.editname = () => {
   openSheet('Call sign',
     '<label class="field"><span class="sr">Call sign</span><input id="nameIn" type="text" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Shown on results you send"></label>' +

@@ -26,7 +26,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 | --- | --- |
 | `content.js` | Study content: chapters, points, cards, questions. The right answer is always `opts[0]`. |
 | `10-core.js` | Icons, rockets, the store list, sample friends, saved progress, the status rules, altitude formatting. |
-| `20-sound.js` | The ping and the recorded blast. `recordings.json` is injected at the `REC` marker. |
+| `20-sound.js` | The ping, the recorded blast and the race music. `recordings.json` is injected at the `REC` marker. |
 | `30-shell.js` | Tabs, pages, the sheet, toasts, sparks. Every button has a `data-act` name looked up in `ACT`. |
 | `40-home.js` | Home and the sheet for one point. |
 | `50-feed.js` | Question slides shared by Learn and Practice, and Learn itself. |
@@ -42,6 +42,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Practice only asks about points that are not new: weak questions first, then untried, then the ones right longest ago.
 - Scoring: each correct answer multiplies altitude by 2 x combo x difficulty. Combo tiers start at 3, 5, 8 and 12.
 - Progress is in `localStorage` under `stratos2.v1`. Nothing is sent anywhere.
+- Races have music: a ticking clock made in code, from Go until the race ends. It builds at halfway (3 correct) and again one from winning (5), dips under each ping, and has its own switch in You.
 - The four friends are samples. Their scores and replies are pretend and run on timers.
 - The store shows example prices. Buying is switched off.
 
