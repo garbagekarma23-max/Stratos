@@ -4,6 +4,10 @@ const R = [];
 const {b, ctx, p, errs} = await open({clock: true});
 const text = sel => p.locator(sel).first().textContent();
 const ff = async ms => { await ctx.clock.runFor(ms); await p.waitForTimeout(60); };
+// The page clock keeps running between steps, so a screen that lasts a moment can be gone before the test looks.
+// pause() stops the clock. After it, time moves only when ff() moves it, until ctx.clock.resume().
+// It stops one second ahead of the page's time, because the clock keeps going while we ask and cannot go back.
+const pause = async () => { await ctx.clock.pauseAt(await p.evaluate(() => Date.now()) + 1000); };
 async function playAll(n, wrongAt = []) {            // answer n questions in the flight on screen
   for (let i = 0; i < n; i++) { await pick(p, '#feed', !wrongAt.includes(i)); await ff(1400); await toLast(p, '#feed'); }
 }
@@ -30,8 +34,10 @@ check(!(await saved(p)).unread.mia, 'opening the thread clears its unread count'
 await p.click('.mcard [data-act="play"]'); await p.waitForTimeout(100);
 check((await text('#sheetTitle')) === 'Before you play' && (await text('#sheetBody')).includes('All 7 points in this chapter are new to you'), 'it warns that the chapter is new', R);
 await shot(p, 'soc-cold-sheet');
+await pause();                                      // the launch card is gone within half a second
 await p.click('#sheetBody [data-act="play"]'); await p.waitForTimeout(100);
 check(await p.locator('#launch:not([hidden])').count() === 1 && (await text('#launchMark')).includes('Mia scored 6 of 8. Beat it.'), 'the launch card names the score to beat', R);
+await ctx.clock.resume();
 await ff(1500);
 check(await p.locator('#launch[hidden]').count() === 1 && (await text('#modeT')) === 'Challenge, Mia got 6 of 8', 'the challenge flight starts', R);
 check(await p.locator('#feed .actions').count() === 0, 'a challenge has no clue, answer or skip buttons', R);
@@ -57,11 +63,13 @@ await shot(p, 'soc-thread-rematch');
 // --- a race Aisha sent, won
 await p.click('[data-act="back"]'); await p.waitForTimeout(100);
 await p.click('.thr[data-f="aisha"]'); await p.waitForTimeout(100);
+await pause();                                      // each countdown number shows for only 0.12 seconds in the tests
 await p.click('.mcard [data-act="play"]'); await p.waitForTimeout(80);
 check(await p.locator('#sheet[hidden]').count() === 1, 'no warning this time, because chapter 1 is no longer new', R);
 check((await text('#launchMark')).includes('Race Aisha'), 'race launch card shows', R);
 await ff(130); check((await text('#launchMark .count')) === '3', 'the countdown starts at 3', R);
 await shot(p, 'soc-race-count');
+await ctx.clock.resume();
 await ff(3200);
 check(await p.locator('#launch[hidden]').count() === 1 && await p.locator('#lanes:not([hidden])').count() === 1, 'the race is on, with two lanes', R);
 for (let i = 0; i < 6; i++) { await pick(p, '#feed', true); if (i === 2) await shot(p, 'soc-race-mid'); await toLast(p, '#feed'); }
