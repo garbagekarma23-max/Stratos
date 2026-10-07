@@ -30,11 +30,13 @@ function renderHome() {
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.pct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
-    '<header class="top"><span class="word">Stratos</span><span class="grow"></span>' +
-      (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') +
-      '<button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button>' +
+    /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Syllabus">' + IC.book + '</button></span>' +
+      '<span class="word">Stratos</span>' +
+      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
-    '<button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(TOPIC.course + ', ' + TOPIC.year) + IC.down + '</button>' +
+    '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(TOPIC.course + ', ' + TOPIC.year) + IC.down + '</button>' +
+      (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
     '<section class="hero" aria-label="Your chapter">' +
       '<p class="kicker">' + esc(TOPIC.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +

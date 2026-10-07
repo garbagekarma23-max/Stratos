@@ -20,6 +20,7 @@ const IC = {
   left: icon('<path d="M15 6l-6 6 6 6"/>'),
   lock: icon('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
   send: icon('<path d="M21 3 10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5-7.5-4z"/>'),
+  book: icon('<path d="M5 19.5V5a2 2 0 0 1 2-2h12v14H7a2 2 0 0 0-2 2.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-4"/><path d="M9 7.5h6"/>'),
   sound: icon('<path d="M4 10v4h3.5L12 18V6L7.5 10z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/>')
 };
 const RK = {

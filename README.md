@@ -12,5 +12,6 @@ The friends in the app are samples, buying is switched off, and the study notes 
 ## Credits
 
 - Typeface: Hanken Grotesk, SIL Open Font License, loaded from Google Fonts.
+- Logo typeface: Archivo by Omnibus-Type, SIL Open Font License, loaded from Google Fonts.
 - Explosion: `tnt_explode.ogg` from Minetest Game, CC0. Made by TumeniNodes from Explosion2.wav by steveygos93 (freesound 80401).
 - Rocket engine and launch rumble: from Endless Sky, public domain.
