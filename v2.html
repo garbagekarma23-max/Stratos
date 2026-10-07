@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&text=Stratos&display=swap">
 <style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
 </head>
 <body>
@@ -70,7 +71,7 @@ svg{display:block;flex:none}
 
 /* Notes beside the stage, wide screens only */
 .about{display:none;max-width:280px}
-.about .a-word{margin-bottom:14px;font:700 24px/1 var(--f);letter-spacing:-.01em}
+.about .a-word{margin-bottom:14px;font-size:24px;line-height:1}
 .about p{margin-bottom:12px}
 .about ul{padding-left:18px;list-style:disc;display:grid;gap:8px;font-size:14px;line-height:1.45;color:var(--ink-2)}
 @media (min-width:960px){.about{display:block}}
@@ -154,12 +155,18 @@ svg{display:block;flex:none}
 #sparks{position:absolute;inset:0;z-index:7;width:100%;height:100%;pointer-events:none}
 
 /* ---------- home ---------- */
-.top{display:flex;align-items:center;gap:6px;min-height:40px}
-.word{font:700 20px/1 var(--f);letter-spacing:-.015em}
+/* The logo is the one place that does not use Hanken Grotesk. It is Archivo at its widest setting; only the letters of Stratos are loaded. */
+.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;min-height:40px}
+.top .tl{min-width:0}
+.top .tr{display:flex;justify-content:flex-end}
+.word,.about .a-word{font-family:'Archivo',var(--f);font-weight:600;font-stretch:125%;letter-spacing:.01em}
+.word{font-size:21px;line-height:1}
 .grow{flex:1;min-width:0}
 .streak{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
 .subject{display:inline-flex;align-items:center;gap:4px;margin:8px 0 0 -10px;padding:6px 6px 6px 10px;border:0;border-radius:999px;background:none;color:var(--ink-2);font-size:14px;font-weight:500}
 .subject .ic{width:16px;height:16px}
+.subrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.subrow .subject{margin-top:0}
 .hero{margin-top:20px}
 .kicker{font-size:13px;color:var(--ink-2)}
 .hero .h1{margin-top:4px}
@@ -1116,6 +1123,7 @@ const IC = {
   left: icon('<path d="M15 6l-6 6 6 6"/>'),
   lock: icon('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
   send: icon('<path d="M21 3 10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5-7.5-4z"/>'),
+  book: icon('<path d="M5 19.5V5a2 2 0 0 1 2-2h12v14H7a2 2 0 0 0-2 2.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-4"/><path d="M9 7.5h6"/>'),
   sound: icon('<path d="M4 10v4h3.5L12 18V6L7.5 10z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/>')
 };
 const RK = {
@@ -1742,11 +1750,13 @@ function renderHome() {
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.pct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
-    '<header class="top"><span class="word">Stratos</span><span class="grow"></span>' +
-      (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') +
-      '<button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button>' +
+    /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Syllabus">' + IC.book + '</button></span>' +
+      '<span class="word">Stratos</span>' +
+      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
-    '<button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(TOPIC.course + ', ' + TOPIC.year) + IC.down + '</button>' +
+    '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(TOPIC.course + ', ' + TOPIC.year) + IC.down + '</button>' +
+      (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
     '<section class="hero" aria-label="Your chapter">' +
       '<p class="kicker">' + esc(TOPIC.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +

@@ -33,7 +33,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 | `60-practice.js` | The start screen, a flight, challenges, races, the result slide. |
 | `70-social.js` | Friends, messages, the store, You, Search. |
 | `90-boot.js` | Keyboard, appearance, start-up. |
-| `style.css`, `body.html`, `head.html` | Looks, fixed markup, title and typeface link. |
+| `style.css`, `body.html`, `head.html` | Looks, fixed markup, title and typeface links. |
 
 ## How it works
 
@@ -50,6 +50,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 
 Design:
 - Clinical, like the ChatGPT home page: white paper, one typeface (Hanken Grotesk), thin lines, one blue for progress.
+- The logo is the one exception: "Stratos" in Archivo at its widest setting (semibold), in the middle of Home's top bar. Only its seven letters are loaded.
 - No gradients in the interface, no emoji as icons, no grids of identical cards, no all-caps labels.
 - The game mechanics stay: combo, altitude, the rocket, sound, vibration on correct answers.
 - The Sky background is the only place the first build's look returns.

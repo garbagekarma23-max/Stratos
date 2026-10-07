@@ -52,7 +52,12 @@ check(legend.includes('Proven 43%') && legend.includes('Learned 7 of 7'), 'legen
 check((await text('.hero .primary')) === 'Fix 1 weak point', 'button now says Fix 1 weak point', R);
 check((await text('.hero .sub')) === 'Globalisation', 'and names the weak point', R);
 check(await p.locator('.pt.is-weak').count() === 1 && await p.locator('.pt.is-learned').count() === 6, 'chapter list shows 1 weak and 6 learned', R);
-check((await text('.streak')) === '1-day streak', 'streak shows in the header', R);
+check((await text('.streak')) === '1-day streak', 'streak shows on Home', R);
+const logo = await p.evaluate(() => { const w = document.querySelector('.top .word'), r = w.getBoundingClientRect(), t = document.querySelector('.top').getBoundingClientRect(); return {off: Math.abs((r.left + r.right) / 2 - (t.left + t.right) / 2), font: getComputedStyle(w).fontFamily}; });
+check(logo.off < 1 && logo.font.startsWith('Archivo'), 'the logo is in the middle of the top bar, in Archivo', R);
+await p.click('.top [aria-label="Syllabus"]'); await p.waitForTimeout(150);
+check((await text('#sheetTitle')) === 'Subjects and topics', 'the book button at the top left opens the syllabus', R);
+await p.click('#sheetClose'); await p.waitForTimeout(150);
 await shot(p, 'flow-home-after-learn');
 
 // --- Practice start screen
