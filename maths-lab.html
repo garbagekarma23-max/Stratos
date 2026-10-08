@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15161a" media="(prefers-color-scheme: dark)">
+<title>Stratos Maths Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600&text=Stratos&display=swap">
+<link rel="stylesheet" href="lab/lab.css">
+<!-- The Maths Lab. This file is the page itself: there is no build step.
+     It loads MathLive (copied into lab/mathlive from npm), then the lab's own scripts in order. -->
+</head>
+<body>
+<aside class="about">
+  <p class="a-word">Stratos</p>
+  <p>Maths Lab, first test.</p>
+  <ul>
+    <li>Ten equations. Write your working one line at a time, the way you would on paper.</li>
+    <li>Enter checks a line and starts the next. Shift and Enter, or holding Enter on the keypad, copies the line down.</li>
+    <li>Done checks your final answer. Skip shows the answer and moves on.</li>
+    <li>You can type with this keyboard or click the keypad.</li>
+    <li>Times and counts are saved on this device only.</li>
+  </ul>
+</aside>
+
+<main id="app">
+  <header class="top">
+    <span class="tl"><button class="icon-btn" id="mute" type="button" aria-pressed="true" aria-label="Sound"></button></span>
+    <span class="word">Stratos</span>
+    <span class="tr"><button class="act" id="skip" type="button"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l9 7-9 7z"/><path d="M19 5v14"/></svg>Skip</button></span>
+  </header>
+
+  <section class="view" id="intro" aria-label="Maths Lab" hidden>
+    <p class="kicker">Maths Lab</p>
+    <h1 class="h1">Ten equations, worked line by line</h1>
+    <p class="lede">Write your working with the keypad, the way you would on paper. Each line is checked as you go.</p>
+    <ul class="how">
+      <li><b>Enter</b> checks a line and starts the next one. Hold it to copy the line down, then change what moved.</li>
+      <li><b>A tick</b> means the line has the same answer as the question. <b>A dot</b> means it changed, with one sentence on what went wrong. Tap any line to fix it.</li>
+      <li><b>The display</b> above the keys works out sums after the last = sign. Tap it to use the result.</li>
+      <li><b>Done</b> checks your final answer. <b>Skip</b> shows the answer and moves on.</li>
+    </ul>
+    <button class="primary wide" id="start" type="button">Start</button>
+    <p class="fine">A first test. Your times and counts are saved on this device only.</p>
+  </section>
+
+  <section id="lab" aria-label="Question" hidden>
+    <div class="qhead">
+      <p class="meta" id="qnum"></p>
+      <div class="qmath" id="qmath"></div>
+    </div>
+    <ol class="sheet" id="sheet" aria-label="Your working"></ol>
+    <div class="pad" id="pad">
+      <div class="padbar">
+        <button class="done" id="done" type="button">Done</button>
+        <button class="calc" id="calc" type="button" tabindex="-1" disabled><span class="lab"></span><span class="val"></span></button>
+      </div>
+      <div class="strip" id="strip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg><i></i><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></div>
+      <div class="keys" id="keys" aria-label="Keypad"></div>
+    </div>
+  </section>
+
+  <section class="view" id="results" aria-label="Results" hidden></section>
+
+  <div id="toast" role="status"></div>
+  <p class="sr" id="live" aria-live="polite"></p>
+</main>
+
+<script src="lab/mathlive/mathlive.min.js"></script>
+<script src="lab/topics.js"></script>
+<script src="lab/maths.js"></script>
+<script src="lab/sound.js"></script>
+<script src="lab/keypad.js"></script>
+<script src="lab/app.js"></script>
+</body>
+</html>

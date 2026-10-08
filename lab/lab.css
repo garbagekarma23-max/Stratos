@@ -1,0 +1,211 @@
+/* Stratos Maths Lab: how it looks.
+   It must look like the same app as v2.html. The colour block below is copied word for word from src/style.css,
+   with the same names, and a test checks the two stay the same. Spacing, corners and lines use v2's values:
+   16px side margins, 12px corners, 999px pills, 1px lines.
+   Maths is drawn in MathLive's maths font (KaTeX). Everything else is Hanken Grotesk.
+   One blue (--accent): the Done button, the cursor and selected maths, as v2 uses it for progress and focus. */
+:root{
+  --paper:#ffffff; --raise:#ffffff; --wash:#f4f5f7; --wash-2:#e9ebef; --line:#e1e3e8; --line-2:#c5c8d0;
+  --ink:#0d0f14; --ink-2:#555a66; --ink-3:#6e7380;
+  --accent:#1f58c2; --accent-soft:#c3d3f1;
+  --good:#0e7748; --good-bg:#e3f4eb;
+  --bad:#b5301f; --bad-bg:#fcebe8;
+  --warn:#8f5400; --warn-dot:#d98a00;
+  --scrim:rgba(13,15,20,.4);
+  --flame:#ff7a1a; --fin:#ff7a1a;
+  --tabs:58px;
+  --f:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#15161a; --raise:#1d1f24; --wash:#1d1f24; --wash-2:#292c33; --line:#2b2e35; --line-2:#464a55;
+    --ink:#eeeff2; --ink-2:#a7abb6; --ink-3:#8a8f9b;
+    --accent:#8db0ff; --accent-soft:#2b3c62;
+    --good:#58d6a0; --good-bg:#16312a;
+    --bad:#ff9384; --bad-bg:#3a1f1d;
+    --warn:#f2b655; --warn-dot:#f2b655;
+    --scrim:rgba(0,0,0,.58);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15161a; --raise:#1d1f24; --wash:#1d1f24; --wash-2:#292c33; --line:#2b2e35; --line-2:#464a55;
+  --ink:#eeeff2; --ink-2:#a7abb6; --ink-3:#8a8f9b;
+  --accent:#8db0ff; --accent-soft:#2b3c62;
+  --good:#58d6a0; --good-bg:#16312a;
+  --bad:#ff9384; --bad-bg:#3a1f1d;
+  --warn:#f2b655; --warn-dot:#f2b655;
+  --scrim:rgba(0,0,0,.58);
+  color-scheme:dark;
+}
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+
+/* ---------- copied from src/style.css ---------- */
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.45 var(--f);display:flex;align-items:center;justify-content:center;gap:56px;overflow:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+button{font:inherit;color:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent;cursor:pointer}
+button:disabled{cursor:default}
+button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+svg{display:block;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.about{display:none;max-width:280px}
+.about .a-word{margin-bottom:14px;font-size:24px;line-height:1}
+.about p{margin-bottom:12px}
+.about ul{padding-left:18px;list-style:disc;display:grid;gap:8px;font-size:14px;line-height:1.45;color:var(--ink-2)}
+@media (min-width:960px){.about{display:block}}
+#app{position:relative;flex:none;width:100%;max-width:440px;height:100%;max-height:920px;overflow:hidden;isolation:isolate;background:var(--paper);-webkit-user-select:none;user-select:none}
+@media (min-width:520px) and (min-height:620px){
+  body{background:var(--wash);padding-inline:16px}
+  #app{height:calc(100% - 32px);border:1px solid var(--line);border-radius:24px}
+}
+.top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;min-height:40px}
+.top .tl{min-width:0}
+.top .tr{display:flex;justify-content:flex-end}
+.word,.about .a-word{font-family:'Archivo',var(--f);font-weight:600;font-stretch:125%;letter-spacing:.01em}
+.word{font-size:21px;line-height:1}
+.icon-btn{position:relative;flex:none;width:40px;height:40px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:none}
+.icon-btn:active{background:var(--wash)}
+.h1{font:700 26px/1.15 var(--f);letter-spacing:-.01em;text-wrap:balance}
+.h2{font:700 17px/1.25 var(--f)}
+.fine{font-size:13px;line-height:1.45;color:var(--ink-2)}
+.kicker{font-size:13px;color:var(--ink-2)}
+.lede{margin-top:8px;color:var(--ink-2)}
+.primary,.ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:600;white-space:nowrap;transition:transform .12s,opacity .2s}
+.primary{min-height:48px;padding:0 22px;border:0;background:var(--ink);color:var(--paper);font-size:15px}
+.ghost{min-height:44px;padding:0 16px;border:1px solid var(--line-2);background:none;font-size:14px}
+.primary:active:not(:disabled),.ghost:active:not(:disabled){transform:scale(.98)}
+.primary:disabled,.ghost:disabled{opacity:.45}
+.wide{width:100%}
+.sm{min-height:36px;padding:0 14px;font-size:13px}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;line-height:1.3;color:var(--ink-2)}
+.meta span + span{padding-left:8px;border-left:1px solid var(--line-2)}
+.act{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 13px 0 10px;border:1px solid var(--opt-line,var(--line-2));border-radius:999px;background:var(--opt-bg,var(--paper));font-size:13px;font-weight:500;transition:border-color .2s,transform .12s}
+.act .ic{width:18px;height:18px}
+.act:active:not(:disabled){transform:scale(.96)}
+.act:disabled{opacity:.4}
+#toast{position:absolute;left:50%;bottom:24px;z-index:9;width:max-content;max-width:calc(100% - 32px);padding:9px 16px;border-radius:18px;background:var(--ink);color:var(--paper);font:600 13px/1.3 var(--f);text-align:center;opacity:0;transform:translate(-50%,10px);transition:opacity .25s,transform .25s;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- the stage ---------- */
+/* No double-tap zoom and no iPhone callout anywhere on the stage. Scrolling still works. */
+#app{display:flex;flex-direction:column;-webkit-touch-callout:none;touch-action:manipulation}
+@supports (height:100dvh){@media (max-width:519px),(max-height:619px){#app{height:100dvh;max-height:none}}}
+.top{flex:none;padding:12px 16px 0}
+.top .tr{visibility:hidden}
+#app[data-mode="q"][data-open] .top .tr{visibility:visible}
+.view{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:20px 16px 32px}
+.view::-webkit-scrollbar,.sheet::-webkit-scrollbar{display:none}
+
+/* ---------- the start screen ---------- */
+#intro .h1{margin-top:4px}
+.how{display:grid;margin-top:20px;border-top:1px solid var(--line)}
+.how li{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.45;color:var(--ink-2)}
+.how b{font-weight:600;color:var(--ink)}
+#intro .primary{margin-top:24px}
+#intro .fine{margin-top:14px}
+
+/* ---------- a question ---------- */
+#lab{flex:1;min-height:0;display:flex;flex-direction:column}
+.qhead{flex:none;padding:10px 16px 12px;border-bottom:1px solid var(--line)}
+.qmath{margin-top:6px;font-size:26px;line-height:1.3;overflow-x:auto;scrollbar-width:none}
+.qmath::-webkit-scrollbar{display:none}
+
+/* The sheet: the student's working, one line per row. */
+.sheet{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;padding:4px 16px 16px}
+.line{display:grid;grid-template-columns:minmax(0,1fr) 22px;align-items:center;column-gap:8px;min-height:50px;border-bottom:1px solid var(--line);animation:open .16s ease-out}
+@keyframes open{from{opacity:0;transform:translateY(-4px)}}
+.line.active{border-bottom-color:var(--line-2)}
+.line .mk{grid-column:2;grid-row:1;width:22px;height:22px;display:grid;place-items:center}
+.line .mk svg{width:20px;height:20px;fill:none;stroke:var(--good);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;animation:land .18s ease-out}
+.line .mk i{width:8px;height:8px;border-radius:50%;background:var(--warn-dot);animation:land .18s ease-out}
+@keyframes land{from{opacity:0;transform:scale(.6)}}
+.line .say{grid-column:1 / -1;margin:-6px 0 10px;font-size:13px;line-height:1.35;color:var(--ink-2)}
+.line.wrong .say{color:var(--warn)}
+.line .say:empty{display:none}
+.end{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:14px 0 4px;font-size:14px;color:var(--ink-2);animation:open .16s ease-out}
+.end b{font-weight:600;color:var(--ink)}
+.end math-span{font-size:22px;color:var(--ink)}
+
+/* MathLive's field, restyled with our values. Its own buttons and look are hidden. */
+math-field{display:block;grid-column:1;grid-row:1;min-width:0;width:100%;padding:6px 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:24px;outline:none;
+  --caret-color:var(--accent);--selection-background-color:var(--accent-soft);--selection-color:var(--ink);
+  --contains-highlight-background-color:transparent;--placeholder-color:var(--ink-3);--placeholder-opacity:1;
+  --smart-fence-color:var(--ink-3);--primary-color:var(--accent);--text-font-family:var(--f)}
+math-field:focus,math-field:focus-within{outline:none}
+math-field::part(virtual-keyboard-toggle),math-field::part(menu-toggle){display:none}
+math-field::part(container){min-height:34px;padding:0}
+math-field::part(content){padding:0;overflow:visible}
+.line:not(.active) math-field{pointer-events:none}
+.line{cursor:text}
+math-span{color:var(--ink)}
+
+/* ---------- the keypad ---------- */
+.pad{flex:none;padding:6px 8px 8px;border-top:1px solid var(--line);background:var(--paper);--kh:clamp(36px,calc(4.9vh + 4.6px),46px);touch-action:none;-webkit-user-select:none;user-select:none}
+@supports (height:1dvh){.pad{--kh:clamp(36px,calc(4.9dvh + 4.6px),46px)}}
+.padbar{display:flex;align-items:center;gap:8px;height:44px;padding:0 0 2px}
+/* Done is the one button in the blue. It sits at the opposite corner from Enter. */
+.done{flex:none;min-height:40px;padding:0 20px;border:0;border-radius:999px;background:var(--accent);color:var(--paper);font:600 15px var(--f);transition:transform .07s,opacity .2s;touch-action:none}
+.done.down,.act.down{transform:scale(.96)}
+/* The calculator display. */
+.calc{flex:1;min-width:0;height:40px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px;border:0;border-radius:12px;background:var(--wash);color:var(--ink);text-align:right;touch-action:none;transition:background-color .07s,transform .07s}
+.calc .lab{flex:none;font-size:12px;color:var(--ink-2)}
+.calc .val{min-width:0;overflow:hidden;font-size:20px;line-height:1;white-space:nowrap}
+.calc.err .val{font:500 14px var(--f);color:var(--ink-2)}
+.calc.down{background:var(--wash-2);transform:scale(.98)}
+/* The strip: drag along it to move the cursor. */
+.strip{display:flex;align-items:center;gap:4px;height:24px;margin:0 2px;color:var(--ink-3);touch-action:none;cursor:ew-resize}
+.strip svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.strip i{flex:1;height:2px;border-radius:1px;background:var(--line-2);transition:background-color .1s,height .1s}
+.strip.on{color:var(--ink)}
+.strip.on i{height:4px;background:var(--ink-3)}
+.keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;touch-action:none;-webkit-touch-callout:none}
+.key{height:var(--kh);min-width:0;display:grid;place-items:center;padding:0;border:1px solid transparent;border-radius:12px;background:var(--wash);color:var(--ink);font:500 22px/1 var(--f);font-variant-numeric:tabular-nums;touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;transition:transform .07s,background-color .07s,opacity .2s}
+.key.fn{background:var(--paper);border-color:var(--line-2)}
+.key.word{font-size:15px;font-weight:600}
+.key.maths{font:400 25px/1 KaTeX_Main,serif}
+.key.maths[data-key="t0"]{font-family:KaTeX_Math,serif;font-style:italic}
+.key .ic{width:22px;height:22px}
+.key .ic .dot{fill:currentColor;stroke:none}
+.key .kf{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.key .kf .slot{stroke:var(--ink-3);stroke-width:1.3}
+.key .kf .sup{fill:currentColor;stroke:none;font:400 11px KaTeX_Main,serif}
+/* Enter is set apart by the darker fill of v2's main button, not a new colour. */
+.key.enter{grid-column:span 2;background:var(--ink);color:var(--paper)}
+.key.down{transform:scale(.95);background:var(--wash-2)}
+.key.fn.down{background:var(--wash)}
+.key.enter.down,.key.enter.held{background:var(--ink);opacity:.8}
+.keys[aria-disabled="true"] .key{opacity:.4}
+
+/* ---------- results ---------- */
+#results .h1{margin-top:4px}
+.stats6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:20px;border-block:1px solid var(--line)}
+.stats6 > div{padding:12px 0 12px 12px;display:grid;gap:4px;align-content:start;border-left:1px solid var(--line)}
+.stats6 > div:nth-child(3n+1){padding-left:0;border-left:0}
+.stats6 > div:nth-child(n+4){border-top:1px solid var(--line)}
+.stats6 dt{font-size:12px;color:var(--ink-2)}
+.stats6 dd{font:700 18px/1.15 var(--f);font-variant-numeric:tabular-nums}
+.qrows{margin-top:8px;border-top:1px solid var(--line)}
+.qrow{display:grid;grid-template-columns:18px minmax(0,1fr) auto;align-items:baseline;column-gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.qrow .n{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.qrow math-span{font-size:18px;overflow:hidden}
+.qrow .t{font-weight:700;font-variant-numeric:tabular-nums}
+.qrow .d{grid-column:2 / -1;margin-top:2px;font-size:13px;color:var(--ink-2)}
+#results .sec{margin-top:26px}
+#results .cta{display:grid;gap:8px;margin-top:24px}
+#results .fine{margin-top:14px}
+
+@media (max-height:640px){
+  .qmath{font-size:22px}
+  math-field{font-size:22px}
+  .line{min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .key.down,.done.down,.calc.down{transform:none}
+}
