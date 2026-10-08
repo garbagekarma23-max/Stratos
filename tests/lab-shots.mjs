@@ -73,7 +73,9 @@ for (const scheme of ['light', 'dark']) {
     await p.tap('#calc'); await p.waitForTimeout(50);
     await p.tap('#done'); await p.waitForTimeout(200);
     await p.screenshot({path: SHOTS + 'cmp-' + scheme + '-lab-wrong-done.png'});
-    await keys(p, 'delete delete delete delete delete delete delete delete delete delete delete delete');
+    // Hold Delete to clear the line (tapping Delete on an empty line would remove the line).
+    { const box = await p.locator('.key[data-key="delete"]').boundingBox(), cdp = await ctx.newCDPSession(p), pt = {x: box.x + box.width / 2, y: box.y + box.height / 2};
+      await cdp.send('Input.dispatchTouchEvent', {type: 'touchStart', touchPoints: [pt]}); await p.waitForTimeout(650); await cdp.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []}); await p.waitForTimeout(50); }
     await keys(p, 't0 equals 5 t2 t0 equals minus 3');
     await p.tap('#done'); await p.waitForTimeout(250);
     await p.screenshot({path: SHOTS + 'cmp-' + scheme + '-lab-right.png'});
@@ -84,7 +86,7 @@ for (const scheme of ['light', 'dark']) {
   await join('compare-' + scheme, ['cmp-' + scheme + '-v2-home', 'cmp-' + scheme + '-v2-question', 'cmp-' + scheme + '-lab-start', 'cmp-' + scheme + '-lab-working'],
     ['v2 Home', 'v2 practice question', 'Maths Lab start', 'Maths Lab working']);
   await join('compare-' + scheme + '-lab', ['cmp-' + scheme + '-lab-wrong-done', 'cmp-' + scheme + '-lab-right', 'cmp-' + scheme + '-lab-results'],
-    ['A wrong line, and Done with one answer', 'Right', 'Results']);
+    ['A wrong line, and Done on an unfinished answer', 'Right', 'Results']);
 }
 await browser.close();
 server.close();
