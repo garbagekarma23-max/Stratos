@@ -8,7 +8,8 @@ A study app prototype for Australian senior students. GitHub Pages serves this r
 
 - `index.html` is the first prototype, a single question feed. Leave it alone unless asked.
 - `v2.html` is the second prototype. It is built from `src/`. Never edit it by hand.
-- Live at https://garbagekarma23-max.github.io/Stratos/ and https://garbagekarma23-max.github.io/Stratos/v2.html
+- `maths-lab.html` is the Maths Lab, a separate page for writing maths working on a phone. Its code is in `lab/`. See the Maths Lab section below.
+- Live at https://garbagekarma23-max.github.io/Stratos/, https://garbagekarma23-max.github.io/Stratos/v2.html and https://garbagekarma23-max.github.io/Stratos/maths-lab.html
 
 The owner is new to programming and reads this code to learn. Explain what you changed in plain words, and keep code comments in plain English.
 
@@ -18,7 +19,43 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Content check: `node check_content.mjs`.
 - Tests: `cd tests && npm install && npm test`. They open `../v2.html` in Chromium with Playwright, so build first. Use the Chromium already on the machine. Do not download a browser.
 - Screenshots: `cd tests && node shots.mjs` writes PNGs to `tests/shots/` (light, dark, Sky, small phone, desktop). `node shots.mjs light` takes the light-mode flight set. Look at them after any visual change.
+- Maths Lab screenshots: `cd tests && node lab-shots.mjs` writes the lab at iPhone size, light and dark, plus `compare-light.png` and `compare-dark.png`, which put it next to v2's Home and a practice question.
 - The site only updates when the pull request is merged into main.
+
+## Maths Lab
+
+A first prototype of doing maths working on a phone. One question at a time: the question at the top, the student's working on a sheet under it, one line per row, and our own keypad at the bottom where the phone keyboard would be. It tests one thing: is writing working with this keypad quick and satisfying enough to use instead of paper? So there is no rocket, combo or altitude here. The good feeling comes from the keys, the sounds and the ticks.
+
+It has no build step. `maths-lab.html` is the page itself and loads these files in order:
+
+| File | What it holds |
+| --- | --- |
+| `lab/mathlive/` | MathLive, which draws and types the maths. A pinned copy from npm, so the page needs no other website. |
+| `lab/topics.js` | The topics as data: the questions in order, their answers, the line Skip shows, and the topic row of keys. A new topic needs no new code. |
+| `lab/maths.js` | Reads a line, checks working lines and final answers, and runs the calculator display. No screen code, so it is tested on its own. |
+| `lab/sound.js` | The key click, the ping and the finishing notes. The chain and levels are copied from `src/20-sound.js`. |
+| `lab/keypad.js` | The keys, presses, holds and the drag strip. |
+| `lab/app.js` | The screen, the lines, Done, Skip, the results and saving. |
+| `lab/lab.css` | The look. Its colour block is copied from `src/style.css` and a test keeps them the same. |
+
+To move to a new MathLive version: change the version in `lab/package.json`, then `cd lab && npm install && npm run copy`, then run the tests.
+
+Rules to keep:
+- Working is typed, one line at a time. The phone's own keyboard must never appear. MathLive's hidden input is marked `inputmode="none"`, our keys never take focus, and a test checks focus after every tap.
+- Lines are checked by numbers, against the question, never against the line above. A line is right if it has exactly the same solutions as the question: each answer is put into the line, then x from minus a million to a million is searched for any other solution, most finely near 0,, and spread-out values check it is not true for every x. A wrong line gets a quiet mark in the weak-point colour and one plain sentence. A line with no = sign gets a hint, not a mark.
+- The calculator display does what an HSC calculator does and no more. It works out the plain arithmetic after the last = sign and shows nothing for anything with x, ± or "or" in it. It never solves, expands or simplifies algebra. Tapping it swaps the arithmetic for its value.
+- The keys follow the Casio fx-82AU: the number block at the bottom with the operators to its right, the shape keys (fraction, root, square, power, brackets) in the row above in the Casio's order, and the topic row on top. The Casio's AC is Undo, its ×10ˣ is =, and its Ans and = are one wide Enter.
+- Enter checks the line and opens a new one. Enter on an empty line does nothing. Holding Enter checks the line and starts the next as a copy. Holding Delete clears the line, and one Undo brings it back.
+- Done checks the final answer and sits at the opposite corner from Enter. It accepts x on its own in any exact form, or a decimal to at least 2 places, worked out to one number. Questions with two answers need both.
+- The topic row belongs to the topic: x, ± and "or" for equations. A later topic swaps in its own keys through `lab/topics.js`, not new code.
+- The look is v2's: the same colour values and names, Hanken Grotesk for words, MathLive's maths font for maths, flat keys with one corner size and no shadows. Enter has the darker fill of v2's main button. Only Done uses the blue.
+- Results (time per question, lines, wrong lines, deletes, undos, skips) are saved on the device only, under `stratos-lab.v1`. Copy results puts them on the clipboard as text. Nothing is sent anywhere.
+
+Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough working).
+
+Known gaps:
+- Never tried on a real iPhone. The click and ping need the iPhone silent switch off, and iPhones do not vibrate for websites.
+- On a computer keyboard, Control and Z uses MathLive's own undo, which takes back a run of typing at once. The keypad's Undo goes one key at a time.
 
 ## Layout of src/
 
@@ -83,6 +120,6 @@ Product:
 ## Working agreement
 
 - One change per session and per pull request. Keep changes small.
-- After a change: build, run the tests, look at screenshots if anything visual moved, then commit `src/` and `v2.html` together.
+- After a change: build, run the tests, look at screenshots if anything visual moved, then commit `src/` and `v2.html` together. A Maths Lab change needs no build: run the tests and `node lab-shots.mjs`, then commit `lab/`, `maths-lab.html` and the tests.
 - If a test fails, fix the cause. Do not weaken the test.
-- Never commit `tests/node_modules` or `tests/shots`.
+- Never commit `tests/node_modules`, `tests/shots` or `lab/node_modules`.
