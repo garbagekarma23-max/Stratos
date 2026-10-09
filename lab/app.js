@@ -101,7 +101,6 @@
     const L = {li: li, mf: mf, checked: null, kind: null, say: '', history: [], deleted: false, box: null};
     Q.lines.push(L);
     mf.addEventListener('input', () => edited(L));
-    mf.addEventListener('keydown', ev => fieldKey(L, ev), {capture: true});
     /* MathLive's long-press menu stays closed. */
     mf.addEventListener('contextmenu', ev => ev.preventDefault());
     /* A tap inside the line moves the cursor itself, so an open box (see the keypad) no longer applies. */
@@ -399,6 +398,15 @@
 
   /* ---------- a computer keyboard ----------
      MathLive takes the typing. Enter checks, Shift and Enter copies, Control and Enter is Done. */
+  /* Keys typed into a line are caught here, on the whole window, before MathLive sees them. Browsers differ in when a
+     listener on the line itself runs: Safari can run it after MathLive, which already handled Backspace by then. The
+     window always comes first, in every browser. */
+  window.addEventListener('keydown', ev => {
+    if (!Q) return;
+    const path = ev.composedPath ? ev.composedPath() : [ev.target];
+    const L = Q.lines.find(l => path.includes(l.mf));
+    if (L) fieldKey(L, ev); else looseKey(ev);
+  }, true);
   function fieldKey(L, ev) {
     if (!Q) return;
     if (Q.state !== 'open') {
@@ -412,7 +420,15 @@
       if (ev.metaKey || ev.ctrlKey) done(); else enter(ev.shiftKey);
       return;
     }
-    if (ev.key === 'Backspace' && !L.mf.value && Q.lines.indexOf(L) > 0) { ev.preventDefault(); ev.stopPropagation(); removeLine(L); return; }
+    if (ev.key === 'Backspace' && !ev.metaKey && !ev.ctrlKey && !ev.altKey) {
+      /* Backspace is done here, not by MathLive, so it works the same in every browser:
+         on an empty line it removes the line, otherwise it deletes one thing. */
+      ev.preventDefault(); ev.stopPropagation();
+      L.box = null;
+      if (!L.mf.value && removeLine(L)) return;
+      L.mf.executeCommand('deleteBackward'); stat().deletes++; edited(L);
+      return;
+    }
     if (ev.key.length === 1 && !ev.metaKey && !ev.ctrlKey && !ev.altKey) {
       /* Characters with a meaning of their own here are typed by typeChar, so they behave the same at any speed. */
       if (L.box || ev.key === '=' || ev.key === '-' || ev.key === 'r') { ev.preventDefault(); ev.stopPropagation(); typeChar(L, ev.key); return; }
@@ -420,8 +436,8 @@
     if ((ev.metaKey || ev.ctrlKey) && !ev.shiftKey && ev.key.toLowerCase() === 'z') stat().undos++;
     else if (ev.key === 'Backspace' || ev.key === 'Delete') stat().deletes++;
   }
-  /* Typing while nothing has focus goes to the line being written. */
-  document.addEventListener('keydown', ev => {
+  /* Typing while no line has focus (just after Start, or after a click elsewhere) goes to the line being written. */
+  function looseKey(ev) {
     if (app.dataset.mode !== 'q' || ev.defaultPrevented || !Q) return;
     if ((ev.metaKey || ev.ctrlKey || ev.altKey) && ev.key !== 'Enter') return;
     const t = ev.target;
@@ -429,7 +445,7 @@
     if (t && t.tagName === 'BUTTON' && (ev.key === 'Enter' || ev.key === ' ')) return;
     if (Q.state !== 'open') { if (ev.key === 'Enter') { ev.preventDefault(); next(); } return; }
     typeKey(ev);
-  });
+  }
   function typeKey(ev) {
     const L = Q.active;
     if (ev.key === 'Enter') { ev.preventDefault(); focusField(L.mf); if (ev.metaKey || ev.ctrlKey) done(); else enter(ev.shiftKey); }

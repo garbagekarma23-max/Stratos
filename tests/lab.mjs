@@ -341,6 +341,23 @@ check(focusChecks > 120 && focusBad === 0, 'focus never landed on anything that 
   check((await lines(p)).length === n - 1 && (await active(p)) === 'x=\\pm7', 'Backspace on an empty line removes it and goes to the line above');
   await ctx.close();
 }
+{
+  // Some browsers (Safari) run a listener on the line itself only after MathLive has handled the key. This copies that:
+  // a listener on the page stops Backspace and Enter before they reach the line. The lab must still get them first.
+  const {ctx, p} = await open({desk: true, w: 1280, h: 800});
+  await p.evaluate(() => document.addEventListener('keydown', ev => { if (ev.key === 'Backspace' || ev.key === 'Enter') ev.stopPropagation(); }, true));
+  await p.click('#start');
+  await p.keyboard.type('3x=12');
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(150);
+  check((await lines(p)).length === 2, 'Enter on a computer keyboard opens a new line in any browser');
+  await p.keyboard.press('Backspace');
+  await p.waitForTimeout(150);
+  check((await lines(p)).length === 1 && (await active(p)) === '3x=12', 'Backspace on a computer keyboard removes an empty line in any browser');
+  await p.keyboard.press('Backspace');
+  check((await active(p)) === '3x=1', 'the next Backspace deletes in the line above');
+  await ctx.close();
+}
 
 // ---------- 5. looks: tokens, widths, dark mode, sound ----------
 {
