@@ -56,8 +56,30 @@ Rules to keep:
 
 Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough working).
 
+### Where maths is going
+
+- `maths-lab.html` stays as the alpha test page. Leave it working.
+- Maths becomes a second subject inside the main app, next to Economics, picked from the subject sheet on Home. It uses the same chapters, points, statuses (new, learned, weak, proven), two-tone bar and weak-points-first rule, so moving between subjects feels like one app.
+- Learn for maths: a worked example card (the full solution, line by line, with a short note on each step), then a guided question of the same type with new numbers, where the first lines are already written and the student finishes, then a check question done alone.
+- Practice for maths: the keypad with the game on top. Weak points first. The combo builds with each right line and resets on a wrong one. The rocket climbs on each right answer. Done gets one clear moment.
+- Questions come from templates that pick the numbers, so a point can be practised with endless different questions.
+- Proven for maths: three right answers in a row on a point, each with different numbers, not all on the same day. One right answer does not show a student can do the type.
+- Build order, one pull request each: (1) the maths subject with Learn, (2) maths Practice with the game, (3) races and challenges with maths, later.
+
+What the current code will need to change for this:
+- One subject is built in. `src/content.js` defines a single `TOPIC`, and `10-core.js` indexes it once into `CH`, `PT` and `ALL`. Home, You, Search, the subject sheet (`ACT.subject` in `40-home.js`, where Maths is a disabled "Soon" row) and the tests (`KEYED` in `tests/lib.mjs`, `check_content.mjs`) all read that one `TOPIC`. They need a current subject, and the indexes need rebuilding when it changes.
+- Saved answers are keyed by point id alone (`saved.ans['c1p1a']`). Maths point ids must not clash with Economics ids, so give them their own prefix or store each subject's answers apart. Keep `stratos2.v1` readable so no one loses progress.
+- Status comes from the last result of question `a` and question `b` (`statusOf` in `10-core.js`). Maths proven needs a short history per point instead: the last few results, with the numbers used and the day. `chStats` counts right `a` and `b` answers for the bar, so it needs a maths version too.
+- Questions are four options with the right one at `opts[0]`. The feed (`50-feed.js`), the answer check, clues, Reveal, races and challenges all assume that. A maths slide is a sheet of lines and the keypad, checked by `lab/maths.js`, so the slide builder needs a second kind of slide.
+- `build.py` puts everything into one file. `lab/maths.js` and `lab/keypad.js` can be inlined the same way (read from `lab/`, so there is one copy). MathLive cannot: it is about 820 KB of script plus 20 font files. `v2.html` should load it with a script tag from `lab/mathlive/`, the same copy the lab uses, and only when maths is first opened, so Economics stays as fast as now.
+- The tests open `v2.html` from a file path, and MathLive's fonts do not load that way. Maths tests in v2 need `tests/serve.mjs`, as the lab tests do.
+- `90-boot.js` answers questions with the A to D and 1 to 4 keys, and the lab catches keys on the whole window. On a maths slide, typing must go to the line, not pick an option.
+- The feed scrolls and snaps one slide at a time, and the tab bar takes 58 px at the bottom. A maths slide needs the keypad fixed at the bottom with the tab bar hidden, and swipes must not move the feed while the student is working.
+- The lab's keypad, sheet and colour block are in `lab/lab.css`, copied from `src/style.css`. When the keypad moves into v2, its styles move into `src/style.css` and the lab should load them from there, so there is one copy.
+- Sound: v2's ping already rises with the combo (`sound.correct(c, tier)`). A right line can call it the same way. The lab's key click lives in `lab/sound.js` and would move into `20-sound.js`, at its measured level.
+
 Known gaps:
-- Never tried on a real iPhone. The click and ping need the iPhone silent switch off, and iPhones do not vibrate for websites.
+- Tested on a real iPhone: the iPhone keyboard never appeared, holding Enter copied the line with no magnifier or text selection, the clicks and pings played with the silent switch off, and all ten questions could be finished. Sound needs the silent switch off, and iPhones do not vibrate for websites.
 - On a computer keyboard, Control and Z uses MathLive's own undo, which takes back a run of typing at once. The keypad's Undo goes one key at a time.
 
 ## Layout of src/
