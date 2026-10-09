@@ -79,7 +79,7 @@ What the current code will need to change for this:
 - Sound: v2's ping already rises with the combo (`sound.correct(c, tier)`). A right line can call it the same way. The lab's key click lives in `lab/sound.js` and would move into `20-sound.js`, at its measured level.
 
 Known gaps:
-- Never tried on a real iPhone. The click and ping need the iPhone silent switch off, and iPhones do not vibrate for websites.
+- Tested on a real iPhone: the iPhone keyboard never appeared, holding Enter copied the line with no magnifier or text selection, the clicks and pings played with the silent switch off, and all ten questions could be finished. Sound needs the silent switch off, and iPhones do not vibrate for websites.
 - On a computer keyboard, Control and Z uses MathLive's own undo, which takes back a run of typing at once. The keypad's Undo goes one key at a time.
 
 ## Layout of src/
