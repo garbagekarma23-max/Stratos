@@ -83,7 +83,8 @@ const segsEl = $('#segs'), chPickT = $('#chPickT');
    o.review holds every point of the chapter, o.only holds one point, and o.pts holds a list of points.
    Economics: each point is a card, then its check question.
    Maths: a new or weak point gets the worked example, a guided question and a check question.
-   A learned or proven point goes straight to a check question. Review shows each worked example, then a check. */
+   A learned or proven point goes straight to a check question. Review shows each worked example, then a check.
+   Proving a maths chapter (o.prove) adds one check question at a time until every point in the chapter is proven. */
 function buildLearn(chId, o) {
   o = o || {};
   const ch = chOf(chId) || curCh();
@@ -97,7 +98,9 @@ function buildLearn(chId, o) {
     else if (st === 'new' || st === 'weak') items.push({t: 'wex', p: p.id}, {t: 'mq', p: p.id, k: 'guided'}, {t: 'mq', p: p.id, k: 'check'});
     else items.push({t: 'mq', p: p.id, k: 'check'});
   });
-  L = {ch: ch.id, mode: o.pts ? 'pts' : o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
+  if (o.prove) items.length = 0;                   /* proving a chapter makes its questions one at a time, as it goes */
+  L = {ch: ch.id, mode: o.prove ? 'prove' : o.pts ? 'pts' : o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
+  if (o.prove) provePush();
   if (!o.only && !o.pts) setCur(ch.id);
   learnFeed.textContent = '';
   if (items.length) fillLearn(); else { L.over = true; learnFeed.appendChild(learnEndEl()); }
@@ -108,7 +111,7 @@ let learnHold = false;
 function openLearn(chId, o) {
   const c = chOf(chId);
   if (c && c.sub !== SUB.id) useSubject(c.sub, true);       /* a chapter of the other subject switches to it first */
-  const ch = c || curCh(), plain = !o || (!o.only && !o.review && !o.pts);
+  const ch = c || curCh(), plain = !o || (!o.only && !o.review && !o.pts && !o.prove);
   const midway = L && L.ch === ch.id && L.mode === 'new' && !L.over;
   if (!(plain && midway)) buildLearn(ch.id, o);     /* a session that is part way through carries on */
   learnHold = true; go('learn'); learnHold = false;
@@ -205,12 +208,20 @@ function learnAnswer(sec, n) {
   showFoot(c.sec);
 }
 function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + c.q.clue); }
-/* The bar above the cards: the chapter, and one segment for each of its points. */
+/* The bar above the cards: the chapter, and one segment for each question in this session.
+   A segment fills when its question is finished: blue if it was right first time, the weak-point colour if not.
+   The segment for the question on screen (or the one a card leads to) is darker until it is done. */
 function paintLearnBar() {
   if (!L) return;
-  const ch = chOf(L.ch), v = viewing(learnFeed), it = v && v.dataset.i !== undefined ? L.items[+v.dataset.i] : null;
+  const ch = chOf(L.ch), v = viewing(learnFeed), vi = v && v.dataset.i !== undefined ? +v.dataset.i : -1;
   chPickT.textContent = (CH.indexOf(ch) + 1) + '. ' + ch.title;
-  segsEl.innerHTML = ch.points.map(p => '<i class="seg ' + statusOf(p.id) + (it && it.p === p.id ? ' cur' : '') + '"></i>').join('');
+  let cur = -1;
+  if (vi >= 0) for (let i = vi; i < L.items.length; i++) if (L.items[i].t === 'q' || L.items[i].t === 'mq') { cur = i; break; }
+  segsEl.innerHTML = L.items.map((it, i) => {
+    if (it.t !== 'q' && it.t !== 'mq') return '';
+    const r = L.res[i], fill = !r ? '' : (r.o === 'correct' ? ' fin' : ' miss');
+    return '<i class="seg' + fill + (i === cur && !r ? ' cur' : '') + '"></i>';
+  }).join('');
 }
 let segTick = 0;
 let workTick = 0;
@@ -223,6 +234,6 @@ learnFeed.addEventListener('scroll', () => {
 ACT.chpick = () => {
   openSheet('Chapters', '<div class="picks">' + CH.map((c, i) => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + s.learned + ' of ' + s.n + ' points learned</small></span><span class="v">' + s.pct + '%</span></button>';
+    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
   }).join('') + '</div>');
 };

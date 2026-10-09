@@ -96,7 +96,7 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
   await p.waitForFunction(() => !!window.MathfieldElement);
   await p.waitForTimeout(200);
   check((await p.locator('.subject').textContent()) === 'Maths, Year 11' && (await p.locator('.hero .h1').textContent()) === 'Linear equations', 'picking Maths switches Home to Linear equations', R);
-  check((await p.locator('.legend').textContent()).includes('Learned 0 of 5') && (await p.locator('.pt').count()) === 5, 'maths starts with nothing learned, five points in chapter 1', R);
+  check((await p.locator('.legend').textContent()).includes('0 of 5 learned') && (await p.locator('.pt').count()) === 5, 'maths starts with nothing learned, five points in chapter 1', R);
   await tab(p, 'search');
   await p.fill('#q', 'brackets'); await p.waitForTimeout(80);
   check((await p.locator('#qOut .res .t').first().textContent()) === 'Brackets' && (await p.getAttribute('#q', 'placeholder')) === 'Search Equations', 'Search looks through maths', R);
@@ -133,10 +133,9 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
 
 // ---------- 3. a point goes new, learned, proven, then weak ----------
 {
-  const day1 = Date.parse('2026-10-05T10:00:00'), day2 = Date.parse('2026-10-06T10:00:00');
-  const {b, p, errs} = await openMaths({day: day1});
+  const {b, p, errs} = await openMaths();
   await pointSheet(p, 'm1p2');
-  check((await sheetText(p)).includes('New. Not started yet.') && (await sheetText(p)).includes('Proven means three right answers in a row on this point, each with different numbers, and not all on the same day.'), 'the point sheet says New and explains the rule for proven', R);
+  check((await sheetText(p)).includes('New. Not started yet.') && (await sheetText(p)).includes('Proven means three right answers in a row on this point, each with different numbers. One right answer does not show you can do the type. A wrong answer makes the point weak and starts the count again.'), 'the point sheet says New and explains the rule for proven', R);
   check(await p.locator('#sheetBody .wsteps li').count() === 4, 'the point sheet shows the worked example', R);
   await p.locator('#sheetBody [data-act="learnpoint"]').tap(); await p.waitForTimeout(150);
   check(await p.locator('#learnFeed .slide.wex').count() === 1, 'a new point starts with its worked example', R);
@@ -153,18 +152,14 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
     check(await p.locator('#learnFeed .slide.wex').count() === 0 && await p.locator('#learnFeed .slide.mq').count() === 1, 'checking a learned point again goes straight to a check question (' + n + ')', R);
     qs.push((await finishSlide(p, true)).latex);
     await pointSheet(p, 'm1p2');
+    if (n === 2) check((await sheetText(p)).includes('Learned. 2 right answers in a row so far. Three in a row proves it.'), 'after two right answers the point is still learned', R);
   }
-  check((await sheetText(p)).includes('Learned. 3 right in a row, all on one day. One more on another day proves it.'), 'three right on the same day is not proven yet', R);
-  await p.clock.setFixedTime(day2);
-  await p.locator('#sheetBody [data-act="learnpoint"]').tap(); await p.waitForTimeout(150);
-  qs.push((await finishSlide(p, true)).latex);
-  await pointSheet(p, 'm1p2');
-  check((await sheetText(p)).includes('Proven. Three right in a row, each with different numbers, on more than one day.'), 'a right answer on another day proves the point', R);
+  check((await sheetText(p)).includes('Proven. Three right in a row, each with different numbers.'), 'three right in a row on the same day proves the point: there is no day rule', R);
   check(new Set(qs).size === qs.length, 'every check question had different numbers (' + qs.join(', ') + ')', R);
   s = await saved(p);
-  check(s.m.h.m1p2.slice(-3).every(r => r.ok) && new Set(s.m.h.m1p2.map(r => r.day)).size === 2, 'the history keeps the result, the numbers and the day of each answer', R);
+  check(s.m.h.m1p2.slice(-3).every(r => r.ok) && s.m.h.m1p2.every(r => r.q && r.day), 'the history keeps the result, the numbers and the day of each answer', R);
   await home(p);
-  check(!(await p.locator('.legend').textContent()).includes('Proven 0%'), 'the chapter bar moves when a point is proven', R);
+  check((await p.locator('.legend').textContent()).includes('1 of 5 proven'), 'the chapter bar moves when a point is proven', R);
   // One wrong answer makes it weak.
   await pointSheet(p, 'm1p2');
   await p.locator('#sheetBody [data-act="learnpoint"]').tap(); await p.waitForTimeout(150);
@@ -226,11 +221,120 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
     if (ci === 0) { await tap(p, '#learnFeed .endslide [data-act="learnch"]'); await p.waitForTimeout(150); }
   }
   await tab(p, 'home');
-  check((await p.locator('.legend').textContent()).includes('Learned 2 of 2') || (await p.locator('.legend').textContent()).includes('Learned 5 of 5'), 'Home shows the chapter learned', R);
+  check((await p.locator('.legend').textContent()).includes('2 of 2 learned') || (await p.locator('.legend').textContent()).includes('5 of 5 learned'), 'Home shows the chapter learned', R);
   check((await p.locator('.hero .primary').textContent()) === 'Prove this chapter', 'Home asks to prove the chapter next', R);
   errsAll.push(...errs); await b.close();
 }
 check(taps > 150 && unsafe === 0, 'focus never landed on anything that opens the phone keyboard (' + taps + ' taps checked)', R);
+
+// ---------- 4b. chapter rows show learning and proving as stages ----------
+{
+  const today = '2026-10-05', P1 = ['m1p1', 'm1p2', 'm1p3', 'm1p4', 'm1p5'];
+  const right = q => ({ok: true, day: today, q: q, t: Date.parse(today + 'T09:00:00')});
+  const hist = (n, ids) => ({h: Object.fromEntries((ids || P1).map(id => [id, Array.from({length: n}, (_, i) => right(id + i))]))});
+  const rows = async m => {
+    const r = await openMaths({seed: {m: m}});
+    const t = await r.p.locator('.ch-head .stage').allTextContents(), legend = await r.p.locator('.legend').textContent();
+    errsAll.push(...r.errs); await r.b.close();
+    return {t: t, legend: legend};
+  };
+  let v = await rows({h: {}});
+  check(v.t[0] === 'Not started' && v.legend.includes('0 of 5 proven') && v.legend.includes('0 of 5 learned'), 'nothing done: Not started, and the bar reads 0 of 5 proven, 0 of 5 learned', R);
+  v = await rows(hist(1, ['m1p1', 'm1p2', 'm1p3']));
+  check(v.t[0] === '3 of 5 learned' && v.legend.includes('3 of 5 learned'), 'three of five learned: 3 of 5 learned, on the row and the bar', R);
+  v = await rows(hist(1));
+  check(v.t[0] === 'Learned, 0 of 5 proven' && v.t[1] === 'Not started', 'every point learned: Learned, 0 of 5 proven', R);
+  const m = hist(1); m.h.m1p1 = hist(3).h.m1p1; m.h.m1p2 = hist(3).h.m1p2;
+  v = await rows(m);
+  check(v.t[0] === 'Learned, 2 of 5 proven' && v.legend.includes('2 of 5 proven'), 'two proven: Learned, 2 of 5 proven, on the row and the bar', R);
+  v = await rows(hist(3));
+  check(v.t[0] === 'Proven' && v.t[1] === 'Not started', 'every point proven: Proven (Home then moves on to chapter 2)', R);
+  check(!v.t.concat([v.legend]).some(t => t.includes('%')), 'no percentage anywhere on the rows or the bar labels', R);
+  // Economics rows use the same words.
+  const ans = {};
+  ['c1p1', 'c1p2', 'c1p3', 'c1p4', 'c1p5', 'c1p6', 'c1p7'].forEach((id, i) => { ans[id + 'a'] = {ok: true, n: 1, t: Date.now() - 1000 + i}; });
+  const e = await open({seed: {ans: ans}});
+  await e.p.waitForTimeout(150);
+  const et = await e.p.locator('.ch-head .stage').allTextContents();
+  check(et[0] === 'Learned, 0 of 7 proven' && et[1] === 'Not started' && (await e.p.locator('.legend').textContent()).includes('0 of 7 proven'), 'Economics: a learned chapter reads Learned, 0 of 7 proven, not 50%', R);
+  errsAll.push(...e.errs); await e.b.close();
+}
+
+// ---------- 4c. proving a whole chapter in one sitting, straight after Learn ----------
+{
+  const {b, p, errs} = await openMaths();
+  const status = s => ['m1p1', 'm1p2', 'm1p3', 'm1p4', 'm1p5'].map(id => {
+    const h = (s.m.h[id] || []), last = h.slice(-3);
+    return !h.length ? 'new' : !h[h.length - 1].ok ? 'weak' : (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3) ? 'proven' : 'learned';
+  });
+  // Learn chapter 1.
+  await p.locator('.hero .primary').tap(); await p.waitForTimeout(200);
+  for (let k = 0; k < 30 && !(await p.locator('#learnFeed .endslide').count()); k++) {
+    await p.waitForTimeout(300);                       /* the keypad comes up once the scroll has settled */
+    if (await working(p)) await finishSlide(p, true);
+    else { await tap(p, '#learnFeed .slide.wex .next'); await p.waitForTimeout(150); }
+  }
+  await home(p);
+  check((await p.locator('.hero .primary').textContent()) === 'Prove this chapter', 'straight after Learn, Home offers Prove this chapter', R);
+  await p.locator('.hero .primary').tap(); await p.waitForTimeout(200);
+  // Answer every question right, except one wrong in the middle.
+  const asked = [];
+  let wrongAt = -1, wrongPoint = null;
+  for (let k = 0; k < 40 && !(await p.locator('#learnFeed .endslide').count()); k++) {
+    const title = await p.locator(WAIT + ' .meta span').nth(1).textContent();
+    asked.push(title);
+    const bad = k === 4;
+    if (bad) { wrongAt = k; wrongPoint = title; }
+    await finishSlide(p, !bad);
+    if (bad) {
+      const s = await saved(p);
+      check(status(s).includes('weak'), 'a wrong answer mid-sitting makes that point weak', R);
+      check(!(await p.locator('#learnFeed .endslide').count()) && await p.locator(WAIT).count() === 1, 'and the sitting carries on with the next question', R);
+    }
+  }
+  const s = await saved(p);
+  check(status(s).every(x => x === 'proven'), 'the sitting ran until every point in the chapter was proven (' + asked.length + ' questions)', R);
+  check(asked.length === 4 * 2 + 1 + 3, 'four points needed two more right after Learn, and the missed point its wrong answer plus three right (' + asked.length + ' questions)', R);
+  check(asked.slice(0, 5).length === new Set(asked.slice(0, 5)).size, 'the questions mix the points: the first five were five different points', R);
+  check(asked.every((t, i) => i === 0 || t !== asked[i - 1] || asked.slice(i - 1).every(x => x === t)), 'never the same point twice in a row while another point is still to prove', R);
+  const back = asked.indexOf(wrongPoint, wrongAt + 1);
+  check(back > wrongAt + 1, 'the missed point came back later in the same sitting, after other points (' + (back - wrongAt) + ' questions later)', R);
+  check((await p.locator('#learnFeed .endslide .ctitle').textContent()) === 'Chapter proven', 'the sitting ends with Chapter proven', R);
+  check((await p.locator('#learnFeed .endslide .primary').textContent()) === 'Go to chapter 2', 'and offers the next chapter first', R);
+  await home(p);
+  check((await p.locator('.ch-head .stage').first().textContent()) === 'Proven', 'Home shows chapter 1 as Proven', R);
+  check(!(await p.locator('#app').textContent()).match(/tomorrow|come back|another day/i), 'nothing on Home says to come back later', R);
+  errsAll.push(...errs); await b.close();
+}
+
+// ---------- 4d. the bar at the top of Learn fills as each question is finished ----------
+{
+  const {b, p, errs} = await openMaths();
+  await p.locator('.hero .primary').tap(); await p.waitForTimeout(200);
+  const segs = () => p.locator('#segs .seg').evaluateAll(els => els.map(e => e.className.replace('seg', '').trim() || '-'));
+  let s = await segs();
+  check(s.length === 10 && s.every(c => c === '-' || c === 'cur'), 'chapter 1 has one segment for each of its 10 questions, none filled yet (' + s.join(' ') + ')', R);
+  await tap(p, '#learnFeed .slide.wex .next'); await p.waitForTimeout(150);
+  check((await segs())[0] === 'cur', 'the segment for the question on screen is marked', R);
+  await finishSlide(p, true);
+  await p.waitForTimeout(300);
+  s = await segs();
+  check(s[0] === 'fin' && s[1] === 'cur', 'the guided question fills its segment when it is right, though the point is still new (' + s.join(' ') + ')', R);
+  await finishSlide(p, false);
+  await p.waitForTimeout(300);
+  s = await segs();
+  check(s[1] === 'miss', 'a check question answered wrong fills its segment in the weak-point colour', R);
+  const look = await p.locator('#segs .seg.cur').evaluate(e => { const c = getComputedStyle(e); return {h: e.getBoundingClientRect().height, shadow: c.boxShadow, outline: c.outlineStyle}; }).catch(() => null);
+  check(!look || (look.h <= 4 && look.shadow === 'none' && look.outline === 'none'), 'the current segment is a plain thin bar with no outline at any number of points', R);
+  errsAll.push(...errs); await b.close();
+  // Chapter 2 has two points: the same thin segments.
+  const r = await openMaths({seed: {m: {cur: 'm2', h: {}}}});
+  await r.p.locator('.hero .primary').tap(); await r.p.waitForTimeout(200);
+  await r.p.locator('#learnFeed .slide.wex .next').last().tap(); await r.p.waitForTimeout(150);
+  const cur = await r.p.locator('#segs .seg.cur').evaluate(e => { const c = getComputedStyle(e); return {h: e.getBoundingClientRect().height, shadow: c.boxShadow}; });
+  check((await r.p.locator('#segs .seg').count()) === 4 && cur.h <= 4 && cur.shadow === 'none', 'a chapter with 2 points shows 4 thin segments, the current one with no outline', R);
+  errsAll.push(...r.errs); await r.b.close();
+}
 
 // ---------- 5. a computer keyboard, small screens and dark mode ----------
 {

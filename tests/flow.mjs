@@ -7,7 +7,7 @@ const text = sel => p.locator(sel).first().textContent();
 // --- Home, first run
 check((await text('.hero .h1')) === 'International economic integration', 'Home shows chapter 1', R);
 check((await text('.hero .primary')) === 'Start this chapter', 'first button says Start this chapter', R);
-check((await text('.legend')).includes('Proven 0%') && (await text('.legend')).includes('Learned 0 of 7'), 'bar legend starts at zero', R);
+check((await text('.legend')).includes('0 of 7 proven') && (await text('.legend')).includes('0 of 7 learned'), 'bar legend starts at zero', R);
 check(await p.locator('.icon-btn .dot').count() === 1, 'unread dot shows on the messages button', R);
 
 // --- Practice is locked until something is learned
@@ -48,7 +48,7 @@ check(s.streak === 1, 'five answers started a day streak', R);
 await tab(p, 'home');
 await p.waitForTimeout(200);
 const legend = await text('.legend');
-check(legend.includes('Proven 43%') && legend.includes('Learned 7 of 7'), 'legend reads 43% proven, 7 of 7 learned: ' + legend.trim(), R);
+check(legend.includes('0 of 7 proven') && legend.includes('7 of 7 learned'), 'legend reads 0 of 7 proven, 7 of 7 learned: ' + legend.trim(), R);
 check((await text('.hero .primary')) === 'Fix 1 weak point', 'button now says Fix 1 weak point', R);
 check((await text('.hero .sub')) === 'Globalisation', 'and names the weak point', R);
 check(await p.locator('.pt.is-weak').count() === 1 && await p.locator('.pt.is-learned').count() === 6, 'chapter list shows 1 weak and 6 learned', R);
@@ -115,8 +115,8 @@ check(s.th.tom.length === 1 && s.th.tom[0].kind === 'result' && s.th.tom[0].tota
 // --- back to Home: the bar moved
 await p.click('[data-act="home"]'); await p.waitForTimeout(250);
 const legend2 = await text('.legend');
-check((await text('.hero .kicker')).includes('chapter 2 of 4') && legend2.includes('Proven 0%'), 'chapter 1 is finished, so Home moves on to chapter 2', R);
-check((await p.locator('.ch-head .pct').first().textContent()) === '100%', 'the chapter list shows chapter 1 at 100%', R);
+check((await text('.hero .kicker')).includes('chapter 2 of 4') && legend2.includes('0 of ') && legend2.includes(' proven'), 'chapter 1 is finished, so Home moves on to chapter 2', R);
+check((await p.locator('.ch-head .stage').first().textContent()) === 'Proven', 'the chapter list shows chapter 1 as Proven', R);
 await shot(p, 'flow-home-after-practice');
 await tab(p, 'practice');
 check(await p.locator('#pracStart:not([hidden])').count() === 1, 'Practice is back at its start screen', R);

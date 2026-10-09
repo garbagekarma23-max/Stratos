@@ -31,7 +31,7 @@ function showRun(on) {
 function renderStart() {
   const learned = learnedPoints();
   if (!learned.length) {
-    startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice asks about points you have learned. Learn your first point, then come back.</p><button class="primary" type="button" data-act="golearn">Open Learn</button></div>';
+    startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice asks about points you have learned. Learn your first point to start.</p><button class="primary" type="button" data-act="golearn">Open Learn</button></div>';
     return;
   }
   const chs = CH.filter(c => chStats(c).learned > 0);
@@ -68,7 +68,7 @@ ACT.len = b => { ui.len = +b.dataset.v; renderStart(); const again = $('.seg3 [d
 ACT.scopech = () => {
   openSheet('Pick a chapter', '<div class="picks">' + CH.map((c, i) => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? s.learned + ' of ' + s.n + ' points learned' : 'Nothing learned here yet') + '</small></span><span class="v">' + s.pct + '%</span></button>';
+    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
   }).join('') + '</div>');
 };
 ACT.setscopech = b => { ui.scopeCh = b.dataset.ch; ui.scope = 'chapter'; closeSheet(); renderStart(); };

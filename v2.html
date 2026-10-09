@@ -192,7 +192,7 @@ svg{display:block;flex:none}
 .ch-head{display:grid;grid-template-columns:14px minmax(0,1fr) auto 18px;align-items:center;gap:10px;width:100%;min-height:56px;padding:8px 0;border:0;background:none;text-align:left}
 .ch-head .n{color:var(--ink-3);font-variant-numeric:tabular-nums}
 .ch-head .t{font-weight:600;line-height:1.3}
-.ch-head .pct{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.ch-head .stage{font-size:13px;line-height:1.3;color:var(--ink-2);text-align:right;font-variant-numeric:tabular-nums}
 .ch-head .ic{width:18px;height:18px;color:var(--ink-3);transition:transform .2s}
 .ch.open .ch-head .ic{transform:rotate(180deg)}
 .pts{padding:0 0 12px 24px}
@@ -262,10 +262,9 @@ svg{display:block;flex:none}
 .chpick .ic{width:16px;height:16px;color:var(--ink-3)}
 .segs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;margin-top:6px}
 .seg{height:4px;border-radius:2px;background:var(--wash-2);transition:background-color .3s}
-.seg.learned{background:var(--accent-soft)}
-.seg.proven{background:var(--accent)}
-.seg.weak{background:var(--warn-dot)}
-.seg.cur{box-shadow:0 0 0 1.5px var(--paper),0 0 0 3px var(--ink)}
+.seg.fin{background:var(--accent)}
+.seg.miss{background:var(--warn-dot)}
+.seg.cur{background:var(--ink-3)}
 #learnFeed{--s-top:88px}
 .card .ctitle{font:700 26px/1.15 var(--f);letter-spacing:-.01em;text-wrap:balance}
 .lines{display:grid;gap:12px;margin-top:2px;font-size:17px;line-height:1.45;-webkit-user-select:text;user-select:text}
@@ -2783,15 +2782,16 @@ function statusOf(pid) {
 }
 /* Maths: each point keeps its last six answers: right or not (ok), the day, the question (q, which tells
    different numbers apart) and the time (t). One right answer does not show a student can do the type, so:
-   a point is new with no answers, and weak if the last answer was wrong. It is proven when the last three answers
-   were all right, each with different numbers, and not all on the same day. It is learned in between. */
+   a point is new with no answers, and weak if the last answer was wrong (a wrong answer also ends its run).
+   It is proven when the last three answers were all right, each with different numbers. It is learned in between.
+   There is no rule about days: spacing comes from Practice bringing back points, never from a lock. */
 const mHist = pid => saved.m.h[pid] || [];
 function runOf(pid) { const h = mHist(pid); let n = 0; for (let i = h.length - 1; i >= 0 && h[i].ok; i--) n++; return n; }
 function mathsStatus(pid) {
   const h = mHist(pid), last = h.slice(-3);
   if (!h.length) return 'new';
   if (!h[h.length - 1].ok) return 'weak';
-  if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3 && new Set(last.map(r => r.day)).size > 1) return 'proven';
+  if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3) return 'proven';
   return 'learned';
 }
 function recordMaths(pid, q, ok) {
@@ -2832,7 +2832,15 @@ function chStats(ch) {
     else ['a', 'b'].forEach(k => { const r = ansOf(p.id, k); if (r && r.ok) ok++; });
   });
   const n = ch.points.length;
-  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (per * n) * 100), lpct: Math.round(learned / n * 100)};
+  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (per * n) * 100), lpct: Math.round(learned / n * 100), ppct: Math.round(proven / n * 100)};
+}
+/* What a chapter row says. Learning comes first, then proving, so a learned chapter never looks unfinished. */
+function chStage(ch) {
+  const s = chStats(ch);
+  if (!s.learned) return {t: 'Not started'};
+  if (s.learned < s.n) return {t: s.learned + ' of ' + s.n + ' learned'};
+  if (s.proven === s.n) return {t: 'Proven'};
+  return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
@@ -2868,8 +2876,9 @@ function mathsNext() {
   }
   if (weak.length >= 3 || (weak.length && !nxt)) return {label: 'Fix ' + plural(weak.length, 'weak point'), sub: names(weak.slice(0, 3)) + (weak.length > 3 ? ' and ' + (weak.length - 3) + ' more' : ''), run: () => openLearn(weak[0].ch, {pts: ids(weak)})};
   if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn shows a worked example, then you finish one and do one on your own.', run: () => openLearn(ch.id)};
-  const todo = ch.points.filter(p => statusOf(p.id) === 'learned').sort((a, b) => lastAt(a.id) - lastAt(b.id));
-  return {label: 'Prove this chapter', sub: plural(todo.length, 'point') + ' still to prove. A point is proven by three right answers in a row, not all on one day.', run: () => openLearn(ch.id, {pts: ids(todo)})};
+  const todo = ch.points.filter(p => statusOf(p.id) !== 'new' && statusOf(p.id) !== 'proven');
+  /* One sitting: check questions from the chapter's unproven points, mixed, until every point is proven. */
+  return {label: 'Prove this chapter', sub: plural(todo.length, 'point') + ' still to prove. Questions keep coming until each has three right in a row.', run: () => openLearn(ch.id, {prove: true})};
 }
 
 /* ---------- altitude ---------- */
@@ -3384,16 +3393,15 @@ function mathsMeans(pid) {
   const st = statusOf(pid), run = runOf(pid);
   if (st === 'new') return 'Not started yet.';
   if (st === 'weak') return 'Your last answer was wrong. Get the next one right to move on.';
-  if (st === 'proven') return 'Three right in a row, each with different numbers, on more than one day.';
-  if (run >= 3) return run + ' right in a row, all on one day. One more on another day proves it.';
-  return plural(run, 'right answer') + ' in a row so far. Three in a row, not all on one day, proves it.';
+  if (st === 'proven') return 'Three right in a row, each with different numbers.';
+  return plural(run, 'right answer') + ' in a row so far. Three in a row proves it.';
 }
-const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers, and not all on the same day. One right answer does not show you can do the type. Any wrong answer makes the point weak.';
+const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers. One right answer does not show you can do the type. A wrong answer makes the point weak and starts the count again.';
 
 function chRow(c, i) {
-  const s = chStats(c), open = ui.open === c.id;
+  const s = chStats(c), g = chStage(c), open = ui.open === c.id;
   let h = '<li class="ch' + (open ? ' open' : '') + '"><button class="ch-head" type="button" data-act="chtoggle" data-ch="' + c.id + '" aria-expanded="' + open + '">' +
-    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="pct">' + s.pct + '%</span>' + IC.down + '</button>';
+    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
   if (open) {
     h += '<ul class="pts">' + c.points.map(p => {
       const st = statusOf(p.id);
@@ -3409,7 +3417,7 @@ function renderHome() {
   const ch = curCh(), ci = CH.indexOf(ch), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
   if (ui.cur !== ch.id) { ui.cur = ch.id; ui.open = ch.id; }       /* the list opens at the chapter you are on */
   /* The bar starts at the widths it had last time, then slides to the new ones. */
-  const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.pct};
+  const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
     /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
@@ -3422,8 +3430,9 @@ function renderHome() {
     '<section class="hero" aria-label="Your chapter">' +
       '<p class="kicker">' + esc(SUB.topic.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +
-      '<div class="bar2" role="img" aria-label="' + st.pct + '% proven. ' + st.learned + ' of ' + st.n + ' points learned."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
-      '<div class="legend" aria-hidden="true"><span><i class="k-p"></i>Proven ' + st.pct + '%</span><span><i class="k-l"></i>Learned ' + st.learned + ' of ' + st.n + '</span></div>' +
+      /* The bar: the pale part is points learned, the blue part points proven. The words under it say the same. */
+      '<div class="bar2" role="img" aria-label="' + st.learned + ' of ' + st.n + ' points learned. ' + st.proven + ' of ' + st.n + ' proven."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
+      '<div class="legend" aria-hidden="true"><span><i class="k-p"></i>' + st.proven + ' of ' + st.n + ' proven</span><span><i class="k-l"></i>' + st.learned + ' of ' + st.n + ' learned</span></div>' +
       '<button class="primary wide" type="button" data-act="continue">' + esc(step.label) + '</button>' +
       '<p class="sub">' + esc(step.sub) + '</p>' +
     '</section>';
@@ -3436,13 +3445,13 @@ function renderHome() {
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
   views.home.scrollTop = keep;
-  if (from.l !== st.lpct || from.p !== st.pct) {
+  if (from.l !== st.lpct || from.p !== st.ppct) {
     setTimeout(() => {
       const b = $('.bar2', views.home); if (!b) return;
-      $('.b-l', b).style.width = st.lpct + '%'; $('.b-p', b).style.width = st.pct + '%';
+      $('.b-l', b).style.width = st.lpct + '%'; $('.b-p', b).style.width = st.ppct + '%';
     }, 80);
   }
-  ui.bar = {ch: ch.id, l: st.lpct, p: st.pct};
+  ui.bar = {ch: ch.id, l: st.lpct, p: st.ppct};
 }
 
 ACT.continue = () => nextStep().run();
@@ -3586,7 +3595,8 @@ const segsEl = $('#segs'), chPickT = $('#chPickT');
    o.review holds every point of the chapter, o.only holds one point, and o.pts holds a list of points.
    Economics: each point is a card, then its check question.
    Maths: a new or weak point gets the worked example, a guided question and a check question.
-   A learned or proven point goes straight to a check question. Review shows each worked example, then a check. */
+   A learned or proven point goes straight to a check question. Review shows each worked example, then a check.
+   Proving a maths chapter (o.prove) adds one check question at a time until every point in the chapter is proven. */
 function buildLearn(chId, o) {
   o = o || {};
   const ch = chOf(chId) || curCh();
@@ -3600,7 +3610,9 @@ function buildLearn(chId, o) {
     else if (st === 'new' || st === 'weak') items.push({t: 'wex', p: p.id}, {t: 'mq', p: p.id, k: 'guided'}, {t: 'mq', p: p.id, k: 'check'});
     else items.push({t: 'mq', p: p.id, k: 'check'});
   });
-  L = {ch: ch.id, mode: o.pts ? 'pts' : o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
+  if (o.prove) items.length = 0;                   /* proving a chapter makes its questions one at a time, as it goes */
+  L = {ch: ch.id, mode: o.prove ? 'prove' : o.pts ? 'pts' : o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
+  if (o.prove) provePush();
   if (!o.only && !o.pts) setCur(ch.id);
   learnFeed.textContent = '';
   if (items.length) fillLearn(); else { L.over = true; learnFeed.appendChild(learnEndEl()); }
@@ -3611,7 +3623,7 @@ let learnHold = false;
 function openLearn(chId, o) {
   const c = chOf(chId);
   if (c && c.sub !== SUB.id) useSubject(c.sub, true);       /* a chapter of the other subject switches to it first */
-  const ch = c || curCh(), plain = !o || (!o.only && !o.review && !o.pts);
+  const ch = c || curCh(), plain = !o || (!o.only && !o.review && !o.pts && !o.prove);
   const midway = L && L.ch === ch.id && L.mode === 'new' && !L.over;
   if (!(plain && midway)) buildLearn(ch.id, o);     /* a session that is part way through carries on */
   learnHold = true; go('learn'); learnHold = false;
@@ -3708,12 +3720,20 @@ function learnAnswer(sec, n) {
   showFoot(c.sec);
 }
 function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec, c.q); say('Clue. ' + c.q.clue); }
-/* The bar above the cards: the chapter, and one segment for each of its points. */
+/* The bar above the cards: the chapter, and one segment for each question in this session.
+   A segment fills when its question is finished: blue if it was right first time, the weak-point colour if not.
+   The segment for the question on screen (or the one a card leads to) is darker until it is done. */
 function paintLearnBar() {
   if (!L) return;
-  const ch = chOf(L.ch), v = viewing(learnFeed), it = v && v.dataset.i !== undefined ? L.items[+v.dataset.i] : null;
+  const ch = chOf(L.ch), v = viewing(learnFeed), vi = v && v.dataset.i !== undefined ? +v.dataset.i : -1;
   chPickT.textContent = (CH.indexOf(ch) + 1) + '. ' + ch.title;
-  segsEl.innerHTML = ch.points.map(p => '<i class="seg ' + statusOf(p.id) + (it && it.p === p.id ? ' cur' : '') + '"></i>').join('');
+  let cur = -1;
+  if (vi >= 0) for (let i = vi; i < L.items.length; i++) if (L.items[i].t === 'q' || L.items[i].t === 'mq') { cur = i; break; }
+  segsEl.innerHTML = L.items.map((it, i) => {
+    if (it.t !== 'q' && it.t !== 'mq') return '';
+    const r = L.res[i], fill = !r ? '' : (r.o === 'correct' ? ' fin' : ' miss');
+    return '<i class="seg' + fill + (i === cur && !r ? ' cur' : '') + '"></i>';
+  }).join('');
 }
 let segTick = 0;
 let workTick = 0;
@@ -3726,7 +3746,7 @@ learnFeed.addEventListener('scroll', () => {
 ACT.chpick = () => {
   openSheet('Chapters', '<div class="picks">' + CH.map((c, i) => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + s.learned + ' of ' + s.n + ' points learned</small></span><span class="v">' + s.pct + '%</span></button>';
+    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
   }).join('') + '</div>');
 };
 
@@ -3789,6 +3809,19 @@ function wexEl(i) {
   return sec;
 }
 
+/* Proving a chapter, in one sitting: the next check question goes to whichever unproven point was asked longest ago
+   in this sitting, so the points mix, and a point answered wrong comes back after the others. Not the same point twice
+   in a row while another is left. Returns false when every point is proven. */
+function provePush() {
+  const left = chOf(L.ch).points.filter(p => statusOf(p.id) !== 'new' && statusOf(p.id) !== 'proven');
+  if (!left.length) return false;
+  const lastP = L.items.length ? L.items[L.items.length - 1].p : null;
+  const pool = left.length > 1 ? left.filter(p => p.id !== lastP) : left;
+  const asked = id => { for (let i = L.items.length - 1; i >= 0; i--) if (L.items[i].p === id) return i; return -1; };
+  const low = Math.min.apply(null, pool.map(p => asked(p.id)));
+  L.items.push({t: 'mq', p: shuffle(pool.filter(p => asked(p.id) === low))[0].id, k: 'check'});
+  return true;
+}
 /* Questions not to ask again: the worked example, the ones already made in this session, and the last few answered. */
 function avoidFor(pid) {
   return [MAKE.example(PT[pid]).eq].concat(L.items.filter(it => it.p === pid && it.q).map(it => it.q.eq), mHist(pid).slice(-3).map(r => r.q));
@@ -3904,9 +3937,10 @@ function mathsFinish(c, how) {
     buzzFor(true, 0);
     say('Right. ' + (it.k === 'guided' ? 'Now one on your own.' : ''));
   } else say('The answer is ' + MAKE.words(it.q.show) + '.');
+  if (L.mode === 'prove' && L.shown >= L.items.length) provePush();
   if (L.shown < L.items.length) fillLearn();
   else { L.over = true; learnFeed.appendChild(learnEndEl()); }
-  nb.firstChild.nodeValue = L.over ? 'Finish' : it.k === 'guided' ? 'On your own' : 'Next point';
+  nb.firstChild.nodeValue = L.over ? 'Finish' : it.k === 'guided' ? 'On your own' : L.mode === 'prove' ? 'Next question' : 'Next point';
   nb.hidden = false;
   paintWork();
   learnFeed.scrollTop = sec.offsetTop;
@@ -3919,7 +3953,10 @@ function mathsEndEl() {
   const ch = chOf(L.ch), st = chStats(ch), nextCh = CH[CH.indexOf(ch) + 1];
   const checks = L.items.filter(it => it.t === 'mq' && it.k === 'check').length, sec = document.createElement('section');
   let title, body;
-  if (L.mode === 'one' && checks === 1) {
+  if (L.mode === 'prove') {
+    title = st.proven === st.n ? 'Chapter proven' : 'Session done';
+    body = st.proven === st.n ? 'Every point has three right answers in a row. ' + (nextCh ? 'Chapter ' + (CH.indexOf(nextCh) + 1) + ' is next.' : 'That is every chapter in this topic.') : st.proven + ' of ' + st.n + ' points proven.';
+  } else if (L.mode === 'one' && checks === 1) {
     title = 'Point checked';
     body = L.right ? 'Right. ' + mathsMeans(L.items[L.items.length - 1].p) : 'Not this time. It is marked weak, and Home will bring it back.';
   } else if (!checks) {
@@ -3927,7 +3964,7 @@ function mathsEndEl() {
     body = st.proven === st.n ? 'Every point is proven.' : 'Now prove them: three right answers in a row on each point, not all on one day. Home brings them back.';
   } else {
     title = st.learned === st.n && L.mode === 'new' ? 'Chapter learned' : 'Session done';
-    body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Check them again on another day to prove them.');
+    body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Three right in a row on each point proves it.');
   }
   sec.className = 'slide endslide';
   sec.innerHTML =
@@ -3935,8 +3972,10 @@ function mathsEndEl() {
     '<h2 class="ctitle">' + title + '</h2>' +
     '<p class="lede">' + body + '</p>' +
     '<div class="cta">' +
-      '<button class="primary" type="button" data-act="tab" data-tab="home">Back to Home</button>' +
-      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '') +
+      (L.mode === 'prove' && st.proven === st.n && nextCh
+        ? '<button class="primary" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button><button class="ghost" type="button" data-act="tab" data-tab="home">Back to Home</button>'
+        : '<button class="primary" type="button" data-act="tab" data-tab="home">Back to Home</button>' +
+          (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '')) +
       (L.mode === 'review' ? '' : '<button class="textbtn" type="button" data-act="review" data-ch="' + ch.id + '">See the worked examples again</button>') +
     '</div>';
   return sec;
@@ -3991,7 +4030,7 @@ function showRun(on) {
 function renderStart() {
   const learned = learnedPoints();
   if (!learned.length) {
-    startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice asks about points you have learned. Learn your first point, then come back.</p><button class="primary" type="button" data-act="golearn">Open Learn</button></div>';
+    startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice asks about points you have learned. Learn your first point to start.</p><button class="primary" type="button" data-act="golearn">Open Learn</button></div>';
     return;
   }
   const chs = CH.filter(c => chStats(c).learned > 0);
@@ -4028,7 +4067,7 @@ ACT.len = b => { ui.len = +b.dataset.v; renderStart(); const again = $('.seg3 [d
 ACT.scopech = () => {
   openSheet('Pick a chapter', '<div class="picks">' + CH.map((c, i) => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? s.learned + ' of ' + s.n + ' points learned' : 'Nothing learned here yet') + '</small></span><span class="v">' + s.pct + '%</span></button>';
+    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
   }).join('') + '</div>');
 };
 ACT.setscopech = b => { ui.scopeCh = b.dataset.ch; ui.scope = 'chapter'; closeSheet(); renderStart(); };
