@@ -1,9 +1,12 @@
 // Shared test helpers: open the test page, answer questions by looking up the right answer in the content file.
+// The page is opened through a small local web server (serve.mjs), the way GitHub Pages serves it, because MathLive
+// (loaded when maths is opened) cannot load its fonts from a plain file path.
 import { chromium } from 'playwright';
+import { serve } from './serve.mjs';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 export const SHOTS = fileURLToPath(new URL('./shots/', import.meta.url));
-const PAGE = new URL('../v2.html', import.meta.url).href;
+let server = null;
 // Use the Chromium already on the machine if there is one.
 const EXE = process.env.CHROMIUM_PATH || (fs.existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined);
 fs.mkdirSync(SHOTS, {recursive: true});
@@ -24,7 +27,8 @@ export async function open(o = {}) {
   const errs = [];
   p.on('console', m => { if (m.type() === 'error' && !/Failed to load resource|net::ERR/.test(m.text())) errs.push(m.text()); });
   p.on('pageerror', e => errs.push('PAGEERROR ' + e.message));
-  await p.goto(PAGE);
+  if (!server) server = await serve();
+  await p.goto(server.url + 'v2.html' + (o.query || ''));
   await p.waitForTimeout(300);
   return {b, ctx, p, errs};
 }

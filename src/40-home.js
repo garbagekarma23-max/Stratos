@@ -7,6 +7,16 @@ const STATUS_MEANS = {
   weak: 'You last got one of its questions wrong.',
   proven: 'Both of its questions are right.'
 };
+/* What a maths point's status means, in one sentence, for that point as it stands. */
+function mathsMeans(pid) {
+  const st = statusOf(pid), run = runOf(pid);
+  if (st === 'new') return 'Not started yet.';
+  if (st === 'weak') return 'Your last answer was wrong. Get the next one right to move on.';
+  if (st === 'proven') return 'Three right in a row, each with different numbers, on more than one day.';
+  if (run >= 3) return run + ' right in a row, all on one day. One more on another day proves it.';
+  return plural(run, 'right answer') + ' in a row so far. Three in a row, not all on one day, proves it.';
+}
+const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers, and not all on the same day. One right answer does not show you can do the type. Any wrong answer makes the point weak.';
 
 function chRow(c, i) {
   const s = chStats(c), open = ui.open === c.id;
@@ -18,7 +28,7 @@ function chRow(c, i) {
       return '<li><button class="pt is-' + st + '" type="button" data-act="point" data-p="' + p.id + '"><i class="st ' + st + '"></i><span class="t">' + esc(p.title) + '</span><span class="lab">' + STATUS[st] + '</span></button></li>';
     }).join('') + '<li>' + (s.learned < s.n
       ? '<button class="ghost sm" type="button" data-act="learnch" data-ch="' + c.id + '">' + (s.learned ? 'Keep learning this chapter' : 'Learn this chapter') + '</button>'
-      : '<button class="ghost sm" type="button" data-act="pracch" data-ch="' + c.id + '">Practise this chapter</button>') + '</li></ul>';
+      : (c.sub === 'maths' ? '' : '<button class="ghost sm" type="button" data-act="pracch" data-ch="' + c.id + '">Practise this chapter</button>')) + '</li></ul>';
   }
   return h + '</li>';
 }
@@ -35,10 +45,10 @@ function renderHome() {
       '<span class="word">Stratos</span>' +
       '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
-    '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(TOPIC.course + ', ' + TOPIC.year) + IC.down + '</button>' +
+    '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(SUB.topic.course + ', ' + SUB.topic.year) + IC.down + '</button>' +
       (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
     '<section class="hero" aria-label="Your chapter">' +
-      '<p class="kicker">' + esc(TOPIC.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
+      '<p class="kicker">' + esc(SUB.topic.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +
       '<div class="bar2" role="img" aria-label="' + st.pct + '% proven. ' + st.learned + ' of ' + st.n + ' points learned."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
       '<div class="legend" aria-hidden="true"><span><i class="k-p"></i>Proven ' + st.pct + '%</span><span><i class="k-l"></i>Learned ' + st.learned + ' of ' + st.n + '</span></div>' +
@@ -49,7 +59,9 @@ function renderHome() {
     h += '<button class="weakrow" type="button" data-act="fixweak"><i class="st weak"></i><span><b>' + plural(weak.length, 'weak point') + '</b><span class="names">' + esc(names(weak)) + '</span></span>' + IC.right + '</button>';
   }
   h += '<section class="sec"><h2 class="h2">Chapters</h2><ol class="ch-list">' + CH.map(chRow).join('') + '</ol></section>' +
-    '<p class="fine">Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.</p></div>';
+    '<p class="fine">' + (isMaths()
+      ? 'Maths is new in this test build. Learn works now. Practice for maths comes next. Progress is saved on this device only.'
+      : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
   views.home.scrollTop = keep;
   if (from.l !== st.lpct || from.p !== st.pct) {
@@ -62,7 +74,7 @@ function renderHome() {
 }
 
 ACT.continue = () => nextStep().run();
-ACT.fixweak = () => startPractice({mode: 'mix', len: 8});
+ACT.fixweak = () => { if (isMaths()) { const w = weakPoints(); openLearn(w[0].ch, {pts: w.map(p => p.id)}); } else startPractice({mode: 'mix', len: 8}); };
 ACT.chtoggle = b => { ui.open = ui.open === b.dataset.ch ? null : b.dataset.ch; renderHome(); };
 ACT.learnch = b => { closeSheet(); closeAllPages(); openLearn(b.dataset.ch); };
 ACT.pracch = b => { closeSheet(); startPractice({mode: 'chapter', ch: b.dataset.ch, len: 8}); };
@@ -73,6 +85,7 @@ ACT.learnpoint = b => { closeSheet(); openLearn(PT[b.dataset.p].ch, {only: b.dat
 /* One point, opened from Home or from Search: its card, where it stands, and what to do with it. */
 function pointSheet(pid) {
   const p = PT[pid], st = statusOf(pid);
+  if (p.sub === 'maths') { mathsSheet(p, st); return; }
   openSheet(p.title,
     '<p class="statusline"><i class="st ' + st + '"></i><span>' + STATUS[st] + '. ' + STATUS_MEANS[st] + '</span></p>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
@@ -84,18 +97,34 @@ function pointSheet(pid) {
     '</div>');
 }
 
+/* The subject sheet. The two loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
 ACT.subject = () => {
   const rows = [
-    ['The Global Economy', 'Economics, Year 12', 'Loaded'],
-    ['Australia\'s Place in the Global Economy', 'Economics, Year 12', 'Soon'],
-    ['Economic Issues', 'Economics, Year 12', 'Soon'],
-    ['Economic Policies and Management', 'Economics, Year 12', 'Soon'],
-    ['Biology', 'Year 12', 'Soon'],
-    ['Maths', 'Year 12', 'Soon'],
-    ['English', 'Year 12', 'Soon'],
-    ['Modern History', 'Year 12', 'Soon']
+    ['The Global Economy', 'Economics, Year 12', 'eco'],
+    ['Equations', 'Maths, Year 11', 'maths'],
+    ['Australia\'s Place in the Global Economy', 'Economics, Year 12'],
+    ['Economic Issues', 'Economics, Year 12'],
+    ['Economic Policies and Management', 'Economics, Year 12'],
+    ['Biology', 'Year 12'],
+    ['English', 'Year 12'],
+    ['Modern History', 'Year 12']
   ];
   openSheet('Subjects and topics',
-    '<div class="picks">' + rows.map((r, i) => '<button class="pick" type="button"' + (i ? ' disabled' : ' data-act="sheetclose"') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + r[2] + '</span></button>').join('') + '</div>' +
-    '<p class="fine">This test has one topic. The other rows show where the rest of the syllabus would go.</p>');
+    '<div class="picks">' + rows.map(r => '<button class="pick" type="button"' + (r[2] ? ' data-act="setsub" data-sub="' + r[2] + '"' + (SUB.id === r[2] ? ' aria-current="true"' : '') : ' disabled') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + (!r[2] ? 'Soon' : SUB.id === r[2] ? 'Open' : 'Switch') + '</span></button>').join('') + '</div>' +
+    '<p class="fine">This test has two topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
 };
+ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
+/* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
+   A Learn session or flight from the other subject ends, because its slides belong to that subject. */
+function useSubject(id, quiet) {
+  if (id === SUB.id || !SUBJECTS[id]) return;
+  save({subject: id});
+  setSubject(id);
+  if (P) closeRun();
+  if (L) { mathsStop(); L = null; learnFeed.textContent = ''; }
+  ui.cur = null; ui.open = null; ui.bar = null;
+  if (id === 'maths') loadMaths();
+  paintSearchFor();
+  if (!quiet) toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+  if (!quiet) { closeAllPages(); go('home'); views.home.scrollTop = 0; }
+}

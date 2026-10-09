@@ -118,7 +118,7 @@ ACT.pickch = b => {
   const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name;
   openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n,
     '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to 6 correct answers wins.' : 'Pick a chapter. You play 8 questions first, then ' + n + ' plays the same set.') + '</p>' +
-    '<div class="picks">' + CH.map((c, i) => {
+    '<div class="picks">' + SUBJECTS.eco.ch.map((c, i) => {
       const s = chStats(c), fresh = s.n - s.learned;
       return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
     }).join('') + '</div>');
@@ -207,7 +207,7 @@ function renderYou() {
   const best = fmt(saved.bestKm || 0), name = saved.name || '', unread = unreadCount();
   const seg = (act, opts, cur, label) => '<div class="seg3" role="group" aria-labelledby="' + label + '">' + opts.map(o => '<button type="button" data-act="' + act + '" data-v="' + o[0] + '" aria-pressed="' + (cur === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
   views.you.innerHTML = '<div class="pad you">' +
-    '<header class="me"><span class="avatar big">' + esc((name || 'Y').charAt(0).toUpperCase()) + '</span><div class="grow"><h1 class="h1">' + esc(name || 'You') + '</h1><p>' + esc(TOPIC.course + ', ' + TOPIC.year) + '</p></div>' +
+    '<header class="me"><span class="avatar big">' + esc((name || 'Y').charAt(0).toUpperCase()) + '</span><div class="grow"><h1 class="h1">' + esc(name || 'You') + '</h1><p>' + esc(SUB.topic.course + ', ' + SUB.topic.year) + '</p></div>' +
       '<button class="ghost sm" type="button" data-act="editname">' + (name ? 'Edit' : 'Add a call sign') + '</button></header>' +
     '<dl class="stats four"><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div><div><dt>Points proven</dt><dd>' + provenCount() + ' of ' + ALL.length + '</dd></div>' +
       '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + (saved.bestCombo || 0) + '</dd></div></dl>' +
@@ -249,7 +249,7 @@ ACT.reset = b => {
   epoch++;
   try { localStorage.removeItem(KEY); } catch (e) {}
   saved = {}; tidySaved(); save();
-  closeRun(); L = null;
+  closeRun(); mathsStop(); L = null; paintSearchFor();
   ui.cur = null; ui.open = null; ui.bar = null; ui.scope = 'mix'; ui.scopeCh = null; ui.len = 8; ui.ftab = 'msgs';
   applyTheme(); applyLook(); applyBg();
   go('home');
@@ -258,11 +258,25 @@ ACT.reset = b => {
 
 /* ---------- search: every point, its card and its questions ---------- */
 const qIn = $('#q'), qOut = $('#qOut'), qChips = $('#qChips'), qClear = $('#qClear'), searchPad = $('#searchPad');
-const INDEX = ALL.map(p => {
+/* Search looks through the subject picked on Home. Maths points are found by their title, intro, worked example and notes. */
+let INDEX = [];
+function indexEntry(p) {
+  if (p.sub === 'maths') {
+    const ex = MAKE.example(p), lines = [p.intro, p.remember].concat(ex.steps.map(s => s.note));
+    return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: ex.text.toLowerCase()};
+  }
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
   return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
-});
-qChips.innerHTML = ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
+}
+const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides']};
+function paintSearchFor() {
+  INDEX = ALL.map(indexEntry);
+  qChips.innerHTML = CHIPS[SUB.id].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
+  qIn.placeholder = 'Search ' + SUB.topic.name;
+  qIn.setAttribute('aria-label', 'Search ' + SUB.topic.name);
+  qIn.value = '';
+  runSearch();
+}
 function marked(text, terms) {
   const re = new RegExp('(' + terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'ig');
   return text.split(re).map((part, i) => i % 2 ? '<mark>' + esc(part) + '</mark>' : esc(part)).join('');

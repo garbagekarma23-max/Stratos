@@ -126,6 +126,11 @@ function loadSaved() {
 function tidySaved() {
   if (!saved || typeof saved !== 'object' || Array.isArray(saved)) saved = {};
   if (!saved.ans || typeof saved.ans !== 'object') saved.ans = {};
+  /* Maths keeps its own progress under m, apart from Economics: h holds each point's last answers, cur its chapter. */
+  if (!saved.m || typeof saved.m !== 'object' || Array.isArray(saved.m)) saved.m = {};
+  if (!saved.m.h || typeof saved.m.h !== 'object') saved.m.h = {};
+  if (saved.subject !== 'maths') saved.subject = 'eco';
+  setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
   if (saved.bg !== 'sky') saved.bg = 'plain';
   if (saved.theme !== 'light' && saved.theme !== 'dark') saved.theme = 'system';
@@ -163,27 +168,66 @@ function streakNow() {
 }
 function weekCount() { return saved.week && saved.week.k === weekKey() ? saved.week.n : 0; }
 
-/* ---------- the content, indexed ---------- */
-const CH = TOPIC.chapters, PT = {}, ALL = [];
-CH.forEach((c, ci) => c.points.forEach((p, pi) => { p.ch = c.id; p.ci = ci; p.pi = pi; p.a.d = 1; PT[p.id] = p; ALL.push(p); }));
-const chOf = id => CH.find(c => c.id === id);
+/* ---------- the content, indexed ----------
+   Two subjects: Economics (content.js) and Maths (maths-content.js). PT holds every point of both, by id.
+   Maths ids start with m, so they never clash with Economics ids.
+   SUB is the subject picked on Home. CH and ALL are its chapters and its points, and change when the subject does. */
+const PT = {};
+function indexTopic(topic, sub) {
+  const all = [];
+  topic.chapters.forEach((c, ci) => {
+    c.sub = sub;
+    c.points.forEach((p, pi) => { p.ch = c.id; p.ci = ci; p.pi = pi; p.sub = sub; if (p.a) p.a.d = 1; PT[p.id] = p; all.push(p); });
+  });
+  return {id: sub, topic: topic, ch: topic.chapters, all: all};
+}
+const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths')};
+let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
+function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
+const isMaths = () => SUB.id === 'maths';
+const chOf = id => SUBJECTS.eco.ch.find(c => c.id === id) || SUBJECTS.maths.ch.find(c => c.id === id);
 const dOf = x => PT[x.p][x.k].d;
 
 /* ---------- what the student knows ----------
-   Every answer is remembered per question: ok is the latest result, n counts the tries and t is the time.
+   Economics: every answer is remembered per question: ok is the latest result, n counts the tries and t is the time.
    A point is new until one of its two questions is answered. It is weak while either was last answered wrong,
    proven when both were last answered right, and learned in between. */
 const ansOf = (pid, k) => saved.ans[pid + k] || null;
 function statusOf(pid) {
+  if (PT[pid] && PT[pid].sub === 'maths') return mathsStatus(pid);
   const a = ansOf(pid, 'a'), b = ansOf(pid, 'b');
   if (!a && !b) return 'new';
   if ((a && !a.ok) || (b && !b.ok)) return 'weak';
   return a && b ? 'proven' : 'learned';
 }
+/* Maths: each point keeps its last six answers: right or not (ok), the day, the question (q, which tells
+   different numbers apart) and the time (t). One right answer does not show a student can do the type, so:
+   a point is new with no answers, and weak if the last answer was wrong. It is proven when the last three answers
+   were all right, each with different numbers, and not all on the same day. It is learned in between. */
+const mHist = pid => saved.m.h[pid] || [];
+function runOf(pid) { const h = mHist(pid); let n = 0; for (let i = h.length - 1; i >= 0 && h[i].ok; i--) n++; return n; }
+function mathsStatus(pid) {
+  const h = mHist(pid), last = h.slice(-3);
+  if (!h.length) return 'new';
+  if (!h[h.length - 1].ok) return 'weak';
+  if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3 && new Set(last.map(r => r.day)).size > 1) return 'proven';
+  return 'learned';
+}
+function recordMaths(pid, q, ok) {
+  saved.m.h[pid] = mHist(pid).concat([{ok: ok, day: dayKey(new Date()), q: q, t: Date.now()}]).slice(-6);
+  counted(ok);
+  save();
+}
 const STATUS = {new: 'New', learned: 'Learned', weak: 'Weak', proven: 'Proven'};
 function record(pid, k, ok) {
-  const id = pid + k, r = saved.ans[id], today = dayKey(new Date());
+  const id = pid + k, r = saved.ans[id];
   saved.ans[id] = {ok: ok, n: (r ? r.n : 0) + 1, t: Date.now()};
+  counted(ok);
+  save();
+}
+/* Every answer, in either subject, counts toward the study day, the streak and the week's right answers. */
+function counted(ok) {
+  const today = dayKey(new Date());
   if (!saved.day || saved.day.k !== today) saved.day = {k: today, n: 0};
   saved.day.n++;
   if (saved.day.n >= 5) markDay();                      /* five answers make a study day */
@@ -191,38 +235,60 @@ function record(pid, k, ok) {
     if (!saved.week || saved.week.k !== weekKey()) saved.week = {k: weekKey(), n: 0};
     saved.week.n++;
   }
-  save();
 }
+/* A chapter's bar. Economics: the share of its questions that are right, two per point.
+   Maths: each point counts three thirds. Each right answer in a row fills one, and the last third only fills
+   once the point is proven, so the bar never shows 100% for a chapter that is not proven. */
 function chStats(ch) {
   let learned = 0, weak = 0, proven = 0, ok = 0;
+  const maths = ch.sub === 'maths', per = maths ? 3 : 2;
   ch.points.forEach(p => {
     const s = statusOf(p.id);
     if (s !== 'new') learned++;
     if (s === 'weak') weak++;
     if (s === 'proven') proven++;
-    ['a', 'b'].forEach(k => { const r = ansOf(p.id, k); if (r && r.ok) ok++; });
+    if (maths) ok += s === 'proven' ? 3 : Math.min(runOf(p.id), 2);
+    else ['a', 'b'].forEach(k => { const r = ansOf(p.id, k); if (r && r.ok) ok++; });
   });
   const n = ch.points.length;
-  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (2 * n) * 100), lpct: Math.round(learned / n * 100)};
+  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (per * n) * 100), lpct: Math.round(learned / n * 100)};
 }
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
-/* The chapter Home shows: the one the student last opened, or the first that is not finished. */
+/* The chapter Home shows: the one the student last opened, or the first that is not finished.
+   Each subject remembers its own: Economics in cur, Maths in m.cur. */
+function setCur(id) { if (isMaths()) { saved.m.cur = id; save(); } else save({cur: id}); }
 function curCh() {
-  const c = chOf(saved.cur);
+  const id = isMaths() ? saved.m.cur : saved.cur, c = CH.find(x => x.id === id);
   if (c && chStats(c).pct < 100) return c;
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }
 const names = pts => pts.map(p => p.title).join(', ');
 /* What the big button on Home does next. */
 function nextStep() {
+  if (isMaths()) return mathsNext();
   const ch = curCh(), st = chStats(ch), weak = weakPoints();
   if (CH.every(c => chStats(c).pct === 100)) return {label: 'Keep it sharp', sub: 'Every point is proven. A mixed flight keeps it that way.', run: () => startPractice({mode: 'mix', len: 8})};
   const nxt = ch.points.find(p => statusOf(p.id) === 'new');
   if (weak.length >= 3 || (weak.length && !nxt)) return {label: 'Fix ' + plural(weak.length, 'weak point'), sub: names(weak.slice(0, 3)) + (weak.length > 3 ? ' and ' + (weak.length - 3) + ' more' : ''), run: () => startPractice({mode: 'mix', len: 8})};
   if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn teaches a point, then checks it. Practice brings it back later, weak points first.', run: () => openLearn(ch.id)};
   return {label: 'Prove this chapter', sub: plural(st.n * 2 - st.ok, 'question') + ' left to get right.', run: () => startPractice({mode: 'chapter', ch: ch.id, len: 8})};
+}
+/* Maths has no Practice yet, so every next step opens Learn: new points, weak points (taught again in full),
+   or a check question on each point that is learned but not yet proven, longest since answered first. */
+const lastAt = pid => { const h = mHist(pid); return h.length ? h[h.length - 1].t : 0; };
+function mathsNext() {
+  const ch = curCh(), st = chStats(ch), weak = weakPoints(), ids = ps => ps.map(p => p.id);
+  const nxt = ch.points.find(p => statusOf(p.id) === 'new');
+  if (CH.every(c => chStats(c).proven === c.points.length)) {
+    const old = ALL.slice().sort((a, b) => lastAt(a.id) - lastAt(b.id)).slice(0, 3);
+    return {label: 'Keep it sharp', sub: 'Every point is proven. Checking a few now and then keeps it that way.', run: () => openLearn(old[0].ch, {pts: ids(old)})};
+  }
+  if (weak.length >= 3 || (weak.length && !nxt)) return {label: 'Fix ' + plural(weak.length, 'weak point'), sub: names(weak.slice(0, 3)) + (weak.length > 3 ? ' and ' + (weak.length - 3) + ' more' : ''), run: () => openLearn(weak[0].ch, {pts: ids(weak)})};
+  if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn shows a worked example, then you finish one and do one on your own.', run: () => openLearn(ch.id)};
+  const todo = ch.points.filter(p => statusOf(p.id) === 'learned').sort((a, b) => lastAt(a.id) - lastAt(b.id));
+  return {label: 'Prove this chapter', sub: plural(todo.length, 'point') + ' still to prove. A point is proven by three right answers in a row, not all on one day.', run: () => openLearn(ch.id, {pts: ids(todo)})};
 }
 
 /* ---------- altitude ---------- */
