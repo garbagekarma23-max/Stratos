@@ -67,6 +67,9 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - `maths-lab.html` stays as the alpha test page. Leave it working.
 - Build order, one pull request each: (1) the maths subject with Learn (done), (2) maths Practice with the game, (3) races and challenges with maths, later.
 - Practice for maths: the keypad with the game on top. Weak points first. The combo builds with each right line and resets on a wrong one. The rocket climbs on each right answer. Done gets one clear moment.
+- Proven for maths: three right answers in a row on a point, each with different numbers. No day limits anywhere. A wrong answer makes the point weak and resets its run.
+- Proving a chapter runs in one sitting: questions from the chapter's unproven points, mixed, until every point is proven or the student leaves.
+- Spacing happens in Practice, never as a lock: Practice keeps bringing back the points right longest ago. Nothing in the app ever tells a student to come back later.
 
 ### Maths in v2
 
@@ -75,13 +78,15 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - Content: `src/maths-content.js`. Each point has an intro, a remember line and forms. A form is a template: the numbers it picks, sums worked out from them, rules they must pass, the question, the answers, and the worked steps with a note on each. Anything in [square brackets] is worked out from the numbers. `src/15-maths-make.js` turns a form into a question. The worked example is the first form with its `ex` numbers. Answers are whole numbers, except x on both sides, where one form gives halves or thirds.
 - Learn for a new or weak point: the worked example card, then a guided question (new numbers, the first `give` steps written in and locked), then a check question with nothing filled in. A learned or proven point goes straight to a check question. Only the check question counts. `src/55-maths.js` builds these slides.
 - On a check question, the first real answer at Done counts. A line that is not an answer yet (x not on its own, a sum not worked out) gets a hint and does not count. Answer before Done counts as wrong. The guided question never counts.
-- Proven for maths: three right answers in a row on a point, each with different numbers, not all on the same day. Any wrong answer makes it weak. Each point keeps its last six answers in `saved.m.h[pid]` as `{ok, day, q, t}`, where q is the question, which tells the numbers apart. `mathsStatus` in `10-core.js` applies the rule, and the point sheet explains it.
-- The bar for maths: each point counts three thirds, one per right answer in a row, and the last third only fills once the point is proven.
+- Proven for maths: three right answers in a row on a point, each with different numbers. There is no day rule. A wrong answer makes it weak and resets its run. Each point keeps its last six answers in `saved.m.h[pid]` as `{ok, day, q, t}`, where q is the question, which tells the numbers apart. `mathsStatus` in `10-core.js` applies the rule, and the point sheet explains it.
+- Chapter rows on Home show learning, then proving, as words, in both subjects: "Not started", "3 of 5 learned", "Learned, 2 of 5 proven", then "Proven" (`chStage` in `10-core.js`). There is no percentage on the rows. The bar at the top of Home has the same words: points learned (pale) and points proven (blue).
+- Prove this chapter (`openLearn(ch, {prove: true})`, mode `prove`): one check question at a time from the chapter's unproven points. `provePush` in `55-maths.js` picks the point asked longest ago in the sitting, never the same one twice in a row while another is left, so a point answered wrong comes back after the others. When the last point is proven, the end slide says Chapter proven and offers the next chapter.
+- The segments at the top of Learn are one per question in the session, in both subjects. Each fills when its question is finished: blue if right first time, the weak-point colour if not. The one on screen is a darker thin bar.
 - Saved: Economics answers stay in `saved.ans` and `saved.cur`, exactly as before. Maths is under `saved.m`. Maths ids start with `m` (`m1p1`), so they never clash.
 - Work mode: when a maths question fills the Learn screen, `#app` gets `data-work`. The tab bar hides, the keypad (`#mPad`) sits at the bottom, the cards stop scrolling, and the A to D keys do nothing. The × in the Learn bar goes Home and keeps the question.
 - MathLive loads from `lab/mathlive/` the first time maths is opened (`loadMaths`), never for Economics.
 - A right line rings v2's ping one step higher each time (`sound.correct`). The key click and the strip tick are in `20-sound.js`, copied from `lab/sound.js` at the lab's measured level.
-- Until maths Practice exists, Home's button for maths opens Learn: new points, then weak points in full, then a check question on each learned point. The Practice tab says maths practice comes next and offers Economics. Flights, races and challenges switch to Economics.
+- Until maths Practice exists, Home's button for maths opens Learn: new points, then weak points in full, then Prove this chapter. The Practice tab says maths practice comes next and offers Economics. Flights, races and challenges switch to Economics.
 
 Known gaps:
 - Tested on a real iPhone: the iPhone keyboard never appeared, holding Enter copied the line with no magnifier or text selection, the clicks and pings played with the silent switch off, and all ten questions could be finished. Sound needs the silent switch off, and iPhones do not vibrate for websites.
@@ -108,7 +113,7 @@ Known gaps:
 ## How it works
 
 - Each point has a card, a check question (`a`) and a practice question (`b`). A point is new until one is answered, weak while either was last answered wrong, proven when both were last right, learned in between.
-- A chapter's bar is the share of its questions that are right. Home's button picks the next step.
+- Home's bar shows the current chapter's points learned and points proven, and each chapter row says its stage in words. Home's button picks the next step, and it is always something that can change progress now.
 - Practice only asks about points that are not new: weak questions first, then untried, then the ones right longest ago.
 - Scoring: each correct answer multiplies altitude by 2 x combo x difficulty. Combo tiers start at 3, 5, 8 and 12.
 - Progress is in `localStorage` under `stratos2.v1`, with maths under its `m` key. Nothing is sent anywhere.

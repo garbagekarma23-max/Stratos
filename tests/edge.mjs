@@ -101,7 +101,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
 // ---------- 4. everything proven
 {
   const {b, p, errs} = await open({seed: seedFor(['c1', 'c2', 'c3', 'c4'], true)});
-  check((await text(p, '.hero .primary')) === 'Keep it sharp' && (await text(p, '.legend')).includes('Proven 100%'), 'with every point proven, Home says Keep it sharp', R);
+  check((await text(p, '.hero .primary')) === 'Keep it sharp' && /(\d+) of \1 proven/.test(await text(p, '.legend')), 'with every point proven, Home says Keep it sharp', R);
   await shot(p, 'edge-all-proven');
   await p.click('.hero .primary'); await p.waitForTimeout(700);
   check((await text(p, '#feed .meta')).startsWith('Question 1 of 8'), 'and it starts a mixed flight of 8', R);
@@ -117,7 +117,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.click('.hero .primary'); await p.waitForTimeout(100);
   await p.locator('#learnFeed .card .next').click(); await pick(p, '#learnFeed', true);
   await tab(p, 'home'); await p.waitForTimeout(100);
-  check((await text(p, '.legend')).includes('Learned 1 of 7'), 'and progress is kept for the visit', R);
+  check((await text(p, '.legend')).includes('1 of 7 learned'), 'and progress is kept for the visit', R);
   console.log('part 5 errors:', errs); await b.close();
 }
 console.log(R.join('\n'));

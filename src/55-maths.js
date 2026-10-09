@@ -57,6 +57,19 @@ function wexEl(i) {
   return sec;
 }
 
+/* Proving a chapter, in one sitting: the next check question goes to whichever unproven point was asked longest ago
+   in this sitting, so the points mix, and a point answered wrong comes back after the others. Not the same point twice
+   in a row while another is left. Returns false when every point is proven. */
+function provePush() {
+  const left = chOf(L.ch).points.filter(p => statusOf(p.id) !== 'new' && statusOf(p.id) !== 'proven');
+  if (!left.length) return false;
+  const lastP = L.items.length ? L.items[L.items.length - 1].p : null;
+  const pool = left.length > 1 ? left.filter(p => p.id !== lastP) : left;
+  const asked = id => { for (let i = L.items.length - 1; i >= 0; i--) if (L.items[i].p === id) return i; return -1; };
+  const low = Math.min.apply(null, pool.map(p => asked(p.id)));
+  L.items.push({t: 'mq', p: shuffle(pool.filter(p => asked(p.id) === low))[0].id, k: 'check'});
+  return true;
+}
 /* Questions not to ask again: the worked example, the ones already made in this session, and the last few answered. */
 function avoidFor(pid) {
   return [MAKE.example(PT[pid]).eq].concat(L.items.filter(it => it.p === pid && it.q).map(it => it.q.eq), mHist(pid).slice(-3).map(r => r.q));
@@ -172,9 +185,10 @@ function mathsFinish(c, how) {
     buzzFor(true, 0);
     say('Right. ' + (it.k === 'guided' ? 'Now one on your own.' : ''));
   } else say('The answer is ' + MAKE.words(it.q.show) + '.');
+  if (L.mode === 'prove' && L.shown >= L.items.length) provePush();
   if (L.shown < L.items.length) fillLearn();
   else { L.over = true; learnFeed.appendChild(learnEndEl()); }
-  nb.firstChild.nodeValue = L.over ? 'Finish' : it.k === 'guided' ? 'On your own' : 'Next point';
+  nb.firstChild.nodeValue = L.over ? 'Finish' : it.k === 'guided' ? 'On your own' : L.mode === 'prove' ? 'Next question' : 'Next point';
   nb.hidden = false;
   paintWork();
   learnFeed.scrollTop = sec.offsetTop;
@@ -187,7 +201,10 @@ function mathsEndEl() {
   const ch = chOf(L.ch), st = chStats(ch), nextCh = CH[CH.indexOf(ch) + 1];
   const checks = L.items.filter(it => it.t === 'mq' && it.k === 'check').length, sec = document.createElement('section');
   let title, body;
-  if (L.mode === 'one' && checks === 1) {
+  if (L.mode === 'prove') {
+    title = st.proven === st.n ? 'Chapter proven' : 'Session done';
+    body = st.proven === st.n ? 'Every point has three right answers in a row. ' + (nextCh ? 'Chapter ' + (CH.indexOf(nextCh) + 1) + ' is next.' : 'That is every chapter in this topic.') : st.proven + ' of ' + st.n + ' points proven.';
+  } else if (L.mode === 'one' && checks === 1) {
     title = 'Point checked';
     body = L.right ? 'Right. ' + mathsMeans(L.items[L.items.length - 1].p) : 'Not this time. It is marked weak, and Home will bring it back.';
   } else if (!checks) {
@@ -195,7 +212,7 @@ function mathsEndEl() {
     body = st.proven === st.n ? 'Every point is proven.' : 'Now prove them: three right answers in a row on each point, not all on one day. Home brings them back.';
   } else {
     title = st.learned === st.n && L.mode === 'new' ? 'Chapter learned' : 'Session done';
-    body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Check them again on another day to prove them.');
+    body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Three right in a row on each point proves it.');
   }
   sec.className = 'slide endslide';
   sec.innerHTML =
@@ -203,8 +220,10 @@ function mathsEndEl() {
     '<h2 class="ctitle">' + title + '</h2>' +
     '<p class="lede">' + body + '</p>' +
     '<div class="cta">' +
-      '<button class="primary" type="button" data-act="tab" data-tab="home">Back to Home</button>' +
-      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '') +
+      (L.mode === 'prove' && st.proven === st.n && nextCh
+        ? '<button class="primary" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button><button class="ghost" type="button" data-act="tab" data-tab="home">Back to Home</button>'
+        : '<button class="primary" type="button" data-act="tab" data-tab="home">Back to Home</button>' +
+          (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '')) +
       (L.mode === 'review' ? '' : '<button class="textbtn" type="button" data-act="review" data-ch="' + ch.id + '">See the worked examples again</button>') +
     '</div>';
   return sec;

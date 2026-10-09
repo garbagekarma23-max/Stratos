@@ -12,16 +12,15 @@ function mathsMeans(pid) {
   const st = statusOf(pid), run = runOf(pid);
   if (st === 'new') return 'Not started yet.';
   if (st === 'weak') return 'Your last answer was wrong. Get the next one right to move on.';
-  if (st === 'proven') return 'Three right in a row, each with different numbers, on more than one day.';
-  if (run >= 3) return run + ' right in a row, all on one day. One more on another day proves it.';
-  return plural(run, 'right answer') + ' in a row so far. Three in a row, not all on one day, proves it.';
+  if (st === 'proven') return 'Three right in a row, each with different numbers.';
+  return plural(run, 'right answer') + ' in a row so far. Three in a row proves it.';
 }
-const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers, and not all on the same day. One right answer does not show you can do the type. Any wrong answer makes the point weak.';
+const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers. One right answer does not show you can do the type. A wrong answer makes the point weak and starts the count again.';
 
 function chRow(c, i) {
-  const s = chStats(c), open = ui.open === c.id;
+  const s = chStats(c), g = chStage(c), open = ui.open === c.id;
   let h = '<li class="ch' + (open ? ' open' : '') + '"><button class="ch-head" type="button" data-act="chtoggle" data-ch="' + c.id + '" aria-expanded="' + open + '">' +
-    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="pct">' + s.pct + '%</span>' + IC.down + '</button>';
+    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
   if (open) {
     h += '<ul class="pts">' + c.points.map(p => {
       const st = statusOf(p.id);
@@ -37,7 +36,7 @@ function renderHome() {
   const ch = curCh(), ci = CH.indexOf(ch), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
   if (ui.cur !== ch.id) { ui.cur = ch.id; ui.open = ch.id; }       /* the list opens at the chapter you are on */
   /* The bar starts at the widths it had last time, then slides to the new ones. */
-  const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.pct};
+  const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
     /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
@@ -50,8 +49,9 @@ function renderHome() {
     '<section class="hero" aria-label="Your chapter">' +
       '<p class="kicker">' + esc(SUB.topic.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +
-      '<div class="bar2" role="img" aria-label="' + st.pct + '% proven. ' + st.learned + ' of ' + st.n + ' points learned."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
-      '<div class="legend" aria-hidden="true"><span><i class="k-p"></i>Proven ' + st.pct + '%</span><span><i class="k-l"></i>Learned ' + st.learned + ' of ' + st.n + '</span></div>' +
+      /* The bar: the pale part is points learned, the blue part points proven. The words under it say the same. */
+      '<div class="bar2" role="img" aria-label="' + st.learned + ' of ' + st.n + ' points learned. ' + st.proven + ' of ' + st.n + ' proven."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
+      '<div class="legend" aria-hidden="true"><span><i class="k-p"></i>' + st.proven + ' of ' + st.n + ' proven</span><span><i class="k-l"></i>' + st.learned + ' of ' + st.n + ' learned</span></div>' +
       '<button class="primary wide" type="button" data-act="continue">' + esc(step.label) + '</button>' +
       '<p class="sub">' + esc(step.sub) + '</p>' +
     '</section>';
@@ -64,13 +64,13 @@ function renderHome() {
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
   views.home.scrollTop = keep;
-  if (from.l !== st.lpct || from.p !== st.pct) {
+  if (from.l !== st.lpct || from.p !== st.ppct) {
     setTimeout(() => {
       const b = $('.bar2', views.home); if (!b) return;
-      $('.b-l', b).style.width = st.lpct + '%'; $('.b-p', b).style.width = st.pct + '%';
+      $('.b-l', b).style.width = st.lpct + '%'; $('.b-p', b).style.width = st.ppct + '%';
     }, 80);
   }
-  ui.bar = {ch: ch.id, l: st.lpct, p: st.pct};
+  ui.bar = {ch: ch.id, l: st.lpct, p: st.ppct};
 }
 
 ACT.continue = () => nextStep().run();

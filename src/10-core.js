@@ -202,15 +202,16 @@ function statusOf(pid) {
 }
 /* Maths: each point keeps its last six answers: right or not (ok), the day, the question (q, which tells
    different numbers apart) and the time (t). One right answer does not show a student can do the type, so:
-   a point is new with no answers, and weak if the last answer was wrong. It is proven when the last three answers
-   were all right, each with different numbers, and not all on the same day. It is learned in between. */
+   a point is new with no answers, and weak if the last answer was wrong (a wrong answer also ends its run).
+   It is proven when the last three answers were all right, each with different numbers. It is learned in between.
+   There is no rule about days: spacing comes from Practice bringing back points, never from a lock. */
 const mHist = pid => saved.m.h[pid] || [];
 function runOf(pid) { const h = mHist(pid); let n = 0; for (let i = h.length - 1; i >= 0 && h[i].ok; i--) n++; return n; }
 function mathsStatus(pid) {
   const h = mHist(pid), last = h.slice(-3);
   if (!h.length) return 'new';
   if (!h[h.length - 1].ok) return 'weak';
-  if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3 && new Set(last.map(r => r.day)).size > 1) return 'proven';
+  if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3) return 'proven';
   return 'learned';
 }
 function recordMaths(pid, q, ok) {
@@ -251,7 +252,15 @@ function chStats(ch) {
     else ['a', 'b'].forEach(k => { const r = ansOf(p.id, k); if (r && r.ok) ok++; });
   });
   const n = ch.points.length;
-  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (per * n) * 100), lpct: Math.round(learned / n * 100)};
+  return {n: n, learned: learned, weak: weak, proven: proven, ok: ok, pct: Math.round(ok / (per * n) * 100), lpct: Math.round(learned / n * 100), ppct: Math.round(proven / n * 100)};
+}
+/* What a chapter row says. Learning comes first, then proving, so a learned chapter never looks unfinished. */
+function chStage(ch) {
+  const s = chStats(ch);
+  if (!s.learned) return {t: 'Not started'};
+  if (s.learned < s.n) return {t: s.learned + ' of ' + s.n + ' learned'};
+  if (s.proven === s.n) return {t: 'Proven'};
+  return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
@@ -287,8 +296,9 @@ function mathsNext() {
   }
   if (weak.length >= 3 || (weak.length && !nxt)) return {label: 'Fix ' + plural(weak.length, 'weak point'), sub: names(weak.slice(0, 3)) + (weak.length > 3 ? ' and ' + (weak.length - 3) + ' more' : ''), run: () => openLearn(weak[0].ch, {pts: ids(weak)})};
   if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn shows a worked example, then you finish one and do one on your own.', run: () => openLearn(ch.id)};
-  const todo = ch.points.filter(p => statusOf(p.id) === 'learned').sort((a, b) => lastAt(a.id) - lastAt(b.id));
-  return {label: 'Prove this chapter', sub: plural(todo.length, 'point') + ' still to prove. A point is proven by three right answers in a row, not all on one day.', run: () => openLearn(ch.id, {pts: ids(todo)})};
+  const todo = ch.points.filter(p => statusOf(p.id) !== 'new' && statusOf(p.id) !== 'proven');
+  /* One sitting: check questions from the chapter's unproven points, mixed, until every point is proven. */
+  return {label: 'Prove this chapter', sub: plural(todo.length, 'point') + ' still to prove. Questions keep coming until each has three right in a row.', run: () => openLearn(ch.id, {prove: true})};
 }
 
 /* ---------- altitude ---------- */
