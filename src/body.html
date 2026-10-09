@@ -2,7 +2,8 @@
   <p class="a-word">Stratos</p>
   <p>Second test build.</p>
   <ul>
-    <li>One topic is loaded: Year 12 Economics, The Global Economy. It has 4 chapters, 26 points and 52 questions.</li>
+    <li>Two topics are loaded. Year 12 Economics, The Global Economy, has 4 chapters, 26 points and 52 questions. Year 11 Maths, Equations, has 2 chapters and 7 points. Pick one from the subject button on Home.</li>
+    <li>Maths questions are made fresh each time, with new numbers. Write the working with the keypad, one line at a time.</li>
     <li>The study notes are a first draft. They still need checking against the NESA syllabus.</li>
     <li>Learn teaches a point, then checks it. Practice asks about what you have learned, weak points first.</li>
     <li>The friends are samples. Messages are cards and preset replies.</li>
@@ -19,8 +20,18 @@
     <header id="learnBar">
       <button class="chpick" id="chPick" type="button" data-act="chpick" aria-haspopup="dialog"><span class="t" id="chPickT"></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="segs" id="segs" aria-hidden="true"></div>
+      <button class="icon-btn" id="mClose" type="button" data-act="mclose" aria-label="Leave this question for now" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </header>
     <div class="feed" id="learnFeed" tabindex="-1" aria-label="Cards and check questions"></div>
+    <!-- The maths keypad (lab/keypad.js and lab/sheet.js). It shows while a maths question is being worked. -->
+    <div class="keypad" id="mPad" hidden>
+      <div class="padbar">
+        <button class="done" id="mDone" type="button">Done</button>
+        <button class="calc" id="mCalc" type="button" tabindex="-1" disabled><span class="lab"></span><span class="val"></span></button>
+      </div>
+      <div class="strip" id="mStrip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg><i></i><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></div>
+      <div class="keys" id="mKeys" aria-label="Keypad"></div>
+    </div>
   </section>
 
   <section class="view" id="v-practice" aria-label="Practice">

@@ -100,7 +100,7 @@ svg{display:block;flex:none}
 .top .tr{visibility:hidden}
 #app[data-mode="q"][data-open] .top .tr{visibility:visible}
 .view{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;padding:20px 16px 32px}
-.view::-webkit-scrollbar,.sheet::-webkit-scrollbar{display:none}
+.view::-webkit-scrollbar{display:none}
 
 /* ---------- the start screen ---------- */
 #intro .h1{margin-top:4px}
@@ -116,71 +116,9 @@ svg{display:block;flex:none}
 .qmath{margin-top:6px;font-size:26px;line-height:1.3;overflow-x:auto;scrollbar-width:none}
 .qmath::-webkit-scrollbar{display:none}
 
-/* The sheet: the student's working, one line per row. */
-.sheet{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;padding:4px 16px 16px}
-.line{display:grid;grid-template-columns:minmax(0,1fr) 22px;align-items:center;column-gap:8px;min-height:50px;border-bottom:1px solid var(--line);animation:open .16s ease-out}
-@keyframes open{from{opacity:0;transform:translateY(-4px)}}
-.line.active{border-bottom-color:var(--line-2)}
-.line .mk{grid-column:2;grid-row:1;width:22px;height:22px;display:grid;place-items:center}
-.line .mk svg{width:20px;height:20px;fill:none;stroke:var(--good);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;animation:land .18s ease-out}
-.line .mk i{width:8px;height:8px;border-radius:50%;background:var(--warn-dot);animation:land .18s ease-out}
-@keyframes land{from{opacity:0;transform:scale(.6)}}
-.line .say{grid-column:1 / -1;margin:-6px 0 10px;font-size:13px;line-height:1.35;color:var(--ink-2)}
-.line.wrong .say{color:var(--warn)}
-.line .say:empty{display:none}
-.end{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:14px 0 4px;font-size:14px;color:var(--ink-2);animation:open .16s ease-out}
-.end b{font-weight:600;color:var(--ink)}
-.end math-span{font-size:22px;color:var(--ink)}
-
-/* MathLive's field, restyled with our values. Its own buttons and look are hidden. */
-math-field{display:block;grid-column:1;grid-row:1;min-width:0;width:100%;padding:6px 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:24px;outline:none;
-  --caret-color:var(--accent);--selection-background-color:var(--accent-soft);--selection-color:var(--ink);
-  --contains-highlight-background-color:transparent;--placeholder-color:var(--ink-3);--placeholder-opacity:1;
-  --smart-fence-color:var(--ink-3);--primary-color:var(--accent);--text-font-family:var(--f)}
-math-field:focus,math-field:focus-within{outline:none}
-math-field::part(virtual-keyboard-toggle),math-field::part(menu-toggle){display:none}
-math-field::part(container){min-height:34px;padding:0}
-math-field::part(content){padding:0;overflow:visible}
-.line:not(.active) math-field{pointer-events:none}
-.line{cursor:text}
-math-span{color:var(--ink)}
-
-/* ---------- the keypad ---------- */
-.pad{flex:none;padding:6px 8px 8px;border-top:1px solid var(--line);background:var(--paper);--kh:clamp(36px,calc(4.9vh + 4.6px),46px);touch-action:none;-webkit-user-select:none;user-select:none}
-@supports (height:1dvh){.pad{--kh:clamp(36px,calc(4.9dvh + 4.6px),46px)}}
-.padbar{display:flex;align-items:center;gap:8px;height:44px;padding:0 0 2px}
-/* Done is the one button in the blue. It sits at the opposite corner from Enter. */
-.done{flex:none;min-height:40px;padding:0 20px;border:0;border-radius:999px;background:var(--accent);color:var(--paper);font:600 15px var(--f);transition:transform .07s,opacity .2s;touch-action:none}
-.done.down,.act.down{transform:scale(.96)}
-/* The calculator display. */
-.calc{flex:1;min-width:0;height:40px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px;border:0;border-radius:12px;background:var(--wash);color:var(--ink);text-align:right;touch-action:none;transition:background-color .07s,transform .07s}
-.calc .lab{flex:none;font-size:12px;color:var(--ink-2)}
-.calc .val{min-width:0;overflow:hidden;font-size:20px;line-height:1;white-space:nowrap}
-.calc.err .val{font:500 14px var(--f);color:var(--ink-2)}
-.calc.down{background:var(--wash-2);transform:scale(.98)}
-/* The strip: drag along it to move the cursor. */
-.strip{display:flex;align-items:center;gap:4px;height:24px;margin:0 2px;color:var(--ink-3);touch-action:none;cursor:ew-resize}
-.strip svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.strip i{flex:1;height:2px;border-radius:1px;background:var(--line-2);transition:background-color .1s,height .1s}
-.strip.on{color:var(--ink)}
-.strip.on i{height:4px;background:var(--ink-3)}
-.keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;touch-action:none;-webkit-touch-callout:none}
-.key{height:var(--kh);min-width:0;display:grid;place-items:center;padding:0;border:1px solid transparent;border-radius:12px;background:var(--wash);color:var(--ink);font:500 22px/1 var(--f);font-variant-numeric:tabular-nums;touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;transition:transform .07s,background-color .07s,opacity .2s}
-.key.fn{background:var(--paper);border-color:var(--line-2)}
-.key.word{font-size:15px;font-weight:600}
-.key.maths{font:400 25px/1 KaTeX_Main,serif}
-.key.maths[data-key="t0"]{font-family:KaTeX_Math,serif;font-style:italic}
-.key .ic{width:22px;height:22px}
-.key .ic .dot{fill:currentColor;stroke:none}
-.key .kf{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.key .kf .slot{stroke:var(--ink-3);stroke-width:1.3}
-.key .kf .sup{fill:currentColor;stroke:none;font:400 11px KaTeX_Main,serif}
-/* Enter is set apart by the darker fill of v2's main button, not a new colour. */
-.key.enter{grid-column:span 2;background:var(--ink);color:var(--paper)}
-.key.down{transform:scale(.95);background:var(--wash-2)}
-.key.fn.down{background:var(--wash)}
-.key.enter.down,.key.enter.held{background:var(--ink);opacity:.8}
-.keys[aria-disabled="true"] .key{opacity:.4}
+/* The sheet: the student's working, one line per row. Its lines and the keypad are styled in lab/keys.css. */
+.work{flex:1;min-height:0;padding:4px 16px 16px}
+.act.down{transform:scale(.96)}
 
 /* ---------- results ---------- */
 #results .h1{margin-top:4px}
@@ -202,10 +140,7 @@ math-span{color:var(--ink)}
 
 @media (max-height:640px){
   .qmath{font-size:22px}
-  math-field{font-size:22px}
-  .line{min-height:44px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .key.down,.done.down,.calc.down{transform:none}
 }

@@ -1,4 +1,4 @@
-// A tiny web server for the Maths Lab tests. It serves the repository folder on a free port,
+// A tiny web server for the tests. It serves the repository folder on a free port,
 // the way GitHub Pages does, because the maths fonts do not load from a plain file path.
 import http from 'http';
 import fs from 'fs';
@@ -17,5 +17,7 @@ export function serve(root = ROOT) {
       res.end(data);
     });
   });
+  /* unref lets a test finish without closing the server itself. */
+  server.unref();
   return new Promise(ok => server.listen(0, '127.0.0.1', () => ok({url: 'http://127.0.0.1:' + server.address().port + '/', close: () => server.close()})));
 }

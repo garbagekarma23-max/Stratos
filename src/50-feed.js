@@ -80,15 +80,25 @@ ACT.why = b => { const sec = b.closest('.slide'), it = P && P.items[+sec.dataset
 const segsEl = $('#segs'), chPickT = $('#chPickT');
 
 /* Build a session. By default it holds the points of the chapter that are still new.
-   o.review holds every point of the chapter, and o.only holds one point. */
+   o.review holds every point of the chapter, o.only holds one point, and o.pts holds a list of points.
+   Economics: each point is a card, then its check question.
+   Maths: a new or weak point gets the worked example, a guided question and a check question.
+   A learned or proven point goes straight to a check question. Review shows each worked example, then a check. */
 function buildLearn(chId, o) {
   o = o || {};
   const ch = chOf(chId) || curCh();
-  const pts = o.only ? [PT[o.only]] : ch.points.filter(p => o.review || statusOf(p.id) === 'new');
+  mathsStop();
+  const pts = o.pts ? o.pts.map(id => PT[id]) : o.only ? [PT[o.only]] : ch.points.filter(p => o.review || statusOf(p.id) === 'new');
   const items = [];
-  pts.forEach(p => { items.push({t: 'card', p: p.id}); items.push({t: 'q', p: p.id, k: 'a', perm: shuffle([0, 1, 2, 3])}); });
-  L = {ch: ch.id, mode: o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
-  if (!o.only) save({cur: ch.id});
+  pts.forEach(p => {
+    if (p.sub !== 'maths') { items.push({t: 'card', p: p.id}); items.push({t: 'q', p: p.id, k: 'a', perm: shuffle([0, 1, 2, 3])}); return; }
+    const st = statusOf(p.id);
+    if (o.review) items.push({t: 'wex', p: p.id}, {t: 'mq', p: p.id, k: 'check'});
+    else if (st === 'new' || st === 'weak') items.push({t: 'wex', p: p.id}, {t: 'mq', p: p.id, k: 'guided'}, {t: 'mq', p: p.id, k: 'check'});
+    else items.push({t: 'mq', p: p.id, k: 'check'});
+  });
+  L = {ch: ch.id, mode: o.pts ? 'pts' : o.only ? 'one' : (o.review ? 'review' : 'new'), items: items, res: [], shown: 0, right: 0, row: 0, over: false};
+  if (!o.only && !o.pts) setCur(ch.id);
   learnFeed.textContent = '';
   if (items.length) fillLearn(); else { L.over = true; learnFeed.appendChild(learnEndEl()); }
   learnFeed.scrollTop = 0;
@@ -96,7 +106,9 @@ function buildLearn(chId, o) {
 }
 let learnHold = false;
 function openLearn(chId, o) {
-  const ch = chOf(chId) || curCh(), plain = !o || (!o.only && !o.review);
+  const c = chOf(chId);
+  if (c && c.sub !== SUB.id) useSubject(c.sub, true);       /* a chapter of the other subject switches to it first */
+  const ch = c || curCh(), plain = !o || (!o.only && !o.review && !o.pts);
   const midway = L && L.ch === ch.id && L.mode === 'new' && !L.over;
   if (!(plain && midway)) buildLearn(ch.id, o);     /* a session that is part way through carries on */
   learnHold = true; go('learn'); learnHold = false;
@@ -107,12 +119,14 @@ function enterLearn() {
   if (!learnHold && (!L || (L.over && cur.points.some(p => statusOf(p.id) === 'new')))) buildLearn(cur.id);
   paintLearnBar();
 }
-/* Add slides until a question is waiting: a card, then its check. */
+/* Add slides until a question is waiting: a card (or a worked example), then its question. */
 function fillLearn() {
   let i = L.shown;
   while (i < L.items.length) {
     const it = L.items[i];
     if (it.t === 'card') { learnFeed.appendChild(cardEl(i)); L.res[i] = {o: 'card'}; i++; }
+    else if (it.t === 'wex') { learnFeed.appendChild(wexEl(i)); L.res[i] = {o: 'card'}; i++; }
+    else if (it.t === 'mq') { learnFeed.appendChild(mqEl(i)); i++; break; }
     else { learnFeed.appendChild(qEl(L, i, true)); i++; break; }
   }
   L.shown = i;
@@ -129,6 +143,7 @@ function cardEl(i) {
   return sec;
 }
 function learnEndEl() {
+  if (chOf(L.ch).sub === 'maths') return mathsEndEl();
   const ch = chOf(L.ch), st = chStats(ch), nextCh = CH[CH.indexOf(ch) + 1], asked = L.items.filter(it => it.t === 'q').length;
   const sec = document.createElement('section');
   let title, body;
@@ -198,7 +213,12 @@ function paintLearnBar() {
   segsEl.innerHTML = ch.points.map(p => '<i class="seg ' + statusOf(p.id) + (it && it.p === p.id ? ' cur' : '') + '"></i>').join('');
 }
 let segTick = 0;
-learnFeed.addEventListener('scroll', () => { if (segTick) return; segTick = setTimeout(() => { segTick = 0; paintLearnBar(); }, 120); }, {passive: true});
+let workTick = 0;
+learnFeed.addEventListener('scroll', () => {
+  clearTimeout(workTick); workTick = setTimeout(paintWork, 140);     /* once the scroll has settled */
+  if (segTick) return;
+  segTick = setTimeout(() => { segTick = 0; paintLearnBar(); }, 120);
+}, {passive: true});
 
 ACT.chpick = () => {
   openSheet('Chapters', '<div class="picks">' + CH.map((c, i) => {

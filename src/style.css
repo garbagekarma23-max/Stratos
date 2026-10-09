@@ -256,6 +256,42 @@ svg{display:block;flex:none}
 .lines b{font-weight:700}
 .rem{padding-top:12px;border-top:1px solid var(--line);font-size:15px;line-height:1.45;color:var(--ink-2);-webkit-user-select:text;user-select:text}
 .rem b{display:block;font-size:13px;color:var(--ink)}
+/* ---------- maths in learn ----------
+   The worked example card, and the guided and check questions. The sheet and keypad themselves are in lab/keys.css. */
+.intro{font-size:16px;line-height:1.45;color:var(--ink-2)}
+.wex-q,.mq-q{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.wex-q .ask,.mq-q .ask{font-size:13px;color:var(--ink-2)}
+.wex-q math-span,.mq-q math-span{font-size:24px}
+/* Each line of a worked solution, with its note to the right. On a narrow screen a long note drops under its line. */
+.wsteps{display:grid;border-top:1px solid var(--line)}
+.wsteps li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.wsteps math-span{font-size:20px}
+.wsteps .wn{flex:1 1 9em;font-size:13px;line-height:1.35;color:var(--ink-2);text-align:right}
+.note .wsteps{margin-top:6px}
+.note .wsteps math-span{font-size:18px}
+.mq-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.mq-head .act{flex:none}
+.mq-tip{font-size:14px;color:var(--ink-2)}
+.slide.mq{gap:10px}
+.slide.mq .work{margin:0 -16px;padding:0 16px;border-top:1px solid var(--line)}
+.slide.mq .work .end{padding-bottom:10px}
+.slide.mq .work .end.pop{animation:pop .4s cubic-bezier(.2,1.5,.4,1)}
+/* Work mode: the keypad sits at the bottom of Learn, the tab bar steps aside, and the question fills the rest. */
+#app[data-work] #tabs{display:none}
+#app[data-work] #v-learn{bottom:0}
+#app[data-work] #learnFeed{overflow:hidden}
+#app[data-work] #toast{bottom:calc(100% - 140px)}
+#v-learn .keypad{position:absolute;inset:auto 0 0 0;z-index:4}
+.slide.mq.working{height:100%;padding-bottom:0}
+.slide.mq.working .work{flex:1;min-height:0}
+.slide.mq.working .foot{display:none}
+#mClose{position:absolute;top:6px;right:8px}
+/* On a short screen the keypad takes half the height, so the hint above the working steps aside to leave room for the lines. */
+@media (max-height:700px){.slide.mq.working .mq-tip{display:none}}
+.panel .rule{font-size:14px;line-height:1.45;color:var(--ink-2)}
+.panel .intro{font-size:15px}
+.panel .wsteps math-span{font-size:18px}
+.pick[aria-current="true"] .v{color:var(--accent);font-weight:600}
 .endslide{gap:14px}
 .endslide .cta{display:grid;gap:8px;margin-top:6px}
 .endslide .textbtn{justify-self:start}

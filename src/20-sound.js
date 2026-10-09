@@ -62,6 +62,19 @@ const sound = (() => {
     g.gain.exponentialRampToValueAtTime(0.0001, t + 0.012 + dur);
     o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + 0.07);
   }
+  /* The maths keypad's click: a very short tap of filtered noise, like a soft key on a calculator.
+     Copied from lab/sound.js with the level measured there, well below the ping. */
+  let noise = null;
+  function click(vol) {
+    const a = ac(); if (!a) return;
+    if (!noise) { noise = a.createBuffer(1, Math.floor(a.sampleRate * 0.03), a.sampleRate); const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1; }
+    const t = a.currentTime, s = a.createBufferSource(), f = a.createBiquadFilter(), g = a.createGain();
+    s.buffer = noise; f.type = 'bandpass'; f.frequency.value = 2600; f.Q.value = 1.1;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.001);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.022);
+    s.connect(f); f.connect(g); g.connect(bus); s.start(t); s.stop(t + 0.03);
+  }
   /* Play one recording. A rate below 1 plays it slower, which makes it deeper and longer, so it sounds bigger. */
   function rec(name, t, o) {
     const a = ac(), s = samples[name]; if (!a || !s) return;
@@ -161,6 +174,9 @@ const sound = (() => {
     liftoff: safe(() => { const a = ac(); if (a) rec('rocket', a.currentTime + 0.02, {rate: 1.1, vol: 0.78, fadeIn: 0.03, len: 0.9, fade: 0.5, wet: 0.2}); }),
     layer: safe(() => { [0, 4, 7, 12].forEach((s, i) => tone(659.25 * Math.pow(2, s / 12), 0.2 + i * 0.09, 0.25, 'sine', 0.19)); }),
     tap: safe(() => { tone(880, 0, 0.06, 'sine', 0.135); }),
+    /* The maths keypad: a click for each key, and a softer one as the cursor moves along the strip. */
+    click: safe(() => click(1.6)),
+    step: safe(() => click(0.6)),
     /* Phones only let sound start from inside a tap. Calling this in the tap gets the sound ready for what follows. */
     wake: safe(() => { ac(); })
   };

@@ -3,6 +3,8 @@ document.addEventListener('keydown', ev => {
   if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
   if (ev.key === 'Escape') { if (!sheet.hidden) closeSheet(); else if (pages.length) closePage(); return; }
   if (!sheet.hidden || pages.length) return;
+  /* While a maths question is being worked, typing goes to the line (see lab/sheet.js), never to the slides. */
+  if (app.dataset.work !== undefined) return;
   const tag = ev.target && ev.target.tagName ? ev.target.tagName.toLowerCase() : '';
   if (tag === 'input' || tag === 'textarea') return;
   const f = ui.tab === 'learn' ? learnFeed : (ui.tab === 'practice' && P && launch.hidden ? feed : null);
@@ -26,6 +28,7 @@ window.addEventListener('resize', () => {
   resize();
   if (a) feed.scrollTop = a.offsetTop;
   if (b) learnFeed.scrollTop = b.offsetTop;
+  paintWork();
 });
 
 /* ---------- appearance ----------
@@ -44,6 +47,8 @@ function start(data) {
   started = true;
   loadSaved();
   applyTheme(); applyLook(); applyBg();
+  paintSearchFor();
+  if (isMaths()) loadMaths();
   resize();
   const t = data && data.v === 1 && (data.tab === 'search' || data.tab === 'you') ? data.tab : 'home';
   go(t);

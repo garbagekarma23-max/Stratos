@@ -8,18 +8,27 @@ How the pieces fit:
   src/style.css        how everything looks
   src/body.html        the fixed parts of the page: the five views, the tab bar, the sheet
   src/content.js       the study content: chapters, points, cards and questions
+  src/maths-content.js the maths content: chapters, points, worked examples and question templates
   src/10-core.js ...   the script, in the order listed in JS below
   src/recordings.json  the three sound recordings, stored as text
+  lab/...              the Maths Lab's keypad, working sheet and line checker. They are read from lab/ so there is
+                       one copy, shared with maths-lab.html. MathLive itself is not copied in: v2.html loads it from
+                       lab/mathlive the first time maths is opened.
 """
 import json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
+LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
-JS = ['content.js', '10-core.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '60-practice.js', '70-social.js', '90-boot.js']
+JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
+      '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
+      '60-practice.js', '70-social.js', '90-boot.js']
 
 def read(name):
-    return open(SRC + name, encoding='utf8').read().rstrip('\n')
+    """A file from src/, or from lab/ when its name starts with lab/."""
+    path = LAB + name[4:] if name.startswith('lab/') else SRC + name
+    return open(path, encoding='utf8').read().rstrip('\n')
 
 def parts():
     """Return the title, the typeface links, and everything that goes in the body."""
@@ -30,7 +39,7 @@ def parts():
     head = read('head.html')
     m = re.match(r'<title>(.*?)</title>\n', head)
     assert m, 'head.html must start with the title'
-    body = ('<style>\n' + read('style.css') + '\n</style>\n\n' + read('body.html') +
+    body = ('<style>\n' + read('style.css') + '\n\n' + read('lab/keys.css') + '\n</style>\n\n' + read('body.html') +
             '\n\n<script>\n(() => {\n\'use strict\';\n\n' + script + '\n})();\n</script>\n')
     return m.group(1), head[m.end():], body
 

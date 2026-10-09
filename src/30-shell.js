@@ -50,7 +50,7 @@ function paint() {
   else renderYou();
 }
 /* The tab bar goes dark while a flight is on screen with the Sky background. */
-function paintChrome() { app.dataset.chrome = (ui.tab === 'practice' && P && !pages.length && saved.bg === 'sky') ? 'sky' : 'plain'; }
+function paintChrome() { app.dataset.chrome = (ui.tab === 'practice' && P && !pages.length && saved.bg === 'sky') ? 'sky' : 'plain'; paintWork(); }
 ACT.tab = b => {
   const t = b.dataset.tab;
   if (t === ui.tab) { if (t !== 'learn' && t !== 'practice') views[t].scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'}); return; }

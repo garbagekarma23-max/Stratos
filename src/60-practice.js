@@ -15,8 +15,14 @@ function poolFor(mode, chId) {
 function enterPractice() {
   if (P) { showRun(true); return; }
   showRun(false);
-  renderStart();
+  if (isMaths()) renderMathsStart(); else renderStart();
 }
+/* Practice for maths comes in the next build. Until then the tab says so, and offers Economics. */
+function renderMathsStart() {
+  startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice for maths comes in the next test build. For now, Learn teaches each maths point and checks it.</p>' +
+    '<button class="primary" type="button" data-act="praceco">Practise Economics</button><button class="ghost" type="button" data-act="golearn">Open Learn</button></div>';
+}
+ACT.praceco = () => { useSubject('eco', true); toast('Switched to Economics: The Global Economy'); enterPractice(); };
 function showRun(on) {
   run.hidden = !on; startEl.hidden = on;
   views.practice.classList.toggle('fixed', on);
@@ -78,6 +84,8 @@ const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l,
 /* Start a flight. o.mode is mix or chapter (your own practice), challenge (8 set questions) or race (first to 6). */
 function startPractice(o) {
   sound.wake();
+  /* Flights, challenges and races are Economics for now. */
+  if (isMaths()) { useSubject('eco', true); toast('Practice uses Economics for now.'); }
   let picked;
   if (o.mode === 'challenge' || o.mode === 'race') {
     const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));

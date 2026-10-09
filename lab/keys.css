@@ -1,0 +1,85 @@
+/* Stratos maths: the working sheet and the keypad.
+   Shared by the Maths Lab (maths-lab.html links this file) and the main app (build.py copies it into v2.html).
+   Everything here sits under .work (the sheet) or .keypad (the keys), so it cannot change anything else on either page.
+   It uses the colour names from src/style.css, which both pages define.
+   Maths is drawn in MathLive's maths font (KaTeX). Everything else is Hanken Grotesk. */
+
+/* ---------- the sheet: the student's working, one line per row ---------- */
+.work{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;margin:0;list-style:none}
+.work::-webkit-scrollbar{display:none}
+.work .line{display:grid;grid-template-columns:minmax(0,1fr) 22px;align-items:center;column-gap:8px;min-height:50px;border-bottom:1px solid var(--line);cursor:text;animation:w-open .16s ease-out}
+@keyframes w-open{from{opacity:0;transform:translateY(-4px)}}
+.work .line.active{border-bottom-color:var(--line-2)}
+.work .line .mk{grid-column:2;grid-row:1;width:22px;height:22px;display:grid;place-items:center}
+.work .line .mk svg{width:20px;height:20px;opacity:1;fill:none;stroke:var(--good);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;animation:w-land .18s ease-out}
+.work .line .mk i{width:8px;height:8px;border-radius:50%;background:var(--warn-dot);animation:w-land .18s ease-out}
+@keyframes w-land{from{opacity:0;transform:scale(.6)}}
+.work .line .say{grid-column:1 / -1;margin:-6px 0 10px;font-size:13px;line-height:1.35;color:var(--ink-2)}
+.work .line.wrong .say{color:var(--warn)}
+.work .line .say:empty{display:none}
+/* Lines written for the student, as in a guided question. They are locked, so they are drawn, not typed. */
+.work .line.given{cursor:default;animation:none}
+.work .line.given math-span{grid-column:1;grid-row:1;min-width:0;padding:6px 0;font-size:22px;color:var(--ink-2);overflow:hidden}
+.work .line.given .say{color:var(--ink-3)}
+.work .end{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:14px 0 4px;font-size:14px;color:var(--ink-2);animation:w-open .16s ease-out}
+.work .end b{font-weight:600;color:var(--ink)}
+.work .end math-span{font-size:22px;color:var(--ink)}
+
+/* MathLive's field, restyled with our values. Its own buttons and look are hidden. */
+.work math-field{display:block;grid-column:1;grid-row:1;min-width:0;width:100%;padding:6px 0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:24px;outline:none;
+  --caret-color:var(--accent);--selection-background-color:var(--accent-soft);--selection-color:var(--ink);
+  --contains-highlight-background-color:transparent;--placeholder-color:var(--ink-3);--placeholder-opacity:1;
+  --smart-fence-color:var(--ink-3);--primary-color:var(--accent);--text-font-family:var(--f)}
+.work math-field:focus,.work math-field:focus-within{outline:none}
+.work math-field::part(virtual-keyboard-toggle),.work math-field::part(menu-toggle){display:none}
+.work math-field::part(container){min-height:34px;padding:0}
+.work math-field::part(content){padding:0;overflow:visible}
+.work .line:not(.active) math-field{pointer-events:none}
+math-span{color:var(--ink)}
+/* Maths that has not been drawn yet stays out of sight, so its LaTeX never flashes up. */
+math-span:not(:defined){visibility:hidden}
+
+/* ---------- the keypad ---------- */
+.keypad{flex:none;padding:6px 8px 8px;border-top:1px solid var(--line);background:var(--paper);--kh:clamp(36px,calc(4.9vh + 4.6px),46px);touch-action:none;-webkit-user-select:none;user-select:none}
+@supports (height:1dvh){.keypad{--kh:clamp(36px,calc(4.9dvh + 4.6px),46px)}}
+.keypad .padbar{display:flex;align-items:center;gap:8px;height:44px;padding:0 0 2px}
+/* Done is the one button in the blue. It sits at the opposite corner from Enter. */
+.keypad .done{flex:none;min-height:40px;padding:0 20px;border:0;border-radius:999px;background:var(--accent);color:var(--paper);font:600 15px var(--f);transition:transform .07s,opacity .2s;touch-action:none}
+.keypad .done.down{transform:scale(.96)}
+/* The calculator display. */
+.keypad .calc{flex:1;min-width:0;height:40px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px;border:0;border-radius:12px;background:var(--wash);color:var(--ink);text-align:right;touch-action:none;transition:background-color .07s,transform .07s}
+.keypad .calc .lab{flex:none;font-size:12px;color:var(--ink-2)}
+.keypad .calc .val{min-width:0;overflow:hidden;font-size:20px;line-height:1;white-space:nowrap}
+.keypad .calc.err .val{font:500 14px var(--f);color:var(--ink-2)}
+.keypad .calc.down{background:var(--wash-2);transform:scale(.98)}
+/* The strip: drag along it to move the cursor. */
+.keypad .strip{display:flex;align-items:center;gap:4px;height:24px;margin:0 2px;color:var(--ink-3);touch-action:none;cursor:ew-resize}
+.keypad .strip svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.keypad .strip i{flex:1;height:2px;border-radius:1px;background:var(--line-2);transition:background-color .1s,height .1s}
+.keypad .strip.on{color:var(--ink)}
+.keypad .strip.on i{height:4px;background:var(--ink-3)}
+.keypad .keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;touch-action:none;-webkit-touch-callout:none}
+.keypad .key{height:var(--kh);min-width:0;display:grid;place-items:center;padding:0;border:1px solid transparent;border-radius:12px;background:var(--wash);color:var(--ink);font:500 22px/1 var(--f);font-variant-numeric:tabular-nums;touch-action:none;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;transition:transform .07s,background-color .07s,opacity .2s}
+.keypad .key.fn{background:var(--paper);border-color:var(--line-2)}
+.keypad .key.word{font-size:15px;font-weight:600}
+.keypad .key.maths{font:400 25px/1 KaTeX_Main,serif}
+.keypad .key.maths[data-key="t0"]{font-family:KaTeX_Math,serif;font-style:italic}
+.keypad .key .ic{width:22px;height:22px}
+.keypad .key .ic .dot{fill:currentColor;stroke:none}
+.keypad .key .kf{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.keypad .key .kf .slot{stroke:var(--ink-3);stroke-width:1.3}
+.keypad .key .kf .sup{fill:currentColor;stroke:none;font:400 11px KaTeX_Main,serif}
+/* Enter is set apart by the darker fill of v2's main button, not a new colour. */
+.keypad .key.enter{grid-column:span 2;background:var(--ink);color:var(--paper)}
+.keypad .key.down{transform:scale(.95);background:var(--wash-2)}
+.keypad .key.fn.down{background:var(--wash)}
+.keypad .key.enter.down,.keypad .key.enter.held{background:var(--ink);opacity:.8}
+.keypad .keys[aria-disabled="true"] .key{opacity:.4}
+
+@media (max-height:640px){
+  .work math-field{font-size:22px}
+  .work .line{min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){
+  .keypad .key.down,.keypad .done.down,.keypad .calc.down{transform:none}
+}
