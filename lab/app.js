@@ -22,7 +22,8 @@
   /* LaTeX for drawing only (not typing): the topic's short names written out in full. */
   const drawn = latex => Object.keys(TOPIC.macros || {}).reduce((s, k) => s.replace(new RegExp('\\\\' + k + '(?![a-zA-Z])', 'g'), TOPIC.macros[k]), latex);
   /* What typing on a computer keyboard turns into. */
-  const SHORTCUTS = {'*': '\\times', '+-': '\\pm', 'or': '\\or', 'sqrt': '\\sqrt{#?}'};
+  /* (+ then - and o then r are handled in typeChar below, so they work at any typing speed.) */
+  const SHORTCUTS = {'*': '\\times', 'sqrt': '\\sqrt{#?}'};
 
   /* MathLive's own sounds, vibration and on-screen keyboard are not used. Ours are. */
   try { MathfieldElement.soundsDirectory = null; } catch (e) {}
@@ -97,12 +98,14 @@
     mf.inlineShortcuts = SHORTCUTS;
     mf.value = latex || '';
     mf.readOnly = true;
-    const L = {li: li, mf: mf, checked: null, kind: null, say: '', history: [], deleted: false};
+    const L = {li: li, mf: mf, checked: null, kind: null, say: '', history: [], deleted: false, box: null};
     Q.lines.push(L);
     mf.addEventListener('input', () => edited(L));
     mf.addEventListener('keydown', ev => fieldKey(L, ev), {capture: true});
     /* MathLive's long-press menu stays closed. */
     mf.addEventListener('contextmenu', ev => ev.preventDefault());
+    /* A tap inside the line moves the cursor itself, so an open box (see the keypad) no longer applies. */
+    mf.addEventListener('pointerdown', () => { L.box = null; });
     /* Tap a line to write on it. */
     li.addEventListener('pointerdown', ev => {
       if (!Q || Q.state !== 'open' || Q.active === L) return;
@@ -246,42 +249,113 @@
   /* Each line keeps its own list of how it looked before each key that changed it, so Undo steps back one key at a time.
      (MathLive has its own undo, which joins runs of typing together. The keypad does not use it.) */
   function setLine(L, value, at) { L.mf.value = value; L.mf.position = Math.min(at, L.mf.lastOffset); }
-  function remember(L) { L.history.push({v: L.mf.value, at: L.mf.position}); if (L.history.length > 500) L.history.shift(); }
+  /* Each step keeps the line, the cursor or selection (so an empty box comes back selected), and any open box. */
+  const snap = L => ({v: L.mf.value, sel: JSON.parse(JSON.stringify(L.mf.selection)), box: L.box ? Object.assign({}, L.box) : null});
+  function restore(L, h) {
+    L.mf.value = h.v;
+    try { L.mf.selection = h.sel; } catch (e) { L.mf.position = L.mf.lastOffset; }
+    L.box = h.box ? Object.assign({}, h.box) : null;
+  }
+  function remember(L) { L.history.push(snap(L)); if (L.history.length > 500) L.history.shift(); }
   function forgetIfSame(L) { const h = L.history[L.history.length - 1]; if (h && h.v === L.mf.value) L.history.pop(); }
   const BASELESS = /(^|[{(=+\-]|\\(?:times|div|pm|mp|or|cdot)\s*)\^/;
+  /* = and "or" never belong inside a power, fraction, root or brackets, so they first step the cursor out to the main line. */
+  const STEPS_OUT = new Set(['=', '\\or']);
+  function stepOut(mf) {
+    for (let i = 0; i < 20; i++) { const at = mf.position; mf.executeCommand('moveAfterParent'); if (mf.position === at) break; }
+  }
+  /* Square or power on an empty spot drops an empty box with the cursor in it. The box takes the number typed next
+     (digits, the point, or a letter such as x). The first other key closes the box first: the cursor jumps past the
+     square, or past the power. Without this, MathLive would carry the ² along to whatever comes next, so 7 = 49 after
+     the box became 7 = 49².
+     The box remembers how many cursor places came after it; closing puts the cursor back that far from the end. */
+  const fills = k => !!(k.num || (k.topic && /^[a-zA-Z]$/.test(k.put || '')));
+  function closeBox(L, stay) {
+    const box = L.box;
+    L.box = null;
+    if (!box || stay) return false;
+    L.mf.position = Math.max(0, L.mf.lastOffset - box.tail);
+    return true;
+  }
+  /* Delete on an empty line removes it, as in a notes app, and the cursor goes to the end of the line above.
+     The first line always stays. */
+  function removeLine(L) {
+    const i = Q.lines.indexOf(L);
+    if (i <= 0 || L.mf.value) return false;
+    Q.lines.splice(i, 1);
+    L.mf.blur();
+    L.li.remove();
+    Q.active = null;
+    activate(Q.lines[i - 1], true);
+    stat().deletes++;
+    say('Line removed.');
+    keep();
+    return true;
+  }
+  let pressRemoved = false;      /* a Delete press that removed a line does nothing more when it is held */
   const defs = Keypad.build(keysEl, TOPIC, (name, how) => {
-    if (how === 'land') { labSound.wake(); labSound.click(); labBuzz(6); return; }
+    if (how === 'land') { pressRemoved = false; labSound.wake(); labSound.click(); labBuzz(6); return; }
     if (!Q || Q.state !== 'open') return;
     const L = Q.active, mf = L.mf, k = defs[name];
     focusField(mf);
+    if (L.box && k.cmd === 'delete' && how === 'tap') {
+      /* Delete inside a box takes back one number at a time, then the box's last number leaves the box empty,
+         and Delete on the empty box takes the square or power away. */
+      const box = L.box;
+      remember(L);
+      if (box.n > 1) { mf.executeCommand('deleteBackward'); box.n--; }
+      else if (box.n === 1) restore(L, box.empty);
+      else restore(L, box.before);
+      stat().deletes++;
+      L.deleted = true;
+      edited(L);
+      return;
+    }
+    if (L.box && !fills(k)) {
+      /* The right arrow on a power box goes on into the power, as normal. Anywhere else it just closes the box. */
+      if (k.cmd === 'right' && L.box.power) L.box = null;
+      /* Delete, Undo and the left arrow work on the box itself. Any other key goes after it, even if it is still empty,
+         so the empty box stays in sight and the line says so. */
+      else if (closeBox(L, k.cmd === 'delete' || k.cmd === 'undo' || k.cmd === 'left') && k.cmd === 'right') { edited(L); return; }
+    }
     if (k.cmd === 'enter') { enter(how === 'hold'); return; }
     if (k.cmd === 'undo') {
       stat().undos++;
       const h = L.history.pop();
-      if (h) setLine(L, h.v, h.at);
+      if (h) restore(L, h);
       edited(L);
       return;
     }
     if (k.cmd === 'delete' && how === 'hold') {
+      if (pressRemoved) return;
       /* Held: the line clears. The first touch already took one thing away, so the line from before that touch
          is what one Undo brings back. */
-      if (L.deleted) { const h = L.history.pop(); if (h) setLine(L, h.v, h.at); }
+      if (L.deleted) { const h = L.history.pop(); if (h) restore(L, h); }
       if (mf.value) { remember(L); setLine(L, '', 0); labBuzz(16); }
       L.deleted = false;
       edited(L);
       return;
     }
+    if (k.cmd === 'delete' && !mf.value) { pressRemoved = removeLine(L); return; }
     remember(L);
+    if (STEPS_OUT.has(k.put)) stepOut(mf);
     if (k.put) mf.insert(k.put);
     else if (k.shape) mf.insert(k.shape, {selectionMode: 'placeholder'});
     else if (k.script) {
       /* Square and power go on whatever is just before the cursor, as on the Casio. With nothing there, they bring an empty box. */
       const before = L.history[L.history.length - 1];
       mf.insert(k.script, {selectionMode: 'placeholder'});
-      if (BASELESS.test(mf.value) && !BASELESS.test(before.v)) { setLine(L, before.v, before.at); mf.insert(k.alone, {selectionMode: 'placeholder'}); }
+      if (BASELESS.test(mf.value) && !BASELESS.test(before.v)) {
+        restore(L, before);
+        const tail = mf.lastOffset - mf.position;
+        mf.insert(k.alone, {selectionMode: 'placeholder'});
+        L.box = {tail: tail, n: 0, power: name === 'power', before: before, empty: null};
+        L.box.empty = snap(L);
+      }
     } else if (k.cmd === 'left') mf.executeCommand('moveToPreviousChar');
     else if (k.cmd === 'right') mf.executeCommand('moveToNextChar');
     else if (k.cmd === 'delete') { mf.executeCommand('deleteBackward'); stat().deletes++; }
+    if (L.box && fills(k)) L.box.n++;
     forgetIfSame(L);
     L.deleted = k.cmd === 'delete' && L.history.length > 0 && L.history[L.history.length - 1].v !== mf.value;
     edited(L);
@@ -289,6 +363,7 @@
   Keypad.strip($('#strip'), dir => {
     if (!Q || Q.state !== 'open') return;
     const mf = Q.active.mf, before = mf.position;
+    Q.active.box = null;
     focusField(mf);
     mf.executeCommand(dir < 0 ? 'moveToPreviousChar' : 'moveToNextChar');
     if (mf.position !== before) { labSound.step(); labBuzz(3); }
@@ -337,6 +412,11 @@
       if (ev.metaKey || ev.ctrlKey) done(); else enter(ev.shiftKey);
       return;
     }
+    if (ev.key === 'Backspace' && !L.mf.value && Q.lines.indexOf(L) > 0) { ev.preventDefault(); ev.stopPropagation(); removeLine(L); return; }
+    if (ev.key.length === 1 && !ev.metaKey && !ev.ctrlKey && !ev.altKey) {
+      /* Characters with a meaning of their own here are typed by typeChar, so they behave the same at any speed. */
+      if (L.box || ev.key === '=' || ev.key === '-' || ev.key === 'r') { ev.preventDefault(); ev.stopPropagation(); typeChar(L, ev.key); return; }
+    } else if (ev.key !== 'Shift') L.box = null;
     if ((ev.metaKey || ev.ctrlKey) && !ev.shiftKey && ev.key.toLowerCase() === 'z') stat().undos++;
     else if (ev.key === 'Backspace' || ev.key === 'Delete') stat().deletes++;
   }
@@ -353,8 +433,24 @@
   function typeKey(ev) {
     const L = Q.active;
     if (ev.key === 'Enter') { ev.preventDefault(); focusField(L.mf); if (ev.metaKey || ev.ctrlKey) done(); else enter(ev.shiftKey); }
-    else if (ev.key === 'Backspace') { ev.preventDefault(); focusField(L.mf); L.mf.executeCommand('deleteBackward'); stat().deletes++; edited(L); }
-    else if (ev.key.length === 1 && ev.key !== ' ' && !ev.metaKey && !ev.ctrlKey && !ev.altKey) { ev.preventDefault(); focusField(L.mf); L.mf.insert(ev.key === '*' ? '\\times' : ev.key === '/' ? '\\div' : ev.key); edited(L); }
+    else if (ev.key === 'Backspace') {
+      ev.preventDefault(); focusField(L.mf);
+      if (!L.mf.value && removeLine(L)) return;
+      L.mf.executeCommand('deleteBackward'); stat().deletes++; edited(L);
+    }
+    else if (ev.key.length === 1 && ev.key !== ' ' && !ev.metaKey && !ev.ctrlKey && !ev.altKey) { ev.preventDefault(); focusField(L.mf); typeChar(L, ev.key); }
+  }
+  /* One typed character. + then - makes ±, and o then r makes the word "or", however fast they are typed.
+     = steps out of any power or fraction first, as on the keypad. */
+  function typeChar(L, ch) {
+    const mf = L.mf;
+    if (L.box) { if (/^[0-9.a-zA-Z]$/.test(ch)) L.box.n++; else closeBox(L); }
+    const prev = mf.position > 0 ? mf.getValue(mf.position - 1, mf.position) : '';
+    if (ch === '-' && prev === '+') { mf.executeCommand('deleteBackward'); mf.insert('\\pm'); }
+    else if (ch === 'r' && prev === 'o') { mf.executeCommand('deleteBackward'); mf.insert('\\or'); }
+    else if (ch === '=') { stepOut(mf); mf.insert('='); }
+    else mf.insert(ch === '*' ? '\\times' : ch === '/' ? '\\div' : ch);
+    edited(L);
   }
   /* Phones only let sound start inside a tap, so every kind of tap gets it ready. */
   ['pointerdown', 'touchend', 'click', 'keydown'].forEach(t => document.addEventListener(t, () => labSound.wake(), {capture: true, passive: true}));

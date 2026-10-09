@@ -257,6 +257,91 @@ check(focusChecks > 120 && focusBad === 0, 'focus never landed on anything that 
   await ctx.close();
 }
 
+// ---------- 6. fixes from the first tests on a phone ----------
+{
+  const {ctx, p} = await open();
+  await tap(p, '#start');
+  // Bug 1: Delete on an empty line removes it and goes to the end of the line above. The first line stays.
+  await key(p, 'delete');
+  check((await lines(p)).length === 1, 'Delete on an empty first line keeps it');
+  await type(p, '3 x = 1 2 E');
+  check((await lines(p)).length === 2, 'Enter opened a second line');
+  await key(p, 'delete');
+  let ls = await lines(p);
+  const atEnd = await p.$eval('.line.active math-field', m => m.position === m.lastOffset);
+  check(ls.length === 1 && ls[0].cls.includes('active') && atEnd, 'Delete on an empty line removes it and puts the cursor at the end of the line above');
+  await key(p, 'delete');
+  check((await active(p)) === '3x=1', 'the next Delete works on the line above');
+  await type(p, '2 E');
+  await hold(p, '.key[data-key="delete"]', 650);
+  check((await lines(p)).length === 1 && (await active(p)) === '3x=12', 'holding Delete on an empty line removes only that line');
+  await hold(p, '.key[data-key="delete"]', 650);
+  // Bug 4: = steps out of a power or fraction, and a box from square or power takes the next number.
+  await type(p, '7 P 2 = 4 9');
+  check((await active(p)) === '7^2=49', '= steps out of a power first (7, power, 2, = 49 gives 7² = 49)');
+  await type(p, 'E');
+  ls = await lines(p);
+  check(ls[ls.length - 2].say === 'This line has no x in it.', '7² = 49 says it has no x in it');
+  await type(p, 'F x > 3 = 4');
+  check((await active(p)) === '\\frac{x}{3}=4', '= steps out of a fraction first');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'S 7 = 4 9');
+  check((await active(p)) === '7^2=49', 'square on an empty line, then 7 = 49, gives 7² = 49');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'S 1 2 + 1');
+  check((await active(p)) === '12^2+1', 'the box takes a whole number, then the next key goes after the square');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'S x >');
+  await type(p, '=');
+  check((await active(p)) === 'x^2=', 'the right arrow leaves the square in one press');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'S 1 2 D D D 5 = 4 9');
+  check((await active(p)) === '5=49', 'Delete in the box takes back the numbers, then the empty box, then the square');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'S 7 U 8 = 6 4');
+  check((await active(p)) === '8^2=64', 'Undo in the box brings the empty box back, ready to fill');
+  await hold(p, '.key[data-key="delete"]', 650);
+  await type(p, 'P 7 > 3 = 4 9');
+  check(/^7\^\{?3\}?=49$/.test(await active(p)), 'power on an empty line: base, then the right arrow into the power, then = steps out');
+  await hold(p, '.key[data-key="delete"]', 650);
+  // Bug 3: an empty box left in a line is named, so a line that looks finished says why it is not.
+  await type(p, 'P 7 S = 4 9 E');
+  ls = await lines(p);
+  const boxed = ls[ls.length - 2];
+  check(boxed.v.includes('\\placeholder') && boxed.say === 'This line has an empty box. Fill it in or delete it.', 'a line with an empty box left in it says so (' + boxed.v + ')');
+  // Bug 5: a line that keeps one answer and drops the other.
+  await ctx.close();
+}
+{
+  const {ctx, p} = await open({seed: {sound: true, run: {topic: 'equations', at: Date.now(), qi: 8, per: [], sheet: null, state: 'open'}}});
+  await type(p, 'x = 7 E');
+  check((await lines(p))[0].say === 'This works, but there is another answer.', 'a line that drops one of two answers says: This works, but there is another answer.');
+  await ctx.close();
+}
+{
+  // Bugs 1 and 2 on a computer keyboard.
+  const {ctx, p} = await open({desk: true, w: 1280, h: 800});
+  await p.click('#start');
+  await p.keyboard.type('x=7');
+  await p.keyboard.press('Enter');
+  await p.keyboard.type('x=+-7');
+  check((await active(p)) === 'x=\\pm7', '+ then − typed straight after Enter makes ±');
+  await p.keyboard.press('Enter');
+  for (const d of [0, 15, 80]) {
+    await p.keyboard.type('x=+-7', {delay: d});
+    check((await active(p)) === 'x=\\pm7', '+ then − makes ± at ' + d + ' ms between keys');
+    for (let i = 0; i < 4; i++) await p.keyboard.press('Backspace');   // x, =, ± and 7
+  }
+  await p.keyboard.type('x=7or');
+  check((await active(p)) === 'x=7\\or', 'o then r makes the word or');
+  for (let i = 0; i < 4; i++) await p.keyboard.press('Backspace');   // x, =, 7 and or
+  const n = (await lines(p)).length;
+  await p.keyboard.press('Backspace');
+  await p.waitForTimeout(150);
+  check((await lines(p)).length === n - 1 && (await active(p)) === 'x=\\pm7', 'Backspace on an empty line removes it and goes to the line above');
+  await ctx.close();
+}
+
 // ---------- 5. looks: tokens, widths, dark mode, sound ----------
 {
   const css = fs.readFileSync(new URL('../lab/lab.css', import.meta.url), 'utf8'), v2 = fs.readFileSync(new URL('../src/style.css', import.meta.url), 'utf8');

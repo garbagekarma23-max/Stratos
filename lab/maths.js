@@ -176,6 +176,9 @@ const LabMaths = (() => {
     let toks;
     try { toks = tokens(String(latex || '')); } catch (e) { if (e instanceof Stop) return {stop: e.why}; throw e; }
     if (!toks.length) return {stop: 'empty'};
+    /* An empty box anywhere (from the fraction, root, power or square keys) is named on its own. Some boxes are
+       small and easy to miss, such as an empty power left after 49, which makes a line look finished when it is not. */
+    if (toks.some(k => k.t === 'ph')) return {stop: 'box'};
     const hasX = toks.some(k => k.t === 'x');
     const r = reader(toks), parts = [];
     let sides = [], eqAt = -1;
@@ -320,6 +323,7 @@ const LabMaths = (() => {
      Returns {kind: 'right' | 'wrong' | 'hint', say: one plain sentence}, or null for an empty line. */
   const HINT = {
     unfinished: 'Finish this line first.',
+    box: 'This line has an empty box. Fill it in or delete it.',
     letter: 'Use x for the unknown.',
     sign: 'This line has a sign that can’t be checked.',
     noEq: 'A working line needs an = sign.',
@@ -341,7 +345,7 @@ const LabMaths = (() => {
     if (fit.length === answers.length && !more) return {kind: 'right', say: ''};
     if (fit.length === 0 && !more) return {kind: 'wrong', say: 'This line has no solution.'};
     if (fit.length === answers.length) return {kind: 'wrong', say: 'This line adds a solution.'};
-    if (fit.length > 0 && !more) return {kind: 'wrong', say: 'This line loses a solution.'};
+    if (fit.length > 0 && !more) return {kind: 'wrong', say: 'This works, but there is another answer.'};
     return {kind: 'wrong', say: 'This line changes the answer.'};
   }
 
