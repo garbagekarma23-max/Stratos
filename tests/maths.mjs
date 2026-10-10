@@ -101,7 +101,8 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
   await p.fill('#q', 'brackets'); await p.waitForTimeout(80);
   check((await p.locator('#qOut .res .t').first().textContent()) === 'Brackets' && (await p.getAttribute('#q', 'placeholder')) === 'Search Equations', 'Search looks through maths', R);
   await tab(p, 'practice');
-  check((await p.locator('#pracStart').textContent()).includes('Practice for maths comes in the next test build'), 'Practice says maths practice comes next', R);
+  const ps0 = await p.locator('#pracStart').textContent();
+  check(ps0.includes('Learn your first point to start') && !ps0.includes('comes next'), 'maths Practice with nothing learned asks you to learn a point first', R);
   // Learn the first point, right.
   await tab(p, 'home');
   await p.locator('.hero .primary').tap(); await p.waitForTimeout(150);
@@ -124,10 +125,10 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
   await p.locator('.subject').tap(); await p.waitForTimeout(80);
   await p.locator('.pick[data-sub="maths"]').tap(); await p.waitForTimeout(200);
   check((await p.locator('.pt[data-p="m1p1"] .lab').textContent()) === 'Learned', 'maths progress is still there after switching away and back', R);
-  // Practise Economics from the maths Practice tab.
+  // The maths Practice tab now offers a maths flight, and stays on maths.
   await tab(p, 'practice');
-  await p.locator('#pracStart [data-act="praceco"]').tap(); await p.waitForTimeout(120);
-  check((await saved(p)).subject === 'eco' && (await p.locator('#pracStart').textContent()).includes('Start flight'), 'Practise Economics switches to Economics practice', R);
+  const ps1 = await p.locator('#pracStart').textContent();
+  check((await saved(p)).subject === 'maths' && ps1.includes('Start flight') && ps1.includes('1 point') && !ps1.includes('comes next'), 'the maths Practice tab offers a maths flight on the point learned', R);
   errsAll.push(...errs); await b.close();
 }
 

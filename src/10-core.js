@@ -129,6 +129,8 @@ function tidySaved() {
   /* Maths keeps its own progress under m, apart from Economics: h holds each point's last answers, cur its chapter. */
   if (!saved.m || typeof saved.m !== 'object' || Array.isArray(saved.m)) saved.m = {};
   if (!saved.m.h || typeof saved.m.h !== 'object') saved.m.h = {};
+  /* best: the fastest finished maths flight for each set of questions ('all' or a chapter id, then the length), in ms. */
+  if (!saved.m.best || typeof saved.m.best !== 'object' || Array.isArray(saved.m.best)) saved.m.best = {};
   if (saved.subject !== 'maths') saved.subject = 'eco';
   setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
@@ -214,8 +216,11 @@ function mathsStatus(pid) {
   if (last.length === 3 && last.every(r => r.ok) && new Set(last.map(r => r.q)).size === 3) return 'proven';
   return 'learned';
 }
-function recordMaths(pid, q, ok) {
-  saved.m.h[pid] = mHist(pid).concat([{ok: ok, day: dayKey(new Date()), q: q, t: Date.now()}]).slice(-6);
+/* src is 'p' for an answer given in Practice, so Practice can tell points it has never asked about. */
+function recordMaths(pid, q, ok, src) {
+  const r = {ok: ok, day: dayKey(new Date()), q: q, t: Date.now()};
+  if (src) r.src = src;
+  saved.m.h[pid] = mHist(pid).concat([r]).slice(-6);
   counted(ok);
   save();
 }
@@ -284,15 +289,14 @@ function nextStep() {
   if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn teaches a point, then checks it. Practice brings it back later, weak points first.', run: () => openLearn(ch.id)};
   return {label: 'Prove this chapter', sub: plural(st.n * 2 - st.ok, 'question') + ' left to get right.', run: () => startPractice({mode: 'chapter', ch: ch.id, len: 8})};
 }
-/* Maths has no Practice yet, so every next step opens Learn: new points, weak points (taught again in full),
-   or a check question on each point that is learned but not yet proven, longest since answered first. */
+/* Maths: the next step opens Learn, which teaches new points and teaches weak points again in full,
+   then proves a chapter in one sitting. Practice is the tab for flights; once everything is proven, Home offers one. */
 const lastAt = pid => { const h = mHist(pid); return h.length ? h[h.length - 1].t : 0; };
 function mathsNext() {
   const ch = curCh(), st = chStats(ch), weak = weakPoints(), ids = ps => ps.map(p => p.id);
   const nxt = ch.points.find(p => statusOf(p.id) === 'new');
   if (CH.every(c => chStats(c).proven === c.points.length)) {
-    const old = ALL.slice().sort((a, b) => lastAt(a.id) - lastAt(b.id)).slice(0, 3);
-    return {label: 'Keep it sharp', sub: 'Every point is proven. Checking a few now and then keeps it that way.', run: () => openLearn(old[0].ch, {pts: ids(old)})};
+    return {label: 'Keep it sharp', sub: 'Every point is proven. A mixed flight keeps it that way.', run: () => startPractice({mode: 'mix', len: 8})};
   }
   if (weak.length >= 3 || (weak.length && !nxt)) return {label: 'Fix ' + plural(weak.length, 'weak point'), sub: names(weak.slice(0, 3)) + (weak.length > 3 ? ' and ' + (weak.length - 3) + ' more' : ''), run: () => openLearn(weak[0].ch, {pts: ids(weak)})};
   if (nxt) return {label: st.learned ? 'Learn the next point' : 'Start this chapter', sub: st.learned ? 'Next: ' + nxt.title : 'Learn shows a worked example, then you finish one and do one on your own.', run: () => openLearn(ch.id)};

@@ -22,10 +22,14 @@ function loadMaths() {
       keys: $('#mKeys'), calc: $('#mCalc'), strip: $('#mStrip'), done: $('#mDone'), topic: MPAD,
       sound: sound, buzz: buzz, say: say, toast: toast,
       live: () => app.dataset.work !== undefined && sheet.hidden && !pages.length,
-      onDone: mathsDone,
+      /* The keypad is shared by Learn and a Practice flight. Done and each checked line go to whichever is on screen. */
+      onDone: () => { if (mpOn()) mpDone(); else mathsDone(); },
       onNext: () => {},
-      /* Each right line rings the ping one step higher, as a combo does in Practice. */
-      onLine: kind => { if (kind === 'right') { mRow++; sound.correct(mRow, 0); buzz(BUZZ[0]); } else if (kind === 'wrong') mRow = 0; }
+      /* In Learn each right line rings the ping one step higher. In Practice it builds the combo (62-maths-practice.js). */
+      onLine: kind => {
+        if (mpOn()) { mpLine(kind); return; }
+        if (kind === 'right') { mRow++; sound.correct(mRow, 0); buzz(BUZZ[0]); } else if (kind === 'wrong') mRow = 0;
+      }
     });
     paintWork();
   });
@@ -99,30 +103,35 @@ function mathsWaiting() {
   return sec ? {i: i, sec: sec, it: it} : null;
 }
 
-/* Work mode: while a maths question fills the Learn screen, the keypad sits at the bottom where the phone keyboard
-   would be, the tab bar steps aside, and the cards stay still so a swipe never moves them mid-working. */
+/* Work mode: while a maths question fills the screen (in Learn, or in a Practice flight), the keypad sits at the bottom
+   where the phone keyboard would be, the tab bar steps aside, and the slides stay still so a swipe never moves them
+   mid-working. The one keypad moves into whichever of the two screens needs it. */
 function paintWork() {
-  const c = mathsWaiting();
-  const on = !!c && mathsReady && !!pad && ui.tab === 'learn' && !pages.length && viewing(learnFeed) === c.sec;
+  const fl = mpOn(), c = fl ? mpWaiting() : mathsWaiting(), f = fl ? feed : learnFeed;
+  const on = !!c && mathsReady && !!pad && ui.tab === (fl ? 'practice' : 'learn') && !pages.length && viewing(f) === c.sec && (!fl || launch.hidden);
   const was = app.dataset.work !== undefined;
   if (on) {
+    const host = fl ? run : views.learn;
+    if (mPad.parentNode !== host) host.appendChild(mPad);
     const el = $('.work', c.sec);
     if (pad.el !== el) {
       mRow = 0;
       pad.start({el: el, answers: c.it.ans, given: c.it.k === 'guided' ? c.it.q.steps.slice(0, c.it.q.give) : [], open: true});
-      say((c.it.k === 'guided' ? 'Guided question. ' : 'Check question. ') + 'Solve ' + c.it.q.text + '.');
+      say((fl ? 'Question ' + (c.i + 1) + '. ' : c.it.k === 'guided' ? 'Guided question. ' : 'Check question. ') + 'Solve ' + c.it.q.text + '.');
     }
     app.dataset.work = '';
-    mPad.hidden = false; mClose.hidden = false;
+    mPad.hidden = false; mClose.hidden = fl;
     c.sec.classList.add('working');
-    learnFeed.style.bottom = mPad.offsetHeight + 'px';
-    learnFeed.scrollTop = c.sec.offsetTop;
+    f.style.bottom = mPad.offsetHeight + 'px';
+    if (fl) gauge.style.bottom = (mPad.offsetHeight + 24) + 'px';
+    toastEl.style.bottom = fl ? (mPad.offsetHeight + 12) + 'px' : '';     /* in a flight, toasts sit just above the keys */
+    f.scrollTop = c.sec.offsetTop;
     if (!was) pad.focus();
   } else {
     delete app.dataset.work;
     mPad.hidden = true; mClose.hidden = true;
-    learnFeed.style.bottom = '';
-    $$('.slide.working', learnFeed).forEach(s => s.classList.remove('working'));
+    learnFeed.style.bottom = ''; feed.style.bottom = ''; gauge.style.bottom = ''; toastEl.style.bottom = '';
+    $$('.slide.working').forEach(s => s.classList.remove('working'));
   }
 }
 ACT.mclose = () => go('home');
@@ -209,7 +218,7 @@ function mathsEndEl() {
     body = L.right ? 'Right. ' + mathsMeans(L.items[L.items.length - 1].p) : 'Not this time. It is marked weak, and Home will bring it back.';
   } else if (!checks) {
     title = 'You have learned every point in this chapter';
-    body = st.proven === st.n ? 'Every point is proven.' : 'Now prove them: three right answers in a row on each point, not all on one day. Home brings them back.';
+    body = st.proven === st.n ? 'Every point is proven.' : 'Now prove them: three right answers in a row on each point. Home brings them back.';
   } else {
     title = st.learned === st.n && L.mode === 'new' ? 'Chapter learned' : 'Session done';
     body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Three right in a row on each point proves it.');

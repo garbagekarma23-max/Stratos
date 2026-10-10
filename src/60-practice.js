@@ -15,20 +15,15 @@ function poolFor(mode, chId) {
 function enterPractice() {
   if (P) { showRun(true); return; }
   showRun(false);
-  if (isMaths()) renderMathsStart(); else renderStart();
+  renderStart();
 }
-/* Practice for maths comes in the next build. Until then the tab says so, and offers Economics. */
-function renderMathsStart() {
-  startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice for maths comes in the next test build. For now, Learn teaches each maths point and checks it.</p>' +
-    '<button class="primary" type="button" data-act="praceco">Practise Economics</button><button class="ghost" type="button" data-act="golearn">Open Learn</button></div>';
-}
-ACT.praceco = () => { useSubject('eco', true); toast('Switched to Economics: The Global Economy'); enterPractice(); };
 function showRun(on) {
   run.hidden = !on; startEl.hidden = on;
   views.practice.classList.toggle('fixed', on);
   if (on) views.practice.scrollTop = 0;
 }
 function renderStart() {
+  if (isMaths()) { renderMathsStart(); return; }      /* maths has its own start screen, in 62-maths-practice.js */
   const learned = learnedPoints();
   if (!learned.length) {
     startEl.innerHTML = '<h1 class="h1">Practice</h1><div class="empty"><p class="lede">Practice asks about points you have learned. Learn your first point to start.</p><button class="primary" type="button" data-act="golearn">Open Learn</button></div>';
@@ -84,8 +79,9 @@ const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l,
 /* Start a flight. o.mode is mix or chapter (your own practice), challenge (8 set questions) or race (first to 6). */
 function startPractice(o) {
   sound.wake();
-  /* Flights, challenges and races are Economics for now. */
-  if (isMaths()) { useSubject('eco', true); toast('Practice uses Economics for now.'); }
+  /* A maths flight is worked on the keypad (62-maths-practice.js). Challenges and races are Economics for now. */
+  if (isMaths() && (o.mode === 'mix' || o.mode === 'chapter')) { startMathsFlight(o); return; }
+  if (isMaths()) { useSubject('eco', true); toast('Challenges and races use Economics for now.'); }
   let picked;
   if (o.mode === 'challenge' || o.mode === 'race') {
     const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));
@@ -125,8 +121,9 @@ function mountRun() {
   $('#modeT').textContent = modeLabel();
   $('#lanes').hidden = !P.race;
   if (P.race) { $('#laneWho').textContent = friend(P.friend).name; paintLanes(); }
+  mpMount();
   feed.textContent = '';
-  feed.appendChild(qEl(P, 0));
+  feed.appendChild(slideFor(0));
   feed.scrollTop = 0;
   shown.L = 0;
   resize();
@@ -136,7 +133,9 @@ function mountRun() {
 function closeRun() {
   token++;
   clearTimeout(raceTimer);
+  if (P && P.maths && pad) pad.stop();
   P = null;
+  paintSegs(); fClock.hidden = true;
   raceMusic();
   feed.textContent = '';
   launch.hidden = true;
@@ -236,7 +235,7 @@ function exhaust(t) {
 
 /* The question waiting for an answer, if there is one. */
 function current() {
-  if (!P || P.done) return null;
+  if (!P || P.done || P.maths) return null;
   const i = P.res.length, sec = $('.slide[data-i="' + i + '"]', feed);
   return sec ? {i: i, sec: sec, it: P.items[i], q: PT[P.items[i].p][P.items[i].k]} : null;
 }
@@ -335,7 +334,7 @@ function appendNext(prev) {
   /* A race keeps going until someone wins, so it goes round the questions again if it has to. */
   if (more && P.race && P.res.length >= P.items.length) shuffle(P.items.slice()).forEach(it => P.items.push({p: it.p, k: it.k, perm: shuffle([0, 1, 2, 3]), back: false}));
   let el;
-  if (more && P.res.length < P.items.length) el = qEl(P, P.res.length);
+  if (more && P.res.length < P.items.length) el = slideFor(P.res.length);
   else { finish(); el = summaryEl(); }
   feed.appendChild(el);
   const nb = prev ? $('.next', prev) : null;
@@ -347,7 +346,8 @@ function finish() {
   P.done = true;
   clearTimeout(raceTimer);
   P.pb = P.alt > 0 && P.alt > (saved.bestKm || 0);
-  save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: Math.max(saved.bestCombo || 0, P.best)});
+  if (P.maths) mpEnd();                                        /* maths keeps its own best combo, counted in lines */
+  save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: P.maths ? (saved.bestCombo || 0) : Math.max(saved.bestCombo || 0, P.best)});
   postResult();
 }
 function summaryEl() {
@@ -356,7 +356,7 @@ function summaryEl() {
   const seen = [];
   P.items.forEach(it => { if (seen.indexOf(it.p) < 0) seen.push(it.p); });
   const still = seen.filter(pid => statusOf(pid) === 'weak').map(pid => PT[pid]);
-  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => 'Chapter ' + (CH.indexOf(c) + 1) + ' is proven. Every question in it is right.');
+  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => 'Chapter ' + (CH.indexOf(c) + 1) + ' is proven. ' + (P.maths ? 'Every point in it is proven.' : 'Every question in it is right.'));
   const weakLine = '<p class="sumline">' + (still.length ? 'Still weak: ' + esc(names(still)) + '.' : 'No weak points left from this flight.') + '</p>' + proved.map(t => '<p class="sumline strong">' + t + '</p>').join('');
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
@@ -379,10 +379,11 @@ function summaryEl() {
   } else {
     const size = clamp(Math.floor((Math.min(app.clientWidth || 390, 440) - 76) / (Math.max(f.n.length, 2) * 0.62)), 30, 60);
     h = '<p class="meta"><span>' + (P.cut ? 'Flight ended early' : 'Flight complete') + '</span></p>' +
-      (P.pb ? '<span class="pb">New personal best</span>' : '') +
+      (P.pb ? '<span class="pb">New personal best</span>' : '') + (P.newBest ? '<span class="pb">New best time</span>' : '') +
       '<p class="big"><span style="font-size:' + size + 'px">' + f.n + '</span><small>' + esc(f.unit) + '</small></p>' +
       '<h2 class="verdict">' + esc(layerOf(P.alt).end) + '</h2>' +
       '<dl class="stats"><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>First try</dt><dd>' + P.first + ' of ' + asked + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
+      (P.maths ? mpSummary() : '') +
       '<p class="sumline">' + (nx ? 'Next stop: ' + esc(nx.stop) + ', ' + fmt(nx.at).long + ' from Earth.' : 'There is no next stop. You are off the map.') + '</p>' +
       weakLine +
       '<div class="cta"><button class="primary" type="button" data-act="again">Fly again</button><button class="ghost" type="button" data-act="sendres">Send to a friend</button></div>' + homeBtn;
@@ -402,12 +403,14 @@ ACT.end = () => {
   if (P.done || !P.res.length) { closeRun(); return; }
   if (endBtn.dataset.armed !== '1') { endBtn.dataset.armed = '1'; toast('Tap the cross again to end this flight'); endArm = setTimeout(disarmEnd, 3200); return; }
   disarmEnd();
-  const c = current();
+  const c = P.maths ? mpWaiting() : current();
   token++;
+  P.busy = false;
   P.cut = true;
   if (P.race) { P.race.over = true; P.race.left = true; raceMusic(); }
   if (c) c.sec.remove();
   scrollToEl(feed, appendNext(feed.lastElementChild));
+  if (P.maths) paintWork();                                    /* the keypad goes with the question */
 };
 
 /* ---------- a race: the sample friend scores on a timer ---------- */
