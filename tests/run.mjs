@@ -2,9 +2,10 @@
 // The Maths Lab tests (lab-maths.mjs, lab.mjs) need no build: maths-lab.html is the page itself.
 // maths-content.mjs checks the maths worked examples and templates without a browser. maths.mjs runs maths in v2,
 // and maths-practice.mjs runs a maths Practice flight. altitude.mjs checks altitude is written out in full and fits.
+// preview.mjs checks the page titles, icons and link preview tags, with no browser.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['altitude.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['altitude.mjs'], ['preview.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});
