@@ -23,12 +23,14 @@ export async function open(o = {}) {
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
   if (o.init) await ctx.addInitScript(o.init);
   if (o.clock) await ctx.clock.install();
+  if (o.route) await o.route(ctx);           // lets a test hold back or change a file the page loads
   const p = await ctx.newPage();
   const errs = [];
   p.on('console', m => { if (m.type() === 'error' && !/Failed to load resource|net::ERR/.test(m.text())) errs.push(m.text()); });
-  p.on('pageerror', e => errs.push('PAGEERROR ' + e.message));
+  // STACK=1 node <test>.mjs also prints where in v2.html a script error happened.
+  p.on('pageerror', e => errs.push('PAGEERROR ' + e.message + (process.env.STACK ? '\n' + e.stack : '')));
   if (!server) server = await serve();
-  await p.goto(server.url + 'v2.html' + (o.query || ''));
+  await p.goto(server.url + 'v2.html' + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
   await p.waitForTimeout(300);
   return {b, ctx, p, errs};
 }

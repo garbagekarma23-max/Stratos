@@ -234,7 +234,7 @@ ACT.mpskip = b => {
    A right answer moves straight to the next question. Anything else stays, with the worked solution, until Next. */
 function mpFinish(c, o, gain) {
   const it = c.it, sec = c.sec, note = $('.note', sec);
-  if (pad.el === $('.work', sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }
+  if (pad && pad.el === $('.work', sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }     /* no pad yet if Answer came before MathLive loaded */
   P.res.push({o: o, gain: gain});
   P.busy = false;
   sec.classList.add('done');

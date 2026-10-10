@@ -20,6 +20,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Tests: `cd tests && npm install && npm test`. They open `v2.html` and `maths-lab.html` in Chromium with Playwright, through the small web server in `tests/serve.mjs` (MathLive's fonts do not load from a file path), so build first. Use the Chromium already on the machine. Do not download a browser.
 - `tests/maths-practice.mjs` runs a maths Practice flight with keypad taps only: the start screen, the order of questions, the combo on lines, altitude on answers, Practice answers counting toward proven, the Done moment with and without reduced motion, the clock and best time, ending early.
 - `tests/altitude.mjs` checks that altitude is written out in full everywhere ("2 billion km", "4.1 billion light-years", never "2 B km" or "ly", and "light-years" never split over two lines) and that the flight screen's altitude line fits at 360 and 390 px. `node altitude.mjs shots` also saves the flight screen high up: `altitude-360.png`, `altitude-390.png`, with a maths clock (`-clock`), and at 280 px (`altitude-280-clock.png`).
+- A script error in any test prints only its message. `STACK=1 node <test>.mjs` also prints where in `v2.html` it happened. `open()` in `tests/lib.mjs` takes `route` to hold back or change a file the page loads (the tests use it to delay MathLive), and `waitUntil` for when the page counts as open.
 - `tests/preview.mjs` checks each page's title, description, icons and link preview tags, and the sizes of the pictures, with no browser.
 - `tests/maths-content.mjs` checks the maths content with the lab's line checker, no browser: every worked example line ticks, and every template run 200 times makes right, clean answers. `tests/maths.mjs` runs maths in v2: the subject switch, the status rules, and Learn on both chapters with keypad taps only.
 - Screenshots: `cd tests && node shots.mjs` writes PNGs to `tests/shots/` (light, dark, Sky, small phone, desktop). `node shots.mjs light` takes the light-mode flight set. Look at them after any visual change.
@@ -158,6 +159,7 @@ Words on screen, and anything written to the owner:
 
 Product:
 - Messages are cards and preset replies. No free typing.
+- Challenges and races are Economics only for now, whichever subject is picked. A message that starts one always names an Economics chapter (`ecoCh()` in `10-core.js`). Saved messages on any other chapter are moved to Economics when the page loads.
 - Nothing is sold by chance. User data is never sold.
 - Label pretend things as pretend.
 - Sound levels were measured and tuned (`MASTER = 0.4`). Do not change them unless asked.

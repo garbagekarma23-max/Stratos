@@ -143,6 +143,11 @@ function tidySaved() {
   if (!ownsRocket(saved.rocket)) saved.rocket = 'classic';
   /* A challenge a friend was still playing when the page closed is finished now. */
   FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { m.them = pretendScore(f, m.total); m.state = 'done'; } }));
+  /* Challenges and races are Economics only. An older build could save one on a maths chapter (a Rematch sent while
+     Maths was picked), which could not be played. Such a message moves to the Economics chapter. */
+  let moved = false;
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.ch && !SUBJECTS.eco.ch.some(c => c.id === m.ch)) { m.ch = ecoCh().id; moved = true; } }));
+  if (moved) save();
 }
 function seedThreads() {
   const now = Date.now(), hour = 36e5;
@@ -284,6 +289,8 @@ function curCh() {
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }
 const names = pts => pts.map(p => p.title).join(', ');
+/* The Economics chapter last opened (or the first), whichever subject is picked. Challenges and races use it. */
+const ecoCh = () => SUBJECTS.eco.ch.find(c => c.id === saved.cur) || SUBJECTS.eco.ch[0];
 /* What the big button on Home does next. */
 function nextStep() {
   if (isMaths()) return mathsNext();

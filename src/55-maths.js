@@ -170,7 +170,7 @@ ACT.mreveal = b => {
 function mathsFinish(c, how) {
   const it = c.it, sec = c.sec, note = $('.note', sec), nb = $('.next', sec);
   L.res[c.i] = {o: how === 'right' ? (it.wrong ? 'fixed' : 'correct') : 'revealed'};
-  if (pad.el === $('.work', sec)) { pad.trim(); pad.lock(); }
+  if (pad && pad.el === $('.work', sec)) { pad.trim(); pad.lock(); }     /* no pad yet if Answer came before MathLive loaded */
   sec.classList.add('done');
   $('.mq-head .act', sec).hidden = true;
   $('.mq-tip', sec).hidden = true;
