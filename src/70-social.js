@@ -139,7 +139,7 @@ ACT.reply = b => {
   addMsg(f, {from: 'me', kind: 'react', text: text});
   if (text === 'Rematch?') {
     /* The friend takes you up on it and sends a fresh challenge. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : ecoCh().id;   /* games are Economics only */
     reactLater(f, 'You are on', 1500);
     later(3400, () => addMsg(f, {from: 'them', kind: 'challenge', ch: ch, them: pretendScore(friend(f), 8), me: null, total: 8, state: 'open'}));
   } else if (Math.random() < 0.6) reactLater(f, text === 'Too easy' ? 'Next time' : 'Good game', 2200);

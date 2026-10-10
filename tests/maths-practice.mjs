@@ -280,5 +280,26 @@ for (const motion of [false, true]) {
   errsAll.push(...errs); await b.close();
 }
 
+// ---------- 7. Answer tapped before MathLive has loaded ----------
+// The flight's first question can show before MathLive (and so the keypad) arrives. Answer must still work.
+{
+  let release;
+  const held = new Promise(ok => { release = ok; });
+  const {b, p, errs} = await open({seed: SEED, waitUntil: 'domcontentloaded', route: ctx => ctx.route('**/lab/mathlive/mathlive.min.js', async rt => { await held; await rt.continue(); })});
+  await p.waitForTimeout(300);
+  await tab(p, 'practice');
+  await p.locator('#pracStart [data-act="start"]').tap();
+  await p.waitForFunction(() => document.querySelector('#launch').hidden, null, {timeout: 5000});
+  check(!(await working(p)), 'while MathLive is still loading, the first question shows with no keypad', R);
+  await p.locator(WAIT + ' [data-act="mpreveal"]').tap(); await p.waitForTimeout(150);
+  const end = await p.locator('#feed .slide.mq.done .end').textContent().catch(() => '');
+  check(end.startsWith('Answer') && !errs.length, 'Answer still shows the answer, with no script errors', R);
+  release();
+  await p.waitForFunction(() => !!window.MathfieldElement && document.fonts.status === 'loaded'); await p.waitForTimeout(200);
+  await p.locator('#feed .slide.mq.done .next').tap(); await p.waitForTimeout(400);
+  check(await working(p), 'once MathLive arrives, the next question gets the keypad', R);
+  errsAll.push(...errs); await b.close();
+}
+
 console.log(R.join('\n'));
 if (errsAll.length) { console.log('ERRORS after maths practice tests:', errsAll); process.exitCode = 1; }

@@ -361,5 +361,26 @@ for (const scheme of ['light', 'dark']) {
   errsAll.push(...r.errs); await r.b.close();
 }
 
+// ---------- Answer tapped before MathLive has loaded ----------
+// On a slow connection the question shows before MathLive (and so the keypad) arrives. Answer must still work.
+// (It used to stop with a script error, because it reached for the keypad before there was one.)
+{
+  let release;
+  const held = new Promise(ok => { release = ok; });
+  const r = await open({seed: {subject: 'maths'}, waitUntil: 'domcontentloaded', route: ctx => ctx.route('**/lab/mathlive/mathlive.min.js', async rt => { await held; await rt.continue(); })});
+  const p = r.p;
+  await p.locator('.hero .primary').tap(); await p.waitForTimeout(150);
+  await p.locator('#learnFeed .slide.wex .next').tap(); await p.waitForTimeout(300);
+  check(!(await mathsLoaded(p)) && !(await working(p)), 'while MathLive is still loading, the guided question shows with no keypad', R);
+  await p.locator(WAIT + ' .mq-head .act').tap(); await p.waitForTimeout(150);
+  const end = await p.locator('#learnFeed .slide.mq.done .end').textContent().catch(() => '');
+  check(end.startsWith('Answer') && !r.errs.length, 'Answer still shows the answer, with no script errors', R);
+  release();
+  await p.waitForFunction(() => !!window.MathfieldElement && document.fonts.status === 'loaded'); await p.waitForTimeout(200);
+  await p.locator('#learnFeed .slide.mq.done .next').tap(); await p.waitForTimeout(400);
+  check(await working(p), 'once MathLive arrives, the next question gets the keypad', R);
+  errsAll.push(...r.errs); await r.b.close();
+}
+
 console.log(R.join('\n'));
 if (errsAll.length) { console.log('ERRORS after maths tests:', errsAll); process.exitCode = 1; }

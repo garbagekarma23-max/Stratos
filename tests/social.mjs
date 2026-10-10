@@ -184,6 +184,39 @@ s = await saved(p);
 check(Object.keys(s.ans).length === 0 && s.bg === 'plain' && !s.name && s.th.mia.length === 1, 'reset clears progress, settings and messages', R);
 check((await text('.hero .primary')) === 'Start this chapter', 'and Home is back to the start', R);
 
+await b.close();
+
+// --- a rematch sent while Maths is picked. Challenges are Economics only, so the friend's new challenge must be on an
+// Economics chapter, and Play must start it. (It used to take the maths chapter, and Play stopped with a script error.)
+{
+  const r = await open({clock: true, seed: {subject: 'maths', cur: 'c2'}});
+  const q = r.p, rff = async ms => { await r.ctx.clock.runFor(ms); await q.waitForTimeout(60); };
+  await q.click('[data-act="page"][data-page="friends"]'); await q.waitForTimeout(120);
+  await q.click('.thr:has-text("Tom")'); await q.waitForTimeout(120);
+  await q.click('[data-act="reply"][data-text="Rematch?"]'); await rff(4000);
+  const tom = (await saved(q)).th.tom.find(m => m.kind === 'challenge');
+  check(tom && tom.ch === 'c2', 'a rematch sent while Maths is picked comes back on an Economics chapter (the last one opened): ' + (tom && tom.ch), R);
+  await q.locator('[data-act="play"]').last().click(); await q.waitForTimeout(150);
+  if (await q.isVisible('#sheet')) { await q.locator('#sheet [data-act="play"]').click(); await q.waitForTimeout(150); }
+  await rff(2500);
+  check(await q.locator('#feed .slide.q').count() >= 1 && (await saved(q)).subject === 'eco', 'Play starts the Economics challenge', R);
+  check(!r.errs.length, 'no script errors: ' + r.errs.join(' | '), R);
+  errs.push(...r.errs); await r.b.close();
+}
+// --- a challenge an older build saved on a maths chapter is moved to Economics when the page loads, and plays.
+{
+  const old = {subject: 'eco', th: {aisha: [], noah: [], tom: [], mia: [{id: 3, from: 'them', kind: 'challenge', ch: 'm1', them: 5, me: null, total: 8, state: 'open', t: 1}]}, unread: {}, mid: 10};
+  const r = await open({clock: true, seed: old});
+  const q = r.p;
+  await q.click('[data-act="page"][data-page="friends"]'); await q.waitForTimeout(120);
+  await q.click('.thr:has-text("Mia")'); await q.waitForTimeout(120);
+  await q.locator('[data-act="play"]').last().click(); await q.waitForTimeout(150);
+  if (await q.isVisible('#sheet')) { await q.locator('#sheet [data-act="play"]').click(); await q.waitForTimeout(150); }
+  await r.ctx.clock.runFor(2500); await q.waitForTimeout(60);
+  check(await q.locator('#feed .slide.q').count() >= 1 && !r.errs.length, 'a challenge saved on a maths chapter by an older build plays, with no script errors', R);
+  check((await saved(q)).th.mia[0].ch === 'c1', 'and it is saved on the Economics chapter now', R);
+  errs.push(...r.errs); await r.b.close();
+}
+
 console.log(R.join('\n'));
 console.log('errors:', errs);
-await b.close();
