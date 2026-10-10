@@ -186,8 +186,8 @@ check((await text('.hero .primary')) === 'Start this chapter', 'and Home is back
 
 await b.close();
 
-// --- a rematch sent while Maths is picked. Challenges are Economics only, so the friend's new challenge must be on an
-// Economics chapter, and Play must start it. (It used to take the maths chapter, and Play stopped with a script error.)
+// --- a rematch in a thread with no game yet, sent while Maths is picked: it uses the subject picked, on the chapter
+// Home shows (maths chapter 1), and Play starts it as a maths challenge of 5 questions.
 {
   const r = await open({clock: true, seed: {subject: 'maths', cur: 'c2'}});
   const q = r.p, rff = async ms => { await r.ctx.clock.runFor(ms); await q.waitForTimeout(60); };
@@ -195,17 +195,34 @@ await b.close();
   await q.click('.thr:has-text("Tom")'); await q.waitForTimeout(120);
   await q.click('[data-act="reply"][data-text="Rematch?"]'); await rff(4000);
   const tom = (await saved(q)).th.tom.find(m => m.kind === 'challenge');
-  check(tom && tom.ch === 'c2', 'a rematch sent while Maths is picked comes back on an Economics chapter (the last one opened): ' + (tom && tom.ch), R);
+  check(tom && tom.ch === 'm1' && typeof tom.seed === 'number' && tom.total === 5, 'a rematch sent while Maths is picked, with no game yet, is a maths challenge on the chapter Home shows: ' + (tom && tom.ch), R);
   await q.locator('[data-act="play"]').last().click(); await q.waitForTimeout(150);
   if (await q.isVisible('#sheet')) { await q.locator('#sheet [data-act="play"]').click(); await q.waitForTimeout(150); }
   await rff(2500);
-  check(await q.locator('#feed .slide.q').count() >= 1 && (await saved(q)).subject === 'eco', 'Play starts the Economics challenge', R);
+  await q.waitForSelector('#feed .slide.mq', {timeout: 8000});
+  check((await saved(q)).subject === 'maths' && (await q.locator('#modeT').textContent()).startsWith('Maths challenge'), 'Play starts the maths challenge', R);
   check(!r.errs.length, 'no script errors: ' + r.errs.join(' | '), R);
   errs.push(...r.errs); await r.b.close();
 }
-// --- a challenge an older build saved on a maths chapter is moved to Economics when the page loads, and plays.
+// --- a maths challenge an older build saved (no seed, 8 questions) gets a seed and 5 questions when the page loads, and plays.
 {
   const old = {subject: 'eco', th: {aisha: [], noah: [], tom: [], mia: [{id: 3, from: 'them', kind: 'challenge', ch: 'm1', them: 5, me: null, total: 8, state: 'open', t: 1}]}, unread: {}, mid: 10};
+  const r = await open({clock: true, seed: old});
+  const q = r.p;
+  await q.click('[data-act="page"][data-page="friends"]'); await q.waitForTimeout(120);
+  const m = (await saved(q)).th.mia[0];
+  check(m.ch === 'm1' && typeof m.seed === 'number' && m.total === 5 && m.them === 5 && m.themMs > 0, 'the old maths challenge now has a seed, 5 questions and a pretend time', R);
+  await q.click('.thr:has-text("Mia")'); await q.waitForTimeout(120);
+  await q.locator('[data-act="play"]').last().click(); await q.waitForTimeout(150);
+  if (await q.isVisible('#sheet')) { await q.locator('#sheet [data-act="play"]').click(); await q.waitForTimeout(150); }
+  await r.ctx.clock.runFor(2500); await q.waitForTimeout(60);
+  await q.waitForSelector('#feed .slide.mq', {timeout: 8000});
+  check((await q.locator('#feed .slide.mq .meta').first().textContent()).includes('Question 1 of 5') && !r.errs.length, 'it plays as a maths challenge of 5, with no script errors', R);
+  errs.push(...r.errs); await r.b.close();
+}
+// --- a message on a chapter this build does not have moves to the first Economics chapter, and plays.
+{
+  const old = {subject: 'eco', th: {aisha: [], noah: [], tom: [], mia: [{id: 3, from: 'them', kind: 'challenge', ch: 'zz9', them: 5, me: null, total: 8, state: 'open', t: 1}]}, unread: {}, mid: 10};
   const r = await open({clock: true, seed: old});
   const q = r.p;
   await q.click('[data-act="page"][data-page="friends"]'); await q.waitForTimeout(120);
@@ -213,8 +230,8 @@ await b.close();
   await q.locator('[data-act="play"]').last().click(); await q.waitForTimeout(150);
   if (await q.isVisible('#sheet')) { await q.locator('#sheet [data-act="play"]').click(); await q.waitForTimeout(150); }
   await r.ctx.clock.runFor(2500); await q.waitForTimeout(60);
-  check(await q.locator('#feed .slide.q').count() >= 1 && !r.errs.length, 'a challenge saved on a maths chapter by an older build plays, with no script errors', R);
-  check((await saved(q)).th.mia[0].ch === 'c1', 'and it is saved on the Economics chapter now', R);
+  check(await q.locator('#feed .slide.q').count() >= 1 && !r.errs.length, 'a challenge on an unknown chapter plays, with no script errors', R);
+  check((await saved(q)).th.mia[0].ch === 'c1', 'and it is saved on the first Economics chapter', R);
   errs.push(...r.errs); await r.b.close();
 }
 

@@ -30,16 +30,17 @@ const MAKE = (() => {
     out = out.replace(/(^|[^0-9.])1x/g, '$1x');
     return out;
   }
-  /* Choose one number for each name in pick: whole numbers from lowest to highest and never 0, or steps of a set size. */
-  function choose(pick) {
+  /* Choose one number for each name in pick: whole numbers from lowest to highest and never 0, or steps of a set size.
+     rnd gives the random numbers: Math.random, or a seeded list for a challenge (see seeded below). */
+  function choose(pick, rnd) {
     const v = {};
     Object.keys(pick).forEach(n => {
       const r = pick[n];
       if (r.length > 2) {
         const steps = Math.round((r[1] - r[0]) / r[2]);
-        v[n] = parseFloat((r[0] + Math.floor(Math.random() * (steps + 1)) * r[2]).toFixed(6));
+        v[n] = parseFloat((r[0] + Math.floor(rnd() * (steps + 1)) * r[2]).toFixed(6));
       } else {
-        do v[n] = r[0] + Math.floor(Math.random() * (r[1] - r[0] + 1)); while (v[n] === 0);
+        do v[n] = r[0] + Math.floor(rnd() * (r[1] - r[0] + 1)); while (v[n] === 0);
       }
     });
     return v;
@@ -55,13 +56,15 @@ const MAKE = (() => {
      o.form  which form to use (otherwise one at random)
      o.vals  the numbers to use (otherwise picked at random, until they pass the form's rules)
      o.avoid questions (as LaTeX) not to make again, such as the worked example and the questions just asked
+     o.rand  where the random numbers come from (otherwise Math.random)
      Returns the question: eq (LaTeX), text (in words), answers (LaTeX), show, and steps as {latex, note}. */
   function question(p, o) {
     o = o || {};
-    const fi = o.form !== undefined ? o.form : Math.floor(Math.random() * p.forms.length), f = p.forms[fi];
+    const rnd = o.rand || Math.random;
+    const fi = o.form !== undefined ? o.form : Math.floor(rnd() * p.forms.length), f = p.forms[fi];
     let v = null, eq = '';
     for (let tries = 0; tries < 2000 && !v; tries++) {
-      const c = complete(f, o.vals || choose(f.pick));
+      const c = complete(f, o.vals || choose(f.pick, rnd));
       eq = fill(f.eq, c, f.dec);
       if (o.vals || ((f.keep || []).every(k => run(k, c)) && (o.avoid || []).indexOf(eq) < 0)) v = c;
     }
@@ -77,6 +80,33 @@ const MAKE = (() => {
   /* The worked example: the first form, with its own numbers. */
   const example = p => question(p, {form: 0, vals: p.forms[0].ex});
 
+  /* A list of random numbers that always comes out the same for the same seed (a whole number).
+     A challenge saves its seed, so both players get exactly the same questions with the same numbers. */
+  function seeded(seed) {
+    let a = seed >>> 0;
+    return () => {
+      a = (a + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(a ^ (a >>> 15), a | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  /* The questions for a challenge: n questions on the points, made from the seed alone.
+     The points are put in an order the seed picks, then taken in turn (round again if there are fewer points than n).
+     Each question avoids the worked example and the set's earlier questions on its point. Nothing about either player
+     goes in, so the same seed gives the same set on any phone. */
+  function set(points, seed, n) {
+    const rnd = seeded(seed), order = points.slice(), out = [];
+    for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = order[i]; order[i] = order[j]; order[j] = t; }
+    for (let i = 0; i < n; i++) {
+      const p = order[i % order.length];
+      out.push(question(p, {rand: rnd, avoid: [example(p).eq].concat(out.filter(q => q.p === p.id).map(q => q.eq))}));
+    }
+    return out;
+  }
+  /* A new seed for a challenge. */
+  const newSeed = () => Math.floor(Math.random() * 4294967296);
+
   /* Maths as words, for screen readers and search: (x − 1)² = 16. */
   function words(latex) {
     return String(latex)
@@ -87,5 +117,5 @@ const MAKE = (() => {
       .replace(/([0-9x)²])-/g, '$1 − ').replace(/-/g, '−').replace(/([0-9x)²])±/g, '$1 ± ')
       .replace(/\s*([+=×÷])\s*/g, ' $1 ').replace(/\s+/g, ' ').trim();
   }
-  return {question: question, example: example, words: words, texNum: texNum};
+  return {question: question, example: example, words: words, texNum: texNum, seeded: seeded, set: set, newSeed: newSeed};
 })();

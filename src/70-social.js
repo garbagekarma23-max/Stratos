@@ -21,24 +21,38 @@ function addMsg(f, m) {
   return m;
 }
 function reactLater(f, text, ms) { later(ms || 2600, () => addMsg(f, {from: 'them', kind: 'react', text: text})); }
-/* The sample friend takes a few seconds to play a challenge you sent. */
+/* The sample friend takes a few seconds to play a challenge you sent. Their score (and maths time) is pretend. */
 function friendPlays(f, id) {
   later(5000 + Math.random() * 3000, () => {
     const m = findMsg(f, id); if (!m || m.state !== 'wait') return;
-    m.them = pretendScore(friend(f), m.total); m.state = 'done';
+    friendScores(friend(f), m); m.state = 'done';
     landed(f, friend(f).name + ' finished your challenge');
     refreshThread(f);
   });
 }
-/* A finished challenge or race goes into the thread with that friend. */
+/* Who won a challenge: won or lost on score, wontime or losttime on level scores (maths only, which keeps times), or draw. */
+function challengeOutcome(me, them, meMs, themMs) {
+  if (me !== them) return me > them ? 'won' : 'lost';
+  if (meMs && themMs && meMs !== themMs) return meMs < themMs ? 'wontime' : 'losttime';
+  return 'draw';
+}
+const outcomeWords = (o, n) => ({won: 'You won.', lost: n + ' won.', wontime: 'You won on time.', losttime: n + ' won on time.', draw: 'A draw.'})[o];
+/* A finished challenge or race goes into the thread with that friend. A maths challenge keeps its seed and your time. */
 function postResult() {
   const f = P.friend;
   if (P.mode === 'challenge') {
-    const m = P.msg ? findMsg(f, P.msg) : null;
+    const m = P.msg ? findMsg(f, P.msg) : null, ms = P.maths ? Math.round(P.ms) : null;
     if (m) {
-      m.me = P.first; m.state = 'done'; save();
-      reactLater(f, P.first > m.them ? 'Rematch?' : (P.first < m.them ? 'Too easy' : 'Good game'), 3000);
-    } else friendPlays(f, addMsg(f, {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'}).id);
+      m.me = P.first; m.state = 'done';
+      if (P.maths) m.meMs = ms;
+      save();
+      const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
+      reactLater(f, o === 'won' || o === 'wontime' ? 'Rematch?' : (o === 'draw' ? 'Good game' : 'Too easy'), 3000);
+    } else {
+      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'};
+      if (P.maths) { nm.seed = P.seed; nm.meMs = ms; }
+      friendPlays(f, addMsg(f, nm).id);
+    }
   } else if (P.mode === 'race') {
     const R = P.race, m = P.msg ? findMsg(f, P.msg) : null, data = {me: R.me, them: R.them, left: R.left, state: 'done'};
     if (m) { Object.assign(m, data); save(); } else addMsg(f, Object.assign({from: 'me', kind: 'race', ch: P.ch}, data));
@@ -56,7 +70,8 @@ function preview(f) {
   if (m.kind === 'challenge') {
     if (m.state === 'open') return 'Challenged you: ' + chOf(m.ch).title;
     if (m.state === 'wait') return n + ' is playing your challenge';
-    return 'Challenge: ' + (m.me > m.them ? 'you won' : (m.me < m.them ? n + ' won' : 'a draw')) + ', ' + m.me + ' to ' + m.them;
+    const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
+    return 'Challenge: ' + {won: 'you won', lost: n + ' won', wontime: 'you won on time', losttime: n + ' won on time', draw: 'a draw'}[o] + ', ' + m.me + ' to ' + m.them;
   }
   if (m.state === 'open') return 'Wants to race you';
   return 'Race: ' + (m.left ? 'you left' : (m.me > m.them ? 'you won' : n + ' won')) + ', ' + m.me + ' to ' + m.them;
@@ -69,19 +84,23 @@ function msgHtml(f, m) {
     return wrap('<div class="mcard"><span class="k">' + (mine ? 'Your flight' : fr.name + '\'s flight') + '</span><span class="bign">' + d.n + ' ' + d.u + '</span>' +
       '<span class="d">' + esc(layerOf(m.km).name) + '. Best combo ×' + m.combo + '. ' + m.first + ' of ' + m.total + ' right first try.</span></div>');
   }
-  const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>';
+  const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>', maths = subOf(m.ch) === 'maths';
   if (m.kind === 'challenge') {
-    const out = m.state !== 'done' ? '' : (m.me > m.them ? 'You won.' : (m.me < m.them ? fr.name + ' won.' : 'A draw.'));
-    return wrap('<div class="mcard"><span class="k">Challenge, ' + plural(m.total, 'question') + '</span>' + title +
-      '<div class="sc"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b><span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b></div>' +
+    const out = m.state !== 'done' ? '' : outcomeWords(challengeOutcome(m.me, m.them, m.meMs, m.themMs), fr.name);
+    /* A maths card has a third column: each player's time. */
+    const time = ms => maths ? '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>' : '';
+    return wrap('<div class="mcard"><span class="k">' + (maths ? 'Maths challenge, ' : 'Challenge, ') + plural(m.total, 'question') + '</span>' + title +
+      '<div class="sc' + (maths ? ' timed' : '') + '"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
+        '<span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b>' + time(m.me == null ? 0 : m.meMs) + '</div>' +
       (out ? '<span class="out">' + out + '</span>' : '') +
       (m.state === 'open' ? '<button class="primary" type="button" data-act="play" data-kind="challenge" data-f="' + f + '" data-m="' + m.id + '">Play</button>' : '') + '</div>');
   }
+  const kind = '<span class="k">' + (maths ? 'Maths race' : 'Race') + ', first to ' + gameSize(m.ch, 'race') + ' correct</span>';
   if (m.state === 'open') {
-    return wrap('<div class="mcard"><span class="k">Race, first to 6 correct</span>' + title +
+    return wrap('<div class="mcard">' + kind + title +
       '<button class="primary" type="button" data-act="play" data-kind="race" data-f="' + f + '" data-m="' + m.id + '">Race now</button></div>');
   }
-  return wrap('<div class="mcard"><span class="k">Race, first to 6 correct</span>' + title +
+  return wrap('<div class="mcard">' + kind + title +
     '<div class="sc"><span>You</span><b>' + m.me + '</b><span>' + fr.name + '</span><b>' + m.them + '</b></div>' +
     '<span class="out">' + (m.left ? 'You left the race.' : (m.me > m.them ? 'You won.' : fr.name + ' won.')) + '</span></div>');
 }
@@ -91,7 +110,7 @@ PAGE.friends = () => {
   let body;
   if (ui.ftab === 'week') {
     const rows = FRIENDS.map(f => ({name: f.name, n: f.week})).concat([{name: saved.name || 'You', n: weekCount(), you: true}]).sort((a, b) => b.n - a.n);
-    body = '<p class="lb-cap">Correct answers since Monday.</p><ol class="lb rows">' + rows.map((r, i) =>
+    body = '<p class="lb-cap">Correct answers since Monday, both subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
       '<li' + (r.you ? ' class="you-row"' : '') + '><span class="rank">' + (i + 1) + '</span><span class="avatar">' + esc(r.name.charAt(0).toUpperCase()) + '</span><span class="nm">' + esc(r.name) + (r.you && saved.name ? ' (you)' : '') + '</span><span class="sc">' + r.n + '</span></li>').join('') + '</ol>';
   } else {
     body = '<div class="rows">' + FRIENDS.slice().sort((a, b) => lastT(b) - lastT(a)).map(f => {
@@ -113,22 +132,27 @@ PAGE.thread = f => {
       '<div class="replies" role="group" aria-label="Quick replies">' + REPLIES.map(r => '<button class="chip" type="button" data-act="reply" data-f="' + f + '" data-text="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div></footer>'
   };
 };
-/* Pick the chapter for a challenge or a race you are starting. */
+/* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name;
-  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n,
-    '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to 6 correct answers wins.' : 'Pick a chapter. You play 8 questions first, then ' + n + ' plays the same set.') + '</p>' +
-    '<div class="picks">' + SUBJECTS.eco.ch.map((c, i) => {
+  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || SUB.id, G = GAME[sub], again = !!b.closest('#sheet');
+  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
+    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
+    '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
+      : 'Pick a chapter. You play ' + G.challenge + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
+    '<div class="picks">' + SUBJECTS[sub].ch.map((c, i) => {
       const s = chStats(c), fresh = s.n - s.learned;
       return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
     }).join('') + '</div>');
+  /* Tapping the switch redraws the sheet. Focus stays on the switch. */
+  if (again) $('#sheetBody .subsw [aria-pressed="true"]').focus({preventScroll: true});
 };
 ACT.startwith = b => startPractice({mode: b.dataset.kind, ch: b.dataset.ch, friend: b.dataset.f});
 /* Play a challenge or race a friend sent. If the chapter has points you have not learned, say so first. */
 ACT.play = b => {
   const f = b.dataset.f, m = findMsg(f, b.dataset.m); if (!m || m.state !== 'open') return;
   const s = chStats(chOf(m.ch)), fresh = s.n - s.learned;
-  const o = {mode: b.dataset.kind, ch: m.ch, friend: f, msg: m.id, them: m.kind === 'challenge' ? m.them : null};
+  const o = {mode: b.dataset.kind, ch: m.ch, friend: f, msg: m.id, them: m.kind === 'challenge' ? m.them : null, themMs: m.themMs || null, seed: m.seed};
   if (!fresh || b.dataset.cold) { startPractice(o); return; }
   openSheet('Before you play',
     '<p class="sub">' + (fresh === s.n ? 'All ' + s.n + ' points' : fresh + ' of the ' + s.n + ' points') + ' in this chapter are new to you. You can learn them first, or go in cold.</p>' +
@@ -138,10 +162,16 @@ ACT.reply = b => {
   const f = b.dataset.f, text = b.dataset.text;
   addMsg(f, {from: 'me', kind: 'react', text: text});
   if (text === 'Rematch?') {
-    /* The friend takes you up on it and sends a fresh challenge. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : ecoCh().id;   /* games are Economics only */
+    /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
+       (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
     reactLater(f, 'You are on', 1500);
-    later(3400, () => addMsg(f, {from: 'them', kind: 'challenge', ch: ch, them: pretendScore(friend(f), 8), me: null, total: 8, state: 'open'}));
+    later(3400, () => {
+      const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};
+      if (subOf(ch) === 'maths') m.seed = MAKE.newSeed();
+      friendScores(friend(f), m);
+      addMsg(f, m);
+    });
   } else if (Math.random() < 0.6) reactLater(f, text === 'Too easy' ? 'Next time' : 'Good game', 2200);
 };
 ACT.tothread = b => { const f = b.dataset.f; closeRun(); go('home'); ui.ftab = 'msgs'; openPage('friends'); openPage('thread', f); };

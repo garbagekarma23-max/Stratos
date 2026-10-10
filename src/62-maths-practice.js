@@ -6,13 +6,18 @@
      2 x (right answers in a row) x difficulty. Difficulty is 2 in chapter 1 and 3 in chapter 2.
    - Done has one clear moment: the working lines tick again one after another, the ping climbs, the rocket lifts,
      then the next question comes in.
-   - A clock runs for the flight. The fastest finished flight for each set of questions is kept. */
+   - A clock runs for the flight. The fastest finished flight for each set of questions is kept.
+   Challenges and races with a friend use the same flight with one try per question (see game below):
+   - A challenge is 5 questions made from a saved seed, so the friend gets exactly the same ones. Score, then time, wins.
+   - A race is first to 4 right answers. Questions keep coming from the chapter until someone gets there. */
 const MATHS_D = p => p.ci === 0 ? 2 : 3;
 const fSegs = $('#fSegs'), fClock = $('#fClock');
 const TICK_MS = 110;                    /* the gap between one line's tick and the next in the Done moment */
 
 /* True while a maths flight is on screen. The keypad sends its lines and Done here when it is. */
 function mpOn() { return ui.tab === 'practice' && !!P && !!P.maths; }
+/* True in a maths challenge or race. Each question gets one try: no fixing, no Skip, and nothing comes back later. */
+const game = () => !!P && (P.mode === 'challenge' || P.mode === 'race');
 
 /* The points a maths flight can ask about, most useful first: weak ones, then ones not practised yet,
    then the ones answered right longest ago. Only points that are not new count. */
@@ -78,20 +83,31 @@ function renderMathsStart() {
 
 /* ---------- a maths flight ---------- */
 function startMathsFlight(o) {
-  const len = o.len === 999 ? 0 : (o.len || 8);
-  const picked = mathsPick(mathsPool(o.mode, o.ch), len);
+  const len = o.len === 999 ? 0 : (o.len || 8), ch = chOf(o.ch);
+  let picked, seed = null;
+  if (o.mode === 'challenge') {
+    /* The questions come from the seed alone, so both players get the same ones with the same numbers. */
+    seed = o.seed != null ? o.seed : MAKE.newSeed();
+    picked = MAKE.set(ch.points, seed, GAME.maths.challenge).map(q => ({p: q.p, q: q}));
+  } else if (o.mode === 'race') picked = shuffle(ch.points.map(p => ({p: p.id})));    /* goes round again until someone wins */
+  else picked = mathsPick(mathsPool(o.mode, o.ch), len);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
   token++;
   clearTimeout(raceTimer);
   if (pad) pad.stop();
-  P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: null, msg: null, them: null,
-    items: picked.map(x => ({p: x.p, back: false})), res: [], total: picked.length,
+  P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null,
+    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed,
+    items: picked.map(x => ({p: x.p, q: x.q || null, back: false})), res: [], total: picked.length,
     combo: 0, row: 0, best: 0, alt: 0, done: false, cut: false, pb: false, first: 0, sent: false,
-    lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct), race: null};
+    lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct),
+    race: o.mode === 'race' ? {target: GAME.maths.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
-  playLaunch(launchCard(), () => paintWork());
+  playLaunch(launchCard(), () => {
+    if (P && P.race) { P.race.go = true; raceMusic(); raceArm(); }
+    paintWork();
+  });
 }
 /* What a new slide in the flight is: Economics or maths. Called by mountRun and appendNext. */
 function slideFor(i) { return P.maths ? mpEl(i) : qEl(P, i); }
@@ -103,12 +119,13 @@ function mpAvoid(pid) {
 /* A maths question slide in a flight. Each one is made fresh from the point's templates, with new numbers. */
 function mpEl(i) {
   const it = P.items[i], p = PT[it.p], sec = document.createElement('section');
-  if (!it.q) { it.q = MAKE.question(p, {avoid: mpAvoid(it.p)}); it.ans = it.q.answers.map(LabMaths.number); }
+  if (!it.q) it.q = MAKE.question(p, {avoid: mpAvoid(it.p)});      /* a challenge's questions are made already, from its seed */
+  if (!it.ans) it.ans = it.q.answers.map(LabMaths.number);
   sec.className = 'slide mq'; sec.dataset.i = i;
   sec.innerHTML =
-    '<p class="meta"><span>Question ' + (i + 1) + (it.back ? '' : ' of ' + P.total) + '</span><span>' + esc(p.title) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '') + '</p>' +
+    '<p class="meta"><span>Question ' + (i + 1) + (it.back || P.race ? '' : ' of ' + P.total) + '</span><span>' + esc(p.title) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '') + '</p>' +
     '<div class="mq-head"><div class="mq-q"><span class="ask">' + esc(MATHS.ask) + '</span>' + mathsEq(it.q.eq) + '</div>' +
-      '<div class="actions">' + (it.back ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
+      '<div class="actions">' + (it.back || game() ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
     '<ol class="work" aria-label="Your working"></ol>' +
     '<div class="note" hidden></div>' +
     '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
@@ -162,6 +179,15 @@ function mpDone() {
   if (!r.ok && !COUNTS.has(r.say)) { pad.note(line, r.say); return; }
   if (!c.it.tried) { c.it.tried = true; recordMaths(c.it.p, c.it.q.eq, r.ok, 'p'); }
   if (r.ok) { mpRight(c); return; }
+  if (game()) {
+    /* One try in a challenge or race: the answer counts as wrong, and the worked solution shows until Next. */
+    P.row = 0;
+    if (P.combo) mpDrop();
+    pad.note(line, r.say);
+    sound.wrong(); buzzFor(false, 0);
+    mpFinish(c, 'wrong', 0);
+    return;
+  }
   const first = !c.it.wrong;
   c.it.wrong = true;
   P.row = 0;
@@ -181,6 +207,11 @@ function mpRight(c) {
     mult = 2 * P.row * MATHS_D(PT[it.p]);                      /* the same rule as Economics, counted in answers */
     P.alt = Math.min(P.alt > 0 ? P.alt * mult : mult, 1e300);
     if (!it.back) P.first++;
+    /* In a race the point is scored at Done, so the friend cannot win during the Done moment. */
+    if (P.race) {
+      P.race.me++; paintLanes();
+      if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); raceMusic(); }
+    }
   }
   P.busy = true;
   pad.trim(); pad.lock();
@@ -213,7 +244,7 @@ ACT.mpreveal = b => {
   const c = mpWaiting();
   if (!c || P.busy || b.closest('.slide') !== c.sec) return;
   if (!c.it.tried) { c.it.tried = true; recordMaths(c.it.p, c.it.q.eq, false, 'p'); }
-  if (!c.it.wrong && !c.it.back) mpRequeue(c.it);
+  if (!c.it.wrong && !c.it.back && !game()) mpRequeue(c.it);
   P.row = 0;
   if (P.combo) mpDrop();
   say('The answer is ' + MAKE.words(c.it.q.show) + '.');
@@ -244,12 +275,12 @@ function mpFinish(c, o, gain) {
   if (o === 'correct') end.innerHTML = '<b>Right</b><span>' + (gain ? 'First try. Altitude ×' + gain + '.' : 'First try.') + '</span>';
   else if (o === 'fixed') end.innerHTML = '<b>Right</b><span>Fixed. It still counts as a miss this time.</span>';
   else if (o === 'skipped') end.innerHTML = '<b>Skipped</b><span>A question like it comes back at the end.</span>';
-  else end.innerHTML = '<b>Answer</b>' + mathsEq(it.q.show);
+  else end.innerHTML = '<b>' + (o === 'wrong' ? 'Not this time' : 'Answer') + '</b>' + mathsEq(it.q.show);
   $('.work', sec).append(end);
   if (o === 'correct' || o === 'skipped') note.hidden = true;
   else {
     note.hidden = false; note.className = 'note';
-    note.innerHTML = '<b>Worked solution</b>' + stepsHtml(it.q.steps) + '<p class="after">' + (it.back ? 'Marked as a weak point.' : 'Marked as a weak point. A question like it comes back later in this flight.') + '</p>';
+    note.innerHTML = '<b>Worked solution</b>' + stepsHtml(it.q.steps) + '<p class="after">' + (it.back || game() ? 'Marked as a weak point.' : 'Marked as a weak point. A question like it comes back later in this flight.') + '</p>';
   }
   paintSegs();
   const el = appendNext(sec);
@@ -268,7 +299,7 @@ function mpFinish(c, o, gain) {
 /* One segment per question in the flight. It fills when the question is finished: blue if right first time,
    the weak-point colour if not. The question on screen is darker until it is done. */
 function paintSegs() {
-  if (!P || !P.maths) { fSegs.hidden = true; fSegs.textContent = ''; return; }
+  if (!P || !P.maths || P.race) { fSegs.hidden = true; fSegs.textContent = ''; return; }     /* a race has the lanes instead */
   fSegs.hidden = false;
   const cur = P.done ? -1 : P.res.length;
   fSegs.innerHTML = P.items.map((it, i) => {
@@ -298,7 +329,8 @@ function mpEnd() {
   if (pad) pad.stop();
   const k = bestKey(P.mode, P.ch, P.total), clean = !P.cut && P.res.every(r => r.o === 'correct' || r.o === 'fixed');
   P.bestKey = k;
-  if (clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
+  /* Best times are for your own flights. A challenge's time goes on its card instead. */
+  if (solo() && clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
   saved.m.bestCombo = Math.max(saved.m.bestCombo || 0, P.best);
   saved.m.bestKm = Math.max(saved.m.bestKm || 0, P.alt);
   fClock.textContent = clockText(P.ms);
@@ -309,6 +341,32 @@ function mpSummary() {
   const b = saved.m.best[P.bestKey], scope = P.mode === 'chapter' ? 'chapter ' + (CH.indexOf(chOf(P.ch)) + 1) : 'everything';
   return '<dl class="stats"><div><dt>Time</dt><dd>' + clockText(P.ms) + '</dd></div><div><dt>Lines</dt><dd>' + P.lines + '</dd></div><div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>' +
     '<p class="sumline">' + (b ? 'Best time for ' + scope + ', ' + plural(P.total, 'question') + ': ' + clockText(b) + '.' : 'A best time needs every question answered, with none skipped or shown.') + '</p>';
+}
+
+/* The extra row on a maths challenge or race result: your time (and the friend's, in a challenge), lines and wrong lines. */
+function mpGameStats(fr) {
+  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
+  return '<dl class="stats"><div><dt>Your time</dt><dd>' + clockText(P.ms) + '</dd></div>' + them + '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>';
+}
+/* The verdict on a maths challenge the friend has already played. More right answers wins; level scores go to the faster time. */
+function mpChallengeLine(fr) {
+  const o = challengeOutcome(P.first, P.them, P.ms, P.themMs), t = P.themMs ? ' in ' + clockText(P.themMs) : '';
+  if (o === 'won') return 'You won. ' + fr.name + ' scored ' + P.them + t + '.';
+  if (o === 'lost') return fr.name + ' won. ' + fr.name + ' scored ' + P.them + t + '.';
+  if (o === 'wontime') return 'You won on time. ' + fr.name + ' also scored ' + P.them + t + '.';
+  if (o === 'losttime') return fr.name + ' won on time. ' + fr.name + ' also scored ' + P.them + t + '.';
+  return 'A draw. ' + fr.name + ' scored ' + P.them + t + '.';
+}
+/* A race ended before this question was answered: close it and lock the keys. */
+function mpClose(c) {
+  if (pad && pad.el === $('.work', c.sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }
+  P.res.push({o: 'closed', gain: 0});
+  P.busy = false;
+  c.sec.classList.add('done');
+  $('.mq-head .actions', c.sec).hidden = true;
+  const note = $('.note', c.sec);
+  note.hidden = false; note.className = 'note quiet';
+  note.innerHTML = '<p>The race ended before you answered.</p>';
 }
 
 /* While the flight scrolls (after Next), the keypad waits until the slide has settled. */

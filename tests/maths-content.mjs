@@ -101,6 +101,34 @@ for (const ch of MATHS.chapters) for (const p of ch.points) {
 check(fractions > RUNS * 0.5, 'x on both sides sometimes gives a fraction answer (' + fractions + ' of ' + made + ' questions)');
 check(made === forms * RUNS && points === 7, made + ' questions made from ' + forms + ' templates in ' + points + ' points');
 
+// ---------- challenge sets: the same seed always gives the same questions ----------
+{
+  const eqs = (ch, seed) => MAKE.set(ch.points, seed, 5).map(q => q.eq);
+  const [c1, c2] = MATHS.chapters, PT_OF = {};
+  MATHS.chapters.forEach(c => c.points.forEach(p => { PT_OF[p.id] = p; }));
+  let same = true, differ = 0, cleanSets = true, allPoints = true, firstBad = '';
+  for (let seed = 1; seed <= 300; seed++) {
+    for (const ch of [c1, c2]) {
+      const a = MAKE.set(ch.points, seed * 7919, 5), b = eqs(ch, seed * 7919);
+      if (JSON.stringify(a.map(q => q.eq)) !== JSON.stringify(b)) same = false;
+      if (new Set(b).size !== 5 || a.some(q => q.eq === MAKE.example(PT_OF[q.p]).eq)) { cleanSets = false; firstBad = firstBad || ch.id + ' seed ' + seed + ': ' + b.join(' | '); }
+      a.forEach(q => { const bad = problem(PT_OF[q.p], q); if (bad) { cleanSets = false; firstBad = firstBad || bad; } });
+      if (ch === c1 && new Set(a.map(q => q.p)).size !== 5) allPoints = false;
+      if (eqs(ch, seed * 7919 + 1).join() !== b.join()) differ++;
+    }
+  }
+  check(same, 'the same seed gives the same five questions every time, in both chapters');
+  check(differ === 600, 'a different seed gives a different set (' + differ + ' of 600)');
+  check(cleanSets, 'every challenge set has five different, clean questions and never the worked example' + (firstBad ? ': ' + firstBad : ''));
+  check(allPoints, 'a chapter 1 challenge asks one question on each of its five points');
+  check(eqs(c1, 12345).join(' | ') === eqs(c1, 12345).join(' | ') && MAKE.seeded(42)() === MAKE.seeded(42)() && MAKE.seeded(42)() !== MAKE.seeded(43)(), 'the seeded numbers repeat for a seed and change with it');
+  const before = Math.random;
+  Math.random = () => 0.5;
+  const fixed = eqs(c1, 999).join();
+  Math.random = before;
+  check(fixed === eqs(c1, 999).join(), 'a challenge set does not use Math.random at all');
+}
+
 // ---------- words for screen readers ----------
 check(MAKE.words('\\left(x+2\\right)^2=9') === '(x + 2)² = 9' && MAKE.words('7-2x=-15') === '7 − 2x = −15' && MAKE.words('x=1\\pm4') === 'x = 1 ± 4', 'maths reads as words with proper minus signs');
 

@@ -401,6 +401,8 @@ svg{display:block;flex:none}
 #run.alt2{--s-top:122px}
 #run.alt2[data-sub="maths"]{--s-top:134px}
 #run.alt2[data-mode="race"]{--s-top:168px}
+#run[data-mode="race"][data-sub="maths"]{--s-top:150px}
+#run.alt2[data-mode="race"][data-sub="maths"]{--s-top:168px}
 .mq-head .actions{flex:none}
 .mq-q{min-width:0}
 @media (max-width:400px){.mq-head .actions .act{padding:0 12px}.mq-head .actions .act .t{display:none}}
@@ -509,6 +511,7 @@ svg{display:block;flex:none}
 .notice{margin-top:16px;padding:10px 12px;border-radius:12px;background:var(--wash);font-size:13px;line-height:1.45;color:var(--ink-2)}
 .p-body > .notice:first-child{margin-top:0}
 .p-body .seg3{margin-bottom:14px}
+.subsw{margin-bottom:12px}
 .thrs{margin-top:8px}
 .thr{display:grid;grid-template-columns:auto minmax(0,1fr) 10px;align-items:center;gap:12px;width:100%;min-height:66px;padding:8px 0;border:0;border-bottom:1px solid var(--line);background:none;text-align:left}
 .thr b{display:block;font-weight:600}
@@ -527,13 +530,15 @@ svg{display:block;flex:none}
 .msg.mine{align-self:flex-end}
 .bubble{padding:9px 14px;border-radius:18px;background:var(--wash-2);font-size:15px;line-height:1.35}
 .msg.mine .bubble{background:var(--ink);color:var(--paper)}
-.mcard{width:min(272px,100%);display:grid;gap:5px;padding:12px 14px 14px;border:1px solid var(--line-2);border-radius:16px;background:var(--paper)}
+.mcard{width:272px;max-width:100%;display:grid;gap:5px;padding:12px 14px 14px;border:1px solid var(--line-2);border-radius:16px;background:var(--paper)}
 .mcard .k{font-size:12px;color:var(--ink-2)}
 .mcard .t{font-weight:700;font-size:16px;line-height:1.25;text-wrap:balance}
 .mcard .bign{font:700 26px/1.05 var(--f);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .mcard .d{font-size:13px;line-height:1.4;color:var(--ink-2)}
 .mcard .sc{display:grid;grid-template-columns:1fr auto;gap:2px 12px;margin-top:4px;padding-top:8px;border-top:1px solid var(--line);font-size:14px;font-variant-numeric:tabular-nums}
 .mcard .sc b{font-weight:700;text-align:right}
+.mcard .sc.timed{grid-template-columns:1fr auto auto}
+.mcard .sc .tm{font-weight:500;color:var(--ink-2);min-width:36px}
 .mcard .out{margin-top:2px;font-weight:700;font-size:14px}
 .mcard .primary{min-height:40px;margin-top:8px;font-size:14px}
 .mcard .textbtn{justify-self:start;font-size:13px;font-weight:500}
@@ -2731,13 +2736,26 @@ const SOUNDS = [
 ];
 const PACK = {name: 'Deep space pack', items: 'Deep field, Saucer and Nebula together', price: '$4.99'};
 
-/* ---------- sample friends. week is their correct answers this week, skill and pace drive the pretend play ---------- */
+/* ---------- sample friends. week is their correct answers this week, skill and pace drive the pretend play ----------
+   pace is the seconds a friend takes for each right answer in an Economics race. mpace is the same for maths
+   chapter 1, where each question is several lines on the keypad, not one tap. */
 const FRIENDS = [
-  {id: 'aisha', name: 'Aisha', week: 64, skill: 0.86, pace: 11},
-  {id: 'noah', name: 'Noah', week: 41, skill: 0.76, pace: 13},
-  {id: 'mia', name: 'Mia', week: 27, skill: 0.68, pace: 15},
-  {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18}
+  {id: 'aisha', name: 'Aisha', week: 64, skill: 0.86, pace: 11, mpace: 25},
+  {id: 'noah', name: 'Noah', week: 41, skill: 0.76, pace: 13, mpace: 30},
+  {id: 'mia', name: 'Mia', week: 27, skill: 0.68, pace: 15, mpace: 36},
+  {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18, mpace: 45}
 ];
+/* Challenges and races in each subject. A maths question takes about three times as long as tapping an option,
+   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6. */
+const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}};
+/* Maths chapter 2 (squares) needs more lines than chapter 1, so the sample friends take 1.3 times as long there. */
+const MATHS_SLOW = {m1: 1, m2: 1.3};
+const subOf = chId => { const c = chOf(chId); return c ? c.sub : 'eco'; };
+const gameSize = (chId, kind) => GAME[subOf(chId)][kind];
+/* A sample friend's seconds for each right answer on a chapter. */
+function paceOf(f, chId) { return subOf(chId) === 'maths' ? f.mpace * (MATHS_SLOW[chId] || 1.3) : f.pace; }
+/* A pretend time for a friend playing a maths challenge, in ms: their pace for each question, give or take a fifth. */
+function pretendTime(f, chId, total) { let ms = 0; for (let i = 0; i < total; i++) ms += paceOf(f, chId) * 1000 * (0.8 + Math.random() * 0.4); return Math.round(ms); }
 const friend = id => FRIENDS.find(f => f.id === id) || FRIENDS[0];
 const REPLIES = ['Nice one', 'Rematch?', 'Too easy', 'Good game'];
 
@@ -2765,12 +2783,21 @@ function tidySaved() {
   if (!saved.th || typeof saved.th !== 'object' || !FRIENDS.every(f => Array.isArray(saved.th[f.id]))) seedThreads();
   if (!saved.unread || typeof saved.unread !== 'object') saved.unread = {};
   if (!ownsRocket(saved.rocket)) saved.rocket = 'classic';
-  /* A challenge a friend was still playing when the page closed is finished now. */
-  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { m.them = pretendScore(f, m.total); m.state = 'done'; } }));
-  /* Challenges and races are Economics only. An older build could save one on a maths chapter (a Rematch sent while
-     Maths was picked), which could not be played. Such a message moves to the Economics chapter. */
+  /* A message on a chapter this build does not have moves to the first Economics chapter, so it can still be played. */
   let moved = false;
-  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.ch && !SUBJECTS.eco.ch.some(c => c.id === m.ch)) { m.ch = ecoCh().id; moved = true; } }));
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => {
+    if (m.ch && !chOf(m.ch)) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
+    /* An older build could save a maths challenge with no seed and 8 questions. It gets a seed and the maths size. */
+    if (m.kind === 'challenge' && subOf(m.ch) === 'maths' && m.seed == null) {
+      m.seed = MAKE.newSeed();
+      if (m.them != null) { m.them = Math.min(m.them, GAME.maths.challenge); if (m.themMs == null) m.themMs = pretendTime(f, m.ch, GAME.maths.challenge); }
+      if (m.me != null) m.me = Math.min(m.me, GAME.maths.challenge);
+      m.total = GAME.maths.challenge;
+      moved = true;
+    }
+  }));
+  /* A challenge a friend was still playing when the page closed is finished now. */
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { friendScores(f, m); m.state = 'done'; } }));
   if (moved) save();
 }
 function seedThreads() {
@@ -2785,6 +2812,8 @@ function seedThreads() {
   saved.mid = 10;
 }
 function pretendScore(f, total) { let n = 0; for (let i = 0; i < total; i++) if (Math.random() < f.skill) n++; return n; }
+/* A sample friend's pretend score on a challenge, and in maths their pretend time too. */
+function friendScores(f, m) { m.them = pretendScore(f, m.total); if (subOf(m.ch) === 'maths') m.themMs = pretendTime(f, m.ch, m.total); }
 function ownsRocket(id) { const r = ROCKETS.find(x => x.id === id); return !!r && !r.price && (!r.earn || streakNow() >= r.earn); }
 
 const dayKey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -2913,8 +2942,6 @@ function curCh() {
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }
 const names = pts => pts.map(p => p.title).join(', ');
-/* The Economics chapter last opened (or the first), whichever subject is picked. Challenges and races use it. */
-const ecoCh = () => SUBJECTS.eco.ch.find(c => c.id === saved.cur) || SUBJECTS.eco.ch[0];
 /* What the big button on Home does next. */
 function nextStep() {
   if (isMaths()) return mathsNext();
@@ -3014,16 +3041,17 @@ const MAKE = (() => {
     out = out.replace(/(^|[^0-9.])1x/g, '$1x');
     return out;
   }
-  /* Choose one number for each name in pick: whole numbers from lowest to highest and never 0, or steps of a set size. */
-  function choose(pick) {
+  /* Choose one number for each name in pick: whole numbers from lowest to highest and never 0, or steps of a set size.
+     rnd gives the random numbers: Math.random, or a seeded list for a challenge (see seeded below). */
+  function choose(pick, rnd) {
     const v = {};
     Object.keys(pick).forEach(n => {
       const r = pick[n];
       if (r.length > 2) {
         const steps = Math.round((r[1] - r[0]) / r[2]);
-        v[n] = parseFloat((r[0] + Math.floor(Math.random() * (steps + 1)) * r[2]).toFixed(6));
+        v[n] = parseFloat((r[0] + Math.floor(rnd() * (steps + 1)) * r[2]).toFixed(6));
       } else {
-        do v[n] = r[0] + Math.floor(Math.random() * (r[1] - r[0] + 1)); while (v[n] === 0);
+        do v[n] = r[0] + Math.floor(rnd() * (r[1] - r[0] + 1)); while (v[n] === 0);
       }
     });
     return v;
@@ -3039,13 +3067,15 @@ const MAKE = (() => {
      o.form  which form to use (otherwise one at random)
      o.vals  the numbers to use (otherwise picked at random, until they pass the form's rules)
      o.avoid questions (as LaTeX) not to make again, such as the worked example and the questions just asked
+     o.rand  where the random numbers come from (otherwise Math.random)
      Returns the question: eq (LaTeX), text (in words), answers (LaTeX), show, and steps as {latex, note}. */
   function question(p, o) {
     o = o || {};
-    const fi = o.form !== undefined ? o.form : Math.floor(Math.random() * p.forms.length), f = p.forms[fi];
+    const rnd = o.rand || Math.random;
+    const fi = o.form !== undefined ? o.form : Math.floor(rnd() * p.forms.length), f = p.forms[fi];
     let v = null, eq = '';
     for (let tries = 0; tries < 2000 && !v; tries++) {
-      const c = complete(f, o.vals || choose(f.pick));
+      const c = complete(f, o.vals || choose(f.pick, rnd));
       eq = fill(f.eq, c, f.dec);
       if (o.vals || ((f.keep || []).every(k => run(k, c)) && (o.avoid || []).indexOf(eq) < 0)) v = c;
     }
@@ -3061,6 +3091,33 @@ const MAKE = (() => {
   /* The worked example: the first form, with its own numbers. */
   const example = p => question(p, {form: 0, vals: p.forms[0].ex});
 
+  /* A list of random numbers that always comes out the same for the same seed (a whole number).
+     A challenge saves its seed, so both players get exactly the same questions with the same numbers. */
+  function seeded(seed) {
+    let a = seed >>> 0;
+    return () => {
+      a = (a + 0x6D2B79F5) >>> 0;
+      let t = Math.imul(a ^ (a >>> 15), a | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  /* The questions for a challenge: n questions on the points, made from the seed alone.
+     The points are put in an order the seed picks, then taken in turn (round again if there are fewer points than n).
+     Each question avoids the worked example and the set's earlier questions on its point. Nothing about either player
+     goes in, so the same seed gives the same set on any phone. */
+  function set(points, seed, n) {
+    const rnd = seeded(seed), order = points.slice(), out = [];
+    for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = order[i]; order[i] = order[j]; order[j] = t; }
+    for (let i = 0; i < n; i++) {
+      const p = order[i % order.length];
+      out.push(question(p, {rand: rnd, avoid: [example(p).eq].concat(out.filter(q => q.p === p.id).map(q => q.eq))}));
+    }
+    return out;
+  }
+  /* A new seed for a challenge. */
+  const newSeed = () => Math.floor(Math.random() * 4294967296);
+
   /* Maths as words, for screen readers and search: (x − 1)² = 16. */
   function words(latex) {
     return String(latex)
@@ -3071,7 +3128,7 @@ const MAKE = (() => {
       .replace(/([0-9x)²])-/g, '$1 − ').replace(/-/g, '−').replace(/([0-9x)²])±/g, '$1 ± ')
       .replace(/\s*([+=×÷])\s*/g, ' $1 ').replace(/\s+/g, ' ').trim();
   }
-  return {question: question, example: example, words: words, texNum: texNum};
+  return {question: question, example: example, words: words, texNum: texNum, seeded: seeded, set: set, newSeed: newSeed};
 })();
 
 /* ---------- sound: a ping on every correct answer, with a recorded blast under it once the combo reaches 3 ---------- */
@@ -4151,16 +4208,21 @@ marksEl.innerHTML = MILES.filter(m => m.m).map(m => {
 }).join('');
 const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l, on: false}));
 
-/* Start a flight. o.mode is mix or chapter (your own practice), challenge (8 set questions) or race (first to 6). */
+/* Start a flight. o.mode is mix or chapter (your own practice), challenge (a set of questions a friend plays too)
+   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject. */
 function startPractice(o) {
   sound.wake();
-  /* A maths flight is worked on the keypad (62-maths-practice.js). Challenges and races are Economics for now. */
-  if (isMaths() && (o.mode === 'mix' || o.mode === 'chapter')) { startMathsFlight(o); return; }
-  if (isMaths()) { useSubject('eco', true); toast('Challenges and races use Economics for now.'); }
+  /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
+  if ((o.mode === 'challenge' || o.mode === 'race') && subOf(o.ch) !== SUB.id) {
+    useSubject(subOf(o.ch), true);
+    toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+  }
+  /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
+  if (isMaths()) { startMathsFlight(o); return; }
   let picked;
   if (o.mode === 'challenge' || o.mode === 'race') {
     const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));
-    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, 8);
+    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, GAME.eco.challenge);
   } else picked = poolFor(o.mode, o.ch).slice(0, o.len || 8);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
@@ -4170,7 +4232,7 @@ function startPractice(o) {
   P = {mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null, them: o.them == null ? null : o.them,
     items: picked.map(x => ({p: x.p, k: x.k, perm: shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
     combo: 0, best: 0, alt: 0, clue: false, done: false, cut: false, pb: false, first: 0, sent: false, before: CH.map(c => chStats(c).pct),
-    race: o.mode === 'race' ? {target: 6, me: 0, them: 0, over: false, left: false} : null};
+    race: o.mode === 'race' ? {target: GAME.eco.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
   playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
@@ -4178,13 +4240,14 @@ function startPractice(o) {
 function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
-  if (P.mode === 'challenge') return {title: 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + '. Beat it.'};
+  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
   if (P.mode === 'chapter') return {title: 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
-  if (P.mode === 'race') return 'Race to ' + P.race.target;
-  if (P.mode === 'challenge') return P.them == null ? 'Challenge for ' + friend(P.friend).name : 'Challenge, ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
+  const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
+  if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
+  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
   if (P.mode === 'chapter') return 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1);
   return 'Mixed flight';
 }
@@ -4424,7 +4487,7 @@ function settle(sec, delay) {
 function appendNext(prev) {
   const more = !P.done && !P.cut && !(P.race && P.race.over);
   /* A race keeps going until someone wins, so it goes round the questions again if it has to. */
-  if (more && P.race && P.res.length >= P.items.length) shuffle(P.items.slice()).forEach(it => P.items.push({p: it.p, k: it.k, perm: shuffle([0, 1, 2, 3]), back: false}));
+  if (more && P.race && P.res.length >= P.items.length) shuffle(P.items.slice()).forEach(it => P.items.push(P.maths ? {p: it.p, back: false} : {p: it.p, k: it.k, perm: shuffle([0, 1, 2, 3]), back: false}));
   let el;
   if (more && P.res.length < P.items.length) el = slideFor(P.res.length);
   else { finish(); el = summaryEl(); }
@@ -4454,11 +4517,13 @@ function summaryEl() {
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
   if (P.mode === 'challenge') {
-    const out = P.them == null ? fr.name + ' is playing the same set now.' : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
+    const out = P.them == null ? fr.name + ' is playing the same set now.' : P.maths ? mpChallengeLine(fr)
+      : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
     h = '<p class="meta"><span>Challenge complete</span></p>' +
       '<p class="big"><span>' + P.first + ' of ' + P.total + '</span><small>' + (P.cut ? 'You ended early, so the rest count as wrong' : 'right') + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
+      (P.maths ? mpGameStats(fr) : '') +
       weakLine +
       '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
   } else if (P.mode === 'race') {
@@ -4467,6 +4532,7 @@ function summaryEl() {
       '<p class="big"><span>' + R.me + ' to ' + R.them + '</span><small>You against ' + esc(fr.name) + ', first to ' + R.target + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
+      (P.maths ? mpGameStats(null) : '') +
       weakLine +
       '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
   } else {
@@ -4519,7 +4585,7 @@ function raceMusic() {
 document.addEventListener('visibilitychange', raceMusic);
 function raceArm() {
   if (!P || !P.race || P.race.over) return;
-  const t = token, ms = friend(P.friend).pace * 1000 * (0.65 + Math.random() * 0.7);
+  const t = token, ms = paceOf(friend(P.friend), P.ch) * 1000 * (0.65 + Math.random() * 0.7);     /* maths pace is slower */
   raceTimer = setTimeout(() => {
     if (t !== token || !P || !P.race || P.race.over) return;
     P.race.them++; paintLanes();
@@ -4527,12 +4593,14 @@ function raceArm() {
   }, ms);
 }
 function raceLost() {
-  const c = current();
+  const c = P.maths ? mpWaiting() : current();
   P.race.over = true;
   raceMusic();
   token++;                                                     /* stops a slide that was about to be added */
-  if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
+  if (c && P.maths) mpClose(c);
+  else if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
   const el = appendNext(feed.lastElementChild), t = token;
+  if (P.maths) paintWork();                                    /* the keypad goes with the question */
   toast(friend(P.friend).name + ' reached ' + P.race.target + ' first');
   sound.wrong();
   setTimeout(() => { if (t === token && P) scrollToEl(feed, el); }, 900);
@@ -4546,13 +4614,18 @@ function raceLost() {
      2 x (right answers in a row) x difficulty. Difficulty is 2 in chapter 1 and 3 in chapter 2.
    - Done has one clear moment: the working lines tick again one after another, the ping climbs, the rocket lifts,
      then the next question comes in.
-   - A clock runs for the flight. The fastest finished flight for each set of questions is kept. */
+   - A clock runs for the flight. The fastest finished flight for each set of questions is kept.
+   Challenges and races with a friend use the same flight with one try per question (see game below):
+   - A challenge is 5 questions made from a saved seed, so the friend gets exactly the same ones. Score, then time, wins.
+   - A race is first to 4 right answers. Questions keep coming from the chapter until someone gets there. */
 const MATHS_D = p => p.ci === 0 ? 2 : 3;
 const fSegs = $('#fSegs'), fClock = $('#fClock');
 const TICK_MS = 110;                    /* the gap between one line's tick and the next in the Done moment */
 
 /* True while a maths flight is on screen. The keypad sends its lines and Done here when it is. */
 function mpOn() { return ui.tab === 'practice' && !!P && !!P.maths; }
+/* True in a maths challenge or race. Each question gets one try: no fixing, no Skip, and nothing comes back later. */
+const game = () => !!P && (P.mode === 'challenge' || P.mode === 'race');
 
 /* The points a maths flight can ask about, most useful first: weak ones, then ones not practised yet,
    then the ones answered right longest ago. Only points that are not new count. */
@@ -4618,20 +4691,31 @@ function renderMathsStart() {
 
 /* ---------- a maths flight ---------- */
 function startMathsFlight(o) {
-  const len = o.len === 999 ? 0 : (o.len || 8);
-  const picked = mathsPick(mathsPool(o.mode, o.ch), len);
+  const len = o.len === 999 ? 0 : (o.len || 8), ch = chOf(o.ch);
+  let picked, seed = null;
+  if (o.mode === 'challenge') {
+    /* The questions come from the seed alone, so both players get the same ones with the same numbers. */
+    seed = o.seed != null ? o.seed : MAKE.newSeed();
+    picked = MAKE.set(ch.points, seed, GAME.maths.challenge).map(q => ({p: q.p, q: q}));
+  } else if (o.mode === 'race') picked = shuffle(ch.points.map(p => ({p: p.id})));    /* goes round again until someone wins */
+  else picked = mathsPick(mathsPool(o.mode, o.ch), len);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
   token++;
   clearTimeout(raceTimer);
   if (pad) pad.stop();
-  P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: null, msg: null, them: null,
-    items: picked.map(x => ({p: x.p, back: false})), res: [], total: picked.length,
+  P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null,
+    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed,
+    items: picked.map(x => ({p: x.p, q: x.q || null, back: false})), res: [], total: picked.length,
     combo: 0, row: 0, best: 0, alt: 0, done: false, cut: false, pb: false, first: 0, sent: false,
-    lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct), race: null};
+    lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct),
+    race: o.mode === 'race' ? {target: GAME.maths.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
-  playLaunch(launchCard(), () => paintWork());
+  playLaunch(launchCard(), () => {
+    if (P && P.race) { P.race.go = true; raceMusic(); raceArm(); }
+    paintWork();
+  });
 }
 /* What a new slide in the flight is: Economics or maths. Called by mountRun and appendNext. */
 function slideFor(i) { return P.maths ? mpEl(i) : qEl(P, i); }
@@ -4643,12 +4727,13 @@ function mpAvoid(pid) {
 /* A maths question slide in a flight. Each one is made fresh from the point's templates, with new numbers. */
 function mpEl(i) {
   const it = P.items[i], p = PT[it.p], sec = document.createElement('section');
-  if (!it.q) { it.q = MAKE.question(p, {avoid: mpAvoid(it.p)}); it.ans = it.q.answers.map(LabMaths.number); }
+  if (!it.q) it.q = MAKE.question(p, {avoid: mpAvoid(it.p)});      /* a challenge's questions are made already, from its seed */
+  if (!it.ans) it.ans = it.q.answers.map(LabMaths.number);
   sec.className = 'slide mq'; sec.dataset.i = i;
   sec.innerHTML =
-    '<p class="meta"><span>Question ' + (i + 1) + (it.back ? '' : ' of ' + P.total) + '</span><span>' + esc(p.title) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '') + '</p>' +
+    '<p class="meta"><span>Question ' + (i + 1) + (it.back || P.race ? '' : ' of ' + P.total) + '</span><span>' + esc(p.title) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '') + '</p>' +
     '<div class="mq-head"><div class="mq-q"><span class="ask">' + esc(MATHS.ask) + '</span>' + mathsEq(it.q.eq) + '</div>' +
-      '<div class="actions">' + (it.back ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
+      '<div class="actions">' + (it.back || game() ? '' : mpBtn('mpskip', IC.skip, 'Skip')) + mpBtn('mpreveal', IC.eye, 'Answer') + '</div></div>' +
     '<ol class="work" aria-label="Your working"></ol>' +
     '<div class="note" hidden></div>' +
     '<div class="foot"><button class="next" type="button" data-act="nextslide" hidden>Next' + IC.down + '</button></div>';
@@ -4702,6 +4787,15 @@ function mpDone() {
   if (!r.ok && !COUNTS.has(r.say)) { pad.note(line, r.say); return; }
   if (!c.it.tried) { c.it.tried = true; recordMaths(c.it.p, c.it.q.eq, r.ok, 'p'); }
   if (r.ok) { mpRight(c); return; }
+  if (game()) {
+    /* One try in a challenge or race: the answer counts as wrong, and the worked solution shows until Next. */
+    P.row = 0;
+    if (P.combo) mpDrop();
+    pad.note(line, r.say);
+    sound.wrong(); buzzFor(false, 0);
+    mpFinish(c, 'wrong', 0);
+    return;
+  }
   const first = !c.it.wrong;
   c.it.wrong = true;
   P.row = 0;
@@ -4721,6 +4815,11 @@ function mpRight(c) {
     mult = 2 * P.row * MATHS_D(PT[it.p]);                      /* the same rule as Economics, counted in answers */
     P.alt = Math.min(P.alt > 0 ? P.alt * mult : mult, 1e300);
     if (!it.back) P.first++;
+    /* In a race the point is scored at Done, so the friend cannot win during the Done moment. */
+    if (P.race) {
+      P.race.me++; paintLanes();
+      if (P.race.me >= P.race.target) { P.race.over = true; clearTimeout(raceTimer); raceMusic(); }
+    }
   }
   P.busy = true;
   pad.trim(); pad.lock();
@@ -4753,7 +4852,7 @@ ACT.mpreveal = b => {
   const c = mpWaiting();
   if (!c || P.busy || b.closest('.slide') !== c.sec) return;
   if (!c.it.tried) { c.it.tried = true; recordMaths(c.it.p, c.it.q.eq, false, 'p'); }
-  if (!c.it.wrong && !c.it.back) mpRequeue(c.it);
+  if (!c.it.wrong && !c.it.back && !game()) mpRequeue(c.it);
   P.row = 0;
   if (P.combo) mpDrop();
   say('The answer is ' + MAKE.words(c.it.q.show) + '.');
@@ -4784,12 +4883,12 @@ function mpFinish(c, o, gain) {
   if (o === 'correct') end.innerHTML = '<b>Right</b><span>' + (gain ? 'First try. Altitude ×' + gain + '.' : 'First try.') + '</span>';
   else if (o === 'fixed') end.innerHTML = '<b>Right</b><span>Fixed. It still counts as a miss this time.</span>';
   else if (o === 'skipped') end.innerHTML = '<b>Skipped</b><span>A question like it comes back at the end.</span>';
-  else end.innerHTML = '<b>Answer</b>' + mathsEq(it.q.show);
+  else end.innerHTML = '<b>' + (o === 'wrong' ? 'Not this time' : 'Answer') + '</b>' + mathsEq(it.q.show);
   $('.work', sec).append(end);
   if (o === 'correct' || o === 'skipped') note.hidden = true;
   else {
     note.hidden = false; note.className = 'note';
-    note.innerHTML = '<b>Worked solution</b>' + stepsHtml(it.q.steps) + '<p class="after">' + (it.back ? 'Marked as a weak point.' : 'Marked as a weak point. A question like it comes back later in this flight.') + '</p>';
+    note.innerHTML = '<b>Worked solution</b>' + stepsHtml(it.q.steps) + '<p class="after">' + (it.back || game() ? 'Marked as a weak point.' : 'Marked as a weak point. A question like it comes back later in this flight.') + '</p>';
   }
   paintSegs();
   const el = appendNext(sec);
@@ -4808,7 +4907,7 @@ function mpFinish(c, o, gain) {
 /* One segment per question in the flight. It fills when the question is finished: blue if right first time,
    the weak-point colour if not. The question on screen is darker until it is done. */
 function paintSegs() {
-  if (!P || !P.maths) { fSegs.hidden = true; fSegs.textContent = ''; return; }
+  if (!P || !P.maths || P.race) { fSegs.hidden = true; fSegs.textContent = ''; return; }     /* a race has the lanes instead */
   fSegs.hidden = false;
   const cur = P.done ? -1 : P.res.length;
   fSegs.innerHTML = P.items.map((it, i) => {
@@ -4838,7 +4937,8 @@ function mpEnd() {
   if (pad) pad.stop();
   const k = bestKey(P.mode, P.ch, P.total), clean = !P.cut && P.res.every(r => r.o === 'correct' || r.o === 'fixed');
   P.bestKey = k;
-  if (clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
+  /* Best times are for your own flights. A challenge's time goes on its card instead. */
+  if (solo() && clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
   saved.m.bestCombo = Math.max(saved.m.bestCombo || 0, P.best);
   saved.m.bestKm = Math.max(saved.m.bestKm || 0, P.alt);
   fClock.textContent = clockText(P.ms);
@@ -4849,6 +4949,32 @@ function mpSummary() {
   const b = saved.m.best[P.bestKey], scope = P.mode === 'chapter' ? 'chapter ' + (CH.indexOf(chOf(P.ch)) + 1) : 'everything';
   return '<dl class="stats"><div><dt>Time</dt><dd>' + clockText(P.ms) + '</dd></div><div><dt>Lines</dt><dd>' + P.lines + '</dd></div><div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>' +
     '<p class="sumline">' + (b ? 'Best time for ' + scope + ', ' + plural(P.total, 'question') + ': ' + clockText(b) + '.' : 'A best time needs every question answered, with none skipped or shown.') + '</p>';
+}
+
+/* The extra row on a maths challenge or race result: your time (and the friend's, in a challenge), lines and wrong lines. */
+function mpGameStats(fr) {
+  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
+  return '<dl class="stats"><div><dt>Your time</dt><dd>' + clockText(P.ms) + '</dd></div>' + them + '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>';
+}
+/* The verdict on a maths challenge the friend has already played. More right answers wins; level scores go to the faster time. */
+function mpChallengeLine(fr) {
+  const o = challengeOutcome(P.first, P.them, P.ms, P.themMs), t = P.themMs ? ' in ' + clockText(P.themMs) : '';
+  if (o === 'won') return 'You won. ' + fr.name + ' scored ' + P.them + t + '.';
+  if (o === 'lost') return fr.name + ' won. ' + fr.name + ' scored ' + P.them + t + '.';
+  if (o === 'wontime') return 'You won on time. ' + fr.name + ' also scored ' + P.them + t + '.';
+  if (o === 'losttime') return fr.name + ' won on time. ' + fr.name + ' also scored ' + P.them + t + '.';
+  return 'A draw. ' + fr.name + ' scored ' + P.them + t + '.';
+}
+/* A race ended before this question was answered: close it and lock the keys. */
+function mpClose(c) {
+  if (pad && pad.el === $('.work', c.sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }
+  P.res.push({o: 'closed', gain: 0});
+  P.busy = false;
+  c.sec.classList.add('done');
+  $('.mq-head .actions', c.sec).hidden = true;
+  const note = $('.note', c.sec);
+  note.hidden = false; note.className = 'note quiet';
+  note.innerHTML = '<p>The race ended before you answered.</p>';
 }
 
 /* While the flight scrolls (after Next), the keypad waits until the slide has settled. */
@@ -4881,24 +5007,38 @@ function addMsg(f, m) {
   return m;
 }
 function reactLater(f, text, ms) { later(ms || 2600, () => addMsg(f, {from: 'them', kind: 'react', text: text})); }
-/* The sample friend takes a few seconds to play a challenge you sent. */
+/* The sample friend takes a few seconds to play a challenge you sent. Their score (and maths time) is pretend. */
 function friendPlays(f, id) {
   later(5000 + Math.random() * 3000, () => {
     const m = findMsg(f, id); if (!m || m.state !== 'wait') return;
-    m.them = pretendScore(friend(f), m.total); m.state = 'done';
+    friendScores(friend(f), m); m.state = 'done';
     landed(f, friend(f).name + ' finished your challenge');
     refreshThread(f);
   });
 }
-/* A finished challenge or race goes into the thread with that friend. */
+/* Who won a challenge: won or lost on score, wontime or losttime on level scores (maths only, which keeps times), or draw. */
+function challengeOutcome(me, them, meMs, themMs) {
+  if (me !== them) return me > them ? 'won' : 'lost';
+  if (meMs && themMs && meMs !== themMs) return meMs < themMs ? 'wontime' : 'losttime';
+  return 'draw';
+}
+const outcomeWords = (o, n) => ({won: 'You won.', lost: n + ' won.', wontime: 'You won on time.', losttime: n + ' won on time.', draw: 'A draw.'})[o];
+/* A finished challenge or race goes into the thread with that friend. A maths challenge keeps its seed and your time. */
 function postResult() {
   const f = P.friend;
   if (P.mode === 'challenge') {
-    const m = P.msg ? findMsg(f, P.msg) : null;
+    const m = P.msg ? findMsg(f, P.msg) : null, ms = P.maths ? Math.round(P.ms) : null;
     if (m) {
-      m.me = P.first; m.state = 'done'; save();
-      reactLater(f, P.first > m.them ? 'Rematch?' : (P.first < m.them ? 'Too easy' : 'Good game'), 3000);
-    } else friendPlays(f, addMsg(f, {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'}).id);
+      m.me = P.first; m.state = 'done';
+      if (P.maths) m.meMs = ms;
+      save();
+      const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
+      reactLater(f, o === 'won' || o === 'wontime' ? 'Rematch?' : (o === 'draw' ? 'Good game' : 'Too easy'), 3000);
+    } else {
+      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'};
+      if (P.maths) { nm.seed = P.seed; nm.meMs = ms; }
+      friendPlays(f, addMsg(f, nm).id);
+    }
   } else if (P.mode === 'race') {
     const R = P.race, m = P.msg ? findMsg(f, P.msg) : null, data = {me: R.me, them: R.them, left: R.left, state: 'done'};
     if (m) { Object.assign(m, data); save(); } else addMsg(f, Object.assign({from: 'me', kind: 'race', ch: P.ch}, data));
@@ -4916,7 +5056,8 @@ function preview(f) {
   if (m.kind === 'challenge') {
     if (m.state === 'open') return 'Challenged you: ' + chOf(m.ch).title;
     if (m.state === 'wait') return n + ' is playing your challenge';
-    return 'Challenge: ' + (m.me > m.them ? 'you won' : (m.me < m.them ? n + ' won' : 'a draw')) + ', ' + m.me + ' to ' + m.them;
+    const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
+    return 'Challenge: ' + {won: 'you won', lost: n + ' won', wontime: 'you won on time', losttime: n + ' won on time', draw: 'a draw'}[o] + ', ' + m.me + ' to ' + m.them;
   }
   if (m.state === 'open') return 'Wants to race you';
   return 'Race: ' + (m.left ? 'you left' : (m.me > m.them ? 'you won' : n + ' won')) + ', ' + m.me + ' to ' + m.them;
@@ -4929,19 +5070,23 @@ function msgHtml(f, m) {
     return wrap('<div class="mcard"><span class="k">' + (mine ? 'Your flight' : fr.name + '\'s flight') + '</span><span class="bign">' + d.n + ' ' + d.u + '</span>' +
       '<span class="d">' + esc(layerOf(m.km).name) + '. Best combo ×' + m.combo + '. ' + m.first + ' of ' + m.total + ' right first try.</span></div>');
   }
-  const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>';
+  const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>', maths = subOf(m.ch) === 'maths';
   if (m.kind === 'challenge') {
-    const out = m.state !== 'done' ? '' : (m.me > m.them ? 'You won.' : (m.me < m.them ? fr.name + ' won.' : 'A draw.'));
-    return wrap('<div class="mcard"><span class="k">Challenge, ' + plural(m.total, 'question') + '</span>' + title +
-      '<div class="sc"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b><span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b></div>' +
+    const out = m.state !== 'done' ? '' : outcomeWords(challengeOutcome(m.me, m.them, m.meMs, m.themMs), fr.name);
+    /* A maths card has a third column: each player's time. */
+    const time = ms => maths ? '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>' : '';
+    return wrap('<div class="mcard"><span class="k">' + (maths ? 'Maths challenge, ' : 'Challenge, ') + plural(m.total, 'question') + '</span>' + title +
+      '<div class="sc' + (maths ? ' timed' : '') + '"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
+        '<span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b>' + time(m.me == null ? 0 : m.meMs) + '</div>' +
       (out ? '<span class="out">' + out + '</span>' : '') +
       (m.state === 'open' ? '<button class="primary" type="button" data-act="play" data-kind="challenge" data-f="' + f + '" data-m="' + m.id + '">Play</button>' : '') + '</div>');
   }
+  const kind = '<span class="k">' + (maths ? 'Maths race' : 'Race') + ', first to ' + gameSize(m.ch, 'race') + ' correct</span>';
   if (m.state === 'open') {
-    return wrap('<div class="mcard"><span class="k">Race, first to 6 correct</span>' + title +
+    return wrap('<div class="mcard">' + kind + title +
       '<button class="primary" type="button" data-act="play" data-kind="race" data-f="' + f + '" data-m="' + m.id + '">Race now</button></div>');
   }
-  return wrap('<div class="mcard"><span class="k">Race, first to 6 correct</span>' + title +
+  return wrap('<div class="mcard">' + kind + title +
     '<div class="sc"><span>You</span><b>' + m.me + '</b><span>' + fr.name + '</span><b>' + m.them + '</b></div>' +
     '<span class="out">' + (m.left ? 'You left the race.' : (m.me > m.them ? 'You won.' : fr.name + ' won.')) + '</span></div>');
 }
@@ -4951,7 +5096,7 @@ PAGE.friends = () => {
   let body;
   if (ui.ftab === 'week') {
     const rows = FRIENDS.map(f => ({name: f.name, n: f.week})).concat([{name: saved.name || 'You', n: weekCount(), you: true}]).sort((a, b) => b.n - a.n);
-    body = '<p class="lb-cap">Correct answers since Monday.</p><ol class="lb rows">' + rows.map((r, i) =>
+    body = '<p class="lb-cap">Correct answers since Monday, both subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
       '<li' + (r.you ? ' class="you-row"' : '') + '><span class="rank">' + (i + 1) + '</span><span class="avatar">' + esc(r.name.charAt(0).toUpperCase()) + '</span><span class="nm">' + esc(r.name) + (r.you && saved.name ? ' (you)' : '') + '</span><span class="sc">' + r.n + '</span></li>').join('') + '</ol>';
   } else {
     body = '<div class="rows">' + FRIENDS.slice().sort((a, b) => lastT(b) - lastT(a)).map(f => {
@@ -4973,22 +5118,27 @@ PAGE.thread = f => {
       '<div class="replies" role="group" aria-label="Quick replies">' + REPLIES.map(r => '<button class="chip" type="button" data-act="reply" data-f="' + f + '" data-text="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div></footer>'
   };
 };
-/* Pick the chapter for a challenge or a race you are starting. */
+/* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name;
-  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n,
-    '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to 6 correct answers wins.' : 'Pick a chapter. You play 8 questions first, then ' + n + ' plays the same set.') + '</p>' +
-    '<div class="picks">' + SUBJECTS.eco.ch.map((c, i) => {
+  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || SUB.id, G = GAME[sub], again = !!b.closest('#sheet');
+  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
+    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
+    '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
+      : 'Pick a chapter. You play ' + G.challenge + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
+    '<div class="picks">' + SUBJECTS[sub].ch.map((c, i) => {
       const s = chStats(c), fresh = s.n - s.learned;
       return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
     }).join('') + '</div>');
+  /* Tapping the switch redraws the sheet. Focus stays on the switch. */
+  if (again) $('#sheetBody .subsw [aria-pressed="true"]').focus({preventScroll: true});
 };
 ACT.startwith = b => startPractice({mode: b.dataset.kind, ch: b.dataset.ch, friend: b.dataset.f});
 /* Play a challenge or race a friend sent. If the chapter has points you have not learned, say so first. */
 ACT.play = b => {
   const f = b.dataset.f, m = findMsg(f, b.dataset.m); if (!m || m.state !== 'open') return;
   const s = chStats(chOf(m.ch)), fresh = s.n - s.learned;
-  const o = {mode: b.dataset.kind, ch: m.ch, friend: f, msg: m.id, them: m.kind === 'challenge' ? m.them : null};
+  const o = {mode: b.dataset.kind, ch: m.ch, friend: f, msg: m.id, them: m.kind === 'challenge' ? m.them : null, themMs: m.themMs || null, seed: m.seed};
   if (!fresh || b.dataset.cold) { startPractice(o); return; }
   openSheet('Before you play',
     '<p class="sub">' + (fresh === s.n ? 'All ' + s.n + ' points' : fresh + ' of the ' + s.n + ' points') + ' in this chapter are new to you. You can learn them first, or go in cold.</p>' +
@@ -4998,10 +5148,16 @@ ACT.reply = b => {
   const f = b.dataset.f, text = b.dataset.text;
   addMsg(f, {from: 'me', kind: 'react', text: text});
   if (text === 'Rematch?') {
-    /* The friend takes you up on it and sends a fresh challenge. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : ecoCh().id;   /* games are Economics only */
+    /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
+       (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
     reactLater(f, 'You are on', 1500);
-    later(3400, () => addMsg(f, {from: 'them', kind: 'challenge', ch: ch, them: pretendScore(friend(f), 8), me: null, total: 8, state: 'open'}));
+    later(3400, () => {
+      const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};
+      if (subOf(ch) === 'maths') m.seed = MAKE.newSeed();
+      friendScores(friend(f), m);
+      addMsg(f, m);
+    });
   } else if (Math.random() < 0.6) reactLater(f, text === 'Too easy' ? 'Next time' : 'Good game', 2200);
 };
 ACT.tothread = b => { const f = b.dataset.f; closeRun(); go('home'); ui.ftab = 'msgs'; openPage('friends'); openPage('thread', f); };
