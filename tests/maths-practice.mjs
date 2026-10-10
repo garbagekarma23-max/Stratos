@@ -276,7 +276,7 @@ for (const motion of [false, true]) {
   await p.locator('.subject').tap(); await p.waitForTimeout(80);
   await p.locator('.pick[data-sub="eco"]').tap(); await p.waitForTimeout(150);
   await tab(p, 'you');
-  check((await you()) === '2 B km | ×7', 'switching to Economics shows the Economics records again: ' + (await you()), R);
+  check((await you()) === '2 billion km | ×7', 'switching to Economics shows the Economics records again: ' + (await you()), R);
   errsAll.push(...errs); await b.close();
 }
 

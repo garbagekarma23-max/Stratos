@@ -187,6 +187,7 @@ function paintAlt(Lv) {
   const km = (Lv === 0 && (!P || P.alt === 0)) ? 0 : Math.pow(10, Lv), f = fmt(km);
   altNum.textContent = f.n; altUnit.textContent = f.u;
   altLayer.textContent = layerOf(km).name;
+  fitAlt();
   gauge.style.setProperty('--pct', (clamp(Lv / TOP_L, 0, 1) * 100).toFixed(2));
   for (let k = 0; k < marks.length; k++) {
     const m = marks[k], on = Lv >= m.l - 0.0005;
@@ -201,6 +202,22 @@ function paintAlt(Lv) {
   run.style.setProperty('--sky-top', mix(A[1], B[1]));
   run.style.setProperty('--sky-bot', mix(A[2], B[2]));
   run.style.setProperty('--glass', 'rgba(6,14,46,' + (0.44 + 0.34 * clamp((Lv - 1.2) / 1.2, 0, 1)).toFixed(2) + ')');
+}
+/* The words after the altitude are written out in full ("billion light years"). When they do not fit on the line
+   beside the number, the layer name and the clock, they move to a line of their own under the number (run gets alt2),
+   and the slides start a little lower to make room. Plain km always stays beside the number. */
+const altBox = $('.alt', run);
+let altFit = '';
+function fitAlt() {
+  const k = altNum.textContent + '|' + altUnit.textContent + '|' + altLayer.textContent + '|' + run.clientWidth;
+  if (k === altFit) return;
+  altFit = k;
+  const was = run.classList.contains('alt2');
+  run.classList.remove('alt2');
+  let two = false;
+  if (run.clientWidth && altUnit.textContent !== 'km') two = altBox.scrollWidth > altBox.clientWidth + 1 || altLayer.scrollWidth > altLayer.clientWidth + 1;
+  run.classList.toggle('alt2', two);
+  if (two !== was && P) { const v = viewing(feed); if (v) feed.scrollTop = v.offsetTop; }
 }
 function paintHud(bump) {
   const t = P ? tierOf(P.combo) : 0;
