@@ -41,7 +41,7 @@ function renderStart() {
   if (weak) parts.push(plural(weak, 'weak question'));
   if (fresh) parts.push(fresh + ' you have not tried');
   if (rev) parts.push(rev + ' for review');
-  const best = fmt(saved.bestKm || 0);
+  const rec = records(), best = fmt(rec.km);
   const choice = (v, title, small, val) => '<button class="choice" type="button" role="radio" aria-checked="' + (ui.scope === v) + '" data-act="scope" data-v="' + v + '"><i class="radio"></i><span class="t">' + title + '<small>' + esc(small) + '</small></span><span class="v">' + val + '</span></button>';
   startEl.innerHTML =
     '<h1 class="h1">Practice</h1>' +
@@ -55,7 +55,7 @@ function renderStart() {
     (lens.length > 1 ? '<div class="lenrow"><span class="label flat" id="lenL">Length</span><div class="seg3" role="group" aria-labelledby="lenL">' + lens.map(v => '<button type="button" data-act="len" data-v="' + v + '" aria-pressed="' + (ui.len === v) + '">' + (v || 'All ' + pool.length) + '</button>').join('') + '</div></div>' : '') +
     '<p class="mix">This flight: ' + parts.join(', ') + '.</p>' +
     '<button class="primary wide" type="button" data-act="start">Start flight</button>' +
-    '<dl class="stats"><div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + (saved.bestCombo || 0) + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>';
+    '<dl class="stats"><div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + rec.combo + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>';
 }
 ACT.golearn = () => openLearn(curCh().id);
 ACT.scope = b => { ui.scope = b.dataset.v; renderStart(); const again = $('.choice[data-v="' + ui.scope + '"]', startEl); if (again) again.focus({preventScroll: true}); };
@@ -345,9 +345,10 @@ function finish() {
   if (P.done) return;
   P.done = true;
   clearTimeout(raceTimer);
-  P.pb = P.alt > 0 && P.alt > (saved.bestKm || 0);
-  if (P.maths) mpEnd();                                        /* maths keeps its own best combo, counted in lines */
-  save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: P.maths ? (saved.bestCombo || 0) : Math.max(saved.bestCombo || 0, P.best)});
+  /* Each subject keeps its own records, so a maths flight is measured against maths flights only. */
+  P.pb = P.alt > 0 && P.alt > (P.maths ? saved.m.bestKm || 0 : saved.bestKm || 0);
+  if (P.maths) { mpEnd(); save(); }
+  else save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: Math.max(saved.bestCombo || 0, P.best)});
   postResult();
 }
 function summaryEl() {

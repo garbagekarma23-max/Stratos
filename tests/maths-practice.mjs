@@ -250,5 +250,35 @@ for (const motion of [false, true]) {
   errsAll.push(...errs); await b.close();
 }
 
+// ---------- 6. each subject keeps its own records ----------
+{
+  const seed = JSON.parse(JSON.stringify(SEED));
+  Object.assign(seed, {bestKm: 2e9, bestCombo: 7});
+  const {b, p, errs} = await openPractice({seed: seed});
+  await tab(p, 'practice');
+  const dd = async () => (await p.locator('#pracStart .stats dd').allTextContents()).slice(0, 2).join(' | ');
+  check((await dd()) === '0 km | ×0', 'maths Practice shows maths records, not the Economics ones: ' + (await dd()), R);
+  await tab(p, 'you');
+  const you = async () => (await p.locator('#v-you .stats dd').allTextContents()).slice(2, 4).join(' | ');
+  check((await you()) === '0 km | ×0', 'You shows the maths records while maths is picked', R);
+  await startFlight(p, 0);
+  for (let i = 0; i < 4; i++) { await right(p); if (i < 3) await ready(p); }
+  await p.waitForSelector('#feed .slide.summary', {timeout: 4000});
+  await p.waitForTimeout(200);
+  check((await p.locator('#feed .slide.summary').textContent()).includes('New personal best'), 'a first maths flight is a personal best for maths, whatever the Economics record', R);
+  let s = await saved(p);
+  check(s.bestKm === 2e9 && s.bestCombo === 7, 'the Economics records are left as they were', R);
+  check(s.m.bestKm > 0 && s.m.bestKm < 2e9 && s.m.bestCombo >= 4, 'the maths records are saved under m: ' + s.m.bestKm + ' km, combo ' + s.m.bestCombo, R);
+  await p.locator('#feed .slide.summary [data-act="home"]').tap(); await p.waitForTimeout(150);
+  await tab(p, 'practice');
+  check((await dd()).startsWith(Math.round(s.m.bestKm).toLocaleString('en-AU') + ' km | ×' + s.m.bestCombo), 'the maths start screen shows the new maths records: ' + (await dd()), R);
+  await tab(p, 'home');
+  await p.locator('.subject').tap(); await p.waitForTimeout(80);
+  await p.locator('.pick[data-sub="eco"]').tap(); await p.waitForTimeout(150);
+  await tab(p, 'you');
+  check((await you()) === '2 B km | ×7', 'switching to Economics shows the Economics records again: ' + (await you()), R);
+  errsAll.push(...errs); await b.close();
+}
+
 console.log(R.join('\n'));
 if (errsAll.length) { console.log('ERRORS after maths practice tests:', errsAll); process.exitCode = 1; }

@@ -57,7 +57,7 @@ function renderMathsStart() {
   if (count(0)) parts.push(plural(count(0), 'weak point'));
   if (count(1)) parts.push(count(1) + ' not practised yet');
   if (count(2)) parts.push(count(2) + ' for review');
-  const best = fmt(saved.bestKm || 0), bt = saved.m.best[bestKey(ui.scope, sc.id, pick.length)];
+  const best = fmt(saved.m.bestKm || 0), bt = saved.m.best[bestKey(ui.scope, sc.id, pick.length)];
   const choice = (v, title, small, val) => '<button class="choice" type="button" role="radio" aria-checked="' + (ui.scope === v) + '" data-act="scope" data-v="' + v + '"><i class="radio"></i><span class="t">' + title + '<small>' + esc(small) + '</small></span><span class="v">' + val + '</span></button>';
   startEl.innerHTML =
     '<h1 class="h1">Practice</h1>' +
@@ -300,6 +300,7 @@ function mpEnd() {
   P.bestKey = k;
   if (clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
   saved.m.bestCombo = Math.max(saved.m.bestCombo || 0, P.best);
+  saved.m.bestKm = Math.max(saved.m.bestKm || 0, P.alt);
   fClock.textContent = clockText(P.ms);
   paintSegs();
 }

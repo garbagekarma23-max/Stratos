@@ -2868,6 +2868,9 @@ function chStage(ch) {
   if (s.proven === s.n) return {t: 'Proven'};
   return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
+/* The best altitude and best combo for the subject picked. Each subject keeps its own:
+   Economics in bestKm and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers). */
+const records = () => isMaths() ? {km: saved.m.bestKm || 0, combo: saved.m.bestCombo || 0} : {km: saved.bestKm || 0, combo: saved.bestCombo || 0};
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
@@ -4074,7 +4077,7 @@ function renderStart() {
   if (weak) parts.push(plural(weak, 'weak question'));
   if (fresh) parts.push(fresh + ' you have not tried');
   if (rev) parts.push(rev + ' for review');
-  const best = fmt(saved.bestKm || 0);
+  const rec = records(), best = fmt(rec.km);
   const choice = (v, title, small, val) => '<button class="choice" type="button" role="radio" aria-checked="' + (ui.scope === v) + '" data-act="scope" data-v="' + v + '"><i class="radio"></i><span class="t">' + title + '<small>' + esc(small) + '</small></span><span class="v">' + val + '</span></button>';
   startEl.innerHTML =
     '<h1 class="h1">Practice</h1>' +
@@ -4088,7 +4091,7 @@ function renderStart() {
     (lens.length > 1 ? '<div class="lenrow"><span class="label flat" id="lenL">Length</span><div class="seg3" role="group" aria-labelledby="lenL">' + lens.map(v => '<button type="button" data-act="len" data-v="' + v + '" aria-pressed="' + (ui.len === v) + '">' + (v || 'All ' + pool.length) + '</button>').join('') + '</div></div>' : '') +
     '<p class="mix">This flight: ' + parts.join(', ') + '.</p>' +
     '<button class="primary wide" type="button" data-act="start">Start flight</button>' +
-    '<dl class="stats"><div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + (saved.bestCombo || 0) + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>';
+    '<dl class="stats"><div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + rec.combo + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>';
 }
 ACT.golearn = () => openLearn(curCh().id);
 ACT.scope = b => { ui.scope = b.dataset.v; renderStart(); const again = $('.choice[data-v="' + ui.scope + '"]', startEl); if (again) again.focus({preventScroll: true}); };
@@ -4378,9 +4381,10 @@ function finish() {
   if (P.done) return;
   P.done = true;
   clearTimeout(raceTimer);
-  P.pb = P.alt > 0 && P.alt > (saved.bestKm || 0);
-  if (P.maths) mpEnd();                                        /* maths keeps its own best combo, counted in lines */
-  save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: P.maths ? (saved.bestCombo || 0) : Math.max(saved.bestCombo || 0, P.best)});
+  /* Each subject keeps its own records, so a maths flight is measured against maths flights only. */
+  P.pb = P.alt > 0 && P.alt > (P.maths ? saved.m.bestKm || 0 : saved.bestKm || 0);
+  if (P.maths) { mpEnd(); save(); }
+  else save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: Math.max(saved.bestCombo || 0, P.best)});
   postResult();
 }
 function summaryEl() {
@@ -4537,7 +4541,7 @@ function renderMathsStart() {
   if (count(0)) parts.push(plural(count(0), 'weak point'));
   if (count(1)) parts.push(count(1) + ' not practised yet');
   if (count(2)) parts.push(count(2) + ' for review');
-  const best = fmt(saved.bestKm || 0), bt = saved.m.best[bestKey(ui.scope, sc.id, pick.length)];
+  const best = fmt(saved.m.bestKm || 0), bt = saved.m.best[bestKey(ui.scope, sc.id, pick.length)];
   const choice = (v, title, small, val) => '<button class="choice" type="button" role="radio" aria-checked="' + (ui.scope === v) + '" data-act="scope" data-v="' + v + '"><i class="radio"></i><span class="t">' + title + '<small>' + esc(small) + '</small></span><span class="v">' + val + '</span></button>';
   startEl.innerHTML =
     '<h1 class="h1">Practice</h1>' +
@@ -4780,6 +4784,7 @@ function mpEnd() {
   P.bestKey = k;
   if (clean && P.ms > 0 && (!saved.m.best[k] || P.ms < saved.m.best[k])) { P.newBest = true; saved.m.best[k] = Math.round(P.ms); }
   saved.m.bestCombo = Math.max(saved.m.bestCombo || 0, P.best);
+  saved.m.bestKm = Math.max(saved.m.bestKm || 0, P.alt);
   fClock.textContent = clockText(P.ms);
   paintSegs();
 }
@@ -5003,13 +5008,13 @@ ACT.pack = () => openSheet(PACK.name,
 
 /* ---------- you: records, settings and the way into friends and the store ---------- */
 function renderYou() {
-  const best = fmt(saved.bestKm || 0), name = saved.name || '', unread = unreadCount();
+  const rec = records(), best = fmt(rec.km), name = saved.name || '', unread = unreadCount();
   const seg = (act, opts, cur, label) => '<div class="seg3" role="group" aria-labelledby="' + label + '">' + opts.map(o => '<button type="button" data-act="' + act + '" data-v="' + o[0] + '" aria-pressed="' + (cur === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
   views.you.innerHTML = '<div class="pad you">' +
     '<header class="me"><span class="avatar big">' + esc((name || 'Y').charAt(0).toUpperCase()) + '</span><div class="grow"><h1 class="h1">' + esc(name || 'You') + '</h1><p>' + esc(SUB.topic.course + ', ' + SUB.topic.year) + '</p></div>' +
       '<button class="ghost sm" type="button" data-act="editname">' + (name ? 'Edit' : 'Add a call sign') + '</button></header>' +
     '<dl class="stats four"><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div><div><dt>Points proven</dt><dd>' + provenCount() + ' of ' + ALL.length + '</dd></div>' +
-      '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + (saved.bestCombo || 0) + '</dd></div></dl>' +
+      '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + rec.combo + '</dd></div></dl>' +
     '<div class="rows">' +
       '<button class="row" type="button" data-act="page" data-page="friends"><span class="t">Friends and messages</span><span class="val">' + (unread ? unread + ' new' : '') + '</span>' + IC.right + '</button>' +
       '<button class="row" type="button" data-act="page" data-page="store"><span class="t">Store</span><span class="val">Rockets, backgrounds, exhausts</span>' + IC.right + '</button>' +

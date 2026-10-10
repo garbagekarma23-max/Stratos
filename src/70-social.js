@@ -204,13 +204,13 @@ ACT.pack = () => openSheet(PACK.name,
 
 /* ---------- you: records, settings and the way into friends and the store ---------- */
 function renderYou() {
-  const best = fmt(saved.bestKm || 0), name = saved.name || '', unread = unreadCount();
+  const rec = records(), best = fmt(rec.km), name = saved.name || '', unread = unreadCount();
   const seg = (act, opts, cur, label) => '<div class="seg3" role="group" aria-labelledby="' + label + '">' + opts.map(o => '<button type="button" data-act="' + act + '" data-v="' + o[0] + '" aria-pressed="' + (cur === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
   views.you.innerHTML = '<div class="pad you">' +
     '<header class="me"><span class="avatar big">' + esc((name || 'Y').charAt(0).toUpperCase()) + '</span><div class="grow"><h1 class="h1">' + esc(name || 'You') + '</h1><p>' + esc(SUB.topic.course + ', ' + SUB.topic.year) + '</p></div>' +
       '<button class="ghost sm" type="button" data-act="editname">' + (name ? 'Edit' : 'Add a call sign') + '</button></header>' +
     '<dl class="stats four"><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div><div><dt>Points proven</dt><dd>' + provenCount() + ' of ' + ALL.length + '</dd></div>' +
-      '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + (saved.bestCombo || 0) + '</dd></div></dl>' +
+      '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + rec.combo + '</dd></div></dl>' +
     '<div class="rows">' +
       '<button class="row" type="button" data-act="page" data-page="friends"><span class="t">Friends and messages</span><span class="val">' + (unread ? unread + ' new' : '') + '</span>' + IC.right + '</button>' +
       '<button class="row" type="button" data-act="page" data-page="store"><span class="t">Store</span><span class="val">Rockets, backgrounds, exhausts</span>' + IC.right + '</button>' +

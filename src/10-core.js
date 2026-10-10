@@ -267,6 +267,9 @@ function chStage(ch) {
   if (s.proven === s.n) return {t: 'Proven'};
   return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
+/* The best altitude and best combo for the subject picked. Each subject keeps its own:
+   Economics in bestKm and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers). */
+const records = () => isMaths() ? {km: saved.m.bestKm || 0, combo: saved.m.bestCombo || 0} : {km: saved.bestKm || 0, combo: saved.bestCombo || 0};
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
