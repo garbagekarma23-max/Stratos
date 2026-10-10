@@ -1,13 +1,31 @@
 // Altitude in words: every place altitude shows writes the big-number words in full ("2 billion km",
-// "4.1 billion light years"), never short forms like "2 B km" or "4.1 B ly". Only km stays short.
-// A long Economics flight climbs to billions of light years, at 360 and 390 px wide, and the flight screen is
+// "4.1 billion light-years"), never short forms like "2 B km" or "4.1 B ly". Only km stays short.
+// "light-years" has a hyphen and never breaks across two lines (an invisible word joiner, U+2060, follows the hyphen).
+// A long Economics flight climbs to billions of light-years, at 360 and 390 px wide, and the flight screen is
 // checked for fit: the words sit beside the number when they fit, and on the line under it when they do not.
 // At 360 px every real case fits beside the number, so the line under it is checked at 280 px,
 // the folded screen of a Galaxy Fold.
 // Run with: node altitude.mjs. Pass "shots" to also save the flight screen to tests/shots/ (altitude-360.png and so on).
 import { open, tab, check, pick, toLast, TOPIC, SHOTS } from './lib.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
-const SHORT = /\d\s*(K|M|B|T|Q|ly)\b|\bly\b/;
+const SHORT = /\d\s*(K|M|B|T|Q|ly)\b|\bly\b|light years?\b/;
+// Text as read, without the invisible word joiner.
+const T = t => t.replace(/\u2060/g, '');
+// Every "light-years" inside the elements matching sel: how many there are, and how many break across two lines.
+const lyLines = (p, sel) => p.evaluate(sel => {
+  let found = 0, broken = 0;
+  document.querySelectorAll(sel).forEach(el => {
+    const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+      for (let i = n.data.indexOf('light-'); i >= 0; i = n.data.indexOf('light-', i + 1)) {
+        const r = document.createRange(); r.setStart(n, i); r.setEnd(n, Math.min(n.data.length, i + 12));
+        const tops = Array.from(r.getClientRects()).filter(x => x.width > 0).map(x => Math.round(x.top));
+        found++; if (new Set(tops).size > 1) broken++;
+      }
+    }
+  });
+  return {found: found, broken: broken};
+}, sel);
 const ans = {};
 TOPIC.chapters.forEach(c => c.points.forEach(p => { ans[p.id + 'a'] = {ok: true, n: 1, t: 1}; }));
 // The record on You and the start screen, and a friend's flight in messages, both big.
@@ -19,18 +37,27 @@ const layout = p => p.evaluate(() => {
   const hud = document.querySelector('#hud').getBoundingClientRect(), slide = document.querySelector('#feed .slide:last-child');
   const q = slide.querySelector('.meta') || slide.firstElementChild;
   return {two: run.classList.contains('alt2'), spill: box.scrollWidth > box.clientWidth + 1, under: u.getBoundingClientRect().top > n.getBoundingClientRect().bottom - 2,
-    clear: q.getBoundingClientRect().top >= hud.bottom, unit: u.textContent, num: n.textContent, layer: document.querySelector('#altLayer').textContent};
+    clear: q.getBoundingClientRect().top >= hud.bottom, unit: u.textContent.replace(/\u2060/g, ''), num: n.textContent, layer: document.querySelector('#altLayer').textContent};
 });
 
 for (const w of [360, 390]) {
   const {b, p, errs} = await open({seed: seed, w: w, h: w === 360 ? 640 : 844});
   if (w === 360) {
     await tab(p, 'practice');
-    const st = await p.locator('#pracStart .stats').textContent();
-    check(st.includes('4.1 billion light years') && !SHORT.test(st), 'the start screen writes the best altitude in full: ' + st.match(/Best altitude(.*?)Best combo/)[1], R);
+    const st = T(await p.locator('#pracStart .stats').textContent());
+    check(st.includes('4.1 billion light-years') && !SHORT.test(st), 'the start screen writes the best altitude in full: ' + st.match(/Best altitude(.*?)Best combo/)[1], R);
+    const lyStart = await lyLines(p, '#pracStart .stats');
+    check(lyStart.found === 1 && !lyStart.broken, 'the start screen keeps “light-years” on one line', R);
     await tab(p, 'you');
-    const you = await p.locator('#v-you .stats').textContent();
-    check(you.includes('4.1 billion light years') && !SHORT.test(you), 'You writes the best altitude in full', R);
+    const you = T(await p.locator('#v-you .stats').textContent());
+    check(you.includes('4.1 billion light-years') && !SHORT.test(you), 'You writes the best altitude in full', R);
+    const lyYou = await lyLines(p, '#v-you .stats');
+    check(lyYou.found === 1 && !lyYou.broken, 'You keeps “light-years” on one line', R);
+    // Narrower still, the record has to wrap: it breaks before "light-years", never inside it.
+    await p.setViewportSize({width: 280, height: 653}); await p.waitForTimeout(150);
+    const lyNarrow = await lyLines(p, '#v-you .stats');
+    check(lyNarrow.found === 1 && !lyNarrow.broken, '280 px: You still keeps “light-years” on one line', R);
+    await p.setViewportSize({width: 360, height: 640}); await p.waitForTimeout(150);
     await p.locator('#v-you .row[data-page="friends"]').click(); await p.waitForTimeout(200);
     const fr = await p.locator('#pages').textContent();
     check(fr.includes('Sent a flight: 165 million km') && !SHORT.test(fr), 'a friend’s flight in messages is written in full', R);
@@ -55,13 +82,13 @@ for (const w of [360, 390]) {
     if (L.spill) spill++;
     if (L.two !== L.under) wrongFit++;
     if (!L.clear) clash++;
-    if (/light years/.test(L.unit) && /illion/.test(L.unit)) lastLy = L;
+    if (/light-years/.test(L.unit) && /illion/.test(L.unit)) lastLy = L;
     if (i >= 21 && L.two && !wrapped) wrapped = L;
-    if (shots && i < 21 && !shot1 && /billion light years/.test(L.unit)) { shot1 = true; await p.screenshot({path: SHOTS + 'altitude-' + w + '.png'}); }
+    if (shots && i < 21 && !shot1 && /billion light-years/.test(L.unit)) { shot1 = true; await p.screenshot({path: SHOTS + 'altitude-' + w + '.png'}); }
   }
   if (shots) await p.screenshot({path: SHOTS + 'altitude-' + w + '-clock.png'});
   const units = [...seen];
-  check(units.some(u => /^(million|billion|trillion) km$/.test(u)) && units.some(u => /illion light years$/.test(u)), w + ' px: the flight climbs through km words to light-year words: ' + units.join(', '), R);
+  check(units.some(u => /^(million|billion|trillion) km$/.test(u)) && units.some(u => /illion light-years$/.test(u)), w + ' px: the flight climbs through km words to light-year words: ' + units.join(', '), R);
   check(!units.some(u => SHORT.test('1 ' + u)), w + ' px: no short forms on the flight screen', R);
   check(spill === 0, w + ' px: the altitude line never spills past the screen', R);
   check(wrongFit === 0, w + ' px: when the words move, they sit on the line under the number', R);
@@ -79,9 +106,11 @@ for (const w of [360, 390]) {
   }
   await p.locator('#endBtn').click(); await p.waitForTimeout(60);
   await p.locator('#endBtn').click(); await p.waitForTimeout(300);
-  const sum = await p.locator('#feed .slide.summary').textContent();
-  check(/light years/.test(sum) && !SHORT.test(sum), w + ' px: the result writes the altitude in full', R);
+  const sum = T(await p.locator('#feed .slide.summary').textContent());
+  check(/light-years/.test(sum) && !SHORT.test(sum), w + ' px: the result writes the altitude in full', R);
   if (shots) await p.screenshot({path: SHOTS + 'altitude-result-' + w + '.png'});
+  const lyRes = await lyLines(p, '#feed .slide.summary, #hud');
+  check(lyRes.found >= 2 && !lyRes.broken, w + ' px: “light-years” stays on one line on the flight screen and the result', R);
   const wide = await p.evaluate(() => document.documentElement.scrollWidth > innerWidth);
   check(!wide, w + ' px: nothing scrolls sideways', R);
   errsAll.push(...errs); await b.close();

@@ -203,7 +203,7 @@ function paintAlt(Lv) {
   run.style.setProperty('--sky-bot', mix(A[2], B[2]));
   run.style.setProperty('--glass', 'rgba(6,14,46,' + (0.44 + 0.34 * clamp((Lv - 1.2) / 1.2, 0, 1)).toFixed(2) + ')');
 }
-/* The words after the altitude are written out in full ("billion light years"). When they do not fit on the line
+/* The words after the altitude are written out in full ("billion light-years"). When they do not fit on the line
    beside the number, the layer name and the clock, they move to a line of their own under the number (run gets alt2),
    and the slides start a little lower to make room. Plain km always stays beside the number. */
 const altBox = $('.alt', run);
