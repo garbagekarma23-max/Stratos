@@ -80,7 +80,9 @@ const SKY = [
   [23.64, [58, 10, 82], [8, 60, 80]],
   [26, [58, 10, 82], [8, 60, 80]]
 ];
-const BIG = [[1e6, 'M', 'million'], [1e9, 'B', 'billion'], [1e12, 'T', 'trillion'], [1e15, 'Q', 'quadrillion']];
+/* The names for big numbers, written out in full on screen. */
+const BIG = [[1e6, 'million'], [1e9, 'billion'], [1e12, 'trillion'], [1e15, 'quadrillion'], [1e18, 'quintillion'], [1e21, 'sextillion'],
+  [1e24, 'septillion'], [1e27, 'octillion'], [1e30, 'nonillion'], [1e33, 'decillion']];
 
 /* ---------- the store. Prices are examples. Nothing here can be bought in this test. ---------- */
 const BGS = [
@@ -320,24 +322,28 @@ function flameAt(t) { const c = EXHAUST[saved.exhaust].c; return lightPlain() ? 
 function level(km) { return km > 1 ? Math.log10(km) : 0; }
 function layerOf(km) { let l = MILES[0]; for (let i = 0; i < MILES.length; i++) if (km >= MILES[i].at) l = MILES[i]; return l; }
 function nextStop(km) { for (let i = 0; i < MILES.length; i++) if (MILES[i].stop && MILES[i].at > km) return MILES[i]; return null; }
-/* Distances as people say them: km up to a light year, light years after that. */
+/* Distances as people say them, with the words written out: km up to a light year, light years after that.
+   "2 billion km", "4.1 billion light years". Only km stays short. n is the number and u the words after it
+   (unit is the same, kept for older callers). long is the whole thing for screen readers. */
 function sig3(v) { const p = Math.pow(10, Math.floor(Math.log10(v)) - 2); return Math.round(v / p) * p; }
+const SUPER = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 function fmt(km) {
   if (km < 1) return {n: '0', u: 'km', unit: 'km', long: '0 km'};
-  let v = km, short = 'km', word = 'km';
-  if (km >= LY) { v = km / LY; short = 'ly'; word = 'light years'; }
+  let v = km, ly = false, word = 'km';
+  if (km >= LY) { v = km / LY; ly = true; word = 'light years'; }
+  const out = (n, u, said) => ({n: n, u: u, unit: u, long: (said || n) + ' ' + u});
   if (v < 1e6) {
-    const x = short === 'ly' && v < 100 ? Math.round(v * 10) / 10 : (v < 1000 || short === 'km' ? Math.round(v) : sig3(v));
-    const n = x.toLocaleString('en-AU');
-    if (short === 'ly' && x === 1) word = 'light year';
-    return {n: n, u: short, unit: word, long: n + ' ' + word};
+    const x = ly && v < 100 ? Math.round(v * 10) / 10 : (v < 1000 || !ly ? Math.round(v) : sig3(v));
+    if (x >= 1e6) return fmt(ly ? 1e6 * LY : 1e6);            /* 999,999.6 rounds up to 1 million */
+    return out(x.toLocaleString('en-AU'), ly && x === 1 ? 'light year' : word);
   }
-  if (v >= 1e18) {                                     /* past a quintillion, the names run out: show a power of ten */
-    const e = Math.floor(Math.log10(v));
-    return {n: '10^' + e, u: short, unit: word, long: '10 to the power of ' + e + ' ' + word};
+  if (v >= BIG[BIG.length - 1][0] * 1000) {             /* past the last name, a power of ten: 10³⁹ light years */
+    const e = String(Math.floor(Math.log10(v)));
+    return out('10' + e.split('').map(d => SUPER[d]).join(''), word, '10 to the power of ' + e);
   }
   let i = 0;
   while (i < BIG.length - 1 && v >= BIG[i + 1][0]) i++;
-  const y = v / BIG[i][0], n = (y < 100 ? Math.round(y * 10) / 10 : Math.round(y)).toLocaleString('en-AU');
-  return {n: n, u: BIG[i][1] + ' ' + short, unit: BIG[i][2] + ' ' + word, long: n + ' ' + BIG[i][2] + ' ' + word};
+  let y = v / BIG[i][0], r = y < 100 ? Math.round(y * 10) / 10 : Math.round(y);
+  if (r >= 1000 && i < BIG.length - 1) { i++; r = Math.round(v / BIG[i][0] * 10) / 10; }   /* 999.97 million is 1 billion */
+  return out(r.toLocaleString('en-AU'), BIG[i][1] + ' ' + word);
 }

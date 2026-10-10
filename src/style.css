@@ -360,8 +360,16 @@ svg{display:block;flex:none}
 .alt .u{font-size:13px;color:var(--ink-2)}
 .alt .layer{margin-left:4px;padding-left:10px;border-left:1px solid var(--line-2);font-size:13px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis}
 .alt .clock{margin-left:auto;padding:0 4px 0 10px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+#run.alt2 .alt{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:6px;row-gap:3px;align-items:baseline}
+#run.alt2 .alt b{grid-column:1;grid-row:1}
+#run.alt2 .alt .u{grid-column:1/-1;grid-row:2}
+#run.alt2 .alt .layer{grid-column:2;grid-row:1;justify-self:start;max-width:100%}
+#run.alt2 .alt .clock{grid-column:3;grid-row:1}
 #fSegs{margin:8px 4px 0 8px}
 #run[data-sub="maths"]{--s-top:116px}
+#run.alt2{--s-top:122px}
+#run.alt2[data-sub="maths"]{--s-top:134px}
+#run.alt2[data-mode="race"]{--s-top:168px}
 .mq-head .actions{flex:none}
 .mq-q{min-width:0}
 @media (max-width:400px){.mq-head .actions .act{padding:0 12px}.mq-head .actions .act .t{display:none}}

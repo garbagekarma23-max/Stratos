@@ -376,8 +376,16 @@ svg{display:block;flex:none}
 .alt .u{font-size:13px;color:var(--ink-2)}
 .alt .layer{margin-left:4px;padding-left:10px;border-left:1px solid var(--line-2);font-size:13px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis}
 .alt .clock{margin-left:auto;padding:0 4px 0 10px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+#run.alt2 .alt{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:6px;row-gap:3px;align-items:baseline}
+#run.alt2 .alt b{grid-column:1;grid-row:1}
+#run.alt2 .alt .u{grid-column:1/-1;grid-row:2}
+#run.alt2 .alt .layer{grid-column:2;grid-row:1;justify-self:start;max-width:100%}
+#run.alt2 .alt .clock{grid-column:3;grid-row:1}
 #fSegs{margin:8px 4px 0 8px}
 #run[data-sub="maths"]{--s-top:116px}
+#run.alt2{--s-top:122px}
+#run.alt2[data-sub="maths"]{--s-top:134px}
+#run.alt2[data-mode="race"]{--s-top:168px}
 .mq-head .actions{flex:none}
 .mq-q{min-width:0}
 @media (max-width:400px){.mq-head .actions .act{padding:0 12px}.mq-head .actions .act .t{display:none}}
@@ -2681,7 +2689,9 @@ const SKY = [
   [23.64, [58, 10, 82], [8, 60, 80]],
   [26, [58, 10, 82], [8, 60, 80]]
 ];
-const BIG = [[1e6, 'M', 'million'], [1e9, 'B', 'billion'], [1e12, 'T', 'trillion'], [1e15, 'Q', 'quadrillion']];
+/* The names for big numbers, written out in full on screen. */
+const BIG = [[1e6, 'million'], [1e9, 'billion'], [1e12, 'trillion'], [1e15, 'quadrillion'], [1e18, 'quintillion'], [1e21, 'sextillion'],
+  [1e24, 'septillion'], [1e27, 'octillion'], [1e30, 'nonillion'], [1e33, 'decillion']];
 
 /* ---------- the store. Prices are examples. Nothing here can be bought in this test. ---------- */
 const BGS = [
@@ -2921,26 +2931,30 @@ function flameAt(t) { const c = EXHAUST[saved.exhaust].c; return lightPlain() ? 
 function level(km) { return km > 1 ? Math.log10(km) : 0; }
 function layerOf(km) { let l = MILES[0]; for (let i = 0; i < MILES.length; i++) if (km >= MILES[i].at) l = MILES[i]; return l; }
 function nextStop(km) { for (let i = 0; i < MILES.length; i++) if (MILES[i].stop && MILES[i].at > km) return MILES[i]; return null; }
-/* Distances as people say them: km up to a light year, light years after that. */
+/* Distances as people say them, with the words written out: km up to a light year, light years after that.
+   "2 billion km", "4.1 billion light years". Only km stays short. n is the number and u the words after it
+   (unit is the same, kept for older callers). long is the whole thing for screen readers. */
 function sig3(v) { const p = Math.pow(10, Math.floor(Math.log10(v)) - 2); return Math.round(v / p) * p; }
+const SUPER = '⁰¹²³⁴⁵⁶⁷⁸⁹';
 function fmt(km) {
   if (km < 1) return {n: '0', u: 'km', unit: 'km', long: '0 km'};
-  let v = km, short = 'km', word = 'km';
-  if (km >= LY) { v = km / LY; short = 'ly'; word = 'light years'; }
+  let v = km, ly = false, word = 'km';
+  if (km >= LY) { v = km / LY; ly = true; word = 'light years'; }
+  const out = (n, u, said) => ({n: n, u: u, unit: u, long: (said || n) + ' ' + u});
   if (v < 1e6) {
-    const x = short === 'ly' && v < 100 ? Math.round(v * 10) / 10 : (v < 1000 || short === 'km' ? Math.round(v) : sig3(v));
-    const n = x.toLocaleString('en-AU');
-    if (short === 'ly' && x === 1) word = 'light year';
-    return {n: n, u: short, unit: word, long: n + ' ' + word};
+    const x = ly && v < 100 ? Math.round(v * 10) / 10 : (v < 1000 || !ly ? Math.round(v) : sig3(v));
+    if (x >= 1e6) return fmt(ly ? 1e6 * LY : 1e6);            /* 999,999.6 rounds up to 1 million */
+    return out(x.toLocaleString('en-AU'), ly && x === 1 ? 'light year' : word);
   }
-  if (v >= 1e18) {                                     /* past a quintillion, the names run out: show a power of ten */
-    const e = Math.floor(Math.log10(v));
-    return {n: '10^' + e, u: short, unit: word, long: '10 to the power of ' + e + ' ' + word};
+  if (v >= BIG[BIG.length - 1][0] * 1000) {             /* past the last name, a power of ten: 10³⁹ light years */
+    const e = String(Math.floor(Math.log10(v)));
+    return out('10' + e.split('').map(d => SUPER[d]).join(''), word, '10 to the power of ' + e);
   }
   let i = 0;
   while (i < BIG.length - 1 && v >= BIG[i + 1][0]) i++;
-  const y = v / BIG[i][0], n = (y < 100 ? Math.round(y * 10) / 10 : Math.round(y)).toLocaleString('en-AU');
-  return {n: n, u: BIG[i][1] + ' ' + short, unit: BIG[i][2] + ' ' + word, long: n + ' ' + BIG[i][2] + ' ' + word};
+  let y = v / BIG[i][0], r = y < 100 ? Math.round(y * 10) / 10 : Math.round(y);
+  if (r >= 1000 && i < BIG.length - 1) { i++; r = Math.round(v / BIG[i][0] * 10) / 10; }   /* 999.97 million is 1 billion */
+  return out(r.toLocaleString('en-AU'), BIG[i][1] + ' ' + word);
 }
 
 /* ---------- maths: making a question from a template ----------
@@ -4223,6 +4237,7 @@ function paintAlt(Lv) {
   const km = (Lv === 0 && (!P || P.alt === 0)) ? 0 : Math.pow(10, Lv), f = fmt(km);
   altNum.textContent = f.n; altUnit.textContent = f.u;
   altLayer.textContent = layerOf(km).name;
+  fitAlt();
   gauge.style.setProperty('--pct', (clamp(Lv / TOP_L, 0, 1) * 100).toFixed(2));
   for (let k = 0; k < marks.length; k++) {
     const m = marks[k], on = Lv >= m.l - 0.0005;
@@ -4237,6 +4252,22 @@ function paintAlt(Lv) {
   run.style.setProperty('--sky-top', mix(A[1], B[1]));
   run.style.setProperty('--sky-bot', mix(A[2], B[2]));
   run.style.setProperty('--glass', 'rgba(6,14,46,' + (0.44 + 0.34 * clamp((Lv - 1.2) / 1.2, 0, 1)).toFixed(2) + ')');
+}
+/* The words after the altitude are written out in full ("billion light years"). When they do not fit on the line
+   beside the number, the layer name and the clock, they move to a line of their own under the number (run gets alt2),
+   and the slides start a little lower to make room. Plain km always stays beside the number. */
+const altBox = $('.alt', run);
+let altFit = '';
+function fitAlt() {
+  const k = altNum.textContent + '|' + altUnit.textContent + '|' + altLayer.textContent + '|' + run.clientWidth;
+  if (k === altFit) return;
+  altFit = k;
+  const was = run.classList.contains('alt2');
+  run.classList.remove('alt2');
+  let two = false;
+  if (run.clientWidth && altUnit.textContent !== 'km') two = altBox.scrollWidth > altBox.clientWidth + 1 || altLayer.scrollWidth > altLayer.clientWidth + 1;
+  run.classList.toggle('alt2', two);
+  if (two !== was && P) { const v = viewing(feed); if (v) feed.scrollTop = v.offsetTop; }
 }
 function paintHud(bump) {
   const t = P ? tierOf(P.combo) : 0;
@@ -5137,6 +5168,7 @@ document.addEventListener('keydown', ev => {
 window.addEventListener('resize', () => {
   const a = P ? viewing(feed) : null, b = L ? viewing(learnFeed) : null;
   resize();
+  fitAlt();
   if (a) feed.scrollTop = a.offsetTop;
   if (b) learnFeed.scrollTop = b.offsetTop;
   paintWork();

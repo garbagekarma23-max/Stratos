@@ -26,6 +26,7 @@ document.addEventListener('keydown', ev => {
 window.addEventListener('resize', () => {
   const a = P ? viewing(feed) : null, b = L ? viewing(learnFeed) : null;
   resize();
+  fitAlt();
   if (a) feed.scrollTop = a.offsetTop;
   if (b) learnFeed.scrollTop = b.offsetTop;
   paintWork();
