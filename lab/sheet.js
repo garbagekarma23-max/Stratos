@@ -443,7 +443,17 @@ const Sheet = (() => {
       /* The lines as plain data, for saving. */
       rows: () => S ? S.lines.map(L => ({latex: L.mf.value, checked: L.checked, kind: L.kind, say: L.say})) : [],
       at: () => S ? Math.max(0, S.lines.indexOf(S.active)) : 0,
-      count: () => S ? S.lines.filter(l => l.mf.value.trim()).length : 0
+      count: () => S ? S.lines.filter(l => l.mf.value.trim()).length : 0,
+      /* The ticks land again, one line after another, step ms apart (all at once if step is 0).
+         each(i, n) runs as line i of n ticks. Returns how many lines tick. */
+      celebrate: (step, each) => {
+        const right = S ? S.lines.filter(L => L.kind === 'right') : [];
+        right.forEach((L, i) => {
+          const go = () => { const mk = L.li.querySelector('.mk'); if (mk) mk.innerHTML = mk.innerHTML; if (each) each(i, right.length); };
+          if (step) setTimeout(go, i * step); else go();
+        });
+        return right.length;
+      }
     };
   }
 

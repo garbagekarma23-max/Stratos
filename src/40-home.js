@@ -60,7 +60,7 @@ function renderHome() {
   }
   h += '<section class="sec"><h2 class="h2">Chapters</h2><ol class="ch-list">' + CH.map(chRow).join('') + '</ol></section>' +
     '<p class="fine">' + (isMaths()
-      ? 'Maths is new in this test build. Learn works now. Practice for maths comes next. Progress is saved on this device only.'
+      ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
   views.home.scrollTop = keep;

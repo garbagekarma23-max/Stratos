@@ -23,7 +23,7 @@ LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '70-social.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/."""

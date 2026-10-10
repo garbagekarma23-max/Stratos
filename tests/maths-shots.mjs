@@ -2,7 +2,8 @@
 // so the two subjects can be compared at a glance. Writes PNGs to tests/shots/.  Run: node maths-shots.mjs [light|dark]
 // The question numbers are random in the app. Here Math.random is fixed, so the pictures are the same each run.
 import fs from 'fs';
-import { open, SHOTS } from './lib.mjs';
+import { open, SHOTS, pick } from './lib.mjs';
+const LM = new Function(fs.readFileSync(new URL('../lab/maths.js', import.meta.url), 'utf8') + '; return LabMaths;')();
 const schemes = process.argv[2] ? [process.argv[2]] : ['light', 'dark'];
 const errs = [];
 const day = 864e5, now = Date.parse('2026-10-08T10:00:00');
@@ -23,6 +24,17 @@ async function page(scheme, seed) {
 }
 const shot = (p, name) => p.screenshot({path: SHOTS + name + '.png'});
 async function ready(p) { await p.waitForFunction(() => !!window.MathfieldElement && document.fonts.status === 'loaded'); await p.waitForTimeout(300); }
+// Practice: answer the maths question on screen with keypad taps (worked out by the lab's solver).
+const KEY = {x: 't0', '=': 'equals', '-': 'minus', '/': 'frac', o: 't2'};
+async function mathsAnswer(p, done) {
+  const latex = await p.locator('#feed .slide.mq:not(.done) .mq-q math-span').last().textContent();
+  const xs = LM.solve(LM.read(latex)).some.slice().sort((a, b) => b - a);
+  const seq = xs.map(v => 'x=' + String(v)).join('o');
+  for (const ch of seq.split('')) await p.locator('#mKeys .key[data-key="' + (KEY[ch] || ch) + '"]').click();
+  if (done) await p.locator('#mDone').click(); else await p.locator('#mKeys .key[data-key="enter"]').click();
+  await p.waitForTimeout(300);
+}
+const flying = p => p.waitForFunction(() => document.querySelector('#app').dataset.work !== undefined && document.querySelector('#launch').hidden).then(() => p.waitForTimeout(250));
 async function join(name, files, captions) {
   const imgs = files.map(f => 'data:image/png;base64,' + fs.readFileSync(SHOTS + f + '.png').toString('base64'));
   const {b, p} = await open({w: 1700, h: 940, dpr: 1});
@@ -78,6 +90,42 @@ for (const scheme of schemes) {
     await shot(p, n('eco-question'));
     errs.push(...e); await b.close();
   }
+  // Practice: a flight part way through, and the result, for maths and for Economics.
+  {
+    const {b, p, errs: e} = await page(scheme, MSEED);
+    await ready(p);
+    await p.locator('.tab[data-tab="practice"]').click(); await p.waitForTimeout(200);
+    await shot(p, n('pstart'));
+    await p.locator('#pracStart [data-act="start"]').click(); await flying(p);
+    await mathsAnswer(p, true); await flying(p);
+    await mathsAnswer(p, true); await flying(p);
+    await mathsAnswer(p, false);
+    await shot(p, n('flight'));
+    errs.push(...e); await b.close();
+  }
+  {
+    const {b, p, errs: e} = await page(scheme, MSEED);
+    await ready(p);
+    await p.locator('.tab[data-tab="practice"]').click(); await p.waitForTimeout(200);
+    await p.locator('#pracStart .seg3 [data-v="0"]').click(); await p.waitForTimeout(100);
+    await p.locator('#pracStart [data-act="start"]').click(); await flying(p);
+    for (let i = 0; i < 3; i++) { await mathsAnswer(p, true); if (i < 2) await flying(p); }
+    await p.waitForSelector('#feed .slide.summary'); await p.waitForTimeout(500);
+    await shot(p, n('result'));
+    errs.push(...e); await b.close();
+  }
+  {
+    const {b, p, errs: e} = await page(scheme, ESEED);
+    await p.locator('.tab[data-tab="practice"]').click(); await p.waitForTimeout(200);
+    await p.locator('#pracStart [data-act="start"]').click(); await p.waitForTimeout(1400);
+    for (let i = 0; i < 2; i++) { await pick(p, '#feed', true); await p.waitForTimeout(500); await p.evaluate(() => { const f = document.querySelector('#feed'); f.scrollTop = f.lastElementChild.offsetTop; }); await p.waitForTimeout(300); }
+    await shot(p, n('eco-flight'));
+    while (await p.locator('#feed .slide.q:not(.done)').count()) { await pick(p, '#feed', true); await p.waitForTimeout(400); }
+    await p.evaluate(() => { const f = document.querySelector('#feed'); f.scrollTop = f.lastElementChild.offsetTop; }); await p.waitForTimeout(500);
+    await shot(p, n('eco-result'));
+    errs.push(...e); await b.close();
+  }
+  await join('maths-practice-' + scheme, [n('flight'), n('eco-flight'), n('result'), n('eco-result')], ['Maths flight', 'Economics flight', 'Maths result', 'Economics result']);
   await join('maths-compare-' + scheme + '-1', [n('home'), n('eco-home'), n('worked'), n('eco-card')], ['Maths Home', 'Economics Home', 'Maths worked example', 'Economics card']);
   await join('maths-compare-' + scheme + '-2', [n('guided'), n('eco-question'), n('sheet'), n('eco-sheet')], ['Maths guided question', 'Economics check question', 'Maths point sheet', 'Economics point sheet']);
 }

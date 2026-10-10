@@ -280,7 +280,9 @@ svg{display:block;flex:none}
 #app[data-work] #v-learn{bottom:0}
 #app[data-work] #learnFeed{overflow:hidden}
 #app[data-work] #toast{bottom:calc(100% - 140px)}
-#v-learn .keypad{position:absolute;inset:auto 0 0 0;z-index:4}
+#mPad{position:absolute;inset:auto 0 0 0;z-index:5}
+#app[data-work] #v-practice{bottom:0}
+#app[data-work] #feed{overflow:hidden}
 .slide.mq.working{height:100%;padding-bottom:0}
 .slide.mq.working .work{flex:1;min-height:0}
 .slide.mq.working .foot{display:none}
@@ -357,6 +359,14 @@ svg{display:block;flex:none}
 .alt b{font:700 19px/1 var(--f);font-variant-numeric:tabular-nums}
 .alt .u{font-size:13px;color:var(--ink-2)}
 .alt .layer{margin-left:4px;padding-left:10px;border-left:1px solid var(--line-2);font-size:13px;color:var(--ink-2);overflow:hidden;text-overflow:ellipsis}
+.alt .clock{margin-left:auto;padding:0 4px 0 10px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+#fSegs{margin:8px 4px 0 8px}
+#run[data-sub="maths"]{--s-top:116px}
+.mq-head .actions{flex:none}
+.mq-q{min-width:0}
+@media (max-width:400px){.mq-head .actions .act{padding:0 12px}.mq-head .actions .act .t{display:none}}
+.slide.arrive{animation:arrive .3s cubic-bezier(.2,.8,.3,1)}
+@keyframes arrive{from{opacity:0;transform:translateY(28px)}}
 .lanes{display:grid;gap:6px;margin:10px 4px 0 8px}
 .lane{display:grid;grid-template-columns:52px minmax(0,1fr) 12px;align-items:center;gap:8px;font-size:12px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
 .lane .who{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
