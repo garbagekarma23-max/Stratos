@@ -100,7 +100,7 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - The Done moment (`mpRight`): the keys lock, each right line ticks again in turn (`pad.celebrate`, 110 ms apart) with the ping one step higher each time, the rocket lifts, then the next question comes in. With reduced motion it is one ping and the next question at once. Anything but a first-try answer stays on screen with the worked solution until Next.
 - The bar of segments under the altitude has one segment per question, as in Learn. The clock beside the altitude runs only while the flight is on screen.
 - Best time: `saved.m.best`, keyed by everything or the chapter id, then the number of questions (`all:8`, `m1:16`), in ms. Only a finished flight with nothing skipped or shown sets one. The start screen and the result show it.
-- The result is the Economics result plus a row of time, lines written and wrong lines. The maths best combo is kept apart in `saved.m.bestCombo`, because it counts lines. Best altitude is shared.
+- The result is the Economics result plus a row of time, lines written and wrong lines. Each subject keeps its own records: maths in `saved.m.bestKm` and `saved.m.bestCombo`, Economics in `saved.bestKm` and `saved.bestCombo`. The Practice start screen, the result's New personal best and the You page all use the subject picked (`records()` in `10-core.js`).
 - On a narrow phone (under 400 px), Skip and Answer show their icons only. In a flight, toasts sit just above the keypad.
 
 Known gaps:
