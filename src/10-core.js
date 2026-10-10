@@ -322,22 +322,25 @@ function flameAt(t) { const c = EXHAUST[saved.exhaust].c; return lightPlain() ? 
 function level(km) { return km > 1 ? Math.log10(km) : 0; }
 function layerOf(km) { let l = MILES[0]; for (let i = 0; i < MILES.length; i++) if (km >= MILES[i].at) l = MILES[i]; return l; }
 function nextStop(km) { for (let i = 0; i < MILES.length; i++) if (MILES[i].stop && MILES[i].at > km) return MILES[i]; return null; }
-/* Distances as people say them, with the words written out: km up to a light year, light years after that.
-   "2 billion km", "4.1 billion light years". Only km stays short. n is the number and u the words after it
+/* Distances as people say them, with the words written out: km up to a light-year, light-years after that.
+   "2 billion km", "4.1 billion light-years". Only km stays short.
+   "light-years" never breaks across two lines: an invisible word joiner (U+2060) after the hyphen holds the two
+   halves together. The non-breaking hyphen character would do the same, but Hanken Grotesk has no drawing for it,
+   so a phone would borrow one from another font. n is the number and u the words after it
    (unit is the same, kept for older callers). long is the whole thing for screen readers. */
 function sig3(v) { const p = Math.pow(10, Math.floor(Math.log10(v)) - 2); return Math.round(v / p) * p; }
-const SUPER = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+const SUPER = '⁰¹²³⁴⁵⁶⁷⁸⁹', LYS = 'light-\u2060years', LY1 = 'light-\u2060year';
 function fmt(km) {
   if (km < 1) return {n: '0', u: 'km', unit: 'km', long: '0 km'};
   let v = km, ly = false, word = 'km';
-  if (km >= LY) { v = km / LY; ly = true; word = 'light years'; }
+  if (km >= LY) { v = km / LY; ly = true; word = LYS; }
   const out = (n, u, said) => ({n: n, u: u, unit: u, long: (said || n) + ' ' + u});
   if (v < 1e6) {
     const x = ly && v < 100 ? Math.round(v * 10) / 10 : (v < 1000 || !ly ? Math.round(v) : sig3(v));
     if (x >= 1e6) return fmt(ly ? 1e6 * LY : 1e6);            /* 999,999.6 rounds up to 1 million */
-    return out(x.toLocaleString('en-AU'), ly && x === 1 ? 'light year' : word);
+    return out(x.toLocaleString('en-AU'), ly && x === 1 ? LY1 : word);
   }
-  if (v >= BIG[BIG.length - 1][0] * 1000) {             /* past the last name, a power of ten: 10³⁹ light years */
+  if (v >= BIG[BIG.length - 1][0] * 1000) {             /* past the last name, a power of ten: 10³⁹ light-years */
     const e = String(Math.floor(Math.log10(v)));
     return out('10' + e.split('').map(d => SUPER[d]).join(''), word, '10 to the power of ' + e);
   }
