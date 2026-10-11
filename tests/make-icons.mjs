@@ -2,7 +2,7 @@
 // Hanken Grotesk, the Archivo wordmark, one blue, and the app's own rocket. Run it again after changing a design here.
 //   node make-icons.mjs
 // Writes: icons/favicon-32.png (for browsers without SVG icons), icons/apple-touch-icon.png (180 by 180, for iPhone
-// home screens and Messages), icons/preview-v2.png and icons/preview-lab.png (1200 by 630, the picture a link shows
+// home screens and Messages), icons/icon-192.png and icons/icon-512.png (the same icon for Android home screens), icons/preview-v2.png and icons/preview-lab.png (1200 by 630, the picture a link shows
 // in Messages, Instagram and other apps). icons/favicon.svg is written by hand.
 import fs from 'fs';
 import { chromium } from 'playwright';
@@ -38,7 +38,10 @@ async function render(file, w, h, html, wait) {
 await render('favicon-32.png', 32, 32, '<style>body{background:transparent}</style><img src="' + server.url + 'icons/favicon.svg" width="32" height="32">');
 
 // The home screen icon: the rocket with its flame on white paper. iPhone rounds the corners itself.
-await render('apple-touch-icon.png', 180, 180, '<div style="width:180px;height:180px;display:grid;place-items:center">' + rocket(78, true) + '</div>');
+// Android needs the same icon at 192 and 512 px in the web app manifests (manifest-v2.webmanifest, manifest-lab.webmanifest).
+for (const [file, w] of [['apple-touch-icon.png', 180], ['icon-192.png', 192], ['icon-512.png', 512]]) {
+  await render(file, w, w, '<div style="width:' + w + 'px;height:' + w + 'px;display:grid;place-items:center">' + rocket(Math.round(w * 78 / 180), true) + '</div>');
+}
 
 // The two-tone bar from Home: points learned (pale) and points proven (blue).
 const bar = '<div style="height:10px;border-radius:5px;background:#e9ebef;position:relative;overflow:hidden">' +
@@ -85,5 +88,5 @@ await render('preview-lab.png', 1200, 630,
   p => p.waitForFunction(() => window.MathfieldElement && document.querySelectorAll('math-span .ML__latex, math-span .ML__base, math-span span').length > 0, null, {timeout: 8000}).catch(() => {}));
 
 await b.close();
-console.log('wrote icons/favicon-32.png, apple-touch-icon.png, preview-v2.png, preview-lab.png');
+console.log('wrote icons/favicon-32.png, apple-touch-icon.png, icon-192.png, icon-512.png, preview-v2.png, preview-lab.png');
 process.exit();

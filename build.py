@@ -50,7 +50,7 @@ def standalone():
             '<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">\n'
             '<meta name="theme-color" content="#15161a" media="(prefers-color-scheme: dark)">\n'
             '<title>' + title + '</title>\n' + links + '\n'
-            '<style>:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>\n'
+            '<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}[hidden]{display:none!important}</style>\n'
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
 if __name__ == '__main__':

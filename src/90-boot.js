@@ -39,6 +39,10 @@ function applyTheme() {
   if (saved.theme === 'light' || saved.theme === 'dark') rootEl.setAttribute('data-theme', saved.theme);
   else if (hostTheme) rootEl.setAttribute('data-theme', hostTheme);
   else rootEl.removeAttribute('data-theme');
+  /* The phone's status bar takes the theme-color. With Light or Dark picked here, both tags take that colour,
+     so the bar matches the app whatever the phone is set to. With System, each tag keeps its own. */
+  const t = rootEl.getAttribute('data-theme');
+  $$('meta[name="theme-color"]').forEach(m => { m.content = t === 'dark' || (!t && /dark/.test(m.media)) ? '#15161a' : '#ffffff'; });
 }
 
 /* ---------- start ---------- */
