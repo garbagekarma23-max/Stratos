@@ -76,16 +76,21 @@ marksEl.innerHTML = MILES.filter(m => m.m).map(m => {
 }).join('');
 const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l, on: false}));
 
-/* Start a flight. o.mode is mix or chapter (your own practice), challenge (8 set questions) or race (first to 6). */
+/* Start a flight. o.mode is mix or chapter (your own practice), challenge (a set of questions a friend plays too)
+   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject. */
 function startPractice(o) {
   sound.wake();
-  /* A maths flight is worked on the keypad (62-maths-practice.js). Challenges and races are Economics for now. */
-  if (isMaths() && (o.mode === 'mix' || o.mode === 'chapter')) { startMathsFlight(o); return; }
-  if (isMaths()) { useSubject('eco', true); toast('Challenges and races use Economics for now.'); }
+  /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
+  if ((o.mode === 'challenge' || o.mode === 'race') && subOf(o.ch) !== SUB.id) {
+    useSubject(subOf(o.ch), true);
+    toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+  }
+  /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
+  if (isMaths()) { startMathsFlight(o); return; }
   let picked;
   if (o.mode === 'challenge' || o.mode === 'race') {
     const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));
-    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, 8);
+    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, GAME.eco.challenge);
   } else picked = poolFor(o.mode, o.ch).slice(0, o.len || 8);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
@@ -95,7 +100,7 @@ function startPractice(o) {
   P = {mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null, them: o.them == null ? null : o.them,
     items: picked.map(x => ({p: x.p, k: x.k, perm: shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
     combo: 0, best: 0, alt: 0, clue: false, done: false, cut: false, pb: false, first: 0, sent: false, before: CH.map(c => chStats(c).pct),
-    race: o.mode === 'race' ? {target: 6, me: 0, them: 0, over: false, left: false} : null};
+    race: o.mode === 'race' ? {target: GAME.eco.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
   go('practice');
   playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
@@ -103,13 +108,14 @@ function startPractice(o) {
 function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
-  if (P.mode === 'challenge') return {title: 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + '. Beat it.'};
+  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
   if (P.mode === 'chapter') return {title: 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
-  if (P.mode === 'race') return 'Race to ' + P.race.target;
-  if (P.mode === 'challenge') return P.them == null ? 'Challenge for ' + friend(P.friend).name : 'Challenge, ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
+  const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
+  if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
+  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
   if (P.mode === 'chapter') return 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1);
   return 'Mixed flight';
 }
@@ -349,7 +355,7 @@ function settle(sec, delay) {
 function appendNext(prev) {
   const more = !P.done && !P.cut && !(P.race && P.race.over);
   /* A race keeps going until someone wins, so it goes round the questions again if it has to. */
-  if (more && P.race && P.res.length >= P.items.length) shuffle(P.items.slice()).forEach(it => P.items.push({p: it.p, k: it.k, perm: shuffle([0, 1, 2, 3]), back: false}));
+  if (more && P.race && P.res.length >= P.items.length) shuffle(P.items.slice()).forEach(it => P.items.push(P.maths ? {p: it.p, back: false} : {p: it.p, k: it.k, perm: shuffle([0, 1, 2, 3]), back: false}));
   let el;
   if (more && P.res.length < P.items.length) el = slideFor(P.res.length);
   else { finish(); el = summaryEl(); }
@@ -379,11 +385,13 @@ function summaryEl() {
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
   if (P.mode === 'challenge') {
-    const out = P.them == null ? fr.name + ' is playing the same set now.' : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
+    const out = P.them == null ? fr.name + ' is playing the same set now.' : P.maths ? mpChallengeLine(fr)
+      : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
     h = '<p class="meta"><span>Challenge complete</span></p>' +
       '<p class="big"><span>' + P.first + ' of ' + P.total + '</span><small>' + (P.cut ? 'You ended early, so the rest count as wrong' : 'right') + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
+      (P.maths ? mpGameStats(fr) : '') +
       weakLine +
       '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
   } else if (P.mode === 'race') {
@@ -392,6 +400,7 @@ function summaryEl() {
       '<p class="big"><span>' + R.me + ' to ' + R.them + '</span><small>You against ' + esc(fr.name) + ', first to ' + R.target + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
+      (P.maths ? mpGameStats(null) : '') +
       weakLine +
       '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
   } else {
@@ -444,7 +453,7 @@ function raceMusic() {
 document.addEventListener('visibilitychange', raceMusic);
 function raceArm() {
   if (!P || !P.race || P.race.over) return;
-  const t = token, ms = friend(P.friend).pace * 1000 * (0.65 + Math.random() * 0.7);
+  const t = token, ms = paceOf(friend(P.friend), P.ch) * 1000 * (0.65 + Math.random() * 0.7);     /* maths pace is slower */
   raceTimer = setTimeout(() => {
     if (t !== token || !P || !P.race || P.race.over) return;
     P.race.them++; paintLanes();
@@ -452,12 +461,14 @@ function raceArm() {
   }, ms);
 }
 function raceLost() {
-  const c = current();
+  const c = P.maths ? mpWaiting() : current();
   P.race.over = true;
   raceMusic();
   token++;                                                     /* stops a slide that was about to be added */
-  if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
+  if (c && P.maths) mpClose(c);
+  else if (c) { P.res.push({o: 'closed'}); paintResolved(P, c.sec, c.i); }
   const el = appendNext(feed.lastElementChild), t = token;
+  if (P.maths) paintWork();                                    /* the keypad goes with the question */
   toast(friend(P.friend).name + ' reached ' + P.race.target + ' first');
   sound.wrong();
   setTimeout(() => { if (t === token && P) scrollToEl(feed, el); }, 900);

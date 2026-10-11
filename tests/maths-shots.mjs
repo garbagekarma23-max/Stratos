@@ -1,5 +1,7 @@
 // Screenshots of maths in v2 at iPhone size (390 by 844), light and dark, next to the same Economics screens,
 // so the two subjects can be compared at a glance. Writes PNGs to tests/shots/.  Run: node maths-shots.mjs [light|dark]
+// Also a maths race part way through (maths-race-light.png) and a thread with maths challenge cards
+// (maths-challenge-light.png), and dark, joined with an Economics race in maths-games-light.png (and dark).
 // The question numbers are random in the app. Here Math.random is fixed, so the pictures are the same each run.
 import fs from 'fs';
 import { open, SHOTS, pick } from './lib.mjs';
@@ -25,7 +27,7 @@ async function page(scheme, seed) {
 const shot = (p, name) => p.screenshot({path: SHOTS + name + '.png'});
 async function ready(p) { await p.waitForFunction(() => !!window.MathfieldElement && document.fonts.status === 'loaded'); await p.waitForTimeout(300); }
 // Practice: answer the maths question on screen with keypad taps (worked out by the lab's solver).
-const KEY = {x: 't0', '=': 'equals', '-': 'minus', '/': 'frac', o: 't2'};
+const KEY = {x: 't0', '=': 'equals', '-': 'minus', '/': 'frac', o: 't2', '.': 'point'};
 async function mathsAnswer(p, done) {
   const latex = await p.locator('#feed .slide.mq:not(.done) .mq-q math-span').last().textContent();
   const xs = LM.solve(LM.read(latex)).some.slice().sort((a, b) => b - a);
@@ -125,6 +127,50 @@ for (const scheme of schemes) {
     await shot(p, n('eco-result'));
     errs.push(...e); await b.close();
   }
+  // Games: a maths race against Aisha part way through, with a line of working on the third question.
+  {
+    const h = q => Object.assign({ok: true, q: q}, at(1));
+    const seed = Object.assign({}, MSEED, {m: {h: {m1p1: [h('a')], m1p2: [h('b')], m1p3: [h('c')], m1p4: [h('d')], m1p5: [h('e')]}},
+      th: {aisha: [{id: 1, from: 'them', kind: 'race', ch: 'm1', state: 'open', t: now - 36e5}], noah: [], mia: [], tom: []}, unread: {}, mid: 10});
+    const {b, p, errs: e} = await page(scheme, seed);
+    await ready(p);
+    await p.locator('[data-act="page"][data-page="friends"]').click(); await p.waitForTimeout(150);
+    await p.locator('.thr[data-f="aisha"]').click(); await p.waitForTimeout(150);
+    await p.locator('.mcard [data-act="play"]').click(); await flying(p);
+    await mathsAnswer(p, true); await flying(p);
+    await mathsAnswer(p, true); await flying(p);
+    await mathsAnswer(p, false);
+    await shot(p, 'maths-race-' + scheme);
+    errs.push(...e); await b.close();
+  }
+  // Games: Noah's thread with a finished maths challenge, a rematch asked for, and Noah's new challenge waiting.
+  {
+    const t = now - 36e5;
+    const seed = Object.assign({}, MSEED, {th: {aisha: [], mia: [], tom: [], noah: [
+      {id: 11, from: 'me', kind: 'challenge', ch: 'm1', seed: 4242, total: 5, me: 4, meMs: 168000, them: 4, themMs: 192000, state: 'done', t: t},
+      {id: 12, from: 'them', kind: 'react', text: 'Too easy', t: t + 6e4},
+      {id: 13, from: 'me', kind: 'react', text: 'Rematch?', t: t + 12e4},
+      {id: 14, from: 'them', kind: 'challenge', ch: 'm1', seed: 77, total: 5, me: null, them: 3, themMs: 161000, state: 'open', t: t + 18e4}
+    ]}, unread: {}, mid: 20});
+    const {b, p, errs: e} = await page(scheme, seed);
+    await p.locator('[data-act="page"][data-page="friends"]').click(); await p.waitForTimeout(150);
+    await p.locator('.thr[data-f="noah"]').click(); await p.waitForTimeout(300);
+    await shot(p, 'maths-challenge-' + scheme);
+    errs.push(...e); await b.close();
+  }
+  // Economics: a race part way through, to compare.
+  {
+    const {b, p, errs: e} = await page(scheme, ESEED);
+    await p.locator('[data-act="page"][data-page="friends"]').click(); await p.waitForTimeout(150);
+    await p.locator('.thr[data-f="aisha"]').click(); await p.waitForTimeout(150);
+    await p.locator('.mcard [data-act="play"]').click(); await p.waitForTimeout(150);
+    if (await p.isVisible('#sheet')) { await p.locator('#sheet [data-act="play"]').click(); }
+    await p.waitForTimeout(2500);
+    for (let i = 0; i < 2; i++) { await pick(p, '#feed', true); await p.waitForTimeout(500); await p.evaluate(() => { const f = document.querySelector('#feed'); f.scrollTop = f.lastElementChild.offsetTop; }); await p.waitForTimeout(300); }
+    await shot(p, n('eco-race'));
+    errs.push(...e); await b.close();
+  }
+  await join('maths-games-' + scheme, ['maths-race-' + scheme, n('eco-race'), 'maths-challenge-' + scheme], ['Maths race', 'Economics race', 'Maths challenge cards']);
   await join('maths-practice-' + scheme, [n('flight'), n('eco-flight'), n('result'), n('eco-result')], ['Maths flight', 'Economics flight', 'Maths result', 'Economics result']);
   await join('maths-compare-' + scheme + '-1', [n('home'), n('eco-home'), n('worked'), n('eco-card')], ['Maths Home', 'Economics Home', 'Maths worked example', 'Economics card']);
   await join('maths-compare-' + scheme + '-2', [n('guided'), n('eco-question'), n('sheet'), n('eco-sheet')], ['Maths guided question', 'Economics check question', 'Maths point sheet', 'Economics point sheet']);

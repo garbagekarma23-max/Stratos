@@ -7,7 +7,7 @@ Stratos is school as a social app. Students open it the way they open Instagram,
 A study app prototype for Australian senior students. GitHub Pages serves this repository from the main branch.
 
 - `index.html` is the first prototype, a single question feed. Leave it alone unless asked.
-- `v2.html` is the second prototype. It is built from `src/` (and the shared maths files in `lab/`). Never edit it by hand. It has two subjects: Economics and Maths (Learn and Practice; races and challenges are Economics only so far).
+- `v2.html` is the second prototype. It is built from `src/` (and the shared maths files in `lab/`). Never edit it by hand. It has two subjects: Economics and Maths, each with Learn, Practice, challenges and races.
 - `maths-lab.html` is the Maths Lab, a separate page for writing maths working on a phone. Its code is in `lab/`. See the Maths Lab section below.
 - Live at https://garbagekarma23-max.github.io/Stratos/, https://garbagekarma23-max.github.io/Stratos/v2.html and https://garbagekarma23-max.github.io/Stratos/maths-lab.html
 
@@ -22,9 +22,10 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - `tests/altitude.mjs` checks that altitude is written out in full everywhere ("2 billion km", "4.1 billion light-years", never "2 B km" or "ly", and "light-years" never split over two lines) and that the flight screen's altitude line fits at 360 and 390 px. `node altitude.mjs shots` also saves the flight screen high up: `altitude-360.png`, `altitude-390.png`, with a maths clock (`-clock`), and at 280 px (`altitude-280-clock.png`).
 - A script error in any test prints only its message. `STACK=1 node <test>.mjs` also prints where in `v2.html` it happened. `open()` in `tests/lib.mjs` takes `route` to hold back or change a file the page loads (the tests use it to delay MathLive), and `waitUntil` for when the page counts as open.
 - `tests/preview.mjs` checks each page's title, description, icons and link preview tags, and the sizes of the pictures, with no browser.
-- `tests/maths-content.mjs` checks the maths content with the lab's line checker, no browser: every worked example line ticks, and every template run 200 times makes right, clean answers. `tests/maths.mjs` runs maths in v2: the subject switch, the status rules, and Learn on both chapters with keypad taps only.
+- `tests/maths-content.mjs` checks the maths content with the lab's line checker, no browser: every worked example line ticks, every template run 200 times makes right, clean answers, and the same challenge seed always makes the same five questions.
+- `tests/maths-games.mjs` runs maths challenges and races with keypad taps only: the subject switch on the friend sheet, a challenge sent and finished, the seed giving the same questions on the page as outside it, a rematch staying in maths, a race won and a race lost, and the sample friends' maths pace. `tests/maths.mjs` runs maths in v2: the subject switch, the status rules, and Learn on both chapters with keypad taps only.
 - Screenshots: `cd tests && node shots.mjs` writes PNGs to `tests/shots/` (light, dark, Sky, small phone, desktop). `node shots.mjs light` takes the light-mode flight set. Look at them after any visual change.
-- Maths screenshots in v2: `cd tests && node maths-shots.mjs` writes Home, a worked example, a guided question and the point sheet, light and dark, plus `maths-compare-light-1.png` (and `-2`, and dark), which put each next to the same Economics screen, and `maths-practice-light.png` (and dark): a maths flight and its result next to Economics.
+- Maths screenshots in v2: `cd tests && node maths-shots.mjs` writes Home, a worked example, a guided question and the point sheet, light and dark, plus `maths-compare-light-1.png` (and `-2`, and dark), which put each next to the same Economics screen, and `maths-practice-light.png` (and dark): a maths flight and its result next to Economics. It also writes `maths-race-light.png` (a maths race part way through), `maths-challenge-light.png` (a thread with maths challenge cards), both in dark too, and `maths-games-light.png` (and dark), which puts them next to an Economics race.
 - Maths Lab screenshots: `cd tests && node lab-shots.mjs` writes the lab at iPhone size, light and dark, plus `compare-light.png` and `compare-dark.png`, which put it next to v2's Home and a practice question.
 - Icons and link previews: `icons/` holds `favicon.svg` (written by hand, the app's classic rocket, with dark-browser colours), and the pictures `cd tests && node make-icons.mjs` makes from the Stratos look: `favicon-32.png`, `apple-touch-icon.png` (180 px) and the 1200 by 630 link previews `preview-v2.png` and `preview-lab.png`. The tags that use them are in `src/head.html` (for v2.html) and at the top of `maths-lab.html`. Apps such as Messages fetch the preview picture from the live site, so its tag uses the full web address, and a new picture only shows once the pull request is merged. Apps also keep old previews for a while.
 - The site only updates when the pull request is merged into main.
@@ -70,7 +71,7 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 ### Where maths is going
 
 - `maths-lab.html` stays as the alpha test page. Leave it working.
-- Build order, one pull request each: (1) the maths subject with Learn (done), (2) maths Practice with the game (done), (3) races and challenges with maths, next.
+- Build order, one pull request each: (1) the maths subject with Learn (done), (2) maths Practice with the game (done), (3) races and challenges with maths (done).
 - Practice for maths: the keypad with the game on top. Weak points first. The combo builds with each right line and resets on a wrong one. The rocket climbs on each right answer. Done gets one clear moment.
 - Proven for maths: three right answers in a row on a point, each with different numbers. No day limits anywhere. A wrong answer makes the point weak and resets its run.
 - Proving a chapter runs in one sitting: questions from the chapter's unproven points, mixed, until every point is proven or the student leaves.
@@ -91,7 +92,7 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - Work mode: when a maths question fills the Learn screen, `#app` gets `data-work`. The tab bar hides, the keypad (`#mPad`) sits at the bottom, the cards stop scrolling, and the A to D keys do nothing. The × in the Learn bar goes Home and keeps the question.
 - MathLive loads from `lab/mathlive/` the first time maths is opened (`loadMaths`), never for Economics.
 - A right line rings v2's ping one step higher each time (`sound.correct`). The key click and the strip tick are in `20-sound.js`, copied from `lab/sound.js` at the lab's measured level.
-- Home's button for maths opens Learn: new points, then weak points in full, then Prove this chapter. Once every point is proven it offers a mixed flight. Races and challenges still switch to Economics.
+- Home's button for maths opens Learn: new points, then weak points in full, then Prove this chapter. Once every point is proven it offers a mixed flight.
 
 ### Maths Practice
 
@@ -106,6 +107,19 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - Best time: `saved.m.best`, keyed by everything or the chapter id, then the number of questions (`all:8`, `m1:16`), in ms. Only a finished flight with nothing skipped or shown sets one. The start screen and the result show it.
 - The result is the Economics result plus a row of time, lines written and wrong lines. Each subject keeps its own records: maths in `saved.m.bestKm` and `saved.m.bestCombo`, Economics in `saved.bestKm` and `saved.bestCombo`. The Practice start screen, the result's New personal best and the You page all use the subject picked (`records()` in `10-core.js`).
 - On a narrow phone (under 400 px), Skip and Answer show their icons only. In a flight, toasts sit just above the keypad.
+
+### Maths challenges and races
+
+- The code: `startPractice` in `60-practice.js` sends a maths challenge or race to `startMathsFlight` in `62-maths-practice.js`, the same flight as maths Practice. `game()` is true in either, and means one try per question: a wrong answer ends the question with the worked solution and waits for Next, there is no Skip, and nothing comes back at the end. Answer shows the worked solution and counts as wrong. The combo, altitude and the Done moment are as in Practice. Answers count toward proven, as in Practice.
+- Sizes are in `GAME` in `10-core.js`: a maths challenge is 5 questions (Economics 8), a maths race is first to 4 (Economics 6). A maths question takes about three times as long as tapping an option, so these take about as long as Economics' 8 and 6.
+- Same questions for both: each maths challenge has a seed, a whole number saved on its message. `MAKE.set(points, seed, 5)` in `15-maths-make.js` makes the questions from the seed alone, with `MAKE.seeded(seed)` in place of `Math.random`: the order of points, the templates and the numbers. Nothing about either player goes in, so the same seed gives the same set on any phone. A chapter 1 challenge asks one question on each of its 5 points. A change to a template changes the questions an old seed makes.
+- Who wins a maths challenge: more right answers, then the faster time if the scores are level ("You won on time"). `challengeOutcome` in `70-social.js`. The card and the result show both scores and both times. Times are kept on the message as `meMs` and `themMs`. Economics cards have no times.
+- A maths race shows the lanes in place of the segment bar, because it has no fixed number of questions. Questions keep coming from the chapter, made fresh, until someone gets to 4. A right answer scores at Done, so the friend cannot win during the Done moment. If the friend gets there first, the open question is closed and the keypad goes.
+- The sample friends' maths pace is `mpace` in `FRIENDS`: seconds per right answer in chapter 1 (Aisha 25, Noah 30, Mia 36, Tom 45), times `MATHS_SLOW` for chapter 2 (1.3), give or take 35%. `paceOf` gives the pace for a chapter in either subject. A friend's pretend challenge time is their pace for each question, give or take a fifth (`pretendTime`). These are first guesses, to tune after a phone test.
+- Starting one: exactly where Economics ones start. Send a challenge or Start a race in a thread opens the friend sheet, with an Economics and Maths switch at the top (it starts on the subject picked on Home) and that subject's chapters under it. A card a friend sent has Play. Starting a game in the other subject switches Home to it. There is no game button on the Practice start screen, in either subject.
+- Rematch: the friend sends a challenge on the subject and chapter of the last game in the thread, with a new seed for maths. With no game yet in the thread, it uses the chapter Home shows.
+- The weekly table counts right answers in both subjects together, and says so. Two tables would split four friends into smaller groups, and the table is about showing up to study. A maths answer takes longer, so a mostly maths week scores lower. If testers notice, a maths answer could count as 2.
+- Saved: a maths challenge message has `seed`, `total` 5, and `meMs` and `themMs` once played. An older build's maths challenge with no seed gets one, and 5 questions, when the page loads (`tidySaved`). A message on a chapter this build does not have moves to the first Economics chapter.
 
 Known gaps:
 - Tested on a real iPhone: the iPhone keyboard never appeared, holding Enter copied the line with no magnifier or text selection, the clicks and pings played with the silent switch off, and all ten questions could be finished. Sound needs the silent switch off, and iPhones do not vibrate for websites.
@@ -125,8 +139,8 @@ Known gaps:
 | `50-feed.js` | Question slides shared by Learn and Practice, and Learn itself. |
 | `55-maths.js` | Maths in Learn: loading MathLive, the worked example card, guided and check questions, work mode, the maths point sheet. |
 | `60-practice.js` | The start screen, a flight, challenges, races, the result slide. |
-| `62-maths-practice.js` | Maths in Practice: the start screen, which points, a flight on the keypad, the combo on lines, the Done moment, the clock and best time. |
-| `70-social.js` | Friends, messages, the store, You, Search. |
+| `62-maths-practice.js` | Maths in Practice: the start screen, which points, a flight on the keypad, the combo on lines, the Done moment, the clock and best time. Maths challenges and races use the same flight. |
+| `70-social.js` | Friends, messages (with the subject switch for games and who won a challenge), the store, You, Search. |
 | `90-boot.js` | Keyboard, appearance, start-up. |
 | `style.css`, `body.html`, `head.html` | Looks, fixed markup, title and typeface links. |
 
@@ -138,7 +152,8 @@ Known gaps:
 - Scoring: each correct answer multiplies altitude by 2 x combo x difficulty. Combo tiers start at 3, 5, 8 and 12.
 - Altitude is written out in full everywhere (`fmt` in `10-core.js`): "384,400 km", "2 billion km", "4.1 billion light-years", from million up to decillion, then a power of ten ("10⁴⁰ light-years"). Only km stays short. "light-years" has a hyphen and an invisible word joiner (U+2060) after it, so it never breaks across two lines. The non-breaking hyphen character is not used because Hanken Grotesk has no drawing for it. On the flight screen, if the words do not fit beside the number, the layer name and the clock, they move to the line under the number (`fitAlt` in `60-practice.js`, `#run.alt2`). At 360 px everything fits; the line under is for narrower screens, such as a folded Galaxy Fold at 280 px.
 - Progress is in `localStorage` under `stratos2.v1`, with maths under its `m` key. Nothing is sent anywhere.
-- Races have music: a ticking clock made in code, from Go until the race ends. It builds at halfway (3 correct) and again one from winning (5), dips under each ping, and has its own switch in You.
+- Races have music: a ticking clock made in code, from Go until the race ends. It builds at halfway (3 correct in Economics, 2 in maths) and again one from winning (5, or 3 in maths), dips under each ping, and has its own switch in You.
+- The weekly table on Friends counts right answers since Monday in both subjects together.
 - The four friends are samples. Their scores and replies are pretend and run on timers.
 - The store shows example prices. Buying is switched off.
 
@@ -159,7 +174,7 @@ Words on screen, and anything written to the owner:
 
 Product:
 - Messages are cards and preset replies. No free typing.
-- Challenges and races are Economics only for now, whichever subject is picked. A message that starts one always names an Economics chapter (`ecoCh()` in `10-core.js`). Saved messages on any other chapter are moved to Economics when the page loads.
+- Challenges and races work in both subjects, and start in the same places in each: the friend sheet from a thread, and Play on a card. A rematch keeps the subject and chapter of the game it answers.
 - Nothing is sold by chance. User data is never sold.
 - Label pretend things as pretend.
 - Sound levels were measured and tuned (`MASTER = 0.4`). Do not change them unless asked.
@@ -171,7 +186,7 @@ Product:
 
 ## Known gaps
 
-- Maths in v2 (Learn and Practice) has not been tried on a real iPhone yet. A maths Learn session, like an Economics one, is lost if the page reloads, though answers already given are saved.
+- Maths in v2 (Learn, Practice, challenges and races) has not been tried on a real iPhone yet. The sample friends' maths pace is a first guess. A maths Learn session, like an Economics one, is lost if the page reloads, though answers already given are saved.
 - The first time maths opens, MathLive (about 820 KB) and its fonts load, which takes a moment on a slow connection. Maths slides stay blank until it arrives.
 - Never tested on a real iPhone. Web sound is muted by the iPhone silent switch, and iPhone browsers do not vibrate.
 - A flight in progress is lost if the page reloads.

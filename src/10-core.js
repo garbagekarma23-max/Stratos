@@ -107,13 +107,26 @@ const SOUNDS = [
 ];
 const PACK = {name: 'Deep space pack', items: 'Deep field, Saucer and Nebula together', price: '$4.99'};
 
-/* ---------- sample friends. week is their correct answers this week, skill and pace drive the pretend play ---------- */
+/* ---------- sample friends. week is their correct answers this week, skill and pace drive the pretend play ----------
+   pace is the seconds a friend takes for each right answer in an Economics race. mpace is the same for maths
+   chapter 1, where each question is several lines on the keypad, not one tap. */
 const FRIENDS = [
-  {id: 'aisha', name: 'Aisha', week: 64, skill: 0.86, pace: 11},
-  {id: 'noah', name: 'Noah', week: 41, skill: 0.76, pace: 13},
-  {id: 'mia', name: 'Mia', week: 27, skill: 0.68, pace: 15},
-  {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18}
+  {id: 'aisha', name: 'Aisha', week: 64, skill: 0.86, pace: 11, mpace: 25},
+  {id: 'noah', name: 'Noah', week: 41, skill: 0.76, pace: 13, mpace: 30},
+  {id: 'mia', name: 'Mia', week: 27, skill: 0.68, pace: 15, mpace: 36},
+  {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18, mpace: 45}
 ];
+/* Challenges and races in each subject. A maths question takes about three times as long as tapping an option,
+   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6. */
+const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}};
+/* Maths chapter 2 (squares) needs more lines than chapter 1, so the sample friends take 1.3 times as long there. */
+const MATHS_SLOW = {m1: 1, m2: 1.3};
+const subOf = chId => { const c = chOf(chId); return c ? c.sub : 'eco'; };
+const gameSize = (chId, kind) => GAME[subOf(chId)][kind];
+/* A sample friend's seconds for each right answer on a chapter. */
+function paceOf(f, chId) { return subOf(chId) === 'maths' ? f.mpace * (MATHS_SLOW[chId] || 1.3) : f.pace; }
+/* A pretend time for a friend playing a maths challenge, in ms: their pace for each question, give or take a fifth. */
+function pretendTime(f, chId, total) { let ms = 0; for (let i = 0; i < total; i++) ms += paceOf(f, chId) * 1000 * (0.8 + Math.random() * 0.4); return Math.round(ms); }
 const friend = id => FRIENDS.find(f => f.id === id) || FRIENDS[0];
 const REPLIES = ['Nice one', 'Rematch?', 'Too easy', 'Good game'];
 
@@ -141,12 +154,21 @@ function tidySaved() {
   if (!saved.th || typeof saved.th !== 'object' || !FRIENDS.every(f => Array.isArray(saved.th[f.id]))) seedThreads();
   if (!saved.unread || typeof saved.unread !== 'object') saved.unread = {};
   if (!ownsRocket(saved.rocket)) saved.rocket = 'classic';
-  /* A challenge a friend was still playing when the page closed is finished now. */
-  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { m.them = pretendScore(f, m.total); m.state = 'done'; } }));
-  /* Challenges and races are Economics only. An older build could save one on a maths chapter (a Rematch sent while
-     Maths was picked), which could not be played. Such a message moves to the Economics chapter. */
+  /* A message on a chapter this build does not have moves to the first Economics chapter, so it can still be played. */
   let moved = false;
-  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.ch && !SUBJECTS.eco.ch.some(c => c.id === m.ch)) { m.ch = ecoCh().id; moved = true; } }));
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => {
+    if (m.ch && !chOf(m.ch)) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
+    /* An older build could save a maths challenge with no seed and 8 questions. It gets a seed and the maths size. */
+    if (m.kind === 'challenge' && subOf(m.ch) === 'maths' && m.seed == null) {
+      m.seed = MAKE.newSeed();
+      if (m.them != null) { m.them = Math.min(m.them, GAME.maths.challenge); if (m.themMs == null) m.themMs = pretendTime(f, m.ch, GAME.maths.challenge); }
+      if (m.me != null) m.me = Math.min(m.me, GAME.maths.challenge);
+      m.total = GAME.maths.challenge;
+      moved = true;
+    }
+  }));
+  /* A challenge a friend was still playing when the page closed is finished now. */
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { friendScores(f, m); m.state = 'done'; } }));
   if (moved) save();
 }
 function seedThreads() {
@@ -161,6 +183,8 @@ function seedThreads() {
   saved.mid = 10;
 }
 function pretendScore(f, total) { let n = 0; for (let i = 0; i < total; i++) if (Math.random() < f.skill) n++; return n; }
+/* A sample friend's pretend score on a challenge, and in maths their pretend time too. */
+function friendScores(f, m) { m.them = pretendScore(f, m.total); if (subOf(m.ch) === 'maths') m.themMs = pretendTime(f, m.ch, m.total); }
 function ownsRocket(id) { const r = ROCKETS.find(x => x.id === id); return !!r && !r.price && (!r.earn || streakNow() >= r.earn); }
 
 const dayKey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -289,8 +313,6 @@ function curCh() {
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }
 const names = pts => pts.map(p => p.title).join(', ');
-/* The Economics chapter last opened (or the first), whichever subject is picked. Challenges and races use it. */
-const ecoCh = () => SUBJECTS.eco.ch.find(c => c.id === saved.cur) || SUBJECTS.eco.ch[0];
 /* What the big button on Home does next. */
 function nextStep() {
   if (isMaths()) return mathsNext();
