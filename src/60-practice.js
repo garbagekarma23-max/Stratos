@@ -120,6 +120,7 @@ function modeLabel() {
   return 'Mixed flight';
 }
 function mountRun() {
+  feed.textContent = '';             /* first, so nothing below finds the last flight's slides and takes them for this one's */
   showRun(true);
   run.dataset.mode = P.mode;
   applyBg();
@@ -128,7 +129,6 @@ function mountRun() {
   $('#lanes').hidden = !P.race;
   if (P.race) { $('#laneWho').textContent = friend(P.friend).name; paintLanes(); }
   mpMount();
-  feed.textContent = '';
   feed.appendChild(slideFor(0));
   feed.scrollTop = 0;
   shown.L = 0;

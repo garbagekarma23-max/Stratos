@@ -28,6 +28,21 @@ for (const [page, img] of [['v2.html', 'preview-v2.png'], ['maths-lab.html', 'pr
   check(png && JSON.stringify(pngSize(png)) === '[32,32]', page + ': the 32 px PNG favicon is linked and is 32 by 32', R);
   check(touch && JSON.stringify(pngSize(touch)) === '[180,180]', page + ': the home screen icon is linked and is 180 by 180', R);
   check(!/—/.test(title + desc), page + ': no em dashes in the title or description', R);
+
+  // Full screen from the Home Screen: a web app manifest (Android) and the iPhone tags, with a status bar for light and dark.
+  const mf = link(head, 'manifest');
+  check(!!mf && fs.existsSync(new URL(mf, ROOT)), page + ': a web app manifest is linked and exists: ' + mf, R);
+  const man = mf ? JSON.parse(read(mf)) : {};
+  check(man.display === 'standalone' && man.start_url === './' + page && man.scope === './' + page && man.id === './' + page, page + ': the manifest opens this page full screen, as its own app', R);
+  check(man.name && man.name.startsWith('Stratos') && man.short_name && man.short_name.length <= 12, page + ': the manifest has a name and a short name for under the icon: ' + man.short_name, R);
+  const icons = man.icons || [];
+  check(['192x192', '512x512'].every(sz => icons.some(i => i.sizes === sz && i.type === 'image/png' && JSON.stringify(pngSize(i.src)) === JSON.stringify(sz.split('x').map(Number)))), page + ': the manifest has the rocket at 192 and 512 px, and the files are those sizes', R);
+  check(man.background_color === '#ffffff' && man.theme_color === '#ffffff', page + ': the manifest colours are the paper colour', R);
+  check(meta(head, 'name', 'apple-mobile-web-app-capable') === 'yes' && meta(head, 'name', 'mobile-web-app-capable') === 'yes', page + ': the Home Screen tags ask for full screen', R);
+  check(meta(head, 'name', 'apple-mobile-web-app-title') === man.short_name, page + ': the iPhone Home Screen name matches the manifest: ' + man.short_name, R);
+  check(meta(head, 'name', 'apple-mobile-web-app-status-bar-style') === 'default', page + ': the iPhone status bar is the default style, which takes the theme-color', R);
+  check(/<meta name="theme-color" content="#ffffff" media="\(prefers-color-scheme: light\)">/.test(head) && /<meta name="theme-color" content="#15161a" media="\(prefers-color-scheme: dark\)">/.test(head), page + ': the status bar is white in light mode and the dark paper colour in dark mode', R);
+  check(/<meta name="viewport" content="[^"]*viewport-fit=cover/.test(head), page + ': the page can reach the screen edges, and pads itself for the safe areas', R);
 }
 const svg = read('icons/favicon.svg');
 check(/prefers-color-scheme: dark/.test(svg) && /viewBox="0 0 40 40"/.test(svg), 'the SVG favicon is square and has colours for dark browser bars', R);

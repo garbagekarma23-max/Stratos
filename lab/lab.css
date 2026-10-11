@@ -95,7 +95,8 @@ svg{display:block;flex:none}
 /* ---------- the stage ---------- */
 /* No double-tap zoom and no iPhone callout anywhere on the stage. Scrolling still works. */
 #app{display:flex;flex-direction:column;-webkit-touch-callout:none;touch-action:manipulation}
-@supports (height:100dvh){@media (max-width:519px),(max-height:619px){#app{height:100dvh;max-height:none}}}
+/* On a phone the stage is the screen's height less the safe areas, which :root pads (the status bar and the home indicator). */
+@supports (height:100dvh){@media (max-width:519px),(max-height:619px){#app{height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));max-height:none}}}
 .top{flex:none;padding:12px 16px 0}
 .top .tr{visibility:hidden}
 #app[data-mode="q"][data-open] .top .tr{visibility:visible}

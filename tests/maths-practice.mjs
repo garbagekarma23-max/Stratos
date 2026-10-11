@@ -301,5 +301,20 @@ for (const motion of [false, true]) {
   errsAll.push(...errs); await b.close();
 }
 
+// ---------- 8. Fly again while the old flight's first question is on screen ----------
+// A new flight must not mistake the old flight's slides for its own. (It used to read a question that was not made yet.)
+{
+  const {b, p, errs} = await open({seed: SEED});
+  await p.waitForFunction(() => !!window.MathfieldElement);
+  await startFlight(p);
+  await p.locator(WAIT + ' [data-act="mpskip"]').tap(); await p.waitForTimeout(200);
+  await p.locator('#endBtn').tap(); await p.locator('#endBtn').tap(); await p.waitForTimeout(200);
+  await p.evaluate(() => { document.querySelector('#feed').scrollTop = 0; }); await p.waitForTimeout(300);
+  await p.evaluate(() => document.querySelector('#feed [data-act="again"]').click());
+  await ready(p);
+  check(!errs.length && await p.locator('#feed .slide').count() === 1 && (await text(p, WAIT + ' .meta')).startsWith('Question 1 of 8'), 'Fly again, with the old first question on screen, starts a clean flight with no script errors', R);
+  errsAll.push(...errs); await b.close();
+}
+
 console.log(R.join('\n'));
 if (errsAll.length) { console.log('ERRORS after maths practice tests:', errsAll); process.exitCode = 1; }

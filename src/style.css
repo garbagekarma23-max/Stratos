@@ -62,6 +62,11 @@ svg{display:block;flex:none}
 
 /* ---------- stage, views and the tab bar ---------- */
 #app{position:relative;flex:none;width:100%;max-width:440px;height:100%;max-height:920px;overflow:hidden;isolation:isolate;background:var(--paper);-webkit-user-select:none;user-select:none}
+/* Safe areas, for a phone with no browser bars (opened from the Home Screen). The page is padded for the status bar at
+   the top (in build.py). At the bottom, the pieces that sit on the edge (the tab bar, the keypad, the sheet, the message
+   bar) reach under the home indicator in their own colour, and pad their buttons up out of its way.
+   --sab is the height of that bottom strip: 0 on a computer and in most browser tabs. */
+#app{--sab:env(safe-area-inset-bottom,0px);--tabs:calc(58px + var(--sab))}
 @media (min-width:520px) and (min-height:620px){
   body{background:var(--wash);padding-inline:16px}
   #app{height:calc(100% - 32px);border:1px solid var(--line);border-radius:24px}
@@ -72,7 +77,7 @@ svg{display:block;flex:none}
 .view.fixed{overflow:hidden}
 .pad{padding:12px 16px 32px}
 
-#tabs{position:absolute;inset:auto 0 0 0;z-index:5;height:var(--tabs);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--paper);border-top:1px solid var(--line);transition:background-color .3s,border-color .3s}
+#tabs{position:absolute;inset:auto 0 0 0;z-index:5;height:var(--tabs);padding-bottom:var(--sab);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--paper);border-top:1px solid var(--line);transition:background-color .3s,border-color .3s}
 .tab{display:grid;justify-items:center;align-content:center;gap:4px;padding:0;border:0;background:none;color:var(--ink-3);font-size:11px;font-weight:500;line-height:1;transition:color .2s}
 .tab svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .tab .f{display:none}
@@ -280,7 +285,7 @@ svg{display:block;flex:none}
 #app[data-work] #v-learn{bottom:0}
 #app[data-work] #learnFeed{overflow:hidden}
 #app[data-work] #toast{bottom:calc(100% - 140px)}
-#mPad{position:absolute;inset:auto 0 0 0;z-index:5}
+#mPad{position:absolute;inset:auto 0 0 0;z-index:5;padding-bottom:calc(8px + var(--sab))}
 #app[data-work] #v-practice{bottom:0}
 #app[data-work] #feed{overflow:hidden}
 .slide.mq.working{height:100%;padding-bottom:0}
@@ -476,7 +481,7 @@ svg{display:block;flex:none}
 .p-bar{flex:none;display:flex;align-items:center;gap:8px;min-height:54px;padding:6px 10px 6px 6px;border-bottom:1px solid var(--line)}
 .p-bar h2{flex:1;min-width:0;font:700 17px/1.2 var(--f);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .p-bar .avatar{width:32px;height:32px;font-size:13px}
-.p-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:14px 16px 28px;scrollbar-width:none}
+.p-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:14px 16px calc(28px + var(--sab));scrollbar-width:none}
 .notice{margin-top:16px;padding:10px 12px;border-radius:12px;background:var(--wash);font-size:13px;line-height:1.45;color:var(--ink-2)}
 .p-body > .notice:first-child{margin-top:0}
 .p-body .seg3{margin-bottom:14px}
@@ -512,7 +517,7 @@ svg{display:block;flex:none}
 .mcard .primary{min-height:40px;margin-top:8px;font-size:14px}
 .mcard .textbtn{justify-self:start;font-size:13px;font-weight:500}
 .sys{align-self:center;max-width:90%;padding:2px 0;font-size:12px;line-height:1.4;color:var(--ink-3);text-align:center}
-.composer{flex:none;display:grid;gap:10px;padding:10px 12px 12px;border-top:1px solid var(--line);background:var(--paper)}
+.composer{flex:none;display:grid;gap:10px;padding:10px 12px calc(12px + var(--sab));border-top:1px solid var(--line);background:var(--paper)}
 .composer .acts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .replies{display:flex;gap:8px;margin:0 -12px;padding:0 12px;overflow-x:auto;scrollbar-width:none}
 .replies .chip{flex:none;color:var(--ink)}
@@ -538,7 +543,7 @@ svg{display:block;flex:none}
 
 /* ---------- sheet ---------- */
 #sheet{position:absolute;inset:0;z-index:8;display:flex;align-items:flex-end;background:var(--scrim)}
-.panel{width:100%;max-height:88%;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:14px;padding:10px 16px 20px;border-radius:22px 22px 0 0;background:var(--raise);scrollbar-width:none;animation:sheet-in .24s cubic-bezier(.2,.8,.2,1)}
+.panel{width:100%;max-height:88%;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:14px;padding:10px 16px calc(20px + var(--sab));border-radius:22px 22px 0 0;background:var(--raise);scrollbar-width:none;animation:sheet-in .24s cubic-bezier(.2,.8,.2,1)}
 @keyframes sheet-in{from{transform:translateY(28px);opacity:.4}}
 .p-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-top:6px}
 .p-head h2{padding-top:8px;font:700 19px/1.25 var(--f);text-wrap:balance}
