@@ -82,11 +82,12 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
       tone(523.25, 0, 0.16, 0.3); tone(523.25 * 1.5, 0.07, 0.22, 0.24);
       out.ping = stats(await a.startRendering());
     }
-    // Every oscillator started, with its pitch and when it starts. Slow ones under 20 Hz are the wobble and swell.
+    // Every oscillator started, with its pitch, when it starts and when it stops. Slow ones under 20 Hz are the wobble and swell.
     let started = [];
-    const st = OscillatorNode.prototype.start;
-    OscillatorNode.prototype.start = function (when) { if (this.frequency.value >= 20) started.push({f: this.frequency.value, at: when || 0}); return st.apply(this, arguments); };
-    // The strongest pitch (by note name, any octave) in a stretch of the recording.
+    const st = OscillatorNode.prototype.start, sp = OscillatorNode.prototype.stop;
+    OscillatorNode.prototype.start = function (when) { if (this.frequency.value >= 20) started.push(this.rec = {f: this.frequency.value, at: when || 0}); return st.apply(this, arguments); };
+    OscillatorNode.prototype.stop = function (when) { if (this.rec) this.rec.stop = when; return sp.apply(this, arguments); };
+    // The three strongest pitches (by note name, any octave) in a stretch of the recording, strongest first.
     const names = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     const strongest = (buf, from, to) => {
       const d = buf.getChannelData(0), sr = buf.sampleRate, pcs = new Array(12).fill(0);
@@ -95,7 +96,7 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
         for (let i = Math.floor(from * sr); i < Math.floor(to * sr); i++) { const s0 = d[i] + c * s1 - s2; s2 = s1; s1 = s0; }
         pcs[m % 12] += s1 * s1 + s2 * s2 - c * s1 * s2;
       }
-      return names[pcs.indexOf(Math.max(...pcs))];
+      return pcs.map((v, i) => [v, names[i]]).sort((x, y) => y[0] - x[0]).slice(0, 3).map(x => x[1]);
     };
     for (const k of ['glass', 'haze', 'halo']) {
       const a = new OfflineAudioContext(2, 48000 * 3.6, 48000);
@@ -106,10 +107,10 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
       out[k].started = started;
       out[k].heard = [strongest(buf, 0.15, 0.5), strongest(buf, 0.8, 1.0), strongest(buf, 1.45, 1.9)];
     }
-    out.hz = [T.noteHz('A4'), T.noteHz('E5'), T.noteHz('D#5'), T.noteHz('G#5'), T.noteHz('E3')];
+    out.hz = [T.noteHz('A4'), T.noteHz('G#3'), T.noteHz('C#3'), T.noteHz('F#4'), T.noteHz('E3')];
     return out;
   });
-  check(near(r.hz[0], 440, 1e-9) && near(r.hz[1], 659.26, 0.01) && near(r.hz[2], 622.25, 0.01) && near(r.hz[3], 830.61, 0.01) && near(r.hz[4], 164.81, 0.01), 'note names give the right pitches', results);
+  check(near(r.hz[0], 440, 1e-9) && near(r.hz[1], 207.65, 0.01) && near(r.hz[2], 138.59, 0.01) && near(r.hz[3], 369.99, 0.01) && near(r.hz[4], 164.81, 0.01), 'note names give the right pitches', results);
   for (const k of ['glass', 'haze', 'halo']) {
     const x = r[k], db = v => (20 * Math.log10(v)).toFixed(1);
     check(x.peak <= r.ping.peak, k + ': its loudest moment is under the ping\'s (' + db(x.peak) + ' dB, ping ' + db(r.ping.peak) + ')', results);
@@ -117,11 +118,11 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
     check(x.rms > r.ping.rms * 0.5, k + ': and still loud enough to hear next to it', results);
     check(x.tail < 0.003, k + ': it has rung out by 3.1 s (' + db(x.tail) + ' dB)', results);
   }
-  // Exactly the notes asked for, at the times asked for. E5, D#5, G#5 land at 0, 0.5 and 1.0 s.
-  // Bells add their own quieter overtones (2.004, 2.76 and 4.07 times the note). The shimmer is an octave up.
-  // Only Haze and Halo have the low E3 underneath, from the start.
-  const hz = {E5: 659.26, Ds5: 622.25, Gs5: 830.61, E3: 164.81};
-  const notes = [[hz.E5, 0], [hz.Ds5, 0.5], [hz.Gs5, 1.0]];
+  // Exactly the notes asked for, at the times asked for: G#3 and D#5 together at 0 s, C#3 alone at 0.5 s, and F#4 and
+  // C#5 together at 1.0 s. Bells add their own quieter overtones (2.004, 2.76 and 4.07 times the note). The shimmer
+  // is an octave up. Only Haze and Halo have the low E3 underneath, from the start.
+  const hz = {Gs3: 207.65, Ds5: 622.25, Cs3: 138.59, Fs4: 369.99, Cs5: 554.37, E3: 164.81};
+  const notes = [[hz.Gs3, 0], [hz.Ds5, 0], [hz.Cs3, 0.5], [hz.Fs4, 1.0], [hz.Cs5, 1.0]];
   const parts = {glass: {bell: true, shimmer: true}, haze: {pad: true, under: true}, halo: {pad: true, bell: true, shimmer: true, under: true}};
   for (const k in parts) {
     const v = parts[k], allowed = [];
@@ -134,13 +135,21 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
     const st = r[k].started, has = (f, at) => st.some(o => Math.abs(o.f - f) < 0.05 && Math.abs(o.at - at) < 1e-6);
     const stray = st.filter(o => !allowed.some(([f, at]) => Math.abs(o.f - f) < 0.05 && Math.abs(o.at - at) < 1e-6));
     check(notes.every(([f, at]) => has(f, at)) && !stray.length,
-      k + ': plays E5 at 0 s, D#5 at 0.5 s and G#5 at 1.0 s, and nothing else' + (stray.length ? ' (also ' + stray.map(o => o.f.toFixed(2) + ' Hz at ' + o.at + ' s').join(', ') + ')' : ''), results);
+      k + ': plays G#3 + D#5 at 0 s, C#3 at 0.5 s and F#4 + C#5 at 1.0 s, and nothing else' + (stray.length ? ' (also ' + stray.map(o => o.f.toFixed(2) + ' Hz at ' + o.at + ' s').join(', ') + ')' : ''), results);
+    // C#3 rings on under the last event: it holds to 1.75 s, then melts away. The first pair melts away soon after the
+    // next event starts, so its oscillators stop sooner.
+    const stopOf = f => Math.max(...st.filter(o => Math.abs(o.f - f) < 0.05).map(o => o.stop));
+    check(stopOf(hz.Cs3) - stopOf(hz.Gs3) > 0.9, k + ': C#3 rings on under F#4 and C#5', results);
     check(has(hz.E3, 0) === !!v.under, k + (v.under ? ': a soft low E3 underneath, from the start' : ': nothing underneath'), results);
-    check(has(hz.E5 * 2, 0) === !!v.shimmer, k + (v.shimmer ? ': a shimmer an octave up' : ': no shimmer'), results);
-    check(r[k].heard.join() === 'E,D#,G#', k + ': the recording sounds E, then D#, then G# (' + r[k].heard.join(', ') + ')', results);
+    check(has(hz.Ds5 * 2, 0) === !!v.shimmer, k + (v.shimmer ? ': a shimmer an octave up' : ': no shimmer'), results);
+    // In the recording, each event's notes are among the three strongest pitches while it sounds.
+    const h = r[k].heard, inTop = (w, pcs) => pcs.every(n => h[w].includes(n));
+    check(inTop(0, ['G#', 'D#']) && inTop(1, ['C#']) && inTop(2, ['F#', 'C#']),
+      k + ': the recording sounds G# and D#, then C#, then F# and C# (' + h.map(x => x.join(' ')).join(' / ') + ')', results);
   }
   const N = await p.evaluate(() => T.INTRO_NOTES);
-  check(N.at.join() === '0,0.5,1' && N.end === 2.8 && N.notes.join() === 'E5,D#5,G#5', 'the notes land at 0, 0.5 and 1.0 s, and ring out to 2.8 s', results);
+  check(N.at.join() === '0,0.5,1' && N.end === 2.8 && N.ring.join() === '0,1.75,0' && JSON.stringify(N.events) === '[["G#3","D#5"],["C#3"],["F#4","C#5"]]',
+    'the three events land at 0, 0.5 and 1.0 s, and ring out to 2.8 s', results);
   await b.close();
 }
 
@@ -339,12 +348,12 @@ for (const [w, scheme] of [[360, 'light'], [360, 'dark'], [280, 'light']]) {
     await p.waitForTimeout(150);
     const s = await state(p), osc = await p.evaluate(() => window.SPY.osc);
     const at = f => osc.some(o => Math.abs(o.f - f) < 0.1);
-    heard[k] = {shown: s.shown, saw: osc.some(o => o.type === 'sawtooth'), e5: at(659.26), under: at(164.81), bell: at(659.26 * 2.76), shimmer: at(659.26 * 2)};
+    heard[k] = {shown: s.shown, saw: osc.some(o => o.type === 'sawtooth'), ds5: at(622.25), under: at(164.81), bell: at(622.25 * 2.76), shimmer: at(622.25 * 2)};
     await to(1600 * (i + 2));
   }
-  check(heard.glass.shown && heard.glass.e5 && heard.glass.bell && heard.glass.shimmer && !heard.glass.saw && !heard.glass.under, 'Glass replays the intro with bells and shimmer, nothing underneath', results);
-  check(heard.haze.shown && heard.haze.e5 && heard.haze.saw && heard.haze.under && !heard.haze.bell && !heard.haze.shimmer, 'Haze plays a pad over the low E', results);
-  check(heard.halo.shown && heard.halo.e5 && heard.halo.saw && heard.halo.bell && heard.halo.shimmer && heard.halo.under, 'Halo plays bells and shimmer over a pad and the low E', results);
+  check(heard.glass.shown && heard.glass.ds5 && heard.glass.bell && heard.glass.shimmer && !heard.glass.saw && !heard.glass.under, 'Glass replays the intro with bells and shimmer, nothing underneath', results);
+  check(heard.haze.shown && heard.haze.ds5 && heard.haze.saw && heard.haze.under && !heard.haze.bell && !heard.haze.shimmer, 'Haze plays a pad over the low E', results);
+  check(heard.halo.shown && heard.halo.ds5 && heard.halo.saw && heard.halo.bell && heard.halo.shimmer && heard.halo.under, 'Halo plays bells and shimmer over a pad and the low E', results);
   await b.close();
   const v2 = fs.readFileSync(new URL('../v2.html', import.meta.url), 'utf8');
   check(!v2.includes('Pick the intro sound'), 'v2.html itself has no choosing buttons', results);
