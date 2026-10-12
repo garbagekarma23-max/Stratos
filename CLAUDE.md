@@ -39,7 +39,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Two canvases, one behind the word and one in front, so the rocket and the trail can pass behind the word. The ring is measured from the word on every frame, so it fits even if the typeface arrives late.
 - A tap, click or key skips it. The click that comes with the skipping tap is eaten, so it never presses a button on Home. With reduced motion the rocket is parked in front of the word, still, for 1 s, then it fades.
 - Safety: a timer removes it 1.8 s after it starts, and a CSS animation on `#intro` fades it and stops it catching taps by 1.8 s even if the script never runs.
-- Sound: three soft chords after the opening of "Across the Universe" (D, B minor, F sharp minor) at 0, 0.5 and 1 s, strummed upwards with a quiet bell on top (`sound.intro` in `20-sound.js`). A whole chord stays below one ping, and a test measures that. The sound switch in You mutes them. Browsers hold sound back until the first tap on a page, so on most phones the intro is silent. The chords only start if sound is allowed straight away, so they never turn up late.
+- Sound: three soft chords (D, B minor, F sharp minor), Stratos's own at 0, 0.5 and 1 s, strummed upwards with a quiet bell on top (`sound.intro` in `20-sound.js`). A whole chord stays below one ping, and a test measures that. The sound switch in You mutes them. Browsers hold sound back until the first tap on a page, so on most phones the intro is silent. The chords only start if sound is allowed straight away, so they never turn up late.
 
 ## Full screen from the Home Screen
 
