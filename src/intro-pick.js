@@ -2,11 +2,11 @@
    build.py adds this file to a copy of v2 called intro-sounds.html, so the intro and its sound are exactly what v2
    plays. v2.html itself never has this. */
 (() => {
-  const SOUNDS = [['glass', 'Glass', 'Clear soft bells with a shimmer.'], ['haze', 'Haze', 'A warm, blurred pad with a slow wobble and added ninths.'], ['halo', 'Halo', 'Soft bells floating over a warm pad.']];
+  const SOUNDS = [['glass', 'Glass', 'Clear soft bells with a shimmer.'], ['haze', 'Haze', 'A warm, blurred pad with a slow wobble, over a low E.'], ['halo', 'Halo', 'Soft bells floating over a warm pad and a low E.']];
   const box = document.createElement('div');
   box.id = 'pick';
   box.innerHTML = '<p class="h2">Pick the intro sound</p>' +
-    '<p class="fine">Each button plays the intro with that sound. The chords and timing are the same in all three. The app plays ' +
+    '<p class="fine">Each button plays the intro with that sound. The notes and timing are the same in all three. The app plays ' +
     SOUNDS.find(s => s[0] === INTRO_SOUND)[1] + ' for now.</p>' +
     '<div class="pick-row">' + SOUNDS.map((s, i) => '<button class="ghost" type="button" data-k="' + s[0] + '"><b>' + (i + 1) + '. ' + s[1] + '</b><span>' + s[2] + '</span></button>').join('') + '</div>' +
     '<p class="fine" id="pickOff" hidden>Sound is switched off in You. Switch it on to hear these.</p>';
@@ -22,7 +22,7 @@
     const b = ev.target.closest('button[data-k]'); if (!b) return;
     $('#pickOff').hidden = saved.sound !== false;
     box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
-    /* The tap is what lets the browser play sound, so the chords wait for it to say yes. */
+    /* The tap is what lets the browser play sound, so the notes wait for it to say yes. */
     playIntro({sound: b.dataset.k, force: true, wait: true});
   });
 })();

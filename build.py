@@ -23,7 +23,7 @@ SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
-      '10-core.js', '15-maths-make.js', '18-chords.js', '20-sound.js', '30-shell.js', '34-intro-path.js', '35-intro.js',
+      '10-core.js', '15-maths-make.js', '18-intro-notes.js', '20-sound.js', '30-shell.js', '34-intro-path.js', '35-intro.js',
       '40-home.js', '50-feed.js', '55-maths.js', '60-practice.js', '62-maths-practice.js', '70-social.js', '90-boot.js']
 # intro-sounds.html is v2 with one more file: three buttons that replay the intro with each of its sounds.
 PICK = ['intro-pick.js']

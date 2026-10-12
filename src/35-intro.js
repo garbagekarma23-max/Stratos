@@ -117,8 +117,8 @@ function introFrame() {
   if (ms < INTRO.total) run.raf = requestAnimationFrame(introFrame);
 }
 
-/* Start the intro. intro-sounds.html uses the options: o.sound picks the chords' sound, o.force plays it even where
-   tests have turned it off, and o.wait lets the chords wait for the browser to allow sound, because a tap started it. */
+/* Start the intro. intro-sounds.html uses the options: o.sound picks the notes' sound, o.force plays it even where
+   tests have turned it off, and o.wait lets the notes wait for the browser to allow sound, because a tap started it. */
 function playIntro(o) {
   o = o || {};
   if (window.STRATOS_INTRO === false && !o.force) return;
@@ -166,7 +166,7 @@ function endIntro(run) {
   introEl.hidden = true; introEl.classList.remove('out');
   introRun = null;
 }
-/* A tap anywhere on the intro, or any key, skips it and fades the chords out. The key goes no further. */
+/* A tap anywhere on the intro, or any key, skips it and fades the notes out. The key goes no further. */
 function skipIntro() {
   const run = introRun; if (!run || run.ending) return;
   sound.introFade();

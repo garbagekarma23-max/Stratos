@@ -3,7 +3,7 @@
 // maths-content.mjs checks the maths worked examples and templates without a browser. maths.mjs runs maths in v2,
 // maths-practice.mjs runs a maths Practice flight, and maths-games.mjs runs maths challenges and races. altitude.mjs checks altitude is written out in full and fits.
 // preview.mjs checks the page titles, icons, link preview tags and web app manifests, with no browser.
-// fullscreen.mjs checks both pages full screen on phones with safe areas. intro.mjs checks the intro, its path and its chords.
+// fullscreen.mjs checks both pages full screen on phones with safe areas. intro.mjs checks the intro, its path and its notes.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs']];

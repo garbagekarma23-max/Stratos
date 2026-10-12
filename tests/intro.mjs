@@ -1,6 +1,6 @@
 // The intro: the rocket flies a ring round the word Stratos as the app opens, then spirals out of the frame.
 // The path maths is checked with no browser. The rest runs the page with its clock paused, moving it on by hand.
-// The chords are played into a recording and measured against the correct-answer ping.
+// The notes are played into a recording, measured against the correct-answer ping, and their pitches checked.
 // Screenshots: intro-<when>-<width>-<scheme>.png in shots/.
 import { open, check, SHOTS } from './lib.mjs';
 import fs from 'fs';
@@ -52,7 +52,7 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
   }
 }
 
-// ---------- the chords, no app: played into a recording ----------
+// ---------- the notes, no app: played into a recording ----------
 {
   // The ping is copied from sound.correct in 20-sound.js (first correct answer). Check the copy still matches.
   const s20 = read('20-sound.js');
@@ -60,8 +60,8 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
     'the copy of the ping matches 20-sound.js', results);
   const {b, p, errs} = await open({file: 'tests/serve.mjs'});
   errors.push(...errs);
-  await p.setContent('<p>chords</p>');
-  await p.addScriptTag({content: read('18-chords.js') + '\nwindow.T = {CHORDS, playChords, noteHz};'});
+  await p.setContent('<p>notes</p>');
+  await p.addScriptTag({content: read('18-intro-notes.js') + '\nwindow.T = {INTRO_NOTES, playIntroNotes, noteHz};'});
   const r = await p.evaluate(async () => {
     const stats = buf => {
       let peak = 0, rms = 0, tail = 0;
@@ -82,15 +82,34 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
       tone(523.25, 0, 0.16, 0.3); tone(523.25 * 1.5, 0.07, 0.22, 0.24);
       out.ping = stats(await a.startRendering());
     }
+    // Every oscillator started, with its pitch and when it starts. Slow ones under 20 Hz are the wobble and swell.
+    let started = [];
+    const st = OscillatorNode.prototype.start;
+    OscillatorNode.prototype.start = function (when) { if (this.frequency.value >= 20) started.push({f: this.frequency.value, at: when || 0}); return st.apply(this, arguments); };
+    // The strongest pitch (by note name, any octave) in a stretch of the recording.
+    const names = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const strongest = (buf, from, to) => {
+      const d = buf.getChannelData(0), sr = buf.sampleRate, pcs = new Array(12).fill(0);
+      for (let m = 40; m < 92; m++) {
+        const w = 2 * Math.PI * 440 * Math.pow(2, (m - 69) / 12) / sr, c = 2 * Math.cos(w); let s1 = 0, s2 = 0;
+        for (let i = Math.floor(from * sr); i < Math.floor(to * sr); i++) { const s0 = d[i] + c * s1 - s2; s2 = s1; s1 = s0; }
+        pcs[m % 12] += s1 * s1 + s2 * s2 - c * s1 * s2;
+      }
+      return names[pcs.indexOf(Math.max(...pcs))];
+    };
     for (const k of ['glass', 'haze', 'halo']) {
       const a = new OfflineAudioContext(2, 48000 * 3.6, 48000);
-      T.playChords(a, a.destination, 0, k);
-      out[k] = stats(await a.startRendering());
+      started = [];
+      T.playIntroNotes(a, a.destination, 0, k);
+      const buf = await a.startRendering();
+      out[k] = stats(buf);
+      out[k].started = started;
+      out[k].heard = [strongest(buf, 0.15, 0.5), strongest(buf, 0.8, 1.0), strongest(buf, 1.45, 1.9)];
     }
-    out.hz = [T.noteHz('A4'), T.noteHz('C#5'), T.noteHz('D3'), T.noteHz('F#6')];
+    out.hz = [T.noteHz('A4'), T.noteHz('E5'), T.noteHz('D#5'), T.noteHz('G#5'), T.noteHz('E3')];
     return out;
   });
-  check(near(r.hz[0], 440, 1e-9) && near(r.hz[1], 554.37, 0.01) && near(r.hz[2], 146.83, 0.01) && near(r.hz[3], 1479.98, 0.01), 'note names give the right pitches', results);
+  check(near(r.hz[0], 440, 1e-9) && near(r.hz[1], 659.26, 0.01) && near(r.hz[2], 622.25, 0.01) && near(r.hz[3], 830.61, 0.01) && near(r.hz[4], 164.81, 0.01), 'note names give the right pitches', results);
   for (const k of ['glass', 'haze', 'halo']) {
     const x = r[k], db = v => (20 * Math.log10(v)).toFixed(1);
     check(x.peak <= r.ping.peak, k + ': its loudest moment is under the ping\'s (' + db(x.peak) + ' dB, ping ' + db(r.ping.peak) + ')', results);
@@ -98,17 +117,30 @@ const I = new Function(read('34-intro-path.js') + '; return {INTRO, introAt, int
     check(x.rms > r.ping.rms * 0.5, k + ': and still loud enough to hear next to it', results);
     check(x.tail < 0.003, k + ': it has rung out by 3.1 s (' + db(x.tail) + ' dB)', results);
   }
-  // The notes in each chord belong to that chord. Only Haze adds the ninth.
-  const C = await p.evaluate(() => T.CHORDS), pc = n => n.replace(/\d/, '');
-  const chord = [['D', 'F#', 'A'], ['A', 'C#', 'E'], ['B', 'D', 'F#']], ninth = ['E', 'B', 'C#'];
-  const parts = {glass: ['bells', 'shimmer'], haze: ['pad'], halo: ['pad', 'bells', 'shimmer']};
+  // Exactly the notes asked for, at the times asked for. E5, D#5, G#5 land at 0, 0.5 and 1.0 s.
+  // Bells add their own quieter overtones (2.004, 2.76 and 4.07 times the note). The shimmer is an octave up.
+  // Only Haze and Halo have the low E3 underneath, from the start.
+  const hz = {E5: 659.26, Ds5: 622.25, Gs5: 830.61, E3: 164.81};
+  const notes = [[hz.E5, 0], [hz.Ds5, 0.5], [hz.Gs5, 1.0]];
+  const parts = {glass: {bell: true, shimmer: true}, haze: {pad: true, under: true}, halo: {pad: true, bell: true, shimmer: true, under: true}};
   for (const k in parts) {
-    const ok = [0, 1, 2].every(i => parts[k].every(part => C[k][part][i].every(n => chord[i].includes(pc(n)) || (k === 'haze' && pc(n) === ninth[i]))));
-    const nine = [0, 1, 2].every(i => parts[k].some(part => C[k][part][i].some(n => pc(n) === ninth[i])));
-    check(ok && nine === (k === 'haze'), k + ': D major, A major, B minor' + (k === 'haze' ? ', each with its ninth' : ', plain'), results);
+    const v = parts[k], allowed = [];
+    for (const [f, at] of notes) {
+      allowed.push([f, at]);
+      if (v.bell) for (const r of [2.004, 2.76, 4.07]) allowed.push([f * r, at]);
+      if (v.shimmer) allowed.push([f * 2, at]);
+    }
+    if (v.under) allowed.push([hz.E3, 0]);
+    const st = r[k].started, has = (f, at) => st.some(o => Math.abs(o.f - f) < 0.05 && Math.abs(o.at - at) < 1e-6);
+    const stray = st.filter(o => !allowed.some(([f, at]) => Math.abs(o.f - f) < 0.05 && Math.abs(o.at - at) < 1e-6));
+    check(notes.every(([f, at]) => has(f, at)) && !stray.length,
+      k + ': plays E5 at 0 s, D#5 at 0.5 s and G#5 at 1.0 s, and nothing else' + (stray.length ? ' (also ' + stray.map(o => o.f.toFixed(2) + ' Hz at ' + o.at + ' s').join(', ') + ')' : ''), results);
+    check(has(hz.E3, 0) === !!v.under, k + (v.under ? ': a soft low E3 underneath, from the start' : ': nothing underneath'), results);
+    check(has(hz.E5 * 2, 0) === !!v.shimmer, k + (v.shimmer ? ': a shimmer an octave up' : ': no shimmer'), results);
+    check(r[k].heard.join() === 'E,D#,G#', k + ': the recording sounds E, then D#, then G# (' + r[k].heard.join(', ') + ')', results);
   }
-  check(C.root.join() === 'D3,A2,B2', 'a soft low root under each chord: D3, A2, B2', results);
-  check(C.at.join() === '0,0.5,1' && C.end === 2.8, 'the chords land at 0, 0.5 and 1.0 s, and ring out to 2.8 s', results);
+  const N = await p.evaluate(() => T.INTRO_NOTES);
+  check(N.at.join() === '0,0.5,1' && N.end === 2.8 && N.notes.join() === 'E5,D#5,G#5', 'the notes land at 0, 0.5 and 1.0 s, and ring out to 2.8 s', results);
   await b.close();
 }
 
@@ -176,11 +208,11 @@ async function page(o = {}) {
   check(px.front.orange + px.back.orange === 0, 'by 1.4 s the rocket has left the frame and is not drawn again', results);
   await to(1505);
   check(!(await state(p)).shown, 'and is gone at 1.5 s', results);
-  // The chords: every voice of each chord starts at 0, 0.5 or 1.0 s after the first.
+  // The notes: every part of each note starts at 0, 0.5 or 1.0 s after the first.
   const spy = await p.evaluate(() => window.SPY);
   const t0 = Math.min(...spy.osc.map(o => o.when)), lands = [...new Set(spy.osc.map(o => (o.when - t0).toFixed(2)))].sort();
-  check(lands.join() === '0.00,0.50,1.00', 'the chords land at 0, 0.5 and 1.0 s (' + lands.join(', ') + ')', results);
-  check(spy.osc.length > 0 && !spy.osc.some(o => o.type === 'sawtooth'), 'the app plays Glass: bells, no pad', results);
+  check(lands.join() === '0.00,0.50,1.00', 'the notes land at 0, 0.5 and 1.0 s (' + lands.join(', ') + ')', results);
+  check(spy.osc.length > 0 && !spy.osc.some(o => o.type === 'sawtooth' || Math.abs(o.f - 164.81) < 0.05), 'the app plays Glass: bells, no pad and nothing underneath', results);
   // Changing tabs does not play it again. Opening the app again does.
   await p.click('.tab[data-tab="you"]'); await to(1600); await p.click('.tab[data-tab="home"]'); await to(1700);
   check(!(await state(p)).shown, 'switching tabs does not play it again', results);
@@ -189,7 +221,7 @@ async function page(o = {}) {
   await b.close();
 }
 {
-  // A tap anywhere skips it and fades out the chords.
+  // A tap anywhere skips it and fades out the notes.
   const {b, p, to} = await page({autoplay: true});
   await to(300);
   const before = (await p.evaluate(() => window.SPY)).fades;
@@ -197,7 +229,7 @@ async function page(o = {}) {
   await to(310);
   const s = await state(p), after = (await p.evaluate(() => window.SPY)).fades;
   check(s.out, 'a tap anywhere skips it', results);
-  check(before === 0 && after > 0, 'and fades out the chords', results);
+  check(before === 0 && after > 0, 'and fades out the notes', results);
   await to(470);
   check(!(await state(p)).shown, 'it is gone 0.15 s after the tap', results);
   check(await p.evaluate(() => document.querySelector('.tab[data-tab="home"]').getAttribute('aria-current') === 'page' && !document.querySelector('#sheet:not([hidden])')),
@@ -306,12 +338,13 @@ for (const [w, scheme] of [[360, 'light'], [360, 'dark'], [280, 'light']]) {
     await p.locator('#pick button').nth(i).click();
     await p.waitForTimeout(150);
     const s = await state(p), osc = await p.evaluate(() => window.SPY.osc);
-    heard[k] = {shown: s.shown, saw: osc.some(o => o.type === 'sawtooth'), e5: osc.some(o => Math.abs(o.f - 659.26) < 0.1), a6: osc.some(o => Math.abs(o.f - 1760) < 0.1)};
+    const at = f => osc.some(o => Math.abs(o.f - f) < 0.1);
+    heard[k] = {shown: s.shown, saw: osc.some(o => o.type === 'sawtooth'), e5: at(659.26), under: at(164.81), bell: at(659.26 * 2.76), shimmer: at(659.26 * 2)};
     await to(1600 * (i + 2));
   }
-  check(heard.glass.shown && !heard.glass.saw, 'Glass replays the intro with bells only', results);
-  check(heard.haze.shown && heard.haze.saw && heard.haze.e5 && !heard.haze.a6, 'Haze plays a pad with the ninth (E5 in D major)', results);
-  check(heard.halo.shown && heard.halo.saw && heard.halo.a6, 'Halo plays bells over a pad, with the shimmer', results);
+  check(heard.glass.shown && heard.glass.e5 && heard.glass.bell && heard.glass.shimmer && !heard.glass.saw && !heard.glass.under, 'Glass replays the intro with bells and shimmer, nothing underneath', results);
+  check(heard.haze.shown && heard.haze.e5 && heard.haze.saw && heard.haze.under && !heard.haze.bell && !heard.haze.shimmer, 'Haze plays a pad over the low E', results);
+  check(heard.halo.shown && heard.halo.e5 && heard.halo.saw && heard.halo.bell && heard.halo.shimmer && heard.halo.under, 'Halo plays bells and shimmer over a pad and the low E', results);
   await b.close();
   const v2 = fs.readFileSync(new URL('../v2.html', import.meta.url), 'utf8');
   check(!v2.includes('Pick the intro sound'), 'v2.html itself has no choosing buttons', results);
