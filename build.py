@@ -10,6 +10,7 @@ How the pieces fit:
   src/content.js       the study content: chapters, points, cards and questions
   src/maths-content.js the maths content: chapters, points, worked examples and question templates
   src/10-core.js ...   the script, in the order listed in JS below
+  src/80-intro.js      the intro: the word Stratos with the rocket flying round it, each time the app opens
   src/recordings.json  the three sound recordings, stored as text
   lab/...              the Maths Lab's keypad, working sheet and line checker. They are read from lab/ so there is
                        one copy, shared with maths-lab.html. MathLive itself is not copied in: v2.html loads it from
@@ -23,7 +24,7 @@ LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '80-intro.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/."""

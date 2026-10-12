@@ -23,6 +23,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - A script error in any test prints only its message. `STACK=1 node <test>.mjs` also prints where in `v2.html` it happened. `open()` in `tests/lib.mjs` takes `route` to hold back or change a file the page loads (the tests use it to delay MathLive), and `waitUntil` for when the page counts as open.
 - `tests/preview.mjs` checks each page's title, description, icons and link preview tags, and the sizes of the pictures, with no browser. It also checks the web app manifests and the Home Screen tags.
 - `tests/fullscreen.mjs` opens both pages as Home Screen apps on four phones (an iPhone with its home indicator, the same with the page under the status bar, an Android phone and an iPhone SE). Chromium is told each phone's safe areas. It checks nothing scrolls, nothing sits under the status bar, every key and button is above the home indicator, the tab bar and keypad reach the bottom edge in their own colour (also on Sky), and the status bar colour follows Light or Dark picked in You. Screenshots: `fs-v2-<phone>-<screen>.png` and `fs-lab-<phone>-<scheme>.png`.
+- `tests/intro.mjs` checks the intro: it plays on opening, a tap, click or key skips it without pressing what is underneath, reduced motion keeps it still, it never blocks the app for more than 2 seconds (even with animation frames stopped or a script error), switching tabs never plays it, and its chords are no louder than the ping (it records the app's own sound offline and compares). Every other test skips the intro: `open()` in `tests/lib.mjs` sets `window.stratosIntro = false` unless a test passes `intro: true`. `node intro.mjs shots` saves `intro-light.png` and `intro-dark.png`, five moments side by side (0.1, 0.4, 0.7, 1.0 and 1.3 s).
 - `tests/maths-content.mjs` checks the maths content with the lab's line checker, no browser: every worked example line ticks, every template run 200 times makes right, clean answers, and the same challenge seed always makes the same five questions.
 - `tests/maths-games.mjs` runs maths challenges and races with keypad taps only: the subject switch on the friend sheet, a challenge sent and finished, the seed giving the same questions on the page as outside it, a rematch staying in maths, a race won and a race lost, and the sample friends' maths pace. `tests/maths.mjs` runs maths in v2: the subject switch, the status rules, and Learn on both chapters with keypad taps only.
 - Screenshots: `cd tests && node shots.mjs` writes PNGs to `tests/shots/` (light, dark, Sky, small phone, desktop). `node shots.mjs light` takes the light-mode flight set. Look at them after any visual change.
@@ -30,6 +31,15 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Maths Lab screenshots: `cd tests && node lab-shots.mjs` writes the lab at iPhone size, light and dark, plus `compare-light.png` and `compare-dark.png`, which put it next to v2's Home and a practice question.
 - Icons and link previews: `icons/` holds `favicon.svg` (written by hand, the app's classic rocket, with dark-browser colours), and the pictures `cd tests && node make-icons.mjs` makes from the Stratos look: `favicon-32.png`, `apple-touch-icon.png` (180 px), the same rocket at 192 and 512 px for Android (`icon-192.png`, `icon-512.png`), and the 1200 by 630 link previews `preview-v2.png` and `preview-lab.png`. The tags that use them are in `src/head.html` (for v2.html) and at the top of `maths-lab.html`. Apps such as Messages fetch the preview picture from the live site, so its tag uses the full web address, and a new picture only shows once the pull request is merged. Apps also keep old previews for a while.
 - The site only updates when the pull request is merged into main.
+
+## The intro
+
+- Each time v2 is opened, the word "Stratos" (the logo typeface, 44 px) shows on the plain background, light or dark, and the student's rocket flies round it. The code is `src/80-intro.js`, the markup `#intro` is at the end of `src/body.html`, and `start()` in `90-boot.js` plays it. Switching tabs never plays it, and nor does a new version of the page carrying on from the old one.
+- The path: a ring centred on the word, 28 px past each end, its height 20% of its width, tilted 12 degrees so the right side rises. The rocket starts at the bottom, in front, and goes 1.25 laps right side first in 1.1 s, speeding up. In front it is up to 16% larger; behind, up to 8% smaller and up to 35% faded. Then it keeps the same speed round while the ring widens, so it spirals out. The widening is worked out for the screen size, so it leaves by about 1.4 s on any screen, and is not drawn again. The nose points along the path. A thin blue trail follows it for 0.3 s. At 1.5 s the intro fades into Home over 0.15 s.
+- Two canvases, one behind the word and one in front, so the rocket and the trail can pass behind the word. The ring is measured from the word on every frame, so it fits even if the typeface arrives late.
+- A tap, click or key skips it. The click that comes with the skipping tap is eaten, so it never presses a button on Home. With reduced motion the rocket is parked in front of the word, still, for 1 s, then it fades.
+- Safety: a timer removes it 1.8 s after it starts, and a CSS animation on `#intro` fades it and stops it catching taps by 1.8 s even if the script never runs.
+- Sound: three soft chords after the opening of "Across the Universe" (D, B minor, F sharp minor) at 0, 0.5 and 1 s, strummed upwards with a quiet bell on top (`sound.intro` in `20-sound.js`). A whole chord stays below one ping, and a test measures that. The sound switch in You mutes them. Browsers hold sound back until the first tap on a page, so on most phones the intro is silent. The chords only start if sound is allowed straight away, so they never turn up late.
 
 ## Full screen from the Home Screen
 
@@ -150,6 +160,7 @@ Known gaps:
 | `60-practice.js` | The start screen, a flight, challenges, races, the result slide. |
 | `62-maths-practice.js` | Maths in Practice: the start screen, which points, a flight on the keypad, the combo on lines, the Done moment, the clock and best time. Maths challenges and races use the same flight. |
 | `70-social.js` | Friends, messages (with the subject switch for games and who won a challenge), the store, You, Search. |
+| `80-intro.js` | The intro that plays when the app opens: the word, the rocket's ring, the trail, skipping, reduced motion and the safety timer. |
 | `90-boot.js` | Keyboard, appearance, start-up. |
 | `style.css`, `body.html`, `head.html` | Looks, fixed markup, title and typeface links. |
 
@@ -198,6 +209,7 @@ Product:
 - Maths in v2 (Learn, Practice, challenges and races) has not been tried on a real iPhone yet. The sample friends' maths pace is a first guess. A maths Learn session, like an Economics one, is lost if the page reloads, though answers already given are saved.
 - The first time maths opens, MathLive (about 820 KB) and its fonts load, which takes a moment on a slow connection. Maths slides stay blank until it arrives.
 - Never tested on a real iPhone. Web sound is muted by the iPhone silent switch, and iPhone browsers do not vibrate.
+- The intro's chords are usually silent on phones, because browsers only allow sound after the first tap on a page. The intro has not been compared on a real phone yet.
 - A flight in progress is lost if the page reloads.
 - The radio rows on the Practice start screen have no arrow-key support, and the sheet does not trap focus.
 - Long cards on small phones scroll inside their slide.

@@ -150,6 +150,43 @@ const sound = (() => {
     const g = mGain.gain, t = ctx.currentTime;
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
+  /* The intro: three soft chords while the rocket circles the word, after the opening of "Across the Universe"
+     (D, B minor, F sharp minor). Each chord is strummed upwards, low note first, with a quiet bell an octave
+     and a half above. Everything goes through iGain, so a tap that skips the intro can fade it all out at once.
+     The levels keep a whole chord below one ping (a test measures this). */
+  const CHORDS = [
+    [146.83, 293.66, 369.99, 440.00],      /* D:  D3 under D4 F#4 A4 */
+    [123.47, 246.94, 293.66, 369.99],      /* Bm: B2 under B3 D4 F#4 */
+    [92.50, 277.18, 369.99, 440.00]        /* F#m: F#2 under C#4 F#4 A4 */
+  ];
+  let iGain = null;
+  function pad(f, t, dur, type, vol) {
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.03);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.03 + dur);
+    o.connect(g); g.connect(iGain); o.start(t); o.stop(t + dur + 0.1);
+  }
+  function chords() {
+    const t0 = ctx.currentTime + 0.03;
+    iGain = ctx.createGain(); iGain.gain.value = 1; iGain.connect(bus);
+    if (verbIn) { const w = ctx.createGain(); w.gain.value = 0.3; iGain.connect(w); w.connect(verbIn); }
+    CHORDS.forEach((c, i) => {
+      const t = t0 + i * 0.5, dur = i === 2 ? 1.5 : 1.05;
+      pad(c[0], t, dur, 'sine', 0.16);                                      /* the bass note */
+      for (let n = 1; n < 4; n++) pad(c[n], t + n * 0.025, dur, 'triangle', 0.07);
+      pad(c[3] * 3, t + 0.1, dur * 0.6, 'sine', 0.02);                      /* the bell, on the top note */
+    });
+  }
+  function stopChords() {
+    if (!iGain) return;
+    const g = iGain, t = ctx.currentTime;
+    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t); g.gain.linearRampToValueAtTime(0, t + 0.1);
+    setTimeout(() => g.disconnect(), 300);
+    iGain = null;
+  }
+  let introOn = false;
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
@@ -177,6 +214,20 @@ const sound = (() => {
     /* The maths keypad: a click for each key, and a softer one as the cursor moves along the strip. */
     click: safe(() => click(1.6)),
     step: safe(() => click(0.6)),
+    /* The intro chords. Browsers hold sound back until the first tap on a page, and most phones do every time.
+       Then the intro is silent: the chords only start if the sound is allowed straight away, so they never turn up
+       late, in the middle of something else. */
+    intro: safe(() => {
+      if (navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed') return;
+      const a = ac(); if (!a) return;
+      introOn = true;
+      const asked = Date.now();
+      if (a.state === 'running') { chords(); return; }
+      const p = a.resume();
+      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') chords(); }, () => {});
+    }),
+    /* At the end of the intro the last chord rings on under Home. A tap that skips it fades the chords out (cut). */
+    introStop: safe(cut => { introOn = false; if (cut) stopChords(); }),
     /* Phones only let sound start from inside a tap. Calling this in the tap gets the sound ready for what follows. */
     wake: safe(() => { ac(); })
   };
