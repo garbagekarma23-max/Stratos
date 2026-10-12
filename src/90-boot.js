@@ -57,6 +57,7 @@ function start(data) {
   resize();
   const t = data && data.v === 1 && (data.tab === 'search' || data.tab === 'you') ? data.tab : 'home';
   go(t);
+  playIntro();
 }
 /* When a new version of this page is published, the open tab carries over. */
 const hot = window.claude && window.claude.hot;

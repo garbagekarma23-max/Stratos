@@ -585,3 +585,12 @@ svg{display:block;flex:none}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* ---------- the intro ----------
+   It covers the stage while the app opens, then fades to show Home underneath. A tap anywhere on it skips it. */
+#intro{position:absolute;inset:0;z-index:20;background:var(--paper);transition:opacity var(--fade,.15s) linear}
+#intro.out{opacity:0}
+#intro canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#introWord{position:absolute;left:50%;top:46%;margin:0;font-size:44px;line-height:1;white-space:nowrap;transform:translate(-50%,-50%)}
+/* With reduced motion everything else stops moving, but the intro still fades into Home, gently. */
+@media (prefers-reduced-motion:reduce){#intro{transition-duration:var(--fade,.15s)!important}}

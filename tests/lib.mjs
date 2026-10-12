@@ -18,11 +18,16 @@ for (const ch of TOPIC.chapters) for (const p of ch.points) for (const k of ['a'
   KEYED.set(p[k].q, {right: p[k].opts[0], id: p.id + k, p: p, k: k});
 }
 export async function open(o = {}) {
-  const b = await chromium.launch(EXE ? {executablePath: EXE} : {});
+  // autoplay: let sound start with no tap, as a browser does once a site is trusted. Without it, sound waits for a tap.
+  const b = await chromium.launch(Object.assign(EXE ? {executablePath: EXE} : {}, o.autoplay ? {args: ['--autoplay-policy=no-user-gesture-required']} : {}));
   const ctx = await b.newContext({viewport: {width: o.w || 390, height: o.h || 844}, deviceScaleFactor: o.dpr || 2, hasTouch: (o.w || 390) < 500, colorScheme: o.scheme || 'light', reducedMotion: o.motion ? 'no-preference' : 'reduce'});
+  // The intro plays each time the page opens. Tests skip it unless they ask for it with intro: true.
+  if (!o.intro) await ctx.addInitScript(() => { window.STRATOS_INTRO = false; });
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
-  if (o.init) await ctx.addInitScript(o.init);
+  if (o.init) for (const f of [].concat(o.init)) await ctx.addInitScript(f);   // one script, or a list of them
   if (o.clock) await ctx.clock.install();
+  // paused: the page's clock stands still from the start, and the test moves it on with p.clock.runFor(ms).
+  if (o.paused) { const t = Date.parse('2026-10-12T09:00:00Z'); await ctx.clock.install({time: t}); await ctx.clock.pauseAt(t + 1000); }
   if (o.route) await o.route(ctx);           // lets a test hold back or change a file the page loads
   const p = await ctx.newPage();
   const errs = [];
@@ -30,8 +35,8 @@ export async function open(o = {}) {
   // STACK=1 node <test>.mjs also prints where in v2.html a script error happened.
   p.on('pageerror', e => errs.push('PAGEERROR ' + e.message + (process.env.STACK ? '\n' + e.stack : '')));
   if (!server) server = await serve();
-  await p.goto(server.url + 'v2.html' + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
-  await p.waitForTimeout(300);
+  await p.goto(server.url + (o.file || 'v2.html') + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
+  if (!o.paused) await p.waitForTimeout(300);
   return {b, ctx, p, errs};
 }
 export const shot = (p, name) => p.screenshot({path: SHOTS + name + '.png'});

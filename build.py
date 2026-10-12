@@ -10,6 +10,7 @@ How the pieces fit:
   src/content.js       the study content: chapters, points, cards and questions
   src/maths-content.js the maths content: chapters, points, worked examples and question templates
   src/10-core.js ...   the script, in the order listed in JS below
+  src/intro-pick.js    only in intro-sounds.html: buttons that replay the intro with each of its three sounds
   src/recordings.json  the three sound recordings, stored as text
   lab/...              the Maths Lab's keypad, working sheet and line checker. They are read from lab/ so there is
                        one copy, shared with maths-lab.html. MathLive itself is not copied in: v2.html loads it from
@@ -22,18 +23,20 @@ SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
-      '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '90-boot.js']
+      '10-core.js', '15-maths-make.js', '18-chords.js', '20-sound.js', '30-shell.js', '34-intro-path.js', '35-intro.js',
+      '40-home.js', '50-feed.js', '55-maths.js', '60-practice.js', '62-maths-practice.js', '70-social.js', '90-boot.js']
+# intro-sounds.html is v2 with one more file: three buttons that replay the intro with each of its sounds.
+PICK = ['intro-pick.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/."""
     path = LAB + name[4:] if name.startswith('lab/') else SRC + name
     return open(path, encoding='utf8').read().rstrip('\n')
 
-def parts():
-    """Return the title, the typeface links, and everything that goes in the body."""
+def parts(extra=()):
+    """Return the title, the typeface links, and everything that goes in the body. extra is more script files."""
     rec = json.load(open(SRC + 'recordings.json'))
-    script = '\n\n'.join(read(n) for n in JS)
+    script = '\n\n'.join(read(n) for n in JS + list(extra))
     assert script.count(MARK) == 1, 'the marker for the recordings is missing from 20-sound.js'
     script = script.replace(MARK, '/*REC*/' + json.dumps(rec, separators=(',', ':')) + '/*REC-END*/')
     head = read('head.html')
@@ -43,13 +46,14 @@ def parts():
             '\n\n<script>\n(() => {\n\'use strict\';\n\n' + script + '\n})();\n</script>\n')
     return m.group(1), head[m.end():], body
 
-def standalone():
-    title, links, body = parts()
+def standalone(extra=(), title=None, head=''):
+    t, links, body = parts(extra)
+    title = title or t
     return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
             '<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">\n'
             '<meta name="theme-color" content="#15161a" media="(prefers-color-scheme: dark)">\n'
-            '<title>' + title + '</title>\n' + links + '\n'
+            '<title>' + title + '</title>\n' + head + links + '\n'
             '<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}[hidden]{display:none!important}</style>\n'
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
@@ -57,3 +61,6 @@ if __name__ == '__main__':
     page = standalone()
     open(HERE + 'v2.html', 'w', encoding='utf8').write(page)
     print('wrote v2.html,', round(len(page) / 1024), 'KB')
+    pick = standalone(PICK, 'Stratos: pick the intro sound', '<meta name="robots" content="noindex">\n')
+    open(HERE + 'intro-sounds.html', 'w', encoding='utf8').write(pick)
+    print('wrote intro-sounds.html,', round(len(pick) / 1024), 'KB')

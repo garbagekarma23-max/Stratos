@@ -49,7 +49,7 @@ const sound = (() => {
           verbIn = vin;
         } catch (e) {}
       }
-      if (ctx.state === 'suspended') ctx.resume();
+      if (ctx.state === 'suspended') { const r = ctx.resume(); if (r && r.catch) r.catch(() => {}); }
       return ctx;
     } catch (e) { return null; }
   }
@@ -150,6 +150,15 @@ const sound = (() => {
     const g = mGain.gain, t = ctx.currentTime;
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
+  /* The intro chords (18-chords.js) play into their own volume, so a tap can fade them out. */
+  let introOut = null;
+  function stopIntro(secs) {
+    if (!introOut) return;
+    const g = introOut, t = ctx.currentTime;
+    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t); g.gain.linearRampToValueAtTime(0, t + secs);
+    setTimeout(() => g.disconnect(), secs * 1000 + 100);
+    introOut = null;
+  }
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
@@ -177,6 +186,23 @@ const sound = (() => {
     /* The maths keypad: a click for each key, and a softer one as the cursor moves along the strip. */
     click: safe(() => click(1.6)),
     step: safe(() => click(0.6)),
+    /* The intro chords. They play only if the browser already lets sound play: the intro never waits or asks for a tap.
+       Firefox can say so before any sound is made. Elsewhere the sound is set up, and played only if it is running.
+       wait is only for a tap on intro-sounds.html: the tap lets sound start, and the chords wait the moment it takes. */
+    intro: safe((kind, wait) => {
+      if (saved.sound === false) return;
+      if (!wait && navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed' && !ctx) return;
+      const a = ac(); if (!a) return;
+      const go = () => {
+        stopIntro(0.02);
+        introOut = a.createGain(); introOut.connect(bus);
+        playChords(a, introOut, a.currentTime + 0.02, kind || INTRO_SOUND);
+      };
+      if (a.state === 'running') go();
+      else if (wait) a.resume().then(() => { try { go(); } catch (e) {} }, () => {});
+    }),
+    /* A tap on the intro fades the chords out. */
+    introFade: safe(() => stopIntro(0.15)),
     /* Phones only let sound start from inside a tap. Calling this in the tap gets the sound ready for what follows. */
     wake: safe(() => { ac(); })
   };
