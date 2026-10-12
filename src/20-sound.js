@@ -151,8 +151,9 @@ const sound = (() => {
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
   /* The intro: three soft chords while the rocket circles the word: D, B minor, F sharp minor. Each chord is
-     strummed upwards, low note first, with a quiet bell an octave and a half above. Everything goes through iGain, so a tap that skips the intro can fade it all out at once.
-     The levels keep a whole chord below one ping (a test measures this). */
+     strummed upwards, low note first, with a quiet bell an octave and a half above. Everything goes through
+     iGain, so a tap that skips the intro can fade it all out at once. The levels keep a whole chord below one
+     ping (a test measures this). */
   const CHORDS = [
     [146.83, 293.66, 369.99, 440.00],      /* D:  D3 under D4 F#4 A4 */
     [123.47, 246.94, 293.66, 369.99],      /* Bm: B2 under B3 D4 F#4 */

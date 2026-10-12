@@ -96,16 +96,21 @@ const look = p => p.evaluate(() => {
 
 // ---------- 3. a tap, a click or a key skips it, and does not press anything underneath ----------
 for (const how of ['tap', 'click', 'key']) {
-  const {b, p, errs} = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, w: how === 'click' ? 1000 : 390, init: started()});
+  // The page notes the moment of the press and the moment the intro is removed, so the time is the intro's own,
+  // not the time the test takes to send the press.
+  const {b, p, errs} = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, w: how === 'click' ? 1000 : 390, init: started(() => {
+    const down = () => { if (window.__down === undefined) window.__down = performance.now(); };
+    addEventListener('pointerdown', down, true); addEventListener('keydown', down, true);
+    document.addEventListener('DOMContentLoaded', () => new MutationObserver(() => { if (window.__gone === undefined && !document.querySelector('#intro')) window.__gone = performance.now(); }).observe(document.body, {childList: true}));
+  })});
   const btn = await p.locator('.hero .primary').boundingBox();
   const x = btn.x + btn.width / 2, y = btn.y + btn.height / 2;
-  const at = await p.evaluate(() => performance.now());
   check(await since(p) < 1000, 'the ' + how + ' comes while the intro plays', R);
   if (how === 'tap') await p.touchscreen.tap(x, y);
   else if (how === 'click') await p.mouse.click(x, y);
   else await p.keyboard.press('Enter');
   await p.waitForFunction(() => !document.querySelector('#intro'), null, {polling: 10, timeout: 2000}).catch(() => {});
-  const took = await p.evaluate(at => performance.now() - at, at);
+  const took = await p.evaluate(() => window.__gone - window.__down);
   check(await gone(p) && took < 300, 'a ' + how + ' skips the intro (gone in ' + Math.round(took) + ' ms)', R);
   await wait(200);
   check(await p.locator('#v-home.on').count() === 1 && await p.locator('#sheet').isHidden() && await p.locator('#pages .page').count() === 0,
