@@ -28,6 +28,7 @@ const SEED = {subject: 'maths', m: {cur: 'm1', h: {m1p1: [h('a')], m1p2: [h('b')
 async function page(ph, file, o = {}) {
   const ctx = await b.newContext({viewport: {width: ph.w, height: ph.h}, deviceScaleFactor: 2, hasTouch: true, colorScheme: o.scheme || 'light', reducedMotion: 'reduce'});
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
+  await ctx.addInitScript(() => { window.stratosIntro = false; });   // skip the intro (tests/intro.mjs tests it)
   const p = await ctx.newPage();
   p.on('pageerror', e => errs.push(ph.name + ' ' + file + ': ' + e.message));
   const cdp = await ctx.newCDPSession(p);

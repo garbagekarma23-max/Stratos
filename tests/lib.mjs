@@ -21,6 +21,8 @@ export async function open(o = {}) {
   const b = await chromium.launch(EXE ? {executablePath: EXE} : {});
   const ctx = await b.newContext({viewport: {width: o.w || 390, height: o.h || 844}, deviceScaleFactor: o.dpr || 2, hasTouch: (o.w || 390) < 500, colorScheme: o.scheme || 'light', reducedMotion: o.motion ? 'no-preference' : 'reduce'});
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
+  // The intro plays each time v2.html opens. Tests skip it unless they pass intro: true (tests/intro.mjs does).
+  if (!o.intro) await ctx.addInitScript(() => { window.stratosIntro = false; });
   if (o.init) await ctx.addInitScript(o.init);
   if (o.clock) await ctx.clock.install();
   if (o.route) await o.route(ctx);           // lets a test hold back or change a file the page loads
