@@ -3317,88 +3317,79 @@ const sound = (() => {
     const g = mGain.gain, t = ctx.currentTime;
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
-  /* The intro: three notes while the rocket circles the word, at 0, 0.5 and 1 seconds. The frequencies are exact,
-     not the nearest standard notes: the second is four semitones below the first, and the third is an octave
-     above the second. Each note swells in over 120 ms, keeps sounding 0.2 s after the next one starts, and the
-     last one rings out until 2.8 s. Only plain sine and triangle waves are used, so every overtone is a whole
-     multiple of the note and the pitch stays exactly where it is set.
-     Everything goes through a gentle low-pass filter, so nothing is sharp, and a share goes through the intro's
-     own soft, wide reverb. Both then go through iGain, so a tap that skips the intro can fade it all out at once.
-     The levels keep the intro below one ping (a test measures this).
-     The three voices:
-       glass  a clear sine tone with a quiet shimmer an octave up (double the frequency)
-       haze   the same, inside a soft, warm pad that holds on to the end, with more reverb
-       halo   the glass tone over a very soft low note an octave below the second note */
-  const INTRO = {notes: [355.1, 281.8, 563.7], at: [0, 0.5, 1], overlap: 0.2, end: 2.8, voice: 'glass'};
-  const LOW = INTRO.notes[1] / 2;                       /* 140.9 Hz, for halo */
-  /* Each voice's overall level, measured so its loudest moment sits a little under one ping. */
-  const LEVEL = {glass: 0.78, haze: 0.63, halo: 0.75};
-  let iGain = null, iVerb = null;
-  /* The intro's reverb: the echo of a big open space, made like the app's, from noise that fades over 3 seconds
-     and gets duller as it fades. The app's reverb uses new random noise each time, which gives a pure note more or
-     less echo at random. This one uses the same numbers every time (seed 361, picked from 400 because it gives the
-     intro's four pitches nearly the same echo in both ears), so the intro sounds the same on every opening.
-     Left and right use different numbers, which makes it wide. */
-  function introVerb() {
-    if (iVerb) return iVerb;
-    const sr = ctx.sampleRate, len = Math.floor(sr * 3), ir = ctx.createBuffer(2, len, sr);
+  /* The intro: three short notes while the rocket circles the word, in the same family as the ping. The
+     frequencies are exact, not the nearest standard notes: the second is four semitones below the first, and the
+     third is an octave above the second. Each note is a soft triangle tone, like the ping, with a quiet shimmer an
+     octave up (double the frequency). It pops in over 8 ms and fades over 0.25 s, ending before the next note
+     starts. The last note fades over 0.5 s, with a faint sparkle two octaves up, so it ends lightly instead of
+     cutting off. Only triangle and sine waves, so every overtone is a whole multiple of the note and the pitch
+     stays exact. A gentle low-pass filter keeps the edges soft, and a very short, light room (about 0.3 s) is the
+     only reverb. Everything is finished by about 1.6 s.
+     Everything goes through iGain, so a tap that skips the intro can fade it all out at once. The levels keep it
+     below one ping (a test measures this).
+     The three timings being compared:
+       steady  notes at 0, 0.5 and 1 s, in step with the rocket's laps
+       quick   notes at 0, 0.3 and 0.6 s
+       bouncy  notes at 0, 0.2 and 0.5 s, the last one a little louder */
+  const INTRO = {
+    notes: [355.1, 281.8, 563.7],
+    timings: {steady: {at: [0, 0.5, 1]}, quick: {at: [0, 0.3, 0.6]}, bouncy: {at: [0, 0.2, 0.5], last: 1.25}},
+    pick: 'steady', fade: 0.25, lastFade: 0.5
+  };
+  /* Each timing's overall level, measured so its loudest moment sits a little under one ping. */
+  const LEVEL = {steady: 0.75, quick: 0.75, bouncy: 0.6};
+  let iGain = null, iRoom = null;
+  /* The room: a very short echo, made from noise that dies away in about 0.3 s. It uses the same numbers every
+     time, so the intro sounds the same on every opening. Seed 268 was picked from 600 because it gives the three
+     notes the same echo, within 1 dB, in both ears. Left and right use different numbers. */
+  const ROOM_SEED = 268;
+  function introRoom() {
+    if (iRoom) return iRoom;
+    const sr = ctx.sampleRate, len = Math.floor(sr * 0.35), ir = ctx.createBuffer(2, len, sr);
     for (let c = 0; c < 2; c++) {
-      let n = (361 + c * 7919) >>> 0;
+      let n = (ROOM_SEED + c * 7919) >>> 0;
       const rnd = () => { n = (Math.imul(n, 1664525) + 1013904223) >>> 0; return n / 4294967296 * 2 - 1; };
       const d = ir.getChannelData(c); let y = 0;
-      for (let i = 0; i < len; i++) { const t = i / sr, k = 0.6 * Math.exp(-t * 2) + 0.05; y += k * (rnd() - y); d[i] = y * Math.exp(-t * 2.2); }
+      for (let i = 0; i < len; i++) { const t = i / sr; y += 0.7 * (rnd() - y); d[i] = y * Math.exp(-t * 23); }
     }
-    iVerb = ir;
+    iRoom = ir;
     return ir;
   }
-  /* A volume that swells in over rise seconds, holds, then fades away between off and gone. With ring, it fades
-     slowly from the end of the swell instead, like a note left to ring. Each step is a smooth half cosine,
-     so there is no hard edge anywhere. */
-  function curve(peak, len, rise, off, ring) {
-    const n = Math.max(32, Math.round(len * 200)), c = new Float32Array(n), ease = x => 0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, x)));
+  /* A volume that pops up over 8 ms on a smooth curve, then dies away like a plucked string, reaching silence at
+     len seconds. */
+  function pop(peak, len) {
+    const n = Math.max(32, Math.round(len * 400)), c = new Float32Array(n), K = 5, rise = 0.008;
     for (let i = 0; i < n; i++) {
       const t = len * i / (n - 1);
-      let v = peak * ease(t / rise);
-      if (ring) { if (t > rise) { const u = (t - rise) / (len - rise); v = peak * (Math.exp(-3 * u) - Math.exp(-3)) / (1 - Math.exp(-3)); } }
-      else if (t > off) v *= 1 - ease((t - off) / (len - off));
-      c[i] = v;
+      c[i] = t < rise ? peak * (0.5 - 0.5 * Math.cos(Math.PI * t / rise))
+        : peak * (Math.exp(-K * (t - rise) / (len - rise)) - Math.exp(-K)) / (1 - Math.exp(-K));
     }
     c[n - 1] = 0;
     return c;
   }
-  /* One wave, from time t for len seconds, with the volume curve above, into dest. */
-  function voice(f, type, t, len, shape, dest) {
+  /* One wave at time t for len seconds, with the pop above, into dest. */
+  function voice(f, type, t, len, peak, dest) {
     const o = ctx.createOscillator(), g = ctx.createGain();
     o.type = type; o.frequency.setValueAtTime(f, t);
     g.gain.value = 0;                                  /* silent until the curve starts */
-    g.gain.setValueCurveAtTime(shape, t, len);
+    g.gain.setValueCurveAtTime(pop(peak, len), t, len);
     o.connect(g); g.connect(dest); o.start(t); o.stop(t + len + 0.02);
   }
   function introNotes(kind) {
-    const t0 = ctx.currentTime + 0.03, haze = kind === 'haze';
-    iGain = ctx.createGain(); iGain.gain.value = LEVEL[kind] || LEVEL.glass; iGain.connect(bus);
-    const soft = ctx.createBiquadFilter(); soft.type = 'lowpass'; soft.frequency.value = 2800; soft.Q.value = 0.5; soft.connect(iGain);
-    /* The reverb share: duller still, then the echo, then into iGain with the rest. Haze has more of it. */
-    const dull = ctx.createBiquadFilter(), room = ctx.createConvolver(), wet = ctx.createGain();
-    dull.type = 'lowpass'; dull.frequency.value = 1800; dull.Q.value = 0.5;
-    room.buffer = introVerb(); wet.gain.value = haze ? 0.9 : 0.5;
-    soft.connect(dull); dull.connect(room); room.connect(wet); wet.connect(iGain);
-    const lead = haze ? 0.12 : 0.16;
+    const T = INTRO.timings[kind] || INTRO.timings[INTRO.pick], t0 = ctx.currentTime + 0.03;
+    iGain = ctx.createGain(); iGain.gain.value = LEVEL[kind] || 1; iGain.connect(bus);
+    const soft = ctx.createBiquadFilter(); soft.type = 'lowpass'; soft.frequency.value = 3200; soft.Q.value = 0.5; soft.connect(iGain);
+    const room = ctx.createConvolver(), wet = ctx.createGain();
+    room.buffer = introRoom(); wet.gain.value = 0.25;
+    soft.connect(room); room.connect(wet); wet.connect(iGain);
     INTRO.notes.forEach((f, i) => {
-      const t = t0 + INTRO.at[i], last = i === INTRO.notes.length - 1;
-      const off = last ? 0 : INTRO.at[i + 1] - INTRO.at[i] - 0.05, len = last ? INTRO.end - INTRO.at[i] : INTRO.at[i + 1] - INTRO.at[i] + INTRO.overlap;
-      voice(f, 'sine', t, len, curve(lead, len, 0.12, off, last), soft);                       /* the note */
-      voice(f * 2, 'sine', t, len, curve(lead * 0.16, len, 0.3, off, last), soft);             /* the shimmer, an octave up */
-      if (haze) {
-        /* The pad: a soft triangle on the same note, warmed by its own low-pass, swelling in slowly and holding
-           on to the end, so the notes blur into each other. */
-        const warm = ctx.createBiquadFilter(), plen = INTRO.end - INTRO.at[i];
-        warm.type = 'lowpass'; warm.frequency.value = 700; warm.Q.value = 0.4; warm.connect(soft);
-        voice(f, 'triangle', t, plen, curve(0.07, plen, 0.4, 0, true), warm);
-      }
+      const last = i === INTRO.notes.length - 1, t = t0 + T.at[i], v = 0.3 * (last && T.last ? T.last : 1);
+      /* A note fades over 0.25 s, or ends just before the next one if that comes sooner, so they never overlap. */
+      const len = last ? INTRO.lastFade : Math.min(INTRO.fade, T.at[i + 1] - T.at[i] - 0.01);
+      voice(f, 'triangle', t, len, v, soft);                         /* the note */
+      voice(f * 2, 'sine', t, len * 0.8, v * 0.16, soft);             /* the shimmer, an octave up */
+      if (last) voice(f * 4, 'sine', t + 0.03, len * 0.7, v * 0.06, soft);   /* the sparkle, two octaves up */
     });
-    /* halo: the low note swells in from the start and fades with the last note. */
-    if (kind === 'halo') voice(LOW, 'sine', t0, INTRO.end, curve(0.09, INTRO.end, 0.6, 0, true), soft);
   }
   function stopIntro() {
     if (!iGain) return;
@@ -3437,11 +3428,11 @@ const sound = (() => {
     step: safe(() => click(0.6)),
     /* The intro notes. Browsers hold sound back until the first tap on a page, and most phones do every time.
        Then the intro is silent: the notes only start if the sound is allowed straight away, so they never turn up
-       late, in the middle of something else. kind picks the voice (glass, haze or halo). */
+       late, in the middle of something else. kind picks the timing (steady, quick or bouncy). */
     intro: safe(kind => {
       if (navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed') return;
       const a = ac(); if (!a) return;
-      kind = kind || INTRO.voice;
+      kind = kind || INTRO.pick;
       introOn = true;
       const asked = Date.now();
       if (a.state === 'running') { introNotes(kind); return; }
