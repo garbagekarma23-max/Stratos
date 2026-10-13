@@ -1,6 +1,6 @@
 // The intro: the word Stratos with the rocket flying round it, each time v2.html is opened.
-// It checks the intro plays on opening, a tap or a key skips it, reduced motion keeps it still, it never blocks the
-// app for more than 2 seconds, switching tabs never plays it, and its notes are no louder than the ping.
+// It checks the intro plays on opening, a tap, click or key skips it, reduced motion keeps it still, it never blocks
+// the app for more than 2 seconds, switching tabs never plays it, and it makes no sound.
 // Every other test skips the intro (open() in lib.mjs). This one passes intro: true.
 // node intro.mjs shots  also saves frames: intro-light.png and intro-dark.png, five moments side by side.
 import { open, check, tab, pick, SHOTS } from './lib.mjs';
@@ -15,24 +15,14 @@ const reaches = p => p.evaluate(() => { const e = document.elementFromPoint(inne
 // it notes the moment the page's script has run, which on a busy machine can come a little later.
 const START = "(() => { const raf = window.requestAnimationFrame.bind(window); window.requestAnimationFrame = cb => { if (window.__t0 === undefined) window.__t0 = performance.now(); return raf(cb); }; document.addEventListener('DOMContentLoaded', () => { if (window.__t0 === undefined) window.__t0 = performance.now(); }); })();";
 const started = fn => START + (fn ? '\n(' + fn + ')();' : '');
-// The page's AudioContext swapped for an offline one that keeps real time, so the app's own sound chain is recorded
-// instead of played. With held true it acts like a browser that holds sound back until the first tap or key: it
-// stays suspended, and resume() only works while the page has just been tapped (navigator.userActivation), as on a
-// phone. Every sine wave the page starts is noted in __osc, with the time it starts, in seconds on the recording.
-const RECORDER = held => `(() => {
-  const SR = 44100, Real = window.OfflineAudioContext, HELD = ${held};
-  window.__rec = []; window.__osc = [];
-  class Rec extends Real {
-    constructor() { super(2, SR * 8, SR); this.t0 = performance.now(); this.on = !HELD; window.__rec.push(this); }
-    get currentTime() { return (performance.now() - this.t0) / 1000; }
-    get state() { return this.on ? 'running' : 'suspended'; }
-    resume() {
-      if (!this.on && navigator.userActivation && navigator.userActivation.isActive) this.on = true;
-      return this.on ? Promise.resolve() : new Promise(() => {});
-    }
-    createOscillator() { const o = super.createOscillator(), go = o.start.bind(o); o.start = t => { window.__osc.push(t); go(t); }; return o; }
-  }
-  window.AudioContext = Rec; window.webkitAudioContext = Rec;
+// Counts every sound context the page makes and every tone it starts, so a test can check the intro makes no sound.
+const COUNT = `(() => {
+  window.__ctx = 0; window.__tones = 0;
+  const C = window.AudioContext; if (!C) return;
+  window.AudioContext = window.webkitAudioContext = class extends C {
+    constructor(...a) { super(...a); window.__ctx++; }
+    createOscillator() { window.__tones++; return super.createOscillator(); }
+  };
 })();`;
 const since = p => p.evaluate(() => performance.now() - window.__t0);
 const until = (p, ms) => p.waitForFunction(ms => performance.now() - window.__t0 >= ms, ms, {polling: 20, timeout: 10000});
@@ -115,59 +105,33 @@ const look = p => p.evaluate(() => {
   await b.close();
 }
 
-// ---------- 3. a tap, a click or a key during the intro ----------
-// With sound allowed from the start, the dings are already playing, so the press skips the intro at once.
-// With sound held back (as on every phone), the press starts the dings, from the first note, and the intro fades
-// into Home over 0.6 s while they play. With sound off in You, the press just skips.
-// Either way the press must not also press the button underneath. The page notes the moment of the press and the
-// moment the intro is removed, so the times are the intro's own, not the time the test takes to send the press.
-const NOTE = (ws, gap) => Math.abs(ws[1] - ws[0] - gap) < 0.02;
-for (const mode of ['allowed', 'held back', 'off']) for (const how of (mode === 'off' ? ['tap'] : ['tap', 'click', 'key'])) {
-  const name = how + ' with sound ' + mode;
+// ---------- 3. a tap, a click or a key skips it, makes no sound, and does not press anything underneath ----------
+// The page notes the moment of the press and the moment the intro is removed, so the time is the intro's own, not
+// the time the test takes to send the press.
+for (const how of ['tap', 'click', 'key']) {
   const {b, p, errs} = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, w: how === 'click' ? 1000 : 390,
-    seed: mode === 'off' ? {sound: false} : undefined,
-    init: START + '\n' + RECORDER(mode !== 'allowed') + '\n(' + (() => {
+    init: START + '\n' + COUNT + '\n(' + (() => {
       const down = () => { if (window.__down === undefined) window.__down = performance.now(); };
       addEventListener('pointerdown', down, true); addEventListener('keydown', down, true);
       document.addEventListener('DOMContentLoaded', () => new MutationObserver(() => { if (window.__gone === undefined && !document.querySelector('#intro')) window.__gone = performance.now(); }).observe(document.body, {childList: true}));
     }) + ')();'});
   const btn = await p.locator('.hero .primary').boundingBox();
   const x = btn.x + btn.width / 2, y = btn.y + btn.height / 2;
-  check(await since(p) < 1000, name + ': the press comes while the intro plays', R);
-  const before = await p.evaluate(() => window.__osc.length);
+  check(await since(p) < 1000, 'the ' + how + ' comes while the intro plays', R);
   if (how === 'tap') await p.touchscreen.tap(x, y);
   else if (how === 'click') await p.mouse.click(x, y);
   else await p.keyboard.press('Enter');
-  if (mode === 'held back') {
-    await wait(200);
-    check(await p.locator('#intro').count() === 1, name + ': the intro is still fading 0.2 s after the press', R);
-  }
   await p.waitForFunction(() => !document.querySelector('#intro'), null, {polling: 10, timeout: 2000}).catch(() => {});
   const took = await p.evaluate(() => window.__gone - window.__down);
-  if (mode === 'held back') {
-    check(await gone(p) && took > 450 && took < 900, name + ': the intro fades into Home over about 0.6 s (gone in ' + Math.round(took) + ' ms)', R);
-  } else {
-    check(await gone(p) && took < 300, name + ': the press skips the intro (gone in ' + Math.round(took) + ' ms)', R);
-  }
-  const osc = await p.evaluate(() => ({list: window.__osc, tap: window.__rec[0] ? (window.__down - window.__rec[0].t0) / 1000 : 0}));
-  if (mode === 'allowed') {
-    check(before === 12 && osc.list.length === 12, name + ': the dings were already playing, and the press does not start them again (' + before + ', then ' + osc.list.length + ' waves)', R);
-  } else if (mode === 'off') {
-    check(osc.list.length === 0, name + ': with sound off, nothing plays', R);
-  } else {
-    const starts = [...new Set(osc.list.map(t => Math.round(t * 1000) / 1000))].sort((m, n) => m - n);
-    check(before === 0, name + ': before the press, the browser held the dings back', R);
-    check(osc.list.length === 12 && starts.length === 3 && starts[0] >= osc.tap && starts[0] - osc.tap < 0.15,
-      name + ': the press starts all three dings, from the first, once (' + osc.list.length + ' waves, first ' + Math.round((starts[0] - osc.tap) * 1000) + ' ms after the press)', R);
-    check(starts.length === 3 && NOTE(starts, 0.3) && NOTE(starts.slice(1), 0.3), name + ': the dings come 0.3 s apart, as on opening', R);
-  }
+  check(await gone(p) && took < 300, 'a ' + how + ' skips the intro (gone in ' + Math.round(took) + ' ms)', R);
+  check(await p.evaluate(() => window.__ctx === 0 && window.__tones === 0), 'the ' + how + ' that skipped it made no sound', R);
   await wait(200);
   check(await p.locator('#v-home.on').count() === 1 && await p.locator('#sheet').isHidden() && await p.locator('#pages .page').count() === 0,
-    name + ': the press did not press the button underneath', R);
+    'the ' + how + ' that skipped it did not press the button underneath', R);
   if (how === 'tap') await p.touchscreen.tap(x, y); else await p.mouse.click(x, y);
   await wait(150);
-  check(await p.locator('#v-learn.on').count() === 1, name + ': afterwards, Home works', R);
-  check(errs.length === 0, name + ': no script errors: ' + errs.join(' | '), R);
+  check(await p.locator('#v-learn.on').count() === 1, 'after a ' + how + ' skip, Home works', R);
+  check(errs.length === 0, 'no script errors: ' + errs.join(' | '), R);
   await b.close();
 }
 
@@ -227,70 +191,14 @@ for (const name in BROKEN) {
   await b.close();
 }
 
-// ---------- 7. the intro notes are no louder than the ping ----------
-// The page's AudioContext is swapped for an offline one that keeps real time, so the app's own sound chain
-// (its volume, compressor and ceiling) is recorded instead of played.
-const RECORD = () => {
-  const SR = 44100, Real = window.OfflineAudioContext;
-  window.__rec = [];
-  class Rec extends Real {
-    constructor() { super(2, SR * 6, SR); this.t0 = performance.now(); window.__rec.push(this); }
-    get currentTime() { return (performance.now() - this.t0) / 1000; }
-    get state() { return 'running'; }
-    resume() { return Promise.resolve(); }
-  }
-  window.AudioContext = Rec; window.webkitAudioContext = Rec;
-};
-// The peak, and the loudest 50 ms, of what was recorded, the level in three windows (one per note), and what is
-// left after 1.3 seconds.
-const measure = p => p.evaluate(async () => {
-  if (!window.__rec.length) return null;
-  const buf = await window.__rec[0].startRendering(), sr = buf.sampleRate, ch = [buf.getChannelData(0), buf.getChannelData(1)];
-  let peak = 0;
-  for (const d of ch) for (let i = 0; i < d.length; i++) peak = Math.max(peak, Math.abs(d[i]));
-  const rms = (a, z) => { let s = 0, n = 0; for (const d of ch) for (let i = Math.floor(a * sr); i < Math.min(d.length, z * sr); i++) { s += d[i] * d[i]; n++; } return Math.sqrt(s / Math.max(1, n)); };
-  let loud = 0;
-  for (let t = 0; t < buf.duration - 0.05; t += 0.01) loud = Math.max(loud, rms(t, t + 0.05));
-  return {peak: peak, loud: loud, parts: [rms(0, 0.28), rms(0.3, 0.58), rms(0.6, 0.9)], after: rms(1.3, 1.8)};
-});
-{
-  const one = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: started(RECORD)});
-  await until(one.p, 2600);
-  const notes = await measure(one.p);
-  check(one.errs.length === 0, 'no script errors with the intro notes: ' + one.errs.join(' | '), R);
-  await one.b.close();
-
-  const two = await open({init: RECORD});
-  await two.p.click('.hero .primary'); await wait(150);
-  await two.p.locator('#learnFeed .card .next').last().click(); await wait(80);
-  await pick(two.p, '#learnFeed', true);
-  await wait(800);
-  const ping = await measure(two.p);
-  check(two.errs.length === 0, 'no script errors with the ping: ' + two.errs.join(' | '), R);
-  await two.b.close();
-
-  const f = n => n.toFixed(3);
-  check(!!notes && !!ping, 'the intro notes and the ping were both recorded', R);
-  if (notes && ping) {
-    check(notes.parts.every(v => v > ping.loud * 0.05), 'there are three notes, at 0, 0.3 and 0.6 seconds (' + notes.parts.map(f).join(', ') + ')', R);
-    check(notes.after < notes.loud * 0.01, 'the notes are finished by 1.3 seconds (' + f(notes.after) + ' after, against ' + f(notes.loud) + ' at the loudest)', R);
-    check(notes.peak <= ping.peak, 'the notes peak no higher than the ping (' + f(notes.peak) + ' against ' + f(ping.peak) + ')', R);
-    check(notes.loud <= ping.loud, 'the loudest 50 ms of the notes is no louder than the ping\'s (' + f(notes.loud) + ' against ' + f(ping.loud) + ')', R);
-  }
-
-  // The dings a tap starts, with sound held back, are just as loud as on opening.
-  const tapped = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: START + '\n' + RECORDER(true)});
-  await tapped.p.touchscreen.tap(195, 422);
-  await wait(1800);
-  const tapNotes = await measure(tapped.p);
-  check(!!tapNotes && !!ping && tapNotes.peak <= ping.peak && tapNotes.loud <= ping.loud,
-    'the dings a tap starts are no louder than the ping (peak ' + (tapNotes ? tapNotes.peak.toFixed(3) : '-') + ', loudest 50 ms ' + (tapNotes ? tapNotes.loud.toFixed(3) : '-') + ')', R);
-  await tapped.b.close();
-
-  const off = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: started(RECORD), seed: {sound: false}});
-  await until(off.p, 1000);
-  check(await off.p.evaluate(() => window.__rec.length) === 0, 'with sound off in You, the intro is silent', R);
-  await off.b.close();
+// ---------- 7. the intro makes no sound ----------
+// Played right through with motion and with reduced motion, it makes no sound context and starts no tone.
+for (const motion of [true, false]) {
+  const {b, p, errs} = await open({intro: true, waitUntil: 'domcontentloaded', motion: motion, init: START + '\n' + COUNT});
+  await p.waitForFunction(() => !document.querySelector('#intro'), null, {timeout: 4000}).catch(() => {});
+  check(await gone(p) && await p.evaluate(() => window.__ctx === 0 && window.__tones === 0), (motion ? 'with motion' : 'with reduced motion') + ': the intro plays through and makes no sound', R);
+  check(errs.length === 0, 'no script errors: ' + errs.join(' | '), R);
+  await b.close();
 }
 
 // ---------- screenshots: five moments side by side, light and dark ----------

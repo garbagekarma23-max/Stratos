@@ -150,86 +150,6 @@ const sound = (() => {
     const g = mGain.gain, t = ctx.currentTime;
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
-  /* The intro: three glass dings while the rocket circles the word, at 0, 0.3 and 0.6 seconds. Stratos's own
-     sound, in the same family as the ping. The frequencies are exact, not the nearest standard notes: the second
-     is four semitones below the first, and the third is an octave above the second.
-     Each ding is a few sine waves started together. The main note is the strongest and rings for about 0.35 s, or
-     until just before the next note, and the last one rings for 0.6 s. Above it, quieter overtones at 2 and 3
-     times its frequency, and a very faint one at 2.76 times, which gives the metal "ding". The overtones die away
-     in about 0.1 s, so each note goes "ding" and then softens to the plain note. Each starts in 1.5 ms, a clear
-     "tink". A low-pass filter takes off only the harshest top. The only reverb is a very short, light room (about
-     0.2 s). Everything is finished by about 1.2 s.
-     Everything goes through iGain, so a tap that skips the intro can fade it all out at once. */
-  const INTRO = {
-    notes: [355.1, 281.8, 563.7], at: [0, 0.3, 0.6], ring: 0.35, lastRing: 0.6, rise: 0.0015, top: 7000,
-    /* The overtones, as [times the note, loudness against the note, how long it rings in s]. */
-    parts: [[2, 0.34, 0.12], [3, 0.22, 0.1], [2.76, 0.06, 0.1]],
-    /* The overall level, measured so the loudest moment sits a little under one ping (a test checks this). */
-    level: 0.6
-  };
-  let iGain = null, iRoom = null;
-  /* The room: a very short echo, made from noise that dies away in about 0.2 s. It uses the same numbers every
-     time, so the intro sounds the same on every opening. Seed 268 was picked from 600 because it gives the three
-     notes nearly the same echo in both ears (within 2 dB). Left and right use different numbers. */
-  const ROOM_SEED = 268;
-  function introRoom() {
-    if (iRoom) return iRoom;
-    const sr = ctx.sampleRate, len = Math.floor(sr * 0.25), ir = ctx.createBuffer(2, len, sr);
-    for (let c = 0; c < 2; c++) {
-      let n = (ROOM_SEED + c * 7919) >>> 0;
-      const rnd = () => { n = (Math.imul(n, 1664525) + 1013904223) >>> 0; return n / 4294967296 * 2 - 1; };
-      const d = ir.getChannelData(c); let y = 0;
-      for (let i = 0; i < len; i++) { const t = i / sr; y += 0.7 * (rnd() - y); d[i] = y * Math.exp(-t * 34.5); }
-    }
-    iRoom = ir;
-    return ir;
-  }
-  /* A volume that jumps up over rise seconds on a smooth curve, then dies away like a struck bell, reaching
-     silence at len seconds. */
-  function strike(peak, len, rise) {
-    const n = Math.max(32, Math.round(len * 600)), c = new Float32Array(n), K = 5;
-    for (let i = 0; i < n; i++) {
-      const t = len * i / (n - 1);
-      c[i] = t < rise ? peak * (0.5 - 0.5 * Math.cos(Math.PI * t / rise))
-        : peak * (Math.exp(-K * (t - rise) / (len - rise)) - Math.exp(-K)) / (1 - Math.exp(-K));
-    }
-    c[n - 1] = 0;
-    return c;
-  }
-  /* One sine wave at time t for len seconds, struck as above, into dest. */
-  function partial(f, t, len, peak, rise, dest) {
-    const o = ctx.createOscillator(), g = ctx.createGain();
-    o.type = 'sine'; o.frequency.setValueAtTime(f, t);
-    g.gain.value = 0;                                  /* silent until the curve starts */
-    g.gain.setValueCurveAtTime(strike(peak, len, rise), t, len);
-    o.connect(g); g.connect(dest); o.start(t); o.stop(t + len + 0.02);
-  }
-  function introNotes() {
-    const t0 = ctx.currentTime + 0.03;
-    iGain = ctx.createGain(); iGain.gain.value = INTRO.level; iGain.connect(bus);
-    const top = ctx.createBiquadFilter(); top.type = 'lowpass'; top.frequency.value = INTRO.top; top.Q.value = 0.5; top.connect(iGain);
-    const room = ctx.createConvolver(), wet = ctx.createGain();
-    room.buffer = introRoom(); wet.gain.value = 0.2;
-    top.connect(room); room.connect(wet); wet.connect(iGain);
-    INTRO.notes.forEach((f, i) => {
-      const last = i === INTRO.notes.length - 1, t = t0 + INTRO.at[i], v = 0.3;
-      /* A note rings for 0.35 s, or ends just before the next one if that comes sooner, so they never overlap. */
-      const len = last ? INTRO.lastRing : Math.min(INTRO.ring, INTRO.at[i + 1] - INTRO.at[i] - 0.01);
-      partial(f, t, len, v, INTRO.rise, top);                                                   /* the note */
-      INTRO.parts.forEach(q => partial(f * q[0], t, Math.min(q[2], len), v * q[1], INTRO.rise, top));   /* the overtones */
-    });
-  }
-  function stopIntro() {
-    if (!iGain) return;
-    const g = iGain, t = ctx.currentTime;
-    g.gain.cancelScheduledValues(t); g.gain.setValueAtTime(g.gain.value, t); g.gain.linearRampToValueAtTime(0, t + 0.1);
-    setTimeout(() => g.disconnect(), 300);
-    iGain = null;
-  }
-  /* introOn: the intro is on screen. introStarted: its dings have started for this opening, so they never play
-     twice. */
-  let introOn = false, introStarted = false, introTapped = false;
-  function startIntro() { if (introStarted) return; introStarted = true; introNotes(); }
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
@@ -257,35 +177,6 @@ const sound = (() => {
     /* The maths keypad: a click for each key, and a softer one as the cursor moves along the strip. */
     click: safe(() => click(1.6)),
     step: safe(() => click(0.6)),
-    /* The intro dings. Browsers hold sound back until the first tap on a page, and most phones do every time.
-       If sound is allowed straight away, the dings start with the intro. If not, they wait for introTap. They never
-       start late on their own, in the middle of something else. */
-    intro: safe(() => {
-      if (navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed') return;
-      const a = ac(); if (!a) return;
-      introOn = true;
-      const asked = Date.now();
-      if (a.state === 'running') { startIntro(); return; }
-      const p = a.resume();
-      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') startIntro(); }, () => {});
-    }),
-    /* A tap on the intro. A tap lets the browser play sound, so if the dings have not started yet, they start now,
-       from the first note, and this says true. If they were already playing before the tap, or the sound is
-       switched off in You, it does nothing and says false, and the tap just skips the intro. It can be called
-       again for the same tap (the intro does, on touchend, for iPhones): it then tries the sound once more. */
-    introTap: () => {
-      try {
-        if ((introStarted && !introTapped) || saved.sound === false) return false;
-        introTapped = true;
-        const a = ac(); if (!a) return false;
-        if (a.state === 'running') { startIntro(); return true; }
-        const p = a.resume();
-        if (p && p.then) p.then(() => { if (a.state === 'running') startIntro(); }, () => {});
-        return true;
-      } catch (e) { return false; }
-    },
-    /* At the end of the intro the last note rings on under Home. A skip while the dings play fades them out (cut). */
-    introStop: safe(cut => { introOn = false; if (cut) stopIntro(); }),
     /* Phones only let sound start from inside a tap. Calling this in the tap gets the sound ready for what follows. */
     wake: safe(() => { ac(); })
   };

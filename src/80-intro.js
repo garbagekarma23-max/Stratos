@@ -4,8 +4,7 @@
    the bottom of the ring, in front of the word, and goes 1.25 laps, right side first, speeding up. On the lower half
    it is in front of the word and a little larger; on the upper half it is behind the word, a little smaller and
    faded. Then the ring widens, so the rocket spirals out of the frame without turning. 1.5 seconds in all, then a
-   quick fade into Home. A tap skips it, and starts the dings if the browser held them back. With reduced motion
-   the rocket is parked in front of the word, still. */
+   quick fade into Home. A tap skips it. With reduced motion the rocket is parked in front of the word, still. */
 const intro = (() => {
   const el = $('#intro');
   const TILT = -12 * Math.PI / 180;   /* the ring is tilted 12 degrees, right side up (up is minus on a screen) */
@@ -14,7 +13,7 @@ const intro = (() => {
   const LAPS = 1.25, ORBIT = 1.1, LEAVE = 0.4, END = ORBIT + LEAVE, TRAIL = 0.3;
   const LEN = 30;                     /* the rocket's length in px, flame included */
   const SLOW = 0.4;                   /* how fast it starts, against its average speed round the ring */
-  const FADE = 0.15, SKIP = 0.12, DING_FADE = 0.6, HOLD = 1, SAFE = 1800;
+  const FADE = 0.15, SKIP = 0.12, HOLD = 1, SAFE = 1800;
   /* The angle round the ring. During the orbit it speeds up evenly: it starts at SLOW times the average speed and
      ends at 2 - SLOW times it. After the orbit it keeps that last speed. */
   const PHI = LAPS * 2 * Math.PI, W1 = PHI * (2 - SLOW) / ORBIT;
@@ -130,7 +129,7 @@ const intro = (() => {
     drawRocket(fx, at(0), heading(0), sizeFor(1), 1, 1);
   }
 
-  let live = false, leaving = false, dinging = false, t0 = 0, raf = 0, timers = [];
+  let live = false, leaving = false, t0 = 0, raf = 0, timers = [];
   function frame(now) {
     if (!live) return;
     const t = Math.max(0, (now - t0) / 1000);
@@ -153,26 +152,22 @@ const intro = (() => {
     timers.forEach(clearTimeout); timers = [];
     window.removeEventListener('keydown', onKey, true);
     window.removeEventListener('resize', onResize);
-    sound.introStop(false);
     el.remove();
   }
-  /* The tap that skips must not also press a button on Home underneath, so the click that follows the tap is eaten.
-     That click comes a few milliseconds after the finger lifts, so the guard lasts only 150 ms: a real tap on Home
-     straight after still works. */
+  /* The tap that skips must not also press a button on Home underneath. The skip happens as the finger lands, and
+     the click from that same tap comes when it lifts, by which time the intro may be gone. So the next click is
+     eaten, unless a new tap starts first (that is a real tap on Home), and the guard gives up after a second. */
   function eatClick() {
-    const eat = ev => { ev.preventDefault(); ev.stopPropagation(); stop(); }, stop = () => window.removeEventListener('click', eat, true);
+    const stop = () => { window.removeEventListener('click', eat, true); window.removeEventListener('pointerdown', stop, true); clearTimeout(t); };
+    const eat = ev => { ev.preventDefault(); ev.stopPropagation(); stop(); };
     window.addEventListener('click', eat, true);
-    setTimeout(stop, 150);
+    window.addEventListener('pointerdown', stop, true);
+    const t = setTimeout(stop, 1000);
   }
-  /* A tap, click or key during the intro. It is also the first moment the browser lets the page play sound. If the
-     dings have not played yet, they start now, from the first note, and the intro fades into Home over 0.6 s as
-     they play. If they are already playing (the browser allowed sound from the start), it skips as before: a quick
-     fade, and the dings fade out with it. */
+  /* A tap, click or key during the intro skips it: a quick fade into Home. */
   function skip(tap) {
     if (!live || leaving) return;
     if (tap) eatClick();
-    if (sound.introTap()) { dinging = true; fadeOut(DING_FADE, false); return; }
-    sound.introStop(true);
     fadeOut(SKIP, false);
   }
   function onKey(ev) { if (!leaving) { ev.preventDefault(); ev.stopPropagation(); skip(false); } }
@@ -185,17 +180,12 @@ const intro = (() => {
     if (on === false || window.stratosIntro === false) { finish(); return; }
     live = true;
     timers.push(setTimeout(finish, SAFE));                 /* the safety timer: gone by 1.8 seconds whatever happens */
-    /* A tap counts when the finger lifts (pointerup), because phones only let a page play sound from then on.
-       iPhones may only allow it at touchend, so the sound is tried again there. */
-    el.addEventListener('pointerdown', ev => ev.preventDefault());
-    el.addEventListener('pointerup', ev => { ev.preventDefault(); skip(true); });
-    el.addEventListener('touchend', () => { if (dinging) sound.introTap(); });
+    el.addEventListener('pointerdown', ev => { ev.preventDefault(); skip(true); });
     window.addEventListener('keydown', onKey, true);
     window.addEventListener('resize', onResize);
     try {
       rk = shapes(saved.rocket);
       col = {hull: cssVar('--ink'), fin: cssVar('--fin'), port: cssVar('--paper'), noz: cssVar('--ink-3'), 'rk-flame': cssVar('--flame'), trail: cssVar('--accent')};
-      sound.intro();
       if (reduce) {
         drawStill();
         /* The word may still be on its way. Draw again once it is, so the ring fits the real word. */
