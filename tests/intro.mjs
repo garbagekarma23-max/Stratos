@@ -10,8 +10,10 @@ const gone = p => p.evaluate(() => !document.querySelector('#intro'));
 // True when a tap in the middle of the screen would reach the app, not the intro.
 const reaches = p => p.evaluate(() => { const e = document.elementFromPoint(innerWidth / 2, innerHeight / 2); return !!e && !e.closest('#intro'); });
 // Times are counted from when the intro starts. The intro starts as the page's script runs, which can be a while after
-// loading began (the typeface links hold the script back), so the test notes the moment the script has run.
-const START = "document.addEventListener('DOMContentLoaded', () => { window.__t0 = performance.now(); });";
+// loading began (the typeface links hold the script back). The test notes the first animation frame the page asks
+// for, which the intro does as it starts. When there is none (reduced motion, or a test that stops animation frames),
+// it notes the moment the page's script has run, which on a busy machine can come a little later.
+const START = "(() => { const raf = window.requestAnimationFrame.bind(window); window.requestAnimationFrame = cb => { if (window.__t0 === undefined) window.__t0 = performance.now(); return raf(cb); }; document.addEventListener('DOMContentLoaded', () => { if (window.__t0 === undefined) window.__t0 = performance.now(); }); })();";
 const started = fn => START + (fn ? '\n(' + fn + ')();' : '');
 const since = p => p.evaluate(() => performance.now() - window.__t0);
 const until = (p, ms) => p.waitForFunction(ms => performance.now() - window.__t0 >= ms, ms, {polling: 20, timeout: 10000});
@@ -192,7 +194,8 @@ const RECORD = () => {
   }
   window.AudioContext = Rec; window.webkitAudioContext = Rec;
 };
-// The peak, and the loudest 50 ms, of what was recorded, plus the level in three windows (one per note).
+// The peak, and the loudest 50 ms, of what was recorded, the level in three windows (one per note), and what is
+// left after 1.3 seconds.
 const measure = p => p.evaluate(async () => {
   if (!window.__rec.length) return null;
   const buf = await window.__rec[0].startRendering(), sr = buf.sampleRate, ch = [buf.getChannelData(0), buf.getChannelData(1)];
@@ -201,7 +204,7 @@ const measure = p => p.evaluate(async () => {
   const rms = (a, z) => { let s = 0, n = 0; for (const d of ch) for (let i = Math.floor(a * sr); i < Math.min(d.length, z * sr); i++) { s += d[i] * d[i]; n++; } return Math.sqrt(s / Math.max(1, n)); };
   let loud = 0;
   for (let t = 0; t < buf.duration - 0.05; t += 0.01) loud = Math.max(loud, rms(t, t + 0.05));
-  return {peak: peak, loud: loud, parts: [rms(0, 0.45), rms(0.5, 0.95), rms(1, 1.45)]};
+  return {peak: peak, loud: loud, parts: [rms(0, 0.28), rms(0.3, 0.58), rms(0.6, 0.9)], after: rms(1.3, 1.8)};
 });
 {
   const one = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: started(RECORD)});
@@ -222,7 +225,8 @@ const measure = p => p.evaluate(async () => {
   const f = n => n.toFixed(3);
   check(!!notes && !!ping, 'the intro notes and the ping were both recorded', R);
   if (notes && ping) {
-    check(notes.parts.every(v => v > ping.loud * 0.05), 'there are three notes, at 0, 0.5 and 1 seconds (' + notes.parts.map(f).join(', ') + ')', R);
+    check(notes.parts.every(v => v > ping.loud * 0.05), 'there are three notes, at 0, 0.3 and 0.6 seconds (' + notes.parts.map(f).join(', ') + ')', R);
+    check(notes.after < notes.loud * 0.01, 'the notes are finished by 1.3 seconds (' + f(notes.after) + ' after, against ' + f(notes.loud) + ' at the loudest)', R);
     check(notes.peak <= ping.peak, 'the notes peak no higher than the ping (' + f(notes.peak) + ' against ' + f(ping.peak) + ')', R);
     check(notes.loud <= ping.loud, 'the loudest 50 ms of the notes is no louder than the ping\'s (' + f(notes.loud) + ' against ' + f(ping.loud) + ')', R);
   }
