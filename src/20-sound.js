@@ -226,7 +226,10 @@ const sound = (() => {
     setTimeout(() => g.disconnect(), 300);
     iGain = null;
   }
-  let introOn = false;
+  /* introOn: the intro is on screen. introStarted: its dings have started for this opening, so they never play
+     twice. */
+  let introOn = false, introStarted = false, introTapped = false;
+  function startIntro() { if (introStarted) return; introStarted = true; introNotes(); }
   const STEPS = [0, 2, 4, 7, 9, 12, 14, 16, 19, 21, 24];
   const safe = fn => function () { try { fn.apply(null, arguments); } catch (e) {} };
   return {
@@ -255,18 +258,33 @@ const sound = (() => {
     click: safe(() => click(1.6)),
     step: safe(() => click(0.6)),
     /* The intro dings. Browsers hold sound back until the first tap on a page, and most phones do every time.
-       Then the intro is silent: the dings only start if the sound is allowed straight away, so they never turn up
-       late, in the middle of something else. */
+       If sound is allowed straight away, the dings start with the intro. If not, they wait for introTap. They never
+       start late on their own, in the middle of something else. */
     intro: safe(() => {
       if (navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed') return;
       const a = ac(); if (!a) return;
       introOn = true;
       const asked = Date.now();
-      if (a.state === 'running') { introNotes(); return; }
+      if (a.state === 'running') { startIntro(); return; }
       const p = a.resume();
-      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') introNotes(); }, () => {});
+      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') startIntro(); }, () => {});
     }),
-    /* At the end of the intro the last note rings on under Home. A tap that skips it fades the notes out (cut). */
+    /* A tap on the intro. A tap lets the browser play sound, so if the dings have not started yet, they start now,
+       from the first note, and this says true. If they were already playing before the tap, or the sound is
+       switched off in You, it does nothing and says false, and the tap just skips the intro. It can be called
+       again for the same tap (the intro does, on touchend, for iPhones): it then tries the sound once more. */
+    introTap: () => {
+      try {
+        if ((introStarted && !introTapped) || saved.sound === false) return false;
+        introTapped = true;
+        const a = ac(); if (!a) return false;
+        if (a.state === 'running') { startIntro(); return true; }
+        const p = a.resume();
+        if (p && p.then) p.then(() => { if (a.state === 'running') startIntro(); }, () => {});
+        return true;
+      } catch (e) { return false; }
+    },
+    /* At the end of the intro the last note rings on under Home. A skip while the dings play fades them out (cut). */
     introStop: safe(cut => { introOn = false; if (cut) stopIntro(); }),
     /* Phones only let sound start from inside a tap. Calling this in the tap gets the sound ready for what follows. */
     wake: safe(() => { ac(); })
