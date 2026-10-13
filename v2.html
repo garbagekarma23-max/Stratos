@@ -3317,48 +3317,58 @@ const sound = (() => {
     const g = mGain.gain, t = ctx.currentTime;
     g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(MUSIC * 0.35, t + 0.03); g.linearRampToValueAtTime(MUSIC, t + 0.6);
   }
-  /* The intro: three short notes while the rocket circles the word, in the same family as the ping. The
-     frequencies are exact, not the nearest standard notes: the second is four semitones below the first, and the
-     third is an octave above the second. Each note is a soft triangle tone, like the ping, with a quiet shimmer an
-     octave up (double the frequency). It pops in over 8 ms and fades over 0.25 s, ending before the next note
-     starts. The last note fades over 0.5 s, with a faint sparkle two octaves up, so it ends lightly instead of
-     cutting off. Only triangle and sine waves, so every overtone is a whole multiple of the note and the pitch
-     stays exact. A gentle low-pass filter keeps the edges soft, and a very short, light room (about 0.3 s) is the
-     only reverb. Everything is finished by about 1.6 s.
+  /* The intro: three dings while the rocket circles the word, Stratos's own, in the same family as the ping.
+     The frequencies are exact, not the nearest standard notes: the second is four semitones below the first, and
+     the third is an octave above the second.
+     Each ding is a few sine waves started together. The main note is the strongest and rings for about 0.35 s (the
+     last one for 0.6 s). Above it, quieter overtones at 2 and 3 times its frequency, and a very faint one at 2.76
+     times, which gives the metal "ding". The overtones die away in about 0.1 s, so each note goes "ding" and then
+     softens to the plain note. Each starts in 2 ms, a clear "tink". A note ends before the next one starts. The only
+     reverb is a very short, light room (about 0.2 s).
      Everything goes through iGain, so a tap that skips the intro can fade it all out at once. The levels keep it
      below one ping (a test measures this).
-     The three timings being compared:
-       steady  notes at 0, 0.5 and 1 s, in step with the rocket's laps
-       quick   notes at 0, 0.3 and 0.6 s
-       bouncy  notes at 0, 0.2 and 0.5 s, the last one a little louder */
+     Three kinds of ding are being compared (tones), and three timings:
+       glass  brighter and more glassy: stronger overtones, lasting a little longer
+       soft   rounder, like a small marimba or music box: faint overtones that go quickly, a duller filter
+       bell   a little more metallic: the 2.76 overtone louder and ringing longer
+       steady notes at 0, 0.5 and 1 s, in step with the rocket's laps; quick at 0, 0.3 and 0.6 s;
+       bouncy at 0, 0.2 and 0.5 s, the last note a little louder */
   const INTRO = {
     notes: [355.1, 281.8, 563.7],
     timings: {steady: {at: [0, 0.5, 1]}, quick: {at: [0, 0.3, 0.6]}, bouncy: {at: [0, 0.2, 0.5], last: 1.25}},
-    pick: 'steady', fade: 0.25, lastFade: 0.5
+    /* For each tone: the overtones as [times the note, loudness against the note, how long it rings in s], the
+       filter that takes off the harshest top, and how sharp the start is. */
+    tones: {
+      glass: {parts: [[2, 0.34, 0.12], [3, 0.22, 0.1], [2.76, 0.06, 0.1]], top: 7000, rise: 0.0015},
+      soft: {parts: [[2, 0.14, 0.07], [3, 0.08, 0.05], [2.76, 0.025, 0.06]], top: 2600, rise: 0.003},
+      bell: {parts: [[2, 0.24, 0.1], [3, 0.14, 0.1], [2.76, 0.15, 0.16]], top: 5500, rise: 0.0015}
+    },
+    timing: 'steady', tone: 'glass', ring: 0.35, lastRing: 0.6
   };
-  /* Each timing's overall level, measured so its loudest moment sits a little under one ping. */
-  const LEVEL = {steady: 0.75, quick: 0.75, bouncy: 0.6};
+  /* Each tone's overall level, measured so its loudest moment sits a little under one ping. Bouncy's louder last
+     note is allowed for by TIMING_LEVEL. */
+  const LEVEL = {glass: 0.6, soft: 0.6, bell: 0.6}, TIMING_LEVEL = {steady: 1, quick: 1, bouncy: 0.8};
   let iGain = null, iRoom = null;
-  /* The room: a very short echo, made from noise that dies away in about 0.3 s. It uses the same numbers every
+  /* The room: a very short echo, made from noise that dies away in about 0.2 s. It uses the same numbers every
      time, so the intro sounds the same on every opening. Seed 268 was picked from 600 because it gives the three
-     notes the same echo, within 1 dB, in both ears. Left and right use different numbers. */
+     notes nearly the same echo in both ears (within 2 dB). Left and right use different numbers. */
   const ROOM_SEED = 268;
   function introRoom() {
     if (iRoom) return iRoom;
-    const sr = ctx.sampleRate, len = Math.floor(sr * 0.35), ir = ctx.createBuffer(2, len, sr);
+    const sr = ctx.sampleRate, len = Math.floor(sr * 0.25), ir = ctx.createBuffer(2, len, sr);
     for (let c = 0; c < 2; c++) {
       let n = (ROOM_SEED + c * 7919) >>> 0;
       const rnd = () => { n = (Math.imul(n, 1664525) + 1013904223) >>> 0; return n / 4294967296 * 2 - 1; };
       const d = ir.getChannelData(c); let y = 0;
-      for (let i = 0; i < len; i++) { const t = i / sr; y += 0.7 * (rnd() - y); d[i] = y * Math.exp(-t * 23); }
+      for (let i = 0; i < len; i++) { const t = i / sr; y += 0.7 * (rnd() - y); d[i] = y * Math.exp(-t * 34.5); }
     }
     iRoom = ir;
     return ir;
   }
-  /* A volume that pops up over 8 ms on a smooth curve, then dies away like a plucked string, reaching silence at
-     len seconds. */
-  function pop(peak, len) {
-    const n = Math.max(32, Math.round(len * 400)), c = new Float32Array(n), K = 5, rise = 0.008;
+  /* A volume that jumps up over rise seconds on a smooth curve, then dies away like a struck bell, reaching
+     silence at len seconds. */
+  function strike(peak, len, rise) {
+    const n = Math.max(32, Math.round(len * 600)), c = new Float32Array(n), K = 5;
     for (let i = 0; i < n; i++) {
       const t = len * i / (n - 1);
       c[i] = t < rise ? peak * (0.5 - 0.5 * Math.cos(Math.PI * t / rise))
@@ -3367,28 +3377,28 @@ const sound = (() => {
     c[n - 1] = 0;
     return c;
   }
-  /* One wave at time t for len seconds, with the pop above, into dest. */
-  function voice(f, type, t, len, peak, dest) {
+  /* One sine wave at time t for len seconds, struck as above, into dest. */
+  function partial(f, t, len, peak, rise, dest) {
     const o = ctx.createOscillator(), g = ctx.createGain();
-    o.type = type; o.frequency.setValueAtTime(f, t);
+    o.type = 'sine'; o.frequency.setValueAtTime(f, t);
     g.gain.value = 0;                                  /* silent until the curve starts */
-    g.gain.setValueCurveAtTime(pop(peak, len), t, len);
+    g.gain.setValueCurveAtTime(strike(peak, len, rise), t, len);
     o.connect(g); g.connect(dest); o.start(t); o.stop(t + len + 0.02);
   }
-  function introNotes(kind) {
-    const T = INTRO.timings[kind] || INTRO.timings[INTRO.pick], t0 = ctx.currentTime + 0.03;
-    iGain = ctx.createGain(); iGain.gain.value = LEVEL[kind] || 1; iGain.connect(bus);
-    const soft = ctx.createBiquadFilter(); soft.type = 'lowpass'; soft.frequency.value = 3200; soft.Q.value = 0.5; soft.connect(iGain);
+  function introNotes(tone, timing) {
+    const T = INTRO.timings[timing] || INTRO.timings[INTRO.timing], K = INTRO.tones[tone] || INTRO.tones[INTRO.tone];
+    const t0 = ctx.currentTime + 0.03;
+    iGain = ctx.createGain(); iGain.gain.value = (LEVEL[tone] || 1) * (TIMING_LEVEL[timing] || 1); iGain.connect(bus);
+    const top = ctx.createBiquadFilter(); top.type = 'lowpass'; top.frequency.value = K.top; top.Q.value = 0.5; top.connect(iGain);
     const room = ctx.createConvolver(), wet = ctx.createGain();
-    room.buffer = introRoom(); wet.gain.value = 0.25;
-    soft.connect(room); room.connect(wet); wet.connect(iGain);
+    room.buffer = introRoom(); wet.gain.value = 0.2;
+    top.connect(room); room.connect(wet); wet.connect(iGain);
     INTRO.notes.forEach((f, i) => {
       const last = i === INTRO.notes.length - 1, t = t0 + T.at[i], v = 0.3 * (last && T.last ? T.last : 1);
-      /* A note fades over 0.25 s, or ends just before the next one if that comes sooner, so they never overlap. */
-      const len = last ? INTRO.lastFade : Math.min(INTRO.fade, T.at[i + 1] - T.at[i] - 0.01);
-      voice(f, 'triangle', t, len, v, soft);                         /* the note */
-      voice(f * 2, 'sine', t, len * 0.8, v * 0.16, soft);             /* the shimmer, an octave up */
-      if (last) voice(f * 4, 'sine', t + 0.03, len * 0.7, v * 0.06, soft);   /* the sparkle, two octaves up */
+      /* A note rings for 0.35 s, or ends just before the next one if that comes sooner, so they never overlap. */
+      const len = last ? INTRO.lastRing : Math.min(INTRO.ring, T.at[i + 1] - T.at[i] - 0.01);
+      partial(f, t, len, v, K.rise, top);                                                  /* the note */
+      K.parts.forEach(q => partial(f * q[0], t, Math.min(q[2], len), v * q[1], K.rise, top));   /* the overtones */
     });
   }
   function stopIntro() {
@@ -3426,18 +3436,18 @@ const sound = (() => {
     /* The maths keypad: a click for each key, and a softer one as the cursor moves along the strip. */
     click: safe(() => click(1.6)),
     step: safe(() => click(0.6)),
-    /* The intro notes. Browsers hold sound back until the first tap on a page, and most phones do every time.
-       Then the intro is silent: the notes only start if the sound is allowed straight away, so they never turn up
-       late, in the middle of something else. kind picks the timing (steady, quick or bouncy). */
-    intro: safe(kind => {
+    /* The intro dings. Browsers hold sound back until the first tap on a page, and most phones do every time.
+       Then the intro is silent: the dings only start if the sound is allowed straight away, so they never turn up
+       late, in the middle of something else. tone and timing pick the kind of ding and the timing (see INTRO). */
+    intro: safe((tone, timing) => {
       if (navigator.getAutoplayPolicy && navigator.getAutoplayPolicy('audiocontext') === 'disallowed') return;
       const a = ac(); if (!a) return;
-      kind = kind || INTRO.pick;
+      tone = tone || INTRO.tone; timing = timing || INTRO.timing;
       introOn = true;
       const asked = Date.now();
-      if (a.state === 'running') { introNotes(kind); return; }
+      if (a.state === 'running') { introNotes(tone, timing); return; }
       const p = a.resume();
-      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') introNotes(kind); }, () => {});
+      if (p && p.then) p.then(() => { if (introOn && Date.now() - asked < 300 && a.state !== 'closed') introNotes(tone, timing); }, () => {});
     }),
     /* At the end of the intro the last note rings on under Home. A tap that skips it fades the notes out (cut). */
     introStop: safe(cut => { introOn = false; if (cut) stopIntro(); }),
