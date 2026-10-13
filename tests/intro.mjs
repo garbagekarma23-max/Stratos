@@ -1,6 +1,6 @@
 // The intro: the word Stratos with the rocket flying round it, each time v2.html is opened.
 // It checks the intro plays on opening, a tap or a key skips it, reduced motion keeps it still, it never blocks the
-// app for more than 2 seconds, switching tabs never plays it, and its chords are no louder than the ping.
+// app for more than 2 seconds, switching tabs never plays it, and its notes are no louder than the ping.
 // Every other test skips the intro (open() in lib.mjs). This one passes intro: true.
 // node intro.mjs shots  also saves frames: intro-light.png and intro-dark.png, five moments side by side.
 import { open, check, tab, pick, SHOTS } from './lib.mjs';
@@ -178,7 +178,7 @@ for (const name in BROKEN) {
   await b.close();
 }
 
-// ---------- 7. the chords are no louder than the ping ----------
+// ---------- 7. the intro notes are no louder than the ping ----------
 // The page's AudioContext is swapped for an offline one that keeps real time, so the app's own sound chain
 // (its volume, compressor and ceiling) is recorded instead of played.
 const RECORD = () => {
@@ -192,7 +192,7 @@ const RECORD = () => {
   }
   window.AudioContext = Rec; window.webkitAudioContext = Rec;
 };
-// The peak, and the loudest 50 ms, of what was recorded, plus the level in three windows (one per chord).
+// The peak, and the loudest 50 ms, of what was recorded, plus the level in three windows (one per note).
 const measure = p => p.evaluate(async () => {
   if (!window.__rec.length) return null;
   const buf = await window.__rec[0].startRendering(), sr = buf.sampleRate, ch = [buf.getChannelData(0), buf.getChannelData(1)];
@@ -206,8 +206,8 @@ const measure = p => p.evaluate(async () => {
 {
   const one = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: started(RECORD)});
   await until(one.p, 2600);
-  const chords = await measure(one.p);
-  check(one.errs.length === 0, 'no script errors with the intro chords: ' + one.errs.join(' | '), R);
+  const notes = await measure(one.p);
+  check(one.errs.length === 0, 'no script errors with the intro notes: ' + one.errs.join(' | '), R);
   await one.b.close();
 
   const two = await open({init: RECORD});
@@ -220,11 +220,11 @@ const measure = p => p.evaluate(async () => {
   await two.b.close();
 
   const f = n => n.toFixed(3);
-  check(!!chords && !!ping, 'the chords and the ping were both recorded', R);
-  if (chords && ping) {
-    check(chords.parts.every(v => v > ping.loud * 0.05), 'there are three chords, at 0, 0.5 and 1 seconds (' + chords.parts.map(f).join(', ') + ')', R);
-    check(chords.peak <= ping.peak, 'the chords peak no higher than the ping (' + f(chords.peak) + ' against ' + f(ping.peak) + ')', R);
-    check(chords.loud <= ping.loud, 'the loudest 50 ms of the chords is no louder than the ping\'s (' + f(chords.loud) + ' against ' + f(ping.loud) + ')', R);
+  check(!!notes && !!ping, 'the intro notes and the ping were both recorded', R);
+  if (notes && ping) {
+    check(notes.parts.every(v => v > ping.loud * 0.05), 'there are three notes, at 0, 0.5 and 1 seconds (' + notes.parts.map(f).join(', ') + ')', R);
+    check(notes.peak <= ping.peak, 'the notes peak no higher than the ping (' + f(notes.peak) + ' against ' + f(ping.peak) + ')', R);
+    check(notes.loud <= ping.loud, 'the loudest 50 ms of the notes is no louder than the ping\'s (' + f(notes.loud) + ' against ' + f(ping.loud) + ')', R);
   }
 
   const off = await open({intro: true, waitUntil: 'domcontentloaded', motion: true, init: started(RECORD), seed: {sound: false}});
