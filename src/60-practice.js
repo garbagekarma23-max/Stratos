@@ -49,7 +49,7 @@ function renderStart() {
     '<p class="label" id="fromL">Questions from</p>' +
     '<div role="radiogroup" aria-labelledby="fromL">' +
       choice('mix', 'Everything I have learned', plural(learned.length, 'point'), plural(all.length, 'question')) +
-      choice('chapter', 'One chapter', (CH.indexOf(sc) + 1) + '. ' + sc.title, plural(one.length, 'question')) +
+      choice('chapter', 'One chapter', sc.n + '. ' + sc.title, plural(one.length, 'question')) +
     '</div>' +
     (ui.scope === 'chapter' && chs.length > 1 ? '<button class="textbtn" type="button" data-act="scopech">Change chapter</button>' : '') +
     (lens.length > 1 ? '<div class="lenrow"><span class="label flat" id="lenL">Length</span><div class="seg3" role="group" aria-labelledby="lenL">' + lens.map(v => '<button type="button" data-act="len" data-v="' + v + '" aria-pressed="' + (ui.len === v) + '">' + (v || 'All ' + pool.length) + '</button>').join('') + '</div></div>' : '') +
@@ -61,9 +61,9 @@ ACT.golearn = () => openLearn(curCh().id);
 ACT.scope = b => { ui.scope = b.dataset.v; renderStart(); const again = $('.choice[data-v="' + ui.scope + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.len = b => { ui.len = +b.dataset.v; renderStart(); const again = $('.seg3 [data-v="' + ui.len + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.scopech = () => {
-  openSheet('Pick a chapter', '<div class="picks">' + CH.map((c, i) => {
+  openSheet('Pick a chapter', '<div class="picks">' + CH.map(c => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
+    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
   }).join('') + '</div>');
 };
 ACT.setscopech = b => { ui.scopeCh = b.dataset.ch; ui.scope = 'chapter'; closeSheet(); renderStart(); };
@@ -83,7 +83,7 @@ function startPractice(o) {
   /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
   if ((o.mode === 'challenge' || o.mode === 'race') && subOf(o.ch) !== SUB.id) {
     useSubject(subOf(o.ch), true);
-    toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+    toast('Switched to ' + subTitle());
   }
   /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
   if (isMaths()) { startMathsFlight(o); return; }
@@ -109,14 +109,14 @@ function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
   if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
-  if (P.mode === 'chapter') return {title: 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1), line: plural(P.total, 'question') + ', weak points first'};
+  if (P.mode === 'chapter') return {title: chName(chOf(P.ch)), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
   const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
   if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
   if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
-  if (P.mode === 'chapter') return 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1);
+  if (P.mode === 'chapter') return chName(chOf(P.ch));
   return 'Mixed flight';
 }
 function mountRun() {
@@ -369,9 +369,10 @@ function finish() {
   P.done = true;
   clearTimeout(raceTimer);
   /* Each subject keeps its own records, so a maths flight is measured against maths flights only. */
-  P.pb = P.alt > 0 && P.alt > (P.maths ? saved.m.bestKm || 0 : saved.bestKm || 0);
+  const rec = subStore();
+  P.pb = P.alt > 0 && P.alt > (rec.bestKm || 0);
   if (P.maths) { mpEnd(); save(); }
-  else save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: Math.max(saved.bestCombo || 0, P.best)});
+  else { rec.bestKm = Math.max(rec.bestKm || 0, P.alt); rec.bestCombo = Math.max(rec.bestCombo || 0, P.best); save(); }
   postResult();
 }
 function summaryEl() {
@@ -380,7 +381,7 @@ function summaryEl() {
   const seen = [];
   P.items.forEach(it => { if (seen.indexOf(it.p) < 0) seen.push(it.p); });
   const still = seen.filter(pid => statusOf(pid) === 'weak').map(pid => PT[pid]);
-  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => 'Chapter ' + (CH.indexOf(c) + 1) + ' is proven. ' + (P.maths ? 'Every point in it is proven.' : 'Every question in it is right.'));
+  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => chName(c) + ' is proven. ' + (P.maths ? 'Every point in it is proven.' : 'Every question in it is right.'));
   const weakLine = '<p class="sumline">' + (still.length ? 'Still weak: ' + esc(names(still)) + '.' : 'No weak points left from this flight.') + '</p>' + proved.map(t => '<p class="sumline strong">' + t + '</p>').join('');
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;

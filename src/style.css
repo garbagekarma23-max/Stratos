@@ -152,7 +152,7 @@ svg{display:block;flex:none}
 .word{font-size:21px;line-height:1}
 .grow{flex:1;min-width:0}
 .streak{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
-.subject{display:inline-flex;align-items:center;gap:4px;margin:8px 0 0 -10px;padding:6px 6px 6px 10px;border:0;border-radius:999px;background:none;color:var(--ink-2);font-size:14px;font-weight:500}
+.subject{display:inline-flex;align-items:center;gap:4px;text-align:left;margin:8px 0 0 -10px;padding:6px 6px 6px 10px;border:0;border-radius:999px;background:none;color:var(--ink-2);font-size:14px;font-weight:500}
 .subject .ic{width:16px;height:16px}
 .subrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
 .subrow .subject{margin-top:0}
@@ -191,6 +191,14 @@ svg{display:block;flex:none}
 .pt.is-weak .lab{color:var(--warn)}
 .pts .ghost{margin-top:8px}
 .home .fine{margin-top:22px}
+/* A course with units: the note under its name, the unit headings, chapters still to come, and the Draft label. */
+.cnote{margin-top:4px;font-size:12px;line-height:1.4;color:var(--ink-3)}
+.unit{margin:18px 0 6px;font-size:14px;font-weight:600;line-height:1.3;color:var(--ink-2)}
+.sec > .h2 + .unit{margin-top:0}
+.ch.soon .ch-head .t{font-weight:500;color:var(--ink-2)}
+.ch.soon .ch-head .stage{color:var(--ink-3)}
+.tag{display:inline-block;padding:1px 7px;border:1px solid var(--line-2);border-radius:999px;font-size:11px;font-weight:500;line-height:1.5;color:var(--ink-2);vertical-align:2px;white-space:nowrap}
+.h1 .tag,.kicker .tag{vertical-align:1px}
 
 /* ---------- the question feed, shared by Learn and Practice ---------- */
 .feed{position:absolute;inset:0;z-index:1;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;overscroll-behavior:contain;scrollbar-width:none;outline:none}

@@ -17,10 +17,12 @@ function mathsMeans(pid) {
 }
 const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers. One right answer does not show you can do the type. A wrong answer makes the point weak and starts the count again.';
 
-function chRow(c, i) {
+function chRow(c) {
+  /* A chapter with no points yet is Coming soon: the row shows where it sits in the course, and it cannot be opened. */
+  if (!c.points.length) return '<li class="ch soon"><button class="ch-head" type="button" disabled><span class="n">' + c.n + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">Coming soon</span><span></span></button></li>';
   const s = chStats(c), g = chStage(c), open = ui.open === c.id;
   let h = '<li class="ch' + (open ? ' open' : '') + '"><button class="ch-head" type="button" data-act="chtoggle" data-ch="' + c.id + '" aria-expanded="' + open + '">' +
-    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
+    '<span class="n">' + c.n + '</span><span class="t">' + esc(c.title) + (isDraft(c) ? ' ' + DRAFT : '') + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
   if (open) {
     h += '<ul class="pts">' + c.points.map(p => {
       const st = statusOf(p.id);
@@ -33,7 +35,7 @@ function chRow(c, i) {
 }
 
 function renderHome() {
-  const ch = curCh(), ci = CH.indexOf(ch), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
+  const ch = curCh(), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
   if (ui.cur !== ch.id) { ui.cur = ch.id; ui.open = ch.id; }       /* the list opens at the chapter you are on */
   /* The bar starts at the widths it had last time, then slides to the new ones. */
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
@@ -46,8 +48,9 @@ function renderHome() {
     '</header>' +
     '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(SUB.topic.course + ', ' + SUB.topic.year) + IC.down + '</button>' +
       (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
+    (SUB.topic.note ? '<p class="cnote">' + esc(SUB.topic.note) + '</p>' : '') +
     '<section class="hero" aria-label="Your chapter">' +
-      '<p class="kicker">' + esc(SUB.topic.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
+      '<p class="kicker">' + (ch.unit ? esc(chName(ch)) + ' of ' + ch.of : esc(SUB.topic.name) + ', chapter ' + ch.n + ' of ' + CH.length) + (isDraft(ch) ? ' ' + DRAFT : '') + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +
       /* The bar: the pale part is points learned, the blue part points proven. The words under it say the same. */
       '<div class="bar2" role="img" aria-label="' + st.learned + ' of ' + st.n + ' points learned. ' + st.proven + ' of ' + st.n + ' proven."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
@@ -58,8 +61,13 @@ function renderHome() {
   if (weak.length && step.label.indexOf('Fix') !== 0) {
     h += '<button class="weakrow" type="button" data-act="fixweak"><i class="st weak"></i><span><b>' + plural(weak.length, 'weak point') + '</b><span class="names">' + esc(names(weak)) + '</span></span>' + IC.right + '</button>';
   }
-  h += '<section class="sec"><h2 class="h2">Chapters</h2><ol class="ch-list">' + CH.map(chRow).join('') + '</ol></section>' +
-    '<p class="fine">' + (isMaths()
+  /* A course with units lists every chapter under its unit, ready or not, so the shape of the whole year shows. */
+  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
+    ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
+    : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
+    '<p class="fine">' + (SUB.units
+      ? 'The AS year has 12 chapters. Chapter 1 is a draft until a teacher has checked it. The rest are coming soon. Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
@@ -90,18 +98,20 @@ function pointSheet(pid) {
     '<p class="statusline"><i class="st ' + st + '"></i><span>' + STATUS[st] + '. ' + STATUS_MEANS[st] + '</span></p>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
     '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
-    '<p class="sub">Chapter ' + (p.ci + 1) + ': ' + esc(chOf(p.ch).title) + '</p>' +
+    '<p class="sub">' + esc(chName(chOf(p.ch))) + ': ' + esc(chOf(p.ch).title) + '</p>' +
+    (isDraft(chOf(p.ch)) ? '<p class="sub">' + DRAFT + ' This chapter has not been checked by a teacher yet.</p>' : '') +
     '<div class="cta">' + (st === 'new'
       ? '<button class="primary" type="button" data-act="learnpoint" data-p="' + pid + '">Check this point</button>'
       : '<button class="primary" type="button" data-act="pracch" data-ch="' + p.ch + '">Practise this chapter</button><button class="ghost" type="button" data-act="learnpoint" data-p="' + pid + '">Check this point again</button>') +
     '</div>');
 }
 
-/* The subject sheet. The two loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
+/* The subject sheet. The three loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
 ACT.subject = () => {
   const rows = [
     ['The Global Economy', 'Economics, Year 12', 'eco'],
     ['Equations', 'Maths, Year 11', 'maths'],
+    [EDEXCEL.course + ', ' + EDEXCEL.year, EDEXCEL.note, 'edexcel'],
     ['Australia\'s Place in the Global Economy', 'Economics, Year 12'],
     ['Economic Issues', 'Economics, Year 12'],
     ['Economic Policies and Management', 'Economics, Year 12'],
@@ -111,7 +121,7 @@ ACT.subject = () => {
   ];
   openSheet('Subjects and topics',
     '<div class="picks">' + rows.map(r => '<button class="pick" type="button"' + (r[2] ? ' data-act="setsub" data-sub="' + r[2] + '"' + (SUB.id === r[2] ? ' aria-current="true"' : '') : ' disabled') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + (!r[2] ? 'Soon' : SUB.id === r[2] ? 'Open' : 'Switch') + '</span></button>').join('') + '</div>' +
-    '<p class="fine">This test has two topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
+    '<p class="fine">This test has three topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
 };
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
@@ -125,6 +135,6 @@ function useSubject(id, quiet) {
   ui.cur = null; ui.open = null; ui.bar = null;
   if (id === 'maths') loadMaths();
   paintSearchFor();
-  if (!quiet) toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+  if (!quiet) toast('Switched to ' + subTitle());
   if (!quiet) { closeAllPages(); go('home'); views.home.scrollTop = 0; }
 }

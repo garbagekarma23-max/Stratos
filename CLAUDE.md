@@ -7,7 +7,7 @@ Stratos is school as a social app. Students open it the way they open Instagram,
 A study app prototype for Australian senior students. GitHub Pages serves this repository from the main branch.
 
 - `index.html` is the first prototype, a single question feed. Leave it alone unless asked.
-- `v2.html` is the second prototype. It is built from `src/` (and the shared maths files in `lab/`). Never edit it by hand. It has two subjects: Economics and Maths, each with Learn, Practice, challenges and races.
+- `v2.html` is the second prototype. It is built from `src/` (and the shared maths files in `lab/`). Never edit it by hand. It has three subjects: NSW Economics and Maths, each with Learn, Practice, challenges and races, and the Edexcel International A Level Economics course, with Learn and Practice.
 - `maths-lab.html` is the Maths Lab, a separate page for writing maths working on a phone. Its code is in `lab/`. See the Maths Lab section below.
 - Live at https://garbagekarma23-max.github.io/Stratos/, https://garbagekarma23-max.github.io/Stratos/v2.html and https://garbagekarma23-max.github.io/Stratos/maths-lab.html
 
@@ -26,6 +26,7 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - `tests/intro.mjs` checks the intro: it plays on opening; a tap, click or key skips it without pressing what is underneath; reduced motion keeps it still; it never blocks the app for more than 2 seconds (even with animation frames stopped or a script error); switching tabs never plays it; and it makes no sound (it counts every sound context and tone the page makes). Every other test skips the intro: `open()` in `tests/lib.mjs` sets `window.stratosIntro = false` unless a test passes `intro: true`. `node intro.mjs shots` saves `intro-light.png` and `intro-dark.png`, five moments side by side (0.1, 0.4, 0.7, 1.0 and 1.3 s).
 - `tests/maths-content.mjs` checks the maths content with the lab's line checker, no browser: every worked example line ticks, every template run 200 times makes right, clean answers, and the same challenge seed always makes the same five questions.
 - `tests/maths-games.mjs` runs maths challenges and races with keypad taps only: the subject switch on the friend sheet, a challenge sent and finished, the seed giving the same questions on the page as outside it, a rematch staying in maths, a race won and a race lost, and the sample friends' maths pace. `tests/maths.mjs` runs maths in v2: the subject switch, the status rules, and Learn on both chapters with keypad taps only.
+- `tests/edexcel.mjs` runs the Edexcel course: the subject sheet row and the Pearson line, switching to it and back, the two units and 12 chapters, the 11 Coming soon rows that cannot be opened, the Draft label (hero, chapter row, point sheet, each Learn card), Search, Learn through Chapter 1, a Practice flight, its progress and records kept apart from NSW and Maths, and the friend sheet staying on the other subjects. `node edexcel.mjs shots` saves `edexcel-home-light.png`, `edexcel-chapters-light.png` and `edexcel-card-light.png` (and dark) at 390 by 844.
 - Screenshots: `cd tests && node shots.mjs` writes PNGs to `tests/shots/` (light, dark, Sky, small phone, desktop). `node shots.mjs light` takes the light-mode flight set. Look at them after any visual change.
 - Maths screenshots in v2: `cd tests && node maths-shots.mjs` writes Home, a worked example, a guided question and the point sheet, light and dark, plus `maths-compare-light-1.png` (and `-2`, and dark), which put each next to the same Economics screen, and `maths-practice-light.png` (and dark): a maths flight and its result next to Economics. It also writes `maths-race-light.png` (a maths race part way through), `maths-challenge-light.png` (a thread with maths challenge cards), both in dark too, and `maths-games-light.png` (and dark), which puts them next to an Economics race.
 - Maths Lab screenshots: `cd tests && node lab-shots.mjs` writes the lab at iPhone size, light and dark, plus `compare-light.png` and `compare-dark.png`, which put it next to v2's Home and a practice question.
@@ -137,12 +138,23 @@ Later ideas, parked: a scratch area for drawing (a diagram, a number line, rough
 - The sample friends' maths pace is `mpace` in `FRIENDS`: seconds per right answer in chapter 1 (Aisha 25, Noah 30, Mia 36, Tom 45), times `MATHS_SLOW` for chapter 2 (1.3), give or take 35%. `paceOf` gives the pace for a chapter in either subject. A friend's pretend challenge time is their pace for each question, give or take a fifth (`pretendTime`). These are first guesses, to tune after a phone test.
 - Starting one: exactly where Economics ones start. Send a challenge or Start a race in a thread opens the friend sheet, with an Economics and Maths switch at the top (it starts on the subject picked on Home) and that subject's chapters under it. A card a friend sent has Play. Starting a game in the other subject switches Home to it. There is no game button on the Practice start screen, in either subject.
 - Rematch: the friend sends a challenge on the subject and chapter of the last game in the thread, with a new seed for maths. With no game yet in the thread, it uses the chapter Home shows.
-- The weekly table counts right answers in both subjects together, and says so. Two tables would split four friends into smaller groups, and the table is about showing up to study. A maths answer takes longer, so a mostly maths week scores lower. If testers notice, a maths answer could count as 2.
+- The weekly table counts right answers in every subject together (NSW Economics, Maths and the Edexcel course), and says so. Two tables would split four friends into smaller groups, and the table is about showing up to study. A maths answer takes longer, so a mostly maths week scores lower. If testers notice, a maths answer could count as 2.
 - Saved: a maths challenge message has `seed`, `total` 5, and `meMs` and `themMs` once played. An older build's maths challenge with no seed gets one, and 5 questions, when the page loads (`tidySaved`). A message on a chapter this build does not have moves to the first Economics chapter.
 
 Known gaps:
 - Tested on a real iPhone: the iPhone keyboard never appeared, holding Enter copied the line with no magnifier or text selection, the clicks and pings played with the silent switch off, and all ten questions could be finished. Sound needs the silent switch off, and iPhones do not vibrate for websites.
 - On a computer keyboard, Control and Z uses MathLive's own undo, which takes back a run of typing at once. The keypad's Undo goes one key at a time.
+
+## Edexcel International A Level Economics
+
+- A course next to NSW Economics and Maths: "Economics, International A Level (Edexcel)" on the subject sheet, starting with the AS year (Units 1 and 2, 12 chapters). Only Unit 1, Chapter 1 (Introductory concepts, six points) has content. The other 11 chapters show on Home as Coming soon and cannot be opened.
+- Under the course name, on the subject sheet and on Home: "Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson." No Pearson logos or branding anywhere.
+- Data: the points are in a bank, `src/econ-points.js` (`ECON_POINTS`), keyed by ids that name the idea (`e-scarcity`), not the course. The course, `src/edexcel-content.js` (`EDEXCEL`), has units, chapters and, in each chapter, a list of point ids. A point has the same parts as in `content.js`, right answer first. Written fresh, not from Pearson's specification, textbooks, past papers or mark schemes.
+- Sharing, set up but not built: a later course (say Cambridge) can list the same point ids. Progress is kept by point id, so a shared point would share its progress. That is the plan. The app still gives each point one chapter (`p.ch`), so a second course that shares points needs each course to keep its own place for a point.
+- Draft: each chapter has `check: 'draft'` or `'checked'`. A draft chapter with points shows a Draft label on the Home hero, its chapter row, the point sheet and each Learn card (`isDraft` and `DRAFT` in `10-core.js`). Change it to `'checked'` once a teacher has checked the chapter.
+- Code: `indexCourse` in `10-core.js` builds the course's chapters from the ids. `CH` holds only chapters with points, so Learn, Practice, Search and Home's button never reach a Coming soon one. `SUB.units` holds every chapter for Home's list. Chapters are numbered within their unit (`c.n`), and `chName` writes "Unit 1, chapter 1".
+- Saved: answers in `saved.ans` with the NSW ones (the ids never clash). The course's chapter and records are in `saved.c.edexcel` (`cur`, `bestKm`, `bestCombo`). `subStore()` in `10-core.js` finds where the subject picked keeps these.
+- It uses NSW Economics' Learn, Practice and Search: a card, a check question, then Practice. Challenges and races are not in this course yet: with it picked, the friend sheet opens on NSW Economics, and a rematch with no game yet uses an NSW chapter.
 
 ## Layout of src/
 
@@ -150,7 +162,9 @@ Known gaps:
 | --- | --- |
 | `content.js` | Study content: chapters, points, cards, questions. The right answer is always `opts[0]`. |
 | `maths-content.js` | Maths content: chapters, points, and the templates that make questions and worked examples. |
-| `10-core.js` | Icons, rockets, the store list, sample friends, saved progress, the subjects, the status rules (both subjects), altitude formatting. |
+| `econ-points.js` | A bank of Economics points that belongs to no one course. The right answer is always `opts[0]`. |
+| `edexcel-content.js` | The Edexcel International A Level Economics course: units, chapters, draft or checked, and the point ids in each. |
+| `10-core.js` | Icons, rockets, the store list, sample friends, saved progress, the subjects and courses, the status rules, altitude formatting. |
 | `15-maths-make.js` | Turns a maths template into a question with its answers and worked steps. No screen code. |
 | `20-sound.js` | The ping, the recorded blast and the race music. `recordings.json` is injected at the `REC` marker. |
 | `30-shell.js` | Tabs, pages, the sheet, toasts, sparks. Every button has a `data-act` name looked up in `ACT`. |
@@ -173,7 +187,7 @@ Known gaps:
 - Altitude is written out in full everywhere (`fmt` in `10-core.js`): "384,400 km", "2 billion km", "4.1 billion light-years", from million up to decillion, then a power of ten ("10⁴⁰ light-years"). Only km stays short. "light-years" has a hyphen and an invisible word joiner (U+2060) after it, so it never breaks across two lines. The non-breaking hyphen character is not used because Hanken Grotesk has no drawing for it. On the flight screen, if the words do not fit beside the number, the layer name and the clock, they move to the line under the number (`fitAlt` in `60-practice.js`, `#run.alt2`). At 360 px everything fits; the line under is for narrower screens, such as a folded Galaxy Fold at 280 px.
 - Progress is in `localStorage` under `stratos2.v1`, with maths under its `m` key. Nothing is sent anywhere.
 - Races have music: a ticking clock made in code, from Go until the race ends. It builds at halfway (3 correct in Economics, 2 in maths) and again one from winning (5, or 3 in maths), dips under each ping, and has its own switch in You.
-- The weekly table on Friends counts right answers since Monday in both subjects together.
+- The weekly table on Friends counts right answers since Monday in every subject together.
 - The four friends are samples. Their scores and replies are pretend and run on timers.
 - The store shows example prices. Buying is switched off.
 
@@ -194,7 +208,7 @@ Words on screen, and anything written to the owner:
 
 Product:
 - Messages are cards and preset replies. No free typing.
-- Challenges and races work in both subjects, and start in the same places in each: the friend sheet from a thread, and Play on a card. A rematch keeps the subject and chapter of the game it answers.
+- Challenges and races work in NSW Economics and Maths (not the Edexcel course yet), and start in the same places in each: the friend sheet from a thread, and Play on a card. A rematch keeps the subject and chapter of the game it answers.
 - Nothing is sold by chance. User data is never sold.
 - Label pretend things as pretend.
 - Sound levels were measured and tuned (`MASTER = 0.4`). Do not change them unless asked.
@@ -206,6 +220,8 @@ Product:
 - Three notes, once the intro's dings, in case they are used elsewhere later: 355.1, 281.8 and 563.7 Hz, in that order. They are exact frequencies, not the nearest standard notes (each is about 29 cents sharp of F4, C#4 and C#5). The second is four semitones below the first, and the third is an octave above the second. They played at 0, 0.3 and 0.6 s as glass dings: the note itself strongest, with quieter overtones at 2 and 3 times its frequency and a very faint one at 2.76 times.
 
 ## Known gaps
+
+- Edexcel Chapter 1 is a draft. A teacher needs to check it before students rely on it. Its two questions on point 5 test specialisation and money, not financial markets.
 
 - Maths in v2 (Learn, Practice, challenges and races) has not been tried on a real iPhone yet. The sample friends' maths pace is a first guess. A maths Learn session, like an Economics one, is lost if the page reloads, though answers already given are saved.
 - The first time maths opens, MathLive (about 820 KB) and its fonts load, which takes a moment on a slow connection. Maths slides stay blank until it arrives.

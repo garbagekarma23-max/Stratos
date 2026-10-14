@@ -146,7 +146,11 @@ function tidySaved() {
   if (!saved.m.h || typeof saved.m.h !== 'object') saved.m.h = {};
   /* best: the fastest finished maths flight for each set of questions ('all' or a chapter id, then the length), in ms. */
   if (!saved.m.best || typeof saved.m.best !== 'object' || Array.isArray(saved.m.best)) saved.m.best = {};
-  if (saved.subject !== 'maths') saved.subject = 'eco';
+  /* A course with units (such as edexcel) keeps its own chapter and records under c, by the course's id.
+     Its answers go in ans with the NSW ones: its point ids start with e-, so they never clash. */
+  if (!saved.c || typeof saved.c !== 'object' || Array.isArray(saved.c)) saved.c = {};
+  COURSES.forEach(id => { if (!saved.c[id] || typeof saved.c[id] !== 'object' || Array.isArray(saved.c[id])) saved.c[id] = {}; });
+  if (!SUBJECTS[saved.subject]) saved.subject = 'eco';
   setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
   if (saved.bg !== 'sky') saved.bg = 'plain';
@@ -157,7 +161,7 @@ function tidySaved() {
   /* A message on a chapter this build does not have moves to the first Economics chapter, so it can still be played. */
   let moved = false;
   FRIENDS.forEach(f => saved.th[f.id].forEach(m => {
-    if (m.ch && !chOf(m.ch)) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
+    if (m.ch && (!chOf(m.ch) || !GAME[subOf(m.ch)])) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
     /* An older build could save a maths challenge with no seed and 8 questions. It gets a seed and the maths size. */
     if (m.kind === 'challenge' && subOf(m.ch) === 'maths' && m.seed == null) {
       m.seed = MAKE.newSeed();
@@ -202,23 +206,53 @@ function streakNow() {
 function weekCount() { return saved.week && saved.week.k === weekKey() ? saved.week.n : 0; }
 
 /* ---------- the content, indexed ----------
-   Two subjects: Economics (content.js) and Maths (maths-content.js). PT holds every point of both, by id.
-   Maths ids start with m, so they never clash with Economics ids.
-   SUB is the subject picked on Home. CH and ALL are its chapters and its points, and change when the subject does. */
+   Three subjects: NSW Economics (content.js), Maths (maths-content.js) and the Edexcel International A Level
+   Economics course (edexcel-content.js, whose points are in the bank in econ-points.js). PT holds every point, by id.
+   Maths ids start with m and bank ids with e-, so they never clash with NSW Economics ids.
+   SUB is the subject picked on Home. CH and ALL are its chapters and its points, and change when the subject does.
+   CH only holds chapters with points. A course with units also keeps every chapter, ready or not, in SUB.units.
+   Each chapter knows its number (n): its place in its unit for a course, its place in the topic otherwise. */
 const PT = {};
 function indexTopic(topic, sub) {
   const all = [];
   topic.chapters.forEach((c, ci) => {
-    c.sub = sub;
+    c.sub = sub; c.n = ci + 1;
     c.points.forEach((p, pi) => { p.ch = c.id; p.ci = ci; p.pi = pi; p.sub = sub; if (p.a) p.a.d = 1; PT[p.id] = p; all.push(p); });
   });
   return {id: sub, topic: topic, ch: topic.chapters, all: all};
 }
-const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths')};
+/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
+   and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
+   the bank so far. A second course that shares points will need each course to keep its own place for a point. */
+function indexCourse(course) {
+  const sub = course.id, ch = [], all = [];
+  const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
+    const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
+      points: c.points.map(id => ECON_POINTS[id])};
+    if (out.points.length) {
+      out.points.forEach((p, pi) => { p.id = c.points[pi]; p.ch = c.id; p.ci = ch.length; p.pi = pi; p.sub = sub; p.a.d = 1; PT[p.id] = p; all.push(p); });
+      ch.push(out);
+    }
+    return out;
+  })}));
+  return {id: sub, topic: course, ch: ch, all: all, units: units};
+}
+const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths'), edexcel: indexCourse(EDEXCEL)};
+const COURSES = ['edexcel'];
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
 function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
 const isMaths = () => SUB.id === 'maths';
-const chOf = id => SUBJECTS.eco.ch.find(c => c.id === id) || SUBJECTS.maths.ch.find(c => c.id === id);
+/* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
+function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }
+/* How a chapter is named: "Chapter 2", or "Unit 1, chapter 2" in a course with units. */
+const chName = c => c.unit ? 'Unit ' + c.unit + ', chapter ' + c.n : 'Chapter ' + c.n;
+/* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
+const isDraft = c => !!c && c.check === 'draft';
+const DRAFT = '<span class="tag">Draft</span>';
+/* Where the subject picked keeps its chapter and records: NSW Economics at the top of saved, Maths in m, a course in c. */
+const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
+/* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
+const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
 const dOf = x => PT[x.p][x.k].d;
 
 /* ---------- what the student knows ----------
@@ -298,17 +332,17 @@ function chStage(ch) {
   if (s.proven === s.n) return {t: 'Proven'};
   return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
-/* The best altitude and best combo for the subject picked. Each subject keeps its own:
-   Economics in bestKm and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers). */
-const records = () => isMaths() ? {km: saved.m.bestKm || 0, combo: saved.m.bestCombo || 0} : {km: saved.bestKm || 0, combo: saved.bestCombo || 0};
+/* The best altitude and best combo for the subject picked. Each subject keeps its own: NSW Economics in bestKm
+   and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers), a course in c[id]. */
+const records = () => ({km: subStore().bestKm || 0, combo: subStore().bestCombo || 0});
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
 /* The chapter Home shows: the one the student last opened, or the first that is not finished.
-   Each subject remembers its own: Economics in cur, Maths in m.cur. */
-function setCur(id) { if (isMaths()) { saved.m.cur = id; save(); } else save({cur: id}); }
+   Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
+function setCur(id) { subStore().cur = id; save(); }
 function curCh() {
-  const id = isMaths() ? saved.m.cur : saved.cur, c = CH.find(x => x.id === id);
+  const id = subStore().cur, c = CH.find(x => x.id === id);
   if (c && chStats(c).pct < 100) return c;
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }

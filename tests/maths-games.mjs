@@ -217,7 +217,7 @@ check((await text('.mcard')).includes('Maths race, first to 4 correct') && (awai
 // --- the weekly table counts both subjects together
 await toFriends();
 await p.click('[data-act="ftab"][data-v="week"]'); await p.waitForTimeout(80);
-check((await text('.lb-cap')) === 'Correct answers since Monday, both subjects.', 'the weekly table says it counts both subjects', R);
+check((await text('.lb-cap')) === 'Correct answers since Monday, all subjects.', 'the weekly table says it counts every subject', R);
 
 check(!errs.length, 'no script errors: ' + errs.join(' | '), R);
 await b.close();

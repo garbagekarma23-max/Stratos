@@ -190,7 +190,7 @@ svg{display:block;flex:none}
 .word{font-size:21px;line-height:1}
 .grow{flex:1;min-width:0}
 .streak{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
-.subject{display:inline-flex;align-items:center;gap:4px;margin:8px 0 0 -10px;padding:6px 6px 6px 10px;border:0;border-radius:999px;background:none;color:var(--ink-2);font-size:14px;font-weight:500}
+.subject{display:inline-flex;align-items:center;gap:4px;text-align:left;margin:8px 0 0 -10px;padding:6px 6px 6px 10px;border:0;border-radius:999px;background:none;color:var(--ink-2);font-size:14px;font-weight:500}
 .subject .ic{width:16px;height:16px}
 .subrow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
 .subrow .subject{margin-top:0}
@@ -229,6 +229,14 @@ svg{display:block;flex:none}
 .pt.is-weak .lab{color:var(--warn)}
 .pts .ghost{margin-top:8px}
 .home .fine{margin-top:22px}
+/* A course with units: the note under its name, the unit headings, chapters still to come, and the Draft label. */
+.cnote{margin-top:4px;font-size:12px;line-height:1.4;color:var(--ink-3)}
+.unit{margin:18px 0 6px;font-size:14px;font-weight:600;line-height:1.3;color:var(--ink-2)}
+.sec > .h2 + .unit{margin-top:0}
+.ch.soon .ch-head .t{font-weight:500;color:var(--ink-2)}
+.ch.soon .ch-head .stage{color:var(--ink-3)}
+.tag{display:inline-block;padding:1px 7px;border:1px solid var(--line-2);border-radius:999px;font-size:11px;font-weight:500;line-height:1.5;color:var(--ink-2);vertical-align:2px;white-space:nowrap}
+.h1 .tag,.kicker .tag{vertical-align:1px}
 
 /* ---------- the question feed, shared by Learn and Practice ---------- */
 .feed{position:absolute;inset:0;z-index:1;overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;overscroll-behavior:contain;scrollbar-width:none;outline:none}
@@ -1490,6 +1498,158 @@ const MATHS = {
               ['x=[n-b]\\or x=[-n-b]', 'Work out the two answers']],
             give: 2, ex: {n: 3, b: 2}}
         ]}
+    ]}
+  ]
+};
+
+/* A bank of Economics points that belongs to no one course.
+   A course (such as edexcel-content.js) lists the ids of the points in each of its chapters. A later course that
+   covers the same ideas, such as a Cambridge course, can list the same ids, and a student's progress on a point
+   is kept by its id, so it would count in both. Nothing shares points yet: only the Edexcel course uses this bank.
+   Ids name the idea, not the course, and start with e- so they never clash with NSW (c1p1) or Maths (m1p1).
+
+   Written fresh in plain words for 16 to 17 year olds. Not copied from any specification, textbook, past paper
+   or mark scheme. A teacher has not checked it yet, which is why the course marks its chapter as a draft.
+
+   Each point has the same parts as in content.js:
+     card      the lines a student reads. A line written as [label, text] shows the label in bold.
+     remember  one line to hold on to.
+     a         the check question, asked straight after the card.
+     b         the practice question, asked later. d is its difficulty, 2 or 3.
+   In every question the correct answer is opts[0]. The order is shuffled on screen. */
+const ECON_POINTS = {
+
+  'e-nature': {title: 'The nature of economics',
+    card: [
+      'Economics is the study of how people, firms and governments choose to use limited resources to meet their wants.',
+      'It is a social science. It studies human behaviour, so economists can rarely run controlled experiments the way chemists can.',
+      'Instead they build models: simple versions of the real world that leave out detail to show how one thing affects another.',
+      'Models assume ceteris paribus, Latin for "other things being equal". Only one thing changes at a time, so its effect can be seen on its own.'
+    ],
+    remember: 'A model changes one thing and holds everything else still.',
+    a: {q: 'Why do economists use the assumption of ceteris paribus?',
+      opts: ['To see the effect of one change on its own', 'To make sure forecasts are always right', 'To include every factor in a market', 'To show what the government ought to do'],
+      why: 'Holding other things equal lets an economist look at one cause on its own. Real markets have many changes at once, so the assumption makes a model simpler, not more accurate.',
+      clue: 'Ceteris paribus means other things being equal.'},
+    b: {d: 2, q: 'A model says a higher bus fare in Nairobi will mean fewer bus trips. The fare rises, but petrol prices jump in the same month and bus trips go up. What best explains this?',
+      opts: ['Other factors changed at the same time', 'The model is wrong and should not be used again', 'Higher bus fares always lead to more trips', 'Economists cannot predict how people behave'],
+      why: 'The model assumed ceteris paribus. Dearer petrol pushed some drivers onto buses, which outweighed the effect of the fare. The model can still be right about the fare on its own.',
+      clue: 'What else changed that month?'}},
+
+  'e-positive': {title: 'Positive and normative economics',
+    card: [
+      'A positive statement is about what is, was or will be. It can be tested against evidence, even if it turns out to be false.',
+      'A normative statement is about what should be. It rests on a value judgement, so evidence alone cannot settle it.',
+      'Words such as should, ought, fair and too much are signs of a normative statement.',
+      'Economists use positive analysis to show the likely effects of a policy. Deciding whether to adopt it is a normative choice.'
+    ],
+    remember: 'Positive can be checked against evidence. Normative needs a value judgement.',
+    a: {q: 'Which of these is a positive statement?',
+      opts: ['Unemployment in India fell last year', 'India ought to spend more on public schools', 'Petrol taxes in India are far too high', 'It is unfair that rents rose so fast in Mumbai'],
+      why: 'Whether unemployment fell can be checked against the data. The other three use ought, too high and unfair, which are value judgements.',
+      clue: 'Which one could you prove right or wrong with data?'},
+    b: {d: 3, q: 'Which statement is normative?',
+      opts: ['Brazil should raise its tax on cigarettes', 'A tax on cigarettes would cut smoking in Brazil', 'Most Brazilians think cigarette taxes are fair', 'Cigarette taxes raise money for Brazil\'s government'],
+      why: 'Should signals a value judgement. The prediction about smoking can be tested. A survey of what people think is positive too: it reports a fact about opinions, and it can be checked.',
+      clue: 'A statement about what people believe can still be checked.'}},
+
+  'e-scarcity': {title: 'Scarcity',
+    card: [
+      'People\'s wants are unlimited, but the resources to meet them are limited. This is the basic economic problem.',
+      'There are four factors of production: land (natural resources), labour (people\'s work), capital (tools, machines and buildings) and enterprise (organising the others and taking the risk).',
+      'Because resources are scarce, every choice has an opportunity cost: the value of the next best option given up.',
+      'Some resources are renewable, such as forests and fish stocks if they are managed well. Others, such as oil and coal, are non-renewable and are gone once used.'
+    ],
+    remember: 'Scarcity forces choices, and every choice costs the next best option.',
+    a: {q: 'What is the opportunity cost of a choice?',
+      opts: ['The value of the next best option given up', 'The total money spent on all the options', 'The price paid for the option that is chosen', 'The value of every option that was not chosen'],
+      why: 'Opportunity cost is only the next best thing you give up, not every option. It is often not money at all.',
+      clue: 'In the end you only give up one alternative: the one you would have picked next.'},
+    b: {d: 2, q: 'Mei, in Singapore, has a free Saturday. Her choices, best first: study for a test, a paid shift worth S$90, a day at the beach. She studies. What is her opportunity cost?',
+      opts: ['The S$90 shift she gave up', 'The day at the beach', 'The S$90 shift and the beach together', 'Nothing, because studying is free'],
+      why: 'Opportunity cost is the next best option, which for Mei is the shift. The beach was her third choice, so it does not count. Studying costs no money, but it still has an opportunity cost.',
+      clue: 'Which option would she have picked if she could not study?'}},
+
+  'e-ppf': {title: 'Production possibility frontiers',
+    card: [
+      'A production possibility frontier (PPF) shows the most an economy can make of two goods using all its resources and technology.',
+      'A point on the curve uses every resource fully. A point inside means some resources are unused or wasted. A point outside cannot be reached for now.',
+      'Moving along the curve shows opportunity cost: more of one good means less of the other. The curve bows outward because resources are not equally good at making both goods.',
+      'The whole curve shifts out when resources or technology grow, and in when they are lost, as after a war or a natural disaster.'
+    ],
+    remember: 'On the curve is efficient. Inside is waste. Outside is out of reach until the curve shifts.',
+    a: {q: 'An economy is at a point inside its PPF. What does this mean?',
+      opts: ['Some resources are unused or used poorly', 'The economy is producing as much as it can', 'The point cannot be reached with today\'s resources', 'Its technology has improved since last year'],
+      why: 'Inside the curve, the economy could make more of both goods with what it already has. Unemployed workers or idle factories put it there.',
+      clue: 'Could the economy make more of both goods without new resources?'},
+    b: {d: 3, q: 'Vietnam moves along its PPF to make more machinery and fewer consumer goods. What is the most likely effect in later years?',
+      opts: ['Its PPF shifts outward as capital grows', 'Its PPF shifts inward as people consume less', 'It moves to a point inside its PPF', 'Its PPF stays in the same place'],
+      why: 'Machines are capital. More capital means more can be made in future, so the curve shifts out. The cost is fewer consumer goods today.',
+      clue: 'Machines are used to make other things.'}},
+
+  'e-special': {title: 'Specialisation, money and financial markets',
+    card: [
+      'Specialisation means focusing on a narrow range of tasks or goods. The division of labour splits making one product into separate tasks, each done by different workers.',
+      'Workers get quicker with practice and less time is lost moving between tasks, so output rises. The costs are dull, repetitive work and depending on others.',
+      'Specialists must trade, and money makes trade easy. It is a medium of exchange, a measure of value, a store of value and a means of deferred payment (paying later, as with a loan).',
+      'Financial markets, such as banks and stock markets, move money from savers to people and firms who want to borrow and invest.'
+    ],
+    remember: 'Specialists rely on trade, and money is what makes trade work.',
+    a: {q: 'What is the main reason the division of labour raises output?',
+      opts: ['Workers get faster at the task they repeat', 'Each worker makes the whole product alone', 'Firms can pay each worker a lower wage', 'Workers stop needing to trade with others'],
+      why: 'Repeating one task builds speed and skill, and no time is lost changing tasks. Splitting the work makes people more dependent on trade, not less.',
+      clue: 'Think about doing the same job many times a day.'},
+    b: {d: 2, q: 'A family in Kenya puts some of each week\'s pay into a mobile money account to buy a fridge next year. Which function of money is this?',
+      opts: ['A store of value', 'A medium of exchange', 'A measure of value', 'A means of deferred payment'],
+      why: 'Holding money now to spend later uses it as a store of value. Deferred payment is paying for something after you get it, such as with a loan.',
+      clue: 'The money is being kept to use later.'}},
+
+  'e-systems': {title: 'Free market, mixed and command economies',
+    card: [
+      ['Free market', 'private owners and prices decide what is made. Adam Smith argued that self-interest in free markets ends up serving others, as if guided by an invisible hand.'],
+      'Friedrich Hayek argued that prices carry information no planner could collect, so the state\'s role should be limited.',
+      ['Command', 'the state owns most resources and plans what is made. Karl Marx argued for shared ownership. Plans often lead to shortages and waste, as planners lack the signals prices give.'],
+      ['Mixed', 'markets do most of the work, while the government provides some goods and services and sets rules. Almost every economy today is mixed, from Germany to India.']
+    ],
+    remember: 'Market: prices decide. Command: the state decides. Mixed: both do.',
+    a: {q: 'In a command economy, who mainly decides what is produced?',
+      opts: ['The government, through a central plan', 'Consumers, through what they buy', 'Private firms, chasing profit', 'Banks, by choosing who gets loans'],
+      why: 'In a command economy the state owns most resources and sets output targets. In a market economy, consumers and firms make these choices through prices.',
+      clue: 'Command means orders from the top.'},
+    b: {d: 3, q: 'A planning office sets a shoe factory a target for the number of pairs it makes. Shops fill with small sizes while larger sizes run out. What problem does this show?',
+      opts: ['Planners lack the information prices give', 'Prices change too often for firms to plan', 'Private firms make too much profit on shoes', 'The government taxes shoe factories too much'],
+      why: 'In a market, the shortage of large sizes would push their price up and tell firms to make more. Without prices, planners and factories miss that signal, so targets are met while people go without.',
+      clue: 'What would happen to the price of large shoes in a market?'}}
+};
+
+/* A course: Pearson Edexcel International A Level Economics, the AS year (Units 1 and 2).
+   Stratos is not affiliated with or endorsed by Pearson. No Pearson logos or branding are used.
+
+   A course holds no study content of its own. Each chapter lists the ids of its points, which live in the bank
+   in econ-points.js, so a point can later belong to more than one course.
+   A chapter with no points shows on Home as Coming soon and cannot be opened.
+   check is 'draft' until a teacher has checked the chapter, then 'checked'. A draft chapter with points shows a
+   Draft label in the app. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
+const EDEXCEL = {
+  id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', short: 'AS Economics',
+  note: 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.',
+  units: [
+    {title: 'Markets in action', chapters: [
+      {id: 'x1c1', title: 'Introductory concepts', check: 'draft',
+        points: ['e-nature', 'e-positive', 'e-scarcity', 'e-ppf', 'e-special', 'e-systems']},
+      {id: 'x1c2', title: 'Consumer behaviour and demand', check: 'draft', points: []},
+      {id: 'x1c3', title: 'Supply', check: 'draft', points: []},
+      {id: 'x1c4', title: 'Price determination', check: 'draft', points: []},
+      {id: 'x1c5', title: 'Market failure', check: 'draft', points: []},
+      {id: 'x1c6', title: 'Government intervention', check: 'draft', points: []}
+    ]},
+    {title: 'Macroeconomic performance and policy', chapters: [
+      {id: 'x2c1', title: 'Measures of economic performance', check: 'draft', points: []},
+      {id: 'x2c2', title: 'Aggregate demand', check: 'draft', points: []},
+      {id: 'x2c3', title: 'Aggregate supply', check: 'draft', points: []},
+      {id: 'x2c4', title: 'National income', check: 'draft', points: []},
+      {id: 'x2c5', title: 'Economic growth', check: 'draft', points: []},
+      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'draft', points: []}
     ]}
   ]
 };
@@ -2809,7 +2969,11 @@ function tidySaved() {
   if (!saved.m.h || typeof saved.m.h !== 'object') saved.m.h = {};
   /* best: the fastest finished maths flight for each set of questions ('all' or a chapter id, then the length), in ms. */
   if (!saved.m.best || typeof saved.m.best !== 'object' || Array.isArray(saved.m.best)) saved.m.best = {};
-  if (saved.subject !== 'maths') saved.subject = 'eco';
+  /* A course with units (such as edexcel) keeps its own chapter and records under c, by the course's id.
+     Its answers go in ans with the NSW ones: its point ids start with e-, so they never clash. */
+  if (!saved.c || typeof saved.c !== 'object' || Array.isArray(saved.c)) saved.c = {};
+  COURSES.forEach(id => { if (!saved.c[id] || typeof saved.c[id] !== 'object' || Array.isArray(saved.c[id])) saved.c[id] = {}; });
+  if (!SUBJECTS[saved.subject]) saved.subject = 'eco';
   setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
   if (saved.bg !== 'sky') saved.bg = 'plain';
@@ -2820,7 +2984,7 @@ function tidySaved() {
   /* A message on a chapter this build does not have moves to the first Economics chapter, so it can still be played. */
   let moved = false;
   FRIENDS.forEach(f => saved.th[f.id].forEach(m => {
-    if (m.ch && !chOf(m.ch)) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
+    if (m.ch && (!chOf(m.ch) || !GAME[subOf(m.ch)])) { m.ch = SUBJECTS.eco.ch[0].id; moved = true; }
     /* An older build could save a maths challenge with no seed and 8 questions. It gets a seed and the maths size. */
     if (m.kind === 'challenge' && subOf(m.ch) === 'maths' && m.seed == null) {
       m.seed = MAKE.newSeed();
@@ -2865,23 +3029,53 @@ function streakNow() {
 function weekCount() { return saved.week && saved.week.k === weekKey() ? saved.week.n : 0; }
 
 /* ---------- the content, indexed ----------
-   Two subjects: Economics (content.js) and Maths (maths-content.js). PT holds every point of both, by id.
-   Maths ids start with m, so they never clash with Economics ids.
-   SUB is the subject picked on Home. CH and ALL are its chapters and its points, and change when the subject does. */
+   Three subjects: NSW Economics (content.js), Maths (maths-content.js) and the Edexcel International A Level
+   Economics course (edexcel-content.js, whose points are in the bank in econ-points.js). PT holds every point, by id.
+   Maths ids start with m and bank ids with e-, so they never clash with NSW Economics ids.
+   SUB is the subject picked on Home. CH and ALL are its chapters and its points, and change when the subject does.
+   CH only holds chapters with points. A course with units also keeps every chapter, ready or not, in SUB.units.
+   Each chapter knows its number (n): its place in its unit for a course, its place in the topic otherwise. */
 const PT = {};
 function indexTopic(topic, sub) {
   const all = [];
   topic.chapters.forEach((c, ci) => {
-    c.sub = sub;
+    c.sub = sub; c.n = ci + 1;
     c.points.forEach((p, pi) => { p.ch = c.id; p.ci = ci; p.pi = pi; p.sub = sub; if (p.a) p.a.d = 1; PT[p.id] = p; all.push(p); });
   });
   return {id: sub, topic: topic, ch: topic.chapters, all: all};
 }
-const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths')};
+/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
+   and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
+   the bank so far. A second course that shares points will need each course to keep its own place for a point. */
+function indexCourse(course) {
+  const sub = course.id, ch = [], all = [];
+  const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
+    const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
+      points: c.points.map(id => ECON_POINTS[id])};
+    if (out.points.length) {
+      out.points.forEach((p, pi) => { p.id = c.points[pi]; p.ch = c.id; p.ci = ch.length; p.pi = pi; p.sub = sub; p.a.d = 1; PT[p.id] = p; all.push(p); });
+      ch.push(out);
+    }
+    return out;
+  })}));
+  return {id: sub, topic: course, ch: ch, all: all, units: units};
+}
+const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths'), edexcel: indexCourse(EDEXCEL)};
+const COURSES = ['edexcel'];
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
 function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
 const isMaths = () => SUB.id === 'maths';
-const chOf = id => SUBJECTS.eco.ch.find(c => c.id === id) || SUBJECTS.maths.ch.find(c => c.id === id);
+/* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
+function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }
+/* How a chapter is named: "Chapter 2", or "Unit 1, chapter 2" in a course with units. */
+const chName = c => c.unit ? 'Unit ' + c.unit + ', chapter ' + c.n : 'Chapter ' + c.n;
+/* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
+const isDraft = c => !!c && c.check === 'draft';
+const DRAFT = '<span class="tag">Draft</span>';
+/* Where the subject picked keeps its chapter and records: NSW Economics at the top of saved, Maths in m, a course in c. */
+const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
+/* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
+const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
 const dOf = x => PT[x.p][x.k].d;
 
 /* ---------- what the student knows ----------
@@ -2961,17 +3155,17 @@ function chStage(ch) {
   if (s.proven === s.n) return {t: 'Proven'};
   return {t: 'Learned, ' + s.proven + ' of ' + s.n + ' proven'};
 }
-/* The best altitude and best combo for the subject picked. Each subject keeps its own:
-   Economics in bestKm and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers). */
-const records = () => isMaths() ? {km: saved.m.bestKm || 0, combo: saved.m.bestCombo || 0} : {km: saved.bestKm || 0, combo: saved.bestCombo || 0};
+/* The best altitude and best combo for the subject picked. Each subject keeps its own: NSW Economics in bestKm
+   and bestCombo, Maths in m.bestKm and m.bestCombo (its combo counts lines, not answers), a course in c[id]. */
+const records = () => ({km: subStore().bestKm || 0, combo: subStore().bestCombo || 0});
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
 /* The chapter Home shows: the one the student last opened, or the first that is not finished.
-   Each subject remembers its own: Economics in cur, Maths in m.cur. */
-function setCur(id) { if (isMaths()) { saved.m.cur = id; save(); } else save({cur: id}); }
+   Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
+function setCur(id) { subStore().cur = id; save(); }
 function curCh() {
-  const id = isMaths() ? saved.m.cur : saved.cur, c = CH.find(x => x.id === id);
+  const id = subStore().cur, c = CH.find(x => x.id === id);
   if (c && chStats(c).pct < 100) return c;
   return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
 }
@@ -3556,10 +3750,12 @@ function mathsMeans(pid) {
 }
 const MATHS_RULE = 'Proven means three right answers in a row on this point, each with different numbers. One right answer does not show you can do the type. A wrong answer makes the point weak and starts the count again.';
 
-function chRow(c, i) {
+function chRow(c) {
+  /* A chapter with no points yet is Coming soon: the row shows where it sits in the course, and it cannot be opened. */
+  if (!c.points.length) return '<li class="ch soon"><button class="ch-head" type="button" disabled><span class="n">' + c.n + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">Coming soon</span><span></span></button></li>';
   const s = chStats(c), g = chStage(c), open = ui.open === c.id;
   let h = '<li class="ch' + (open ? ' open' : '') + '"><button class="ch-head" type="button" data-act="chtoggle" data-ch="' + c.id + '" aria-expanded="' + open + '">' +
-    '<span class="n">' + (i + 1) + '</span><span class="t">' + esc(c.title) + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
+    '<span class="n">' + c.n + '</span><span class="t">' + esc(c.title) + (isDraft(c) ? ' ' + DRAFT : '') + '</span><span class="stage">' + esc(g.t) + '</span>' + IC.down + '</button>';
   if (open) {
     h += '<ul class="pts">' + c.points.map(p => {
       const st = statusOf(p.id);
@@ -3572,7 +3768,7 @@ function chRow(c, i) {
 }
 
 function renderHome() {
-  const ch = curCh(), ci = CH.indexOf(ch), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
+  const ch = curCh(), st = chStats(ch), step = nextStep(), weak = weakPoints(), streak = streakNow(), unread = unreadCount();
   if (ui.cur !== ch.id) { ui.cur = ch.id; ui.open = ch.id; }       /* the list opens at the chapter you are on */
   /* The bar starts at the widths it had last time, then slides to the new ones. */
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
@@ -3585,8 +3781,9 @@ function renderHome() {
     '</header>' +
     '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(SUB.topic.course + ', ' + SUB.topic.year) + IC.down + '</button>' +
       (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
+    (SUB.topic.note ? '<p class="cnote">' + esc(SUB.topic.note) + '</p>' : '') +
     '<section class="hero" aria-label="Your chapter">' +
-      '<p class="kicker">' + esc(SUB.topic.name) + ', chapter ' + (ci + 1) + ' of ' + CH.length + '</p>' +
+      '<p class="kicker">' + (ch.unit ? esc(chName(ch)) + ' of ' + ch.of : esc(SUB.topic.name) + ', chapter ' + ch.n + ' of ' + CH.length) + (isDraft(ch) ? ' ' + DRAFT : '') + '</p>' +
       '<h1 class="h1">' + esc(ch.title) + '</h1>' +
       /* The bar: the pale part is points learned, the blue part points proven. The words under it say the same. */
       '<div class="bar2" role="img" aria-label="' + st.learned + ' of ' + st.n + ' points learned. ' + st.proven + ' of ' + st.n + ' proven."><i class="b-l" style="width:' + from.l + '%"></i><i class="b-p" style="width:' + from.p + '%"></i></div>' +
@@ -3597,8 +3794,13 @@ function renderHome() {
   if (weak.length && step.label.indexOf('Fix') !== 0) {
     h += '<button class="weakrow" type="button" data-act="fixweak"><i class="st weak"></i><span><b>' + plural(weak.length, 'weak point') + '</b><span class="names">' + esc(names(weak)) + '</span></span>' + IC.right + '</button>';
   }
-  h += '<section class="sec"><h2 class="h2">Chapters</h2><ol class="ch-list">' + CH.map(chRow).join('') + '</ol></section>' +
-    '<p class="fine">' + (isMaths()
+  /* A course with units lists every chapter under its unit, ready or not, so the shape of the whole year shows. */
+  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
+    ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
+    : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
+    '<p class="fine">' + (SUB.units
+      ? 'The AS year has 12 chapters. Chapter 1 is a draft until a teacher has checked it. The rest are coming soon. Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
   views.home.innerHTML = h;
@@ -3629,18 +3831,20 @@ function pointSheet(pid) {
     '<p class="statusline"><i class="st ' + st + '"></i><span>' + STATUS[st] + '. ' + STATUS_MEANS[st] + '</span></p>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
     '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
-    '<p class="sub">Chapter ' + (p.ci + 1) + ': ' + esc(chOf(p.ch).title) + '</p>' +
+    '<p class="sub">' + esc(chName(chOf(p.ch))) + ': ' + esc(chOf(p.ch).title) + '</p>' +
+    (isDraft(chOf(p.ch)) ? '<p class="sub">' + DRAFT + ' This chapter has not been checked by a teacher yet.</p>' : '') +
     '<div class="cta">' + (st === 'new'
       ? '<button class="primary" type="button" data-act="learnpoint" data-p="' + pid + '">Check this point</button>'
       : '<button class="primary" type="button" data-act="pracch" data-ch="' + p.ch + '">Practise this chapter</button><button class="ghost" type="button" data-act="learnpoint" data-p="' + pid + '">Check this point again</button>') +
     '</div>');
 }
 
-/* The subject sheet. The two loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
+/* The subject sheet. The three loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
 ACT.subject = () => {
   const rows = [
     ['The Global Economy', 'Economics, Year 12', 'eco'],
     ['Equations', 'Maths, Year 11', 'maths'],
+    [EDEXCEL.course + ', ' + EDEXCEL.year, EDEXCEL.note, 'edexcel'],
     ['Australia\'s Place in the Global Economy', 'Economics, Year 12'],
     ['Economic Issues', 'Economics, Year 12'],
     ['Economic Policies and Management', 'Economics, Year 12'],
@@ -3650,7 +3854,7 @@ ACT.subject = () => {
   ];
   openSheet('Subjects and topics',
     '<div class="picks">' + rows.map(r => '<button class="pick" type="button"' + (r[2] ? ' data-act="setsub" data-sub="' + r[2] + '"' + (SUB.id === r[2] ? ' aria-current="true"' : '') : ' disabled') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + (!r[2] ? 'Soon' : SUB.id === r[2] ? 'Open' : 'Switch') + '</span></button>').join('') + '</div>' +
-    '<p class="fine">This test has two topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
+    '<p class="fine">This test has three topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
 };
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
@@ -3664,7 +3868,7 @@ function useSubject(id, quiet) {
   ui.cur = null; ui.open = null; ui.bar = null;
   if (id === 'maths') loadMaths();
   paintSearchFor();
-  if (!quiet) toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+  if (!quiet) toast('Switched to ' + subTitle());
   if (!quiet) { closeAllPages(); go('home'); views.home.scrollTop = 0; }
 }
 
@@ -3680,7 +3884,7 @@ function qEl(S, i, learn) {
     meta = '<span>Check</span><span>' + esc(p.title) + '</span>';
     acts = actBtn('clue', IC.clue, 'Clue');
   } else {
-    meta = '<span>Question ' + (i + 1) + (S.mode !== 'race' && !it.back ? ' of ' + S.total : '') + '</span><span>Chapter ' + (p.ci + 1) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '');
+    meta = '<span>Question ' + (i + 1) + (S.mode !== 'race' && !it.back ? ' of ' + S.total : '') + '</span><span>' + esc(chName(chOf(p.ch))) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '');
     if (S.mode === 'mix' || S.mode === 'chapter') acts = actBtn('clue', IC.clue, 'Clue') + actBtn('reveal', IC.eye, 'Answer') + (it.back ? '' : actBtn('skip', IC.skip, 'Skip'));
   }
   sec.className = 'slide q'; sec.dataset.i = i;
@@ -3808,7 +4012,7 @@ function cardEl(i) {
   const p = PT[L.items[i].p], ch = chOf(p.ch), sec = document.createElement('section');
   sec.className = 'slide card'; sec.dataset.i = i;
   sec.innerHTML =
-    '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span></p>' +
+    '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span>' + (isDraft(ch) ? DRAFT : '') + '</p>' +
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
     '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
@@ -3832,12 +4036,12 @@ function learnEndEl() {
   }
   sec.className = 'slide endslide';
   sec.innerHTML =
-    '<p class="meta"><span>Chapter ' + (CH.indexOf(ch) + 1) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
+    '<p class="meta"><span>' + esc(chName(ch)) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +
     '<p class="lede">' + body + '</p>' +
     '<div class="cta">' +
       '<button class="primary" type="button" data-act="pracch" data-ch="' + ch.id + '">Practise this chapter</button>' +
-      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '') +
+      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to ' + esc(chName(nextCh).toLowerCase()) + '</button>' : '') +
       (L.mode === 'review' ? '' : '<button class="textbtn" type="button" data-act="review" data-ch="' + ch.id + '">Read the cards again</button>') +
     '</div>';
   return sec;
@@ -3884,7 +4088,7 @@ function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec
 function paintLearnBar() {
   if (!L) return;
   const ch = chOf(L.ch), v = viewing(learnFeed), vi = v && v.dataset.i !== undefined ? +v.dataset.i : -1;
-  chPickT.textContent = (CH.indexOf(ch) + 1) + '. ' + ch.title;
+  chPickT.textContent = ch.n + '. ' + ch.title;
   let cur = -1;
   if (vi >= 0) for (let i = vi; i < L.items.length; i++) if (L.items[i].t === 'q' || L.items[i].t === 'mq') { cur = i; break; }
   segsEl.innerHTML = L.items.map((it, i) => {
@@ -3902,9 +4106,8 @@ learnFeed.addEventListener('scroll', () => {
 }, {passive: true});
 
 ACT.chpick = () => {
-  openSheet('Chapters', '<div class="picks">' + CH.map((c, i) => {
-    const s = chStats(c);
-    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
+  openSheet('Chapters', '<div class="picks">' + CH.map(c => {
+    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
   }).join('') + '</div>');
 };
 
@@ -4215,7 +4418,7 @@ function renderStart() {
     '<p class="label" id="fromL">Questions from</p>' +
     '<div role="radiogroup" aria-labelledby="fromL">' +
       choice('mix', 'Everything I have learned', plural(learned.length, 'point'), plural(all.length, 'question')) +
-      choice('chapter', 'One chapter', (CH.indexOf(sc) + 1) + '. ' + sc.title, plural(one.length, 'question')) +
+      choice('chapter', 'One chapter', sc.n + '. ' + sc.title, plural(one.length, 'question')) +
     '</div>' +
     (ui.scope === 'chapter' && chs.length > 1 ? '<button class="textbtn" type="button" data-act="scopech">Change chapter</button>' : '') +
     (lens.length > 1 ? '<div class="lenrow"><span class="label flat" id="lenL">Length</span><div class="seg3" role="group" aria-labelledby="lenL">' + lens.map(v => '<button type="button" data-act="len" data-v="' + v + '" aria-pressed="' + (ui.len === v) + '">' + (v || 'All ' + pool.length) + '</button>').join('') + '</div></div>' : '') +
@@ -4227,9 +4430,9 @@ ACT.golearn = () => openLearn(curCh().id);
 ACT.scope = b => { ui.scope = b.dataset.v; renderStart(); const again = $('.choice[data-v="' + ui.scope + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.len = b => { ui.len = +b.dataset.v; renderStart(); const again = $('.seg3 [data-v="' + ui.len + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.scopech = () => {
-  openSheet('Pick a chapter', '<div class="picks">' + CH.map((c, i) => {
+  openSheet('Pick a chapter', '<div class="picks">' + CH.map(c => {
     const s = chStats(c);
-    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
+    return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
   }).join('') + '</div>');
 };
 ACT.setscopech = b => { ui.scopeCh = b.dataset.ch; ui.scope = 'chapter'; closeSheet(); renderStart(); };
@@ -4249,7 +4452,7 @@ function startPractice(o) {
   /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
   if ((o.mode === 'challenge' || o.mode === 'race') && subOf(o.ch) !== SUB.id) {
     useSubject(subOf(o.ch), true);
-    toast('Switched to ' + SUB.topic.course + ': ' + SUB.topic.name);
+    toast('Switched to ' + subTitle());
   }
   /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
   if (isMaths()) { startMathsFlight(o); return; }
@@ -4275,14 +4478,14 @@ function launchCard() {
   const f = P.friend ? friend(P.friend).name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
   if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
-  if (P.mode === 'chapter') return {title: 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1), line: plural(P.total, 'question') + ', weak points first'};
+  if (P.mode === 'chapter') return {title: chName(chOf(P.ch)), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
   const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
   if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
   if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
-  if (P.mode === 'chapter') return 'Chapter ' + (CH.indexOf(chOf(P.ch)) + 1);
+  if (P.mode === 'chapter') return chName(chOf(P.ch));
   return 'Mixed flight';
 }
 function mountRun() {
@@ -4535,9 +4738,10 @@ function finish() {
   P.done = true;
   clearTimeout(raceTimer);
   /* Each subject keeps its own records, so a maths flight is measured against maths flights only. */
-  P.pb = P.alt > 0 && P.alt > (P.maths ? saved.m.bestKm || 0 : saved.bestKm || 0);
+  const rec = subStore();
+  P.pb = P.alt > 0 && P.alt > (rec.bestKm || 0);
   if (P.maths) { mpEnd(); save(); }
-  else save({bestKm: Math.max(saved.bestKm || 0, P.alt), bestCombo: Math.max(saved.bestCombo || 0, P.best)});
+  else { rec.bestKm = Math.max(rec.bestKm || 0, P.alt); rec.bestCombo = Math.max(rec.bestCombo || 0, P.best); save(); }
   postResult();
 }
 function summaryEl() {
@@ -4546,7 +4750,7 @@ function summaryEl() {
   const seen = [];
   P.items.forEach(it => { if (seen.indexOf(it.p) < 0) seen.push(it.p); });
   const still = seen.filter(pid => statusOf(pid) === 'weak').map(pid => PT[pid]);
-  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => 'Chapter ' + (CH.indexOf(c) + 1) + ' is proven. ' + (P.maths ? 'Every point in it is proven.' : 'Every question in it is right.'));
+  const proved = CH.filter((c, i) => P.before[i] < 100 && chStats(c).pct === 100).map(c => chName(c) + ' is proven. ' + (P.maths ? 'Every point in it is proven.' : 'Every question in it is right.'));
   const weakLine = '<p class="sumline">' + (still.length ? 'Still weak: ' + esc(names(still)) + '.' : 'No weak points left from this flight.') + '</p>' + proved.map(t => '<p class="sumline strong">' + t + '</p>').join('');
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
@@ -5130,7 +5334,7 @@ PAGE.friends = () => {
   let body;
   if (ui.ftab === 'week') {
     const rows = FRIENDS.map(f => ({name: f.name, n: f.week})).concat([{name: saved.name || 'You', n: weekCount(), you: true}]).sort((a, b) => b.n - a.n);
-    body = '<p class="lb-cap">Correct answers since Monday, both subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
+    body = '<p class="lb-cap">Correct answers since Monday, all subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
       '<li' + (r.you ? ' class="you-row"' : '') + '><span class="rank">' + (i + 1) + '</span><span class="avatar">' + esc(r.name.charAt(0).toUpperCase()) + '</span><span class="nm">' + esc(r.name) + (r.you && saved.name ? ' (you)' : '') + '</span><span class="sc">' + r.n + '</span></li>').join('') + '</ol>';
   } else {
     body = '<div class="rows">' + FRIENDS.slice().sort((a, b) => lastT(b) - lastT(a)).map(f => {
@@ -5154,7 +5358,7 @@ PAGE.thread = f => {
 };
 /* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || SUB.id, G = GAME[sub], again = !!b.closest('#sheet');
+  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || (GAME[SUB.id] ? SUB.id : 'eco'), G = GAME[sub], again = !!b.closest('#sheet');
   const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
     '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
   openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
@@ -5184,7 +5388,7 @@ ACT.reply = b => {
   if (text === 'Rematch?') {
     /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
        (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : GAME[SUB.id] ? curCh().id : SUBJECTS.eco.ch[0].id;
     reactLater(f, 'You are on', 1500);
     later(3400, () => {
       const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};
@@ -5318,12 +5522,13 @@ function indexEntry(p) {
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
   return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
 }
-const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides']};
+const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
+  edexcel: ['opportunity cost', 'PPF', 'normative', 'money', 'invisible hand']};
 function paintSearchFor() {
   INDEX = ALL.map(indexEntry);
   qChips.innerHTML = CHIPS[SUB.id].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
-  qIn.placeholder = 'Search ' + SUB.topic.name;
-  qIn.setAttribute('aria-label', 'Search ' + SUB.topic.name);
+  qIn.placeholder = 'Search ' + (SUB.topic.short || SUB.topic.name);
+  qIn.setAttribute('aria-label', 'Search ' + (SUB.topic.short || SUB.topic.name));
   qIn.value = '';
   runSearch();
 }
@@ -5348,7 +5553,7 @@ function runSearch() {
   if (!hits.length) { qOut.innerHTML = '<p class="nores">Nothing in this topic matches "' + esc(raw) + '".</p>'; return; }
   qOut.innerHTML = '<p class="count-l">' + plural(hits.length, 'point') + '</p><div class="results">' + hits.map(h => {
     const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => l.toLowerCase().indexOf(t) >= 0)) || e.lines[0];
-    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">Chapter ' + (e.p.ci + 1) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
+    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
   }).join('') + '</div>';
 }
 qIn.addEventListener('input', runSearch);
