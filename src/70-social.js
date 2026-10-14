@@ -110,7 +110,7 @@ PAGE.friends = () => {
   let body;
   if (ui.ftab === 'week') {
     const rows = FRIENDS.map(f => ({name: f.name, n: f.week})).concat([{name: saved.name || 'You', n: weekCount(), you: true}]).sort((a, b) => b.n - a.n);
-    body = '<p class="lb-cap">Correct answers since Monday, both subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
+    body = '<p class="lb-cap">Correct answers since Monday, all subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
       '<li' + (r.you ? ' class="you-row"' : '') + '><span class="rank">' + (i + 1) + '</span><span class="avatar">' + esc(r.name.charAt(0).toUpperCase()) + '</span><span class="nm">' + esc(r.name) + (r.you && saved.name ? ' (you)' : '') + '</span><span class="sc">' + r.n + '</span></li>').join('') + '</ol>';
   } else {
     body = '<div class="rows">' + FRIENDS.slice().sort((a, b) => lastT(b) - lastT(a)).map(f => {
@@ -134,7 +134,7 @@ PAGE.thread = f => {
 };
 /* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || SUB.id, G = GAME[sub], again = !!b.closest('#sheet');
+  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || (GAME[SUB.id] ? SUB.id : 'eco'), G = GAME[sub], again = !!b.closest('#sheet');
   const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
     '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
   openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
@@ -164,7 +164,7 @@ ACT.reply = b => {
   if (text === 'Rematch?') {
     /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
        (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : GAME[SUB.id] ? curCh().id : SUBJECTS.eco.ch[0].id;
     reactLater(f, 'You are on', 1500);
     later(3400, () => {
       const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};
@@ -298,12 +298,13 @@ function indexEntry(p) {
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
   return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
 }
-const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides']};
+const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
+  edexcel: ['opportunity cost', 'PPF', 'normative', 'money', 'invisible hand']};
 function paintSearchFor() {
   INDEX = ALL.map(indexEntry);
   qChips.innerHTML = CHIPS[SUB.id].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
-  qIn.placeholder = 'Search ' + SUB.topic.name;
-  qIn.setAttribute('aria-label', 'Search ' + SUB.topic.name);
+  qIn.placeholder = 'Search ' + (SUB.topic.short || SUB.topic.name);
+  qIn.setAttribute('aria-label', 'Search ' + (SUB.topic.short || SUB.topic.name));
   qIn.value = '';
   runSearch();
 }
@@ -328,7 +329,7 @@ function runSearch() {
   if (!hits.length) { qOut.innerHTML = '<p class="nores">Nothing in this topic matches "' + esc(raw) + '".</p>'; return; }
   qOut.innerHTML = '<p class="count-l">' + plural(hits.length, 'point') + '</p><div class="results">' + hits.map(h => {
     const e = h.e, st = statusOf(e.p.id), line = e.lines.find(l => terms.some(t => l.toLowerCase().indexOf(t) >= 0)) || e.lines[0];
-    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">Chapter ' + (e.p.ci + 1) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
+    return '<button class="res" type="button" data-act="point" data-p="' + e.p.id + '"><i class="st ' + st + '"></i><span><span class="t">' + esc(e.p.title) + '</span><span class="c">' + esc(chName(chOf(e.p.ch))) + ', ' + STATUS[st].toLowerCase() + '</span><span class="snip">' + marked(line, terms) + '</span></span></button>';
   }).join('') + '</div>';
 }
 qIn.addEventListener('input', runSearch);

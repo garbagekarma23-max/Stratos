@@ -9,6 +9,8 @@ How the pieces fit:
   src/body.html        the fixed parts of the page: the five views, the tab bar, the sheet
   src/content.js       the study content: chapters, points, cards and questions
   src/maths-content.js the maths content: chapters, points, worked examples and question templates
+  src/econ-points.js   a bank of Economics points that belongs to no one course, so a course can share them
+  src/edexcel-content.js the Edexcel International A Level Economics course: units, chapters and the point ids in each
   src/10-core.js ...   the script, in the order listed in JS below
   src/80-intro.js      the intro: the word Stratos with the rocket flying round it, each time the app opens
   src/recordings.json  the three sound recordings, stored as text
@@ -22,7 +24,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
-JS = ['content.js', 'maths-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
+JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
       '60-practice.js', '62-maths-practice.js', '70-social.js', '80-intro.js', '90-boot.js']
 

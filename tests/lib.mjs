@@ -12,8 +12,13 @@ const EXE = process.env.CHROMIUM_PATH || (fs.existsSync('/opt/pw-browsers/chromi
 fs.mkdirSync(SHOTS, {recursive: true});
 const src = fs.readFileSync(new URL('../src/content.js', import.meta.url), 'utf8');
 export const TOPIC = new Function(src + '; return TOPIC;')();
+// The Economics point bank and the Edexcel course that lists its points (econ-points.js, edexcel-content.js).
+export const BANK = new Function(fs.readFileSync(new URL('../src/econ-points.js', import.meta.url), 'utf8') + '; return ECON_POINTS;')();
+export const EDEXCEL = new Function(fs.readFileSync(new URL('../src/edexcel-content.js', import.meta.url), 'utf8') + '; return EDEXCEL;')();
+// Every multiple-choice question, by its text, so pick() can find the right answer in either Economics course.
 export const KEYED = new Map();
-for (const ch of TOPIC.chapters) for (const p of ch.points) for (const k of ['a', 'b']) {
+const points = TOPIC.chapters.flatMap(ch => ch.points).concat(Object.keys(BANK).map(id => Object.assign({id: id}, BANK[id])));
+for (const p of points) for (const k of ['a', 'b']) {
   if (KEYED.has(p[k].q)) throw new Error('two questions share the text: ' + p[k].q);
   KEYED.set(p[k].q, {right: p[k].opts[0], id: p.id + k, p: p, k: k});
 }

@@ -10,7 +10,7 @@ function qEl(S, i, learn) {
     meta = '<span>Check</span><span>' + esc(p.title) + '</span>';
     acts = actBtn('clue', IC.clue, 'Clue');
   } else {
-    meta = '<span>Question ' + (i + 1) + (S.mode !== 'race' && !it.back ? ' of ' + S.total : '') + '</span><span>Chapter ' + (p.ci + 1) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '');
+    meta = '<span>Question ' + (i + 1) + (S.mode !== 'race' && !it.back ? ' of ' + S.total : '') + '</span><span>' + esc(chName(chOf(p.ch))) + '</span>' + (it.back ? '<span class="back">Back again</span>' : '');
     if (S.mode === 'mix' || S.mode === 'chapter') acts = actBtn('clue', IC.clue, 'Clue') + actBtn('reveal', IC.eye, 'Answer') + (it.back ? '' : actBtn('skip', IC.skip, 'Skip'));
   }
   sec.className = 'slide q'; sec.dataset.i = i;
@@ -138,7 +138,7 @@ function cardEl(i) {
   const p = PT[L.items[i].p], ch = chOf(p.ch), sec = document.createElement('section');
   sec.className = 'slide card'; sec.dataset.i = i;
   sec.innerHTML =
-    '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span></p>' +
+    '<p class="meta"><span>Point ' + (p.pi + 1) + ' of ' + ch.points.length + '</span>' + (isDraft(ch) ? DRAFT : '') + '</p>' +
     '<h2 class="ctitle">' + esc(p.title) + '</h2>' +
     '<div class="lines">' + p.card.map(lineHtml).join('') + '</div>' +
     '<p class="rem"><b>Remember</b>' + esc(p.remember) + '</p>' +
@@ -162,12 +162,12 @@ function learnEndEl() {
   }
   sec.className = 'slide endslide';
   sec.innerHTML =
-    '<p class="meta"><span>Chapter ' + (CH.indexOf(ch) + 1) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
+    '<p class="meta"><span>' + esc(chName(ch)) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +
     '<p class="lede">' + body + '</p>' +
     '<div class="cta">' +
       '<button class="primary" type="button" data-act="pracch" data-ch="' + ch.id + '">Practise this chapter</button>' +
-      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to chapter ' + (CH.indexOf(nextCh) + 1) + '</button>' : '') +
+      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to ' + esc(chName(nextCh).toLowerCase()) + '</button>' : '') +
       (L.mode === 'review' ? '' : '<button class="textbtn" type="button" data-act="review" data-ch="' + ch.id + '">Read the cards again</button>') +
     '</div>';
   return sec;
@@ -214,7 +214,7 @@ function learnClue() { const c = learnCurrent(); if (!c) return; paintClue(c.sec
 function paintLearnBar() {
   if (!L) return;
   const ch = chOf(L.ch), v = viewing(learnFeed), vi = v && v.dataset.i !== undefined ? +v.dataset.i : -1;
-  chPickT.textContent = (CH.indexOf(ch) + 1) + '. ' + ch.title;
+  chPickT.textContent = ch.n + '. ' + ch.title;
   let cur = -1;
   if (vi >= 0) for (let i = vi; i < L.items.length; i++) if (L.items[i].t === 'q' || L.items[i].t === 'mq') { cur = i; break; }
   segsEl.innerHTML = L.items.map((it, i) => {
@@ -232,8 +232,7 @@ learnFeed.addEventListener('scroll', () => {
 }, {passive: true});
 
 ACT.chpick = () => {
-  openSheet('Chapters', '<div class="picks">' + CH.map((c, i) => {
-    const s = chStats(c);
-    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
+  openSheet('Chapters', '<div class="picks">' + CH.map(c => {
+    return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
   }).join('') + '</div>');
 };
