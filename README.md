@@ -17,3 +17,4 @@ The friends in the app are samples, buying is switched off, and the study notes 
 - Explosion: `tnt_explode.ogg` from Minetest Game, CC0. Made by TumeniNodes from Explosion2.wav by steveygos93 (freesound 80401).
 - Rocket engine and launch rumble: from Endless Sky, public domain.
 - Maths Lab and maths in v2: MathLive by Arno Gourdol, MIT licence, copied into `lab/mathlive` with its licence. Its maths fonts are the KaTeX fonts that come with MathLive.
+
