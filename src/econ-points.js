@@ -665,7 +665,7 @@ const ECON_POINTS = {
       'Aggregate supply (AS) is the total output firms in an economy plan to produce at each price level. In the short run, costs such as wages are taken as fixed.',
       'The short-run aggregate supply (SRAS) curve slopes up. With costs fixed, a higher price level means more profit on each unit, so firms produce more.',
       'A change in the price level moves along the SRAS curve. A change in firms\' costs shifts the whole curve.',
-      'SRAS shifts left when costs rise: higher wages, dearer raw materials or energy, a weaker currency that raises import prices, or higher taxes on firms. It shifts right when costs fall.'
+      'SRAS shifts left when costs rise: higher wages, dearer raw materials or energy, a weaker currency that raises import prices, or higher indirect taxes. It shifts right when costs fall.'
     ],
     remember: 'Higher costs shift SRAS left. Lower costs shift it right.',
     a: {q: 'Wages rise across Poland with no rise in productivity. What happens to the SRAS curve?',
@@ -889,10 +889,10 @@ const ECON_POINTS = {
 
   'e-fiscal': {title: 'Fiscal policy',
     card: [
-      'Fiscal policy is the government changing its spending and taxes to steer AD. It also affects how income is shared and what the economy can produce.',
+      'Fiscal policy is the government changing its spending and taxes to steer AD. Direct taxes are on income, such as income tax. Indirect taxes are on spending, such as VAT or GST.',
       ['Expansionary', 'more spending or lower taxes raise AD, which can lift output in a recession. In 2009 Australia paid cash bonuses to millions of households to keep them spending.'],
       ['Contractionary', 'less spending or higher taxes cut AD, which can slow inflation or reduce borrowing.'],
-      'A budget deficit is when spending is more than tax revenue in a year, and the government borrows the gap. Direct taxes are on income, such as income tax. Indirect taxes are on spending, such as VAT or GST.'
+      'A budget deficit is one year\'s gap between spending and tax revenue, which the government borrows. The national debt is the total owed from all past borrowing, so each deficit adds to it.'
     ],
     remember: 'More spending or lower taxes raise AD. Less spending or higher taxes cut it.',
     a: {q: 'In a recession, South Korea\'s government spends more on roads and cuts income tax. What kind of policy is this?',
