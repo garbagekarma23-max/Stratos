@@ -151,6 +151,11 @@ function tidySaved() {
   if (!saved.c || typeof saved.c !== 'object' || Array.isArray(saved.c)) saved.c = {};
   COURSES.forEach(id => { if (!saved.c[id] || typeof saved.c[id] !== 'object' || Array.isArray(saved.c[id])) saved.c[id] = {}; });
   if (!SUBJECTS[saved.subject]) saved.subject = 'eco';
+  /* Where the student studies, once they have picked it on the subject sheet: a country code, and a state if the
+     country has states. A code or state this build does not know is dropped, so the sheet asks again. */
+  if (!saved.place || typeof saved.place !== 'object' || COUNTRY_CODES.indexOf(saved.place.country) < 0) delete saved.place;
+  else saved.place = {country: saved.place.country, state: stateOf(saved.place.country, saved.place.state) ? saved.place.state : null};
+  if (saved.place && statesOf(saved.place.country).length && !saved.place.state) delete saved.place;
   setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
   if (saved.bg !== 'sky') saved.bg = 'plain';
@@ -224,8 +229,8 @@ function indexTopic(topic, sub) {
 /* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
    and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
    the bank so far. A second course that shares points will need each course to keep its own place for a point. */
-function indexCourse(course) {
-  const sub = course.id, ch = [], all = [];
+function indexCourse(course, sub) {
+  const ch = [], all = [];
   const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
     const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
       points: c.points.map(id => ECON_POINTS[id])};
@@ -237,8 +242,11 @@ function indexCourse(course) {
   })}));
   return {id: sub, topic: course, ch: ch, all: all, units: units};
 }
-const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths'), edexcel: indexCourse(EDEXCEL)};
-const COURSES = ['edexcel'];
+/* Every course in COURSE_LIST (places.js), by its id. A course with units is indexed as a course, the others as a topic.
+   COURSES lists the courses with units, which keep their chapter and records in saved.c. */
+const SUBJECTS = {};
+COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
+const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
 function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
 const isMaths = () => SUB.id === 'maths';
@@ -258,6 +266,46 @@ const DRAFT = '<span class="tag">Draft</span>';
 const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
 /* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
 const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
+
+/* ---------- where the student studies (the data is in places.js) ---------- */
+/* A country's name, from its two-letter code. The browser knows every country's name, so none are stored. */
+let regionNames = null;
+function countryName(code) {
+  try { if (!regionNames) regionNames = new Intl.DisplayNames(['en'], {type: 'region'}); return regionNames.of(code) || code; } catch (e) { return code; }
+}
+const statesOf = code => (PLACES[code] && PLACES[code].states) || [];
+const stateOf = (code, id) => statesOf(code).find(s => s.id === id) || null;
+/* A zone ending in / matches every zone that starts with it, such as Australia/ for Australia/Perth. */
+const zoneIn = (tz, zones) => (zones || []).some(z => z.slice(-1) === '/' ? tz.indexOf(z) === 0 : tz === z);
+/* A country with courses of its own, in the country itself or in any of its states. */
+const hasOwn = code => !!PLACES[code] && (!!PLACES[code].curriculum || statesOf(code).some(s => s.curriculum));
+/* The curriculum for a place: its state's, or the country's own. null while it has none yet. */
+function curriculumAt(place) {
+  const st = stateOf(place.country, place.state), id = st ? st.curriculum : PLACES[place.country] && PLACES[place.country].curriculum;
+  return (id && CURRICULA[id]) || null;
+}
+/* How a place is named: "New South Wales, Australia", or the country alone. */
+const placeName = place => { const st = stateOf(place.country, place.state); return (st ? st.name + ', ' : '') + countryName(place.country); };
+function deviceZone() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return ''; } }
+/* The state guessed from the time zone, or the first state with courses if the zone does not say. */
+function guessState(code, tz) {
+  const st = statesOf(code);
+  if (!st.length) return null;
+  return (st.find(s => zoneIn(tz, s.zones)) || st.find(s => s.curriculum) || st[0]).id;
+}
+/* A guess at where the student studies, from the phone's own settings only: no location, and nothing is sent.
+   The region in each of the phone's languages ("en-AU" says Australia) and its time zone ("Australia/Perth").
+   A language's country with courses of its own comes first, then a country the time zone names, then any language's
+   country. Many Australian phones are set to US English, which is why the time zone comes before a plain language.
+   null if neither says. */
+function guessPlace() {
+  const langs = [].concat(navigator.languages || [], navigator.language || []);
+  const regions = langs.map(t => { const m = /^[a-z]{2,3}(?:[-_][a-z]{4})?[-_]([a-z]{2})(?:[-_]|$)/i.exec(t || ''); return m ? m[1].toUpperCase() : ''; })
+    .filter(c => COUNTRY_CODES.indexOf(c) >= 0);
+  const tz = deviceZone(), zoned = Object.keys(PLACES).find(c => zoneIn(tz, PLACES[c].zones));
+  const country = regions.find(hasOwn) || zoned || regions[0] || null;
+  return country ? {country: country, state: guessState(country, tz)} : null;
+}
 const dOf = x => PT[x.p][x.k].d;
 
 /* ---------- what the student knows ----------

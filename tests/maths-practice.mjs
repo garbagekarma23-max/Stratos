@@ -3,7 +3,7 @@
 // Opened at iPhone size with touch. Every answer is typed with keypad taps. The test reads each question from the
 // screen and works out its answer with the Maths Lab's own solver, so it never looks at the answers the app stored.
 import fs from 'fs';
-import { open, saved, tab, check } from './lib.mjs';
+import { open, saved, tab, check, course } from './lib.mjs';
 const R = [];
 const read = f => fs.readFileSync(new URL('../' + f, import.meta.url), 'utf8');
 const LM = new Function(read('lab/maths.js') + '; return LabMaths;')();
@@ -240,8 +240,7 @@ for (const motion of [false, true]) {
   check(sum.includes('Flight ended early') && !(await working(p)), 'the cross ends a maths flight early', R);
   await p.locator('#feed .slide.summary [data-act="home"]').tap(); await p.waitForTimeout(150);
   check(!(await p.locator('#fSegs').isVisible()) && !(await p.locator('#fClock').isVisible()), 'the segments and clock go with the flight', R);
-  await p.locator('.subject').tap(); await p.waitForTimeout(80);
-  await p.locator('.pick[data-sub="eco"]').tap(); await p.waitForTimeout(150);
+  await course(p, 'eco');
   await p.evaluate(() => { const s = JSON.parse(localStorage.getItem('stratos2.v1')); s.ans = {c1p1a: {ok: true, n: 1, t: 1}}; localStorage.setItem('stratos2.v1', JSON.stringify(s)); });
   await p.reload(); await p.waitForTimeout(300);
   await tab(p, 'practice');
@@ -273,8 +272,7 @@ for (const motion of [false, true]) {
   await tab(p, 'practice');
   check((await dd()).startsWith(Math.round(s.m.bestKm).toLocaleString('en-AU') + ' km | ×' + s.m.bestCombo), 'the maths start screen shows the new maths records: ' + (await dd()), R);
   await tab(p, 'home');
-  await p.locator('.subject').tap(); await p.waitForTimeout(80);
-  await p.locator('.pick[data-sub="eco"]').tap(); await p.waitForTimeout(150);
+  await course(p, 'eco');
   await tab(p, 'you');
   check((await you()) === '2 billion km | ×7', 'switching to Economics shows the Economics records again: ' + (await you()), R);
   errsAll.push(...errs); await b.close();

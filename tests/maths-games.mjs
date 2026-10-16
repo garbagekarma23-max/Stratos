@@ -2,7 +2,7 @@
 // the same seed giving the same questions on both sides, a maths rematch staying in maths, a maths race won and lost,
 // and the sample friends' maths pace. Every answer is typed with keypad taps, worked out with the Maths Lab's solver.
 import fs from 'fs';
-import { open, saved, check } from './lib.mjs';
+import { open, saved, check, course } from './lib.mjs';
 const R = [];
 const read = f => fs.readFileSync(new URL('../' + f, import.meta.url), 'utf8');
 const LM = new Function(read('lab/maths.js') + '; return LabMaths;')();
@@ -127,8 +127,7 @@ s = await saved(p); m = s.th.noah[s.th.noah.length - 1];
 check(m.from === 'them' && m.kind === 'challenge' && m.ch === 'm1' && m.total === 5 && typeof m.seed === 'number' && m.seed !== sentSeed && m.them != null && m.themMs > 0, 'Noah\'s rematch is a maths challenge on the same chapter, with a new seed', R);
 const rematchSeed = m.seed;
 await home();
-await p.click('.subrow [data-act="subject"]'); await p.waitForTimeout(80);
-await p.click('#sheetBody [data-sub="eco"]'); await p.waitForTimeout(150);
+await course(p, 'eco');
 check((await saved(p)).subject === 'eco', 'Home is switched to Economics', R);
 await p.click('[data-act="page"][data-page="friends"]'); await p.waitForTimeout(100);
 await p.click('.thr[data-f="noah"]'); await p.waitForTimeout(100);

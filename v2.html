@@ -607,6 +607,14 @@ svg{display:block;flex:none}
 .pick:disabled .t{color:var(--ink-2);font-weight:500}
 .field input{width:100%;height:50px;padding:0 14px;border:1px solid var(--line-2);border-radius:12px;background:var(--paper);color:var(--ink);font:500 16px var(--f);-webkit-user-select:text;user-select:text}
 .field input::placeholder{color:var(--ink-3)}
+.field input::-webkit-search-cancel-button{display:none}
+/* The subject sheet: where you study, then its courses. The country list scrolls under the button, which stays at the
+   bottom of the sheet. The course row's last small line is the Pearson note. */
+.places{border-top:1px solid var(--line)}
+.stick{position:sticky;bottom:calc(-20px - var(--sab));margin:-6px -16px calc(-20px - var(--sab));padding:12px 16px calc(20px + var(--sab));background:var(--raise);border-top:1px solid var(--line)}
+.pick.place{border-top:1px solid var(--line)}
+.pick.place .v{color:var(--accent);font-weight:600}
+.pick .t small.pnote{margin-top:2px;font-size:12px;line-height:1.4;color:var(--ink-3)}
 .preview{width:100%;aspect-ratio:16/9;border-radius:12px;display:grid;place-items:center;background:var(--wash);overflow:hidden}
 .preview .rk{width:48px;height:80px}
 .preview .ic{width:40px;height:40px;color:var(--ink-2)}
@@ -2450,40 +2458,85 @@ const ECON_POINTS = {
    in econ-points.js, so a point can later belong to more than one course.
    A chapter with no points shows on Home as Coming soon and cannot be opened.
    check is 'draft' until a teacher has checked the chapter, then 'checked'. A draft chapter with points shows a
-   Draft label in the app. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
+   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
 const EDEXCEL = {
   id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', short: 'AS Economics',
   note: 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.',
   units: [
     {title: 'Markets in action', chapters: [
-      {id: 'x1c1', title: 'Introductory concepts', check: 'draft',
+      {id: 'x1c1', title: 'Introductory concepts', check: 'checked',
         points: ['e-nature', 'e-positive', 'e-scarcity', 'e-ppf', 'e-special', 'e-systems']},
-      {id: 'x1c2', title: 'Consumer behaviour and demand', check: 'draft',
+      {id: 'x1c2', title: 'Consumer behaviour and demand', check: 'checked',
         points: ['e-rational', 'e-demand', 'e-ped', 'e-yed', 'e-xed']},
-      {id: 'x1c3', title: 'Supply', check: 'draft',
+      {id: 'x1c3', title: 'Supply', check: 'checked',
         points: ['e-supply', 'e-pes']},
-      {id: 'x1c4', title: 'Price determination', check: 'draft',
+      {id: 'x1c4', title: 'Price determination', check: 'checked',
         points: ['e-equilibrium', 'e-surplus', 'e-pricemech', 'e-taxsub']},
-      {id: 'x1c5', title: 'Market failure', check: 'draft',
+      {id: 'x1c5', title: 'Market failure', check: 'checked',
         points: ['e-failure', 'e-externality', 'e-public', 'e-info', 'e-bubbles']},
-      {id: 'x1c6', title: 'Government intervention', check: 'draft',
+      {id: 'x1c6', title: 'Government intervention', check: 'checked',
         points: ['e-correct', 'e-maxmin', 'e-permits', 'e-govfail']}
     ]},
     {title: 'Macroeconomic performance and policy', chapters: [
-      {id: 'x2c1', title: 'Measures of economic performance', check: 'draft',
+      {id: 'x2c1', title: 'Measures of economic performance', check: 'checked',
         points: ['e-gdp', 'e-living', 'e-cpi', 'e-inflation', 'e-labour', 'e-unemployment', 'e-bop']},
-      {id: 'x2c2', title: 'Aggregate demand', check: 'draft',
+      {id: 'x2c2', title: 'Aggregate demand', check: 'checked',
         points: ['e-ad', 'e-consumption', 'e-investment', 'e-govtrade']},
-      {id: 'x2c3', title: 'Aggregate supply', check: 'draft',
+      {id: 'x2c3', title: 'Aggregate supply', check: 'checked',
         points: ['e-sras', 'e-lras', 'e-lrasshift']},
-      {id: 'x2c4', title: 'National income', check: 'draft',
+      {id: 'x2c4', title: 'National income', check: 'checked',
         points: ['e-income', 'e-flow', 'e-macroeq', 'e-multiplier']},
-      {id: 'x2c5', title: 'Economic growth', check: 'draft',
+      {id: 'x2c5', title: 'Economic growth', check: 'checked',
         points: ['e-growthcause', 'e-outputgap', 'e-growthgain', 'e-growthcost']},
-      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'draft',
+      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'checked',
         points: ['e-objectives', 'e-monetary', 'e-fiscal', 'e-supplyside', 'e-conflicts']}
     ]}
   ]
+};
+
+/* Where each course is taught. The subject sheet reads this to show a student the courses for their country.
+   Adding a country, a state or a course here needs no new code.
+
+   COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
+                course's content (from content.js, maths-content.js or edexcel-content.js), name is the plain name on
+                its row, and about is the line under it: the exam it leads to, then the topic loaded.
+   CURRICULA    a country's or a state's own courses, by id. more is a line under them.
+   INTERNATIONAL the courses that show in every country, under International courses.
+   COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
+                stored here. Uninhabited places (Antarctica, Bouvet Island, South Georgia, Heard Island, the French
+                Southern Territories and the US Outlying Islands) are left out.
+   PLACES       what is known about a country beyond its name: its own curriculum, or its states, and the time zones
+                that guess it. A zone ending in / matches every zone that starts with it. A country not in PLACES
+                still shows in the list, with only the international courses.
+   A state with no curriculum yet can still be picked: the sheet says its courses are coming. */
+const COURSE_LIST = [
+  {id: 'eco', data: TOPIC, name: 'Economics, Year 12', about: 'HSC, The Global Economy'},
+  {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
+  {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
+];
+const CURRICULA = {
+  nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
+};
+const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
+const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT ' +
+  'BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM ' +
+  'FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +
+  'KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT ' +
+  'MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW ' +
+  'SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG US ' +
+  'UY UZ VA VC VE VG VI VN VU WF WS XK YE YT ZA ZM ZW').split(' ');
+const PLACES = {
+  AU: {zones: ['Australia/'], about: 'NSW courses and international courses', states: [
+    {id: 'nsw', name: 'New South Wales', curriculum: 'nsw', about: 'HSC',
+      zones: ['Australia/Sydney', 'Australia/NSW', 'Australia/Broken_Hill', 'Australia/Yancowinna', 'Australia/Lord_Howe', 'Australia/LHI']},
+    {id: 'vic', name: 'Victoria', zones: ['Australia/Melbourne', 'Australia/Victoria']},
+    {id: 'qld', name: 'Queensland', zones: ['Australia/Brisbane', 'Australia/Lindeman', 'Australia/Queensland']},
+    {id: 'wa', name: 'Western Australia', zones: ['Australia/Perth', 'Australia/West', 'Australia/Eucla']},
+    {id: 'sa', name: 'South Australia', zones: ['Australia/Adelaide', 'Australia/South']},
+    {id: 'tas', name: 'Tasmania', zones: ['Australia/Hobart', 'Australia/Tasmania', 'Australia/Currie']},
+    {id: 'act', name: 'Australian Capital Territory', zones: ['Australia/ACT', 'Australia/Canberra']},
+    {id: 'nt', name: 'Northern Territory', zones: ['Australia/Darwin', 'Australia/North']}
+  ]}
 };
 
 /* Stratos Maths Lab: the topics. Each topic is data only, so a new topic needs no new code.
@@ -3806,6 +3859,11 @@ function tidySaved() {
   if (!saved.c || typeof saved.c !== 'object' || Array.isArray(saved.c)) saved.c = {};
   COURSES.forEach(id => { if (!saved.c[id] || typeof saved.c[id] !== 'object' || Array.isArray(saved.c[id])) saved.c[id] = {}; });
   if (!SUBJECTS[saved.subject]) saved.subject = 'eco';
+  /* Where the student studies, once they have picked it on the subject sheet: a country code, and a state if the
+     country has states. A code or state this build does not know is dropped, so the sheet asks again. */
+  if (!saved.place || typeof saved.place !== 'object' || COUNTRY_CODES.indexOf(saved.place.country) < 0) delete saved.place;
+  else saved.place = {country: saved.place.country, state: stateOf(saved.place.country, saved.place.state) ? saved.place.state : null};
+  if (saved.place && statesOf(saved.place.country).length && !saved.place.state) delete saved.place;
   setSubject(saved.subject);
   if (!EXHAUST[saved.exhaust] || EXHAUST[saved.exhaust].price) saved.exhaust = 'kerosene';
   if (saved.bg !== 'sky') saved.bg = 'plain';
@@ -3879,8 +3937,8 @@ function indexTopic(topic, sub) {
 /* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
    and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
    the bank so far. A second course that shares points will need each course to keep its own place for a point. */
-function indexCourse(course) {
-  const sub = course.id, ch = [], all = [];
+function indexCourse(course, sub) {
+  const ch = [], all = [];
   const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
     const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
       points: c.points.map(id => ECON_POINTS[id])};
@@ -3892,8 +3950,11 @@ function indexCourse(course) {
   })}));
   return {id: sub, topic: course, ch: ch, all: all, units: units};
 }
-const SUBJECTS = {eco: indexTopic(TOPIC, 'eco'), maths: indexTopic(MATHS, 'maths'), edexcel: indexCourse(EDEXCEL)};
-const COURSES = ['edexcel'];
+/* Every course in COURSE_LIST (places.js), by its id. A course with units is indexed as a course, the others as a topic.
+   COURSES lists the courses with units, which keep their chapter and records in saved.c. */
+const SUBJECTS = {};
+COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
+const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
 function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
 const isMaths = () => SUB.id === 'maths';
@@ -3913,6 +3974,46 @@ const DRAFT = '<span class="tag">Draft</span>';
 const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
 /* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
 const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
+
+/* ---------- where the student studies (the data is in places.js) ---------- */
+/* A country's name, from its two-letter code. The browser knows every country's name, so none are stored. */
+let regionNames = null;
+function countryName(code) {
+  try { if (!regionNames) regionNames = new Intl.DisplayNames(['en'], {type: 'region'}); return regionNames.of(code) || code; } catch (e) { return code; }
+}
+const statesOf = code => (PLACES[code] && PLACES[code].states) || [];
+const stateOf = (code, id) => statesOf(code).find(s => s.id === id) || null;
+/* A zone ending in / matches every zone that starts with it, such as Australia/ for Australia/Perth. */
+const zoneIn = (tz, zones) => (zones || []).some(z => z.slice(-1) === '/' ? tz.indexOf(z) === 0 : tz === z);
+/* A country with courses of its own, in the country itself or in any of its states. */
+const hasOwn = code => !!PLACES[code] && (!!PLACES[code].curriculum || statesOf(code).some(s => s.curriculum));
+/* The curriculum for a place: its state's, or the country's own. null while it has none yet. */
+function curriculumAt(place) {
+  const st = stateOf(place.country, place.state), id = st ? st.curriculum : PLACES[place.country] && PLACES[place.country].curriculum;
+  return (id && CURRICULA[id]) || null;
+}
+/* How a place is named: "New South Wales, Australia", or the country alone. */
+const placeName = place => { const st = stateOf(place.country, place.state); return (st ? st.name + ', ' : '') + countryName(place.country); };
+function deviceZone() { try { return Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { return ''; } }
+/* The state guessed from the time zone, or the first state with courses if the zone does not say. */
+function guessState(code, tz) {
+  const st = statesOf(code);
+  if (!st.length) return null;
+  return (st.find(s => zoneIn(tz, s.zones)) || st.find(s => s.curriculum) || st[0]).id;
+}
+/* A guess at where the student studies, from the phone's own settings only: no location, and nothing is sent.
+   The region in each of the phone's languages ("en-AU" says Australia) and its time zone ("Australia/Perth").
+   A language's country with courses of its own comes first, then a country the time zone names, then any language's
+   country. Many Australian phones are set to US English, which is why the time zone comes before a plain language.
+   null if neither says. */
+function guessPlace() {
+  const langs = [].concat(navigator.languages || [], navigator.language || []);
+  const regions = langs.map(t => { const m = /^[a-z]{2,3}(?:[-_][a-z]{4})?[-_]([a-z]{2})(?:[-_]|$)/i.exec(t || ''); return m ? m[1].toUpperCase() : ''; })
+    .filter(c => COUNTRY_CODES.indexOf(c) >= 0);
+  const tz = deviceZone(), zoned = Object.keys(PLACES).find(c => zoneIn(tz, PLACES[c].zones));
+  const country = regions.find(hasOwn) || zoned || regions[0] || null;
+  return country ? {country: country, state: guessState(country, tz)} : null;
+}
 const dOf = x => PT[x.p][x.k].d;
 
 /* ---------- what the student knows ----------
@@ -4612,7 +4713,7 @@ function renderHome() {
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
     /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
-    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Syllabus">' + IC.book + '</button></span>' +
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button></span>' +
       '<span class="word">Stratos</span>' +
       '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
@@ -4636,7 +4737,7 @@ function renderHome() {
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.units
-      ? 'The AS year has 12 chapters. Both units are drafts until a teacher has checked them. Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. Progress is saved on this device only.'
       : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
@@ -4676,23 +4777,87 @@ function pointSheet(pid) {
     '</div>');
 }
 
-/* The subject sheet. The three loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
+/* ---------- the subject sheet: where you study, then its courses ----------
+   The first time, the sheet asks for the country (and the state, for a country with states), with a guess from the
+   phone's settings already picked. Once that is saved it opens on the courses: the place's own, then the international
+   ones. The data is in places.js. ui.pl holds the picks while the sheet is open, before they are saved. */
 ACT.subject = () => {
-  const rows = [
-    ['The Global Economy', 'Economics, Year 12', 'eco'],
-    ['Equations', 'Maths, Year 11', 'maths'],
-    [EDEXCEL.course + ', ' + EDEXCEL.year, EDEXCEL.note, 'edexcel'],
-    ['Australia\'s Place in the Global Economy', 'Economics, Year 12'],
-    ['Economic Issues', 'Economics, Year 12'],
-    ['Economic Policies and Management', 'Economics, Year 12'],
-    ['Biology', 'Year 12'],
-    ['English', 'Year 12'],
-    ['Modern History', 'Year 12']
-  ];
-  openSheet('Subjects and topics',
-    '<div class="picks">' + rows.map(r => '<button class="pick" type="button"' + (r[2] ? ' data-act="setsub" data-sub="' + r[2] + '"' + (SUB.id === r[2] ? ' aria-current="true"' : '') : ' disabled') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + (!r[2] ? 'Soon' : SUB.id === r[2] ? 'Open' : 'Switch') + '</span></button>').join('') + '</div>' +
-    '<p class="fine">This test has three topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
+  if (saved.place) { courseSheet(); return; }
+  const g = guessPlace();
+  ui.pl = {country: g ? g.country : null, state: g ? g.state : null, guessed: !!g};
+  countrySheet();
 };
+ACT.placechange = () => { ui.pl = {country: saved.place.country, state: saved.place.state, guessed: false}; countrySheet(); };
+/* Search ignores capitals and accents, so "cote" finds Côte d’Ivoire. */
+const fold = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’']/g, '').toLowerCase();
+const radio = (act, v, on, title, small) => '<button class="choice" type="button" role="radio" aria-checked="' + on + '" data-act="' + act + '" data-v="' + v + '"><i class="radio"></i><span class="t">' + esc(title) + (small ? '<small>' + esc(small) + '</small>' : '') + '</span></button>';
+const placeNext = () => statesOf(ui.pl.country).length ? 'Next' : 'Show courses';
+
+function countrySheet() {
+  const sel = ui.pl.country;
+  /* The country picked comes first, then the countries with courses of their own, then every other country A to Z. */
+  const named = COUNTRY_CODES.map(c => ({c: c, n: countryName(c)}));
+  const rank = x => x.c === sel ? 0 : hasOwn(x.c) ? 1 : 2;
+  named.sort((a, b) => rank(a) - rank(b) || a.n.localeCompare(b.n, 'en'));
+  openSheet('Where do you study?',
+    '<p class="rule">Pick your country to see its courses.' + (ui.pl.guessed ? ' We guessed from your phone\'s language and region settings.' : '') + '</p>' +
+    '<label class="field"><span class="sr">Search countries</span><input id="placeIn" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="Search countries"></label>' +
+    '<div class="places" role="radiogroup" aria-label="Country">' + named.map(x =>
+      radio('country', x.c, x.c === sel, x.n, PLACES[x.c] && PLACES[x.c].about).replace('<button ', '<button data-find="' + esc(fold(x.n)) + '" ')).join('') + '</div>' +
+    '<p class="sub" id="placeNone" hidden>No country matches.</p>' +
+    '<p class="fine">This uses no location, and nothing is sent anywhere.</p>' +
+    '<div class="stick"><button class="primary wide" type="button" data-act="placenext"' + (sel ? '' : ' disabled') + '>' + placeNext() + '</button></div>');
+}
+/* Typing in the search box hides the countries whose names do not have what was typed in them. */
+sheetBody.addEventListener('input', ev => {
+  if (ev.target.id !== 'placeIn') return;
+  const q = fold(ev.target.value.trim());
+  let shown = 0;
+  $$('.places .choice', sheetBody).forEach(b => { const ok = !q || b.dataset.find.indexOf(q) >= 0 || b.dataset.v === q.toUpperCase(); b.hidden = !ok; if (ok) shown++; });
+  $('#placeNone').hidden = shown > 0;
+});
+sheetBody.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'placeIn') { ev.preventDefault(); ev.target.blur(); } });
+/* Picking a row only moves the dot, so the search and the place in the list stay as they are. */
+const checkOnly = (b, sel) => $$(sel, sheetBody).forEach(x => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+ACT.country = b => {
+  ui.pl.country = b.dataset.v;
+  ui.pl.state = guessState(b.dataset.v, deviceZone());
+  checkOnly(b, '.places .choice');
+  const n = $('[data-act="placenext"]', sheetBody); n.disabled = false; n.textContent = placeNext();
+};
+ACT.placenext = () => { if (!ui.pl.country) return; if (statesOf(ui.pl.country).length) stateSheet(); else placeDone(); };
+
+function stateSheet() {
+  openSheet('Which state or territory?',
+    '<p class="rule">Pick yours to see its courses.</p>' +
+    '<div role="radiogroup" aria-label="State or territory">' + statesOf(ui.pl.country).map(s =>
+      radio('state', s.id, s.id === ui.pl.state, s.name, s.curriculum ? s.about : 'Courses coming')).join('') + '</div>' +
+    '<div class="cta"><button class="primary" type="button" data-act="placedone">Show courses</button><button class="ghost" type="button" data-act="placeback">Back</button></div>');
+}
+ACT.state = b => { ui.pl.state = b.dataset.v; checkOnly(b, '[data-act="state"]'); };
+ACT.placeback = () => countrySheet();
+ACT.placedone = () => placeDone();
+function placeDone() { save({place: {country: ui.pl.country, state: ui.pl.state}}); ui.pl = null; courseSheet(); }
+
+/* The courses for the place saved: its own, then the international ones. The course open now always shows, under
+   Open now if the place does not offer it, so Home never names a course the sheet hides. */
+function courseSheet() {
+  const pl = saved.place, own = curriculumAt(pl), st = stateOf(pl.country, pl.state);
+  const row = id => {
+    const c = COURSE_LIST.find(x => x.id === id), note = c.data.note;
+    return '<button class="pick" type="button" data-act="setsub" data-sub="' + id + '"' + (SUB.id === id ? ' aria-current="true"' : '') + '><span class="t">' + esc(c.name) +
+      '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span><span class="v">' + (SUB.id === id ? 'Open' : 'Switch') + '</span></button>';
+  };
+  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3><div class="picks">' + ids.map(row).join('') + '</div>' + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
+  const listed = (own ? own.courses : []).concat(INTERNATIONAL.courses);
+  openSheet('Courses',
+    '<button class="pick place" type="button" data-act="placechange"><span class="t">' + esc(placeName(pl)) + '</span><span class="v">Change</span></button>' +
+    (own ? group(own.name, own.courses, own.more)
+      : '<p class="sub">Courses for ' + esc(st ? st.name : countryName(pl.country)) + ' are coming. The international courses below work anywhere.</p>') +
+    group(INTERNATIONAL.name, INTERNATIONAL.courses, INTERNATIONAL.more) +
+    (listed.indexOf(SUB.id) < 0 ? group('Open now', [SUB.id]) : '') +
+    '<p class="fine">Each course keeps its own progress, saved on this device only.</p>');
+}
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
    A Learn session or flight from the other subject ends, because its slides belong to that subject. */

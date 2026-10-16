@@ -55,8 +55,8 @@ check(await p.locator('.pt.is-weak').count() === 1 && await p.locator('.pt.is-le
 check((await text('.streak')) === '1-day streak', 'streak shows on Home', R);
 const logo = await p.evaluate(() => { const w = document.querySelector('.top .word'), r = w.getBoundingClientRect(), t = document.querySelector('.top').getBoundingClientRect(); return {off: Math.abs((r.left + r.right) / 2 - (t.left + t.right) / 2), font: getComputedStyle(w).fontFamily}; });
 check(logo.off < 1 && logo.font.startsWith('Archivo'), 'the logo is in the middle of the top bar, in Archivo', R);
-await p.click('.top [aria-label="Syllabus"]'); await p.waitForTimeout(150);
-check((await text('#sheetTitle')) === 'Subjects and topics', 'the book button at the top left opens the syllabus', R);
+await p.click('.top [aria-label="Courses"]'); await p.waitForTimeout(150);
+check((await text('#sheetTitle')) === 'Where do you study?', 'the book button at the top left opens the course sheet, which first asks where you study', R);
 await p.click('#sheetClose'); await p.waitForTimeout(150);
 await shot(p, 'flow-home-after-learn');
 

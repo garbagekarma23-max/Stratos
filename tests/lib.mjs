@@ -24,7 +24,10 @@ for (const p of points) for (const k of ['a', 'b']) {
 }
 export async function open(o = {}) {
   const b = await chromium.launch(EXE ? {executablePath: EXE} : {});
-  const ctx = await b.newContext({viewport: {width: o.w || 390, height: o.h || 844}, deviceScaleFactor: o.dpr || 2, hasTouch: (o.w || 390) < 500, colorScheme: o.scheme || 'light', reducedMotion: o.motion ? 'no-preference' : 'reduce'});
+  // The phone's language and time zone. The subject sheet guesses the country from them. Tests are an Australian
+  // phone unless they say otherwise.
+  const ctx = await b.newContext({viewport: {width: o.w || 390, height: o.h || 844}, deviceScaleFactor: o.dpr || 2, hasTouch: (o.w || 390) < 500, colorScheme: o.scheme || 'light', reducedMotion: o.motion ? 'no-preference' : 'reduce',
+    locale: o.locale || 'en-AU', timezoneId: o.tz || 'Australia/Sydney'});
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
   // The intro plays each time v2.html opens. Tests skip it unless they pass intro: true (tests/intro.mjs does).
   if (!o.intro) await ctx.addInitScript(() => { window.stratosIntro = false; });
@@ -59,3 +62,13 @@ export async function pick(p, feed, wantRight) {
 // Scroll a feed to its last slide, the way the Next button does.
 export async function toLast(p, feed) { await p.evaluate(f => { const el = document.querySelector(f); el.scrollTop = el.lastElementChild.offsetTop; }, feed); await p.waitForTimeout(60); }
 export const check = (ok, what, results) => { results.push((ok ? 'ok   ' : 'FAIL ') + what); if (!ok) process.exitCode = 1; };
+// Switch to a course from Home's subject sheet. The first time, the sheet asks where you study, with the phone's guess
+// picked: this takes the guess, then the state if there is a state step.
+export async function course(p, id) {
+  await p.locator('.subject').click(); await p.waitForTimeout(100);
+  if (await p.locator('#placeIn').count()) {
+    await p.locator('[data-act="placenext"]').click(); await p.waitForTimeout(80);
+    if (await p.locator('[data-act="placedone"]').count()) { await p.locator('[data-act="placedone"]').click(); await p.waitForTimeout(80); }
+  }
+  await p.locator('.pick[data-sub="' + id + '"]').click(); await p.waitForTimeout(200);
+}

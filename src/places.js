@@ -1,0 +1,44 @@
+/* Where each course is taught. The subject sheet reads this to show a student the courses for their country.
+   Adding a country, a state or a course here needs no new code.
+
+   COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
+                course's content (from content.js, maths-content.js or edexcel-content.js), name is the plain name on
+                its row, and about is the line under it: the exam it leads to, then the topic loaded.
+   CURRICULA    a country's or a state's own courses, by id. more is a line under them.
+   INTERNATIONAL the courses that show in every country, under International courses.
+   COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
+                stored here. Uninhabited places (Antarctica, Bouvet Island, South Georgia, Heard Island, the French
+                Southern Territories and the US Outlying Islands) are left out.
+   PLACES       what is known about a country beyond its name: its own curriculum, or its states, and the time zones
+                that guess it. A zone ending in / matches every zone that starts with it. A country not in PLACES
+                still shows in the list, with only the international courses.
+   A state with no curriculum yet can still be picked: the sheet says its courses are coming. */
+const COURSE_LIST = [
+  {id: 'eco', data: TOPIC, name: 'Economics, Year 12', about: 'HSC, The Global Economy'},
+  {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
+  {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
+];
+const CURRICULA = {
+  nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
+};
+const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
+const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT ' +
+  'BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM ' +
+  'FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +
+  'KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT ' +
+  'MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW ' +
+  'SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG US ' +
+  'UY UZ VA VC VE VG VI VN VU WF WS XK YE YT ZA ZM ZW').split(' ');
+const PLACES = {
+  AU: {zones: ['Australia/'], about: 'NSW courses and international courses', states: [
+    {id: 'nsw', name: 'New South Wales', curriculum: 'nsw', about: 'HSC',
+      zones: ['Australia/Sydney', 'Australia/NSW', 'Australia/Broken_Hill', 'Australia/Yancowinna', 'Australia/Lord_Howe', 'Australia/LHI']},
+    {id: 'vic', name: 'Victoria', zones: ['Australia/Melbourne', 'Australia/Victoria']},
+    {id: 'qld', name: 'Queensland', zones: ['Australia/Brisbane', 'Australia/Lindeman', 'Australia/Queensland']},
+    {id: 'wa', name: 'Western Australia', zones: ['Australia/Perth', 'Australia/West', 'Australia/Eucla']},
+    {id: 'sa', name: 'South Australia', zones: ['Australia/Adelaide', 'Australia/South']},
+    {id: 'tas', name: 'Tasmania', zones: ['Australia/Hobart', 'Australia/Tasmania', 'Australia/Currie']},
+    {id: 'act', name: 'Australian Capital Territory', zones: ['Australia/ACT', 'Australia/Canberra']},
+    {id: 'nt', name: 'Northern Territory', zones: ['Australia/Darwin', 'Australia/North']}
+  ]}
+};

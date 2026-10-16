@@ -42,7 +42,7 @@ function renderHome() {
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
     /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
-    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Syllabus">' + IC.book + '</button></span>' +
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button></span>' +
       '<span class="word">Stratos</span>' +
       '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
@@ -66,7 +66,7 @@ function renderHome() {
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.units
-      ? 'The AS year has 12 chapters. Both units are drafts until a teacher has checked them. Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. Progress is saved on this device only.'
       : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
@@ -106,23 +106,87 @@ function pointSheet(pid) {
     '</div>');
 }
 
-/* The subject sheet. The three loaded topics can be picked. The other rows show where the rest of the syllabus would go. */
+/* ---------- the subject sheet: where you study, then its courses ----------
+   The first time, the sheet asks for the country (and the state, for a country with states), with a guess from the
+   phone's settings already picked. Once that is saved it opens on the courses: the place's own, then the international
+   ones. The data is in places.js. ui.pl holds the picks while the sheet is open, before they are saved. */
 ACT.subject = () => {
-  const rows = [
-    ['The Global Economy', 'Economics, Year 12', 'eco'],
-    ['Equations', 'Maths, Year 11', 'maths'],
-    [EDEXCEL.course + ', ' + EDEXCEL.year, EDEXCEL.note, 'edexcel'],
-    ['Australia\'s Place in the Global Economy', 'Economics, Year 12'],
-    ['Economic Issues', 'Economics, Year 12'],
-    ['Economic Policies and Management', 'Economics, Year 12'],
-    ['Biology', 'Year 12'],
-    ['English', 'Year 12'],
-    ['Modern History', 'Year 12']
-  ];
-  openSheet('Subjects and topics',
-    '<div class="picks">' + rows.map(r => '<button class="pick" type="button"' + (r[2] ? ' data-act="setsub" data-sub="' + r[2] + '"' + (SUB.id === r[2] ? ' aria-current="true"' : '') : ' disabled') + '><span class="t">' + esc(r[0]) + '<small>' + esc(r[1]) + '</small></span><span class="v">' + (!r[2] ? 'Soon' : SUB.id === r[2] ? 'Open' : 'Switch') + '</span></button>').join('') + '</div>' +
-    '<p class="fine">This test has three topics. Each keeps its own progress. The other rows show where the rest of the syllabus would go.</p>');
+  if (saved.place) { courseSheet(); return; }
+  const g = guessPlace();
+  ui.pl = {country: g ? g.country : null, state: g ? g.state : null, guessed: !!g};
+  countrySheet();
 };
+ACT.placechange = () => { ui.pl = {country: saved.place.country, state: saved.place.state, guessed: false}; countrySheet(); };
+/* Search ignores capitals and accents, so "cote" finds Côte d’Ivoire. */
+const fold = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’']/g, '').toLowerCase();
+const radio = (act, v, on, title, small) => '<button class="choice" type="button" role="radio" aria-checked="' + on + '" data-act="' + act + '" data-v="' + v + '"><i class="radio"></i><span class="t">' + esc(title) + (small ? '<small>' + esc(small) + '</small>' : '') + '</span></button>';
+const placeNext = () => statesOf(ui.pl.country).length ? 'Next' : 'Show courses';
+
+function countrySheet() {
+  const sel = ui.pl.country;
+  /* The country picked comes first, then the countries with courses of their own, then every other country A to Z. */
+  const named = COUNTRY_CODES.map(c => ({c: c, n: countryName(c)}));
+  const rank = x => x.c === sel ? 0 : hasOwn(x.c) ? 1 : 2;
+  named.sort((a, b) => rank(a) - rank(b) || a.n.localeCompare(b.n, 'en'));
+  openSheet('Where do you study?',
+    '<p class="rule">Pick your country to see its courses.' + (ui.pl.guessed ? ' We guessed from your phone\'s language and region settings.' : '') + '</p>' +
+    '<label class="field"><span class="sr">Search countries</span><input id="placeIn" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="Search countries"></label>' +
+    '<div class="places" role="radiogroup" aria-label="Country">' + named.map(x =>
+      radio('country', x.c, x.c === sel, x.n, PLACES[x.c] && PLACES[x.c].about).replace('<button ', '<button data-find="' + esc(fold(x.n)) + '" ')).join('') + '</div>' +
+    '<p class="sub" id="placeNone" hidden>No country matches.</p>' +
+    '<p class="fine">This uses no location, and nothing is sent anywhere.</p>' +
+    '<div class="stick"><button class="primary wide" type="button" data-act="placenext"' + (sel ? '' : ' disabled') + '>' + placeNext() + '</button></div>');
+}
+/* Typing in the search box hides the countries whose names do not have what was typed in them. */
+sheetBody.addEventListener('input', ev => {
+  if (ev.target.id !== 'placeIn') return;
+  const q = fold(ev.target.value.trim());
+  let shown = 0;
+  $$('.places .choice', sheetBody).forEach(b => { const ok = !q || b.dataset.find.indexOf(q) >= 0 || b.dataset.v === q.toUpperCase(); b.hidden = !ok; if (ok) shown++; });
+  $('#placeNone').hidden = shown > 0;
+});
+sheetBody.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'placeIn') { ev.preventDefault(); ev.target.blur(); } });
+/* Picking a row only moves the dot, so the search and the place in the list stay as they are. */
+const checkOnly = (b, sel) => $$(sel, sheetBody).forEach(x => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+ACT.country = b => {
+  ui.pl.country = b.dataset.v;
+  ui.pl.state = guessState(b.dataset.v, deviceZone());
+  checkOnly(b, '.places .choice');
+  const n = $('[data-act="placenext"]', sheetBody); n.disabled = false; n.textContent = placeNext();
+};
+ACT.placenext = () => { if (!ui.pl.country) return; if (statesOf(ui.pl.country).length) stateSheet(); else placeDone(); };
+
+function stateSheet() {
+  openSheet('Which state or territory?',
+    '<p class="rule">Pick yours to see its courses.</p>' +
+    '<div role="radiogroup" aria-label="State or territory">' + statesOf(ui.pl.country).map(s =>
+      radio('state', s.id, s.id === ui.pl.state, s.name, s.curriculum ? s.about : 'Courses coming')).join('') + '</div>' +
+    '<div class="cta"><button class="primary" type="button" data-act="placedone">Show courses</button><button class="ghost" type="button" data-act="placeback">Back</button></div>');
+}
+ACT.state = b => { ui.pl.state = b.dataset.v; checkOnly(b, '[data-act="state"]'); };
+ACT.placeback = () => countrySheet();
+ACT.placedone = () => placeDone();
+function placeDone() { save({place: {country: ui.pl.country, state: ui.pl.state}}); ui.pl = null; courseSheet(); }
+
+/* The courses for the place saved: its own, then the international ones. The course open now always shows, under
+   Open now if the place does not offer it, so Home never names a course the sheet hides. */
+function courseSheet() {
+  const pl = saved.place, own = curriculumAt(pl), st = stateOf(pl.country, pl.state);
+  const row = id => {
+    const c = COURSE_LIST.find(x => x.id === id), note = c.data.note;
+    return '<button class="pick" type="button" data-act="setsub" data-sub="' + id + '"' + (SUB.id === id ? ' aria-current="true"' : '') + '><span class="t">' + esc(c.name) +
+      '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span><span class="v">' + (SUB.id === id ? 'Open' : 'Switch') + '</span></button>';
+  };
+  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3><div class="picks">' + ids.map(row).join('') + '</div>' + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
+  const listed = (own ? own.courses : []).concat(INTERNATIONAL.courses);
+  openSheet('Courses',
+    '<button class="pick place" type="button" data-act="placechange"><span class="t">' + esc(placeName(pl)) + '</span><span class="v">Change</span></button>' +
+    (own ? group(own.name, own.courses, own.more)
+      : '<p class="sub">Courses for ' + esc(st ? st.name : countryName(pl.country)) + ' are coming. The international courses below work anywhere.</p>') +
+    group(INTERNATIONAL.name, INTERNATIONAL.courses, INTERNATIONAL.more) +
+    (listed.indexOf(SUB.id) < 0 ? group('Open now', [SUB.id]) : '') +
+    '<p class="fine">Each course keeps its own progress, saved on this device only.</p>');
+}
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
    A Learn session or flight from the other subject ends, because its slides belong to that subject. */
