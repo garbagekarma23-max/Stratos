@@ -167,7 +167,7 @@ function learnEndEl() {
     '<p class="lede">' + body + '</p>' +
     '<div class="cta">' +
       '<button class="primary" type="button" data-act="pracch" data-ch="' + ch.id + '">Practise this chapter</button>' +
-      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to ' + esc(chName(nextCh).toLowerCase()) + '</button>' : '') +
+      (nextCh ? '<button class="ghost" type="button" data-act="learnch" data-ch="' + nextCh.id + '">Go to ' + esc(nextCh.unit ? chName(nextCh) : chName(nextCh).toLowerCase()) + '</button>' : '') +
       (L.mode === 'review' ? '' : '<button class="textbtn" type="button" data-act="review" data-ch="' + ch.id + '">Read the cards again</button>') +
     '</div>';
   return sec;
