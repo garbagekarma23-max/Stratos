@@ -1,10 +1,11 @@
 // The Edexcel International A Level Economics course in v2: picking it on the subject sheet, its own progress kept
-// apart from NSW Economics and Maths, the 11 chapters that are Coming soon, the Draft label, Learn through Chapter 1,
+// apart from NSW Economics and Maths, the six Unit 1 chapters with points, the six Unit 2 chapters that are Coming soon,
+// the Draft label, Learn through Chapter 1,
 // a Practice flight on it, and the friend sheet staying on the other subjects.
 // Run: node edexcel.mjs. Pass "shots" to also save Home and a Chapter 1 card at 390 by 844, light and dark, to tests/shots/.
 import { open, shot, tab, saved, pick, toLast, waiting, check, BANK, EDEXCEL } from './lib.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
-const IDS = EDEXCEL.units[0].chapters[0].points;
+const IDS = EDEXCEL.units[0].chapters[0].points, ALLIDS = EDEXCEL.units.flatMap(u => u.chapters.flatMap(c => c.points));
 const NOTE = 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.';
 const NAME = 'Economics, International A Level (Edexcel)';
 // Progress already made in the other two subjects, which this course must leave exactly as it is.
@@ -38,7 +39,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const pearson = await p.evaluate(() => { const t = document.querySelector('#v-home').innerText; return t.split('Pearson').length - 1; });
   check(pearson === 2, 'Home names Pearson only in the one line under the course name', R);
 
-  // ---------- 2. the shape of the AS year: two units, 12 chapters, 11 Coming soon ----------
+  // ---------- 2. the shape of the AS year: two units, 12 chapters, Unit 1 ready, Unit 2 Coming soon ----------
   const units = await p.locator('#v-home .unit').allTextContents();
   check(units.join('|') === 'Unit 1: Markets in action|Unit 2: Macroeconomic performance and policy', 'Home lists Unit 1 and Unit 2', R);
   const titles = await p.locator('#v-home .ch-head .t').allTextContents();
@@ -47,17 +48,28 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const nums = await p.locator('#v-home .ch-head .n').allTextContents();
   check(nums.join('') === '123456123456', 'chapters are numbered within each unit', R);
   const soon = p.locator('#v-home .ch.soon');
-  check((await soon.count()) === 11, '11 chapters are Coming soon', R);
+  check((await soon.count()) === 6 && (await p.locator('#v-home .ch-list').nth(1).locator('.ch.soon').count()) === 6, 'the six Unit 2 chapters are Coming soon', R);
   const soonStages = await soon.locator('.stage').allTextContents();
   check(soonStages.every(s => s === 'Coming soon'), 'each says Coming soon', R);
-  check((await soon.locator('.ch-head:disabled').count()) === 11, 'each Coming soon row is disabled', R);
+  check((await soon.locator('.ch-head:disabled').count()) === 6, 'each Coming soon row is disabled', R);
   await soon.nth(0).locator('.ch-head').click({force: true}); await p.waitForTimeout(100);
   check((await p.locator('#v-home .ch.soon.open, #v-home .ch.soon .pts').count()) === 0 && (await text(p, '.hero .h1')) === 'Introductory concepts', 'tapping a Coming soon chapter opens nothing', R);
-  const ch1 = p.locator('#v-home .ch:not(.soon)');
-  check((await ch1.count()) === 1 && (await ch1.locator('.ch-head .t .tag').textContent()) === 'Draft', 'Chapter 1 is the one ready chapter, labelled Draft', R);
+  const ready = p.locator('#v-home .ch:not(.soon)');
+  check((await ready.count()) === 6 && (await p.locator('#v-home .ch-list').nth(0).locator('.ch:not(.soon)').count()) === 6, 'the six Unit 1 chapters are ready', R);
+  check((await ready.locator('.ch-head .t .tag').allTextContents()).join('|') === 'Draft|Draft|Draft|Draft|Draft|Draft', 'each ready chapter is labelled Draft', R);
+  check((await ready.locator('.stage').allTextContents()).every(s => s === 'Not started'), 'each ready chapter says Not started', R);
+  // Open chapters 2 to 6 in turn: each lists its points from the bank, in order, then Chapter 1 opens again.
+  const lists = [];
+  for (let i = 1; i < 6; i++) {
+    await ready.nth(i).locator('.ch-head').click(); await p.waitForTimeout(80);
+    lists.push((await ready.nth(i).locator('.pt .t').allTextContents()).join('|') === EDEXCEL.units[0].chapters[i].points.map(id => BANK[id].title).join('|'));
+  }
+  check(lists.every(Boolean) && EDEXCEL.units[0].chapters.map(c => c.points.length).join('') === '652454', 'chapters 2 to 6 open to their 5, 2, 4, 5 and 4 points, in order', R);
+  await ready.nth(0).locator('.ch-head').click(); await p.waitForTimeout(80);
+  const ch1 = ready.first();
   check((await ch1.locator('.pt').count()) === 6 && (await ch1.locator('.pt .t').allTextContents()).join('|') === IDS.map(id => BANK[id].title).join('|'), 'Chapter 1 has its six points, in order', R);
-  check((await ch1.locator('.pt .lab').allTextContents()).every(s => s === 'New'), 'every point starts New', R);
-  check((await p.locator('#v-home .fine').textContent()).includes('Chapter 1 is a draft until a teacher has checked it'), 'the note at the bottom of Home says Chapter 1 is a draft', R);
+  check((await ready.locator('.pt .lab').allTextContents()).every(s => s === 'New'), 'every point starts New', R);
+  check((await p.locator('#v-home .fine').textContent()).includes('Unit 1 is a draft until a teacher has checked it. Unit 2 is coming soon.'), 'the note at the bottom of Home says Unit 1 is a draft and Unit 2 is coming soon', R);
 
   // The point sheet says the chapter is a draft.
   await ch1.locator('.pt').nth(2).click(); await p.waitForTimeout(150);
@@ -70,7 +82,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   check((await p.getAttribute('#q', 'placeholder')) === 'Search AS Economics', 'Search looks through AS Economics', R);
   await p.fill('#q', 'opportunity'); await p.waitForTimeout(80);
   const hits = await p.locator('#qOut .res .t').allTextContents();
-  check(hits.includes('Scarcity') && hits.every(h => IDS.some(id => BANK[id].title === h)), 'Search finds Scarcity and only this course\'s points', R);
+  check(hits.includes('Scarcity') && hits.every(h => ALLIDS.some(id => BANK[id].title === h)), 'Search finds Scarcity and only this course\'s points', R);
   check((await text(p, '#qOut .res .c')).startsWith('Unit 1, chapter 1'), 'a search result names Unit 1, chapter 1', R);
   await p.fill('#q', 'tariff'); await p.waitForTimeout(80);
   check((await text(p, '#qOut')).startsWith('Nothing in this topic matches'), 'NSW points are not found', R);
@@ -96,7 +108,8 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   check((await text(p, '#learnFeed .endslide .ctitle')) === 'Chapter learned', 'the end slide says Chapter learned', R);
   check((await text(p, '#learnFeed .endslide .lede')).startsWith('5 of 6 checks right first time. 1 weak point'), 'it counts 5 of 6 and one weak point', R);
   check((await text(p, '#learnFeed .endslide .meta')).startsWith('Unit 1, chapter 1'), 'it names Unit 1, chapter 1', R);
-  check((await p.locator('#learnFeed .endslide [data-act="learnch"]').count()) === 0, 'it offers no next chapter, because the rest are Coming soon', R);
+  const next = p.locator('#learnFeed .endslide [data-act="learnch"]');
+  check((await next.count()) === 1 && (await next.textContent()) === 'Go to Unit 1, chapter 2' && (await next.getAttribute('data-ch')) === 'x1c2', 'it offers Unit 1, chapter 2 next', R);
   let s = await saved(p);
   const mine = Object.keys(s.ans).filter(k => k.startsWith('e-'));
   check(mine.length === 6 && IDS.every(id => s.ans[id + 'a']) && s.ans['e-ppfa'].ok === false && s.ans['e-naturea'].ok === true, 'six answers are saved under the point ids, the fourth wrong', R);
@@ -135,7 +148,8 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   check((await text(p, '#pracStart')).includes('Best altitude0 km'), 'NSW Practice shows its own record, not the course\'s', R);
   await tab(p, 'home');
   await toEdexcel(p);
-  check((await p.locator('#v-home .ch:not(.soon) .pt.is-weak').count()) === 0 && (await text(p, '.legend')).includes('6 of 6 learned'), 'the course\'s progress is still there', R);
+  check((await text(p, '#v-home .ch:not(.soon) .stage')) === 'Proven' && (await p.locator('#v-home .pt.is-weak').count()) === 0, 'the course\'s progress is still there: Chapter 1 is proven', R);
+  check((await text(p, '.hero .h1')) === 'Consumer behaviour and demand' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 2 of 6 Draft', 'with Chapter 1 proven, Home moves on to Unit 1, chapter 2', R);
   await p.reload(); await p.waitForTimeout(300);
   check((await text(p, '.subject')) === NAME, 'after a reload the course is still picked', R);
 
