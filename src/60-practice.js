@@ -61,10 +61,10 @@ ACT.golearn = () => openLearn(curCh().id);
 ACT.scope = b => { ui.scope = b.dataset.v; renderStart(); const again = $('.choice[data-v="' + ui.scope + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.len = b => { ui.len = +b.dataset.v; renderStart(); const again = $('.seg3 [data-v="' + ui.len + '"]', startEl); if (again) again.focus({preventScroll: true}); };
 ACT.scopech = () => {
-  openSheet('Pick a chapter', '<div class="picks">' + CH.map(c => {
+  openSheet('Pick a chapter', chPicks(c => {
     const s = chStats(c);
     return '<button class="pick" type="button" data-act="setscopech" data-ch="' + c.id + '"' + (s.learned ? '' : ' disabled') + '><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (s.learned ? esc(chStage(c).t) : 'Nothing learned here yet') + '</small></span></button>';
-  }).join('') + '</div>');
+  }));
 };
 ACT.setscopech = b => { ui.scopeCh = b.dataset.ch; ui.scope = 'chapter'; closeSheet(); renderStart(); };
 ACT.start = () => startPractice({mode: ui.scope, ch: ui.scopeCh, len: ui.len || 999});
