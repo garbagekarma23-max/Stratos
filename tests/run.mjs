@@ -5,10 +5,12 @@
 // preview.mjs checks the page titles, icons, link preview tags and web app manifests, with no browser.
 // fullscreen.mjs checks both pages full screen on phones with safe areas.
 // edexcel.mjs runs the Edexcel International A Level Economics course: switching to it, its own progress, Coming soon and Draft.
+// places.mjs runs the subject sheet's steps: the country guessed from the phone, the country list and search, the state,
+// the international courses in every country, and switching courses.
 // intro.mjs checks the intro that plays when v2.html opens. Every other test skips it.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});

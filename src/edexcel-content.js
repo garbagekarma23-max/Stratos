@@ -5,37 +5,37 @@
    in econ-points.js, so a point can later belong to more than one course.
    A chapter with no points shows on Home as Coming soon and cannot be opened.
    check is 'draft' until a teacher has checked the chapter, then 'checked'. A draft chapter with points shows a
-   Draft label in the app. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
+   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
 const EDEXCEL = {
   id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', short: 'AS Economics',
   note: 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.',
   units: [
     {title: 'Markets in action', chapters: [
-      {id: 'x1c1', title: 'Introductory concepts', check: 'draft',
+      {id: 'x1c1', title: 'Introductory concepts', check: 'checked',
         points: ['e-nature', 'e-positive', 'e-scarcity', 'e-ppf', 'e-special', 'e-systems']},
-      {id: 'x1c2', title: 'Consumer behaviour and demand', check: 'draft',
+      {id: 'x1c2', title: 'Consumer behaviour and demand', check: 'checked',
         points: ['e-rational', 'e-demand', 'e-ped', 'e-yed', 'e-xed']},
-      {id: 'x1c3', title: 'Supply', check: 'draft',
+      {id: 'x1c3', title: 'Supply', check: 'checked',
         points: ['e-supply', 'e-pes']},
-      {id: 'x1c4', title: 'Price determination', check: 'draft',
+      {id: 'x1c4', title: 'Price determination', check: 'checked',
         points: ['e-equilibrium', 'e-surplus', 'e-pricemech', 'e-taxsub']},
-      {id: 'x1c5', title: 'Market failure', check: 'draft',
+      {id: 'x1c5', title: 'Market failure', check: 'checked',
         points: ['e-failure', 'e-externality', 'e-public', 'e-info', 'e-bubbles']},
-      {id: 'x1c6', title: 'Government intervention', check: 'draft',
+      {id: 'x1c6', title: 'Government intervention', check: 'checked',
         points: ['e-correct', 'e-maxmin', 'e-permits', 'e-govfail']}
     ]},
     {title: 'Macroeconomic performance and policy', chapters: [
-      {id: 'x2c1', title: 'Measures of economic performance', check: 'draft',
+      {id: 'x2c1', title: 'Measures of economic performance', check: 'checked',
         points: ['e-gdp', 'e-living', 'e-cpi', 'e-inflation', 'e-labour', 'e-unemployment', 'e-bop']},
-      {id: 'x2c2', title: 'Aggregate demand', check: 'draft',
+      {id: 'x2c2', title: 'Aggregate demand', check: 'checked',
         points: ['e-ad', 'e-consumption', 'e-investment', 'e-govtrade']},
-      {id: 'x2c3', title: 'Aggregate supply', check: 'draft',
+      {id: 'x2c3', title: 'Aggregate supply', check: 'checked',
         points: ['e-sras', 'e-lras', 'e-lrasshift']},
-      {id: 'x2c4', title: 'National income', check: 'draft',
+      {id: 'x2c4', title: 'National income', check: 'checked',
         points: ['e-income', 'e-flow', 'e-macroeq', 'e-multiplier']},
-      {id: 'x2c5', title: 'Economic growth', check: 'draft',
+      {id: 'x2c5', title: 'Economic growth', check: 'checked',
         points: ['e-growthcause', 'e-outputgap', 'e-growthgain', 'e-growthcost']},
-      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'draft',
+      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'checked',
         points: ['e-objectives', 'e-monetary', 'e-fiscal', 'e-supplyside', 'e-conflicts']}
     ]}
   ]

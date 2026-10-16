@@ -1,10 +1,11 @@
 // The Edexcel International A Level Economics course in v2: picking it on the subject sheet, its own progress kept
 // apart from NSW Economics and Maths, the 12 chapters of Units 1 and 2 and their points, a chapter with no points
-// showing as Coming soon, the Draft label, Learn through Chapter 1, Learn from the end of Unit 1 into Unit 2,
+// showing as Coming soon, no Draft label now that every chapter is checked (and the label still working for a chapter
+// marked draft), Learn through Chapter 1, Learn from the end of Unit 1 into Unit 2,
 // a Practice flight on it, and the friend sheet staying on the other subjects.
 // Run: node edexcel.mjs. Pass "shots" to also save Home, the chapter list, a Unit 1 card and a Unit 2 card at 390 by 844,
 // light and dark, to tests/shots/.
-import { open, shot, tab, saved, pick, toLast, waiting, check, BANK, EDEXCEL } from './lib.mjs';
+import { open, shot, tab, saved, pick, toLast, waiting, check, course, BANK, EDEXCEL } from './lib.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
 const IDS = EDEXCEL.units[0].chapters[0].points, ALLIDS = EDEXCEL.units.flatMap(u => u.chapters.flatMap(c => c.points));
 const NOTE = 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.';
@@ -14,10 +15,7 @@ const ECO = {c1p1a: {ok: true, n: 1, t: Date.parse('2026-10-01T09:00:00')}, c1p2
 const MATHS = {cur: 'm1', h: {m1p1: [{ok: true, day: '2026-10-01', q: 'a', t: 1}]}};
 const SEED = {ans: ECO, cur: 'c1', m: MATHS};
 
-async function toEdexcel(p) {
-  await p.click('.subject'); await p.waitForTimeout(100);
-  await p.click('.pick[data-sub="edexcel"]'); await p.waitForTimeout(200);
-}
+const toEdexcel = p => course(p, 'edexcel');
 const text = (p, sel) => p.locator(sel).first().textContent();
 
 // ---------- 1. the subject sheet, switching, and Home ----------
@@ -25,33 +23,35 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const {b, p, errs} = await open({seed: SEED});
   check((await p.locator('.tag').count()) === 0, 'NSW Economics shows no Draft label', R);
   await p.click('.subject'); await p.waitForTimeout(100);
+  await p.click('[data-act="placenext"]'); await p.waitForTimeout(80);
+  await p.click('[data-act="placedone"]'); await p.waitForTimeout(80);
   const row = p.locator('.pick[data-sub="edexcel"]');
-  check((await row.count()) === 1 && (await row.locator('.t').textContent()) === NAME + NOTE, 'the subject sheet has the course, with the Pearson line under its name', R);
+  check((await row.count()) === 1 && (await row.locator('.t').textContent()) === 'Economics, AS yearInternational A Level (Edexcel)' + NOTE, 'the subject sheet has the course, named with its exam, with the Pearson line under it', R);
   check((await row.locator('.v').textContent()) === 'Switch' && !(await row.isDisabled()), 'the course can be picked', R);
   await row.click(); await p.waitForTimeout(200);
   check((await text(p, '.subject')) === NAME, 'Home shows the course name', R);
   check((await text(p, '.cnote')) === NOTE, 'the Pearson line sits under the course name on Home', R);
   check((await text(p, '#toast')) === 'Switched to ' + NAME, 'a toast says which course is open', R);
   check((await text(p, '.hero .h1')) === 'Introductory concepts', 'Home opens on Unit 1, Chapter 1: Introductory concepts', R);
-  check((await text(p, '.hero .kicker')) === 'Unit 1, chapter 1 of 6 Draft', 'the hero says Unit 1, chapter 1 of 6, with a Draft label', R);
+  check((await text(p, '.hero .kicker')) === 'Unit 1, chapter 1 of 6', 'the hero says Unit 1, chapter 1 of 6, with no Draft label', R);
   check((await text(p, '.legend')).includes('0 of 6 proven') && (await text(p, '.legend')).includes('0 of 6 learned'), 'the bar starts at 0 of 6', R);
   check((await text(p, '.hero .primary')) === 'Start this chapter', 'the button says Start this chapter', R);
   // Pearson is named only in the line under the course name. No logos: the page has no images of any kind for it.
   const pearson = await p.evaluate(() => { const t = document.querySelector('#v-home').innerText; return t.split('Pearson').length - 1; });
   check(pearson === 2, 'Home names Pearson only in the one line under the course name', R);
 
-  // ---------- 2. the shape of the AS year: two units, 12 chapters, every one ready and a draft ----------
+  // ---------- 2. the shape of the AS year: two units, 12 chapters, every one ready and checked ----------
   const units = await p.locator('#v-home .unit').allTextContents();
   check(units.join('|') === 'Unit 1: Markets in action|Unit 2: Macroeconomic performance and policy', 'Home lists Unit 1 and Unit 2', R);
   const titles = await p.locator('#v-home .ch-head .t').allTextContents();
   const want = EDEXCEL.units.flatMap(u => u.chapters.map(c => c.title));
-  check(titles.length === 12 && titles.map(t => t.replace(/ Draft$/, '')).join('|') === want.join('|'), 'all 12 chapters show, in order', R);
+  check(titles.length === 12 && titles.join('|') === want.join('|'), 'all 12 chapters show, in order', R);
   const nums = await p.locator('#v-home .ch-head .n').allTextContents();
   check(nums.join('') === '123456123456', 'chapters are numbered within each unit', R);
   check((await p.locator('#v-home .ch.soon').count()) === 0, 'no chapter is Coming soon', R);
   const ready = p.locator('#v-home .ch:not(.soon)');
   check((await ready.count()) === 12 && (await p.locator('#v-home .ch-list').nth(1).locator('.ch:not(.soon)').count()) === 6, 'all 12 chapters are ready, six in each unit', R);
-  check((await ready.locator('.ch-head .t .tag').allTextContents()).every(t => t === 'Draft') && (await ready.locator('.ch-head .t .tag').count()) === 12, 'each chapter is labelled Draft', R);
+  check((await p.locator('#v-home .tag').count()) === 0, 'no chapter is labelled Draft', R);
   check((await ready.locator('.stage').allTextContents()).every(s => s === 'Not started'), 'each chapter says Not started', R);
   // Open chapters 2 to 12 in turn: each lists its points from the bank, in order, then Chapter 1 opens again.
   const chapters = EDEXCEL.units.flatMap(u => u.chapters), lists = [];
@@ -65,12 +65,13 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const ch1 = ready.first();
   check((await ch1.locator('.pt').count()) === 6 && (await ch1.locator('.pt .t').allTextContents()).join('|') === IDS.map(id => BANK[id].title).join('|'), 'Chapter 1 has its six points, in order', R);
   check((await ready.locator('.pt .lab').allTextContents()).every(s => s === 'New'), 'every point starts New', R);
-  check((await p.locator('#v-home .fine').textContent()).includes('Both units are drafts until a teacher has checked them.') && !(await p.locator('#v-home .fine').textContent()).includes('coming soon'), 'the note at the bottom of Home says both units are drafts', R);
+  const fine = await p.locator('#v-home .fine').textContent();
+  check(fine.startsWith('The AS year has 12 chapters. Challenges and races') && !/draft|checked/i.test(fine) && !fine.includes('coming soon'), 'the note at the bottom of Home says nothing about drafts', R);
 
-  // The point sheet says the chapter is a draft.
+  // The point sheet names the chapter, and no longer says it is a draft.
   await ch1.locator('.pt').nth(2).click(); await p.waitForTimeout(150);
   const sh = await text(p, '#sheetBody');
-  check((await text(p, '#sheetTitle')) === 'Scarcity' && sh.includes('Unit 1, chapter 1: Introductory concepts') && sh.includes('Draft This chapter has not been checked by a teacher yet.'), 'the point sheet names the chapter and says it is a draft', R);
+  check((await text(p, '#sheetTitle')) === 'Scarcity' && sh.includes('Unit 1, chapter 1: Introductory concepts') && !sh.includes('Draft') && !sh.includes('not been checked'), 'the point sheet names the chapter, with no draft line', R);
   await p.click('#sheetClose'); await p.waitForTimeout(150);
 
   // ---------- 3. Search and Practice follow the course ----------
@@ -99,7 +100,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   for (let i = 0; i < 6; i++) {
     const card = p.locator('#learnFeed .card:not(.endslide)').last();
     check((await card.locator('.ctitle').textContent()) === BANK[IDS[i]].title, 'card ' + (i + 1) + ' is ' + BANK[IDS[i]].title, R);
-    check((await card.locator('.meta').textContent()) === 'Point ' + (i + 1) + ' of 6Draft', 'card ' + (i + 1) + ' says Point ' + (i + 1) + ' of 6, Draft', R);
+    check((await card.locator('.meta').textContent()) === 'Point ' + (i + 1) + ' of 6', 'card ' + (i + 1) + ' says Point ' + (i + 1) + ' of 6, with no Draft label', R);
     if (i === 0 && shots) await card.locator('.ctitle').waitFor();
     await card.locator('.next').click(); await p.waitForTimeout(60);
     await pick(p, '#learnFeed', i !== 3);
@@ -151,7 +152,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await tab(p, 'home');
   await toEdexcel(p);
   check((await text(p, '#v-home .ch:not(.soon) .stage')) === 'Proven' && (await p.locator('#v-home .pt.is-weak').count()) === 0, 'the course\'s progress is still there: Chapter 1 is proven', R);
-  check((await text(p, '.hero .h1')) === 'Consumer behaviour and demand' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 2 of 6 Draft', 'with Chapter 1 proven, Home moves on to Unit 1, chapter 2', R);
+  check((await text(p, '.hero .h1')) === 'Consumer behaviour and demand' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 2 of 6', 'with Chapter 1 proven, Home moves on to Unit 1, chapter 2', R);
   await p.reload(); await p.waitForTimeout(300);
   check((await text(p, '.subject')) === NAME, 'after a reload the course is still picked', R);
 
@@ -173,7 +174,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
 // ---------- 8. from the end of Unit 1 into Unit 2 ----------
 {
   const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel', c: {edexcel: {cur: 'x1c6'}}})});
-  check((await text(p, '.hero .h1')) === 'Government intervention' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 6 of 6 Draft', 'Home opens on Unit 1, chapter 6', R);
+  check((await text(p, '.hero .h1')) === 'Government intervention' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 6 of 6', 'Home opens on Unit 1, chapter 6', R);
   await p.click('.hero .primary'); await p.waitForTimeout(150);
   const ids6 = EDEXCEL.units[0].chapters[5].points;
   for (let i = 0; i < ids6.length; i++) {
@@ -187,7 +188,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const ids21 = EDEXCEL.units[1].chapters[0].points;
   check((await text(p, '#chPickT')) === '1. Measures of economic performance' && (await p.locator('#segs .seg').count()) === ids21.length, 'Learn opens Unit 2, chapter 1 with a segment for each of its 7 points', R);
   const card = p.locator('#learnFeed .card:not(.endslide)').last();
-  check((await card.locator('.ctitle').textContent()) === BANK[ids21[0]].title && (await card.locator('.meta').textContent()) === 'Point 1 of 7Draft', 'its first card is ' + BANK[ids21[0]].title + ', Point 1 of 7, Draft', R);
+  check((await card.locator('.ctitle').textContent()) === BANK[ids21[0]].title && (await card.locator('.meta').textContent()) === 'Point 1 of 7', 'its first card is ' + BANK[ids21[0]].title + ', Point 1 of 7', R);
   await card.locator('.next').click(); await p.waitForTimeout(60);
   await pick(p, '#learnFeed', true);
   const s = await saved(p);
@@ -204,7 +205,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
 {
   const route = ctx => ctx.route(/v2\.html/, async r => {
     const res = await r.fetch(), body = await res.text();
-    const out = body.replace(/(id: 'x2c6', title: '[^']+', check: 'draft',\s*points: )\[[^\]]*\]/, '$1[]');
+    const out = body.replace(/(id: 'x2c6', title: '[^']+', check: 'checked',\s*points: )\[[^\]]*\]/, '$1[]');
     await r.fulfill({response: res, body: out});
   });
   const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel'}), route: route});
@@ -220,7 +221,27 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   errsAll.push(...errs); await b.close();
 }
 
-// ---------- 10. screenshots at 390 by 844, light and dark ----------
+// ---------- 10. the Draft label still works ----------
+// Every chapter is checked now, so this opens the page with Unit 1, chapter 1 marked draft again, as a later course's
+// chapters would start.
+{
+  const route = ctx => ctx.route(/v2\.html/, async r => {
+    const res = await r.fetch(), body = await res.text();
+    await r.fulfill({response: res, body: body.replace("id: 'x1c1', title: 'Introductory concepts', check: 'checked'", "id: 'x1c1', title: 'Introductory concepts', check: 'draft'")});
+  });
+  const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel'}), route: route});
+  check((await text(p, '.hero .kicker')) === 'Unit 1, chapter 1 of 6 Draft', 'a chapter marked draft shows the Draft label on the hero', R);
+  check((await p.locator('#v-home .ch-head .t .tag').count()) === 1 && (await p.locator('#v-home .ch-head .t').first().textContent()) === 'Introductory concepts Draft', 'and on its chapter row only', R);
+  check((await p.locator('#v-home .fine').textContent()).includes('Chapters marked Draft have not been checked by a teacher yet.'), 'the note at the bottom of Home explains the label', R);
+  await p.locator('#v-home .pt').first().click(); await p.waitForTimeout(150);
+  check((await text(p, '#sheetBody')).includes('Draft This chapter has not been checked by a teacher yet.'), 'the point sheet says the chapter is a draft', R);
+  await p.click('#sheetClose'); await p.waitForTimeout(150);
+  await p.click('.hero .primary'); await p.waitForTimeout(150);
+  check((await p.locator('#learnFeed .card:not(.endslide)').last().locator('.meta').textContent()) === 'Point 1 of 6Draft', 'each Learn card says Draft', R);
+  errsAll.push(...errs); await b.close();
+}
+
+// ---------- 11. screenshots at 390 by 844, light and dark ----------
 if (shots) for (const scheme of ['light', 'dark']) {
   const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel'}), scheme: scheme, w: 390, h: 844});
   await shot(p, 'edexcel-home-' + scheme);

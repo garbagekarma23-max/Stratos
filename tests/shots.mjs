@@ -82,7 +82,8 @@ if (which === 'all' || which === 'desk') {
 console.log('errors:', errsAll);
 if (which === 'light') {
   const {b, p, errs} = await open({motion: true, seed: seedFor(['c1', 'c2'])});
-  await p.click('[data-act="subject"]'); await p.waitForTimeout(350); await shot(p, 'vis-light-subjects'); await p.click('#sheetClose');
+  await p.click('[data-act="subject"]'); await p.waitForTimeout(350); await shot(p, 'vis-light-subjects');
+  await p.click('[data-act="placenext"]'); await p.click('[data-act="placedone"]'); await p.waitForTimeout(350); await shot(p, 'vis-light-courses'); await p.click('#sheetClose');
   await tab(p, 'practice'); await p.waitForTimeout(200);
   await p.click('[data-act="len"][data-v="0"]'); await p.waitForTimeout(100);
   await p.click('[data-act="start"]'); await p.waitForTimeout(800); await shot(p, 'vis-light-launch');

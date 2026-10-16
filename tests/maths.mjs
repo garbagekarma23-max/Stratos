@@ -90,8 +90,10 @@ async function pointSheet(p, pid) { await home(p); await p.locator('.pt[data-p="
   const eco = {c1p1a: {ok: true, n: 1, t: Date.parse('2026-10-01T09:00:00')}, c1p2a: {ok: false, n: 1, t: Date.parse('2026-10-01T09:01:00')}};
   const {b, p, errs} = await open({seed: {ans: eco, cur: 'c1'}});
   await p.locator('.subject').tap(); await p.waitForTimeout(100);
+  await p.locator('[data-act="placenext"]').tap(); await p.waitForTimeout(80);
+  await p.locator('[data-act="placedone"]').tap(); await p.waitForTimeout(80);
   const rows = await p.locator('#sheetBody .pick').allTextContents();
-  check(rows.some(r => r.startsWith('EquationsMaths, Year 11')) && !rows.some(r => /^Maths.*Soon/.test(r)), 'the subject sheet offers Maths: Equations, Year 11', R);
+  check(rows.some(r => r.startsWith('Maths, Year 11HSC, Equations')) && !rows.some(r => /Soon/.test(r)), 'the subject sheet offers Maths, Year 11, for the HSC', R);
   await p.locator('.pick[data-sub="maths"]').tap();
   await p.waitForFunction(() => !!window.MathfieldElement);
   await p.waitForTimeout(200);
