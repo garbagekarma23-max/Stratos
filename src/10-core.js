@@ -246,6 +246,11 @@ const isMaths = () => SUB.id === 'maths';
 function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }
 /* How a chapter is named: "Chapter 2", or "Unit 1, chapter 2" in a course with units. */
 const chName = c => c.unit ? 'Unit ' + c.unit + ', chapter ' + c.n : 'Chapter ' + c.n;
+/* The list of chapters in a sheet, for picking one. A course numbers its chapters within each unit, so each unit's
+   name goes above its chapters. A unit with no chapter ready yet is left out. row draws one chapter. */
+const chPicks = row => SUB.units
+  ? SUB.units.filter(u => CH.some(c => c.unit === u.n)).map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><div class="picks">' + CH.filter(c => c.unit === u.n).map(row).join('') + '</div>').join('')
+  : '<div class="picks">' + CH.map(row).join('') + '</div>';
 /* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
 const isDraft = c => !!c && c.check === 'draft';
 const DRAFT = '<span class="tag">Draft</span>';

@@ -232,7 +232,7 @@ learnFeed.addEventListener('scroll', () => {
 }, {passive: true});
 
 ACT.chpick = () => {
-  openSheet('Chapters', '<div class="picks">' + CH.map(c => {
+  openSheet('Chapters', chPicks(c => {
     return '<button class="pick" type="button" data-act="learnch" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + esc(chStage(c).t) + '</small></span></button>';
-  }).join('') + '</div>');
+  }));
 };

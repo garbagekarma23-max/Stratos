@@ -25,12 +25,18 @@ const EDEXCEL = {
         points: ['e-correct', 'e-maxmin', 'e-permits', 'e-govfail']}
     ]},
     {title: 'Macroeconomic performance and policy', chapters: [
-      {id: 'x2c1', title: 'Measures of economic performance', check: 'draft', points: []},
-      {id: 'x2c2', title: 'Aggregate demand', check: 'draft', points: []},
-      {id: 'x2c3', title: 'Aggregate supply', check: 'draft', points: []},
-      {id: 'x2c4', title: 'National income', check: 'draft', points: []},
-      {id: 'x2c5', title: 'Economic growth', check: 'draft', points: []},
-      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'draft', points: []}
+      {id: 'x2c1', title: 'Measures of economic performance', check: 'draft',
+        points: ['e-gdp', 'e-living', 'e-cpi', 'e-inflation', 'e-labour', 'e-unemployment', 'e-bop']},
+      {id: 'x2c2', title: 'Aggregate demand', check: 'draft',
+        points: ['e-ad', 'e-consumption', 'e-investment', 'e-govtrade']},
+      {id: 'x2c3', title: 'Aggregate supply', check: 'draft',
+        points: ['e-sras', 'e-lras', 'e-lrasshift']},
+      {id: 'x2c4', title: 'National income', check: 'draft',
+        points: ['e-income', 'e-flow', 'e-macroeq', 'e-multiplier']},
+      {id: 'x2c5', title: 'Economic growth', check: 'draft',
+        points: ['e-growthcause', 'e-outputgap', 'e-growthgain', 'e-growthcost']},
+      {id: 'x2c6', title: 'Macroeconomic objectives and policies', check: 'draft',
+        points: ['e-objectives', 'e-monetary', 'e-fiscal', 'e-supplyside', 'e-conflicts']}
     ]}
   ]
 };

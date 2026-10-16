@@ -1,8 +1,9 @@
 // The Edexcel International A Level Economics course in v2: picking it on the subject sheet, its own progress kept
-// apart from NSW Economics and Maths, the six Unit 1 chapters with points, the six Unit 2 chapters that are Coming soon,
-// the Draft label, Learn through Chapter 1,
+// apart from NSW Economics and Maths, the 12 chapters of Units 1 and 2 and their points, a chapter with no points
+// showing as Coming soon, the Draft label, Learn through Chapter 1, Learn from the end of Unit 1 into Unit 2,
 // a Practice flight on it, and the friend sheet staying on the other subjects.
-// Run: node edexcel.mjs. Pass "shots" to also save Home and a Chapter 1 card at 390 by 844, light and dark, to tests/shots/.
+// Run: node edexcel.mjs. Pass "shots" to also save Home, the chapter list, a Unit 1 card and a Unit 2 card at 390 by 844,
+// light and dark, to tests/shots/.
 import { open, shot, tab, saved, pick, toLast, waiting, check, BANK, EDEXCEL } from './lib.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
 const IDS = EDEXCEL.units[0].chapters[0].points, ALLIDS = EDEXCEL.units.flatMap(u => u.chapters.flatMap(c => c.points));
@@ -39,7 +40,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const pearson = await p.evaluate(() => { const t = document.querySelector('#v-home').innerText; return t.split('Pearson').length - 1; });
   check(pearson === 2, 'Home names Pearson only in the one line under the course name', R);
 
-  // ---------- 2. the shape of the AS year: two units, 12 chapters, Unit 1 ready, Unit 2 Coming soon ----------
+  // ---------- 2. the shape of the AS year: two units, 12 chapters, every one ready and a draft ----------
   const units = await p.locator('#v-home .unit').allTextContents();
   check(units.join('|') === 'Unit 1: Markets in action|Unit 2: Macroeconomic performance and policy', 'Home lists Unit 1 and Unit 2', R);
   const titles = await p.locator('#v-home .ch-head .t').allTextContents();
@@ -47,29 +48,24 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   check(titles.length === 12 && titles.map(t => t.replace(/ Draft$/, '')).join('|') === want.join('|'), 'all 12 chapters show, in order', R);
   const nums = await p.locator('#v-home .ch-head .n').allTextContents();
   check(nums.join('') === '123456123456', 'chapters are numbered within each unit', R);
-  const soon = p.locator('#v-home .ch.soon');
-  check((await soon.count()) === 6 && (await p.locator('#v-home .ch-list').nth(1).locator('.ch.soon').count()) === 6, 'the six Unit 2 chapters are Coming soon', R);
-  const soonStages = await soon.locator('.stage').allTextContents();
-  check(soonStages.every(s => s === 'Coming soon'), 'each says Coming soon', R);
-  check((await soon.locator('.ch-head:disabled').count()) === 6, 'each Coming soon row is disabled', R);
-  await soon.nth(0).locator('.ch-head').click({force: true}); await p.waitForTimeout(100);
-  check((await p.locator('#v-home .ch.soon.open, #v-home .ch.soon .pts').count()) === 0 && (await text(p, '.hero .h1')) === 'Introductory concepts', 'tapping a Coming soon chapter opens nothing', R);
+  check((await p.locator('#v-home .ch.soon').count()) === 0, 'no chapter is Coming soon', R);
   const ready = p.locator('#v-home .ch:not(.soon)');
-  check((await ready.count()) === 6 && (await p.locator('#v-home .ch-list').nth(0).locator('.ch:not(.soon)').count()) === 6, 'the six Unit 1 chapters are ready', R);
-  check((await ready.locator('.ch-head .t .tag').allTextContents()).join('|') === 'Draft|Draft|Draft|Draft|Draft|Draft', 'each ready chapter is labelled Draft', R);
-  check((await ready.locator('.stage').allTextContents()).every(s => s === 'Not started'), 'each ready chapter says Not started', R);
-  // Open chapters 2 to 6 in turn: each lists its points from the bank, in order, then Chapter 1 opens again.
-  const lists = [];
-  for (let i = 1; i < 6; i++) {
+  check((await ready.count()) === 12 && (await p.locator('#v-home .ch-list').nth(1).locator('.ch:not(.soon)').count()) === 6, 'all 12 chapters are ready, six in each unit', R);
+  check((await ready.locator('.ch-head .t .tag').allTextContents()).every(t => t === 'Draft') && (await ready.locator('.ch-head .t .tag').count()) === 12, 'each chapter is labelled Draft', R);
+  check((await ready.locator('.stage').allTextContents()).every(s => s === 'Not started'), 'each chapter says Not started', R);
+  // Open chapters 2 to 12 in turn: each lists its points from the bank, in order, then Chapter 1 opens again.
+  const chapters = EDEXCEL.units.flatMap(u => u.chapters), lists = [];
+  for (let i = 1; i < 12; i++) {
     await ready.nth(i).locator('.ch-head').click(); await p.waitForTimeout(80);
-    lists.push((await ready.nth(i).locator('.pt .t').allTextContents()).join('|') === EDEXCEL.units[0].chapters[i].points.map(id => BANK[id].title).join('|'));
+    lists.push((await ready.nth(i).locator('.pt .t').allTextContents()).join('|') === chapters[i].points.map(id => BANK[id].title).join('|'));
   }
-  check(lists.every(Boolean) && EDEXCEL.units[0].chapters.map(c => c.points.length).join('') === '652454', 'chapters 2 to 6 open to their 5, 2, 4, 5 and 4 points, in order', R);
+  check(lists.every(Boolean) && chapters.map(c => c.points.length).join('') === '652454743445', 'chapters 2 to 12 open to their points, in order: Unit 1 has 5, 2, 4, 5 and 4 after Chapter 1, Unit 2 has 7, 4, 3, 4, 4 and 5', R);
+  check(ALLIDS.length === 53 && new Set(ALLIDS).size === 53, 'the course has 53 points, none listed twice', R);
   await ready.nth(0).locator('.ch-head').click(); await p.waitForTimeout(80);
   const ch1 = ready.first();
   check((await ch1.locator('.pt').count()) === 6 && (await ch1.locator('.pt .t').allTextContents()).join('|') === IDS.map(id => BANK[id].title).join('|'), 'Chapter 1 has its six points, in order', R);
   check((await ready.locator('.pt .lab').allTextContents()).every(s => s === 'New'), 'every point starts New', R);
-  check((await p.locator('#v-home .fine').textContent()).includes('Unit 1 is a draft until a teacher has checked it. Unit 2 is coming soon.'), 'the note at the bottom of Home says Unit 1 is a draft and Unit 2 is coming soon', R);
+  check((await p.locator('#v-home .fine').textContent()).includes('Both units are drafts until a teacher has checked them.') && !(await p.locator('#v-home .fine').textContent()).includes('coming soon'), 'the note at the bottom of Home says both units are drafts', R);
 
   // The point sheet says the chapter is a draft.
   await ch1.locator('.pt').nth(2).click(); await p.waitForTimeout(150);
@@ -84,7 +80,9 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   const hits = await p.locator('#qOut .res .t').allTextContents();
   check(hits.includes('Scarcity') && hits.every(h => ALLIDS.some(id => BANK[id].title === h)), 'Search finds Scarcity and only this course\'s points', R);
   check((await text(p, '#qOut .res .c')).startsWith('Unit 1, chapter 1'), 'a search result names Unit 1, chapter 1', R);
-  await p.fill('#q', 'tariff'); await p.waitForTimeout(80);
+  await p.fill('#q', 'multiplier'); await p.waitForTimeout(80);
+  check((await text(p, '#qOut .res .t')) === 'The multiplier' && (await text(p, '#qOut .res .c')).startsWith('Unit 2, chapter 4'), 'Search finds a Unit 2 point and names Unit 2, chapter 4', R);
+  await p.fill('#q', 'WTO'); await p.waitForTimeout(80);
   check((await text(p, '#qOut')).startsWith('Nothing in this topic matches'), 'NSW points are not found', R);
   await tab(p, 'practice');
   check((await text(p, '#pracStart')).includes('Learn your first point'), 'Practice asks you to learn a point first', R);
@@ -94,6 +92,10 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.click('.hero .primary'); await p.waitForTimeout(150);
   check((await p.locator('#v-learn.on').count()) === 1 && (await p.locator('#segs .seg').count()) === 6, 'Learn opens with six segments', R);
   check((await text(p, '#chPickT')) === '1. Introductory concepts', 'the Learn bar names the chapter', R);
+  // The chapter sheet puts each unit's name above its chapters, as both units number theirs from 1.
+  await p.click('[data-act="chpick"]'); await p.waitForTimeout(150);
+  check((await p.locator('#sheetBody .unit').allTextContents()).join('|') === 'Unit 1: Markets in action|Unit 2: Macroeconomic performance and policy' && (await p.locator('#sheetBody .picks').nth(1).locator('.pick').count()) === 6, 'the Learn chapter sheet lists each unit under its name', R);
+  await p.click('#sheetClose'); await p.waitForTimeout(150);
   for (let i = 0; i < 6; i++) {
     const card = p.locator('#learnFeed .card:not(.endslide)').last();
     check((await card.locator('.ctitle').textContent()) === BANK[IDS[i]].title, 'card ' + (i + 1) + ' is ' + BANK[IDS[i]].title, R);
@@ -168,7 +170,57 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   errsAll.push(...errs); await b.close();
 }
 
-// ---------- 8. screenshots at 390 by 844, light and dark ----------
+// ---------- 8. from the end of Unit 1 into Unit 2 ----------
+{
+  const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel', c: {edexcel: {cur: 'x1c6'}}})});
+  check((await text(p, '.hero .h1')) === 'Government intervention' && (await text(p, '.hero .kicker')) === 'Unit 1, chapter 6 of 6 Draft', 'Home opens on Unit 1, chapter 6', R);
+  await p.click('.hero .primary'); await p.waitForTimeout(150);
+  const ids6 = EDEXCEL.units[0].chapters[5].points;
+  for (let i = 0; i < ids6.length; i++) {
+    await p.locator('#learnFeed .card:not(.endslide)').last().locator('.next').click(); await p.waitForTimeout(60);
+    await pick(p, '#learnFeed', true);
+    await p.locator('#learnFeed .slide.q.done .next').last().click(); await p.waitForTimeout(60);
+  }
+  const next = p.locator('#learnFeed .endslide [data-act="learnch"]');
+  check((await next.textContent()) === 'Go to Unit 2, chapter 1' && (await next.getAttribute('data-ch')) === 'x2c1', 'the end of Unit 1 offers Unit 2, chapter 1', R);
+  await next.click(); await p.waitForTimeout(200);
+  const ids21 = EDEXCEL.units[1].chapters[0].points;
+  check((await text(p, '#chPickT')) === '1. Measures of economic performance' && (await p.locator('#segs .seg').count()) === ids21.length, 'Learn opens Unit 2, chapter 1 with a segment for each of its 7 points', R);
+  const card = p.locator('#learnFeed .card:not(.endslide)').last();
+  check((await card.locator('.ctitle').textContent()) === BANK[ids21[0]].title && (await card.locator('.meta').textContent()) === 'Point 1 of 7Draft', 'its first card is ' + BANK[ids21[0]].title + ', Point 1 of 7, Draft', R);
+  await card.locator('.next').click(); await p.waitForTimeout(60);
+  await pick(p, '#learnFeed', true);
+  const s = await saved(p);
+  check(s.ans[ids21[0] + 'a'] && s.ans[ids21[0] + 'a'].ok === true && s.c.edexcel.cur === 'x2c1', 'the answer is saved under the point id, and the course is now on Unit 2, chapter 1', R);
+  await tab(p, 'practice');
+  await p.click('[data-act="scope"][data-v="chapter"]'); await p.waitForTimeout(100);
+  await p.click('[data-act="scopech"]'); await p.waitForTimeout(150);
+  check((await p.locator('#sheetBody .unit').count()) === 2 && !(await p.locator('#sheetBody .picks').nth(1).locator('.pick').first().isDisabled()) && (await p.locator('#sheetBody .picks').nth(1).locator('.pick').nth(1).isDisabled()), 'the Practice chapter sheet lists both units, with Unit 2, chapter 1 open to pick', R);
+  errsAll.push(...errs); await b.close();
+}
+
+// ---------- 9. a chapter with no points is Coming soon ----------
+// Every chapter has points now, so this opens the page with Unit 2, chapter 6 emptied, as a later unit would start.
+{
+  const route = ctx => ctx.route(/v2\.html/, async r => {
+    const res = await r.fetch(), body = await res.text();
+    const out = body.replace(/(id: 'x2c6', title: '[^']+', check: 'draft',\s*points: )\[[^\]]*\]/, '$1[]');
+    await r.fulfill({response: res, body: out});
+  });
+  const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel'}), route: route});
+  const soon = p.locator('#v-home .ch.soon');
+  check((await soon.count()) === 1 && (await soon.locator('.t').textContent()) === 'Macroeconomic objectives and policies' && (await soon.locator('.stage').textContent()) === 'Coming soon', 'an empty chapter shows as Coming soon', R);
+  check((await soon.locator('.ch-head:disabled').count()) === 1, 'the Coming soon row is disabled', R);
+  await soon.locator('.ch-head').click({force: true}); await p.waitForTimeout(100);
+  check((await p.locator('#v-home .ch.soon.open, #v-home .ch.soon .pts').count()) === 0 && (await text(p, '.hero .h1')) === 'Introductory concepts', 'tapping a Coming soon chapter opens nothing', R);
+  check((await p.locator('#v-home .ch:not(.soon)').count()) === 11, 'the other 11 chapters are ready', R);
+  await p.click('.hero .primary'); await p.waitForTimeout(150);
+  await p.click('[data-act="chpick"]'); await p.waitForTimeout(150);
+  check((await p.locator('#sheetBody .pick').count()) === 11, 'the Learn chapter sheet leaves the Coming soon chapter out', R);
+  errsAll.push(...errs); await b.close();
+}
+
+// ---------- 10. screenshots at 390 by 844, light and dark ----------
 if (shots) for (const scheme of ['light', 'dark']) {
   const {b, p, errs} = await open({seed: Object.assign({}, SEED, {subject: 'edexcel'}), scheme: scheme, w: 390, h: 844});
   await shot(p, 'edexcel-home-' + scheme);
@@ -177,6 +229,16 @@ if (shots) for (const scheme of ['light', 'dark']) {
   await shot(p, 'edexcel-chapters-' + scheme);
   await p.click('.hero .primary'); await p.waitForTimeout(300);
   await shot(p, 'edexcel-card-' + scheme);
+  await p.click('[data-act="chpick"]'); await p.waitForTimeout(250);
+  await shot(p, 'edexcel-picker-' + scheme);
+  await p.click('#sheetBody [data-ch="x2c4"]'); await p.waitForTimeout(300);
+  for (let i = 0; i < 3; i++) {
+    await p.locator('#learnFeed .card:not(.endslide)').last().locator('.next').click(); await p.waitForTimeout(60);
+    await pick(p, '#learnFeed', true);
+    await p.locator('#learnFeed .slide.q.done .next').last().click(); await p.waitForTimeout(60);
+  }
+  await p.waitForTimeout(300);
+  await shot(p, 'edexcel-unit2-card-' + scheme);
   errsAll.push(...errs); await b.close();
 }
 

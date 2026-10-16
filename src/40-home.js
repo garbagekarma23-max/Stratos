@@ -66,7 +66,7 @@ function renderHome() {
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.units
-      ? 'The AS year has 12 chapters. Unit 1 is a draft until a teacher has checked it. Unit 2 is coming soon. Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      ? 'The AS year has 12 chapters. Both units are drafts until a teacher has checked them. Challenges and races use the other subjects for now. Progress is saved on this device only.'
       : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
       : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';

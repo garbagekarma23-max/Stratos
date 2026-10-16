@@ -9,7 +9,8 @@ const TOPIC = new Function(read('src/content.js') + '; return TOPIC;')();
 const {MATHS, MAKE} = new Function(read('src/maths-content.js') + read('src/15-maths-make.js') + '; return {MATHS, MAKE};')();
 const BANK = new Function(read('src/econ-points.js') + '; return ECON_POINTS;')();
 const COURSES = [new Function(read('src/edexcel-content.js') + '; return EDEXCEL;')()];
-const BANNED = /\b(crucial|delve|enhance|foster|garner|highlight|interplay|intricate|key|landscape|meticulous|pivotal|showcase|tapestry|testament|underscore|valuable|vibrant|groundbreaking|renowned)\w*/i;
+// key(?!nes) lets the economist Keynes through, as the ban is on the word key.
+const BANNED = /\b(crucial|delve|enhance|foster|garner|highlight|interplay|intricate|key(?!nes)|landscape|meticulous|pivotal|showcase|tapestry|testament|underscore|valuable|vibrant|groundbreaking|renowned)\w*/i;
 const problems = [];
 const wordCheck = (id, t) => {
   if (BANNED.test(t)) problems.push(id + ' banned word in: ' + t);
