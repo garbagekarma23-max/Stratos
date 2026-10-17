@@ -1,7 +1,7 @@
 # Setting up Supabase for Stratos accounts
 
-Accounts are switched off until the project's address and publishable key are in `src/85-account.js`. Until then
-the app works exactly as before, and You shows no account row.
+The project's address and publishable key are in `src/85-account.js`, so accounts are on. With them empty, accounts
+are switched off, the app works exactly as before, and You shows no account row.
 
 Do these steps in the Supabase dashboard for the project called stratos.
 
@@ -44,6 +44,10 @@ Leave **Anonymous sign-ins** and **Phone** off. Google comes in its own pull req
 
 **Authentication**, then **Emails**, then **Templates**. Put the text in `supabase/emails.md` into both Magic Link
 and Confirm signup.
+
+Supabase only lets the templates be changed once step 6 is done. Until then students get Supabase's own email, which
+has the link and no code. The app works with that: the sheet after sending leads with the link, and the code box is
+there for when the email has one.
 
 ## 6. A sender for real students
 

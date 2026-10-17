@@ -1,6 +1,8 @@
 # Sign-in emails
 
-Paste these into the Supabase dashboard: Authentication, then Emails, then Templates. Use the same text for both
+Paste these into the Supabase dashboard: Authentication, then Emails, then Templates. Supabase only allows this once
+your own sender is set up (README step 6). Until then its own email goes out, with the link and no code, and the app
+works with that. Use the same text for both
 **Magic Link** and **Confirm signup**. A student's first sign-in gets Confirm signup, and every later one gets Magic Link.
 
 `{{ .Token }}` is where Supabase puts the code. `{{ .ConfirmationURL }}` is the link. Leave both exactly as written.
