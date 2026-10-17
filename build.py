@@ -14,10 +14,14 @@ How the pieces fit:
   src/places.js        every course, which countries and states teach which, and the country codes for the subject sheet
   src/10-core.js ...   the script, in the order listed in JS below
   src/80-intro.js      the intro: the word Stratos with the rocket flying round it, each time the app opens
+  src/84-merge.js      the part of the save that goes to an account, and how two copies are put together
+  src/85-account.js    signing in by email and keeping progress in step with the account (optional)
   src/recordings.json  the three sound recordings, stored as text
   lab/...              the Maths Lab's keypad, working sheet and line checker. They are read from lab/ so there is
                        one copy, shared with maths-lab.html. MathLive itself is not copied in: v2.html loads it from
                        lab/mathlive the first time maths is opened.
+  vendor/supabase      the Supabase library, for accounts. Not copied in either: v2.html loads it only for a student
+                       who signs in.
 """
 import json, os, re
 
@@ -27,7 +31,7 @@ LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '80-intro.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/."""

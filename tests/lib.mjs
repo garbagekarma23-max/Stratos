@@ -32,6 +32,13 @@ export async function open(o = {}) {
   // The intro plays each time v2.html opens. Tests skip it unless they pass intro: true (tests/intro.mjs does).
   if (!o.intro) await ctx.addInitScript(() => { window.stratosIntro = false; });
   if (o.init) await ctx.addInitScript(o.init);
+  // Tests never reach a real Supabase project. tests/account.mjs passes supabase: a fake from fake-supabase.mjs,
+  // which the page is pointed at instead. Its route is added last, so it wins over the block.
+  await ctx.route(/^https:\/\/[^/]*\.supabase\.co\//, r => r.abort());
+  if (o.supabase) {
+    await ctx.addInitScript(c => { window.stratosSupabase = c; }, {url: o.supabase.url, key: o.supabase.key});
+    await o.supabase.route(ctx);
+  }
   if (o.clock) await ctx.clock.install();
   if (o.route) await o.route(ctx);           // lets a test hold back or change a file the page loads
   const p = await ctx.newPage();

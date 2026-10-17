@@ -59,6 +59,7 @@ function start(data) {
   go(t);
   /* The intro plays when the app is opened, but not when a new version of the page carries on from the old one. */
   intro.play(!(data && data.v === 1 && data.tab));
+  acctBoot();
 }
 /* When a new version of this page is published, the open tab carries over. */
 const hot = window.claude && window.claude.hot;
