@@ -59,7 +59,7 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.keyboard.press('Enter'); await p.waitForTimeout(150);
   await p.keyboard.press('r'); await p.waitForTimeout(1500);
   check(await p.locator('#feed .slide.q.done').count() === 3, 'Enter moves on and R shows the answer', R);
-  await tab(p, 'you'); await p.click('[data-act="page"][data-page="store"]'); await p.waitForTimeout(80);
+  await tab(p, 'you'); await p.click('#v-you [data-act="page"][data-page="store"]'); await p.waitForTimeout(80);
   await p.click('.tile[data-id="dusk"]'); await p.waitForTimeout(60);
   await p.keyboard.press('Escape'); await p.waitForTimeout(40);
   check(await p.locator('#sheet[hidden]').count() === 1 && await p.locator('.page').count() === 1, 'Escape closes the sheet first', R);

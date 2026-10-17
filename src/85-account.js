@@ -238,7 +238,7 @@ function syncWords() {
 const whereSaved = () => signedIn() ? 'Progress is saved to your account.' : 'Progress is saved on this device only.';
 function acctRow() {
   if (!ACCOUNTS) return '';
-  if (!signedIn()) return '<button class="row" type="button" data-act="signin"><span class="t">Save progress to an account</span><span class="val">Optional</span>' + IC.right + '</button>';
+  if (!signedIn()) return '<button class="row" type="button" data-act="signin" data-title="Save your progress"><span class="t">Save progress to an account</span><span class="val">Optional</span>' + IC.right + '</button>';
   return '<button class="row" type="button" data-act="account"><span class="t">Account</span><span class="val" id="acctVal">' + syncWords() + '</span>' + IC.right + '</button>';
 }
 function acctLine() {
@@ -253,20 +253,28 @@ function paintAcct() {
     if (v && signedIn()) v.textContent = syncWords(); else if (!!v !== signedIn()) renderYou();
   }
   const l = $('#acctLine'); if (l) l.textContent = acctLine();
+  /* Home's Sign in button shows only while signed out. */
+  if (!!$('.top .signin', views.home) === signedIn()) renderHome();
 }
 
 let codeFor = '', againTimer = 0;
-ACT.signin = () => {
+/* The email sheet. One email address both makes an account and signs in, so it is the same sheet everywhere. Its title
+   follows the button that opened it: Create an account, Sign in, or Save your progress from You. Use a different
+   email keeps the title it had. */
+let signTitle = 'Save your progress';
+ACT.signin = b => signInSheet(b && b.dataset.title);
+function signInSheet(title) {
   if (!ACCOUNTS) return;
+  if (title) signTitle = title;
   loadSupabase().catch(() => {});
-  openSheet('Save your progress',
-    '<p class="sub">Sign in to keep your progress on every device. Without an account, it stays on this device.</p>' +
+  openSheet(signTitle,
+    '<p class="sub">We’ll email you a link. It makes your account, or signs you in if you have one.</p>' +
     '<label class="field"><span class="sr">Email</span><input id="emailIn" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Email"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a sign-in link</button></div>' +
     '<p class="fine">Your email is used only to sign in. Stratos keeps no name, birthday or location.</p>');
   const i = $('#emailIn'); i.value = codeFor; i.focus();
-};
+}
 function acctErr(msg) { const e = $('#acctErr'); if (e) { e.textContent = msg; e.hidden = !msg; } }
 /* What went wrong, in plain words. The library gives a status of 0 when it could not reach Supabase at all. */
 function why(e, fallback) {
@@ -396,6 +404,52 @@ ACT.delacct = async b => {
   renderYou();
   toast('Account deleted. This device keeps its progress.');
 };
+
+/* ---------- asking to save progress: the welcome screen, and one offer after the first chapter ----------
+   Both are only for a student who is not signed in, and only while accounts are switched on. Try it first and
+   Not now keep everything on the device, as before. saved.welcomed and saved.offered stay on the device: they are
+   not progress, so they never go to the account. Tests turn both off with window.stratosWelcome = false. */
+const welcomeEl = $('#welcome');
+const asking = () => ACCOUNTS && !signedIn() && window.stratosWelcome !== false;
+/* The welcome screen shows on a device that has never seen it and has no progress yet, so testers who already have
+   progress never see it. Not when the page opens from a sign-in link: the welcome would only get in its way. */
+function welcomeDue() {
+  if (!asking() || saved.welcomed || hasProgress(saved)) return false;
+  return !/(^|[#&])(access_token|error_description)=/.test(location.hash);
+}
+/* start() calls this before the intro plays, so the intro fades into the welcome screen instead of Home. */
+function showWelcome() {
+  if (!welcomeDue()) return;
+  welcomeEl.innerHTML =
+    '<div class="w-mid"><p class="word" id="wWord">Stratos</p><p class="w-line">Your syllabus in short cards. Race your friends on it.</p></div>' +
+    '<div class="w-end"><button class="primary wide" type="button" data-act="wcreate">Create an account</button>' +
+      '<button class="textbtn" type="button" data-act="wtry">Try it first</button>' +
+      '<p class="fine">An account keeps your progress on every device. Trying it first keeps it on this device, and you can sign in later from Home.</p></div>';
+  welcomeEl.hidden = false;
+  welcomeInert(true);
+  welcomeEl.focus({preventScroll: true});
+}
+/* While the welcome screen is up, the app behind it cannot be reached with the keyboard or a screen reader. */
+function welcomeInert(on) { Object.keys(views).forEach(k => { views[k].inert = on; }); $('#tabs').inert = on; }
+function welcomeDone() {
+  save({welcomed: 1});
+  welcomeEl.hidden = true; welcomeEl.textContent = '';
+  welcomeInert(false);
+}
+ACT.wtry = () => welcomeDone();
+ACT.wcreate = () => { welcomeDone(); signInSheet('Create an account'); };
+
+/* At the end of a Learn session, once the chapter is learned, the end slide carries a mark. When that slide comes
+   into view (learnSeen in 50-feed.js), the offer opens, once per device. Closing it counts as Not now. */
+const offerDue = ch => asking() && !saved.offered && chStats(ch).learned === chStats(ch).n;
+function offerSave() {
+  if (!asking() || saved.offered) return;
+  save({offered: 1});
+  openSheet('Save your progress so you don’t lose it',
+    '<p class="sub">Your progress is on this device only. An account keeps it if you lose or change your phone.</p>' +
+    '<div class="cta"><button class="primary" type="button" data-act="signin" data-title="Create an account">Create an account</button>' +
+    '<button class="ghost" type="button" data-act="sheetclose">Not now</button></div>');
+}
 
 /* ---------- when to sync ---------- */
 function acctBoot() {

@@ -22,7 +22,7 @@ const T = Date.now() - 36e5;
 /* Sign in from You with the code the fake "emailed". */
 async function signIn(p, email, wrongFirst) {
   await tab(p, 'you');
-  await p.click('[data-act="signin"]'); await p.waitForTimeout(100);
+  await p.click('#v-you [data-act="signin"]'); await p.waitForTimeout(100);
   await p.fill('#emailIn', email);
   await p.click('[data-act="sendcode"]');
   await p.waitForSelector('#codeIn');
@@ -49,7 +49,7 @@ async function answerOne(p) {
   const asked = [];
   d.p.on('request', q => { if (/supabase/.test(q.url())) asked.push(q.url()); });
   await tab(d.p, 'you');
-  check(await d.p.locator('[data-act="signin"]').count() === 0, 'with no project filled in, You has no account row', R);
+  check(await d.p.locator('#v-you [data-act="signin"]').count() === 0, 'with no project filled in, You has no account row', R);
   check((await d.p.locator('.you .fine').last().textContent()).endsWith('Nothing you do here is sent anywhere.'), 'and says nothing is sent anywhere', R);
   check(asked.length === 0, 'and nothing is asked of Supabase or its library', R);
 }
@@ -63,7 +63,7 @@ async function answerOne(p) {
   const supa = /const SUPA = window\.stratosSupabase \|\| \{url: '([^']*)', key: '([^']*)'\}/.exec(fs.readFileSync(new URL('../v2.html', import.meta.url), 'utf8'));
   check(supa && /^https:\/\/[a-z]+\.supabase\.co$/.test(supa[1]) && supa[2].startsWith('sb_publishable_'), 'the build has the project address and a publishable key, so accounts are on', R);
   await tab(d.p, 'you');
-  check(await d.p.locator('[data-act="signin"]').count() === 1, 'and You offers Save progress to an account', R);
+  check(await d.p.locator('#v-you [data-act="signin"]').count() === 1, 'and You offers Save progress to an account', R);
   await tab(d.p, 'home');
   check(asked.length === 0, 'signed out, the build asks nothing of Supabase and does not load its library', R);
 }
@@ -74,12 +74,13 @@ const askedA = [];
 A.p.on('request', q => { if (/supabase/.test(q.url())) askedA.push(q.url()); });
 await answerOne(A.p);
 await tab(A.p, 'you');
-check(await A.p.locator('[data-act="signin"]').count() === 1, 'You offers Save progress to an account', R);
-check((await A.p.locator('[data-act="signin"] .val').textContent()) === 'Optional', 'and says it is optional', R);
+check(await A.p.locator('#v-you [data-act="signin"]').count() === 1, 'You offers Save progress to an account', R);
+check((await A.p.locator('#v-you [data-act="signin"] .val').textContent()) === 'Optional', 'and says it is optional', R);
 check(askedA.length === 0 && f.log.length === 0, 'signed out, the app asks nothing of Supabase and does not load its library', R);
 check((await A.p.locator('.you .fine').last().textContent()).endsWith('sent anywhere unless you sign in.'), 'the fine print says nothing is sent unless you sign in', R);
+check(await A.p.locator('#v-home .top .signin').count() === 1, 'signed out, Home\'s top bar has Sign in', R);
 
-await A.p.click('[data-act="signin"]'); await A.p.waitForTimeout(100);
+await A.p.click('#v-you [data-act="signin"]'); await A.p.waitForTimeout(100);
 if (SHOTS) await shot(A.p, 'account-email-light');
 await A.p.fill('#emailIn', 'not an email');
 await A.p.click('[data-act="sendcode"]'); await A.p.waitForTimeout(100);
@@ -98,6 +99,7 @@ check(rA && Object.keys(rA.data.ans).length === 3 && rA.data.ans.c1p2a.ok === fa
 check(rA && !('theme' in rA.data) && !('place' in rA.data) && !('th' in rA.data) && !('name' in rA.data), 'appearance, the place, messages and the call sign are not in the progress row', R);
 check(Object.keys(sA.ans).length === 3, 'and the device still has them', R);
 check((await A.p.locator('[data-act="account"] .val').textContent()) === 'Saved', 'You says Saved', R);
+check(await A.p.locator('#v-home .top .signin').count() === 0, 'once signed in, Home\'s top bar has no Sign in, with no reload', R);
 
 // A change goes up a moment later.
 const revBefore = Number(rA.rev);
@@ -118,7 +120,7 @@ check(await until(async () => { const r = await row('a@example.com'); return r &
 {
   const d = await device();
   await tab(d.p, 'you');
-  await d.p.click('[data-act="signin"]'); await d.p.waitForTimeout(100);
+  await d.p.click('#v-you [data-act="signin"]'); await d.p.waitForTimeout(100);
   await d.p.fill('#emailIn', 'a@example.com');
   await d.p.click('[data-act="sendcode"]');
   await d.p.waitForSelector('#codeIn');
@@ -142,7 +144,7 @@ check(await until(async () => { const r = await row('a@example.com'); return r &
   check(await until(async () => /run out or was used already\. Ask for a new one in You\./.test(await d.p.locator('#toast').textContent().catch(() => ''))), 'a used or old link says so and points to You', R);
   check(!(await d.p.evaluate(() => location.hash)), 'and the error is cleared from the address bar', R);
   await tab(d.p, 'you');
-  check(await d.p.locator('[data-act="signin"]').count() === 1, 'and the student can ask for a new email', R);
+  check(await d.p.locator('#v-you [data-act="signin"]').count() === 1, 'and the student can ask for a new email', R);
   await d.b.close();
 }
 
@@ -234,9 +236,9 @@ await A.p.click('[data-act="signout"]');
 check(await until(async () => Object.keys((await saved(A.p)).ans || {}).length === 0), 'signing out erases this device’s copy', R);
 check(await A.p.evaluate(() => !localStorage.getItem('stratos2.auth') && !localStorage.getItem('stratos2.sync')), 'and forgets the account on this device', R);
 check(!!(await row('a@example.com')).data.ans[offId], 'the account keeps its progress', R);
-check(await A.p.locator('#v-home.on').count() === 1, 'and goes back to Home', R);
+check(await A.p.locator('#v-home.on').count() === 1 && await A.p.locator('#v-home .top .signin').count() === 1, 'and goes back to Home, with Sign in in its top bar again', R);
 await tab(A.p, 'you');
-check(await A.p.locator('[data-act="signin"]').count() === 1, 'You offers signing in again', R);
+check(await A.p.locator('#v-you [data-act="signin"]').count() === 1, 'You offers signing in again', R);
 
 // ---------- Reset while signed in ----------
 await tab(B.p, 'you');
@@ -278,7 +280,7 @@ check(calls.length === 1 && calls[0] === 'POST /rest/v1/rpc/delete_account {}', 
 const users = (await f.admin('select email from auth.users order by email')).rows.map(r => r.email);
 check(users.join() === 'b@example.com', 'only the student who asked is deleted: ' + users.join(', '), R);
 check(!!(await row('b@example.com')) && (await profile('b@example.com')) !== null, 'the other student keeps their progress and profile', R);
-check(await until(async () => (await C.p.locator('[data-act="signin"]').count()) === 1), 'the device is signed out', R);
+check(await until(async () => (await C.p.locator('#v-you [data-act="signin"]').count()) === 1), 'the device is signed out', R);
 check(Object.keys((await saved(C.p)).ans).length >= 6, 'and keeps its progress', R);
 
 // The account is deleted somewhere else while E is signed in to it. E notices when it next syncs.
@@ -291,7 +293,7 @@ check(!!(await saved(E.p)).ans.c1p3a, 'and this device keeps its progress', R);
 for (const scheme of ['light', 'dark']) {
   const d = await device({w: 360, h: 740, scheme: scheme});
   await tab(d.p, 'you');
-  await d.p.click('[data-act="signin"]'); await d.p.fill('#emailIn', 'someone.with.a.long.address@example.com');
+  await d.p.click('#v-you [data-act="signin"]'); await d.p.fill('#emailIn', 'someone.with.a.long.address@example.com');
   await d.p.click('[data-act="sendcode"]'); await d.p.waitForSelector('#codeIn');
   const over = await d.p.evaluate(() => document.documentElement.scrollWidth > innerWidth || [...document.querySelectorAll('#sheet button, #sheet input')].some(e => e.getBoundingClientRect().right > innerWidth));
   check(!over, 'the code sheet fits at 360 px in ' + scheme, R);

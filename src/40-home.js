@@ -41,10 +41,13 @@ function renderHome() {
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
-    /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
-    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button></span>' +
+    /* The top bar has three parts. On the left, the courses button, and Sign in while signed out. In the middle, the logo.
+       On the right, the store and the friends button. */
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button>' +
+        (ACCOUNTS && !signedIn() ? '<button class="signin" type="button" data-act="signin" data-title="Sign in" aria-haspopup="dialog">Sign in</button>' : '') + '</span>' +
       '<span class="word">Stratos</span>' +
-      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
+      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="store" aria-label="Store">' + IC.bag + '</button>' +
+        '<button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
     '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(SUB.topic.course + ', ' + SUB.topic.year) + IC.down + '</button>' +
       (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +

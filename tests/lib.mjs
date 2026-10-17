@@ -31,6 +31,9 @@ export async function open(o = {}) {
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
   // The intro plays each time v2.html opens. Tests skip it unless they pass intro: true (tests/intro.mjs does).
   if (!o.intro) await ctx.addInitScript(() => { window.stratosIntro = false; });
+  // The welcome screen on first open, and the offer to save progress after the first chapter, ask a student who is
+  // not signed in to make an account. Tests skip both unless they pass welcome: true (tests/welcome.mjs does).
+  if (!o.welcome) await ctx.addInitScript(() => { window.stratosWelcome = false; });
   if (o.init) await ctx.addInitScript(o.init);
   // Tests never reach a real Supabase project: every supabase.co address is blocked, including the one in the build.
   // tests/account.mjs passes supabase: a fake from fake-supabase.mjs,
