@@ -241,7 +241,7 @@ function renderYou() {
       '<button class="ghost sm" type="button" data-act="editname">' + (name ? 'Edit' : 'Add a call sign') + '</button></header>' +
     '<dl class="stats four"><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div><div><dt>Points proven</dt><dd>' + provenCount() + ' of ' + ALL.length + '</dd></div>' +
       '<div><dt>Best altitude</dt><dd>' + best.n + ' ' + best.u + '</dd></div><div><dt>Best combo</dt><dd>×' + rec.combo + '</dd></div></dl>' +
-    '<div class="rows">' +
+    '<div class="rows">' + acctRow() +
       '<button class="row" type="button" data-act="page" data-page="friends"><span class="t">Friends and messages</span><span class="val">' + (unread ? unread + ' new' : '') + '</span>' + IC.right + '</button>' +
       '<button class="row" type="button" data-act="page" data-page="store"><span class="t">Store</span><span class="val">Rockets, backgrounds, exhausts</span>' + IC.right + '</button>' +
     '</div>' +
@@ -252,20 +252,23 @@ function renderYou() {
       '<div class="set"><span class="t" id="setMusic">Race music</span><button class="switch" type="button" data-act="music" aria-pressed="' + (saved.music !== false) + '" aria-labelledby="setMusic"><span></span></button></div>' +
     '</section>' +
     '<button class="textbtn danger" type="button" data-act="reset">Reset this test</button>' +
-    '<p class="fine">Reset erases progress, messages and settings on this device. Nothing you do here is sent anywhere.</p></div>';
+    '<p class="fine">' + (signedIn() ? 'Reset erases progress, messages and settings on this device, and signs you out. Your account keeps its progress.'
+      : 'Reset erases progress, messages and settings on this device. Nothing you do here is sent anywhere' + (ACCOUNTS ? ' unless you sign in.' : '.')) + '</p></div>';
 }
 const refocus = sel => { const el = $(sel, views.you); if (el) el.focus({preventScroll: true}); };
 ACT.theme = b => { save({theme: b.dataset.v}); applyTheme(); applyLook(); renderYou(); refocus('[data-act="theme"][data-v="' + saved.theme + '"]'); };
 ACT.bg = b => { save({bg: b.dataset.v}); applyBg(); renderYou(); refocus('[data-act="bg"][data-v="' + saved.bg + '"]'); sound.tap(); };
 ACT.sound = () => { save({sound: saved.sound === false}); renderYou(); refocus('[data-act="sound"]'); sound.tap(); };
 ACT.music = () => { save({music: saved.music === false}); renderYou(); refocus('[data-act="music"]'); sound.tap(); };
-ACT.editname = () => {
-  openSheet('Call sign',
+ACT.editname = () => callSign('');
+/* The call sign sheet. lead is a line above the box, used just after signing in. */
+function callSign(lead) {
+  openSheet('Call sign', (lead ? '<p class="sub">' + esc(lead) + ' Add a call sign for friends to see, or close this to skip it.</p>' : '') +
     '<label class="field"><span class="sr">Call sign</span><input id="nameIn" type="text" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Shown on results you send"></label>' +
     '<p class="fine">Use a nickname, not your full name.</p>' +
     '<div class="cta"><button class="primary" type="button" data-act="savename">Save</button></div>');
   const i = $('#nameIn'); i.value = saved.name || ''; i.focus();
-};
+}
 ACT.savename = () => { const i = $('#nameIn'); if (i) save({name: i.value.trim().slice(0, 16)}); closeSheet(); renderYou(); };
 sheetBody.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'nameIn') { ev.preventDefault(); ACT.savename(); } });
 let resetArm = 0;
@@ -276,6 +279,13 @@ ACT.reset = b => {
     return;
   }
   clearTimeout(resetArm);
+  /* Signed in, Reset signs this device out first. The account keeps its progress. */
+  if (signedIn()) acctForget();
+  eraseDevice();
+  toast('Reset. This device is back to the start.');
+};
+/* Erase this device's progress, messages and settings, and go back to Home. Reset and Sign out both use it. */
+function eraseDevice() {
   epoch++;
   try { localStorage.removeItem(KEY); } catch (e) {}
   saved = {}; tidySaved(); save();
@@ -283,8 +293,7 @@ ACT.reset = b => {
   ui.cur = null; ui.open = null; ui.bar = null; ui.scope = 'mix'; ui.scopeCh = null; ui.len = 8; ui.ftab = 'msgs';
   applyTheme(); applyLook(); applyBg();
   go('home');
-  toast('Reset. This device is back to the start.');
-};
+}
 
 /* ---------- search: every point, its card and its questions ---------- */
 const qIn = $('#q'), qOut = $('#qOut'), qChips = $('#qChips'), qClear = $('#qClear'), searchPad = $('#searchPad');

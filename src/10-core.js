@@ -130,10 +130,11 @@ function pretendTime(f, chId, total) { let ms = 0; for (let i = 0; i < total; i+
 const friend = id => FRIENDS.find(f => f.id === id) || FRIENDS[0];
 const REPLIES = ['Nice one', 'Rematch?', 'Too easy', 'Good game'];
 
-/* ---------- saved settings, progress and messages (this device only) ---------- */
+/* ---------- saved settings, progress and messages, on this device ----------
+   Signed in, a copy of the progress is kept in the account too: syncSoon (85-account.js) sends it a moment later. */
 const KEY = 'stratos2.v1';
 let saved = {};
-function save(patch) { if (patch) Object.assign(saved, patch); try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+function save(patch) { if (patch) Object.assign(saved, patch); try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} syncSoon(); }
 function loadSaved() {
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
   tidySaved();

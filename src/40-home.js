@@ -66,10 +66,10 @@ function renderHome() {
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.units
-      ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. Progress is saved on this device only.'
+      ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. ' + whereSaved()
       : isMaths()
-      ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. Progress is saved on this device only.'
-      : 'Second test build. The study notes are a first draft and still need checking against the syllabus. Progress is saved on this device only.') + '</p></div>';
+      ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. ' + whereSaved()
+      : 'Second test build. The study notes are a first draft and still need checking against the syllabus. ' + whereSaved()) + '</p></div>';
   views.home.innerHTML = h;
   views.home.scrollTop = keep;
   if (from.l !== st.lpct || from.p !== st.ppct) {
@@ -185,7 +185,7 @@ function courseSheet() {
       : '<p class="sub">Courses for ' + esc(st ? st.name : countryName(pl.country)) + ' are coming. The international courses below work anywhere.</p>') +
     group(INTERNATIONAL.name, INTERNATIONAL.courses, INTERNATIONAL.more) +
     (listed.indexOf(SUB.id) < 0 ? group('Open now', [SUB.id]) : '') +
-    '<p class="fine">Each course keeps its own progress, saved on this device only.</p>');
+    '<p class="fine">Each course keeps its own progress, ' + (signedIn() ? 'saved to your account.' : 'saved on this device only.') + '</p>');
 }
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
