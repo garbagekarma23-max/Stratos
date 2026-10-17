@@ -6909,8 +6909,8 @@ function canon(x) {
 
 /* The Supabase project. Both values are public by design: the publishable key only lets a browser ask, and the rules
    in supabase/schema.sql decide what it may do. The secret key never goes here, or anywhere in this repository.
-   While these are empty, accounts are switched off and You shows no account row. Tests point this at a fake. */
-const SUPA = window.stratosSupabase || {url: '', key: ''};
+   With these empty, accounts are switched off and You shows no account row. Tests point this at a fake. */
+const SUPA = window.stratosSupabase || {url: 'https://hlklmkvuanyogqwpmszi.supabase.co', key: 'sb_publishable_ik-1wCDIVx7g66o-mNYFqg_S6uDqP9x'};
 const ACCOUNTS = !!(SUPA.url && SUPA.key);
 const AUTH_KEY = 'stratos2.auth', SYNC_KEY = 'stratos2.sync';
 let sb = null, sbLoading = null;
@@ -6934,7 +6934,8 @@ function loadSupabase() {
     s.src = 'vendor/supabase/supabase.js';
     s.onload = () => {
       try {
-        /* implicit: a link from the email signs in whichever browser it opens in. The code works anywhere. */
+        /* implicit: a link from the email signs in whichever browser it opens in. The code works anywhere.
+           If the link opens in another tab of this browser, the library tells this tab, and onAuth carries on here. */
         sb = window.supabase.createClient(SUPA.url, SUPA.key, {auth: {storageKey: AUTH_KEY, flowType: 'implicit', detectSessionInUrl: true, persistSession: true, autoRefreshToken: true}});
         sb.auth.onAuthStateChange(onAuth);
         ok(sb);
@@ -7162,7 +7163,7 @@ ACT.signin = () => {
     '<p class="sub">Sign in to keep your progress on every device. Without an account, it stays on this device.</p>' +
     '<label class="field"><span class="sr">Email</span><input id="emailIn" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Email"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
-    '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a code</button></div>' +
+    '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a sign-in link</button></div>' +
     '<p class="fine">Your email is used only to sign in. Stratos keeps no name, birthday or location.</p>');
   const i = $('#emailIn'); i.value = codeFor; i.focus();
 };
@@ -7170,7 +7171,7 @@ function acctErr(msg) { const e = $('#acctErr'); if (e) { e.textContent = msg; e
 /* What went wrong, in plain words. The library gives a status of 0 when it could not reach Supabase at all. */
 function why(e, fallback) {
   if (!navigator.onLine || !e || e.status === 0 || /fetch|network|offline/i.test(e.message || '')) return 'No connection. Try again when you are online.';
-  if (e.status === 429 || /rate/i.test(e.code || '')) return 'Too many codes asked for. Wait a minute, then try again.';
+  if (e.status === 429 || /rate/i.test(e.code || '')) return 'Too many emails asked for. Wait a minute, then try again.';
   return fallback;
 }
 ACT.sendcode = async b => {
@@ -7183,22 +7184,26 @@ ACT.sendcode = async b => {
     const r = await sb.auth.signInWithOtp({email: email, options: {shouldCreateUser: true, emailRedirectTo: location.origin + location.pathname}});
     if (r.error) throw r.error;
   } catch (e) {
-    b.disabled = false; acctErr(why(e, 'The code could not be sent. Check the email address and try again.'));
+    b.disabled = false; acctErr(why(e, 'The email could not be sent. Check the address and try again.'));
     return;
   }
   codeFor = email;
   if (!again) codeSheet(); else { acctErr(''); toast('Sent again.'); }
   waitToResend();
 };
+/* The email always has a link. It has a 6-digit code too once Supabase sends our own email (supabase/emails.md), so
+   the sheet leads with the link and offers the code box as the other way in. Closing the sheet, Send again and Use a
+   different email are always there, so nobody waits on a code that never comes. */
 function codeSheet() {
   openSheet('Check your email',
-    '<p class="sub">We sent a code to <span class="em">' + esc(codeFor) + '</span>. Type it here, or tap the link in the email on this device.</p>' +
-    '<label class="field"><span class="sr">Code from the email</span><input id="codeIn" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" spellcheck="false" placeholder="Code from the email"></label>' +
+    '<p class="sub">We sent an email to <span class="em">' + esc(codeFor) + '</span>. Tap the link in it to sign in.</p>' +
+    '<p class="fine">The link signs in the browser it opens in. On an iPhone that is Safari, even if you use Stratos from your Home Screen.</p>' +
+    '<p class="fine">If the email has a 6-digit code, you can type it here instead.</p>' +
+    '<label class="field"><span class="sr">6-digit code</span><input id="codeIn" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" spellcheck="false" placeholder="6-digit code"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
-    '<div class="cta"><button class="primary" type="button" data-act="verifycode">Sign in</button>' +
+    '<div class="cta"><button class="ghost" type="button" data-act="verifycode">Sign in with the code</button>' +
     '<button class="ghost" type="button" data-act="sendcode" data-again="1" id="againBtn" disabled>Send again</button></div>' +
     '<button class="textbtn" type="button" data-act="signin">Use a different email</button>');
-  $('#codeIn').focus();
 }
 /* Send again waits 60 seconds, the gap Supabase needs between two codes to the same address. */
 function waitToResend() {
@@ -7214,14 +7219,14 @@ function waitToResend() {
 }
 ACT.verifycode = async b => {
   const i = $('#codeIn'), code = i ? i.value.replace(/\D/g, '') : '';
-  if (code.length < 6) { acctErr('Type the code from the email. It has 6 digits.'); return; }
+  if (code.length < 6) { acctErr('Tap the link in the email. If it has a 6-digit code, type that here.'); return; }
   b.disabled = true; b.textContent = 'Signing in'; acctErr('');
   try {
     const r = await sb.auth.verifyOtp({email: codeFor, token: code, type: 'email'});
     if (r.error) throw r.error;
     /* onAuth hears about the sign-in and takes it from here. */
   } catch (e) {
-    b.disabled = false; b.textContent = 'Sign in';
+    b.disabled = false; b.textContent = 'Sign in with the code';
     acctErr(why(e, 'That code is wrong or has run out. Check the email, or send a new one.'));
   }
 };
@@ -7298,7 +7303,7 @@ function acctBoot() {
   /* A link from the email that had run out or was used already comes back with an error in the address. */
   if (/(^|[#&])error_description=/.test(location.hash)) {
     try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
-    toast('That sign-in link has run out or was used already. Ask for a new code in You.');
+    toast('That sign-in link has run out or was used already. Ask for a new one in You.');
   }
   let has = false;
   try { has = !!localStorage.getItem(AUTH_KEY); } catch (e) {}

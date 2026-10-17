@@ -3,6 +3,7 @@
 // node account.mjs shots also saves the sheets at 390 by 844 in light and dark.
 import { open, shot, tab, saved, pick, check } from './lib.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
+import fs from 'fs';
 
 const R = [], SHOTS = process.argv[2] === 'shots';
 const f = await fakeSupabase();
@@ -41,9 +42,9 @@ async function answerOne(p) {
   return k.id;
 }
 
-// ---------- accounts switched off: the build as committed, with no project filled in ----------
+// ---------- accounts switched off: no project filled in ----------
 {
-  const d = await open();
+  const d = await open({accounts: false});
   all.push(d);
   const asked = [];
   d.p.on('request', q => { if (/supabase/.test(q.url())) asked.push(q.url()); });
@@ -51,6 +52,20 @@ async function answerOne(p) {
   check(await d.p.locator('[data-act="signin"]').count() === 0, 'with no project filled in, You has no account row', R);
   check((await d.p.locator('.you .fine').last().textContent()).endsWith('Nothing you do here is sent anywhere.'), 'and says nothing is sent anywhere', R);
   check(asked.length === 0, 'and nothing is asked of Supabase or its library', R);
+}
+
+// ---------- the build as committed: the real project filled in, never reached by the tests ----------
+{
+  const d = await open();
+  all.push(d);
+  const asked = [];
+  d.p.on('request', q => { if (/supabase/.test(q.url())) asked.push(q.url()); });
+  const supa = /const SUPA = window\.stratosSupabase \|\| \{url: '([^']*)', key: '([^']*)'\}/.exec(fs.readFileSync(new URL('../v2.html', import.meta.url), 'utf8'));
+  check(supa && /^https:\/\/[a-z]+\.supabase\.co$/.test(supa[1]) && supa[2].startsWith('sb_publishable_'), 'the build has the project address and a publishable key, so accounts are on', R);
+  await tab(d.p, 'you');
+  check(await d.p.locator('[data-act="signin"]').count() === 1, 'and You offers Save progress to an account', R);
+  await tab(d.p, 'home');
+  check(asked.length === 0, 'signed out, the build asks nothing of Supabase and does not load its library', R);
 }
 
 // ---------- device A: used without an account, then signs in ----------
@@ -95,6 +110,39 @@ check(await until(async () => { const r = await row('a@example.com'); return r &
   const d = await device({query: '#access_token=' + s.access_token + '&refresh_token=' + s.refresh_token + '&expires_in=3600&expires_at=' + s.expires_at + '&token_type=bearer&type=magiclink'});
   check(await until(async () => Object.keys((await saved(d.p)).ans || {}).length >= 4), 'a link from the email signs in the browser it opens in, and the progress comes down', R);
   check(!(await d.p.evaluate(() => location.hash)), 'and the sign-in is cleared from the address bar', R);
+  await d.b.close();
+}
+
+// ---------- the email has only a link, no code (Supabase's own email, before our template is in) ----------
+// The student asks for the email in one tab, then taps the link, which opens a new tab in the same browser.
+{
+  const d = await device();
+  await tab(d.p, 'you');
+  await d.p.click('[data-act="signin"]'); await d.p.waitForTimeout(100);
+  await d.p.fill('#emailIn', 'a@example.com');
+  await d.p.click('[data-act="sendcode"]');
+  await d.p.waitForSelector('#codeIn');
+  check((await d.p.locator('#sheetBody .sub').textContent()).includes('Tap the link in it to sign in.'), 'the sheet after sending leads with the link', R);
+  check(await d.p.evaluate(() => document.activeElement.id !== 'codeIn'), 'the code box is not focused, so a phone keyboard does not open for a code that may not come', R);
+  await d.p.click('[data-act="verifycode"]');
+  check((await d.p.locator('#acctErr').textContent()).startsWith('Tap the link in the email.'), 'Sign in with nothing typed points to the link', R);
+  check(await d.p.locator('#sheetBody [data-act="signin"]').count() === 1 && await d.p.locator('#sheetClose').isVisible(), 'and Use a different email and close are there, so nobody is stuck', R);
+  const u = await f.user('a@example.com'), s = f.session(u);
+  const linkTab = await d.ctx.newPage();
+  await linkTab.goto(d.p.url().replace(/#.*$/, '') + '#access_token=' + s.access_token + '&refresh_token=' + s.refresh_token + '&expires_in=3600&expires_at=' + s.expires_at + '&token_type=bearer&type=magiclink');
+  check(await until(async () => Object.keys((await saved(linkTab)).ans || {}).length >= 4), 'the link signs in the tab it opens in', R);
+  check(await until(async () => (await d.p.locator('#codeIn').count()) === 0), 'the first tab hears of it and closes the email sheet', R);
+  await tab(d.p, 'home'); await tab(d.p, 'you');
+  check(await until(async () => (await d.p.locator('[data-act="account"]').count()) === 1), 'and shows the Account row there too', R);
+  await d.b.close();
+}
+// A link that has run out, or that a school's email system opened first, comes back with an error in the address.
+{
+  const d = await device({query: '#error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired'});
+  check(await until(async () => /run out or was used already\. Ask for a new one in You\./.test(await d.p.locator('#toast').textContent().catch(() => ''))), 'a used or old link says so and points to You', R);
+  check(!(await d.p.evaluate(() => location.hash)), 'and the error is cleared from the address bar', R);
+  await tab(d.p, 'you');
+  check(await d.p.locator('[data-act="signin"]').count() === 1, 'and the student can ask for a new email', R);
   await d.b.close();
 }
 
