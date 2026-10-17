@@ -224,6 +224,7 @@ function mathsEndEl() {
     body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Three right in a row on each point proves it.');
   }
   sec.className = 'slide endslide';
+  if (offerDue(ch)) sec.dataset.offer = '1';
   sec.innerHTML =
     '<p class="meta"><span>Chapter ' + (CH.indexOf(ch) + 1) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +

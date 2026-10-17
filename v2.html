@@ -184,8 +184,13 @@ svg{display:block;flex:none}
 /* ---------- home ---------- */
 /* The logo is the one place that does not use Hanken Grotesk. It is Archivo at its widest setting; only the letters of Stratos are loaded. */
 .top{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;min-height:40px}
-.top .tl{min-width:0}
+.top .tl{min-width:0;display:flex;align-items:center;gap:4px}
 .top .tr{display:flex;justify-content:flex-end}
+/* The icons at each end of the top bar sit 8px into the page's margin, so the icons line up with the text below. */
+.top .tl>.icon-btn:first-child{margin-left:-8px}
+.top .tr>.icon-btn:last-child{margin-right:-8px}
+.signin{min-height:32px;padding:0 12px;border:1px solid var(--line-2);border-radius:999px;background:none;font:600 13px/1 var(--f);color:var(--ink);white-space:nowrap}
+.signin:active{background:var(--wash)}
 .word,.about .a-word,#intro .i-word{font-family:'Archivo',var(--f);font-weight:600;font-stretch:125%;letter-spacing:.01em}
 .word{font-size:21px;line-height:1}
 .grow{flex:1;min-width:0}
@@ -591,6 +596,22 @@ svg{display:block;flex:none}
 .packrow span{display:block;font-size:13px;color:var(--ink-2)}
 .packrow .price{font-weight:700;font-size:14px;color:var(--ink)}
 
+/* ---------- the welcome screen ----------
+   The word sits where the intro's word is, at the same size, so the intro fades into it. The buttons are at the
+   bottom, in reach of a thumb. On a short screen the two parts stack instead, so they never overlap. */
+#welcome{position:absolute;inset:0;z-index:8;background:var(--paper);outline:none}
+#welcome .w-mid{position:absolute;left:24px;right:24px;top:calc(50% - 22px);text-align:center}
+#welcome .word{font-size:44px}
+#welcome .w-line{max-width:300px;margin:16px auto 0;font-size:17px;line-height:1.4;color:var(--ink-2);text-wrap:balance}
+#welcome .w-end{position:absolute;left:0;right:0;bottom:0;display:grid;justify-items:center;gap:6px;padding:0 16px calc(24px + var(--sab));text-align:center}
+#welcome .primary{min-height:54px;font-size:16px}
+#welcome .textbtn{min-height:44px;font-size:15px}
+#welcome .fine{max-width:320px;margin-top:4px;color:var(--ink-3);text-wrap:balance}
+@media (max-height:560px){
+  #welcome{display:flex;flex-direction:column;justify-content:center;gap:28px;overflow-y:auto}
+  #welcome .w-mid,#welcome .w-end{position:static}
+}
+
 /* ---------- sheet ---------- */
 #sheet{position:absolute;inset:0;z-index:8;display:flex;align-items:flex-end;background:var(--scrim)}
 .panel{width:100%;max-height:88%;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:14px;padding:10px 16px calc(20px + var(--sab));border-radius:22px 22px 0 0;background:var(--raise);scrollbar-width:none;animation:sheet-in .24s cubic-bezier(.2,.8,.2,1)}
@@ -855,6 +876,9 @@ math-span:not(:defined){visibility:hidden}
 
   <div id="pages"></div>
   <canvas id="sparks" aria-hidden="true"></canvas>
+
+  <!-- The welcome screen, on a device's first open while signed out (src/85-account.js). The intro fades into it. -->
+  <div id="welcome" role="dialog" aria-modal="true" aria-labelledby="wWord" tabindex="-1" hidden></div>
 
   <div id="sheet" hidden>
     <div class="panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
@@ -3732,6 +3756,7 @@ const IC = {
   left: icon('<path d="M15 6l-6 6 6 6"/>'),
   lock: icon('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
   send: icon('<path d="M21 3 10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5-7.5-4z"/>'),
+  bag: icon('<path d="M5.5 8h13l-1 12.5h-11z"/><path d="M9 10.5V7a3 3 0 0 1 6 0v3.5"/>'),
   book: icon('<path d="M5 19.5V5a2 2 0 0 1 2-2h12v14H7a2 2 0 0 0-2 2.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-4"/><path d="M9 7.5h6"/>'),
   sound: icon('<path d="M4 10v4h3.5L12 18V6L7.5 10z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/>')
 };
@@ -4717,10 +4742,13 @@ function renderHome() {
   const from = ui.bar && ui.bar.ch === ch.id ? ui.bar : {l: st.lpct, p: st.ppct};
   const keep = views.home.scrollTop;
   let h = '<div class="pad home">' +
-    /* The top bar has three parts: the syllabus button on the left, the logo in the middle, the friends button on the right. */
-    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button></span>' +
+    /* The top bar has three parts. On the left, the courses button, and Sign in while signed out. In the middle, the logo.
+       On the right, the store and the friends button. */
+    '<header class="top"><span class="tl"><button class="icon-btn" type="button" data-act="subject" aria-haspopup="dialog" aria-label="Courses">' + IC.book + '</button>' +
+        (ACCOUNTS && !signedIn() ? '<button class="signin" type="button" data-act="signin" data-title="Sign in" aria-haspopup="dialog">Sign in</button>' : '') + '</span>' +
       '<span class="word">Stratos</span>' +
-      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
+      '<span class="tr"><button class="icon-btn" type="button" data-act="page" data-page="store" aria-label="Store">' + IC.bag + '</button>' +
+        '<button class="icon-btn" type="button" data-act="page" data-page="friends" aria-label="Friends and messages' + (unread ? ', ' + unread + ' new' : '') + '">' + IC.send + (unread ? '<i class="dot"></i>' : '') + '</button></span>' +
     '</header>' +
     '<div class="subrow"><button class="subject" type="button" data-act="subject" aria-haspopup="dialog">' + esc(SUB.topic.course + ', ' + SUB.topic.year) + IC.down + '</button>' +
       (streak ? '<span class="streak">' + streak + '-day streak</span>' : '') + '</div>' +
@@ -5042,6 +5070,7 @@ function learnEndEl() {
     body = L.right + ' of ' + asked + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix in Practice.' : ' Practice will bring these points back later.');
   }
   sec.className = 'slide endslide';
+  if (offerDue(ch)) sec.dataset.offer = '1';
   sec.innerHTML =
     '<p class="meta"><span>' + esc(chName(ch)) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +
@@ -5104,10 +5133,18 @@ function paintLearnBar() {
     return '<i class="seg' + fill + (i === cur && !r ? ' cur' : '') + '"></i>';
   }).join('');
 }
+/* The end slide of a session that learned the chapter carries a mark (learnEndEl). Once it is on screen, the offer to
+   save progress to an account opens (offerSave in 85-account.js). */
+function learnSeen() {
+  const v = L && L.over ? viewing(learnFeed) : null;
+  if (!v || !v.dataset.offer || ui.tab !== 'learn' || pages.length || !sheet.hidden) return;
+  delete v.dataset.offer;
+  offerSave();
+}
 let segTick = 0;
 let workTick = 0;
 learnFeed.addEventListener('scroll', () => {
-  clearTimeout(workTick); workTick = setTimeout(paintWork, 140);     /* once the scroll has settled */
+  clearTimeout(workTick); workTick = setTimeout(() => { paintWork(); learnSeen(); }, 140);     /* once the scroll has settled */
   if (segTick) return;
   segTick = setTimeout(() => { segTick = 0; paintLearnBar(); }, 120);
 }, {passive: true});
@@ -5344,6 +5381,7 @@ function mathsEndEl() {
     body = L.right + ' of ' + checks + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix. Home brings them back first.' : ' Three right in a row on each point proves it.');
   }
   sec.className = 'slide endslide';
+  if (offerDue(ch)) sec.dataset.offer = '1';
   sec.innerHTML =
     '<p class="meta"><span>Chapter ' + (CH.indexOf(ch) + 1) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +
@@ -7138,7 +7176,7 @@ function syncWords() {
 const whereSaved = () => signedIn() ? 'Progress is saved to your account.' : 'Progress is saved on this device only.';
 function acctRow() {
   if (!ACCOUNTS) return '';
-  if (!signedIn()) return '<button class="row" type="button" data-act="signin"><span class="t">Save progress to an account</span><span class="val">Optional</span>' + IC.right + '</button>';
+  if (!signedIn()) return '<button class="row" type="button" data-act="signin" data-title="Save your progress"><span class="t">Save progress to an account</span><span class="val">Optional</span>' + IC.right + '</button>';
   return '<button class="row" type="button" data-act="account"><span class="t">Account</span><span class="val" id="acctVal">' + syncWords() + '</span>' + IC.right + '</button>';
 }
 function acctLine() {
@@ -7153,20 +7191,28 @@ function paintAcct() {
     if (v && signedIn()) v.textContent = syncWords(); else if (!!v !== signedIn()) renderYou();
   }
   const l = $('#acctLine'); if (l) l.textContent = acctLine();
+  /* Home's Sign in button shows only while signed out. */
+  if (!!$('.top .signin', views.home) === signedIn()) renderHome();
 }
 
 let codeFor = '', againTimer = 0;
-ACT.signin = () => {
+/* The email sheet. One email address both makes an account and signs in, so it is the same sheet everywhere. Its title
+   follows the button that opened it: Create an account, Sign in, or Save your progress from You. Use a different
+   email keeps the title it had. */
+let signTitle = 'Save your progress';
+ACT.signin = b => signInSheet(b && b.dataset.title);
+function signInSheet(title) {
   if (!ACCOUNTS) return;
+  if (title) signTitle = title;
   loadSupabase().catch(() => {});
-  openSheet('Save your progress',
-    '<p class="sub">Sign in to keep your progress on every device. Without an account, it stays on this device.</p>' +
+  openSheet(signTitle,
+    '<p class="sub">We’ll email you a link. It makes your account, or signs you in if you have one.</p>' +
     '<label class="field"><span class="sr">Email</span><input id="emailIn" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Email"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a sign-in link</button></div>' +
     '<p class="fine">Your email is used only to sign in. Stratos keeps no name, birthday or location.</p>');
   const i = $('#emailIn'); i.value = codeFor; i.focus();
-};
+}
 function acctErr(msg) { const e = $('#acctErr'); if (e) { e.textContent = msg; e.hidden = !msg; } }
 /* What went wrong, in plain words. The library gives a status of 0 when it could not reach Supabase at all. */
 function why(e, fallback) {
@@ -7297,6 +7343,52 @@ ACT.delacct = async b => {
   toast('Account deleted. This device keeps its progress.');
 };
 
+/* ---------- asking to save progress: the welcome screen, and one offer after the first chapter ----------
+   Both are only for a student who is not signed in, and only while accounts are switched on. Try it first and
+   Not now keep everything on the device, as before. saved.welcomed and saved.offered stay on the device: they are
+   not progress, so they never go to the account. Tests turn both off with window.stratosWelcome = false. */
+const welcomeEl = $('#welcome');
+const asking = () => ACCOUNTS && !signedIn() && window.stratosWelcome !== false;
+/* The welcome screen shows on a device that has never seen it and has no progress yet, so testers who already have
+   progress never see it. Not when the page opens from a sign-in link: the welcome would only get in its way. */
+function welcomeDue() {
+  if (!asking() || saved.welcomed || hasProgress(saved)) return false;
+  return !/(^|[#&])(access_token|error_description)=/.test(location.hash);
+}
+/* start() calls this before the intro plays, so the intro fades into the welcome screen instead of Home. */
+function showWelcome() {
+  if (!welcomeDue()) return;
+  welcomeEl.innerHTML =
+    '<div class="w-mid"><p class="word" id="wWord">Stratos</p><p class="w-line">Your syllabus in short cards. Race your friends on it.</p></div>' +
+    '<div class="w-end"><button class="primary wide" type="button" data-act="wcreate">Create an account</button>' +
+      '<button class="textbtn" type="button" data-act="wtry">Try it first</button>' +
+      '<p class="fine">An account keeps your progress on every device. Trying it first keeps it on this device, and you can sign in later from Home.</p></div>';
+  welcomeEl.hidden = false;
+  welcomeInert(true);
+  welcomeEl.focus({preventScroll: true});
+}
+/* While the welcome screen is up, the app behind it cannot be reached with the keyboard or a screen reader. */
+function welcomeInert(on) { Object.keys(views).forEach(k => { views[k].inert = on; }); $('#tabs').inert = on; }
+function welcomeDone() {
+  save({welcomed: 1});
+  welcomeEl.hidden = true; welcomeEl.textContent = '';
+  welcomeInert(false);
+}
+ACT.wtry = () => welcomeDone();
+ACT.wcreate = () => { welcomeDone(); signInSheet('Create an account'); };
+
+/* At the end of a Learn session, once the chapter is learned, the end slide carries a mark. When that slide comes
+   into view (learnSeen in 50-feed.js), the offer opens, once per device. Closing it counts as Not now. */
+const offerDue = ch => asking() && !saved.offered && chStats(ch).learned === chStats(ch).n;
+function offerSave() {
+  if (!asking() || saved.offered) return;
+  save({offered: 1});
+  openSheet('Save your progress so you don’t lose it',
+    '<p class="sub">Your progress is on this device only. An account keeps it if you lose or change your phone.</p>' +
+    '<div class="cta"><button class="primary" type="button" data-act="signin" data-title="Create an account">Create an account</button>' +
+    '<button class="ghost" type="button" data-act="sheetclose">Not now</button></div>');
+}
+
 /* ---------- when to sync ---------- */
 function acctBoot() {
   if (!ACCOUNTS) return;
@@ -7376,6 +7468,8 @@ function start(data) {
   resize();
   const t = data && data.v === 1 && (data.tab === 'search' || data.tab === 'you') ? data.tab : 'home';
   go(t);
+  /* On a device's first open, while signed out, the welcome screen waits under the intro. */
+  showWelcome();
   /* The intro plays when the app is opened, but not when a new version of the page carries on from the old one. */
   intro.play(!(data && data.v === 1 && data.tab));
   acctBoot();

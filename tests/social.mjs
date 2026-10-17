@@ -126,7 +126,7 @@ check(/Noah\d of 8/.test(card) && card.includes('You8 of 8'), 'the card shows bo
 await p.click('[data-act="back"]'); await p.click('[data-act="back"]'); await p.waitForTimeout(100);
 await tab(p, 'you');
 await shot(p, 'soc-you');
-await p.click('[data-act="page"][data-page="store"]'); await p.waitForTimeout(120);
+await p.click('#v-you [data-act="page"][data-page="store"]'); await p.waitForTimeout(120);
 await shot(p, 'soc-store-top');
 check(await p.locator('.tile').count() === 6 + 5 + 6 + 3, 'the store has 20 items', R);
 check(await p.locator('.tile[aria-pressed="true"]').count() === 4, 'four items are in use', R);

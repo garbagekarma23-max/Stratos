@@ -161,6 +161,7 @@ function learnEndEl() {
     body = L.right + ' of ' + asked + ' checks right first time.' + (st.weak ? ' ' + plural(st.weak, 'weak point') + ' to fix in Practice.' : ' Practice will bring these points back later.');
   }
   sec.className = 'slide endslide';
+  if (offerDue(ch)) sec.dataset.offer = '1';
   sec.innerHTML =
     '<p class="meta"><span>' + esc(chName(ch)) + '</span><span>' + st.learned + ' of ' + st.n + ' points learned</span></p>' +
     '<h2 class="ctitle">' + title + '</h2>' +
@@ -223,10 +224,18 @@ function paintLearnBar() {
     return '<i class="seg' + fill + (i === cur && !r ? ' cur' : '') + '"></i>';
   }).join('');
 }
+/* The end slide of a session that learned the chapter carries a mark (learnEndEl). Once it is on screen, the offer to
+   save progress to an account opens (offerSave in 85-account.js). */
+function learnSeen() {
+  const v = L && L.over ? viewing(learnFeed) : null;
+  if (!v || !v.dataset.offer || ui.tab !== 'learn' || pages.length || !sheet.hidden) return;
+  delete v.dataset.offer;
+  offerSave();
+}
 let segTick = 0;
 let workTick = 0;
 learnFeed.addEventListener('scroll', () => {
-  clearTimeout(workTick); workTick = setTimeout(paintWork, 140);     /* once the scroll has settled */
+  clearTimeout(workTick); workTick = setTimeout(() => { paintWork(); learnSeen(); }, 140);     /* once the scroll has settled */
   if (segTick) return;
   segTick = setTimeout(() => { segTick = 0; paintLearnBar(); }, 120);
 }, {passive: true});
