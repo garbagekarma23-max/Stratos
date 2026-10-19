@@ -30,6 +30,7 @@ async function page(ph, file, o = {}) {
   if (o.seed) await ctx.addInitScript(s => { if (!sessionStorage.getItem('seeded')) { localStorage.setItem('stratos2.v1', JSON.stringify(s)); sessionStorage.setItem('seeded', '1'); } }, o.seed);
   await ctx.addInitScript(() => { window.stratosIntro = false; });   // skip the intro (tests/intro.mjs tests it)
   await ctx.addInitScript(() => { window.stratosWelcome = false; }); // and the welcome screen (tests/welcome.mjs tests it)
+  await ctx.addInitScript(() => { window.stratosSetup = false; });   // and the first-open course steps (tests/first-open.mjs)
   const p = await ctx.newPage();
   p.on('pageerror', e => errs.push(ph.name + ' ' + file + ': ' + e.message));
   const cdp = await ctx.newCDPSession(p);
