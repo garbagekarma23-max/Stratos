@@ -574,6 +574,16 @@ svg{display:block;flex:none}
   #welcome .w-mid,#welcome .w-end{position:static}
 }
 
+/* ---------- the first-open steps ----------
+   The subject sheet's steps, full screen, on the plain paper. The panel fills the screen instead of rising from the
+   bottom, so the intro fades straight into it. The button stays at the bottom, as in the sheet. */
+#setup{position:absolute;inset:0;z-index:8;background:var(--paper);outline:none}
+#setup .panel{height:100%;max-height:none;padding-top:12px;border-radius:0;background:var(--paper);animation:none}
+#setup .p-head h2{font-size:26px}
+#setup .stick{background:var(--paper)}
+#setup .pick > .ic{width:18px;height:18px;color:var(--ink-3)}
+#setup .textbtn{align-self:center;min-height:44px;font-size:15px}
+
 /* ---------- sheet ---------- */
 #sheet{position:absolute;inset:0;z-index:8;display:flex;align-items:flex-end;background:var(--scrim)}
 .panel{width:100%;max-height:88%;overflow-y:auto;overscroll-behavior:contain;display:flex;flex-direction:column;gap:14px;padding:10px 16px calc(20px + var(--sab));border-radius:22px 22px 0 0;background:var(--raise);scrollbar-width:none;animation:sheet-in .24s cubic-bezier(.2,.8,.2,1)}

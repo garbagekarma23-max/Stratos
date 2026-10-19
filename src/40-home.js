@@ -112,7 +112,17 @@ function pointSheet(pid) {
 /* ---------- the subject sheet: where you study, then its courses ----------
    The first time, the sheet asks for the country (and the state, for a country with states), with a guess from the
    phone's settings already picked. Once that is saved it opens on the courses: the place's own, then the international
-   ones. The data is in places.js. ui.pl holds the picks while the sheet is open, before they are saved. */
+   ones. The data is in places.js. ui.pl holds the picks while the sheet is open, before they are saved.
+   On a device's first open the same steps run full screen (#setup) instead of in the sheet: see the end of this part.
+   ui.first is true while they do. showStep and stepBody send each step to the right place. */
+const setupEl = $('#setup'), setupBody = $('#setupBody');
+const stepBody = () => ui.first ? setupBody : sheetBody;
+function showStep(title, html) {
+  if (!ui.first) { openSheet(title, html); return; }
+  $('#setupTitle').textContent = title;
+  setupBody.innerHTML = html;
+  $('.panel', setupEl).scrollTop = 0;
+}
 ACT.subject = () => {
   if (saved.place) { courseSheet(); return; }
   const g = guessPlace();
@@ -131,7 +141,7 @@ function countrySheet() {
   const named = COUNTRY_CODES.map(c => ({c: c, n: countryName(c)}));
   const rank = x => x.c === sel ? 0 : hasOwn(x.c) ? 1 : 2;
   named.sort((a, b) => rank(a) - rank(b) || a.n.localeCompare(b.n, 'en'));
-  openSheet('Where do you study?',
+  showStep('Where do you study?',
     '<p class="rule">Pick your country to see its courses.' + (ui.pl.guessed ? ' We guessed from your phone\'s language and region settings.' : '') + '</p>' +
     '<label class="field"><span class="sr">Search countries</span><input id="placeIn" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="Search countries"></label>' +
     '<div class="places" role="radiogroup" aria-label="Country">' + named.map(x =>
@@ -141,26 +151,28 @@ function countrySheet() {
     '<div class="stick"><button class="primary wide" type="button" data-act="placenext"' + (sel ? '' : ' disabled') + '>' + placeNext() + '</button></div>');
 }
 /* Typing in the search box hides the countries whose names do not have what was typed in them. */
-sheetBody.addEventListener('input', ev => {
-  if (ev.target.id !== 'placeIn') return;
-  const q = fold(ev.target.value.trim());
-  let shown = 0;
-  $$('.places .choice', sheetBody).forEach(b => { const ok = !q || b.dataset.find.indexOf(q) >= 0 || b.dataset.v === q.toUpperCase(); b.hidden = !ok; if (ok) shown++; });
-  $('#placeNone').hidden = shown > 0;
+[sheetBody, setupBody].forEach(el => {
+  el.addEventListener('input', ev => {
+    if (ev.target.id !== 'placeIn') return;
+    const q = fold(ev.target.value.trim());
+    let shown = 0;
+    $$('.places .choice', el).forEach(b => { const ok = !q || b.dataset.find.indexOf(q) >= 0 || b.dataset.v === q.toUpperCase(); b.hidden = !ok; if (ok) shown++; });
+    $('#placeNone').hidden = shown > 0;
+  });
+  el.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'placeIn') { ev.preventDefault(); ev.target.blur(); } });
 });
-sheetBody.addEventListener('keydown', ev => { if (ev.key === 'Enter' && ev.target.id === 'placeIn') { ev.preventDefault(); ev.target.blur(); } });
 /* Picking a row only moves the dot, so the search and the place in the list stay as they are. */
-const checkOnly = (b, sel) => $$(sel, sheetBody).forEach(x => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+const checkOnly = (b, sel) => $$(sel, stepBody()).forEach(x => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
 ACT.country = b => {
   ui.pl.country = b.dataset.v;
   ui.pl.state = guessState(b.dataset.v, deviceZone());
   checkOnly(b, '.places .choice');
-  const n = $('[data-act="placenext"]', sheetBody); n.disabled = false; n.textContent = placeNext();
+  const n = $('[data-act="placenext"]', stepBody()); n.disabled = false; n.textContent = placeNext();
 };
 ACT.placenext = () => { if (!ui.pl.country) return; if (statesOf(ui.pl.country).length) stateSheet(); else placeDone(); };
 
 function stateSheet() {
-  openSheet('Which state or territory?',
+  showStep('Which state or territory?',
     '<p class="rule">Pick yours to see its courses.</p>' +
     '<div role="radiogroup" aria-label="State or territory">' + statesOf(ui.pl.country).map(s =>
       radio('state', s.id, s.id === ui.pl.state, s.name, s.curriculum ? s.about : 'Courses coming')).join('') + '</div>' +
@@ -172,25 +184,70 @@ ACT.placedone = () => placeDone();
 function placeDone() { save({place: {country: ui.pl.country, state: ui.pl.state}}); ui.pl = null; courseSheet(); }
 
 /* The courses for the place saved: its own, then the international ones. The course open now always shows, under
-   Open now if the place does not offer it, so Home never names a course the sheet hides. */
+   Open now if the place does not offer it, so Home never names a course the sheet hides.
+   On a first open nothing is open yet: each row has an arrow, one tap picks it, and there is no Open now. */
 function courseSheet() {
-  const pl = saved.place, own = curriculumAt(pl), st = stateOf(pl.country, pl.state);
+  const first = ui.first, pl = saved.place, own = curriculumAt(pl), st = stateOf(pl.country, pl.state);
   const row = id => {
-    const c = COURSE_LIST.find(x => x.id === id), note = c.data.note;
-    return '<button class="pick" type="button" data-act="setsub" data-sub="' + id + '"' + (SUB.id === id ? ' aria-current="true"' : '') + '><span class="t">' + esc(c.name) +
-      '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span><span class="v">' + (SUB.id === id ? 'Open' : 'Switch') + '</span></button>';
+    const c = COURSE_LIST.find(x => x.id === id), note = c.data.note, on = !first && SUB.id === id;
+    return '<button class="pick" type="button" data-act="' + (first ? 'firstsub' : 'setsub') + '" data-sub="' + id + '"' + (on ? ' aria-current="true"' : '') + '><span class="t">' + esc(c.name) +
+      '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span>' +
+      (first ? IC.right : '<span class="v">' + (on ? 'Open' : 'Switch') + '</span>') + '</button>';
   };
   const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3><div class="picks">' + ids.map(row).join('') + '</div>' + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
   const listed = (own ? own.courses : []).concat(INTERNATIONAL.courses);
-  openSheet('Courses',
+  showStep(first ? 'Pick your course' : 'Courses',
     '<button class="pick place" type="button" data-act="placechange"><span class="t">' + esc(placeName(pl)) + '</span><span class="v">Change</span></button>' +
     (own ? group(own.name, own.courses, own.more)
       : '<p class="sub">Courses for ' + esc(st ? st.name : countryName(pl.country)) + ' are coming. The international courses below work anywhere.</p>') +
     group(INTERNATIONAL.name, INTERNATIONAL.courses, INTERNATIONAL.more) +
-    (listed.indexOf(SUB.id) < 0 ? group('Open now', [SUB.id]) : '') +
-    '<p class="fine">Each course keeps its own progress, ' + (signedIn() ? 'saved to your account.' : 'saved on this device only.') + '</p>');
+    (!first && listed.indexOf(SUB.id) < 0 ? group('Open now', [SUB.id]) : '') +
+    '<p class="fine">' + (first ? 'You can switch courses any time from Home. ' : '') + 'Each course keeps its own progress, ' + (signedIn() ? 'saved to your account.' : 'saved on this device only.') + '</p>' +
+    (first ? '<button class="textbtn" type="button" data-act="firstnone">My course isn’t here yet</button>' : ''));
 }
 ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
+
+/* ---------- the first-open steps ----------
+   On a device's first open, the intro fades into the subject sheet's steps, full screen: where you study, the state
+   if the country has states, then the course. Then the welcome screen (85-account.js), if it is due, then Home.
+   They show only while this device has no course (saved.picked is 0, see tidySaved in 10-core.js), not while signed
+   in (the account brings its course), and not when the page opens from a sign-in link. Picking a course saves
+   picked, so they never show again. A reload part way through starts them again, at the courses if the place was
+   saved. Tests skip them with window.stratosSetup = false. */
+function setupDue() {
+  if (saved.picked || window.stratosSetup === false || signedIn() || hasProgress(saved)) return false;
+  return !/(^|[#&])(access_token|error_description)=/.test(location.hash);
+}
+/* start() calls this before the intro plays, so the intro fades into the first step. True if the steps are showing. */
+function showSetup() {
+  if (!setupDue()) return false;
+  ui.first = true;
+  setupEl.hidden = false;
+  welcomeInert(true);
+  if (saved.place) courseSheet();
+  else { const g = guessPlace(); ui.pl = {country: g ? g.country : null, state: g ? g.state : null, guessed: !!g}; countrySheet(); }
+  setupEl.focus({preventScroll: true});
+  return true;
+}
+/* A course is picked: save it, close the steps, then the welcome screen if it is due, or Home. note is a toast for
+   Home, shown once Home is in view. */
+function setupDone(id, note) {
+  ui.first = false; ui.pl = null;
+  setupEl.hidden = true; setupBody.textContent = '';
+  useSubject(id, true);
+  save({subject: id, picked: 1});
+  go('home');
+  ui.homeNote = note || '';
+  if (!showWelcome()) { welcomeInert(false); homeNote(); }
+}
+/* The toast saved for Home, if there is one. The welcome screen's Try it first calls this too. */
+function homeNote() { if (ui.homeNote) toast(ui.homeNote); ui.homeNote = ''; }
+ACT.firstsub = b => setupDone(b.dataset.sub);
+/* My course isn’t here yet: the first course the place has, or the first international one, to try meanwhile. */
+ACT.firstnone = () => {
+  const own = curriculumAt(saved.place);
+  setupDone(own ? own.courses[0] : INTERNATIONAL.courses[0], 'Try this one while we add yours.');
+};
 /* Switch Home, Learn and Search to another subject. Each subject's progress stays where it is.
    A Learn session or flight from the other subject ends, because its slides belong to that subject. */
 function useSubject(id, quiet) {
