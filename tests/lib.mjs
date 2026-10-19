@@ -34,6 +34,9 @@ export async function open(o = {}) {
   // The welcome screen on first open, and the offer to save progress after the first chapter, ask a student who is
   // not signed in to make an account. Tests skip both unless they pass welcome: true (tests/welcome.mjs does).
   if (!o.welcome) await ctx.addInitScript(() => { window.stratosWelcome = false; });
+  // The course steps on first open (where you study, then the course) come before the welcome screen. Tests skip
+  // them unless they pass setup: true (tests/first-open.mjs does).
+  if (!o.setup) await ctx.addInitScript(() => { window.stratosSetup = false; });
   if (o.init) await ctx.addInitScript(o.init);
   // Tests never reach a real Supabase project: every supabase.co address is blocked, including the one in the build.
   // tests/account.mjs passes supabase: a fake from fake-supabase.mjs,

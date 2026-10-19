@@ -152,6 +152,9 @@ function tidySaved() {
      Its answers go in ans with the NSW ones: its point ids start with e-, so they never clash. */
   if (!saved.c || typeof saved.c !== 'object' || Array.isArray(saved.c)) saved.c = {};
   COURSES.forEach(id => { if (!saved.c[id] || typeof saved.c[id] !== 'object' || Array.isArray(saved.c[id])) saved.c[id] = {}; });
+  /* picked: 1 once this device has a course, 0 while the first-open steps (40-home.js) still have to ask for one.
+     A save from before them that names a course or has answers counts as picked. It stays on this device. */
+  if (saved.picked !== 0 && saved.picked !== 1) saved.picked = SUBJECTS[saved.subject] || hasProgress(saved) ? 1 : 0;
   if (!SUBJECTS[saved.subject]) saved.subject = 'eco';
   /* Where the student studies, once they have picked it on the subject sheet: a country code, and a state if the
      country has states. A code or state this build does not know is dropped, so the sheet asks again. */

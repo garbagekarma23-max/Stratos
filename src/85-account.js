@@ -417,9 +417,10 @@ function welcomeDue() {
   if (!asking() || saved.welcomed || hasProgress(saved)) return false;
   return !/(^|[#&])(access_token|error_description)=/.test(location.hash);
 }
-/* start() calls this before the intro plays, so the intro fades into the welcome screen instead of Home. */
+/* start() calls this before the intro plays, so the intro fades into the welcome screen instead of Home. On a first
+   open the course steps come first, and their end calls this (setupDone in 40-home.js). True if it is showing. */
 function showWelcome() {
-  if (!welcomeDue()) return;
+  if (!welcomeDue()) return false;
   welcomeEl.innerHTML =
     '<div class="w-mid"><p class="word" id="wWord">Stratos</p><p class="w-line">Your syllabus in short cards. Race your friends on it.</p></div>' +
     '<div class="w-end"><button class="primary wide" type="button" data-act="wcreate">Create an account</button>' +
@@ -428,6 +429,7 @@ function showWelcome() {
   welcomeEl.hidden = false;
   welcomeInert(true);
   welcomeEl.focus({preventScroll: true});
+  return true;
 }
 /* While the welcome screen is up, the app behind it cannot be reached with the keyboard or a screen reader. */
 function welcomeInert(on) { Object.keys(views).forEach(k => { views[k].inert = on; }); $('#tabs').inert = on; }
@@ -436,7 +438,7 @@ function welcomeDone() {
   welcomeEl.hidden = true; welcomeEl.textContent = '';
   welcomeInert(false);
 }
-ACT.wtry = () => welcomeDone();
+ACT.wtry = () => { welcomeDone(); homeNote(); };
 ACT.wcreate = () => { welcomeDone(); signInSheet('Create an account'); };
 
 /* At the end of a Learn session, once the chapter is learned, the end slide carries a mark. When that slide comes
