@@ -38,6 +38,15 @@ The owner is new to programming and reads this code to learn. Explain what you c
 - Icons and link previews: `icons/` holds `favicon.svg` (written by hand, the app's classic rocket, with dark-browser colours), and the pictures `cd tests && node make-icons.mjs` makes from the Stratos look: `favicon-32.png`, `apple-touch-icon.png` (180 px), the same rocket at 192 and 512 px for Android (`icon-192.png`, `icon-512.png`), and the 1200 by 630 link previews `preview-v2.png` and `preview-lab.png`. The tags that use them are in `src/head.html` (for v2.html) and at the top of `maths-lab.html`. Apps such as Messages fetch the preview picture from the live site, so its tag uses the full web address, and a new picture only shows once the pull request is merged. Apps also keep old previews for a while.
 - The site only updates when the pull request is merged into main.
 
+## Skills
+
+Three skills in `.claude/skills/`, copied unchanged from their makers, each with its licence beside it. Claude Code loads them in every session on this repository.
+
+- `frontend-design` (Anthropic, `anthropics/skills`, Apache 2.0): when designing or reshaping a screen in `src/` or the lab. The Stratos design rules and words rules in this file come first. The skill asks for bold, distinctive looks; Stratos is clinical, with one typeface and one blue. Use it for layout, type sizes and spacing, not to change the look.
+- `supabase-postgres-best-practices` (Supabase, `supabase/agent-skills`, MIT): before changing `supabase/schema.sql` or its rules, and when writing tests for them in `tests/rls.mjs`.
+- `supabase` (Supabase, `supabase/agent-skills`, MIT): for accounts, sign-in and sync (`src/85-account.js`, `supabase/`), and for the friends tables in step 5. Its advice on the Supabase command-line tool and MCP server does not apply here: this project uses neither, and the schema is pasted into the SQL Editor.
+- To update one, copy its folder again from the same repository. The Supabase folders have no licence of their own upstream, so put their repository's `LICENSE` back in each.
+
 ## Accounts and sync
 
 - Signing in is optional. Without an account, everything works as before and nothing contacts Supabase: the account code only loads the Supabase library for a student who opens the sign-in sheet or is signed in already. `SUPA` at the top of `src/85-account.js` holds the project's address and publishable key. With them empty, accounts are switched off and You shows no account row.
