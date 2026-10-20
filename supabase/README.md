@@ -45,18 +45,20 @@ Leave **Anonymous sign-ins** and **Phone** off. Google comes in its own pull req
 **Authentication**, then **Emails**, then **Templates**. Put the text in `supabase/emails.md` into both Magic Link
 and Confirm signup.
 
-Supabase only lets the templates be changed once step 6 is done. Until then students get Supabase's own email, which
-has the link and no code. The app works with that: the sheet after sending leads with the link, and the code box is
-there for when the email has one.
+Done. Both templates have the 6-digit code (`{{ .Token }}`) and the link. The app asks for the code first, and the
+link still signs in the browser it opens in.
 
 ## 6. A sender for real students
 
-Supabase's built-in email only sends to members of your Supabase team, and only about 2 emails an hour. That is
-enough for you to try it with your own address. It will not work for testers.
+Done: custom SMTP through Resend, sending from noreply@stratosstudy.com. It is under **Authentication**, then
+**Emails**, then **SMTP Settings**.
 
-Before testers use it, set up your own sender under **Authentication**, then **Emails**, then **SMTP Settings**.
-That needs a domain you own and an email service such as Resend or Brevo. Then raise the email limit under
-**Authentication**, then **Rate Limits**.
+Two things to check from time to time:
+
+- **Authentication**, then **Rate Limits**: the email limit should be high enough for every tester to sign in. Supabase
+  sets it low until custom SMTP is on.
+- In Resend, click tracking (link tracking) should be off. It rewrites the link in the email, which Supabase says
+  can break it.
 
 ## 7. The two values for the code
 

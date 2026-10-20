@@ -7284,10 +7284,10 @@ function signInSheet(title) {
   if (title) signTitle = title;
   loadSupabase().catch(() => {});
   openSheet(signTitle,
-    '<p class="sub">We’ll email you a link. It makes your account, or signs you in if you have one.</p>' +
+    '<p class="sub">We’ll email you a 6-digit code. It makes your account, or signs you in if you have one.</p>' +
     '<label class="field"><span class="sr">Email</span><input id="emailIn" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Email"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
-    '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a sign-in link</button></div>' +
+    '<div class="cta"><button class="primary" type="button" data-act="sendcode">Email me a code</button></div>' +
     '<p class="fine">Your email is used only to sign in. Stratos keeps no name, birthday or location.</p>');
   const i = $('#emailIn'); i.value = codeFor; i.focus();
 }
@@ -7315,19 +7315,19 @@ ACT.sendcode = async b => {
   if (!again) codeSheet(); else { acctErr(''); toast('Sent again.'); }
   waitToResend();
 };
-/* The email always has a link. It has a 6-digit code too once Supabase sends our own email (supabase/emails.md), so
-   the sheet leads with the link and offers the code box as the other way in. Closing the sheet, Send again and Use a
-   different email are always there, so nobody waits on a code that never comes. */
+/* The email has a 6-digit code and a link (supabase/emails.md). The code is the main way in: it works in a Home
+   Screen app on an iPhone, which keeps its storage apart from Safari, where links open. The code box takes focus so
+   a phone opens its number keypad. The link still signs in the browser it opens in. */
 function codeSheet() {
   openSheet('Check your email',
-    '<p class="sub">We sent an email to <span class="em">' + esc(codeFor) + '</span>. Tap the link in it to sign in.</p>' +
-    '<p class="fine">The link signs in the browser it opens in. On an iPhone that is Safari, even if you use Stratos from your Home Screen.</p>' +
-    '<p class="fine">If the email has a 6-digit code, you can type it here instead.</p>' +
-    '<label class="field"><span class="sr">6-digit code</span><input id="codeIn" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" spellcheck="false" placeholder="6-digit code"></label>' +
+    '<p class="sub">We sent a 6-digit code to <span class="em">' + esc(codeFor) + '</span>. Type it here.</p>' +
+    '<label class="field"><span class="sr">6-digit code</span><input id="codeIn" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="6" spellcheck="false" placeholder="6-digit code"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
-    '<div class="cta"><button class="ghost" type="button" data-act="verifycode">Sign in with the code</button>' +
+    '<div class="cta"><button class="primary" type="button" data-act="verifycode">Sign in</button>' +
     '<button class="ghost" type="button" data-act="sendcode" data-again="1" id="againBtn" disabled>Send again</button></div>' +
+    '<p class="fine">The email has a link too. It signs in the browser it opens in.</p>' +
     '<button class="textbtn" type="button" data-act="signin">Use a different email</button>');
+  $('#codeIn').focus();
 }
 /* Send again waits 60 seconds, the gap Supabase needs between two codes to the same address. */
 function waitToResend() {
@@ -7343,14 +7343,14 @@ function waitToResend() {
 }
 ACT.verifycode = async b => {
   const i = $('#codeIn'), code = i ? i.value.replace(/\D/g, '') : '';
-  if (code.length < 6) { acctErr('Tap the link in the email. If it has a 6-digit code, type that here.'); return; }
+  if (code.length < 6) { acctErr('Type the 6-digit code from the email.'); return; }
   b.disabled = true; b.textContent = 'Signing in'; acctErr('');
   try {
     const r = await sb.auth.verifyOtp({email: codeFor, token: code, type: 'email'});
     if (r.error) throw r.error;
     /* onAuth hears about the sign-in and takes it from here. */
   } catch (e) {
-    b.disabled = false; b.textContent = 'Sign in with the code';
+    b.disabled = false; b.textContent = 'Sign in';
     acctErr(why(e, 'That code is wrong or has run out. Check the email, or send a new one.'));
   }
 };

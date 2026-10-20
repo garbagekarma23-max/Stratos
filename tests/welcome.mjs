@@ -56,7 +56,7 @@ async function close(d) { errsAll.push(...d.errs); await d.b.close(); }
   const asked = watch(d);
   await d.p.locator('#welcome .primary').click(); await d.p.waitForTimeout(200);
   check(!(await shown(d.p, '#welcome')) && (await title(d.p)) === 'Create an account' && await shown(d.p, '#emailIn'), 'Create an account opens the email sheet, named Create an account', R);
-  check((await d.p.locator('#sheetBody .sub').first().textContent()) === 'We’ll email you a link. It makes your account, or signs you in if you have one.', 'which says one email makes the account or signs in', R);
+  check((await d.p.locator('#sheetBody .sub').first().textContent()) === 'We’ll email you a 6-digit code. It makes your account, or signs you in if you have one.', 'which says one email makes the account or signs in', R);
   check(asked.some(u => u.includes('vendor/supabase/supabase.js')), 'and only then loads the Supabase library', R);
   check((await saved(d.p)).welcomed === 1, 'the welcome counts as seen', R);
   await d.p.locator('#sheetClose').click(); await d.p.waitForTimeout(100);

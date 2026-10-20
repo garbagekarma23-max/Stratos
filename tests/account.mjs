@@ -115,19 +115,28 @@ check(await until(async () => { const r = await row('a@example.com'); return r &
   await d.b.close();
 }
 
-// ---------- the email has only a link, no code (Supabase's own email, before our template is in) ----------
-// The student asks for the email in one tab, then taps the link, which opens a new tab in the same browser.
+// ---------- the code first, and the link in a new tab ----------
+// The student asks for a code in one tab, then taps the link instead, which opens a new tab in the same browser.
 {
-  const d = await device();
+  const d = await device({clock: true});
   await tab(d.p, 'you');
   await d.p.click('#v-you [data-act="signin"]'); await d.p.waitForTimeout(100);
+  check((await d.p.locator('[data-act="sendcode"]').textContent()) === 'Email me a code', 'the email sheet\'s button says Email me a code', R);
   await d.p.fill('#emailIn', 'a@example.com');
   await d.p.click('[data-act="sendcode"]');
   await d.p.waitForSelector('#codeIn');
-  check((await d.p.locator('#sheetBody .sub').textContent()).includes('Tap the link in it to sign in.'), 'the sheet after sending leads with the link', R);
-  check(await d.p.evaluate(() => document.activeElement.id !== 'codeIn'), 'the code box is not focused, so a phone keyboard does not open for a code that may not come', R);
+  check((await d.p.locator('#sheetBody .sub').textContent()).includes('We sent a 6-digit code to a@example.com. Type it here.'), 'the sheet after sending asks for the 6-digit code', R);
+  const box = await d.p.evaluate(() => { const i = document.querySelector('#codeIn'); return {focus: document.activeElement === i, mode: i.inputMode, pattern: i.pattern, auto: i.autocomplete, max: i.maxLength}; });
+  check(box.focus && box.mode === 'numeric' && box.pattern === '[0-9]*' && box.auto === 'one-time-code' && box.max === 6, 'the code box takes focus, with a number keypad on phones and room for 6 digits', R);
+  check((await d.p.locator('[data-act="verifycode"]').getAttribute('class')) === 'primary', 'Sign in is the main button', R);
+  await d.p.fill('#codeIn', '123');
   await d.p.click('[data-act="verifycode"]');
-  check((await d.p.locator('#acctErr').textContent()).startsWith('Tap the link in the email.'), 'Sign in with nothing typed points to the link', R);
+  check((await d.p.locator('#acctErr').textContent()) === 'Type the 6-digit code from the email.', 'a short code asks for all 6 digits', R);
+  check(await d.p.locator('#againBtn').isDisabled() && /^Send again in (59|60) s$/.test(await d.p.locator('#againBtn').textContent()), 'Send again waits, counting down from 60 seconds', R);
+  await d.ctx.clock.runFor(30000); await d.p.waitForTimeout(50);
+  check(await d.p.locator('#againBtn').isDisabled(), 'and is still waiting after 30 seconds', R);
+  await d.ctx.clock.runFor(31000); await d.p.waitForTimeout(50);
+  check(!(await d.p.locator('#againBtn').isDisabled()) && (await d.p.locator('#againBtn').textContent()) === 'Send again', 'after 60 seconds, Send again can be tapped', R);
   check(await d.p.locator('#sheetBody [data-act="signin"]').count() === 1 && await d.p.locator('#sheetClose').isVisible(), 'and Use a different email and close are there, so nobody is stuck', R);
   const u = await f.user('a@example.com'), s = f.session(u);
   const linkTab = await d.ctx.newPage();
