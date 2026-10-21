@@ -1,8 +1,7 @@
 # Sign-in emails
 
-Paste these into the Supabase dashboard: Authentication, then Emails, then Templates. Supabase only allows this once
-your own sender is set up (README step 6). Until then its own email goes out, with the link and no code, and the app
-works with that. Use the same text for both
+Paste these into the Supabase dashboard: Authentication, then Emails, then Templates. Both are in now, sent through
+Resend (README step 6). Use the same text for both
 **Magic Link** and **Confirm signup**. A student's first sign-in gets Confirm signup, and every later one gets Magic Link.
 
 `{{ .Token }}` is where Supabase puts the code. `{{ .ConfirmationURL }}` is the link. Leave both exactly as written.
@@ -24,5 +23,5 @@ Your Stratos code: {{ .Token }}
 ```
 
 The code is the main way in. A Stratos app added to an iPhone's Home Screen keeps its own storage, apart from Safari,
-and an email link always opens in Safari. School email systems also often open links before the student sees them,
-which can use up a one-time link. The code works in both cases.
+and an email link always opens in Safari. The code works there. School email systems often open links before the
+student sees them. The link and the code are the same one-time token, so that most likely uses up the code too.
