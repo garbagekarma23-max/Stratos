@@ -108,6 +108,10 @@ Do this once the pull request with `supabase/friends.sql` is merged.
 
 Running the file again later is safe. It keeps the data.
 
+If friends are in already, run `supabase/friends.sql` once more after the pull request that fixed Nigeria is merged.
+Before that fix, the check refused usernames and call signs such as "nigeria" and "Niger", because a banned word with a
+double letter matched the same letters with one. Running the file again puts the fixed check in and keeps the data.
+
 To ban another word in usernames and call signs, open **Table Editor**, then `banned_words`, and insert a row: the word
 in lower case letters only, and `anywhere` ticked if it should be caught inside longer names too (leave it unticked
 for short words that are part of ordinary ones). It applies to new and changed names straight away.

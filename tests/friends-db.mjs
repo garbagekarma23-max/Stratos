@@ -91,6 +91,15 @@ const leet = w => w.replace(/s/, '5').replace(/a/, '4').replace(/e/, '3').replac
 check(await un(c.id, 'xx' + word + 'xx') === 'banned' && await un(c.id, 'the.' + wholeWord) === 'banned' && await un(c.id, 'the_' + leet(wholeWord)) === 'banned',
   'a username with a banned word is refused: anywhere words inside a name, whole words between dots, and look-alike spellings', R);
 check(await un(c.id, 'classic.grass') === 'ok', 'a short banned word inside a longer one ("classic", "grass") is fine', R);
+const doubled = (await f.admin("select word from public.banned_words where anywhere and word ~ '(.)\\1' and word ~ '[aeiou]' order by word limit 1")).rows[0].word;
+const stretched = w => w.replace(/([aeiou])/, '$1$1$1');
+const g = await user();
+check(await un(g.id, 'xx' + stretched(word)) === 'banned' && await un(g.id, 'xx' + stretched(doubled)) === 'banned', 'a banned word with a letter said over and over is still refused', R);
+check(await un(g.id, 'xx' + doubled.replace(/(.)\1/, '$1')) === 'ok', 'but a word with a double letter is not matched by the same word with one letter', R);
+const geo = [];
+for (const name of ['nigeria', 'niger.fan', 'nigerian_k']) geo.push(await un((await user()).id, name));
+check(geo.every(r => r === 'ok'), 'the usernames nigeria, niger.fan and nigerian_k are allowed: ' + geo.join(', '), R);
+check((await f.admin("select public.has_banned_word('NigeriaFan') a, public.has_banned_word('Niger') b")).rows.every(r => !r.a && !r.b), 'and so are the call signs NigeriaFan and Niger', R);
 check(await un(c.id, 'Cat.Test') === 'today', 'a username can change only once a day', R);
 await f.admin("update public.profiles set username_at = now() - interval '25 hours' where id = $1", [c.id]);
 check(await un(c.id, 'Cat.Test') === 'ok' && (await state(c.id)).me.username === 'cat.test', 'after a day it can change, and is kept in lower case', R);

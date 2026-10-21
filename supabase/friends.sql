@@ -132,10 +132,36 @@ alter table public.banned_words enable row level security;
 -- These run only from inside the functions further down. Each has search_path = '', so every name in it is written
 -- in full and nobody can slip in a function or table of the same name.
 
+-- A banned word as a pattern where each letter may be said over and over, but never fewer times than in the word:
+-- "shit" becomes s+h+i+t+, so "shiiit" is caught, and a word with a double letter keeps it, so a slur spelled with
+-- "gg" never matches "Nigeria" or "Niger".
+create or replace function public.word_pattern(w text)
+returns text
+language plpgsql
+immutable
+set search_path = ''
+as $$
+declare
+  p text := '';
+  i int := 1;
+  k int;
+  c text;
+begin
+  while i <= char_length(w) loop
+    c := substr(w, i, 1);
+    k := 1;
+    while substr(w, i + k, 1) = c loop k := k + 1; end loop;
+    p := p || c || case when k = 1 then '+' else '{' || k || ',}' end;
+    i := i + k;
+  end loop;
+  return p;
+end;
+$$;
+
 -- True if a name has a banned word. Capitals are ignored, look-alike digits and symbols are read as letters
 -- (0 o, 1 i, 3 e, 4 a, 5 s, 7 t, 8 b, @ a, $ s), and dots, underscores and spaces are ignored. For the words banned
--- anywhere, letters said over and over ("shiiit") are read once too. Whole words are compared exactly, because
--- reading double letters once would turn ordinary names into banned ones.
+-- anywhere, a letter said over and over ("shiiit") still matches, through word_pattern. Whole words are compared
+-- exactly, because reading double letters once would turn ordinary names into banned ones.
 create or replace function public.has_banned_word(t text)
 returns boolean
 language plpgsql
@@ -146,17 +172,15 @@ as $$
 declare
   s text;
   joined text;
-  once text;
   parts text[];
 begin
   if t is null then return false; end if;
   s := translate(lower(t), '0134578@$', 'oieastbas');
   joined := regexp_replace(s, '[^a-z]', '', 'g');
-  once := regexp_replace(joined, '(.)\1+', '\1', 'g');
   parts := array_remove(regexp_split_to_array(s, '[^a-z]+'), '');
   return exists (
     select 1 from public.banned_words w
-    where (w.anywhere and (position(w.word in joined) > 0 or position(regexp_replace(w.word, '(.)\1+', '\1', 'g') in once) > 0))
+    where (w.anywhere and joined ~ public.word_pattern(w.word))
        or (not w.anywhere and (w.word = any (parts) or w.word = joined))
   );
 end;
@@ -352,7 +376,7 @@ begin
 end;
 $$;
 
-revoke all on function public.has_banned_word(text), public.is_reserved(text), public.profiles_clean(),
+revoke all on function public.word_pattern(text), public.has_banned_word(text), public.is_reserved(text), public.profiles_clean(),
   public.friend_lock(uuid, uuid), public.friend_limit(uuid, text[], int, int), public.friend_count(uuid),
   public.friend_ids(uuid), public.friend_face(uuid), public.make_friend_code(), public.code_of(uuid),
   public.friend_ask(uuid, uuid, text, text) from public, anon, authenticated;
