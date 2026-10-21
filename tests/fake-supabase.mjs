@@ -1,6 +1,6 @@
 // A fake Supabase for the tests, so they never reach the real one.
-// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql loaded into it, the same file
-// that goes into Supabase. Each request from the page runs as the student who sent it, so the tests check the real
+// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql and supabase/friends.sql loaded
+// into it, the same files that go into Supabase. Each request from the page runs as the student who sent it, so the tests check the real
 // rules. Only the sign-in part is pretend: codes are kept here so a test can read them, and nothing is emailed.
 // It answers only the requests the app makes. Anything else gets an error, so a new kind of request shows up in a test.
 import { PGlite } from '@electric-sql/pglite';
@@ -17,6 +17,7 @@ export async function fakeSupabase() {
   const db = new PGlite();
   await db.exec(fs.readFileSync(new URL('./supabase-standin.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/schema.sql', import.meta.url), 'utf8'));
+  await db.exec(fs.readFileSync(new URL('../supabase/friends.sql', import.meta.url), 'utf8'));
   const f = {url: URL_, key: KEY, db, codes: {}, refresh: {}, down: false, log: []};
   // One request at a time, the way one database connection works.
   let queue = Promise.resolve();
@@ -56,7 +57,8 @@ export async function fakeSupabase() {
   const ID = /^[a-z_]+$/;
   const pgError = e => {
     const code = e.code || '';
-    const status = code === '42501' ? 403 : code === '23505' ? 409 : code === '42883' || code === '42P01' ? 404 : code.startsWith('23') || code.startsWith('22') ? 400 : 500;
+    // P0001 is an error a function or check raises on purpose, such as banned_word. The real one answers 400.
+    const status = code === '42501' ? 403 : code === '23505' ? 409 : code === '42883' || code === '42P01' ? 404 : code.startsWith('23') || code.startsWith('22') || code === 'P0001' ? 400 : 500;
     return {status, body: {code: code === '42883' ? 'PGRST202' : code, message: e.message, details: null, hint: null}};
   };
 
@@ -67,8 +69,13 @@ export async function fakeSupabase() {
       // Arguments are passed by name, the way the real one does it. A function that takes none cannot be given any.
       const args = body && typeof body === 'object' ? Object.keys(body) : [];
       if (!args.every(a => ID.test(a))) return {status: 400, body: {message: 'bad argument'}};
-      const sql = 'select public.' + fn + '(' + args.map((a, i) => a + ' => $' + (i + 1)) .join(', ') + ')';
-      try { await f.as(who && who.sub, sql, args.map(a => body[a])); return {status: 204}; } catch (e) { return pgError(e); }
+      const sql = 'select public.' + fn + '(' + args.map((a, i) => a + ' => $' + (i + 1)) .join(', ') + ') as v';
+      // A function that returns nothing answers 204. One that returns something answers it as JSON, as the real one does.
+      try {
+        const r = await f.as(who && who.sub, sql, args.map(a => body[a]));
+        const v = r.rows[0] ? r.rows[0].v : null;
+        return v == null ? {status: 204} : {status: 200, body: v};
+      } catch (e) { return pgError(e); }
     }
     const table = path;
     if (!ID.test(table)) return {status: 404, body: {message: 'no such table'}};

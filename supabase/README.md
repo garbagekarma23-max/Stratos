@@ -88,6 +88,53 @@ Once the site is updated:
 5. On the second account, tap **Delete account** twice. In **Authentication**, then **Users**, only the first
    account should be left, and `progress` should have one row.
 
+## 9. Add friends
+
+Do this once the pull request with `supabase/friends.sql` is merged.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/friends.sql` and press **Run**. It should say Success. No rows returned. It needs the
+   tables from step 2, which are in already, so do not run `schema.sql` again.
+3. Open **Table Editor**. There should be seven new tables: `friend_codes`, `friend_requests`, `friendships`,
+   `blocks`, `friend_log`, `friend_seen` and `banned_words`, and `profiles` should have three new columns:
+   `username`, `findable` and `username_at`. None of the tables should be marked as unprotected.
+4. Open **Advisors**, then **Security Advisor**. Two kinds of notice are expected, and nothing else:
+   - "RLS enabled, no policy" on the seven new tables. That is on purpose: no student may reach them directly, only
+     the functions in the file.
+   - A note that signed-in users can run a `security definer` function, if Supabase shows that check. That is on
+     purpose too: each of those functions finds the caller with `auth.uid()` and only touches their rows.
+
+   Anything else is a problem. Send it to Claude.
+
+Running the file again later is safe. It keeps the data.
+
+To ban another word in usernames and call signs, open **Table Editor**, then `banned_words`, and insert a row: the word
+in lower case letters only, and `anywhere` ticked if it should be caught inside longer names too (leave it unticked
+for short words that are part of ordinary ones). It applies to new and changed names straight away.
+
+## 10. Check friends with two accounts
+
+Once the site is updated. Use your own email for the first account and the same address with +test before the @ for
+the second (written here as you@example.com and you+test@example.com). Supabase treats them as two accounts, and both
+emails arrive in your inbox.
+
+1. Sign in with you@example.com on your phone (A) and you+test@example.com on a computer (B). Give A the call sign
+   Ace and B the call sign Bee.
+2. On both, open Friends and pick a username, such as ace.test and bee.test.
+3. On B, tap Add a friend and search ACE in capitals. @ace.test shows, with "No mutual friends" and nothing else.
+   Tap Send request.
+4. On A, within about 10 seconds, Bee shows under Requests. Tap Accept. Both lists now show the other's call sign.
+5. In **Table Editor**, `friendships` has one row of two ids. Neither table shows an email.
+6. On A, open You, then Account, and turn off "Let people find me by username". On B, search ace: "No one found".
+   Turn it back on.
+7. On B, try a call sign with a banned word: it is refused with a message.
+8. On B, open Your friend code and tap Make a new code. On A, use the Code side of Add a friend with the old code:
+   "That code didn't work". Type six more made-up codes: the last says to wait 15 minutes.
+9. On A, tap Bee, then Block, then Tap again. B's list empties, with no message. On B, search ace: "No one found".
+   On A, Unblock Bee under Blocked.
+10. On B, open Account and tap Delete account twice. Bee leaves A's lists, and `friend_codes`, `friendships`,
+    `friend_requests` and `blocks` have no rows with B's id. The username bee.test can be picked again.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press
