@@ -11,7 +11,7 @@ let frBusy = false, frAgain = false, frAsked = 0, frOffline = false;
 let addHow = 'name', lastFound = [];
 function readFr() { try { const s = JSON.parse(localStorage.getItem(FR_KEY) || 'null'); return s && s.me ? s : null; } catch (e) { return null; } }
 function saveFr() { try { if (fr) localStorage.setItem(FR_KEY, JSON.stringify(fr)); } catch (e) {} }
-function frForget() { fr = null; lastFound = []; frOffline = false; try { localStorage.removeItem(FR_KEY); } catch (e) {} }
+function frForget() { fr = null; lastFound = []; frOffline = false; msForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
 /* The list, if it belongs to the account signed in now. */
 const frMine = () => signedIn() && fr && fr.uid === st.uid ? fr : null;
 /* Requests waiting for this student, for the dot on Home's friends button. */
@@ -40,23 +40,26 @@ async function frLoad() {
   if (!ACCOUNTS || !st.uid) return;
   if (frBusy) { frAgain = true; return; }
   frBusy = true; frAsked = Date.now();
-  const before = fr ? JSON.stringify(Object.assign({}, fr, {at: 0})) : '', wasOff = frOffline;
+  const now = () => (fr ? JSON.stringify(Object.assign({}, fr, {at: 0})) : '') + JSON.stringify(chs), before = now(), wasOff = frOffline;
   try {
     const d = await frCall('friends_state');
     fr = Object.assign(d, {uid: st.uid, at: Date.now()});
     frOffline = false;
     saveFr();
+    /* The chats come with the list. If they cannot be fetched, the friends list still shows. */
+    try { await msLoadList(); } catch (e) {}
   } catch (e) { frOffline = true; }
   frBusy = false;
-  if (before !== (fr ? JSON.stringify(Object.assign({}, fr, {at: 0})) : '') || wasOff !== frOffline) frRepaint();
+  if (before !== now() || wasOff !== frOffline) frRepaint();
   if (frAgain) { frAgain = false; frLoad(); }
 }
 setInterval(() => { if (pageIs('friends') && !document.hidden && navigator.onLine && st.uid) frLoad(); }, 10000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden && st.uid && navigator.onLine) frLoad(); });
 
-/* Redraw whatever shows friends: the Friends page (keeping what is typed in the username box), the account sheet's
-   username part, and the dot on Home and You. */
+/* Redraw whatever shows friends: the Friends page (keeping what is typed in the username box), a chat (which closes
+   if the friend is gone), the account sheet's username part, and the dot on Home and You. */
 function frRepaint() {
+  if (pageIs('chat') && frMine() && !frFind('friends', topPage().arg)) closePage();
   if (pageIs('friends')) {
     const i = $('.unameIn', pagesEl), v = i ? i.value : null, focused = i && document.activeElement === i;
     paintPage('same');
@@ -66,6 +69,7 @@ function frRepaint() {
   const af = $('#acctFr'); if (af) af.innerHTML = acctFrHtml();
   if (!pages.length && ui.tab === 'home') renderHome();
   else if (!pages.length && ui.tab === 'you') renderYou();
+  msWarnCheck();
 }
 
 /* ---------- the Friends page ---------- */
@@ -79,6 +83,7 @@ function realFriends() {
       '<div class="cta"><button class="primary" type="button" data-act="signin" data-title="Sign in">Sign in</button></div></section>';
   }
   if (Date.now() - frAsked > 3000) setTimeout(frLoad, 0);
+  setTimeout(msWarnCheck, 0);
   const d = frMine();
   if (!d) return '<p class="fine fr-wait">' + (frOffline ? 'No connection. Your friends will show once you are online.' : 'Loading your friends.') + '</p>';
   if (!d.me.username) return unameForm(false);
@@ -89,8 +94,15 @@ function realFriends() {
       '<div class="fr-row"><span class="avatar">' + frInitial(r) + '</span><span class="fr-who"><b>' + esc(frShown(r)) + '</b>' + (r.name && r.username ? '<span>@' + esc(r.username) + '</span>' : '') + '</span>' +
       '<span class="fr-acts"><button class="primary sm" type="button" data-act="fraccept" data-ref="' + r.ref + '">Accept</button><button class="ghost sm" type="button" data-act="frdecline" data-ref="' + r.ref + '">Decline</button></span></div>').join('') + '</div>';
   }
-  h += '<h3 class="fr-h">Your friends</h3>' + (d.friends.length ? '<div class="rows">' + d.friends.slice().sort((x, y) => frShown(x).localeCompare(frShown(y))).map(f =>
-      '<button class="fr-row" type="button" data-act="frfriend" data-ref="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + (f.name ? '@' + esc(f.username) + ', friends' : 'Friends') + ' since ' + dayText(f.since) + '</span></span>' + IC.right + '</button>').join('') + '</div>'
+  /* Each friend opens their chat. The line under the name says where the chat stands, and a dot shows unread messages
+     or a message request. */
+  h += '<h3 class="fr-h">Your friends</h3>' + (d.friends.length ? '<div class="rows">' + d.friends.slice().sort((x, y) => frShown(x).localeCompare(frShown(y))).map(f => {
+      const c = msChat(f.ref), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0);
+      const line = c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
+        : c.state === 'open' ? 'No messages yet' : (f.name ? '@' + f.username + ', friends' : 'Friends') + ' since ' + dayText(f.since);
+      return '<button class="fr-row' + (dot ? ' unread' : '') + '" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + esc(line) + '</span></span>' +
+        (dot ? '<i class="dot"></i><span class="sr">' + (c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : IC.right) + '</button>';
+    }).join('') + '</div>'
     : '<p class="fine fr-none">No friends yet. Find a friend by username, or show them your code.</p>');
   h += '<div class="rows fr-ways"><button class="row" type="button" data-act="fradd"><span class="t">Add a friend</span><span class="val"></span>' + IC.right + '</button>' +
     '<button class="row" type="button" data-act="frcode"><span class="t">Your friend code</span><span class="val">' + codeText(d.me.code) + '</span>' + IC.right + '</button></div>';
@@ -318,7 +330,7 @@ ACT.frfriend = b => {
     '<p class="fine">Challenges and races with real friends come in a later update. ' + n + ' sees only your call sign and username.</p>' +
     '<div class="cta"><button class="ghost" type="button" data-act="frremove" data-ref="' + f.ref + '" data-n="' + n + '">Remove friend</button></div>' +
     '<button class="textbtn danger" type="button" data-act="frblock" data-ref="' + f.ref + '" data-n="' + n + '">Block</button>' +
-    '<p class="fine">Removing or blocking doesn’t tell them. Blocking also stops them sending you another request.</p>');
+    '<p class="fine">Removing or blocking doesn’t tell them. Either one deletes your chat for both of you. Blocking also stops them sending you another request.</p>');
 };
 /* Remove and Block from a friend's sheet take two taps, like Delete account. */
 function armed(b, text, back) {

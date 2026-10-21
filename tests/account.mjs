@@ -286,9 +286,10 @@ check((await C.p.locator('[data-act="delacct"]').textContent()).startsWith('Tap 
 await C.p.click('[data-act="delacct"]');
 check(await until(async () => !(await row('a@example.com'))), 'the second tap deletes the account and its progress', R);
 const calls = f.log.slice(logFrom).filter(l => l.includes('/rpc/'));
-// The account sheet also loads the friends list (friends_state, which takes nothing either).
+// The account sheet also loads the friends list and the chats with it (friends_state and chats_state, which take
+// nothing either).
 const dels = calls.filter(l => l.includes('/rpc/delete_account'));
-check(dels.length === 1 && dels[0] === 'POST /rest/v1/rpc/delete_account {}' && calls.every(l => l === 'POST /rest/v1/rpc/delete_account {}' || l === 'POST /rest/v1/rpc/friends_state {}'),
+check(dels.length === 1 && dels[0] === 'POST /rest/v1/rpc/delete_account {}' && calls.every(l => ['POST /rest/v1/rpc/delete_account {}', 'POST /rest/v1/rpc/friends_state {}', 'POST /rest/v1/rpc/chats_state {}'].includes(l)),
   'the app calls delete_account once, with nothing in it: ' + calls.join(' '), R);
 const users = (await f.admin('select email from auth.users order by email')).rows.map(r => r.email);
 check(users.join() === 'b@example.com', 'only the student who asked is deleted: ' + users.join(', '), R);

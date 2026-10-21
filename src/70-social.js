@@ -1,6 +1,6 @@
 /* ---------- friends and messages ----------
    The four friends are samples and their side of every exchange is pretend.
-   A message is a card or a preset reply. There is no free typing. */
+   A message to a sample friend is a card or a preset reply. Real friends type messages (77-messages.js). */
 function findMsg(f, id) { return saved.th[f].find(m => m.id === +id) || null; }
 function refreshThread(f) { if (pageIs('thread', f)) paintPage('same'); }
 /* Something arrived from a friend. Count it as unread unless their thread is open. */
@@ -122,7 +122,7 @@ PAGE.friends = () => {
       return '<button class="thr' + (un ? ' unread' : '') + '" type="button" data-act="page" data-page="thread" data-f="' + f.id + '"><span class="avatar">' + f.name.charAt(0) + '</span><span><b>' + f.name + '</b><span class="prev">' + esc(preview(f)) + '</span></span>' + (un ? '<i class="dot"></i><span class="sr">' + un + ' new</span>' : '<i></i>') + '</button>';
     }).join('') + (ACCOUNTS ? '' : '<button class="row" type="button" disabled><span class="t">Add a friend</span><span class="val">Needs accounts</span>' + IC.right + '</button>') + '</div>';
   }
-  return {title: 'Friends', html: seg + body + '<p class="notice">' + (ACCOUNTS ? 'These four are sample friends, and their scores are made up. Messages are cards and preset replies. There is no free typing.'
+  return {title: 'Friends', html: seg + body + '<p class="notice">' + (ACCOUNTS ? 'These four are sample friends, and their scores are made up. Chats with sample friends use cards and preset replies.'
     : 'These four are sample friends, and their scores are made up. Real friends need accounts, which this test does not have. Messages are cards and preset replies. There is no free typing.') + '</p>'};
 };
 ACT.ftab = b => { ui.ftab = b.dataset.v; paintPage('same'); const again = $('.seg3 [data-v="' + ui.ftab + '"]', pagesEl); if (again) again.focus({preventScroll: true}); };
