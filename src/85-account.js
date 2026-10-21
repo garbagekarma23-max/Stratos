@@ -334,6 +334,7 @@ ACT.sendcode = async b => {
 function codeSheet() {
   openSheet('Check your email',
     '<p class="sub">We sent a 6-digit code to <span class="em">' + esc(codeFor) + '</span>. Type it here.</p>' +
+    '<p class="fine">It can take a minute or two to arrive. If it hasn’t come, check your junk or spam folder.</p>' +
     '<label class="field"><span class="sr">6-digit code</span><input id="codeIn" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="6" spellcheck="false" placeholder="6-digit code"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="primary" type="button" data-act="verifycode">Sign in</button>' +
