@@ -76,7 +76,7 @@ function paintPage(how) {
   const d = PAGE[t.name](t.arg), el = document.createElement('div');
   el.className = 'page';
   if (how !== 'push') el.style.animation = 'none';
-  el.innerHTML = '<header class="p-bar"><button class="icon-btn" type="button" data-act="back" aria-label="Back">' + IC.left + '</button>' + (d.avatar || '') + '<h2>' + esc(d.title) + '</h2></header>' +
+  el.innerHTML = '<header class="p-bar"><button class="icon-btn" type="button" data-act="back" aria-label="Back">' + IC.left + '</button>' + (d.avatar || '') + '<h2>' + esc(d.title) + '</h2>' + (d.right || '') + '</header>' +
     '<div class="p-body' + (d.cls ? ' ' + d.cls : '') + '">' + d.html + '</div>' + (d.foot || '');
   pagesEl.appendChild(el);
   const body = $('.p-body', el);

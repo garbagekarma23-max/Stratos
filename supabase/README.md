@@ -135,6 +135,81 @@ emails arrive in your inbox.
 10. On B, open Account and tap Delete account twice. Bee leaves A's lists, and `friend_codes`, `friendships`,
     `friend_requests` and `blocks` have no rows with B's id. The username bee.test can be picked again.
 
+## 11. Add messages
+
+Do this once the pull request with `supabase/messages.sql` is merged. Until then the app still works: Friends shows
+the list, and a chat only says it is loading.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/messages.sql` and press **Run**. It should say Success. No rows returned. It needs the
+   tables from steps 2 and 9, which are in already, so do not run the other files again.
+3. Open **Table Editor**. In the `public` schema there should be three new tables, `chats`, `messages` and
+   `message_log`, none marked as unprotected, and `banned_words` should have a new column, `in_messages`.
+4. In the schema list at the top left of Table Editor, pick `moderation`. It should have four tables, `reports`,
+   `bans`, `notices` and `actions`.
+5. Open **Settings**, then **API** (or **Data API**). Under **Exposed schemas**, leave it as it is: `public` and
+   `graphql_public`. Never add `moderation`. That is what keeps reports away from students.
+6. Open **Advisors**, then **Security Advisor**. Expected, and nothing else: "RLS enabled, no policy" on the three new
+   tables (only the functions in the file reach them), and the note about `security definer` functions from step 9.
+
+Running the file again later is safe. It keeps the data.
+
+Messages refuse fewer words than usernames: slurs and explicit sexual words only. To refuse another word in messages,
+open **Table Editor**, then `banned_words`, find the word (or add it, as in step 9) and tick `in_messages`.
+
+## 12. Turn on the daily clean-up
+
+Messages are deleted after 90 days and reports after 12 months. The app never shows anything older, but the rows only
+leave the database when the clean-up runs.
+
+1. Open **Integrations**, then **Cron**, and turn it on (it installs the `pg_cron` extension).
+2. Open **SQL Editor** and run `supabase/messages.sql` once more. With Cron on, it adds a job called
+   `stratos-cleanup` that runs every day at 17:17 UTC (early morning in Sydney).
+3. In **Integrations**, then **Cron**, the job `stratos-cleanup` should be listed. To run it once by hand, run
+   `select moderation.cleanup();` in **SQL Editor**. It answers with how many old messages it deleted.
+
+## 13. Check messages with two accounts
+
+Once the site is updated. Use you@example.com and you+test@example.com, already friends from step 10 (make them
+friends again if step 10 ended with a deleted account).
+
+1. On A, open Friends and tap B. Tap **Send message request**. It says "Message request sent."
+2. On B, B's row says "Wants to message you", with a dot. Open it and tap **Accept**.
+3. Send messages both ways. Each arrives within about 5 seconds while the chat is open.
+4. On A, send `call me on 0412 345 678`. It stays in the box with "Messages can’t have phone numbers." Then send
+   `add me on snap`: "Keep chats on Stratos."
+5. On A, send `I want to die`. A sees a line about Kids Helpline. B sees "might be going through something".
+6. On B, tap that message, then **Report message**, then a reason. In **SQL Editor**, run
+   `select * from moderation.open_reports;`. The report is there, with the conversation written out.
+7. Try each action in step 14 on A: warn (A sees the warning next time Friends opens), ban for 1 day (A's box is
+   replaced with "You can’t send messages until"), then unban.
+8. In **Table Editor**, `messages` has the messages and `chats` one row. Neither has an email.
+9. On B, open the chat, tap the button at the top right, then **Block** twice. The chat closes on both phones, and
+   `chats` and `messages` are empty. The report stays in `moderation.reports`.
+
+## 14. Acting on reports
+
+Everything here is done in **SQL Editor**. Each command answers in words, saying what it did. A report's id is the
+long code in the `id` column of `open_reports`. Copy it and paste it between the quote marks.
+
+| To | Run | What happens |
+| --- | --- | --- |
+| See new reports | `select * from moderation.open_reports;` | One row per new report, oldest first: when, the reason, who reported, who was reported, how many reports and warnings that student has had, and the conversation. The reported message starts with `>>`. |
+| Mark one reviewed | `select moderation.reviewed('report id');` | The report leaves the list. Nothing else changes, and nobody is told. |
+| Warn | `select moderation.warn('report id');` | The student sees "A message you sent was reported", with the rules for messages, the next time they open Friends. Once only. They are not told who reported them. |
+| Ban from messaging | `select moderation.ban('report id', 7);` | For 7 days (any number of days). The student can still read chats and use friends, but cannot send messages or message requests, or accept one. Their box says until when, with support@stratosstudy.com. |
+| Ban for good | `select moderation.ban('report id', null);` | Until you lift it. The box says "Messaging is turned off for your account." |
+| Ban without a report | `select moderation.ban_user('username', 7);` | The same, found by username (with or without the @). |
+| Lift a ban | `select moderation.unban('username');` | They can send messages again straight away. |
+| See refused messages | `select * from moderation.refusals;` | How many messages each student had refused in the last 7 days, and why (phone, link, word). No text is kept. Many refusals for phone numbers or other apps is worth a look. |
+| See what you have done | `select * from moderation.history;` | Every review, warning, ban and unban, newest first. Add `where username = '@name'` before the `;` to see one student. |
+
+Reports can also be browsed in **Table Editor**: pick the `moderation` schema, then `reports`. Change nothing there
+by hand: the commands above also record what you did and tell the student.
+
+Nothing tells you when a report arrives yet. Until the email alert comes (the next pull request), check
+`open_reports` every day while students are messaging.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press

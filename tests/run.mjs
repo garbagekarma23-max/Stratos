@@ -16,9 +16,11 @@
 // Every other test skips the course steps.
 // friends-db.mjs checks the friends rules in supabase/friends.sql with no browser, and friends.mjs runs real friends
 // (usernames, search, codes, requests, block) on several devices against the fake Supabase.
+// messages-db.mjs checks the rules and the filter in supabase/messages.sql with no browser, and messages.mjs runs
+// messages between real friends (requests, sending, refused messages, report, warnings and bans) on two devices.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['welcome.mjs'], ['first-open.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['messages.mjs'], ['welcome.mjs'], ['first-open.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});
