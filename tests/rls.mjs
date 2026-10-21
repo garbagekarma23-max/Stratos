@@ -1,4 +1,4 @@
-// Checks the rules in supabase/schema.sql with no browser. The file is loaded into PGlite (Postgres running inside
+// Checks the rules in supabase/schema.sql with no browser (friends.sql has its own test, friends-db.mjs). The file is loaded into PGlite (Postgres running inside
 // Node) with a small stand-in for Supabase's sign-in tables, then each request runs as one student, as someone not
 // signed in, or as another student, and the test checks what the database lets through.
 import fs from 'fs';
@@ -13,7 +13,9 @@ const rows = async (uid, sql, params) => (await f.as(uid, sql, params)).rows;
 
 // Row-level security is on for every table the app can reach.
 const tables = (await f.admin("select c.relname, c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r'")).rows;
-check(tables.length === 2 && tables.every(t => t.relrowsecurity), 'row-level security is on for every table: ' + tables.map(t => t.relname).join(', '), R);
+// schema.sql has profiles and progress. friends.sql (checked in friends-db.mjs) adds the friends tables.
+const ALL = ['banned_words', 'blocks', 'friend_codes', 'friend_log', 'friend_requests', 'friend_seen', 'friendships', 'profiles', 'progress'];
+check(tables.map(t => t.relname).sort().join() === ALL.join() && tables.every(t => t.relrowsecurity), 'row-level security is on for every table: ' + tables.map(t => t.relname).sort().join(', '), R);
 
 // Someone not signed in gets nothing.
 check(await fails(null, 'select * from public.progress') === '42501', 'not signed in: cannot read progress', R);
@@ -49,6 +51,11 @@ check(await fails(a.id, 'update public.profiles set id = $1 where id = $2', [c.i
 await f.as(a.id, "update public.profiles set call_sign = 'Hacked' where id = $1", [b.id]);
 check((await f.admin('select call_sign from public.profiles where id = $1', [b.id])).rows[0].call_sign === 'Bee', 'a student cannot change another student\'s call sign', R);
 check(await fails(a.id, "update public.progress set updated_at = '2000-01-01' where user_id = $1", [a.id]) === '42501', 'updated_at is set by the database, not the student', R);
+
+// The username and the search switch are set only through set_username and set_findable (friends.sql).
+check(await fails(a.id, "update public.profiles set username = 'ace' where id = $1", [a.id]) === '42501', 'a student cannot write their username directly', R);
+check(await fails(a.id, 'update public.profiles set findable = false where id = $1', [a.id]) === '42501', 'or their search switch', R);
+check(await fails(a.id, 'update public.profiles set username_at = now() where id = $1', [a.id]) === '42501', 'or when their username was last set', R);
 
 // Deleting rows: nobody can.
 check(await fails(a.id, 'delete from public.progress where user_id = $1', [a.id]) === '42501', 'a student cannot delete progress rows directly', R);

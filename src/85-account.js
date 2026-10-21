@@ -116,11 +116,15 @@ async function adopt(user, remote, how, msg) {
   if (remote) applyPart(how === 'use' ? remote.data : merge(syncPart(saved), remote.data), false);
   st = {uid: user.id, email: user.email, rev: remote ? remote.rev : 0, hash: remote ? canon(syncPart(remote.data)) : ''};
   saveSync();
+  nameRefused = false;
   await syncName(true);
   closeSheet();
-  if (saved.name) toast(msg);
+  if (nameRefused) callSign(msg, BANNED_CS);
+  else if (saved.name) toast(msg);
   else callSign(msg);
+  nameRefused = false;
   await push();
+  frLoad();
 }
 
 /* Fetch the account's copy and put it together with this device's. With here set, the subject and chapter open on
@@ -139,6 +143,7 @@ async function pull(here) {
   try { await fetchAndMerge(here); await syncName(false); st.last = Date.now(); saveSync(); } catch (e) {} finally { pulling = false; }
   paintAcct();
   push();
+  frLoad();
 }
 
 /* Send this device's copy to the account. rev is checked, so if another device saved since this one last looked,
@@ -180,22 +185,45 @@ async function push() {
   }
 }
 
-/* The call sign, in profiles. The account's wins, unless this device changed it since they were last in step. */
+/* The call sign, in profiles. The account's wins, unless this device changed it since they were last in step.
+   The account refuses a call sign with a banned word (supabase/friends.sql). One picked while signed out, which
+   had no check, is then put back to the account's and the student is asked for another. */
+let nameRefused = false;
+const isBanned = e => !!e && /banned_word/.test(e.message || '');
+function refuseName(keep) {
+  nameRefused = true;
+  save({name: keep}); st.name = keep;
+  /* adopt() asks itself, just after signing in. Any other time, ask now if nothing else is open. */
+  if (!firstFor && sheet.hidden) callSign('', BANNED_CS);
+}
 async function syncName(first) {
   const mine = saved.name || '';
   const r = await sb.from('profiles').select('call_sign').eq('id', st.uid);
   if (r.error) throw r.error;
   if (!r.data.length) {
-    const w = await sb.from('profiles').insert({id: st.uid, call_sign: mine || null});
+    let w = await sb.from('profiles').insert({id: st.uid, call_sign: mine || null});
+    if (isBanned(w.error)) { refuseName(''); w = await sb.from('profiles').insert({id: st.uid, call_sign: null}); }
     if (w.error && w.error.code !== '23505') throw w.error;
-    st.name = mine; return;
+    st.name = saved.name || ''; return;
   }
   const theirs = r.data[0].call_sign || '';
   if (theirs === mine) { st.name = mine; return; }
   if (first ? theirs : mine === (st.name || '')) { save({name: theirs}); st.name = theirs; return; }
   const w = await sb.from('profiles').update({call_sign: mine || null}).eq('id', st.uid);
+  if (isBanned(w.error)) { refuseName(theirs); return; }
   if (w.error) throw w.error;
   st.name = mine;
+}
+/* Before a signed-in student's new call sign is saved, the account checks it. False only if it has a banned word:
+   with no connection it is saved on the device and checked when it syncs. */
+async function nameAllowed(name) {
+  if (!name || !st.uid || !acctUser || !navigator.onLine) return true;
+  try {
+    await loadSupabase();
+    const r = await sb.from('profiles').update({call_sign: name}).eq('id', st.uid);
+    if (isBanned(r.error)) return false;
+  } catch (e) {}
+  return true;
 }
 
 /* Put a synced part into this device's save, then tidy it the way a save from storage is tidied. */
@@ -225,6 +253,7 @@ function acctForget() {
   leaving = true;
   clearTimeout(pushTimer);
   acctUser = null; st = {}; saveSync();
+  frForget();
   const end = () => { try { localStorage.removeItem(AUTH_KEY); } catch (e) {} leaving = false; };
   if (sb) sb.auth.signOut({scope: 'local'}).then(end, end); else end();
 }
@@ -352,12 +381,13 @@ ACT.account = () => {
   openSheet('Account',
     '<p class="sub">Signed in as <span class="em">' + esc(st.email || (acctUser && acctUser.email) || '') + '</span>.</p>' +
     '<p class="statusline" id="acctLine">' + acctLine() + '</p>' +
-    '<p class="fine">Progress, records and your call sign are saved to your account. Appearance, sound and the place you picked stay on each device.</p>' +
+    '<div id="acctFr">' + acctFrHtml() + '</div>' +
+    '<p class="fine">Progress, records and your call sign are saved to your account. Friends see only your call sign and username. Appearance, sound and the place you picked stay on each device.</p>' +
     '<div class="cta"><button class="ghost" type="button" data-act="signout">Sign out</button></div>' +
     '<p class="fine">Signing out erases this device’s copy. Your account keeps it.</p>' +
     '<button class="textbtn danger" type="button" data-act="delacct">Delete account</button>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>');
-  if (navigator.onLine) pull(true);
+  if (navigator.onLine) { pull(true); frLoad(); }
 };
 ACT.signout = async b => {
   b.disabled = true;

@@ -14,9 +14,11 @@
 // top bar (Sign in while signed out, and the store). Every other test skips the welcome screen and the offer.
 // first-open.mjs runs a device's first open: the intro, where you study, the course, the welcome screen, then Home.
 // Every other test skips the course steps.
+// friends-db.mjs checks the friends rules in supabase/friends.sql with no browser, and friends.mjs runs real friends
+// (usernames, search, codes, requests, block) on several devices against the fake Supabase.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['welcome.mjs'], ['first-open.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['welcome.mjs'], ['first-open.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});
