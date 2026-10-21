@@ -126,6 +126,7 @@ check(await until(async () => { const r = await row('a@example.com'); return r &
   await d.p.click('[data-act="sendcode"]');
   await d.p.waitForSelector('#codeIn');
   check((await d.p.locator('#sheetBody .sub').textContent()).includes('We sent a 6-digit code to a@example.com. Type it here.'), 'the sheet after sending asks for the 6-digit code', R);
+  check((await d.p.locator('#sheetBody .fine').first().textContent()) === 'It can take a minute or two to arrive. If it hasn’t come, check your junk or spam folder.', 'and says the code can take a minute or two, and to check junk or spam', R);
   const box = await d.p.evaluate(() => { const i = document.querySelector('#codeIn'); return {focus: document.activeElement === i, mode: i.inputMode, pattern: i.pattern, auto: i.autocomplete, max: i.maxLength}; });
   check(box.focus && box.mode === 'numeric' && box.pattern === '[0-9]*' && box.auto === 'one-time-code' && box.max === 6, 'the code box takes focus, with a number keypad on phones and room for 6 digits', R);
   check((await d.p.locator('[data-act="verifycode"]').getAttribute('class')) === 'primary', 'Sign in is the main button', R);

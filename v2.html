@@ -801,16 +801,16 @@ math-span:not(:defined){visibility:hidden}
 
 <aside class="about">
   <p class="a-word">Stratos</p>
-  <p>Second test build.</p>
+  <p>Test build.</p>
   <ul>
-    <li>Two topics are loaded. Year 12 Economics, The Global Economy, has 4 chapters, 26 points and 52 questions. Year 11 Maths, Equations, has 2 chapters and 7 points. Pick one from the subject button on Home.</li>
-    <li>Maths questions are made fresh each time, with new numbers. Write the working with the keypad, one line at a time.</li>
-    <li>The study notes are a first draft. They still need checking against the NESA syllabus.</li>
-    <li>Learn teaches a point, then checks it. Practice asks about what you have learned, weak points first.</li>
-    <li>The friends are samples. Messages are cards and preset replies.</li>
+    <li>Three courses: NSW Year 12 Economics, NSW Year 11 Maths, and Economics, International A Level (Edexcel). Pick one from the course button on Home.</li>
+    <li>The Edexcel course covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.</li>
+    <li>Maths questions are made fresh each time. Write the working with the keypad.</li>
+    <li>The NSW study notes are a first draft, still to be checked against the NESA syllabus.</li>
+    <li>Real friends need an account. Add them by username or by code. Challenges and races work in NSW Economics and Maths. The sample friends are pretend.</li>
     <li>The store shows example prices. Buying is switched off.</li>
     <li>Press A to D to answer and Enter for the next slide. In Practice, H gives a clue and S skips.</li>
-    <li>Progress is saved on this device only.</li>
+    <li>Progress is saved on this device. With an account, which is optional, it syncs across your devices.</li>
   </ul>
 </aside>
 
@@ -7742,6 +7742,7 @@ ACT.sendcode = async b => {
 function codeSheet() {
   openSheet('Check your email',
     '<p class="sub">We sent a 6-digit code to <span class="em">' + esc(codeFor) + '</span>. Type it here.</p>' +
+    '<p class="fine">It can take a minute or two to arrive. If it hasn’t come, check your junk or spam folder.</p>' +
     '<label class="field"><span class="sr">6-digit code</span><input id="codeIn" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="6" spellcheck="false" placeholder="6-digit code"></label>' +
     '<p class="fine err" id="acctErr" role="alert" hidden></p>' +
     '<div class="cta"><button class="primary" type="button" data-act="verifycode">Sign in</button>' +

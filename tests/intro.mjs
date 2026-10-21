@@ -70,7 +70,8 @@ const look = p => p.evaluate(() => {
   const end = await since(p);
   check(end >= 1450 && end <= 1900, 'it ends after about 1.5 seconds and a quick fade (' + Math.round(end) + ' ms)', R);
   check(await p.locator('.hero .primary').isVisible(), 'then Home is there', R);
-  await p.click('.hero .primary'); await wait(150);
+  await p.click('.hero .primary');
+  await p.waitForSelector('#v-learn.on', {timeout: 3000}).catch(() => {});
   check(await p.locator('#v-learn.on').count() === 1, 'and Home works: its button opens Learn', R);
   check(errs.length === 0, 'no script errors: ' + errs.join(' | '), R);
   await b.close();
@@ -129,7 +130,7 @@ for (const how of ['tap', 'click', 'key']) {
   check(await p.locator('#v-home.on').count() === 1 && await p.locator('#sheet').isHidden() && await p.locator('#pages .page').count() === 0,
     'the ' + how + ' that skipped it did not press the button underneath', R);
   if (how === 'tap') await p.touchscreen.tap(x, y); else await p.mouse.click(x, y);
-  await wait(150);
+  await p.waitForSelector('#v-learn.on', {timeout: 3000}).catch(() => {});
   check(await p.locator('#v-learn.on').count() === 1, 'after a ' + how + ' skip, Home works', R);
   check(errs.length === 0, 'no script errors: ' + errs.join(' | '), R);
   await b.close();
