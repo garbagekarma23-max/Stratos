@@ -19,6 +19,7 @@ const IC = {
   right: icon('<path d="M9 6l6 6-6 6"/>'),
   left: icon('<path d="M15 6l-6 6 6 6"/>'),
   lock: icon('<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
+  more: icon('<path d="M5 12h.01M12 12h.01M19 12h.01" stroke-width="3"/>'),
   send: icon('<path d="M21 3 10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5-7.5-4z"/>'),
   bag: icon('<path d="M5.5 8h13l-1 12.5h-11z"/><path d="M9 10.5V7a3 3 0 0 1 6 0v3.5"/>'),
   book: icon('<path d="M5 19.5V5a2 2 0 0 1 2-2h12v14H7a2 2 0 0 0-2 2.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-4"/><path d="M9 7.5h6"/>'),

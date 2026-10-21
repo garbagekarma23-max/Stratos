@@ -88,7 +88,7 @@ await friendsPage(A.p);
 check((await text(A.p, '.fr-out .h2')) === 'Friends need an account', 'signed out, Friends says friends need an account', R);
 check((await text(A.p, '.fr-out .fine')) === 'Find friends by username, or add them with a code you share in person. Friends see only your call sign and username, never your email or progress.', 'and what friends see', R);
 check((await text(A.p, '.p-body .fr-h')) === 'Sample friends' && await A.p.locator('.p-body .thr').count() === 4, 'the four sample friends stay, under their own heading', R);
-check((await text(A.p, '.notice')) === 'These four are sample friends, and their scores are made up. Messages are cards and preset replies. There is no free typing.', 'with the notice saying they are samples', R);
+check((await text(A.p, '.notice')) === 'These four are sample friends, and their scores are made up. Chats with sample friends use cards and preset replies.', 'with the notice saying they are samples', R);
 await A.p.click('[data-act="ftab"][data-v="week"]'); await A.p.waitForTimeout(80);
 check((await text(A.p, '.fr-later')) === 'Sample friends only. Real friends join this table in a later update.', 'This week says it is sample friends only for now', R);
 await A.p.click('[data-act="ftab"][data-v="msgs"]'); await A.p.waitForTimeout(80);
@@ -178,8 +178,8 @@ check(await A.p.locator('.top [data-page="friends"] .dot').count() === 1 && (awa
 await A.p.click('[data-act="page"][data-page="friends"]'); await A.p.waitForTimeout(150);
 await A.p.click('[data-act="fraccept"]');
 check(await toastSays(A.p, 'You’re now friends with Bee.'), 'Accept says they are friends now', R);
-check(await until(async () => (await text(A.p, '[data-act="frfriend"] .fr-who b')) === 'Bee' && (await text(A.p, '[data-act="frfriend"] .fr-who span')).startsWith('@bee.test, friends since ')), 'the friends list shows the call sign, the username and since when', R);
-check(await until(async () => (await text(B.p, '[data-act="frfriend"] .fr-who b')) === 'Ace', 12000), 'and the other side shows them too', R);
+check(await until(async () => (await text(A.p, '[data-page="chat"] .fr-who b')) === 'Bee' && (await text(A.p, '[data-page="chat"] .fr-who span')).startsWith('@bee.test, friends since ')), 'the friends list shows the call sign, the username and since when', R);
+check(await until(async () => (await text(B.p, '[data-page="chat"] .fr-who b')) === 'Ace', 12000), 'and the other side shows them too', R);
 const bId = await uid('bee@example.com');
 check(bodiesA.length > 0 && bodiesA.every(t => !t.includes(bId) && !t.includes('bee@example.com')), 'nothing the page received holds the friend\'s account id or email', R);
 await addSheet(B.p);
@@ -258,14 +258,14 @@ await search(A.p, 'bee');
 check((await errText(A.p)) === 'No connection. Try again when you are online.', 'with no connection, search says so', R);
 await A.p.click('#sheetClose');
 check(await until(async () => (await text(A.p, '.fr-off')).startsWith('Offline. This list is from '), 12000), 'and the list says it is from earlier', R);
-check(await A.p.locator('[data-act="frfriend"]').count() === 1, 'the friends from last time still show', R);
+check(await A.p.locator('[data-page="chat"]').count() === 1, 'the friends from last time still show', R);
 f.down = false;
 check(await until(async () => await A.p.locator('.fr-off').count() === 0, 12000), 'back online, the note goes', R);
 
 // ---------- at 360 px, light and dark ----------
 await addSheet(A.p, 'code');
 await sendCode(A.p, (await codeOn(C.p)));
-check(await until(async () => await A.p.locator('[data-act="frcancel"]').count() === 1 && await A.p.locator('[data-act="frfriend"]').count() === 1), 'the page now has a friend and a request sent', R);
+check(await until(async () => await A.p.locator('[data-act="frcancel"]').count() === 1 && await A.p.locator('[data-page="chat"]').count() === 1), 'the page now has a friend and a request sent', R);
 await both(A.p, 'friends-list');
 for (const scheme of ['light', 'dark']) {
   await A.p.emulateMedia({colorScheme: scheme});
@@ -281,14 +281,16 @@ await A.p.setViewportSize({width: 390, height: 844});
 
 // ---------- remove and block from a friend's sheet ----------
 await friendsPage(B.p);
-await B.p.click('[data-act="frfriend"]'); await B.p.waitForTimeout(100);
+// A friend's row opens their chat. The button at the top right of the chat opens the friend's sheet.
+await B.p.click('.p-body [data-page="chat"]'); await B.p.waitForTimeout(300);
+await B.p.click('#pages .p-bar [data-act="frfriend"]'); await B.p.waitForTimeout(100);
 check((await text(B.p, '#sheetTitle')) === 'Ace' && (await text(B.p, '#sheetBody .sub')).startsWith('@ace.test. Friends since '), 'a friend\'s sheet shows their call sign, username and since when', R);
 await B.p.click('[data-act="frremove"]');
 check((await text(B.p, '[data-act="frremove"]')) === 'Tap again to remove Ace', 'Remove friend asks for a second tap', R);
 await B.p.click('[data-act="frremove"]');
 check(await toastSays(B.p, 'Ace is no longer your friend.'), 'the second tap removes them', R);
-check(await until(async () => await B.p.locator('[data-act="frfriend"]').count() === 0), 'and the list is empty', R);
-check(await until(async () => await A.p.locator('[data-act="frfriend"]').count() === 0, 12000), 'on both sides', R);
+check(await until(async () => await B.p.locator('[data-page="chat"]').count() === 0), 'and the list is empty', R);
+check(await until(async () => await A.p.locator('[data-page="chat"]').count() === 0, 12000), 'on both sides', R);
 
 // ---------- a call sign picked while signed out, with a banned word ----------
 const E = await device({seed: {name: 'Mr' + word, ans: {c1p1a: {ok: true, n: 1, t: Date.now()}}}});
