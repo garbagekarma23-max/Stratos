@@ -222,10 +222,13 @@ messages, usernames or anything else about a student.
 
 - A "Hurting themselves or others" report is urgent: the subject starts with URGENT, and it always sends.
 - Other reports send at most one email every 5 minutes, across all students, because Resend's 100 emails a day are
-  shared with sign-in codes. A report that sends no email is still in `open_reports`, and the next email counts it.
+  shared with sign-in codes. A report held back by that limit is still in `open_reports`, and the next email counts
+  it. If no other email comes, a catch-up every 15 minutes sends one email about the reports held back, inside the
+  same limit.
 - If the email fails for any reason, the report is still saved.
 
 The code is `supabase/report-email.sql`. The Resend key and your address are secrets in Supabase, never in the code.
+Do this once the pull request with that file is merged.
 
 ### A Resend key that can only send
 
@@ -254,15 +257,19 @@ running.
    the email. The file below tries to turn it on too.
 2. Open **SQL Editor**, paste the whole of `supabase/report-email.sql` and press **Run**. It should say Success. No
    rows returned. It needs the tables from steps 2, 9 and 11, which are in already.
-3. In **Table Editor**, the `moderation` schema has a new table, `alerts`: one row per report, saying whether an
-   email went. It has nothing about a student.
-4. If **Security Advisor** lists `alerts` as "RLS enabled, no policy", that is on purpose, as in step 11.
+3. In **Table Editor**, the `moderation` schema has a new table, `alerts`: one row per email tried, saying whether it
+   went. It has nothing about a student.
+4. In **Integrations**, then **Cron**, there is a new job, `stratos-report-catchup`, every 15 minutes. Cron is on
+   from step 12. If the job is missing, turn Cron on and run the file again. To run the catch-up once by hand, run
+   `select moderation.email_catchup();`. It answers what it did.
+5. If **Security Advisor** lists `alerts` as "RLS enabled, no policy", that is on purpose, as in step 11.
 
 Running the file again later is safe. It keeps the data.
 
 To see each report's email, newest first, run `select * from moderation.alert_status;`. `what_happened` says Resend
 accepted it, Resend refused it (with Resend's reason, such as a wrong key), it was not sent because another email went
-in the 5 minutes before, or what is missing (a Vault secret, or pg_net). Resend's answers are kept for 6 hours.
+in the 5 minutes before, or what is missing (a Vault secret, or pg_net). A catch-up email shows as Catch-up. Resend's
+answers are kept for 6 hours.
 
 ### Check it with two accounts
 
@@ -275,13 +282,16 @@ Use A and B from step 13, with the chat open and about eight messages each way. 
    shows both reports.
 3. On B, still within the 5 minutes, report one of A's messages as **Hurting themselves or others**. An email arrives
    with the subject "URGENT: Stratos: new report (Hurting themselves or others)" and "Open reports: 3".
-4. Wait until 5 minutes have passed since step 1. On A, report one of B's messages as **Sexual or rude**. An email
-   arrives with "Open reports: 4".
-5. Check that a failed email cannot stop a report. In Vault, edit `report_email_to` to `not-an-email`. On B, report
+4. Within 15 minutes of step 2, with no other report, the catch-up sends one more email: "Stratos: new report
+   (Spam)" and "Open reports: 3". That is the step 2 report, which no email had counted. To see it sooner, wait
+   until 5 minutes have passed since step 1 and run `select moderation.email_catchup();` in **SQL Editor**: it
+   answers "Sent one email about 1 report."
+5. Run `select moderation.email_catchup();` again. It answers "No reports waiting for an email."
+6. Check that a failed email cannot stop a report. In Vault, edit `report_email_to` to `not-an-email`. On B, report
    one of A's messages as **Hurting themselves or others** (urgent, so the 5 minutes do not matter). B still sees
    "Thanks for reporting". The report is in `open_reports`, no email arrives, and `alert_status` says Resend refused
    it. Set `report_email_to` back to your address.
-6. Mark the test reports reviewed with `moderation.reviewed`, as in step 14.
+7. Mark the test reports reviewed with `moderation.reviewed`, as in step 14.
 
 If no email arrives in step 1, `alert_status` says why.
 

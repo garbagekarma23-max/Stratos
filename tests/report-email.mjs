@@ -44,14 +44,14 @@ async function pair(nameA, nameB, says) {
 // A reports the next of B's messages, and the report answer comes back.
 const report = (p, reason) => call(p.a.id, 'report_message', {friend: p.ref, n: p.next++, reason});
 const sent = async () => admin('select * from net.sent order by id');
-const lastAlert = async () => (await admin('select * from moderation.alerts order by at desc, report desc limit 1'))[0];
+const lastAlert = async () => (await admin('select * from moderation.alerts order by id desc limit 1'))[0];
 // Move every email back in time, so the 5-minute wait is over.
 const later = (mins = 6) => f.admin("update moderation.alerts set at = at - ($1 || ' minutes')::interval", [String(mins)]);
 const reportCount = async () => (await admin('select count(*)::int c from moderation.reports'))[0].c;
 
 await f.admin("insert into vault.decrypted_secrets values ('resend_api_key', $1), ('report_email_to', $2)", [KEY, TO]);
-const p1 = await pair('ana.rep', 'ben.rep', 20);
-const p2 = await pair('cat.rep', 'dan.rep', 20);
+const p1 = await pair('ana.rep', 'ben.rep', 30);
+const p2 = await pair('cat.rep', 'dan.rep', 30);
 
 // ---------- locked away from students ----------
 const rls = await admin("select c.relrowsecurity from pg_class c join pg_namespace s on s.oid = c.relnamespace where s.nspname = 'moderation' and c.relname = 'alerts'");
@@ -63,8 +63,9 @@ for (const t of ['alerts', 'alert_status']) {
   if (await fails(null, 'select * from moderation.' + t) === '42501') locked++;
 }
 check(locked === 4, 'no student and nobody signed out can read the emails list', R);
-check(await fails(p1.a.id, "select moderation.email_answer(1, now())") === '42501' && await fails(p1.a.id, "select moderation.reason_label('spam')") === '42501',
-  'or call the email functions', R);
+check(await fails(p1.a.id, "select moderation.email_answer(1, now())") === '42501' && await fails(p1.a.id, "select moderation.reason_label('spam')") === '42501' &&
+  await fails(p1.a.id, 'select moderation.email_catchup()') === '42501' && await fails(p1.a.id, "select moderation.queue_email('Spam', false, true)") === '42501' &&
+  await fails(p1.a.id, 'select moderation.emailed_lately()') === '42501', 'or call the email functions, the catch-up included', R);
 check(!(await admin("select has_function_privilege('authenticated', 'moderation.email_report()', 'execute') a"))[0].a, 'or the trigger function', R);
 
 // ---------- the first email ----------
@@ -184,13 +185,76 @@ const r1 = (await lastAlert()).report;
 await f.admin('delete from moderation.reports where id = $1', [r1]);
 check(!(await admin('select 1 from moderation.alerts where report = $1', [r1])).length, 'an alert goes when its report goes (the 12-month clean-up)', R);
 
+// ---------- the catch-up every 15 minutes ----------
+const catchup = async () => (await admin('select moderation.email_catchup() r'))[0].r;
+const job = (await admin("select * from cron.job where jobname = 'stratos-report-catchup'"))[0];
+check(job && job.schedule === '*/15 * * * *' && job.command === 'select moderation.email_catchup()', 'the file adds a Cron job that runs the catch-up every 15 minutes', R);
+await f.admin('delete from moderation.alerts');
+await f.admin('delete from public.message_log');
+await f.admin("update moderation.reports set status = 'reviewed'");
+check(await catchup() === 'No reports waiting for an email.', 'with nothing held back, the catch-up sends nothing', R);
+await report(p2, 'spam');
+await report(p1, 'sexual');
+let had = (await sent()).length;
+check((await lastAlert()).outcome === 'skipped' && await catchup() === 'Waiting: an email went in the last 5 minutes.' && (await sent()).length === had,
+  'a report held back inside the 5 minutes: the catch-up waits too, inside the same limit', R);
+await later();
+check(await catchup() === 'Sent one email about 1 report.' && (await sent()).length === had + 1, 'once the 5 minutes are over, the catch-up sends one email', R);
+const c1 = (await sent()).at(-1);
+check(c1.body.subject === 'Stratos: new report (Sexual or rude)' && c1.body.text === BODY(['Sexual or rude', 2]) && c1.headers.Authorization === 'Bearer ' + KEY,
+  'in the same format, with the held-back report\'s reason and every open report counted', R);
+const c1Leak = [...p1.texts, ...p2.texts, 'ana.rep', 'cat.rep', 'ANAsign', 'CATsign', p1.a.id, p2.a.id, p1.a.email, p2.a.email].filter(x => JSON.stringify(c1.body).toLowerCase().includes(String(x).toLowerCase()));
+check(!c1Leak.length, 'with nothing about a student in it', R);
+check(await catchup() === 'No reports waiting for an email.', 'once it has gone, the next catch-up has nothing to send', R);
+await report(p2, 'bullying');
+check((await lastAlert()).outcome === 'skipped', 'the catch-up email counts toward the 5 minutes, so a report straight after is held back', R);
+await report(p1, 'personal');
+await later();
+check(await catchup() === 'Sent one email about 2 reports.', 'several held-back reports make one email', R);
+const c2 = (await sent()).at(-1);
+check(c2.body.subject === 'Stratos: new reports (Asking for personal details or to meet, Bullying or threats)' &&
+  c2.body.text === 'New reports came in on Stratos.\n\nReasons: Asking for personal details or to meet, Bullying or threats\nOpen reports: 4\n\nOpen Supabase, then SQL Editor, and run:\nselect * from moderation.open_reports;\n',
+  'which names each reason once', R);
+await later();
+await report(p2, 'spam');
+await report(p1, 'other');
+await report(p2, 'harm');
+await later();
+check((await admin("select outcome from moderation.alerts order by id desc limit 3")).map(r => r.outcome).join() === 'sent,skipped,sent' && await catchup() === 'No reports waiting for an email.',
+  'a held-back report that a later email counted (an urgent one too) needs no catch-up', R);
+await report(p1, 'spam');
+await report(p2, 'other');
+await admin("select moderation.reviewed(report) from moderation.alerts where outcome = 'skipped' order by id desc limit 1");
+await later();
+check(await catchup() === 'No reports waiting for an email.', 'nor does one already reviewed', R);
+await report(p1, 'spam');
+await report(p2, 'sexual');
+await later();
+await f.admin("alter function net.http_post(text, jsonb, jsonb, jsonb, int) rename to http_post_off");
+check(await catchup() === 'Not sent: no_pg_net. It is tried again next time.' && (await lastAlert()).outcome === 'failed' && (await lastAlert()).report === null,
+  'a catch-up email that fails is recorded and raises no error', R);
+await f.admin("alter function net.http_post_off(text, jsonb, jsonb, jsonb, int) rename to http_post");
+check(await catchup() === 'Sent one email about 1 report.', 'and is tried again by the next catch-up', R);
+st = (await admin('select * from moderation.alert_status'))[0];
+check(st.reason === 'Catch-up' && st.report === null && st.what_happened === 'Sent. Waiting for Resend to answer.', 'alert_status lists a catch-up email as Catch-up', R);
+await f.admin("update moderation.alerts set at = at - interval '13 months' where report is null");
+await catchup();
+check(!(await admin("select 1 from moderation.alerts where at < now() - interval '12 months'")).length, 'catch-up rows older than 12 months are deleted', R);
+
 // ---------- running the file again ----------
 const keep = (await admin('select count(*)::int c from moderation.alerts'))[0].c;
 await f.db.exec(SQL);
 check((await admin('select count(*)::int c from moderation.alerts'))[0].c === keep && keep > 0, 'running report-email.sql a second time keeps the alerts', R);
-check((await admin("select count(*)::int c from pg_trigger where tgname = 'email_report'"))[0].c === 1, 'and leaves one trigger', R);
+check((await admin("select count(*)::int c from pg_trigger where tgname = 'email_report'"))[0].c === 1 && (await admin('select count(*)::int c from cron.job'))[0].c === 1, 'and leaves one trigger and one Cron job', R);
 await later();
 check(await report(p2, 'spam') === 'ok' && (await lastAlert()).outcome === 'sent', 'which still sends', R);
+
+// An early copy of the alerts table, one row per report with no id, made by hand before the file was merged, is replaced.
+await f.admin('drop table moderation.alerts cascade');
+await f.admin("create table moderation.alerts (report uuid primary key references moderation.reports (id) on delete cascade, at timestamptz not null default now(), urgent boolean not null, outcome text not null, why text, request bigint)");
+await f.db.exec(SQL);
+await later();
+check(await report(p2, 'spam') === 'ok' && (await lastAlert()).outcome === 'sent' && (await admin('select * from moderation.alert_status')).length === 1, 'an early copy of the alerts table is replaced, and emails work after', R);
 
 // ---------- nothing secret in the repository ----------
 check(!/re_[A-Za-z0-9]{8,}/.test(SQL) && !/[A-Za-z0-9._%+-]+@(?!stratosstudy\.com|example\.com)[A-Za-z0-9.-]+\.[a-z]{2,}/i.test(SQL), 'the SQL file has no Resend key and no address but stratosstudy.com and example.com', R);

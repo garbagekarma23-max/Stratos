@@ -14,8 +14,8 @@
 --   holds the messages, a username, a call sign, an id or an email of a student, because it lands in an ordinary inbox.
 -- * "Hurting themselves or others" is urgent: URGENT at the start of the subject, and it always sends.
 -- * Every other report sends at most one email every 5 minutes, across all students, because Resend's 100 emails a
---   day are shared with sign-in codes. A report that sends no email is still in open_reports, and the next email
---   counts it.
+--   day are shared with sign-in codes. A report held back by that limit is still in open_reports, and the next email
+--   counts it. If no other email comes, a catch-up every 15 minutes (Supabase Cron) sends one, inside the same limit.
 -- * The Resend key and the address to send to are secrets in Vault, named resend_api_key and report_email_to. They are
 --   never in this file or anywhere in the repository.
 
@@ -33,14 +33,26 @@ $$;
 
 
 -- ---------- the table ----------
--- One row per report: whether an email went, and if not, why. request is pg_net's number for the email, which finds
--- Resend's answer. Nothing about a student is kept here: the report has that. The row goes when its report goes
--- (12 months, in moderation.cleanup).
+-- One row per email tried: one for each report, and one for each catch-up email (report empty). request is pg_net's
+-- number for the email, which finds Resend's answer. Nothing about a student is kept here: the report has that. A
+-- report's row goes when its report goes (12 months, in moderation.cleanup); a catch-up row after 12 months.
 -- outcome: sent (queued for Resend), skipped (another email went in the 5 minutes before), or failed.
 -- why, for skipped and failed: five_minutes, no_key, no_address, no_pg_net, or error and the error's code.
+-- at is the moment the row is written, after the lock below, so it puts the emails in the order they really went.
+-- An early copy of this table, with one row per report and no id, was only ever made by hand before this file was
+-- merged, and holds nothing worth keeping. It is replaced.
+do $$
+begin
+  if to_regclass('moderation.alerts') is not null and not exists (select 1 from information_schema.columns
+      where table_schema = 'moderation' and table_name = 'alerts' and column_name = 'id') then
+    drop table moderation.alerts cascade;
+  end if;
+end;
+$$;
 create table if not exists moderation.alerts (
-  report uuid primary key references moderation.reports (id) on delete cascade,
-  at timestamptz not null default now(),
+  id bigint generated always as identity primary key,
+  report uuid unique references moderation.reports (id) on delete cascade,
+  at timestamptz not null default clock_timestamp(),
   urgent boolean not null,
   outcome text not null check (outcome in ('sent', 'skipped', 'failed')),
   why text,
@@ -70,6 +82,53 @@ as $$
     else reason end;
 $$;
 
+-- Put one email in pg_net's queue. reasons: the reasons, in words, joined with commas; many: more than one report.
+-- Answers pg_net's number for it, or why it was not sent (no_key, no_address, no_pg_net, or error and a code). It
+-- never raises an error.
+create or replace function moderation.queue_email(reasons text, many boolean, urgent boolean, out req bigint, out why text)
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  api_key text;
+  send_to text;
+  open_count int;
+begin
+  select trim(s.decrypted_secret) into api_key from vault.decrypted_secrets s where s.name = 'resend_api_key';
+  select trim(s.decrypted_secret) into send_to from vault.decrypted_secrets s where s.name = 'report_email_to';
+  if coalesce(api_key, '') = '' then why := 'no_key'; return; end if;
+  if coalesce(send_to, '') = '' then why := 'no_address'; return; end if;
+  select count(*) into open_count from moderation.reports r where r.status = 'new';
+  req := net.http_post(
+    url := 'https://api.resend.com/emails',
+    headers := jsonb_build_object('Content-Type', 'application/json', 'Authorization', 'Bearer ' || api_key),
+    body := jsonb_build_object(
+      'from', 'Stratos <noreply@stratosstudy.com>',
+      'to', jsonb_build_array(send_to),
+      'subject', case when urgent then 'URGENT: ' else '' end || 'Stratos: new report' || case when many then 's' else '' end || ' (' || reasons || ')',
+      'text', case when many then 'New reports came in on Stratos.' else 'A new report came in on Stratos.' end || chr(10) || chr(10) ||
+        case when many then 'Reasons: ' else 'Reason: ' end || reasons || chr(10) ||
+        'Open reports: ' || open_count || chr(10) || chr(10) ||
+        'Open Supabase, then SQL Editor, and run:' || chr(10) ||
+        'select * from moderation.open_reports;' || chr(10)),
+    timeout_milliseconds := 10000);
+exception
+  when undefined_function or invalid_schema_name then req := null; why := 'no_pg_net';
+  when others then req := null; why := 'error ' || sqlstate;
+end;
+$$;
+
+-- An email went in the last 5 minutes that was not urgent. Urgent ones do not count toward the limit.
+create or replace function moderation.emailed_lately()
+returns boolean
+language sql
+stable
+set search_path = ''
+as $$
+  select exists (select 1 from moderation.alerts a where not a.urgent and a.outcome = 'sent' and a.at > clock_timestamp() - interval '5 minutes');
+$$;
+
 -- Runs after each report is saved. It never raises an error, so it can never stop a report.
 create or replace function moderation.email_report()
 returns trigger
@@ -79,46 +138,20 @@ set search_path = ''
 as $$
 declare
   urgent boolean := new.reason = 'harm';
-  label text := moderation.reason_label(new.reason);
-  api_key text;
-  send_to text;
-  open_count int;
   req bigint;
   why text;
 begin
   begin
-    if not urgent then
-      -- One report at a time from here, so two reports at the same moment cannot both send.
-      perform pg_advisory_xact_lock(hashtextextended('stratos-report-email', 0));
-      if exists (select 1 from moderation.alerts a where not a.urgent and a.outcome = 'sent' and a.at > now() - interval '5 minutes') then
-        why := 'five_minutes';
-      end if;
-    end if;
-    if why is null then
-      select trim(s.decrypted_secret) into api_key from vault.decrypted_secrets s where s.name = 'resend_api_key';
-      select trim(s.decrypted_secret) into send_to from vault.decrypted_secrets s where s.name = 'report_email_to';
-      if coalesce(api_key, '') = '' then why := 'no_key';
-      elsif coalesce(send_to, '') = '' then why := 'no_address';
-      else
-        select count(*) into open_count from moderation.reports r where r.status = 'new';
-        req := net.http_post(
-          url := 'https://api.resend.com/emails',
-          headers := jsonb_build_object('Content-Type', 'application/json', 'Authorization', 'Bearer ' || api_key),
-          body := jsonb_build_object(
-            'from', 'Stratos <noreply@stratosstudy.com>',
-            'to', jsonb_build_array(send_to),
-            'subject', case when urgent then 'URGENT: ' else '' end || 'Stratos: new report (' || label || ')',
-            'text', 'A new report came in on Stratos.' || chr(10) || chr(10) ||
-              'Reason: ' || label || chr(10) ||
-              'Open reports: ' || open_count || chr(10) || chr(10) ||
-              'Open Supabase, then SQL Editor, and run:' || chr(10) ||
-              'select * from moderation.open_reports;' || chr(10)),
-          timeout_milliseconds := 10000);
-      end if;
+    -- One email at a time from here, urgent or not, so two reports at the same moment cannot both send, and every
+    -- email counts the reports saved before it.
+    perform pg_advisory_xact_lock(hashtextextended('stratos-report-email', 0));
+    if not urgent and moderation.emailed_lately() then
+      why := 'five_minutes';
+    else
+      select q.req, q.why into req, why from moderation.queue_email(moderation.reason_label(new.reason), false, urgent) q;
     end if;
   exception
-    when undefined_function or invalid_schema_name then why := 'no_pg_net'; req := null;
-    when others then why := 'error ' || sqlstate; req := null;
+    when others then req := null; why := 'error ' || sqlstate;
   end;
   begin
     insert into moderation.alerts (report, urgent, outcome, why, request)
@@ -131,6 +164,37 @@ $$;
 
 create or replace trigger email_report after insert on moderation.reports
   for each row execute function moderation.email_report();
+
+-- The catch-up, every 15 minutes. Reports held back by the 5-minute limit, still new, that no email since has
+-- counted: one email about them all, unless an email went in the last 5 minutes (that one, or the next catch-up,
+-- covers them). An email that failed is tried again next time. Answers what it did, in words.
+create or replace function moderation.email_catchup()
+returns text
+language plpgsql
+security definer
+set search_path = ''
+as $$
+declare
+  held int;
+  reasons text;
+  req bigint;
+  why text;
+begin
+  perform pg_advisory_xact_lock(hashtextextended('stratos-report-email', 0));
+  delete from moderation.alerts where report is null and at < now() - interval '12 months';
+  select count(*), string_agg(distinct moderation.reason_label(r.reason), ', ' order by moderation.reason_label(r.reason)) into held, reasons
+  from moderation.alerts a join moderation.reports r on r.id = a.report
+  where a.outcome = 'skipped' and r.status = 'new'
+    and not exists (select 1 from moderation.alerts b where b.outcome = 'sent' and b.at > a.at);
+  if held = 0 then return 'No reports waiting for an email.'; end if;
+  if moderation.emailed_lately() then return 'Waiting: an email went in the last 5 minutes.'; end if;
+  select q.req, q.why into req, why from moderation.queue_email(reasons, held > 1, false) q;
+  insert into moderation.alerts (report, urgent, outcome, why, request)
+  values (null, false, case when req is not null then 'sent' else 'failed' end, why, req);
+  if req is null then return 'Not sent: ' || why || '. It is tried again next time.'; end if;
+  return 'Sent one email about ' || held || case when held = 1 then ' report.' else ' reports.' end;
+end;
+$$;
 
 
 -- ---------- what the owner runs in the SQL Editor ----------
@@ -160,18 +224,28 @@ $$;
 
 -- Each report's email, newest first: select * from moderation.alert_status;
 create or replace view moderation.alert_status as
-select a.at, a.report, moderation.reason_label(r.reason) as reason, a.urgent,
+select a.at, a.report, coalesce(moderation.reason_label(r.reason), 'Catch-up') as reason, a.urgent,
   case
     when a.outcome = 'sent' then moderation.email_answer(a.request, a.at)
-    when a.why = 'five_minutes' then 'Not sent: another email went in the 5 minutes before. The report is in open_reports.'
+    when a.why = 'five_minutes' then 'Not sent: another email went in the 5 minutes before. The next email, or the catch-up within 15 minutes, counts it.'
     when a.why = 'no_key' then 'Not sent: Vault has no secret called resend_api_key.'
     when a.why = 'no_address' then 'Not sent: Vault has no secret called report_email_to.'
     when a.why = 'no_pg_net' then 'Not sent: pg_net is off. Turn it on in Database, then Extensions.'
     else 'Not sent: ' || coalesce(a.why, 'unknown error') || '.'
   end as what_happened
 from moderation.alerts a
-join moderation.reports r on r.id = a.report
+left join moderation.reports r on r.id = a.report
 order by a.at desc;
 
 revoke all on all functions in schema moderation from public, anon, authenticated;
 revoke all on all tables in schema moderation from public, anon, authenticated;
+
+-- Run the catch-up every 15 minutes, once Supabase Cron is turned on (README step 12). If it is not on yet, this does
+-- nothing: turn it on and run this file again.
+do $$
+begin
+  if to_regprocedure('cron.schedule(text, text, text)') is not null then
+    perform cron.schedule('stratos-report-catchup', '*/15 * * * *', 'select moderation.email_catchup()');
+  end if;
+end;
+$$;

@@ -34,3 +34,11 @@ create function net.http_post(url text, body jsonb default '{}', params jsonb de
     headers jsonb default '{"Content-Type": "application/json"}', timeout_milliseconds int default 5000)
   returns bigint language sql
   as $$ insert into net.sent (url, headers, body) values (url, headers, body) returning id $$;
+
+-- Supabase Cron (pg_cron), which runs SQL on a timetable. The stand-in only keeps the jobs; nothing runs on its own.
+create schema cron;
+create table cron.job (jobname text primary key, schedule text, command text);
+create function cron.schedule(job_name text, schedule text, command text) returns bigint language sql
+  as $$ insert into cron.job values (job_name, schedule, command)
+        on conflict (jobname) do update set schedule = excluded.schedule, command = excluded.command;
+        select 1::bigint $$;
