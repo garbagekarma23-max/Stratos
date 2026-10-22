@@ -156,18 +156,22 @@ const text = (p, sel) => p.locator(sel).first().textContent();
   await p.reload(); await p.waitForTimeout(300);
   check((await text(p, '.subject')) === NAME, 'after a reload the course is still picked', R);
 
-  // ---------- 7. challenges and races stay on the other subjects ----------
+  // ---------- 7. challenges work in the course; races stay on the other subjects ----------
   await p.click('[data-act="page"][data-page="friends"]'); await p.waitForTimeout(120);
   await p.click('.thr[data-f="tom"]'); await p.waitForTimeout(120);
   await p.click('[data-act="pickch"][data-kind="challenge"]'); await p.waitForTimeout(100);
-  check((await p.getAttribute('#sheetBody .subsw [aria-pressed="true"]', 'data-sub')) === 'eco', 'the friend sheet opens on NSW Economics', R);
+  check((await p.getAttribute('#sheetBody .subsw [aria-pressed="true"]', 'data-sub')) === 'edexcel' && (await p.locator('#sheetBody .subsw button').count()) === 3, 'the challenge sheet opens on the course, with all three courses on its switch', R);
   const games = await p.locator('#sheetBody [data-act="startwith"] .t').allTextContents();
-  check(games.length === 4 && !games.some(g => g.includes('Introductory concepts')), 'it lists the NSW chapters only', R);
+  check(games.length === 12 && games[0].startsWith('1. Introductory concepts') && (await p.locator('#sheetBody h3.unit').count()) === 2, 'it lists the 12 course chapters under their units', R);
+  check((await text(p, '#sheetBody .sub')).includes('You play up to 8 questions first'), 'and says a course challenge has up to 8 questions', R);
+  await p.click('#sheetClose'); await p.waitForTimeout(100);
+  await p.click('[data-act="pickch"][data-kind="race"]'); await p.waitForTimeout(100);
+  check((await p.getAttribute('#sheetBody .subsw [aria-pressed="true"]', 'data-sub')) === 'eco' && (await p.locator('#sheetBody .subsw button').count()) === 2, 'the race sheet has only NSW Economics and Maths, and opens on NSW Economics', R);
   await p.click('#sheetClose'); await p.waitForTimeout(100);
   await p.click('[data-act="reply"][data-text="Rematch?"]'); await p.waitForTimeout(3600);
   s = await saved(p);
   const re = s.th.tom[s.th.tom.length - 1];
-  check(re.kind === 'challenge' && /^c\d$/.test(re.ch), 'a rematch with no game yet uses an NSW chapter', R);
+  check(re.kind === 'challenge' && /^x\dc\d$/.test(re.ch), 'a rematch with no game yet uses the course chapter Home shows', R);
   errsAll.push(...errs); await b.close();
 }
 

@@ -835,8 +835,8 @@ end;
 $$;
 
 -- The daily clean-up: messages older than 90 days, requests nobody answered in 30 days, old log rows, reports and
--- history older than 12 months, and bans that have ended. Supabase Cron runs it every day (README step 12). Even
--- without it, nothing older than these limits is ever shown to a student.
+-- history older than 12 months, bans that have ended, and old challenges (challenges.sql). Supabase Cron runs it
+-- every day (README step 12). Even without it, nothing older than these limits is ever shown to a student.
 create or replace function moderation.cleanup()
 returns text
 language plpgsql
@@ -853,6 +853,8 @@ begin
   delete from moderation.actions where at < now() - interval '12 months';
   delete from moderation.notices where seen_at < now() - interval '12 months';
   delete from moderation.bans where until < now();
+  -- Old challenges too, once challenges.sql is in (README step 16).
+  if to_regprocedure('moderation.challenge_cleanup()') is not null then perform moderation.challenge_cleanup(); end if;
   return gone || ' old messages deleted.';
 end;
 $$;

@@ -37,20 +37,21 @@ function challengeOutcome(me, them, meMs, themMs) {
   return 'draw';
 }
 const outcomeWords = (o, n) => ({won: 'You won.', lost: n + ' won.', wontime: 'You won on time.', losttime: n + ' won on time.', draw: 'A draw.'})[o];
-/* A finished challenge or race goes into the thread with that friend. A maths challenge keeps its seed and your time. */
+/* A finished challenge or race goes into the thread with that friend. A challenge keeps its seed and your time.
+   A challenge with a real friend goes to the database instead (78-challenges.js). */
 function postResult() {
   const f = P.friend;
+  if (P.real) { chSend(); return; }
   if (P.mode === 'challenge') {
-    const m = P.msg ? findMsg(f, P.msg) : null, ms = P.maths ? Math.round(P.ms) : null;
+    const m = P.msg ? findMsg(f, P.msg) : null, ms = Math.round(P.ms);
     if (m) {
       m.me = P.first; m.state = 'done';
-      if (P.maths) m.meMs = ms;
+      m.meMs = ms;
       save();
       const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
       reactLater(f, o === 'won' || o === 'wontime' ? 'Rematch?' : (o === 'draw' ? 'Good game' : 'Too easy'), 3000);
     } else {
-      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'};
-      if (P.maths) { nm.seed = P.seed; nm.meMs = ms; }
+      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait', seed: P.seed, meMs: ms};
       friendPlays(f, addMsg(f, nm).id);
     }
   } else if (P.mode === 'race') {
@@ -87,10 +88,10 @@ function msgHtml(f, m) {
   const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>', maths = subOf(m.ch) === 'maths';
   if (m.kind === 'challenge') {
     const out = m.state !== 'done' ? '' : outcomeWords(challengeOutcome(m.me, m.them, m.meMs, m.themMs), fr.name);
-    /* A maths card has a third column: each player's time. */
-    const time = ms => maths ? '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>' : '';
+    /* A third column: each player's time. A challenge from before challenges were timed has none. */
+    const time = ms => '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>';
     return wrap('<div class="mcard"><span class="k">' + (maths ? 'Maths challenge, ' : 'Challenge, ') + plural(m.total, 'question') + '</span>' + title +
-      '<div class="sc' + (maths ? ' timed' : '') + '"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
+      '<div class="sc timed"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
         '<span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b>' + time(m.me == null ? 0 : m.meMs) + '</div>' +
       (out ? '<span class="out">' + out + '</span>' : '') +
       (m.state === 'open' ? '<button class="primary" type="button" data-act="play" data-kind="challenge" data-f="' + f + '" data-m="' + m.id + '">Play</button>' : '') + '</div>');
@@ -137,18 +138,34 @@ PAGE.thread = f => {
       '<div class="replies" role="group" aria-label="Quick replies">' + REPLIES.map(r => '<button class="chip" type="button" data-act="reply" data-f="' + f + '" data-text="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div></footer>'
   };
 };
-/* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
+/* Pick the course and chapter for a challenge or a race you are starting. The course starts as the one picked on Home.
+   Challenges work in all three courses, races in NSW Economics and Maths. With a real friend (data-real, from
+   78-challenges.js), only a chapter with every point learned can be picked, because the challenger plays first. */
+const GAME_SUBS = [['eco', 'Economics'], ['maths', 'Maths'], ['edexcel', 'AS Economics']];
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || (GAME[SUB.id] ? SUB.id : 'eco'), G = GAME[sub], again = !!b.closest('#sheet');
-  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
-    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  const f = b.dataset.f, kind = b.dataset.kind, real = !!b.dataset.real, n = real ? chFoeName(f) : friend(f).name;
+  if (!n) return;
+  const subs = GAME_SUBS.filter(o => GAME[o[0]][kind]), sub = b.dataset.sub || (subs.some(o => o[0] === SUB.id) ? SUB.id : 'eco');
+  const G = GAME[sub], S = SUBJECTS[sub], again = !!b.closest('#sheet');
+  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Course">' + subs.map(o =>
+    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '"' + (real ? ' data-real="1"' : '') + ' data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  const ready = c => { const s = chStats(c); return s.learned === s.n; };
+  const row = c => {
+    if (real) {
+      return '<button class="pick" type="button" data-act="chstart" data-f="' + f + '" data-ch="' + c.id + '"' + (ready(c) ? '' : ' disabled') + '><span class="t">' + c.n + '. ' + esc(c.title) +
+        '<small>' + (ready(c) ? plural(gameSize(c.id, 'challenge'), 'question') : 'Learn every point first') + '</small></span>' + IC.right + '</button>';
+    }
+    const s = chStats(c), fresh = s.n - s.learned;
+    return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
+  };
+  const size = sub === 'edexcel' ? 'up to ' + G.challenge : G.challenge;
   openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
     '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
-      : 'Pick a chapter. You play ' + G.challenge + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
-    '<div class="picks">' + SUBJECTS[sub].ch.map((c, i) => {
-      const s = chStats(c), fresh = s.n - s.learned;
-      return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
-    }).join('') + '</div>');
+      : real ? 'Pick a chapter you’ve learned. You play first, then ' + esc(n) + ' plays the same questions. ' + esc(n) + ' has 7 days to play.'
+      : 'Pick a chapter. You play ' + size + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
+    (real && !S.ch.some(ready) ? '<p class="fine ch-none">Learn a chapter in this course to challenge with it.</p>' : '') +
+    chPicks(row, S) +
+    (kind === 'challenge' ? '<p class="fine">More right answers wins. If it’s level, the faster time wins.</p>' : ''));
   /* Tapping the switch redraws the sheet. Focus stays on the switch. */
   if (again) $('#sheetBody .subsw [aria-pressed="true"]').focus({preventScroll: true});
 };
@@ -169,7 +186,7 @@ ACT.reply = b => {
   if (text === 'Rematch?') {
     /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
        (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : GAME[SUB.id] ? curCh().id : SUBJECTS.eco.ch[0].id;
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
     reactLater(f, 'You are on', 1500);
     later(3400, () => {
       const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};

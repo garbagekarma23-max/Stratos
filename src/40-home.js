@@ -1,7 +1,8 @@
 /* ---------- home: the chapter in progress, its bar, and the list of chapters ---------- */
 const lineHtml = l => '<p>' + (Array.isArray(l) ? '<b>' + esc(l[0]) + ':</b> ' + esc(l[1]) : esc(l)) + '</p>';
-/* New messages from the sample friends, and friend requests waiting (75-friends.js). */
-const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread();
+/* New messages from the sample friends, friend requests waiting (75-friends.js), unread messages and message requests
+   (77-messages.js), and challenges to play and new results (78-challenges.js). */
+const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread() + chUnread();
 const STATUS_MEANS = {
   new: 'Not started yet.',
   learned: 'One of its two questions is right so far.',

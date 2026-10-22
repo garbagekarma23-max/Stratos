@@ -624,6 +624,18 @@ button.bubble.ms{border:0}
 .ms-count.over{color:var(--bad)}
 .ms-banned{gap:4px}
 .ms-quote{margin:0;padding:10px 14px;border-left:3px solid var(--line-2);font-size:15px;line-height:1.4;white-space:pre-wrap;overflow-wrap:anywhere}
+/* Challenges with real friends (78-challenges.js): a friend's row with its Challenge button, the card's two buttons,
+   the challenges under a chat with no message request accepted, and the results on a friend's sheet. */
+.fr-friend{grid-template-columns:minmax(0,1fr) auto}
+.fr-open{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;min-width:0;min-height:46px;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left}
+.composer .acts.one{grid-template-columns:1fr}
+.mcard .ch-acts{display:flex;gap:8px;margin-top:8px}
+.mcard .ch-acts .primary,.mcard .ch-acts .ghost{flex:1;min-height:40px;margin:0;padding:0 12px;font-size:14px}
+.ch-part{display:flex;flex-direction:column;gap:10px;margin-top:8px;padding-top:6px;border-top:1px solid var(--line)}
+.ch-part .fr-h{margin:6px 0 0}
+.ch-results{display:grid;gap:6px;margin:0 0 8px;padding:0;list-style:none;font-size:14px;line-height:1.4}
+.ch-results li{padding-bottom:6px;border-bottom:1px solid var(--line)}
+.ch-tally{margin-bottom:6px}
 
 .shelf-h{margin:24px 0 10px;font:700 15px/1.2 var(--f)}
 .shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -3921,15 +3933,18 @@ const FRIENDS = [
   {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18, mpace: 45}
 ];
 /* Challenges and races in each subject. A maths question takes about three times as long as tapping an option,
-   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6. */
-const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}};
+   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6.
+   The Edexcel course has challenges but no races yet. */
+const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}, edexcel: {challenge: 8}};
 /* Maths chapter 2 (squares) needs more lines than chapter 1, so the sample friends take 1.3 times as long there. */
 const MATHS_SLOW = {m1: 1, m2: 1.3};
 const subOf = chId => { const c = chOf(chId); return c ? c.sub : 'eco'; };
-const gameSize = (chId, kind) => GAME[subOf(chId)][kind];
+/* An Economics challenge asks two questions per point at most, so a chapter with 2 points has 4 questions.
+   supabase/challenges.sql keeps the same sizes for real friends, and a test checks they match. */
+const gameSize = (chId, kind) => kind === 'challenge' && subOf(chId) !== 'maths' ? Math.min(GAME[subOf(chId)].challenge, 2 * chOf(chId).points.length) : GAME[subOf(chId)][kind];
 /* A sample friend's seconds for each right answer on a chapter. */
 function paceOf(f, chId) { return subOf(chId) === 'maths' ? f.mpace * (MATHS_SLOW[chId] || 1.3) : f.pace; }
-/* A pretend time for a friend playing a maths challenge, in ms: their pace for each question, give or take a fifth. */
+/* A pretend time for a friend playing a challenge, in ms: their pace for each question, give or take a fifth. */
 function pretendTime(f, chId, total) { let ms = 0; for (let i = 0; i < total; i++) ms += paceOf(f, chId) * 1000 * (0.8 + Math.random() * 0.4); return Math.round(ms); }
 const friend = id => FRIENDS.find(f => f.id === id) || FRIENDS[0];
 const REPLIES = ['Nice one', 'Rematch?', 'Too easy', 'Good game'];
@@ -3984,6 +3999,8 @@ function tidySaved() {
       moved = true;
     }
   }));
+  /* Every challenge is timed now. A sample friend's score from before that gets a pretend time. */
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.them != null && m.themMs == null) { m.themMs = pretendTime(f, m.ch, m.total); moved = true; } }));
   /* A challenge a friend was still playing when the page closed is finished now. */
   FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { friendScores(f, m); m.state = 'done'; } }));
   if (moved) save();
@@ -4000,8 +4017,8 @@ function seedThreads() {
   saved.mid = 10;
 }
 function pretendScore(f, total) { let n = 0; for (let i = 0; i < total; i++) if (Math.random() < f.skill) n++; return n; }
-/* A sample friend's pretend score on a challenge, and in maths their pretend time too. */
-function friendScores(f, m) { m.them = pretendScore(f, m.total); if (subOf(m.ch) === 'maths') m.themMs = pretendTime(f, m.ch, m.total); }
+/* A sample friend's pretend score and time on a challenge. */
+function friendScores(f, m) { m.them = pretendScore(f, m.total); m.themMs = pretendTime(f, m.ch, m.total); }
 function ownsRocket(id) { const r = ROCKETS.find(x => x.id === id); return !!r && !r.price && (!r.earn || streakNow() >= r.earn); }
 
 const dayKey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -4063,10 +4080,11 @@ function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x 
 /* How a chapter is named: "Chapter 2", or "Unit 1, chapter 2" in a course with units. */
 const chName = c => c.unit ? 'Unit ' + c.unit + ', chapter ' + c.n : 'Chapter ' + c.n;
 /* The list of chapters in a sheet, for picking one. A course numbers its chapters within each unit, so each unit's
-   name goes above its chapters. A unit with no chapter ready yet is left out. row draws one chapter. */
-const chPicks = row => SUB.units
-  ? SUB.units.filter(u => CH.some(c => c.unit === u.n)).map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><div class="picks">' + CH.filter(c => c.unit === u.n).map(row).join('') + '</div>').join('')
-  : '<div class="picks">' + CH.map(row).join('') + '</div>';
+   name goes above its chapters. A unit with no chapter ready yet is left out. row draws one chapter.
+   S is the subject, the one picked on Home unless another is given. */
+const chPicks = (row, S) => (S = S || SUB, S.units
+  ? S.units.filter(u => S.ch.some(c => c.unit === u.n)).map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><div class="picks">' + S.ch.filter(c => c.unit === u.n).map(row).join('') + '</div>').join('')
+  : '<div class="picks">' + S.ch.map(row).join('') + '</div>');
 /* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
 const isDraft = c => !!c && c.check === 'draft';
 const DRAFT = '<span class="tag">Draft</span>';
@@ -4771,8 +4789,9 @@ function frame() {
 
 /* ---------- home: the chapter in progress, its bar, and the list of chapters ---------- */
 const lineHtml = l => '<p>' + (Array.isArray(l) ? '<b>' + esc(l[0]) + ':</b> ' + esc(l[1]) : esc(l)) + '</p>';
-/* New messages from the sample friends, and friend requests waiting (75-friends.js). */
-const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread();
+/* New messages from the sample friends, friend requests waiting (75-friends.js), unread messages and message requests
+   (77-messages.js), and challenges to play and new results (78-challenges.js). */
+const unreadCount = () => FRIENDS.reduce((n, f) => n + (saved.unread[f.id] || 0), 0) + frRequests() + msUnread() + chUnread();
 const STATUS_MEANS = {
   new: 'Not started yet.',
   learned: 'One of its two questions is right so far.',
@@ -5618,8 +5637,19 @@ marksEl.innerHTML = MILES.filter(m => m.m).map(m => {
 }).join('');
 const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l, on: false}));
 
+/* The questions for an Economics challenge, made from its seed alone, so a friend gets the same ones in the same
+   order with the options in the same places. Practice questions (b) first, then check questions (a), easiest first. */
+function ecoSet(ch, seed, n) {
+  const rnd = MAKE.seeded(seed), mix = l => { for (let i = l.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = l[i]; l[i] = l[j]; l[j] = t; } return l; };
+  const as = mix(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = mix(ch.points.map(p => ({p: p.id, k: 'b'})));
+  return bs.concat(as).slice(0, n).sort((x, y) => dOf(x) - dOf(y)).map(x => ({p: x.p, k: x.k, perm: mix([0, 1, 2, 3])}));
+}
+/* The friend in a challenge or race: a sample friend, or a real one (78-challenges.js), who has a ref and a name. */
+const foe = () => P.real ? {id: P.friend, name: P.foe, real: true} : friend(P.friend);
+
 /* Start a flight. o.mode is mix or chapter (your own practice), challenge (a set of questions a friend plays too)
-   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject. */
+   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject.
+   A challenge with a real friend has real, cref (the challenge's ref), foe (their name) and the seed the database picked. */
 function startPractice(o) {
   sound.wake();
   /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
@@ -5629,18 +5659,22 @@ function startPractice(o) {
   }
   /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
   if (isMaths()) { startMathsFlight(o); return; }
-  let picked;
-  if (o.mode === 'challenge' || o.mode === 'race') {
-    const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));
-    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, GAME.eco.challenge);
+  let picked, seed = null;
+  if (o.mode === 'challenge') {
+    seed = o.seed != null ? o.seed : MAKE.newSeed();
+    picked = ecoSet(chOf(o.ch), seed, gameSize(o.ch, 'challenge'));
+  } else if (o.mode === 'race') {
+    const ch = chOf(o.ch);
+    picked = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))).concat(shuffle(ch.points.map(p => ({p: p.id, k: 'b'}))));
   } else picked = poolFor(o.mode, o.ch).slice(0, o.len || 8);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
-  picked.sort((x, y) => dOf(x) - dOf(y));               /* easiest first, so a combo can build */
+  if (o.mode !== 'challenge') picked.sort((x, y) => dOf(x) - dOf(y));               /* easiest first, so a combo can build */
   token++;
   clearTimeout(raceTimer);
   P = {mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null, them: o.them == null ? null : o.them,
-    items: picked.map(x => ({p: x.p, k: x.k, perm: shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
+    themMs: o.themMs || null, seed: seed, real: !!o.real, cref: o.cref || null, foe: o.foe || null, ms: 0,
+    items: picked.map(x => ({p: x.p, k: x.k, perm: x.perm || shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
     combo: 0, best: 0, alt: 0, clue: false, done: false, cut: false, pb: false, first: 0, sent: false, before: CH.map(c => chStats(c).pct),
     race: o.mode === 'race' ? {target: GAME.eco.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
@@ -5648,16 +5682,16 @@ function startPractice(o) {
   playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
 }
 function launchCard() {
-  const f = P.friend ? friend(P.friend).name : '';
+  const f = P.friend ? foe().name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
-  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
+  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
   if (P.mode === 'chapter') return {title: chName(chOf(P.ch)), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
   const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
   if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
-  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
+  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + foe().name : m + c + ', ' + foe().name + ' got ' + P.them + ' of ' + P.total;
   if (P.mode === 'chapter') return chName(chOf(P.ch));
   return 'Mixed flight';
 }
@@ -5825,6 +5859,7 @@ function answer(sec, n) {
   P.res.push({o: right ? 'correct' : 'wrong', pick: n, clue: P.clue, gain: mult});
   P.clue = false;
   record(c.it.p, c.it.k, right);
+  chKeep();
   paintResolved(P, c.sec, c.i);
   const btn = $('.opt[data-n="' + n + '"]', c.sec);
   if (right) {
@@ -5918,7 +5953,7 @@ function finish() {
   postResult();
 }
 function summaryEl() {
-  const f = fmt(P.alt), nx = nextStop(P.alt), sec = document.createElement('section'), fr = P.friend ? friend(P.friend) : null;
+  const f = fmt(P.alt), nx = nextStop(P.alt), sec = document.createElement('section'), fr = P.friend ? foe() : null;
   const asked = P.items.filter((it, i) => !it.back && P.res[i] && P.res[i].o !== 'closed').length;
   const seen = [];
   P.items.forEach(it => { if (seen.indexOf(it.p) < 0) seen.push(it.p); });
@@ -5928,15 +5963,15 @@ function summaryEl() {
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
   if (P.mode === 'challenge') {
-    const out = P.them == null ? fr.name + ' is playing the same set now.' : P.maths ? mpChallengeLine(fr)
-      : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
-    h = '<p class="meta"><span>Challenge complete</span></p>' +
+    const out = P.them != null ? mpChallengeLine(fr) : fr.real ? 'Sent to ' + fr.name + '. They have 7 days to play it.' : fr.name + ' is playing the same set now.';
+    h = '<p class="meta"><span>' + (fr.real && P.them == null ? 'Challenge sent' : 'Challenge complete') + '</span></p>' +
       '<p class="big"><span>' + P.first + ' of ' + P.total + '</span><small>' + (P.cut ? 'You ended early, so the rest count as wrong' : 'right') + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
-      (P.maths ? mpGameStats(fr) : '') +
+      mpGameStats(fr) +
       weakLine +
-      '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
+      (fr.real ? '<div class="cta"><button class="primary" type="button" data-act="tochat" data-f="' + fr.id + '">See it in chat</button></div>'
+        : '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>') + homeBtn;
   } else if (P.mode === 'race') {
     const R = P.race, out = R.left ? 'You left the race.' : (R.me >= R.target ? 'You won the race.' : fr.name + ' won the race.');
     h = '<p class="meta"><span>Race over</span></p>' +
@@ -5970,7 +6005,8 @@ let endArm = 0;
 function disarmEnd() { clearTimeout(endArm); endBtn.dataset.armed = ''; }
 ACT.end = () => {
   if (!P) return;
-  if (P.done || !P.res.length) { closeRun(); return; }
+  /* A friend playing a real challenge has started it already, so even with nothing answered, ending takes two taps. */
+  if (P.done || (!P.res.length && !(P.real && P.them != null))) { closeRun(); return; }
   if (endBtn.dataset.armed !== '1') { endBtn.dataset.armed = '1'; toast('Tap the cross again to end this flight'); endArm = setTimeout(disarmEnd, 3200); return; }
   disarmEnd();
   const c = P.maths ? mpWaiting() : current();
@@ -6116,7 +6152,7 @@ function startMathsFlight(o) {
   clearTimeout(raceTimer);
   if (pad) pad.stop();
   P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null,
-    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed,
+    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed, real: !!o.real, cref: o.cref || null, foe: o.foe || null,
     items: picked.map(x => ({p: x.p, q: x.q || null, back: false})), res: [], total: picked.length,
     combo: 0, row: 0, best: 0, alt: 0, done: false, cut: false, pb: false, first: 0, sent: false,
     lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct),
@@ -6287,6 +6323,7 @@ function mpFinish(c, o, gain) {
   if (pad && pad.el === $('.work', sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }     /* no pad yet if Answer came before MathLive loaded */
   P.res.push({o: o, gain: gain});
   P.busy = false;
+  chKeep();
   sec.classList.add('done');
   $('.mq-head .actions', sec).hidden = true;
   const end = document.createElement('li');
@@ -6326,19 +6363,22 @@ function paintSegs() {
     return '<i class="seg' + fill + (i === cur ? ' cur' : '') + '"></i>';
   }).join('');
 }
-/* The clock runs only while the flight is on screen: not during lift-off, on another tab, or with the page hidden. */
+/* The clock runs only while the flight is on screen: not during lift-off, on another tab, or with the page hidden.
+   Maths flights have it, and so does every challenge, where the faster time wins on level scores. */
+const timed = () => !!P && (P.maths || P.mode === 'challenge');
 let clockLast = 0;
 setInterval(() => {
   const now = performance.now(), dt = now - (clockLast || now);
   clockLast = now;
-  if (!P || !P.maths || P.done) return;
+  if (!timed() || P.done) return;
   if (ui.tab === 'practice' && launch.hidden && !document.hidden && !pages.length) P.ms += Math.min(dt, 1000);
   fClock.textContent = clockText(P.ms);
 }, 250);
-/* Set the flight's extras up when it is mounted: segments and clock for maths, neither for Economics. */
+/* Set the flight's extras up when it is mounted: segments and clock for maths, the clock alone for an Economics
+   challenge, neither for other Economics flights. */
 function mpMount() {
   run.dataset.sub = P.maths ? 'maths' : 'eco';
-  fClock.hidden = !P.maths;
+  fClock.hidden = !timed();
   fClock.textContent = '0:00';
   paintSegs();
 }
@@ -6362,12 +6402,13 @@ function mpSummary() {
     '<p class="sumline">' + (b ? 'Best time for ' + scope + ', ' + plural(P.total, 'question') + ': ' + clockText(b) + '.' : 'A best time needs every question answered, with none skipped or shown.') + '</p>';
 }
 
-/* The extra row on a maths challenge or race result: your time (and the friend's, in a challenge), lines and wrong lines. */
+/* The extra row on a challenge or maths race result: your time (and the friend's, in a challenge), and in maths
+   lines and wrong lines. A friend who has not played yet has no time: Playing for a sample friend, Not played for a real one. */
 function mpGameStats(fr) {
-  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
-  return '<dl class="stats"><div><dt>Your time</dt><dd>' + clockText(P.ms) + '</dd></div>' + them + '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>';
+  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : fr.real ? 'Not played' : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
+  return '<dl class="stats"><div><dt>Your time</dt><dd class="myT">' + clockText(P.ms) + '</dd></div>' + them + (P.maths ? '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div>' : '') + '</dl>';
 }
-/* The verdict on a maths challenge the friend has already played. More right answers wins; level scores go to the faster time. */
+/* The verdict on a challenge the friend has already played. More right answers wins; level scores go to the faster time. */
 function mpChallengeLine(fr) {
   const o = challengeOutcome(P.first, P.them, P.ms, P.themMs), t = P.themMs ? ' in ' + clockText(P.themMs) : '';
   if (o === 'won') return 'You won. ' + fr.name + ' scored ' + P.them + t + '.';
@@ -6434,20 +6475,21 @@ function challengeOutcome(me, them, meMs, themMs) {
   return 'draw';
 }
 const outcomeWords = (o, n) => ({won: 'You won.', lost: n + ' won.', wontime: 'You won on time.', losttime: n + ' won on time.', draw: 'A draw.'})[o];
-/* A finished challenge or race goes into the thread with that friend. A maths challenge keeps its seed and your time. */
+/* A finished challenge or race goes into the thread with that friend. A challenge keeps its seed and your time.
+   A challenge with a real friend goes to the database instead (78-challenges.js). */
 function postResult() {
   const f = P.friend;
+  if (P.real) { chSend(); return; }
   if (P.mode === 'challenge') {
-    const m = P.msg ? findMsg(f, P.msg) : null, ms = P.maths ? Math.round(P.ms) : null;
+    const m = P.msg ? findMsg(f, P.msg) : null, ms = Math.round(P.ms);
     if (m) {
       m.me = P.first; m.state = 'done';
-      if (P.maths) m.meMs = ms;
+      m.meMs = ms;
       save();
       const o = challengeOutcome(m.me, m.them, m.meMs, m.themMs);
       reactLater(f, o === 'won' || o === 'wontime' ? 'Rematch?' : (o === 'draw' ? 'Good game' : 'Too easy'), 3000);
     } else {
-      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait'};
-      if (P.maths) { nm.seed = P.seed; nm.meMs = ms; }
+      const nm = {from: 'me', kind: 'challenge', ch: P.ch, me: P.first, them: null, total: P.total, state: 'wait', seed: P.seed, meMs: ms};
       friendPlays(f, addMsg(f, nm).id);
     }
   } else if (P.mode === 'race') {
@@ -6484,10 +6526,10 @@ function msgHtml(f, m) {
   const title = '<span class="t">' + esc(chOf(m.ch).title) + '</span>', maths = subOf(m.ch) === 'maths';
   if (m.kind === 'challenge') {
     const out = m.state !== 'done' ? '' : outcomeWords(challengeOutcome(m.me, m.them, m.meMs, m.themMs), fr.name);
-    /* A maths card has a third column: each player's time. */
-    const time = ms => maths ? '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>' : '';
+    /* A third column: each player's time. A challenge from before challenges were timed has none. */
+    const time = ms => '<b class="tm">' + (ms ? clockText(ms) : '') + '</b>';
     return wrap('<div class="mcard"><span class="k">' + (maths ? 'Maths challenge, ' : 'Challenge, ') + plural(m.total, 'question') + '</span>' + title +
-      '<div class="sc' + (maths ? ' timed' : '') + '"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
+      '<div class="sc timed"><span>' + fr.name + '</span><b>' + (m.them == null ? 'Playing now' : m.them + ' of ' + m.total) + '</b>' + time(m.them == null ? 0 : m.themMs) +
         '<span>You</span><b>' + (m.me == null ? 'Not played' : m.me + ' of ' + m.total) + '</b>' + time(m.me == null ? 0 : m.meMs) + '</div>' +
       (out ? '<span class="out">' + out + '</span>' : '') +
       (m.state === 'open' ? '<button class="primary" type="button" data-act="play" data-kind="challenge" data-f="' + f + '" data-m="' + m.id + '">Play</button>' : '') + '</div>');
@@ -6534,18 +6576,34 @@ PAGE.thread = f => {
       '<div class="replies" role="group" aria-label="Quick replies">' + REPLIES.map(r => '<button class="chip" type="button" data-act="reply" data-f="' + f + '" data-text="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div></footer>'
   };
 };
-/* Pick the subject and chapter for a challenge or a race you are starting. The subject starts as the one picked on Home. */
+/* Pick the course and chapter for a challenge or a race you are starting. The course starts as the one picked on Home.
+   Challenges work in all three courses, races in NSW Economics and Maths. With a real friend (data-real, from
+   78-challenges.js), only a chapter with every point learned can be picked, because the challenger plays first. */
+const GAME_SUBS = [['eco', 'Economics'], ['maths', 'Maths'], ['edexcel', 'AS Economics']];
 ACT.pickch = b => {
-  const f = b.dataset.f, kind = b.dataset.kind, n = friend(f).name, sub = b.dataset.sub || (GAME[SUB.id] ? SUB.id : 'eco'), G = GAME[sub], again = !!b.closest('#sheet');
-  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Subject">' + [['eco', 'Economics'], ['maths', 'Maths']].map(o =>
-    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '" data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  const f = b.dataset.f, kind = b.dataset.kind, real = !!b.dataset.real, n = real ? chFoeName(f) : friend(f).name;
+  if (!n) return;
+  const subs = GAME_SUBS.filter(o => GAME[o[0]][kind]), sub = b.dataset.sub || (subs.some(o => o[0] === SUB.id) ? SUB.id : 'eco');
+  const G = GAME[sub], S = SUBJECTS[sub], again = !!b.closest('#sheet');
+  const seg = '<div class="seg3 wide subsw" role="group" aria-label="Course">' + subs.map(o =>
+    '<button type="button" data-act="pickch" data-kind="' + kind + '" data-f="' + f + '"' + (real ? ' data-real="1"' : '') + ' data-sub="' + o[0] + '" aria-pressed="' + (sub === o[0]) + '">' + o[1] + '</button>').join('') + '</div>';
+  const ready = c => { const s = chStats(c); return s.learned === s.n; };
+  const row = c => {
+    if (real) {
+      return '<button class="pick" type="button" data-act="chstart" data-f="' + f + '" data-ch="' + c.id + '"' + (ready(c) ? '' : ' disabled') + '><span class="t">' + c.n + '. ' + esc(c.title) +
+        '<small>' + (ready(c) ? plural(gameSize(c.id, 'challenge'), 'question') : 'Learn every point first') + '</small></span>' + IC.right + '</button>';
+    }
+    const s = chStats(c), fresh = s.n - s.learned;
+    return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
+  };
+  const size = sub === 'edexcel' ? 'up to ' + G.challenge : G.challenge;
   openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
     '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
-      : 'Pick a chapter. You play ' + G.challenge + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
-    '<div class="picks">' + SUBJECTS[sub].ch.map((c, i) => {
-      const s = chStats(c), fresh = s.n - s.learned;
-      return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + (i + 1) + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
-    }).join('') + '</div>');
+      : real ? 'Pick a chapter you’ve learned. You play first, then ' + esc(n) + ' plays the same questions. ' + esc(n) + ' has 7 days to play.'
+      : 'Pick a chapter. You play ' + size + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
+    (real && !S.ch.some(ready) ? '<p class="fine ch-none">Learn a chapter in this course to challenge with it.</p>' : '') +
+    chPicks(row, S) +
+    (kind === 'challenge' ? '<p class="fine">More right answers wins. If it’s level, the faster time wins.</p>' : ''));
   /* Tapping the switch redraws the sheet. Focus stays on the switch. */
   if (again) $('#sheetBody .subsw [aria-pressed="true"]').focus({preventScroll: true});
 };
@@ -6566,7 +6624,7 @@ ACT.reply = b => {
   if (text === 'Rematch?') {
     /* The friend takes you up on it and sends a fresh challenge on the subject and chapter of the last game in the thread
        (or the chapter Home shows, if there has been no game yet). A maths one gets a new seed: new numbers, the same for both. */
-    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : GAME[SUB.id] ? curCh().id : SUBJECTS.eco.ch[0].id;
+    const l = saved.th[f], lastGame = l.slice().reverse().find(m => m.ch), ch = lastGame ? lastGame.ch : curCh().id;
     reactLater(f, 'You are on', 1500);
     later(3400, () => {
       const m = {from: 'them', kind: 'challenge', ch: ch, me: null, total: gameSize(ch, 'challenge'), state: 'open'};
@@ -6771,7 +6829,7 @@ let frBusy = false, frAgain = false, frAsked = 0, frOffline = false;
 let addHow = 'name', lastFound = [];
 function readFr() { try { const s = JSON.parse(localStorage.getItem(FR_KEY) || 'null'); return s && s.me ? s : null; } catch (e) { return null; } }
 function saveFr() { try { if (fr) localStorage.setItem(FR_KEY, JSON.stringify(fr)); } catch (e) {} }
-function frForget() { fr = null; lastFound = []; frOffline = false; msForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
+function frForget() { fr = null; lastFound = []; frOffline = false; msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
 /* The list, if it belongs to the account signed in now. */
 const frMine = () => signedIn() && fr && fr.uid === st.uid ? fr : null;
 /* Requests waiting for this student, for the dot on Home's friends button. */
@@ -6795,19 +6853,22 @@ async function frCall(fn, args) {
 const frWhy = e => why(e, 'Something went wrong. Try again in a moment.');
 
 /* Fetch the list. Called when Friends opens, every 10 seconds while it is open and on screen, when the app comes back
-   on screen, after signing in and after every change. Only redraws if something changed. */
+   on screen, after signing in and after every change. Only redraws if something changed. The chats (77-messages.js)
+   and the challenges (78-challenges.js) come with it, and a challenge score waiting on this phone is sent first. */
 async function frLoad() {
   if (!ACCOUNTS || !st.uid) return;
   if (frBusy) { frAgain = true; return; }
   frBusy = true; frAsked = Date.now();
-  const now = () => (fr ? JSON.stringify(Object.assign({}, fr, {at: 0})) : '') + JSON.stringify(chs), before = now(), wasOff = frOffline;
+  const now = () => (fr ? JSON.stringify(Object.assign({}, fr, {at: 0})) : '') + JSON.stringify(chs) + JSON.stringify(chl), before = now(), wasOff = frOffline;
   try {
+    if (chPending()) await chFlush(true);
     const d = await frCall('friends_state');
     fr = Object.assign(d, {uid: st.uid, at: Date.now()});
     frOffline = false;
     saveFr();
     /* The chats come with the list. If they cannot be fetched, the friends list still shows. */
     try { await msLoadList(); } catch (e) {}
+    try { await chLoadList(); } catch (e) {}
   } catch (e) { frOffline = true; }
   frBusy = false;
   if (before !== now() || wasOff !== frOffline) frRepaint();
@@ -6820,6 +6881,7 @@ document.addEventListener('visibilitychange', () => { if (!document.hidden && st
    if the friend is gone), the account sheet's username part, and the dot on Home and You. */
 function frRepaint() {
   if (pageIs('chat') && frMine() && !frFind('friends', topPage().arg)) closePage();
+  else if (pageIs('chat')) chatRepaint();
   if (pageIs('friends')) {
     const i = $('.unameIn', pagesEl), v = i ? i.value : null, focused = i && document.activeElement === i;
     paintPage('same');
@@ -6854,14 +6916,17 @@ function realFriends() {
       '<div class="fr-row"><span class="avatar">' + frInitial(r) + '</span><span class="fr-who"><b>' + esc(frShown(r)) + '</b>' + (r.name && r.username ? '<span>@' + esc(r.username) + '</span>' : '') + '</span>' +
       '<span class="fr-acts"><button class="primary sm" type="button" data-act="fraccept" data-ref="' + r.ref + '">Accept</button><button class="ghost sm" type="button" data-act="frdecline" data-ref="' + r.ref + '">Decline</button></span></div>').join('') + '</div>';
   }
-  /* Each friend opens their chat. The line under the name says where the chat stands, and a dot shows unread messages
-     or a message request. */
+  /* Challenges waiting for this student to play (78-challenges.js). */
+  h += chToPlay();
+  /* Each friend opens their chat, and has a Challenge button. The line under the name says where the chat stands, or
+     a challenge to play or a new result first. A dot shows unread messages, a message request or a challenge. */
   h += '<h3 class="fr-h">Your friends</h3>' + (d.friends.length ? '<div class="rows">' + d.friends.slice().sort((x, y) => frShown(x).localeCompare(frShown(y))).map(f => {
-      const c = msChat(f.ref), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0);
-      const line = c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
+      const c = msChat(f.ref), g = chRowLine(f.ref, frShown(f)), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0) || !!g;
+      const line = g ? g.text : c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
         : c.state === 'open' ? 'No messages yet' : (f.name ? '@' + f.username + ', friends' : 'Friends') + ' since ' + dayText(f.since);
-      return '<button class="fr-row' + (dot ? ' unread' : '') + '" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + esc(line) + '</span></span>' +
-        (dot ? '<i class="dot"></i><span class="sr">' + (c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : IC.right) + '</button>';
+      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + esc(line) + '</span></span>' +
+        (dot ? '<i class="dot"></i><span class="sr">' + (g ? 'Challenge' : c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : '') + '</button>' +
+        '<button class="ghost sm" type="button" data-act="pickch" data-kind="challenge" data-real="1" data-f="' + f.ref + '" aria-label="Challenge ' + esc(frShown(f)) + '">Challenge</button></div>';
     }).join('') + '</div>'
     : '<p class="fine fr-none">No friends yet. Find a friend by username, or show them your code.</p>');
   h += '<div class="rows fr-ways"><button class="row" type="button" data-act="fradd"><span class="t">Add a friend</span><span class="val"></span>' + IC.right + '</button>' +
@@ -7087,7 +7152,9 @@ ACT.frfriend = b => {
   const n = esc(frShown(f));
   openSheet(frShown(f),
     '<p class="sub">' + (f.name ? '@' + esc(f.username) + '. ' : '') + 'Friends since ' + dayText(f.since, true) + '.</p>' +
-    '<p class="fine">Challenges and races with real friends come in a later update. ' + n + ' sees only your call sign and username.</p>' +
+    chResults(f.ref, frShown(f)) +
+    '<div class="cta">' + chButton(f.ref) + '</div>' +
+    '<p class="fine">Races with real friends come in a later update. ' + n + ' sees only your call sign and username.</p>' +
     '<div class="cta"><button class="ghost" type="button" data-act="frremove" data-ref="' + f.ref + '" data-n="' + n + '">Remove friend</button></div>' +
     '<button class="textbtn danger" type="button" data-act="frblock" data-ref="' + f.ref + '" data-n="' + n + '">Block</button>' +
     '<p class="fine">Removing or blocking doesn’t tell them. Either one deletes your chat for both of you. Blocking also stops them sending you another request.</p>');
@@ -7174,14 +7241,19 @@ function whenText(t) {
   if (diff === 1) return 'Yesterday ' + time;
   return d.toLocaleDateString('en-AU', {weekday: 'short', day: 'numeric', month: 'short'}) + ', ' + time;
 }
+/* The messages, with challenge cards (78-challenges.js) in among them by when each was sent. While earlier messages
+   are not loaded, challenges from before the first one shown wait until they are. */
 function msgsHtml(f) {
-  const name = esc(frShown(f));
+  const name = esc(frShown(f)), from = cv.more && cv.list.length ? new Date(cv.list[0].at).getTime() : 0;
   let h = cv.more ? '<button class="textbtn ms-earlier" type="button" data-act="mearlier">Show earlier messages</button>' : '', last = 0;
-  if (!cv.list.length) h += '<p class="sys">No messages yet. Say hello.</p>';
-  cv.list.forEach(m => {
-    const t = new Date(m.at).getTime();
-    if (t - last > 15 * 60000) h += '<p class="sys ms-when">' + whenText(m.at) + '</p>';
-    last = t;
+  const items = cv.list.map(m => ({t: new Date(m.at).getTime(), m: m}))
+    .concat(chFor(f.ref).map(c => ({t: new Date(c.at).getTime(), c: c})).filter(x => x.t >= from)).sort((x, y) => x.t - y.t);
+  if (!items.length) h += '<p class="sys">No messages yet. Say hello.</p>';
+  items.forEach(x => {
+    if (x.t - last > 15 * 60000) h += '<p class="sys ms-when">' + whenText(x.t) + '</p>';
+    last = x.t;
+    if (x.c) { h += chCard(x.c); return; }
+    const m = x.m;
     h += '<div class="msg' + (m.mine ? ' mine' : '') + '" data-n="' + m.n + '">' +
       (m.mine ? '<div class="bubble ms">' + esc(m.text) + '</div>' : '<button class="bubble ms" type="button" data-act="mmsg" data-n="' + m.n + '">' + esc(m.text) + '</button>') + '</div>';
     if (m.care) h += '<p class="care' + (m.mine ? ' mine' : '') + '">' + (m.mine ? 'If you’re not okay, you don’t have to deal with it alone. ' + helpLine()
@@ -7197,24 +7269,27 @@ PAGE.chat = ref => {
   else if (Date.now() - cv.at > 1500) setTimeout(() => chatFetch(false), 0);  /* opened again: fetch what is new now */
   const more = '<button class="icon-btn" type="button" data-act="frfriend" data-ref="' + ref + '" aria-label="About ' + n + '">' + IC.more + '</button>';
   const page = {title: name, avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
+  setTimeout(() => chSeen(ref), 0);
   if (!cv.loaded) return Object.assign(page, {html: '<p class="sys">' + (frOffline ? 'No connection. This chat will show once you are online.' : 'Loading.') + '</p>'});
   if (cv.state === 'none') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<p class="sys">You and ' + n + ' are friends. Send a message request to start chatting. ' + n + ' can accept or decline.</p>' +
       '<div class="cta"><button class="primary" type="button" data-act="mask">Send message request</button></div>' +
-      '<p class="fine">Messages are text only. Stratos doesn’t send messages with links, phone numbers, email addresses or words it doesn’t allow.</p>'});
+      '<p class="fine">Messages are text only. Stratos doesn’t send messages with links, phone numbers, email addresses or words it doesn’t allow.</p>' + chChatPart(ref)});
   }
   if (cv.state === 'sent') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<p class="sys">Message request sent. You can message ' + n + ' once they accept.</p>' +
-      '<div class="cta"><button class="ghost" type="button" data-act="mcancel">Cancel request</button></div>'});
+      '<div class="cta"><button class="ghost" type="button" data-act="mcancel">Cancel request</button></div>' + chChatPart(ref)});
   }
   if (cv.state === 'asked') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<h3 class="h2">' + n + ' wants to message you.</h3>' +
       '<p class="sub">Accept only if you know ' + n + ' and want to chat. You can block them at any time.</p>' +
-      '<div class="cta"><button class="primary" type="button" data-act="maccept">Accept</button><button class="ghost" type="button" data-act="mdecline">Decline</button></div>'});
+      '<div class="cta"><button class="primary" type="button" data-act="maccept">Accept</button><button class="ghost" type="button" data-act="mdecline">Decline</button></div>' + chChatPart(ref)});
   }
+  /* Send a challenge sits above the box. A ban from messaging does not stop challenges. */
+  const acts = '<div class="acts one">' + chButton(ref) + '</div>';
   const foot = cv.ban
-    ? '<footer class="composer ms-banned"><p class="sub">' + banText(cv.ban) + '</p><p class="fine">This is because of a report. You can still read your chats, and friends still work. Questions? Email support@stratosstudy.com.</p></footer>'
-    : '<footer class="composer ms-box"><p class="fine err" id="msErr" role="alert" hidden></p><div class="ms-row">' +
+    ? '<footer class="composer ms-banned">' + acts + '<p class="sub">' + banText(cv.ban) + '</p><p class="fine">This is because of a report. You can still read your chats, and friends still work. Questions? Email support@stratosstudy.com.</p></footer>'
+    : '<footer class="composer ms-box">' + acts + '<p class="fine err" id="msErr" role="alert" hidden></p><div class="ms-row">' +
       '<textarea id="msgIn" rows="1" placeholder="Message" aria-label="Message to ' + n + '" autocomplete="off"></textarea>' +
       '<button class="primary sm" type="button" data-act="msend" disabled>Send</button></div><p class="fine ms-count" aria-live="polite" hidden></p></footer>';
   return Object.assign(page, {html: '<p class="sys">Only you and ' + n + ' can read this chat. Messages are deleted after 90 days.</p>' + msgsHtml(f), foot: foot});
@@ -7396,6 +7471,215 @@ ACT.mwarnok = async () => {
   closeSheet();
   try { await frCall('seen_notice'); if (msMine()) msMine().me.warned = false; } catch (e) { warnShown = false; }
 };
+
+/* ---------- challenges with real friends ----------
+   Only while accounts are on and the student is signed in. Everything goes through the functions in
+   supabase/challenges.sql, which check who is asking and keep every limit. Signed out, the sample friends' challenges
+   work as before (70-social.js).
+   How one goes: the challenger picks a chapter they have learned, start_challenge picks a seed, and they play. The
+   questions come from the seed alone, so the friend gets the same ones. finish_challenge saves the score and time,
+   and only then does the friend see it. The friend taps Play (play_challenge hands over the seed, once), plays, and
+   both see who won: more right answers, then the faster time.
+   The list of challenges comes with the friends list (frLoad in 75-friends.js), and every 10 seconds while a chat is
+   on screen. It is never kept on this device. A score not saved yet is, under stratos2.chal, so a flight cut off by
+   a reload or a lost connection is still sent. */
+let chl = null;                       /* the last answer from challenges_state, with uid (whose it is) */
+let chBusy = false;
+const CH_KEY = 'stratos2.chal';
+const chMine = () => signedIn() && chl && chl.uid === st.uid ? chl : null;
+const chList = () => { const c = chMine(); return c ? c.challenges : []; };
+const chFind = ref => chList().find(c => c.ref === ref) || null;
+/* Every challenge with one friend, by the friendship's ref. */
+const chFor = ref => chList().filter(c => c.friend === ref);
+const chFoeName = ref => { const f = frFind('friends', ref); return f ? frShown(f) : ''; };
+function chForget() { chl = null; try { localStorage.removeItem(CH_KEY); } catch (e) {} }
+async function chLoadList() {
+  const c = await frCall('challenges_state');
+  chl = Object.assign(c, {uid: st.uid});
+}
+/* For the dot on Home and Friends: challenges waiting for this student to play, and results they haven't opened. */
+const chUnread = () => chList().filter(c => c.state === 'open' || c.new).length;
+
+/* ---------- saving a score ---------- */
+function chPending() { try { const p = JSON.parse(localStorage.getItem(CH_KEY) || 'null'); return p && p.ref ? p : null; } catch (e) { return null; } }
+/* The score so far in a real challenge, kept on this phone after each answer (and at the start). mine: this student
+   sent the challenge. n: how many questions are answered. */
+function chKeep() {
+  if (!P || !P.real || !P.cref) return;
+  try { localStorage.setItem(CH_KEY, JSON.stringify({uid: st.uid, ref: P.cref, mine: P.them == null, n: P.res.length, right: P.first, ms: Math.round(P.ms)})); } catch (e) {}
+}
+/* Send a score waiting on this phone. A challenge still being played waits until it ends. A challenger who left before
+   answering anything never sends it: it goes from the database after 2 hours. A friend who started it gets the score
+   they had, and the questions not answered count as wrong. Answers what the database said, or null with no connection. */
+async function chFlush(fromLoad) {
+  const p = chPending();
+  if (!p || chBusy || !st.uid || p.uid !== st.uid) return null;
+  if (P && P.real && P.cref === p.ref && !P.done) return null;
+  const drop = () => { const q = chPending(); if (q && q.ref === p.ref) try { localStorage.removeItem(CH_KEY); } catch (e) {} };
+  if (p.mine && !p.n) { drop(); return {result: 'dropped'}; }
+  chBusy = true;
+  let r = null;
+  try { r = await frCall('finish_challenge', {ref: p.ref, right_n: p.right, ms: p.ms}); } catch (e) { r = null; }
+  chBusy = false;
+  if (r) { drop(); if (!fromLoad) frLoad(); }
+  return r;
+}
+window.addEventListener('online', () => { if (st.uid && chPending()) frLoad(); });
+
+/* The end of a real challenge (postResult in 70-social.js). The result slide is up already. If the database moved the
+   time (never faster than a set time per question, never slower than the time it measured), the verdict follows it. */
+async function chSend() {
+  const p = P;
+  chKeep();
+  const r = await chFlush();
+  const verdict = text => { if (P === p) { const v = $('.summary .verdict', feed); if (v) v.textContent = text; } };
+  if (!r) { verdict('Saved on this phone. It sends when you’re back online.'); return; }
+  if (r.result === 'ok') {
+    if (r.ms !== Math.round(p.ms) && P === p) {
+      p.ms = r.ms;
+      const t = $('.summary .myT', feed); if (t) t.textContent = clockText(r.ms);
+      fClock.textContent = clockText(r.ms);
+      if (p.them != null) verdict(mpChallengeLine({name: p.foe}));
+    }
+    return;
+  }
+  verdict(r.result === 'late' ? 'This challenge ran out of time, so it wasn’t saved.' : 'This challenge is no longer there.');
+}
+
+/* ---------- starting, playing and declining ---------- */
+const startWords = n => ({day: 'You’ve sent 20 challenges today. Try again tomorrow.', friend_full: n + ' has 3 of your challenges to play already.',
+  their_full: n + ' has a lot of challenges waiting. Try again later.', chapter: 'That chapter can’t be used for a challenge yet.',
+  gone: 'You’re no longer friends, so you can’t challenge them.'});
+/* A chapter picked on the challenge sheet (ACT.pickch in 70-social.js). The database picks the seed. */
+ACT.chstart = async b => {
+  const ref = b.dataset.f, ch = b.dataset.ch, n = chFoeName(ref);
+  if (!n) return;
+  if (!navigator.onLine) { toast('You need a connection to start a challenge.'); return; }
+  b.disabled = true;
+  let r;
+  try { r = await frCall('start_challenge', {friend: ref, ch: ch}); }
+  catch (e) { toast(navigator.onLine ? frWhy(e) : 'You need a connection to start a challenge.'); if (b.isConnected) b.disabled = false; return; }
+  if (r.result !== 'ok') { toast(startWords(n)[r.result] || 'Something went wrong. Try again in a moment.'); if (b.isConnected) b.disabled = false; if (r.result === 'gone') frLoad(); return; }
+  startPractice({mode: 'challenge', ch: ch, friend: ref, real: true, cref: r.ref, seed: r.seed, foe: n});
+  chKeep();
+};
+/* Play a challenge a friend sent. If the chapter has points you haven't learned, say so first. */
+ACT.chplay = async b => {
+  const c = chFind(b.dataset.ref); if (!c || c.state !== 'open') return;
+  const ch = chOf(c.ch), n = chFoeName(c.friend);
+  if (!ch) { toast('This challenge is on a chapter this version of Stratos doesn’t have.'); return; }
+  const s = chStats(ch), fresh = s.n - s.learned;
+  if (fresh && !b.dataset.cold) {
+    openSheet('Before you play',
+      '<p class="sub">' + (fresh === s.n ? 'All ' + s.n + ' points' : fresh + ' of the ' + s.n + ' points') + ' in this chapter are new to you. You can learn them first, or go in cold.</p>' +
+      '<div class="cta"><button class="primary" type="button" data-act="learnch" data-ch="' + ch.id + '">Learn the chapter first</button><button class="ghost" type="button" data-act="chplay" data-cold="1" data-ref="' + c.ref + '">Play anyway</button></div>' +
+      '<p class="fine">Once you start, you can’t play it again. You have 2 hours to finish.</p>');
+    return;
+  }
+  if (!navigator.onLine) { toast('You need a connection to play a challenge.'); return; }
+  b.disabled = true;
+  let r;
+  try { r = await frCall('play_challenge', {ref: c.ref}); }
+  catch (e) { toast(navigator.onLine ? frWhy(e) : 'You need a connection to play a challenge.'); if (b.isConnected) b.disabled = false; return; }
+  if (r.result !== 'ok') {
+    toast({started: 'You’ve played this challenge already.', expired: 'This challenge ran out. Challenges last 7 days.'}[r.result] || 'This challenge is no longer there.');
+    closeSheet(); frLoad(); return;
+  }
+  c.state = 'playing';
+  startPractice({mode: 'challenge', ch: c.ch, friend: c.friend, real: true, cref: c.ref, seed: r.seed, foe: n, them: c.them.right, themMs: c.them.ms});
+  chKeep();
+};
+/* Decline is silent: to the friend, it waits until the 7 days are up. */
+ACT.chdecline = async b => {
+  const c = chFind(b.dataset.ref); if (!c) return;
+  const n = chFoeName(c.friend);
+  b.disabled = true;
+  try {
+    const r = await frCall('decline_challenge', {ref: c.ref});
+    if (r === 'ok') { c.state = 'declined'; frRepaint(); toast('Declined. ' + n + ' isn’t told.'); }
+    else toast('This challenge is no longer there.');
+  } catch (e) { toast(frWhy(e)); if (b.isConnected) b.disabled = false; }
+  frLoad();
+};
+ACT.tochat = b => { const f = b.dataset.f; closeRun(); go('home'); ui.ftab = 'msgs'; openPage('friends'); if (frFind('friends', f)) openPage('chat', f); };
+/* Opening a chat counts the results in it as seen, so the dot goes. */
+function chSeen(ref) {
+  const fresh = chFor(ref).filter(c => c.new);
+  if (!fresh.length) return;
+  fresh.forEach(c => { c.new = false; });
+  frRepaint();
+  frCall('seen_challenges', {friend: ref}).catch(() => {});
+}
+/* While a chat is on screen, its challenges are fetched every 10 seconds (the chat's messages every 5). */
+setInterval(async () => {
+  if (!pageIs('chat') || document.hidden || !navigator.onLine || !st.uid) return;
+  const before = JSON.stringify(chl);
+  try { await chLoadList(); } catch (e) { return; }
+  if (JSON.stringify(chl) !== before) frRepaint();
+}, 10000);
+
+/* ---------- what the student sees ---------- */
+const chScore = (c, side) => side ? (side.quit ? 'Didn’t finish' : side.right + ' of ' + c.total) : null;
+const chOutcome = c => challengeOutcome(c.me.right, c.them.right, c.me.ms, c.them.ms);
+function chDaysLeft(c) { const d = Math.ceil((new Date(c.ends).getTime() - Date.now()) / 864e5); return d >= 1 ? plural(d, 'day') + ' left' : 'Less than a day left'; }
+/* A result in a few words: "you won, 5 to 3". n is the friend's name. */
+const chShort = (c, n) => ({won: 'you won', lost: n + ' won', wontime: 'you won on time', losttime: n + ' won on time', draw: 'a draw'})[chOutcome(c)] + ', ' + c.me.right + ' to ' + c.them.right;
+/* Where a chapter is: "Maths, Year 11. Chapter 1." */
+const chWhere = ch => { const course = COURSE_LIST.find(x => x.id === ch.sub); return (course ? course.name + '. ' : '') + chName(ch) + '.'; };
+/* A challenge as a card in the chat, the same for both students: each one's score and time, and where it stands. */
+function chCard(c) {
+  const ch = chOf(c.ch), n = esc(chFoeName(c.friend) || 'Your friend'), maths = !!ch && ch.sub === 'maths';
+  const cell = (who, side, none) => '<span>' + who + '</span><b>' + (chScore(c, side) || none) + '</b><b class="tm">' + (side && side.ms ? clockText(side.ms) : '') + '</b>';
+  const them = cell(n, c.them, c.state === 'playing' && c.mine ? 'Playing now' : 'Not played'), me = cell('You', c.me, c.state === 'playing' ? 'Started' : 'Not played');
+  const out = c.state === 'done' ? outcomeWords(chOutcome(c), n)
+    : c.state === 'waiting' ? 'Waiting for ' + n + ' to play. ' + chDaysLeft(c) + '.'
+    : c.state === 'playing' ? (c.mine ? n + ' is playing it now.' : 'You started this challenge.')
+    : c.state === 'open' ? chDaysLeft(c) + ' to play.'
+    : c.state === 'declined' ? 'You declined it.' : 'Not played in time.';
+  return '<div class="msg ch-msg' + (c.mine ? ' mine' : '') + '" data-ch="' + c.ref + '"><div class="mcard"><span class="k">' + (maths ? 'Maths challenge, ' : 'Challenge, ') + plural(c.total, 'question') + '</span>' +
+    '<span class="t">' + (ch ? esc(ch.title) : 'A chapter this version doesn’t have') + '</span>' + (ch ? '<span class="d">' + esc(chWhere(ch)) + '</span>' : '') +
+    '<div class="sc timed">' + them + me + '</div><span class="out">' + out + '</span>' +
+    (c.state === 'open' ? '<div class="ch-acts"><button class="primary" type="button" data-act="chplay" data-ref="' + c.ref + '">Play</button><button class="ghost" type="button" data-act="chdecline" data-ref="' + c.ref + '">Decline</button></div>' : '') +
+    '</div></div>';
+}
+/* The Send a challenge button, in a chat and on a friend's sheet. */
+const chButton = ref => '<button class="ghost" type="button" data-act="pickch" data-kind="challenge" data-real="1" data-f="' + ref + '">Send a challenge</button>';
+/* The challenges part of a chat that is not open for messages yet (no message request accepted). */
+function chChatPart(ref) {
+  const list = chFor(ref).slice().sort((x, y) => new Date(x.at) - new Date(y.at));
+  return '<div class="ch-part">' + (list.length ? '<h3 class="fr-h">Challenges</h3>' + list.map(chCard).join('') : '') +
+    '<div class="cta">' + chButton(ref) + '</div><p class="fine">Challenges work without a message request. They have no messages in them, only the chapter and the scores.</p></div>';
+}
+/* What a friend's row on Friends says about challenges, if anything: one waiting to be played, or a new result. */
+function chRowLine(ref, n) {
+  const l = chFor(ref), open = l.find(c => c.state === 'open'), fresh = l.find(c => c.new);
+  if (open) { const ch = chOf(open.ch); return {text: 'Challenged you: ' + (ch ? ch.title : 'a chapter'), dot: true}; }
+  if (fresh) return {text: 'Challenge: ' + chShort(fresh, n), dot: true};
+  return null;
+}
+/* Challenges to play, at the top of Friends. */
+function chToPlay() {
+  const l = chList().filter(c => c.state === 'open');
+  if (!l.length) return '';
+  return '<h3 class="fr-h">Challenges to play</h3><div class="rows">' + l.map(c => {
+    const f = frFind('friends', c.friend), ch = chOf(c.ch); if (!f) return '';
+    return '<div class="fr-row ch-row"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' +
+      esc((ch ? ch.title : 'A chapter') + '. Beat ' + c.them.right + ' of ' + c.total + (c.them.ms ? ' in ' + clockText(c.them.ms) : '') + '.') + '</span></span>' +
+      '<span class="fr-acts"><button class="primary sm" type="button" data-act="chplay" data-ref="' + c.ref + '">Play</button><button class="ghost sm" type="button" data-act="chdecline" data-ref="' + c.ref + '">Decline</button></span></div>';
+  }).join('') + '</div>';
+}
+/* Results with one friend, for their sheet: the tally over the last 90 days and the last 10. */
+function chResults(ref, name) {
+  const done = chFor(ref).filter(c => c.state === 'done'), n = esc(name);
+  if (!done.length) return '<h3 class="fr-h">Challenges</h3><p class="fine ch-none">No challenges finished yet.</p>';
+  const count = o => done.filter(c => { const x = chOutcome(c); return o === 'won' ? x === 'won' || x === 'wontime' : o === 'lost' ? x === 'lost' || x === 'losttime' : x === 'draw'; }).length;
+  const draws = count('draw');
+  return '<h3 class="fr-h">Challenges</h3><p class="sub ch-tally">Last 90 days: you ' + count('won') + ', ' + n + ' ' + count('lost') + (draws ? ', ' + plural(draws, 'draw') : '') + '.</p>' +
+    '<ul class="ch-results">' + done.slice(0, 10).map(c => {
+      const ch = chOf(c.ch), s = chShort(c, n);
+      return '<li>' + esc(ch ? ch.title : 'A chapter') + '. ' + s.charAt(0).toUpperCase() + s.slice(1) + '.</li>';
+    }).join('') + '</ul>';
+}
 
 /* ---------- the intro: the word Stratos with the student's rocket flying round it ----------
    It plays each time the app is opened (start() in 90-boot.js), never when switching tabs.
