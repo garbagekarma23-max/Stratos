@@ -211,8 +211,89 @@ long code in the `id` column of `open_reports`. Copy it and paste it between the
 Reports can also be browsed in **Table Editor**: pick the `moderation` schema, then `reports`. Change nothing there
 by hand: the commands above also record what you did and tell the student.
 
-Nothing tells you when a report arrives yet. Until the email alert comes (the next pull request), check
-`open_reports` every day while students are messaging.
+Step 15 emails you when a report arrives. Check `open_reports` from time to time as well, in case an email goes
+astray.
+
+## 15. Email me when a report comes in
+
+Each report sends you an email through Resend, from noreply@stratosstudy.com. The email says only that a report came
+in, its reason, how many reports are open, and to run `select * from moderation.open_reports;`. It never has the
+messages, usernames or anything else about a student.
+
+- A "Hurting themselves or others" report is urgent: the subject starts with URGENT, and it always sends.
+- Other reports send at most one email every 5 minutes, across all students, because Resend's 100 emails a day are
+  shared with sign-in codes. A report held back by that limit is still in `open_reports`, and the next email counts
+  it. If no other email comes, a catch-up every 15 minutes sends one email about the reports held back, inside the
+  same limit.
+- If the email fails for any reason, the report is still saved.
+
+The code is `supabase/report-email.sql`. The Resend key and your address are secrets in Supabase, never in the code.
+Do this once the pull request with that file is merged.
+
+### A Resend key that can only send
+
+1. Open resend.com, then **API Keys**, then **Create API Key**.
+2. Name it `Stratos report alerts`.
+3. For **Permission**, pick **Sending access**, not Full access.
+4. For **Domain**, pick `stratosstudy.com`, so the key cannot send from any other domain.
+5. Press **Add**. Resend shows the key once. It starts with `re_`. Copy it and go straight to the next part. Never
+   paste it into a chat, a file or the SQL Editor (the SQL Editor keeps a history of what was typed).
+
+This key is separate from the one Supabase uses for sign-in emails, so deleting it later never touches sign-in.
+
+### Put the two secrets in Supabase
+
+1. Open **Integrations**, then **Vault**. On some dashboards Vault is under **Project Settings**. If it asks to
+   install Vault, install it.
+2. Press **Add new secret**. Name: `resend_api_key`. Secret: the `re_` key. Save.
+3. Press **Add new secret** again. Name: `report_email_to`. Secret: the address the emails should go to. Save.
+
+The names must be exactly these. To change the address later, edit `report_email_to` in Vault. Nothing else needs
+running.
+
+### Add the code
+
+1. Open **Database**, then **Extensions**, search `pg_net`, and turn it on if it is off. It lets the database send
+   the email. The file below tries to turn it on too.
+2. Open **SQL Editor**, paste the whole of `supabase/report-email.sql` and press **Run**. It should say Success. No
+   rows returned. It needs the tables from steps 2, 9 and 11, which are in already.
+3. In **Table Editor**, the `moderation` schema has a new table, `alerts`: one row per email tried, saying whether it
+   went. It has nothing about a student.
+4. In **Integrations**, then **Cron**, there is a new job, `stratos-report-catchup`, every 15 minutes. Cron is on
+   from step 12. If the job is missing, turn Cron on and run the file again. To run the catch-up once by hand, run
+   `select moderation.email_catchup();`. It answers what it did.
+5. If **Security Advisor** lists `alerts` as "RLS enabled, no policy", that is on purpose, as in step 11.
+
+Running the file again later is safe. It keeps the data.
+
+To see each report's email, newest first, run `select * from moderation.alert_status;`. `what_happened` says Resend
+accepted it, Resend refused it (with Resend's reason, such as a wrong key), it was not sent because another email went
+in the 5 minutes before, or what is missing (a Vault secret, or pg_net). A catch-up email shows as Catch-up. Resend's
+answers are kept for 6 hours.
+
+### Check it with two accounts
+
+Use A and B from step 13, with the chat open and about eight messages each way. Each message can be reported once.
+
+1. On B, tap one of A's messages, then **Report message**, then **Spam**. Within about a minute an email arrives with
+   the subject "Stratos: new report (Spam)" and "Open reports: 1". Check it has no names and no message text.
+2. On A, within 5 minutes of step 1, report one of B's messages as **Spam**. No email arrives, because the limit is for
+   everyone. In **SQL Editor**, `select * from moderation.alert_status;` shows it as not sent, and `open_reports`
+   shows both reports.
+3. On B, still within the 5 minutes, report one of A's messages as **Hurting themselves or others**. An email arrives
+   with the subject "URGENT: Stratos: new report (Hurting themselves or others)" and "Open reports: 3".
+4. Within 15 minutes of step 2, with no other report, the catch-up sends one more email: "Stratos: new report
+   (Spam)" and "Open reports: 3". That is the step 2 report, which no email had counted. To see it sooner, wait
+   until 5 minutes have passed since step 1 and run `select moderation.email_catchup();` in **SQL Editor**: it
+   answers "Sent one email about 1 report."
+5. Run `select moderation.email_catchup();` again. It answers "No reports waiting for an email."
+6. Check that a failed email cannot stop a report. In Vault, edit `report_email_to` to `not-an-email`. On B, report
+   one of A's messages as **Hurting themselves or others** (urgent, so the 5 minutes do not matter). B still sees
+   "Thanks for reporting". The report is in `open_reports`, no email arrives, and `alert_status` says Resend refused
+   it. Set `report_email_to` back to your address.
+7. Mark the test reports reviewed with `moderation.reviewed`, as in step 14.
+
+If no email arrives in step 1, `alert_status` says why.
 
 ## If the project pauses
 
