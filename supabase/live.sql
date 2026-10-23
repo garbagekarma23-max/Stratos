@@ -145,7 +145,8 @@ grant execute on function live.chat_ok(text, boolean) to authenticated;
 -- Realtime asks these rules about realtime.messages. select is joining and hearing a channel; insert is sending on
 -- it. Only broadcast (no presence), only for signed-in students, only for chat channels chat_ok allows. Rules on a
 -- table add up, so any other rule written on realtime.messages later would let more in: check them all if you add one.
-alter table realtime.messages enable row level security;
+-- Supabase already turns on row-level security on realtime.messages. The table belongs to Supabase, so the SQL Editor
+-- cannot change it (alter table fails with "must be owner of table messages"). It can only add and drop policies on it.
 drop policy if exists "stratos chat hear" on realtime.messages;
 create policy "stratos chat hear" on realtime.messages
   for select to authenticated

@@ -359,6 +359,11 @@ the typing bubble never shows, and new messages arrive within 5 seconds as befor
 
 Running `live.sql` again later is safe. It keeps the data and puts the rules back as written.
 
+An early copy of `live.sql` had the line `alter table realtime.messages enable row level security;`, which fails in the
+SQL Editor with "must be owner of table messages". Supabase owns that table and already has row-level security on it,
+so the line is gone. If you ran the file with that line deleted, as the project already has, nothing needs running
+again: the file now is exactly what you ran.
+
 What it keeps: one row per student who has the app open, holding only when their mark runs out (a minute after their
 last check-in). No history, and no "last seen". Typing and the "new message" signal pass through Realtime and are
 never saved. Message text never goes through Realtime: the friend's app still fetches it with `chat_messages`.
