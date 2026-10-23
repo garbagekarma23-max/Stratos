@@ -8,7 +8,7 @@
    "typing" at most every 2 seconds while the student types, "stop" when the box empties or the chat closes, and "new"
    with the message number after a message is sent, so the friend's app fetches it at once. No text goes this way:
    messages still only come from chat_messages. Realtime lets in only the two friends, once the message request is
-   accepted. If it can't be reached, the chat is fetched every 5 seconds, as before. */
+   accepted. The chat is still fetched every 5 seconds, so it works the same without Realtime, only slower. */
 let onl = null;           /* the last answer from online_now: {uid, online (refs), show (the switch)} */
 let onAt = 0, onBusy = false;
 function onMine() { return signedIn() && onl && onl.uid === st.uid ? onl : null; }
@@ -62,8 +62,6 @@ ACT.frshowon = async b => {
 let rt = null;            /* the channel joined now: {ref, ch, joined, sentAt, mine (typing sent), hide, soon, fetchAt} */
 let rtNo = {};            /* chats whose channel was refused or failed, and until when not to try again */
 const RT_GAP = 2000, RT_HIDE = 4000;
-/* True while the open chat's channel is joined, so the chat can be fetched less often (77-messages.js). */
-function liveOn(ref) { return !!(rt && rt.ref === ref && rt.joined); }
 /* The chat that should have a channel now: accepted, on screen, still a friend, the app in front and online. */
 function liveWant() {
   return ACCOUNTS && sb && st.uid && !document.hidden && navigator.onLine && cv && cv.loaded && cv.state === 'open' &&
@@ -85,8 +83,7 @@ function liveJoin(ref) {
     .subscribe(status => {
       if (rt !== me) return;
       me.joined = status === 'SUBSCRIBED';
-      /* Joined: fetch anything sent before the channel was ready. Refused or failed: fetch every 5 seconds instead,
-         and try again in a minute. */
+      /* Joined: fetch anything sent before the channel was ready. Refused or failed: try again in a minute. */
       if (me.joined) liveFetch(me);
       else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') { rtNo[ref] = Date.now() + 60000; liveLeave(); }
     });

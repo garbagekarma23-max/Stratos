@@ -337,7 +337,7 @@ point is learned.
 ## 18. Add online status and the typing bubble
 
 Do this once the pull request with `supabase/live.sql` is merged. Until then the app still works: nobody shows online,
-the typing bubble never shows, and chats are fetched every 5 seconds as before.
+the typing bubble never shows, and new messages arrive within 5 seconds as before.
 
 1. Open **SQL Editor** and start a new query.
 2. Paste the whole of `supabase/live.sql` and press **Run**. It should say Success. No rows returned. It needs the
@@ -376,7 +376,7 @@ Once the site is updated. Use A and B from step 13, friends, with an accepted me
 5. Open the chat on both. On A, type without sending. On B, three dots show at the bottom left within a second, and
    go a few seconds after A stops, when A empties the box, or when A leaves the chat.
 6. On A, send a message. It shows on B within a second or two.
-7. On A, block B. On B, typing no longer reaches A, and the chat closes within about 20 seconds.
+7. On A, block B. On B, typing no longer reaches A, and the chat closes within about 5 seconds.
 
 ## If the project pauses
 

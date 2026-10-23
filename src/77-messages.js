@@ -3,7 +3,8 @@
    supabase/messages.sql, which check who is asking, keep every limit and filter every message before it is saved, so
    nothing here has to be trusted. A chat is named by its friendship's ref, never by the other student's account id.
    Messages are never saved on this device: a chat is fetched when it opens, and new messages are asked for every 5
-   seconds while it is on screen (every 20 while its Realtime channel tells this app of new ones, see 79-live.js). The list of chats (who has unread messages or a request) comes with the friends
+   seconds while it is on screen. While both students have it open, its Realtime channel (79-live.js) brings new ones
+   at once too. The list of chats (who has unread messages or a request) comes with the friends
    list, every 10 seconds on Friends and every 30 seconds elsewhere, for the dot on Home. */
 let chs = null;          /* the last answer from chats_state, with uid (whose it is) */
 let cv = null;           /* the chat open now: {ref, state, list, more, ban, loaded} */
@@ -160,12 +161,8 @@ async function chatFetch(full) {
   if (seen || changed) frRepaint();
   liveSync();
 }
-/* Every 5 seconds, or every 20 while the chat's Realtime channel is joined and brings new messages at once. */
-setInterval(() => {
-  if (!cv || !pageIs('chat', cv.ref) || document.hidden || !navigator.onLine || !st.uid) return;
-  if (liveOn(cv.ref) && Date.now() - cv.at < 20000) return;
-  chatFetch(false);
-}, 5000);
+/* Every 5 seconds, even with the Realtime channel joined: the fetch also brings a ban, an unban or the chat closing. */
+setInterval(() => { if (cv && pageIs('chat', cv.ref) && !document.hidden && navigator.onLine && st.uid) chatFetch(false); }, 5000);
 /* The list of chats, for the dot, while Friends and the chat are not on screen. */
 setInterval(() => { if (!pageIs('friends') && !pageIs('chat') && !document.hidden && navigator.onLine && st.uid) frLoad(); }, 30000);
 ACT.mearlier = async b => {

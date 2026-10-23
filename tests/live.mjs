@@ -210,6 +210,7 @@ await A.p.click('[data-act="msend"]');
 check(await until(async () => (await bubbles(B.p)).includes('Did you get question 4?'), 4000), 'her message reaches Ben without waiting for the 5-second fetch: ' + (Date.now() - s0) + ' ms', R);
 check(await typing(B.p).count() === 0, 'and the typing bubble is gone', R);
 check(Date.now() - s0 < 2500, 'within 2.5 seconds', R);
+check(f.rt.log.some(x => x.send && x.event === 'new' && x.from === ua.id && x.ok && Number.isInteger(x.payload.n)), 'because Ana\'s app sent "new" with the message number on the channel', R);
 await box(B.p).fill('Yes, 42');
 await B.p.click('[data-act="msend"]');
 check(await until(async () => (await bubbles(A.p)).includes('Yes, 42'), 2500), 'and the other way', R);
@@ -217,11 +218,6 @@ const sends = f.rt.log.filter(x => x.send);
 check(sends.length > 0 && sends.every(x => ['typing', 'stop', 'new'].includes(x.event) && Object.keys(x.payload).every(k => k === 'n') && x.ok), 'Realtime only carried typing, stop and new with a message number, never text', R);
 check(!JSON.stringify(sends).includes('question 4') && !JSON.stringify(sends).includes('42"'), 'no message text went through Realtime', R);
 check((await f.admin('select count(*)::int c from realtime.messages')).rows[0].c === 0, 'and nothing was kept in realtime.messages', R);
-// Polling slows while the channel is joined.
-const fetchesBefore = f.log.filter(l => l.includes('/rpc/chat_messages')).length;
-await A.p.waitForTimeout(12000);
-const fetches = f.log.filter(l => l.includes('/rpc/chat_messages')).length - fetchesBefore;
-check(fetches <= 2, 'with the channel joined, the chats are fetched less often (' + fetches + ' in 12 seconds for both phones)', R);
 
 // ---------- leaving the chat ----------
 await box(A.p).pressSequentially('one more', {delay: 30});
