@@ -51,14 +51,19 @@ function whenText(t) {
   if (diff === 1) return 'Yesterday ' + time;
   return d.toLocaleDateString('en-AU', {weekday: 'short', day: 'numeric', month: 'short'}) + ', ' + time;
 }
+/* The messages, with challenge cards (78-challenges.js) in among them by when each was sent. While earlier messages
+   are not loaded, challenges from before the first one shown wait until they are. */
 function msgsHtml(f) {
-  const name = esc(frShown(f));
+  const name = esc(frShown(f)), from = cv.more && cv.list.length ? new Date(cv.list[0].at).getTime() : 0;
   let h = cv.more ? '<button class="textbtn ms-earlier" type="button" data-act="mearlier">Show earlier messages</button>' : '', last = 0;
-  if (!cv.list.length) h += '<p class="sys">No messages yet. Say hello.</p>';
-  cv.list.forEach(m => {
-    const t = new Date(m.at).getTime();
-    if (t - last > 15 * 60000) h += '<p class="sys ms-when">' + whenText(m.at) + '</p>';
-    last = t;
+  const items = cv.list.map(m => ({t: new Date(m.at).getTime(), m: m}))
+    .concat(chFor(f.ref).map(c => ({t: new Date(c.at).getTime(), c: c})).filter(x => x.t >= from)).sort((x, y) => x.t - y.t);
+  if (!items.length) h += '<p class="sys">No messages yet. Say hello.</p>';
+  items.forEach(x => {
+    if (x.t - last > 15 * 60000) h += '<p class="sys ms-when">' + whenText(x.t) + '</p>';
+    last = x.t;
+    if (x.c) { h += chCard(x.c); return; }
+    const m = x.m;
     h += '<div class="msg' + (m.mine ? ' mine' : '') + '" data-n="' + m.n + '">' +
       (m.mine ? '<div class="bubble ms">' + esc(m.text) + '</div>' : '<button class="bubble ms" type="button" data-act="mmsg" data-n="' + m.n + '">' + esc(m.text) + '</button>') + '</div>';
     if (m.care) h += '<p class="care' + (m.mine ? ' mine' : '') + '">' + (m.mine ? 'If you’re not okay, you don’t have to deal with it alone. ' + helpLine()
@@ -74,24 +79,27 @@ PAGE.chat = ref => {
   else if (Date.now() - cv.at > 1500) setTimeout(() => chatFetch(false), 0);  /* opened again: fetch what is new now */
   const more = '<button class="icon-btn" type="button" data-act="frfriend" data-ref="' + ref + '" aria-label="About ' + n + '">' + IC.more + '</button>';
   const page = {title: name, avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
+  setTimeout(() => chSeen(ref), 0);
   if (!cv.loaded) return Object.assign(page, {html: '<p class="sys">' + (frOffline ? 'No connection. This chat will show once you are online.' : 'Loading.') + '</p>'});
   if (cv.state === 'none') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<p class="sys">You and ' + n + ' are friends. Send a message request to start chatting. ' + n + ' can accept or decline.</p>' +
       '<div class="cta"><button class="primary" type="button" data-act="mask">Send message request</button></div>' +
-      '<p class="fine">Messages are text only. Stratos doesn’t send messages with links, phone numbers, email addresses or words it doesn’t allow.</p>'});
+      '<p class="fine">Messages are text only. Stratos doesn’t send messages with links, phone numbers, email addresses or words it doesn’t allow.</p>' + chChatPart(ref)});
   }
   if (cv.state === 'sent') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<p class="sys">Message request sent. You can message ' + n + ' once they accept.</p>' +
-      '<div class="cta"><button class="ghost" type="button" data-act="mcancel">Cancel request</button></div>'});
+      '<div class="cta"><button class="ghost" type="button" data-act="mcancel">Cancel request</button></div>' + chChatPart(ref)});
   }
   if (cv.state === 'asked') {
     return Object.assign(page, {cls: 'thread ms-ask', html: '<h3 class="h2">' + n + ' wants to message you.</h3>' +
       '<p class="sub">Accept only if you know ' + n + ' and want to chat. You can block them at any time.</p>' +
-      '<div class="cta"><button class="primary" type="button" data-act="maccept">Accept</button><button class="ghost" type="button" data-act="mdecline">Decline</button></div>'});
+      '<div class="cta"><button class="primary" type="button" data-act="maccept">Accept</button><button class="ghost" type="button" data-act="mdecline">Decline</button></div>' + chChatPart(ref)});
   }
+  /* Send a challenge sits above the box. A ban from messaging does not stop challenges. */
+  const acts = '<div class="acts one">' + chButton(ref) + '</div>';
   const foot = cv.ban
-    ? '<footer class="composer ms-banned"><p class="sub">' + banText(cv.ban) + '</p><p class="fine">This is because of a report. You can still read your chats, and friends still work. Questions? Email support@stratosstudy.com.</p></footer>'
-    : '<footer class="composer ms-box"><p class="fine err" id="msErr" role="alert" hidden></p><div class="ms-row">' +
+    ? '<footer class="composer ms-banned">' + acts + '<p class="sub">' + banText(cv.ban) + '</p><p class="fine">This is because of a report. You can still read your chats, and friends still work. Questions? Email support@stratosstudy.com.</p></footer>'
+    : '<footer class="composer ms-box">' + acts + '<p class="fine err" id="msErr" role="alert" hidden></p><div class="ms-row">' +
       '<textarea id="msgIn" rows="1" placeholder="Message" aria-label="Message to ' + n + '" autocomplete="off"></textarea>' +
       '<button class="primary sm" type="button" data-act="msend" disabled>Send</button></div><p class="fine ms-count" aria-live="polite" hidden></p></footer>';
   return Object.assign(page, {html: '<p class="sys">Only you and ' + n + ' can read this chat. Messages are deleted after 90 days.</p>' + msgsHtml(f), foot: foot});

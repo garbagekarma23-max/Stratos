@@ -97,7 +97,7 @@ function startMathsFlight(o) {
   clearTimeout(raceTimer);
   if (pad) pad.stop();
   P = {maths: true, mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null,
-    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed,
+    them: o.them == null ? null : o.them, themMs: o.themMs || null, seed: seed, real: !!o.real, cref: o.cref || null, foe: o.foe || null,
     items: picked.map(x => ({p: x.p, q: x.q || null, back: false})), res: [], total: picked.length,
     combo: 0, row: 0, best: 0, alt: 0, done: false, cut: false, pb: false, first: 0, sent: false,
     lines: 0, wrong: 0, ms: 0, newBest: false, busy: false, before: CH.map(c => chStats(c).pct),
@@ -268,6 +268,7 @@ function mpFinish(c, o, gain) {
   if (pad && pad.el === $('.work', sec)) { pad.trim(); P.lines += pad.count(); pad.lock(); }     /* no pad yet if Answer came before MathLive loaded */
   P.res.push({o: o, gain: gain});
   P.busy = false;
+  chKeep();
   sec.classList.add('done');
   $('.mq-head .actions', sec).hidden = true;
   const end = document.createElement('li');
@@ -307,19 +308,22 @@ function paintSegs() {
     return '<i class="seg' + fill + (i === cur ? ' cur' : '') + '"></i>';
   }).join('');
 }
-/* The clock runs only while the flight is on screen: not during lift-off, on another tab, or with the page hidden. */
+/* The clock runs only while the flight is on screen: not during lift-off, on another tab, or with the page hidden.
+   Maths flights have it, and so does every challenge, where the faster time wins on level scores. */
+const timed = () => !!P && (P.maths || P.mode === 'challenge');
 let clockLast = 0;
 setInterval(() => {
   const now = performance.now(), dt = now - (clockLast || now);
   clockLast = now;
-  if (!P || !P.maths || P.done) return;
+  if (!timed() || P.done) return;
   if (ui.tab === 'practice' && launch.hidden && !document.hidden && !pages.length) P.ms += Math.min(dt, 1000);
   fClock.textContent = clockText(P.ms);
 }, 250);
-/* Set the flight's extras up when it is mounted: segments and clock for maths, neither for Economics. */
+/* Set the flight's extras up when it is mounted: segments and clock for maths, the clock alone for an Economics
+   challenge, neither for other Economics flights. */
 function mpMount() {
   run.dataset.sub = P.maths ? 'maths' : 'eco';
-  fClock.hidden = !P.maths;
+  fClock.hidden = !timed();
   fClock.textContent = '0:00';
   paintSegs();
 }
@@ -343,12 +347,13 @@ function mpSummary() {
     '<p class="sumline">' + (b ? 'Best time for ' + scope + ', ' + plural(P.total, 'question') + ': ' + clockText(b) + '.' : 'A best time needs every question answered, with none skipped or shown.') + '</p>';
 }
 
-/* The extra row on a maths challenge or race result: your time (and the friend's, in a challenge), lines and wrong lines. */
+/* The extra row on a challenge or maths race result: your time (and the friend's, in a challenge), and in maths
+   lines and wrong lines. A friend who has not played yet has no time: Playing for a sample friend, Not played for a real one. */
 function mpGameStats(fr) {
-  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
-  return '<dl class="stats"><div><dt>Your time</dt><dd>' + clockText(P.ms) + '</dd></div>' + them + '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div></dl>';
+  const them = fr ? '<div><dt>' + esc(fr.name) + '\'s time</dt><dd>' + (P.themMs ? clockText(P.themMs) : fr.real ? 'Not played' : 'Playing') + '</dd></div>' : '<div><dt>Lines</dt><dd>' + P.lines + '</dd></div>';
+  return '<dl class="stats"><div><dt>Your time</dt><dd class="myT">' + clockText(P.ms) + '</dd></div>' + them + (P.maths ? '<div><dt>Wrong lines</dt><dd>' + P.wrong + '</dd></div>' : '') + '</dl>';
 }
-/* The verdict on a maths challenge the friend has already played. More right answers wins; level scores go to the faster time. */
+/* The verdict on a challenge the friend has already played. More right answers wins; level scores go to the faster time. */
 function mpChallengeLine(fr) {
   const o = challengeOutcome(P.first, P.them, P.ms, P.themMs), t = P.themMs ? ' in ' + clockText(P.themMs) : '';
   if (o === 'won') return 'You won. ' + fr.name + ' scored ' + P.them + t + '.';

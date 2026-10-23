@@ -119,15 +119,18 @@ const FRIENDS = [
   {id: 'tom', name: 'Tom', week: 12, skill: 0.55, pace: 18, mpace: 45}
 ];
 /* Challenges and races in each subject. A maths question takes about three times as long as tapping an option,
-   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6. */
-const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}};
+   so a maths challenge has 5 questions and a maths race is first to 4, which take about as long as Economics' 8 and 6.
+   The Edexcel course has challenges but no races yet. */
+const GAME = {eco: {challenge: 8, race: 6}, maths: {challenge: 5, race: 4}, edexcel: {challenge: 8}};
 /* Maths chapter 2 (squares) needs more lines than chapter 1, so the sample friends take 1.3 times as long there. */
 const MATHS_SLOW = {m1: 1, m2: 1.3};
 const subOf = chId => { const c = chOf(chId); return c ? c.sub : 'eco'; };
-const gameSize = (chId, kind) => GAME[subOf(chId)][kind];
+/* An Economics challenge asks two questions per point at most, so a chapter with 2 points has 4 questions.
+   supabase/challenges.sql keeps the same sizes for real friends, and a test checks they match. */
+const gameSize = (chId, kind) => kind === 'challenge' && subOf(chId) !== 'maths' ? Math.min(GAME[subOf(chId)].challenge, 2 * chOf(chId).points.length) : GAME[subOf(chId)][kind];
 /* A sample friend's seconds for each right answer on a chapter. */
 function paceOf(f, chId) { return subOf(chId) === 'maths' ? f.mpace * (MATHS_SLOW[chId] || 1.3) : f.pace; }
-/* A pretend time for a friend playing a maths challenge, in ms: their pace for each question, give or take a fifth. */
+/* A pretend time for a friend playing a challenge, in ms: their pace for each question, give or take a fifth. */
 function pretendTime(f, chId, total) { let ms = 0; for (let i = 0; i < total; i++) ms += paceOf(f, chId) * 1000 * (0.8 + Math.random() * 0.4); return Math.round(ms); }
 const friend = id => FRIENDS.find(f => f.id === id) || FRIENDS[0];
 const REPLIES = ['Nice one', 'Rematch?', 'Too easy', 'Good game'];
@@ -182,6 +185,8 @@ function tidySaved() {
       moved = true;
     }
   }));
+  /* Every challenge is timed now. A sample friend's score from before that gets a pretend time. */
+  FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.them != null && m.themMs == null) { m.themMs = pretendTime(f, m.ch, m.total); moved = true; } }));
   /* A challenge a friend was still playing when the page closed is finished now. */
   FRIENDS.forEach(f => saved.th[f.id].forEach(m => { if (m.kind === 'challenge' && m.state === 'wait') { friendScores(f, m); m.state = 'done'; } }));
   if (moved) save();
@@ -198,8 +203,8 @@ function seedThreads() {
   saved.mid = 10;
 }
 function pretendScore(f, total) { let n = 0; for (let i = 0; i < total; i++) if (Math.random() < f.skill) n++; return n; }
-/* A sample friend's pretend score on a challenge, and in maths their pretend time too. */
-function friendScores(f, m) { m.them = pretendScore(f, m.total); if (subOf(m.ch) === 'maths') m.themMs = pretendTime(f, m.ch, m.total); }
+/* A sample friend's pretend score and time on a challenge. */
+function friendScores(f, m) { m.them = pretendScore(f, m.total); m.themMs = pretendTime(f, m.ch, m.total); }
 function ownsRocket(id) { const r = ROCKETS.find(x => x.id === id); return !!r && !r.price && (!r.earn || streakNow() >= r.earn); }
 
 const dayKey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -261,10 +266,11 @@ function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x 
 /* How a chapter is named: "Chapter 2", or "Unit 1, chapter 2" in a course with units. */
 const chName = c => c.unit ? 'Unit ' + c.unit + ', chapter ' + c.n : 'Chapter ' + c.n;
 /* The list of chapters in a sheet, for picking one. A course numbers its chapters within each unit, so each unit's
-   name goes above its chapters. A unit with no chapter ready yet is left out. row draws one chapter. */
-const chPicks = row => SUB.units
-  ? SUB.units.filter(u => CH.some(c => c.unit === u.n)).map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><div class="picks">' + CH.filter(c => c.unit === u.n).map(row).join('') + '</div>').join('')
-  : '<div class="picks">' + CH.map(row).join('') + '</div>';
+   name goes above its chapters. A unit with no chapter ready yet is left out. row draws one chapter.
+   S is the subject, the one picked on Home unless another is given. */
+const chPicks = (row, S) => (S = S || SUB, S.units
+  ? S.units.filter(u => S.ch.some(c => c.unit === u.n)).map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><div class="picks">' + S.ch.filter(c => c.unit === u.n).map(row).join('') + '</div>').join('')
+  : '<div class="picks">' + S.ch.map(row).join('') + '</div>');
 /* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
 const isDraft = c => !!c && c.check === 'draft';
 const DRAFT = '<span class="tag">Draft</span>';

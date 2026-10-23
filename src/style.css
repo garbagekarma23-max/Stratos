@@ -586,6 +586,18 @@ button.bubble.ms{border:0}
 .ms-count.over{color:var(--bad)}
 .ms-banned{gap:4px}
 .ms-quote{margin:0;padding:10px 14px;border-left:3px solid var(--line-2);font-size:15px;line-height:1.4;white-space:pre-wrap;overflow-wrap:anywhere}
+/* Challenges with real friends (78-challenges.js): a friend's row with its Challenge button, the card's two buttons,
+   the challenges under a chat with no message request accepted, and the results on a friend's sheet. */
+.fr-friend{grid-template-columns:minmax(0,1fr) auto}
+.fr-open{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;min-width:0;min-height:46px;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left}
+.composer .acts.one{grid-template-columns:1fr}
+.mcard .ch-acts{display:flex;gap:8px;margin-top:8px}
+.mcard .ch-acts .primary,.mcard .ch-acts .ghost{flex:1;min-height:40px;margin:0;padding:0 12px;font-size:14px}
+.ch-part{display:flex;flex-direction:column;gap:10px;margin-top:8px;padding-top:6px;border-top:1px solid var(--line)}
+.ch-part .fr-h{margin:6px 0 0}
+.ch-results{display:grid;gap:6px;margin:0 0 8px;padding:0;list-style:none;font-size:14px;line-height:1.4}
+.ch-results li{padding-bottom:6px;border-bottom:1px solid var(--line)}
+.ch-tally{margin-bottom:6px}
 
 .shelf-h{margin:24px 0 10px;font:700 15px/1.2 var(--f)}
 .shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}

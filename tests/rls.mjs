@@ -14,8 +14,9 @@ const rows = async (uid, sql, params) => (await f.as(uid, sql, params)).rows;
 // Row-level security is on for every table the app can reach.
 const tables = (await f.admin("select c.relname, c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r'")).rows;
 // schema.sql has profiles and progress. friends.sql (checked in friends-db.mjs) adds the friends tables, and
-// messages.sql (checked in messages-db.mjs) the chat tables.
-const ALL = ['banned_words', 'blocks', 'chats', 'friend_codes', 'friend_log', 'friend_requests', 'friend_seen', 'friendships', 'message_log', 'messages', 'profiles', 'progress'];
+// messages.sql (checked in messages-db.mjs) the chat tables, and challenges.sql (checked in challenges-db.mjs) the
+// challenge tables.
+const ALL = ['banned_words', 'blocks', 'challenge_chapters', 'challenge_log', 'challenges', 'chats', 'friend_codes', 'friend_log', 'friend_requests', 'friend_seen', 'friendships', 'message_log', 'messages', 'profiles', 'progress'];
 check(tables.map(t => t.relname).sort().join() === ALL.join() && tables.every(t => t.relrowsecurity), 'row-level security is on for every table: ' + tables.map(t => t.relname).sort().join(', '), R);
 
 // Someone not signed in gets nothing.

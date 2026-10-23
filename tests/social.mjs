@@ -37,19 +37,21 @@ check((await text('#sheetTitle')) === 'Before you play' && (await text('#sheetBo
 await shot(p, 'soc-cold-sheet');
 await pause();                                      // the launch card is gone within half a second
 await p.click('#sheetBody [data-act="play"]'); await p.waitForTimeout(100);
-check(await p.locator('#launch:not([hidden])').count() === 1 && (await text('#launchMark')).includes('Mia scored 6 of 8. Beat it.'), 'the launch card names the score to beat', R);
+check(await p.locator('#launch:not([hidden])').count() === 1 && /Mia scored 6 of 8 in \d+:\d\d\. Beat it\./.test(await text('#launchMark')), 'the launch card names the score and time to beat', R);
 await ctx.clock.resume();
 await ff(1500);
 check(await p.locator('#launch[hidden]').count() === 1 && (await text('#modeT')) === 'Challenge, Mia got 6 of 8', 'the challenge flight starts', R);
 check(await p.locator('#feed .actions').count() === 0, 'a challenge has no clue, answer or skip buttons', R);
 await playAll(8, [1, 5]);
 let sum = await text('#feed .summary');
-check(sum.includes('6 of 8') && sum.includes('A draw. Mia scored 6.'), 'result: 6 of 8, a draw', R);
+// Level scores go to the faster time, in Economics too.
+check(sum.includes('6 of 8') && /(You|Mia) won on time\. Mia also scored 6 in \d+:\d\d\./.test(sum) && /Your time\d+:\d\d/.test(sum), 'result: 6 of 8, level, decided on time', R);
+const onTime = sum.includes('You won on time') ? 'You won on time.' : 'Mia won on time.';
 await shot(p, 'soc-challenge-result');
 await p.click('[data-act="tothread"]'); await p.waitForTimeout(150);
-check((await text('.page h2')) === 'Mia' && (await text('.mcard')).includes('You6 of 8') && (await text('.mcard .out')) === 'A draw.', 'the card in the thread now shows both scores', R);
+check((await text('.page h2')) === 'Mia' && /You6 of 8\d+:\d\d/.test(await text('.mcard')) && (await text('.mcard .out')) === onTime, 'the card in the thread now shows both scores and times', R);
 await ff(3200);
-check((await p.locator('.msg .bubble').last().textContent()) === 'Good game', 'Mia replies Good game', R);
+check((await p.locator('.msg .bubble').last().textContent()) === (onTime.startsWith('You') ? 'Rematch?' : 'Too easy'), 'Mia replies to the result', R);
 await shot(p, 'soc-thread-mia-done');
 let s = await saved(p);
 check(Object.keys(s.ans).length === 8 && s.week.n === 6, '8 answers saved and 6 counted for the week', R);

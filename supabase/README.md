@@ -295,6 +295,45 @@ Use A and B from step 13, with the chat open and about eight messages each way. 
 
 If no email arrives in step 1, `alert_status` says why.
 
+## 16. Add challenges
+
+Do this once the pull request with `supabase/challenges.sql` is merged. Until then the app still works: Friends shows
+the list, and Challenge says something went wrong.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/challenges.sql` and press **Run**. It should say Success. No rows returned. It needs the
+   tables from steps 2, 9 and 11, which are in already.
+3. Start a new query, paste the whole of `supabase/messages.sql` again and press **Run**. This adds challenges to the
+   daily clean-up from step 12. Running it again is safe: it keeps every chat, message and report.
+4. Open **Table Editor**. There should be three new tables, `challenge_chapters`, `challenges` and `challenge_log`,
+   none marked as unprotected. `challenge_chapters` has 18 rows, one for each chapter a challenge can use.
+5. Open **Advisors**, then **Security Advisor**. Expected, and nothing else new: "RLS enabled, no policy" on the three
+   new tables (only the functions in the file reach them), and the note about `security definer` functions.
+
+Running `challenges.sql` again later is safe. It keeps the data, and puts `challenge_chapters` back as the file says.
+A new chapter in the app needs a line in that list and the file run again. A test checks the list matches the app.
+
+## 17. Check challenges with two accounts
+
+Once the site is updated. Use A and B from step 13, friends, each with a call sign. A needs one chapter where every
+point is learned.
+
+1. On A, open Friends and tap **Challenge** on B's row. A chapter A has not learned says "Learn every point first" and
+   cannot be picked. Pick the learned one. A plays 8 questions, and the result says "Sent to B. They have 7 days to
+   play it."
+2. In **Table Editor**, `challenges` has one row, with A's score in `from_right` and time in `from_ms`. There is no
+   email or name in it.
+3. On B, within about 10 seconds with Friends open, the challenge shows under **Challenges to play**, with the score
+   and time to beat. Home's friends button has a dot. Tap **Play**. B gets the same questions as A, in the same order.
+4. Both chats show the card with both scores and who won. On A, B's row says the result, with a dot that goes when
+   the chat opens.
+5. On A, send another challenge. On B, tap **Decline**. B sees "Declined. A isn’t told." A's card still says it is
+   waiting.
+6. On A, open the chat, tap the button at the top right, and check the tally under **Challenges**.
+7. On B, block A. `challenges` is empty.
+8. To run the clean-up by hand: `select moderation.cleanup();`. It also deletes challenges older than 90 days and
+   ones a challenger started and never finished.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press

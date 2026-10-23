@@ -76,8 +76,19 @@ marksEl.innerHTML = MILES.filter(m => m.m).map(m => {
 }).join('');
 const marks = Array.from(marksEl.children).map(el => ({el: el, l: +el.dataset.l, on: false}));
 
+/* The questions for an Economics challenge, made from its seed alone, so a friend gets the same ones in the same
+   order with the options in the same places. Practice questions (b) first, then check questions (a), easiest first. */
+function ecoSet(ch, seed, n) {
+  const rnd = MAKE.seeded(seed), mix = l => { for (let i = l.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const t = l[i]; l[i] = l[j]; l[j] = t; } return l; };
+  const as = mix(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = mix(ch.points.map(p => ({p: p.id, k: 'b'})));
+  return bs.concat(as).slice(0, n).sort((x, y) => dOf(x) - dOf(y)).map(x => ({p: x.p, k: x.k, perm: mix([0, 1, 2, 3])}));
+}
+/* The friend in a challenge or race: a sample friend, or a real one (78-challenges.js), who has a ref and a name. */
+const foe = () => P.real ? {id: P.friend, name: P.foe, real: true} : friend(P.friend);
+
 /* Start a flight. o.mode is mix or chapter (your own practice), challenge (a set of questions a friend plays too)
-   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject. */
+   or race (first to a number of right answers). GAME in 10-core.js has the sizes for each subject.
+   A challenge with a real friend has real, cref (the challenge's ref), foe (their name) and the seed the database picked. */
 function startPractice(o) {
   sound.wake();
   /* A challenge or race is played in its chapter's subject. Starting one in the other subject switches Home to it. */
@@ -87,18 +98,22 @@ function startPractice(o) {
   }
   /* A maths flight, challenge or race is worked on the keypad (62-maths-practice.js). */
   if (isMaths()) { startMathsFlight(o); return; }
-  let picked;
-  if (o.mode === 'challenge' || o.mode === 'race') {
-    const ch = chOf(o.ch), as = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))), bs = shuffle(ch.points.map(p => ({p: p.id, k: 'b'})));
-    picked = o.mode === 'race' ? as.concat(bs) : bs.concat(as).slice(0, GAME.eco.challenge);
+  let picked, seed = null;
+  if (o.mode === 'challenge') {
+    seed = o.seed != null ? o.seed : MAKE.newSeed();
+    picked = ecoSet(chOf(o.ch), seed, gameSize(o.ch, 'challenge'));
+  } else if (o.mode === 'race') {
+    const ch = chOf(o.ch);
+    picked = shuffle(ch.points.map(p => ({p: p.id, k: 'a'}))).concat(shuffle(ch.points.map(p => ({p: p.id, k: 'b'}))));
   } else picked = poolFor(o.mode, o.ch).slice(0, o.len || 8);
   closeSheet(); closeAllPages();
   if (!picked.length) { go('practice'); return; }
-  picked.sort((x, y) => dOf(x) - dOf(y));               /* easiest first, so a combo can build */
+  if (o.mode !== 'challenge') picked.sort((x, y) => dOf(x) - dOf(y));               /* easiest first, so a combo can build */
   token++;
   clearTimeout(raceTimer);
   P = {mode: o.mode, ch: o.ch || null, len: o.len || 8, friend: o.friend || null, msg: o.msg || null, them: o.them == null ? null : o.them,
-    items: picked.map(x => ({p: x.p, k: x.k, perm: shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
+    themMs: o.themMs || null, seed: seed, real: !!o.real, cref: o.cref || null, foe: o.foe || null, ms: 0,
+    items: picked.map(x => ({p: x.p, k: x.k, perm: x.perm || shuffle([0, 1, 2, 3]), back: false})), res: [], total: picked.length,
     combo: 0, best: 0, alt: 0, clue: false, done: false, cut: false, pb: false, first: 0, sent: false, before: CH.map(c => chStats(c).pct),
     race: o.mode === 'race' ? {target: GAME.eco.race, me: 0, them: 0, over: false, left: false} : null};
   mountRun();
@@ -106,16 +121,16 @@ function startPractice(o) {
   playLaunch(launchCard(), P.race ? () => { P.race.go = true; raceMusic(); raceArm(); } : null);
 }
 function launchCard() {
-  const f = P.friend ? friend(P.friend).name : '';
+  const f = P.friend ? foe().name : '';
   if (P.mode === 'race') return {title: 'Race ' + f, line: 'First to ' + P.race.target + ' correct wins', count: true};
-  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.maths && P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
+  if (P.mode === 'challenge') return {title: P.maths ? 'Maths challenge' : 'Challenge', line: P.them == null ? plural(P.total, 'question') + '. ' + f + ' plays the same set after you.' : f + ' scored ' + P.them + ' of ' + P.total + (P.themMs ? ' in ' + clockText(P.themMs) : '') + '. Beat it.'};
   if (P.mode === 'chapter') return {title: chName(chOf(P.ch)), line: plural(P.total, 'question') + ', weak points first'};
   return {title: 'Mixed flight', line: plural(P.total, 'question') + ', weak points first'};
 }
 function modeLabel() {
   const m = P.maths ? 'Maths ' : '', c = P.maths ? 'challenge' : 'Challenge';
   if (P.mode === 'race') return (P.maths ? 'Maths race' : 'Race') + ' to ' + P.race.target;
-  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + friend(P.friend).name : m + c + ', ' + friend(P.friend).name + ' got ' + P.them + ' of ' + P.total;
+  if (P.mode === 'challenge') return P.them == null ? m + c + ' for ' + foe().name : m + c + ', ' + foe().name + ' got ' + P.them + ' of ' + P.total;
   if (P.mode === 'chapter') return chName(chOf(P.ch));
   return 'Mixed flight';
 }
@@ -283,6 +298,7 @@ function answer(sec, n) {
   P.res.push({o: right ? 'correct' : 'wrong', pick: n, clue: P.clue, gain: mult});
   P.clue = false;
   record(c.it.p, c.it.k, right);
+  chKeep();
   paintResolved(P, c.sec, c.i);
   const btn = $('.opt[data-n="' + n + '"]', c.sec);
   if (right) {
@@ -376,7 +392,7 @@ function finish() {
   postResult();
 }
 function summaryEl() {
-  const f = fmt(P.alt), nx = nextStop(P.alt), sec = document.createElement('section'), fr = P.friend ? friend(P.friend) : null;
+  const f = fmt(P.alt), nx = nextStop(P.alt), sec = document.createElement('section'), fr = P.friend ? foe() : null;
   const asked = P.items.filter((it, i) => !it.back && P.res[i] && P.res[i].o !== 'closed').length;
   const seen = [];
   P.items.forEach(it => { if (seen.indexOf(it.p) < 0) seen.push(it.p); });
@@ -386,15 +402,15 @@ function summaryEl() {
   const homeBtn = '<button class="textbtn" type="button" data-act="home">Back to Home</button>';
   let h;
   if (P.mode === 'challenge') {
-    const out = P.them == null ? fr.name + ' is playing the same set now.' : P.maths ? mpChallengeLine(fr)
-      : (P.first > P.them ? 'You won. ' : P.first < P.them ? fr.name + ' won. ' : 'A draw. ') + fr.name + ' scored ' + P.them + '.';
-    h = '<p class="meta"><span>Challenge complete</span></p>' +
+    const out = P.them != null ? mpChallengeLine(fr) : fr.real ? 'Sent to ' + fr.name + '. They have 7 days to play it.' : fr.name + ' is playing the same set now.';
+    h = '<p class="meta"><span>' + (fr.real && P.them == null ? 'Challenge sent' : 'Challenge complete') + '</span></p>' +
       '<p class="big"><span>' + P.first + ' of ' + P.total + '</span><small>' + (P.cut ? 'You ended early, so the rest count as wrong' : 'right') + '</small></p>' +
       '<h2 class="verdict">' + esc(out) + '</h2>' +
       '<dl class="stats"><div><dt>Altitude</dt><dd>' + f.n + ' ' + f.u + '</dd></div><div><dt>Best combo</dt><dd>×' + P.best + '</dd></div><div><dt>Day streak</dt><dd>' + streakNow() + '</dd></div></dl>' +
-      (P.maths ? mpGameStats(fr) : '') +
+      mpGameStats(fr) +
       weakLine +
-      '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>' + homeBtn;
+      (fr.real ? '<div class="cta"><button class="primary" type="button" data-act="tochat" data-f="' + fr.id + '">See it in chat</button></div>'
+        : '<div class="cta"><button class="primary" type="button" data-act="tothread" data-f="' + fr.id + '">See it in messages</button></div>') + homeBtn;
   } else if (P.mode === 'race') {
     const R = P.race, out = R.left ? 'You left the race.' : (R.me >= R.target ? 'You won the race.' : fr.name + ' won the race.');
     h = '<p class="meta"><span>Race over</span></p>' +
@@ -428,7 +444,8 @@ let endArm = 0;
 function disarmEnd() { clearTimeout(endArm); endBtn.dataset.armed = ''; }
 ACT.end = () => {
   if (!P) return;
-  if (P.done || !P.res.length) { closeRun(); return; }
+  /* A friend playing a real challenge has started it already, so even with nothing answered, ending takes two taps. */
+  if (P.done || (!P.res.length && !(P.real && P.them != null))) { closeRun(); return; }
   if (endBtn.dataset.armed !== '1') { endBtn.dataset.armed = '1'; toast('Tap the cross again to end this flight'); endArm = setTimeout(disarmEnd, 3200); return; }
   disarmEnd();
   const c = P.maths ? mpWaiting() : current();
