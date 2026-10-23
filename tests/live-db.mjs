@@ -165,6 +165,10 @@ check(!(await hear(cr.b.id, cr.ref)) && !(await send(cr.b.id, cr.ref)), 'after r
 await here(c.a.id);
 await f.db.exec(LIVE_SQL);
 check(await sees(c.b.id, c.ref) && await hear(c.a.id, c.ref), 'running live.sql again keeps the data and the rules', R);
+const rt = await admin("select c.relrowsecurity as on, pg_get_userbyid(c.relowner) as owner from pg_class c join pg_namespace s on s.oid = c.relnamespace where s.nspname = 'realtime' and c.relname = 'messages'");
+check(rt[0].on && rt[0].owner === 'supabase_realtime_admin', 'realtime.messages belongs to Supabase and has row-level security on, as in a real project', R);
+check(await admin('alter table realtime.messages enable row level security').then(() => false, e => e.code) === '42501',
+  'the SQL Editor cannot alter realtime.messages, so live.sql never tries', R);
 const pol = (await admin("select polname from pg_policy where polrelid = 'realtime.messages'::regclass order by 1")).map(x => x.polname);
 check(pol.join() === 'stratos chat hear,stratos chat send', 'exactly two rules on realtime.messages: ' + pol.join(), R);
 check(!/@(?!example\.com)[a-z0-9-]+\.[a-z]/i.test(LIVE_SQL.replace(/support@stratosstudy\.com/g, '')), 'no real email address in live.sql', R);

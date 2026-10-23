@@ -46,12 +46,48 @@ create function cron.schedule(job_name text, schedule text, command text) return
 -- Realtime's table of rules for channels. Supabase makes it with row-level security on. Realtime sets realtime.topic
 -- to the channel's name, then asks as the student whether they may read (join and hear) or insert (send). The fake's
 -- Realtime (fake-supabase.mjs) asks the same way. Nothing is ever kept in it: every check is rolled back.
-create schema realtime;
+-- In Supabase the schema and table belong to supabase_realtime_admin, not to postgres, the user the SQL Editor runs
+-- as. So postgres cannot alter the table (enable row-level security on it, add a column, change its owner, and so on).
+-- The one thing Supabase lets postgres do there is add, change and drop policies on realtime.messages (its supautils
+-- extension's policy_grants). The stand-in has the same owner.
+create role supabase_realtime_admin nologin;
+create schema realtime authorization supabase_realtime_admin;
 create table realtime.messages (id bigserial primary key, topic text not null, extension text not null, event text,
   payload jsonb, private boolean default true, inserted_at timestamptz default now());
 alter table realtime.messages enable row level security;
+alter table realtime.messages owner to supabase_realtime_admin;
 create function realtime.topic() returns text language sql stable
   as $$ select nullif(current_setting('realtime.topic', true), '')::text $$;
 grant usage on schema realtime to anon, authenticated;
 grant select, insert on realtime.messages to anon, authenticated;
 grant usage on sequence realtime.messages_id_seq to anon, authenticated;
+
+-- The tests run every SQL file as PGlite's superuser, who skips the owner check that stops postgres in Supabase. This
+-- puts that check back for the realtime schema: while the SQL files load, any command on something in it other than
+-- create, alter or drop policy on realtime.messages fails the way Supabase fails it, with "must be owner". Setup
+-- above ran before this, and the tests' own reads and checks (which change nothing in the schema) never meet it.
+create function public.standin_realtime_owner() returns event_trigger language plpgsql as $$
+declare c record;
+begin
+  for c in select * from pg_event_trigger_ddl_commands() loop
+    if c.schema_name = 'realtime' and not (c.command_tag in ('CREATE POLICY', 'ALTER POLICY')
+        and c.object_identity like '% on realtime.messages') then
+      raise exception 'must be owner of %', c.object_identity using errcode = '42501';
+    end if;
+  end loop;
+end;
+$$;
+create event trigger standin_realtime_owner on ddl_command_end execute function public.standin_realtime_owner();
+create function public.standin_realtime_drop() returns event_trigger language plpgsql as $$
+declare c record;
+begin
+  for c in select * from pg_event_trigger_dropped_objects() loop
+    if c.schema_name = 'realtime' and not (c.object_type = 'policy' and c.object_identity like '% on realtime.messages') then
+      raise exception 'must be owner of %', c.object_identity using errcode = '42501';
+    end if;
+  end loop;
+end;
+$$;
+create event trigger standin_realtime_drop on sql_drop execute function public.standin_realtime_drop();
+revoke all on function public.standin_realtime_owner() from public, anon, authenticated;
+revoke all on function public.standin_realtime_drop() from public, anon, authenticated;
