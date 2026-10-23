@@ -45,6 +45,7 @@ const MESSAGES = ['chats_state', 'ask_to_message', 'accept_message_request', 'de
   'chat_messages', 'send_message', 'report_message', 'seen_notice'];
 // The functions in challenges.sql (checked in challenges-db.mjs).
 const CHALLENGES = ['challenges_state', 'start_challenge', 'play_challenge', 'finish_challenge', 'decline_challenge', 'seen_challenges'];
+const LIVE = ['online_now', 'set_show_online'];
 
 // ---------- locked tables, and who may call what ----------
 const rls = (await f.admin("select c.relname, c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace where n.nspname = 'public' and c.relkind = 'r'")).rows;
@@ -66,7 +67,7 @@ let anonOut = 0;
 for (const fn of APP) if (await fails(null, 'select public.' + fn + '(' + (/(accept|decline|cancel|remove|block|unblock)/.test(fn) ? "'00000000-0000-0000-0000-000000000000'" : /^(set_username|find_students|send_friend_request_to|send_friend_request)$/.test(fn) ? "'abc'" : fn === 'set_findable' ? 'true' : '') + ')') === '42501') anonOut++;
 check(anonOut === APP.length, 'someone not signed in can call none of the ' + APP.length + ' friends functions', R);
 const exposed = (await f.admin("select p.proname from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prorettype <> 'trigger'::regtype and has_function_privilege('authenticated', p.oid, 'execute') order by 1")).rows.map(r => r.proname);
-check(exposed.join() === APP.concat(MESSAGES, CHALLENGES, ['delete_account']).sort().join(), 'signed-in students can call exactly the app functions (friends, messages and challenges) and delete_account, no helpers: ' + exposed.join(', '), R);
+check(exposed.join() === APP.concat(MESSAGES, CHALLENGES, LIVE, ['delete_account']).sort().join(), 'signed-in students can call exactly the app functions (friends, messages, challenges and online) and delete_account, no helpers: ' + exposed.join(', '), R);
 const anonFns = (await f.admin("select p.proname from pg_proc p join pg_namespace n on n.oid = p.pronamespace where n.nspname = 'public' and p.prorettype <> 'trigger'::regtype and has_function_privilege('anon', p.oid, 'execute')")).rows;
 check(anonFns.length === 0, 'someone not signed in can call no function at all', R);
 check(await fails(a.id, "select public.has_banned_word('x')") === '42501' && await fails(a.id, 'select public.friend_ask($1, $2, null, null)', [a.id, b.id]) === '42501' && await fails(a.id, 'select public.code_of($1)', [b.id]) === '42501',

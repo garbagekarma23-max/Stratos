@@ -11,7 +11,7 @@ let frBusy = false, frAgain = false, frAsked = 0, frOffline = false;
 let addHow = 'name', lastFound = [];
 function readFr() { try { const s = JSON.parse(localStorage.getItem(FR_KEY) || 'null'); return s && s.me ? s : null; } catch (e) { return null; } }
 function saveFr() { try { if (fr) localStorage.setItem(FR_KEY, JSON.stringify(fr)); } catch (e) {} }
-function frForget() { fr = null; lastFound = []; frOffline = false; msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
+function frForget() { fr = null; lastFound = []; frOffline = false; liveForget(); msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
 /* The list, if it belongs to the account signed in now. */
 const frMine = () => signedIn() && fr && fr.uid === st.uid ? fr : null;
 /* Requests waiting for this student, for the dot on Home's friends button. */
@@ -52,6 +52,8 @@ async function frLoad() {
     try { await msLoadList(); } catch (e) {}
     try { await chLoadList(); } catch (e) {}
   } catch (e) { frOffline = true; }
+  /* Who is online (79-live.js) has its own timer. The first list loaded fetches it straight away. */
+  if (!frOffline && !onMine()) await onCheck();
   frBusy = false;
   if (before !== now() || wasOff !== frOffline) frRepaint();
   if (frAgain) { frAgain = false; frLoad(); }
@@ -106,7 +108,8 @@ function realFriends() {
       const c = msChat(f.ref), g = chRowLine(f.ref, frShown(f)), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0) || !!g;
       const line = g ? g.text : c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
         : c.state === 'open' ? 'No messages yet' : (f.name ? '@' + f.username + ', friends' : 'Friends') + ' since ' + dayText(f.since);
-      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + esc(line) + '</span></span>' +
+      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who">' +
+        (isOnline(f.ref) ? '<b class="fr-nm"><bdi>' + esc(frShown(f)) + '</bdi>' + onlineTag(f.ref) + '</b>' : '<b>' + esc(frShown(f)) + '</b>') + '<span>' + esc(line) + '</span></span>' +
         (dot ? '<i class="dot"></i><span class="sr">' + (g ? 'Challenge' : c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : '') + '</button>' +
         '<button class="ghost sm" type="button" data-act="pickch" data-kind="challenge" data-real="1" data-f="' + f.ref + '" aria-label="Challenge ' + esc(frShown(f)) + '">Challenge</button></div>';
     }).join('') + '</div>'
@@ -173,7 +176,8 @@ function acctFrHtml() {
   return '<div class="rows fr-acct"><div class="set"><span class="t">Username</span><span class="fr-un">' + (d.me.username ? '@' + esc(d.me.username) : 'Not picked yet') + '</span>' +
       '<button class="ghost sm" type="button" data-act="unamechange">' + (d.me.username ? 'Change' : 'Pick') + '</button></div>' +
     '<div class="set"><span class="t" id="setFind">Let people find me by username</span><button class="switch" type="button" data-act="frfindable" aria-pressed="' + (d.me.findable !== false) + '" aria-labelledby="setFind"><span></span></button></div></div>' +
-    '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>';
+    '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>' +
+    onlineSetHtml();
 }
 ACT.frfindable = async b => {
   const d = frMine(); if (!d) return;
@@ -309,6 +313,8 @@ const frFind = (list, ref) => { const d = frMine(); return d ? d[list].find(x =>
 /* Run one change, then fetch the list. A toast says what happened or what went wrong. */
 async function frChange(b, fn, ref, done) {
   if (b) b.disabled = true;
+  /* Leave the chat's Realtime channel straight away, so nothing more goes either way (79-live.js). */
+  if (fn === 'block_student' || fn === 'remove_friend') liveDrop(ref);
   try {
     const r = await frCall(fn, {ref: ref});
     closeSheet();

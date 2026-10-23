@@ -159,7 +159,7 @@ ACT.pickch = b => {
     return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
   };
   const size = sub === 'edexcel' ? 'up to ' + G.challenge : G.challenge;
-  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
+  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, (real && isOnline(f) ? '<p class="on-now">' + onlineTag(f) + '</p>' : '') + seg +
     '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
       : real ? 'Pick a chapter you’ve learned. You play first, then ' + esc(n) + ' plays the same questions. ' + esc(n) + ' has 7 days to play.'
       : 'Pick a chapter. You play ' + size + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +

@@ -334,6 +334,50 @@ point is learned.
 8. To run the clean-up by hand: `select moderation.cleanup();`. It also deletes challenges older than 90 days and
    ones a challenger started and never finished.
 
+## 18. Add online status and the typing bubble
+
+Do this once the pull request with `supabase/live.sql` is merged. Until then the app still works: nobody shows online,
+the typing bubble never shows, and chats are fetched every 5 seconds as before.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/live.sql` and press **Run**. It should say Success. No rows returned. It needs the
+   tables from steps 2, 9, 11 and 16, which are in already.
+3. Open **Realtime**, then **Settings**. Turn off **Allow public access**, and save. Now a phone can only join a
+   private channel that the rules in `live.sql` allow. Stratos uses no public channels, so nothing else changes. (If
+   the dashboard words it differently, it is the setting that allows only private channels.)
+4. Open **Table Editor**. There should be one new table, `online`, not marked as unprotected. It holds a row only for
+   a student who has the app open now, and only until when that lasts.
+5. Open **Authentication**, then **Policies**, and pick the `realtime` schema. `messages` should have exactly two
+   policies, `stratos chat hear` and `stratos chat send`. Rules on a table add up, so any other policy here would let
+   more phones in. Don't add one without checking it against these two.
+6. In **Integrations**, then **Cron**, there should be a job called `stratos-online` that runs every minute. It deletes
+   marks whose minute has passed. If it is missing, Cron was off: turn it on (step 12) and run `live.sql` again.
+7. Open **Advisors**, then **Security Advisor**. Expected, and nothing else new: "RLS enabled, no policy" on `online`
+   (only the functions in the file reach it), and the note about `security definer` functions.
+8. Open **Project Settings**, then **Data API**. **Exposed schemas** must not include `live` or `moderation`. They
+   aren't there unless someone adds them.
+
+Running `live.sql` again later is safe. It keeps the data and puts the rules back as written.
+
+What it keeps: one row per student who has the app open, holding only when their mark runs out (a minute after their
+last check-in). No history, and no "last seen". Typing and the "new message" signal pass through Realtime and are
+never saved. Message text never goes through Realtime: the friend's app still fetches it with `chat_messages`.
+
+## 19. Check online status and typing with two accounts
+
+Once the site is updated. Use A and B from step 13, friends, with an accepted message request.
+
+1. Open the app on both. On A, open Friends. Within about 10 seconds, B's row shows a green dot and "Online". The
+   chat's header and the Challenge sheet for B say Online too.
+2. In **Table Editor**, `online` has two rows. Each `until` is about a minute ahead.
+3. On B, switch to another app. On A, B goes from the list within about 10 seconds, and B's row in `online` is gone.
+4. On B, open You, then Account, and turn off **Show when I’m online**. A no longer sees B online. B still sees A.
+   Turn it on again.
+5. Open the chat on both. On A, type without sending. On B, three dots show at the bottom left within a second, and
+   go a few seconds after A stops, when A empties the box, or when A leaves the chat.
+6. On A, send a message. It shows on B within a second or two.
+7. On A, block B. On B, typing no longer reaches A, and the chat closes within about 20 seconds.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press
