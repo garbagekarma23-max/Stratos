@@ -607,8 +607,8 @@ svg{display:block;flex:none}
 /* Online (79-live.js): a green dot and the word, next to a friend's name, under it in a chat and on the challenge sheet. */
 .online{flex:none;display:inline-flex;align-items:center;gap:5px;font:600 12px/1.2 var(--f);font-style:normal;color:var(--good);white-space:nowrap}
 .online::before{content:'';flex:none;width:8px;height:8px;border-radius:50%;background:var(--good)}
-.fr-who b.fr-nm{display:flex;align-items:center;gap:8px;min-width:0}
-.fr-nm bdi{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fr-who.on{display:grid;grid-template-columns:minmax(0,max-content) 1fr;align-items:center;column-gap:8px}
+.fr-who.on > span{grid-column:1 / -1}
 .p-tt{flex:1;min-width:0}
 .p-sub{margin-top:2px;line-height:1}
 .on-now{margin:0 0 12px}
@@ -6941,8 +6941,7 @@ function realFriends() {
       const c = msChat(f.ref), g = chRowLine(f.ref, frShown(f)), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0) || !!g;
       const line = g ? g.text : c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
         : c.state === 'open' ? 'No messages yet' : (f.name ? '@' + f.username + ', friends' : 'Friends') + ' since ' + dayText(f.since);
-      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who">' +
-        (isOnline(f.ref) ? '<b class="fr-nm"><bdi>' + esc(frShown(f)) + '</bdi>' + onlineTag(f.ref) + '</b>' : '<b>' + esc(frShown(f)) + '</b>') + '<span>' + esc(line) + '</span></span>' +
+      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who' + (isOnline(f.ref) ? ' on' : '') + '"><b>' + esc(frShown(f)) + '</b>' + onlineTag(f.ref) + '<span>' + esc(line) + '</span></span>' +
         (dot ? '<i class="dot"></i><span class="sr">' + (g ? 'Challenge' : c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : '') + '</button>' +
         '<button class="ghost sm" type="button" data-act="pickch" data-kind="challenge" data-real="1" data-f="' + f.ref + '" aria-label="Challenge ' + esc(frShown(f)) + '">Challenge</button></div>';
     }).join('') + '</div>'
