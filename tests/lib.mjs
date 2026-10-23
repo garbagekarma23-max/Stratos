@@ -42,6 +42,7 @@ export async function open(o = {}) {
   // tests/account.mjs passes supabase: a fake from fake-supabase.mjs,
   // which the page is pointed at instead. Its route is added last, so it wins over the block.
   await ctx.route(/^https:\/\/[^/]*\.supabase\.co\//, r => r.abort());
+  await ctx.routeWebSocket(/^wss:\/\/[^/]*\.supabase\.co\//, ws => ws.close());
   // accounts: false empties the project values, the way the build is with none filled in.
   if (o.accounts === false) await ctx.addInitScript(() => { window.stratosSupabase = {url: '', key: ''}; });
   if (o.supabase) {

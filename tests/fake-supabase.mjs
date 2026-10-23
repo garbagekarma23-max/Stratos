@@ -1,7 +1,10 @@
 // A fake Supabase for the tests, so they never reach the real one.
-// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql and challenges.sql loaded
+// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql, challenges.sql and live.sql loaded
 // into it, the same files that go into Supabase. Each request from the page runs as the student who sent it, so the tests check the real
 // rules. Only the sign-in part is pretend: codes are kept here so a test can read them, and nothing is emailed.
+// Realtime is faked too, over a WebSocket route: it lets a phone join or send on a channel only if the rules in
+// live.sql allow it (f.channelOk), and passes each event to the other phones on that channel. f.rt.log keeps what it
+// saw; f.rt.down makes it refuse every connection, as if Realtime could not be reached.
 // It answers only the requests the app makes. Anything else gets an error, so a new kind of request shows up in a test.
 import { PGlite } from '@electric-sql/pglite';
 import crypto from 'crypto';
@@ -21,6 +24,7 @@ export async function fakeSupabase() {
   await db.exec(fs.readFileSync(new URL('../supabase/messages.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/report-email.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/challenges.sql', import.meta.url), 'utf8'));
+  await db.exec(fs.readFileSync(new URL('../supabase/live.sql', import.meta.url), 'utf8'));
   const f = {url: URL_, key: KEY, db, codes: {}, refresh: {}, down: false, log: []};
   // One request at a time, the way one database connection works.
   let queue = Promise.resolve();
@@ -56,6 +60,21 @@ export async function fakeSupabase() {
   }));
   // Run SQL as the database owner, past the rules. Only tests do this, to look at what is really stored.
   f.admin = (sql, params) => one(() => db.query(sql, params));
+  // Ask Realtime's rules (on realtime.messages, from live.sql) whether a student (uid, or nobody) may join and hear the
+  // channel topic, or send on it, the way Supabase's Realtime asks: realtime.topic set to the channel's name, then a
+  // read or an insert as the student. Everything is rolled back, so nothing is kept.
+  f.channelOk = (uid, topic, sending, ext = 'broadcast') => one(() => db.transaction(async tx => {
+    let ok = false;
+    if (!sending) await tx.query("insert into realtime.messages (topic, extension, event) values ($1, $2, 'check')", [topic, ext]);
+    await tx.query('set local role ' + (uid ? 'authenticated' : 'anon'));
+    await tx.query("select set_config('request.jwt.claim.sub', $1, true), set_config('realtime.topic', $2, true)", [uid || '', topic]);
+    try {
+      if (sending) { await tx.query("insert into realtime.messages (topic, extension, event) values ($1, $2, 'check')", [topic, ext]); ok = true; }
+      else ok = (await tx.query('select count(*)::int as n from realtime.messages where topic = $1 and extension = $2', [topic, ext])).rows[0].n > 0;
+    } catch (e) { ok = false; }
+    await tx.rollback();
+    return ok;
+  }).catch(() => false));
 
   const ID = /^[a-z_]+$/;
   const pgError = e => {
@@ -151,8 +170,63 @@ export async function fakeSupabase() {
     return {status: 404, body: {msg: 'the fake does not answer ' + method + ' ' + path}};
   }
 
+  // ---------- Realtime ----------
+  // The library speaks Phoenix's protocol: JSON arrays [join_ref, ref, topic, event, payload], except that a broadcast
+  // it sends comes as a small binary frame (kind 3, six lengths, the encoding, then the strings and the payload). The
+  // fake answers in JSON, which the library also reads. Topics arrive as realtime:<name>; the rules see <name>.
+  f.rt = {log: [], down: false};
+  const rooms = new Map(), sockets = new Set();
+  // Drop every connection, as when Realtime goes away. With f.rt.down set too, the phones can't connect again.
+  f.rt.drop = () => { for (const ws of sockets) { try { ws.close({code: 1011, reason: 'gone'}); } catch (e) {} } sockets.clear(); rooms.clear(); };
+  f.rt.members = name => (rooms.get('realtime:' + name) || new Set()).size;
+  const realtime = ws => {
+    const u = new URL(ws.url());
+    if (f.rt.down || f.down || u.searchParams.get('apikey') !== KEY) { f.rt.log.push({refused: 'connection'}); ws.close({code: 1011, reason: 'unavailable'}); return; }
+    sockets.add(ws);
+    const me = {ws, out: arr => { try { ws.send(JSON.stringify(arr)); } catch (e) {} }}, joined = new Map();
+    const leave = topic => { const r = rooms.get(topic); if (r) r.delete(me); joined.delete(topic); };
+    const broadcast = async (jr, ref, topic, event, payload) => {
+      const name = topic.replace(/^realtime:/, ''), uid = joined.get(topic);
+      const ok = uid !== undefined && await f.channelOk(uid, name, true);
+      f.rt.log.push({send: name, from: uid, event, payload, ok});
+      if (ref) me.out([jr, ref, topic, 'phx_reply', {status: ok ? 'ok' : 'error', response: {}}]);
+      if (ok) for (const peer of rooms.get(topic) || []) if (peer !== me) peer.out([null, null, topic, 'broadcast', {type: 'broadcast', event, payload}]);
+    };
+    ws.onMessage(async m => {
+      if (typeof m !== 'string') {
+        const b = Buffer.from(m);
+        if (b[0] !== 3) return;
+        let i = 7;
+        const take = n => { const t = b.subarray(i, i + n).toString(); i += n; return t; };
+        const jr = take(b[1]), ref = take(b[2]), topic = take(b[3]), event = take(b[4]);
+        take(b[5]);
+        let payload = {};
+        try { payload = b[6] === 1 ? JSON.parse(b.subarray(i).toString() || '{}') : {}; } catch (e) {}
+        return broadcast(jr, ref, topic, event, payload);
+      }
+      const [jr, ref, topic, event, payload] = JSON.parse(m);
+      if (topic === 'phoenix') return me.out([null, ref, 'phoenix', 'phx_reply', {status: 'ok', response: {}}]);
+      if (event === 'phx_join') {
+        const who = whoIs('Bearer ' + ((payload && payload.access_token) || '')), name = topic.replace(/^realtime:/, '');
+        // Public channels are switched off (README step 18), so a channel must be private.
+        const ok = !!(payload && payload.config && payload.config.private) && await f.channelOk(who && who.sub, name, false);
+        f.rt.log.push({join: name, from: who && who.sub, ok});
+        if (!ok) return me.out([jr, ref, topic, 'phx_reply', {status: 'error', response: {reason: 'Unauthorized: You do not have permissions to read from this Channel topic: ' + name}}]);
+        joined.set(topic, who.sub);
+        if (!rooms.has(topic)) rooms.set(topic, new Set());
+        rooms.get(topic).add(me);
+        return me.out([jr, ref, topic, 'phx_reply', {status: 'ok', response: {postgres_changes: []}}]);
+      }
+      if (event === 'phx_leave') { leave(topic); return me.out([jr, ref, topic, 'phx_reply', {status: 'ok', response: {}}]); }
+      if (event === 'broadcast' && payload) return broadcast(jr, ref, topic, payload.event, payload.payload || {});
+      if (ref) me.out([jr, ref, topic, 'phx_reply', {status: 'ok', response: {}}]);
+    });
+    ws.onClose(() => { sockets.delete(ws); for (const t of [...joined.keys()]) leave(t); });
+  };
+
   // Send every request for the fake's address here, for one browser context (one device).
-  f.route = ctx => ctx.route(URL_ + '/**', async route => {
+  f.route = async ctx => { await ctx.routeWebSocket(/^wss:\/\/fake-stratos\.supabase\.co\/realtime\//, realtime); return f.routeHttp(ctx); };
+  f.routeHttp = ctx => ctx.route(URL_ + '/**', async route => {
     const req = route.request(), u = new URL(req.url()), headers = req.headers();
     if (f.down) { f.log.push('down ' + req.method() + ' ' + u.pathname); return route.abort('internetdisconnected'); }
     let body = null;

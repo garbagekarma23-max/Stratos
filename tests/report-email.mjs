@@ -245,7 +245,7 @@ check(!(await admin("select 1 from moderation.alerts where at < now() - interval
 const keep = (await admin('select count(*)::int c from moderation.alerts'))[0].c;
 await f.db.exec(SQL);
 check((await admin('select count(*)::int c from moderation.alerts'))[0].c === keep && keep > 0, 'running report-email.sql a second time keeps the alerts', R);
-check((await admin("select count(*)::int c from pg_trigger where tgname = 'email_report'"))[0].c === 1 && (await admin('select count(*)::int c from cron.job'))[0].c === 1, 'and leaves one trigger and one Cron job', R);
+check((await admin("select count(*)::int c from pg_trigger where tgname = 'email_report'"))[0].c === 1 && (await admin("select count(*)::int c from cron.job where command like '%email_catchup%'"))[0].c === 1, 'and leaves one trigger and one catch-up Cron job', R);
 await later();
 check(await report(p2, 'spam') === 'ok' && (await lastAlert()).outcome === 'sent', 'which still sends', R);
 

@@ -604,6 +604,20 @@ svg{display:block;flex:none}
 .fr-row .dot{width:9px;height:9px;margin:0 4px;border-radius:50%;background:var(--accent)}
 .fr-row.unread .fr-who span{color:var(--ink);font-weight:600}
 .p-bar .icon-btn:last-child:not(:first-child){margin-right:-4px}
+/* Online (79-live.js): a green dot and the word, next to a friend's name, under it in a chat and on the challenge sheet. */
+.online{flex:none;display:inline-flex;align-items:center;gap:5px;font:600 12px/1.2 var(--f);font-style:normal;color:var(--good);white-space:nowrap}
+.online::before{content:'';flex:none;width:8px;height:8px;border-radius:50%;background:var(--good)}
+.fr-who.on{display:grid;grid-template-columns:minmax(0,max-content) 1fr;align-items:center;column-gap:8px}
+.fr-who.on > span{grid-column:1 / -1}
+.p-tt{flex:1;min-width:0}
+.p-sub{margin-top:2px;line-height:1}
+.on-now{margin:0 0 12px}
+/* The friend is typing: three dots in a bubble where their next message will appear. With reduced motion they stay still. */
+.msg.typing .bubble{display:inline-flex;align-items:center;gap:4px;padding:13px 14px}
+.msg.typing i{width:7px;height:7px;border-radius:50%;background:var(--ink-3);opacity:.45;animation:typing 1.2s ease-in-out infinite}
+.msg.typing i:nth-of-type(2){animation-delay:.15s}
+.msg.typing i:nth-of-type(3){animation-delay:.3s}
+@keyframes typing{0%,60%,100%{opacity:.45;transform:none}30%{opacity:1;transform:translateY(-3px)}}
 .bubble.ms{display:block;max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;color:inherit;font-family:inherit}
 button.bubble.ms{border:0}
 .care{align-self:flex-start;max-width:86%;margin-top:-4px;font-size:12px;line-height:1.45;color:var(--ink-2)}
@@ -843,7 +857,7 @@ math-span:not(:defined){visibility:hidden}
     <li>The Edexcel course covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.</li>
     <li>Maths questions are made fresh each time. Write the working with the keypad.</li>
     <li>The NSW study notes are a first draft, still to be checked against the NESA syllabus.</li>
-    <li>Real friends need an account. Add them by username or by code. Challenges and races work in NSW Economics and Maths. The sample friends are pretend.</li>
+    <li>Real friends need an account. Add them by username or by code. Challenges work in all three courses, races in NSW Economics and Maths. The sample friends are pretend.</li>
     <li>The store shows example prices. Buying is switched off.</li>
     <li>Press A to D to answer and Enter for the next slide. In Practice, H gives a clue and S skips.</li>
     <li>Progress is saved on this device. With an account, which is optional, it syncs across your devices.</li>
@@ -4678,7 +4692,8 @@ function paintPage(how) {
   const d = PAGE[t.name](t.arg), el = document.createElement('div');
   el.className = 'page';
   if (how !== 'push') el.style.animation = 'none';
-  el.innerHTML = '<header class="p-bar"><button class="icon-btn" type="button" data-act="back" aria-label="Back">' + IC.left + '</button>' + (d.avatar || '') + '<h2>' + esc(d.title) + '</h2>' + (d.right || '') + '</header>' +
+  el.innerHTML = '<header class="p-bar"><button class="icon-btn" type="button" data-act="back" aria-label="Back">' + IC.left + '</button>' + (d.avatar || '') +
+    (d.sub ? '<div class="p-tt"><h2>' + esc(d.title) + '</h2><p class="p-sub">' + d.sub + '</p></div>' : '<h2>' + esc(d.title) + '</h2>') + (d.right || '') + '</header>' +
     '<div class="p-body' + (d.cls ? ' ' + d.cls : '') + '">' + d.html + '</div>' + (d.foot || '');
   pagesEl.appendChild(el);
   const body = $('.p-body', el);
@@ -6597,7 +6612,7 @@ ACT.pickch = b => {
     return '<button class="pick" type="button" data-act="startwith" data-kind="' + kind + '" data-f="' + f + '" data-ch="' + c.id + '"><span class="t">' + c.n + '. ' + esc(c.title) + '<small>' + (fresh ? (fresh === s.n ? 'All ' + s.n + ' points are new to you' : fresh + ' of ' + s.n + ' points are new to you') : 'You have learned every point') + '</small></span>' + IC.right + '</button>';
   };
   const size = sub === 'edexcel' ? 'up to ' + G.challenge : G.challenge;
-  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, seg +
+  openSheet(kind === 'race' ? 'Race ' + n : 'Challenge ' + n, (real && isOnline(f) ? '<p class="on-now">' + onlineTag(f) + '</p>' : '') + seg +
     '<p class="sub">' + (kind === 'race' ? 'Pick a chapter. The first to ' + G.race + ' correct answers wins.'
       : real ? 'Pick a chapter you’ve learned. You play first, then ' + esc(n) + ' plays the same questions. ' + esc(n) + ' has 7 days to play.'
       : 'Pick a chapter. You play ' + size + ' questions first, then ' + n + ' plays the same set' + (sub === 'maths' ? ', with the same numbers.' : '.')) + '</p>' +
@@ -6829,7 +6844,7 @@ let frBusy = false, frAgain = false, frAsked = 0, frOffline = false;
 let addHow = 'name', lastFound = [];
 function readFr() { try { const s = JSON.parse(localStorage.getItem(FR_KEY) || 'null'); return s && s.me ? s : null; } catch (e) { return null; } }
 function saveFr() { try { if (fr) localStorage.setItem(FR_KEY, JSON.stringify(fr)); } catch (e) {} }
-function frForget() { fr = null; lastFound = []; frOffline = false; msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
+function frForget() { fr = null; lastFound = []; frOffline = false; liveForget(); msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
 /* The list, if it belongs to the account signed in now. */
 const frMine = () => signedIn() && fr && fr.uid === st.uid ? fr : null;
 /* Requests waiting for this student, for the dot on Home's friends button. */
@@ -6870,6 +6885,8 @@ async function frLoad() {
     try { await msLoadList(); } catch (e) {}
     try { await chLoadList(); } catch (e) {}
   } catch (e) { frOffline = true; }
+  /* Who is online (79-live.js) has its own timer. The first list loaded fetches it straight away. */
+  if (!frOffline && !onMine()) await onCheck();
   frBusy = false;
   if (before !== now() || wasOff !== frOffline) frRepaint();
   if (frAgain) { frAgain = false; frLoad(); }
@@ -6924,7 +6941,7 @@ function realFriends() {
       const c = msChat(f.ref), g = chRowLine(f.ref, frShown(f)), dot = c.state === 'asked' || (c.state === 'open' && c.unread > 0) || !!g;
       const line = g ? g.text : c.state === 'asked' ? 'Wants to message you' : c.state === 'sent' ? 'Message request sent' : c.state === 'open' && c.last ? (c.last.mine ? 'You: ' : '') + c.last.text
         : c.state === 'open' ? 'No messages yet' : (f.name ? '@' + f.username + ', friends' : 'Friends') + ' since ' + dayText(f.since);
-      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who"><b>' + esc(frShown(f)) + '</b><span>' + esc(line) + '</span></span>' +
+      return '<div class="fr-row fr-friend' + (dot ? ' unread' : '') + '"><button class="fr-open" type="button" data-act="page" data-page="chat" data-f="' + f.ref + '"><span class="avatar">' + frInitial(f) + '</span><span class="fr-who' + (isOnline(f.ref) ? ' on' : '') + '"><b>' + esc(frShown(f)) + '</b>' + onlineTag(f.ref) + '<span>' + esc(line) + '</span></span>' +
         (dot ? '<i class="dot"></i><span class="sr">' + (g ? 'Challenge' : c.state === 'asked' ? 'Message request' : c.unread + ' new') + '</span>' : '') + '</button>' +
         '<button class="ghost sm" type="button" data-act="pickch" data-kind="challenge" data-real="1" data-f="' + f.ref + '" aria-label="Challenge ' + esc(frShown(f)) + '">Challenge</button></div>';
     }).join('') + '</div>'
@@ -6991,7 +7008,8 @@ function acctFrHtml() {
   return '<div class="rows fr-acct"><div class="set"><span class="t">Username</span><span class="fr-un">' + (d.me.username ? '@' + esc(d.me.username) : 'Not picked yet') + '</span>' +
       '<button class="ghost sm" type="button" data-act="unamechange">' + (d.me.username ? 'Change' : 'Pick') + '</button></div>' +
     '<div class="set"><span class="t" id="setFind">Let people find me by username</span><button class="switch" type="button" data-act="frfindable" aria-pressed="' + (d.me.findable !== false) + '" aria-labelledby="setFind"><span></span></button></div></div>' +
-    '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>';
+    '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>' +
+    onlineSetHtml();
 }
 ACT.frfindable = async b => {
   const d = frMine(); if (!d) return;
@@ -7127,6 +7145,8 @@ const frFind = (list, ref) => { const d = frMine(); return d ? d[list].find(x =>
 /* Run one change, then fetch the list. A toast says what happened or what went wrong. */
 async function frChange(b, fn, ref, done) {
   if (b) b.disabled = true;
+  /* Leave the chat's Realtime channel straight away, so nothing more goes either way (79-live.js). */
+  if (fn === 'block_student' || fn === 'remove_friend') liveDrop(ref);
   try {
     const r = await frCall(fn, {ref: ref});
     closeSheet();
@@ -7193,11 +7213,12 @@ app.addEventListener('input', ev => {
    supabase/messages.sql, which check who is asking, keep every limit and filter every message before it is saved, so
    nothing here has to be trusted. A chat is named by its friendship's ref, never by the other student's account id.
    Messages are never saved on this device: a chat is fetched when it opens, and new messages are asked for every 5
-   seconds while it is on screen. The list of chats (who has unread messages or a request) comes with the friends
+   seconds while it is on screen. While both students have it open, its Realtime channel (79-live.js) brings new ones
+   at once too. The list of chats (who has unread messages or a request) comes with the friends
    list, every 10 seconds on Friends and every 30 seconds elsewhere, for the dot on Home. */
 let chs = null;          /* the last answer from chats_state, with uid (whose it is) */
 let cv = null;           /* the chat open now: {ref, state, list, more, ban, loaded} */
-let cvBusy = false, warnShown = false;
+let cvBusy = false, cvAgain = false, warnShown = false;
 const MAX_MSG = 500;
 const msMine = () => signedIn() && chs && chs.uid === st.uid ? chs : null;
 const msChat = ref => { const c = msMine(); return (c && c.chats.find(x => x.ref === ref)) || {state: 'none', unread: 0, last: null}; };
@@ -7259,7 +7280,21 @@ function msgsHtml(f) {
     if (m.care) h += '<p class="care' + (m.mine ? ' mine' : '') + '">' + (m.mine ? 'If you’re not okay, you don’t have to deal with it alone. ' + helpLine()
       : name + ' might be going through something. Check in with them, and tell an adult you trust if you’re worried.') + '</p>';
   });
+  if (cv.theyType) h += typingHtml(name);
   return h;
+}
+/* The friend is typing (79-live.js): three dots where their next message will appear. */
+const typingHtml = name => '<div class="msg typing" role="status"><div class="bubble ms"><span class="sr">' + name + ' is typing</span><i></i><i></i><i></i></div></div>';
+/* Show or hide just the bubble, so the box (and anything half typed in it) is left alone. Stays at the bottom if the
+   chat was there already. */
+function typingPaint() {
+  if (!cv || !pageIs('chat', cv.ref)) return;
+  const body = $('.p-body.thread', pagesEl), f = frFind('friends', cv.ref);
+  if (!body || !f) return;
+  const atEnd = body.scrollHeight - body.scrollTop - body.clientHeight < 80, old = $('.msg.typing', body);
+  if (old && !cv.theyType) old.remove();
+  if (!old && cv.theyType) body.insertAdjacentHTML('beforeend', typingHtml(esc(frShown(f))));
+  if (atEnd) body.scrollTop = body.scrollHeight;
 }
 PAGE.chat = ref => {
   const f = frFind('friends', ref);
@@ -7268,7 +7303,7 @@ PAGE.chat = ref => {
   if (!cv || cv.ref !== ref) { cv = {ref: ref, state: msChat(ref).state, list: [], more: false, ban: null, loaded: false, at: 0}; setTimeout(() => chatFetch(true), 0); }
   else if (Date.now() - cv.at > 1500) setTimeout(() => chatFetch(false), 0);  /* opened again: fetch what is new now */
   const more = '<button class="icon-btn" type="button" data-act="frfriend" data-ref="' + ref + '" aria-label="About ' + n + '">' + IC.more + '</button>';
-  const page = {title: name, avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
+  const page = {title: name, sub: onlineTag(ref), avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
   setTimeout(() => chSeen(ref), 0);
   if (!cv.loaded) return Object.assign(page, {html: '<p class="sys">' + (frOffline ? 'No connection. This chat will show once you are online.' : 'Loading.') + '</p>'});
   if (cv.state === 'none') {
@@ -7311,25 +7346,32 @@ function chatRepaint() {
 }
 /* Fetch the chat: everything (when it opens) or only what is new. */
 async function chatFetch(full) {
-  if (!cv || cvBusy) return;
+  if (!cv) return;
+  if (cvBusy) { cvAgain = true; return; }
   const ref = cv.ref, after = !full && cv.loaded && cv.list.length ? cv.list[cv.list.length - 1].n : 0;
   cvBusy = true;
   let r = null;
   try { r = await frCall('chat_messages', {friend: ref, after_n: after}); frOffline = false; } catch (e) { frOffline = true; }
   cvBusy = false;
+  if (cvAgain) { cvAgain = false; setTimeout(() => chatFetch(false), 0); }
   if (!cv || cv.ref !== ref) return;
   if (!r) { if (!cv.loaded) chatRepaint(); return; }
   if (r.result === 'gone') { frLoad(); return; }
-  const before = cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded;
+  const before = cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded + !!cv.theyType;
+  /* A message from the friend ends their typing bubble. */
+  if (r.messages.some(m => !m.mine && !cv.list.some(x => x.n === m.n))) cv.theyType = false;
   if (full || !cv.loaded || after === 0) { cv.list = r.messages; cv.more = r.more; }
   else r.messages.forEach(m => { if (!cv.list.some(x => x.n === m.n)) cv.list.push(m); });
   cv.state = r.state; cv.ban = r.ban; cv.loaded = true; cv.at = Date.now();
   /* Fetching counts the messages as seen, so the dot goes. */
   const c = msMine() && msMine().chats.find(x => x.ref === ref), seen = !!(c && (c.unread || c.state !== r.state));
   if (c) { c.state = r.state; c.unread = 0; }
-  if (before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded) chatRepaint();
-  if (seen || before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded) frRepaint();
+  const changed = before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded + !!cv.theyType;
+  if (changed) chatRepaint();
+  if (seen || changed) frRepaint();
+  liveSync();
 }
+/* Every 5 seconds, even with the Realtime channel joined: the fetch also brings a ban, an unban or the chat closing. */
 setInterval(() => { if (cv && pageIs('chat', cv.ref) && !document.hidden && navigator.onLine && st.uid) chatFetch(false); }, 5000);
 /* The list of chats, for the dot, while Friends and the chat are not on screen. */
 setInterval(() => { if (!pageIs('friends') && !pageIs('chat') && !document.hidden && navigator.onLine && st.uid) frLoad(); }, 30000);
@@ -7371,6 +7413,7 @@ ACT.msend = async b => {
     const j = $('#msgIn'); if (j) { j.value = ''; boxChanged(j); }
     if (cv.list.length && cv.list[cv.list.length - 1].n < r.n - 1) await chatFetch(false);
     else cv.list.push({n: r.n, mine: true, text: text.trim(), at: r.at, care: r.care});
+    liveSent(r.n);
     chatRepaint();
     const body = $('.p-body', pagesEl); if (body) body.scrollTop = body.scrollHeight;
     if (r.care) say('Sent. If you’re not okay, you don’t have to deal with it alone.');
@@ -7382,7 +7425,7 @@ ACT.msend = async b => {
   msErr(SEND_SAY[r.result] || 'Something went wrong. Try again in a moment.');
   if (b.isConnected) b.disabled = false;
 };
-app.addEventListener('input', ev => { if (ev.target.id === 'msgIn') { boxChanged(ev.target); if (!$('#msErr').hidden) msErr(''); } });
+app.addEventListener('input', ev => { if (ev.target.id === 'msgIn') { boxChanged(ev.target); if (!$('#msErr').hidden) msErr(''); liveTyping(ev.target.value); } });
 /* On a computer keyboard Enter sends, and Shift and Enter starts a new line. On a phone Enter is a new line. */
 app.addEventListener('keydown', ev => {
   if (ev.target.id !== 'msgIn' || ev.key !== 'Enter' || ev.shiftKey || ev.isComposing) return;
@@ -7679,6 +7722,144 @@ function chResults(ref, name) {
       const ch = chOf(c.ch), s = chShort(c, n);
       return '<li>' + esc(ch ? ch.title : 'A chapter') + '. ' + s.charAt(0).toUpperCase() + s.slice(1) + '.</li>';
     }).join('') + '</ul>';
+}
+
+/* ---------- live: who is online now, and typing in a chat ----------
+   Only while accounts are on and the student is signed in. The rules for both are in supabase/live.sql.
+   Online: while the app is on screen, it checks in every 10 seconds on Friends or in a chat and every 20 elsewhere
+   (online_now), which marks the student online for the next minute, unless they turned off "Show when I'm online". The answer is the refs of friends online now,
+   never an id or a time. When the app goes into the background it says so, and the mark goes at once. Nothing about
+   it is kept on this device.
+   Typing: while an accepted chat is on screen, the app joins that chat's private channel in Supabase Realtime. It sends
+   "typing" at most every 2 seconds while the student types, "stop" when the box empties or the chat closes, and "new"
+   with the message number after a message is sent, so the friend's app fetches it at once. No text goes this way:
+   messages still only come from chat_messages. Realtime lets in only the two friends, once the message request is
+   accepted. The chat is still fetched every 5 seconds, so it works the same without Realtime, only slower. */
+let onl = null;           /* the last answer from online_now: {uid, online (refs), show (the switch)} */
+let onAt = 0, onBusy = false;
+function onMine() { return signedIn() && onl && onl.uid === st.uid ? onl : null; }
+function isOnline(ref) { const o = onMine(); return !!(o && o.online.includes(ref)); }
+/* The green dot and the word, next to a friend's name. */
+function onlineTag(ref) { return isOnline(ref) ? '<i class="online">Online</i>' : ''; }
+
+/* Check in (or, in the background, say this student has gone) and fetch which friends are online. Redraws only if
+   that changed. Skipped for a student with no friends, once the switch is known. */
+async function onCheck() {
+  const d = frMine();
+  if (!ACCOUNTS || !st.uid || onBusy || !d || (!d.friends.length && onMine())) return;
+  onBusy = true; onAt = Date.now();
+  try {
+    const r = await frCall('online_now', {here: !document.hidden});
+    const was = onMine(), before = was ? was.online.join() + was.show : '';
+    onl = {uid: st.uid, online: r.online.slice().sort(), show: r.show};
+    if (before !== onl.online.join() + onl.show) frRepaint();
+  } catch (e) {} finally { onBusy = false; }
+}
+setInterval(() => {
+  if (document.hidden || !navigator.onLine || !st.uid) return;
+  if (Date.now() - onAt > (pageIs('friends') || pageIs('chat') ? 9500 : 19500)) onCheck();
+}, 1000);
+document.addEventListener('visibilitychange', () => { if (st.uid && navigator.onLine && onMine()) { onBusy = false; onCheck(); } liveSync(); });
+/* Signing out: take this student's mark away. Called just before the sign-out, so the call still has the sign-in. */
+function liveBye() {
+  liveLeave();
+  if (sb && onMine()) sb.rpc('online_now', {here: false}).then(() => {}, () => {});
+  onl = null; rtNo = {};
+}
+function liveForget() { liveLeave(); onl = null; rtNo = {}; }
+
+/* ---------- the switch on the account sheet ---------- */
+function onlineSetHtml() {
+  const o = onMine();
+  if (!o) setTimeout(onCheck, 0);
+  return '<div class="rows fr-acct"><div class="set"><span class="t" id="setOnline">Show when I’m online</span><button class="switch" type="button" data-act="frshowon" aria-pressed="' + (o ? o.show : true) + '" aria-labelledby="setOnline"><span></span></button></div></div>' +
+    '<p class="fine">When this is off, nobody sees when you’re online. You still see friends who show it. Stratos keeps no record of when you were online.</p>';
+}
+ACT.frshowon = async b => {
+  const o = onMine(), on = !(o ? o.show : true);
+  if (o) o.show = on;
+  b.setAttribute('aria-pressed', on);
+  try { await frCall('set_show_online', {show_on: on}); toast(on ? 'Friends can see when you’re online.' : 'Nobody can see when you’re online now.'); }
+  catch (e) { if (o) o.show = !on; if (b.isConnected) b.setAttribute('aria-pressed', !on); toast(frWhy(e)); return; }
+  onBusy = false; onCheck();
+};
+
+/* ---------- the chat's channel in Realtime ---------- */
+let rt = null;            /* the channel joined now: {ref, ch, joined, sentAt, mine (typing sent), hide, soon, fetchAt} */
+let rtNo = {};            /* chats whose channel was refused or failed, and until when not to try again */
+const RT_GAP = 2000, RT_HIDE = 4000;
+/* The chat that should have a channel now: accepted, on screen, still a friend, the app in front and online. */
+function liveWant() {
+  return ACCOUNTS && sb && st.uid && !document.hidden && navigator.onLine && cv && cv.loaded && cv.state === 'open' &&
+    pageIs('chat', cv.ref) && frFind('friends', cv.ref) ? cv.ref : null;
+}
+/* Join or leave to match. Runs every second, and whenever the chat or the app changes. */
+function liveSync() {
+  const want = liveWant();
+  if (rt && rt.ref !== want) liveLeave();
+  if (want && !rt && !((rtNo[want] || 0) > Date.now())) liveJoin(want);
+}
+setInterval(liveSync, 1000);
+function liveJoin(ref) {
+  const ch = sb.channel('chat:' + ref, {config: {private: true, broadcast: {self: false, ack: false}}});
+  const me = rt = {ref: ref, ch: ch, joined: false, sentAt: 0, mine: false, hide: 0, soon: 0, fetchAt: 0};
+  ch.on('broadcast', {event: 'typing'}, () => theyType(me, true))
+    .on('broadcast', {event: 'stop'}, () => theyType(me, false))
+    .on('broadcast', {event: 'new'}, () => { theyType(me, false); liveFetch(me); })
+    .subscribe(status => {
+      if (rt !== me) return;
+      me.joined = status === 'SUBSCRIBED';
+      /* Joined: fetch anything sent before the channel was ready. Refused or failed: try again in a minute. */
+      if (me.joined) liveFetch(me);
+      else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') { rtNo[ref] = Date.now() + 60000; liveLeave(); }
+    });
+}
+function liveLeave() {
+  const me = rt; if (!me) return;
+  if (me.mine) liveSend(me, 'stop');
+  rt = null;
+  clearTimeout(me.hide); clearTimeout(me.soon);
+  if (cv && cv.ref === me.ref && cv.theyType) { cv.theyType = false; typingPaint(); }
+  try { sb.removeChannel(me.ch).catch(() => {}); } catch (e) {}
+}
+/* Block or remove: leave at once, and don't join again before the list catches up. */
+function liveDrop(ref) { if (rt && rt.ref === ref) { rtNo[ref] = Date.now() + 864e5; liveLeave(); } }
+function liveSend(me, event, payload) {
+  if (!me || !me.joined) return;
+  try { me.ch.send({type: 'broadcast', event: event, payload: payload || {}}).catch(() => {}); } catch (e) {}
+}
+/* The box changed: say typing (at most every 2 seconds), or stop once it is empty. */
+function liveTyping(text) {
+  const me = rt;
+  if (!me || !me.joined || !cv || me.ref !== cv.ref) return;
+  if (!text.trim()) { if (me.mine) { me.mine = false; me.sentAt = 0; liveSend(me, 'stop'); } return; }
+  if (Date.now() - me.sentAt < RT_GAP) return;
+  me.mine = true; me.sentAt = Date.now();
+  liveSend(me, 'typing');
+}
+/* A message was sent: tell the friend's app its number, so it fetches it now. This also ends typing there. */
+function liveSent(n) {
+  const me = rt;
+  if (!me || !cv || me.ref !== cv.ref) return;
+  me.mine = false; me.sentAt = 0;
+  liveSend(me, 'new', {n: n});
+}
+/* The friend is typing, or stopped. The bubble goes 4 seconds after the last word from them. */
+function theyType(me, on) {
+  if (rt !== me || !cv || cv.ref !== me.ref) return;
+  clearTimeout(me.hide);
+  if (on) me.hide = setTimeout(() => theyType(me, false), RT_HIDE);
+  if (!!cv.theyType === on) return;
+  cv.theyType = on;
+  typingPaint();
+}
+/* Fetch new messages, at most once a second, however many "new" arrive. */
+function liveFetch(me) {
+  if (rt !== me || me.soon) return;
+  me.soon = setTimeout(() => {
+    me.soon = 0; me.fetchAt = Date.now();
+    if (rt === me && cv && cv.ref === me.ref) chatFetch(false);
+  }, Math.max(0, 1000 - (Date.now() - me.fetchAt)));
 }
 
 /* ---------- the intro: the word Stratos with the student's rocket flying round it ----------
@@ -8257,6 +8438,9 @@ function applyPart(part, here) {
 function acctForget() {
   leaving = true;
   clearTimeout(pushTimer);
+  /* Take away this student's online mark (79-live.js). The library takes the sign-in for it before signing out below,
+     because it does these in the order they are asked. Sign out never waits for it. */
+  liveBye();
   acctUser = null; st = {}; saveSync();
   frForget();
   const end = () => { try { localStorage.removeItem(AUTH_KEY); } catch (e) {} leaving = false; };

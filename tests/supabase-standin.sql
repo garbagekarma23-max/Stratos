@@ -42,3 +42,16 @@ create function cron.schedule(job_name text, schedule text, command text) return
   as $$ insert into cron.job values (job_name, schedule, command)
         on conflict (jobname) do update set schedule = excluded.schedule, command = excluded.command;
         select 1::bigint $$;
+
+-- Realtime's table of rules for channels. Supabase makes it with row-level security on. Realtime sets realtime.topic
+-- to the channel's name, then asks as the student whether they may read (join and hear) or insert (send). The fake's
+-- Realtime (fake-supabase.mjs) asks the same way. Nothing is ever kept in it: every check is rolled back.
+create schema realtime;
+create table realtime.messages (id bigserial primary key, topic text not null, extension text not null, event text,
+  payload jsonb, private boolean default true, inserted_at timestamptz default now());
+alter table realtime.messages enable row level security;
+create function realtime.topic() returns text language sql stable
+  as $$ select nullif(current_setting('realtime.topic', true), '')::text $$;
+grant usage on schema realtime to anon, authenticated;
+grant select, insert on realtime.messages to anon, authenticated;
+grant usage on sequence realtime.messages_id_seq to anon, authenticated;

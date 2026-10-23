@@ -3,11 +3,12 @@
    supabase/messages.sql, which check who is asking, keep every limit and filter every message before it is saved, so
    nothing here has to be trusted. A chat is named by its friendship's ref, never by the other student's account id.
    Messages are never saved on this device: a chat is fetched when it opens, and new messages are asked for every 5
-   seconds while it is on screen. The list of chats (who has unread messages or a request) comes with the friends
+   seconds while it is on screen. While both students have it open, its Realtime channel (79-live.js) brings new ones
+   at once too. The list of chats (who has unread messages or a request) comes with the friends
    list, every 10 seconds on Friends and every 30 seconds elsewhere, for the dot on Home. */
 let chs = null;          /* the last answer from chats_state, with uid (whose it is) */
 let cv = null;           /* the chat open now: {ref, state, list, more, ban, loaded} */
-let cvBusy = false, warnShown = false;
+let cvBusy = false, cvAgain = false, warnShown = false;
 const MAX_MSG = 500;
 const msMine = () => signedIn() && chs && chs.uid === st.uid ? chs : null;
 const msChat = ref => { const c = msMine(); return (c && c.chats.find(x => x.ref === ref)) || {state: 'none', unread: 0, last: null}; };
@@ -69,7 +70,21 @@ function msgsHtml(f) {
     if (m.care) h += '<p class="care' + (m.mine ? ' mine' : '') + '">' + (m.mine ? 'If you’re not okay, you don’t have to deal with it alone. ' + helpLine()
       : name + ' might be going through something. Check in with them, and tell an adult you trust if you’re worried.') + '</p>';
   });
+  if (cv.theyType) h += typingHtml(name);
   return h;
+}
+/* The friend is typing (79-live.js): three dots where their next message will appear. */
+const typingHtml = name => '<div class="msg typing" role="status"><div class="bubble ms"><span class="sr">' + name + ' is typing</span><i></i><i></i><i></i></div></div>';
+/* Show or hide just the bubble, so the box (and anything half typed in it) is left alone. Stays at the bottom if the
+   chat was there already. */
+function typingPaint() {
+  if (!cv || !pageIs('chat', cv.ref)) return;
+  const body = $('.p-body.thread', pagesEl), f = frFind('friends', cv.ref);
+  if (!body || !f) return;
+  const atEnd = body.scrollHeight - body.scrollTop - body.clientHeight < 80, old = $('.msg.typing', body);
+  if (old && !cv.theyType) old.remove();
+  if (!old && cv.theyType) body.insertAdjacentHTML('beforeend', typingHtml(esc(frShown(f))));
+  if (atEnd) body.scrollTop = body.scrollHeight;
 }
 PAGE.chat = ref => {
   const f = frFind('friends', ref);
@@ -78,7 +93,7 @@ PAGE.chat = ref => {
   if (!cv || cv.ref !== ref) { cv = {ref: ref, state: msChat(ref).state, list: [], more: false, ban: null, loaded: false, at: 0}; setTimeout(() => chatFetch(true), 0); }
   else if (Date.now() - cv.at > 1500) setTimeout(() => chatFetch(false), 0);  /* opened again: fetch what is new now */
   const more = '<button class="icon-btn" type="button" data-act="frfriend" data-ref="' + ref + '" aria-label="About ' + n + '">' + IC.more + '</button>';
-  const page = {title: name, avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
+  const page = {title: name, sub: onlineTag(ref), avatar: '<span class="avatar">' + frInitial(f) + '</span>', right: more, cls: 'thread', bottom: true};
   setTimeout(() => chSeen(ref), 0);
   if (!cv.loaded) return Object.assign(page, {html: '<p class="sys">' + (frOffline ? 'No connection. This chat will show once you are online.' : 'Loading.') + '</p>'});
   if (cv.state === 'none') {
@@ -121,25 +136,32 @@ function chatRepaint() {
 }
 /* Fetch the chat: everything (when it opens) or only what is new. */
 async function chatFetch(full) {
-  if (!cv || cvBusy) return;
+  if (!cv) return;
+  if (cvBusy) { cvAgain = true; return; }
   const ref = cv.ref, after = !full && cv.loaded && cv.list.length ? cv.list[cv.list.length - 1].n : 0;
   cvBusy = true;
   let r = null;
   try { r = await frCall('chat_messages', {friend: ref, after_n: after}); frOffline = false; } catch (e) { frOffline = true; }
   cvBusy = false;
+  if (cvAgain) { cvAgain = false; setTimeout(() => chatFetch(false), 0); }
   if (!cv || cv.ref !== ref) return;
   if (!r) { if (!cv.loaded) chatRepaint(); return; }
   if (r.result === 'gone') { frLoad(); return; }
-  const before = cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded;
+  const before = cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded + !!cv.theyType;
+  /* A message from the friend ends their typing bubble. */
+  if (r.messages.some(m => !m.mine && !cv.list.some(x => x.n === m.n))) cv.theyType = false;
   if (full || !cv.loaded || after === 0) { cv.list = r.messages; cv.more = r.more; }
   else r.messages.forEach(m => { if (!cv.list.some(x => x.n === m.n)) cv.list.push(m); });
   cv.state = r.state; cv.ban = r.ban; cv.loaded = true; cv.at = Date.now();
   /* Fetching counts the messages as seen, so the dot goes. */
   const c = msMine() && msMine().chats.find(x => x.ref === ref), seen = !!(c && (c.unread || c.state !== r.state));
   if (c) { c.state = r.state; c.unread = 0; }
-  if (before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded) chatRepaint();
-  if (seen || before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded) frRepaint();
+  const changed = before !== cv.state + JSON.stringify(cv.ban) + cv.list.length + cv.loaded + !!cv.theyType;
+  if (changed) chatRepaint();
+  if (seen || changed) frRepaint();
+  liveSync();
 }
+/* Every 5 seconds, even with the Realtime channel joined: the fetch also brings a ban, an unban or the chat closing. */
 setInterval(() => { if (cv && pageIs('chat', cv.ref) && !document.hidden && navigator.onLine && st.uid) chatFetch(false); }, 5000);
 /* The list of chats, for the dot, while Friends and the chat are not on screen. */
 setInterval(() => { if (!pageIs('friends') && !pageIs('chat') && !document.hidden && navigator.onLine && st.uid) frLoad(); }, 30000);
@@ -181,6 +203,7 @@ ACT.msend = async b => {
     const j = $('#msgIn'); if (j) { j.value = ''; boxChanged(j); }
     if (cv.list.length && cv.list[cv.list.length - 1].n < r.n - 1) await chatFetch(false);
     else cv.list.push({n: r.n, mine: true, text: text.trim(), at: r.at, care: r.care});
+    liveSent(r.n);
     chatRepaint();
     const body = $('.p-body', pagesEl); if (body) body.scrollTop = body.scrollHeight;
     if (r.care) say('Sent. If you’re not okay, you don’t have to deal with it alone.');
@@ -192,7 +215,7 @@ ACT.msend = async b => {
   msErr(SEND_SAY[r.result] || 'Something went wrong. Try again in a moment.');
   if (b.isConnected) b.disabled = false;
 };
-app.addEventListener('input', ev => { if (ev.target.id === 'msgIn') { boxChanged(ev.target); if (!$('#msErr').hidden) msErr(''); } });
+app.addEventListener('input', ev => { if (ev.target.id === 'msgIn') { boxChanged(ev.target); if (!$('#msErr').hidden) msErr(''); liveTyping(ev.target.value); } });
 /* On a computer keyboard Enter sends, and Shift and Enter starts a new line. On a phone Enter is a new line. */
 app.addEventListener('keydown', ev => {
   if (ev.target.id !== 'msgIn' || ev.key !== 'Enter' || ev.shiftKey || ev.isComposing) return;
