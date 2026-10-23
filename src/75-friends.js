@@ -11,7 +11,7 @@ let frBusy = false, frAgain = false, frAsked = 0, frOffline = false;
 let addHow = 'name', lastFound = [];
 function readFr() { try { const s = JSON.parse(localStorage.getItem(FR_KEY) || 'null'); return s && s.me ? s : null; } catch (e) { return null; } }
 function saveFr() { try { if (fr) localStorage.setItem(FR_KEY, JSON.stringify(fr)); } catch (e) {} }
-function frForget() { fr = null; lastFound = []; frOffline = false; liveForget(); msForget(); chForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
+function frForget() { fr = null; lastFound = []; frOffline = false; liveForget(); msForget(); chForget(); wkForget(); try { localStorage.removeItem(FR_KEY); } catch (e) {} }
 /* The list, if it belongs to the account signed in now. */
 const frMine = () => signedIn() && fr && fr.uid === st.uid ? fr : null;
 /* Requests waiting for this student, for the dot on Home's friends button. */
@@ -169,14 +169,15 @@ ACT.unamechange = () => {
   openSheet(d.me.username ? 'Change username' : 'Pick a username', unameForm(true));
   const i = $('.unameIn', sheetBody); i.value = d.me.username || ''; i.focus();
 };
-/* The account sheet's part: the username and the search switch. */
+/* The account sheet's part: the username, the search switch, the online switch (79-live.js) and the weekly table's
+   switch (76-week.js). */
 function acctFrHtml() {
   const d = frMine(); if (!d) return '';
   return '<div class="rows fr-acct"><div class="set"><span class="t">Username</span><span class="fr-un">' + (d.me.username ? '@' + esc(d.me.username) : 'Not picked yet') + '</span>' +
       '<button class="ghost sm" type="button" data-act="unamechange">' + (d.me.username ? 'Change' : 'Pick') + '</button></div>' +
     '<div class="set"><span class="t" id="setFind">Let people find me by username</span><button class="switch" type="button" data-act="frfindable" aria-pressed="' + (d.me.findable !== false) + '" aria-labelledby="setFind"><span></span></button></div></div>' +
     '<p class="fine">When this is off, nobody can find you by searching. Your friend code still works, and your friends stay your friends.</p>' +
-    onlineSetHtml();
+    onlineSetHtml() + weekSetHtml();
 }
 ACT.frfindable = async b => {
   const d = frMine(); if (!d) return;

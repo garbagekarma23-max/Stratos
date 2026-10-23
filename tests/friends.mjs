@@ -90,7 +90,8 @@ check((await text(A.p, '.fr-out .fine')) === 'Find friends by username, or add t
 check((await text(A.p, '.p-body .fr-h')) === 'Sample friends' && await A.p.locator('.p-body .thr').count() === 4, 'the four sample friends stay, under their own heading', R);
 check((await text(A.p, '.notice')) === 'These four are sample friends, and their scores are made up. Chats with sample friends use cards and preset replies.', 'with the notice saying they are samples', R);
 await A.p.click('[data-act="ftab"][data-v="week"]'); await A.p.waitForTimeout(80);
-check((await text(A.p, '.fr-later')) === 'Sample friends only. Real friends join this table in a later update.', 'This week says it is sample friends only for now', R);
+check((await text(A.p, '.fr-later')) === 'Sample friends only. Sign in to see your real friends here.' && await A.p.locator('.p-body [data-act="signin"]').count() === 1,
+  'signed out, This week says it is sample friends only, with Sign in', R);
 await A.p.click('[data-act="ftab"][data-v="msgs"]'); await A.p.waitForTimeout(80);
 await both(A.p, 'friends-signedout');
 check(f.log.length === logStart, 'signed out, the Friends page asks nothing of Supabase', R);

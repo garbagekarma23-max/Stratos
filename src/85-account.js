@@ -397,6 +397,8 @@ ACT.signout = async b => {
   b.disabled = true;
   /* This device never started keeping in step, so its progress is not in the account: keep it here. */
   if (!st.uid) { acctForget(); closeSheet(); renderYou(); toast('Signed out. This device keeps its progress.'); return; }
+  /* Right answers waiting for the weekly table (76-week.js) get one try. Signing out erases any left. */
+  if (wkRead()) await wkSend();
   if (unsynced()) { await loadSupabase().catch(() => {}); await push(); }
   if (unsynced()) {
     openSheet('Not saved yet',
