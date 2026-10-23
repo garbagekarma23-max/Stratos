@@ -34,12 +34,11 @@ setInterval(() => {
   if (Date.now() - onAt > (pageIs('friends') || pageIs('chat') ? 9500 : 19500)) onCheck();
 }, 1000);
 document.addEventListener('visibilitychange', () => { if (st.uid && navigator.onLine && onMine()) { onBusy = false; onCheck(); } liveSync(); });
-/* Signing out: take this student's mark away first, while the sign-in still works. Waits at most a second and a half. */
+/* Signing out: take this student's mark away. Called just before the sign-out, so the call still has the sign-in. */
 function liveBye() {
   liveLeave();
-  const go = sb && onMine() ? sb.rpc('online_now', {here: false}).then(() => {}, () => {}) : Promise.resolve();
+  if (sb && onMine()) sb.rpc('online_now', {here: false}).then(() => {}, () => {});
   onl = null; rtNo = {};
-  return Promise.race([go, new Promise(ok => setTimeout(ok, 1500))]);
 }
 function liveForget() { liveLeave(); onl = null; rtNo = {}; }
 

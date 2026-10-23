@@ -252,12 +252,13 @@ function applyPart(part, here) {
 function acctForget() {
   leaving = true;
   clearTimeout(pushTimer);
-  /* Take away this student's online mark (79-live.js) while the sign-in still works, then sign out here. */
-  const bye = liveBye();
+  /* Take away this student's online mark (79-live.js). The library takes the sign-in for it before signing out below,
+     because it does these in the order they are asked. Sign out never waits for it. */
+  liveBye();
   acctUser = null; st = {}; saveSync();
   frForget();
   const end = () => { try { localStorage.removeItem(AUTH_KEY); } catch (e) {} leaving = false; };
-  if (sb) bye.then(() => sb.auth.signOut({scope: 'local'})).then(end, end); else end();
+  if (sb) sb.auth.signOut({scope: 'local'}).then(end, end); else end();
 }
 
 /* ---------- what the student sees: a row on You, and the sheets ---------- */
