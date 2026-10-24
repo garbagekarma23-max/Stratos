@@ -53,6 +53,10 @@ insert into public.challenge_chapters (ch, course, total, per_q_ms) values
   ('x1c5', 'edexcel', 8, 1500), ('x1c6', 'edexcel', 8, 1500), ('x2c1', 'edexcel', 8, 1500), ('x2c2', 'edexcel', 8, 1500),
   ('x2c3', 'edexcel', 6, 1500), ('x2c4', 'edexcel', 8, 1500), ('x2c5', 'edexcel', 8, 1500), ('x2c6', 'edexcel', 8, 1500)
 on conflict (ch) do update set course = excluded.course, total = excluded.total, per_q_ms = excluded.per_q_ms;
+-- The courses made by the content pipeline (src/made.js): one row for each chapter with points in src/courses.
+-- python3 content/pipeline.py publish writes the lines between these two markers. Do not edit them by hand.
+-- made chapters start
+-- made chapters end
 
 
 -- ---------- the tables ----------

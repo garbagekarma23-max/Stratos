@@ -344,11 +344,12 @@ function indexEntry(p) {
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
   return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
 }
+/* Words to try in Search, for each subject. A made course (made.js) brings its own, as chips. */
 const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
   edexcel: ['opportunity cost', 'PPF', 'normative', 'money', 'invisible hand']};
 function paintSearchFor() {
   INDEX = ALL.map(indexEntry);
-  qChips.innerHTML = CHIPS[SUB.id].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
+  qChips.innerHTML = (CHIPS[SUB.id] || SUB.topic.chips || []).map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
   qIn.placeholder = 'Search ' + (SUB.topic.short || SUB.topic.name);
   qIn.setAttribute('aria-label', 'Search ' + (SUB.topic.short || SUB.topic.name));
   qIn.value = '';

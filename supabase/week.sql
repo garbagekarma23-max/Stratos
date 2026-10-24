@@ -63,6 +63,10 @@ insert into public.week_points (pid, maths) values
   ('e-income', false), ('e-flow', false), ('e-macroeq', false), ('e-multiplier', false), ('e-growthcause', false),
   ('e-outputgap', false), ('e-growthgain', false), ('e-growthcost', false), ('e-objectives', false),
   ('e-monetary', false), ('e-fiscal', false), ('e-supplyside', false), ('e-conflicts', false);
+-- The courses made by the content pipeline (src/made.js): one row for each point in src/bank. python3
+-- content/pipeline.py publish writes the lines between these two markers. Do not edit them by hand.
+-- made points start
+-- made points end
 
 
 -- ---------- the answers ----------

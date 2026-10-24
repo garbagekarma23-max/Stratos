@@ -2620,12 +2620,26 @@ const EDEXCEL = {
   ]
 };
 
+/* Courses made by the content pipeline (content/pipeline.py), and the banks their points live in.
+   Never edit the files in src/bank or src/courses by hand: content/pipeline.py publish writes them.
+
+   MADE_BANKS   one bank per subject, by its short name (bus for Business Studies). Each file in src/bank adds its
+                points here, by id. Ids start with the bank's name and a dash (bus-sole-trader), so they never clash
+                with NSW (c1p1), Maths (m1p1) or the Economics bank (e-ped).
+   MADE_COURSES each file in src/courses adds one course here. A course has the same shape as edexcel-content.js:
+                units, chapters, and in each chapter a list of point ids. A chapter whose points are still waiting for
+                review is published with no points, so it shows on Home as Coming soon.
+   build.py puts this file first, then every file in src/bank, then every file in src/courses. */
+const MADE_BANKS = {};
+const MADE_COURSES = [];
+
 /* Where each course is taught. The subject sheet reads this to show a student the courses for their country.
    Adding a country, a state or a course here needs no new code.
 
    COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
-                course's content (from content.js, maths-content.js or edexcel-content.js), name is the plain name on
-                its row, and about is the line under it: the exam it leads to, then the topic loaded.
+                course's content (from content.js, maths-content.js, edexcel-content.js or src/courses), name is the
+                plain name on its row, and about is the line under it: the exam it leads to, then the topic loaded.
+                The courses the content pipeline made (made.js) come after the others.
    CURRICULA    a country's or a state's own courses, by id. more is a line under them.
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
@@ -2639,11 +2653,13 @@ const COURSE_LIST = [
   {id: 'eco', data: TOPIC, name: 'Economics, Year 12', about: 'HSC, The Global Economy'},
   {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
-];
+].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
 const CURRICULA = {
   nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
 };
 const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
+/* A made course (made.js) names where it is taught: a curriculum here, or international. */
+MADE_COURSES.forEach(c => (c.place === 'international' ? INTERNATIONAL : CURRICULA[c.place]).courses.push(c.id));
 const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT ' +
   'BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM ' +
   'FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +
@@ -4071,14 +4087,17 @@ function indexTopic(topic, sub) {
   });
   return {id: sub, topic: topic, ch: topic.chapters, all: all};
 }
-/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
-   and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
-   the bank so far. A second course that shares points will need each course to keep its own place for a point. */
+/* A point from a bank: the Economics bank (econ-points.js) or one the content pipeline made (made.js). */
+const bankPoint = id => ECON_POINTS[id] || (MADE_BANKS[id.split('-')[0]] || {})[id];
+/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, and leaves the course data as
+   it was. Two courses can list the same point, so each course gets its own copy of the point, holding its own place
+   (p.ch, p.ci, p.pi). The card and questions are shared, and progress is kept by the point's id, so it counts in both.
+   PT holds the copy from the subject picked: setSubject points it at that subject's copies. */
 function indexCourse(course, sub) {
   const ch = [], all = [];
   const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
     const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
-      points: c.points.map(id => ECON_POINTS[id])};
+      points: c.points.map(id => Object.assign({}, bankPoint(id)))};
     if (out.points.length) {
       out.points.forEach((p, pi) => { p.id = c.points[pi]; p.ch = c.id; p.ci = ch.length; p.pi = pi; p.sub = sub; p.a.d = 1; PT[p.id] = p; all.push(p); });
       ch.push(out);
@@ -4093,7 +4112,7 @@ const SUBJECTS = {};
 COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
 const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
-function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
+function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; }); }
 const isMaths = () => SUB.id === 'maths';
 /* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
 function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }
@@ -4883,7 +4902,9 @@ function renderHome() {
   h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
-    '<p class="fine">' + (SUB.units
+    '<p class="fine">' + (SUB.topic.row
+      ? 'This course has ' + plural(SUB.units.reduce((n, u) => n + u.ch.length, 0), 'chapter') + '. Challenges and races use the other subjects for now. ' + whereSaved()
+      : SUB.units
       ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. ' + whereSaved()
       : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. ' + whereSaved()
@@ -6806,11 +6827,12 @@ function indexEntry(p) {
   const lines = p.card.map(l => Array.isArray(l) ? l[0] + ': ' + l[1] : l).concat([p.remember]);
   return {p: p, title: p.title.toLowerCase(), lines: lines, body: lines.join(' ').toLowerCase(), qs: [p.a.q, p.b.q, p.a.opts[0], p.b.opts[0]].join(' ').toLowerCase()};
 }
+/* Words to try in Search, for each subject. A made course (made.js) brings its own, as chips. */
 const CHIPS = {eco: ['tariff', 'comparative advantage', 'IMF', 'HDI', 'dumping', 'G20'], maths: ['brackets', 'fraction', 'square root', 'decimal', 'both sides'],
   edexcel: ['opportunity cost', 'PPF', 'normative', 'money', 'invisible hand']};
 function paintSearchFor() {
   INDEX = ALL.map(indexEntry);
-  qChips.innerHTML = CHIPS[SUB.id].map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
+  qChips.innerHTML = (CHIPS[SUB.id] || SUB.topic.chips || []).map(s => '<button class="chip" type="button" data-act="chipq" data-q="' + s + '">' + s + '</button>').join('');
   qIn.placeholder = 'Search ' + (SUB.topic.short || SUB.topic.name);
   qIn.setAttribute('aria-label', 'Search ' + (SUB.topic.short || SUB.topic.name));
   qIn.value = '';
