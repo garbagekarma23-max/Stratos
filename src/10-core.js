@@ -237,14 +237,17 @@ function indexTopic(topic, sub) {
   });
   return {id: sub, topic: topic, ch: topic.chapters, all: all};
 }
-/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, with the points themselves,
-   and leaves the course data as it was. A point still records one chapter (p.ch), because only one course uses
-   the bank so far. A second course that shares points will need each course to keep its own place for a point. */
+/* A point from a bank: the Economics bank (econ-points.js) or one the content pipeline made (made.js). */
+const bankPoint = id => ECON_POINTS[id] || (MADE_BANKS[id.split('-')[0]] || {})[id];
+/* A course lists point ids in each chapter. Indexing builds the chapters the app uses, and leaves the course data as
+   it was. Two courses can list the same point, so each course gets its own copy of the point, holding its own place
+   (p.ch, p.ci, p.pi). The card and questions are shared, and progress is kept by the point's id, so it counts in both.
+   PT holds the copy from the subject picked: setSubject points it at that subject's copies. */
 function indexCourse(course, sub) {
   const ch = [], all = [];
   const units = course.units.map((u, ui) => ({n: ui + 1, title: u.title, ch: u.chapters.map((c, i) => {
     const out = {id: c.id, title: c.title, check: c.check, sub: sub, unit: ui + 1, n: i + 1, of: u.chapters.length, ids: c.points,
-      points: c.points.map(id => ECON_POINTS[id])};
+      points: c.points.map(id => Object.assign({}, bankPoint(id)))};
     if (out.points.length) {
       out.points.forEach((p, pi) => { p.id = c.points[pi]; p.ch = c.id; p.ci = ch.length; p.pi = pi; p.sub = sub; p.a.d = 1; PT[p.id] = p; all.push(p); });
       ch.push(out);
@@ -259,7 +262,7 @@ const SUBJECTS = {};
 COURSE_LIST.forEach(c => { SUBJECTS[c.id] = c.data.units ? indexCourse(c.data, c.id) : indexTopic(c.data, c.id); });
 const COURSES = COURSE_LIST.filter(c => c.data.units).map(c => c.id);
 let SUB = SUBJECTS.eco, CH = SUB.ch, ALL = SUB.all;
-function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; }
+function setSubject(id) { SUB = SUBJECTS[id] || SUBJECTS.eco; CH = SUB.ch; ALL = SUB.all; ALL.forEach(p => { PT[p.id] = p; }); }
 const isMaths = () => SUB.id === 'maths';
 /* A chapter with points, from any subject. Coming soon chapters are left out, so nothing can open one. */
 function chOf(id) { for (const k in SUBJECTS) { const c = SUBJECTS[k].ch.find(x => x.id === id); if (c) return c; } return null; }

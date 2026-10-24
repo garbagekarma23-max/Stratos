@@ -2,8 +2,9 @@
    Adding a country, a state or a course here needs no new code.
 
    COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
-                course's content (from content.js, maths-content.js or edexcel-content.js), name is the plain name on
-                its row, and about is the line under it: the exam it leads to, then the topic loaded.
+                course's content (from content.js, maths-content.js, edexcel-content.js or src/courses), name is the
+                plain name on its row, and about is the line under it: the exam it leads to, then the topic loaded.
+                The courses the content pipeline made (made.js) come after the others.
    CURRICULA    a country's or a state's own courses, by id. more is a line under them.
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
@@ -17,11 +18,13 @@ const COURSE_LIST = [
   {id: 'eco', data: TOPIC, name: 'Economics, Year 12', about: 'HSC, The Global Economy'},
   {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
-];
+].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
 const CURRICULA = {
   nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
 };
 const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
+/* A made course (made.js) names where it is taught: a curriculum here, or international. */
+MADE_COURSES.forEach(c => (c.place === 'international' ? INTERNATIONAL : CURRICULA[c.place]).courses.push(c.id));
 const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT ' +
   'BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM ' +
   'FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +

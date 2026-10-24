@@ -4,7 +4,7 @@
 // any 24 hours, 2 days late at most, 50 a call), who sees whom on the table, the switch, block, remove and Delete
 // account, the clean-up, and that the list of points matches the app's content.
 import fs from 'fs';
-import vm from 'vm';
+import { loadContent, unitCourses } from '../content/load.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
 import { check } from './lib.mjs';
 
@@ -41,11 +41,11 @@ const clear = u => admin('delete from public.week_answers where user_id = $1', [
 const table = (u, since = new Date(Date.now() - 3 * 864e5).toISOString()) => call(u.id, 'week_table', {since});
 const totalOf = async (viewer, ref) => { const r = (await table(viewer)).friends.find(x => x.ref === ref); return r ? r.n : null; };
 // Every Economics question the app has, to send many different ones.
-const src = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js'].map(x => fs.readFileSync(new URL('../src/' + x, import.meta.url), 'utf8')).join('\n');
-const C = vm.runInNewContext(src + '\n;({TOPIC, MATHS, EDEXCEL})');
+// The content is read as the build puts it in v2.html (content/load.mjs), with the courses the content pipeline made.
+const C = loadContent();
 const ECO = [], MATHS = [];
 C.TOPIC.chapters.forEach(c => c.points.forEach(p => ECO.push(p.id)));
-C.EDEXCEL.units.forEach(u => u.chapters.forEach(c => c.points.forEach(p => ECO.push(typeof p === 'string' ? p : p.id))));
+unitCourses(C).forEach(k => k.units.forEach(u => u.chapters.forEach(c => c.points.forEach(p => { if (!ECO.includes(p)) ECO.push(p); }))));
 C.MATHS.chapters.forEach(c => c.points.forEach(p => MATHS.push(p.id)));
 const QS = ECO.flatMap(p => [p + 'a', p + 'b']);
 

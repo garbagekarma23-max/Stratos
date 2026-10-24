@@ -1,7 +1,9 @@
 """Build Stratos from the files in src/.
 
 Run it with:  python3 build.py
-It writes v2.html next to this file. That one file is the whole app and can be opened in a browser or put on GitHub Pages.
+It writes v2.html next to this file.
+The tests also run  python3 build.py --extra tests/made --out v2-made.html  to add a made course from another folder
+(with bank/ and courses/ in it) and write the page under another name. That one file is the whole app and can be opened in a browser or put on GitHub Pages.
 
 How the pieces fit:
   src/head.html        the page title, the description, the icons and link preview, and the link to the typeface
@@ -11,6 +13,8 @@ How the pieces fit:
   src/maths-content.js the maths content: chapters, points, worked examples and question templates
   src/econ-points.js   a bank of Economics points that belongs to no one course, so a course can share them
   src/edexcel-content.js the Edexcel International A Level Economics course: units, chapters and the point ids in each
+  src/made.js          where the courses made by the content pipeline go, then every file in src/bank (their points)
+                       and src/courses (the courses). content/pipeline.py publish writes those two folders.
   src/places.js        every course, which countries and states teach which, and the country codes for the subject sheet
   src/10-core.js ...   the script, in the order listed in JS below
   src/75-friends.js    real friends: usernames, search, friend codes, requests, remove, block and unblock
@@ -28,25 +32,34 @@ How the pieces fit:
   vendor/supabase      the Supabase library, for accounts. Not copied in either: v2.html loads it only for a student
                        who signs in.
 """
-import json, os, re
+import glob, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 SRC = HERE + 'src/'
 LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
-JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
+JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'made.js', 'MADE', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
       '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
 
 def read(name):
-    """A file from src/, or from lab/ when its name starts with lab/."""
-    path = LAB + name[4:] if name.startswith('lab/') else SRC + name
+    """A file from src/, or from lab/ when its name starts with lab/, or any file by its full path."""
+    path = name if os.path.isabs(name) else LAB + name[4:] if name.startswith('lab/') else SRC + name
     return open(path, encoding='utf8').read().rstrip('\n')
 
-def parts():
+def made(extra=None):
+    """The made courses' files: every bank, then every course, in name order. extra is another folder to add."""
+    files = []
+    for folder in ['bank', 'courses']:
+        for root in [SRC] + ([extra] if extra else []):
+            files += sorted(glob.glob(os.path.join(os.path.abspath(root), folder, '*.js')))
+    return files
+
+def parts(extra=None):
     """Return the title, the typeface links, and everything that goes in the body."""
     rec = json.load(open(SRC + 'recordings.json'))
-    script = '\n\n'.join(read(n) for n in JS)
+    names = [m for n in JS for m in (made(extra) if n == 'MADE' else [n])]
+    script = '\n\n'.join(read(n) for n in names)
     assert script.count(MARK) == 1, 'the marker for the recordings is missing from 20-sound.js'
     script = script.replace(MARK, '/*REC*/' + json.dumps(rec, separators=(',', ':')) + '/*REC-END*/')
     head = read('head.html')
@@ -56,8 +69,8 @@ def parts():
             '\n\n<script>\n(() => {\n\'use strict\';\n\n' + script + '\n})();\n</script>\n')
     return m.group(1), head[m.end():], body
 
-def standalone():
-    title, links, body = parts()
+def standalone(extra=None):
+    title, links, body = parts(extra)
     return ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n'
             '<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">\n'
@@ -66,7 +79,12 @@ def standalone():
             '<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}[hidden]{display:none!important}</style>\n'
             '</head>\n<body>\n' + body + '</body>\n</html>\n')
 
+def option(name):
+    """The value after --name on the command line, or None."""
+    return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else None
+
 if __name__ == '__main__':
-    page = standalone()
-    open(HERE + 'v2.html', 'w', encoding='utf8').write(page)
-    print('wrote v2.html,', round(len(page) / 1024), 'KB')
+    out = option('--out') or 'v2.html'
+    page = standalone(option('--extra'))
+    open(HERE + out, 'w', encoding='utf8').write(page)
+    print('wrote ' + out + ',', round(len(page) / 1024), 'KB')

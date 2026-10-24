@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stratos review</title>
+<!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
+     It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, or not
+     written. Every decision is saved straight away in content/work. -->
+<style>
+:root{--paper:#fff;--ink:#16171b;--soft:#5d6068;--line:#e3e4e8;--wash:#f6f7f9;--blue:#2f5bea;--blue-wash:#eaf0ff;--weak:#c2410c;--weak-wash:#fff1e8;--ok:#15803d}
+@media (prefers-color-scheme: dark){:root{--paper:#15161a;--ink:#ececef;--soft:#a2a5ad;--line:#2c2e35;--wash:#1d1f24;--blue:#7d9bff;--blue-wash:#1f2740;--weak:#fb923c;--weak-wash:#2e1f15;--ok:#4ade80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;padding:14px 20px;border-bottom:1px solid var(--line)}
+header h1{font-size:17px;margin:0}
+header .counts{color:var(--soft);font-size:14px}
+main{display:grid;grid-template-columns:260px 1fr 340px;min-height:calc(100vh - 54px)}
+nav{border-right:1px solid var(--line);padding:12px 0;overflow:auto}
+nav h2{font-size:13px;font-weight:600;color:var(--soft);margin:14px 16px 4px}
+nav h3{font-size:13px;font-weight:500;color:var(--soft);margin:8px 16px 2px}
+nav button{display:block;width:100%;text-align:left;border:0;background:none;color:var(--ink);font:inherit;padding:6px 16px 6px 24px;cursor:pointer}
+nav button[aria-current="true"]{background:var(--blue-wash)}
+nav button small{display:block;color:var(--soft);font-size:12px}
+section{padding:20px 24px;overflow:auto}
+.pane{border-left:1px solid var(--line)}
+.label{font-size:12px;font-weight:600;color:var(--soft);margin:18px 0 4px}
+.label:first-child{margin-top:0}
+h2.title{font-size:20px;margin:2px 0 4px}
+.where{color:var(--soft);font-size:13px}
+.card p{margin:6px 0}
+.remember{background:var(--wash);border-radius:8px;padding:8px 12px}
+.q{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:8px}
+.q .qt{font-weight:600}
+.opt{display:flex;gap:8px;padding:3px 0}
+.opt .mark{width:56px;flex:none;font-size:12px;color:var(--soft);padding-top:2px}
+.opt.right .mark{color:var(--ok);font-weight:600}
+.small{font-size:13px;color:var(--soft)}
+ins{background:var(--blue-wash);color:var(--blue);text-decoration:none;border-radius:3px}
+del{color:var(--soft)}
+.flag{background:var(--weak-wash);border-radius:8px;padding:8px 12px;margin:6px 0}
+.note{background:var(--wash);border-radius:8px;padding:8px 12px;margin:6px 0}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.seg button{border:0;background:none;color:var(--ink);font:inherit;padding:5px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--blue-wash);color:var(--blue)}
+.actions{position:sticky;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:12px 24px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;grid-column:1/-1}
+.actions button{font:inherit;border-radius:8px;padding:8px 14px;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.actions button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.actions button:disabled{opacity:.4;cursor:default}
+.actions input{font:inherit;flex:1;min-width:220px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.msg{width:100%;font-size:14px}
+.msg.bad{color:var(--weak)}
+form label{display:block;font-size:12px;font-weight:600;color:var(--soft);margin:12px 0 3px}
+form input,form textarea,form select{width:100%;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
+form textarea{min-height:52px;resize:vertical}
+form .row{display:grid;grid-template-columns:140px 1fr;gap:6px;margin-bottom:6px}
+.empty{padding:40px 24px;color:var(--soft)}
+kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px}
+@media (max-width:900px){main{grid-template-columns:1fr}nav,.pane{border:0;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<header><h1>Stratos review</h1><span class="counts" id="counts"></span><span class="small">Keys: <kbd>J</kbd> <kbd>K</kbd> move, <kbd>A</kbd> approve, <kbd>F</kbd> use the fix, <kbd>E</kbd> edit, <kbd>R</kbd> reject</span></header>
+<main id="main"><div class="empty">Loading.</div></main>
+<script>
+'use strict';
+const TOKEN = '{{TOKEN}}';
+let data = {courses: [], items: []}, cur = 0, view = 'draft', editing = false, message = null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);
+
+/* Words that changed between two texts: added ones in blue, removed ones crossed out. */
+function diff(a, b) {
+  const x = String(a || '').split(/(\s+)/), y = String(b || '').split(/(\s+)/), m = x.length, n = y.length;
+  const t = Array.from({length: m + 1}, () => new Array(n + 1).fill(0));
+  for (let i = m - 1; i >= 0; i--) for (let j = n - 1; j >= 0; j--) t[i][j] = x[i] === y[j] ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
+  let i = 0, j = 0, out = '';
+  while (i < m && j < n) {
+    if (x[i] === y[j]) { out += esc(x[i]); i++; j++; }
+    else if (t[i + 1][j] >= t[i][j + 1]) { if (x[i].trim()) out += '<del>' + esc(x[i]) + '</del>'; i++; }
+    else { out += y[j].trim() ? '<ins>' + esc(y[j]) + '</ins>' : esc(y[j]); j++; }
+  }
+  while (i < m) { if (x[i].trim()) out += '<del>' + esc(x[i]) + '</del>'; i++; }
+  while (j < n) { out += y[j].trim() ? '<ins>' + esc(y[j]) + '</ins>' : esc(y[j]); j++; }
+  return out;
+}
+const line = l => Array.isArray(l) ? '<b>' + esc(l[0]) + ':</b> ' + esc(l[1]) : esc(l);
+const plain = l => Array.isArray(l) ? l[0] + ': ' + l[1] : l;
+
+/* A point as students see it. With base, words changed from base are marked. */
+function pointHtml(p, base) {
+  const t = (a, b) => base ? diff(b, a) : esc(a);
+  const q = k => '<div class="q"><div class="qt">' + (k === 'a' ? 'Check question' : 'Practice question, difficulty ' + p.b.d) + '</div><p>' + t(p[k].q, base && base[k].q) + '</p>' +
+    p[k].opts.map((o, i) => '<div class="opt' + (i ? '' : ' right') + '"><span class="mark">' + (i ? 'Wrong' : 'Right') + '</span><span>' + t(o, base && base[k].opts[i]) + '</span></div>').join('') +
+    '<p class="small"><b>Why:</b> ' + t(p[k].why, base && base[k].why) + '</p><p class="small"><b>Clue:</b> ' + t(p[k].clue, base && base[k].clue) + '</p></div>';
+  return '<h2 class="title">' + t(p.title, base && base.title) + '</h2>' +
+    '<div class="label">Card</div><div class="card">' + p.card.map((l, i) => '<p>' + (base ? diff(base.card[i] ? plain(base.card[i]) : '', plain(l)) : line(l)) + '</p>').join('') + '</div>' +
+    '<div class="label">Remember</div><div class="remember">' + t(p.remember, base && base.remember) + '</div>' + q('a') + q('b');
+}
+
+function formHtml(p) {
+  p = p || {title: '', card: ['', '', ''], remember: '', a: {q: '', opts: ['', '', '', ''], why: '', clue: ''}, b: {d: 2, q: '', opts: ['', '', '', ''], why: '', clue: ''}};
+  const card = p.card.map((l, i) => '<div class="row"><input data-f="label" data-i="' + i + '" placeholder="Label (optional)" value="' + esc(Array.isArray(l) ? l[0] : '') + '"><textarea data-f="line" data-i="' + i + '">' + esc(Array.isArray(l) ? l[1] : l) + '</textarea></div>').join('');
+  const q = k => '<label>' + (k === 'a' ? 'Check question' : 'Practice question') + '</label><textarea data-f="' + k + '.q">' + esc(p[k].q) + '</textarea>' +
+    (k === 'b' ? '<label>Difficulty</label><select data-f="b.d"><option value="2"' + (p.b.d === 2 ? ' selected' : '') + '>2</option><option value="3"' + (p.b.d === 3 ? ' selected' : '') + '>3</option></select>' : '') +
+    p[k].opts.map((o, i) => '<label>' + (i ? 'Wrong option ' + i : 'Right option') + '</label><input data-f="' + k + '.opts" data-i="' + i + '" value="' + esc(o) + '">').join('') +
+    '<label>Why</label><textarea data-f="' + k + '.why">' + esc(p[k].why) + '</textarea><label>Clue</label><input data-f="' + k + '.clue" value="' + esc(p[k].clue) + '">';
+  return '<form id="edit"><label>Title</label><input data-f="title" value="' + esc(p.title) + '"><label>Card lines (3 or 4). Leave a line empty to drop it.</label>' + card +
+    (p.card.length < 4 ? '<div class="row"><input data-f="label" data-i="' + p.card.length + '" placeholder="Label (optional)"><textarea data-f="line" data-i="' + p.card.length + '" placeholder="A fourth line (optional)"></textarea></div>' : '') +
+    '<label>Remember</label><input data-f="remember" value="' + esc(p.remember) + '">' + q('a') + q('b') + '</form>';
+}
+
+function readForm() {
+  const f = $('#edit'), v = s => f.querySelector('[data-f="' + s + '"]').value.trim();
+  const opts = k => [...f.querySelectorAll('[data-f="' + k + '.opts"]')].map(x => x.value.trim());
+  const card = [...f.querySelectorAll('[data-f="line"]')].map(t => {
+    const label = f.querySelector('[data-f="label"][data-i="' + t.dataset.i + '"]').value.trim(), text = t.value.trim();
+    return text ? (label ? [label, text] : text) : null;
+  }).filter(Boolean);
+  const q = k => ({q: v(k + '.q'), opts: opts(k), why: v(k + '.why'), clue: v(k + '.clue')});
+  return {title: v('title'), card: card, remember: v('remember'), a: q('a'), b: Object.assign({d: +v('b.d')}, q('b'))};
+}
+
+function render() {
+  const total = data.courses.reduce((n, c) => n + (c.counts.cleared || 0) + (c.counts.reuse || 0), 0);
+  $('#counts').textContent = data.items.length + ' to review, ' + total + ' cleared';
+  if (!data.items.length) {
+    $('#main').innerHTML = '<div class="empty">Nothing to review. Run <kbd>py content\\pipeline.py publish</kbd> with the outline to put the cleared points into the app.</div>';
+    return;
+  }
+  cur = Math.min(cur, data.items.length - 1);
+  const it = data.items[cur];
+  let nav = '', lastC = '', lastCh = '';
+  data.items.forEach((x, i) => {
+    if (x.courseName !== lastC) { nav += '<h2>' + esc(x.courseName) + '</h2>'; lastC = x.courseName; lastCh = ''; }
+    if (x.chapter !== lastCh) { nav += '<h3>' + esc(x.chapter) + '</h3>'; lastCh = x.chapter; }
+    nav += '<button type="button" data-i="' + i + '"' + (i === cur ? ' aria-current="true"' : '') + '>' + esc(x.title) + '<small>' +
+      ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage] + '</small></button>';
+  });
+  let mid = '<p class="where">' + esc(it.courseName + '. ' + it.unit + '. ' + it.chapter) + '</p>';
+  let side = '<div class="label">Your brief</div><p>' + esc(it.brief) + '</p>';
+  let acts = '';
+  if (editing) {
+    mid += formHtml(view === 'fix' && it.proposal ? it.proposal : it.draft);
+    if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
+    acts = '<button type="button" class="primary" data-act="save">Save and approve</button><button type="button" data-act="cancel">Cancel</button>';
+  } else if (it.stage === 'match-review') {
+    mid += '<h2 class="title">' + esc(it.title) + '</h2><p>This point may already be in the bank as <b>' + esc(it.match.same) + '</b>. Reusing it shares the card, the questions and each student\'s progress with the courses that already use it.</p>' +
+      (it.match.point ? '<div class="label">In the bank now</div>' + pointHtml(it.match.point) : '');
+    side += '<div class="label">Why it may match</div><p>' + esc(it.match.reason) + '</p>';
+    acts = '<button type="button" class="primary" data-act="reuse">Reuse ' + esc(it.match.same) + '</button><button type="button" data-act="reject">Write a new point</button>';
+  } else {
+    if (it.proposal) mid += '<div class="seg" role="group" aria-label="Version"><button type="button" data-view="draft" aria-pressed="' + (view === 'draft') + '">As written</button><button type="button" data-view="fix" aria-pressed="' + (view === 'fix') + '">The fix</button></div>';
+    if (it.draft || it.proposal) mid += view === 'fix' && it.proposal ? pointHtml(it.proposal, it.draft) : pointHtml(it.draft);
+    else mid += '<h2 class="title">' + esc(it.title) + '</h2>';
+    if (it.error) side += '<div class="label">What happened</div><div class="flag">' + esc(it.error) + '</div>';
+    if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
+    if (it.summary) side += '<div class="label">Summary</div><p>' + esc(it.summary) + '</p>';
+    if (it.sure) side += '<p class="small">Sure: ' + esc(it.sure) + '</p>';
+    if (it.sensitive && it.sensitive !== 'none') side += '<div class="note">Always reviewed: this point is about ' + esc(({'mental-health': 'mental health', 'drugs': 'drugs', 'sexual-health': 'sexual health', 'first-nations': 'Aboriginal and Torres Strait Islander histories, cultures or peoples', 'set-text': 'a set text', 'other-sensitive': 'a sensitive topic'})[it.sensitive]) + '.</div>';
+    if (it.proposalProblems.length) side += '<div class="label">The fix fails the content check</div>' + it.proposalProblems.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
+    acts = '<button type="button" class="primary" data-act="approve"' + (it.draft ? '' : ' disabled') + '>Approve as written</button>' +
+      '<button type="button" data-act="fix"' + (it.proposal ? '' : ' disabled') + '>Use the fix</button>' +
+      '<button type="button" data-act="edit">Edit</button>' +
+      '<input id="note" placeholder="Note for the writer (optional)" aria-label="Note for the writer"><button type="button" data-act="reject">Reject and rewrite</button>';
+  }
+  if (message) acts += '<p class="msg' + (message.bad ? ' bad' : '') + '">' + esc(message.text) + (message.problems ? '<br>' + message.problems.map(esc).join('<br>') : '') + '</p>';
+  $('#main').innerHTML = '<nav>' + nav + '</nav><section>' + mid + '</section><section class="pane">' + side + '</section><div class="actions">' + acts + '</div>';
+}
+
+async function load() {
+  const r = await fetch('/api/items', {headers: {'X-Review-Token': TOKEN}});
+  data = await r.json();
+  render();
+}
+async function decide(action, extra) {
+  const it = data.items[cur];
+  const r = await fetch('/api/decide', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Review-Token': TOKEN},
+    body: JSON.stringify(Object.assign({course: it.course, id: it.id, action: action}, extra || {}))});
+  const res = await r.json();
+  message = {text: res.message || (res.ok ? 'Saved.' : 'Not saved.'), bad: !res.ok, problems: res.problems};
+  if (res.ok) { editing = false; view = 'draft'; await load(); } else render();
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.i !== undefined) { cur = +b.dataset.i; editing = false; view = 'draft'; message = null; render(); return; }
+  if (b.dataset.view) { view = b.dataset.view; render(); return; }
+  const act = b.dataset.act;
+  if (act === 'edit') { editing = true; message = null; render(); return; }
+  if (act === 'cancel') { editing = false; message = null; render(); return; }
+  if (act === 'save') { decide('edit', {point: readForm()}); return; }
+  if (act === 'reject') { decide('reject', {note: $('#note') ? $('#note').value : ''}); return; }
+  if (act) decide(act);
+});
+document.addEventListener('keydown', e => {
+  if (e.target.closest('input, textarea, select') || e.metaKey || e.ctrlKey || e.altKey || !data.items.length) return;
+  const k = e.key.toLowerCase(), click = a => { const b = document.querySelector('[data-act="' + a + '"]'); if (b && !b.disabled) b.click(); };
+  if (k === 'j' || k === 'k') { cur = Math.max(0, Math.min(data.items.length - 1, cur + (k === 'j' ? 1 : -1))); editing = false; view = 'draft'; message = null; render(); }
+  else if (k === 'a') click(data.items[cur].stage === 'match-review' ? 'reuse' : 'approve');
+  else if (k === 'f') click('fix');
+  else if (k === 'e') click('edit');
+  else if (k === 'r') { const n = $('#note'); if (n) { e.preventDefault(); n.focus(); } else click('reject'); }
+});
+load();
+</script>
+</body>
+</html>

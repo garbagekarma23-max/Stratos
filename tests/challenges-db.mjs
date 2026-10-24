@@ -2,7 +2,7 @@
 // (Postgres running inside Node) through fake-supabase.mjs, then each call runs as one student, as another, or as
 // someone not signed in. The list of chapters is checked against the app's own content files.
 import fs from 'fs';
-import vm from 'vm';
+import { loadContent, unitCourses } from '../content/load.mjs';
 import { fakeSupabase } from './fake-supabase.mjs';
 import { check } from './lib.mjs';
 
@@ -77,14 +77,14 @@ check(anonOut === APP.length, 'someone not signed in can call none of them', R);
 check(await fails(p1.a.id, 'select moderation.challenge_cleanup()') === '42501', 'and a student cannot run the clean-up', R);
 
 // ---------- the chapters match the app ----------
-// The content files are loaded on their own, as the build puts them in v2.html, and each chapter's size worked out
+// The content files are loaded on their own, as the build puts them in v2.html (content/load.mjs, with the courses
+// the content pipeline made), and each chapter's size worked out
 // the way gameSize in src/10-core.js does: two questions per point up to 8 in Economics, 5 in maths.
-const src = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js'].map(x => fs.readFileSync(new URL('../src/' + x, import.meta.url), 'utf8')).join('\n');
-const C = vm.runInNewContext(src + '\n;({TOPIC, MATHS, EDEXCEL})');
+const C = loadContent();
 const want = {};
 C.TOPIC.chapters.forEach(c => { want[c.id] = ['eco', Math.min(8, 2 * c.points.length), 1500]; });
 C.MATHS.chapters.forEach(c => { want[c.id] = ['maths', 5, 4000]; });
-C.EDEXCEL.units.forEach(u => u.chapters.forEach(c => { if (c.points.length) want[c.id] = ['edexcel', Math.min(8, 2 * c.points.length), 1500]; }));
+unitCourses(C).forEach(k => k.units.forEach(u => u.chapters.forEach(c => { if (c.points.length) want[c.id] = [k.id, Math.min(8, 2 * c.points.length), 1500]; })));
 const have = {};
 (await admin('select * from public.challenge_chapters')).forEach(r => { have[r.ch] = [r.course, r.total, r.per_q_ms]; });
 check(JSON.stringify(Object.keys(have).sort()) === JSON.stringify(Object.keys(want).sort()), 'challenge_chapters has every chapter the app has, and no other: ' + Object.keys(have).length, R);

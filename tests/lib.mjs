@@ -5,6 +5,7 @@ import { chromium } from 'playwright';
 import { serve } from './serve.mjs';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import { loadContent } from '../content/load.mjs';
 export const SHOTS = fileURLToPath(new URL('./shots/', import.meta.url));
 let server = null;
 // Use the Chromium already on the machine if there is one.
@@ -15,13 +16,19 @@ export const TOPIC = new Function(src + '; return TOPIC;')();
 // The Economics point bank and the Edexcel course that lists its points (econ-points.js, edexcel-content.js).
 export const BANK = new Function(fs.readFileSync(new URL('../src/econ-points.js', import.meta.url), 'utf8') + '; return ECON_POINTS;')();
 export const EDEXCEL = new Function(fs.readFileSync(new URL('../src/edexcel-content.js', import.meta.url), 'utf8') + '; return EDEXCEL;')();
-// Every multiple-choice question, by its text, so pick() can find the right answer in either Economics course.
+// Every multiple-choice question, by its text, so pick() can find the right answer in any course with options.
+// The made banks (src/bank) are added too. keyBank adds another bank, such as the made course in tests/made.
 export const KEYED = new Map();
-const points = TOPIC.chapters.flatMap(ch => ch.points).concat(Object.keys(BANK).map(id => Object.assign({id: id}, BANK[id])));
-for (const p of points) for (const k of ['a', 'b']) {
-  if (KEYED.has(p[k].q)) throw new Error('two questions share the text: ' + p[k].q);
-  KEYED.set(p[k].q, {right: p[k].opts[0], id: p.id + k, p: p, k: k});
+export function keyBank(bank) {
+  for (const id of Object.keys(bank)) for (const k of ['a', 'b']) {
+    const p = Object.assign({id: id}, bank[id]);
+    if (KEYED.has(p[k].q)) throw new Error('two questions share the text: ' + p[k].q);
+    KEYED.set(p[k].q, {right: p[k].opts[0], id: p.id + k, p: p, k: k});
+  }
 }
+keyBank(Object.fromEntries(TOPIC.chapters.flatMap(ch => ch.points).map(p => [p.id, p])));
+keyBank(BANK);
+Object.values(loadContent().MADE_BANKS).forEach(keyBank);
 export async function open(o = {}) {
   const b = await chromium.launch(EXE ? {executablePath: EXE} : {});
   // The phone's language and time zone. The subject sheet guesses the country from them. Tests are an Australian
@@ -57,7 +64,8 @@ export async function open(o = {}) {
   // STACK=1 node <test>.mjs also prints where in v2.html a script error happened.
   p.on('pageerror', e => errs.push('PAGEERROR ' + e.message + (process.env.STACK ? '\n' + e.stack : '')));
   if (!server) server = await serve();
-  await p.goto(server.url + 'v2.html' + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
+  // page opens another build of v2, such as v2-made.html (tests/made.mjs).
+  await p.goto(server.url + (o.page || 'v2.html') + (o.query || ''), {waitUntil: o.waitUntil || 'load'});
   await p.waitForTimeout(300);
   return {b, ctx, p, errs};
 }

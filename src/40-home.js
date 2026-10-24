@@ -70,7 +70,9 @@ function renderHome() {
   h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
-    '<p class="fine">' + (SUB.units
+    '<p class="fine">' + (SUB.topic.row
+      ? 'This course has ' + plural(SUB.units.reduce((n, u) => n + u.ch.length, 0), 'chapter') + '. Challenges and races use the other subjects for now. ' + whereSaved()
+      : SUB.units
       ? 'The AS year has 12 chapters.' + (SUB.ch.some(isDraft) ? ' Chapters marked Draft have not been checked by a teacher yet.' : '') + ' Challenges and races use the other subjects for now. ' + whereSaved()
       : isMaths()
       ? 'Maths is new in this test build. Learn and Practice work now. Races and challenges use Economics for now. ' + whereSaved()
