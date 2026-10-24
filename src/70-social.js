@@ -107,23 +107,27 @@ function msgHtml(f, m) {
 }
 
 /* The Friends page. Messages: real friends first (75-friends.js), then the four sample friends, who stay until real
-   friends can play challenges and races. This week: the sample friends only, for now. With accounts switched off,
-   the page is as it was before accounts. */
+   friends can play races. This week: signed in, you and your real friends (76-week.js); signed out, the sample
+   friends. With accounts switched off, the page is as it was before accounts. */
 PAGE.friends = () => {
   const seg = '<div class="seg3 wide" role="group" aria-label="Show"><button type="button" data-act="ftab" data-v="msgs" aria-pressed="' + (ui.ftab === 'msgs') + '">Messages</button><button type="button" data-act="ftab" data-v="week" aria-pressed="' + (ui.ftab === 'week') + '">This week</button></div>';
   let body;
-  if (ui.ftab === 'week') {
+  const real = ui.ftab === 'week' && signedIn();
+  if (real) body = weekReal();
+  else if (ui.ftab === 'week') {
     const rows = FRIENDS.map(f => ({name: f.name, n: f.week})).concat([{name: saved.name || 'You', n: weekCount(), you: true}]).sort((a, b) => b.n - a.n);
     body = '<p class="lb-cap">Correct answers since Monday, all subjects.</p><ol class="lb rows">' + rows.map((r, i) =>
       '<li' + (r.you ? ' class="you-row"' : '') + '><span class="rank">' + (i + 1) + '</span><span class="avatar">' + esc(r.name.charAt(0).toUpperCase()) + '</span><span class="nm">' + esc(r.name) + (r.you && saved.name ? ' (you)' : '') + '</span><span class="sc">' + r.n + '</span></li>').join('') + '</ol>' +
-      (ACCOUNTS ? '<p class="fine fr-later">Sample friends only. Real friends join this table in a later update.</p>' : '');
+      (ACCOUNTS ? '<p class="fine fr-later">Sample friends only. Sign in to see your real friends here.</p>' +
+        '<div class="cta"><button class="ghost" type="button" data-act="signin" data-title="Sign in">Sign in</button></div>' : '');
   } else {
     body = realFriends() + (ACCOUNTS ? '<h3 class="fr-h">Sample friends</h3>' : '') + '<div class="rows">' + FRIENDS.slice().sort((a, b) => lastT(b) - lastT(a)).map(f => {
       const un = saved.unread[f.id] || 0;
       return '<button class="thr' + (un ? ' unread' : '') + '" type="button" data-act="page" data-page="thread" data-f="' + f.id + '"><span class="avatar">' + f.name.charAt(0) + '</span><span><b>' + f.name + '</b><span class="prev">' + esc(preview(f)) + '</span></span>' + (un ? '<i class="dot"></i><span class="sr">' + un + ' new</span>' : '<i></i>') + '</button>';
     }).join('') + (ACCOUNTS ? '' : '<button class="row" type="button" disabled><span class="t">Add a friend</span><span class="val">Needs accounts</span>' + IC.right + '</button>') + '</div>';
   }
-  return {title: 'Friends', html: seg + body + '<p class="notice">' + (ACCOUNTS ? 'These four are sample friends, and their scores are made up. Chats with sample friends use cards and preset replies.'
+  return {title: 'Friends', html: seg + body + '<p class="notice">' + (real ? 'Friends see only your call sign or username and your total. To leave the table, open You, then Account.'
+    : ACCOUNTS ? 'These four are sample friends, and their scores are made up. Chats with sample friends use cards and preset replies.'
     : 'These four are sample friends, and their scores are made up. Real friends need accounts, which this test does not have. Messages are cards and preset replies. There is no free typing.') + '</p>'};
 };
 ACT.ftab = b => { ui.ftab = b.dataset.v; paintPage('same'); const again = $('.seg3 [data-v="' + ui.ftab + '"]', pagesEl); if (again) again.focus({preventScroll: true}); };

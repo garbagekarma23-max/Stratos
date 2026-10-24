@@ -1,5 +1,5 @@
 // A fake Supabase for the tests, so they never reach the real one.
-// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql, challenges.sql and live.sql loaded
+// The database is real: PGlite (Postgres running inside Node) with supabase/schema.sql, friends.sql, messages.sql, report-email.sql, challenges.sql, live.sql and week.sql loaded
 // into it, the same files that go into Supabase. Each request from the page runs as the student who sent it, so the tests check the real
 // rules. Only the sign-in part is pretend: codes are kept here so a test can read them, and nothing is emailed.
 // Realtime is faked too, over a WebSocket route: it lets a phone join or send on a channel only if the rules in
@@ -25,6 +25,7 @@ export async function fakeSupabase() {
   await db.exec(fs.readFileSync(new URL('../supabase/report-email.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/challenges.sql', import.meta.url), 'utf8'));
   await db.exec(fs.readFileSync(new URL('../supabase/live.sql', import.meta.url), 'utf8'));
+  await db.exec(fs.readFileSync(new URL('../supabase/week.sql', import.meta.url), 'utf8'));
   const f = {url: URL_, key: KEY, db, codes: {}, refresh: {}, down: false, log: []};
   // One request at a time, the way one database connection works.
   let queue = Promise.resolve();

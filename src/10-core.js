@@ -351,18 +351,20 @@ function recordMaths(pid, q, ok, src) {
   const r = {ok: ok, day: dayKey(new Date()), q: q, t: Date.now()};
   if (src) r.src = src;
   saved.m.h[pid] = mHist(pid).concat([r]).slice(-6);
-  counted(ok);
+  counted(ok, pid + ':' + q);
   save();
 }
 const STATUS = {new: 'New', learned: 'Learned', weak: 'Weak', proven: 'Proven'};
 function record(pid, k, ok) {
   const id = pid + k, r = saved.ans[id];
   saved.ans[id] = {ok: ok, n: (r ? r.n : 0) + 1, t: Date.now()};
-  counted(ok);
+  counted(ok, id);
   save();
 }
-/* Every answer, in either subject, counts toward the study day, the streak and the week's right answers. */
-function counted(ok) {
+/* Every answer, in either subject, counts toward the study day, the streak and the week's right answers.
+   q names the question: an Economics question's id (c1p1a), or a maths point's id, a colon and the question.
+   While signed in, a right answer also goes to the weekly table with friends (76-week.js). */
+function counted(ok, q) {
   const today = dayKey(new Date());
   if (!saved.day || saved.day.k !== today) saved.day = {k: today, n: 0};
   saved.day.n++;
@@ -370,6 +372,7 @@ function counted(ok) {
   if (ok) {
     if (!saved.week || saved.week.k !== weekKey()) saved.week = {k: weekKey(), n: 0};
     saved.week.n++;
+    wkLog(q);
   }
 }
 /* A chapter's bar. Economics: the share of its questions that are right, two per point.

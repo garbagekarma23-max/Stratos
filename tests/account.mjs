@@ -287,9 +287,11 @@ await C.p.click('[data-act="delacct"]');
 check(await until(async () => !(await row('a@example.com'))), 'the second tap deletes the account and its progress', R);
 const calls = f.log.slice(logFrom).filter(l => l.includes('/rpc/'));
 // The account sheet also loads the friends list, the chats and the challenges with it (friends_state, chats_state and
-// challenges_state, which take nothing either).
+// challenges_state, which take nothing either), and the weekly table for its switch (week_table, which takes only
+// when Monday began on this phone).
 const dels = calls.filter(l => l.includes('/rpc/delete_account'));
-check(dels.length === 1 && dels[0] === 'POST /rest/v1/rpc/delete_account {}' && calls.every(l => ['POST /rest/v1/rpc/delete_account {}', 'POST /rest/v1/rpc/friends_state {}', 'POST /rest/v1/rpc/chats_state {}', 'POST /rest/v1/rpc/challenges_state {}'].includes(l)),
+const weekOk = l => /^POST \/rest\/v1\/rpc\/week_table \{"since":"\d{4}-\d\d-\d\dT[\d:.]+Z"\}$/.test(l);
+check(dels.length === 1 && dels[0] === 'POST /rest/v1/rpc/delete_account {}' && calls.every(l => weekOk(l) || ['POST /rest/v1/rpc/delete_account {}', 'POST /rest/v1/rpc/friends_state {}', 'POST /rest/v1/rpc/chats_state {}', 'POST /rest/v1/rpc/challenges_state {}'].includes(l)),
   'the app calls delete_account once, with nothing in it: ' + calls.join(' '), R);
 const users = (await f.admin('select email from auth.users order by email')).rows.map(r => r.email);
 check(users.join() === 'b@example.com', 'only the student who asked is deleted: ' + users.join(', '), R);

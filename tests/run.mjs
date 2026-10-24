@@ -23,9 +23,11 @@
 // challenges between real friends (start, play, result, decline, limits, block) on two devices.
 // live-db.mjs checks supabase/live.sql with no browser (who can see a student online, and who can join or send on a
 // chat's Realtime channel), and live.mjs runs online status and the typing bubble on several devices.
+// week-db.mjs checks the weekly table's rules in supabase/week.sql with no browser, and week.mjs runs the weekly table
+// with real friends (sending right answers, the table, the switch, offline, sign out) on several devices.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['welcome.mjs'], ['first-open.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});

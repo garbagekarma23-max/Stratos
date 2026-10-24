@@ -126,7 +126,7 @@ await tab(B.p, 'you');
 await B.p.click('[data-act="account"]');
 await B.p.waitForSelector('#sheetBody [data-act="frshowon"]');
 check((await text(B.p, '#setOnline')) === 'Show when I’m online' && (await B.p.getAttribute('[data-act="frshowon"]', 'aria-pressed')) === 'true', 'the account sheet has Show when I’m online, on', R);
-check((await text(B.p, '#acctFr .fr-acct:last-of-type + .fine')).startsWith('When this is off, nobody sees when you’re online. You still see friends who show it.'), 'and says what off does', R);
+check((await text(B.p, '#acctFr .fr-acct:has(#setOnline) + .fine')).startsWith('When this is off, nobody sees when you’re online. You still see friends who show it.'), 'and says what off does', R);
 await both(B.p, 'live-account');
 await B.p.click('[data-act="frshowon"]');
 check(await until(async () => (await text(B.p, '#toast')).includes('Nobody can see when you’re online now.')) && (await B.p.getAttribute('[data-act="frshowon"]', 'aria-pressed')) === 'false', 'turning it off says so', R);

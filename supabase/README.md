@@ -383,6 +383,41 @@ Once the site is updated. Use A and B from step 13, friends, with an accepted me
 6. On A, send a message. It shows on B within a second or two.
 7. On A, block B. On B, typing no longer reaches A, and the chat closes within about 5 seconds.
 
+## 20. Add the weekly table
+
+Do this once the pull request with `supabase/week.sql` is merged. Until then a signed-in student's This week tab says
+"This week’s table needs a connection.", because the functions it asks for are not there yet.
+
+1. Open **SQL Editor** and start a new query.
+2. Paste the whole of `supabase/week.sql` and press **Run**. It should say Success. No rows returned. It needs the
+   tables from steps 2, 9, 11, 16 and 18, which are in already.
+3. Open **Table Editor**. There should be two new tables, `week_points` (one row for each point the app has, 86 now)
+   and `week_answers` (empty until a student answers), neither marked as unprotected.
+4. In **Integrations**, then **Cron**, there should be a job called `stratos-week` that runs every day. It deletes
+   answers older than 15 days. If it is missing, Cron was off: turn it on (step 12) and run `week.sql` again.
+5. Open **Advisors**, then **Security Advisor**. Expected, and nothing else new: "RLS enabled, no policy" on
+   `week_points` and `week_answers` (only the functions in the file reach them), and the note about `security definer`
+   functions.
+
+Running `week.sql` again later is safe. It keeps the answers and puts the rules and the list of points back as
+written. When a new point is added to the app, its line goes in `week.sql` (a test says so), and the file is run again.
+
+What it keeps: one row for each right answer that counted, with the account's random id, the question (such as
+`c1p1a`, or `m1p1:3x+5=20` for maths) and when it was answered. Nothing else, and only for 15 days. Friends never
+see these rows, only each student's total.
+
+## 21. Check the weekly table with two accounts
+
+Once the site is updated. Use A and B from step 13, friends.
+
+1. On A, answer three questions right, a few seconds apart. In **Table Editor**, `week_answers` has three rows for A
+   within about 10 seconds.
+2. On B, open Friends, then This week. A shows with 3, and B with its own total.
+3. On A, open You, then Account, and turn off **Show me on friends’ weekly table**. On B, reopen This week: A has
+   gone. On A, This week still shows B, and A's row says Hidden from friends. Turn it on again.
+4. On A, sign out, answer a question, and sign in again. A's total has not changed: answers given while signed out
+   never count.
+
 ## If the project pauses
 
 A free project pauses after a week with no use. The app keeps working on each device while it is paused. Press

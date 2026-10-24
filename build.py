@@ -14,6 +14,7 @@ How the pieces fit:
   src/places.js        every course, which countries and states teach which, and the country codes for the subject sheet
   src/10-core.js ...   the script, in the order listed in JS below
   src/75-friends.js    real friends: usernames, search, friend codes, requests, remove, block and unblock
+  src/76-week.js       the weekly table with real friends: sending right answers, the table and its switch
   src/77-messages.js   messages between real friends: message requests, the chat, Send, report and warnings
   src/78-challenges.js challenges with real friends: starting, playing, the cards and the results
   src/79-live.js       who is online now, and the typing bubble and instant messages through Supabase Realtime
@@ -35,7 +36,7 @@ LAB = HERE + 'lab/'
 MARK = '/*REC*/{}/*REC-END*/'
 JS = ['content.js', 'maths-content.js', 'econ-points.js', 'edexcel-content.js', 'places.js', 'lab/topics.js', 'lab/maths.js', 'lab/keypad.js', 'lab/sheet.js',
       '10-core.js', '15-maths-make.js', '20-sound.js', '30-shell.js', '40-home.js', '50-feed.js', '55-maths.js',
-      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
+      '60-practice.js', '62-maths-practice.js', '70-social.js', '75-friends.js', '76-week.js', '77-messages.js', '78-challenges.js', '79-live.js', '80-intro.js', '84-merge.js', '85-account.js', '90-boot.js']
 
 def read(name):
     """A file from src/, or from lab/ when its name starts with lab/."""
