@@ -1,0 +1,48 @@
+# A test course. This comment must survive the ids being written in.
+id: tst-course
+subject: Testing
+bank: tst
+name: Testing, Year 9
+about: NSW, Test topic
+short: Testing
+years: [9]
+place: nsw
+kind: standard
+note: A made course for the tests. It is not real study content.
+also_match: [e]
+units:
+  - title: Testing unit
+    chapters:
+      - title: First chapter   # a comment on a title
+        id: tst-course-1-1
+        points:
+          - title: Plain one
+            id: tst-plain-one
+            brief: A plain point.
+          - title: Dash one
+            id: tst-dash-one
+            brief: Its first version has a dash, so the content check sends it back once.
+          - title: Flag one
+            id: tst-flag-one
+            brief: The checker flags it, so it gets a fix.
+          - title: Error one
+            id: tst-error-one
+            brief: The API has an error the first time.
+          - title: Expire one
+            id: tst-expire-one
+            brief: The request expires the first time.
+          - title: Same one
+            id: tst-same-one
+            brief: The matcher finds it in the bank.
+          - title: Price elasticity
+            id: tst-price-elasticity
+            reuse: e-ped
+      - title: Second chapter
+        id: tst-course-1-2
+        points:
+          - title: Refuse one
+            id: tst-refuse-one
+            brief: Claude declines to write it until the owner adds a note.
+          - title: Unsure one
+            id: tst-unsure-one
+            brief: The checker is not sure of it.

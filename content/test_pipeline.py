@@ -4,14 +4,19 @@
   python3 content/test_pipeline.py --write-fixture  also writes tests/made/, the made course tests/made.mjs opens
 
 What it checks: the outline rules (Years 7 to 12, the bank, briefs, the colon hint), ids written into the outline
-with its comments kept, the estimate, --max-dollars, a full run (match, write, the content check and one rewrite,
-check, fix, a refusal, an API error tried again, an expired request sent again), a stop just after a batch was
-sent carrying on without sending it twice, the API key never printed or saved, the review page (its token, its
-Host check, approve, the fix, edit with the content check, reject with a note, reuse), and publishing into a copy
-of the repository: the bank and course files, a chapter held back as Coming soon, the SQL lines, and that
-check_content.mjs and build.py pass on the result.
+with its comments kept, the estimate, --max-dollars, a full run on the original settings (match, write, the content
+check and one rewrite, check, fix, a refusal, an API error tried again, an expired request sent again), a stop just
+after a batch was sent carrying on without sending it twice, the review page (its token, its Host check, approve,
+the fix, edit with the content check, reject with a note, reuse), and publishing into a copy of the repository: the
+bank and course files, a chapter held back as Coming soon, the SQL lines, and that check_content.mjs and build.py
+pass on the result.
+
+Then: a run saved by the pipeline from before settings (tests/pipeline-old-run/) finished on the original settings;
+the cheaper settings (chapter writing on Sonnet, the Haiku screen, the Opus check, spot checks, sensitive words,
+points written on their own, each point's cost, the numbers after a run); a trial with --now and the Compare tab;
+run-many with shared batches and each course's share of --max-dollars; and the API key never printed or saved.
 """
-import contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
+import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,38 +67,95 @@ class FakeBatches:
             out.append(NS(id=bid, created_at=b['created'], request_counts=NS(processing=len(b['requests']), succeeded=0, errored=0, canceled=0, expired=0)))
         return out
 
+class FakeError(Exception):
+    """An error from the stand-in API, shaped like the library's: a status code and a message."""
+    def __init__(self, status, message):
+        super().__init__(message); self.status_code, self.message = status, message
+
+def stage_of(params):
+    """Which step a request is for, read from the request as the API would get it."""
+    system, user = params['system'][0]['text'], params['messages'][0]['content']
+    if system.startswith('Stratos keeps a bank'): return 'match'
+    if system.startswith('You check'): return 'screen' if params['model'] == pipeline.HAIKU else 'check'
+    if 'This point was flagged in checking' in user: return 'fix'
+    return 'chapter' if re.search(r'^Write these \d+ points from this chapter', user, re.M) else 'write'
+
 class FakeAPI:
+    """Stands in for the Anthropic API. What it answers depends on words in each point's title:
+    Error and Expire fail the first time, Same is in the bank, Refuse is declined until there is a note, Dash fails the
+    content check once, Lost is left out of a chapter answer once, Flag is flagged by both checkers, Haiku flag only by
+    Haiku, Miss only by Opus, Doubt makes Haiku not sure, Topic makes Haiku name a sensitive topic, and Unsure makes Opus
+    not sure."""
     def __init__(self):
         self.batches, self.created, self.stop_after_create, self.seen = {}, 0, False, {}
-        self.messages = NS(batches=FakeBatches(self), count_tokens=lambda **p: NS(input_tokens=len(json.dumps(p)) // 4))
-    def answer(self, req):
-        stage = {'m': 'match', 'w': 'write', 'c': 'check', 'f': 'fix'}[req['custom_id'][0]]
-        text = req['params']['messages'][0]['content']
-        title = re.search(r'^Point: (.*)$', text, re.M).group(1) if stage != 'check' else re.search(r'^Title: (.*)$', text, re.M).group(1)
+        self.streamed, self.interrupt_on, self.release, self.limit_once, self.billed = [], None, threading.Event(), False, 0
+        self.messages = NS(batches=FakeBatches(self), count_tokens=lambda **p: NS(input_tokens=len(json.dumps(p)) // 4), stream=self.stream)
+    def count(self, title, stage):
         n = self.seen[(title, stage)] = self.seen.get((title, stage), 0) + 1
-        ok = lambda data, stop='end_turn': NS(custom_id=req['custom_id'], result=NS(type='succeeded', message=NS(
-            stop_reason=stop, content=[NS(type='thinking', thinking=''), NS(type='text', text=json.dumps(data))],
-            usage=NS(input_tokens=3000, output_tokens=2000, cache_creation_input_tokens=0, cache_read_input_tokens=0), stop_details=None)))
-        if 'Error' in title and n == 1:
-            return NS(custom_id=req['custom_id'], result=NS(type='errored', error=NS(type='error', error=NS(type='api_error', message='overloaded'))))
-        if 'Expire' in title and n == 1:
-            return NS(custom_id=req['custom_id'], result=NS(type='expired'))
+        return n
+    def reply(self, params):
+        """(kind, data): kind is ok, refusal, error or expired."""
+        stage, text = stage_of(params), params['messages'][0]['content']
+        if stage == 'chapter':
+            pts = re.findall(r'^Id: (\S+)\nPoint: (.*)$', text, re.M)
+            if any('Refuse' in t for _, t in pts): return 'refusal', None
+            out = {}
+            for pid, title in pts:
+                n = self.count(title, 'write')
+                if 'Lost' in title and n == 1: continue
+                out[pid] = fake_point(title, dash=('Dash' in title and n == 1))
+            return 'ok', out
+        title = re.search(r'^Point: (.*)$', text, re.M).group(1) if stage not in ('check', 'screen') else re.search(r'^Title: (.*)$', text, re.M).group(1)
+        n = self.count(title, stage)
+        if 'Error' in title and n == 1: return 'error', None
+        if 'Expire' in title and n == 1: return 'expired', None
         if stage == 'match':
             same = re.search(r'^- (e-[a-z]+):', text, re.M).group(1) if 'Same' in title else ''
-            return ok({'same': same, 'reason': 'It teaches the same idea.' if same else 'No point in the bank is the same.'})
+            return 'ok', {'same': same, 'reason': 'It teaches the same idea.' if same else 'No point in the bank is the same.'}
         if stage in ('write', 'fix'):
-            if 'Refuse' in title and 'owner\'s note' not in text:
-                r = ok({}, 'refusal'); r.result.message.content = []; return r
-            return ok(fake_point(title, dash=('Dash' in title and n == 1)))
-        # The checker: the right answer is the option that starts with Right.
+            if 'Refuse' in title and 'owner\'s note' not in text: return 'refusal', None
+            return 'ok', fake_point(title, dash=('Dash' in title and n == 1))
+        # The checkers: the right answer is the option that starts with Right.
+        haiku = stage == 'screen'
+        flag = 'Flag' in title or (haiku and 'Haiku flag' in title) or (not haiku and 'Miss' in title)
         def pick(k):
             block = text.split('Question ' + k + ': ')[1]
             opts = re.findall(r'^- (.*)$', block.split('Clue:')[0], re.M)
             best = next(o for o in opts if o.startswith('Right'))
             return {'best': best, 'also_right': [o for o in opts if o == 'Wrong one'] if 'Flag' in title and k == 'a' else []}
-        probs = [{'part': 'card', 'kind': 'fact', 'detail': 'The second line is not quite right.'}] if 'Flag' in title else []
-        return ok({'a': pick('a'), 'b': pick('b'), 'problems': probs, 'sure': 'low' if 'Unsure' in title else 'high',
-                   'sensitive': 'none', 'summary': 'Problems found.' if probs else 'No problems found.'})
+        probs = [{'part': 'card', 'kind': 'fact', 'detail': 'The second line is not quite right.'}] if flag else []
+        sure = 'low' if not haiku and 'Unsure' in title else 'medium' if haiku and 'Doubt' in title else 'high'
+        return 'ok', {'a': pick('a'), 'b': pick('b'), 'problems': probs, 'sure': sure,
+                      'sensitive': 'drugs' if haiku and 'Topic' in title else 'none', 'summary': 'Problems found.' if probs else 'No problems found.'}
+    def message(self, kind, data):
+        self.billed += 1
+        return NS(stop_reason='refusal' if kind == 'refusal' else 'end_turn', stop_details=None,
+                  content=[] if kind == 'refusal' else [NS(type='thinking', thinking=''), NS(type='text', text=json.dumps(data))],
+                  usage=NS(input_tokens=3000, output_tokens=2000, cache_creation_input_tokens=0, cache_read_input_tokens=0))
+    def answer(self, req):
+        """A batch result for one request."""
+        kind, data = self.reply(req['params'])
+        if kind == 'error':
+            return NS(custom_id=req['custom_id'], result=NS(type='errored', error=NS(type='error', error=NS(type='api_error', message='overloaded'))))
+        if kind == 'expired':
+            return NS(custom_id=req['custom_id'], result=NS(type='expired'))
+        return NS(custom_id=req['custom_id'], result=NS(type='succeeded', message=self.message(kind, data)))
+    @contextlib.contextmanager
+    def stream(self, **params):
+        """The normal Messages API, for --now."""
+        self.streamed.append(params)
+        if self.interrupt_on and self.interrupt_on(params):
+            # Ctrl+C while this request is running: it never comes back.
+            self.interrupt_on = None
+            _thread.interrupt_main()
+            self.release.wait(5)
+            raise FakeError(529, 'overloaded')
+        if self.limit_once:
+            self.limit_once = False
+            raise FakeError(429, 'rate_limit_error')
+        kind, data = self.reply(params)
+        if kind in ('error', 'expired'): raise FakeError(529, 'overloaded')
+        yield NS(get_final_message=lambda: self.message(kind, data))
 
 
 OUTLINE = """# A test course. This comment must survive the ids being written in.
@@ -135,6 +197,74 @@ units:
             brief: The checker is not sure of it.
 """
 
+CHEAP = """id: tst-cheap
+subject: Testing
+bank: tsc
+name: Testing Cheap, Year 9
+about: NSW, Cheap topic
+years: [9]
+place: nsw
+kind: standard
+note: A made course for the tests of the cheaper settings.
+units:
+  - title: Cheap unit
+    chapters:
+      - title: Screened chapter
+        points:
+          - title: Plain two
+            brief: Haiku passes it, so it is cleared without Opus.
+          - title: Haiku flag two
+            brief: Haiku flags it and Opus passes it.
+          - title: Flag two
+            brief: Both checkers flag it, so it gets a fix.
+          - title: Doubt two
+            brief: Haiku is not sure of it.
+          - title: Topic two
+            brief: Haiku names a topic that always comes to the owner.
+          - title: Lost two
+            brief: The chapter answer leaves it out once, so it is written on its own.
+          - title: Dash two
+            brief: Its first version fails the content check, so it is written again on its own.
+      - title: Refused chapter
+        points:
+          - title: Refuse two
+            brief: The chapter request is declined because of this point.
+          - title: Partner two
+            brief: Written on its own after the chapter request was declined.
+      - title: Words chapter
+        points:
+          - title: Wellbeing two
+            brief: How mental health affects work, so the word list sends it straight to Opus.
+          - title: Spot two
+            brief: Haiku passes it, and it is picked for a spot check.
+"""
+
+def course_text(cid, bank, word):
+    """A small course of three plain points in two chapters, for run-many."""
+    return """id: """ + cid + """
+subject: Testing
+bank: """ + bank + """
+name: Testing """ + word + """, Year 9
+about: NSW, """ + word + """ topic
+years: [9]
+place: nsw
+kind: standard
+note: A made course for the run-many tests.
+units:
+  - title: """ + word + """ unit
+    chapters:
+      - title: """ + word + """ first chapter
+        points:
+          - title: """ + word + """ one
+            brief: A plain point.
+          - title: """ + word + """ two
+            brief: Another plain point.
+      - title: """ + word + """ second chapter
+        points:
+          - title: """ + word + """ three
+            brief: A point on its own.
+"""
+
 def run(argv):
     """Runs the pipeline and returns (exit code, what it printed)."""
     out = io.StringIO()
@@ -163,6 +293,7 @@ def main():
     api = FakeAPI()
     pipeline.make_client = lambda: api
     pipeline.POLL_SECONDS = 0
+    spot_check = pipeline.spot_check
     os.environ['ANTHROPIC_API_KEY'] = KEY
     printed = []
     def go(*argv):
@@ -200,7 +331,7 @@ def main():
     check(code == 0 and 'rough' not in out and 'match:' in out, 'with a key, the estimate counts the prompts with the API')
     code, out = go('run', outline)
     check(code == 1 and '--max-dollars' in out and api.created == 0, 'run refuses to start without --max-dollars')
-    code, out = go('run', outline, '--max-dollars', '0.01')
+    code, out = go('run', outline, '--max-dollars', '0.01', '--settings', 'original')
     check(code == 1 and 'Not sent' in out and api.created == 0, 'and sends nothing that could pass it')
 
     # ---------- a stop just after sending ----------
@@ -284,11 +415,6 @@ def main():
     page = open(os.path.join(repo, 'v2.html'), encoding='utf-8').read() if b.returncode == 0 else ''
     check(b.returncode == 0 and 'MADE_COURSES.push(' in page and 'tst-unsure-one' in page, 'build.py puts the made course into v2.html')
 
-    # ---------- the key ----------
-    saved = ''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
-    check(KEY not in ''.join(printed) and KEY not in saved, 'the API key is never printed or written to a file')
-    check(pipeline.scrub('the key ' + KEY + ' leaked') == 'the key [key] leaked', 'and anything printed has it taken out')
-
     # ---------- the fixture for tests/made.mjs ----------
     fixture = os.path.join(REPO, 'tests', 'made')
     made = {os.path.join(d, f): open(os.path.join(repo, 'src', d, f), encoding='utf-8').read() for d in ['bank', 'courses'] for f in os.listdir(os.path.join(repo, 'src', d))}
@@ -298,6 +424,183 @@ def main():
         print('wrote tests/made/')
     have = {os.path.join(d, f): open(os.path.join(fixture, d, f), encoding='utf-8').read() for d in ['bank', 'courses'] for f in os.listdir(os.path.join(fixture, d))} if os.path.isdir(fixture) else {}
     check(have == made, 'tests/made/ is what publish writes now (python3 content/test_pipeline.py --write-fixture updates it)')
+    # ---------- a run started before settings carries on ----------
+    # tests/pipeline-old-run/ was made by the pipeline as it was before settings: a run stopped with a batch open.
+    repo2 = os.path.join(tmp, 'repo2'); copy_repo(repo2)
+    old = os.path.join(REPO, 'tests', 'pipeline-old-run')
+    work2 = os.path.join(tmp, 'work-old')
+    shutil.copytree(os.path.join(old, 'work'), work2)
+    outline2 = os.path.join(tmp, 'old.yaml'); shutil.copy(os.path.join(old, 'tst-course.yaml'), outline2)
+    ob = json.load(open(os.path.join(old, 'open-batch.json'), encoding='utf-8'))
+    api2 = FakeAPI(); api2.created = ob['batches']
+    api2.batches[ob['id']] = {'requests': ob['requests'], 'polls': 1, 'created': ob['created']}
+    for t, s_, n in ob['seen']: api2.seen[(t, s_)] = n
+    pipeline.make_client = lambda: api2
+    O = pipeline.Work(work2, 'tst-course')
+    spent_before = O.state['spent']['usd']
+    check('settings' not in O.state, 'the old run has no settings saved')
+    code, out = run(['--repo', repo2, '--work', work2, 'run', outline2, '--max-dollars', '5']); printed.append(out)
+    O = pipeline.Work(work2, 'tst-course')
+    sent = [r for bid, b in api2.batches.items() if bid != ob['id'] for r in b['requests']]
+    check(code == 0 and 'Done for now' in out and O.state['settings'] == 'original' and 'original settings' in out, 'a run saved before settings carries on to the end, on the original settings')
+    check(sent and all(r['params']['model'] == pipeline.OPUS for r in sent) and not any(stage_of(r['params']) in ('chapter', 'screen') for r in sent),
+          'every request it sends goes to Opus, one point at a time, with no Haiku screen')
+    effort = {'write': 'medium', 'check': 'high', 'fix': 'medium', 'match': 'low'}
+    check(all(r['params']['output_config']['effort'] == effort[stage_of(r['params'])] for r in sent) and
+          all('Already written in this chapter' not in r['params']['messages'][0]['content'] for r in sent), 'with the same effort and prompts as before')
+    check(abs(O.state['spent']['usd'] - (spent_before + api2.billed * (3000 * 2 + 2000 * 10) / 1e6)) < 0.001, 'its answers are priced as Opus batches, as before')
+    check(O.load('tst-plain-one')['cleared_by'] == 'checker' and O.load('tst-flag-one')['stage'] == 'review' and O.load('tst-unsure-one')['stage'] == 'review' and
+          O.load('tst-dash-one')['stage'] == 'cleared', 'and its points end where they would have before')
+    items = pipeline.review_items(work2, repo2)['items']
+    check(sorted(i['id'] for i in items) == ['tst-flag-one', 'tst-refuse-one', 'tst-same-one', 'tst-unsure-one'], 'the review page lists its points as before')
+    ok = [pipeline.decide(work2, repo2, {'course': 'tst-course', 'id': 'tst-flag-one', 'action': 'fix'})['ok'],
+          pipeline.decide(work2, repo2, {'course': 'tst-course', 'id': 'tst-same-one', 'action': 'reuse'})['ok']]
+    code, out = run(['--repo', repo2, '--work', work2, 'publish', outline2]); printed.append(out)
+    check(all(ok) and code == 0 and 'Held back as Coming soon: Second chapter' in out, 'and it publishes as before')
+    pipeline.make_client = lambda: api
+
+    # ---------- the cheaper settings, with batches ----------
+    cheap = os.path.join(tmp, 'tst-cheap.yaml')
+    with open(cheap, 'w', encoding='utf-8') as f: f.write(CHEAP)
+    code, out = go('estimate', cheap)
+    nums = lambda label, text: [float(x) for x in re.search(label + r'.*?US\$(\d+\.\d\d) to US\$(\d+\.\d\d)', text).groups()]
+    b_, n_ = nums('With batches', out), nums('With --now', out)
+    check(code == 0 and 'cheaper settings' in out and 'write, a chapter at a time: 3 requests for 11 points' in out and 'Claude Sonnet 5.5, low effort' in out and
+          'screen: 10 requests, Claude Haiku 5.5, medium effort' in out, 'the estimate shows a request per chapter on Sonnet and the Haiku screen')
+    check(abs(n_[0] - 2 * b_[0]) < 0.02 and abs(n_[1] - 2 * b_[1]) < 0.02 and b_[1] > 0, 'and the cost with batches and with --now, which is twice as much')
+    code, out = go('estimate', cheap, '--settings', 'original')
+    check(code == 0 and 'write, one point at a time: 12 requests' in out and 'screen' not in out and 'Claude Opus 5.5, medium effort' in out, 'with --settings original it shows the first run\'s settings')
+    check(not os.path.exists(os.path.join(work, 'tst-cheap', 'state.json')), 'and an estimate saves no settings')
+    pipeline.spot_check = lambda pid: pid == 'tsc-spot-two'
+    first = api.created
+    code, out = go('run', cheap, '--max-dollars', '5')
+    C2 = pipeline.Work(work, 'tst-cheap')
+    reqs = [r for bid, b in api.batches.items() if int(bid.split('_')[1]) > first for r in b['requests']]
+    chap = [r for r in reqs if stage_of(r['params']) == 'chapter']
+    check(code == 0 and 'Done for now' in out and C2.state['settings'] == 'cheaper', 'a new course runs on the cheaper settings')
+    check(len(chap) == 3 and all(r['params']['model'] == pipeline.SONNET and r['params']['output_config']['effort'] == 'low' for r in chap) and
+          sorted(chap[0]['params']['output_config']['format']['schema']['required']) == sorted(p for p in chap[0]['params']['output_config']['format']['schema']['properties']),
+          'each chapter is written in one request to Sonnet, low effort, with an entry for each point')
+    check(all(r['params']['model'] == pipeline.HAIKU and r['params']['output_config']['effort'] == 'medium' for r in reqs if stage_of(r['params']) == 'screen') and
+          all(r['params']['model'] == pipeline.OPUS and r['params']['output_config']['effort'] == 'high' for r in reqs if stage_of(r['params']) == 'check'),
+          'Haiku screens at medium effort, and Opus checks at high')
+    R = C2.load
+    check(R('tsc-plain-two')['cleared_by'] == 'screen' and not R('tsc-plain-two').get('check'), 'a point Haiku passes cleanly is cleared without Opus')
+    check(R('tsc-haiku-flag-two')['cleared_by'] == 'checker' and R('tsc-haiku-flag-two')['to_opus'] == 'flagged at the screen', 'a point Haiku flags goes to Opus, which can clear it')
+    check(R('tsc-flag-two')['stage'] == 'review' and R('tsc-flag-two').get('proposal'), 'a point both flag gets a fix and waits for review')
+    check(R('tsc-doubt-two')['to_opus'] == 'not sure at the screen' and R('tsc-doubt-two')['cleared_by'] == 'checker', 'a point Haiku is not sure of goes to Opus')
+    check(R('tsc-topic-two')['stage'] == 'review' and R('tsc-topic-two')['sensitive'] == 'drugs' and R('tsc-topic-two')['check']['sensitive'] == 'none',
+          'a topic Haiku names comes to the owner even when Opus names none')
+    check(R('tsc-wellbeing-two').get('screen') is None and R('tsc-wellbeing-two')['to_opus'] == 'the word mental health', 'a point with a sensitive word skips Haiku and goes to Opus')
+    check(R('tsc-spot-two')['to_opus'] == 'spot check' and R('tsc-spot-two')['screen_passed'] and R('tsc-spot-two').get('check'), 'a spot check sends a point Haiku passed to Opus too')
+    lost = R('tsc-lost-two')
+    alone = [r for r in reqs if stage_of(r['params']) == 'write' and 'Point: Lost two' in r['params']['messages'][0]['content']]
+    check(lost['stage'] == 'cleared' and any('written on its own' in l for l in lost['log']) and alone and 'Already written in this chapter' in alone[0]['params']['messages'][0]['content'],
+          'a point missing from the chapter answer is written on its own, told what the chapter has already')
+    check(R('tsc-dash-two')['stage'] == 'cleared' and R('tsc-dash-two').get('redone'), 'a point that fails the content check is written again on its own')
+    check(R('tsc-refuse-two')['stage'] == 'failed' and R('tsc-partner-two')['stage'] == 'cleared', 'a declined chapter request is sent again one point at a time, so only the refused point fails')
+    plain = R('tsc-plain-two')['usd']
+    check(abs(plain['write'] - (3000 * 1 + 2000 * 5) / 1e6 / 7) < 1e-5 and abs(plain['screen'] - (3000 * 0.05 + 2000 * 0.25) / 1e6) < 1e-5,
+          'each point\'s cost is saved, with a chapter request shared between its points, at batch prices')
+    check('Flagged for you:' in out and 'Sent to the Opus checker:' in out and 'cents for each of 10 points written' in out and 'spot check' in out,
+          'after the run it prints the cost per point, the flag rate and the points sent to Opus')
+    code, out = go('status', cheap)
+    check(code == 0 and 'cheaper settings' in out and 'Sent to the Opus checker:' in out, 'status shows the settings and the same numbers')
+    pipeline.spot_check = spot_check
+
+    # ---------- a trial with --now, and the Compare tab ----------
+    batches_before = api.created
+    code, out = go('run', outline, '--as', 'tst-course', '--max-dollars', '5')
+    check(code == 1 and '--as needs a new name' in out, 'a trial needs a name of its own')
+    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '0.001')
+    check(code == 1 and 'Not sent' in out and not api.streamed, '--now keeps to --max-dollars, at its own prices')
+    pipeline.NOW_MOST = 3
+    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    check(code == 1 and 'more than 3 for --now' in out and not api.streamed, '--now refuses a run bigger than NOW_MOST')
+    pipeline.NOW_MOST = 50
+    api.limit_once = True
+    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    check(code == 1 and 'rate limit' in out, 'a rate limit stops a --now run with a message')
+    api.interrupt_on = lambda p: stage_of(p) == 'screen'
+    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    T = pipeline.Work(work, 'tst-course-cheaper')
+    check(code == 130 and 'Stopped' in out and T.state.get('pending', 0) > 0, 'Ctrl+C during --now stops it, with the running requests\' high cost counted')
+    spent_at_stop = T.state['spent']['usd'] + T.state['pending']
+    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    api.release.set()
+    T = pipeline.Work(work, 'tst-course-cheaper')
+    check(code == 0 and 'counted US$' in out and 'Done for now' in out and T.state['spent']['usd'] >= spent_at_stop and not T.state.get('pending'),
+          'running again counts that money as spent and carries on to the end')
+    check(api.created == batches_before and api.streamed, 'with --now nothing goes through batches')
+    meta = json.load(open(os.path.join(work, 'tst-course-cheaper', 'course.json'), encoding='utf-8'))
+    check(meta['trial_of'] == 'tst-course' and T.state['trial_of'] == 'tst-course' and T.state['settings'] == 'cheaper', 'the trial has its own folder, marked as a trial of the course')
+    trecs = [T.load(p) for p in ['tst-plain-one', 'tst-unsure-one', 'tst-error-one']]
+    check(all(r.get('screen_passed') and r.get('check') and r['to_opus'] == 'trial' for r in trecs[:2]), 'in a trial, Opus checks every point Haiku passed too')
+    check(abs(T.load('tst-plain-one')['usd']['screen'] - (3000 * 0.10 + 2000 * 0.50) / 1e6) < 1e-5, 'and --now answers are priced at the normal price')
+    check(re.search(r'Trial: Haiku passed \d+ points, and Opus flagged [1-9]\d* of them', out) and 'Without the extra Opus checks' in out,
+          'the trial says how many points Haiku passed that Opus flagged')
+    check(T.load('tst-error-one')['to_opus'] == 'the screen did not answer', 'a screen that fails sends the point to Opus')
+    code, out = go('publish', outline)
+    check('tst-course-cheaper' not in json.dumps(pipeline.review_items(work, repo)) and
+          pipeline.decide(work, repo, {'course': 'tst-course-cheaper', 'id': 'tst-unsure-one', 'action': 'approve'})['ok'] is False,
+          'a trial never shows in the review list and nothing in it can be approved')
+    server = pipeline.review_server(work, repo, 0)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    port = server.server_address[1]
+    page = urllib.request.urlopen('http://127.0.0.1:' + str(port) + '/').read().decode()
+    token2 = re.search(r"const TOKEN = '([^']+)'", page).group(1)
+    call = lambda path, body=None, tok=token2, _call=call: _call(path, body, tok)
+    comp = call('/api/compare')
+    tr = comp['trials'][0] if comp.get('trials') else {}
+    pair = next((p for p in tr.get('pairs', []) if p['id'] == 'tst-plain-one'), {})
+    check(tr.get('trial') == 'tst-course-cheaper' and tr['a']['settings'] == 'original' and tr['b']['settings'] == 'cheaper' and
+          pair.get('a', {}).get('point') and pair.get('b', {}).get('point') and pair['b']['usd'], 'the Compare tab gets both versions of each point, with each run\'s numbers')
+    check('data-tab="compare"' in page, 'and the page has a Compare tab')
+    r = call('/api/pick', {'trial': 'tst-course-cheaper', 'id': 'tst-plain-one', 'pick': 'b'})
+    check(r.get('ok') and call('/api/compare')['trials'][0]['pairs'][0]['pick'] == 'b', 'a pick on the Compare tab is saved')
+    check(not call('/api/pick', {'trial': 'tst-course', 'id': 'tst-plain-one', 'pick': 'b'}).get('ok') and
+          not call('/api/pick', {'trial': 'tst-course-cheaper', 'id': '../x', 'pick': 'b'}).get('ok') and
+          call('/api/compare', tok=None).get('status') == 403, 'an unknown trial or point is refused, and so is a call without the token')
+    server.shutdown()
+
+    # ---------- run-many ----------
+    many = os.path.join(tmp, 'many'); os.makedirs(many)
+    for name, text in [('tst-a', course_text('tst-a', 'tsa', 'Alpha')), ('tst-b', course_text('tst-b', 'tsb', 'Beta')), ('bad', course_text('tst-z', 'tsz', 'Zed').replace('years: [9]', 'years: [6]'))]:
+        with open(os.path.join(many, name + '.yaml'), 'w', encoding='utf-8') as f: f.write(text)
+    pipeline.BATCH_MOST = 3
+    first = api.created
+    code, out = go('run-many', many, '--max-dollars', '5')
+    A, B = pipeline.Work(work, 'tst-a'), pipeline.Work(work, 'tst-b')
+    new = {bid: b for bid, b in api.batches.items() if int(bid.split('_')[1]) > first}
+    check(code == 0 and 'bad.yaml' in out and 'Years 7 to 12' in out and 'The other courses carry on' in out, 'run-many sets aside an outline with problems and carries on')
+    check(out.index('The combined estimate, before anything is sent') < out.index('Sent ') and 'Estimate for the rest of all 2 courses' in out and "its share of --max-dollars" in out,
+          'it shows the combined estimate and each course\'s share before sending anything')
+    shared = [bid for bid, b in new.items() if any(r['custom_id'] in a['items'] for a in A.state['batches'] if a['id'] == bid for r in b['requests']) and
+              any(r['custom_id'] in x['items'] for x in B.state['batches'] if x['id'] == bid for r in b['requests'])]
+    check(shared and all(len(b['requests']) <= 3 for b in new.values()), 'both courses\' requests share each batch, split when a batch would be too big')
+    check(all(A.load(p)['stage'] == 'cleared' for p in ['tsa-alpha-one', 'tsa-alpha-two', 'tsa-alpha-three']) and all(B.load(p)['stage'] == 'cleared' for p in ['tsb-beta-one', 'tsb-beta-two', 'tsb-beta-three']),
+          'each course\'s points are written and checked in its own folder')
+    check(A.state['spent']['usd'] > 0 and B.state['spent']['usd'] > 0 and out.rindex('Testing Alpha, Year 9 (cheaper settings)') > out.index('Done for now') and
+          out.rindex('Testing Beta, Year 9 (cheaper settings)') > out.index('Done for now'), 'each course keeps its own costs, with a summary for each at the end')
+    pipeline.BATCH_MOST = 5000
+    jobs = [NS(work=NS(state={'spent': {'usd': 1}})), NS(work=NS(state={'spent': {'usd': 0}}))]
+    check([round(x, 4) for x in pipeline.shares(jobs, [2, 6], 5)] == [2, 3], 'each course\'s share is what it spent plus the rest split by what it could still cost')
+    many2 = os.path.join(tmp, 'many2'); os.makedirs(many2)
+    for name, text in [('tst-c', course_text('tst-c', 'tsc', 'Gamma')), ('tst-d', course_text('tst-d', 'tsd', 'Delta'))]:
+        with open(os.path.join(many2, name + '.yaml'), 'w', encoding='utf-8') as f: f.write(text)
+    shares = pipeline.shares
+    pipeline.shares = lambda jobs, highs, limit: [5 if j.course['id'] == 'tst-c' else 0.000001 for j in jobs]
+    code, out = go('run-many', many2, '--max-dollars', '5')
+    pipeline.shares = shares
+    D = pipeline.Work(work, 'tst-d')
+    check(code == 0 and 'Held back: Not sent' in out and D.state['spent']['usd'] == 0 and pipeline.Work(work, 'tst-c').load('tsc-gamma-one')['stage'] == 'cleared',
+          'a course over its share is held back, and the others carry on')
+
+    # ---------- the key ----------
+    saved = ''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
+    check(KEY not in ''.join(printed) and KEY not in saved, 'the API key is never printed or written to a file')
+    check(pipeline.scrub('the key ' + KEY + ' leaked') == 'the key [key] leaked', 'and anything printed has it taken out')
+
     shutil.rmtree(tmp, ignore_errors=True)
     print(sum(results), 'of', len(results), 'checks ok')
     return 0 if all(results) else 1

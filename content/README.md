@@ -1,6 +1,6 @@
 # The content pipeline
 
-Turns a course outline into study content for Stratos. You write the outline: the course, its units and chapters, and a short brief for each point, in your own words. The pipeline sends each point to Claude, which writes the card, the remember line, the check question and the practice question. The content check runs on each one, then a separate Claude call checks it for wrong answers, options that could also be right, and factual errors. You review only the points it flags, on a page on your own computer. Then the pipeline writes the cleared points into the app.
+Turns a course outline into study content for Stratos. You write the outline: the course, its units and chapters, and a short brief for each point, in your own words. The pipeline sends each chapter to Claude, which writes the card, the remember line, the check question and the practice question for each point. The content check runs on each one, then a separate Claude call checks it for wrong answers, options that could also be right, and factual errors. You review only the points it flags, on a page on your own computer. Then the pipeline writes the cleared points into the app.
 
 The commands below are for PowerShell on Windows. They also work in Git Bash, so Claude Code can run them as written.
 
@@ -8,7 +8,7 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 
 If you are Claude Code helping the owner with these steps:
 
-- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run` and the exact `estimate` there. When it is time, give them the command to paste.
+- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
 - You can run every other step: `status`, `estimate` (a rough one, with no key), `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
@@ -91,7 +91,29 @@ py content/pipeline.py estimate content/outlines/nsw-bus-11.yaml
 
 In the key window, it counts the real prompts with the API, which is free. Anywhere else it gives a rough figure from the length of the prompts. The first time, it also writes an id under each chapter and point title in the outline.
 
-For the Business Studies chapter (20 points), the estimate is about US$1.50 to US$3. Each point costs about 7 to 14 cents: the writing request is about 3,900 tokens in and the check about 2,000, and the rest is Claude's output, thinking included, which is the uncertain part. The prices are for Claude Opus 5.5 through Message Batches: US$2 per million tokens in and US$10 out, half the normal price.
+It shows each step, the model that does it and how hard it thinks, then two totals: with batches (the default) and with `--now` (step 7), which costs twice as much. Add `--settings original` to see the cost with the first run's settings. Give it several outlines, or a folder of them, for one combined estimate.
+
+There are two sets of settings, at the top of `content/pipeline.py`:
+
+| Step | `original` (the first run) | `cheaper` (a new course) |
+| --- | --- | --- |
+| Write | Claude Opus 5.5, medium effort, one point per request | Claude Sonnet 5.5, low effort, a chapter per request |
+| Screen | none | Claude Haiku 5.5, medium effort |
+| Check | Claude Opus 5.5, high effort | Claude Opus 5.5, high effort |
+| Fix | Claude Opus 5.5, medium effort | Claude Opus 5.5, medium effort |
+
+With `cheaper`, Haiku checks every point first. A point it passes cleanly (the writer's answers, no other option right, no problems, sure, no sensitive topic) is cleared. Everything else goes to the Opus checker, which is not told what Haiku said. A point Haiku says is sensitive always comes to you. A point whose brief or draft has a word such as mental health, drugs, sexual or Aboriginal skips Haiku and goes to Opus, and so does every point in an English course. One in 10 of the points Haiku passes goes to Opus anyway, so you can see how often Haiku misses something.
+
+A course keeps the settings it started on. nsw-bus-11 started before there were settings, so it stays on `original` unless you run it with `--settings cheaper`.
+
+For the Business Studies chapter (20 points), from the length of the prompts:
+
+| | `original` | `cheaper` |
+| --- | --- | --- |
+| With batches | US$1.35 to US$2.70 (7 to 14 cents a point) | US$0.50 to US$1.40 (2.5 to 7 cents a point) |
+| With `--now` | US$2.70 to US$5.40 | US$1.00 to US$2.70 |
+
+Claude's output, thinking included, is the uncertain part. With `cheaper`, most of the cost is the Opus checks and fixes, so it depends on how many points Haiku sends on. The estimate guesses 30% to 60% until a course has screened 5 points, then uses that course's own share. Batch prices are half the normal price: per million tokens in and out, Opus US$2 and US$10, Sonnet US$1 and US$5, Haiku US$0.05 and US$0.25.
 
 ## 7. Write and check the points
 
@@ -102,10 +124,31 @@ py content/pipeline.py run content/outlines/nsw-bus-11.yaml --max-dollars 5
 ```
 
 - `--max-dollars` is the most this course may cost in total, counting earlier runs. The pipeline refuses to send a batch that could take it past that.
-- Each step is one batch, so a run waits for several in turn: matching (if the bank has points in the same subject), writing, checking and fixes. Batches usually take under an hour each, at most 24.
+- Each step is one batch, so a run waits for several in turn: matching (if the bank has points in the same subject), writing, the Haiku screen, checking and fixes. Batches usually take under an hour each, at most 24.
+- `--now` sends the requests to the normal API instead, 4 at a time, so a run finishes in minutes. It costs twice as much, and it only runs when at most 50 points are waiting. Use it for tests and small courses:
+
+  ```powershell
+  py content/pipeline.py run content/outlines/nsw-bus-11.yaml --now --max-dollars 5
+  ```
+
+  If you press Ctrl+C during `--now`, the requests still running are lost but may be billed. The pipeline counts their highest possible cost as spent, so `--max-dollars` still holds.
+- `--settings cheaper` or `--settings original` changes the course's settings, and they are saved for its next runs.
 - You can press Ctrl+C at any time and run the same command later. Everything is saved as it arrives, in `content/work/nsw-bus-11/`, and nothing is sent twice.
 - `--no-wait` sends or collects once, then stops instead of waiting.
 - `py content/pipeline.py status content/outlines/nsw-bus-11.yaml` shows where each point is, with no API calls.
+- At the end of each run it prints, for the course, the cost per point written, how many points were flagged for you, and how many went to the Opus checker and why.
+
+### Several courses at once
+
+```powershell
+py content/pipeline.py run-many content/outlines --max-dollars 20
+```
+
+`run-many` takes several outlines, or a folder of them. It shows the combined estimate first, then puts every course's requests for a round into one shared batch: all the writing together, then all the screening, all the checks and all the fixes. A batch with more than 5,000 requests is split into several (`BATCH_MOST` at the top of `pipeline.py`), to stay inside the account's batch queue.
+
+- `--max-dollars` is the most all the courses may cost together, counting earlier runs. Each course gets a share: what it has spent, plus the rest split by how much each could still cost. The shares are printed before anything is sent. A course that would pass its share is held back and the others carry on. Run the same command again to share out the money again.
+- Each course keeps its own work folder, settings and costs, and a course whose outline has a problem, or that stops, does not hold up the others.
+- `--now`, `--settings` and `--no-wait` work as with `run`. At the end it prints the numbers for each course.
 
 ## 8. Review the flagged points
 
@@ -141,7 +184,7 @@ node challenges-db.mjs
 cd ..
 ```
 
-`publish` writes the cleared points into `src/bank/bus.js`, the course into `src/courses/nsw-bus-11.js`, and the course's lines into `supabase/week.sql` and `supabase/challenges.sql`. A chapter goes in only when every point in it is cleared. Until then it shows on Home as Coming soon. Then commit everything on a new branch:
+`publish` never publishes a trial (step 10). It writes the cleared points into `src/bank/bus.js`, the course into `src/courses/nsw-bus-11.js`, and the course's lines into `supabase/week.sql` and `supabase/challenges.sql`. A chapter goes in only when every point in it is cleared. Until then it shows on Home as Coming soon. Then commit everything on a new branch:
 
 ```powershell
 git checkout -b content/nsw-bus-11
@@ -151,6 +194,24 @@ git push -u origin content/nsw-bus-11
 ```
 
 Open the pull request on GitHub. The browser tests (`npm test`) need Chromium, so ask a Claude Code session on the web to run them on the branch. After it is merged, paste `supabase/week.sql` and then `supabase/challenges.sql` into the Supabase SQL Editor and run each, so the weekly table counts the new points.
+
+## 10. Compare the settings with a trial
+
+To see whether the cheaper settings keep the quality, run the same outline again under another name. In the key window:
+
+```powershell
+py content/pipeline.py run content/outlines/nsw-bus-11.yaml --as nsw-bus-11-cheaper --settings cheaper --now --max-dollars 4
+```
+
+- The trial has its own folder, `content/work/nsw-bus-11-cheaper/`, with the same point ids. It never publishes, and its points never show in the review list, so nothing in it reaches students.
+- In a trial, Opus checks every point, including the ones Haiku passed. That is the only way to see what Haiku would have let through. At the end it says how many points Haiku passed and how many of those Opus flagged, and what the trial would have cost without the extra Opus checks.
+- For the Business chapter, a trial costs about US$1.80 to US$3.70 with `--now`, or half that with batches.
+
+Then open the review page (step 8) and choose **Compare**. It shows the numbers for both runs, then each point twice, side by side, as students would see it. With **Hide which side is which until I pick** on, the sides are mixed up, and each point's run, checkers and cost show only after you pick **Left is better**, **About the same** or **Right is better**. Tap your pick again to clear it. Your picks are saved in the trial's folder, and the totals are at the top.
+
+Twenty points is a small sample, and two runs on the same settings also differ. Look for anything clearly worse. If Opus flags more than one or two of the points Haiku passed, tell Claude Code, and keep Opus checking every point.
+
+You can commit the trial's folder with the course, so the comparison is kept, or delete it.
 
 ## Writing an outline
 
@@ -184,10 +245,10 @@ Rules:
 
 | File | What it holds |
 | --- | --- |
-| `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model, how hard it thinks at each step, and the prices. |
+| `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model and how hard it thinks at each step, the prices, and the limits for `--now` and batches. |
 | `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples), `checker.md`, `matcher.md`, and the extra rules for each kind in `kinds/`. |
-| `review/index.html` | The review page. |
+| `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. |
 | `work/` | What each run saved: `state.json` (the batches and the money spent) and a file per point (each version, the checker's answer and your decisions). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
-| `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. |
+| `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. |

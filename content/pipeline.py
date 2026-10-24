@@ -3,6 +3,7 @@
 Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py estimate content/outlines/nsw-bus-11.yaml   what the rest of the course will cost
   python3 content/pipeline.py run content/outlines/nsw-bus-11.yaml --max-dollars 5
+  python3 content/pipeline.py run-many content/outlines --max-dollars 20  several courses, sharing each batch
   python3 content/pipeline.py status content/outlines/nsw-bus-11.yaml     where each point is, with no API calls
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
@@ -11,45 +12,87 @@ content/README.md walks through each step.
 How a point goes through it:
   match    if the bank already has points in the same subject, Claude says whether one is the same idea. A match
            waits for you in the review page: reuse it, or have a new point written.
-  write    Claude writes the point: card, remember line, check question and practice question.
-           node check_content.mjs --json checks it. If it fails, Claude rewrites it once with the problems.
+  write    Claude writes the point: card, remember line, check question and practice question. With the cheaper
+           settings, one request writes every point of a chapter. node check_content.mjs --json checks each point.
+           If one fails, Claude rewrites that point on its own, once, with the problems.
+  screen   with the cheaper settings, Claude Haiku checks it first. A point it passes cleanly is cleared. Anything
+           it flags or is not sure of goes on to the check.
   check    a separate call checks it. It is not told the right answer: it picks one itself, and says if another
            option could also be right, if any fact is wrong, and how sure it is.
   fix      a point the checker flagged gets a suggested fix.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
-Each step is one Message Batch for every point that needs it, which costs half the normal price.
+Each step is one Message Batch for every point that needs it, which costs half the normal price. With --now, the
+requests go one by one to the normal API instead: done in minutes, at the full price.
 
-Everything is saved as it arrives, in content/work/<course id>/: state.json (the batches sent and the money spent)
-and points/<point id>.json (each point's drafts, the checker's answer and your decisions). Running the same
-command again carries on from there. Nothing is sent twice unless it failed.
+Everything is saved as it arrives, in content/work/<course id>/: state.json (the settings, the batches sent and the
+money spent) and points/<point id>.json (each point's drafts, the checkers' answers, its cost and your decisions).
+Running the same command again carries on from there. Nothing is sent twice unless it failed.
 
 The API key is read from the ANTHROPIC_API_KEY environment variable and never written anywhere or printed.
 """
-import argparse, hashlib, http.server, json, os, random, re, secrets, subprocess, sys, time, urllib.parse
+import argparse, hashlib, http.server, json, os, queue, random, re, secrets, subprocess, sys, threading, time, urllib.parse
 from datetime import datetime, timezone
+from types import SimpleNamespace as NS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 
 # ---------- settings ----------
-MODEL = 'claude-opus-5-5'
-# How hard Claude thinks at each step. Thinking is billed as output, so this is the main thing that sets the cost.
-EFFORT = {'match': 'low', 'write': 'medium', 'check': 'high', 'fix': 'medium'}
-MAX_TOKENS = {'match': 8000, 'write': 32000, 'check': 32000, 'fix': 32000}
-# Message Batches prices for Claude Opus 5.5, in US dollars per million tokens: half the normal $4 in and $20 out.
-# Cache reads are counted at $0.20, the normal price, to be safe.
-PRICE = {'in': 2.00, 'out': 10.00, 'cache_write': 2.50, 'cache_read': 0.20}
-# The output tokens (thinking included) a request is expected to use, low and high, for estimates before sending.
-OUT_LOW = {'match': 500, 'write': 2000, 'check': 2500, 'fix': 2000}
-OUT_HIGH = {'match': 1500, 'write': 4500, 'check': 5500, 'fix': 4500}
-# Shares of points expected to need a second writing (the content check failed) and a fix (the checker flagged it).
-REDO_SHARE, FIX_SHARE = 0.1, 0.25
+OPUS, SONNET, HAIKU = 'claude-opus-5-5', 'claude-sonnet-5-5', 'claude-haiku-5-5'
+MODEL_NAMES = {OPUS: 'Claude Opus 5.5', SONNET: 'Claude Sonnet 5.5', HAIKU: 'Claude Haiku 5.5'}
+# Each step has a model, how hard it thinks (effort), and the output tokens one point is expected to use there, low
+# and high, for estimates before sending. Thinking is billed as output, so effort is the main thing that sets the cost.
+# A course keeps the settings it started with (saved in its state.json). run --settings original or --settings cheaper
+# changes them.
+SETTINGS = {
+    # The settings of the first run (nsw-bus-11): Claude Opus 5.5 at every step, and one writing request per point.
+    'original': {
+        'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'write': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'screen': None,
+        'check': {'model': OPUS, 'effort': 'high', 'out': (2500, 5500)},
+        'fix': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'chapters': False},
+    # Cheaper: Claude Sonnet 5.5 writes a chapter at a time, and Claude Haiku 5.5 screens every point first. Only the
+    # points it flags or is not sure of go to the Claude Opus 5.5 checker. Fixes stay on Claude Opus 5.5.
+    'cheaper': {
+        'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'write': {'model': SONNET, 'effort': 'low', 'out': (1000, 2000)},
+        'screen': {'model': HAIKU, 'effort': 'medium', 'out': (2500, 5500)},
+        'check': {'model': OPUS, 'effort': 'high', 'out': (2500, 5500)},
+        'fix': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'chapters': True},
+}
+NEW_COURSE = 'cheaper'    # the settings a new course starts on
+OLD_COURSE = 'original'   # a course whose state.json has no settings in it started before there were settings
+MAX_TOKENS = {'match': 8000, 'write': 32000, 'chapter': 64000, 'screen': 32000, 'check': 32000, 'fix': 32000}
+# Normal prices in US dollars per million tokens. Message Batches cost half (BATCH). A cache write costs 1.25 times the
+# input price. Cache reads are counted at the normal price, to be safe.
+PRICES = {OPUS: {'in': 4.00, 'out': 20.00, 'cache_read': 0.20},
+          SONNET: {'in': 2.00, 'out': 10.00, 'cache_read': 0.20},
+          HAIKU: {'in': 0.10, 'out': 0.50, 'cache_read': 0.01}}
+BATCH = 0.5
+# Shares used by the estimate: points written a second time (the content check failed), points that get a fix, and
+# points the Haiku screen sends on to the Opus checker. Once a course has screened 5 points, its own share is used.
+REDO_SHARE, FIX_SHARE, TO_OPUS = 0.1, (0.25, 0.35), (0.3, 0.6)
+# One in 10 of the points Haiku passes goes to the Opus checker anyway, so its misses keep being measured.
+SPOT_SHARE = 0.1
+# --now sends 4 requests at a time, and only for a run of at most 50 points. Bigger runs use batches.
+NOW_PARALLEL, NOW_MOST = 4, 50
+# A batch holds at most this many requests and bytes. More are split into several batches. The API allows 100,000
+# requests and 256 MB in one batch; the account's queue limit depends on its tier, so stay well under both.
+BATCH_MOST, BATCH_BYTES = 5000, 100_000_000
 POLL_SECONDS = int(os.environ.get('STRATOS_POLL', '60'))
 TRIES = 3
 KINDS = ['standard', 'english', 'maths', 'theory']
 EXAMPLES = ['e-positive', 'e-ped', 'e-externality']
-WAITING = ('match', 'write', 'check', 'fix')
+WAITING = ('match', 'write', 'screen', 'check', 'fix')
+# Words in a brief or a draft that send a point to the Opus checker without Haiku, so a sensitive topic Haiku misses is
+# still judged by Opus. A word that turns up in another sense (an economic depression) only costs a check.
+SENSITIVE = re.compile(r'\b(mental (health|illness)|suicid\w*|self[- ]harm\w*|depress\w*|anxiety|eating disorders?|drugs?|'
+                       r'alcohol\w*|vap(e|es|ing)|smok\w*|cannabis|sex\w*|contracept\w*|aboriginal|torres strait|first nations|'
+                       r'indigenous|stolen generations?|racis\w*|violen\w*|abus\w*)\b', re.I)
 
 
 # ---------- printing, and keeping the key out of it ----------
@@ -69,6 +112,12 @@ def now():
 
 def money(usd):
     return 'US$' + format(usd, '.2f')
+
+def cents(usd):
+    return format(usd * 100, '.1f') + ' cents'
+
+def many_of(n, word):
+    return str(n) + ' ' + word + ('' if n == 1 else 's')
 
 
 # ---------- files ----------
@@ -235,6 +284,18 @@ def assign_ids(path, course, d):
     with open(path, 'w', encoding='utf-8', newline='') as f: f.write(''.join(lines))
     say('Gave', len(new), 'new ids, written into', os.path.relpath(path, REPO) if path.startswith(REPO) else path)
 
+def outline_paths(items):
+    """Outline files from a list of files and folders. A folder gives every .yaml file in it, A to Z."""
+    out = []
+    for it in items:
+        if os.path.isdir(it): out += [os.path.join(it, f) for f in sorted(os.listdir(it)) if f.endswith(('.yaml', '.yml'))]
+        else: out.append(it)
+    seen, keep = set(), []
+    for p in out:
+        if os.path.abspath(p) not in seen: seen.add(os.path.abspath(p)); keep.append(p)
+    if not keep: raise Stop('No outlines found in ' + ', '.join(items))
+    return keep
+
 
 # ---------- the JSON shapes Claude answers in ----------
 def obj(props, required=None):
@@ -253,7 +314,7 @@ CHECK_SCHEMA = obj({
     'sensitive': {'type': 'string', 'enum': ['none', 'mental-health', 'drugs', 'sexual-health', 'first-nations', 'set-text', 'other-sensitive']},
     'summary': STR})
 MATCH_SCHEMA = obj({'same': STR, 'reason': STR})
-SCHEMAS = {'match': MATCH_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA}
+SCHEMAS = {'match': MATCH_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'screen': CHECK_SCHEMA}
 
 def to_bank(p):
     """A point as Claude writes it (card lines with labels) to the bank's shape (a label line is [label, text])."""
@@ -293,8 +354,10 @@ def brief(pt):
 def pjson(p):
     return json.dumps(to_claude(p), ensure_ascii=False, indent=1)
 
-def write_user(course, pt, rec):
+def write_user(course, pt, rec, siblings=None):
     parts = [context(course, pt), '', 'Write this point.', brief(pt)]
+    if siblings:
+        parts += ['', 'Already written in this chapter. Do not teach their ideas or reuse their examples:'] + siblings
     if rec.get('rejected'):
         parts += ['', 'The owner rejected this earlier version:', pjson(rec['rejected'])]
     if rec.get('note'):
@@ -302,6 +365,13 @@ def write_user(course, pt, rec):
     if rec.get('redo'):
         parts += ['', 'Your last version failed the content check. Write it again and fix these:', '- ' + '\n- '.join(rec['redo']),
                   '', 'Your last version:', pjson(rec['draft'])]
+    return '\n'.join(parts)
+
+def chapter_user(course, pts):
+    parts = [context(course, pts[0]), '', 'Write these ' + str(len(pts)) + ' points from this chapter. Answer with one entry for each id below. '
+             'Follow every rule above for each point, as if it were written on its own: each teaches only its own idea, and a student '
+             'may meet any of them alone. Give each point its own examples and scenarios, so no two questions in the chapter feel the same.']
+    for pt in pts: parts += ['', 'Id: ' + pt['id'], brief(pt)]
     return '\n'.join(parts)
 
 def fix_user(course, pt, rec):
@@ -334,16 +404,25 @@ def bank_point(d, pid):
         if pid in b: return b[pid]
     return None
 
-def request(stage, course, pt, rec, d, custom_id, cands=None):
+def params(step, cfg, system, user, schema, max_tokens):
+    s = cfg[step]
+    return {'model': s['model'], 'max_tokens': max_tokens,
+            'system': [{'type': 'text', 'text': system, 'cache_control': {'type': 'ephemeral'}}],
+            'messages': [{'role': 'user', 'content': user}],
+            'output_config': {'effort': s['effort'], 'format': {'type': 'json_schema', 'schema': schema}}}
+
+def request(stage, course, pt, rec, d, custom_id, cfg, cands=None, siblings=None):
+    """One request for one point at one step."""
     if stage == 'match': system, user = prompt('matcher.md'), match_user(course, pt, cands, d)
-    elif stage == 'check': system, user = prompt('checker.md'), check_user(course, pt, rec)
+    elif stage in ('check', 'screen'): system, user = prompt('checker.md'), check_user(course, pt, rec)
     elif stage == 'fix': system, user = writer_system(course, d), fix_user(course, pt, rec)
-    else: system, user = writer_system(course, d), write_user(course, pt, rec)
-    return {'custom_id': custom_id, 'params': {
-        'model': MODEL, 'max_tokens': MAX_TOKENS[stage],
-        'system': [{'type': 'text', 'text': system, 'cache_control': {'type': 'ephemeral'}}],
-        'messages': [{'role': 'user', 'content': user}],
-        'output_config': {'effort': EFFORT[stage], 'format': {'type': 'json_schema', 'schema': SCHEMAS[stage]}}}}
+    else: system, user = writer_system(course, d), write_user(course, pt, rec, siblings)
+    return {'custom_id': custom_id, 'params': params(stage, cfg, system, user, SCHEMAS[stage], MAX_TOKENS[stage])}
+
+def chapter_request(course, pts, d, custom_id, cfg):
+    """One request that writes several points of a chapter at once. The answer has one entry for each point id."""
+    schema = obj({pt['id']: POINT_SCHEMA for pt in pts})
+    return {'custom_id': custom_id, 'params': params('write', cfg, writer_system(course, d), chapter_user(course, pts), schema, MAX_TOKENS['chapter'])}
 
 
 # ---------- where each point is ----------
@@ -352,6 +431,7 @@ class Work:
     def __init__(self, root, cid):
         self.dir = os.path.join(root, cid)
         self.state_path = os.path.join(self.dir, 'state.json')
+        self.existed = os.path.exists(self.state_path)
         self.state = read_json(self.state_path, {'batches': [], 'sending': None, 'spent': {'usd': 0, 'in': 0, 'out': 0}})
     def save(self): write_json(self.state_path, self.state)
     def point_path(self, pid): return os.path.join(self.dir, 'points', pid + '.json')
@@ -372,9 +452,13 @@ def candidates(course, d, pt):
         out += [i for i in d['banks'].get(b, {}) if i not in mine]
     return out
 
+# What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
+DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries',
+              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone']
+
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse, match or write."""
-    for k in ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'final', 'match', 'error', 'reuse', 'tries', 'rejected', 'note', 'cleared_by']:
+    for k in DRAFT_KEYS + ['final', 'match', 'reuse', 'rejected', 'note', 'cleared_by']:
         rec.pop(k, None)
     if pt['reuse']:
         rec.update(stage='reuse', reuse=pt['reuse'])
@@ -383,9 +467,11 @@ def fresh(rec, course, d, pt):
     else:
         rec['stage'] = 'write'
 
-def sync(work, course, d):
+def sync(work, course, d, trial_of=None):
     """Makes a record for each point in the outline, and starts again any point whose title or brief changed."""
-    write_json(os.path.join(work.dir, 'course.json'), {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'units']})
+    meta = {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'units']}
+    if trial_of: meta.update(id=os.path.basename(work.dir), name=course['name'] + ' (trial ' + os.path.basename(work.dir) + ')', trial_of=trial_of)
+    write_json(os.path.join(work.dir, 'course.json'), meta)
     for pt in course['points']:
         rec, h = work.load(pt['id']), brief_hash(pt)
         if rec is None:
@@ -395,22 +481,53 @@ def sync(work, course, d):
             rec.update(title=pt['title'], brief=h); rec.pop('match_rejected', None)
             fresh(rec, course, d, pt); log(rec, 'the outline changed, so it starts again at ' + rec['stage']); work.put(rec)
 
-def next_requests(work, course, d):
-    """One request for each point that is waiting on Claude."""
-    out, items = [], {}
+def point_of(course, pid):
+    return next(p for p in course['points'] if p['id'] == pid)
+
+def first_writing(rec):
+    """True for a point that can be written with the rest of its chapter: not a rewrite, a rejection or a retry alone."""
+    return not (rec.get('redo') or rec.get('note') or rec.get('rejected') or rec.get('alone'))
+
+def siblings(course, work, pt):
+    """The chapter's points already written, as lines for a point written on its own."""
+    ch = course['units'][pt['unit']]['chapters'][pt['chapter']]
+    out = []
+    for p in ch['points']:
+        if p['id'] == pt['id']: continue
+        r = work.load(p['id']) or {}
+        v = r.get('final') or r.get('draft')
+        if v: out.append('- ' + v['title'] + ': ' + v['remember'])
+    return out
+
+def next_requests(work, course, d, cfg):
+    """The requests for every point that is waiting on Claude: one per point, or one per chapter for first writing."""
+    out, items, groups = [], {}, {}
+    nb = len(work.state['batches'])
+    def one(pt, rec, stage):
+        n = rec.setdefault('sent', {}).get(stage, 0)
+        cid = stage[0] + '_' + hashlib.sha1((course['id'] + pt['id'] + stage + str(n) + str(nb)).encode()).hexdigest()[:24]
+        sib = siblings(course, work, pt) if stage == 'write' and cfg['chapters'] else None
+        out.append(request(stage, course, pt, rec, d, cid, cfg, candidates(course, d, pt) if stage == 'match' else None, sib))
+        items[cid] = {'pid': pt['id'], 'stage': stage, 'model': cfg[stage]['model']}
     for pt in course['points']:
         rec = work.load(pt['id'])
-        if rec['stage'] not in WAITING: continue
         stage = rec['stage']
-        n = rec.setdefault('sent', {}).get(stage, 0)
-        cid = stage[0] + '_' + hashlib.sha1((course['id'] + pt['id'] + stage + str(n) + str(len(work.state['batches']))).encode()).hexdigest()[:24]
-        out.append(request(stage, course, pt, rec, d, cid, candidates(course, d, pt) if stage == 'match' else None))
-        items[cid] = {'pid': pt['id'], 'stage': stage}
+        if stage not in WAITING: continue
+        if stage == 'write' and cfg['chapters'] and first_writing(rec):
+            groups.setdefault((pt['unit'], pt['chapter']), []).append((pt, rec)); continue
+        one(pt, rec, stage)
+    for group in groups.values():
+        if len(group) == 1: one(*group[0], 'write'); continue
+        pts = [pt for pt, _ in group]
+        n = sum(rec.get('sent', {}).get('write', 0) for _, rec in group)
+        cid = 'w_' + hashlib.sha1((course['id'] + ','.join(p['id'] for p in pts) + 'chapter' + str(n) + str(nb)).encode()).hexdigest()[:24]
+        out.append(chapter_request(course, pts, d, cid, cfg))
+        items[cid] = {'pids': [p['id'] for p in pts], 'stage': 'write', 'model': cfg['write']['model']}
     return out, items
 
-def flags_for(rec):
+def flags_for(rec, c=None):
     """What the owner sees about a checked point. concrete is False when the only flags are 'not sure' or a topic."""
-    p, c, out, concrete = rec['draft'], rec['check'], [], False
+    p, c, out, concrete = rec['draft'], c or rec['check'], [], False
     norm = lambda s: re.sub(r'\s+', ' ', s.strip().lower())
     for k in ['a', 'b']:
         right, best = p[k]['opts'][0], c[k]['best']
@@ -426,32 +543,68 @@ def flags_for(rec):
     if c['sure'] == 'low': out.append('The checker was not sure of this point.')
     return out, concrete
 
-def collect(work, course, d, batch, results, repo):
-    """Saves what came back for a batch, and moves each point to its next step."""
+def spot_check(pid):
+    """True for about SPOT_SHARE of points, picked by the point id, so a run picks the same ones again."""
+    return int(hashlib.sha1(pid.encode()).hexdigest()[:8], 16) / 0xffffffff < SPOT_SHARE
+
+def after_write(rec, course, cfg, pt):
+    """The step after writing: Haiku's screen, or straight to the Opus checker."""
+    if not cfg.get('screen'): return 'check'
+    if course['kind'] == 'english':
+        rec['to_opus'] = 'English course'; return 'check'
+    m = SENSITIVE.search(pt['title'] + ' ' + pt['brief'] + ' ' + json.dumps(rec['draft'], ensure_ascii=False))
+    if m:
+        rec['to_opus'] = 'the word ' + m.group(0).lower(); return 'check'
+    return 'screen'
+
+def charge(work, recs, u, item, at_now):
+    """Adds what one answer cost to the course's total and, shared evenly, to each point it was for."""
+    rate = rates(item.get('model', OPUS), at_now)
+    get = lambda k: getattr(u, k, 0) or 0
+    usd = (get('input_tokens') * rate['in'] + get('cache_creation_input_tokens') * rate['cache_write'] +
+           get('cache_read_input_tokens') * rate['cache_read'] + get('output_tokens') * rate['out']) / 1e6
+    s = work.state['spent']
+    s['in'] += get('input_tokens') + get('cache_creation_input_tokens') + get('cache_read_input_tokens')
+    s['out'] += get('output_tokens')
+    s['usd'] = round(s['usd'] + usd, 4)
+    for rec in recs:
+        c = rec.setdefault('usd', {})
+        c[item['stage']] = round(c.get(item['stage'], 0) + usd / len(recs), 5)
+
+def answer_text(m):
+    """The JSON Claude answered with, or None if it was cut off or not JSON."""
+    text = next((b.text for b in m.content if getattr(b, 'type', '') == 'text'), '')
+    try:
+        return json.loads(text) if m.stop_reason != 'max_tokens' else None
+    except ValueError:
+        return None
+
+def collect(work, course, d, batch, results, repo, cfg, at_now=False):
+    """Saves what came back, and moves each point to its next step."""
     written = {}
     for r in results:
         item = batch['items'].get(r.custom_id)
         if not item: continue
+        if 'pids' in item:
+            collect_chapter(work, item, r, written, at_now); continue
         rec, stage = work.load(item['pid']), item['stage']
         if rec is None or rec['stage'] != stage: continue
         kind = r.result.type
         if kind == 'succeeded':
             m = r.result.message
-            add_usage(work, m.usage)
+            charge(work, [rec], m.usage, item, at_now)
+            data = None if m.stop_reason == 'refusal' else answer_text(m)
+            if stage == 'screen' and data is None:
+                rec.update(stage='check', to_opus='the screen did not answer'); log(rec, 'screen: no answer, so to the check'); work.put(rec); continue
             if m.stop_reason == 'refusal':
                 det = getattr(m, 'stop_details', None)
                 rec.update(stage='failed', error='Claude declined to write this' + (' (' + str(det.category) + ')' if det and getattr(det, 'category', None) else '') + '. Edit it by hand, or reject it with a note to try again.')
                 log(rec, stage + ': declined'); work.put(rec); continue
-            text = next((b.text for b in m.content if getattr(b, 'type', '') == 'text'), '')
-            try:
-                data = json.loads(text) if m.stop_reason != 'max_tokens' else None
-            except ValueError:
-                data = None
             if data is None:
                 retry(rec, stage, 'the answer was cut off or not JSON'); work.put(rec); continue
             if stage == 'match':
                 rec['match'] = data
-                if data['same'] in candidates(course, d, next(p for p in course['points'] if p['id'] == rec['id'])):
+                if data['same'] in candidates(course, d, point_of(course, rec['id'])):
                     rec['stage'] = 'match-review'; log(rec, 'match: the bank may have it as ' + data['same'])
                 else:
                     rec['stage'] = 'write'; log(rec, 'match: none')
@@ -460,17 +613,13 @@ def collect(work, course, d, batch, results, repo):
                     written[rec['id']] = (to_bank(data), stage)
                 except (KeyError, TypeError, AttributeError):
                     retry(rec, stage, 'the answer was not in the right shape')
+            elif stage == 'screen':
+                screened(rec, data, cfg)
             else:
-                rec['check'] = data
-                rec['sensitive'] = data['sensitive']
-                rec['flags'], concrete = flags_for(rec)
-                if not rec['flags'] and data['sensitive'] == 'none':
-                    rec.update(stage='cleared', final=rec['draft'], cleared_by='checker'); log(rec, 'check: passed, cleared')
-                elif concrete:
-                    rec['stage'] = 'fix'; log(rec, 'check: flagged')
-                else:
-                    rec['stage'] = 'review'; log(rec, 'check: for review (' + ('not sure' if data['sure'] == 'low' else data['sensitive']) + ')')
+                checked(rec, data)
             work.put(rec)
+        elif stage == 'screen':
+            rec.update(stage='check', to_opus='the screen did not answer'); log(rec, 'screen: ' + kind + ', so to the check'); work.put(rec)
         elif kind == 'errored':
             err = r.result.error
             inner = getattr(err, 'error', err)
@@ -481,7 +630,7 @@ def collect(work, course, d, batch, results, repo):
             work.put(rec)
         else:
             retry(rec, stage, 'the batch ' + kind); work.put(rec)
-    # The content check, for everything written in this batch at once.
+    # The content check, for everything written here at once.
     problems = check_points({pid: p for pid, (p, _) in written.items()}, course['kind'], repo, work.dir)
     for pid, (p, stage) in written.items():
         rec, probs = work.load(pid), problems.get(pid, [])
@@ -490,8 +639,71 @@ def collect(work, course, d, batch, results, repo):
         elif probs and not rec.get('redone'):
             rec.update(draft=p, redo=probs, redone=True); log(rec, 'write: failed the content check, writing again')
         else:
-            rec.update(stage='check', draft=p, local=probs); rec.pop('redo', None); log(rec, 'write: done' + (' (still fails the content check)' if probs else ''))
+            rec.update(draft=p, local=probs); rec.pop('redo', None)
+            rec['stage'] = after_write(rec, course, cfg, point_of(course, pid))
+            log(rec, 'write: done' + (' (still fails the content check)' if probs else '') + (', to the screen' if rec['stage'] == 'screen' else ''))
         work.put(rec)
+
+def collect_chapter(work, item, r, written, at_now):
+    """Saves the answer to a chapter's writing request. A point that is missing or wrong is written on its own next."""
+    recs = [rec for rec in (work.load(pid) for pid in item['pids']) if rec and rec['stage'] == 'write']
+    if not recs: return
+    kind = r.result.type
+    def alone(why, count=True):
+        for rec in recs:
+            if count: retry(rec, 'write', why)
+            if rec['stage'] == 'write':
+                rec['alone'] = True; log(rec, 'write: ' + why + ' in the chapter request, so it is written on its own next')
+            work.put(rec)
+    if kind != 'succeeded':
+        inner = getattr(getattr(r.result, 'error', None), 'error', None)
+        if kind == 'errored' and getattr(inner, 'type', '') == 'invalid_request_error': return alone('the API refused it', count=False)
+        for rec in recs: retry(rec, 'write', 'the API had an error' if kind == 'errored' else 'the batch ' + kind); work.put(rec)
+        return
+    m = r.result.message
+    charge(work, recs, m.usage, item, at_now)
+    if m.stop_reason == 'refusal': return alone('Claude declined', count=False)
+    data = answer_text(m)
+    if data is None: return alone('the answer was cut off or not JSON')
+    for rec in recs:
+        try:
+            written[rec['id']] = (to_bank(data[rec['id']]), 'write')
+        except (KeyError, TypeError, AttributeError):
+            retry(rec, 'write', 'its part of the chapter answer was missing or not in the right shape')
+            if rec['stage'] == 'write':
+                rec['alone'] = True; log(rec, 'write: it is written on its own next')
+        work.put(rec)
+
+def screened(rec, data, cfg):
+    """Haiku's answer. A clean pass is cleared. Anything else goes to the Opus checker."""
+    rec['screen'] = data
+    flags, _ = flags_for(rec, data)
+    if data['sensitive'] != 'none': rec['screen_sensitive'] = data['sensitive']
+    if not flags and data['sure'] == 'high' and data['sensitive'] == 'none':
+        rec['screen_passed'] = True
+        if cfg.get('trial'):
+            rec.update(stage='check', to_opus='trial'); log(rec, 'screen: passed, and checked again in this trial')
+        elif spot_check(rec['id']):
+            rec.update(stage='check', to_opus='spot check'); log(rec, 'screen: passed, and picked for a spot check')
+        else:
+            rec.update(stage='cleared', final=rec['draft'], cleared_by='screen'); log(rec, 'screen: passed, cleared')
+        return
+    why = 'a topic' if data['sensitive'] != 'none' else 'flagged' if flags else 'not sure'
+    rec.update(stage='check', to_opus=why + ' at the screen'); log(rec, 'screen: ' + why + ', so to the check')
+
+def checked(rec, data):
+    """The Opus checker's answer."""
+    rec['check'] = data
+    sensitive = data['sensitive'] if data['sensitive'] != 'none' else rec.get('screen_sensitive', 'none')
+    rec['sensitive'] = sensitive
+    rec['flags'], concrete = flags_for(rec)
+    if rec.get('screen_passed') and (rec['flags'] or data['sensitive'] != 'none'): rec['screen_missed'] = True
+    if not rec['flags'] and sensitive == 'none':
+        rec.update(stage='cleared', final=rec['draft'], cleared_by='checker'); log(rec, 'check: passed, cleared')
+    elif concrete:
+        rec['stage'] = 'fix'; log(rec, 'check: flagged')
+    else:
+        rec['stage'] = 'review'; log(rec, 'check: for review (' + ('not sure' if data['sure'] == 'low' else sensitive) + ')')
 
 def retry(rec, stage, why):
     t = rec.setdefault('tries', {})
@@ -502,13 +714,48 @@ def retry(rec, stage, why):
     else:
         log(rec, stage + ': ' + why + ', will try again')
 
-def add_usage(work, u):
-    s = work.state['spent']
-    get = lambda k: getattr(u, k, 0) or 0
-    s['in'] += get('input_tokens') + get('cache_creation_input_tokens') + get('cache_read_input_tokens')
-    s['out'] += get('output_tokens')
-    s['usd'] = round(s['usd'] + (get('input_tokens') * PRICE['in'] + get('cache_creation_input_tokens') * PRICE['cache_write'] +
-                                 get('cache_read_input_tokens') * PRICE['cache_read'] + get('output_tokens') * PRICE['out']) / 1e6, 4)
+
+# ---------- money ----------
+def rates(model, at_now):
+    """Dollars per million tokens for a model: the normal price with --now, half that in a batch."""
+    p, share = PRICES.get(model, PRICES[OPUS]), 1 if at_now else BATCH
+    return {'in': p['in'] * share, 'out': p['out'] * share, 'cache_write': p['in'] * 1.25 * share, 'cache_read': p['cache_read']}
+
+def points_in(item):
+    return len(item.get('pids') or [item.get('pid')])
+
+def request_tokens(api, reqs, items):
+    """Input tokens for each request. With a key, the API counts up to 12 of each kind for free and the rest are
+    scaled from their length. Without one, about 3.5 characters a token."""
+    size = [len(json.dumps(r['params'], ensure_ascii=False)) for r in reqs]
+    if api is None: return [round(s / 3.5) for s in size]
+    groups = {}
+    for i, r in enumerate(reqs):
+        it = items[r['custom_id']]
+        groups.setdefault((it['stage'], 'pids' in it, r['params']['model']), []).append(i)
+    out = [0] * len(reqs)
+    for idx in groups.values():
+        sample = idx[:12]
+        counted = 0
+        for i in sample:
+            p = {k: v for k, v in reqs[i]['params'].items() if k != 'max_tokens'}
+            try:
+                counted += api.messages.count_tokens(**p).input_tokens
+            except Exception as e:
+                raise api_error(e)
+        per_char = counted / max(1, sum(size[i] for i in sample))
+        for i in idx: out[i] = round(size[i] * per_char)
+    return out
+
+def request_costs(tokens, reqs, items, cfg, at_now):
+    """Low and high cost of each request, from its input tokens and the output its step is expected to use."""
+    out = []
+    for t, r in zip(tokens, reqs):
+        it = items[r['custom_id']]
+        rate, (lo, hi) = rates(r['params']['model'], at_now), cfg[it['stage']]['out']
+        n = points_in(it)
+        out.append(((t * rate['in'] + n * lo * rate['out']) / 1e6, (t * rate['in'] + n * hi * rate['out']) / 1e6))
+    return out
 
 
 # ---------- the API ----------
@@ -531,50 +778,73 @@ def api_error(e):
     rid = getattr(e, 'request_id', None)
     if status == 401: text = 'The API key was not accepted. Check it, and set it again (content/README.md, step 5).'
     elif 'usage limits' in msg: text = 'A spending limit was reached, so the API stopped. Raise the limit in the Console, or wait until it resets: ' + msg
+    elif status == 429: text = ('The API\'s rate limit or batch queue is full. Everything sent so far is saved. Wait a while and run the same command again'
+                                ', or lower BATCH_MOST at the top of content/pipeline.py: ' + msg)
     else: text = 'The API said no' + (' (' + str(status) + ')' if status else '') + ': ' + msg
-    return Stop(text + (' Request id: ' + rid if rid else ''))
-
-def count_tokens(client, reqs):
-    """Input tokens for the requests, counted by the API for free. Counts up to 12 and scales up from them."""
-    if not reqs: return 0
-    sample = reqs[:12]
-    total = 0
-    for r in sample:
-        p = {k: v for k, v in r['params'].items() if k != 'max_tokens'}
-        total += client.messages.count_tokens(**p).input_tokens
-    return round(total * len(reqs) / len(sample))
-
-def rough_tokens(reqs):
-    """Without a key, about 3.5 characters a token."""
-    return round(sum(len(json.dumps(r['params'], ensure_ascii=False)) for r in reqs) / 3.5)
-
-def cost_range(tokens_in, stages):
-    """Low and high cost in dollars for requests with these input tokens, given how many are at each step."""
-    lo = tokens_in * PRICE['in'] / 1e6 + sum(n * OUT_LOW[s] for s, n in stages.items()) * PRICE['out'] / 1e6
-    hi = tokens_in * PRICE['in'] / 1e6 + sum(n * OUT_HIGH[s] for s, n in stages.items()) * PRICE['out'] / 1e6
-    return lo, hi
+    return Stop(scrub(text + (' Request id: ' + rid if rid else '')))
 
 def find_sent(client, sending):
     """After a stop between sending a batch and saving it: the batch, if the API has it."""
+    want = sending.get('total', len(sending['items']))
     try:
         for b in client.messages.batches.list(limit=20):
             created = b.created_at if isinstance(b.created_at, str) else b.created_at.strftime('%Y-%m-%dT%H:%M:%SZ')
             total = sum(getattr(b.request_counts, k) for k in ['processing', 'succeeded', 'errored', 'canceled', 'expired'])
-            if created >= sending['before'] and total == len(sending['items']): return b.id
+            if created >= sending['before'] and total == want: return b.id
     except Exception as e:
         raise api_error(e)
     return None
 
+def now_one(api, req):
+    """Sends one request to the normal Messages API and returns its answer in the same shape as a batch result."""
+    try:
+        with api.messages.stream(**req['params']) as s:
+            m = s.get_final_message()
+        return NS(custom_id=req['custom_id'], result=NS(type='succeeded', message=m))
+    except Exception as e:
+        status, msg = getattr(e, 'status_code', None), str(getattr(e, 'message', '') or e)
+        if status in (401, 403, 429) or 'usage limits' in msg: return e
+        kind = 'invalid_request_error' if status == 400 else 'api_error'
+        return NS(custom_id=req['custom_id'], result=NS(type='errored', error=NS(type='error', error=NS(type=kind, message=scrub(msg)))))
 
-# ---------- the commands ----------
-def setup(args):
-    repo = args.repo or REPO
-    d = dump(repo)
-    course = read_outline(args.outline, d)
-    assign_ids(args.outline, course, d)
-    work = Work(args.work or os.path.join(repo, 'content', 'work'), course['id'])
-    sync(work, course, d)
-    return repo, d, course, work
+
+# ---------- running courses ----------
+class Job:
+    """One course in a run: its outline, its work folder, its settings and the most it may cost."""
+    def __init__(self, repo, d, course, work, cfg, name, trial_of=None):
+        self.repo, self.d, self.course, self.work, self.cfg, self.settings, self.trial_of = repo, d, course, work, cfg, name, trial_of
+        self.limit, self.held, self.failed, self.start = None, None, None, work.state['spent']['usd']
+    @property
+    def label(self): return self.course['name'] + (', trial ' + os.path.basename(self.work.dir) if self.trial_of else '')
+
+def work_root(args, repo):
+    return args.work or os.path.join(repo, 'content', 'work')
+
+def setup(args, outline=None, as_name=None, wanted=None, repo=None, d=None):
+    """Reads an outline, gives it ids, and makes its work folder and records. Returns a Job."""
+    repo = repo or args.repo or REPO
+    d = d or dump(repo)
+    outline = outline or args.outline
+    course = read_outline(outline, d)
+    assign_ids(outline, course, d)
+    root = work_root(args, repo)
+    trial_of = None
+    if as_name:
+        if not re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', as_name) or as_name == course['id']:
+            raise Stop('--as needs a new name for the trial, in lower-case words joined by dashes, such as ' + course['id'] + '-cheaper')
+        trial_of = course['id']
+    work = Work(root, as_name or course['id'])
+    if work.existed and work.state.get('trial_of') != trial_of:
+        raise Stop(('content/work/' + as_name + ' is ' + ('a trial of ' + work.state['trial_of'] if work.state.get('trial_of') else 'a course of its own') +
+                    '. Pick another name for --as.') if as_name else ('content/work/' + course['id'] + ' is a trial. Run it with --as ' + course['id'] + '.'))
+    saved = work.state.get('settings') or (OLD_COURSE if work.existed else None)
+    name = wanted or saved or NEW_COURSE
+    if name not in SETTINGS: raise Stop('--settings must be one of ' + ', '.join(SETTINGS))
+    cfg = dict(SETTINGS[name], trial=bool(trial_of))
+    sync(work, course, d, trial_of)
+    job = Job(repo, d, course, work, cfg, name, trial_of)
+    job.saved = saved
+    return job
 
 def counts(work, course):
     c = {}
@@ -584,115 +854,407 @@ def counts(work, course):
     return c
 
 STAGE_WORDS = {'match': 'waiting to be matched', 'match-review': 'a possible match, for you to review', 'write': 'waiting to be written',
-               'check': 'waiting to be checked', 'fix': 'waiting for a fix', 'review': 'for you to review', 'failed': 'could not be written, for you to review',
-               'cleared': 'cleared', 'reuse': 'reusing a bank point'}
+               'screen': 'waiting for the Haiku screen', 'check': 'waiting to be checked', 'fix': 'waiting for a fix', 'review': 'for you to review',
+               'failed': 'could not be written, for you to review', 'cleared': 'cleared', 'reuse': 'reusing a bank point'}
 
-def cmd_status(args):
-    repo, d, course, work = setup(args)
-    say(course['name'] + ':', len(course['points']), 'points')
-    for s, n in counts(work, course).items(): say(' ', n, STAGE_WORDS[s])
-    open_b = [b for b in work.state['batches'] if not b.get('collected')]
-    if open_b: say(' ', len(open_b), 'batch sent and not collected yet. Run the run command again to collect it.')
-    say('Spent so far on this course:', money(work.state['spent']['usd']))
+def stats(work, points):
+    """The numbers after a run: what was written and checked, flagged, sent to the Opus checker, and what it cost."""
+    recs = [r for r in (work.load(p['id']) for p in points) if r]
+    written = [r for r in recs if r['stage'] != 'reuse' and (r.get('draft') or r.get('final'))]
+    checked = [r for r in written if r.get('check') or r.get('screen') or r.get('cleared_by') in ('checker', 'screen')]
+    opus = [r for r in written if r.get('check')]
+    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') == 'owner']
+    why = {}
+    for r in opus:
+        k = r.get('to_opus') or 'every point'
+        k = 'flagged or not sure at the Haiku screen' if k.endswith('at the screen') or k == 'the screen did not answer' else \
+            'by topic' if k == 'English course' or k.startswith('the word ') else 'checked again in the trial' if k == 'trial' else k
+        why[k] = why.get(k, 0) + 1
+    passed = [r for r in written if r.get('screen_passed')]
+    trial_checks = sum((r.get('usd') or {}).get('check', 0) for r in written if r.get('to_opus') == 'trial')
+    return {'usd': work.state['spent']['usd'], 'written': len(written), 'checked': len(checked), 'opus': len(opus), 'flagged': len(flagged), 'why': why,
+            'passed': len(passed), 'missed': len([r for r in passed if r.get('screen_missed')]), 'trialChecks': round(trial_checks, 4),
+            'pointUsd': {r['id']: round(sum((r.get('usd') or {}).values()), 4) for r in written if r.get('usd')}}
 
-def cmd_estimate(args):
-    repo, d, course, work = setup(args)
-    left = {'match': 0, 'write': 0, 'check': 0, 'fix': 0}
-    samples = {}
-    ex = d['banks']['e'][EXAMPLES[1]]
-    for pt in course['points']:
-        rec = work.load(pt['id'])
-        s = rec['stage']
-        if s not in WAITING: continue
-        steps = {'match': ['match', 'write', 'check'], 'write': ['write', 'check'], 'check': ['check'], 'fix': ['fix']}[s]
-        for st in steps:
-            left[st] += 1
-            if st not in samples:
-                stand_in = dict(rec, draft=rec.get('draft') or ex, flags=rec.get('flags') or ['A problem the checker found.'])
-                samples[st] = request(st, course, pt, stand_in, d, 'x', candidates(course, d, pt) if st == 'match' else None)
-    if 'write' in samples or 'check' in samples:
-        left['fix'] += round((left['write'] or left['check']) * FIX_SHARE)
-        left['write'] += round(left['write'] * REDO_SHARE)
-        if 'fix' not in samples:
-            pt = course['points'][0]
-            samples['fix'] = request('fix', course, pt, {'id': pt['id'], 'draft': ex, 'flags': ['A problem the checker found.']}, d, 'x')
-    if not any(left.values()):
-        say('Nothing is left to send for', course['name'] + '. Spent so far:', money(work.state['spent']['usd'])); return
-    exact = bool(os.environ.get('ANTHROPIC_API_KEY'))
-    api = client() if exact else None
-    tokens = 0
-    for st, n in left.items():
-        if not n: continue
+def share(n, of):
+    return str(n) + ' of ' + str(of) + ' points checked' + (' (' + str(round(100 * n / of)) + '%)' if of else '')
+
+def summary(job, after_run=True, stages=True):
+    """Prints where each point is and the numbers for one course, after a run or for status."""
+    s, w = stats(job.work, job.course['points']), job.work
+    say(job.label + ' (' + job.settings + ' settings)' + (':' if stages else ''))
+    if stages:
+        for st, n in counts(w, job.course).items(): say('  ' + str(n), STAGE_WORDS[st])
+    say('  ' + ('This run: ' + money(s['usd'] - job.start) + '. ' if after_run else '') + 'The course so far: ' + money(s['usd']) +
+        (', ' + cents(s['usd'] / s['written']) + ' for each of ' + str(s['written']) + ' points written.' if s['written'] else '.'))
+    if s['checked']:
+        say('  Flagged for you: ' + share(s['flagged'], s['checked']) + '.')
+        say('  Sent to the Opus checker: ' + share(s['opus'], s['checked']) +
+            (': ' + ', '.join(str(n) + ' ' + k for k, n in sorted(s['why'].items(), key=lambda x: -x[1])) if job.cfg.get('screen') and s['why'] else '') + '.')
+    if job.trial_of and s['passed']:
+        say('  Trial: Haiku passed ' + str(s['passed']) + ' points, and Opus flagged ' + str(s['missed']) + ' of them.')
+        if s['trialChecks'] and s['written']:
+            plain = s['usd'] - s['trialChecks']
+            say('  Without the extra Opus checks, the course so far would have cost about ' + money(plain) + ', ' + cents(plain / s['written']) + ' a point.')
+    if w.state.get('pending'):
+        say('  ' + money(w.state['pending']) + ' is counted as spent for requests that were still running when the run stopped.')
+
+def settle(job):
+    """Money held for --now requests still running when a run stopped counts as spent, since they may be billed."""
+    st = job.work.state
+    if st.get('pending'):
+        say(job.label + ': counted ' + money(st['pending']) + ' as spent for requests that were still running when the last run stopped.')
+        st['spent']['usd'] = round(st['spent']['usd'] + st['pending'], 4); st['pending'] = 0; job.work.save()
+
+def guard(job, many, fn):
+    """Runs one course's part. In run-many, a course that stops is set aside and the others carry on."""
+    try:
+        return fn()
+    except Stop as e:
+        if not many: raise
+        job.failed = str(e)
+        say(job.label + ': ' + str(e) + '\nThe other courses carry on.')
+
+def drive(api, jobs, args, many=False):
+    """Sends and collects for every course until nothing is left to send. One batch (or several, if they would be too
+    big) holds every course's requests for the same round."""
+    for j in jobs:
+        settle(j)
+        if j.saved and j.saved != j.settings: say(j.label + ': the settings change from ' + j.saved + ' to ' + j.settings + '.')
+        j.work.state['settings'] = j.settings
+        if j.trial_of: j.work.state['trial_of'] = j.trial_of
+        j.work.save()
+    try:
+        while True:
+            live = [j for j in jobs if not j.failed]
+            for j in live:
+                st = j.work.state
+                if st.get('sending'):
+                    bid = find_sent(api, st['sending'])
+                    if bid:
+                        st['batches'].append({'id': bid, 'items': st['sending']['items'], 'sent': st['sending']['before']})
+                        say('Found the batch sent before the stop:', bid)
+                    st['sending'] = None; j.work.save()
+            if not collect_open(api, live, args, many): continue
+            if any(not b.get('collected') for j in live if not j.failed for b in j.work.state['batches']):
+                say('A batch is still running. Batches usually take under an hour, at most 24. Run the same command again later to collect it.')
+                return finish(jobs)
+            plan = []
+            for j in [j for j in live if not j.held and not j.failed]:
+                got = guard(j, many, lambda: next_requests(j.work, j.course, j.d, j.cfg))
+                if got and got[0]: plan.append((j, got[0], got[1]))
+            if not plan:
+                return finish(jobs, done=True)
+            if args.now:
+                waiting = sum(1 for j, _, _ in plan for pt in j.course['points'] if j.work.load(pt['id'])['stage'] in WAITING)
+                if waiting > NOW_MOST:
+                    raise Stop(str(waiting) + ' points are waiting, more than ' + str(NOW_MOST) + ' for --now. Run without --now to use batches, at half the price.')
+            costed = []
+            for j, reqs, items in plan:
+                tokens = request_tokens(api, reqs, items)
+                cost = request_costs(tokens, reqs, items, j.cfg, args.now)
+                lo, hi = sum(c[0] for c in cost), sum(c[1] for c in cost)
+                spent = j.work.state['spent']['usd'] + (j.work.state.get('pending') or 0)
+                if spent + hi > j.limit:
+                    j.held = ('Not sent: this round could cost up to ' + money(hi) + ', and ' + money(spent) + ' is spent already, which would pass ' +
+                              ('its share of --max-dollars, ' if many else '--max-dollars ') + money(j.limit) + '. Raise --max-dollars to go on.')
+                    if not many: raise Stop(j.held)
+                    say(j.label + ': ' + j.held + ' The other courses carry on.')
+                    continue
+                costed.append((j, reqs, items, cost, lo, hi))
+            if not costed:
+                raise Stop('Nothing was sent: every course would pass its share of --max-dollars.')
+            if args.now: send_now(api, costed, many)
+            else: send_batches(api, costed, many)
+    except KeyboardInterrupt:
+        say('\nStopped. Everything so far is saved. Run the same command again to carry on.')
+        finish(jobs, quiet=True)
+        sys.exit(130)
+    except Stop:
+        if any(j.work.state['spent']['usd'] > j.start for j in jobs): finish(jobs, quiet=True)
+        raise
+
+def collect_open(api, jobs, args, many):
+    """Collects every batch that has ended. Returns False after waiting, so the loop looks again."""
+    open_ids = []
+    for j in jobs:
+        for b in j.work.state['batches']:
+            if not b.get('collected') and b['id'] not in open_ids: open_ids.append(b['id'])
+    running = False
+    for bid in open_ids:
         try:
-            per = count_tokens(api, [samples[st]]) if exact else rough_tokens([samples[st]])
+            info = api.messages.batches.retrieve(bid)
+            if info.processing_status != 'ended': running = True; continue
+            results = list(api.messages.batches.results(bid))
         except Exception as e:
             raise api_error(e)
-        tokens += per * n
-        say(' ', st + ':', n, 'requests, about', format(per, ','), 'tokens in each')
-    lo, hi = cost_range(tokens, left)
-    say('Estimate for the rest of', course['name'] + ':', money(lo), 'to', money(hi) + ('' if exact else ' (rough: set the API key for an exact count of the prompts)'))
-    say('Spent so far:', money(work.state['spent']['usd']) + '. Thinking is billed as output and is the uncertain part, so plan for the high number.')
+        for j in jobs:
+            for b in j.work.state['batches']:
+                if b['id'] != bid or b.get('collected'): continue
+                mine = [r for r in results if r.custom_id in b['items']]
+                def go():
+                    collect(j.work, j.course, j.d, b, mine, j.repo, j.cfg)
+                    b['collected'] = True; j.work.save()
+                    say('Collected', many_of(len(mine), 'answer') + (' for ' + j.label if many else '') + '. Spent so far' + (' on it' if many else '') + ':', money(j.work.state['spent']['usd']))
+                guard(j, many, go)
+    if running and not args.no_wait:
+        say('Waiting for the batch (checking every', POLL_SECONDS, 'seconds). You can stop with Ctrl+C and run the same command later.')
+        time.sleep(POLL_SECONDS)
+        return False
+    return True
+
+def sent_counts(work, items):
+    for it in items.values():
+        for pid in it.get('pids') or [it['pid']]:
+            rec = work.load(pid); s = rec.setdefault('sent', {}); s[it['stage']] = s.get(it['stage'], 0) + 1; work.put(rec)
+
+def stage_words(items):
+    stages = {}
+    for it in items.values():
+        k = 'chapter write' if 'pids' in it else it['stage']
+        stages[k] = stages.get(k, 0) + 1
+    return ', '.join(str(n) + ' ' + s for s, n in stages.items())
+
+def send_batches(api, costed, many):
+    """Sends the round as batches: every course's requests together, split when a batch would be too big."""
+    queue_ = [(j, r) for j, reqs, _, _, _, _ in costed for r in reqs]
+    chunks, cur, size = [], [], 0
+    for j, r in queue_:
+        n = len(json.dumps(r, ensure_ascii=False).encode('utf-8'))
+        if cur and (len(cur) >= BATCH_MOST or size + n > BATCH_BYTES): chunks.append(cur); cur, size = [], 0
+        cur.append((j, r)); size += n
+    if cur: chunks.append(cur)
+    for j, reqs, items, cost, lo, hi in costed:
+        j.round, j.items = (lo, hi), items
+    for chunk in chunks:
+        mine = {}
+        for j, r in chunk: mine.setdefault(id(j), (j, {}))[1][r['custom_id']] = j.items[r['custom_id']]
+        for j, its in mine.values():
+            j.work.state['sending'] = {'before': now(), 'items': its, 'total': len(chunk)}; j.work.save()
+        try:
+            b = api.messages.batches.create(requests=[r for _, r in chunk])
+        except Exception as e:
+            for j, _ in mine.values(): j.work.state['sending'] = None; j.work.save()
+            raise api_error(e)
+        for j, its in mine.values():
+            entry = {'id': b.id, 'items': its, 'sent': now()}
+            if len(mine) > 1: entry['shared'] = len(mine)
+            j.work.state['batches'].append(entry); j.work.state['sending'] = None; j.work.save()
+            sent_counts(j.work, its)
+        if many:
+            say('Sent', many_of(len(chunk), 'request'), 'for', many_of(len(mine), 'course'), 'in batch', b.id + ':')
+            for j, its in mine.values(): say(' ', j.label + ':', stage_words(its))
+        else:
+            j, its = next(iter(mine.values()))
+            say('Sent', many_of(len(chunk), 'request'), '(' + stage_words(its) + '), expected', money(j.round[0]), 'to', money(j.round[1]) + '. Batch', b.id)
+    if many:
+        lo, hi = sum(c[4] for c in costed), sum(c[5] for c in costed)
+        say('Expected for this round:', money(lo), 'to', money(hi) + '.')
+
+def send_now(api, costed, many):
+    """Sends the round to the normal Messages API, NOW_PARALLEL at a time, and saves each answer as it arrives. While a
+    request runs, its high cost counts as spent, so --max-dollars holds even if the run stops part way."""
+    jobs_in, todo, done = queue.Queue(), [], queue.Queue()
+    for j, reqs, items, cost, lo, hi in costed:
+        j.work.state['pending'] = round((j.work.state.get('pending') or 0) + hi, 4); j.work.save()
+        sent_counts(j.work, items)
+        for r, c in zip(reqs, cost): todo.append((j, r, items[r['custom_id']], c[1]))
+        say('Sending', many_of(len(reqs), 'request') + (' for ' + j.label if many else '') + ' (' + stage_words(items) + ') with --now, expected', money(lo), 'to', money(hi) + '.')
+    for t in todo: jobs_in.put(t)
+    def worker():
+        while True:
+            try: t = jobs_in.get_nowait()
+            except queue.Empty: return
+            done.put((t, now_one(api, t[1])))
+    def unsent():
+        # Takes back the requests no worker has started, so they are not counted as spent. Returns how many.
+        n = 0
+        while True:
+            try: jj, _, _, h = jobs_in.get_nowait()
+            except queue.Empty: return n
+            jj.work.state['pending'] = max(0, round(jj.work.state['pending'] - h, 4)); jj.work.save(); n += 1
+    for _ in range(min(NOW_PARALLEL, len(todo))): threading.Thread(target=worker, daemon=True).start()
+    expected, got, stop = len(todo), 0, None
+    try:
+        while got < expected:
+            try: (j, r, item, hi), res = done.get(timeout=0.5)
+            except queue.Empty: continue
+            got += 1
+            j.work.state['pending'] = max(0, round(j.work.state['pending'] - hi, 4))
+            if isinstance(res, Exception):
+                # Stop sending more, but keep the answers to requests already running, since they are billed.
+                stop = stop or res
+                expected -= unsent(); j.work.save()
+                continue
+            guard(j, many, lambda: collect(j.work, j.course, j.d, {'items': {r['custom_id']: item}}, [res], j.repo, j.cfg, at_now=True))
+            j.work.save()
+    except KeyboardInterrupt:
+        unsent()
+        raise
+    if stop: raise api_error(stop)
+    for j, *_ in costed:
+        j.work.state['pending'] = 0; j.work.save()
+        say('Collected the answers' + (' for ' + j.label if many else '') + '. Spent so far:', money(j.work.state['spent']['usd']))
+
+def finish(jobs, done=False, quiet=False):
+    """The end of a run: where each point is, and the numbers, for each course."""
+    if done: say('Done for now.')
+    for j in jobs:
+        if len(jobs) > 1: say('')
+        summary(j, stages=not quiet)
+        if j.failed: say('  Stopped: ' + j.failed)
+        elif j.held: say('  Held back: ' + j.held)
+    if done and not quiet:
+        say('Next: py content\\pipeline.py review' + (' (a trial shows on its Compare tab)' if any(j.trial_of for j in jobs) else ''))
+
+
+# ---------- the estimate ----------
+def plan_left(job):
+    """What is left to send for a course: {step: ([requests low, high, points low, high], a sample request)}."""
+    course, d, cfg, work = job.course, job.d, job.cfg, job.work
+    ex = d['banks']['e'][EXAMPLES[1]]
+    reqs, items = next_requests(work, course, d, cfg)
+    in_chapter = {pid for it in items.values() for pid in it.get('pids', [])}
+    stand = lambda rec: dict(rec, draft=rec.get('draft') or ex, flags=rec.get('flags') or ['A problem the checker found.'])
+    left, samples = {}, {}
+    def add(step, n_lo, n_hi=None, pts=1):
+        a = left.setdefault(step, [0, 0, 0, 0]); n_hi = n_lo if n_hi is None else n_hi
+        a[0] += n_lo; a[1] += n_hi; a[2] += n_lo * pts; a[3] += n_hi * pts
+    for r in reqs:
+        it = items[r['custom_id']]
+        if 'pids' in it:
+            add('chapter', 1, pts=len(it['pids'])); samples.setdefault('chapter', r)
+    written, ahead, screened = 0, 0, 0
+    for pt in course['points']:
+        rec = work.load(pt['id']); s = rec['stage']
+        if s not in WAITING: continue
+        if s == 'match':
+            add('match', 1)
+            if 'match' not in samples: samples['match'] = request('match', course, pt, rec, d, 'x', cfg, candidates(course, d, pt))
+        if s in ('match', 'write'):
+            written += 1
+            if s == 'match' or pt['id'] not in in_chapter:
+                add('write', 1)
+                if 'write' not in samples: samples['write'] = request('write', course, pt, stand(rec), d, 'x', cfg)
+        if s in ('match', 'write', 'screen', 'check'): ahead += 1
+        if s in ('match', 'write', 'screen'):
+            if cfg.get('screen') and course['kind'] != 'english' and not SENSITIVE.search(pt['title'] + ' ' + pt['brief']): screened += 1
+            else: add('check', 1)
+        if s == 'check': add('check', 1)
+        if s == 'fix': add('fix', 1)
+        for st in ('screen', 'check', 'fix'):
+            if st not in samples and cfg.get(st): samples[st] = request(st, course, pt, stand(rec), d, 'x', cfg)
+    if 'write' not in samples:
+        pt = course['points'][0]; samples['write'] = request('write', course, pt, {'id': pt['id']}, d, 'x', cfg)
+    if round(written * REDO_SHARE): add('write', round(written * REDO_SHARE))
+    if screened:
+        add('screen', screened)
+        st = stats(work, course['points'])
+        if cfg.get('trial'): lo = hi = screened
+        elif st['checked'] >= 5: lo = hi = round(screened * st['opus'] / st['checked'])
+        else: lo, hi = round(screened * TO_OPUS[0]), round(screened * TO_OPUS[1])
+        add('check', lo, hi)
+    if ahead: add('fix', round(ahead * FIX_SHARE[0]), round(ahead * FIX_SHARE[1]))
+    return {k: (left[k], samples[k]) for k in STEP_NAMES if k in left and left[k][1]}
+
+STEP_NAMES = {'match': 'match', 'chapter': 'write, a chapter at a time', 'write': 'write, one point at a time', 'screen': 'screen', 'check': 'check', 'fix': 'fix'}
+
+def estimate(job, api, quiet=False):
+    """Low and high cost of the rest of a course, with batches and with --now. Prints each step unless quiet."""
+    left = plan_left(job)
+    if not left:
+        if not quiet: say('Nothing is left to send for', job.label + '. Spent so far:', money(job.work.state['spent']['usd']))
+        return (0, 0, 0, 0)
+    if not quiet: say(job.label + ' (' + job.settings + ' settings):')
+    tot = [0, 0, 0, 0]
+    for step, ((n_lo, n_hi, p_lo, p_hi), sample) in left.items():
+        key = 'write' if step == 'chapter' else step
+        s = job.cfg[key]
+        item = {'stage': key}
+        if step == 'chapter': item['pids'] = ['x'] * max(1, round(p_hi / max(1, n_hi)))
+        per = request_tokens(api, [sample], {sample['custom_id']: item})[0]
+        for i, at_now in enumerate([False, True]):
+            r = rates(s['model'], at_now)
+            tot[2 * i] += (n_lo * per * r['in'] + p_lo * s['out'][0] * r['out']) / 1e6
+            tot[2 * i + 1] += (n_hi * per * r['in'] + p_hi * s['out'][1] * r['out']) / 1e6
+        if not quiet:
+            n = str(n_lo) if n_lo == n_hi else str(n_lo) + ' to ' + str(n_hi)
+            say('  ' + STEP_NAMES[step] + ':', n, ('request' if n == '1' else 'requests') + (' for ' + str(p_hi) + ' points' if step == 'chapter' else '') + ',',
+                MODEL_NAMES.get(s['model'], s['model']) + ', ' + s['effort'] + ' effort, about', format(per, ','), 'tokens in each')
+    return tuple(tot)
+
+def say_totals(name, tot, exact, spent=None):
+    say('Estimate for the rest of', name + ':' + ('' if exact else ' (rough: set the API key for an exact count of the prompts)'))
+    say('  With batches (the default):', money(tot[0]), 'to', money(tot[1]) + '. Each step is one batch, usually under an hour, at most 24.')
+    say('  With --now:', money(tot[2]), 'to', money(tot[3]) + '. Usually a few minutes for a small course (at most ' + str(NOW_MOST) + ' points).')
+    if spent is not None:
+        say('Spent so far:', money(spent) + '. Thinking is billed as output and is the uncertain part, so plan for the high number.')
+
+
+# ---------- the commands ----------
+def cmd_status(args):
+    job = setup(args, as_name=args.as_name)
+    say(job.label + ':', len(job.course['points']), 'points, on the', job.settings, 'settings' + (' (not saved until the first run)' if not job.work.existed else '') + '.')
+    summary(job, after_run=False)
+    open_b = [b for b in job.work.state['batches'] if not b.get('collected')]
+    if open_b: say(' ', many_of(len(open_b), 'batch'), 'sent and not collected yet. Run the run command again to collect it.')
+
+def cmd_estimate(args):
+    paths = outline_paths(args.outline)
+    if args.as_name and len(paths) > 1: raise Stop('--as works with one outline only.')
+    exact = bool(os.environ.get('ANTHROPIC_API_KEY'))
+    api = client() if exact else None
+    repo = args.repo or REPO; d = dump(repo)
+    total, spent = [0, 0, 0, 0], 0
+    for p in paths:
+        job = setup(args, p, args.as_name, args.settings, repo, d)
+        tot = estimate(job, api)
+        if any(tot):
+            if len(paths) == 1: say_totals(job.label, tot, exact, job.work.state['spent']['usd'])
+            else: say('  With batches:', money(tot[0]), 'to', money(tot[1]) + '. With --now:', money(tot[2]), 'to', money(tot[3]) + '.')
+        total = [a + b for a, b in zip(total, tot)]; spent += job.work.state['spent']['usd']
+    if len(paths) > 1: say_totals('all ' + str(len(paths)) + ' courses', total, exact, spent)
 
 def cmd_run(args):
     if args.max_dollars is None:
         raise Stop('Add --max-dollars, the most this course may cost in total, counting what earlier runs spent. For example: --max-dollars 5')
-    repo, d, course, work = setup(args)
+    job = setup(args, as_name=args.as_name, wanted=args.settings)
     api = client()
-    try:
-        while True:
-            st = work.state
-            if st.get('sending'):
-                bid = find_sent(api, st['sending'])
-                if bid:
-                    st['batches'].append({'id': bid, 'items': st['sending']['items'], 'sent': st['sending']['before']})
-                    say('Found the batch sent before the stop:', bid)
-                st['sending'] = None; work.save()
-            for b in [b for b in st['batches'] if not b.get('collected')]:
-                try:
-                    info = api.messages.batches.retrieve(b['id'])
-                    if info.processing_status != 'ended': continue
-                    results = list(api.messages.batches.results(b['id']))
-                except Exception as e:
-                    raise api_error(e)
-                collect(work, course, d, b, results, repo)
-                b['collected'] = True; work.save()
-                say('Collected', len(results), 'answers. Spent so far:', money(st['spent']['usd']))
-            waiting = [b for b in st['batches'] if not b.get('collected')]
-            if waiting:
-                if args.no_wait:
-                    say('A batch is still running. Batches usually take under an hour, at most 24. Run the same command again later to collect it.')
-                    return
-                say('Waiting for the batch (checking every', POLL_SECONDS, 'seconds). You can stop with Ctrl+C and run the same command later.')
-                time.sleep(POLL_SECONDS); continue
-            reqs, items = next_requests(work, course, d)
-            if not reqs:
-                say('Done for now.')
-                for s, n in counts(work, course).items(): say(' ', n, STAGE_WORDS[s])
-                say('Spent on this course:', money(st['spent']['usd']) + '. Next: py content\\pipeline.py review')
-                return
-            stages = {}
-            for it in items.values(): stages[it['stage']] = stages.get(it['stage'], 0) + 1
-            try:
-                tokens = count_tokens(api, reqs)
-            except Exception as e:
-                raise api_error(e)
-            lo, hi = cost_range(tokens, stages)
-            if st['spent']['usd'] + hi > args.max_dollars:
-                raise Stop('Not sent: this batch could cost up to ' + money(hi) + ', and ' + money(st['spent']['usd']) + ' is spent already, which would pass --max-dollars ' +
-                           money(args.max_dollars) + '. Raise --max-dollars to go on.')
-            st['sending'] = {'before': now(), 'items': items}; work.save()
-            try:
-                b = api.messages.batches.create(requests=reqs)
-            except Exception as e:
-                st['sending'] = None; work.save()
-                raise api_error(e)
-            st['batches'].append({'id': b.id, 'items': items, 'sent': now()}); st['sending'] = None; work.save()
-            for pid in {it['pid'] for it in items.values()}:
-                rec = work.load(pid); sent = rec.setdefault('sent', {}); sent[rec['stage']] = sent.get(rec['stage'], 0) + 1; work.put(rec)
-            say('Sent', len(reqs), 'requests (' + ', '.join(str(n) + ' ' + s for s, n in stages.items()) + '), expected', money(lo), 'to', money(hi) + '. Batch', b.id)
-    except KeyboardInterrupt:
-        say('\nStopped. Everything so far is saved. Run the same command again to carry on.')
-        sys.exit(130)
+    job.limit = args.max_dollars
+    drive(api, [job], args)
+
+def shares(jobs, highs, limit):
+    """Each course's share of --max-dollars: what it has spent, plus the rest of the money split by how much each
+    course could still cost at most."""
+    spent = sum(j.work.state['spent']['usd'] for j in jobs)
+    rest, need = max(0, limit - spent), sum(highs)
+    return [j.work.state['spent']['usd'] + (rest * h / need if need else 0) for j, h in zip(jobs, highs)]
+
+def cmd_run_many(args):
+    if args.max_dollars is None:
+        raise Stop('Add --max-dollars, the most all these courses may cost together in total, counting what earlier runs spent. For example: --max-dollars 20')
+    repo = args.repo or REPO; d = dump(repo)
+    api = client()
+    jobs = []
+    for p in outline_paths(args.outline):
+        try:
+            jobs.append(setup(args, p, None, args.settings, repo, d))
+        except Stop as e:
+            say(p + ': ' + str(e) + '\nThe other courses carry on.')
+    if not jobs: raise Stop('No course could be read.')
+    ids = [j.course['id'] for j in jobs]
+    for i in set(x for x in ids if ids.count(x) > 1): raise Stop('Two outlines have the id ' + i + '.')
+    say('The combined estimate, before anything is sent:')
+    highs, total = [], [0, 0, 0, 0]
+    for j in jobs:
+        tot = estimate(j, api)
+        if any(tot): say('  With batches:', money(tot[0]), 'to', money(tot[1]) + '. With --now:', money(tot[2]), 'to', money(tot[3]) + '.')
+        highs.append(tot[3] if args.now else tot[1]); total = [a + b for a, b in zip(total, tot)]
+    say_totals('all ' + str(len(jobs)) + ' courses', total, True, sum(j.work.state['spent']['usd'] for j in jobs))
+    for j, s in zip(jobs, shares(jobs, highs, args.max_dollars)):
+        j.limit = s
+        say('  ' + j.label + ': its share of --max-dollars is ' + money(s) + ', counting the ' + money(j.work.state['spent']['usd']) + ' spent already.')
+    drive(api, jobs, args, many=True)
 
 
 # ---------- publishing ----------
@@ -731,7 +1293,8 @@ def sql_blocks(repo):
         write_text(path, replace_block(text, start, end, body, path))
 
 def cmd_publish(args):
-    repo, d, course, work = setup(args)
+    job = setup(args)
+    repo, d, course, work = job.repo, job.d, job.course, job.work
     recs = {pt['id']: work.load(pt['id']) for pt in course['points']}
     units, ready, held = [], 0, []
     for u in course['units']:
@@ -780,14 +1343,16 @@ def cmd_publish(args):
     work.state['published'] = now(); work.save()
 
 
+
+
 # ---------- the review page ----------
 def review_items(root, repo):
-    """Every point waiting for the owner, in every course in the work folder."""
+    """Every point waiting for the owner, in every course in the work folder. Trials are left out: they never publish."""
     d = dump(repo)
     courses, items = [], []
     for cid in sorted(os.listdir(root)) if os.path.isdir(root) else []:
         meta = read_json(os.path.join(root, cid, 'course.json'))
-        if not meta: continue
+        if not meta or meta.get('trial_of'): continue
         work = Work(root, cid)
         tally = {}
         for ui, u in enumerate(meta['units']):
@@ -806,16 +1371,17 @@ def review_items(root, repo):
                                   'sensitive': rec.get('sensitive'), 'local': rec.get('local') or [], 'error': rec.get('error'),
                                   'match': dict(match, point=bank_point(d, match['same'])) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
-    return {'courses': courses, 'items': items}
+    return {'courses': courses, 'items': items, 'trials': len(trials(root))}
 
 def decide(root, repo, body):
     """Saves one decision from the review page. Returns {ok, message, problems}."""
     cid, pid, action = body.get('course'), body.get('id'), body.get('action')
     if not cid or cid not in os.listdir(root) or not re.fullmatch(r'[a-z0-9-]+', pid or ''): return {'ok': False, 'message': 'Unknown point.'}
+    meta = read_json(os.path.join(root, cid, 'course.json'))
+    if not meta or meta.get('trial_of'): return {'ok': False, 'message': 'A trial is for comparing only. Nothing in it is reviewed or published.'}
     work = Work(root, cid)
     rec = work.load(pid)
     if not rec or rec['stage'] not in ('review', 'match-review', 'failed'): return {'ok': False, 'message': 'This point is not waiting for review.'}
-    meta = read_json(os.path.join(root, cid, 'course.json'))
     def done(text):
         log(rec, 'review: ' + text); work.put(rec); return {'ok': True, 'message': text}
     if rec['stage'] == 'match-review':
@@ -845,10 +1411,55 @@ def decide(root, repo, body):
     if action == 'reject':
         note = (body.get('note') or '').strip()[:1000]
         rejected = rec.get('draft')
-        for k in ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries']: rec.pop(k, None)
+        for k in DRAFT_KEYS: rec.pop(k, None)
         rec.update(stage='write', note=note, rejected=rejected)
         return done('rejected, to be written again' + (' with a note' if note else ''))
     return {'ok': False, 'message': 'Unknown action.'}
+
+def trials(root):
+    """The trial folders whose course has a work folder too: [(trial name, its course.json, the course's course.json)]."""
+    out = []
+    for name in sorted(os.listdir(root)) if os.path.isdir(root) else []:
+        meta = read_json(os.path.join(root, name, 'course.json'))
+        if not meta or not meta.get('trial_of'): continue
+        base = read_json(os.path.join(root, meta['trial_of'], 'course.json'))
+        if base and not base.get('trial_of'): out.append((name, meta, base))
+    return out
+
+def side(rec):
+    """One run's version of a point, for the Compare tab."""
+    if not rec or rec['stage'] == 'reuse': return None
+    p = rec.get('final') or rec.get('proposal') or rec.get('draft')
+    return {'point': p, 'which': 'final' if rec.get('final') else 'the fix' if rec.get('proposal') else 'draft', 'stage': STAGE_WORDS.get(rec['stage'], rec['stage']),
+            'clearedBy': rec.get('cleared_by'), 'flags': rec.get('flags') or [], 'summary': (rec.get('check') or {}).get('summary'),
+            'screen': (rec.get('screen') or {}).get('summary'), 'screenPassed': bool(rec.get('screen_passed')), 'toOpus': rec.get('to_opus'),
+            'usd': round(sum((rec.get('usd') or {}).values()), 4) if rec.get('usd') else None}
+
+def compare_items(root):
+    """Every trial next to its course: each point's two versions, the numbers for both runs, and the owner's picks."""
+    out = []
+    for name, meta, base in trials(root):
+        A, B = Work(root, meta['trial_of']), Work(root, name)
+        picks = read_json(os.path.join(B.dir, 'compare.json'), {})
+        pts = [dict(pt, chapter='Chapter ' + str(ci + 1) + ': ' + c['title']) for u in meta['units'] for ci, c in enumerate(u['chapters']) for pt in c['points']]
+        pairs = [{'id': pt['id'], 'title': pt['title'], 'chapter': pt['chapter'], 'a': side(A.load(pt['id'])), 'b': side(B.load(pt['id'])), 'pick': picks.get(pt['id'])}
+                 for pt in pts]
+        num = lambda w, s: dict({k: v for k, v in stats(w, pts).items() if k != 'pointUsd'}, settings=w.state.get('settings') or (OLD_COURSE if w.existed else NEW_COURSE))
+        out.append({'trial': name, 'base': meta['trial_of'], 'name': base['name'], 'a': num(A, 'a'), 'b': num(B, 'b'), 'pairs': pairs})
+    return {'trials': out}
+
+def pick(root, body):
+    """Saves the owner's pick for one point on the Compare tab: a (the course), b (the trial), same, or none."""
+    name, pid, choice = body.get('trial'), body.get('id'), body.get('pick')
+    found = [t for t in trials(root) if t[0] == name]
+    if not found or choice not in ('a', 'b', 'same', None): return {'ok': False, 'message': 'Unknown trial or pick.'}
+    if pid not in {pt['id'] for u in found[0][1]['units'] for c in u['chapters'] for pt in c['points']}: return {'ok': False, 'message': 'Unknown point.'}
+    path = os.path.join(root, name, 'compare.json')
+    picks = read_json(path, {})
+    if choice: picks[pid] = choice
+    else: picks.pop(pid, None)
+    write_json(path, picks)
+    return {'ok': True}
 
 def review_server(root, repo, port):
     token = secrets.token_urlsafe(24)
@@ -870,24 +1481,25 @@ def review_server(root, repo, port):
             if not self.allowed(): return self.send(403, {'ok': False})
             path = urllib.parse.urlparse(self.path).path
             if path == '/': return self.send(200, page, 'text/html')
-            if path == '/api/items':
+            if path in ('/api/items', '/api/compare'):
                 if self.headers.get('X-Review-Token') != token: return self.send(403, {'ok': False})
-                try: return self.send(200, review_items(root, repo))
+                try: return self.send(200, review_items(root, repo) if path == '/api/items' else compare_items(root))
                 except Stop as e: return self.send(500, {'ok': False, 'message': str(e)})
             self.send(404, {'ok': False})
         def do_POST(self):
             if not self.allowed() or self.headers.get('X-Review-Token') != token: return self.send(403, {'ok': False, 'message': 'Refused.'})
-            if urllib.parse.urlparse(self.path).path != '/api/decide': return self.send(404, {'ok': False})
+            path = urllib.parse.urlparse(self.path).path
+            if path not in ('/api/decide', '/api/pick'): return self.send(404, {'ok': False})
             try:
                 body = json.loads(self.rfile.read(min(int(self.headers.get('Content-Length') or 0), 200000)).decode('utf-8'))
-                return self.send(200, decide(root, repo, body))
+                return self.send(200, decide(root, repo, body) if path == '/api/decide' else pick(root, body))
             except (ValueError, Stop) as e:
                 return self.send(400, {'ok': False, 'message': str(e)})
     return http.server.HTTPServer(('127.0.0.1', port), Handler)
 
 def cmd_review(args):
     repo = args.repo or REPO
-    root = args.work or os.path.join(repo, 'content', 'work')
+    root = work_root(args, repo)
     server = review_server(root, repo, args.port)
     url = 'http://localhost:' + str(server.server_address[1]) + '/'
     say('The review page is at', url, '(only on this computer). Leave this window open while you review, and press Ctrl+C to stop.')
@@ -907,19 +1519,27 @@ def main(argv=None):
     ap.add_argument('--work', help=argparse.SUPPRESS)
     ap.add_argument('--repo', help=argparse.SUPPRESS)
     sub = ap.add_subparsers(dest='cmd', required=True)
-    for name, text in [('estimate', 'what the rest of a course will cost'), ('status', 'where each point is, with no API calls'),
-                       ('run', 'write and check the points'), ('publish', 'write the cleared points into src/')]:
+    settings = 'which settings to use: ' + ' or '.join(SETTINGS) + '. A course keeps the ones it started with unless you name others'
+    for name, text in [('estimate', 'what the rest of a course (or several) will cost'), ('status', 'where each point is, with no API calls'),
+                       ('run', 'write and check the points'), ('run-many', 'write and check several courses, sharing each batch'),
+                       ('publish', 'write the cleared points into src/')]:
         s = sub.add_parser(name, help=text)
-        s.add_argument('outline')
-        if name == 'run':
-            s.add_argument('--max-dollars', type=float, help='the most this course may cost in total, counting earlier runs')
+        s.add_argument('outline', nargs='+' if name in ('estimate', 'run-many') else None,
+                       help='outline files, or folders of them' if name in ('estimate', 'run-many') else 'the outline file')
+        if name in ('estimate', 'run', 'status'):
+            s.add_argument('--as', dest='as_name', help='a trial: run the outline again under this name, to compare on the review page')
+        if name in ('estimate', 'run', 'run-many'):
+            s.add_argument('--settings', choices=list(SETTINGS), help=settings)
+        if name in ('run', 'run-many'):
+            s.add_argument('--max-dollars', type=float, help='the most this course (with run-many, all of them together) may cost in total, counting earlier runs')
+            s.add_argument('--now', action='store_true', help='send to the normal API instead of batches: done in minutes, at twice the price')
             s.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for a batch')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
     args = ap.parse_args(argv)
     try:
-        {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'publish': cmd_publish, 'review': cmd_review}[args.cmd](args)
+        {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1
