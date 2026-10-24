@@ -6,7 +6,8 @@
 <title>Stratos review</title>
 <!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
      It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, or not
-     written. Every decision is saved straight away in content/work. -->
+     written. Every decision is saved straight away in content/work. The Compare tab puts a trial run (run --as)
+     next to its course, point by point, so the owner can judge whether cheaper settings keep the quality. -->
 <style>
 :root{--paper:#fff;--ink:#16171b;--soft:#5d6068;--line:#e3e4e8;--wash:#f6f7f9;--blue:#2f5bea;--blue-wash:#eaf0ff;--weak:#c2410c;--weak-wash:#fff1e8;--ok:#15803d}
 @media (prefers-color-scheme: dark){:root{--paper:#15161a;--ink:#ececef;--soft:#a2a5ad;--line:#2c2e35;--wash:#1d1f24;--blue:#7d9bff;--blue-wash:#1f2740;--weak:#fb923c;--weak-wash:#2e1f15;--ok:#4ade80}}
@@ -54,18 +55,32 @@ form label{display:block;font-size:12px;font-weight:600;color:var(--soft);margin
 form input,form textarea,form select{width:100%;font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
 form textarea{min-height:52px;resize:vertical}
 form .row{display:grid;grid-template-columns:140px 1fr;gap:6px;margin-bottom:6px}
-.empty{padding:40px 24px;color:var(--soft)}
+.empty{grid-column:1/-1;padding:40px 24px;color:var(--soft)}
 kbd{font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:4px;padding:0 4px}
-@media (max-width:900px){main{grid-template-columns:1fr}nav,.pane{border:0;border-bottom:1px solid var(--line)}}
+header .tabs{display:inline-flex;gap:4px}
+header .tabs button{font:inherit;font-size:14px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--ink);padding:3px 10px;cursor:pointer}
+header .tabs button[aria-pressed="true"]{background:var(--blue-wash);color:var(--blue);border-color:var(--blue-wash)}
+.compare{grid-column:1/-1;padding:20px 24px;max-width:1400px}
+.compare table{border-collapse:collapse;margin:8px 0 16px;font-size:14px}
+.compare th,.compare td{text-align:left;padding:4px 16px 4px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.compare th{font-weight:600;color:var(--soft)}
+.pairbox{border-top:1px solid var(--line);padding:18px 0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.pair .colhead{font-size:13px;font-weight:600;color:var(--soft);margin-bottom:6px}
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.picks button,.compare .toggle{font:inherit;border-radius:8px;padding:6px 12px;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.picks button[aria-pressed="true"],.compare .toggle[aria-pressed="true"]{background:var(--blue-wash);color:var(--blue);border-color:var(--blue)}
+@media (max-width:900px){main{grid-template-columns:1fr}nav,.pane{border:0;border-bottom:1px solid var(--line)}.pair{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><h1>Stratos review</h1><span class="counts" id="counts"></span><span class="small">Keys: <kbd>J</kbd> <kbd>K</kbd> move, <kbd>A</kbd> approve, <kbd>F</kbd> use the fix, <kbd>E</kbd> edit, <kbd>R</kbd> reject</span></header>
+<header><h1>Stratos review</h1><span class="tabs" id="tabs" hidden><button type="button" data-tab="review" aria-pressed="true">To review</button><button type="button" data-tab="compare" aria-pressed="false">Compare</button></span><span class="counts" id="counts"></span><span class="small" id="keys">Keys: <kbd>J</kbd> <kbd>K</kbd> move, <kbd>A</kbd> approve, <kbd>F</kbd> use the fix, <kbd>E</kbd> edit, <kbd>R</kbd> reject</span></header>
 <main id="main"><div class="empty">Loading.</div></main>
 <script>
 'use strict';
 const TOKEN = '{{TOKEN}}';
 let data = {courses: [], items: []}, cur = 0, view = 'draft', editing = false, message = null;
+let tab = 'review', comp = {trials: []}, trial = 0, blind = true;
 const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[c]);
 
@@ -122,6 +137,10 @@ function readForm() {
 }
 
 function render() {
+  $('#tabs').hidden = !data.trials;
+  document.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tab === tab)));
+  $('#keys').hidden = tab === 'compare';
+  if (tab === 'compare') return renderCompare();
   const total = data.courses.reduce((n, c) => n + (c.counts.cleared || 0) + (c.counts.reuse || 0), 0);
   $('#counts').textContent = data.items.length + ' to review, ' + total + ' cleared';
   if (!data.items.length) {
@@ -168,6 +187,65 @@ function render() {
   $('#main').innerHTML = '<nav>' + nav + '</nav><section>' + mid + '</section><section class="pane">' + side + '</section><div class="actions">' + acts + '</div>';
 }
 
+/* The Compare tab: a trial next to its course. a is the course, b is the trial. With the sides hidden, which side is
+   which is picked from the point id, and stays hidden until a pick is made for that point. */
+const numbersRow = (label, f, t) => '<tr><th>' + label + '</th><td>' + esc(f(t.a)) + '</td><td>' + esc(f(t.b)) + '</td></tr>';
+const pct = (n, of) => of ? n + ' of ' + of + ' (' + Math.round(100 * n / of) + '%)' : 'none checked yet';
+function flip(id) { let h = 0; for (const c of id) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h % 2 === 1; }
+function sideHtml(s, shown) {
+  if (!s || !s.point) return '<p class="small">Not written in this run.</p>';
+  let out = pointHtml(s.point);
+  if (shown) {
+    out += '<p class="small">' + esc(({final: 'Final version', 'the fix': 'The suggested fix', draft: 'Draft'})[s.which]) + ', ' +
+      (s.clearedBy ? 'cleared by ' + esc(({screen: 'the Haiku screen', checker: 'the Opus checker', owner: 'you'})[s.clearedBy] || s.clearedBy) : esc(s.stage)) +
+      (s.usd != null ? '. Cost ' + (s.usd * 100).toFixed(1) + ' cents' : '') + '.</p>';
+    if (s.screen) out += '<p class="small"><b>Haiku:</b> ' + esc(s.screen) + (s.toOpus ? ' Sent to Opus: ' + esc(s.toOpus) + '.' : '') + '</p>';
+    if (s.summary) out += '<p class="small"><b>Opus:</b> ' + esc(s.summary) + '</p>';
+    out += s.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
+  }
+  return out;
+}
+function renderCompare() {
+  const ts = comp.trials;
+  $('#counts').textContent = '';
+  if (!ts.length) { $('#main').innerHTML = '<div class="empty">No trials yet. Run an outline again with --as and a new name to make one.</div>'; return; }
+  trial = Math.min(trial, ts.length - 1);
+  const t = ts[trial], tally = {a: 0, b: 0, same: 0};
+  t.pairs.forEach(p => { if (p.pick) tally[p.pick]++; });
+  let h = '<div class="compare">';
+  if (ts.length > 1) h += '<p><select id="trial" aria-label="Trial">' + ts.map((x, i) => '<option value="' + i + '"' + (i === trial ? ' selected' : '') + '>' + esc(x.trial + ' next to ' + x.base) + '</option>').join('') + '</select></p>';
+  h += '<h2 class="title">' + esc(t.name) + '</h2><p class="where">The course (' + esc(t.base) + ') next to the trial (' + esc(t.trial) + ').</p>';
+  h += '<table><tr><th></th><th>The course</th><th>The trial</th></tr>' +
+    numbersRow('Settings', x => x.settings, t) +
+    numbersRow('Spent', x => 'US$' + x.usd.toFixed(2), t) +
+    numbersRow('Per point written', x => x.written ? (100 * x.usd / x.written).toFixed(1) + ' cents' : 'nothing written yet', t) +
+    numbersRow('Flagged for you', x => pct(x.flagged, x.checked), t) +
+    numbersRow('Sent to the Opus checker', x => pct(x.opus, x.checked), t) +
+    numbersRow('Passed by Haiku, then flagged by Opus', x => x.passed ? x.missed + ' of ' + x.passed : 'no Haiku screen', t) + '</table>';
+  h += '<p>Your picks: the course better ' + tally.a + ', the same ' + tally.same + ', the trial better ' + tally.b + ', of ' + t.pairs.length + ' points.</p>';
+  h += '<button type="button" class="toggle" data-act="blind" aria-pressed="' + blind + '">Hide which side is which until I pick</button>';
+  t.pairs.forEach((p, i) => {
+    const left = blind && flip(p.id) ? 'b' : 'a', right = left === 'a' ? 'b' : 'a', shown = !blind || !!p.pick;
+    const name = k => shown ? (k === 'a' ? 'The course' : 'The trial') : (k === left ? 'Left' : 'Right');
+    const btn = (k, label) => '<button type="button" data-pick="' + k + '" data-p="' + i + '" aria-pressed="' + (p.pick === k) + '">' + label + '</button>';
+    h += '<div class="pairbox"><p class="where">' + esc(p.chapter) + '</p><div class="pair"><div><div class="colhead">' + name(left) + '</div>' + sideHtml(p[left], shown) +
+      '</div><div><div class="colhead">' + name(right) + '</div>' + sideHtml(p[right], shown) + '</div></div>' +
+      '<div class="picks">' + btn(left, 'Left is better') + btn('same', 'About the same') + btn(right, 'Right is better') + '</div></div>';
+  });
+  $('#main').innerHTML = h + '</div>';
+}
+async function loadCompare() {
+  const r = await fetch('/api/compare', {headers: {'X-Review-Token': TOKEN}});
+  comp = await r.json();
+  render();
+}
+async function setPick(i, k) {
+  const p = comp.trials[trial].pairs[i], next = p.pick === k ? null : k;
+  const r = await fetch('/api/pick', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Review-Token': TOKEN},
+    body: JSON.stringify({trial: comp.trials[trial].trial, id: p.id, pick: next})});
+  if ((await r.json()).ok) { p.pick = next; render(); }
+}
+
 async function load() {
   const r = await fetch('/api/items', {headers: {'X-Review-Token': TOKEN}});
   data = await r.json();
@@ -182,9 +260,13 @@ async function decide(action, extra) {
   if (res.ok) { editing = false; view = 'draft'; await load(); } else render();
 }
 
+document.addEventListener('change', e => { if (e.target.id === 'trial') { trial = +e.target.value; render(); } });
 document.addEventListener('click', e => {
   const b = e.target.closest('button');
   if (!b) return;
+  if (b.dataset.tab) { tab = b.dataset.tab; if (tab === 'compare') loadCompare(); else load(); return; }
+  if (b.dataset.pick) { setPick(+b.dataset.p, b.dataset.pick); return; }
+  if (b.dataset.act === 'blind') { blind = !blind; render(); return; }
   if (b.dataset.i !== undefined) { cur = +b.dataset.i; editing = false; view = 'draft'; message = null; render(); return; }
   if (b.dataset.view) { view = b.dataset.view; render(); return; }
   const act = b.dataset.act;
@@ -195,7 +277,7 @@ document.addEventListener('click', e => {
   if (act) decide(act);
 });
 document.addEventListener('keydown', e => {
-  if (e.target.closest('input, textarea, select') || e.metaKey || e.ctrlKey || e.altKey || !data.items.length) return;
+  if (tab !== 'review' || e.target.closest('input, textarea, select') || e.metaKey || e.ctrlKey || e.altKey || !data.items.length) return;
   const k = e.key.toLowerCase(), click = a => { const b = document.querySelector('[data-act="' + a + '"]'); if (b && !b.disabled) b.click(); };
   if (k === 'j' || k === 'k') { cur = Math.max(0, Math.min(data.items.length - 1, cur + (k === 'j' ? 1 : -1))); editing = false; view = 'draft'; message = null; render(); }
   else if (k === 'a') click(data.items[cur].stage === 'match-review' ? 'reuse' : 'approve');
