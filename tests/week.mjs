@@ -119,7 +119,8 @@ const kept = await queue(A.p);
 check(kept && kept.uid === ua.id && kept.list.length === 1 && kept.list[0].q === q1 && Math.abs(kept.list[0].at - Date.now()) < 5000,
   'signed in, a right answer is kept on the phone with its question and when: ' + JSON.stringify(kept && kept.list), R);
 check(await until(async () => await countOf(ua) === 1, 12000), 'and sent within 10 seconds', R);
-check(await queue(A.p) === null, 'then the phone keeps nothing', R);
+// The database saves the answer before its reply reaches the phone, so give the reply a moment to arrive.
+check(await until(async () => await queue(A.p) === null, 2000), 'then the phone keeps nothing', R);
 const sent = (await rows('select q from public.week_answers where user_id = $1', [ua.id]))[0].q;
 check(sent === q1, 'the database has the question: ' + sent, R);
 
