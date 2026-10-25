@@ -56,10 +56,10 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   check((await title(d.p)) === 'Pick your course', 'Show courses shows Pick your course', R);
   check((await d.p.locator('#setup .pick.place').textContent()) === 'New South Wales, AustraliaChange', 'the place at the top, with Change', R);
   check(JSON.stringify(await d.p.locator('#setup .unit').allTextContents()) === JSON.stringify(['New South Wales', 'International courses']), 'New South Wales, then International courses, and no Open now', R);
-  check(JSON.stringify(await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub))) === JSON.stringify(['eco', 'maths', 'edexcel']), 'NSW Economics and Maths, then the Edexcel course', R);
+  check(JSON.stringify(await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub))) === JSON.stringify(['eco', 'maths', 'nsw-bus-11', 'edexcel']), 'NSW Economics, Maths and Business Studies, then the Edexcel course', R);
   const subs = await d.p.locator('#setup .p-in > .sub').allTextContents();
   check(subs[0] === 'More NSW subjects are coming.' && subs[1] === 'Taught in schools around the world.', 'with the line under each group', R);
-  check(await d.p.locator('#setup .pick[data-sub] .v').count() === 0 && await d.p.locator('#setup .pick[data-sub] .ic').count() === 3 && await d.p.locator('#setup [aria-current]').count() === 0, 'each row has an arrow, not Open or Switch, and none is marked open', R);
+  check(await d.p.locator('#setup .pick[data-sub] .v').count() === 0 && await d.p.locator('#setup .pick[data-sub] .ic').count() === 4 && await d.p.locator('#setup [aria-current]').count() === 0, 'each row has an arrow, not Open or Switch, and none is marked open', R);
   check((await d.p.locator('#setup .fine').textContent()) === FINE, 'the line that courses can be switched from Home', R);
   check((await d.p.locator('#setup .p-in > :last-child').textContent()) === NONE && await d.p.locator('#setup .p-in > :last-child').evaluate(b => b.classList.contains('textbtn')), 'and My course isn’t here yet, a text button, at the bottom', R);
   let s = await saved(d.p);

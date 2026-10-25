@@ -194,7 +194,15 @@ git commit -m "Add Business Studies, Year 11: Nature of business"
 git push -u origin content/nsw-bus-11
 ```
 
-Open the pull request on GitHub. The browser tests (`npm test`) need Chromium, so ask a Claude Code session on the web to run them on the branch. After it is merged, paste `supabase/week.sql` and then `supabase/challenges.sql` into the Supabase SQL Editor and run each, so the weekly table counts the new points.
+Open the pull request on GitHub, but do not merge it yet. The browser tests must pass first, every time. They need Chromium, which a Claude Code session on the web has, so open one on the branch and ask it to run the full suite:
+
+```
+cd tests && npm install && npm test
+```
+
+Merge only when every test passes. A new course changes the subject sheet, so tests that list a place's courses (such as `places.mjs` and `first-open.mjs`) may need the new course added. Ask the session to add it to them, never to loosen or remove a check, and to push the change to the same branch. Then run the suite again.
+
+After it is merged, paste `supabase/week.sql` and then `supabase/challenges.sql` into the Supabase SQL Editor and run each, so the weekly table counts the new points.
 
 ## 10. Compare the settings with a trial
 
