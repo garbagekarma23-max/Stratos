@@ -242,7 +242,11 @@ await call(ub.id, 'accept_message_request', {friend: ref});
 await call(ua.id, 'send_message', {friend: ref, body: 'good game'});
 await tab(A.p, 'home'); await chat(A.p);
 await A.p.waitForSelector('#msgIn');
-const order = await A.p.evaluate(() => [...document.querySelectorAll('.p-body .msg')].map(m => m.classList.contains('ch-msg') ? 'card' : 'text'));
+// The 3 challenges above went straight to the database, so they show after the chat's next fetch of its
+// challenges, which comes every 10 seconds.
+const cards = () => A.p.evaluate(() => [...document.querySelectorAll('.p-body .msg')].map(m => m.classList.contains('ch-msg') ? 'card' : 'text'));
+await until(async () => (await cards()).filter(t => t === 'card').length === 6, 12000);
+const order = await cards();
 check(order.join() === 'card,card,card,card,card,card,text', 'the cards sit in among the messages by when each was sent: ' + order.join(), R);
 check(await A.p.locator('.composer .acts [data-act="pickch"]').count() === 1, 'Send a challenge sits above the message box', R);
 await both(A.p, 'chal-chat');
