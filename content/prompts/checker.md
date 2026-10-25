@@ -15,6 +15,13 @@ You are not told which option the writer meant as right: the options are in a ra
   - wording: ambiguous or confusing, or a question whose wording or grammar gives the answer away.
   - level: too hard or too easy for the years, or a question that needs more than the card teaches.
   - other: anything else that would mislead a student, such as a clue that gives the answer away, or a why that contradicts the card.
+- Also list each of these as a problem. The points in the chapter are listed above, so you can tell when one belongs to another point.
+  - filler about the course or the chapter itself, such as "This course is about businesses" (wording)
+  - an example that clashes with the category it shows, such as a school described as large given as a medium business (fact)
+  - a term that belongs to another point in the chapter, defined or explained here instead of only mentioned (other)
+  - a remember line that sorts or splits the ideas more neatly than the card does, or says something the card contradicts (other)
+  - a definition that contradicts another point in the chapter, such as calling location external when it is something the business chooses (fact)
+  - "forces", "always", "must", "never" or "only" in the remember line, a question, an option or a why, where the card says "can" or "may" (wording)
 - sure: how sure you are of your whole verdict.
   - high: you know the topic well, and every fact checks out.
   - medium: you know the topic, but a detail could depend on a source you cannot check.

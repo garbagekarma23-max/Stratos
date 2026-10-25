@@ -12,9 +12,10 @@ bank and course files, a chapter held back as Coming soon, the SQL lines, and th
 pass on the result.
 
 Then: a run saved by the pipeline from before settings (tests/pipeline-old-run/) finished on the original settings;
-the cheaper settings (chapter writing on Sonnet, the Haiku screen, the Opus check, spot checks, sensitive words,
-points written on their own, each point's cost, the numbers after a run); a trial with --now and the Compare tab;
-run-many with shared batches and each course's share of --max-dollars; and the API key never printed or saved.
+the cheaper settings, a new course's default (chapter writing on Sonnet, and Opus checking every point with no
+Haiku screen); the screened settings, asked for by name (the Haiku screen, the Opus check, spot checks, sensitive
+words, points written on their own, each point's cost, the numbers after a run); a trial with --now and the Compare
+tab; run-many with shared batches and each course's share of --max-dollars; and the API key never printed or saved.
 """
 import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
@@ -459,28 +460,37 @@ def main():
     check(all(ok) and code == 0 and 'Held back as Coming soon: Second chapter' in out, 'and it publishes as before')
     pipeline.make_client = lambda: api
 
-    # ---------- the cheaper settings, with batches ----------
+    # ---------- the cheaper settings, and the screened settings, with batches ----------
     cheap = os.path.join(tmp, 'tst-cheap.yaml')
     with open(cheap, 'w', encoding='utf-8') as f: f.write(CHEAP)
     code, out = go('estimate', cheap)
+    check(code == 0 and 'cheaper settings' in out and 'write, a chapter at a time: 3 requests for 11 points' in out and 'Claude Sonnet 5.5, low effort' in out and
+          'screen' not in out and 'check: 11 requests, Claude Opus 5.5, high effort' in out,
+          'a new course is estimated on the cheaper settings: a request per chapter on Sonnet, and Opus checking every point with no Haiku screen')
+    code, out = go('estimate', cheap, '--settings', 'screened')
     nums = lambda label, text: [float(x) for x in re.search(label + r'.*?US\$(\d+\.\d\d) to US\$(\d+\.\d\d)', text).groups()]
     b_, n_ = nums('With batches', out), nums('With --now', out)
-    check(code == 0 and 'cheaper settings' in out and 'write, a chapter at a time: 3 requests for 11 points' in out and 'Claude Sonnet 5.5, low effort' in out and
-          'screen: 10 requests, Claude Haiku 5.5, medium effort' in out, 'the estimate shows a request per chapter on Sonnet and the Haiku screen')
+    check(code == 0 and 'screened settings' in out and 'write, a chapter at a time: 3 requests for 11 points' in out and
+          'screen: 10 requests, Claude Haiku 5.5, medium effort' in out, 'with --settings screened it shows the Haiku screen too')
     check(abs(n_[0] - 2 * b_[0]) < 0.02 and abs(n_[1] - 2 * b_[1]) < 0.02 and b_[1] > 0, 'and the cost with batches and with --now, which is twice as much')
     code, out = go('estimate', cheap, '--settings', 'original')
     check(code == 0 and 'write, one point at a time: 12 requests' in out and 'screen' not in out and 'Claude Opus 5.5, medium effort' in out, 'with --settings original it shows the first run\'s settings')
     check(not os.path.exists(os.path.join(work, 'tst-cheap', 'state.json')), 'and an estimate saves no settings')
     pipeline.spot_check = lambda pid: pid == 'tsc-spot-two'
     first = api.created
-    code, out = go('run', cheap, '--max-dollars', '5')
+    code, out = go('run', cheap, '--max-dollars', '5', '--settings', 'screened')
     C2 = pipeline.Work(work, 'tst-cheap')
     reqs = [r for bid, b in api.batches.items() if int(bid.split('_')[1]) > first for r in b['requests']]
     chap = [r for r in reqs if stage_of(r['params']) == 'chapter']
-    check(code == 0 and 'Done for now' in out and C2.state['settings'] == 'cheaper', 'a new course runs on the cheaper settings')
+    check(code == 0 and 'Done for now' in out and C2.state['settings'] == 'screened', 'a course asked to run on the screened settings keeps them')
     check(len(chap) == 3 and all(r['params']['model'] == pipeline.SONNET and r['params']['output_config']['effort'] == 'low' for r in chap) and
           sorted(chap[0]['params']['output_config']['format']['schema']['required']) == sorted(p for p in chap[0]['params']['output_config']['format']['schema']['properties']),
           'each chapter is written in one request to Sonnet, low effort, with an entry for each point')
+    sys_of = lambda r: r['params']['system'][0]['text']
+    check(all('Never add filler about the course' in sys_of(r) and 'Keep the card\'s strength' in sys_of(r) for r in chap) and
+          all('filler about the course or the chapter itself' in sys_of(r) and 'defined or explained here instead of only mentioned' in sys_of(r)
+              for r in reqs if stage_of(r['params']) in ('screen', 'check')),
+          'the writer is given the rules from the first course\'s review, and both checkers look for them')
     check(all(r['params']['model'] == pipeline.HAIKU and r['params']['output_config']['effort'] == 'medium' for r in reqs if stage_of(r['params']) == 'screen') and
           all(r['params']['model'] == pipeline.OPUS and r['params']['output_config']['effort'] == 'high' for r in reqs if stage_of(r['params']) == 'check'),
           'Haiku screens at medium effort, and Opus checks at high')
@@ -505,35 +515,35 @@ def main():
     check('Flagged for you:' in out and 'Sent to the Opus checker:' in out and 'cents for each of 10 points written' in out and 'spot check' in out,
           'after the run it prints the cost per point, the flag rate and the points sent to Opus')
     code, out = go('status', cheap)
-    check(code == 0 and 'cheaper settings' in out and 'Sent to the Opus checker:' in out, 'status shows the settings and the same numbers')
+    check(code == 0 and 'screened settings' in out and 'Sent to the Opus checker:' in out, 'status shows the settings and the same numbers')
     pipeline.spot_check = spot_check
 
     # ---------- a trial with --now, and the Compare tab ----------
     batches_before = api.created
     code, out = go('run', outline, '--as', 'tst-course', '--max-dollars', '5')
     check(code == 1 and '--as needs a new name' in out, 'a trial needs a name of its own')
-    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '0.001')
+    code, out = go('run', outline, '--as', 'tst-course-screened', '--settings', 'screened', '--now', '--max-dollars', '0.001')
     check(code == 1 and 'Not sent' in out and not api.streamed, '--now keeps to --max-dollars, at its own prices')
     pipeline.NOW_MOST = 3
-    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    code, out = go('run', outline, '--as', 'tst-course-screened', '--settings', 'screened', '--now', '--max-dollars', '5')
     check(code == 1 and 'more than 3 for --now' in out and not api.streamed, '--now refuses a run bigger than NOW_MOST')
     pipeline.NOW_MOST = 50
     api.limit_once = True
-    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    code, out = go('run', outline, '--as', 'tst-course-screened', '--settings', 'screened', '--now', '--max-dollars', '5')
     check(code == 1 and 'rate limit' in out, 'a rate limit stops a --now run with a message')
     api.interrupt_on = lambda p: stage_of(p) == 'screen'
-    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
-    T = pipeline.Work(work, 'tst-course-cheaper')
+    code, out = go('run', outline, '--as', 'tst-course-screened', '--settings', 'screened', '--now', '--max-dollars', '5')
+    T = pipeline.Work(work, 'tst-course-screened')
     check(code == 130 and 'Stopped' in out and T.state.get('pending', 0) > 0, 'Ctrl+C during --now stops it, with the running requests\' high cost counted')
     spent_at_stop = T.state['spent']['usd'] + T.state['pending']
-    code, out = go('run', outline, '--as', 'tst-course-cheaper', '--now', '--max-dollars', '5')
+    code, out = go('run', outline, '--as', 'tst-course-screened', '--settings', 'screened', '--now', '--max-dollars', '5')
     api.release.set()
-    T = pipeline.Work(work, 'tst-course-cheaper')
+    T = pipeline.Work(work, 'tst-course-screened')
     check(code == 0 and 'counted US$' in out and 'Done for now' in out and T.state['spent']['usd'] >= spent_at_stop and not T.state.get('pending'),
           'running again counts that money as spent and carries on to the end')
     check(api.created == batches_before and api.streamed, 'with --now nothing goes through batches')
-    meta = json.load(open(os.path.join(work, 'tst-course-cheaper', 'course.json'), encoding='utf-8'))
-    check(meta['trial_of'] == 'tst-course' and T.state['trial_of'] == 'tst-course' and T.state['settings'] == 'cheaper', 'the trial has its own folder, marked as a trial of the course')
+    meta = json.load(open(os.path.join(work, 'tst-course-screened', 'course.json'), encoding='utf-8'))
+    check(meta['trial_of'] == 'tst-course' and T.state['trial_of'] == 'tst-course' and T.state['settings'] == 'screened', 'the trial has its own folder, marked as a trial of the course')
     trecs = [T.load(p) for p in ['tst-plain-one', 'tst-unsure-one', 'tst-error-one']]
     check(all(r.get('screen_passed') and r.get('check') and r['to_opus'] == 'trial' for r in trecs[:2]), 'in a trial, Opus checks every point Haiku passed too')
     check(abs(T.load('tst-plain-one')['usd']['screen'] - (3000 * 0.10 + 2000 * 0.50) / 1e6) < 1e-5, 'and --now answers are priced at the normal price')
@@ -541,8 +551,8 @@ def main():
           'the trial says how many points Haiku passed that Opus flagged')
     check(T.load('tst-error-one')['to_opus'] == 'the screen did not answer', 'a screen that fails sends the point to Opus')
     code, out = go('publish', outline)
-    check('tst-course-cheaper' not in json.dumps(pipeline.review_items(work, repo)) and
-          pipeline.decide(work, repo, {'course': 'tst-course-cheaper', 'id': 'tst-unsure-one', 'action': 'approve'})['ok'] is False,
+    check('tst-course-screened' not in json.dumps(pipeline.review_items(work, repo)) and
+          pipeline.decide(work, repo, {'course': 'tst-course-screened', 'id': 'tst-unsure-one', 'action': 'approve'})['ok'] is False,
           'a trial never shows in the review list and nothing in it can be approved')
     server = pipeline.review_server(work, repo, 0)
     threading.Thread(target=server.serve_forever, daemon=True).start()
@@ -553,13 +563,13 @@ def main():
     comp = call('/api/compare')
     tr = comp['trials'][0] if comp.get('trials') else {}
     pair = next((p for p in tr.get('pairs', []) if p['id'] == 'tst-plain-one'), {})
-    check(tr.get('trial') == 'tst-course-cheaper' and tr['a']['settings'] == 'original' and tr['b']['settings'] == 'cheaper' and
+    check(tr.get('trial') == 'tst-course-screened' and tr['a']['settings'] == 'original' and tr['b']['settings'] == 'screened' and
           pair.get('a', {}).get('point') and pair.get('b', {}).get('point') and pair['b']['usd'], 'the Compare tab gets both versions of each point, with each run\'s numbers')
     check('data-tab="compare"' in page, 'and the page has a Compare tab')
-    r = call('/api/pick', {'trial': 'tst-course-cheaper', 'id': 'tst-plain-one', 'pick': 'b'})
+    r = call('/api/pick', {'trial': 'tst-course-screened', 'id': 'tst-plain-one', 'pick': 'b'})
     check(r.get('ok') and call('/api/compare')['trials'][0]['pairs'][0]['pick'] == 'b', 'a pick on the Compare tab is saved')
     check(not call('/api/pick', {'trial': 'tst-course', 'id': 'tst-plain-one', 'pick': 'b'}).get('ok') and
-          not call('/api/pick', {'trial': 'tst-course-cheaper', 'id': '../x', 'pick': 'b'}).get('ok') and
+          not call('/api/pick', {'trial': 'tst-course-screened', 'id': '../x', 'pick': 'b'}).get('ok') and
           call('/api/compare', tok=None).get('status') == 403, 'an unknown trial or point is refused, and so is a call without the token')
     server.shutdown()
 
@@ -582,6 +592,9 @@ def main():
           'each course\'s points are written and checked in its own folder')
     check(A.state['spent']['usd'] > 0 and B.state['spent']['usd'] > 0 and out.rindex('Testing Alpha, Year 9 (cheaper settings)') > out.index('Done for now') and
           out.rindex('Testing Beta, Year 9 (cheaper settings)') > out.index('Done for now'), 'each course keeps its own costs, with a summary for each at the end')
+    check(not any(stage_of(r['params']) == 'screen' for b in new.values() for r in b['requests']) and
+          all(A.load(p).get('check') and not A.load(p).get('screen') for p in ['tsa-alpha-one', 'tsa-alpha-two', 'tsa-alpha-three']),
+          'new courses run on the cheaper settings: nothing goes to Haiku, and Opus checks every point')
     pipeline.BATCH_MOST = 5000
     jobs = [NS(work=NS(state={'spent': {'usd': 1}})), NS(work=NS(state={'spent': {'usd': 0}}))]
     check([round(x, 4) for x in pipeline.shares(jobs, [2, 6], 5)] == [2, 3], 'each course\'s share is what it spent plus the rest split by what it could still cost')

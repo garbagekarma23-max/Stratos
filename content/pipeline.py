@@ -15,8 +15,8 @@ How a point goes through it:
   write    Claude writes the point: card, remember line, check question and practice question. With the cheaper
            settings, one request writes every point of a chapter. node check_content.mjs --json checks each point.
            If one fails, Claude rewrites that point on its own, once, with the problems.
-  screen   with the cheaper settings, Claude Haiku checks it first. A point it passes cleanly is cleared. Anything
-           it flags or is not sure of goes on to the check.
+  screen   only with the screened settings, which a course gets only by asking: Claude Haiku checks it first. A point
+           it passes cleanly is cleared. Anything it flags or is not sure of goes on to the check.
   check    a separate call checks it. It is not told the right answer: it picks one itself, and says if another
            option could also be right, if any fact is wrong, and how sure it is.
   fix      a point the checker flagged gets a suggested fix.
@@ -43,25 +43,37 @@ OPUS, SONNET, HAIKU = 'claude-opus-5-5', 'claude-sonnet-5-5', 'claude-haiku-5-5'
 MODEL_NAMES = {OPUS: 'Claude Opus 5.5', SONNET: 'Claude Sonnet 5.5', HAIKU: 'Claude Haiku 5.5'}
 # Each step has a model, how hard it thinks (effort), and the output tokens one point is expected to use there, low
 # and high, for estimates before sending. Thinking is billed as output, so effort is the main thing that sets the cost.
-# A course keeps the settings it started with (saved in its state.json). run --settings original or --settings cheaper
+# The output numbers are set so the estimate matches what the first run and the cheaper trial of nsw-bus-11 cost.
+# A course keeps the settings it started with (saved in its state.json). run --settings original, cheaper or screened
 # changes them.
 SETTINGS = {
     # The settings of the first run (nsw-bus-11): Claude Opus 5.5 at every step, and one writing request per point.
+    # It cost about 3.7 cents a point with batches.
     'original': {
         'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
-        'write': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'write': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
         'screen': None,
-        'check': {'model': OPUS, 'effort': 'high', 'out': (2500, 5500)},
-        'fix': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
+        'fix': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
         'chapters': False},
-    # Cheaper: Claude Sonnet 5.5 writes a chapter at a time, and Claude Haiku 5.5 screens every point first. Only the
-    # points it flags or is not sure of go to the Claude Opus 5.5 checker. Fixes stay on Claude Opus 5.5.
+    # Cheaper, for a new course: Claude Sonnet 5.5 writes a chapter at a time, and Claude Opus 5.5 checks every point
+    # and writes the fixes. A trial of nsw-bus-11 matched the original's quality and flag rate at about 2 cents a point.
     'cheaper': {
         'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
-        'write': {'model': SONNET, 'effort': 'low', 'out': (1000, 2000)},
-        'screen': {'model': HAIKU, 'effort': 'medium', 'out': (2500, 5500)},
-        'check': {'model': OPUS, 'effort': 'high', 'out': (2500, 5500)},
-        'fix': {'model': OPUS, 'effort': 'medium', 'out': (2000, 4500)},
+        'write': {'model': SONNET, 'effort': 'low', 'out': (600, 900)},
+        'screen': None,
+        'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
+        'fix': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
+        'chapters': True},
+    # Cheaper with a Claude Haiku 5.5 screen first: only the points it flags or is not sure of go to the Opus checker.
+    # In the nsw-bus-11 trial Haiku sent all 20 points on, so it saved nothing. Kept for a later Haiku, only by asking
+    # for it with --settings screened.
+    'screened': {
+        'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'write': {'model': SONNET, 'effort': 'low', 'out': (600, 900)},
+        'screen': {'model': HAIKU, 'effort': 'medium', 'out': (550, 750)},
+        'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
+        'fix': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
         'chapters': True},
 }
 NEW_COURSE = 'cheaper'    # the settings a new course starts on
@@ -1519,7 +1531,7 @@ def main(argv=None):
     ap.add_argument('--work', help=argparse.SUPPRESS)
     ap.add_argument('--repo', help=argparse.SUPPRESS)
     sub = ap.add_subparsers(dest='cmd', required=True)
-    settings = 'which settings to use: ' + ' or '.join(SETTINGS) + '. A course keeps the ones it started with unless you name others'
+    settings = 'which settings to use: ' + ', '.join(SETTINGS) + '. A course keeps the ones it started with unless you name others'
     for name, text in [('estimate', 'what the rest of a course (or several) will cost'), ('status', 'where each point is, with no API calls'),
                        ('run', 'write and check the points'), ('run-many', 'write and check several courses, sharing each batch'),
                        ('publish', 'write the cleared points into src/')]:
