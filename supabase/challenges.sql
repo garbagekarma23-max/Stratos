@@ -56,6 +56,12 @@ on conflict (ch) do update set course = excluded.course, total = excluded.total,
 -- The courses made by the content pipeline (src/made.js): one row for each chapter with points in src/courses.
 -- python3 content/pipeline.py publish writes the lines between these two markers. Do not edit them by hand.
 -- made chapters start
+insert into public.challenge_chapters (ch, course, total, per_q_ms) values
+  ('nsw-bus-11-1-1', 'nsw-bus-11', 8, 1500),
+  ('nsw-bus-11-1-2', 'nsw-bus-11', 8, 1500),
+  ('nsw-bus-11-1-3', 'nsw-bus-11', 8, 1500),
+  ('nsw-bus-11-1-4', 'nsw-bus-11', 6, 1500)
+on conflict (ch) do update set course = excluded.course, total = excluded.total, per_q_ms = excluded.per_q_ms;
 -- made chapters end
 
 

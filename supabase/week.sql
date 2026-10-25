@@ -66,6 +66,28 @@ insert into public.week_points (pid, maths) values
 -- The courses made by the content pipeline (src/made.js): one row for each point in src/bank. python3
 -- content/pipeline.py publish writes the lines between these two markers. Do not edit them by hand.
 -- made points start
+insert into public.week_points (pid, maths) values
+  ('bus-business', false),
+  ('bus-goods-services', false),
+  ('bus-profit', false),
+  ('bus-business-economy', false),
+  ('bus-entrepreneurship-innovation', false),
+  ('bus-size-business', false),
+  ('bus-industry-sectors', false),
+  ('bus-local-national-global-businesses', false),
+  ('bus-sole-traders-partnerships', false),
+  ('bus-companies-limited-liability', false),
+  ('bus-government-enterprises', false),
+  ('bus-external-environment', false),
+  ('bus-economic-financial-influences', false),
+  ('bus-social-legal-political-influences', false),
+  ('bus-technological-geographic-institutional-influences', false),
+  ('bus-customers-suppliers-competitors', false),
+  ('bus-internal-environment', false),
+  ('bus-establishment-growth', false),
+  ('bus-maturity-after', false),
+  ('bus-businesses-close', false)
+on conflict (pid) do nothing;
 -- made points end
 
 
