@@ -1,18 +1,18 @@
-/* Business Studies, Year 11 (HSC, Nature of business). Made by the content pipeline from content/outlines/nsw-bus-11.yaml.
+/* Business Studies, Year 11: Nature of business (HSC, Nature of business). Made by the content pipeline from content/outlines/nsw-bus-11.yaml.
    Written by python3 content/pipeline.py publish. Do not edit it by hand. A chapter with no points is still
    being reviewed, and shows on Home as Coming soon. */
 MADE_COURSES.push({
   "id": "nsw-bus-11",
   "course": "Business Studies",
   "year": "Year 11",
-  "name": "Business Studies, Year 11",
+  "name": "Business Studies, Year 11: Nature of business",
   "short": "Business Studies",
   "note": "Follows the NSW Business Studies syllabus. Not made or endorsed by NESA.",
   "place": "nsw",
   "kind": "standard",
   "years": [11],
   "chips": ["sole trader", "limited liability", "quaternary", "life cycle", "external environment"],
-  "row": {"name": "Business Studies, Year 11", "about": "HSC, Nature of business"},
+  "row": {"name": "Business Studies, Year 11: Nature of business", "about": "HSC, Nature of business"},
   "units": [
     {
       "title": "Nature of business",

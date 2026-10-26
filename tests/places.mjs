@@ -174,7 +174,7 @@ for (const [place, own, line] of [
   await p.click('.subject'); await p.waitForTimeout(100);
   check((await headings(p)).join('|') === 'New South Wales|International courses', 'NSW shows its own courses, then the international ones', R);
   const names = await p.locator('#sheetBody .pick:not(.place) .t').allTextContents();
-  check(names[0] === 'Economics, Year 12HSC, The Global Economy' && names[1] === 'Maths, Year 11HSC, Equations' && names[2] === 'Business Studies, Year 11HSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.' && names[3].startsWith('Economics, AS yearInternational A Level (Edexcel)') && names.length === 4, 'each row has a plain name and the exam it leads to', R);
+  check(names[0] === 'Economics, Year 12: The Global EconomyHSC, The Global Economy' && names[1] === 'Maths, Year 11HSC, Equations' && names[2] === 'Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.' && names[3].startsWith('Economics, AS yearInternational A Level (Edexcel)') && names.length === 4, 'each row has a plain name and the exam it leads to', R);
   check((await row('eco').locator('.v').textContent()) === 'Open' && (await row('maths').locator('.v').textContent()) === 'Switch' && (await row('edexcel').locator('.v').textContent()) === 'Switch', 'the course open now says Open, the others Switch', R);
   check((await p.locator('#sheetBody .pick:disabled').count()) === 0 && !(await text(p, '#sheetBody')).includes('Soon'), 'there are no Soon rows', R);
   await p.click('#sheetClose'); await p.waitForTimeout(80);

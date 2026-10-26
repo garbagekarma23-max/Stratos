@@ -136,7 +136,7 @@ check(!(await A.p.evaluate(() => localStorage.getItem('stratos2.chal'))), 'nothi
 await both(A.p, 'chal-sent');
 await A.p.click('#feed [data-act="tochat"]');
 await A.p.waitForSelector('.p-body .ch-msg');
-check((await text(A.p, '.ch-msg .mcard .out')) === 'Waiting for Ben to play. 7 days left.' && (await text(A.p, '.ch-msg .mcard .k')) === 'Challenge, 8 questions' && (await text(A.p, '.ch-msg .mcard .d')) === 'Economics, Year 12. Chapter 1.',
+check((await text(A.p, '.ch-msg .mcard .out')) === 'Waiting for Ben to play. 7 days left.' && (await text(A.p, '.ch-msg .mcard .k')) === 'Challenge, 8 questions' && (await text(A.p, '.ch-msg .mcard .d')) === 'Economics, Year 12: The Global Economy. Chapter 1.',
   'See it in chat shows the card, waiting for Ben, with the course and chapter', R);
 check(/^BenNot playedYou6 of 8\d+:\d\d$/.test(await text(A.p, '.ch-msg .sc')), 'with Ben not played and Ana\'s 6 of 8 and time', R);
 check((await text(A.p, '.ch-part > .fine')) === 'Challenges work without a message request. They have no messages in them, only the chapter and the scores.' && await A.p.locator('.ch-part [data-act="pickch"]').count() === 1,
