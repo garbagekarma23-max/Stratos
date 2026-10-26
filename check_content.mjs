@@ -7,7 +7,7 @@
 // each bank's ids start with its name, each course is for Years 7 to 12 and names a place, and an English course
 // never quotes more than 10 words in a row.
 //   node check_content.mjs                 checks everything in src/
-//   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "points": {id: point}})
+//   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
 import fs from 'fs';
 import { loadContent, allBankPoints, unitCourses } from './content/load.mjs';
@@ -18,18 +18,26 @@ const BANK = allBankPoints(C);
 const COURSES = unitCourses(C);
 // key(?!nes) lets the economist Keynes through, as the ban is on the word key.
 const BANNED = /\b(crucial|delve|enhance|foster|garner|highlight|interplay|intricate|key(?!nes)|landscape|meticulous|pivotal|showcase|tapestry|testament|underscore|valuable|vibrant|groundbreaking|renowned)\w*/i;
+/* The banned words are a style rule, not a ban on subject vocabulary. These names and terms are taken out of the
+   text before the check, so every other use is still caught: "testament" on its own, or "landscape" outside Geography.
+   ALLOWED holds proper nouns, allowed in any subject. ALLOWED_IN holds a subject's literal terms, by the subject's name
+   (a made course's course line, or the subject in a --json file). */
+const ALLOWED = [/\b(?:New|Old) Testaments?\b/g];
+const ALLOWED_IN = {Geography: [/\blandscapes?\b/gi]};
+const banned = (t, subject) => BANNED.test([...ALLOWED, ...(ALLOWED_IN[subject] || [])].reduce((s, r) => s.replace(r, ''), t));
 let problems = [];
-const wordCheck = (id, t) => {
+const wordCheck = (id, t, subject) => {
   if (typeof t !== 'string') { problems.push(id + ' has a part that is not text'); return; }
-  if (BANNED.test(t)) problems.push(id + ' banned word in: ' + t);
+  if (banned(t, subject)) problems.push(id + ' banned word in: ' + t);
   if (/[—–]/.test(t)) problems.push(id + ' dash in: ' + t);
   if (/\s{2,}/.test(t)) problems.push(id + ' double space in: ' + t);
 };
 /* A quote of more than 10 words, in straight or curly quote marks. English courses must not quote set texts at length. */
 const longQuote = t => (t.match(/"[^"]*"|“[^”]*”|‘[^’]*’/g) || []).find(q => q.split(/\s+/).filter(Boolean).length > 10);
 /* One point with a card and two questions. tally counts its questions and how often the right answer is longest.
-   kind is the made course's kind (english, maths, theory or standard), for the rules that only some subjects have. */
-function checkPoint(id, p, tally, kind) {
+   kind is the made course's kind (english, maths, theory or standard), for the rules that only some subjects have.
+   subject is the course's subject, for the subject terms the banned words let through (ALLOWED_IN). */
+function checkPoint(id, p, tally, kind, subject) {
   tally.pts++;
   if (!p.title) problems.push(id + ' has no title');
   if (!Array.isArray(p.card) || p.card.length < 3 || p.card.length > 4) { problems.push(id + ' card has ' + (p.card || []).length + ' lines'); if (!Array.isArray(p.card)) return; }
@@ -47,7 +55,7 @@ function checkPoint(id, p, tally, kind) {
     q.opts.forEach(o => { if (o.length > 60) problems.push(id + k + ' option is ' + o.length + ' characters: ' + o); if (/[.]$/.test(o)) problems.push(id + k + ' option ends with a full stop: ' + o); });
     texts.push(q.q, q.why, q.clue, ...q.opts);
   }
-  for (const t of texts) wordCheck(id, t);
+  for (const t of texts) wordCheck(id, t, subject);
   if (kind === 'english') for (const t of texts) { const q = typeof t === 'string' && longQuote(t); if (q) problems.push(id + ' quotes more than 10 words: ' + q); }
 }
 const report = (name, t) => {
@@ -62,7 +70,7 @@ if (process.argv[2] === '--json') {
   const input = JSON.parse(fs.readFileSync(process.argv[3], 'utf8')), out = {};
   for (const [id, p] of Object.entries(input.points)) {
     problems = [];
-    try { checkPoint(id, p, tally(), input.kind); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
+    try { checkPoint(id, p, tally(), input.kind, input.subject); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
     out[id] = problems;
   }
   console.log(JSON.stringify(out));
@@ -100,22 +108,22 @@ for (const c of COURSES) {
     if (!Array.isArray(c.years) || !c.years.length || c.years.some(y => !(y >= 7 && y <= 12))) problems.push(c.id + ' must be for Years 7 to 12, not ' + c.years);
     if (!['standard', 'english', 'maths', 'theory'].includes(c.kind)) problems.push(c.id + ' has no kind: standard, english, maths or theory');
     if (!c.units.some(u => u.chapters.some(ch => ch.points.length))) problems.push(c.id + ' has no chapter with points');
-    for (const t of [c.course, c.year, c.name, c.note, c.short, ...(c.row ? [c.row.name, c.row.about] : [])]) wordCheck(c.id, t);
+    for (const t of [c.course, c.year, c.name, c.note, c.short, ...(c.row ? [c.row.name, c.row.about] : [])]) wordCheck(c.id, t, c.course);
   }
   for (const u of c.units) {
     if (!u.title) problems.push(c.id + ' has a unit with no title');
-    wordCheck(c.id, u.title);
+    wordCheck(c.id, u.title, c.course);
     for (const ch of u.chapters) {
       if (ids.has(ch.id)) problems.push(ch.id + ' is used by two chapters');
       ids.add(ch.id);
       if (ch.check !== 'draft' && ch.check !== 'checked') problems.push(ch.id + ' check must be draft or checked, not ' + ch.check);
       if (!Array.isArray(ch.points)) problems.push(ch.id + ' has no list of points');
-      wordCheck(ch.id, ch.title);
+      wordCheck(ch.id, ch.title, c.course);
       for (const pid of ch.points || []) {
         if (!BANK[pid]) { problems.push(ch.id + ' lists ' + pid + ', which is not in the bank'); continue; }
         if (ch.points.indexOf(pid) !== ch.points.lastIndexOf(pid)) problems.push(ch.id + ' lists ' + pid + ' twice');
         used.add(pid);
-        checkPoint(pid, BANK[pid], t, c.kind);
+        checkPoint(pid, BANK[pid], t, c.kind, c.course);
       }
     }
   }

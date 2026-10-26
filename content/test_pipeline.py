@@ -312,6 +312,12 @@ def main():
     bad(OUTLINE.replace('brief: A plain point.', 'brief: Two kinds: goods and services.'), 'a colon in a brief gets the hint about quote marks', 'needs quote marks')
     bad(OUTLINE.replace('reuse: e-ped', 'reuse: e-nothing'), 'reusing a point that is not in a bank is refused', 'not in any bank')
 
+    # ---------- the content check is told the course's subject ----------
+    geo = pipeline.to_bank(fake_point('Glaciers'))
+    geo['card'][2] = 'Glaciers carved the landscape of the valley.'
+    check(pipeline.check_points({'tst-geo': geo}, 'standard', repo, tmp, 'Geography') == {'tst-geo': []}, 'the content check is told the subject, so landscape passes in Geography')
+    check(any('banned word' in p for p in pipeline.check_points({'tst-geo': geo}, 'standard', repo, tmp, 'Business Studies')['tst-geo']), 'and landscape is still caught in another subject')
+
     with open(outline, 'w', encoding='utf-8') as f: f.write(OUTLINE)
     code, out = go('status', outline)
     text = open(outline, encoding='utf-8').read()

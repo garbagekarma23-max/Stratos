@@ -15,7 +15,7 @@
                 still shows in the list, with only the international courses.
    A state with no curriculum yet can still be picked: the sheet says its courses are coming. */
 const COURSE_LIST = [
-  {id: 'eco', data: TOPIC, name: 'Economics, Year 12', about: 'HSC, The Global Economy'},
+  {id: 'eco', data: TOPIC, name: 'Economics, Year 12: The Global Economy', about: 'HSC, The Global Economy'},
   {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
 ].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));

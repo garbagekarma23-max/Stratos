@@ -164,11 +164,12 @@ def dump(repo):
     """The content in src/ as it stands: the banks, the made courses, and the ids already taken (content/dump.mjs)."""
     return json.loads(node([os.path.join('content', 'dump.mjs')], repo))
 
-def check_points(points, kind, repo, work_dir):
-    """Runs check_content.mjs on some points. Returns {id: [problems]}."""
+def check_points(points, kind, repo, work_dir, subject=None):
+    """Runs check_content.mjs on some points. Returns {id: [problems]}. The subject lets through its own terms that
+    share a word with a banned one, such as landscape in Geography."""
     if not points: return {}
     path = os.path.join(work_dir, 'check-input.json')
-    write_json(path, {'kind': kind, 'points': points})
+    write_json(path, {'kind': kind, 'subject': subject, 'points': points})
     try:
         return json.loads(node(['check_content.mjs', '--json', path], repo))
     finally:
@@ -643,7 +644,7 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
         else:
             retry(rec, stage, 'the batch ' + kind); work.put(rec)
     # The content check, for everything written here at once.
-    problems = check_points({pid: p for pid, (p, _) in written.items()}, course['kind'], repo, work.dir)
+    problems = check_points({pid: p for pid, (p, _) in written.items()}, course['kind'], repo, work.dir, course['subject'])
     for pid, (p, stage) in written.items():
         rec, probs = work.load(pid), problems.get(pid, [])
         if stage == 'fix':
@@ -1417,7 +1418,7 @@ def decide(root, repo, body):
                  'b': {k: p['b'][k] for k in ['d', 'q', 'opts', 'why', 'clue']}}
         except (KeyError, TypeError):
             return {'ok': False, 'message': 'The edited point is missing a part.'}
-        probs = check_points({pid: p}, meta['kind'], repo, work.dir).get(pid, [])
+        probs = check_points({pid: p}, meta['kind'], repo, work.dir, meta.get('subject')).get(pid, [])
         if probs: return {'ok': False, 'message': 'The content check found problems. Fix them and save again.', 'problems': probs}
         rec.update(stage='cleared', final=p, cleared_by='owner', edited=True); return done('edited and approved')
     if action == 'reject':
