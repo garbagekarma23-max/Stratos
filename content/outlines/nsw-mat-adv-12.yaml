@@ -1,0 +1,182 @@
+# NSW Mathematics Advanced, Year 12: the seven Year 12 focus areas, 40 points.
+# Drafted from NESA's Mathematics Advanced 11-12 Syllabus (2024), taught in Year 12 from Term 4 2026 and first examined
+# in the 2027 HSC. The structure follows the syllabus. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Keypad templates can come later, per topic, as in Maths Lab.
+
+id: nsw-mat-adv-12
+subject: Mathematics
+bank: mat
+name: Mathematics Advanced, Year 12
+about: HSC, Calculus, series, random variables and finance
+short: Mathematics Advanced
+years: [12]
+place: nsw
+kind: maths
+syllabus: NSW Mathematics Advanced 11-12 Syllabus (2024), Year 12 focus areas
+note: Follows the NSW Mathematics Advanced syllabus. Not made or endorsed by NESA.
+chips: [stationary point, integral, geometric series, normal distribution, annuity]
+
+units:
+  - title: Functions
+    chapters:
+      - title: Further graph transformations and modelling
+        id: nsw-mat-adv-12-1-1
+        points:
+          - title: Combining transformations
+            id: mat-combining-transformations
+            brief: Graphing y = kf(a(x + b)) + c by applying dilations, reflections and translations in the right order, and finding the new position of a point.
+          - title: Transforming trigonometric graphs
+            id: mat-transforming-trigonometric-graphs
+            brief: In y = k sin(a(x + b)) + c, k sets the amplitude, 2π/a the period, b the phase shift and c the centre line.
+          - title: Modelling with functions
+            id: mat-modelling-with-functions
+            brief: Choosing a linear, quadratic, exponential or trigonometric model to fit a situation, such as tides or population, and interpreting its parameters.
+          - title: Finding a rule from a graph
+            id: mat-finding-rule-from-graph
+            brief: Working out the equation of a transformed graph from its features, such as its intercepts, turning point or amplitude.
+
+  - title: Sequences and series
+    chapters:
+      - title: Sequences and series
+        id: nsw-mat-adv-12-2-1
+        points:
+          - title: Arithmetic sequences
+            id: mat-arithmetic-sequences
+            brief: Each term adds a common difference d. The nth term is a + (n - 1)d.
+          - title: Arithmetic series
+            id: mat-arithmetic-series
+            brief: The sum of n terms is n/2 × (2a + (n - 1)d), or n/2 × (first + last).
+          - title: Geometric sequences
+            id: mat-geometric-sequences
+            brief: Each term multiplies by a common ratio r. The nth term is arⁿ⁻¹.
+          - title: Geometric series
+            id: mat-geometric-series
+            brief: The sum of n terms is a(rⁿ - 1)/(r - 1) for r ≠ 1.
+          - title: Limiting sums
+            id: mat-limiting-sums
+            brief: When -1 < r < 1, a geometric series approaches a/(1 - r) as more terms are added. Otherwise it has no limiting sum.
+          - title: Sigma notation
+            id: mat-sigma-notation
+            brief: Σ is shorthand for a sum, with the first and last values of the counter written below and above.
+
+  - title: Calculus
+    chapters:
+      - title: Differential calculus
+        id: nsw-mat-adv-12-3-1
+        points:
+          - title: Derivatives of trigonometric functions
+            id: mat-derivatives-trigonometric-functions
+            brief: The derivative of sin x is cos x, of cos x is -sin x, and of tan x is sec²x, with x in radians, combined with the chain rule.
+          - title: Derivatives of exponentials and logarithms
+            id: mat-derivatives-exponentials-logarithms
+            brief: The derivative of eᶠ⁽ˣ⁾ is f'(x)eᶠ⁽ˣ⁾, and of ln f(x) is f'(x)/f(x).
+          - title: Stationary points
+            id: mat-stationary-points
+            brief: Points where f'(x) = 0. A table of gradients either side shows whether each is a maximum, a minimum or a horizontal point of inflection.
+          - title: The second derivative and concavity
+            id: mat-second-derivative-concavity
+            brief: f''(x) > 0 means concave up and f''(x) < 0 means concave down. A point of inflection is where concavity changes.
+          - title: Curve sketching with calculus
+            id: mat-curve-sketching-with-calculus
+            brief: Sketching a function from its intercepts, stationary points, points of inflection and behaviour at the edges of its domain.
+
+      - title: Integral calculus
+        id: nsw-mat-adv-12-3-2
+        points:
+          - title: Antiderivatives
+            id: mat-antiderivatives
+            brief: An antiderivative undoes differentiation. The antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C for n ≠ -1, and C is the constant of integration.
+          - title: Integrals of exponential and trigonometric functions
+            id: mat-integrals-exponential-trigonometric-functions
+            brief: Integrating eˣ, sin x, cos x and sec²x, including with a linear inside such as e³ˣ or cos(2x).
+          - title: Integrals giving logarithms
+            id: mat-integrals-giving-logarithms
+            brief: The integral of 1/x is ln|x| + C, and the integral of f'(x)/f(x) is ln|f(x)| + C.
+          - title: The definite integral
+            id: mat-definite-integral
+            brief: The definite integral from a to b is F(b) - F(a), where F is an antiderivative. This is the fundamental theorem of calculus.
+          - title: Areas under curves
+            id: mat-areas-under-curves
+            brief: The integral gives signed area. Area below the x-axis is negative, so regions above and below are found separately and added as positive values.
+          - title: Area between two curves
+            id: mat-area-between-two-curves
+            brief: The area between y = f(x) and y = g(x) is the integral of the upper function minus the lower one, between their intersections.
+          - title: The trapezoidal rule
+            id: mat-trapezoidal-rule
+            brief: Estimating a definite integral by splitting the area into trapezia of equal width and adding their areas.
+
+      - title: Applications of calculus
+        id: nsw-mat-adv-12-3-3
+        points:
+          - title: Optimisation
+            id: mat-optimisation
+            brief: Writing a quantity as a function of one variable, differentiating and finding the maximum or minimum, then checking the endpoints and the answer makes sense.
+          - title: Displacement, velocity and acceleration
+            id: mat-displacement-velocity-acceleration
+            brief: Velocity is the derivative of displacement and acceleration is the derivative of velocity. Integrating goes the other way, with initial conditions to find the constant.
+          - title: Reading motion from graphs
+            id: mat-reading-motion-from-graphs
+            brief: Using displacement-time and velocity-time graphs to tell when a particle is at rest, changing direction or speeding up.
+          - title: Exponential growth and decay
+            id: mat-exponential-growth-decay
+            brief: Quantities that change at a rate proportional to their size follow N = N₀eᵏᵗ, growing if k > 0 and decaying if k < 0, as with populations or radioactive decay.
+          - title: Rates of change in context
+            id: mat-rates-change-context
+            brief: Using derivatives to find how fast a quantity, such as the volume of water in a tank, is changing at a given moment.
+
+  - title: Statistical analysis
+    chapters:
+      - title: Discrete random variables
+        id: nsw-mat-adv-12-4-1
+        points:
+          - title: Discrete probability distributions
+            id: mat-discrete-probability-distributions
+            brief: A table of each value of a random variable and its probability. The probabilities must add to 1.
+          - title: Expected value
+            id: mat-expected-value
+            brief: E(X) = Σ x × P(x), the long-run average of a random variable.
+          - title: Variance and standard deviation of a random variable
+            id: mat-variance-standard-deviation-random
+            brief: Var(X) = E(X²) - [E(X)]², and the standard deviation is its square root.
+
+      - title: Continuous random variables
+        id: nsw-mat-adv-12-4-2
+        points:
+          - title: Probability density functions
+            id: mat-probability-density-functions
+            brief: For a continuous variable, probability is the area under a density curve. The function is never negative and the total area is 1.
+          - title: Cumulative distribution functions
+            id: mat-cumulative-distribution-functions
+            brief: The cumulative distribution function gives P(X ≤ x), found by integrating the density from the lowest value up to x.
+          - title: The normal distribution
+            id: mat-normal-distribution
+            brief: A symmetric bell-shaped distribution set by its mean and standard deviation. About 68%, 95% and 99.7% of values lie within 1, 2 and 3 standard deviations.
+          - title: z-scores
+            id: mat-z-scores
+            brief: z = (x - μ)/σ tells how many standard deviations a value is from the mean, so scores from different distributions can be compared.
+          - title: Probabilities from the normal distribution
+            id: mat-probabilities-from-normal-distribution
+            brief: Using z-scores with a table or the empirical rule to find the probability that a normal variable lies in an interval.
+
+  - title: Financial mathematics
+    chapters:
+      - title: Financial mathematics
+        id: nsw-mat-adv-12-5-1
+        points:
+          - title: Compound interest
+            id: mat-compound-interest
+            brief: A = P(1 + r)ⁿ, with r the rate per period and n the number of periods. Interest earns interest.
+          - title: Annuities as geometric series
+            id: mat-annuities-as-geometric-series
+            brief: An annuity is a series of equal regular payments. Its future value is the sum of a geometric series of compounded payments.
+          - title: Present value of an annuity
+            id: mat-present-value-annuity
+            brief: The lump sum needed now to fund a series of future payments, found by discounting each payment.
+          - title: Reducing balance loans
+            id: mat-reducing-balance-loans
+            brief: Each period interest is added and a repayment is taken off. Setting the balance after n periods to zero gives the repayment.
+          - title: Using tables of interest factors
+            id: mat-using-tables-interest-factors
+            brief: Reading future or present value interest factors from a table to find the value of an annuity without the full formula.

@@ -1,0 +1,242 @@
+# NSW Mathematics Advanced, Year 11: the seven Year 11 focus areas, 56 points.
+# Drafted from NESA's Mathematics Advanced 11-12 Syllabus (2024), taught in Year 11 from 2026. The structure follows
+# the syllabus: each focus area is a chapter, or two when it is large. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Keypad templates can come later, per topic, as in Maths Lab.
+
+id: nsw-mat-adv-11
+subject: Mathematics
+bank: mat
+name: Mathematics Advanced, Year 11
+about: HSC, Functions, trigonometry, calculus and probability
+short: Mathematics Advanced
+years: [11]
+place: nsw
+kind: maths
+syllabus: NSW Mathematics Advanced 11-12 Syllabus (2024), Year 11 focus areas
+note: Follows the NSW Mathematics Advanced syllabus. Not made or endorsed by NESA.
+chips: [domain, discriminant, radians, derivative, logarithm]
+
+units:
+  - title: Functions
+    chapters:
+      - title: Working with functions
+        id: nsw-mat-adv-11-1-1
+        points:
+          - title: Functions and relations
+            id: mat-functions-relations
+            brief: A relation pairs inputs with outputs. A function gives exactly one output for each input. On a graph, the vertical line test tells them apart.
+          - title: Domain and range
+            id: mat-domain-range
+            brief: The domain is the set of allowed x values and the range is the set of y values produced. Students find both, including for square roots and fractions.
+          - title: Function notation
+            id: mat-function-notation
+            brief: Writing f(x) and evaluating it, such as f(3) or f(a + 1), and using it to describe a rule.
+          - title: Odd and even functions
+            id: mat-odd-even-functions
+            brief: An even function has f(-x) = f(x) and is symmetric in the y-axis. An odd function has f(-x) = -f(x) and has point symmetry about the origin.
+          - title: Linear functions
+            id: mat-linear-functions
+            brief: Gradient as rise over run, the forms y = mx + c and y - y₁ = m(x - x₁), parallel lines with equal gradients and perpendicular lines whose gradients multiply to -1.
+
+      - title: Families of graphs
+        id: nsw-mat-adv-11-1-2
+        points:
+          - title: Quadratic functions
+            id: mat-quadratic-functions
+            brief: Parabolas, their axis of symmetry x = -b/2a, vertex, intercepts and whether they open up or down. Finding roots by factorising, completing the square and the quadratic formula.
+          - title: The discriminant
+            id: mat-discriminant
+            brief: Δ = b² - 4ac tells how many real roots a quadratic has, two if positive, one if zero, none if negative. It also decides whether a line meets a parabola.
+          - title: Cubic and polynomial graphs
+            id: mat-cubic-polynomial-graphs
+            brief: Sketching cubics from their factors, using roots, the y-intercept and what happens as x grows large. A repeated root touches the axis.
+          - title: Reciprocal functions
+            id: mat-reciprocal-functions
+            brief: The hyperbola y = k/x, with asymptotes on both axes, and how the sign of k decides which quadrants it lies in.
+          - title: Absolute value functions
+            id: mat-absolute-value-functions
+            brief: "|x| is the distance from zero. The graph of y = |x| is a V shape, and solving |x - a| = b gives two answers."
+          - title: Circles
+            id: mat-circles
+            brief: The circle (x - h)² + (y - k)² = r² has centre (h, k) and radius r. Completing the square turns a general equation into this form.
+
+      - title: Graph transformations
+        id: nsw-mat-adv-11-1-3
+        points:
+          - title: Vertical translations
+            id: mat-vertical-translations
+            brief: y = f(x) + c moves the graph up by c, or down if c is negative.
+          - title: Horizontal translations
+            id: mat-horizontal-translations
+            brief: y = f(x + b) moves the graph left by b. The shift is the opposite of the sign, a common mistake.
+          - title: Vertical dilations
+            id: mat-vertical-dilations
+            brief: y = kf(x) stretches the graph from the x-axis by a factor of k. Every y value is multiplied by k.
+          - title: Horizontal dilations
+            id: mat-horizontal-dilations
+            brief: y = f(ax) compresses the graph towards the y-axis by a factor of a, so every x value is divided by a.
+          - title: Reflections
+            id: mat-reflections
+            brief: y = -f(x) reflects in the x-axis and y = f(-x) reflects in the y-axis.
+          - title: Solving equations with graphs
+            id: mat-solving-equations-with-graphs
+            brief: The solutions of f(x) = g(x) are the x values where the two graphs meet. Counting intersections tells how many solutions there are.
+
+  - title: Trigonometric functions
+    chapters:
+      - title: Trigonometry and measure of angles
+        id: nsw-mat-adv-11-2-1
+        points:
+          - title: Right-angled trigonometry
+            id: mat-right-angled-trigonometry
+            brief: Sine, cosine and tangent as ratios of sides in a right-angled triangle, used to find unknown sides and angles.
+          - title: Exact values
+            id: mat-exact-values
+            brief: The exact trig ratios of 30°, 45° and 60° from the two special triangles, written with surds.
+          - title: Bearings and elevation
+            id: mat-bearings-elevation
+            brief: True bearings measured clockwise from north as three digits, and angles of elevation and depression, applied in two-step problems.
+          - title: Radians
+            id: mat-radians
+            brief: One radian is the angle where the arc equals the radius. π radians is 180°, and students convert between the two.
+          - title: Arcs and sectors
+            id: mat-arcs-sectors
+            brief: Arc length l = rθ and sector area A = ½r²θ, with θ in radians.
+
+      - title: Non-right-angled triangles
+        id: nsw-mat-adv-11-2-2
+        points:
+          - title: The sine rule
+            id: mat-sine-rule
+            brief: a/sin A = b/sin B = c/sin C for any triangle. The ambiguous case, where two triangles fit the given side and angle.
+          - title: The cosine rule
+            id: mat-cosine-rule
+            brief: c² = a² + b² - 2ab cos C, used when two sides and the included angle, or all three sides, are known.
+          - title: Area of any triangle
+            id: mat-area-any-triangle
+            brief: Area = ½ab sin C, using two sides and the angle between them.
+
+      - title: Trigonometric identities and equations
+        id: nsw-mat-adv-11-2-3
+        points:
+          - title: The unit circle
+            id: mat-unit-circle
+            brief: On a circle of radius 1, cos θ is the x-coordinate and sin θ the y-coordinate. The signs in each quadrant follow from this.
+          - title: Angles of any size
+            id: mat-angles-any-size
+            brief: Using related acute angles and the quadrant to find trig ratios of angles beyond 90°, in degrees and radians.
+          - title: Graphs of sine, cosine and tangent
+            id: mat-graphs-sine-cosine-tangent
+            brief: The shapes, periods and amplitudes of y = sin x, y = cos x and y = tan x, and where tan has asymptotes.
+          - title: Reciprocal ratios
+            id: mat-reciprocal-ratios
+            brief: Cosecant, secant and cotangent as 1/sin, 1/cos and 1/tan, and where each is undefined.
+          - title: The Pythagorean identity
+            id: mat-pythagorean-identity
+            brief: sin²θ + cos²θ = 1, and the related identities with tan and sec, used to simplify expressions and prove identities.
+          - title: Solving trigonometric equations
+            id: mat-solving-trigonometric-equations
+            brief: Finding every solution of an equation such as 2 sin x = 1 within a given domain, using the quadrants and the period.
+
+  - title: Calculus
+    chapters:
+      - title: Rates of change and the derivative
+        id: nsw-mat-adv-11-3-1
+        points:
+          - title: Average rate of change
+            id: mat-average-rate-change
+            brief: The gradient of a secant between two points on a curve, (f(b) - f(a))/(b - a), as an average rate of change.
+          - title: The derivative from first principles
+            id: mat-derivative-from-first-principles
+            brief: The derivative is the limit of the secant gradient as h approaches 0, f'(x) = lim (f(x + h) - f(x))/h. It gives the gradient of the tangent.
+          - title: The power rule
+            id: mat-power-rule
+            brief: The derivative of xⁿ is nxⁿ⁻¹, including negative and fractional powers, and the derivatives of sums and constant multiples.
+          - title: Tangents and normals
+            id: mat-tangents-normals
+            brief: Using the derivative at a point to find the equation of the tangent, and the normal, which is perpendicular to it.
+          - title: Where a function is not differentiable
+            id: mat-where-function-not-differentiable
+            brief: A function has no derivative at a sharp corner, a jump or a vertical tangent, even if it is continuous there.
+
+      - title: Differentiation rules
+        id: nsw-mat-adv-11-3-2
+        points:
+          - title: The product rule
+            id: mat-product-rule
+            brief: The derivative of uv is u'v + uv'.
+          - title: The quotient rule
+            id: mat-quotient-rule
+            brief: The derivative of u/v is (u'v - uv')/v². A common mistake is the order of the terms on top.
+          - title: The chain rule
+            id: mat-chain-rule
+            brief: The derivative of f(g(x)) is f'(g(x)) × g'(x), as in differentiating (3x + 1)⁵.
+          - title: Derivatives as rates in context
+            id: mat-derivatives-as-rates-context
+            brief: Interpreting a derivative as a rate, such as velocity as the rate of change of displacement, with units.
+
+  - title: Exponential and logarithmic functions
+    chapters:
+      - title: Exponentials and logarithms
+        id: nsw-mat-adv-11-4-1
+        points:
+          - title: Exponential functions
+            id: mat-exponential-functions
+            brief: Graphs of y = aˣ for a > 1 and 0 < a < 1, their horizontal asymptote and y-intercept of 1.
+          - title: The number e
+            id: mat-number-e
+            brief: e is about 2.718. y = eˣ is the exponential whose gradient at every point equals its value, so the derivative of eˣ is eˣ.
+          - title: What a logarithm is
+            id: mat-logarithm
+            brief: log_a(x) is the power a must be raised to, to give x. So log₂ 8 = 3. Logarithms undo exponentials.
+          - title: Logarithm laws
+            id: mat-logarithm-laws
+            brief: log(xy) = log x + log y, log(x/y) = log x - log y, and log(xⁿ) = n log x, plus log_a(1) = 0 and log_a(a) = 1.
+          - title: Change of base
+            id: mat-change-base
+            brief: log_a(x) = log_b(x)/log_b(a), which lets a calculator find a logarithm in any base.
+          - title: Solving exponential equations
+            id: mat-solving-exponential-equations
+            brief: Taking logarithms of both sides to solve equations such as 3ˣ = 20, and using the natural log ln for base e.
+          - title: Graphs of logarithmic functions
+            id: mat-graphs-logarithmic-functions
+            brief: y = log_a(x) is the reflection of y = aˣ in the line y = x. It has a vertical asymptote at x = 0 and passes through (1, 0).
+
+  - title: Statistical analysis
+    chapters:
+      - title: Probability
+        id: nsw-mat-adv-11-5-1
+        points:
+          - title: Sample spaces and probability
+            id: mat-sample-spaces-probability
+            brief: Listing all equally likely outcomes, and P(event) = favourable outcomes ÷ total outcomes, between 0 and 1.
+          - title: Venn diagrams and set notation
+            id: mat-venn-diagrams-set-notation
+            brief: Union, intersection and complement, shown on Venn diagrams, and P(A ∪ B) = P(A) + P(B) - P(A ∩ B).
+          - title: Conditional probability
+            id: mat-conditional-probability
+            brief: P(A | B) = P(A ∩ B)/P(B), the probability of A given that B has happened, read from tables and diagrams.
+          - title: Independent events
+            id: mat-independent-events
+            brief: Events are independent when one does not change the probability of the other, so P(A ∩ B) = P(A) × P(B).
+          - title: Multi-stage experiments
+            id: mat-multi-stage-experiments
+            brief: Tree diagrams and arrays for two or more stages, with and without replacement.
+
+      - title: Describing data
+        id: nsw-mat-adv-11-5-2
+        points:
+          - title: Types of data
+            id: mat-types-data
+            brief: Categorical data (nominal or ordinal) and numerical data (discrete or continuous), and which displays suit each.
+          - title: Measures of centre
+            id: mat-measures-centre
+            brief: The mean, median and mode, and why the median is better than the mean when data has outliers or is skewed.
+          - title: Measures of spread
+            id: mat-measures-spread
+            brief: Range, interquartile range and standard deviation, and what each says about how spread out data is.
+          - title: Shape of a distribution
+            id: mat-shape-distribution
+            brief: Describing data as symmetric or positively or negatively skewed, and spotting outliers with the 1.5 × IQR rule.
