@@ -1,0 +1,103 @@
+{
+ "id": "mat-expected-value",
+ "title": "Expected value",
+ "brief": "d3a62b09b53b",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:11Z write: done",
+  "2026-10-27T01:00:06Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "write": 0.00608,
+  "check": 0.01002
+ },
+ "draft": {
+  "title": "Expected value",
+  "card": [
+   "The expected value E(X) is the long-run average of a random variable. It is the mean of the distribution.",
+   "Formula: E(X) = Σ x × P(x). Multiply each value by its probability, then add the results.",
+   "Example: P(0) = 0.5, P(1) = 0.3, P(2) = 0.2. Then E(X) = 0 × 0.5 + 1 × 0.3 + 2 × 0.2 = 0.7.",
+   "E(X) is an average over many trials. It need not be a value X can actually take, as 0.7 is not."
+  ],
+  "remember": "Multiply each value by its probability and add them up.",
+  "a": {
+   "q": "X has P(1) = 0.5, P(2) = 0.3 and P(5) = 0.2. What is E(X)?",
+   "opts": [
+    "2.1",
+    "2.67",
+    "1.0",
+    "8"
+   ],
+   "why": "E(X) = 1 × 0.5 + 2 × 0.3 + 5 × 0.2 = 0.5 + 0.6 + 1.0 = 2.1. The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
+   "clue": "Weight each value by its probability."
+  },
+  "b": {
+   "d": 3,
+   "q": "A game at a fete in Orange costs nothing to play. You win $0 with probability 0.7, $4 with probability 0.2 and $10 with probability 0.1. What is the expected win in dollars?",
+   "opts": [
+    "1.80",
+    "4.67",
+    "14",
+    "0.90"
+   ],
+   "why": "E(X) = 0 × 0.7 + 4 × 0.2 + 10 × 0.1 = 0.8 + 1.0 = 1.80. The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
+   "clue": "Do not average the prizes. Weight them by probability."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.1",
+   "also_right": []
+  },
+  "b": {
+   "best": "1.80",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out (2.1 and 1.80), the card's example is correct, and the distractors match common errors."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Expected value",
+  "card": [
+   "The expected value E(X) is the long-run average of a random variable. It is the mean of the distribution.",
+   "Formula: E(X) = Σ x × P(x). Multiply each value by its probability, then add the results.",
+   "Example: P(0) = 0.5, P(1) = 0.3, P(2) = 0.2. Then E(X) = 0 × 0.5 + 1 × 0.3 + 2 × 0.2 = 0.7.",
+   "E(X) is an average over many trials. It need not be a value X can actually take, as 0.7 is not."
+  ],
+  "remember": "Multiply each value by its probability and add them up.",
+  "a": {
+   "q": "X has P(1) = 0.5, P(2) = 0.3 and P(5) = 0.2. What is E(X)?",
+   "opts": [
+    "2.1",
+    "2.67",
+    "1.0",
+    "8"
+   ],
+   "why": "E(X) = 1 × 0.5 + 2 × 0.3 + 5 × 0.2 = 0.5 + 0.6 + 1.0 = 2.1. The value 2.67 comes from averaging 1, 2 and 5 without using the probabilities.",
+   "clue": "Weight each value by its probability."
+  },
+  "b": {
+   "d": 3,
+   "q": "A game at a fete in Orange costs nothing to play. You win $0 with probability 0.7, $4 with probability 0.2 and $10 with probability 0.1. What is the expected win in dollars?",
+   "opts": [
+    "1.80",
+    "4.67",
+    "14",
+    "0.90"
+   ],
+   "why": "E(X) = 0 × 0.7 + 4 × 0.2 + 10 × 0.1 = 0.8 + 1.0 = 1.80. The value 4.67 is the plain average of 0, 4 and 10, which ignores how likely each prize is.",
+   "clue": "Do not average the prizes. Weight them by probability."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -770,5 +770,1047 @@ MADE_BANKS.bus = {
       "why": "Pty Ltd shows the business is a company, and an insolvent company goes into liquidation. Bankruptcy is tempting because it also follows unpaid debts, but it applies to a person, not a company.",
       "clue": "Is the business a person or a company?"
     }
+  },
+  "bus-managers-do": {
+    "title": "What managers do",
+    "card": [
+      [
+        "Planning",
+        "setting goals for the business and deciding how to reach them. It gives the other roles their direction."
+      ],
+      ["Organising", "arranging people, resources and tasks so the plan can be carried out."],
+      ["Leading", "guiding and motivating staff so they do the work and work towards the goals."],
+      [
+        "Controlling",
+        "checking results against the goals and fixing any gaps. What it finds can change plans, staffing or leadership, so all four roles link to each other."
+      ]
+    ],
+    "remember": "Managers plan, organise, lead and control, and the four roles link together so the business meets its goals.",
+    "a": {
+      "q": "A manager compares this month's sales with the target and finds sales are lower. Which role is she using?",
+      "opts": ["Controlling", "Planning", "Organising", "Leading"],
+      "why": "She is measuring actual results against a goal, which is controlling. Planning is tempting because a target is involved, but the target was set earlier. Here she is checking performance against it.",
+      "clue": "The target already exists. What is she doing with it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam manages a bakery in Orange. He sets a goal to sell 20% more bread, then rosters extra bakers for the early shift. Which pair of roles has he used?",
+      "opts": [
+        "Planning, then organising",
+        "Organising, then leading",
+        "Leading, then controlling",
+        "Controlling, then planning"
+      ],
+      "why": "Setting the sales goal is planning. Rostering extra bakers arranges people and tasks to carry out the plan, which is organising. Leading is tempting because staff are involved, but he has not yet guided or motivated them.",
+      "clue": "Match each of Sam's two actions to a role on its own."
+    }
+  },
+  "bus-management-skills": {
+    "title": "Management skills",
+    "card": [
+      [
+        "Interpersonal skills",
+        "Skills used to work well with people, such as motivating a team, building trust and handling conflict."
+      ],
+      [
+        "Communication",
+        "Getting information across clearly and listening to others, in speech, in writing and in meetings."
+      ],
+      [
+        "Decision-making and problem-solving",
+        "Decision-making is choosing between options. Problem-solving is finding the cause of an issue and a way to fix it."
+      ],
+      [
+        "Planning and adapting",
+        "Managers look ahead and set a course. They also change it when conditions change, such as a supplier closing or a drop in sales."
+      ]
+    ],
+    "remember": "Good managers combine people skills with clear thinking, and they adjust when things change.",
+    "a": {
+      "q": "A manager calmly sorts out an argument between two staff and keeps both on the team. Which skill is she mainly using?",
+      "opts": ["Interpersonal skills", "Decision-making", "Planning ahead", "Adapting to change"],
+      "why": "Handling conflict between staff and keeping them working together is an interpersonal skill. Decision-making is tempting, but that skill is about choosing between options, not about settling a clash between people.",
+      "clue": "Is she dealing with a plan, a choice or a relationship?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam runs a bike shop in Bendigo. His main supplier suddenly closes, so he quickly finds two new suppliers and changes his order dates. Which skill is Sam showing most?",
+      "opts": ["Adapting to changed conditions", "Motivating his team", "Listening to customers", "Setting long-term goals"],
+      "why": "Sam changes his plans when conditions change, which is adapting. Setting long-term goals is tempting because it is part of planning, but Sam is changing a plan, not setting one.",
+      "clue": "Look at what changed, and how Sam responded."
+    }
+  },
+  "bus-stakeholders": {
+    "title": "Stakeholders",
+    "card": [
+      "A stakeholder is any person or group with an interest in a business, or who is affected by what it does. They do not have to own it.",
+      "Common stakeholders are owners, employees, customers, suppliers, the government and the community. Each wants something different from the business.",
+      "Owners want profit. Employees want fair pay and safe work. Customers want good products at fair prices. Suppliers want to be paid on time. The government wants tax paid and laws followed. The community wants jobs and a clean local area.",
+      "Stakeholder interests often conflict. For example, higher wages for employees can mean lower profit for owners. Managers must weigh these interests when they make decisions."
+    ],
+    "remember": "A stakeholder is anyone with an interest in a business, and their wants often clash.",
+    "a": {
+      "q": "Which of these people is a stakeholder in a bakery in Orange?",
+      "opts": [
+        "A supplier who sells the bakery its flour",
+        "Only the person who owns the bakery",
+        "Only the staff who bake the bread",
+        "A shopper in another state who has never heard of it"
+      ],
+      "why": "A stakeholder is anyone with an interest in the business, and a supplier depends on its orders. Owners are stakeholders too, but they are not the only ones, so limiting the group to owners is wrong.",
+      "clue": "Stakeholders do not need to own the business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dan owns a printing firm in Geelong. He cuts staff overtime pay to lift profit. Which two stakeholder groups have interests that conflict here?",
+      "opts": ["Owners and employees", "Customers and suppliers", "The government and the community", "Suppliers and owners"],
+      "why": "Owners want higher profit, while employees want fair pay, so cutting overtime helps one and hurts the other. Customers and suppliers are not directly affected by this decision, so they are less tempting as the conflict.",
+      "clue": "Think about who gains from lower wage costs and who loses."
+    }
+  },
+  "bus-corporate-social-responsibility": {
+    "title": "Corporate social responsibility",
+    "card": [
+      "Corporate social responsibility (CSR) means a business acts for the good of society and the environment. It does this beyond what the law requires.",
+      "Obeying the law is the minimum. A business that only does what the law demands is not showing CSR.",
+      "Examples include cutting waste, using less energy, treating suppliers fairly and supporting a local community.",
+      "CSR is a choice the business makes. It can cost money in the short term, and a business may also gain a better reputation from it."
+    ],
+    "remember": "CSR is a business choosing to do good for society and the environment beyond its legal duties.",
+    "a": {
+      "q": "Which action is an example of corporate social responsibility?",
+      "opts": [
+        "A bakery chooses to donate unsold bread to a local shelter",
+        "A bakery pays its staff the award wage the law sets",
+        "A bakery follows food safety rules so it can open",
+        "A bakery lowers its prices to attract more customers"
+      ],
+      "why": "Donating unsold bread is a voluntary act that helps the community and goes beyond the law. Paying the award wage is tempting, but the law requires it, so it is only the minimum.",
+      "clue": "Look for the action the business was not forced to take."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq owns a furniture company in Newcastle. Which decision shows CSR rather than only meeting legal duties?",
+      "opts": [
+        "He pays timber suppliers a fair price above what they ask",
+        "He fits the safety equipment that workplace laws require",
+        "He pays company tax on the profit the business earns",
+        "He lowers prices to beat a rival furniture company"
+      ],
+      "why": "Paying suppliers a fair price beyond what they ask is a voluntary act that treats others fairly. Fitting required safety equipment is tempting, but it is a legal duty, so it does not go beyond the law.",
+      "clue": "Ask whether the law would have forced the business to do it."
+    }
+  },
+  "bus-management-triple-bottom-line": {
+    "title": "Management and the triple bottom line",
+    "card": [
+      "The triple bottom line judges a business on three kinds of result, not on profit alone. The three are financial, social and environmental.",
+      ["Financial", "profit, sales and returns to owners. This is the result a business has always measured."],
+      [
+        "Social",
+        "the effect on people, such as employees, customers and the community. Examples are safe work, fair pay and local support."
+      ],
+      [
+        "Environmental",
+        "the effect on nature, such as the energy used, the waste made and the pollution released. Managers who use this approach report on all three areas."
+      ]
+    ],
+    "remember": "The triple bottom line asks how a business did on money, people and the environment.",
+    "a": {
+      "q": "Which statement best describes the triple bottom line?",
+      "opts": [
+        "Judging a business on money, people and the environment",
+        "Judging a business on profit, sales and returns to owners",
+        "Judging a business on its owners, staff and customers",
+        "Judging a business on how well it follows the law"
+      ],
+      "why": "The triple bottom line has three parts: financial, social and environmental results. The option about profit, sales and returns to owners is tempting, but it covers only the financial result and leaves out the effects on people and the environment.",
+      "clue": "Think of the three areas named in the card."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a furniture maker in Newcastle. Her yearly report covers profit, staff safety records and the amount of timber waste sent to landfill. What does the report show?",
+      "opts": [
+        "It reports on all three parts of the triple bottom line",
+        "It reports on the financial part only",
+        "It reports on the financial and social parts only",
+        "It reports on the social and environmental parts only"
+      ],
+      "why": "Profit is a financial result, staff safety is a social result and timber waste is an environmental result. The report covers all three. A student might miss the waste figure and choose the financial and social option, but waste is about the effect on the environment.",
+      "clue": "Sort each item in the report into money, people or environment."
+    }
+  },
+  "bus-classical-scientific-approach": {
+    "title": "The classical scientific approach",
+    "card": [
+      "The classical scientific approach was developed by Frederick Taylor. He studied work closely to find the most efficient way to do each job.",
+      "Work is broken into simple tasks, and each task is timed and measured. Workers are trained to do the task the one best way.",
+      "Workers are paid for output, such as a rate for each item made. Taylor expected this to give them a reason to work faster.",
+      "The approach raised productivity, which is the amount produced for the effort and resources used. But it treated workers like parts of a machine, so the work could become dull and repetitive."
+    ],
+    "remember": "Measure and simplify the work, pay for output: more productivity, but workers are treated like machines.",
+    "a": {
+      "q": "Which action by a manager is the best example of the classical scientific approach?",
+      "opts": [
+        "Timing each step of packing a box and setting one method",
+        "Asking staff to vote on how the team should work",
+        "Letting each worker choose their own way to pack",
+        "Holding weekly social events to lift team spirit"
+      ],
+      "why": "Timing each step and setting one best method is Taylor's approach of measuring simple tasks. Asking staff to vote or holding social events focus on people's needs, which Taylor's approach did not.",
+      "clue": "Look for measuring tasks and one best method."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev runs a bakery in Bathurst. He splits loaf making into set steps, times each step, and pays staff a rate for each tray finished. Output rises, but staff say the work is dull. Which statement best explains both results?",
+      "opts": [
+        "Pay drives speed, but simple tasks treat staff like machines",
+        "Pay drives speed, and simple tasks give staff more variety",
+        "Simple tasks lift morale, but pay for output slows the work",
+        "Timing gives staff more say, but pay for output bores them"
+      ],
+      "why": "Paying for each tray gives workers a reason to work faster, and timed, simple steps raise productivity. Repeating the same small task treats workers like parts of a machine, which makes the work dull. Saying the simple tasks give variety is wrong, as they do the opposite.",
+      "clue": "Match one result to pay and the other to simple, repeated tasks."
+    }
+  },
+  "bus-classical-bureaucratic-approach": {
+    "title": "The classical bureaucratic approach",
+    "card": [
+      "The classical bureaucratic approach manages a business through a clear structure and written rules. It draws on the ideas of Max Weber and Henri Fayol.",
+      "Authority comes from the top. A hierarchy is a chain of command, where each worker reports to one manager above them.",
+      "Each job has a set role, and written rules and procedures say how tasks are done. This makes work consistent and orderly.",
+      "The cost is that a business can become slow and rigid. A decision may need approval from several levels, and rules may not suit an unusual case."
+    ],
+    "remember": "Hierarchy, written rules and set roles bring order, but can make a business slow and rigid.",
+    "a": {
+      "q": "Which business is run mainly on the bureaucratic approach?",
+      "opts": [
+        "Staff follow a written manual and report to one supervisor",
+        "Managers pay staff by the number of items each makes",
+        "Staff in each team choose their own roles and goals",
+        "Managers change their style to suit each new problem"
+      ],
+      "why": "A written manual and a single line of reporting show rules and a chain of command. Paying by output is a different approach, and the other two options leave out rules and hierarchy.",
+      "clue": "Look for written rules and a chain of command."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hana runs a council office in Bathurst. Every request needs a form signed by three levels of managers. Customers say it is slow, but errors are rare. What does this show?",
+      "opts": [
+        "Order from rules, but slowness from a rigid structure",
+        "Speed from clear roles, but errors from weak rules",
+        "Better motivation from teamwork, but slow decisions",
+        "Fast decisions from the top, but too many errors"
+      ],
+      "why": "Signatures from several levels and written forms are features of a bureaucratic structure. They give order and few errors, but they slow decisions. Teamwork is not what the case describes.",
+      "clue": "The case describes several approval levels and forms."
+    }
+  },
+  "bus-behavioural-approach": {
+    "title": "The behavioural approach",
+    "card": [
+      "The behavioural approach says that people are not machines. How workers feel about their job and their team affects how well they work.",
+      "Elton Mayo led the best-known Hawthorne studies, at a factory near Chicago in the late 1920s and early 1930s. Output often rose when workers were given attention, even when conditions did not improve.",
+      "The studies suggested that attention, teamwork and meeting social needs, such as belonging and respect, can lift motivation. Pay is not the only thing that motivates people.",
+      "Managers using this approach lead and consult rather than only give orders. They listen to workers, build teams and take an interest in them."
+    ],
+    "remember": "Motivation can grow when workers feel noticed, valued and part of a team.",
+    "a": {
+      "q": "Which action by a manager best fits the behavioural approach?",
+      "opts": [
+        "Holding regular team meetings to ask staff for ideas",
+        "Timing each task so workers can be paid per item",
+        "Writing a rule book that sets every worker's duties",
+        "Cutting staff numbers to lower the wage bill"
+      ],
+      "why": "Asking staff for ideas shows consultation and meets social needs, which the behavioural approach says can lift motivation. Paying per item is tempting, but it relies on pay and measured tasks rather than how workers feel.",
+      "clue": "Which action treats workers as people with social needs?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a call centre in Parramatta. Sales are flat. She stops checking call times, starts weekly team lunches and asks staff how to improve the work. Sales rise. Which idea best explains this?",
+      "opts": [
+        "Attention and teamwork can lift motivation",
+        "Closer checks on call times can lift output",
+        "A clear chain of command keeps work orderly",
+        "Better pay can lift workers' motivation"
+      ],
+      "why": "Priya gave attention, built teamwork and consulted staff, and sales rose. This matches the Hawthorne finding that meeting social needs can lift motivation. Closer checks on call times cannot explain it, as she stopped them, and nothing here involved a change in pay.",
+      "clue": "Look at what Priya changed, and what she did not change."
+    }
+  },
+  "bus-political-approach": {
+    "title": "The political approach",
+    "card": [
+      "The political approach sees a business as a collection of groups, such as departments, teams and owners. Each group has its own interests and goals.",
+      "These groups compete for limited power and resources, such as budget, staff and equipment. Their interests can clash.",
+      "Managers work by negotiating with groups and building alliances, where groups agree to back each other's goals.",
+      "Decisions are shaped by bargaining and influence. They are not simply set by rules or by the manager alone."
+    ],
+    "remember": "Groups compete for power and resources, so managers negotiate and build alliances.",
+    "a": {
+      "q": "Which situation best shows the political approach in a business?",
+      "opts": [
+        "Two teams argue over budget and a manager brokers a deal",
+        "A manager writes a strict rulebook for every worker",
+        "A manager times each task and pays by items made",
+        "A manager reshapes the business as the market changes"
+      ],
+      "why": "The political approach is about groups with different interests competing for resources, and a manager negotiating between them. A rulebook relies on set rules and authority, not bargaining.",
+      "clue": "Look for groups with different interests and a deal between them."
+    },
+    "b": {
+      "d": 3,
+      "q": "At Harbour Toys in Newcastle, the design team wants more money for new products. The warehouse team wants new shelving. Both want the same limited budget. The manager meets both teams. They agree that design gets the money this year, and in return design will back the warehouse's request next year. What is the manager doing?",
+      "opts": [
+        "Negotiating and building an alliance between groups",
+        "Breaking the work into simple, measured tasks",
+        "Ending the competition by giving orders from the top",
+        "Paying each team by how much it produces"
+      ],
+      "why": "The manager bargains with two groups competing for a limited budget, and design agrees to back the warehouse's request next year. That is negotiating and building an alliance. Giving orders from the top would settle the clash by authority, with no bargaining, so it does not fit this case.",
+      "clue": "Notice what each team agrees to do for the other."
+    }
+  },
+  "bus-systems-approach": {
+    "title": "The systems approach",
+    "card": [
+      "The systems approach sees a business as a system: a set of connected parts that work together. A change in one part can affect the others.",
+      "A system takes in inputs, such as labour, materials and money. It transforms them through its processes and produces outputs, such as goods and services.",
+      "A business is also an open system. It takes in resources from its environment and sends outputs back to it, so it must keep adapting as that environment changes.",
+      "A manager using this approach looks at how the parts fit together, such as production, marketing and finance, rather than treating each one alone."
+    ],
+    "remember": "A business is a set of connected parts that turns inputs into outputs and keeps adapting.",
+    "a": {
+      "q": "Which example is the transformation step in a bakery run as a system?",
+      "opts": [
+        "Staff turn flour and eggs into loaves of bread",
+        "The owner buys flour and eggs from a supplier",
+        "Customers buy the loaves from the shop counter",
+        "A new café opens next door and takes some customers"
+      ],
+      "why": "Transformation is the process that turns inputs into outputs, and baking does that. Buying flour is an input, which is tempting because it is part of the production chain but it is not the step that changes the inputs.",
+      "clue": "Look for the step that changes inputs into something new."
+    },
+    "b": {
+      "d": 3,
+      "q": "A furniture maker in Orange buys cheaper timber to cut costs. Quality drops, customers return items, and the service team is swamped. Which idea of the systems approach does this best show?",
+      "opts": [
+        "A change in one part can affect other parts",
+        "Workers should be paid only for their output",
+        "Each department should act on its own",
+        "Groups inside the business compete for power"
+      ],
+      "why": "The change in buying affected quality and then customer service, so the parts are connected. Acting on its own is tempting but is the opposite: the example shows that a department's choices spill into other parts.",
+      "clue": "Follow the effect of the purchasing choice through the business."
+    }
+  },
+  "bus-contingency-approach": {
+    "title": "The contingency approach",
+    "card": [
+      "The contingency approach says there is no single best way to manage. The right approach depends on the situation.",
+      "Managers look at the problem in front of them, such as how urgent it is, how skilled the staff are and how much change is happening. Then they choose a style to suit.",
+      "The same manager may command in one case and consult staff in another. This is a sign of good judgement, not of being inconsistent.",
+      "This approach lets managers use ideas from other approaches when they fit. It does not say that any one of them is always right."
+    ],
+    "remember": "Contingency means it depends: match the management style to the situation.",
+    "a": {
+      "q": "Which statement best describes the contingency approach?",
+      "opts": [
+        "Managers adapt their style to the situation they face",
+        "One style should be used in every situation",
+        "Managers should avoid changing their style once chosen",
+        "The best style is the one that gives staff the most say"
+      ],
+      "why": "The contingency approach holds that the right style changes with the situation, so managers adapt. Using one style everywhere is the opposite, as it assumes a single best way exists.",
+      "clue": "Does this approach claim one way of managing suits every case?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a bakery in Newcastle. During a fire drill she gives clear orders, and next week she asks staff to help design a new roster. Why does this fit the contingency approach?",
+      "opts": [
+        "She chose a different style to suit each situation",
+        "She is inconsistent and has no management approach",
+        "She used the same style because staff expect it",
+        "She copied the style of the most successful bakery"
+      ],
+      "why": "Priya adapted her style to the problem: quick orders for an urgent drill, consultation for a roster. Calling her inconsistent is tempting, but the card says changing style to fit the case is good judgement.",
+      "clue": "Look at how the two situations differ."
+    }
+  },
+  "bus-forces-change": {
+    "title": "Forces for change",
+    "card": [
+      "A force for change is something that pushes a business to change how it operates. Forces can come from outside the business or from inside it.",
+      [
+        "External forces",
+        "come from the business environment, outside its control. Examples are new technology, competitors, changes in the law and changing customer tastes."
+      ],
+      [
+        "Internal forces",
+        "come from within the business. Examples are a new manager with new ideas, poor financial results, and low staff morale."
+      ],
+      "A force pushes a business to consider change. The business still decides how, and whether, to respond."
+    ],
+    "remember": "Ask where a force starts: in the wider environment, or in the business itself. Either way, the business chooses its response.",
+    "a": {
+      "q": "Which of these is an internal force for change in a business?",
+      "opts": [
+        "Falling profits that worry the owners",
+        "A new competitor opening nearby",
+        "A new law on workplace safety",
+        "A new app that customers prefer to use"
+      ],
+      "why": "Falling profits are a result inside the business, so they are an internal force. A new competitor, a new law and new technology all come from outside the business, so they are external forces.",
+      "clue": "Which one comes from inside the business, not its surroundings?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia owns a bakery in Dubbo. A new supermarket opens nearby and sells cheap bread. Mia's sales drop, and she begins to change her menu. Which statement is correct?",
+      "opts": [
+        "The supermarket is external, the sales fall is internal",
+        "Both the supermarket and the sales fall are external",
+        "The supermarket is internal, the sales fall is external",
+        "Both the supermarket and the sales fall are internal"
+      ],
+      "why": "The supermarket is a competitor outside the bakery, so it is an external force. The fall in sales shows up in the bakery's own results, so it is an internal force. Calling both external is tempting because the supermarket caused the drop, but the poor result is still inside Mia's business.",
+      "clue": "Ask where each force comes from: outside the bakery or in its own results."
+    }
+  },
+  "bus-resistance-change": {
+    "title": "Resistance to change",
+    "card": [
+      "Resistance to change is when people in a business oppose or delay a change. It can come from employees, managers or others affected, and it can slow a change down or stop it.",
+      [
+        "Costs and fear",
+        "People may resist because the change costs them time, effort or money, or because they fear the unknown and are unsure what it will mean for their job."
+      ],
+      [
+        "Status and habit",
+        "People may resist because they could lose status or influence, or because they are used to the current way of working and prefer it."
+      ],
+      [
+        "Poor communication",
+        "If staff are not told what is changing and why, they may fill the gap with rumours and doubt, and resist the change."
+      ]
+    ],
+    "remember": "People resist change when it costs them, worries them, threatens their standing, upsets habits or is poorly explained.",
+    "a": {
+      "q": "A café owner brings in a new ordering app. A long-serving waiter refuses to use it and says, \"The paper pads work fine.\" Which reason for resistance is this?",
+      "opts": [
+        "Habit, as the waiter prefers the usual way of working",
+        "Lost status, as the waiter loses a senior role",
+        "Poor communication, as no one explained the app",
+        "Costs, as the waiter must pay for the app"
+      ],
+      "why": "The waiter says the old method works fine, which shows a preference for the usual way of working. Lost status is tempting, but nothing in the case says the waiter loses a role or influence.",
+      "clue": "Look at what the waiter says about the old pads."
+    },
+    "b": {
+      "d": 3,
+      "q": "A factory in Newcastle plans to move to a new production system. Managers tell staff nothing until the week it starts. Many workers then say they think jobs will be cut. Which best explains their resistance?",
+      "opts": [
+        "Poor communication led to fear of the unknown",
+        "Habit made the workers dislike all new systems",
+        "The workers lost status once the system started",
+        "The system cost the workers money to learn"
+      ],
+      "why": "Staff were not told what was happening, so they feared for their jobs. Habit is tempting, but the workers' concern is about job cuts, not about liking the old system. Nothing in the case says they lost status or paid costs.",
+      "clue": "Think about what the workers were told before the change and what they feared."
+    }
+  },
+  "bus-managing-change-well": {
+    "title": "Managing change well",
+    "card": [
+      "Change is more likely to succeed when managers plan how to bring people with them. Good management of change deals with the people side as well as the new system or process.",
+      [
+        "Explain and involve",
+        "Managers explain why the change is needed and what it will mean for staff. They ask staff for ideas and feedback, so people feel the change is shared and not forced on them."
+      ],
+      [
+        "Set goals",
+        "Managers set clear goals, such as what will change and by when. Staff then know what they are working towards and can see progress."
+      ],
+      [
+        "Train and support",
+        "Managers give training so staff can use new skills or systems with confidence. They keep supporting people through the change, for example by listening to concerns."
+      ]
+    ],
+    "remember": "Successful change brings people along: explain it, involve staff, set goals, train and support.",
+    "a": {
+      "q": "Which action best shows a manager involving staff in a change?",
+      "opts": [
+        "Asking staff for ideas on how to introduce the change",
+        "Sending staff an email announcing the start date",
+        "Setting a deadline for when the change must be finished",
+        "Running a course on how to use the new system"
+      ],
+      "why": "Involving staff means asking for their ideas and feedback, so they help shape the change. An email only tells them the date. A deadline is a goal, and a course is training.",
+      "clue": "Involving means staff have a say, not just hear the news."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a Dubbo bakery that is adding online ordering. Staff are worried they will not cope. Which step most directly deals with this worry?",
+      "opts": [
+        "Training staff on the system and checking in with them",
+        "Explaining that online sales have grown across the industry",
+        "Setting a goal of 50 online orders a week",
+        "Asking staff to vote on the name of the new service"
+      ],
+      "why": "The worry is about coping, so training and ongoing support deal with it directly. Explaining the need for change is useful, but it does not give staff the skills or help they feel they lack.",
+      "clue": "Which step builds skills and gives help to people who feel unsure?"
+    }
+  },
+  "bus-force-field-analysis": {
+    "title": "Force field analysis",
+    "card": [
+      "Force field analysis is a model created by Kurt Lewin. It helps a business look at a proposed change by listing the forces on each side.",
+      ["Driving forces", "push towards the change. Examples are falling sales, a new competitor or a new law."],
+      [
+        "Restraining forces",
+        "push against the change. Examples are the cost of the change, staff fear of the unknown or habit."
+      ],
+      "The business weighs the two lists. Change is likely to happen when the driving forces outweigh the restraining forces. A manager can also make change more likely by adding driving forces or by reducing restraining forces."
+    ],
+    "remember": "List the forces for and against a change. Change is likely when the forces for it are stronger.",
+    "a": {
+      "q": "What is the main purpose of a force field analysis?",
+      "opts": [
+        "To weigh the forces for and against a proposed change",
+        "To rank staff by how much they support a change",
+        "To work out the total cost of a proposed change",
+        "To list the steps needed to carry out a change"
+      ],
+      "why": "The model sets driving forces against restraining forces so managers can see how likely a change is to happen. It does not plan the steps or total the cost, although cost may appear as one restraining force.",
+      "clue": "Think about the two lists the model builds."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a bakery in Newcastle. She wants to bring in online ordering. Customers keep asking for it, but two long-serving staff dislike new software. Which is a restraining force?",
+      "opts": [
+        "Two long-serving staff dislike new software",
+        "Customers keep asking for online ordering",
+        "Rival bakeries already take online orders",
+        "Online orders could raise sales over time"
+      ],
+      "why": "Staff dislike of the software pushes against the change, so it is a restraining force. Customer requests, rival bakeries and higher sales all push towards the change, so they are driving forces. A customer request can feel like pressure, but it pushes the business towards change.",
+      "clue": "Which one pushes against the change rather than for it?"
+    }
+  },
+  "bus-decision-start-business": {
+    "title": "The decision to start a business",
+    "card": [
+      "People start a business for different reasons. Some want to be their own boss and make their own decisions.",
+      "Others want to follow an idea or interest, or to earn more than they could as an employee. Earning more is not guaranteed.",
+      "Before starting, an owner weighs up their skills, their money and the risk. Skills mean what they can do or learn. Money means what they can put in and live on.",
+      "Risk is the chance the business does not work and the owner loses money or time. A person may decide to start if the possible gain seems worth that risk."
+    ],
+    "remember": "Starting a business is a choice made by weighing reasons for it against skills, money and risk.",
+    "a": {
+      "q": "Which is a reason a person might choose to start a business?",
+      "opts": [
+        "To make their own decisions as the boss",
+        "To remove any risk of losing money",
+        "To be certain of earning more than a wage",
+        "To avoid needing any skills or money"
+      ],
+      "why": "Being your own boss and making your own decisions is a common reason to start. Starting a business does not remove risk, and earning more than a wage is not guaranteed, so those options are wrong.",
+      "clue": "Which reason is about independence, not a promise?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is a skilled baker in Orange. He has a new recipe idea but only a little savings. Which step best shows he is weighing the decision to start a bakery?",
+      "opts": [
+        "Checking if his savings could cover costs and losses",
+        "Quitting his job straight away so he can start sooner",
+        "Assuming the bakery will earn more than his wage",
+        "Ignoring the risk because his recipe is so good"
+      ],
+      "why": "Sam is weighing his money against the risk of losses before he acts. Quitting at once or assuming higher earnings skips the weighing, and a good recipe does not remove risk.",
+      "clue": "Weighing means comparing money and risk before acting."
+    }
+  },
+  "bus-market-research-new-business": {
+    "title": "Market research for a new business",
+    "card": [
+      "Market research is collecting and studying information about a market. For a new business, it is done before the business starts and before money is spent, so mistakes cost less.",
+      "It asks four things: who the customers are, what they want, what competitors already offer, and whether enough people will buy.",
+      [
+        "Primary research",
+        "new information the owner collects first-hand, such as a survey, an interview or a trial sample."
+      ],
+      [
+        "Secondary research",
+        "information that already exists, such as government population data, industry reports or competitor websites."
+      ]
+    ],
+    "remember": "Research first to learn who will buy, what they want and who else sells to them.",
+    "a": {
+      "q": "Why should an owner do market research before spending money on a new business?",
+      "opts": [
+        "To learn whether enough customers are likely to buy",
+        "To make sure the business will never face competitors",
+        "To avoid the need for a plan for finance and staff",
+        "To guarantee that the business makes a profit"
+      ],
+      "why": "Research gives evidence about customers, their wants and competitors, so the owner can judge demand before risking money. It cannot guarantee profit, because results can still turn out differently from what research suggests.",
+      "clue": "Think about what the owner wants to know before risking money."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya plans a juice bar in Orange. She reads council data on how many people work nearby, then asks 50 passers-by what drinks they would buy. Which describes her research?",
+      "opts": [
+        "Secondary research from the data, primary from the questions",
+        "Primary research from the data, secondary from the questions",
+        "Both parts are secondary, as others gave the answers",
+        "Both parts are primary research, as they relate to her bar"
+      ],
+      "why": "The council data already existed, so it is secondary research. Asking passers-by collects new information first-hand, so it is primary. Relating to her own bar does not make existing data primary.",
+      "clue": "Ask who collected each piece of information, and when."
+    }
+  },
+  "bus-choosing-location": {
+    "title": "Choosing a location",
+    "card": [
+      "Location is where a business sets up. The owner chooses it, and it affects both costs and sales.",
+      [
+        "Customers",
+        "a site close to customers, with good visibility, such as a busy street, can bring in more passing trade and more sales."
+      ],
+      [
+        "Suppliers and staff",
+        "being near suppliers can cut delivery costs and delays. Being near a pool of suitable workers makes hiring easier."
+      ],
+      [
+        "Rent and competitors",
+        "rent is a cost that differs from site to site, and busy sites often cost more. Nearby competitors may share the same customers, but they can also show that demand exists."
+      ]
+    ],
+    "remember": "A good location balances the sales it can bring against the costs it adds.",
+    "a": {
+      "q": "Why might an owner pay higher rent for a shop on a busy main street?",
+      "opts": [
+        "Passing customers may lift sales enough to cover the cost",
+        "Higher rent guarantees more customers will buy",
+        "Nearby competitors mean the shop shares fewer customers",
+        "Suppliers deliver for free to busy streets"
+      ],
+      "why": "A busy site has high visibility, so more people may see the shop and buy. That can make up for the extra rent. The option saying higher rent guarantees more buyers is wrong, because a busy site may raise sales but cannot promise them.",
+      "clue": "Think about what a busy street gives the shop in return."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya plans a bakery in a country town. Cheap rent is available on a quiet back street, or dearer rent on the main street. What is the best reason to choose the main street?",
+      "opts": [
+        "Visibility to passing customers may raise sales",
+        "The rent is lower than on the back street",
+        "There will be no competitors on the main street",
+        "Suppliers will charge less for flour there"
+      ],
+      "why": "The main street gives visibility and more passing trade, which may raise sales above the extra rent. The tempting option about rent is wrong, because the main street costs more. Nothing in the case says there are no competitors or cheaper flour.",
+      "clue": "The main street costs more, so what could make that worth paying?"
+    }
+  },
+  "bus-financing-new-business": {
+    "title": "Financing a new business",
+    "card": [
+      "A new business needs money before it earns any. The owner has to decide where that start-up money will come from.",
+      [
+        "Equity",
+        "money the owner puts in, such as personal savings. The owner keeps control and does not owe interest, but the owner's own money is at risk if the business fails."
+      ],
+      [
+        "Debt",
+        "money borrowed, such as a bank loan. It must be repaid with interest, whether or not the business is making a profit."
+      ],
+      "Many owners use a mix of both. More equity means less to repay. Debt adds interest costs, and if the business fails, the loan is still owed and is often repaid from the owner's own savings."
+    ],
+    "remember": "Equity is the owner's own money and is at risk. Debt is borrowed and must be repaid with interest.",
+    "a": {
+      "q": "Which statement best describes debt finance for a new business?",
+      "opts": [
+        "Borrowed money that must be repaid with interest",
+        "Money the owner puts in from personal savings",
+        "Money that the owner keeps and never has to repay",
+        "Money from customers paid before the business opens"
+      ],
+      "why": "Debt is borrowed money, so it must be repaid with interest. Savings put in by the owner are equity, which is the most tempting wrong option because both are ways to fund a start-up.",
+      "clue": "Think about who the money belongs to at first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya uses her own savings to open a bakery in Orange. Six months later the bakery closes. What is the main risk of the finance she chose?",
+      "opts": [
+        "She loses the savings she put into the bakery",
+        "She must repay a bank loan with interest",
+        "She gives up control of the bakery to a lender",
+        "She pays interest on the money she lost"
+      ],
+      "why": "Her savings are equity, so the money she put in is at risk if the business fails. A loan repaid with interest is debt, which she did not use, and equity lets her keep control rather than hand it to a lender.",
+      "clue": "Where did her start-up money come from?"
+    }
+  },
+  "bus-resources-needed-start": {
+    "title": "Resources needed to start",
+    "card": [
+      "A new business needs resources before it can trade. Planning them in advance helps the owner avoid running short once customers arrive.",
+      [
+        "Premises and equipment",
+        "the place where the business operates and the tools it uses, such as an oven, a van or a computer."
+      ],
+      [
+        "Stock and staff",
+        "stock is the goods held ready to sell or to use in making products. Staff are the people hired to do the work."
+      ],
+      [
+        "Systems",
+        "set ways of running the business, such as accounts to record money in and out, and a way to take orders and payments."
+      ]
+    ],
+    "remember": "Plan premises, equipment, stock, staff and systems before opening, so the business does not run short.",
+    "a": {
+      "q": "Which item is a system that a new business needs?",
+      "opts": [
+        "A process for recording money in and out",
+        "A van used to deliver orders to customers",
+        "A shop front rented on a busy street",
+        "A baker hired to work weekend shifts"
+      ],
+      "why": "Recording money in and out is a set way of running the business, so it is a system. The van is equipment, the shop front is premises and the baker is staff.",
+      "clue": "A system is a set way of working, not a thing or a person."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia opens a café in Dubbo. On day one she runs out of coffee beans and milk by 10 am. Which resource did she fail to plan enough of?",
+      "opts": ["Stock", "Premises", "Equipment", "Staff"],
+      "why": "Coffee beans and milk are goods held ready to use in making products, so they are stock. She had a place to trade and machines to make coffee, so premises and equipment were not the problem.",
+      "clue": "What gets used up each time the café makes a drink?"
+    }
+  },
+  "bus-business-plan-matters": {
+    "title": "Why a business plan matters",
+    "card": [
+      "A business plan is a written document that sets out what a business wants to achieve and how it will get there.",
+      "It guides decisions. Owners and managers can check a choice against the plan and ask if it moves the business toward its goals.",
+      "Lenders and investors often ask to see a plan before they provide finance. It shows them the business has clear goals and a realistic way to reach them.",
+      "A plan also gives a standard to measure against. The owner can compare what happened with what was planned and then make changes."
+    ],
+    "remember": "A business plan sets out goals and how to reach them, so it guides decisions and helps win finance.",
+    "a": {
+      "q": "Why would a bank ask a new business owner for a business plan before approving a loan?",
+      "opts": [
+        "It shows clear goals and a realistic way to reach them",
+        "It guarantees that the business will make a profit",
+        "It removes the need for the owner to make decisions",
+        "It lets the bank manage the daily running of the business"
+      ],
+      "why": "A lender wants evidence that the business has goals and a workable way to reach them, and a plan provides this. A plan does not guarantee profit, because results can differ from what was planned.",
+      "clue": "Think about what a lender needs to feel confident about."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Bathurst. A supplier offers her a cheap oven that would let her sell wholesale, but her plan aims to grow her own shopfront sales. How does the plan help her decide?",
+      "opts": [
+        "She can check if the oven moves her toward her plan's goals",
+        "She must refuse the oven, because a plan cannot be changed",
+        "The plan will tell her the exact price to pay for the oven",
+        "The plan will find a lender to pay for the oven"
+      ],
+      "why": "A plan gives a standard to test a choice against. Priya can ask if wholesale selling fits her goal of shopfront growth. A plan guides decisions but does not forbid change, and it does not set prices or find finance by itself.",
+      "clue": "Use the plan to test the choice, not to make it for her."
+    }
+  },
+  "bus-vision-mission-goals": {
+    "title": "Vision, mission and goals",
+    "card": [
+      [
+        "Vision",
+        "what the business wants to become in the future. It looks ahead and shows the direction the business is heading."
+      ],
+      ["Mission", "the purpose of the business today. It says what the business does, and for whom."],
+      [
+        "Goals",
+        "specific targets that can be measured and have a time limit. They turn the vision and mission into action."
+      ],
+      "A goal such as \"raise sales by 10% this year\" can be checked at the end of the year. A statement such as \"be the best\" cannot be measured, so it is not a goal."
+    ],
+    "remember": "Vision is where the business is heading. Mission is why it exists. Goals are the measurable steps.",
+    "a": {
+      "q": "Which statement is a goal for a bakery in Orange?",
+      "opts": [
+        "Open a second shop by December next year",
+        "Be the most loved bakery in regional NSW",
+        "Bake fresh bread for local families each day",
+        "Become a household name across Australia"
+      ],
+      "why": "Opening a second shop by a set date can be measured and has a time limit, so it is a goal. Being the most loved bakery is a hope about the future, so it is closer to a vision, and it cannot be measured.",
+      "clue": "Which one could you tick off as done or not done?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq runs a lawn care business in Perth. He writes: \"We mow and maintain gardens for busy households.\" What does this statement set out?",
+      "opts": [
+        "Its mission, as it says what the business does and for whom",
+        "Its vision, as it describes what the business will become",
+        "Its goal, as it describes the work the business carries out",
+        "Its vision, as it names the customers the business serves"
+      ],
+      "why": "The statement says what the business does now and who it serves, which is a mission. A vision would describe what the business wants to become. It is not a goal, as it has no measurable target or time limit.",
+      "clue": "Does the statement look ahead, or describe the purpose today?"
+    }
+  },
+  "bus-swot-analysis": {
+    "title": "SWOT analysis",
+    "card": [
+      "A SWOT analysis is a list that helps a business plan. It sorts what affects the business into four groups: strengths, weaknesses, opportunities and threats.",
+      [
+        "Strengths and weaknesses",
+        "These are internal. They come from inside the business, so the business can control them. Examples are skilled staff or old equipment."
+      ],
+      [
+        "Opportunities and threats",
+        "These are external. They come from outside the business, so the business cannot control them. Examples are a new road past the shop or a new competitor."
+      ],
+      "The business then plans to use its strengths, fix its weaknesses, take up opportunities and prepare for threats."
+    ],
+    "remember": "SWOT sorts what a business can control (inside) from what it cannot (outside).",
+    "a": {
+      "q": "Which of these is an internal weakness of a business?",
+      "opts": [
+        "Its delivery van is old and often breaks down",
+        "A new competitor opens in the same street",
+        "The council plans to build a new bus stop nearby",
+        "Customers in the area are starting to prefer online shopping"
+      ],
+      "why": "The van belongs to the business, so the problem is internal and the business can fix it. The competitor is a threat from outside, so it is external and not a weakness.",
+      "clue": "Which problem sits inside the business itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia runs a café in Dubbo. A large mining company opens a new site nearby and hundreds of workers move to town. In her SWOT analysis, where does this belong?",
+      "opts": [
+        "Opportunity, because it is external and may bring customers",
+        "Strength, because it may bring customers to her café",
+        "Threat, because it is external and she cannot control it",
+        "Weakness, because she did not plan for it"
+      ],
+      "why": "The mine is outside the café and Mia cannot control it, so it is external. It may bring more customers, so it is an opportunity. It is not a strength, because strengths come from inside the business.",
+      "clue": "First ask if Mia controls it, then ask if it helps her."
+    }
+  },
+  "bus-parts-business-plan": {
+    "title": "Parts of a business plan",
+    "card": [
+      "A business plan is split into parts. Each part has its own goals and actions, and together they work towards the business's overall goals.",
+      [
+        "Marketing",
+        "how the business will find and keep customers. It covers the product, price, promotion and place."
+      ],
+      [
+        "Operations",
+        "how the business will make its product or deliver its service. It covers things like suppliers, equipment and production methods."
+      ],
+      [
+        "Finance and human resources",
+        "Finance covers the money needed, expected sales and costs, and cash flow. Human resources covers how staff are hired, trained and managed."
+      ]
+    ],
+    "remember": "Each part of a plan answers its own question, with its own goals and actions.",
+    "a": {
+      "q": "Which part of a business plan would set out how many staff to hire and how to train them?",
+      "opts": ["Human resources", "Operations", "Finance", "Marketing"],
+      "why": "Human resources covers how staff are hired, trained and managed. Operations is the most tempting wrong answer, but it covers how the product is made or the service is delivered, not how staff are hired and trained.",
+      "clue": "Which part is about the people who work for the business?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia plans to open a bakery in Dubbo. She is working out which flour supplier to use and what ovens to buy. Which part of her plan is this?",
+      "opts": ["Operations", "Marketing", "Finance", "Human resources"],
+      "why": "Choosing suppliers and equipment is about how the bakery will make its product, so it belongs in operations. Finance is tempting because ovens cost money, but finance covers money needed, sales, costs and cash flow, not how the product is made.",
+      "clue": "Which part covers how the product is made?"
+    }
+  },
+  "bus-levels-planning": {
+    "title": "Levels of planning",
+    "card": [
+      [
+        "Strategic plan",
+        "covers several years and the whole business. It sets the broad direction, such as opening in a new state."
+      ],
+      [
+        "Tactical plan",
+        "covers one to two years and a part of the business, such as the marketing team. It turns the strategic plan into steps for that part."
+      ],
+      [
+        "Operational plan",
+        "covers the day-to-day work, such as a weekly roster or daily orders of stock. It keeps routine tasks running."
+      ],
+      "The levels link up. Operational plans support tactical plans, and tactical plans support the strategic plan."
+    ],
+    "remember": "Strategic is long and whole-business. Tactical is one to two years for a part. Operational is day to day.",
+    "a": {
+      "q": "Which of these is an example of a strategic plan?",
+      "opts": [
+        "A five-year plan to expand a bakery chain into Queensland",
+        "A plan to run a social media campaign for the next year",
+        "A roster that sets who works each shift this week",
+        "A schedule for ordering flour every Monday morning"
+      ],
+      "why": "Expanding into a new state covers several years and affects the whole business, so it is strategic. The social media campaign is tempting, but it covers one year and one part of the business, so it is tactical.",
+      "clue": "Look for the plan with the longest time and the widest reach."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages the sales team at a furniture company in Newcastle. She writes a plan for the next 18 months to lift online sales, which supports the owner's five-year growth plan. What level of plan is Priya's?",
+      "opts": [
+        "Tactical, as it covers one to two years for one part",
+        "Strategic, as it helps the owner's long-term growth goal",
+        "Operational, as it is made by a manager, not the owner",
+        "Operational, as it deals with sales that happen each day"
+      ],
+      "why": "The plan runs 18 months and covers only the sales team, so it is tactical. It is not strategic even though it supports a strategic plan, because strategic plans cover several years and the whole business.",
+      "clue": "Check the length of time and how much of the business the plan covers."
+    }
+  },
+  "bus-monitoring-performance": {
+    "title": "Monitoring performance",
+    "card": [
+      "Monitoring performance means checking how the business is actually going. The owner compares actual results, such as sales or costs, with the figures in the plan.",
+      "The gap between an actual result and the planned result is called a variance. A favourable variance is better than planned, such as sales above target or costs below budget.",
+      "An unfavourable variance is worse than planned, such as sales below target or costs above budget. Checking regularly lets a business spot these early and act, for example by cutting costs or promoting more.",
+      "Monitoring only helps if the owner acts on what it shows. A plan that is never compared with real results cannot guide decisions."
+    ],
+    "remember": "Compare actual results with the plan often, and act early when results fall short.",
+    "a": {
+      "q": "What is the main purpose of monitoring performance in a business?",
+      "opts": [
+        "To spot gaps between results and the plan and act early",
+        "To copy the prices and products of a main competitor",
+        "To prepare for a problem that has not happened yet",
+        "To write a new business plan at the end of each year"
+      ],
+      "why": "Monitoring compares actual results with the plan so the owner can see gaps and respond early. Copying competitors is a different activity, and monitoring is about checking results, not writing a new plan.",
+      "clue": "Think about what is compared with what, and why."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia's café in Dubbo planned to sell 400 coffees a week. Her weekly records show only 300 sold for three weeks in a row. What should Mia do next?",
+      "opts": [
+        "Look into why sales are low and change her approach",
+        "Wait until the end of the year to see if sales recover",
+        "Ignore the figures because the plan was already written",
+        "Raise her sales target so the plan looks more ambitious"
+      ],
+      "why": "Selling fewer coffees than planned is an unfavourable variance. Monitoring is useful when Mia acts early, such as by finding the cause and adjusting. Waiting until the year ends lets the problem grow.",
+      "clue": "What should the owner do once a gap has been found?"
+    }
+  },
+  "bus-benchmarking": {
+    "title": "Benchmarking",
+    "card": [
+      "Benchmarking is comparing a business's results with a standard. The standard might be a competitor, the industry average or the best business in the field.",
+      "The business picks a measure, such as the cost of making each item or the time taken to serve a customer. It then compares its own figure with the benchmark.",
+      "A gap shows where the business is behind. The business can then look at how the better performer works and change its own methods to close the gap.",
+      "The standard is usually outside the business, though some businesses compare their own branches. Either way, it is not the business's own plan."
+    ],
+    "remember": "Benchmarking compares results with a better standard, not your own plan, to find ways to improve.",
+    "a": {
+      "q": "Which action is an example of benchmarking?",
+      "opts": [
+        "A bakery compares its cost per loaf to the industry average",
+        "A bakery checks its sales against its own monthly target",
+        "A bakery asks staff to suggest ideas for new bread flavours",
+        "A bakery plans what to do if its oven breaks down"
+      ],
+      "why": "The bakery compares its own cost with a standard, the industry average, to see where it can improve. Checking sales against its own target is not benchmarking, because the standard there is the business's own plan.",
+      "clue": "Which one compares the bakery with other businesses?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a gym in Ballarat. She finds that a rival gym signs up new members in half the time hers takes. What should she do to benchmark?",
+      "opts": [
+        "Study how the rival signs up members and change her process",
+        "Cut her prices so that she has more members than the rival",
+        "Check her sign-up times against the targets in her own plan",
+        "Wait to see whether her sign-up times improve by themselves"
+      ],
+      "why": "Benchmarking uses the gap with a better performer to find ways to improve, so Priya should study how the rival works and adjust her own process. Checking against her own plan's targets is tempting, but that compares her with her plan, not with a better performer.",
+      "clue": "The aim is to learn from the business that does it better."
+    }
+  },
+  "bus-contingency-planning": {
+    "title": "Contingency planning",
+    "card": [
+      "A contingency plan is a set of steps a business prepares in case something goes wrong. The problem may never happen, but the business is ready if it does.",
+      "Managers start by listing events that could harm the business, such as a main supplier failing, a power outage or a fire. They then judge how likely each is and how badly it would hurt.",
+      "For each serious risk, the plan sets out what to do, who does it and what resources are needed. An example is a backup supplier that has already been approved.",
+      "Because the response is planned in advance, the business can act quickly and limit the damage. The plan should be reviewed from time to time so it stays up to date."
+    ],
+    "remember": "A contingency plan is a prepared response to a problem that might happen.",
+    "a": {
+      "q": "Which action is an example of contingency planning?",
+      "opts": [
+        "Arranging a backup supplier in case the main one fails",
+        "Comparing this month's sales with the sales target",
+        "Copying the prices of the largest competitor",
+        "Ordering extra stock after a supplier has closed"
+      ],
+      "why": "Preparing a backup supplier before any problem happens is a planned response to a possible event. Ordering stock after the supplier has closed is a reaction, not a plan made in advance.",
+      "clue": "Look for the action taken before anything goes wrong."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia runs a bakery in Dubbo with one oven. She writes down what she will do if the oven breaks: who to call, and a nearby bakery that has agreed to bake her bread. Why is this useful?",
+      "opts": [
+        "She can keep trading quickly if the oven fails",
+        "It stops the oven from ever breaking down",
+        "It shows how her sales compare with other bakeries",
+        "It means she no longer needs to insure the oven"
+      ],
+      "why": "The plan sets out the response before the breakdown, so Mia can act fast and limit lost sales. A plan cannot prevent a fault, and it does not compare her with others.",
+      "clue": "Think about what the plan changes if the oven does break."
+    }
+  },
+  "bus-small-businesses-succeed-or": {
+    "title": "Why small businesses succeed or fail",
+    "card": [
+      "Small businesses are more likely to succeed when they have good planning, enough money, sound management and a clear understanding of their customers.",
+      [
+        "Planning and money",
+        "A plan gives the owner goals and a way to reach them. Enough money, called finance, pays for start-up costs and keeps the business running through slow months."
+      ],
+      [
+        "Management and customers",
+        "Sound management means the owner makes careful decisions and runs daily tasks well. Knowing the customer means offering what people want at a price they will pay."
+      ],
+      [
+        "Failure",
+        "Cash flow problems often cause failure. This happens when a business cannot pay bills on time because cash is going out faster than it comes in. Poor planning also often leads to failure."
+      ]
+    ],
+    "remember": "Planning, money, management and knowing customers help a small business succeed. Cash flow problems and poor planning often bring failure.",
+    "a": {
+      "q": "Which of these is most likely to lead a small business to fail?",
+      "opts": [
+        "Often being unable to pay bills when they fall due",
+        "Choosing to open in a small country town",
+        "Offering only a few products to customers",
+        "Having an owner who also works in the business"
+      ],
+      "why": "A business that cannot pay its bills on time has a cash flow problem, which often causes failure. The other options can work well in many small businesses, so they do not on their own lead to failure.",
+      "clue": "Think about what happens when cash goes out faster than it comes in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi opens a bike repair shop in Ballarat. He did not research what local cyclists want, and he has not planned for slow winter months. Which outcome is most likely?",
+      "opts": [
+        "He may struggle to pay bills and the shop may fail",
+        "The shop will succeed because repair work is needed",
+        "The shop will succeed because he has few competitors",
+        "The shop will fail because small businesses cannot last"
+      ],
+      "why": "Not knowing his customers and not planning for slow months can leave Ravi short of cash, which often causes failure. Saying small businesses cannot last is wrong, because many succeed with good planning and management.",
+      "clue": "Look for the two weaknesses in what Ravi did not do."
+    }
   }
 };

@@ -1,0 +1,194 @@
+{
+ "id": "chem-colorimetry-uv-visible-spectroscopy",
+ "title": "Colorimetry and UV-visible spectroscopy",
+ "brief": "f33786eb21a8",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:00Z new, write",
+  "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:08Z write: done",
+  "2026-10-27T01:08:34Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-28T11:49:19Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00529,
+  "check": 0.01054,
+  "fix": 0.02203,
+  "recheck": 0.01167
+ },
+ "draft": {
+  "title": "Colorimetry and UV-visible spectroscopy",
+  "card": [
+   "A coloured solution absorbs some of the light passing through it. The more concentrated the solution, the more light it absorbs. For dilute solutions, absorbance rises in proportion to concentration.",
+   "A colorimeter measures absorbance using visible light of a chosen colour. A UV-visible spectrometer does the same job across ultraviolet and visible wavelengths.",
+   "To find an unknown concentration, measure the absorbance of several standard solutions of known concentration. Plot absorbance against concentration to make a calibration curve.",
+   "Then measure the absorbance of the unknown solution under the same conditions. Read across from that absorbance to the curve, then down to the concentration."
+  ],
+  "remember": "Absorbance rises with concentration, so a calibration curve turns a measured absorbance into a concentration.",
+  "a": {
+   "q": "Why is a calibration curve needed to find the concentration of a copper(II) sulfate solution by colorimetry?",
+   "opts": [
+    "It links absorbance to concentration using known standards",
+    "It shows the mass of precipitate formed from the copper ions",
+    "It removes the colour of the solution before it is measured",
+    "It counts the atoms of copper in the sample directly"
+   ],
+   "why": "A colorimeter only measures absorbance. Standards of known concentration give a curve that links absorbance to concentration. The precipitate option describes gravimetric analysis, which is a different method.",
+   "clue": "The instrument measures absorbance, not concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam measures the absorbance of five standard solutions and plots a calibration curve. His water sample from a dam has an absorbance higher than any standard. What is the best next step?",
+   "opts": [
+    "Dilute the sample, remeasure, and allow for the dilution",
+    "Read the concentration by extending the curve far upwards",
+    "Use the highest standard's concentration as the answer",
+    "Measure it again using a different colour of light"
+   ],
+   "why": "The curve is only reliable between the standards measured. Diluting brings the absorbance inside that range, and the dilution is then allowed for in the answer. Extending the curve assumes the straight line continues, which the data does not show.",
+   "clue": "A calibration curve is only trusted within the range of the standards."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It links absorbance to concentration using known standards",
+   "also_right": []
+  },
+  "b": {
+   "best": "Dilute the sample, remeasure, and allow for the dilution",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says a calibration curve is reliable only within the range of the standards, and it never mentions diluting a sample and correcting for the dilution. The question and its clue need ideas the card does not teach. The card only hints at them by saying proportionality holds for dilute solutions."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate and clear. Question b's correct answer, diluting the sample and correcting for the dilution, depends on the idea that a curve is valid only within the range of the standards. The card does not teach this, so it should add a line about it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card never says a calibration curve is reliable only within the range of the standards, and it never mentions diluting a sample and correcting for the dilution. The question and its clue need ideas the card does not teach. The card only hints at them by saying proportionality holds for dilute solutions."
+ ],
+ "proposal": {
+  "title": "Colorimetry and UV-visible spectroscopy",
+  "card": [
+   "A coloured solution absorbs some of the light passing through it. For dilute solutions, absorbance rises in proportion to concentration.",
+   "A colorimeter measures absorbance using visible light of one chosen colour. A UV-visible spectrometer does the same job across ultraviolet and visible wavelengths.",
+   "Measure the absorbance of several standards, which are solutions of known concentration. Plot absorbance against concentration to make a calibration curve, then read the unknown's concentration from its absorbance.",
+   "The curve is only reliable within the range of the standards. If the unknown's absorbance is too high, dilute it, remeasure, then multiply by the dilution factor."
+  ],
+  "remember": "Standards of known concentration give a curve that turns a measured absorbance into a concentration.",
+  "a": {
+   "q": "Why is a calibration curve needed to find the concentration of a copper(II) sulfate solution by colorimetry?",
+   "opts": [
+    "It links absorbance to concentration using known standards",
+    "It shows the mass of precipitate formed from the copper ions",
+    "It removes the colour of the solution before it is measured",
+    "It counts the atoms of copper in the sample directly"
+   ],
+   "why": "A colorimeter only measures absorbance. Standards of known concentration give a curve that links absorbance to concentration. The precipitate option describes gravimetric analysis, which is a different method.",
+   "clue": "The instrument measures absorbance, not concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam measures the absorbance of five standard solutions and plots a calibration curve. His water sample from a dam has an absorbance higher than any standard. What is the best next step?",
+   "opts": [
+    "Dilute the sample, remeasure, and allow for the dilution",
+    "Read the concentration by extending the curve far upwards",
+    "Use the highest standard's concentration as the answer",
+    "Add more standards that are more dilute than the rest"
+   ],
+   "why": "The curve is only reliable between the standards measured. Diluting brings the absorbance inside that range, and multiplying by the dilution factor gives the sample's concentration. Extending the curve assumes the line keeps going the same way, which the standards do not show.",
+   "clue": "Is the sample's reading inside the range the curve covers?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It links absorbance to concentration using known standards",
+    "also_right": []
+   },
+   "b": {
+    "best": "Dilute the sample, remeasure, and allow for the dilution",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says a calibration curve is reliable only within the range of the standards, and it never mentions diluting a sample and correcting for the dilution. The question and its clue need ideas the card does not teach. The card only hints at them by saying proportionality holds for dilute solutions."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card never says a calibration curve is reliable only within the range of the standards, and it never mentions diluting a sample and correcting for the dilution. The question and its clue need ideas the card does not teach. The card only hints at them by saying proportionality holds for dilute solutions."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Colorimetry and UV-visible spectroscopy",
+  "card": [
+   "A coloured solution absorbs some of the light passing through it. For dilute solutions, absorbance rises in proportion to concentration.",
+   "A colorimeter measures absorbance using visible light of one chosen colour. A UV-visible spectrometer does the same job across ultraviolet and visible wavelengths.",
+   "Measure the absorbance of several standards, which are solutions of known concentration. Plot absorbance against concentration to make a calibration curve, then read the unknown's concentration from its absorbance.",
+   "The curve is only reliable within the range of the standards. If the unknown's absorbance is too high, dilute it, remeasure, then multiply by the dilution factor."
+  ],
+  "remember": "Standards of known concentration give a curve that turns a measured absorbance into a concentration.",
+  "a": {
+   "q": "Why is a calibration curve needed to find the concentration of a copper(II) sulfate solution by colorimetry?",
+   "opts": [
+    "It links absorbance to concentration using known standards",
+    "It shows the mass of precipitate formed from the copper ions",
+    "It removes the colour of the solution before it is measured",
+    "It counts the atoms of copper in the sample directly"
+   ],
+   "why": "A colorimeter only measures absorbance. Standards of known concentration give a curve that links absorbance to concentration. The precipitate option describes gravimetric analysis, which is a different method.",
+   "clue": "The instrument measures absorbance, not concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam measures the absorbance of five standard solutions and plots a calibration curve. His water sample from a dam has an absorbance higher than any standard. What is the best next step?",
+   "opts": [
+    "Dilute the sample, remeasure, and allow for the dilution",
+    "Read the concentration by extending the curve far upwards",
+    "Use the highest standard's concentration as the answer",
+    "Add more standards that are more dilute than the rest"
+   ],
+   "why": "The curve is only reliable between the standards measured. Diluting brings the absorbance inside that range, and multiplying by the dilution factor gives the sample's concentration. Extending the curve assumes the line keeps going the same way, which the standards do not show.",
+   "clue": "Is the sample's reading inside the range the curve covers?"
+  }
+ },
+ "cleared_by": "owner"
+}

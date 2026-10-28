@@ -1,0 +1,211 @@
+{
+ "id": "mat-arithmetic-series",
+ "title": "Arithmetic series",
+ "brief": "86649a3c59dd",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:56Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-28T11:49:41Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00482,
+  "check": 0.00991,
+  "fix": 0.01747,
+  "recheck": 0.0139
+ },
+ "draft": {
+  "title": "Arithmetic series",
+  "card": [
+   "An arithmetic series is the sum of the terms of an arithmetic sequence. Here a is the first term, d is the common difference and n is the number of terms.",
+   [
+    "Formula 1",
+    "Sₙ = n/2 × (2a + (n − 1)d). Use it when you know a, d and n."
+   ],
+   [
+    "Formula 2",
+    "Sₙ = n/2 × (first + last). Use it when you know the first and last terms and n."
+   ],
+   [
+    "Example",
+    "Add 3 + 7 + 11 + ... for 10 terms. Here a = 3, d = 4 and n = 10. S₁₀ = 10/2 × (2×3 + 9×4) = 5 × 42 = 210."
+   ]
+  ],
+  "remember": "Sum = half the number of terms × (first + last), and the last term is a + (n − 1)d.",
+  "a": {
+   "q": "What is the sum of the first 8 terms of 5 + 8 + 11 + ...?",
+   "opts": [
+    "124",
+    "132",
+    "248",
+    "116"
+   ],
+   "why": "Here a = 5, d = 3 and n = 8. S₈ = 8/2 × (2×5 + 7×3) = 4 × 31 = 124. The answer 248 comes from forgetting to halve n, which is the tempting mistake.",
+   "clue": "Find 2a + (n − 1)d first, then multiply by n/2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia saves $10 in week 1, then $14 in week 2, and so on, adding $4 more each week. She does this for 12 weeks. How much has she saved in total?",
+   "opts": [
+    "$384",
+    "$342",
+    "$768",
+    "$396"
+   ],
+   "why": "Here a = 10, d = 4 and n = 12. The last term is 10 + 11×4 = 54, so S₁₂ = 12/2 × (10 + 54) = 6 × 64 = 384. The answer 342 uses n − 1 = 11 terms instead of 12.",
+   "clue": "Count the weeks as n, then find the last week's saving first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "124",
+   "also_right": []
+  },
+  "b": {
+   "best": "$384",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says $342 comes from using n − 1 = 11 terms, but 11 terms gives 11/2 × (20 + 10×4) = $330, or $352 if the last term 54 is kept. $342 does not come from that mistake, so the explanation of the distractor is false."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with answers 124 and $384. The explanation for question b wrongly says $342 comes from using 11 terms; 11 terms gives $330 or $352."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says $342 comes from using n − 1 = 11 terms, but 11 terms gives 11/2 × (20 + 10×4) = $330, or $352 if the last term 54 is kept. $342 does not come from that mistake, so the explanation of the distractor is false."
+ ],
+ "proposal": {
+  "title": "Arithmetic series",
+  "card": [
+   "An arithmetic series is the sum of the terms of an arithmetic sequence. Here a is the first term, d is the common difference and n is the number of terms.",
+   [
+    "Formula 1",
+    "Sₙ = n/2 × (2a + (n − 1)d). Use it when you know a, d and n."
+   ],
+   [
+    "Formula 2",
+    "Sₙ = n/2 × (first + last). Use it when you know the first and last terms and n."
+   ],
+   [
+    "Example",
+    "Add 3 + 7 + 11 + ... for 10 terms. Here a = 3, d = 4 and n = 10. S₁₀ = 10/2 × (2×3 + 9×4) = 5 × 42 = 210."
+   ]
+  ],
+  "remember": "Sum = half the number of terms × (first + last), and the last term is a + (n − 1)d.",
+  "a": {
+   "q": "What is the sum of the first 8 terms of 5 + 8 + 11 + ...?",
+   "opts": [
+    "124",
+    "136",
+    "248",
+    "26"
+   ],
+   "why": "Here a = 5, d = 3 and n = 8. S₈ = 8/2 × (2×5 + 7×3) = 4 × 31 = 124. The answer 248 comes from forgetting to halve n, which is the tempting mistake.",
+   "clue": "Find 2a + (n − 1)d first, then multiply by n/2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia saves $10 in week 1, then $14 in week 2, and so on, adding $4 more each week. She does this for 12 weeks. How much has she saved in total?",
+   "opts": [
+    "$384",
+    "$408",
+    "$768",
+    "$330"
+   ],
+   "why": "Here a = 10, d = 4 and n = 12. The last term is 10 + 11×4 = 54, so S₁₂ = 12/2 × (10 + 54) = 6 × 64 = 384. The answer $408 uses 12×4 for the last term, giving 58 instead of 54.",
+   "clue": "Count the weeks as n, then find the last week's saving first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "124",
+    "also_right": []
+   },
+   "b": {
+    "best": "$384",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "remember",
+     "kind": "other",
+     "detail": "The remember line adds the nth-term formula a + (n − 1)d, which belongs to point 1 (arithmetic sequences) and is not on the card. It also keeps only Formula 2, so it summarises more narrowly than the card's two formulas."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both answers are right: 124 for (a) and $384 for (b), and the card's example checks out (210). The only issue is minor: the remember line brings in the nth-term formula from the arithmetic sequences point, which the card itself does not teach."
+  },
+  "flags": [
+   "Remember, other: The remember line adds the nth-term formula a + (n − 1)d, which belongs to point 1 (arithmetic sequences) and is not on the card. It also keeps only Formula 2, so it summarises more narrowly than the card's two formulas."
+  ]
+ },
+ "final": {
+  "title": "Arithmetic series",
+  "card": [
+   "An arithmetic series is the sum of the terms of an arithmetic sequence. Here a is the first term, d is the common difference and n is the number of terms.",
+   [
+    "Formula 1",
+    "Sₙ = n/2 × (2a + (n − 1)d). Use it when you know a, d and n."
+   ],
+   [
+    "Formula 2",
+    "Sₙ = n/2 × (first + last). Use it when you know the first and last terms and n."
+   ],
+   [
+    "Example",
+    "Add 3 + 7 + 11 + ... for 10 terms. Here a = 3, d = 4 and n = 10. S₁₀ = 10/2 × (2×3 + 9×4) = 5 × 42 = 210."
+   ]
+  ],
+  "remember": "Sum = half the number of terms × (first + last), and the last term is a + (n − 1)d.",
+  "a": {
+   "q": "What is the sum of the first 8 terms of 5 + 8 + 11 + ...?",
+   "opts": [
+    "124",
+    "136",
+    "248",
+    "26"
+   ],
+   "why": "Here a = 5, d = 3 and n = 8. S₈ = 8/2 × (2×5 + 7×3) = 4 × 31 = 124. The answer 248 comes from forgetting to halve n, which is the tempting mistake.",
+   "clue": "Find 2a + (n − 1)d first, then multiply by n/2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia saves $10 in week 1, then $14 in week 2, and so on, adding $4 more each week. She does this for 12 weeks. How much has she saved in total?",
+   "opts": [
+    "$384",
+    "$408",
+    "$768",
+    "$330"
+   ],
+   "why": "Here a = 10, d = 4 and n = 12. The last term is 10 + 11×4 = 54, so S₁₂ = 12/2 × (10 + 54) = 6 × 64 = 384. The answer $408 uses 12×4 for the last term, giving 58 instead of 54.",
+   "clue": "Count the weeks as n, then find the last week's saving first."
+  }
+ },
+ "cleared_by": "owner"
+}

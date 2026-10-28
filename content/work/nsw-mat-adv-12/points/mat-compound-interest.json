@@ -1,0 +1,169 @@
+{
+ "id": "mat-compound-interest",
+ "title": "Compound interest",
+ "brief": "e62213760603",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00985,
+  "check": 0.00874,
+  "fix": 0.01432
+ },
+ "draft": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r)ⁿ. A is the final amount, P is the amount invested at the start, r is the rate per period as a decimal, and n is the number of periods.",
+   "Rate and periods must match. For 6% per year compounded monthly, r = 0.06 ÷ 12 = 0.005 and n is the number of months.",
+   "Example: $2000 at 5% per year for 3 years. A = 2000 × 1.05³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r) once for each period. Match r and n to the same period.",
+  "a": {
+   "q": "Mia invests $1000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$1210",
+    "$1200",
+    "$1100",
+    "$1020"
+   ],
+   "why": "A = 1000 × 1.1² = 1000 × 1.21 = $1210. The answer $1200 is simple interest, which does not let the interest earn interest.",
+   "clue": "Multiply by 1.1 once for each year."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam invests $5000 at 6% per year, compounded monthly, for 2 years. Which calculation gives the final amount?",
+   "opts": [
+    "5000 × (1.005)²⁴",
+    "5000 × (1.005)²",
+    "5000 × (1.06)²⁴",
+    "5000 × (1.06)²"
+   ],
+   "why": "The rate per month is 0.06 ÷ 12 = 0.005, and there are 2 × 12 = 24 months. So A = 5000 × 1.005²⁴. Using 1.06² ignores the monthly compounding, so it does not match the period.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$1210",
+   "also_right": []
+  },
+  "b": {
+   "best": "5000 × (1.005)²⁴",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Multiply by 1.1 once for each year' gives the student the whole method (1000 × 1.1 × 1.1), so the question no longer tests whether they can set up compound interest, only the arithmetic."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, example arithmetic, answers and explanations are all correct. The only issue is that the clue for question a hands over the full method, so the question tests little beyond arithmetic."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Multiply by 1.1 once for each year' gives the student the whole method (1000 × 1.1 × 1.1), so the question no longer tests whether they can set up compound interest, only the arithmetic."
+ ],
+ "proposal": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r)ⁿ. A is the final amount, P is the amount invested at the start, r is the rate per period as a decimal, and n is the number of periods.",
+   "Rate and periods must match. For 6% per year compounded monthly, r = 0.06 ÷ 12 = 0.005 and n is the number of months.",
+   "Example: $2000 at 5% per year for 3 years. A = 2000 × 1.05³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r) once for each period. Match r and n to the same period.",
+  "a": {
+   "q": "Mia invests $1000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$1210",
+    "$1200",
+    "$1100",
+    "$1020"
+   ],
+   "why": "A = 1000 × 1.1² = 1000 × 1.21 = $1210. The answer $1200 is simple interest, which does not let the interest earn interest.",
+   "clue": "Is the second year's interest found on $1000 or on the new balance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam invests $5000 at 6% per year, compounded monthly, for 2 years. Which calculation gives the final amount?",
+   "opts": [
+    "5000 × (1.005)²⁴",
+    "5000 × (1.005)²",
+    "5000 × (1.06)²⁴",
+    "5000 × (1.06)²"
+   ],
+   "why": "The rate per month is 0.06 ÷ 12 = 0.005, and there are 2 × 12 = 24 months. So A = 5000 × 1.005²⁴. Using 1.06² ignores the monthly compounding, so the rate and periods do not match.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Multiply by 1.1 once for each year' gives the student the whole method (1000 × 1.1 × 1.1), so the question no longer tests whether they can set up compound interest, only the arithmetic."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Multiply by 1.1 once for each year' gives the student the whole method (1000 × 1.1 × 1.1), so the question no longer tests whether they can set up compound interest, only the arithmetic."
+  ]
+ },
+ "final": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r)ⁿ. A is the final amount, P is the amount invested at the start, r is the rate per period as a decimal, and n is the number of periods.",
+   "Rate and periods must match. For 6% per year compounded monthly, r = 0.06 ÷ 12 = 0.005 and n is the number of months.",
+   "Example: $2000 at 5% per year for 3 years. A = 2000 × 1.05³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r) once for each period. Match r and n to the same period.",
+  "a": {
+   "q": "Mia invests $1000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$1210",
+    "$1200",
+    "$1100",
+    "$1020"
+   ],
+   "why": "A = 1000 × 1.1² = 1000 × 1.21 = $1210. The answer $1200 is simple interest, which does not let the interest earn interest.",
+   "clue": "Is the second year's interest found on $1000 or on the new balance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam invests $5000 at 6% per year, compounded monthly, for 2 years. Which calculation gives the final amount?",
+   "opts": [
+    "5000 × (1.005)²⁴",
+    "5000 × (1.005)²",
+    "5000 × (1.06)²⁴",
+    "5000 × (1.06)²"
+   ],
+   "why": "The rate per month is 0.06 ÷ 12 = 0.005, and there are 2 × 12 = 24 months. So A = 5000 × 1.005²⁴. Using 1.06² ignores the monthly compounding, so the rate and periods do not match.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "cleared_by": "auto"
+}

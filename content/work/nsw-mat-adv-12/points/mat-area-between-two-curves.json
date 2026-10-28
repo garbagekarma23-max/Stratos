@@ -1,0 +1,105 @@
+{
+ "id": "mat-area-between-two-curves",
+ "title": "Area between two curves",
+ "brief": "0538ad2cb1c6",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00521,
+  "check": 0.00883
+ },
+ "draft": {
+  "title": "Area between two curves",
+  "card": [
+   "To find the area between two curves, subtract the lower function from the upper one, then integrate. Area = ∫ (upper − lower) dx.",
+   "The limits are where the curves meet. Set f(x) = g(x) and solve for x to find them.",
+   "Check which curve is on top between the limits, for example by testing a point. Subtracting the wrong way gives a negative area.",
+   "Example: y = x and y = x² meet where x = x², so at x = 0 and x = 1. Between them x is on top. Area = ∫ from 0 to 1 of (x − x²) dx = [x²/2 − x³/3] from 0 to 1 = 1/2 − 1/3 = 1/6."
+  ],
+  "remember": "Area between curves = integral of (upper − lower), from one intersection to the next.",
+  "a": {
+   "q": "Which integral gives the area between y = x and y = x² from x = 0 to x = 1, where y = x is the upper curve?",
+   "opts": [
+    "∫ from 0 to 1 of (x − x²) dx",
+    "∫ from 0 to 1 of (x² − x) dx",
+    "∫ from 0 to 1 of (x + x²) dx",
+    "∫ from 0 to 1 of (x · x²) dx"
+   ],
+   "why": "The area is the upper function minus the lower one, and y = x is on top, so the integrand is x − x². Using x² − x gives the right size with the wrong sign, a negative answer.",
+   "clue": "Take the lower curve away from the upper curve."
+  },
+  "b": {
+   "d": 2,
+   "q": "The line y = 4 and the curve y = x² meet at x = −2 and x = 2, with the line on top. What is the area between them?",
+   "opts": [
+    "32/3",
+    "16/3",
+    "16",
+    "64/3"
+   ],
+   "why": "Area = ∫ from −2 to 2 of (4 − x²) dx = [4x − x³/3] from −2 to 2 = (8 − 8/3) − (−8 + 8/3) = 32/3. Using only 0 to 2 gives 16/3, which is just half of the area.",
+   "clue": "The region runs from x = −2 to x = 2, not from 0."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "∫ from 0 to 1 of (x − x²) dx",
+   "also_right": []
+  },
+  "b": {
+   "best": "32/3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card, example and both answers check out: ∫₀¹(x − x²)dx = 1/6 and ∫₋₂²(4 − x²)dx = 32/3."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Area between two curves",
+  "card": [
+   "To find the area between two curves, subtract the lower function from the upper one, then integrate. Area = ∫ (upper − lower) dx.",
+   "The limits are where the curves meet. Set f(x) = g(x) and solve for x to find them.",
+   "Check which curve is on top between the limits, for example by testing a point. Subtracting the wrong way gives a negative area.",
+   "Example: y = x and y = x² meet where x = x², so at x = 0 and x = 1. Between them x is on top. Area = ∫ from 0 to 1 of (x − x²) dx = [x²/2 − x³/3] from 0 to 1 = 1/2 − 1/3 = 1/6."
+  ],
+  "remember": "Area between curves = integral of (upper − lower), from one intersection to the next.",
+  "a": {
+   "q": "Which integral gives the area between y = x and y = x² from x = 0 to x = 1, where y = x is the upper curve?",
+   "opts": [
+    "∫ from 0 to 1 of (x − x²) dx",
+    "∫ from 0 to 1 of (x² − x) dx",
+    "∫ from 0 to 1 of (x + x²) dx",
+    "∫ from 0 to 1 of (x · x²) dx"
+   ],
+   "why": "The area is the upper function minus the lower one, and y = x is on top, so the integrand is x − x². Using x² − x gives the right size with the wrong sign, a negative answer.",
+   "clue": "Take the lower curve away from the upper curve."
+  },
+  "b": {
+   "d": 2,
+   "q": "The line y = 4 and the curve y = x² meet at x = −2 and x = 2, with the line on top. What is the area between them?",
+   "opts": [
+    "32/3",
+    "16/3",
+    "16",
+    "64/3"
+   ],
+   "why": "Area = ∫ from −2 to 2 of (4 − x²) dx = [4x − x³/3] from −2 to 2 = (8 − 8/3) − (−8 + 8/3) = 32/3. Using only 0 to 2 gives 16/3, which is just half of the area.",
+   "clue": "The region runs from x = −2 to x = 2, not from 0."
+  }
+ },
+ "cleared_by": "checker"
+}

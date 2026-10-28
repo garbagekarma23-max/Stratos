@@ -1,0 +1,240 @@
+{
+ "id": "mat-bearings-elevation",
+ "title": "Bearings and elevation",
+ "brief": "f52ef1e9ed58",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.0048,
+  "check": 0.01024,
+  "fix": 0.03271,
+  "recheck": 0.01562
+ },
+ "draft": {
+  "title": "Bearings and elevation",
+  "card": [
+   [
+    "True bearing",
+    "A true bearing is an angle measured clockwise from north, written with three digits. East is 090°, south is 180° and a bearing of 45° is written 045°."
+   ],
+   [
+    "Elevation",
+    "An angle of elevation is measured up from the horizontal to the line of sight. An angle of depression is measured down from the horizontal."
+   ],
+   [
+    "Two steps",
+    "Draw a right-angled triangle. Use sin, cos or tan to find one side, then use that side in the next step. Example: a ship sails 10 km on a bearing of 090°, then 24 km on 180°. It is now √(10² + 24²) = √676 = 26 km from the start."
+   ],
+   [
+    "Back bearing",
+    "To find the bearing of A from B, when you know the bearing of B from A, add or subtract 180°. Keep the answer between 000° and 360°."
+   ]
+  ],
+  "remember": "Bearings turn clockwise from north. Elevation and depression are measured from the horizontal.",
+  "a": {
+   "q": "A boat sails 15 km due east, then 20 km due south. How far is it from where it started?",
+   "opts": [
+    "25 km",
+    "35 km",
+    "5 km",
+    "√175 km"
+   ],
+   "why": "The two legs meet at a right angle, so the distance is √(15² + 20²) = √625 = 25 km. Adding the legs to get 35 km is wrong, because the straight line back is the hypotenuse, not the sum of the two sides.",
+   "clue": "East then south makes a right angle. Which side is the direct distance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Town B is on a bearing of 060° from town A. What is the bearing of town A from town B?",
+   "opts": [
+    "240°",
+    "120°",
+    "300°",
+    "060°"
+   ],
+   "why": "The back bearing differs by 180°, so 060° + 180° = 240°. Taking 180° − 60° = 120° is tempting, but that treats the angle as measured from south and does not give the clockwise angle from north at B.",
+   "clue": "The direction at B points the opposite way to the direction at A."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "25 km",
+   "also_right": []
+  },
+  "b": {
+   "best": "240°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The 'Two steps' item says to use sin, cos or tan to find one side and then use it in the next step, but its example uses only Pythagoras in a single step. The example does not show the method it is meant to illustrate."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Keep the answer between 000° and 360°' suggests 360° is a valid bearing. Bearings run from 000° up to but not including 360° (360° is written 000°)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with single answers of 25 km and 240°. On the card, the two-step example uses Pythagoras rather than the sin/cos/tan method it describes, and the back-bearing range wrongly implies 360° is a valid bearing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The 'Two steps' item says to use sin, cos or tan to find one side and then use it in the next step, but its example uses only Pythagoras in a single step. The example does not show the method it is meant to illustrate.",
+  "Card, wording: 'Keep the answer between 000° and 360°' suggests 360° is a valid bearing. Bearings run from 000° up to but not including 360° (360° is written 000°)."
+ ],
+ "proposal": {
+  "title": "Bearings and elevation",
+  "card": [
+   [
+    "True bearing",
+    "A true bearing is an angle measured clockwise from north, written with three digits. East is 090°, south is 180°, west is 270° and a bearing of 45° is written 045°."
+   ],
+   [
+    "Elevation",
+    "An angle of elevation is measured up from the horizontal to the line of sight. An angle of depression is measured down from the horizontal. The depression from A to B equals the elevation from B to A."
+   ],
+   [
+    "Two steps",
+    "Use sin, cos or tan in one right-angled triangle to find a shared side, then use it in the next. Example: 30 m from a tower the elevation is 40°, so height = 30 × tan 40° ≈ 25.2 m. Where the elevation is 25°, distance = 25.2 ÷ tan 25° ≈ 54.0 m."
+   ],
+   [
+    "Back bearing",
+    "To find the bearing of A from B, add 180° to the bearing of B from A, or subtract 180° if it is 180° or more. Bearings run from 000° up to 359°, and 360° is written 000°."
+   ]
+  ],
+  "remember": "Bearings turn clockwise from north. Elevation and depression both start at the horizontal.",
+  "a": {
+   "q": "A plane flies south-west. What is its true bearing?",
+   "opts": [
+    "225°",
+    "135°",
+    "045°",
+    "315°"
+   ],
+   "why": "South is 180° and west is 270°, so south-west lies halfway between them at 225°. The answer 135° comes from turning anticlockwise from north, but bearings always turn clockwise.",
+   "clue": "Turn clockwise from north past south, but not as far as west."
+  },
+  "b": {
+   "d": 3,
+   "q": "From the top of a 60 m lighthouse, the angle of depression to a boat is 15°. Later it is 25°. How far has the boat moved toward the lighthouse?",
+   "opts": [
+    "95.3 m",
+    "11.9 m",
+    "89.9 m",
+    "352.6 m"
+   ],
+   "why": "The depression angle equals the elevation angle at the boat, so each distance is 60 ÷ tan of the angle: 60 ÷ tan 15° ≈ 223.9 m and 60 ÷ tan 25° ≈ 128.7 m. The boat moved 223.9 − 128.7 ≈ 95.3 m. Multiplying by tan instead of dividing gives 11.9 m, which treats the height as the side next to the angle.",
+   "clue": "The height is opposite the angle at the boat in both triangles."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "225°",
+    "also_right": []
+   },
+   "b": {
+    "best": "95.3 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: south-west is 225°, and 60 ÷ tan 15° − 60 ÷ tan 25° ≈ 95.3 m. The card's worked example is also accurate."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The 'Two steps' item says to use sin, cos or tan to find one side and then use it in the next step, but its example uses only Pythagoras in a single step. The example does not show the method it is meant to illustrate."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Keep the answer between 000° and 360°' suggests 360° is a valid bearing. Bearings run from 000° up to but not including 360° (360° is written 000°)."
+   }
+  ],
+  "flags": [
+   "Card, other: The 'Two steps' item says to use sin, cos or tan to find one side and then use it in the next step, but its example uses only Pythagoras in a single step. The example does not show the method it is meant to illustrate.",
+   "Card, wording: 'Keep the answer between 000° and 360°' suggests 360° is a valid bearing. Bearings run from 000° up to but not including 360° (360° is written 000°)."
+  ]
+ },
+ "final": {
+  "title": "Bearings and elevation",
+  "card": [
+   [
+    "True bearing",
+    "A true bearing is an angle measured clockwise from north, written with three digits. East is 090°, south is 180°, west is 270° and a bearing of 45° is written 045°."
+   ],
+   [
+    "Elevation",
+    "An angle of elevation is measured up from the horizontal to the line of sight. An angle of depression is measured down from the horizontal. The depression from A to B equals the elevation from B to A."
+   ],
+   [
+    "Two steps",
+    "Use sin, cos or tan in one right-angled triangle to find a shared side, then use it in the next. Example: 30 m from a tower the elevation is 40°, so height = 30 × tan 40° ≈ 25.2 m. Where the elevation is 25°, distance = 25.2 ÷ tan 25° ≈ 54.0 m."
+   ],
+   [
+    "Back bearing",
+    "To find the bearing of A from B, add 180° to the bearing of B from A, or subtract 180° if it is 180° or more. Bearings run from 000° up to 359°, and 360° is written 000°."
+   ]
+  ],
+  "remember": "Bearings turn clockwise from north. Elevation and depression both start at the horizontal.",
+  "a": {
+   "q": "A plane flies south-west. What is its true bearing?",
+   "opts": [
+    "225°",
+    "135°",
+    "045°",
+    "315°"
+   ],
+   "why": "South is 180° and west is 270°, so south-west lies halfway between them at 225°. The answer 135° comes from turning anticlockwise from north, but bearings always turn clockwise.",
+   "clue": "Turn clockwise from north past south, but not as far as west."
+  },
+  "b": {
+   "d": 3,
+   "q": "From the top of a 60 m lighthouse, the angle of depression to a boat is 15°. Later it is 25°. How far has the boat moved toward the lighthouse?",
+   "opts": [
+    "95.3 m",
+    "11.9 m",
+    "89.9 m",
+    "352.6 m"
+   ],
+   "why": "The depression angle equals the elevation angle at the boat, so each distance is 60 ÷ tan of the angle: 60 ÷ tan 15° ≈ 223.9 m and 60 ÷ tan 25° ≈ 128.7 m. The boat moved 223.9 − 128.7 ≈ 95.3 m. Multiplying by tan instead of dividing gives 11.9 m, which treats the height as the side next to the angle.",
+   "clue": "The height is opposite the angle at the boat in both triangles."
+  }
+ },
+ "cleared_by": "recheck"
+}

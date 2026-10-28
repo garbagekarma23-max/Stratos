@@ -1,0 +1,125 @@
+{
+ "id": "mat-where-function-not-differentiable",
+ "title": "Where a function is not differentiable",
+ "brief": "8658b8925f47",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: failed the content check, writing again",
+  "2026-10-27T01:08:33Z write: done",
+  "2026-10-27T01:22:57Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01158,
+  "check": 0.0077
+ },
+ "draft": {
+  "title": "Where a function is not differentiable",
+  "card": [
+   "A derivative at a point is the gradient of the tangent there. If no single tangent gradient exists, the function is not differentiable at that point.",
+   [
+    "Sharp corner",
+    "the left and right sides have different gradients. For f(x) = |x| at x = 0, the gradient is −1 on the left and 1 on the right, so there is no derivative."
+   ],
+   [
+    "Jump",
+    "the graph breaks, so it is not continuous there. A function that is not continuous at a point cannot be differentiable there."
+   ],
+   [
+    "Vertical tangent",
+    "the tangent is a vertical line, which has no gradient. For f(x) = ∛x at x = 0, the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
+   ]
+  ],
+  "remember": "No derivative where the graph has a corner, a jump or a vertical tangent.",
+  "a": {
+   "q": "Which function is continuous at x = 0 but has no derivative there?",
+   "opts": [
+    "f(x) = |x|",
+    "f(x) = x²",
+    "f(x) = 3x + 1",
+    "f(x) = x³"
+   ],
+   "why": "The graph of |x| has no break at x = 0, but the gradient changes from −1 to 1 at the corner, so there is no derivative. The graph of x² is smooth at x = 0, with gradient 0, so it is differentiable.",
+   "clue": "Look for the function whose graph has a sharp point at the origin."
+  },
+  "b": {
+   "d": 3,
+   "q": "A function has gradient 2 for x < 3 and gradient 2 for x > 3, but its graph jumps up by 4 units at x = 3. What is true at x = 3?",
+   "opts": [
+    "It is not differentiable, because it is not continuous",
+    "It is differentiable, because both gradients equal 2",
+    "It is not differentiable, because of a sharp corner",
+    "It is not differentiable, because the tangent is vertical"
+   ],
+   "why": "A jump means the function is not continuous at x = 3, so it cannot be differentiable there. Equal gradients on each side are tempting, but the two pieces do not meet, so there is no single tangent at that point.",
+   "clue": "Check whether the graph is joined at x = 3 before comparing gradients."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "f(x) = |x|",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is not differentiable, because it is not continuous",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Where a function is not differentiable",
+  "card": [
+   "A derivative at a point is the gradient of the tangent there. If no single tangent gradient exists, the function is not differentiable at that point.",
+   [
+    "Sharp corner",
+    "the left and right sides have different gradients. For f(x) = |x| at x = 0, the gradient is −1 on the left and 1 on the right, so there is no derivative."
+   ],
+   [
+    "Jump",
+    "the graph breaks, so it is not continuous there. A function that is not continuous at a point cannot be differentiable there."
+   ],
+   [
+    "Vertical tangent",
+    "the tangent is a vertical line, which has no gradient. For f(x) = ∛x at x = 0, the curve is continuous but the gradient grows without limit. So a function can be continuous at a point and still not differentiable there."
+   ]
+  ],
+  "remember": "No derivative where the graph has a corner, a jump or a vertical tangent.",
+  "a": {
+   "q": "Which function is continuous at x = 0 but has no derivative there?",
+   "opts": [
+    "f(x) = |x|",
+    "f(x) = x²",
+    "f(x) = 3x + 1",
+    "f(x) = x³"
+   ],
+   "why": "The graph of |x| has no break at x = 0, but the gradient changes from −1 to 1 at the corner, so there is no derivative. The graph of x² is smooth at x = 0, with gradient 0, so it is differentiable.",
+   "clue": "Look for the function whose graph has a sharp point at the origin."
+  },
+  "b": {
+   "d": 3,
+   "q": "A function has gradient 2 for x < 3 and gradient 2 for x > 3, but its graph jumps up by 4 units at x = 3. What is true at x = 3?",
+   "opts": [
+    "It is not differentiable, because it is not continuous",
+    "It is differentiable, because both gradients equal 2",
+    "It is not differentiable, because of a sharp corner",
+    "It is not differentiable, because the tangent is vertical"
+   ],
+   "why": "A jump means the function is not continuous at x = 3, so it cannot be differentiable there. Equal gradients on each side are tempting, but the two pieces do not meet, so there is no single tangent at that point.",
+   "clue": "Check whether the graph is joined at x = 3 before comparing gradients."
+  }
+ },
+ "cleared_by": "checker"
+}

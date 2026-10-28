@@ -1,0 +1,204 @@
+{
+ "id": "mat-sample-spaces-probability",
+ "title": "Sample spaces and probability",
+ "brief": "efcceabd76ad",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.0046,
+  "check": 0.01077,
+  "fix": 0.01374,
+  "recheck": 0.0105
+ },
+ "draft": {
+  "title": "Sample spaces and probability",
+  "card": [
+   "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
+   "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
+   "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+   "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
+  ],
+  "remember": "List every outcome, count the ones you want, then divide by the total.",
+  "a": {
+   "q": "A fair die is rolled once. What is the probability of rolling a number greater than 4?",
+   "opts": [
+    "1/3",
+    "1/6",
+    "2/3",
+    "5/6"
+   ],
+   "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only the 5 and forgets that 4 is not included while 6 is.",
+   "clue": "Count the outcomes that are above 4, not including 4."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two fair coins are tossed. What is the probability of getting exactly one head?",
+   "opts": [
+    "1/2",
+    "1/3",
+    "1/4",
+    "3/4"
+   ],
+   "why": "The sample space is {HH, HT, TH, TT}, which has 4 equally likely outcomes. Exactly one head happens in HT and TH, so P = 2/4 = 1/2. The answer 1/3 comes from wrongly listing only 3 outcomes: 2 heads, 1 head, 0 heads. These are not equally likely.",
+   "clue": "List the outcomes in order, so HT and TH are different."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1/3",
+   "also_right": []
+  },
+  "b": {
+   "best": "1/2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why's account of the 1/6 distractor is muddled. It says 1/6 'counts only the 5 and forgets that 4 is not included while 6 is'. Counting only the 5 means missing the 6; the point about 4 is irrelevant to getting 1/6. Reword to something like: 'counts only one outcome, forgetting that 6 is also greater than 4.'"
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line drops the card's condition that the outcomes must be equally likely. Without it, the rule supports the very error question b's distractor tests ({2 heads, 1 head, 0 heads} giving 1/3). Add 'equally likely' to the line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (1/3 and 1/2). Two problems: the why for (a) explains the 1/6 distractor confusingly, and the remember line leaves out the 'equally likely' condition the card states."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why's account of the 1/6 distractor is muddled. It says 1/6 'counts only the 5 and forgets that 4 is not included while 6 is'. Counting only the 5 means missing the 6; the point about 4 is irrelevant to getting 1/6. Reword to something like: 'counts only one outcome, forgetting that 6 is also greater than 4.'",
+  "Remember, other: The remember line drops the card's condition that the outcomes must be equally likely. Without it, the rule supports the very error question b's distractor tests ({2 heads, 1 head, 0 heads} giving 1/3). Add 'equally likely' to the line."
+ ],
+ "proposal": {
+  "title": "Sample spaces and probability",
+  "card": [
+   "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
+   "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
+   "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+   "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
+  ],
+  "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
+  "a": {
+   "q": "A fair die is rolled once. What is the probability of rolling a number greater than 4?",
+   "opts": [
+    "1/3",
+    "1/6",
+    "2/3",
+    "5/6"
+   ],
+   "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+   "clue": "Count the outcomes that are above 4, not including 4."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two fair coins are tossed. What is the probability of getting exactly one head?",
+   "opts": [
+    "1/2",
+    "1/3",
+    "1/4",
+    "3/4"
+   ],
+   "why": "The sample space is {HH, HT, TH, TT}, which has 4 equally likely outcomes. Exactly one head happens in HT and TH, so P = 2/4 = 1/2. The answer 1/3 comes from wrongly listing only 3 outcomes: 2 heads, 1 head, 0 heads. These are not equally likely.",
+   "clue": "List the outcomes in order, so HT and TH are different."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "1/3",
+    "also_right": []
+   },
+   "b": {
+    "best": "1/2",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why's account of the 1/6 distractor is muddled. It says 1/6 'counts only the 5 and forgets that 4 is not included while 6 is'. Counting only the 5 means missing the 6; the point about 4 is irrelevant to getting 1/6. Reword to something like: 'counts only one outcome, forgetting that 6 is also greater than 4.'"
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line drops the card's condition that the outcomes must be equally likely. Without it, the rule supports the very error question b's distractor tests ({2 heads, 1 head, 0 heads} giving 1/3). Add 'equally likely' to the line."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why's account of the 1/6 distractor is muddled. It says 1/6 'counts only the 5 and forgets that 4 is not included while 6 is'. Counting only the 5 means missing the 6; the point about 4 is irrelevant to getting 1/6. Reword to something like: 'counts only one outcome, forgetting that 6 is also greater than 4.'",
+   "Remember, other: The remember line drops the card's condition that the outcomes must be equally likely. Without it, the rule supports the very error question b's distractor tests ({2 heads, 1 head, 0 heads} giving 1/3). Add 'equally likely' to the line."
+  ]
+ },
+ "final": {
+  "title": "Sample spaces and probability",
+  "card": [
+   "A sample space is the list of all possible outcomes of an experiment. Rolling one die gives {1, 2, 3, 4, 5, 6}.",
+   "An event is a set of outcomes we care about, such as rolling an even number: {2, 4, 6}.",
+   "If all outcomes are equally likely, P(event) = number of favourable outcomes ÷ total number of outcomes. For an even number, P = 3/6 = 1/2.",
+   "Every probability is between 0 and 1. An impossible event has probability 0 and a certain event has probability 1."
+  ],
+  "remember": "List equally likely outcomes, count the ones you want, then divide by the total.",
+  "a": {
+   "q": "A fair die is rolled once. What is the probability of rolling a number greater than 4?",
+   "opts": [
+    "1/3",
+    "1/6",
+    "2/3",
+    "5/6"
+   ],
+   "why": "The favourable outcomes are 5 and 6, so there are 2 out of 6 outcomes, and 2/6 = 1/3. The option 1/6 is tempting, but it counts only one outcome, forgetting that 6 is also greater than 4.",
+   "clue": "Count the outcomes that are above 4, not including 4."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two fair coins are tossed. What is the probability of getting exactly one head?",
+   "opts": [
+    "1/2",
+    "1/3",
+    "1/4",
+    "3/4"
+   ],
+   "why": "The sample space is {HH, HT, TH, TT}, which has 4 equally likely outcomes. Exactly one head happens in HT and TH, so P = 2/4 = 1/2. The answer 1/3 comes from wrongly listing only 3 outcomes: 2 heads, 1 head, 0 heads. These are not equally likely.",
+   "clue": "List the outcomes in order, so HT and TH are different."
+  }
+ },
+ "cleared_by": "recheck"
+}

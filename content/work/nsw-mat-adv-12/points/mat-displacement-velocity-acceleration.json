@@ -1,0 +1,111 @@
+{
+ "id": "mat-displacement-velocity-acceleration",
+ "title": "Displacement, velocity and acceleration",
+ "brief": "29c21b61845e",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00499,
+  "check": 0.00618
+ },
+ "draft": {
+  "title": "Displacement, velocity and acceleration",
+  "card": [
+   "For a particle moving in a straight line, x(t) is its displacement from the origin at time t. Velocity is v = dx/dt and acceleration is a = dv/dt.",
+   "Going the other way, integrate. Velocity is the integral of acceleration, and displacement is the integral of velocity. Each integral adds a constant C.",
+   "An initial condition fixes the constant. Put in the given values of t and v (or x), then solve for C.",
+   [
+    "Example",
+    "If a = 6t and v = 2 when t = 0, then v = 3t² + C. Putting in t = 0 gives 2 = C, so v = 3t² + 2. At t = 1, v = 5."
+   ]
+  ],
+  "remember": "Differentiate to go from x to v to a. Integrate to go back, and use the starting values to find C.",
+  "a": {
+   "q": "A particle has displacement x = t³ − 4t metres at time t seconds. What is its velocity when t = 2?",
+   "opts": [
+    "8 m/s",
+    "4 m/s",
+    "0 m/s",
+    "12 m/s"
+   ],
+   "why": "v = dx/dt = 3t² − 4, so at t = 2, v = 12 − 4 = 8 m/s. The value 0 is x itself at t = 2 (8 − 8), which is displacement, not velocity.",
+   "clue": "Differentiate x first, then put in t = 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "A particle has acceleration a = 4t m/s². When t = 0 its velocity is 3 m/s. What is its velocity when t = 2?",
+   "opts": [
+    "11 m/s",
+    "8 m/s",
+    "5 m/s",
+    "14 m/s"
+   ],
+   "why": "Integrating gives v = 2t² + C. Since v = 3 when t = 0, C = 3, so v = 2t² + 3. At t = 2, v = 8 + 3 = 11 m/s. The answer 8 comes from leaving out the constant.",
+   "clue": "Integrate a, then use v = 3 at t = 0 to find C before putting in t = 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8 m/s",
+   "also_right": []
+  },
+  "b": {
+   "best": "11 m/s",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Displacement, velocity and acceleration",
+  "card": [
+   "For a particle moving in a straight line, x(t) is its displacement from the origin at time t. Velocity is v = dx/dt and acceleration is a = dv/dt.",
+   "Going the other way, integrate. Velocity is the integral of acceleration, and displacement is the integral of velocity. Each integral adds a constant C.",
+   "An initial condition fixes the constant. Put in the given values of t and v (or x), then solve for C.",
+   [
+    "Example",
+    "If a = 6t and v = 2 when t = 0, then v = 3t² + C. Putting in t = 0 gives 2 = C, so v = 3t² + 2. At t = 1, v = 5."
+   ]
+  ],
+  "remember": "Differentiate to go from x to v to a. Integrate to go back, and use the starting values to find C.",
+  "a": {
+   "q": "A particle has displacement x = t³ − 4t metres at time t seconds. What is its velocity when t = 2?",
+   "opts": [
+    "8 m/s",
+    "4 m/s",
+    "0 m/s",
+    "12 m/s"
+   ],
+   "why": "v = dx/dt = 3t² − 4, so at t = 2, v = 12 − 4 = 8 m/s. The value 0 is x itself at t = 2 (8 − 8), which is displacement, not velocity.",
+   "clue": "Differentiate x first, then put in t = 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "A particle has acceleration a = 4t m/s². When t = 0 its velocity is 3 m/s. What is its velocity when t = 2?",
+   "opts": [
+    "11 m/s",
+    "8 m/s",
+    "5 m/s",
+    "14 m/s"
+   ],
+   "why": "Integrating gives v = 2t² + C. Since v = 3 when t = 0, C = 3, so v = 2t² + 3. At t = 2, v = 8 + 3 = 11 m/s. The answer 8 comes from leaving out the constant.",
+   "clue": "Integrate a, then use v = 3 at t = 0 to find C before putting in t = 2."
+  }
+ },
+ "cleared_by": "checker"
+}

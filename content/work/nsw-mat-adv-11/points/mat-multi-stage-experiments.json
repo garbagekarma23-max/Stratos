@@ -1,0 +1,117 @@
+{
+ "id": "mat-multi-stage-experiments",
+ "title": "Multi-stage experiments",
+ "brief": "7c1da29595dc",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01005,
+  "check": 0.00588
+ },
+ "draft": {
+  "title": "Multi-stage experiments",
+  "card": [
+   "A multi-stage experiment has two or more steps, such as drawing two counters or rolling a die twice. A tree diagram shows each stage as a set of branches, with the probability written on each branch.",
+   "To find the probability of one path, multiply along its branches. To find the probability of an outcome that can happen by more than one path, add the path probabilities.",
+   [
+    "With replacement",
+    "the item is put back, so the second stage has the same probabilities as the first."
+   ],
+   [
+    "Without replacement",
+    "the item is kept out, so the total and possibly the favourable count drop by 1 at the second stage. Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(both red) = 3/5 × 2/4 = 6/20 = 3/10."
+   ]
+  ],
+  "remember": "Multiply along a path, add across paths, and check whether the second stage has changed.",
+  "a": {
+   "q": "A bag has 4 red and 6 blue counters. Two are drawn without replacement. What is P(both red)?",
+   "opts": [
+    "2/15",
+    "4/25",
+    "2/5",
+    "1/3"
+   ],
+   "why": "The first draw gives 4/10. With one red gone, the second gives 3/9. So P = 4/10 × 3/9 = 12/90 = 2/15. The option 4/25 comes from 4/10 × 4/10, which wrongly puts the counter back.",
+   "clue": "After the first draw, both the reds and the total change."
+  },
+  "b": {
+   "d": 3,
+   "q": "A box has 3 green and 2 yellow balls. Two are drawn without replacement. What is P(exactly one green)?",
+   "opts": [
+    "3/5",
+    "3/10",
+    "12/25",
+    "6/25"
+   ],
+   "why": "Two paths work: green then yellow is 3/5 × 2/4 = 3/10, and yellow then green is 2/5 × 3/4 = 3/10. Add them: 3/10 + 3/10 = 3/5. The option 12/25 comes from using replacement, where the answer is 2 × 3/5 × 2/5.",
+   "clue": "Find both orders, then add them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2/15",
+   "also_right": []
+  },
+  "b": {
+   "best": "3/5",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Multi-stage experiments",
+  "card": [
+   "A multi-stage experiment has two or more steps, such as drawing two counters or rolling a die twice. A tree diagram shows each stage as a set of branches, with the probability written on each branch.",
+   "To find the probability of one path, multiply along its branches. To find the probability of an outcome that can happen by more than one path, add the path probabilities.",
+   [
+    "With replacement",
+    "the item is put back, so the second stage has the same probabilities as the first."
+   ],
+   [
+    "Without replacement",
+    "the item is kept out, so the total and possibly the favourable count drop by 1 at the second stage. Example: a bag has 3 red and 2 blue counters. Two are drawn without replacement. P(both red) = 3/5 × 2/4 = 6/20 = 3/10."
+   ]
+  ],
+  "remember": "Multiply along a path, add across paths, and check whether the second stage has changed.",
+  "a": {
+   "q": "A bag has 4 red and 6 blue counters. Two are drawn without replacement. What is P(both red)?",
+   "opts": [
+    "2/15",
+    "4/25",
+    "2/5",
+    "1/3"
+   ],
+   "why": "The first draw gives 4/10. With one red gone, the second gives 3/9. So P = 4/10 × 3/9 = 12/90 = 2/15. The option 4/25 comes from 4/10 × 4/10, which wrongly puts the counter back.",
+   "clue": "After the first draw, both the reds and the total change."
+  },
+  "b": {
+   "d": 3,
+   "q": "A box has 3 green and 2 yellow balls. Two are drawn without replacement. What is P(exactly one green)?",
+   "opts": [
+    "3/5",
+    "3/10",
+    "12/25",
+    "6/25"
+   ],
+   "why": "Two paths work: green then yellow is 3/5 × 2/4 = 3/10, and yellow then green is 2/5 × 3/4 = 3/10. Add them: 3/10 + 3/10 = 3/5. The option 12/25 comes from using replacement, where the answer is 2 × 3/5 × 2/5.",
+   "clue": "Find both orders, then add them."
+  }
+ },
+ "cleared_by": "checker"
+}

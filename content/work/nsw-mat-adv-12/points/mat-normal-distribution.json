@@ -1,0 +1,192 @@
+{
+ "id": "mat-normal-distribution",
+ "title": "The normal distribution",
+ "brief": "bb0bbb9ec874",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00501,
+  "check": 0.00844,
+  "fix": 0.02026,
+  "recheck": 0.01096
+ },
+ "draft": {
+  "title": "The normal distribution",
+  "card": [
+   "A normal distribution is a symmetric, bell-shaped curve. Its highest point is at the mean (μ), and the left and right sides mirror each other.",
+   "Two numbers set the curve: the mean μ, which gives its centre, and the standard deviation σ, which gives its spread. A bigger σ makes a wider, flatter bell.",
+   "The empirical rule: about 68% of values lie within 1σ of the mean, about 95% within 2σ, and about 99.7% within 3σ.",
+   "Example: if μ = 50 and σ = 4, about 95% of values lie within 2 × 4 = 8 of the mean, so between 42 and 58."
+  ],
+  "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within 1, 2 and 3σ.",
+  "a": {
+   "q": "A normal variable has mean 100 and standard deviation 10. About 95% of values lie between which two numbers?",
+   "opts": [
+    "80 and 120",
+    "90 and 110",
+    "70 and 130",
+    "95 and 105"
+   ],
+   "why": "95% lies within 2 standard deviations, and 2 × 10 = 20, so the range is 100 − 20 = 80 to 100 + 20 = 120. The range 90 to 110 is only 1 standard deviation each side, which holds about 68%.",
+   "clue": "95% is within 2 standard deviations of the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "The lengths of a fish species in a Tasmanian farm are normal, with mean 40 cm and standard deviation 3 cm. About what percentage of fish are longer than 46 cm?",
+   "opts": [
+    "2.5%",
+    "5%",
+    "16%",
+    "0.15%"
+   ],
+   "why": "46 is 2 standard deviations above the mean (40 + 2 × 3). About 95% lie within 2σ, so about 5% lie outside, split equally between the two tails by symmetry. That leaves about 2.5% above 46 cm, not 5%.",
+   "clue": "Outside 2σ is split evenly between both tails."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "80 and 120",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.5%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Finding the share of values in one tail (above 46 cm) by halving the 5% outside 2σ is a probability calculation from the normal distribution. That is point 5's idea, not this point's. The card never shows how to split the outside share between the tails, so the question relies on the clue for a method the card does not teach."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. Question b asks for a one-tail probability, which belongs to point 5 (probabilities from the normal distribution) and goes beyond what this card teaches."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Finding the share of values in one tail (above 46 cm) by halving the 5% outside 2σ is a probability calculation from the normal distribution. That is point 5's idea, not this point's. The card never shows how to split the outside share between the tails, so the question relies on the clue for a method the card does not teach."
+ ],
+ "proposal": {
+  "title": "The normal distribution",
+  "card": [
+   "A normal distribution is a symmetric, bell-shaped curve. Its highest point is at the mean (μ), and the left and right sides mirror each other.",
+   "Two numbers set the curve: the mean μ, which gives its centre, and the standard deviation σ, which gives its spread. A bigger σ makes a wider, flatter bell.",
+   "The empirical rule: about 68% of values lie within 1σ of the mean, about 95% within 2σ, and about 99.7% within 3σ.",
+   "Example: if μ = 50 and σ = 4, about 95% of values lie within 2 × 4 = 8 of the mean, so between 42 and 58."
+  ],
+  "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within 1, 2 and 3σ.",
+  "a": {
+   "q": "A normal variable has mean 100 and standard deviation 10. About 95% of values lie between which two numbers?",
+   "opts": [
+    "80 and 120",
+    "90 and 110",
+    "70 and 130",
+    "95 and 105"
+   ],
+   "why": "95% lies within 2 standard deviations, and 2 × 10 = 20, so the range is 100 − 20 = 80 to 100 + 20 = 120. The range 90 to 110 is only 1 standard deviation each side, which holds about 68%.",
+   "clue": "95% is within 2 standard deviations of the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Fish lengths on a Tasmanian farm are normal. About 95% of the fish are between 34 cm and 46 cm long. What are the mean and standard deviation?",
+   "opts": [
+    "Mean 40 cm, standard deviation 3 cm",
+    "Mean 40 cm, standard deviation 6 cm",
+    "Mean 40 cm, standard deviation 12 cm",
+    "Mean 40 cm, standard deviation 2 cm"
+   ],
+   "why": "The curve is symmetric, so the mean is the midpoint: (34 + 46) ÷ 2 = 40. Each end is 6 cm from the mean, and 95% covers 2σ each side, so 2σ = 6 and σ = 3. Choosing 6 cm treats the distance to each end as only one standard deviation.",
+   "clue": "How many standard deviations does 95% cover on each side?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "80 and 120",
+    "also_right": []
+   },
+   "b": {
+    "best": "Mean 40 cm, standard deviation 3 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Finding the share of values in one tail (above 46 cm) by halving the 5% outside 2σ is a probability calculation from the normal distribution. That is point 5's idea, not this point's. The card never shows how to split the outside share between the tails, so the question relies on the clue for a method the card does not teach."
+   }
+  ],
+  "flags": [
+   "Question b, other: Finding the share of values in one tail (above 46 cm) by halving the 5% outside 2σ is a probability calculation from the normal distribution. That is point 5's idea, not this point's. The card never shows how to split the outside share between the tails, so the question relies on the clue for a method the card does not teach."
+  ]
+ },
+ "final": {
+  "title": "The normal distribution",
+  "card": [
+   "A normal distribution is a symmetric, bell-shaped curve. Its highest point is at the mean (μ), and the left and right sides mirror each other.",
+   "Two numbers set the curve: the mean μ, which gives its centre, and the standard deviation σ, which gives its spread. A bigger σ makes a wider, flatter bell.",
+   "The empirical rule: about 68% of values lie within 1σ of the mean, about 95% within 2σ, and about 99.7% within 3σ.",
+   "Example: if μ = 50 and σ = 4, about 95% of values lie within 2 × 4 = 8 of the mean, so between 42 and 58."
+  ],
+  "remember": "Mean sets the centre, standard deviation sets the spread: 68%, 95% and 99.7% within 1, 2 and 3σ.",
+  "a": {
+   "q": "A normal variable has mean 100 and standard deviation 10. About 95% of values lie between which two numbers?",
+   "opts": [
+    "80 and 120",
+    "90 and 110",
+    "70 and 130",
+    "95 and 105"
+   ],
+   "why": "95% lies within 2 standard deviations, and 2 × 10 = 20, so the range is 100 − 20 = 80 to 100 + 20 = 120. The range 90 to 110 is only 1 standard deviation each side, which holds about 68%.",
+   "clue": "95% is within 2 standard deviations of the mean."
+  },
+  "b": {
+   "d": 3,
+   "q": "Fish lengths on a Tasmanian farm are normal. About 95% of the fish are between 34 cm and 46 cm long. What are the mean and standard deviation?",
+   "opts": [
+    "Mean 40 cm, standard deviation 3 cm",
+    "Mean 40 cm, standard deviation 6 cm",
+    "Mean 40 cm, standard deviation 12 cm",
+    "Mean 40 cm, standard deviation 2 cm"
+   ],
+   "why": "The curve is symmetric, so the mean is the midpoint: (34 + 46) ÷ 2 = 40. Each end is 6 cm from the mean, and 95% covers 2σ each side, so 2σ = 6 and σ = 3. Choosing 6 cm treats the distance to each end as only one standard deviation.",
+   "clue": "How many standard deviations does 95% cover on each side?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,190 @@
+{
+ "id": "mat-area-any-triangle",
+ "title": "Area of any triangle",
+ "brief": "81b32a4cf37f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: done",
+  "2026-10-27T01:00:05Z check: flagged",
+  "2026-10-27T01:08:33Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01083,
+  "check": 0.01082,
+  "fix": 0.01476,
+  "recheck": 0.01128
+ },
+ "draft": {
+  "title": "Area of any triangle",
+  "card": [
+   "Area = ½ab sin C. Here a and b are two sides, and C is the angle between them.",
+   "It works for any triangle, because a sin C acts as the height. You do not need to measure the height.",
+   "Example: sides 8 cm and 5 cm with 30° between them. Area = ½ × 8 × 5 × sin 30° = 20 × 0.5 = 10 cm².",
+   "To find an angle from a known area, rearrange to sin C = 2 × Area ÷ ab. Take the inverse sine on your calculator."
+  ],
+  "remember": "Half the product of two sides, times the sine of the angle between them.",
+  "a": {
+   "q": "A triangular paddock has two fences of 9 m and 12 m meeting at an angle of 40°. What is its area, to 1 decimal place?",
+   "opts": [
+    "34.7 m²",
+    "41.4 m²",
+    "69.4 m²",
+    "108.0 m²"
+   ],
+   "why": "Area = ½ × 9 × 12 × sin 40° = 54 × 0.6428 = 34.7 m². Using cos 40° gives 41.4 m², which uses the wrong ratio.",
+   "clue": "Half, times both sides, times the sine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has an area of 20 cm². Two of its sides are 8 cm and 10 cm, and the acute angle between them is C. What is C?",
+   "opts": [
+    "30°",
+    "14.5°",
+    "60°",
+    "7.2°"
+   ],
+   "why": "20 = ½ × 8 × 10 × sin C = 40 sin C, so sin C = 0.5 and C = 30°. Forgetting the ½ gives sin C = 0.25, which is 14.5°.",
+   "clue": "Write the area formula, then solve for sin C."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "34.7 m²",
+   "also_right": []
+  },
+  "b": {
+   "best": "30°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says to find an angle from a known area by taking the inverse sine, but it does not say that 180° minus that angle also fits, because sin C = sin(180° − C). A student could think inverse sine always gives the only answer. Question b avoids this by saying the angle is acute, but the card should note that the obtuse angle may also be a solution."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct (34.7 m² and 30°). The card should mention that, when finding an angle from an area, the obtuse angle 180° − C can also fit."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says to find an angle from a known area by taking the inverse sine, but it does not say that 180° minus that angle also fits, because sin C = sin(180° − C). A student could think inverse sine always gives the only answer. Question b avoids this by saying the angle is acute, but the card should note that the obtuse angle may also be a solution."
+ ],
+ "proposal": {
+  "title": "Area of any triangle",
+  "card": [
+   "Area = ½ab sin C. Here a and b are two sides, and C is the angle between them.",
+   "It works for any triangle, because a sin C acts as the height. You do not need to measure the height.",
+   "Example: sides 8 cm and 5 cm with 30° between them. Area = ½ × 8 × 5 × sin 30° = 20 × 0.5 = 10 cm².",
+   "To find an angle from a known area, rearrange to sin C = 2 × Area ÷ ab and take the inverse sine. As sin C = sin(180° − C), the obtuse angle 180° − C may also fit."
+  ],
+  "remember": "Half the product of two sides, times the sine of the angle between them.",
+  "a": {
+   "q": "A triangular paddock has two fences of 9 m and 12 m meeting at an angle of 40°. What is its area, to 1 decimal place?",
+   "opts": [
+    "34.7 m²",
+    "41.4 m²",
+    "69.4 m²",
+    "108.0 m²"
+   ],
+   "why": "Area = ½ × 9 × 12 × sin 40° = 54 × 0.6428 = 34.7 m². Using cos 40° gives 41.4 m², which uses the wrong ratio.",
+   "clue": "Half, times both sides, times the sine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has an area of 20 cm². Two of its sides are 8 cm and 10 cm, and the acute angle between them is C. What is C?",
+   "opts": [
+    "30°",
+    "14.5°",
+    "60°",
+    "7.2°"
+   ],
+   "why": "20 = ½ × 8 × 10 × sin C = 40 sin C, so sin C = 0.5 and C = 30°. The angle 150° also has a sine of 0.5, but it is not acute. Forgetting the ½ gives sin C = 0.25, which is 14.5°.",
+   "clue": "Write the area formula, then solve for sin C."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "34.7 m²",
+    "also_right": []
+   },
+   "b": {
+    "best": "30°",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says to find an angle from a known area by taking the inverse sine, but it does not say that 180° minus that angle also fits, because sin C = sin(180° − C). A student could think inverse sine always gives the only answer. Question b avoids this by saying the angle is acute, but the card should note that the obtuse angle may also be a solution."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says to find an angle from a known area by taking the inverse sine, but it does not say that 180° minus that angle also fits, because sin C = sin(180° − C). A student could think inverse sine always gives the only answer. Question b avoids this by saying the angle is acute, but the card should note that the obtuse angle may also be a solution."
+  ]
+ },
+ "final": {
+  "title": "Area of any triangle",
+  "card": [
+   "Area = ½ab sin C. Here a and b are two sides, and C is the angle between them.",
+   "It works for any triangle, because a sin C acts as the height. You do not need to measure the height.",
+   "Example: sides 8 cm and 5 cm with 30° between them. Area = ½ × 8 × 5 × sin 30° = 20 × 0.5 = 10 cm².",
+   "To find an angle from a known area, rearrange to sin C = 2 × Area ÷ ab and take the inverse sine. As sin C = sin(180° − C), the obtuse angle 180° − C may also fit."
+  ],
+  "remember": "Half the product of two sides, times the sine of the angle between them.",
+  "a": {
+   "q": "A triangular paddock has two fences of 9 m and 12 m meeting at an angle of 40°. What is its area, to 1 decimal place?",
+   "opts": [
+    "34.7 m²",
+    "41.4 m²",
+    "69.4 m²",
+    "108.0 m²"
+   ],
+   "why": "Area = ½ × 9 × 12 × sin 40° = 54 × 0.6428 = 34.7 m². Using cos 40° gives 41.4 m², which uses the wrong ratio.",
+   "clue": "Half, times both sides, times the sine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A triangle has an area of 20 cm². Two of its sides are 8 cm and 10 cm, and the acute angle between them is C. What is C?",
+   "opts": [
+    "30°",
+    "14.5°",
+    "60°",
+    "7.2°"
+   ],
+   "why": "20 = ½ × 8 × 10 × sin C = 40 sin C, so sin C = 0.5 and C = 30°. The angle 150° also has a sine of 0.5, but it is not acute. Forgetting the ½ gives sin C = 0.25, which is 14.5°.",
+   "clue": "Write the area formula, then solve for sin C."
+  }
+ },
+ "cleared_by": "recheck"
+}

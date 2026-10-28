@@ -1,0 +1,206 @@
+{
+ "id": "mat-annuities-as-geometric-series",
+ "title": "Annuities as geometric series",
+ "brief": "df09346ff5d4",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-28T11:49:43Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00576,
+  "check": 0.01076,
+  "fix": 0.01894,
+  "recheck": 0.01112
+ },
+ "draft": {
+  "title": "Annuities as geometric series",
+  "card": [
+   "An annuity is a series of equal payments made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
+   "The future value is the total of all payments after compounding. A payment made with k periods left grows to M(1 + r)^k, so each payment is compounded for a different number of periods.",
+   "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). Its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
+   "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+  ],
+  "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+  "a": {
+   "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
+   "opts": [
+    "$1655",
+    "$1500",
+    "$1815",
+    "$1331"
+   ],
+   "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605. The total is 500 + 550 + 605 = $1655. $1500 ignores interest, and $1815 wrongly compounds the last payment as well.",
+   "clue": "The last payment earns no interest, and the earlier ones earn more."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
+   "opts": [
+    "200 × (1.05⁴ − 1) ÷ 0.05",
+    "200 × 1.05⁴",
+    "200 × (1.05⁴ − 1) ÷ 1.05",
+    "200 × (1.05⁵ − 1) ÷ 0.05"
+   ],
+   "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms. The sum is 200 × (1.05⁴ − 1) ÷ 0.05, which is about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four.",
+   "clue": "Use the geometric sum with 4 terms, and divide by r, not 1 + r."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$1655",
+   "also_right": []
+  },
+  "b": {
+   "best": "200 × (1.05⁴ − 1) ÷ 0.05",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $1815 comes from also compounding the last payment. Compounding every payment one extra period gives 550 + 605 + 665.50 = $1820.50, not $1815, so the explanation of this distractor is wrong. Either change the distractor to $1820.50 or fix the why."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('4 terms' and 'divide by r, not 1 + r') rules out every distractor in turn, so it hands students the answer instead of hinting at it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both intended answers are correct. The why for (a) wrongly explains where the $1815 distractor comes from (compounding all payments gives $1820.50), and the clue for (b) gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says $1815 comes from also compounding the last payment. Compounding every payment one extra period gives 550 + 605 + 665.50 = $1820.50, not $1815, so the explanation of this distractor is wrong. Either change the distractor to $1820.50 or fix the why.",
+  "Question b, other: The clue ('4 terms' and 'divide by r, not 1 + r') rules out every distractor in turn, so it hands students the answer instead of hinting at it."
+ ],
+ "proposal": {
+  "title": "Annuities as geometric series",
+  "card": [
+   "An annuity is a series of equal payments M made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
+   "The future value is the total of all payments after compounding. A payment made with k periods left grows to M × (1 + r) to the power k, so each payment compounds for a different number of periods.",
+   "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). For n payments, its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
+   "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+  ],
+  "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+  "a": {
+   "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
+   "opts": [
+    "$1655",
+    "$1500",
+    "$1820.50",
+    "$665.50"
+   ],
+   "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605, so the total is 500 + 550 + 605 = $1655. $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
+   "clue": "The last payment earns no interest, and the earlier ones earn more."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
+   "opts": [
+    "200 × (1.05⁴ − 1) ÷ 0.05",
+    "200 × 1.05⁴",
+    "200 × (1.05⁴ − 1) ÷ 1.05",
+    "200 × (1.05⁵ − 1) ÷ 0.05"
+   ],
+   "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is 200 × (1.05⁴ − 1) ÷ 0.05, about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
+   "clue": "Match each part of the expression to the sum formula on the card."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$1655",
+    "also_right": []
+   },
+   "b": {
+    "best": "200 × (1.05⁴ − 1) ÷ 0.05",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: $1655 for question a and about $862.03 for question b."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $1815 comes from also compounding the last payment. Compounding every payment one extra period gives 550 + 605 + 665.50 = $1820.50, not $1815, so the explanation of this distractor is wrong. Either change the distractor to $1820.50 or fix the why."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('4 terms' and 'divide by r, not 1 + r') rules out every distractor in turn, so it hands students the answer instead of hinting at it."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says $1815 comes from also compounding the last payment. Compounding every payment one extra period gives 550 + 605 + 665.50 = $1820.50, not $1815, so the explanation of this distractor is wrong. Either change the distractor to $1820.50 or fix the why.",
+   "Question b, other: The clue ('4 terms' and 'divide by r, not 1 + r') rules out every distractor in turn, so it hands students the answer instead of hinting at it."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Annuities as geometric series",
+  "card": [
+   "An annuity is a series of equal payments M made at regular intervals, such as $1000 deposited at the end of each year. Interest is added each period at a rate r.",
+   "The future value is the total of all payments after compounding. A payment made with k periods left grows to M × (1 + r) to the power k, so each payment compounds for a different number of periods.",
+   "Written from the last payment back, the terms are M, M(1 + r), M(1 + r)², and so on. This is a geometric series with first term M and common ratio (1 + r). For n payments, its sum is FV = M[(1 + r)ⁿ − 1] ÷ r.",
+   "Example: $1000 at the end of each year for 3 years at 10% a year. FV = 1000 + 1000 × 1.1 + 1000 × 1.1² = 1000 + 1100 + 1210 = $3310. The formula gives 1000 × (1.1³ − 1) ÷ 0.1 = 1000 × 3.31 = $3310."
+  ],
+  "remember": "Each payment compounds for a different time, and the total is a geometric series with ratio 1 + r.",
+  "a": {
+   "q": "$500 is paid at the end of each year for 3 years, with interest of 10% a year. What is the future value just after the last payment?",
+   "opts": [
+    "$1655",
+    "$1500",
+    "$1820.50",
+    "$665.50"
+   ],
+   "why": "The payments grow to 500, 500 × 1.1 = 550 and 500 × 1.1² = 605, so the total is 500 + 550 + 605 = $1655. $1820.50 compounds every payment one extra period, but the last payment earns no interest. $1500 ignores interest altogether.",
+   "clue": "The last payment earns no interest, and the earlier ones earn more."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya deposits $200 at the end of each year for 4 years at 5% a year. Which expression gives the future value just after her last deposit?",
+   "opts": [
+    "200 × (1.05⁴ − 1) ÷ 0.05",
+    "200 × 1.05⁴",
+    "200 × (1.05⁴ − 1) ÷ 1.05",
+    "200 × (1.05⁵ − 1) ÷ 0.05"
+   ],
+   "why": "The deposits form a geometric series with first term 200, ratio 1.05 and 4 terms, so the sum is 200 × (1.05⁴ − 1) ÷ 0.05, about $862.03. 200 × 1.05⁴ compounds only one deposit, not all four. Using a power of 5 counts one deposit too many.",
+   "clue": "Match each part of the expression to the sum formula on the card."
+  }
+ },
+ "cleared_by": "owner"
+}

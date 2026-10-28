@@ -1,0 +1,249 @@
+{
+ "id": "phys-dc-motors",
+ "title": "DC motors",
+ "brief": "63b1238bbd2b",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:03Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:10Z write: done",
+  "2026-10-27T01:08:36Z check: flagged",
+  "2026-10-27T01:23:01Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00526,
+  "check": 0.01844,
+  "fix": 0.02029,
+  "recheck": 0.01218
+ },
+ "draft": {
+  "title": "DC motors",
+  "card": [
+   "A DC motor has a coil of wire between the poles of a magnet. When current flows, the two long sides of the coil each feel a force from the magnetic field.",
+   "The current runs in opposite directions along the two sides, so the forces point in opposite directions. These forces make a torque that turns the coil.",
+   "Without a change, the coil would stop after half a turn. The torque would then try to turn it back, because the forces on each side would pull it into the vertical position and hold it there.",
+   [
+    "Split-ring commutator",
+    "a ring cut into two halves, joined to the ends of the coil. It reverses the current in the coil every half turn, so the torque keeps pushing the same way and the coil keeps spinning."
+   ]
+  ],
+  "remember": "Opposite forces on the two sides turn the coil. The commutator reverses the current each half turn to keep it turning the same way.",
+  "a": {
+   "q": "What is the job of the split-ring commutator in a DC motor?",
+   "opts": [
+    "It reverses the coil current every half turn",
+    "It reverses the magnetic field every half turn",
+    "It stops the current flowing through the coil",
+    "It makes the forces on both sides point the same way"
+   ],
+   "why": "Reversing the current every half turn keeps the torque acting in the same turning direction. The magnet's field is not changed by the commutator. The forces on the two sides still point in opposite directions, which is what produces the torque.",
+   "clue": "Think about what must change so the torque does not reverse."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev builds a simple DC motor, but the split ring is replaced by two solid rings, so the current never reverses. The coil is released when its plane is parallel to the magnetic field. What is most likely to happen?",
+   "opts": [
+    "It turns about a half turn, then settles and stops",
+    "It spins faster and faster in one direction",
+    "It does not move because the forces cancel out",
+    "It turns back and forth, never settling at rest"
+   ],
+   "why": "With no reversal, the torque turns the coil only until its plane is at right angles to the field. There the torque is zero, so it settles. It starts moving because the opposite forces on the two sides make a torque, not cancel it. Without a commutator it does not keep spinning.",
+   "clue": "What happens to the torque once the coil has turned half a turn with the current unchanged?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It reverses the coil current every half turn",
+   "also_right": []
+  },
+  "b": {
+   "best": "It turns about a half turn, then settles and stops",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Without a commutator, a coil starting with its plane parallel to the field turns only about a quarter turn (90°) before reaching the zero-torque position. The card says it would stop after half a turn."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The coil does not simply stop and get held there. It overshoots and swings back and forth about the zero-torque position, then settles only because of friction. The card's 'pull it into the vertical position and hold it there' oversimplifies this."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Vertical position' only makes sense if the field is horizontal, which the card never says. 'Plane at right angles to the field' would be clearer."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The intended answer says the coil turns 'about a half turn', but from the parallel position it turns about a quarter turn to the zero-torque position. The clue repeats 'half a turn'. The best option is only the closest, not correct."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) correctly says the coil turns until its plane is at right angles to the field, which is a quarter turn. This contradicts the intended option and the card, which both say half a turn."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question b wrongly say a coil without a commutator turns half a turn before stopping; from the parallel position it is about a quarter turn. The coil also oscillates before settling, and why (b) contradicts the half-turn claim. Question a is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Without a commutator, a coil starting with its plane parallel to the field turns only about a quarter turn (90°) before reaching the zero-torque position. The card says it would stop after half a turn.",
+  "Card, fact: The coil does not simply stop and get held there. It overshoots and swings back and forth about the zero-torque position, then settles only because of friction. The card's 'pull it into the vertical position and hold it there' oversimplifies this.",
+  "Card, wording: 'Vertical position' only makes sense if the field is horizontal, which the card never says. 'Plane at right angles to the field' would be clearer.",
+  "Question b, fact: The intended answer says the coil turns 'about a half turn', but from the parallel position it turns about a quarter turn to the zero-torque position. The clue repeats 'half a turn'. The best option is only the closest, not correct.",
+  "Question b, other: Why (b) correctly says the coil turns until its plane is at right angles to the field, which is a quarter turn. This contradicts the intended option and the card, which both say half a turn."
+ ],
+ "proposal": {
+  "title": "DC motors",
+  "card": [
+   "A DC motor has a coil of wire between the poles of a magnet. Current runs in opposite directions along the coil's two long sides, so the field pushes them in opposite directions and makes a torque that turns the coil.",
+   "If the current never reverses, the torque turns the coil only about a quarter turn, until its plane is at right angles to the field. In that position the torque is zero.",
+   "The coil overshoots that position, and the torque then pulls it back. It swings back and forth about this position until friction brings it to rest there.",
+   [
+    "Split-ring commutator",
+    "a ring cut into two halves, joined to the ends of the coil. It reverses the current in the coil every half turn, so the torque keeps pushing the same way and the coil keeps spinning."
+   ]
+  ],
+  "remember": "Opposite forces on the two sides turn the coil. The commutator reverses the current each half turn to keep it turning the same way.",
+  "a": {
+   "q": "What is the job of the split-ring commutator in a DC motor?",
+   "opts": [
+    "It reverses the coil current every half turn",
+    "It reverses the magnetic field every half turn",
+    "It stops the current flowing through the coil",
+    "It makes the forces on both sides point the same way"
+   ],
+   "why": "Reversing the current every half turn keeps the torque acting in the same turning direction. The magnet's field is not changed by the commutator. The forces on the two sides still point in opposite directions, which is what produces the torque.",
+   "clue": "Think about what must change so the torque does not reverse."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev builds a simple DC motor, but the split ring is replaced by two solid rings, so the current never reverses. The coil is released with its plane parallel to the field. What is most likely to happen?",
+   "opts": [
+    "It swings about the quarter-turn position, then stops",
+    "It spins faster and faster in one direction",
+    "It does not move because the forces cancel out",
+    "It turns a half turn, then stops there"
+   ],
+   "why": "The torque turns the coil about a quarter turn, to where its plane is at right angles to the field and the torque is zero. It overshoots, is pulled back, and friction stops it there. It does not reach a half turn, because past the quarter turn the torque acts against its motion.",
+   "clue": "Where is the torque zero when the current never reverses?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It reverses the coil current every half turn",
+    "also_right": []
+   },
+   "b": {
+    "best": "It swings about the quarter-turn position, then stops",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Without a commutator, a coil starting with its plane parallel to the field turns only about a quarter turn (90°) before reaching the zero-torque position. The card says it would stop after half a turn."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The coil does not simply stop and get held there. It overshoots and swings back and forth about the zero-torque position, then settles only because of friction. The card's 'pull it into the vertical position and hold it there' oversimplifies this."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Vertical position' only makes sense if the field is horizontal, which the card never says. 'Plane at right angles to the field' would be clearer."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The intended answer says the coil turns 'about a half turn', but from the parallel position it turns about a quarter turn to the zero-torque position. The clue repeats 'half a turn'. The best option is only the closest, not correct."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) correctly says the coil turns until its plane is at right angles to the field, which is a quarter turn. This contradicts the intended option and the card, which both say half a turn."
+   }
+  ],
+  "flags": [
+   "Card, fact: Without a commutator, a coil starting with its plane parallel to the field turns only about a quarter turn (90°) before reaching the zero-torque position. The card says it would stop after half a turn.",
+   "Card, fact: The coil does not simply stop and get held there. It overshoots and swings back and forth about the zero-torque position, then settles only because of friction. The card's 'pull it into the vertical position and hold it there' oversimplifies this.",
+   "Card, wording: 'Vertical position' only makes sense if the field is horizontal, which the card never says. 'Plane at right angles to the field' would be clearer.",
+   "Question b, fact: The intended answer says the coil turns 'about a half turn', but from the parallel position it turns about a quarter turn to the zero-torque position. The clue repeats 'half a turn'. The best option is only the closest, not correct.",
+   "Question b, other: Why (b) correctly says the coil turns until its plane is at right angles to the field, which is a quarter turn. This contradicts the intended option and the card, which both say half a turn."
+  ]
+ },
+ "final": {
+  "title": "DC motors",
+  "card": [
+   "A DC motor has a coil of wire between the poles of a magnet. Current runs in opposite directions along the coil's two long sides, so the field pushes them in opposite directions and makes a torque that turns the coil.",
+   "If the current never reverses, the torque turns the coil only about a quarter turn, until its plane is at right angles to the field. In that position the torque is zero.",
+   "The coil overshoots that position, and the torque then pulls it back. It swings back and forth about this position until friction brings it to rest there.",
+   [
+    "Split-ring commutator",
+    "a ring cut into two halves, joined to the ends of the coil. It reverses the current in the coil every half turn, so the torque keeps pushing the same way and the coil keeps spinning."
+   ]
+  ],
+  "remember": "Opposite forces on the two sides turn the coil. The commutator reverses the current each half turn to keep it turning the same way.",
+  "a": {
+   "q": "What is the job of the split-ring commutator in a DC motor?",
+   "opts": [
+    "It reverses the coil current every half turn",
+    "It reverses the magnetic field every half turn",
+    "It stops the current flowing through the coil",
+    "It makes the forces on both sides point the same way"
+   ],
+   "why": "Reversing the current every half turn keeps the torque acting in the same turning direction. The magnet's field is not changed by the commutator. The forces on the two sides still point in opposite directions, which is what produces the torque.",
+   "clue": "Think about what must change so the torque does not reverse."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev builds a simple DC motor, but the split ring is replaced by two solid rings, so the current never reverses. The coil is released with its plane parallel to the field. What is most likely to happen?",
+   "opts": [
+    "It swings about the quarter-turn position, then stops",
+    "It spins faster and faster in one direction",
+    "It does not move because the forces cancel out",
+    "It turns a half turn, then stops there"
+   ],
+   "why": "The torque turns the coil about a quarter turn, to where its plane is at right angles to the field and the torque is zero. It overshoots, is pulled back, and friction stops it there. It does not reach a half turn, because past the quarter turn the torque acts against its motion.",
+   "clue": "Where is the torque zero when the current never reverses?"
+  }
+ },
+ "cleared_by": "recheck"
+}

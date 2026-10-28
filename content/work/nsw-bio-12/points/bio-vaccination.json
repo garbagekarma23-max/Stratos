@@ -1,0 +1,192 @@
+{
+ "id": "bio-vaccination",
+ "title": "Vaccination",
+ "brief": "813ac6393ab4",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:01Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:09Z write: done",
+  "2026-10-27T01:08:35Z check: flagged",
+  "2026-10-27T01:23:00Z fix: suggested",
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00498,
+  "check": 0.01047,
+  "fix": 0.01755,
+  "recheck": 0.01101
+ },
+ "draft": {
+  "title": "Vaccination",
+  "card": [
+   "A vaccine contains a harmless form or part of a pathogen. It may be a weakened or killed pathogen, or a piece of one, such as a protein.",
+   "The vaccine carries antigens, so the immune system responds to it. B cells and T cells are activated, and some become memory cells.",
+   "Memory cells stay in the body for a long time. The person gets no illness from the first exposure, because the vaccine cannot cause the disease.",
+   "If the real pathogen enters later, memory cells respond faster and more strongly than in a first infection. This stops or reduces the disease."
+  ],
+  "remember": "A vaccine trains the immune system with antigens, so memory cells are ready before the real pathogen arrives.",
+  "a": {
+   "q": "Why does a vaccine let a person become immune without getting the disease?",
+   "opts": [
+    "It carries antigens that cause memory cells to form",
+    "It contains antibodies that kill the pathogen later",
+    "It contains antibiotics that destroy the pathogen",
+    "It stops the pathogen from ever entering the body"
+   ],
+   "why": "The vaccine's antigens trigger an immune response, and memory cells form without the pathogen causing illness. Giving antibodies is a tempting idea, but the vaccine works by making the body build its own response and memory.",
+   "clue": "Think about what the immune system needs to recognise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is vaccinated with a vaccine made from one protein of a virus. Months later she is exposed to the whole virus. Why is her illness likely to be mild or absent?",
+   "opts": [
+    "Memory cells for that protein respond quickly to the virus",
+    "The protein she received has already killed the virus",
+    "The vaccine made her body stop making new cells to infect",
+    "She now has a first-time response that is slow but strong"
+   ],
+   "why": "The protein acted as an antigen, so memory cells formed. When the virus has the same protein, those cells respond faster and more strongly. A slow first-time response is wrong, because that is what happens without earlier exposure.",
+   "clue": "The viral protein in the vaccine is also found on the virus."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It carries antigens that cause memory cells to form",
+   "also_right": []
+  },
+  "b": {
+   "best": "Memory cells for that protein respond quickly to the virus",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says the vaccine 'cannot cause the disease', but it also lists weakened (live attenuated) pathogens. These can rarely cause illness, for example vaccine-derived polio from the oral polio vaccine, or disease in people with weak immune systems. They can also cause mild symptoms. Safer wording: 'the vaccine is very unlikely to cause the disease' or 'is designed not to cause the disease'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match the card. The card's claim that a vaccine 'cannot cause the disease' is too absolute for weakened live vaccines and should be softened."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says the vaccine 'cannot cause the disease', but it also lists weakened (live attenuated) pathogens. These can rarely cause illness, for example vaccine-derived polio from the oral polio vaccine, or disease in people with weak immune systems. They can also cause mild symptoms. Safer wording: 'the vaccine is very unlikely to cause the disease' or 'is designed not to cause the disease'."
+ ],
+ "proposal": {
+  "title": "Vaccination",
+  "card": [
+   "A vaccine contains a harmless form or part of a pathogen. It may be a weakened or killed pathogen, or a piece of one, such as a protein.",
+   "The vaccine carries antigens, so the immune system responds to it. B cells and T cells are activated, the body makes its own antibodies, and some cells become memory cells.",
+   "Memory cells stay in the body for a long time. The vaccine is designed not to cause the disease, though it may cause mild effects such as a sore arm.",
+   "If the real pathogen enters later, memory cells respond faster and more strongly than in a first infection. This stops or reduces the disease."
+  ],
+  "remember": "A vaccine trains the immune system with antigens, so memory cells are ready before the real pathogen arrives.",
+  "a": {
+   "q": "Why does a vaccine let a person become immune without first catching the disease?",
+   "opts": [
+    "It carries antigens that cause memory cells to form",
+    "It contains antibodies that kill the pathogen later",
+    "It contains antibiotics that destroy the pathogen",
+    "It stops the pathogen from ever entering the body"
+   ],
+   "why": "The vaccine's antigens trigger an immune response, and memory cells form without the person having the disease. Giving antibodies is a tempting idea, but the vaccine works by making the body build its own antibodies and memory.",
+   "clue": "Think about what the immune system needs to recognise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is vaccinated with a vaccine made from one protein of a virus. Months later she is exposed to the whole virus. Why is her illness likely to be mild or absent?",
+   "opts": [
+    "Memory cells for that protein respond quickly to the virus",
+    "The protein she received has already killed the virus",
+    "She caught the disease from the vaccine, so it cannot recur",
+    "She now has a first-time response that is slow but strong"
+   ],
+   "why": "The protein acted as an antigen, so memory cells formed. When the virus carries the same protein, those cells respond faster and more strongly. A slow first-time response is wrong, because that is what happens without earlier exposure.",
+   "clue": "The viral protein in the vaccine is also found on the virus."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:39Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It carries antigens that cause memory cells to form",
+    "also_right": []
+   },
+   "b": {
+    "best": "Memory cells for that protein respond quickly to the virus",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:39Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says the vaccine 'cannot cause the disease', but it also lists weakened (live attenuated) pathogens. These can rarely cause illness, for example vaccine-derived polio from the oral polio vaccine, or disease in people with weak immune systems. They can also cause mild symptoms. Safer wording: 'the vaccine is very unlikely to cause the disease' or 'is designed not to cause the disease'."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says the vaccine 'cannot cause the disease', but it also lists weakened (live attenuated) pathogens. These can rarely cause illness, for example vaccine-derived polio from the oral polio vaccine, or disease in people with weak immune systems. They can also cause mild symptoms. Safer wording: 'the vaccine is very unlikely to cause the disease' or 'is designed not to cause the disease'."
+  ]
+ },
+ "final": {
+  "title": "Vaccination",
+  "card": [
+   "A vaccine contains a harmless form or part of a pathogen. It may be a weakened or killed pathogen, or a piece of one, such as a protein.",
+   "The vaccine carries antigens, so the immune system responds to it. B cells and T cells are activated, the body makes its own antibodies, and some cells become memory cells.",
+   "Memory cells stay in the body for a long time. The vaccine is designed not to cause the disease, though it may cause mild effects such as a sore arm.",
+   "If the real pathogen enters later, memory cells respond faster and more strongly than in a first infection. This stops or reduces the disease."
+  ],
+  "remember": "A vaccine trains the immune system with antigens, so memory cells are ready before the real pathogen arrives.",
+  "a": {
+   "q": "Why does a vaccine let a person become immune without first catching the disease?",
+   "opts": [
+    "It carries antigens that cause memory cells to form",
+    "It contains antibodies that kill the pathogen later",
+    "It contains antibiotics that destroy the pathogen",
+    "It stops the pathogen from ever entering the body"
+   ],
+   "why": "The vaccine's antigens trigger an immune response, and memory cells form without the person having the disease. Giving antibodies is a tempting idea, but the vaccine works by making the body build its own antibodies and memory.",
+   "clue": "Think about what the immune system needs to recognise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is vaccinated with a vaccine made from one protein of a virus. Months later she is exposed to the whole virus. Why is her illness likely to be mild or absent?",
+   "opts": [
+    "Memory cells for that protein respond quickly to the virus",
+    "The protein she received has already killed the virus",
+    "She caught the disease from the vaccine, so it cannot recur",
+    "She now has a first-time response that is slow but strong"
+   ],
+   "why": "The protein acted as an antigen, so memory cells formed. When the virus carries the same protein, those cells respond faster and more strongly. A slow first-time response is wrong, because that is what happens without earlier exposure.",
+   "clue": "The viral protein in the vaccine is also found on the virus."
+  }
+ },
+ "cleared_by": "recheck"
+}

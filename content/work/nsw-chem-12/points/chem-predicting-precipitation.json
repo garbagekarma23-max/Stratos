@@ -1,0 +1,216 @@
+{
+ "id": "chem-predicting-precipitation",
+ "title": "Predicting precipitation",
+ "brief": "3f13a116eb8f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:00Z new, write",
+  "2026-10-27T00:53:12Z write: done",
+  "2026-10-27T01:00:08Z check: flagged",
+  "2026-10-27T01:08:34Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00644,
+  "check": 0.01706,
+  "fix": 0.0321,
+  "recheck": 0.01251
+ },
+ "draft": {
+  "title": "Predicting precipitation",
+  "card": [
+   "The ion product, Q, is worked out like Ksp, but with the ion concentrations at the moment of mixing. These need not be equilibrium values.",
+   "If Q is greater than Ksp, the solution holds more ions than it can at equilibrium. A precipitate forms until the concentrations fall to the Ksp value.",
+   "If Q is less than or equal to Ksp, no precipitate forms. The solution is unsaturated, or just saturated.",
+   "When two solutions are mixed, the volume increases. Find each ion's new concentration after dilution before calculating Q."
+  ],
+  "remember": "Precipitate forms when Q is greater than Ksp. Dilute the ions first when mixing.",
+  "a": {
+   "q": "A mixture of two solutions has a Q for barium sulfate of 5 × 10-9. The Ksp is 1 × 10-10. What happens?",
+   "opts": [
+    "A precipitate forms",
+    "No precipitate forms",
+    "The solution is unsaturated",
+    "The Ksp rises to match Q"
+   ],
+   "why": "Q is greater than Ksp, so the mixture holds more ions than it can at equilibrium and solid forms. It is not unsaturated, and Ksp stays the same at a given temperature.",
+   "clue": "Compare Q with Ksp."
+  },
+  "b": {
+   "d": 3,
+   "q": "50 mL of 0.020 M Ca2+ is mixed with 50 mL of 0.020 M SO4 2-. Ksp of CaSO4 is 5 × 10-5. What happens?",
+   "opts": [
+    "No precipitate, as Q is 1 × 10-4 only after... see below",
+    "Q = 1.0 × 10-4, so a precipitate forms",
+    "Q = 4.0 × 10-4, so a precipitate forms",
+    "Q = 1.0 × 10-4, so no precipitate forms"
+   ],
+   "why": "Mixing doubles the volume, so each ion falls to 0.010 M. Q = 0.010 × 0.010 = 1.0 × 10-4, which is greater than 5 × 10-5, so a precipitate forms. Using 0.020 M each gives 4.0 × 10-4 because the dilution is ignored.",
+   "clue": "Each volume is doubled, so halve each concentration."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A precipitate forms",
+   "also_right": []
+  },
+  "b": {
+   "best": "Q = 1.0 × 10-4, so a precipitate forms",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The first option, 'No precipitate, as Q is 1 × 10-4 only after... see below', is garbled, unfinished draft text. It needs replacing with a complete distractor."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Each volume is doubled'. It is the total volume that is double each starting volume, which is why each concentration halves. As written it is imprecise."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A precipitate forms until the concentrations fall to the Ksp value' suggests each concentration equals Ksp. It is the ion product (Q) that falls to equal Ksp."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. Question b has a garbled, unfinished first option and a slightly imprecise clue. The card wrongly implies the ion concentrations, rather than their product Q, fall to the Ksp value."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “Q = 1.0 × 10-4, so a precipitate forms”, not the writer’s answer “No precipitate, as Q is 1 × 10-4 only after... see below”.",
+  "Question b, wording: The first option, 'No precipitate, as Q is 1 × 10-4 only after... see below', is garbled, unfinished draft text. It needs replacing with a complete distractor.",
+  "Question b, wording: The clue says 'Each volume is doubled'. It is the total volume that is double each starting volume, which is why each concentration halves. As written it is imprecise.",
+  "Card, wording: 'A precipitate forms until the concentrations fall to the Ksp value' suggests each concentration equals Ksp. It is the ion product (Q) that falls to equal Ksp."
+ ],
+ "proposal": {
+  "title": "Predicting precipitation",
+  "card": [
+   "The ion product, Q, is worked out like Ksp, but with the ion concentrations at the moment of mixing. These need not be equilibrium values.",
+   "If Q is greater than Ksp, the solution holds more ions than it can at equilibrium. Solid precipitates until Q falls to equal Ksp. Ksp itself stays the same at a given temperature.",
+   "If Q is less than Ksp, no precipitate forms and the solution is unsaturated. If Q equals Ksp, the solution is just saturated.",
+   "When two solutions are mixed, the total volume grows, so each ion is diluted. Find each ion's new concentration before calculating Q."
+  ],
+  "remember": "Precipitate forms when Q is greater than Ksp. Dilute the ions first when mixing.",
+  "a": {
+   "q": "A mixture of two solutions has a Q for barium sulfate of 5 × 10⁻⁹. The Ksp is 1 × 10⁻¹⁰. What happens?",
+   "opts": [
+    "A precipitate forms",
+    "No precipitate forms",
+    "The solution is unsaturated",
+    "The Ksp rises to match Q"
+   ],
+   "why": "Q is greater than Ksp, so the mixture holds more ions than it can at equilibrium and solid forms. It is not unsaturated, and Ksp stays the same at a given temperature.",
+   "clue": "Compare Q with Ksp."
+  },
+  "b": {
+   "d": 3,
+   "q": "50 mL of 0.020 M Ca²⁺ is mixed with 50 mL of 0.020 M SO₄²⁻. Ksp of CaSO₄ is 5 × 10⁻⁵. What happens?",
+   "opts": [
+    "Q = 1.0 × 10⁻⁴, so a precipitate forms",
+    "Q = 4.0 × 10⁻⁴, so a precipitate forms",
+    "Q = 1.0 × 10⁻⁴, so no precipitate forms",
+    "Q = 2.5 × 10⁻⁵, so no precipitate forms"
+   ],
+   "why": "The total volume is 100 mL, double each starting volume, so each ion falls to 0.010 M. Q = 0.010 × 0.010 = 1.0 × 10⁻⁴, which is greater than 5 × 10⁻⁵, so a precipitate forms. Using 0.020 M for each ion gives 4.0 × 10⁻⁴ because the dilution is ignored.",
+   "clue": "The total volume is double each starting volume."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A precipitate forms",
+    "also_right": []
+   },
+   "b": {
+    "best": "Q = 1.0 × 10⁻⁴, so a precipitate forms",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The first option, 'No precipitate, as Q is 1 × 10-4 only after... see below', is garbled, unfinished draft text. It needs replacing with a complete distractor."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Each volume is doubled'. It is the total volume that is double each starting volume, which is why each concentration halves. As written it is imprecise."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A precipitate forms until the concentrations fall to the Ksp value' suggests each concentration equals Ksp. It is the ion product (Q) that falls to equal Ksp."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “Q = 1.0 × 10-4, so a precipitate forms”, not the writer’s answer “No precipitate, as Q is 1 × 10-4 only after... see below”.",
+   "Question b, wording: The first option, 'No precipitate, as Q is 1 × 10-4 only after... see below', is garbled, unfinished draft text. It needs replacing with a complete distractor.",
+   "Question b, wording: The clue says 'Each volume is doubled'. It is the total volume that is double each starting volume, which is why each concentration halves. As written it is imprecise.",
+   "Card, wording: 'A precipitate forms until the concentrations fall to the Ksp value' suggests each concentration equals Ksp. It is the ion product (Q) that falls to equal Ksp."
+  ]
+ },
+ "final": {
+  "title": "Predicting precipitation",
+  "card": [
+   "The ion product, Q, is worked out like Ksp, but with the ion concentrations at the moment of mixing. These need not be equilibrium values.",
+   "If Q is greater than Ksp, the solution holds more ions than it can at equilibrium. Solid precipitates until Q falls to equal Ksp. Ksp itself stays the same at a given temperature.",
+   "If Q is less than Ksp, no precipitate forms and the solution is unsaturated. If Q equals Ksp, the solution is just saturated.",
+   "When two solutions are mixed, the total volume grows, so each ion is diluted. Find each ion's new concentration before calculating Q."
+  ],
+  "remember": "Precipitate forms when Q is greater than Ksp. Dilute the ions first when mixing.",
+  "a": {
+   "q": "A mixture of two solutions has a Q for barium sulfate of 5 × 10⁻⁹. The Ksp is 1 × 10⁻¹⁰. What happens?",
+   "opts": [
+    "A precipitate forms",
+    "No precipitate forms",
+    "The solution is unsaturated",
+    "The Ksp rises to match Q"
+   ],
+   "why": "Q is greater than Ksp, so the mixture holds more ions than it can at equilibrium and solid forms. It is not unsaturated, and Ksp stays the same at a given temperature.",
+   "clue": "Compare Q with Ksp."
+  },
+  "b": {
+   "d": 3,
+   "q": "50 mL of 0.020 M Ca²⁺ is mixed with 50 mL of 0.020 M SO₄²⁻. Ksp of CaSO₄ is 5 × 10⁻⁵. What happens?",
+   "opts": [
+    "Q = 1.0 × 10⁻⁴, so a precipitate forms",
+    "Q = 4.0 × 10⁻⁴, so a precipitate forms",
+    "Q = 1.0 × 10⁻⁴, so no precipitate forms",
+    "Q = 2.5 × 10⁻⁵, so no precipitate forms"
+   ],
+   "why": "The total volume is 100 mL, double each starting volume, so each ion falls to 0.010 M. Q = 0.010 × 0.010 = 1.0 × 10⁻⁴, which is greater than 5 × 10⁻⁵, so a precipitate forms. Using 0.020 M for each ion gives 4.0 × 10⁻⁴ because the dilution is ignored.",
+   "clue": "The total volume is double each starting volume."
+  }
+ },
+ "cleared_by": "recheck"
+}

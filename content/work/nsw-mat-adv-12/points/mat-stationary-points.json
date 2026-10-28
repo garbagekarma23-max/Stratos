@@ -1,0 +1,198 @@
+{
+ "id": "mat-stationary-points",
+ "title": "Stationary points",
+ "brief": "e04627fbd0b8",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00558,
+  "check": 0.01012,
+  "fix": 0.03082,
+  "recheck": 0.0122
+ },
+ "draft": {
+  "title": "Stationary points",
+  "card": [
+   "A stationary point is where the gradient of the curve is zero. To find one, solve f'(x) = 0 and then put each x value into f(x) to get the y value.",
+   "To find its type, check the sign of f'(x) just before and just after the point. Put the results in a table of gradients.",
+   [
+    "Maximum",
+    "the gradient goes from positive to zero to negative. Minimum: it goes from negative to zero to positive."
+   ],
+   [
+    "Horizontal inflection",
+    "the gradient has the same sign on both sides. Example: f(x) = x³ − 3x². Then f'(x) = 3x² − 6x = 3x(x − 2), so x = 0 or 2. At x = −1, f' = 9 (positive). At x = 1, f' = −3 (negative). At x = 3, f' = 9 (positive). So x = 0 is a maximum and x = 2 is a minimum."
+   ]
+  ],
+  "remember": "Solve f'(x) = 0, then test the gradient on each side to name the type.",
+  "a": {
+   "q": "A curve has f'(x) = 0 at x = 4. The gradient is negative just before x = 4 and positive just after. What type of stationary point is it?",
+   "opts": [
+    "A minimum",
+    "A maximum",
+    "A horizontal point of inflection",
+    "Not a stationary point"
+   ],
+   "why": "The gradient goes from negative to zero to positive, so the curve falls and then rises. That is a minimum. It is not a maximum, because a maximum has the gradient going from positive to negative.",
+   "clue": "Picture the curve going down and then up."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 6x² + 9x, what is the stationary point at x = 3?",
+   "opts": [
+    "A minimum at (3, 0)",
+    "A maximum at (3, 0)",
+    "A minimum at (3, 9)",
+    "A horizontal point of inflection at (3, 0)"
+   ],
+   "why": "f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3), so f'(x) = 0 at x = 3. At x = 2, f' = −3. At x = 4, f' = 9. The gradient goes from negative to positive, so it is a minimum. f(3) = 27 − 54 + 27 = 0, so the point is (3, 0). The point (3, 9) comes from a wrong y value.",
+   "clue": "Test the gradient at x = 2 and x = 4, then find f(3)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A minimum",
+   "also_right": []
+  },
+  "b": {
+   "best": "A minimum at (3, 0)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The worked example (f(x) = x³ − 3x², giving a maximum and a minimum) sits in the 'Horizontal inflection' bullet, so it seems to illustrate a horizontal inflection when it shows none. It should go in its own bullet or with the maximum/minimum bullet."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths and both questions are correct. The card's worked example, which finds a maximum and a minimum, is placed under the 'Horizontal inflection' bullet and could mislead students about what it shows."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The worked example (f(x) = x³ − 3x², giving a maximum and a minimum) sits in the 'Horizontal inflection' bullet, so it seems to illustrate a horizontal inflection when it shows none. It should go in its own bullet or with the maximum/minimum bullet."
+ ],
+ "proposal": {
+  "title": "Stationary points",
+  "card": [
+   "A stationary point is where the gradient of the curve is zero. To find one, solve f'(x) = 0, then put each x value into f(x) to get the y value.",
+   "To find its type, check the sign of f'(x) just before and just after the point, and record it in a table of gradients. Positive to zero to negative is a maximum. Negative to zero to positive is a minimum.",
+   "If the gradient has the same sign on both sides, such as positive, zero, positive, the point is a horizontal point of inflection.",
+   "Example: f(x) = x³ − 3x², so f'(x) = 3x² − 6x = 3x(x − 2) = 0 at x = 0 or 2. At x = −1, 1 and 3, f' is 9, −3 and 9, so (0, 0) is a maximum and (2, −4) is a minimum."
+  ],
+  "remember": "Solve f'(x) = 0, then test the gradient on each side to name the type.",
+  "a": {
+   "q": "A curve has f'(x) = 0 at x = 4. The gradient is negative just before x = 4 and positive just after. What type of stationary point is it?",
+   "opts": [
+    "A minimum",
+    "A maximum",
+    "A horizontal point of inflection",
+    "Not a stationary point"
+   ],
+   "why": "The gradient goes from negative to zero to positive, so the curve falls and then rises. That is a minimum. It is not a maximum, because a maximum has the gradient going from positive to negative.",
+   "clue": "Picture the curve going down and then up."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 6x² + 9x, what is the stationary point at x = 3?",
+   "opts": [
+    "A minimum at (3, 0)",
+    "A maximum at (3, 0)",
+    "A minimum at (3, 9)",
+    "A horizontal inflection at (3, 0)"
+   ],
+   "why": "f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3), so f'(x) = 0 at x = 3. At x = 2, f' = −3, and at x = 4, f' = 9, so the gradient goes from negative to positive: a minimum. f(3) = 27 − 54 + 27 = 0, so the point is (3, 0), not (3, 9), which mixes up a gradient value with the y value.",
+   "clue": "Test the gradient at x = 2 and x = 4, then find f(3)."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A minimum",
+    "also_right": []
+   },
+   "b": {
+    "best": "A minimum at (3, 0)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example, both answers and both explanations check out: question a is a minimum, and question b is a minimum at (3, 0)."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The worked example (f(x) = x³ − 3x², giving a maximum and a minimum) sits in the 'Horizontal inflection' bullet, so it seems to illustrate a horizontal inflection when it shows none. It should go in its own bullet or with the maximum/minimum bullet."
+   }
+  ],
+  "flags": [
+   "Card, fact: The worked example (f(x) = x³ − 3x², giving a maximum and a minimum) sits in the 'Horizontal inflection' bullet, so it seems to illustrate a horizontal inflection when it shows none. It should go in its own bullet or with the maximum/minimum bullet."
+  ]
+ },
+ "final": {
+  "title": "Stationary points",
+  "card": [
+   "A stationary point is where the gradient of the curve is zero. To find one, solve f'(x) = 0, then put each x value into f(x) to get the y value.",
+   "To find its type, check the sign of f'(x) just before and just after the point, and record it in a table of gradients. Positive to zero to negative is a maximum. Negative to zero to positive is a minimum.",
+   "If the gradient has the same sign on both sides, such as positive, zero, positive, the point is a horizontal point of inflection.",
+   "Example: f(x) = x³ − 3x², so f'(x) = 3x² − 6x = 3x(x − 2) = 0 at x = 0 or 2. At x = −1, 1 and 3, f' is 9, −3 and 9, so (0, 0) is a maximum and (2, −4) is a minimum."
+  ],
+  "remember": "Solve f'(x) = 0, then test the gradient on each side to name the type.",
+  "a": {
+   "q": "A curve has f'(x) = 0 at x = 4. The gradient is negative just before x = 4 and positive just after. What type of stationary point is it?",
+   "opts": [
+    "A minimum",
+    "A maximum",
+    "A horizontal point of inflection",
+    "Not a stationary point"
+   ],
+   "why": "The gradient goes from negative to zero to positive, so the curve falls and then rises. That is a minimum. It is not a maximum, because a maximum has the gradient going from positive to negative.",
+   "clue": "Picture the curve going down and then up."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 6x² + 9x, what is the stationary point at x = 3?",
+   "opts": [
+    "A minimum at (3, 0)",
+    "A maximum at (3, 0)",
+    "A minimum at (3, 9)",
+    "A horizontal inflection at (3, 0)"
+   ],
+   "why": "f'(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3), so f'(x) = 0 at x = 3. At x = 2, f' = −3, and at x = 4, f' = 9, so the gradient goes from negative to positive: a minimum. f(3) = 27 − 54 + 27 = 0, so the point is (3, 0), not (3, 9), which mixes up a gradient value with the y value.",
+   "clue": "Test the gradient at x = 2 and x = 4, then find f(3)."
+  }
+ },
+ "cleared_by": "recheck"
+}

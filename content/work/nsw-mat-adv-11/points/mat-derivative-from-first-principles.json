@@ -1,0 +1,105 @@
+{
+ "id": "mat-derivative-from-first-principles",
+ "title": "The derivative from first principles",
+ "brief": "9ab12362575c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01003,
+  "check": 0.00769
+ },
+ "draft": {
+  "title": "The derivative from first principles",
+  "card": [
+   "The gradient of a secant through (x, f(x)) and (x + h, f(x + h)) is (f(x + h) − f(x))/h. Here h is the gap in x between the two points.",
+   "As h gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+   "The derivative is that limit: f'(x) = lim (f(x + h) − f(x))/h as h approaches 0. It gives the gradient of the tangent at x.",
+   "Example: f(x) = x². Then (f(x + h) − f(x))/h = (2xh + h²)/h = 2x + h. As h approaches 0, this approaches 2x, so f'(x) = 2x."
+  ],
+  "remember": "Find the secant gradient, simplify it, then let h approach 0.",
+  "a": {
+   "q": "What does f'(x) = lim (f(x + h) − f(x))/h as h approaches 0 give?",
+   "opts": [
+    "The gradient of the tangent at x",
+    "The gradient of the secant between two fixed points",
+    "The average rate of change over an interval",
+    "The value of the function at x"
+   ],
+   "why": "As h approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+   "clue": "What does the secant turn into as h shrinks?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Using first principles, what is f'(x) for f(x) = x² + 3x?",
+   "opts": [
+    "2x + 3",
+    "2x + 3h",
+    "x² + 3",
+    "2x"
+   ],
+   "why": "The secant gradient is ((x + h)² + 3(x + h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3. As h approaches 0, this approaches 2x + 3. The option 2x + 3h keeps h, which has gone to 0 in the limit.",
+   "clue": "Expand, cancel the h in the denominator, then let h approach 0."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The gradient of the tangent at x",
+   "also_right": []
+  },
+  "b": {
+   "best": "2x + 3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The derivative from first principles",
+  "card": [
+   "The gradient of a secant through (x, f(x)) and (x + h, f(x + h)) is (f(x + h) − f(x))/h. Here h is the gap in x between the two points.",
+   "As h gets closer to 0, the second point slides towards the first. The secant turns into the tangent at that point.",
+   "The derivative is that limit: f'(x) = lim (f(x + h) − f(x))/h as h approaches 0. It gives the gradient of the tangent at x.",
+   "Example: f(x) = x². Then (f(x + h) − f(x))/h = (2xh + h²)/h = 2x + h. As h approaches 0, this approaches 2x, so f'(x) = 2x."
+  ],
+  "remember": "Find the secant gradient, simplify it, then let h approach 0.",
+  "a": {
+   "q": "What does f'(x) = lim (f(x + h) − f(x))/h as h approaches 0 give?",
+   "opts": [
+    "The gradient of the tangent at x",
+    "The gradient of the secant between two fixed points",
+    "The average rate of change over an interval",
+    "The value of the function at x"
+   ],
+   "why": "As h approaches 0, the secant becomes the tangent, so the limit is the tangent's gradient. A secant gradient needs two separate points, so it is not the limit.",
+   "clue": "What does the secant turn into as h shrinks?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Using first principles, what is f'(x) for f(x) = x² + 3x?",
+   "opts": [
+    "2x + 3",
+    "2x + 3h",
+    "x² + 3",
+    "2x"
+   ],
+   "why": "The secant gradient is ((x + h)² + 3(x + h) − x² − 3x)/h = (2xh + h² + 3h)/h = 2x + h + 3. As h approaches 0, this approaches 2x + 3. The option 2x + 3h keeps h, which has gone to 0 in the limit.",
+   "clue": "Expand, cancel the h in the denominator, then let h approach 0."
+  }
+ },
+ "cleared_by": "checker"
+}

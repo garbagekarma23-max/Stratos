@@ -1,0 +1,194 @@
+{
+ "id": "mat-chain-rule",
+ "title": "The chain rule",
+ "brief": "cc37b139881c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00491,
+  "check": 0.00826,
+  "fix": 0.01647,
+  "recheck": 0.00603
+ },
+ "draft": {
+  "title": "The chain rule",
+  "card": [
+   "A composite function has one function inside another, such as (3x + 1)⁵. The inner function is 3x + 1 and the outer function is the fifth power.",
+   "The chain rule says: if y = f(g(x)), then dy/dx = f'(g(x)) × g'(x). Differentiate the outer function and leave the inside alone, then multiply by the derivative of the inside.",
+   "Example: y = (3x + 1)⁵. The outer derivative is 5(3x + 1)⁴. The inner derivative is 3. So dy/dx = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴.",
+   "A common mistake is to forget the last step and leave out the derivative of the inside."
+  ],
+  "remember": "Differentiate the outside, keep the inside, then multiply by the derivative of the inside.",
+  "a": {
+   "q": "What is the derivative of y = (2x + 7)⁴?",
+   "opts": [
+    "8(2x + 7)³",
+    "4(2x + 7)³",
+    "4(2x + 7)³ + 2",
+    "2(2x + 7)⁴"
+   ],
+   "why": "The outer derivative is 4(2x + 7)³ and the inner derivative is 2, so dy/dx = 4(2x + 7)³ × 2 = 8(2x + 7)³. The option 4(2x + 7)³ is tempting, but it leaves out the multiplication by the derivative of the inside.",
+   "clue": "Multiply by the derivative of 2x + 7."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the gradient of y = (x² − 3)³ at x = 2.",
+   "opts": [
+    "24",
+    "3",
+    "12",
+    "6"
+   ],
+   "why": "dy/dx = 3(x² − 3)² × 2x = 6x(x² − 3)². At x = 2 this is 6 × 2 × (4 − 3)² = 12 × 1 = 12. Wait: the correct value is 12, so 24 comes from a slip in the multiplication.",
+   "clue": "The inner derivative of x² − 3 is 2x, not 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8(2x + 7)³",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why for (b) contains a stray self-correction ('Wait: the correct value is 12…') that reads like a draft note and will confuse students. It also does not clearly explain how 24 arises, or why the other distractors (6, 3) are wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card and both questions are correct (a: 8(2x + 7)³, b: 12). The explanation for (b) contains a leftover 'Wait:' self-correction and an unclear account of the 24 distractor that should be rewritten."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “12”, not the writer’s answer “24”.",
+  "Question b, wording: The why for (b) contains a stray self-correction ('Wait: the correct value is 12…') that reads like a draft note and will confuse students. It also does not clearly explain how 24 arises, or why the other distractors (6, 3) are wrong."
+ ],
+ "proposal": {
+  "title": "The chain rule",
+  "card": [
+   "A composite function has one function inside another, such as (3x + 1)⁵. The inner function is 3x + 1 and the outer function is the fifth power.",
+   "The chain rule says: if y = f(g(x)), then dy/dx = f'(g(x)) × g'(x). Differentiate the outer function and leave the inside alone, then multiply by the derivative of the inside.",
+   "Example: y = (3x + 1)⁵. The outer derivative is 5(3x + 1)⁴. The inner derivative is 3. So dy/dx = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴.",
+   "A common mistake is to leave out the derivative of the inside. To find the gradient at a point, find dy/dx first, then substitute the x value."
+  ],
+  "remember": "Differentiate the outside, keep the inside, then multiply by the derivative of the inside.",
+  "a": {
+   "q": "What is the derivative of y = (2x + 7)⁴?",
+   "opts": [
+    "8(2x + 7)³",
+    "4(2x + 7)³",
+    "4(2x + 7)³ + 2",
+    "2(2x + 7)⁴"
+   ],
+   "why": "The outer derivative is 4(2x + 7)³ and the inner derivative is 2, so dy/dx = 4(2x + 7)³ × 2 = 8(2x + 7)³. The option 4(2x + 7)³ is tempting, but it leaves out the multiplication by the derivative of the inside.",
+   "clue": "Multiply by the derivative of 2x + 7."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the gradient of y = (x² − 3)³ at x = 2.",
+   "opts": [
+    "12",
+    "3",
+    "6",
+    "1"
+   ],
+   "why": "dy/dx = 3(x² − 3)² × 2x = 6x(x² − 3)². At x = 2 this is 6 × 2 × (4 − 3)² = 12. The answer 6 uses 2 as the inner derivative instead of 2x, 3 leaves out the inner derivative, and 1 is the value of y, not the gradient.",
+   "clue": "Find the derivative of x² − 3 before you substitute."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "8(2x + 7)³",
+    "also_right": []
+   },
+   "b": {
+    "best": "12",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why for (b) contains a stray self-correction ('Wait: the correct value is 12…') that reads like a draft note and will confuse students. It also does not clearly explain how 24 arises, or why the other distractors (6, 3) are wrong."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “12”, not the writer’s answer “24”.",
+   "Question b, wording: The why for (b) contains a stray self-correction ('Wait: the correct value is 12…') that reads like a draft note and will confuse students. It also does not clearly explain how 24 arises, or why the other distractors (6, 3) are wrong."
+  ]
+ },
+ "final": {
+  "title": "The chain rule",
+  "card": [
+   "A composite function has one function inside another, such as (3x + 1)⁵. The inner function is 3x + 1 and the outer function is the fifth power.",
+   "The chain rule says: if y = f(g(x)), then dy/dx = f'(g(x)) × g'(x). Differentiate the outer function and leave the inside alone, then multiply by the derivative of the inside.",
+   "Example: y = (3x + 1)⁵. The outer derivative is 5(3x + 1)⁴. The inner derivative is 3. So dy/dx = 5(3x + 1)⁴ × 3 = 15(3x + 1)⁴.",
+   "A common mistake is to leave out the derivative of the inside. To find the gradient at a point, find dy/dx first, then substitute the x value."
+  ],
+  "remember": "Differentiate the outside, keep the inside, then multiply by the derivative of the inside.",
+  "a": {
+   "q": "What is the derivative of y = (2x + 7)⁴?",
+   "opts": [
+    "8(2x + 7)³",
+    "4(2x + 7)³",
+    "4(2x + 7)³ + 2",
+    "2(2x + 7)⁴"
+   ],
+   "why": "The outer derivative is 4(2x + 7)³ and the inner derivative is 2, so dy/dx = 4(2x + 7)³ × 2 = 8(2x + 7)³. The option 4(2x + 7)³ is tempting, but it leaves out the multiplication by the derivative of the inside.",
+   "clue": "Multiply by the derivative of 2x + 7."
+  },
+  "b": {
+   "d": 3,
+   "q": "Find the gradient of y = (x² − 3)³ at x = 2.",
+   "opts": [
+    "12",
+    "3",
+    "6",
+    "1"
+   ],
+   "why": "dy/dx = 3(x² − 3)² × 2x = 6x(x² − 3)². At x = 2 this is 6 × 2 × (4 − 3)² = 12. The answer 6 uses 2 as the inner derivative instead of 2x, 3 leaves out the inner derivative, and 1 is the value of y, not the gradient.",
+   "clue": "Find the derivative of x² − 3 before you substitute."
+  }
+ },
+ "cleared_by": "recheck"
+}

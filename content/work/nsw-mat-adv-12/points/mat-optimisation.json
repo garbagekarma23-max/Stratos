@@ -1,0 +1,169 @@
+{
+ "id": "mat-optimisation",
+ "title": "Optimisation",
+ "brief": "c04fa72c21c3",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00531,
+  "check": 0.00873,
+  "fix": 0.01439
+ },
+ "draft": {
+  "title": "Optimisation",
+  "card": [
+   "Optimisation finds the largest or smallest value of a quantity. First write that quantity as a function of one variable. Use any given condition to remove the other variables.",
+   "Differentiate and solve f'(x) = 0 to find the stationary points. Test each one to see if it is a maximum or minimum, using the second derivative or the sign of f'(x) on each side.",
+   "Check the endpoints of the allowed domain, because the greatest or least value can occur there. Also check that the answer makes sense, for example that a length is positive.",
+   "Example: two numbers add to 10. Find the largest product. If one is x, the other is 10 − x, so P = x(10 − x) = 10x − x². Then P' = 10 − 2x = 0 gives x = 5. P'' = −2 is negative, so it is a maximum. The largest product is 5 × 5 = 25."
+  ],
+  "remember": "Write one variable, solve f'(x) = 0, test the type, then check endpoints and sense.",
+  "a": {
+   "q": "Two numbers add to 12. Their product P = x(12 − x). What is the largest value of P?",
+   "opts": [
+    "36",
+    "6",
+    "72",
+    "12"
+   ],
+   "why": "P = 12x − x², so P' = 12 − 2x = 0 gives x = 6. P'' = −2 is negative, so this is a maximum, and P = 6 × 6 = 36. The value 6 is where the maximum occurs, not the maximum itself.",
+   "clue": "Find x first, then put it back into P."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has 40 m of fencing for a rectangular pen with width x metres and length y metres. Which area A is largest, using A = x(20 − x) with 0 ≤ x ≤ 20?",
+   "opts": [
+    "100 m²",
+    "10 m²",
+    "200 m²",
+    "400 m²"
+   ],
+   "why": "A = 20x − x², so A' = 20 − 2x = 0 gives x = 10. A'' = −2 is negative, so it is a maximum, and A = 10 × 10 = 100. The endpoints x = 0 and x = 20 both give area 0, so they are smaller. The value 10 is the width, not the area.",
+   "clue": "Find x, then work out the area, and compare with the endpoints."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "36",
+   "also_right": []
+  },
+  "b": {
+   "best": "100 m²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'Which area A is largest' reads as asking which listed option is the largest number, which would be 400 m². It should ask 'What is the largest possible area A?'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct (36 and 100 m²). Question b's wording 'Which area A is largest' is ambiguous and could point students to 400 m², so it should be reworded to 'What is the largest possible area?'"
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem 'Which area A is largest' reads as asking which listed option is the largest number, which would be 400 m². It should ask 'What is the largest possible area A?'"
+ ],
+ "proposal": {
+  "title": "Optimisation",
+  "card": [
+   "Optimisation finds the largest or smallest value of a quantity. First write that quantity as a function of one variable. Use any given condition to remove the other variables.",
+   "Differentiate and solve f'(x) = 0 to find the stationary points. Test each one to see if it is a maximum or minimum, using the second derivative or the sign of f'(x) on each side.",
+   "Check the endpoints of the allowed domain, because the greatest or least value can occur there. Also check that the answer makes sense, for example that a length is positive.",
+   "Example: two numbers add to 10. Find the largest product. If one is x, the other is 10 − x, so P = x(10 − x) = 10x − x². Then P' = 10 − 2x = 0 gives x = 5. P'' = −2 is negative, so it is a maximum. The largest product is 5 × 5 = 25."
+  ],
+  "remember": "Write one variable, solve f'(x) = 0, test the type, then check endpoints and sense.",
+  "a": {
+   "q": "Two numbers add to 12. Their product P = x(12 − x). What is the largest value of P?",
+   "opts": [
+    "36",
+    "6",
+    "72",
+    "12"
+   ],
+   "why": "P = 12x − x², so P' = 12 − 2x = 0 gives x = 6. P'' = −2 is negative, so this is a maximum, and P = 6 × 6 = 36. The value 6 is where the maximum occurs, not the maximum itself.",
+   "clue": "Find x first, then put it back into P."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has 40 m of fencing for a rectangular pen x metres wide, so its area is A = x(20 − x) for 0 ≤ x ≤ 20. What is the largest possible area A?",
+   "opts": [
+    "100 m²",
+    "10 m²",
+    "200 m²",
+    "400 m²"
+   ],
+   "why": "A = 20x − x², so A' = 20 − 2x = 0 gives x = 10. A'' = −2 is negative, so it is a maximum, and A = 10 × 10 = 100. The endpoints x = 0 and x = 20 both give area 0, so they are smaller. The value 10 is the width, not the area.",
+   "clue": "Find x, then work out the area, and compare with the endpoints."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'Which area A is largest' reads as asking which listed option is the largest number, which would be 400 m². It should ask 'What is the largest possible area A?'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem 'Which area A is largest' reads as asking which listed option is the largest number, which would be 400 m². It should ask 'What is the largest possible area A?'"
+  ]
+ },
+ "final": {
+  "title": "Optimisation",
+  "card": [
+   "Optimisation finds the largest or smallest value of a quantity. First write that quantity as a function of one variable. Use any given condition to remove the other variables.",
+   "Differentiate and solve f'(x) = 0 to find the stationary points. Test each one to see if it is a maximum or minimum, using the second derivative or the sign of f'(x) on each side.",
+   "Check the endpoints of the allowed domain, because the greatest or least value can occur there. Also check that the answer makes sense, for example that a length is positive.",
+   "Example: two numbers add to 10. Find the largest product. If one is x, the other is 10 − x, so P = x(10 − x) = 10x − x². Then P' = 10 − 2x = 0 gives x = 5. P'' = −2 is negative, so it is a maximum. The largest product is 5 × 5 = 25."
+  ],
+  "remember": "Write one variable, solve f'(x) = 0, test the type, then check endpoints and sense.",
+  "a": {
+   "q": "Two numbers add to 12. Their product P = x(12 − x). What is the largest value of P?",
+   "opts": [
+    "36",
+    "6",
+    "72",
+    "12"
+   ],
+   "why": "P = 12x − x², so P' = 12 − 2x = 0 gives x = 6. P'' = −2 is negative, so this is a maximum, and P = 6 × 6 = 36. The value 6 is where the maximum occurs, not the maximum itself.",
+   "clue": "Find x first, then put it back into P."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava has 40 m of fencing for a rectangular pen x metres wide, so its area is A = x(20 − x) for 0 ≤ x ≤ 20. What is the largest possible area A?",
+   "opts": [
+    "100 m²",
+    "10 m²",
+    "200 m²",
+    "400 m²"
+   ],
+   "why": "A = 20x − x², so A' = 20 − 2x = 0 gives x = 10. A'' = −2 is negative, so it is a maximum, and A = 10 × 10 = 100. The endpoints x = 0 and x = 20 both give area 0, so they are smaller. The value 10 is the width, not the area.",
+   "clue": "Find x, then work out the area, and compare with the endpoints."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,204 @@
+{
+ "id": "mat-cubic-polynomial-graphs",
+ "title": "Cubic and polynomial graphs",
+ "brief": "68343c14c490",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00497,
+  "check": 0.01074,
+  "fix": 0.0157,
+  "recheck": 0.01093
+ },
+ "draft": {
+  "title": "Cubic and polynomial graphs",
+  "card": [
+   "A cubic such as y = (x − 1)(x + 2)(x − 3) has roots where each factor is zero: x = 1, −2 and 3. The graph crosses the x-axis at each of these.",
+   "For the y-intercept, put x = 0. Here y = (−1)(2)(−3) = 6, so the graph meets the y-axis at (0, 6).",
+   "Look at the sign of the x³ term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
+   "A repeated factor, such as (x − 2)², gives a repeated root. The graph touches the x-axis there and turns back, instead of crossing."
+  ],
+  "remember": "Roots give the x-intercepts, x = 0 gives the y-intercept, and the x³ sign gives the ends. A repeated root touches.",
+  "a": {
+   "q": "The graph of y = (x − 2)²(x + 1) is sketched. What happens at x = 2?",
+   "opts": [
+    "It touches the x-axis and turns back",
+    "It crosses the x-axis",
+    "It has a y-intercept",
+    "It has a gap in the graph"
+   ],
+   "why": "The factor (x − 2) appears twice, so x = 2 is a repeated root and the graph touches the axis there. It crosses only at the single root x = −1. Crossing at every root is the tempting mistake.",
+   "clue": "Look at how many times the factor (x − 2) appears."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the y-intercept of y = −(x − 1)(x + 4)(x − 2)?",
+   "opts": [
+    "−8",
+    "8",
+    "−2",
+    "2"
+   ],
+   "why": "Put x = 0: y = −(−1)(4)(−2) = −8. Here (−1)(4)(−2) = 8, and the minus sign in front makes it −8. Dropping that sign gives 8, which is wrong.",
+   "clue": "Put x = 0 and keep the minus sign at the front."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It touches the x-axis and turns back",
+   "also_right": []
+  },
+  "b": {
+   "best": "−8",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says any repeated factor makes the graph touch the x-axis and turn back. That is only true for an even power such as (x − 2)². A cubed factor such as (x − 2)³ is also a repeated root, but the graph crosses there, flattening as it passes through. The card should say a squared (double) root touches."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "\"A repeated root touches\" is false for a triple root such as (x − 2)³, where the graph crosses the axis. It should say a double or squared root touches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct. The card and remember line say every repeated root touches the axis, which is wrong for a triple root like (x − 2)³, so they should say a squared (double) root."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says any repeated factor makes the graph touch the x-axis and turn back. That is only true for an even power such as (x − 2)². A cubed factor such as (x − 2)³ is also a repeated root, but the graph crosses there, flattening as it passes through. The card should say a squared (double) root touches.",
+  "Remember, fact: \"A repeated root touches\" is false for a triple root such as (x − 2)³, where the graph crosses the axis. It should say a double or squared root touches."
+ ],
+ "proposal": {
+  "title": "Cubic and polynomial graphs",
+  "card": [
+   "A cubic such as y = (x − 1)(x + 2)(x − 3) has roots where each factor is zero: x = 1, −2 and 3. The graph crosses the x-axis at each of these single roots.",
+   "For the y-intercept, put x = 0. Here y = (−1)(2)(−3) = 6, so the graph meets the y-axis at (0, 6).",
+   "Look at the sign of the x³ term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
+   "A squared factor, such as (x − 2)², gives a double root. The graph touches the x-axis there and turns back. A cubed factor, such as (x − 2)³, still crosses, but flattens as it passes through."
+  ],
+  "remember": "Single roots cross, a double (squared) root touches, x = 0 gives the y-intercept and the x³ sign sets the ends.",
+  "a": {
+   "q": "The graph of y = (x − 2)²(x + 1) is sketched. What happens at x = 2?",
+   "opts": [
+    "It touches the x-axis and turns back",
+    "It crosses the x-axis",
+    "It crosses, flattening as it passes through",
+    "It has a gap in the graph"
+   ],
+   "why": "The factor (x − 2) is squared, so x = 2 is a double root and the graph touches the axis there and turns back. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root x = −1.",
+   "clue": "What power is the factor (x − 2) raised to?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the y-intercept of y = −(x − 1)(x + 4)(x − 2)?",
+   "opts": [
+    "−8",
+    "8",
+    "−2",
+    "2"
+   ],
+   "why": "Put x = 0: y = −(−1)(4)(−2) = −8. Here (−1)(4)(−2) = 8, and the minus sign in front makes it −8. Dropping that sign gives 8, which is wrong.",
+   "clue": "Put x = 0 and keep the minus sign at the front."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It touches the x-axis and turns back",
+    "also_right": []
+   },
+   "b": {
+    "best": "−8",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says any repeated factor makes the graph touch the x-axis and turn back. That is only true for an even power such as (x − 2)². A cubed factor such as (x − 2)³ is also a repeated root, but the graph crosses there, flattening as it passes through. The card should say a squared (double) root touches."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "\"A repeated root touches\" is false for a triple root such as (x − 2)³, where the graph crosses the axis. It should say a double or squared root touches."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says any repeated factor makes the graph touch the x-axis and turn back. That is only true for an even power such as (x − 2)². A cubed factor such as (x − 2)³ is also a repeated root, but the graph crosses there, flattening as it passes through. The card should say a squared (double) root touches.",
+   "Remember, fact: \"A repeated root touches\" is false for a triple root such as (x − 2)³, where the graph crosses the axis. It should say a double or squared root touches."
+  ]
+ },
+ "final": {
+  "title": "Cubic and polynomial graphs",
+  "card": [
+   "A cubic such as y = (x − 1)(x + 2)(x − 3) has roots where each factor is zero: x = 1, −2 and 3. The graph crosses the x-axis at each of these single roots.",
+   "For the y-intercept, put x = 0. Here y = (−1)(2)(−3) = 6, so the graph meets the y-axis at (0, 6).",
+   "Look at the sign of the x³ term. If it is positive, the graph rises on the right and falls on the left. If it is negative, it falls on the right and rises on the left.",
+   "A squared factor, such as (x − 2)², gives a double root. The graph touches the x-axis there and turns back. A cubed factor, such as (x − 2)³, still crosses, but flattens as it passes through."
+  ],
+  "remember": "Single roots cross, a double (squared) root touches, x = 0 gives the y-intercept and the x³ sign sets the ends.",
+  "a": {
+   "q": "The graph of y = (x − 2)²(x + 1) is sketched. What happens at x = 2?",
+   "opts": [
+    "It touches the x-axis and turns back",
+    "It crosses the x-axis",
+    "It crosses, flattening as it passes through",
+    "It has a gap in the graph"
+   ],
+   "why": "The factor (x − 2) is squared, so x = 2 is a double root and the graph touches the axis there and turns back. Crossing with a flat point happens for a cubed factor, not a squared one. The graph crosses only at the single root x = −1.",
+   "clue": "What power is the factor (x − 2) raised to?"
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the y-intercept of y = −(x − 1)(x + 4)(x − 2)?",
+   "opts": [
+    "−8",
+    "8",
+    "−2",
+    "2"
+   ],
+   "why": "Put x = 0: y = −(−1)(4)(−2) = −8. Here (−1)(4)(−2) = 8, and the minus sign in front makes it −8. Dropping that sign gives 8, which is wrong.",
+   "clue": "Put x = 0 and keep the minus sign at the front."
+  }
+ },
+ "cleared_by": "recheck"
+}

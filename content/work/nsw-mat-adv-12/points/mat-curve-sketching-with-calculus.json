@@ -1,0 +1,226 @@
+{
+ "id": "mat-curve-sketching-with-calculus",
+ "title": "Curve sketching with calculus",
+ "brief": "fab6dae020c8",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-28T11:49:42Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01094,
+  "check": 0.0131,
+  "fix": 0.01668,
+  "recheck": 0.01541
+ },
+ "draft": {
+  "title": "Curve sketching with calculus",
+  "card": [
+   [
+    "Intercepts",
+    "Put x = 0 to find the y-intercept. Solve f(x) = 0 to find the x-intercepts."
+   ],
+   [
+    "Turning points",
+    "Solve f'(x) = 0 for the stationary points and find each y-value. Check the gradient either side to see if it is a maximum or a minimum. Mark any point of inflection, where the curve changes concavity."
+   ],
+   [
+    "Edges",
+    "Check what f(x) does for very large positive and negative x. For a polynomial, the term with the highest power decides this."
+   ],
+   [
+    "Example",
+    "f(x) = x³ − 3x² = x²(x − 3) cuts the axes at (0, 0) and (3, 0). f'(x) = 3x(x − 2) gives stationary points (0, 0), a maximum, and (2, −4), a minimum. There is an inflection at (1, −2). As x → ∞, f(x) → ∞, and as x → −∞, f(x) → −∞."
+   ]
+  ],
+  "remember": "Plot the intercepts, turning points and inflections, then join them to match the edge behaviour.",
+  "a": {
+   "q": "What does the graph of y = x³ − 3x² do as x gets very large and negative?",
+   "opts": [
+    "It falls without bound",
+    "It rises without bound",
+    "It levels off at 0",
+    "It levels off at −3"
+   ],
+   "why": "For large x, the x³ term outweighs the −3x² term. A large negative number cubed is a large negative number, so y falls without bound. The graph does not level off, because a cubic has no horizontal limit.",
+   "clue": "Which term is largest when x is huge? What sign does it have for negative x?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, what are the coordinates of the maximum turning point?",
+   "opts": [
+    "(−2, 16)",
+    "(2, −16)",
+    "(−2, −16)",
+    "(2, 16)"
+   ],
+   "why": "f'(x) = 3x² − 12 = 0 gives x = 2 or x = −2. f(−2) = −8 + 24 = 16. The gradient is positive at x = −3 and negative at x = 0, so (−2, 16) is a maximum. (2, −16) is tempting but is the minimum.",
+   "clue": "Solve f'(x) = 0, then check the gradient either side of each x-value."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It falls without bound",
+   "also_right": []
+  },
+  "b": {
+   "best": "(−2, 16)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The 'Turning points' line says to check the gradient either side 'to see if it is a maximum or a minimum'. This leaves out the third outcome, a horizontal point of inflection (as for y = x³ at x = 0). Students may think every stationary point is a turning point."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card glosses a point of inflection as 'where the curve changes concavity'. That definition belongs to point 4 (second derivative and concavity); this point should only mention it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths, both questions and both explanations are correct. The card implies every stationary point is a maximum or minimum, leaving out horizontal inflections, and it briefly defines a point of inflection, which belongs to point 4."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The 'Turning points' line says to check the gradient either side 'to see if it is a maximum or a minimum'. This leaves out the third outcome, a horizontal point of inflection (as for y = x³ at x = 0). Students may think every stationary point is a turning point.",
+  "Card, other: The card glosses a point of inflection as 'where the curve changes concavity'. That definition belongs to point 4 (second derivative and concavity); this point should only mention it."
+ ],
+ "proposal": {
+  "title": "Curve sketching with calculus",
+  "card": [
+   [
+    "Intercepts",
+    "Put x = 0 to find the y-intercept. Solve f(x) = 0 to find the x-intercepts."
+   ],
+   [
+    "Stationary points",
+    "Solve f'(x) = 0 and find each y-value. The gradient either side shows whether each is a maximum, a minimum or a horizontal point of inflection. Also mark any other points of inflection."
+   ],
+   [
+    "Edges",
+    "Check what f(x) does for very large positive and negative x. For a polynomial, the term with the highest power decides this."
+   ],
+   [
+    "Example",
+    "f(x) = x³ − 3x² = x²(x − 3) cuts the axes at (0, 0) and (3, 0). f'(x) = 3x(x − 2) gives stationary points (0, 0), a maximum, and (2, −4), a minimum. There is a point of inflection at (1, −2). As x → ∞, f(x) → ∞, and as x → −∞, f(x) → −∞."
+   ]
+  ],
+  "remember": "Plot the intercepts, stationary points and inflections, then join them to match the edge behaviour.",
+  "a": {
+   "q": "What does the graph of y = x³ − 3x² do as x gets very large and negative?",
+   "opts": [
+    "It falls without bound",
+    "It rises without bound",
+    "It levels off at 0",
+    "It levels off at −3"
+   ],
+   "why": "For large x, the x³ term outweighs the −3x² term. A large negative number cubed is a large negative number, so y falls without bound. The graph does not level off, because a cubic has no horizontal limit.",
+   "clue": "Which term is largest when x is huge? What sign does it have for negative x?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, what are the coordinates of the maximum turning point?",
+   "opts": [
+    "(−2, 16)",
+    "(2, −16)",
+    "(−2, −16)",
+    "(2, 16)"
+   ],
+   "why": "f'(x) = 3x² − 12 = 0 gives x = 2 or x = −2. f(−2) = −8 + 24 = 16. The gradient is positive at x = −3 and negative at x = 0, so (−2, 16) is a maximum. (2, −16) is tempting but is the minimum.",
+   "clue": "Solve f'(x) = 0, then check the gradient either side of each x-value."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "It falls without bound",
+    "also_right": []
+   },
+   "b": {
+    "best": "(−2, 16)",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "level",
+     "detail": "Question a uses the same function as the card's worked example, and the card already states that as x → −∞, f(x) → −∞. Students can copy the answer rather than reason about the leading term. A different cubic, such as y = 2x² − x³, would test the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "All the maths checks out: the intercepts, stationary points, inflection point and both answers are correct. The only issue is that question a repeats the card's example function, so its answer is stated directly on the card."
+  },
+  "flags": [
+   "Question a, level: Question a uses the same function as the card's worked example, and the card already states that as x → −∞, f(x) → −∞. Students can copy the answer rather than reason about the leading term. A different cubic, such as y = 2x² − x³, would test the idea."
+  ]
+ },
+ "final": {
+  "title": "Curve sketching with calculus",
+  "card": [
+   [
+    "Intercepts",
+    "Put x = 0 to find the y-intercept. Solve f(x) = 0 to find the x-intercepts."
+   ],
+   [
+    "Stationary points",
+    "Solve f'(x) = 0 and find each y-value. The gradient either side shows whether each is a maximum, a minimum or a horizontal point of inflection. Also mark any other points of inflection."
+   ],
+   [
+    "Edges",
+    "Check what f(x) does for very large positive and negative x. For a polynomial, the term with the highest power decides this."
+   ],
+   [
+    "Example",
+    "f(x) = x³ − 3x² = x²(x − 3) cuts the axes at (0, 0) and (3, 0). f'(x) = 3x(x − 2) gives stationary points (0, 0), a maximum, and (2, −4), a minimum. There is a point of inflection at (1, −2). As x → ∞, f(x) → ∞, and as x → −∞, f(x) → −∞."
+   ]
+  ],
+  "remember": "Plot the intercepts, stationary points and inflections, then join them to match the edge behaviour.",
+  "a": {
+   "q": "What does the graph of y = x³ − 3x² do as x gets very large and negative?",
+   "opts": [
+    "It falls without bound",
+    "It rises without bound",
+    "It levels off at 0",
+    "It levels off at −3"
+   ],
+   "why": "For large x, the x³ term outweighs the −3x² term. A large negative number cubed is a large negative number, so y falls without bound. The graph does not level off, because a cubic has no horizontal limit.",
+   "clue": "Which term is largest when x is huge? What sign does it have for negative x?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, what are the coordinates of the maximum turning point?",
+   "opts": [
+    "(−2, 16)",
+    "(2, −16)",
+    "(−2, −16)",
+    "(2, 16)"
+   ],
+   "why": "f'(x) = 3x² − 12 = 0 gives x = 2 or x = −2. f(−2) = −8 + 24 = 16. The gradient is positive at x = −3 and negative at x = 0, so (−2, 16) is a maximum. (2, −16) is tempting but is the minimum.",
+   "clue": "Solve f'(x) = 0, then check the gradient either side of each x-value."
+  }
+ },
+ "cleared_by": "owner"
+}

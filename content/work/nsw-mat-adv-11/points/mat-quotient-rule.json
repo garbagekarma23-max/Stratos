@@ -1,0 +1,192 @@
+{
+ "id": "mat-quotient-rule",
+ "title": "The quotient rule",
+ "brief": "537765d16da4",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00505,
+  "check": 0.008,
+  "fix": 0.0141,
+  "recheck": 0.01017
+ },
+ "draft": {
+  "title": "The quotient rule",
+  "card": [
+   "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
+   "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
+   "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
+   "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x²×1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+  ],
+  "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+  "a": {
+   "q": "Which expression is the derivative of u/v by the quotient rule?",
+   "opts": [
+    "(u'v − uv') ÷ v²",
+    "(uv' − u'v) ÷ v²",
+    "(u'v + uv') ÷ v²",
+    "(u'v − uv') ÷ v"
+   ],
+   "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The second option has the terms in the wrong order, which gives the answer the wrong sign.",
+   "clue": "Start the top line with u', the derivative of the top function."
+  },
+  "b": {
+   "d": 2,
+   "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
+   "opts": [
+    "2 ÷ (x + 2)²",
+    "−2 ÷ (x + 2)²",
+    "(2x + 2) ÷ (x + 2)²",
+    "1 ÷ (x + 2)²"
+   ],
+   "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1×(x + 2) − x×1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
+   "clue": "Find u' and v' first, then work out u'v − uv'."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(u'v − uv') ÷ v²",
+   "also_right": []
+  },
+  "b": {
+   "best": "2 ÷ (x + 2)²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The second option has the terms in the wrong order', but options are shown in random order. In this order the second option is the correct answer, and the wrong-order option is the first. Students would be told the right answer is wrong. Name the wrong expression, (uv' − u'v) ÷ v², instead of its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths on the card and in both questions is correct. Why (a) refers to 'the second option' as the wrong-order one, which here is the correct answer, so it should name the expression instead of its position."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'The second option has the terms in the wrong order', but options are shown in random order. In this order the second option is the correct answer, and the wrong-order option is the first. Students would be told the right answer is wrong. Name the wrong expression, (uv' − u'v) ÷ v², instead of its position."
+ ],
+ "proposal": {
+  "title": "The quotient rule",
+  "card": [
+   "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
+   "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
+   "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
+   "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x² × 1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+  ],
+  "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+  "a": {
+   "q": "Which expression is the derivative of u/v by the quotient rule?",
+   "opts": [
+    "(u'v − uv') ÷ v²",
+    "(uv' − u'v) ÷ v²",
+    "(u'v + uv') ÷ v²",
+    "(u'v − uv') ÷ v"
+   ],
+   "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The expression (uv' − u'v) ÷ v² has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
+   "clue": "Start the top line with u', the derivative of the top function."
+  },
+  "b": {
+   "d": 2,
+   "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
+   "opts": [
+    "2 ÷ (x + 2)²",
+    "−2 ÷ (x + 2)²",
+    "(2x + 2) ÷ (x + 2)²",
+    "1 ÷ (x + 2)²"
+   ],
+   "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1 × (x + 2) − x × 1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
+   "clue": "Find u' and v' first, then work out u'v − uv'."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "(u'v − uv') ÷ v²",
+    "also_right": []
+   },
+   "b": {
+    "best": "2 ÷ (x + 2)²",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'The second option has the terms in the wrong order', but options are shown in random order. In this order the second option is the correct answer, and the wrong-order option is the first. Students would be told the right answer is wrong. Name the wrong expression, (uv' − u'v) ÷ v², instead of its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'The second option has the terms in the wrong order', but options are shown in random order. In this order the second option is the correct answer, and the wrong-order option is the first. Students would be told the right answer is wrong. Name the wrong expression, (uv' − u'v) ÷ v², instead of its position."
+  ]
+ },
+ "final": {
+  "title": "The quotient rule",
+  "card": [
+   "Use the quotient rule to differentiate a fraction y = u/v, where u and v are both functions of x and v is not zero.",
+   "The rule is dy/dx = (u'v − uv') ÷ v². Here u' and v' are the derivatives of u and v.",
+   "The order on top matters. Start with u'v (the derivative of the top times the bottom), then subtract uv'. Swapping them flips the sign of the answer.",
+   "Example: y = x²/(x + 1). Take u = x² and v = x + 1, so u' = 2x and v' = 1. Then dy/dx = (2x(x + 1) − x² × 1) ÷ (x + 1)² = (x² + 2x) ÷ (x + 1)²."
+  ],
+  "remember": "Top: u'v − uv'. Bottom: v². The derivative of the top comes first.",
+  "a": {
+   "q": "Which expression is the derivative of u/v by the quotient rule?",
+   "opts": [
+    "(u'v − uv') ÷ v²",
+    "(uv' − u'v) ÷ v²",
+    "(u'v + uv') ÷ v²",
+    "(u'v − uv') ÷ v"
+   ],
+   "why": "The top is u'v − uv', with the derivative of the top function first, and the bottom is v squared. The expression (uv' − u'v) ÷ v² has the terms on top in the wrong order, so it gives the answer with the wrong sign.",
+   "clue": "Start the top line with u', the derivative of the top function."
+  },
+  "b": {
+   "d": 2,
+   "q": "Using the quotient rule, what is the derivative of y = x/(x + 2)?",
+   "opts": [
+    "2 ÷ (x + 2)²",
+    "−2 ÷ (x + 2)²",
+    "(2x + 2) ÷ (x + 2)²",
+    "1 ÷ (x + 2)²"
+   ],
+   "why": "Let u = x and v = x + 2, so u' = 1 and v' = 1. The top is 1 × (x + 2) − x × 1 = 2, so dy/dx = 2 ÷ (x + 2)². Putting the terms in the wrong order would give −2, which is the most tempting mistake.",
+   "clue": "Find u' and v' first, then work out u'v − uv'."
+  }
+ },
+ "cleared_by": "recheck"
+}

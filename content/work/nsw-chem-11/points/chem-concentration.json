@@ -1,0 +1,231 @@
+{
+ "id": "chem-concentration",
+ "title": "Concentration",
+ "brief": "82d65b7b5075",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:58Z new, write",
+  "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00499,
+  "check": 0.01444,
+  "fix": 0.01668,
+  "recheck": 0.0117
+ },
+ "draft": {
+  "title": "Concentration",
+  "card": [
+   "Concentration tells you how much solute is dissolved in a given volume of solution. The solute is the substance that dissolves, and the solution is the solute and solvent mixed together.",
+   [
+    "Molar concentration",
+    "c = n ÷ V, where c is in mol/L, n is the moles of solute and V is the volume of solution in litres. Change mL to L by dividing by 1000."
+   ],
+   [
+    "Mass concentration",
+    "mass of solute ÷ volume of solution, usually in g/L. To change g/L to mol/L, divide by the molar mass of the solute."
+   ],
+   [
+    "Parts per million",
+    "ppm means mg of solute per kg of solution. For dilute water solutions, 1 ppm is about 1 mg/L."
+   ]
+  ],
+  "remember": "Concentration is solute per volume of solution: mol/L uses moles, g/L uses mass.",
+  "a": {
+   "q": "Liam dissolves 0.50 mol of sodium chloride in water to make 250 mL of solution. What is the concentration?",
+   "opts": [
+    "2.0 mol/L",
+    "0.50 mol/L",
+    "0.125 mol/L",
+    "500 mol/L"
+   ],
+   "why": "250 mL is 0.250 L, so c = 0.50 ÷ 0.250 = 2.0 mol/L. Using 250 in place of 0.250 gives 0.0020 mol/L, so the volume must be in litres first.",
+   "clue": "Convert the volume to litres before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of sodium hydroxide solution has a concentration of 4.0 g/L. The molar mass of NaOH is 40 g/mol. What is its concentration in mol/L?",
+   "opts": [
+    "0.10 mol/L",
+    "10 mol/L",
+    "160 mol/L",
+    "4.0 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 4.0 g/L ÷ 40 g/mol = 0.10 mol/L. Multiplying by the molar mass gives 160, which is tempting but turns grams into the wrong unit.",
+   "clue": "Grams per litre become moles per litre when you divide by the molar mass."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.0 mol/L",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.10 mol/L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The first bullet defines concentration as solute in a given volume of solution, but the card's own ppm definition is mg of solute per kg of solution, which is per mass, not per volume. Concentration is better defined as the amount of solute in a given quantity (volume or mass) of solution."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says concentration is always solute per volume of solution. This conflicts with the card's ppm definition (mg per kg of solution) and leaves ppm out."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct (2.0 mol/L and 0.10 mol/L). The card and remember line define concentration as per volume of solution, which clashes with the card's own mass-based ppm definition (mg/kg). The definition should say 'a given quantity (volume or mass) of solution'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The first bullet defines concentration as solute in a given volume of solution, but the card's own ppm definition is mg of solute per kg of solution, which is per mass, not per volume. Concentration is better defined as the amount of solute in a given quantity (volume or mass) of solution.",
+  "Remember, other: The remember line says concentration is always solute per volume of solution. This conflicts with the card's ppm definition (mg per kg of solution) and leaves ppm out."
+ ],
+ "proposal": {
+  "title": "Concentration",
+  "card": [
+   "Concentration is the amount of solute in a given quantity of solution, measured by volume or by mass. The solute is the substance that dissolves, and the solution is the solute and solvent mixed together.",
+   [
+    "Molar concentration",
+    "c = n ÷ V, where c is in mol/L, n is the moles of solute and V is the volume of solution in litres. Change mL to L by dividing by 1000."
+   ],
+   [
+    "Mass concentration",
+    "mass of solute ÷ volume of solution, usually in g/L. To change g/L to mol/L, divide by the molar mass of the solute."
+   ],
+   [
+    "Parts per million",
+    "ppm means mg of solute per kg of solution. For dilute water solutions, 1 ppm is about 1 mg/L."
+   ]
+  ],
+  "remember": "Match the unit to the measure: mol/L uses moles, g/L uses grams and ppm uses mg per kg.",
+  "a": {
+   "q": "Liam dissolves 0.50 mol of sodium chloride in water to make 250 mL of solution. What is the concentration?",
+   "opts": [
+    "2.0 mol/L",
+    "0.0020 mol/L",
+    "0.125 mol/L",
+    "0.50 mol/L"
+   ],
+   "why": "250 mL is 0.250 L, so c = 0.50 ÷ 0.250 = 2.0 mol/L. Dividing by 250 instead gives 0.0020 mol/L, which comes from forgetting to change mL to L.",
+   "clue": "Convert the volume to litres before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of sodium hydroxide solution has a concentration of 4.0 g/L. The molar mass of NaOH is 40 g/mol. What is its concentration in mol/L?",
+   "opts": [
+    "0.10 mol/L",
+    "10 mol/L",
+    "160 mol/L",
+    "4.0 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 4.0 g/L ÷ 40 g/mol = 0.10 mol/L. Multiplying by the molar mass gives 160, but then the units do not work out to mol/L.",
+   "clue": "Grams per litre become moles per litre when you divide by the molar mass."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2.0 mol/L",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.10 mol/L",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both calculations are correct: 0.50 ÷ 0.250 = 2.0 mol/L, and 4.0 ÷ 40 = 0.10 mol/L. The card's definitions of mol/L, g/L and ppm are accurate."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The first bullet defines concentration as solute in a given volume of solution, but the card's own ppm definition is mg of solute per kg of solution, which is per mass, not per volume. Concentration is better defined as the amount of solute in a given quantity (volume or mass) of solution."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says concentration is always solute per volume of solution. This conflicts with the card's ppm definition (mg per kg of solution) and leaves ppm out."
+   }
+  ],
+  "flags": [
+   "Card, fact: The first bullet defines concentration as solute in a given volume of solution, but the card's own ppm definition is mg of solute per kg of solution, which is per mass, not per volume. Concentration is better defined as the amount of solute in a given quantity (volume or mass) of solution.",
+   "Remember, other: The remember line says concentration is always solute per volume of solution. This conflicts with the card's ppm definition (mg per kg of solution) and leaves ppm out."
+  ]
+ },
+ "final": {
+  "title": "Concentration",
+  "card": [
+   "Concentration is the amount of solute in a given quantity of solution, measured by volume or by mass. The solute is the substance that dissolves, and the solution is the solute and solvent mixed together.",
+   [
+    "Molar concentration",
+    "c = n ÷ V, where c is in mol/L, n is the moles of solute and V is the volume of solution in litres. Change mL to L by dividing by 1000."
+   ],
+   [
+    "Mass concentration",
+    "mass of solute ÷ volume of solution, usually in g/L. To change g/L to mol/L, divide by the molar mass of the solute."
+   ],
+   [
+    "Parts per million",
+    "ppm means mg of solute per kg of solution. For dilute water solutions, 1 ppm is about 1 mg/L."
+   ]
+  ],
+  "remember": "Match the unit to the measure: mol/L uses moles, g/L uses grams and ppm uses mg per kg.",
+  "a": {
+   "q": "Liam dissolves 0.50 mol of sodium chloride in water to make 250 mL of solution. What is the concentration?",
+   "opts": [
+    "2.0 mol/L",
+    "0.0020 mol/L",
+    "0.125 mol/L",
+    "0.50 mol/L"
+   ],
+   "why": "250 mL is 0.250 L, so c = 0.50 ÷ 0.250 = 2.0 mol/L. Dividing by 250 instead gives 0.0020 mol/L, which comes from forgetting to change mL to L.",
+   "clue": "Convert the volume to litres before you divide."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of sodium hydroxide solution has a concentration of 4.0 g/L. The molar mass of NaOH is 40 g/mol. What is its concentration in mol/L?",
+   "opts": [
+    "0.10 mol/L",
+    "10 mol/L",
+    "160 mol/L",
+    "4.0 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 4.0 g/L ÷ 40 g/mol = 0.10 mol/L. Multiplying by the molar mass gives 160, but then the units do not work out to mol/L.",
+   "clue": "Grams per litre become moles per litre when you divide by the molar mass."
+  }
+ },
+ "cleared_by": "recheck"
+}

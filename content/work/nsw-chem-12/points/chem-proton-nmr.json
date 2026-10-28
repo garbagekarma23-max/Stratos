@@ -1,0 +1,169 @@
+{
+ "id": "chem-proton-nmr",
+ "title": "Proton NMR",
+ "brief": "df5179a9345b",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:00Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:08Z write: done",
+  "2026-10-27T01:08:34Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00558,
+  "check": 0.01312,
+  "fix": 0.01683
+ },
+ "draft": {
+  "title": "Proton NMR",
+  "card": [
+   "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogens in the same chemical environment give one peak. Hydrogens in different environments give separate peaks.",
+   "The area under a peak (often shown as an integration value) is in proportion to the number of hydrogens in that environment. A peak with twice the area is from twice as many hydrogens.",
+   "A peak is split by hydrogens on the neighbouring carbon atoms. A peak with n neighbouring hydrogens splits into n + 1 lines: 0 gives a singlet, 1 a doublet, 2 a triplet and 3 a quartet.",
+   "Chemists combine the number of peaks, their areas and their splitting to work out the structure. For example, ethanol, CH3CH2OH, has three environments: CH3, CH2 and OH."
+  ],
+  "remember": "Peaks count the kinds of hydrogen, area counts how many, and splitting counts the neighbours.",
+  "a": {
+   "q": "A peak in a proton NMR spectrum is a triplet. What does this tell you about that hydrogen environment?",
+   "opts": [
+    "It has 2 hydrogens on the neighbouring carbon atoms",
+    "It contains 3 hydrogens",
+    "It has 3 hydrogens on the neighbouring carbon atoms",
+    "It has 2 hydrogens in the same environment"
+   ],
+   "why": "A peak splits into n + 1 lines, where n is the number of neighbouring hydrogens. A triplet has 3 lines, so n is 2. The tempting option is 3 neighbours, but that would give a quartet. The number of hydrogens in the peak itself comes from its area.",
+   "clue": "Lines = neighbouring hydrogens + 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound has the formula C4H8O2. Its proton NMR spectrum shows 3 peaks with area ratio 3:2:3. The 2-hydrogen peak is a quartet. How many hydrogens are on the carbon next to the carbon giving the quartet?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "8"
+   ],
+   "why": "A quartet has 4 lines, so n + 1 = 4 and n = 3. The carbon next door carries 3 hydrogens. The 2 is the number of hydrogens in the quartet itself, which comes from its area, not its splitting.",
+   "clue": "Use the number of lines in the quartet, not its area."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It has 2 hydrogens on the neighbouring carbon atoms",
+   "also_right": []
+  },
+  "b": {
+   "best": "3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'The carbon next to the carbon giving the quartet' assumes there is only one neighbouring carbon. In methyl propanoate (CH3CH2COOCH3), which fits C4H8O2 with a 3:2:3 ratio, the quartet CH2 sits between a CH3 carbon and the C=O carbon, which has 0 hydrogens. Better: 'How many hydrogens are on the neighbouring carbon atoms?'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b's wording 'the carbon next to' is ambiguous, because in an ester that fits the data the CH2 has two carbon neighbours, one with no hydrogens; it should ask about hydrogens on neighbouring carbons."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: 'The carbon next to the carbon giving the quartet' assumes there is only one neighbouring carbon. In methyl propanoate (CH3CH2COOCH3), which fits C4H8O2 with a 3:2:3 ratio, the quartet CH2 sits between a CH3 carbon and the C=O carbon, which has 0 hydrogens. Better: 'How many hydrogens are on the neighbouring carbon atoms?'"
+ ],
+ "proposal": {
+  "title": "Proton NMR",
+  "card": [
+   "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogens in the same chemical environment give one peak. Hydrogens in different environments give separate peaks.",
+   "The area under a peak (often shown as an integration value) is in proportion to the number of hydrogens in that environment. A peak with twice the area is from twice as many hydrogens.",
+   "A peak is split by hydrogens on the neighbouring carbon atoms. A peak with n neighbouring hydrogens splits into n + 1 lines: 0 gives a singlet, 1 a doublet, 2 a triplet and 3 a quartet.",
+   "Chemists combine the number of peaks, their areas and their splitting to work out the structure. For example, ethanol, CH3CH2OH, has three environments: CH3, CH2 and OH."
+  ],
+  "remember": "Peaks count the kinds of hydrogen, area counts how many, and splitting counts the neighbours.",
+  "a": {
+   "q": "A peak in a proton NMR spectrum is a triplet. What does this tell you about that hydrogen environment?",
+   "opts": [
+    "It has 2 hydrogens on the neighbouring carbon atoms",
+    "It contains 3 hydrogens",
+    "It has 3 hydrogens on the neighbouring carbon atoms",
+    "It has 2 hydrogens in the same environment"
+   ],
+   "why": "A peak splits into n + 1 lines, where n is the number of neighbouring hydrogens. A triplet has 3 lines, so n is 2. The tempting option is 3 neighbours, but that would give a quartet, and the number of hydrogens in the peak itself comes from its area.",
+   "clue": "Lines = neighbouring hydrogens + 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound has the formula C4H8O2. Its proton NMR spectrum shows 3 peaks with area ratio 3:2:3. The 2-hydrogen peak is a quartet. How many hydrogens are on the neighbouring carbon atoms?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "8"
+   ],
+   "why": "A quartet has 4 lines, so n + 1 = 4 and n = 3. The neighbouring carbon atoms carry 3 hydrogens in total. The 2 is the number of hydrogens in the quartet itself, which comes from its area, not its splitting.",
+   "clue": "Use the number of lines in the quartet, not its area."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'The carbon next to the carbon giving the quartet' assumes there is only one neighbouring carbon. In methyl propanoate (CH3CH2COOCH3), which fits C4H8O2 with a 3:2:3 ratio, the quartet CH2 sits between a CH3 carbon and the C=O carbon, which has 0 hydrogens. Better: 'How many hydrogens are on the neighbouring carbon atoms?'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: 'The carbon next to the carbon giving the quartet' assumes there is only one neighbouring carbon. In methyl propanoate (CH3CH2COOCH3), which fits C4H8O2 with a 3:2:3 ratio, the quartet CH2 sits between a CH3 carbon and the C=O carbon, which has 0 hydrogens. Better: 'How many hydrogens are on the neighbouring carbon atoms?'"
+  ]
+ },
+ "final": {
+  "title": "Proton NMR",
+  "card": [
+   "Proton NMR looks at the hydrogen atoms in a molecule. Hydrogens in the same chemical environment give one peak. Hydrogens in different environments give separate peaks.",
+   "The area under a peak (often shown as an integration value) is in proportion to the number of hydrogens in that environment. A peak with twice the area is from twice as many hydrogens.",
+   "A peak is split by hydrogens on the neighbouring carbon atoms. A peak with n neighbouring hydrogens splits into n + 1 lines: 0 gives a singlet, 1 a doublet, 2 a triplet and 3 a quartet.",
+   "Chemists combine the number of peaks, their areas and their splitting to work out the structure. For example, ethanol, CH3CH2OH, has three environments: CH3, CH2 and OH."
+  ],
+  "remember": "Peaks count the kinds of hydrogen, area counts how many, and splitting counts the neighbours.",
+  "a": {
+   "q": "A peak in a proton NMR spectrum is a triplet. What does this tell you about that hydrogen environment?",
+   "opts": [
+    "It has 2 hydrogens on the neighbouring carbon atoms",
+    "It contains 3 hydrogens",
+    "It has 3 hydrogens on the neighbouring carbon atoms",
+    "It has 2 hydrogens in the same environment"
+   ],
+   "why": "A peak splits into n + 1 lines, where n is the number of neighbouring hydrogens. A triplet has 3 lines, so n is 2. The tempting option is 3 neighbours, but that would give a quartet, and the number of hydrogens in the peak itself comes from its area.",
+   "clue": "Lines = neighbouring hydrogens + 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound has the formula C4H8O2. Its proton NMR spectrum shows 3 peaks with area ratio 3:2:3. The 2-hydrogen peak is a quartet. How many hydrogens are on the neighbouring carbon atoms?",
+   "opts": [
+    "3",
+    "2",
+    "4",
+    "8"
+   ],
+   "why": "A quartet has 4 lines, so n + 1 = 4 and n = 3. The neighbouring carbon atoms carry 3 hydrogens in total. The 2 is the number of hydrogens in the quartet itself, which comes from its area, not its splitting.",
+   "clue": "Use the number of lines in the quartet, not its area."
+  }
+ },
+ "cleared_by": "auto"
+}

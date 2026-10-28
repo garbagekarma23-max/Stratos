@@ -1,0 +1,111 @@
+{
+ "id": "mat-derivatives-trigonometric-functions",
+ "title": "Derivatives of trigonometric functions",
+ "brief": "4749fb3334ca",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00483,
+  "check": 0.00549
+ },
+ "draft": {
+  "title": "Derivatives of trigonometric functions",
+  "card": [
+   "With x in radians: the derivative of sin x is cos x, of cos x is −sin x, and of tan x is sec²x. Here sec x means 1/cos x.",
+   "If the angle is a function, use the chain rule. Differentiate the trig function, keep the inside the same, then multiply by the derivative of the inside.",
+   "So d/dx [sin(f(x))] = f'(x) cos(f(x)), and d/dx [cos(f(x))] = −f'(x) sin(f(x)). For tan, d/dx [tan(f(x))] = f'(x) sec²(f(x)).",
+   [
+    "Example",
+    "y = sin(3x). The inside is 3x, and its derivative is 3. So dy/dx = 3cos(3x)."
+   ]
+  ],
+  "remember": "Differentiate the trig function, keep the inside, then multiply by the derivative of the inside.",
+  "a": {
+   "q": "What is the derivative of cos(5x)?",
+   "opts": [
+    "−5sin(5x)",
+    "5sin(5x)",
+    "−sin(5x)",
+    "−5cos(5x)"
+   ],
+   "why": "The derivative of cos is −sin, and the inside 5x has derivative 5. So the answer is −5sin(5x). Leaving out the minus sign gives 5sin(5x), which is a common sign error.",
+   "clue": "The derivative of cos has a minus sign, and the inside also adds a factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the gradient of y = tan(2x) at x = 0?",
+   "opts": [
+    "2",
+    "0",
+    "1",
+    "1/2"
+   ],
+   "why": "dy/dx = 2sec²(2x). At x = 0, sec²(0) = 1/cos²(0) = 1, so the gradient is 2 × 1 = 2. The answer 1 comes from forgetting to multiply by the derivative of 2x.",
+   "clue": "Use the chain rule first, then put x = 0 into sec²."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "−5sin(5x)",
+   "also_right": []
+  },
+  "b": {
+   "best": "2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Derivatives of trigonometric functions",
+  "card": [
+   "With x in radians: the derivative of sin x is cos x, of cos x is −sin x, and of tan x is sec²x. Here sec x means 1/cos x.",
+   "If the angle is a function, use the chain rule. Differentiate the trig function, keep the inside the same, then multiply by the derivative of the inside.",
+   "So d/dx [sin(f(x))] = f'(x) cos(f(x)), and d/dx [cos(f(x))] = −f'(x) sin(f(x)). For tan, d/dx [tan(f(x))] = f'(x) sec²(f(x)).",
+   [
+    "Example",
+    "y = sin(3x). The inside is 3x, and its derivative is 3. So dy/dx = 3cos(3x)."
+   ]
+  ],
+  "remember": "Differentiate the trig function, keep the inside, then multiply by the derivative of the inside.",
+  "a": {
+   "q": "What is the derivative of cos(5x)?",
+   "opts": [
+    "−5sin(5x)",
+    "5sin(5x)",
+    "−sin(5x)",
+    "−5cos(5x)"
+   ],
+   "why": "The derivative of cos is −sin, and the inside 5x has derivative 5. So the answer is −5sin(5x). Leaving out the minus sign gives 5sin(5x), which is a common sign error.",
+   "clue": "The derivative of cos has a minus sign, and the inside also adds a factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the gradient of y = tan(2x) at x = 0?",
+   "opts": [
+    "2",
+    "0",
+    "1",
+    "1/2"
+   ],
+   "why": "dy/dx = 2sec²(2x). At x = 0, sec²(0) = 1/cos²(0) = 1, so the gradient is 2 × 1 = 2. The answer 1 comes from forgetting to multiply by the derivative of 2x.",
+   "clue": "Use the chain rule first, then put x = 0 into sec²."
+  }
+ },
+ "cleared_by": "checker"
+}
