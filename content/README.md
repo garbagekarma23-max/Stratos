@@ -9,7 +9,7 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 If you are Claude Code helping the owner with these steps:
 
 - Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `review`, `publish`, the build, the checks and git.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
@@ -153,6 +153,49 @@ py content/pipeline.py run-many content/outlines --max-dollars 20
 
 ## 8. Review the flagged points
 
+### Clear the safe ones first (optional)
+
+`autoreview` clears some flagged points for you by using the checker's fix, the same as pressing **Use the fix**. It makes no API calls and needs no key, so it can run in any window. It only reads the checker's saved answers.
+
+It clears a point only when all of these hold:
+
+- The checker was highly sure.
+- Every problem the checker named is of kind **wording** or **other**. Wording covers confusing words, a question whose wording gives the answer away, filler about the course, and "forces" or "always" where the card says "can" or "may". Other covers a term that belongs to another point, a remember line that splits ideas more neatly than the card or contradicts it, a clue that gives the answer away, and a why that contradicts the card.
+- No problem's explanation uses "incorrect", "wrong", "false", "inaccurate", "not true", "error" or "mistake", whatever kind it is labelled.
+- The checker picked the writer's answer to both questions, and said no other option could also be right.
+- There is no sensitive topic.
+- There is a fix, it passes the content check, and it keeps the same right answer to both questions.
+
+Everything else stays for you: a possible factual error, a problem with the level, anything the checker was not highly sure of, a sensitive topic, a point with no fix, a possible match in the bank, and a point that could not be written.
+
+After you merge this pull request, on your own computer:
+
+```powershell
+git checkout main
+git pull
+py content/pipeline.py autoreview --dry-run
+```
+
+With no outline it looks at every course in `content/work/` (trials are left out). To look at some courses only, name their outlines, or a folder of them:
+
+```powershell
+py content/pipeline.py autoreview content/outlines/nsw-bus-11.yaml --dry-run
+```
+
+The dry run changes nothing. For each course it prints how many points it would clear, which ones, how many it would keep as spot checks, and how many are left for you, with the reasons. It also replays the rules on the points you have already reviewed, next to what you chose, so you can see whether they agree with you. When the numbers look right, run it again without `--dry-run`:
+
+```powershell
+py content/pipeline.py autoreview
+```
+
+- **Spot checks**: 1 in 10 automatic decisions (the 1st, 11th, 21st and so on in each course) is not cleared. It stays in the review list labelled **Spot check**, with a note saying autoreview would have used the fix. Decide it as you would any other. If you reject one, every summary after that (`autoreview`, `status` and the end of a run) shows a warning. The rate is `AUTO_SPOT_EVERY` at the top of `content/pipeline.py`: 10 is 1 in 10, and 20 would be 1 in 20.
+- **The record**: each point it clears gets an `auto` entry in its file in `content/work/<course>/points/`, with when, the problems and their kinds, how sure the checker was, and "used the fix", and a line in its log. The first draft stays in the file. `content/work/<course>/autoreview.json` counts the decisions and keeps your answer to each spot check.
+- **Undo**: `py content/pipeline.py autoreview content/outlines/nsw-bus-11.yaml --undo` sends every point it cleared in that course back to the review list. Add `--point bus-business` for one point. Add `--dry-run` to see what would go back first. A point sent back is never cleared automatically again. If the course was already published, run `publish` again: a chapter with a point waiting for you shows as Coming soon until you clear it.
+- Running it again never decides a point twice. Run it after each `run`, before you open the review page.
+- Commit the work folders afterwards, as in step 9, so the decisions are kept.
+
+### The review page
+
 ```powershell
 py content/pipeline.py review
 ```
@@ -168,7 +211,7 @@ The buttons:
 - **Edit** lets you change any part. Saving runs the content check first, and says what to fix if it fails.
 - **Reject and rewrite** sends it back to be written again on the next run, with your note.
 
-Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
+Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here, and nor do the points autoreview cleared, apart from its spot checks. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
 
 After rejecting points, run step 7 again to rewrite them. Press Ctrl+C in the window to stop the review page.
 
@@ -258,6 +301,6 @@ Rules:
 | `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md`, and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
-| `work/` | What each run saved: `state.json` (the batches and the money spent) and a file per point (each version, the checker's answer and your decisions). Commit it with the content. |
+| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (its decisions count and your spot check answers) and a file per point (each version, the checker's answer, autoreview's decision and yours). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. |

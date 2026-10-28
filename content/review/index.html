@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stratos review</title>
 <!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
-     It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, or not
-     written. Every decision is saved straight away in content/work. The Compare tab puts a trial run (run --as)
-     next to its course, point by point, so the owner can judge whether cheaper settings keep the quality. -->
+     It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, not
+     written, or a spot check from autoreview. Every decision is saved straight away in content/work. The Compare tab
+     puts a trial run (run --as) next to its course, point by point, so the owner can judge whether cheaper settings
+     keep the quality. -->
 <style>
 :root{--paper:#fff;--ink:#16171b;--soft:#5d6068;--line:#e3e4e8;--wash:#f6f7f9;--blue:#2f5bea;--blue-wash:#eaf0ff;--weak:#c2410c;--weak-wash:#fff1e8;--ok:#15803d}
 @media (prefers-color-scheme: dark){:root{--paper:#15161a;--ink:#ececef;--soft:#a2a5ad;--line:#2c2e35;--wash:#1d1f24;--blue:#7d9bff;--blue-wash:#1f2740;--weak:#fb923c;--weak-wash:#2e1f15;--ok:#4ade80}}
@@ -154,7 +155,7 @@ function render() {
     if (x.courseName !== lastC) { nav += '<h2>' + esc(x.courseName) + '</h2>'; lastC = x.courseName; lastCh = ''; }
     if (x.chapter !== lastCh) { nav += '<h3>' + esc(x.chapter) + '</h3>'; lastCh = x.chapter; }
     nav += '<button type="button" data-i="' + i + '"' + (i === cur ? ' aria-current="true"' : '') + '>' + esc(x.title) + '<small>' +
-      ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage] + '</small></button>';
+      (x.spot ? 'Spot check' : ({review: 'Flagged', 'match-review': 'Possible match', failed: 'Not written'})[x.stage]) + '</small></button>';
   });
   let mid = '<p class="where">' + esc(it.courseName + '. ' + it.unit + '. ' + it.chapter) + '</p>';
   let side = '<div class="label">Your brief</div><p>' + esc(it.brief) + '</p>';
@@ -172,6 +173,7 @@ function render() {
     if (it.proposal) mid += '<div class="seg" role="group" aria-label="Version"><button type="button" data-view="draft" aria-pressed="' + (view === 'draft') + '">As written</button><button type="button" data-view="fix" aria-pressed="' + (view === 'fix') + '">The fix</button></div>';
     if (it.draft || it.proposal) mid += view === 'fix' && it.proposal ? pointHtml(it.proposal, it.draft) : pointHtml(it.draft);
     else mid += '<h2 class="title">' + esc(it.title) + '</h2>';
+    if (it.spot) side += '<div class="note">Spot check: autoreview would have cleared this point with the fix. Decide it as you would any other. Use the fix agrees with autoreview, and a rejection shows a warning in the summary.</div>';
     if (it.error) side += '<div class="label">What happened</div><div class="flag">' + esc(it.error) + '</div>';
     if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
     if (it.summary) side += '<div class="label">Summary</div><p>' + esc(it.summary) + '</p>';
@@ -197,7 +199,7 @@ function sideHtml(s, shown) {
   let out = pointHtml(s.point);
   if (shown) {
     out += '<p class="small">' + esc(({final: 'Final version', 'the fix': 'The suggested fix', draft: 'Draft'})[s.which]) + ', ' +
-      (s.clearedBy ? 'cleared by ' + esc(({screen: 'the Haiku screen', checker: 'the Opus checker', owner: 'you'})[s.clearedBy] || s.clearedBy) : esc(s.stage)) +
+      (s.clearedBy ? 'cleared by ' + esc(({screen: 'the Haiku screen', checker: 'the Opus checker', owner: 'you', auto: 'autoreview'})[s.clearedBy] || s.clearedBy) : esc(s.stage)) +
       (s.usd != null ? '. Cost ' + (s.usd * 100).toFixed(1) + ' cents' : '') + '.</p>';
     if (s.screen) out += '<p class="small"><b>Haiku:</b> ' + esc(s.screen) + (s.toOpus ? ' Sent to Opus: ' + esc(s.toOpus) + '.' : '') + '</p>';
     if (s.summary) out += '<p class="small"><b>Opus:</b> ' + esc(s.summary) + '</p>';
