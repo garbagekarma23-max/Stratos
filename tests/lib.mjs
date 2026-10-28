@@ -44,6 +44,9 @@ export async function open(o = {}) {
   // The course steps on first open (where you study, then the course) come before the welcome screen. Tests skip
   // them unless they pass setup: true (tests/first-open.mjs does).
   if (!o.setup) await ctx.addInitScript(() => { window.stratosSetup = false; });
+  // The first time a course is opened, a sheet asks where the class is up to. Tests skip it unless they pass start: true
+  // (tests/start.mjs does).
+  if (!o.start) await ctx.addInitScript(() => { window.stratosStart = false; });
   if (o.init) await ctx.addInitScript(o.init);
   // Tests never reach a real Supabase project: every supabase.co address is blocked, including the one in the build.
   // tests/account.mjs passes supabase: a fake from fake-supabase.mjs,

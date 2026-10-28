@@ -5,9 +5,10 @@
    in econ-points.js, so a point can later belong to more than one course.
    A chapter with no points shows on Home as Coming soon and cannot be opened.
    check is 'draft' until a teacher has checked the chapter, then 'checked'. A draft chapter with points shows a
-   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
+   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1).
+   level is the heading the subject sheet lists the course under: AS here, A level for the A2 year. */
 const EDEXCEL = {
-  id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', short: 'AS Economics',
+  id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', level: 'AS', short: 'AS Economics',
   note: 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.',
   units: [
     {title: 'Markets in action', chapters: [

@@ -14,6 +14,7 @@
 // top bar (Sign in while signed out, and the store). Every other test skips the welcome screen and the offer.
 // first-open.mjs runs a device's first open: the intro, where you study, the course, the welcome screen, then Home.
 // Every other test skips the course steps.
+// start.mjs checks Where is your class up to?, asked the first time a course opens. Every other test skips it.
 // friends-db.mjs checks the friends rules in supabase/friends.sql with no browser, and friends.mjs runs real friends
 // (usernames, search, codes, requests, block) on several devices against the fake Supabase.
 // messages-db.mjs checks the rules and the filter in supabase/messages.sql with no browser, and messages.mjs runs
@@ -30,7 +31,7 @@
 // words.mjs checks the banned words in check_content.mjs with no browser: the names and subject terms it lets through.
 import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
-const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['pipeline.mjs'], ['made.mjs'], ['words.mjs']];
+const runs = [['flow.mjs'], ['social.mjs'], ['edge.mjs'], ['monkey.mjs', '1500', '7'], ['monkey.mjs', '1500', '4242'], ['lab-maths.mjs'], ['lab.mjs'], ['maths-content.mjs'], ['maths.mjs'], ['maths-practice.mjs'], ['maths-games.mjs'], ['edexcel.mjs'], ['places.mjs'], ['altitude.mjs'], ['preview.mjs'], ['fullscreen.mjs'], ['intro.mjs'], ['merge.mjs'], ['rls.mjs'], ['account.mjs'], ['friends-db.mjs'], ['friends.mjs'], ['messages-db.mjs'], ['report-email.mjs'], ['messages.mjs'], ['challenges-db.mjs'], ['challenges.mjs'], ['live-db.mjs'], ['live.mjs'], ['week-db.mjs'], ['week.mjs'], ['welcome.mjs'], ['first-open.mjs'], ['start.mjs'], ['pipeline.mjs'], ['made.mjs'], ['words.mjs']];
 let ok = 0, bad = 0;
 for (const r of runs) {
   const out = spawnSync('node', r, {cwd: fileURLToPath(new URL('.', import.meta.url)), encoding: 'utf8'});

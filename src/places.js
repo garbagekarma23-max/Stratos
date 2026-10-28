@@ -1,10 +1,10 @@
 /* Where each course is taught. The subject sheet reads this to show a student the courses for their country.
    Adding a country, a state or a course here needs no new code.
 
-   COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
-                course's content (from content.js, maths-content.js, edexcel-content.js or src/courses), name is the
-                plain name on its row, and about is the line under it: the exam it leads to, then the topic loaded.
-                The courses the content pipeline made (made.js) come after the others.
+   COURSE_LIST  every course the app has. id is how progress is saved, data is the course's content (from content.js,
+                maths-content.js, edexcel-content.js or src/courses), name is the plain name on its row, and about is
+                the line under it: the exam it leads to, then the topic loaded. The courses the content pipeline made
+                (made.js) come after the others. Each course also gets its group and rank (see yearGroup below).
    CURRICULA    a country's or a state's own courses, by id. more is a line under them.
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
@@ -19,6 +19,16 @@ const COURSE_LIST = [
   {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
 ].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
+/* The heading a course is listed under on the subject sheet, and where that heading sorts. It comes from the course's
+   data, never its name: level for an A level course (AS, then A level), otherwise years (Year 11 before Year 12).
+   The content pipeline writes years and year into every course it makes, from the outline's years line. */
+const LEVELS = ['AS', 'A level'];
+function yearGroup(d) {
+  if (d.level) return {group: d.level, rank: 100 + Math.max(0, LEVELS.indexOf(d.level))};
+  const ys = (d.years || []).slice().sort((a, b) => a - b);
+  return {group: d.year, rank: ys.length ? ys[0] : 99};
+}
+COURSE_LIST.forEach(c => Object.assign(c, yearGroup(c.data)));
 const CURRICULA = {
   nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
 };
