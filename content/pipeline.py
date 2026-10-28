@@ -5,6 +5,8 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py run content/outlines/nsw-bus-11.yaml --max-dollars 5
   python3 content/pipeline.py run-many content/outlines --max-dollars 20  several courses, sharing each batch
   python3 content/pipeline.py status content/outlines/nsw-bus-11.yaml     where each point is, with no API calls
+  python3 content/pipeline.py autoreview --dry-run                         which flagged points it would clear with the fix
+  python3 content/pipeline.py autoreview                                  clears them, with no API calls
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
 content/README.md walks through each step.
@@ -20,6 +22,8 @@ How a point goes through it:
   check    a separate call checks it. It is not told the right answer: it picks one itself, and says if another
            option could also be right, if any fact is wrong, and how sure it is.
   fix      a point the checker flagged gets a suggested fix.
+  auto     only when you run autoreview: a flagged point whose problems are all wording or other, with the checker highly
+           sure and a fix that passes the content check, is cleared with the fix. 1 in 10 stay for you as spot checks.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
 Each step is one Message Batch for every point that needs it, which costs half the normal price. With --now, the
@@ -90,6 +94,18 @@ BATCH = 0.5
 REDO_SHARE, FIX_SHARE, TO_OPUS = 0.1, (0.25, 0.35), (0.3, 0.6)
 # One in 10 of the points Haiku passes goes to the Opus checker anyway, so its misses keep being measured.
 SPOT_SHARE = 0.1
+# autoreview: one in this many automatic decisions stays in the review list as a spot check, so the owner can see
+# whether they hold up. 10 is 1 in 10. Make it bigger (20 is 1 in 20) for fewer spot checks once they keep agreeing.
+AUTO_SPOT_EVERY = 10
+# The kinds of checker problem autoreview may clear with the fix: wording, and other (overlap with another point, a
+# remember line that splits ideas more neatly than the card, a clue that gives the answer away, a why that contradicts
+# the card). fact and level always stay with the owner.
+AUTO_SAFE_KINDS = ('wording', 'other')
+# A problem whose explanation uses one of these words stays with the owner whatever its kind, in case the checker
+# labelled a wrong fact as wording or other.
+AUTO_UNSAFE_WORDS = re.compile(r'\b(incorrect\w*|wrong\w*|false\w*|inaccura\w*|not true|errors?|erroneous\w*|mistake\w*|mistaken\w*)\b', re.I)
+# Saved with each automatic decision, so decisions made under older rules can be told apart.
+AUTO_RULES = 1
 # --now sends 4 requests at a time, and only for a run of at most 50 points. Bigger runs use batches.
 NOW_PARALLEL, NOW_MOST = 4, 50
 # A batch holds at most this many requests and bytes. More are split into several batches. The API allows 100,000
@@ -467,7 +483,7 @@ def candidates(course, d, pt):
 
 # What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
 DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries',
-              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone']
+              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone']
 
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse, match or write."""
@@ -876,7 +892,7 @@ def stats(work, points):
     written = [r for r in recs if r['stage'] != 'reuse' and (r.get('draft') or r.get('final'))]
     checked = [r for r in written if r.get('check') or r.get('screen') or r.get('cleared_by') in ('checker', 'screen')]
     opus = [r for r in written if r.get('check')]
-    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') == 'owner']
+    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') in ('owner', 'auto')]
     why = {}
     for r in opus:
         k = r.get('to_opus') or 'every point'
@@ -904,6 +920,7 @@ def summary(job, after_run=True, stages=True):
         say('  Flagged for you: ' + share(s['flagged'], s['checked']) + '.')
         say('  Sent to the Opus checker: ' + share(s['opus'], s['checked']) +
             (': ' + ', '.join(str(n) + ' ' + k for k, n in sorted(s['why'].items(), key=lambda x: -x[1])) if job.cfg.get('screen') and s['why'] else '') + '.')
+    for line in auto_lines(w, [r for r in (w.load(p['id']) for p in job.course['points']) if r]): say('  ' + line)
     if job.trial_of and s['passed']:
         say('  Trial: Haiku passed ' + str(s['passed']) + ' points, and Opus flagged ' + str(s['missed']) + ' of them.')
         if s['trialChecks'] and s['written']:
@@ -1358,6 +1375,192 @@ def cmd_publish(args):
 
 
 
+# ---------- autoreview: clearing safe flagged points with the checker's fix ----------
+def auto_path(work):
+    return os.path.join(work.dir, 'autoreview.json')
+
+def auto_state(work):
+    """autoreview.json: how many automatic decisions the course has had, which picks the spot checks, and the owner's
+    answer to each spot check. It is kept apart from state.json, so a run and the review page never write over each other."""
+    return read_json(auto_path(work), {'decided': 0, 'spot_answers': []})
+
+def auto_answer(work, pid, action):
+    """Saves the owner's decision on a spot check."""
+    st = auto_state(work)
+    st['spot_answers'].append({'id': pid, 'action': action, 'at': now()})
+    write_json(auto_path(work), st)
+
+def auto_problems(rec):
+    """Why a flagged point must stay with the owner. An empty list means autoreview may clear it with the checker's fix,
+    once the fix passes the content check again."""
+    if rec.get('auto_undone'): return ['you undid its automatic decision']
+    c, p, draft = rec.get('check'), rec.get('proposal'), rec.get('draft')
+    if not c or not draft: return ['not checked']
+    norm = lambda s: re.sub(r'\s+', ' ', s.strip().lower())
+    why = []
+    if (rec.get('sensitive') or 'none') != 'none': why.append('a sensitive topic')
+    if c['sure'] != 'high': why.append('the checker was not highly sure')
+    for k in ['a', 'b']:
+        if norm(c[k]['best']) != norm(draft[k]['opts'][0]): why.append('the checker picked another answer')
+        if any(norm(o) != norm(c[k]['best']) for o in c[k]['also_right']): why.append('another option could also be right')
+    for pr in c['problems']:
+        if pr['kind'] not in AUTO_SAFE_KINDS: why.append({'fact': 'a possible factual error', 'level': 'a problem with the level'}.get(pr['kind'], 'a ' + pr['kind'] + ' problem'))
+        elif AUTO_UNSAFE_WORDS.search(pr['detail']): why.append('a problem uses a word like wrong or error')
+    if not p: why.append('no fix')
+    else:
+        if rec.get('proposal_problems'): why.append('the fix fails the content check')
+        if any(norm(p[k]['opts'][0]) != norm(draft[k]['opts'][0]) for k in ['a', 'b']): why.append('the fix changes a right answer')
+    return list(dict.fromkeys(why))
+
+def auto_parts(rec):
+    """The problems a decision was made on, in a few words: card wording, remember other."""
+    return ', '.join(pr['part'] + ' ' + pr['kind'] for pr in rec['check']['problems']) or 'the content check'
+
+def auto_courses(args, root):
+    """The work folders autoreview looks at: the outlines named, or every course in the work folder. Trials are left out."""
+    if args.outline:
+        ids = []
+        for path in outline_paths(args.outline):
+            if not os.path.exists(path): raise Stop('No outline at ' + path)
+            yaml, text = load_yaml(path)
+            try:
+                o = yaml.safe_load(text)
+            except yaml.YAMLError:
+                o = None
+            if not isinstance(o, dict) or not isinstance(o.get('id'), str): raise Stop(path + ' has no id line, so its work folder cannot be found.')
+            ids.append(o['id'])
+    else:
+        ids = sorted(os.listdir(root)) if os.path.isdir(root) else []
+    out = []
+    for cid in ids:
+        meta = read_json(os.path.join(root, cid, 'course.json'))
+        if not meta:
+            if args.outline: say(cid + ': no work folder yet, so nothing to review. Run the run command first.')
+            continue
+        if meta.get('trial_of'): continue
+        out.append((Work(root, cid), meta))
+    return out
+
+def meta_recs(work, meta):
+    """Every point's record in a course, in the outline's order."""
+    return [r for r in (work.load(pt['id']) for u in meta['units'] for c in u['chapters'] for pt in c['points']) if r]
+
+def auto_lines(work, recs):
+    """Lines for a course's summary: what autoreview cleared, the spot checks, and a warning if the owner rejected one."""
+    out = []
+    done = [r for r in recs if r.get('cleared_by') == 'auto']
+    spots = [r for r in recs if r['stage'] == 'review' and (r.get('auto') or {}).get('spot')]
+    if done or spots:
+        out.append('Cleared automatically with the checker\'s fix: ' + str(len(done)) + '. Spot checks waiting for you: ' + str(len(spots)) + '.')
+    answers = auto_state(work)['spot_answers']
+    if answers:
+        words = {'fix': 'used the fix', 'approve': 'approved as written', 'edit': 'edited', 'reject': 'rejected'}
+        tally = {}
+        for a in answers: tally[a['action']] = tally.get(a['action'], 0) + 1
+        out.append('Spot checks you decided: ' + str(len(answers)) + ' (' + ', '.join(words.get(k, k) + ' ' + str(n) for k, n in tally.items()) + ').')
+        rejected = list(dict.fromkeys(a['id'] for a in answers if a['action'] == 'reject'))
+        if rejected:
+            out.append('Warning: you rejected ' + many_of(len(rejected), 'spot check') + ' (' + ', '.join(rejected) + '), so the automatic decisions '
+                       'may not hold up. Look over the points cleared automatically, or send them all back to you with autoreview --undo.')
+    return out
+
+def auto_replay(recs):
+    """For the dry run: how these rules would have decided the points the owner already reviewed with a fix to pick."""
+    seen = [r for r in recs if r.get('cleared_by') == 'owner' and r.get('check') and r.get('proposal') and not r.get('auto')]
+    if not seen: return []
+    choice = lambda r: 'edited' if r.get('edited') else 'used the fix' if r['final'] == r['proposal'] else 'approved as written'
+    would = [r for r in seen if not auto_problems(r)]
+    out = ['Points you already reviewed that had a fix: ' + str(len(seen)) + '. These rules would have cleared ' + str(len(would)) + ' of them.']
+    if would:
+        tally = {}
+        for r in would: tally[choice(r)] = tally.get(choice(r), 0) + 1
+        out.append('  Of those ' + str(len(would)) + ', you ' + ', '.join(k + ' on ' + str(n) for k, n in tally.items()) + '.')
+    for r in seen:
+        if r in would: out.append('  ' + r['id'] + ': would clear (' + auto_parts(r) + '). You ' + choice(r) + '.')
+        else: out.append('  ' + r['id'] + ': would stay for you (' + '; '.join(auto_problems(r)) + '). You ' + choice(r) + '.')
+    return out
+
+def autoreview(work, meta, repo, dry):
+    """Clears the safe flagged points of one course with the checker's fix, keeping 1 in AUTO_SPOT_EVERY as spot checks."""
+    recs = meta_recs(work, meta)
+    waiting = [r for r in recs if r['stage'] == 'review' and not (r.get('auto') or {}).get('spot')]
+    held = {r['id']: auto_problems(r) for r in waiting}
+    ok = [r for r in waiting if not held[r['id']]]
+    # The fix passed the content check when it was written. It runs again, in case the check has changed since.
+    probs = check_points({r['id']: r['proposal'] for r in ok}, meta['kind'], repo, work.dir, meta.get('subject'))
+    st = auto_state(work)
+    n, cleared, spots = st['decided'], [], []
+    for r in ok:
+        if probs.get(r['id']):
+            held[r['id']] = ['the fix fails the content check']
+            if not dry: r['proposal_problems'] = probs[r['id']]; work.put(r)
+            continue
+        n += 1
+        spot = (n - 1) % AUTO_SPOT_EVERY == 0
+        (spots if spot else cleared).append(r)
+        if dry: continue
+        r['auto'] = {'at': now(), 'rules': AUTO_RULES, 'n': n, 'decision': 'used the fix', 'spot': spot, 'sure': r['check']['sure'],
+                     'problems': r['check']['problems'], 'flags': r.get('flags') or []}
+        if spot:
+            log(r, 'autoreview: picked as a spot check. It would have been cleared with the fix (' + auto_parts(r) + ')')
+        else:
+            r.update(stage='cleared', final=r['proposal'], cleared_by='auto'); log(r, 'autoreview: cleared with the fix (' + auto_parts(r) + ')')
+        work.put(r)
+    if not dry and (cleared or spots):
+        st['decided'] = n; write_json(auto_path(work), st)
+    say(meta['name'] + ' (' + meta['id'] + '):')
+    say('  ' + ('Would clear' if dry else 'Cleared') + ' automatically with the checker\'s fix: ' + str(len(cleared)) + '.')
+    for r in cleared: say('    ' + r['id'] + ' (' + auto_parts(r) + ')')
+    say('  ' + ('Would keep' if dry else 'Kept') + ' for you as spot checks (1 in ' + str(AUTO_SPOT_EVERY) + '): ' + str(len(spots)) + '.')
+    for r in spots: say('    ' + r['id'] + ' (' + auto_parts(r) + ')')
+    reasons, left = {}, 0
+    for r in recs:
+        if r in spots or r['stage'] == 'review' and (r.get('auto') or {}).get('spot'): why = ['a spot check']
+        elif r['stage'] == 'review' and held.get(r['id']): why = held[r['id']]
+        elif r['stage'] == 'failed': why = ['not written']
+        elif r['stage'] == 'match-review': why = ['a possible match in the bank']
+        else: continue
+        left += 1
+        for w in why: reasons[w] = reasons.get(w, 0) + 1
+    say('  Left for you in the review list' + (' after this' if dry else '') + ': ' + str(left) + '.' + (' Why (a point can have more than one reason):' if reasons else ''))
+    for w, k in sorted(reasons.items(), key=lambda x: -x[1]): say('    ' + w + ': ' + str(k))
+    later = len([r for r in recs if r['stage'] in WAITING])
+    if later: say('  Not checked yet: ' + str(later) + '. Run autoreview again after the run finishes.')
+    for line in auto_lines(work, recs): say('  ' + line)
+    if dry:
+        for line in auto_replay(recs): say('  ' + line)
+
+def auto_undo(work, meta, point, dry):
+    """Sends points autoreview cleared back to the review list. They are never cleared automatically again."""
+    recs = [r for r in meta_recs(work, meta) if r.get('cleared_by') == 'auto' and (not point or r['id'] == point)]
+    if point and not recs: raise Stop(point + ' was not cleared automatically in ' + meta['name'] + '.')
+    say(meta['name'] + ' (' + meta['id'] + '): ' + str(len(recs)) + (' would go' if dry else ' went') + ' back to the review list.')
+    for r in recs:
+        say('    ' + r['id'])
+        if dry: continue
+        r['auto_undone'] = dict(r.pop('auto'), undone=now())
+        r['stage'] = 'review'; r.pop('final', None); r.pop('cleared_by', None)
+        log(r, 'autoreview: undone, back to the review list')
+        work.put(r)
+    if recs and not dry:
+        say('  If this course was published, run publish again: a chapter with a point waiting for you shows as Coming soon until you clear it.')
+
+def cmd_autoreview(args):
+    repo = args.repo or REPO
+    root = work_root(args, repo)
+    if args.point and not args.undo: raise Stop('--point works with --undo.')
+    courses = auto_courses(args, root)
+    if args.point and len(courses) != 1: raise Stop('--point needs the one outline its point is in.')
+    if not courses:
+        say('No courses to review in ' + root + '. Run the run command first.'); return
+    if args.dry_run: say('Dry run: nothing is changed.')
+    for i, (work, meta) in enumerate(courses):
+        if i: say('')
+        if args.undo: auto_undo(work, meta, args.point, args.dry_run)
+        else: autoreview(work, meta, repo, args.dry_run)
+    if not args.dry_run and not args.undo: say('\nNext: py content\\pipeline.py review')
+
+
 # ---------- the review page ----------
 def review_items(root, repo):
     """Every point waiting for the owner, in every course in the work folder. Trials are left out: they never publish."""
@@ -1382,6 +1585,7 @@ def review_items(root, repo):
                                   'proposalProblems': rec.get('proposal_problems') or [], 'flags': rec.get('flags') or [],
                                   'summary': (rec.get('check') or {}).get('summary'), 'sure': (rec.get('check') or {}).get('sure'),
                                   'sensitive': rec.get('sensitive'), 'local': rec.get('local') or [], 'error': rec.get('error'),
+                                  'spot': bool(rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')),
                                   'match': dict(match, point=bank_point(d, match['same'])) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
     return {'courses': courses, 'items': items, 'trials': len(trials(root))}
@@ -1395,8 +1599,12 @@ def decide(root, repo, body):
     work = Work(root, cid)
     rec = work.load(pid)
     if not rec or rec['stage'] not in ('review', 'match-review', 'failed'): return {'ok': False, 'message': 'This point is not waiting for review.'}
+    spot = rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')
     def done(text):
-        log(rec, 'review: ' + text); work.put(rec); return {'ok': True, 'message': text}
+        if spot and rec.get('auto'): rec['auto']['owner'] = action
+        log(rec, 'review: ' + text + (' (a spot check)' if spot else '')); work.put(rec)
+        if spot: auto_answer(work, pid, action)
+        return {'ok': True, 'message': text}
     if rec['stage'] == 'match-review':
         if action == 'reuse':
             rec.update(stage='reuse', reuse=rec['match']['same']); return done('reusing ' + rec['match']['same'])
@@ -1547,12 +1755,18 @@ def main(argv=None):
             s.add_argument('--max-dollars', type=float, help='the most this course (with run-many, all of them together) may cost in total, counting earlier runs')
             s.add_argument('--now', action='store_true', help='send to the normal API instead of batches: done in minutes, at twice the price')
             s.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for a batch')
+    a = sub.add_parser('autoreview', help='clear safe flagged points with the checker\'s fix, with no API calls')
+    a.add_argument('outline', nargs='*', help='outline files, or folders of them. With none, every course in content/work')
+    a.add_argument('--dry-run', action='store_true', help='show what it would do, and change nothing')
+    a.add_argument('--undo', action='store_true', help='send the points it cleared back to the review list')
+    a.add_argument('--point', help='with --undo, only this point id')
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
     args = ap.parse_args(argv)
     try:
-        {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review}[args.cmd](args)
+        {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
+         'autoreview': cmd_autoreview}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1

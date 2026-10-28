@@ -15,7 +15,9 @@ Then: a run saved by the pipeline from before settings (tests/pipeline-old-run/)
 the cheaper settings, a new course's default (chapter writing on Sonnet, and Opus checking every point with no
 Haiku screen); the screened settings, asked for by name (the Haiku screen, the Opus check, spot checks, sensitive
 words, points written on their own, each point's cost, the numbers after a run); a trial with --now and the Compare
-tab; run-many with shared batches and each course's share of --max-dollars; and the API key never printed or saved.
+tab; run-many with shared batches and each course's share of --max-dollars; autoreview (what it clears with the fix and
+what stays, the word guard, the dry run, spot checks and their warning, undo, the replay); and the API key never printed
+or saved.
 """
 import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
@@ -284,6 +286,130 @@ def copy_repo(dst):
     for f in ['load.mjs', 'dump.mjs']: shutil.copy(os.path.join(HERE, f), os.path.join(dst, 'content', f))
     for f in ['build.py', 'check_content.mjs']: shutil.copy(os.path.join(REPO, f), os.path.join(dst, f))
 
+
+def auto_tests(tmp, repo, printed):
+    """autoreview, on a work folder of flagged points made here: what it clears, what stays, spot checks, undo."""
+    work = os.path.join(tmp, 'work-auto')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work, 'autoreview'] + list(argv)); printed.append(out); return code, out
+    def prob(part, kind, detail='A clearer word would help here.'):
+        return {'part': part, 'kind': kind, 'detail': detail}
+    def point(pid, problems=(), sure='high', sensitive='none', also=False, best_wrong=False, fix=True, new_answer=False, bad_fix=False,
+              local=None, stage='review', owner=None):
+        draft = pipeline.to_bank(fake_point(pid.replace('-', ' ').capitalize()))
+        best = lambda k: draft[k]['opts'][1 if best_wrong and k == 'a' else 0]
+        check_ = {'a': {'best': best('a'), 'also_right': [draft['a']['opts'][2]] if also else []}, 'b': {'best': best('b'), 'also_right': []},
+                  'problems': list(problems), 'sure': sure, 'sensitive': sensitive, 'summary': 'Problems found.'}
+        rec = {'id': pid, 'title': draft['title'], 'brief': 'x', 'stage': stage, 'draft': draft, 'check': check_, 'sensitive': sensitive, 'local': local or [], 'log': []}
+        rec['flags'], _ = pipeline.flags_for(rec)
+        if fix:
+            p = json.loads(json.dumps(draft)); p['remember'] = 'A clearer remember line.'
+            if new_answer: p['a']['opts'][0] = 'A different right answer'
+            if bad_fix: p['remember'] = 'A dash — in the fix'
+            rec.update(proposal=p, proposal_problems=[])
+        if owner: rec.update(final=rec['proposal'] if owner == 'fix' else draft, cleared_by='owner')
+        return rec
+    safe = ['tau-wording', 'tau-other', 'tau-local'] + ['tau-safe-' + str(i) for i in range(1, 13)]
+    recs = [point('tau-wording', [prob('card', 'wording')]), point('tau-other', [prob('remember', 'other', 'This term belongs to point 2.')]),
+            point('tau-local', local=['tau-local banned word in: a key idea'])] + [point(i, [prob('a', 'wording')]) for i in safe[3:]]
+    unsafe = {'tau-fact': (point('tau-fact', [prob('card', 'fact')]), 'a possible factual error'),
+              'tau-level': (point('tau-level', [prob('b', 'level')]), 'a problem with the level'),
+              'tau-words': (point('tau-words', [prob('card', 'wording', 'The date in this line is incorrect.')]), 'a problem uses a word like wrong or error'),
+              'tau-medium': (point('tau-medium', [prob('card', 'wording')], sure='medium'), 'the checker was not highly sure'),
+              'tau-topic': (point('tau-topic', [prob('card', 'wording')], sensitive='drugs'), 'a sensitive topic'),
+              'tau-best': (point('tau-best', [], best_wrong=True), 'the checker picked another answer'),
+              'tau-also': (point('tau-also', [], also=True), 'another option could also be right'),
+              'tau-nofix': (point('tau-nofix', [prob('card', 'wording')], fix=False), 'no fix'),
+              'tau-badfix': (point('tau-badfix', [prob('card', 'wording')], bad_fix=True), 'the fix fails the content check'),
+              'tau-answer': (point('tau-answer', [prob('a', 'wording')], new_answer=True), 'the fix changes a right answer')}
+    recs += [r for r, _ in unsafe.values()]
+    recs += [point('tau-failed', stage='failed'), point('tau-owner', [prob('card', 'other')], stage='cleared', owner='fix'),
+             point('tau-owner-fact', [prob('card', 'fact')], stage='cleared', owner='draft')]
+    W = pipeline.Work(work, 'tst-auto')
+    for r in recs: W.put(r)
+    pts = [{'id': r['id'], 'title': r['title'], 'brief': 'x'} for r in recs]
+    pipeline.write_json(os.path.join(W.dir, 'course.json'), {'id': 'tst-auto', 'subject': 'Testing', 'name': 'Testing Auto, Year 9', 'about': 'x', 'kind': 'standard',
+                        'years': [9], 'units': [{'title': 'U', 'chapters': [{'id': 'c1', 'title': 'C', 'points': pts}]}]})
+    trial = pipeline.Work(work, 'tst-auto-trial')
+    trial.put(dict(point('tau-wording', [prob('card', 'wording')]), id='tau-trial'))
+    pipeline.write_json(os.path.join(trial.dir, 'course.json'), {'id': 'tst-auto-trial', 'name': 'Trial', 'kind': 'standard', 'trial_of': 'tst-auto',
+                        'units': [{'title': 'U', 'chapters': [{'id': 'c1', 'title': 'C', 'points': [{'id': 'tau-trial', 'title': 'T', 'brief': 'x'}]}]}]})
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
+    st = lambda pid: W.load(pid)['stage']
+
+    g = pipeline.AUTO_UNSAFE_WORDS.search
+    check(all(g(t) for t in ['It is incorrect.', 'This is wrong.', 'a false split', 'Inaccurate figure', 'not true in Australia', 'an error', 'a mistake']) and
+          not any(g(t) for t in ['The card correctly says may.', 'Reword it.', 'the terror of debt']), 'the word guard catches its words, and not words that only contain them')
+    check(pipeline.AUTO_SPOT_EVERY == 10 and pipeline.AUTO_SAFE_KINDS == ('wording', 'other'), 'spot checks are 1 in 10, and only wording and other are safe kinds')
+
+    before = files()
+    code, out = go('--dry-run')
+    check(code == 0 and 'Dry run: nothing is changed.' in out and files() == before, 'the dry run changes no file')
+    check('Would clear automatically with the checker\'s fix: 13.' in out and 'Would keep for you as spot checks (1 in 10): 2.' in out,
+          'it says how many it would clear and keep as spot checks')
+    check('Left for you in the review list after this: 13.' in out and all('    ' + w + ': 1' in out for _, w in unsafe.values()) and 'not written: 1' in out and 'a spot check: 2' in out,
+          'and how many are left for you, with each reason')
+    check('Trial' not in out, 'trials are left out')
+    check('tau-owner: would clear (card other). You used the fix.' in out and 'tau-owner-fact: would stay for you (a possible factual error). You approved as written.' in out,
+          'it replays the rules on points you already reviewed, next to what you chose')
+
+    code, out = go()
+    spots = [safe[0], safe[10]]
+    check(code == 0 and 'Cleared automatically with the checker\'s fix: 13.' in out and all(st(i) == 'cleared' for i in safe if i not in spots),
+          'autoreview clears the safe points')
+    a = W.load('tau-wording')
+    c = W.load('tau-other')
+    check(c['cleared_by'] == 'auto' and c['final'] == c['proposal'] and c['auto']['decision'] == 'used the fix' and c['auto']['problems'] == c['check']['problems'] and
+          c['auto']['flags'] == c['flags'] and c['auto']['rules'] == pipeline.AUTO_RULES and any('autoreview: cleared with the fix (remember other)' in l for l in c['log']),
+          'each point records what was flagged and that the fix was used automatically, and keeps its first draft')
+    check(st('tau-local') == 'cleared', 'a draft that only failed the content check is cleared when the fix passes it')
+    check(all(st(i) == 'review' and W.load(i)['auto']['spot'] for i in spots) and a.get('final') is None and pipeline.read_json(pipeline.auto_path(W))['decided'] == 15,
+          'the 1st and 11th automatic decisions stay for you as spot checks')
+    check(all(st(i) == 'review' and not W.load(i).get('auto') for i in unsafe) and st('tau-failed') == 'failed', 'every unsafe point stays for you')
+    check(W.load('tau-badfix')['proposal_problems'] and pipeline.auto_problems(W.load('tau-badfix')) == ['the fix fails the content check'],
+          'a fix that fails the content check now has its problems saved for the review page')
+    s = pipeline.stats(W, pts)
+    check(s['flagged'] >= 13 + 2, 'points cleared automatically still count as flagged in the numbers after a run')
+    code, out = go()
+    check('Cleared automatically with the checker\'s fix: 0.' in out and pipeline.read_json(pipeline.auto_path(W))['decided'] == 15 and all(st(i) == 'review' for i in spots),
+          'running it again decides nothing twice')
+
+    items = [i for i in pipeline.review_items(work, repo)['items'] if i['course'] == 'tst-auto']
+    check(sorted(i['id'] for i in items if i['spot']) == sorted(spots) and not any(i['id'] == 'tau-trial' for i in pipeline.review_items(work, repo)['items']),
+          'the review page lists the spot checks, marked as spot checks')
+    r1 = pipeline.decide(work, repo, {'course': 'tst-auto', 'id': spots[0], 'action': 'fix'})
+    r2 = pipeline.decide(work, repo, {'course': 'tst-auto', 'id': spots[1], 'action': 'reject', 'note': 'The fix is worse.'})
+    ans = pipeline.read_json(pipeline.auto_path(W))['spot_answers']
+    check(r1['ok'] and r2['ok'] and [(x['id'], x['action']) for x in ans] == [(spots[0], 'fix'), (spots[1], 'reject')] and W.load(spots[0])['auto']['owner'] == 'fix',
+          'your decision on each spot check is saved')
+    code, out = go()
+    check('Spot checks you decided: 2 (used the fix 1, rejected 1).' in out and 'Warning: you rejected 1 spot check (' + spots[1] + ')' in out,
+          'rejecting a spot check shows a warning in the summary')
+    check(any('Warning: you rejected 1 spot check' in l for l in pipeline.auto_lines(W, pipeline.meta_recs(W, pipeline.read_json(os.path.join(W.dir, 'course.json'))))),
+          'and the same lines go in the summary after a run and in status')
+
+    before = files()
+    code, out = go('--undo', '--dry-run')
+    check(code == 0 and 'Testing Auto, Year 9 (tst-auto): 13 would go back to the review list.' in out and files() == before,
+          'undo with no outline looks at every course, and its dry run changes nothing')
+    code, out = go('--point', 'tau-other')
+    check(code == 1 and 'works with --undo' in out, '--point works only with --undo')
+    outline = os.path.join(tmp, 'tst-auto.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write('id: tst-auto\nsubject: Testing\n')
+    before = files()
+    code, out = go(outline, '--undo', '--point', 'tau-other', '--dry-run')
+    check(code == 0 and 'would go back' in out and files() == before, 'undo has a dry run too')
+    code, out = go(outline, '--undo', '--point', 'tau-other')
+    c = W.load('tau-other')
+    check(code == 0 and c['stage'] == 'review' and not c.get('final') and not c.get('cleared_by') and c['auto_undone']['undone'] and c['proposal'] and c['draft'],
+          'undo with --point sends one point back to the review list, keeping the record of its decision')
+    code, out = go(outline)
+    check(st('tau-other') == 'review' and pipeline.auto_problems(W.load('tau-other')) == ['you undid its automatic decision'], 'and it is never cleared automatically again')
+    code, out = go(outline, '--undo')
+    check(code == 0 and not any(W.load(i).get('cleared_by') == 'auto' for i in safe) and 'run publish again' in out, 'undo sends back every point it cleared')
+    with open(os.path.join(tmp, 'tst-none.yaml'), 'w', encoding='utf-8') as f: f.write('id: tst-none\n')
+    code, out = go(os.path.join(tmp, 'tst-none.yaml'))
+    check(code == 0 and 'no work folder yet' in out, 'an outline with no work folder yet says so')
 
 def main():
     tmp = tempfile.mkdtemp(prefix='stratos-pipeline-')
@@ -615,8 +741,11 @@ def main():
     check(code == 0 and 'Held back: Not sent' in out and D.state['spent']['usd'] == 0 and pipeline.Work(work, 'tst-c').load('tsc-gamma-one')['stage'] == 'cleared',
           'a course over its share is held back, and the others carry on')
 
+    # ---------- autoreview ----------
+    auto_tests(tmp, repo, printed)
+
     # ---------- the key ----------
-    saved = ''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
+    saved =''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
     check(KEY not in ''.join(printed) and KEY not in saved, 'the API key is never printed or written to a file')
     check(pipeline.scrub('the key ' + KEY + ' leaked') == 'the key [key] leaked', 'and anything printed has it taken out')
 
