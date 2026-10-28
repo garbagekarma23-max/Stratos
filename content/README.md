@@ -8,8 +8,8 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 
 If you are Claude Code helping the owner with these steps:
 
-- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `review`, `publish`, the build, the checks and git.
+- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `recheck --dry-run` (a rough estimate, with no key), `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
@@ -194,6 +194,41 @@ py content/pipeline.py autoreview
 - Running it again never decides a point twice. Run it after each `run`, before you open the review page.
 - Commit the work folders afterwards, as in step 9, so the decisions are kept.
 
+### Recheck the fixes (optional)
+
+Autoreview keeps a point for you when the fix changes a right answer or the checker named a possible factual error. Often the fix is fine, but you can't tell that from simple rewording without reading it closely. `recheck` sends each of those fixes to the Opus checker again, as a fresh check. The checker gets the fix as if it were a new point: never the first draft or the problems found in it. It costs about 1 cent a fix with batches.
+
+It clears a point with the fix only when the fresh check:
+
+- picks the fix's right answer to both questions,
+- says no other option could also be right,
+- finds no problems,
+- names no sensitive topic,
+- and is highly sure.
+
+Anything else stays for you, with the fresh check's reasons on the review page under **Fresh check of the fix**.
+
+It never sends a point with a sensitive topic, a point you sent back with `--undo`, a fix that fails the content check, a point with no fix, or a spot check. It also skips points autoreview can clear for free, so run autoreview first. A point is rechecked once only.
+
+In the key window, after autoreview:
+
+```powershell
+py content/pipeline.py recheck --dry-run
+```
+
+The dry run lists the fixes it would send, why the others stay with you, the estimate, and what the course has spent so far. It sends nothing. Then:
+
+```powershell
+py content/pipeline.py recheck --max-dollars 5
+```
+
+- `--max-dollars` works as in `run`: the most the course may cost in total, counting earlier runs. With several courses, they share it as in `run-many`. It refuses to send a batch that could pass it.
+- The fixes go in one batch, which usually takes under an hour. `--no-wait` sends or collects once, then stops. Ctrl+C is safe, and running the same command again carries on.
+- At the end it prints, for each course, how many fixes it rechecked, how many it cleared, the spot checks, how many it kept for you, and why.
+- **Spot checks**: 1 in 10 of the points recheck would clear (the 1st, 11th and so on in each course) stays in the review list as a **Spot check**, as with autoreview. These are counted apart from autoreview's. Rejecting one puts the same warning in every summary.
+- Each point it clears has `cleared_by: "recheck"`, an `auto` entry and a `recheck` entry with the fresh check's answer in its file. `autoreview --undo` sends these back to you too, and they are never cleared automatically again.
+- With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to recheck some courses only.
+
 ### The review page
 
 ```powershell
@@ -211,7 +246,7 @@ The buttons:
 - **Edit** lets you change any part. Saving runs the content check first, and says what to fix if it fails.
 - **Reject and rewrite** sends it back to be written again on the next run, with your note.
 
-Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here, and nor do the points autoreview cleared, apart from its spot checks. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
+Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here, and nor do the points autoreview or recheck cleared, apart from their spot checks. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
 
 After rejecting points, run step 7 again to rewrite them. Press Ctrl+C in the window to stop the review page.
 
@@ -301,6 +336,6 @@ Rules:
 | `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md`, and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
-| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (its decisions count and your spot check answers) and a file per point (each version, the checker's answer, autoreview's decision and yours). Commit it with the content. |
+| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's or recheck's decision and yours). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. |

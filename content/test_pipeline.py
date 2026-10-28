@@ -16,8 +16,9 @@ the cheaper settings, a new course's default (chapter writing on Sonnet, and Opu
 Haiku screen); the screened settings, asked for by name (the Haiku screen, the Opus check, spot checks, sensitive
 words, points written on their own, each point's cost, the numbers after a run); a trial with --now and the Compare
 tab; run-many with shared batches and each course's share of --max-dollars; autoreview (what it clears with the fix and
-what stays, the word guard, the dry run, spot checks and their warning, undo, the replay); and the API key never printed
-or saved.
+what stays, the word guard, the dry run, spot checks and their warning, undo, the replay); recheck (which fixes it sends
+and which never, the checker seeing only the fix, the estimate, --max-dollars, what it clears and keeps, its spot checks,
+undo, nothing decided twice); and the API key never printed or saved.
 """
 import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
@@ -411,6 +412,112 @@ def auto_tests(tmp, repo, printed):
     code, out = go(os.path.join(tmp, 'tst-none.yaml'))
     check(code == 0 and 'no work folder yet' in out, 'an outline with no work folder yet says so')
 
+def recheck_tests(tmp, repo, printed, api):
+    """recheck, on a work folder of held points made here: which fixes it sends, that the checker sees only the fix, what
+    it clears and keeps, spot checks, money, undo, and never deciding a point twice."""
+    work = os.path.join(tmp, 'work-recheck')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work, 'recheck'] + list(argv)); printed.append(out); return code, out
+    fact = {'part': 'card', 'kind': 'fact', 'detail': 'OLDPROBLEM: the second line may not be right.'}
+    pts = []
+    def point(title, problems=(fact,), sensitive='none', fix=True, answer=None, bad_fix=False, undone=False, sure='high'):
+        pid = 'trc-' + '-'.join(title.lower().split()[1:])
+        draft = pipeline.to_bank(fake_point(title))
+        check_ = {'a': {'best': draft['a']['opts'][0], 'also_right': []}, 'b': {'best': draft['b']['opts'][0], 'also_right': []},
+                  'problems': list(problems), 'sure': sure, 'sensitive': sensitive, 'summary': 'Problems found.'}
+        rec = {'id': pid, 'title': title, 'brief': 'x', 'stage': 'review', 'draft': draft, 'check': check_, 'sensitive': sensitive, 'local': [], 'log': []}
+        rec['flags'], _ = pipeline.flags_for(rec)
+        if fix:
+            f = json.loads(json.dumps(draft)); f['remember'] = 'A clearer remember line.'
+            if answer: f['a']['opts'] = answer
+            if bad_fix: f['remember'] = 'A dash — in the fix'
+            rec.update(proposal=f, proposal_problems=[])
+        if undone: rec['auto_undone'] = {'by': 'recheck', 'undone': pipeline.now()}
+        pts.append({'id': pid, 'title': title, 'brief': 'The brief of ' + title.lower() + '.', 'codes': [], 'reuse': None, 'unit': 0, 'chapter': 0})
+        return rec
+    # Eleven fixes the fresh check agrees with. The second changed a right answer, which autoreview never clears.
+    oks = [point('Recheck ok newanswer', answer=['Right: a new answer', 'Wrong one', 'Wrong two', 'Wrong three']) if i == 2 else point('Recheck ok ' + str(i))
+           for i in range(1, 12)]
+    kept = [point('Recheck Flag'), point('Recheck Unsure'), point('Recheck picks', answer=['Not this one', 'Right: this one', 'Wrong two', 'Wrong three'])]
+    err = point('Recheck Error')
+    never = {'trc-topic': (point('Recheck topic', sensitive='drugs'), 'a sensitive topic'),
+             'trc-undone': (point('Recheck undone', undone=True), 'you undid its automatic decision'),
+             'trc-badfix': (point('Recheck badfix', bad_fix=True), 'the fix fails the content check'),
+             'trc-wording': (point('Recheck wording', problems=[{'part': 'card', 'kind': 'wording', 'detail': 'Reword it.'}]), 'autoreview can clear it, with no API call'),
+             'trc-nofix': (point('Recheck nofix', fix=False, sure='low'), 'no fix')}
+    W = pipeline.Work(work, 'tst-recheck')
+    for r in oks + kept + [err] + [r for r, _ in never.values()]: W.put(r)
+    # A course.json from before the syllabus line was saved in it: the syllabus comes from the outline.
+    pipeline.write_json(os.path.join(W.dir, 'course.json'), {'id': 'tst-recheck', 'subject': 'Testing', 'name': 'Testing Recheck, Year 9', 'about': 'NSW, Recheck topic',
+                        'kind': 'standard', 'years': [9], 'units': [{'title': 'Recheck unit', 'chapters': [{'id': 'tst-recheck-1-1', 'title': 'Recheck chapter', 'points': pts}]}]})
+    outline = os.path.join(tmp, 'tst-recheck.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write('id: tst-recheck\nsubject: Testing\nsyllabus: The recheck syllabus, Year 9\n')
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
+    st = lambda pid: W.load(pid)['stage']
+
+    code, out = go(outline)
+    check(code == 1 and '--max-dollars' in out, 'recheck needs --max-dollars')
+    del os.environ['ANTHROPIC_API_KEY']
+    before, first = files(), api.created
+    code, out = go(outline, '--dry-run')
+    check(code == 0 and 'rough' in out and files() == before and api.created == first, 'its dry run works without a key, and sends and changes nothing')
+    os.environ['ANTHROPIC_API_KEY'] = KEY
+    code, out = go(outline, '--dry-run')
+    check(code == 0 and 'Fixes to recheck: 15.' in out and 'rough' not in out and re.search(r'Estimate: US\$\d+\.\d\d to US\$\d+\.\d\d, in one batch, Claude Opus 5.5, high effort', out) and
+          'Spent on this course so far: US$0.00.' in out and files() == before and api.created == first,
+          'the dry run shows the fixes it would send and the estimate, with the money spent so far')
+    check(all('    ' + w + ': 1' in out for _, w in never.values()), 'and why each other point stays with you: a sensitive topic, undone, a fix that fails the content check, autoreview, no fix')
+    code, out = go(outline, '--max-dollars', '0.0001')
+    check(code == 1 and 'Not sent' in out and api.created == first, 'it sends nothing that could pass --max-dollars')
+
+    code, out = go(outline, '--max-dollars', '5')
+    reqs = [r for bid, b in api.batches.items() if int(bid.split('_')[1]) > first for r in b['requests']]
+    check(code == 0 and 'Done for now' in out and api.created == first + 2 and len(reqs) == 16, 'recheck sends the fixes in a batch, and sends an errored one again')
+    user = lambda r: r['params']['messages'][0]['content']
+    check(all(stage_of(r['params']) == 'check' and r['params']['model'] == pipeline.OPUS and r['params']['output_config']['effort'] == 'high' for r in reqs),
+          'each fix goes to the Opus checker, at high effort')
+    check(all('A clearer remember line.' in user(r) and 'Hold on to' not in user(r) and 'OLDPROBLEM' not in user(r) and 'flagged' not in user(r) for r in reqs),
+          'the checker sees the fix as a new point: never the first draft or the first check\'s problems')
+    check(all('Syllabus: The recheck syllabus, Year 9' in user(r) and 'Chapter 1: Recheck chapter' in user(r) for r in reqs), 'and is told the course, its syllabus and the chapter, as in the first check')
+    check(not any(nid in json.dumps(reqs) for nid in never), 'sensitive, undone, failing, autoreview and fix-less points are never sent')
+    spots = [oks[0]['id'], oks[10]['id']]
+    agreed = [r['id'] for r in oks + [err] if r['id'] not in spots]
+    check(all(st(i) == 'cleared' and W.load(i)['cleared_by'] == 'recheck' and W.load(i)['final'] == W.load(i)['proposal'] for i in agreed),
+          'a fix the fresh check agrees with is cleared with the fix, marked cleared_by recheck')
+    nw = W.load('trc-ok-newanswer')
+    check(nw['stage'] == 'cleared' and nw['final']['a']['opts'][0] == 'Right: a new answer' and nw['auto']['by'] == 'recheck' and
+          any('recheck: the fresh check agreed with the fix' in l for l in nw['log']), 'including a fix that changed a right answer, with the decision recorded')
+    check(all(st(i) == 'review' and W.load(i)['auto']['spot'] and W.load(i)['auto']['by'] == 'recheck' for i in spots) and
+          pipeline.read_json(pipeline.auto_path(W))['rechecked'] == 12, 'the 1st and 11th recheck clears stay for you as spot checks')
+    why = {r['id']: W.load(r['id'])['recheck'] for r in kept}
+    check(all(st(i) == 'review' and why[i]['result'] == 'kept' for i in why) and
+          set(why['trc-flag']['why']) == {'the fresh check found a problem', 'the fresh check says another option could also be right'} and
+          why['trc-unsure']['why'] == ['the fresh check was not highly sure'] and why['trc-picks']['why'] == ['the fresh check picked another answer'],
+          'a fresh check that finds a problem, another right option, doubt or another answer keeps the point, with the reasons')
+    check(all(st(i) == 'review' and not W.load(i).get('recheck') for i in never) and W.load('trc-badfix')['proposal_problems'], 'the points never sent stay as they were')
+    check(pipeline.Work(work, 'tst-recheck').state['spent']['usd'] > 0 and all(W.load(i)['usd']['recheck'] > 0 for i in agreed), 'the money is counted for the course and each point')
+    check('Fixes rechecked: 15. Cleared with the fix: 10. Spot checks waiting for you: 2. Kept for you: 3.' in out and 'Kept for you because' in out,
+          'the summary at the end says what the fresh checks decided, for the course')
+    items = {i['id']: i for i in pipeline.review_items(work, repo)['items'] if i['course'] == 'tst-recheck'}
+    check(all(items[i]['spot'] and items[i]['spotBy'] == 'recheck' for i in spots) and items['trc-flag']['recheck']['result'] == 'kept' and items['trc-flag']['recheck']['flags'],
+          'the review page shows the recheck\'s spot checks and the fresh check of a kept fix')
+
+    first = api.created
+    code, out = go(outline, '--max-dollars', '5')
+    check(code == 0 and 'Fixes to recheck: 0.' in out and 'rechecked already: 3' in out and 'Nothing to recheck.' in out and api.created == first, 'running it again decides nothing twice')
+    r = pipeline.decide(work, repo, {'course': 'tst-recheck', 'id': spots[1], 'action': 'reject', 'note': 'No.'})
+    check(r['ok'] and any('Warning: you rejected 1 spot check (' + spots[1] + ')' in l for l in pipeline.auto_lines(W, pipeline.meta_recs(W, pipeline.read_json(os.path.join(W.dir, 'course.json'))))),
+          'rejecting a recheck spot check shows the warning')
+    code, out = run(['--repo', repo, '--work', work, 'autoreview', outline, '--undo', '--point', agreed[0]]); printed.append(out)
+    u = W.load(agreed[0])
+    check(code == 0 and u['stage'] == 'review' and u['auto_undone']['by'] == 'recheck' and not u.get('cleared_by'), 'autoreview --undo sends a recheck clear back to you')
+    code, out = go(outline, '--max-dollars', '5')
+    check(st(agreed[0]) == 'review' and 'you undid its automatic decision: 2' in out and api.created == first, 'and it is never rechecked or cleared that way again')
+    W = pipeline.Work(work, 'tst-recheck')
+    W.state['batches'].append({'id': 'msgbatch_open', 'items': {'c_x': {'pid': 'trc-flag', 'stage': 'check', 'model': pipeline.OPUS}}}); W.save()
+    code, out = go(outline, '--dry-run')
+    check('A run\'s batch is still open' in out, 'a course with a run\'s batch still open is left until the run collects it')
+
 def main():
     tmp = tempfile.mkdtemp(prefix='stratos-pipeline-')
     repo, work = os.path.join(tmp, 'repo'), os.path.join(tmp, 'work')
@@ -743,6 +850,7 @@ def main():
 
     # ---------- autoreview ----------
     auto_tests(tmp, repo, printed)
+    recheck_tests(tmp, repo, printed, api)
 
     # ---------- the key ----------
     saved =''.join(open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(tmp) for f in fs if f.endswith(('.json', '.js', '.sql', '.yaml')))
