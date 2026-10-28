@@ -7,6 +7,8 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py status content/outlines/nsw-bus-11.yaml     where each point is, with no API calls
   python3 content/pipeline.py autoreview --dry-run                         which flagged points it would clear with the fix
   python3 content/pipeline.py autoreview                                  clears them, with no API calls
+  python3 content/pipeline.py recheck --dry-run                           which fixes it would check again, and the cost
+  python3 content/pipeline.py recheck --max-dollars 5                     a fresh Opus check of each fix waiting for you
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
 content/README.md walks through each step.
@@ -24,6 +26,10 @@ How a point goes through it:
   fix      a point the checker flagged gets a suggested fix.
   auto     only when you run autoreview: a flagged point whose problems are all wording or other, with the checker highly
            sure and a fix that passes the content check, is cleared with the fix. 1 in 10 stay for you as spot checks.
+  recheck  only when you run recheck: the fix of a point still waiting for you goes to the Opus checker as a new point,
+           with nothing about the first draft or its problems. If the check picks the fix's answers, finds nothing
+           else right, no problems and no topic, and is highly sure, the point is cleared with the fix. 1 in 10 stay
+           for you as spot checks. A sensitive topic and a point you sent back with --undo are never sent.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
 Each step is one Message Batch for every point that needs it, which costs half the normal price. With --now, the
@@ -483,7 +489,7 @@ def candidates(course, d, pt):
 
 # What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
 DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries',
-              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone']
+              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries']
 
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse, match or write."""
@@ -498,7 +504,7 @@ def fresh(rec, course, d, pt):
 
 def sync(work, course, d, trial_of=None):
     """Makes a record for each point in the outline, and starts again any point whose title or brief changed."""
-    meta = {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'units']}
+    meta = {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'syllabus', 'units']}
     if trial_of: meta.update(id=os.path.basename(work.dir), name=course['name'] + ' (trial ' + os.path.basename(work.dir) + ')', trial_of=trial_of)
     write_json(os.path.join(work.dir, 'course.json'), meta)
     for pt in course['points']:
@@ -614,6 +620,8 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
     for r in results:
         item = batch['items'].get(r.custom_id)
         if not item: continue
+        if item['stage'] == 'recheck':
+            recheck_collect(work, item, r, at_now); continue
         if 'pids' in item:
             collect_chapter(work, item, r, written, at_now); continue
         rec, stage = work.load(item['pid']), item['stage']
@@ -843,6 +851,7 @@ class Job:
     def __init__(self, repo, d, course, work, cfg, name, trial_of=None):
         self.repo, self.d, self.course, self.work, self.cfg, self.settings, self.trial_of = repo, d, course, work, cfg, name, trial_of
         self.limit, self.held, self.failed, self.start = None, None, None, work.state['spent']['usd']
+        self.requests = None   # what to send in each round, if not the next steps of the run (recheck sends its own)
     @property
     def label(self): return self.course['name'] + (', trial ' + os.path.basename(self.work.dir) if self.trial_of else '')
 
@@ -892,7 +901,7 @@ def stats(work, points):
     written = [r for r in recs if r['stage'] != 'reuse' and (r.get('draft') or r.get('final'))]
     checked = [r for r in written if r.get('check') or r.get('screen') or r.get('cleared_by') in ('checker', 'screen')]
     opus = [r for r in written if r.get('check')]
-    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') in ('owner', 'auto')]
+    flagged = [r for r in checked if r.get('flags') or (r.get('sensitive') or 'none') != 'none' or r['stage'] in ('fix', 'review') or r.get('cleared_by') in ('owner', 'auto', 'recheck')]
     why = {}
     for r in opus:
         k = r.get('to_opus') or 'every point'
@@ -971,7 +980,7 @@ def drive(api, jobs, args, many=False):
                 return finish(jobs)
             plan = []
             for j in [j for j in live if not j.held and not j.failed]:
-                got = guard(j, many, lambda: next_requests(j.work, j.course, j.d, j.cfg))
+                got = guard(j, many, j.requests or (lambda: next_requests(j.work, j.course, j.d, j.cfg)))
                 if got and got[0]: plan.append((j, got[0], got[1]))
             if not plan:
                 return finish(jobs, done=True)
@@ -1448,10 +1457,12 @@ def meta_recs(work, meta):
 def auto_lines(work, recs):
     """Lines for a course's summary: what autoreview cleared, the spot checks, and a warning if the owner rejected one."""
     out = []
+    by = lambda r: (r.get('auto') or {}).get('by', 'autoreview')
     done = [r for r in recs if r.get('cleared_by') == 'auto']
-    spots = [r for r in recs if r['stage'] == 'review' and (r.get('auto') or {}).get('spot')]
+    spots = [r for r in recs if r['stage'] == 'review' and (r.get('auto') or {}).get('spot') and by(r) == 'autoreview']
     if done or spots:
         out.append('Cleared automatically with the checker\'s fix: ' + str(len(done)) + '. Spot checks waiting for you: ' + str(len(spots)) + '.')
+    out += recheck_lines(recs)
     answers = auto_state(work)['spot_answers']
     if answers:
         words = {'fix': 'used the fix', 'approve': 'approved as written', 'edit': 'edited', 'reject': 'rejected'}
@@ -1531,8 +1542,8 @@ def autoreview(work, meta, repo, dry):
         for line in auto_replay(recs): say('  ' + line)
 
 def auto_undo(work, meta, point, dry):
-    """Sends points autoreview cleared back to the review list. They are never cleared automatically again."""
-    recs = [r for r in meta_recs(work, meta) if r.get('cleared_by') == 'auto' and (not point or r['id'] == point)]
+    """Sends points autoreview or recheck cleared back to the review list. They are never cleared automatically again."""
+    recs = [r for r in meta_recs(work, meta) if r.get('cleared_by') in ('auto', 'recheck') and (not point or r['id'] == point)]
     if point and not recs: raise Stop(point + ' was not cleared automatically in ' + meta['name'] + '.')
     say(meta['name'] + ' (' + meta['id'] + '): ' + str(len(recs)) + (' would go' if dry else ' went') + ' back to the review list.')
     for r in recs:
@@ -1561,6 +1572,185 @@ def cmd_autoreview(args):
     if not args.dry_run and not args.undo: say('\nNext: py content\\pipeline.py review')
 
 
+# ---------- recheck: a fresh Opus check of each fix waiting for the owner ----------
+def recheck_skip(rec):
+    """Why a point waiting for the owner is not rechecked, or None if its fix can be sent for a fresh check."""
+    if rec['stage'] != 'review': return 'not waiting for you'
+    if (rec.get('auto') or {}).get('spot'): return 'a spot check'
+    if rec.get('auto_undone'): return 'you undid its automatic decision'
+    if any(s and s != 'none' for s in [rec.get('sensitive'), (rec.get('check') or {}).get('sensitive'), rec.get('screen_sensitive')]): return 'a sensitive topic'
+    if rec.get('recheck'): return 'rechecked already'
+    if not rec.get('check') or not rec.get('proposal'): return 'no fix'
+    if rec.get('proposal_problems'): return 'the fix fails the content check'
+    if not auto_problems(rec): return 'autoreview can clear it, with no API call'
+    return None
+
+def recheck_why(p, c):
+    """Why a fresh check of the fix p keeps it with the owner. An empty list means the check agrees with the fix on every count."""
+    norm = lambda s: re.sub(r'\s+', ' ', s.strip().lower())
+    why = []
+    if c['sensitive'] != 'none': why.append('the fresh check named a sensitive topic')
+    if c['sure'] != 'high': why.append('the fresh check was not highly sure')
+    for k in ['a', 'b']:
+        if norm(c[k]['best']) != norm(p[k]['opts'][0]): why.append('the fresh check picked another answer')
+        if any(norm(o) != norm(c[k]['best']) for o in c[k]['also_right']): why.append('the fresh check says another option could also be right')
+    if c['problems']: why.append('the fresh check found a problem')
+    return list(dict.fromkeys(why))
+
+def recheck_requests(job):
+    """A check request for the fix of every point that can be rechecked. The checker gets the fix as if it were a
+    new point: never the first draft, the first check's problems or the right answers."""
+    out, items = [], {}
+    nb = len(job.work.state['batches'])
+    for pt in job.course['points']:
+        rec = job.work.load(pt['id'])
+        if not rec or recheck_skip(rec): continue
+        n = rec.get('sent', {}).get('recheck', 0)
+        cid = 'r_' + hashlib.sha1((job.course['id'] + pt['id'] + 'recheck' + str(n) + str(nb)).encode()).hexdigest()[:24]
+        out.append(request('check', job.course, pt, {'id': rec['id'], 'draft': rec['proposal']}, None, cid, job.cfg))
+        items[cid] = {'pid': pt['id'], 'stage': 'recheck', 'model': job.cfg['check']['model']}
+    return out, items
+
+def recheck_collect(work, item, r, at_now):
+    """Saves the fresh check of one fix. If it agrees with the fix on every count, the point is cleared with the fix,
+    apart from 1 in AUTO_SPOT_EVERY, which stays with the owner as a spot check."""
+    rec = work.load(item['pid'])
+    if rec is None: return
+    kind = r.result.type
+    if kind == 'succeeded': charge(work, [rec], r.result.message.usage, item, at_now)
+    # Decided while the batch ran: the money counts, but the answer is not used.
+    if rec['stage'] != 'review' or not rec.get('proposal') or rec.get('recheck'): return work.put(rec)
+    def keep(why, data=None):
+        rec['recheck'] = {'at': now(), 'result': 'kept', 'why': why}
+        if data: rec['recheck'].update(check=data, flags=flags_for({'draft': rec['proposal']}, data)[0])
+        log(rec, 'recheck: kept for you (' + '; '.join(why) + ')'); work.put(rec)
+    m = r.result.message if kind == 'succeeded' else None
+    if m and m.stop_reason == 'refusal': return keep(['the fresh check declined to answer'])
+    data = answer_text(m) if m else None
+    if data is None:
+        t = rec['recheck_tries'] = rec.get('recheck_tries', 0) + 1
+        if t >= TRIES: return keep(['the fresh check failed ' + str(TRIES) + ' times'])
+        log(rec, 'recheck: ' + ('the answer was cut off or not JSON' if m else 'the API had an error' if kind == 'errored' else 'the batch ' + kind) + ', will try again')
+        return work.put(rec)
+    why = recheck_why(rec['proposal'], data)
+    if why: return keep(why, data)
+    st = auto_state(work)
+    n = st['rechecked'] = st.get('rechecked', 0) + 1
+    spot = (n - 1) % AUTO_SPOT_EVERY == 0
+    write_json(auto_path(work), st)
+    rec['recheck'] = {'at': now(), 'result': 'spot check' if spot else 'cleared', 'why': [], 'check': data, 'flags': []}
+    rec['auto'] = {'at': now(), 'rules': AUTO_RULES, 'by': 'recheck', 'n': n, 'decision': 'used the fix', 'spot': spot, 'sure': data['sure'],
+                   'problems': rec['check']['problems'], 'flags': rec.get('flags') or []}
+    if spot:
+        log(rec, 'recheck: the fresh check agreed with the fix, and it was picked as a spot check')
+    else:
+        rec.update(stage='cleared', final=rec['proposal'], cleared_by='recheck'); log(rec, 'recheck: the fresh check agreed with the fix, cleared with the fix')
+    work.put(rec)
+
+def recheck_lines(recs):
+    """Lines for a course's summary: what the fresh checks of the fixes decided."""
+    done = [r for r in recs if r.get('recheck')]
+    if not done: return []
+    tally = lambda res: len([r for r in done if r['recheck']['result'] == res])
+    spots = [r for r in done if r['stage'] == 'review' and (r.get('auto') or {}).get('spot')]
+    out = ['Fixes rechecked: ' + str(len(done)) + '. Cleared with the fix: ' + str(tally('cleared')) + '. Spot checks waiting for you: ' + str(len(spots)) +
+           '. Kept for you: ' + str(tally('kept')) + '.']
+    why = {}
+    for r in done:
+        for w in r['recheck']['why']: why[w] = why.get(w, 0) + 1
+    if why: out.append('Kept for you because (a point can have more than one reason):')
+    out += ['  ' + w + ': ' + str(n) for w, n in sorted(why.items(), key=lambda x: -x[1])]
+    return out
+
+def run_open(work):
+    """True while a run's batch, not a recheck's, is sent and not collected yet."""
+    open_ = [b['items'] for b in work.state['batches'] if not b.get('collected')] + ([work.state['sending']['items']] if work.state.get('sending') else [])
+    return any(it['stage'] != 'recheck' for its in open_ for it in its.values())
+
+def outline_syllabus(cid, args, repo):
+    """The syllabus line from a course's outline, for a work folder whose course.json is from before it was saved there."""
+    paths = (outline_paths(args.outline) if args.outline else []) + [os.path.join(repo, 'content', 'outlines', cid + '.yaml')]
+    for path in paths:
+        if not os.path.exists(path): continue
+        yaml, text = load_yaml(path)
+        try:
+            o = yaml.safe_load(text)
+        except yaml.YAMLError:
+            continue
+        if isinstance(o, dict) and o.get('id') == cid: return o.get('syllabus')
+    return None
+
+def recheck_job(work, meta, args, repo):
+    """A Job for one course's recheck, from its work folder: the checker is told the course and chapter as before."""
+    course = dict(meta, points=[pt for u in meta['units'] for c in u['chapters'] for pt in c['points']])
+    if 'syllabus' not in meta: course['syllabus'] = outline_syllabus(meta['id'], args, repo)
+    name = work.state.get('settings') or OLD_COURSE
+    cfg = dict(SETTINGS[name], trial=False)
+    cfg['recheck'] = cfg['check']
+    job = Job(repo, None, course, work, cfg, name)
+    job.saved, job.requests = name, lambda: recheck_requests(job)
+    return job
+
+def cmd_recheck(args):
+    if args.max_dollars is None and not args.dry_run:
+        raise Stop('Add --max-dollars, the most these courses may cost in total, counting what earlier runs spent. '
+                   'Run it with --dry-run first to see what is spent so far and what the recheck would cost.')
+    repo = args.repo or REPO
+    root = work_root(args, repo)
+    courses = auto_courses(args, root)
+    if not courses:
+        say('No courses to recheck in ' + root + '. Run the run command first.'); return
+    if args.dry_run: say('Dry run: nothing is sent or changed.')
+    exact = bool(os.environ.get('ANTHROPIC_API_KEY'))
+    api = client() if exact or not args.dry_run else None
+    jobs, highs, total = [], [], [0, 0]
+    for i, (work, meta) in enumerate(courses):
+        if i: say('')
+        say(meta['name'] + ' (' + meta['id'] + '):')
+        if run_open(work):
+            say('  A run\'s batch is still open. Run the run command to collect it, then recheck.'); continue
+        job = recheck_job(work, meta, args, repo)
+        # The fix passed the content check when it was written. It runs again, in case the check has changed since.
+        recs = [work.load(pt['id']) for pt in job.course['points']]
+        ready = [r for r in recs if r and not recheck_skip(r)]
+        probs = check_points({r['id']: r['proposal'] for r in ready}, meta['kind'], repo, work.dir, meta.get('subject'))
+        for r in ready:
+            if probs.get(r['id']) and not args.dry_run: r['proposal_problems'] = probs[r['id']]; work.put(r)
+        reqs, items = job.requests()
+        if args.dry_run: reqs = [q for q in reqs if not probs.get(items[q['custom_id']]['pid'])]
+        skipped = {}
+        for r in recs:
+            why = 'the fix fails the content check' if r and probs.get(r['id']) else recheck_skip(r) if r else None
+            if r and r['stage'] == 'review' and why: skipped[why] = skipped.get(why, 0) + 1
+        say('  Fixes to recheck: ' + str(len(reqs)) + '.')
+        for q in reqs: say('    ' + items[q['custom_id']]['pid'])
+        if skipped:
+            say('  Not rechecked, and left for you:')
+            for w, n in sorted(skipped.items(), key=lambda x: -x[1]): say('    ' + w + ': ' + str(n))
+        open_ = any(not b.get('collected') for b in work.state['batches']) or work.state.get('sending')
+        if open_: say('  A recheck batch sent before is still open. It is collected first.')
+        if not reqs and not open_: continue
+        lo = hi = 0
+        if reqs:
+            cost = request_costs(request_tokens(api, reqs, items), reqs, items, job.cfg, False)
+            lo, hi = sum(c[0] for c in cost), sum(c[1] for c in cost)
+            say('  Estimate' + ('' if exact else ' (rough: set the API key for an exact count of the prompts)') + ': ' + money(lo) + ' to ' + money(hi) +
+                ', in one batch, ' + MODEL_NAMES.get(job.cfg['check']['model'], job.cfg['check']['model']) + ', ' + job.cfg['check']['effort'] + ' effort.')
+        say('  Spent on this course so far: ' + money(work.state['spent']['usd']) + '.')
+        jobs.append(job); highs.append(hi); total = [total[0] + lo, total[1] + hi]
+    if len(jobs) > 1: say('\nEstimate for all ' + str(len(jobs)) + ' courses: ' + money(total[0]) + ' to ' + money(total[1]) + '.')
+    if not jobs:
+        say('\nNothing to recheck.'); return
+    if args.dry_run: return
+    if len(jobs) == 1: jobs[0].limit = args.max_dollars
+    else:
+        for j, s_ in zip(jobs, shares(jobs, highs, args.max_dollars)):
+            j.limit = s_
+            say('  ' + j.label + ': its share of --max-dollars is ' + money(s_) + ', counting the ' + money(j.work.state['spent']['usd']) + ' spent already.')
+    say('')
+    drive(api, jobs, args, many=len(jobs) > 1)
+
+
 # ---------- the review page ----------
 def review_items(root, repo):
     """Every point waiting for the owner, in every course in the work folder. Trials are left out: they never publish."""
@@ -1586,9 +1776,17 @@ def review_items(root, repo):
                                   'summary': (rec.get('check') or {}).get('summary'), 'sure': (rec.get('check') or {}).get('sure'),
                                   'sensitive': rec.get('sensitive'), 'local': rec.get('local') or [], 'error': rec.get('error'),
                                   'spot': bool(rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')),
+                                  'spotBy': (rec.get('auto') or {}).get('by', 'autoreview'),
+                                  'recheck': recheck_item(rec.get('recheck')),
                                   'match': dict(match, point=bank_point(d, match['same'])) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
     return {'courses': courses, 'items': items, 'trials': len(trials(root))}
+
+def recheck_item(rc):
+    """What the review page shows of a fresh check of the fix."""
+    if not rc: return None
+    c = rc.get('check') or {}
+    return {'result': rc['result'], 'why': rc['why'], 'flags': rc.get('flags') or [], 'summary': c.get('summary'), 'sure': c.get('sure')}
 
 def decide(root, repo, body):
     """Saves one decision from the review page. Returns {ok, message, problems}."""
@@ -1760,13 +1958,19 @@ def main(argv=None):
     a.add_argument('--dry-run', action='store_true', help='show what it would do, and change nothing')
     a.add_argument('--undo', action='store_true', help='send the points it cleared back to the review list')
     a.add_argument('--point', help='with --undo, only this point id')
+    rc = sub.add_parser('recheck', help='send each fix waiting for you to the Opus checker as a fresh check, and clear it if the check agrees')
+    rc.add_argument('outline', nargs='*', help='outline files, or folders of them. With none, every course in content/work')
+    rc.add_argument('--max-dollars', type=float, help='the most these courses may cost in total, counting earlier runs')
+    rc.add_argument('--dry-run', action='store_true', help='show what it would recheck and the estimate, and send nothing')
+    rc.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for the batch')
+    rc.set_defaults(now=False)
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
     args = ap.parse_args(argv)
     try:
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
-         'autoreview': cmd_autoreview}[args.cmd](args)
+         'autoreview': cmd_autoreview, 'recheck': cmd_recheck}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1

@@ -6,7 +6,7 @@
 <title>Stratos review</title>
 <!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
      It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, not
-     written, or a spot check from autoreview. Every decision is saved straight away in content/work. The Compare tab
+     written, or a spot check from autoreview or recheck. Every decision is saved straight away in content/work. The Compare tab
      puts a trial run (run --as) next to its course, point by point, so the owner can judge whether cheaper settings
      keep the quality. -->
 <style>
@@ -173,7 +173,13 @@ function render() {
     if (it.proposal) mid += '<div class="seg" role="group" aria-label="Version"><button type="button" data-view="draft" aria-pressed="' + (view === 'draft') + '">As written</button><button type="button" data-view="fix" aria-pressed="' + (view === 'fix') + '">The fix</button></div>';
     if (it.draft || it.proposal) mid += view === 'fix' && it.proposal ? pointHtml(it.proposal, it.draft) : pointHtml(it.draft);
     else mid += '<h2 class="title">' + esc(it.title) + '</h2>';
-    if (it.spot) side += '<div class="note">Spot check: autoreview would have cleared this point with the fix. Decide it as you would any other. Use the fix agrees with autoreview, and a rejection shows a warning in the summary.</div>';
+    if (it.spot && it.spotBy === 'recheck') side += '<div class="note">Spot check: a fresh check of the fix agreed with it, so recheck would have cleared this point with the fix. Decide it as you would any other. Use the fix agrees with recheck, and a rejection shows a warning in the summary.</div>';
+    else if (it.spot) side += '<div class="note">Spot check: autoreview would have cleared this point with the fix. Decide it as you would any other. Use the fix agrees with autoreview, and a rejection shows a warning in the summary.</div>';
+    if (it.recheck && it.recheck.result === 'kept') {
+      side += '<div class="label">Fresh check of the fix</div>' + it.recheck.why.map(f => '<div class="flag">Kept for you: ' + esc(f) + '.</div>').join('') +
+        it.recheck.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('') +
+        (it.recheck.summary ? '<p>' + esc(it.recheck.summary) + '</p>' : '') + (it.recheck.sure ? '<p class="small">Sure: ' + esc(it.recheck.sure) + '</p>' : '');
+    }
     if (it.error) side += '<div class="label">What happened</div><div class="flag">' + esc(it.error) + '</div>';
     if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
     if (it.summary) side += '<div class="label">Summary</div><p>' + esc(it.summary) + '</p>';
