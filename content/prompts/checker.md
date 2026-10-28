@@ -22,6 +22,7 @@ You are not told which option the writer meant as right: the options are in a ra
   - a remember line that sorts or splits the ideas more neatly than the card does, or says something the card contradicts (other)
   - a definition that contradicts another point in the chapter, such as calling location external when it is something the business chooses (fact)
   - "forces", "always", "must", "never" or "only" in the remember line, a question, an option or a why, where the card says "can" or "may" (wording)
+  - a question whose right option stands out from the others: clearly the longest, or the only one with a qualifier or a precise detail, so a student could pick it without knowing the idea. Give the question as its part (wording)
 - sure: how sure you are of your whole verdict.
   - high: you know the topic well, and every fact checks out.
   - medium: you know the topic, but a detail could depend on a source you cannot check.

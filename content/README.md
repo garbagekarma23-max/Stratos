@@ -8,8 +8,8 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 
 If you are Claude Code helping the owner with these steps:
 
-- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `recheck --dry-run` (a rough estimate, with no key), `review`, `publish`, the build, the checks and git.
+- Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck`, `rebalance` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
@@ -229,6 +229,45 @@ py content/pipeline.py recheck --max-dollars 5
 - Each point it clears has `cleared_by: "recheck"`, an `auto` entry and a `recheck` entry with the fresh check's answer in its file. `autoreview --undo` sends these back to you too, and they are never cleared automatically again.
 - With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to recheck some courses only.
 
+### Rebalance the options (optional)
+
+In a good question, a student can't pick the right option by its look. Many courses written so far have the right option as the longest of the four far more often than chance: `node check_content.mjs` prints a warning for each one (see below). The writer and the checker are told about this now, so new courses should not need it. `rebalance` fixes a course that is already written.
+
+For each cleared point, it finds the questions whose right option is clearly the longest: longer than every wrong option, and at least 5 characters longer than their average. For each one, Claude Sonnet 5.5 rewrites only the three wrong options, so they match the right one in length and detail. It is asked to keep each wrong option's mistake, so the explanation still fits, and to keep it clearly wrong. The question, the right option, the card, the explanation and the clue never change: the pipeline copies them from the old version. It costs well under 1 cent a point with batches.
+
+The new options are used only when:
+
+- there are three of them, all different from each other and from the right option,
+- the right option is no longer clearly the longest,
+- and the point passes the content check with them.
+
+Otherwise the point keeps its old options, and its file says why. A point is rebalanced once only. A point still waiting for you is left out: decide it on the review page first.
+
+In the key window:
+
+```powershell
+py content/pipeline.py rebalance --dry-run
+```
+
+The dry run lists the questions it would rewrite, the estimate, and what each course has spent so far. It sends nothing. Then:
+
+```powershell
+py content/pipeline.py rebalance --max-dollars 2
+```
+
+- `--max-dollars` works as in `recheck`: the most the course may cost in total, counting earlier runs. With several courses, they share it as in `run-many`. It refuses to send a batch that could pass it.
+- The points go in one batch, which usually takes under an hour. `--no-wait` sends or collects once, then stops. Ctrl+C is safe, and running the same command again carries on.
+- At the end it prints, for each course, how many questions it rebalanced, how many points kept their old options, and why.
+- Each point it changes has a `rebalance` entry in its file, with the old options. Only the version students get (`final`) changes.
+- With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to rebalance some courses only.
+- Then publish each course it changed again (step 9), and look over a few of the new options in the app.
+
+The new options are not sent to the checker again. If you want a second look at them, open the course in the app or read the `rebalance` entries in `content/work/<course>/points/`.
+
+#### The warning in the content check
+
+For each course, `node check_content.mjs` prints how often the right option is the longest, against chance (a quarter of the questions), and how often it is clearly the longest. When the count is well above chance (2 standard deviations, which luck alone gives about 1 course in 40, in a course of 20 or more questions), it prints a warning under WARNINGS with the `rebalance` command to run. A warning does not fail the check.
+
 ### The review page
 
 ```powershell
@@ -333,9 +372,9 @@ Rules:
 | File | What it holds |
 | --- | --- |
 | `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model and how hard it thinks at each step, the prices, and the limits for `--now` and batches. |
-| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md`, and the extra rules for each kind in `kinds/`. |
+| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md`, `rebalance.md` (rewriting wrong options to match the right one), and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
-| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's or recheck's decision and yours). Commit it with the content. |
+| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's or recheck's decision and yours, and the old options rebalance replaced). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. |
