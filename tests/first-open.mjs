@@ -7,6 +7,7 @@
 // first-home, light and dark, at 390 by 844.
 import fs from 'fs';
 import { open, saved, shot, check } from './lib.mjs';
+import { loadContent } from '../content/load.mjs';
 // What goes to an account (src/84-merge.js), to check the place and the pick stay on the device.
 const {syncPart} = new Function(fs.readFileSync(new URL('../src/84-merge.js', import.meta.url), 'utf8') + '; return {syncPart};')();
 const R = [], SHOOT = process.argv[2] === 'shots', errsAll = [];
@@ -56,10 +57,13 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   check((await title(d.p)) === 'Pick your course', 'Show courses shows Pick your course', R);
   check((await d.p.locator('#setup .pick.place').textContent()) === 'New South Wales, AustraliaChange', 'the place at the top, with Change', R);
   check(JSON.stringify(await d.p.locator('#setup .unit').allTextContents()) === JSON.stringify(['New South Wales', 'International courses']), 'New South Wales, then International courses, and no Open now', R);
-  check(JSON.stringify(await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub))) === JSON.stringify(['eco', 'maths', 'nsw-bus-11', 'edexcel']), 'NSW Economics, Maths and Business Studies, then the Edexcel course', R);
+  // Every NSW course (made ones read from the content files), by year, then the Edexcel course last.
+  const subsOn = await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub));
+  const nswIds = ['eco', 'maths'].concat(loadContent().MADE_COURSES.filter(c => c.place === 'nsw').map(c => c.id));
+  check(subsOn.length === nswIds.length + 1 && nswIds.every(id => subsOn.indexOf(id) >= 0 && subsOn.indexOf(id) < nswIds.length) && subsOn[subsOn.length - 1] === 'edexcel' && JSON.stringify(await d.p.locator('#setup .yr').allTextContents()) === JSON.stringify(['Year 11', 'Year 12', 'AS']), 'every NSW course under Year 11 and Year 12, then the Edexcel course under AS', R);
   const subs = await d.p.locator('#setup .p-in > .sub').allTextContents();
   check(subs[0] === 'More NSW subjects are coming.' && subs[1] === 'Taught in schools around the world.', 'with the line under each group', R);
-  check(await d.p.locator('#setup .pick[data-sub] .v').count() === 0 && await d.p.locator('#setup .pick[data-sub] .ic').count() === 4 && await d.p.locator('#setup [aria-current]').count() === 0, 'each row has an arrow, not Open or Switch, and none is marked open', R);
+  check(await d.p.locator('#setup .pick[data-sub] .v').count() === 0 && await d.p.locator('#setup .pick[data-sub] .ic').count() === subsOn.length && await d.p.locator('#setup [aria-current]').count() === 0, 'each row has an arrow, not Open or Switch, and none is marked open', R);
   check((await d.p.locator('#setup .fine').textContent()) === FINE, 'the line that courses can be switched from Home', R);
   check((await d.p.locator('#setup .p-in > :last-child').textContent()) === NONE && await d.p.locator('#setup .p-in > :last-child').evaluate(b => b.classList.contains('textbtn')), 'and My course isn’t here yet, a text button, at the bottom', R);
   let s = await saved(d.p);

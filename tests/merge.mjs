@@ -8,10 +8,10 @@ const R = [];
 const T = 1760000000000, min = 60000;
 
 // What goes to the account and what stays on the device.
-const dev = {ans: {c1p1a: {ok: true, n: 1, t: T}}, m: {h: {}, best: {}, cur: 'm1'}, c: {edexcel: {cur: 'e1'}}, subject: 'eco', cur: 'c1',
+const dev = {ans: {c1p1a: {ok: true, n: 1, t: T}}, m: {h: {}, best: {}, cur: 'm1', start: 'm1'}, c: {edexcel: {cur: 'e1', start: 'e1'}}, subject: 'eco', cur: 'c1', start: 'c1',
   theme: 'dark', bg: 'sky', sound: false, music: false, place: {country: 'AU', state: 'nsw'}, th: {aisha: []}, unread: {}, mid: 10, name: 'Ace', rocket: 'classic', exhaust: 'kerosene', streak: 2, lastDay: '2026-10-16'};
 const part = syncPart(dev);
-check(['ans', 'm', 'c', 'subject', 'cur', 'rocket', 'exhaust', 'streak', 'lastDay'].every(k => k in part), 'the account gets answers, records, the chapter, the streak, the rocket', R);
+check(['ans', 'm', 'c', 'subject', 'cur', 'start', 'rocket', 'exhaust', 'streak', 'lastDay'].every(k => k in part), 'the account gets answers, records, the chapter, the streak, the rocket', R);
 check(['theme', 'bg', 'sound', 'music', 'place', 'th', 'unread', 'mid', 'name'].every(k => !(k in part)), 'appearance, sound, the place, the sample messages and the call sign stay out of it', R);
 part.ans.c1p1a.ok = false;
 check(dev.ans.c1p1a.ok === true, 'the synced part is a copy: changing it leaves the save alone', R);
@@ -60,6 +60,12 @@ const newer = {ans: {c1p2a: {ok: true, n: 1, t: T + min}}, subject: 'eco', cur: 
 const n1 = merge(older, newer);
 check(n1.subject === 'eco' && n1.cur === 'c2' && n1.rocket === 'needle' && n1.m.cur === 'm2', 'the subject, chapter and rocket come from the device answered most recently', R);
 check(merge({}, newer).subject === 'eco' && merge(older, {}).subject === 'maths', 'an empty copy takes everything from the other', R);
+
+// Where the class was up to (start), in each subject: the device answered most recently, or the only one that has it.
+const st1 = merge({ans: {c1p1a: {ok: true, n: 1, t: T}}, start: 'c2', m: {start: 'm2'}, c: {edexcel: {start: 'x2c1'}}},
+  {ans: {c1p2a: {ok: true, n: 1, t: T + min}}, start: 'c3', c: {edexcel: {}}});
+check(st1.start === 'c3' && st1.m.start === 'm2' && st1.c.edexcel.start === 'x2c1', 'the starting chapter comes from the device answered most recently, or from the one copy that has it', R);
+check(syncPart({start: 'c2', m: {start: 'm2'}, c: {edexcel: {start: 'x1c3'}}}).start === 'c2' && canon(merge(st1, {})) === canon(merge({}, st1)), 'the starting chapter goes to the account, and the order makes no difference', R);
 
 // canon gives the same text whatever order the keys are in, as the database returns them.
 check(canon({b: 1, a: {d: [1, {y: 2, x: 1}], c: null}}) === canon({a: {c: null, d: [1, {x: 1, y: 2}]}, b: 1}), 'canon ignores the order of keys', R);

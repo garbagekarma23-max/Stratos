@@ -238,6 +238,11 @@ svg{display:block;flex:none}
 .cnote{margin-top:4px;font-size:12px;line-height:1.4;color:var(--ink-3)}
 .unit{margin:18px 0 6px;font-size:14px;font-weight:600;line-height:1.3;color:var(--ink-2)}
 .sec > .h2 + .unit,#sheetBody > .unit:first-child{margin-top:0}
+/* On the subject sheet, each place's courses go under a smaller heading for each year or level. */
+.yr{margin:0 0 -8px;font-size:13px;font-weight:500;line-height:1.3;color:var(--ink-3)}
+.unit + .yr{margin-top:-6px}
+/* Home's Starting point row, under Chapters: where the class was up to, and Change. */
+.startat{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-2px 0 2px;font-size:14px;color:var(--ink-2)}
 .ch.soon .ch-head .t{font-weight:500;color:var(--ink-2)}
 .ch.soon .ch-head .stage{color:var(--ink-3)}
 .tag{display:inline-block;padding:1px 7px;border:1px solid var(--line-2);border-radius:999px;font-size:11px;font-weight:500;line-height:1.5;color:var(--ink-2);vertical-align:2px;white-space:nowrap}
@@ -1016,7 +1021,7 @@ math-span:not(:defined){visibility:hidden}
      b         the practice question, asked later. d is its difficulty, 2 or 3.
    In every question the correct answer is opts[0]. The order is shuffled on screen. */
 const TOPIC = {
-  id: 'ge', course: 'Economics', year: 'Year 12', name: 'The Global Economy',
+  id: 'ge', course: 'Economics', year: 'Year 12', years: [12], name: 'The Global Economy',
   chapters: [
 
     {id: 'c1', title: 'International economic integration', points: [
@@ -1473,7 +1478,7 @@ const TOPIC = {
    Anything in [square brackets] is worked out from the numbers: [a] is a picked number, [c-b] is c take b.
    In the notes, 1x is written x, and -3 is written with a proper minus sign. */
 const MATHS = {
-  id: 'eq', course: 'Maths', year: 'Year 11', name: 'Equations', ask: 'Solve for x.',
+  id: 'eq', course: 'Maths', year: 'Year 11', years: [11], name: 'Equations', ask: 'Solve for x.',
   chapters: [
 
     {id: 'm1', title: 'Linear equations', points: [
@@ -2584,9 +2589,10 @@ const ECON_POINTS = {
    in econ-points.js, so a point can later belong to more than one course.
    A chapter with no points shows on Home as Coming soon and cannot be opened.
    check is 'draft' until a teacher has checked the chapter, then 'checked'. A draft chapter with points shows a
-   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1). */
+   Draft label in the app. Every chapter here has been checked. Chapter ids start with x so they never clash with NSW (c1) or Maths (m1).
+   level is the heading the subject sheet lists the course under: AS here, A level for the A2 year. */
 const EDEXCEL = {
-  id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', short: 'AS Economics',
+  id: 'edexcel', course: 'Economics', year: 'International A Level (Edexcel)', name: 'AS year', level: 'AS', short: 'AS Economics',
   note: 'Covers Pearson Edexcel International A Level Economics. Not affiliated with or endorsed by Pearson.',
   units: [
     {title: 'Markets in action', chapters: [
@@ -18929,10 +18935,10 @@ MADE_COURSES.push({
 /* Where each course is taught. The subject sheet reads this to show a student the courses for their country.
    Adding a country, a state or a course here needs no new code.
 
-   COURSE_LIST  every course the app has, in the order the sheet shows them. id is how progress is saved, data is the
-                course's content (from content.js, maths-content.js, edexcel-content.js or src/courses), name is the
-                plain name on its row, and about is the line under it: the exam it leads to, then the topic loaded.
-                The courses the content pipeline made (made.js) come after the others.
+   COURSE_LIST  every course the app has. id is how progress is saved, data is the course's content (from content.js,
+                maths-content.js, edexcel-content.js or src/courses), name is the plain name on its row, and about is
+                the line under it: the exam it leads to, then the topic loaded. The courses the content pipeline made
+                (made.js) come after the others. Each course also gets its group and rank (see yearGroup below).
    CURRICULA    a country's or a state's own courses, by id. more is a line under them.
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
@@ -18947,6 +18953,16 @@ const COURSE_LIST = [
   {id: 'maths', data: MATHS, name: 'Maths, Year 11', about: 'HSC, Equations'},
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
 ].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
+/* The heading a course is listed under on the subject sheet, and where that heading sorts. It comes from the course's
+   data, never its name: level for an A level course (AS, then A level), otherwise years (Year 11 before Year 12).
+   The content pipeline writes years and year into every course it makes, from the outline's years line. */
+const LEVELS = ['AS', 'A level'];
+function yearGroup(d) {
+  if (d.level) return {group: d.level, rank: 100 + Math.max(0, LEVELS.indexOf(d.level))};
+  const ys = (d.years || []).slice().sort((a, b) => a - b);
+  return {group: d.year, rank: ys.length ? ys[0] : 99};
+}
+COURSE_LIST.forEach(c => Object.assign(c, yearGroup(c.data)));
 const CURRICULA = {
   nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
 };
@@ -20420,8 +20436,10 @@ const chPicks = (row, S) => (S = S || SUB, S.units
 /* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
 const isDraft = c => !!c && c.check === 'draft';
 const DRAFT = '<span class="tag">Draft</span>';
-/* Where the subject picked keeps its chapter and records: NSW Economics at the top of saved, Maths in m, a course in c. */
-const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
+/* Where a subject keeps its chapter, its starting point and its records: NSW Economics at the top of saved, Maths in m,
+   a course in c. subStore is the one for the subject picked. */
+const storeOf = id => id === 'eco' ? saved : id === 'maths' ? saved.m : saved.c[id];
+const subStore = () => storeOf(SUB.id);
 /* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
 const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
 
@@ -20552,13 +20570,29 @@ const records = () => ({km: subStore().bestKm || 0, combo: subStore().bestCombo 
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
-/* The chapter Home shows: the one the student last opened, or the first that is not finished.
-   Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
+/* The chapter Home shows: the one the student last opened, or the first that is not finished, from the chapter
+   their class was up to when they started (startCh). Once every chapter from there on is finished, the first
+   unfinished one before it. Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
 function setCur(id) { subStore().cur = id; save(); }
 function curCh() {
-  const id = subStore().cur, c = CH.find(x => x.id === id);
+  const id = subStore().cur, c = CH.find(x => x.id === id), from = CH.indexOf(startCh());
   if (c && chStats(c).pct < 100) return c;
-  return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
+  return CH.find((x, i) => i >= from && chStats(x).pct < 100) || CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
+}
+/* Where the student's class was up to when they started the course: a chapter id in start, kept with the subject's
+   chapter and records (storeOf), so it goes to the account. Chapter 1 if none was picked, or the one picked has gone.
+   It only moves where Home starts. Chapters before it stay open, and nothing in them counts as done: progress only
+   ever comes from answers. */
+function startCh(S) {
+  S = S || SUB;
+  return S.ch.find(x => x.id === storeOf(S.id).start) || S.ch[0];
+}
+/* The question is asked the first time a course is opened: it has more than one chapter ready, no start saved and no
+   answers in it, so a student already partway through never sees it. Tests skip it with window.stratosStart = false. */
+function startDue(id) {
+  const S = SUBJECTS[id];
+  if (!S || window.stratosStart === false || S.ch.length < 2 || storeOf(id).start) return false;
+  return !S.all.some(p => p.sub === 'maths' ? mHist(p.id).length : ansOf(p.id, 'a') || ansOf(p.id, 'b'));
 }
 const names = pts => pts.map(p => p.title).join(', ');
 /* What the big button on Home does next. */
@@ -21192,7 +21226,9 @@ function renderHome() {
     h += '<button class="weakrow" type="button" data-act="fixweak"><i class="st weak"></i><span><b>' + plural(weak.length, 'weak point') + '</b><span class="names">' + esc(names(weak)) + '</span></span>' + IC.right + '</button>';
   }
   /* A course with units lists every chapter under its unit, ready or not, so the shape of the whole year shows. */
-  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
+  /* Where the class was up to when the student started, with Change. Only for a course with a choice of chapters. */
+  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (CH.length > 1
+    ? '<div class="startat"><span>Starting point: ' + esc(chName(startCh())) + '</span><button class="textbtn" type="button" data-act="startch" aria-haspopup="dialog">Change</button></div>' : '') + (SUB.units
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.topic.row
@@ -21323,7 +21359,18 @@ function courseSheet() {
       '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span>' +
       (first ? IC.right : '<span class="v">' + (on ? 'Open' : 'Switch') + '</span>') + '</button>';
   };
-  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3><div class="picks">' + ids.map(row).join('') + '</div>' + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
+  /* Under each place, the courses go by year (Year 11, then Year 12) or by level (AS, then A level), and A to Z by
+     subject within a year. yearGroup in places.js reads both from the course's data. */
+  const byYear = ids => {
+    const cs = ids.map(id => COURSE_LIST.find(x => x.id === id)), out = [];
+    cs.slice().sort((a, b) => a.rank - b.rank || a.group.localeCompare(b.group, 'en') ||
+      a.data.course.localeCompare(b.data.course, 'en') || a.name.localeCompare(b.name, 'en')).forEach(c => {
+      const g = out[out.length - 1];
+      if (g && g.name === c.group) g.ids.push(c.id); else out.push({name: c.group, ids: [c.id]});
+    });
+    return out.map(g => '<h4 class="yr">' + esc(g.name) + '</h4><div class="picks">' + g.ids.map(row).join('') + '</div>').join('');
+  };
+  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3>' + byYear(ids) + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
   const listed = (own ? own.courses : []).concat(INTERNATIONAL.courses);
   showStep(first ? 'Pick your course' : 'Courses',
     '<button class="pick place" type="button" data-act="placechange"><span class="t">' + esc(placeName(pl)) + '</span><span class="v">Change</span></button>' +
@@ -21334,7 +21381,44 @@ function courseSheet() {
     '<p class="fine">' + (first ? 'You can switch courses any time from Home. ' : '') + 'Each course keeps its own progress, ' + (signedIn() ? 'saved to your account.' : 'saved on this device only.') + '</p>' +
     (first ? '<button class="textbtn" type="button" data-act="firstnone">My course isn’t here yet</button>' : ''));
 }
-ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
+ACT.setsub = b => {
+  const id = b.dataset.sub;
+  closeSheet(); useSubject(id);
+  if (startDue(id)) startSheet(id);
+};
+
+/* ---------- where the class is up to ----------
+   The first time a course is opened (startDue in 10-core.js), a sheet asks where the student's class is up to, with
+   every chapter ready to open and Chapter 1 picked. Picking a later chapter starts Home there. The chapters before it
+   stay open to go back to, but they are not marked done and give nothing: no altitude, streak or proven points.
+   Home's Starting point row opens the same sheet to change it. On a device's first open it is a full-screen step
+   after the course (ui.first), with Back to the courses. ui.st holds the course and the chapter picked. */
+function startSheet(id, first) {
+  const S = SUBJECTS[id], on = startCh(S).id;
+  ui.st = {id: id, ch: on};
+  /* In the sheet, Chapter 1 is saved straight away, so closing it keeps Chapter 1 and it is not asked again. */
+  if (!first && !storeOf(id).start) { storeOf(id).start = on; save(); }
+  showStep('Where is your class up to?',
+    '<p class="rule">Pick the chapter your class is on. Home starts there. Earlier chapters stay open to go back to, but they don’t count as done.</p>' +
+    '<div role="radiogroup" aria-label="Chapter">' + S.ch.map(c => radio('startpick', c.id, c.id === on, c.title, chName(c))).join('') + '</div>' +
+    (first
+      ? '<div class="stick cta"><button class="primary" type="button" data-act="startset">Start here</button><button class="ghost" type="button" data-act="startback">Back</button></div>'
+      : '<div class="stick"><button class="primary wide" type="button" data-act="startset">Start here</button></div>'));
+}
+ACT.startch = () => startSheet(SUB.id);
+ACT.startpick = b => { ui.st.ch = b.dataset.v; checkOnly(b, '[data-act="startpick"]'); };
+ACT.startback = () => { ui.st = null; courseSheet(); };
+ACT.startset = () => {
+  const st = ui.st, first = ui.first;
+  ui.st = null;
+  storeOf(st.id).start = st.ch;
+  storeOf(st.id).cur = st.ch;
+  save();
+  if (first) { setupDone(st.id); return; }
+  closeSheet();
+  ui.cur = null;
+  renderHome();
+};
 
 /* ---------- the first-open steps ----------
    On a device's first open, the intro fades into the subject sheet's steps, full screen: where you study, the state
@@ -21371,7 +21455,7 @@ function setupDone(id, note) {
 }
 /* The toast saved for Home, if there is one. The welcome screen's Try it first calls this too. */
 function homeNote() { if (ui.homeNote) toast(ui.homeNote); ui.homeNote = ''; }
-ACT.firstsub = b => setupDone(b.dataset.sub);
+ACT.firstsub = b => { if (startDue(b.dataset.sub)) startSheet(b.dataset.sub, true); else setupDone(b.dataset.sub); };
 /* My course isn’t here yet: the first course the place has, or the first international one, to try meanwhile. */
 ACT.firstnone = () => {
   const own = curriculumAt(saved.place);
@@ -24517,11 +24601,11 @@ const intro = (() => {
 
 /* ---------- the part of the save that goes to an account, and putting two copies together ----------
    No screen code here, so tests/merge.mjs can check it on its own.
-   The account keeps study progress: answers, records, the chapter open, the streak and the counts, the rocket and
+   The account keeps study progress: answers, records, the chapter open, where the class was up to (start), the streak and the counts, the rocket and
    exhaust. These stay on the device: appearance, Sky, sound and race music (a phone and a laptop can differ), the
    place picked on the subject sheet (no location goes to the account), and the sample friends' messages (pretend).
    The call sign goes to the account too, but in its own table, profiles, not in here. */
-const SYNC_TOP = ['ans', 'cur', 'bestKm', 'bestCombo', 'subject', 'streak', 'lastDay', 'day', 'week', 'rocket', 'exhaust'];
+const SYNC_TOP = ['ans', 'cur', 'start', 'bestKm', 'bestCombo', 'subject', 'streak', 'lastDay', 'day', 'week', 'rocket', 'exhaust'];
 const isObj = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const copy = x => x === undefined ? undefined : JSON.parse(JSON.stringify(x));
 
@@ -24542,7 +24626,7 @@ function hasProgress(s) {
 }
 
 /* The time of the latest answer in a save, in any subject. The copy answered most recently decides the choices
-   that cannot be added together: the subject, the chapter open, the rocket and the exhaust. */
+   that cannot be added together: the subject, the chapter open, the starting chapter, the rocket and the exhaust. */
 function lastAnswer(s) {
   let t = 0;
   if (isObj(s.ans)) Object.keys(s.ans).forEach(k => { const r = s.ans[k]; if (r && r.t > t) t = r.t; });
@@ -24564,7 +24648,7 @@ function merge(a, b) {
   const newer = lastAnswer(b) > lastAnswer(a) ? b : a, older = newer === a ? b : a;
   const out = syncPart(newer);
   out.v = 1;
-  ['cur', 'subject', 'rocket', 'exhaust'].forEach(k => { if (out[k] === undefined && older[k] !== undefined) out[k] = older[k]; });
+  ['cur', 'start', 'subject', 'rocket', 'exhaust'].forEach(k => { if (out[k] === undefined && older[k] !== undefined) out[k] = older[k]; });
 
   out.ans = {};
   const ansA = isObj(a.ans) ? a.ans : {}, ansB = isObj(b.ans) ? b.ans : {};
@@ -24577,7 +24661,7 @@ function merge(a, b) {
 
   const ma = isObj(a.m) ? a.m : {}, mb = isObj(b.m) ? b.m : {};
   out.m = isObj(out.m) ? out.m : {};
-  if (out.m.cur === undefined && (newer === a ? mb : ma).cur !== undefined) out.m.cur = (newer === a ? mb : ma).cur;
+  ['cur', 'start'].forEach(k => { if (out.m[k] === undefined && (newer === a ? mb : ma)[k] !== undefined) out.m[k] = (newer === a ? mb : ma)[k]; });
   out.m.h = {};
   const ha = isObj(ma.h) ? ma.h : {}, hb = isObj(mb.h) ? mb.h : {};
   new Set(Object.keys(ha).concat(Object.keys(hb))).forEach(pid => {
@@ -24607,7 +24691,7 @@ function merge(a, b) {
   new Set(Object.keys(ca).concat(Object.keys(cb))).forEach(id => {
     const x = isObj(ca[id]) ? ca[id] : {}, y = isObj(cb[id]) ? cb[id] : {};
     const c = out.c[id] = isObj(out.c[id]) ? out.c[id] : {};
-    if (c.cur === undefined) { const o = newer === a ? y : x; if (o.cur !== undefined) c.cur = o.cur; }
+    ['cur', 'start'].forEach(k => { if (c[k] === undefined) { const o = newer === a ? y : x; if (o[k] !== undefined) c[k] = o[k]; } });
     ['bestKm', 'bestCombo'].forEach(k => { if (x[k] || y[k]) c[k] = most(x, y, k); });
   });
 

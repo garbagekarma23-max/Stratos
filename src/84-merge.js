@@ -1,10 +1,10 @@
 /* ---------- the part of the save that goes to an account, and putting two copies together ----------
    No screen code here, so tests/merge.mjs can check it on its own.
-   The account keeps study progress: answers, records, the chapter open, the streak and the counts, the rocket and
+   The account keeps study progress: answers, records, the chapter open, where the class was up to (start), the streak and the counts, the rocket and
    exhaust. These stay on the device: appearance, Sky, sound and race music (a phone and a laptop can differ), the
    place picked on the subject sheet (no location goes to the account), and the sample friends' messages (pretend).
    The call sign goes to the account too, but in its own table, profiles, not in here. */
-const SYNC_TOP = ['ans', 'cur', 'bestKm', 'bestCombo', 'subject', 'streak', 'lastDay', 'day', 'week', 'rocket', 'exhaust'];
+const SYNC_TOP = ['ans', 'cur', 'start', 'bestKm', 'bestCombo', 'subject', 'streak', 'lastDay', 'day', 'week', 'rocket', 'exhaust'];
 const isObj = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const copy = x => x === undefined ? undefined : JSON.parse(JSON.stringify(x));
 
@@ -25,7 +25,7 @@ function hasProgress(s) {
 }
 
 /* The time of the latest answer in a save, in any subject. The copy answered most recently decides the choices
-   that cannot be added together: the subject, the chapter open, the rocket and the exhaust. */
+   that cannot be added together: the subject, the chapter open, the starting chapter, the rocket and the exhaust. */
 function lastAnswer(s) {
   let t = 0;
   if (isObj(s.ans)) Object.keys(s.ans).forEach(k => { const r = s.ans[k]; if (r && r.t > t) t = r.t; });
@@ -47,7 +47,7 @@ function merge(a, b) {
   const newer = lastAnswer(b) > lastAnswer(a) ? b : a, older = newer === a ? b : a;
   const out = syncPart(newer);
   out.v = 1;
-  ['cur', 'subject', 'rocket', 'exhaust'].forEach(k => { if (out[k] === undefined && older[k] !== undefined) out[k] = older[k]; });
+  ['cur', 'start', 'subject', 'rocket', 'exhaust'].forEach(k => { if (out[k] === undefined && older[k] !== undefined) out[k] = older[k]; });
 
   out.ans = {};
   const ansA = isObj(a.ans) ? a.ans : {}, ansB = isObj(b.ans) ? b.ans : {};
@@ -60,7 +60,7 @@ function merge(a, b) {
 
   const ma = isObj(a.m) ? a.m : {}, mb = isObj(b.m) ? b.m : {};
   out.m = isObj(out.m) ? out.m : {};
-  if (out.m.cur === undefined && (newer === a ? mb : ma).cur !== undefined) out.m.cur = (newer === a ? mb : ma).cur;
+  ['cur', 'start'].forEach(k => { if (out.m[k] === undefined && (newer === a ? mb : ma)[k] !== undefined) out.m[k] = (newer === a ? mb : ma)[k]; });
   out.m.h = {};
   const ha = isObj(ma.h) ? ma.h : {}, hb = isObj(mb.h) ? mb.h : {};
   new Set(Object.keys(ha).concat(Object.keys(hb))).forEach(pid => {
@@ -90,7 +90,7 @@ function merge(a, b) {
   new Set(Object.keys(ca).concat(Object.keys(cb))).forEach(id => {
     const x = isObj(ca[id]) ? ca[id] : {}, y = isObj(cb[id]) ? cb[id] : {};
     const c = out.c[id] = isObj(out.c[id]) ? out.c[id] : {};
-    if (c.cur === undefined) { const o = newer === a ? y : x; if (o.cur !== undefined) c.cur = o.cur; }
+    ['cur', 'start'].forEach(k => { if (c[k] === undefined) { const o = newer === a ? y : x; if (o[k] !== undefined) c[k] = o[k]; } });
     ['bestKm', 'bestCombo'].forEach(k => { if (x[k] || y[k]) c[k] = most(x, y, k); });
   });
 

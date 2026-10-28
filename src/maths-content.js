@@ -23,7 +23,7 @@
    Anything in [square brackets] is worked out from the numbers: [a] is a picked number, [c-b] is c take b.
    In the notes, 1x is written x, and -3 is written with a proper minus sign. */
 const MATHS = {
-  id: 'eq', course: 'Maths', year: 'Year 11', name: 'Equations', ask: 'Solve for x.',
+  id: 'eq', course: 'Maths', year: 'Year 11', years: [11], name: 'Equations', ask: 'Solve for x.',
   chapters: [
 
     {id: 'm1', title: 'Linear equations', points: [

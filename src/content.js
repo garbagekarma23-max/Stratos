@@ -10,7 +10,7 @@
      b         the practice question, asked later. d is its difficulty, 2 or 3.
    In every question the correct answer is opts[0]. The order is shuffled on screen. */
 const TOPIC = {
-  id: 'ge', course: 'Economics', year: 'Year 12', name: 'The Global Economy',
+  id: 'ge', course: 'Economics', year: 'Year 12', years: [12], name: 'The Global Economy',
   chapters: [
 
     {id: 'c1', title: 'International economic integration', points: [

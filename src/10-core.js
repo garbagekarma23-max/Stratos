@@ -277,8 +277,10 @@ const chPicks = (row, S) => (S = S || SUB, S.units
 /* A chapter is shown as a draft while its data says check: 'draft'. NSW and Maths chapters have no check. */
 const isDraft = c => !!c && c.check === 'draft';
 const DRAFT = '<span class="tag">Draft</span>';
-/* Where the subject picked keeps its chapter and records: NSW Economics at the top of saved, Maths in m, a course in c. */
-const subStore = () => SUB.id === 'eco' ? saved : SUB.id === 'maths' ? saved.m : saved.c[SUB.id];
+/* Where a subject keeps its chapter, its starting point and its records: NSW Economics at the top of saved, Maths in m,
+   a course in c. subStore is the one for the subject picked. */
+const storeOf = id => id === 'eco' ? saved : id === 'maths' ? saved.m : saved.c[id];
+const subStore = () => storeOf(SUB.id);
 /* The subject's name in a sentence: "Maths: Equations", or the whole course name for a course with units. */
 const subTitle = () => SUB.units ? SUB.topic.course + ', ' + SUB.topic.year : SUB.topic.course + ': ' + SUB.topic.name;
 
@@ -409,13 +411,29 @@ const records = () => ({km: subStore().bestKm || 0, combo: subStore().bestCombo 
 const weakPoints = () => ALL.filter(p => statusOf(p.id) === 'weak');
 const learnedPoints = () => ALL.filter(p => statusOf(p.id) !== 'new');
 const provenCount = () => ALL.filter(p => statusOf(p.id) === 'proven').length;
-/* The chapter Home shows: the one the student last opened, or the first that is not finished.
-   Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
+/* The chapter Home shows: the one the student last opened, or the first that is not finished, from the chapter
+   their class was up to when they started (startCh). Once every chapter from there on is finished, the first
+   unfinished one before it. Each subject remembers its own: Economics in cur, Maths in m.cur, a course in c[id].cur. */
 function setCur(id) { subStore().cur = id; save(); }
 function curCh() {
-  const id = subStore().cur, c = CH.find(x => x.id === id);
+  const id = subStore().cur, c = CH.find(x => x.id === id), from = CH.indexOf(startCh());
   if (c && chStats(c).pct < 100) return c;
-  return CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
+  return CH.find((x, i) => i >= from && chStats(x).pct < 100) || CH.find(x => chStats(x).pct < 100) || CH[CH.length - 1];
+}
+/* Where the student's class was up to when they started the course: a chapter id in start, kept with the subject's
+   chapter and records (storeOf), so it goes to the account. Chapter 1 if none was picked, or the one picked has gone.
+   It only moves where Home starts. Chapters before it stay open, and nothing in them counts as done: progress only
+   ever comes from answers. */
+function startCh(S) {
+  S = S || SUB;
+  return S.ch.find(x => x.id === storeOf(S.id).start) || S.ch[0];
+}
+/* The question is asked the first time a course is opened: it has more than one chapter ready, no start saved and no
+   answers in it, so a student already partway through never sees it. Tests skip it with window.stratosStart = false. */
+function startDue(id) {
+  const S = SUBJECTS[id];
+  if (!S || window.stratosStart === false || S.ch.length < 2 || storeOf(id).start) return false;
+  return !S.all.some(p => p.sub === 'maths' ? mHist(p.id).length : ansOf(p.id, 'a') || ansOf(p.id, 'b'));
 }
 const names = pts => pts.map(p => p.title).join(', ');
 /* What the big button on Home does next. */

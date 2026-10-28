@@ -17,6 +17,15 @@ const spyLocation = () => {
 };
 const checked = p => p.locator('#sheetBody [role="radio"][aria-checked="true"]');
 const headings = p => p.locator('#sheetBody .unit').allTextContents();
+// The courses on the sheet, by place and then by year: [[place, [[year, [course ids]], ...]], ...].
+const grouped = p => p.evaluate(() => {
+  const out = [];
+  document.querySelectorAll('#sheetBody .unit, #sheetBody .yr').forEach(h => {
+    if (h.classList.contains('unit')) { out.push([h.textContent, []]); return; }
+    out[out.length - 1][1].push([h.textContent, Array.from(h.nextElementSibling.querySelectorAll('.pick')).map(b => b.dataset.sub)]);
+  });
+  return out;
+});
 
 // ---------- 1. the guess from the phone's settings ----------
 const cases = [
@@ -155,7 +164,7 @@ for (const [place, own, line] of [
   await p.click('.subject'); await p.waitForTimeout(100);
   const hs = await headings(p), name = await text(p, '#sheetBody .place .t');
   check(hs.includes('International courses') && (await p.locator('#sheetBody .pick[data-sub="edexcel"]').count()) === 1, name + ': the international courses show', R);
-  check((await p.locator('#sheetBody .unit + .picks + .sub').last().textContent()) === 'Taught in schools around the world.', name + ': under them, Taught in schools around the world.', R);
+  check((await p.locator('#sheetBody .picks + .sub').last().textContent()) === 'Taught in schools around the world.', name + ': under them, Taught in schools around the world.', R);
   if (own) {
     check(hs[0] === own && (await p.locator('#sheetBody .pick[data-sub="eco"], #sheetBody .pick[data-sub="maths"]').count()) === 2 && (await p.locator('#sheetBody > .sub').first().textContent()) === 'More NSW subjects are coming.', name + ': NSW Economics and Maths come first, then More NSW subjects are coming.', R);
   } else {
@@ -175,10 +184,19 @@ for (const [place, own, line] of [
   await p.click('.subject'); await p.waitForTimeout(100);
   check((await headings(p)).join('|') === 'New South Wales|International courses', 'NSW shows its own courses, then the international ones', R);
   const names = await p.locator('#sheetBody .pick:not(.place) .t').allTextContents();
-  // The made NSW courses come between Maths and the international ones, each with its name, exam line and note.
-  // They are read from the content files, so a new course needs no change here.
-  const made = loadContent().MADE_COURSES.filter(c => c.place === 'nsw').map(c => c.row.name + c.row.about + c.note);
-  check(names[0] === 'Economics, Year 12: The Global EconomyHSC, The Global Economy' && names[1] === 'Maths, Year 11HSC, Equations' && made.includes('Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.') && made.every((m, i) => names[2 + i] === m) && names[2 + made.length].startsWith('Economics, AS yearInternational A Level (Edexcel)') && names.length === made.length + 3, 'each row has a plain name and the exam it leads to', R);
+  // Every NSW course, made ones included, each with its name, exam line and note. They are read from the content
+  // files, so a new course needs no change here.
+  const made = loadContent().MADE_COURSES.filter(c => c.place === 'nsw');
+  check(names.includes('Economics, Year 12: The Global EconomyHSC, The Global Economy') && names.includes('Maths, Year 11HSC, Equations') && names.includes('Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.') &&
+    made.every(c => names.includes(c.row.name + c.row.about + c.note)) && names.some(n => n.startsWith('Economics, AS yearInternational A Level (Edexcel)')) && names.length === made.length + 3, 'each row has a plain name and the exam it leads to', R);
+  // By year: NSW's Year 11 courses, then Year 12, each A to Z by subject; the Edexcel course under AS. The year comes
+  // from each course's data (its years), so a course is checked against its data, not its name.
+  const g = await grouped(p), nswG = g[0][1], yearOfData = id => id === 'eco' ? 12 : id === 'maths' ? 11 : made.find(c => c.id === id).years[0];
+  const subjOf = id => id === 'eco' ? 'Economics' : id === 'maths' ? 'Maths' : made.find(c => c.id === id).course;
+  check(g.map(x => x[0]).join('|') === 'New South Wales|International courses' && nswG.map(x => x[0]).join('|') === 'Year 11|Year 12' && JSON.stringify(g[1][1]) === JSON.stringify([['AS', ['edexcel']]]), 'under New South Wales the courses go under Year 11 then Year 12, and the Edexcel course under AS', R);
+  check(nswG.every(([y, ids]) => ids.every(id => 'Year ' + yearOfData(id) === y)) && nswG.flatMap(x => x[1]).length === made.length + 2, 'each NSW course sits under the year its data gives', R);
+  check(nswG.every(([, ids]) => ids.every((id, i) => !i || subjOf(ids[i - 1]).localeCompare(subjOf(id), 'en') <= 0)), 'within a year the courses go A to Z by subject', R);
+  check(nswG[0][1].indexOf('maths') > nswG[0][1].indexOf('nsw-bus-11') && nswG[1][1].includes('eco') && !nswG[0][1].includes('eco'), 'Maths, Year 11 is under Year 11 after Business Studies, and Economics, Year 12 under Year 12', R);
   check(new Set(names).size === names.length, 'no two rows read the same', R);
   check((await row('eco').locator('.v').textContent()) === 'Open' && (await row('maths').locator('.v').textContent()) === 'Switch' && (await row('edexcel').locator('.v').textContent()) === 'Switch', 'the course open now says Open, the others Switch', R);
   check((await p.locator('#sheetBody .pick:disabled').count()) === 0 && !(await text(p, '#sheetBody')).includes('Soon'), 'there are no Soon rows', R);

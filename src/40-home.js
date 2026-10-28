@@ -67,7 +67,9 @@ function renderHome() {
     h += '<button class="weakrow" type="button" data-act="fixweak"><i class="st weak"></i><span><b>' + plural(weak.length, 'weak point') + '</b><span class="names">' + esc(names(weak)) + '</span></span>' + IC.right + '</button>';
   }
   /* A course with units lists every chapter under its unit, ready or not, so the shape of the whole year shows. */
-  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (SUB.units
+  /* Where the class was up to when the student started, with Change. Only for a course with a choice of chapters. */
+  h += '<section class="sec"><h2 class="h2">Chapters</h2>' + (CH.length > 1
+    ? '<div class="startat"><span>Starting point: ' + esc(chName(startCh())) + '</span><button class="textbtn" type="button" data-act="startch" aria-haspopup="dialog">Change</button></div>' : '') + (SUB.units
     ? SUB.units.map(u => '<h3 class="unit">Unit ' + u.n + ': ' + esc(u.title) + '</h3><ol class="ch-list">' + u.ch.map(chRow).join('') + '</ol>').join('')
     : '<ol class="ch-list">' + CH.map(chRow).join('') + '</ol>') + '</section>' +
     '<p class="fine">' + (SUB.topic.row
@@ -198,7 +200,18 @@ function courseSheet() {
       '<small>' + esc(c.about) + '</small>' + (note ? '<small class="pnote">' + esc(note) + '</small>' : '') + '</span>' +
       (first ? IC.right : '<span class="v">' + (on ? 'Open' : 'Switch') + '</span>') + '</button>';
   };
-  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3><div class="picks">' + ids.map(row).join('') + '</div>' + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
+  /* Under each place, the courses go by year (Year 11, then Year 12) or by level (AS, then A level), and A to Z by
+     subject within a year. yearGroup in places.js reads both from the course's data. */
+  const byYear = ids => {
+    const cs = ids.map(id => COURSE_LIST.find(x => x.id === id)), out = [];
+    cs.slice().sort((a, b) => a.rank - b.rank || a.group.localeCompare(b.group, 'en') ||
+      a.data.course.localeCompare(b.data.course, 'en') || a.name.localeCompare(b.name, 'en')).forEach(c => {
+      const g = out[out.length - 1];
+      if (g && g.name === c.group) g.ids.push(c.id); else out.push({name: c.group, ids: [c.id]});
+    });
+    return out.map(g => '<h4 class="yr">' + esc(g.name) + '</h4><div class="picks">' + g.ids.map(row).join('') + '</div>').join('');
+  };
+  const group = (name, ids, more) => '<h3 class="unit">' + esc(name) + '</h3>' + byYear(ids) + (more ? '<p class="sub">' + esc(more) + '</p>' : '');
   const listed = (own ? own.courses : []).concat(INTERNATIONAL.courses);
   showStep(first ? 'Pick your course' : 'Courses',
     '<button class="pick place" type="button" data-act="placechange"><span class="t">' + esc(placeName(pl)) + '</span><span class="v">Change</span></button>' +
@@ -209,7 +222,44 @@ function courseSheet() {
     '<p class="fine">' + (first ? 'You can switch courses any time from Home. ' : '') + 'Each course keeps its own progress, ' + (signedIn() ? 'saved to your account.' : 'saved on this device only.') + '</p>' +
     (first ? '<button class="textbtn" type="button" data-act="firstnone">My course isn’t here yet</button>' : ''));
 }
-ACT.setsub = b => { closeSheet(); useSubject(b.dataset.sub); };
+ACT.setsub = b => {
+  const id = b.dataset.sub;
+  closeSheet(); useSubject(id);
+  if (startDue(id)) startSheet(id);
+};
+
+/* ---------- where the class is up to ----------
+   The first time a course is opened (startDue in 10-core.js), a sheet asks where the student's class is up to, with
+   every chapter ready to open and Chapter 1 picked. Picking a later chapter starts Home there. The chapters before it
+   stay open to go back to, but they are not marked done and give nothing: no altitude, streak or proven points.
+   Home's Starting point row opens the same sheet to change it. On a device's first open it is a full-screen step
+   after the course (ui.first), with Back to the courses. ui.st holds the course and the chapter picked. */
+function startSheet(id, first) {
+  const S = SUBJECTS[id], on = startCh(S).id;
+  ui.st = {id: id, ch: on};
+  /* In the sheet, Chapter 1 is saved straight away, so closing it keeps Chapter 1 and it is not asked again. */
+  if (!first && !storeOf(id).start) { storeOf(id).start = on; save(); }
+  showStep('Where is your class up to?',
+    '<p class="rule">Pick the chapter your class is on. Home starts there. Earlier chapters stay open to go back to, but they don’t count as done.</p>' +
+    '<div role="radiogroup" aria-label="Chapter">' + S.ch.map(c => radio('startpick', c.id, c.id === on, c.title, chName(c))).join('') + '</div>' +
+    (first
+      ? '<div class="stick cta"><button class="primary" type="button" data-act="startset">Start here</button><button class="ghost" type="button" data-act="startback">Back</button></div>'
+      : '<div class="stick"><button class="primary wide" type="button" data-act="startset">Start here</button></div>'));
+}
+ACT.startch = () => startSheet(SUB.id);
+ACT.startpick = b => { ui.st.ch = b.dataset.v; checkOnly(b, '[data-act="startpick"]'); };
+ACT.startback = () => { ui.st = null; courseSheet(); };
+ACT.startset = () => {
+  const st = ui.st, first = ui.first;
+  ui.st = null;
+  storeOf(st.id).start = st.ch;
+  storeOf(st.id).cur = st.ch;
+  save();
+  if (first) { setupDone(st.id); return; }
+  closeSheet();
+  ui.cur = null;
+  renderHome();
+};
 
 /* ---------- the first-open steps ----------
    On a device's first open, the intro fades into the subject sheet's steps, full screen: where you study, the state
@@ -246,7 +296,7 @@ function setupDone(id, note) {
 }
 /* The toast saved for Home, if there is one. The welcome screen's Try it first calls this too. */
 function homeNote() { if (ui.homeNote) toast(ui.homeNote); ui.homeNote = ''; }
-ACT.firstsub = b => setupDone(b.dataset.sub);
+ACT.firstsub = b => { if (startDue(b.dataset.sub)) startSheet(b.dataset.sub, true); else setupDone(b.dataset.sub); };
 /* My course isn’t here yet: the first course the place has, or the first international one, to try meanwhile. */
 ACT.firstnone = () => {
   const own = curriculumAt(saved.place);
