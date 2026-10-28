@@ -1,0 +1,105 @@
+{
+ "id": "mat-reducing-balance-loans",
+ "title": "Reducing balance loans",
+ "brief": "19083b7690f9",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01489,
+  "check": 0.00771
+ },
+ "draft": {
+  "title": "Reducing balance loans",
+  "card": [
+   "On a reducing balance loan, interest is charged on the amount still owing. Each period, the interest is added and then the repayment M is taken off.",
+   "With balance B and rate r per period, the new balance is B × (1 + r) − M. Repeat this step for each period.",
+   "Example: $10 000 at 10% per year, repaid over 2 years. After year 1: 11 000 − M. After year 2: (11 000 − M) × 1.1 − M = 12 100 − 2.1M.",
+   "The loan is repaid when the balance after n periods is zero. Here 12 100 − 2.1M = 0, so M = 12 100 ÷ 2.1 = $5761.90 per year, to the nearest cent."
+  ],
+  "remember": "Balance each period = balance × (1 + r) − M. Set the final balance to zero to find M.",
+  "a": {
+   "q": "Ravi borrows $1000 at 5% per period. He makes a repayment of $300 at the end of the first period. What is the balance after that repayment?",
+   "opts": [
+    "$750",
+    "$700",
+    "$735",
+    "$1350"
+   ],
+   "why": "Interest is added first: 1000 × 1.05 = 1050. Then the repayment comes off: 1050 − 300 = 750. $735 is wrong because it takes the repayment off before adding interest.",
+   "clue": "Add the interest to the balance, then take off the repayment."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena borrows $2000 at 10% per year. She repays it with 2 equal repayments at the end of each year. What is each repayment, to the nearest cent?",
+   "opts": [
+    "$1152.38",
+    "$1210.00",
+    "$1100.00",
+    "$1047.62"
+   ],
+   "why": "After year 1 the balance is 2000 × 1.1 − M = 2200 − M. After year 2 it is 2420 − 2.1M. Setting this to zero gives M = 2420 ÷ 2.1 = $1152.38. $1210 is wrong because it halves 2420 and ignores that the first repayment cuts the interest in year 2.",
+   "clue": "Write the balance after each year, then set the second one to zero."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$750",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1152.38",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's example, both questions and both explanations check out: 12 100 ÷ 2.1 = $5761.90, 1050 − 300 = $750, and 2420 ÷ 2.1 = $1152.38."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Reducing balance loans",
+  "card": [
+   "On a reducing balance loan, interest is charged on the amount still owing. Each period, the interest is added and then the repayment M is taken off.",
+   "With balance B and rate r per period, the new balance is B × (1 + r) − M. Repeat this step for each period.",
+   "Example: $10 000 at 10% per year, repaid over 2 years. After year 1: 11 000 − M. After year 2: (11 000 − M) × 1.1 − M = 12 100 − 2.1M.",
+   "The loan is repaid when the balance after n periods is zero. Here 12 100 − 2.1M = 0, so M = 12 100 ÷ 2.1 = $5761.90 per year, to the nearest cent."
+  ],
+  "remember": "Balance each period = balance × (1 + r) − M. Set the final balance to zero to find M.",
+  "a": {
+   "q": "Ravi borrows $1000 at 5% per period. He makes a repayment of $300 at the end of the first period. What is the balance after that repayment?",
+   "opts": [
+    "$750",
+    "$700",
+    "$735",
+    "$1350"
+   ],
+   "why": "Interest is added first: 1000 × 1.05 = 1050. Then the repayment comes off: 1050 − 300 = 750. $735 is wrong because it takes the repayment off before adding interest.",
+   "clue": "Add the interest to the balance, then take off the repayment."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena borrows $2000 at 10% per year. She repays it with 2 equal repayments at the end of each year. What is each repayment, to the nearest cent?",
+   "opts": [
+    "$1152.38",
+    "$1210.00",
+    "$1100.00",
+    "$1047.62"
+   ],
+   "why": "After year 1 the balance is 2000 × 1.1 − M = 2200 − M. After year 2 it is 2420 − 2.1M. Setting this to zero gives M = 2420 ÷ 2.1 = $1152.38. $1210 is wrong because it halves 2420 and ignores that the first repayment cuts the interest in year 2.",
+   "clue": "Write the balance after each year, then set the second one to zero."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,171 @@
+{
+ "id": "phys-range-time-flight",
+ "title": "Range and time of flight",
+ "brief": "69db7fe5ba03",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:03Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:11Z write: done",
+  "2026-10-27T01:08:36Z check: flagged",
+  "2026-10-27T01:23:01Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
+  "2026-10-28T11:49:49Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00541,
+  "check": 0.00874,
+  "fix": 0.02915
+ },
+ "draft": {
+  "title": "Range and time of flight",
+  "card": [
+   "Range is the horizontal distance a projectile travels. Time of flight is how long it stays in the air. Both depend on launch speed and launch angle.",
+   "Split the launch velocity into parts. Horizontal: vx = v cos θ. Vertical: vy = v sin θ. The vertical part decides the time of flight, and the horizontal part is constant.",
+   "For a launch from level ground with no air resistance, time of flight = 2v sin θ ÷ g. Range = vx × time of flight = v² sin 2θ ÷ g.",
+   "A larger launch speed gives a greater range and a longer time. For a fixed speed, 45° gives the longest range. A steeper angle gives a longer time in the air."
+  ],
+  "remember": "Vertical motion sets the time in the air. Range is horizontal speed times that time, and 45° gives the longest range.",
+  "a": {
+   "q": "Two balls are kicked from level ground at the same speed, one at 30° and one at 60°. Ignoring air resistance, which statement is correct?",
+   "opts": [
+    "The 60° ball is in the air longer",
+    "The 30° ball is in the air longer",
+    "Both balls are in the air for the same time",
+    "The 60° ball travels much further than the 30° ball"
+   ],
+   "why": "The 60° ball has the larger vertical velocity, v sin θ, so it stays up longer. The ranges are equal, because sin 60° and sin 30° give the same value of sin 2θ. The 60° ball is not the one that goes further.",
+   "clue": "Which angle gives the larger vertical part of the velocity?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya kicks a ball from level ground at 20 m/s. She wants the greatest range and ignores air resistance. Which launch angle should she choose?",
+   "opts": [
+    "45°, which makes sin 2θ largest",
+    "30°, so the ball keeps more horizontal speed",
+    "60°, so the ball stays in the air longer",
+    "90°, so the ball reaches the greatest height"
+   ],
+   "why": "Range is v² sin 2θ ÷ g, and sin 2θ is largest at 45°. A steeper angle gives more time in the air but less horizontal speed, and a flatter angle does the reverse. A 90° launch goes straight up and has no range.",
+   "clue": "Range depends on both horizontal speed and time in the air."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The 60° ball is in the air longer",
+   "also_right": []
+  },
+  "b": {
+   "best": "45°, which makes sin 2θ largest",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"sin 60° and sin 30° give the same value of sin 2θ\", which is garbled. The equal ranges come from sin 2θ being sin 120° and sin 60°, which are equal. As written, it could confuse students about what is being substituted into sin 2θ."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and each question has one clear right answer. The why for (a) garbles the sin 2θ reasoning for the equal ranges. It should say that sin 120° = sin 60°."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why says \"sin 60° and sin 30° give the same value of sin 2θ\", which is garbled. The equal ranges come from sin 2θ being sin 120° and sin 60°, which are equal. As written, it could confuse students about what is being substituted into sin 2θ."
+ ],
+ "proposal": {
+  "title": "Range and time of flight",
+  "card": [
+   "Range is the horizontal distance a projectile travels. Time of flight is how long it stays in the air. Both depend on launch speed and launch angle.",
+   "Split the launch velocity into parts: vx = v cos θ and vy = v sin θ. The vertical part sets the time of flight, so a steeper launch stays up longer.",
+   "For a launch from level ground with no air resistance, time of flight = 2v sin θ ÷ g. Range = vx × time of flight = v² sin 2θ ÷ g.",
+   "A larger launch speed gives a greater range and a longer time. For a fixed speed, 45° gives the longest range, and angles that add to 90° give equal ranges."
+  ],
+  "remember": "Vertical motion sets the time in the air. Range is horizontal speed times that time, and 45° gives the longest range.",
+  "a": {
+   "q": "Two balls are kicked from level ground at the same speed, one at 30° and one at 60°. Ignoring air resistance, which statement is correct?",
+   "opts": [
+    "The 60° ball is in the air longer",
+    "The 30° ball is in the air longer",
+    "Both balls are in the air for the same time",
+    "The 60° ball travels much further than the 30° ball"
+   ],
+   "why": "The 60° ball has the larger vertical velocity, v sin θ, so it stays up longer. The ranges are equal: sin 2θ is sin 60° for the 30° kick and sin 120° for the 60° kick, and these two values are equal. So the 60° ball does not go further.",
+   "clue": "Which angle gives the larger vertical part of the velocity?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya kicks a ball from level ground at 20 m/s. She wants the greatest range and ignores air resistance. Which launch angle should she choose?",
+   "opts": [
+    "45°, which makes sin 2θ largest",
+    "30°, so the ball keeps more horizontal speed",
+    "60°, so the ball stays in the air longer",
+    "90°, so the ball reaches the greatest height"
+   ],
+   "why": "Range is v² sin 2θ ÷ g, and sin 2θ is largest at 45°. A steeper angle gives more time in the air but less horizontal speed, and a flatter angle does the reverse. A 90° launch goes straight up and has no range.",
+   "clue": "Range depends on both horizontal speed and time in the air."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"sin 60° and sin 30° give the same value of sin 2θ\", which is garbled. The equal ranges come from sin 2θ being sin 120° and sin 60°, which are equal. As written, it could confuse students about what is being substituted into sin 2θ."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why says \"sin 60° and sin 30° give the same value of sin 2θ\", which is garbled. The equal ranges come from sin 2θ being sin 120° and sin 60°, which are equal. As written, it could confuse students about what is being substituted into sin 2θ."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Range and time of flight",
+  "card": [
+   "Range is the horizontal distance a projectile travels. Time of flight is how long it stays in the air. Both depend on launch speed and launch angle.",
+   "Split the launch velocity into parts: vx = v cos θ and vy = v sin θ. The vertical part sets the time of flight, so a steeper launch stays up longer.",
+   "For a launch from level ground with no air resistance, time of flight = 2v sin θ ÷ g. Range = vx × time of flight = v² sin 2θ ÷ g.",
+   "A larger launch speed gives a greater range and a longer time. For a fixed speed, 45° gives the longest range, and angles that add to 90° give equal ranges."
+  ],
+  "remember": "Vertical motion sets the time in the air. Range is horizontal speed times that time, and 45° gives the longest range.",
+  "a": {
+   "q": "Two balls are kicked from level ground at the same speed, one at 30° and one at 60°. Ignoring air resistance, which statement is correct?",
+   "opts": [
+    "The 60° ball is in the air longer",
+    "The 30° ball is in the air longer",
+    "Both balls are in the air for the same time",
+    "The 60° ball travels much further than the 30° ball"
+   ],
+   "why": "The 60° ball has the larger vertical velocity, v sin θ, so it stays up longer. The ranges are equal: sin 2θ is sin 60° for the 30° kick and sin 120° for the 60° kick, and these two values are equal. So the 60° ball does not go further.",
+   "clue": "Which angle gives the larger vertical part of the velocity?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya kicks a ball from level ground at 20 m/s. She wants the greatest range and ignores air resistance. Which launch angle should she choose?",
+   "opts": [
+    "45°, which makes sin 2θ largest",
+    "30°, so the ball keeps more horizontal speed",
+    "60°, so the ball stays in the air longer",
+    "90°, so the ball reaches the greatest height"
+   ],
+   "why": "Range is v² sin 2θ ÷ g, and sin 2θ is largest at 45°. A steeper angle gives more time in the air but less horizontal speed, and a flatter angle does the reverse. A 90° launch goes straight up and has no range.",
+   "clue": "Range depends on both horizontal speed and time in the air."
+  }
+ },
+ "cleared_by": "owner"
+}

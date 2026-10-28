@@ -1,0 +1,216 @@
+{
+ "id": "mat-pythagorean-identity",
+ "title": "The Pythagorean identity",
+ "brief": "c5e88ab4efa1",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00496,
+  "check": 0.01277,
+  "fix": 0.01955,
+  "recheck": 0.0108
+ },
+ "draft": {
+  "title": "The Pythagorean identity",
+  "card": [
+   "For any angle θ, sin²θ + cos²θ = 1. It comes from the unit circle: the point (cos θ, sin θ) lies on a circle of radius 1, so x² + y² = 1.",
+   "Rearranged, it gives sin²θ = 1 − cos²θ and cos²θ = 1 − sin²θ. Use these to swap one ratio for the other.",
+   "Divide every term by cos²θ to get tan²θ + 1 = sec²θ. Here tan θ = sin θ ÷ cos θ and sec θ = 1/cos θ.",
+   "Example: simplify 1 − cos²θ. By the identity it equals sin²θ. To prove an identity, work on one side only until it matches the other."
+  ],
+  "remember": "sin²θ + cos²θ = 1 is true for every angle, and the other forms come from it.",
+  "a": {
+   "q": "If sin θ = 3/5 and θ is acute, what is the value of cos θ?",
+   "opts": [
+    "4/5",
+    "2/5",
+    "16/25",
+    "−4/5"
+   ],
+   "why": "cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25, so cos θ = 4/5. Since θ is acute, cos θ is positive. The value 16/25 is cos²θ, so the square root step is still needed.",
+   "clue": "Find cos²θ first, then take the square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is equal to (1 − cos²θ) ÷ sin θ, for sin θ ≠ 0?",
+   "opts": [
+    "sin θ",
+    "cos θ",
+    "1/sin θ",
+    "1 − cos θ"
+   ],
+   "why": "1 − cos²θ = sin²θ, so the expression is sin²θ ÷ sin θ = sin θ. The option 1 − cos θ is tempting, but cos²θ cannot be square rooted term by term.",
+   "clue": "Rewrite the top using sin²θ + cos²θ = 1."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4/5",
+   "also_right": []
+  },
+  "b": {
+   "best": "sin θ",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines sec θ = 1/cos θ, which belongs to point 4 (Reciprocal ratios). It should only mention sec here, not define it."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Dividing by cos²θ to get tan²θ + 1 = sec²θ needs cos θ ≠ 0, but the card doesn't say so. Next to 'for any angle', a student could think this form also holds for every angle."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's line 'cos²θ cannot be square rooted term by term' is confusing. It doesn't clearly explain how a student would reach 1 − cos θ, or what the mistake is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (4/5 and sin θ). The card defines sec, which belongs to the reciprocal-ratios point, and omits the cos θ ≠ 0 condition for the sec form. The why for (b) explains the distractor confusingly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines sec θ = 1/cos θ, which belongs to point 4 (Reciprocal ratios). It should only mention sec here, not define it.",
+  "Card, wording: Dividing by cos²θ to get tan²θ + 1 = sec²θ needs cos θ ≠ 0, but the card doesn't say so. Next to 'for any angle', a student could think this form also holds for every angle.",
+  "Question b, wording: The why's line 'cos²θ cannot be square rooted term by term' is confusing. It doesn't clearly explain how a student would reach 1 − cos θ, or what the mistake is."
+ ],
+ "proposal": {
+  "title": "The Pythagorean identity",
+  "card": [
+   "For any angle θ, sin²θ + cos²θ = 1. It comes from the unit circle: the point (cos θ, sin θ) lies on a circle of radius 1, so x² + y² = 1.",
+   "Rearranged, it gives sin²θ = 1 − cos²θ and cos²θ = 1 − sin²θ. If you take a square root, use the quadrant to choose the sign.",
+   "Dividing every term by cos²θ gives tan²θ + 1 = sec²θ, using tan θ = sin θ ÷ cos θ. You cannot divide by zero, so this form holds only where cos θ ≠ 0.",
+   "Example: simplify 1 − cos²θ. By the identity it equals sin²θ. To prove an identity, work on one side only until it matches the other."
+  ],
+  "remember": "Swap sin²θ and cos²θ using sin²θ + cos²θ = 1. The tan and sec form needs cos θ ≠ 0.",
+  "a": {
+   "q": "If sin θ = 3/5 and θ is acute, what is the value of cos θ?",
+   "opts": [
+    "4/5",
+    "2/5",
+    "16/25",
+    "−4/5"
+   ],
+   "why": "cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25, so cos θ = 4/5. Since θ is acute, cos θ is positive. The value 16/25 is cos²θ, so the square root step is still needed.",
+   "clue": "Find cos²θ first, then take the square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is equal to (1 − cos²θ) ÷ sin θ, for sin θ ≠ 0?",
+   "opts": [
+    "sin θ",
+    "cos θ",
+    "sin²θ",
+    "1/sin θ"
+   ],
+   "why": "1 − cos²θ = sin²θ, so the expression is sin²θ ÷ sin θ = sin θ. The option sin²θ is tempting, but it is only the top rewritten: you still have to divide by sin θ.",
+   "clue": "Rewrite the top using sin²θ + cos²θ = 1, then divide."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "4/5",
+    "also_right": []
+   },
+   "b": {
+    "best": "sin θ",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines sec θ = 1/cos θ, which belongs to point 4 (Reciprocal ratios). It should only mention sec here, not define it."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Dividing by cos²θ to get tan²θ + 1 = sec²θ needs cos θ ≠ 0, but the card doesn't say so. Next to 'for any angle', a student could think this form also holds for every angle."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's line 'cos²θ cannot be square rooted term by term' is confusing. It doesn't clearly explain how a student would reach 1 − cos θ, or what the mistake is."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines sec θ = 1/cos θ, which belongs to point 4 (Reciprocal ratios). It should only mention sec here, not define it.",
+   "Card, wording: Dividing by cos²θ to get tan²θ + 1 = sec²θ needs cos θ ≠ 0, but the card doesn't say so. Next to 'for any angle', a student could think this form also holds for every angle.",
+   "Question b, wording: The why's line 'cos²θ cannot be square rooted term by term' is confusing. It doesn't clearly explain how a student would reach 1 − cos θ, or what the mistake is."
+  ]
+ },
+ "final": {
+  "title": "The Pythagorean identity",
+  "card": [
+   "For any angle θ, sin²θ + cos²θ = 1. It comes from the unit circle: the point (cos θ, sin θ) lies on a circle of radius 1, so x² + y² = 1.",
+   "Rearranged, it gives sin²θ = 1 − cos²θ and cos²θ = 1 − sin²θ. If you take a square root, use the quadrant to choose the sign.",
+   "Dividing every term by cos²θ gives tan²θ + 1 = sec²θ, using tan θ = sin θ ÷ cos θ. You cannot divide by zero, so this form holds only where cos θ ≠ 0.",
+   "Example: simplify 1 − cos²θ. By the identity it equals sin²θ. To prove an identity, work on one side only until it matches the other."
+  ],
+  "remember": "Swap sin²θ and cos²θ using sin²θ + cos²θ = 1. The tan and sec form needs cos θ ≠ 0.",
+  "a": {
+   "q": "If sin θ = 3/5 and θ is acute, what is the value of cos θ?",
+   "opts": [
+    "4/5",
+    "2/5",
+    "16/25",
+    "−4/5"
+   ],
+   "why": "cos²θ = 1 − sin²θ = 1 − 9/25 = 16/25, so cos θ = 4/5. Since θ is acute, cos θ is positive. The value 16/25 is cos²θ, so the square root step is still needed.",
+   "clue": "Find cos²θ first, then take the square root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which expression is equal to (1 − cos²θ) ÷ sin θ, for sin θ ≠ 0?",
+   "opts": [
+    "sin θ",
+    "cos θ",
+    "sin²θ",
+    "1/sin θ"
+   ],
+   "why": "1 − cos²θ = sin²θ, so the expression is sin²θ ÷ sin θ = sin θ. The option sin²θ is tempting, but it is only the top rewritten: you still have to divide by sin θ.",
+   "clue": "Rewrite the top using sin²θ + cos²θ = 1, then divide."
+  }
+ },
+ "cleared_by": "recheck"
+}

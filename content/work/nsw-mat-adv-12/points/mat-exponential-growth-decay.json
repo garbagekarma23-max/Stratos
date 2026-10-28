@@ -1,0 +1,210 @@
+{
+ "id": "mat-exponential-growth-decay",
+ "title": "Exponential growth and decay",
+ "brief": "c03682787e6c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01002,
+  "check": 0.01043,
+  "fix": 0.02764,
+  "recheck": 0.01154
+ },
+ "draft": {
+  "title": "Exponential growth and decay",
+  "card": [
+   "Some quantities change at a rate proportional to their size: the bigger N is, the faster it changes. This is written dN/dt = kN, and its solution is N = N₀eᵏᵗ.",
+   "N₀ is the starting amount, when t = 0. k is the constant that sets how fast N changes, and t is time.",
+   [
+    "Growth",
+    "k > 0, so N increases, as with a population in a good environment."
+   ],
+   [
+    "Decay",
+    "k < 0, so N decreases towards 0, as with a radioactive substance. Example: N = 80e^(−0.5t) starts at 80. At t = 2, N = 80e⁻¹ ≈ 29.4."
+   ]
+  ],
+  "remember": "N = N₀eᵏᵗ: N₀ is the start, and the sign of k decides growth or decay.",
+  "a": {
+   "q": "A quantity follows N = 50e^(−0.2t). Which statement is true?",
+   "opts": [
+    "It starts at 50 and is decaying",
+    "It starts at 50 and is growing",
+    "It starts at 0.2 and is decaying",
+    "It starts at −0.2 and is growing"
+   ],
+   "why": "N₀ = 50 is the value at t = 0, and k = −0.2 is negative, so N decays. Growing is wrong because it ignores the negative sign of k.",
+   "clue": "Put t = 0 in, then look at the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A colony of bacteria in a lab follows N = 200e^(0.3t), where t is in hours. What is N after 2 hours, to the nearest whole number?",
+   "opts": [
+    "364",
+    "120",
+    "1478",
+    "260"
+   ],
+   "why": "N = 200e^(0.3 × 2) = 200e^0.6 ≈ 200 × 1.822 = 364. The value 260 comes from 200 + 0.3 × 2 × 100 style adding, and it is wrong because the exponent multiplies k by t before e is raised to it.",
+   "clue": "Work out k × t first, then use e to that power."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It starts at 50 and is decaying",
+   "also_right": []
+  },
+  "b": {
+   "best": "364",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's account of the 260 distractor ('200 + 0.3 × 2 × 100 style adding') is muddled. The '× 100' has no clear source, and 260 is more naturally 200 × 1.3 (one step of simple 30% growth). The reason it then gives does not clearly explain that mistake."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct: 80e⁻¹ ≈ 29.4 and 200e^0.6 ≈ 364. The only issue is that the why for question b gives a confusing account of where the 260 distractor comes from."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why's account of the 260 distractor ('200 + 0.3 × 2 × 100 style adding') is muddled. The '× 100' has no clear source, and 260 is more naturally 200 × 1.3 (one step of simple 30% growth). The reason it then gives does not clearly explain that mistake."
+ ],
+ "proposal": {
+  "title": "Exponential growth and decay",
+  "card": [
+   "Some quantities change at a rate proportional to their size: the bigger N is, the faster it changes. This is written dN/dt = kN, and its solution is N = N₀eᵏᵗ.",
+   "N₀ is the starting amount, when t = 0. k is the constant that sets how fast N changes, and t is time.",
+   [
+    "Growth",
+    "k > 0, so N increases, as with a population in a good environment."
+   ],
+   [
+    "Decay",
+    "k < 0, so N decreases towards 0, as with a radioactive substance. Example: N = 80e^(−0.5t) starts at 80. At t = 2, N = 80e⁻¹ ≈ 29.4."
+   ]
+  ],
+  "remember": "N = N₀eᵏᵗ: N₀ is the start, and the sign of k decides growth or decay.",
+  "a": {
+   "q": "A quantity follows N = 50e^(−0.2t). Which statement is true?",
+   "opts": [
+    "It starts at 50 and is decaying",
+    "It starts at 50 and is growing",
+    "It starts at 0.2 and is decaying",
+    "It starts at −0.2 and is growing"
+   ],
+   "why": "N₀ = 50 is the value at t = 0, and k = −0.2 is negative, so N decays. Growing is wrong because it ignores the negative sign of k.",
+   "clue": "Put t = 0 in, then look at the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A colony of bacteria in a lab follows N = 200e^(0.3t), where t is in hours. What is N after 2 hours, to the nearest whole number?",
+   "opts": [
+    "364",
+    "120",
+    "1478",
+    "320"
+   ],
+   "why": "N = 200e^(0.3 × 2) = 200e^0.6 ≈ 200 × 1.822 = 364. The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model N grows faster as it gets bigger, so you must use e to the power 0.6.",
+   "clue": "Work out k × t first, then use e to that power."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It starts at 50 and is decaying",
+    "also_right": []
+   },
+   "b": {
+    "best": "364",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example (80e⁻¹ ≈ 29.4) and both answers (50 and decaying; 200e^0.6 ≈ 364) check out, and the distractors match common errors."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's account of the 260 distractor ('200 + 0.3 × 2 × 100 style adding') is muddled. The '× 100' has no clear source, and 260 is more naturally 200 × 1.3 (one step of simple 30% growth). The reason it then gives does not clearly explain that mistake."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why's account of the 260 distractor ('200 + 0.3 × 2 × 100 style adding') is muddled. The '× 100' has no clear source, and 260 is more naturally 200 × 1.3 (one step of simple 30% growth). The reason it then gives does not clearly explain that mistake."
+  ]
+ },
+ "final": {
+  "title": "Exponential growth and decay",
+  "card": [
+   "Some quantities change at a rate proportional to their size: the bigger N is, the faster it changes. This is written dN/dt = kN, and its solution is N = N₀eᵏᵗ.",
+   "N₀ is the starting amount, when t = 0. k is the constant that sets how fast N changes, and t is time.",
+   [
+    "Growth",
+    "k > 0, so N increases, as with a population in a good environment."
+   ],
+   [
+    "Decay",
+    "k < 0, so N decreases towards 0, as with a radioactive substance. Example: N = 80e^(−0.5t) starts at 80. At t = 2, N = 80e⁻¹ ≈ 29.4."
+   ]
+  ],
+  "remember": "N = N₀eᵏᵗ: N₀ is the start, and the sign of k decides growth or decay.",
+  "a": {
+   "q": "A quantity follows N = 50e^(−0.2t). Which statement is true?",
+   "opts": [
+    "It starts at 50 and is decaying",
+    "It starts at 50 and is growing",
+    "It starts at 0.2 and is decaying",
+    "It starts at −0.2 and is growing"
+   ],
+   "why": "N₀ = 50 is the value at t = 0, and k = −0.2 is negative, so N decays. Growing is wrong because it ignores the negative sign of k.",
+   "clue": "Put t = 0 in, then look at the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A colony of bacteria in a lab follows N = 200e^(0.3t), where t is in hours. What is N after 2 hours, to the nearest whole number?",
+   "opts": [
+    "364",
+    "120",
+    "1478",
+    "320"
+   ],
+   "why": "N = 200e^(0.3 × 2) = 200e^0.6 ≈ 200 × 1.822 = 364. The value 320 comes from adding 30% of 200, which is 60, in each of the 2 hours. That treats the growth as a fixed amount per hour, but in this model N grows faster as it gets bigger, so you must use e to the power 0.6.",
+   "clue": "Work out k × t first, then use e to that power."
+  }
+ },
+ "cleared_by": "recheck"
+}

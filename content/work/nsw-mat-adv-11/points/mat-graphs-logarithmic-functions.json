@@ -1,0 +1,206 @@
+{
+ "id": "mat-graphs-logarithmic-functions",
+ "title": "Graphs of logarithmic functions",
+ "brief": "7eff3fee7b89",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:05Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:57Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-28T11:49:41Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00567,
+  "check": 0.01216,
+  "fix": 0.01698,
+  "recheck": 0.01285
+ },
+ "draft": {
+  "title": "Graphs of logarithmic functions",
+  "card": [
+   "The graph of y = log_a(x) is the reflection of y = aˣ in the line y = x. Swapping x and y turns each point (p, q) on one graph into (q, p) on the other.",
+   "The y-intercept of y = aˣ is (0, 1), so y = log_a(x) passes through (1, 0). It has no y-intercept.",
+   "The horizontal asymptote y = 0 of y = aˣ becomes a vertical asymptote x = 0. The graph only exists for x > 0, because you cannot raise a positive base to a power and get zero or a negative number.",
+   "Example: 2³ = 8 puts (3, 8) on y = 2ˣ, so (8, 3) is on y = log₂(x). For a > 1 the graph rises. Its gradient is steep near x = 0 and flattens as x grows."
+  ],
+  "remember": "y = log_a(x) is y = aˣ reflected in y = x: through (1, 0), with a vertical asymptote at x = 0.",
+  "a": {
+   "q": "Which point lies on the graph of y = log₃(x)?",
+   "opts": [
+    "(9, 2)",
+    "(2, 9)",
+    "(0, 1)",
+    "(3, 0)"
+   ],
+   "why": "3² = 9, so log₃ 9 = 2 and (9, 2) is on the graph. (2, 9) has the coordinates the wrong way round: it lies on y = 3ˣ's reflection partner, not on this graph.",
+   "clue": "Reflecting in y = x swaps the coordinates of a point on y = 3ˣ."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = log₂(x) is reflected in the line y = x to give another graph. Which statement about y = log₂(x) is correct?",
+   "opts": [
+    "It has a vertical asymptote at x = 0",
+    "It has a horizontal asymptote at y = 0",
+    "It has a y-intercept at (0, 1)",
+    "It is defined for all real values of x"
+   ],
+   "why": "The horizontal asymptote y = 0 of y = 2ˣ reflects into the vertical line x = 0. The graph does not have a y-intercept at (0, 1): that belongs to y = 2ˣ, and the logarithm passes through (1, 0) instead.",
+   "clue": "Reflecting in y = x swaps x and y, so a horizontal line becomes a vertical line."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(9, 2)",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has a vertical asymptote at x = 0",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says (2, 9) 'lies on y = 3ˣ's reflection partner, not on this graph'. That is wrong: (2, 9) lies on y = 3ˣ itself, and the reflection partner of y = 3ˣ is y = log₃(x), which is this graph. The explanation contradicts itself and the card."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem first says y = log₂(x) is reflected in y = x to give another graph, then asks about y = log₂(x) itself. The reflection sentence plays no part in the question and may make students think they should be describing the reflected graph (y = 2ˣ), where 'horizontal asymptote at y = 0' and 'y-intercept at (0, 1)' would be correct."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct, but the why for (a) wrongly says (2, 9) lies on the reflection partner of y = 3ˣ rather than on y = 3ˣ itself. Question b's stem confusingly describes a reflected graph that it then doesn't ask about."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says (2, 9) 'lies on y = 3ˣ's reflection partner, not on this graph'. That is wrong: (2, 9) lies on y = 3ˣ itself, and the reflection partner of y = 3ˣ is y = log₃(x), which is this graph. The explanation contradicts itself and the card.",
+  "Question b, wording: The stem first says y = log₂(x) is reflected in y = x to give another graph, then asks about y = log₂(x) itself. The reflection sentence plays no part in the question and may make students think they should be describing the reflected graph (y = 2ˣ), where 'horizontal asymptote at y = 0' and 'y-intercept at (0, 1)' would be correct."
+ ],
+ "proposal": {
+  "title": "Graphs of logarithmic functions",
+  "card": [
+   "The graph of y = log_a(x) is the reflection of y = aˣ in the line y = x. Swapping x and y turns each point (p, q) on one graph into (q, p) on the other.",
+   "The y-intercept of y = aˣ is (0, 1), so y = log_a(x) passes through (1, 0). It has no y-intercept.",
+   "The horizontal asymptote y = 0 of y = aˣ becomes a vertical asymptote x = 0. The graph only exists for x > 0, because a positive base raised to any power never gives zero or a negative number.",
+   "Example: 2³ = 8 puts (3, 8) on y = 2ˣ, so (8, 3) is on y = log₂(x). For a > 1 the graph rises. Its gradient is steep near x = 0 and flattens as x grows."
+  ],
+  "remember": "Swap the coordinates of y = aˣ to get the log graph: through (1, 0), with a vertical asymptote at x = 0.",
+  "a": {
+   "q": "Which point lies on the graph of y = log₃(x)?",
+   "opts": [
+    "(9, 2)",
+    "(2, 9)",
+    "(0, 1)",
+    "(3, 0)"
+   ],
+   "why": "3² = 9, so log₃ 9 = 2 and (9, 2) is on the graph. (2, 9) lies on y = 3ˣ itself. Reflecting it in y = x swaps the coordinates and gives (9, 2) on y = log₃(x).",
+   "clue": "Find a point on y = 3ˣ, then swap its coordinates."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement about the graph of y = log₂(x) is correct?",
+   "opts": [
+    "It has a vertical asymptote at x = 0",
+    "It has a horizontal asymptote at y = 0",
+    "It has a y-intercept at (0, 1)",
+    "It is defined for all real values of x"
+   ],
+   "why": "The horizontal asymptote y = 0 of y = 2ˣ reflects into the vertical line x = 0. A horizontal asymptote at y = 0 and a y-intercept at (0, 1) are features of y = 2ˣ, not of the log graph, which passes through (1, 0) and exists only for x > 0.",
+   "clue": "Reflecting in y = x swaps x and y, so a horizontal line becomes a vertical line."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "(9, 2)",
+    "also_right": []
+   },
+   "b": {
+    "best": "It has a vertical asymptote at x = 0",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says (2, 9) 'lies on y = 3ˣ's reflection partner, not on this graph'. That is wrong: (2, 9) lies on y = 3ˣ itself, and the reflection partner of y = 3ˣ is y = log₃(x), which is this graph. The explanation contradicts itself and the card."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem first says y = log₂(x) is reflected in y = x to give another graph, then asks about y = log₂(x) itself. The reflection sentence plays no part in the question and may make students think they should be describing the reflected graph (y = 2ˣ), where 'horizontal asymptote at y = 0' and 'y-intercept at (0, 1)' would be correct."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says (2, 9) 'lies on y = 3ˣ's reflection partner, not on this graph'. That is wrong: (2, 9) lies on y = 3ˣ itself, and the reflection partner of y = 3ˣ is y = log₃(x), which is this graph. The explanation contradicts itself and the card.",
+   "Question b, wording: The stem first says y = log₂(x) is reflected in y = x to give another graph, then asks about y = log₂(x) itself. The reflection sentence plays no part in the question and may make students think they should be describing the reflected graph (y = 2ˣ), where 'horizontal asymptote at y = 0' and 'y-intercept at (0, 1)' would be correct."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Graphs of logarithmic functions",
+  "card": [
+   "The graph of y = log_a(x) is the reflection of y = aˣ in the line y = x. Swapping x and y turns each point (p, q) on one graph into (q, p) on the other.",
+   "The y-intercept of y = aˣ is (0, 1), so y = log_a(x) passes through (1, 0). It has no y-intercept.",
+   "The horizontal asymptote y = 0 of y = aˣ becomes a vertical asymptote x = 0. The graph only exists for x > 0, because a positive base raised to any power never gives zero or a negative number.",
+   "Example: 2³ = 8 puts (3, 8) on y = 2ˣ, so (8, 3) is on y = log₂(x). For a > 1 the graph rises. Its gradient is steep near x = 0 and flattens as x grows."
+  ],
+  "remember": "Swap the coordinates of y = aˣ to get the log graph: through (1, 0), with a vertical asymptote at x = 0.",
+  "a": {
+   "q": "Which point lies on the graph of y = log₃(x)?",
+   "opts": [
+    "(9, 2)",
+    "(2, 9)",
+    "(0, 1)",
+    "(3, 0)"
+   ],
+   "why": "3² = 9, so log₃ 9 = 2 and (9, 2) is on the graph. (2, 9) lies on y = 3ˣ itself. Reflecting it in y = x swaps the coordinates and gives (9, 2) on y = log₃(x).",
+   "clue": "Find a point on y = 3ˣ, then swap its coordinates."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which statement about the graph of y = log₂(x) is correct?",
+   "opts": [
+    "It has a vertical asymptote at x = 0",
+    "It has a horizontal asymptote at y = 0",
+    "It has a y-intercept at (0, 1)",
+    "It is defined for all real values of x"
+   ],
+   "why": "The horizontal asymptote y = 0 of y = 2ˣ reflects into the vertical line x = 0. A horizontal asymptote at y = 0 and a y-intercept at (0, 1) are features of y = 2ˣ, not of the log graph, which passes through (1, 0) and exists only for x > 0.",
+   "clue": "Reflecting in y = x swaps x and y, so a horizontal line becomes a vertical line."
+  }
+ },
+ "cleared_by": "owner"
+}

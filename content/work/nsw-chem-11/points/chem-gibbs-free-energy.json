@@ -1,0 +1,190 @@
+{
+ "id": "chem-gibbs-free-energy",
+ "title": "Gibbs free energy",
+ "brief": "e17e4115844b",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:58Z new, write",
+  "2026-10-27T00:53:11Z write: done",
+  "2026-10-27T01:00:07Z check: flagged",
+  "2026-10-27T01:08:34Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00635,
+  "check": 0.01308,
+  "fix": 0.0195,
+  "recheck": 0.0145
+ },
+ "draft": {
+  "title": "Gibbs free energy",
+  "card": [
+   "Gibbs free energy change (ΔG) combines enthalpy and entropy into one value. ΔG = ΔH - TΔS.",
+   "ΔH is the enthalpy change, in kJ mol⁻¹. ΔS is the entropy change, T is the temperature in kelvin, and ΔG is in kJ mol⁻¹. ΔS is often given in J K⁻¹ mol⁻¹, so divide by 1000 to match ΔH.",
+   "A reaction is spontaneous when ΔG is negative. It is not spontaneous when ΔG is positive. Spontaneous means it can happen without continuous energy input. It does not say how fast.",
+   "To convert from °C to kelvin, add 273. For example, 25 °C is 298 K."
+  ],
+  "remember": "Negative ΔG means spontaneous. ΔG = ΔH - TΔS.",
+  "a": {
+   "q": "A reaction has ΔG = -40 kJ mol⁻¹ at 298 K. What does this tell you?",
+   "opts": [
+    "The reaction is spontaneous at this temperature",
+    "The reaction is not spontaneous at this temperature",
+    "The reaction must be very fast",
+    "The reaction must release no heat"
+   ],
+   "why": "A negative ΔG means the reaction is spontaneous. Spontaneous does not mean fast, which is the tempting mistake, because ΔG says nothing about rate.",
+   "clue": "Look at the sign of ΔG."
+  },
+  "b": {
+   "d": 3,
+   "q": "A reaction has ΔH = -92 kJ mol⁻¹ and ΔS = -199 J K⁻¹ mol⁻¹. What is ΔG at 300 K, and is it spontaneous?",
+   "opts": [
+    "-32 kJ mol⁻¹, spontaneous",
+    "+32 kJ mol⁻¹, not spontaneous",
+    "-152 kJ mol⁻¹, spontaneous",
+    "-59 000 kJ mol⁻¹, spontaneous"
+   ],
+   "why": "TΔS = 300 × (-0.199) = -59.7 kJ mol⁻¹, so ΔG = -92 - (-59.7) = -32 kJ mol⁻¹. This is negative, so the reaction is spontaneous. Forgetting to convert J to kJ gives the unreasonable last option.",
+   "clue": "Convert ΔS to kJ before using the equation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The reaction is spontaneous at this temperature",
+   "also_right": []
+  },
+  "b": {
+   "best": "-32 kJ mol⁻¹, spontaneous",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says forgetting to convert J to kJ gives 'the last option', but options appear in random order, so 'last' points to nothing reliable. The distractor '-59 000 kJ mol⁻¹' also does not match that mistake: unconverted, -92 - 300(-199) = about +59 600 kJ mol⁻¹, a positive value. The why misdescribes the distractor."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. The explanation for (b) refers to 'the last option' even though options are shuffled, and the -59 000 distractor does not match the unit-conversion mistake it is said to represent, which would give about +59 600 kJ mol⁻¹."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says forgetting to convert J to kJ gives 'the last option', but options appear in random order, so 'last' points to nothing reliable. The distractor '-59 000 kJ mol⁻¹' also does not match that mistake: unconverted, -92 - 300(-199) = about +59 600 kJ mol⁻¹, a positive value. The why misdescribes the distractor."
+ ],
+ "proposal": {
+  "title": "Gibbs free energy",
+  "card": [
+   "Gibbs free energy change (ΔG) combines enthalpy and entropy into one value. ΔG = ΔH - TΔS.",
+   "ΔH is the enthalpy change, in kJ mol⁻¹. ΔS is the entropy change, T is the temperature in kelvin, and ΔG is in kJ mol⁻¹. ΔS is often given in J K⁻¹ mol⁻¹, so divide by 1000 to match ΔH.",
+   "A reaction is spontaneous when ΔG is negative. It is not spontaneous when ΔG is positive. Spontaneous means it can happen without continuous energy input. It does not say how fast.",
+   "To convert from °C to kelvin, add 273. For example, 25 °C is 298 K."
+  ],
+  "remember": "Negative ΔG means spontaneous. Keep T in kelvin and ΔS in kJ.",
+  "a": {
+   "q": "A reaction has ΔG = -40 kJ mol⁻¹ at 298 K. What does this tell you?",
+   "opts": [
+    "The reaction is spontaneous at this temperature",
+    "The reaction is not spontaneous at this temperature",
+    "The reaction must be very fast",
+    "The reaction needs continuous energy input"
+   ],
+   "why": "A negative ΔG means the reaction is spontaneous, so it can happen without continuous energy input. Spontaneous does not mean fast, which is the tempting mistake, because ΔG says nothing about rate.",
+   "clue": "Look at the sign of ΔG."
+  },
+  "b": {
+   "d": 3,
+   "q": "A reaction has ΔH = -92 kJ mol⁻¹ and ΔS = -199 J K⁻¹ mol⁻¹. What is ΔG at 300 K, and is it spontaneous?",
+   "opts": [
+    "-32 kJ mol⁻¹, spontaneous",
+    "+32 kJ mol⁻¹, not spontaneous",
+    "-152 kJ mol⁻¹, spontaneous",
+    "+59 608 kJ mol⁻¹, not spontaneous"
+   ],
+   "why": "TΔS = 300 × (-0.199) = -59.7 kJ mol⁻¹, so ΔG = -92 - (-59.7) = about -32 kJ mol⁻¹, which is negative, so the reaction is spontaneous. The answer -152 comes from adding TΔS instead of subtracting it. Leaving ΔS in J gives +59 608, which mixes J and kJ.",
+   "clue": "Convert ΔS to kJ, then watch the minus sign before TΔS."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The reaction is spontaneous at this temperature",
+    "also_right": []
+   },
+   "b": {
+    "best": "-32 kJ mol⁻¹, spontaneous",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: a negative ΔG means spontaneous, and ΔG = -92 - (300 × -0.199) ≈ -32 kJ mol⁻¹."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says forgetting to convert J to kJ gives 'the last option', but options appear in random order, so 'last' points to nothing reliable. The distractor '-59 000 kJ mol⁻¹' also does not match that mistake: unconverted, -92 - 300(-199) = about +59 600 kJ mol⁻¹, a positive value. The why misdescribes the distractor."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says forgetting to convert J to kJ gives 'the last option', but options appear in random order, so 'last' points to nothing reliable. The distractor '-59 000 kJ mol⁻¹' also does not match that mistake: unconverted, -92 - 300(-199) = about +59 600 kJ mol⁻¹, a positive value. The why misdescribes the distractor."
+  ]
+ },
+ "final": {
+  "title": "Gibbs free energy",
+  "card": [
+   "Gibbs free energy change (ΔG) combines enthalpy and entropy into one value. ΔG = ΔH - TΔS.",
+   "ΔH is the enthalpy change, in kJ mol⁻¹. ΔS is the entropy change, T is the temperature in kelvin, and ΔG is in kJ mol⁻¹. ΔS is often given in J K⁻¹ mol⁻¹, so divide by 1000 to match ΔH.",
+   "A reaction is spontaneous when ΔG is negative. It is not spontaneous when ΔG is positive. Spontaneous means it can happen without continuous energy input. It does not say how fast.",
+   "To convert from °C to kelvin, add 273. For example, 25 °C is 298 K."
+  ],
+  "remember": "Negative ΔG means spontaneous. Keep T in kelvin and ΔS in kJ.",
+  "a": {
+   "q": "A reaction has ΔG = -40 kJ mol⁻¹ at 298 K. What does this tell you?",
+   "opts": [
+    "The reaction is spontaneous at this temperature",
+    "The reaction is not spontaneous at this temperature",
+    "The reaction must be very fast",
+    "The reaction needs continuous energy input"
+   ],
+   "why": "A negative ΔG means the reaction is spontaneous, so it can happen without continuous energy input. Spontaneous does not mean fast, which is the tempting mistake, because ΔG says nothing about rate.",
+   "clue": "Look at the sign of ΔG."
+  },
+  "b": {
+   "d": 3,
+   "q": "A reaction has ΔH = -92 kJ mol⁻¹ and ΔS = -199 J K⁻¹ mol⁻¹. What is ΔG at 300 K, and is it spontaneous?",
+   "opts": [
+    "-32 kJ mol⁻¹, spontaneous",
+    "+32 kJ mol⁻¹, not spontaneous",
+    "-152 kJ mol⁻¹, spontaneous",
+    "+59 608 kJ mol⁻¹, not spontaneous"
+   ],
+   "why": "TΔS = 300 × (-0.199) = -59.7 kJ mol⁻¹, so ΔG = -92 - (-59.7) = about -32 kJ mol⁻¹, which is negative, so the reaction is spontaneous. The answer -152 comes from adding TΔS instead of subtracting it. Leaving ΔS in J gives +59 608, which mixes J and kJ.",
+   "clue": "Convert ΔS to kJ, then watch the minus sign before TΔS."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,196 @@
+{
+ "id": "mat-measures-spread",
+ "title": "Measures of spread",
+ "brief": "1ce0591c5a5b",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01041,
+  "check": 0.01059,
+  "fix": 0.01467
+ },
+ "draft": {
+  "title": "Measures of spread",
+  "card": [
+   [
+    "Range",
+    "Highest value − lowest value. It uses only two values, so one extreme value can change it a lot."
+   ],
+   [
+    "IQR",
+    "The interquartile range is Q3 − Q1. It is the spread of the middle half of the data. Q1 is the median of the lower half and Q3 is the median of the upper half. For 2, 4, 5, 7, 8, 10, 12, 15: Q1 = 4.5, Q3 = 11, so IQR = 6.5."
+   ],
+   [
+    "Standard deviation",
+    "This is the typical distance of the values from the mean. It uses every value, so an extreme value affects it. A calculator finds it."
+   ],
+   "For all three, a larger number means the data is more spread out. An extreme value changes the range and standard deviation more than it changes the IQR."
+  ],
+  "remember": "Bigger spread number, more spread out data. The IQR looks only at the middle half.",
+  "a": {
+   "q": "What is the IQR of 4, 6, 7, 9, 10, 12, 15, 18?",
+   "opts": [
+    "7",
+    "14",
+    "13.5",
+    "6.5"
+   ],
+   "why": "The lower half is 4, 6, 7, 9, so Q1 = 6.5. The upper half is 10, 12, 15, 18, so Q3 = 13.5. IQR = 13.5 − 6.5 = 7. The value 14 is tempting, but that is the range, not the IQR.",
+   "clue": "Find Q1 and Q3 first, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the daily customers at her stall for a month. One day a festival brings in a huge crowd. Which measure of spread changes least because of that day?",
+   "opts": [
+    "The interquartile range",
+    "The range",
+    "The standard deviation",
+    "All three change by the same amount"
+   ],
+   "why": "The IQR looks only at the middle half of the data, so one very large value changes it little. The range depends on the highest value, so it jumps. The standard deviation uses every value, so it rises too.",
+   "clue": "Which measure ignores the top quarter of the data?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7",
+   "also_right": []
+  },
+  "b": {
+   "best": "The interquartile range",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which measure ignores the top quarter of the data?' points almost directly at the IQR. The card already says the IQR is the spread of the middle half, so the clue largely gives the answer away rather than prompting reasoning."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out (IQR = 7; the IQR changes least). The only issue is that the clue for question b nearly names the IQR, giving the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Which measure ignores the top quarter of the data?' points almost directly at the IQR. The card already says the IQR is the spread of the middle half, so the clue largely gives the answer away rather than prompting reasoning."
+ ],
+ "proposal": {
+  "title": "Measures of spread",
+  "card": [
+   [
+    "Range",
+    "Highest value − lowest value. It uses only two values, so one extreme value can change it a lot."
+   ],
+   [
+    "IQR",
+    "The interquartile range is Q3 − Q1. It is the spread of the middle half of the data. Q1 is the median of the lower half and Q3 is the median of the upper half. For 2, 4, 5, 7, 8, 10, 12, 15: Q1 = 4.5, Q3 = 11, so IQR = 6.5."
+   ],
+   [
+    "Standard deviation",
+    "This is the typical distance of the values from the mean. It uses every value, so an extreme value affects it. A calculator finds it."
+   ],
+   "For all three, a larger number means the data is more spread out. An extreme value changes the range and standard deviation more than it changes the IQR."
+  ],
+  "remember": "Bigger spread number, more spread out data. The IQR looks only at the middle half.",
+  "a": {
+   "q": "What is the IQR of 4, 6, 7, 9, 10, 12, 15, 18?",
+   "opts": [
+    "7",
+    "14",
+    "13.5",
+    "6.5"
+   ],
+   "why": "The lower half is 4, 6, 7, 9, so Q1 = 6.5. The upper half is 10, 12, 15, 18, so Q3 = 13.5. IQR = 13.5 − 6.5 = 7. The value 14 is tempting, but that is the range, not the IQR.",
+   "clue": "Find Q1 and Q3 first, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the daily customers at her stall for a month. One day a festival brings in a huge crowd. Which measure of spread changes least because of that day?",
+   "opts": [
+    "The interquartile range",
+    "The range",
+    "The standard deviation",
+    "All three change by the same amount"
+   ],
+   "why": "The IQR looks only at the middle half of the data, so one very large value changes it little. The range depends on the highest value, so it jumps. The standard deviation uses every value, so it rises too.",
+   "clue": "Think about which values each measure actually uses."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which measure ignores the top quarter of the data?' points almost directly at the IQR. The card already says the IQR is the spread of the middle half, so the clue largely gives the answer away rather than prompting reasoning."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Which measure ignores the top quarter of the data?' points almost directly at the IQR. The card already says the IQR is the spread of the middle half, so the clue largely gives the answer away rather than prompting reasoning."
+  ]
+ },
+ "final": {
+  "title": "Measures of spread",
+  "card": [
+   [
+    "Range",
+    "Highest value − lowest value. It uses only two values, so one extreme value can change it a lot."
+   ],
+   [
+    "IQR",
+    "The interquartile range is Q3 − Q1. It is the spread of the middle half of the data. Q1 is the median of the lower half and Q3 is the median of the upper half. For 2, 4, 5, 7, 8, 10, 12, 15: Q1 = 4.5, Q3 = 11, so IQR = 6.5."
+   ],
+   [
+    "Standard deviation",
+    "This is the typical distance of the values from the mean. It uses every value, so an extreme value affects it. A calculator finds it."
+   ],
+   "For all three, a larger number means the data is more spread out. An extreme value changes the range and standard deviation more than it changes the IQR."
+  ],
+  "remember": "Bigger spread number, more spread out data. The IQR looks only at the middle half.",
+  "a": {
+   "q": "What is the IQR of 4, 6, 7, 9, 10, 12, 15, 18?",
+   "opts": [
+    "7",
+    "14",
+    "13.5",
+    "6.5"
+   ],
+   "why": "The lower half is 4, 6, 7, 9, so Q1 = 6.5. The upper half is 10, 12, 15, 18, so Q3 = 13.5. IQR = 13.5 − 6.5 = 7. The value 14 is tempting, but that is the range, not the IQR.",
+   "clue": "Find Q1 and Q3 first, then subtract."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia records the daily customers at her stall for a month. One day a festival brings in a huge crowd. Which measure of spread changes least because of that day?",
+   "opts": [
+    "The interquartile range",
+    "The range",
+    "The standard deviation",
+    "All three change by the same amount"
+   ],
+   "why": "The IQR looks only at the middle half of the data, so one very large value changes it little. The range depends on the highest value, so it jumps. The standard deviation uses every value, so it rises too.",
+   "clue": "Think about which values each measure actually uses."
+  }
+ },
+ "cleared_by": "auto"
+}

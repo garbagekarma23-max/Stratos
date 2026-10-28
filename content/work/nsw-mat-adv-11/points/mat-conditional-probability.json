@@ -1,0 +1,169 @@
+{
+ "id": "mat-conditional-probability",
+ "title": "Conditional probability",
+ "brief": "aa9055ade1a2",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00471,
+  "check": 0.00956,
+  "fix": 0.02506
+ },
+ "draft": {
+  "title": "Conditional probability",
+  "card": [
+   "P(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+   "Formula: P(A | B) = P(A ∩ B)/P(B). The bottom is the event we are given. The top is the part of it that is also A.",
+   "From a table, P(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. P(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+  ],
+  "remember": "Given B means B is the new total. Divide by P(B), not by everything.",
+  "a": {
+   "q": "In a group, P(A ∩ B) = 0.2 and P(B) = 0.5. What is P(A | B)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "P(A | B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students at a school camp, 25 chose kayaking and 10 of those also chose archery. 5 chose only archery. A student who chose archery is picked. What is the probability they also chose kayaking?",
+   "opts": [
+    "2/3",
+    "1/4",
+    "2/5",
+    "10/25"
+   ],
+   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 1/4 divides by all 40 students, which ignores that we are told the student chose archery.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.4",
+   "also_right": []
+  },
+  "b": {
+   "best": "2/3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Two options, 2/5 and 10/25, are the same value. A student can rule both out because they cannot both be the single right answer, which weakens the question. Replace one with a different distractor, such as 10/30 or 15/40."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct (0.4 and 2/3). In question b, two options (2/5 and 10/25) have the same value, so a student can rule both out by elimination; one should be replaced."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Two options, 2/5 and 10/25, are the same value. A student can rule both out because they cannot both be the single right answer, which weakens the question. Replace one with a different distractor, such as 10/30 or 15/40."
+ ],
+ "proposal": {
+  "title": "Conditional probability",
+  "card": [
+   "P(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+   "Formula: P(A | B) = P(A ∩ B)/P(B). The bottom is the event we are given. The top is the part of it that is also A.",
+   "From a table, P(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. P(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+  ],
+  "remember": "Given B means B is the new total. Divide by P(B), not by everything.",
+  "a": {
+   "q": "In a group, P(A ∩ B) = 0.2 and P(B) = 0.5. What is P(A | B)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "P(A | B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students at a school camp, 25 chose kayaking and 10 of those also chose archery. 5 chose only archery. A student who chose archery is picked. What is the probability they also chose kayaking?",
+   "opts": [
+    "2/3",
+    "1/4",
+    "2/5",
+    "3/8"
+   ],
+   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Two options, 2/5 and 10/25, are the same value. A student can rule both out because they cannot both be the single right answer, which weakens the question. Replace one with a different distractor, such as 10/30 or 15/40."
+   }
+  ],
+  "flags": [
+   "Question b, other: Two options, 2/5 and 10/25, are the same value. A student can rule both out because they cannot both be the single right answer, which weakens the question. Replace one with a different distractor, such as 10/30 or 15/40."
+  ]
+ },
+ "final": {
+  "title": "Conditional probability",
+  "card": [
+   "P(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+   "Formula: P(A | B) = P(A ∩ B)/P(B). The bottom is the event we are given. The top is the part of it that is also A.",
+   "From a table, P(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. P(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+  ],
+  "remember": "Given B means B is the new total. Divide by P(B), not by everything.",
+  "a": {
+   "q": "In a group, P(A ∩ B) = 0.2 and P(B) = 0.5. What is P(A | B)?",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "P(A | B) = P(A ∩ B) ÷ P(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "Of 40 students at a school camp, 25 chose kayaking and 10 of those also chose archery. 5 chose only archery. A student who chose archery is picked. What is the probability they also chose kayaking?",
+   "opts": [
+    "2/3",
+    "1/4",
+    "2/5",
+    "3/8"
+   ],
+   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "cleared_by": "auto"
+}

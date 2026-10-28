@@ -1,0 +1,226 @@
+{
+ "id": "bio-pedigrees",
+ "title": "Pedigrees",
+ "brief": "5737d7f30561",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:01Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:09Z write: done",
+  "2026-10-27T01:08:35Z check: flagged",
+  "2026-10-27T01:23:00Z fix: suggested",
+  "2026-10-28T11:40:39Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-28T11:49:09Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00531,
+  "check": 0.01972,
+  "fix": 0.02248,
+  "recheck": 0.01994
+ },
+ "draft": {
+  "title": "Pedigrees",
+  "card": [
+   "A pedigree is a family tree that tracks one trait through generations. Squares are males, circles are females, and shaded symbols show people with the trait.",
+   [
+    "Dominant",
+    "if two unaffected parents never have an affected child, the trait is not recessive. A dominant trait shows in every affected person's line: an affected child has at least one affected parent."
+   ],
+   [
+    "Recessive",
+    "two unaffected parents can have an affected child. This shows the parents each carry a hidden copy of the allele, so the trait is recessive."
+   ],
+   [
+    "Sex-linked",
+    "an X-linked recessive trait shows far more often in males, who have one X chromosome. It often passes from an unaffected carrier mother to her son."
+   ]
+  ],
+  "remember": "Read a pedigree by asking who is affected and whether unaffected parents can have affected children.",
+  "a": {
+   "q": "In a pedigree, two unaffected parents have an affected daughter. What does this show about the trait?",
+   "opts": [
+    "It is recessive, and both parents carry the allele",
+    "It is dominant, and both parents carry the allele",
+    "It is dominant, because the daughter is affected",
+    "It is sex-linked, because the child is female"
+   ],
+   "why": "An unaffected parent cannot carry a dominant allele, because a dominant allele would show. So the trait must be recessive, and each parent passed on a hidden copy. Calling it dominant ignores that both parents are unaffected.",
+   "clue": "Could a parent hide a dominant allele?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Ravi's family tree, a rare trait affects a grandfather and two of his grandsons. Both grandsons have unaffected parents and their mother's father is unaffected. Which pattern best fits?",
+   "opts": [
+    "X-linked recessive, passed on by a carrier mother",
+    "Dominant, passed on by an affected parent",
+    "Recessive, because only males are affected",
+    "Dominant, because it appears in two generations"
+   ],
+   "why": "The grandsons are affected but both parents are unaffected, so the trait cannot be dominant. Only males are affected and sons get their X from their mother, so a carrier mother fits an X-linked recessive trait. Saying it is simply recessive misses that the pattern also points to the X chromosome.",
+   "clue": "Can a dominant trait skip an unaffected parent?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is recessive, and both parents carry the allele",
+   "also_right": []
+  },
+  "b": {
+   "best": "X-linked recessive, passed on by a carrier mother",
+   "also_right": [
+    "Recessive, because only males are affected"
+   ]
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'If two unaffected parents never have an affected child, the trait is not recessive' is false logic. Not seeing affected children does not rule out recessive. The real test for dominance is two affected parents having an unaffected child."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The stem says the mother's father is unaffected. That means the affected grandfather is the paternal grandfather, who passes a Y, not an X, to his son, so he cannot pass an X-linked allele down to his grandsons. As written, the pedigree does not support X-linked recessive over plain autosomal recessive. The writer almost certainly meant the mother's father is affected."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why ignores the stated unaffected maternal grandfather and says only that a carrier mother fits. It does not explain how the affected grandfather links to the grandsons, so it does not match the stem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's dominance rule is logically wrong: unaffected parents never having affected children does not rule out recessive. Question b's stem says the mother's father is unaffected, which breaks the X-linked pattern it is meant to show; it should probably say the mother's father is affected."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Recessive, because only males are affected” could also be right.",
+  "Card, fact: 'If two unaffected parents never have an affected child, the trait is not recessive' is false logic. Not seeing affected children does not rule out recessive. The real test for dominance is two affected parents having an unaffected child.",
+  "Question b, fact: The stem says the mother's father is unaffected. That means the affected grandfather is the paternal grandfather, who passes a Y, not an X, to his son, so he cannot pass an X-linked allele down to his grandsons. As written, the pedigree does not support X-linked recessive over plain autosomal recessive. The writer almost certainly meant the mother's father is affected.",
+  "Question b, other: The why ignores the stated unaffected maternal grandfather and says only that a carrier mother fits. It does not explain how the affected grandfather links to the grandsons, so it does not match the stem."
+ ],
+ "proposal": {
+  "title": "Pedigrees",
+  "card": [
+   "A pedigree is a family tree that tracks one trait through generations. Squares are males, circles are females, and shaded symbols show people with the trait.",
+   [
+    "Dominant",
+    "two affected parents can have an unaffected child only if the trait is dominant. Each parent must be heterozygous, carrying one hidden recessive allele to pass on."
+   ],
+   [
+    "Recessive",
+    "two unaffected parents can have an affected child. Each parent carries a hidden copy of the allele, so the trait is recessive and can skip generations."
+   ],
+   [
+    "Sex-linked",
+    "an X-linked recessive trait shows far more often in males, who have one X chromosome. Sons get their X from their mother, so it often passes from a carrier mother to her son."
+   ]
+  ],
+  "remember": "Unaffected parents with an affected child: recessive. Affected parents with an unaffected child: dominant.",
+  "a": {
+   "q": "In a pedigree, two unaffected parents have an affected daughter. What does this show about the trait?",
+   "opts": [
+    "It is recessive, and both parents carry the allele",
+    "It is dominant, and both parents carry the allele",
+    "It is dominant, because the daughter is affected",
+    "It is sex-linked, because the child is female"
+   ],
+   "why": "An unaffected parent cannot carry a dominant allele, because a dominant allele would show. So the trait must be recessive, and each parent passed on a hidden copy. Calling it dominant ignores that both parents are unaffected.",
+   "clue": "Could a parent hide a dominant allele?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Ravi's family tree, two parents both have a rare trait, but their daughter does not. What does this show about the trait?",
+   "opts": [
+    "It is dominant, and both parents are heterozygous",
+    "It is recessive, and both parents are carriers",
+    "It is recessive, because it skipped the daughter",
+    "It is X-linked, because the daughter is unaffected"
+   ],
+   "why": "If the trait were recessive, both affected parents would have two recessive alleles and could pass on nothing else, so every child would be affected. An unaffected daughter means each parent carried a hidden recessive allele, so the trait is dominant. Skipping a child looks like a recessive pattern, but here it is affected parents, not unaffected ones, who have the unaffected child.",
+   "clue": "What alleles could two affected parents pass on if the trait were recessive?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:39Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "It is recessive, and both parents carry the allele",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is dominant, and both parents are heterozygous",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The recessive bullet says that when two unaffected parents have an affected child, each parent carries a hidden copy. That holds for autosomal recessive traits, but not for an X-linked recessive trait in an affected son: there only the mother is a carrier and the father has no copy. The card's own next bullet says this, so the two bullets clash. The line should say 'autosomal recessive' or note the son exception."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are sound and their intended answers are correct. The one problem is that the card's recessive bullet says both unaffected parents must carry the allele, which is not true for an X-linked recessive affected son and clashes with the card's own sex-linked bullet."
+  },
+  "flags": [
+   "Card, fact: The recessive bullet says that when two unaffected parents have an affected child, each parent carries a hidden copy. That holds for autosomal recessive traits, but not for an X-linked recessive trait in an affected son: there only the mother is a carrier and the father has no copy. The card's own next bullet says this, so the two bullets clash. The line should say 'autosomal recessive' or note the son exception."
+  ]
+ },
+ "final": {
+  "title": "Pedigrees",
+  "card": [
+   "A pedigree is a family tree that tracks one trait through generations. Squares are males, circles are females, and shaded symbols show people with the trait.",
+   [
+    "Dominant",
+    "two affected parents can have an unaffected child only if the trait is dominant. Each parent must be heterozygous, carrying one hidden recessive allele to pass on."
+   ],
+   [
+    "Recessive",
+    "two unaffected parents can have an affected child. Each parent carries a hidden copy of the allele, so the trait is recessive and can skip generations."
+   ],
+   [
+    "Sex-linked",
+    "an X-linked recessive trait shows far more often in males, who have one X chromosome. Sons get their X from their mother, so it often passes from a carrier mother to her son."
+   ]
+  ],
+  "remember": "Unaffected parents with an affected child: recessive. Affected parents with an unaffected child: dominant.",
+  "a": {
+   "q": "In a pedigree, two unaffected parents have an affected daughter. What does this show about the trait?",
+   "opts": [
+    "It is recessive, and both parents carry the allele",
+    "It is dominant, and both parents carry the allele",
+    "It is dominant, because the daughter is affected",
+    "It is sex-linked, because the child is female"
+   ],
+   "why": "An unaffected parent cannot carry a dominant allele, because a dominant allele would show. So the trait must be recessive, and each parent passed on a hidden copy. Calling it dominant ignores that both parents are unaffected.",
+   "clue": "Could a parent hide a dominant allele?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Ravi's family tree, two parents both have a rare trait, but their daughter does not. What does this show about the trait?",
+   "opts": [
+    "It is dominant, and both parents are heterozygous",
+    "It is recessive, and both parents are carriers",
+    "It is recessive, because it skipped the daughter",
+    "It is X-linked, because the daughter is unaffected"
+   ],
+   "why": "If the trait were recessive, both affected parents would have two recessive alleles and could pass on nothing else, so every child would be affected. An unaffected daughter means each parent carried a hidden recessive allele, so the trait is dominant. Skipping a child looks like a recessive pattern, but here it is affected parents, not unaffected ones, who have the unaffected child.",
+   "clue": "What alleles could two affected parents pass on if the trait were recessive?"
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,205 @@
+{
+ "id": "mat-measures-centre",
+ "title": "Measures of centre",
+ "brief": "1b8671ba007e",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00453,
+  "check": 0.01055,
+  "fix": 0.01889
+ },
+ "draft": {
+  "title": "Measures of centre",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Every value affects the mean."
+   ],
+   [
+    "Median",
+    "The middle value when the data is in order. With an even number of values, it is the mean of the two middle values."
+   ],
+   [
+    "Mode",
+    "The value that occurs most often."
+   ],
+   [
+    "Outliers",
+    "An outlier is a value far from the rest. It pulls the mean towards it, but the median barely moves. So the median is a better centre for skewed data or data with outliers. Example: 2, 3, 4, 5, 36 has mean 10 and median 4."
+   ]
+  ],
+  "remember": "The mean is pulled by extreme values. The median is not, so it suits skewed data.",
+  "a": {
+   "q": "What is the median of the data set 7, 3, 9, 4, 12, 5?",
+   "opts": [
+    "6",
+    "6.7",
+    "8",
+    "4"
+   ],
+   "why": "In order the data is 3, 4, 5, 7, 9, 12. There are six values, so the median is the mean of 5 and 7, which is 6. The mean of all values is 6.7, but that is not the middle value.",
+   "clue": "Put the values in order first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five workers at a small firm in Ballarat earn $50 000, $52 000, $54 000, $56 000 and $288 000. Which statement is correct?",
+   "opts": [
+    "The median of $54 000 describes a typical worker better",
+    "The mean of $100 000 describes a typical worker better",
+    "The mean and median are equal, so either one works",
+    "The mode of $50 000 is the best centre, as it is lowest"
+   ],
+   "why": "The $288 000 value is an outlier. It pulls the mean up to $100 000 (500 000 ÷ 5), which is more than four of the five workers earn. The median of $54 000 is not affected much by the outlier, so it is a better centre.",
+   "clue": "Which value is far from the rest, and which measure does it pull?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "The median of $54 000 describes a typical worker better",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the median is not pulled by extreme values, but the card says it 'barely moves'. The remember line states it more absolutely than the card does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers check out: the median in (a) is 6, and the mean in (b) is $100 000 against a median of $54 000. The only issue is minor: the remember line says the median is not pulled at all, where the card says it barely moves."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says the median is not pulled by extreme values, but the card says it 'barely moves'. The remember line states it more absolutely than the card does."
+ ],
+ "proposal": {
+  "title": "Measures of centre",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Every value affects the mean."
+   ],
+   [
+    "Median",
+    "The middle value when the data is in order. With an even number of values, it is the mean of the two middle values."
+   ],
+   [
+    "Mode",
+    "The value that occurs most often. If no value repeats, there is no mode."
+   ],
+   [
+    "Outliers",
+    "An outlier is a value far from the rest. It pulls the mean towards it, but the median barely moves. So the median is a better centre for skewed data or data with outliers. Example: 2, 3, 4, 5, 36 has mean 10 and median 4."
+   ]
+  ],
+  "remember": "Extreme values pull the mean but barely move the median, so the median suits skewed data.",
+  "a": {
+   "q": "What is the median of the data set 7, 3, 9, 4, 12, 5?",
+   "opts": [
+    "6",
+    "6.5",
+    "6.7",
+    "5"
+   ],
+   "why": "In order the data is 3, 4, 5, 7, 9, 12. There are six values, so the median is the mean of 5 and 7, which is 6. Taking 9 and 4 from the unordered list gives 6.5, which is wrong because the values were not put in order first.",
+   "clue": "Put the values in order first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five workers at a small firm in Ballarat earn $50 000, $52 000, $54 000, $56 000 and $288 000. Which statement is correct?",
+   "opts": [
+    "The median of $54 000 describes a typical worker better",
+    "The mean of $100 000 describes a typical worker better",
+    "The mean and median are equal, so either one works",
+    "The mode of $50 000 is the best centre, as it is lowest"
+   ],
+   "why": "The $288 000 value is an outlier. It pulls the mean up to $100 000 (500 000 ÷ 5), which is more than four of the five workers earn. The median of $54 000 barely moves because of the outlier, so it is a better centre, and no value repeats, so there is no mode.",
+   "clue": "Which value is far from the rest, and which measure does it pull?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says the median is not pulled by extreme values, but the card says it 'barely moves'. The remember line states it more absolutely than the card does."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says the median is not pulled by extreme values, but the card says it 'barely moves'. The remember line states it more absolutely than the card does."
+  ]
+ },
+ "final": {
+  "title": "Measures of centre",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Every value affects the mean."
+   ],
+   [
+    "Median",
+    "The middle value when the data is in order. With an even number of values, it is the mean of the two middle values."
+   ],
+   [
+    "Mode",
+    "The value that occurs most often. If no value repeats, there is no mode."
+   ],
+   [
+    "Outliers",
+    "An outlier is a value far from the rest. It pulls the mean towards it, but the median barely moves. So the median is a better centre for skewed data or data with outliers. Example: 2, 3, 4, 5, 36 has mean 10 and median 4."
+   ]
+  ],
+  "remember": "Extreme values pull the mean but barely move the median, so the median suits skewed data.",
+  "a": {
+   "q": "What is the median of the data set 7, 3, 9, 4, 12, 5?",
+   "opts": [
+    "6",
+    "6.5",
+    "6.7",
+    "5"
+   ],
+   "why": "In order the data is 3, 4, 5, 7, 9, 12. There are six values, so the median is the mean of 5 and 7, which is 6. Taking 9 and 4 from the unordered list gives 6.5, which is wrong because the values were not put in order first.",
+   "clue": "Put the values in order first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five workers at a small firm in Ballarat earn $50 000, $52 000, $54 000, $56 000 and $288 000. Which statement is correct?",
+   "opts": [
+    "The median of $54 000 describes a typical worker better",
+    "The mean of $100 000 describes a typical worker better",
+    "The mean and median are equal, so either one works",
+    "The mode of $50 000 is the best centre, as it is lowest"
+   ],
+   "why": "The $288 000 value is an outlier. It pulls the mean up to $100 000 (500 000 ÷ 5), which is more than four of the five workers earn. The median of $54 000 barely moves because of the outlier, so it is a better centre, and no value repeats, so there is no mode.",
+   "clue": "Which value is far from the rest, and which measure does it pull?"
+  }
+ },
+ "cleared_by": "auto"
+}

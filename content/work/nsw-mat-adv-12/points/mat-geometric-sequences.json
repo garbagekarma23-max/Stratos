@@ -1,0 +1,184 @@
+{
+ "id": "mat-geometric-sequences",
+ "title": "Geometric sequences",
+ "brief": "c82925a86503",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:56Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording, b other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00463,
+  "check": 0.00986,
+  "fix": 0.0161
+ },
+ "draft": {
+  "title": "Geometric sequences",
+  "card": [
+   "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
+   "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
+   "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
+   [
+    "Example",
+    "For 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+   ]
+  ],
+  "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+  "a": {
+   "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
+   "opts": [
+    "1458",
+    "4374",
+    "729",
+    "12"
+   ],
+   "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
+   "clue": "Find r first, then check the power on r."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina's savings plan gives a geometric sequence 400, −200, 100, ... What is the 5th term?",
+   "opts": [
+    "25",
+    "−25",
+    "−50",
+    "12.5"
+   ],
+   "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. The power 4 is even, so the answer is positive. A sign error gives −25.",
+   "clue": "The ratio is negative, so think about an even power."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1458",
+   "also_right": []
+  },
+  "b": {
+   "best": "25",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "A 'savings plan' with a term of −200 makes little sense, since savings amounts do not alternate between positive and negative. The context could confuse students. Use a plain sequence or a context where negative terms make sense."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says the power is even, so the answer is positive. That rules out −50 and −25 and leaves only 12.5 or 25, which gives away much of the answer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct (1458 and 25). In question b, the savings-plan context does not fit a sequence with negative terms, and the clue all but gives away the sign of the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: A 'savings plan' with a term of −200 makes little sense, since savings amounts do not alternate between positive and negative. The context could confuse students. Use a plain sequence or a context where negative terms make sense.",
+  "Question b, other: The clue says the power is even, so the answer is positive. That rules out −50 and −25 and leaves only 12.5 or 25, which gives away much of the answer."
+ ],
+ "proposal": {
+  "title": "Geometric sequences",
+  "card": [
+   "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
+   "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
+   "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
+   "For example, in 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+  ],
+  "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+  "a": {
+   "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
+   "opts": [
+    "1458",
+    "4374",
+    "729",
+    "12"
+   ],
+   "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
+   "clue": "Find r first, then check the power on r."
+  },
+  "b": {
+   "d": 3,
+   "q": "A geometric sequence is 400, −200, 100, ... What is the 5th term?",
+   "opts": [
+    "25",
+    "−25",
+    "−50",
+    "12.5"
+   ],
+   "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. Treating it as −(1/2)⁴ gives −25, but the negative sign is part of r, so it is raised to the power too. The value −50 is only the 4th term.",
+   "clue": "Count how many times r has been applied by the 5th term."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "A 'savings plan' with a term of −200 makes little sense, since savings amounts do not alternate between positive and negative. The context could confuse students. Use a plain sequence or a context where negative terms make sense."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says the power is even, so the answer is positive. That rules out −50 and −25 and leaves only 12.5 or 25, which gives away much of the answer."
+   }
+  ],
+  "flags": [
+   "Question b, wording: A 'savings plan' with a term of −200 makes little sense, since savings amounts do not alternate between positive and negative. The context could confuse students. Use a plain sequence or a context where negative terms make sense.",
+   "Question b, other: The clue says the power is even, so the answer is positive. That rules out −50 and −25 and leaves only 12.5 or 25, which gives away much of the answer."
+  ]
+ },
+ "final": {
+  "title": "Geometric sequences",
+  "card": [
+   "In a geometric sequence, each term is found by multiplying the one before it by the same number. That number is the common ratio, r.",
+   "To find r, divide any term by the term before it. For 3, 6, 12, 24, r = 6 ÷ 3 = 2. The ratio can be negative or a fraction.",
+   "The first term is a. The nth term is Tₙ = arⁿ⁻¹. The power is n − 1, because the first term has not been multiplied by r yet.",
+   "For example, in 5, 10, 20, ..., a = 5 and r = 2. The 6th term is 5 × 2⁵ = 5 × 32 = 160."
+  ],
+  "remember": "Divide to find r, then use Tₙ = arⁿ⁻¹ with the power n − 1.",
+  "a": {
+   "q": "A geometric sequence is 2, 6, 18, 54, ... What is the 7th term?",
+   "opts": [
+    "1458",
+    "4374",
+    "729",
+    "12"
+   ],
+   "why": "Here a = 2 and r = 6 ÷ 2 = 3. T₇ = 2 × 3⁶ = 2 × 729 = 1458. Using 3⁷ gives 4374, which is the 8th term, because the power must be n − 1.",
+   "clue": "Find r first, then check the power on r."
+  },
+  "b": {
+   "d": 3,
+   "q": "A geometric sequence is 400, −200, 100, ... What is the 5th term?",
+   "opts": [
+    "25",
+    "−25",
+    "−50",
+    "12.5"
+   ],
+   "why": "Here a = 400 and r = −200 ÷ 400 = −1/2. T₅ = 400 × (−1/2)⁴ = 400 × 1/16 = 25. Treating it as −(1/2)⁴ gives −25, but the negative sign is part of r, so it is raised to the power too. The value −50 is only the 4th term.",
+   "clue": "Count how many times r has been applied by the 5th term."
+  }
+ },
+ "cleared_by": "auto"
+}

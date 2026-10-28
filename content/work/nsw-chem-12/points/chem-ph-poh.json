@@ -1,0 +1,199 @@
+{
+ "id": "chem-ph-poh",
+ "title": "pH and pOH",
+ "brief": "46298c653686",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:00Z new, write",
+  "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:08Z write: done",
+  "2026-10-27T01:08:34Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b wording, a wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00489,
+  "check": 0.01164,
+  "fix": 0.01507
+ },
+ "draft": {
+  "title": "pH and pOH",
+  "card": [
+   [
+    "pH",
+    "pH = -log[H⁺], where [H⁺] is the concentration of hydrogen ions in mol/L. A lower pH means a higher [H⁺]."
+   ],
+   [
+    "pOH",
+    "pOH = -log[OH⁻], where [OH⁻] is the concentration of hydroxide ions in mol/L."
+   ],
+   "At 25°C, pH + pOH = 14. So if you know one value, you can find the other by subtracting from 14.",
+   "The scale is logarithmic. A change of 1 pH unit means [H⁺] changes by a factor of 10. At 25°C, pH below 7 is acidic, 7 is neutral and above 7 is basic."
+  ],
+  "remember": "pH and pOH are negative logs of ion concentrations, and at 25°C they add to 14.",
+  "a": {
+   "q": "A solution at 25°C has [H⁺] = 1 × 10⁻⁴ mol/L. What is its pH?",
+   "opts": [
+    "4",
+    "10",
+    "-4",
+    "0.0001"
+   ],
+   "why": "pH = -log(1 × 10⁻⁴) = 4. The value 10 is the pOH, which is what you get if you subtract from 14 and stop there. The pH is the negative log of [H⁺] itself.",
+   "clue": "Take the negative log of the H⁺ concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solution X at 25°C has a pOH of 3. Which statement about solution X is correct?",
+   "opts": [
+    "Its pH is 11, so it is basic",
+    "Its pH is 3, so it is acidic",
+    "Its pH is 11, so it is acidic",
+    "Its pH is 3, so it is basic"
+   ],
+   "why": "pH = 14 - 3 = 11, which is above 7, so the solution is basic. A low pOH means a high [OH⁻], so it is tempting to call the pH 3, but the pH is found by subtracting from 14.",
+   "clue": "Subtract the pOH from 14, then compare with 7."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its pH is 11, so it is basic",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'A low pOH means a high [OH⁻], so it is tempting to call the pH 3'. This reasoning is muddled. A high [OH⁻] points to a basic solution, not a pH of 3. The real trap is mistaking the pOH value for the pH. Reword it, for example: 'It is tempting to read the pOH of 3 as the pH, but pH = 14 − 3 = 11.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 10 'is what you get if you subtract from 14 and stop there'. This is unclear, because the question involves no subtraction. Better to say that 10 is the pOH (14 − 4), which a student might give by finding the pOH instead of the pH."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and each question has one clear right answer (4, and pH 11 basic). Both explanations are worded confusingly, especially why (b), whose reasoning about why pH 3 is tempting does not make sense."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says 'A low pOH means a high [OH⁻], so it is tempting to call the pH 3'. This reasoning is muddled. A high [OH⁻] points to a basic solution, not a pH of 3. The real trap is mistaking the pOH value for the pH. Reword it, for example: 'It is tempting to read the pOH of 3 as the pH, but pH = 14 − 3 = 11.'",
+  "Question a, wording: The why says 10 'is what you get if you subtract from 14 and stop there'. This is unclear, because the question involves no subtraction. Better to say that 10 is the pOH (14 − 4), which a student might give by finding the pOH instead of the pH."
+ ],
+ "proposal": {
+  "title": "pH and pOH",
+  "card": [
+   [
+    "pH",
+    "pH = -log[H⁺], where [H⁺] is the concentration of hydrogen ions in mol/L. A lower pH means a higher [H⁺]."
+   ],
+   [
+    "pOH",
+    "pOH = -log[OH⁻], where [OH⁻] is the concentration of hydroxide ions in mol/L."
+   ],
+   "At 25°C, pH + pOH = 14. So if you know one value, you can find the other by subtracting from 14.",
+   "The scale is logarithmic. A change of 1 pH unit means [H⁺] changes by a factor of 10. At 25°C, pH below 7 is acidic, 7 is neutral and above 7 is basic."
+  ],
+  "remember": "pH and pOH are negative logs of ion concentrations, and at 25°C they add to 14.",
+  "a": {
+   "q": "A solution at 25°C has [H⁺] = 1 × 10⁻⁴ mol/L. What is its pH?",
+   "opts": [
+    "4",
+    "10",
+    "-4",
+    "0.0001"
+   ],
+   "why": "pH = -log(1 × 10⁻⁴) = 4. The value 10 is the pOH (14 - 4), which a student might give by finding the pOH instead of the pH.",
+   "clue": "Take the negative log of the H⁺ concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solution X at 25°C has a pOH of 3. Which statement about solution X is correct?",
+   "opts": [
+    "Its pH is 11, so it is basic",
+    "Its pH is 3, so it is acidic",
+    "Its pH is 11, so it is acidic",
+    "Its pH is 3, so it is basic"
+   ],
+   "why": "At 25°C, pH + pOH = 14, so pH = 14 - 3 = 11. That is above 7, so the solution is basic. It is tempting to read the pOH of 3 as the pH, but pH = 14 - 3 = 11.",
+   "clue": "Subtract the pOH from 14, then compare with 7."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'A low pOH means a high [OH⁻], so it is tempting to call the pH 3'. This reasoning is muddled. A high [OH⁻] points to a basic solution, not a pH of 3. The real trap is mistaking the pOH value for the pH. Reword it, for example: 'It is tempting to read the pOH of 3 as the pH, but pH = 14 − 3 = 11.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 10 'is what you get if you subtract from 14 and stop there'. This is unclear, because the question involves no subtraction. Better to say that 10 is the pOH (14 − 4), which a student might give by finding the pOH instead of the pH."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says 'A low pOH means a high [OH⁻], so it is tempting to call the pH 3'. This reasoning is muddled. A high [OH⁻] points to a basic solution, not a pH of 3. The real trap is mistaking the pOH value for the pH. Reword it, for example: 'It is tempting to read the pOH of 3 as the pH, but pH = 14 − 3 = 11.'",
+   "Question a, wording: The why says 10 'is what you get if you subtract from 14 and stop there'. This is unclear, because the question involves no subtraction. Better to say that 10 is the pOH (14 − 4), which a student might give by finding the pOH instead of the pH."
+  ]
+ },
+ "final": {
+  "title": "pH and pOH",
+  "card": [
+   [
+    "pH",
+    "pH = -log[H⁺], where [H⁺] is the concentration of hydrogen ions in mol/L. A lower pH means a higher [H⁺]."
+   ],
+   [
+    "pOH",
+    "pOH = -log[OH⁻], where [OH⁻] is the concentration of hydroxide ions in mol/L."
+   ],
+   "At 25°C, pH + pOH = 14. So if you know one value, you can find the other by subtracting from 14.",
+   "The scale is logarithmic. A change of 1 pH unit means [H⁺] changes by a factor of 10. At 25°C, pH below 7 is acidic, 7 is neutral and above 7 is basic."
+  ],
+  "remember": "pH and pOH are negative logs of ion concentrations, and at 25°C they add to 14.",
+  "a": {
+   "q": "A solution at 25°C has [H⁺] = 1 × 10⁻⁴ mol/L. What is its pH?",
+   "opts": [
+    "4",
+    "10",
+    "-4",
+    "0.0001"
+   ],
+   "why": "pH = -log(1 × 10⁻⁴) = 4. The value 10 is the pOH (14 - 4), which a student might give by finding the pOH instead of the pH.",
+   "clue": "Take the negative log of the H⁺ concentration."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solution X at 25°C has a pOH of 3. Which statement about solution X is correct?",
+   "opts": [
+    "Its pH is 11, so it is basic",
+    "Its pH is 3, so it is acidic",
+    "Its pH is 11, so it is acidic",
+    "Its pH is 3, so it is basic"
+   ],
+   "why": "At 25°C, pH + pOH = 14, so pH = 14 - 3 = 11. That is above 7, so the solution is basic. It is tempting to read the pOH of 3 as the pH, but pH = 14 - 3 = 11.",
+   "clue": "Subtract the pOH from 14, then compare with 7."
+  }
+ },
+ "cleared_by": "auto"
+}

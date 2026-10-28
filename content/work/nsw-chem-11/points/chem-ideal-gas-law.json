@@ -1,0 +1,184 @@
+{
+ "id": "chem-ideal-gas-law",
+ "title": "The ideal gas law",
+ "brief": "9ea51dfd0a5e",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:58Z new, write",
+  "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-28T11:49:17Z review: approved with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00524,
+  "check": 0.0117,
+  "fix": 0.02467,
+  "recheck": 0.01467
+ },
+ "draft": {
+  "title": "The ideal gas law",
+  "card": [
+   "The ideal gas law is PV = nRT. It links the pressure, volume, amount and temperature of a gas in one equation.",
+   "P is pressure, V is volume, n is moles and T is temperature in kelvin. R is the gas constant, 8.314 J K⁻¹ mol⁻¹, when P is in kilopascals (kPa) and V is in litres (L).",
+   "To find one quantity, rearrange the equation. For example, n = PV ÷ RT. Convert °C to K by adding 273.15 before you calculate.",
+   "An ideal gas is a model in which the particles take up no space and do not attract each other. Real gases follow it closely at low pressure and high temperature."
+  ],
+  "remember": "PV = nRT: keep T in kelvin, and use R with kPa and litres.",
+  "a": {
+   "q": "A gas is at 200 kPa and 300 K. Its volume doubles at the same pressure and the same amount of gas. What happens to the temperature?",
+   "opts": [
+    "It doubles to 600 K",
+    "It halves to 150 K",
+    "It stays at 300 K",
+    "It rises to 500 K"
+   ],
+   "why": "With P and n fixed, V = nRT ÷ P, so V and T rise together. Doubling V means doubling T, to 600 K. Halving is wrong because it reverses the link between V and T.",
+   "clue": "With P and n fixed, rearrange to see how V relates to T."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sealed flask holds 0.100 mol of gas at 25°C and a volume of 2.00 L. Which expression gives its pressure in kPa? (R = 8.314)",
+   "opts": [
+    "P = 0.100 × 8.314 × 298.15 ÷ 2.00",
+    "P = 0.100 × 8.314 × 25 ÷ 2.00",
+    "P = 2.00 × 8.314 × 298.15 ÷ 0.100",
+    "P = 0.100 × 298.15 ÷ (8.314 × 2.00)"
+   ],
+   "why": "Rearranging gives P = nRT ÷ V, with T converted to 298.15 K. Using 25 directly is wrong because temperature must be in kelvin.",
+   "clue": "Rearrange for P, then check the temperature unit."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It doubles to 600 K",
+   "also_right": []
+  },
+  "b": {
+   "best": "P = 0.100 × 8.314 × 298.15 ÷ 2.00",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "With P and n fixed, the question tests the V–T proportionality. That is Charles's law, which belongs to point 3 (Gas laws), not a use of PV = nRT with all four quantities."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, both answers and both explanations are correct. Question a overlaps with the gas laws point (Charles's law); consider replacing it with a question that needs the full PV = nRT."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: With P and n fixed, the question tests the V–T proportionality. That is Charles's law, which belongs to point 3 (Gas laws), not a use of PV = nRT with all four quantities."
+ ],
+ "proposal": {
+  "title": "The ideal gas law",
+  "card": [
+   "The ideal gas law is PV = nRT. It links the pressure, volume, amount and temperature of a gas in one equation.",
+   "P is pressure, V is volume, n is moles and T is temperature in kelvin. R is the gas constant, 8.314 J K⁻¹ mol⁻¹, when P is in kilopascals (kPa) and V is in litres (L).",
+   "To find one quantity, rearrange the equation. For example, n = PV ÷ RT. Convert °C to K by adding 273.15 before you calculate.",
+   "An ideal gas is a model in which the particles take up no space and do not attract each other. Real gases follow it closely at low pressure and high temperature."
+  ],
+  "remember": "PV = nRT: keep T in kelvin, and use R with kPa and litres.",
+  "a": {
+   "q": "A 3.00 L container holds a gas at 200 kPa and 27°C. How many moles of gas are in it? (R = 8.314)",
+   "opts": [
+    "0.240 mol",
+    "2.67 mol",
+    "4.16 mol",
+    "240 mol"
+   ],
+   "why": "n = PV ÷ RT = (200 × 3.00) ÷ (8.314 × 300.15) = 0.240 mol. The answer 2.67 mol comes from using 27 instead of 300.15, but T must be in kelvin.",
+   "clue": "Rearrange for n, and convert the temperature first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sealed flask holds 0.100 mol of gas at 25°C and a volume of 2.00 L. Which expression gives its pressure in kPa? (R = 8.314)",
+   "opts": [
+    "P = 0.100 × 8.314 × 298.15 ÷ 2.00",
+    "P = 0.100 × 8.314 × 25 ÷ 2.00",
+    "P = 2.00 × 8.314 × 298.15 ÷ 0.100",
+    "P = 0.100 × 298.15 ÷ (8.314 × 2.00)"
+   ],
+   "why": "Rearranging gives P = nRT ÷ V, with T converted to 298.15 K. Using 25 directly is wrong because temperature must be in kelvin.",
+   "clue": "Rearrange for P, then check the temperature unit."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "0.240 mol",
+    "also_right": []
+   },
+   "b": {
+    "best": "P = 0.100 × 8.314 × 298.15 ÷ 2.00",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "R is given as 8.314 J K⁻¹ mol⁻¹ 'when P is in kPa and V is in L'. J K⁻¹ mol⁻¹ goes with pascals and cubic metres. With kPa and litres the unit should be L kPa K⁻¹ mol⁻¹. The number is the same, but the unit label is wrong for the units stated."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are correct and have one right answer each (0.240 mol, and P = 0.100 × 8.314 × 298.15 ÷ 2.00). The card gives R the unit J K⁻¹ mol⁻¹ while pairing it with kPa and litres; it should read 8.314 L kPa K⁻¹ mol⁻¹."
+  },
+  "flags": [
+   "Card, fact: R is given as 8.314 J K⁻¹ mol⁻¹ 'when P is in kPa and V is in L'. J K⁻¹ mol⁻¹ goes with pascals and cubic metres. With kPa and litres the unit should be L kPa K⁻¹ mol⁻¹. The number is the same, but the unit label is wrong for the units stated."
+  ]
+ },
+ "final": {
+  "title": "The ideal gas law",
+  "card": [
+   "The ideal gas law is PV = nRT. It links the pressure, volume, amount and temperature of a gas in one equation.",
+   "P is pressure, V is volume, n is moles and T is temperature in kelvin. R is the gas constant, 8.314 J K⁻¹ mol⁻¹, when P is in kilopascals (kPa) and V is in litres (L).",
+   "To find one quantity, rearrange the equation. For example, n = PV ÷ RT. Convert °C to K by adding 273.15 before you calculate.",
+   "An ideal gas is a model in which the particles take up no space and do not attract each other. Real gases follow it closely at low pressure and high temperature."
+  ],
+  "remember": "PV = nRT: keep T in kelvin, and use R with kPa and litres.",
+  "a": {
+   "q": "A 3.00 L container holds a gas at 200 kPa and 27°C. How many moles of gas are in it? (R = 8.314)",
+   "opts": [
+    "0.240 mol",
+    "2.67 mol",
+    "4.16 mol",
+    "240 mol"
+   ],
+   "why": "n = PV ÷ RT = (200 × 3.00) ÷ (8.314 × 300.15) = 0.240 mol. The answer 2.67 mol comes from using 27 instead of 300.15, but T must be in kelvin.",
+   "clue": "Rearrange for n, and convert the temperature first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sealed flask holds 0.100 mol of gas at 25°C and a volume of 2.00 L. Which expression gives its pressure in kPa? (R = 8.314)",
+   "opts": [
+    "P = 0.100 × 8.314 × 298.15 ÷ 2.00",
+    "P = 0.100 × 8.314 × 25 ÷ 2.00",
+    "P = 2.00 × 8.314 × 298.15 ÷ 0.100",
+    "P = 0.100 × 298.15 ÷ (8.314 × 2.00)"
+   ],
+   "why": "Rearranging gives P = nRT ÷ V, with T converted to 298.15 K. Using 25 directly is wrong because temperature must be in kelvin.",
+   "clue": "Rearrange for P, then check the temperature unit."
+  }
+ },
+ "cleared_by": "owner"
+}

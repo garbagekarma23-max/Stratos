@@ -1,0 +1,190 @@
+{
+ "id": "mat-discrete-probability-distributions",
+ "title": "Discrete probability distributions",
+ "brief": "fb96087cce95",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:11Z write: done",
+  "2026-10-27T01:00:06Z check: flagged",
+  "2026-10-27T01:08:33Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00608,
+  "check": 0.00792,
+  "fix": 0.02489,
+  "recheck": 0.01065
+ },
+ "draft": {
+  "title": "Discrete probability distributions",
+  "card": [
+   "A discrete random variable X takes separate values, such as 0, 1, 2, 3. A probability distribution lists each value x with its probability P(X = x).",
+   "Every probability is between 0 and 1. All the probabilities in the table must add to 1, because one of the values must happen.",
+   "To find a missing probability, subtract the others from 1. Example: P(1) = 0.3, P(2) = 0.5 and P(3) = k. Then k = 1 − 0.3 − 0.5 = 0.2.",
+   "To find the chance of a group of values, add their probabilities. In the example, P(X ≥ 2) = 0.5 + 0.2 = 0.7."
+  ],
+  "remember": "List every value with its probability, and the probabilities add to 1.",
+  "a": {
+   "q": "A random variable X has P(1) = 0.2, P(2) = 0.35, P(3) = k and P(4) = 0.25. What is k?",
+   "opts": [
+    "0.2",
+    "0.8",
+    "0.45",
+    "0.25"
+   ],
+   "why": "The probabilities add to 1, so k = 1 − (0.2 + 0.35 + 0.25) = 1 − 0.8 = 0.2. The value 0.8 is the sum of the known probabilities, not the missing one.",
+   "clue": "Subtract the known probabilities from 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's bus is late X minutes, where P(0) = 0.4, P(5) = 0.3, P(10) = 0.2 and P(15) = 0.1. What is P(X ≥ 5)?",
+   "opts": [
+    "0.6",
+    "0.3",
+    "0.4",
+    "0.9"
+   ],
+   "why": "Add the probabilities for 5, 10 and 15: 0.3 + 0.2 + 0.1 = 0.6. Check: 1 − P(0) = 1 − 0.4 = 0.6. The value 0.9 wrongly leaves out P(0) and counts only part of the rest.",
+   "clue": "At least 5 means 5 or more. Add those probabilities."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.2",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) misdescribes the 0.9 distractor. 0.9 = 0.4 + 0.3 + 0.2, so it wrongly includes P(0) and leaves out P(15). It does not leave out P(0)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with answers 0.2 and 0.6, and the card is sound. Why (b) wrongly explains the 0.9 distractor: that error comes from including P(0) and leaving out P(15), not from leaving out P(0)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) misdescribes the 0.9 distractor. 0.9 = 0.4 + 0.3 + 0.2, so it wrongly includes P(0) and leaves out P(15). It does not leave out P(0)."
+ ],
+ "proposal": {
+  "title": "Discrete probability distributions",
+  "card": [
+   "A discrete random variable X takes separate values, such as 0, 1, 2, 3. A probability distribution lists each value x with its probability P(X = x).",
+   "Every probability is between 0 and 1. All the probabilities in the table must add to 1, because one of the values must happen.",
+   "To find a missing probability, subtract the others from 1. Example: P(1) = 0.3, P(2) = 0.5 and P(3) = k. Then k = 1 − 0.3 − 0.5 = 0.2.",
+   "To find the chance of a group of values, add their probabilities. In the example, P(X ≥ 2) = 0.5 + 0.2 = 0.7."
+  ],
+  "remember": "List every value with its probability, and the probabilities add to 1.",
+  "a": {
+   "q": "A random variable X has P(1) = 0.2, P(2) = 0.35, P(3) = k and P(4) = 0.25. What is k?",
+   "opts": [
+    "0.2",
+    "0.8",
+    "0.45",
+    "0.25"
+   ],
+   "why": "The probabilities add to 1, so k = 1 − (0.2 + 0.35 + 0.25) = 1 − 0.8 = 0.2. The value 0.8 is the sum of the known probabilities, not the missing one.",
+   "clue": "Subtract the known probabilities from 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's bus is late X minutes, where P(0) = 0.4, P(5) = 0.3, P(10) = 0.2 and P(15) = 0.1. What is P(X ≥ 5)?",
+   "opts": [
+    "0.6",
+    "0.3",
+    "0.4",
+    "0.9"
+   ],
+   "why": "Add the probabilities for 5, 10 and 15: 0.3 + 0.2 + 0.1 = 0.6. Check: 1 − P(0) = 1 − 0.4 = 0.6. The value 0.9 adds the probabilities for 0, 5 and 10, so it wrongly includes P(0) and leaves out P(15).",
+   "clue": "At least 5 means 5 or more. Add those probabilities."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "0.2",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) misdescribes the 0.9 distractor. 0.9 = 0.4 + 0.3 + 0.2, so it wrongly includes P(0) and leaves out P(15). It does not leave out P(0)."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) misdescribes the 0.9 distractor. 0.9 = 0.4 + 0.3 + 0.2, so it wrongly includes P(0) and leaves out P(15). It does not leave out P(0)."
+  ]
+ },
+ "final": {
+  "title": "Discrete probability distributions",
+  "card": [
+   "A discrete random variable X takes separate values, such as 0, 1, 2, 3. A probability distribution lists each value x with its probability P(X = x).",
+   "Every probability is between 0 and 1. All the probabilities in the table must add to 1, because one of the values must happen.",
+   "To find a missing probability, subtract the others from 1. Example: P(1) = 0.3, P(2) = 0.5 and P(3) = k. Then k = 1 − 0.3 − 0.5 = 0.2.",
+   "To find the chance of a group of values, add their probabilities. In the example, P(X ≥ 2) = 0.5 + 0.2 = 0.7."
+  ],
+  "remember": "List every value with its probability, and the probabilities add to 1.",
+  "a": {
+   "q": "A random variable X has P(1) = 0.2, P(2) = 0.35, P(3) = k and P(4) = 0.25. What is k?",
+   "opts": [
+    "0.2",
+    "0.8",
+    "0.45",
+    "0.25"
+   ],
+   "why": "The probabilities add to 1, so k = 1 − (0.2 + 0.35 + 0.25) = 1 − 0.8 = 0.2. The value 0.8 is the sum of the known probabilities, not the missing one.",
+   "clue": "Subtract the known probabilities from 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ava's bus is late X minutes, where P(0) = 0.4, P(5) = 0.3, P(10) = 0.2 and P(15) = 0.1. What is P(X ≥ 5)?",
+   "opts": [
+    "0.6",
+    "0.3",
+    "0.4",
+    "0.9"
+   ],
+   "why": "Add the probabilities for 5, 10 and 15: 0.3 + 0.2 + 0.1 = 0.6. Check: 1 − P(0) = 1 − 0.4 = 0.6. The value 0.9 adds the probabilities for 0, 5 and 10, so it wrongly includes P(0) and leaves out P(15).",
+   "clue": "At least 5 means 5 or more. Add those probabilities."
+  }
+ },
+ "cleared_by": "recheck"
+}

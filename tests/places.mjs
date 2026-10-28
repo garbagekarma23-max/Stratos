@@ -4,6 +4,7 @@
 // Nothing may be sent and the location feature may never be asked for.
 // Run: node places.mjs. Pass "shots" to also save each step at 390 by 844, light and dark, to tests/shots/.
 import { open, shot, saved, check } from './lib.mjs';
+import { loadContent } from '../content/load.mjs';
 const R = [], errsAll = [], shots = process.argv[2] === 'shots';
 const text = (p, sel) => p.locator(sel).first().textContent();
 const COMING = c => 'Courses for ' + c + ' are coming. The international courses below work anywhere.';
@@ -174,7 +175,11 @@ for (const [place, own, line] of [
   await p.click('.subject'); await p.waitForTimeout(100);
   check((await headings(p)).join('|') === 'New South Wales|International courses', 'NSW shows its own courses, then the international ones', R);
   const names = await p.locator('#sheetBody .pick:not(.place) .t').allTextContents();
-  check(names[0] === 'Economics, Year 12: The Global EconomyHSC, The Global Economy' && names[1] === 'Maths, Year 11HSC, Equations' && names[2] === 'Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.' && names[3].startsWith('Economics, AS yearInternational A Level (Edexcel)') && names.length === 4, 'each row has a plain name and the exam it leads to', R);
+  // The made NSW courses come between Maths and the international ones, each with its name, exam line and note.
+  // They are read from the content files, so a new course needs no change here.
+  const made = loadContent().MADE_COURSES.filter(c => c.place === 'nsw').map(c => c.row.name + c.row.about + c.note);
+  check(names[0] === 'Economics, Year 12: The Global EconomyHSC, The Global Economy' && names[1] === 'Maths, Year 11HSC, Equations' && made.includes('Business Studies, Year 11: Nature of businessHSC, Nature of businessFollows the NSW Business Studies syllabus. Not made or endorsed by NESA.') && made.every((m, i) => names[2 + i] === m) && names[2 + made.length].startsWith('Economics, AS yearInternational A Level (Edexcel)') && names.length === made.length + 3, 'each row has a plain name and the exam it leads to', R);
+  check(new Set(names).size === names.length, 'no two rows read the same', R);
   check((await row('eco').locator('.v').textContent()) === 'Open' && (await row('maths').locator('.v').textContent()) === 'Switch' && (await row('edexcel').locator('.v').textContent()) === 'Switch', 'the course open now says Open, the others Switch', R);
   check((await p.locator('#sheetBody .pick:disabled').count()) === 0 && !(await text(p, '#sheetBody')).includes('Soon'), 'there are no Soon rows', R);
   await p.click('#sheetClose'); await p.waitForTimeout(80);

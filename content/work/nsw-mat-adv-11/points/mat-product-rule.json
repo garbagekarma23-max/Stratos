@@ -1,0 +1,208 @@
+{
+ "id": "mat-product-rule",
+ "title": "The product rule",
+ "brief": "c14de86ae10d",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-28T11:49:40Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00504,
+  "check": 0.01412,
+  "fix": 0.01586,
+  "recheck": 0.01279
+ },
+ "draft": {
+  "title": "The product rule",
+  "card": [
+   "Use the product rule when a function is two factors multiplied together, such as x² sin x. Call the factors u and v.",
+   "The rule: if y = uv, then dy/dx = u'v + uv'. Differentiate one factor at a time and leave the other alone, then add.",
+   "Example: y = x³(2x + 5). Let u = x³ and v = 2x + 5, so u' = 3x² and v' = 2.",
+   "dy/dx = 3x²(2x + 5) + x³ × 2 = 6x³ + 15x² + 2x³ = 8x³ + 15x². Check by expanding first: y = 2x⁴ + 5x³, which gives 8x³ + 15x²."
+  ],
+  "remember": "Product rule: derivative of the first times the second, plus the first times the derivative of the second.",
+  "a": {
+   "q": "For y = x²(3x − 1), let u = x² and v = 3x − 1. Which expression is dy/dx?",
+   "opts": [
+    "2x(3x − 1) + x² × 3",
+    "2x × 3",
+    "2x(3x − 1) − x² × 3",
+    "2x × 3 + x² × 3"
+   ],
+   "why": "The product rule adds u'v and uv', so dy/dx = 2x(3x − 1) + 3x². Multiplying the two derivatives, 2x × 3, is the tempting mistake: the rule never multiplies u' by v'.",
+   "clue": "Differentiate one factor at a time, keep the other, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "What is the derivative of y = x⁴(x + 2) at x = 1?",
+   "opts": [
+    "14",
+    "5",
+    "12",
+    "10"
+   ],
+   "why": "u = x⁴, v = x + 2, so dy/dx = 4x³(x + 2) + x⁴ × 1. At x = 1 this is 4 × 3 + 1 = 13? Check: 4 × 1 × 3 = 12, plus 1 gives 13. Expanding y = x⁵ + 2x⁴ gives 5x⁴ + 8x³, which is 13 at x = 1.",
+   "clue": "Find dy/dx with the product rule, then substitute x = 1."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2x(3x − 1) + x² × 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "None of the options is correct. y = x⁴(x + 2) gives dy/dx = 4x³(x + 2) + x⁴ = 5x⁴ + 8x³, which equals 13 at x = 1, and 13 is not offered. The options are 14, 10, 12 and 5. 12 is the tempting error of dropping the uv' term. The 'best' recorded here is only a placeholder, because no option can be defended."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why reads like unfinished working: '4 × 3 + 1 = 13? Check: ...'. It also names 13, which is not among the options, so it contradicts the question as written."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has no correct option: the derivative at x = 1 is 13, which is not offered, and its why contains unfinished, question-marked working. Question a and the card are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “12”, not the writer’s answer “14”.",
+  "Question b, fact: None of the options is correct. y = x⁴(x + 2) gives dy/dx = 4x³(x + 2) + x⁴ = 5x⁴ + 8x³, which equals 13 at x = 1, and 13 is not offered. The options are 14, 10, 12 and 5. 12 is the tempting error of dropping the uv' term. The 'best' recorded here is only a placeholder, because no option can be defended.",
+  "Question b, other: The why reads like unfinished working: '4 × 3 + 1 = 13? Check: ...'. It also names 13, which is not among the options, so it contradicts the question as written."
+ ],
+ "proposal": {
+  "title": "The product rule",
+  "card": [
+   "Use the product rule when a function is two factors multiplied together, such as x²(4x − 1). Call the factors u and v.",
+   "The rule: if y = uv, then dy/dx = u'v + uv'. Differentiate one factor at a time and leave the other alone, then add.",
+   "Example: y = x³(2x + 5). Let u = x³ and v = 2x + 5, so u' = 3x² and v' = 2.",
+   "dy/dx = 3x²(2x + 5) + x³ × 2 = 6x³ + 15x² + 2x³ = 8x³ + 15x². Check by expanding first: y = 2x⁴ + 5x³, which gives 8x³ + 15x²."
+  ],
+  "remember": "Product rule: derivative of the first times the second, plus the first times the derivative of the second.",
+  "a": {
+   "q": "For y = x²(3x − 1), let u = x² and v = 3x − 1. Which expression is dy/dx?",
+   "opts": [
+    "2x(3x − 1) + x² × 3",
+    "2x × 3",
+    "2x(3x − 1) − x² × 3",
+    "2x × 3 + x² × 3"
+   ],
+   "why": "The product rule adds u'v and uv', so dy/dx = 2x(3x − 1) + 3x². Multiplying the two derivatives, 2x × 3, is the tempting mistake: the rule never multiplies u' by v'.",
+   "clue": "Differentiate one factor at a time, keep the other, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "What is the derivative of y = x⁴(x + 2) at x = 1?",
+   "opts": [
+    "13",
+    "12",
+    "11",
+    "4"
+   ],
+   "why": "With u = x⁴ and v = x + 2, dy/dx = 4x³(x + 2) + x⁴ × 1, which is 4 × 3 + 1 = 13 at x = 1. Expanding first gives y = x⁵ + 2x⁴, so dy/dx = 5x⁴ + 8x³, also 13. The answer 12 comes from leaving out the uv' term.",
+   "clue": "Find dy/dx with the product rule, then substitute x = 1."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2x(3x − 1) + x² × 3",
+    "also_right": []
+   },
+   "b": {
+    "best": "13",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example, both questions and both explanations check out: the derivative in (a) is 2x(3x − 1) + 3x², and the derivative in (b) is 13 at x = 1."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "None of the options is correct. y = x⁴(x + 2) gives dy/dx = 4x³(x + 2) + x⁴ = 5x⁴ + 8x³, which equals 13 at x = 1, and 13 is not offered. The options are 14, 10, 12 and 5. 12 is the tempting error of dropping the uv' term. The 'best' recorded here is only a placeholder, because no option can be defended."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why reads like unfinished working: '4 × 3 + 1 = 13? Check: ...'. It also names 13, which is not among the options, so it contradicts the question as written."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “12”, not the writer’s answer “14”.",
+   "Question b, fact: None of the options is correct. y = x⁴(x + 2) gives dy/dx = 4x³(x + 2) + x⁴ = 5x⁴ + 8x³, which equals 13 at x = 1, and 13 is not offered. The options are 14, 10, 12 and 5. 12 is the tempting error of dropping the uv' term. The 'best' recorded here is only a placeholder, because no option can be defended.",
+   "Question b, other: The why reads like unfinished working: '4 × 3 + 1 = 13? Check: ...'. It also names 13, which is not among the options, so it contradicts the question as written."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "The product rule",
+  "card": [
+   "Use the product rule when a function is two factors multiplied together, such as x²(4x − 1). Call the factors u and v.",
+   "The rule: if y = uv, then dy/dx = u'v + uv'. Differentiate one factor at a time and leave the other alone, then add.",
+   "Example: y = x³(2x + 5). Let u = x³ and v = 2x + 5, so u' = 3x² and v' = 2.",
+   "dy/dx = 3x²(2x + 5) + x³ × 2 = 6x³ + 15x² + 2x³ = 8x³ + 15x². Check by expanding first: y = 2x⁴ + 5x³, which gives 8x³ + 15x²."
+  ],
+  "remember": "Product rule: derivative of the first times the second, plus the first times the derivative of the second.",
+  "a": {
+   "q": "For y = x²(3x − 1), let u = x² and v = 3x − 1. Which expression is dy/dx?",
+   "opts": [
+    "2x(3x − 1) + x² × 3",
+    "2x × 3",
+    "2x(3x − 1) − x² × 3",
+    "2x × 3 + x² × 3"
+   ],
+   "why": "The product rule adds u'v and uv', so dy/dx = 2x(3x − 1) + 3x². Multiplying the two derivatives, 2x × 3, is the tempting mistake: the rule never multiplies u' by v'.",
+   "clue": "Differentiate one factor at a time, keep the other, then add."
+  },
+  "b": {
+   "d": 2,
+   "q": "What is the derivative of y = x⁴(x + 2) at x = 1?",
+   "opts": [
+    "13",
+    "12",
+    "11",
+    "4"
+   ],
+   "why": "With u = x⁴ and v = x + 2, dy/dx = 4x³(x + 2) + x⁴ × 1, which is 4 × 3 + 1 = 13 at x = 1. Expanding first gives y = x⁵ + 2x⁴, so dy/dx = 5x⁴ + 8x³, also 13. The answer 12 comes from leaving out the uv' term.",
+   "clue": "Find dy/dx with the product rule, then substitute x = 1."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,231 @@
+{
+ "id": "chem-gas-laws",
+ "title": "Gas laws",
+ "brief": "63c258dbf20c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:58Z new, write",
+  "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:59Z fix: suggested",
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00499,
+  "check": 0.01393,
+  "fix": 0.01462,
+  "recheck": 0.01314
+ },
+ "draft": {
+  "title": "Gas laws",
+  "card": [
+   [
+    "Boyle's law",
+    "At constant temperature, the pressure of a fixed amount of gas is inversely proportional to its volume. P₁V₁ = P₂V₂."
+   ],
+   [
+    "Charles's law",
+    "At constant pressure, the volume of a fixed amount of gas is directly proportional to its temperature in kelvin. V₁/T₁ = V₂/T₂."
+   ],
+   [
+    "Gay-Lussac's law",
+    "At constant volume, the pressure of a fixed amount of gas is directly proportional to its temperature in kelvin. P₁/T₁ = P₂/T₂."
+   ],
+   "Always convert temperature to kelvin first: K = °C + 273.15. Celsius cannot be used, because 0°C is not zero energy."
+  ],
+  "remember": "Each law holds one quantity constant. Temperature must be in kelvin.",
+  "a": {
+   "q": "A sealed syringe of air is pushed in at constant temperature, halving its volume. What happens to the gas pressure?",
+   "opts": [
+    "It doubles",
+    "It halves",
+    "It stays the same",
+    "It increases by a factor of four"
+   ],
+   "why": "At constant temperature, pressure and volume are inversely proportional (Boyle's law). Halving the volume doubles the pressure. Pressure does not halve, because that would be a direct relationship.",
+   "clue": "Pressure and volume move in opposite directions."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rigid sealed can of gas at 27°C is heated to 127°C. The gas pressure was 100 kPa at 27°C. What is it at 127°C?",
+   "opts": [
+    "About 133 kPa",
+    "About 470 kPa",
+    "About 100 kPa",
+    "About 75 kPa"
+   ],
+   "why": "The volume is constant, so use P₁/T₁ = P₂/T₂ with kelvin: 300 K and 400 K. P₂ = 100 × 400 ÷ 300 ≈ 133 kPa. Using 27 and 127 directly gives about 470 kPa, which is wrong because Celsius cannot be used.",
+   "clue": "Convert both temperatures to kelvin before you divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It doubles",
+   "also_right": []
+  },
+  "b": {
+   "best": "About 133 kPa",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Celsius cannot be used, because 0°C is not zero energy\" is imprecise. It implies that 0 K is zero energy, but particles keep a minimum (zero-point) energy even at absolute zero. The real reason is that the laws need a scale whose zero is absolute zero. Better: \"because 0°C is not absolute zero.\""
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Each law holds one quantity constant\" overlooks that the card also requires a fixed amount of gas in every law, so two quantities are held constant. Better: \"Each law keeps the amount of gas and one other quantity constant.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct: halving the volume doubles the pressure, and the can reaches about 133 kPa. The card's reason for using kelvin (\"0°C is not zero energy\") is imprecise and should say absolute zero, and the remember line's \"one quantity constant\" overlooks the fixed amount of gas."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Celsius cannot be used, because 0°C is not zero energy\" is imprecise. It implies that 0 K is zero energy, but particles keep a minimum (zero-point) energy even at absolute zero. The real reason is that the laws need a scale whose zero is absolute zero. Better: \"because 0°C is not absolute zero.\"",
+  "Remember, wording: \"Each law holds one quantity constant\" overlooks that the card also requires a fixed amount of gas in every law, so two quantities are held constant. Better: \"Each law keeps the amount of gas and one other quantity constant.\""
+ ],
+ "proposal": {
+  "title": "Gas laws",
+  "card": [
+   [
+    "Boyle's law",
+    "At constant temperature, the pressure of a fixed amount of gas is inversely proportional to its volume. P₁V₁ = P₂V₂."
+   ],
+   [
+    "Charles's law",
+    "At constant pressure, the volume of a fixed amount of gas is directly proportional to its temperature in kelvin. V₁/T₁ = V₂/T₂."
+   ],
+   [
+    "Gay-Lussac's law",
+    "At constant volume, the pressure of a fixed amount of gas is directly proportional to its temperature in kelvin. P₁/T₁ = P₂/T₂."
+   ],
+   "Always convert temperature to kelvin first: K = °C + 273.15. Celsius cannot be used, because 0°C is not absolute zero."
+  ],
+  "remember": "Each law keeps the amount of gas and one other quantity constant. Temperature must be in kelvin.",
+  "a": {
+   "q": "A sealed syringe of air is pushed in at constant temperature, halving its volume. What happens to the gas pressure?",
+   "opts": [
+    "It doubles",
+    "It halves",
+    "It stays the same",
+    "It quadruples"
+   ],
+   "why": "At constant temperature, pressure and volume are inversely proportional (Boyle's law). Halving the volume doubles the pressure. Pressure does not halve, because that would be a direct relationship.",
+   "clue": "Pressure and volume move in opposite directions."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rigid sealed can of gas at 27°C is heated to 127°C. The gas pressure was 100 kPa at 27°C. What is it at 127°C?",
+   "opts": [
+    "About 133 kPa",
+    "About 470 kPa",
+    "About 100 kPa",
+    "About 75 kPa"
+   ],
+   "why": "The volume is constant, so use P₁/T₁ = P₂/T₂ with kelvin: about 300 K and 400 K. P₂ = 100 × 400 ÷ 300 ≈ 133 kPa. Using 27 and 127 directly gives about 470 kPa, which is wrong because Celsius cannot be used.",
+   "clue": "Convert both temperatures to kelvin before you divide."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:40Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It doubles",
+    "also_right": []
+   },
+   "b": {
+    "best": "About 133 kPa",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The three gas laws, the kelvin conversion and both worked answers (pressure doubles; 100 × 400/300 ≈ 133 kPa) are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:40Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Celsius cannot be used, because 0°C is not zero energy\" is imprecise. It implies that 0 K is zero energy, but particles keep a minimum (zero-point) energy even at absolute zero. The real reason is that the laws need a scale whose zero is absolute zero. Better: \"because 0°C is not absolute zero.\""
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Each law holds one quantity constant\" overlooks that the card also requires a fixed amount of gas in every law, so two quantities are held constant. Better: \"Each law keeps the amount of gas and one other quantity constant.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Celsius cannot be used, because 0°C is not zero energy\" is imprecise. It implies that 0 K is zero energy, but particles keep a minimum (zero-point) energy even at absolute zero. The real reason is that the laws need a scale whose zero is absolute zero. Better: \"because 0°C is not absolute zero.\"",
+   "Remember, wording: \"Each law holds one quantity constant\" overlooks that the card also requires a fixed amount of gas in every law, so two quantities are held constant. Better: \"Each law keeps the amount of gas and one other quantity constant.\""
+  ]
+ },
+ "final": {
+  "title": "Gas laws",
+  "card": [
+   [
+    "Boyle's law",
+    "At constant temperature, the pressure of a fixed amount of gas is inversely proportional to its volume. P₁V₁ = P₂V₂."
+   ],
+   [
+    "Charles's law",
+    "At constant pressure, the volume of a fixed amount of gas is directly proportional to its temperature in kelvin. V₁/T₁ = V₂/T₂."
+   ],
+   [
+    "Gay-Lussac's law",
+    "At constant volume, the pressure of a fixed amount of gas is directly proportional to its temperature in kelvin. P₁/T₁ = P₂/T₂."
+   ],
+   "Always convert temperature to kelvin first: K = °C + 273.15. Celsius cannot be used, because 0°C is not absolute zero."
+  ],
+  "remember": "Each law keeps the amount of gas and one other quantity constant. Temperature must be in kelvin.",
+  "a": {
+   "q": "A sealed syringe of air is pushed in at constant temperature, halving its volume. What happens to the gas pressure?",
+   "opts": [
+    "It doubles",
+    "It halves",
+    "It stays the same",
+    "It quadruples"
+   ],
+   "why": "At constant temperature, pressure and volume are inversely proportional (Boyle's law). Halving the volume doubles the pressure. Pressure does not halve, because that would be a direct relationship.",
+   "clue": "Pressure and volume move in opposite directions."
+  },
+  "b": {
+   "d": 3,
+   "q": "A rigid sealed can of gas at 27°C is heated to 127°C. The gas pressure was 100 kPa at 27°C. What is it at 127°C?",
+   "opts": [
+    "About 133 kPa",
+    "About 470 kPa",
+    "About 100 kPa",
+    "About 75 kPa"
+   ],
+   "why": "The volume is constant, so use P₁/T₁ = P₂/T₂ with kelvin: about 300 K and 400 K. P₂ = 100 × 400 ÷ 300 ≈ 133 kPa. Using 27 and 127 directly gives about 470 kPa, which is wrong because Celsius cannot be used.",
+   "clue": "Convert both temperatures to kelvin before you divide."
+  }
+ },
+ "cleared_by": "recheck"
+}

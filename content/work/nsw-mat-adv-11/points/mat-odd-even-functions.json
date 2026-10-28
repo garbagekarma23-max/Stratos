@@ -1,0 +1,199 @@
+{
+ "id": "mat-odd-even-functions",
+ "title": "Odd and even functions",
+ "brief": "d66d71a05cd1",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:55Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:32Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (remember other, b wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00498,
+  "check": 0.0105,
+  "fix": 0.01445
+ },
+ "draft": {
+  "title": "Odd and even functions",
+  "card": [
+   [
+    "Even",
+    "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+   ],
+   [
+    "Odd",
+    "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+   ],
+   "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
+   "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+  ],
+  "remember": "Put in -x. The same result means even. The opposite result means odd.",
+  "a": {
+   "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
+   "opts": [
+    "x² + 5, so f is even",
+    "-x² - 5, so f is odd",
+    "x² - 5, so f is neither odd nor even",
+    "-x² + 5, so f is odd"
+   ],
+   "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+   "clue": "Replace x with -x, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "f(x) = x³ + 2. Which statement is correct?",
+   "opts": [
+    "f is neither odd nor even",
+    "f is odd, because x³ is odd",
+    "f is even, because 2 is a constant",
+    "f is both odd and even"
+   ],
+   "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+   "clue": "Work out both f(-x) and -f(x), and compare them with each other."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x² + 5, so f is even",
+   "also_right": []
+  },
+  "b": {
+   "best": "f is neither odd nor even",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line names only the even and odd outcomes and leaves out the 'neither' case that the card teaches, so the split looks neater than the card's. A student could come away thinking every function is either odd or even, which is exactly the trap in question b."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says to work out f(-x) and -f(x) and 'compare them with each other'. That covers only the odd test. Checking 'neither' also needs f(-x) compared with f(x), so the clue is incomplete and slightly confusing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. The remember line leaves out the 'neither' case that question b tests, and question b's clue mentions only the comparison with -f(x), not the one with f(x)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line names only the even and odd outcomes and leaves out the 'neither' case that the card teaches, so the split looks neater than the card's. A student could come away thinking every function is either odd or even, which is exactly the trap in question b.",
+  "Question b, wording: The clue says to work out f(-x) and -f(x) and 'compare them with each other'. That covers only the odd test. Checking 'neither' also needs f(-x) compared with f(x), so the clue is incomplete and slightly confusing."
+ ],
+ "proposal": {
+  "title": "Odd and even functions",
+  "card": [
+   [
+    "Even",
+    "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+   ],
+   [
+    "Odd",
+    "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+   ],
+   "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
+   "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+  ],
+  "remember": "Put in -x. Equal to f(x) means even, equal to -f(x) means odd, and matching neither means neither.",
+  "a": {
+   "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
+   "opts": [
+    "x² + 5, so f is even",
+    "-x² - 5, so f is odd",
+    "x² - 5, so f is neither odd nor even",
+    "-x² + 5, so f is odd"
+   ],
+   "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+   "clue": "Replace x with -x, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "f(x) = x³ + 2. Which statement is correct?",
+   "opts": [
+    "f is neither odd nor even",
+    "f is odd, because x³ is odd",
+    "f is even, because 2 is a constant",
+    "f is both odd and even"
+   ],
+   "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+   "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line names only the even and odd outcomes and leaves out the 'neither' case that the card teaches, so the split looks neater than the card's. A student could come away thinking every function is either odd or even, which is exactly the trap in question b."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says to work out f(-x) and -f(x) and 'compare them with each other'. That covers only the odd test. Checking 'neither' also needs f(-x) compared with f(x), so the clue is incomplete and slightly confusing."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line names only the even and odd outcomes and leaves out the 'neither' case that the card teaches, so the split looks neater than the card's. A student could come away thinking every function is either odd or even, which is exactly the trap in question b.",
+   "Question b, wording: The clue says to work out f(-x) and -f(x) and 'compare them with each other'. That covers only the odd test. Checking 'neither' also needs f(-x) compared with f(x), so the clue is incomplete and slightly confusing."
+  ]
+ },
+ "final": {
+  "title": "Odd and even functions",
+  "card": [
+   [
+    "Even",
+    "f(-x) = f(x) for every x in the domain. The graph is symmetric in the y-axis, so the left side mirrors the right side."
+   ],
+   [
+    "Odd",
+    "f(-x) = -f(x) for every x in the domain. The graph has point symmetry about the origin, so turning it half a turn about the origin leaves it unchanged."
+   ],
+   "To test a function, replace x with -x and simplify. Compare the result with f(x) and with -f(x). If it matches neither, the function is neither odd nor even.",
+   "Example: f(x) = x³ + x. Then f(-x) = (-x)³ + (-x) = -x³ - x = -(x³ + x) = -f(x), so f is odd."
+  ],
+  "remember": "Put in -x. Equal to f(x) means even, equal to -f(x) means odd, and matching neither means neither.",
+  "a": {
+   "q": "f(x) = x² + 5. What is f(-x) in simplest form, and what type of function is f?",
+   "opts": [
+    "x² + 5, so f is even",
+    "-x² - 5, so f is odd",
+    "x² - 5, so f is neither odd nor even",
+    "-x² + 5, so f is odd"
+   ],
+   "why": "f(-x) = (-x)² + 5 = x² + 5, which equals f(x), so f is even. A common slip is to think the minus sign makes the whole rule negative, but squaring removes it.",
+   "clue": "Replace x with -x, then square it."
+  },
+  "b": {
+   "d": 3,
+   "q": "f(x) = x³ + 2. Which statement is correct?",
+   "opts": [
+    "f is neither odd nor even",
+    "f is odd, because x³ is odd",
+    "f is even, because 2 is a constant",
+    "f is both odd and even"
+   ],
+   "why": "f(-x) = (-x)³ + 2 = -x³ + 2. This is not equal to f(x) = x³ + 2, and it is not equal to -f(x) = -x³ - 2. So f is neither. The tempting answer is odd, but the constant 2 breaks the test.",
+   "clue": "Find f(-x), then compare it with both f(x) and -f(x)."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,189 @@
+{
+ "id": "mat-finding-rule-from-graph",
+ "title": "Finding a rule from a graph",
+ "brief": "ffa3bf4e4c79",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:56Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-10-28T11:49:41Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00552,
+  "check": 0.01178,
+  "fix": 0.0194
+ },
+ "draft": {
+  "title": "Finding a rule from a graph",
+  "card": [
+   "Match the graph to a family of rules first. A U shape with a turning point is a quadratic. A wave is a sine or cosine. Then use the graph's features to find each number.",
+   [
+    "Quadratic",
+    "With turning point (h, k), use y = a(x − h)² + k. Then put one other point into the rule to find a."
+   ],
+   [
+    "Sine wave",
+    "In y = A sin(nx) + c, the centre line is c = (max + min) ÷ 2. The amplitude is A = (max − min) ÷ 2. The period is 2π/n, so n = 2π ÷ period."
+   ],
+   "Example: a parabola has turning point (2, −3) and passes through (0, 1). Then y = a(x − 2)² − 3. Put in x = 0, y = 1: 1 = 4a − 3, so 4a = 4 and a = 1. The rule is y = (x − 2)² − 3."
+  ],
+  "remember": "Read the turning point or the max, min and period off the graph, then use one more point to finish the rule.",
+  "a": {
+   "q": "A parabola has turning point (1, 5) and passes through (3, 1). Which rule fits it?",
+   "opts": [
+    "y = −(x − 1)² + 5",
+    "y = (x − 1)² + 5",
+    "y = −(x + 1)² + 5",
+    "y = −(x − 1)² − 5"
+   ],
+   "why": "Start with y = a(x − 1)² + 5. Put in (3, 1): 1 = 4a + 5, so a = −1. The option with (x + 1) has the sign of the horizontal shift wrong, because the turning point is at x = 1.",
+   "clue": "Use the turning point first, then put in the other point to find a."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sine wave has a maximum of 7, a minimum of −1 and a period of π. Which rule fits it?",
+   "opts": [
+    "y = 4 sin(2x) + 3",
+    "y = 4 sin(x) + 3",
+    "y = 8 sin(2x) + 3",
+    "y = 4 sin(2x) + 7"
+   ],
+   "why": "Amplitude = (7 − (−1)) ÷ 2 = 4 and centre line = (7 + (−1)) ÷ 2 = 3. Also n = 2π ÷ π = 2. The option with 8 uses the full height from min to max, which is double the amplitude.",
+   "clue": "Half the gap between max and min is the amplitude. Midway between them is the centre line."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "y = −(x − 1)² + 5",
+   "also_right": []
+  },
+  "b": {
+   "best": "y = 4 sin(2x) + 3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'A U shape with a turning point is a quadratic', but a parabola can open downward (∩ shape), as the parabola in question a does. Saying 'a U or upside-down U shape' would avoid misleading students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have exactly one correct answer, and the explanations are right. The only issue is the card's 'U shape' description of quadratics, which leaves out downward-opening parabolas like the one in question a."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says 'A U shape with a turning point is a quadratic', but a parabola can open downward (∩ shape), as the parabola in question a does. Saying 'a U or upside-down U shape' would avoid misleading students."
+ ],
+ "proposal": {
+  "title": "Finding a rule from a graph",
+  "card": [
+   "Match the graph to a family first: a U or upside-down U shape is a quadratic, and a wave is a sine or cosine. Then use the graph's features to find each number.",
+   [
+    "Quadratic",
+    "With turning point (h, k), use y = a(x − h)² + k, then put one other point in to find a. A negative a gives an upside-down U."
+   ],
+   [
+    "Sine wave",
+    "In y = A sin(nx) + c, the centre line is c = (max + min) ÷ 2 and the amplitude is A = (max − min) ÷ 2. The period is 2π/n, so n = 2π ÷ period."
+   ],
+   "Example: a parabola has turning point (2, −3) and passes through (0, 1). Then y = a(x − 2)² − 3. Put in x = 0, y = 1: 1 = 4a − 3, so a = 1. The rule is y = (x − 2)² − 3."
+  ],
+  "remember": "Read the turning point or the max, min and period off the graph, then use one more point to finish the rule.",
+  "a": {
+   "q": "A parabola has turning point (1, 5) and passes through (3, 1). Which rule fits it?",
+   "opts": [
+    "y = −(x − 1)² + 5",
+    "y = (x − 1)² + 5",
+    "y = −(x + 1)² + 5",
+    "y = −(x − 1)² − 5"
+   ],
+   "why": "Start with y = a(x − 1)² + 5. Put in (3, 1): 1 = 4a + 5, so a = −1. The option with (x + 1) has the sign of the horizontal shift wrong, because the turning point is at x = 1.",
+   "clue": "Use the turning point first, then put in the other point to find a."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sine wave has a maximum of 7, a minimum of −1 and a period of π. Which rule fits it?",
+   "opts": [
+    "y = 4 sin(2x) + 3",
+    "y = 4 sin(x) + 3",
+    "y = 8 sin(2x) + 3",
+    "y = 4 sin(2x) + 7"
+   ],
+   "why": "Amplitude = (7 − (−1)) ÷ 2 = 4 and centre line = (7 + (−1)) ÷ 2 = 3. Also n = 2π ÷ π = 2. The option with 8 uses the full height from min to max, which is double the amplitude.",
+   "clue": "Half the gap between max and min is the amplitude. Midway between them is the centre line."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-28T08:46:50Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'A U shape with a turning point is a quadratic', but a parabola can open downward (∩ shape), as the parabola in question a does. Saying 'a U or upside-down U shape' would avoid misleading students."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says 'A U shape with a turning point is a quadratic', but a parabola can open downward (∩ shape), as the parabola in question a does. Saying 'a U or upside-down U shape' would avoid misleading students."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Finding a rule from a graph",
+  "card": [
+   "Match the graph to a family first: a U or upside-down U shape is a quadratic, and a wave is a sine or cosine. Then use the graph's features to find each number.",
+   [
+    "Quadratic",
+    "With turning point (h, k), use y = a(x − h)² + k, then put one other point in to find a. A negative a gives an upside-down U."
+   ],
+   [
+    "Sine wave",
+    "In y = A sin(nx) + c, the centre line is c = (max + min) ÷ 2 and the amplitude is A = (max − min) ÷ 2. The period is 2π/n, so n = 2π ÷ period."
+   ],
+   "Example: a parabola has turning point (2, −3) and passes through (0, 1). Then y = a(x − 2)² − 3. Put in x = 0, y = 1: 1 = 4a − 3, so a = 1. The rule is y = (x − 2)² − 3."
+  ],
+  "remember": "Read the turning point or the max, min and period off the graph, then use one more point to finish the rule.",
+  "a": {
+   "q": "A parabola has turning point (1, 5) and passes through (3, 1). Which rule fits it?",
+   "opts": [
+    "y = −(x − 1)² + 5",
+    "y = (x − 1)² + 5",
+    "y = −(x + 1)² + 5",
+    "y = −(x − 1)² − 5"
+   ],
+   "why": "Start with y = a(x − 1)² + 5. Put in (3, 1): 1 = 4a + 5, so a = −1. The option with (x + 1) has the sign of the horizontal shift wrong, because the turning point is at x = 1.",
+   "clue": "Use the turning point first, then put in the other point to find a."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sine wave has a maximum of 7, a minimum of −1 and a period of π. Which rule fits it?",
+   "opts": [
+    "y = 4 sin(2x) + 3",
+    "y = 4 sin(x) + 3",
+    "y = 8 sin(2x) + 3",
+    "y = 4 sin(2x) + 7"
+   ],
+   "why": "Amplitude = (7 − (−1)) ÷ 2 = 4 and centre line = (7 + (−1)) ÷ 2 = 3. Also n = 2π ÷ π = 2. The option with 8 uses the full height from min to max, which is double the amplitude.",
+   "clue": "Half the gap between max and min is the amplitude. Midway between them is the centre line."
+  }
+ },
+ "cleared_by": "owner"
+}

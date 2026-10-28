@@ -1,0 +1,220 @@
+{
+ "id": "mat-antiderivatives",
+ "title": "Antiderivatives",
+ "brief": "55efb327ad4f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:07Z write: done",
+  "2026-10-27T01:08:33Z check: flagged",
+  "2026-10-27T01:22:58Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.005,
+  "check": 0.01387,
+  "fix": 0.02585,
+  "recheck": 0.01192
+ },
+ "draft": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative undoes differentiation. If F'(x) = f(x), then F(x) is an antiderivative of f(x).",
+   "The power rule: the antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C, for n ≠ -1. Add 1 to the power, then divide by the new power.",
+   "C is the constant of integration. Constants vanish when we differentiate, so every antiderivative needs + C.",
+   "Example: the antiderivative of 6x² is 6 × x³/3 + C = 2x³ + C. Check by differentiating: 6x². A constant multiple stays in front, and terms are done one at a time."
+  ],
+  "remember": "Add 1 to the power, divide by the new power, then add C.",
+  "a": {
+   "q": "What is the antiderivative of 8x³?",
+   "opts": [
+    "2x⁴ + C",
+    "24x² + C",
+    "8x⁴ + C",
+    "2x⁴"
+   ],
+   "why": "Raise the power to 4, then divide by 4: 8x⁴/4 = 2x⁴, so the answer is 2x⁴ + C. Differentiating 2x⁴ gives 8x³, which confirms it. 24x² is the derivative, not the antiderivative.",
+   "clue": "Add 1 to the power, then divide by the new power."
+  },
+  "b": {
+   "d": 3,
+   "q": "A curve has gradient function dy/dx = 3x² − 4x and passes through (1, 5). What is its equation?",
+   "opts": [
+    "y = x³ − 2x² + 6",
+    "y = x³ − 2x² + 5",
+    "y = x³ − 4x² + 8",
+    "y = 6x − 4 + 3"
+   ],
+   "why": "The antiderivative is y = x³ − 2x² + C. Putting in (1, 5): 1 − 2 + C = 5, so C = 6. Using 5 as C without substituting is the tempting mistake.",
+   "clue": "Find the antiderivative first, then use the point to find C."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2x⁴ + C",
+   "also_right": [
+    "2x⁴"
+   ]
+  },
+  "b": {
+   "best": "y = x³ − 2x² + 6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'every antiderivative needs + C', but its own definition (F'(x) = f(x)) makes 2x⁴ an antiderivative of 8x³. + C is needed for the general antiderivative (all antiderivatives), not for each one. Better: 'the general antiderivative includes + C'."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Because of the card's definition, the option 2x⁴ is defensible as an antiderivative of 8x³. The question should ask for the general antiderivative, or that option should be replaced."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never shows how to use a given point to find C, or how to get a curve's equation from its gradient function. The question needs a skill the card does not teach. Add a worked example to the card, or change the question."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths is correct. However, the card's claim that 'every antiderivative needs + C' clashes with its own definition and makes the option 2x⁴ defensible in question a. Question b also needs a skill (finding C from a point) that the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “2x⁴” could also be right.",
+  "Card, wording: The card says 'every antiderivative needs + C', but its own definition (F'(x) = f(x)) makes 2x⁴ an antiderivative of 8x³. + C is needed for the general antiderivative (all antiderivatives), not for each one. Better: 'the general antiderivative includes + C'.",
+  "Question a, wording: Because of the card's definition, the option 2x⁴ is defensible as an antiderivative of 8x³. The question should ask for the general antiderivative, or that option should be replaced.",
+  "Question b, level: The card never shows how to use a given point to find C, or how to get a curve's equation from its gradient function. The question needs a skill the card does not teach. Add a worked example to the card, or change the question."
+ ],
+ "proposal": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative undoes differentiation. If F'(x) = f(x), then F(x) is an antiderivative of f(x).",
+   "Power rule: the antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C, for n ≠ -1. Add 1 to the power and divide by the new power, one term at a time, keeping any constant multiple in front.",
+   "C is the constant of integration. Constants vanish when we differentiate, so the general antiderivative, which covers all antiderivatives, includes + C.",
+   "Example: 6x² gives 6 × x³/3 + C = 2x³ + C. If a curve with gradient 6x² passes through (1, 7), then 7 = 2 + C, so C = 5 and y = 2x³ + 5."
+  ],
+  "remember": "Add 1 to the power, divide by the new power, add C, then use a known point to find C.",
+  "a": {
+   "q": "What is the general antiderivative of 8x³?",
+   "opts": [
+    "2x⁴ + C",
+    "24x² + C",
+    "8x⁴ + C",
+    "8x⁴/3 + C"
+   ],
+   "why": "Raise the power to 4, then divide by 4: 8x⁴/4 = 2x⁴, so the general antiderivative is 2x⁴ + C. Differentiating 2x⁴ gives 8x³, which confirms it. 24x² + C comes from differentiating instead, and 8x⁴/3 + C divides by the old power.",
+   "clue": "Divide by the new power, not the old one."
+  },
+  "b": {
+   "d": 3,
+   "q": "A curve has gradient function dy/dx = 3x² − 4x and passes through (1, 5). What is its equation?",
+   "opts": [
+    "y = x³ − 2x² + 6",
+    "y = x³ − 2x² + 5",
+    "y = x³ − 4x² + 8",
+    "y = x³ − 2x² + 4"
+   ],
+   "why": "Term by term, the antiderivative is y = x³ − 2x² + C. Putting in (1, 5): 1 − 2 + C = 5, so C = 6. Using 5 as C without substituting is the tempting mistake, and y = x³ − 4x² + 8 passes through the point but forgets to divide −4x² by 2.",
+   "clue": "Find the antiderivative first, then substitute the point to find C."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2x⁴ + C",
+    "also_right": []
+   },
+   "b": {
+    "best": "y = x³ − 2x² + 6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says 'every antiderivative needs + C', but its own definition (F'(x) = f(x)) makes 2x⁴ an antiderivative of 8x³. + C is needed for the general antiderivative (all antiderivatives), not for each one. Better: 'the general antiderivative includes + C'."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Because of the card's definition, the option 2x⁴ is defensible as an antiderivative of 8x³. The question should ask for the general antiderivative, or that option should be replaced."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never shows how to use a given point to find C, or how to get a curve's equation from its gradient function. The question needs a skill the card does not teach. Add a worked example to the card, or change the question."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “2x⁴” could also be right.",
+   "Card, wording: The card says 'every antiderivative needs + C', but its own definition (F'(x) = f(x)) makes 2x⁴ an antiderivative of 8x³. + C is needed for the general antiderivative (all antiderivatives), not for each one. Better: 'the general antiderivative includes + C'.",
+   "Question a, wording: Because of the card's definition, the option 2x⁴ is defensible as an antiderivative of 8x³. The question should ask for the general antiderivative, or that option should be replaced.",
+   "Question b, level: The card never shows how to use a given point to find C, or how to get a curve's equation from its gradient function. The question needs a skill the card does not teach. Add a worked example to the card, or change the question."
+  ]
+ },
+ "final": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative undoes differentiation. If F'(x) = f(x), then F(x) is an antiderivative of f(x).",
+   "Power rule: the antiderivative of xⁿ is xⁿ⁺¹/(n + 1) + C, for n ≠ -1. Add 1 to the power and divide by the new power, one term at a time, keeping any constant multiple in front.",
+   "C is the constant of integration. Constants vanish when we differentiate, so the general antiderivative, which covers all antiderivatives, includes + C.",
+   "Example: 6x² gives 6 × x³/3 + C = 2x³ + C. If a curve with gradient 6x² passes through (1, 7), then 7 = 2 + C, so C = 5 and y = 2x³ + 5."
+  ],
+  "remember": "Add 1 to the power, divide by the new power, add C, then use a known point to find C.",
+  "a": {
+   "q": "What is the general antiderivative of 8x³?",
+   "opts": [
+    "2x⁴ + C",
+    "24x² + C",
+    "8x⁴ + C",
+    "8x⁴/3 + C"
+   ],
+   "why": "Raise the power to 4, then divide by 4: 8x⁴/4 = 2x⁴, so the general antiderivative is 2x⁴ + C. Differentiating 2x⁴ gives 8x³, which confirms it. 24x² + C comes from differentiating instead, and 8x⁴/3 + C divides by the old power.",
+   "clue": "Divide by the new power, not the old one."
+  },
+  "b": {
+   "d": 3,
+   "q": "A curve has gradient function dy/dx = 3x² − 4x and passes through (1, 5). What is its equation?",
+   "opts": [
+    "y = x³ − 2x² + 6",
+    "y = x³ − 2x² + 5",
+    "y = x³ − 4x² + 8",
+    "y = x³ − 2x² + 4"
+   ],
+   "why": "Term by term, the antiderivative is y = x³ − 2x² + C. Putting in (1, 5): 1 − 2 + C = 5, so C = 6. Using 5 as C without substituting is the tempting mistake, and y = x³ − 4x² + 8 passes through the point but forgets to divide −4x² by 2.",
+   "clue": "Find the antiderivative first, then substitute the point to find C."
+  }
+ },
+ "cleared_by": "recheck"
+}

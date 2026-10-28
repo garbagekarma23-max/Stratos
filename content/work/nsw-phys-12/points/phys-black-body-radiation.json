@@ -1,0 +1,204 @@
+{
+ "id": "phys-black-body-radiation",
+ "title": "Black body radiation",
+ "brief": "8d0037da7741",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:30:03Z new, write",
+  "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:11Z write: done",
+  "2026-10-27T01:08:35Z check: flagged",
+  "2026-10-27T01:23:01Z fix: suggested",
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00513,
+  "check": 0.01181,
+  "fix": 0.01683,
+  "recheck": 0.00992
+ },
+ "draft": {
+  "title": "Black body radiation",
+  "card": [
+   "A black body is an ideal object that absorbs all radiation that hits it. When hot, it gives off a continuous spectrum of radiation that depends only on its temperature.",
+   "Wien's law says the peak wavelength is inversely proportional to the temperature in kelvin: λmax = b ÷ T. The constant b is about 2.9 × 10^-3 m K.",
+   "So as an object gets hotter, the peak moves to a shorter wavelength, and the object gives off more energy overall. A cooler object peaks at a longer wavelength.",
+   "Classical physics could not explain the shape of the spectrum. Planck fixed this by assuming energy is given off in separate packets, not in a smooth flow."
+  ],
+  "remember": "Hotter means a shorter peak wavelength. Planck explained the spectrum with energy in packets.",
+  "a": {
+   "q": "A metal bar is heated in a furnace and its temperature rises. What happens to the peak wavelength of the radiation it gives off?",
+   "opts": [
+    "It becomes shorter",
+    "It becomes longer",
+    "It stays the same",
+    "It becomes longer, but the energy given off falls"
+   ],
+   "why": "Wien's law says peak wavelength is inversely proportional to temperature, so a hotter bar peaks at a shorter wavelength. It is tempting to think the wavelength grows with the heat, but that reverses the relationship.",
+   "clue": "Wien's law links peak wavelength and temperature inversely."
+  },
+  "b": {
+   "d": 3,
+   "q": "Star X has a surface temperature of 6000 K. Star Y has a surface temperature of 3000 K. Both act as black bodies. How do their peak wavelengths compare?",
+   "opts": [
+    "Star X's is half of Star Y's",
+    "Star X's is double Star Y's",
+    "Star X's is the same as Star Y's",
+    "Star X's is a quarter of Star Y's"
+   ],
+   "why": "Peak wavelength is inversely proportional to temperature in kelvin. Star X is twice as hot, so its peak wavelength is half that of Star Y. Doubling the temperature does not double the wavelength, because the relationship is inverse.",
+   "clue": "Inversely proportional means doubling one halves the other."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It becomes shorter",
+   "also_right": []
+  },
+  "b": {
+   "best": "Star X's is half of Star Y's",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Inversely proportional means doubling one halves the other' all but gives the answer. The temperatures are plainly doubled (6000 K vs 3000 K), so the student only has to apply 'halves' without reasoning."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue states the inverse link between peak wavelength and temperature, which is exactly what the question tests. Once told 'inversely', a rising temperature leads straight to 'shorter', so the clue largely gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's facts are correct, including Wien's constant of about 2.9 × 10^-3 m K, and each question has one clear right answer. Both clues effectively give the answer away, especially question b's 'doubling one halves the other'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Inversely proportional means doubling one halves the other' all but gives the answer. The temperatures are plainly doubled (6000 K vs 3000 K), so the student only has to apply 'halves' without reasoning.",
+  "Question a, other: The clue states the inverse link between peak wavelength and temperature, which is exactly what the question tests. Once told 'inversely', a rising temperature leads straight to 'shorter', so the clue largely gives the answer away."
+ ],
+ "proposal": {
+  "title": "Black body radiation",
+  "card": [
+   "A black body is an ideal object that absorbs all radiation that hits it. When hot, it gives off a continuous spectrum of radiation that depends only on its temperature.",
+   "Wien's law says the peak wavelength is inversely proportional to the temperature in kelvin: λmax = b ÷ T. The constant b is about 2.9 × 10^-3 m K.",
+   "So as an object gets hotter, the peak moves to a shorter wavelength, and the object gives off more energy overall. A cooler object peaks at a longer wavelength.",
+   "Classical physics could not explain the shape of the spectrum. Planck fixed this by assuming energy is given off in separate packets, not in a smooth flow."
+  ],
+  "remember": "Hotter means a shorter peak wavelength. Planck explained the spectrum with energy in packets.",
+  "a": {
+   "q": "A metal bar is heated in a furnace and its temperature rises. What happens to the peak wavelength of the radiation it gives off?",
+   "opts": [
+    "It becomes shorter",
+    "It becomes longer",
+    "It stays the same",
+    "It becomes longer, then shorter"
+   ],
+   "why": "Wien's law says peak wavelength is inversely proportional to temperature, so a hotter bar peaks at a shorter wavelength. It is tempting to think the wavelength grows with the heat, but that reverses the relationship.",
+   "clue": "Look at where T sits in Wien's law."
+  },
+  "b": {
+   "d": 3,
+   "q": "Filament X glows at 3000 K. Filament Y glows at 1500 K. Both act as black bodies. How do their peak wavelengths compare?",
+   "opts": [
+    "X's peak is half of Y's",
+    "X's peak is double Y's",
+    "X's peak is the same as Y's",
+    "X's peak is a quarter of Y's"
+   ],
+   "why": "Peak wavelength is inversely proportional to temperature in kelvin. Filament X is twice as hot, so its peak wavelength is half that of Filament Y. Doubling the temperature does not double the wavelength, because T is on the bottom of λmax = b ÷ T.",
+   "clue": "Find the ratio of the temperatures, then use λmax = b ÷ T."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-28T11:40:41Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It becomes shorter",
+    "also_right": []
+   },
+   "b": {
+    "best": "X's peak is half of Y's",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-28T11:40:41Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Inversely proportional means doubling one halves the other' all but gives the answer. The temperatures are plainly doubled (6000 K vs 3000 K), so the student only has to apply 'halves' without reasoning."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue states the inverse link between peak wavelength and temperature, which is exactly what the question tests. Once told 'inversely', a rising temperature leads straight to 'shorter', so the clue largely gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Inversely proportional means doubling one halves the other' all but gives the answer. The temperatures are plainly doubled (6000 K vs 3000 K), so the student only has to apply 'halves' without reasoning.",
+   "Question a, other: The clue states the inverse link between peak wavelength and temperature, which is exactly what the question tests. Once told 'inversely', a rising temperature leads straight to 'shorter', so the clue largely gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Black body radiation",
+  "card": [
+   "A black body is an ideal object that absorbs all radiation that hits it. When hot, it gives off a continuous spectrum of radiation that depends only on its temperature.",
+   "Wien's law says the peak wavelength is inversely proportional to the temperature in kelvin: λmax = b ÷ T. The constant b is about 2.9 × 10^-3 m K.",
+   "So as an object gets hotter, the peak moves to a shorter wavelength, and the object gives off more energy overall. A cooler object peaks at a longer wavelength.",
+   "Classical physics could not explain the shape of the spectrum. Planck fixed this by assuming energy is given off in separate packets, not in a smooth flow."
+  ],
+  "remember": "Hotter means a shorter peak wavelength. Planck explained the spectrum with energy in packets.",
+  "a": {
+   "q": "A metal bar is heated in a furnace and its temperature rises. What happens to the peak wavelength of the radiation it gives off?",
+   "opts": [
+    "It becomes shorter",
+    "It becomes longer",
+    "It stays the same",
+    "It becomes longer, then shorter"
+   ],
+   "why": "Wien's law says peak wavelength is inversely proportional to temperature, so a hotter bar peaks at a shorter wavelength. It is tempting to think the wavelength grows with the heat, but that reverses the relationship.",
+   "clue": "Look at where T sits in Wien's law."
+  },
+  "b": {
+   "d": 3,
+   "q": "Filament X glows at 3000 K. Filament Y glows at 1500 K. Both act as black bodies. How do their peak wavelengths compare?",
+   "opts": [
+    "X's peak is half of Y's",
+    "X's peak is double Y's",
+    "X's peak is the same as Y's",
+    "X's peak is a quarter of Y's"
+   ],
+   "why": "Peak wavelength is inversely proportional to temperature in kelvin. Filament X is twice as hot, so its peak wavelength is half that of Filament Y. Doubling the temperature does not double the wavelength, because T is on the bottom of λmax = b ÷ T.",
+   "clue": "Find the ratio of the temperatures, then use λmax = b ÷ T."
+  }
+ },
+ "cleared_by": "recheck"
+}

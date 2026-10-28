@@ -1,0 +1,105 @@
+{
+ "id": "mat-cumulative-distribution-functions",
+ "title": "Cumulative distribution functions",
+ "brief": "867aaee1f199",
+ "stage": "cleared",
+ "log": [
+  "2026-10-26T13:29:57Z new, write",
+  "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-27T01:00:06Z write: done",
+  "2026-10-27T01:08:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00489,
+  "check": 0.00588
+ },
+ "draft": {
+  "title": "Cumulative distribution functions",
+  "card": [
+   "The cumulative distribution function (CDF), F(x), gives P(X ≤ x). It is the area under the density curve f from the lowest value of X up to x.",
+   "Find it by integrating: F(x) = ∫ f(t) dt, from the lowest value up to x. Use t inside the integral so x is only the upper limit.",
+   "Worked example: f(x) = 2x for 0 ≤ x ≤ 1. Then F(x) = ∫ 2t dt from 0 to x = x². So P(X ≤ 0.5) = 0.5² = 0.25.",
+   "F rises from 0 to 1 and never falls. For an interval, P(a ≤ X ≤ b) = F(b) − F(a). Differentiating F gives back f."
+  ],
+  "remember": "F(x) is the area so far: integrate f up to x.",
+  "a": {
+   "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(X ≤ 0.6)?",
+   "opts": [
+    "0.36",
+    "0.6",
+    "1.2",
+    "0.72"
+   ],
+   "why": "F(x) = x², so P(X ≤ 0.6) = 0.6² = 0.36. Substituting 0.6 into f gives 1.2, which is the height of the curve, not the area up to 0.6.",
+   "clue": "Integrate f from 0 up to 0.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(0.5 ≤ X ≤ 0.8)?",
+   "opts": [
+    "0.39",
+    "0.64",
+    "0.25",
+    "0.30"
+   ],
+   "why": "F(x) = x², so P = F(0.8) − F(0.5) = 0.64 − 0.25 = 0.39. Using F(0.8) alone gives 0.64, which wrongly includes the area below 0.5.",
+   "clue": "Subtract the area up to 0.5 from the area up to 0.8."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.36",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.39",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cumulative distribution functions",
+  "card": [
+   "The cumulative distribution function (CDF), F(x), gives P(X ≤ x). It is the area under the density curve f from the lowest value of X up to x.",
+   "Find it by integrating: F(x) = ∫ f(t) dt, from the lowest value up to x. Use t inside the integral so x is only the upper limit.",
+   "Worked example: f(x) = 2x for 0 ≤ x ≤ 1. Then F(x) = ∫ 2t dt from 0 to x = x². So P(X ≤ 0.5) = 0.5² = 0.25.",
+   "F rises from 0 to 1 and never falls. For an interval, P(a ≤ X ≤ b) = F(b) − F(a). Differentiating F gives back f."
+  ],
+  "remember": "F(x) is the area so far: integrate f up to x.",
+  "a": {
+   "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(X ≤ 0.6)?",
+   "opts": [
+    "0.36",
+    "0.6",
+    "1.2",
+    "0.72"
+   ],
+   "why": "F(x) = x², so P(X ≤ 0.6) = 0.6² = 0.36. Substituting 0.6 into f gives 1.2, which is the height of the curve, not the area up to 0.6.",
+   "clue": "Integrate f from 0 up to 0.6."
+  },
+  "b": {
+   "d": 3,
+   "q": "A variable has density f(x) = 2x for 0 ≤ x ≤ 1. What is P(0.5 ≤ X ≤ 0.8)?",
+   "opts": [
+    "0.39",
+    "0.64",
+    "0.25",
+    "0.30"
+   ],
+   "why": "F(x) = x², so P = F(0.8) − F(0.5) = 0.64 − 0.25 = 0.39. Using F(0.8) alone gives 0.64, which wrongly includes the area below 0.5.",
+   "clue": "Subtract the area up to 0.5 from the area up to 0.8."
+  }
+ },
+ "cleared_by": "checker"
+}
