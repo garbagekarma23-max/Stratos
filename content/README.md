@@ -233,15 +233,18 @@ py content/pipeline.py recheck --max-dollars 5
 
 In a good question, a student can't pick the right option by its look. Many courses written so far have the right option as the longest of the four far more often than chance: `node check_content.mjs` prints a warning for each one (see below). The writer and the checker are told about this now, so new courses should not need it. `rebalance` fixes a course that is already written.
 
-For each cleared point, it finds the questions whose right option is clearly the longest: longer than every wrong option, and at least 5 characters longer than their average. For each one, Claude Sonnet 5.5 rewrites only the three wrong options, so they match the right one in length and detail. It is asked to keep each wrong option's mistake, so the explanation still fits, and to keep it clearly wrong. The question, the right option, the card, the explanation and the clue never change: the pipeline copies them from the old version. It costs well under 1 cent a point with batches.
+For each cleared point, it finds the questions whose right option is clearly the longest: longer than every wrong option, and at least 5 characters longer than their average. For each one, Claude Sonnet 5.5 rewrites only the three wrong options, so they match the right one in length and detail. It is asked to keep each wrong option's mistake, so the explanation still fits, and to keep it clearly wrong. The question, the right option, the card, the explanation and the clue never change: the pipeline copies them from the old version.
+
+Then each rewritten point goes to the course's checker, Claude Opus 5.5 at high effort, as if it were a new point. The checker is never told the old options or that anything was rewritten. Opus is the only checker measured on this content: Haiku sent every point on in the one trial, and Sonnet has never been tried as a checker. With batches, a rewrite costs well under 1 cent and its check about 1 cent.
 
 The new options are used only when:
 
 - there are three of them, all different from each other and from the right option,
 - the right option is no longer clearly the longest,
-- and the point passes the content check with them.
+- the point passes the content check with them,
+- and the check picks the right option in both questions, says no other option could also be right, finds no problems, names no sensitive topic and is highly sure.
 
-Otherwise the point keeps its old options, and its file says why. A point is rebalanced once only. A point still waiting for you is left out: decide it on the review page first.
+Otherwise the point keeps its old options, and its file says why. A rewrite the check turned down is kept in the file too (`tried`), with the check. A point is rebalanced once only. A point still waiting for you is left out: decide it on the review page first. So is a point about a sensitive topic, which you approved as written.
 
 In the key window:
 
@@ -249,20 +252,22 @@ In the key window:
 py content/pipeline.py rebalance --dry-run
 ```
 
-The dry run lists the questions it would rewrite, the estimate, and what each course has spent so far. It sends nothing. Then:
+The dry run lists the questions it would rewrite, the estimate for the rewrites and for their checks, and what each course has spent so far. It sends nothing. Its last line gives the numbers to pass for the highest estimate. Then:
 
 ```powershell
-py content/pipeline.py rebalance --max-dollars 2
+py content/pipeline.py rebalance --max-new-dollars 3
 ```
 
-- `--max-dollars` works as in `recheck`: the most the course may cost in total, counting earlier runs. With several courses, they share it as in `run-many`. It refuses to send a batch that could pass it.
-- The points go in one batch, which usually takes under an hour. `--no-wait` sends or collects once, then stops. Ctrl+C is safe, and running the same command again carries on.
+- `--max-new-dollars` is the most this rebalance may spend, not counting earlier runs. With several courses, they share it by how much each could cost.
+- `--max-dollars` also works, as in `recheck`: the most the courses may cost in total, counting what earlier runs spent. On the 11 courses written so far, US$14.87 is spent already, so `--max-new-dollars 3` is the same as `--max-dollars 17.87`. Pass one or the other, not both.
+- Before sending anything, it refuses if the rewrites and all their checks could cost more than the limit, so no rewrite is paid for without its check. It also refuses any batch that could pass the limit.
+- The rewrites go in one batch, then the checks in another. Each usually takes under an hour. `--no-wait` sends or collects once, then stops. Ctrl+C is safe, and running the same command again carries on, with any check still to send.
 - At the end it prints, for each course, how many questions it rebalanced, how many points kept their old options, and why.
 - Each point it changes has a `rebalance` entry in its file, with the old options. Only the version students get (`final`) changes.
 - With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to rebalance some courses only.
 - Then publish each course it changed again (step 9), and look over a few of the new options in the app.
 
-The new options are not sent to the checker again. If you want a second look at them, open the course in the app or read the `rebalance` entries in `content/work/<course>/points/`.
+The check is strict, so some good rewrites will be kept out. A point the check turns down keeps the options it has now.
 
 #### The warning in the content check
 

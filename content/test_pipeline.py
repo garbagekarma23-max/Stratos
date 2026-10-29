@@ -19,8 +19,8 @@ tab; run-many with shared batches and each course's share of --max-dollars; auto
 what stays, the word guard, the dry run, spot checks and their warning, undo, the replay); recheck (which fixes it sends
 and which never, the checker seeing only the fix, the estimate, --max-dollars, what it clears and keeps, its spot checks,
 undo, nothing decided twice); rebalance (the questions whose right option is clearly the longest, the estimate on Sonnet,
---max-dollars, new wrong options with the question and right option kept, what it keeps and why, nothing sent twice,
-and check_content's warning before and after); and the API key never printed or saved.
+--max-dollars and --max-new-dollars, new wrong options with the question and right option kept, the check of each
+rewrite on Opus, what it keeps and why, nothing sent twice, and check_content's warning before and after); and the API key never printed or saved.
 """
 import _thread, contextlib, io, json, os, re, shutil, subprocess, sys, tempfile, threading, urllib.request
 from types import SimpleNamespace as NS
@@ -93,7 +93,7 @@ class FakeAPI:
     content check once, Lost is left out of a chapter answer once, Flag is flagged by both checkers, Haiku flag only by
     Haiku, Miss only by Opus, Doubt makes Haiku not sure, Topic makes Haiku name a sensitive topic, and Unsure makes Opus
     not sure. For rebalance: Short keeps the wrong options short, Banned puts a banned word in one, Twin repeats one,
-    Stubborn is declined and Glitch has an error the first time."""
+    Stubborn is declined and Glitch has an error the first time. The checker finds a problem in Picky once it has new options."""
     def __init__(self):
         self.batches, self.created, self.stop_after_create, self.seen = {}, 0, False, {}
         self.streamed, self.interrupt_on, self.release, self.limit_once, self.billed = [], None, threading.Event(), False, 0
@@ -145,6 +145,7 @@ class FakeAPI:
             best = next(o for o in opts if o.startswith('Right'))
             return {'best': best, 'also_right': [o for o in opts if o == 'Wrong one'] if 'Flag' in title and k == 'a' else []}
         probs = [{'part': 'card', 'kind': 'fact', 'detail': 'The second line is not quite right.'}] if flag else []
+        if 'Picky' in title and 'Wrong idea' in text: probs = [{'part': 'a', 'kind': 'wording', 'detail': 'A new option could mislead.'}]
         sure = 'low' if not haiku and 'Unsure' in title else 'medium' if haiku and 'Doubt' in title else 'high'
         return 'ok', {'a': pick('a'), 'b': pick('b'), 'problems': probs, 'sure': sure,
                       'sensitive': 'drugs' if haiku and 'Topic' in title else 'none', 'summary': 'Problems found.' if probs else 'No problems found.'}
@@ -551,15 +552,16 @@ units:
         points:
 """ + ''.join('          - title: Plain ' + w + '\n            brief: Its right options are the longest.\n'
               for w in ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot', 'golf', 'hotel', 'india', 'juliet', 'balanced',
-                        'Short', 'Banned', 'Twin', 'Stubborn', 'Glitch']) + """      - title: Waiting chapter
+                        'Short', 'Banned', 'Twin', 'Stubborn', 'Glitch', 'Picky']) + """      - title: Waiting chapter
         points:
           - title: Plain Flag
             brief: The checker flags it, so it waits for the owner.
 """
 
 def rebalance_tests(tmp, printed, api):
-    """rebalance, on a course run here: the questions it picks, the estimate, --max-dollars, the new wrong options,
-    what it keeps, nothing sent twice, and check_content's warning before and after."""
+    """rebalance, on a course run here: the questions it picks, the estimate with its checks, --max-dollars and
+    --max-new-dollars, the new wrong options and their check, what it keeps, nothing sent twice, and check_content's
+    warning before and after."""
     repo, work = os.path.join(tmp, 'repo-rebal'), os.path.join(tmp, 'work-rebal')
     copy_repo(repo)
     outline = os.path.join(tmp, 'tst-rebal.yaml')
@@ -569,25 +571,28 @@ def rebalance_tests(tmp, printed, api):
     code, out = go('run', outline, '--max-dollars', '5')
     W = pipeline.Work(work, 'tst-rebal')
     pid = lambda w: 'tsr-plain-' + w.lower()
-    check(code == 0 and W.load(pid('Flag'))['stage'] == 'review' and all(W.load(pid(w))['stage'] == 'cleared' for w in ['alpha', 'Glitch']), 'a course for rebalance is written and checked')
-    # balanced has no question to rebalance, and alpha only its check question.
+    words = ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot', 'golf', 'hotel', 'india', 'juliet', 'balanced', 'Short', 'Banned', 'Twin', 'Stubborn', 'Glitch', 'Picky']
+    check(code == 0 and W.load(pid('Flag'))['stage'] == 'review' and all(W.load(pid(w))['stage'] == 'cleared' for w in words), 'a course for rebalance is written and checked')
+    # balanced has no question to rebalance, alpha only its check question, and india is about a sensitive topic you approved.
     r = W.load(pid('balanced'))
     for k in ['a', 'b']: r['final'][k]['opts'] = ['Right: plain balanced', 'Wrong: plain balancer', 'Wrong: plain unbalance', 'Wrong: not so balanced']
     W.put(r)
     r = W.load(pid('alpha')); r['final']['b']['opts'] = ['Right: plain alpha', 'Wrong: plain omega', 'Wrong: plain gamma', 'Wrong: plain sigma']; W.put(r)
-    before = {p_: W.load(p_)['final'] for p_ in [pid(w) for w in ['alpha', 'bravo', 'balanced', 'Short', 'Banned', 'Twin', 'Stubborn', 'Glitch']]}
-    picked = sum(len(pipeline.rebalance_qs(W.load(pid(w))['final'])) for w in ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot', 'golf', 'hotel', 'india', 'juliet',
-                                                                          'balanced', 'Short', 'Banned', 'Twin', 'Stubborn', 'Glitch'])
+    r = W.load(pid('india')); r['sensitive'] = 'drugs'; W.put(r)
+    before = {pid(w): W.load(pid(w))['final'] for w in words}
+    picked = sum(len(pipeline.rebalance_qs(before[pid(w)])) for w in words)
     code, out = go('publish', outline)
     cc = subprocess.run(['node', 'check_content.mjs'], cwd=repo, capture_output=True, text=True, encoding='utf-8')
-    warn = re.search(r'Testing, Year 9 \(tst-rebal\): the correct option is the longest in (\d+) of 32 questions, well above chance \(about 8\)\. (\d+) are clearly the longest\.', cc.stdout)
+    warn = re.search(r'Testing, Year 9 \(tst-rebal\): the correct option is the longest in (\d+) of 34 questions, well above chance \(about 9\)\. (\d+) are clearly the longest\.', cc.stdout)
     check(code == 0 and cc.returncode == 0 and warn and 'py content/pipeline.py rebalance content/outlines/tst-rebal.yaml --dry-run' in cc.stdout and 'no problems found' in cc.stdout,
           'check_content warns when a course\'s right option is the longest well above chance, and does not fail')
-    check(warn and int(warn.group(2)) == picked == 29, 'and counts the questions clearly the longest the same way rebalance does')
+    check(warn and int(warn.group(2)) == picked == 31, 'and counts the questions clearly the longest the same way rebalance does')
     files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
 
     code, out = go('rebalance', outline)
-    check(code == 1 and '--max-dollars' in out, 'rebalance needs --max-dollars')
+    check(code == 1 and '--max-new-dollars' in out and '--max-dollars' in out, 'rebalance needs --max-new-dollars or --max-dollars')
+    code, out = go('rebalance', outline, '--max-dollars', '5', '--max-new-dollars', '1')
+    check(code == 2, 'and refuses both at once')
     del os.environ['ANTHROPIC_API_KEY']
     first, saved = api.created, files()
     code, out = go('rebalance', outline, '--dry-run')
@@ -595,46 +600,67 @@ def rebalance_tests(tmp, printed, api):
     os.environ['ANTHROPIC_API_KEY'] = KEY
     code, out = go('rebalance', outline, '--dry-run')
     check(code == 0 and 'Questions where the right option is clearly the longest: 29, in 15 points.' in out and '    tsr-plain-alpha (question a)\n' in out and
-          '    tsr-plain-bravo (question a and b)' in out and 'tsr-plain-balanced' not in out and files() == saved and api.created == first,
+          '    tsr-plain-bravo (question a and b)' in out and 'tsr-plain-balanced' not in out and 'tsr-plain-india' not in out and files() == saved and api.created == first,
           'the dry run lists each question whose right option is clearly the longest, and sends and changes nothing')
-    check(re.search(r'Estimate: US\$\d+\.\d\d to US\$\d+\.\d\d, in one batch, Claude Sonnet 5.5, medium effort', out) and 'Spent on this course so far: US$' in out and
-          'not cleared yet, so it is decided on the review page first: 1' in out, 'with the estimate on Sonnet, the money spent so far, and the point waiting for the owner left out')
+    check(re.search(r'Rewrites: US\$\d+\.\d\d to US\$\d+\.\d\d, Claude Sonnet 5.5, medium effort', out) and
+          re.search(r'Checks: US\$\d+\.\d\d to US\$\d+\.\d\d, Claude Opus 5.5, high effort', out) and 'Spent on this course so far: US$' in out and
+          'not cleared yet, so it is decided on the review page first: 1' in out and 'a sensitive topic: 1' in out,
+          'with the estimate for the rewrites on Sonnet and their checks on Opus, the money spent so far, and the points waiting for you or sensitive left out')
+    spent = W.state['spent']['usd']
+    hint = re.search(r'pass --max-new-dollars (\d+\.\d\d), which is the same as --max-dollars (\d+\.\d\d)\.', out)
+    check(hint and abs(float(hint.group(2)) - spent - float(hint.group(1))) < 0.011, 'and the number to pass for either limit, --max-dollars counting what is spent already')
     W.state['batches'].append({'id': 'msgbatch_open', 'items': {'x': {'pid': pid('alpha'), 'stage': 'check'}}}); W.save()
-    code, out = go('rebalance', outline, '--max-dollars', '5')
+    code, out = go('rebalance', outline, '--max-new-dollars', '5')
     check(code == 0 and 'A run\'s batch is still open' in out and api.created == first, 'a course with a run\'s batch open is left alone')
     W.state['batches'].pop(); W.save()
-    code, out = go('rebalance', outline, '--max-dollars', '0.0001')
-    check(code == 1 and 'Not sent' in out and api.created == first, 'a limit too low sends nothing')
+    code, out = go('rebalance', outline, '--max-new-dollars', '0.0001')
+    check(code == 1 and 'Not sent' in out and api.created == first, 'a new spend limit too low sends nothing')
+    code, out = go('rebalance', outline, '--max-dollars', format(spent + 0.0001, '.4f'))
+    check(code == 1 and 'Not sent' in out and api.created == first, 'and so does --max-dollars with almost nothing over what is spent already')
 
-    code, out = go('rebalance', outline, '--max-dollars', '5')
+    code, out = go('rebalance', outline, '--max-new-dollars', '3')
     W = pipeline.Work(work, 'tst-rebal')
-    reqs = [q for b in list(api.batches.values())[-2:] for q in b['requests'] if q['custom_id'].startswith('b_')]
-    check(code == 0 and api.created == first + 2 and len(reqs) == 16, 'rebalance sends a request a point in a batch, and sends an errored one again')
-    check(all(q['params']['model'] == pipeline.SONNET and q['params']['output_config']['effort'] == 'medium' for q in reqs), 'on Sonnet at medium effort')
+    sent = [q for b in list(api.batches.values())[-3:] for q in b['requests']]
+    reqs, checks = [q for q in sent if q['custom_id'].startswith('b_')], [q for q in sent if q['custom_id'].startswith('k_')]
+    check(code == 0 and api.created == first + 3 and len(reqs) == 16 and len(checks) == 11,
+          'rebalance sends a rewrite a point in a batch, then a check of each rewrite that passed the content check, and sends an errored one again')
+    check(0 < W.state['spent']['usd'] - spent <= 3, 'and spends no more than --max-new-dollars on top of what was spent')
+    check(all(q['params']['model'] == pipeline.SONNET and q['params']['output_config']['effort'] == 'medium' for q in reqs), 'the rewrites on Sonnet at medium effort')
+    check(all(q['params']['model'] == pipeline.OPUS and q['params']['output_config']['effort'] == 'high' and q['params']['system'][0]['text'].startswith('You check') for q in checks),
+          'the checks on the course\'s checker, Opus at high effort')
+    bravo_check = next(q for q in checks if 'Title: Plain bravo' in q['params']['messages'][0]['content'])['params']['messages'][0]['content']
+    check('Wrong idea a0' in bravo_check and 'Wrong one' not in bravo_check and 'rewr' not in bravo_check.lower(),
+          'the checker sees the point with its new options, as a new point: never the old options or that anything was rewritten')
     alpha_req = next(q for q in reqs if 'Title: Plain alpha' in q['params']['messages'][0]['content'])['params']
     check(list(alpha_req['output_config']['format']['schema']['properties']) == ['a'] and 'Question b' not in alpha_req['messages'][0]['content'] and
-          'Right option, 18 characters (keep it as it is): Right: plain alpha' in alpha_req['messages'][0]['content'], 'asking only for the questions that need it, with the right option\'s length')
+          'Right option, 18 characters (keep it as it is): Right: plain alpha' in alpha_req['messages'][0]['content'], 'a rewrite asks only for the questions that need it, with the right option\'s length')
     a, b = W.load(pid('alpha')), W.load(pid('bravo'))
     same = lambda old, new, k: old[k]['q'] == new[k]['q'] and old[k]['opts'][0] == new[k]['opts'][0] and old[k]['why'] == new[k]['why'] and old[k]['clue'] == new[k]['clue']
     check(a['stage'] == 'cleared' and a['final']['a']['opts'][1:] != before[pid('alpha')]['a']['opts'][1:] and a['final']['b'] == before[pid('alpha')]['b'] and
           same(before[pid('alpha')], a['final'], 'a') and not pipeline.clearly_longest(a['final']['a']['opts']), 'a question gets new wrong options, and the question, right option, why and clue stay')
     check(all(same(before[pid('bravo')], b['final'], k) and not pipeline.clearly_longest(b['final'][k]['opts']) for k in 'ab') and b['rebalance']['result'] == 'changed' and
-          b['rebalance']['old'] == {k: before[pid('bravo')][k]['opts'] for k in 'ab'} and b['usd']['rebalance'] > 0, 'both questions of a point, with the old options and the cost kept')
-    kept = {w: W.load(pid(w)) for w in ['Short', 'Banned', 'Twin', 'Stubborn']}
+          b['rebalance']['old'] == {k: before[pid('bravo')][k]['opts'] for k in 'ab'} and b['rebalance']['check']['problems'] == [] and
+          b['usd']['rebalance'] > 0 and b['usd']['rebalance-check'] > 0, 'both questions of a point, with the old options, the check and the cost of each step kept')
+    kept = {w: W.load(pid(w)) for w in ['Short', 'Banned', 'Twin', 'Stubborn', 'Picky']}
     check(all(r['final'] == before[r['id']] and r['rebalance']['result'] == 'kept' for r in kept.values()), 'a rewrite that is not used leaves the point as it was')
     check('still clearly the longest' in kept['Short']['rebalance']['why'][0] and 'content check' in kept['Banned']['rebalance']['why'][0] and
           'two options were the same' in kept['Twin']['rebalance']['why'][0] and 'declined' in kept['Stubborn']['rebalance']['why'][0],
           'with the reason: still the longest, the content check, two the same, or declined')
+    pk = kept['Picky']['rebalance']
+    check(pk['why'] == ['the check found a problem'] and pk['check']['problems'] and pk['tried']['a']['opts'][1].startswith('Wrong idea'),
+          'a rewrite the check finds a problem in keeps the old options, with the reason, the check and the rewrite it turned down')
     check(W.load(pid('Glitch'))['rebalance']['result'] == 'changed' and W.load(pid('balanced'))['final'] == before[pid('balanced')] and
-          not W.load(pid('balanced')).get('rebalance') and not W.load(pid('Flag')).get('rebalance'), 'an errored request is sent again, and the others are never sent')
-    check('Rebalanced: 21 questions in 11 points. Kept their old options: 4.' in out and 'Next: publish each course again' in out, 'the summary says what changed and what to do next')
+          not W.load(pid('balanced')).get('rebalance') and not W.load(pid('india')).get('rebalance') and W.load(pid('india'))['final'] == before[pid('india')] and
+          not W.load(pid('Flag')).get('rebalance'), 'an errored request is sent again, and the others are never sent')
+    check('Rebalanced: 19 questions in 10 points. Kept their old options: 5.' in out and 'the check found a problem: 1' in out and 'Next: publish each course again' in out,
+          'the summary says what changed, what was kept and why, and what to do next')
     first = api.created
-    code, out = go('rebalance', outline, '--max-dollars', '5')
-    check(code == 0 and 'clearly the longest: 0, in 0 points.' in out and 'rebalanced already: 4' in out and 'Nothing to rebalance.' in out and api.created == first,
+    code, out = go('rebalance', outline, '--max-new-dollars', '3')
+    check(code == 0 and 'clearly the longest: 0, in 0 points.' in out and 'rebalanced already: 5' in out and 'Nothing to rebalance.' in out and api.created == first,
           'running it again rebalances nothing twice')
     code, out = go('publish', outline)
     cc = subprocess.run(['node', 'check_content.mjs'], cwd=repo, capture_output=True, text=True, encoding='utf-8')
-    check(code == 0 and cc.returncode == 0 and 'tst-rebal' not in cc.stdout.split('WARNINGS')[-1] and 'Testing, Year 9: 16 points, 32 questions' in cc.stdout,
+    check(code == 0 and cc.returncode == 0 and 'tst-rebal' not in cc.stdout.split('WARNINGS')[-1] and 'Testing, Year 9: 17 points, 34 questions' in cc.stdout,
           'published again, the course no longer gets the warning')
 
 
