@@ -9,20 +9,26 @@
   "2026-10-27T01:00:10Z write: done",
   "2026-10-27T01:08:36Z check: flagged",
   "2026-10-27T01:23:01Z fix: suggested",
-  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00526,
   "check": 0.01844,
   "fix": 0.02029,
-  "recheck": 0.01218
+  "recheck": 0.01218,
+  "rebalance": 0.00162,
+  "rebalance-check": 0.01274
  },
  "draft": {
   "title": "DC motors",
@@ -237,13 +243,43 @@
    "q": "Dev builds a simple DC motor, but the split ring is replaced by two solid rings, so the current never reverses. The coil is released with its plane parallel to the field. What is most likely to happen?",
    "opts": [
     "It swings about the quarter-turn position, then stops",
-    "It spins faster and faster in one direction",
-    "It does not move because the forces cancel out",
-    "It turns a half turn, then stops there"
+    "It keeps spinning faster in one direction without stopping",
+    "It stays still because the forces on both sides cancel out",
+    "It turns a half turn, then stops with its plane parallel"
    ],
    "why": "The torque turns the coil about a quarter turn, to where its plane is at right angles to the field and the torque is zero. It overshoots, is pulled back, and friction stops it there. It does not reach a half turn, because past the quarter turn the torque acts against its motion.",
    "clue": "Where is the torque zero when the current never reverses?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It reverses the coil current every half turn",
+    "also_right": []
+   },
+   "b": {
+    "best": "It swings about the quarter-turn position, then stops",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "It swings about the quarter-turn position, then stops",
+    "It spins faster and faster in one direction",
+    "It does not move because the forces cancel out",
+    "It turns a half turn, then stops there"
+   ]
+  }
+ }
 }

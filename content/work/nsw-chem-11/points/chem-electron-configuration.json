@@ -9,20 +9,26 @@
   "2026-10-27T01:00:07Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.0054,
   "check": 0.01191,
   "fix": 0.01912,
-  "recheck": 0.01304
+  "recheck": 0.01304,
+  "rebalance": 0.00372,
+  "rebalance-check": 0.01377
  },
  "draft": {
   "title": "Electron configuration",
@@ -192,13 +198,43 @@
    "q": "Sodium has the configuration 1s² 2s² 2p⁶ 3s¹. Why does it react in a similar way to potassium, which ends in 4s¹?",
    "opts": [
     "Both have one electron in their outer energy level",
-    "Both have the same number of energy levels",
-    "Both have the same total number of electrons",
-    "Both have a full outer energy level"
+    "Both have the same number of occupied energy levels",
+    "Both atoms have the same total number of electrons",
+    "Both have a full outer energy level of eight electrons"
    ],
    "why": "Reactions depend on the outer electrons, and both atoms have one valence electron. They have different numbers of energy levels and total electrons, and neither outer level is full.",
    "clue": "Look at the last subshell in each configuration."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "1s² 2s² 2p⁶ 3s²",
+    "also_right": []
+   },
+   "b": {
+    "best": "Both have one electron in their outer energy level",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Both have one electron in their outer energy level",
+    "Both have the same number of energy levels",
+    "Both have the same total number of electrons",
+    "Both have a full outer energy level"
+   ]
+  }
+ }
 }

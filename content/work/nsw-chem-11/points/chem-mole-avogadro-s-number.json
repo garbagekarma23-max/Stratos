@@ -7,16 +7,22 @@
   "2026-10-26T13:29:58Z new, write",
   "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:07Z write: done",
-  "2026-10-27T01:08:33Z check: passed, cleared"
+  "2026-10-27T01:08:33Z check: passed, cleared",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00491,
-  "check": 0.00962
+  "check": 0.00962,
+  "rebalance": 0.00555,
+  "rebalance-check": 0.01629
  },
  "draft": {
   "title": "The mole and Avogadro's number",
@@ -81,9 +87,9 @@
    "q": "Which statement about 1 mol of oxygen molecules and 1 mol of carbon atoms is correct?",
    "opts": [
     "They contain the same number of particles",
-    "They have the same mass",
-    "The oxygen has more particles",
-    "The carbon has more particles"
+    "They both have the same mass in grams",
+    "Oxygen has more particles because it is O2",
+    "Carbon has more particles as atoms are small"
    ],
    "why": "One mole of any particles is 6.022 × 10²³ of them, so both amounts contain the same number of particles. Mass is not what a mole fixes, so the same mass is a tempting but wrong choice.",
    "clue": "A mole is a number of particles, not a mass."
@@ -101,5 +107,35 @@
    "clue": "More moles means more particles, so multiply."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They contain the same number of particles",
+    "also_right": []
+   },
+   "b": {
+    "best": "3.0 × 6.022 × 10²³",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "They contain the same number of particles",
+    "They have the same mass",
+    "The oxygen has more particles",
+    "The carbon has more particles"
+   ]
+  }
+ }
 }

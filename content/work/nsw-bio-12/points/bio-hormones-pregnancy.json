@@ -13,17 +13,23 @@
   "2026-10-28T11:58:15Z write: done",
   "2026-10-28T12:00:19Z check: flagged",
   "2026-10-28T12:03:24Z fix: suggested",
-  "2026-10-28T12:22:19Z autoreview: cleared with the fix (b other)"
+  "2026-10-28T12:22:19Z autoreview: cleared with the fix (b other)",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check named a sensitive topic; the check found a problem)"
  ],
  "sent": {
   "write": 4,
   "check": 2,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "write": 0.02888,
   "check": 0.02442,
-  "fix": 0.0257
+  "fix": 0.0257,
+  "rebalance": 0.00511,
+  "rebalance-check": 0.01275
  },
  "note": "",
  "rejected": {
@@ -235,5 +241,76 @@
    "clue": "The hormones have an early source and a later one."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check named a sensitive topic",
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Hormones in pregnancy",
+   "card": [
+    "Hormones are chemical messengers carried in the blood. In pregnancy, some of them keep the body able to support the developing baby.",
+    [
+     "Progesterone",
+     "keeps the lining of the uterus thick and rich in blood vessels, so the embryo stays in place. It also helps stop the uterus contracting."
+    ],
+    [
+     "Oestrogen",
+     "also helps maintain the uterus lining and supports the growth of the uterus."
+    ],
+    [
+     "Placenta",
+     "At first the ovary makes these hormones. The placenta, an organ that forms in pregnancy, then also makes them, and later makes most of them."
+    ]
+   ],
+   "remember": "Progesterone and oestrogen support the pregnancy, and the placenta becomes a main source of them.",
+   "a": {
+    "q": "Progesterone drops sharply in early pregnancy. What is the most likely effect?",
+    "opts": [
+     "The lining could thin and the pregnancy could be lost",
+     "The lining would thicken further and protect the embryo",
+     "The uterus would contract less often and hold the embryo",
+     "The lining would stay the same and the pregnancy continue"
+    ],
+    "why": "Progesterone keeps the uterus lining thick, so a sharp drop could let the lining thin and the pregnancy be lost. Contractions would not lessen, because progesterone helps stop the uterus contracting.",
+    "clue": "Think about what progesterone does to the uterus lining."
+   },
+   "b": {
+    "d": 2,
+    "q": "Why can hormone levels stay high in late pregnancy, when the ovary is no longer the main source?",
+    "opts": [
+     "The placenta now makes most of the hormones",
+     "The uterus wall itself makes them as it stretches",
+     "The fetus makes them and passes them to the mother",
+     "The ovary makes more of them as the fetus grows"
+    ],
+    "why": "The placenta also makes progesterone and oestrogen, and later makes most of them. The ovary is the early source, so it is not the reason levels stay high later.",
+    "clue": "The hormones have an early source and a later one."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "The lining could thin and the pregnancy could be lost",
+    "also_right": []
+   },
+   "b": {
+    "best": "The placenta now makes most of the hormones",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one hedged with 'could'. The three wrong options all use 'would', so a test-wise student could pick the hedged option without knowing the idea. Use the same modal verb in every option."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "sexual-health",
+   "summary": "The facts are accurate and both intended answers are correct. One small issue: in question a, the right option is the only one that uses 'could' instead of 'would', which hints at the answer."
+  }
+ }
 }

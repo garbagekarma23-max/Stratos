@@ -7,16 +7,22 @@
   "2026-10-26T13:30:01Z new, write",
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:09Z write: done",
-  "2026-10-27T01:08:34Z check: passed, cleared"
+  "2026-10-27T01:08:34Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00494,
-  "check": 0.00843
+  "check": 0.00843,
+  "rebalance": 0.00526,
+  "rebalance-check": 0.01728
  },
  "draft": {
   "title": "Fertilisation and implantation in mammals",
@@ -101,5 +107,66 @@
    "clue": "Work out which steps come before a ball of cells exists, and which come after."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Fertilisation and implantation in mammals",
+   "card": [
+    "Fertilisation is when a sperm cell fuses with an egg cell. In mammals this usually happens in the oviduct (fallopian tube).",
+    "The fused cell is a zygote. It has a full set of chromosomes: half from the sperm and half from the egg.",
+    "The zygote divides by mitosis as it moves along the oviduct towards the uterus. This forms a ball of cells called an embryo.",
+    "Implantation is when the embryo attaches to and embeds in the wall of the uterus. The pregnancy begins to develop from this point."
+   ],
+   "remember": "Sperm and egg fuse to make a zygote, and the dividing embryo then embeds in the uterus wall.",
+   "a": {
+    "q": "Which event produces a zygote in a mammal?",
+    "opts": [
+     "A sperm cell fuses with an egg cell",
+     "An embryo embeds in the uterus wall",
+     "A zygote divides by mitosis into a ball of cells",
+     "An egg cell leaves the ovary and enters the oviduct"
+    ],
+    "why": "A zygote is the single cell formed when a sperm and an egg fuse. Embedding in the uterus wall is implantation, which happens later to an embryo that already has many cells.",
+    "clue": "A zygote is the very first cell of the new individual."
+   },
+   "b": {
+    "d": 3,
+    "q": "A researcher studies a mouse embryo that is a ball of cells in the oviduct, before it has reached the uterus. Which statement about it is correct?",
+    "opts": [
+     "It has formed from a zygote but has not yet implanted",
+     "It is a ball of cells made before the sperm and egg fused",
+     "It has attached to the uterus wall and is now a zygote",
+     "It is still a single zygote cell that has not yet divided"
+    ],
+    "why": "A ball of cells comes from a zygote dividing by mitosis, so fertilisation has already happened. Implantation only happens once the embryo embeds in the uterus wall, so it has not yet occurred. Calling it a zygote is wrong, as a zygote is the single fused cell.",
+    "clue": "Work out which steps come before a ball of cells exists, and which come after."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "A sperm cell fuses with an egg cell",
+    "also_right": []
+   },
+   "b": {
+    "best": "It has formed from a zygote but has not yet implanted",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card presents implantation in the uterus wall as true of mammals in general. Monotremes such as the platypus and echidna lay eggs and do not implant. Most marsupials form only a brief, limited attachment. It would be more accurate to say 'in placental mammals, such as humans and mice', which matters for Australian students."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are sound and have one clear right answer each. One minor fact problem: the card describes implantation as true of all mammals, but monotremes and most marsupials do not implant this way, so it should say 'placental mammals'."
+  }
+ }
 }

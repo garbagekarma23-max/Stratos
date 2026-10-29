@@ -8,17 +8,23 @@
   "2026-10-27T00:53:13Z match: none",
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:01Z check: passed, cleared"
+  "2026-10-27T01:23:01Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "match": 1,
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.0038,
   "write": 0.00977,
-  "check": 0.00673
+  "check": 0.00673,
+  "rebalance": 0.00658,
+  "rebalance-check": 0.00729
  },
  "match": {
   "same": "",
@@ -106,9 +112,9 @@
    "q": "Which of these is an example of a strategic plan?",
    "opts": [
     "A five-year plan to expand a bakery chain into Queensland",
-    "A plan to run a social media campaign for the next year",
-    "A roster that sets who works each shift this week",
-    "A schedule for ordering flour every Monday morning"
+    "A one-year plan for the marketing team's social media push",
+    "A daily roster that sets who works each shift this week",
+    "A weekly schedule for ordering flour every Monday morning"
    ],
    "why": "Expanding into a new state covers several years and affects the whole business, so it is strategic. The social media campaign is tempting, but it covers one year and one part of the business, so it is tactical.",
    "clue": "Look for the plan with the longest time and the widest reach."
@@ -126,5 +132,35 @@
    "clue": "Check the length of time and how much of the business the plan covers."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A five-year plan to expand a bakery chain into Queensland",
+    "also_right": []
+   },
+   "b": {
+    "best": "Tactical, as it covers one to two years for one part",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "A five-year plan to expand a bakery chain into Queensland",
+    "A plan to run a social media campaign for the next year",
+    "A roster that sets who works each shift this week",
+    "A schedule for ordering flour every Monday morning"
+   ]
+  }
+ }
 }

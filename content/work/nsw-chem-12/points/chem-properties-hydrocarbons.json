@@ -9,18 +9,24 @@
   "2026-10-27T01:00:08Z write: done",
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00505,
   "check": 0.0115,
-  "fix": 0.01852
+  "fix": 0.01852,
+  "rebalance": 0.00731,
+  "rebalance-check": 0.0129
  },
  "draft": {
   "title": "Properties of hydrocarbons",
@@ -145,9 +151,9 @@
    "q": "Why does pentane have a higher boiling point than propane?",
    "opts": [
     "Its stronger dispersion forces need more energy to overcome",
-    "Its covalent bonds between carbons are stronger",
-    "It forms hydrogen bonds between its molecules",
-    "It has polar bonds that attract other molecules"
+    "Its stronger covalent bonds need more energy to break apart",
+    "Its stronger hydrogen bonds between molecules need more heat",
+    "Its polar bonds attract other molecules and need more heat"
    ],
    "why": "Pentane has a longer chain, so its dispersion forces between molecules are stronger and more energy is needed to separate them. Boiling does not break the covalent bonds inside the molecules, so stronger bonds are not the reason.",
    "clue": "Think about the forces between molecules, not inside them."
@@ -165,5 +171,35 @@
    "clue": "What holds water molecules to each other, and can hexane join in?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Its stronger dispersion forces need more energy to overcome",
+    "also_right": []
+   },
+   "b": {
+    "best": "Two layers, because hexane is non-polar and water is polar",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Its stronger dispersion forces need more energy to overcome",
+    "Its covalent bonds between carbons are stronger",
+    "It forms hydrogen bonds between its molecules",
+    "It has polar bonds that attract other molecules"
+   ]
+  }
+ }
 }

@@ -11,21 +11,27 @@
   "2026-10-27T01:23:01Z write: done (still fails the content check)",
   "2026-10-27T01:29:34Z check: flagged",
   "2026-10-27T01:36:42Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "match": 1,
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00383,
   "write": 0.0116,
   "check": 0.01218,
   "fix": 0.01899,
-  "recheck": 0.01384
+  "recheck": 0.01384,
+  "rebalance": 0.00264,
+  "rebalance-check": 0.01386
  },
  "match": {
   "same": "",
@@ -167,9 +173,9 @@
    "q": "Which action by a manager is the best example of the classical scientific approach?",
    "opts": [
     "Timing each step of packing a box and setting one method",
-    "Asking staff to vote on how the team should work",
-    "Letting each worker choose their own way to pack",
-    "Holding weekly social events to lift team spirit"
+    "Asking staff to vote on the best way to run the packing team",
+    "Letting each worker choose their own way to pack each box",
+    "Holding weekly social events to lift team spirit and morale"
    ],
    "why": "Timing each step and setting one best method is Taylor's approach of measuring simple tasks. Asking staff to vote or holding social events focus on people's needs, which Taylor's approach did not.",
    "clue": "Look for measuring tasks and one best method."
@@ -187,5 +193,35 @@
    "clue": "Match one result to pay and the other to simple, repeated tasks."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Timing each step of packing a box and setting one method",
+    "also_right": []
+   },
+   "b": {
+    "best": "Pay drives speed, but simple tasks treat staff like machines",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Timing each step of packing a box and setting one method",
+    "Asking staff to vote on how the team should work",
+    "Letting each worker choose their own way to pack",
+    "Holding weekly social events to lift team spirit"
+   ]
+  }
+ }
 }

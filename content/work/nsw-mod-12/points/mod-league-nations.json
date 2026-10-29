@@ -10,18 +10,24 @@
   "2026-10-27T01:08:37Z check: flagged",
   "2026-10-27T01:23:02Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
-  "2026-10-28T11:49:43Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:43Z review: approved with the fix (a spot check)",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00456,
   "check": 0.01128,
-  "fix": 0.01387
+  "fix": 0.01387,
+  "rebalance": 0.00382,
+  "rebalance-check": 0.01746
  },
  "draft": {
   "title": "The League of Nations",
@@ -167,5 +173,66 @@
    "clue": "Think about who could make members act."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "The League of Nations",
+   "card": [
+    "The League of Nations was founded in 1920, after World War I, to keep peace between countries. It was set up under the peace settlement and based in Geneva.",
+    "It relied on collective security. Members agreed that if one country attacked another, the rest would act together against it, rather than leaving it to one country.",
+    "The League had no army of its own. It could ask members to apply economic sanctions or send troops, but each member decided for itself whether to do so.",
+    "The United States never joined, so the League lacked its economic strength. In the 1930s it failed to stop aggression, such as Japan in Manchuria and Italy in Ethiopia."
+   ],
+   "remember": "The League's peacekeeping depended on members choosing to act, and in the 1930s they did not.",
+   "a": {
+    "q": "Why was the League of Nations' system of collective security weak?",
+    "opts": [
+     "It depended on members choosing to act together",
+     "It allowed only the United States to apply sanctions",
+     "It banned members from using economic pressure",
+     "It let its own army act without member approval"
+    ],
+    "why": "The League had no army, so any action relied on members agreeing to use sanctions or troops. The option about its own army is wrong because the League had no army of its own.",
+    "clue": "Who decided whether to act on the League's behalf?"
+   },
+   "b": {
+    "d": 3,
+    "q": "In 1935 Italy invaded Ethiopia, and League members applied only limited sanctions. Which factor best explains why the League failed to stop Italy?",
+    "opts": [
+     "It could not force members to act, and had no army",
+     "It had too many members to hold meetings in Geneva",
+     "It was founded before the peace settlement was agreed",
+     "It was run mainly by the United States from Geneva"
+    ],
+    "why": "The League had no army and each member chose how far to act, so it could not make Italy stop. The United States did not run it: it never joined, which also limited the League's strength.",
+    "clue": "Think about who could make members act."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "It depended on members choosing to act together",
+    "also_right": []
+   },
+   "b": {
+    "best": "It could not force members to act, and had no army",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "remember",
+     "kind": "other",
+     "detail": "The remember line says that in the 1930s members 'did not' act. Question b's stem says members applied limited sanctions against Italy in 1935, so they did act partly. The line oversimplifies, and it sits slightly at odds with the question. Something like 'did not act firmly enough' would fit both."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Facts and answers check out: founding in 1920, Geneva, the US never joining, Manchuria and Ethiopia. One small issue: the remember line says members did not act in the 1930s, while question b says they applied limited sanctions."
+  }
+ }
 }

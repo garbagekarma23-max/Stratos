@@ -10,19 +10,25 @@
   "2026-10-27T01:08:37Z write: done",
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other)",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00388,
   "write": 0.00939,
   "check": 0.00911,
-  "fix": 0.01516
+  "fix": 0.01516,
+  "rebalance": 0.00134,
+  "rebalance-check": 0.0101
  },
  "match": {
   "same": "",
@@ -208,5 +214,78 @@
    "clue": "Look at what changed, and how Sam responded."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Management skills",
+   "card": [
+    [
+     "Interpersonal skills",
+     "Skills used to work well with people, such as motivating a team, building trust and handling conflict."
+    ],
+    [
+     "Communication",
+     "Getting information across clearly and listening to others, in speech, in writing and in meetings."
+    ],
+    [
+     "Decision-making and problem-solving",
+     "Decision-making is choosing between options. Problem-solving is finding the cause of an issue and a way to fix it."
+    ],
+    [
+     "Planning and adapting",
+     "Managers look ahead and set a course. They also change it when conditions change, such as a supplier closing or a drop in sales."
+    ]
+   ],
+   "remember": "Good managers combine people skills with clear thinking, and they adjust when things change.",
+   "a": {
+    "q": "A manager calmly sorts out an argument between two staff and keeps both on the team. Which skill is she mainly using?",
+    "opts": [
+     "Interpersonal skills",
+     "Decision-making",
+     "Planning ahead",
+     "Adapting to change"
+    ],
+    "why": "Handling conflict between staff and keeping them working together is an interpersonal skill. Decision-making is tempting, but that skill is about choosing between options, not about settling a clash between people.",
+    "clue": "Is she dealing with a plan, a choice or a relationship?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Sam runs a bike shop in Bendigo. His main supplier suddenly closes, so he quickly finds two new suppliers and changes his order dates. Which skill is Sam showing most?",
+    "opts": [
+     "Adapting to changed conditions",
+     "Motivating his team to work harder",
+     "Listening closely to what customers say",
+     "Setting long-term goals for the shop"
+    ],
+    "why": "Sam changes his plans when conditions change, which is adapting. Setting long-term goals is tempting because it is part of planning, but Sam is changing a plan, not setting one.",
+    "clue": "Look at what changed, and how Sam responded."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Interpersonal skills",
+    "also_right": []
+   },
+   "b": {
+    "best": "Adapting to changed conditions",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The stem says Sam 'changes his order dates' and the clue says 'Look at what changed', which echo the right option 'Adapting to changed conditions'. A student could match the words without knowing the skill."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card, the remember line and both answers are correct. In question b, the stem and clue repeat 'change', which points to the right option by word-matching alone."
+  }
+ }
 }

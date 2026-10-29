@@ -11,20 +11,26 @@
   "2026-10-27T01:23:00Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
   "2026-10-28T11:40:39Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-28T11:49:07Z review: approved with the fix"
+  "2026-10-28T11:49:07Z review: approved with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01118,
   "check": 0.01378,
   "fix": 0.01515,
-  "recheck": 0.01392
+  "recheck": 0.01392,
+  "rebalance": 0.00553,
+  "rebalance-check": 0.01275
  },
  "draft": {
   "title": "Genotype and phenotype",
@@ -192,9 +198,9 @@
    "q": "Which of these describes a genotype?",
    "opts": [
     "The pair of alleles a rabbit carries for fur colour",
-    "The brown fur colour that can be seen on a rabbit",
-    "The height a rabbit reaches after a good diet",
-    "The number of rabbits in a population"
+    "The brown fur colour that can be seen on a young rabbit",
+    "The body size a rabbit reaches after eating a good diet",
+    "The number of rabbits living in one area of bushland"
    ],
    "why": "A genotype is the alleles an organism carries, so the pair of alleles for fur colour is a genotype. Brown fur is tempting, but it is the trait that shows, which is the phenotype.",
    "clue": "Is it the alleles themselves, or the trait they lead to?"
@@ -212,5 +218,35 @@
    "clue": "The seedlings are identical in their alleles. What differs is their surroundings."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The pair of alleles a rabbit carries for fur colour",
+    "also_right": []
+   },
+   "b": {
+    "best": "Same genotype, but the environment changed the phenotype",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "The pair of alleles a rabbit carries for fur colour",
+    "The brown fur colour that can be seen on a rabbit",
+    "The height a rabbit reaches after a good diet",
+    "The number of rabbits in a population"
+   ]
+  }
+ }
 }

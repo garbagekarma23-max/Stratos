@@ -9,20 +9,26 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00501,
   "check": 0.01602,
   "fix": 0.0274,
-  "recheck": 0.0143
+  "recheck": 0.0143,
+  "rebalance": 0.00465,
+  "rebalance-check": 0.01401
  },
  "draft": {
   "title": "Causes of mutation",
@@ -246,13 +252,43 @@
    "q": "Two skin cells on Priya's arm get the same exposure to sunlight. One develops a mutation and the other does not. Which explanation fits best?",
    "opts": [
     "UV makes mutations more likely, and some damage is repaired",
-    "UV acts as a mutagen in some skin cells but not others",
-    "The second cell was shaded from the sun's UV light",
-    "UV light lowered the mutation rate in the second cell"
+    "UV is a mutagen only for some skin cells, so one was spared",
+    "The second cell was shaded from the sun's UV light by hair",
+    "UV light lowered the mutation rate in the second skin cell"
    ],
    "why": "Ultraviolet light is a mutagen, so it raises the chance of a mutation in every exposed cell without guaranteeing one, and cells can often repair damage. Saying UV is a mutagen in some cells but not others is tempting, but a mutagen raises the rate in all exposed cells. The outcome in each cell comes down to chance and repair.",
    "clue": "Think about what cells can do after their DNA is damaged."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An agent that raises the rate of mutation",
+    "also_right": []
+   },
+   "b": {
+    "best": "UV makes mutations more likely, and some damage is repaired",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "UV makes mutations more likely, and some damage is repaired",
+    "UV acts as a mutagen in some skin cells but not others",
+    "The second cell was shaded from the sun's UV light",
+    "UV light lowered the mutation rate in the second cell"
+   ]
+  }
+ }
 }

@@ -8,16 +8,22 @@
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: failed the content check, writing again",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:00Z check: passed, cleared"
+  "2026-10-27T01:23:00Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01044,
-  "check": 0.00818
+  "check": 0.00818,
+  "rebalance": 0.00881,
+  "rebalance-check": 0.0134
  },
  "draft": {
   "title": "Torque",
@@ -103,5 +109,66 @@
    "clue": "sin 90° equals 1, so multiply distance by force."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Torque",
+   "card": [
+    "Torque is the turning effect of a force about a pivot. It is measured in newton metres (N m).",
+    "τ = r F sin θ. Here r is the distance from the pivot to where the force acts, F is the force, and θ is the angle between the force and the line from the pivot.",
+    "For the same force, a larger r gives a larger torque. This is why a longer spanner turns a tight nut more easily.",
+    "A force pushing at right angles (θ = 90°) to the line from the pivot gives the most torque. A force along that line (θ = 0°) gives zero torque."
+   ],
+   "remember": "Torque depends on the force, the distance from the pivot, and the angle.",
+   "a": {
+    "q": "Why does a longer spanner make a tight nut easier to turn?",
+    "opts": [
+     "The same force acts at a greater distance, so torque is more",
+     "The spanner makes the force larger, so the torque is more",
+     "A longer spanner adds mass, so the nut turns more easily",
+     "The angle of the force gets larger, so the torque is greater"
+    ],
+    "why": "Torque is r F sin θ, so a larger r gives a larger torque for the same force. The force itself is not made bigger by the spanner. Only the distance from the pivot changes.",
+    "clue": "Which part of τ = r F sin θ changes with spanner length?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya pushes on a door with a force of 20 N. The door is 0.90 m wide and she pushes at the handle edge, at 90° to the door. What is the torque about the hinges?",
+    "opts": [
+     "18 N m",
+     "22 N m",
+     "0 N m",
+     "1.8 N m"
+    ],
+    "why": "τ = r F sin θ = 0.90 × 20 × sin 90° = 18 N m. The torque is not zero, because the push is at right angles to the line from the hinges, which gives the largest sin θ value of 1.",
+    "clue": "sin 90° equals 1, so multiply distance by force."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "The same force acts at a greater distance, so torque is more",
+    "also_right": []
+   },
+   "b": {
+    "best": "18 N m",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue 'sin 90° equals 1, so multiply distance by force' hands students the whole method. They can get 18 N m without having to apply τ = r F sin θ themselves, which makes the question trivial for Year 12."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card, remember line, both questions and both explanations are correct. The only issue is that the clue for question b gives away the calculation, so it should hint less, for example by pointing only to the value of sin 90°."
+  }
+ }
 }

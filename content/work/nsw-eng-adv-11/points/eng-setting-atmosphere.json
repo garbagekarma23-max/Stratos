@@ -7,16 +7,22 @@
   "2026-10-26T13:29:51Z new, write",
   "2026-10-27T00:53:08Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:03Z write: done",
-  "2026-10-27T01:08:31Z check: passed, cleared"
+  "2026-10-27T01:08:31Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00477,
-  "check": 0.00799
+  "check": 0.00799,
+  "rebalance": 0.00253,
+  "rebalance-check": 0.01403
  },
  "draft": {
   "title": "Setting and atmosphere",
@@ -81,9 +87,9 @@
    "q": "A story opens with thick fog, a locked gate and a silent village. What is the main effect of this setting?",
    "opts": [
     "It creates an uneasy, mysterious atmosphere",
-    "It shows the narrator cannot be trusted",
-    "It marks the climax of the plot",
-    "It shows a character changing over time"
+    "It shows the narrator cannot be trusted at all",
+    "It marks the climax of the story's main plot",
+    "It shows a character changing over the story"
    ],
    "why": "Fog, a locked gate and silence build a mood of unease, which is atmosphere. The setting does not say anything about the narrator or the plot's climax, so those options are wrong.",
    "clue": "Think about the mood the place gives the reader."
@@ -101,5 +107,35 @@
    "clue": "Match the land's condition to how Leila feels."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It creates an uneasy, mysterious atmosphere",
+    "also_right": []
+   },
+   "b": {
+    "best": "It mirrors Leila's feelings of being stuck",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "It creates an uneasy, mysterious atmosphere",
+    "It shows the narrator cannot be trusted",
+    "It marks the climax of the plot",
+    "It shows a character changing over time"
+   ]
+  }
+ }
 }

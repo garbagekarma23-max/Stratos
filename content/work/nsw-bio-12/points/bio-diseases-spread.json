@@ -9,20 +9,26 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00481,
   "check": 0.01182,
   "fix": 0.01742,
-  "recheck": 0.01205
+  "recheck": 0.01205,
+  "rebalance": 0.00203,
+  "rebalance-check": 0.01569
  },
  "draft": {
   "title": "How diseases spread",
@@ -204,9 +210,9 @@
    "q": "Which description fits a vector?",
    "opts": [
     "An organism that carries a pathogen between hosts",
-    "A person who has caught a disease",
-    "A drop of fluid released by a sneeze",
-    "Food that has been contaminated by a pathogen"
+    "A person who has caught a disease and passes it on",
+    "A drop of fluid released by a sneeze or a cough",
+    "Food or water that has been made unsafe by a pathogen"
    ],
    "why": "A vector is an organism that carries a pathogen from one host to another. A sneeze droplet and contaminated food carry a pathogen too, but they are not living things that move it between hosts, so they are not vectors.",
    "clue": "A vector is a living thing that moves the pathogen."
@@ -216,13 +222,50 @@
    "q": "Many people at a camp in Queensland get sick with diarrhoea after drinking from a creek that cattle had polluted with faeces. Which way did the disease spread?",
    "opts": [
     "Contaminated water",
-    "Droplets",
-    "Vector",
-    "Direct contact"
+    "Airborne droplets",
+    "A mosquito vector",
+    "Touching a sick host"
    ],
    "why": "The pathogen reached people through water that faeces had contaminated. Vector is tempting because animals were involved, but the cattle did not carry the pathogen from host to host. Nobody touched an infected host, so it is not direct contact either.",
    "clue": "Think about what the people swallowed."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An organism that carries a pathogen between hosts",
+    "also_right": []
+   },
+   "b": {
+    "best": "Contaminated water",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "An organism that carries a pathogen between hosts",
+    "A person who has caught a disease",
+    "A drop of fluid released by a sneeze",
+    "Food that has been contaminated by a pathogen"
+   ],
+   "b": [
+    "Contaminated water",
+    "Droplets",
+    "Vector",
+    "Direct contact"
+   ]
+  }
+ }
 }

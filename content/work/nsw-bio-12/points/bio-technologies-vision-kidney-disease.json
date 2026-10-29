@@ -9,20 +9,26 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00515,
   "check": 0.01114,
   "fix": 0.01631,
-  "recheck": 0.01245
+  "recheck": 0.01245,
+  "rebalance": 0.00899,
+  "rebalance-check": 0.01588
  },
  "draft": {
   "title": "Vision and kidney technologies",
@@ -168,9 +174,9 @@
    "q": "Which statement best describes how laser surgery corrects vision?",
    "opts": [
     "It reshapes the cornea so light focuses on the retina",
-    "It adds a lens in front of the eye to bend light",
-    "It sends electrical signals to the optic nerve",
-    "It filters wastes out of the blood"
+    "It places a lens in front of the eye to bend light inward",
+    "It sends electrical signals to the optic nerve of the eye",
+    "It filters wastes and extra water out of the bloodstream"
    ],
    "why": "Laser surgery changes the shape of the cornea, so light is bent correctly and focuses on the retina. Glasses and contact lenses also correct focus, but they add a lens and do not reshape the cornea.",
    "clue": "Think about which part of the eye the laser changes."
@@ -180,13 +186,50 @@
    "q": "Sam's kidneys have failed, and he now has dialysis three times a week. What does the dialysis do for him?",
    "opts": [
     "It filters wastes from his blood in place of his kidneys",
-    "It repairs the damaged tissue so his kidneys work again",
-    "It makes his kidneys produce more urine",
-    "It adds a lens so light focuses on his retina"
+    "It heals the damaged kidney tissue so the kidneys work again",
+    "It makes his kidneys produce much more urine every day",
+    "It adds a lens in front of his eye so light focuses properly"
    ],
    "why": "Dialysis does the filtering job of the failed kidneys, so wastes do not build up in his blood. The option about repairing the kidneys is the tempting wrong answer: dialysis treats the effect of kidney failure but does not restore the organ.",
    "clue": "Dialysis takes over a job. Does it fix the organ?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It reshapes the cornea so light focuses on the retina",
+    "also_right": []
+   },
+   "b": {
+    "best": "It filters wastes from his blood in place of his kidneys",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "It reshapes the cornea so light focuses on the retina",
+    "It adds a lens in front of the eye to bend light",
+    "It sends electrical signals to the optic nerve",
+    "It filters wastes out of the blood"
+   ],
+   "b": [
+    "It filters wastes from his blood in place of his kidneys",
+    "It repairs the damaged tissue so his kidneys work again",
+    "It makes his kidneys produce more urine",
+    "It adds a lens so light focuses on his retina"
+   ]
+  }
+ }
 }

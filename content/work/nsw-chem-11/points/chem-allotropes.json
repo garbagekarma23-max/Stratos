@@ -10,20 +10,26 @@
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:16Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:16Z review: approved with the fix (a spot check)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00486,
   "check": 0.00946,
   "fix": 0.01231,
-  "recheck": 0.01163
+  "recheck": 0.01163,
+  "rebalance": 0.00437,
+  "rebalance-check": 0.01226
  },
  "draft": {
   "title": "Allotropes",
@@ -209,13 +215,43 @@
    "q": "Graphite is used in pencils and conducts electricity, but diamond does not conduct. What best explains the difference?",
    "opts": [
     "Graphite has a free electron per atom, but diamond has none",
-    "Graphite has ions that move, but diamond has none",
-    "Graphite has four bonds per atom, but diamond has three",
-    "Graphite is a different element from diamond"
+    "Graphite has mobile ions in its layers, but diamond has none",
+    "Graphite has four bonds per atom, but diamond has only three",
+    "Graphite is a different element from diamond, so it conducts"
    ],
    "why": "In graphite each carbon atom bonds to three others, leaving one electron free to move along the layers. In diamond all four outer electrons are held in bonds. The element is the same in both, so a different element cannot be the reason.",
    "clue": "Compare how many bonds each carbon atom makes in the two forms."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They are different structural forms of the same element",
+    "also_right": []
+   },
+   "b": {
+    "best": "Graphite has a free electron per atom, but diamond has none",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Graphite has a free electron per atom, but diamond has none",
+    "Graphite has ions that move, but diamond has none",
+    "Graphite has four bonds per atom, but diamond has three",
+    "Graphite is a different element from diamond"
+   ]
+  }
+ }
 }

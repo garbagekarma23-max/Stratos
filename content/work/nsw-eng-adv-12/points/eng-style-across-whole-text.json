@@ -9,20 +9,26 @@
   "2026-10-27T01:00:04Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00486,
   "check": 0.00962,
   "fix": 0.02342,
-  "recheck": 0.01261
+  "recheck": 0.01261,
+  "rebalance": 0.00659,
+  "rebalance-check": 0.01337
  },
  "draft": {
   "title": "Style across a whole text",
@@ -180,9 +186,9 @@
    "q": "A student is writing about a novel. Which observation is evidence of the writer's style?",
    "opts": [
     "Short, blunt sentences recur whenever the narrator is afraid",
-    "A striking metaphor of a locked door opens the last chapter",
-    "The narrator slowly grows braver as the story unfolds",
-    "The novel explores the cost of living in fear"
+    "One vivid metaphor of a locked door ends the last chapter",
+    "The narrator grows braver after leaving home in chapter two",
+    "The novel explores the cost of living in fear under a regime"
    ],
    "why": "Short sentences that keep returning at moments of fear are a repeated choice about how the text is written, so they form a pattern. The locked door metaphor is tempting, but it is one choice in one place. The narrator's growth is what happens, and fear is what the novel is about.",
    "clue": "Separate how the novel is written from what happens in it."
@@ -200,5 +206,35 @@
    "clue": "Spotting a choice is only the first step."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Short, blunt sentences recur whenever the narrator is afraid",
+    "also_right": []
+   },
+   "b": {
+    "best": "She tracks a repeated choice and links it to meaning",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Short, blunt sentences recur whenever the narrator is afraid",
+    "A striking metaphor of a locked door opens the last chapter",
+    "The narrator slowly grows braver as the story unfolds",
+    "The novel explores the cost of living in fear"
+   ]
+  }
+ }
 }

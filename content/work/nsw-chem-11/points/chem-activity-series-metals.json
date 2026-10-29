@@ -9,18 +9,24 @@
   "2026-10-27T01:00:07Z write: done",
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00481,
   "check": 0.00871,
-  "fix": 0.01413
+  "fix": 0.01413,
+  "rebalance": 0.00342,
+  "rebalance-check": 0.01185
  },
  "draft": {
   "title": "The activity series of metals",
@@ -157,13 +163,43 @@
    "q": "Mia puts a strip of magnesium into iron(II) sulfate solution and a strip of copper into a separate beaker of iron(II) sulfate solution. What does she see?",
    "opts": [
     "Iron forms on the magnesium only",
-    "Iron forms on the copper only",
-    "Iron forms on both strips",
-    "Iron forms on neither strip"
+    "Iron forms on the copper strip only",
+    "Iron forms on both of the strips",
+    "Iron forms on neither of the strips"
    ],
    "why": "Magnesium is more reactive than iron, so it displaces iron from solution and iron forms as a solid. Copper is less reactive than iron, so it cannot displace iron and nothing happens.",
    "clue": "Only a metal above iron in the series can displace iron."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The one that loses electrons most easily",
+    "also_right": []
+   },
+   "b": {
+    "best": "Iron forms on the magnesium only",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Iron forms on the magnesium only",
+    "Iron forms on the copper only",
+    "Iron forms on both strips",
+    "Iron forms on neither strip"
+   ]
+  }
+ }
 }

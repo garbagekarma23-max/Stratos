@@ -9,18 +9,24 @@
   "2026-10-27T01:00:07Z write: done",
   "2026-10-27T01:08:33Z check: flagged",
   "2026-10-27T01:22:59Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00492,
   "check": 0.0096,
-  "fix": 0.0137
+  "fix": 0.0137,
+  "rebalance": 0.00463,
+  "rebalance-check": 0.01431
  },
  "draft": {
   "title": "Balanced equations",
@@ -145,9 +151,9 @@
    "q": "Why must a chemical equation be balanced?",
    "opts": [
     "Atoms are not created or destroyed, so mass is conserved",
-    "Each reactant must have the same mass as each product",
-    "The number of molecules must be equal on both sides",
-    "Subscripts in formulas must match on both sides"
+    "Each single reactant must have the same mass as each product",
+    "Molecules are not created or destroyed, so counts must match",
+    "Subscripts in each formula must be the same on both sides"
    ],
    "why": "Atoms are only rearranged in a reaction, so each type of atom must appear in the same number on both sides. The number of molecules can change, as in 2H₂ + O₂ → 2H₂O, so equal molecule counts are not required.",
    "clue": "Think about what happens to atoms during a reaction."
@@ -165,5 +171,35 @@
    "clue": "What does a subscript tell you about a formula?"
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Atoms are not created or destroyed, so mass is conserved",
+    "also_right": []
+   },
+   "b": {
+    "best": "Changing a subscript makes a different substance",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Atoms are not created or destroyed, so mass is conserved",
+    "Each reactant must have the same mass as each product",
+    "The number of molecules must be equal on both sides",
+    "Subscripts in formulas must match on both sides"
+   ]
+  }
+ }
 }

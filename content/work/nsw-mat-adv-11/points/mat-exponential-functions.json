@@ -7,16 +7,22 @@
   "2026-10-26T13:29:55Z new, write",
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:05Z write: done",
-  "2026-10-27T01:08:32Z check: passed, cleared"
+  "2026-10-27T01:08:32Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00549,
-  "check": 0.00693
+  "check": 0.00693,
+  "rebalance": 0.00172,
+  "rebalance-check": 0.01221
  },
  "draft": {
   "title": "Exponential functions",
@@ -105,13 +111,43 @@
    "q": "Mia graphs y = 3ˣ and y = (1/3)ˣ on the same axes. Which statement is true for both graphs?",
    "opts": [
     "Both have the horizontal asymptote y = 0",
-    "Both rise from left to right",
-    "Both cross the x-axis at x = 1",
-    "Both have the y-intercept 3"
+    "Both rise steadily from left to right",
+    "Both cross the x-axis at the point x = 1",
+    "Both have the y-intercept 3 on the y-axis"
    ],
    "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to y = 0 without touching it. The graph of y = 3ˣ rises but y = (1/3)ˣ falls, so rising is not true for both.",
    "clue": "Think about what both graphs share, whatever the base."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It falls from left to right and passes through (0, 1)",
+    "also_right": []
+   },
+   "b": {
+    "best": "Both have the horizontal asymptote y = 0",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Both have the horizontal asymptote y = 0",
+    "Both rise from left to right",
+    "Both cross the x-axis at x = 1",
+    "Both have the y-intercept 3"
+   ]
+  }
+ }
 }

@@ -31,9 +31,9 @@ MADE_BANKS.mat = {
       "q": "A circle on a graph is cut twice by the vertical line x = 0. What does this tell you?",
       "opts": [
         "The circle is not the graph of a function",
-        "The circle is the graph of a function",
-        "The circle is a function only for x > 0",
-        "The circle is not a relation"
+        "The circle is the graph of a valid function",
+        "The circle is a function only when x is above 0",
+        "The circle is not a relation of x and y values"
       ],
       "why": "A vertical line that cuts the graph twice means one x value has two y values. So it fails the vertical line test and is not a function. It is still a relation, because it pairs x values with y values.",
       "clue": "One vertical line cutting twice means one input has two outputs."
@@ -1110,9 +1110,9 @@ MADE_BANKS.mat = {
       "q": "Mia graphs y = 3ˣ and y = (1/3)ˣ on the same axes. Which statement is true for both graphs?",
       "opts": [
         "Both have the horizontal asymptote y = 0",
-        "Both rise from left to right",
-        "Both cross the x-axis at x = 1",
-        "Both have the y-intercept 3"
+        "Both rise steadily from left to right",
+        "Both cross the x-axis at the point x = 1",
+        "Both have the y-intercept 3 on the y-axis"
       ],
       "why": "Both have positive bases not equal to 1, so both have y-intercept 1 and get closer to y = 0 without touching it. The graph of y = 3ˣ rises but y = (1/3)ˣ falls, so rising is not true for both.",
       "clue": "Think about what both graphs share, whatever the base."
@@ -1883,9 +1883,9 @@ MADE_BANKS.mat = {
       "q": "f(x) = x⁴ has f''(x) = 12x². Which statement about the point (0, 0) is true?",
       "opts": [
         "Not an inflection point, as f''(x) does not change sign",
-        "An inflection point, as f''(0) = 0",
-        "An inflection point, as the curve is concave up",
-        "Not an inflection point, as f''(x) is negative there"
+        "An inflection point, as f''(x) = 0 when x = 0 on the curve",
+        "An inflection point, as the curve is concave up near x = 0",
+        "Not an inflection point, as f''(x) is negative near x = 0"
       ],
       "why": "f''(x) = 12x² is positive on both sides of x = 0, so the concavity does not change and there is no point of inflection. The tempting option says f''(0) = 0 is enough, but the sign of f''(x) must change.",
       "clue": "Check the sign of f''(x) on each side of x = 0."

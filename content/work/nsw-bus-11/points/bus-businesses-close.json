@@ -8,12 +8,16 @@
   "2026-10-24T23:13:21Z write: done",
   "2026-10-24T23:15:28Z check: flagged",
   "2026-10-24T23:17:32Z fix: suggested",
-  "2026-10-25T10:37:11Z review: approved with the fix"
+  "2026-10-25T10:37:11Z review: approved with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 1,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "draft": {
   "title": "Why businesses close",
@@ -176,5 +180,82 @@
    "clue": "Is the business a person or a company?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "usd": {
+  "rebalance": 0.00138,
+  "rebalance-check": 0.0152
+ },
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Why businesses close",
+   "card": [
+    [
+     "Voluntary closure",
+     "the owner chooses to close or leave. They may retire, sell the business, or move on to other work. The business can still pay its debts."
+    ],
+    [
+     "Insolvency",
+     "being unable to pay debts when they fall due. Creditors, the people or firms owed money, may then force the business to close."
+    ],
+    [
+     "Bankruptcy",
+     "the legal process for a person who cannot pay their debts, such as a sole trader or partner. A trustee takes control of their assets to pay creditors."
+    ],
+    [
+     "Liquidation",
+     "the legal process that winds up a company, often because it is insolvent. A liquidator sells its assets, pays creditors as far as possible, and the company is deregistered."
+    ]
+   ],
+   "remember": "Closing by choice is voluntary. Insolvency can force closure: bankruptcy for a person, liquidation for a company.",
+   "a": {
+    "q": "Which of these best describes insolvency?",
+    "opts": [
+     "Being unable to pay debts when they fall due",
+     "Making a loss in one year while still paying debts",
+     "Choosing to close the business when the owner retires",
+     "Selling the business to a new owner who takes over"
+    ],
+    "why": "Insolvency means the business cannot pay its debts as they fall due. A single loss does not mean debts go unpaid, and retiring or selling is a voluntary choice, not insolvency.",
+    "clue": "Think about bills the business cannot pay."
+   },
+   "b": {
+    "d": 3,
+    "q": "Tasman Tiles Pty Ltd, a company in Newcastle, can no longer pay its suppliers as bills fall due. Which legal process is most likely to follow?",
+    "opts": [
+     "Liquidation, because it is an insolvent company",
+     "Bankruptcy, because it cannot pay its debts",
+     "Voluntary closure, because its owners choose it",
+     "Bankruptcy, because its owners are the ones in debt"
+    ],
+    "why": "Pty Ltd shows the business is a company, and an insolvent company goes into liquidation. Bankruptcy is tempting because it also follows unpaid debts, but it applies to a person, not a company.",
+    "clue": "Is the business a person or a company?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Being unable to pay debts when they fall due",
+    "also_right": []
+   },
+   "b": {
+    "best": "Liquidation, because it is an insolvent company",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "The clue 'Think about bills the business cannot pay' points straight to the only option about being unable to pay debts, so a student can pick it without knowing what insolvency means."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card, questions and explanations are accurate for Australian law, and both intended answers are correct. The only problem is that the clue for question a gives the answer away."
+  }
+ }
 }

@@ -8,16 +8,22 @@
   "2026-10-27T00:53:09Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:04Z write: failed the content check, writing again",
   "2026-10-27T01:08:32Z write: done",
-  "2026-10-27T01:22:57Z check: passed, cleared"
+  "2026-10-27T01:22:57Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01087,
-  "check": 0.00846
+  "check": 0.00846,
+  "rebalance": 0.00329,
+  "rebalance-check": 0.0134
  },
  "draft": {
   "title": "How texts build empathy",
@@ -101,9 +107,9 @@
    "q": "What does empathy mean when a text builds it in a reader?",
    "opts": [
     "Understanding and sharing what a character feels",
-    "Agreeing with every choice a character makes",
-    "Feeling pity for a character from a distance",
-    "Knowing the facts of a character's life"
+    "Agreeing with every choice a character decides to make",
+    "Feeling pity for a character while staying far away",
+    "Knowing all the facts about a character's whole life"
    ],
    "why": "Empathy is understanding and sharing another person's feelings. Pity from a distance is tempting, but it keeps the reader outside the character's experience, which is what empathy moves past.",
    "clue": "Think of standing inside the character's feelings, not watching from outside."
@@ -113,13 +119,50 @@
    "q": "A story is told in the first person by Linh, a new arrival in Australia. She describes folding her school uniform each night so the worn cuffs do not show. Which choice does most to place the reader inside her experience?",
    "opts": [
     "Her own first-person voice and the detail of the cuffs",
-    "The fact that the story is set in a school",
-    "The use of a long paragraph to end the story",
-    "The fact that Linh is a student, as readers are"
+    "The fact that the story is set in a school and a home",
+    "The use of one long paragraph to end the whole story",
+    "The fact that Linh is a student, just as readers are"
    ],
    "why": "Linh's own voice and a small specific detail let the reader feel her embarrassment and care from the inside. The setting being a school does not by itself make the reader share her feelings.",
    "clue": "Look for the techniques named on the card that appear in the passage."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Understanding and sharing what a character feels",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her own first-person voice and the detail of the cuffs",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Understanding and sharing what a character feels",
+    "Agreeing with every choice a character makes",
+    "Feeling pity for a character from a distance",
+    "Knowing the facts of a character's life"
+   ],
+   "b": [
+    "Her own first-person voice and the detail of the cuffs",
+    "The fact that the story is set in a school",
+    "The use of a long paragraph to end the story",
+    "The fact that Linh is a student, as readers are"
+   ]
+  }
+ }
 }

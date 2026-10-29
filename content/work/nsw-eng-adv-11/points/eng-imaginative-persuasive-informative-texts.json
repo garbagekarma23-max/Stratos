@@ -9,20 +9,26 @@
   "2026-10-27T01:00:03Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00475,
   "check": 0.01142,
   "fix": 0.02269,
-  "recheck": 0.0113
+  "recheck": 0.0113,
+  "rebalance": 0.00545,
+  "rebalance-check": 0.01198
  },
  "draft": {
   "title": "Imaginative, persuasive and informative texts",
@@ -207,9 +213,9 @@
    "q": "Which text's main purpose is to persuade?",
    "opts": [
     "An editorial claiming the town needs more firebreaks",
-    "A guide explaining how firebreaks slow a bushfire",
-    "A poem mourning a forest lost to bushfire",
-    "A news report listing homes lost in a bushfire"
+    "A guide explaining how council crews build firebreaks",
+    "A poem mourning a forest lost to a summer bushfire",
+    "A news report listing the homes lost in a bushfire"
    ],
    "why": "The editorial puts forward a view, that the town needs more firebreaks, and wants readers to accept it. The guide is on the same topic but only explains how firebreaks work. The poem stirs strong feelings, but it does not argue for a view.",
    "clue": "Which text wants readers to accept a view?"
@@ -227,5 +233,35 @@
    "clue": "Look at what the last paragraph asks readers to do."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An editorial claiming the town needs more firebreaks",
+    "also_right": []
+   },
+   "b": {
+    "best": "Informative with a persuasive ending",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "An editorial claiming the town needs more firebreaks",
+    "A guide explaining how firebreaks slow a bushfire",
+    "A poem mourning a forest lost to bushfire",
+    "A news report listing homes lost in a bushfire"
+   ]
+  }
+ }
 }

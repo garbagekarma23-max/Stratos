@@ -7,16 +7,22 @@
   "2026-10-26T13:29:51Z new, write",
   "2026-10-27T00:53:08Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:04Z write: done",
-  "2026-10-27T01:08:31Z check: passed, cleared"
+  "2026-10-27T01:08:31Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00472,
-  "check": 0.00953
+  "check": 0.00953,
+  "rebalance": 0.00145,
+  "rebalance-check": 0.01318
  },
  "draft": {
   "title": "Drafting and editing",
@@ -99,9 +105,9 @@
    "q": "Which task is an example of revising, not editing?",
    "opts": [
     "Moving the strongest scene from the middle to the opening",
-    "Fixing a missing comma in the second paragraph",
-    "Swapping a vague verb for a more exact one",
-    "Correcting the spelling of a character's name"
+    "Fixing a missing comma in the second paragraph of the story",
+    "Swapping a vague verb for a more exact one in the last scene",
+    "Correcting the spelling of a character's name throughout it"
    ],
    "why": "Moving a scene changes the structure of the piece, so it is revising. The other three fix sentences or words, which is editing. Swapping a verb can seem big, but it is a change to a single word.",
    "clue": "Revising changes the shape of the whole piece."
@@ -119,5 +125,35 @@
    "clue": "One change moves a big part. The other fixes the wording."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Moving the strongest scene from the middle to the opening",
+    "also_right": []
+   },
+   "b": {
+    "best": "Revising, then editing",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Moving the strongest scene from the middle to the opening",
+    "Fixing a missing comma in the second paragraph",
+    "Swapping a vague verb for a more exact one",
+    "Correcting the spelling of a character's name"
+   ]
+  }
+ }
 }

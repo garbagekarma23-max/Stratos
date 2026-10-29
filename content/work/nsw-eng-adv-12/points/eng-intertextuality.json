@@ -11,20 +11,26 @@
   "2026-10-27T01:22:57Z check: flagged",
   "2026-10-27T01:29:33Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:28Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:28Z review: approved with the fix (a spot check)",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01113,
   "check": 0.01288,
   "fix": 0.01992,
-  "recheck": 0.01111
+  "recheck": 0.01111,
+  "rebalance": 0.00334,
+  "rebalance-check": 0.01191
  },
  "draft": {
   "title": "Intertextuality",
@@ -196,9 +202,9 @@
    "q": "Which statement best describes intertextuality?",
    "opts": [
     "The links between texts that share stories, forms or ideas",
-    "The copying of one writer's exact words into a new text",
-    "The way a text is divided into chapters or sections",
-    "The influence of a writer's own life on their text"
+    "The copying of one writer's exact words into a later text",
+    "The way a single text is divided into chapters or sections",
+    "The influence of a writer's own life and beliefs on a text"
    ],
    "why": "Intertextuality is the relationship between texts through shared stories, characters, forms or ideas. Copying exact words is too narrow, because a link can be a retold story or a borrowed form with no words repeated.",
    "clue": "Can a connection between texts exist without any repeated words?"
@@ -208,13 +214,50 @@
    "q": "Priya writes a story in which a young person leaves home, faces a hard test and returns changed. Readers who know many older tales with this pattern notice more in it. What does this show?",
    "opts": [
     "Her story is linked to earlier texts, shaping how it is read",
-    "Her story makes no sense unless readers know older tales",
-    "Her story is weaker because it uses a familiar pattern",
-    "Her story has copied one earlier text word for word"
+    "Her story makes no sense unless readers know the older tales",
+    "Her story is weaker because it uses a familiar story pattern",
+    "Her story has copied one earlier text word for word exactly"
    ],
    "why": "The story shares a pattern with many earlier texts, and knowing them changes how readers take it. Saying it makes no sense without them goes too far, because a reader who knows no older tales can still follow it.",
    "clue": "Could a reader who knows no older tales still follow the story?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The links between texts that share stories, forms or ideas",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her story is linked to earlier texts, shaping how it is read",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "The links between texts that share stories, forms or ideas",
+    "The copying of one writer's exact words into a new text",
+    "The way a text is divided into chapters or sections",
+    "The influence of a writer's own life on their text"
+   ],
+   "b": [
+    "Her story is linked to earlier texts, shaping how it is read",
+    "Her story makes no sense unless readers know older tales",
+    "Her story is weaker because it uses a familiar pattern",
+    "Her story has copied one earlier text word for word"
+   ]
+  }
+ }
 }

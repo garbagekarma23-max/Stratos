@@ -91,9 +91,9 @@ MADE_BANKS.eng = {
       "q": "Which line is an example of personification?",
       "opts": [
         "The old clock grumbled through the long afternoon",
-        "The old clock was loud and rusty",
-        "The old clock ticked like a dripping tap",
-        "The old clock sat on the kitchen shelf"
+        "The old clock was loud and rusty in the long afternoon",
+        "The old clock ticked like a tap through the afternoon",
+        "The old clock sat on the shelf through the long day"
       ],
       "why": "A clock cannot grumble, so the line gives it a human mood. The simile compares the ticking to a tap, but it does not give the clock a human quality.",
       "clue": "Look for a human feeling or action given to an object."
@@ -103,9 +103,9 @@ MADE_BANKS.eng = {
       "q": "In a short story, Priya's grandmother keeps a red scarf. It appears when the family argues, when they make peace and when the grandmother dies. What makes the scarf a symbol?",
       "opts": [
         "It stands for family bonds and gains meaning each time",
-        "It is a bright colour that catches the reader's eye",
-        "It is described as if the scarf were alive",
-        "It is mentioned more than once in the story"
+        "It is a bright colour and catches the reader's eye often",
+        "It is described as if it were alive and has feelings",
+        "It is mentioned in many scenes and is always the same"
       ],
       "why": "The scarf is tied to a larger idea, the bond within the family, and each return adds to that meaning. Repetition alone is not enough, because an object can be repeated without standing for anything bigger.",
       "clue": "Ask what bigger idea the scarf points to, and how each return changes it."
@@ -296,9 +296,9 @@ MADE_BANKS.eng = {
       "q": "Which text's main purpose is to persuade?",
       "opts": [
         "An editorial claiming the town needs more firebreaks",
-        "A guide explaining how firebreaks slow a bushfire",
-        "A poem mourning a forest lost to bushfire",
-        "A news report listing homes lost in a bushfire"
+        "A guide explaining how council crews build firebreaks",
+        "A poem mourning a forest lost to a summer bushfire",
+        "A news report listing the homes lost in a bushfire"
       ],
       "why": "The editorial puts forward a view, that the town needs more firebreaks, and wants readers to accept it. The guide is on the same topic but only explains how firebreaks work. The poem stirs strong feelings, but it does not argue for a view.",
       "clue": "Which text wants readers to accept a view?"
@@ -368,9 +368,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence is written in the most formal register?",
       "opts": [
         "Residents are requested to refrain from parking here",
-        "Please don't park here, folks, we need the space",
-        "Park somewhere else, mate, this spot's taken",
-        "No parking here, thanks heaps for helping out"
+        "Please don't park here, folks, we really need the space",
+        "Park somewhere else, mate, because this spot's taken",
+        "No parking here, thanks heaps for helping us out mate"
       ],
       "why": "Requested and refrain from are precise, formal word choices, and the sentence keeps a distance from the reader. The other three use contractions, slang or casual phrases, which make the tone closer and more informal.",
       "clue": "Look for the sentence with no slang or contractions."
@@ -413,9 +413,9 @@ MADE_BANKS.eng = {
       "q": "A writer changes 'She crept down the hall' to 'You creep down the hall'. What is the main effect of this change?",
       "opts": [
         "It places the reader inside the action as the one acting",
-        "It shows events through the narrator's own eyes",
-        "It puts more distance between the reader and events",
-        "It moves the narrator to stand outside the story"
+        "It shows the events through the narrator's own eyes as I",
+        "It puts more distance between the reader and the events",
+        "It moves the narrator outside the story to watch from afar"
       ],
       "why": "The change is to second person, which pulls the reader into the action as if they are the one acting. Seeing events through the narrator's own eyes is the effect of first person, where the narrator says I, not you.",
       "clue": "Think about where the change puts the reader."
@@ -441,8 +441,8 @@ MADE_BANKS.eng = {
       "q": "What is the best way to use a mentor text in your own writing?",
       "opts": [
         "Borrow one technique and apply it to your own subject",
-        "Copy its best sentences and change a few words",
-        "Write about the same topic using the same ideas",
+        "Copy its best sentences and change a few of the words",
+        "Write about the same topic and keep the same ideas",
         "Read it once for enjoyment and then put it aside"
       ],
       "why": "A mentor text teaches a technique you can reuse with your own content. Copying sentences or ideas is plagiarism, and reading only for enjoyment skips the close study that makes it useful.",
@@ -547,9 +547,9 @@ MADE_BANKS.eng = {
       "q": "Which task is an example of revising, not editing?",
       "opts": [
         "Moving the strongest scene from the middle to the opening",
-        "Fixing a missing comma in the second paragraph",
-        "Swapping a vague verb for a more exact one",
-        "Correcting the spelling of a character's name"
+        "Fixing a missing comma in the second paragraph of the story",
+        "Swapping a vague verb for a more exact one in the last scene",
+        "Correcting the spelling of a character's name throughout it"
       ],
       "why": "Moving a scene changes the structure of the piece, so it is revising. The other three fix sentences or words, which is editing. Swapping a verb can seem big, but it is a change to a single word.",
       "clue": "Revising changes the shape of the whole piece."
@@ -647,9 +647,9 @@ MADE_BANKS.eng = {
       "q": "A story opens with thick fog, a locked gate and a silent village. What is the main effect of this setting?",
       "opts": [
         "It creates an uneasy, mysterious atmosphere",
-        "It shows the narrator cannot be trusted",
-        "It marks the climax of the plot",
-        "It shows a character changing over time"
+        "It shows the narrator cannot be trusted at all",
+        "It marks the climax of the story's main plot",
+        "It shows a character changing over the story"
       ],
       "why": "Fog, a locked gate and silence build a mood of unease, which is atmosphere. The setting does not say anything about the narrator or the plot's climax, so those options are wrong.",
       "clue": "Think about the mood the place gives the reader."
@@ -898,9 +898,9 @@ MADE_BANKS.eng = {
       "q": "What does a counter-narrative do?",
       "opts": [
         "Tells a story from a perspective the dominant story left out",
-        "Repeats the dominant story in a shorter and simpler form",
-        "Updates the setting of a story for a modern audience",
-        "Gives the dominant story's hero a longer speaking part"
+        "Repeats the dominant story in a shorter and simpler version",
+        "Updates the setting of a story to suit a modern-day audience",
+        "Gives the hero of the dominant story a longer speaking part"
       ],
       "why": "A counter-narrative brings in a viewpoint that was missing and so challenges the dominant story. Simply repeating or updating a story does not question whose experience counts.",
       "clue": "Think about whose voice was missing."
@@ -934,9 +934,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence is the strongest comparison of two stories about leaving home?",
       "opts": [
         "A's letters can feel more private to readers than B's film",
-        "Story A is told as letters and Story B is a film",
-        "Story A is sad and Story B is also sad in places",
-        "Story A is better because its ending is more moving"
+        "A is told as letters and B is shown as a film on screen",
+        "A is sad and B is also sad in several of its scenes",
+        "A is better because its ending is more moving to readers"
       ],
       "why": "The sentence about the letters feeling more private names a difference in form and says what it can do for the reader, so it explains why the difference matters. Saying one story is letters and the other a film is the tempting choice, but it only lists the difference. The others note a likeness or give a personal judgement.",
       "clue": "Which one says what a difference does for the reader?"
@@ -946,9 +946,9 @@ MADE_BANKS.eng = {
       "q": "Two stories about friendship were made decades apart in different countries. A student writes that they differ because they were made at different times. What would make this a stronger comparison?",
       "opts": [
         "Linking each era's attitudes to how it shows friendship",
-        "Adding the exact year each story was made",
-        "Saying the first story is weaker because it is older",
-        "Retelling the plot of each story in more detail"
+        "Adding the exact year and the country of each story's making",
+        "Saying the older story is weaker because it is less modern",
+        "Retelling the plot of each story in much more detail first"
       ],
       "why": "Context matters when the student links the time and place a story was made to what the story shows. Adding a date is tempting, but it only states another fact without explaining anything. Calling a story weaker because it is older is a judgement, not a reason for the difference.",
       "clue": "Think about what context can do to a story's ideas."
@@ -1251,9 +1251,9 @@ MADE_BANKS.eng = {
       "q": "Which choice makes a quotation actually support an argument?",
       "opts": [
         "Explaining what its words suggest about the point",
-        "Placing it on its own line after the point",
-        "Making it as long as possible",
-        "Repeating it in the next sentence"
+        "Placing it on its own line straight after the point",
+        "Choosing a long passage that covers the whole scene",
+        "Repeating the same quotation again in the next line"
       ],
       "why": "A quotation supports an argument when you explain how its words prove your point. Length or repetition adds nothing, and a quotation left alone is still unexplained.",
       "clue": "What must follow the evidence?"
@@ -1263,9 +1263,9 @@ MADE_BANKS.eng = {
       "q": "Jess argues that a narrator feels lonely. She writes: The narrator eats alone by the window. What is missing from her paragraph?",
       "opts": [
         "An explanation of how this detail shows loneliness",
-        "A longer quotation from the same page",
-        "A second quotation about eating",
-        "A summary of the whole story"
+        "A longer quotation from the same page of the book",
+        "A second quotation that is also about eating alone",
+        "A summary of the whole story from start to finish"
       ],
       "why": "Jess gives a detail from the text but does not say how it shows loneliness. Evidence needs analysis to prove a point. More quotation would still leave it unexplained.",
       "clue": "She has the evidence, but what has she not done with it?"
@@ -1602,9 +1602,9 @@ MADE_BANKS.eng = {
       "q": "Which sentence best explains a character's motivation?",
       "opts": [
         "Guilt drives Lena to leave money on her neighbour's step",
-        "Lena leaves money on her neighbour's step at night",
-        "Lena is a person who does many unusual things",
-        "The writer uses a short sentence when Lena walks home"
+        "Lena leaves money on her neighbour's step late at night",
+        "Lena is a person who does many surprising things alone",
+        "The writer uses a short sentence as Lena walks home late"
       ],
       "why": "The option about guilt names an emotion and links it to Lena's action, so it gives the reason she acts. The option about leaving money at night only describes the action. The option about a short sentence names a technique but gives no reason.",
       "clue": "Look for the option that gives a reason for the action."
@@ -1614,9 +1614,9 @@ MADE_BANKS.eng = {
       "q": "In a story, Ravi tells everyone he does not care about the race. He stays up late laying out his running shoes and checking the start time again and again. What do these details most likely reveal?",
       "opts": [
         "His hope of winning, which he hides behind pride",
-        "His relief that the race has been cancelled",
-        "His anger at the people who asked about it",
-        "His boredom with a race he has run before"
+        "His relief that the race has been cancelled this year",
+        "His anger at the people who keep asking him about it",
+        "His boredom with a race that he has already run before"
       ],
       "why": "His words say he does not care, but his actions show he cares a great deal. The details point to hope, hidden by pride. Anger is tempting because he is defensive, but nothing in his actions shows it.",
       "clue": "Compare what Ravi says with what he does."
@@ -1644,9 +1644,9 @@ MADE_BANKS.eng = {
       "q": "What does empathy mean when a text builds it in a reader?",
       "opts": [
         "Understanding and sharing what a character feels",
-        "Agreeing with every choice a character makes",
-        "Feeling pity for a character from a distance",
-        "Knowing the facts of a character's life"
+        "Agreeing with every choice a character decides to make",
+        "Feeling pity for a character while staying far away",
+        "Knowing all the facts about a character's whole life"
       ],
       "why": "Empathy is understanding and sharing another person's feelings. Pity from a distance is tempting, but it keeps the reader outside the character's experience, which is what empathy moves past.",
       "clue": "Think of standing inside the character's feelings, not watching from outside."
@@ -1656,9 +1656,9 @@ MADE_BANKS.eng = {
       "q": "A story is told in the first person by Linh, a new arrival in Australia. She describes folding her school uniform each night so the worn cuffs do not show. Which choice does most to place the reader inside her experience?",
       "opts": [
         "Her own first-person voice and the detail of the cuffs",
-        "The fact that the story is set in a school",
-        "The use of a long paragraph to end the story",
-        "The fact that Linh is a student, as readers are"
+        "The fact that the story is set in a school and a home",
+        "The use of one long paragraph to end the whole story",
+        "The fact that Linh is a student, just as readers are"
       ],
       "why": "Linh's own voice and a small specific detail let the reader feel her embarrassment and care from the inside. The setting being a school does not by itself make the reader share her feelings.",
       "clue": "Look for the techniques named on the card that appear in the passage."
@@ -1686,9 +1686,9 @@ MADE_BANKS.eng = {
       "q": "A writer changes \"She walked to the stage\" to \"She edged towards the stage\". What does this change in diction convey?",
       "opts": [
         "Her reluctance or fear about reaching the stage",
-        "Her eagerness to begin the performance",
-        "Her pride in how far she has come",
-        "Her calm focus on the task ahead"
+        "Her eagerness to begin the performance she loves",
+        "Her pride in how far she has come in her career",
+        "Her calm focus on the task ahead of her tonight"
       ],
       "why": "To edge is to move slowly and cautiously, so the new verb shows she is holding back out of fear or reluctance. Eagerness is tempting because she is still moving towards the stage, but an eager person would hurry, not edge.",
       "clue": "Picture how someone moves when they edge forward."
@@ -1833,9 +1833,9 @@ MADE_BANKS.eng = {
       "q": "Which statement best describes intertextuality?",
       "opts": [
         "The links between texts that share stories, forms or ideas",
-        "The copying of one writer's exact words into a new text",
-        "The way a text is divided into chapters or sections",
-        "The influence of a writer's own life on their text"
+        "The copying of one writer's exact words into a later text",
+        "The way a single text is divided into chapters or sections",
+        "The influence of a writer's own life and beliefs on a text"
       ],
       "why": "Intertextuality is the relationship between texts through shared stories, characters, forms or ideas. Copying exact words is too narrow, because a link can be a retold story or a borrowed form with no words repeated.",
       "clue": "Can a connection between texts exist without any repeated words?"
@@ -1845,9 +1845,9 @@ MADE_BANKS.eng = {
       "q": "Priya writes a story in which a young person leaves home, faces a hard test and returns changed. Readers who know many older tales with this pattern notice more in it. What does this show?",
       "opts": [
         "Her story is linked to earlier texts, shaping how it is read",
-        "Her story makes no sense unless readers know older tales",
-        "Her story is weaker because it uses a familiar pattern",
-        "Her story has copied one earlier text word for word"
+        "Her story makes no sense unless readers know the older tales",
+        "Her story is weaker because it uses a familiar story pattern",
+        "Her story has copied one earlier text word for word exactly"
       ],
       "why": "The story shares a pattern with many earlier texts, and knowing them changes how readers take it. Saying it makes no sense without them goes too far, because a reader who knows no older tales can still follow it.",
       "clue": "Could a reader who knows no older tales still follow the story?"
@@ -2154,9 +2154,9 @@ MADE_BANKS.eng = {
       "q": "A student is writing about a novel. Which observation is evidence of the writer's style?",
       "opts": [
         "Short, blunt sentences recur whenever the narrator is afraid",
-        "A striking metaphor of a locked door opens the last chapter",
-        "The narrator slowly grows braver as the story unfolds",
-        "The novel explores the cost of living in fear"
+        "One vivid metaphor of a locked door ends the last chapter",
+        "The narrator grows braver after leaving home in chapter two",
+        "The novel explores the cost of living in fear under a regime"
       ],
       "why": "Short sentences that keep returning at moments of fear are a repeated choice about how the text is written, so they form a pattern. The locked door metaphor is tempting, but it is one choice in one place. The narrator's growth is what happens, and fear is what the novel is about.",
       "clue": "Separate how the novel is written from what happens in it."
@@ -2627,9 +2627,9 @@ MADE_BANKS.eng = {
       "q": "Which line of dialogue relies most on subtext to show a character's anger?",
       "opts": [
         "\"Nice of you to turn up,\" said Dad, not looking up",
-        "\"I am furious that you were late,\" said Dad",
-        "\"Your lateness makes me very upset,\" said Dad",
-        "\"Tom, I feel disappointed that you were late\""
+        "\"I am furious that you were late again,\" said Dad",
+        "\"Your lateness makes me really upset,\" Dad said aloud",
+        "\"Tom, I feel so disappointed that you were late\""
       ],
       "why": "Dad's words sound polite, but the reader senses his anger from the sarcasm and his refusal to look up. The other options name the feeling outright, so nothing is left for the reader to work out.",
       "clue": "Which character never names the feeling?"

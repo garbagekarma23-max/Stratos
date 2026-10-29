@@ -7,16 +7,22 @@
   "2026-10-26T13:30:03Z new, write",
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: done",
-  "2026-10-27T01:08:35Z check: passed, cleared"
+  "2026-10-27T01:08:35Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00504,
-  "check": 0.00778
+  "check": 0.00778,
+  "rebalance": 0.00271,
+  "rebalance-check": 0.01617
  },
  "draft": {
   "title": "Gravitational field strength",
@@ -101,5 +107,71 @@
    "clue": "Distance is squared in the formula, so the factor is squared too."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Gravitational field strength",
+   "card": [
+    "Gravitational field strength, g, is the gravitational force on each kilogram placed at a point. It is measured in newtons per kilogram (N/kg), and g = F/m.",
+    "Around a mass M, at a distance r from its centre, g = GM/r². It does not depend on the mass placed in the field, only on M and r.",
+    "The field gets weaker with distance. Doubling r makes g one quarter as large. A larger M makes g larger.",
+    "At the Earth's surface, g is about 9.8 N/kg. The force on a mass m is F = mg, so a 2.0 kg object feels about 19.6 N."
+   ],
+   "remember": "g = GM/r²: it depends on the mass creating the field and the distance, not on the object in it.",
+   "a": {
+    "q": "A 3.0 kg object and a 6.0 kg object are placed at the same point near a planet. How do the field strengths at that point compare?",
+    "opts": [
+     "They are the same, because g depends only on M and r",
+     "The 6.0 kg object has twice the g, because it has more mass",
+     "The 3.0 kg object has twice the g, because it has less mass",
+     "The 6.0 kg object has four times the g, because g uses m²"
+    ],
+    "why": "The field strength at a point is set by the mass creating the field and the distance from it, so both objects are in the same g. The 6.0 kg object feels twice the force, but force per kilogram is unchanged.",
+    "clue": "g is force per kilogram, so mass of the object cancels."
+   },
+   "b": {
+    "d": 3,
+    "q": "At the surface of a planet, g is 12 N/kg. What is g at a point three planet radii above the surface, measured from the centre at 4 times the radius?",
+    "opts": [
+     "0.75 N/kg",
+     "3.0 N/kg",
+     "4.0 N/kg",
+     "48 N/kg"
+    ],
+    "why": "The distance from the centre is 4 times larger, so g falls to 1/4² = 1/16 of its value. 12 ÷ 16 = 0.75 N/kg. Dividing by 4 is the tempting mistake, as it forgets the square in r².",
+    "clue": "Distance is squared in the formula, so the factor is squared too."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "They are the same, because g depends only on M and r",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.75 N/kg",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "The clue 'mass of the object cancels' states the answer outright, so a student can pick the right option without knowing the idea."
+    },
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The stem 'three planet radii above the surface, measured from the centre at 4 times the radius' is awkwardly phrased and could confuse. Clearer: 'at a distance of 4 planet radii from the centre (three radii above the surface)'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The physics and both intended answers are correct. Question a's clue gives the answer away, and question b's stem is awkwardly worded."
+  }
+ }
 }

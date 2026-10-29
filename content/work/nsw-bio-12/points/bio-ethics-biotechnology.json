@@ -10,20 +10,26 @@
   "2026-10-27T01:08:35Z write: done",
   "2026-10-27T01:23:00Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01107,
   "check": 0.01425,
   "fix": 0.0202,
-  "recheck": 0.01332
+  "recheck": 0.01332,
+  "rebalance": 0.0053,
+  "rebalance-check": 0.01394
  },
  "draft": {
   "title": "Ethics of biotechnology",
@@ -209,9 +215,9 @@
    "q": "Which of these is an ethical question about biotechnology?",
    "opts": [
     "Should a company be allowed to patent a human gene?",
-    "Which enzyme cuts DNA at a set sequence?",
-    "How many bases are in a gene for insulin?",
-    "Which microbes turn milk into cheese?"
+    "Which enzyme is used to cut DNA at a set sequence?",
+    "How many bases are found in the human insulin gene?",
+    "Which microbes are used to turn milk into cheese?"
    ],
    "why": "Whether genes should be owned is a question of right and wrong, so it is about ethics. The other three ask for facts that science can answer without a value judgement.",
    "clue": "Look for the question about what should be allowed, not what is true."
@@ -229,5 +235,35 @@
    "clue": "Ask who benefits and who is left out."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Should a company be allowed to patent a human gene?",
+    "also_right": []
+   },
+   "b": {
+    "best": "Fairness, because only some patients may afford it",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Should a company be allowed to patent a human gene?",
+    "Which enzyme cuts DNA at a set sequence?",
+    "How many bases are in a gene for insulin?",
+    "Which microbes turn milk into cheese?"
+   ]
+  }
+ }
 }

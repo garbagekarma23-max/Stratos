@@ -8,16 +8,22 @@
   "2026-10-27T00:53:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:08Z write: failed the content check, writing again",
   "2026-10-27T01:08:34Z write: done",
-  "2026-10-27T01:22:59Z check: passed, cleared"
+  "2026-10-27T01:22:59Z check: passed, cleared",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.0109,
-  "check": 0.00944
+  "check": 0.00944,
+  "rebalance": 0.0014,
+  "rebalance-check": 0.01221
  },
  "draft": {
   "title": "Sustainability in industry",
@@ -113,13 +119,43 @@
    "q": "Dev's company makes a plastic from crude oil. It switches to making the same plastic from sugar cane waste. Which green chemistry aim does this meet?",
    "opts": [
     "Using a renewable feedstock",
-    "Using a safer chemical",
-    "Producing less waste",
-    "Using less energy"
+    "Using a less harmful solvent",
+    "Producing fewer by-products",
+    "Using a lower reaction temperature"
    ],
    "why": "Sugar cane waste is a plant source that can be replaced, while crude oil is finite. The change is to the starting material. Nothing in the case says the process makes less waste or is less hazardous, so those aims cannot be assumed.",
    "clue": "Focus on where the starting material comes from."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Lower energy use",
+    "also_right": []
+   },
+   "b": {
+    "best": "Using a renewable feedstock",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Using a renewable feedstock",
+    "Using a safer chemical",
+    "Producing less waste",
+    "Using less energy"
+   ]
+  }
+ }
 }

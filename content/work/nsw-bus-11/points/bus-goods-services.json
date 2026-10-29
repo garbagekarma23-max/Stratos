@@ -6,11 +6,15 @@
  "log": [
   "2026-10-24T11:31:04Z new, write",
   "2026-10-24T23:13:21Z write: done",
-  "2026-10-24T23:15:28Z check: passed, cleared"
+  "2026-10-24T23:15:28Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 1,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "draft": {
   "title": "Goods and services",
@@ -87,9 +91,9 @@
    "q": "What makes a haircut a service rather than a good?",
    "opts": [
     "It is work done for the customer, not an item they own",
-    "It costs less than most goods do",
-    "It is usually sold by a small business",
-    "It is paid for straight after it is done"
+    "It costs less than the physical items most shops sell",
+    "It is usually sold by a small business and not a big firm",
+    "It is paid for straight after the work has been done"
    ],
    "why": "A haircut is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
    "clue": "Does the customer walk out owning a new thing?"
@@ -107,5 +111,39 @@
    "clue": "What does the customer own after each sale that they did not own before?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "usd": {
+  "rebalance": 0.00672,
+  "rebalance-check": 0.01102
+ },
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is work done for the customer, not an item they own",
+    "also_right": []
+   },
+   "b": {
+    "best": "The bikes are goods and the tune-ups are a service",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "It is work done for the customer, not an item they own",
+    "It costs less than most goods do",
+    "It is usually sold by a small business",
+    "It is paid for straight after it is done"
+   ]
+  }
+ }
 }

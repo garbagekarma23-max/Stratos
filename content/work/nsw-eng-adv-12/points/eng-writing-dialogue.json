@@ -8,16 +8,22 @@
   "2026-10-27T00:53:09Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:04Z write: failed the content check, writing again",
   "2026-10-27T01:08:32Z write: done",
-  "2026-10-27T01:22:57Z check: passed, cleared"
+  "2026-10-27T01:22:57Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01109,
-  "check": 0.00857
+  "check": 0.00857,
+  "rebalance": 0.00259,
+  "rebalance-check": 0.01291
  },
  "draft": {
   "title": "Writing dialogue",
@@ -83,9 +89,9 @@
    "q": "Which line of dialogue relies most on subtext to show a character's anger?",
    "opts": [
     "\"Nice of you to turn up,\" said Dad, not looking up",
-    "\"I am furious that you were late,\" said Dad",
-    "\"Your lateness makes me very upset,\" said Dad",
-    "\"Tom, I feel disappointed that you were late\""
+    "\"I am furious that you were late again,\" said Dad",
+    "\"Your lateness makes me really upset,\" Dad said aloud",
+    "\"Tom, I feel so disappointed that you were late\""
    ],
    "why": "Dad's words sound polite, but the reader senses his anger from the sarcasm and his refusal to look up. The other options name the feeling outright, so nothing is left for the reader to work out.",
    "clue": "Which character never names the feeling?"
@@ -103,5 +109,35 @@
    "clue": "Look for the option that leaves the reader some work to do."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "\"Nice of you to turn up,\" said Dad, not looking up",
+    "also_right": []
+   },
+   "b": {
+    "best": "Let them talk about something small while tension simmers",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "\"Nice of you to turn up,\" said Dad, not looking up",
+    "\"I am furious that you were late,\" said Dad",
+    "\"Your lateness makes me very upset,\" said Dad",
+    "\"Tom, I feel disappointed that you were late\""
+   ]
+  }
+ }
 }

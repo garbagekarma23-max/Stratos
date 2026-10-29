@@ -7,16 +7,22 @@
   "2026-10-26T13:30:06Z new, write",
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:12Z write: done",
-  "2026-10-27T01:08:37Z check: passed, cleared"
+  "2026-10-27T01:08:37Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00503,
-  "check": 0.01024
+  "check": 0.01024,
+  "rebalance": 0.00154,
+  "rebalance-check": 0.0147
  },
  "draft": {
   "title": "The nature of the war",
@@ -117,13 +123,43 @@
    "q": "A US company enters a village in the South to find enemy fighters. It finds only farmers and leaves, and the Viet Cong return days later. Which feature of the war does this best show?",
    "opts": [
     "Search and destroy missions struggled to hold ground",
-    "Bombing had cut off every enemy supply line",
-    "Guerrilla tactics were failing against US troops",
-    "The Viet Cong had no support among villagers"
+    "Bombing raids had cut off every enemy supply route",
+    "Guerrilla tactics were failing against US ground units",
+    "The Viet Cong had lost all support from local villagers"
    ],
    "why": "Search and destroy missions tried to find and kill fighters, but it was hard to tell them from villagers, so the US often could not hold an area. The Viet Cong returning shows guerrilla tactics were working, not failing.",
    "clue": "Ask what the US troops could not do after they left."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They let small groups strike and then vanish",
+    "also_right": []
+   },
+   "b": {
+    "best": "Search and destroy missions struggled to hold ground",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card, the remember line and both questions are accurate and at the right level, each question has one clearly right answer, and the explanations match the card."
+  },
+  "old": {
+   "b": [
+    "Search and destroy missions struggled to hold ground",
+    "Bombing had cut off every enemy supply line",
+    "Guerrilla tactics were failing against US troops",
+    "The Viet Cong had no support among villagers"
+   ]
+  }
+ }
 }

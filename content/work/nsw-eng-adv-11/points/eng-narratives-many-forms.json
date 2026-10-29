@@ -9,20 +9,26 @@
   "2026-10-27T01:00:04Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00473,
   "check": 0.01243,
   "fix": 0.01624,
-  "recheck": 0.01053
+  "recheck": 0.01053,
+  "rebalance": 0.00156,
+  "rebalance-check": 0.01427
  },
  "draft": {
   "title": "Narratives in many forms",
@@ -200,5 +206,66 @@
    "clue": "Which tool works when the audience can only listen?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Narratives in many forms",
+   "card": [
+    "A story can be told in many forms: prose, poetry, film, graphic novels, podcasts, games and social media posts.",
+    "Each form has its own tools. Film uses camera angles, music and editing. A graphic novel uses panels, images and speech bubbles.",
+    "A podcast has no pictures, so it relies on voice, sound effects and silence. Prose relies on words, such as description and sentence rhythm.",
+    "The same story can feel different in a different form, because the tools shape what the audience sees, hears and notices."
+   ],
+   "remember": "The form of a story decides which tools the creator can use to shape the audience's experience.",
+   "a": {
+    "q": "Which pair correctly matches a form with a tool it uses?",
+    "opts": [
+     "Graphic novel and panels",
+     "Podcast and camera angles",
+     "Prose and speech bubbles",
+     "Podcast and pictures"
+    ],
+    "why": "A graphic novel tells its story through panels laid out on the page. A podcast has no pictures, so neither camera angles nor images belong to it. Speech bubbles are a tool of graphic novels, while prose relies on words alone.",
+    "clue": "Think about what the audience can see in each form."
+   },
+   "b": {
+    "d": 3,
+    "q": "Kai turns a short story about a storm at sea into a podcast. The audience cannot see the waves. Which tool would best build the danger of the storm?",
+    "opts": [
+     "Sound effects of crashing waves and howling wind",
+     "A close-up camera angle on the sailors' frightened faces",
+     "A page of panels showing the ship tilting in the waves",
+     "A long paragraph describing the colours of the sea"
+    ],
+    "why": "A podcast works through sound, so crashing waves and wind let listeners hear the danger. A camera angle and panels need images, which a podcast does not have. A narrator could read description aloud, but this one is about colours, which listeners cannot see, so it does less to build danger than sound.",
+    "clue": "Which tool works when the audience can only listen?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Graphic novel and panels",
+    "also_right": []
+   },
+   "b": {
+    "best": "Sound effects of crashing waves and howling wind",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The why says description of colours does little because 'listeners cannot see' them. Spoken description works by making listeners imagine what they cannot see, which is the point the card makes about words. The real reason the option is weaker is that it is about colours, not danger. The why should say that instead."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions have one clear right answer and the card is accurate. The why for (b) wrongly suggests that spoken description of colours fails because listeners cannot see; it should say the description is about colours rather than danger."
+  }
+ }
 }

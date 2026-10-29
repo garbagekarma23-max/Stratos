@@ -201,9 +201,9 @@ MADE_BANKS.mod = {
       "q": "Which statement best explains why the Enabling Act mattered for Hitler's power?",
       "opts": [
         "It let his government make laws without the Reichstag",
-        "It made him chancellor for the first time",
-        "It gave the Nazis their first seats in parliament",
-        "It ended the Great Depression in Germany"
+        "It made him chancellor when Hindenburg appointed him",
+        "It gave the Nazis their first seats in the Reichstag",
+        "It ended the Great Depression and won back jobs"
       ],
       "why": "The Act let the government pass laws without the Reichstag, which is what allowed Hitler to rule as a dictator. It did not make him chancellor, because Hindenburg had already appointed him in January 1933. That appointment is the tempting wrong answer.",
       "clue": "Check the order of events: the Act came after Hitler became chancellor."
@@ -222,9 +222,9 @@ MADE_BANKS.mod = {
       "q": "Which description best fits militarism in 1930s Japan?",
       "opts": [
         "The armed forces held great influence over government policy",
-        "Elected politicians controlled the army through parliament",
-        "Army influence shrank as the Depression worsened",
-        "Japan avoided foreign conflict to rebuild its economy"
+        "Elected politicians held strong control over the army by law",
+        "Army influence fell as people lost trust in its leaders",
+        "Japan avoided war abroad so it could rebuild its economy"
       ],
       "why": "Militarism means the armed forces have great influence over government and policy, and in the 1930s the army and navy came to hold it. Civilian politicians did not control the army: in Manchuria the army acted and they did not stop it.",
       "clue": "Think about who made the decisions, the army or the politicians."
@@ -234,9 +234,9 @@ MADE_BANKS.mod = {
       "q": "Japanese army officers in Manchuria staged a railway incident in 1931 and then took over the region, while the government in Tokyo did not stop them. What does this show?",
       "opts": [
         "The army could act with little control from civilian leaders",
-        "The government in Tokyo had planned the invasion in detail",
-        "Japan's economy no longer needed new land or resources",
-        "China had already attacked Japan in Manchuria first"
+        "Civilian leaders in Tokyo had ordered the takeover in secret",
+        "Japan already had all the land and resources it needed then",
+        "Chinese troops attacked the railway and Japan struck back"
       ],
       "why": "The army used a staged incident as an excuse and the civilian government did not stop it, which shows the army's growing power. The incident was staged by the army, so it was not a real Chinese attack that started the conflict.",
       "clue": "Who acted, and who failed to stop them?"
@@ -954,9 +954,9 @@ MADE_BANKS.mod = {
       "q": "A US company enters a village in the South to find enemy fighters. It finds only farmers and leaves, and the Viet Cong return days later. Which feature of the war does this best show?",
       "opts": [
         "Search and destroy missions struggled to hold ground",
-        "Bombing had cut off every enemy supply line",
-        "Guerrilla tactics were failing against US troops",
-        "The Viet Cong had no support among villagers"
+        "Bombing raids had cut off every enemy supply route",
+        "Guerrilla tactics were failing against US ground units",
+        "The Viet Cong had lost all support from local villagers"
       ],
       "why": "Search and destroy missions tried to find and kill fighters, but it was hard to tell them from villagers, so the US often could not hold an area. The Viet Cong returning shows guerrilla tactics were working, not failing.",
       "clue": "Ask what the US troops could not do after they left."

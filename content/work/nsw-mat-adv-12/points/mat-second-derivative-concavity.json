@@ -8,16 +8,22 @@
   "2026-10-27T00:53:10Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:06Z write: failed the content check, writing again",
   "2026-10-27T01:08:33Z write: done",
-  "2026-10-27T01:22:58Z check: passed, cleared"
+  "2026-10-27T01:22:58Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01087,
-  "check": 0.00874
+  "check": 0.00874,
+  "rebalance": 0.00456,
+  "rebalance-check": 0.01244
  },
  "draft": {
   "title": "The second derivative and concavity",
@@ -107,13 +113,43 @@
    "q": "f(x) = x⁴ has f''(x) = 12x². Which statement about the point (0, 0) is true?",
    "opts": [
     "Not an inflection point, as f''(x) does not change sign",
-    "An inflection point, as f''(0) = 0",
-    "An inflection point, as the curve is concave up",
-    "Not an inflection point, as f''(x) is negative there"
+    "An inflection point, as f''(x) = 0 when x = 0 on the curve",
+    "An inflection point, as the curve is concave up near x = 0",
+    "Not an inflection point, as f''(x) is negative near x = 0"
    ],
    "why": "f''(x) = 12x² is positive on both sides of x = 0, so the concavity does not change and there is no point of inflection. The tempting option says f''(0) = 0 is enough, but the sign of f''(x) must change.",
    "clue": "Check the sign of f''(x) on each side of x = 0."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x > 1",
+    "also_right": []
+   },
+   "b": {
+    "best": "Not an inflection point, as f''(x) does not change sign",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Not an inflection point, as f''(x) does not change sign",
+    "An inflection point, as f''(0) = 0",
+    "An inflection point, as the curve is concave up",
+    "Not an inflection point, as f''(x) is negative there"
+   ]
+  }
+ }
 }

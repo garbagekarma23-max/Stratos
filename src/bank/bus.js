@@ -54,9 +54,9 @@ MADE_BANKS.bus = {
       "q": "What makes a haircut a service rather than a good?",
       "opts": [
         "It is work done for the customer, not an item they own",
-        "It costs less than most goods do",
-        "It is usually sold by a small business",
-        "It is paid for straight after it is done"
+        "It costs less than the physical items most shops sell",
+        "It is usually sold by a small business and not a big firm",
+        "It is paid for straight after the work has been done"
       ],
       "why": "A haircut is work done for the customer, and they do not take home a physical item to own. Price, business size and when it is paid for do not decide whether something is a good or a service.",
       "clue": "Does the customer walk out owning a new thing?"
@@ -127,9 +127,9 @@ MADE_BANKS.bus = {
       "q": "How does the tax a business pays help the wider community?",
       "opts": [
         "It funds services such as public hospitals",
-        "It is paid to workers as their wages",
-        "It is kept by the owners as a reward",
-        "It buys new equipment for the business"
+        "It is paid to workers as their weekly wages",
+        "It is kept by the owners as a reward for risk",
+        "It buys new equipment for the business to use"
       ],
       "why": "Tax goes to the government, which spends it on services like hospitals, schools and roads. Wages are a separate benefit: they go straight to workers, not through the government.",
       "clue": "Who receives the tax, and what do they spend it on?"
@@ -588,9 +588,9 @@ MADE_BANKS.bus = {
       "q": "Which of these shows competitors affecting a business?",
       "opts": [
         "A rival cuts its prices, so the business offers a discount",
-        "Buyers lose interest in a product, so its sales fall",
-        "The cost of parts rises, so each product costs more",
-        "Stock arrives late, so customer orders are delayed"
+        "Customers stop wanting a product, so the business sells less",
+        "The cost of parts rises, so each product costs more to make",
+        "A supplier sends stock late, so customer orders are delayed"
       ],
       "why": "A rival selling similar products is a competitor, and its lower prices push the business to respond. Falling interest from buyers comes from customers, while the cost and timing of parts and stock come from suppliers.",
       "clue": "Look for another business selling to the same buyers."
@@ -932,9 +932,9 @@ MADE_BANKS.bus = {
       "q": "Priya manages a furniture maker in Newcastle. Her yearly report covers profit, staff safety records and the amount of timber waste sent to landfill. What does the report show?",
       "opts": [
         "It reports on all three parts of the triple bottom line",
-        "It reports on the financial part only",
-        "It reports on the financial and social parts only",
-        "It reports on the social and environmental parts only"
+        "It reports on the financial part of the measure only",
+        "It reports on the financial and social results only",
+        "It reports on the social and environmental results only"
       ],
       "why": "Profit is a financial result, staff safety is a social result and timber waste is an environmental result. The report covers all three. A student might miss the waste figure and choose the financial and social option, but waste is about the effect on the environment.",
       "clue": "Sort each item in the report into money, people or environment."
@@ -953,9 +953,9 @@ MADE_BANKS.bus = {
       "q": "Which action by a manager is the best example of the classical scientific approach?",
       "opts": [
         "Timing each step of packing a box and setting one method",
-        "Asking staff to vote on how the team should work",
-        "Letting each worker choose their own way to pack",
-        "Holding weekly social events to lift team spirit"
+        "Asking staff to vote on the best way to run the packing team",
+        "Letting each worker choose their own way to pack each box",
+        "Holding weekly social events to lift team spirit and morale"
       ],
       "why": "Timing each step and setting one best method is Taylor's approach of measuring simple tasks. Asking staff to vote or holding social events focus on people's needs, which Taylor's approach did not.",
       "clue": "Look for measuring tasks and one best method."
@@ -1199,9 +1199,9 @@ MADE_BANKS.bus = {
       "q": "A café owner brings in a new ordering app. A long-serving waiter refuses to use it and says, \"The paper pads work fine.\" Which reason for resistance is this?",
       "opts": [
         "Habit, as the waiter prefers the usual way of working",
-        "Lost status, as the waiter loses a senior role",
-        "Poor communication, as no one explained the app",
-        "Costs, as the waiter must pay for the app"
+        "Lost status, as the waiter fears losing a senior role",
+        "Poor communication, as no one explained the new app",
+        "Costs, as the waiter would have to pay for the new app"
       ],
       "why": "The waiter says the old method works fine, which shows a preference for the usual way of working. Lost status is tempting, but nothing in the case says the waiter loses a role or influence.",
       "clue": "Look at what the waiter says about the old pads."
@@ -1277,9 +1277,9 @@ MADE_BANKS.bus = {
       "q": "What is the main purpose of a force field analysis?",
       "opts": [
         "To weigh the forces for and against a proposed change",
-        "To rank staff by how much they support a change",
-        "To work out the total cost of a proposed change",
-        "To list the steps needed to carry out a change"
+        "To rank staff by how much they support a proposed change",
+        "To work out the total cost of a change to the business",
+        "To list the steps needed to carry out a proposed change"
       ],
       "why": "The model sets driving forces against restraining forces so managers can see how likely a change is to happen. It does not plan the steps or total the cost, although cost may appear as one restraining force.",
       "clue": "Think about the two lists the model builds."
@@ -1652,9 +1652,9 @@ MADE_BANKS.bus = {
       "q": "Which of these is an example of a strategic plan?",
       "opts": [
         "A five-year plan to expand a bakery chain into Queensland",
-        "A plan to run a social media campaign for the next year",
-        "A roster that sets who works each shift this week",
-        "A schedule for ordering flour every Monday morning"
+        "A one-year plan for the marketing team's social media push",
+        "A daily roster that sets who works each shift this week",
+        "A weekly schedule for ordering flour every Monday morning"
       ],
       "why": "Expanding into a new state covers several years and affects the whole business, so it is strategic. The social media campaign is tempting, but it covers one year and one part of the business, so it is tactical.",
       "clue": "Look for the plan with the longest time and the widest reach."
