@@ -6,6 +6,8 @@
 // The courses the content pipeline made (src/bank and src/courses, see src/made.js) get the same checks, and more:
 // each bank's ids start with its name, each course is for Years 7 to 12 and names a place, and an English course
 // never quotes more than 10 words in a row.
+// It also warns when a course's right answer is the longest option far more often than chance, which lets a student
+// guess by length. content/pipeline.py rebalance fixes a course already written.
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
@@ -34,6 +36,10 @@ const wordCheck = (id, t, subject) => {
 };
 /* A quote of more than 10 words, in straight or curly quote marks. English courses must not quote set texts at length. */
 const longQuote = t => (t.match(/"[^"]*"|“[^”]*”|‘[^’]*’/g) || []).find(q => q.split(/\s+/).filter(Boolean).length > 10);
+/* The right option is clearly the longest when it is longer than every wrong option and at least LONG_MARGIN characters
+   longer than their average. content/pipeline.py uses the same rule (clearly_longest) to pick the questions to rebalance. */
+const LONG_MARGIN = 5;
+const clearlyLongest = len => len[0] > Math.max(...len.slice(1)) && len[0] - (len[1] + len[2] + len[3]) / 3 >= LONG_MARGIN;
 /* One point with a card and two questions. tally counts its questions and how often the right answer is longest.
    kind is the made course's kind (english, maths, theory or standard), for the rules that only some subjects have.
    subject is the course's subject, for the subject terms the banned words let through (ALLOWED_IN). */
@@ -51,6 +57,7 @@ function checkPoint(id, p, tally, kind, subject) {
     if (k === 'b' && ![2, 3].includes(q.d)) problems.push(id + k + ' has no difficulty');
     const len = q.opts.map(o => o.length), rest = Math.max(...len.slice(1));
     if (len[0] > rest) tally.longest++;
+    if (clearlyLongest(len)) tally.clear++;
     tally.margins.push([id + k, len[0] - rest, len.join('/')]);
     q.opts.forEach(o => { if (o.length > 60) problems.push(id + k + ' option is ' + o.length + ' characters: ' + o); if (/[.]$/.test(o)) problems.push(id + k + ' option ends with a full stop: ' + o); });
     texts.push(q.q, q.why, q.clue, ...q.opts);
@@ -58,12 +65,20 @@ function checkPoint(id, p, tally, kind, subject) {
   for (const t of texts) wordCheck(id, t, subject);
   if (kind === 'english') for (const t of texts) { const q = typeof t === 'string' && longQuote(t); if (q) problems.push(id + ' quotes more than 10 words: ' + q); }
 }
-const report = (name, t) => {
+/* A course's right option is the longest well above chance when the count is at least 2 standard deviations above a
+   quarter of its questions (a binomial count with p = 1/4). By luck alone, that happens to about 1 course in 40. A course
+   with fewer than 20 questions is too small to tell. A warning does not fail the check. */
+const warnings = [];
+const report = (name, t, id) => {
   console.log(name + ':', t.pts, 'points,', t.qs, 'questions');
-  console.log('  correct option is the longest in', t.longest, 'of', t.qs, '(chance is about', Math.round(t.qs / 4) + ')');
+  console.log('  correct option is the longest in', t.longest, 'of', t.qs, '(chance is about', Math.round(t.qs / 4) + '), clearly the longest in', t.clear);
   console.log('  largest margins:', t.margins.sort((a, b) => b[1] - a[1]).slice(0, 8).map(m => m[0] + ' +' + m[1] + ' [' + m[2] + ']').join('\n    '));
+  const chance = t.qs / 4, sd = Math.sqrt(t.qs * 3 / 16);
+  if (t.qs >= 20 && t.longest >= chance + 2 * sd)
+    warnings.push(name + (id ? ' (' + id + ')' : '') + ': the correct option is the longest in ' + t.longest + ' of ' + t.qs + ' questions, well above chance (about ' +
+      Math.round(chance) + '). ' + t.clear + ' are clearly the longest. ' + (id ? 'Run: py content/pipeline.py rebalance content/outlines/' + id + '.yaml --dry-run' : 'Make the wrong options as long and detailed as the right one.'));
 };
-const tally = () => ({pts: 0, qs: 0, longest: 0, margins: []});
+const tally = () => ({pts: 0, qs: 0, longest: 0, clear: 0, margins: []});
 
 /* --json FILE: check only the points in it, for content/pipeline.py, and print each point's problems. */
 if (process.argv[2] === '--json') {
@@ -127,7 +142,7 @@ for (const c of COURSES) {
       }
     }
   }
-  report(c.course + ', ' + c.year, t);
+  report(c.course + ', ' + c.year, t, isMade && c.id);
 }
 for (const id of Object.keys(BANK)) if (!used.has(id)) problems.push(id + ' is in the bank but no course lists it');
 for (const id of [...TOPIC.chapters.map(c => c.id), ...MATHS.chapters.map(c => c.id)]) if (ids.has(id)) problems.push(id + ' clashes with a course chapter id');
@@ -140,5 +155,6 @@ for (const ch of MATHS.chapters) for (const p of ch.points) {
   for (const t of texts) wordCheck(p.id, t);
 }
 console.log('maths:', mpts, 'points,', mforms, 'question templates');
+if (warnings.length) console.log('WARNINGS (these do not fail the check):\n  ' + warnings.join('\n  '));
 console.log(problems.length ? 'PROBLEMS:\n  ' + problems.join('\n  ') : 'no problems found');
 process.exitCode = problems.length ? 1 : 0;

@@ -9,6 +9,8 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py autoreview                                  clears them, with no API calls
   python3 content/pipeline.py recheck --dry-run                           which fixes it would check again, and the cost
   python3 content/pipeline.py recheck --max-dollars 5                     a fresh Opus check of each fix waiting for you
+  python3 content/pipeline.py rebalance --dry-run                         which questions have a right option that stands out by length
+  python3 content/pipeline.py rebalance --max-new-dollars 3               rewrites their wrong options to match it, and checks them
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
 content/README.md walks through each step.
@@ -30,6 +32,11 @@ How a point goes through it:
            with nothing about the first draft or its problems. If the check picks the fix's answers, finds nothing
            else right, no problems and no topic, and is highly sure, the point is cleared with the fix. 1 in 10 stay
            for you as spot checks. A sensitive topic and a point you sent back with --undo are never sent.
+  rebalance only when you run rebalance: in a cleared point, a question whose right option is clearly the longest gets
+           its three wrong options rewritten to match it in length and detail. The question and the right option never
+           change. A rewrite that passes the content check and no longer has the right option clearly the longest
+           goes to the course's checker (Opus) as a new point. Only if the check agrees with it on every count are the
+           new options used. Otherwise the point keeps its old options.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
 Each step is one Message Batch for every point that needs it, which costs half the normal price. With --now, the
@@ -88,7 +95,13 @@ SETTINGS = {
 }
 NEW_COURSE = 'cheaper'    # the settings a new course starts on
 OLD_COURSE = 'original'   # a course whose state.json has no settings in it started before there were settings
-MAX_TOKENS = {'match': 8000, 'write': 32000, 'chapter': 64000, 'screen': 32000, 'check': 32000, 'fix': 32000}
+MAX_TOKENS = {'match': 8000, 'write': 32000, 'chapter': 64000, 'screen': 32000, 'check': 32000, 'fix': 32000, 'rebalance': 16000}
+# rebalance, for courses already written: the cheaper writer, Claude Sonnet 5.5, rewrites the wrong options of a question
+# whose right option is clearly the longest. One request a point, in a batch.
+REBALANCE = {'model': SONNET, 'effort': 'medium', 'out': (400, 900)}
+# The right option is clearly the longest when it is longer than every wrong option and at least this many characters
+# longer than their average. check_content.mjs uses the same rule.
+LONG_MARGIN = 5
 # Normal prices in US dollars per million tokens. Message Batches cost half (BATCH). A cache write costs 1.25 times the
 # input price. Cache reads are counted at the normal price, to be safe.
 PRICES = {OPUS: {'in': 4.00, 'out': 20.00, 'cache_read': 0.20},
@@ -349,6 +362,7 @@ CHECK_SCHEMA = obj({
     'sensitive': {'type': 'string', 'enum': ['none', 'mental-health', 'drugs', 'sexual-health', 'first-nations', 'set-text', 'other-sensitive']},
     'summary': STR})
 MATCH_SCHEMA = obj({'same': STR, 'reason': STR})
+WRONG = obj({'wrong': {'type': 'array', 'items': STR}})
 SCHEMAS = {'match': MATCH_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'screen': CHECK_SCHEMA}
 
 def to_bank(p):
@@ -489,7 +503,8 @@ def candidates(course, d, pt):
 
 # What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
 DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries',
-              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries']
+              'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries',
+              'rebalance', 'rebalance_tries']
 
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse, match or write."""
@@ -616,12 +631,16 @@ def answer_text(m):
 
 def collect(work, course, d, batch, results, repo, cfg, at_now=False):
     """Saves what came back, and moves each point to its next step."""
-    written = {}
+    written, rebalanced = {}, {}
     for r in results:
         item = batch['items'].get(r.custom_id)
         if not item: continue
         if item['stage'] == 'recheck':
             recheck_collect(work, item, r, at_now); continue
+        if item['stage'] == 'rebalance':
+            rebalance_collect(work, item, r, at_now, rebalanced); continue
+        if item['stage'] == 'rebalance-check':
+            rebalance_check_collect(work, item, r, at_now); continue
         if 'pids' in item:
             collect_chapter(work, item, r, written, at_now); continue
         rec, stage = work.load(item['pid']), item['stage']
@@ -680,6 +699,7 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
             rec['stage'] = after_write(rec, course, cfg, point_of(course, pid))
             log(rec, 'write: done' + (' (still fails the content check)' if probs else '') + (', to the screen' if rec['stage'] == 'screen' else ''))
         work.put(rec)
+    if rebalanced: rebalance_finish(work, rebalanced, course, repo)
 
 def collect_chapter(work, item, r, written, at_now):
     """Saves the answer to a chapter's writing request. A point that is missing or wrong is written on its own next."""
@@ -1463,6 +1483,7 @@ def auto_lines(work, recs):
     if done or spots:
         out.append('Cleared automatically with the checker\'s fix: ' + str(len(done)) + '. Spot checks waiting for you: ' + str(len(spots)) + '.')
     out += recheck_lines(recs)
+    out += rebalance_lines(recs)
     answers = auto_state(work)['spot_answers']
     if answers:
         words = {'fix': 'used the fix', 'approve': 'approved as written', 'edit': 'edited', 'reject': 'rejected'}
@@ -1663,9 +1684,9 @@ def recheck_lines(recs):
     return out
 
 def run_open(work):
-    """True while a run's batch, not a recheck's, is sent and not collected yet."""
+    """True while a run's batch, not a recheck's or a rebalance's, is sent and not collected yet."""
     open_ = [b['items'] for b in work.state['batches'] if not b.get('collected')] + ([work.state['sending']['items']] if work.state.get('sending') else [])
-    return any(it['stage'] != 'recheck' for its in open_ for it in its.values())
+    return any(it['stage'] not in ('recheck', 'rebalance', 'rebalance-check') for its in open_ for it in its.values())
 
 def outline_syllabus(cid, args, repo):
     """The syllabus line from a course's outline, for a work folder whose course.json is from before it was saved there."""
@@ -1749,6 +1770,273 @@ def cmd_recheck(args):
             say('  ' + j.label + ': its share of --max-dollars is ' + money(s_) + ', counting the ' + money(j.work.state['spent']['usd']) + ' spent already.')
     say('')
     drive(api, jobs, args, many=len(jobs) > 1)
+
+
+# ---------- rebalance: wrong options as long and detailed as the right one ----------
+def clearly_longest(opts):
+    """True when the right option (the first) is longer than every wrong option and at least LONG_MARGIN characters
+    longer than their average, so a student could pick it by its length alone."""
+    n, rest = len(opts[0]), [len(o) for o in opts[1:]]
+    return n > max(rest) and n - sum(rest) / len(rest) >= LONG_MARGIN
+
+def rebalance_qs(p):
+    """The questions of a point whose right option is clearly the longest: a, b, both or neither."""
+    return [k for k in ('a', 'b') if clearly_longest(p[k]['opts'])]
+
+def rebalance_skip(rec):
+    """Why a point is not rebalanced, or None if it can be (or its rewrite is waiting for the check). Only a point with a
+    question that needs it is asked about."""
+    if rec['stage'] != 'cleared' or not rec.get('final'): return 'not cleared yet, so it is decided on the review page first'
+    rb = rec.get('rebalance')
+    if rb and rb['result'] == 'checking': return None
+    if rb: return 'rebalanced already'
+    # You approved a sensitive point as written, so its options are not changed without you.
+    if (rec.get('sensitive') or 'none') != 'none': return 'a sensitive topic'
+    return None
+
+def rebalance_needs(rec):
+    """The questions of a point that need rebalancing, from the version students get (or will get, once it is cleared)."""
+    p = rec.get('final') or rec.get('proposal') or rec.get('draft')
+    return rebalance_qs(p) if p and rec['stage'] != 'reuse' else []
+
+def rebalance_range(right):
+    """The lengths a new wrong option may have: from 4 characters shorter than the right option to 4 longer, at most 60.
+    Three wrong options in it are never clearly shorter on average. The request also asks for one at least as long as the
+    right option, so across a course the right option stops being the longest more often than chance."""
+    n = len(right)
+    return max(1, n - 4), min(60, n + 4)
+
+def rebalance_user(course, pt, p, ks):
+    card = '\n'.join('- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card'])
+    parts = [context(course, pt), '', 'Rewrite the wrong options of ' + ('question ' + ks[0] if len(ks) == 1 else 'both questions') + ' of this point.',
+             '', 'Title: ' + p['title'], 'Card:', card, 'Remember: ' + p['remember']]
+    for k in ks:
+        q = p[k]
+        lo, hi = rebalance_range(q['opts'][0])
+        parts += ['', 'Question ' + k + ': ' + q['q'], 'Right option, ' + str(len(q['opts'][0])) + ' characters (keep it as it is): ' + q['opts'][0], 'Wrong options now:']
+        parts += ['- ' + o + ' (' + str(len(o)) + ' characters)' for o in q['opts'][1:]]
+        parts += ['Why: ' + q['why'], 'Clue: ' + q['clue'], 'Write each new wrong option in ' + str(lo) + ' to ' + str(hi) + ' characters. '
+                  'Make at least one of them as long as the right option or longer.']
+    return '\n'.join(parts)
+
+def rebalance_check_request(job, pt, rec, draft, n, nb):
+    """A check of a point with its new options, sent to the course's checker as if it were a new point: never told the
+    old options or that anything was rewritten."""
+    cid = 'k_' + hashlib.sha1((job.course['id'] + pt['id'] + 'rebalance-check' + str(n) + str(nb)).encode()).hexdigest()[:24]
+    req = request('check', job.course, pt, {'id': rec['id'], 'draft': draft}, None, cid, job.cfg)
+    return req, {'pid': pt['id'], 'stage': 'rebalance-check', 'model': job.cfg['check']['model']}
+
+def rebalance_requests(job, guess=False):
+    """A rewrite for every cleared point with a question whose right option is clearly the longest, and a check for every
+    rewrite that passed the content check. With guess, for the estimate: also the check each rewrite will need, made
+    from the point as it is now, which is about the same size."""
+    out, items = [], {}
+    nb = len(job.work.state['batches'])
+    for pt in job.course['points']:
+        rec = job.work.load(pt['id'])
+        if not rec or rebalance_skip(rec): continue
+        rb = rec.get('rebalance')
+        if rb:
+            req, it = rebalance_check_request(job, pt, rec, rb['new'], rec.get('sent', {}).get('rebalance-check', 0), nb)
+            out.append(req); items[req['custom_id']] = it
+            continue
+        ks = rebalance_qs(rec['final'])
+        if not ks: continue
+        n = rec.get('sent', {}).get('rebalance', 0)
+        cid = 'b_' + hashlib.sha1((job.course['id'] + pt['id'] + 'rebalance' + str(n) + str(nb)).encode()).hexdigest()[:24]
+        user = rebalance_user(job.course, pt, rec['final'], ks)
+        out.append({'custom_id': cid, 'params': params('rebalance', job.cfg, prompt('rebalance.md'), user, obj({k: WRONG for k in ks}), MAX_TOKENS['rebalance'])})
+        items[cid] = {'pid': pt['id'], 'stage': 'rebalance', 'model': job.cfg['rebalance']['model'], 'ks': ks}
+        if guess:
+            req, it = rebalance_check_request(job, pt, rec, rec['final'], 0, nb)
+            out.append(req); items[req['custom_id']] = it
+    return out, items
+
+def rebalance_keep(work, rec, why, check=None):
+    """The point keeps its old options, with the reason. A rewrite the check turned down is kept in the file too."""
+    rb = rec.get('rebalance') or {}
+    rec['rebalance'] = {'at': now(), 'result': 'kept', 'changed': [], 'why': rb.get('why', []) + why}
+    if rb.get('new'): rec['rebalance'].update(tried=rb['new'], check=check)
+    log(rec, 'rebalance: kept its old options (' + '; '.join(why) + ')'); work.put(rec)
+
+def rebalance_collect(work, item, r, at_now, rebalanced):
+    """Reads the new wrong options for one point. Each question takes them only if they are three different options
+    and the right option is no longer clearly the longest. The content check then runs on every point at once, in
+    rebalance_finish."""
+    rec = work.load(item['pid'])
+    if rec is None: return
+    kind = r.result.type
+    if kind == 'succeeded': charge(work, [rec], r.result.message.usage, item, at_now)
+    if rebalance_skip(rec) or rec.get('rebalance'): return work.put(rec)
+    m = r.result.message if kind == 'succeeded' else None
+    if m and m.stop_reason == 'refusal': return rebalance_keep(work, rec, ['Claude declined to rewrite them'])
+    data = answer_text(m) if m else None
+    if not isinstance(data, dict):
+        t = rec['rebalance_tries'] = rec.get('rebalance_tries', 0) + 1
+        if t >= TRIES: return rebalance_keep(work, rec, ['the rewrite failed ' + str(TRIES) + ' times'])
+        log(rec, 'rebalance: ' + ('the answer was cut off or not JSON' if m else 'the API had an error' if kind == 'errored' else 'the batch ' + kind) + ', will try again')
+        return work.put(rec)
+    norm = lambda s: re.sub(r'\s+', ' ', s.strip().lower())
+    old, new, changed, why = rec['final'], json.loads(json.dumps(rec['final'])), [], []
+    for k in item['ks']:
+        wrong = (data.get(k) or {}).get('wrong') if isinstance(data.get(k), dict) else None
+        if not isinstance(wrong, list) or len(wrong) != 3 or not all(isinstance(w, str) and w.strip() for w in wrong):
+            why.append('question ' + k + ': the answer was not three wrong options'); continue
+        # The question and the right option are copied from the old version, so they can never change.
+        opts = [old[k]['opts'][0]] + [w.strip() for w in wrong]
+        if len({norm(o) for o in opts}) < 4:
+            why.append('question ' + k + ': two options were the same'); continue
+        if clearly_longest(opts):
+            why.append('question ' + k + ': the right option was still clearly the longest'); continue
+        new[k]['opts'] = opts; changed.append(k)
+    rebalanced[rec['id']] = (new, changed, why)
+    work.put(rec)
+
+def rebalance_finish(work, rebalanced, course, repo):
+    """Runs the content check on the rebalanced points. A point that fails keeps its old options. One that passes waits
+    for the checker (rebalance_check_collect), which decides whether it gets the new ones."""
+    probs = check_points({pid: new for pid, (new, changed, _) in rebalanced.items() if changed}, course['kind'], repo, work.dir, course.get('subject'))
+    for pid, (new, changed, why) in rebalanced.items():
+        rec = work.load(pid)
+        if changed and probs.get(pid):
+            why, changed = why + ['the new options failed the content check: ' + '; '.join(probs[pid])], []
+        if not changed:
+            rebalance_keep(work, rec, why); continue
+        rec['rebalance'] = {'at': now(), 'result': 'checking', 'changed': changed, 'why': why, 'new': new}
+        log(rec, 'rebalance: new wrong options for question ' + ' and '.join(changed) + ', waiting for the check' + (' (' + '; '.join(why) + ')' if why else ''))
+        work.put(rec)
+
+def rebalance_check_collect(work, item, r, at_now):
+    """The checker's answer on a point with its new options. They are used only if the check picks the right answer to
+    both questions, finds nothing else right, no problems and no sensitive topic, and is highly sure. Anything else keeps
+    the old options, with the reason."""
+    rec = work.load(item['pid'])
+    if rec is None: return
+    kind = r.result.type
+    if kind == 'succeeded': charge(work, [rec], r.result.message.usage, item, at_now)
+    rb = rec.get('rebalance')
+    if rec['stage'] != 'cleared' or not rb or rb['result'] != 'checking': return work.put(rec)
+    m = r.result.message if kind == 'succeeded' else None
+    if m and m.stop_reason == 'refusal': return rebalance_keep(work, rec, ['the check declined to answer'])
+    data = answer_text(m) if m else None
+    if data is None:
+        t = rec['rebalance_tries'] = rec.get('rebalance_tries', 0) + 1
+        if t >= TRIES: return rebalance_keep(work, rec, ['the check failed ' + str(TRIES) + ' times'])
+        log(rec, 'rebalance check: ' + ('the answer was cut off or not JSON' if m else 'the API had an error' if kind == 'errored' else 'the batch ' + kind) + ', will try again')
+        return work.put(rec)
+    why = [w.replace('the fresh check', 'the check') for w in recheck_why(rb['new'], data)]
+    if why: return rebalance_keep(work, rec, why, data)
+    rec['rebalance'] = {'at': now(), 'result': 'changed', 'changed': rb['changed'], 'why': rb['why'], 'check': data,
+                        'old': {k: rec['final'][k]['opts'] for k in rb['changed']}}
+    rec['final'] = rb['new']
+    log(rec, 'rebalance: the check agreed, new wrong options used for question ' + ' and '.join(rb['changed']))
+    work.put(rec)
+
+def rebalance_lines(recs):
+    """Lines for a course's summary: what rebalance changed and what it left as it was."""
+    done = [r for r in recs if r.get('rebalance')]
+    if not done: return []
+    changed = [r for r in done if r['rebalance']['result'] == 'changed']
+    waiting = len([r for r in done if r['rebalance']['result'] == 'checking'])
+    out = ['Rebalanced: ' + many_of(sum(len(r['rebalance']['changed']) for r in changed), 'question') + ' in ' + many_of(len(changed), 'point') +
+           '. Kept their old options: ' + str(len(done) - len(changed) - waiting) + '.' + (' Waiting for the check: ' + str(waiting) + '.' if waiting else '')]
+    why = {}
+    for r in done:
+        if r['rebalance']['result'] == 'checking': continue
+        for w in r['rebalance']['why']:
+            w = re.sub(r'^question [ab]: ', '', w); w = w.split(': ')[0] if w.startswith('the new options failed') else w
+            why[w] = why.get(w, 0) + 1
+    if why: out.append('Not rebalanced because (a point can have more than one reason):')
+    out += ['  ' + w + ': ' + str(n) for w, n in sorted(why.items(), key=lambda x: -x[1])]
+    return out
+
+def rebalance_job(work, meta, args, repo):
+    """A Job for one course's rebalance, from its work folder."""
+    course = dict(meta, points=[pt for u in meta['units'] for c in u['chapters'] for pt in c['points']])
+    if 'syllabus' not in meta: course['syllabus'] = outline_syllabus(meta['id'], args, repo)
+    name = work.state.get('settings') or OLD_COURSE
+    cfg = dict(SETTINGS[name], trial=False, rebalance=REBALANCE)
+    cfg['rebalance-check'] = cfg['check']
+    job = Job(repo, None, course, work, cfg, name)
+    job.saved, job.requests = name, lambda: rebalance_requests(job)
+    return job
+
+def up_cents(usd):
+    """Dollars rounded up to the cent, for a number to pass to --max-dollars."""
+    return '{:.2f}'.format(-(-round(usd * 1e6) // 10000) / 100)
+
+def cmd_rebalance(args):
+    if args.max_dollars is None and args.max_new_dollars is None and not args.dry_run:
+        raise Stop('Add --max-new-dollars, the most this rebalance may spend, or --max-dollars, the most these courses may cost in total, '
+                   'counting what earlier runs spent. Run it with --dry-run first to see the estimate.')
+    repo = args.repo or REPO
+    root = work_root(args, repo)
+    courses = auto_courses(args, root)
+    if not courses:
+        say('No courses to rebalance in ' + root + '. Run the run command first.'); return
+    if args.dry_run: say('Dry run: nothing is sent or changed.')
+    exact = bool(os.environ.get('ANTHROPIC_API_KEY'))
+    api = client() if exact or not args.dry_run else None
+    jobs, highs, total = [], [], [0, 0]
+    for i, (work, meta) in enumerate(courses):
+        if i: say('')
+        say(meta['name'] + ' (' + meta['id'] + '):')
+        if run_open(work):
+            say('  A run\'s batch is still open. Run the run command to collect it, then rebalance.'); continue
+        job = rebalance_job(work, meta, args, repo)
+        recs = [r for r in (work.load(pt['id']) for pt in job.course['points']) if r]
+        reqs, items = rebalance_requests(job, guess=True)
+        rewrites = [items[q['custom_id']] for q in reqs if items[q['custom_id']]['stage'] == 'rebalance']
+        waiting = [r['id'] for r in recs if (r.get('rebalance') or {}).get('result') == 'checking']
+        say('  Questions where the right option is clearly the longest: ' + str(sum(len(it['ks']) for it in rewrites)) + ', in ' + many_of(len(rewrites), 'point') + '.')
+        for it in rewrites: say('    ' + it['pid'] + ' (question ' + ' and '.join(it['ks']) + ')')
+        if waiting:
+            say('  Rewritten already, waiting for the check: ' + str(len(waiting)) + '.')
+            for pid in waiting: say('    ' + pid)
+        skipped = {}
+        for r in recs:
+            why = rebalance_skip(r) if rebalance_needs(r) else None
+            if why: skipped[why] = skipped.get(why, 0) + 1
+        if skipped:
+            say('  Not rebalanced:')
+            for w, n in sorted(skipped.items(), key=lambda x: -x[1]): say('    ' + w + ': ' + str(n))
+        open_ = any(not b.get('collected') for b in work.state['batches']) or work.state.get('sending')
+        if open_: say('  A batch sent before is still open. It is collected first.')
+        if not reqs and not open_: continue
+        lo = hi = 0
+        if reqs:
+            cost = request_costs(request_tokens(api, reqs, items), reqs, items, job.cfg, False)
+            part = lambda stage: [c for q, c in zip(reqs, cost) if items[q['custom_id']]['stage'] == stage]
+            lo, hi = sum(c[0] for c in cost), sum(c[1] for c in cost)
+            say('  Estimate' + ('' if exact else ' (rough: set the API key for an exact count of the prompts)') + ': ' + money(lo) + ' to ' + money(hi) + ', in batches.')
+            rw, ck = part('rebalance'), part('rebalance-check')
+            if rw: say('    Rewrites: ' + money(sum(c[0] for c in rw)) + ' to ' + money(sum(c[1] for c in rw)) + ', ' +
+                       MODEL_NAMES[REBALANCE['model']] + ', ' + REBALANCE['effort'] + ' effort.')
+            say('    Checks: ' + money(sum(c[0] for c in ck)) + ' to ' + money(sum(c[1] for c in ck)) + ', ' + MODEL_NAMES[job.cfg['check']['model']] + ', ' +
+                job.cfg['check']['effort'] + ' effort, at most one for each point' + (' (counted as if every rewrite passes the content check)' if rw else '') + '.')
+        say('  Spent on this course so far: ' + money(work.state['spent']['usd']) + '.')
+        jobs.append(job); highs.append(hi); total = [total[0] + lo, total[1] + hi]
+    if len(jobs) > 1: say('\nEstimate for all ' + str(len(jobs)) + ' courses: ' + money(total[0]) + ' to ' + money(total[1]) + '.')
+    if not jobs:
+        say('\nNothing to rebalance.'); return
+    spent = sum(j.work.state['spent']['usd'] for j in jobs)
+    say(('\n' if len(jobs) > 1 else '') + 'Spent on ' + ('these courses' if len(jobs) > 1 else 'this course') + ' so far: ' + money(spent) +
+        '. --max-dollars counts that. To allow up to the highest estimate, pass --max-new-dollars ' + up_cents(total[1]) +
+        ', which is the same as --max-dollars ' + up_cents(spent + total[1]) + '.')
+    if args.dry_run: return
+    limit = args.max_dollars if args.max_dollars is not None else spent + args.max_new_dollars
+    if spent + total[1] > limit:
+        raise Stop('Not sent: the rewrites and their checks could cost up to ' + money(total[1]) + ', and only ' + money(max(0, limit - spent)) +
+                   ' is left under the limit. Raise it to go on, so no rewrite is paid for without its check.')
+    if len(jobs) == 1: jobs[0].limit = limit
+    else:
+        for j, s_ in zip(jobs, shares(jobs, highs, limit)):
+            j.limit = s_
+            say('  ' + j.label + ': it may spend up to ' + money(s_ - j.work.state['spent']['usd']) + ' more.')
+    say('')
+    drive(api, jobs, args, many=len(jobs) > 1)
+    if any((r.get('rebalance') or {}).get('result') == 'changed' for j in jobs for r in (j.work.load(pt['id']) for pt in j.course['points']) if r):
+        say('Next: publish each course again, so the new options go into src/ (content/README.md, step 9).')
 
 
 # ---------- the review page ----------
@@ -1964,13 +2252,21 @@ def main(argv=None):
     rc.add_argument('--dry-run', action='store_true', help='show what it would recheck and the estimate, and send nothing')
     rc.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for the batch')
     rc.set_defaults(now=False)
+    rb = sub.add_parser('rebalance', help='rewrite the wrong options of questions whose right option is clearly the longest')
+    rb.add_argument('outline', nargs='*', help='outline files, or folders of them. With none, every course in content/work')
+    lim = rb.add_mutually_exclusive_group()
+    lim.add_argument('--max-new-dollars', type=float, help='the most this rebalance may spend, not counting earlier runs')
+    lim.add_argument('--max-dollars', type=float, help='the most these courses may cost in total, counting earlier runs')
+    rb.add_argument('--dry-run', action='store_true', help='show which questions it would rewrite and the estimate, and send nothing')
+    rb.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for the batch')
+    rb.set_defaults(now=False)
     r = sub.add_parser('review', help='the review page, on this computer only')
     r.add_argument('--port', type=int, default=8765)
     r.add_argument('--no-browser', action='store_true')
     args = ap.parse_args(argv)
     try:
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
-         'autoreview': cmd_autoreview, 'recheck': cmd_recheck}[args.cmd](args)
+         'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'rebalance': cmd_rebalance}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1
