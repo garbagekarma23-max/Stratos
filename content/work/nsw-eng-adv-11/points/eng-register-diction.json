@@ -9,20 +9,26 @@
   "2026-10-27T01:00:03Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00484,
   "check": 0.01309,
   "fix": 0.01706,
-  "recheck": 0.0138
+  "recheck": 0.0138,
+  "rebalance": 0.00411,
+  "rebalance-check": 0.0133
  },
  "draft": {
   "title": "Register and diction",
@@ -210,9 +216,9 @@
    "q": "Which sentence is written in the most formal register?",
    "opts": [
     "Residents are requested to refrain from parking here",
-    "Please don't park here, folks, we need the space",
-    "Park somewhere else, mate, this spot's taken",
-    "No parking here, thanks heaps for helping out"
+    "Please don't park here, folks, we really need the space",
+    "Park somewhere else, mate, because this spot's taken",
+    "No parking here, thanks heaps for helping us out mate"
    ],
    "why": "Requested and refrain from are precise, formal word choices, and the sentence keeps a distance from the reader. The other three use contractions, slang or casual phrases, which make the tone closer and more informal.",
    "clue": "Look for the sentence with no slang or contractions."
@@ -230,5 +236,35 @@
    "clue": "Judge by her words, not by the type of text."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Residents are requested to refrain from parking here",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is close and relaxed, as she is speaking to peers",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Residents are requested to refrain from parking here",
+    "Please don't park here, folks, we need the space",
+    "Park somewhere else, mate, this spot's taken",
+    "No parking here, thanks heaps for helping out"
+   ]
+  }
+ }
 }

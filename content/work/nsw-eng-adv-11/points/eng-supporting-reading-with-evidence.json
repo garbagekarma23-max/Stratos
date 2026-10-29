@@ -6,15 +6,21 @@
  "log": [
   "2026-10-26T13:29:51Z new, write",
   "2026-10-27T00:53:09Z write: done",
-  "2026-10-27T01:00:03Z check: passed, cleared"
+  "2026-10-27T01:00:03Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 1,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "write": 0.00567,
-  "check": 0.008
+  "check": 0.008,
+  "rebalance": 0.0018,
+  "rebalance-check": 0.01286
  },
  "draft": {
   "title": "Supporting a reading with evidence",
@@ -79,9 +85,9 @@
    "q": "Which choice makes a quotation actually support an argument?",
    "opts": [
     "Explaining what its words suggest about the point",
-    "Placing it on its own line after the point",
-    "Making it as long as possible",
-    "Repeating it in the next sentence"
+    "Placing it on its own line straight after the point",
+    "Choosing a long passage that covers the whole scene",
+    "Repeating the same quotation again in the next line"
    ],
    "why": "A quotation supports an argument when you explain how its words prove your point. Length or repetition adds nothing, and a quotation left alone is still unexplained.",
    "clue": "What must follow the evidence?"
@@ -91,13 +97,50 @@
    "q": "Jess argues that a narrator feels lonely. She writes: The narrator eats alone by the window. What is missing from her paragraph?",
    "opts": [
     "An explanation of how this detail shows loneliness",
-    "A longer quotation from the same page",
-    "A second quotation about eating",
-    "A summary of the whole story"
+    "A longer quotation from the same page of the book",
+    "A second quotation that is also about eating alone",
+    "A summary of the whole story from start to finish"
    ],
    "why": "Jess gives a detail from the text but does not say how it shows loneliness. Evidence needs analysis to prove a point. More quotation would still leave it unexplained.",
    "clue": "She has the evidence, but what has she not done with it?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Explaining what its words suggest about the point",
+    "also_right": []
+   },
+   "b": {
+    "best": "An explanation of how this detail shows loneliness",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Explaining what its words suggest about the point",
+    "Placing it on its own line after the point",
+    "Making it as long as possible",
+    "Repeating it in the next sentence"
+   ],
+   "b": [
+    "An explanation of how this detail shows loneliness",
+    "A longer quotation from the same page",
+    "A second quotation about eating",
+    "A summary of the whole story"
+   ]
+  }
+ }
 }

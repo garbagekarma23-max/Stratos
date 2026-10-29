@@ -7,16 +7,22 @@
   "2026-10-26T13:29:51Z new, write",
   "2026-10-27T00:53:08Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:04Z write: done",
-  "2026-10-27T01:08:31Z check: passed, cleared"
+  "2026-10-27T01:08:31Z check: passed, cleared",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00491,
-  "check": 0.00892
+  "check": 0.00892,
+  "rebalance": 0.00222,
+  "rebalance-check": 0.01413
  },
  "draft": {
   "title": "Personification and symbolism",
@@ -105,9 +111,9 @@
    "q": "Which line is an example of personification?",
    "opts": [
     "The old clock grumbled through the long afternoon",
-    "The old clock was loud and rusty",
-    "The old clock ticked like a dripping tap",
-    "The old clock sat on the kitchen shelf"
+    "The old clock was loud and rusty in the long afternoon",
+    "The old clock ticked like a tap through the afternoon",
+    "The old clock sat on the shelf through the long day"
    ],
    "why": "A clock cannot grumble, so the line gives it a human mood. The simile compares the ticking to a tap, but it does not give the clock a human quality.",
    "clue": "Look for a human feeling or action given to an object."
@@ -117,13 +123,50 @@
    "q": "In a short story, Priya's grandmother keeps a red scarf. It appears when the family argues, when they make peace and when the grandmother dies. What makes the scarf a symbol?",
    "opts": [
     "It stands for family bonds and gains meaning each time",
-    "It is a bright colour that catches the reader's eye",
-    "It is described as if the scarf were alive",
-    "It is mentioned more than once in the story"
+    "It is a bright colour and catches the reader's eye often",
+    "It is described as if it were alive and has feelings",
+    "It is mentioned in many scenes and is always the same"
    ],
    "why": "The scarf is tied to a larger idea, the bond within the family, and each return adds to that meaning. Repetition alone is not enough, because an object can be repeated without standing for anything bigger.",
    "clue": "Ask what bigger idea the scarf points to, and how each return changes it."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The old clock grumbled through the long afternoon",
+    "also_right": []
+   },
+   "b": {
+    "best": "It stands for family bonds and gains meaning each time",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "The old clock grumbled through the long afternoon",
+    "The old clock was loud and rusty",
+    "The old clock ticked like a dripping tap",
+    "The old clock sat on the kitchen shelf"
+   ],
+   "b": [
+    "It stands for family bonds and gains meaning each time",
+    "It is a bright colour that catches the reader's eye",
+    "It is described as if the scarf were alive",
+    "It is mentioned more than once in the story"
+   ]
+  }
+ }
 }

@@ -9,20 +9,26 @@
   "2026-10-27T01:00:12Z write: done",
   "2026-10-27T01:08:37Z check: flagged",
   "2026-10-27T01:23:02Z fix: suggested",
-  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00509,
   "check": 0.01225,
   "fix": 0.01557,
-  "recheck": 0.01508
+  "recheck": 0.01508,
+  "rebalance": 0.00262,
+  "rebalance-check": 0.01668
  },
  "draft": {
   "title": "The February Revolution of 1917",
@@ -200,5 +206,66 @@
    "clue": "Who did the workers and soldiers listen to?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "The February Revolution of 1917",
+   "card": [
+    "In early 1917 Russia was in its third year of war against Germany. Huge army losses and a breakdown in food and fuel supplies in cities such as Petrograd caused anger.",
+    "In late February (by the Russian calendar of the time), strikes and protests spread across Petrograd. Many soldiers sent to restore order joined the crowds instead.",
+    "Without support from the army, Tsar Nicholas II abdicated on 2 March by the Russian calendar (15 March by the Western calendar). This ended Romanov rule.",
+    "Two bodies then shared power. The Provisional Government, drawn from the old Duma (parliament), held official authority. The Petrograd Soviet, a council of workers and soldiers, held much practical influence over the soldiers and workers."
+   ],
+   "remember": "War and shortages brought down the Tsar, and power was then shared between two rival bodies.",
+   "a": {
+    "q": "Which event made the Tsar's fall certain in February 1917?",
+    "opts": [
+     "Soldiers joined the protesters instead of stopping them",
+     "The Duma voted to remove him and he was forced to leave",
+     "German troops captured Petrograd and ended his authority",
+     "The Petrograd Soviet declared itself the new government"
+    ],
+    "why": "Once troops sided with the crowds, the Tsar had lost the force he needed to keep order, so he abdicated. The Soviet did not take over formally: official authority passed to the Provisional Government.",
+    "clue": "Think about who the Tsar relied on to control crowds."
+   },
+   "b": {
+    "d": 3,
+    "q": "In March 1917 a factory worker in Petrograd says, 'The Provisional Government rules alone now.' Why is this inaccurate?",
+    "opts": [
+     "The Petrograd Soviet shared power and had real influence",
+     "The Tsar had refused to abdicate and still ruled Russia",
+     "The Provisional Government had no official authority",
+     "The Petrograd Soviet had been banned by the Duma"
+    ],
+    "why": "After the abdication, the Provisional Government held official authority, but the Petrograd Soviet shared power through its influence over workers and soldiers. The claim that the Government had no authority is wrong: it was the official government.",
+    "clue": "Who did the workers and soldiers listen to?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Soldiers joined the protesters instead of stopping them",
+    "also_right": []
+   },
+   "b": {
+    "best": "The Petrograd Soviet shared power and had real influence",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card says Nicholas II's abdication on 2 March 'ended Romanov rule'. Strictly, he abdicated in favour of his brother Grand Duke Michael, and Romanov rule ended only when Michael declined the throne on 3 March. Consider 'This soon ended Romanov rule' or a mention of Michael's refusal."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions have one clear right answer, and the facts and dates check out. One small simplification: the card says the Tsar's abdication itself ended Romanov rule, but that only happened when his brother Michael refused the throne a day later."
+  }
+ }
 }

@@ -10,18 +10,24 @@
   "2026-10-27T01:08:34Z write: done",
   "2026-10-27T01:22:58Z check: flagged",
   "2026-10-27T01:29:33Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other, card wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other, card wording)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 3,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01099,
   "check": 0.01066,
-  "fix": 0.01399
+  "fix": 0.01399,
+  "rebalance": 0.00837,
+  "rebalance-check": 0.01959
  },
  "draft": {
   "title": "Rates of reaction",
@@ -179,5 +185,76 @@
    "clue": "Only the amount of exposed solid has changed."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Rates of reaction",
+   "card": [
+    "The rate of a reaction is how fast reactants are used up or products are made. Collision theory says a reaction needs particles to collide, and only some collisions are successful.",
+    "A higher temperature makes particles move faster. They collide more often and more of the collisions are successful, so the rate rises.",
+    "A higher concentration puts more particles in the same volume, so collisions happen more often. A larger surface area of a solid exposes more particles to collide, so crushing a solid into powder speeds up the reaction.",
+    "A catalyst also speeds up a reaction. It is not used up, so it is left unchanged at the end."
+   ],
+   "remember": "Anything that makes successful collisions more frequent speeds up a reaction.",
+   "a": {
+    "q": "Why does a more concentrated acid react faster with magnesium ribbon?",
+    "opts": [
+     "More acid particles per volume mean more frequent collisions",
+     "Every acid particle moves faster, so more collisions succeed",
+     "The magnesium ribbon gains a larger surface area to react",
+     "The acid acts as a catalyst, so it is not used up at all"
+    ],
+    "why": "A higher concentration means more particles in each unit of volume, so collisions with the metal happen more often. The option saying each acid particle moves faster is wrong, because particle speed is linked to temperature, not concentration.",
+    "clue": "Think about how many particles fit in the same volume."
+   },
+   "b": {
+    "d": 2,
+    "q": "Sam adds the same mass of calcium carbonate to the same acid at the same temperature. One test uses a single lump and one uses fine powder. Why is the powder faster?",
+    "opts": [
+     "More surface is exposed, so more collisions with acid happen",
+     "Powder particles move faster, so more collisions succeed",
+     "The powder lowers the acid's temperature, which speeds it up",
+     "The powder acts as a catalyst, so it is not used up at all"
+    ],
+    "why": "Powder exposes far more of the solid to the acid, so collisions are more frequent. The temperature is the same in both tests, so particle speed is not the cause. The powder is a reactant and is used up, so it is not a catalyst.",
+    "clue": "Only the amount of exposed solid has changed."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "More acid particles per volume mean more frequent collisions",
+    "also_right": []
+   },
+   "b": {
+    "best": "More surface is exposed, so more collisions with acid happen",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "other",
+     "detail": "The card explains a catalyst's property of not being used up and being left unchanged. That belongs to point 5 (Activation energy and catalysts). Here it should only be mentioned as something that speeds up a reaction."
+    },
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "The clue 'how many particles fit in the same volume' matches the right option's wording 'particles per volume' almost exactly. A student could match the words without knowing the idea."
+    },
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue 'Only the amount of exposed solid has changed' nearly states the answer, and 'exposed' appears only in the right option."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts and answers are correct. The card explains the catalyst's 'not used up' property, which belongs to point 5, and both clues echo the right option's wording closely enough to give the answer away."
+  }
+ }
 }

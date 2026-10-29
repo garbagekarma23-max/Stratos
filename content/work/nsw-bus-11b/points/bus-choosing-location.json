@@ -10,21 +10,27 @@
   "2026-10-27T01:08:36Z write: done",
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00417,
   "write": 0.00471,
   "check": 0.01175,
   "fix": 0.01609,
-  "recheck": 0.01154
+  "recheck": 0.01154,
+  "rebalance": 0.00262,
+  "rebalance-check": 0.01568
  },
  "match": {
   "same": "",
@@ -246,5 +252,80 @@
    "clue": "The main street costs more, so what could make that worth paying?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Choosing a location",
+   "card": [
+    "Location is where a business sets up. The owner chooses it, and it affects both costs and sales.",
+    [
+     "Customers",
+     "a site close to customers, with good visibility, such as a busy street, can bring in more passing trade and more sales."
+    ],
+    [
+     "Suppliers and staff",
+     "being near suppliers can cut delivery costs and delays. Being near a pool of suitable workers makes hiring easier."
+    ],
+    [
+     "Rent and competitors",
+     "rent is a cost that differs from site to site, and busy sites often cost more. Nearby competitors may share the same customers, but they can also show that demand exists."
+    ]
+   ],
+   "remember": "A good location balances the sales it can bring against the costs it adds.",
+   "a": {
+    "q": "Why might an owner pay higher rent for a shop on a busy main street?",
+    "opts": [
+     "Passing customers may lift sales enough to cover the cost",
+     "Higher rent on its own guarantees that more people will buy",
+     "Nearby rivals on the street mean fewer shared customers",
+     "Suppliers send stock to busy streets free of delivery cost"
+    ],
+    "why": "A busy site has high visibility, so more people may see the shop and buy. That can make up for the extra rent. The option saying higher rent guarantees more buyers is wrong, because a busy site may raise sales but cannot promise them.",
+    "clue": "Think about what a busy street gives the shop in return."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya plans a bakery in a country town. Cheap rent is available on a quiet back street, or dearer rent on the main street. What is the best reason to choose the main street?",
+    "opts": [
+     "Visibility to passing customers may raise sales",
+     "The rent is lower than on the back street",
+     "There will be no competitors on the main street",
+     "Suppliers will charge less for flour there"
+    ],
+    "why": "The main street gives visibility and more passing trade, which may raise sales above the extra rent. The tempting option about rent is wrong, because the main street costs more. Nothing in the case says there are no competitors or cheaper flour.",
+    "clue": "The main street costs more, so what could make that worth paying?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Passing customers may lift sales enough to cover the cost",
+    "also_right": []
+   },
+   "b": {
+    "best": "Visibility to passing customers may raise sales",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one hedged with 'may'. The distractors use absolute words ('guarantees', 'free', 'mean'), so a student could pick it by the qualifier alone."
+    },
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The right option is the only one with the qualifier 'may'. The others are flat certainties ('no competitors', 'will charge less', 'is lower'), so it stands out without knowing the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card, remember line and explanations are accurate and stay within this point. In both questions the right answer is the only option hedged with 'may', which could give it away, so the distractors need rewording to match that tone."
+  }
+ }
 }

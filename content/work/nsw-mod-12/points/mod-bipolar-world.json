@@ -7,16 +7,22 @@
   "2026-10-26T13:30:06Z new, write",
   "2026-10-27T00:53:13Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:12Z write: done",
-  "2026-10-27T01:08:37Z check: passed, cleared"
+  "2026-10-27T01:08:37Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.0049,
-  "check": 0.00803
+  "check": 0.00803,
+  "rebalance": 0.00326,
+  "rebalance-check": 0.01606
  },
  "draft": {
   "title": "A bipolar world",
@@ -113,5 +119,72 @@
    "clue": "Who was fighting, and who was only supplying help?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "A bipolar world",
+   "card": [
+    "A bipolar world has two main centres of power. After 1945, these were the United States and the Soviet Union, called the superpowers.",
+    [
+     "NATO",
+     "a military alliance formed in 1949. The United States and its Western allies promised to defend each other if one was attacked."
+    ],
+    [
+     "Warsaw Pact",
+     "a rival military alliance formed in 1955. The Soviet Union led it, together with its allies in Eastern Europe."
+    ],
+    "The superpowers competed for influence around the world, by backing friendly governments and spreading their ideas. They avoided fighting each other directly, but often supported opposing sides in conflicts elsewhere."
+   ],
+   "remember": "Two superpowers led rival alliances and competed for influence, but did not fight each other directly.",
+   "a": {
+    "q": "Why is the world after 1945 described as bipolar?",
+    "opts": [
+     "Two superpowers led rival blocs and held most power",
+     "Two major wars were fought between the main powers directly",
+     "Two continents were ruled by one shared world government",
+     "Two rival alliances merged into one single organisation"
+    ],
+    "why": "Bipolar means two main centres of power. The United States and the Soviet Union each led a bloc of allies. The idea of two wars is tempting, but the superpowers avoided fighting each other directly.",
+    "clue": "Think about what bi means, and who held the power."
+   },
+   "b": {
+    "d": 3,
+    "q": "In the 1950s, a Soviet-backed government and a US-backed government fought a war in a third country. Their superpowers sent weapons and advisers but did not fight each other. What does this show about the superpowers?",
+    "opts": [
+     "They competed for influence while avoiding direct conflict",
+     "They had ended their rivalry and chose to cooperate fully",
+     "They had joined together in one shared military alliance",
+     "They had lost their influence over the smaller countries"
+    ],
+    "why": "Each superpower backed one side to gain influence, but neither fought the other directly. Cooperation is wrong because they supported opposing sides. Joining one alliance is wrong because NATO and the Warsaw Pact were rivals.",
+    "clue": "Who was fighting, and who was only supplying help?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Two superpowers led rival blocs and held most power",
+    "also_right": []
+   },
+   "b": {
+    "best": "They competed for influence while avoiding direct conflict",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "'A Soviet-backed government and a US-backed government fought a war in a third country' is confusing. It reads as if both governments came from outside the country where the war was fought. Proxy wars were usually fought between rival sides within one country, such as North and South. It would be clearer to say the war was 'in a divided country' or 'between two sides of one country'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and both questions are accurate, and each question has one clear answer. The only problem is the confusing phrase 'fought a war in a third country' in question b, which should be reworded."
+  }
+ }
 }

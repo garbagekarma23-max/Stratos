@@ -8,17 +8,23 @@
   "2026-10-27T00:53:13Z match: none",
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:01Z check: passed, cleared"
+  "2026-10-27T01:23:01Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "match": 1,
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00389,
   "write": 0.00466,
-  "check": 0.00739
+  "check": 0.00739,
+  "rebalance": 0.00386,
+  "rebalance-check": 0.01273
  },
  "match": {
   "same": "",
@@ -100,9 +106,9 @@
    "q": "What is the main purpose of a force field analysis?",
    "opts": [
     "To weigh the forces for and against a proposed change",
-    "To rank staff by how much they support a change",
-    "To work out the total cost of a proposed change",
-    "To list the steps needed to carry out a change"
+    "To rank staff by how much they support a proposed change",
+    "To work out the total cost of a change to the business",
+    "To list the steps needed to carry out a proposed change"
    ],
    "why": "The model sets driving forces against restraining forces so managers can see how likely a change is to happen. It does not plan the steps or total the cost, although cost may appear as one restraining force.",
    "clue": "Think about the two lists the model builds."
@@ -120,5 +126,35 @@
    "clue": "Which one pushes against the change rather than for it?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "To weigh the forces for and against a proposed change",
+    "also_right": []
+   },
+   "b": {
+    "best": "Two long-serving staff dislike new software",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "To weigh the forces for and against a proposed change",
+    "To rank staff by how much they support a change",
+    "To work out the total cost of a proposed change",
+    "To list the steps needed to carry out a change"
+   ]
+  }
+ }
 }

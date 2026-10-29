@@ -306,8 +306,8 @@ MADE_BANKS.bio = {
       "q": "In a liver cell, a gene is switched on and its mRNA is made. Which statement describes what happens next to that mRNA?",
       "opts": [
         "A ribosome reads it in codons and tRNA brings amino acids",
-        "tRNA copies it into a new strand of DNA in the nucleus",
-        "A ribosome copies it into a second strand of mRNA",
+        "tRNA copies it back into a strand of DNA inside the nucleus",
+        "A ribosome copies it into a second strand of mRNA for later",
         "Each base is read singly and calls for one amino acid"
       ],
       "why": "After transcription, the mRNA moves to a ribosome, which reads it in codons while tRNA brings the matching amino acids to build a polypeptide. Reading single bases is wrong because a codon is a group of three bases, and most codons call for one amino acid.",
@@ -333,9 +333,9 @@ MADE_BANKS.bio = {
       "q": "Which of these describes a genotype?",
       "opts": [
         "The pair of alleles a rabbit carries for fur colour",
-        "The brown fur colour that can be seen on a rabbit",
-        "The height a rabbit reaches after a good diet",
-        "The number of rabbits in a population"
+        "The brown fur colour that can be seen on a young rabbit",
+        "The body size a rabbit reaches after eating a good diet",
+        "The number of rabbits living in one area of bushland"
       ],
       "why": "A genotype is the alleles an organism carries, so the pair of alleles for fur colour is a genotype. Brown fur is tempting, but it is the trait that shows, which is the phenotype.",
       "clue": "Is it the alleles themselves, or the trait they lead to?"
@@ -411,7 +411,12 @@ MADE_BANKS.bio = {
     "b": {
       "d": 3,
       "q": "A grower crosses two pink-flowered snapdragon plants. Pink is the heterozygote of a red allele and a white allele, and neither allele is dominant. What offspring are expected?",
-      "opts": ["1 red : 2 pink : 1 white", "All pink", "3 red : 1 white", "1 red : 1 white"],
+      "opts": [
+        "1 red : 2 pink : 1 white",
+        "All pink, no red or white",
+        "3 red : 1 white offspring",
+        "1 red : 1 white, no pink"
+      ],
       "why": "Each pink parent passes on a red or a white allele with equal chance. The offspring are 1 red, 2 pink and 1 white, as the heterozygote looks different from both homozygotes. A 3:1 ratio would need one allele to be dominant.",
       "clue": "Heterozygotes look different here, so count them as their own group."
     }
@@ -589,9 +594,9 @@ MADE_BANKS.bio = {
       "q": "Two skin cells on Priya's arm get the same exposure to sunlight. One develops a mutation and the other does not. Which explanation fits best?",
       "opts": [
         "UV makes mutations more likely, and some damage is repaired",
-        "UV acts as a mutagen in some skin cells but not others",
-        "The second cell was shaded from the sun's UV light",
-        "UV light lowered the mutation rate in the second cell"
+        "UV is a mutagen only for some skin cells, so one was spared",
+        "The second cell was shaded from the sun's UV light by hair",
+        "UV light lowered the mutation rate in the second skin cell"
       ],
       "why": "Ultraviolet light is a mutagen, so it raises the chance of a mutation in every exposed cell without guaranteeing one, and cells can often repair damage. Saying UV is a mutagen in some cells but not others is tempting, but a mutagen raises the rate in all exposed cells. The outcome in each cell comes down to chance and repair.",
       "clue": "Think about what cells can do after their DNA is damaged."
@@ -616,9 +621,9 @@ MADE_BANKS.bio = {
       "q": "Which mutation could be inherited by a child?",
       "opts": [
         "A mutation in a sperm-producing cell in the testes",
-        "A mutation in a skin cell damaged by sunburn",
-        "A mutation in a liver cell of an adult",
-        "A mutation in a white blood cell of a mother"
+        "A mutation in a skin cell damaged by strong sunlight",
+        "A mutation in a liver cell that makes bile in adults",
+        "A mutation in a white blood cell of a pregnant mother"
       ],
       "why": "Only a mutation in a gamete, or in a cell that makes gametes, can be passed on, because gametes join to form the offspring's first cell. Skin, liver and white blood cells are body cells, so their mutations are not inherited.",
       "clue": "Which cell goes on to make a gamete?"
@@ -911,9 +916,9 @@ MADE_BANKS.bio = {
       "q": "Which of these is an ethical question about biotechnology?",
       "opts": [
         "Should a company be allowed to patent a human gene?",
-        "Which enzyme cuts DNA at a set sequence?",
-        "How many bases are in a gene for insulin?",
-        "Which microbes turn milk into cheese?"
+        "Which enzyme is used to cut DNA at a set sequence?",
+        "How many bases are found in the human insulin gene?",
+        "Which microbes are used to turn milk into cheese?"
       ],
       "why": "Whether genes should be owned is a question of right and wrong, so it is about ethics. The other three ask for facts that science can answer without a value judgement.",
       "clue": "Look for the question about what should be allowed, not what is true."
@@ -1059,9 +1064,9 @@ MADE_BANKS.bio = {
       "q": "Which description fits a vector?",
       "opts": [
         "An organism that carries a pathogen between hosts",
-        "A person who has caught a disease",
-        "A drop of fluid released by a sneeze",
-        "Food that has been contaminated by a pathogen"
+        "A person who has caught a disease and passes it on",
+        "A drop of fluid released by a sneeze or a cough",
+        "Food or water that has been made unsafe by a pathogen"
       ],
       "why": "A vector is an organism that carries a pathogen from one host to another. A sneeze droplet and contaminated food carry a pathogen too, but they are not living things that move it between hosts, so they are not vectors.",
       "clue": "A vector is a living thing that moves the pathogen."
@@ -1069,7 +1074,7 @@ MADE_BANKS.bio = {
     "b": {
       "d": 3,
       "q": "Many people at a camp in Queensland get sick with diarrhoea after drinking from a creek that cattle had polluted with faeces. Which way did the disease spread?",
-      "opts": ["Contaminated water", "Droplets", "Vector", "Direct contact"],
+      "opts": ["Contaminated water", "Airborne droplets", "A mosquito vector", "Touching a sick host"],
       "why": "The pathogen reached people through water that faeces had contaminated. Vector is tempting because animals were involved, but the cattle did not carry the pathogen from host to host. Nobody touched an infected host, so it is not direct contact either.",
       "clue": "Think about what the people swallowed."
     }
@@ -1805,9 +1810,9 @@ MADE_BANKS.bio = {
       "q": "Which statement best describes how laser surgery corrects vision?",
       "opts": [
         "It reshapes the cornea so light focuses on the retina",
-        "It adds a lens in front of the eye to bend light",
-        "It sends electrical signals to the optic nerve",
-        "It filters wastes out of the blood"
+        "It places a lens in front of the eye to bend light inward",
+        "It sends electrical signals to the optic nerve of the eye",
+        "It filters wastes and extra water out of the bloodstream"
       ],
       "why": "Laser surgery changes the shape of the cornea, so light is bent correctly and focuses on the retina. Glasses and contact lenses also correct focus, but they add a lens and do not reshape the cornea.",
       "clue": "Think about which part of the eye the laser changes."
@@ -1817,9 +1822,9 @@ MADE_BANKS.bio = {
       "q": "Sam's kidneys have failed, and he now has dialysis three times a week. What does the dialysis do for him?",
       "opts": [
         "It filters wastes from his blood in place of his kidneys",
-        "It repairs the damaged tissue so his kidneys work again",
-        "It makes his kidneys produce more urine",
-        "It adds a lens so light focuses on his retina"
+        "It heals the damaged kidney tissue so the kidneys work again",
+        "It makes his kidneys produce much more urine every day",
+        "It adds a lens in front of his eye so light focuses properly"
       ],
       "why": "Dialysis does the filtering job of the failed kidneys, so wastes do not build up in his blood. The option about repairing the kidneys is the tempting wrong answer: dialysis treats the effect of kidney failure but does not restore the organ.",
       "clue": "Dialysis takes over a job. Does it fix the organ?"

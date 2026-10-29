@@ -9,20 +9,26 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:34Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00496,
   "check": 0.01041,
   "fix": 0.01508,
-  "recheck": 0.01185
+  "recheck": 0.01185,
+  "rebalance": 0.00569,
+  "rebalance-check": 0.00799
  },
  "draft": {
   "title": "Making proteins",
@@ -210,13 +216,43 @@
    "q": "In a liver cell, a gene is switched on and its mRNA is made. Which statement describes what happens next to that mRNA?",
    "opts": [
     "A ribosome reads it in codons and tRNA brings amino acids",
-    "tRNA copies it into a new strand of DNA in the nucleus",
-    "A ribosome copies it into a second strand of mRNA",
+    "tRNA copies it back into a strand of DNA inside the nucleus",
+    "A ribosome copies it into a second strand of mRNA for later",
     "Each base is read singly and calls for one amino acid"
    ],
    "why": "After transcription, the mRNA moves to a ribosome, which reads it in codons while tRNA brings the matching amino acids to build a polypeptide. Reading single bases is wrong because a codon is a group of three bases, and most codons call for one amino acid.",
    "clue": "Think about the size of the group of bases that is read."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Translation",
+    "also_right": []
+   },
+   "b": {
+    "best": "A ribosome reads it in codons and tRNA brings amino acids",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "A ribosome reads it in codons and tRNA brings amino acids",
+    "tRNA copies it into a new strand of DNA in the nucleus",
+    "A ribosome copies it into a second strand of mRNA",
+    "Each base is read singly and calls for one amino acid"
+   ]
+  }
+ }
 }

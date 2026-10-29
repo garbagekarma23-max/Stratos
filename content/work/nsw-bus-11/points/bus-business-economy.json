@@ -6,11 +6,15 @@
  "log": [
   "2026-10-24T11:31:04Z new, write",
   "2026-10-24T23:13:21Z write: done",
-  "2026-10-24T23:15:28Z check: passed, cleared"
+  "2026-10-24T23:15:28Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 1,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "draft": {
   "title": "Business in the economy",
@@ -99,9 +103,9 @@
    "q": "How does the tax a business pays help the wider community?",
    "opts": [
     "It funds services such as public hospitals",
-    "It is paid to workers as their wages",
-    "It is kept by the owners as a reward",
-    "It buys new equipment for the business"
+    "It is paid to workers as their weekly wages",
+    "It is kept by the owners as a reward for risk",
+    "It buys new equipment for the business to use"
    ],
    "why": "Tax goes to the government, which spends it on services like hospitals, schools and roads. Wages are a separate benefit: they go straight to workers, not through the government.",
    "clue": "Who receives the tax, and what do they spend it on?"
@@ -119,5 +123,39 @@
    "clue": "Can one business help and harm a community at the same time?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "usd": {
+  "rebalance": 0.0029,
+  "rebalance-check": 0.0123
+ },
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It funds services such as public hospitals",
+    "also_right": []
+   },
+   "b": {
+    "best": "It provides incomes but harms quality of life nearby",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "It funds services such as public hospitals",
+    "It is paid to workers as their wages",
+    "It is kept by the owners as a reward",
+    "It buys new equipment for the business"
+   ]
+  }
+ }
 }

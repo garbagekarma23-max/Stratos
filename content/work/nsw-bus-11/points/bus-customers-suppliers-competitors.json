@@ -6,11 +6,15 @@
  "log": [
   "2026-10-24T11:31:04Z new, write",
   "2026-10-24T23:13:21Z write: done",
-  "2026-10-24T23:15:28Z check: passed, cleared"
+  "2026-10-24T23:15:28Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 1,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "draft": {
   "title": "Customers, suppliers and competitors",
@@ -93,9 +97,9 @@
    "q": "Which of these shows competitors affecting a business?",
    "opts": [
     "A rival cuts its prices, so the business offers a discount",
-    "Buyers lose interest in a product, so its sales fall",
-    "The cost of parts rises, so each product costs more",
-    "Stock arrives late, so customer orders are delayed"
+    "Customers stop wanting a product, so the business sells less",
+    "The cost of parts rises, so each product costs more to make",
+    "A supplier sends stock late, so customer orders are delayed"
    ],
    "why": "A rival selling similar products is a competitor, and its lower prices push the business to respond. Falling interest from buyers comes from customers, while the cost and timing of parts and stock come from suppliers.",
    "clue": "Look for another business selling to the same buyers."
@@ -113,5 +117,39 @@
    "clue": "Trace the torn shirts back to where the problem began."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "usd": {
+  "rebalance": 0.00605,
+  "rebalance-check": 0.01294
+ },
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A rival cuts its prices, so the business offers a discount",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her supplier, through the quality of its inputs",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "A rival cuts its prices, so the business offers a discount",
+    "Buyers lose interest in a product, so its sales fall",
+    "The cost of parts rises, so each product costs more",
+    "Stock arrives late, so customer orders are delayed"
+   ]
+  }
+ }
 }

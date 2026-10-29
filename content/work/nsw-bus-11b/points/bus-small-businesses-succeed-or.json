@@ -8,17 +8,23 @@
   "2026-10-27T00:53:13Z match: none",
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:37Z write: done",
-  "2026-10-27T01:23:01Z check: passed, cleared"
+  "2026-10-27T01:23:01Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00398,
   "write": 0.00987,
-  "check": 0.00838
+  "check": 0.00838,
+  "rebalance": 0.00574,
+  "rebalance-check": 0.01287
  },
  "match": {
   "same": "",
@@ -126,5 +132,75 @@
    "clue": "Look for the two weaknesses in what Ravi did not do."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Why small businesses succeed or fail",
+   "card": [
+    "Small businesses are more likely to succeed when they have good planning, enough money, sound management and a clear understanding of their customers.",
+    [
+     "Planning and money",
+     "A plan gives the owner goals and a way to reach them. Enough money, called finance, pays for start-up costs and keeps the business running through slow months."
+    ],
+    [
+     "Management and customers",
+     "Sound management means the owner makes careful decisions and runs daily tasks well. Knowing the customer means offering what people want at a price they will pay."
+    ],
+    [
+     "Failure",
+     "Cash flow problems often cause failure. This happens when a business cannot pay bills on time because cash is going out faster than it comes in. Poor planning also often leads to failure."
+    ]
+   ],
+   "remember": "Planning, money, management and knowing customers help a small business succeed. Cash flow problems and poor planning often bring failure.",
+   "a": {
+    "q": "Which of these is most likely to lead a small business to fail?",
+    "opts": [
+     "Often being unable to pay bills when they fall due",
+     "Choosing to open in a small country town, not a city",
+     "Often offering only a few products to customers",
+     "Often having an owner who works in the business"
+    ],
+    "why": "A business that cannot pay its bills on time has a cash flow problem, which often causes failure. The other options can work well in many small businesses, so they do not on their own lead to failure.",
+    "clue": "Think about what happens when cash goes out faster than it comes in."
+   },
+   "b": {
+    "d": 3,
+    "q": "Ravi opens a bike repair shop in Ballarat. He did not research what local cyclists want, and he has not planned for slow winter months. Which outcome is most likely?",
+    "opts": [
+     "He may struggle to pay bills and the shop may fail",
+     "The shop will succeed because repair work is needed",
+     "The shop will succeed because he has few competitors",
+     "The shop will fail because small businesses cannot last"
+    ],
+    "why": "Not knowing his customers and not planning for slow months can leave Ravi short of cash, which often causes failure. Saying small businesses cannot last is wrong, because many succeed with good planning and management.",
+    "clue": "Look for the two weaknesses in what Ravi did not do."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Often being unable to pay bills when they fall due",
+    "also_right": []
+   },
+   "b": {
+    "best": "He may struggle to pay bills and the shop may fail",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The right option is the only one with a hedge ('may ... may'). The others all say 'will' or 'cannot', so a student can pick it from the wording alone without knowing the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and question a are accurate. In question b, the right option is the only hedged one ('may'), so it stands out from the absolute distractors and should be reworded."
+  }
+ }
 }

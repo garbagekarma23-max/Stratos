@@ -11,19 +11,25 @@
   "2026-10-27T01:23:01Z write: done",
   "2026-10-27T01:29:34Z check: flagged",
   "2026-10-27T01:36:42Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a other)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "match": 1,
   "write": 3,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00391,
   "write": 0.01032,
   "check": 0.0094,
-  "fix": 0.01303
+  "fix": 0.01303,
+  "rebalance": 0.00431,
+  "rebalance-check": 0.0113
  },
  "match": {
   "same": "",
@@ -193,13 +199,43 @@
    "q": "Priya manages a furniture maker in Newcastle. Her yearly report covers profit, staff safety records and the amount of timber waste sent to landfill. What does the report show?",
    "opts": [
     "It reports on all three parts of the triple bottom line",
-    "It reports on the financial part only",
-    "It reports on the financial and social parts only",
-    "It reports on the social and environmental parts only"
+    "It reports on the financial part of the measure only",
+    "It reports on the financial and social results only",
+    "It reports on the social and environmental results only"
    ],
    "why": "Profit is a financial result, staff safety is a social result and timber waste is an environmental result. The report covers all three. A student might miss the waste figure and choose the financial and social option, but waste is about the effect on the environment.",
    "clue": "Sort each item in the report into money, people or environment."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Judging a business on money, people and the environment",
+    "also_right": []
+   },
+   "b": {
+    "best": "It reports on all three parts of the triple bottom line",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "It reports on all three parts of the triple bottom line",
+    "It reports on the financial part only",
+    "It reports on the financial and social parts only",
+    "It reports on the social and environmental parts only"
+   ]
+  }
+ }
 }

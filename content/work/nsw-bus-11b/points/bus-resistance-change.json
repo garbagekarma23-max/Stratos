@@ -8,17 +8,23 @@
   "2026-10-27T00:53:13Z match: none",
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:01Z check: passed, cleared"
+  "2026-10-27T01:23:01Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "match": 1,
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00386,
   "write": 0.00491,
-  "check": 0.00626
+  "check": 0.00626,
+  "rebalance": 0.00468,
+  "rebalance-check": 0.00792
  },
  "match": {
   "same": "",
@@ -106,9 +112,9 @@
    "q": "A café owner brings in a new ordering app. A long-serving waiter refuses to use it and says, \"The paper pads work fine.\" Which reason for resistance is this?",
    "opts": [
     "Habit, as the waiter prefers the usual way of working",
-    "Lost status, as the waiter loses a senior role",
-    "Poor communication, as no one explained the app",
-    "Costs, as the waiter must pay for the app"
+    "Lost status, as the waiter fears losing a senior role",
+    "Poor communication, as no one explained the new app",
+    "Costs, as the waiter would have to pay for the new app"
    ],
    "why": "The waiter says the old method works fine, which shows a preference for the usual way of working. Lost status is tempting, but nothing in the case says the waiter loses a role or influence.",
    "clue": "Look at what the waiter says about the old pads."
@@ -126,5 +132,35 @@
    "clue": "Think about what the workers were told before the change and what they feared."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Habit, as the waiter prefers the usual way of working",
+    "also_right": []
+   },
+   "b": {
+    "best": "Poor communication led to fear of the unknown",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Habit, as the waiter prefers the usual way of working",
+    "Lost status, as the waiter loses a senior role",
+    "Poor communication, as no one explained the app",
+    "Costs, as the waiter must pay for the app"
+   ]
+  }
+ }
 }

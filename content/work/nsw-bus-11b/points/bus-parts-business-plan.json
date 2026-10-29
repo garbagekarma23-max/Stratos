@@ -9,17 +9,23 @@
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:37Z write: failed the content check, writing again",
   "2026-10-27T01:23:01Z write: done",
-  "2026-10-27T01:29:34Z check: passed, cleared"
+  "2026-10-27T01:29:34Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "match": 1,
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00373,
   "write": 0.01453,
-  "check": 0.00606
+  "check": 0.00606,
+  "rebalance": 0.00122,
+  "rebalance-check": 0.01341
  },
  "match": {
   "same": "",
@@ -128,5 +134,75 @@
    "clue": "Which part covers how the product is made?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Parts of a business plan",
+   "card": [
+    "A business plan is split into parts. Each part has its own goals and actions, and together they work towards the business's overall goals.",
+    [
+     "Marketing",
+     "how the business will find and keep customers. It covers the product, price, promotion and place."
+    ],
+    [
+     "Operations",
+     "how the business will make its product or deliver its service. It covers things like suppliers, equipment and production methods."
+    ],
+    [
+     "Finance and human resources",
+     "Finance covers the money needed, expected sales and costs, and cash flow. Human resources covers how staff are hired, trained and managed."
+    ]
+   ],
+   "remember": "Each part of a plan answers its own question, with its own goals and actions.",
+   "a": {
+    "q": "Which part of a business plan would set out how many staff to hire and how to train them?",
+    "opts": [
+     "Human resources",
+     "Operations plan",
+     "Finance and costs",
+     "Marketing plan"
+    ],
+    "why": "Human resources covers how staff are hired, trained and managed. Operations is the most tempting wrong answer, but it covers how the product is made or the service is delivered, not how staff are hired and trained.",
+    "clue": "Which part is about the people who work for the business?"
+   },
+   "b": {
+    "d": 2,
+    "q": "Mia plans to open a bakery in Dubbo. She is working out which flour supplier to use and what ovens to buy. Which part of her plan is this?",
+    "opts": [
+     "Operations",
+     "Marketing",
+     "Finance",
+     "Human resources"
+    ],
+    "why": "Choosing suppliers and equipment is about how the bakery will make its product, so it belongs in operations. Finance is tempting because ovens cost money, but finance covers money needed, sales, costs and cash flow, not how the product is made.",
+    "clue": "Which part covers how the product is made?"
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Human resources",
+    "also_right": []
+   },
+   "b": {
+    "best": "Operations",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The option labels are inconsistent. 'Operations plan' and 'Marketing plan' add 'plan', 'Finance and costs' adds a qualifier, and the right answer, 'Human resources', is the only one worded exactly as on the card. That makes it stand out. Use matching labels, such as Operations, Marketing, Human resources and Finance."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and both questions are accurate, and the intended answers are right. The one fix is in question a: the option labels are inconsistent, so the correct option, the only one matching the card's wording, stands out."
+  }
+ }
 }

@@ -9,19 +9,25 @@
   "2026-10-27T01:00:03Z write: done (still fails the content check)",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "write": 0.01146,
   "check": 0.01415,
   "fix": 0.01935,
-  "recheck": 0.01269
+  "recheck": 0.01269,
+  "rebalance": 0.00318,
+  "rebalance-check": 0.01146
  },
  "draft": {
   "title": "Comparing two narratives",
@@ -226,9 +232,9 @@
    "q": "Which sentence is the strongest comparison of two stories about leaving home?",
    "opts": [
     "A's letters can feel more private to readers than B's film",
-    "Story A is told as letters and Story B is a film",
-    "Story A is sad and Story B is also sad in places",
-    "Story A is better because its ending is more moving"
+    "A is told as letters and B is shown as a film on screen",
+    "A is sad and B is also sad in several of its scenes",
+    "A is better because its ending is more moving to readers"
    ],
    "why": "The sentence about the letters feeling more private names a difference in form and says what it can do for the reader, so it explains why the difference matters. Saying one story is letters and the other a film is the tempting choice, but it only lists the difference. The others note a likeness or give a personal judgement.",
    "clue": "Which one says what a difference does for the reader?"
@@ -238,13 +244,50 @@
    "q": "Two stories about friendship were made decades apart in different countries. A student writes that they differ because they were made at different times. What would make this a stronger comparison?",
    "opts": [
     "Linking each era's attitudes to how it shows friendship",
-    "Adding the exact year each story was made",
-    "Saying the first story is weaker because it is older",
-    "Retelling the plot of each story in more detail"
+    "Adding the exact year and the country of each story's making",
+    "Saying the older story is weaker because it is less modern",
+    "Retelling the plot of each story in much more detail first"
    ],
    "why": "Context matters when the student links the time and place a story was made to what the story shows. Adding a date is tempting, but it only states another fact without explaining anything. Calling a story weaker because it is older is a judgement, not a reason for the difference.",
    "clue": "Think about what context can do to a story's ideas."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A's letters can feel more private to readers than B's film",
+    "also_right": []
+   },
+   "b": {
+    "best": "Linking each era's attitudes to how it shows friendship",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "A's letters can feel more private to readers than B's film",
+    "Story A is told as letters and Story B is a film",
+    "Story A is sad and Story B is also sad in places",
+    "Story A is better because its ending is more moving"
+   ],
+   "b": [
+    "Linking each era's attitudes to how it shows friendship",
+    "Adding the exact year each story was made",
+    "Saying the first story is weaker because it is older",
+    "Retelling the plot of each story in more detail"
+   ]
+  }
+ }
 }

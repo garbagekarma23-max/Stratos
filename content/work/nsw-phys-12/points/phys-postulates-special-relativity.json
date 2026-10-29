@@ -8,16 +8,22 @@
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: failed the content check, writing again",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:00Z check: passed, cleared"
+  "2026-10-27T01:23:00Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a and b"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01619,
-  "check": 0.00642
+  "check": 0.00642,
+  "rebalance": 0.00648,
+  "rebalance-check": 0.01162
  },
  "draft": {
   "title": "Postulates of special relativity",
@@ -95,9 +101,9 @@
    "q": "A spaceship moves past Earth at a steady, very high speed. It fires a pulse of light forwards. What do observers on Earth measure for the speed of the pulse in a vacuum?",
    "opts": [
     "c, the same as the crew on the ship measure",
-    "c plus the speed of the spaceship",
-    "c minus the speed of the spaceship",
-    "Less than c, because the ship is moving"
+    "c plus the speed of the ship, as speeds add",
+    "c minus the speed of the ship, seen from Earth",
+    "Less than c, because the ship is moving away"
    ],
    "why": "The speed of light in a vacuum is the same for all observers, whatever the motion of the source. Adding the ship's speed to c is the everyday rule, and the second postulate rules it out.",
    "clue": "Does the speed of the source change the speed of light?"
@@ -107,13 +113,50 @@
    "q": "Priya is on a train moving at a steady speed. She does a physics experiment in a closed carriage with no windows. Which statement follows from the first postulate?",
    "opts": [
     "The experiment cannot show if the train is moving steadily",
-    "The experiment gives different laws from the platform's",
-    "The experiment can measure the train's steady speed",
-    "The experiment works only if the train is at rest"
+    "The experiment shows that laws differ from the platform's",
+    "The experiment can measure the train's steady speed exactly",
+    "The experiment works only if the train is not moving at all"
    ],
    "why": "The laws of physics are the same in every inertial frame, so no experiment inside the carriage can tell steady motion from rest. The claim that the laws differ on the platform is the tempting mistake, and the first postulate rules it out.",
    "clue": "A train at steady speed is an inertial frame."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a",
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "c, the same as the crew on the ship measure",
+    "also_right": []
+   },
+   "b": {
+    "best": "The experiment cannot show if the train is moving steadily",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "c, the same as the crew on the ship measure",
+    "c plus the speed of the spaceship",
+    "c minus the speed of the spaceship",
+    "Less than c, because the ship is moving"
+   ],
+   "b": [
+    "The experiment cannot show if the train is moving steadily",
+    "The experiment gives different laws from the platform's",
+    "The experiment can measure the train's steady speed",
+    "The experiment works only if the train is at rest"
+   ]
+  }
+ }
 }

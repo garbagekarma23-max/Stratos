@@ -21,9 +21,9 @@ MADE_BANKS.phys = {
       "q": "A ball rolls off a table and flies through the air. Ignoring air resistance, which statement describes its motion?",
       "opts": [
         "Sideways velocity is constant, falling velocity changes",
-        "Both horizontal and vertical velocities are constant",
-        "Horizontal velocity decreases as the ball falls",
-        "Vertical velocity is constant at 9.8 m/s"
+        "Both sideways and falling velocities stay constant, always",
+        "Sideways velocity decreases steadily as the ball falls",
+        "Falling velocity is constant at 9.8 m/s, sideways changes"
       ],
       "why": "No horizontal force acts, so horizontal velocity stays the same. Gravity changes the vertical velocity. The option saying 9.8 m/s is tempting, but 9.8 is the acceleration in m/s², not a constant speed.",
       "clue": "Which direction has a force acting on it?"
@@ -462,9 +462,9 @@ MADE_BANKS.phys = {
       "q": "Dev builds a simple DC motor, but the split ring is replaced by two solid rings, so the current never reverses. The coil is released with its plane parallel to the field. What is most likely to happen?",
       "opts": [
         "It swings about the quarter-turn position, then stops",
-        "It spins faster and faster in one direction",
-        "It does not move because the forces cancel out",
-        "It turns a half turn, then stops there"
+        "It keeps spinning faster in one direction without stopping",
+        "It stays still because the forces on both sides cancel out",
+        "It turns a half turn, then stops with its plane parallel"
       ],
       "why": "The torque turns the coil about a quarter turn, to where its plane is at right angles to the field and the torque is zero. It overshoots, is pulled back, and friction stops it there. It does not reach a half turn, because past the quarter turn the torque acts against its motion.",
       "clue": "Where is the torque zero when the current never reverses?"
@@ -804,9 +804,9 @@ MADE_BANKS.phys = {
       "q": "Compared with a double slit of the same spacing, why is a diffraction grating better for measuring wavelengths?",
       "opts": [
         "Its bright lines are thin and sharp, so angles are precise",
-        "Its bright lines are wider, so they are easier to see",
-        "It stops light of some wavelengths from passing through",
-        "It makes all wavelengths leave at the same angle"
+        "Its bright lines are wider, so they are easier to see by eye",
+        "It blocks light of some wavelengths so fewer colours remain",
+        "It sends all the wavelengths out at one angle, so they merge"
       ],
       "why": "Light from many slits interferes to give thin, sharp bright lines, so the angle θ can be measured precisely. Wider lines would make the angle harder to read, not easier.",
       "clue": "Think about what many slits do to the width of each bright line."
@@ -1004,9 +1004,9 @@ MADE_BANKS.phys = {
       "q": "A spaceship moves past Earth at a steady, very high speed. It fires a pulse of light forwards. What do observers on Earth measure for the speed of the pulse in a vacuum?",
       "opts": [
         "c, the same as the crew on the ship measure",
-        "c plus the speed of the spaceship",
-        "c minus the speed of the spaceship",
-        "Less than c, because the ship is moving"
+        "c plus the speed of the ship, as speeds add",
+        "c minus the speed of the ship, seen from Earth",
+        "Less than c, because the ship is moving away"
       ],
       "why": "The speed of light in a vacuum is the same for all observers, whatever the motion of the source. Adding the ship's speed to c is the everyday rule, and the second postulate rules it out.",
       "clue": "Does the speed of the source change the speed of light?"
@@ -1016,9 +1016,9 @@ MADE_BANKS.phys = {
       "q": "Priya is on a train moving at a steady speed. She does a physics experiment in a closed carriage with no windows. Which statement follows from the first postulate?",
       "opts": [
         "The experiment cannot show if the train is moving steadily",
-        "The experiment gives different laws from the platform's",
-        "The experiment can measure the train's steady speed",
-        "The experiment works only if the train is at rest"
+        "The experiment shows that laws differ from the platform's",
+        "The experiment can measure the train's steady speed exactly",
+        "The experiment works only if the train is not moving at all"
       ],
       "why": "The laws of physics are the same in every inertial frame, so no experiment inside the carriage can tell steady motion from rest. The claim that the laws differ on the platform is the tempting mistake, and the first postulate rules it out.",
       "clue": "A train at steady speed is an inertial frame."
@@ -1287,9 +1287,9 @@ MADE_BANKS.phys = {
       "q": "Thomson got the same charge to mass ratio when he changed the metal of the plates and the gas in the tube. What did this suggest?",
       "opts": [
         "The particles are a common part of all matter",
-        "The particles came only from the glass tube",
-        "The particles were different in each metal",
-        "The particles had no charge or mass"
+        "The particles come only from the tube glass",
+        "The particles are different in each metal used",
+        "The particles have no charge and almost no mass"
       ],
       "why": "A ratio that stays the same for every metal and gas suggests the same kind of particle comes from all of them, so it is part of all matter. If the particles differed by material, the ratio would change. It does not.",
       "clue": "Think about what stays the same when the materials change."
@@ -1308,9 +1308,9 @@ MADE_BANKS.phys = {
       "q": "What did Millikan's results show about the charges on the oil drops?",
       "opts": [
         "Each was a whole multiple of one smallest charge",
-        "Each was a different value with no pattern",
-        "Each was exactly the same size",
-        "Each was a fraction of the electron's charge"
+        "Each was a different value with no fixed pattern",
+        "Each was exactly the same size on every drop",
+        "Each was a small fraction of the electron's charge"
       ],
       "why": "The charges were all whole multiples of about 1.6 × 10^-19 C, so charge comes in units. Different drops carried different numbers of these units, so they were not all the same size. No drop carried a fraction of that value, so the charges could not take just any value.",
       "clue": "Look at what the measured charges had in common."

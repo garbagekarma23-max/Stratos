@@ -7,16 +7,22 @@
   "2026-10-26T13:30:00Z new, write",
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:08Z write: done",
-  "2026-10-27T01:08:34Z check: passed, cleared"
+  "2026-10-27T01:08:34Z check: passed, cleared",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00511,
-  "check": 0.00724
+  "check": 0.00724,
+  "rebalance": 0.00369,
+  "rebalance-check": 0.01457
  },
  "draft": {
   "title": "Titration",
@@ -101,5 +107,66 @@
    "clue": "Write the balanced equation first and check the mole ratio."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Titration",
+   "card": [
+    "A titration finds the unknown concentration of one solution. A solution of known concentration, the standard solution, is added from a burette to a measured volume of the unknown solution in a conical flask.",
+    "The volume of the unknown solution is measured with a pipette. The volume added from the burette is read from the scale before and after, and the difference is the titre.",
+    "The equivalence point is where the two reactants have been added in exactly the ratio of the balanced equation. An indicator in the flask changes colour near this point, and the titration is stopped there.",
+    "To calculate, find moles of the known solution: n = c × V (V in litres). Use the mole ratio in the equation to find moles of the unknown, then divide by its volume to get concentration."
+   ],
+   "remember": "Titration uses a known solution, the mole ratio and n = c × V to find an unknown concentration.",
+   "a": {
+    "q": "In a titration, what is the titre?",
+    "opts": [
+     "The volume added from the burette to reach the end",
+     "The volume of unknown solution measured by pipette",
+     "The concentration of the standard solution in mol/L",
+     "The moles of unknown solution found in the flask"
+    ],
+    "why": "The titre is the burette reading after minus the reading before, which is the volume added. The volume in the flask is measured with a pipette, so it is not the titre.",
+    "clue": "It is the difference between two burette readings."
+   },
+   "b": {
+    "d": 3,
+    "q": "Tom titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH. The titre is 30.0 mL. What is the concentration of the acid?",
+    "opts": [
+     "0.0750 mol/L",
+     "0.150 mol/L",
+     "0.0500 mol/L",
+     "0.300 mol/L"
+    ],
+    "why": "Moles of NaOH = 0.100 × 0.0300 = 0.00300 mol. H2SO4 + 2NaOH gives 1 mol acid per 2 mol base, so acid = 0.00150 mol, and 0.00150 ÷ 0.0200 = 0.0750 mol/L. 0.150 mol/L comes from ignoring the 1:2 ratio.",
+    "clue": "Write the balanced equation first and check the mole ratio."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "The volume added from the burette to reach the end",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.0750 mol/L",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "The clue 'It is the difference between two burette readings' gives the answer away. Only one option mentions the burette, so a student can match the word without understanding what a titre is."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts and both answers are correct. The only issue is that the clue for question a points straight to the one option that mentions the burette."
+  }
+ }
 }

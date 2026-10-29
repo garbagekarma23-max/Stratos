@@ -9,18 +9,24 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (card wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (card wording)",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00511,
   "check": 0.01013,
-  "fix": 0.0146
+  "fix": 0.0146,
+  "rebalance": 0.00517,
+  "rebalance-check": 0.01329
  },
  "draft": {
   "title": "Somatic and germline mutations",
@@ -163,9 +169,9 @@
    "q": "Which mutation could be inherited by a child?",
    "opts": [
     "A mutation in a sperm-producing cell in the testes",
-    "A mutation in a skin cell damaged by sunburn",
-    "A mutation in a liver cell of an adult",
-    "A mutation in a white blood cell of a mother"
+    "A mutation in a skin cell damaged by strong sunlight",
+    "A mutation in a liver cell that makes bile in adults",
+    "A mutation in a white blood cell of a pregnant mother"
    ],
    "why": "Only a mutation in a gamete, or in a cell that makes gametes, can be passed on, because gametes join to form the offspring's first cell. Skin, liver and white blood cells are body cells, so their mutations are not inherited.",
    "clue": "Which cell goes on to make a gamete?"
@@ -183,5 +189,35 @@
    "clue": "Ask which type of cell carried the mutation."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A mutation in a sperm-producing cell in the testes",
+    "also_right": []
+   },
+   "b": {
+    "best": "The mutation was somatic, so it was not in her gametes",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "A mutation in a sperm-producing cell in the testes",
+    "A mutation in a skin cell damaged by sunburn",
+    "A mutation in a liver cell of an adult",
+    "A mutation in a white blood cell of a mother"
+   ]
+  }
+ }
 }

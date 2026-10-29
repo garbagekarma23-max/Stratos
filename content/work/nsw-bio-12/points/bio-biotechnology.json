@@ -9,20 +9,26 @@
   "2026-10-27T01:00:09Z write: done",
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
-  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:39Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00464,
   "check": 0.00996,
   "fix": 0.02502,
-  "recheck": 0.01428
+  "recheck": 0.01428,
+  "rebalance": 0.00527,
+  "rebalance-check": 0.01646
  },
  "draft": {
   "title": "What biotechnology is",
@@ -206,5 +212,72 @@
    "clue": "Think about what people did with yeast and microbes in the kitchen."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "What biotechnology is",
+   "card": [
+    "Biotechnology is the use of living things, or parts of living things, to make products or to carry out useful processes.",
+    [
+     "Traditional",
+     "uses whole organisms, such as yeast in bread, or microbes in cheese and yoghurt. People used these methods long before DNA was understood."
+    ],
+    [
+     "Modern",
+     "changes the genes of an organism so that it makes a product it would not make naturally. Bacteria with a human gene can make medicines such as insulin."
+    ],
+    "In each case, cells or parts of cells, such as enzymes, do the work. Killing microbes, or just cutting up a plant or animal as raw material, is not biotechnology."
+   ],
+   "remember": "If cells or their enzymes do the work, from bread to insulin, it is biotechnology.",
+   "a": {
+    "q": "Which of these is an example of biotechnology?",
+    "opts": [
+     "Using bacterial enzymes in washing powder to remove stains",
+     "Heating milk to kill the bacteria that would make it go off",
+     "Sawing pine trees into timber planks to build strong houses",
+     "Drying grapes in the hot sun to turn them into sultanas"
+    ],
+    "why": "Enzymes are parts of cells, and here they do the work of breaking down stains, so this is biotechnology. Heating milk involves bacteria, but it kills them rather than using them, and no cells do any work in sawing timber or drying grapes.",
+    "clue": "Ask whether a living thing, or part of one, carries out the process."
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya says that biotechnology only began when scientists first moved genes between organisms. Why is she wrong?",
+    "opts": [
+     "People used living things such as yeast long before that",
+     "Moving genes is not a type of biotechnology",
+     "Biotechnology only uses parts of cells, not whole organisms",
+     "Biotechnology only applies to making medicines"
+    ],
+    "why": "Biotechnology is any use of living things or their parts to make products. Bread, cheese and yoghurt made with microbes count, and people made them long before gene transfer. Gene transfer is a modern form of biotechnology, not the start of it.",
+    "clue": "Think about what people did with yeast and microbes in the kitchen."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Using bacterial enzymes in washing powder to remove stains",
+    "also_right": []
+   },
+   "b": {
+    "best": "People used living things such as yeast long before that",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue tells students to think about yeast and microbes in the kitchen, and the right option is the only one that mentions yeast. A student can match the words without knowing the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts and the intended answers are sound. The only problem is that question b's clue names yeast, which gives away the one option that mentions it."
+  }
+ }
 }

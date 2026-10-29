@@ -9,18 +9,24 @@
   "2026-10-27T01:00:04Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording, a other)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording, a other)",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00501,
   "check": 0.01081,
-  "fix": 0.01553
+  "fix": 0.01553,
+  "rebalance": 0.00602,
+  "rebalance-check": 0.02017
  },
  "draft": {
   "title": "Changing form and medium",
@@ -177,5 +183,76 @@
    "clue": "Ask what the film does in place of describing thoughts."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Changing form and medium",
+   "card": [
+    "Form is the kind of text, such as a play, novel, poem or film. Medium is the channel that carries it, such as a stage, a page or a screen.",
+    "Each form has its own tools. A film can use close-ups, music and editing. A play relies on live actors, dialogue, staging and lighting. A novel can take the reader inside a character's thoughts.",
+    "When a story moves to a new form, the composer (the person who creates the text) must change how it is told. Some things are shown in a new way, some are cut and some are added.",
+    "Because the form changes the telling, it also changes the meaning a reader or viewer takes away. Comparing the two forms is part of the conversation between the texts."
+   ],
+   "remember": "A new form gives a story new tools, so the same story can mean something different.",
+   "a": {
+    "q": "Why does moving a story from a novel to a film change how it is told?",
+    "opts": [
+     "Each form has different tools for showing events and ideas",
+     "Films must always follow the plot of the novel word for word",
+     "A film can only tell a story through what characters say",
+     "The meaning of a story stays the same whatever form it uses"
+    ],
+    "why": "A novel can describe a character's thoughts in words, while a film can show them through close-ups, music and editing. The ways of telling differ, so the story is told differently. The meaning does not stay the same, because the new form changes what the audience notices.",
+    "clue": "Compare what a page and a screen can each do."
+   },
+   "b": {
+    "d": 3,
+    "q": "A novel tells us a girl's fear through several pages of her private thoughts. In the film version, the director shows a close-up of her shaking hands and uses a low, tense soundtrack. What does this change show?",
+    "opts": [
+     "The film uses its own tools to convey the same feeling",
+     "The film has left out the girl's fear completely",
+     "The film is a weaker text because it uses no words",
+     "The film has changed the story's setting and period"
+    ],
+    "why": "The close-up and soundtrack are film techniques that take the place of the novel's access to thoughts. The fear is still there, but it is shown in a new way. It is not a weaker text, because each form has its own tools for telling a story.",
+    "clue": "Ask what the film does in place of describing thoughts."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Each form has different tools for showing events and ideas",
+    "also_right": []
+   },
+   "b": {
+    "best": "The film uses its own tools to convey the same feeling",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The right option says the film conveys 'the same feeling', and why (b) says 'the fear is still there'. But the card and remember line teach that changing form changes the meaning, and why (a) says the meaning does not stay the same. A close-up of shaking hands shows fear from outside rather than from inside her thoughts, so calling it 'the same' contradicts the point being taught. Rewording it to 'convey her fear in a new way' would fix this."
+    },
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "Three distractors use absolute words that the card does not use: 'only' (where the card says a film 'can' use close-ups, music and editing), 'must always' and 'word for word'. These overstatements mark them as wrong, so a student can pick the answer without knowing the idea."
+    },
+    {
+     "part": "a",
+     "kind": "level",
+     "detail": "For Year 12 HSC Advanced the distractors are implausible ('only through what characters say', 'word for word'). The question tests almost nothing beyond recognising the card's sentence."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both answers are clear and the facts are sound. However, question b's right option says the film conveys 'the same feeling', which contradicts the card's message that a new form changes the meaning. Question a's distractors are overstated with 'only' and 'must always', which gives the answer away."
+  }
+ }
 }

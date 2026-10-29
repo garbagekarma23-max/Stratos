@@ -21,9 +21,9 @@ MADE_BANKS.chem = {
       "q": "Why is salt water a mixture and not a compound?",
       "opts": [
         "Its salt and water are not joined chemically and can vary",
-        "Its salt and water are joined in one fixed ratio",
-        "It contains only one type of atom",
-        "It cannot be separated by physical means"
+        "Its salt and water are joined in one fixed ratio by bonds",
+        "It is made of only one type of atom joined together",
+        "It cannot be split up by any physical means such as boiling"
       ],
       "why": "Salt water has salt and water mixed together without being chemically joined, and the amount of salt can vary. A compound has a fixed ratio of elements joined chemically, so that option is wrong.",
       "clue": "Think about whether the amounts can change."
@@ -110,9 +110,9 @@ MADE_BANKS.chem = {
       "q": "Sodium has the configuration 1s² 2s² 2p⁶ 3s¹. Why does it react in a similar way to potassium, which ends in 4s¹?",
       "opts": [
         "Both have one electron in their outer energy level",
-        "Both have the same number of energy levels",
-        "Both have the same total number of electrons",
-        "Both have a full outer energy level"
+        "Both have the same number of occupied energy levels",
+        "Both atoms have the same total number of electrons",
+        "Both have a full outer energy level of eight electrons"
       ],
       "why": "Reactions depend on the outer electrons, and both atoms have one valence electron. They have different numbers of energy levels and total electrons, and neither outer level is full.",
       "clue": "Look at the last subshell in each configuration."
@@ -329,9 +329,9 @@ MADE_BANKS.chem = {
       "q": "Methane (CH4) has a lower boiling point than ethane (C2H6). Both are non-polar molecules. Which is the best reason?",
       "opts": [
         "Ethane has stronger dispersion forces, with more electrons",
-        "Ethane has hydrogen bonds between its molecules",
-        "Ethane has dipole-dipole forces because it is polar",
-        "Ethane has stronger covalent bonds between its atoms"
+        "Ethane has hydrogen bonds, because it has more C and H atoms",
+        "Ethane has stronger dipole-dipole forces, as it is polar",
+        "Ethane has stronger covalent bonds, which break less easily"
       ],
       "why": "Both molecules are non-polar, and hydrogen is bonded only to carbon, so only dispersion forces act. Ethane is larger with more electrons, so its dispersion forces are stronger and it boils higher. Covalent bonds are not broken when a molecular substance boils.",
       "clue": "Both are non-polar, so which force is left, and what makes it stronger?"
@@ -371,9 +371,9 @@ MADE_BANKS.chem = {
       "q": "Graphite is used in pencils and conducts electricity, but diamond does not conduct. What best explains the difference?",
       "opts": [
         "Graphite has a free electron per atom, but diamond has none",
-        "Graphite has ions that move, but diamond has none",
-        "Graphite has four bonds per atom, but diamond has three",
-        "Graphite is a different element from diamond"
+        "Graphite has mobile ions in its layers, but diamond has none",
+        "Graphite has four bonds per atom, but diamond has only three",
+        "Graphite is a different element from diamond, so it conducts"
       ],
       "why": "In graphite each carbon atom bonds to three others, leaving one electron free to move along the layers. In diamond all four outer electrons are held in bonds. The element is the same in both, so a different element cannot be the reason.",
       "clue": "Compare how many bonds each carbon atom makes in the two forms."
@@ -392,9 +392,9 @@ MADE_BANKS.chem = {
       "q": "Why must a chemical equation be balanced?",
       "opts": [
         "Atoms are not created or destroyed, so mass is conserved",
-        "Each reactant must have the same mass as each product",
-        "The number of molecules must be equal on both sides",
-        "Subscripts in formulas must match on both sides"
+        "Each single reactant must have the same mass as each product",
+        "Molecules are not created or destroyed, so counts must match",
+        "Subscripts in each formula must be the same on both sides"
       ],
       "why": "Atoms are only rearranged in a reaction, so each type of atom must appear in the same number on both sides. The number of molecules can change, as in 2H₂ + O₂ → 2H₂O, so equal molecule counts are not required.",
       "clue": "Think about what happens to atoms during a reaction."
@@ -425,9 +425,9 @@ MADE_BANKS.chem = {
       "q": "Which statement about 1 mol of oxygen molecules and 1 mol of carbon atoms is correct?",
       "opts": [
         "They contain the same number of particles",
-        "They have the same mass",
-        "The oxygen has more particles",
-        "The carbon has more particles"
+        "They both have the same mass in grams",
+        "Oxygen has more particles because it is O2",
+        "Carbon has more particles as atoms are small"
       ],
       "why": "One mole of any particles is 6.022 × 10²³ of them, so both amounts contain the same number of particles. Mass is not what a mole fixes, so the same mass is a tempting but wrong choice.",
       "clue": "A mole is a number of particles, not a mass."
@@ -751,7 +751,12 @@ MADE_BANKS.chem = {
     "remember": "Every acid reaction here makes a salt. The other products depend on whether the acid meets a metal, a carbonate or a base.",
     "a": {
       "q": "Which products form when an acid reacts with a carbonate?",
-      "opts": ["A salt, water and carbon dioxide", "A salt and hydrogen", "A salt and water only", "A salt, water and oxygen"],
+      "opts": [
+        "A salt, water and carbon dioxide",
+        "A salt and hydrogen gas only",
+        "A salt and water, with no gas given off",
+        "A salt, water and oxygen gas"
+      ],
       "why": "A carbonate contains carbon and oxygen, so the reaction gives off carbon dioxide along with a salt and water. A salt and water only is the result for a base, which has no carbonate to release gas.",
       "clue": "A carbonate reaction fizzes with a gas."
     },
@@ -865,9 +870,9 @@ MADE_BANKS.chem = {
       "q": "Mia puts a strip of magnesium into iron(II) sulfate solution and a strip of copper into a separate beaker of iron(II) sulfate solution. What does she see?",
       "opts": [
         "Iron forms on the magnesium only",
-        "Iron forms on the copper only",
-        "Iron forms on both strips",
-        "Iron forms on neither strip"
+        "Iron forms on the copper strip only",
+        "Iron forms on both of the strips",
+        "Iron forms on neither of the strips"
       ],
       "why": "Magnesium is more reactive than iron, so it displaces iron from solution and iron forms as a solid. Copper is less reactive than iron, so it cannot displace iron and nothing happens.",
       "clue": "Only a metal above iron in the series can displace iron."
@@ -2013,9 +2018,9 @@ MADE_BANKS.chem = {
       "q": "Why does pentane have a higher boiling point than propane?",
       "opts": [
         "Its stronger dispersion forces need more energy to overcome",
-        "Its covalent bonds between carbons are stronger",
-        "It forms hydrogen bonds between its molecules",
-        "It has polar bonds that attract other molecules"
+        "Its stronger covalent bonds need more energy to break apart",
+        "Its stronger hydrogen bonds between molecules need more heat",
+        "Its polar bonds attract other molecules and need more heat"
       ],
       "why": "Pentane has a longer chain, so its dispersion forces between molecules are stronger and more energy is needed to separate them. Boiling does not break the covalent bonds inside the molecules, so stronger bonds are not the reason.",
       "clue": "Think about the forces between molecules, not inside them."
@@ -2464,9 +2469,9 @@ MADE_BANKS.chem = {
       "q": "In AAS, what is measured to find the concentration of a metal?",
       "opts": [
         "How much light of a set wavelength the atoms absorb",
-        "How much mass of precipitate the metal forms",
-        "The colour the metal gives to a flame",
-        "How much heat the sample gives out"
+        "How much mass of precipitate the metal forms when dried",
+        "The colour the metal gives to a flame in the burner",
+        "How much heat the sample gives out in the flame"
       ],
       "why": "Free atoms of the metal absorb light of a set wavelength, and more atoms absorb more light. Flame colour is a different test, and AAS does not weigh a precipitate.",
       "clue": "The name of the method says what the atoms do to the light."
@@ -2564,9 +2569,9 @@ MADE_BANKS.chem = {
       "q": "A compound has a mass spectrum with its highest m/z peak at 72. What does this peak most likely show?",
       "opts": [
         "The molar mass of the compound is 72 g/mol",
-        "The compound has 72 carbon atoms",
-        "The compound has 72 hydrogen atoms",
-        "The compound has a CH3 group of mass 72"
+        "The compound has 72 carbon atoms per molecule",
+        "Each molecule has 72 hydrogen atoms in total",
+        "The peak shows a CH3 group with a mass of 72"
       ],
       "why": "The peak with the highest m/z is usually the molecular ion, and its m/z equals the molar mass. It does not count atoms. A CH3 group has a mass of 15, so a loss of 15 would show a CH3 group, not a peak at 72.",
       "clue": "The molecular ion has lost only one electron, so its mass is the mass of the whole molecule."
@@ -2762,7 +2767,12 @@ MADE_BANKS.chem = {
     "b": {
       "d": 3,
       "q": "Dev's company makes a plastic from crude oil. It switches to making the same plastic from sugar cane waste. Which green chemistry aim does this meet?",
-      "opts": ["Using a renewable feedstock", "Using a safer chemical", "Producing less waste", "Using less energy"],
+      "opts": [
+        "Using a renewable feedstock",
+        "Using a less harmful solvent",
+        "Producing fewer by-products",
+        "Using a lower reaction temperature"
+      ],
       "why": "Sugar cane waste is a plant source that can be replaced, while crude oil is finite. The change is to the starting material. Nothing in the case says the process makes less waste or is less hazardous, so those aims cannot be assumed.",
       "clue": "Focus on where the starting material comes from."
     }

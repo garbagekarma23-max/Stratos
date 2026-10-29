@@ -10,20 +10,26 @@
   "2026-10-27T01:08:34Z write: done",
   "2026-10-27T01:22:59Z check: flagged",
   "2026-10-27T01:29:33Z fix: suggested",
-  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question b"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01271,
   "check": 0.01096,
   "fix": 0.03246,
-  "recheck": 0.01332
+  "recheck": 0.01332,
+  "rebalance": 0.00537,
+  "rebalance-check": 0.01487
  },
  "draft": {
   "title": "Intermolecular forces",
@@ -209,13 +215,43 @@
    "q": "Methane (CH4) has a lower boiling point than ethane (C2H6). Both are non-polar molecules. Which is the best reason?",
    "opts": [
     "Ethane has stronger dispersion forces, with more electrons",
-    "Ethane has hydrogen bonds between its molecules",
-    "Ethane has dipole-dipole forces because it is polar",
-    "Ethane has stronger covalent bonds between its atoms"
+    "Ethane has hydrogen bonds, because it has more C and H atoms",
+    "Ethane has stronger dipole-dipole forces, as it is polar",
+    "Ethane has stronger covalent bonds, which break less easily"
    ],
    "why": "Both molecules are non-polar, and hydrogen is bonded only to carbon, so only dispersion forces act. Ethane is larger with more electrons, so its dispersion forces are stronger and it boils higher. Covalent bonds are not broken when a molecular substance boils.",
    "clue": "Both are non-polar, so which force is left, and what makes it stronger?"
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "b"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Water molecules form hydrogen bonds with each other",
+    "also_right": []
+   },
+   "b": {
+    "best": "Ethane has stronger dispersion forces, with more electrons",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "b": [
+    "Ethane has stronger dispersion forces, with more electrons",
+    "Ethane has hydrogen bonds between its molecules",
+    "Ethane has dipole-dipole forces because it is polar",
+    "Ethane has stronger covalent bonds between its atoms"
+   ]
+  }
+ }
 }

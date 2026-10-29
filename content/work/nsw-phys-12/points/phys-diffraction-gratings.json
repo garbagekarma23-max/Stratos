@@ -8,16 +8,22 @@
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: failed the content check, writing again",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:00Z check: passed, cleared"
+  "2026-10-27T01:23:00Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01164,
-  "check": 0.00834
+  "check": 0.00834,
+  "rebalance": 0.00274,
+  "rebalance-check": 0.01269
  },
  "draft": {
   "title": "Diffraction gratings",
@@ -83,9 +89,9 @@
    "q": "Compared with a double slit of the same spacing, why is a diffraction grating better for measuring wavelengths?",
    "opts": [
     "Its bright lines are thin and sharp, so angles are precise",
-    "Its bright lines are wider, so they are easier to see",
-    "It stops light of some wavelengths from passing through",
-    "It makes all wavelengths leave at the same angle"
+    "Its bright lines are wider, so they are easier to see by eye",
+    "It blocks light of some wavelengths so fewer colours remain",
+    "It sends all the wavelengths out at one angle, so they merge"
    ],
    "why": "Light from many slits interferes to give thin, sharp bright lines, so the angle θ can be measured precisely. Wider lines would make the angle harder to read, not easier.",
    "clue": "Think about what many slits do to the width of each bright line."
@@ -103,5 +109,35 @@
    "clue": "Rearrange d sin θ = mλ to get sin θ on its own."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Its bright lines are thin and sharp, so angles are precise",
+    "also_right": []
+   },
+   "b": {
+    "best": "Red light is bent to a larger angle than blue light",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Its bright lines are thin and sharp, so angles are precise",
+    "Its bright lines are wider, so they are easier to see",
+    "It stops light of some wavelengths from passing through",
+    "It makes all wavelengths leave at the same angle"
+   ]
+  }
+ }
 }

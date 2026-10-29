@@ -8,16 +8,22 @@
   "2026-10-27T00:53:12Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:00:10Z write: failed the content check, writing again",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:00Z check: passed, cleared"
+  "2026-10-27T01:23:00Z check: passed, cleared",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01103,
-  "check": 0.00728
+  "check": 0.00728,
+  "rebalance": 0.00723,
+  "rebalance-check": 0.01062
  },
  "draft": {
   "title": "Projectile motion",
@@ -95,9 +101,9 @@
    "q": "A ball rolls off a table and flies through the air. Ignoring air resistance, which statement describes its motion?",
    "opts": [
     "Sideways velocity is constant, falling velocity changes",
-    "Both horizontal and vertical velocities are constant",
-    "Horizontal velocity decreases as the ball falls",
-    "Vertical velocity is constant at 9.8 m/s"
+    "Both sideways and falling velocities stay constant, always",
+    "Sideways velocity decreases steadily as the ball falls",
+    "Falling velocity is constant at 9.8 m/s, sideways changes"
    ],
    "why": "No horizontal force acts, so horizontal velocity stays the same. Gravity changes the vertical velocity. The option saying 9.8 m/s is tempting, but 9.8 is the acceleration in m/s², not a constant speed.",
    "clue": "Which direction has a force acting on it?"
@@ -115,5 +121,35 @@
    "clue": "Does sideways motion change how fast something falls?"
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Sideways velocity is constant, falling velocity changes",
+    "also_right": []
+   },
+   "b": {
+    "best": "They land at the same time",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Sideways velocity is constant, falling velocity changes",
+    "Both horizontal and vertical velocities are constant",
+    "Horizontal velocity decreases as the ball falls",
+    "Vertical velocity is constant at 9.8 m/s"
+   ]
+  }
+ }
 }

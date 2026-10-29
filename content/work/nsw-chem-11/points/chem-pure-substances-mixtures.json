@@ -11,20 +11,26 @@
   "2026-10-27T01:22:58Z check: flagged",
   "2026-10-27T01:29:33Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
-  "2026-10-28T11:49:15Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:49:15Z review: approved with the fix (a spot check)",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00999,
   "check": 0.01324,
   "fix": 0.01622,
-  "recheck": 0.0118
+  "recheck": 0.0118,
+  "rebalance": 0.0026,
+  "rebalance-check": 0.01301
  },
  "draft": {
   "title": "Pure substances and mixtures",
@@ -202,9 +208,9 @@
    "q": "Why is salt water a mixture and not a compound?",
    "opts": [
     "Its salt and water are not joined chemically and can vary",
-    "Its salt and water are joined in one fixed ratio",
-    "It contains only one type of atom",
-    "It cannot be separated by physical means"
+    "Its salt and water are joined in one fixed ratio by bonds",
+    "It is made of only one type of atom joined together",
+    "It cannot be split up by any physical means such as boiling"
    ],
    "why": "Salt water has salt and water mixed together without being chemically joined, and the amount of salt can vary. A compound has a fixed ratio of elements joined chemically, so that option is wrong.",
    "clue": "Think about whether the amounts can change."
@@ -222,5 +228,35 @@
    "clue": "Which property differs between the two liquids?"
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Its salt and water are not joined chemically and can vary",
+    "also_right": []
+   },
+   "b": {
+    "best": "Distillation",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Its salt and water are not joined chemically and can vary",
+    "Its salt and water are joined in one fixed ratio",
+    "It contains only one type of atom",
+    "It cannot be separated by physical means"
+   ]
+  }
+ }
 }

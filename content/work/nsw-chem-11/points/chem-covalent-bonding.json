@@ -11,20 +11,26 @@
   "2026-10-27T01:22:59Z check: flagged",
   "2026-10-27T01:29:33Z fix: suggested",
   "2026-10-28T11:40:40Z recheck: kept for you (the fresh check found a problem)",
-  "2026-10-28T11:49:16Z review: approved with the fix"
+  "2026-10-28T11:49:16Z review: approved with the fix",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01217,
   "check": 0.01617,
   "fix": 0.03007,
-  "recheck": 0.02479
+  "recheck": 0.02479,
+  "rebalance": 0.00614,
+  "rebalance-check": 0.01834
  },
  "draft": {
   "title": "Covalent bonding",
@@ -217,5 +223,72 @@
    "clue": "Ask what must be pulled apart when each one melts."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Covalent bonding",
+   "card": [
+    "A covalent bond forms when two non-metal atoms share a pair of electrons. Each atom is attracted to the shared pair, so the atoms stay joined. Some atoms share more than one pair.",
+    [
+     "Molecular",
+     "small groups of atoms joined by covalent bonds. The bonds inside each molecule are strong, but the molecules are only weakly attracted to each other. Little energy is needed to separate them, so melting points are low."
+    ],
+    [
+     "Network",
+     "a huge three-dimensional web of atoms, all joined by covalent bonds. Diamond is one. Melting means breaking many strong bonds, so network solids are very hard and have very high melting points."
+    ],
+    "Covalent substances have no ions, so they have no charged particles free to move in the way that ions do in a melted ionic compound."
+   ],
+   "remember": "Covalent bonds share electron pairs. Molecules separate easily, but a network must break bonds.",
+   "a": {
+    "q": "Which pair of atoms is most likely to join by a covalent bond?",
+    "opts": [
+     "Two non-metal atoms, such as carbon and oxygen",
+     "A metal and a non-metal atom, such as sodium and chlorine",
+     "Two atoms that each give away all their outer electrons",
+     "An atom that loses electrons and an atom that gains them"
+    ],
+    "why": "A covalent bond forms when two non-metal atoms share a pair of electrons. The sodium and chlorine pairing is tempting, but it includes a metal, and covalent bonds form between non-metals.",
+    "clue": "Look for the pair that shares electrons."
+   },
+   "b": {
+    "d": 3,
+    "q": "Wax is made of small covalent molecules and melts at a low temperature. Quartz is a covalent network solid and melts at a very high temperature. Why do they differ?",
+    "opts": [
+     "Wax melts by separating molecules, quartz by breaking bonds",
+     "Wax has no covalent bonds, but quartz has many strong ones",
+     "Quartz melts because it contains ions that wax does not have",
+     "The bonds in wax molecules are weaker than those in quartz"
+    ],
+    "why": "Melting wax only separates molecules that are weakly attracted to each other. Melting quartz means breaking covalent bonds throughout the network. The idea that the covalent bonds in wax are weaker is tempting, but the bonds inside wax molecules are strong. They just do not need to break when wax melts.",
+    "clue": "Ask what must be pulled apart when each one melts."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Two non-metal atoms, such as carbon and oxygen",
+    "also_right": []
+   },
+   "b": {
+    "best": "Wax melts by separating molecules, quartz by breaking bonds",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The distractor 'The bonds in wax molecules are weaker than those in quartz' is literally true: C–C and C–H bonds are weaker than Si–O bonds. It is wrong only as the explanation of the melting difference. A careful student may be confused. Consider rewording it to something plainly false, such as 'Wax molecules have no strong bonds inside them'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and the intended answers are correct. One distractor in question b is technically true (the bonds in wax are weaker than Si–O), even though it is not the reason for the melting difference, so it should be reworded to be clearly false."
+  }
+ }
 }

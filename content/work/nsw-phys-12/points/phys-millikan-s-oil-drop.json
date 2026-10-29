@@ -9,18 +9,24 @@
   "2026-10-27T01:00:10Z write: done",
   "2026-10-27T01:08:36Z check: flagged",
   "2026-10-27T01:23:01Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (a wording)",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: the check agreed, new wrong options used for question a"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00469,
   "check": 0.01036,
-  "fix": 0.01337
+  "fix": 0.01337,
+  "rebalance": 0.00423,
+  "rebalance-check": 0.01286
  },
  "draft": {
   "title": "Millikan's oil drop experiment",
@@ -145,9 +151,9 @@
    "q": "What did Millikan's results show about the charges on the oil drops?",
    "opts": [
     "Each was a whole multiple of one smallest charge",
-    "Each was a different value with no pattern",
-    "Each was exactly the same size",
-    "Each was a fraction of the electron's charge"
+    "Each was a different value with no fixed pattern",
+    "Each was exactly the same size on every drop",
+    "Each was a small fraction of the electron's charge"
    ],
    "why": "The charges were all whole multiples of about 1.6 × 10^-19 C, so charge comes in units. Different drops carried different numbers of these units, so they were not all the same size. No drop carried a fraction of that value, so the charges could not take just any value.",
    "clue": "Look at what the measured charges had in common."
@@ -165,5 +171,35 @@
    "clue": "A drop that is not moving has balanced forces."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "changed",
+  "changed": [
+   "a"
+  ],
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Each was a whole multiple of one smallest charge",
+    "also_right": []
+   },
+   "b": {
+    "best": "qE = mg",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "old": {
+   "a": [
+    "Each was a whole multiple of one smallest charge",
+    "Each was a different value with no pattern",
+    "Each was exactly the same size",
+    "Each was a fraction of the electron's charge"
+   ]
+  }
+ }
 }

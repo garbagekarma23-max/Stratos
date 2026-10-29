@@ -8,17 +8,23 @@
   "2026-10-27T00:53:13Z match: none",
   "2026-10-27T01:00:11Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-10-27T01:08:36Z write: done",
-  "2026-10-27T01:23:01Z check: passed, cleared"
+  "2026-10-27T01:23:01Z check: passed, cleared",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "match": 1,
   "write": 2,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "match": 0.00406,
   "write": 0.00459,
-  "check": 0.00918
+  "check": 0.00918,
+  "rebalance": 0.00409,
+  "rebalance-check": 0.01316
  },
  "match": {
   "same": "",
@@ -108,5 +114,71 @@
    "clue": "Ask whether the law would have forced the business to do it."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Corporate social responsibility",
+   "card": [
+    "Corporate social responsibility (CSR) means a business acts for the good of society and the environment. It does this beyond what the law requires.",
+    "Obeying the law is the minimum. A business that only does what the law demands is not showing CSR.",
+    "Examples include cutting waste, using less energy, treating suppliers fairly and supporting a local community.",
+    "CSR is a choice the business makes. It can cost money in the short term, and a business may also gain a better reputation from it."
+   ],
+   "remember": "CSR is a business choosing to do good for society and the environment beyond its legal duties.",
+   "a": {
+    "q": "Which action is an example of corporate social responsibility?",
+    "opts": [
+     "A bakery chooses to donate unsold bread to a local shelter",
+     "A bakery pays its staff the award wage that the law requires",
+     "A bakery follows the food safety rules so that it can open",
+     "A bakery cuts its prices to win more customers from rivals"
+    ],
+    "why": "Donating unsold bread is a voluntary act that helps the community and goes beyond the law. Paying the award wage is tempting, but the law requires it, so it is only the minimum.",
+    "clue": "Look for the action the business was not forced to take."
+   },
+   "b": {
+    "d": 3,
+    "q": "Tariq owns a furniture company in Newcastle. Which decision shows CSR rather than only meeting legal duties?",
+    "opts": [
+     "He pays timber suppliers a fair price above what they ask",
+     "He fits the safety equipment that workplace laws require",
+     "He pays company tax on the profit the business earns",
+     "He lowers prices to beat a rival furniture company"
+    ],
+    "why": "Paying suppliers a fair price beyond what they ask is a voluntary act that treats others fairly. Fitting required safety equipment is tempting, but it is a legal duty, so it does not go beyond the law.",
+    "clue": "Ask whether the law would have forced the business to do it."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "A bakery chooses to donate unsold bread to a local shelter",
+    "also_right": []
+   },
+   "b": {
+    "best": "He pays timber suppliers a fair price above what they ask",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one with a word of choice ('chooses to'), and the two legal distractors say outright that they are required ('so that it can open', 'that the law requires'). A student can pick the answer from the wording without understanding CSR."
+    },
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "'A fair price above what they ask' is confusing. Paying more than a supplier asks is generosity, not a 'fair' price, so a student may wonder what 'fair' means here. Something like 'He pays timber suppliers fairly and on time, even when he could pay less' would match the card's 'treating suppliers fairly' more clearly."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts are correct and each question has one right answer. In (a), 'chooses to' marks the right option, and in (b), 'a fair price above what they ask' is awkward and could confuse students."
+  }
+ }
 }

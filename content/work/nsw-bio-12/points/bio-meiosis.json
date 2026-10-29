@@ -10,18 +10,24 @@
   "2026-10-27T01:08:35Z check: flagged",
   "2026-10-27T01:23:00Z fix: suggested",
   "2026-10-28T08:46:50Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
-  "2026-10-28T11:48:33Z review: approved with the fix (a spot check)"
+  "2026-10-28T11:48:33Z review: approved with the fix (a spot check)",
+  "2026-10-29T11:03:03Z rebalance: new wrong options for question b, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00482,
   "check": 0.00919,
-  "fix": 0.01618
+  "fix": 0.01618,
+  "rebalance": 0.00474,
+  "rebalance-check": 0.01604
  },
  "draft": {
   "title": "Meiosis",
@@ -185,5 +191,72 @@
    "clue": "Think about how chromosomes are shared out into gametes."
   }
  },
- "cleared_by": "owner"
+ "cleared_by": "owner",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Meiosis",
+   "card": [
+    "Meiosis is cell division that makes sex cells (gametes), such as sperm and egg cells. One diploid cell, with two sets of chromosomes, divides twice and makes four cells.",
+    "Each new cell has half the chromosome number of the parent cell. In humans, a body cell has 46 chromosomes and a gamete has 23.",
+    [
+     "Crossing over",
+     "matching chromosomes swap sections of DNA. This makes new combinations of alleles on a chromosome."
+    ],
+    [
+     "Independent assortment",
+     "the pairs of chromosomes line up and separate at random. Each gamete gets a different mix of chromosomes from the two parents."
+    ]
+   ],
+   "remember": "Meiosis makes four genetically different gametes, each with half the chromosome number.",
+   "a": {
+    "q": "A human cell with 46 chromosomes divides by meiosis. What does it make?",
+    "opts": [
+     "Four cells, each with 23 chromosomes",
+     "Two cells, each with 23 chromosomes",
+     "Four cells, each with 46 chromosomes",
+     "Two cells, each with 46 chromosomes"
+    ],
+    "why": "Meiosis has two divisions, so one cell makes four cells, and each has half the chromosome number: 23. Two cells with 23 is tempting, but it counts only one division.",
+    "clue": "Count the divisions, then think about what a human gamete carries."
+   },
+   "b": {
+    "d": 3,
+    "q": "Two sisters have the same parents but are not genetically identical. Which part of meiosis helps explain this?",
+    "opts": [
+     "Chromosome pairs separate at random into each gamete",
+     "Every gamete keeps the full chromosome number of 46",
+     "Each gamete is an exact copy of the parent body cell",
+     "One cell divides once and makes two gametes in total"
+    ],
+    "why": "Independent assortment gives each gamete a different mix of chromosomes, so each child gets a different combination. The other options describe gametes that copy the parent cell or have the wrong chromosome number, which would not explain the differences.",
+    "clue": "Think about how chromosomes are shared out into gametes."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Four cells, each with 23 chromosomes",
+    "also_right": []
+   },
+   "b": {
+    "best": "Chromosome pairs separate at random into each gamete",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "remember",
+     "kind": "fact",
+     "detail": "'Meiosis makes four genetically different gametes' is not true for egg production. In human females, meiosis makes one egg and smaller polar bodies, not four gametes. The card says 'four cells', but the remember line turns this into four gametes. Saying 'four genetically different cells' would avoid the problem."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are sound, each with one clearly right answer. The only problem is minor: the remember line says meiosis always makes four gametes, which is not true for egg production, where it gives one egg and polar bodies."
+  }
+ }
 }

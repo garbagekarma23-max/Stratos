@@ -10,20 +10,26 @@
   "2026-10-27T01:08:37Z write: done",
   "2026-10-27T01:23:01Z check: flagged",
   "2026-10-27T01:29:34Z fix: suggested",
-  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix"
+  "2026-10-28T11:40:41Z recheck: the fresh check agreed with the fix, cleared with the fix",
+  "2026-10-29T11:03:06Z rebalance: new wrong options for question a and b, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 3,
   "check": 1,
   "fix": 1,
-  "recheck": 1
+  "recheck": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.01083,
   "check": 0.00951,
   "fix": 0.01335,
-  "recheck": 0.01477
+  "recheck": 0.01477,
+  "rebalance": 0.00201,
+  "rebalance-check": 0.01382
  },
  "draft": {
   "title": "Challenges to democracy",
@@ -217,5 +223,75 @@
    "clue": "Ask what people want when they think the government is weak."
   }
  },
- "cleared_by": "recheck"
+ "cleared_by": "recheck",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Challenges to democracy",
+   "card": [
+    "After World War I, many European states became democracies, with elected governments and written constitutions. Many were new and had little experience of democratic rule.",
+    [
+     "Economic crisis",
+     "inflation, debt and unemployment left many people poor and angry. Voters often blamed the government and looked for a stronger alternative."
+    ],
+    [
+     "Political violence",
+     "armed groups and street fighting, often between the far left and far right, made governments look weak and unable to keep order."
+    ],
+    [
+     "Distrust",
+     "many people doubted that elected politicians could solve problems. Some saw democracy as slow and divided. Between the wars, many states gave way to authoritarian rule, where one leader or party held power without real checks."
+    ]
+   ],
+   "remember": "Hardship, violence and distrust weakened new democracies, and many turned to authoritarian rule.",
+   "a": {
+    "q": "Why were new democracies in interwar Europe often easy to undermine?",
+    "opts": [
+     "Hardship, violence and distrust weakened faith in them",
+     "They had no elections or written constitutions at all",
+     "They were ruled by a single party from their very start",
+     "Their citizens had long experience of self-government"
+    ],
+    "why": "Economic crisis, political violence and distrust made governments look weak, so many people were open to stronger leaders. The option saying they had no elections or constitutions is wrong, because these states did hold elections and had written constitutions.",
+    "clue": "Think about what made people lose faith in elected governments."
+   },
+   "b": {
+    "d": 3,
+    "q": "In a new democracy, street fights between rival armed groups become common and unemployment is high. Many voters say, \"Parliament cannot keep order.\" What is the most likely effect?",
+    "opts": [
+     "Support may grow for a leader promising strong rule",
+     "Voters will trust parliament more once fighting grows",
+     "Armed groups will become the lawful government at once",
+     "The economy will recover quickly because order returns"
+    ],
+    "why": "Violence and hardship can make parliament look weak, so some voters may turn to a leader who promises order. Trusting parliament more is wrong because the scenario describes distrust growing, not shrinking.",
+    "clue": "Ask what people want when they think the government is weak."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Hardship, violence and distrust weakened faith in them",
+    "also_right": []
+   },
+   "b": {
+    "best": "Support may grow for a leader promising strong rule",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The right option is the only one with a hedge ('may'). The three wrong options all use absolute wording ('will', 'at once'), so a student could pick the answer from its wording alone, without knowing the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts are sound and both intended answers are right. In question b, the right option is the only hedged one ('may') against three absolute options, so it stands out and gives the answer away."
+  }
+ }
 }

@@ -9,18 +9,24 @@
   "2026-10-27T01:00:03Z write: done",
   "2026-10-27T01:08:31Z check: flagged",
   "2026-10-27T01:22:57Z fix: suggested",
-  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other, b wording)"
+  "2026-10-28T08:46:50Z autoreview: cleared with the fix (b other, b wording)",
+  "2026-10-29T11:03:05Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:38Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 2,
   "check": 1,
-  "fix": 1
+  "fix": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "alone": true,
  "usd": {
   "write": 0.00467,
   "check": 0.01124,
-  "fix": 0.01543
+  "fix": 0.01543,
+  "rebalance": 0.00131,
+  "rebalance-check": 0.01383
  },
  "draft": {
   "title": "Form and genre conventions",
@@ -213,5 +219,83 @@
    "clue": "Compare her setting with the one gothic stories usually have."
   }
  },
- "cleared_by": "auto"
+ "cleared_by": "auto",
+ "rebalance": {
+  "at": "2026-10-29T11:05:38Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Form and genre conventions",
+   "card": [
+    [
+     "Form",
+     "the kind of text, such as a novel, short story, play, poem or film. Each form has its own tools, such as stage directions in a play or stanzas in a poem."
+    ],
+    [
+     "Genre",
+     "a type of story with expected features, called conventions. Gothic stories often use gloomy settings and a sense of dread. Dystopian stories often show a harsh, controlled society."
+    ],
+    [
+     "Following",
+     "A writer who follows conventions gives readers what they expect. This makes the type of story easy to recognise."
+    ],
+    [
+     "Breaking",
+     "A writer can also break a convention, such as setting a gothic story in a bright, cheerful place. The surprise can make readers think again about the ideas."
+    ]
+   ],
+   "remember": "Form is the kind of text. Genre is the type of story. Writers follow or break conventions to make meaning.",
+   "a": {
+    "q": "Which of these describes a genre rather than a form?",
+    "opts": [
+     "A dystopian story",
+     "A graphic novel",
+     "A narrative poem",
+     "A one-act play script"
+    ],
+    "why": "Dystopian is a type of story with expected features, so it is a genre. A short film, a sonnet and a stage play are kinds of text, so they are forms.",
+    "clue": "Which one is a type of story, not a kind of text?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Priya writes a gothic short story set in a sunny beach town, but she keeps a growing sense of dread. What is she doing with the setting?",
+    "opts": [
+     "Breaking a genre convention to surprise readers",
+     "Following a genre convention to meet expectations",
+     "Changing the form from a short story to a play",
+     "Turning her gothic story into a dystopian one"
+    ],
+    "why": "Gothic stories often use gloomy settings, so a sunny beach town breaks a convention, while the dread keeps the story gothic. Following a convention is tempting, but that describes the dread, not the setting. The form stays a short story.",
+    "clue": "Compare her setting with the one gothic stories usually have."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "A dystopian story",
+    "also_right": []
+   },
+   "b": {
+    "best": "Breaking a genre convention to surprise readers",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "Why (a) names 'a short film, a sonnet and a stage play' as the forms, but the options are a graphic novel, a narrative poem and a one-act play script. The explanation does not match the question."
+    },
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one containing the word 'story', and both the card ('a type of story') and the clue ('a type of story, not a kind of text') point to that word. A student could match the word without understanding the difference between genre and form."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and answers are sound. Why (a) lists forms (short film, sonnet, stage play) that are not the options shown, and in question a the word 'story' lets students match the answer without knowing the idea."
+  }
+ }
 }

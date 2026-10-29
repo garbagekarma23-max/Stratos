@@ -6,15 +6,21 @@
  "log": [
   "2026-10-26T13:29:58Z new, write",
   "2026-10-27T00:53:11Z write: done",
-  "2026-10-27T01:00:07Z check: passed, cleared"
+  "2026-10-27T01:00:07Z check: passed, cleared",
+  "2026-10-29T11:03:04Z rebalance: new wrong options for question a, waiting for the check",
+  "2026-10-29T11:05:37Z rebalance: kept its old options (the check found a problem)"
  ],
  "sent": {
   "write": 1,
-  "check": 1
+  "check": 1,
+  "rebalance": 1,
+  "rebalance-check": 1
  },
  "usd": {
   "write": 0.00635,
-  "check": 0.01451
+  "check": 0.01451,
+  "rebalance": 0.00232,
+  "rebalance-check": 0.01659
  },
  "draft": {
   "title": "Predicting spontaneity",
@@ -117,5 +123,75 @@
    "clue": "Decide the sign of ΔS for gas becoming liquid."
   }
  },
- "cleared_by": "checker"
+ "cleared_by": "checker",
+ "rebalance": {
+  "at": "2026-10-29T11:05:37Z",
+  "result": "kept",
+  "changed": [],
+  "why": [
+   "the check found a problem"
+  ],
+  "tried": {
+   "title": "Predicting spontaneity",
+   "card": [
+    "In ΔG = ΔH - TΔS, T is always positive. So the signs of ΔH and ΔS decide how ΔG changes with temperature.",
+    [
+     "ΔH negative, ΔS positive",
+     "ΔG is always negative. The reaction is spontaneous at all temperatures."
+    ],
+    [
+     "ΔH positive, ΔS negative",
+     "ΔG is always positive. The reaction is spontaneous at no temperature."
+    ],
+    [
+     "Same signs",
+     "Temperature decides. If both are negative, the reaction is spontaneous at low temperatures. If both are positive, it is spontaneous at high temperatures."
+    ]
+   ],
+   "remember": "Opposite signs fix the answer. Matching signs mean temperature decides.",
+   "a": {
+    "q": "A reaction has a positive ΔH and a positive ΔS. When is it spontaneous?",
+    "opts": [
+     "Only at high temperatures",
+     "Only at low temperatures",
+     "At all temperatures, always",
+     "At no temperature at all"
+    ],
+    "why": "At high temperature the TΔS term is large and positive, so it outweighs ΔH and makes ΔG negative. At low temperature ΔH dominates, so ΔG is positive.",
+    "clue": "Which term gets larger as T rises?"
+   },
+   "b": {
+    "d": 3,
+    "q": "Water vapour condenses to liquid water, releasing heat. At which temperatures is condensation spontaneous?",
+    "opts": [
+     "Only at low temperatures",
+     "Only at high temperatures",
+     "At all temperatures",
+     "At no temperature"
+    ],
+    "why": "Condensing releases heat, so ΔH is negative. The particles become more ordered, so ΔS is negative. With both negative, the -TΔS term is positive and grows with T, so ΔG is negative only at low temperatures.",
+    "clue": "Decide the sign of ΔS for gas becoming liquid."
+   }
+  },
+  "check": {
+   "a": {
+    "best": "Only at high temperatures",
+    "also_right": []
+   },
+   "b": {
+    "best": "Only at low temperatures",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "level",
+     "detail": "The question depends on knowing that ΔS is negative when a gas condenses to a liquid. The card never teaches this; it belongs to point 1 (Entropy). The clue points students to it, but a student who has only read this card cannot work out the sign of ΔS from it."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts and both intended answers are correct. One minor issue: question b needs the sign of ΔS for condensation, which comes from the Entropy point, not this card."
+  }
+ }
 }
