@@ -2560,5 +2560,2432 @@ MADE_BANKS.mat = {
       "why": "A lump sum needed now uses the present value factor for 3% and 5 periods: 2000 × 4.5797 = $9159.40. The future value factor gives $10618.20, which is tempting but is the total at the end, not the sum needed now.",
       "clue": "Is Sam's money needed at the start or built up by the end?"
     }
+  },
+  "mat-substituting-into-formulas": {
+    "title": "Substituting into formulas",
+    "card": [
+      "A formula is a rule that links letters. To substitute, replace each letter with its number and write the numbers in brackets if they could be confused with signs.",
+      "Then work it out in the usual order: brackets first, then powers, then × and ÷ from left to right, then + and − from left to right.",
+      "Example: speed s = d ÷ t. For d = 150 and t = 3, s = 150 ÷ 3 = 50.",
+      "Example: A = ½bh with b = 6 and h = 4. A = ½ × 6 × 4 = 3 × 4 = 12. Another: P = 2l + 2w with l = 5 and w = 3 gives P = 10 + 6 = 16, because the × is done before the +."
+    ],
+    "remember": "Replace each letter with its number, then follow the order of operations.",
+    "a": {
+      "q": "Using P = 2l + 2w, what is P when l = 7 and w = 4?",
+      "opts": ["22", "64", "18", "51"],
+      "why": "P = 2 × 7 + 2 × 4 = 14 + 8 = 22. The answer 64 comes from working strictly left to right: 2 × 7 = 14, then 14 + 2 = 16, then 16 × 4 = 64, which does the + before the second ×. The answer 18 comes from forgetting to double w, giving 14 + 4.",
+      "clue": "Do each multiplication before the addition."
+    },
+    "b": {
+      "d": 2,
+      "q": "Dana cycles 36 km in 3 hours. Using s = d ÷ t, what is her speed in km/h?",
+      "opts": ["12", "108", "39", "33"],
+      "why": "s = 36 ÷ 3 = 12 km/h. The answer 108 comes from multiplying d and t instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+      "clue": "Distance goes on top, time goes underneath."
+    }
+  },
+  "mat-changing-subject-formula": {
+    "title": "Changing the subject of a formula",
+    "card": [
+      "The subject of a formula is the letter on its own on one side. In v = d ÷ t, the subject is v.",
+      "To change the subject, do the same operation to both sides. Undo operations on the wanted letter in reverse order, so the last one applied is undone first.",
+      "Example: make d the subject of v = d ÷ t. Multiply both sides by t. This gives v × t = d, so d = vt.",
+      "Example: make x the subject of y = 3x + 2. Subtract 2 from both sides: y − 2 = 3x. Then divide both sides by 3: x = (y − 2) ÷ 3."
+    ],
+    "remember": "Do the same to both sides, and undo the steps in reverse order.",
+    "a": {
+      "q": "Make m the subject of P = 4m − 5",
+      "opts": ["m = (P + 5) ÷ 4", "m = (P − 5) ÷ 4", "m = P ÷ 4 + 5", "m = 4(P + 5)"],
+      "why": "First add 5 to both sides: P + 5 = 4m. Then divide both sides by 4 to get m = (P + 5) ÷ 4. Option m = P ÷ 4 + 5 is tempting, but it divides only part of the right side, so the 5 is not divided by 4.",
+      "clue": "Undo the subtraction first, then the multiplication."
+    },
+    "b": {
+      "d": 3,
+      "q": "The formula C = 5F ÷ 9 is rearranged to make F the subject. Which result is correct?",
+      "opts": ["F = 9C ÷ 5", "F = 5C ÷ 9", "F = C ÷ 45", "F = 9C − 5"],
+      "why": "Multiply both sides by 9: 9C = 5F. Then divide both sides by 5: F = 9C ÷ 5. Option F = 5C ÷ 9 is tempting, but it swaps the numbers and does not undo the operations.",
+      "clue": "Undo the division by 9 first, then undo the multiplication by 5."
+    }
+  },
+  "mat-solving-linear-equations": {
+    "title": "Solving linear equations",
+    "card": [
+      "A linear equation has one unknown, such as x, and no powers of x higher than 1 (no x², x³ and so on). To solve it, find the value of x that makes both sides equal.",
+      "Undo the operations in reverse order, doing the same to both sides each time. In an equation without brackets, undo any addition or subtraction first, then undo multiplication or division.",
+      "With brackets, expand them first or divide both sides by the number outside. With a fraction such as x/4, multiply both sides by the bottom number.",
+      "Example: 3(x + 2) = 21. Divide both sides by 3 to get x + 2 = 7. Subtract 2 to get x = 5. Check: 3 × (5 + 2) = 3 × 7 = 21, so x = 5 is correct."
+    ],
+    "remember": "Do the same to both sides, undo in reverse order, then check by substituting.",
+    "a": {
+      "q": "Solve 2x + 5 = 17.",
+      "opts": ["x = 6", "x = 11", "x = 12", "x = 3.5"],
+      "why": "Subtract 5 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 5 = 17. Choosing x = 11 comes from adding 5 instead of subtracting it, and x = 12 comes from skipping the division by 2.",
+      "clue": "Undo the addition before the multiplication."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia solves 4(x − 3) = 20. What is x?",
+      "opts": ["x = 8", "x = 2", "x = 5", "x = 5.75"],
+      "why": "Divide both sides by 4 to get x − 3 = 5, then add 3 to get x = 8. Check: 4 × (8 − 3) = 4 × 5 = 20. Choosing x = 5 comes from dividing by 4 but forgetting to add 3 back.",
+      "clue": "Divide by the number outside the bracket, then undo the subtraction."
+    }
+  },
+  "mat-formulas-with-units": {
+    "title": "Formulas with units",
+    "card": [
+      "Every measurement in a formula has a unit. Before you substitute, check that the units match what the formula needs and what the answer should be in.",
+      "If a unit does not match, convert it first. Common conversions: 60 minutes = 1 hour, 1000 m = 1 km, 100 cm = 1 m.",
+      "To change minutes to hours, divide by 60. For hours and minutes, convert only the minutes: 2 hours 15 minutes = 2 + 15 ÷ 60 = 2.25 hours, not 2.15 hours.",
+      "Example: speed = distance ÷ time. A cyclist rides 12 km in 30 minutes. Change 30 minutes to 0.5 hours. Then speed = 12 ÷ 0.5 = 24 km/h."
+    ],
+    "remember": "Convert to matching units first, then substitute.",
+    "a": {
+      "q": "Zara walks 3 km in 45 minutes. To find her speed in km/h, what time should be put into speed = distance ÷ time?",
+      "opts": ["0.75 hours", "45 hours", "4.5 hours", "0.45 hours"],
+      "why": "Minutes change to hours by dividing by 60, and 45 ÷ 60 = 0.75. Writing 0.45 hours is tempting but wrong, because an hour has 60 minutes, not 100.",
+      "clue": "Divide minutes by 60 to get hours."
+    },
+    "b": {
+      "d": 2,
+      "q": "Leon drives 90 km in 1 hour 30 minutes. What is his average speed, using speed = distance ÷ time?",
+      "opts": ["60 km/h", "69.2 km/h", "90 km/h", "1 km/h"],
+      "why": "1 hour 30 minutes is 1 + 30 ÷ 60 = 1.5 hours, so speed = 90 ÷ 1.5 = 60 km/h. Writing the time as 1.3 hours gives 90 ÷ 1.3 ≈ 69.2, which is wrong because 30 minutes is half an hour, not 0.3 of an hour.",
+      "clue": "Change 30 minutes to part of an hour first."
+    }
+  },
+  "mat-writing-equations-from-words": {
+    "title": "Writing equations from words",
+    "card": [
+      "Choose a letter for the unknown amount, such as n for the number of gigabytes. Then turn each part of the story into maths.",
+      "A fixed amount is added once. An amount per item is multiplied by the number of items. Total cost = fixed fee + cost per item × number of items.",
+      "Words like total, is or costs show where the equals sign goes. Then solve the equation by undoing operations in reverse order.",
+      "Example: a phone plan costs $20 a month plus $3 per GB. Zara's bill was $38. Write 20 + 3n = 38. Subtract 20 to get 3n = 18, then divide by 3 to get n = 6 GB."
+    ],
+    "remember": "Name the unknown, build the equation from the story, then solve it.",
+    "a": {
+      "q": "A gym charges a $15 joining fee plus $4 per class. Sam paid $47 in total. Which equation finds the number of classes, c?",
+      "opts": ["15 + 4c = 47", "4 + 15c = 47", "(15 + 4) × c = 47", "15c + 4c = 47"],
+      "why": "The joining fee is paid once, so 15 is added. The $4 is paid for each class, so it is multiplied by c. Swapping them, as in 4 + 15c, would charge $15 per class.",
+      "clue": "Which amount is paid once, and which is paid for each class?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Ella's phone plan costs $25 a month plus $2 per GB. Her bill was $41. How many GB did she use?",
+      "opts": ["8 GB", "16 GB", "33 GB", "13 GB"],
+      "why": "The equation is 25 + 2n = 41. Subtract 25 to get 2n = 16, then divide by 2 to get n = 8. Choosing 16 forgets the last step of dividing by 2.",
+      "clue": "Undo the fixed fee first, then the cost per GB."
+    }
+  },
+  "mat-gradient-as-rate-change": {
+    "title": "Gradient as a rate of change",
+    "card": [
+      "The gradient of a line measures how steep it is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+      "Pick two points on the line. Subtract the y values for the rise and the x values for the run, in the same order. A line that goes up from left to right has a positive gradient.",
+      "In context, the gradient is a rate: the change in y for each 1 unit of x. Its unit is the y unit per x unit, such as dollars per hour or litres per minute.",
+      "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). Rise = 75 − 30 = 45. Run = 5 − 2 = 3. Gradient = 45 ÷ 3 = 15, so the rate is $15 per hour."
+    ],
+    "remember": "Gradient = rise ÷ run, and in context it is the rate of change in y per 1 unit of x.",
+    "a": {
+      "q": "A line passes through (1, 7) and (4, 19). What is its gradient?",
+      "opts": ["4", "3", "12", "1/4"],
+      "why": "Rise = 19 − 7 = 12 and run = 4 − 1 = 3, so the gradient is 12 ÷ 3 = 4. The answer 1/4 comes from dividing run by rise, which is the wrong way round.",
+      "clue": "Divide the change in y by the change in x."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam fills a tank. The graph of litres in the tank against minutes passes through (2, 50) and (6, 130). What is the rate of filling?",
+      "opts": ["20 litres per minute", "80 litres per minute", "25 litres per minute", "0.05 litres per minute"],
+      "why": "Rise = 130 − 50 = 80 litres and run = 6 − 2 = 4 minutes, so the rate is 80 ÷ 4 = 20 litres per minute. The answer 80 is only the rise, and it skips the division by the run.",
+      "clue": "Find the rise and the run first, then divide."
+    }
+  },
+  "mat-y-intercept-context": {
+    "title": "The y-intercept in context",
+    "card": [
+      "The y-intercept is the value of y when x is zero. On a graph, it is the point where the line crosses the vertical axis.",
+      "In a real situation, it is the starting amount, before anything has changed. Often it is a fixed cost, such as a call-out fee, which is paid even if the job takes no time.",
+      "To find it from a table, look for the row where x = 0. If there is no such row, work backwards using the rate of change.",
+      "Example: a plumber charges $60 to arrive, then $40 for each hour of work. When hours = 0, the cost is $60. So the y-intercept is $60, the call-out fee."
+    ],
+    "remember": "The y-intercept is the value of y when x is zero: the starting amount.",
+    "a": {
+      "q": "A tutor's cost C (in dollars) for h hours is shown on a graph. The line crosses the vertical axis at C = 25. What does this 25 mean?",
+      "opts": [
+        "The fixed fee charged before any hours are worked",
+        "The extra cost for each hour of tutoring",
+        "The number of hours that cost nothing",
+        "The cost of tutoring for 25 hours"
+      ],
+      "why": "The line crosses the axis where h = 0, so 25 is the cost with no hours worked. That is a fixed fee. The cost for each extra hour is the gradient, not the y-intercept.",
+      "clue": "What is the number of hours at the point where the line meets the vertical axis?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jaya hires a bike. The table shows the total cost, $C, for h hours: h = 1 gives $18, h = 2 gives $26, h = 3 gives $34. What is the y-intercept, and what does it mean?",
+      "opts": [
+        "$10, the fixed hire fee",
+        "$8, the fixed hire fee",
+        "$10, the cost for each hour",
+        "$8, the cost for each hour"
+      ],
+      "why": "The cost rises by $8 each hour, so one hour earlier the cost was $18 − $8 = $10. At h = 0 the cost is $10, which is the fixed fee. The $8 is the rate of change per hour, so it is the gradient.",
+      "clue": "Work backwards one hour from h = 1 using the rise in cost."
+    }
+  },
+  "mat-equation-y-mx-c": {
+    "title": "The equation y = mx + c",
+    "card": [
+      "A straight line has the equation y = mx + c. The letter m is the gradient, and c is the y-intercept, where the line crosses the y-axis.",
+      [
+        "Write it",
+        "put the gradient in for m and the y-intercept in for c. A line with gradient 3 and y-intercept −2 has the equation y = 3x − 2."
+      ],
+      [
+        "Graph it",
+        "plot the point (0, c) on the y-axis. Then use the gradient as rise over run to find a second point, and join the points with a straight line."
+      ],
+      [
+        "Read it",
+        "for a line that crosses the y-axis at 4 and rises 2 for every 1 across, m = 2 and c = 4. So the equation is y = 2x + 4."
+      ]
+    ],
+    "remember": "In y = mx + c, m is the steepness of the line and c is where it crosses the y-axis.",
+    "a": {
+      "q": "What is the equation of a line with gradient 2 and y-intercept −5?",
+      "opts": ["y = 2x − 5", "y = −5x + 2", "y = 2x + 5", "y = −2x − 5"],
+      "why": "The gradient 2 goes in for m and the y-intercept −5 goes in for c, so y = 2x − 5. The equation y = −5x + 2 is tempting, but it swaps the gradient and the y-intercept.",
+      "clue": "m comes before x, and c is the number added at the end."
+    },
+    "b": {
+      "d": 2,
+      "q": "A line crosses the y-axis at 3. Starting from that point, it rises 4 for every 2 units across. What is its equation?",
+      "opts": ["y = 2x + 3", "y = 4x + 3", "y = 2x + 4", "y = 3x + 2"],
+      "why": "The gradient is rise over run, which is 4 ÷ 2 = 2, and the y-intercept is 3. So y = 2x + 3. The equation y = 4x + 3 is tempting, but it uses the rise as the gradient without dividing by the run.",
+      "clue": "Divide the rise by the run to find m."
+    }
+  },
+  "mat-direct-variation": {
+    "title": "Direct variation",
+    "card": [
+      "Two quantities are in direct variation when y = kx. We say y is directly proportional to x. The number k is the constant of variation.",
+      "If x doubles, y doubles. If x is 0, y is 0. The graph is a straight line through the origin (0, 0).",
+      "To find k, divide y by x using one known pair. k = y ÷ x. Then use y = kx to find other values.",
+      "Example: y is directly proportional to x, and y = 12 when x = 3. Then k = 12 ÷ 3 = 4, so y = 4x. When x = 5, y = 4 × 5 = 20."
+    ],
+    "remember": "In direct variation, y = kx: find k by dividing y by x, and the line passes through the origin.",
+    "a": {
+      "q": "y is directly proportional to x, and y = 35 when x = 7. What is the constant of variation k?",
+      "opts": ["5", "28", "42", "245"],
+      "why": "k = y ÷ x = 35 ÷ 7 = 5. Check: 5 × 7 = 35. The value 245 comes from multiplying 35 × 7, which is not how k is found.",
+      "clue": "Divide y by x."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia is paid at a fixed rate per hour, so her pay is directly proportional to hours worked. She earns $96 for 4 hours. How much does she earn for 7 hours?",
+      "opts": ["$168", "$99", "$120", "$672"],
+      "why": "k = 96 ÷ 4 = 24 dollars per hour, so pay = 24 × 7 = $168. Adding the 3 extra hours to $96 gives $99, which treats hours as dollars. Multiplying $96 by 7 gives $672, which skips finding the pay for one hour, and $120 adds only one extra hour of pay.",
+      "clue": "Find the pay for one hour first."
+    }
+  },
+  "mat-linear-models": {
+    "title": "Linear models",
+    "card": [
+      "A linear model uses a straight-line equation to describe how two quantities are related. It is written y = mx + c, where m is the rate of change and c is the starting amount.",
+      "To predict, put a value of x into the equation and work out y. Example: a taxi charges C = 3 + 2d, where C is the cost in dollars and d is the distance in km. For 10 km, C = 3 + 2 × 10 = 23, so the cost is $23.",
+      "To find x from a known y, put y into the equation and solve. If C = 17, then 17 = 3 + 2d, so 2d = 14 and d = 7 km.",
+      "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
+    ],
+    "remember": "Put x in to predict y, but be careful of predictions outside the data the model came from.",
+    "a": {
+      "q": "A plumber's charge is C = 60 + 45h, where C is the cost in dollars and h is the hours worked. What is the cost of a 3 hour job?",
+      "opts": ["$195", "$108", "$135", "$8,100"],
+      "why": "C = 60 + 45 × 3 = 60 + 135 = 195, so the cost is $195. The answer $135 leaves out the $60 starting amount, and $108 comes from adding all three numbers, 60 + 45 + 3, instead of multiplying 45 by 3.",
+      "clue": "Multiply first, then add the starting amount."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's plant height model is H = 5 + 2t, where H is height in cm and t is days. It was made from data for days 1 to 10. Which prediction is least reliable?",
+      "opts": ["The height at day 60", "The height at day 4", "The height at day 9", "The height at day 10"],
+      "why": "Day 60 is far outside the data from days 1 to 10, so it is extrapolation and the plant may not keep growing at the same rate. Days 4, 9 and 10 are inside the range the model was built from, so they are more reliable.",
+      "clue": "Which day is furthest from the data used to make the model?"
+    }
+  },
+  "mat-wages-salaries": {
+    "title": "Wages and salaries",
+    "card": [
+      ["Wage", "Pay for each hour worked. Weekly wage = hourly rate × hours worked in the week."],
+      [
+        "Salary",
+        "A fixed amount for the year, paid in equal instalments. These are often weekly, fortnightly or monthly."
+      ],
+      "To find one payment from a salary, divide by the number of payments in the year: 52 weeks, 26 fortnights or 12 months.",
+      "Example: a salary of $62 400 paid fortnightly gives $62 400 ÷ 26 = $2400 each fortnight. To get a yearly figure from a weekly wage, multiply by 52."
+    ],
+    "remember": "Salary ÷ number of payments gives one payment. Payment × number of payments gives the year.",
+    "a": {
+      "q": "Priya earns a salary of $54 600 a year, paid weekly. How much is each weekly payment?",
+      "opts": ["$1050", "$2100", "$4550", "$1092"],
+      "why": "There are 52 weeks in a year, so $54 600 ÷ 52 = $1050. Dividing by 26 gives $2100, which is a fortnightly payment, not a weekly one.",
+      "clue": "How many weekly payments are there in a year?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is paid $28 an hour and works 35 hours a week, all year. Pay is the same every week. What is his yearly pay?",
+      "opts": ["$50 960", "$980", "$25 480", "$101 920"],
+      "why": "Weekly pay is $28 × 35 = $980. Yearly pay is $980 × 52 = $50 960. The answer $25 480 comes from using 26, which is the number of fortnights, not weeks.",
+      "clue": "Find the weekly pay first, then count the weeks in a year."
+    }
+  },
+  "mat-overtime-penalty-rates": {
+    "title": "Overtime and penalty rates",
+    "card": [
+      [
+        "Overtime",
+        "hours worked beyond a worker's normal hours, such as past 38 hours in a week. Overtime is paid at a higher rate than the normal hourly rate."
+      ],
+      [
+        "Penalty rate",
+        "a higher rate paid for work at certain times, such as nights, weekends or public holidays, even within normal hours."
+      ],
+      "Time-and-a-half pays 1.5 times the normal rate, and double time pays 2 times. For each type of hour, pay = hours × normal rate × multiplier, then add these for total pay.",
+      "Example: the normal rate is $20 an hour. Ali works 8 normal hours and 2 overtime hours at time-and-a-half. Normal pay is 8 × $20 = $160. Overtime pay is 2 × $20 × 1.5 = $60. Total pay is $220."
+    ],
+    "remember": "Work out hours × normal rate × multiplier for each type of hour, then add the amounts.",
+    "a": {
+      "q": "Priya's normal rate is $24 an hour. What is her hourly rate at time-and-a-half?",
+      "opts": ["$36", "$48", "$25.50", "$12"],
+      "why": "Time-and-a-half is 1.5 times the normal rate, so 24 × 1.5 = $36. The tempting $48 uses a multiplier of 2, which is double time.",
+      "clue": "Time-and-a-half means 1.5 times the normal rate."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom earns $18 an hour. One week he works 38 normal hours and 4 hours at double time. What is his total pay for the week?",
+      "opts": ["$828", "$756", "$684", "$720"],
+      "why": "Normal pay is 38 × 18 = $684. Double time pay is 4 × 18 × 2 = $144. The total is 684 + 144 = $828. The option $756 comes from paying the 4 extra hours at the normal rate and forgetting the multiplier.",
+      "clue": "Find the normal pay and the double time pay separately, then add them."
+    }
+  },
+  "mat-commission-piecework": {
+    "title": "Commission and piecework",
+    "card": [
+      ["Commission", "Pay worked out as a percentage of the value of what a person sells. Commission = rate × sales."],
+      [
+        "Piecework",
+        "Pay worked out as a fixed amount for each item made or task done. Piecework pay = rate per item × number of items."
+      ],
+      [
+        "Example",
+        "Sam sells $12 000 of furniture at 5% commission. Commission = 0.05 × 12 000 = $600. Ana is paid $4 for each scarf she sews and sews 30. Pay = 4 × 30 = $120."
+      ],
+      "Some workers get a base wage or salary and commission on top. Add the two to find total pay."
+    ],
+    "remember": "Commission pays a percentage of sales. Piecework pays a set amount per item or task.",
+    "a": {
+      "q": "Leila earns 4% commission on her sales. She sells $15 000 of solar panels in a month. How much commission does she earn?",
+      "opts": ["$600", "$375", "$3750", "$6000"],
+      "why": "Commission = 4% × 15 000 = 0.04 × 15 000 = $600. Dividing 15 000 by 4 gives $3750, which treats 4% as 1/4 and is wrong.",
+      "clue": "Change 4% to a decimal, then multiply by the sales."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is paid a base wage of $500 a week plus 3% commission on his sales. In one week he sells $8000 of goods. What is his total pay for the week?",
+      "opts": ["$740", "$240", "$524", "$8500"],
+      "why": "Commission = 0.03 × 8000 = $240. Total pay = base wage + commission = 500 + 240 = $740. Giving $240 leaves out the base wage.",
+      "clue": "Work out the commission first, then add the base wage."
+    }
+  },
+  "mat-taxable-income": {
+    "title": "Taxable income",
+    "card": [
+      [
+        "Gross income",
+        "all the money a person earns in a year before anything is taken out. It includes wages, salary, commission and interest."
+      ],
+      [
+        "Deduction",
+        "an allowable expense that can be taken off gross income, such as work tools, a work uniform or a union fee. Everyday costs like groceries are not deductions."
+      ],
+      [
+        "Taxable income",
+        "gross income − allowable deductions. Income tax is worked out on this amount, not on gross income."
+      ],
+      "Example: Sam earns $64 000 in a year and has $1 200 of allowable deductions. Taxable income = $64 000 − $1 200 = $62 800."
+    ],
+    "remember": "Taxable income is what is left after deductions, and tax is worked out on it.",
+    "a": {
+      "q": "Priya has a gross income of $52 000 and allowable deductions of $900. What is her taxable income?",
+      "opts": ["$51 100", "$52 900", "$900", "$51 000"],
+      "why": "Taxable income = gross income − deductions = $52 000 − $900 = $51 100. Adding the deductions gives $52 900, but deductions are taken off, not added.",
+      "clue": "Deductions are taken away from gross income."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom earns $78 500 in a year. He spends $650 on work boots and $350 on a union fee, both allowable. Tax is worked out on which amount?",
+      "opts": ["$77 500", "$78 500", "$79 500", "$1 000"],
+      "why": "Total deductions are $650 + $350 = $1 000. Taxable income = $78 500 − $1 000 = $77 500, and tax is worked out on this. Using $78 500 is tempting, but that is gross income, before deductions.",
+      "clue": "Add the deductions first, then subtract them."
+    }
+  },
+  "mat-income-tax-net-pay": {
+    "title": "Income tax and net pay",
+    "card": [
+      "Income tax is worked out on taxable income using a tax table with brackets. Each bracket has its own rate, and the rates can change, so always use the table you are given.",
+      "Example table: $0 to $18,200 pays no tax. $18,201 to $45,000 pays 16c for each $1 over $18,200. $45,001 to $135,000 pays $4,288 plus 30c for each $1 over $45,000.",
+      "The Medicare levy is a separate amount for public health care. Here it is 2% of taxable income. Example: taxable income $60,000 gives tax of $4,288 + 0.30 × $15,000 = $8,788, and a levy of 0.02 × $60,000 = $1,200.",
+      "Net pay is take-home pay. Net pay = gross income − income tax − Medicare levy − other deductions, such as union fees. Gross income is total pay before anything is taken out."
+    ],
+    "remember": "Find the tax from the table, add the Medicare levy, then take both and any other deductions off the gross income.",
+    "a": {
+      "q": "Using the example table, what is the income tax on a taxable income of $30,000?",
+      "opts": ["$1,888", "$4,800", "$2,912", "$11,800"],
+      "why": "Only the part over $18,200 is taxed at 16c per $1. That is $30,000 − $18,200 = $11,800, and 0.16 × $11,800 = $1,888. Taking 16% of the whole $30,000 gives $4,800, but the first $18,200 is not taxed at that rate.",
+      "clue": "Find how much of the income is over $18,200 first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam earns a gross income of $50,000 a year and has no allowable deductions, so his taxable income is also $50,000. Using the example table and a 2% Medicare levy, what is his net pay if $600 in union fees also comes out of his pay?",
+      "opts": ["$42,612", "$43,612", "$43,212", "$33,400"],
+      "why": "Tax is $4,288 + 0.30 × $5,000 = $5,788, and the levy is 0.02 × $50,000 = $1,000. Net pay = $50,000 − $5,788 − $1,000 − $600 = $42,612. $43,612 is tempting, but it leaves out the Medicare levy.",
+      "clue": "Three amounts come off the gross income, not two."
+    }
+  },
+  "mat-budgeting": {
+    "title": "Budgeting",
+    "card": [
+      "A budget is a plan for the money you expect to earn and spend. List all income, such as wages, then list all expenses.",
+      ["Fixed cost", "an expense that stays the same each period, such as rent, insurance or a gym membership."],
+      ["Variable cost", "an expense that changes from one period to the next, such as food or petrol."],
+      "Savings = income − expenses. Example: Zoe earns $900 a fortnight. Rent is $400 and food is $150. Other costs are $200. Expenses are $750, so she can save $900 − $750 = $150."
+    ],
+    "remember": "A budget compares income with expenses. What is left over can be saved.",
+    "a": {
+      "q": "Which of these is a variable cost for a household?",
+      "opts": [
+        "Weekly groceries for the household",
+        "Weekly rent for the unit",
+        "Monthly car insurance payment",
+        "Monthly gym membership fee"
+      ],
+      "why": "Food costs change from one week to the next, so groceries are a variable cost. Rent, insurance and a gym membership stay the same each period, so they are fixed. Rent is the most tempting wrong option because it is paid weekly too, but the amount does not change.",
+      "clue": "Which amount would differ from one week to the next?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Liam earns $1200 a fortnight. His expenses are rent $520, food $210, transport $90 and other costs $180. How much can he save each fortnight?",
+      "opts": ["$200", "$1000", "$380", "$2200"],
+      "why": "Expenses are 520 + 210 + 90 + 180 = $1000. Savings = 1200 − 1000 = $200. Giving $1000 is a mistake, because that is the total of the expenses, not what is left. $380 leaves out the other costs.",
+      "clue": "Add up every expense first, then subtract from income."
+    }
+  },
+  "mat-simple-interest": {
+    "title": "Simple interest",
+    "card": [
+      "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
+      "The formula is I = Prn. I is the interest, P is the principal, r is the interest rate per period as a decimal, and n is the number of periods.",
+      "The rate and the time must use the same unit. A rate of 6% per year needs n in years, so 6 months is n = 0.5.",
+      "Example: $2000 at 5% per year for 3 years. I = 2000 × 0.05 × 3 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+    ],
+    "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
+    "a": {
+      "q": "Ben invests $4000 at 3% per year simple interest for 2 years. How much interest does he earn?",
+      "opts": ["$240", "$120", "$4240", "$24 000"],
+      "why": "I = 4000 × 0.03 × 2 = $240. $4240 is the total amount after 2 years, the principal plus the interest, but the question asks for the interest alone. $24 000 comes from using 3 instead of 0.03.",
+      "clue": "Write 3% as a decimal before you multiply."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya borrows $5000 at 8% per year simple interest for 18 months. How much interest does she pay in total?",
+      "opts": ["$600", "$7200", "$400", "$720"],
+      "why": "The rate is per year, so 18 months is n = 1.5 years. I = 5000 × 0.08 × 1.5 = $600. Using n = 18 gives $7200, which mixes months with a yearly rate.",
+      "clue": "Change the months into years first."
+    }
+  },
+  "mat-compound-interest-by-repeated": {
+    "title": "Compound interest by repeated calculation",
+    "card": [
+      "With compound interest, the interest is added to the balance at the end of each period. In the next period, interest is earned on the new, larger balance.",
+      "To work it out, find the interest for one period, add it to the balance, then repeat. Interest for a period = balance × rate for that period.",
+      "Example: $1000 at 10% per year for 2 years. Year 1: 10% of $1000 = $100, so the balance is $1100. Year 2: 10% of $1100 = $110, so the balance is $1210.",
+      "Simple interest on $1000 at 10% for 2 years is $200, so the balance would be $1200. Compound interest gave $210 because the year 1 interest earned interest."
+    ],
+    "remember": "Compound interest is added to the balance each period, so later interest is worked out on a bigger amount.",
+    "a": {
+      "q": "Ava invests $2000 at 5% per year, compounded yearly. What is the balance after 2 years?",
+      "opts": ["$2205", "$2200", "$2100", "$2250"],
+      "why": "Year 1: 5% of $2000 = $100, so the balance is $2100. Year 2: 5% of $2100 = $105, so the balance is $2205. $2200 is the simple interest answer, which works out interest on $2000 both years.",
+      "clue": "Year 2 interest is worked out on the new balance."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam borrows $5000 at 10% per year, compounded yearly, and repays nothing for 3 years. How much more does he owe than with simple interest at the same rate?",
+      "opts": ["$155", "$500", "$1655", "$150"],
+      "why": "Compound: $5000 becomes $5500, then $6050, then $6655, so the interest is $1655. Simple interest is 3 × $500 = $1500. The difference is $155. $1655 is only the compound interest, not the difference.",
+      "clue": "Find both interest amounts, then subtract."
+    }
+  },
+  "mat-percentage-increase-decrease": {
+    "title": "Percentage increase and decrease",
+    "card": [
+      [
+        "Increase",
+        "To raise an amount by a percentage, multiply by 100% plus the percentage. To increase by 15%, multiply by 1.15."
+      ],
+      [
+        "Decrease",
+        "To lower an amount by a percentage, multiply by 100% minus the percentage. To decrease by 20%, multiply by 0.8."
+      ],
+      ["Worked example", "A $60 jumper is discounted by 20%. New price = 60 × 0.8 = $48."],
+      [
+        "Backwards",
+        "To find the original amount, divide the new amount by the multiplier. If $48 is the price after a 20% discount, original = 48 ÷ 0.8 = $60. Do not add 20% to $48."
+      ]
+    ],
+    "remember": "Change forwards by multiplying by the multiplier. Go back to the original by dividing by it.",
+    "a": {
+      "q": "A $250 bike is discounted by 30%. What is the new price?",
+      "opts": ["$175", "$325", "$220", "$75"],
+      "why": "The multiplier is 100% − 30% = 70%, so 250 × 0.7 = $175. $75 is only the discount, not the new price.",
+      "clue": "Multiply by 100% minus the percentage."
+    },
+    "b": {
+      "d": 3,
+      "q": "After a 20% discount, a pair of headphones in Perth costs $120. What was the price before the discount?",
+      "opts": ["$150", "$144", "$96", "$140"],
+      "why": "The sale price is 80% of the original, so original = 120 ÷ 0.8 = $150. Adding 20% of $120 gives $144, which is wrong because the 20% was taken from the original price, not from $120.",
+      "clue": "$120 is 0.8 times the original price."
+    }
+  },
+  "mat-gst": {
+    "title": "GST",
+    "card": [
+      "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
+      [
+        "Adding GST",
+        "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+      ],
+      [
+        "Finding the GST",
+        "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+      ],
+      [
+        "Example",
+        "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+      ]
+    ],
+    "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
+    "a": {
+      "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
+      "opts": ["$275", "$25", "$272.73", "$260"],
+      "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+      "clue": "The new price is 110% of the starting price."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
+      "opts": ["$17", "$18.70", "$170", "$20.57"],
+      "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+      "clue": "The $187 is already 110% of the price before GST."
+    }
+  },
+  "mat-household-bills": {
+    "title": "Household bills",
+    "card": [
+      "A fixed charge does not depend on how much is used. It is often a supply charge given as a daily rate, such as $1 a day for electricity.",
+      "A usage charge depends on how much is used, such as cents per kilowatt hour (kWh) of electricity. Bill total = fixed charge + (usage × rate).",
+      "Example: a supply charge of $1 a day for 90 days is $90. Using 600 kWh at 30 cents per kWh costs 600 × $0.30 = $180. The bill is $90 + $180 = $270.",
+      "To compare two plans, work out the total cost of each for the same usage. The plan with the lower total is cheaper for that usage."
+    ],
+    "remember": "Total bill = fixed charge + usage charge. Compare plans using the same usage.",
+    "a": {
+      "q": "A water bill has a fixed charge of $60 for the bill and a usage charge of $2 per kilolitre. A household uses 40 kilolitres. What is the total bill?",
+      "opts": ["$140", "$80", "$120", "$100"],
+      "why": "The usage charge is 40 × $2 = $80. Adding the fixed charge gives $80 + $60 = $140. The $80 option leaves out the fixed charge, which does not depend on how much is used.",
+      "clue": "Find the usage charge first, then add the fixed charge."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two electricity plans each have a bill covering 90 days. Plan A has a supply charge of $90 for the whole bill and costs 25 cents per kWh. Plan B has a supply charge of $60 for the whole bill and costs 30 cents per kWh. Which plan is cheaper for 800 kWh, and by how much?",
+      "opts": ["Plan A, by $10", "Plan B, by $10", "Plan A, by $30", "Plan B, by $30"],
+      "why": "Plan A: $90 + 800 × $0.25 = $90 + $200 = $290. Plan B: $60 + 800 × $0.30 = $60 + $240 = $300. Plan B has the lower supply charge, but its higher rate costs more at this usage, so Plan A is cheaper by $10.",
+      "clue": "Work out the full total for each plan before comparing."
+    }
+  },
+  "mat-accuracy-measurements": {
+    "title": "Accuracy of measurements",
+    "card": [
+      "No measurement is exact. An instrument can only show readings to its smallest unit, such as 1 mm on a ruler.",
+      [
+        "Absolute error",
+        "half the smallest unit on the instrument. A ruler marked in 1 mm steps has an absolute error of 0.5 mm."
+      ],
+      [
+        "Limits of accuracy",
+        "the measurement minus the absolute error, up to the measurement plus the absolute error. The true value lies between these limits."
+      ],
+      "Example: a length is 24 cm, read from a ruler marked in whole centimetres. Absolute error = 1 ÷ 2 = 0.5 cm. Limits: 24 − 0.5 = 23.5 cm to 24 + 0.5 = 24.5 cm."
+    ],
+    "remember": "Absolute error is half the smallest unit. Limits are the reading plus and minus it.",
+    "a": {
+      "q": "A kitchen scale shows masses in steps of 2 g. What is its absolute error?",
+      "opts": ["1 g", "2 g", "4 g", "0.5 g"],
+      "why": "The absolute error is half the smallest unit, and 2 ÷ 2 = 1 g. Choosing 2 g is tempting, but that is the whole smallest unit, not half of it.",
+      "clue": "Halve the size of the smallest step."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya measures a plank as 3.4 m, using a tape marked in steps of 0.1 m. What are the limits of accuracy?",
+      "opts": ["3.35 m to 3.45 m", "3.3 m to 3.5 m", "3.39 m to 3.41 m", "3.375 m to 3.425 m"],
+      "why": "The absolute error is 0.1 ÷ 2 = 0.05 m. So the limits are 3.4 − 0.05 = 3.35 m and 3.4 + 0.05 = 3.45 m. The range 3.3 m to 3.5 m uses the whole smallest unit instead of half.",
+      "clue": "Halve 0.1 first, then subtract and add it."
+    }
+  },
+  "mat-significant-figures-scientific-notation": {
+    "title": "Significant figures and scientific notation",
+    "card": [
+      "Significant figures are the digits that carry meaning. Count from the first non-zero digit. Zeros between non-zero digits count. Zeros at the start never count.",
+      "To round to a number of significant figures, keep that many digits from the first non-zero digit. Look at the next digit: 5 or more rounds up, 4 or less stays. Example: 0.004 738 to 2 significant figures is 0.0047.",
+      "Scientific notation is a number that is at least 1 and less than 10, times a power of ten. Example: 45 000 = 4.5 × 10⁴, because the decimal point moves 4 places left.",
+      "A small number has a negative power. Example: 0.0032 = 3.2 × 10⁻³, because the decimal point moves 3 places right."
+    ],
+    "remember": "Count significant figures from the first non-zero digit. Scientific notation is a number at least 1 and less than 10, times a power of ten.",
+    "a": {
+      "q": "What is 0.007 046 rounded to 3 significant figures?",
+      "opts": ["0.00705", "0.00704", "0.007", "0.0070"],
+      "why": "The first significant figure is 7. The three significant figures are 7, 0 and 4, and the next digit is 6, so the 4 rounds up to 5. This gives 0.00705. Rounding to 0.00704 ignores the 6 and leaves the 4 unchanged.",
+      "clue": "Start counting at the first non-zero digit, then check the digit after the third."
+    },
+    "b": {
+      "d": 3,
+      "q": "A virus in a lab measures 0.000 000 12 m across. How is this written in scientific notation?",
+      "opts": ["1.2 × 10⁻⁷ m", "1.2 × 10⁷ m", "1.2 × 10⁻⁶ m", "12 × 10⁻⁸ m"],
+      "why": "The decimal point moves 7 places right to give 1.2, so the power is −7. The form 12 × 10⁻⁸ has the right value, but 12 is not less than 10. Using 10⁻⁶ moves the point only 6 places.",
+      "clue": "Count the places the point moves to get a number at least 1 and less than 10."
+    }
+  },
+  "mat-unit-conversions": {
+    "title": "Unit conversions",
+    "card": [
+      "Length, mass and capacity: 1 m = 100 cm, 1 cm = 10 mm, 1 km = 1000 m, 1 kg = 1000 g, 1 L = 1000 mL. To go to a smaller unit, multiply. To go to a larger unit, divide.",
+      "For area, square the length factor. 1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². For volume, cube it: 1 m³ = 100 × 100 × 100 = 1 000 000 cm³.",
+      "1 cm³ holds 1 mL. So 1000 cm³ holds 1000 mL, which is 1 L.",
+      "Worked example: 30 000 cm² to m². Divide by 10 000, because 1 m² = 10 000 cm². The answer is 3 m²."
+    ],
+    "remember": "Square the length factor for area and cube it for volume. 1 cm³ = 1 mL.",
+    "a": {
+      "q": "A rug has an area of 50 000 cm². What is its area in m²?",
+      "opts": ["5 m²", "500 m²", "50 m²", "0.5 m²"],
+      "why": "1 m² = 10 000 cm², so divide: 50 000 ÷ 10 000 = 5 m². Dividing by 100, the length factor, gives 500 m², which forgets to square the factor for an area.",
+      "clue": "How many cm² are in 1 m²?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A rainwater tank on a farm near Orange holds 0.6 m³ of water. How many litres is that?",
+      "opts": ["600 L", "6 L", "6000 L", "600 000 L"],
+      "why": "1 m³ = 1 000 000 cm³, so 0.6 m³ = 600 000 cm³, which holds 600 000 mL. Dividing by 1000 gives 600 L. Stopping at 600 000 forgets to change mL to L, and 6 L comes from squaring the length factor instead of cubing it.",
+      "clue": "Change m³ to cm³ first, then cm³ to mL, then mL to L."
+    }
+  },
+  "mat-perimeter-area": {
+    "title": "Perimeter and area",
+    "card": [
+      [
+        "Perimeter",
+        "the distance around the outside of a shape, in units such as cm or m. Add the lengths of all the sides."
+      ],
+      [
+        "Area",
+        "the space inside a shape, in square units such as cm² or m². Rectangle: A = l × w. Triangle: A = ½ × b × h, where h is the height at right angles to the base."
+      ],
+      [
+        "Trapezium and circle",
+        "Trapezium: A = ½ × (a + b) × h, where a and b are the parallel sides. Circle: A = πr², and the perimeter (circumference) is C = 2πr."
+      ],
+      [
+        "Composite shapes",
+        "Split the shape into rectangles, triangles and so on, then add the areas, or subtract any part that is cut out. Example: a 6 m by 4 m rectangle with a triangle of base 6 m and height 3 m on top has area 24 + ½ × 6 × 3 = 24 + 9 = 33 m²."
+      ]
+    ],
+    "remember": "Perimeter adds the sides. Area fills the inside, so split a complex shape into simple parts, then add or subtract.",
+    "a": {
+      "q": "A trapezium has parallel sides of 5 cm and 9 cm, and a height of 4 cm. What is its area?",
+      "opts": ["28 cm²", "56 cm²", "36 cm²", "20 cm²"],
+      "why": "A = ½ × (5 + 9) × 4 = ½ × 14 × 4 = 28 cm². Leaving out the ½ gives 56 cm², which is the tempting mistake. Using only one parallel side gives 36 cm² or 20 cm².",
+      "clue": "Add the parallel sides, then multiply by the height and halve."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's garden bed is an 8 m by 5 m rectangle with a right triangle cut out of one corner. The triangle has base 4 m and height 3 m. What is the area of the bed?",
+      "opts": ["34 m²", "40 m²", "46 m²", "28 m²"],
+      "why": "The rectangle is 8 × 5 = 40 m² and the triangle is ½ × 4 × 3 = 6 m², so the bed is 40 − 6 = 34 m². Adding the triangle instead of subtracting it gives 46 m², and not removing it gives 40 m². Forgetting the ½ removes 12 m² and gives 28 m².",
+      "clue": "The triangle is cut out, so take its area away."
+    }
+  },
+  "mat-surface-area": {
+    "title": "Surface area",
+    "card": [
+      "Surface area is the total area of all the faces of a solid. It is measured in square units, such as cm² or m².",
+      "To find it, work out the area of each face and add them. A rectangular prism has 6 rectangular faces, in 3 matching pairs.",
+      "A cylinder has two circular ends and one curved side. The side unrolls into a rectangle. Its width is the circle's circumference (2 × π × r) and its height is the cylinder's height.",
+      "Example: a box is 5 cm long, 3 cm wide and 2 cm high. Faces: 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+    ],
+    "remember": "Find the area of every face, then add them all.",
+    "a": {
+      "q": "A box is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+      "opts": ["52 cm²", "24 cm²", "26 cm²", "40 cm²"],
+      "why": "The pairs of faces are 2 × 12 + 2 × 8 + 2 × 6 = 24 + 16 + 12 = 52 cm². The 24 option is really the volume, 4 × 3 × 2, which would be 24 cm³, not an area. The 26 option counts each pair only once.",
+      "clue": "Add the areas of all 6 faces, in 3 matching pairs."
+    },
+    "b": {
+      "d": 3,
+      "q": "A closed cube has sides of 5 cm. What is the total area of its faces?",
+      "opts": ["150 cm²", "125 cm²", "100 cm²", "25 cm²"],
+      "why": "Each face is 5 × 5 = 25 cm², and a cube has 6 faces, so 6 × 25 = 150 cm². The 125 cm² option is really the volume, 5 × 5 × 5, which should be 125 cm³, not an area. The 100 cm² option counts only 4 faces.",
+      "clue": "A cube has 6 faces, and all of them are the same size."
+    }
+  },
+  "mat-volume-capacity": {
+    "title": "Volume and capacity",
+    "card": [
+      "Volume is the space inside a solid. For a prism or cylinder, V = base area × height. The base is the face that repeats along the height.",
+      [
+        "Prism",
+        "find the area of the base shape first, then multiply by the height. A rectangular prism has V = l × w × h."
+      ],
+      [
+        "Cylinder",
+        "the base is a circle, so V = π × r² × h. Example: r = 3 cm and h = 10 cm gives V = π × 3² × 10 = 90π, which is about 283 cm³."
+      ],
+      [
+        "Capacity",
+        "capacity is how much liquid a container holds. 1 cm³ holds 1 mL, and 1000 cm³ holds 1 L. So a volume of 2000 cm³ has a capacity of 2 L."
+      ]
+    ],
+    "remember": "Volume is base area × height. Use 1 cm³ = 1 mL to turn volume into capacity.",
+    "a": {
+      "q": "A rectangular tank has a base 20 cm by 10 cm and a height of 5 cm. What is its volume?",
+      "opts": ["1000 cm³", "200 cm³", "350 cm³", "100 cm³"],
+      "why": "Base area = 20 × 10 = 200 cm². Volume = 200 × 5 = 1000 cm³. Finding only the base area, 200 cm³, skips the multiplication by the height.",
+      "clue": "Find the base area first, then use the height."
+    },
+    "b": {
+      "d": 3,
+      "q": "A cylindrical water tank has a base radius of 10 cm and a height of 20 cm. About how many litres can it hold?",
+      "opts": ["6.3 L", "2.0 L", "0.63 L", "6283 L"],
+      "why": "V = π × 10² × 20 = 2000π, which is about 6283 cm³. Since 1000 cm³ holds 1 L, the capacity is about 6.3 L. Leaving out π gives 2000 cm³, or 2.0 L, and 6283 L forgets to divide by 1000.",
+      "clue": "Find the volume in cm³ first, then change cm³ to litres."
+    }
+  },
+  "mat-latitude-longitude": {
+    "title": "Latitude and longitude",
+    "card": [
+      [
+        "Latitude",
+        "measures degrees north or south of the equator. The equator is 0°, and the poles are 90° N and 90° S."
+      ],
+      [
+        "Longitude",
+        "measures degrees east or west of the prime meridian, which runs through Greenwich in London. The prime meridian is 0°, and longitude goes up to 180° E and 180° W."
+      ],
+      "Latitude is written first, then longitude. Together they give the position of a place, such as Sydney at about 34° S, 151° E.",
+      "Lines of latitude run east to west, and each one is a circle around the Earth. Lines of longitude run from the North Pole to the South Pole."
+    ],
+    "remember": "Latitude is the angle north or south. Longitude is the angle east or west.",
+    "a": {
+      "q": "Which place is in the southern hemisphere and east of the prime meridian?",
+      "opts": ["34° S, 151° E", "34° N, 151° E", "34° S, 151° W", "34° N, 151° W"],
+      "why": "S means south of the equator and E means east of the prime meridian. 34° N is north of the equator. 34° S, 151° W is south but west of Greenwich, so it fails the second test.",
+      "clue": "Check the letter after each number."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya reads a map for a town at 37° S, 145° E. What does the 145° E tell her?",
+      "opts": [
+        "It is 145° of longitude east of the prime meridian",
+        "It is 145° of latitude east of the prime meridian",
+        "It is 145° of longitude east of the equator",
+        "It is 145° of latitude north of the equator"
+      ],
+      "why": "The second number in a position is the longitude, and E means east of the prime meridian. Longitude is not measured from the equator: that is the starting line for latitude.",
+      "clue": "Which line is longitude measured from, and which comes second?"
+    }
+  },
+  "mat-time-zones": {
+    "title": "Time zones",
+    "card": [
+      "The world is divided into time zones. Each zone keeps its own clock time, so it can be morning in one country and night in another.",
+      "Zones are measured from Coordinated Universal Time (UTC). A zone written UTC+3 is 3 hours ahead of UTC. A zone written UTC−5 is 5 hours behind UTC.",
+      "Sydney is UTC+10. During daylight saving, when clocks go forward 1 hour, Sydney is UTC+11.",
+      "To compare two places, find the gap between their UTC numbers. Example: UTC+10 and UTC+3 are 10 − 3 = 7 hours apart, and the higher number is ahead."
+    ],
+    "remember": "UTC+ means ahead of UTC and UTC− means behind. Sydney is UTC+10, or UTC+11 in daylight saving.",
+    "a": {
+      "q": "A city is in the UTC−5 time zone. How does its clock time compare with UTC?",
+      "opts": [
+        "It is 5 hours behind UTC",
+        "It is 5 hours ahead of UTC",
+        "It is 5 minutes behind UTC",
+        "It is the same as UTC"
+      ],
+      "why": "A minus sign means the zone is behind UTC, so UTC−5 is 5 hours behind. Reading it as ahead mixes up the sign, and the number counts hours, not minutes.",
+      "clue": "Does the minus sign mean ahead or behind?"
+    },
+    "b": {
+      "d": 2,
+      "q": "It is 2:00 pm in Sydney during daylight saving (UTC+11). What is the time at UTC+3?",
+      "opts": ["6:00 am", "10:00 pm", "5:00 am", "11:00 am"],
+      "why": "UTC+11 and UTC+3 are 11 − 3 = 8 hours apart. UTC+3 is behind Sydney, so subtract 8 hours from 2:00 pm to get 6:00 am. Adding 8 hours gives 10:00 pm, which would put UTC+3 ahead of Sydney.",
+      "clue": "Which zone has the higher number, and so is ahead?"
+    }
+  },
+  "mat-longitude-time-difference": {
+    "title": "Longitude and time difference",
+    "card": [
+      "The Earth turns 360° in 24 hours, so it turns 360° ÷ 24 = 15° each hour. This means every 15° of longitude is about 1 hour of time difference.",
+      [
+        "Same side",
+        "if both places are east, or both are west, subtract the longitudes. For 150°E and 120°E: 150° − 120° = 30°, and 30° ÷ 15 = 2 hours."
+      ],
+      [
+        "Opposite sides",
+        "if one place is east and one is west of 0°, add the longitudes. For 45°E and 15°W: 45° + 15° = 60°, and 60° ÷ 15 = 4 hours."
+      ],
+      "The Earth turns towards the east, so the place further east is ahead in time. So 150°E is 2 hours ahead of 120°E, and 45°E is 4 hours ahead of 15°W."
+    ],
+    "remember": "Same side, subtract. Opposite sides, add. Divide by 15, and east is ahead.",
+    "a": {
+      "q": "Two towns are 45° of longitude apart. About how many hours apart are their times?",
+      "opts": ["3 hours", "4 hours", "6 hours", "45 hours"],
+      "why": "The Earth turns 15° each hour, so 45° ÷ 15 = 3 hours. Dividing by 24 instead of 15 gives about 1.9, which does not match the rule of 15° per hour.",
+      "clue": "Divide the degrees by the number of degrees in one hour."
+    },
+    "b": {
+      "d": 3,
+      "q": "Town P is at 30°E and town Q is at 75°W. Both are on the same day. About what is the time difference, and which town is ahead?",
+      "opts": ["7 hours, and P is ahead", "7 hours, and Q is ahead", "3 hours, and P is ahead", "3 hours, and Q is ahead"],
+      "why": "P is east and Q is west of 0°, so add the longitudes: 30° + 75° = 105°, and 105° ÷ 15 = 7 hours. P is further east, so P is ahead. Subtracting gives 75° − 30° = 45°, or 3 hours, which treats the towns as if they were on the same side.",
+      "clue": "Check whether the towns are on the same side of 0°."
+    }
+  },
+  "mat-travel-across-time-zones": {
+    "title": "Travel across time zones",
+    "card": [
+      "A flight takes the same real time whatever the clocks say. To find the arrival time, add the flight time to the departure time first.",
+      "Then adjust for the time difference between the two places. If the destination is ahead of where you left, add the difference. If it is behind, subtract it.",
+      ["Example", "A flight leaves Sydney at 10:00 am and takes 3 hours. The destination is 2 hours behind Sydney."],
+      "10:00 am + 3 hours = 1:00 pm Sydney time. Then 1:00 pm − 2 hours = 11:00 am local time at the destination."
+    ],
+    "remember": "Add the flight time, then add or subtract the time difference.",
+    "a": {
+      "q": "A flight leaves Sydney at 8:00 am and takes 4 hours. The destination is 3 hours behind Sydney. What is the local arrival time?",
+      "opts": ["9:00 am", "3:00 pm", "12:00 noon", "5:00 am"],
+      "why": "8:00 am + 4 hours = 12:00 noon Sydney time. The destination is behind, so subtract 3 hours to get 9:00 am. Adding the 3 hours gives 3:00 pm, which is wrong because a place that is behind has an earlier clock time.",
+      "clue": "Add the flight time first, then use the time difference."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jamal's flight leaves Sydney at 9:30 am and takes 9 hours. The destination is 2 hours ahead of Sydney. What is the local arrival time?",
+      "opts": ["8:30 pm", "4:30 pm", "6:30 pm", "11:30 am"],
+      "why": "9:30 am + 9 hours = 6:30 pm Sydney time. The destination is ahead, so add 2 hours to get 8:30 pm. Subtracting 2 hours gives 4:30 pm, which is wrong because a place that is ahead has a later clock time.",
+      "clue": "Ahead means the clock there shows a later time."
+    }
+  },
+  "mat-international-date-line": {
+    "title": "The International Date Line",
+    "card": [
+      "The International Date Line is an imaginary line that runs through the Pacific Ocean, close to 180° longitude. It bends in places so that it goes around some countries and islands.",
+      "Crossing the line changes the calendar date by one day. The date is not changed by the distance travelled or the time of day.",
+      [
+        "West",
+        "Going west across the line adds a day, so the date moves forward one day. For example, 5 March becomes 6 March."
+      ],
+      [
+        "East",
+        "Going east across the line takes a day away, so the date moves back one day. For example, 5 March becomes 4 March."
+      ]
+    ],
+    "remember": "West adds a day. East takes a day away.",
+    "a": {
+      "q": "A cargo ship sails west across the International Date Line. Just before it crosses, it is Tuesday. What day is it just after?",
+      "opts": ["Wednesday", "Monday", "Tuesday", "Thursday"],
+      "why": "Going west across the line adds a day, so Tuesday moves forward to Wednesday. Monday is the tempting mistake: it comes from taking a day away, which is what happens going east.",
+      "clue": "Does the ship's direction move the calendar forward or back?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila sails her yacht east across the International Date Line in the Pacific. Just before she crosses, the date is 1 April. What is the date just after?",
+      "opts": ["31 March", "2 April", "1 April", "30 March"],
+      "why": "Going east takes a day away, so the date goes back one day from 1 April. March has 31 days, so the day before 1 April is 31 March. 2 April comes from adding a day, which is what happens going west.",
+      "clue": "Work out the direction rule first, then count one day."
+    }
+  },
+  "mat-network-terms": {
+    "title": "Network terms",
+    "card": [
+      ["Vertex", "a point in a network, drawn as a dot. It can stand for a town, a computer or a person."],
+      ["Edge", "a line that joins two vertices. It can stand for a road, a cable or a friendship."],
+      ["Degree", "the number of edges that meet at a vertex. If town A has roads to B, C and D, then A has degree 3."],
+      [
+        "Weighted network",
+        "a network with a value on each edge, such as a distance in km or a cost in dollars. The value is called the weight."
+      ]
+    ],
+    "remember": "A network is vertices joined by edges. Degree counts edges at a vertex, and weights are values on edges.",
+    "a": {
+      "q": "In a network, vertex P is joined by edges to Q, R, S and T. What is the degree of P?",
+      "opts": ["4", "5", "1", "8"],
+      "why": "Degree is the number of edges that meet at the vertex. P has four edges, one to each of Q, R, S and T, so its degree is 4. The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.",
+      "clue": "Count the edges at P, not the vertices in the network."
+    },
+    "b": {
+      "d": 2,
+      "q": "A network shows five towns as dots. Roads between them are lines labelled 12, 7, 9 and 15, in km. What do the labels 12, 7, 9 and 15 show?",
+      "opts": ["The weights of the edges", "The degrees of the vertices", "The number of vertices", "The number of edges"],
+      "why": "A value written on an edge, such as a distance, is its weight. The labels are on the roads, which are edges, so they are not degrees. Degree is a count of edges at a vertex, and it is not a distance.",
+      "clue": "The labels sit on the lines, not on the dots."
+    }
+  },
+  "mat-walks-paths-circuits": {
+    "title": "Walks, paths and circuits",
+    "card": [
+      [
+        "Walk",
+        "any route that moves along edges from vertex to vertex. A walk may use the same edge or the same vertex more than once."
+      ],
+      [
+        "Path",
+        "a walk that never repeats a vertex. For example, A-B-C-D is a path, but A-B-C-B-D is not, because B appears twice."
+      ],
+      [
+        "Circuit",
+        "a walk that starts and ends at the same vertex without repeating an edge. A-B-C-A is a circuit. A-B-A is not, because it uses edge AB twice."
+      ],
+      "To classify a route, list its vertices in order. Check if any vertex or edge repeats, and check if the first and last vertices are the same."
+    ],
+    "remember": "A path repeats no vertex. A circuit ends where it began and repeats no edge.",
+    "a": {
+      "q": "A network has the route P-Q-R-S-Q-T. Which word describes this route?",
+      "opts": ["A walk that is not a path", "A path", "A circuit", "A path that is also a circuit"],
+      "why": "The route moves along edges, so it is a walk. Vertex Q appears twice, so it is not a path. It starts at P and ends at T, so it is not a circuit.",
+      "clue": "List the vertices and look for one that repeats."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia cycles around her town along the route H-J-K-L-M-H. Every vertex except H is visited once. Which statement is correct?",
+      "opts": [
+        "It is a circuit, because it starts and ends at H",
+        "It is a path, because no vertex except H repeats",
+        "It is a path, because it starts and ends at H",
+        "It is not a walk, because H appears twice"
+      ],
+      "why": "The route starts and ends at H and uses each edge only once, so it is a circuit. It is not a path, because H appears twice. It is still a walk, as it follows edges.",
+      "clue": "Compare the first and last vertices, then check for repeats."
+    }
+  },
+  "mat-shortest-paths": {
+    "title": "Shortest paths",
+    "card": [
+      "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
+      "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
+      "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
+      "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+    ],
+    "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
+    "a": {
+      "q": "In a network, the only two routes from P to S are P-Q-S, with weights 6 and 9, and P-R-S, with weights 5 and 7. What is the weight of the shortest path from P to S?",
+      "opts": ["12", "15", "11", "13"],
+      "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the longer route.",
+      "clue": "Add the weights along each route, then compare the totals."
+    },
+    "b": {
+      "d": 3,
+      "q": "Town A is joined to town D by a direct road of 14 km. The only other route goes A to B (4 km), B to C (5 km), then C to D (3 km). Which route is the shortest path from A to D?",
+      "opts": [
+        "A-B-C-D, with a total of 12 km",
+        "A-D, with a total of 14 km",
+        "A-B-C-D, with a total of 13 km",
+        "A-D, because it has the fewest edges"
+      ],
+      "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+      "clue": "Fewer edges does not mean less total weight."
+    }
+  },
+  "mat-trees": {
+    "title": "Trees",
+    "card": [
+      "A network is connected if there is a route between every pair of vertices.",
+      "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
+      "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
+      "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+    ],
+    "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+    "a": {
+      "q": "A tree has 9 vertices. How many edges does it have?",
+      "opts": ["8", "9", "10", "7"],
+      "why": "A tree with n vertices has n − 1 edges, so 9 − 1 = 8. Choosing 9 mixes up the number of edges with the number of vertices.",
+      "clue": "Take one away from the number of vertices."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council plans a path network joining 7 parks in Orange. It has 7 vertices, is connected and has 7 edges. Is it a tree?",
+      "opts": [
+        "No, because a tree would have only 6 edges",
+        "Yes, because it is connected",
+        "Yes, because it has as many edges as vertices",
+        "No, because a tree would have 8 edges"
+      ],
+      "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+      "clue": "Work out how many edges a tree with 7 vertices has, then compare."
+    }
+  },
+  "mat-minimum-spanning-trees": {
+    "title": "Minimum spanning trees",
+    "card": [
+      "A minimum spanning tree joins every vertex of a weighted network using the least total weight. It has no circuits. It is used for jobs such as laying cable between towns.",
+      [
+        "Kruskal's method",
+        "List the edges from smallest weight to largest. Add each edge in turn, but skip any edge that would make a circuit. Stop when every vertex is joined."
+      ],
+      [
+        "Prim's method",
+        "Start at any vertex. Keep adding the smallest edge that joins a new vertex to the part already built. Stop when every vertex is joined."
+      ],
+      [
+        "Example",
+        "Edges: AB 4, AC 2, BC 3, BD 5, CD 6. Kruskal adds AC 2 and BC 3. It skips AB 4, as A, B and C would form a circuit. It adds BD 5. Total weight: 2 + 3 + 5 = 10."
+      ]
+    ],
+    "remember": "Both methods build the cheapest way to join every vertex, and neither ever adds an edge that makes a circuit.",
+    "a": {
+      "q": "A network has edges PQ 3, PR 4, QR 5, RS 6 and QS 8. What is the total weight of its minimum spanning tree?",
+      "opts": ["13", "12", "18", "26"],
+      "why": "Kruskal adds PQ 3 and PR 4. It skips QR 5, as P, Q and R would form a circuit. It adds RS 6. Total: 3 + 4 + 6 = 13. The answer 12 is tempting, but 3 + 4 + 5 leaves S unconnected.",
+      "clue": "Check each edge for a circuit before you add it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Cable must link five towns. The costs in thousands of dollars are AB 7, AC 5, BC 6, BD 4, CD 8, CE 9 and DE 3. What is the least total cost to connect all five towns?",
+      "opts": ["$18 000", "$19 000", "$21 000", "$42 000"],
+      "why": "Kruskal adds DE 3, BD 4, AC 5 and BC 6. Every town is now joined, so the rest are not needed. Total: 3 + 4 + 5 + 6 = 18. Using AB 7 in place of BC 6 also joins all towns, but it costs 19, which is more.",
+      "clue": "Take the cheapest edges first, and stop once all five towns are joined."
+    }
+  },
+  "mat-statistical-investigation-process": {
+    "title": "The statistical investigation process",
+    "card": [
+      "A statistical investigation starts with a question that data can answer. For example: how many hours do Year 11 students at our school sleep on a school night?",
+      "Next, collect the data, for example by a survey. Then organise it in a table and display it in a graph, so patterns are easier to see.",
+      "Then analyse the data, for example by finding a measure such as an average, and looking for patterns. The analysis gives the evidence for the answer.",
+      "Finally, draw a conclusion that answers the original question, using the data as evidence. A conclusion that does not answer the question means the investigation is not finished."
+    ],
+    "remember": "Question, collect, organise and display, analyse, conclude. The conclusion answers the question.",
+    "a": {
+      "q": "Which list shows the steps of an investigation in the correct order?",
+      "opts": [
+        "Pose a question, collect data, display data, conclude",
+        "Collect data, pose a question, display data, conclude",
+        "Pose a question, display data, collect data, conclude",
+        "Pose a question, collect data, conclude, display data"
+      ],
+      "why": "An investigation starts with a question, then data is collected, then it is displayed and analysed, and the conclusion comes last. Displaying data before collecting it is impossible, and a conclusion drawn before analysis has no evidence.",
+      "clue": "What must you have before you know which data to collect?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Zoe asks: do Year 11 students at her school spend more time on homework than Year 9 students? She surveys both year groups and graphs the results. What should she do to finish her investigation?",
+      "opts": [
+        "Compare the group averages and say which is higher",
+        "Work out the group averages and leave it there",
+        "Survey Year 10 students and add them to the graph",
+        "Describe the shape of the Year 11 graph only"
+      ],
+      "why": "Comparing the averages is the analysis, and saying which is higher is the conclusion that answers Zoe's question. Working out the averages and stopping there is tempting, but without a conclusion the question is still unanswered, so the investigation is not finished.",
+      "clue": "Which step gives Zoe an answer to the question she asked?"
+    }
+  },
+  "mat-sampling-methods": {
+    "title": "Sampling methods",
+    "card": [
+      [
+        "Random",
+        "every member of the population, the whole group being studied, has an equal chance of being in the sample, such as drawing names from a hat."
+      ],
+      [
+        "Systematic",
+        "choose every kth member from a list, after a random start. For 500 students and a sample of 50, take every 10th name."
+      ],
+      [
+        "Stratified",
+        "split the population into groups, such as year groups, then take a random sample from each group in proportion to its size."
+      ],
+      [
+        "Self-selected",
+        "people choose to take part, such as in an online poll. People with strong views are more likely to reply, so the sample can be biased: its results may not match the population."
+      ]
+    ],
+    "remember": "A fair sample gives every member an equal chance of being chosen. A sample whose members choose themselves can be biased.",
+    "a": {
+      "q": "A school has 500 students on a numbered list. The principal picks a random start, then surveys every 10th student on the list. Which sampling method is this?",
+      "opts": ["Systematic", "Stratified", "Self-selected", "Random"],
+      "why": "Choosing every kth name from a list after a random start is systematic sampling. It is not stratified, because the students are not split into groups first.",
+      "clue": "Look at how the students are picked from the list."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in Wagga Wagga wants to know if residents like a new bus timetable. It posts a survey link on its Facebook page and uses the first 200 replies. Why might the results be biased?",
+      "opts": [
+        "Residents chose to reply, so they may not match the town",
+        "Residents were split into groups, so some may be left out",
+        "Every resident had an equal chance, so some may be missed",
+        "Every 10th reply was used, so some groups may be skipped"
+      ],
+      "why": "This is a self-selected sample. Only residents who see the page and choose to reply take part, so their views may not match the whole town. The council did not split residents into groups or take every 10th reply, and not every resident had an equal chance of being chosen.",
+      "clue": "Who decided which residents took part?"
+    }
+  },
+  "mat-displaying-data": {
+    "title": "Displaying data",
+    "card": [
+      [
+        "Column graph",
+        "uses separate bars with gaps between them. It suits categorical data, such as the favourite sport of each student in a class."
+      ],
+      [
+        "Dot plot",
+        "puts one dot above a number on a number line for each score. It suits small sets of numerical data, such as 12 test marks out of 10."
+      ],
+      [
+        "Histogram",
+        "uses touching bars, each covering a class interval, such as 0 to 9 or 10 to 19. It suits large sets of numerical data, especially measures."
+      ],
+      [
+        "Stem-and-leaf plot",
+        "splits each value into a stem and a leaf, so 47 has stem 4 and leaf 7. It shows the shape and keeps every original value."
+      ]
+    ],
+    "remember": "Gaps between bars suit categories. Touching bars suit grouped numbers.",
+    "a": {
+      "q": "Which display suits the data on the favourite pet of each student in a class?",
+      "opts": ["Column graph", "Histogram", "Stem-and-leaf plot", "Dot plot"],
+      "why": "Favourite pet is categorical, so separate bars with gaps suit it. A histogram is for grouped numerical data, and it has touching bars.",
+      "clue": "Pets are names of groups, not numbers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev records the exact height of each of 200 students and wants to group the heights in intervals. Which display suits this best?",
+      "opts": ["Histogram", "Column graph", "Dot plot", "Stem-and-leaf plot"],
+      "why": "Heights are numerical and there are many of them, so grouping them in class intervals with a histogram suits. A dot plot suits small sets, and a column graph suits categories.",
+      "clue": "Think of a large set of measures grouped in intervals."
+    }
+  },
+  "mat-spread-box-plots": {
+    "title": "Spread and box plots",
+    "card": [
+      [
+        "Range",
+        "highest score − lowest score. It shows the full spread, but it can be pulled a long way by outliers."
+      ],
+      [
+        "Quartiles",
+        "Order the data. The median is Q2. Q1 is the median of the lower half and Q3 is the median of the upper half. IQR = Q3 − Q1. It measures the spread of the middle half, so outliers barely change it."
+      ],
+      [
+        "Box plot",
+        "It is drawn from five numbers: lowest, Q1, median, Q3 and highest. The box runs from Q1 to Q3, with a line at the median. Whiskers reach to the lowest and highest scores."
+      ],
+      "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median = (7 + 8) ÷ 2 = 7.5. Q1 = (4 + 5) ÷ 2 = 4.5. Q3 = (10 + 12) ÷ 2 = 11. IQR = 11 − 4.5 = 6.5. Range = 20 − 2 = 18. To compare two sets, a smaller IQR means the middle of the data is less spread out."
+    ],
+    "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
+    "a": {
+      "q": "Which set of five numbers is used to draw a box plot?",
+      "opts": [
+        "Lowest, Q1, median, Q3, highest",
+        "Lowest, mean, median, mode, highest",
+        "Q1, Q2, Q3, range, IQR",
+        "Lowest, Q1, mean, Q3, highest"
+      ],
+      "why": "A box plot uses the lowest score, Q1, the median, Q3 and the highest score. Mean and mode are measures of centre, but they are not part of a box plot's five numbers.",
+      "clue": "The box runs from Q1 to Q3 with a line inside it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ben's quiz scores have Q1 = 12 and Q3 = 20, lowest 4 and highest 30. Mia's scores have Q1 = 10 and Q3 = 24, lowest 8 and highest 26. Whose middle half of scores is less spread out, and what is that IQR?",
+      "opts": ["Ben's, with an IQR of 8", "Mia's, with an IQR of 14", "Ben's, with an IQR of 26", "Mia's, with an IQR of 18"],
+      "why": "Ben's IQR = 20 − 12 = 8 and Mia's IQR = 24 − 10 = 14. The smaller IQR means less spread in the middle half, so Ben's. Ben's range of 26 is larger than Mia's 18, but range uses only the two ends.",
+      "clue": "Find Q3 − Q1 for each student, not highest − lowest."
+    }
+  },
+  "mat-simultaneous-linear-equations": {
+    "title": "Simultaneous linear equations",
+    "card": [
+      "Two linear equations that describe the same situation are called simultaneous equations. Their graphs are straight lines, and the point where the lines cross satisfies both equations.",
+      [
+        "Graphing",
+        "Draw both lines on the same axes and read off the point where they cross. This is quick, but the reading may be only approximate."
+      ],
+      [
+        "Substitution",
+        "Put one equation into the other to leave one unknown. Example: y = 2x + 5 and y = 3x + 1. Set 2x + 5 = 3x + 1, so x = 4. Then y = 2 × 4 + 5 = 13. The lines meet at (4, 13)."
+      ],
+      "The meeting point shows where two things are equal. If two phone plans have costs C = 20 + 5t and C = 8 + 8t, they cost the same at the t-value where the lines meet."
+    ],
+    "remember": "The crossing point is the one pair of values that fits both equations, so both quantities are equal there.",
+    "a": {
+      "q": "Solve y = 2x + 1 and y = x + 6 by substitution. Where do the lines meet?",
+      "opts": ["(5, 11)", "(11, 5)", "(5, 6)", "(7, 5)"],
+      "why": "Set 2x + 1 = x + 6, so x = 5. Then y = 2 × 5 + 1 = 11, which gives (5, 11). Checking in the other equation: 5 + 6 = 11. The point (11, 5) swaps the order of x and y.",
+      "clue": "Make the two right-hand sides equal, then find y."
+    },
+    "b": {
+      "d": 3,
+      "q": "Plan A costs C = 30 + 4t and Plan B costs C = 10 + 6t, where t is the number of gigabytes used. At how many gigabytes do the plans cost the same?",
+      "opts": ["10 gigabytes", "20 gigabytes", "4 gigabytes", "70 gigabytes"],
+      "why": "Set 30 + 4t = 10 + 6t, so 20 = 2t and t = 10. The cost at that point is 30 + 40 = 70 dollars, which is the answer 70, not the number of gigabytes. Check: 10 + 60 = 70.",
+      "clue": "Ask for t, not the cost. Make the two costs equal."
+    }
+  },
+  "mat-break-even-analysis": {
+    "title": "Break-even analysis",
+    "card": [
+      "A business has a cost line and a revenue line. Cost = fixed cost + cost per item × number of items. Revenue = price per item × number of items.",
+      "The break-even point is where the two lines meet. Cost equals revenue there, so the profit is zero.",
+      "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. Profit = revenue − cost.",
+      "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set 300 + 10n = 25n. Then 300 = 15n, so n = 20. He breaks even at 20 scarves."
+    ],
+    "remember": "Break even where cost = revenue. Profit = revenue − cost.",
+    "a": {
+      "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
+      "opts": [
+        "It breaks even at 50 items",
+        "It makes a profit at 50 items",
+        "It makes a loss at 50 items",
+        "Its fixed cost is $0"
+      ],
+      "why": "Revenue equals cost, so profit is $0 and 50 items is the break-even point. A profit would need revenue above cost. Fixed cost cannot be found from these two figures alone.",
+      "clue": "Compare revenue with cost."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
+      "opts": ["50", "29", "67", "20"],
+      "why": "Set 400 + 6n = 14n, so 400 = 8n and n = 50. Check: cost is 400 + 300 = $700 and revenue is 14 × 50 = $700. Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+      "clue": "How much profit does each candle add towards the fixed cost?"
+    }
+  },
+  "mat-exponential-models": {
+    "title": "Exponential models",
+    "card": [
+      "An exponential model changes by a fixed percentage each period. It has the form y = a(b)ˣ, where x is the number of periods.",
+      ["a", "the starting value, when x = 0. b is the multiplier for each period."],
+      ["Growth", "b is above 1. A rise of 5% each period gives b = 1 + 0.05 = 1.05."],
+      [
+        "Decay",
+        "b is between 0 and 1. A fall of 15% each period gives b = 1 − 0.15 = 0.85. Example: a car worth $20 000 that loses 15% a year has V = 20 000 × 0.85ˣ. After 2 years, V = 20 000 × 0.85² = $14 450."
+      ]
+    ],
+    "remember": "Find b by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
+    "a": {
+      "q": "A town of 4000 people grows by 3% each year. Which equation models the population P after x years?",
+      "opts": ["P = 4000 × 1.03ˣ", "P = 4000 × 0.03ˣ", "P = 4000 × 3ˣ", "P = 4000 × 0.97ˣ"],
+      "why": "Growth of 3% means the multiplier is 1 + 0.03 = 1.03. Using 0.97 is tempting, but that is the multiplier for a 3% fall, not a rise.",
+      "clue": "For growth, add the rate to 1."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya buys a laptop for $2000. It loses 20% of its value each year. What is it worth after 3 years?",
+      "opts": ["$1024", "$800", "$1280", "$3456"],
+      "why": "Decay of 20% gives b = 0.8, so V = 2000 × 0.8³ = 2000 × 0.512 = $1024. Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong, because each year's fall is 20% of the current, smaller value.",
+      "clue": "Multiply by 0.8 once for each year, so the power is 3."
+    }
+  },
+  "mat-quadratic-models": {
+    "title": "Quadratic models",
+    "card": [
+      "A quadratic model has the form y = ax² + bx + c, where a is not 0. Its graph is a parabola, a smooth U-shaped or upside-down U-shaped curve.",
+      [
+        "Maximum",
+        "if a is negative, the parabola opens downwards and its highest point is the maximum. A thrown ball rises to a maximum height, then falls."
+      ],
+      [
+        "Minimum",
+        "if a is positive, the parabola opens upwards and its lowest point is the minimum. This point is called the vertex, as is the maximum point."
+      ],
+      "To read the answer from a graph, find the vertex. Its y-value is the maximum or minimum value. Its x-value is where that value happens. Example: a ball's height h (metres) after t seconds peaks at the point (2, 20). The maximum height is 20 m, reached after 2 seconds."
+    ],
+    "remember": "The vertex gives the best value (its y) and when or where it happens (its x).",
+    "a": {
+      "q": "A graph of a ball's height (m) against time (s) is a parabola with its vertex at (3, 45). What is the maximum height?",
+      "opts": ["45 m", "3 m", "48 m", "15 m"],
+      "why": "The y-value of the vertex is the maximum value, and y is height here, so it is 45 m. The 3 is the time in seconds when the ball reaches that height, not the height itself.",
+      "clue": "Height is on the y-axis. Which part of the vertex is y?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Profit P (in dollars) from selling cupcakes at price x dollars is modelled by a parabola with vertex (6, 240) that opens downwards. What price gives the greatest profit?",
+      "opts": ["$6", "$240", "$36", "$46"],
+      "why": "The x-value of the vertex is the price at which the maximum happens, so the price is $6. The $240 is the greatest profit, which is the y-value, so it answers a different question.",
+      "clue": "Price is on the x-axis. Which part of the vertex tells you where the maximum happens?"
+    }
+  },
+  "mat-inverse-variation-models": {
+    "title": "Inverse variation models",
+    "card": [
+      "In an inverse variation, y = k/x, where k is a fixed number called the constant. As x gets bigger, y gets smaller.",
+      "Doubling x halves y. Tripling x divides y by 3. The product x × y always equals k.",
+      "The graph is a curve called a hyperbola. It never touches either axis.",
+      "Example: a 120 km trip takes t = 120/s hours at a speed of s km/h. At 60 km/h, t = 120 ÷ 60 = 2 hours. At 120 km/h, t = 1 hour. Doubling the speed halved the time."
+    ],
+    "remember": "In y = k/x, x × y stays the same, so when one doubles the other halves.",
+    "a": {
+      "q": "y varies inversely with x. When x = 4, y = 12. What is y when x = 8?",
+      "opts": ["6", "24", "3", "1.5"],
+      "why": "Here k = x × y = 4 × 12 = 48, so y = 48/8 = 6. Doubling x halves y. The answer 24 comes from doubling y, which treats the relationship as direct rather than inverse.",
+      "clue": "Find k first by multiplying x and y."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila's trip is 240 km. At an average speed of 80 km/h it takes 3 hours. If she slows to an average of 60 km/h, how long does the trip take?",
+      "opts": ["4 hours", "2.25 hours", "3 hours", "5 hours"],
+      "why": "Time = 240/speed, so t = 240 ÷ 60 = 4 hours. Check: 80 × 3 = 240 and 60 × 4 = 240, so the product stays the same. Slower speed means more time, so 2.25 hours is wrong. That answer comes from multiplying 3 by 60/80, which treats the relationship as direct.",
+      "clue": "Distance stays 240 km, so speed × time stays the same."
+    }
+  },
+  "mat-comparing-investments": {
+    "title": "Comparing investments",
+    "card": [
+      [
+        "Simple interest",
+        "Interest is paid only on the original amount. I = Prn, so the interest is the same every year."
+      ],
+      [
+        "Compound interest",
+        "Interest is added to the balance, so later interest is earned on interest too. FV = PV(1 + r)ⁿ, where r is the rate per period and n is the number of periods. For quarterly, r is the yearly rate ÷ 4 and there are 4 periods a year."
+      ],
+      [
+        "Compare",
+        "Work out the final value of each investment over the same time. The larger final value is the better investment. Example: $1000 for 2 years at 6% p.a. gives $1120 simple, or 1000 × 1.06² = $1123.60 compounded yearly."
+      ],
+      [
+        "Watch for",
+        "At the same yearly rate, more frequent compounding gives more. But a higher simple rate can beat a lower compound rate, so always work out both."
+      ]
+    ],
+    "remember": "Find each final value over the same time, then pick the larger.",
+    "a": {
+      "q": "Over 3 years, which gives the larger final value? A: $2000 at 5.5% p.a. simple interest. B: $2000 at 5% p.a. compounded yearly.",
+      "opts": ["A, by $14.75", "B, by $14.75", "A, by $330.00", "B, by $315.25"],
+      "why": "A gives 2000 + 2000 × 0.055 × 3 = $2330. B gives 2000 × 1.05³ = $2315.25. A is larger by $14.75. B is tempting because compound interest earns interest on interest, but its lower rate means it falls short here.",
+      "clue": "Compound is not always better. Work out both final values."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia invests $5000 for 1 year at 8% p.a. Bank X compounds the interest yearly. Bank Y compounds it quarterly. How much more does Bank Y pay?",
+      "opts": ["$12.16", "$0.00", "$412.16", "$400.00"],
+      "why": "Bank X gives 5000 × 1.08 = $5400. Bank Y uses r = 0.02 and n = 4: 5000 × 1.02⁴ = $5412.16, so Y pays $12.16 more. It is not $0, because at the same yearly rate, more frequent compounding earns more.",
+      "clue": "Quarterly means a rate of 8% ÷ 4 for 4 periods."
+    }
+  },
+  "mat-shares-dividends": {
+    "title": "Shares and dividends",
+    "card": [
+      [
+        "Share",
+        "A share is one small part of the ownership of a company. People who own shares are called shareholders."
+      ],
+      [
+        "Dividend",
+        "A dividend is a share of a company's profit paid to shareholders. It is paid per share, so owning more shares means a bigger payment."
+      ],
+      [
+        "Dividend yield",
+        "Dividend yield = yearly dividend per share ÷ share price × 100%. It shows the yearly dividend as a percentage of the price."
+      ],
+      "Example: a share costs $40 and pays $1.80 in dividends over a year. Yield = 1.80 ÷ 40 × 100% = 4.5%."
+    ],
+    "remember": "Yield compares the yearly dividend with the share price, as a percentage.",
+    "a": {
+      "q": "A share costs $25 and pays a dividend of $1.50 over a year. What is the dividend yield?",
+      "opts": ["6%", "0.06%", "1.5%", "37.5%"],
+      "why": "Yield = 1.50 ÷ 25 × 100% = 6%. Dividing gives 0.06, and writing 0.06% forgets to multiply by 100%.",
+      "clue": "Divide the dividend by the share price, then turn it into a percentage."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq owns 200 shares in a company. Each share costs $12 and the company pays $0.84 per share in a year. What is his total yearly dividend, and the yield?",
+      "opts": [
+        "$168, and the yield is 7%",
+        "$168, and the yield is 0.07%",
+        "$2400, and the yield is 7%",
+        "$2400, and the yield is 0.07%"
+      ],
+      "why": "Dividend = 200 × 0.84 = $168. Yield = 0.84 ÷ 12 × 100% = 7%. The yield uses the price and dividend of one share, so it does not depend on how many shares he owns, and $2400 is the cost of the shares.",
+      "clue": "Yield uses one share, but the payment uses all 200."
+    }
+  },
+  "mat-inflation-appreciation": {
+    "title": "Inflation and appreciation",
+    "card": [
+      [
+        "Inflation",
+        "a general rise in prices over time. A fixed yearly inflation rate makes prices grow like compound interest."
+      ],
+      [
+        "Appreciation",
+        "a rise in the value of an asset, such as a house, over time. A fixed yearly rate works the same way."
+      ],
+      "Use FV = PV(1 + r)ⁿ. PV is today's price or value, r is the yearly rate as a decimal, and n is the number of years. FV is the future price or value.",
+      "Example: a $4000 laptop with inflation of 3% a year. After 2 years, FV = 4000 × 1.03² = 4000 × 1.0609 = $4243.60."
+    ],
+    "remember": "Inflation and appreciation both use FV = PV(1 + r)ⁿ, with r as the yearly rate of increase.",
+    "a": {
+      "q": "A unit is worth $500 000 and appreciates by 4% a year. Which calculation gives its value after 3 years?",
+      "opts": ["500 000 × 1.04³", "500 000 × 0.96³", "500 000 × 1.12", "500 000 × 1.04 × 3"],
+      "why": "Appreciation of 4% means r = 0.04, so each year the value is multiplied by 1.04. After 3 years that is 1.04³. Multiplying by 1.12 treats the growth as simple, not compound, and ignores that each year builds on the last.",
+      "clue": "Each year the value is multiplied by the same number."
+    },
+    "b": {
+      "d": 2,
+      "q": "A bus fare is $3.50 today. Inflation is 2% a year. What is the fare after 2 years, to the nearest cent?",
+      "opts": ["$3.64", "$3.57", "$3.71", "$3.92"],
+      "why": "FV = 3.50 × 1.02² = 3.50 × 1.0404 = 3.6414, which is $3.64. The answer $3.57 uses only one year of inflation, so it skips a step.",
+      "clue": "Multiply by 1.02 once for each year."
+    }
+  },
+  "mat-declining-balance-depreciation": {
+    "title": "Declining balance depreciation",
+    "card": [
+      "Depreciation is the fall in an asset's value over time. Declining balance depreciation takes off a fixed percentage of the asset's current value each year.",
+      "S = V₀(1 − r)ⁿ. S is the salvage value (the value after n years), V₀ is the starting value, r is the yearly rate as a decimal and n is the number of years.",
+      "The percentage is taken from a smaller value each year, so the dollar loss gets smaller each year.",
+      "Example: a $20 000 machine loses 10% a year for 3 years. S = 20 000 × (1 − 0.10)³ = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+    ],
+    "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+    "a": {
+      "q": "A van is worth $40 000 and loses 15% of its value each year. What is its value after 2 years?",
+      "opts": ["$28 900", "$28 000", "$34 000", "$27 100"],
+      "why": "S = 40 000 × 0.85² = 40 000 × 0.7225 = $28 900. The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
+      "clue": "Multiply by 0.85 twice."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's laptop cost $2000 and depreciates by 20% each year on the declining balance. What is its value after 3 years?",
+      "opts": ["$1024", "$800", "$1280", "$1200"],
+      "why": "S = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+      "clue": "The factor each year is 1 − 0.20, used three times."
+    }
+  },
+  "mat-credit-cards": {
+    "title": "Credit cards",
+    "card": [
+      "A credit card lets you spend money the card provider lends you. If you pay the full balance by the due date, you usually pay no interest on purchases during the interest-free period.",
+      "If you do not pay in full, interest is charged on the amount owed, and it is worked out daily. Daily rate = annual rate ÷ 365.",
+      "Interest for a period = amount owed × daily rate × number of days. The annual rate on credit cards is often high.",
+      "Example: $2000 is owed at 18% per year for 30 days. Daily rate = 18% ÷ 365 = 0.0493% (to 4 decimal places). Interest = 2000 × 0.18 ÷ 365 × 30 = $29.59 (to the nearest cent)."
+    ],
+    "remember": "Interest = amount owed × annual rate ÷ 365 × days, charged once the interest-free period ends.",
+    "a": {
+      "q": "A credit card has an annual rate of 21.9%. What is the daily interest rate, using 365 days in a year?",
+      "opts": ["0.06%", "1.83%", "0.73%", "0.6%"],
+      "why": "Daily rate = 21.9% ÷ 365 = 0.06%. Dividing by 12 gives about 1.83%, which is a monthly rate, and dividing by 30 gives 0.73%, which is not a daily rate either. 0.6% is a decimal place slip.",
+      "clue": "Divide the annual rate by the number of days in a year."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo owes $1500 on a credit card at 19.5% per year, and the interest-free period has ended. Using 365 days, what is the interest for 20 days, to the nearest cent?",
+      "opts": ["$16.03", "$24.38", "$292.50", "$0.80"],
+      "why": "Interest = 1500 × 0.195 ÷ 365 × 20 = $16.03. The $0.80 option is only one day's interest, found by 1500 × 0.195 ÷ 365 = $0.80 and not multiplied by 20 days. $24.38 divides the yearly interest by 12, which gives a month, not 20 days.",
+      "clue": "Work out one day's interest, then multiply by the number of days."
+    }
+  },
+  "mat-annuity": {
+    "title": "What an annuity is",
+    "card": [
+      "An annuity is a series of equal payments made at regular intervals. The money earns compound interest, which means interest is added to the balance and then earns interest too.",
+      "Example: Sam puts $200 into a savings account at the end of every month. The payments are equal and regular, and the balance earns compound interest. This is an annuity.",
+      "An annuity can be money you pay in, such as regular saving. The payment amount and the time between payments stay the same each time.",
+      "A single deposit that is left alone is not an annuity. A set of deposits of different sizes, or made at random times, is not an annuity either."
+    ],
+    "remember": "An annuity is equal payments at regular intervals, earning compound interest.",
+    "a": {
+      "q": "Which of these is an annuity?",
+      "opts": [
+        "Paying $150 into a savings account every month",
+        "Paying $5000 into a savings account once",
+        "Paying in $100, then $300, then $50 each year",
+        "Paying $150 into an account on days chosen at random"
+      ],
+      "why": "The $150 deposit every month is equal and regular, and it earns compound interest in the account. The single $5000 deposit is tempting because it earns interest, but it is only one payment, so it is not a series.",
+      "clue": "Look for equal amounts and a regular gap."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which of these savings plans is an annuity?",
+      "opts": [
+        "Ella saves $80 at the end of each fortnight in an account",
+        "Raj deposits $1000 once and leaves it for ten years",
+        "Tia saves $50, then $70, then $90 on the first of each month",
+        "Leo deposits $60 whenever he has spare cash"
+      ],
+      "why": "Ella pays the same amount at regular intervals into an account that earns compound interest. Tia's payments are regular but they are not equal, so her plan does not fit. Raj's plan earns compound interest but has only one payment.",
+      "clue": "Check both the size of each payment and the timing."
+    }
+  },
+  "mat-future-value-annuity": {
+    "title": "Future value of an annuity",
+    "card": [
+      "The future value of an annuity is the total it grows to, including every payment and all the interest earned. Interest is paid on each payment from the day it goes in.",
+      "A table of future value interest factors gives a number for each interest rate per period and number of periods. The rate and periods must match how often payments are made.",
+      "Future value = payment × factor. A spreadsheet can also give the answer.",
+      "Example: $200 is paid in at the end of each year for 3 years at 5% p.a. The factor for 5% and 3 periods is 3.1525. Future value = 200 × 3.1525 = $630.50."
+    ],
+    "remember": "Future value = payment × table factor, using the rate and periods that match each payment.",
+    "a": {
+      "q": "An annuity pays $500 at the end of each year. For its rate and term, the future value factor is 4.3101. What is the future value?",
+      "opts": ["$2155.05", "$116.00", "$500.00", "$2500.00"],
+      "why": "Future value = 500 × 4.3101 = $2155.05. Dividing by the factor gives a much smaller number, because the factor is a multiplier that includes interest. That is a common mistake.",
+      "clue": "Multiply the payment by the factor."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila saves $300 at the end of each quarter for 2 years at 8% p.a. compounded quarterly. Which factor should she use from the table?",
+      "opts": ["2% per period, 8 periods", "8% per period, 2 periods", "2% per period, 2 periods", "8% per period, 8 periods"],
+      "why": "Payments are quarterly, so the rate is 8% ÷ 4 = 2% per quarter. Two years has 2 × 4 = 8 quarters, so there are 8 periods. Using 8% and 2 periods matches the yearly figures, not the quarterly payments.",
+      "clue": "Change both the rate and the term to quarters."
+    }
+  },
+  "mat-present-value-from-tables": {
+    "title": "Present value from tables",
+    "card": [
+      "The present value of an annuity is the single amount that, invested now, would grow to the same total as the annuity. It is a lump sum today that matches the regular payments.",
+      "Present value = payment × present value factor. The factor comes from a table, found using the interest rate per period and the number of periods.",
+      "Rate per period = annual rate ÷ periods per year. Number of periods = years × periods per year. Example: 6% p.a. paid monthly for 2 years is 0.5% per month for 24 periods.",
+      "Worked example: $1000 paid each year for 3 years at 2% p.a. The table factor is 2.8839. Present value = 1000 × 2.8839 = $2883.90."
+    ],
+    "remember": "Present value = payment × table factor, using the rate and periods for each payment.",
+    "a": {
+      "q": "An annuity pays $2000 each year for 5 years at 2% p.a. The table factor for 2% and 5 periods is 4.7135. What is its present value?",
+      "opts": ["$9427.00", "$424.31", "$10 000.00", "$2004.71"],
+      "why": "Present value = 2000 × 4.7135 = $9427.00. Dividing by the factor gives $424.31, which reverses the method. The factor is multiplied by the payment.",
+      "clue": "The payment and the factor are combined by one operation."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia wants the lump sum today that matches $300 paid each month for 3 years at 6% p.a. compounded monthly. Which table factor does she need?",
+      "opts": [
+        "0.5% per period, 36 periods",
+        "6% per period, 3 periods",
+        "0.5% per period, 3 periods",
+        "6% per period, 36 periods"
+      ],
+      "why": "Payments are monthly, so the rate is 6% ÷ 12 = 0.5% per month and the periods are 3 × 12 = 36. Using 6% and 3 periods uses the annual figures, which do not match monthly payments.",
+      "clue": "Both the rate and the number of periods must match how often payments are made."
+    }
+  },
+  "mat-loan-repayments": {
+    "title": "Loan repayments",
+    "card": [
+      "A loan is the present value of all its repayments. It is the amount that, paid in one go today, equals the repayments in value.",
+      "So loan = repayment × present value factor. The factor comes from the table, using the interest rate per period and the number of periods.",
+      "To find the repayment, divide: repayment = loan ÷ factor. Match the rate to the repayment period, so monthly repayments need a monthly rate.",
+      "Example: a $10 000 loan has a factor of 11.2551 for 12 monthly repayments at 1% per month. Repayment = 10 000 ÷ 11.2551 = $888.49."
+    ],
+    "remember": "Repayment = loan ÷ present value factor.",
+    "a": {
+      "q": "Anna borrows $15 000. The table gives a present value factor of 5 for her rate and term. What is each repayment?",
+      "opts": ["$3000", "$75 000", "$14 995", "$15 005"],
+      "why": "The loan equals repayment × factor, so repayment = 15 000 ÷ 5 = $3000. Multiplying gives $75 000, but that mixes up which amount is the total and which is the factor's multiple.",
+      "clue": "The loan is the repayment times the factor."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom borrows $25 000 and repays it in 12 equal monthly repayments at 1% per month. The table factor is 11.2551. What is each repayment, to the nearest cent?",
+      "opts": ["$2221.22", "$2083.33", "$2333.33", "$281 377.50"],
+      "why": "Repayment = 25 000 ÷ 11.2551 = $2221.22. Dividing by 12 gives $2083.33, but that ignores interest, so it is too low. Adding a flat 1% of the loan to that gives $2333.33, which is not how the table works.",
+      "clue": "Divide the loan by the factor. Interest is already built into the factor."
+    }
+  },
+  "mat-total-interest-loan": {
+    "title": "Total interest on a loan",
+    "card": [
+      "The total paid on a loan = repayment × number of repayments. Total interest = total paid − amount borrowed.",
+      "Example: Sam borrows $10 000 and repays $450 a month for 24 months. Total paid = 450 × 24 = $10 800. Total interest = 10 800 − 10 000 = $800.",
+      "A longer term makes each repayment smaller, because the loan is spread over more payments.",
+      "A longer term also means interest is charged for more time, so the total interest is usually much larger."
+    ],
+    "remember": "Total interest = total paid − amount borrowed. A longer term means smaller repayments but more interest.",
+    "a": {
+      "q": "Priya borrows $8000 and repays $250 a month for 36 months. What is the total interest?",
+      "opts": ["$1000", "$9000", "$750", "$8250"],
+      "why": "Total paid = 250 × 36 = $9000. Total interest = 9000 − 8000 = $1000. The $9000 is the total paid, not the interest, because the amount borrowed has not yet been taken off.",
+      "clue": "Find the total paid first, then take off the amount borrowed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom borrows $20 000. Plan A: $620 a month for 36 months. Plan B: $390 a month for 60 months. Which statement is correct?",
+      "opts": [
+        "Plan B has $1080 more interest than Plan A",
+        "Plan A has $1080 more interest than Plan B",
+        "Plan B has $3400 more interest than Plan A",
+        "Plan A and Plan B have the same total interest"
+      ],
+      "why": "Plan A total = 620 × 36 = $22 320, so interest is $2320. Plan B total = 390 × 60 = $23 400, so interest is $3400. Plan B costs $1080 more in interest, even though its repayments are smaller.",
+      "clue": "Work out the interest for each plan, then compare them."
+    }
+  },
+  "mat-elevation-depression": {
+    "title": "Elevation and depression",
+    "card": [
+      "Both angles are measured from a horizontal line, the level line through the eye of the person looking.",
+      [
+        "Angle of elevation",
+        "the angle from the horizontal up to the line of sight, such as looking up at a flagpole top."
+      ],
+      [
+        "Angle of depression",
+        "the angle from the horizontal down to the line of sight, such as looking down from a balcony to a car."
+      ],
+      "The two horizontal lines are parallel, so the angle of depression from A to B equals the angle of elevation from B to A. A right triangle drawn from the heights and distances then lets you find the missing length."
+    ],
+    "remember": "Measure from the horizontal: up is elevation, down is depression. The matching pair are equal.",
+    "a": {
+      "q": "Priya stands at the bottom of a hill and looks up at a tower on top. The angle between the horizontal and her line of sight is called the:",
+      "opts": ["Angle of elevation", "Angle of depression", "Angle of the vertical", "Angle of the hill"],
+      "why": "Her line of sight goes up from the horizontal, so the angle is one of elevation. Depression is used only when the line of sight goes down from the horizontal.",
+      "clue": "Does her line of sight go up or down from the horizontal?"
+    },
+    "b": {
+      "d": 3,
+      "q": "From the top of a lighthouse, the angle of depression to a boat is 20°. What is the angle of elevation from the boat to the top of the lighthouse?",
+      "opts": ["20°", "70°", "110°", "160°"],
+      "why": "The horizontal lines at the top and at the boat are parallel, so the two angles are equal and the elevation is 20°. 70° is tempting, but that is the angle between the line of sight and the lighthouse, not the horizontal.",
+      "clue": "The two horizontal lines are parallel."
+    }
+  },
+  "mat-true-compass-bearings": {
+    "title": "True and compass bearings",
+    "card": [
+      [
+        "True bearing",
+        "a three-figure angle measured clockwise from north, such as 045°T or 135°T. North is 000°T, east is 090°T, south is 180°T and west is 270°T."
+      ],
+      [
+        "Compass bearing",
+        "an angle from north or south turned towards east or west, such as S45°E. Start facing south, then turn 45° towards east."
+      ],
+      "To convert: N θ E = θ. S θ E = 180 − θ. S θ W = 180 + θ. N θ W = 360 − θ.",
+      "Example: S30°W is 30° past south towards west, so the true bearing is 180 + 30 = 210°T."
+    ],
+    "remember": "True bearings turn clockwise from north. Compass bearings turn from north or south.",
+    "a": {
+      "q": "What is the true bearing of N40°W?",
+      "opts": ["320°T", "040°T", "140°T", "220°T"],
+      "why": "N40°W is 40° from north towards west, which is 40° short of a full turn: 360 − 40 = 320°T. 040°T is wrong because that is N40°E, towards east.",
+      "clue": "West is anticlockwise from north."
+    },
+    "b": {
+      "d": 3,
+      "q": "A ship leaves port on a true bearing of 250°T. What is its compass bearing?",
+      "opts": ["S70°W", "S20°W", "N70°W", "S70°E"],
+      "why": "250° lies between south (180°) and west (270°). It is 250 − 180 = 70° past south towards west, so S70°W. S20°W is wrong because it is 20° past south, which is 200°T.",
+      "clue": "250° is between south at 180° and west at 270°."
+    }
+  },
+  "mat-ratios": {
+    "title": "Ratios",
+    "card": [
+      "A ratio compares quantities of the same kind in the same unit. Simplify it by dividing every part by the same number, as with fractions. For example, 12 : 18 = 2 : 3 after dividing by 6.",
+      "If the units differ, change them to the same unit first. 50 cm to 2 m becomes 50 : 200, which simplifies to 1 : 4.",
+      "To share a quantity in a ratio, add the parts to get the total number of parts. Divide the quantity by this total to find the value of one part.",
+      "Multiply one part by each ratio number. Sharing $600 in the ratio 2 : 3 gives 2 + 3 = 5 parts. One part is $600 ÷ 5 = $120, so the shares are $240 and $360."
+    ],
+    "remember": "Add the parts, divide to find one part, then multiply by each ratio number.",
+    "a": {
+      "q": "Ava and Ben share $450 in the ratio 4 : 5. How much does Ben get?",
+      "opts": ["$250", "$200", "$360", "$90"],
+      "why": "There are 4 + 5 = 9 parts, so one part is $450 ÷ 9 = $50. Ben gets 5 × $50 = $250. $200 is Ava's share, and it is the tempting wrong option.",
+      "clue": "Add the parts first, then find one part."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia mixes 750 mL of cordial with 3 L of water. What is the ratio of cordial to water in simplest form?",
+      "opts": ["1 : 4", "1 : 40", "250 : 1", "3 : 4"],
+      "why": "Change 3 L to 3000 mL. The ratio 750 : 3000 simplifies by dividing both by 750 to give 1 : 4. Writing 750 : 3 and simplifying to 250 : 1 is wrong because the units were not the same.",
+      "clue": "Put both amounts in the same unit before simplifying."
+    }
+  },
+  "mat-scale-drawings-plans": {
+    "title": "Scale drawings and plans",
+    "card": [
+      "A scale such as 1 : 100 means 1 unit on the plan stands for 100 of the same units in real life. So 1 cm on the plan is 100 cm in real life.",
+      "To find a real length, multiply the plan length by the scale number. To find a plan length, divide the real length by it. Then change units if needed: 100 cm = 1 m.",
+      "Areas scale by the square of the scale number. With a scale of 1 : 100, 1 cm² on the plan is 100 × 100 = 10 000 cm² in real life.",
+      "Worked example: a room is 5 cm by 4 cm on a 1 : 50 plan. Real size = 250 cm by 200 cm = 2.5 m by 2 m. Real area = 2.5 × 2 = 5 m²."
+    ],
+    "remember": "Multiply lengths by the scale number. For areas, multiply by the scale number squared.",
+    "a": {
+      "q": "A wall is 6 cm long on a plan with a scale of 1 : 200. How long is the real wall?",
+      "opts": ["12 m", "1.2 m", "30 m", "120 m"],
+      "why": "Real length = 6 × 200 = 1200 cm, which is 12 m because 100 cm = 1 m. The option 120 m comes from dividing by 10 instead of 100 when changing units.",
+      "clue": "Multiply by 200, then change cm to m."
+    },
+    "b": {
+      "d": 3,
+      "q": "A courtyard measures 3 cm by 2 cm on a plan with a scale of 1 : 500. What is its real area?",
+      "opts": ["150 m²", "30 m²", "1500 m²", "75 000 m²"],
+      "why": "Real sides are 3 × 500 = 1500 cm = 15 m and 2 × 500 = 1000 cm = 10 m. Area = 15 × 10 = 150 m². The option 1500 m² comes from multiplying the plan area (6 cm²) by 500 instead of by 500².",
+      "clue": "Find both real sides in metres first, then multiply."
+    }
+  },
+  "mat-rates-conversions": {
+    "title": "Rates and conversions",
+    "card": [
+      "A rate compares two quantities with different units, such as km/h (kilometres per hour) or $/kg (dollars per kilogram). The word per means for each one.",
+      "To find a rate, divide the first quantity by the second. If 3 kg of apples cost $12, the rate is $12 ÷ 3 kg = $4/kg.",
+      "To convert a rate, change each unit separately. For km/h to m/s, multiply by 1000, as 1 km is 1000 m. Then divide by 3600: an hour has 3600 seconds, so the distance in one second is smaller.",
+      "Example: 72 km/h = 72 × 1000 ÷ 3600 = 20 m/s. To go back from m/s to km/h, multiply by 3.6."
+    ],
+    "remember": "Change each unit on its own: km to m (×1000) and per hour to per second (÷3600).",
+    "a": {
+      "q": "A cyclist travels at 18 km/h. What is this speed in m/s?",
+      "opts": ["5 m/s", "64.8 m/s", "0.3 m/s", "18 000 m/s"],
+      "why": "18 × 1000 = 18 000 m per hour, and 18 000 ÷ 3600 = 5 m/s. Multiplying by 3.6 gives 64.8, which is the conversion from m/s to km/h, so it is the wrong way round.",
+      "clue": "Change km to m, then per hour to per second."
+    },
+    "b": {
+      "d": 3,
+      "q": "A tap fills a tank at 90 litres per minute. What is this rate in litres per second?",
+      "opts": ["1.5 L/s", "5400 L/s", "0.67 L/s", "0.025 L/s"],
+      "why": "A minute has 60 seconds, so each second gives 90 ÷ 60 = 1.5 litres. Multiplying by 60 gives 5400, which is the rate per hour, not per second. Dividing by 3600 treats a minute as if it were an hour.",
+      "clue": "Will the amount in one second be smaller or larger than in one minute?"
+    }
+  },
+  "mat-energy-power": {
+    "title": "Energy and power",
+    "card": [
+      ["Power", "how fast an appliance uses energy. It is measured in watts (W). 1 kilowatt (kW) = 1000 W."],
+      [
+        "Energy",
+        "the total amount used. Energy = power × time. With power in kW and time in hours, energy is in kilowatt-hours (kWh)."
+      ],
+      "Electricity is billed by the kWh. Cost = kWh used × price per kWh. Change watts to kW first by dividing by 1000.",
+      "Example: a 2000 W heater runs for 3 hours. 2000 W = 2 kW. Energy = 2 × 3 = 6 kWh. At 30 cents per kWh, the cost is 6 × 30 = 180 cents, or $1.80."
+    ],
+    "remember": "Change watts to kW, then multiply by hours to get kWh, then by the price.",
+    "a": {
+      "q": "A 500 W microwave runs for 2 hours. How much energy does it use?",
+      "opts": ["1 kWh", "1000 kWh", "250 kWh", "0.25 kWh"],
+      "why": "500 W = 0.5 kW, so energy = 0.5 × 2 = 1 kWh. 1000 kWh comes from not dividing by 1000 at all: 500 × 2 = 1000 is in watt-hours, not kWh.",
+      "clue": "Divide watts by 1000 before multiplying by time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi runs a 1500 W heater for 4 hours. Electricity costs 25 cents per kWh. What is the cost?",
+      "opts": ["$1.50", "$0.38", "$150.00", "$1500.00"],
+      "why": "1500 W = 1.5 kW, so energy = 1.5 × 4 = 6 kWh. Cost = 6 × 25 = 150 cents, which is $1.50. $150.00 treats 150 cents as dollars, and $1500.00 comes from using 1500 W instead of 1.5 kW.",
+      "clue": "Find kWh first, then the cost in cents, then change to dollars."
+    }
+  },
+  "mat-speed-distance-time": {
+    "title": "Speed, distance and time",
+    "card": [
+      "Speed = distance ÷ time. Rearranged, distance = speed × time and time = distance ÷ speed. Keep the units matching, such as km with hours.",
+      "Worked example: a cyclist rides 45 km in 3 hours. Speed = 45 ÷ 3 = 15 km/h. At 15 km/h, 20 km takes 20 ÷ 15 = 1.33 hours.",
+      "On a distance-time graph, time is across and distance is up. The gradient (rise ÷ run) is the speed, so a steeper line means a faster speed.",
+      "A flat line means distance is not changing, so the object is stopped. A line going back down towards zero means the object is returning to the start."
+    ],
+    "remember": "Speed = distance ÷ time, and on a distance-time graph the gradient is the speed.",
+    "a": {
+      "q": "A train travels 240 km at a steady speed of 80 km/h. How long does the trip take?",
+      "opts": ["3 hours", "0.33 hours", "320 hours", "19 200 hours"],
+      "why": "Time = distance ÷ speed = 240 ÷ 80 = 3 hours. Dividing speed by distance instead gives 0.33, which flips the rearranged formula.",
+      "clue": "Time is distance divided by speed."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a distance-time graph, Priya's line rises from 0 km at 0 h to 12 km at 2 h. It then stays flat until 3 h. What is her average speed over the first 2 hours, and what does the flat part show?",
+      "opts": [
+        "6 km/h, and she is stopped",
+        "6 km/h, and she is moving slowly",
+        "4 km/h, and she is stopped",
+        "4 km/h, and she is moving slowly"
+      ],
+      "why": "Speed is the gradient: 12 ÷ 2 = 6 km/h. A flat line means distance is not changing, so she is stopped, not moving slowly. Dividing by 3 hours gives 4 km/h, but the first stage lasts only 2 hours.",
+      "clue": "Use only the first 2 hours, and ask what a gradient of zero means."
+    }
+  },
+  "mat-fuel-consumption": {
+    "title": "Fuel consumption",
+    "card": [
+      "Fuel consumption is the number of litres a car uses to travel 100 km. It is written as L/100 km. A lower number means the car uses less fuel.",
+      "To find the fuel for a trip, use: fuel (L) = consumption ÷ 100 × distance (km). Divide by 100 first to get the litres used per kilometre.",
+      "To find the cost, multiply the litres by the price per litre. Cost = fuel used × price per litre.",
+      "Example: a car uses 8 L/100 km and petrol costs $2 per litre. A 250 km trip uses 8 ÷ 100 × 250 = 20 L. The cost is 20 × $2 = $40."
+    ],
+    "remember": "Fuel used = consumption ÷ 100 × distance. Then multiply by the price per litre for the cost.",
+    "a": {
+      "q": "A car uses 6 L/100 km. How much fuel does it use on a 350 km trip?",
+      "opts": ["21 L", "58.3 L", "1.7 L", "2100 L"],
+      "why": "Fuel = 6 ÷ 100 × 350 = 21 L. Dividing 350 by 6 gives 58.3, but dividing the distance by the consumption does not give litres. The fuel used comes from multiplying the litres per kilometre by the distance.",
+      "clue": "Find the litres used for each kilometre, then multiply by the distance."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's van uses 9.5 L/100 km. Fuel costs $1.80 per litre. What is the fuel cost of a 400 km trip?",
+      "opts": ["$68.40", "$38.00", "$6.84", "$17.10"],
+      "why": "Fuel = 9.5 ÷ 100 × 400 = 38 L. Cost = 38 × $1.80 = $68.40. The answer $38.00 is the number of litres, so the cost step is still needed, and $17.10 is only the cost of 100 km.",
+      "clue": "Find the litres first, then use the price."
+    }
+  },
+  "mat-flow-networks": {
+    "title": "Flow networks",
+    "card": [
+      "A flow network is a directed network, so each edge has an arrow showing the way flow can go. Flow might be cars on roads, water in pipes or data in cables.",
+      ["Source", "the vertex where the flow starts. Nothing flows into it along the network."],
+      ["Sink", "the vertex where the flow ends. Nothing flows out of it along the network."],
+      "Each edge has a capacity, the most it can carry in a set time, such as 40 cars an hour. The flow along an edge can be anything from 0 up to its capacity, and only in the direction of the arrow."
+    ],
+    "remember": "A flow network has arrows, a source, a sink and a capacity on every edge.",
+    "a": {
+      "q": "In a flow network of roads, an edge from P to Q is labelled 40. What does this mean?",
+      "opts": [
+        "Up to 40 cars an hour can travel from P to Q",
+        "Exactly 40 cars an hour must travel from P to Q",
+        "Up to 40 cars an hour can travel either way",
+        "The road from P to Q is 40 kilometres long"
+      ],
+      "why": "The label is the capacity, the most the edge can carry in a set time, and the arrow gives the direction. Exactly 40 is wrong because the flow can be anything from 0 up to the capacity.",
+      "clue": "Capacity is a limit on the flow, in one direction."
+    },
+    "b": {
+      "d": 2,
+      "q": "A flow network of pipes has one source and one sink. Every arrow at vertex W points away from W, and every arrow at vertex K points towards K. Which is correct?",
+      "opts": [
+        "W is the source and K is the sink",
+        "K is the source and W is the sink",
+        "W and K are both sinks",
+        "W and K are both sources"
+      ],
+      "why": "Nothing flows into W, so flow can only start there, which makes W the source. Nothing flows out of K, so flow ends there, which makes K the sink. Swapping them is wrong because the source is where arrows leave, not where they arrive.",
+      "clue": "Flow starts where nothing comes in."
+    }
+  },
+  "mat-cuts": {
+    "title": "Cuts",
+    "card": [
+      "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
+      "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
+      "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
+      "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+    ],
+    "remember": "Add only the edges that go from the source side to the sink side.",
+    "a": {
+      "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
+      "opts": ["10", "16", "8", "14"],
+      "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+      "clue": "Count only the edges that start on the source side and end on the sink side."
+    },
+    "b": {
+      "d": 3,
+      "q": "The edges are S to A (9), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
+      "opts": ["14", "18", "10", "12"],
+      "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+      "clue": "Check the direction of each edge that crosses the cut."
+    }
+  },
+  "mat-maximum-flow-minimum-cut": {
+    "title": "Maximum flow and minimum cut",
+    "card": [
+      "A cut splits a network into a source side and a sink side, as in the last point. Every unit of flow must cross each cut to reach the sink.",
+      "So no flow can be bigger than the capacity of any cut. The cut with the smallest capacity is called the minimum cut, and it is the tightest limit.",
+      "Maximum flow = capacity of the minimum cut. If a flow you find equals the capacity of some cut, that flow is the maximum and that cut is the minimum.",
+      "Example: a network's cuts have capacities 12, 9 and 15. The maximum flow is 9. Finding a flow of 9 confirms it, since no flow can get past the cut of 9."
+    ],
+    "remember": "The tightest cut sets the limit: maximum flow = minimum cut.",
+    "a": {
+      "q": "A network has exactly three cuts, with capacities 14, 11 and 17. What is the maximum flow through the network?",
+      "opts": ["11", "14", "17", "42"],
+      "why": "The maximum flow equals the capacity of the minimum cut, which is 11. Choosing 17 is tempting, but all the flow must also cross the cut of 11, so it cannot be more than 11. Adding the cuts to get 42 has no meaning.",
+      "clue": "Which cut is the tightest limit?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ava finds a way to send 15 kL per hour through a pipe network. She also finds a cut with a capacity of 15 kL per hour. What can she conclude?",
+      "opts": [
+        "15 kL per hour is the maximum flow",
+        "The maximum flow could be more than 15 kL per hour",
+        "Another cut could have a capacity under 15 kL per hour",
+        "The maximum flow is less than 15 kL per hour"
+      ],
+      "why": "No flow can be bigger than any cut, so no flow can pass the cut of 15, and 15 is the maximum. Thinking a bigger flow might exist is tempting, but it would have to cross that cut. Also, no cut can be under 15, since Ava's flow of 15 crosses every cut.",
+      "clue": "Can any flow be bigger than a cut it has to cross?"
+    }
+  },
+  "mat-flow-practice": {
+    "title": "Flow in practice",
+    "card": [
+      "A bottleneck is an edge or set of edges that limits the maximum flow. It is found by looking at the minimum cut, because those edges are full when the flow is at its maximum.",
+      "Example: a network has two roads in a row. Road 1 carries 8 cars a minute and road 2 carries 5. The most that can get through is 5, so road 2 is the bottleneck.",
+      "Raising the capacity of a bottleneck edge raises every cut that contains it. The new maximum flow is the new smallest cut, which may be a different cut that does not contain that edge.",
+      "Raising the capacity of an edge that is not in the minimum cut does not change the maximum flow, as the minimum cut stays the same."
+    ],
+    "remember": "To raise the flow, widen an edge in the minimum cut, and check the new smallest cut.",
+    "a": {
+      "q": "Two pipes join in a line. Pipe A carries 12 litres a minute and pipe B carries 7. What is the maximum flow, and where is the bottleneck?",
+      "opts": [
+        "7 litres a minute, at pipe B",
+        "7 litres a minute, at pipe A",
+        "12 litres a minute, at pipe A",
+        "19 litres a minute, at pipe B"
+      ],
+      "why": "Water must pass through both pipes in turn, so the flow cannot be more than the smaller capacity, 7. Pipe B is full at that flow, so it is the bottleneck. Pipe A is not full, so it is not the limit.",
+      "clue": "Which pipe is the smaller one in the line?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A data network has source S and sink T. Its minimum cut is 20 Mb/s, made up of edges P (12) and Q (8). The next smallest cut is 26 Mb/s and does not contain P. P is raised from 12 to 20. What is the new maximum flow?",
+      "opts": ["26 Mb/s", "28 Mb/s", "20 Mb/s", "32 Mb/s"],
+      "why": "Raising P lifts the first cut to 20 − 12 + 20 = 28. The 26 Mb/s cut does not contain P, so it stays at 26 and is now the smallest, so the maximum flow is 26. Adding 8 to get 28 is tempting, but the flow cannot pass the new smallest cut.",
+      "clue": "Work out the old cut's new capacity, then compare it with the other cut."
+    }
+  },
+  "mat-activity-networks": {
+    "title": "Activity networks",
+    "card": [
+      "A big project is split into smaller jobs called activities. An activity network shows them as a diagram.",
+      "Each activity is an edge (an arrow) with a letter and its duration, such as A, 3 for an activity A that takes 3 hours. Each arrow points in the direction of time.",
+      "Some activities must wait for others. A vertex (a circle) is where arrows meet, and any activity leaving a vertex cannot start until every activity arriving at it is finished.",
+      "Example: A, 2 leads to a vertex. Two arrows leave it: B, 4 and C, 3. B and C can only start once A is done. B and C do not wait for each other."
+    ],
+    "remember": "In an activity network, edges are activities with durations, and an activity waits for all arrows into its starting vertex.",
+    "a": {
+      "q": "In an activity network, activities D and E both arrive at a vertex, and activity F leaves it. When can F start?",
+      "opts": [
+        "Once both D and E are finished",
+        "As soon as D is finished",
+        "As soon as E is finished",
+        "At the same time as D and E"
+      ],
+      "why": "F leaves the vertex, so it must wait for every activity arriving there. That means both D and E must be finished. Starting after only one of them is tempting, but F would then begin before the other is done.",
+      "clue": "An activity waits for everything arriving at its starting vertex."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia plans a school fair. Activity P, 3 days (book the hall) leads to a vertex. Activities Q, 2 days (print posters) and R, 4 days (hire tables) both leave that vertex. Which statement is correct?",
+      "opts": [
+        "Q and R can both start once P is finished",
+        "Q can start only after R is finished",
+        "R can start before P is finished",
+        "P can start only after Q and R are finished"
+      ],
+      "why": "Q and R both leave the vertex where P arrives, so each must wait for P and no other activity. They do not wait for each other. P is before them, so it cannot wait for Q or R.",
+      "clue": "Look at which arrows enter the vertex and which leave it."
+    }
+  },
+  "mat-earliest-starting-times": {
+    "title": "Earliest starting times",
+    "card": [
+      "The earliest starting time (EST) of an activity is the soonest it can begin. Activities with nothing before them start at 0.",
+      "Scan forward: an activity finishes at its own EST plus its own duration. The next activity's EST is the largest finish time of the activities leading into it, since it must wait for all of them.",
+      [
+        "Example",
+        "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is 0 + 3 = 3. D (3 days) follows A and B, which finish at 3 and 5, so its EST is 5."
+      ],
+      "E (3 days) follows C and D. C finishes at 3 + 4 = 7 and D at 5 + 3 = 8, so the EST of E is 8. The project's shortest time is 8 + 3 = 11 days."
+    ],
+    "remember": "Scan forward, add durations, and take the largest total where paths meet.",
+    "a": {
+      "q": "Activity X takes 4 days and activity Y takes 6 days. Both start at 0, and activity Z can only begin after both are finished. What is the EST of Z?",
+      "opts": ["6 days", "10 days", "4 days", "2 days"],
+      "why": "Z must wait for both X and Y. X finishes at 4 and Y at 6, so Z can start at the larger value, 6. Adding them to get 10 is wrong, because X and Y run at the same time.",
+      "clue": "Z waits for the slower of the two."
+    },
+    "b": {
+      "d": 3,
+      "q": "P (2 days) and Q (4 days) both start at 0. R (5 days) follows P. S (4 days) follows P and Q. T (6 days) follows R and S. What is the shortest time to finish the project?",
+      "opts": ["14 days", "13 days", "21 days", "8 days"],
+      "why": "R finishes at 2 + 5 = 7. S starts at the larger of 2 and 4, which is 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes 8 + 6 = 14 days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
+      "clue": "Find the EST of T, then add its duration."
+    }
+  },
+  "mat-latest-starting-times": {
+    "title": "Latest starting times",
+    "card": [
+      "The latest starting time (LST) of an activity is the latest it can begin without delaying the whole project. A backward scan through the network finds it.",
+      "Start at the finish vertex. Give it the project's shortest time, which comes from the forward scan. Then work backwards, one vertex at a time.",
+      "An activity's LST is the value at the vertex it leads to, minus its duration. A vertex's value is the smallest LST of the activities leaving it.",
+      "Example: the finish vertex is 12. A (4 days) and B (7 days) both go from vertex V to the finish. A's LST is 12 − 4 = 8. B's LST is 12 − 7 = 5. V's value is the smallest, 5."
+    ],
+    "remember": "Work back from the finish: subtract each duration, and keep the smallest result at each vertex.",
+    "a": {
+      "q": "Two activities leave vertex V. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex V?",
+      "opts": ["6", "7", "13", "16"],
+      "why": "10 − 3 = 7 and 11 − 5 = 6, and a vertex takes the smallest result, so V is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
+      "clue": "Subtract each duration, then compare the two results."
+    },
+    "b": {
+      "d": 3,
+      "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the LST of activity P?",
+      "opts": ["14", "11", "26", "6"],
+      "why": "P's LST is the value at the vertex it leads to minus its duration: 20 − 6 = 14. The tempting 11 is the value at vertex X, which is set by Q, the longer activity. P can start as late as day 14 and still finish by day 20.",
+      "clue": "Use only P's duration and the vertex P leads to."
+    }
+  },
+  "mat-float-time": {
+    "title": "Float time",
+    "card": [
+      "Float is how long an activity can be delayed without delaying the whole project. Float = latest start time − earliest start time.",
+      "Always subtract the earliest start from the latest start. Never add them. Float is in the same unit as the times, such as days or hours.",
+      "Worked example: an activity has an earliest start of 6 days and a latest start of 10 days. Float = 10 − 6 = 4 days.",
+      "A float of 4 days means the activity can start up to 4 days late and the project still finishes on time. A float of 0 means there is no room to delay it."
+    ],
+    "remember": "Float is latest start minus earliest start: the spare time an activity has.",
+    "a": {
+      "q": "An activity has an earliest start time of 8 days and a latest start time of 13 days. What is its float?",
+      "opts": ["5 days", "21 days", "8 days", "13 days"],
+      "why": "Float = latest start − earliest start = 13 − 8 = 5 days. Adding the two times gives 21, but float is a difference, so you subtract.",
+      "clue": "Subtract the earlier start from the later one."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a build in Newcastle. Fitting windows has an earliest start of 14 days and a latest start of 14 days. Painting has an earliest start of 9 days and a latest start of 12 days. Which statement is correct?",
+      "opts": [
+        "Windows have 0 days float, and painting has 3 days",
+        "Windows have 14 days float, and painting has 3 days",
+        "Windows have 0 days float, and painting has 12 days",
+        "Windows have 14 days float, and painting has 21 days"
+      ],
+      "why": "Windows: 14 − 14 = 0, so there is no room to delay them. Painting: 12 − 9 = 3 days of float. Taking a latest start time on its own as the float is the tempting mistake, because float is a difference.",
+      "clue": "Work out latest start minus earliest start for each activity."
+    }
+  },
+  "mat-critical-path": {
+    "title": "The critical path",
+    "card": [
+      "The critical path is the longest path through an activity network, from start to finish. Its length is the shortest time in which the whole project can be finished.",
+      "Every activity on the critical path has zero float, so its earliest start time equals its latest start time. These are called critical activities.",
+      "A delay to any critical activity delays the whole project by the same amount. An activity off the path has float, so it can start late by up to its float without delaying the project.",
+      "Example: path A, C, E takes 3 + 5 + 4 = 12 days. Path B, D takes 4 + 6 = 10 days. The longest is A, C, E, so it is the critical path and the project takes 12 days."
+    ],
+    "remember": "The critical path is the longest path. It has no float, so any delay on it delays the project.",
+    "a": {
+      "q": "A project has three paths from start to finish. Path 1 takes 14 days, path 2 takes 17 days and path 3 takes 15 days. What is the shortest time to finish the project?",
+      "opts": ["17 days", "14 days", "15 days", "46 days"],
+      "why": "The project cannot finish until the longest path is done, so the critical path of 17 days sets the time. The shortest path of 14 days is tempting, but the project would not be finished when that path ends.",
+      "clue": "The project is only finished when every path is done."
+    },
+    "b": {
+      "d": 3,
+      "q": "In Priya's building project, activity G is on the critical path and activity H is not. Both are due to start on Monday. G is delayed by 2 days. What happens?",
+      "opts": [
+        "The whole project is delayed by 2 days",
+        "The whole project is delayed by less than 2 days",
+        "The project is not delayed, as G has float",
+        "Only activity H is delayed, by 2 days"
+      ],
+      "why": "G is critical, so it has zero float and a 2 day delay moves the finish by 2 days. The option saying G has float is tempting but wrong, because float belongs to activities off the critical path, such as H.",
+      "clue": "Critical activities have zero float."
+    }
+  },
+  "mat-scatterplots": {
+    "title": "Scatterplots",
+    "card": [
+      "A scatterplot shows pairs of numerical data as points on a graph. Each point is one person, place, object or time, with a value for each of two variables.",
+      [
+        "Explanatory variable",
+        "the variable that may explain or influence the other. It goes on the x-axis (horizontal). Choose it by asking which may explain the other, not by number size or the order measured."
+      ],
+      ["Response variable", "the variable that may respond to the change. It goes on the y-axis (vertical)."],
+      "Example: Sam records hours of study and test mark for 12 students. Hours may explain the mark, so hours go on the x-axis and mark on the y-axis. A student with 3 hours and a mark of 60 is plotted at (3, 60)."
+    ],
+    "remember": "Plot each pair as a point, with the explanatory variable on the x-axis.",
+    "a": {
+      "q": "A teacher plots the number of hours of sleep and the number of mistakes made in a maths quiz. Which variable goes on the x-axis?",
+      "opts": [
+        "Hours of sleep, as it may explain the mistakes",
+        "Mistakes, as it may explain the hours of sleep",
+        "Mistakes, as it is the larger number",
+        "Hours of sleep, as it is measured first"
+      ],
+      "why": "Sleep may influence how many mistakes are made, so it is the explanatory variable and goes on the x-axis. The size of the numbers or the order of measuring does not decide the axis.",
+      "clue": "Which variable may explain the other?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia records the daily maximum temperature and the number of ice creams sold at her stall in Byron Bay. She plots a scatterplot to see if the two are related. On Monday it was 30°C and she sold 85. Which point is plotted for Monday?",
+      "opts": ["(30, 85)", "(85, 30)", "(30, 30)", "(85, 85)"],
+      "why": "Temperature may explain sales, so it is the explanatory variable and goes on the x-axis. Monday is plotted as (30, 85). The point (85, 30) swaps the axes.",
+      "clue": "Which variable might explain the other? It is the x value."
+    }
+  },
+  "mat-correlation": {
+    "title": "Correlation",
+    "card": [
+      [
+        "Direction",
+        "In a positive relationship, y tends to increase as x increases. In a negative relationship, y tends to decrease as x increases."
+      ],
+      [
+        "Form",
+        "If the points follow a straight-line pattern, the relationship is linear. If they follow a curve, it is non-linear."
+      ],
+      [
+        "Strength",
+        "The more tightly the points cluster around the pattern, the stronger the relationship. Points that are widely spread show a weak relationship. In between is moderate."
+      ],
+      "Example: the points on a scatterplot of hours of study and test mark form a tight, upward straight-line pattern. That is a strong, positive, linear relationship."
+    ],
+    "remember": "A full description names all three: how strong, which way and what shape.",
+    "a": {
+      "q": "A scatterplot shows the age of a car and its resale value. The points fall from left to right, close to a straight line. How is the relationship described?",
+      "opts": [
+        "Strong, negative, linear",
+        "Strong, positive, linear",
+        "Weak, negative, linear",
+        "Strong, negative, non-linear"
+      ],
+      "why": "The points fall as age increases, so the direction is negative. They sit close to a straight line, so it is strong and linear. Positive is wrong because resale value goes down, not up, as age increases.",
+      "clue": "As x goes up, which way does y move?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia plots shoe size against height for her class. The points rise from left to right but are widely scattered around a straight-line pattern. Which description fits best?",
+      "opts": ["Weak, positive, linear", "Strong, positive, linear", "Weak, negative, linear", "Weak, positive, non-linear"],
+      "why": "The points rise, so the direction is positive. They are widely scattered, so the relationship is weak. They follow a straight-line pattern, so it is linear. Strong is tempting because the points rise, but strength depends on how tightly the points cluster.",
+      "clue": "Strength is about how tightly the points cluster, not just whether they rise."
+    }
+  },
+  "mat-pearson-s-correlation-coefficient": {
+    "title": "Pearson's correlation coefficient",
+    "card": [
+      "Pearson's correlation coefficient, written r, is a number that measures how strong a linear relationship is and which direction it goes. It is found with a calculator.",
+      "r is always from -1 to 1. The sign gives the direction: a positive r means y tends to rise as x rises, and a negative r means y tends to fall as x rises.",
+      "The distance from 0 gives the strength. Values close to 1 or -1 are strong, values near 0.5 or -0.5 are moderate, and values close to 0 are weak. So r = -0.9 is stronger than r = 0.6.",
+      "Example: r = -0.82 is a strong negative linear relationship. r = 0 means there is no linear relationship, but the data could still follow a curve."
+    ],
+    "remember": "The sign of r gives the direction. How close it is to 1 or -1 gives the strength.",
+    "a": {
+      "q": "A calculator gives r = -0.85 for a set of data. Which description is correct?",
+      "opts": [
+        "A strong negative linear relationship",
+        "A strong positive linear relationship",
+        "A weak negative linear relationship",
+        "A weak positive linear relationship"
+      ],
+      "why": "The negative sign means y tends to fall as x rises. The value 0.85 is close to 1, so the relationship is strong. The positive options ignore the sign, and the weak options misread how close 0.85 is to 1.",
+      "clue": "Read the sign for direction, then see how close the number is to 1 or -1."
+    },
+    "b": {
+      "d": 3,
+      "q": "Four pairs of variables have these values of r. Which pair has the strongest linear relationship?",
+      "opts": ["r = -0.92", "r = 0.75", "r = 0.10", "r = -0.48"],
+      "why": "Strength depends on the distance from 0, not on the sign. The value -0.92 is closest to -1, so it is the strongest. A common mistake is to pick 0.75 because it is the largest positive value, but a negative r can be stronger.",
+      "clue": "Ignore the signs and ask which number is closest to 1."
+    }
+  },
+  "mat-least-squares-regression-line": {
+    "title": "Least-squares regression line",
+    "card": [
+      "A least-squares regression line is the line of best fit for a scatterplot. A calculator finds it, and it is written as y = a + bx, where x is the explanatory variable and y is the response variable.",
+      "The gradient b shows how much y changes, on average, when x increases by 1. The y-intercept a is the predicted value of y when x = 0.",
+      "To predict, put a value of x into the equation and work out y. The line is used to predict y from x, not x from y.",
+      "Example: a line for a bakery is y = 20 + 3x, where x is the temperature in °C and y is the number of iced drinks sold. At x = 30, y = 20 + 3 × 30 = 110 drinks."
+    ],
+    "remember": "Put x into y = a + bx to predict y. The gradient is the change in y for each 1 increase in x.",
+    "a": {
+      "q": "A regression line is y = 20 + 3x, where x is the temperature in °C and y is the iced drinks sold. What does the gradient 3 tell us?",
+      "opts": [
+        "Each 1°C rise adds about 3 drinks sold",
+        "Each extra drink sold adds about 3°C",
+        "At 0°C, about 3 drinks are sold",
+        "At 3°C, about 20 drinks are sold"
+      ],
+      "why": "The gradient is the change in y for each 1 increase in x. Here, y is drinks and x is temperature, so each 1°C rise adds about 3 drinks. The value 20 is the y-intercept, so saying 3 drinks are sold at 0°C mixes up the gradient and the intercept.",
+      "clue": "Gradient is the change in y for a 1 unit rise in x."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ravi's regression line is y = 12 + 2x, where x is the hours studied and y is the test mark. What mark does the line predict for 8 hours of study?",
+      "opts": ["28", "20", "112", "22"],
+      "why": "Put x = 8 into the line: y = 12 + 2 × 8 = 12 + 16 = 28. Answering 112 comes from adding 12 and 2 first, then multiplying by 8: (12 + 2) × 8 = 112. That ignores the order of operations, as the multiplication must be done before the addition.",
+      "clue": "Multiply 2 by 8 before you add 12."
+    }
+  },
+  "mat-interpolation-extrapolation": {
+    "title": "Interpolation and extrapolation",
+    "card": [
+      "A regression line can be used to predict values. The range of the data runs from the smallest to the largest x-value in the data set.",
+      [
+        "Interpolation",
+        "predicting for an x-value inside the range of the data. It is fairly reliable, because the line is built from data on both sides of that value."
+      ],
+      [
+        "Extrapolation",
+        "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
+      ],
+      "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+    ],
+    "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
+    "a": {
+      "q": "A line of best fit is drawn using data with x-values from 20 to 50. Which prediction is an example of extrapolation?",
+      "opts": ["Predicting y when x = 70", "Predicting y when x = 35", "Predicting y when x = 22", "Predicting y when x = 48"],
+      "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+      "clue": "Compare each x-value with the data the line was built from."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dana records the hours of study (from 2 to 10 hours) and the test scores of 30 students. She uses her line to predict scores for 6 hours and for 14 hours. Which statement is correct?",
+      "opts": [
+        "The 6 hour prediction is more reliable than the 14 hour one",
+        "The 14 hour prediction is more reliable than the 6 hour one",
+        "Both predictions are equally reliable, as they use one line",
+        "Neither prediction is reliable, as it is only an estimate"
+      ],
+      "why": "The value 6 hours is inside the range of 2 to 10, so it is interpolation and fairly reliable. The value 14 hours is outside the range, so it is extrapolation and less reliable, even though both use the same line.",
+      "clue": "Which prediction has data on both sides of it?"
+    }
+  },
+  "mat-correlation-causation": {
+    "title": "Correlation and causation",
+    "card": [
+      "Correlation means two variables move together. Causation means a change in one variable produces a change in the other.",
+      "A strong correlation does not prove causation. The data only shows that the variables move together, not why.",
+      [
+        "Third factor",
+        "a separate variable that affects both of the others and makes them move together. Ice cream sales and sunburn cases both rise in hot weather, so temperature is a third factor."
+      ],
+      "To claim causation, there needs to be more than a scatterplot or a value of r. A reasonable explanation for how one variable affects the other is needed, and third factors need to be ruled out."
+    ],
+    "remember": "Moving together does not prove one causes the other. Look for a third factor.",
+    "a": {
+      "q": "A town finds a strong positive correlation between the number of fire trucks sent to a fire and the damage done. What is the best conclusion?",
+      "opts": [
+        "The correlation alone does not show trucks cause damage",
+        "Sending more fire trucks causes more damage to buildings",
+        "Damage causes fewer fire trucks to be sent to a fire",
+        "The correlation is an error, as r cannot be positive here"
+      ],
+      "why": "A correlation shows only that the variables move together. A third factor, the size of the fire, probably leads to both more trucks and more damage. Saying the trucks cause the damage is the tempting mistake.",
+      "clue": "Think about what makes both numbers larger."
+    },
+    "b": {
+      "d": 3,
+      "q": "Data from a city shows that suburbs with more swimming pools have more cases of heat stroke. Which is the most likely reason?",
+      "opts": [
+        "Hotter suburbs have more pools and more heat stroke",
+        "Owning a pool causes heat stroke in the owner",
+        "Heat stroke leads people to build pools at home",
+        "Pools and heat stroke are unrelated, so r must be 0"
+      ],
+      "why": "Hot weather is a third factor that could lead to both more pools and more heat stroke. Claiming pools cause heat stroke treats the correlation as causation. The data show the variables move together, so r is not 0.",
+      "clue": "Look for a separate factor that affects both variables."
+    }
+  },
+  "mat-relative-frequency": {
+    "title": "Relative frequency",
+    "card": [
+      "A trial is one go at an experiment, such as one roll of a die. An event is an outcome you are counting, such as rolling a 6.",
+      "Relative frequency = number of times the event happened ÷ number of trials. It can be written as a fraction, a decimal or a percentage.",
+      "Example: Sam flips a drawing pin 50 times and it lands point up 30 times. Relative frequency = 30 ÷ 50 = 3/5 = 0.6 = 60%.",
+      "Relative frequency is used as an estimate of probability when the true value is not known. More trials usually give a better estimate."
+    ],
+    "remember": "Relative frequency = times it happened ÷ total trials. More trials usually give a better estimate.",
+    "a": {
+      "q": "A spinner is spun 40 times and lands on red 14 times. What is the relative frequency of red?",
+      "opts": ["14/40 = 0.35", "14/26 = 0.54", "40/14 = 2.86", "26/40 = 0.65"],
+      "why": "Relative frequency = 14 ÷ 40 = 0.35. The tempting option 14/26 divides by the number of non-red spins, but the total number of trials must go on the bottom.",
+      "clue": "Divide by the total number of spins."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena tests a coin she thinks is unfair. After 10 flips she gets 7 heads. Her friend Ravi flips the same coin 500 times and gets 270 heads. Which estimate of the probability of heads is likely to be better?",
+      "opts": [
+        "Ravi's 270/500, because it uses more trials",
+        "Lena's 7/10, because it is a higher value",
+        "Lena's 7/10, because she suspects the coin is unfair",
+        "Both are equally good, because it is one coin"
+      ],
+      "why": "More trials usually give a better estimate of probability, so Ravi's 270 ÷ 500 = 0.54 is likely closer to the true value. Lena's 7/10 = 0.7 comes from only 10 flips, so luck can change it a lot. Using the same coin does not make a short run as reliable as a long one.",
+      "clue": "With only a few flips, how much can luck change the result?"
+    }
+  },
+  "mat-expected-frequency": {
+    "title": "Expected frequency",
+    "card": [
+      "Expected frequency is the number of times an event is expected to happen in a set number of trials. It is a prediction, not a promise.",
+      "Expected frequency = probability × number of trials.",
+      "Example: the probability of rain on a day in a town is 0.2. Over 150 days, the expected number of rainy days is 0.2 × 150 = 30.",
+      "The actual result is often close to the expected frequency but may not match it. Change a percentage to a decimal or fraction first, so 40% becomes 0.4."
+    ],
+    "remember": "Expected frequency is probability × number of trials, and it is a prediction.",
+    "a": {
+      "q": "The probability that a bus is late is 0.15. About how many late buses are expected in 200 trips?",
+      "opts": ["30", "15", "185", "1333"],
+      "why": "Expected frequency = 0.15 × 200 = 30. The option 185 comes from 200 − 15, which treats the probability as the whole number 15 and subtracts it instead of multiplying. The option 1333 comes from dividing 200 by 0.15.",
+      "clue": "Multiply the probability by the number of trips."
+    },
+    "b": {
+      "d": 3,
+      "q": "A factory finds that 4% of its phone chargers are faulty. In a batch of 2500 chargers, how many faulty chargers are expected?",
+      "opts": ["100", "10", "10000", "2496"],
+      "why": "Change 4% to 0.04. Then 0.04 × 2500 = 100. Using 4 instead of 0.04 gives 10000, and 10 comes from 0.004 × 2500, which moves the decimal point one place too far.",
+      "clue": "Write the percentage as a decimal before multiplying."
+    }
+  },
+  "mat-two-way-tables": {
+    "title": "Two-way tables",
+    "card": [
+      "A two-way table sorts data by two categories at once, such as year group and how students travel to school. Each cell counts the people in both categories. The totals sit in the last row and column.",
+      "To find a probability, divide the count you want by the total that applies. P(event) = number in the event ÷ total in the group.",
+      "The group matters. If you are told a person is already in a group, such as 'a Year 12 student', use that group's total as the divisor, not the grand total.",
+      "Example: 60 students. Bus: 12 in Year 11 and 18 in Year 12. Walk: 20 in Year 11 and 10 in Year 12. P(bus) = 30/60 = 1/2. P(bus, given Year 12) = 18 ÷ 28 (Year 12 total is 18 + 10)."
+    ],
+    "remember": "Pick the count you want, then divide by the total of the group you are in.",
+    "a": {
+      "q": "In the example, 60 students: Year 12 bus 18, Year 12 walk 10. A Year 12 student is chosen. What is the probability they walk?",
+      "opts": ["10/28", "10/60", "10/30", "18/28"],
+      "why": "The student is known to be in Year 12, so the divisor is the Year 12 total: 18 + 10 = 28. So P = 10/28. Using 60 is the tempting mistake, as it ignores the group you are told about.",
+      "clue": "Which total applies once you know the year group?"
+    },
+    "b": {
+      "d": 3,
+      "q": "At Kiah's gym, 80 members were surveyed. Morning: 14 women and 26 men. Evening: 22 women and 18 men. A woman is chosen. What is the probability she goes in the morning?",
+      "opts": ["14/36", "14/40", "14/80", "26/40"],
+      "why": "The person is a woman, so the group is all women: 14 + 22 = 36. P = 14/36. Using 40 divides by all morning members, which is the wrong group and the tempting mistake.",
+      "clue": "Add up the column or row for the group you are told about."
+    }
+  },
+  "mat-complementary-events": {
+    "title": "Complementary events",
+    "card": [
+      "The complement of an event is the event not happening. If A is rain tomorrow, the complement of A is no rain tomorrow.",
+      "An event and its complement cover every outcome, and they cannot both happen. So their probabilities add to 1.",
+      "P(not A) = 1 − P(A). Probabilities can be written as fractions, decimals or percentages, and 1 means 100%.",
+      "Example: the chance a bus is late is 0.15. The chance it is not late is 1 − 0.15 = 0.85."
+    ],
+    "remember": "To find the chance of something not happening, take its probability away from 1.",
+    "a": {
+      "q": "The probability that Ravi's train is on time is 0.92. What is the probability that it is not on time?",
+      "opts": ["0.08", "0.92", "0.82", "1.92"],
+      "why": "P(not on time) = 1 − 0.92 = 0.08. The value 0.92 is the chance of the train being on time, not the complement. Adding to 1 instead of taking away gives 1.92, which is impossible for a probability.",
+      "clue": "The two probabilities must add to 1."
+    },
+    "b": {
+      "d": 3,
+      "q": "A spinner at a school fair has a 3/8 chance of landing on red. What is the probability that it does not land on red?",
+      "opts": ["5/8", "3/5", "1/8", "8/3"],
+      "why": "P(not red) = 1 − 3/8 = 8/8 − 3/8 = 5/8. The option 3/5 compares red with not red, which is not a probability of not red. A probability can never be larger than 1, so 8/3 cannot be right.",
+      "clue": "Write 1 as a fraction with 8 on the bottom."
+    }
+  },
+  "mat-features-normal-distribution": {
+    "title": "Features of a normal distribution",
+    "card": [
+      "A normal distribution is shaped like a bell. It has one peak in the middle, and the curve falls away on both sides.",
+      "It is symmetric. The left half is a mirror image of the right half, so the centre splits the data into two matching halves.",
+      "The mean, median and mode are all equal, and they sit at the peak. For example, if the mean mark is 60, the median and mode are also 60.",
+      "Scores near the centre are common. Scores far from the centre, in either tail, are rare."
+    ],
+    "remember": "A normal distribution is a symmetric bell with the mean, median and mode all at the centre.",
+    "a": {
+      "q": "The heights of a large group of students follow a normal distribution with a mean of 168 cm. What is the median height?",
+      "opts": ["168 cm", "Less than 168 cm", "More than 168 cm", "It cannot be found without the range"],
+      "why": "In a normal distribution the mean and median are equal, so the median is 168 cm. The distribution is symmetric, so the median is not pulled to either side of the mean.",
+      "clue": "Which measures of centre are equal in a normal distribution?"
+    },
+    "b": {
+      "d": 2,
+      "q": "The weights of apples from an orchard in Orange follow a normal distribution. Which description of the graph is correct?",
+      "opts": [
+        "Symmetric, with a single peak at the mean",
+        "Skewed right, with a long tail of heavy apples",
+        "Flat, with every weight equally likely",
+        "Symmetric, with two peaks either side of the mean"
+      ],
+      "why": "A normal distribution is a symmetric bell with one peak at the mean. A long tail on one side would mean the distribution is skewed, and two peaks would not be a bell shape.",
+      "clue": "Think of the shape of a bell, with the peak at the centre."
+    }
+  },
+  "mat-empirical-rule": {
+    "title": "The empirical rule",
+    "card": [
+      "In a normal distribution, scores cluster around the mean. The empirical rule says how much of the data lies within 1, 2 and 3 standard deviations of the mean.",
+      "About 68% of scores lie within 1 standard deviation of the mean. About 95% lie within 2, and about 99.7% lie within 3.",
+      "The distribution is symmetric, so the percentages split evenly either side of the mean. Within 1 standard deviation, about 34% lie on each side.",
+      "Example: test marks have mean 60 and standard deviation 10. Within 2 standard deviations means 40 to 80, so about 95% of marks are in that range. The other 5% are split evenly, so about 2.5% score above 80."
+    ],
+    "remember": "Within 1, 2 and 3 standard deviations of the mean: about 68%, 95% and 99.7%.",
+    "a": {
+      "q": "Heights of Year 12 students are normally distributed, with mean 170 cm and standard deviation 8 cm. About what percentage of heights lie between 154 cm and 186 cm?",
+      "opts": ["95%", "68%", "99.7%", "50%"],
+      "why": "154 and 186 are each 16 cm from the mean, which is 2 standard deviations. About 95% of scores lie within 2 standard deviations. 68% is tempting, but that is the share within only 1 standard deviation, 162 to 178.",
+      "clue": "Find how many standard deviations 154 is below the mean."
+    },
+    "b": {
+      "d": 3,
+      "q": "Bags of rice have a normal distribution of mass, with mean 1000 g and standard deviation 20 g. About what percentage of bags have a mass above 1040 g?",
+      "opts": ["2.5%", "5%", "0.15%", "16%"],
+      "why": "1040 g is 2 standard deviations above the mean. About 95% of bags lie within 2 standard deviations, so about 5% lie outside, split evenly between the two ends. That gives 2.5% above 1040 g. 5% is wrong because it counts both ends.",
+      "clue": "The scores outside the range are split evenly between both ends."
+    }
+  },
+  "mat-comparing-scores-with-z": {
+    "title": "Comparing scores with z-scores",
+    "card": [
+      "Raw scores from different tests cannot be compared directly, because each test has its own mean and spread. A mark of 70 can be strong on one test and weak on another.",
+      "To compare, convert each score to a z-score using its own test's mean and standard deviation (SD). This puts both scores on the same scale.",
+      "The higher z-score is the better performance relative to its group. A bigger gap in marks does not always give a higher z-score, because a wider spread makes it smaller.",
+      "Example: Maths 72 (mean 60, SD 8) gives z = (72 − 60) ÷ 8 = 1.5. Science 68 (mean 50, SD 12) gives z = (68 − 50) ÷ 12 = 1.5. The two results are equal relative to their groups."
+    ],
+    "remember": "Compare z-scores, not raw marks. The higher z-score is the better result for its group.",
+    "a": {
+      "q": "Ravi scores 64 in English (mean 55, SD 6) and 58 in History (mean 50, SD 4). In which subject did he do better relative to the group?",
+      "opts": [
+        "History, because its z-score is 2 and English is 1.5",
+        "English, because its z-score is 1.5 and History is 2",
+        "English, because 64 is higher than 58",
+        "History, because its mean is lower than English"
+      ],
+      "why": "English z = (64 − 55) ÷ 6 = 1.5. History z = (58 − 50) ÷ 4 = 2. The higher z-score is the better result. Comparing raw marks is tempting, but each test has its own mean and spread.",
+      "clue": "Find a z-score for each subject, then compare them."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya scores 45 on a music test (mean 38, SD 5) and 81 on a drama test (mean 70, SD 10). Which statement is correct?",
+      "opts": [
+        "Music was better: z = 1.4 compared with z = 1.1",
+        "Drama was better: z = 1.1 compared with z = 1.4",
+        "Drama was better, as she was 11 marks above the mean",
+        "The two were equal, because both are above the mean"
+      ],
+      "why": "Music z = (45 − 38) ÷ 5 = 1.4. Drama z = (81 − 70) ÷ 10 = 1.1. Drama has the bigger gap in marks, but its spread is wider, so its z-score is lower. Music is the better result for its group.",
+      "clue": "Divide each gap from the mean by that test's standard deviation."
+    }
+  },
+  "mat-quality-control": {
+    "title": "Quality control",
+    "card": [
+      "Quality control checks that a product is close enough to its target. A machine that fills bottles gives amounts that vary a little, and these often follow a normal distribution.",
+      "Work out the product's z-score. The business sets limits for the z-score. A product is acceptable if its z-score is inside the limits or exactly equal to a limit.",
+      "Many firms accept z-scores from −2 to 2 inclusive. A product outside the limits is unusual, so it may be rejected or the machine may be checked.",
+      "Example: bottles have a mean fill of 600 mL and a standard deviation of 4 mL. A 592 mL bottle has z = (592 − 600) ÷ 4 = −2. That equals the limit, so it is acceptable. A 609 mL bottle has z = 2.25, so it is outside."
+    ],
+    "remember": "Find the z-score: on or inside the limits is acceptable, outside may be rejected.",
+    "a": {
+      "q": "Cans have a mean fill of 375 mL and a standard deviation of 2 mL. The limits are z from −2 to 2 inclusive. Is a 380 mL can acceptable?",
+      "opts": [
+        "No, its z-score of 2.5 is outside the limits",
+        "Yes, its z-score of 0.4 is inside the limits",
+        "Yes, it is only 5 mL away from the mean",
+        "No, its z-score of −2.5 is outside the limits"
+      ],
+      "why": "z = (380 − 375) ÷ 2 = 2.5, which is above the upper limit of 2, so the can is not acceptable. Saying it is only 5 mL from the mean is tempting, but the limits apply to the z-score, not the difference in mL.",
+      "clue": "Compare the z-score, not the mL difference, with the limits."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's factory fills jars with a mean of 500 g and a standard deviation of 5 g. Jars are acceptable if z is from −2 to 2 inclusive. Which jar is rejected?",
+      "opts": ["511 g", "490 g", "505 g", "498 g"],
+      "why": "For 511 g, z = (511 − 500) ÷ 5 = 2.2, which is outside the limits. The 490 g jar has z = −2, which equals a limit, so it is acceptable. It is tempting only because it is the lightest jar.",
+      "clue": "Work out each jar's z-score. Does a z-score equal to a limit count?"
+    }
   }
 };

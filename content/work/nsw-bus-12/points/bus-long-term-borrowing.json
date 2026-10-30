@@ -1,0 +1,203 @@
+{
+ "id": "bus-long-term-borrowing",
+ "title": "Long-term borrowing",
+ "brief": "582dedb1e708",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:24Z match: none",
+  "2026-10-29T12:22:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:17Z write: done",
+  "2026-10-29T12:39:08Z check: flagged",
+  "2026-10-29T12:41:45Z fix: suggested",
+  "2026-10-29T14:30:28Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00749,
+  "write": 0.00509,
+  "check": 0.01199,
+  "fix": 0.0338
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest bank point, Financing a new business, only separates equity from debt in general, while the new point teaches specific long-term borrowing types such as mortgages, debentures, unsecured notes and leasing, so no existing point teaches this idea."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Long-term borrowing",
+  "card": [
+   "Long-term borrowing is money borrowed for more than a year, often for several years. Businesses use it to fund large purchases, such as property or machinery. The business repays it with regular interest payments.",
+   [
+    "Mortgage",
+    "a loan secured against property. If the business cannot repay, the lender can sell the property to recover the money."
+   ],
+   [
+    "Debenture and unsecured note",
+    "a debenture is a loan to a company, usually secured against its assets. An unsecured note is a similar loan with no asset pledged, so the lender takes more risk and usually charges a higher interest rate."
+   ],
+   [
+    "Leasing",
+    "the business pays regular fees to use an asset, such as a vehicle, owned by someone else. It does not need to pay the full price at the start."
+   ]
+  ],
+  "remember": "Long-term borrowing funds big purchases over years, and the business pays interest regularly.",
+  "a": {
+   "q": "A bakery in Orange borrows money from a bank to buy its shop. The shop is pledged as security for the loan. What type of finance is this?",
+   "opts": [
+    "A mortgage",
+    "An unsecured note",
+    "A lease",
+    "An overdraft"
+   ],
+   "why": "A loan secured against property is a mortgage, and the bank can sell the shop if the loan is not repaid. An unsecured note is tempting, but it has no asset pledged as security.",
+   "clue": "Which type of loan is secured against property?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's landscaping company in Bathurst wants a new truck. It will pay a monthly fee to use a truck owned by a finance company. What is this, and what is true of it?",
+   "opts": [
+    "Leasing, as it avoids paying the full price at the start",
+    "A mortgage, as the lender holds the truck as security",
+    "An unsecured note, as no asset is pledged to the lender",
+    "A debenture, as the company is lending money to the owner"
+   ],
+   "why": "Paying regular fees to use an asset someone else owns is leasing, and it avoids a large payment at the start. A mortgage is tempting, but a mortgage is a loan secured against property and Tia is not borrowing money to buy the truck.",
+   "clue": "Who owns the truck while Tia uses it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A mortgage",
+   "also_right": []
+  },
+  "b": {
+   "best": "Leasing, as it avoids paying the full price at the start",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"The business repays it with regular interest payments\" suggests interest payments repay the loan. Interest is the cost of borrowing, and the amount borrowed (the principal) must also be repaid. For debentures and unsecured notes the principal is often repaid at maturity. A clearer line would be: \"The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with one clear right answer. One card line implies interest payments repay the loan, when the principal must also be repaid, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"The business repays it with regular interest payments\" suggests interest payments repay the loan. Interest is the cost of borrowing, and the amount borrowed (the principal) must also be repaid. For debentures and unsecured notes the principal is often repaid at maturity. A clearer line would be: \"The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.\""
+ ],
+ "proposal": {
+  "title": "Long-term borrowing",
+  "card": [
+   "Long-term borrowing is money borrowed for more than a year to fund large purchases, such as property or machinery. The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.",
+   [
+    "Mortgage",
+    "a loan secured against property. If the business cannot repay, the lender can sell the property to recover the money."
+   ],
+   [
+    "Debenture and unsecured note",
+    "a debenture is a loan a company raises from investors for a set term at a fixed interest rate, usually secured against its assets. An unsecured note is similar but has no asset pledged, so lenders take more risk and usually get a higher interest rate."
+   ],
+   [
+    "Leasing",
+    "the business pays regular fees to use an asset, such as a vehicle, owned by someone else. It does not need to pay the full price at the start."
+   ]
+  ],
+  "remember": "Long-term finance spreads the cost of big assets over years: interest along the way, and the amount borrowed repaid too.",
+  "a": {
+   "q": "A bakery in Orange borrows money from a bank to buy its shop. The shop is pledged as security for the loan. What type of finance is this?",
+   "opts": [
+    "A mortgage",
+    "An unsecured note",
+    "A lease",
+    "A debenture"
+   ],
+   "why": "A loan secured against property is a mortgage, and the bank can sell the shop if the loan is not repaid. An unsecured note is tempting, but it has no asset pledged as security, and a debenture is raised from investors rather than a bank.",
+   "clue": "Which type of loan is secured against property?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's gardening company in Bathurst wants a new truck. It will pay a monthly fee to use a truck owned by a finance company. What is this, and what is true of it?",
+   "opts": [
+    "Leasing, as it avoids paying the full price at the start",
+    "A mortgage, as the lender holds the truck as security",
+    "An unsecured note, as no asset is pledged to the lender",
+    "A debenture, as investors lend to the company for a set term"
+   ],
+   "why": "Paying regular fees to use an asset someone else owns is leasing, and it avoids a large payment at the start. A mortgage is tempting, but a mortgage is a loan secured against property, and Tia is not borrowing money to buy the truck.",
+   "clue": "Who owns the truck while Tia uses it?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:28Z",
+  "rules": 1,
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"The business repays it with regular interest payments\" suggests interest payments repay the loan. Interest is the cost of borrowing, and the amount borrowed (the principal) must also be repaid. For debentures and unsecured notes the principal is often repaid at maturity. A clearer line would be: \"The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.\""
+   }
+  ],
+  "flags": [
+   "Card, wording: \"The business repays it with regular interest payments\" suggests interest payments repay the loan. Interest is the cost of borrowing, and the amount borrowed (the principal) must also be repaid. For debentures and unsecured notes the principal is often repaid at maturity. A clearer line would be: \"The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.\""
+  ]
+ },
+ "final": {
+  "title": "Long-term borrowing",
+  "card": [
+   "Long-term borrowing is money borrowed for more than a year to fund large purchases, such as property or machinery. The business makes regular interest payments and repays the amount borrowed over time or at the end of the term.",
+   [
+    "Mortgage",
+    "a loan secured against property. If the business cannot repay, the lender can sell the property to recover the money."
+   ],
+   [
+    "Debenture and unsecured note",
+    "a debenture is a loan a company raises from investors for a set term at a fixed interest rate, usually secured against its assets. An unsecured note is similar but has no asset pledged, so lenders take more risk and usually get a higher interest rate."
+   ],
+   [
+    "Leasing",
+    "the business pays regular fees to use an asset, such as a vehicle, owned by someone else. It does not need to pay the full price at the start."
+   ]
+  ],
+  "remember": "Long-term finance spreads the cost of big assets over years: interest along the way, and the amount borrowed repaid too.",
+  "a": {
+   "q": "A bakery in Orange borrows money from a bank to buy its shop. The shop is pledged as security for the loan. What type of finance is this?",
+   "opts": [
+    "A mortgage",
+    "An unsecured note",
+    "A lease",
+    "A debenture"
+   ],
+   "why": "A loan secured against property is a mortgage, and the bank can sell the shop if the loan is not repaid. An unsecured note is tempting, but it has no asset pledged as security, and a debenture is raised from investors rather than a bank.",
+   "clue": "Which type of loan is secured against property?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tia's gardening company in Bathurst wants a new truck. It will pay a monthly fee to use a truck owned by a finance company. What is this, and what is true of it?",
+   "opts": [
+    "Leasing, as it avoids paying the full price at the start",
+    "A mortgage, as the lender holds the truck as security",
+    "An unsecured note, as no asset is pledged to the lender",
+    "A debenture, as investors lend to the company for a set term"
+   ],
+   "why": "Paying regular fees to use an asset someone else owns is leasing, and it avoids a large payment at the start. A mortgage is tempting, but a mortgage is a loan secured against property, and Tia is not borrowing money to buy the truck.",
+   "clue": "Who owns the truck while Tia uses it?"
+  }
+ },
+ "cleared_by": "auto"
+}

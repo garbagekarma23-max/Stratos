@@ -1,0 +1,112 @@
+{
+ "id": "mat-compound-interest-by-repeated",
+ "title": "Compound interest by repeated calculation",
+ "brief": "4544a87c8b41",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01334,
+  "write": 0.00483,
+  "check": 0.00689
+ },
+ "match": {
+  "same": "",
+  "reason": "The bank's compound interest point is a Year 12 formula approach (multiply by (1 + r) for each period), while the new point builds compound interest period by period and compares it with simple interest, so it is taught at a different depth for Year 11."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Compound interest by repeated calculation",
+  "card": [
+   "With compound interest, the interest is added to the balance at the end of each period. In the next period, interest is earned on the new, larger balance.",
+   "To work it out, find the interest for one period, add it to the balance, then repeat. Interest for a period = balance × rate for that period.",
+   "Example: $1000 at 10% per year for 2 years. Year 1: 10% of $1000 = $100, so the balance is $1100. Year 2: 10% of $1100 = $110, so the balance is $1210.",
+   "Simple interest on $1000 at 10% for 2 years is $200, so the balance would be $1200. Compound interest gave $210 because the year 1 interest earned interest."
+  ],
+  "remember": "Compound interest is added to the balance each period, so later interest is worked out on a bigger amount.",
+  "a": {
+   "q": "Ava invests $2000 at 5% per year, compounded yearly. What is the balance after 2 years?",
+   "opts": [
+    "$2205",
+    "$2200",
+    "$2100",
+    "$2250"
+   ],
+   "why": "Year 1: 5% of $2000 = $100, so the balance is $2100. Year 2: 5% of $2100 = $105, so the balance is $2205. $2200 is the simple interest answer, which works out interest on $2000 both years.",
+   "clue": "Year 2 interest is worked out on the new balance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam borrows $5000 at 10% per year, compounded yearly, and repays nothing for 3 years. How much more does he owe than with simple interest at the same rate?",
+   "opts": [
+    "$155",
+    "$500",
+    "$1655",
+    "$150"
+   ],
+   "why": "Compound: $5000 becomes $5500, then $6050, then $6655, so the interest is $1655. Simple interest is 3 × $500 = $1500. The difference is $155. $1655 is only the compound interest, not the difference.",
+   "clue": "Find both interest amounts, then subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$2205",
+   "also_right": []
+  },
+  "b": {
+   "best": "$155",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: $2000 at 5% for 2 years gives $2205, and $6655 − $6500 gives a difference of $155."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Compound interest by repeated calculation",
+  "card": [
+   "With compound interest, the interest is added to the balance at the end of each period. In the next period, interest is earned on the new, larger balance.",
+   "To work it out, find the interest for one period, add it to the balance, then repeat. Interest for a period = balance × rate for that period.",
+   "Example: $1000 at 10% per year for 2 years. Year 1: 10% of $1000 = $100, so the balance is $1100. Year 2: 10% of $1100 = $110, so the balance is $1210.",
+   "Simple interest on $1000 at 10% for 2 years is $200, so the balance would be $1200. Compound interest gave $210 because the year 1 interest earned interest."
+  ],
+  "remember": "Compound interest is added to the balance each period, so later interest is worked out on a bigger amount.",
+  "a": {
+   "q": "Ava invests $2000 at 5% per year, compounded yearly. What is the balance after 2 years?",
+   "opts": [
+    "$2205",
+    "$2200",
+    "$2100",
+    "$2250"
+   ],
+   "why": "Year 1: 5% of $2000 = $100, so the balance is $2100. Year 2: 5% of $2100 = $105, so the balance is $2205. $2200 is the simple interest answer, which works out interest on $2000 both years.",
+   "clue": "Year 2 interest is worked out on the new balance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam borrows $5000 at 10% per year, compounded yearly, and repays nothing for 3 years. How much more does he owe than with simple interest at the same rate?",
+   "opts": [
+    "$155",
+    "$500",
+    "$1655",
+    "$150"
+   ],
+   "why": "Compound: $5000 becomes $5500, then $6050, then $6655, so the interest is $1655. Simple interest is 3 × $500 = $1500. The difference is $155. $1655 is only the compound interest, not the difference.",
+   "clue": "Find both interest amounts, then subtract."
+  }
+ },
+ "cleared_by": "checker"
+}

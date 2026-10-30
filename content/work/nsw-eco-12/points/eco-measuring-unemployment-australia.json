@@ -1,0 +1,229 @@
+{
+ "id": "eco-measuring-unemployment-australia",
+ "title": "Measuring unemployment in Australia",
+ "brief": "0e87e8b691e2",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:25Z match: none",
+  "2026-10-29T12:22:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:18Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00614,
+  "write": 0.00478,
+  "check": 0.0137,
+  "fix": 0.03168,
+  "recheck": 0.01534
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest point, e-labour, teaches how the unemployment rate is calculated, not the ABS Labour Force Survey definition of who counts as unemployed, so the new point is a different idea."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Measuring unemployment in Australia",
+  "card": [
+   "The Australian Bureau of Statistics (ABS) runs the Labour Force Survey each month. It asks a sample of households about work, then uses the answers to estimate unemployment for the whole country.",
+   [
+    "Employed",
+    "a person aged 15 or over who did at least one hour of paid work in the survey week."
+   ],
+   [
+    "Unemployed",
+    "a person with no paid work in the survey week who looked for work and could start work. Someone who has not looked for work is not counted as unemployed."
+   ],
+   "Unemployment rate = unemployed ÷ labour force × 100. The labour force is everyone who is employed or unemployed."
+  ],
+  "remember": "To be unemployed, a person must have no work, be looking for work and be able to start.",
+  "a": {
+   "q": "Sam has no paid work, has sent job applications this month and could start next week. How does the ABS Labour Force Survey count Sam?",
+   "opts": [
+    "Unemployed",
+    "Employed",
+    "Not in the labour force",
+    "Underemployed"
+   ],
+   "why": "Sam had no paid work, looked for work and could start, so Sam meets every test for unemployed. Sam is not outside the labour force, because that group is made of people who are not looking for work.",
+   "clue": "Check Sam against all three tests for unemployed."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the survey week, Priya had no paid job and did not look for work, though she wanted one. Tom did two hours of paid work and also looked for more. How does the survey count them?",
+   "opts": [
+    "Priya is not unemployed and Tom is employed",
+    "Priya is unemployed and Tom is employed",
+    "Priya is not unemployed and Tom is unemployed",
+    "Priya is unemployed and Tom is unemployed"
+   ],
+   "why": "Priya did not look for work, so she fails one test and is not counted as unemployed, even though she wants a job. Tom did paid work in the survey week, so he is employed, even though he is looking for more.",
+   "clue": "Wanting a job is not the same as looking for one."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Unemployed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya is not unemployed and Tom is employed",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question says Sam 'could start next week' and applied 'this month'. The ABS tests are about being available in the survey week and looking in the past four weeks. Since the question gives no survey week, 'next week' is loosely timed against the card's test. 'Could start now' would be cleaner."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says people not in the labour force are 'people who are not looking for work'. That group also includes people who are looking but cannot start. The explanation should say they fail the looking test or the availability test."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Two small fixes: the timing in question a ('could start next week', 'this month') is loose against the survey-week test, and why (a) describes 'not in the labour force' too narrowly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The question says Sam 'could start next week' and applied 'this month'. The ABS tests are about being available in the survey week and looking in the past four weeks. Since the question gives no survey week, 'next week' is loosely timed against the card's test. 'Could start now' would be cleaner.",
+  "Question a, fact: Why (a) says people not in the labour force are 'people who are not looking for work'. That group also includes people who are looking but cannot start. The explanation should say they fail the looking test or the availability test."
+ ],
+ "proposal": {
+  "title": "Measuring unemployment in Australia",
+  "card": [
+   "The Australian Bureau of Statistics (ABS) runs the Labour Force Survey each month. It asks a sample of households about work, then uses the answers to estimate unemployment for the whole country.",
+   [
+    "Employed",
+    "a person aged 15 or over who did at least one hour of paid work in the survey week."
+   ],
+   [
+    "Unemployed",
+    "a person aged 15 or over with no paid work in the survey week, who looked for work in the past four weeks and could start in the survey week. Someone who has not looked for work is not counted as unemployed."
+   ],
+   "Unemployment rate = unemployed ÷ labour force × 100. The labour force is everyone who is employed or unemployed. Anyone 15 or over who is neither is not in the labour force."
+  ],
+  "remember": "To be unemployed, a person must have no work, be looking for work and be able to start.",
+  "a": {
+   "q": "In the survey week, Sam had no paid work. Sam has applied for jobs over the past month and could start now. How does the ABS Labour Force Survey count Sam?",
+   "opts": [
+    "Unemployed, and part of the labour force",
+    "Unemployed, but not part of the labour force",
+    "Not in the labour force, because Sam has no job",
+    "Employed, because Sam is actively seeking work"
+   ],
+   "why": "Sam had no paid work, looked for work in the past four weeks and could start now, so Sam meets all three tests for unemployed. Everyone who is unemployed is part of the labour force. People outside it are those who fail the looking test or the availability test, not those who simply have no job.",
+   "clue": "Check Sam against all three tests, then recall who makes up the labour force."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the survey week, Priya had no paid job and did not look for work, though she wanted one. Tom did two hours of paid work and also looked for more. How does the survey count them?",
+   "opts": [
+    "Priya is not unemployed and Tom is employed",
+    "Priya is unemployed and Tom is employed",
+    "Priya is not unemployed and Tom is unemployed",
+    "Priya is unemployed and Tom is unemployed"
+   ],
+   "why": "Priya did not look for work, so she fails one test and is not counted as unemployed, even though she wants a job. Tom did at least one hour of paid work in the survey week, so he is employed, even though he is looking for more.",
+   "clue": "Wanting a job is not the same as looking for one."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Unemployed, and part of the labour force",
+    "also_right": []
+   },
+   "b": {
+    "best": "Priya is not unemployed and Tom is employed",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card matches the ABS Labour Force Survey definitions, each question has one clearly right answer, and the explanations agree with the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question says Sam 'could start next week' and applied 'this month'. The ABS tests are about being available in the survey week and looking in the past four weeks. Since the question gives no survey week, 'next week' is loosely timed against the card's test. 'Could start now' would be cleaner."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says people not in the labour force are 'people who are not looking for work'. That group also includes people who are looking but cannot start. The explanation should say they fail the looking test or the availability test."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The question says Sam 'could start next week' and applied 'this month'. The ABS tests are about being available in the survey week and looking in the past four weeks. Since the question gives no survey week, 'next week' is loosely timed against the card's test. 'Could start now' would be cleaner.",
+   "Question a, fact: Why (a) says people not in the labour force are 'people who are not looking for work'. That group also includes people who are looking but cannot start. The explanation should say they fail the looking test or the availability test."
+  ]
+ },
+ "final": {
+  "title": "Measuring unemployment in Australia",
+  "card": [
+   "The Australian Bureau of Statistics (ABS) runs the Labour Force Survey each month. It asks a sample of households about work, then uses the answers to estimate unemployment for the whole country.",
+   [
+    "Employed",
+    "a person aged 15 or over who did at least one hour of paid work in the survey week."
+   ],
+   [
+    "Unemployed",
+    "a person aged 15 or over with no paid work in the survey week, who looked for work in the past four weeks and could start in the survey week. Someone who has not looked for work is not counted as unemployed."
+   ],
+   "Unemployment rate = unemployed ÷ labour force × 100. The labour force is everyone who is employed or unemployed. Anyone 15 or over who is neither is not in the labour force."
+  ],
+  "remember": "To be unemployed, a person must have no work, be looking for work and be able to start.",
+  "a": {
+   "q": "In the survey week, Sam had no paid work. Sam has applied for jobs over the past month and could start now. How does the ABS Labour Force Survey count Sam?",
+   "opts": [
+    "Unemployed, and part of the labour force",
+    "Unemployed, but not part of the labour force",
+    "Not in the labour force, because Sam has no job",
+    "Employed, because Sam is actively seeking work"
+   ],
+   "why": "Sam had no paid work, looked for work in the past four weeks and could start now, so Sam meets all three tests for unemployed. Everyone who is unemployed is part of the labour force. People outside it are those who fail the looking test or the availability test, not those who simply have no job.",
+   "clue": "Check Sam against all three tests, then recall who makes up the labour force."
+  },
+  "b": {
+   "d": 3,
+   "q": "In the survey week, Priya had no paid job and did not look for work, though she wanted one. Tom did two hours of paid work and also looked for more. How does the survey count them?",
+   "opts": [
+    "Priya is not unemployed and Tom is employed",
+    "Priya is unemployed and Tom is employed",
+    "Priya is not unemployed and Tom is unemployed",
+    "Priya is unemployed and Tom is unemployed"
+   ],
+   "why": "Priya did not look for work, so she fails one test and is not counted as unemployed, even though she wants a job. Tom did at least one hour of paid work in the survey week, so he is employed, even though he is looking for more.",
+   "clue": "Wanting a job is not the same as looking for one."
+  }
+ },
+ "cleared_by": "recheck"
+}

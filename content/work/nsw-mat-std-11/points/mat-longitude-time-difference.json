@@ -1,0 +1,213 @@
+{
+ "id": "mat-longitude-time-difference",
+ "title": "Longitude and time difference",
+ "brief": "4e24bc03d6e0",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-30T11:56:45Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01294,
+  "write": 0.00485,
+  "check": 0.01006,
+  "fix": 0.03211,
+  "recheck": 0.00638
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers longitude and time difference; the closest ones, bearings and radians, teach different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Longitude and time difference",
+  "card": [
+   "The Earth turns 360° in 24 hours. So it turns 360° ÷ 24 = 15° each hour.",
+   "This means every 15° of longitude is about 1 hour of time difference. To find the time difference, find the difference in longitude, then divide by 15.",
+   "The Earth turns towards the east, so places further east are ahead in time. Places further west are behind.",
+   "Example: Place A is at 150°E and place B is at 120°E. The difference is 150° − 120° = 30°. 30° ÷ 15 = 2 hours. A is further east, so A is 2 hours ahead of B."
+  ],
+  "remember": "Divide the longitude difference by 15 to get hours. East is ahead, west is behind.",
+  "a": {
+   "q": "Two towns are 45° of longitude apart. About how many hours apart are their times?",
+   "opts": [
+    "3 hours",
+    "4 hours",
+    "6 hours",
+    "45 hours"
+   ],
+   "why": "The Earth turns 15° each hour, so 45° ÷ 15 = 3 hours. Dividing by 24 instead of 15 gives about 1.9, which is a different rule and does not match 15° per hour.",
+   "clue": "Divide the degrees by the number of degrees in one hour."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town P is at 30°E and town Q is at 75°W. Both are on the same day. About what is the time difference, and which town is ahead?",
+   "opts": [
+    "7 hours, and P is ahead",
+    "7 hours, and Q is ahead",
+    "3 hours, and P is ahead",
+    "3 hours, and Q is ahead"
+   ],
+   "why": "P is east and Q is west of the prime meridian, so add the angles: 30° + 75° = 105°. 105° ÷ 15 = 7 hours. P is further east, so P is ahead. Subtracting 75° from 30° gives 45°, which is the error when the two sides are not added.",
+   "clue": "The towns are on opposite sides of 0°, so the angles join together."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3 hours",
+   "also_right": []
+  },
+  "b": {
+   "best": "7 hours, and P is ahead",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card only shows subtracting two longitudes on the same side of the prime meridian (150°E and 120°E). It never teaches that longitudes on opposite sides (one E, one W) are added. Question b relies on that step, and only the clue supplies it, so the question needs more than the card teaches. Add an example to the card that crosses 0°."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out (3 hours; 7 hours with P ahead). However, question b needs students to add longitudes across the prime meridian, which the card never teaches; it only shows subtraction on one side."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card only shows subtracting two longitudes on the same side of the prime meridian (150°E and 120°E). It never teaches that longitudes on opposite sides (one E, one W) are added. Question b relies on that step, and only the clue supplies it, so the question needs more than the card teaches. Add an example to the card that crosses 0°."
+ ],
+ "proposal": {
+  "title": "Longitude and time difference",
+  "card": [
+   "The Earth turns 360° in 24 hours, so it turns 360° ÷ 24 = 15° each hour. This means every 15° of longitude is about 1 hour of time difference.",
+   [
+    "Same side",
+    "if both places are east, or both are west, subtract the longitudes. For 150°E and 120°E: 150° − 120° = 30°, and 30° ÷ 15 = 2 hours."
+   ],
+   [
+    "Opposite sides",
+    "if one place is east and one is west of 0°, add the longitudes. For 45°E and 15°W: 45° + 15° = 60°, and 60° ÷ 15 = 4 hours."
+   ],
+   "The Earth turns towards the east, so the place further east is ahead in time. So 150°E is 2 hours ahead of 120°E, and 45°E is 4 hours ahead of 15°W."
+  ],
+  "remember": "Same side, subtract. Opposite sides, add. Divide by 15, and east is ahead.",
+  "a": {
+   "q": "Two towns are 45° of longitude apart. About how many hours apart are their times?",
+   "opts": [
+    "3 hours",
+    "4 hours",
+    "6 hours",
+    "45 hours"
+   ],
+   "why": "The Earth turns 15° each hour, so 45° ÷ 15 = 3 hours. Dividing by 24 instead of 15 gives about 1.9, which does not match the rule of 15° per hour.",
+   "clue": "Divide the degrees by the number of degrees in one hour."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town P is at 30°E and town Q is at 75°W. Both are on the same day. About what is the time difference, and which town is ahead?",
+   "opts": [
+    "7 hours, and P is ahead",
+    "7 hours, and Q is ahead",
+    "3 hours, and P is ahead",
+    "3 hours, and Q is ahead"
+   ],
+   "why": "P is east and Q is west of 0°, so add the longitudes: 30° + 75° = 105°, and 105° ÷ 15 = 7 hours. P is further east, so P is ahead. Subtracting gives 75° − 30° = 45°, or 3 hours, which treats the towns as if they were on the same side.",
+   "clue": "Check whether the towns are on the same side of 0°."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3 hours",
+    "also_right": []
+   },
+   "b": {
+    "best": "7 hours, and P is ahead",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card only shows subtracting two longitudes on the same side of the prime meridian (150°E and 120°E). It never teaches that longitudes on opposite sides (one E, one W) are added. Question b relies on that step, and only the clue supplies it, so the question needs more than the card teaches. Add an example to the card that crosses 0°."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card only shows subtracting two longitudes on the same side of the prime meridian (150°E and 120°E). It never teaches that longitudes on opposite sides (one E, one W) are added. Question b relies on that step, and only the clue supplies it, so the question needs more than the card teaches. Add an example to the card that crosses 0°."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Longitude and time difference",
+  "card": [
+   "The Earth turns 360° in 24 hours, so it turns 360° ÷ 24 = 15° each hour. This means every 15° of longitude is about 1 hour of time difference.",
+   [
+    "Same side",
+    "if both places are east, or both are west, subtract the longitudes. For 150°E and 120°E: 150° − 120° = 30°, and 30° ÷ 15 = 2 hours."
+   ],
+   [
+    "Opposite sides",
+    "if one place is east and one is west of 0°, add the longitudes. For 45°E and 15°W: 45° + 15° = 60°, and 60° ÷ 15 = 4 hours."
+   ],
+   "The Earth turns towards the east, so the place further east is ahead in time. So 150°E is 2 hours ahead of 120°E, and 45°E is 4 hours ahead of 15°W."
+  ],
+  "remember": "Same side, subtract. Opposite sides, add. Divide by 15, and east is ahead.",
+  "a": {
+   "q": "Two towns are 45° of longitude apart. About how many hours apart are their times?",
+   "opts": [
+    "3 hours",
+    "4 hours",
+    "6 hours",
+    "45 hours"
+   ],
+   "why": "The Earth turns 15° each hour, so 45° ÷ 15 = 3 hours. Dividing by 24 instead of 15 gives about 1.9, which does not match the rule of 15° per hour.",
+   "clue": "Divide the degrees by the number of degrees in one hour."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town P is at 30°E and town Q is at 75°W. Both are on the same day. About what is the time difference, and which town is ahead?",
+   "opts": [
+    "7 hours, and P is ahead",
+    "7 hours, and Q is ahead",
+    "3 hours, and P is ahead",
+    "3 hours, and Q is ahead"
+   ],
+   "why": "P is east and Q is west of 0°, so add the longitudes: 30° + 75° = 105°, and 105° ÷ 15 = 7 hours. P is further east, so P is ahead. Subtracting gives 75° − 30° = 45°, or 3 hours, which treats the towns as if they were on the same side.",
+   "clue": "Check whether the towns are on the same side of 0°."
+  }
+ },
+ "cleared_by": "owner"
+}

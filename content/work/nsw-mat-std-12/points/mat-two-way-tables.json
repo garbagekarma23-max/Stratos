@@ -1,0 +1,112 @@
+{
+ "id": "mat-two-way-tables",
+ "title": "Two-way tables",
+ "brief": "1d188bca4b81",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01301,
+  "write": 0.00485,
+  "check": 0.00624
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank teaches two-way tables; the closest ones, Venn diagrams and conditional probability, are related ideas but not the same."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Two-way tables",
+  "card": [
+   "A two-way table sorts data by two categories at once, such as year group and how students travel to school. Each cell counts the people in both categories. The totals sit in the last row and column.",
+   "To find a probability, divide the count you want by the total that applies. P(event) = number in the event ÷ total in the group.",
+   "The group matters. If you are told a person is already in a group, such as 'a Year 12 student', use that group's total as the divisor, not the grand total.",
+   "Example: 60 students. Bus: 12 in Year 11 and 18 in Year 12. Walk: 20 in Year 11 and 10 in Year 12. P(bus) = 30/60 = 1/2. P(bus, given Year 12) = 18 ÷ 28 (Year 12 total is 18 + 10)."
+  ],
+  "remember": "Pick the count you want, then divide by the total of the group you are in.",
+  "a": {
+   "q": "In the example, 60 students: Year 12 bus 18, Year 12 walk 10. A Year 12 student is chosen. What is the probability they walk?",
+   "opts": [
+    "10/28",
+    "10/60",
+    "10/30",
+    "18/28"
+   ],
+   "why": "The student is known to be in Year 12, so the divisor is the Year 12 total: 18 + 10 = 28. So P = 10/28. Using 60 is the tempting mistake, as it ignores the group you are told about.",
+   "clue": "Which total applies once you know the year group?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At Kiah's gym, 80 members were surveyed. Morning: 14 women and 26 men. Evening: 22 women and 18 men. A woman is chosen. What is the probability she goes in the morning?",
+   "opts": [
+    "14/36",
+    "14/40",
+    "14/80",
+    "26/40"
+   ],
+   "why": "The person is a woman, so the group is all women: 14 + 22 = 36. P = 14/36. Using 40 divides by all morning members, which is the wrong group and the tempting mistake.",
+   "clue": "Add up the column or row for the group you are told about."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10/28",
+   "also_right": []
+  },
+  "b": {
+   "best": "14/36",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The example's figures check out (Year 12 total 28, women total 36), and the intended answers match."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Two-way tables",
+  "card": [
+   "A two-way table sorts data by two categories at once, such as year group and how students travel to school. Each cell counts the people in both categories. The totals sit in the last row and column.",
+   "To find a probability, divide the count you want by the total that applies. P(event) = number in the event ÷ total in the group.",
+   "The group matters. If you are told a person is already in a group, such as 'a Year 12 student', use that group's total as the divisor, not the grand total.",
+   "Example: 60 students. Bus: 12 in Year 11 and 18 in Year 12. Walk: 20 in Year 11 and 10 in Year 12. P(bus) = 30/60 = 1/2. P(bus, given Year 12) = 18 ÷ 28 (Year 12 total is 18 + 10)."
+  ],
+  "remember": "Pick the count you want, then divide by the total of the group you are in.",
+  "a": {
+   "q": "In the example, 60 students: Year 12 bus 18, Year 12 walk 10. A Year 12 student is chosen. What is the probability they walk?",
+   "opts": [
+    "10/28",
+    "10/60",
+    "10/30",
+    "18/28"
+   ],
+   "why": "The student is known to be in Year 12, so the divisor is the Year 12 total: 18 + 10 = 28. So P = 10/28. Using 60 is the tempting mistake, as it ignores the group you are told about.",
+   "clue": "Which total applies once you know the year group?"
+  },
+  "b": {
+   "d": 3,
+   "q": "At Kiah's gym, 80 members were surveyed. Morning: 14 women and 26 men. Evening: 22 women and 18 men. A woman is chosen. What is the probability she goes in the morning?",
+   "opts": [
+    "14/36",
+    "14/40",
+    "14/80",
+    "26/40"
+   ],
+   "why": "The person is a woman, so the group is all women: 14 + 22 = 36. P = 14/36. Using 40 divides by all morning members, which is the wrong group and the tempting mistake.",
+   "clue": "Add up the column or row for the group you are told about."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,190 @@
+{
+ "id": "mat-rates-conversions",
+ "title": "Rates and conversions",
+ "brief": "79a027dddc5f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: picked as a spot check. It would have been cleared with the fix (remember wording, card wording)",
+  "2026-10-30T11:59:07Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01315,
+  "write": 0.00479,
+  "check": 0.01098,
+  "fix": 0.0275
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers comparing two different units as a rate or converting units such as km/h to m/s, because the nearest points are about rates of change in calculus, which is a different idea."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Rates and conversions",
+  "card": [
+   "A rate compares two quantities with different units, such as km/h (kilometres per hour) or $/kg (dollars per kilogram). The word per means for each one.",
+   "To find a rate, divide the first quantity by the second. If 3 kg of apples cost $12, the rate is $12 ÷ 3 kg = $4/kg.",
+   "To convert a rate, change each unit separately. For km/h to m/s, multiply by 1000 to change km to m, and divide by 3600 to change hours to seconds.",
+   "Example: 72 km/h = 72 × 1000 ÷ 3600 = 20 m/s. To go back from m/s to km/h, multiply by 3.6."
+  ],
+  "remember": "Change each unit on its own: km to m (×1000) and hours to seconds (÷3600).",
+  "a": {
+   "q": "A cyclist travels at 18 km/h. What is this speed in m/s?",
+   "opts": [
+    "5 m/s",
+    "64.8 m/s",
+    "0.3 m/s",
+    "18 000 m/s"
+   ],
+   "why": "18 × 1000 = 18 000 m per hour, and 18 000 ÷ 3600 = 5 m/s. Multiplying by 3.6 gives 64.8, which is the conversion from m/s to km/h, so it is the wrong way round.",
+   "clue": "Change km to m, then hours to seconds."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tap fills a tank at 90 litres per minute. What is this rate in litres per second?",
+   "opts": [
+    "1.5 L/s",
+    "5400 L/s",
+    "0.67 L/s",
+    "150 L/s"
+   ],
+   "why": "There are 60 seconds in a minute, so each second gives 90 ÷ 60 = 1.5 litres. Multiplying by 60 gives 5400, which is the rate per hour, not per second.",
+   "clue": "Will the amount in one second be smaller or larger than in one minute?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5 m/s",
+   "also_right": []
+  },
+  "b": {
+   "best": "1.5 L/s",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"hours to seconds (÷3600)\" could teach students that changing hours to seconds means dividing by 3600. Converting a time from hours to seconds is ×3600. The ÷3600 only applies because the hour is the denominator of the rate. Better: \"per hour to per second (÷3600)\"."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"divide by 3600 to change hours to seconds\" has the same problem. It should say the rate is divided by 3600 because there are 3600 seconds in an hour, so the distance per second is smaller."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The answers (5 m/s and 1.5 L/s) and the explanations are correct. The card and remember line say \"÷3600 to change hours to seconds\", which could teach the wrong direction for converting a time on its own, so it should say \"per hour to per second\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"hours to seconds (÷3600)\" could teach students that changing hours to seconds means dividing by 3600. Converting a time from hours to seconds is ×3600. The ÷3600 only applies because the hour is the denominator of the rate. Better: \"per hour to per second (÷3600)\".",
+  "Card, wording: \"divide by 3600 to change hours to seconds\" has the same problem. It should say the rate is divided by 3600 because there are 3600 seconds in an hour, so the distance per second is smaller."
+ ],
+ "proposal": {
+  "title": "Rates and conversions",
+  "card": [
+   "A rate compares two quantities with different units, such as km/h (kilometres per hour) or $/kg (dollars per kilogram). The word per means for each one.",
+   "To find a rate, divide the first quantity by the second. If 3 kg of apples cost $12, the rate is $12 ÷ 3 kg = $4/kg.",
+   "To convert a rate, change each unit separately. For km/h to m/s, multiply by 1000, as 1 km is 1000 m. Then divide by 3600: an hour has 3600 seconds, so the distance in one second is smaller.",
+   "Example: 72 km/h = 72 × 1000 ÷ 3600 = 20 m/s. To go back from m/s to km/h, multiply by 3.6."
+  ],
+  "remember": "Change each unit on its own: km to m (×1000) and per hour to per second (÷3600).",
+  "a": {
+   "q": "A cyclist travels at 18 km/h. What is this speed in m/s?",
+   "opts": [
+    "5 m/s",
+    "64.8 m/s",
+    "0.3 m/s",
+    "18 000 m/s"
+   ],
+   "why": "18 × 1000 = 18 000 m per hour, and 18 000 ÷ 3600 = 5 m/s. Multiplying by 3.6 gives 64.8, which is the conversion from m/s to km/h, so it is the wrong way round.",
+   "clue": "Change km to m, then per hour to per second."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tap fills a tank at 90 litres per minute. What is this rate in litres per second?",
+   "opts": [
+    "1.5 L/s",
+    "5400 L/s",
+    "0.67 L/s",
+    "0.025 L/s"
+   ],
+   "why": "A minute has 60 seconds, so each second gives 90 ÷ 60 = 1.5 litres. Multiplying by 60 gives 5400, which is the rate per hour, not per second. Dividing by 3600 treats a minute as if it were an hour.",
+   "clue": "Will the amount in one second be smaller or larger than in one minute?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"hours to seconds (÷3600)\" could teach students that changing hours to seconds means dividing by 3600. Converting a time from hours to seconds is ×3600. The ÷3600 only applies because the hour is the denominator of the rate. Better: \"per hour to per second (÷3600)\"."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"divide by 3600 to change hours to seconds\" has the same problem. It should say the rate is divided by 3600 because there are 3600 seconds in an hour, so the distance per second is smaller."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"hours to seconds (÷3600)\" could teach students that changing hours to seconds means dividing by 3600. Converting a time from hours to seconds is ×3600. The ÷3600 only applies because the hour is the denominator of the rate. Better: \"per hour to per second (÷3600)\".",
+   "Card, wording: \"divide by 3600 to change hours to seconds\" has the same problem. It should say the rate is divided by 3600 because there are 3600 seconds in an hour, so the distance per second is smaller."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Rates and conversions",
+  "card": [
+   "A rate compares two quantities with different units, such as km/h (kilometres per hour) or $/kg (dollars per kilogram). The word per means for each one.",
+   "To find a rate, divide the first quantity by the second. If 3 kg of apples cost $12, the rate is $12 ÷ 3 kg = $4/kg.",
+   "To convert a rate, change each unit separately. For km/h to m/s, multiply by 1000, as 1 km is 1000 m. Then divide by 3600: an hour has 3600 seconds, so the distance in one second is smaller.",
+   "Example: 72 km/h = 72 × 1000 ÷ 3600 = 20 m/s. To go back from m/s to km/h, multiply by 3.6."
+  ],
+  "remember": "Change each unit on its own: km to m (×1000) and per hour to per second (÷3600).",
+  "a": {
+   "q": "A cyclist travels at 18 km/h. What is this speed in m/s?",
+   "opts": [
+    "5 m/s",
+    "64.8 m/s",
+    "0.3 m/s",
+    "18 000 m/s"
+   ],
+   "why": "18 × 1000 = 18 000 m per hour, and 18 000 ÷ 3600 = 5 m/s. Multiplying by 3.6 gives 64.8, which is the conversion from m/s to km/h, so it is the wrong way round.",
+   "clue": "Change km to m, then per hour to per second."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tap fills a tank at 90 litres per minute. What is this rate in litres per second?",
+   "opts": [
+    "1.5 L/s",
+    "5400 L/s",
+    "0.67 L/s",
+    "0.025 L/s"
+   ],
+   "why": "A minute has 60 seconds, so each second gives 90 ÷ 60 = 1.5 litres. Multiplying by 60 gives 5400, which is the rate per hour, not per second. Dividing by 3600 treats a minute as if it were an hour.",
+   "clue": "Will the amount in one second be smaller or larger than in one minute?"
+  }
+ },
+ "cleared_by": "owner"
+}

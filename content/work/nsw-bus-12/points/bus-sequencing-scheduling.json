@@ -1,0 +1,235 @@
+{
+ "id": "bus-sequencing-scheduling",
+ "title": "Sequencing and scheduling",
+ "brief": "edf1550f7b03",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:24Z match: none",
+  "2026-10-29T12:22:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:17Z write: done",
+  "2026-10-29T12:39:08Z check: flagged",
+  "2026-10-29T12:41:44Z fix: suggested",
+  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00737,
+  "write": 0.00495,
+  "check": 0.01237,
+  "fix": 0.02615,
+  "recheck": 0.00866
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers ordering and timing tasks with Gantt charts or critical path analysis; the nearest ones, on levels of planning and monitoring performance, are related ideas, not the same one."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Sequencing and scheduling",
+  "card": [
+   [
+    "Sequencing",
+    "deciding the order of tasks. Some tasks must finish before others can start, such as laying a floor before painting it."
+   ],
+   [
+    "Scheduling",
+    "setting when each task starts and finishes, and who or what does it. A schedule puts the tasks on a timeline."
+   ],
+   [
+    "Gantt chart",
+    "a bar chart with tasks listed down the side and time across the top. Each bar shows when a task starts and ends, so overlapping tasks are easy to see."
+   ],
+   [
+    "Critical path analysis",
+    "finds the longest chain of linked tasks from start to finish. That chain sets the shortest time the whole job can take. A delay to any task on it delays the whole job."
+   ]
+  ],
+  "remember": "Sequencing sets the order, scheduling sets the times, and the critical path is the longest chain that fixes the finish date.",
+  "a": {
+   "q": "Which tool shows tasks as bars along a timeline so overlapping tasks can be seen?",
+   "opts": [
+    "A Gantt chart",
+    "Critical path analysis",
+    "A sequencing rule",
+    "A warranty schedule"
+   ],
+   "why": "A Gantt chart draws each task as a bar against time, so overlaps are clear. Critical path analysis is tempting, but it finds the longest chain of tasks rather than drawing bars on a timeline.",
+   "clue": "Think of a bar chart with time across the top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's team is fitting out a shop. Painting (3 days) and then shelving (2 days) must follow each other. Lighting (1 day) can happen at any time. The painting and shelving chain is the longest. What happens if lighting is delayed by one day?",
+   "opts": [
+    "The finish date stays the same",
+    "The finish date moves back one day",
+    "Painting must be moved to start later",
+    "The critical path changes to lighting"
+   ],
+   "why": "Lighting is not on the critical path, so a short delay to it does not change when the job finishes. A delay to painting or shelving would move the finish date. The tempting answer is that any delay moves the end date, but that is true only for tasks on the critical path.",
+   "clue": "Is lighting part of the longest chain of tasks?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A Gantt chart",
+   "also_right": []
+  },
+  "b": {
+   "best": "The finish date stays the same",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says a delay moves the end date 'only' for tasks on the critical path. That is not quite true: a task off the critical path also delays the job if it slips by more than its spare time (float). Here lighting has four days of float, so the answer holds, but the 'only' claim overgeneralises. Reword it, for example: 'a short delay to a task off the critical path need not move the end date.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. The one problem is Why (b): it says delays move the finish date 'only' for critical-path tasks, which overgeneralises, because a task off the path delays the job if it slips by more than its spare time."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says a delay moves the end date 'only' for tasks on the critical path. That is not quite true: a task off the critical path also delays the job if it slips by more than its spare time (float). Here lighting has four days of float, so the answer holds, but the 'only' claim overgeneralises. Reword it, for example: 'a short delay to a task off the critical path need not move the end date.'"
+ ],
+ "proposal": {
+  "title": "Sequencing and scheduling",
+  "card": [
+   [
+    "Sequencing",
+    "deciding the order of tasks. Some tasks must finish before others can start, such as laying a floor before painting it."
+   ],
+   [
+    "Scheduling",
+    "setting when each task starts and finishes, and who or what does it. A schedule puts the tasks on a timeline."
+   ],
+   [
+    "Gantt chart",
+    "a bar chart with tasks listed down the side and time across the top. Each bar shows when a task starts and ends, so overlapping tasks are easy to see."
+   ],
+   [
+    "Critical path analysis",
+    "finds the longest chain of linked tasks from start to finish. That chain sets the shortest time the whole job can take. A delay to any task on it delays the whole job. Tasks off it have spare time, called float."
+   ]
+  ],
+  "remember": "Sequencing sets the order, scheduling sets the times, and the critical path is the longest chain that fixes the finish date.",
+  "a": {
+   "q": "Which tool shows tasks as bars along a timeline so overlapping tasks can be seen?",
+   "opts": [
+    "A Gantt chart",
+    "Critical path analysis",
+    "A sequencing rule",
+    "A task order list"
+   ],
+   "why": "A Gantt chart draws each task as a bar against time, so overlaps are clear. Critical path analysis is tempting, but it finds the longest chain of tasks rather than drawing bars on a timeline.",
+   "clue": "Think of a bar chart with time across the top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's team is fitting out a shop. Painting (3 days) and then shelving (2 days) must follow each other. Lighting (1 day) can happen at any time. The painting and shelving chain is the longest. What happens if lighting is delayed by one day?",
+   "opts": [
+    "The finish date stays the same",
+    "The finish date moves back one day",
+    "Painting must be moved to start later",
+    "The critical path changes to lighting"
+   ],
+   "why": "Lighting is not on the critical path, and it has several days of float, so a one day delay does not change when the job finishes. A delay to painting or shelving would move the finish date. The tempting answer is that any delay moves the end date, but a short delay to a task off the critical path need not move it.",
+   "clue": "Is lighting part of the longest chain of tasks?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A Gantt chart",
+    "also_right": []
+   },
+   "b": {
+    "best": "The finish date stays the same",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 24,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says a delay moves the end date 'only' for tasks on the critical path. That is not quite true: a task off the critical path also delays the job if it slips by more than its spare time (float). Here lighting has four days of float, so the answer holds, but the 'only' claim overgeneralises. Reword it, for example: 'a short delay to a task off the critical path need not move the end date.'"
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says a delay moves the end date 'only' for tasks on the critical path. That is not quite true: a task off the critical path also delays the job if it slips by more than its spare time (float). Here lighting has four days of float, so the answer holds, but the 'only' claim overgeneralises. Reword it, for example: 'a short delay to a task off the critical path need not move the end date.'"
+  ]
+ },
+ "final": {
+  "title": "Sequencing and scheduling",
+  "card": [
+   [
+    "Sequencing",
+    "deciding the order of tasks. Some tasks must finish before others can start, such as laying a floor before painting it."
+   ],
+   [
+    "Scheduling",
+    "setting when each task starts and finishes, and who or what does it. A schedule puts the tasks on a timeline."
+   ],
+   [
+    "Gantt chart",
+    "a bar chart with tasks listed down the side and time across the top. Each bar shows when a task starts and ends, so overlapping tasks are easy to see."
+   ],
+   [
+    "Critical path analysis",
+    "finds the longest chain of linked tasks from start to finish. That chain sets the shortest time the whole job can take. A delay to any task on it delays the whole job. Tasks off it have spare time, called float."
+   ]
+  ],
+  "remember": "Sequencing sets the order, scheduling sets the times, and the critical path is the longest chain that fixes the finish date.",
+  "a": {
+   "q": "Which tool shows tasks as bars along a timeline so overlapping tasks can be seen?",
+   "opts": [
+    "A Gantt chart",
+    "Critical path analysis",
+    "A sequencing rule",
+    "A task order list"
+   ],
+   "why": "A Gantt chart draws each task as a bar against time, so overlaps are clear. Critical path analysis is tempting, but it finds the longest chain of tasks rather than drawing bars on a timeline.",
+   "clue": "Think of a bar chart with time across the top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's team is fitting out a shop. Painting (3 days) and then shelving (2 days) must follow each other. Lighting (1 day) can happen at any time. The painting and shelving chain is the longest. What happens if lighting is delayed by one day?",
+   "opts": [
+    "The finish date stays the same",
+    "The finish date moves back one day",
+    "Painting must be moved to start later",
+    "The critical path changes to lighting"
+   ],
+   "why": "Lighting is not on the critical path, and it has several days of float, so a one day delay does not change when the job finishes. A delay to painting or shelving would move the finish date. The tempting answer is that any delay moves the end date, but a short delay to a task off the critical path need not move it.",
+   "clue": "Is lighting part of the longest chain of tasks?"
+  }
+ },
+ "cleared_by": "recheck"
+}

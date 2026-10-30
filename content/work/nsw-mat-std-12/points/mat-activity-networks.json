@@ -1,0 +1,112 @@
+{
+ "id": "mat-activity-networks",
+ "title": "Activity networks",
+ "brief": "3ab9651cd43f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01285,
+  "write": 0.00492,
+  "check": 0.00701
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers activity networks or project scheduling, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Activity networks",
+  "card": [
+   "A big project is split into smaller jobs called activities. An activity network shows them as a diagram.",
+   "Each activity is an edge (an arrow) with a letter and its duration, such as A, 3 for an activity A that takes 3 hours. Each arrow points in the direction of time.",
+   "Some activities must wait for others. A vertex (a circle) is where arrows meet, and any activity leaving a vertex cannot start until every activity arriving at it is finished.",
+   "Example: A, 2 leads to a vertex. Two arrows leave it: B, 4 and C, 3. B and C can only start once A is done. B and C do not wait for each other."
+  ],
+  "remember": "In an activity network, edges are activities with durations, and an activity waits for all arrows into its starting vertex.",
+  "a": {
+   "q": "In an activity network, activities D and E both arrive at a vertex, and activity F leaves it. When can F start?",
+   "opts": [
+    "Once both D and E are finished",
+    "As soon as D is finished",
+    "As soon as E is finished",
+    "At the same time as D and E"
+   ],
+   "why": "F leaves the vertex, so it must wait for every activity arriving there. That means both D and E must be finished. Starting after only one of them is tempting, but F would then begin before the other is done.",
+   "clue": "An activity waits for everything arriving at its starting vertex."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plans a school fair. Activity P, 3 days (book the hall) leads to a vertex. Activities Q, 2 days (print posters) and R, 4 days (hire tables) both leave that vertex. Which statement is correct?",
+   "opts": [
+    "Q and R can both start once P is finished",
+    "Q can start only after R is finished",
+    "R can start before P is finished",
+    "P can start only after Q and R are finished"
+   ],
+   "why": "Q and R both leave the vertex where P arrives, so each must wait for P and no other activity. They do not wait for each other. P is before them, so it cannot wait for Q or R.",
+   "clue": "Look at which arrows enter the vertex and which leave it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Once both D and E are finished",
+   "also_right": []
+  },
+  "b": {
+   "best": "Q and R can both start once P is finished",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Activity networks",
+  "card": [
+   "A big project is split into smaller jobs called activities. An activity network shows them as a diagram.",
+   "Each activity is an edge (an arrow) with a letter and its duration, such as A, 3 for an activity A that takes 3 hours. Each arrow points in the direction of time.",
+   "Some activities must wait for others. A vertex (a circle) is where arrows meet, and any activity leaving a vertex cannot start until every activity arriving at it is finished.",
+   "Example: A, 2 leads to a vertex. Two arrows leave it: B, 4 and C, 3. B and C can only start once A is done. B and C do not wait for each other."
+  ],
+  "remember": "In an activity network, edges are activities with durations, and an activity waits for all arrows into its starting vertex.",
+  "a": {
+   "q": "In an activity network, activities D and E both arrive at a vertex, and activity F leaves it. When can F start?",
+   "opts": [
+    "Once both D and E are finished",
+    "As soon as D is finished",
+    "As soon as E is finished",
+    "At the same time as D and E"
+   ],
+   "why": "F leaves the vertex, so it must wait for every activity arriving there. That means both D and E must be finished. Starting after only one of them is tempting, but F would then begin before the other is done.",
+   "clue": "An activity waits for everything arriving at its starting vertex."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plans a school fair. Activity P, 3 days (book the hall) leads to a vertex. Activities Q, 2 days (print posters) and R, 4 days (hire tables) both leave that vertex. Which statement is correct?",
+   "opts": [
+    "Q and R can both start once P is finished",
+    "Q can start only after R is finished",
+    "R can start before P is finished",
+    "P can start only after Q and R are finished"
+   ],
+   "why": "Q and R both leave the vertex where P arrives, so each must wait for P and no other activity. They do not wait for each other. P is before them, so it cannot wait for Q or R.",
+   "clue": "Look at which arrows enter the vertex and which leave it."
+  }
+ },
+ "cleared_by": "checker"
+}

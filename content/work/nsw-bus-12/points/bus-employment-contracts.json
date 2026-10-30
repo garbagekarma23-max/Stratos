@@ -1,0 +1,252 @@
+{
+ "id": "bus-employment-contracts",
+ "title": "Employment contracts",
+ "brief": "424dcbfeadb4",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:23Z match: none",
+  "2026-10-29T12:22:32Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:17Z write: failed the content check, writing again",
+  "2026-10-29T12:39:08Z write: done",
+  "2026-10-29T12:41:44Z check: flagged",
+  "2026-10-29T12:45:00Z fix: suggested",
+  "2026-10-29T16:45:05Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00718,
+  "write": 0.01556,
+  "check": 0.01967,
+  "fix": 0.01893,
+  "recheck": 0.01429
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers employment contracts, modern awards, enterprise agreements or the National Employment Standards, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Employment contracts",
+  "card": [
+   [
+    "Common law contract",
+    "an agreement between one employer and one employee. It can be written or spoken, and it sets that person's pay and conditions."
+   ],
+   [
+    "Modern award",
+    "a set of minimum pay and conditions for a whole industry or occupation, such as retail. It applies to many employers and employees."
+   ],
+   [
+    "Enterprise agreement",
+    "an agreement made at one workplace between the employer and its employees. It must leave employees better off overall than the award."
+   ],
+   "The National Employment Standards (NES) are ten minimum entitlements, such as annual leave. They apply to all employees covered by the national system, and no contract can go below them."
+  ],
+  "remember": "Contracts and awards set pay and conditions, and none can go below the NES.",
+  "a": {
+   "q": "Which agreement is made at a single workplace between that employer and its employees?",
+   "opts": [
+    "An enterprise agreement",
+    "A modern award",
+    "A common law contract",
+    "The National Employment Standards"
+   ],
+   "why": "An enterprise agreement is made at one workplace and covers the employees there. A modern award covers a whole industry or occupation. A common law contract is tempting, but it is between the employer and one employee, not the group.",
+   "clue": "Think of an agreement for one business and its staff as a group."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo's written contract offers 12 days less annual leave than the National Employment Standards give. What is the effect on Jo's leave?",
+   "opts": [
+    "The NES entitlement applies, as it is the minimum",
+    "The contract applies, because Jo signed it",
+    "The two amounts are averaged to find Jo's leave",
+    "The award for the industry applies in place of the NES"
+   ],
+   "why": "The NES set a minimum that no contract can go below, so the lower term has no effect and Jo gets the NES entitlement. Signing the contract does not remove the minimum, which is why the second option is wrong.",
+   "clue": "Can a signed contract take away a minimum for all employees?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An enterprise agreement",
+   "also_right": []
+  },
+  "b": {
+   "best": "The NES entitlement applies, as it is the minimum",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The NES now have eleven minimum entitlements, not ten. Casual conversion was added in 2021, so 'ten' is out of date."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "An enterprise agreement is not limited to 'one workplace'. A single-enterprise agreement can cover several sites of one employer, and multi-enterprise agreements also exist. 'Made between an employer (or employers) and its employees' would be accurate."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the second option is wrong because signing does not remove the minimum. Options are shown in random order, and in this order the second option is the correct NES answer, so the why contradicts the right answer. It should name the option ('The contract applies, because Jo signed it') rather than its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. The card says the NES have ten entitlements when there are now eleven, and it describes enterprise agreements too narrowly as 'one workplace'. The why for (b) refers to 'the second option', which in this order is the correct answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The NES now have eleven minimum entitlements, not ten. Casual conversion was added in 2021, so 'ten' is out of date.",
+  "Card, fact: An enterprise agreement is not limited to 'one workplace'. A single-enterprise agreement can cover several sites of one employer, and multi-enterprise agreements also exist. 'Made between an employer (or employers) and its employees' would be accurate.",
+  "Question b, other: The why says the second option is wrong because signing does not remove the minimum. Options are shown in random order, and in this order the second option is the correct NES answer, so the why contradicts the right answer. It should name the option ('The contract applies, because Jo signed it') rather than its position."
+ ],
+ "proposal": {
+  "title": "Employment contracts",
+  "card": [
+   [
+    "Common law contract",
+    "an agreement between one employer and one employee. It can be written or spoken, and it sets that person's pay and conditions."
+   ],
+   [
+    "Modern award",
+    "a set of minimum pay and conditions for a whole industry or occupation, such as retail. It applies to many employers and employees."
+   ],
+   [
+    "Enterprise agreement",
+    "an agreement made between an employer, or a group of employers, and its employees as a group. It must leave employees better off overall than the award."
+   ],
+   "The National Employment Standards (NES) are eleven minimum entitlements, such as annual leave. They apply to all employees covered by the national system, and no award, agreement or contract can go below them."
+  ],
+  "remember": "Contracts, awards and agreements set pay and conditions. None can go below the NES.",
+  "a": {
+   "q": "A hotel owner and all of its staff make a deal that sets their pay and conditions. What is this deal?",
+   "opts": [
+    "An enterprise agreement",
+    "A modern award",
+    "A common law contract",
+    "The National Employment Standards"
+   ],
+   "why": "The deal is made between an employer and its employees as a group, which is an enterprise agreement. A common law contract is tempting, but it is between the employer and one employee, not the whole staff. A modern award covers a whole industry, not one employer's deal.",
+   "clue": "Is the deal with one worker, or with the staff as a group?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo's written contract gives fewer days of annual leave than the National Employment Standards. What is the effect on Jo's leave?",
+   "opts": [
+    "The NES entitlement applies, as it is the minimum",
+    "The contract applies, because Jo signed it",
+    "The two amounts are averaged to find Jo's leave",
+    "The industry award applies in place of the NES"
+   ],
+   "why": "The NES set a minimum that no contract can go below, so the lower term has no effect and Jo gets the NES entitlement. The option 'The contract applies, because Jo signed it' is wrong, because signing does not remove the minimum. An award cannot replace the NES either.",
+   "clue": "Can a signed contract take away a minimum for all employees?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:05Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An enterprise agreement",
+    "also_right": []
+   },
+   "b": {
+    "best": "The NES entitlement applies, as it is the minimum",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's facts on common law contracts, modern awards, enterprise agreements (better off overall test) and the eleven NES minimums are accurate, and both questions have one clear right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:05Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 27,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The NES now have eleven minimum entitlements, not ten. Casual conversion was added in 2021, so 'ten' is out of date."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "An enterprise agreement is not limited to 'one workplace'. A single-enterprise agreement can cover several sites of one employer, and multi-enterprise agreements also exist. 'Made between an employer (or employers) and its employees' would be accurate."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the second option is wrong because signing does not remove the minimum. Options are shown in random order, and in this order the second option is the correct NES answer, so the why contradicts the right answer. It should name the option ('The contract applies, because Jo signed it') rather than its position."
+   }
+  ],
+  "flags": [
+   "Card, fact: The NES now have eleven minimum entitlements, not ten. Casual conversion was added in 2021, so 'ten' is out of date.",
+   "Card, fact: An enterprise agreement is not limited to 'one workplace'. A single-enterprise agreement can cover several sites of one employer, and multi-enterprise agreements also exist. 'Made between an employer (or employers) and its employees' would be accurate.",
+   "Question b, other: The why says the second option is wrong because signing does not remove the minimum. Options are shown in random order, and in this order the second option is the correct NES answer, so the why contradicts the right answer. It should name the option ('The contract applies, because Jo signed it') rather than its position."
+  ]
+ },
+ "final": {
+  "title": "Employment contracts",
+  "card": [
+   [
+    "Common law contract",
+    "an agreement between one employer and one employee. It can be written or spoken, and it sets that person's pay and conditions."
+   ],
+   [
+    "Modern award",
+    "a set of minimum pay and conditions for a whole industry or occupation, such as retail. It applies to many employers and employees."
+   ],
+   [
+    "Enterprise agreement",
+    "an agreement made between an employer, or a group of employers, and its employees as a group. It must leave employees better off overall than the award."
+   ],
+   "The National Employment Standards (NES) are eleven minimum entitlements, such as annual leave. They apply to all employees covered by the national system, and no award, agreement or contract can go below them."
+  ],
+  "remember": "Contracts, awards and agreements set pay and conditions. None can go below the NES.",
+  "a": {
+   "q": "A hotel owner and all of its staff make a deal that sets their pay and conditions. What is this deal?",
+   "opts": [
+    "An enterprise agreement",
+    "A modern award",
+    "A common law contract",
+    "The National Employment Standards"
+   ],
+   "why": "The deal is made between an employer and its employees as a group, which is an enterprise agreement. A common law contract is tempting, but it is between the employer and one employee, not the whole staff. A modern award covers a whole industry, not one employer's deal.",
+   "clue": "Is the deal with one worker, or with the staff as a group?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jo's written contract gives fewer days of annual leave than the National Employment Standards. What is the effect on Jo's leave?",
+   "opts": [
+    "The NES entitlement applies, as it is the minimum",
+    "The contract applies, because Jo signed it",
+    "The two amounts are averaged to find Jo's leave",
+    "The industry award applies in place of the NES"
+   ],
+   "why": "The NES set a minimum that no contract can go below, so the lower term has no effect and Jo gets the NES entitlement. The option 'The contract applies, because Jo signed it' is wrong, because signing does not remove the minimum. An award cannot replace the NES either.",
+   "clue": "Can a signed contract take away a minimum for all employees?"
+  }
+ },
+ "cleared_by": "recheck"
+}

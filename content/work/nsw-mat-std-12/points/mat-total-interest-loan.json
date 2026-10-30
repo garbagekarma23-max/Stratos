@@ -1,0 +1,112 @@
+{
+ "id": "mat-total-interest-loan",
+ "title": "Total interest on a loan",
+ "brief": "84dbebb4f6f9",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01315,
+  "write": 0.00471,
+  "check": 0.01008
+ },
+ "match": {
+  "same": "",
+  "reason": "No existing point covers total interest as total repayments minus the amount borrowed, or how the loan term affects it; reducing balance loans and compound interest are related but teach different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Total interest on a loan",
+  "card": [
+   "The total paid on a loan = repayment × number of repayments. Total interest = total paid − amount borrowed.",
+   "Example: Sam borrows $10 000 and repays $450 a month for 24 months. Total paid = 450 × 24 = $10 800. Total interest = 10 800 − 10 000 = $800.",
+   "A longer term makes each repayment smaller, because the loan is spread over more payments.",
+   "A longer term also means interest is charged for more time, so the total interest is usually much larger."
+  ],
+  "remember": "Total interest = total paid − amount borrowed. A longer term means smaller repayments but more interest.",
+  "a": {
+   "q": "Priya borrows $8000 and repays $250 a month for 36 months. What is the total interest?",
+   "opts": [
+    "$1000",
+    "$9000",
+    "$750",
+    "$8250"
+   ],
+   "why": "Total paid = 250 × 36 = $9000. Total interest = 9000 − 8000 = $1000. The $9000 is the total paid, not the interest, because the amount borrowed has not yet been taken off.",
+   "clue": "Find the total paid first, then take off the amount borrowed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom borrows $20 000. Plan A: $620 a month for 36 months. Plan B: $390 a month for 60 months. Which statement is correct?",
+   "opts": [
+    "Plan B has $1080 more interest than Plan A",
+    "Plan A has $1080 more interest than Plan B",
+    "Plan B has $3400 more interest than Plan A",
+    "Plan A and Plan B have the same total interest"
+   ],
+   "why": "Plan A total = 620 × 36 = $22 320, so interest is $2320. Plan B total = 390 × 60 = $23 400, so interest is $3400. Plan B costs $1080 more in interest, even though its repayments are smaller.",
+   "clue": "Work out the interest for each plan, then compare them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$1000",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plan B has $1080 more interest than Plan A",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out ($1000; Plan B interest $3400 versus Plan A $2320, a $1080 difference), and the card and explanations are accurate."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Total interest on a loan",
+  "card": [
+   "The total paid on a loan = repayment × number of repayments. Total interest = total paid − amount borrowed.",
+   "Example: Sam borrows $10 000 and repays $450 a month for 24 months. Total paid = 450 × 24 = $10 800. Total interest = 10 800 − 10 000 = $800.",
+   "A longer term makes each repayment smaller, because the loan is spread over more payments.",
+   "A longer term also means interest is charged for more time, so the total interest is usually much larger."
+  ],
+  "remember": "Total interest = total paid − amount borrowed. A longer term means smaller repayments but more interest.",
+  "a": {
+   "q": "Priya borrows $8000 and repays $250 a month for 36 months. What is the total interest?",
+   "opts": [
+    "$1000",
+    "$9000",
+    "$750",
+    "$8250"
+   ],
+   "why": "Total paid = 250 × 36 = $9000. Total interest = 9000 − 8000 = $1000. The $9000 is the total paid, not the interest, because the amount borrowed has not yet been taken off.",
+   "clue": "Find the total paid first, then take off the amount borrowed."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom borrows $20 000. Plan A: $620 a month for 36 months. Plan B: $390 a month for 60 months. Which statement is correct?",
+   "opts": [
+    "Plan B has $1080 more interest than Plan A",
+    "Plan A has $1080 more interest than Plan B",
+    "Plan B has $3400 more interest than Plan A",
+    "Plan A and Plan B have the same total interest"
+   ],
+   "why": "Plan A total = 620 × 36 = $22 320, so interest is $2320. Plan B total = 390 × 60 = $23 400, so interest is $3400. Plan B costs $1080 more in interest, even though its repayments are smaller.",
+   "clue": "Work out the interest for each plan, then compare them."
+  }
+ },
+ "cleared_by": "checker"
+}

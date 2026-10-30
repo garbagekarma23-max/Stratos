@@ -1,0 +1,213 @@
+{
+ "id": "mat-cuts",
+ "title": "Cuts",
+ "brief": "d42bd404cdee",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01286,
+  "write": 0.0049,
+  "check": 0.01147,
+  "fix": 0.03198,
+  "recheck": 0.00731
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers network flow cuts and their capacity, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cuts",
+  "card": [
+   "A flow network has a source, where flow starts, and a sink, where it ends. Each directed edge has a capacity, which is the most it can carry.",
+   "A cut is a line drawn across the network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
+   "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
+   "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+  ],
+  "remember": "Add only the edges that go from the source side to the sink side.",
+  "a": {
+   "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
+   "opts": [
+    "10",
+    "16",
+    "8",
+    "14"
+   ],
+   "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+   "clue": "Count only the edges that start on the source side and end on the sink side."
+  },
+  "b": {
+   "d": 3,
+   "q": "The edges are S to A (8), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
+   "opts": [
+    "16",
+    "20",
+    "12",
+    "14"
+   ],
+   "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5). The total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is not counted. Adding it gives 18, and the options show other sums that do not match.",
+   "clue": "Check the direction of each edge that crosses the cut."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "14",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines a flow network (source, sink, directed edges with capacities), which is point 1 of the chapter. It should only mention these terms, not explain them again."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says adding the back edge B to A gives 18, but 18 is not an option, and it vaguely says 'the options show other sums that do not match'. The distractors (12, 16, 20) do not match the error the clue warns about, so the why does not explain them."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are right (a = 10, b = 14). The card re-explains flow networks, which belong to point 1, and the why for (b) names a wrong sum (18) that is not among the options, so it does not explain the distractors shown."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “14”, not the writer’s answer “16”.",
+  "Card, other: The first bullet defines a flow network (source, sink, directed edges with capacities), which is point 1 of the chapter. It should only mention these terms, not explain them again.",
+  "Question b, wording: The why says adding the back edge B to A gives 18, but 18 is not an option, and it vaguely says 'the options show other sums that do not match'. The distractors (12, 16, 20) do not match the error the clue warns about, so the why does not explain them."
+ ],
+ "proposal": {
+  "title": "Cuts",
+  "card": [
+   "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
+   "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
+   "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
+   "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+  ],
+  "remember": "Add only the edges that go from the source side to the sink side.",
+  "a": {
+   "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
+   "opts": [
+    "10",
+    "16",
+    "8",
+    "14"
+   ],
+   "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+   "clue": "Count only the edges that start on the source side and end on the sink side."
+  },
+  "b": {
+   "d": 3,
+   "q": "The edges are S to A (9), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
+   "opts": [
+    "14",
+    "18",
+    "10",
+    "12"
+   ],
+   "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+   "clue": "Check the direction of each edge that crosses the cut."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "10",
+    "also_right": []
+   },
+   "b": {
+    "best": "14",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 3 + 5 + 2 = 10 for (a) and 6 + 3 + 5 = 14 for (b). The card, remember line and explanations match and stay within the cuts point."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines a flow network (source, sink, directed edges with capacities), which is point 1 of the chapter. It should only mention these terms, not explain them again."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says adding the back edge B to A gives 18, but 18 is not an option, and it vaguely says 'the options show other sums that do not match'. The distractors (12, 16, 20) do not match the error the clue warns about, so the why does not explain them."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “14”, not the writer’s answer “16”.",
+   "Card, other: The first bullet defines a flow network (source, sink, directed edges with capacities), which is point 1 of the chapter. It should only mention these terms, not explain them again.",
+   "Question b, wording: The why says adding the back edge B to A gives 18, but 18 is not an option, and it vaguely says 'the options show other sums that do not match'. The distractors (12, 16, 20) do not match the error the clue warns about, so the why does not explain them."
+  ]
+ },
+ "final": {
+  "title": "Cuts",
+  "card": [
+   "A cut is a line drawn across a flow network that splits the vertices into two groups. The source is in one group and the sink is in the other.",
+   "The capacity of a cut is the total of the capacities of the edges that point from the source side to the sink side. Edges that point back towards the source side are not counted.",
+   "Edges with both ends on the same side do not cross the cut, so they are not counted either.",
+   "Example: the source S has edges S to A (7) and S to B (5). A to T (4) and B to T (6) lead to the sink T. A cut with S, A, B on one side and T on the other crosses A to T and B to T. Its capacity is 4 + 6 = 10."
+  ],
+  "remember": "Add only the edges that go from the source side to the sink side.",
+  "a": {
+   "q": "A cut separates S and A from B and T. The edges are S to B (3), A to B (5), A to T (2) and B to T (6). What is the capacity of the cut?",
+   "opts": [
+    "10",
+    "16",
+    "8",
+    "14"
+   ],
+   "why": "The edges that go from the S and A side to the B and T side are S to B (3), A to B (5) and A to T (2). The total is 3 + 5 + 2 = 10. B to T (6) is not counted, as both ends are on the sink side, and adding it gives 16.",
+   "clue": "Count only the edges that start on the source side and end on the sink side."
+  },
+  "b": {
+   "d": 3,
+   "q": "The edges are S to A (9), S to B (6), A to B (3), B to A (4), A to T (5) and B to T (7). A cut separates S and A from B and T. What is its capacity?",
+   "opts": [
+    "14",
+    "18",
+    "10",
+    "12"
+   ],
+   "why": "The edges that cross from the S and A side to the B and T side are S to B (6), A to B (3) and A to T (5), so the total is 6 + 3 + 5 = 14. B to A (4) points back to the source side, so it is ignored: adding it gives 18 and subtracting it gives 10. Adding only the edges into T gives 12, which misses S to B and A to B.",
+   "clue": "Check the direction of each edge that crosses the cut."
+  }
+ },
+ "cleared_by": "recheck"
+}

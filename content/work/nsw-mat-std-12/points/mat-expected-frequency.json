@@ -1,0 +1,211 @@
+{
+ "id": "mat-expected-frequency",
+ "title": "Expected frequency",
+ "brief": "b128b1226c44",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01302,
+  "write": 0.00407,
+  "check": 0.01133,
+  "fix": 0.02604,
+  "recheck": 0.01074
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers expected frequency (probability times number of trials); expected value is a related but different idea about a weighted average of a random variable's values."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Expected frequency",
+  "card": [
+   "Expected frequency is the number of times an event is expected to happen in a set number of trials. It is a prediction, not a promise.",
+   "Expected frequency = probability × number of trials.",
+   "Example: the probability of rain on a day in a town is 0.2. Over 150 days, the expected number of rainy days is 0.2 × 150 = 30.",
+   "The actual result is often close to the expected frequency but may not match it. Change a percentage to a decimal or fraction first, so 40% becomes 0.4."
+  ],
+  "remember": "Expected frequency is probability × number of trials, and it is a prediction.",
+  "a": {
+   "q": "The probability that a bus is late is 0.15. About how many late buses are expected in 200 trips?",
+   "opts": [
+    "30",
+    "15",
+    "185",
+    "1333"
+   ],
+   "why": "Expected frequency = 0.15 × 200 = 30. The option 185 subtracts the probability from the trips instead of multiplying, which is a common slip.",
+   "clue": "Multiply the probability by the number of trips."
+  },
+  "b": {
+   "d": 3,
+   "q": "A factory finds that 4% of its phone chargers are faulty. In a batch of 2500 chargers, how many faulty chargers are expected?",
+   "opts": [
+    "100",
+    "10",
+    "400",
+    "2496"
+   ],
+   "why": "Change 4% to 0.04. Then 0.04 × 2500 = 100. Using 4 instead of 0.04 gives 10000, and 10 comes from moving the decimal point the wrong way.",
+   "clue": "Write the percentage as a decimal before multiplying."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30",
+   "also_right": []
+  },
+  "b": {
+   "best": "100",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 185 'subtracts the probability from the trips', but 200 − 0.15 = 199.85. 185 comes from 200 − 15, which treats the probability as the whole number 15 and then subtracts it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why explains a 10000 distractor that is not among the options. It also says 10 comes from moving the decimal point 'the wrong way', but 10 comes from 0.004 × 2500, which is moving the point one place too far. The why does not explain the 400 option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, with one clear right answer each (30 and 100). The explanations misdescribe how the distractors arise: 185 is 200 − 15, not 200 − 0.15, and the b explanation cites an option that does not exist and misexplains 10."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says 185 'subtracts the probability from the trips', but 200 − 0.15 = 199.85. 185 comes from 200 − 15, which treats the probability as the whole number 15 and then subtracts it.",
+  "Question b, wording: The why explains a 10000 distractor that is not among the options. It also says 10 comes from moving the decimal point 'the wrong way', but 10 comes from 0.004 × 2500, which is moving the point one place too far. The why does not explain the 400 option."
+ ],
+ "proposal": {
+  "title": "Expected frequency",
+  "card": [
+   "Expected frequency is the number of times an event is expected to happen in a set number of trials. It is a prediction, not a promise.",
+   "Expected frequency = probability × number of trials.",
+   "Example: the probability of rain on a day in a town is 0.2. Over 150 days, the expected number of rainy days is 0.2 × 150 = 30.",
+   "The actual result is often close to the expected frequency but may not match it. Change a percentage to a decimal or fraction first, so 40% becomes 0.4."
+  ],
+  "remember": "Expected frequency is probability × number of trials, and it is a prediction.",
+  "a": {
+   "q": "The probability that a bus is late is 0.15. About how many late buses are expected in 200 trips?",
+   "opts": [
+    "30",
+    "15",
+    "185",
+    "1333"
+   ],
+   "why": "Expected frequency = 0.15 × 200 = 30. The option 185 comes from 200 − 15, which treats the probability as the whole number 15 and subtracts it instead of multiplying. The option 1333 comes from dividing 200 by 0.15.",
+   "clue": "Multiply the probability by the number of trips."
+  },
+  "b": {
+   "d": 3,
+   "q": "A factory finds that 4% of its phone chargers are faulty. In a batch of 2500 chargers, how many faulty chargers are expected?",
+   "opts": [
+    "100",
+    "10",
+    "10000",
+    "2496"
+   ],
+   "why": "Change 4% to 0.04. Then 0.04 × 2500 = 100. Using 4 instead of 0.04 gives 10000, and 10 comes from 0.004 × 2500, which moves the decimal point one place too far.",
+   "clue": "Write the percentage as a decimal before multiplying."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "30",
+    "also_right": []
+   },
+   "b": {
+    "best": "100",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 185 'subtracts the probability from the trips', but 200 − 0.15 = 199.85. 185 comes from 200 − 15, which treats the probability as the whole number 15 and then subtracts it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why explains a 10000 distractor that is not among the options. It also says 10 comes from moving the decimal point 'the wrong way', but 10 comes from 0.004 × 2500, which is moving the point one place too far. The why does not explain the 400 option."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says 185 'subtracts the probability from the trips', but 200 − 0.15 = 199.85. 185 comes from 200 − 15, which treats the probability as the whole number 15 and then subtracts it.",
+   "Question b, wording: The why explains a 10000 distractor that is not among the options. It also says 10 comes from moving the decimal point 'the wrong way', but 10 comes from 0.004 × 2500, which is moving the point one place too far. The why does not explain the 400 option."
+  ]
+ },
+ "final": {
+  "title": "Expected frequency",
+  "card": [
+   "Expected frequency is the number of times an event is expected to happen in a set number of trials. It is a prediction, not a promise.",
+   "Expected frequency = probability × number of trials.",
+   "Example: the probability of rain on a day in a town is 0.2. Over 150 days, the expected number of rainy days is 0.2 × 150 = 30.",
+   "The actual result is often close to the expected frequency but may not match it. Change a percentage to a decimal or fraction first, so 40% becomes 0.4."
+  ],
+  "remember": "Expected frequency is probability × number of trials, and it is a prediction.",
+  "a": {
+   "q": "The probability that a bus is late is 0.15. About how many late buses are expected in 200 trips?",
+   "opts": [
+    "30",
+    "15",
+    "185",
+    "1333"
+   ],
+   "why": "Expected frequency = 0.15 × 200 = 30. The option 185 comes from 200 − 15, which treats the probability as the whole number 15 and subtracts it instead of multiplying. The option 1333 comes from dividing 200 by 0.15.",
+   "clue": "Multiply the probability by the number of trips."
+  },
+  "b": {
+   "d": 3,
+   "q": "A factory finds that 4% of its phone chargers are faulty. In a batch of 2500 chargers, how many faulty chargers are expected?",
+   "opts": [
+    "100",
+    "10",
+    "10000",
+    "2496"
+   ],
+   "why": "Change 4% to 0.04. Then 0.04 × 2500 = 100. Using 4 instead of 0.04 gives 10000, and 10 comes from 0.004 × 2500, which moves the decimal point one place too far.",
+   "clue": "Write the percentage as a decimal before multiplying."
+  }
+ },
+ "cleared_by": "recheck"
+}

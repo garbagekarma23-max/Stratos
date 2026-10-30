@@ -1,0 +1,226 @@
+{
+ "id": "mat-gst",
+ "title": "GST",
+ "brief": "0995e708f1f7",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01291,
+  "write": 0.0045,
+  "check": 0.00762,
+  "fix": 0.02435,
+  "recheck": 0.00774
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers GST or adding and removing a 10% tax, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "GST",
+  "card": [
+   "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
+   [
+    "Adding GST",
+    "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+   ],
+   [
+    "Finding the GST",
+    "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+   ],
+   [
+    "Example",
+    "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+   ]
+  ],
+  "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
+  "a": {
+   "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
+   "opts": [
+    "$275",
+    "$25",
+    "$272.73",
+    "$260"
+   ],
+   "why": "The price with GST is $250 × 1.1 = $275. Dividing by 11 gives $22.73, which is the method for a price that already includes GST, and it does not add GST to $250.",
+   "clue": "The new price is 110% of the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
+   "opts": [
+    "$17",
+    "$18.70",
+    "$170",
+    "$20.57"
+   ],
+   "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+   "clue": "The $187 is already 110% of the price before GST."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$275",
+   "also_right": []
+  },
+  "b": {
+   "best": "$17",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for (a) talks about $22.73, which is not an option. The distractor is $272.73, which is $250 plus $250 ÷ 11. The why should say that adding $250 ÷ 11 = $22.73 gives $272.73, and that this uses the wrong method."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. The only problem is that the why for question a explains $22.73 rather than the listed distractor $272.73, so it should be reworded to match the option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why for (a) talks about $22.73, which is not an option. The distractor is $272.73, which is $250 plus $250 ÷ 11. The why should say that adding $250 ÷ 11 = $22.73 gives $272.73, and that this uses the wrong method."
+ ],
+ "proposal": {
+  "title": "GST",
+  "card": [
+   "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
+   [
+    "Adding GST",
+    "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+   ],
+   [
+    "Finding the GST",
+    "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+   ],
+   [
+    "Example",
+    "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+   ]
+  ],
+  "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
+  "a": {
+   "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
+   "opts": [
+    "$275",
+    "$25",
+    "$272.73",
+    "$260"
+   ],
+   "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+   "clue": "The new price is 110% of the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
+   "opts": [
+    "$17",
+    "$18.70",
+    "$170",
+    "$20.57"
+   ],
+   "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+   "clue": "The $187 is already 110% of the price before GST."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$275",
+    "also_right": []
+   },
+   "b": {
+    "best": "$17",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The facts, worked examples and answers check out: $250 × 1.1 = $275 and $187 ÷ 11 = $17."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for (a) talks about $22.73, which is not an option. The distractor is $272.73, which is $250 plus $250 ÷ 11. The why should say that adding $250 ÷ 11 = $22.73 gives $272.73, and that this uses the wrong method."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why for (a) talks about $22.73, which is not an option. The distractor is $272.73, which is $250 plus $250 ÷ 11. The why should say that adding $250 ÷ 11 = $22.73 gives $272.73, and that this uses the wrong method."
+  ]
+ },
+ "final": {
+  "title": "GST",
+  "card": [
+   "GST is the Goods and Services Tax. In Australia it is 10% of the price on most goods and services. Some items, such as basic fresh food, do not have it.",
+   [
+    "Adding GST",
+    "Multiply the price before GST by 1.1. Example: a $60 repair becomes $60 × 1.1 = $66. The GST is $6."
+   ],
+   [
+    "Finding the GST",
+    "A price with GST included is 110% of the original, so the GST is 1/11 of it. Divide the GST-inclusive price by 11."
+   ],
+   [
+    "Example",
+    "A jacket costs $154 with GST included. The GST is $154 ÷ 11 = $14. The price before GST is $154 − $14 = $140."
+   ]
+  ],
+  "remember": "Add GST by multiplying by 1.1. To find the GST in a price that includes it, divide by 11.",
+  "a": {
+   "q": "A tradesperson charges $250 before GST. What is the price with 10% GST added?",
+   "opts": [
+    "$275",
+    "$25",
+    "$272.73",
+    "$260"
+   ],
+   "why": "The price with GST is $250 × 1.1 = $275. Adding $250 ÷ 11 = $22.73 gives $272.73, but that uses the wrong method: dividing by 11 finds the GST in a price that already includes it. Here the $250 is before GST, so the GST is 10% of it, which is $25.",
+   "clue": "The new price is 110% of the starting price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia pays $187 for a printer, and the price includes GST. How much of the $187 is GST?",
+   "opts": [
+    "$17",
+    "$18.70",
+    "$170",
+    "$20.57"
+   ],
+   "why": "The price includes GST, so the GST is $187 ÷ 11 = $17. Taking 10% of $187 gives $18.70, which is tempting but wrong, because $187 is 110% of the original price and not 100%.",
+   "clue": "The $187 is already 110% of the price before GST."
+  }
+ },
+ "cleared_by": "recheck"
+}

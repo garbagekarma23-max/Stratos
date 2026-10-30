@@ -1,0 +1,211 @@
+{
+ "id": "eco-underemployment",
+ "title": "Underemployment",
+ "brief": "660fd53bdf45",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:24Z match: none",
+  "2026-10-29T12:22:33Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:19Z write: done",
+  "2026-10-29T12:39:08Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00601,
+  "write": 0.00458,
+  "check": 0.01424,
+  "fix": 0.03443,
+  "recheck": 0.00945
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers underemployment; e-labour measures unemployment and e-unemployment covers its causes, but neither teaches people who work but want more hours."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Underemployment",
+  "card": [
+   "Underemployed people have a job but want more hours than they get. Most work part time and would take extra hours, or work full time and want more.",
+   "The ABS counts them as employed, not unemployed, because they did paid work in the survey week. So the unemployment rate does not show them.",
+   "The underemployment rate is the share of the labour force who are underemployed. In Australia it is often close to or above the unemployment rate.",
+   "A high rate means labour is not fully used. Workers earn less than they want, and the economy produces less than it could."
+  ],
+  "remember": "Underemployed people have work but want more hours, and they sit outside the unemployment rate.",
+  "a": {
+   "q": "Which person is underemployed?",
+   "opts": [
+    "Jo works 15 hours a week and wants 30",
+    "Sam has no job, is looking and could start now",
+    "Lee works 40 hours a week and is happy with them",
+    "Ana has no job and has stopped looking for work"
+   ],
+   "why": "Jo has a job but wants more hours, so she is underemployed. Sam is unemployed because he has no paid work. Ana has no job at all, so she is not underemployed either.",
+   "clue": "Underemployed people already have paid work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dubbo has 5% unemployment, but many part-time workers there want more hours. What does this show?",
+   "opts": [
+    "Labour is underused beyond what unemployment shows",
+    "Unemployment is really higher than the ABS reports",
+    "Everyone who wants more hours is counted as unemployed",
+    "Part-time workers are not counted as employed"
+   ],
+   "why": "Part-time workers who want more hours have jobs, so the unemployment rate leaves them out. Their unused capacity shows up only in the underemployment rate. It is wrong to say they are counted as unemployed, because they did paid work.",
+   "clue": "Ask how the ABS counts someone who did paid work."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Jo works 15 hours a week and wants 30",
+   "also_right": []
+  },
+  "b": {
+   "best": "Labour is underused beyond what unemployment shows",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"or work full time and want more\" does not match the ABS definition. Full-time workers count as underemployed only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work. A full-time worker who simply wants more hours is not counted. The card also leaves out that underemployed people must be available for more hours."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says their unused capacity shows up \"only\" in the underemployment rate. The card does not say this, and these workers are also part of the ABS labour underutilisation rate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions work and have one clear answer. The card wrongly says full-time workers who want more hours are underemployed: the ABS counts full-time workers only if they worked part-time hours for economic reasons. The why for (b) also overstates with \"only\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"or work full time and want more\" does not match the ABS definition. Full-time workers count as underemployed only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work. A full-time worker who simply wants more hours is not counted. The card also leaves out that underemployed people must be available for more hours.",
+  "Question b, wording: The why says their unused capacity shows up \"only\" in the underemployment rate. The card does not say this, and these workers are also part of the ABS labour underutilisation rate."
+ ],
+ "proposal": {
+  "title": "Underemployment",
+  "card": [
+   "Underemployed people have a job but want, and are available for, more hours. Most are part-time workers who would take extra hours if offered.",
+   "A full-time worker counts only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work.",
+   "The ABS counts underemployed people as employed, because they did paid work in the survey week. So the unemployment rate leaves them out, even though their unused hours mean labour is not fully used.",
+   "The underemployment rate is the share of the labour force who are underemployed. In Australia it is often close to or above the unemployment rate."
+  ],
+  "remember": "Underemployed workers count as employed, so the unemployment rate misses their unused hours.",
+  "a": {
+   "q": "Which person is underemployed?",
+   "opts": [
+    "Jo works 15 hours a week but wants and can work 30",
+    "Sam has no job, is looking and could start now",
+    "Lee works 40 hours a week and is happy with them",
+    "Ana has no job and has stopped looking for work"
+   ],
+   "why": "Jo has a job and wants, and is available for, more hours, so she is underemployed. Sam is unemployed because he has no paid work. Ana has no job at all, so she is not underemployed either.",
+   "clue": "Underemployed people already have paid work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dubbo has 5% unemployment, but many part-time workers there want, and could work, more hours. What does this show?",
+   "opts": [
+    "Labour is underused beyond what unemployment shows",
+    "Unemployment is really higher than the ABS reports",
+    "Everyone who wants more hours is counted as unemployed",
+    "Part-time workers are not counted as employed"
+   ],
+   "why": "These part-time workers have jobs, so the ABS counts them as employed and the unemployment rate leaves them out. Their unused hours mean labour is underused beyond what the 5% suggests. It is wrong to say they are counted as unemployed, because they did paid work.",
+   "clue": "Ask how the ABS counts someone who did paid work."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Jo works 15 hours a week but wants and can work 30",
+    "also_right": []
+   },
+   "b": {
+    "best": "Labour is underused beyond what unemployment shows",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card matches the ABS definitions of underemployment and the underemployment rate, and both questions have one clearly correct answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 24,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"or work full time and want more\" does not match the ABS definition. Full-time workers count as underemployed only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work. A full-time worker who simply wants more hours is not counted. The card also leaves out that underemployed people must be available for more hours."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says their unused capacity shows up \"only\" in the underemployment rate. The card does not say this, and these workers are also part of the ABS labour underutilisation rate."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"or work full time and want more\" does not match the ABS definition. Full-time workers count as underemployed only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work. A full-time worker who simply wants more hours is not counted. The card also leaves out that underemployed people must be available for more hours.",
+   "Question b, wording: The why says their unused capacity shows up \"only\" in the underemployment rate. The card does not say this, and these workers are also part of the ABS labour underutilisation rate."
+  ]
+ },
+ "final": {
+  "title": "Underemployment",
+  "card": [
+   "Underemployed people have a job but want, and are available for, more hours. Most are part-time workers who would take extra hours if offered.",
+   "A full-time worker counts only if they worked part-time hours in the survey week for economic reasons, such as being stood down or having too little work.",
+   "The ABS counts underemployed people as employed, because they did paid work in the survey week. So the unemployment rate leaves them out, even though their unused hours mean labour is not fully used.",
+   "The underemployment rate is the share of the labour force who are underemployed. In Australia it is often close to or above the unemployment rate."
+  ],
+  "remember": "Underemployed workers count as employed, so the unemployment rate misses their unused hours.",
+  "a": {
+   "q": "Which person is underemployed?",
+   "opts": [
+    "Jo works 15 hours a week but wants and can work 30",
+    "Sam has no job, is looking and could start now",
+    "Lee works 40 hours a week and is happy with them",
+    "Ana has no job and has stopped looking for work"
+   ],
+   "why": "Jo has a job and wants, and is available for, more hours, so she is underemployed. Sam is unemployed because he has no paid work. Ana has no job at all, so she is not underemployed either.",
+   "clue": "Underemployed people already have paid work."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dubbo has 5% unemployment, but many part-time workers there want, and could work, more hours. What does this show?",
+   "opts": [
+    "Labour is underused beyond what unemployment shows",
+    "Unemployment is really higher than the ABS reports",
+    "Everyone who wants more hours is counted as unemployed",
+    "Part-time workers are not counted as employed"
+   ],
+   "why": "These part-time workers have jobs, so the ABS counts them as employed and the unemployment rate leaves them out. Their unused hours mean labour is underused beyond what the 5% suggests. It is wrong to say they are counted as unemployed, because they did paid work.",
+   "clue": "Ask how the ABS counts someone who did paid work."
+  }
+ },
+ "cleared_by": "recheck"
+}

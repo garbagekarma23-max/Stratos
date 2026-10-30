@@ -1,0 +1,203 @@
+{
+ "id": "mat-spread-box-plots",
+ "title": "Spread and box plots",
+ "brief": "c8ad094f3755",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01324,
+  "write": 0.0061,
+  "check": 0.01438,
+  "fix": 0.01948
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest point, Measures of spread, covers range and IQR as spread numbers, but the new point also centres on drawing box plots and using them to compare two data sets, so it is a broader idea and needs its own point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Spread and box plots",
+  "card": [
+   [
+    "Range",
+    "highest score − lowest score. It shows the full spread but is pulled by outliers, which are scores far from the rest."
+   ],
+   [
+    "Quartiles",
+    "Order the data. The median is Q2. Q1 is the median of the lower half and Q3 is the median of the upper half. IQR = Q3 − Q1, so it measures the spread of the middle half of the data."
+   ],
+   [
+    "Box plot",
+    "It is drawn from five numbers: lowest, Q1, median, Q3 and highest. The box runs from Q1 to Q3, with a line at the median. Whiskers reach to the lowest and highest scores."
+   ],
+   "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median = (7 + 8) ÷ 2 = 7.5. Q1 = (4 + 5) ÷ 2 = 4.5. Q3 = (10 + 12) ÷ 2 = 11. IQR = 11 − 4.5 = 6.5. Range = 20 − 2 = 18. To compare two sets, a smaller IQR means the middle of the data is less spread out."
+  ],
+  "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
+  "a": {
+   "q": "Which set of five numbers is used to draw a box plot?",
+   "opts": [
+    "Lowest, Q1, median, Q3, highest",
+    "Lowest, mean, median, mode, highest",
+    "Q1, Q2, Q3, range, IQR",
+    "Lowest, Q1, mean, Q3, highest"
+   ],
+   "why": "A box plot uses the lowest score, Q1, the median, Q3 and the highest score. Mean and mode are measures of centre, but they are not part of a box plot's five numbers.",
+   "clue": "The box runs from Q1 to Q3 with a line inside it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's quiz scores have Q1 = 12 and Q3 = 20, lowest 4 and highest 30. Mia's scores have Q1 = 10 and Q3 = 24, lowest 8 and highest 26. Whose middle half of scores is less spread out, and what is that IQR?",
+   "opts": [
+    "Ben's, with an IQR of 8",
+    "Mia's, with an IQR of 14",
+    "Ben's, with an IQR of 26",
+    "Mia's, with an IQR of 18"
+   ],
+   "why": "Ben's IQR = 20 − 12 = 8 and Mia's IQR = 24 − 10 = 14. The smaller IQR means less spread in the middle half, so Ben's. Ben's range of 26 is larger than Mia's 18, but range uses only the two ends.",
+   "clue": "Find Q3 − Q1 for each student, not highest − lowest."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Lowest, Q1, median, Q3, highest",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ben's, with an IQR of 8",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines outliers ('scores far from the rest'), a term that belongs to point 5 (Mean, median and mode), instead of only mentioning it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The worked example, both questions and the explanations all check out. The only issue is that the card defines outliers, which belongs to point 5, instead of just mentioning the term."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines outliers ('scores far from the rest'), a term that belongs to point 5 (Mean, median and mode), instead of only mentioning it."
+ ],
+ "proposal": {
+  "title": "Spread and box plots",
+  "card": [
+   [
+    "Range",
+    "highest score − lowest score. It shows the full spread, but it can be pulled a long way by outliers."
+   ],
+   [
+    "Quartiles",
+    "Order the data. The median is Q2. Q1 is the median of the lower half and Q3 is the median of the upper half. IQR = Q3 − Q1. It measures the spread of the middle half, so outliers barely change it."
+   ],
+   [
+    "Box plot",
+    "It is drawn from five numbers: lowest, Q1, median, Q3 and highest. The box runs from Q1 to Q3, with a line at the median. Whiskers reach to the lowest and highest scores."
+   ],
+   "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median = (7 + 8) ÷ 2 = 7.5. Q1 = (4 + 5) ÷ 2 = 4.5. Q3 = (10 + 12) ÷ 2 = 11. IQR = 11 − 4.5 = 6.5. Range = 20 − 2 = 18. To compare two sets, a smaller IQR means the middle of the data is less spread out."
+  ],
+  "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
+  "a": {
+   "q": "Which set of five numbers is used to draw a box plot?",
+   "opts": [
+    "Lowest, Q1, median, Q3, highest",
+    "Lowest, mean, median, mode, highest",
+    "Q1, Q2, Q3, range, IQR",
+    "Lowest, Q1, mean, Q3, highest"
+   ],
+   "why": "A box plot uses the lowest score, Q1, the median, Q3 and the highest score. Mean and mode are measures of centre, but they are not part of a box plot's five numbers.",
+   "clue": "The box runs from Q1 to Q3 with a line inside it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's quiz scores have Q1 = 12 and Q3 = 20, lowest 4 and highest 30. Mia's scores have Q1 = 10 and Q3 = 24, lowest 8 and highest 26. Whose middle half of scores is less spread out, and what is that IQR?",
+   "opts": [
+    "Ben's, with an IQR of 8",
+    "Mia's, with an IQR of 14",
+    "Ben's, with an IQR of 26",
+    "Mia's, with an IQR of 18"
+   ],
+   "why": "Ben's IQR = 20 − 12 = 8 and Mia's IQR = 24 − 10 = 14. The smaller IQR means less spread in the middle half, so Ben's. Ben's range of 26 is larger than Mia's 18, but range uses only the two ends.",
+   "clue": "Find Q3 − Q1 for each student, not highest − lowest."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines outliers ('scores far from the rest'), a term that belongs to point 5 (Mean, median and mode), instead of only mentioning it."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines outliers ('scores far from the rest'), a term that belongs to point 5 (Mean, median and mode), instead of only mentioning it."
+  ]
+ },
+ "final": {
+  "title": "Spread and box plots",
+  "card": [
+   [
+    "Range",
+    "highest score − lowest score. It shows the full spread, but it can be pulled a long way by outliers."
+   ],
+   [
+    "Quartiles",
+    "Order the data. The median is Q2. Q1 is the median of the lower half and Q3 is the median of the upper half. IQR = Q3 − Q1. It measures the spread of the middle half, so outliers barely change it."
+   ],
+   [
+    "Box plot",
+    "It is drawn from five numbers: lowest, Q1, median, Q3 and highest. The box runs from Q1 to Q3, with a line at the median. Whiskers reach to the lowest and highest scores."
+   ],
+   "Example: 2, 4, 5, 7, 8, 10, 12, 20. Median = (7 + 8) ÷ 2 = 7.5. Q1 = (4 + 5) ÷ 2 = 4.5. Q3 = (10 + 12) ÷ 2 = 11. IQR = 11 − 4.5 = 6.5. Range = 20 − 2 = 18. To compare two sets, a smaller IQR means the middle of the data is less spread out."
+  ],
+  "remember": "Range uses the two ends. IQR uses the middle half, so outliers barely change it.",
+  "a": {
+   "q": "Which set of five numbers is used to draw a box plot?",
+   "opts": [
+    "Lowest, Q1, median, Q3, highest",
+    "Lowest, mean, median, mode, highest",
+    "Q1, Q2, Q3, range, IQR",
+    "Lowest, Q1, mean, Q3, highest"
+   ],
+   "why": "A box plot uses the lowest score, Q1, the median, Q3 and the highest score. Mean and mode are measures of centre, but they are not part of a box plot's five numbers.",
+   "clue": "The box runs from Q1 to Q3 with a line inside it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ben's quiz scores have Q1 = 12 and Q3 = 20, lowest 4 and highest 30. Mia's scores have Q1 = 10 and Q3 = 24, lowest 8 and highest 26. Whose middle half of scores is less spread out, and what is that IQR?",
+   "opts": [
+    "Ben's, with an IQR of 8",
+    "Mia's, with an IQR of 14",
+    "Ben's, with an IQR of 26",
+    "Mia's, with an IQR of 18"
+   ],
+   "why": "Ben's IQR = 20 − 12 = 8 and Mia's IQR = 24 − 10 = 14. The smaller IQR means less spread in the middle half, so Ben's. Ben's range of 26 is larger than Mia's 18, but range uses only the two ends.",
+   "clue": "Find Q3 − Q1 for each student, not highest − lowest."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,259 @@
+{
+ "id": "mat-perimeter-area",
+ "title": "Perimeter and area",
+ "brief": "4abfc982870d",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01311,
+  "write": 0.00532,
+  "check": 0.01007,
+  "fix": 0.02778,
+  "recheck": 0.00816
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers perimeter and area of basic shapes and composite figures; related points like arcs and sectors or area of any triangle are narrower and use different methods."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Perimeter and area",
+  "card": [
+   [
+    "Perimeter",
+    "the distance around the outside of a shape, in units such as cm or m. Add the lengths of all the sides."
+   ],
+   [
+    "Area",
+    "the space inside a shape, in square units such as cm² or m². Rectangle: A = l × w. Triangle: A = ½ × b × h, where h is the height at right angles to the base."
+   ],
+   [
+    "Trapezium",
+    "A = ½ × (a + b) × h, where a and b are the parallel sides. Circle: A = πr², and the perimeter (circumference) is C = 2πr."
+   ],
+   [
+    "Composite shapes",
+    "Split the shape into rectangles, triangles and so on, then add the areas. Example: a 6 m by 4 m rectangle with a triangle of base 6 m and height 3 m on top has area 24 + ½ × 6 × 3 = 24 + 9 = 33 m²."
+   ]
+  ],
+  "remember": "Perimeter adds the sides. Area fills the inside, so split a complex shape into simple parts.",
+  "a": {
+   "q": "A trapezium has parallel sides of 5 cm and 9 cm, and a height of 4 cm. What is its area?",
+   "opts": [
+    "28 cm²",
+    "56 cm²",
+    "36 cm²",
+    "20 cm²"
+   ],
+   "why": "A = ½ × (5 + 9) × 4 = ½ × 14 × 4 = 28 cm². Leaving out the ½ gives 56 cm², which is the tempting mistake.",
+   "clue": "Add the parallel sides, then multiply by the height and halve."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's garden bed is a rectangle 8 m by 5 m with a semicircle-free cut: a right triangle with base 4 m and height 3 m is removed from one corner. What is the area of the bed?",
+   "opts": [
+    "34 m²",
+    "40 m²",
+    "46 m²",
+    "37 m²"
+   ],
+   "why": "The rectangle is 8 × 5 = 40 m². The removed triangle is ½ × 4 × 3 = 6 m². So the bed is 40 − 6 = 34 m². Forgetting the ½ would remove 12 m² and give 28 m², and not removing anything gives 40 m².",
+   "clue": "Find the area of the whole rectangle, then take away the triangle's area."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "28 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "34 m²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The phrase \"with a semicircle-free cut\" is confusing and meaningless. It may make students look for a semicircle. It should just say a right triangle is removed from one corner."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says forgetting the ½ gives 28 m², but 28 m² is not an option. The actual distractors are 37 m² and 46 m², and the why does not explain them."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card only teaches splitting a composite shape and adding the areas. This question needs subtracting a removed part, which the card never shows. Add a line such as \"or subtract any part that is cut out\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths is right in both questions (28 cm² and 34 m²). Question b has confusing wording (\"semicircle-free cut\") and a why that names 28 m², which is not an option. It also needs subtraction, which the card only teaches as adding parts."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The phrase \"with a semicircle-free cut\" is confusing and meaningless. It may make students look for a semicircle. It should just say a right triangle is removed from one corner.",
+  "Question b, other: The why says forgetting the ½ gives 28 m², but 28 m² is not an option. The actual distractors are 37 m² and 46 m², and the why does not explain them.",
+  "Question b, level: The card only teaches splitting a composite shape and adding the areas. This question needs subtracting a removed part, which the card never shows. Add a line such as \"or subtract any part that is cut out\"."
+ ],
+ "proposal": {
+  "title": "Perimeter and area",
+  "card": [
+   [
+    "Perimeter",
+    "the distance around the outside of a shape, in units such as cm or m. Add the lengths of all the sides."
+   ],
+   [
+    "Area",
+    "the space inside a shape, in square units such as cm² or m². Rectangle: A = l × w. Triangle: A = ½ × b × h, where h is the height at right angles to the base."
+   ],
+   [
+    "Trapezium and circle",
+    "Trapezium: A = ½ × (a + b) × h, where a and b are the parallel sides. Circle: A = πr², and the perimeter (circumference) is C = 2πr."
+   ],
+   [
+    "Composite shapes",
+    "Split the shape into rectangles, triangles and so on, then add the areas, or subtract any part that is cut out. Example: a 6 m by 4 m rectangle with a triangle of base 6 m and height 3 m on top has area 24 + ½ × 6 × 3 = 24 + 9 = 33 m²."
+   ]
+  ],
+  "remember": "Perimeter adds the sides. Area fills the inside, so split a complex shape into simple parts, then add or subtract.",
+  "a": {
+   "q": "A trapezium has parallel sides of 5 cm and 9 cm, and a height of 4 cm. What is its area?",
+   "opts": [
+    "28 cm²",
+    "56 cm²",
+    "36 cm²",
+    "20 cm²"
+   ],
+   "why": "A = ½ × (5 + 9) × 4 = ½ × 14 × 4 = 28 cm². Leaving out the ½ gives 56 cm², which is the tempting mistake. Using only one parallel side gives 36 cm² or 20 cm².",
+   "clue": "Add the parallel sides, then multiply by the height and halve."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's garden bed is an 8 m by 5 m rectangle with a right triangle cut out of one corner. The triangle has base 4 m and height 3 m. What is the area of the bed?",
+   "opts": [
+    "34 m²",
+    "40 m²",
+    "46 m²",
+    "28 m²"
+   ],
+   "why": "The rectangle is 8 × 5 = 40 m² and the triangle is ½ × 4 × 3 = 6 m², so the bed is 40 − 6 = 34 m². Adding the triangle instead of subtracting it gives 46 m², and not removing it gives 40 m². Forgetting the ½ removes 12 m² and gives 28 m².",
+   "clue": "The triangle is cut out, so take its area away."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "28 cm²",
+    "also_right": []
+   },
+   "b": {
+    "best": "34 m²",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out (28 cm² and 34 m²), and the formulas, worked example and explanations are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The phrase \"with a semicircle-free cut\" is confusing and meaningless. It may make students look for a semicircle. It should just say a right triangle is removed from one corner."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says forgetting the ½ gives 28 m², but 28 m² is not an option. The actual distractors are 37 m² and 46 m², and the why does not explain them."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card only teaches splitting a composite shape and adding the areas. This question needs subtracting a removed part, which the card never shows. Add a line such as \"or subtract any part that is cut out\"."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The phrase \"with a semicircle-free cut\" is confusing and meaningless. It may make students look for a semicircle. It should just say a right triangle is removed from one corner.",
+   "Question b, other: The why says forgetting the ½ gives 28 m², but 28 m² is not an option. The actual distractors are 37 m² and 46 m², and the why does not explain them.",
+   "Question b, level: The card only teaches splitting a composite shape and adding the areas. This question needs subtracting a removed part, which the card never shows. Add a line such as \"or subtract any part that is cut out\"."
+  ]
+ },
+ "final": {
+  "title": "Perimeter and area",
+  "card": [
+   [
+    "Perimeter",
+    "the distance around the outside of a shape, in units such as cm or m. Add the lengths of all the sides."
+   ],
+   [
+    "Area",
+    "the space inside a shape, in square units such as cm² or m². Rectangle: A = l × w. Triangle: A = ½ × b × h, where h is the height at right angles to the base."
+   ],
+   [
+    "Trapezium and circle",
+    "Trapezium: A = ½ × (a + b) × h, where a and b are the parallel sides. Circle: A = πr², and the perimeter (circumference) is C = 2πr."
+   ],
+   [
+    "Composite shapes",
+    "Split the shape into rectangles, triangles and so on, then add the areas, or subtract any part that is cut out. Example: a 6 m by 4 m rectangle with a triangle of base 6 m and height 3 m on top has area 24 + ½ × 6 × 3 = 24 + 9 = 33 m²."
+   ]
+  ],
+  "remember": "Perimeter adds the sides. Area fills the inside, so split a complex shape into simple parts, then add or subtract.",
+  "a": {
+   "q": "A trapezium has parallel sides of 5 cm and 9 cm, and a height of 4 cm. What is its area?",
+   "opts": [
+    "28 cm²",
+    "56 cm²",
+    "36 cm²",
+    "20 cm²"
+   ],
+   "why": "A = ½ × (5 + 9) × 4 = ½ × 14 × 4 = 28 cm². Leaving out the ½ gives 56 cm², which is the tempting mistake. Using only one parallel side gives 36 cm² or 20 cm².",
+   "clue": "Add the parallel sides, then multiply by the height and halve."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's garden bed is an 8 m by 5 m rectangle with a right triangle cut out of one corner. The triangle has base 4 m and height 3 m. What is the area of the bed?",
+   "opts": [
+    "34 m²",
+    "40 m²",
+    "46 m²",
+    "28 m²"
+   ],
+   "why": "The rectangle is 8 × 5 = 40 m² and the triangle is ½ × 4 × 3 = 6 m², so the bed is 40 − 6 = 34 m². Adding the triangle instead of subtracting it gives 46 m², and not removing it gives 40 m². Forgetting the ½ removes 12 m² and gives 28 m².",
+   "clue": "The triangle is cut out, so take its area away."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,176 @@
+{
+ "id": "mat-fuel-consumption",
+ "title": "Fuel consumption",
+ "brief": "7eb2e9196ff6",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01297,
+  "write": 0.00477,
+  "check": 0.00944,
+  "fix": 0.0278
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers fuel consumption in litres per 100 km or trip fuel and cost, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fuel consumption",
+  "card": [
+   "Fuel consumption is the number of litres a car uses to travel 100 km. It is written as L/100 km. A lower number means the car uses less fuel.",
+   "To find the fuel for a trip, use: fuel (L) = consumption ÷ 100 × distance (km). Divide by 100 first to get the litres used per kilometre.",
+   "To find the cost, multiply the litres by the price per litre. Cost = fuel used × price per litre.",
+   "Example: a car uses 8 L/100 km and petrol costs $2 per litre. A 250 km trip uses 8 ÷ 100 × 250 = 20 L. The cost is 20 × $2 = $40."
+  ],
+  "remember": "Fuel used = consumption ÷ 100 × distance. Then multiply by the price per litre for the cost.",
+  "a": {
+   "q": "A car uses 6 L/100 km. How much fuel does it use on a 350 km trip?",
+   "opts": [
+    "21 L",
+    "58.3 L",
+    "17.1 L",
+    "2100 L"
+   ],
+   "why": "Fuel = 6 ÷ 100 × 350 = 21 L. Dividing 350 by 6 gives 58.3, which finds how many 6 L blocks fit into 350, not the litres used.",
+   "clue": "Find the litres used for each kilometre, then multiply by the distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's van uses 9.5 L/100 km. Fuel costs $1.80 per litre. What is the fuel cost of a 400 km trip?",
+   "opts": [
+    "$68.40",
+    "$38.00",
+    "$6.84",
+    "$7.60"
+   ],
+   "why": "Fuel = 9.5 ÷ 100 × 400 = 38 L. Cost = 38 × $1.80 = $68.40. The answer $38.00 is the litres, and the cost step is still needed.",
+   "clue": "Find the litres first, then use the price."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "21 L",
+   "also_right": []
+  },
+  "b": {
+   "best": "$68.40",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for (a) says 350 ÷ 6 'finds how many 6 L blocks fit into 350'. But 350 is kilometres, not litres, so the reason given mixes units and could confuse students. It would be clearer to say that dividing distance by consumption does not give litres."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct: 21 L and $68.40. The only issue is that the explanation for question (a) mixes units when it describes the 350 ÷ 6 distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why for (a) says 350 ÷ 6 'finds how many 6 L blocks fit into 350'. But 350 is kilometres, not litres, so the reason given mixes units and could confuse students. It would be clearer to say that dividing distance by consumption does not give litres."
+ ],
+ "proposal": {
+  "title": "Fuel consumption",
+  "card": [
+   "Fuel consumption is the number of litres a car uses to travel 100 km. It is written as L/100 km. A lower number means the car uses less fuel.",
+   "To find the fuel for a trip, use: fuel (L) = consumption ÷ 100 × distance (km). Divide by 100 first to get the litres used per kilometre.",
+   "To find the cost, multiply the litres by the price per litre. Cost = fuel used × price per litre.",
+   "Example: a car uses 8 L/100 km and petrol costs $2 per litre. A 250 km trip uses 8 ÷ 100 × 250 = 20 L. The cost is 20 × $2 = $40."
+  ],
+  "remember": "Fuel used = consumption ÷ 100 × distance. Then multiply by the price per litre for the cost.",
+  "a": {
+   "q": "A car uses 6 L/100 km. How much fuel does it use on a 350 km trip?",
+   "opts": [
+    "21 L",
+    "58.3 L",
+    "1.7 L",
+    "2100 L"
+   ],
+   "why": "Fuel = 6 ÷ 100 × 350 = 21 L. Dividing 350 by 6 gives 58.3, but dividing the distance by the consumption does not give litres. The fuel used comes from multiplying the litres per kilometre by the distance.",
+   "clue": "Find the litres used for each kilometre, then multiply by the distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's van uses 9.5 L/100 km. Fuel costs $1.80 per litre. What is the fuel cost of a 400 km trip?",
+   "opts": [
+    "$68.40",
+    "$38.00",
+    "$6.84",
+    "$17.10"
+   ],
+   "why": "Fuel = 9.5 ÷ 100 × 400 = 38 L. Cost = 38 × $1.80 = $68.40. The answer $38.00 is the number of litres, so the cost step is still needed, and $17.10 is only the cost of 100 km.",
+   "clue": "Find the litres first, then use the price."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why for (a) says 350 ÷ 6 'finds how many 6 L blocks fit into 350'. But 350 is kilometres, not litres, so the reason given mixes units and could confuse students. It would be clearer to say that dividing distance by consumption does not give litres."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why for (a) says 350 ÷ 6 'finds how many 6 L blocks fit into 350'. But 350 is kilometres, not litres, so the reason given mixes units and could confuse students. It would be clearer to say that dividing distance by consumption does not give litres."
+  ]
+ },
+ "final": {
+  "title": "Fuel consumption",
+  "card": [
+   "Fuel consumption is the number of litres a car uses to travel 100 km. It is written as L/100 km. A lower number means the car uses less fuel.",
+   "To find the fuel for a trip, use: fuel (L) = consumption ÷ 100 × distance (km). Divide by 100 first to get the litres used per kilometre.",
+   "To find the cost, multiply the litres by the price per litre. Cost = fuel used × price per litre.",
+   "Example: a car uses 8 L/100 km and petrol costs $2 per litre. A 250 km trip uses 8 ÷ 100 × 250 = 20 L. The cost is 20 × $2 = $40."
+  ],
+  "remember": "Fuel used = consumption ÷ 100 × distance. Then multiply by the price per litre for the cost.",
+  "a": {
+   "q": "A car uses 6 L/100 km. How much fuel does it use on a 350 km trip?",
+   "opts": [
+    "21 L",
+    "58.3 L",
+    "1.7 L",
+    "2100 L"
+   ],
+   "why": "Fuel = 6 ÷ 100 × 350 = 21 L. Dividing 350 by 6 gives 58.3, but dividing the distance by the consumption does not give litres. The fuel used comes from multiplying the litres per kilometre by the distance.",
+   "clue": "Find the litres used for each kilometre, then multiply by the distance."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's van uses 9.5 L/100 km. Fuel costs $1.80 per litre. What is the fuel cost of a 400 km trip?",
+   "opts": [
+    "$68.40",
+    "$38.00",
+    "$6.84",
+    "$17.10"
+   ],
+   "why": "Fuel = 9.5 ÷ 100 × 400 = 38 L. Cost = 38 × $1.80 = $68.40. The answer $38.00 is the number of litres, so the cost step is still needed, and $17.10 is only the cost of 100 km.",
+   "clue": "Find the litres first, then use the price."
+  }
+ },
+ "cleared_by": "auto"
+}

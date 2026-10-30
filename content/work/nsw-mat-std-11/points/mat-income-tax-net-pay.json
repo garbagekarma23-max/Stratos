@@ -1,0 +1,176 @@
+{
+ "id": "mat-income-tax-net-pay",
+ "title": "Income tax and net pay",
+ "brief": "8b6adc5e6c8d",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01306,
+  "write": 0.01109,
+  "check": 0.01339,
+  "fix": 0.03097
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers income tax brackets, the Medicare levy or net pay; the financial points there deal only with interest, annuities and loans."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Income tax and net pay",
+  "card": [
+   "Income tax is worked out on taxable income using a tax table with brackets. Each bracket has its own rate, and the rates can change, so always use the table you are given.",
+   "Example table: $0 to $18,200 pays no tax. $18,201 to $45,000 pays 16c for each $1 over $18,200. $45,001 to $135,000 pays $4,288 plus 30c for each $1 over $45,000.",
+   "The Medicare levy is a separate amount for public health care. Here it is 2% of taxable income. Example: taxable income $60,000 gives tax of $4,288 + 0.30 × $15,000 = $8,788, and a levy of 0.02 × $60,000 = $1,200.",
+   "Net pay is take-home pay. Net pay = income − income tax − Medicare levy − other deductions, such as union fees."
+  ],
+  "remember": "Find the tax from the table, add the Medicare levy, then take both and any other deductions off the income.",
+  "a": {
+   "q": "Using the example table, what is the income tax on a taxable income of $30,000?",
+   "opts": [
+    "$1,888",
+    "$4,800",
+    "$2,912",
+    "$11,800"
+   ],
+   "why": "Only the part over $18,200 is taxed at 16c per $1. That is $30,000 − $18,200 = $11,800, and 0.16 × $11,800 = $1,888. Taking 16% of the whole $30,000 gives $4,800, but the first $18,200 is not taxed at that rate.",
+   "clue": "Find how much of the income is over $18,200 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam has a taxable income of $50,000 for the year. Using the example table and a 2% Medicare levy, what is his net pay if he also pays $600 in other deductions?",
+   "opts": [
+    "$42,612",
+    "$43,612",
+    "$43,212",
+    "$33,400"
+   ],
+   "why": "Tax is $4,288 + 0.30 × $5,000 = $5,788, and the levy is 0.02 × $50,000 = $1,000. Net pay = $50,000 − $5,788 − $1,000 − $600 = $42,612. $43,612 is tempting, but it leaves out the Medicare levy.",
+   "clue": "Three amounts come off the income, not two."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$1,888",
+   "also_right": []
+  },
+  "b": {
+   "best": "$42,612",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Net pay is worked out from gross income, not taxable income. Question b subtracts tax, levy and other deductions from Sam's taxable income, which only matches his gross pay if he has no allowable deductions. The card's formula just says \"income\", which does not settle it. Saying Sam earns $50,000 with no allowable deductions, or giving gross income, would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out ($1,888 and $42,612), and the tax table matches current Australian rates. The only issue is that question b works out net pay from taxable income rather than gross income, which could blur the two ideas for students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Net pay is worked out from gross income, not taxable income. Question b subtracts tax, levy and other deductions from Sam's taxable income, which only matches his gross pay if he has no allowable deductions. The card's formula just says \"income\", which does not settle it. Saying Sam earns $50,000 with no allowable deductions, or giving gross income, would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "Income tax and net pay",
+  "card": [
+   "Income tax is worked out on taxable income using a tax table with brackets. Each bracket has its own rate, and the rates can change, so always use the table you are given.",
+   "Example table: $0 to $18,200 pays no tax. $18,201 to $45,000 pays 16c for each $1 over $18,200. $45,001 to $135,000 pays $4,288 plus 30c for each $1 over $45,000.",
+   "The Medicare levy is a separate amount for public health care. Here it is 2% of taxable income. Example: taxable income $60,000 gives tax of $4,288 + 0.30 × $15,000 = $8,788, and a levy of 0.02 × $60,000 = $1,200.",
+   "Net pay is take-home pay. Net pay = gross income − income tax − Medicare levy − other deductions, such as union fees. Gross income is total pay before anything is taken out."
+  ],
+  "remember": "Find the tax from the table, add the Medicare levy, then take both and any other deductions off the gross income.",
+  "a": {
+   "q": "Using the example table, what is the income tax on a taxable income of $30,000?",
+   "opts": [
+    "$1,888",
+    "$4,800",
+    "$2,912",
+    "$11,800"
+   ],
+   "why": "Only the part over $18,200 is taxed at 16c per $1. That is $30,000 − $18,200 = $11,800, and 0.16 × $11,800 = $1,888. Taking 16% of the whole $30,000 gives $4,800, but the first $18,200 is not taxed at that rate.",
+   "clue": "Find how much of the income is over $18,200 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam earns a gross income of $50,000 a year and has no allowable deductions, so his taxable income is also $50,000. Using the example table and a 2% Medicare levy, what is his net pay if $600 in union fees also comes out of his pay?",
+   "opts": [
+    "$42,612",
+    "$43,612",
+    "$43,212",
+    "$33,400"
+   ],
+   "why": "Tax is $4,288 + 0.30 × $5,000 = $5,788, and the levy is 0.02 × $50,000 = $1,000. Net pay = $50,000 − $5,788 − $1,000 − $600 = $42,612. $43,612 is tempting, but it leaves out the Medicare levy.",
+   "clue": "Three amounts come off the gross income, not two."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Net pay is worked out from gross income, not taxable income. Question b subtracts tax, levy and other deductions from Sam's taxable income, which only matches his gross pay if he has no allowable deductions. The card's formula just says \"income\", which does not settle it. Saying Sam earns $50,000 with no allowable deductions, or giving gross income, would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Net pay is worked out from gross income, not taxable income. Question b subtracts tax, levy and other deductions from Sam's taxable income, which only matches his gross pay if he has no allowable deductions. The card's formula just says \"income\", which does not settle it. Saying Sam earns $50,000 with no allowable deductions, or giving gross income, would remove the ambiguity."
+  ]
+ },
+ "final": {
+  "title": "Income tax and net pay",
+  "card": [
+   "Income tax is worked out on taxable income using a tax table with brackets. Each bracket has its own rate, and the rates can change, so always use the table you are given.",
+   "Example table: $0 to $18,200 pays no tax. $18,201 to $45,000 pays 16c for each $1 over $18,200. $45,001 to $135,000 pays $4,288 plus 30c for each $1 over $45,000.",
+   "The Medicare levy is a separate amount for public health care. Here it is 2% of taxable income. Example: taxable income $60,000 gives tax of $4,288 + 0.30 × $15,000 = $8,788, and a levy of 0.02 × $60,000 = $1,200.",
+   "Net pay is take-home pay. Net pay = gross income − income tax − Medicare levy − other deductions, such as union fees. Gross income is total pay before anything is taken out."
+  ],
+  "remember": "Find the tax from the table, add the Medicare levy, then take both and any other deductions off the gross income.",
+  "a": {
+   "q": "Using the example table, what is the income tax on a taxable income of $30,000?",
+   "opts": [
+    "$1,888",
+    "$4,800",
+    "$2,912",
+    "$11,800"
+   ],
+   "why": "Only the part over $18,200 is taxed at 16c per $1. That is $30,000 − $18,200 = $11,800, and 0.16 × $11,800 = $1,888. Taking 16% of the whole $30,000 gives $4,800, but the first $18,200 is not taxed at that rate.",
+   "clue": "Find how much of the income is over $18,200 first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam earns a gross income of $50,000 a year and has no allowable deductions, so his taxable income is also $50,000. Using the example table and a 2% Medicare levy, what is his net pay if $600 in union fees also comes out of his pay?",
+   "opts": [
+    "$42,612",
+    "$43,612",
+    "$43,212",
+    "$33,400"
+   ],
+   "why": "Tax is $4,288 + 0.30 × $5,000 = $5,788, and the levy is 0.02 × $50,000 = $1,000. Net pay = $50,000 − $5,788 − $1,000 − $600 = $42,612. $43,612 is tempting, but it leaves out the Medicare levy.",
+   "clue": "Three amounts come off the gross income, not two."
+  }
+ },
+ "cleared_by": "auto"
+}

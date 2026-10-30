@@ -1,0 +1,208 @@
+{
+ "id": "mat-earliest-starting-times",
+ "title": "Earliest starting times",
+ "brief": "88807972fbc6",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01292,
+  "write": 0.01107,
+  "check": 0.00945,
+  "fix": 0.0308,
+  "recheck": 0.01149
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers critical path analysis or forward scans through activity networks, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Earliest starting times",
+  "card": [
+   "The earliest starting time (EST) of an activity is the soonest it can begin. Activities with nothing before them start at 0.",
+   "Scan forward from the start. For each activity, add the EST of the activity before it to that activity's duration. If more than one activity leads in, take the largest total, because the next activity must wait for all of them.",
+   [
+    "Example",
+    "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is 3. D (3 days) follows A and B, so its EST is the larger of 3 and 5, which is 5."
+   ],
+   "E (3 days) follows C and D. C finishes at 3 + 4 = 7 and D at 5 + 3 = 8, so the EST of E is 8. The project's shortest time is 8 + 3 = 11 days."
+  ],
+  "remember": "Scan forward, add durations, and take the largest total where paths meet.",
+  "a": {
+   "q": "Activity X takes 4 days and activity Y takes 6 days. Both start at 0, and activity Z can only begin after both are finished. What is the EST of Z?",
+   "opts": [
+    "6 days",
+    "10 days",
+    "4 days",
+    "2 days"
+   ],
+   "why": "Z must wait for both X and Y. X finishes at 4 and Y at 6, so Z can start at the larger value, 6. Adding them to get 10 is wrong, because X and Y run at the same time.",
+   "clue": "Z waits for the slower of the two."
+  },
+  "b": {
+   "d": 3,
+   "q": "P (2 days) and Q (4 days) both start at 0. R (5 days) follows P. S (4 days) follows P and Q. T (6 days) follows R and S. What is the shortest time to finish the project?",
+   "opts": [
+    "14 days",
+    "13 days",
+    "21 days",
+    "8 days"
+   ],
+   "why": "R finishes at 2 + 5 = 7 and S starts at the larger of 2 and 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes 8 + 6 = 14 days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
+   "clue": "Find the EST of T, then add its duration."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6 days",
+   "also_right": []
+  },
+  "b": {
+   "best": "14 days",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Add the EST of the activity before it to that activity's duration\" is ambiguous. \"That activity\" can be read as the current activity, but the rule needs the earlier activity's duration (its finish time). The example is correct, but the rule as worded could teach students to add the wrong duration."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The answers and the worked example check out (a: 6 days, b: 14 days). One card sentence is ambiguous about whose duration to add, and should say to add the earlier activity's EST and its own duration."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Add the EST of the activity before it to that activity's duration\" is ambiguous. \"That activity\" can be read as the current activity, but the rule needs the earlier activity's duration (its finish time). The example is correct, but the rule as worded could teach students to add the wrong duration."
+ ],
+ "proposal": {
+  "title": "Earliest starting times",
+  "card": [
+   "The earliest starting time (EST) of an activity is the soonest it can begin. Activities with nothing before them start at 0.",
+   "Scan forward: an activity finishes at its own EST plus its own duration. The next activity's EST is the largest finish time of the activities leading into it, since it must wait for all of them.",
+   [
+    "Example",
+    "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is 0 + 3 = 3. D (3 days) follows A and B, which finish at 3 and 5, so its EST is 5."
+   ],
+   "E (3 days) follows C and D. C finishes at 3 + 4 = 7 and D at 5 + 3 = 8, so the EST of E is 8. The project's shortest time is 8 + 3 = 11 days."
+  ],
+  "remember": "Scan forward, add durations, and take the largest total where paths meet.",
+  "a": {
+   "q": "Activity X takes 4 days and activity Y takes 6 days. Both start at 0, and activity Z can only begin after both are finished. What is the EST of Z?",
+   "opts": [
+    "6 days",
+    "10 days",
+    "4 days",
+    "2 days"
+   ],
+   "why": "Z must wait for both X and Y. X finishes at 4 and Y at 6, so Z can start at the larger value, 6. Adding them to get 10 is wrong, because X and Y run at the same time.",
+   "clue": "Z waits for the slower of the two."
+  },
+  "b": {
+   "d": 3,
+   "q": "P (2 days) and Q (4 days) both start at 0. R (5 days) follows P. S (4 days) follows P and Q. T (6 days) follows R and S. What is the shortest time to finish the project?",
+   "opts": [
+    "14 days",
+    "13 days",
+    "21 days",
+    "8 days"
+   ],
+   "why": "R finishes at 2 + 5 = 7. S starts at the larger of 2 and 4, which is 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes 8 + 6 = 14 days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
+   "clue": "Find the EST of T, then add its duration."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6 days",
+    "also_right": []
+   },
+   "b": {
+    "best": "14 days",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example is correct (EST of E is 8, project time 11 days), and both questions have one clear right answer (6 days and 14 days) that matches the explanations."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Add the EST of the activity before it to that activity's duration\" is ambiguous. \"That activity\" can be read as the current activity, but the rule needs the earlier activity's duration (its finish time). The example is correct, but the rule as worded could teach students to add the wrong duration."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Add the EST of the activity before it to that activity's duration\" is ambiguous. \"That activity\" can be read as the current activity, but the rule needs the earlier activity's duration (its finish time). The example is correct, but the rule as worded could teach students to add the wrong duration."
+  ]
+ },
+ "final": {
+  "title": "Earliest starting times",
+  "card": [
+   "The earliest starting time (EST) of an activity is the soonest it can begin. Activities with nothing before them start at 0.",
+   "Scan forward: an activity finishes at its own EST plus its own duration. The next activity's EST is the largest finish time of the activities leading into it, since it must wait for all of them.",
+   [
+    "Example",
+    "A (3 days) and B (5 days) both start at 0. C (4 days) follows A, so its EST is 0 + 3 = 3. D (3 days) follows A and B, which finish at 3 and 5, so its EST is 5."
+   ],
+   "E (3 days) follows C and D. C finishes at 3 + 4 = 7 and D at 5 + 3 = 8, so the EST of E is 8. The project's shortest time is 8 + 3 = 11 days."
+  ],
+  "remember": "Scan forward, add durations, and take the largest total where paths meet.",
+  "a": {
+   "q": "Activity X takes 4 days and activity Y takes 6 days. Both start at 0, and activity Z can only begin after both are finished. What is the EST of Z?",
+   "opts": [
+    "6 days",
+    "10 days",
+    "4 days",
+    "2 days"
+   ],
+   "why": "Z must wait for both X and Y. X finishes at 4 and Y at 6, so Z can start at the larger value, 6. Adding them to get 10 is wrong, because X and Y run at the same time.",
+   "clue": "Z waits for the slower of the two."
+  },
+  "b": {
+   "d": 3,
+   "q": "P (2 days) and Q (4 days) both start at 0. R (5 days) follows P. S (4 days) follows P and Q. T (6 days) follows R and S. What is the shortest time to finish the project?",
+   "opts": [
+    "14 days",
+    "13 days",
+    "21 days",
+    "8 days"
+   ],
+   "why": "R finishes at 2 + 5 = 7. S starts at the larger of 2 and 4, which is 4, so S finishes at 8. T starts at the larger of 7 and 8, which is 8, so the project takes 8 + 6 = 14 days. The answer 8 is only the EST of T, and it leaves out T's own duration.",
+   "clue": "Find the EST of T, then add its duration."
+  }
+ },
+ "cleared_by": "recheck"
+}
