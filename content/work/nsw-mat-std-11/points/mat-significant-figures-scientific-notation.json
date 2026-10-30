@@ -1,0 +1,176 @@
+{
+ "id": "mat-significant-figures-scientific-notation",
+ "title": "Significant figures and scientific notation",
+ "brief": "8fa0379de88f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01286,
+  "write": 0.00526,
+  "check": 0.01103,
+  "fix": 0.02684
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers significant figures or scientific notation, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Significant figures and scientific notation",
+  "card": [
+   "Significant figures are the digits that carry meaning. Count from the first non-zero digit. Zeros between non-zero digits count. Zeros at the start never count.",
+   "To round to a number of significant figures, keep that many digits from the first non-zero digit. Look at the next digit: 5 or more rounds up, 4 or less stays. Example: 0.004 738 to 2 significant figures is 0.0047.",
+   "Scientific notation is a number from 1 up to (but not including) 10, times a power of ten. Example: 45 000 = 4.5 × 10⁴, because the decimal point moves 4 places left.",
+   "A small number has a negative power. Example: 0.0032 = 3.2 × 10⁻³, because the decimal point moves 3 places right."
+  ],
+  "remember": "Count significant figures from the first non-zero digit. Scientific notation is a number from 1 to 10 times a power of ten.",
+  "a": {
+   "q": "What is 0.007 046 rounded to 3 significant figures?",
+   "opts": [
+    "0.00705",
+    "0.00704",
+    "0.007",
+    "0.0070"
+   ],
+   "why": "The first significant figure is 7. The three significant figures are 7, 0 and 4, and the next digit is 6, so the 4 rounds up to 5. This gives 0.00705. Rounding to 0.00704 ignores the 6 and leaves the 4 unchanged.",
+   "clue": "Start counting at the first non-zero digit, then check the digit after the third."
+  },
+  "b": {
+   "d": 3,
+   "q": "A virus in a lab measures 0.000 000 12 m across. How is this written in scientific notation?",
+   "opts": [
+    "1.2 × 10⁻⁷ m",
+    "1.2 × 10⁷ m",
+    "1.2 × 10⁻⁶ m",
+    "12 × 10⁻⁸ m"
+   ],
+   "why": "The decimal point moves 7 places right to give 1.2, so the power is −7. The form 12 × 10⁻⁸ has the right value but 12 is not between 1 and 10. Using 10⁻⁶ moves the point only 6 places.",
+   "clue": "Count the places the decimal point moves to get a number from 1 to 10."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.00705",
+   "also_right": []
+  },
+  "b": {
+   "best": "1.2 × 10⁻⁷ m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says scientific notation uses 'a number from 1 to 10', but the card says from 1 up to but not including 10. The looser wording could lead students to accept forms like 10 × 10³. The clue in question b repeats this loose wording."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct: 0.00705 for (a) and 1.2 × 10⁻⁷ m for (b). The only issue is that the remember line (and the clue for b) says 'from 1 to 10', which drops the card's 'not including 10'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says scientific notation uses 'a number from 1 to 10', but the card says from 1 up to but not including 10. The looser wording could lead students to accept forms like 10 × 10³. The clue in question b repeats this loose wording."
+ ],
+ "proposal": {
+  "title": "Significant figures and scientific notation",
+  "card": [
+   "Significant figures are the digits that carry meaning. Count from the first non-zero digit. Zeros between non-zero digits count. Zeros at the start never count.",
+   "To round to a number of significant figures, keep that many digits from the first non-zero digit. Look at the next digit: 5 or more rounds up, 4 or less stays. Example: 0.004 738 to 2 significant figures is 0.0047.",
+   "Scientific notation is a number that is at least 1 and less than 10, times a power of ten. Example: 45 000 = 4.5 × 10⁴, because the decimal point moves 4 places left.",
+   "A small number has a negative power. Example: 0.0032 = 3.2 × 10⁻³, because the decimal point moves 3 places right."
+  ],
+  "remember": "Count significant figures from the first non-zero digit. Scientific notation is a number at least 1 and less than 10, times a power of ten.",
+  "a": {
+   "q": "What is 0.007 046 rounded to 3 significant figures?",
+   "opts": [
+    "0.00705",
+    "0.00704",
+    "0.007",
+    "0.0070"
+   ],
+   "why": "The first significant figure is 7. The three significant figures are 7, 0 and 4, and the next digit is 6, so the 4 rounds up to 5. This gives 0.00705. Rounding to 0.00704 ignores the 6 and leaves the 4 unchanged.",
+   "clue": "Start counting at the first non-zero digit, then check the digit after the third."
+  },
+  "b": {
+   "d": 3,
+   "q": "A virus in a lab measures 0.000 000 12 m across. How is this written in scientific notation?",
+   "opts": [
+    "1.2 × 10⁻⁷ m",
+    "1.2 × 10⁷ m",
+    "1.2 × 10⁻⁶ m",
+    "12 × 10⁻⁸ m"
+   ],
+   "why": "The decimal point moves 7 places right to give 1.2, so the power is −7. The form 12 × 10⁻⁸ has the right value, but 12 is not less than 10. Using 10⁻⁶ moves the point only 6 places.",
+   "clue": "Count the places the point moves to get a number at least 1 and less than 10."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says scientific notation uses 'a number from 1 to 10', but the card says from 1 up to but not including 10. The looser wording could lead students to accept forms like 10 × 10³. The clue in question b repeats this loose wording."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says scientific notation uses 'a number from 1 to 10', but the card says from 1 up to but not including 10. The looser wording could lead students to accept forms like 10 × 10³. The clue in question b repeats this loose wording."
+  ]
+ },
+ "final": {
+  "title": "Significant figures and scientific notation",
+  "card": [
+   "Significant figures are the digits that carry meaning. Count from the first non-zero digit. Zeros between non-zero digits count. Zeros at the start never count.",
+   "To round to a number of significant figures, keep that many digits from the first non-zero digit. Look at the next digit: 5 or more rounds up, 4 or less stays. Example: 0.004 738 to 2 significant figures is 0.0047.",
+   "Scientific notation is a number that is at least 1 and less than 10, times a power of ten. Example: 45 000 = 4.5 × 10⁴, because the decimal point moves 4 places left.",
+   "A small number has a negative power. Example: 0.0032 = 3.2 × 10⁻³, because the decimal point moves 3 places right."
+  ],
+  "remember": "Count significant figures from the first non-zero digit. Scientific notation is a number at least 1 and less than 10, times a power of ten.",
+  "a": {
+   "q": "What is 0.007 046 rounded to 3 significant figures?",
+   "opts": [
+    "0.00705",
+    "0.00704",
+    "0.007",
+    "0.0070"
+   ],
+   "why": "The first significant figure is 7. The three significant figures are 7, 0 and 4, and the next digit is 6, so the 4 rounds up to 5. This gives 0.00705. Rounding to 0.00704 ignores the 6 and leaves the 4 unchanged.",
+   "clue": "Start counting at the first non-zero digit, then check the digit after the third."
+  },
+  "b": {
+   "d": 3,
+   "q": "A virus in a lab measures 0.000 000 12 m across. How is this written in scientific notation?",
+   "opts": [
+    "1.2 × 10⁻⁷ m",
+    "1.2 × 10⁷ m",
+    "1.2 × 10⁻⁶ m",
+    "12 × 10⁻⁸ m"
+   ],
+   "why": "The decimal point moves 7 places right to give 1.2, so the power is −7. The form 12 × 10⁻⁸ has the right value, but 12 is not less than 10. Using 10⁻⁶ moves the point only 6 places.",
+   "clue": "Count the places the point moves to get a number at least 1 and less than 10."
+  }
+ },
+ "cleared_by": "auto"
+}

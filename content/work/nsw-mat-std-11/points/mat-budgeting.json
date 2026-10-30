@@ -1,0 +1,217 @@
+{
+ "id": "mat-budgeting",
+ "title": "Budgeting",
+ "brief": "b47027a27e5f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01316,
+  "write": 0.00454,
+  "check": 0.00756,
+  "fix": 0.01991,
+  "recheck": 0.01111
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers budgeting with income, expenses and fixed versus variable costs, and the nearest financial points (compound interest, annuities, loans) teach different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Budgeting",
+  "card": [
+   "A budget is a plan for the money you expect to earn and spend. List all income, such as wages, then list all expenses.",
+   [
+    "Fixed cost",
+    "an expense that stays the same each period, such as rent or a phone plan with a set price."
+   ],
+   [
+    "Variable cost",
+    "an expense that changes from one period to the next, such as food or petrol."
+   ],
+   "Savings = income − expenses. Example: Zoe earns $900 a fortnight. Rent is $400 and food is $150. Other costs are $200. Expenses are $750, so she can save $900 − $750 = $150."
+  ],
+  "remember": "A budget compares income with expenses. What is left over can be saved.",
+  "a": {
+   "q": "Which of these is a variable cost for a household?",
+   "opts": [
+    "Groceries, which change from week to week",
+    "Rent of $350 a week for a unit",
+    "A gym membership of $20 a fortnight",
+    "A car loan repayment of $200 a month"
+   ],
+   "why": "Groceries change in amount from one period to the next, so they are variable. The rent, membership and loan repayment are set amounts, so they are fixed costs. Rent is the most tempting wrong option, but it stays the same each week.",
+   "clue": "Which cost would not be the same amount each time?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam earns $1200 a fortnight. His expenses are rent $520, food $210, transport $90 and other costs $180. How much can he save each fortnight?",
+   "opts": [
+    "$200",
+    "$1000",
+    "$400",
+    "$310"
+   ],
+   "why": "Expenses are 520 + 210 + 90 + 180 = $1000. Savings = 1200 − 1000 = $200. Giving $1000 is a mistake, because that is the total of the expenses, not what is left.",
+   "clue": "Add up every expense first, then subtract from income."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Groceries, which change from week to week",
+   "also_right": []
+  },
+  "b": {
+   "best": "$200",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier, and that qualifier ('which change from week to week') restates the card's definition of a variable cost. A student can pick it without knowing the idea. Use plain 'Groceries' or give every option a similar description."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and arithmetic are correct (Zoe saves $150, Liam saves $200). Question a gives its answer away, because the correct option is the only one that includes the definition 'which change from week to week'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a qualifier, and that qualifier ('which change from week to week') restates the card's definition of a variable cost. A student can pick it without knowing the idea. Use plain 'Groceries' or give every option a similar description."
+ ],
+ "proposal": {
+  "title": "Budgeting",
+  "card": [
+   "A budget is a plan for the money you expect to earn and spend. List all income, such as wages, then list all expenses.",
+   [
+    "Fixed cost",
+    "an expense that stays the same each period, such as rent, insurance or a gym membership."
+   ],
+   [
+    "Variable cost",
+    "an expense that changes from one period to the next, such as food or petrol."
+   ],
+   "Savings = income − expenses. Example: Zoe earns $900 a fortnight. Rent is $400 and food is $150. Other costs are $200. Expenses are $750, so she can save $900 − $750 = $150."
+  ],
+  "remember": "A budget compares income with expenses. What is left over can be saved.",
+  "a": {
+   "q": "Which of these is a variable cost for a household?",
+   "opts": [
+    "Weekly groceries for the household",
+    "Weekly rent for the unit",
+    "Monthly car insurance payment",
+    "Monthly gym membership fee"
+   ],
+   "why": "Food costs change from one week to the next, so groceries are a variable cost. Rent, insurance and a gym membership stay the same each period, so they are fixed. Rent is the most tempting wrong option because it is paid weekly too, but the amount does not change.",
+   "clue": "Which amount would differ from one week to the next?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam earns $1200 a fortnight. His expenses are rent $520, food $210, transport $90 and other costs $180. How much can he save each fortnight?",
+   "opts": [
+    "$200",
+    "$1000",
+    "$380",
+    "$2200"
+   ],
+   "why": "Expenses are 520 + 210 + 90 + 180 = $1000. Savings = 1200 − 1000 = $200. Giving $1000 is a mistake, because that is the total of the expenses, not what is left. $380 leaves out the other costs.",
+   "clue": "Add up every expense first, then subtract from income."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Weekly groceries for the household",
+    "also_right": []
+   },
+   "b": {
+    "best": "$200",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example and both answers are correct ($750 and $150; $1000 and $200), and the explanations match the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier, and that qualifier ('which change from week to week') restates the card's definition of a variable cost. A student can pick it without knowing the idea. Use plain 'Groceries' or give every option a similar description."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with a qualifier, and that qualifier ('which change from week to week') restates the card's definition of a variable cost. A student can pick it without knowing the idea. Use plain 'Groceries' or give every option a similar description."
+  ]
+ },
+ "final": {
+  "title": "Budgeting",
+  "card": [
+   "A budget is a plan for the money you expect to earn and spend. List all income, such as wages, then list all expenses.",
+   [
+    "Fixed cost",
+    "an expense that stays the same each period, such as rent, insurance or a gym membership."
+   ],
+   [
+    "Variable cost",
+    "an expense that changes from one period to the next, such as food or petrol."
+   ],
+   "Savings = income − expenses. Example: Zoe earns $900 a fortnight. Rent is $400 and food is $150. Other costs are $200. Expenses are $750, so she can save $900 − $750 = $150."
+  ],
+  "remember": "A budget compares income with expenses. What is left over can be saved.",
+  "a": {
+   "q": "Which of these is a variable cost for a household?",
+   "opts": [
+    "Weekly groceries for the household",
+    "Weekly rent for the unit",
+    "Monthly car insurance payment",
+    "Monthly gym membership fee"
+   ],
+   "why": "Food costs change from one week to the next, so groceries are a variable cost. Rent, insurance and a gym membership stay the same each period, so they are fixed. Rent is the most tempting wrong option because it is paid weekly too, but the amount does not change.",
+   "clue": "Which amount would differ from one week to the next?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam earns $1200 a fortnight. His expenses are rent $520, food $210, transport $90 and other costs $180. How much can he save each fortnight?",
+   "opts": [
+    "$200",
+    "$1000",
+    "$380",
+    "$2200"
+   ],
+   "why": "Expenses are 520 + 210 + 90 + 180 = $1000. Savings = 1200 − 1000 = $200. Giving $1000 is a mistake, because that is the total of the expenses, not what is left. $380 leaves out the other costs.",
+   "clue": "Add up every expense first, then subtract from income."
+  }
+ },
+ "cleared_by": "recheck"
+}

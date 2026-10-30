@@ -1,0 +1,199 @@
+{
+ "id": "mat-float-time",
+ "title": "Float time",
+ "brief": "e93d3280844c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01282,
+  "write": 0.00471,
+  "check": 0.01054,
+  "fix": 0.02786,
+  "recheck": 0.01227
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers float time or critical path networks, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Float time",
+  "card": [
+   "Float is how long an activity can be delayed without delaying the whole project. Float = latest start time − earliest start time.",
+   "Both start times come from scans of the network, which are taught in earlier points. Here they are given, so you only subtract.",
+   "Worked example: an activity has an earliest start of 6 days and a latest start of 10 days. Float = 10 − 6 = 4 days.",
+   "A float of 4 days means the activity can start up to 4 days late and the project still finishes on time. A float of 0 means there is no room to delay it."
+  ],
+  "remember": "Float is latest start minus earliest start: the spare time an activity has.",
+  "a": {
+   "q": "An activity has an earliest start time of 8 days and a latest start time of 13 days. What is its float?",
+   "opts": [
+    "5 days",
+    "21 days",
+    "8 days",
+    "13 days"
+   ],
+   "why": "Float = latest start − earliest start = 13 − 8 = 5 days. Adding the two times gives 21, which is a sign error in the method, because float is a difference.",
+   "clue": "Subtract the earlier start from the later one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya manages a build in Newcastle. Fitting windows has an earliest start of 14 days and a latest start of 14 days. Painting has an earliest start of 9 days and a latest start of 12 days. Which statement is correct?",
+   "opts": [
+    "Windows can't be delayed, and painting has 3 days float",
+    "Windows have 14 days float, and painting has 3 days",
+    "Windows can't be delayed, and painting has 12 days float",
+    "Windows have 14 days float, and painting has 21 days"
+   ],
+   "why": "Windows: 14 − 14 = 0, so any delay holds up the project. Painting: 12 − 9 = 3 days of float. Using a latest start time on its own as the float is the tempting mistake, because float is a difference.",
+   "clue": "Work out latest start minus earliest start for each activity."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5 days",
+   "also_right": []
+  },
+  "b": {
+   "best": "Windows can't be delayed, and painting has 3 days float",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet ('Both start times come from scans of the network, which are taught in earlier points. Here they are given, so you only subtract.') is filler about the course structure rather than content about float."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct and match the card. The only problem is a card bullet that talks about the course's earlier points rather than about float."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The second bullet ('Both start times come from scans of the network, which are taught in earlier points. Here they are given, so you only subtract.') is filler about the course structure rather than content about float."
+ ],
+ "proposal": {
+  "title": "Float time",
+  "card": [
+   "Float is how long an activity can be delayed without delaying the whole project. Float = latest start time − earliest start time.",
+   "Always subtract the earliest start from the latest start. Never add them. Float is in the same unit as the times, such as days or hours.",
+   "Worked example: an activity has an earliest start of 6 days and a latest start of 10 days. Float = 10 − 6 = 4 days.",
+   "A float of 4 days means the activity can start up to 4 days late and the project still finishes on time. A float of 0 means there is no room to delay it."
+  ],
+  "remember": "Float is latest start minus earliest start: the spare time an activity has.",
+  "a": {
+   "q": "An activity has an earliest start time of 8 days and a latest start time of 13 days. What is its float?",
+   "opts": [
+    "5 days",
+    "21 days",
+    "8 days",
+    "13 days"
+   ],
+   "why": "Float = latest start − earliest start = 13 − 8 = 5 days. Adding the two times gives 21, but float is a difference, so you subtract.",
+   "clue": "Subtract the earlier start from the later one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya manages a build in Newcastle. Fitting windows has an earliest start of 14 days and a latest start of 14 days. Painting has an earliest start of 9 days and a latest start of 12 days. Which statement is correct?",
+   "opts": [
+    "Windows have 0 days float, and painting has 3 days",
+    "Windows have 14 days float, and painting has 3 days",
+    "Windows have 0 days float, and painting has 12 days",
+    "Windows have 14 days float, and painting has 21 days"
+   ],
+   "why": "Windows: 14 − 14 = 0, so there is no room to delay them. Painting: 12 − 9 = 3 days of float. Taking a latest start time on its own as the float is the tempting mistake, because float is a difference.",
+   "clue": "Work out latest start minus earliest start for each activity."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "5 days",
+    "also_right": []
+   },
+   "b": {
+    "best": "Windows have 0 days float, and painting has 3 days",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet ('Both start times come from scans of the network, which are taught in earlier points. Here they are given, so you only subtract.') is filler about the course structure rather than content about float."
+   }
+  ],
+  "flags": [
+   "Card, wording: The second bullet ('Both start times come from scans of the network, which are taught in earlier points. Here they are given, so you only subtract.') is filler about the course structure rather than content about float."
+  ]
+ },
+ "final": {
+  "title": "Float time",
+  "card": [
+   "Float is how long an activity can be delayed without delaying the whole project. Float = latest start time − earliest start time.",
+   "Always subtract the earliest start from the latest start. Never add them. Float is in the same unit as the times, such as days or hours.",
+   "Worked example: an activity has an earliest start of 6 days and a latest start of 10 days. Float = 10 − 6 = 4 days.",
+   "A float of 4 days means the activity can start up to 4 days late and the project still finishes on time. A float of 0 means there is no room to delay it."
+  ],
+  "remember": "Float is latest start minus earliest start: the spare time an activity has.",
+  "a": {
+   "q": "An activity has an earliest start time of 8 days and a latest start time of 13 days. What is its float?",
+   "opts": [
+    "5 days",
+    "21 days",
+    "8 days",
+    "13 days"
+   ],
+   "why": "Float = latest start − earliest start = 13 − 8 = 5 days. Adding the two times gives 21, but float is a difference, so you subtract.",
+   "clue": "Subtract the earlier start from the later one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya manages a build in Newcastle. Fitting windows has an earliest start of 14 days and a latest start of 14 days. Painting has an earliest start of 9 days and a latest start of 12 days. Which statement is correct?",
+   "opts": [
+    "Windows have 0 days float, and painting has 3 days",
+    "Windows have 14 days float, and painting has 3 days",
+    "Windows have 0 days float, and painting has 12 days",
+    "Windows have 14 days float, and painting has 21 days"
+   ],
+   "why": "Windows: 14 − 14 = 0, so there is no room to delay them. Painting: 12 − 9 = 3 days of float. Taking a latest start time on its own as the float is the tempting mistake, because float is a difference.",
+   "clue": "Work out latest start minus earliest start for each activity."
+  }
+ },
+ "cleared_by": "recheck"
+}

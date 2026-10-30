@@ -1,0 +1,178 @@
+{
+ "id": "mat-gradient-as-rate-change",
+ "title": "Gradient as a rate of change",
+ "brief": "682f71cf1c16",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-10-30T11:56:44Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01328,
+  "write": 0.00492,
+  "check": 0.00846,
+  "fix": 0.02665
+ },
+ "match": {
+  "same": "",
+  "reason": "No bank point matches: linear functions covers rise over run along with parallel and perpendicular gradients but not gradient as a rate in context, average rate of change is about secant gradients of curves, and the derivative points are calculus."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Gradient as a rate of change",
+  "card": [
+   "The gradient of a line measures how steep it is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+   "Pick two points on the line. Subtract the y values for the rise and the x values for the run, in the same order. A line that goes up from left to right has a positive gradient.",
+   "In context, the gradient is a rate: the change in y for each 1 unit of x. Its unit is the y unit per x unit, such as dollars per hour or litres per minute.",
+   "Example: a graph of money earned passes through (2, 30) and (5, 75). Rise = 75 − 30 = 45. Run = 5 − 2 = 3. Gradient = 45 ÷ 3 = 15, so the rate is $15 per hour."
+  ],
+  "remember": "Gradient = rise ÷ run, and in context it is the rate of change in y per 1 unit of x.",
+  "a": {
+   "q": "A line passes through (1, 7) and (4, 19). What is its gradient?",
+   "opts": [
+    "4",
+    "3",
+    "12",
+    "1/4"
+   ],
+   "why": "Rise = 19 − 7 = 12 and run = 4 − 1 = 3, so the gradient is 12 ÷ 3 = 4. The answer 1/4 comes from dividing run by rise, which is the wrong way round.",
+   "clue": "Divide the change in y by the change in x."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam fills a tank. The graph of litres in the tank against minutes passes through (2, 50) and (6, 130). What is the rate of filling?",
+   "opts": [
+    "20 litres per minute",
+    "80 litres per minute",
+    "40 litres per minute",
+    "0.05 litres per minute"
+   ],
+   "why": "Rise = 130 − 50 = 80 litres and run = 6 − 2 = 4 minutes, so the rate is 80 ÷ 4 = 20 litres per minute. The answer 80 is only the rise, and it skips the division by the run.",
+   "clue": "Find the rise and the run first, then divide."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 litres per minute",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example says 'a graph of money earned' but never says the axes are dollars and hours, yet it concludes '$15 per hour'. The card itself teaches that the unit comes from the y and x units, so it should name them, e.g. 'money earned ($) against hours worked'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and clear, with one right answer each (a: 4; b: 20 litres per minute). The only issue is that the card's worked example never names its axis units, yet it gives the rate as dollars per hour."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The worked example says 'a graph of money earned' but never says the axes are dollars and hours, yet it concludes '$15 per hour'. The card itself teaches that the unit comes from the y and x units, so it should name them, e.g. 'money earned ($) against hours worked'."
+ ],
+ "proposal": {
+  "title": "Gradient as a rate of change",
+  "card": [
+   "The gradient of a line measures how steep it is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+   "Pick two points on the line. Subtract the y values for the rise and the x values for the run, in the same order. A line that goes up from left to right has a positive gradient.",
+   "In context, the gradient is a rate: the change in y for each 1 unit of x. Its unit is the y unit per x unit, such as dollars per hour or litres per minute.",
+   "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). Rise = 75 − 30 = 45. Run = 5 − 2 = 3. Gradient = 45 ÷ 3 = 15, so the rate is $15 per hour."
+  ],
+  "remember": "Gradient = rise ÷ run, and in context it is the rate of change in y per 1 unit of x.",
+  "a": {
+   "q": "A line passes through (1, 7) and (4, 19). What is its gradient?",
+   "opts": [
+    "4",
+    "3",
+    "12",
+    "1/4"
+   ],
+   "why": "Rise = 19 − 7 = 12 and run = 4 − 1 = 3, so the gradient is 12 ÷ 3 = 4. The answer 1/4 comes from dividing run by rise, which is the wrong way round.",
+   "clue": "Divide the change in y by the change in x."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam fills a tank. The graph of litres in the tank against minutes passes through (2, 50) and (6, 130). What is the rate of filling?",
+   "opts": [
+    "20 litres per minute",
+    "80 litres per minute",
+    "25 litres per minute",
+    "0.05 litres per minute"
+   ],
+   "why": "Rise = 130 − 50 = 80 litres and run = 6 − 2 = 4 minutes, so the rate is 80 ÷ 4 = 20 litres per minute. The answer 80 is only the rise, and it skips the division by the run.",
+   "clue": "Find the rise and the run first, then divide."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example says 'a graph of money earned' but never says the axes are dollars and hours, yet it concludes '$15 per hour'. The card itself teaches that the unit comes from the y and x units, so it should name them, e.g. 'money earned ($) against hours worked'."
+   }
+  ],
+  "flags": [
+   "Card, wording: The worked example says 'a graph of money earned' but never says the axes are dollars and hours, yet it concludes '$15 per hour'. The card itself teaches that the unit comes from the y and x units, so it should name them, e.g. 'money earned ($) against hours worked'."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Gradient as a rate of change",
+  "card": [
+   "The gradient of a line measures how steep it is. Gradient = rise ÷ run, where rise is the change in y and run is the change in x.",
+   "Pick two points on the line. Subtract the y values for the rise and the x values for the run, in the same order. A line that goes up from left to right has a positive gradient.",
+   "In context, the gradient is a rate: the change in y for each 1 unit of x. Its unit is the y unit per x unit, such as dollars per hour or litres per minute.",
+   "Example: a graph of money earned ($) against hours worked passes through (2, 30) and (5, 75). Rise = 75 − 30 = 45. Run = 5 − 2 = 3. Gradient = 45 ÷ 3 = 15, so the rate is $15 per hour."
+  ],
+  "remember": "Gradient = rise ÷ run, and in context it is the rate of change in y per 1 unit of x.",
+  "a": {
+   "q": "A line passes through (1, 7) and (4, 19). What is its gradient?",
+   "opts": [
+    "4",
+    "3",
+    "12",
+    "1/4"
+   ],
+   "why": "Rise = 19 − 7 = 12 and run = 4 − 1 = 3, so the gradient is 12 ÷ 3 = 4. The answer 1/4 comes from dividing run by rise, which is the wrong way round.",
+   "clue": "Divide the change in y by the change in x."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam fills a tank. The graph of litres in the tank against minutes passes through (2, 50) and (6, 130). What is the rate of filling?",
+   "opts": [
+    "20 litres per minute",
+    "80 litres per minute",
+    "25 litres per minute",
+    "0.05 litres per minute"
+   ],
+   "why": "Rise = 130 − 50 = 80 litres and run = 6 − 2 = 4 minutes, so the rate is 80 ÷ 4 = 20 litres per minute. The answer 80 is only the rise, and it skips the division by the run.",
+   "clue": "Find the rise and the run first, then divide."
+  }
+ },
+ "cleared_by": "owner"
+}

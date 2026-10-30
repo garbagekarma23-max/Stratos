@@ -1,0 +1,224 @@
+{
+ "id": "mat-exponential-models",
+ "title": "Exponential models",
+ "brief": "9a907276f223",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-30T11:57:24Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01338,
+  "write": 0.00494,
+  "check": 0.00884,
+  "fix": 0.0253,
+  "recheck": 0.01528
+ },
+ "match": {
+  "same": "",
+  "reason": "No bank point teaches percentage-based growth or decay with y = a(b)ˣ: the closest, exponential growth and decay, uses N = N₀eᵏᵗ, and modelling with functions and compound interest are broader or different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Exponential models",
+  "card": [
+   "An exponential model changes by a fixed percentage each period. It has the form y = a(b)ˣ, where x is the number of periods.",
+   [
+    "a",
+    "the starting value, when x = 0. b is the multiplier for each period."
+   ],
+   [
+    "Growth",
+    "b is above 1. A rise of 5% each period gives b = 1 + 0.05 = 1.05."
+   ],
+   [
+    "Decay",
+    "b is between 0 and 1. A fall of 15% each period gives b = 1 − 0.15 = 0.85. Example: a car worth $20 000 that loses 15% a year has V = 20 000 × 0.85ˣ. After 2 years, V = 20 000 × 0.85² = $14 450."
+   ]
+  ],
+  "remember": "Find b by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
+  "a": {
+   "q": "A town of 4000 people grows by 3% each year. Which equation models the population P after x years?",
+   "opts": [
+    "P = 4000 × 1.03ˣ",
+    "P = 4000 × 0.03ˣ",
+    "P = 4000 × 3ˣ",
+    "P = 4000 × 0.97ˣ"
+   ],
+   "why": "Growth of 3% means the multiplier is 1 + 0.03 = 1.03. Using 0.97 is tempting, but that is the multiplier for a 3% fall, not a rise.",
+   "clue": "For growth, add the rate to 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a laptop for $2000. It loses 20% of its value each year. What is it worth after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$3456"
+   ],
+   "why": "Decay of 20% gives b = 0.8, so V = 2000 × 0.8³ = 2000 × 0.512 = $1024. Taking 20% off 3 times in a row from the start ($2000 − 3 × $400 = $800) is wrong, because each year's fall is 20% of a smaller value.",
+   "clue": "Multiply by 0.8 once for each year, so the power is 3."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "P = 4000 × 1.03ˣ",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1024",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'Taking 20% off 3 times in a row from the start' is wrong. But taking 20% off three times in a row is the correct method. The phrase meant is subtracting 20% of the original $2000 each year, so it could confuse students. Reword it, for example: 'Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong…'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the questions and the arithmetic are all correct. The only issue is that the explanation for question b describes the wrong method as 'taking 20% off 3 times in a row', which actually sounds like the correct method and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says 'Taking 20% off 3 times in a row from the start' is wrong. But taking 20% off three times in a row is the correct method. The phrase meant is subtracting 20% of the original $2000 each year, so it could confuse students. Reword it, for example: 'Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong…'"
+ ],
+ "proposal": {
+  "title": "Exponential models",
+  "card": [
+   "An exponential model changes by a fixed percentage each period. It has the form y = a(b)ˣ, where x is the number of periods.",
+   [
+    "a",
+    "the starting value, when x = 0. b is the multiplier for each period."
+   ],
+   [
+    "Growth",
+    "b is above 1. A rise of 5% each period gives b = 1 + 0.05 = 1.05."
+   ],
+   [
+    "Decay",
+    "b is between 0 and 1. A fall of 15% each period gives b = 1 − 0.15 = 0.85. Example: a car worth $20 000 that loses 15% a year has V = 20 000 × 0.85ˣ. After 2 years, V = 20 000 × 0.85² = $14 450."
+   ]
+  ],
+  "remember": "Find b by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
+  "a": {
+   "q": "A town of 4000 people grows by 3% each year. Which equation models the population P after x years?",
+   "opts": [
+    "P = 4000 × 1.03ˣ",
+    "P = 4000 × 0.03ˣ",
+    "P = 4000 × 3ˣ",
+    "P = 4000 × 0.97ˣ"
+   ],
+   "why": "Growth of 3% means the multiplier is 1 + 0.03 = 1.03. Using 0.97 is tempting, but that is the multiplier for a 3% fall, not a rise.",
+   "clue": "For growth, add the rate to 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a laptop for $2000. It loses 20% of its value each year. What is it worth after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$3456"
+   ],
+   "why": "Decay of 20% gives b = 0.8, so V = 2000 × 0.8³ = 2000 × 0.512 = $1024. Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong, because each year's fall is 20% of the current, smaller value.",
+   "clue": "Multiply by 0.8 once for each year, so the power is 3."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "P = 4000 × 1.03ˣ",
+    "also_right": []
+   },
+   "b": {
+    "best": "$1024",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "remember",
+     "kind": "wording",
+     "detail": "'Adding the percentage rate to 1' does not say to write the rate as a decimal first. A student could add 5 to 1 and get 6. The card shows 0.05, so the line should say 'the rate as a decimal'."
+    },
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue states both the multiplier (0.8) and the power (3), so the student only has to do the arithmetic. It removes the need to work out the decay multiplier, which is the idea being tested."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts and answers are correct ($14 450 and $1024 check out). There are two minor issues: the remember line should say to use the rate as a decimal, and the clue for question b gives away the method."
+  },
+  "flags": [
+   "Remember, wording: 'Adding the percentage rate to 1' does not say to write the rate as a decimal first. A student could add 5 to 1 and get 6. The card shows 0.05, so the line should say 'the rate as a decimal'.",
+   "Question b, other: The clue states both the multiplier (0.8) and the power (3), so the student only has to do the arithmetic. It removes the need to work out the decay multiplier, which is the idea being tested."
+  ]
+ },
+ "final": {
+  "title": "Exponential models",
+  "card": [
+   "An exponential model changes by a fixed percentage each period. It has the form y = a(b)ˣ, where x is the number of periods.",
+   [
+    "a",
+    "the starting value, when x = 0. b is the multiplier for each period."
+   ],
+   [
+    "Growth",
+    "b is above 1. A rise of 5% each period gives b = 1 + 0.05 = 1.05."
+   ],
+   [
+    "Decay",
+    "b is between 0 and 1. A fall of 15% each period gives b = 1 − 0.15 = 0.85. Example: a car worth $20 000 that loses 15% a year has V = 20 000 × 0.85ˣ. After 2 years, V = 20 000 × 0.85² = $14 450."
+   ]
+  ],
+  "remember": "Find b by adding the percentage rate to 1 for growth, or taking it from 1 for decay.",
+  "a": {
+   "q": "A town of 4000 people grows by 3% each year. Which equation models the population P after x years?",
+   "opts": [
+    "P = 4000 × 1.03ˣ",
+    "P = 4000 × 0.03ˣ",
+    "P = 4000 × 3ˣ",
+    "P = 4000 × 0.97ˣ"
+   ],
+   "why": "Growth of 3% means the multiplier is 1 + 0.03 = 1.03. Using 0.97 is tempting, but that is the multiplier for a 3% fall, not a rise.",
+   "clue": "For growth, add the rate to 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya buys a laptop for $2000. It loses 20% of its value each year. What is it worth after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$3456"
+   ],
+   "why": "Decay of 20% gives b = 0.8, so V = 2000 × 0.8³ = 2000 × 0.512 = $1024. Subtracting $400 (20% of the original $2000) each year gives $800, which is wrong, because each year's fall is 20% of the current, smaller value.",
+   "clue": "Multiply by 0.8 once for each year, so the power is 3."
+  }
+ },
+ "cleared_by": "owner"
+}

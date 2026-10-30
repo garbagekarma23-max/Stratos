@@ -1,0 +1,211 @@
+{
+ "id": "mat-unit-conversions",
+ "title": "Unit conversions",
+ "brief": "6932bc5076a3",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01295,
+  "write": 0.00517,
+  "check": 0.01101,
+  "fix": 0.02977,
+  "recheck": 0.00768
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers converting units of length, area, volume, mass or capacity, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Unit conversions",
+  "card": [
+   "Length, mass and capacity: 1 m = 100 cm, 1 cm = 10 mm, 1 km = 1000 m, 1 kg = 1000 g, 1 L = 1000 mL. To go to a smaller unit, multiply. To go to a larger unit, divide.",
+   "For area, square the length factor. 1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². For volume, cube it: 1 m³ = 100 × 100 × 100 = 1 000 000 cm³.",
+   "1 cm³ holds 1 mL. So 1000 cm³ holds 1000 mL, which is 1 L.",
+   "Worked example: 30 000 cm² to m². Divide by 10 000, because 1 m² = 10 000 cm². The answer is 3 m²."
+  ],
+  "remember": "Square the length factor for area and cube it for volume. 1 cm³ = 1 mL.",
+  "a": {
+   "q": "A rug has an area of 50 000 cm². What is its area in m²?",
+   "opts": [
+    "5 m²",
+    "500 m²",
+    "50 m²",
+    "0.5 m²"
+   ],
+   "why": "1 m² = 10 000 cm², so divide: 50 000 ÷ 10 000 = 5 m². Dividing by 1000 or 100 gives 50 or 500, which wrongly uses the length factor for an area.",
+   "clue": "How many cm² are in 1 m²?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's fish tank is a box 50 cm long, 20 cm wide and 30 cm high. It is full of water. How many litres does it hold?",
+   "opts": [
+    "30 L",
+    "300 L",
+    "3 L",
+    "3000 L"
+   ],
+   "why": "Volume = 50 × 20 × 30 = 30 000 cm³. Since 1 cm³ holds 1 mL, that is 30 000 mL, and dividing by 1000 gives 30 L. Dividing by 100 instead gives 300 L, which mixes up the factor for mL to L.",
+   "clue": "Find the volume in cm³ first, then change mL to L."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5 m²",
+   "also_right": []
+  },
+  "b": {
+   "best": "30 L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing by 1000 or by 100 'wrongly uses the length factor'. Only 100 is the cm-to-m length factor. Dividing by 1000 is not the length factor for cm to m, so the explanation of the 50 m² distractor is inaccurate."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs the volume of a rectangular prism (length × width × height), which belongs to point 6 (Volume and capacity) and is not taught on this card. The conversion itself is covered, but the volume step is not."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (5 m² and 30 L). Question b relies on finding a box's volume, which belongs to the later volume point, and the why for a wrongly calls dividing by 1000 a use of the length factor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says dividing by 1000 or by 100 'wrongly uses the length factor'. Only 100 is the cm-to-m length factor. Dividing by 1000 is not the length factor for cm to m, so the explanation of the 50 m² distractor is inaccurate.",
+  "Question b, level: The question needs the volume of a rectangular prism (length × width × height), which belongs to point 6 (Volume and capacity) and is not taught on this card. The conversion itself is covered, but the volume step is not."
+ ],
+ "proposal": {
+  "title": "Unit conversions",
+  "card": [
+   "Length, mass and capacity: 1 m = 100 cm, 1 cm = 10 mm, 1 km = 1000 m, 1 kg = 1000 g, 1 L = 1000 mL. To go to a smaller unit, multiply. To go to a larger unit, divide.",
+   "For area, square the length factor. 1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². For volume, cube it: 1 m³ = 100 × 100 × 100 = 1 000 000 cm³.",
+   "1 cm³ holds 1 mL. So 1000 cm³ holds 1000 mL, which is 1 L.",
+   "Worked example: 30 000 cm² to m². Divide by 10 000, because 1 m² = 10 000 cm². The answer is 3 m²."
+  ],
+  "remember": "Square the length factor for area and cube it for volume. 1 cm³ = 1 mL.",
+  "a": {
+   "q": "A rug has an area of 50 000 cm². What is its area in m²?",
+   "opts": [
+    "5 m²",
+    "500 m²",
+    "50 m²",
+    "0.5 m²"
+   ],
+   "why": "1 m² = 10 000 cm², so divide: 50 000 ÷ 10 000 = 5 m². Dividing by 100, the length factor, gives 500 m², which forgets to square the factor for an area.",
+   "clue": "How many cm² are in 1 m²?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A rainwater tank on a farm near Orange holds 0.6 m³ of water. How many litres is that?",
+   "opts": [
+    "600 L",
+    "6 L",
+    "6000 L",
+    "600 000 L"
+   ],
+   "why": "1 m³ = 1 000 000 cm³, so 0.6 m³ = 600 000 cm³, which holds 600 000 mL. Dividing by 1000 gives 600 L. Stopping at 600 000 forgets to change mL to L, and 6 L comes from squaring the length factor instead of cubing it.",
+   "clue": "Change m³ to cm³ first, then cm³ to mL, then mL to L."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "5 m²",
+    "also_right": []
+   },
+   "b": {
+    "best": "600 L",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 50 000 ÷ 10 000 = 5 m², and 0.6 m³ = 600 000 cm³ = 600 000 mL = 600 L."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing by 1000 or by 100 'wrongly uses the length factor'. Only 100 is the cm-to-m length factor. Dividing by 1000 is not the length factor for cm to m, so the explanation of the 50 m² distractor is inaccurate."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs the volume of a rectangular prism (length × width × height), which belongs to point 6 (Volume and capacity) and is not taught on this card. The conversion itself is covered, but the volume step is not."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says dividing by 1000 or by 100 'wrongly uses the length factor'. Only 100 is the cm-to-m length factor. Dividing by 1000 is not the length factor for cm to m, so the explanation of the 50 m² distractor is inaccurate.",
+   "Question b, level: The question needs the volume of a rectangular prism (length × width × height), which belongs to point 6 (Volume and capacity) and is not taught on this card. The conversion itself is covered, but the volume step is not."
+  ]
+ },
+ "final": {
+  "title": "Unit conversions",
+  "card": [
+   "Length, mass and capacity: 1 m = 100 cm, 1 cm = 10 mm, 1 km = 1000 m, 1 kg = 1000 g, 1 L = 1000 mL. To go to a smaller unit, multiply. To go to a larger unit, divide.",
+   "For area, square the length factor. 1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². For volume, cube it: 1 m³ = 100 × 100 × 100 = 1 000 000 cm³.",
+   "1 cm³ holds 1 mL. So 1000 cm³ holds 1000 mL, which is 1 L.",
+   "Worked example: 30 000 cm² to m². Divide by 10 000, because 1 m² = 10 000 cm². The answer is 3 m²."
+  ],
+  "remember": "Square the length factor for area and cube it for volume. 1 cm³ = 1 mL.",
+  "a": {
+   "q": "A rug has an area of 50 000 cm². What is its area in m²?",
+   "opts": [
+    "5 m²",
+    "500 m²",
+    "50 m²",
+    "0.5 m²"
+   ],
+   "why": "1 m² = 10 000 cm², so divide: 50 000 ÷ 10 000 = 5 m². Dividing by 100, the length factor, gives 500 m², which forgets to square the factor for an area.",
+   "clue": "How many cm² are in 1 m²?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A rainwater tank on a farm near Orange holds 0.6 m³ of water. How many litres is that?",
+   "opts": [
+    "600 L",
+    "6 L",
+    "6000 L",
+    "600 000 L"
+   ],
+   "why": "1 m³ = 1 000 000 cm³, so 0.6 m³ = 600 000 cm³, which holds 600 000 mL. Dividing by 1000 gives 600 L. Stopping at 600 000 forgets to change mL to L, and 6 L comes from squaring the length factor instead of cubing it.",
+   "clue": "Change m³ to cm³ first, then cm³ to mL, then mL to L."
+  }
+ },
+ "cleared_by": "recheck"
+}

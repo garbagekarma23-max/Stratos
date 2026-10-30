@@ -1,0 +1,176 @@
+{
+ "id": "mat-surface-area",
+ "title": "Surface area",
+ "brief": "c35a88c025f0",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01304,
+  "write": 0.0048,
+  "check": 0.01013,
+  "fix": 0.0264
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers surface area of solids; the closest ones deal with areas of sectors, triangles and regions under curves, which are different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area",
+  "card": [
+   "Surface area is the total area of all the faces of a solid. It is measured in square units, such as cm² or m².",
+   "To find it, work out the area of each face and add them. A rectangular prism has 6 rectangular faces, in 3 matching pairs.",
+   "A cylinder has two circular ends and one curved side. The side unrolls into a rectangle. Its width is the circle's circumference (2 × π × r) and its height is the cylinder's height.",
+   "Example: a box is 5 cm long, 3 cm wide and 2 cm high. Faces: 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+  ],
+  "remember": "Find the area of every face, then add them all.",
+  "a": {
+   "q": "A box is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+   "opts": [
+    "52 cm²",
+    "24 cm²",
+    "26 cm²",
+    "48 cm²"
+   ],
+   "why": "The pairs of faces are 2 × 12 + 2 × 8 + 2 × 6 = 24 + 16 + 12 = 52 cm². The answer 24 cm² is the volume, not the surface area, and it is in cubic units.",
+   "clue": "Add the areas of all 6 faces, in 3 matching pairs."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cube has sides of 5 cm. What is the total area of its faces?",
+   "opts": [
+    "150 cm²",
+    "125 cm²",
+    "100 cm²",
+    "25 cm²"
+   ],
+   "why": "Each face is 5 × 5 = 25 cm², and a cube has 6 faces, so 6 × 25 = 150 cm². The answer 125 cm³ would be the volume. The answer 100 cm² counts only 4 faces.",
+   "clue": "A cube has 6 faces, and all of them are the same size."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "52 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "150 cm²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls the volume distractor '125 cm³', but the option shown is '125 cm²'. A student checking the explanation may be confused by the unit mismatch. Make them consistent, for example by saying the 125 cm² option is really the volume and should be in cm³."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, example and both answers are correct (52 cm² and 150 cm²). The only issue is that the why for question b names the distractor as 125 cm³ while the option reads 125 cm²."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why calls the volume distractor '125 cm³', but the option shown is '125 cm²'. A student checking the explanation may be confused by the unit mismatch. Make them consistent, for example by saying the 125 cm² option is really the volume and should be in cm³."
+ ],
+ "proposal": {
+  "title": "Surface area",
+  "card": [
+   "Surface area is the total area of all the faces of a solid. It is measured in square units, such as cm² or m².",
+   "To find it, work out the area of each face and add them. A rectangular prism has 6 rectangular faces, in 3 matching pairs.",
+   "A cylinder has two circular ends and one curved side. The side unrolls into a rectangle. Its width is the circle's circumference (2 × π × r) and its height is the cylinder's height.",
+   "Example: a box is 5 cm long, 3 cm wide and 2 cm high. Faces: 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+  ],
+  "remember": "Find the area of every face, then add them all.",
+  "a": {
+   "q": "A box is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+   "opts": [
+    "52 cm²",
+    "24 cm²",
+    "26 cm²",
+    "40 cm²"
+   ],
+   "why": "The pairs of faces are 2 × 12 + 2 × 8 + 2 × 6 = 24 + 16 + 12 = 52 cm². The 24 option is really the volume, 4 × 3 × 2, which would be 24 cm³, not an area. The 26 option counts each pair only once.",
+   "clue": "Add the areas of all 6 faces, in 3 matching pairs."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cube has sides of 5 cm. What is the total area of its faces?",
+   "opts": [
+    "150 cm²",
+    "125 cm²",
+    "100 cm²",
+    "25 cm²"
+   ],
+   "why": "Each face is 5 × 5 = 25 cm², and a cube has 6 faces, so 6 × 25 = 150 cm². The 125 cm² option is really the volume, 5 × 5 × 5, which should be 125 cm³, not an area. The 100 cm² option counts only 4 faces.",
+   "clue": "A cube has 6 faces, and all of them are the same size."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls the volume distractor '125 cm³', but the option shown is '125 cm²'. A student checking the explanation may be confused by the unit mismatch. Make them consistent, for example by saying the 125 cm² option is really the volume and should be in cm³."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why calls the volume distractor '125 cm³', but the option shown is '125 cm²'. A student checking the explanation may be confused by the unit mismatch. Make them consistent, for example by saying the 125 cm² option is really the volume and should be in cm³."
+  ]
+ },
+ "final": {
+  "title": "Surface area",
+  "card": [
+   "Surface area is the total area of all the faces of a solid. It is measured in square units, such as cm² or m².",
+   "To find it, work out the area of each face and add them. A rectangular prism has 6 rectangular faces, in 3 matching pairs.",
+   "A cylinder has two circular ends and one curved side. The side unrolls into a rectangle. Its width is the circle's circumference (2 × π × r) and its height is the cylinder's height.",
+   "Example: a box is 5 cm long, 3 cm wide and 2 cm high. Faces: 2 × (5 × 3) + 2 × (5 × 2) + 2 × (3 × 2) = 30 + 20 + 12 = 62 cm²."
+  ],
+  "remember": "Find the area of every face, then add them all.",
+  "a": {
+   "q": "A box is 4 cm long, 3 cm wide and 2 cm high. What is its surface area?",
+   "opts": [
+    "52 cm²",
+    "24 cm²",
+    "26 cm²",
+    "40 cm²"
+   ],
+   "why": "The pairs of faces are 2 × 12 + 2 × 8 + 2 × 6 = 24 + 16 + 12 = 52 cm². The 24 option is really the volume, 4 × 3 × 2, which would be 24 cm³, not an area. The 26 option counts each pair only once.",
+   "clue": "Add the areas of all 6 faces, in 3 matching pairs."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed cube has sides of 5 cm. What is the total area of its faces?",
+   "opts": [
+    "150 cm²",
+    "125 cm²",
+    "100 cm²",
+    "25 cm²"
+   ],
+   "why": "Each face is 5 × 5 = 25 cm², and a cube has 6 faces, so 6 × 25 = 150 cm². The 125 cm² option is really the volume, 5 × 5 × 5, which should be 125 cm³, not an area. The 100 cm² option counts only 4 faces.",
+   "clue": "A cube has 6 faces, and all of them are the same size."
+  }
+ },
+ "cleared_by": "auto"
+}

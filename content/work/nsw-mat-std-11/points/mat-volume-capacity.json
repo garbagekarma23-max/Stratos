@@ -1,0 +1,224 @@
+{
+ "id": "mat-volume-capacity",
+ "title": "Volume and capacity",
+ "brief": "4d18f640ce8c",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-30T11:56:45Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01311,
+  "write": 0.00502,
+  "check": 0.0133,
+  "fix": 0.02948,
+  "recheck": 0.01509
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers volume of prisms and cylinders or capacity; the closest geometry points (arcs and sectors, area of triangles) teach different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Volume and capacity",
+  "card": [
+   "Volume is the space inside a solid. For a prism or cylinder, V = base area × height. The base is the face that repeats along the height.",
+   [
+    "Prism",
+    "find the area of the base shape first, then multiply by the height. A rectangular prism has V = l × w × h."
+   ],
+   [
+    "Cylinder",
+    "the base is a circle, so V = π × r² × h. Example: r = 3 cm and h = 10 cm gives V = π × 3² × 10 = 90π, which is about 283 cm³."
+   ],
+   [
+    "Capacity",
+    "capacity is how much liquid a container holds. 1 cm³ holds 1 mL, and 1000 cm³ holds 1 L. So a volume of 2000 cm³ has a capacity of 2 L."
+   ]
+  ],
+  "remember": "Volume is base area × height. Then 1 cm³ holds 1 mL to find capacity.",
+  "a": {
+   "q": "A rectangular tank has a base 20 cm by 10 cm and a height of 5 cm. What is its volume?",
+   "opts": [
+    "1000 cm³",
+    "200 cm³",
+    "350 cm³",
+    "100 cm³"
+   ],
+   "why": "Base area = 20 × 10 = 200 cm². Volume = 200 × 5 = 1000 cm³. Finding only the base area, 200 cm³, skips the multiplication by the height.",
+   "clue": "Find the base area first, then use the height."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cylindrical water tank has a base radius of 10 cm and a height of 20 cm. About how many litres can it hold?",
+   "opts": [
+    "6.3 L",
+    "2.0 L",
+    "1.3 L",
+    "6283 L"
+   ],
+   "why": "V = π × 10² × 20 = 2000π, which is about 6283 cm³. Since 1000 cm³ holds 1 L, the capacity is about 6.3 L. Using the diameter 10 × 2 = 20 for r would be a mistake, but here r is already 10, and using r instead of r² gives 2.0 L.",
+   "clue": "Find the volume in cm³ first, then change cm³ to litres."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1000 cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "6.3 L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says using r instead of r² gives 2.0 L. That is wrong: π × 10 × 20 ≈ 628 cm³ ≈ 0.63 L. The 2.0 L distractor actually comes from leaving out π (10² × 20 = 2000 cm³ = 2 L), so the explanation misdiagnoses the error."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's sentence 'Using the diameter 10 × 2 = 20 for r would be a mistake, but here r is already 10' is confusing. It describes a mistake that matches none of the options, and it muddles radius and diameter for students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct (a = 1000 cm³, b = 6.3 L). Why (b) wrongly says the 2.0 L option comes from using r instead of r² (it actually comes from leaving out π), and its sentence about the diameter is confusing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says using r instead of r² gives 2.0 L. That is wrong: π × 10 × 20 ≈ 628 cm³ ≈ 0.63 L. The 2.0 L distractor actually comes from leaving out π (10² × 20 = 2000 cm³ = 2 L), so the explanation misdiagnoses the error.",
+  "Question b, wording: The why's sentence 'Using the diameter 10 × 2 = 20 for r would be a mistake, but here r is already 10' is confusing. It describes a mistake that matches none of the options, and it muddles radius and diameter for students."
+ ],
+ "proposal": {
+  "title": "Volume and capacity",
+  "card": [
+   "Volume is the space inside a solid. For a prism or cylinder, V = base area × height. The base is the face that repeats along the height.",
+   [
+    "Prism",
+    "find the area of the base shape first, then multiply by the height. A rectangular prism has V = l × w × h."
+   ],
+   [
+    "Cylinder",
+    "the base is a circle, so V = π × r² × h. Example: r = 3 cm and h = 10 cm gives V = π × 3² × 10 = 90π, which is about 283 cm³."
+   ],
+   [
+    "Capacity",
+    "capacity is how much liquid a container holds. 1 cm³ holds 1 mL, and 1000 cm³ holds 1 L. So a volume of 2000 cm³ has a capacity of 2 L."
+   ]
+  ],
+  "remember": "Volume is base area × height. Use 1 cm³ = 1 mL to turn volume into capacity.",
+  "a": {
+   "q": "A rectangular tank has a base 20 cm by 10 cm and a height of 5 cm. What is its volume?",
+   "opts": [
+    "1000 cm³",
+    "200 cm³",
+    "350 cm³",
+    "100 cm³"
+   ],
+   "why": "Base area = 20 × 10 = 200 cm². Volume = 200 × 5 = 1000 cm³. Finding only the base area, 200 cm³, skips the multiplication by the height.",
+   "clue": "Find the base area first, then use the height."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cylindrical water tank has a base radius of 10 cm and a height of 20 cm. About how many litres can it hold?",
+   "opts": [
+    "6.3 L",
+    "2.0 L",
+    "0.63 L",
+    "6283 L"
+   ],
+   "why": "V = π × 10² × 20 = 2000π, which is about 6283 cm³. Since 1000 cm³ holds 1 L, the capacity is about 6.3 L. Leaving out π gives 2000 cm³, or 2.0 L, and 6283 L forgets to divide by 1000.",
+   "clue": "Find the volume in cm³ first, then change cm³ to litres."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "1000 cm³",
+    "also_right": []
+   },
+   "b": {
+    "best": "6.3 L",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "other",
+     "detail": "The capacity bullet re-teaches the cm³ to mL and L conversion (1 cm³ = 1 mL, 1000 cm³ = 1 L), which belongs to point 3 (Unit conversions). Linking volume to capacity is fair here, but the conversion could simply be referred to rather than taught again."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "All facts and both answers check out (1000 cm³; about 6.3 L). The only issue is minor: the card re-teaches the cm³ to mL and L conversion that belongs to the Unit conversions point."
+  },
+  "flags": [
+   "Card, other: The capacity bullet re-teaches the cm³ to mL and L conversion (1 cm³ = 1 mL, 1000 cm³ = 1 L), which belongs to point 3 (Unit conversions). Linking volume to capacity is fair here, but the conversion could simply be referred to rather than taught again."
+  ]
+ },
+ "final": {
+  "title": "Volume and capacity",
+  "card": [
+   "Volume is the space inside a solid. For a prism or cylinder, V = base area × height. The base is the face that repeats along the height.",
+   [
+    "Prism",
+    "find the area of the base shape first, then multiply by the height. A rectangular prism has V = l × w × h."
+   ],
+   [
+    "Cylinder",
+    "the base is a circle, so V = π × r² × h. Example: r = 3 cm and h = 10 cm gives V = π × 3² × 10 = 90π, which is about 283 cm³."
+   ],
+   [
+    "Capacity",
+    "capacity is how much liquid a container holds. 1 cm³ holds 1 mL, and 1000 cm³ holds 1 L. So a volume of 2000 cm³ has a capacity of 2 L."
+   ]
+  ],
+  "remember": "Volume is base area × height. Use 1 cm³ = 1 mL to turn volume into capacity.",
+  "a": {
+   "q": "A rectangular tank has a base 20 cm by 10 cm and a height of 5 cm. What is its volume?",
+   "opts": [
+    "1000 cm³",
+    "200 cm³",
+    "350 cm³",
+    "100 cm³"
+   ],
+   "why": "Base area = 20 × 10 = 200 cm². Volume = 200 × 5 = 1000 cm³. Finding only the base area, 200 cm³, skips the multiplication by the height.",
+   "clue": "Find the base area first, then use the height."
+  },
+  "b": {
+   "d": 3,
+   "q": "A cylindrical water tank has a base radius of 10 cm and a height of 20 cm. About how many litres can it hold?",
+   "opts": [
+    "6.3 L",
+    "2.0 L",
+    "0.63 L",
+    "6283 L"
+   ],
+   "why": "V = π × 10² × 20 = 2000π, which is about 6283 cm³. Since 1000 cm³ holds 1 L, the capacity is about 6.3 L. Leaving out π gives 2000 cm³, or 2.0 L, and 6283 L forgets to divide by 1000.",
+   "clue": "Find the volume in cm³ first, then change cm³ to litres."
+  }
+ },
+ "cleared_by": "owner"
+}

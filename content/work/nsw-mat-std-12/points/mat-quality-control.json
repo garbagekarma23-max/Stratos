@@ -1,0 +1,223 @@
+{
+ "id": "mat-quality-control",
+ "title": "Quality control",
+ "brief": "3ab51cfffe10",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01315,
+  "write": 0.00511,
+  "check": 0.01483,
+  "fix": 0.03357,
+  "recheck": 0.01353
+ },
+ "match": {
+  "same": "",
+  "reason": "The bank has related normal distribution points such as probabilities from the normal distribution, but none teaches using it to judge whether a product falls within an acceptable range, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Quality control",
+  "card": [
+   "Quality control checks that a product is close enough to its target. A machine that fills bottles gives amounts that vary a little, and these often follow a normal distribution.",
+   "Find how far a measurement is from the mean in standard deviations: z = (x − mean) ÷ standard deviation. A product is acceptable if its z-score is inside the limits set by the business.",
+   "Many firms treat a z-score between −2 and 2 as acceptable. A measurement outside this range is unusual, so it may be rejected or the machine may be checked.",
+   "Example: bottles are filled with a mean of 600 mL and a standard deviation of 4 mL. A bottle with 592 mL has z = (592 − 600) ÷ 4 = −2, so it is just inside the limits. A bottle with 609 mL has z = 2.25, so it is outside."
+  ],
+  "remember": "Find the z-score, then compare it with the acceptable limits.",
+  "a": {
+   "q": "Cans are filled with a mean of 375 mL and a standard deviation of 2 mL. A can holds 380 mL. What is its z-score?",
+   "opts": [
+    "2.5",
+    "−2.5",
+    "5",
+    "1.25"
+   ],
+   "why": "z = (380 − 375) ÷ 2 = 2.5. The can is above the mean, so z is positive. Using 5 is tempting, but that is the difference in mL and it has not been divided by the standard deviation.",
+   "clue": "Subtract the mean, then divide by the standard deviation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's factory fills jars with a mean of 500 g and a standard deviation of 5 g. Jars are acceptable if their z-score is between −2 and 2. Which jar is rejected?",
+   "opts": [
+    "511 g",
+    "490 g",
+    "505 g",
+    "498 g"
+   ],
+   "why": "For 511 g, z = (511 − 500) ÷ 5 = 2.2, which is outside the limits. The 490 g jar has z = −2, which is on the limit, so it is acceptable. This is the tempting wrong answer, because it is the lightest jar.",
+   "clue": "Work out the z-score of each jar and compare it with the limits."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.5",
+   "also_right": []
+  },
+  "b": {
+   "best": "511 g",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Between −2 and 2' does not say whether the limits themselves count. The 490 g jar (z = −2) is acceptable only if the endpoints are included. A student who reads 'between' strictly could defend 490 g as rejected too. Say 'from −2 to 2 inclusive' or avoid a jar exactly on the limit."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example says a z-score of exactly −2 is 'just inside the limits', but it is exactly on the limit. The why for (b) says 'on the limit'. The card should state plainly that a z-score equal to a limit counts as acceptable."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card restates the z-score formula and explains it as how far a measurement is from the mean in standard deviations. That is the idea of point 2 (Standardised scores), and here it should only be used, not taught again."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (2.5 and 511 g). Question b's 'between −2 and 2' is unclear about whether the limits count, and the card calls z = −2 'just inside' when it is on the limit. The card also re-teaches the z-score definition from point 2."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: 'Between −2 and 2' does not say whether the limits themselves count. The 490 g jar (z = −2) is acceptable only if the endpoints are included. A student who reads 'between' strictly could defend 490 g as rejected too. Say 'from −2 to 2 inclusive' or avoid a jar exactly on the limit.",
+  "Card, wording: The example says a z-score of exactly −2 is 'just inside the limits', but it is exactly on the limit. The why for (b) says 'on the limit'. The card should state plainly that a z-score equal to a limit counts as acceptable.",
+  "Card, other: The card restates the z-score formula and explains it as how far a measurement is from the mean in standard deviations. That is the idea of point 2 (Standardised scores), and here it should only be used, not taught again."
+ ],
+ "proposal": {
+  "title": "Quality control",
+  "card": [
+   "Quality control checks that a product is close enough to its target. A machine that fills bottles gives amounts that vary a little, and these often follow a normal distribution.",
+   "Work out the product's z-score. The business sets limits for the z-score. A product is acceptable if its z-score is inside the limits or exactly equal to a limit.",
+   "Many firms accept z-scores from −2 to 2 inclusive. A product outside the limits is unusual, so it may be rejected or the machine may be checked.",
+   "Example: bottles have a mean fill of 600 mL and a standard deviation of 4 mL. A 592 mL bottle has z = (592 − 600) ÷ 4 = −2. That equals the limit, so it is acceptable. A 609 mL bottle has z = 2.25, so it is outside."
+  ],
+  "remember": "Find the z-score: on or inside the limits is acceptable, outside may be rejected.",
+  "a": {
+   "q": "Cans have a mean fill of 375 mL and a standard deviation of 2 mL. The limits are z from −2 to 2 inclusive. Is a 380 mL can acceptable?",
+   "opts": [
+    "No, its z-score of 2.5 is outside the limits",
+    "Yes, its z-score of 0.4 is inside the limits",
+    "Yes, it is only 5 mL away from the mean",
+    "No, its z-score of −2.5 is outside the limits"
+   ],
+   "why": "z = (380 − 375) ÷ 2 = 2.5, which is above the upper limit of 2, so the can is not acceptable. Saying it is only 5 mL from the mean is tempting, but the limits apply to the z-score, not the difference in mL.",
+   "clue": "Compare the z-score, not the mL difference, with the limits."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's factory fills jars with a mean of 500 g and a standard deviation of 5 g. Jars are acceptable if z is from −2 to 2 inclusive. Which jar is rejected?",
+   "opts": [
+    "511 g",
+    "490 g",
+    "505 g",
+    "498 g"
+   ],
+   "why": "For 511 g, z = (511 − 500) ÷ 5 = 2.2, which is outside the limits. The 490 g jar has z = −2, which equals a limit, so it is acceptable. It is tempting only because it is the lightest jar.",
+   "clue": "Work out each jar's z-score. Does a z-score equal to a limit count?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "No, its z-score of 2.5 is outside the limits",
+    "also_right": []
+   },
+   "b": {
+    "best": "511 g",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Between −2 and 2' does not say whether the limits themselves count. The 490 g jar (z = −2) is acceptable only if the endpoints are included. A student who reads 'between' strictly could defend 490 g as rejected too. Say 'from −2 to 2 inclusive' or avoid a jar exactly on the limit."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example says a z-score of exactly −2 is 'just inside the limits', but it is exactly on the limit. The why for (b) says 'on the limit'. The card should state plainly that a z-score equal to a limit counts as acceptable."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card restates the z-score formula and explains it as how far a measurement is from the mean in standard deviations. That is the idea of point 2 (Standardised scores), and here it should only be used, not taught again."
+   }
+  ],
+  "flags": [
+   "Question b, wording: 'Between −2 and 2' does not say whether the limits themselves count. The 490 g jar (z = −2) is acceptable only if the endpoints are included. A student who reads 'between' strictly could defend 490 g as rejected too. Say 'from −2 to 2 inclusive' or avoid a jar exactly on the limit.",
+   "Card, wording: The example says a z-score of exactly −2 is 'just inside the limits', but it is exactly on the limit. The why for (b) says 'on the limit'. The card should state plainly that a z-score equal to a limit counts as acceptable.",
+   "Card, other: The card restates the z-score formula and explains it as how far a measurement is from the mean in standard deviations. That is the idea of point 2 (Standardised scores), and here it should only be used, not taught again."
+  ]
+ },
+ "final": {
+  "title": "Quality control",
+  "card": [
+   "Quality control checks that a product is close enough to its target. A machine that fills bottles gives amounts that vary a little, and these often follow a normal distribution.",
+   "Work out the product's z-score. The business sets limits for the z-score. A product is acceptable if its z-score is inside the limits or exactly equal to a limit.",
+   "Many firms accept z-scores from −2 to 2 inclusive. A product outside the limits is unusual, so it may be rejected or the machine may be checked.",
+   "Example: bottles have a mean fill of 600 mL and a standard deviation of 4 mL. A 592 mL bottle has z = (592 − 600) ÷ 4 = −2. That equals the limit, so it is acceptable. A 609 mL bottle has z = 2.25, so it is outside."
+  ],
+  "remember": "Find the z-score: on or inside the limits is acceptable, outside may be rejected.",
+  "a": {
+   "q": "Cans have a mean fill of 375 mL and a standard deviation of 2 mL. The limits are z from −2 to 2 inclusive. Is a 380 mL can acceptable?",
+   "opts": [
+    "No, its z-score of 2.5 is outside the limits",
+    "Yes, its z-score of 0.4 is inside the limits",
+    "Yes, it is only 5 mL away from the mean",
+    "No, its z-score of −2.5 is outside the limits"
+   ],
+   "why": "z = (380 − 375) ÷ 2 = 2.5, which is above the upper limit of 2, so the can is not acceptable. Saying it is only 5 mL from the mean is tempting, but the limits apply to the z-score, not the difference in mL.",
+   "clue": "Compare the z-score, not the mL difference, with the limits."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's factory fills jars with a mean of 500 g and a standard deviation of 5 g. Jars are acceptable if z is from −2 to 2 inclusive. Which jar is rejected?",
+   "opts": [
+    "511 g",
+    "490 g",
+    "505 g",
+    "498 g"
+   ],
+   "why": "For 511 g, z = (511 − 500) ÷ 5 = 2.2, which is outside the limits. The 490 g jar has z = −2, which equals a limit, so it is acceptable. It is tempting only because it is the lightest jar.",
+   "clue": "Work out each jar's z-score. Does a z-score equal to a limit count?"
+  }
+ },
+ "cleared_by": "recheck"
+}

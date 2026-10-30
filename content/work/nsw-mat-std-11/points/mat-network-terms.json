@@ -1,0 +1,212 @@
+{
+ "id": "mat-network-terms",
+ "title": "Network terms",
+ "brief": "c303a2ca3244",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01295,
+  "write": 0.00438,
+  "check": 0.00898,
+  "fix": 0.02313
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers networks, vertices, edges, degree or weighted edges, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Network terms",
+  "card": [
+   [
+    "Vertex",
+    "a point in a network, drawn as a dot. It can stand for a town, a computer or a person."
+   ],
+   [
+    "Edge",
+    "a line that joins two vertices. It can stand for a road, a cable or a friendship."
+   ],
+   [
+    "Degree",
+    "the number of edges that meet at a vertex. If town A has roads to B, C and D, then A has degree 3."
+   ],
+   [
+    "Weighted network",
+    "a network with a value on each edge, such as a distance in km or a cost in dollars. The value is called the weight."
+   ]
+  ],
+  "remember": "A network is vertices joined by edges. Degree counts edges at a vertex, and weights are values on edges.",
+  "a": {
+   "q": "In a network, vertex P is joined by edges to Q, R, S and T. What is the degree of P?",
+   "opts": [
+    "4",
+    "5",
+    "1",
+    "8"
+   ],
+   "why": "Degree is the number of edges that meet at the vertex. P has four edges, one to each of Q, R, S and T, so its degree is 4. The answer is not 5, because P itself is not counted as one of its own edges.",
+   "clue": "Count the edges at P, not the vertices in the network."
+  },
+  "b": {
+   "d": 2,
+   "q": "A network shows five towns as dots. Roads between them are lines labelled 12, 7, 9 and 15, in km. What do the labels 12, 7, 9 and 15 show?",
+   "opts": [
+    "The weights of the edges",
+    "The degrees of the vertices",
+    "The number of vertices",
+    "The number of edges"
+   ],
+   "why": "A value written on an edge, such as a distance, is its weight. The labels are on the roads, which are edges, so they are not degrees. Degree is a count of edges at a vertex, and it is not a distance.",
+   "clue": "The labels sit on the lines, not on the dots."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4",
+   "also_right": []
+  },
+  "b": {
+   "best": "The weights of the edges",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'P itself is not counted as one of its own edges', which blurs vertices and edges. Better: 'The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. One small wording issue: the why for (a) confusingly speaks of P as if it could be an edge."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why says 'P itself is not counted as one of its own edges', which blurs vertices and edges. Better: 'The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.'"
+ ],
+ "proposal": {
+  "title": "Network terms",
+  "card": [
+   [
+    "Vertex",
+    "a point in a network, drawn as a dot. It can stand for a town, a computer or a person."
+   ],
+   [
+    "Edge",
+    "a line that joins two vertices. It can stand for a road, a cable or a friendship."
+   ],
+   [
+    "Degree",
+    "the number of edges that meet at a vertex. If town A has roads to B, C and D, then A has degree 3."
+   ],
+   [
+    "Weighted network",
+    "a network with a value on each edge, such as a distance in km or a cost in dollars. The value is called the weight."
+   ]
+  ],
+  "remember": "A network is vertices joined by edges. Degree counts edges at a vertex, and weights are values on edges.",
+  "a": {
+   "q": "In a network, vertex P is joined by edges to Q, R, S and T. What is the degree of P?",
+   "opts": [
+    "4",
+    "5",
+    "1",
+    "8"
+   ],
+   "why": "Degree is the number of edges that meet at the vertex. P has four edges, one to each of Q, R, S and T, so its degree is 4. The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.",
+   "clue": "Count the edges at P, not the vertices in the network."
+  },
+  "b": {
+   "d": 2,
+   "q": "A network shows five towns as dots. Roads between them are lines labelled 12, 7, 9 and 15, in km. What do the labels 12, 7, 9 and 15 show?",
+   "opts": [
+    "The weights of the edges",
+    "The degrees of the vertices",
+    "The number of vertices",
+    "The number of edges"
+   ],
+   "why": "A value written on an edge, such as a distance, is its weight. The labels are on the roads, which are edges, so they are not degrees. Degree is a count of edges at a vertex, and it is not a distance.",
+   "clue": "The labels sit on the lines, not on the dots."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'P itself is not counted as one of its own edges', which blurs vertices and edges. Better: 'The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.'"
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why says 'P itself is not counted as one of its own edges', which blurs vertices and edges. Better: 'The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.'"
+  ]
+ },
+ "final": {
+  "title": "Network terms",
+  "card": [
+   [
+    "Vertex",
+    "a point in a network, drawn as a dot. It can stand for a town, a computer or a person."
+   ],
+   [
+    "Edge",
+    "a line that joins two vertices. It can stand for a road, a cable or a friendship."
+   ],
+   [
+    "Degree",
+    "the number of edges that meet at a vertex. If town A has roads to B, C and D, then A has degree 3."
+   ],
+   [
+    "Weighted network",
+    "a network with a value on each edge, such as a distance in km or a cost in dollars. The value is called the weight."
+   ]
+  ],
+  "remember": "A network is vertices joined by edges. Degree counts edges at a vertex, and weights are values on edges.",
+  "a": {
+   "q": "In a network, vertex P is joined by edges to Q, R, S and T. What is the degree of P?",
+   "opts": [
+    "4",
+    "5",
+    "1",
+    "8"
+   ],
+   "why": "Degree is the number of edges that meet at the vertex. P has four edges, one to each of Q, R, S and T, so its degree is 4. The answer is not 5, because degree counts edges at P, not the vertices P, Q, R, S and T.",
+   "clue": "Count the edges at P, not the vertices in the network."
+  },
+  "b": {
+   "d": 2,
+   "q": "A network shows five towns as dots. Roads between them are lines labelled 12, 7, 9 and 15, in km. What do the labels 12, 7, 9 and 15 show?",
+   "opts": [
+    "The weights of the edges",
+    "The degrees of the vertices",
+    "The number of vertices",
+    "The number of edges"
+   ],
+   "why": "A value written on an edge, such as a distance, is its weight. The labels are on the roads, which are edges, so they are not degrees. Degree is a count of edges at a vertex, and it is not a distance.",
+   "clue": "The labels sit on the lines, not on the dots."
+  }
+ },
+ "cleared_by": "auto"
+}

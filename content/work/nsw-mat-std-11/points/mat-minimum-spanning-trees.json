@@ -1,0 +1,130 @@
+{
+ "id": "mat-minimum-spanning-trees",
+ "title": "Minimum spanning trees",
+ "brief": "a13bc32906af",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01288,
+  "write": 0.01136,
+  "check": 0.01043
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers networks or minimum spanning trees, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Minimum spanning trees",
+  "card": [
+   "A minimum spanning tree joins every vertex of a weighted network using the least total weight. It has no circuits. It is used for jobs such as laying cable between towns.",
+   [
+    "Kruskal's method",
+    "List the edges from smallest weight to largest. Add each edge in turn, but skip any edge that would make a circuit. Stop when every vertex is joined."
+   ],
+   [
+    "Prim's method",
+    "Start at any vertex. Keep adding the smallest edge that joins a new vertex to the part already built. Stop when every vertex is joined."
+   ],
+   [
+    "Example",
+    "Edges: AB 4, AC 2, BC 3, BD 5, CD 6. Kruskal adds AC 2 and BC 3. It skips AB 4, as A, B and C would form a circuit. It adds BD 5. Total weight: 2 + 3 + 5 = 10."
+   ]
+  ],
+  "remember": "Both methods build the cheapest way to join every vertex, and neither ever adds an edge that makes a circuit.",
+  "a": {
+   "q": "A network has edges PQ 3, PR 4, QR 5, RS 6 and QS 8. What is the total weight of its minimum spanning tree?",
+   "opts": [
+    "13",
+    "12",
+    "18",
+    "26"
+   ],
+   "why": "Kruskal adds PQ 3 and PR 4. It skips QR 5, as P, Q and R would form a circuit. It adds RS 6. Total: 3 + 4 + 6 = 13. The answer 12 is tempting, but 3 + 4 + 5 leaves S unconnected.",
+   "clue": "Check each edge for a circuit before you add it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cable must link five towns. The costs in thousands of dollars are AB 7, AC 5, BC 6, BD 4, CD 8, CE 9 and DE 3. What is the least total cost to connect all five towns?",
+   "opts": [
+    "$18 000",
+    "$19 000",
+    "$21 000",
+    "$42 000"
+   ],
+   "why": "Kruskal adds DE 3, BD 4, AC 5 and BC 6. Every town is now joined, so the rest are not needed. Total: 3 + 4 + 5 + 6 = 18. Using AB 7 in place of BC 6 also joins all towns, but it costs 19, which is more.",
+   "clue": "Take the cheapest edges first, and stop once all five towns are joined."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "13",
+   "also_right": []
+  },
+  "b": {
+   "best": "$18 000",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card example (total 10) and both answers (13 and $18 000) check out with Kruskal's method, and the explanations are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Minimum spanning trees",
+  "card": [
+   "A minimum spanning tree joins every vertex of a weighted network using the least total weight. It has no circuits. It is used for jobs such as laying cable between towns.",
+   [
+    "Kruskal's method",
+    "List the edges from smallest weight to largest. Add each edge in turn, but skip any edge that would make a circuit. Stop when every vertex is joined."
+   ],
+   [
+    "Prim's method",
+    "Start at any vertex. Keep adding the smallest edge that joins a new vertex to the part already built. Stop when every vertex is joined."
+   ],
+   [
+    "Example",
+    "Edges: AB 4, AC 2, BC 3, BD 5, CD 6. Kruskal adds AC 2 and BC 3. It skips AB 4, as A, B and C would form a circuit. It adds BD 5. Total weight: 2 + 3 + 5 = 10."
+   ]
+  ],
+  "remember": "Both methods build the cheapest way to join every vertex, and neither ever adds an edge that makes a circuit.",
+  "a": {
+   "q": "A network has edges PQ 3, PR 4, QR 5, RS 6 and QS 8. What is the total weight of its minimum spanning tree?",
+   "opts": [
+    "13",
+    "12",
+    "18",
+    "26"
+   ],
+   "why": "Kruskal adds PQ 3 and PR 4. It skips QR 5, as P, Q and R would form a circuit. It adds RS 6. Total: 3 + 4 + 6 = 13. The answer 12 is tempting, but 3 + 4 + 5 leaves S unconnected.",
+   "clue": "Check each edge for a circuit before you add it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cable must link five towns. The costs in thousands of dollars are AB 7, AC 5, BC 6, BD 4, CD 8, CE 9 and DE 3. What is the least total cost to connect all five towns?",
+   "opts": [
+    "$18 000",
+    "$19 000",
+    "$21 000",
+    "$42 000"
+   ],
+   "why": "Kruskal adds DE 3, BD 4, AC 5 and BC 6. Every town is now joined, so the rest are not needed. Total: 3 + 4 + 5 + 6 = 18. Using AB 7 in place of BC 6 also joins all towns, but it costs 19, which is more.",
+   "clue": "Take the cheapest edges first, and stop once all five towns are joined."
+  }
+ },
+ "cleared_by": "checker"
+}

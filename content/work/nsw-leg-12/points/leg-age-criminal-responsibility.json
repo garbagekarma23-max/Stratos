@@ -1,0 +1,234 @@
+{
+ "id": "leg-age-criminal-responsibility",
+ "title": "The age of criminal responsibility",
+ "brief": "328419e884f5",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, write",
+  "2026-10-29T12:14:26Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:22:37Z write: failed the content check, writing again",
+  "2026-10-29T12:30:22Z write: done (still fails the content check)",
+  "2026-10-29T14:07:07Z check: flagged",
+  "2026-10-29T14:10:40Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01227,
+  "check": 0.02205,
+  "fix": 0.02935,
+  "recheck": 0.00978
+ },
+ "draft": {
+  "title": "The age of criminal responsibility",
+  "card": [
+   "The age of criminal responsibility is the age at which a child can be held responsible for a crime. In NSW it is 10.",
+   [
+    "Under 10",
+    "a child cannot be charged with a crime. The law treats them as unable to commit one, whatever they did."
+   ],
+   [
+    "Aged 10 to 13",
+    "a child can be charged, but doli incapax applies. The child is presumed unable to know the act was seriously wrong."
+   ],
+   "To overcome this, the prosecution must prove the child knew the act was seriously wrong, not just naughty. This is in addition to proving the offence itself."
+  ],
+  "remember": "Under 10 is never charged. At 10 to 13 the prosecution must also prove the child knew the act was seriously wrong.",
+  "a": {
+   "q": "How does NSW law treat a 12-year-old accused of theft?",
+   "opts": [
+    "The prosecution must also prove the child knew it was wrong",
+    "The child cannot be charged because they are under 14",
+    "The child is presumed to know it was wrong, so no more proof",
+    "The child must prove they did not know it was seriously wrong"
+   ],
+   "why": "At 12 a child can be charged, but doli incapax means the prosecution must also prove the child knew the act was seriously wrong. The option saying a child under 14 cannot be charged is tempting, but the bar on charging applies only under 10.",
+   "clue": "Think about what the prosecution must prove for ages 10 to 13."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethan is 9 and Priya is 13. Each takes a bike from a shed in Bathurst. Which statement is correct?",
+   "opts": [
+    "Ethan cannot be charged, but Priya can if her knowledge is proved",
+    "Both can be charged if the prosecution proves the theft",
+    "Neither can be charged, as both are under 14",
+    "Ethan can be charged if he knew it was wrong, but Priya cannot"
+   ],
+   "why": "Ethan is under 10, so he cannot be charged whatever he knew. Priya is 13, so she can be charged, but only if the prosecution proves she knew the act was seriously wrong. Doli incapax does not matter for Ethan, as the age bar already applies.",
+   "clue": "Check which age group each child falls in, then what each group needs."
+  }
+ },
+ "redone": true,
+ "local": [
+  "leg-age-criminal-responsibilitya option is 61 characters: The child must prove they did not know it was seriously wrong",
+  "leg-age-criminal-responsibilityb option is 65 characters: Ethan cannot be charged, but Priya can if her knowledge is proved",
+  "leg-age-criminal-responsibilityb option is 62 characters: Ethan can be charged if he knew it was wrong, but Priya cannot"
+ ],
+ "check": {
+  "a": {
+   "best": "The prosecution must also prove the child knew it was wrong",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ethan cannot be charged, but Priya can if her knowledge is proved",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option and the why say Priya can be charged only if her knowledge is proved. A 10 to 13-year-old can be charged without that proof, as the card says. Doli incapax must be rebutted at trial to convict, not before charging. This mixes up charging with conviction and contradicts the card's 'a child can be charged, but doli incapax applies'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'what the prosecution must prove' points straight to the only option that begins 'The prosecution', so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts are correct for NSW (age 10; doli incapax for 10 to 13, rebutted by proof that the child knew the act was seriously wrong). However, question b's right option and its why wrongly make charging a 13-year-old depend on proving her knowledge, when that proof is needed to convict. Question a's clue also nearly gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The right option and the why say Priya can be charged only if her knowledge is proved. A 10 to 13-year-old can be charged without that proof, as the card says. Doli incapax must be rebutted at trial to convict, not before charging. This mixes up charging with conviction and contradicts the card's 'a child can be charged, but doli incapax applies'.",
+  "Question a, other: The clue 'what the prosecution must prove' points straight to the only option that begins 'The prosecution', so a student can pick it without knowing the idea.",
+  "Content check: leg-age-criminal-responsibilitya option is 61 characters: The child must prove they did not know it was seriously wrong",
+  "Content check: leg-age-criminal-responsibilityb option is 65 characters: Ethan cannot be charged, but Priya can if her knowledge is proved",
+  "Content check: leg-age-criminal-responsibilityb option is 62 characters: Ethan can be charged if he knew it was wrong, but Priya cannot"
+ ],
+ "proposal": {
+  "title": "The age of criminal responsibility",
+  "card": [
+   "The age of criminal responsibility is the age at which a child can be held responsible for a crime. In NSW it is 10.",
+   [
+    "Under 10",
+    "a child cannot be charged with a crime. The law treats them as unable to commit one, whatever they did."
+   ],
+   [
+    "Aged 10 to 13",
+    "a child can be charged, but doli incapax applies. The child is presumed not to know the act was seriously wrong."
+   ],
+   "To convict, the prosecution must overcome this by proving the child knew the act was seriously wrong, not just naughty. This is on top of proving the offence itself."
+  ],
+  "remember": "Under 10: no charge. Aged 10 to 13: a charge is possible, but a conviction needs proof the child knew the act was seriously wrong.",
+  "a": {
+   "q": "A 12-year-old is charged with theft in NSW. What else must be shown for a conviction?",
+   "opts": [
+    "That the child knew the act was seriously wrong",
+    "That the child knew the act was naughty or mischievous",
+    "Nothing more, as the child is aged 10 or over",
+    "That the child is mature enough to be tried as an adult"
+   ],
+   "why": "At 12, doli incapax applies, so the prosecution must prove the child knew the act was seriously wrong, on top of proving the theft. Knowing it was naughty or mischievous is tempting, but that is not enough to overcome the presumption.",
+   "clue": "Reread what doli incapax presumes about a child of 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethan is 9 and Priya is 13. Each takes a bike from a shed in Bathurst. Which statement is correct?",
+   "opts": [
+    "Only Priya can be charged, but doli incapax applies to her",
+    "Both can be charged, and doli incapax applies to both",
+    "Neither can be charged, as both are under 14",
+    "Only Priya can be charged, and doli incapax does not apply"
+   ],
+   "why": "Ethan is under 10, so he cannot be charged whatever he knew. Priya is 13, which is still in the 10 to 13 group, so she can be charged, but to convict her the prosecution must prove she knew the act was seriously wrong. Thinking 13 is too old for doli incapax is the tempting mistake.",
+   "clue": "Is 13 inside or outside the 10 to 13 group?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "That the child knew the act was seriously wrong",
+    "also_right": []
+   },
+   "b": {
+    "best": "Only Priya can be charged, but doli incapax applies to her",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card matches NSW law: criminal responsibility starts at 10, and doli incapax covers ages 10 to 13, requiring proof the child knew the act was seriously wrong, not merely naughty (RP v The Queen 2016). Both questions have one clear right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 20,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option and the why say Priya can be charged only if her knowledge is proved. A 10 to 13-year-old can be charged without that proof, as the card says. Doli incapax must be rebutted at trial to convict, not before charging. This mixes up charging with conviction and contradicts the card's 'a child can be charged, but doli incapax applies'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'what the prosecution must prove' points straight to the only option that begins 'The prosecution', so a student can pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The right option and the why say Priya can be charged only if her knowledge is proved. A 10 to 13-year-old can be charged without that proof, as the card says. Doli incapax must be rebutted at trial to convict, not before charging. This mixes up charging with conviction and contradicts the card's 'a child can be charged, but doli incapax applies'.",
+   "Question a, other: The clue 'what the prosecution must prove' points straight to the only option that begins 'The prosecution', so a student can pick it without knowing the idea.",
+   "Content check: leg-age-criminal-responsibilitya option is 61 characters: The child must prove they did not know it was seriously wrong",
+   "Content check: leg-age-criminal-responsibilityb option is 65 characters: Ethan cannot be charged, but Priya can if her knowledge is proved",
+   "Content check: leg-age-criminal-responsibilityb option is 62 characters: Ethan can be charged if he knew it was wrong, but Priya cannot"
+  ]
+ },
+ "final": {
+  "title": "The age of criminal responsibility",
+  "card": [
+   "The age of criminal responsibility is the age at which a child can be held responsible for a crime. In NSW it is 10.",
+   [
+    "Under 10",
+    "a child cannot be charged with a crime. The law treats them as unable to commit one, whatever they did."
+   ],
+   [
+    "Aged 10 to 13",
+    "a child can be charged, but doli incapax applies. The child is presumed not to know the act was seriously wrong."
+   ],
+   "To convict, the prosecution must overcome this by proving the child knew the act was seriously wrong, not just naughty. This is on top of proving the offence itself."
+  ],
+  "remember": "Under 10: no charge. Aged 10 to 13: a charge is possible, but a conviction needs proof the child knew the act was seriously wrong.",
+  "a": {
+   "q": "A 12-year-old is charged with theft in NSW. What else must be shown for a conviction?",
+   "opts": [
+    "That the child knew the act was seriously wrong",
+    "That the child knew the act was naughty or mischievous",
+    "Nothing more, as the child is aged 10 or over",
+    "That the child is mature enough to be tried as an adult"
+   ],
+   "why": "At 12, doli incapax applies, so the prosecution must prove the child knew the act was seriously wrong, on top of proving the theft. Knowing it was naughty or mischievous is tempting, but that is not enough to overcome the presumption.",
+   "clue": "Reread what doli incapax presumes about a child of 12."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethan is 9 and Priya is 13. Each takes a bike from a shed in Bathurst. Which statement is correct?",
+   "opts": [
+    "Only Priya can be charged, but doli incapax applies to her",
+    "Both can be charged, and doli incapax applies to both",
+    "Neither can be charged, as both are under 14",
+    "Only Priya can be charged, and doli incapax does not apply"
+   ],
+   "why": "Ethan is under 10, so he cannot be charged whatever he knew. Priya is 13, which is still in the 10 to 13 group, so she can be charged, but to convict her the prosecution must prove she knew the act was seriously wrong. Thinking 13 is too old for doli incapax is the tempting mistake.",
+   "clue": "Is 13 inside or outside the 10 to 13 group?"
+  }
+ },
+ "cleared_by": "recheck"
+}

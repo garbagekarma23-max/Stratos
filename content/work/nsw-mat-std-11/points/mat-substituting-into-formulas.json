@@ -1,0 +1,199 @@
+{
+ "id": "mat-substituting-into-formulas",
+ "title": "Substituting into formulas",
+ "brief": "92c0acb7be60",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01305,
+  "write": 0.00479,
+  "check": 0.00973,
+  "fix": 0.02758,
+  "recheck": 0.01089
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank teaches general substitution into formulas with order of operations; function notation is a related but narrower idea about replacing x in f(x)."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A formula is a rule that links letters. To substitute, replace each letter with its number and write the numbers in brackets if they could be confused with signs.",
+   "Then work it out in the usual order: brackets first, then powers, then × and ÷ from left to right, then + and − from left to right.",
+   "Example: speed s = d ÷ t. For d = 150 and t = 3, s = 150 ÷ 3 = 50.",
+   "Example: A = ½bh with b = 6 and h = 4. A = ½ × 6 × 4 = 3 × 4 = 12. Another: P = 2l + 2w with l = 5 and w = 3 gives P = 10 + 6 = 16, because the × is done before the +."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "Using P = 2l + 2w, what is P when l = 7 and w = 4?",
+   "opts": [
+    "22",
+    "36",
+    "44",
+    "15"
+   ],
+   "why": "P = 2 × 7 + 2 × 4 = 14 + 8 = 22. The answer 36 comes from adding first: (2 × 7 + 2) × 4 = 16 × 4 is 64, and 2 × (7 + 2) × 4 is 72, so adding before multiplying gives a wrong result. The answer 44 comes from doubling the whole sum, which is 2 × (7 + 4) × 2.",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana cycles 36 km in 3 hours. Using s = d ÷ t, what is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "s = 36 ÷ 3 = 12 km/h. The answer 108 comes from multiplying d and t instead of dividing. The answer 39 comes from adding the two numbers.",
+   "clue": "Distance goes on top, time goes underneath."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "22",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why for (a) claims the answer 36 comes from adding first, but its own working gives 64 and 72, not 36. The explanation does not account for the distractor and contains muddled arithmetic. 36 would come from, for example, 2 × (7 + 2) × 2."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer (22 and 12). The explanation for question a's distractor 36 is wrong: its working gives 64 and 72, not 36, so it needs rewriting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why for (a) claims the answer 36 comes from adding first, but its own working gives 64 and 72, not 36. The explanation does not account for the distractor and contains muddled arithmetic. 36 would come from, for example, 2 × (7 + 2) × 2."
+ ],
+ "proposal": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A formula is a rule that links letters. To substitute, replace each letter with its number and write the numbers in brackets if they could be confused with signs.",
+   "Then work it out in the usual order: brackets first, then powers, then × and ÷ from left to right, then + and − from left to right.",
+   "Example: speed s = d ÷ t. For d = 150 and t = 3, s = 150 ÷ 3 = 50.",
+   "Example: A = ½bh with b = 6 and h = 4. A = ½ × 6 × 4 = 3 × 4 = 12. Another: P = 2l + 2w with l = 5 and w = 3 gives P = 10 + 6 = 16, because the × is done before the +."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "Using P = 2l + 2w, what is P when l = 7 and w = 4?",
+   "opts": [
+    "22",
+    "64",
+    "18",
+    "51"
+   ],
+   "why": "P = 2 × 7 + 2 × 4 = 14 + 8 = 22. The answer 64 comes from working strictly left to right: 2 × 7 = 14, then 14 + 2 = 16, then 16 × 4 = 64, which does the + before the second ×. The answer 18 comes from forgetting to double w, giving 14 + 4.",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dana cycles 36 km in 3 hours. Using s = d ÷ t, what is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "s = 36 ÷ 3 = 12 km/h. The answer 108 comes from multiplying d and t instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+   "clue": "Distance goes on top, time goes underneath."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "22",
+    "also_right": []
+   },
+   "b": {
+    "best": "12",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why for (a) claims the answer 36 comes from adding first, but its own working gives 64 and 72, not 36. The explanation does not account for the distractor and contains muddled arithmetic. 36 would come from, for example, 2 × (7 + 2) × 2."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why for (a) claims the answer 36 comes from adding first, but its own working gives 64 and 72, not 36. The explanation does not account for the distractor and contains muddled arithmetic. 36 would come from, for example, 2 × (7 + 2) × 2."
+  ]
+ },
+ "final": {
+  "title": "Substituting into formulas",
+  "card": [
+   "A formula is a rule that links letters. To substitute, replace each letter with its number and write the numbers in brackets if they could be confused with signs.",
+   "Then work it out in the usual order: brackets first, then powers, then × and ÷ from left to right, then + and − from left to right.",
+   "Example: speed s = d ÷ t. For d = 150 and t = 3, s = 150 ÷ 3 = 50.",
+   "Example: A = ½bh with b = 6 and h = 4. A = ½ × 6 × 4 = 3 × 4 = 12. Another: P = 2l + 2w with l = 5 and w = 3 gives P = 10 + 6 = 16, because the × is done before the +."
+  ],
+  "remember": "Replace each letter with its number, then follow the order of operations.",
+  "a": {
+   "q": "Using P = 2l + 2w, what is P when l = 7 and w = 4?",
+   "opts": [
+    "22",
+    "64",
+    "18",
+    "51"
+   ],
+   "why": "P = 2 × 7 + 2 × 4 = 14 + 8 = 22. The answer 64 comes from working strictly left to right: 2 × 7 = 14, then 14 + 2 = 16, then 16 × 4 = 64, which does the + before the second ×. The answer 18 comes from forgetting to double w, giving 14 + 4.",
+   "clue": "Do each multiplication before the addition."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dana cycles 36 km in 3 hours. Using s = d ÷ t, what is her speed in km/h?",
+   "opts": [
+    "12",
+    "108",
+    "39",
+    "33"
+   ],
+   "why": "s = 36 ÷ 3 = 12 km/h. The answer 108 comes from multiplying d and t instead of dividing. The answers 39 and 33 come from adding or subtracting the two numbers.",
+   "clue": "Distance goes on top, time goes underneath."
+  }
+ },
+ "cleared_by": "recheck"
+}

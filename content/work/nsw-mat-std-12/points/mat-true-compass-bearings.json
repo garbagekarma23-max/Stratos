@@ -1,0 +1,122 @@
+{
+ "id": "mat-true-compass-bearings",
+ "title": "True and compass bearings",
+ "brief": "3e0eb2931bea",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: done",
+  "2026-10-29T12:30:23Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01334,
+  "write": 0.01061,
+  "check": 0.01045
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest bank point, Bearings and elevation, covers clockwise-from-north bearings together with angles of elevation and depression, so it is broader and does not teach compass bearings like S45°E, which makes it not the same idea."
+ },
+ "draft": {
+  "title": "True and compass bearings",
+  "card": [
+   [
+    "True bearing",
+    "a three-figure angle measured clockwise from north, such as 045°T or 135°T. North is 000°T, east is 090°T, south is 180°T and west is 270°T."
+   ],
+   [
+    "Compass bearing",
+    "an angle from north or south turned towards east or west, such as S45°E. Start facing south, then turn 45° towards east."
+   ],
+   "To convert: N θ E = θ. S θ E = 180 − θ. S θ W = 180 + θ. N θ W = 360 − θ.",
+   "Example: S30°W is 30° past south towards west, so the true bearing is 180 + 30 = 210°T."
+  ],
+  "remember": "True bearings turn clockwise from north. Compass bearings turn from north or south.",
+  "a": {
+   "q": "What is the true bearing of N40°W?",
+   "opts": [
+    "320°T",
+    "040°T",
+    "140°T",
+    "220°T"
+   ],
+   "why": "N40°W is 40° from north towards west, which is 40° short of a full turn: 360 − 40 = 320°T. 040°T is wrong because that is N40°E, towards east.",
+   "clue": "West is anticlockwise from north."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ship leaves port on a true bearing of 250°T. What is its compass bearing?",
+   "opts": [
+    "S70°W",
+    "S20°W",
+    "N70°W",
+    "S70°E"
+   ],
+   "why": "250° lies between south (180°) and west (270°). It is 250 − 180 = 70° past south towards west, so S70°W. S20°W is wrong because it is 20° past south, which is 200°T.",
+   "clue": "250° is between south at 180° and west at 270°."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "320°T",
+   "also_right": []
+  },
+  "b": {
+   "best": "S70°W",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "True and compass bearings",
+  "card": [
+   [
+    "True bearing",
+    "a three-figure angle measured clockwise from north, such as 045°T or 135°T. North is 000°T, east is 090°T, south is 180°T and west is 270°T."
+   ],
+   [
+    "Compass bearing",
+    "an angle from north or south turned towards east or west, such as S45°E. Start facing south, then turn 45° towards east."
+   ],
+   "To convert: N θ E = θ. S θ E = 180 − θ. S θ W = 180 + θ. N θ W = 360 − θ.",
+   "Example: S30°W is 30° past south towards west, so the true bearing is 180 + 30 = 210°T."
+  ],
+  "remember": "True bearings turn clockwise from north. Compass bearings turn from north or south.",
+  "a": {
+   "q": "What is the true bearing of N40°W?",
+   "opts": [
+    "320°T",
+    "040°T",
+    "140°T",
+    "220°T"
+   ],
+   "why": "N40°W is 40° from north towards west, which is 40° short of a full turn: 360 − 40 = 320°T. 040°T is wrong because that is N40°E, towards east.",
+   "clue": "West is anticlockwise from north."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ship leaves port on a true bearing of 250°T. What is its compass bearing?",
+   "opts": [
+    "S70°W",
+    "S20°W",
+    "N70°W",
+    "S70°E"
+   ],
+   "why": "250° lies between south (180°) and west (270°). It is 250 − 180 = 70° past south towards west, so S70°W. S20°W is wrong because it is 20° past south, which is 200°T.",
+   "clue": "250° is between south at 180° and west at 270°."
+  }
+ },
+ "cleared_by": "checker"
+}

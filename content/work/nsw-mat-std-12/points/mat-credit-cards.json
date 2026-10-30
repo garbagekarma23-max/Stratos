@@ -1,0 +1,199 @@
+{
+ "id": "mat-credit-cards",
+ "title": "Credit cards",
+ "brief": "7ddb1663fbe2",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01309,
+  "write": 0.00505,
+  "check": 0.01246,
+  "fix": 0.02949,
+  "recheck": 0.01462
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers credit cards; compound interest and reducing balance loans are related, but neither teaches daily interest on a card balance after an interest-free period."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Credit cards",
+  "card": [
+   "A credit card lets you spend money the bank lends you. If you pay the full balance by the due date, you usually pay no interest on purchases during the interest-free period.",
+   "If you do not pay in full, interest is charged on the amount owed, and it is worked out daily. Daily rate = annual rate ÷ 365.",
+   "Interest for a period = amount owed × daily rate × number of days. The annual rate on credit cards is often high.",
+   "Example: $2000 is owed at 18% per year for 30 days. Daily rate = 18% ÷ 365 = 0.0493% (to 4 decimal places). Interest = 2000 × 0.18 ÷ 365 × 30 = $29.59 (to the nearest cent)."
+  ],
+  "remember": "Interest = amount owed × annual rate ÷ 365 × days, charged once the interest-free period ends.",
+  "a": {
+   "q": "A credit card has an annual rate of 21.9%. What is the daily interest rate, using 365 days in a year?",
+   "opts": [
+    "0.06%",
+    "0.0183%",
+    "0.73%",
+    "21.9%"
+   ],
+   "why": "Daily rate = 21.9% ÷ 365 = 0.06%. The 0.0183% option comes from dividing by 12 and then 365 or similar slips, and 0.73% divides by 30, which is not how daily interest is found.",
+   "clue": "Divide the annual rate by the number of days in a year."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo owes $1500 on a credit card at 19.5% per year, and the interest-free period has ended. Using 365 days, what is the interest for 20 days, to the nearest cent?",
+   "opts": [
+    "$16.03",
+    "$24.38",
+    "$292.50",
+    "$0.80"
+   ],
+   "why": "Interest = 1500 × 0.195 ÷ 365 × 20 = $16.03. The $0.80 option is only one day's interest, found by 1500 × 0.195 ÷ 365 = $0.80 and not multiplied by 20 days.",
+   "clue": "Work out one day's interest, then multiply by the number of days."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.06%",
+   "also_right": []
+  },
+  "b": {
+   "best": "$16.03",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 0.0183% comes from dividing by 12 and then 365, but 21.9 ÷ 12 ÷ 365 ≈ 0.005%. 0.0183% is closer to the monthly rate (21.9 ÷ 12 = 1.825%) written as a decimal (about 0.0183). The explanation of the distractor is wrong and could confuse students who check it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, its worked example and both answers are correct (0.06% and $16.03). The only problem is that the why for question a wrongly explains where the 0.0183% distractor comes from."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says 0.0183% comes from dividing by 12 and then 365, but 21.9 ÷ 12 ÷ 365 ≈ 0.005%. 0.0183% is closer to the monthly rate (21.9 ÷ 12 = 1.825%) written as a decimal (about 0.0183). The explanation of the distractor is wrong and could confuse students who check it."
+ ],
+ "proposal": {
+  "title": "Credit cards",
+  "card": [
+   "A credit card lets you spend money the card provider lends you. If you pay the full balance by the due date, you usually pay no interest on purchases during the interest-free period.",
+   "If you do not pay in full, interest is charged on the amount owed, and it is worked out daily. Daily rate = annual rate ÷ 365.",
+   "Interest for a period = amount owed × daily rate × number of days. The annual rate on credit cards is often high.",
+   "Example: $2000 is owed at 18% per year for 30 days. Daily rate = 18% ÷ 365 = 0.0493% (to 4 decimal places). Interest = 2000 × 0.18 ÷ 365 × 30 = $29.59 (to the nearest cent)."
+  ],
+  "remember": "Interest = amount owed × annual rate ÷ 365 × days, charged once the interest-free period ends.",
+  "a": {
+   "q": "A credit card has an annual rate of 21.9%. What is the daily interest rate, using 365 days in a year?",
+   "opts": [
+    "0.06%",
+    "1.83%",
+    "0.73%",
+    "0.6%"
+   ],
+   "why": "Daily rate = 21.9% ÷ 365 = 0.06%. Dividing by 12 gives about 1.83%, which is a monthly rate, and dividing by 30 gives 0.73%, which is not a daily rate either. 0.6% is a decimal place slip.",
+   "clue": "Divide the annual rate by the number of days in a year."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo owes $1500 on a credit card at 19.5% per year, and the interest-free period has ended. Using 365 days, what is the interest for 20 days, to the nearest cent?",
+   "opts": [
+    "$16.03",
+    "$24.38",
+    "$292.50",
+    "$0.80"
+   ],
+   "why": "Interest = 1500 × 0.195 ÷ 365 × 20 = $16.03. The $0.80 option is only one day's interest, found by 1500 × 0.195 ÷ 365 = $0.80 and not multiplied by 20 days. $24.38 divides the yearly interest by 12, which gives a month, not 20 days.",
+   "clue": "Work out one day's interest, then multiply by the number of days."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "0.06%",
+    "also_right": []
+   },
+   "b": {
+    "best": "$16.03",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example and both answers check out: 21.9% ÷ 365 = 0.06%, and 1500 × 0.195 ÷ 365 × 20 = $16.03."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 0.0183% comes from dividing by 12 and then 365, but 21.9 ÷ 12 ÷ 365 ≈ 0.005%. 0.0183% is closer to the monthly rate (21.9 ÷ 12 = 1.825%) written as a decimal (about 0.0183). The explanation of the distractor is wrong and could confuse students who check it."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why says 0.0183% comes from dividing by 12 and then 365, but 21.9 ÷ 12 ÷ 365 ≈ 0.005%. 0.0183% is closer to the monthly rate (21.9 ÷ 12 = 1.825%) written as a decimal (about 0.0183). The explanation of the distractor is wrong and could confuse students who check it."
+  ]
+ },
+ "final": {
+  "title": "Credit cards",
+  "card": [
+   "A credit card lets you spend money the card provider lends you. If you pay the full balance by the due date, you usually pay no interest on purchases during the interest-free period.",
+   "If you do not pay in full, interest is charged on the amount owed, and it is worked out daily. Daily rate = annual rate ÷ 365.",
+   "Interest for a period = amount owed × daily rate × number of days. The annual rate on credit cards is often high.",
+   "Example: $2000 is owed at 18% per year for 30 days. Daily rate = 18% ÷ 365 = 0.0493% (to 4 decimal places). Interest = 2000 × 0.18 ÷ 365 × 30 = $29.59 (to the nearest cent)."
+  ],
+  "remember": "Interest = amount owed × annual rate ÷ 365 × days, charged once the interest-free period ends.",
+  "a": {
+   "q": "A credit card has an annual rate of 21.9%. What is the daily interest rate, using 365 days in a year?",
+   "opts": [
+    "0.06%",
+    "1.83%",
+    "0.73%",
+    "0.6%"
+   ],
+   "why": "Daily rate = 21.9% ÷ 365 = 0.06%. Dividing by 12 gives about 1.83%, which is a monthly rate, and dividing by 30 gives 0.73%, which is not a daily rate either. 0.6% is a decimal place slip.",
+   "clue": "Divide the annual rate by the number of days in a year."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo owes $1500 on a credit card at 19.5% per year, and the interest-free period has ended. Using 365 days, what is the interest for 20 days, to the nearest cent?",
+   "opts": [
+    "$16.03",
+    "$24.38",
+    "$292.50",
+    "$0.80"
+   ],
+   "why": "Interest = 1500 × 0.195 ÷ 365 × 20 = $16.03. The $0.80 option is only one day's interest, found by 1500 × 0.195 ÷ 365 = $0.80 and not multiplied by 20 days. $24.38 divides the yearly interest by 12, which gives a month, not 20 days.",
+   "clue": "Work out one day's interest, then multiply by the number of days."
+  }
+ },
+ "cleared_by": "recheck"
+}

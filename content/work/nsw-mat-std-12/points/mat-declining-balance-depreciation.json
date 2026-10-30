@@ -1,0 +1,112 @@
+{
+ "id": "mat-declining-balance-depreciation",
+ "title": "Declining balance depreciation",
+ "brief": "ccf54c49b2eb",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01299,
+  "write": 0.00475,
+  "check": 0.00694
+ },
+ "match": {
+  "same": "",
+  "reason": "No existing point teaches declining balance depreciation; compound interest and exponential decay are related ideas but not the same formula or context."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Declining balance depreciation",
+  "card": [
+   "Depreciation is the fall in an asset's value over time. Declining balance depreciation takes off a fixed percentage of the asset's current value each year.",
+   "S = V₀(1 − r)ⁿ. S is the salvage value (the value after n years), V₀ is the starting value, r is the yearly rate as a decimal and n is the number of years.",
+   "The percentage is taken from a smaller value each year, so the dollar loss gets smaller each year.",
+   "Example: a $20 000 machine loses 10% a year for 3 years. S = 20 000 × (1 − 0.10)³ = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+  ],
+  "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+  "a": {
+   "q": "A van is worth $40 000 and loses 15% of its value each year. What is its value after 2 years?",
+   "opts": [
+    "$28 900",
+    "$28 000",
+    "$34 000",
+    "$27 100"
+   ],
+   "why": "S = 40 000 × 0.85² = 40 000 × 0.7225 = $28 900. The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
+   "clue": "Multiply by 0.85 twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's laptop cost $2000 and depreciates by 20% each year on the declining balance. What is its value after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$1200"
+   ],
+   "why": "S = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is 1 − 0.20, used three times."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$28 900",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1024",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The formula, the worked example and both answers ($28 900 and $1024) are correct, and the explanations correctly identify the 'percentage of the original value' error behind $28 000 and $800."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Declining balance depreciation",
+  "card": [
+   "Depreciation is the fall in an asset's value over time. Declining balance depreciation takes off a fixed percentage of the asset's current value each year.",
+   "S = V₀(1 − r)ⁿ. S is the salvage value (the value after n years), V₀ is the starting value, r is the yearly rate as a decimal and n is the number of years.",
+   "The percentage is taken from a smaller value each year, so the dollar loss gets smaller each year.",
+   "Example: a $20 000 machine loses 10% a year for 3 years. S = 20 000 × (1 − 0.10)³ = 20 000 × 0.9³ = 20 000 × 0.729 = $14 580."
+  ],
+  "remember": "Multiply by (1 − r) once for each year. The value falls, but the rate stays the same.",
+  "a": {
+   "q": "A van is worth $40 000 and loses 15% of its value each year. What is its value after 2 years?",
+   "opts": [
+    "$28 900",
+    "$28 000",
+    "$34 000",
+    "$27 100"
+   ],
+   "why": "S = 40 000 × 0.85² = 40 000 × 0.7225 = $28 900. The value $28 000 comes from taking 15% of $40 000 off each year, which ignores that the percentage applies to the smaller current value.",
+   "clue": "Multiply by 0.85 twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's laptop cost $2000 and depreciates by 20% each year on the declining balance. What is its value after 3 years?",
+   "opts": [
+    "$1024",
+    "$800",
+    "$1280",
+    "$1200"
+   ],
+   "why": "S = 2000 × 0.8³ = 2000 × 0.512 = $1024. The value $800 comes from taking 20% of the original price off each year, which ignores that each year's loss is taken from the smaller current value.",
+   "clue": "The factor each year is 1 − 0.20, used three times."
+  }
+ },
+ "cleared_by": "checker"
+}

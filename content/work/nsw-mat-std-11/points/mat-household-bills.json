@@ -1,0 +1,188 @@
+{
+ "id": "mat-household-bills",
+ "title": "Household bills",
+ "brief": "1ed7f8daaf88",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (card wording, b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01313,
+  "write": 0.00518,
+  "check": 0.0118,
+  "fix": 0.02834
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers reading household bills with supply and usage charges; the closest, linear functions, teaches gradients and parallel lines rather than bills or comparing plans."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Household bills",
+  "card": [
+   "Many bills have two parts. A fixed charge is the same every billing period, such as a daily supply charge. A usage charge depends on how much is used, such as cents per kilowatt hour (kWh) of electricity.",
+   "Bill total = fixed charge + (usage × rate). Work out each part, then add them.",
+   "Example: a supply charge of $1 a day for 90 days is $90. Using 600 kWh at 30 cents per kWh costs 600 × $0.30 = $180. The bill is $90 + $180 = $270.",
+   "To compare two plans, work out the total cost of each for the same usage. The plan with the lower total is cheaper for that usage."
+  ],
+  "remember": "Total bill = fixed charge + usage charge. Compare plans using the same usage.",
+  "a": {
+   "q": "A water bill has a fixed charge of $60 and a usage charge of $2 per kilolitre. A household uses 40 kilolitres. What is the total bill?",
+   "opts": [
+    "$140",
+    "$80",
+    "$120",
+    "$100"
+   ],
+   "why": "The usage charge is 40 × $2 = $80. Adding the fixed charge gives $80 + $60 = $140. The $80 option leaves out the fixed charge, which is paid whatever the usage.",
+   "clue": "Find the usage charge first, then add the fixed charge."
+  },
+  "b": {
+   "d": 3,
+   "q": "Plan A has a supply charge of $90 and costs 25 cents per kWh. Plan B has a supply charge of $60 and costs 30 cents per kWh. Both bills cover the same 90 days. Which plan is cheaper for 800 kWh, and by how much?",
+   "opts": [
+    "Plan A, by $10",
+    "Plan B, by $10",
+    "Plan A, by $30",
+    "Plan B, by $30"
+   ],
+   "why": "Plan A: $90 + 800 × $0.25 = $90 + $200 = $290. Plan B: $60 + 800 × $0.30 = $60 + $240 = $300. Plan B has the lower supply charge, but its higher rate costs more at this usage, so Plan A is cheaper by $10.",
+   "clue": "Work out the full total for each plan before comparing."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$140",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plan A, by $10",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a fixed charge 'is the same every billing period, such as a daily supply charge', but a daily charge totals differently when billing periods differ in length (for example 90 versus 92 days). It would be clearer to say the fixed charge does not depend on how much is used."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card teaches the supply charge as a daily rate ($1 a day × 90 days), but question b gives 'a supply charge of $90' and then mentions 90 days. A student could multiply $90 by 90. The question should say the $90 and $60 are for the whole 90-day bill."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: a is $140, and in b Plan A is cheaper by $10. Two minor wording fixes are suggested: the card calls a daily supply charge 'the same every billing period', and question b should say its supply charges cover the whole 90 days, not each day."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says a fixed charge 'is the same every billing period, such as a daily supply charge', but a daily charge totals differently when billing periods differ in length (for example 90 versus 92 days). It would be clearer to say the fixed charge does not depend on how much is used.",
+  "Question b, wording: The card teaches the supply charge as a daily rate ($1 a day × 90 days), but question b gives 'a supply charge of $90' and then mentions 90 days. A student could multiply $90 by 90. The question should say the $90 and $60 are for the whole 90-day bill."
+ ],
+ "proposal": {
+  "title": "Household bills",
+  "card": [
+   "A fixed charge does not depend on how much is used. It is often a supply charge given as a daily rate, such as $1 a day for electricity.",
+   "A usage charge depends on how much is used, such as cents per kilowatt hour (kWh) of electricity. Bill total = fixed charge + (usage × rate).",
+   "Example: a supply charge of $1 a day for 90 days is $90. Using 600 kWh at 30 cents per kWh costs 600 × $0.30 = $180. The bill is $90 + $180 = $270.",
+   "To compare two plans, work out the total cost of each for the same usage. The plan with the lower total is cheaper for that usage."
+  ],
+  "remember": "Total bill = fixed charge + usage charge. Compare plans using the same usage.",
+  "a": {
+   "q": "A water bill has a fixed charge of $60 for the bill and a usage charge of $2 per kilolitre. A household uses 40 kilolitres. What is the total bill?",
+   "opts": [
+    "$140",
+    "$80",
+    "$120",
+    "$100"
+   ],
+   "why": "The usage charge is 40 × $2 = $80. Adding the fixed charge gives $80 + $60 = $140. The $80 option leaves out the fixed charge, which does not depend on how much is used.",
+   "clue": "Find the usage charge first, then add the fixed charge."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two electricity plans each have a bill covering 90 days. Plan A has a supply charge of $90 for the whole bill and costs 25 cents per kWh. Plan B has a supply charge of $60 for the whole bill and costs 30 cents per kWh. Which plan is cheaper for 800 kWh, and by how much?",
+   "opts": [
+    "Plan A, by $10",
+    "Plan B, by $10",
+    "Plan A, by $30",
+    "Plan B, by $30"
+   ],
+   "why": "Plan A: $90 + 800 × $0.25 = $90 + $200 = $290. Plan B: $60 + 800 × $0.30 = $60 + $240 = $300. Plan B has the lower supply charge, but its higher rate costs more at this usage, so Plan A is cheaper by $10.",
+   "clue": "Work out the full total for each plan before comparing."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says a fixed charge 'is the same every billing period, such as a daily supply charge', but a daily charge totals differently when billing periods differ in length (for example 90 versus 92 days). It would be clearer to say the fixed charge does not depend on how much is used."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card teaches the supply charge as a daily rate ($1 a day × 90 days), but question b gives 'a supply charge of $90' and then mentions 90 days. A student could multiply $90 by 90. The question should say the $90 and $60 are for the whole 90-day bill."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says a fixed charge 'is the same every billing period, such as a daily supply charge', but a daily charge totals differently when billing periods differ in length (for example 90 versus 92 days). It would be clearer to say the fixed charge does not depend on how much is used.",
+   "Question b, wording: The card teaches the supply charge as a daily rate ($1 a day × 90 days), but question b gives 'a supply charge of $90' and then mentions 90 days. A student could multiply $90 by 90. The question should say the $90 and $60 are for the whole 90-day bill."
+  ]
+ },
+ "final": {
+  "title": "Household bills",
+  "card": [
+   "A fixed charge does not depend on how much is used. It is often a supply charge given as a daily rate, such as $1 a day for electricity.",
+   "A usage charge depends on how much is used, such as cents per kilowatt hour (kWh) of electricity. Bill total = fixed charge + (usage × rate).",
+   "Example: a supply charge of $1 a day for 90 days is $90. Using 600 kWh at 30 cents per kWh costs 600 × $0.30 = $180. The bill is $90 + $180 = $270.",
+   "To compare two plans, work out the total cost of each for the same usage. The plan with the lower total is cheaper for that usage."
+  ],
+  "remember": "Total bill = fixed charge + usage charge. Compare plans using the same usage.",
+  "a": {
+   "q": "A water bill has a fixed charge of $60 for the bill and a usage charge of $2 per kilolitre. A household uses 40 kilolitres. What is the total bill?",
+   "opts": [
+    "$140",
+    "$80",
+    "$120",
+    "$100"
+   ],
+   "why": "The usage charge is 40 × $2 = $80. Adding the fixed charge gives $80 + $60 = $140. The $80 option leaves out the fixed charge, which does not depend on how much is used.",
+   "clue": "Find the usage charge first, then add the fixed charge."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two electricity plans each have a bill covering 90 days. Plan A has a supply charge of $90 for the whole bill and costs 25 cents per kWh. Plan B has a supply charge of $60 for the whole bill and costs 30 cents per kWh. Which plan is cheaper for 800 kWh, and by how much?",
+   "opts": [
+    "Plan A, by $10",
+    "Plan B, by $10",
+    "Plan A, by $30",
+    "Plan B, by $30"
+   ],
+   "why": "Plan A: $90 + 800 × $0.25 = $90 + $200 = $290. Plan B: $60 + 800 × $0.30 = $60 + $240 = $300. Plan B has the lower supply charge, but its higher rate costs more at this usage, so Plan A is cheaper by $10.",
+   "clue": "Work out the full total for each plan before comparing."
+  }
+ },
+ "cleared_by": "auto"
+}

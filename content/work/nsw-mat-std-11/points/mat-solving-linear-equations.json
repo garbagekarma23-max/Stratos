@@ -1,0 +1,203 @@
+{
+ "id": "mat-solving-linear-equations",
+ "title": "Solving linear equations",
+ "brief": "51e0dea1601f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: kept for you (the fresh check found a problem)",
+  "2026-10-30T11:56:43Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01315,
+  "write": 0.00466,
+  "check": 0.01256,
+  "fix": 0.02779,
+  "recheck": 0.01597
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank teaches solving linear equations by undoing operations; the closest ones cover linear functions, solving equations with graphs, or other equation types, which are different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Solving linear equations",
+  "card": [
+   "A linear equation has one unknown, such as x, and no powers of x. To solve it, find the value of x that makes both sides equal.",
+   "Undo the operations in reverse order, doing the same to both sides each time. Remove any addition or subtraction first, then undo multiplication or division.",
+   "With brackets, expand them first or divide both sides by the number outside. With a fraction such as x/4, multiply both sides by the bottom number.",
+   "Example: 3(x + 2) = 21. Divide both sides by 3 to get x + 2 = 7. Subtract 2 to get x = 5. Check: 3 × (5 + 2) = 3 × 7 = 21, so x = 5 is correct."
+  ],
+  "remember": "Do the same to both sides, undo in reverse order, then check by substituting.",
+  "a": {
+   "q": "Solve 2x + 5 = 17.",
+   "opts": [
+    "x = 6",
+    "x = 11",
+    "x = 5",
+    "x = 12"
+   ],
+   "why": "Subtract 5 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 5 = 17. Choosing x = 11 comes from subtracting 5 and skipping the division by 2.",
+   "clue": "Undo the addition before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves 4(x − 3) = 20. What is x?",
+   "opts": [
+    "x = 8",
+    "x = 2",
+    "x = 5",
+    "x = 17"
+   ],
+   "why": "Divide both sides by 4 to get x − 3 = 5, then add 3 to get x = 8. Check: 4 × (8 − 3) = 4 × 5 = 20. Choosing x = 5 comes from dividing by 4 but forgetting to add 3 back.",
+   "clue": "Divide by the number outside the bracket, then undo the subtraction."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 6",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 8",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says x = 11 comes from subtracting 5 and skipping the division by 2. Subtracting 5 gives 2x = 12, so skipping the division gives x = 12, not 11. The distractor explanation is wrong."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"No powers of x\" is imprecise, since x itself is x to the power 1. It should say no powers of x higher than 1 (no x², x³ and so on)."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The rule \"Remove any addition or subtraction first, then undo multiplication or division\" is stated generally. The worked example then divides first and subtracts second, which may confuse students. Say that the rule applies to equations without brackets."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (x = 6 and x = 8), but the why for question a wrongly says x = 11 comes from skipping the division (that mistake gives 12). On the card, the definition of a linear equation needs tightening, and the 'addition first' rule seems to clash with the worked example."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says x = 11 comes from subtracting 5 and skipping the division by 2. Subtracting 5 gives 2x = 12, so skipping the division gives x = 12, not 11. The distractor explanation is wrong.",
+  "Card, wording: \"No powers of x\" is imprecise, since x itself is x to the power 1. It should say no powers of x higher than 1 (no x², x³ and so on).",
+  "Card, wording: The rule \"Remove any addition or subtraction first, then undo multiplication or division\" is stated generally. The worked example then divides first and subtracts second, which may confuse students. Say that the rule applies to equations without brackets."
+ ],
+ "proposal": {
+  "title": "Solving linear equations",
+  "card": [
+   "A linear equation has one unknown, such as x, and no powers of x higher than 1 (no x², x³ and so on). To solve it, find the value of x that makes both sides equal.",
+   "Undo the operations in reverse order, doing the same to both sides each time. In an equation without brackets, undo any addition or subtraction first, then undo multiplication or division.",
+   "With brackets, expand them first or divide both sides by the number outside. With a fraction such as x/4, multiply both sides by the bottom number.",
+   "Example: 3(x + 2) = 21. Divide both sides by 3 to get x + 2 = 7. Subtract 2 to get x = 5. Check: 3 × (5 + 2) = 3 × 7 = 21, so x = 5 is correct."
+  ],
+  "remember": "Do the same to both sides, undo in reverse order, then check by substituting.",
+  "a": {
+   "q": "Solve 2x + 5 = 17.",
+   "opts": [
+    "x = 6",
+    "x = 11",
+    "x = 12",
+    "x = 3.5"
+   ],
+   "why": "Subtract 5 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 5 = 17. Choosing x = 11 comes from adding 5 instead of subtracting it, and x = 12 comes from skipping the division by 2.",
+   "clue": "Undo the addition before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves 4(x − 3) = 20. What is x?",
+   "opts": [
+    "x = 8",
+    "x = 2",
+    "x = 5",
+    "x = 5.75"
+   ],
+   "why": "Divide both sides by 4 to get x − 3 = 5, then add 3 to get x = 8. Check: 4 × (8 − 3) = 4 × 5 = 20. Choosing x = 5 comes from dividing by 4 but forgetting to add 3 back.",
+   "clue": "Divide by the number outside the bracket, then undo the subtraction."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "x = 6",
+    "also_right": []
+   },
+   "b": {
+    "best": "x = 8",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card defines a linear equation as having one unknown. Linear equations can have more than one unknown: y = 2x + 3 is linear, and linear relationships come up later in the course. Better wording: 'The linear equations here have one unknown, such as x, ...'"
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are correct, with x = 6 and x = 8, and the explanations match the card. The one problem is that the card defines a linear equation as having only one unknown, which is too narrow and should be reworded."
+  },
+  "flags": [
+   "Card, fact: The card defines a linear equation as having one unknown. Linear equations can have more than one unknown: y = 2x + 3 is linear, and linear relationships come up later in the course. Better wording: 'The linear equations here have one unknown, such as x, ...'"
+  ]
+ },
+ "final": {
+  "title": "Solving linear equations",
+  "card": [
+   "A linear equation has one unknown, such as x, and no powers of x higher than 1 (no x², x³ and so on). To solve it, find the value of x that makes both sides equal.",
+   "Undo the operations in reverse order, doing the same to both sides each time. In an equation without brackets, undo any addition or subtraction first, then undo multiplication or division.",
+   "With brackets, expand them first or divide both sides by the number outside. With a fraction such as x/4, multiply both sides by the bottom number.",
+   "Example: 3(x + 2) = 21. Divide both sides by 3 to get x + 2 = 7. Subtract 2 to get x = 5. Check: 3 × (5 + 2) = 3 × 7 = 21, so x = 5 is correct."
+  ],
+  "remember": "Do the same to both sides, undo in reverse order, then check by substituting.",
+  "a": {
+   "q": "Solve 2x + 5 = 17.",
+   "opts": [
+    "x = 6",
+    "x = 11",
+    "x = 12",
+    "x = 3.5"
+   ],
+   "why": "Subtract 5 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 5 = 17. Choosing x = 11 comes from adding 5 instead of subtracting it, and x = 12 comes from skipping the division by 2.",
+   "clue": "Undo the addition before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia solves 4(x − 3) = 20. What is x?",
+   "opts": [
+    "x = 8",
+    "x = 2",
+    "x = 5",
+    "x = 5.75"
+   ],
+   "why": "Divide both sides by 4 to get x − 3 = 5, then add 3 to get x = 8. Check: 4 × (8 − 3) = 4 × 5 = 20. Choosing x = 5 comes from dividing by 4 but forgetting to add 3 back.",
+   "clue": "Divide by the number outside the bracket, then undo the subtraction."
+  }
+ },
+ "cleared_by": "owner"
+}

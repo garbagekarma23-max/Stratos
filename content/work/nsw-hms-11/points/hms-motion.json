@@ -1,0 +1,235 @@
+{
+ "id": "hms-motion",
+ "title": "Motion",
+ "brief": "2bff04779b45",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, write",
+  "2026-10-29T12:14:25Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:22:35Z write: done",
+  "2026-10-29T12:30:20Z check: flagged",
+  "2026-10-29T12:39:09Z fix: suggested",
+  "2026-10-29T16:45:06Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00464,
+  "check": 0.01295,
+  "fix": 0.01932,
+  "recheck": 0.00955
+ },
+ "draft": {
+  "title": "Motion",
+  "card": [
+   [
+    "Linear motion",
+    "The whole body or object moves in a straight line (or a curved path), and every part moves the same distance in the same direction and time. A bobsled sliding down a straight track is an example."
+   ],
+   [
+    "Angular motion",
+    "A body or part of it turns around a fixed point called an axis. A gymnast swinging around a high bar is an example, and so is a forearm turning around the elbow."
+   ],
+   [
+    "General motion",
+    "A mix of linear and angular motion. A cyclist moves forward in a line while the legs turn around the hips and knees."
+   ],
+   "To classify a movement, ask two things. Does the whole body travel along a path? Do any parts turn around an axis?"
+  ],
+  "remember": "Linear is along a path, angular is turning around an axis, and general is both together.",
+  "a": {
+   "q": "A diver leaves the board and spins around her hips while she falls towards the water. Which type of motion is the spinning part of this dive?",
+   "opts": [
+    "Angular motion",
+    "Linear motion",
+    "General motion",
+    "No motion"
+   ],
+   "why": "The diver turns around an axis through her hips, so the spin is angular motion. It is not linear, because linear motion has no turning and every part moves the same way. The whole dive could be called general motion, but the question asks about the spinning part only.",
+   "clue": "Look at what the body is turning around."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jade runs along a track. Her whole body travels forward while her legs swing around her hip joints. Which type of motion is her run?",
+   "opts": [
+    "General motion",
+    "Linear motion",
+    "Angular motion",
+    "Rotation only"
+   ],
+   "why": "Her body travels forward, which is linear, and her legs turn around her hips, which is angular. Together they make general motion. Linear motion is the tempting answer, because her whole body moves forward, but it ignores the turning of her legs.",
+   "clue": "Check for both travel along a path and turning around an axis."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Angular motion",
+   "also_right": [
+    "General motion"
+   ]
+  },
+  "b": {
+   "best": "General motion",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The 'spinning part' of the dive is the phase where she spins while she falls towards the water. During that phase she is both travelling along a path and rotating, which by the card's own two-question test is general motion. A careful student could defend 'General motion', so the question needs to ask only about the rotation, for example 'What type of motion is her turning around her hips?'"
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Angular motion is defined as turning 'around a fixed point called an axis'. An axis is an imaginary line, not a point, and in the dive question the axis through the hips is not fixed but moves with the falling diver. This clashes with the card's definition and could confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a is ambiguous: the spinning phase of the dive happens while she falls, so 'General motion' can be defended alongside the intended 'Angular motion'. The card also calls an axis a 'fixed point', which is imprecise and clashes with the moving axis in the diving example."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “General motion” could also be right.",
+  "Question a, wording: The 'spinning part' of the dive is the phase where she spins while she falls towards the water. During that phase she is both travelling along a path and rotating, which by the card's own two-question test is general motion. A careful student could defend 'General motion', so the question needs to ask only about the rotation, for example 'What type of motion is her turning around her hips?'",
+  "Card, fact: Angular motion is defined as turning 'around a fixed point called an axis'. An axis is an imaginary line, not a point, and in the dive question the axis through the hips is not fixed but moves with the falling diver. This clashes with the card's definition and could confuse students."
+ ],
+ "proposal": {
+  "title": "Motion",
+  "card": [
+   [
+    "Linear motion",
+    "The whole body or object travels with no turning. Every part moves the same distance, in the same direction, in the same time. The path is often a straight line, as with a bobsled on a straight track, but it can also curve."
+   ],
+   [
+    "Angular motion",
+    "A body or part of it turns around an axis, an imaginary line that the turning happens around. A gymnast swings around a high bar, and a forearm turns around an axis through the elbow. The axis can stay still or move with the body."
+   ],
+   [
+    "General motion",
+    "A mix of linear and angular motion. A cyclist travels forward in a line while the legs turn around the hips and knees."
+   ],
+   "To classify a movement, ask two things. Does the whole body travel along a path? Do any parts turn around an axis? If both, it is general motion."
+  ],
+  "remember": "Linear is travel with no turning, angular is turning around an axis, and general is both together.",
+  "a": {
+   "q": "A diver leaves the board and turns around her hips as she falls. What type of motion is her turning around her hips?",
+   "opts": [
+    "Angular motion",
+    "Linear motion",
+    "General motion",
+    "Linear motion along a curved path"
+   ],
+   "why": "Turning around an axis through the hips is angular motion, even though that axis moves as she falls. The whole dive, falling and turning together, would be general motion, but the question asks only about the turning.",
+   "clue": "Look only at the turning, not the fall."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jade runs along a track. Her whole body travels forward while her legs swing around her hip joints. Which type of motion is her run?",
+   "opts": [
+    "General motion",
+    "Linear motion",
+    "Angular motion",
+    "Neither, as her hip axis is not fixed"
+   ],
+   "why": "Her body travels forward, which is linear, and her legs turn around her hips, which is angular. Together they make general motion. Linear motion is tempting because her whole body moves forward, but it ignores the turning of her legs.",
+   "clue": "Check for both travel along a path and turning around an axis."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:06Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Angular motion",
+    "also_right": []
+   },
+   "b": {
+    "best": "General motion",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:06Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The 'spinning part' of the dive is the phase where she spins while she falls towards the water. During that phase she is both travelling along a path and rotating, which by the card's own two-question test is general motion. A careful student could defend 'General motion', so the question needs to ask only about the rotation, for example 'What type of motion is her turning around her hips?'"
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Angular motion is defined as turning 'around a fixed point called an axis'. An axis is an imaginary line, not a point, and in the dive question the axis through the hips is not fixed but moves with the falling diver. This clashes with the card's definition and could confuse students."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “General motion” could also be right.",
+   "Question a, wording: The 'spinning part' of the dive is the phase where she spins while she falls towards the water. During that phase she is both travelling along a path and rotating, which by the card's own two-question test is general motion. A careful student could defend 'General motion', so the question needs to ask only about the rotation, for example 'What type of motion is her turning around her hips?'",
+   "Card, fact: Angular motion is defined as turning 'around a fixed point called an axis'. An axis is an imaginary line, not a point, and in the dive question the axis through the hips is not fixed but moves with the falling diver. This clashes with the card's definition and could confuse students."
+  ]
+ },
+ "final": {
+  "title": "Motion",
+  "card": [
+   [
+    "Linear motion",
+    "The whole body or object travels with no turning. Every part moves the same distance, in the same direction, in the same time. The path is often a straight line, as with a bobsled on a straight track, but it can also curve."
+   ],
+   [
+    "Angular motion",
+    "A body or part of it turns around an axis, an imaginary line that the turning happens around. A gymnast swings around a high bar, and a forearm turns around an axis through the elbow. The axis can stay still or move with the body."
+   ],
+   [
+    "General motion",
+    "A mix of linear and angular motion. A cyclist travels forward in a line while the legs turn around the hips and knees."
+   ],
+   "To classify a movement, ask two things. Does the whole body travel along a path? Do any parts turn around an axis? If both, it is general motion."
+  ],
+  "remember": "Linear is travel with no turning, angular is turning around an axis, and general is both together.",
+  "a": {
+   "q": "A diver leaves the board and turns around her hips as she falls. What type of motion is her turning around her hips?",
+   "opts": [
+    "Angular motion",
+    "Linear motion",
+    "General motion",
+    "Linear motion along a curved path"
+   ],
+   "why": "Turning around an axis through the hips is angular motion, even though that axis moves as she falls. The whole dive, falling and turning together, would be general motion, but the question asks only about the turning.",
+   "clue": "Look only at the turning, not the fall."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jade runs along a track. Her whole body travels forward while her legs swing around her hip joints. Which type of motion is her run?",
+   "opts": [
+    "General motion",
+    "Linear motion",
+    "Angular motion",
+    "Neither, as her hip axis is not fixed"
+   ],
+   "why": "Her body travels forward, which is linear, and her legs turn around her hips, which is angular. Together they make general motion. Linear motion is tempting because her whole body moves forward, but it ignores the turning of her legs.",
+   "clue": "Check for both travel along a path and turning around an axis."
+  }
+ },
+ "cleared_by": "recheck"
+}

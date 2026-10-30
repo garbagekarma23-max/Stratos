@@ -1,0 +1,203 @@
+{
+ "id": "mat-correlation",
+ "title": "Correlation",
+ "brief": "df18c495faf2",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01315,
+  "write": 0.00481,
+  "check": 0.00899,
+  "fix": 0.0249
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers describing a bivariate relationship by its direction, form and strength; the closest ones deal with single-variable data or with modelling functions, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Correlation",
+  "card": [
+   [
+    "Direction",
+    "In a positive relationship, y tends to increase as x increases. In a negative relationship, y tends to decrease as x increases."
+   ],
+   [
+    "Form",
+    "If the points follow a straight-line pattern, the relationship is linear. If they follow a curve, it is non-linear."
+   ],
+   [
+    "Strength",
+    "The more tightly the points cluster around the pattern, the stronger the relationship. Points that are widely spread show a weak relationship. In between is moderate."
+   ],
+   "Example: the points on a scatterplot of hours of study and test mark form a tight, upward straight-line pattern. That is a strong, positive, linear relationship."
+  ],
+  "remember": "Describe a relationship by direction, form and strength, in that order.",
+  "a": {
+   "q": "A scatterplot shows the age of a car and its resale value. The points fall from left to right, close to a straight line. How is the relationship described?",
+   "opts": [
+    "Strong, negative, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Strong, negative, non-linear"
+   ],
+   "why": "The points fall as age increases, so the direction is negative. They sit close to a straight line, so it is strong and linear. Positive is wrong because resale value goes down, not up, as age increases.",
+   "clue": "As x goes up, which way does y move?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots shoe size against height for her class. The points rise from left to right but are widely scattered around a straight-line pattern. Which description fits best?",
+   "opts": [
+    "Weak, positive, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Weak, positive, non-linear"
+   ],
+   "why": "The points rise, so the direction is positive. They are widely scattered, so the relationship is weak. They follow a straight-line pattern, so it is linear. Strong is tempting because the points rise, but strength depends on how tightly the points cluster.",
+   "clue": "Strength is about how tightly the points cluster, not just whether they rise."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Strong, negative, linear",
+   "also_right": []
+  },
+  "b": {
+   "best": "Weak, positive, linear",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says to describe a relationship by direction, form and strength 'in that order', but the card's example ('strong, positive, linear') and every option in both questions use the order strength, direction, form. The card also never says a fixed order is required."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. The remember line's 'in that order' (direction, form, strength) clashes with the card's example and the options, which all give strength first, so remove or fix it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says to describe a relationship by direction, form and strength 'in that order', but the card's example ('strong, positive, linear') and every option in both questions use the order strength, direction, form. The card also never says a fixed order is required."
+ ],
+ "proposal": {
+  "title": "Correlation",
+  "card": [
+   [
+    "Direction",
+    "In a positive relationship, y tends to increase as x increases. In a negative relationship, y tends to decrease as x increases."
+   ],
+   [
+    "Form",
+    "If the points follow a straight-line pattern, the relationship is linear. If they follow a curve, it is non-linear."
+   ],
+   [
+    "Strength",
+    "The more tightly the points cluster around the pattern, the stronger the relationship. Points that are widely spread show a weak relationship. In between is moderate."
+   ],
+   "Example: the points on a scatterplot of hours of study and test mark form a tight, upward straight-line pattern. That is a strong, positive, linear relationship."
+  ],
+  "remember": "A full description names all three: how strong, which way and what shape.",
+  "a": {
+   "q": "A scatterplot shows the age of a car and its resale value. The points fall from left to right, close to a straight line. How is the relationship described?",
+   "opts": [
+    "Strong, negative, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Strong, negative, non-linear"
+   ],
+   "why": "The points fall as age increases, so the direction is negative. They sit close to a straight line, so it is strong and linear. Positive is wrong because resale value goes down, not up, as age increases.",
+   "clue": "As x goes up, which way does y move?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots shoe size against height for her class. The points rise from left to right but are widely scattered around a straight-line pattern. Which description fits best?",
+   "opts": [
+    "Weak, positive, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Weak, positive, non-linear"
+   ],
+   "why": "The points rise, so the direction is positive. They are widely scattered, so the relationship is weak. They follow a straight-line pattern, so it is linear. Strong is tempting because the points rise, but strength depends on how tightly the points cluster.",
+   "clue": "Strength is about how tightly the points cluster, not just whether they rise."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says to describe a relationship by direction, form and strength 'in that order', but the card's example ('strong, positive, linear') and every option in both questions use the order strength, direction, form. The card also never says a fixed order is required."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says to describe a relationship by direction, form and strength 'in that order', but the card's example ('strong, positive, linear') and every option in both questions use the order strength, direction, form. The card also never says a fixed order is required."
+  ]
+ },
+ "final": {
+  "title": "Correlation",
+  "card": [
+   [
+    "Direction",
+    "In a positive relationship, y tends to increase as x increases. In a negative relationship, y tends to decrease as x increases."
+   ],
+   [
+    "Form",
+    "If the points follow a straight-line pattern, the relationship is linear. If they follow a curve, it is non-linear."
+   ],
+   [
+    "Strength",
+    "The more tightly the points cluster around the pattern, the stronger the relationship. Points that are widely spread show a weak relationship. In between is moderate."
+   ],
+   "Example: the points on a scatterplot of hours of study and test mark form a tight, upward straight-line pattern. That is a strong, positive, linear relationship."
+  ],
+  "remember": "A full description names all three: how strong, which way and what shape.",
+  "a": {
+   "q": "A scatterplot shows the age of a car and its resale value. The points fall from left to right, close to a straight line. How is the relationship described?",
+   "opts": [
+    "Strong, negative, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Strong, negative, non-linear"
+   ],
+   "why": "The points fall as age increases, so the direction is negative. They sit close to a straight line, so it is strong and linear. Positive is wrong because resale value goes down, not up, as age increases.",
+   "clue": "As x goes up, which way does y move?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia plots shoe size against height for her class. The points rise from left to right but are widely scattered around a straight-line pattern. Which description fits best?",
+   "opts": [
+    "Weak, positive, linear",
+    "Strong, positive, linear",
+    "Weak, negative, linear",
+    "Weak, positive, non-linear"
+   ],
+   "why": "The points rise, so the direction is positive. They are widely scattered, so the relationship is weak. They follow a straight-line pattern, so it is linear. Strong is tempting because the points rise, but strength depends on how tightly the points cluster.",
+   "clue": "Strength is about how tightly the points cluster, not just whether they rise."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,112 @@
+{
+ "id": "mat-present-value-from-tables",
+ "title": "Present value from tables",
+ "brief": "ed7912038146",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01428,
+  "write": 0.01014,
+  "check": 0.00752
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest bank points either work out present value by summing discounted payments or cover tables of both future and present value factors, so neither matches this narrower table-only present value idea."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Present value from tables",
+  "card": [
+   "The present value of an annuity is the single amount that, invested now, would grow to the same total as the annuity. It is a lump sum today that matches the regular payments.",
+   "Present value = payment × present value factor. The factor comes from a table, found using the interest rate per period and the number of periods.",
+   "Rate per period = annual rate ÷ periods per year. Number of periods = years × periods per year. Example: 6% p.a. paid monthly for 2 years is 0.5% per month for 24 periods.",
+   "Worked example: $1000 paid each year for 3 years at 2% p.a. The table factor is 2.8839. Present value = 1000 × 2.8839 = $2883.90."
+  ],
+  "remember": "Present value = payment × table factor, using the rate and periods for each payment.",
+  "a": {
+   "q": "An annuity pays $2000 each year for 5 years at 2% p.a. The table factor for 2% and 5 periods is 4.7135. What is its present value?",
+   "opts": [
+    "$9427.00",
+    "$424.31",
+    "$10 000.00",
+    "$2004.71"
+   ],
+   "why": "Present value = 2000 × 4.7135 = $9427.00. Dividing by the factor gives $424.31, which reverses the method. The factor is multiplied by the payment.",
+   "clue": "The payment and the factor are combined by one operation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia wants the lump sum today that matches $300 paid each month for 3 years at 6% p.a. compounded monthly. Which table factor does she need?",
+   "opts": [
+    "0.5% per period, 36 periods",
+    "6% per period, 3 periods",
+    "0.5% per period, 3 periods",
+    "6% per period, 36 periods"
+   ],
+   "why": "Payments are monthly, so the rate is 6% ÷ 12 = 0.5% per month and the periods are 3 × 12 = 36. Using 6% and 3 periods uses the annual figures, which do not match monthly payments.",
+   "clue": "Both the rate and the number of periods must match how often payments are made."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$9427.00",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.5% per period, 36 periods",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The table factors (2.8839 and 4.7135), the worked example and both answers all check out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Present value from tables",
+  "card": [
+   "The present value of an annuity is the single amount that, invested now, would grow to the same total as the annuity. It is a lump sum today that matches the regular payments.",
+   "Present value = payment × present value factor. The factor comes from a table, found using the interest rate per period and the number of periods.",
+   "Rate per period = annual rate ÷ periods per year. Number of periods = years × periods per year. Example: 6% p.a. paid monthly for 2 years is 0.5% per month for 24 periods.",
+   "Worked example: $1000 paid each year for 3 years at 2% p.a. The table factor is 2.8839. Present value = 1000 × 2.8839 = $2883.90."
+  ],
+  "remember": "Present value = payment × table factor, using the rate and periods for each payment.",
+  "a": {
+   "q": "An annuity pays $2000 each year for 5 years at 2% p.a. The table factor for 2% and 5 periods is 4.7135. What is its present value?",
+   "opts": [
+    "$9427.00",
+    "$424.31",
+    "$10 000.00",
+    "$2004.71"
+   ],
+   "why": "Present value = 2000 × 4.7135 = $9427.00. Dividing by the factor gives $424.31, which reverses the method. The factor is multiplied by the payment.",
+   "clue": "The payment and the factor are combined by one operation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia wants the lump sum today that matches $300 paid each month for 3 years at 6% p.a. compounded monthly. Which table factor does she need?",
+   "opts": [
+    "0.5% per period, 36 periods",
+    "6% per period, 3 periods",
+    "0.5% per period, 3 periods",
+    "6% per period, 36 periods"
+   ],
+   "why": "Payments are monthly, so the rate is 6% ÷ 12 = 0.5% per month and the periods are 3 × 12 = 36. Using 6% and 3 periods uses the annual figures, which do not match monthly payments.",
+   "clue": "Both the rate and the number of periods must match how often payments are made."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,176 @@
+{
+ "id": "mat-comparing-scores-with-z",
+ "title": "Comparing scores with z-scores",
+ "brief": "e6863631cd19",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01316,
+  "write": 0.00556,
+  "check": 0.01037,
+  "fix": 0.01925
+ },
+ "match": {
+  "same": "",
+  "reason": "The bank's z-scores point teaches what a z-score is and how to calculate one, while the new point is narrower: it uses z-scores to compare results across different tests, so it needs its own point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Comparing scores with z-scores",
+  "card": [
+   "Raw scores from different tests cannot be compared directly, because each test has its own mean and spread. A mark of 70 can be good on one test and weak on another.",
+   "A z-score fixes this. z = (score − mean) ÷ standard deviation. It shows how many standard deviations a score is above or below its own group's mean.",
+   "Work out the z-score for each test. The higher z-score is the better performance relative to the group. A negative z-score means below the mean.",
+   "Example: Maths 72 (mean 60, SD 8) gives z = 12 ÷ 8 = 1.5. Science 68 (mean 50, SD 12) gives z = 18 ÷ 12 = 1.5. The two performances are equal relative to their groups."
+  ],
+  "remember": "Convert each score to a z-score. The higher z-score is the better result for its group.",
+  "a": {
+   "q": "Ravi scores 64 in English (mean 55, SD 6) and 58 in History (mean 50, SD 4). In which subject did he do better relative to the group?",
+   "opts": [
+    "History, because its z-score is 2 and English is 1.5",
+    "English, because its z-score is 1.5 and History is 2",
+    "English, because 64 is higher than 58",
+    "History, because its mean is lower than English"
+   ],
+   "why": "English z = 9 ÷ 6 = 1.5. History z = 8 ÷ 4 = 2. The higher z-score means a better result for the group. Comparing raw marks is tempting, but each test has its own mean and spread.",
+   "clue": "Find a z-score for each subject, then compare them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya scores 45 on a music test (mean 38, SD 5) and 81 on a drama test (mean 70, SD 10). Which statement is correct?",
+   "opts": [
+    "Music was better: z = 1.4 compared with z = 1.1",
+    "Drama was better: z = 1.1 compared with z = 1.4",
+    "Drama was better, as she was 11 marks above the mean",
+    "The two were equal, because both are above the mean"
+   ],
+   "why": "Music z = 7 ÷ 5 = 1.4. Drama z = 11 ÷ 10 = 1.1. Drama has the bigger gap from the mean in marks, but the spread is wider, so that gap is fewer standard deviations. Music is the better result for its group.",
+   "clue": "Divide each gap from the mean by that test's standard deviation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "History, because its z-score is 2 and English is 1.5",
+   "also_right": []
+  },
+  "b": {
+   "best": "Music was better: z = 1.4 compared with z = 1.1",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card re-teaches the z-score from point 2 (Standardised scores). It gives the formula and explains what a z-score means, when it only needs to mention it and apply it to comparing scores."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct, with one clear right answer each. The only issue is that the card re-defines the z-score formula and its meaning, which belongs to the Standardised scores point."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card re-teaches the z-score from point 2 (Standardised scores). It gives the formula and explains what a z-score means, when it only needs to mention it and apply it to comparing scores."
+ ],
+ "proposal": {
+  "title": "Comparing scores with z-scores",
+  "card": [
+   "Raw scores from different tests cannot be compared directly, because each test has its own mean and spread. A mark of 70 can be strong on one test and weak on another.",
+   "To compare, convert each score to a z-score using its own test's mean and standard deviation (SD). This puts both scores on the same scale.",
+   "The higher z-score is the better performance relative to its group. A bigger gap in marks does not always give a higher z-score, because a wider spread makes it smaller.",
+   "Example: Maths 72 (mean 60, SD 8) gives z = (72 − 60) ÷ 8 = 1.5. Science 68 (mean 50, SD 12) gives z = (68 − 50) ÷ 12 = 1.5. The two results are equal relative to their groups."
+  ],
+  "remember": "Compare z-scores, not raw marks. The higher z-score is the better result for its group.",
+  "a": {
+   "q": "Ravi scores 64 in English (mean 55, SD 6) and 58 in History (mean 50, SD 4). In which subject did he do better relative to the group?",
+   "opts": [
+    "History, because its z-score is 2 and English is 1.5",
+    "English, because its z-score is 1.5 and History is 2",
+    "English, because 64 is higher than 58",
+    "History, because its mean is lower than English"
+   ],
+   "why": "English z = (64 − 55) ÷ 6 = 1.5. History z = (58 − 50) ÷ 4 = 2. The higher z-score is the better result. Comparing raw marks is tempting, but each test has its own mean and spread.",
+   "clue": "Find a z-score for each subject, then compare them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya scores 45 on a music test (mean 38, SD 5) and 81 on a drama test (mean 70, SD 10). Which statement is correct?",
+   "opts": [
+    "Music was better: z = 1.4 compared with z = 1.1",
+    "Drama was better: z = 1.1 compared with z = 1.4",
+    "Drama was better, as she was 11 marks above the mean",
+    "The two were equal, because both are above the mean"
+   ],
+   "why": "Music z = (45 − 38) ÷ 5 = 1.4. Drama z = (81 − 70) ÷ 10 = 1.1. Drama has the bigger gap in marks, but its spread is wider, so its z-score is lower. Music is the better result for its group.",
+   "clue": "Divide each gap from the mean by that test's standard deviation."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card re-teaches the z-score from point 2 (Standardised scores). It gives the formula and explains what a z-score means, when it only needs to mention it and apply it to comparing scores."
+   }
+  ],
+  "flags": [
+   "Card, other: The card re-teaches the z-score from point 2 (Standardised scores). It gives the formula and explains what a z-score means, when it only needs to mention it and apply it to comparing scores."
+  ]
+ },
+ "final": {
+  "title": "Comparing scores with z-scores",
+  "card": [
+   "Raw scores from different tests cannot be compared directly, because each test has its own mean and spread. A mark of 70 can be strong on one test and weak on another.",
+   "To compare, convert each score to a z-score using its own test's mean and standard deviation (SD). This puts both scores on the same scale.",
+   "The higher z-score is the better performance relative to its group. A bigger gap in marks does not always give a higher z-score, because a wider spread makes it smaller.",
+   "Example: Maths 72 (mean 60, SD 8) gives z = (72 − 60) ÷ 8 = 1.5. Science 68 (mean 50, SD 12) gives z = (68 − 50) ÷ 12 = 1.5. The two results are equal relative to their groups."
+  ],
+  "remember": "Compare z-scores, not raw marks. The higher z-score is the better result for its group.",
+  "a": {
+   "q": "Ravi scores 64 in English (mean 55, SD 6) and 58 in History (mean 50, SD 4). In which subject did he do better relative to the group?",
+   "opts": [
+    "History, because its z-score is 2 and English is 1.5",
+    "English, because its z-score is 1.5 and History is 2",
+    "English, because 64 is higher than 58",
+    "History, because its mean is lower than English"
+   ],
+   "why": "English z = (64 − 55) ÷ 6 = 1.5. History z = (58 − 50) ÷ 4 = 2. The higher z-score is the better result. Comparing raw marks is tempting, but each test has its own mean and spread.",
+   "clue": "Find a z-score for each subject, then compare them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya scores 45 on a music test (mean 38, SD 5) and 81 on a drama test (mean 70, SD 10). Which statement is correct?",
+   "opts": [
+    "Music was better: z = 1.4 compared with z = 1.1",
+    "Drama was better: z = 1.1 compared with z = 1.4",
+    "Drama was better, as she was 11 marks above the mean",
+    "The two were equal, because both are above the mean"
+   ],
+   "why": "Music z = (45 − 38) ÷ 5 = 1.4. Drama z = (81 − 70) ÷ 10 = 1.1. Drama has the bigger gap in marks, but its spread is wider, so its z-score is lower. Music is the better result for its group.",
+   "clue": "Divide each gap from the mean by that test's standard deviation."
+  }
+ },
+ "cleared_by": "auto"
+}

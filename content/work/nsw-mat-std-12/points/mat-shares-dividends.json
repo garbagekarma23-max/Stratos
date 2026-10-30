@@ -1,0 +1,226 @@
+{
+ "id": "mat-shares-dividends",
+ "title": "Shares and dividends",
+ "brief": "e34a8a221b01",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01308,
+  "write": 0.00476,
+  "check": 0.01023,
+  "fix": 0.02693,
+  "recheck": 0.0122
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers shares, dividends or dividend yield; the nearest financial points deal with interest, annuities and loans, which are different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Shares and dividends",
+  "card": [
+   [
+    "Share",
+    "A share is one small part of the ownership of a company. People who own shares are called shareholders."
+   ],
+   [
+    "Dividend",
+    "A dividend is a share of a company's profit paid to shareholders. It is paid per share, so owning more shares means a bigger payment."
+   ],
+   [
+    "Dividend yield",
+    "Dividend yield = yearly dividend per share ÷ share price × 100%. It shows the yearly dividend as a percentage of the price."
+   ],
+   "Example: a share costs $40 and pays $1.80 in dividends over a year. Yield = 1.80 ÷ 40 × 100% = 4.5%."
+  ],
+  "remember": "Yield compares the yearly dividend with the share price, as a percentage.",
+  "a": {
+   "q": "A share costs $25 and pays a dividend of $1.50 over a year. What is the dividend yield?",
+   "opts": [
+    "6%",
+    "1.5%",
+    "16.7%",
+    "37.5%"
+   ],
+   "why": "Yield = 1.50 ÷ 25 × 100% = 6%. Dividing the price by the dividend gives 16.7%, which turns the fraction upside down.",
+   "clue": "Divide the dividend by the share price."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq owns 200 shares in a company. Each share costs $12 and the company pays $0.84 per share in a year. What is his total yearly dividend, and the yield?",
+   "opts": [
+    "$168, and the yield is 7%",
+    "$168, and the yield is 0.07%",
+    "$2400, and the yield is 7%",
+    "$2400, and the yield is 0.07%"
+   ],
+   "why": "Dividend = 200 × 0.84 = $168. Yield = 0.84 ÷ 12 × 100% = 7%. The yield uses the price and dividend of one share, so it does not depend on how many shares he owns, and $2400 is the cost of the shares.",
+   "clue": "Yield uses one share, but the payment uses all 200."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6%",
+   "also_right": []
+  },
+  "b": {
+   "best": "$168, and the yield is 7%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing the price by the dividend gives 16.7%. In fact 25 ÷ 1.50 = 16.7, which is 1667% once multiplied by 100%. The distractor works, but the explanation of where it comes from is loose."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the worked example and both questions are correct, and each question has one clear right answer. There is one small slip: the why for (a) says price ÷ dividend gives 16.7%, when it gives 16.7 (1667% as a percentage)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says dividing the price by the dividend gives 16.7%. In fact 25 ÷ 1.50 = 16.7, which is 1667% once multiplied by 100%. The distractor works, but the explanation of where it comes from is loose."
+ ],
+ "proposal": {
+  "title": "Shares and dividends",
+  "card": [
+   [
+    "Share",
+    "A share is one small part of the ownership of a company. People who own shares are called shareholders."
+   ],
+   [
+    "Dividend",
+    "A dividend is a share of a company's profit paid to shareholders. It is paid per share, so owning more shares means a bigger payment."
+   ],
+   [
+    "Dividend yield",
+    "Dividend yield = yearly dividend per share ÷ share price × 100%. It shows the yearly dividend as a percentage of the price."
+   ],
+   "Example: a share costs $40 and pays $1.80 in dividends over a year. Yield = 1.80 ÷ 40 × 100% = 4.5%."
+  ],
+  "remember": "Yield compares the yearly dividend with the share price, as a percentage.",
+  "a": {
+   "q": "A share costs $25 and pays a dividend of $1.50 over a year. What is the dividend yield?",
+   "opts": [
+    "6%",
+    "0.06%",
+    "1.5%",
+    "37.5%"
+   ],
+   "why": "Yield = 1.50 ÷ 25 × 100% = 6%. Dividing gives 0.06, and writing 0.06% forgets to multiply by 100%.",
+   "clue": "Divide the dividend by the share price, then turn it into a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq owns 200 shares in a company. Each share costs $12 and the company pays $0.84 per share in a year. What is his total yearly dividend, and the yield?",
+   "opts": [
+    "$168, and the yield is 7%",
+    "$168, and the yield is 0.07%",
+    "$2400, and the yield is 7%",
+    "$2400, and the yield is 0.07%"
+   ],
+   "why": "Dividend = 200 × 0.84 = $168. Yield = 0.84 ÷ 12 × 100% = 7%. The yield uses the price and dividend of one share, so it does not depend on how many shares he owns, and $2400 is the cost of the shares.",
+   "clue": "Yield uses one share, but the payment uses all 200."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6%",
+    "also_right": []
+   },
+   "b": {
+    "best": "$168, and the yield is 7%",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 1.50 ÷ 25 = 6%, and 200 × $0.84 = $168 with 0.84 ÷ 12 = 7%."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing the price by the dividend gives 16.7%. In fact 25 ÷ 1.50 = 16.7, which is 1667% once multiplied by 100%. The distractor works, but the explanation of where it comes from is loose."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says dividing the price by the dividend gives 16.7%. In fact 25 ÷ 1.50 = 16.7, which is 1667% once multiplied by 100%. The distractor works, but the explanation of where it comes from is loose."
+  ]
+ },
+ "final": {
+  "title": "Shares and dividends",
+  "card": [
+   [
+    "Share",
+    "A share is one small part of the ownership of a company. People who own shares are called shareholders."
+   ],
+   [
+    "Dividend",
+    "A dividend is a share of a company's profit paid to shareholders. It is paid per share, so owning more shares means a bigger payment."
+   ],
+   [
+    "Dividend yield",
+    "Dividend yield = yearly dividend per share ÷ share price × 100%. It shows the yearly dividend as a percentage of the price."
+   ],
+   "Example: a share costs $40 and pays $1.80 in dividends over a year. Yield = 1.80 ÷ 40 × 100% = 4.5%."
+  ],
+  "remember": "Yield compares the yearly dividend with the share price, as a percentage.",
+  "a": {
+   "q": "A share costs $25 and pays a dividend of $1.50 over a year. What is the dividend yield?",
+   "opts": [
+    "6%",
+    "0.06%",
+    "1.5%",
+    "37.5%"
+   ],
+   "why": "Yield = 1.50 ÷ 25 × 100% = 6%. Dividing gives 0.06, and writing 0.06% forgets to multiply by 100%.",
+   "clue": "Divide the dividend by the share price, then turn it into a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq owns 200 shares in a company. Each share costs $12 and the company pays $0.84 per share in a year. What is his total yearly dividend, and the yield?",
+   "opts": [
+    "$168, and the yield is 7%",
+    "$168, and the yield is 0.07%",
+    "$2400, and the yield is 7%",
+    "$2400, and the yield is 0.07%"
+   ],
+   "why": "Dividend = 200 × 0.84 = $168. Yield = 0.84 ÷ 12 × 100% = 7%. The yield uses the price and dividend of one share, so it does not depend on how many shares he owns, and $2400 is the cost of the shares.",
+   "clue": "Yield uses one share, but the payment uses all 200."
+  }
+ },
+ "cleared_by": "recheck"
+}

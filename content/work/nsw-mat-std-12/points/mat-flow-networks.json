@@ -1,0 +1,217 @@
+{
+ "id": "mat-flow-networks",
+ "title": "Flow networks",
+ "brief": "9257db5e6770",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01285,
+  "write": 0.00476,
+  "check": 0.01227,
+  "fix": 0.0264,
+  "recheck": 0.01265
+ },
+ "match": {
+  "same": "",
+  "reason": "The bank has no point on networks or flow capacity, so flow networks needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Flow networks",
+  "card": [
+   "A flow network is a directed network, so each edge has an arrow showing the way flow can go. Flow might be cars on roads, water in pipes or data in cables.",
+   [
+    "Source",
+    "the vertex where the flow starts. Nothing flows into it along the network."
+   ],
+   [
+    "Sink",
+    "the vertex where the flow ends. Nothing flows out of it along the network."
+   ],
+   "Each edge has a capacity, the most it can carry in a set time, such as 40 cars an hour. The flow along an edge can be anything from 0 up to its capacity, and only in the direction of the arrow."
+  ],
+  "remember": "A flow network has arrows, a source, a sink and a capacity on every edge.",
+  "a": {
+   "q": "In a flow network of roads, an edge from P to Q is labelled 40. What does this mean?",
+   "opts": [
+    "Up to 40 cars an hour can travel from P to Q",
+    "Exactly 40 cars an hour must travel from P to Q",
+    "Up to 40 cars an hour can travel either way",
+    "The road from P to Q is 40 kilometres long"
+   ],
+   "why": "The label is the capacity, the most the edge can carry in a set time, and the arrow gives the direction. Exactly 40 is wrong because the flow can be anything from 0 up to the capacity.",
+   "clue": "Capacity is a limit on the flow, in one direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Water moves through pipes from a dam (D) to a town (T). A pipe from D to R has capacity 12 litres a second, and a pipe from R to T has capacity 9 litres a second. What is the most water that can flow from D to T along this route?",
+   "opts": [
+    "9 litres a second",
+    "12 litres a second",
+    "21 litres a second",
+    "3 litres a second"
+   ],
+   "why": "All the water must pass through both pipes in turn, so the smaller capacity of 9 limits it. Adding them to get 21 is wrong because the pipes are in a line, not side by side.",
+   "clue": "Water must get through both pipes, one after the other."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Up to 40 cars an hour can travel from P to Q",
+   "also_right": []
+  },
+  "b": {
+   "best": "9 litres a second",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says that flow into a vertex must equal flow out, or that a route is limited by its smallest capacity. Finding the most a two-pipe route can carry is really the bottleneck idea from point 4 (Flow in practice), so this question asks for more than this card teaches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. Question b (the answer is 9) relies on the bottleneck idea from a later point that this card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card never says that flow into a vertex must equal flow out, or that a route is limited by its smallest capacity. Finding the most a two-pipe route can carry is really the bottleneck idea from point 4 (Flow in practice), so this question asks for more than this card teaches."
+ ],
+ "proposal": {
+  "title": "Flow networks",
+  "card": [
+   "A flow network is a directed network, so each edge has an arrow showing the way flow can go. Flow might be cars on roads, water in pipes or data in cables.",
+   [
+    "Source",
+    "the vertex where the flow starts. Nothing flows into it along the network."
+   ],
+   [
+    "Sink",
+    "the vertex where the flow ends. Nothing flows out of it along the network."
+   ],
+   "Each edge has a capacity, the most it can carry in a set time, such as 40 cars an hour. The flow along an edge can be anything from 0 up to its capacity, and only in the direction of the arrow."
+  ],
+  "remember": "A flow network has arrows, a source, a sink and a capacity on every edge.",
+  "a": {
+   "q": "In a flow network of roads, an edge from P to Q is labelled 40. What does this mean?",
+   "opts": [
+    "Up to 40 cars an hour can travel from P to Q",
+    "Exactly 40 cars an hour must travel from P to Q",
+    "Up to 40 cars an hour can travel either way",
+    "The road from P to Q is 40 kilometres long"
+   ],
+   "why": "The label is the capacity, the most the edge can carry in a set time, and the arrow gives the direction. Exactly 40 is wrong because the flow can be anything from 0 up to the capacity.",
+   "clue": "Capacity is a limit on the flow, in one direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "A flow network of pipes has one source and one sink. Every arrow at vertex W points away from W, and every arrow at vertex K points towards K. Which is correct?",
+   "opts": [
+    "W is the source and K is the sink",
+    "K is the source and W is the sink",
+    "W and K are both sinks",
+    "W and K are both sources"
+   ],
+   "why": "Nothing flows into W, so flow can only start there, which makes W the source. Nothing flows out of K, so flow ends there, which makes K the sink. Swapping them is wrong because the source is where arrows leave, not where they arrive.",
+   "clue": "Flow starts where nothing comes in."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Up to 40 cars an hour can travel from P to Q",
+    "also_right": []
+   },
+   "b": {
+    "best": "W is the source and K is the sink",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card never says that flow into a vertex must equal flow out, or that a route is limited by its smallest capacity. Finding the most a two-pipe route can carry is really the bottleneck idea from point 4 (Flow in practice), so this question asks for more than this card teaches."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card never says that flow into a vertex must equal flow out, or that a route is limited by its smallest capacity. Finding the most a two-pipe route can carry is really the bottleneck idea from point 4 (Flow in practice), so this question asks for more than this card teaches."
+  ]
+ },
+ "final": {
+  "title": "Flow networks",
+  "card": [
+   "A flow network is a directed network, so each edge has an arrow showing the way flow can go. Flow might be cars on roads, water in pipes or data in cables.",
+   [
+    "Source",
+    "the vertex where the flow starts. Nothing flows into it along the network."
+   ],
+   [
+    "Sink",
+    "the vertex where the flow ends. Nothing flows out of it along the network."
+   ],
+   "Each edge has a capacity, the most it can carry in a set time, such as 40 cars an hour. The flow along an edge can be anything from 0 up to its capacity, and only in the direction of the arrow."
+  ],
+  "remember": "A flow network has arrows, a source, a sink and a capacity on every edge.",
+  "a": {
+   "q": "In a flow network of roads, an edge from P to Q is labelled 40. What does this mean?",
+   "opts": [
+    "Up to 40 cars an hour can travel from P to Q",
+    "Exactly 40 cars an hour must travel from P to Q",
+    "Up to 40 cars an hour can travel either way",
+    "The road from P to Q is 40 kilometres long"
+   ],
+   "why": "The label is the capacity, the most the edge can carry in a set time, and the arrow gives the direction. Exactly 40 is wrong because the flow can be anything from 0 up to the capacity.",
+   "clue": "Capacity is a limit on the flow, in one direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "A flow network of pipes has one source and one sink. Every arrow at vertex W points away from W, and every arrow at vertex K points towards K. Which is correct?",
+   "opts": [
+    "W is the source and K is the sink",
+    "K is the source and W is the sink",
+    "W and K are both sinks",
+    "W and K are both sources"
+   ],
+   "why": "Nothing flows into W, so flow can only start there, which makes W the source. Nothing flows out of K, so flow ends there, which makes K the sink. Swapping them is wrong because the source is where arrows leave, not where they arrive.",
+   "clue": "Flow starts where nothing comes in."
+  }
+ },
+ "cleared_by": "recheck"
+}

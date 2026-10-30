@@ -1,0 +1,112 @@
+{
+ "id": "mat-loan-repayments",
+ "title": "Loan repayments",
+ "brief": "9ee77083c472",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:24Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01334,
+  "write": 0.01198,
+  "check": 0.00915
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest bank points are the present value of an annuity, reducing balance loans and interest factor tables, but none teaches treating a loan as the present value of its repayments and dividing by a present value factor to find the repayment, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Loan repayments",
+  "card": [
+   "A loan is the present value of all its repayments. It is the amount that, paid in one go today, equals the repayments in value.",
+   "So loan = repayment × present value factor. The factor comes from the table, using the interest rate per period and the number of periods.",
+   "To find the repayment, divide: repayment = loan ÷ factor. Match the rate to the repayment period, so monthly repayments need a monthly rate.",
+   "Example: a $10 000 loan has a factor of 11.2551 for 12 monthly repayments at 1% per month. Repayment = 10 000 ÷ 11.2551 = $888.49."
+  ],
+  "remember": "Repayment = loan ÷ present value factor.",
+  "a": {
+   "q": "Anna borrows $15 000. The table gives a present value factor of 5 for her rate and term. What is each repayment?",
+   "opts": [
+    "$3000",
+    "$75 000",
+    "$14 995",
+    "$15 005"
+   ],
+   "why": "The loan equals repayment × factor, so repayment = 15 000 ÷ 5 = $3000. Multiplying gives $75 000, but that mixes up which amount is the total and which is the factor's multiple.",
+   "clue": "The loan is the repayment times the factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom borrows $25 000 and repays it in 12 equal monthly repayments at 1% per month. The table factor is 11.2551. What is each repayment, to the nearest cent?",
+   "opts": [
+    "$2221.22",
+    "$2083.33",
+    "$2333.33",
+    "$281 377.50"
+   ],
+   "why": "Repayment = 25 000 ÷ 11.2551 = $2221.22. Dividing by 12 gives $2083.33, but that ignores interest, so it is too low. Adding a flat 1% of the loan to that gives $2333.33, which is not how the table works.",
+   "clue": "Divide the loan by the factor. Interest is already built into the factor."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$3000",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2221.22",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The factor 11.2551 and both repayments ($888.49 and $2221.22) check out, and each question has exactly one right option."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Loan repayments",
+  "card": [
+   "A loan is the present value of all its repayments. It is the amount that, paid in one go today, equals the repayments in value.",
+   "So loan = repayment × present value factor. The factor comes from the table, using the interest rate per period and the number of periods.",
+   "To find the repayment, divide: repayment = loan ÷ factor. Match the rate to the repayment period, so monthly repayments need a monthly rate.",
+   "Example: a $10 000 loan has a factor of 11.2551 for 12 monthly repayments at 1% per month. Repayment = 10 000 ÷ 11.2551 = $888.49."
+  ],
+  "remember": "Repayment = loan ÷ present value factor.",
+  "a": {
+   "q": "Anna borrows $15 000. The table gives a present value factor of 5 for her rate and term. What is each repayment?",
+   "opts": [
+    "$3000",
+    "$75 000",
+    "$14 995",
+    "$15 005"
+   ],
+   "why": "The loan equals repayment × factor, so repayment = 15 000 ÷ 5 = $3000. Multiplying gives $75 000, but that mixes up which amount is the total and which is the factor's multiple.",
+   "clue": "The loan is the repayment times the factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom borrows $25 000 and repays it in 12 equal monthly repayments at 1% per month. The table factor is 11.2551. What is each repayment, to the nearest cent?",
+   "opts": [
+    "$2221.22",
+    "$2083.33",
+    "$2333.33",
+    "$281 377.50"
+   ],
+   "why": "Repayment = 25 000 ÷ 11.2551 = $2221.22. Dividing by 12 gives $2083.33, but that ignores interest, so it is too low. Adding a flat 1% of the loan to that gives $2333.33, which is not how the table works.",
+   "clue": "Divide the loan by the factor. Interest is already built into the factor."
+  }
+ },
+ "cleared_by": "checker"
+}

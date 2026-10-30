@@ -1,0 +1,206 @@
+{
+ "id": "mat-overtime-penalty-rates",
+ "title": "Overtime and penalty rates",
+ "brief": "13b63901b2da",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (remember wording, card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01305,
+  "write": 0.00488,
+  "check": 0.01153,
+  "fix": 0.03389
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers overtime or penalty pay rates; the closest financial points deal with interest, annuities and loans, which are different ideas."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Overtime and penalty rates",
+  "card": [
+   "Normal pay is the hourly rate for ordinary hours. Extra pay is often given for work outside those hours, such as at night, on weekends, on public holidays or past the normal hours in a week.",
+   [
+    "Time-and-a-half",
+    "pays 1.5 times the normal hourly rate. Double time pays 2 times the normal hourly rate."
+   ],
+   [
+    "Total pay",
+    "Find the pay for each type of hour, then add them. Pay for a type of hour = hours × normal rate × multiplier."
+   ],
+   "Example: the normal rate is $20 an hour. Ali works 8 normal hours and 2 hours at time-and-a-half. Normal pay is 8 × $20 = $160. Overtime pay is 2 × $20 × 1.5 = $60. Total pay is $220."
+  ],
+  "remember": "Multiply the normal rate by the multiplier for those hours, then add all the pay together.",
+  "a": {
+   "q": "Priya's normal rate is $24 an hour. What is her hourly rate at time-and-a-half?",
+   "opts": [
+    "$36",
+    "$48",
+    "$25.50",
+    "$26"
+   ],
+   "why": "Time-and-a-half is 1.5 times the normal rate, so 24 × 1.5 = $36. Double time would give $48, which is the tempting wrong option because it uses a multiplier of 2.",
+   "clue": "Time-and-a-half means 1.5 times the normal rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom earns $18 an hour. One week he works 38 normal hours and 4 hours at double time. What is his total pay for the week?",
+   "opts": [
+    "$828",
+    "$756",
+    "$684",
+    "$72"
+   ],
+   "why": "Normal pay is 38 × 18 = $684. Double time pay is 4 × 18 × 2 = $144. The total is 684 + 144 = $828. The option $756 comes from paying the 4 extra hours at the normal rate and forgetting the multiplier.",
+   "clue": "Work out the normal pay and the double time pay separately, then add them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$36",
+   "also_right": []
+  },
+  "b": {
+   "best": "$828",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says to multiply the normal rate by the multiplier and then add the pay, but it leaves out multiplying by the number of hours. A student could add hourly rates instead of pay amounts. The card's formula is hours × normal rate × multiplier."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The title names 'overtime' and 'penalty rates', but the card never says what either term means. 'Overtime' appears only in the example, and 'penalty rate' does not appear at all, so students are not told which term covers extra hours and which covers nights, weekends and public holidays."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct: a is $36 and b is $828. The remember line leaves out multiplying by hours, and the card never defines 'overtime' or 'penalty rate' even though they are in the title."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says to multiply the normal rate by the multiplier and then add the pay, but it leaves out multiplying by the number of hours. A student could add hourly rates instead of pay amounts. The card's formula is hours × normal rate × multiplier.",
+  "Card, wording: The title names 'overtime' and 'penalty rates', but the card never says what either term means. 'Overtime' appears only in the example, and 'penalty rate' does not appear at all, so students are not told which term covers extra hours and which covers nights, weekends and public holidays."
+ ],
+ "proposal": {
+  "title": "Overtime and penalty rates",
+  "card": [
+   [
+    "Overtime",
+    "hours worked beyond a worker's normal hours, such as past 38 hours in a week. Overtime is paid at a higher rate than the normal hourly rate."
+   ],
+   [
+    "Penalty rate",
+    "a higher rate paid for work at certain times, such as nights, weekends or public holidays, even within normal hours."
+   ],
+   "Time-and-a-half pays 1.5 times the normal rate, and double time pays 2 times. For each type of hour, pay = hours × normal rate × multiplier, then add these for total pay.",
+   "Example: the normal rate is $20 an hour. Ali works 8 normal hours and 2 overtime hours at time-and-a-half. Normal pay is 8 × $20 = $160. Overtime pay is 2 × $20 × 1.5 = $60. Total pay is $220."
+  ],
+  "remember": "Work out hours × normal rate × multiplier for each type of hour, then add the amounts.",
+  "a": {
+   "q": "Priya's normal rate is $24 an hour. What is her hourly rate at time-and-a-half?",
+   "opts": [
+    "$36",
+    "$48",
+    "$25.50",
+    "$12"
+   ],
+   "why": "Time-and-a-half is 1.5 times the normal rate, so 24 × 1.5 = $36. The tempting $48 uses a multiplier of 2, which is double time.",
+   "clue": "Time-and-a-half means 1.5 times the normal rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom earns $18 an hour. One week he works 38 normal hours and 4 hours at double time. What is his total pay for the week?",
+   "opts": [
+    "$828",
+    "$756",
+    "$684",
+    "$720"
+   ],
+   "why": "Normal pay is 38 × 18 = $684. Double time pay is 4 × 18 × 2 = $144. The total is 684 + 144 = $828. The option $756 comes from paying the 4 extra hours at the normal rate and forgetting the multiplier.",
+   "clue": "Find the normal pay and the double time pay separately, then add them."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says to multiply the normal rate by the multiplier and then add the pay, but it leaves out multiplying by the number of hours. A student could add hourly rates instead of pay amounts. The card's formula is hours × normal rate × multiplier."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The title names 'overtime' and 'penalty rates', but the card never says what either term means. 'Overtime' appears only in the example, and 'penalty rate' does not appear at all, so students are not told which term covers extra hours and which covers nights, weekends and public holidays."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says to multiply the normal rate by the multiplier and then add the pay, but it leaves out multiplying by the number of hours. A student could add hourly rates instead of pay amounts. The card's formula is hours × normal rate × multiplier.",
+   "Card, wording: The title names 'overtime' and 'penalty rates', but the card never says what either term means. 'Overtime' appears only in the example, and 'penalty rate' does not appear at all, so students are not told which term covers extra hours and which covers nights, weekends and public holidays."
+  ]
+ },
+ "final": {
+  "title": "Overtime and penalty rates",
+  "card": [
+   [
+    "Overtime",
+    "hours worked beyond a worker's normal hours, such as past 38 hours in a week. Overtime is paid at a higher rate than the normal hourly rate."
+   ],
+   [
+    "Penalty rate",
+    "a higher rate paid for work at certain times, such as nights, weekends or public holidays, even within normal hours."
+   ],
+   "Time-and-a-half pays 1.5 times the normal rate, and double time pays 2 times. For each type of hour, pay = hours × normal rate × multiplier, then add these for total pay.",
+   "Example: the normal rate is $20 an hour. Ali works 8 normal hours and 2 overtime hours at time-and-a-half. Normal pay is 8 × $20 = $160. Overtime pay is 2 × $20 × 1.5 = $60. Total pay is $220."
+  ],
+  "remember": "Work out hours × normal rate × multiplier for each type of hour, then add the amounts.",
+  "a": {
+   "q": "Priya's normal rate is $24 an hour. What is her hourly rate at time-and-a-half?",
+   "opts": [
+    "$36",
+    "$48",
+    "$25.50",
+    "$12"
+   ],
+   "why": "Time-and-a-half is 1.5 times the normal rate, so 24 × 1.5 = $36. The tempting $48 uses a multiplier of 2, which is double time.",
+   "clue": "Time-and-a-half means 1.5 times the normal rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom earns $18 an hour. One week he works 38 normal hours and 4 hours at double time. What is his total pay for the week?",
+   "opts": [
+    "$828",
+    "$756",
+    "$684",
+    "$720"
+   ],
+   "why": "Normal pay is 38 × 18 = $684. Double time pay is 4 × 18 × 2 = $144. The total is 684 + 144 = $828. The option $756 comes from paying the 4 extra hours at the normal rate and forgetting the multiplier.",
+   "clue": "Find the normal pay and the double time pay separately, then add them."
+  }
+ },
+ "cleared_by": "auto"
+}

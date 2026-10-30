@@ -1,0 +1,199 @@
+{
+ "id": "mat-break-even-analysis",
+ "title": "Break-even analysis",
+ "brief": "7f796f2cde28",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01306,
+  "write": 0.00483,
+  "check": 0.00924,
+  "fix": 0.0247,
+  "recheck": 0.01141
+ },
+ "match": {
+  "same": "",
+  "reason": "No bank point teaches break-even analysis: solving equations with graphs and linear functions are related but broader ideas without the cost, revenue and profit context."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Break-even analysis",
+  "card": [
+   "A business has a cost line and a revenue line. Cost = fixed cost + cost per item × number of items. Revenue = price per item × number of items.",
+   "The break-even point is where the two lines meet. Cost equals revenue there, so the profit is zero.",
+   "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. Profit = revenue − cost.",
+   "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set 300 + 10n = 25n. Then 300 = 15n, so n = 20. He breaks even at 20 scarves."
+  ],
+  "remember": "Break even where cost = revenue. Profit = revenue − cost.",
+  "a": {
+   "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
+   "opts": [
+    "It breaks even at 50 items",
+    "It makes a profit at 50 items",
+    "It makes a loss at 50 items",
+    "Its fixed cost is $0"
+   ],
+   "why": "Revenue equals cost, so profit is $0 and 50 items is the break-even point. A profit would need revenue above cost. Fixed cost cannot be found from these two figures alone.",
+   "clue": "Compare revenue with cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
+   "opts": [
+    "50",
+    "29",
+    "67",
+    "20"
+   ],
+   "why": "Set 400 + 6n = 14n, so 400 = 8n and n = 50. Check: cost is 400 + 300 = $700 and revenue is 14 × 50 = $700. Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "clue": "Each candle adds to revenue by the price, minus the cost to make it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It breaks even at 50 items",
+   "also_right": []
+  },
+  "b": {
+   "best": "50",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says each candle 'adds to revenue by the price, minus the cost to make it'. Each candle adds $14 to revenue. It is profit that each candle raises by the price minus the making cost ($8). A student could take the clue as a wrong definition of revenue."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their answers are correct (break-even at 50 items; 400 ÷ 8 = 50 candles). The only problem is that question b's clue wrongly says each candle adds price minus cost to revenue, when it adds that amount to profit."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue says each candle 'adds to revenue by the price, minus the cost to make it'. Each candle adds $14 to revenue. It is profit that each candle raises by the price minus the making cost ($8). A student could take the clue as a wrong definition of revenue."
+ ],
+ "proposal": {
+  "title": "Break-even analysis",
+  "card": [
+   "A business has a cost line and a revenue line. Cost = fixed cost + cost per item × number of items. Revenue = price per item × number of items.",
+   "The break-even point is where the two lines meet. Cost equals revenue there, so the profit is zero.",
+   "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. Profit = revenue − cost.",
+   "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set 300 + 10n = 25n. Then 300 = 15n, so n = 20. He breaks even at 20 scarves."
+  ],
+  "remember": "Break even where cost = revenue. Profit = revenue − cost.",
+  "a": {
+   "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
+   "opts": [
+    "It breaks even at 50 items",
+    "It makes a profit at 50 items",
+    "It makes a loss at 50 items",
+    "Its fixed cost is $0"
+   ],
+   "why": "Revenue equals cost, so profit is $0 and 50 items is the break-even point. A profit would need revenue above cost. Fixed cost cannot be found from these two figures alone.",
+   "clue": "Compare revenue with cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
+   "opts": [
+    "50",
+    "29",
+    "67",
+    "20"
+   ],
+   "why": "Set 400 + 6n = 14n, so 400 = 8n and n = 50. Check: cost is 400 + 300 = $700 and revenue is 14 × 50 = $700. Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "clue": "How much profit does each candle add towards the fixed cost?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It breaks even at 50 items",
+    "also_right": []
+   },
+   "b": {
+    "best": "50",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says each candle 'adds to revenue by the price, minus the cost to make it'. Each candle adds $14 to revenue. It is profit that each candle raises by the price minus the making cost ($8). A student could take the clue as a wrong definition of revenue."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue says each candle 'adds to revenue by the price, minus the cost to make it'. Each candle adds $14 to revenue. It is profit that each candle raises by the price minus the making cost ($8). A student could take the clue as a wrong definition of revenue."
+  ]
+ },
+ "final": {
+  "title": "Break-even analysis",
+  "card": [
+   "A business has a cost line and a revenue line. Cost = fixed cost + cost per item × number of items. Revenue = price per item × number of items.",
+   "The break-even point is where the two lines meet. Cost equals revenue there, so the profit is zero.",
+   "Past the break-even point, revenue is above cost and the business makes a profit. Before it, cost is above revenue and the business makes a loss. Profit = revenue − cost.",
+   "Example: Ravi sells scarves. Fixed cost is $300 and each scarf costs $10 to make and sells for $25. Set 300 + 10n = 25n. Then 300 = 15n, so n = 20. He breaks even at 20 scarves."
+  ],
+  "remember": "Break even where cost = revenue. Profit = revenue − cost.",
+  "a": {
+   "q": "At 50 items, a business has revenue of $900 and cost of $900. What does this show?",
+   "opts": [
+    "It breaks even at 50 items",
+    "It makes a profit at 50 items",
+    "It makes a loss at 50 items",
+    "Its fixed cost is $0"
+   ],
+   "why": "Revenue equals cost, so profit is $0 and 50 items is the break-even point. A profit would need revenue above cost. Fixed cost cannot be found from these two figures alone.",
+   "clue": "Compare revenue with cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia sells candles. Fixed cost is $400, each candle costs $6 to make and sells for $14. How many candles must she sell to break even?",
+   "opts": [
+    "50",
+    "29",
+    "67",
+    "20"
+   ],
+   "why": "Set 400 + 6n = 14n, so 400 = 8n and n = 50. Check: cost is 400 + 300 = $700 and revenue is 14 × 50 = $700. Dividing by the price of $14 gives 29, which ignores that each candle also costs $6 to make.",
+   "clue": "How much profit does each candle add towards the fixed cost?"
+  }
+ },
+ "cleared_by": "recheck"
+}

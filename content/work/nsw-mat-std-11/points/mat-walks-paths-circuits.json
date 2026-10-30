@@ -1,0 +1,226 @@
+{
+ "id": "mat-walks-paths-circuits",
+ "title": "Walks, paths and circuits",
+ "brief": "801a62f23ccc",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01316,
+  "write": 0.00441,
+  "check": 0.01382,
+  "fix": 0.02686,
+  "recheck": 0.01808
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers graph theory ideas like walks, paths and circuits; the closest one, multi-stage experiments, uses paths in probability trees, which is a different idea."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Walks, paths and circuits",
+  "card": [
+   [
+    "Walk",
+    "any route that moves along edges from vertex to vertex. A walk may use the same edge or the same vertex more than once."
+   ],
+   [
+    "Path",
+    "a walk that never repeats a vertex. For example, A-B-C-D is a path, but A-B-C-B-D is not, because B appears twice."
+   ],
+   [
+    "Circuit",
+    "a walk that starts and ends at the same vertex. A-B-C-A is a circuit."
+   ],
+   "To classify a route, list its vertices in order. Check if any vertex repeats, and check if the first and last vertices are the same."
+  ],
+  "remember": "A path repeats no vertex. A circuit ends where it began.",
+  "a": {
+   "q": "A network has the route P-Q-R-S-Q-T. Which word describes this route?",
+   "opts": [
+    "A walk that is not a path",
+    "A path",
+    "A circuit",
+    "A path that is also a circuit"
+   ],
+   "why": "The route moves along edges, so it is a walk. Vertex Q appears twice, so it is not a path. It starts at P and ends at T, so it is not a circuit.",
+   "clue": "List the vertices and look for one that repeats."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cycles around her town along the route H-J-K-L-M-H. Every vertex except H is visited once. Which statement is correct?",
+   "opts": [
+    "It is a circuit, because it starts and ends at H",
+    "It is a path, because no vertex except H repeats",
+    "It is a path, because it starts and ends at H",
+    "It is not a walk, because H appears twice"
+   ],
+   "why": "The route starts and ends at H, so it is a circuit. It is not a path, because H appears twice. It is still a walk, as it follows edges.",
+   "clue": "Compare the first and last vertices, then check for repeats."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A walk that is not a path",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is a circuit, because it starts and ends at H",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a circuit as any walk that starts and ends at the same vertex. Most Australian Standard texts define a circuit as a closed trail, which does not repeat an edge. Under the card's definition, A-B-A would count as a circuit, but it is only a closed walk. The definition matches the chapter outline, but it may teach a looser meaning than students will meet in exams. Consider adding 'without repeating an edge'."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the explanations match the card. The card's definition of a circuit (any closed walk) is looser than the usual one (a closed trail with no repeated edges) and should be checked against the course textbook."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines a circuit as any walk that starts and ends at the same vertex. Most Australian Standard texts define a circuit as a closed trail, which does not repeat an edge. Under the card's definition, A-B-A would count as a circuit, but it is only a closed walk. The definition matches the chapter outline, but it may teach a looser meaning than students will meet in exams. Consider adding 'without repeating an edge'."
+ ],
+ "proposal": {
+  "title": "Walks, paths and circuits",
+  "card": [
+   [
+    "Walk",
+    "any route that moves along edges from vertex to vertex. A walk may use the same edge or the same vertex more than once."
+   ],
+   [
+    "Path",
+    "a walk that never repeats a vertex. For example, A-B-C-D is a path, but A-B-C-B-D is not, because B appears twice."
+   ],
+   [
+    "Circuit",
+    "a walk that starts and ends at the same vertex without repeating an edge. A-B-C-A is a circuit. A-B-A is not, because it uses edge AB twice."
+   ],
+   "To classify a route, list its vertices in order. Check if any vertex or edge repeats, and check if the first and last vertices are the same."
+  ],
+  "remember": "A path repeats no vertex. A circuit ends where it began and repeats no edge.",
+  "a": {
+   "q": "A network has the route P-Q-R-S-Q-T. Which word describes this route?",
+   "opts": [
+    "A walk that is not a path",
+    "A path",
+    "A circuit",
+    "A path that is also a circuit"
+   ],
+   "why": "The route moves along edges, so it is a walk. Vertex Q appears twice, so it is not a path. It starts at P and ends at T, so it is not a circuit.",
+   "clue": "List the vertices and look for one that repeats."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cycles around her town along the route H-J-K-L-M-H. Every vertex except H is visited once. Which statement is correct?",
+   "opts": [
+    "It is a circuit, because it starts and ends at H",
+    "It is a path, because no vertex except H repeats",
+    "It is a path, because it starts and ends at H",
+    "It is not a walk, because H appears twice"
+   ],
+   "why": "The route starts and ends at H and uses each edge only once, so it is a circuit. It is not a path, because H appears twice. It is still a walk, as it follows edges.",
+   "clue": "Compare the first and last vertices, then check for repeats."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A walk that is not a path",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is a circuit, because it starts and ends at H",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both questions have one clearly right answer that matches the card, and the explanations agree with it."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a circuit as any walk that starts and ends at the same vertex. Most Australian Standard texts define a circuit as a closed trail, which does not repeat an edge. Under the card's definition, A-B-A would count as a circuit, but it is only a closed walk. The definition matches the chapter outline, but it may teach a looser meaning than students will meet in exams. Consider adding 'without repeating an edge'."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines a circuit as any walk that starts and ends at the same vertex. Most Australian Standard texts define a circuit as a closed trail, which does not repeat an edge. Under the card's definition, A-B-A would count as a circuit, but it is only a closed walk. The definition matches the chapter outline, but it may teach a looser meaning than students will meet in exams. Consider adding 'without repeating an edge'."
+  ]
+ },
+ "final": {
+  "title": "Walks, paths and circuits",
+  "card": [
+   [
+    "Walk",
+    "any route that moves along edges from vertex to vertex. A walk may use the same edge or the same vertex more than once."
+   ],
+   [
+    "Path",
+    "a walk that never repeats a vertex. For example, A-B-C-D is a path, but A-B-C-B-D is not, because B appears twice."
+   ],
+   [
+    "Circuit",
+    "a walk that starts and ends at the same vertex without repeating an edge. A-B-C-A is a circuit. A-B-A is not, because it uses edge AB twice."
+   ],
+   "To classify a route, list its vertices in order. Check if any vertex or edge repeats, and check if the first and last vertices are the same."
+  ],
+  "remember": "A path repeats no vertex. A circuit ends where it began and repeats no edge.",
+  "a": {
+   "q": "A network has the route P-Q-R-S-Q-T. Which word describes this route?",
+   "opts": [
+    "A walk that is not a path",
+    "A path",
+    "A circuit",
+    "A path that is also a circuit"
+   ],
+   "why": "The route moves along edges, so it is a walk. Vertex Q appears twice, so it is not a path. It starts at P and ends at T, so it is not a circuit.",
+   "clue": "List the vertices and look for one that repeats."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cycles around her town along the route H-J-K-L-M-H. Every vertex except H is visited once. Which statement is correct?",
+   "opts": [
+    "It is a circuit, because it starts and ends at H",
+    "It is a path, because no vertex except H repeats",
+    "It is a path, because it starts and ends at H",
+    "It is not a walk, because H appears twice"
+   ],
+   "why": "The route starts and ends at H and uses each edge only once, so it is a circuit. It is not a path, because H appears twice. It is still a walk, as it follows edges.",
+   "clue": "Compare the first and last vertices, then check for repeats."
+  }
+ },
+ "cleared_by": "recheck"
+}

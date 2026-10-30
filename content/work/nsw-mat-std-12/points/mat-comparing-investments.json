@@ -1,0 +1,261 @@
+{
+ "id": "mat-comparing-investments",
+ "title": "Comparing investments",
+ "brief": "a469cea82d76",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-10-30T11:57:41Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0132,
+  "write": 0.00531,
+  "check": 0.01111,
+  "fix": 0.0377,
+  "recheck": 0.01493
+ },
+ "match": {
+  "same": "",
+  "reason": "The closest bank point, compound interest, teaches how to calculate compound interest, but it does not cover comparing simple and compound interest or different compounding periods to choose an investment, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Comparing investments",
+  "card": [
+   [
+    "Simple interest",
+    "Interest is paid only on the original amount. I = Prn, so the interest is the same every year."
+   ],
+   [
+    "Compound interest",
+    "Interest is added to the balance, so later interest is earned on interest too. FV = PV(1 + r)ⁿ, where r is the rate per period and n is the number of periods."
+   ],
+   [
+    "Compare",
+    "Work out the final value of each investment over the same time. The larger final value is the better investment. More frequent compounding gives more interest at the same yearly rate."
+   ],
+   [
+    "Example",
+    "$1000 for 2 years at 6% p.a. Simple: 1000 + 1000 × 0.06 × 2 = $1120. Compounded yearly: 1000 × 1.06² = $1123.60. Compound is better by $3.60."
+   ]
+  ],
+  "remember": "Find each final value over the same time, then pick the larger.",
+  "a": {
+   "q": "Which investment gives the larger final value after 2 years? A: $1000 at 6% p.a. simple interest. B: $1000 at 6% p.a. compounded yearly.",
+   "opts": [
+    "B, by $3.60",
+    "A, by $3.60",
+    "B, by $120",
+    "A, by $123.60"
+   ],
+   "why": "A gives $1000 + 1000 × 0.06 × 2 = $1120. B gives 1000 × 1.06² = $1123.60. B is larger by $3.60. A is not larger, because simple interest does not earn interest on interest.",
+   "clue": "Work out both final values over the same 2 years."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia invests $5000 for 1 year at 8% p.a. Bank X compounds the interest yearly. Bank Y compounds it quarterly. How much more does Bank Y pay?",
+   "opts": [
+    "$20.16",
+    "$80.00",
+    "$5.00",
+    "$400.00"
+   ],
+   "why": "Bank X pays 5000 × 1.08 = $5400. Bank Y uses r = 0.02 and n = 4: 5000 × 1.02⁴ = $5412.16. The difference is $12.16 more, so check the working below. 1.02⁴ = 1.08243216, so Y gives $5412.16 and the difference is $12.16.",
+   "clue": "Quarterly means a rate of 8% ÷ 4 for 4 periods."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "B, by $3.60",
+   "also_right": []
+  },
+  "b": {
+   "best": "$20.16",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. Bank X gives 5000 × 1.08 = $5400 and Bank Y gives 5000 × 1.02⁴ = $5412.16, so Bank Y pays $12.16 more. $12.16 is not among the options, and $20.16 (the closest, likely the intended answer) is wrong."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why contains leftover drafting text ('so check the working below') and gives $12.16, which contradicts every listed option."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a repeats the card's worked example exactly ($1000, 2 years, 6%, simple vs yearly compound, $3.60), so it tests recall of the card rather than understanding of comparing investments."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has no correct option: Bank Y pays $12.16 more, but the options are $5.00, $20.16, $400 and $80, and the why still contains draft text. Question a copies the card's example word for word, so it only tests recall."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: No option is correct. Bank X gives 5000 × 1.08 = $5400 and Bank Y gives 5000 × 1.02⁴ = $5412.16, so Bank Y pays $12.16 more. $12.16 is not among the options, and $20.16 (the closest, likely the intended answer) is wrong.",
+  "Question b, other: The why contains leftover drafting text ('so check the working below') and gives $12.16, which contradicts every listed option.",
+  "Question a, level: Question a repeats the card's worked example exactly ($1000, 2 years, 6%, simple vs yearly compound, $3.60), so it tests recall of the card rather than understanding of comparing investments."
+ ],
+ "proposal": {
+  "title": "Comparing investments",
+  "card": [
+   [
+    "Simple interest",
+    "Interest is paid only on the original amount. I = Prn, so the interest is the same every year."
+   ],
+   [
+    "Compound interest",
+    "Interest is added to the balance, so later interest is earned on interest too. FV = PV(1 + r)ⁿ, where r is the rate per period and n is the number of periods. For quarterly, r is the yearly rate ÷ 4 and there are 4 periods a year."
+   ],
+   [
+    "Compare",
+    "Work out the final value of each investment over the same time. The larger final value is the better investment. Example: $1000 for 2 years at 6% p.a. gives $1120 simple, or 1000 × 1.06² = $1123.60 compounded yearly."
+   ],
+   [
+    "Watch for",
+    "At the same yearly rate, more frequent compounding gives more. But a higher simple rate can beat a lower compound rate, so always work out both."
+   ]
+  ],
+  "remember": "Find each final value over the same time, then pick the larger.",
+  "a": {
+   "q": "Over 3 years, which gives the larger final value? A: $2000 at 5.5% p.a. simple interest. B: $2000 at 5% p.a. compounded yearly.",
+   "opts": [
+    "A, by $14.75",
+    "B, by $14.75",
+    "A, by $330.00",
+    "B, by $315.25"
+   ],
+   "why": "A gives 2000 + 2000 × 0.055 × 3 = $2330. B gives 2000 × 1.05³ = $2315.25. A is larger by $14.75. B is tempting because compound interest earns interest on interest, but its lower rate means it falls short here.",
+   "clue": "Compound is not always better. Work out both final values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia invests $5000 for 1 year at 8% p.a. Bank X compounds the interest yearly. Bank Y compounds it quarterly. How much more does Bank Y pay?",
+   "opts": [
+    "$12.16",
+    "$0.00",
+    "$412.16",
+    "$400.00"
+   ],
+   "why": "Bank X gives 5000 × 1.08 = $5400. Bank Y uses r = 0.02 and n = 4: 5000 × 1.02⁴ = $5412.16, so Y pays $12.16 more. It is not $0, because at the same yearly rate, more frequent compounding earns more.",
+   "clue": "Quarterly means a rate of 8% ÷ 4 for 4 periods."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A, by $14.75",
+    "also_right": []
+   },
+   "b": {
+    "best": "$12.16",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. All calculations check out: in (a) A gives $2330 and B gives $2315.25, and in (b) $5412.16 minus $5400 is $12.16."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. Bank X gives 5000 × 1.08 = $5400 and Bank Y gives 5000 × 1.02⁴ = $5412.16, so Bank Y pays $12.16 more. $12.16 is not among the options, and $20.16 (the closest, likely the intended answer) is wrong."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why contains leftover drafting text ('so check the working below') and gives $12.16, which contradicts every listed option."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a repeats the card's worked example exactly ($1000, 2 years, 6%, simple vs yearly compound, $3.60), so it tests recall of the card rather than understanding of comparing investments."
+   }
+  ],
+  "flags": [
+   "Question b, fact: No option is correct. Bank X gives 5000 × 1.08 = $5400 and Bank Y gives 5000 × 1.02⁴ = $5412.16, so Bank Y pays $12.16 more. $12.16 is not among the options, and $20.16 (the closest, likely the intended answer) is wrong.",
+   "Question b, other: The why contains leftover drafting text ('so check the working below') and gives $12.16, which contradicts every listed option.",
+   "Question a, level: Question a repeats the card's worked example exactly ($1000, 2 years, 6%, simple vs yearly compound, $3.60), so it tests recall of the card rather than understanding of comparing investments."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Comparing investments",
+  "card": [
+   [
+    "Simple interest",
+    "Interest is paid only on the original amount. I = Prn, so the interest is the same every year."
+   ],
+   [
+    "Compound interest",
+    "Interest is added to the balance, so later interest is earned on interest too. FV = PV(1 + r)ⁿ, where r is the rate per period and n is the number of periods. For quarterly, r is the yearly rate ÷ 4 and there are 4 periods a year."
+   ],
+   [
+    "Compare",
+    "Work out the final value of each investment over the same time. The larger final value is the better investment. Example: $1000 for 2 years at 6% p.a. gives $1120 simple, or 1000 × 1.06² = $1123.60 compounded yearly."
+   ],
+   [
+    "Watch for",
+    "At the same yearly rate, more frequent compounding gives more. But a higher simple rate can beat a lower compound rate, so always work out both."
+   ]
+  ],
+  "remember": "Find each final value over the same time, then pick the larger.",
+  "a": {
+   "q": "Over 3 years, which gives the larger final value? A: $2000 at 5.5% p.a. simple interest. B: $2000 at 5% p.a. compounded yearly.",
+   "opts": [
+    "A, by $14.75",
+    "B, by $14.75",
+    "A, by $330.00",
+    "B, by $315.25"
+   ],
+   "why": "A gives 2000 + 2000 × 0.055 × 3 = $2330. B gives 2000 × 1.05³ = $2315.25. A is larger by $14.75. B is tempting because compound interest earns interest on interest, but its lower rate means it falls short here.",
+   "clue": "Compound is not always better. Work out both final values."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia invests $5000 for 1 year at 8% p.a. Bank X compounds the interest yearly. Bank Y compounds it quarterly. How much more does Bank Y pay?",
+   "opts": [
+    "$12.16",
+    "$0.00",
+    "$412.16",
+    "$400.00"
+   ],
+   "why": "Bank X gives 5000 × 1.08 = $5400. Bank Y uses r = 0.02 and n = 4: 5000 × 1.02⁴ = $5412.16, so Y pays $12.16 more. It is not $0, because at the same yearly rate, more frequent compounding earns more.",
+   "clue": "Quarterly means a rate of 8% ÷ 4 for 4 periods."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,247 @@
+{
+ "id": "mat-latest-starting-times",
+ "title": "Latest starting times",
+ "brief": "6fbda4d3451f",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01291,
+  "write": 0.00503,
+  "check": 0.01343,
+  "fix": 0.02357,
+  "recheck": 0.01106
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers critical path analysis or latest starting times in project networks, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Latest starting times",
+  "card": [
+   "The latest start time (LST) of an activity is the latest it can start without delaying the whole project. Its minimum project time comes from the forward scan, which is not taught here.",
+   "Start at the finish vertex. Its value is the project's shortest time. Then work backwards, one vertex at a time.",
+   "For each activity leaving a vertex, subtract its duration from the value at the vertex it leads to. If a vertex has more than one activity leaving it, take the smallest result.",
+   "Example: the finish vertex is 12. Activity A (4 days) leads to it, and so does B (7 days). Both leave the same vertex. 12 − 4 = 8 and 12 − 7 = 5. Take the smallest, 5. The latest start for that vertex is 5."
+  ],
+  "remember": "Scan backwards from the finish, subtract each duration, and take the smallest result at a vertex.",
+  "a": {
+   "q": "Two activities leave one vertex. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at the first vertex?",
+   "opts": [
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "why": "10 − 3 = 7 and 11 − 5 = 6. A backward scan takes the smallest result, so the value is 6. Choosing 7 takes the larger result, which could delay the activity that lasts 5 days.",
+   "clue": "Subtract each duration, then take the smaller answer."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the latest start time at X?",
+   "opts": [
+    "11",
+    "14",
+    "15",
+    "26"
+   ],
+   "why": "20 − 6 = 14 and 20 − 9 = 11. The smallest is 11, so X must be reached by day 11. Choosing 14 would leave too little time for Q, which delays the project. Adding durations (26) is wrong, as the backward scan subtracts.",
+   "clue": "Work backwards from 20 and subtract, for each activity."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "11",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines the LST of an activity, then says 'the latest start for that vertex is 5'. The 5 is the vertex value, which is the LST of B only. A's latest start is 8. This mixes up activity LSTs with vertex values."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "In 'Its minimum project time comes from the forward scan', 'Its' grammatically refers to the activity, not the project. This is confusing."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The first vertex' is ambiguous. It could be read as the first vertex mentioned after it, the one with value 10, rather than the vertex both activities leave."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks for the 'latest start time at X', but the card defines LST for activities. P's LST is 14 and Q's is 11, so a careful student could argue for 14. It should ask for the value at vertex X."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says choosing 7 'could delay the activity that lasts 5 days'. The point is that it would delay the whole project, which is what the card teaches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The arithmetic and intended answers (6 and 11) are correct. However, the card and question b mix up an activity's latest start time with the value at a vertex, and question a's phrase 'the first vertex' is ambiguous."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines the LST of an activity, then says 'the latest start for that vertex is 5'. The 5 is the vertex value, which is the LST of B only. A's latest start is 8. This mixes up activity LSTs with vertex values.",
+  "Card, wording: In 'Its minimum project time comes from the forward scan', 'Its' grammatically refers to the activity, not the project. This is confusing.",
+  "Question a, wording: 'The first vertex' is ambiguous. It could be read as the first vertex mentioned after it, the one with value 10, rather than the vertex both activities leave.",
+  "Question b, wording: The question asks for the 'latest start time at X', but the card defines LST for activities. P's LST is 14 and Q's is 11, so a careful student could argue for 14. It should ask for the value at vertex X.",
+  "Question a, other: The why says choosing 7 'could delay the activity that lasts 5 days'. The point is that it would delay the whole project, which is what the card teaches."
+ ],
+ "proposal": {
+  "title": "Latest starting times",
+  "card": [
+   "The latest starting time (LST) of an activity is the latest it can begin without delaying the whole project. A backward scan through the network finds it.",
+   "Start at the finish vertex. Give it the project's shortest time, which comes from the forward scan. Then work backwards, one vertex at a time.",
+   "An activity's LST is the value at the vertex it leads to, minus its duration. A vertex's value is the smallest LST of the activities leaving it.",
+   "Example: the finish vertex is 12. A (4 days) and B (7 days) both go from vertex V to the finish. A's LST is 12 − 4 = 8. B's LST is 12 − 7 = 5. V's value is the smallest, 5."
+  ],
+  "remember": "Work back from the finish: subtract each duration, and keep the smallest result at each vertex.",
+  "a": {
+   "q": "Two activities leave vertex V. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex V?",
+   "opts": [
+    "6",
+    "7",
+    "13",
+    "16"
+   ],
+   "why": "10 − 3 = 7 and 11 − 5 = 6, and a vertex takes the smallest result, so V is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
+   "clue": "Subtract each duration, then compare the two results."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the LST of activity P?",
+   "opts": [
+    "14",
+    "11",
+    "26",
+    "6"
+   ],
+   "why": "P's LST is the value at the vertex it leads to minus its duration: 20 − 6 = 14. The tempting 11 is the value at vertex X, which is set by Q, the longer activity. P can start as late as day 14 and still finish by day 20.",
+   "clue": "Use only P's duration and the vertex P leads to."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6",
+    "also_right": []
+   },
+   "b": {
+    "best": "14",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines the LST of an activity, then says 'the latest start for that vertex is 5'. The 5 is the vertex value, which is the LST of B only. A's latest start is 8. This mixes up activity LSTs with vertex values."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "In 'Its minimum project time comes from the forward scan', 'Its' grammatically refers to the activity, not the project. This is confusing."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'The first vertex' is ambiguous. It could be read as the first vertex mentioned after it, the one with value 10, rather than the vertex both activities leave."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks for the 'latest start time at X', but the card defines LST for activities. P's LST is 14 and Q's is 11, so a careful student could argue for 14. It should ask for the value at vertex X."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says choosing 7 'could delay the activity that lasts 5 days'. The point is that it would delay the whole project, which is what the card teaches."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines the LST of an activity, then says 'the latest start for that vertex is 5'. The 5 is the vertex value, which is the LST of B only. A's latest start is 8. This mixes up activity LSTs with vertex values.",
+   "Card, wording: In 'Its minimum project time comes from the forward scan', 'Its' grammatically refers to the activity, not the project. This is confusing.",
+   "Question a, wording: 'The first vertex' is ambiguous. It could be read as the first vertex mentioned after it, the one with value 10, rather than the vertex both activities leave.",
+   "Question b, wording: The question asks for the 'latest start time at X', but the card defines LST for activities. P's LST is 14 and Q's is 11, so a careful student could argue for 14. It should ask for the value at vertex X.",
+   "Question a, other: The why says choosing 7 'could delay the activity that lasts 5 days'. The point is that it would delay the whole project, which is what the card teaches."
+  ]
+ },
+ "final": {
+  "title": "Latest starting times",
+  "card": [
+   "The latest starting time (LST) of an activity is the latest it can begin without delaying the whole project. A backward scan through the network finds it.",
+   "Start at the finish vertex. Give it the project's shortest time, which comes from the forward scan. Then work backwards, one vertex at a time.",
+   "An activity's LST is the value at the vertex it leads to, minus its duration. A vertex's value is the smallest LST of the activities leaving it.",
+   "Example: the finish vertex is 12. A (4 days) and B (7 days) both go from vertex V to the finish. A's LST is 12 − 4 = 8. B's LST is 12 − 7 = 5. V's value is the smallest, 5."
+  ],
+  "remember": "Work back from the finish: subtract each duration, and keep the smallest result at each vertex.",
+  "a": {
+   "q": "Two activities leave vertex V. One lasts 3 days and leads to a vertex with value 10. The other lasts 5 days and leads to a vertex with value 11. What is the value at vertex V?",
+   "opts": [
+    "6",
+    "7",
+    "13",
+    "16"
+   ],
+   "why": "10 − 3 = 7 and 11 − 5 = 6, and a vertex takes the smallest result, so V is 6. Choosing 7 is wrong: the 5-day activity would then end on day 12, after 11, which delays the whole project.",
+   "clue": "Subtract each duration, then compare the two results."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Mia's building project, the finish vertex has value 20. Activity P (6 days) and activity Q (9 days) both go from vertex X to the finish. What is the LST of activity P?",
+   "opts": [
+    "14",
+    "11",
+    "26",
+    "6"
+   ],
+   "why": "P's LST is the value at the vertex it leads to minus its duration: 20 − 6 = 14. The tempting 11 is the value at vertex X, which is set by Q, the longer activity. P can start as late as day 14 and still finish by day 20.",
+   "clue": "Use only P's duration and the vertex P leads to."
+  }
+ },
+ "cleared_by": "recheck"
+}

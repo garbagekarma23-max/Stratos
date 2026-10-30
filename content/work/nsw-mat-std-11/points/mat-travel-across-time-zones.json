@@ -1,0 +1,118 @@
+{
+ "id": "mat-travel-across-time-zones",
+ "title": "Travel across time zones",
+ "brief": "24041c4209f6",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:10Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.01286,
+  "write": 0.01025,
+  "check": 0.00816
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers working out flight arrival times across time zones, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Travel across time zones",
+  "card": [
+   "A flight takes the same real time whatever the clocks say. To find the arrival time, add the flight time to the departure time first.",
+   "Then adjust for the time difference between the two places. If the destination is ahead of where you left, add the difference. If it is behind, subtract it.",
+   [
+    "Example",
+    "A flight leaves Sydney at 10:00 am and takes 3 hours. The destination is 2 hours behind Sydney."
+   ],
+   "10:00 am + 3 hours = 1:00 pm Sydney time. Then 1:00 pm − 2 hours = 11:00 am local time at the destination."
+  ],
+  "remember": "Add the flight time, then add or subtract the time difference.",
+  "a": {
+   "q": "A flight leaves Sydney at 8:00 am and takes 4 hours. The destination is 3 hours behind Sydney. What is the local arrival time?",
+   "opts": [
+    "9:00 am",
+    "3:00 pm",
+    "12:00 noon",
+    "5:00 am"
+   ],
+   "why": "8:00 am + 4 hours = 12:00 noon Sydney time. The destination is behind, so subtract 3 hours to get 9:00 am. Adding the 3 hours gives 3:00 pm, which is wrong because a place that is behind has an earlier clock time.",
+   "clue": "Add the flight time first, then use the time difference."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jamal's flight leaves Sydney at 9:30 am and takes 9 hours. The destination is 2 hours ahead of Sydney. What is the local arrival time?",
+   "opts": [
+    "8:30 pm",
+    "4:30 pm",
+    "6:30 pm",
+    "11:30 am"
+   ],
+   "why": "9:30 am + 9 hours = 6:30 pm Sydney time. The destination is ahead, so add 2 hours to get 8:30 pm. Subtracting 2 hours gives 4:30 pm, which is wrong because a place that is ahead has a later clock time.",
+   "clue": "Ahead means the clock there shows a later time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "9:00 am",
+   "also_right": []
+  },
+  "b": {
+   "best": "8:30 pm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: 9:00 am for (a) and 8:30 pm for (b), and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Travel across time zones",
+  "card": [
+   "A flight takes the same real time whatever the clocks say. To find the arrival time, add the flight time to the departure time first.",
+   "Then adjust for the time difference between the two places. If the destination is ahead of where you left, add the difference. If it is behind, subtract it.",
+   [
+    "Example",
+    "A flight leaves Sydney at 10:00 am and takes 3 hours. The destination is 2 hours behind Sydney."
+   ],
+   "10:00 am + 3 hours = 1:00 pm Sydney time. Then 1:00 pm − 2 hours = 11:00 am local time at the destination."
+  ],
+  "remember": "Add the flight time, then add or subtract the time difference.",
+  "a": {
+   "q": "A flight leaves Sydney at 8:00 am and takes 4 hours. The destination is 3 hours behind Sydney. What is the local arrival time?",
+   "opts": [
+    "9:00 am",
+    "3:00 pm",
+    "12:00 noon",
+    "5:00 am"
+   ],
+   "why": "8:00 am + 4 hours = 12:00 noon Sydney time. The destination is behind, so subtract 3 hours to get 9:00 am. Adding the 3 hours gives 3:00 pm, which is wrong because a place that is behind has an earlier clock time.",
+   "clue": "Add the flight time first, then use the time difference."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jamal's flight leaves Sydney at 9:30 am and takes 9 hours. The destination is 2 hours ahead of Sydney. What is the local arrival time?",
+   "opts": [
+    "8:30 pm",
+    "4:30 pm",
+    "6:30 pm",
+    "11:30 am"
+   ],
+   "why": "9:30 am + 9 hours = 6:30 pm Sydney time. The destination is ahead, so add 2 hours to get 8:30 pm. Subtracting 2 hours gives 4:30 pm, which is wrong because a place that is ahead has a later clock time.",
+   "clue": "Ahead means the clock there shows a later time."
+  }
+ },
+ "cleared_by": "checker"
+}

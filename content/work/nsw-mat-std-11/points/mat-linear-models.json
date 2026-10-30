@@ -1,0 +1,199 @@
+{
+ "id": "mat-linear-models",
+ "title": "Linear models",
+ "brief": "e6e6edeecad5",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T16:45:07Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.01329,
+  "write": 0.0051,
+  "check": 0.01061,
+  "fix": 0.02712,
+  "recheck": 0.0138
+ },
+ "match": {
+  "same": "",
+  "reason": "No bank point teaches using a straight-line model to make predictions and the limits of extrapolation: linear functions covers gradients and parallel lines, and modelling with functions is a Year 12 point about choosing between model types."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Linear models",
+  "card": [
+   "A linear model uses a straight-line equation to describe how two quantities are related. It is written y = mx + c, where m is the rate of change and c is the starting amount.",
+   "To predict, put a value of x into the equation and work out y. Example: a taxi charges C = 3 + 2d, where C is the cost in dollars and d is the distance in km. For 10 km, C = 3 + 2 × 10 = 23, so the cost is $23.",
+   "To find x from a known y, put y into the equation and solve. If C = 17, then 17 = 3 + 2d, so 2d = 14 and d = 7 km.",
+   "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
+  ],
+  "remember": "Put x in to predict y, but be careful of predictions outside the data the model came from.",
+  "a": {
+   "q": "A plumber's charge is C = 60 + 45h, where C is the cost in dollars and h is the hours worked. What is the cost of a 3 hour job?",
+   "opts": [
+    "$195",
+    "$108",
+    "$135",
+    "$8,100"
+   ],
+   "why": "C = 60 + 45 × 3 = 60 + 135 = 195, so the cost is $195. The answer $135 leaves out the $60 call-out fee, and $108 comes from adding 60 + 45 and then multiplying by 3 incorrectly.",
+   "clue": "Multiply first, then add the starting amount."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's plant height model is H = 5 + 2t, where H is height in cm and t is days. It was made from data for days 1 to 10. Which prediction is least reliable?",
+   "opts": [
+    "The height at day 60",
+    "The height at day 4",
+    "The height at day 9",
+    "The height at day 10"
+   ],
+   "why": "Day 60 is far outside the data from days 1 to 10, so it is extrapolation and the plant may not keep growing at the same rate. Days 4, 9 and 10 are inside the range the model was built from, so they are more reliable.",
+   "clue": "Which day is furthest from the data used to make the model?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$195",
+   "also_right": []
+  },
+  "b": {
+   "best": "The height at day 60",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $108 comes from adding 60 + 45 and then multiplying by 3. That gives (60 + 45) × 3 = $315, not $108. $108 actually comes from adding all three numbers: 60 + 45 + 3. The explanation of this distractor is wrong and would confuse a student checking their error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have the right answers ($195 and day 60). The explanation for question a wrongly says $108 comes from (60 + 45) × 3, when it actually comes from 60 + 45 + 3."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says $108 comes from adding 60 + 45 and then multiplying by 3. That gives (60 + 45) × 3 = $315, not $108. $108 actually comes from adding all three numbers: 60 + 45 + 3. The explanation of this distractor is wrong and would confuse a student checking their error."
+ ],
+ "proposal": {
+  "title": "Linear models",
+  "card": [
+   "A linear model uses a straight-line equation to describe how two quantities are related. It is written y = mx + c, where m is the rate of change and c is the starting amount.",
+   "To predict, put a value of x into the equation and work out y. Example: a taxi charges C = 3 + 2d, where C is the cost in dollars and d is the distance in km. For 10 km, C = 3 + 2 × 10 = 23, so the cost is $23.",
+   "To find x from a known y, put y into the equation and solve. If C = 17, then 17 = 3 + 2d, so 2d = 14 and d = 7 km.",
+   "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
+  ],
+  "remember": "Put x in to predict y, but be careful of predictions outside the data the model came from.",
+  "a": {
+   "q": "A plumber's charge is C = 60 + 45h, where C is the cost in dollars and h is the hours worked. What is the cost of a 3 hour job?",
+   "opts": [
+    "$195",
+    "$108",
+    "$135",
+    "$8,100"
+   ],
+   "why": "C = 60 + 45 × 3 = 60 + 135 = 195, so the cost is $195. The answer $135 leaves out the $60 starting amount, and $108 comes from adding all three numbers, 60 + 45 + 3, instead of multiplying 45 by 3.",
+   "clue": "Multiply first, then add the starting amount."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's plant height model is H = 5 + 2t, where H is height in cm and t is days. It was made from data for days 1 to 10. Which prediction is least reliable?",
+   "opts": [
+    "The height at day 60",
+    "The height at day 4",
+    "The height at day 9",
+    "The height at day 10"
+   ],
+   "why": "Day 60 is far outside the data from days 1 to 10, so it is extrapolation and the plant may not keep growing at the same rate. Days 4, 9 and 10 are inside the range the model was built from, so they are more reliable.",
+   "clue": "Which day is furthest from the data used to make the model?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-10-29T16:45:07Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$195",
+    "also_right": []
+   },
+   "b": {
+    "best": "The height at day 60",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 60 + 45 × 3 = 195, and day 60 is the only prediction outside the day 1 to 10 data."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-10-29T16:45:07Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $108 comes from adding 60 + 45 and then multiplying by 3. That gives (60 + 45) × 3 = $315, not $108. $108 actually comes from adding all three numbers: 60 + 45 + 3. The explanation of this distractor is wrong and would confuse a student checking their error."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says $108 comes from adding 60 + 45 and then multiplying by 3. That gives (60 + 45) × 3 = $315, not $108. $108 actually comes from adding all three numbers: 60 + 45 + 3. The explanation of this distractor is wrong and would confuse a student checking their error."
+  ]
+ },
+ "final": {
+  "title": "Linear models",
+  "card": [
+   "A linear model uses a straight-line equation to describe how two quantities are related. It is written y = mx + c, where m is the rate of change and c is the starting amount.",
+   "To predict, put a value of x into the equation and work out y. Example: a taxi charges C = 3 + 2d, where C is the cost in dollars and d is the distance in km. For 10 km, C = 3 + 2 × 10 = 23, so the cost is $23.",
+   "To find x from a known y, put y into the equation and solve. If C = 17, then 17 = 3 + 2d, so 2d = 14 and d = 7 km.",
+   "A model is only built from real data in a certain range. Predicting outside that range is extrapolation, and the model may stop being accurate there, because the real pattern may not stay a straight line."
+  ],
+  "remember": "Put x in to predict y, but be careful of predictions outside the data the model came from.",
+  "a": {
+   "q": "A plumber's charge is C = 60 + 45h, where C is the cost in dollars and h is the hours worked. What is the cost of a 3 hour job?",
+   "opts": [
+    "$195",
+    "$108",
+    "$135",
+    "$8,100"
+   ],
+   "why": "C = 60 + 45 × 3 = 60 + 135 = 195, so the cost is $195. The answer $135 leaves out the $60 starting amount, and $108 comes from adding all three numbers, 60 + 45 + 3, instead of multiplying 45 by 3.",
+   "clue": "Multiply first, then add the starting amount."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's plant height model is H = 5 + 2t, where H is height in cm and t is days. It was made from data for days 1 to 10. Which prediction is least reliable?",
+   "opts": [
+    "The height at day 60",
+    "The height at day 4",
+    "The height at day 9",
+    "The height at day 10"
+   ],
+   "why": "Day 60 is far outside the data from days 1 to 10, so it is extrapolation and the plant may not keep growing at the same rate. Days 4, 9 and 10 are inside the range the model was built from, so they are more reliable.",
+   "clue": "Which day is furthest from the data used to make the model?"
+  }
+ },
+ "cleared_by": "recheck"
+}

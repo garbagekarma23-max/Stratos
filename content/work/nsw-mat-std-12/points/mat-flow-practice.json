@@ -1,0 +1,176 @@
+{
+ "id": "mat-flow-practice",
+ "title": "Flow in practice",
+ "brief": "eee6eb5072a5",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:23Z write: done",
+  "2026-10-29T12:39:10Z check: flagged",
+  "2026-10-29T12:41:47Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01294,
+  "write": 0.00531,
+  "check": 0.01481,
+  "fix": 0.02926
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers network flow, so applying maximum flow to find bottlenecks needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Flow in practice",
+  "card": [
+   "A bottleneck is an edge or set of edges that limits the maximum flow. It is found by looking at the minimum cut, because those edges are full when the flow is at its maximum.",
+   "Example: a network has two roads in a row. Road 1 carries 8 cars a minute and road 2 carries 5. The most that can get through is 5, so road 2 is the bottleneck.",
+   "Raising the capacity of a bottleneck edge may raise the maximum flow. It only helps up to the point where another cut becomes the smallest.",
+   "Raising the capacity of an edge that is not in the minimum cut does not change the maximum flow, as the minimum cut stays the same."
+  ],
+  "remember": "To raise the flow, widen an edge in the minimum cut, and check the new smallest cut.",
+  "a": {
+   "q": "Two pipes join in a line. Pipe A carries 12 litres a minute and pipe B carries 7. What is the maximum flow, and where is the bottleneck?",
+   "opts": [
+    "7 litres a minute, at pipe B",
+    "7 litres a minute, at pipe A",
+    "12 litres a minute, at pipe A",
+    "19 litres a minute, at pipe B"
+   ],
+   "why": "Water must pass through both pipes in turn, so the flow cannot be more than the smaller capacity, 7. Pipe B is full at that flow, so it is the bottleneck. Pipe A is not full, so it is not the limit.",
+   "clue": "Which pipe is the smaller one in the line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A data network has source S and sink T. Its minimum cut is 20 Mb/s, made up of edges P (12) and Q (8). The next smallest cut is 26 Mb/s. Edge P is raised from 12 to 20. What is the new maximum flow?",
+   "opts": [
+    "26 Mb/s",
+    "28 Mb/s",
+    "20 Mb/s",
+    "32 Mb/s"
+   ],
+   "why": "Raising P lifts the first cut to 20 − 12 + 20 = 28. The other cut is still 26, and it is now the smallest, so the maximum flow is 26. Adding 8 to get 28 is tempting, but the flow cannot pass the new smallest cut.",
+   "clue": "Work out the old cut's new capacity, then compare it with the other cut."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7 litres a minute, at pipe B",
+   "also_right": []
+  },
+  "b": {
+   "best": "26 Mb/s",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never says whether edge P is part of the 26 Mb/s cut. If that cut also contained P, raising P would raise it too, and the new maximum flow could be more than 26. The intended answer of 26 only holds if the 26 Mb/s cut does not contain P, so the question should say so."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b needs to state that the 26 Mb/s cut does not include edge P, or the answer of 26 cannot be justified."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question never says whether edge P is part of the 26 Mb/s cut. If that cut also contained P, raising P would raise it too, and the new maximum flow could be more than 26. The intended answer of 26 only holds if the 26 Mb/s cut does not contain P, so the question should say so."
+ ],
+ "proposal": {
+  "title": "Flow in practice",
+  "card": [
+   "A bottleneck is an edge or set of edges that limits the maximum flow. It is found by looking at the minimum cut, because those edges are full when the flow is at its maximum.",
+   "Example: a network has two roads in a row. Road 1 carries 8 cars a minute and road 2 carries 5. The most that can get through is 5, so road 2 is the bottleneck.",
+   "Raising the capacity of a bottleneck edge raises every cut that contains it. The new maximum flow is the new smallest cut, which may be a different cut that does not contain that edge.",
+   "Raising the capacity of an edge that is not in the minimum cut does not change the maximum flow, as the minimum cut stays the same."
+  ],
+  "remember": "To raise the flow, widen an edge in the minimum cut, and check the new smallest cut.",
+  "a": {
+   "q": "Two pipes join in a line. Pipe A carries 12 litres a minute and pipe B carries 7. What is the maximum flow, and where is the bottleneck?",
+   "opts": [
+    "7 litres a minute, at pipe B",
+    "7 litres a minute, at pipe A",
+    "12 litres a minute, at pipe A",
+    "19 litres a minute, at pipe B"
+   ],
+   "why": "Water must pass through both pipes in turn, so the flow cannot be more than the smaller capacity, 7. Pipe B is full at that flow, so it is the bottleneck. Pipe A is not full, so it is not the limit.",
+   "clue": "Which pipe is the smaller one in the line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A data network has source S and sink T. Its minimum cut is 20 Mb/s, made up of edges P (12) and Q (8). The next smallest cut is 26 Mb/s and does not contain P. P is raised from 12 to 20. What is the new maximum flow?",
+   "opts": [
+    "26 Mb/s",
+    "28 Mb/s",
+    "20 Mb/s",
+    "32 Mb/s"
+   ],
+   "why": "Raising P lifts the first cut to 20 − 12 + 20 = 28. The 26 Mb/s cut does not contain P, so it stays at 26 and is now the smallest, so the maximum flow is 26. Adding 8 to get 28 is tempting, but the flow cannot pass the new smallest cut.",
+   "clue": "Work out the old cut's new capacity, then compare it with the other cut."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question never says whether edge P is part of the 26 Mb/s cut. If that cut also contained P, raising P would raise it too, and the new maximum flow could be more than 26. The intended answer of 26 only holds if the 26 Mb/s cut does not contain P, so the question should say so."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question never says whether edge P is part of the 26 Mb/s cut. If that cut also contained P, raising P would raise it too, and the new maximum flow could be more than 26. The intended answer of 26 only holds if the 26 Mb/s cut does not contain P, so the question should say so."
+  ]
+ },
+ "final": {
+  "title": "Flow in practice",
+  "card": [
+   "A bottleneck is an edge or set of edges that limits the maximum flow. It is found by looking at the minimum cut, because those edges are full when the flow is at its maximum.",
+   "Example: a network has two roads in a row. Road 1 carries 8 cars a minute and road 2 carries 5. The most that can get through is 5, so road 2 is the bottleneck.",
+   "Raising the capacity of a bottleneck edge raises every cut that contains it. The new maximum flow is the new smallest cut, which may be a different cut that does not contain that edge.",
+   "Raising the capacity of an edge that is not in the minimum cut does not change the maximum flow, as the minimum cut stays the same."
+  ],
+  "remember": "To raise the flow, widen an edge in the minimum cut, and check the new smallest cut.",
+  "a": {
+   "q": "Two pipes join in a line. Pipe A carries 12 litres a minute and pipe B carries 7. What is the maximum flow, and where is the bottleneck?",
+   "opts": [
+    "7 litres a minute, at pipe B",
+    "7 litres a minute, at pipe A",
+    "12 litres a minute, at pipe A",
+    "19 litres a minute, at pipe B"
+   ],
+   "why": "Water must pass through both pipes in turn, so the flow cannot be more than the smaller capacity, 7. Pipe B is full at that flow, so it is the bottleneck. Pipe A is not full, so it is not the limit.",
+   "clue": "Which pipe is the smaller one in the line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A data network has source S and sink T. Its minimum cut is 20 Mb/s, made up of edges P (12) and Q (8). The next smallest cut is 26 Mb/s and does not contain P. P is raised from 12 to 20. What is the new maximum flow?",
+   "opts": [
+    "26 Mb/s",
+    "28 Mb/s",
+    "20 Mb/s",
+    "32 Mb/s"
+   ],
+   "why": "Raising P lifts the first cut to 20 − 12 + 20 = 28. The 26 Mb/s cut does not contain P, so it stays at 26 and is now the smallest, so the maximum flow is 26. Adding 8 to get 28 is tempting, but the flow cannot pass the new smallest cut.",
+   "clue": "Work out the old cut's new capacity, then compare it with the other cut."
+  }
+ },
+ "cleared_by": "auto"
+}

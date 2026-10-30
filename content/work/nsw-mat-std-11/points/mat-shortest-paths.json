@@ -1,0 +1,176 @@
+{
+ "id": "mat-shortest-paths",
+ "title": "Shortest paths",
+ "brief": "05478b44c394",
+ "stage": "cleared",
+ "log": [
+  "2026-10-29T12:07:18Z new, match",
+  "2026-10-29T12:14:27Z match: none",
+  "2026-10-29T12:22:38Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-10-29T12:30:22Z write: done",
+  "2026-10-29T12:39:09Z check: flagged",
+  "2026-10-29T12:41:46Z fix: suggested",
+  "2026-10-29T14:30:29Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.01285,
+  "write": 0.00497,
+  "check": 0.00956,
+  "fix": 0.02553
+ },
+ "match": {
+  "same": "",
+  "reason": "No point in the bank covers shortest paths in weighted networks, so this needs a new point."
+ },
+ "alone": true,
+ "draft": {
+  "title": "Shortest paths",
+  "card": [
+   "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
+   "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
+   "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
+   "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+  ],
+  "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
+  "a": {
+   "q": "In a network, the route P-Q-S has weights 6 and 9, and the route P-R-S has weights 5 and 7. What is the weight of the shortest path from P to S?",
+   "opts": [
+    "12",
+    "15",
+    "11",
+    "13"
+   ],
+   "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the larger route.",
+   "clue": "Add the weights along each route, then compare the totals."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town A is joined to town D by a direct road of 14 km. Another route goes A to B (4 km), B to C (5 km), then C to D (3 km). Which route is the shortest path from A to D?",
+   "opts": [
+    "A-B-C-D, with a total of 12 km",
+    "A-D, with a total of 14 km",
+    "A-B-C-D, with a total of 13 km",
+    "A-D, because it has the fewest edges"
+   ],
+   "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+   "clue": "Fewer edges does not mean less total weight."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12",
+   "also_right": []
+  },
+  "b": {
+   "best": "A-B-C-D, with a total of 12 km",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question does not say that P-Q-S and P-R-S are the only routes from P to S. Strictly, the shortest path cannot be confirmed without knowing that. Add 'the only two routes' or similar."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, questions and explanations are correct, and the intended answers (12 and A-B-C-D with 12 km) are right. One minor wording issue: question a should say these are the only two routes from P to S."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The question does not say that P-Q-S and P-R-S are the only routes from P to S. Strictly, the shortest path cannot be confirmed without knowing that. Add 'the only two routes' or similar."
+ ],
+ "proposal": {
+  "title": "Shortest paths",
+  "card": [
+   "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
+   "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
+   "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
+   "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+  ],
+  "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
+  "a": {
+   "q": "In a network, the only two routes from P to S are P-Q-S, with weights 6 and 9, and P-R-S, with weights 5 and 7. What is the weight of the shortest path from P to S?",
+   "opts": [
+    "12",
+    "15",
+    "11",
+    "13"
+   ],
+   "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the longer route.",
+   "clue": "Add the weights along each route, then compare the totals."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town A is joined to town D by a direct road of 14 km. The only other route goes A to B (4 km), B to C (5 km), then C to D (3 km). Which route is the shortest path from A to D?",
+   "opts": [
+    "A-B-C-D, with a total of 12 km",
+    "A-D, with a total of 14 km",
+    "A-B-C-D, with a total of 13 km",
+    "A-D, because it has the fewest edges"
+   ],
+   "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+   "clue": "Fewer edges does not mean less total weight."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-10-29T14:30:29Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question does not say that P-Q-S and P-R-S are the only routes from P to S. Strictly, the shortest path cannot be confirmed without knowing that. Add 'the only two routes' or similar."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The question does not say that P-Q-S and P-R-S are the only routes from P to S. Strictly, the shortest path cannot be confirmed without knowing that. Add 'the only two routes' or similar."
+  ]
+ },
+ "final": {
+  "title": "Shortest paths",
+  "card": [
+   "In a weighted network, the weight of a route is the sum of the weights on its edges. The shortest path between two vertices is the route with the smallest total weight.",
+   "The route with the fewest edges is not always the shortest. Add up the weights to compare routes.",
+   "For a small network, list every route from the start to the end without repeating a vertex. Add the weights of each route and choose the smallest total.",
+   "Example: A to D can go A-B-D with weights 4 and 7, or A-C-D with weights 3 and 5. A-B-D totals 4 + 7 = 11. A-C-D totals 3 + 5 = 8. The shortest path is A-C-D, with weight 8."
+  ],
+  "remember": "Add the weights along each route and pick the smallest total, not the fewest edges.",
+  "a": {
+   "q": "In a network, the only two routes from P to S are P-Q-S, with weights 6 and 9, and P-R-S, with weights 5 and 7. What is the weight of the shortest path from P to S?",
+   "opts": [
+    "12",
+    "15",
+    "11",
+    "13"
+   ],
+   "why": "P-R-S totals 5 + 7 = 12, and P-Q-S totals 6 + 9 = 15. The smaller total is 12. Choosing 15 would mean picking the longer route.",
+   "clue": "Add the weights along each route, then compare the totals."
+  },
+  "b": {
+   "d": 3,
+   "q": "Town A is joined to town D by a direct road of 14 km. The only other route goes A to B (4 km), B to C (5 km), then C to D (3 km). Which route is the shortest path from A to D?",
+   "opts": [
+    "A-B-C-D, with a total of 12 km",
+    "A-D, with a total of 14 km",
+    "A-B-C-D, with a total of 13 km",
+    "A-D, because it has the fewest edges"
+   ],
+   "why": "A-B-C-D totals 4 + 5 + 3 = 12 km, which is less than the direct 14 km. The direct road has fewer edges, but the shortest path depends on total weight, not the number of edges.",
+   "clue": "Fewer edges does not mean less total weight."
+  }
+ },
+ "cleared_by": "auto"
+}
