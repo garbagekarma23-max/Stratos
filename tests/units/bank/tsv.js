@@ -145,6 +145,28 @@ MADE_BANKS.tsv = {
       "clue": "Think of the case."
     }
   },
+  "tsv-mirage-supply-curve": {
+    "title": "Mirage supply curve",
+    "card": [
+      "The first line teaches mirage supply curve.",
+      ["Part", "The second line is about mirage supply curve."],
+      "The third line ends the card."
+    ],
+    "remember": "Hold on to mirage supply curve.",
+    "a": {
+      "q": "Which is true of mirage supply curve?",
+      "opts": ["Right: mirage supply curve", "Wrong one", "Wrong two", "Wrong three"],
+      "why": "The first option is right.",
+      "clue": "Read the card."
+    },
+    "b": {
+      "d": 2,
+      "q": "In a new case, what shows mirage supply curve?",
+      "opts": ["Right: mirage supply curve again", "Wrong four", "Wrong five", "Wrong six"],
+      "why": "The first option is right again.",
+      "clue": "Think of the case."
+    }
+  },
   "tsv-later-ripples": {
     "title": "Later ripples",
     "card": [

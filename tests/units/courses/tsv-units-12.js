@@ -28,7 +28,7 @@ MADE_COURSES.push({
           "id": "tsv-units-12-1-2",
           "title": "Looked chapter",
           "check": "checked",
-          "points": ["e-ped", "tsv-doubtful-nature", "tsv-fresh-scarcity", "tsv-lonely-tide-pools"]
+          "points": ["e-ped", "tsv-doubtful-nature", "tsv-fresh-scarcity", "tsv-lonely-tide-pools", "tsv-mirage-supply-curve"]
         }
       ]
     }

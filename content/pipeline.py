@@ -20,7 +20,7 @@ How a point goes through it:
            it shares with the point's title and brief, lowered for another subject and for years far apart. The best
            few go to the match step. A point with none is written new, with no match request.
   match    Claude Haiku judges the point against its shortlist: reuse a bank point as it is, adapt one, or write a new
-           point. A reuse or adapt it is not highly sure of goes to Claude Opus, which is not told Haiku's answer.
+           point. Every reuse, and an adapt it is not highly sure of, goes to Claude Opus, which is not told Haiku's answer.
            One Opus is not highly sure of waits for you in the review page: reuse it, adapt it, or write a new point.
   reuse    the bank point goes into the course as it is: nothing written, checked or reviewed. A sensitive topic, an
            English course, or a bank point already in the course still comes to you, or is written new.
@@ -111,8 +111,8 @@ SETTINGS = {
         'chapters': True},
 }
 # Matching, on cheaper and screened: Claude Haiku 5.5 judges each new point against the few bank points the shortlist
-# found (shortlist, below): reuse it as it is, adapt it, or write a new one. Only a reuse or an adapt it is not highly
-# sure of goes on to Claude Opus 5.5 (confirm), which is not told Haiku's answer. adapt writes only the changes an
+# found (shortlist, below): reuse it as it is, adapt it, or write a new one. Every reuse, and an adapt it is not highly
+# sure of, goes on to Claude Opus 5.5 (confirm), which is not told Haiku's answer. adapt writes only the changes an
 # adapted point needs, with the cheaper writer. Haiku's matching has not been measured against Opus yet.
 NEW_COURSE = 'cheaper'    # the settings a new course starts on
 OLD_COURSE = 'original'   # a course whose state.json has no settings in it started before there were settings
@@ -901,8 +901,9 @@ ADAPT_ANY = 'Fit it to this course and its syllabus, as the brief describes.'
 
 def match_collect(work, rec, item, r, course, d, cfg, at_now, reused):
     """A match answer: Haiku's first look (match), or Opus's second look (confirm), which is not told Haiku's answer.
-    new, or a bank point not on the shortlist: written new. A reuse or adapt that is not highly sure: Haiku's goes to
-    Opus, and Opus's to the owner. A highly sure adapt is adapted next, and a highly sure reuse is decided in
+    new, or a bank point not on the shortlist: written new. Every reuse Haiku names goes to Opus, because a reuse is
+    never checked or reviewed. An adapt Haiku is not highly sure of goes to Opus too. One Opus is not highly sure of
+    goes to the owner. A highly sure adapt is adapted next, and a highly sure reuse is decided in
     reuse_finish, once the content check has run on it. A match that cannot be answered is written new."""
     stage, kind = item['stage'], r.result.type
     m = r.result.message if kind == 'succeeded' else None
@@ -920,6 +921,9 @@ def match_collect(work, rec, item, r, course, d, cfg, at_now, reused):
     who = MODEL_NAMES.get(item.get('model'), stage)
     if verdict not in ('reuse', 'adapt') or same not in match_cands(course, d, point_of(course, rec['id']), rec):
         rec['stage'] = 'write'; log(rec, stage + ': ' + who + ' found no bank point the same, so it is written new')
+    elif stage == 'match' and cfg.get('confirm') and verdict == 'reuse':
+        # A reuse skips the checker and the owner, so Opus confirms every one, however sure Haiku is.
+        rec['stage'] = 'confirm'; log(rec, 'match: ' + who + ' says reuse ' + same + ', so to the Opus match check, as every reuse is')
     elif sure != 'high' and stage == 'match' and cfg.get('confirm'):
         rec['stage'] = 'confirm'; log(rec, 'match: ' + who + ' may ' + verdict + ' ' + same + ', but is not highly sure, so to the Opus match check')
     elif sure != 'high':
@@ -1472,8 +1476,8 @@ def plan_left(job):
         it = items[r['custom_id']]
         if 'pids' in it:
             add('chapter', 1, pts=len(it['pids'])); samples.setdefault('chapter', r)
-    # A point still being matched may end as a reuse, with nothing more to send, or as a new point: the low end
-    # counts the first, the high end the second. [low, high] for each count below.
+    # A point still being matched may end as a reuse, with only the Opus match check to send, or as a new point: the
+    # low end counts the first, the high end the second. [low, high] for each count below.
     written, ahead, screened = [0, 0], [0, 0], [0, 0]
     most, big = 0, None
     for pt in course['points']:
@@ -1485,7 +1489,8 @@ def plan_left(job):
             cands = match_cands(course, d, pt, rec)
             if len(cands) > most: most, big = len(cands), (pt, rec, cands)
             if s == 'match': add('match', 1)
-            if cfg.get('confirm'): add('confirm', 0 if s == 'match' else 1, 1)
+            # The low end counts the point as a reuse, and Opus confirms every reuse, so both ends have the check.
+            if cfg.get('confirm'): add('confirm', 1)
         if s == 'adapt':
             add('adapt', 1)
             if 'adapt' not in samples: samples['adapt'] = request('adapt', course, pt, rec, d, 'x', cfg)

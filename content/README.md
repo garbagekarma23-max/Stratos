@@ -97,7 +97,7 @@ There are two sets of settings to pick from, at the top of `content/pipeline.py`
 
 | Step | `original` (the first run) | `cheaper` (a new course) |
 | --- | --- | --- |
-| Match | Claude Opus 5.5, low effort. A match it is not highly sure of comes to you | Claude Haiku 5.5, medium effort. A match it is not highly sure of goes to Claude Opus 5.5, medium effort |
+| Match | Claude Opus 5.5, low effort. A match it is not highly sure of comes to you | Claude Haiku 5.5, medium effort. Every reuse, and an adapt it is not highly sure of, goes to Claude Opus 5.5, medium effort |
 | Adapt | Claude Opus 5.5, medium effort | Claude Sonnet 5.5, low effort |
 | Write | Claude Opus 5.5, medium effort, one point per request | Claude Sonnet 5.5, low effort, a chapter per request |
 | Check | Claude Opus 5.5, high effort, every point | Claude Opus 5.5, high effort, every point |
@@ -162,12 +162,12 @@ Many ideas are taught in more than one course: supply and demand in NSW Economic
 
 1. **The shortlist, with no API call.** Every published point in every bank gets a score from the words it shares with the new point's title and brief (rare words count for more, and "multi-stage" counts the same as "multistage"). The score is lowered for a different subject (Business Studies and Economics count as the same, and so do the maths courses) and for years far apart. The best 5 (`MATCH_MOST`) that score at least 0.2 (`MATCH_MIN`) go on. A point with none is written new, with no match request at all. On the NSW courses, the 21 points you or the matcher already matched all came out top of their shortlists.
 2. **The match: Claude Haiku 5.5.** It sees the new point, its course and state, and each shortlisted point in full (card and both questions), with the courses it is used in. It answers reuse, adapt or new, how sure it is, and for adapt, the changes needed.
-3. **The match check: Claude Opus 5.5**, only when Haiku says reuse or adapt but is not highly sure. Opus gets the same request and is not told Haiku's answer. Its answer decides.
+3. **The match check: Claude Opus 5.5**, for every reuse Haiku names, however sure it is, because a reuse skips both the checker and you. Also for an adapt Haiku is not highly sure of. Opus gets the same request and is not told Haiku's answer. Its answer decides. An adapt Haiku is highly sure of, and a point it says is new, go straight on without Opus, because both are written and checked anyway.
 4. **You**, only when Opus is not highly sure either. The review page shows it as a possible match.
 
 ### The three outcomes
 
-- **Reuse**: the bank point fits as it is. Nothing is written, checked or reviewed: the chapter lists the bank point's id, as `reuse:` in an outline does. A reuse still comes to you if it is about a sensitive topic or for an English course (those points are always reviewed), and is written new if the course already has that bank point. If the bank point fails the content check for this course (a word only another subject allows, such as landscape in Geography), it is adapted instead.
+- **Reuse**: the bank point fits as it is, and Opus has confirmed it. Nothing is written, checked or reviewed: the chapter lists the bank point's id, as `reuse:` in an outline does. A reuse still comes to you if it is about a sensitive topic or for an English course (those points are always reviewed), and is written new if the course already has that bank point. If the bank point fails the content check for this course (a word only another subject allows, such as landscape in Geography), it is adapted instead.
 - **Adapt**: the bank point teaches the same idea at the right depth, but needs small changes for this syllabus: a term or notation, which formulas are given, a law or body that differs between states, or a local example. Claude Sonnet 5.5 gets the bank point part by part and the list of changes, and answers with only the parts it changes (`prompts/adapter.md`). Both questions are always worded afresh, because no two questions may share the same text (step 9). The adapted point is a new point in this course's bank, with its own id and its own progress, and goes through the content check, the checker, the fix, autoreview and recheck like any other. Its file has an `adapt` entry: the bank point it came from, the changes asked for, and the parts that changed.
 - **New**: written from scratch, as before.
 
@@ -175,9 +175,9 @@ Each point's file keeps its `shortlist` (with the scores), Haiku's answer (`matc
 
 ### What it costs
 
-The shortlist is free. A Haiku match is about 0.03 cents a point with batches, and an Opus match check about 1 to 2 cents. Before, every point in a course whose subject had a bank went to Opus with every point in that bank: Business Studies Year 12's 106 match requests cost US$0.77, and the four NSW wave 2 courses that matched spent US$2.37 on it. The ten other wave 2 courses were never matched at all.
+The shortlist is free. A Haiku match is about 0.03 cents a point with batches, and an Opus match check about 1 to 2 cents. Every reuse costs one Opus match check, which is still far less than writing and checking a new point (about 4 cents). Before, every point in a course whose subject had a bank went to Opus with every point in that bank: Business Studies Year 12's 106 match requests cost US$0.77, and the four NSW wave 2 courses that matched spent US$2.37 on it. The ten other wave 2 courses were never matched at all.
 
-The estimate counts a point still to be matched both ways: its low end as if it were reused, its high end as if it were written new and checked by Opus too. Plan for the high number.
+The estimate counts a point still to be matched both ways: its low end as if it were reused (so with its Opus match check), its high end as if it were written new after the match check too. Plan for the high number.
 
 ### Courses from other states
 

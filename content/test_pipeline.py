@@ -22,7 +22,8 @@ undo, nothing decided twice); rebalance (the questions whose right option is cle
 --max-dollars and --max-new-dollars, new wrong options with the question and right option kept, the check of each
 rewrite on Opus, what it keeps and why, nothing sent twice, and check_content's warning before and after); reuse, adapt and new
 across states (the shortlist with no API call, the split and estimate before sending, Haiku's match, Opus only for a
-match Haiku is not sure of and never told Haiku's answer, a reuse with nothing written, a bank point reused twice, an
+reuse Haiku names and for an adapt it is not sure of, never told Haiku's answer, a sure Haiku reuse Opus turns down written
+new, a reuse with nothing written, a bank point reused twice, an
 adapt with only the changes, a question kept word for word caught and adapted again, the adapted point checked and
 flagged like any other, a possible match adapted from the review page, a reuse that fails the content check adapted,
 a sensitive or English reuse sent to the owner, and two Victorian courses published with their units, written to
@@ -145,6 +146,7 @@ class FakeAPI:
                               'reason': ('Opus' if opus else 'Haiku') + (' found no bank point the same.' if verdict == 'new' else ' says it teaches the same idea.')}
             if 'Same' in title: return said('reuse', 'medium')
             if 'Reuse' in title or 'Twice' in title: return said('reuse', 'high')
+            if 'Mirage' in title: return said('new', 'high') if opus else said('reuse', 'high')
             if 'Adapt' in title or 'Rough' in title: return said('adapt', 'high', ['Use the term this state uses.'])
             if 'Maybe' in title: return said('reuse', 'high') if opus else said('adapt', 'medium', ['A change Haiku guessed.'])
             if 'Doubtful' in title: return said('adapt', 'medium', ['A change Haiku guessed.'])
@@ -294,7 +296,7 @@ units:
 
 # Two courses for Victoria, which names its years by units. They reuse, adapt and write points against the test
 # course's bank (published by then) and the Economics bank. What the stand-in answers depends on words in each title:
-# Reuse and Twice are the same as a bank point, Adapt and Rough need changes (Rough's first changes keep a question word
+# Reuse and Twice are the same as a bank point, Mirage is a reuse Haiku is sure of that Opus turns down, Adapt and Rough need changes (Rough's first changes keep a question word
 # for word), Maybe is an adapt Haiku is not sure of that Opus says is a reuse, Doubtful is an adapt neither is sure of,
 # and Fresh has a bank point close by that is not the same. Lonely is like nothing in any bank.
 UNITS12 = """id: tsv-units-12
@@ -331,6 +333,8 @@ units:
             brief: "Scarcity: wants are unlimited and resources are limited, the basic economic problem."
           - title: Lonely tide pools
             brief: Rock platforms between the tides, which no bank has a point on.
+          - title: Mirage supply curve
+            brief: "The supply curve: it slopes up as the price rises, the good's own price moves along the curve, and costs shift it."
 """
 UNITS34 = """id: tsv-units-34
 subject: Testing
@@ -775,17 +779,19 @@ def states_tests(tmp, repo, printed, api):
     # ---------- the shortlist and the split, before anything is sent ----------
     code, out = go('estimate', u12)
     sl = {p_: (R(p_).get('shortlist') or []) for p_ in ['tsv-reuse-plain-one', 'tsv-adapt-dash-one', 'tsv-rough-flag-one', 'tsv-maybe-price-elasticity',
-                                                         'tsv-doubtful-nature', 'tsv-fresh-scarcity', 'tsv-lonely-tide-pools']}
+                                                         'tsv-doubtful-nature', 'tsv-fresh-scarcity', 'tsv-lonely-tide-pools', 'tsv-mirage-supply-curve']}
     top = {k: v[0][0] if v else None for k, v in sl.items()}
     check(top == {'tsv-reuse-plain-one': 'tst-plain-one', 'tsv-adapt-dash-one': 'tst-dash-one', 'tsv-rough-flag-one': 'tst-flag-one',
-                  'tsv-maybe-price-elasticity': 'e-ped', 'tsv-doubtful-nature': 'e-nature', 'tsv-fresh-scarcity': 'e-scarcity', 'tsv-lonely-tide-pools': None},
+                  'tsv-maybe-price-elasticity': 'e-ped', 'tsv-doubtful-nature': 'e-nature', 'tsv-fresh-scarcity': 'e-scarcity', 'tsv-lonely-tide-pools': None,
+                  'tsv-mirage-supply-curve': 'e-supply'},
           'with no API call, the shortlist finds the likely bank point in another course\'s bank and in the Economics bank, best first: ' + json.dumps(top))
     check(all(len(v) <= pipeline.MATCH_MOST and all(x[1] >= pipeline.MATCH_MIN for x in v) for v in sl.values()) and R('tsv-lonely-tide-pools')['stage'] == 'write',
           'each shortlist has at most ' + str(pipeline.MATCH_MOST) + ' points above the lowest score, and a point like nothing in any bank goes straight to writing')
-    check(code == 0 and 'Reuse 0, adapt 0, new 1. Still to match: 7, against ' in out and 'match: 7 requests, Claude Haiku 5.5, medium effort' in out and
-          'match check: 0 to 7 requests, Claude Opus 5.5, medium effort' in out, 'the estimate shows the split and the match steps before anything is sent')
+    check(code == 0 and 'Reuse 0, adapt 0, new 1. Still to match: 8, against ' in out and 'match: 8 requests, Claude Haiku 5.5, medium effort' in out and
+          'match check: 8 requests, Claude Opus 5.5, medium effort' in out,
+          'the estimate shows the split and the match steps before anything is sent, with an Opus match check for each point at both ends, since every reuse has one')
     lo, hi = (float(x) for x in re.search(r'With batches \(the default\): US\$(\d+\.\d\d) to US\$(\d+\.\d\d)', out).groups())
-    check(hi > lo, 'and its low end counts the points being matched as reused, its high end as new: US$' + format(lo, '.2f') + ' to US$' + format(hi, '.2f'))
+    check(hi > lo, 'and its low end counts the points being matched as reused, with only the match check, its high end as new: US$' + format(lo, '.2f') + ' to US$' + format(hi, '.2f'))
     code, out = go('status', u12.replace('12.yaml', 'x.yaml'))
     bad_level = UNITS12.replace('level: Units 1 and 2', 'level: units 1 and 2')
     with open(os.path.join(tmp, 'bad-level.yaml'), 'w', encoding='utf-8') as f: f.write(bad_level)
@@ -798,20 +804,28 @@ def states_tests(tmp, repo, printed, api):
     reqs = [r for bid, b in api.batches.items() if int(bid.split('_')[1]) > first for r in b['requests']]
     of = lambda st: [r for r in reqs if stage_of(r['params']) == st]
     user = lambda r: r['params']['messages'][0]['content']
-    check(code == 0 and out.index('Still to match: 7') < out.index('Sent ') and 'Reuse 2, adapt 2, new 3. Possible matches for you to review: 1.' in out,
+    check(code == 0 and out.index('Still to match: 8') < out.index('Sent ') and 'Reuse 2, adapt 2, new 4. Possible matches for you to review: 1.' in out,
           'run shows the split before sending, and again once matching has decided')
-    check(len(of('match')) == 7 and all(r['params']['model'] == pipeline.HAIKU and r['params']['output_config']['effort'] == 'medium' for r in of('match')) and
+    check(len(of('match')) == 8 and all(r['params']['model'] == pipeline.HAIKU and r['params']['output_config']['effort'] == 'medium' for r in of('match')) and
           all(user(r).count('\nId: ') <= pipeline.MATCH_MOST for r in of('match')) and not any('Lonely' in user(r) for r in of('match')),
           'Haiku judges each point with a shortlist, against only those bank points, and never the point with none')
     check(any('Id: tst-plain-one\nUsed in: Testing, Year 9 (New South Wales)' in user(r) for r in of('match')) and
           all('for students in Victoria, Australia' in user(r) for r in of('match')), 'each bank point comes with the courses it is used in, and the new course with its state')
     conf = of('confirm')
-    check(sorted(re.search(r'^Point: (.*)$', user(r), re.M).group(1) for r in conf) == ['Doubtful nature', 'Maybe price elasticity'] and
+    check(sorted(re.search(r'^Point: (.*)$', user(r), re.M).group(1) for r in conf) ==
+          ['Doubtful nature', 'Maybe price elasticity', 'Mirage supply curve', 'Reuse plain one', 'Twice plain one'] and
           all(r['params']['model'] == pipeline.OPUS for r in conf) and not any('Haiku' in user(r) or 'guessed' in user(r) for r in conf),
-          'only a match Haiku is not highly sure of goes to Opus, which is not told Haiku\'s answer')
+          'Opus checks every reuse Haiku names, however sure, and an adapt Haiku is not highly sure of, and is never told Haiku\'s answer')
+    check(not any('Adapt dash one' in user(r) or 'Rough flag one' in user(r) or 'Fresh scarcity' in user(r) for r in conf),
+          'an adapt Haiku is highly sure of, and a point it says is new, never go to Opus')
     reuse = R('tsv-reuse-plain-one')
-    check(reuse['stage'] == 'reuse' and reuse['reuse'] == 'tst-plain-one' and set(reuse['usd']) == {'match'} and
-          not any(t == 'Reuse plain one' and st != 'match' for t, st in api.seen), 'reuse: the bank point fits as it is, with no writing, checking or review')
+    check(reuse['stage'] == 'reuse' and reuse['reuse'] == 'tst-plain-one' and reuse['confirm']['verdict'] == 'reuse' and set(reuse['usd']) == {'match', 'confirm'} and
+          not any(t == 'Reuse plain one' and st not in ('match', 'confirm') for t, st in api.seen),
+          'reuse: once Opus confirms it, the bank point goes in as it is, with no writing, checking or review')
+    mirage = R('tsv-mirage-supply-curve')
+    check(mirage['match']['verdict'] == 'reuse' and mirage['match']['sure'] == 'high' and mirage['confirm']['verdict'] == 'new' and
+          mirage['stage'] == 'cleared' and 'write' in mirage['usd'] and not mirage.get('reuse'),
+          'a reuse Haiku is highly sure of but Opus turns down is written new')
     maybe = R('tsv-maybe-price-elasticity')
     check(maybe['stage'] == 'reuse' and maybe['reuse'] == 'e-ped' and maybe['match']['verdict'] == 'adapt' and maybe['confirm']['verdict'] == 'reuse' and
           set(maybe['usd']) == {'match', 'confirm'}, 'a reuse Opus is highly sure of is taken, whatever Haiku said')
@@ -856,7 +870,7 @@ def states_tests(tmp, repo, printed, api):
     check('Fixes to recheck: 1.\n    tsv-rough-flag-one' in out, 'and so does recheck')
     code, out = go('run', u12, '--max-dollars', '5')
     doubt = R('tsv-doubtful-nature')
-    check(code == 0 and doubt['stage'] == 'cleared' and doubt['final']['title'] == 'Adapted The nature of economics' and 'Reuse 2, adapt 3, new 3.' in out,
+    check(code == 0 and doubt['stage'] == 'cleared' and doubt['final']['title'] == 'Adapted The nature of economics' and 'Reuse 2, adapt 3, new 4.' in out,
           'the next run adapts it, checks it and clears it')
     r = pipeline.decide(work, repo_s, {'course': 'tsv-units-12', 'id': 'tsv-rough-flag-one', 'action': 'fix'})
 
@@ -893,7 +907,7 @@ def states_tests(tmp, repo, printed, api):
           'each course carries its level, as its heading too')
     ch1, ch2 = k12['units'][0]['chapters']
     check(ch1['points'] == ['tst-plain-one', 'tsv-twice-plain-one', 'tsv-adapt-dash-one', 'tsv-rough-flag-one'] and
-          ch2['points'] == ['e-ped', 'tsv-doubtful-nature', 'tsv-fresh-scarcity', 'tsv-lonely-tide-pools'],
+          ch2['points'] == ['e-ped', 'tsv-doubtful-nature', 'tsv-fresh-scarcity', 'tsv-lonely-tide-pools', 'tsv-mirage-supply-curve'],
           'a chapter lists a reused point by its bank id, and an adapted point by its own')
     check('tst-plain-one' not in C['banks']['tsv'] and C['banks']['tsv']['tsv-adapt-dash-one']['title'] == 'Adapted Dash one' and
           [u['course'] for u in C['used']['tst-plain-one']] == ['tst-course', 'tsv-units-12'], 'the reused point stays in its own bank, now used by both courses')
