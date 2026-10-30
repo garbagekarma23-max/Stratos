@@ -1075,7 +1075,7 @@ MADE_BANKS.geo = {
     ],
     "remember": "Primary data is data you collect yourself, by observing, measuring, surveying or interviewing.",
     "a": {
-      "q": "Which of these is an example of primary data?",
+      "q": "Which of these is an example of primary data in a geography fieldwork study?",
       "opts": [
         "A student counts cyclists passing a bridge in one hour",
         "A student uses census figures on how people travel to work",
