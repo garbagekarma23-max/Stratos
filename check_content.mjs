@@ -8,6 +8,8 @@
 // never quotes more than 10 words in a row.
 // It also warns when a course's right answer is the longest option far more often than chance, which lets a student
 // guess by length. content/pipeline.py rebalance fixes a course already written.
+// No two questions may ask the same thing word for word, in any bank or in NSW Economics (content.js). The tests find
+// each answer by its question's text, and a student studying two courses would meet one question with two answers.
 //   node check_content.mjs                 checks everything in src/
 //   node check_content.mjs --json FILE     checks only the points in FILE ({"kind": ..., "subject": ..., "points": {id: point}})
 //                                          and prints the problems for each as JSON. content/pipeline.py uses this.
@@ -80,12 +82,30 @@ const report = (name, t, id) => {
 };
 const tally = () => ({pts: 0, qs: 0, longest: 0, clear: 0, margins: []});
 
+/* Two questions share the same text when they match ignoring capitals, spaces and the mark at the end. asked() lists
+   every question of NSW Economics and every bank, by its text, as [id, a or b], leaving out the points in skip. */
+const sameText = q => q.toLowerCase().replace(/\s+/g, ' ').replace(/[\s?.!:]+$/, '').trim();
+function asked(skip) {
+  const out = new Map(), add = (id, p) => { for (const k of ['a', 'b']) if (p[k] && typeof p[k].q === 'string') { const t = sameText(p[k].q); (out.get(t) || out.set(t, []).get(t)).push([id, k]); } };
+  for (const ch of TOPIC.chapters) for (const p of ch.points) if (!skip.has(p.id)) add(p.id, p);
+  for (const [id, p] of Object.entries(BANK)) if (!skip.has(id)) add(id, p);
+  return {map: out, add: add};
+}
+const twins = (map, id, k, q) => (map.get(sameText(q)) || []).filter(([i, j]) => i !== id || j !== k).map(([i, j]) => i + j);
+
 /* --json FILE: check only the points in it, for content/pipeline.py, and print each point's problems. */
 if (process.argv[2] === '--json') {
   const input = JSON.parse(fs.readFileSync(process.argv[3], 'utf8')), out = {};
+  // A point in the file takes the place of the bank's copy with the same id, so a point is never its own copy.
+  const qs = asked(new Set(Object.keys(input.points)));
+  for (const [id, p] of Object.entries(input.points)) if (p && typeof p === 'object') qs.add(id, p);
   for (const [id, p] of Object.entries(input.points)) {
     problems = [];
     try { checkPoint(id, p, tally(), input.kind, input.subject); } catch (e) { problems.push(id + ' could not be checked: ' + e.message); }
+    for (const k of ['a', 'b']) {
+      const q = p && p[k] && p[k].q, same = typeof q === 'string' ? twins(qs.map, id, k, q) : [];
+      if (same.length) problems.push(id + k + ' asks the same question, word for word, as ' + same.join(' and ') + ': ' + q.trim() + ' Word it differently.');
+    }
     out[id] = problems;
   }
   console.log(JSON.stringify(out));
@@ -145,6 +165,7 @@ for (const c of COURSES) {
   report(c.course + ', ' + c.year, t, isMade && c.id);
 }
 for (const id of Object.keys(BANK)) if (!used.has(id)) problems.push(id + ' is in the bank but no course lists it');
+for (const [q, where] of asked(new Set()).map) if (where.length > 1) problems.push(where.map(([i, k]) => i + k).join(' and ') + ' ask the same question, word for word: ' + q);
 for (const id of [...TOPIC.chapters.map(c => c.id), ...MATHS.chapters.map(c => c.id)]) if (ids.has(id)) problems.push(id + ' clashes with a course chapter id');
 for (const id of ids) if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(id)) problems.push(id + ' is not a chapter id: lower-case letters and numbers joined by dashes');
 

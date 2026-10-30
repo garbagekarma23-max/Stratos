@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stratos review</title>
 <!-- The review page for the content pipeline. python3 content/pipeline.py review serves it on this computer only.
-     It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank, not
+     It shows only the points waiting for the owner: flagged by the checker, a possible match in the bank (reuse it,
+     adapt it, or write a new point), not
      written, or a spot check from autoreview or recheck. Every decision is saved straight away in content/work. The Compare tab
      puts a trial run (run --as) next to its course, point by point, so the owner can judge whether cheaper settings
      keep the quality. -->
@@ -165,10 +166,14 @@ function render() {
     if (it.flags.length) side += '<div class="label">Checker</div>' + it.flags.map(f => '<div class="flag">' + esc(f) + '</div>').join('');
     acts = '<button type="button" class="primary" data-act="save">Save and approve</button><button type="button" data-act="cancel">Cancel</button>';
   } else if (it.stage === 'match-review') {
-    mid += '<h2 class="title">' + esc(it.title) + '</h2><p>This point may already be in the bank as <b>' + esc(it.match.same) + '</b>. Reusing it shares the card, the questions and each student\'s progress with the courses that already use it.</p>' +
-      (it.match.point ? '<div class="label">In the bank now</div>' + pointHtml(it.match.point) : '');
-    side += '<div class="label">Why it may match</div><p>' + esc(it.match.reason) + '</p>';
-    acts = '<button type="button" class="primary" data-act="reuse">Reuse ' + esc(it.match.same) + '</button><button type="button" data-act="reject">Write a new point</button>';
+    const m = it.match, changes = m.changes || [];
+    mid += '<h2 class="title">' + esc(it.title) + '</h2><p>This point may already be in the bank as <b>' + esc(m.same) + '</b>' + (m.usedIn ? ', used in ' + esc(m.usedIn) : '') +
+      '. Reusing it shares the card, the questions and each student\'s progress with the courses that already use it. Adapting it writes a new point for this course from it, with only the changes below, then checks it like any other.</p>' +
+      (m.point ? '<div class="label">In the bank now</div>' + pointHtml(m.point) : '');
+    side += '<div class="label">Why it may match</div><p>' + esc(m.reason) + '</p>' +
+      (m.verdict ? '<p class="small">' + esc((m.by ? m.by + ' said ' : 'Said ') + m.verdict + ', ' + (m.sure || 'not') + ' sure') + '.</p>' : '') +
+      (changes.length ? '<div class="label">Changes for this course</div>' + changes.map(c => '<div class="flag">' + esc(c) + '</div>').join('') : '');
+    acts = '<button type="button" class="primary" data-act="reuse">Reuse ' + esc(m.same) + '</button><button type="button" data-act="adapt">Adapt it</button><button type="button" data-act="reject">Write a new point</button>';
   } else {
     if (it.proposal) mid += '<div class="seg" role="group" aria-label="Version"><button type="button" data-view="draft" aria-pressed="' + (view === 'draft') + '">As written</button><button type="button" data-view="fix" aria-pressed="' + (view === 'fix') + '">The fix</button></div>';
     if (it.draft || it.proposal) mid += view === 'fix' && it.proposal ? pointHtml(it.proposal, it.draft) : pointHtml(it.draft);

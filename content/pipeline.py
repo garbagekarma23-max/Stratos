@@ -16,8 +16,17 @@ Run it from the repository folder. On Windows, type py where this says python3.
 content/README.md walks through each step.
 
 How a point goes through it:
-  match    if the bank already has points in the same subject, Claude says whether one is the same idea. A match
-           waits for you in the review page: reuse it, or have a new point written.
+  shortlist with no API call, every published point in every bank (any subject, state or year) is scored by the words
+           it shares with the point's title and brief, lowered for another subject and for years far apart. The best
+           few go to the match step. A point with none is written new, with no match request.
+  match    Claude Haiku judges the point against its shortlist: reuse a bank point as it is, adapt one, or write a new
+           point. A reuse or adapt it is not highly sure of goes to Claude Opus, which is not told Haiku's answer.
+           One Opus is not highly sure of waits for you in the review page: reuse it, adapt it, or write a new point.
+  reuse    the bank point goes into the course as it is: nothing written, checked or reviewed. A sensitive topic, an
+           English course, or a bank point already in the course still comes to you, or is written new.
+  adapt    the cheaper writer gets the bank point and the changes it needs for this course (terms, notation, given
+           formulas, local laws or examples), and answers with only the changed parts. Both questions are always
+           worded afresh. The adapted point is a new point, checked like any other.
   write    Claude writes the point: card, remember line, check question and practice question. With the cheaper
            settings, one request writes every point of a chapter. node check_content.mjs --json checks each point.
            If one fails, Claude rewrites that point on its own, once, with the problems.
@@ -39,7 +48,8 @@ How a point goes through it:
            new options used. Otherwise the point keeps its old options.
   review   you approve it, use the fix, edit it, or reject it with a note (it is then written again).
   cleared  ready to publish. A point the checker passed is cleared at once.
-Each step is one Message Batch for every point that needs it, which costs half the normal price. With --now, the
+Each step is one Message Batch for every point that needs it, which costs half the normal price. estimate and run
+show how the points split (reuse, adapt, new, still to match) and the estimate before anything is sent. With --now, the
 requests go one by one to the normal API instead: done in minutes, at the full price.
 
 Everything is saved as it arrives, in content/work/<course id>/: state.json (the settings, the batches sent and the
@@ -48,7 +58,7 @@ Running the same command again carries on from there. Nothing is sent twice unle
 
 The API key is read from the ANTHROPIC_API_KEY environment variable and never written anywhere or printed.
 """
-import argparse, hashlib, http.server, json, os, queue, random, re, secrets, subprocess, sys, threading, time, urllib.parse
+import argparse, hashlib, http.server, json, math, os, queue, random, re, secrets, subprocess, sys, threading, time, urllib.parse
 from datetime import datetime, timezone
 from types import SimpleNamespace as NS
 
@@ -65,9 +75,12 @@ MODEL_NAMES = {OPUS: 'Claude Opus 5.5', SONNET: 'Claude Sonnet 5.5', HAIKU: 'Cla
 # changes them.
 SETTINGS = {
     # The settings of the first run (nsw-bus-11): Claude Opus 5.5 at every step, and one writing request per point.
-    # It cost about 3.7 cents a point with batches.
+    # It cost about 3.7 cents a point with batches. Opus judges each match itself, so there is no second match check:
+    # a match it is not highly sure of goes to the owner.
     'original': {
         'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'confirm': None,
+        'adapt': {'model': OPUS, 'effort': 'medium', 'out': (400, 900)},
         'write': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
         'screen': None,
         'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
@@ -76,7 +89,9 @@ SETTINGS = {
     # Cheaper, for a new course: Claude Sonnet 5.5 writes a chapter at a time, and Claude Opus 5.5 checks every point
     # and writes the fixes. A trial of nsw-bus-11 matched the original's quality and flag rate at about 2 cents a point.
     'cheaper': {
-        'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'match': {'model': HAIKU, 'effort': 'medium', 'out': (400, 1200)},
+        'confirm': {'model': OPUS, 'effort': 'medium', 'out': (600, 1600)},
+        'adapt': {'model': SONNET, 'effort': 'low', 'out': (300, 700)},
         'write': {'model': SONNET, 'effort': 'low', 'out': (600, 900)},
         'screen': None,
         'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
@@ -86,16 +101,22 @@ SETTINGS = {
     # In the nsw-bus-11 trial Haiku sent all 20 points on, so it saved nothing. Kept for a later Haiku, only by asking
     # for it with --settings screened.
     'screened': {
-        'match': {'model': OPUS, 'effort': 'low', 'out': (500, 1500)},
+        'match': {'model': HAIKU, 'effort': 'medium', 'out': (400, 1200)},
+        'confirm': {'model': OPUS, 'effort': 'medium', 'out': (600, 1600)},
+        'adapt': {'model': SONNET, 'effort': 'low', 'out': (300, 700)},
         'write': {'model': SONNET, 'effort': 'low', 'out': (600, 900)},
         'screen': {'model': HAIKU, 'effort': 'medium', 'out': (550, 750)},
         'check': {'model': OPUS, 'effort': 'high', 'out': (550, 750)},
         'fix': {'model': OPUS, 'effort': 'medium', 'out': (1100, 1400)},
         'chapters': True},
 }
+# Matching, on cheaper and screened: Claude Haiku 5.5 judges each new point against the few bank points the shortlist
+# found (shortlist, below): reuse it as it is, adapt it, or write a new one. Only a reuse or an adapt it is not highly
+# sure of goes on to Claude Opus 5.5 (confirm), which is not told Haiku's answer. adapt writes only the changes an
+# adapted point needs, with the cheaper writer. Haiku's matching has not been measured against Opus yet.
 NEW_COURSE = 'cheaper'    # the settings a new course starts on
 OLD_COURSE = 'original'   # a course whose state.json has no settings in it started before there were settings
-MAX_TOKENS = {'match': 8000, 'write': 32000, 'chapter': 64000, 'screen': 32000, 'check': 32000, 'fix': 32000, 'rebalance': 16000}
+MAX_TOKENS = {'match': 8000, 'confirm': 16000, 'adapt': 16000, 'write': 32000, 'chapter': 64000, 'screen': 32000, 'check': 32000, 'fix': 32000, 'rebalance': 16000}
 # rebalance, for courses already written: the cheaper writer, Claude Sonnet 5.5, rewrites the wrong options of a question
 # whose right option is clearly the longest. One request a point, in a batch.
 REBALANCE = {'model': SONNET, 'effort': 'medium', 'out': (400, 900)}
@@ -134,7 +155,7 @@ POLL_SECONDS = int(os.environ.get('STRATOS_POLL', '60'))
 TRIES = 3
 KINDS = ['standard', 'english', 'maths', 'theory']
 EXAMPLES = ['e-positive', 'e-ped', 'e-externality']
-WAITING = ('match', 'write', 'screen', 'check', 'fix')
+WAITING = ('match', 'confirm', 'adapt', 'write', 'screen', 'check', 'fix')
 # Words in a brief or a draft that send a point to the Opus checker without Haiku, so a sensitive topic Haiku misses is
 # still judged by Opus. A word that turns up in another sense (an economic depression) only costs a check.
 SENSITIVE = re.compile(r'\b(mental (health|illness)|suicid\w*|self[- ]harm\w*|depress\w*|anxiety|eating disorders?|drugs?|'
@@ -218,6 +239,15 @@ def year_text(years):
     if len(ys) == 2: return 'Years ' + str(ys[0]) + ' and ' + str(ys[1])
     return 'Years ' + str(ys[0]) + ' to ' + str(ys[-1])
 
+def level_text(course):
+    """How the course names its level: "Units 1 and 2 (Year 11)" for an outline with a level line, or "Year 11"."""
+    return course['level'] + ' (' + year_text(course['years']) + ')' if course.get('level') else year_text(course['years'])
+
+def where_text(course):
+    """Where the students are: their state for a state's course, or Australia."""
+    name = course.get('placeName')
+    return name + ', Australia' if name else 'Australia'
+
 STOP_WORDS = {'a', 'an', 'the', 'of', 'and', 'in', 'to', 'for', 'is', 'on', 'its', 'what', 'how', 'why'}
 
 def slug(title, most=4):
@@ -252,12 +282,15 @@ def read_outline(path, d):
     years = o.get('years')
     if not isinstance(years, list) or not years or any(not isinstance(y, int) or y < 7 or y > 12 for y in years):
         bad.append('years must be a list of years from 7 to 12, like [11]. Stratos is for Years 7 to 12 only')
+    level = o.get('level')
+    if level is not None and (not isinstance(level, str) or not re.fullmatch(r'[A-Z][A-Za-z0-9 ]{1,29}', level)):
+        bad.append('level must be a short heading in sentence case, such as Units 1 and 2, or left out for a course named by its years')
     if o['kind'] not in KINDS: bad.append('kind must be one of ' + ', '.join(KINDS))
     if o['place'] not in d['places']: bad.append('place must be one of ' + ', '.join(d['places']))
     also = o.get('also_match') or []
     if not isinstance(also, list) or any(b not in d['banks'] for b in also): bad.append('also_match must list banks that exist: ' + ', '.join(sorted(d['banks'])))
-    course = {k: o.get(k) for k in ['id', 'subject', 'bank', 'name', 'about', 'place', 'kind', 'note', 'syllabus', 'short']}
-    course.update({'years': years, 'also_match': also, 'chips': o.get('chips') or [], 'units': [], 'points': []})
+    course = {k: o.get(k) for k in ['id', 'subject', 'bank', 'name', 'about', 'place', 'kind', 'note', 'syllabus', 'short', 'level']}
+    course.update({'years': years, 'placeName': (d.get('placeNames') or {}).get(o['place']), 'also_match': also, 'chips': o.get('chips') or [], 'units': [], 'points': []})
     titles = set()
     for ui, u in enumerate(o.get('units') or []):
         if not isinstance(u, dict) or not u.get('title'): bad.append('unit ' + str(ui + 1) + ' needs a title'); continue
@@ -361,9 +394,14 @@ CHECK_SCHEMA = obj({
     'sure': {'type': 'string', 'enum': ['high', 'medium', 'low']},
     'sensitive': {'type': 'string', 'enum': ['none', 'mental-health', 'drugs', 'sexual-health', 'first-nations', 'set-text', 'other-sensitive']},
     'summary': STR})
-MATCH_SCHEMA = obj({'same': STR, 'reason': STR})
+MATCH_SCHEMA = obj({'verdict': {'type': 'string', 'enum': ['reuse', 'adapt', 'new']}, 'same': STR, 'changes': {'type': 'array', 'items': STR},
+                    'sure': {'type': 'string', 'enum': ['high', 'medium', 'low']}, 'reason': STR})
+# The parts of a point an adapt can change, by name. card1 is the first card line's text, card1 label its label.
+ADAPT_PARTS = (['title'] + [f'card{i}' + x for i in range(1, 5) for x in ('', ' label')] + ['remember'] +
+               [k + '.' + x for k in 'ab' for x in ['q', 'opt1', 'opt2', 'opt3', 'opt4', 'why', 'clue']])
+ADAPT_SCHEMA = obj({'changes': {'type': 'array', 'items': obj({'part': {'type': 'string', 'enum': ADAPT_PARTS}, 'text': STR})}})
 WRONG = obj({'wrong': {'type': 'array', 'items': STR}})
-SCHEMAS = {'match': MATCH_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'screen': CHECK_SCHEMA}
+SCHEMAS = {'match': MATCH_SCHEMA, 'confirm': MATCH_SCHEMA, 'adapt': ADAPT_SCHEMA, 'write': POINT_SCHEMA, 'fix': POINT_SCHEMA, 'check': CHECK_SCHEMA, 'screen': CHECK_SCHEMA}
 
 def to_bank(p):
     """A point as Claude writes it (card lines with labels) to the bank's shape (a label line is [label, text])."""
@@ -375,6 +413,38 @@ def to_claude(p):
     """A bank point back to the shape Claude writes in."""
     card = [{'label': l[0], 'text': l[1]} if isinstance(l, list) else {'label': '', 'text': l} for l in p['card']]
     return {'title': p['title'], 'card': card, 'remember': p['remember'], 'a': p['a'], 'b': p['b']}
+
+def parts(p):
+    """A bank point as named parts, one a line, for an adapt request: title, card1, card1 label, ..., b.clue."""
+    out = ['title: ' + p['title']]
+    for i, l in enumerate(p['card'], 1):
+        if isinstance(l, list): out.append(f'card{i} label: ' + l[0])
+        out.append(f'card{i}: ' + (l[1] if isinstance(l, list) else l))
+    out.append('remember: ' + p['remember'])
+    for k in 'ab':
+        out.append(k + '.q: ' + p[k]['q'])
+        out += [k + '.opt' + str(i) + ': ' + o + (' (right)' if i == 1 else '') for i, o in enumerate(p[k]['opts'], 1)]
+        out += [k + '.why: ' + p[k]['why'], k + '.clue: ' + p[k]['clue']]
+    return out
+
+def adapted(src, changes):
+    """A bank point with an adapt's changes made: each names a part and gives its whole new text. Returns the point in
+    the bank's shape and the names of the parts that changed."""
+    p, done = json.loads(json.dumps(to_claude(src))), []
+    for ch in changes:
+        part, text = ch.get('part', ''), (ch.get('text') or '').strip()
+        m = re.fullmatch(r'card([1-4])( label)?', part)
+        if m:
+            i = int(m.group(1)) - 1
+            if i == len(p['card']): p['card'].append({'label': '', 'text': ''})
+            if i >= len(p['card']): continue
+            p['card'][i]['label' if m.group(2) else 'text'] = text
+        elif re.fullmatch(r'[ab]\.opt[1-4]', part): p[part[0]]['opts'][int(part[-1]) - 1] = text
+        elif re.fullmatch(r'[ab]\.(q|why|clue)', part): p[part[0]][part[2:]] = text
+        elif part in ('title', 'remember'): p[part] = text
+        else: continue
+        done.append(part)
+    return to_bank(p), list(dict.fromkeys(done))
 
 
 # ---------- prompts ----------
@@ -388,8 +458,8 @@ def writer_system(course, d):
 def context(course, pt):
     """The course, the chapter and its other points, so Claude writes this point to fit them."""
     unit = course['units'][pt['unit']]; ch = unit['chapters'][pt['chapter']]
-    lines = ['Course: ' + course['subject'] + ', ' + year_text(course['years']) + ' (' + course['about'] + ').',
-             'Students: ' + year_text(course['years']) + ', in Australia.']
+    lines = ['Course: ' + course['subject'] + ', ' + level_text(course) + ' (' + course['about'] + ').',
+             'Students: ' + year_text(course['years']) + ', in ' + where_text(course) + '.']
     if course.get('syllabus'): lines.append('Syllabus: ' + course['syllabus'] + '.')
     lines += ['Unit ' + str(pt['unit'] + 1) + ': ' + unit['title'], 'Chapter ' + str(pt['chapter'] + 1) + ': ' + ch['title'],
               'The points in this chapter, in order. Each teaches its own idea: do not teach or ask about the others in this point.']
@@ -440,13 +510,41 @@ def check_user(course, pt, rec):
                       '', 'The writer\'s explanations, which name the intended answers. Decide best and also_right before you read them.',
                       'Why (a): ' + p['a']['why'], 'Why (b): ' + p['b']['why']])
 
+def used_text(d, pid):
+    """Where a bank point is used: "Economics, AS (international); Business Studies, Year 12 (New South Wales)"."""
+    out = []
+    for u in d['used'].get(pid, []):
+        level = u.get('level') or (year_text(u['years']) if u.get('years') else '')
+        place = (d.get('placeNames') or {}).get(u.get('place'), 'international')
+        out.append((u.get('subject') or u['course']) + (', ' + level if level else '') + ' (' + place + ')')
+    return '; '.join(dict.fromkeys(out)) or 'no course yet'
+
 def match_user(course, pt, cands, d):
-    lines = ['New course: ' + course['subject'] + ', ' + year_text(course['years']) + '.', '', 'The new point:', brief(pt), '', 'Points already in the bank:']
+    """The new point, its course and chapter, and each bank point it may match, in full, most likely first."""
+    unit = course['units'][pt['unit']]
+    lines = ['New course: ' + course['subject'] + ', ' + level_text(course) + ' (' + course['about'] + '), for students in ' + where_text(course) + '.']
+    if course.get('syllabus'): lines.append('Syllabus: ' + course['syllabus'] + '.')
+    lines += ['Chapter: ' + unit['chapters'][pt['chapter']]['title'], '', 'The new point:', brief(pt), '', 'Bank points that may teach the same idea, most likely first:']
     for i in cands:
         p = bank_point(d, i)
-        years = sorted({y for u in d['used'].get(i, []) for y in (u['years'] or [])})
-        lines.append('- ' + i + ': ' + p['title'] + '. ' + p['remember'] + (' (used in ' + year_text(years) + ')' if years else ''))
+        card = ['- ' + (l[0] + ': ' + l[1] if isinstance(l, list) else l) for l in p['card']]
+        q = lambda k: ['Question ' + k + ': ' + p[k]['q']] + ['- ' + o + (' (right)' if n == 0 else '') for n, o in enumerate(p[k]['opts'])]
+        lines += ['', 'Id: ' + i, 'Used in: ' + used_text(d, i), 'Title: ' + p['title'], 'Card:'] + card + ['Remember: ' + p['remember']] + q('a') + q('b')
     return '\n'.join(lines)
+
+def adapter_system(course):
+    return prompt('adapter.md').replace('{kind_rules}', prompt(os.path.join('kinds', course['kind'] + '.md')))
+
+def adapt_user(course, pt, rec, d):
+    """The bank point part by part, with the changes the match step asked for. A rewrite after the content check
+    failed also gets the problems and the last version."""
+    a = rec['adapt']
+    parts_ = [context(course, pt), '', 'Adapt this point from the bank for this course.', brief(pt), '', 'What needs changing for this course:',
+              '- ' + '\n- '.join(a['changes']), '', 'The bank point (' + a['from'] + '), part by part:'] + parts(bank_point(d, a['from']))
+    if rec.get('redo'):
+        parts_ += ['', 'Your last changes made a point that failed the content check. Start again from the bank point above, and fix these:',
+                   '- ' + '\n- '.join(rec['redo']), '', 'Your last version:', pjson(rec['draft'])]
+    return '\n'.join(parts_)
 
 def bank_point(d, pid):
     for b in d['banks'].values():
@@ -462,7 +560,8 @@ def params(step, cfg, system, user, schema, max_tokens):
 
 def request(stage, course, pt, rec, d, custom_id, cfg, cands=None, siblings=None):
     """One request for one point at one step."""
-    if stage == 'match': system, user = prompt('matcher.md'), match_user(course, pt, cands, d)
+    if stage in ('match', 'confirm'): system, user = prompt('matcher.md'), match_user(course, pt, cands, d)
+    elif stage == 'adapt': system, user = adapter_system(course), adapt_user(course, pt, rec, d)
     elif stage in ('check', 'screen'): system, user = prompt('checker.md'), check_user(course, pt, rec)
     elif stage == 'fix': system, user = writer_system(course, d), fix_user(course, pt, rec)
     else: system, user = writer_system(course, d), write_user(course, pt, rec, siblings)
@@ -493,33 +592,116 @@ def brief_hash(pt):
 def log(rec, text):
     rec.setdefault('log', []).append(now() + ' ' + text)
 
-def candidates(course, d, pt):
-    """Bank points that could be the same idea: from the course's bank and the banks in also_match."""
-    mine = {p['id'] for p in course['points']}
+# ---------- finding bank points a new point could reuse, with no API calls ----------
+# Every published point in every bank is looked at, in any subject. Each gets a score from the words it shares with
+# the new point's title and brief, lowered for another subject and for years far apart. Only the best few above
+# MATCH_MIN go to the match step, so most new points never cost a match request.
+MATCH_MOST = 5      # at most this many bank points are sent with one new point
+MATCH_MIN = 0.2     # a bank point scoring under this is never sent. Set from the matches made in the NSW courses.
+# Subjects that share ideas, by words in the subject's name. Two subjects in one family count as the same subject.
+# A subject in none of them is its own family.
+SUBJECT_FAMILIES = [('maths', r'math'), ('english', r'english|literature|literacy'), ('economics', r'econom|business|accounting|commerce'),
+                    ('law', r'legal|law\b'), ('history', r'histor'), ('biology', r'biolog'), ('chemistry', r'chemi'), ('physics', r'physic'),
+                    ('geography', r'geograph'), ('health', r'health|physical education|movement|sport|recreation'), ('society', r'society|sociolog')]
+SUBJECT_OTHER, YEARS_APART = 0.6, {0: 1.0, 1: 0.85, 2: 0.6}   # the score is multiplied by these for another subject, and years apart
+MATCH_STOP = STOP_WORDS | set('''about above after again against all also am among any are as at be because been before being between both but by can
+could did do does doing down during each few from further had has have having he her here hers him his i if into it itself just may me
+might more most must my no nor not now only or other our out over own same she should so some such than that their theirs them then there
+these they this those through too under until up very was we were when where which while who whom will with would you your one two use
+used uses using way ways student students learn learns idea ideas point points'''.split())
+
+def stem(w):
+    """A word cut back to its root, roughly, so prices and pricing count as the same word."""
+    for end, to in (('ational', 'ate'), ('ations', ''), ('ation', ''), ('ities', ''), ('ity', ''), ('ings', ''), ('ing', ''), ('ies', 'y'),
+                    ('ied', 'y'), ('ises', 'ise'), ('ses', 's'), ('es', 'e'), ('ed', ''), ('ly', ''), ('s', '')):
+        if w.endswith(end) and len(w) - len(end) >= 3: return w[:-len(end)] + to
+    return w
+
+def words(text):
+    """The words of some text that say what it is about, cut back to their roots. A hyphenated word also counts as one
+    word, so multi-stage matches multistage."""
+    t = text.lower().replace('’', "'")
+    ws = re.findall(r'[a-z0-9]+', t) + [w.replace('-', '') for w in re.findall(r'[a-z0-9]+(?:-[a-z0-9]+)+', t)]
+    return [stem(w) for w in ws if w not in MATCH_STOP and len(w) > 2]
+
+def family(subject):
+    s = (subject or '').lower()
+    return next((name for name, rx in SUBJECT_FAMILIES if re.search(rx, s)), s)
+
+def point_text(p):
+    """A bank point's words for matching: the title three times, the remember line twice, then the card."""
+    card = ' '.join(l[1] if isinstance(l, list) else l for l in p['card'])
+    return ' '.join([p['title']] * 3 + [p['remember']] * 2 + [card])
+
+def match_index(d):
+    """Each bank point's word weights, worked out once per run: words that are rare across the banks weigh more."""
+    if '_index' in d: return d['_index']
+    docs = {i: words(point_text(p)) for b in d['banks'].values() for i, p in b.items()}
+    seen = {}
+    for ws in docs.values():
+        for w in set(ws): seen[w] = seen.get(w, 0) + 1
+    idf = {w: 1 + math.log(len(docs) / n) for w, n in seen.items()}
+    d['_index'] = {'idf': idf, 'vec': {i: weigh(ws, idf) for i, ws in docs.items()}}
+    return d['_index']
+
+def weigh(ws, idf):
+    """Word weights for some text, scaled to length 1, so long and short points compare fairly."""
+    v = {}
+    for w in ws: v[w] = v.get(w, 0) + idf.get(w, 1 + math.log(1000))
+    n = sum(x * x for x in v.values()) ** 0.5 or 1
+    return {w: x / n for w, x in v.items()}
+
+def years_apart(years, used):
+    """How many years apart a new course is from the courses that use a bank point. An international course with no
+    years counts as Years 11 and 12."""
+    theirs = {y for u in used for y in (u.get('years') or [11, 12])} or {11, 12}
+    return min(abs(a - b) for a in years for b in theirs)
+
+def shortlist(course, d, pt):
+    """The bank points most likely to teach the same idea as a new point, best first, as [[id, score]]: at most
+    MATCH_MOST, each scoring at least MATCH_MIN. A point this course already lists is left out."""
+    idx = match_index(d)
+    mine = {p['id'] for p in course['points']} | {p['reuse'] for p in course['points'] if p.get('reuse')}
+    chapter = course['units'][pt['unit']]['chapters'][pt['chapter']]['title']
+    me = weigh(words(' '.join([pt['title']] * 3 + [pt['brief']] * 2 + [chapter])), idf=idx['idf'])
+    fam, near = family(course['subject']), {course['bank']} | set(course.get('also_match') or [])
     out = []
-    for b in [course['bank']] + course['also_match']:
-        out += [i for i in d['banks'].get(b, {}) if i not in mine]
-    return out
+    for b, pts in d['banks'].items():
+        for i in pts:
+            if i in mine: continue
+            used = d['used'].get(i, [])
+            sim = sum(x * idx['vec'][i].get(w, 0) for w, x in me.items())
+            if sim < MATCH_MIN: continue
+            same = b in near or any(family(u.get('subject')) == fam for u in used)
+            score = sim * (1 if same else SUBJECT_OTHER) * YEARS_APART.get(years_apart(course['years'], used), 0.4)
+            if score >= MATCH_MIN: out.append([i, round(score, 3)])
+    return sorted(out, key=lambda x: -x[1])[:MATCH_MOST]
+
+def candidates(course, d, pt):
+    """The ids of the bank points sent to the match step with a point."""
+    return [i for i, _ in shortlist(course, d, pt)]
 
 # What a point's record holds from its last writing and checking. A fresh start or a rejection clears these.
-DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries',
+DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive', 'proposal', 'proposal_problems', 'error', 'tries', 'adapt',
               'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries',
               'rebalance', 'rebalance_tries']
 
 def fresh(rec, course, d, pt):
-    """Puts a point at its first step: reuse, match or write."""
-    for k in DRAFT_KEYS + ['final', 'match', 'reuse', 'rejected', 'note', 'cleared_by']:
+    """Puts a point at its first step: reuse (named in the outline), match (the shortlist found bank points that may
+    teach the same idea) or write."""
+    for k in DRAFT_KEYS + ['final', 'match', 'confirm', 'matched', 'shortlist', 'reuse', 'rejected', 'note', 'cleared_by']:
         rec.pop(k, None)
     if pt['reuse']:
         rec.update(stage='reuse', reuse=pt['reuse'])
-    elif candidates(course, d, pt) and not rec.get('match_rejected'):
-        rec['stage'] = 'match'
-    else:
+    elif rec.get('match_rejected'):
         rec['stage'] = 'write'
+    else:
+        rec['shortlist'] = shortlist(course, d, pt)
+        rec['stage'] = 'match' if rec['shortlist'] else 'write'
 
 def sync(work, course, d, trial_of=None):
     """Makes a record for each point in the outline, and starts again any point whose title or brief changed."""
-    meta = {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'syllabus', 'units']}
+    meta = {k: course[k] for k in ['id', 'subject', 'name', 'about', 'kind', 'years', 'level', 'place', 'placeName', 'syllabus', 'units']}
     if trial_of: meta.update(id=os.path.basename(work.dir), name=course['name'] + ' (trial ' + os.path.basename(work.dir) + ')', trial_of=trial_of)
     write_json(os.path.join(work.dir, 'course.json'), meta)
     for pt in course['points']:
@@ -549,6 +731,12 @@ def siblings(course, work, pt):
         if v: out.append('- ' + v['title'] + ': ' + v['remember'])
     return out
 
+def match_cands(course, d, pt, rec):
+    """The bank points a match request is sent with: the point's shortlist, made when it was added, less any point
+    no longer in a bank. A record from before shortlists gets one now."""
+    sl = rec.get('shortlist')
+    return [i for i, _ in sl if bank_point(d, i)] if sl is not None else candidates(course, d, pt)
+
 def next_requests(work, course, d, cfg):
     """The requests for every point that is waiting on Claude: one per point, or one per chapter for first writing."""
     out, items, groups = [], {}, {}
@@ -557,12 +745,15 @@ def next_requests(work, course, d, cfg):
         n = rec.setdefault('sent', {}).get(stage, 0)
         cid = stage[0] + '_' + hashlib.sha1((course['id'] + pt['id'] + stage + str(n) + str(nb)).encode()).hexdigest()[:24]
         sib = siblings(course, work, pt) if stage == 'write' and cfg['chapters'] else None
-        out.append(request(stage, course, pt, rec, d, cid, cfg, candidates(course, d, pt) if stage == 'match' else None, sib))
+        out.append(request(stage, course, pt, rec, d, cid, cfg, match_cands(course, d, pt, rec) if stage in ('match', 'confirm') else None, sib))
         items[cid] = {'pid': pt['id'], 'stage': stage, 'model': cfg[stage]['model']}
     for pt in course['points']:
         rec = work.load(pt['id'])
         stage = rec['stage']
         if stage not in WAITING: continue
+        if stage in ('match', 'confirm') and not match_cands(course, d, pt, rec) or stage == 'adapt' and not bank_point(d, rec['adapt']['from']):
+            # The bank points it was close to have left the banks since, so it is written new.
+            rec.pop('adapt', None); rec['stage'] = stage = 'write'; log(rec, 'the bank point it matched is gone, so it is written new'); work.put(rec)
         if stage == 'write' and cfg['chapters'] and first_writing(rec):
             groups.setdefault((pt['unit'], pt['chapter']), []).append((pt, rec)); continue
         one(pt, rec, stage)
@@ -631,7 +822,7 @@ def answer_text(m):
 
 def collect(work, course, d, batch, results, repo, cfg, at_now=False):
     """Saves what came back, and moves each point to its next step."""
-    written, rebalanced = {}, {}
+    written, rebalanced, reused = {}, {}, {}
     for r in results:
         item = batch['items'].get(r.custom_id)
         if not item: continue
@@ -645,6 +836,8 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
             collect_chapter(work, item, r, written, at_now); continue
         rec, stage = work.load(item['pid']), item['stage']
         if rec is None or rec['stage'] != stage: continue
+        if stage in ('match', 'confirm'):
+            match_collect(work, rec, item, r, course, d, cfg, at_now, reused); continue
         kind = r.result.type
         if kind == 'succeeded':
             m = r.result.message
@@ -652,18 +845,20 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
             data = None if m.stop_reason == 'refusal' else answer_text(m)
             if stage == 'screen' and data is None:
                 rec.update(stage='check', to_opus='the screen did not answer'); log(rec, 'screen: no answer, so to the check'); work.put(rec); continue
+            if m.stop_reason == 'refusal' and stage == 'adapt':
+                rec.pop('adapt', None); rec['stage'] = 'write'; log(rec, 'adapt: declined, so it is written new'); work.put(rec); continue
             if m.stop_reason == 'refusal':
                 det = getattr(m, 'stop_details', None)
                 rec.update(stage='failed', error='Claude declined to write this' + (' (' + str(det.category) + ')' if det and getattr(det, 'category', None) else '') + '. Edit it by hand, or reject it with a note to try again.')
                 log(rec, stage + ': declined'); work.put(rec); continue
             if data is None:
                 retry(rec, stage, 'the answer was cut off or not JSON'); work.put(rec); continue
-            if stage == 'match':
-                rec['match'] = data
-                if data['same'] in candidates(course, d, point_of(course, rec['id'])):
-                    rec['stage'] = 'match-review'; log(rec, 'match: the bank may have it as ' + data['same'])
-                else:
-                    rec['stage'] = 'write'; log(rec, 'match: none')
+            if stage == 'adapt':
+                try:
+                    p, rec['adapt']['parts'] = adapted(bank_point(d, rec['adapt']['from']), data['changes'])
+                    written[rec['id']] = (p, stage)
+                except (KeyError, TypeError, AttributeError, IndexError):
+                    retry(rec, stage, 'the answer was not in the right shape')
             elif stage in ('write', 'fix'):
                 try:
                     written[rec['id']] = (to_bank(data), stage)
@@ -693,13 +888,75 @@ def collect(work, course, d, batch, results, repo, cfg, at_now=False):
         if stage == 'fix':
             rec.update(stage='review', proposal=p, proposal_problems=probs); log(rec, 'fix: suggested')
         elif probs and not rec.get('redone'):
-            rec.update(draft=p, redo=probs, redone=True); log(rec, 'write: failed the content check, writing again')
+            rec.update(draft=p, redo=probs, redone=True); log(rec, stage + ': failed the content check, writing again')
         else:
             rec.update(draft=p, local=probs); rec.pop('redo', None)
             rec['stage'] = after_write(rec, course, cfg, point_of(course, pid))
-            log(rec, 'write: done' + (' (still fails the content check)' if probs else '') + (', to the screen' if rec['stage'] == 'screen' else ''))
+            log(rec, stage + ': done' + (' (still fails the content check)' if probs else '') + (', to the screen' if rec['stage'] == 'screen' else ''))
         work.put(rec)
+    if reused: reuse_finish(work, reused, course, d, repo)
     if rebalanced: rebalance_finish(work, rebalanced, course, repo)
+
+ADAPT_ANY = 'Fit it to this course and its syllabus, as the brief describes.'
+
+def match_collect(work, rec, item, r, course, d, cfg, at_now, reused):
+    """A match answer: Haiku's first look (match), or Opus's second look (confirm), which is not told Haiku's answer.
+    new, or a bank point not on the shortlist: written new. A reuse or adapt that is not highly sure: Haiku's goes to
+    Opus, and Opus's to the owner. A highly sure adapt is adapted next, and a highly sure reuse is decided in
+    reuse_finish, once the content check has run on it. A match that cannot be answered is written new."""
+    stage, kind = item['stage'], r.result.type
+    m = r.result.message if kind == 'succeeded' else None
+    if m: charge(work, [rec], m.usage, item, at_now)
+    data = answer_text(m) if m and m.stop_reason != 'refusal' else None
+    if not isinstance(data, dict):
+        why = 'declined' if m and m.stop_reason == 'refusal' else 'the answer was cut off or not JSON' if m else 'the API had an error' if kind == 'errored' else 'the batch ' + kind
+        t = rec.setdefault('tries', {}); t[stage] = t.get(stage, 0) + 1
+        if why == 'declined' or t[stage] >= TRIES: rec['stage'] = 'write'; log(rec, stage + ': ' + why + ', so it is written new')
+        else: log(rec, stage + ': ' + why + ', will try again')
+        return work.put(rec)
+    rec[stage] = dict(data, model=item.get('model'))
+    # An answer from before adapt had only same and reason: a match then always went to the owner.
+    verdict, same, sure = data.get('verdict') or ('reuse' if data.get('same') else 'new'), data.get('same') or '', data.get('sure') or 'medium'
+    who = MODEL_NAMES.get(item.get('model'), stage)
+    if verdict not in ('reuse', 'adapt') or same not in match_cands(course, d, point_of(course, rec['id']), rec):
+        rec['stage'] = 'write'; log(rec, stage + ': ' + who + ' found no bank point the same, so it is written new')
+    elif sure != 'high' and stage == 'match' and cfg.get('confirm'):
+        rec['stage'] = 'confirm'; log(rec, 'match: ' + who + ' may ' + verdict + ' ' + same + ', but is not highly sure, so to the Opus match check')
+    elif sure != 'high':
+        rec['stage'] = 'match-review'; log(rec, stage + ': ' + who + ' may ' + verdict + ' ' + same + ', but is not highly sure, so it is for you to review')
+    elif verdict == 'reuse':
+        reused[rec['id']] = (same, who)
+    else:
+        start_adapt(rec, same, data.get('changes'), who)
+    work.put(rec)
+
+def start_adapt(rec, same, changes, by):
+    """Sends a point to the adapt step, with the changes the bank point needs for this course."""
+    changes = [c.strip() for c in changes or [] if isinstance(c, str) and c.strip()] or [ADAPT_ANY]
+    rec.update(stage='adapt', adapt={'from': same, 'changes': changes, 'by': by})
+    log(rec, 'match: ' + by + ' says adapt ' + same + ' (' + many_of(len(changes), 'change') + ')')
+
+def reuse_finish(work, reused, course, d, repo):
+    """A point judged the same as a bank point takes it as it is. If another point in this course has that bank point
+    already, it is written new. If the bank point fails the content check for this course (a word only another subject
+    allows, or a long quote in an English course), it is adapted, with the problems as its changes. A reuse is never
+    checked again, so one about a sensitive topic, or for an English course, goes to the owner, as such points always do."""
+    recs = [r for r in (work.load(pt['id']) for pt in course['points']) if r]
+    taken = {pt['reuse'] for pt in course['points'] if pt.get('reuse')} | {r['reuse'] for r in recs if r['stage'] == 'reuse' and r.get('reuse')}
+    # Checked under its own id, so its questions are not counted as copies of themselves.
+    probs = check_points({same: bank_point(d, same) for same, _ in reused.values()}, course['kind'], repo, work.dir, course['subject'])
+    for pid, (same, who) in reused.items():
+        rec = work.load(pid)
+        if same in taken:
+            rec['stage'] = 'write'; log(rec, 'match: ' + same + ' is in this course already, so it is written new')
+        elif probs.get(same):
+            start_adapt(rec, same, ['Fix what the content check found for this course: ' + p for p in probs[same]], 'the content check')
+        elif course['kind'] == 'english' or SENSITIVE.search(json.dumps(bank_point(d, same), ensure_ascii=False) + ' ' + point_of(course, pid)['brief']):
+            rec['stage'] = 'match-review'; log(rec, 'match: ' + who + ' says reuse ' + same + ', but ' + ('an English course' if course['kind'] == 'english' else 'its topic') + ' always comes to you')
+        else:
+            rec.update(stage='reuse', reuse=same, matched={'verdict': 'reuse', 'from': same, 'by': who, 'at': now()}); taken.add(same)
+            log(rec, 'match: ' + who + ' says reuse ' + same + ', with nothing more to write, check or review')
+        work.put(rec)
 
 def collect_chapter(work, item, r, written, at_now):
     """Saves the answer to a chapter's writing request. A point that is missing or wrong is written on its own next."""
@@ -765,7 +1022,9 @@ def checked(rec, data):
 def retry(rec, stage, why):
     t = rec.setdefault('tries', {})
     t[stage] = t.get(stage, 0) + 1
-    if t[stage] >= TRIES:
+    if t[stage] >= TRIES and stage == 'adapt':
+        rec.pop('adapt', None); rec['stage'] = 'write'; log(rec, 'adapt: gave up, ' + why + ', so it is written new')
+    elif t[stage] >= TRIES:
         rec.update(stage='failed', error=stage + ' failed ' + str(TRIES) + ' times: ' + why + '. Reject it with a note to try again, or edit it by hand.')
         log(rec, stage + ': gave up, ' + why)
     else:
@@ -911,9 +1170,33 @@ def counts(work, course):
         c[s] = c.get(s, 0) + 1
     return c
 
-STAGE_WORDS = {'match': 'waiting to be matched', 'match-review': 'a possible match, for you to review', 'write': 'waiting to be written',
+STAGE_WORDS = {'match': 'waiting to be matched', 'confirm': 'waiting for the Opus match check', 'adapt': 'waiting to be adapted from a bank point',
+               'match-review': 'a possible match, for you to review', 'write': 'waiting to be written',
                'screen': 'waiting for the Haiku screen', 'check': 'waiting to be checked', 'fix': 'waiting for a fix', 'review': 'for you to review',
                'failed': 'could not be written, for you to review', 'cleared': 'cleared', 'reuse': 'reusing a bank point'}
+
+def split(work, course):
+    """How a course's points divide: reused as they are (named in the outline, or matched), adapted from a bank point,
+    and new, and the points still being matched."""
+    c = {'outline': 0, 'reuse': 0, 'adapt': 0, 'new': 0, 'match': 0, 'confirm': 0, 'review': 0, 'looked': 0}
+    for pt in course['points']:
+        rec = work.load(pt['id'])
+        if pt.get('reuse'): c['outline'] += 1
+        elif rec['stage'] == 'reuse': c['reuse'] += 1
+        elif rec.get('adapt'): c['adapt'] += 1
+        elif rec['stage'] in ('match', 'confirm'): c[rec['stage']] += 1; c['looked'] += len(rec.get('shortlist') or [])
+        elif rec['stage'] == 'match-review': c['review'] += 1
+        else: c['new'] += 1
+    return c
+
+def split_line(c):
+    """The split in words, such as: Reuse 3 (1 named in the outline), adapt 2, new 40. Still to match: 5."""
+    out = ('Reuse ' + str(c['reuse'] + c['outline']) + (' (' + str(c['outline']) + ' named in the outline)' if c['outline'] else '') +
+           ', adapt ' + str(c['adapt']) + ', new ' + str(c['new']) + '.')
+    if c['match']: out += ' Still to match: ' + str(c['match']) + ', against ' + many_of(c['looked'], 'bank point') + ' the shortlist found.'
+    if c['confirm']: out += ' Waiting for the Opus match check: ' + str(c['confirm']) + '.'
+    if c['review']: out += ' Possible matches for you to review: ' + str(c['review']) + '.'
+    return out
 
 def stats(work, points):
     """The numbers after a run: what was written and checked, flagged, sent to the Opus checker, and what it cost."""
@@ -943,6 +1226,7 @@ def summary(job, after_run=True, stages=True):
     say(job.label + ' (' + job.settings + ' settings)' + (':' if stages else ''))
     if stages:
         for st, n in counts(w, job.course).items(): say('  ' + str(n), STAGE_WORDS[st])
+    say('  ' + split_line(split(w, job.course)))
     say('  ' + ('This run: ' + money(s['usd'] - job.start) + '. ' if after_run else '') + 'The course so far: ' + money(s['usd']) +
         (', ' + cents(s['usd'] / s['written']) + ' for each of ' + str(s['written']) + ' points written.' if s['written'] else '.'))
     if s['checked']:
@@ -1004,6 +1288,11 @@ def drive(api, jobs, args, many=False):
                 if got and got[0]: plan.append((j, got[0], got[1]))
             if not plan:
                 return finish(jobs, done=True)
+            # Once matching has decided more points, the split shows again before the next round is sent.
+            for j, _, _ in plan:
+                if j.d is None: continue
+                line = split_line(split(j.work, j.course))
+                if line != getattr(j, 'last_split', None): say(j.label + ': ' + line); j.last_split = line
             if args.now:
                 waiting = sum(1 for j, _, _ in plan for pt in j.course['points'] if j.work.load(pt['id'])['stage'] in WAITING)
                 if waiting > NOW_MOST:
@@ -1183,40 +1472,54 @@ def plan_left(job):
         it = items[r['custom_id']]
         if 'pids' in it:
             add('chapter', 1, pts=len(it['pids'])); samples.setdefault('chapter', r)
-    written, ahead, screened = 0, 0, 0
+    # A point still being matched may end as a reuse, with nothing more to send, or as a new point: the low end
+    # counts the first, the high end the second. [low, high] for each count below.
+    written, ahead, screened = [0, 0], [0, 0], [0, 0]
+    most, big = 0, None
     for pt in course['points']:
         rec = work.load(pt['id']); s = rec['stage']
         if s not in WAITING: continue
-        if s == 'match':
-            add('match', 1)
-            if 'match' not in samples: samples['match'] = request('match', course, pt, rec, d, 'x', cfg, candidates(course, d, pt))
-        if s in ('match', 'write'):
-            written += 1
-            if s == 'match' or pt['id'] not in in_chapter:
-                add('write', 1)
+        lo = 0 if s in ('match', 'confirm') else 1
+        if s in ('match', 'confirm'):
+            # The sample is the point with the most bank points to look at, so the estimate is on the safe side.
+            cands = match_cands(course, d, pt, rec)
+            if len(cands) > most: most, big = len(cands), (pt, rec, cands)
+            if s == 'match': add('match', 1)
+            if cfg.get('confirm'): add('confirm', 0 if s == 'match' else 1, 1)
+        if s == 'adapt':
+            add('adapt', 1)
+            if 'adapt' not in samples: samples['adapt'] = request('adapt', course, pt, rec, d, 'x', cfg)
+        if s in ('match', 'confirm', 'write'):
+            written[0] += lo; written[1] += 1
+            if lo == 0 or pt['id'] not in in_chapter:
+                add('write', lo, 1)
                 if 'write' not in samples: samples['write'] = request('write', course, pt, stand(rec), d, 'x', cfg)
-        if s in ('match', 'write', 'screen', 'check'): ahead += 1
-        if s in ('match', 'write', 'screen'):
-            if cfg.get('screen') and course['kind'] != 'english' and not SENSITIVE.search(pt['title'] + ' ' + pt['brief']): screened += 1
-            else: add('check', 1)
+        if s in ('match', 'confirm', 'adapt', 'write', 'screen', 'check'): ahead[0] += lo; ahead[1] += 1
+        if s in ('match', 'confirm', 'adapt', 'write', 'screen'):
+            if cfg.get('screen') and course['kind'] != 'english' and not SENSITIVE.search(pt['title'] + ' ' + pt['brief']): screened[0] += lo; screened[1] += 1
+            else: add('check', lo, 1)
         if s == 'check': add('check', 1)
         if s == 'fix': add('fix', 1)
         for st in ('screen', 'check', 'fix'):
             if st not in samples and cfg.get(st): samples[st] = request(st, course, pt, stand(rec), d, 'x', cfg)
+    if big:
+        for st in ('match', 'confirm'):
+            if cfg.get(st): samples[st] = request(st, course, big[0], big[1], d, 'x', cfg, big[2])
     if 'write' not in samples:
         pt = course['points'][0]; samples['write'] = request('write', course, pt, {'id': pt['id']}, d, 'x', cfg)
-    if round(written * REDO_SHARE): add('write', round(written * REDO_SHARE))
-    if screened:
-        add('screen', screened)
+    if round(written[1] * REDO_SHARE): add('write', round(written[0] * REDO_SHARE), round(written[1] * REDO_SHARE))
+    if screened[1]:
+        add('screen', *screened)
         st = stats(work, course['points'])
-        if cfg.get('trial'): lo = hi = screened
-        elif st['checked'] >= 5: lo = hi = round(screened * st['opus'] / st['checked'])
-        else: lo, hi = round(screened * TO_OPUS[0]), round(screened * TO_OPUS[1])
+        if cfg.get('trial'): lo, hi = screened
+        elif st['checked'] >= 5: lo, hi = (round(n * st['opus'] / st['checked']) for n in screened)
+        else: lo, hi = round(screened[0] * TO_OPUS[0]), round(screened[1] * TO_OPUS[1])
         add('check', lo, hi)
-    if ahead: add('fix', round(ahead * FIX_SHARE[0]), round(ahead * FIX_SHARE[1]))
+    if ahead[1]: add('fix', round(ahead[0] * FIX_SHARE[0]), round(ahead[1] * FIX_SHARE[1]))
     return {k: (left[k], samples[k]) for k in STEP_NAMES if k in left and left[k][1]}
 
-STEP_NAMES = {'match': 'match', 'chapter': 'write, a chapter at a time', 'write': 'write, one point at a time', 'screen': 'screen', 'check': 'check', 'fix': 'fix'}
+STEP_NAMES = {'match': 'match', 'confirm': 'match check', 'adapt': 'adapt, writing only the changes', 'chapter': 'write, a chapter at a time',
+              'write': 'write, one point at a time', 'screen': 'screen', 'check': 'check', 'fix': 'fix'}
 
 def estimate(job, api, quiet=False):
     """Low and high cost of the rest of a course, with batches and with --now. Prints each step unless quiet."""
@@ -1225,6 +1528,8 @@ def estimate(job, api, quiet=False):
         if not quiet: say('Nothing is left to send for', job.label + '. Spent so far:', money(job.work.state['spent']['usd']))
         return (0, 0, 0, 0)
     if not quiet: say(job.label + ' (' + job.settings + ' settings):')
+    if not quiet:
+        job.last_split = split_line(split(job.work, job.course)); say('  ' + job.last_split)
     tot = [0, 0, 0, 0]
     for step, ((n_lo, n_hi, p_lo, p_hi), sample) in left.items():
         key = 'write' if step == 'chapter' else step
@@ -1280,6 +1585,11 @@ def cmd_run(args):
     job = setup(args, as_name=args.as_name, wanted=args.settings)
     api = client()
     job.limit = args.max_dollars
+    st = job.work.state
+    if not st.get('sending') and not any(not b.get('collected') for b in st['batches']):
+        # The split and the estimate before anything is sent. While a batch is out, they wait for its answers.
+        tot = estimate(job, api)
+        if any(tot): say_totals(job.label, tot, True, st['spent']['usd'])
     drive(api, [job], args)
 
 def shares(jobs, highs, limit):
@@ -1379,9 +1689,11 @@ def cmd_publish(args):
             for pid in c['points']:
                 if recs.get(pid) and recs[pid]['stage'] == 'cleared': bank[pid] = recs[pid]['final']
     chips = course['chips'] or [p['title'].lower() for p in course['points'] if recs[p['id']]['stage'] == 'cleared'][:5]
-    data = {'id': course['id'], 'course': course['subject'], 'year': year_text(course['years']), 'name': course['name'], 'short': course['short'] or course['subject'],
-            'note': course['note'], 'place': course['place'], 'kind': course['kind'], 'years': course['years'], 'chips': chips,
-            'row': {'name': course['name'], 'about': course['about']}, 'units': units}
+    # year is the course's heading on Home ("Economics, Units 1 and 2"), so a course with a level line uses it. level is
+    # also what the subject sheet groups it under (yearGroup in src/places.js).
+    data = {'id': course['id'], 'course': course['subject'], 'year': course.get('level') or year_text(course['years']), 'name': course['name'],
+            'short': course['short'] or course['subject'], 'note': course['note'], 'place': course['place'], 'kind': course['kind'], 'years': course['years'],
+            **({'level': course['level']} if course.get('level') else {}), 'chips': chips, 'row': {'name': course['name'], 'about': course['about']}, 'units': units}
     write_text(os.path.join(repo, 'src', 'bank', bank_name + '.js'),
                '/* The ' + bank_name + ' bank: points made by the content pipeline. Written by python3 content/pipeline.py publish.\n'
                '   Do not edit it by hand: change a point through the review page and publish again (content/README.md).\n'
@@ -2056,7 +2368,8 @@ def review_items(root, repo):
                     if not rec: continue
                     tally[rec['stage']] = tally.get(rec['stage'], 0) + 1
                     if rec['stage'] not in ('review', 'match-review', 'failed'): continue
-                    match = rec.get('match') or {}
+                    # The Opus match check's answer when there was one, or else the first look's.
+                    match = rec.get('confirm') or rec.get('match') or {}
                     items.append({'course': cid, 'courseName': meta['name'], 'unit': 'Unit ' + str(ui + 1) + ': ' + u['title'],
                                   'chapter': 'Chapter ' + str(ci + 1) + ': ' + c['title'], 'id': rec['id'], 'title': pt['title'], 'brief': pt['brief'],
                                   'stage': rec['stage'], 'draft': rec.get('draft'), 'proposal': rec.get('proposal'),
@@ -2066,7 +2379,8 @@ def review_items(root, repo):
                                   'spot': bool(rec['stage'] == 'review' and (rec.get('auto') or {}).get('spot')),
                                   'spotBy': (rec.get('auto') or {}).get('by', 'autoreview'),
                                   'recheck': recheck_item(rec.get('recheck')),
-                                  'match': dict(match, point=bank_point(d, match['same'])) if match.get('same') else None})
+                                  'match': dict(match, point=bank_point(d, match['same']), usedIn=used_text(d, match['same']),
+                                                by=MODEL_NAMES.get(match.get('model'), '')) if match.get('same') else None})
         courses.append({'id': cid, 'name': meta['name'], 'counts': tally})
     return {'courses': courses, 'items': items, 'trials': len(trials(root))}
 
@@ -2092,11 +2406,15 @@ def decide(root, repo, body):
         if spot: auto_answer(work, pid, action)
         return {'ok': True, 'message': text}
     if rec['stage'] == 'match-review':
+        m = rec.get('confirm') or rec.get('match') or {}
         if action == 'reuse':
-            rec.update(stage='reuse', reuse=rec['match']['same']); return done('reusing ' + rec['match']['same'])
+            rec.update(stage='reuse', reuse=m['same'], matched={'verdict': 'reuse', 'from': m['same'], 'by': 'owner', 'at': now()})
+            return done('reusing ' + m['same'])
+        if action == 'adapt':
+            start_adapt(rec, m['same'], m.get('changes'), 'owner'); return done('adapting ' + m['same'] + ' on the next run')
         if action == 'reject':
             rec.update(stage='write', match_rejected=True); return done('match rejected, to be written')
-        return {'ok': False, 'message': 'Reuse or reject this match.'}
+        return {'ok': False, 'message': 'Reuse, adapt or reject this match.'}
     if action == 'approve':
         if not rec.get('draft'): return {'ok': False, 'message': 'There is nothing written to approve. Edit it, or reject it with a note.'}
         if rec.get('local'): return {'ok': False, 'message': 'This version fails the content check. Use Edit to fix it first.', 'problems': rec['local']}
