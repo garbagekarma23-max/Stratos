@@ -1,0 +1,186 @@
+# VCE Specialist Mathematics, Units 1 and 2: proof, logic, sequences, graph theory, matrices, vectors, complex numbers
+# and simulation, 41 points.
+# Drafted from the VCAA's VCE Mathematics Study Design, accreditation period 2023 to 2027. The structure follows the
+# study design's areas of study, each a unit here, with Unit 1 and Unit 2 content together under each. Every brief is
+# in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Run General Mathematics and Mathematical Methods first, so shared
+# points such as matrices and networks can be reused.
+# In transition: the accreditation ends 31 December 2027. Check for a new study design before running this for 2028.
+
+id: vic-mat-spec-u12
+subject: Mathematics
+bank: mat
+name: Specialist Mathematics, Units 1 and 2
+about: VCE, Proof, vectors, complex numbers and discrete maths
+short: Specialist Mathematics
+years: [11]
+level: Units 1 and 2
+place: vic
+kind: maths
+syllabus: VCE Mathematics Study Design (2023 to 2027), Specialist Mathematics Units 1 and 2
+note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
+chips: [proof by contradiction, induction, Argand plane, vector, recurrence]
+
+units:
+  - title: Discrete mathematics
+    chapters:
+      - title: Logic and proof
+        id: vic-mat-spec-u12-1-1
+        points:
+          - title: Statements and connectives
+            id: mat-statements-connectives
+            brief: A statement is true or false. Connectives such as and, or and not join statements, and truth tables show the result.
+          - title: Conditional statements
+            id: mat-conditional-statements
+            brief: The statement if P then Q is false only when P is true and Q is false. Its contrapositive, if not Q then not P, means the same.
+          - title: Converse and equivalence
+            id: mat-converse-equivalence
+            brief: The converse of if P then Q is if Q then P, which is not always true. When both hold, P and Q are equivalent.
+          - title: Quantifiers
+            id: mat-quantifiers
+            brief: For all and there exists say how widely a statement applies. A single counterexample disproves a for all statement.
+          - title: Direct proof
+            id: mat-direct-proof
+            brief: Start from what is known and reason step by step to the result, such as proving the sum of two even numbers is even.
+          - title: Proof by contrapositive
+            id: mat-proof-by-contrapositive
+            brief: To prove if P then Q, prove if not Q then not P instead.
+          - title: Proof by contradiction
+            id: mat-proof-by-contradiction
+            brief: Assume the result is false and show this leads to something impossible, as in proving √2 is irrational.
+          - title: Mathematical induction
+            id: mat-mathematical-induction
+            brief: Show a statement holds for the first case, and that holding for n means it holds for n + 1. Then it holds for all.
+
+      - title: Sequences, series and combinatorics
+        id: vic-mat-spec-u12-1-2
+        points:
+          - title: Arithmetic and geometric series
+            id: mat-arithmetic-geometric-series
+            brief: An arithmetic series sums to n/2 × (2a + (n − 1)d). A geometric series sums to a(rⁿ − 1)/(r − 1).
+          - title: Infinite geometric series
+            id: mat-infinite-geometric-series
+            brief: When −1 < r < 1, a geometric series sums to a/(1 − r).
+          - title: Recurrence relations in Specialist
+            id: mat-recurrence-relations-specialist
+            brief: Sequences defined from earlier terms, including second-order ones such as the Fibonacci sequence.
+          - title: The pigeonhole principle
+            id: mat-pigeonhole-principle
+            brief: If more than n items go into n boxes, some box holds at least two.
+          - title: The inclusion-exclusion principle
+            id: mat-inclusion-exclusion-principle
+            brief: To count A or B, add the counts of A and B, then subtract those in both.
+          - title: Arrangements with restrictions
+            id: mat-arrangements-with-restrictions
+            brief: Count arrangements where some items must be together or apart, or some positions are fixed.
+
+      - title: Graph theory and matrices
+        id: vic-mat-spec-u12-1-3
+        points:
+          - title: Graph theory in Specialist
+            id: mat-graph-theory-specialist
+            brief: Graphs model connections. Euler's handshaking lemma says the sum of degrees is twice the number of edges.
+          - title: Trees and algorithms
+            id: mat-trees-algorithms
+            brief: A tree on n vertices has n − 1 edges. Algorithms such as Prim's find a minimum spanning tree.
+          - title: Matrix operations in Specialist
+            id: mat-matrix-operations-specialist
+            brief: Matrix addition and multiplication, and that AB need not equal BA.
+          - title: Matrices as transformations
+            id: mat-matrices-as-transformations
+            brief: A 2 × 2 matrix maps points in the plane, giving dilations, reflections, rotations and shears.
+          - title: Composition and inverse transformations
+            id: mat-composition-inverse-transformations
+            brief: Doing one transformation then another multiplies their matrices. The inverse matrix undoes a transformation.
+          - title: Determinants and area
+            id: mat-determinants-area
+            brief: A transformation multiplies areas by the absolute value of its determinant.
+
+  - title: Functions, relations and graphs
+    chapters:
+      - title: Graphs and curves
+        id: vic-mat-spec-u12-2-1
+        points:
+          - title: Reciprocal functions
+            id: mat-reciprocal-functions-2
+            brief: The graph of 1/f(x) has vertical asymptotes where f(x) = 0 and is largest where f is smallest.
+          - title: Parametric equations
+            id: mat-parametric-equations
+            brief: x and y are each given in terms of a parameter t, which can trace curves such as circles.
+          - title: Polar coordinates
+            id: mat-polar-coordinates
+            brief: A point is given by its distance r from the origin and angle θ, with x = r cos θ and y = r sin θ.
+          - title: Circles and ellipses
+            id: mat-circles-ellipses
+            brief: (x − h)² + (y − k)² = r² is a circle. Dividing x² and y² by different squares gives an ellipse.
+          - title: Hyperbolas
+            id: mat-hyperbolas
+            brief: x²/a² − y²/b² = 1 is a hyperbola with asymptotes y = ±(b/a)x.
+
+  - title: Space and measurement
+    chapters:
+      - title: Trigonometry and vectors
+        id: vic-mat-spec-u12-3-1
+        points:
+          - title: Trigonometric identities
+            id: mat-trigonometric-identities
+            brief: sin²x + cos²x = 1, and the compound angle and double angle formulas rewrite trigonometric expressions.
+          - title: Vectors in the plane
+            id: mat-vectors-plane
+            brief: A vector has size and direction, written as a column or with i and j components.
+          - title: Adding and scaling vectors
+            id: mat-adding-scaling-vectors
+            brief: Vectors add head to tail. Multiplying by a scalar stretches or reverses them.
+          - title: Magnitude and unit vectors
+            id: mat-magnitude-unit-vectors
+            brief: The magnitude of ai + bj is √(a² + b²). A unit vector has magnitude 1.
+          - title: The scalar product
+            id: mat-scalar-product
+            brief: a·b = |a||b|cos θ. Two non-zero vectors are perpendicular when their scalar product is zero.
+          - title: Vector projections
+            id: mat-vector-projections
+            brief: The projection of a onto b gives the part of a in the direction of b.
+          - title: Proof with vectors
+            id: mat-proof-with-vectors
+            brief: Vectors can prove geometric results, such as that the diagonals of a parallelogram bisect each other.
+
+  - title: Algebra, number and structure
+    chapters:
+      - title: Complex numbers
+        id: vic-mat-spec-u12-4-1
+        points:
+          - title: The imaginary unit
+            id: mat-imaginary-unit
+            brief: i is defined by i² = −1, so square roots of negative numbers can be written, such as √−9 = 3i.
+          - title: Arithmetic with complex numbers
+            id: mat-arithmetic-with-complex-numbers
+            brief: Complex numbers a + bi add, subtract and multiply like binomials, using i² = −1.
+          - title: Conjugates and division
+            id: mat-conjugates-division
+            brief: The conjugate of a + bi is a − bi. Dividing uses the conjugate to make the denominator real.
+          - title: The Argand plane
+            id: mat-argand-plane
+            brief: A complex number is plotted with its real part on the horizontal axis and imaginary part on the vertical.
+          - title: Modulus and argument
+            id: mat-modulus-argument
+            brief: The modulus is the distance from the origin; the argument is the angle from the positive real axis.
+          - title: Solving quadratics over the complex numbers
+            id: mat-solving-quadratics-over-complex
+            brief: A quadratic with a negative discriminant has two complex roots that are conjugates.
+
+  - title: Data analysis, probability and statistics
+    chapters:
+      - title: Simulation and sampling
+        id: vic-mat-spec-u12-5-1
+        points:
+          - title: Simulation
+            id: mat-simulation
+            brief: Using random numbers to model a chance process many times and estimate a probability.
+          - title: Sample means vary
+            id: mat-sample-means-vary
+            brief: The mean of a sample changes from one sample to the next. Larger samples vary less.
+          - title: Distributions of sample means
+            id: mat-distributions-sample-means
+            brief: Plotting the means of many samples shows their spread, which narrows as sample size grows.

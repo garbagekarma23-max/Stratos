@@ -1,0 +1,213 @@
+# VCE General Mathematics, Units 3 and 4: data analysis, recursion and financial modelling, matrices, and networks
+# and decision mathematics, 52 points.
+# Drafted from the VCAA's VCE Mathematics Study Design, accreditation period 2023 to 2027. The structure follows the
+# study design: Unit 3 is data analysis and recursion and financial modelling, Unit 4 is matrices and networks, and
+# each chapter is part of one. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Units 1 and 2 and NSW Mathematics Standard (the mat bank) share
+# much of this, so expect reuses and adapts.
+# In transition: the accreditation ends 31 December 2027. Check for a new study design before running this for 2028.
+
+id: vic-mat-gen-u34
+subject: Mathematics
+bank: mat
+name: General Mathematics, Units 3 and 4
+about: VCE, Data, finance, matrices and networks
+short: General Mathematics
+years: [12]
+level: Units 3 and 4
+place: vic
+kind: maths
+syllabus: VCE Mathematics Study Design (2023 to 2027), General Mathematics Units 3 and 4
+note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
+chips: [z-score, least squares, seasonal index, annuity, critical path]
+
+units:
+  - title: "Unit 3: Data analysis, and recursion and financial modelling"
+    chapters:
+      - title: Investigating data distributions
+        id: vic-mat-gen-u34-1-1
+        points:
+          - title: Describing a distribution
+            id: mat-describing-distribution
+            brief: A distribution is described by its shape, centre (median or mean), spread (IQR or standard deviation) and any outliers.
+          - title: Boxplots and outliers
+            id: mat-boxplots-outliers
+            brief: Outliers lie below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR, and are drawn as separate points on a boxplot.
+          - title: The 68-95-99.7 rule
+            id: mat-68-95-99-7
+            brief: For a bell-shaped distribution, about 68%, 95% and 99.7% of values lie within 1, 2 and 3 standard deviations of the mean.
+          - title: Standardised scores
+            id: mat-standardised-scores-2
+            brief: A z-score is (x − mean) ÷ standard deviation, the number of standard deviations a value lies from the mean.
+          - title: Comparing with z-scores
+            id: mat-comparing-with-z-scores
+            brief: z-scores let values from different distributions be compared, such as marks on two tests.
+
+      - title: Investigating associations
+        id: vic-mat-gen-u34-1-2
+        points:
+          - title: Response and explanatory variables
+            id: mat-response-explanatory-variables
+            brief: The explanatory variable may explain changes in the response variable, and goes on the horizontal axis.
+          - title: Associations between categorical variables
+            id: mat-associations-between-categorical-variables
+            brief: In a two-way table, an association exists when percentages for one variable differ across the other.
+          - title: Pearson's correlation coefficient
+            id: mat-pearson-s-correlation-coefficient-2
+            brief: r measures the strength and direction of a linear association, from −1 to 1. It is only meaningful for linear data.
+          - title: Correlation and causation
+            id: mat-correlation-causation-2
+            brief: A strong correlation does not show one variable causes the other. A third variable or coincidence may explain it.
+          - title: The least squares regression line
+            id: mat-least-squares-regression-line-2
+            brief: The line y = a + bx that makes the sum of squared residuals smallest. The slope b = r × sy/sx.
+          - title: Interpreting slope and intercept
+            id: mat-interpreting-slope-intercept
+            brief: The slope is the change in the response for each unit increase in the explanatory variable; the intercept is its value when that is zero.
+          - title: The coefficient of determination
+            id: mat-coefficient-determination
+            brief: r² gives the percentage of variation in the response explained by the explanatory variable.
+          - title: Residuals and residual plots
+            id: mat-residuals-residual-plots
+            brief: A residual is actual minus predicted. A residual plot with no pattern supports a linear model.
+          - title: Data transformations
+            id: mat-data-transformations
+            brief: Squaring, taking the logarithm or the reciprocal of a variable can straighten a curved scatterplot before fitting a line.
+
+      - title: Time series
+        id: vic-mat-gen-u34-1-3
+        points:
+          - title: Features of a time series
+            id: mat-features-time-series
+            brief: A time series plot may show trend, seasonality, cycles, irregular fluctuations, structural change and outliers.
+          - title: Smoothing with moving means
+            id: mat-smoothing-with-moving-means
+            brief: Replacing each value with the mean of it and its neighbours smooths out fluctuations. Even-numbered means need centring.
+          - title: Median smoothing
+            id: mat-median-smoothing
+            brief: Replacing each value with the median of it and its neighbours, often done on the graph, which resists outliers.
+          - title: Seasonal indices
+            id: mat-seasonal-indices
+            brief: A seasonal index compares a season with the average season. An index of 1.2 means 20% above average.
+          - title: Deseasonalising data
+            id: mat-deseasonalising-data
+            brief: Dividing each value by its seasonal index removes seasonality so the trend is clearer.
+          - title: Forecasting from a trend
+            id: mat-forecasting-from-trend
+            brief: Fit a least squares line to deseasonalised data, predict, then reseasonalise by multiplying by the seasonal index.
+
+      - title: Recursion and financial modelling
+        id: vic-mat-gen-u34-1-4
+        points:
+          - title: Recurrence relations for finance
+            id: mat-recurrence-relations-finance
+            brief: A first-order linear recurrence, V(n+1) = R × V(n) + d, models balances growing or shrinking each period.
+          - title: Flat-rate depreciation
+            id: mat-flat-rate-depreciation
+            brief: An asset loses the same amount each period, V(n+1) = V(n) − d, a linear decay.
+          - title: Unit cost depreciation
+            id: mat-unit-cost-depreciation
+            brief: An asset loses value by a fixed amount for each unit of use, such as per kilometre driven.
+          - title: Reducing balance depreciation
+            id: mat-reducing-balance-depreciation
+            brief: An asset loses a fixed percentage each period, so its value decays geometrically.
+          - title: Effective annual interest rate
+            id: mat-effective-annual-interest-rate
+            brief: The yearly rate that gives the same growth as a nominal rate compounded more often. More frequent compounding raises it.
+          - title: Reducing balance loans
+            id: mat-reducing-balance-loans-2
+            brief: A loan where interest is added each period and a regular repayment comes off, until the balance reaches zero.
+          - title: Annuities
+            id: mat-annuities
+            brief: An investment that pays out regular amounts until it runs out, its balance falling each period.
+          - title: Perpetuities
+            id: mat-perpetuities
+            brief: An investment that pays out only the interest each period, so the balance never falls.
+          - title: Compound interest with regular additions
+            id: mat-compound-interest-with-regular
+            brief: An investment that earns interest and also has a regular amount added each period.
+          - title: Using a finance solver
+            id: mat-using-finance-solver
+            brief: A finance solver finds any one of N, I%, PV, PMT and FV from the others, with money in and out given opposite signs.
+
+  - title: "Unit 4: Matrices, and networks and decision mathematics"
+    chapters:
+      - title: Matrices
+        id: vic-mat-gen-u34-2-1
+        points:
+          - title: Types of matrices
+            id: mat-types-matrices
+            brief: Row, column, square, zero, identity, diagonal, triangular, symmetric and binary matrices each have a defining pattern.
+          - title: Matrix arithmetic
+            id: mat-matrix-arithmetic
+            brief: Adding, subtracting, scalar multiplying and multiplying matrices, and checking the orders allow it.
+          - title: Determinants and inverses
+            id: mat-determinants-inverses
+            brief: For a 2 × 2 matrix the determinant is ad − bc. A matrix with determinant zero has no inverse.
+          - title: Solving simultaneous equations with matrices
+            id: mat-solving-simultaneous-equations-with
+            brief: Write the equations as AX = B, then X = A⁻¹B.
+          - title: Permutation matrices
+            id: mat-permutation-matrices
+            brief: A matrix of zeros and ones that reorders the rows or columns of another matrix.
+          - title: Communication and dominance matrices
+            id: mat-communication-dominance-matrices
+            brief: Matrices showing who can contact whom, or who beat whom, where adding powers counts two-step links.
+          - title: Transition matrices
+            id: mat-transition-matrices
+            brief: A matrix whose columns give the chances of moving between states, used to predict a population's states over time.
+          - title: Steady state
+            id: mat-steady-state
+            brief: After many steps, a regular transition matrix leads to a steady state where the numbers in each state stop changing.
+          - title: Matrix recurrence relations
+            id: mat-matrix-recurrence-relations
+            brief: S(n+1) = T × S(n) gives each state matrix from the one before, and a column can be added each step.
+          - title: Leslie matrices
+            id: mat-leslie-matrices
+            brief: A matrix model of a population by age group, using birth rates and survival rates to project the population.
+
+      - title: Graphs and networks
+        id: vic-mat-gen-u34-2-2
+        points:
+          - title: Graph terms
+            id: mat-graph-terms
+            brief: Vertices, edges, loops, multiple edges, degree, connected, complete, simple and bipartite graphs.
+          - title: Adjacency matrices
+            id: mat-adjacency-matrices
+            brief: A matrix showing how many edges join each pair of vertices.
+          - title: Euler and Hamilton in Unit 4
+            id: mat-euler-hamilton-unit-4
+            brief: An Euler trail exists when exactly two vertices have odd degree. Hamilton paths visit each vertex once.
+          - title: Trees and spanning trees
+            id: mat-trees-spanning-trees
+            brief: A tree is a connected graph with no cycles. A spanning tree includes every vertex of a graph.
+          - title: Prim's algorithm
+            id: mat-prim-s-algorithm
+            brief: Build a minimum spanning tree by repeatedly adding the cheapest edge that joins a new vertex to the tree.
+          - title: Dijkstra's algorithm
+            id: mat-dijkstra-s-algorithm
+            brief: Find the shortest path from one vertex by fixing the closest unvisited vertex each step.
+          - title: Flow networks and minimum cut
+            id: mat-flow-networks-minimum-cut
+            brief: The maximum flow through a network equals the capacity of its minimum cut.
+
+      - title: Decision mathematics
+        id: vic-mat-gen-u34-2-3
+        points:
+          - title: The Hungarian algorithm
+            id: mat-hungarian-algorithm
+            brief: An algorithm on a cost matrix that allocates workers to tasks one to one at the least total cost.
+          - title: Activity networks
+            id: mat-activity-networks-2
+            brief: Activities are edges, with immediate predecessors showing which must be finished before each can start.
+          - title: Earliest and latest start times
+            id: mat-earliest-latest-start-times
+            brief: A forward scan finds earliest start times, and a backward scan finds the latest start times.
+          - title: The critical path and float
+            id: mat-critical-path-float
+            brief: Activities with zero float form the critical path, which sets the minimum time for the project.
+          - title: Crashing a project
+            id: mat-crashing-project
+            brief: Shortening some activities, at a cost, to cut the project time, which may change the critical path.

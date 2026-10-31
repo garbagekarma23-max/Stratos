@@ -20,3 +20,18 @@ The ids in them were written by a rough estimate only, and nothing is published,
 ## Run after English Advanced is published
 
 `nsw-eng-std-11.yaml` and `nsw-eng-std-12.yaml` share the `eng` bank with English Advanced, and teach many of the same ideas. The matcher only finds points that are already published. Run and publish `nsw-eng-adv-11` and `nsw-eng-adv-12` first, then run these two, so their points can reuse Advanced ones.
+
+## VCE outlines to redraft against a new study design
+
+These four Victorian outlines follow study designs whose accreditation ends on 31 December 2026 (VCAA Notice to Schools 23, February 2024). A replacement study design is due from 2027, so redraft each one against it before running it:
+
+| Outline | Follows now |
+| --- | --- |
+| `vic-bio-u12.yaml` | VCE Biology Study Design (2022 to 2026), Units 1 and 2 |
+| `vic-bio-u34.yaml` | VCE Biology Study Design (2022 to 2026), Units 3 and 4 |
+| `vic-mod-u12.yaml` | VCE History Study Design (2022 to 2026), Modern History Units 1 and 2 |
+| `vic-rev-u34.yaml` | VCE History Study Design (2022 to 2026), Revolutions Units 3 and 4 |
+
+The replacement study designs could not be read when these were drafted, so their units and areas of study are not known here. Revolutions has no Units 1 and 2: Modern History Units 1 and 2 is the usual path into it.
+
+As with the NSW outlines above, the ids were written by a rough estimate only, and nothing is published, so a redraft can change or drop any of them.
