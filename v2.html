@@ -42867,7 +42867,8 @@ MADE_COURSES.push({
                 maths-content.js, edexcel-content.js or src/courses), name is the plain name on its row, and about is
                 the line under it: the exam it leads to, then the topic loaded. The courses the content pipeline made
                 (made.js) come after the others. Each course also gets its group and rank (see yearGroup below).
-   CURRICULA    a country's or a state's own courses, by id. more is a line under them.
+   CURRICULA    a country's or a state's own courses, by id. more is a line under them. about is the certificate a
+                state's row names on the sheet. A state's curriculum shows only once it has a course (see the end).
    INTERNATIONAL the courses that show in every country, under International courses.
    COUNTRY_CODES every country, by its two-letter code. The browser names each one (Intl.DisplayNames), so no names are
                 stored here. Uninhabited places (Antarctica, Bouvet Island, South Georgia, Heard Island, the French
@@ -42882,17 +42883,27 @@ const COURSE_LIST = [
   {id: 'edexcel', data: EDEXCEL, name: 'Economics, AS year', about: 'International A Level (Edexcel)'}
 ].concat(MADE_COURSES.map(c => ({id: c.id, data: c, name: c.row.name, about: c.row.about})));
 /* The heading a course is listed under on the subject sheet, and where that heading sorts. It comes from the course's
-   data, never its name: level for an A level course (AS, then A level), otherwise years (Year 11 before Year 12).
-   The content pipeline writes years and year into every course it makes, from the outline's years line. */
+   data, never its name: level if it has one, otherwise year (Year 11 before Year 12). The content pipeline writes
+   years and year into every course it makes, from the outline's years line, and level from its level line, such as
+   Units 1 and 2 for Victoria and Queensland, or Stage 1 for South Australia. A level sorts by its years (Units 1 and 2 are Year 11,
+   so they come before Units 3 and 4), and a level with no years after every year, AS before A level. Headings with
+   the same rank go in number order, so Units 1 and 2 comes before Units 3 and 4. */
 const LEVELS = ['AS', 'A level'];
 function yearGroup(d) {
-  if (d.level) return {group: d.level, rank: 100 + Math.max(0, LEVELS.indexOf(d.level))};
   const ys = (d.years || []).slice().sort((a, b) => a - b);
+  if (d.level) return {group: d.level, rank: ys.length ? ys[0] : 100 + Math.max(0, LEVELS.indexOf(d.level))};
   return {group: d.year, rank: ys.length ? ys[0] : 99};
 }
 COURSE_LIST.forEach(c => Object.assign(c, yearGroup(c.data)));
 const CURRICULA = {
-  nsw: {name: 'New South Wales', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'}
+  nsw: {name: 'New South Wales', about: 'HSC', courses: ['eco', 'maths'], more: 'More NSW subjects are coming.'},
+  vic: {name: 'Victoria', about: 'VCE', courses: [], more: 'More Victorian subjects are coming.'},
+  qld: {name: 'Queensland', about: 'QCE', courses: [], more: 'More Queensland subjects are coming.'},
+  wa: {name: 'Western Australia', about: 'WACE', courses: [], more: 'More Western Australian subjects are coming.'},
+  sa: {name: 'South Australia', about: 'SACE', courses: [], more: 'More South Australian subjects are coming.'},
+  tas: {name: 'Tasmania', about: 'TCE', courses: [], more: 'More Tasmanian subjects are coming.'},
+  act: {name: 'Australian Capital Territory', about: 'ACT Senior Secondary Certificate', courses: [], more: 'More ACT subjects are coming.'},
+  nt: {name: 'Northern Territory', about: 'NTCET', courses: [], more: 'More Northern Territory subjects are coming.'}
 };
 const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
 /* A made course (made.js) names where it is taught: a curriculum here, or international. */
@@ -42917,6 +42928,15 @@ const PLACES = {
     {id: 'nt', name: 'Northern Territory', zones: ['Australia/Darwin', 'Australia/North']}
   ]}
 };
+/* A state's own curriculum (CURRICULA, by the state's id) shows once it has a course. Until then the state says
+   "Courses coming" on the sheet, and its students see the international courses. Australia's line on the country
+   list names every state with courses: "NSW courses and international courses", then "NSW and VIC courses and ...". */
+PLACES.AU.states.forEach(s => {
+  const c = CURRICULA[s.id];
+  if (!s.curriculum && c && c.courses.length) Object.assign(s, {curriculum: s.id, about: c.about});
+});
+(own => { PLACES.AU.about = own.length > 1 ? own.slice(0, -1).join(', ') + ' and ' + own[own.length - 1] + ' courses and international courses' : PLACES.AU.about; })(
+  PLACES.AU.states.filter(s => s.curriculum).map(s => s.id.toUpperCase()));
 
 /* Stratos Maths Lab: the topics. Each topic is data only, so a new topic needs no new code.
 

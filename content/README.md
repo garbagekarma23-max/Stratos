@@ -1,6 +1,6 @@
 # The content pipeline
 
-Turns a course outline into study content for Stratos. You write the outline: the course, its units and chapters, and a short brief for each point, in your own words. The pipeline sends each chapter to Claude, which writes the card, the remember line, the check question and the practice question for each point. The content check runs on each one, then a separate Claude call checks it for wrong answers, options that could also be right, and factual errors. You review only the points it flags, on a page on your own computer. Then the pipeline writes the cleared points into the app.
+Turns a course outline into study content for Stratos. You write the outline: the course, its units and chapters, and a short brief for each point, in your own words. First the pipeline looks for points already written, in any course, subject or state: a point can be reused as it is, adapted with small changes, or written new (see Reusing points from other courses and states). Then it sends each chapter to Claude, which writes the card, the remember line, the check question and the practice question for each point. The content check runs on each one, then a separate Claude call checks it for wrong answers, options that could also be right, and factual errors. You review only the points it flags, on a page on your own computer. Then the pipeline writes the cleared points into the app.
 
 The commands below are for PowerShell on Windows. They also work in Git Bash, so Claude Code can run them as written.
 
@@ -97,6 +97,8 @@ There are two sets of settings to pick from, at the top of `content/pipeline.py`
 
 | Step | `original` (the first run) | `cheaper` (a new course) |
 | --- | --- | --- |
+| Match | Claude Opus 5.5, low effort. A match it is not highly sure of comes to you | Claude Haiku 5.5, medium effort. Every reuse, and an adapt it is not highly sure of, goes to Claude Opus 5.5, medium effort |
+| Adapt | Claude Opus 5.5, medium effort | Claude Sonnet 5.5, low effort |
 | Write | Claude Opus 5.5, medium effort, one point per request | Claude Sonnet 5.5, low effort, a chapter per request |
 | Check | Claude Opus 5.5, high effort, every point | Claude Opus 5.5, high effort, every point |
 | Fix | Claude Opus 5.5, medium effort | Claude Opus 5.5, medium effort |
@@ -125,7 +127,8 @@ py content/pipeline.py run content/outlines/nsw-bus-11.yaml --max-dollars 5
 ```
 
 - `--max-dollars` is the most this course may cost in total, counting earlier runs. The pipeline refuses to send a batch that could take it past that.
-- Each step is one batch, so a run waits for several in turn: matching (if the bank has points in the same subject), writing, checking and fixes. Batches usually take under an hour each, at most 24.
+- Before sending anything, it shows how the points split (reuse, adapt, new, and how many are still to be matched) and the estimate, as `estimate` does. Once matching has decided more points, it shows the split again before the next batch.
+- Each step is one batch, so a run waits for several in turn: matching (for points the shortlist found a likely bank point for), adapting, writing, checking and fixes. Batches usually take under an hour each, at most 24.
 - `--now` sends the requests to the normal API instead, 4 at a time, so a run finishes in minutes. It costs twice as much, and it only runs when at most 50 points are waiting. Use it for tests and small courses:
 
   ```powershell
@@ -150,6 +153,38 @@ py content/pipeline.py run-many content/outlines --max-dollars 20
 - `--max-dollars` is the most all the courses may cost together, counting earlier runs. Each course gets a share: what it has spent, plus the rest split by how much each could still cost. The shares are printed before anything is sent. A course that would pass its share is held back and the others carry on. Run the same command again to share out the money again.
 - Each course keeps its own work folder, settings and costs, and a course whose outline has a problem, or that stops, does not hold up the others.
 - `--now`, `--settings` and `--no-wait` work as with `run`. At the end it prints the numbers for each course.
+
+## Reusing points from other courses and states
+
+Many ideas are taught in more than one course: supply and demand in NSW Economics and in Victoria's, z-scores in two maths courses, the share market in Business Studies and Economics. A point reused as it is costs nothing more to write or check, and a student's progress on it counts in every course that has it. So before writing, each new point is matched against every point already published, in every bank.
+
+### How a point is matched
+
+1. **The shortlist, with no API call.** Every published point in every bank gets a score from the words it shares with the new point's title and brief (rare words count for more, and "multi-stage" counts the same as "multistage"). The score is lowered for a different subject (Business Studies and Economics count as the same, and so do the maths courses) and for years far apart. The best 5 (`MATCH_MOST`) that score at least 0.2 (`MATCH_MIN`) go on. A point with none is written new, with no match request at all. On the NSW courses, the 21 points you or the matcher already matched all came out top of their shortlists.
+2. **The match: Claude Haiku 5.5.** It sees the new point, its course and state, and each shortlisted point in full (card and both questions), with the courses it is used in. It answers reuse, adapt or new, how sure it is, and for adapt, the changes needed.
+3. **The match check: Claude Opus 5.5**, for every reuse Haiku names, however sure it is, because a reuse skips both the checker and you. Also for an adapt Haiku is not highly sure of. Opus gets the same request and is not told Haiku's answer. Its answer decides. An adapt Haiku is highly sure of, and a point it says is new, go straight on without Opus, because both are written and checked anyway.
+4. **You**, only when Opus is not highly sure either. The review page shows it as a possible match.
+
+### The three outcomes
+
+- **Reuse**: the bank point fits as it is, and Opus has confirmed it. Nothing is written, checked or reviewed: the chapter lists the bank point's id, as `reuse:` in an outline does. A reuse still comes to you if it is about a sensitive topic or for an English course (those points are always reviewed), and is written new if the course already has that bank point. If the bank point fails the content check for this course (a word only another subject allows, such as landscape in Geography), it is adapted instead.
+- **Adapt**: the bank point teaches the same idea at the right depth, but needs small changes for this syllabus: a term or notation, which formulas are given, a law or body that differs between states, or a local example. Claude Sonnet 5.5 gets the bank point part by part and the list of changes, and answers with only the parts it changes (`prompts/adapter.md`). Both questions are always worded afresh, because no two questions may share the same text (step 9). The adapted point is a new point in this course's bank, with its own id and its own progress, and goes through the content check, the checker, the fix, autoreview and recheck like any other. Its file has an `adapt` entry: the bank point it came from, the changes asked for, and the parts that changed.
+- **New**: written from scratch, as before.
+
+Each point's file keeps its `shortlist` (with the scores), Haiku's answer (`match`), Opus's (`confirm`) and what was decided (`matched` or `adapt`), with each step's cost.
+
+### What it costs
+
+The shortlist is free. A Haiku match is about 0.03 cents a point with batches, and an Opus match check about 1 to 2 cents. Every reuse costs one Opus match check, which is still far less than writing and checking a new point (about 4 cents). Before, every point in a course whose subject had a bank went to Opus with every point in that bank: Business Studies Year 12's 106 match requests cost US$0.77, and the four NSW wave 2 courses that matched spent US$2.37 on it. The ten other wave 2 courses were never matched at all.
+
+The estimate counts a point still to be matched both ways: its low end as if it were reused (so with its Opus match check), its high end as if it were written new after the match check too. Plan for the high number.
+
+### Courses from other states
+
+- Name the state in `place`: `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt` (or `nsw`, or `international`). A state's courses show on the subject sheet once its first course is published. Until then it says Courses coming, as now.
+- Victoria and Queensland name their years by units, and South Australia and the Northern Territory by stages (Stage 1 and Stage 2). Give the outline a `level` line, such as `level: Units 1 and 2` or `level: Stage 1`, and keep `years` (`[11]` for Units 1 and 2 or Stage 1, `[12]` for Units 3 and 4 or Stage 2), which matching uses. The subject sheet lists the course under its level, as it lists NSW courses under Year 11 and Year 12, and Home names it "Economics, Units 1 and 2".
+- Publish the courses you want reused first. Matching only sees published points, so two courses in the same `run-many` can't reuse each other's points.
+- Haiku's matching has not been measured against Opus yet. For the first run of another state's courses, look over a few reuses and adapts before publishing: each point's file says which bank point it came from.
 
 ## 8. Review the flagged points
 
@@ -282,7 +317,7 @@ py content/pipeline.py review
 This opens http://localhost:8765 in your browser. Only this computer can open it. It lists only the points waiting for you:
 
 - **Flagged**: the checker found a problem. On the left is the point as students would see it, with the right option marked. On the right are the checker's reasons and how sure it was. If it suggested a fix, **The fix** shows it with the changed words in blue.
-- **Possible match**: the bank already has a point that may teach the same idea. **Reuse** shares that point, and each student's progress on it, with the courses that already use it. **Write a new point** has one written for this course.
+- **Possible match**: the bank already has a point that may teach the same idea, and neither Haiku nor Opus was highly sure, or it is a reuse about a sensitive topic or for an English course. It shows the bank point, which courses use it, what the model said and the changes it suggested. **Reuse** shares that point, and each student's progress on it, with the courses that already use it. **Adapt it** has a new point adapted from it on the next run, with those changes. **Write a new point** has one written for this course from scratch.
 - **Not written**: Claude declined to write it, or it failed three times.
 
 The buttons:
@@ -306,6 +341,8 @@ node week-db.mjs
 node challenges-db.mjs
 cd ..
 ```
+
+`node check_content.mjs` fails if two questions anywhere in the banks (or in NSW Economics) share the same text, ignoring capitals, spaces and the mark at the end. The pipeline runs the same check on each point as it is written or adapted, so a copy is written again before it reaches you.
 
 `publish` never publishes a trial (step 10). It writes the cleared points into `src/bank/bus.js`, the course into `src/courses/nsw-bus-11.js`, and the course's lines into `supabase/week.sql` and `supabase/challenges.sql`. A chapter goes in only when every point in it is cleared. Until then it shows on Home as Coming soon. Then commit everything on a new branch:
 
@@ -355,13 +392,14 @@ Copy `content/outlines/nsw-bus-11.yaml` and change it. Each line:
 | `bank` | The shared bank its new points go in: 2 to 4 letters, such as `bus`. Courses in the same subject share a bank. |
 | `name`, `about` | The course's row on the subject sheet, and the line under it. |
 | `short` | A short name for Search ("Search Business Studies"). |
-| `years` | The years it is for, from 7 to 12, such as `[11]` or `[7, 8]`. |
-| `place` | `nsw`, or `international`. |
+| `years` | The years it is for, from 7 to 12, such as `[11]` or `[7, 8]`. Matching uses them, so keep them for a course named by units too. |
+| `level` | Optional. The heading the course is listed under, for a state that names its years another way, such as `Units 1 and 2`. Short, in sentence case. Without it, the course is listed under its year. |
+| `place` | `nsw`, `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt`, or `international`. |
 | `kind` | `standard`; `english` (techniques, text types, modules, context and themes of set texts, essay structure, and never more than 10 words quoted); `maths` (cards and multiple choice until the keypad comes to the course); or `theory` (for practical subjects such as Visual Arts, Music, Drama and practical PDHPE: theory and history only). |
 | `syllabus` | Which syllabus and part, in a few words, so Claude pitches it right. |
 | `note` | The line under the course name on Home and the subject sheet. |
 | `chips` | Optional. Words to try on the Search page. |
-| `also_match` | Optional. Other banks to look for the same idea in, such as `[e]` for the Economics bank. |
+| `also_match` | Optional. Matching looks in every bank now. A bank named here counts as the same subject, so its points score higher, such as `[e]` for the Economics bank. |
 | `units` | Each unit has a `title` and `chapters`. Each chapter has a `title` and `points`. |
 | points | Each point has a `title` and a `brief`: what it teaches, in a sentence or two of your own words. `codes` can list syllabus outcome codes. `reuse: e-ped` uses a bank point exactly as it is, with no brief. |
 
@@ -371,15 +409,16 @@ Rules:
 - The pipeline adds an `id:` line under each chapter and point the first time it runs. Never change an id once the course is published: progress is saved by it.
 - Changing a point's title or brief later starts that point again from the beginning on the next run.
 - Keep a chapter to about 3 to 7 points, so a Learn session stays short.
+- Write each brief so it says what the point teaches in plain words. The shortlist matches on the words in the title and brief, so a brief that names the idea finds a point already written.
 
 ## Files
 
 | File | What it holds |
 | --- | --- |
 | `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model and how hard it thinks at each step, the prices, and the limits for `--now` and batches. |
-| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md`, `rebalance.md` (rewriting wrong options to match the right one), and the extra rules for each kind in `kinds/`. |
+| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
 | `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's or recheck's decision and yours, and the old options rebalance replaced). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
-| `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. |
+| `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. `tests/made/` and `tests/units/` are courses it publishes, which the browser tests open. |
