@@ -1,11 +1,12 @@
-# VCE Physics, Units 3 and 4: fields, motion and electricity, and how ideas about light and matter changed, 39 points.
-# Drafted from the VCAA's VCE Physics Study Design, Units 3 and 4 from 2024. The structure follows the study design:
-# each unit is a unit here, and each area of study is a chapter. The practical investigation is school-run, so it is
-# not here. Every brief is in our own words.
+# VCE Physics, Units 3 and 4: fields, motion and electricity, and how ideas about light and matter changed, 51 points.
+# Checked against the VCAA's VCE Physics Study Design, accredited from 2023 (Units 3 and 4 from 2024), in October
+# 2026. Each unit is a unit here, and each area of study is a chapter, or two when it is large. The investigations are
+# school-run, so their science skills are a short chapter here. Every brief is in our own words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # NSW Physics Year 12 (the phys bank) covers much of this, so expect reuses and adapts.
-# The study design's end date was not confirmed when this was drafted (a school guide gives 2027). Check it first.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-phys-u34
 subject: Physics
@@ -27,33 +28,37 @@ units:
       - title: Motion in two dimensions
         id: vic-phys-u34-1-1
         points:
+          - title: Forces in two dimensions
+            id: phys-forces-two-dimensions
+            brief: Newton's laws apply when two or more forces act at angles, by adding the forces as vectors.
           - title: Projectile motion in physics
             id: phys-projectile-motion-physics
-            brief: Horizontal and vertical motion are independent. Horizontal velocity stays constant while gravity accelerates the vertical part.
+            brief: "Horizontal and vertical motion are independent: steady horizontal velocity and constant downward acceleration. Air resistance shortens the path."
           - title: Uniform circular motion
             id: phys-uniform-circular-motion-2
-            brief: An object moving in a circle at constant speed accelerates toward the centre, a = v²/r, needing a net centripetal force.
+            brief: An object moving in a horizontal circle at steady speed accelerates towards the centre, as a car on a curve or a ball on a string does.
           - title: Banked tracks
             id: phys-banked-tracks
             brief: On a banked curve, part of the normal force supplies the centripetal force, so a car can turn without friction.
           - title: Vertical circular motion
             id: phys-vertical-circular-motion
             brief: At the top and bottom of a vertical loop, the normal force and weight combine to give the centripetal force.
-          - title: Conservation of momentum in 2D
+
+      - title: Energy and momentum in Unit 3
+        id: vic-phys-u34-1-2-2
+        points:
+          - title: Impulse and momentum
             id: phys-conservation-momentum-2d
-            brief: In a collision with no outside force, total momentum stays the same, and energy may be lost in an inelastic collision.
+            brief: Impulse, force times time, equals the change in momentum, and total momentum is conserved in a straight-line collision.
+          - title: Work done by a force
+            id: phys-work-done-by-force
+            brief: Work is force times displacement, or the area under a force-distance graph.
+          - title: Elastic and inelastic collisions
+            id: phys-elastic-inelastic-collisions-2
+            brief: Kinetic energy is kept in an elastic collision and partly lost in an inelastic one, though momentum is conserved in both.
           - title: Springs and energy
             id: phys-springs-energy
-            brief: Hooke's law, F = −kx, and the energy stored in a spring, ½kx², which changes into other forms.
-          - title: Einstein's postulates
-            id: phys-einstein-s-postulates
-            brief: The laws of physics are the same in every inertial frame, and the speed of light is the same for all observers.
-          - title: Time dilation and length contraction
-            id: phys-time-dilation-length-contraction
-            brief: Moving clocks run slow and moving objects are shorter, by the Lorentz factor, as seen by a stationary observer.
-          - title: Mass and energy in relativity
-            id: phys-mass-energy-relativity
-            brief: E = mc² means mass and energy are equivalent, which explains the energy from nuclear reactions.
+            brief: Energy moves between kinetic, elastic and gravitational forms, found from equations or the area under force-distance graphs.
 
       - title: Fields
         id: vic-phys-u34-1-2
@@ -67,24 +72,34 @@ units:
           - title: Newton's law of universal gravitation
             id: phys-newton-s-law-universal-2
             brief: F = GMm/r², so the force halves to a quarter when the distance doubles.
-          - title: Satellites and orbits
-            id: phys-satellites-orbits
-            brief: Gravity supplies the centripetal force for a satellite, which sets its speed and period for each orbit radius.
           - title: Electric fields
             id: phys-electric-fields-2
-            brief: Charges create electric fields. Coulomb's law gives the force between charges, and a uniform field lies between parallel plates.
+            brief: The field around a point charge weakens with the inverse square of distance. A uniform field between plates accelerates a charge, with F = qE and W = qV.
           - title: Magnetic fields
             id: phys-magnetic-fields
             brief: Magnets and currents create magnetic fields, with field lines from north to south.
+          - title: Comparing fields
+            id: phys-comparing-fields
+            brief: Electric and magnetic forces can attract or repel, but gravity only attracts. Fields can be static or changing, uniform or not.
+
+      - title: Using fields
+        id: vic-phys-u34-1-4
+        points:
+          - title: Satellites and orbits
+            id: phys-satellites-orbits
+            brief: Gravity supplies the centripetal force for a satellite, which sets its speed and period for each orbit radius.
+          - title: Charged particles in fields
+            id: phys-charged-particles-fields
+            brief: A charge moving across a magnetic field feels a force F = qvB at right angles, so it moves in a circle whose radius depends on its speed.
+          - title: Particle accelerators
+            id: phys-synchrotrons-light
+            brief: Accelerators such as synchrotrons speed charges up with electric fields and bend them in circles with magnetic fields.
           - title: Force on a current in a field
             id: phys-force-current-field
             brief: A current-carrying wire in a magnetic field feels a force, F = nIlB, used in motors.
-          - title: Charged particles in fields
-            id: phys-charged-particles-fields
-            brief: A charge moving through a magnetic field feels a force F = qvB at right angles, making it move in a circle.
           - title: DC motors
             id: phys-dc-motors-2
-            brief: Forces on a current loop in a magnetic field make it turn, and a split-ring commutator keeps it turning one way.
+            brief: A current-carrying coil in a magnetic field turns, with a split ring commutator keeping it turning. More current, field or loops give more torque.
 
       - title: Generating electricity
         id: vic-phys-u34-1-3
@@ -100,7 +115,10 @@ units:
             brief: The induced current flows to oppose the change in flux that caused it.
           - title: Generators
             id: phys-generators-2
-            brief: A coil turning in a magnetic field makes alternating current, using slip rings, or direct current with a commutator.
+            brief: A coil turning in a magnetic field gives AC through slip rings in an alternator, or DC through a split ring commutator.
+          - title: Solar cells and inverters
+            id: phys-solar-cells-inverters
+            brief: Photovoltaic cells produce DC, and an inverter turns it into AC for use in the home.
           - title: Peak and RMS values
             id: phys-peak-rms-values
             brief: The RMS voltage of an AC supply is the peak voltage divided by √2, and gives the same power as that DC voltage.
@@ -118,7 +136,10 @@ units:
         points:
           - title: Wave properties
             id: phys-wave-properties
-            brief: Waves have wavelength, frequency, amplitude and speed, linked by v = fλ.
+            brief: Light is a transverse electromagnetic wave made by accelerating charges, and all such waves travel at c in a vacuum.
+          - title: Standing waves
+            id: phys-standing-waves
+            brief: A wave and its reflection add to make a standing wave with fixed nodes and antinodes.
           - title: Diffraction
             id: phys-diffraction
             brief: Waves spread out through a gap or around an edge, most when the gap is close to the wavelength.
@@ -128,9 +149,6 @@ units:
           - title: Path difference and interference
             id: phys-path-difference-interference
             brief: Bright bands occur where path difference is a whole number of wavelengths, dark bands at half wavelengths.
-          - title: Polarisation
-            id: phys-polarisation-2
-            brief: A transverse wave can be polarised to vibrate in one plane, which shows light is a transverse wave.
 
       - title: Light and matter
         id: vic-phys-u34-2-2
@@ -150,15 +168,54 @@ units:
           - title: Electron diffraction
             id: phys-electron-diffraction
             brief: Electrons passing through a crystal make diffraction patterns, confirming their wave nature.
+          - title: Momentum of photons and matter
+            id: phys-momentum-photons-matter
+            brief: Photons and particles with the same wavelength have the same momentum, p = h/λ.
+
+      - title: Quantisation and spectra
+        id: vic-phys-u34-2-3
+        points:
+          - title: The idea of quantisation
+            id: phys-idea-quantisation
+            brief: Energy that comes only in set amounts explained both the behaviour of light and the structure of atoms.
           - title: Atomic energy levels and spectra
             id: phys-atomic-energy-levels-spectra
             brief: Electrons in atoms have set energy levels. Moving between them emits or absorbs photons of set frequencies, giving line spectra.
           - title: Wave-particle duality
             id: phys-wave-particle-duality
-            brief: Light and matter both show wave and particle behaviour, depending on the experiment.
-          - title: Heisenberg's uncertainty principle
-            id: phys-heisenberg-s-uncertainty-principle
-            brief: The position and momentum of a particle cannot both be known exactly at the same time.
-          - title: Synchrotrons and light
-            id: phys-synchrotrons-light
-            brief: A synchrotron accelerates electrons in a ring to make intense light used to study materials.
+            brief: Single photons and single electrons build up a double slit pattern, evidence that light and matter both act as waves and particles.
+
+      - title: Special relativity
+        id: vic-phys-u34-2-4
+        points:
+          - title: Limits of classical mechanics
+            id: phys-limits-classical-mechanics
+            brief: Newton's mechanics fails for objects moving close to the speed of light.
+          - title: Einstein's postulates
+            id: phys-einstein-s-postulates
+            brief: The laws of physics are the same in every inertial frame, and the speed of light is the same for all observers.
+          - title: The Michelson-Morley experiment
+            id: phys-michelson-morley-experiment
+            brief: It found no change in the speed of light with Earth's motion, a result that supports special relativity.
+          - title: Time dilation and length contraction
+            id: phys-time-dilation-length-contraction
+            brief: Proper time and proper length are measured in an object's own frame. Observers moving relative to it measure longer times and shorter lengths.
+          - title: Relativity in action
+            id: phys-relativity-action
+            brief: Muons reaching the ground, the design of particle accelerators and GPS corrections all depend on relativity.
+          - title: Mass and energy in relativity
+            id: phys-mass-energy-relativity
+            brief: An object's total energy is γmc², its rest energy plus kinetic energy. Mass converts to energy in the Sun and in annihilation.
+
+      - title: "Science skills: the investigation"
+        id: vic-phys-u34-2-5
+        points:
+          - title: Variables and controlled experiments in physics
+            id: phys-variables-controlled-experiments-physics
+            brief: Changing one independent variable, measuring the dependent variable and controlling the rest shows cause and effect.
+          - title: Linearising data
+            id: phys-linearising-data
+            brief: Graphing transformed data to get a straight line shows a relationship, and the gradient has a physical meaning.
+          - title: Presenting a scientific poster
+            id: phys-presenting-scientific-poster
+            brief: A poster communicates an investigation briefly, with correct symbols, units and significant figures, and acknowledges sources.

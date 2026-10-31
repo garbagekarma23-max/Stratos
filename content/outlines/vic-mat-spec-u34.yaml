@@ -1,11 +1,13 @@
 # VCE Specialist Mathematics, Units 3 and 4: proof, functions, complex numbers, calculus, vectors and statistical
-# inference, 42 points.
-# Drafted from the VCAA's VCE Mathematics Study Design, accreditation period 2023 to 2027. Units 3 and 4 are taught as
-# a sequence, so each unit here is an area of study and each chapter part of one. Every brief is in our own words.
+# inference, 51 points.
+# Checked against the VCAA's VCE Mathematics Study Design, accredited from 2023, in October 2026. Units 3 and 4 are
+# taught as a sequence, so each unit here is an area of study and each chapter part of one. Every brief is in our own
+# words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # Cards and multiple choice for now (kind: maths). Run Mathematical Methods Units 3 and 4 first: Specialist assumes it.
-# In transition: the accreditation ends 31 December 2027. Check for a new study design before running this for 2028.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-mat-spec-u34
 subject: Mathematics
@@ -17,16 +19,19 @@ years: [12]
 level: Units 3 and 4
 place: vic
 kind: maths
-syllabus: VCE Mathematics Study Design (2023 to 2027), Specialist Mathematics Units 3 and 4
+syllabus: VCE Mathematics Study Design (from 2023), Specialist Mathematics Units 3 and 4
 note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
 chips: [De Moivre's theorem, partial fractions, differential equation, vector equation of a line, hypothesis test]
 
 units:
   - title: Discrete mathematics
     chapters:
-      - title: Proof and number
+      - title: Logic and proof
         id: vic-mat-spec-u34-1-1
         points:
+          - title: Conjectures and if and only if
+            id: mat-conjectures-if-only-if
+            brief: "A conjecture is a statement to prove or disprove. If and only if means each side implies the other: a necessary and sufficient condition."
           - title: Proof by induction in Unit 3
             id: mat-proof-by-induction-unit
             brief: Induction proves results about sums, divisibility and inequalities for every natural number.
@@ -38,49 +43,40 @@ units:
             brief: Results about divisibility, odd and even numbers and primes, proved directly or by contradiction.
           - title: Contrapositive and contradiction in Unit 3
             id: mat-contrapositive-contradiction-unit-3
-            brief: Choosing between direct proof, contrapositive and contradiction depending on which is easiest to start.
+            brief: Proof by cases, by contrapositive and by contradiction, chosen to suit the statement.
 
   - title: Functions, relations and graphs
     chapters:
-      - title: Rational functions and circular functions
+      - title: Rational functions
         id: vic-mat-spec-u34-2-1
         points:
           - title: Rational functions
             id: mat-rational-functions
             brief: A quotient of two polynomials. Its graph has vertical asymptotes where the denominator is zero and may have an oblique asymptote.
-          - title: Reciprocal circular functions
-            id: mat-reciprocal-circular-functions
-            brief: sec x = 1/cos x, cosec x = 1/sin x and cot x = 1/tan x, each with asymptotes where its denominator is zero.
-          - title: Compound and double angle formulas
-            id: mat-compound-double-angle-formulas
-            brief: Formulas such as sin(A + B) = sin A cos B + cos A sin B rewrite expressions and solve equations.
-          - title: Inverse circular functions
-            id: mat-inverse-circular-functions
-            brief: arcsin, arccos and arctan undo sin, cos and tan on restricted domains, with set ranges.
+          - title: Partial fractions in Unit 3
+            id: mat-partial-fractions-unit-3
+            brief: A rational function of low degree written as a sum of partial fractions, which helps graphing and integration.
+          - title: Graphs of quotient functions
+            id: mat-graphs-quotient-functions
+            brief: Graphs of rational and quotient functions, with their asymptotes, stationary points and points of inflection.
 
   - title: Algebra, number and structure
     chapters:
       - title: Complex numbers in Unit 3
         id: vic-mat-spec-u34-3-1
         points:
-          - title: Polar form
-            id: mat-polar-form
-            brief: z = r cis θ, where r is the modulus and θ the argument, makes multiplying and dividing simple.
-          - title: Multiplying in polar form
-            id: mat-multiplying-polar-form
-            brief: Multiply moduli and add arguments. Dividing divides moduli and subtracts arguments.
           - title: De Moivre's theorem
             id: mat-de-moivre-s-theorem
             brief: (r cis θ)ⁿ = rⁿ cis(nθ), for powers of complex numbers.
           - title: Roots of complex numbers
             id: mat-roots-complex-numbers
-            brief: The n nth roots of a complex number lie evenly spaced on a circle in the Argand plane.
+            brief: The n nth roots of a complex number, such as the roots of unity, are evenly spaced on a circle in the complex plane.
           - title: Factorising polynomials over C
             id: mat-factorising-polynomials-over-c
-            brief: Every polynomial factors fully over the complex numbers. Real polynomials have non-real roots in conjugate pairs.
-          - title: Regions and curves in the complex plane
-            id: mat-regions-curves-complex-plane
-            brief: Equations such as |z − 1| = 2 or Arg(z) = π/4 describe circles, lines and rays in the Argand plane.
+            brief: The fundamental theorem of algebra says a polynomial of degree n has n roots over C, so it factorises fully into linear factors.
+          - title: Solving polynomial equations over C
+            id: mat-solving-polynomial-equations-over
+            brief: Completing the square, quadratic factors and the conjugate root theorem solve polynomial equations with real coefficients.
 
   - title: Calculus
     chapters:
@@ -90,21 +86,30 @@ units:
           - title: Implicit differentiation
             id: mat-implicit-differentiation
             brief: Differentiate both sides of a relation with respect to x, using the chain rule on terms in y.
+          - title: Related rates
+            id: mat-related-rates
+            brief: The chain rule links rates of change, such as how fast a balloon's radius grows as air is pumped in.
           - title: Derivatives of inverse circular functions
             id: mat-derivatives-inverse-circular-functions
             brief: The derivative of arcsin(x) is 1/√(1 − x²), and of arctan(x) is 1/(1 + x²).
           - title: Second derivatives and points of inflection
             id: mat-second-derivatives-points-inflection
-            brief: The second derivative gives concavity. A point of inflection is where concavity changes.
+            brief: The second derivative shows concavity, and where it changes sign the graph has a point of inflection.
+          - title: Graphs of antiderivatives
+            id: mat-graphs-antiderivatives
+            brief: The graph of a function shows the shape of its antiderivatives, which differ only by a vertical shift.
 
       - title: Integral calculus
         id: vic-mat-spec-u34-4-2
         points:
+          - title: Integrals that give inverse circular functions
+            id: mat-integrals-that-give-inverse
+            brief: Expressions such as 1/(a^2 + x^2) integrate to inverse circular functions.
           - title: Integration by substitution
             id: mat-integration-by-substitution
             brief: Changing the variable, u = g(x), turns an integral of f(g(x))g′(x) into an integral of f(u).
           - title: Partial fractions
-            id: mat-partial-fractions
+            id: mat-partial-fractions-2
             brief: Splitting a rational function into simpler fractions so each can be integrated.
           - title: Integrating with trigonometric identities
             id: mat-integrating-with-trigonometric-identities
@@ -117,26 +122,39 @@ units:
             brief: Rotating a curve about an axis makes a solid with volume π times the integral of y².
           - title: Arc length and surface area
             id: mat-arc-length-surface-area
-            brief: Integrals give the length of a curve and the area of the surface formed by rotating it.
+            brief: Integrals give the length of a curve defined by parametric equations and the area of a surface formed by rotating a curve.
 
-      - title: Differential equations and kinematics
+      - title: Differential equations
         id: vic-mat-spec-u34-4-3
         points:
           - title: Differential equations
             id: mat-differential-equations
-            brief: An equation with a derivative in it, solved by integrating and using a starting condition.
+            brief: Equations involving rates, formed from contexts in chemistry, biology and economics, and checked by substituting a solution.
+          - title: Separation of variables
+            id: mat-separation-variables
+            brief: Moving each variable to its own side of a differential equation and integrating both sides solves it.
           - title: Growth and decay models
             id: mat-growth-decay-models
             brief: dy/dt = ky gives exponential growth or decay. The logistic model levels off at a limit.
+          - title: The logistic equation
+            id: mat-logistic-equation
+            brief: A growth model where the rate slows as the population nears a limit, the carrying capacity.
           - title: Slope fields
             id: mat-slope-fields
             brief: Short line segments showing the gradient at many points, sketching solution curves without solving.
           - title: Euler's method
             id: mat-euler-s-method
             brief: Step along a solution using the gradient, y(n+1) = y(n) + h f(x(n), y(n)), to approximate it.
+
+      - title: Kinematics
+        id: vic-mat-spec-u34-4-4
+        points:
           - title: Rectilinear motion
             id: mat-rectilinear-motion
             brief: Velocity is the derivative of displacement and acceleration the derivative of velocity, along a straight line.
+          - title: Velocity-time graphs
+            id: mat-velocity-time-graphs
+            brief: The gradient of a velocity-time graph is acceleration and the signed area under it is displacement.
           - title: Acceleration in different forms
             id: mat-acceleration-different-forms
             brief: Acceleration can be written as dv/dt, v dv/dx or d/dx(½v²), chosen to suit the information given.
@@ -149,21 +167,37 @@ units:
           - title: Vectors in 3D
             id: mat-vectors-3d
             brief: Vectors with i, j and k components describe position and direction in space.
+          - title: Linear dependence
+            id: mat-linear-dependence
+            brief: Vectors are linearly dependent if one can be made from the others. Independent vectors in 3D point in genuinely different directions.
+          - title: Scalar and vector resolutes
+            id: mat-scalar-vector-resolutes
+            brief: The scalar product splits a vector into a part along another vector and a part perpendicular to it.
           - title: The vector product
             id: mat-vector-product
             brief: a × b gives a vector perpendicular to both, with size equal to the area of the parallelogram they form.
+          - title: Angles between vectors
+            id: mat-angles-distances-3d
+            brief: The scalar product gives the angle between two vectors and shows when they are perpendicular.
+          - title: Vector proofs in Unit 3
+            id: mat-vector-proofs-unit-3
+            brief: Vectors prove results such as the diagonals of a rhombus being perpendicular.
+
+      - title: Lines, planes and vector calculus
+        id: vic-mat-spec-u34-5-2
+        points:
           - title: Vector equation of a line
             id: mat-vector-equation-line
             brief: r = a + tb gives every point on a line through a in the direction b.
           - title: Vector and Cartesian equations of a plane
             id: mat-vector-cartesian-equations-plane
             brief: A plane is set by a point and a normal vector, giving ax + by + cz = d.
-          - title: Angles and distances in 3D
-            id: mat-angles-distances-3d
-            brief: Scalar products give angles between lines and planes; projections give distances.
           - title: Vector calculus
             id: mat-vector-calculus
             brief: Differentiating a position vector gives velocity and acceleration vectors for motion along a path.
+          - title: Paths of particles
+            id: mat-paths-particles
+            brief: Position vectors as functions of time trace paths such as circles and ellipses, and show whether two particles collide.
           - title: Projectile motion with vectors
             id: mat-projectile-motion-with-vectors
             brief: A projectile's position vector combines constant horizontal velocity with vertical acceleration due to gravity.
@@ -188,6 +222,9 @@ units:
           - title: p-values and significance
             id: mat-p-values-significance
             brief: A p-value below the significance level, such as 0.05, gives evidence to reject the null hypothesis.
+          - title: One-tail and two-tail tests
+            id: mat-one-tail-two-tail
+            brief: A one-tail test looks for a change in one direction; a two-tail test looks for a change either way.
           - title: Type I and type II errors
             id: mat-type-i-type-ii
             brief: A type I error rejects a true null hypothesis. A type II error fails to reject a false one.

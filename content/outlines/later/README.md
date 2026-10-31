@@ -21,17 +21,6 @@ The ids in them were written by a rough estimate only, and nothing is published,
 
 `nsw-eng-std-11.yaml` and `nsw-eng-std-12.yaml` share the `eng` bank with English Advanced, and teach many of the same ideas. The matcher only finds points that are already published. Run and publish `nsw-eng-adv-11` and `nsw-eng-adv-12` first, then run these two, so their points can reuse Advanced ones.
 
-## VCE outlines to redraft against a new study design
+## No VCE outlines wait here
 
-These four Victorian outlines follow study designs whose accreditation ends on 31 December 2026 (VCAA Notice to Schools 23, February 2024). A replacement study design is due from 2027, so redraft each one against it before running it:
-
-| Outline | Follows now |
-| --- | --- |
-| `vic-bio-u12.yaml` | VCE Biology Study Design (2022 to 2026), Units 1 and 2 |
-| `vic-bio-u34.yaml` | VCE Biology Study Design (2022 to 2026), Units 3 and 4 |
-| `vic-mod-u12.yaml` | VCE History Study Design (2022 to 2026), Modern History Units 1 and 2 |
-| `vic-rev-u34.yaml` | VCE History Study Design (2022 to 2026), Revolutions Units 3 and 4 |
-
-The replacement study designs could not be read when these were drafted, so their units and areas of study are not known here. Revolutions has no Units 1 and 2: Modern History Units 1 and 2 is the usual path into it.
-
-As with the NSW outlines above, the ids were written by a rough estimate only, and nothing is published, so a redraft can change or drop any of them.
+Every VCE outline is in `content/outlines/`. The VCE Biology and History outlines waited here while their study designs were due to end on 31 December 2026 (VCAA Notice to Schools 23, February 2024). VCAA has since changed how it states accreditation: since 2025 its study designs, study pages and examination specifications give only the year a study design starts (Notice to Schools 23, April 2025). As of October 2026 both still show as current (Biology from 2022, History from 2022), and no replacement for 2027 has been announced, so the four outlines moved up and were checked against the current study designs. If VCAA publishes a new study design for any VCE study, move its outlines back here and list them with what replaces them.

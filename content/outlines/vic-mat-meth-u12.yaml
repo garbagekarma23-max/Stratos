@@ -1,12 +1,12 @@
-# VCE Mathematical Methods, Units 1 and 2: functions, algebra, calculus and probability, 43 points.
-# Drafted from the VCAA's VCE Mathematics Study Design, accreditation period 2023 to 2027. The structure follows the
-# study design's areas of study, each a unit here, with Unit 1 and Unit 2 content together under each. Every brief is
-# in our own words.
+# VCE Mathematical Methods, Units 1 and 2: functions, algebra, calculus and probability, 52 points.
+# Checked against the VCAA's VCE Mathematics Study Design, accredited from 2023, in October 2026. Each unit is a unit
+# here, and its areas of study are its chapters, or two when one is large. Every brief is in our own words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # Cards and multiple choice for now (kind: maths). NSW Mathematics Advanced (the mat bank) shares much of this, so
 # expect reuses and adapts.
-# In transition: the accreditation ends 31 December 2027. Check for a new study design before running this for 2028.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-mat-meth-u12
 subject: Mathematics
@@ -18,14 +18,14 @@ years: [11]
 level: Units 1 and 2
 place: vic
 kind: maths
-syllabus: VCE Mathematics Study Design (2023 to 2027), Mathematical Methods Units 1 and 2
+syllabus: VCE Mathematics Study Design (from 2023), Mathematical Methods Units 1 and 2
 note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
 chips: [factor theorem, inverse function, radians, first principles, conditional probability]
 
 units:
-  - title: Functions, relations and graphs
+  - title: "Unit 1: Polynomial and power functions, rates of change and counting"
     chapters:
-      - title: Functions and their graphs
+      - title: Functions
         id: vic-mat-meth-u12-1-1
         points:
           - title: Relations and functions
@@ -34,6 +34,16 @@ units:
           - title: Domain and range notation
             id: mat-domain-range-notation
             brief: "Intervals use brackets, such as [0, 5) including 0 but not 5, and a restricted domain can be written f: [0, ∞) → R."
+          - title: Inverse functions
+            id: mat-inverse-functions
+            brief: An inverse reverses a function by swapping x and y. It exists only when the function is one-to-one, and its graph reflects in y = x.
+          - title: Reading graphs of real data
+            id: mat-reading-graphs-real-data
+            brief: Describing where a graph of real data rises, falls, levels off or crosses an axis, even without a rule for it.
+
+      - title: Polynomial and power graphs
+        id: vic-mat-meth-u12-1-2-2
+        points:
           - title: Linear graphs and equations
             id: mat-linear-graphs-equations
             brief: Lines y = mx + c, gradients, parallel lines (equal gradients) and perpendicular lines (gradients multiplying to −1).
@@ -49,12 +59,104 @@ units:
           - title: Power functions
             id: mat-power-functions
             brief: Graphs such as y = 1/x, y = 1/x² and y = √x have asymptotes or start points that set their shape.
+
+      - title: Polynomial algebra
+        id: vic-mat-meth-u12-2-1
+        points:
+          - title: Expanding and factorising
+            id: mat-expanding-factorising
+            brief: Common factors, grouping, difference of two squares and perfect squares rewrite polynomials.
+          - title: Dividing polynomials
+            id: mat-dividing-polynomials
+            brief: Long division writes P(x) as a divisor times a quotient plus a remainder.
+          - title: The remainder and factor theorems
+            id: mat-remainder-factor-theorems
+            brief: Substituting a value into a polynomial gives the remainder on dividing by (x - a). A remainder of 0 means a factor, and the rational root theorem lists possible roots.
+          - title: Solving polynomial equations
+            id: mat-solving-polynomial-equations
+            brief: Factorise, then set each factor to zero. The factor theorem finds a first factor for a cubic.
+          - title: The bisection method
+            id: mat-bisection-method
+            brief: Halving an interval again and again where a function changes sign closes in on a root to any accuracy.
+
+      - title: Transformations and simultaneous equations
+        id: vic-mat-meth-u12-1-4
+        points:
           - title: Transformations of graphs
             id: mat-transformations-graphs
-            brief: Dilations, reflections and translations change a graph; y = a f(b(x − h)) + k combines them.
-          - title: Inverse functions
-            id: mat-inverse-functions
-            brief: An inverse reverses a function by swapping x and y. It exists only when the function is one-to-one, and its graph reflects in y = x.
+            brief: Dilations from or parallel to an axis, reflections in an axis and translations move and reshape a graph in predictable ways.
+          - title: Families of functions
+            id: mat-families-functions
+            brief: A parameter in a rule, such as a in y = ax^2, describes a whole family of graphs, and given points find a particular rule.
+          - title: Simultaneous equations
+            id: mat-simultaneous-equations
+            brief: Solve two equations together by substitution or elimination, including a line meeting a parabola.
+
+      - title: Rates of change
+        id: vic-mat-meth-u12-3-1
+        points:
+          - title: Average rate of change
+            id: mat-average-rate-change-2
+            brief: The gradient of the chord between two points, (f(b) − f(a))/(b − a).
+          - title: Instantaneous rate of change
+            id: mat-instantaneous-rate-change
+            brief: The gradient of the tangent at a point, found as the limit of chord gradients as the points move together.
+          - title: Rates in context
+            id: mat-rates-context
+            brief: Reading rates from graphs of real data, such as temperature over time, motion graphs or water filling containers of different shapes.
+          - title: Tangent lines
+            id: mat-tangent-lines
+            brief: The gradient of the tangent at a point measures the instantaneous rate of change, and shows where it is positive, negative or zero.
+
+      - title: Counting and probability
+        id: vic-mat-meth-u12-4-1
+        points:
+          - title: Sample spaces and events
+            id: mat-sample-spaces-events
+            brief: The sample space lists every outcome. An event is a set of outcomes, with probability from 0 to 1.
+          - title: Simulation
+            id: mat-simulation
+            brief: Coins, dice, spinners and random number generators simulate experiments, and the results estimate probabilities.
+          - title: Counting principles
+            id: mat-permutations
+            brief: The addition principle counts choices that are alternatives; the multiplication principle counts choices made one after another.
+          - title: Combinations
+            id: mat-combinations
+            brief: The number of selections of r items from n, when order does not matter, is nCr = n!/(r!(n − r)!).
+
+  - title: "Unit 2: Circular, exponential and logarithmic functions, calculus and probability"
+    chapters:
+      - title: Circular functions
+        id: vic-mat-meth-u12-1-3
+        points:
+          - title: Radians
+            id: mat-radians-2
+            brief: An angle measured by arc length on a unit circle. A full turn is 2π radians, and arc length is radius times angle.
+          - title: The unit circle
+            id: mat-unit-circle-2
+            brief: A point on the unit circle at angle θ has coordinates (cos θ, sin θ), which gives the signs in each quadrant.
+          - title: Exact values
+            id: mat-exact-values-2
+            brief: The sine, cosine and tangent of π/6, π/4 and π/3 have exact values from two special triangles.
+          - title: Symmetry and periodicity
+            id: mat-symmetry-periodicity
+            brief: Sine, cosine and tangent repeat and reflect around the unit circle, which links values in different quadrants.
+
+      - title: Circular graphs and equations
+        id: vic-mat-meth-u12-2-2
+        points:
+          - title: Graphs of sine and cosine
+            id: mat-graphs-sine-cosine
+            brief: Graphs of y = a sin(nx) + k and y = a cos(nx) + k, where a sets the amplitude, n the period and k the mean value.
+          - title: The tangent graph
+            id: mat-tangent-graph
+            brief: y = tan x has period π and vertical asymptotes where cos x = 0.
+          - title: Modelling with sine and cosine
+            id: mat-modelling-with-sine-cosine
+            brief: Tides, daylight hours and temperatures can be modelled with sine and cosine, where period, amplitude and mean have meaning.
+          - title: Solving trigonometric equations
+            id: mat-solving-trigonometric-equations-2
+            brief: Find a reference angle, then every solution in the domain using the quadrants and the period.
 
       - title: Exponential and logarithmic functions
         id: vic-mat-meth-u12-1-2
@@ -67,98 +169,45 @@ units:
             brief: y = a^x has a horizontal asymptote at y = 0 and passes through (0, 1). It grows for a > 1 and decays for 0 < a < 1.
           - title: Logarithms
             id: mat-logarithms
-            brief: log_a(y) = x means a^x = y. Logarithms undo exponentials.
+            brief: "A logarithm is an exponent: log base a of x is the power of a that gives x. The log function is the inverse of the exponential."
           - title: Logarithm laws
             id: mat-logarithm-laws-2
             brief: log(ab) = log a + log b, log(a/b) = log a − log b, and log(a^n) = n log a.
           - title: Solving exponential equations
             id: mat-solving-exponential-equations-2
             brief: Equations such as 2^x = 10 are solved by taking logarithms of both sides.
+          - title: Exponential models
+            id: mat-exponential-models-2
+            brief: Exponential rules model growth and decay, with an initial value, a growth or decay rate, a doubling time or a half-life.
 
-      - title: Circular functions
-        id: vic-mat-meth-u12-1-3
+      - title: Differentiation
+        id: vic-mat-meth-u12-2-4
         points:
-          - title: Radians
-            id: mat-radians-2
-            brief: π radians equals 180 degrees. Radians are the natural unit for circular functions.
-          - title: The unit circle
-            id: mat-unit-circle-2
-            brief: A point on the unit circle at angle θ has coordinates (cos θ, sin θ), which gives the signs in each quadrant.
-          - title: Exact values
-            id: mat-exact-values-2
-            brief: The sine, cosine and tangent of π/6, π/4 and π/3 have exact values from two special triangles.
-          - title: Graphs of sine and cosine
-            id: mat-graphs-sine-cosine
-            brief: y = a sin(nx) has amplitude |a| and period 2π/n. Cosine is the same shape shifted.
-          - title: The tangent graph
-            id: mat-tangent-graph
-            brief: y = tan x has period π and vertical asymptotes where cos x = 0.
-          - title: Solving trigonometric equations
-            id: mat-solving-trigonometric-equations-2
-            brief: Find a reference angle, then every solution in the domain using the quadrants and the period.
-
-  - title: Algebra, number and structure
-    chapters:
-      - title: Polynomials
-        id: vic-mat-meth-u12-2-1
-        points:
-          - title: Expanding and factorising
-            id: mat-expanding-factorising
-            brief: Common factors, grouping, difference of two squares and perfect squares rewrite polynomials.
-          - title: Dividing polynomials
-            id: mat-dividing-polynomials
-            brief: Long division writes P(x) as a divisor times a quotient plus a remainder.
-          - title: The remainder and factor theorems
-            id: mat-remainder-factor-theorems
-            brief: P(a) is the remainder when P(x) is divided by (x − a). If P(a) = 0, then (x − a) is a factor.
-          - title: Solving polynomial equations
-            id: mat-solving-polynomial-equations
-            brief: Factorise, then set each factor to zero. The factor theorem finds a first factor for a cubic.
-          - title: Simultaneous equations
-            id: mat-simultaneous-equations
-            brief: Solve two equations together by substitution or elimination, including a line meeting a parabola.
-
-  - title: Calculus
-    chapters:
-      - title: Rates of change and differentiation
-        id: vic-mat-meth-u12-3-1
-        points:
-          - title: Average rate of change
-            id: mat-average-rate-change-2
-            brief: The gradient of the chord between two points, (f(b) − f(a))/(b − a).
-          - title: Instantaneous rate of change
-            id: mat-instantaneous-rate-change
-            brief: The gradient of the tangent at a point, found as the limit of chord gradients as the points move together.
           - title: Differentiation from first principles
             id: mat-differentiation-from-first-principles
-            brief: f′(x) is the limit as h → 0 of (f(x + h) − f(x))/h.
+            brief: The derivative is the limit of the gradient of a chord as its two points come together.
+          - title: The central difference approximation
+            id: mat-central-difference-approximation
+            brief: The gradient of a chord either side of a point, f(x + h) - f(x - h) over 2h, estimates the derivative.
           - title: Differentiating polynomials
             id: mat-differentiating-polynomials
             brief: The derivative of x^n is n x^(n−1), and derivatives of sums are sums of derivatives.
-          - title: Tangent lines
-            id: mat-tangent-lines
-            brief: The derivative at a point gives the tangent's gradient; substituting the point gives its equation.
-          - title: Stationary points
-            id: mat-stationary-points-2
-            brief: Where f′(x) = 0. A sign table of f′ shows a local maximum, local minimum or stationary point of inflection.
           - title: Graphs of derivative functions
             id: mat-graphs-derivative-functions
             brief: f′ is positive where f rises, negative where it falls and zero at stationary points.
+          - title: Stationary points
+            id: mat-stationary-points-2
+            brief: Where the derivative is zero, a graph has a local maximum, local minimum or stationary point of inflection. These solve maximum and minimum problems.
           - title: Antidifferentiation
             id: mat-antidifferentiation
-            brief: Reversing differentiation. The antiderivative of x^n is x^(n+1)/(n + 1) plus a constant.
-          - title: Rates in context
-            id: mat-rates-context
-            brief: Derivatives describe rates such as velocity from displacement.
+            brief: Reversing differentiation gives a family of curves with the same gradient. A known point picks out one of them.
+          - title: Newton's method
+            id: mat-newton-s-method
+            brief: Following tangent lines towards the axis improves a guess at a root of a cubic again and again.
 
-  - title: Data analysis, probability and statistics
-    chapters:
       - title: Probability
-        id: vic-mat-meth-u12-4-1
+        id: vic-mat-meth-u12-2-5
         points:
-          - title: Sample spaces and events
-            id: mat-sample-spaces-events
-            brief: The sample space lists every outcome. An event is a set of outcomes, with probability from 0 to 1.
           - title: Venn diagrams and Karnaugh maps
             id: mat-venn-diagrams-karnaugh-maps
             brief: Venn diagrams and probability tables organise events and show unions, intersections and complements.
@@ -168,18 +217,12 @@ units:
           - title: Conditional probability
             id: mat-conditional-probability-2
             brief: Pr(A | B) = Pr(A ∩ B)/Pr(B), the chance of A given that B has happened.
+          - title: The law of total probability
+            id: mat-law-total-probability
+            brief: The probability of an event is the sum of its probabilities along each path, such as given A and given not A.
           - title: Independent events
             id: mat-independent-events-2
             brief: A and B are independent when Pr(A ∩ B) = Pr(A) × Pr(B).
           - title: Tree diagrams
             id: mat-tree-diagrams
-            brief: Branches multiply along a path and add across paths, handy for multi-stage events with or without replacement.
-          - title: Permutations
-            id: mat-permutations
-            brief: The number of ordered arrangements of r items from n is n!/(n − r)!.
-          - title: Combinations
-            id: mat-combinations
-            brief: The number of selections of r items from n, when order does not matter, is nCr = n!/(r!(n − r)!).
-          - title: Pascal's triangle
-            id: mat-pascal-s-triangle
-            brief: Each entry is the sum of the two above, and the entries in row n are the values of nCr.
+            brief: Branches show each stage of an experiment. Multiplying along branches gives probabilities, with or without replacement.

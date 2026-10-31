@@ -1,11 +1,13 @@
-# VCE Physics, Units 1 and 2: energy, motion, and how physics explains the world, 34 points.
-# Drafted from the VCAA's VCE Physics Study Design, Units 1 and 2 from 2023 and Units 3 and 4 from 2024. The structure
-# follows the study design: each unit is a unit here, and each area of study is a chapter. Unit 2's options and the
-# investigations are school-picked or school-run, so they are not here. Every brief is in our own words.
+# VCE Physics, Units 1 and 2: energy, motion, and how physics explains the world, 52 points.
+# Checked against the VCAA's VCE Physics Study Design, accredited from 2023 (Units 3 and 4 from 2024), in October
+# 2026. Each unit is a unit here, and each area of study is a chapter, or two when it is large. The investigations are
+# school-run, so their science skills are a short chapter here. Unit 2's options (a school picks one of 18) are not
+# here. Every brief is in our own words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # NSW Physics (the phys bank) covers much of the motion and electricity, so expect reuses and adapts.
-# The study design's end date was not confirmed when this was drafted (a school guide gives 2027). Check it first.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-phys-u12
 subject: Physics
@@ -24,12 +26,31 @@ chips: [specific heat capacity, half-life, Ohm's law, momentum, Newton's laws]
 units:
   - title: "Unit 1: How is energy useful to society?"
     chapters:
-      - title: Light and heat
+      - title: Light
         id: vic-phys-u12-1-1
+        points:
+          - title: Waves and their properties
+            id: phys-waves-their-properties
+            brief: Waves have amplitude, wavelength, period and frequency, linked by v = fλ. Light is a transverse wave that needs no medium, unlike sound.
+          - title: The electromagnetic spectrum
+            id: phys-electromagnetic-spectrum-2
+            brief: Radio, microwave, infrared, visible, ultraviolet, x-rays and gamma all travel at c in a vacuum. The Sun gives out mostly ultraviolet, visible and infrared.
+          - title: Refraction and Snell's law
+            id: phys-refraction-snell-s-law
+            brief: Light bends as it changes speed between materials. Snell's law links the angles to the refractive indices.
+          - title: Total internal reflection and optical fibres
+            id: phys-total-internal-reflection-optical
+            brief: Beyond the critical angle, light reflects completely inside a material, which lets optical fibres carry signals.
+          - title: Dispersion, rainbows and mirages
+            id: phys-dispersion-rainbows-mirages
+            brief: Each colour refracts by a different amount, splitting white light in prisms and raindrops. Mirages come from refraction in warm air.
+
+      - title: Heat
+        id: vic-phys-u12-1-2-2
         points:
           - title: Temperature and internal energy
             id: phys-temperature-internal-energy
-            brief: Temperature measures the average kinetic energy of particles. Internal energy is the total energy of all of them.
+            brief: Temperature rises as particles gain kinetic and potential energy. Kelvin starts at absolute zero, 273 below Celsius.
           - title: Heat transfer
             id: phys-heat-transfer
             brief: Heat moves by conduction through contact, convection through moving fluids and radiation as electromagnetic waves.
@@ -39,20 +60,17 @@ units:
           - title: Latent heat
             id: phys-latent-heat-2
             brief: Energy absorbed or released during a change of state at constant temperature, Q = mL.
-          - title: Thermal equilibrium
-            id: phys-thermal-equilibrium
-            brief: Objects in contact exchange heat until they reach the same temperature.
-          - title: The electromagnetic spectrum
-            id: phys-electromagnetic-spectrum-2
-            brief: Radio waves to gamma rays all travel at the speed of light, differing in wavelength and frequency.
+          - title: Cooling by evaporation
+            id: phys-cooling-by-evaporation
+            brief: The fastest particles escape when a liquid evaporates, so the average energy, and the temperature, of what is left falls.
           - title: Black body radiation
             id: phys-black-body-radiation-2
-            brief: Hotter objects emit more radiation and at shorter peak wavelengths, as Wien's law describes.
+            brief: Hotter objects emit more energy in total, and at a shorter peak wavelength, as Wien's law describes.
           - title: The greenhouse effect and climate
             id: phys-greenhouse-effect-climate
             brief: Greenhouse gases absorb and re-emit infrared radiation from Earth's surface, warming it. More of them warms it further.
 
-      - title: Energy from the nucleus
+      - title: Radiation from the nucleus
         id: vic-phys-u12-1-2
         points:
           - title: Nuclear stability
@@ -60,27 +78,40 @@ units:
             brief: The strong nuclear force holds the nucleus together against the repulsion of protons. Unstable nuclei decay.
           - title: Alpha, beta and gamma radiation
             id: phys-alpha-beta-gamma-radiation
-            brief: Alpha particles are helium nuclei, beta particles are electrons or positrons, and gamma rays are high-energy photons.
+            brief: Alpha particles are helium nuclei, beta-minus are electrons, beta-plus are positrons, and gamma rays are high-energy photons. Each penetrates differently.
           - title: Nuclear equations
             id: phys-nuclear-equations
             brief: In a decay, mass numbers and atomic numbers balance on both sides.
+          - title: Decay series
+            id: phys-decay-series
+            brief: An unstable isotope decays step by step through other isotopes until it reaches a stable one, shown on a decay series diagram.
           - title: Half-life
             id: phys-half-life-2
             brief: The time for half the radioactive nuclei in a sample to decay.
           - title: Effects of ionising radiation
             id: phys-effects-ionising-radiation
-            brief: Radiation can damage cells. Dose equivalent in sieverts accounts for the type of radiation.
+            brief: Radiation can damage cells. Absorbed dose is in grays; equivalent and effective dose, in sieverts, allow for the type of radiation and the tissue.
+          - title: Medical radioisotopes
+            id: phys-medical-radioisotopes
+            brief: Radioisotopes are used to find and treat cancers, weighing damage to diseased cells against harm to healthy tissue.
+
+      - title: Nuclear energy
+        id: vic-phys-u12-1-4
+        points:
           - title: Nuclear fission
             id: phys-nuclear-fission
-            brief: A heavy nucleus splits into smaller ones, releasing energy and neutrons that can start a chain reaction.
+            brief: A heavy nucleus splits, releasing energy and neutrons. A chain reaction needs enough mass in the right shape, and moderators slow neutrons.
           - title: Nuclear fusion
             id: phys-nuclear-fusion
             brief: Light nuclei join into a heavier one, releasing energy, as in the Sun.
-          - title: Mass defect and energy
+          - title: Binding energy
             id: phys-mass-defect-energy
-            brief: The products of fission or fusion have less mass, and the missing mass becomes energy by E = mc².
+            brief: Fission and fusion release energy because their products are more tightly bound, as the binding energy curve shows. The lost mass becomes energy.
+          - title: Nuclear power for Australia
+            id: phys-nuclear-power-australia
+            brief: Weighing the costs, risks and benefits of nuclear energy as a power source for Australia.
 
-      - title: Electricity
+      - title: Circuits
         id: vic-phys-u12-1-3
         points:
           - title: Charge and current
@@ -89,6 +120,9 @@ units:
           - title: Potential difference
             id: phys-potential-difference-2
             brief: The energy each coulomb of charge gains or loses, measured in volts.
+          - title: Models and meters
+            id: phys-models-meters
+            brief: Analogies such as water in pipes help explain current and voltage, each with limits. Ammeters go in series, voltmeters in parallel.
           - title: Resistance and Ohm's law
             id: phys-resistance-ohm-s-law
             brief: V = IR. Ohmic devices have a constant resistance; others, such as diodes, do not.
@@ -98,16 +132,32 @@ units:
           - title: Parallel circuits
             id: phys-parallel-circuits
             brief: Voltage is the same across each branch, currents add, and total resistance is less than any one branch.
+          - title: Voltage dividers
+            id: phys-voltage-dividers
+            brief: Two resistors in series split the supply voltage in the ratio of their resistances, a basis for sensor circuits.
+
+      - title: Using electricity
+        id: vic-phys-u12-1-6
+        points:
           - title: Electrical power and energy
             id: phys-electrical-power-energy
             brief: P = VI, and energy used is power times time, often billed in kilowatt-hours.
-          - title: Electrical safety at home
+          - title: Non-ohmic devices
+            id: phys-non-ohmic-devices
+            brief: Diodes, thermistors, light dependent resistors and LEDs do not follow Ohm's law, and their I-V graphs show it.
+          - title: Circuits in the home
+            id: phys-circuits-home
+            brief: Household wiring is mostly parallel, so each appliance gets full voltage and works on its own.
+          - title: Safety devices
             id: phys-electrical-safety-at-home
             brief: Fuses and circuit breakers stop overloads, earthing protects metal cases, and residual current devices cut power when current leaks.
+          - title: Electric shock
+            id: phys-electric-shock
+            brief: Current through the body causes harm that grows with size and duration. Knowing the danger levels and first aid saves lives.
 
   - title: "Unit 2: How does physics help us to understand the world?"
     chapters:
-      - title: Motion
+      - title: Describing motion
         id: vic-phys-u12-2-1
         points:
           - title: Scalars and vectors
@@ -118,10 +168,17 @@ units:
             brief: Velocity is the rate of change of displacement and acceleration is the rate of change of velocity.
           - title: Motion graphs
             id: phys-motion-graphs
-            brief: The gradient of a position-time graph is velocity; the area under a velocity-time graph is displacement.
+            brief: Position, velocity and acceleration graphs describe motion, including motion where acceleration changes.
           - title: Equations of motion
             id: phys-equations-motion
             brief: For constant acceleration, equations such as v = u + at and s = ut + ½at² link the quantities.
+
+      - title: Forces
+        id: vic-phys-u12-2-2
+        points:
+          - title: Forces as vectors
+            id: phys-forces-as-vectors
+            brief: A force has size and direction and acts at a point. Forces add as vectors, and can be split into components, such as gravity, friction and normal forces.
           - title: Newton's first law
             id: phys-newton-s-first-law-2
             brief: An object stays at rest or moves at constant velocity unless a net force acts on it.
@@ -131,15 +188,38 @@ units:
           - title: Newton's third law
             id: phys-newton-s-third-law-2
             brief: When one object pushes on another, the second pushes back with an equal and opposite force.
+          - title: Torque and equilibrium
+            id: phys-torque-2
+            brief: Torque is force times perpendicular distance from a pivot. A structure is in equilibrium when forces and torques both balance.
+
+      - title: Energy and momentum
+        id: vic-phys-u12-2-3
+        points:
           - title: Momentum and impulse in physics
             id: phys-momentum-impulse-physics
             brief: Momentum is mass times velocity. Impulse, force times time, equals the change in momentum, and total momentum is conserved.
           - title: Work and energy
             id: phys-work-energy
             brief: Work is force times distance moved. Kinetic energy is ½mv² and gravitational potential energy is mgh.
+          - title: Hooke's law
+            id: phys-hooke-s-law
+            brief: An ideal spring stretches in proportion to the force on it, F = -kx, and stores elastic potential energy.
           - title: Conservation of energy and efficiency
             id: phys-conservation-energy-efficiency
-            brief: Energy is never lost but changes form. Efficiency is the useful energy out divided by the energy in.
-          - title: Torque
-            id: phys-torque-2
-            brief: The turning effect of a force, force times the perpendicular distance from the pivot.
+            brief: Energy changes form but is not lost. Power is the rate of transfer, and efficiency is the share that ends up useful.
+
+      - title: "Science skills: investigations"
+        id: vic-phys-u12-2-4
+        points:
+          - title: Aims, hypotheses, models and theories in physics
+            id: phys-aims-hypotheses-models-theories
+            brief: An aim states what is tested, a hypothesis predicts a result, and models, theories and laws explain or describe patterns.
+          - title: Accuracy, precision and validity in physics
+            id: phys-accuracy-precision-validity-physics
+            brief: Accurate results are close to the true value, precise results agree, and valid results measure what was intended.
+          - title: Uncertainty and error
+            id: phys-uncertainty-error
+            brief: Random errors scatter results and systematic errors shift them. Uncertainty shows how far a result can be trusted.
+          - title: Reporting an investigation
+            id: phys-reporting-investigation
+            brief: A report uses correct terms, units, significant figures and graphs to present findings and link them to physics ideas.

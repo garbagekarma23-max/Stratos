@@ -1,13 +1,13 @@
 # VCE General Mathematics, Units 1 and 2: data, sequences and finance, linear relations, matrices, networks, and
-# measurement and trigonometry, 48 points.
-# Drafted from the VCAA's VCE Mathematics Study Design, accreditation period 2023 to 2027. In Units 1 and 2 schools
-# pick and order the topics, so each unit here is an area of study and each chapter a topic. Every brief is in our own
-# words.
+# measurement and trigonometry, 56 points.
+# Checked against the VCAA's VCE Mathematics Study Design, accredited from 2023, in October 2026. Each unit is a unit
+# here, and its areas of study are its chapters, or two when one is large. Every brief is in our own words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # Cards and multiple choice for now (kind: maths). NSW Mathematics Standard (the mat bank) shares much of this, so
 # expect reuses and adapts.
-# In transition: the accreditation ends 31 December 2027. Check for a new study design before running this for 2028.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-mat-gen-u12
 subject: Mathematics
@@ -19,12 +19,12 @@ years: [11]
 level: Units 1 and 2
 place: vic
 kind: maths
-syllabus: VCE Mathematics Study Design (2023 to 2027), General Mathematics Units 1 and 2
+syllabus: VCE Mathematics Study Design (from 2023), General Mathematics Units 1 and 2
 note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
 chips: [five-number summary, recurrence relation, compound interest, matrix, Euler trail]
 
 units:
-  - title: Data analysis, probability and statistics
+  - title: "Unit 1: Data, sequences and finance, linear relations and matrices"
     chapters:
       - title: Investigating data distributions
         id: vic-mat-gen-u12-1-1
@@ -35,9 +35,9 @@ units:
           - title: Displaying categorical data
             id: mat-displaying-categorical-data
             brief: Frequency tables, bar charts and segmented bar charts show how often each category occurs.
-          - title: Histograms and dot plots
+          - title: Histograms, stem plots and dot plots
             id: mat-histograms-dot-plots
-            brief: Histograms and dot plots show the shape of numerical data, such as symmetric, positively skewed or negatively skewed.
+            brief: Displays for numerical data, chosen to suit the data and the question, that show shape, centre, spread and outliers.
           - title: Mean, median and mode
             id: mat-mean-median-mode-2
             brief: The mean is the sum divided by the count, the median the middle value and the mode the most common. Skew pulls the mean toward the tail.
@@ -46,32 +46,14 @@ units:
             brief: The range is highest less lowest, the IQR is Q3 less Q1, and the standard deviation measures typical distance from the mean.
           - title: The five-number summary and boxplots
             id: mat-five-number-summary-boxplots
-            brief: Minimum, Q1, median, Q3 and maximum, drawn as a boxplot. A value more than 1.5 IQRs beyond the box is an outlier.
+            brief: Minimum, Q1, median, Q3 and maximum, drawn as a boxplot. Values beyond the fences, 1.5 IQRs past the quartiles, are possible outliers.
+          - title: Shapes of distributions
+            id: mat-shapes-distributions
+            brief: Distributions can be symmetric or skewed, and in a bell-shaped one most data lie within a few standard deviations of the mean.
           - title: Comparing distributions
             id: mat-comparing-distributions
-            brief: Back-to-back stem plots and parallel boxplots compare groups by centre, spread, shape and outliers.
+            brief: Back-to-back stem plots and parallel boxplots compare the centre and spread of one variable across two or more groups.
 
-      - title: Investigating associations
-        id: vic-mat-gen-u12-1-2
-        points:
-          - title: Scatterplots
-            id: mat-scatterplots-2
-            brief: A scatterplot shows the link between two numerical variables, with the explanatory variable on the horizontal axis.
-          - title: Describing an association
-            id: mat-describing-association
-            brief: Describe direction (positive or negative), form (linear or not) and strength (weak, moderate or strong).
-          - title: Two-way tables
-            id: mat-two-way-tables-2
-            brief: Two-way frequency tables compare two categorical variables, using row or column percentages.
-          - title: Lines of good fit
-            id: mat-lines-good-fit
-            brief: A line drawn through a scatterplot by eye can be used to predict one variable from the other.
-          - title: Interpolation and extrapolation
-            id: mat-interpolation-extrapolation-2
-            brief: Predicting within the data's range is interpolation and is more reliable than extrapolation beyond it.
-
-  - title: Algebra, number and structure
-    chapters:
       - title: Sequences and recursion
         id: vic-mat-gen-u12-2-1
         points:
@@ -84,6 +66,9 @@ units:
           - title: First-order recurrence relations
             id: mat-first-order-recurrence-relations
             brief: A rule giving each term from the one before, such as u(n+1) = u(n) + 4, with a starting value u0.
+          - title: Explicit rules for sequences
+            id: mat-explicit-rules-sequences
+            brief: A rule for the nth term, such as t = a + (n - 1)d, finds any term without listing every one before it.
           - title: Linear growth and decay
             id: mat-linear-growth-decay
             brief: Adding or subtracting the same amount each step, as in simple interest or flat-rate depreciation.
@@ -96,10 +81,13 @@ units:
         points:
           - title: Percentage increase and decrease
             id: mat-percentage-increase-decrease-2
-            brief: To raise a value by 10%, multiply by 1.1. To lower it by 10%, multiply by 0.9.
+            brief: Working out percentage increases and decreases, mark-ups and discounts.
           - title: GST and price
             id: mat-gst-price
             brief: GST in Australia is 10%. A price including GST is the price without it times 1.1.
+          - title: The unitary method
+            id: mat-unitary-method
+            brief: Finding the value of one unit first, such as 1 per cent or one item, then scaling up to compare and solve problems.
           - title: Simple interest
             id: mat-simple-interest-2
             brief: Interest on the starting amount only, I = PrT/100, so the balance grows by the same amount each period.
@@ -108,13 +96,11 @@ units:
             brief: Interest added to the balance and earning interest itself, A = P(1 + r/100)^n with r per period.
           - title: Comparing purchase options
             id: mat-comparing-purchase-options
-            brief: Cash, credit cards, buy now pay later and loans differ in interest, fees and total cost.
+            brief: Comparing paying cash, by debit or credit card, with a personal loan, or with buy now pay later, by total cost.
           - title: Inflation and purchasing power
             id: mat-inflation-purchasing-power
             brief: Inflation means the same money buys less over time, so a price rising with inflation stays the same in real terms.
 
-  - title: Functions, relations and graphs
-    chapters:
       - title: Linear relations and modelling
         id: vic-mat-gen-u12-3-1
         points:
@@ -132,19 +118,14 @@ units:
             brief: The intersection of two lines solves both equations, found by graphing, substitution or elimination, such as a break-even point.
           - title: Piecewise and step graphs
             id: mat-piecewise-step-graphs
-            brief: Graphs made of different rules over different intervals, such as parking fees that jump at each hour.
-          - title: Direct and inverse variation
-            id: mat-direct-inverse-variation
-            brief: In direct variation y = kx; in inverse variation y = k/x, so one doubles as the other halves.
+            brief: Graphs made of line segments or steps model situations such as tax scales, phone charges and parking fees.
 
-  - title: Discrete mathematics
-    chapters:
       - title: Matrices
         id: vic-mat-gen-u12-4-1
         points:
           - title: What a matrix is
             id: mat-matrix
-            brief: A rectangular array of numbers. Its order is rows by columns, such as 2 × 3.
+            brief: A rectangular array of rows and columns that stores information such as a database or the links in a network. Types include row, column, square, zero and identity.
           - title: Adding and scaling matrices
             id: mat-adding-scaling-matrices
             brief: Matrices of the same order add element by element. Scalar multiplication multiplies every element.
@@ -157,6 +138,30 @@ units:
           - title: Matrices in context
             id: mat-matrices-context
             brief: Matrices can store data such as sales by shop and month, and multiplying them can total costs or revenue.
+          - title: Transition matrices
+            id: mat-transition-matrices
+            brief: A matrix of the chances of moving between states, multiplied again and again to show how a population changes and settles.
+
+  - title: "Unit 2: Associations, networks, variation and measurement"
+    chapters:
+      - title: Investigating associations
+        id: vic-mat-gen-u12-1-2
+        points:
+          - title: Response and explanatory variables
+            id: mat-response-explanatory-variables
+            brief: The explanatory variable may explain or predict changes in the response variable, and goes on the horizontal axis.
+          - title: Scatterplots
+            id: mat-scatterplots-2
+            brief: A scatterplot shows the link between two numerical variables, with the explanatory variable on the horizontal axis.
+          - title: Describing an association
+            id: mat-describing-association
+            brief: An association is described by its direction, form and strength. A strong association does not prove that one variable causes the other.
+          - title: Lines of good fit
+            id: mat-lines-good-fit
+            brief: A line drawn through a scatterplot by eye can be used to predict one variable from the other.
+          - title: Interpolation and extrapolation
+            id: mat-interpolation-extrapolation-2
+            brief: Predicting within the data's range is interpolation and is more reliable than extrapolation beyond it.
 
       - title: Graphs and networks
         id: vic-mat-gen-u12-4-2
@@ -164,48 +169,69 @@ units:
           - title: Vertices, edges and degree
             id: mat-vertices-edges-degree
             brief: A graph has vertices joined by edges. The degree of a vertex is the number of edges that meet it.
-          - title: Walks, trails, paths and circuits
-            id: mat-walks-trails-paths-circuits
-            brief: A walk is any route, a trail repeats no edge, a path repeats no vertex, and a circuit or cycle ends where it began.
-          - title: Euler trails and circuits
-            id: mat-euler-trails-circuits
-            brief: An Euler trail uses every edge once. A connected graph has an Euler circuit if every vertex has even degree.
-          - title: Hamiltonian paths and cycles
-            id: mat-hamiltonian-paths-cycles
-            brief: A Hamiltonian path visits every vertex once. A Hamiltonian cycle also returns to the start.
+          - title: Types of graphs and the adjacency matrix
+            id: mat-types-graphs-adjacency-matrix
+            brief: Graphs can be connected, isomorphic, or have loops and multiple edges. An adjacency matrix records which vertices are joined.
           - title: Planar graphs and Euler's formula
             id: mat-planar-graphs-euler-s
             brief: A planar graph can be drawn without edges crossing, and then v − e + f = 2.
+          - title: Walks, trails, paths and circuits
+            id: mat-walks-trails-paths-circuits
+            brief: A walk is any route, a trail repeats no edge, a path repeats no vertex, and a circuit or cycle ends where it began.
           - title: Shortest path
             id: mat-shortest-path
             brief: In a weighted graph, the shortest path between two vertices has the smallest total weight.
+          - title: Trees and minimum spanning trees
+            id: mat-trees-minimum-spanning-trees
+            brief: A tree connects all vertices with no cycles. A minimum spanning tree does so with the least total weight, found by a greedy algorithm.
 
-  - title: Space and measurement
-    chapters:
-      - title: Measurement and trigonometry
+      - title: Variation
+        id: vic-mat-gen-u12-2-3
+        points:
+          - title: Direct and inverse variation
+            id: mat-direct-inverse-variation
+            brief: In direct variation y = kx; in inverse variation y = k/x. Each can be recognised from a table, a graph or a rule.
+          - title: Transforming data to linearity
+            id: mat-transforming-data-linearity
+            brief: Plotting y against x squared, 1/x or log x can turn a curved pattern into a straight line.
+          - title: Modelling non-linear data
+            id: mat-modelling-non-linear-data
+            brief: Rules of the form y = kx^n fit some curved data, and the transformed straight line gives k.
+
+      - title: Measurement
         id: vic-mat-gen-u12-5-1
         points:
+          - title: Units and precision
+            id: mat-units-precision
+            brief: Units of length, angle, area, volume and capacity, exact and approximate answers, scientific notation and significant figures.
           - title: Perimeter and area
             id: mat-perimeter-area-2
-            brief: Area formulas for rectangles, triangles, trapeziums and circles, and adding or subtracting shapes for composite figures.
+            brief: Perimeter and area of triangles, quadrilaterals, circles, arcs, sectors and composite shapes.
           - title: Surface area and volume
             id: mat-surface-area-volume
             brief: Volume of a prism is base area times height. Surface area adds the areas of every face.
           - title: Similarity and scale factors
             id: mat-similarity-scale-factors
-            brief: Similar shapes have matching angles and sides in the same ratio k. Areas scale by k² and volumes by k³.
+            brief: Similar shapes have equal angles and sides in the same ratio. Conditions for similarity show when two triangles are similar.
+          - title: Scaling area and volume
+            id: mat-scaling-area-volume
+            brief: If lengths scale by k, areas scale by k squared and volumes by k cubed.
+
+      - title: Trigonometry
+        id: vic-mat-gen-u12-2-5
+        points:
           - title: Pythagoras' theorem
             id: mat-pythagoras-theorem
-            brief: In a right-angled triangle, a² + b² = c², where c is the hypotenuse.
+            brief: In a right-angled triangle the square on the hypotenuse equals the sum of the squares on the other sides, in two and three dimensions.
           - title: Sine, cosine and tangent ratios
             id: mat-sine-cosine-tangent-ratios
-            brief: In a right-angled triangle, sin is opposite over hypotenuse, cos adjacent over hypotenuse and tan opposite over adjacent.
+            brief: The trigonometric ratios find sides and angles in right-angled triangles, including angles of elevation and depression.
           - title: The sine and cosine rules
             id: mat-sine-cosine-rules
-            brief: For any triangle, the sine rule links sides to opposite angles and the cosine rule finds a side or angle from the other three parts.
+            brief: The sine rule, with its ambiguous case, and the cosine rule solve triangles without a right angle.
           - title: Area of a triangle with sine
             id: mat-area-triangle-with-sine
             brief: Area = ½ab sin C, using two sides and the angle between them.
-          - title: Bearings and angles of elevation
+          - title: Three-figure bearings
             id: mat-bearings-angles-elevation
-            brief: Bearings are measured clockwise from north. Angles of elevation and depression are measured from the horizontal.
+            brief: Directions measured clockwise from north, such as 135°T, used with the sine and cosine rules in navigation problems.

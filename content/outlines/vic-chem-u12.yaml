@@ -1,12 +1,13 @@
-# VCE Chemistry, Units 1 and 2: the diversity of materials, and how chemical reactions shape the natural world,
-# 42 points.
-# Drafted from the VCAA's VCE Chemistry Study Design, Units 1 and 2 from 2023 and Units 3 and 4 from 2024. The structure
-# follows the study design: each unit is a unit here, and each area of study is a chapter, or two when it is large.
-# The research investigations are school-run, so they are not here. Every brief is in our own words.
+# VCE Chemistry, Units 1 and 2: the diversity of materials, and how chemical reactions shape the natural world, 71
+# points.
+# Checked against the VCAA's VCE Chemistry Study Design, accredited from 2023 (Units 3 and 4 from 2024), in October
+# 2026. Each unit is a unit here, and each area of study is a chapter, or two when it is large. The investigations are
+# school-run, so their science skills are a short chapter here. Every brief is in our own words.
 # content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
 # time it runs. Never change an id after the course is published: progress is saved by id.
 # NSW Chemistry (the chem bank) covers most of these ideas, so expect many reuses and adapts.
-# The study design's end date was not confirmed when this was drafted (a school guide gives 2027). Check it first.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
 
 id: vic-chem-u12
 subject: Chemistry
@@ -25,39 +26,24 @@ chips: [electron configuration, intermolecular forces, polymer, pH, mole]
 units:
   - title: "Unit 1: How can the diversity of materials be explained?"
     chapters:
-      - title: Elements and the periodic table
+      - title: Atoms and the periodic table
         id: vic-chem-u12-1-1
         points:
           - title: Atomic structure
             id: chem-atomic-structure-2
-            brief: Atoms have a nucleus of protons and neutrons with electrons around it. The atomic number is the number of protons.
-          - title: Isotopes and relative atomic mass
-            id: chem-isotopes-relative-atomic-mass
-            brief: Isotopes have the same protons but different neutrons. Relative atomic mass is the weighted mean of an element's isotopes.
+            brief: Atoms have protons, neutrons and electrons. Atomic number, mass number and charge identify an element, isotope or ion.
           - title: Electron configuration
             id: chem-electron-configuration-2
-            brief: Electrons fill shells and subshells (s, p, d) in order of energy, such as 1s² 2s² 2p⁶ for neon.
+            brief: Electrons fill shells and subshells (s, p, d) in a set order, which explains an element's place in the periodic table.
           - title: The periodic table's layout
             id: chem-periodic-table-s-layout
             brief: Elements are arranged by atomic number into groups (columns) with similar properties and periods (rows).
           - title: Periodic trends
             id: chem-periodic-trends
             brief: Across a period, atomic radius falls and electronegativity and first ionisation energy rise. Down a group the reverse.
-          - title: Metallic bonding
-            id: chem-metallic-bonding-2
-            brief: Metal atoms share a sea of delocalised electrons around positive ions, which explains conductivity and malleability.
-          - title: Reactivity of metals
-            id: chem-reactivity-metals
-            brief: Metals that lose electrons easily, at the left and bottom of the table, react most strongly.
-          - title: Ionic bonding
-            id: chem-ionic-bonding-2
-            brief: Metals give electrons to non-metals, forming ions held in a lattice by electrostatic attraction.
-          - title: Properties of ionic compounds
-            id: chem-properties-ionic-compounds
-            brief: Ionic compounds have high melting points, are brittle and conduct only when molten or dissolved.
-          - title: Writing ionic formulas
-            id: chem-writing-ionic-formulas
-            brief: Charges must balance, so magnesium chloride is MgCl₂. Polyatomic ions such as sulfate keep their brackets.
+          - title: Critical elements
+            id: chem-critical-elements
+            brief: Elements such as helium, phosphorus and the rare-earth metals are scarce but needed for technology, so recovering them by recycling matters.
 
       - title: Covalent substances
         id: vic-chem-u12-1-2
@@ -77,102 +63,240 @@ units:
           - title: Intermolecular forces
             id: chem-intermolecular-forces-2
             brief: Dispersion forces act between all molecules, dipole-dipole forces between polar ones, and hydrogen bonds where H bonds to N, O or F.
-          - title: Covalent network lattices
+          - title: Properties of molecular substances
+            id: chem-properties-molecular-substances
+            brief: Weak forces between molecules give low melting and boiling points, and molecules do not conduct electricity.
+          - title: Diamond and graphite
             id: chem-covalent-network-lattices
-            brief: Diamond and graphite are carbon networks. Diamond is very hard; graphite conducts because of delocalised electrons.
-          - title: Carbon nanomaterials
-            id: chem-carbon-nanomaterials
-            brief: Graphene and carbon nanotubes have strength and conductivity useful in new materials.
+            brief: Diamond and graphite are carbon networks. Diamond is very hard; graphite is soft and conducts because of delocalised electrons. Each suits different uses.
 
-      - title: Organic compounds and polymers
+      - title: Metals and ionic compounds
+        id: vic-chem-u12-1-3-2
+        points:
+          - title: Metallic bonding
+            id: chem-metallic-bonding-2
+            brief: Metal ions in a sea of delocalised electrons explain lustre, malleability, high melting points and conduction of heat and electricity.
+          - title: Reactivity of metals
+            id: chem-reactivity-metals
+            brief: How readily metals react with water, acids and oxygen, found by experiment, gives a reactivity series.
+          - title: Metal recycling
+            id: chem-metal-recycling
+            brief: Recycling metals into new products is an example of a circular economy, saving ore and energy.
+          - title: Ionic bonding
+            id: chem-ionic-bonding-2
+            brief: Metals give electrons to non-metals, forming ions held in a lattice by electrostatic attraction.
+          - title: Properties of ionic compounds
+            id: chem-properties-ionic-compounds
+            brief: Ionic compounds have high melting points, are brittle and conduct only when molten or dissolved.
+          - title: Writing ionic formulas
+            id: chem-writing-ionic-formulas
+            brief: Balancing ion charges gives the formula and name of an ionic compound, including those with polyatomic ions such as sulfate and nitrate.
+          - title: Predicting precipitates
+            id: chem-predicting-precipitates
+            brief: Solubility tables predict when two solutions form an insoluble solid, shown in full and ionic equations with states.
+
+      - title: Separating mixtures
+        id: vic-chem-u12-1-4
+        points:
+          - title: Like dissolves like
+            id: chem-like-dissolves-like
+            brief: Polar solutes dissolve in polar solvents such as water, and non-polar solutes in non-polar solvents.
+          - title: Chromatography
+            id: chem-chromatography
+            brief: Components of a mixture travel different distances through a stationary phase, which shows what a sample contains and how pure it is.
+          - title: Rf values
+            id: chem-rf-values
+            brief: The distance a spot travels divided by the distance the solvent travels gives an Rf value that helps identify a substance.
+
+      - title: Quantifying atoms and compounds
+        id: vic-chem-u12-1-5
+        points:
+          - title: Isotopes and relative atomic mass
+            id: chem-isotopes-relative-atomic-mass
+            brief: Relative isotopic masses are set against carbon-12. Mass spectrometry gives the abundance of each isotope, from which relative atomic mass is found.
+          - title: The mole
+            id: chem-mole
+            brief: One mole is 6.02 × 10²³ particles. n = m/M links mass to amount.
+          - title: Molar mass and percentage composition
+            id: chem-molar-mass-percentage-composition
+            brief: The molar mass of a compound is the sum of its atoms' masses, and gives the percentage by mass of each element.
+          - title: Empirical and molecular formulas
+            id: chem-empirical-molecular-formulas
+            brief: Percentage composition gives the simplest whole-number ratio of atoms; the molar mass then gives the actual formula.
+
+      - title: Organic compounds
         id: vic-chem-u12-1-3
         points:
-          - title: Hydrocarbons
+          - title: Families of organic compounds
             id: chem-hydrocarbons
-            brief: Alkanes have only single bonds, alkenes have a C=C double bond. Both burn and are used as fuels.
+            brief: Alkanes, alkenes, haloalkanes, alcohols and carboxylic acids each share a general formula and similar properties.
+          - title: Structural and semi-structural formulas
+            id: chem-functional-groups
+            brief: Structural and semi-structural formulas show how atoms are joined, including the functional group that sets each family apart.
           - title: Naming simple organic compounds
             id: chem-naming-simple-organic-compounds
             brief: IUPAC names show the chain length, the bonds and any functional group, such as but-2-ene.
-          - title: Functional groups
-            id: chem-functional-groups
-            brief: Groups such as hydroxyl in alcohols and carboxyl in carboxylic acids give organic compounds their properties.
+          - title: Organic chemicals from plants
+            id: chem-organic-chemicals-from-plants
+            brief: Plant biomass can replace oil as a renewable source of solvents, medicines, adhesives, dyes and paints.
+          - title: Organic materials in everyday life
+            id: chem-organic-materials-everyday-life
+            brief: Fabrics, foods, medicines, cosmetics, pesticides and car parts are all made from organic compounds.
+
+      - title: Polymers and society
+        id: vic-chem-u12-1-7
+        points:
+          - title: Addition and condensation polymers
+            id: chem-addition-condensation-polymers
+            brief: Addition polymers join monomers with double bonds and nothing lost. Condensation polymers join monomers and release a small molecule such as water.
           - title: Addition polymers
             id: chem-addition-polymers-2
             brief: Alkene monomers join by opening their double bonds into long chains, such as ethene into polyethene.
           - title: Thermoplastics and thermosets
             id: chem-thermoplastics-thermosets
             brief: Thermoplastics soften when heated because chains are not cross-linked. Thermosets are cross-linked and do not.
+          - title: Designing polymers
+            id: chem-designing-polymers
+            brief: Choosing the monomer, chain length and amount of branching gives a plastic the properties a use needs.
+          - title: Fossil plastics and bioplastics
+            id: chem-fossil-plastics-bioplastics
+            brief: Plastics such as PVC and polystyrene come from oil; bioplastics such as PLA come from plants. Each can be recycled or composted in different ways.
           - title: Linear and circular economies for plastics
             id: chem-linear-circular-economies-plastics
-            brief: A linear economy makes, uses and throws away. A circular economy designs plastics to be reused and recycled.
+            brief: Recycling, condensation polymers that break down by hydrolysis and better design move plastics from make, use and throw away towards reuse.
+
+      - title: "Science skills: evidence and sustainability"
+        id: vic-chem-u12-1-8
+        points:
+          - title: Primary and secondary data
+            id: chem-primary-secondary-data
+            brief: Primary data is collected first-hand; secondary data comes from others' work and must be judged for quality.
+          - title: Evidence, opinion and anecdote
+            id: chem-evidence-opinion-anecdote
+            brief: Scientific evidence is tested and repeatable. Opinion and anecdote are not, so they cannot settle a scientific question.
+          - title: Quality of evidence
+            id: chem-quality-evidence
+            brief: Good evidence is valid, comes from an authoritative source and has its possible errors and bias considered.
+          - title: Green chemistry and sustainable development
+            id: chem-green-chemistry-sustainable-development
+            brief: Principles such as less waste, safer chemicals and renewable feedstocks help chemistry meet needs now without harming later generations.
 
   - title: "Unit 2: How do chemical reactions shape the natural world?"
     chapters:
-      - title: Water and its properties
+      - title: Water
         id: vic-chem-u12-2-1
         points:
+          - title: Water on Earth
+            id: chem-water-earth
+            brief: Water exists as solid, liquid and gas at Earth's surface, but only a small share is fresh water fit to drink.
           - title: Water's unusual properties
             id: chem-water-s-unusual-properties
-            brief: Hydrogen bonding gives water a high boiling point, high specific heat capacity and high latent heat.
+            brief: Hydrogen bonding gives water a higher boiling point than other Group 16 hydrides and makes ice less dense than liquid water.
           - title: Specific heat capacity
             id: chem-specific-heat-capacity
             brief: The energy to raise 1 g of a substance by 1 °C. Water's is high, so it warms and cools slowly.
-          - title: Water as a solvent
-            id: chem-water-as-solvent
-            brief: Polar water dissolves ionic and polar substances, but not non-polar ones.
-          - title: Precipitation reactions
-            id: chem-precipitation-reactions-2
-            brief: Two solutions mix to form an insoluble solid, shown by an ionic equation with states.
+          - title: Latent heat of vaporisation
+            id: chem-latent-heat-vaporisation
+            brief: Water takes a lot of energy to evaporate, which helps keep oceans and living things at steady temperatures.
 
-      - title: Acids, bases and redox
+      - title: Acids and bases
         id: vic-chem-u12-2-2
         points:
           - title: Brønsted-Lowry acids and bases
             id: chem-br-nsted-lowry-acids
-            brief: An acid donates a proton and a base accepts one. Each has a conjugate partner.
+            brief: Acids donate protons and bases accept them. Polyprotic acids can donate more than one proton.
           - title: Strong and weak acids
             id: chem-strong-weak-acids-2
-            brief: A strong acid ionises fully in water; a weak acid only partly. Strength is not the same as concentration.
+            brief: Strong acids and bases ionise fully in water; weak ones only partly. Strength is not the same as concentration.
           - title: Amphiprotic substances
             id: chem-amphiprotic-substances
             brief: Substances such as water and HCO₃⁻ can act as an acid or a base.
-          - title: The pH scale
-            id: chem-ph-scale
-            brief: pH = −log[H₃O⁺]. Each step of 1 on the scale is a tenfold change in concentration.
           - title: Neutralisation
             id: chem-neutralisation
-            brief: Acids react with bases to form a salt and water, and with carbonates to form a salt, water and carbon dioxide.
+            brief: Acids react with hydroxides and carbonates to form salts and water. Antacids neutralise excess stomach acid.
+          - title: The pH scale
+            id: chem-ph-scale
+            brief: pH is a logarithmic scale of hydrogen ion concentration. The ionic product of water gives the pH of strong acid and base solutions.
+          - title: Indicators and pH meters
+            id: chem-indicators-ph-meters
+            brief: Natural indicators, commercial indicators and pH meters differ in accuracy and precision when measuring acidity.
+          - title: Acid rain and ocean acidity
+            id: chem-acidification-oceans
+            brief: Dissolved carbon dioxide makes rain naturally slightly acidic. Acid rain from pollution is stronger, and more carbon dioxide is making oceans less basic.
+
+      - title: Redox reactions
+        id: vic-chem-u12-2-3-2
+        points:
           - title: Oxidation and reduction
             id: chem-oxidation-reduction-2
-            brief: Oxidation is losing electrons and reduction is gaining them. They always happen together.
-          - title: Oxidation numbers
-            id: chem-oxidation-numbers-2
-            brief: Numbers tracking electrons in a reaction. A rise means oxidation and a fall means reduction.
-          - title: The reactivity series and corrosion
+            brief: Oxidation is loss of electrons and reduction is gain. Half-equations, balanced in acidic conditions, show each side of the reaction.
+          - title: Metal displacement reactions
             id: chem-reactivity-series-corrosion
-            brief: More reactive metals displace less reactive ones from solution. Corrosion is a metal being oxidised.
+            brief: A more reactive metal displaces a less reactive one from solution, as the reactivity series predicts.
+          - title: Corrosion and simple cells
+            id: chem-corrosion-simple-cells
+            brief: Rusting is a redox reaction, and simple primary cells use redox to turn chemical energy into electrical energy.
 
-      - title: Measuring and analysing chemicals
+      - title: Solutions and concentration
         id: vic-chem-u12-2-3
         points:
-          - title: The mole
-            id: chem-mole
-            brief: One mole is 6.02 × 10²³ particles. n = m/M links mass to amount.
           - title: Concentration
             id: chem-concentration-2
-            brief: Concentration in mol/L is moles divided by volume in litres. It can also be given in g/L, % or ppm.
-          - title: Stoichiometry
-            id: chem-stoichiometry
-            brief: The ratio of moles in a balanced equation lets one amount be worked out from another.
+            brief: Concentration is solute per amount of solution, in mol/L, g/L, %(m/v), %(v/v) or ppm, with conversions between them.
+          - title: Solubility
+            id: chem-water-as-solvent
+            brief: Solubility tables and graphs show how much of a substance dissolves, and how temperature changes the solubility of solids and gases.
+          - title: Removing impurities from water
+            id: chem-precipitation-reactions-2
+            brief: Adding a chemical that forms a precipitate with an unwanted ion removes it from water.
           - title: Volumetric analysis
             id: chem-volumetric-analysis
-            brief: Titration finds an unknown concentration from the volume of a standard solution needed to react with it.
-          - title: Gas volumes
-            id: chem-gas-volumes
-            brief: At standard conditions one mole of any gas takes up the same volume, and pV = nRT links pressure, volume, amount and temperature.
+            brief: Titration with a standard solution and an indicator finds an unknown concentration, using dilution and volume-volume stoichiometry.
+
+      - title: Gases
+        id: vic-chem-u12-2-5
+        points:
           - title: Greenhouse gases
             id: chem-greenhouse-gases
             brief: Carbon dioxide, methane and water vapour absorb infrared radiation and warm the atmosphere.
-          - title: Acidification of the oceans
-            id: chem-acidification-oceans
-            brief: Oceans absorb carbon dioxide, forming carbonic acid that lowers pH and harms shell-forming organisms.
+          - title: Gas pressure and standard conditions
+            id: chem-gas-pressure-standard-conditions
+            brief: Gas pressure is force on an area. Standard laboratory conditions are 25 °C and 100 kPa.
+          - title: The ideal gas equation
+            id: chem-gas-volumes
+            brief: pV = nRT links pressure, volume, amount and temperature of a gas, with care over units.
+          - title: Stoichiometry with gases
+            id: chem-stoichiometry-with-gases
+            brief: Mole ratios from an equation find the mass, amount or volume of a gas made or used in a reaction.
+
+      - title: Analysing salts
+        id: vic-chem-u12-2-6
+        points:
+          - title: Salts in water and soil
+            id: chem-salts-water-soil
+            brief: Minerals and heavy metals get into water and soil. Electrical conductivity measures how salty a sample is.
+          - title: Water of crystallisation
+            id: chem-water-crystallisation
+            brief: Heating a hydrated salt drives off water, and the mass lost gives the ratio of water to salt.
+          - title: Mass-mass stoichiometry
+            id: chem-stoichiometry
+            brief: Mole ratios from a balanced equation find the mass of one substance from the mass of another.
+          - title: Colorimetry and UV-visible spectroscopy
+            id: chem-colorimetry-uv-visible-spectroscopy-2
+            brief: The amount of light a coloured solution absorbs, read against a calibration curve, gives its concentration.
+
+      - title: "Science skills: investigations"
+        id: vic-chem-u12-2-7
+        points:
+          - title: Aims, hypotheses, models and theories
+            id: chem-aims-hypotheses-models-theories
+            brief: An aim states what is investigated, a hypothesis predicts a result, and models, theories and laws explain or describe patterns.
+          - title: Accuracy, precision and validity
+            id: chem-accuracy-precision-validity
+            brief: Accurate results are close to the true value, precise results agree with each other, and valid results measure what was intended.
+          - title: Repeatability and reproducibility
+            id: chem-repeatability-reproducibility
+            brief: Repeatable results come out the same when repeated; reproducible results come out the same with other people or methods.
+          - title: Errors and limitations
+            id: chem-errors-limitations
+            brief: Random errors scatter results and systematic errors shift them one way. Every method has limits to report.
