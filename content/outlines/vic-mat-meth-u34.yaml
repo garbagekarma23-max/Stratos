@@ -1,0 +1,190 @@
+# VCE Mathematical Methods, Units 3 and 4: functions, calculus, and probability and statistics, 43 points.
+# Checked against the VCAA's VCE Mathematics Study Design, accredited from 2023, in October 2026. Units 3 and 4 are
+# taught as a sequence, so each unit here is an area of study and each chapter part of one. Every brief is in our own
+# words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Units 1 and 2 and NSW Mathematics Advanced (the mat bank) share
+# much of this, so expect reuses and adapts.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
+
+id: vic-mat-meth-u34
+subject: Mathematics
+bank: mat
+name: Mathematical Methods, Units 3 and 4
+about: VCE, Functions, calculus and statistics
+short: Mathematical Methods
+years: [12]
+level: Units 3 and 4
+place: vic
+kind: maths
+syllabus: VCE Mathematics Study Design (from 2023), Mathematical Methods Units 3 and 4
+note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
+chips: [composite function, chain rule, definite integral, binomial distribution, confidence interval]
+
+units:
+  - title: Functions, relations and graphs
+    chapters:
+      - title: Functions and transformations
+        id: vic-mat-meth-u34-1-1
+        points:
+          - title: Polynomial and power graphs in Unit 3
+            id: mat-polynomial-power-graphs-unit
+            brief: "Features of polynomial and power function graphs: intercepts, stationary points, inflections, asymptotes and domain."
+          - title: Exponential and logarithmic graphs
+            id: mat-exponential-logarithmic-graphs
+            brief: y = e^x and y = log_e(x) are inverses. Transformations move their asymptotes and intercepts.
+          - title: Circular function graphs
+            id: mat-circular-function-graphs
+            brief: y = a sin(n(x − b)) + c and its cosine and tangent forms have amplitude, period, phase and centre set by a, n, b and c.
+          - title: Transformations in mapping form
+            id: mat-transformations-mapping-form
+            brief: A rule such as (x, y) → (2x + 1, 3y) describes dilations, reflections and translations together.
+          - title: Sums and products of functions
+            id: mat-sums-products-functions
+            brief: f + g and f × g are defined on the domain shared by both, and their graphs can be sketched by adding or multiplying heights.
+          - title: Composite functions
+            id: mat-composite-functions
+            brief: f(g(x)) applies g then f. It exists only when the range of g sits inside the domain of f.
+          - title: Inverse functions in Unit 3
+            id: mat-inverse-functions-unit-3
+            brief: A one-to-one function has an inverse whose domain is the function's range. Restricting a domain can make a function one-to-one.
+          - title: Hybrid functions and modelling
+            id: mat-hybrid-functions-modelling
+            brief: Piecewise (hybrid) functions and combinations of functions model real situations, such as a cost that changes rule above a threshold.
+
+  - title: Algebra, number and structure
+    chapters:
+      - title: Solving equations
+        id: vic-mat-meth-u34-3-1
+        points:
+          - title: Polynomial equations in Unit 3
+            id: mat-polynomial-equations-unit-3
+            brief: A polynomial of degree n has at most n real solutions, found by factorising, by graph or numerically.
+          - title: Exponential and logarithmic equations
+            id: mat-exponential-logarithmic-equations
+            brief: Solve by writing both sides with the same base or by taking logarithms, checking the domain of any log.
+          - title: Trigonometric equations in Unit 3
+            id: mat-trigonometric-equations-unit-3
+            brief: Find every solution in a domain using a reference angle, the quadrants and the period, including with transformations.
+          - title: Literal and parameter equations
+            id: mat-literal-parameter-equations
+            brief: Equations with a parameter, such as kx + 2 = 3, can have one, none or infinitely many solutions depending on k.
+          - title: Systems of linear equations
+            id: mat-systems-linear-equations
+            brief: Simultaneous linear equations can have one solution, none or infinitely many, which a parameter can decide.
+          - title: Numerical solutions
+            id: mat-bisection-method-2
+            brief: When an equation cannot be solved exactly, numerical methods such as bisection find solutions to any accuracy.
+
+  - title: Calculus
+    chapters:
+      - title: Differentiation
+        id: vic-mat-meth-u34-2-1
+        points:
+          - title: Derivatives of exponential, log and circular functions
+            id: mat-derivatives-exponential-log-circular
+            brief: The derivative of e^(kx) is k e^(kx), of log_e(x) is 1/x, of sin(kx) is k cos(kx) and of cos(kx) is −k sin(kx).
+          - title: The chain rule
+            id: mat-chain-rule-2
+            brief: The derivative of f(g(x)) is f′(g(x)) × g′(x).
+          - title: The product rule
+            id: mat-product-rule-2
+            brief: The derivative of u × v is u′v + uv′.
+          - title: The quotient rule
+            id: mat-quotient-rule-2
+            brief: The derivative of u/v is (u′v − uv′)/v².
+          - title: Sketching derivative and antiderivative graphs
+            id: mat-sketching-derivative-antiderivative-graphs
+            brief: The shape of a graph shows the shape of its derivative and of an antiderivative, without a rule.
+          - title: Stationary points and curve sketching
+            id: mat-stationary-points-curve-sketching
+            brief: Derivatives find stationary points, points of inflection and where a function is strictly increasing or decreasing.
+          - title: Optimisation
+            id: mat-optimisation-2
+            brief: Finding the largest or smallest value of a quantity in context, checking stationary points and the endpoints of the interval.
+          - title: Rates of change in context
+            id: mat-rates-change-related-rates
+            brief: The derivative gives the instantaneous rate of change of a quantity, such as velocity from position.
+
+      - title: Integration
+        id: vic-mat-meth-u34-2-2
+        points:
+          - title: Antiderivatives in Unit 3
+            id: mat-antiderivatives-unit-3
+            brief: Antiderivatives of x^n, e^(kx), 1/x, sin(kx) and cos(kx), each plus a constant.
+          - title: Definite integrals
+            id: mat-definite-integrals
+            brief: A definite integral is the limit of a sum of thin strips, and has properties such as splitting across an interval.
+          - title: The fundamental theorem of calculus
+            id: mat-fundamental-theorem-calculus
+            brief: Integration and differentiation undo each other, which links the area under a curve to antiderivatives.
+          - title: Finding a function from its rate of change
+            id: mat-finding-function-from-rate
+            brief: Antidifferentiating a rate and using a known point, a boundary condition, gives the function itself.
+          - title: Area under and between curves
+            id: mat-area-under-between-curves
+            brief: Area is the integral of the top curve minus the bottom one, splitting where curves cross the axis or each other.
+          - title: The trapezium rule
+            id: mat-trapezium-rule
+            brief: Approximating area with trapeziums of equal width, which improves as the width shrinks.
+          - title: Average value of a function
+            id: mat-average-value-function
+            brief: The average value of f on [a, b] is the integral from a to b divided by b − a.
+
+  - title: Data analysis, probability and statistics
+    chapters:
+      - title: Discrete random variables
+        id: vic-mat-meth-u34-4-1
+        points:
+          - title: Random variables
+            id: mat-random-variables
+            brief: A random variable gives a number to each outcome of an experiment. It is discrete if it takes separate values and continuous if it takes any value in a range.
+          - title: Discrete probability distributions
+            id: mat-discrete-probability-distributions-2
+            brief: A table or rule giving the probability of each value of a random variable, with the probabilities adding to 1.
+          - title: Expected value and variance
+            id: mat-expected-value-variance
+            brief: E(X) is the sum of x × Pr(X = x). Var(X) = E(X²) − (E(X))², and the standard deviation is its square root.
+          - title: The binomial distribution
+            id: mat-binomial-distribution
+            brief: The number of successes in n independent Bernoulli trials, each with the same chance p, has a binomial distribution.
+          - title: Mean and variance of a binomial
+            id: mat-mean-variance-binomial
+            brief: For a binomial, E(X) = np and Var(X) = np(1 − p).
+
+      - title: Continuous random variables
+        id: vic-mat-meth-u34-4-2
+        points:
+          - title: Probability density functions
+            id: mat-probability-density-functions-2
+            brief: A non-negative function whose total area is 1. Areas under it give probabilities for intervals.
+          - title: Mean, median and variance of a continuous variable
+            id: mat-mean-median-variance-continuous
+            brief: The mean is the integral of x f(x). The median splits the area in half.
+          - title: The normal distribution
+            id: mat-normal-distribution-2
+            brief: A symmetric bell curve set by its mean μ and standard deviation σ.
+          - title: The standard normal distribution
+            id: mat-standard-normal-distribution
+            brief: Z = (X − μ)/σ turns any normal variable into one with mean 0 and standard deviation 1.
+
+      - title: Sampling and confidence intervals
+        id: vic-mat-meth-u34-4-3
+        points:
+          - title: Populations and samples
+            id: mat-populations-samples
+            brief: A sample statistic, such as a sample proportion, estimates a population parameter, and varies from sample to sample.
+          - title: Simulating samples
+            id: mat-simulating-samples
+            brief: Repeated random samples, simulated with technology, show how a sample statistic varies from sample to sample.
+          - title: The sample proportion
+            id: mat-sample-proportion
+            brief: The proportion of a sample with a feature varies between samples. For large samples its distribution is roughly normal.
+          - title: Approximate confidence intervals
+            id: mat-approximate-confidence-intervals
+            brief: A 95% confidence interval for p is p-hat ± 1.96 × √(p-hat(1 − p-hat)/n).
+          - title: Interpreting a confidence interval
+            id: mat-interpreting-confidence-interval
+            brief: About 95% of intervals made this way would contain the true proportion. Larger samples give narrower intervals.

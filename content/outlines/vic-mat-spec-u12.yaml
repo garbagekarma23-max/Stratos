@@ -1,0 +1,266 @@
+# VCE Specialist Mathematics, Units 1 and 2: proof, logic, sequences, graph theory, matrices, vectors, complex numbers
+# and simulation, 63 points.
+# Checked against the VCAA's VCE Mathematics Study Design, accredited from 2023, in October 2026. Each unit is a unit
+# here, and its areas of study are its chapters, or two when one is large. Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+# Cards and multiple choice for now (kind: maths). Run General Mathematics and Mathematical Methods first, so shared
+# points such as matrices and networks can be reused.
+# VCAA's study designs now give only the year they start (Notice to Schools 23, April 2025 changed the accreditation
+# periods), and none of these has a replacement announced for 2027. Check the study's page before each run.
+
+id: vic-mat-spec-u12
+subject: Mathematics
+bank: mat
+name: Specialist Mathematics, Units 1 and 2
+about: VCE, Proof, vectors, complex numbers and discrete maths
+short: Specialist Mathematics
+years: [11]
+level: Units 1 and 2
+place: vic
+kind: maths
+syllabus: VCE Mathematics Study Design (from 2023), Specialist Mathematics Units 1 and 2
+note: Follows the VCE Mathematics study design. Not made or endorsed by the VCAA.
+chips: [proof by contradiction, induction, Argand plane, vector, recurrence]
+
+units:
+  - title: "Unit 1: Proof, logic, graphs, sequences and combinatorics"
+    chapters:
+      - title: Number and proof
+        id: vic-mat-spec-u12-1-1
+        points:
+          - title: Number systems and sets
+            id: mat-number-systems-sets
+            brief: The natural numbers, integers, rationals, reals and complex numbers, and set notation such as union, intersection, complement and subset.
+          - title: Primes and the fundamental theorem of arithmetic
+            id: mat-primes-fundamental-theorem-arithmetic
+            brief: Every whole number above 1 is a product of primes in exactly one way, and there are infinitely many primes.
+          - title: Quantifiers
+            id: mat-quantifiers
+            brief: For all and there exists say how widely a statement applies. A single counterexample disproves a for all statement.
+          - title: Direct proof
+            id: mat-direct-proof
+            brief: Start from what is known and reason step by step to the result, such as proving the sum of two even numbers is even.
+          - title: Examples and counterexamples
+            id: mat-examples-counterexamples
+            brief: Examples can support a claim but never prove it for all cases. One counterexample is enough to disprove it.
+
+      - title: Methods of proof
+        id: vic-mat-spec-u12-1-2-2
+        points:
+          - title: Proof by contrapositive
+            id: mat-proof-by-contrapositive
+            brief: To prove if P then Q, prove if not Q then not P instead.
+          - title: Proof by contradiction
+            id: mat-proof-by-contradiction
+            brief: Assume the result is false and show this leads to something impossible, as in proving √2 is irrational.
+          - title: Mathematical induction
+            id: mat-mathematical-induction
+            brief: Show a statement holds for the first case, and that holding for n means it holds for n + 1. Then it holds for all.
+          - title: Proofs about numbers
+            id: mat-proofs-about-numbers
+            brief: Simple proofs about divisibility, sequences and series, inequalities and irrational numbers such as the square root of 2.
+
+      - title: Logic and algorithms
+        id: vic-mat-spec-u12-1-3-2
+        points:
+          - title: Statements and connectives
+            id: mat-statements-connectives
+            brief: Propositions joined by and, or and not, with truth tables and Karnaugh maps showing when a compound statement is true.
+          - title: Conditional statements
+            id: mat-conditional-statements
+            brief: The statement if P then Q is false only when P is true and Q is false. Its contrapositive, if not Q then not P, means the same.
+          - title: Converse and equivalence
+            id: mat-converse-equivalence
+            brief: The converse of if P then Q is if Q then P, which is not always true. When both hold, P and Q are equivalent.
+          - title: Boolean algebra
+            id: mat-boolean-algebra
+            brief: The laws of Boolean algebra simplify statements and sets, and show which arguments are valid and which are tautologies.
+          - title: Logic gates and circuits
+            id: mat-logic-gates-circuits
+            brief: AND, OR and NOT gates build circuits that follow Boolean rules, and simplifying the logic simplifies the circuit.
+          - title: Binary numbers
+            id: mat-binary-numbers
+            brief: Numbers written in base 2 with only 0s and 1s, as computers store them, and converting to and from base 10.
+          - title: Algorithms and pseudocode
+            id: mat-algorithms-pseudocode
+            brief: An algorithm uses sequence, decisions (if-then) and repetition (loops), written in pseudocode.
+
+      - title: Graphs and matrices
+        id: vic-mat-spec-u12-1-3
+        points:
+          - title: Graph theory in Specialist
+            id: mat-graph-theory-specialist
+            brief: Graphs of vertices and edges model molecules, circuits and networks. The degrees of all vertices add to twice the number of edges.
+          - title: Types of graphs
+            id: mat-types-graphs
+            brief: Simple, complete, bipartite and regular graphs, subgraphs, complements, and isomorphic graphs that are the same in structure.
+          - title: Planar graphs and Euler's formula
+            id: mat-planar-graphs-euler-s-2
+            brief: A planar graph can be drawn with no edges crossing. For a connected one, vertices minus edges plus faces equals 2.
+          - title: Trees
+            id: mat-trees-algorithms
+            brief: A tree is connected with no cycles, and a tree with n vertices always has n - 1 edges.
+          - title: Euler and Hamilton
+            id: mat-euler-hamilton
+            brief: An Euler trail uses each edge once, as in the Königsberg bridge problem; a Hamiltonian path visits each vertex once.
+          - title: Matrix operations in Specialist
+            id: mat-matrix-operations-specialist
+            brief: Matrix notation and order, using matrices to hold data, and adding, scaling and multiplying them.
+          - title: Determinants and matrix equations
+            id: mat-determinants-matrix-equations
+            brief: The determinant shows whether a square matrix has an inverse, which solves matrix equations such as AX = B.
+
+      - title: Sequences, series and combinatorics
+        id: vic-mat-spec-u12-1-2
+        points:
+          - title: Arithmetic and geometric series
+            id: mat-arithmetic-geometric-series
+            brief: An arithmetic series sums to n/2 × (2a + (n − 1)d). A geometric series sums to a(rⁿ − 1)/(r − 1).
+          - title: Infinite geometric series
+            id: mat-infinite-geometric-series
+            brief: When −1 < r < 1, a geometric series sums to a/(1 − r).
+          - title: Recurrence relations in Specialist
+            id: mat-recurrence-relations-specialist
+            brief: Sequences defined from earlier terms, including second-order ones such as the Fibonacci sequence.
+          - title: The pigeonhole principle
+            id: mat-pigeonhole-principle
+            brief: If more than n items go into n boxes, some box holds at least two.
+          - title: The inclusion-exclusion principle
+            id: mat-inclusion-exclusion-principle
+            brief: To count A or B, add the counts of A and B, then subtract those in both.
+          - title: Permutations and combinations
+            id: mat-arrangements-with-restrictions
+            brief: Counting arrangements and selections, with or without repeated items, and with conditions such as two people sitting together.
+          - title: Combinatorial identities
+            id: mat-combinatorial-identities
+            brief: Results such as nCr = nC(n - r), proved by counting the same thing in two ways.
+
+  - title: "Unit 2: Sampling, trigonometry, vectors, complex numbers and curves"
+    chapters:
+      - title: Simulation and sampling
+        id: vic-mat-spec-u12-5-1
+        points:
+          - title: Sums of random variables
+            id: mat-sums-random-variables
+            brief: Adding two independent copies of a discrete random variable gives a different distribution from doubling one copy.
+          - title: Simulation
+            id: mat-simulation-2
+            brief: Using random numbers to model a chance process many times and estimate a probability.
+          - title: Sample means vary
+            id: mat-sample-means-vary
+            brief: The mean of a sample changes from one sample to the next. Larger samples vary less.
+          - title: Distributions of sample means
+            id: mat-distributions-sample-means
+            brief: Plotting the means of many samples shows their spread, which narrows as sample size grows.
+
+      - title: Trigonometry and transformations
+        id: vic-mat-spec-u12-3-1
+        points:
+          - title: Radians, arcs and segments
+            id: mat-radians-arcs-segments
+            brief: Radian measure, arc length, and the areas of sectors and segments of a circle.
+          - title: Sine and cosine rules in three dimensions
+            id: mat-sine-cosine-rules-three
+            brief: The sine and cosine rules solve triangles in solid shapes, such as the angle between two planes.
+          - title: Compound and double angle formulas
+            id: mat-trigonometric-identities
+            brief: Formulas such as sin(A + B) and cos 2A rewrite trigonometric expressions, prove identities and give exact values.
+          - title: Matrices as transformations
+            id: mat-matrices-as-transformations
+            brief: A 2 × 2 matrix maps points in the plane, giving dilations, reflections, rotations and shears.
+          - title: Composition and inverse transformations
+            id: mat-composition-inverse-transformations
+            brief: Doing one transformation then another multiplies their matrices. The inverse matrix undoes a transformation.
+          - title: Determinants and area
+            id: mat-determinants-area
+            brief: The determinant of a transformation matrix scales areas, and some properties stay the same under a transformation.
+
+      - title: Vectors in the plane
+        id: vic-mat-spec-u12-2-3
+        points:
+          - title: Vectors in the plane
+            id: mat-vectors-plane
+            brief: A vector has size and direction, written as a column or with i and j components.
+          - title: Adding and scaling vectors
+            id: mat-adding-scaling-vectors
+            brief: Vectors add head to tail. Multiplying by a scalar stretches or reverses them.
+          - title: Magnitude and unit vectors
+            id: mat-magnitude-unit-vectors
+            brief: The magnitude of ai + bj is √(a² + b²). A unit vector has magnitude 1.
+          - title: The scalar product
+            id: mat-scalar-product
+            brief: a·b = |a||b|cos θ. Two non-zero vectors are perpendicular when their scalar product is zero.
+          - title: Vector projections
+            id: mat-vector-projections
+            brief: The projection of a onto b gives the part of a in the direction of b.
+          - title: Proof with vectors
+            id: mat-proof-with-vectors
+            brief: Vectors can prove geometric results, such as that the diagonals of a parallelogram bisect each other.
+          - title: Vectors in motion
+            id: mat-vectors-motion
+            brief: Vectors model displacement, velocity, relative velocity, forces in balance and motion under a constant force.
+
+      - title: Complex numbers
+        id: vic-mat-spec-u12-4-1
+        points:
+          - title: The imaginary unit
+            id: mat-imaginary-unit
+            brief: i is defined by i² = −1, so square roots of negative numbers can be written, such as √−9 = 3i.
+          - title: Arithmetic with complex numbers
+            id: mat-arithmetic-with-complex-numbers
+            brief: Complex numbers a + bi add, subtract and multiply like binomials, using i² = −1.
+          - title: Conjugates and division
+            id: mat-conjugates-division
+            brief: The conjugate of a + bi is a − bi. Dividing uses the conjugate to make the denominator real.
+          - title: The Argand plane
+            id: mat-argand-plane
+            brief: A complex number is plotted with its real part on the horizontal axis and imaginary part on the vertical.
+
+      - title: Polar form and the complex plane
+        id: vic-mat-spec-u12-2-5
+        points:
+          - title: Modulus and argument
+            id: mat-modulus-argument
+            brief: The modulus is the distance from the origin; the argument is the angle from the positive real axis.
+          - title: Polar form
+            id: mat-polar-form
+            brief: A complex number written as r cis θ. Multiplying multiplies the moduli and adds the arguments.
+          - title: Solving quadratics over the complex numbers
+            id: mat-solving-quadratics-over-complex
+            brief: A quadratic with a negative discriminant has two complex roots that are conjugates.
+          - title: Regions in the complex plane
+            id: mat-regions-complex-plane
+            brief: Equations and inequalities in z describe lines, rays, circles, ellipses and regions on the Argand plane.
+
+      - title: Rational and circular graphs
+        id: vic-mat-spec-u12-2-6
+        points:
+          - title: Partial fractions
+            id: mat-partial-fractions
+            brief: Splitting a rational function into simpler fractions with linear or quadratic denominators, by equating coefficients.
+          - title: Reciprocal functions
+            id: mat-reciprocal-functions-2
+            brief: Graphs of y = 1/f(x), including the reciprocal circular functions sec, cosec and cot, with asymptotes where f(x) = 0.
+          - title: Inverse circular functions
+            id: mat-inverse-circular-functions
+            brief: arcsin, arccos and arctan undo sin, cos and tan on restricted domains, each with its own graph.
+          - title: The absolute value function
+            id: mat-absolute-value-function
+            brief: y = |x| makes every output non-negative, giving a V-shaped graph that can be transformed.
+
+      - title: Curves and loci
+        id: vic-mat-spec-u12-2-1
+        points:
+          - title: Circles and ellipses
+            id: mat-circles-ellipses
+            brief: Lines, circles and ellipses defined as loci of points, with their Cartesian, polar and parametric forms.
+          - title: Parabolas and hyperbolas
+            id: mat-hyperbolas
+            brief: Parabolas and hyperbolas as loci, their equations and graphs, including the asymptotes of a hyperbola.
+          - title: Parametric equations
+            id: mat-parametric-equations
+            brief: x and y are each given in terms of a parameter t, which can trace curves such as circles.
+          - title: Polar coordinates
+            id: mat-polar-coordinates
+            brief: A point is given by its distance r from the origin and angle θ, with x = r cos θ and y = r sin θ.

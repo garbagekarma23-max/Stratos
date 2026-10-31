@@ -20,3 +20,7 @@ The ids in them were written by a rough estimate only, and nothing is published,
 ## Run after English Advanced is published
 
 `nsw-eng-std-11.yaml` and `nsw-eng-std-12.yaml` share the `eng` bank with English Advanced, and teach many of the same ideas. The matcher only finds points that are already published. Run and publish `nsw-eng-adv-11` and `nsw-eng-adv-12` first, then run these two, so their points can reuse Advanced ones.
+
+## No VCE outlines wait here
+
+Every VCE outline is in `content/outlines/`. The VCE Biology and History outlines waited here while their study designs were due to end on 31 December 2026 (VCAA Notice to Schools 23, February 2024). VCAA has since changed how it states accreditation: since 2025 its study designs, study pages and examination specifications give only the year a study design starts (Notice to Schools 23, April 2025). As of October 2026 both still show as current (Biology from 2022, History from 2022), and no replacement for 2027 has been announced, so the four outlines moved up and were checked against the current study designs. If VCAA publishes a new study design for any VCE study, move its outlines back here and list them with what replaces them.
