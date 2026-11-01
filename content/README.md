@@ -9,7 +9,7 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 If you are Claude Code helping the owner with these steps:
 
 - Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck`, `rebalance` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` (it makes no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), `review`, `publish`, the build, the checks and git.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
@@ -264,6 +264,45 @@ py content/pipeline.py recheck --max-dollars 5
 - Each point it clears has `cleared_by: "recheck"`, an `auto` entry and a `recheck` entry with the fresh check's answer in its file. `autoreview --undo` sends these back to you too, and they are never cleared automatically again.
 - With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to recheck some courses only.
 
+### Reject what the fresh check found (optional)
+
+When the fresh check finds a problem in a fix, you would usually reject the point anyway. `autoreject` does that for you, the same as pressing **Reject and rewrite**, and the next `run` writes the point again. It makes no API calls and needs no key, so it can run in any window. The rewrite is paid for by that `run`, like any other: the writing, the check, and a fix if it is flagged.
+
+It rejects a point only when recheck kept it for one reason: the fresh check found a problem. If the fresh check was also not highly sure, picked another answer, said another option could be right or named a sensitive topic, the point stays for you.
+
+These always stay for you:
+
+- A sensitive topic: one named by the checker, the Haiku screen or the fresh check, or a word from `SENSITIVE` at the top of `content/pipeline.py` in the title, brief, draft or fix. A word used in another sense, such as an economic depression, stays too.
+- A possible match.
+- A spot check.
+- A point you sent back with `--undo`.
+- A fix that fails the content check.
+- A point rewritten twice already (`AUTOREJECT_MOST` at the top of `content/pipeline.py`). Your rejections on the review page count, including ones from before autoreject existed. Writing a point again because it failed the content check does not count. Changing the point's title or brief starts the count again.
+
+The writer gets the fix, because that is the version the fresh check read, and the fresh check's problems as the note. The first draft is kept in the point's file.
+
+After recheck:
+
+```powershell
+py content/pipeline.py autoreject --dry-run
+```
+
+The dry run changes nothing. For each course it prints which points it would reject, and how many stay for you, with the reasons. When the numbers look right, run it again without `--dry-run`:
+
+```powershell
+py content/pipeline.py autoreject
+```
+
+Then run each course it rejected points in again (step 7), in the key window. After that run, use autoreview, recheck and autoreject again, as for a new point.
+
+- **The record**: each point it rejects gets `cleared_by: "autoreject"`, a `rewrites` count, a line in its log and an `autoreject` entry in its file, with when, the problems and a copy of the point as it was. `cleared_by` changes once the rewrite is decided. The `autoreject` entry stays.
+- **The summary**: `autoreject`, `status` and the end of a run print how many points it has rejected, how many are waiting to be rewritten, and how many are left for you after two rewrites.
+- **Undo**: `py content/pipeline.py autoreject content/outlines/nsw-bus-11.yaml --undo` sends every point it rejected in that course back to the review list, as it was, with the fresh check. Add `--point bus-business` for one point. Add `--dry-run` to see what would go back first. A point sent back is never rejected or cleared automatically again, unless you reject it yourself. If the rewrite was already written, it is kept in the point's file (`replaced`). A rewrite that has been cleared, or that you rejected, stands and does not go back. Undo waits while a run's batch is open, so run the course first.
+- Autoreject has no spot checks of its own. It clears nothing, and every rewrite goes through the checker again.
+- Running it again never decides a point twice.
+- Commit the work folders afterwards, as in step 9, so the decisions are kept.
+- With no outline it looks at every course in `content/work/`, apart from trials. Name outlines, or a folder of them, to look at some courses only.
+
 ### Rebalance the options (optional)
 
 In a good question, a student can't pick the right option by its look. Many courses written so far have the right option as the longest of the four far more often than chance: `node check_content.mjs` prints a warning for each one (see below). The writer and the checker are told about this now, so new courses should not need it. `rebalance` fixes a course that is already written.
@@ -325,7 +364,7 @@ The buttons:
 - **Edit** lets you change any part. Saving runs the content check first, and says what to fix if it fails.
 - **Reject and rewrite** sends it back to be written again on the next run, with your note.
 
-Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here, and nor do the points autoreview or recheck cleared, apart from their spot checks. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
+Keys: J and K move between points, A approves, F uses the fix, E edits, R goes to the note. Points that weren't flagged are cleared already and don't show here, and nor do the points autoreview or recheck cleared, apart from their spot checks, or the points autoreject sent for a rewrite. Points about mental health, drugs, sexual health, Aboriginal and Torres Strait Islander histories and cultures, or facts about a set text always come here.
 
 After rejecting points, run step 7 again to rewrite them. Press Ctrl+C in the window to stop the review page.
 
@@ -419,6 +458,6 @@ Rules:
 | `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
-| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's or recheck's decision and yours, and the old options rebalance replaced). Commit it with the content. |
+| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's, recheck's or autoreject's decision and yours, and the old options rebalance replaced). Commit it with the content. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. `tests/made/` and `tests/units/` are courses it publishes, which the browser tests open. |
