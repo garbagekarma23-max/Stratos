@@ -2383,7 +2383,7 @@ MADE_BANKS.phys = {
     ],
     "remember": "Aim: what is tested. Hypothesis: the predicted result. Model and theory explain, and a law describes a pattern.",
     "a": {
-      "q": "Which statement is a hypothesis?",
+      "q": "Ana is planning a ramp investigation with trolleys. Which statement is a hypothesis?",
       "opts": [
         "A heavier trolley will roll down a ramp more slowly",
         "To find out how trolley mass affects speed on a ramp",
