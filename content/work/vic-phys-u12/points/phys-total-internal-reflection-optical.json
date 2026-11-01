@@ -1,0 +1,305 @@
+{
+ "id": "phys-total-internal-reflection-optical",
+ "title": "Total internal reflection and optical fibres",
+ "brief": "11ec8f2f029d",
+ "shortlist": [
+  [
+   "hms-muscle-fibre-types",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: failed the content check, writing again",
+  "2026-11-01T08:24:35Z write: done (still fails the content check)",
+  "2026-11-01T08:33:53Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-01T13:41:59Z write: failed the content check, writing again",
+  "2026-11-01T13:47:17Z write: done",
+  "2026-11-01T13:49:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.0315,
+  "check": 0.02199,
+  "fix": 0.02894,
+  "recheck": 0.01122
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point on muscle fibre types is from a different subject and does not teach total internal reflection or optical fibres, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The options say 'at a large angle' and 'at a small angle' without saying the angle is the angle of incidence, measured from the normal. In everyday speech, light hitting a surface 'at a small angle' means a grazing ray, which would make the second option right. Say 'large angle of incidence (measured from the normal)' or 'beyond the critical angle'.",
+ "rejected": {
+  "title": "Total internal reflection and optical fibres",
+  "card": [
+   "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+   "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+   "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle.",
+   "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+  ],
+  "remember": "Beyond the critical angle, light inside the higher index material reflects completely, so fibres can guide it.",
+  "a": {
+   "q": "Which situation can produce total internal reflection?",
+   "opts": [
+    "Light in glass hitting a glass-air boundary at a large angle",
+    "Light in air hitting a glass boundary at a large angle",
+    "Light in glass hitting a glass-air boundary at a small angle",
+    "Light in air hitting a water boundary at a small angle"
+   ],
+   "why": "Total internal reflection needs light in the higher index material and an angle beyond the critical angle. Air to glass fails the first need. A small angle in glass fails the second.",
+   "clue": "Check both conditions: which material, and which angle."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+   "opts": [
+    "It hits the wall beyond the critical angle and reflects",
+    "It hits the wall below the critical angle and is absorbed",
+    "The coating has a higher index than the core and traps it",
+    "The signal is a sound wave that cannot leave the glass"
+   ],
+   "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+   "clue": "Think about the angle at the wall of the core."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The options say 'at a large angle' and 'at a small angle' without saying the angle is the angle of incidence, measured from the normal. In everyday speech, light hitting a surface 'at a small angle' means a grazing ray, which would make the second option right. Say 'large angle of incidence (measured from the normal)' or 'beyond the critical angle'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Total internal reflection and optical fibres",
+     "card": [
+      "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+      "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+      "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle.",
+      "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+     ],
+     "remember": "Beyond the critical angle, light inside the denser material reflects completely, so fibres can guide it.",
+     "a": {
+      "q": "Which situation can produce total internal reflection?",
+      "opts": [
+       "Light in glass hitting a glass-air boundary at a large angle",
+       "Light in air hitting a glass boundary at a large angle",
+       "Light in glass hitting a glass-air boundary at a small angle",
+       "Light in air hitting a water boundary at a small angle"
+      ],
+      "why": "Total internal reflection needs light in the higher index material and an angle beyond the critical angle. Air to glass fails the first need. A small angle in glass fails the second.",
+      "clue": "Check both conditions: which material, and which angle."
+     },
+     "b": {
+      "d": 2,
+      "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+      "opts": [
+       "It meets the wall beyond the critical angle and reflects fully",
+       "It meets the wall below the critical angle and is absorbed",
+       "The coating has a higher index than the core and traps it",
+       "The signal is a sound wave that cannot leave the glass"
+      ],
+      "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+      "clue": "Think about the angle at the wall of the core."
+     }
+    },
+    "redone": true,
+    "local": [
+     "phys-total-internal-reflection-opticalb option is 62 characters: It meets the wall beyond the critical angle and reflects fully"
+    ],
+    "check": {
+     "a": {
+      "best": "Light in glass hitting a glass-air boundary at a large angle",
+      "also_right": []
+     },
+     "b": {
+      "best": "It meets the wall beyond the critical angle and reflects fully",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "The remember line says 'denser material', but the card only speaks of 'higher refractive index'. Students may read 'denser' as mass density, which is not what governs total internal reflection. 'Higher index material' would match the card."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The physics and both questions are sound, with one clear answer each. The only issue is that the remember line uses 'denser material' where the card says 'higher refractive index', which could be confused with mass density."
+    },
+    "flags": [
+     "Remember, wording: The remember line says 'denser material', but the card only speaks of 'higher refractive index'. Students may read 'denser' as mass density, which is not what governs total internal reflection. 'Higher index material' would match the card.",
+     "Content check: phys-total-internal-reflection-opticalb option is 62 characters: It meets the wall beyond the critical angle and reflects fully"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Total internal reflection and optical fibres",
+     "card": [
+      "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+      "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+      "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle.",
+      "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+     ],
+     "remember": "Beyond the critical angle, light inside the higher index material reflects completely, so fibres can guide it.",
+     "a": {
+      "q": "Which situation can produce total internal reflection?",
+      "opts": [
+       "Light in glass hitting a glass-air boundary at a large angle",
+       "Light in air hitting a glass boundary at a large angle",
+       "Light in glass hitting a glass-air boundary at a small angle",
+       "Light in air hitting a water boundary at a small angle"
+      ],
+      "why": "Total internal reflection needs light in the higher index material and an angle beyond the critical angle. Air to glass fails the first need. A small angle in glass fails the second.",
+      "clue": "Check both conditions: which material, and which angle."
+     },
+     "b": {
+      "d": 2,
+      "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+      "opts": [
+       "It hits the wall beyond the critical angle and reflects",
+       "It hits the wall below the critical angle and is absorbed",
+       "The coating has a higher index than the core and traps it",
+       "The signal is a sound wave that cannot leave the glass"
+      ],
+      "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+      "clue": "Think about the angle at the wall of the core."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Light in glass hitting a glass-air boundary at a large angle",
+       "also_right": []
+      },
+      "b": {
+       "best": "It hits the wall beyond the critical angle and reflects",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The options say 'at a large angle' and 'at a small angle' without saying the angle is the angle of incidence, measured from the normal. In everyday speech, light hitting a surface 'at a small angle' means a grazing ray, which would make the second option right. Say 'large angle of incidence (measured from the normal)' or 'beyond the critical angle'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The physics is correct throughout. Question a's options say 'large angle' and 'small angle' without saying they are measured from the normal, so a student reading them in the everyday sense could pick the wrong option."
+     },
+     "flags": [
+      "Question a, wording: The options say 'at a large angle' and 'at a small angle' without saying the angle is the angle of incidence, measured from the normal. In everyday speech, light hitting a surface 'at a small angle' means a grazing ray, which would make the second option right. Say 'large angle of incidence (measured from the normal)' or 'beyond the critical angle'."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Total internal reflection and optical fibres",
+  "card": [
+   "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+   "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+   "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle. Angles of incidence are measured from the normal.",
+   "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+  ],
+  "remember": "Beyond the critical angle, light inside the higher index material reflects completely, so fibres can guide it.",
+  "a": {
+   "q": "Which situation can produce total internal reflection?",
+   "opts": [
+    "Glass to air, angle of incidence above the critical angle",
+    "Air to glass, angle of incidence above the critical angle",
+    "Glass to air, angle of incidence below the critical angle",
+    "Air to water, angle of incidence below the critical angle"
+   ],
+   "why": "Total internal reflection needs light in the higher index material and an angle of incidence beyond the critical angle. Air to glass fails the first need. An angle of incidence below the critical angle fails the second, so some light escapes.",
+   "clue": "Check both conditions: which material, and which angle of incidence."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+   "opts": [
+    "It hits the wall beyond the critical angle and reflects",
+    "It hits the wall below the critical angle and is absorbed",
+    "The coating has a higher index than the core and traps it",
+    "The signal is a sound wave that cannot leave the glass"
+   ],
+   "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+   "clue": "Think about the angle of incidence at the wall of the core."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Glass to air, angle of incidence above the critical angle",
+   "also_right": []
+  },
+  "b": {
+   "best": "It hits the wall beyond the critical angle and reflects",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Total internal reflection and optical fibres",
+  "card": [
+   "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+   "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+   "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle. Angles of incidence are measured from the normal.",
+   "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+  ],
+  "remember": "Beyond the critical angle, light inside the higher index material reflects completely, so fibres can guide it.",
+  "a": {
+   "q": "Which situation can produce total internal reflection?",
+   "opts": [
+    "Glass to air, angle of incidence above the critical angle",
+    "Air to glass, angle of incidence above the critical angle",
+    "Glass to air, angle of incidence below the critical angle",
+    "Air to water, angle of incidence below the critical angle"
+   ],
+   "why": "Total internal reflection needs light in the higher index material and an angle of incidence beyond the critical angle. Air to glass fails the first need. An angle of incidence below the critical angle fails the second, so some light escapes.",
+   "clue": "Check both conditions: which material, and which angle of incidence."
+  },
+  "b": {
+   "d": 2,
+   "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+   "opts": [
+    "It hits the wall beyond the critical angle and reflects",
+    "It hits the wall below the critical angle and is absorbed",
+    "The coating has a higher index than the core and traps it",
+    "The signal is a sound wave that cannot leave the glass"
+   ],
+   "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+   "clue": "Think about the angle of incidence at the wall of the core."
+  }
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "id": "phys-temperature-internal-energy",
+ "title": "Temperature and internal energy",
+ "brief": "ec4d48405ec5",
+ "shortlist": [
+  [
+   "phys-escape-velocity-gravitational-potential",
+   0.244
+  ],
+  [
+   "chem-gas-laws",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:35Z write: done",
+  "2026-11-01T08:33:53Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00481,
+  "check": 0.01411,
+  "fix": 0.02611,
+  "recheck": 0.00803
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches temperature as particle kinetic and potential energy: the escape velocity point covers gravitational potential energy, and the gas laws point covers pressure-volume-temperature relationships and the kelvin scale, which are related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Temperature and internal energy",
+  "card": [
+   "All the particles in a substance are moving and pulling on each other. Internal energy is the total of their kinetic energy and their potential energy.",
+   "Temperature is linked to the average kinetic energy of the particles. Hotter means the particles move faster on average.",
+   "Adding energy to a substance raises its internal energy. The particles can gain kinetic energy, potential energy, or both.",
+   "The Kelvin scale starts at absolute zero, where particles have the least possible energy. Absolute zero is about 273 degrees below 0 on the Celsius scale, so T(K) = T(°C) + 273."
+  ],
+  "remember": "Internal energy is the particles' kinetic plus potential energy. Temperature tracks the average kinetic energy.",
+  "a": {
+   "q": "Which statement best describes the internal energy of a block of copper?",
+   "opts": [
+    "The sum of kinetic and potential energy of its particles",
+    "The kinetic energy of the whole block as it moves",
+    "The average speed of the particles in the block",
+    "The potential energy of the block above the ground"
+   ],
+   "why": "Internal energy is the total of the kinetic and potential energy of the particles inside the substance. The average speed or kinetic energy of the particles relates to temperature, not to the total, and the motion or height of the whole block does not change it.",
+   "clue": "Think about the particles inside, not the block as a whole."
+  },
+  "b": {
+   "d": 2,
+   "q": "A lab thermometer reads 27 °C. What is this temperature on the Kelvin scale?",
+   "opts": [
+    "300 K",
+    "246 K",
+    "27 K",
+    "-246 K"
+   ],
+   "why": "Add 273 to the Celsius value: 27 + 273 = 300 K. Subtracting 273 gives 246, which reverses the conversion. Kelvin has no negative values, as it starts at absolute zero.",
+   "clue": "Kelvin values are always larger than Celsius values."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sum of kinetic and potential energy of its particles",
+   "also_right": []
+  },
+  "b": {
+   "best": "300 K",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Subtracting 273 gives 246'. In fact 27 − 273 = −246, which is the −246 K option. 246 comes from 273 − 27. The explanation miscalculates and confuses the two wrong options."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. However, the explanation for (b) wrongly says subtracting 273 from 27 gives 246, when it gives −246; fix the arithmetic and link it to the −246 K option."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says 'Subtracting 273 gives 246'. In fact 27 − 273 = −246, which is the −246 K option. 246 comes from 273 − 27. The explanation miscalculates and confuses the two wrong options."
+ ],
+ "proposal": {
+  "title": "Temperature and internal energy",
+  "card": [
+   "All the particles in a substance are moving and pulling on each other. Internal energy is the total of their kinetic energy and their potential energy.",
+   "Temperature is linked to the average kinetic energy of the particles. Hotter means the particles move faster on average.",
+   "Adding energy to a substance raises its internal energy. The particles can gain kinetic energy, potential energy, or both.",
+   "The Kelvin scale starts at absolute zero, where particles have the least possible energy. Absolute zero is about 273 degrees below 0 on the Celsius scale, so T(K) = T(°C) + 273."
+  ],
+  "remember": "Internal energy is the particles' kinetic plus potential energy. Temperature tracks the average kinetic energy.",
+  "a": {
+   "q": "Which statement best describes the internal energy of a block of copper?",
+   "opts": [
+    "The sum of kinetic and potential energy of its particles",
+    "The kinetic energy of the whole block as it moves",
+    "The average speed of the particles in the block",
+    "The potential energy of the block above the ground"
+   ],
+   "why": "Internal energy is the total of the kinetic and potential energy of the particles inside the substance. The average speed or kinetic energy of the particles relates to temperature, not to the total, and the motion or height of the whole block does not change it.",
+   "clue": "Think about the particles inside, not the block as a whole."
+  },
+  "b": {
+   "d": 2,
+   "q": "A lab thermometer reads 27 °C. What is this temperature on the Kelvin scale?",
+   "opts": [
+    "300 K",
+    "246 K",
+    "27 K",
+    "-246 K"
+   ],
+   "why": "Add 273 to the Celsius value: 27 + 273 = 300 K. The 246 K option comes from 273 − 27, which reverses the conversion. Working out 27 − 273 gives −246, which is impossible, as the Kelvin scale starts at absolute zero and has no negative values.",
+   "clue": "Should the Kelvin number be bigger or smaller than 27?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The sum of kinetic and potential energy of its particles",
+    "also_right": []
+   },
+   "b": {
+    "best": "300 K",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Subtracting 273 gives 246'. In fact 27 − 273 = −246, which is the −246 K option. 246 comes from 273 − 27. The explanation miscalculates and confuses the two wrong options."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says 'Subtracting 273 gives 246'. In fact 27 − 273 = −246, which is the −246 K option. 246 comes from 273 − 27. The explanation miscalculates and confuses the two wrong options."
+  ]
+ },
+ "final": {
+  "title": "Temperature and internal energy",
+  "card": [
+   "All the particles in a substance are moving and pulling on each other. Internal energy is the total of their kinetic energy and their potential energy.",
+   "Temperature is linked to the average kinetic energy of the particles. Hotter means the particles move faster on average.",
+   "Adding energy to a substance raises its internal energy. The particles can gain kinetic energy, potential energy, or both.",
+   "The Kelvin scale starts at absolute zero, where particles have the least possible energy. Absolute zero is about 273 degrees below 0 on the Celsius scale, so T(K) = T(°C) + 273."
+  ],
+  "remember": "Internal energy is the particles' kinetic plus potential energy. Temperature tracks the average kinetic energy.",
+  "a": {
+   "q": "Which statement best describes the internal energy of a block of copper?",
+   "opts": [
+    "The sum of kinetic and potential energy of its particles",
+    "The kinetic energy of the whole block as it moves",
+    "The average speed of the particles in the block",
+    "The potential energy of the block above the ground"
+   ],
+   "why": "Internal energy is the total of the kinetic and potential energy of the particles inside the substance. The average speed or kinetic energy of the particles relates to temperature, not to the total, and the motion or height of the whole block does not change it.",
+   "clue": "Think about the particles inside, not the block as a whole."
+  },
+  "b": {
+   "d": 2,
+   "q": "A lab thermometer reads 27 °C. What is this temperature on the Kelvin scale?",
+   "opts": [
+    "300 K",
+    "246 K",
+    "27 K",
+    "-246 K"
+   ],
+   "why": "Add 273 to the Celsius value: 27 + 273 = 300 K. The 246 K option comes from 273 − 27, which reverses the conversion. Working out 27 − 273 gives −246, which is impossible, as the Kelvin scale starts at absolute zero and has no negative values.",
+   "clue": "Should the Kelvin number be bigger or smaller than 27?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,54 @@
+{
+ "id": "leg-jury-criminal-trial",
+ "title": "The jury in a criminal trial",
+ "brief": "0381c7132b73",
+ "shortlist": [
+  [
+   "leg-juries",
+   0.416
+  ],
+  [
+   "leg-burden-standard-proof",
+   0.266
+  ]
+ ],
+ "stage": "match-review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt leg-juries, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 may adapt leg-juries, but is not highly sure, so it is for you to review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.00983
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-juries",
+  "changes": [
+   "Victoria uses a jury of 12 in criminal trials, but the majority verdict rule differs: a majority of 10 to 2 may be accepted after proper deliberation, not NSW's 11 to 1, so the card's majority verdict wording and rule must be changed.",
+   "Question b uses an 11 to 1 NSW murder trial, so it must be rewritten as a Victorian case with a 10 to 2 split and a Victorian court, such as the County Court or Supreme Court.",
+   "The card should state that the jury decides whether the accused is guilty beyond reasonable doubt, matching the brief, and should use a Victorian court and example in place of the NSW higher courts and indictable trial wording."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the right depth, but its NSW majority verdict rule (11 to 1) and NSW-based examples differ from Victoria's 10 to 2 rule, so it needs adapting rather than reusing.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-juries",
+  "changes": [
+   "Change all references to NSW to Victoria, and name the Victorian higher courts (County Court and Supreme Court) that hear indictable offences before a jury.",
+   "Update the majority verdict rule to Victorian law under the Juries Act 2000 (Vic): an 11 to 1 majority may be accepted only after at least six hours of deliberation, and not for murder, treason or certain serious drug offences.",
+   "Rewrite question b so it is not a murder trial, because murder needs a unanimous verdict in Victoria. Use an offence such as armed robbery or burglary, and state that the jury has deliberated for at least six hours.",
+   "Add a line to the card that the jury decides guilt beyond reasonable doubt, to match the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of the criminal jury at a fitting depth, but its majority verdict rules and murder example follow NSW law, so they must be changed to Victorian law.",
+  "model": "claude-opus-5-5"
+ }
+}

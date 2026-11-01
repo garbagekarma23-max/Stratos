@@ -1595,5 +1595,919 @@ MADE_BANKS.phys = {
       "why": "The electron is a lepton: a fundamental matter particle with no quarks inside it. The idea that all matter is made of quarks is tempting, but matter is made of two families, quarks and leptons. The electron is not a force carrier either, as it is a matter particle.",
       "clue": "Matter has two families of fundamental particles. Which one includes the electron?"
     }
+  },
+  "phys-temperature-internal-energy": {
+    "title": "Temperature and internal energy",
+    "card": [
+      "All the particles in a substance are moving and pulling on each other. Internal energy is the total of their kinetic energy and their potential energy.",
+      "Temperature is linked to the average kinetic energy of the particles. Hotter means the particles move faster on average.",
+      "Adding energy to a substance raises its internal energy. The particles can gain kinetic energy, potential energy, or both.",
+      "The Kelvin scale starts at absolute zero, where particles have the least possible energy. Absolute zero is about 273 degrees below 0 on the Celsius scale, so T(K) = T(°C) + 273."
+    ],
+    "remember": "Internal energy is the particles' kinetic plus potential energy. Temperature tracks the average kinetic energy.",
+    "a": {
+      "q": "Which statement best describes the internal energy of a block of copper?",
+      "opts": [
+        "The sum of kinetic and potential energy of its particles",
+        "The kinetic energy of the whole block as it moves",
+        "The average speed of the particles in the block",
+        "The potential energy of the block above the ground"
+      ],
+      "why": "Internal energy is the total of the kinetic and potential energy of the particles inside the substance. The average speed or kinetic energy of the particles relates to temperature, not to the total, and the motion or height of the whole block does not change it.",
+      "clue": "Think about the particles inside, not the block as a whole."
+    },
+    "b": {
+      "d": 2,
+      "q": "A lab thermometer reads 27 °C. What is this temperature on the Kelvin scale?",
+      "opts": ["300 K", "246 K", "27 K", "-246 K"],
+      "why": "Add 273 to the Celsius value: 27 + 273 = 300 K. The 246 K option comes from 273 − 27, which reverses the conversion. Working out 27 − 273 gives −246, which is impossible, as the Kelvin scale starts at absolute zero and has no negative values.",
+      "clue": "Should the Kelvin number be bigger or smaller than 27?"
+    }
+  },
+  "phys-heat-transfer": {
+    "title": "Heat transfer",
+    "card": [
+      "Heat is energy that moves from a hotter place to a cooler place. It moves in three ways: conduction, convection and radiation.",
+      [
+        "Conduction",
+        "heat passing through direct contact. Vibrating particles pass energy to their neighbours without the material itself moving. Metals conduct well."
+      ],
+      [
+        "Convection",
+        "heat carried by the movement of a fluid, which is a liquid or a gas. Warmer fluid is less dense and rises, and cooler fluid sinks to replace it."
+      ],
+      [
+        "Radiation",
+        "heat carried by electromagnetic waves, mainly infrared. It needs no particles, so it can cross empty space."
+      ]
+    ],
+    "remember": "Conduction needs contact, convection needs a moving fluid, and radiation needs neither.",
+    "a": {
+      "q": "Which way of transferring heat can carry energy from the Sun to Earth through space?",
+      "opts": ["Radiation", "Conduction", "Convection", "Conduction and convection together"],
+      "why": "Space is almost empty, so there are no particles to pass energy on or to flow as a fluid. Radiation uses electromagnetic waves, which need no particles. Conduction and convection both rely on particles.",
+      "clue": "Which way does not need any particles?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jin holds one end of a steel spoon. The other end sits in hot soup, and soon his hand feels warm. How did the heat mostly travel along the spoon?",
+      "opts": [
+        "By conduction, as vibrating particles passed energy on",
+        "By convection, as hot steel moved up the spoon",
+        "By radiation, as waves crossed the air to his hand",
+        "By convection, as hot soup flowed along the handle"
+      ],
+      "why": "The spoon is a solid, so its particles stay in place and pass energy to their neighbours by vibrating. That is conduction. Convection is tempting because soup is hot, but it needs a fluid to move, and the steel does not flow.",
+      "clue": "Does the steel itself move along the spoon?"
+    }
+  },
+  "phys-specific-heat-capacity-physics": {
+    "title": "Specific heat capacity in physics",
+    "card": [
+      "Specific heat capacity (c) is the energy needed to raise the temperature of 1 kg of a substance by 1 °C. Its unit is J/(kg °C).",
+      "The energy to change an object's temperature is Q = mcΔT. Q is energy in joules, m is mass in kg, and ΔT is the change in temperature.",
+      "For the same mass and the same energy, a substance with a low c warms up more than one with a high c. Water has a high c, about 4200 J/(kg °C).",
+      "ΔT is final temperature minus initial temperature. It is negative when the object cools, so Q is then negative and energy leaves the object."
+    ],
+    "remember": "Q = mcΔT: more mass or a higher c means more energy is needed for the same temperature change.",
+    "a": {
+      "q": "Two blocks of equal mass gain the same energy. Block X has a lower c than block Y. Which statement is correct?",
+      "opts": [
+        "Block X warms up by more than block Y",
+        "Block Y warms up by more than block X",
+        "Both blocks warm up by the same amount",
+        "Block X needs more energy for the same rise"
+      ],
+      "why": "With Q and m equal, ΔT = Q ÷ (mc), so a lower c gives a larger ΔT. Block Y is tempting only if you think a higher c means more warming, but a high c means the block resists temperature change.",
+      "clue": "Rearrange the formula to find ΔT."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ayesha heats 2.0 kg of water in a pan in Geelong from 20 °C to 30 °C. Water has c = 4200 J/(kg °C). How much energy does the water gain?",
+      "opts": ["84 000 J", "8400 J", "42 000 J", "168 000 J"],
+      "why": "Q = mcΔT = 2.0 × 4200 × 10 = 84 000 J. The value 42 000 J comes from leaving out the mass of 2.0 kg.",
+      "clue": "ΔT is the change in temperature, not the final temperature."
+    }
+  },
+  "phys-latent-heat-2": {
+    "title": "Latent heat",
+    "card": [
+      "During a change of state, such as ice melting or water boiling, energy goes in or out but the temperature stays constant. The energy changes how the particles are arranged, not how fast they move.",
+      [
+        "Latent heat",
+        "the energy absorbed or released when a substance changes state at constant temperature. Melting and boiling absorb it. Freezing and condensing release it."
+      ],
+      [
+        "Formula",
+        "Q = mL, where Q is the energy in joules, m is the mass in kilograms and L is the specific latent heat in joules per kilogram."
+      ],
+      "L depends on the substance and the change. For water, melting ice takes about 3.3 × 10^5 J/kg. Boiling takes about 2.3 × 10^6 J/kg, which is much more."
+    ],
+    "remember": "During a change of state the energy goes into changing particle arrangement, so temperature stays constant. Use Q = mL.",
+    "a": {
+      "q": "A block of ice at 0 °C is heated and begins to melt. What happens to the energy supplied while it melts?",
+      "opts": [
+        "It changes the particle arrangement, not the temperature",
+        "It raises the temperature of the ice until it is all melted",
+        "It is lost to the surroundings and does not affect the ice",
+        "It makes the particles move faster, so the water gets hotter"
+      ],
+      "why": "During melting, the energy goes into changing how the particles are arranged, so the temperature stays at 0 °C. The tempting option says the temperature rises, but the temperature is constant during a change of state.",
+      "clue": "Look at what stays constant during a change of state."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya heats 0.50 kg of water at 100 °C until it has all boiled to steam at 100 °C. About how much energy is needed, using L = 2.3 × 10^6 J/kg?",
+      "opts": ["1.2 × 10^6 J", "4.6 × 10^6 J", "2.3 × 10^6 J", "1.2 × 10^5 J"],
+      "why": "Q = mL = 0.50 × 2.3 × 10^6 = 1.15 × 10^6 J, which is about 1.2 × 10^6 J. Using 2.3 × 10^6 J ignores the mass and gives the energy for 1 kg.",
+      "clue": "Multiply the mass by L, and check the mass is not 1 kg."
+    }
+  },
+  "phys-cooling-by-evaporation": {
+    "title": "Cooling by evaporation",
+    "card": [
+      "Particles in a liquid move at different speeds. Some have more kinetic energy than others, and the average sets the temperature.",
+      "Evaporation happens at the surface. A particle can escape as a gas only if it has enough kinetic energy to break free of the attraction of its neighbours.",
+      "So the fastest particles leave first. The particles left behind have a lower average kinetic energy.",
+      "Lower average kinetic energy means the remaining liquid is cooler. This is why sweat on skin cools the body as it evaporates."
+    ],
+    "remember": "Evaporation removes the most energetic particles, so the liquid left behind cools.",
+    "a": {
+      "q": "Why does a liquid cool as it evaporates?",
+      "opts": [
+        "The fastest particles leave, so the average energy falls",
+        "Every particle slows down by the same amount as it escapes",
+        "The liquid gains energy from the air and so it cools",
+        "Particles that escape take the slowest ones with them"
+      ],
+      "why": "Only particles with enough kinetic energy can escape, so the fastest ones leave. The average kinetic energy of the particles left behind falls, and so does the temperature. It is not the slowest particles that leave, because they cannot break free.",
+      "clue": "Think about which particles can break free of their neighbours."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia steps out of a pool on a warm, dry day in Mildura and feels cold as the water on her skin dries. What is the best explanation?",
+      "opts": [
+        "The fastest water particles escape and take energy with them",
+        "The water on her skin gains energy from the cool pool",
+        "The slowest water particles escape and leave the warmer ones",
+        "Her skin loses all of its particles as the water dries"
+      ],
+      "why": "The most energetic water particles leave the surface, so the average energy of the water left on her skin falls and it cools her skin. The slowest particles do not have enough energy to escape, so the idea that they leave is wrong.",
+      "clue": "Which particles have enough energy to leave the surface?"
+    }
+  },
+  "phys-black-body-radiation-2": {
+    "title": "Black body radiation",
+    "card": [
+      "A black body is an ideal object that absorbs all the radiation that hits it. At any temperature above absolute zero, it emits radiation across a range of wavelengths.",
+      "The hotter the object, the more energy it emits in total each second. The Stefan-Boltzmann law says this power rises with the fourth power of the temperature in kelvin.",
+      "The peak wavelength is the wavelength at which the most energy is emitted. Wien's law says it gets shorter as temperature rises, because peak wavelength is inversely proportional to temperature in kelvin.",
+      "Real objects only approximate a black body. A heated piece of metal glows dull red, then orange, then white as its peak moves to shorter wavelengths and more visible light is emitted."
+    ],
+    "remember": "Hotter means more total energy emitted and a shorter peak wavelength.",
+    "a": {
+      "q": "A metal rod is heated until its temperature in kelvin doubles. What happens to the radiation it emits?",
+      "opts": [
+        "More energy in total, and a shorter peak wavelength",
+        "More energy in total, and a longer peak wavelength",
+        "Less energy in total, and a shorter peak wavelength",
+        "The same energy in total, and a shorter peak wavelength"
+      ],
+      "why": "A hotter object emits more energy in total, and its peak moves to a shorter wavelength. The option with a longer peak wavelength reverses Wien's law, which says peak wavelength falls as temperature rises.",
+      "clue": "Think of metal going from red to white as it heats."
+    },
+    "b": {
+      "d": 3,
+      "q": "Star P has a surface temperature of 3000 K. Star Q has a surface temperature of 6000 K. Which statement compares their radiation correctly?",
+      "opts": [
+        "Q has a peak wavelength half that of P",
+        "Q has a peak wavelength twice that of P",
+        "Q has a peak wavelength the same as P",
+        "Q has a peak wavelength a quarter that of P"
+      ],
+      "why": "Peak wavelength is inversely proportional to temperature in kelvin. Doubling the temperature halves the peak wavelength. The option saying twice is tempting, but it treats the two as directly proportional.",
+      "clue": "Peak wavelength and temperature move in opposite directions."
+    }
+  },
+  "phys-greenhouse-effect-climate": {
+    "title": "The greenhouse effect and climate",
+    "card": [
+      "Earth absorbs energy from the Sun, mostly as visible light. The warm surface then emits energy back towards space as infrared radiation.",
+      "Greenhouse gases, such as carbon dioxide, methane and water vapour, absorb some of this infrared radiation. They then re-emit it in all directions, including back down to the surface.",
+      "This extra energy returning to the surface keeps Earth warmer than it would be without these gases. This is the greenhouse effect, and it is a natural process.",
+      "Adding more greenhouse gases to the atmosphere means more infrared radiation is absorbed and re-emitted downwards. This warms the surface further and changes the climate."
+    ],
+    "remember": "Greenhouse gases trap infrared radiation from the surface, so more gas means more warming.",
+    "a": {
+      "q": "Which process is the greenhouse effect?",
+      "opts": [
+        "Gases absorb and re-emit infrared from Earth's surface",
+        "Gases block sunlight so less of it reaches the surface",
+        "Gases reflect visible light from the Sun back into space",
+        "Gases create new thermal energy inside the atmosphere"
+      ],
+      "why": "The surface emits infrared, and greenhouse gases absorb it and re-emit some of it back down, which warms the surface. The gases do not block sunlight or make new energy. Blocking sunlight would cool Earth, not warm it.",
+      "clue": "Think about what the warm surface sends out, and what happens to it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Over many years, the amount of carbon dioxide in the atmosphere above a region rises. What is the most direct effect on energy at the surface?",
+      "opts": [
+        "More infrared is re-emitted downwards to the surface",
+        "Less infrared leaves the surface in the first place",
+        "More visible light is emitted by the surface",
+        "Less sunlight is absorbed by the surface"
+      ],
+      "why": "More carbon dioxide absorbs more of the surface's infrared and re-emits more of it back down, so the surface warms. The surface does not emit less infrared, since that depends on its temperature. Visible light from the Sun is not what the extra gas changes.",
+      "clue": "Which radiation do greenhouse gases interact with?"
+    }
+  },
+  "phys-electrical-power-energy": {
+    "title": "Electrical power and energy",
+    "card": [
+      "Electrical power is the rate at which a device transfers energy. P = VI, where P is in watts (W), V is in volts (V) and I is in amperes (A).",
+      "Energy transferred = power × time, or E = Pt. With P in watts and t in seconds, E is in joules (J). One watt is one joule per second.",
+      "Electricity bills use the kilowatt-hour (kWh). It is the energy used by a 1 kW device running for 1 hour.",
+      "To find kWh, change power to kilowatts and time to hours, then multiply. 1 kWh = 3.6 million joules."
+    ],
+    "remember": "Power is VI. Energy is power × time, and a kWh is 1 kW for 1 hour.",
+    "a": {
+      "q": "A heater runs from a 240 V supply and draws a current of 5.0 A. What is its power?",
+      "opts": ["1200 W", "48 W", "245 W", "0.021 W"],
+      "why": "P = VI = 240 × 5.0 = 1200 W. Dividing V by I gives 48, which is a resistance in ohms, not a power.",
+      "clue": "Multiply the voltage by the current."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a 2000 W fan heater for 3 hours. How much energy does she use, as billed?",
+      "opts": ["6 kWh", "6000 kWh", "0.67 kWh", "2 kWh"],
+      "why": "Change 2000 W to 2 kW, then E = 2 × 3 = 6 kWh. Leaving the power in watts gives 6000, which is in watt-hours, not kilowatt-hours.",
+      "clue": "Change watts to kilowatts before multiplying by hours."
+    }
+  },
+  "phys-non-ohmic-devices": {
+    "title": "Non-ohmic devices",
+    "card": [
+      [
+        "Ohmic",
+        "a device whose resistance stays constant, so current is directly proportional to voltage. Its I-V graph is a straight line through the origin."
+      ],
+      [
+        "Non-ohmic",
+        "a device whose resistance changes as the voltage or conditions change. Its I-V graph is not a straight line through the origin."
+      ],
+      [
+        "Diode and LED",
+        "these let current flow easily in one direction only. An LED is a diode that gives off light. Little current flows until the voltage passes a certain value, then the current rises steeply."
+      ],
+      [
+        "Thermistor and LDR",
+        "a thermistor changes resistance with temperature. A light dependent resistor (LDR) changes resistance with light level. For a typical LDR, resistance falls as light gets brighter."
+      ]
+    ],
+    "remember": "If the I-V graph is not a straight line through the origin, the device is non-ohmic.",
+    "a": {
+      "q": "The I-V graph of a component is a curve. What does this show about the component?",
+      "opts": [
+        "Its resistance changes, so it is non-ohmic",
+        "Its resistance is constant, so it is ohmic",
+        "Its current stays the same at every voltage",
+        "It lets current flow in both directions equally"
+      ],
+      "why": "A curved I-V graph means the ratio of voltage to current is not constant, so the resistance changes and the device is non-ohmic. A constant resistance would give a straight line through the origin.",
+      "clue": "What shape is the graph for a device with constant resistance?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya tests a component in a Bendigo school lab. Connected one way, almost no current flows. Connected the other way, little current flows until the voltage passes a certain value, then it rises steeply. What is the component?",
+      "opts": ["A diode", "A thermistor", "A light dependent resistor", "A fixed resistor"],
+      "why": "Current flows easily in only one direction and rises steeply once the voltage passes a certain value, which is how a diode behaves. A thermistor is tempting because its graph also curves, but it lets current flow in both directions.",
+      "clue": "What happens when she reverses the connection?"
+    }
+  },
+  "phys-circuits-home": {
+    "title": "Circuits in the home",
+    "card": [
+      "Household appliances are mostly wired in parallel. Each one sits on its own branch, connected across the active and neutral wires from the supply.",
+      "In a parallel circuit, every branch has the same voltage across it. In Australian homes this is about 230 V, so each appliance gets the full supply voltage.",
+      "Each branch carries its own current. If one appliance is switched off or fails, the other branches are not cut off and keep working.",
+      "The current in the main supply wire is the sum of the branch currents. Turning on more appliances adds more branches, so the total current rises."
+    ],
+    "remember": "Parallel branches share the same voltage, work independently, and their currents add.",
+    "a": {
+      "q": "A kettle and a toaster are plugged into two sockets on the same household circuit. The toaster is switched off. What happens to the kettle?",
+      "opts": [
+        "It keeps working with the same voltage across it",
+        "It works, but with a lower voltage across it",
+        "It stops, because the circuit is now broken",
+        "It works, but with a higher voltage across it"
+      ],
+      "why": "The kettle is on its own parallel branch, so switching off the toaster does not break its path. The voltage across it stays the same. In a series circuit, one open switch would stop the current everywhere, but that is not how sockets are wired.",
+      "clue": "Each appliance is on its own branch."
+    },
+    "b": {
+      "d": 2,
+      "q": "In Priya's home in Geelong, a lamp is on and a heater is then switched on in the same circuit. What happens to the total current in the supply wire?",
+      "opts": [
+        "It rises, because the heater adds a branch current",
+        "It stays the same, because the voltage is unchanged",
+        "It falls, because the voltage is shared between them",
+        "It stays the same, because the lamp keeps its current"
+      ],
+      "why": "In parallel, the total current is the sum of the branch currents. The heater adds its own current to the lamp's, so the total rises. The voltage stays the same for each branch, but that does not mean the total current stays the same.",
+      "clue": "Branch currents add together."
+    }
+  },
+  "phys-electrical-safety-at-home": {
+    "title": "Safety devices",
+    "card": [
+      [
+        "Fuse",
+        "a thin wire in the live line that melts when the current is too high. This breaks the circuit, and a melted fuse must be replaced."
+      ],
+      [
+        "Circuit breaker",
+        "a switch that trips open when the current is too high, so the circuit is broken. It can be reset after the fault is fixed."
+      ],
+      [
+        "Earthing",
+        "a wire joins the metal case of an appliance to the ground. If the live wire touches the case, current flows safely through the earth wire, and this large current blows the fuse or trips the breaker."
+      ],
+      [
+        "Residual current device",
+        "a device that compares the current in the live and neutral wires. If some current leaks out, as it would through a person, the two differ and it cuts the power very quickly."
+      ]
+    ],
+    "remember": "Fuses and breakers stop too much current. Earthing gives a safe path. A residual current device spots leaks.",
+    "a": {
+      "q": "Which device cuts the power because the current in the live and neutral wires is different?",
+      "opts": ["A residual current device", "A fuse", "A circuit breaker", "An earth wire"],
+      "why": "A residual current device compares the two currents, and a difference means current is leaking elsewhere. A fuse and a circuit breaker respond to a high current in the circuit, not to a difference between wires.",
+      "clue": "Which device compares two wires?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jo's metal toaster has a fault, and the live wire touches its metal case. The case is earthed. What does the earth wire do?",
+      "opts": [
+        "Carries current to ground, so a fuse or breaker acts",
+        "Stops current reaching the ground, so the case stays safe",
+        "Compares live and neutral currents, then cuts the power",
+        "Lowers the case's voltage, so the fuse is not needed"
+      ],
+      "why": "The earth wire joins the case to the ground, giving the fault current a safe path. That large current blows the fuse or trips the breaker, which cuts the power. Comparing the live and neutral currents is the job of a residual current device, not the earth wire.",
+      "clue": "Picture the easiest path the fault current can take."
+    }
+  },
+  "phys-electric-shock": {
+    "title": "Electric shock",
+    "card": [
+      "An electric shock happens when current passes through the body. Current, not voltage alone, causes the harm.",
+      "The harm grows with the size of the current and with how long it flows. Current is roughly V ÷ R, so lower body resistance lets more current flow at the same voltage. Wet skin has a lower resistance than dry skin.",
+      "Effects range from a tingle and muscle spasms to burns and the heart beating abnormally. A current of around 0.1 A or more through the chest can be fatal.",
+      "First aid: switch off the power, or free the person using a non-conductor such as dry wood. Do not touch them while they are still in contact. Then call 000, and start CPR if they are not breathing."
+    ],
+    "remember": "Harm depends on current and time, so cut the power first and then get help.",
+    "a": {
+      "q": "Two people touch the same faulty wiring at the same voltage. Why might one receive a larger current than the other?",
+      "opts": [
+        "Their bodies have different resistances",
+        "One person touches the wiring for a longer time",
+        "One has wet skin, which raises body resistance",
+        "One body uses up more of the flow than the other"
+      ],
+      "why": "At the same voltage, current is roughly V ÷ R, so the body with lower resistance gets more current. Wet skin is tempting, but it lowers resistance rather than raising it. Touching for longer adds to the harm but does not change the size of the current.",
+      "clue": "Besides voltage, what else sets the current?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jai finds his friend gripping a damaged power cord and unable to let go. The power point is nearby. What should Jai do first?",
+      "opts": [
+        "Switch off the power at the power point",
+        "Pull his friend away from the cord by the arm",
+        "Call 000 and wait beside his friend for help",
+        "Start CPR while his friend still holds the cord"
+      ],
+      "why": "Cutting the power stops the current and keeps Jai safe. Pulling his friend by the arm is tempting, but Jai could become part of the circuit and be shocked too. Calling 000 and CPR come after the danger is removed.",
+      "clue": "Remove the danger before helping, so you are not shocked too."
+    }
+  },
+  "phys-scalars-vectors-2": {
+    "title": "Scalars and vectors",
+    "card": [
+      [
+        "Scalar",
+        "a quantity with size only, such as distance, speed, mass and time. It is fully described by a number and a unit."
+      ],
+      [
+        "Vector",
+        "a quantity with size and direction, such as displacement, velocity and force. A full description needs a number, a unit and a direction."
+      ],
+      "Direction can be given in words, such as north or upwards, or by a sign, such as + and - along a line. Opposite directions have opposite signs.",
+      "A vector keeps its direction in the answer. 50 km/h is a speed. 50 km/h east is a velocity."
+    ],
+    "remember": "If a quantity needs a direction to be complete, it is a vector. If not, it is a scalar.",
+    "a": {
+      "q": "Which quantity is a vector?",
+      "opts": [
+        "A force of 20 N acting downwards",
+        "A mass of 20 kg measured on scales",
+        "A time of 20 s measured on a stopwatch",
+        "A speed of 20 m/s shown on a speedometer"
+      ],
+      "why": "A force of 20 N acting downwards has a size and a direction, so it is a vector. A speed of 20 m/s is tempting, but the speedometer gives size only, so it is a scalar. How a value was measured does not give it a direction.",
+      "clue": "Which one includes a direction, not just a way of measuring?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya cycles at 12 m/s around a circular track. Which statement about her motion is correct?",
+      "opts": [
+        "12 m/s is her speed, as no direction is given",
+        "12 m/s is her velocity, as it has a size",
+        "12 m/s is her speed, as she travels in a circle",
+        "12 m/s is her velocity, as it is measured in m/s"
+      ],
+      "why": "The value 12 m/s has a size only, with no direction stated, so it is a speed, which is a scalar. Units of m/s do not decide it: a velocity must also include a direction.",
+      "clue": "Does the value 12 m/s include a direction?"
+    }
+  },
+  "phys-displacement-velocity-acceleration": {
+    "title": "Displacement, velocity and acceleration",
+    "card": [
+      [
+        "Displacement",
+        "the straight-line change in position, from start to finish, with a direction. It is not the same as the distance travelled along the path."
+      ],
+      [
+        "Velocity",
+        "the rate of change of displacement. Average velocity = change in displacement ÷ time taken. Its unit is m s⁻¹."
+      ],
+      [
+        "Acceleration",
+        "the rate of change of velocity. Average acceleration = change in velocity ÷ time taken. Its unit is m s⁻²."
+      ],
+      "Change in velocity is final velocity minus initial velocity. Velocity changes if speed changes, if direction changes, or both, so a body can accelerate while its speed stays the same."
+    ],
+    "remember": "Displacement over time gives velocity. Velocity change over time gives acceleration.",
+    "a": {
+      "q": "A cyclist's velocity changes from 2 m s⁻¹ east to 8 m s⁻¹ east in 3 s. What is the average acceleration?",
+      "opts": ["2 m s⁻² east", "6 m s⁻² east", "2.7 m s⁻² east", "5 m s⁻² east"],
+      "why": "Change in velocity = 8 - 2 = 6 m s⁻¹, and 6 ÷ 3 = 2 m s⁻². Dividing the final velocity by the time gives 2.7, but acceleration depends on the change in velocity, not the final value.",
+      "clue": "Find the change in velocity first, then divide by the time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya walks 60 m east along a track, then 20 m west, in 40 s. What is her average velocity?",
+      "opts": ["1.0 m s⁻¹ east", "2.0 m s⁻¹ east", "1.5 m s⁻¹ east", "0.5 m s⁻¹ east"],
+      "why": "Her displacement is 60 - 20 = 40 m east, so average velocity = 40 ÷ 40 = 1.0 m s⁻¹ east. Using the 80 m distance travelled gives 2.0, but velocity uses displacement, not distance.",
+      "clue": "Velocity uses the change in position, not the path length."
+    }
+  },
+  "phys-motion-graphs": {
+    "title": "Motion graphs",
+    "card": [
+      "On a position-time graph, the gradient is the velocity. A straight line means constant velocity, and a flat line means the object is at rest.",
+      "On a velocity-time graph, the gradient is the acceleration. The area between the line and the time axis is the displacement.",
+      "On an acceleration-time graph, the area under the line is the change in velocity.",
+      "A curved line means the gradient is changing. So a curve on a position-time graph shows changing velocity, and a curve on a velocity-time graph shows changing acceleration."
+    ],
+    "remember": "Position, velocity, acceleration: gradient gives the next one along, and area gives the change in the one before.",
+    "a": {
+      "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
+      "opts": ["Constant acceleration", "Constant velocity", "Zero acceleration", "Decreasing velocity"],
+      "why": "The gradient of a velocity-time graph is acceleration. A straight sloping line has a constant gradient, so the acceleration is constant. Constant velocity would need a flat line, with zero gradient.",
+      "clue": "Gradient on a velocity-time graph gives acceleration."
+    },
+    "b": {
+      "d": 3,
+      "q": "A runner's position-time graph is a straight line sloping up for 10 s, then a curve that gets steeper. What does the curve show?",
+      "opts": [
+        "The runner's velocity is increasing",
+        "The runner's velocity is constant",
+        "The runner is at rest",
+        "The runner's acceleration is zero"
+      ],
+      "why": "On a position-time graph, the gradient is velocity. A curve that gets steeper has an increasing gradient, so the velocity is increasing. Constant velocity, with zero acceleration, describes the straight section, not the curve.",
+      "clue": "Steeper means a larger gradient, and gradient means velocity."
+    }
+  },
+  "phys-equations-motion": {
+    "title": "Equations of motion",
+    "card": [
+      "The equations apply only when acceleration is constant along a straight line. The symbols are u (initial velocity), v (final velocity), a (acceleration), t (time) and s (displacement).",
+      "v = u + at links final velocity, initial velocity, acceleration and time. It has no s in it.",
+      "s = ut + ½at² links displacement, initial velocity, acceleration and time. It has no v in it.",
+      "Pick the equation that holds the three quantities you know and the one you want. Take one direction as positive and give signs to match."
+    ],
+    "remember": "Constant acceleration only. Choose the equation that leaves out the quantity you do not need.",
+    "a": {
+      "q": "A trolley starts from rest and accelerates at 3 m/s² for 4 s. What is its final velocity?",
+      "opts": ["12 m/s", "7 m/s", "24 m/s", "0.75 m/s"],
+      "why": "Use v = u + at, so v = 0 + 3 × 4 = 12 m/s. Adding 3 and 4 to get 7 mixes up the quantities, as acceleration is multiplied by time.",
+      "clue": "Rest means u is 0."
+    },
+    "b": {
+      "d": 3,
+      "q": "A car moving at 10 m/s accelerates at 2 m/s² for 5 s. How far does it travel in this time?",
+      "opts": ["75 m", "50 m", "25 m", "60 m"],
+      "why": "Use s = ut + ½at²: s = 10 × 5 + ½ × 2 × 25 = 50 + 25 = 75 m. Giving 50 m leaves out the extra distance gained from accelerating.",
+      "clue": "You need the equation with s, u, a and t, and no v."
+    }
+  },
+  "phys-forces-as-vectors": {
+    "title": "Forces as vectors",
+    "card": [
+      "A force is a push or a pull. It has a size, measured in newtons (N), and a direction. A quantity with both is a vector.",
+      "Forces add as vectors. Forces in the same direction add, and forces in opposite directions subtract. The result is the net force.",
+      "A force at an angle can be split into two components at right angles, usually horizontal and vertical. For a force F at angle θ above the horizontal, the horizontal part is F cos θ and the vertical part is F sin θ.",
+      "Common forces are gravity (weight), which pulls down, the normal force, which pushes out at right angles from a surface, and friction, which acts along a surface against sliding."
+    ],
+    "remember": "A force is a vector: add it with direction in mind, or split it into components.",
+    "a": {
+      "q": "A 30 N force pulls a box to the right and a 10 N force pulls it to the left. What is the net force?",
+      "opts": ["20 N to the right", "40 N to the right", "20 N to the left", "10 N to the right"],
+      "why": "Forces in opposite directions subtract, so 30 N - 10 N = 20 N, in the direction of the larger force, to the right. Adding them to get 40 N ignores direction, which is the mistake the vector idea avoids.",
+      "clue": "Opposite directions work against each other."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya pulls a sled with a 100 N rope force at 30° above the horizontal. What is the horizontal component of her pull?",
+      "opts": ["About 87 N", "50 N", "100 N", "About 58 N"],
+      "why": "The horizontal component is F cos θ = 100 × cos 30° ≈ 87 N. The 50 N option is the vertical component, F sin θ, which is the tempting mix-up.",
+      "clue": "The horizontal part uses the angle measured from the horizontal."
+    }
+  },
+  "phys-newton-s-first-law-2": {
+    "title": "Newton's first law",
+    "card": [
+      "Newton's first law says an object keeps its velocity unless a net force acts on it. The net force is the sum of all the forces on the object.",
+      "If the net force is zero, an object at rest stays at rest. An object that is moving keeps moving in a straight line at the same speed.",
+      "So an object moving at constant velocity has a net force of zero. Several forces can still act on it, as long as they balance.",
+      "A net force is needed to change the velocity, which means to speed up, slow down or turn. Motion alone does not need a net force."
+    ],
+    "remember": "No net force means no change in velocity. Constant velocity does not need a net force.",
+    "a": {
+      "q": "A skydiver falls at a constant velocity of 55 m/s straight down. What is the net force on the skydiver?",
+      "opts": [
+        "Zero, because the forces on the skydiver balance",
+        "Downwards, because the skydiver is moving down",
+        "Downwards, because gravity is acting on the skydiver",
+        "Upwards, because air resistance acts on the skydiver"
+      ],
+      "why": "Constant velocity means the velocity is not changing, so the net force is zero. Gravity and air resistance both act, but they balance. The motion downwards does not need a net force downwards.",
+      "clue": "Is the velocity changing?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya pushes a trolley along a flat, straight corridor at a steady 1.5 m/s. Which statement about the forces on the trolley is correct?",
+      "opts": [
+        "Her push is balanced by the forces resisting the motion",
+        "Her push is larger than the forces resisting the motion",
+        "Her push is the only force acting along the corridor",
+        "Her push is needed to cancel the trolley's weight"
+      ],
+      "why": "A steady velocity means the net force is zero, so her push must be balanced by friction and other resisting forces along the corridor. A larger push would make the trolley speed up. Weight acts downwards and is balanced by a different force.",
+      "clue": "Steady speed in a straight line means what for the net force?"
+    }
+  },
+  "phys-newton-s-second-law-2": {
+    "title": "Newton's second law",
+    "card": [
+      "The net force is the vector sum of all forces on an object. Newton's second law says net force = mass × acceleration, or F = ma.",
+      "Force is in newtons (N), mass in kilograms (kg) and acceleration in metres per second squared (m/s²). One newton gives a 1 kg mass an acceleration of 1 m/s².",
+      "The acceleration points in the same direction as the net force. For the same net force, a larger mass gives a smaller acceleration.",
+      "If the net force is zero, the acceleration is zero. If several forces act, add them as vectors first, then use F = ma on the net force."
+    ],
+    "remember": "Acceleration depends on the net force and the mass, not on any single force.",
+    "a": {
+      "q": "A net force of 12 N acts on a 3 kg trolley. What is the trolley's acceleration?",
+      "opts": [
+        "4 m/s² in the direction of the net force",
+        "4 m/s² opposite to the net force",
+        "36 m/s² in the direction of the net force",
+        "0.25 m/s² in the direction of the net force"
+      ],
+      "why": "a = F ÷ m = 12 ÷ 3 = 4 m/s², and it points in the direction of the net force. Multiplying 12 by 3 to get 36 is the tempting mistake, because it ignores that acceleration is force divided by mass.",
+      "clue": "Divide the net force by the mass."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya pushes a 20 kg box east with 50 N. Friction of 30 N acts west on the box. What is the box's acceleration?",
+      "opts": ["1 m/s² east", "2.5 m/s² east", "4 m/s² east", "1 m/s² west"],
+      "why": "The net force is 50 N east minus 30 N west, which is 20 N east. Then a = 20 ÷ 20 = 1 m/s² east. Using the 50 N push alone gives 2.5 m/s², which ignores friction.",
+      "clue": "Find the net force before you use F = ma."
+    }
+  },
+  "phys-newton-s-third-law-2": {
+    "title": "Newton's third law",
+    "card": [
+      "Forces come in pairs. If object A exerts a force on object B, then B exerts a force on A at the same time.",
+      "The two forces in a pair are equal in size, opposite in direction and of the same type, such as both contact forces or both gravitational.",
+      "The two forces act on different objects. Because of this, they never cancel each other out.",
+      "The pair stays equal whatever the objects are like. It holds if one object is far heavier than the other, and whether each is still or moving."
+    ],
+    "remember": "Every force has a partner of equal size and opposite direction, acting on the other object.",
+    "a": {
+      "q": "A skateboarder pushes on a wall with a force of 60 N to the right. What is the partner force?",
+      "opts": [
+        "The wall pushes the skateboarder with 60 N to the left",
+        "The wall pushes the skateboarder with 60 N to the right",
+        "The skateboarder's weight pulls down on the skateboarder",
+        "The wall pushes the skateboarder with less than 60 N"
+      ],
+      "why": "The partner force acts on the other object, so the wall pushes on the skateboarder. It is equal in size and opposite in direction, so 60 N to the left. A force to the right would not be opposite to the skateboarder's push.",
+      "clue": "Which object does the partner force act on, and which way?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A heavy moving truck hits a lighter parked car and pushes on it with 5000 N. What size is the force the car exerts on the truck?",
+      "opts": [
+        "5000 N, as the pair forces are equal in size",
+        "Less than 5000 N, as the car has less mass",
+        "More than 5000 N, as the car is damaged more",
+        "Zero, as the car was parked before the crash"
+      ],
+      "why": "The car's push on the truck is the partner of the truck's push on the car, so it is also 5000 N. The pair stays equal even though the truck is heavier and the car was still. Less than 5000 N is tempting, but the size of a third law pair does not depend on the masses of the objects.",
+      "clue": "Think about what the third law says a pair depends on."
+    }
+  },
+  "phys-torque-2": {
+    "title": "Torque and equilibrium",
+    "card": [
+      "Torque is the turning effect of a force about a pivot. Torque = force × perpendicular distance from the pivot, so its unit is the newton metre (N m).",
+      "Only the distance measured at right angles to the line of the force counts. A bigger force or a longer distance gives a bigger torque.",
+      "A torque can turn an object clockwise or anticlockwise. A structure is in equilibrium when the forces balance (net force is zero) and the torques balance (clockwise torque equals anticlockwise torque).",
+      "Balanced torques mean the object does not start to rotate. Balanced forces mean it does not start to accelerate in a straight line. Both conditions must hold."
+    ],
+    "remember": "Torque = force × perpendicular distance. Equilibrium needs balanced forces and balanced torques.",
+    "a": {
+      "q": "Why is a door easier to push open at the handle than near the hinges?",
+      "opts": [
+        "A longer distance from the pivot gives a larger torque",
+        "A longer distance from the pivot gives a larger net force",
+        "The push has a smaller size when applied near the hinges",
+        "The handle is lighter, so it needs less torque to turn"
+      ],
+      "why": "The hinges are the pivot. The same force applied further away has a larger perpendicular distance, so the torque is larger. The size of the force does not change, and torque is not the same as net force.",
+      "clue": "The hinges are the pivot. What changes when you push further from it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A 30 N child sits 2.0 m from the pivot of a see-saw. A second child sits on the other side. The see-saw stays level. If the second child weighs 20 N, how far from the pivot do they sit?",
+      "opts": ["3.0 m", "1.3 m", "2.0 m", "0.33 m"],
+      "why": "For torques to balance, 30 × 2.0 = 20 × d, so d = 3.0 m. The lighter child must sit further away. Sitting at 2.0 m would give a smaller torque, so the see-saw would tip toward the heavier child.",
+      "clue": "Set the clockwise torque equal to the anticlockwise torque."
+    }
+  },
+  "phys-momentum-impulse-physics": {
+    "title": "Momentum and impulse in physics",
+    "card": [
+      "Momentum is mass times velocity: p = mv. It is measured in kg m/s and has a direction, the same as the velocity.",
+      "Impulse is force times the time the force acts: impulse = FΔt. It equals the change in momentum: FΔt = Δp = mv - mu, where u is the initial velocity and v is the final velocity.",
+      "For the same change in momentum, a longer contact time means a smaller average force. This is why a crumple zone or a soft landing reduces the force.",
+      "In a system with no external force, total momentum stays the same. The momentum before a collision equals the momentum after it."
+    ],
+    "remember": "Impulse equals change in momentum. More time means less average force for the same change.",
+    "a": {
+      "q": "A 0.50 kg ball moving at 6.0 m/s is caught by a player and brought to rest in 0.20 s. What is the average force on the ball?",
+      "opts": ["15 N", "3.0 N", "30 N", "0.60 N"],
+      "why": "The change in momentum has size 0.50 × 6.0 = 3.0 kg m/s, as the final velocity is 0. Force = 3.0 ÷ 0.20 = 15 N. The answer 3.0 N is the momentum change, which has not been divided by the time.",
+      "clue": "Find the change in momentum first, then divide by the time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq lands from a jump with his knees bent, so he stops over a longer time than with stiff legs. His momentum change is the same both ways. Why is the force on him smaller?",
+      "opts": [
+        "The same impulse is spread over a longer time",
+        "The impulse is smaller when the time is longer",
+        "His momentum change is smaller with bent knees",
+        "The force and the time are not related to impulse"
+      ],
+      "why": "Impulse FΔt equals the change in momentum, which is the same in both landings. If Δt is larger, F must be smaller. The impulse does not shrink, because it is fixed by the momentum change.",
+      "clue": "The momentum change is fixed, so what must happen to F when Δt grows?"
+    }
+  },
+  "phys-work-energy": {
+    "title": "Work and energy",
+    "card": [
+      "Work is done when a force moves an object. W = Fs, where s is the distance moved in the direction of the force. It is measured in joules (J).",
+      "Work transfers energy. Doing work on an object changes its energy by the same amount.",
+      [
+        "Kinetic energy",
+        "the energy of motion. Ek = ½mv². Doubling the speed makes the kinetic energy four times larger."
+      ],
+      [
+        "Gravitational potential energy",
+        "the energy stored by height in a gravitational field. Ep = mgh, with g about 9.8 m/s² near Earth's surface."
+      ]
+    ],
+    "remember": "Work is force times distance. Energy of motion is ½mv² and energy of height is mgh.",
+    "a": {
+      "q": "A trolley is pushed with a steady force of 40 N along a level path for 5.0 m. How much work is done on the trolley?",
+      "opts": ["200 J", "8.0 J", "45 J", "35 J"],
+      "why": "Work = force × distance = 40 × 5.0 = 200 J. Dividing the two numbers gives 8.0, but work is found by multiplying them.",
+      "clue": "Multiply the force by the distance moved."
+    },
+    "b": {
+      "d": 3,
+      "q": "A cyclist on a flat road speeds up from 5 m/s to 10 m/s. By what factor does her kinetic energy increase?",
+      "opts": ["4 times", "2 times", "3 times", "8 times"],
+      "why": "Kinetic energy depends on v². Doubling the speed multiplies v² by 4, so the energy is four times larger. It is not doubled, because speed is squared in the formula.",
+      "clue": "Look at how speed appears in ½mv²."
+    }
+  },
+  "phys-hooke-s-law": {
+    "title": "Hooke's law",
+    "card": [
+      "For an ideal spring, the extension x is directly proportional to the force applied. Doubling the force doubles the extension.",
+      "Hooke's law is F = -kx. The spring constant k is the force needed per metre of extension, in N/m. A stiffer spring has a larger k.",
+      "The minus sign shows that the spring's restoring force points opposite to the extension. The size of the force is kx.",
+      "A stretched or compressed spring stores elastic potential energy. E = ½kx², so doubling the extension makes the stored energy four times greater."
+    ],
+    "remember": "Force is proportional to extension, F = kx in size. Stored energy is ½kx².",
+    "a": {
+      "q": "A spring stretches 0.10 m when a 5.0 N force is applied. What is its spring constant k, assuming it is ideal?",
+      "opts": ["50 N/m", "0.50 N/m", "0.020 N/m", "5.1 N/m"],
+      "why": "k = F ÷ x = 5.0 ÷ 0.10 = 50 N/m. Multiplying force by extension gives 0.50, which is not the force per metre.",
+      "clue": "Divide the force by the extension in metres."
+    },
+    "b": {
+      "d": 3,
+      "q": "Spring A is stretched 2.0 cm and stores energy E. Spring A is then stretched 6.0 cm from rest. How much energy does it store now?",
+      "opts": ["9E", "3E", "6E", "27E"],
+      "why": "Stored energy is ½kx², so it depends on the square of the extension. Tripling x makes the energy 3² = 9 times greater. Choosing 3E treats energy as proportional to extension, which is true for force but not for energy.",
+      "clue": "Energy depends on x squared, not x."
+    }
+  },
+  "phys-conservation-energy-efficiency": {
+    "title": "Conservation of energy and efficiency",
+    "card": [
+      "Energy changes from one form to another but is not created or destroyed. The total energy stays the same.",
+      "Some energy usually ends up as thermal energy that spreads into the surroundings. It is not lost, but it is not useful for the task.",
+      "Power is the rate of energy transfer: P = E ÷ t. It is measured in watts (W), where 1 W is 1 J each second.",
+      "Efficiency is the share of input energy that becomes useful output. Efficiency = useful output ÷ total input, often written as a percentage."
+    ],
+    "remember": "Energy is never lost, but only the useful share counts toward efficiency.",
+    "a": {
+      "q": "A motor takes in 500 J of energy and gives out 350 J of useful energy. What is its efficiency?",
+      "opts": ["70%", "30%", "150 J", "143%"],
+      "why": "Efficiency = 350 ÷ 500 = 0.70, or 70%. The 30% figure is the share of the input that is not useful, mostly thermal energy, so it is not the efficiency.",
+      "clue": "Divide the useful output by the total input."
+    },
+    "b": {
+      "d": 3,
+      "q": "Nina's kettle transfers 180 000 J of electrical energy in 90 s. What is its power?",
+      "opts": ["2000 W", "16 200 000 W", "0.0005 W", "90 W"],
+      "why": "Power = energy ÷ time = 180 000 ÷ 90 = 2000 W. Multiplying the two numbers gives a far larger value, but power is a rate, so it needs division by the time.",
+      "clue": "Power is energy transferred each second."
+    }
+  },
+  "phys-aims-hypotheses-models-theories": {
+    "title": "Aims, hypotheses, models and theories",
+    "card": [
+      [
+        "Aim",
+        "states what an investigation will test or find out. It is often written as a purpose, such as \"To investigate how the length of a pendulum affects its period\"."
+      ],
+      [
+        "Hypothesis",
+        "a testable prediction of the result, often with a reason. For example: \"If the length increases, the period will increase.\" Data can support it or fail to support it."
+      ],
+      [
+        "Model",
+        "a simplified picture or set of ideas used to explain or predict how something behaves. A theory is a broader explanation that has been tested many times and is supported by a lot of evidence."
+      ],
+      [
+        "Law",
+        "a short description of a pattern that has been observed, often as an equation, such as F = ma. A law describes what happens. A theory explains why."
+      ]
+    ],
+    "remember": "Aim: what is tested. Hypothesis: the predicted result. Model and theory explain, and a law describes a pattern.",
+    "a": {
+      "q": "Which statement is a hypothesis?",
+      "opts": [
+        "A heavier trolley will roll down a ramp more slowly",
+        "To find out how trolley mass affects speed on a ramp",
+        "Trolley speed is measured with a light gate and timer",
+        "Trolleys are modelled as point masses on the ramp"
+      ],
+      "why": "A hypothesis predicts a result that can be tested, and the trolley statement does this. The statement starting with \"To find out\" is an aim, because it says what is tested without predicting an outcome.",
+      "clue": "Which one predicts what will happen?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya measures the current through a resistor at several voltages. In her results, current is proportional to voltage, so V = IR with R constant. She gives no reason why. What is this statement?",
+      "opts": [
+        "A law, because it describes a pattern in observations",
+        "A theory, because it is supported by many results",
+        "A hypothesis, because it predicts a future result",
+        "An aim, because it states what the test is about"
+      ],
+      "why": "Current being proportional to voltage, with R constant, describes a pattern seen in measurements. It does not explain why, so it is a law: this one is known as Ohm's law. A theory is tempting because the pattern is well supported, but a theory explains why something happens.",
+      "clue": "Does the statement describe a pattern or explain a cause?"
+    }
+  },
+  "phys-accuracy-precision-validity-physics": {
+    "title": "Accuracy, precision and validity",
+    "card": [
+      [
+        "Accurate",
+        "results are close to the true value. A set of readings can be accurate when their average is near the accepted value."
+      ],
+      ["Precise", "results agree closely with each other. Precise readings can still be far from the true value."],
+      [
+        "Valid",
+        "an investigation is valid when it measures what it set out to measure, and only the independent variable changes the dependent variable. Other variables are controlled."
+      ],
+      "An investigation can give precise results and still be invalid, for example if a variable that should be controlled is left to change."
+    ],
+    "remember": "Accurate is close to the true value, precise is close together, and valid is measuring what you meant to.",
+    "a": {
+      "q": "Four students time a pendulum swing that is known to take 2.00 s. Whose readings are precise but not accurate?",
+      "opts": ["2.51, 2.50, 2.52, 2.51 s", "2.00, 2.01, 1.99, 2.00 s", "1.6, 2.4, 2.1, 1.9 s", "1.4, 2.6, 2.9, 1.1 s"],
+      "why": "The readings 2.51, 2.50, 2.52 and 2.51 s agree closely, so they are precise, but they sit well above 2.00 s, so they are not accurate. The readings 2.00, 2.01, 1.99 and 2.00 s are both precise and accurate, which is why that option is tempting.",
+      "clue": "Look for readings that agree with each other but miss 2.00 s."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya tests how the mass of a trolley affects its acceleration down a ramp. She adds mass but also raises the ramp each time. Her timings agree closely. What is the main problem?",
+      "opts": [
+        "The investigation is not valid, as the slope also changed",
+        "The timings are not precise, as the mass changed",
+        "The investigation is not accurate, as the timings agree",
+        "The results are not valid, as the timings agree closely"
+      ],
+      "why": "Raising the ramp changes a second variable that should be controlled, so the results do not show the effect of mass alone. This makes the investigation invalid. Close agreement of timings shows precision, but precision does not make an investigation valid.",
+      "clue": "Which variable should have been kept the same?"
+    }
+  },
+  "phys-uncertainty-error": {
+    "title": "Uncertainty and error",
+    "card": [
+      [
+        "Random error",
+        "a small, unpredictable variation that makes repeated readings scatter around a value. Repeating the measurement and averaging reduces its effect."
+      ],
+      [
+        "Systematic error",
+        "a fault that shifts every reading the same way, such as a balance that is not zeroed. Repeating and averaging does not remove it."
+      ],
+      [
+        "Uncertainty",
+        "a range that shows how far a measured value could be from the true value, written as 12.4 ± 0.2 s. A smaller range means the result can be trusted more."
+      ],
+      "A measuring tool has a limit to its reading. A common estimate of reading uncertainty is half the smallest scale division."
+    ],
+    "remember": "Random error scatters readings, systematic error shifts them, and uncertainty gives the range of doubt.",
+    "a": {
+      "q": "A student times a trolley with a stopwatch that starts 0.3 s late every run. What type of error is this?",
+      "opts": [
+        "Systematic error, as every time is shifted the same way",
+        "Random error, as the times differ from the true value",
+        "Systematic error, as the readings scatter from run to run",
+        "Random error, as averaging the times will remove it"
+      ],
+      "why": "The stopwatch shifts every reading by the same amount, so it is a systematic error. Averaging does not remove it, which is why the random error options are wrong.",
+      "clue": "Does the fault push every reading the same way?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia measures a pendulum's period five times and gets 1.92, 2.05, 1.98, 2.10 and 1.95 s. Her clock is accurate. Which change best reduces the effect of the variation in her results?",
+      "opts": [
+        "Repeat many more times and average the results",
+        "Subtract a fixed amount from every reading",
+        "Replace the pendulum string with a longer one",
+        "Record only the first reading to avoid confusion"
+      ],
+      "why": "The readings scatter both above and below a value, so the variation is random. Repeating and averaging reduces random error. Subtracting a fixed amount would suit a systematic shift, but the readings here are not shifted one way.",
+      "clue": "Are the readings scattered or all shifted the same way?"
+    }
+  },
+  "phys-reporting-investigation": {
+    "title": "Reporting an investigation",
+    "card": [
+      "A report presents what was found so that another person can follow it and check it. Use correct physics terms and give every measurement with its correct unit, such as 2.4 m/s or 15 N.",
+      "Give results to a sensible number of significant figures. A value should not show more digits than the measuring instrument can support. A ruler marked in millimetres cannot give a length such as 12.3456 cm.",
+      "Draw a graph to show a pattern. Put the independent variable on the horizontal axis and the dependent variable on the vertical axis. Label each axis with its quantity and unit, and draw a line of best fit through the points.",
+      "Link the findings to physics ideas. State what the results show, then explain it using a relevant concept, model or law."
+    ],
+    "remember": "A good report gives units, sensible significant figures and labelled graphs, then links results to physics.",
+    "a": {
+      "q": "A student times a trolley with a stopwatch that reads to 0.01 s. Which way of reporting the time best follows good reporting practice?",
+      "opts": ["2.35 s", "2.3517 s", "2.35", "2.35 m"],
+      "why": "2.35 s gives the correct unit for time and the digits the stopwatch can read. 2.3517 s shows digits the stopwatch cannot measure. 2.35 has no unit, and 2.35 m uses a unit of length, not time.",
+      "clue": "Check the unit and the digits the instrument can give."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya measures how the stretch of a spring changes as she adds mass. She chooses the mass to add and measures the stretch. Which graph setup is correct?",
+      "opts": [
+        "Mass on the horizontal axis, stretch on the vertical axis",
+        "Stretch on the horizontal axis, mass on the vertical axis",
+        "Mass and stretch both with no axis labels",
+        "Mass on the horizontal axis, with a line joining every point"
+      ],
+      "why": "Mass is the independent variable, so it goes on the horizontal axis, and stretch is the dependent variable on the vertical axis. Swapping them is tempting, but the variable Priya controls goes on the horizontal axis. Axes also need labels with units, and a line of best fit is drawn, not a line joining every point.",
+      "clue": "Which quantity did Priya choose, and which did she measure?"
+    }
   }
 };

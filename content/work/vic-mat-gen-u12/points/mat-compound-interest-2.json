@@ -1,0 +1,268 @@
+{
+ "id": "mat-compound-interest-2",
+ "title": "Compound interest",
+ "brief": "9a82c27dfde7",
+ "shortlist": [
+  [
+   "mat-compound-interest-by-repeated",
+   0.782
+  ],
+  [
+   "mat-compound-interest",
+   0.599
+  ],
+  [
+   "mat-simple-interest",
+   0.473
+  ],
+  [
+   "mat-comparing-investments",
+   0.34
+  ],
+  [
+   "mat-reducing-balance-loans",
+   0.331
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-compound-interest-by-repeated, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:06Z match: Claude Opus 5.5 says adapt mat-compound-interest (2 changes)",
+  "2026-11-01T08:24:33Z adapt: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00042,
+  "confirm": 0.01,
+  "adapt": 0.00747,
+  "check": 0.00888,
+  "fix": 0.02674,
+  "recheck": 0.00836
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-compound-interest-by-repeated",
+  "changes": [
+   "Add the formula A = P(1 + r/100)^n, with r as a percentage per period, since the VCE study design expects students to use it and the card only works by repeated calculation.",
+   "Keep the rate in percent form (r/100) rather than the decimal form used in the card's wording, to match VCE notation."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of interest added to the balance at the right Year 11 depth, but it lacks the formula the new point requires, so it needs a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-compound-interest",
+  "changes": [
+   "Write the formula the way the VCE Study Design does, A = P(1 + r/100)ⁿ, with r as the percentage rate per period rather than a decimal.",
+   "Restate the rate-matching example in percent: for 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005."
+  ],
+  "sure": "high",
+  "reason": "The NSW Year 12 compound interest card teaches the same formula-based idea at a suitable depth, but VCE General Mathematics writes the rate as a percentage (r/100), so the notation needs a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-compound-interest",
+  "changes": [
+   "Write the formula the way the VCE Study Design does, A = P(1 + r/100)ⁿ, with r as the percentage rate per period rather than a decimal.",
+   "Restate the rate-matching example in percent: for 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
+   "Rate and periods must match. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
+   "Example: $2000 at 5% per year for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r/100) once for each period. Match r and n to the same period.",
+  "a": {
+   "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$2420",
+    "$2400",
+    "$2200",
+    "$2040"
+   ],
+   "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+   "clue": "Is year 2 interest found on $2000 or on the new balance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
+   "opts": [
+    "3000 × (1 + 1/100)³⁶",
+    "3000 × (1 + 1/100)³",
+    "3000 × (1 + 12/100)³⁶",
+    "3000 × (1 + 12/100)³"
+   ],
+   "why": "The rate per month is r = 12 ÷ 12 = 1, and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods ignores the monthly compounding, so r and n do not match.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$2420",
+   "also_right": []
+  },
+  "b": {
+   "best": "3000 × (1 + 1/100)³⁶",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says using 12% with 3 periods means 'r and n do not match'. Yet 12% per year with 3 years do match each other, both being yearly. The real error is that neither matches the monthly compounding period. Students who follow the card's rule 'rate and periods must match' could be confused."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, worked example and both answers are correct. One small issue: the why for (b) says 12% with 3 periods has r and n not matching, when the real mismatch is with the monthly compounding period."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says using 12% with 3 periods means 'r and n do not match'. Yet 12% per year with 3 years do match each other, both being yearly. The real error is that neither matches the monthly compounding period. Students who follow the card's rule 'rate and periods must match' could be confused."
+ ],
+ "proposal": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
+   "Both r and n must use the compounding period. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
+   "Example: $2000 at 5% per year, compounded yearly, for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r/100) once for each period, with r and n both set to the compounding period.",
+  "a": {
+   "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$2420",
+    "$2400",
+    "$2200",
+    "$2040"
+   ],
+   "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+   "clue": "Is year 2 interest found on $2000 or on the new balance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
+   "opts": [
+    "3000 × (1 + 1/100)³⁶",
+    "3000 × (1 + 1/100)³",
+    "3000 × (1 + 12/100)³⁶",
+    "3000 × (1 + 12/100)³"
+   ],
+   "why": "Interest is compounded monthly, so the rate per month is 12 ÷ 12 = 1 and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods works in years, so neither r nor n matches the monthly compounding period.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$2420",
+    "also_right": []
+   },
+   "b": {
+    "best": "3000 × (1 + 1/100)³⁶",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example ($2315.25) and both intended answers ($2420, and 3000 × 1.01³⁶) are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says using 12% with 3 periods means 'r and n do not match'. Yet 12% per year with 3 years do match each other, both being yearly. The real error is that neither matches the monthly compounding period. Students who follow the card's rule 'rate and periods must match' could be confused."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says using 12% with 3 periods means 'r and n do not match'. Yet 12% per year with 3 years do match each other, both being yearly. The real error is that neither matches the monthly compounding period. Students who follow the card's rule 'rate and periods must match' could be confused."
+  ]
+ },
+ "final": {
+  "title": "Compound interest",
+  "card": [
+   "With compound interest, the interest earned is added to the balance. The next period's interest is then worked out on the larger amount. So interest earns interest.",
+   "The formula is A = P(1 + r/100)ⁿ. A is the final amount, P is the amount invested at the start, r is the percentage rate per period (6 means 6%), and n is the number of periods.",
+   "Both r and n must use the compounding period. For 6% per year compounded monthly, r = 6 ÷ 12 = 0.5 per month, so the multiplier is 1 + 0.5/100 = 1.005. Then n is the number of months.",
+   "Example: $2000 at 5% per year, compounded yearly, for 3 years. A = 2000 × (1 + 5/100)³ = 2000 × 1.157625 = $2315.25. The interest earned is $315.25."
+  ],
+  "remember": "Multiply by (1 + r/100) once for each period, with r and n both set to the compounding period.",
+  "a": {
+   "q": "Priya invests $2000 at 10% per year, compounded yearly, for 2 years. What is the final amount?",
+   "opts": [
+    "$2420",
+    "$2400",
+    "$2200",
+    "$2040"
+   ],
+   "why": "A = 2000 × (1 + 10/100)² = 2000 × 1.21 = $2420. The answer $2400 is simple interest, which does not let the interest earn interest.",
+   "clue": "Is year 2 interest found on $2000 or on the new balance?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom invests $3000 at 12% per year, compounded monthly, for 3 years. Which calculation gives the final amount?",
+   "opts": [
+    "3000 × (1 + 1/100)³⁶",
+    "3000 × (1 + 1/100)³",
+    "3000 × (1 + 12/100)³⁶",
+    "3000 × (1 + 12/100)³"
+   ],
+   "why": "Interest is compounded monthly, so the rate per month is 12 ÷ 12 = 1 and there are 3 × 12 = 36 months. So A = 3000 × (1 + 1/100)³⁶. Using 12% with 3 periods works in years, so neither r nor n matches the monthly compounding period.",
+   "clue": "Convert both the rate and the time to months."
+  }
+ },
+ "cleared_by": "recheck"
+}

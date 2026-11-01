@@ -1,0 +1,204 @@
+{
+ "id": "phys-nuclear-fission",
+ "title": "Nuclear fission",
+ "brief": "9c7dbfd1c7ba",
+ "shortlist": [
+  [
+   "phys-fission-fusion",
+   0.316
+  ],
+  [
+   "phys-mass-defect-binding-energy",
+   0.239
+  ],
+  [
+   "phys-mass-energy",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other, a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.0074,
+  "check": 0.0106,
+  "fix": 0.01653
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank points cover fission only as part of a broader fission and fusion card at NSW Year 12 depth with binding energy per nucleon, and none teaches the chain reaction, critical mass, or neutron moderation that the new VCE Units 1 and 2 point needs, so a new point is the safer choice.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Nuclear fission",
+  "card": [
+   "Fission is when a heavy nucleus, such as uranium-235, splits into two smaller nuclei. It releases energy and two or three neutrons.",
+   "Fission is usually started when a nucleus absorbs a neutron. The neutrons released can then be absorbed by other nuclei and split them too. This is a chain reaction.",
+   "A chain reaction needs enough fissile material in a suitable shape. If too many neutrons escape through the surface, the reaction dies out. This is why a minimum mass is needed.",
+   "Neutrons from fission move fast, and slow neutrons are more likely to be absorbed by uranium-235. A moderator, such as water or graphite, slows the neutrons down so the chain reaction continues in a reactor."
+  ],
+  "remember": "Fission splits a heavy nucleus and frees neutrons. Those neutrons keep a chain reaction going if enough are absorbed.",
+  "a": {
+   "q": "What makes fission a chain reaction?",
+   "opts": [
+    "Neutrons released by one fission trigger further fissions",
+    "Energy released by one fission heats the whole reactor",
+    "The two smaller nuclei split again into lighter nuclei",
+    "A moderator keeps adding new uranium to the reactor"
+   ],
+   "why": "Each fission releases neutrons, and these can be absorbed by other nuclei and split them. The reaction therefore sustains itself. Heat is released, but heat alone does not cause the next fission.",
+   "clue": "What particles come out of each fission?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A small sphere of uranium-235 does not sustain a chain reaction, but a larger one does. What is the best explanation?",
+   "opts": [
+    "In the small sphere too many neutrons escape the surface",
+    "In the small sphere the neutrons are moving too slowly",
+    "In the larger sphere each fission releases more neutrons",
+    "In the larger sphere the nuclei are less likely to split"
+   ],
+   "why": "A small sphere has a large surface compared with its volume, so many neutrons leave before they hit another nucleus. A larger mass lets enough neutrons be absorbed to keep going. The number of neutrons per fission does not depend on the size of the sphere.",
+   "clue": "Think about neutrons that leave through the surface."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Neutrons released by one fission trigger further fissions",
+   "also_right": []
+  },
+  "b": {
+   "best": "In the small sphere too many neutrons escape the surface",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about neutrons that leave through the surface' points straight at the only option that mentions the surface. A student can pick the right answer without understanding critical mass."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says the reaction 'therefore sustains itself'. The card says a chain reaction dies out if too many neutrons escape, so this overstates it. It should say the reaction can sustain itself if enough neutrons are absorbed."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The clue for question b effectively gives the answer away, and why (a) overstates that the reaction always sustains itself."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Think about neutrons that leave through the surface' points straight at the only option that mentions the surface. A student can pick the right answer without understanding critical mass.",
+  "Question a, other: Why (a) says the reaction 'therefore sustains itself'. The card says a chain reaction dies out if too many neutrons escape, so this overstates it. It should say the reaction can sustain itself if enough neutrons are absorbed."
+ ],
+ "proposal": {
+  "title": "Nuclear fission",
+  "card": [
+   "Fission is when a heavy nucleus, such as uranium-235, splits into two smaller nuclei. It releases energy and two or three neutrons.",
+   "Fission is usually started when a nucleus absorbs a neutron. The neutrons released can then be absorbed by other nuclei and split them too. This is a chain reaction.",
+   "A chain reaction needs enough fissile material in a suitable shape. If too many neutrons escape through the surface, the reaction dies out. This is why a minimum mass, the critical mass, is needed.",
+   "Neutrons from fission move fast, and slow neutrons are more likely to be absorbed by uranium-235. A moderator, such as water or graphite, slows the neutrons down so the chain reaction can continue in a reactor."
+  ],
+  "remember": "Fission splits a heavy nucleus and frees neutrons. Those neutrons keep a chain reaction going if enough are absorbed.",
+  "a": {
+   "q": "What makes fission a chain reaction?",
+   "opts": [
+    "Neutrons released by one fission trigger further fissions",
+    "Energy released by one fission heats the whole reactor",
+    "The two smaller nuclei split again into lighter nuclei",
+    "A moderator keeps adding new uranium to the reactor"
+   ],
+   "why": "Each fission releases neutrons, and these can be absorbed by other nuclei and split them. If enough neutrons are absorbed, the reaction can sustain itself. Heat is released, but heat alone does not cause the next fission.",
+   "clue": "What particles come out of each fission?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A small sphere of uranium-235 does not sustain a chain reaction, but a larger one does. What is the best explanation?",
+   "opts": [
+    "In the small sphere too many neutrons escape the surface",
+    "In the small sphere the neutrons are moving too slowly",
+    "In the larger sphere each fission releases more neutrons",
+    "In the larger sphere the nuclei are less likely to split"
+   ],
+   "why": "A small sphere has a large surface compared with its volume, so many neutrons leave before they hit another nucleus. A larger mass lets enough neutrons be absorbed to keep going. The number of neutrons per fission does not depend on the size of the sphere.",
+   "clue": "What must happen to a neutron before it can cause another fission?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about neutrons that leave through the surface' points straight at the only option that mentions the surface. A student can pick the right answer without understanding critical mass."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says the reaction 'therefore sustains itself'. The card says a chain reaction dies out if too many neutrons escape, so this overstates it. It should say the reaction can sustain itself if enough neutrons are absorbed."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Think about neutrons that leave through the surface' points straight at the only option that mentions the surface. A student can pick the right answer without understanding critical mass.",
+   "Question a, other: Why (a) says the reaction 'therefore sustains itself'. The card says a chain reaction dies out if too many neutrons escape, so this overstates it. It should say the reaction can sustain itself if enough neutrons are absorbed."
+  ]
+ },
+ "final": {
+  "title": "Nuclear fission",
+  "card": [
+   "Fission is when a heavy nucleus, such as uranium-235, splits into two smaller nuclei. It releases energy and two or three neutrons.",
+   "Fission is usually started when a nucleus absorbs a neutron. The neutrons released can then be absorbed by other nuclei and split them too. This is a chain reaction.",
+   "A chain reaction needs enough fissile material in a suitable shape. If too many neutrons escape through the surface, the reaction dies out. This is why a minimum mass, the critical mass, is needed.",
+   "Neutrons from fission move fast, and slow neutrons are more likely to be absorbed by uranium-235. A moderator, such as water or graphite, slows the neutrons down so the chain reaction can continue in a reactor."
+  ],
+  "remember": "Fission splits a heavy nucleus and frees neutrons. Those neutrons keep a chain reaction going if enough are absorbed.",
+  "a": {
+   "q": "What makes fission a chain reaction?",
+   "opts": [
+    "Neutrons released by one fission trigger further fissions",
+    "Energy released by one fission heats the whole reactor",
+    "The two smaller nuclei split again into lighter nuclei",
+    "A moderator keeps adding new uranium to the reactor"
+   ],
+   "why": "Each fission releases neutrons, and these can be absorbed by other nuclei and split them. If enough neutrons are absorbed, the reaction can sustain itself. Heat is released, but heat alone does not cause the next fission.",
+   "clue": "What particles come out of each fission?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A small sphere of uranium-235 does not sustain a chain reaction, but a larger one does. What is the best explanation?",
+   "opts": [
+    "In the small sphere too many neutrons escape the surface",
+    "In the small sphere the neutrons are moving too slowly",
+    "In the larger sphere each fission releases more neutrons",
+    "In the larger sphere the nuclei are less likely to split"
+   ],
+   "why": "A small sphere has a large surface compared with its volume, so many neutrons leave before they hit another nucleus. A larger mass lets enough neutrons be absorbed to keep going. The number of neutrons per fission does not depend on the size of the sphere.",
+   "clue": "What must happen to a neutron before it can cause another fission?"
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "acc-other-inventory-movements",
+ "title": "Other inventory movements",
+ "brief": "2ccfba74ace0",
+ "shortlist": [
+  [
+   "bus-inventory-management",
+   0.338
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00591,
+  "check": 0.00814
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers holding costs and FIFO/LIFO valuation, while the new point is about returns, drawings and advertising stock movements changing the inventory card, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Other inventory movements",
+  "card": [
+   "Inventory is not only bought and sold. Some other events also change the units and value on the inventory card.",
+   [
+    "Returns",
+    "Goods sent back to a supplier reduce inventory. Goods a customer sends back to the business increase inventory, if they can be resold."
+   ],
+   [
+    "Private use",
+    "When the owner takes goods for personal use, inventory falls. This is not a sale, and the owner is not paid by customers."
+   ],
+   [
+    "Advertising",
+    "Stock given away or used for advertising leaves inventory, even though no sale is made."
+   ]
+  ],
+  "remember": "If goods leave or return to the shelves, the inventory card changes, even with no sale.",
+  "a": {
+   "q": "Tam owns a bike shop in Ballarat. She takes a helmet from stock for her son. What happens to the inventory card?",
+   "opts": [
+    "Inventory falls by one helmet",
+    "Inventory rises by one helmet",
+    "Inventory stays the same",
+    "Inventory falls because a sale was made"
+   ],
+   "why": "Goods taken by the owner for private use leave inventory, so the card shows one less helmet. It is not a sale, so the last option is wrong, even though stock has gone.",
+   "clue": "Did the helmet stay in the shop?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noor runs a gift shop in Geelong. She returns 4 faulty mugs to her supplier. A customer also returns 2 resaleable mugs for a refund. What is the net change in mugs on the inventory card?",
+   "opts": [
+    "Fall of 2 mugs",
+    "Rise of 2 mugs",
+    "Fall of 6 mugs",
+    "Rise of 6 mugs"
+   ],
+   "why": "Returning 4 mugs to the supplier cuts inventory by 4. The 2 resaleable mugs from the customer add 2 back. The net change is a fall of 2. Falling by 6 wrongly treats both returns as leaving stock.",
+   "clue": "One return takes stock out and the other brings stock in."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Inventory falls by one helmet",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fall of 2 mugs",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Other inventory movements",
+  "card": [
+   "Inventory is not only bought and sold. Some other events also change the units and value on the inventory card.",
+   [
+    "Returns",
+    "Goods sent back to a supplier reduce inventory. Goods a customer sends back to the business increase inventory, if they can be resold."
+   ],
+   [
+    "Private use",
+    "When the owner takes goods for personal use, inventory falls. This is not a sale, and the owner is not paid by customers."
+   ],
+   [
+    "Advertising",
+    "Stock given away or used for advertising leaves inventory, even though no sale is made."
+   ]
+  ],
+  "remember": "If goods leave or return to the shelves, the inventory card changes, even with no sale.",
+  "a": {
+   "q": "Tam owns a bike shop in Ballarat. She takes a helmet from stock for her son. What happens to the inventory card?",
+   "opts": [
+    "Inventory falls by one helmet",
+    "Inventory rises by one helmet",
+    "Inventory stays the same",
+    "Inventory falls because a sale was made"
+   ],
+   "why": "Goods taken by the owner for private use leave inventory, so the card shows one less helmet. It is not a sale, so the last option is wrong, even though stock has gone.",
+   "clue": "Did the helmet stay in the shop?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noor runs a gift shop in Geelong. She returns 4 faulty mugs to her supplier. A customer also returns 2 resaleable mugs for a refund. What is the net change in mugs on the inventory card?",
+   "opts": [
+    "Fall of 2 mugs",
+    "Rise of 2 mugs",
+    "Fall of 6 mugs",
+    "Rise of 6 mugs"
+   ],
+   "why": "Returning 4 mugs to the supplier cuts inventory by 4. The 2 resaleable mugs from the customer add 2 back. The net change is a fall of 2. Falling by 6 wrongly treats both returns as leaving stock.",
+   "clue": "One return takes stock out and the other brings stock in."
+  }
+ },
+ "cleared_by": "checker"
+}

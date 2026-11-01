@@ -1,0 +1,265 @@
+{
+ "id": "leg-summary-indictable-offences-2",
+ "title": "Summary and indictable offences",
+ "brief": "a82e1aeeb81a",
+ "shortlist": [
+  [
+   "leg-summary-indictable-offences",
+   0.714
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt leg-summary-indictable-offences, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:04Z match: Claude Opus 5.5 says adapt leg-summary-indictable-offences (3 changes)",
+  "2026-11-01T08:24:32Z adapt: failed the content check, writing again",
+  "2026-11-01T08:33:50Z adapt: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.00502,
+  "adapt": 0.01113,
+  "check": 0.01517,
+  "fix": 0.02441,
+  "recheck": 0.00795
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-summary-indictable-offences",
+  "changes": [
+   "Replace 'Local Court' with 'Magistrates' Court' throughout, since that is the Victorian court where summary offences are heard and where indictable cases begin.",
+   "Replace 'a higher court' with the Victorian trial courts, the County Court or Supreme Court, for indictable trials.",
+   "Update question b so that Dev's first appearance is in the Magistrates' Court, not the Local Court.",
+   "Note that in Victoria some indictable offences can be heard summarily in the Magistrates' Court, so the card should not present the split as absolute."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same summary-versus-indictable idea at a suitable depth, but it uses New South Wales court names and needs Victorian courts and terminology.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-summary-indictable-offences",
+  "changes": [
+   "Replace 'Local Court' with 'Magistrates' Court' throughout the card, since Victoria's lower court is the Magistrates' Court.",
+   "In question b, change Dev's first court appearance from the Local Court to the Magistrates' Court, and update the matching distractor.",
+   "Where the card says 'a higher court', it may name Victoria's higher courts, the County Court and the Supreme Court."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same distinction at a suitable depth, but it uses the NSW Local Court, which in Victoria is the Magistrates' Court.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "leg-summary-indictable-offences",
+  "changes": [
+   "Replace 'Local Court' with 'Magistrates' Court' throughout the card, since Victoria's lower court is the Magistrates' Court.",
+   "In question b, change Dev's first court appearance from the Local Court to the Magistrates' Court, and update the matching distractor.",
+   "Where the card says 'a higher court', it may name Victoria's higher courts, the County Court and the Supreme Court."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "a.q",
+   "b.q",
+   "b.opt2",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as offensive language or a minor traffic offence. It is heard by a magistrate in the Magistrates' Court, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug supply. It can be tried by a judge and jury in a higher court, such as the County Court or the Supreme Court."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to a higher court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature is normally true of a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the second option is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first court appearance is in the Magistrates' Court. How is his offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is heard by a magistrate without a jury",
+   "also_right": []
+  },
+  "b": {
+   "best": "Indictable, because it is serious and can go before a jury",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls 'the second option' the tempting jury mistake, but options are shown in random order. Here the second option is 'decided by the police', and the jury option is third, so the explanation points students to the wrong option. Name the option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear right answer. The only problem is that why (a) refers to 'the second option' by position, which does not match the randomised order and points to the wrong distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) calls 'the second option' the tempting jury mistake, but options are shown in random order. Here the second option is 'decided by the police', and the jury option is third, so the explanation points students to the wrong option. Name the option by its content instead."
+ ],
+ "proposal": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as offensive language or a minor traffic offence. It is heard by a magistrate in the Magistrates' Court, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug supply. It can be tried by a judge and jury in a higher court, such as the County Court or the Supreme Court."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to a higher court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature is normally true of a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the option saying it is tried by a judge and jury is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first court appearance is in the Magistrates' Court. How is his offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is heard by a magistrate without a jury",
+    "also_right": []
+   },
+   "b": {
+    "best": "Indictable, because it is serious and can go before a jury",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls 'the second option' the tempting jury mistake, but options are shown in random order. Here the second option is 'decided by the police', and the jury option is third, so the explanation points students to the wrong option. Name the option by its content instead."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) calls 'the second option' the tempting jury mistake, but options are shown in random order. Here the second option is 'decided by the police', and the jury option is third, so the explanation points students to the wrong option. Name the option by its content instead."
+  ]
+ },
+ "final": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as offensive language or a minor traffic offence. It is heard by a magistrate in the Magistrates' Court, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug supply. It can be tried by a judge and jury in a higher court, such as the County Court or the Supreme Court."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to a higher court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature is normally true of a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the option saying it is tried by a judge and jury is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first court appearance is in the Magistrates' Court. How is his offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "cleared_by": "recheck"
+}

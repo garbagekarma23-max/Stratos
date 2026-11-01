@@ -1,0 +1,57 @@
+{
+ "id": "chem-predicting-precipitates",
+ "title": "Predicting precipitates",
+ "brief": "a84f04251187",
+ "shortlist": [
+  [
+   "chem-precipitation-reactions",
+   0.474
+  ],
+  [
+   "chem-predicting-precipitation",
+   0.24
+  ],
+  [
+   "chem-ionic-bonding",
+   0.212
+  ]
+ ],
+ "stage": "match-review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt chem-precipitation-reactions, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:02Z confirm: Claude Opus 5.5 may adapt chem-precipitation-reactions, but is not highly sure, so it is for you to review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.00909
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-precipitation-reactions",
+  "changes": [
+   "Add a full chemical equation with states alongside the net ionic equation, since the new point is shown in both forms.",
+   "Base the solubility guidance on the solubility table students are given in VCE, rather than the general solubility rules and examples in the NSW card.",
+   "Localise the worked examples to the VCE context, such as the reactions used in the Materials, water and acids unit."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same precipitation and spectator-ion idea at the right Year 11 depth, but it needs a full equation with states and VCE-specific solubility guidance added.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "chem-precipitation-reactions",
+  "changes": [
+   "Refer to the solubility table, as the VCE Study Design does, rather than 'solubility rules'.",
+   "Add a full balanced equation with states, such as AgNO3(aq) + NaCl(aq) → AgCl(s) + NaNO3(aq), alongside the ionic equation.",
+   "Call the equation without spectator ions an 'ionic equation' to match VCE wording, rather than 'net ionic equation'."
+  ],
+  "sure": "medium",
+  "reason": "The NSW Year 11 precipitation card teaches the same idea at the same depth: use solubility data to predict an insoluble product and write the ionic equation with states. It needs VCE wording and a full-equation example added.",
+  "model": "claude-opus-5-5"
+ }
+}

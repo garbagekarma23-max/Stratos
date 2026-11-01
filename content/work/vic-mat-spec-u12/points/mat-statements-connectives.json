@@ -1,0 +1,236 @@
+{
+ "id": "mat-statements-connectives",
+ "title": "Statements and connectives",
+ "brief": "e1e839694b85",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00415,
+  "check": 0.01158,
+  "fix": 0.01654,
+  "recheck": 0.00641
+ },
+ "draft": {
+  "title": "Statements and connectives",
+  "card": [
+   "A proposition is a statement that is either true or false, such as 7 is prime. A question or an instruction is not a proposition.",
+   [
+    "And",
+    "P and Q is true only when both P and Q are true."
+   ],
+   [
+    "Or",
+    "P or Q is true when at least one of P and Q is true. It is false only when both are false."
+   ],
+   [
+    "Not",
+    "not P has the opposite truth value to P. A truth table lists every true and false case. With two propositions there are 4 rows. A Karnaugh map shows the same cases in a grid."
+   ]
+  ],
+  "remember": "And needs both true. Or needs at least one true. Not flips the value.",
+  "a": {
+   "q": "P is true and Q is false. Which compound statement is true?",
+   "opts": [
+    "P or Q",
+    "P and Q",
+    "not P",
+    "not P and Q"
+   ],
+   "why": "Or is true when at least one part is true, and P is true. P and Q fails because Q is false. not P is false, so not P and Q is also false.",
+   "clue": "Which connective only needs one true part?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Today is not raining (P is false) and it is windy (Q is true). Which statement about the day is true?",
+   "opts": [
+    "not P and Q",
+    "P or not Q",
+    "P and Q",
+    "not Q or P"
+   ],
+   "why": "not P is true because P is false, and Q is true, so not P and Q is true. P or not Q is false, since both P and not Q are false. P and Q is false because P is false. not Q or P is false since both parts are false.",
+   "clue": "Work out the value of not P and not Q first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "P or Q",
+   "also_right": [
+    "not P and Q"
+   ]
+  },
+  "b": {
+   "best": "not P and Q",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'not P and Q' is ambiguous because the card never says that not applies only to the letter right after it. Read as not (P and Q), it is true when P is true and Q is false, so a second option can be defended. Use brackets, for example (not P) and Q."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Today is not raining (P is false)' never says what P stands for. A student could take P to mean 'it is not raining'. Say 'P: it is raining. Today it is not raining, so P is false.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. In question a, 'not P and Q' needs brackets, because read as not (P and Q) it is also true. Question b should say what P stands for."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “not P and Q” could also be right.",
+  "Question a, wording: 'not P and Q' is ambiguous because the card never says that not applies only to the letter right after it. Read as not (P and Q), it is true when P is true and Q is false, so a second option can be defended. Use brackets, for example (not P) and Q.",
+  "Question b, wording: 'Today is not raining (P is false)' never says what P stands for. A student could take P to mean 'it is not raining'. Say 'P: it is raining. Today it is not raining, so P is false.'"
+ ],
+ "proposal": {
+  "title": "Statements and connectives",
+  "card": [
+   "A proposition is a statement that is either true or false, such as 7 is prime. A truth table, or a grid called a Karnaugh map, shows when a compound statement is true in every case.",
+   [
+    "And",
+    "P and Q is true only when both P and Q are true."
+   ],
+   [
+    "Or",
+    "P or Q is true when at least one of P and Q is true. It is false only when both are false."
+   ],
+   [
+    "Not",
+    "not P has the opposite truth value to P. Brackets show what not applies to: (not P) and Q is not the same as not (P and Q)."
+   ]
+  ],
+  "remember": "And needs both true. Or needs at least one true. Not flips the value.",
+  "a": {
+   "q": "P is true and Q is false. Which compound statement is true?",
+   "opts": [
+    "P or Q",
+    "P and Q",
+    "not P",
+    "(not P) and Q"
+   ],
+   "why": "Or is true when at least one part is true, and P is true. P and Q fails because Q is false. not P is false, so (not P) and Q is also false.",
+   "clue": "Which connective only needs one true part?"
+  },
+  "b": {
+   "d": 3,
+   "q": "P: it is raining. Q: it is windy. Today it is not raining, so P is false, and it is windy, so Q is true. Which statement is true?",
+   "opts": [
+    "(not P) and Q",
+    "P or (not Q)",
+    "P and Q",
+    "not (P or Q)"
+   ],
+   "why": "not P is true because P is false, and Q is true, so (not P) and Q is true. not (P or Q) is tempting, but P or Q is true because Q is true, so its opposite is false. P or (not Q) and P and Q are both false.",
+   "clue": "Work out what is inside each bracket first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "P or Q",
+    "also_right": []
+   },
+   "b": {
+    "best": "(not P) and Q",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'not P and Q' is ambiguous because the card never says that not applies only to the letter right after it. Read as not (P and Q), it is true when P is true and Q is false, so a second option can be defended. Use brackets, for example (not P) and Q."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Today is not raining (P is false)' never says what P stands for. A student could take P to mean 'it is not raining'. Say 'P: it is raining. Today it is not raining, so P is false.'"
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “not P and Q” could also be right.",
+   "Question a, wording: 'not P and Q' is ambiguous because the card never says that not applies only to the letter right after it. Read as not (P and Q), it is true when P is true and Q is false, so a second option can be defended. Use brackets, for example (not P) and Q.",
+   "Question b, wording: 'Today is not raining (P is false)' never says what P stands for. A student could take P to mean 'it is not raining'. Say 'P: it is raining. Today it is not raining, so P is false.'"
+  ]
+ },
+ "final": {
+  "title": "Statements and connectives",
+  "card": [
+   "A proposition is a statement that is either true or false, such as 7 is prime. A truth table, or a grid called a Karnaugh map, shows when a compound statement is true in every case.",
+   [
+    "And",
+    "P and Q is true only when both P and Q are true."
+   ],
+   [
+    "Or",
+    "P or Q is true when at least one of P and Q is true. It is false only when both are false."
+   ],
+   [
+    "Not",
+    "not P has the opposite truth value to P. Brackets show what not applies to: (not P) and Q is not the same as not (P and Q)."
+   ]
+  ],
+  "remember": "And needs both true. Or needs at least one true. Not flips the value.",
+  "a": {
+   "q": "P is true and Q is false. Which compound statement is true?",
+   "opts": [
+    "P or Q",
+    "P and Q",
+    "not P",
+    "(not P) and Q"
+   ],
+   "why": "Or is true when at least one part is true, and P is true. P and Q fails because Q is false. not P is false, so (not P) and Q is also false.",
+   "clue": "Which connective only needs one true part?"
+  },
+  "b": {
+   "d": 3,
+   "q": "P: it is raining. Q: it is windy. Today it is not raining, so P is false, and it is windy, so Q is true. Which statement is true?",
+   "opts": [
+    "(not P) and Q",
+    "P or (not Q)",
+    "P and Q",
+    "not (P or Q)"
+   ],
+   "why": "not P is true because P is false, and Q is true, so (not P) and Q is true. not (P or Q) is tempting, but P or Q is true because Q is true, so its opposite is false. P or (not Q) and P and Q are both false.",
+   "clue": "Work out what is inside each bracket first."
+  }
+ },
+ "cleared_by": "recheck"
+}

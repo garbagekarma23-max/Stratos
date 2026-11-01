@@ -1,0 +1,214 @@
+{
+ "id": "bio-stomata",
+ "title": "Stomata",
+ "brief": "ba2ba7d541e9",
+ "shortlist": [
+  [
+   "bio-plant-responses-stay-balance",
+   0.509
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 may adapt bio-plant-responses-stay-balance, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T09:35:07Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.00403,
+  "write": 0.00533,
+  "check": 0.01201,
+  "fix": 0.01572,
+  "recheck": 0.01156
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bio-plant-responses-stay-balance",
+  "changes": [
+   "Replace question b, which tests leaf drop in a NSW eucalypt, with a question on how stomata balance gas exchange against water loss, since leaf drop is not the idea in this brief.",
+   "Remove or shorten the leaf-drop lines in the card, which go beyond the stomata idea in the brief.",
+   "Make the drought example local to Victoria, or use a general example, instead of western NSW."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same stomata and water-balance idea at a suitable depth, but its second question and drought leaf-drop content go beyond this brief and its example is NSW-specific, so it needs adapting rather than reusing.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader lesson on how plants keep water balance, including leaf drop and a whole question on it, so it would need more than small changes to teach just how stomata trade gas exchange against water loss.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Stomata",
+  "card": [
+   "Stomata are tiny pores, mostly on the underside of leaves. Each pore sits between two guard cells, which change shape to open or close it.",
+   "When a stoma is open, carbon dioxide diffuses in for photosynthesis and oxygen diffuses out. Water vapour also diffuses out of the leaf.",
+   "A plant cannot have gas exchange without some water loss. Open stomata favour photosynthesis, and closed stomata save water.",
+   "Stomata tend to be open in bright light when water is plentiful. They tend to close when the plant is short of water, such as on a hot, dry day. This is how a vascular plant regulates its water."
+  ],
+  "remember": "Open stomata let carbon dioxide in and water out. Closing them saves water.",
+  "a": {
+   "q": "Which statement best explains why a plant cannot keep its stomata open all the time?",
+   "opts": [
+    "Open stomata let water vapour escape from the leaf",
+    "Open stomata stop oxygen leaving the leaf",
+    "Open stomata block carbon dioxide from entering",
+    "Open stomata stop the guard cells changing shape"
+   ],
+   "why": "Water vapour diffuses out through open stomata, so a plant that stayed open would lose too much water. Oxygen leaves and carbon dioxide enters through open stomata, so the other options reverse what happens.",
+   "clue": "Think about what else leaves the leaf when a pore is open."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a hot, dry afternoon in Mildura, a grapevine is short of water. What is the most likely response of its stomata, and the effect on photosynthesis?",
+   "opts": [
+    "They close, saving water but limiting carbon dioxide intake",
+    "They close, saving water and raising carbon dioxide intake",
+    "They open, saving water but limiting carbon dioxide intake",
+    "They open, gaining water and raising carbon dioxide intake"
+   ],
+   "why": "A plant short of water tends to close its stomata to cut water loss. With the pores closed, less carbon dioxide can enter, so photosynthesis is limited. Opening them would increase water loss, not save water.",
+   "clue": "Closed pores block water vapour and carbon dioxide both."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Open stomata let water vapour escape from the leaf",
+   "also_right": []
+  },
+  "b": {
+   "best": "They close, saving water but limiting carbon dioxide intake",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says the other options all 'reverse what happens', but 'Open stomata stop the guard cells changing shape' is not a reversal of anything on the card. Guard cells change shape to open and close the pore, so this option is simply false, not reversed."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear right answer. One small fix: the explanation for (a) wrongly calls the guard-cell option a reversal."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says the other options all 'reverse what happens', but 'Open stomata stop the guard cells changing shape' is not a reversal of anything on the card. Guard cells change shape to open and close the pore, so this option is simply false, not reversed."
+ ],
+ "proposal": {
+  "title": "Stomata",
+  "card": [
+   "Stomata are tiny pores, mostly on the underside of leaves. Each pore sits between two guard cells, which change shape to open or close it.",
+   "When a stoma is open, carbon dioxide diffuses in for photosynthesis and oxygen diffuses out. Water vapour also diffuses out of the leaf.",
+   "A plant cannot have gas exchange without some water loss. Open stomata favour photosynthesis, and closed stomata save water.",
+   "Stomata tend to open in bright light when water is plentiful, and close when the plant is short of water, such as on a hot, dry day. This is how a vascular plant regulates its water."
+  ],
+  "remember": "Open stomata let carbon dioxide in and water out. Closing them saves water.",
+  "a": {
+   "q": "Which statement best explains why a plant cannot keep its stomata open all the time?",
+   "opts": [
+    "Open stomata let water vapour escape from the leaf",
+    "Open stomata stop oxygen leaving the leaf",
+    "Open stomata block carbon dioxide from entering",
+    "Open stomata stop the guard cells changing shape"
+   ],
+   "why": "Water vapour diffuses out through open stomata, so a plant that stayed open would lose too much water. The oxygen and carbon dioxide options reverse what happens, since both gases pass through open pores. The guard cell option is false, because guard cells change shape to open and close the pore.",
+   "clue": "Think about what else leaves the leaf when a pore is open."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a hot, dry afternoon in Mildura, a grapevine is short of water. What is the most likely response of its stomata, and the effect on photosynthesis?",
+   "opts": [
+    "They close, saving water but limiting carbon dioxide intake",
+    "They close, saving water and raising carbon dioxide intake",
+    "They open, saving water but limiting carbon dioxide intake",
+    "They open, gaining water and raising carbon dioxide intake"
+   ],
+   "why": "A plant short of water tends to close its stomata to cut water loss. With the pores closed, less carbon dioxide can enter, so photosynthesis is limited. Opening them would increase water loss, not save water.",
+   "clue": "Closed pores block water vapour and carbon dioxide both."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "Open stomata let water vapour escape from the leaf",
+    "also_right": []
+   },
+   "b": {
+    "best": "They close, saving water but limiting carbon dioxide intake",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue says closed pores block both water vapour and carbon dioxide. That rules out 'raising carbon dioxide intake' and 'opening saves water', leaving only the right option, so a student can answer without knowing that stomata close when the plant is short of water."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and both questions are accurate. The clue for question b nearly gives the answer away by stating that closed pores block carbon dioxide, which leaves only one option standing."
+  },
+  "flags": [
+   "Question b, other: The clue says closed pores block both water vapour and carbon dioxide. That rules out 'raising carbon dioxide intake' and 'opening saves water', leaving only the right option, so a student can answer without knowing that stomata close when the plant is short of water."
+  ]
+ },
+ "final": {
+  "title": "Stomata",
+  "card": [
+   "Stomata are tiny pores, mostly on the underside of leaves. Each pore sits between two guard cells, which change shape to open or close it.",
+   "When a stoma is open, carbon dioxide diffuses in for photosynthesis and oxygen diffuses out. Water vapour also diffuses out of the leaf.",
+   "A plant cannot have gas exchange without some water loss. Open stomata favour photosynthesis, and closed stomata save water.",
+   "Stomata tend to open in bright light when water is plentiful, and close when the plant is short of water, such as on a hot, dry day. This is how a vascular plant regulates its water."
+  ],
+  "remember": "Open stomata let carbon dioxide in and water out. Closing them saves water.",
+  "a": {
+   "q": "Which statement best explains why a plant cannot keep its stomata open all the time?",
+   "opts": [
+    "Open stomata let water vapour escape from the leaf",
+    "Open stomata stop oxygen leaving the leaf",
+    "Open stomata block carbon dioxide from entering",
+    "Open stomata stop the guard cells changing shape"
+   ],
+   "why": "Water vapour diffuses out through open stomata, so a plant that stayed open would lose too much water. The oxygen and carbon dioxide options reverse what happens, since both gases pass through open pores. The guard cell option is false, because guard cells change shape to open and close the pore.",
+   "clue": "Think about what else leaves the leaf when a pore is open."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a hot, dry afternoon in Mildura, a grapevine is short of water. What is the most likely response of its stomata, and the effect on photosynthesis?",
+   "opts": [
+    "They close, saving water but limiting carbon dioxide intake",
+    "They close, saving water and raising carbon dioxide intake",
+    "They open, saving water but limiting carbon dioxide intake",
+    "They open, gaining water and raising carbon dioxide intake"
+   ],
+   "why": "A plant short of water tends to close its stomata to cut water loss. With the pores closed, less carbon dioxide can enter, so photosynthesis is limited. Opening them would increase water loss, not save water.",
+   "clue": "Closed pores block water vapour and carbon dioxide both."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,207 @@
+{
+ "id": "mat-conjugates-division",
+ "title": "Conjugates and division",
+ "brief": "feaff9ef4b48",
+ "shortlist": [
+  [
+   "chem-conjugate-acid-base-pairs",
+   0.317
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00553,
+  "check": 0.00954,
+  "fix": 0.02485,
+  "recheck": 0.00628
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only candidate, on conjugate acid-base pairs in chemistry, is a different idea from the complex conjugate used to rationalise division in complex numbers, so no bank point teaches this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Conjugates and division",
+  "card": [
+   "The conjugate of a + bi is a − bi. Only the sign of the imaginary part changes.",
+   "A number times its conjugate is real: (a + bi)(a − bi) = a² + b².",
+   "To divide, multiply the top and bottom by the conjugate of the denominator. This makes the denominator real.",
+   "Example: 1/(2 + i) = (2 − i)/((2 + i)(2 − i)) = (2 − i)/5 = 2/5 − i/5."
+  ],
+  "remember": "To divide, multiply top and bottom by the denominator's conjugate.",
+  "a": {
+   "q": "What is (3 + 2i)(3 − 2i)?",
+   "opts": [
+    "13",
+    "5",
+    "9 − 4i",
+    "9 + 4i"
+   ],
+   "why": "A number times its conjugate is a² + b² = 9 + 4 = 13. The option 5 comes from a sign error, treating the result as a² − b².",
+   "clue": "Expand it, then use i² = −1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is 5/(1 − 2i) in the form a + bi?",
+   "opts": [
+    "1 + 2i",
+    "1 − 2i",
+    "5 + 10i",
+    "1/5 + 2i/5"
+   ],
+   "why": "Multiply top and bottom by 1 + 2i. The bottom becomes 1 + 4 = 5, and the top is 5 + 10i, so the result is 1 + 2i. Using 1 − 2i gives the wrong sign.",
+   "clue": "Use the conjugate 1 + 2i, then simplify by 5."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "13",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 + 2i",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'Using 1 − 2i gives the wrong sign', which is unclear. Multiplying top and bottom by 1 − 2i does not give the option 1 − 2i (it gives 5(1 − 2i)/(−3 − 4i)). The option 1 − 2i really comes from flipping the sign of the result, and the why should say so."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: question a is 13 and question b is 1 + 2i, and the card is correct. The only issue is a vague line in the explanation for b about where the 1 − 2i distractor comes from."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says 'Using 1 − 2i gives the wrong sign', which is unclear. Multiplying top and bottom by 1 − 2i does not give the option 1 − 2i (it gives 5(1 − 2i)/(−3 − 4i)). The option 1 − 2i really comes from flipping the sign of the result, and the why should say so."
+ ],
+ "proposal": {
+  "title": "Conjugates and division",
+  "card": [
+   "The conjugate of a + bi is a − bi. Only the sign of the imaginary part changes.",
+   "A number times its conjugate is real: (a + bi)(a − bi) = a² + b².",
+   "To divide, multiply the top and bottom by the conjugate of the denominator. This makes the denominator real.",
+   "Example: 1/(2 + i) = (2 − i)/((2 + i)(2 − i)) = (2 − i)/5 = 2/5 − i/5."
+  ],
+  "remember": "To divide, multiply top and bottom by the denominator's conjugate.",
+  "a": {
+   "q": "What is (3 + 2i)(3 − 2i)?",
+   "opts": [
+    "13",
+    "5",
+    "9 − 4i",
+    "9 + 4i"
+   ],
+   "why": "A number times its conjugate is a² + b² = 9 + 4 = 13. The option 5 comes from a sign error, treating the result as a² − b².",
+   "clue": "Expand it, then use i² = −1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is 5/(1 − 2i) in the form a + bi?",
+   "opts": [
+    "1 + 2i",
+    "1 − 2i",
+    "5 + 10i",
+    "1/5 + 2i/5"
+   ],
+   "why": "Multiply top and bottom by the conjugate 1 + 2i. The bottom becomes 1 + 4 = 5 and the top becomes 5 + 10i, so the result is 1 + 2i. The option 1 − 2i flips the sign of the imaginary part of this result, and 5 + 10i forgets to divide by 5.",
+   "clue": "Multiply top and bottom by the conjugate of 1 − 2i."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "13",
+    "also_right": []
+   },
+   "b": {
+    "best": "1 + 2i",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says 'Using 1 − 2i gives the wrong sign', which is unclear. Multiplying top and bottom by 1 − 2i does not give the option 1 − 2i (it gives 5(1 − 2i)/(−3 − 4i)). The option 1 − 2i really comes from flipping the sign of the result, and the why should say so."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says 'Using 1 − 2i gives the wrong sign', which is unclear. Multiplying top and bottom by 1 − 2i does not give the option 1 − 2i (it gives 5(1 − 2i)/(−3 − 4i)). The option 1 − 2i really comes from flipping the sign of the result, and the why should say so."
+  ]
+ },
+ "final": {
+  "title": "Conjugates and division",
+  "card": [
+   "The conjugate of a + bi is a − bi. Only the sign of the imaginary part changes.",
+   "A number times its conjugate is real: (a + bi)(a − bi) = a² + b².",
+   "To divide, multiply the top and bottom by the conjugate of the denominator. This makes the denominator real.",
+   "Example: 1/(2 + i) = (2 − i)/((2 + i)(2 − i)) = (2 − i)/5 = 2/5 − i/5."
+  ],
+  "remember": "To divide, multiply top and bottom by the denominator's conjugate.",
+  "a": {
+   "q": "What is (3 + 2i)(3 − 2i)?",
+   "opts": [
+    "13",
+    "5",
+    "9 − 4i",
+    "9 + 4i"
+   ],
+   "why": "A number times its conjugate is a² + b² = 9 + 4 = 13. The option 5 comes from a sign error, treating the result as a² − b².",
+   "clue": "Expand it, then use i² = −1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is 5/(1 − 2i) in the form a + bi?",
+   "opts": [
+    "1 + 2i",
+    "1 − 2i",
+    "5 + 10i",
+    "1/5 + 2i/5"
+   ],
+   "why": "Multiply top and bottom by the conjugate 1 + 2i. The bottom becomes 1 + 4 = 5 and the top becomes 5 + 10i, so the result is 1 + 2i. The option 1 − 2i flips the sign of the imaginary part of this result, and 5 + 10i forgets to divide by 5.",
+   "clue": "Multiply top and bottom by the conjugate of 1 − 2i."
+  }
+ },
+ "cleared_by": "recheck"
+}

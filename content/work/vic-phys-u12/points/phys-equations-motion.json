@@ -1,0 +1,124 @@
+{
+ "id": "phys-equations-motion",
+ "title": "Equations of motion",
+ "brief": "0a152af7389d",
+ "shortlist": [
+  [
+   "phys-uniform-circular-motion",
+   0.301
+  ],
+  [
+   "phys-projectile-motion",
+   0.295
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00673,
+  "check": 0.00738
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the constant-acceleration equations of motion; uniform circular motion and projectile motion are different ideas, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Equations of motion",
+  "card": [
+   "The equations apply only when acceleration is constant along a straight line. The symbols are u (initial velocity), v (final velocity), a (acceleration), t (time) and s (displacement).",
+   "v = u + at links final velocity, initial velocity, acceleration and time. It has no s in it.",
+   "s = ut + ½at² links displacement, initial velocity, acceleration and time. It has no v in it.",
+   "Pick the equation that holds the three quantities you know and the one you want. Take one direction as positive and give signs to match."
+  ],
+  "remember": "Constant acceleration only. Choose the equation that leaves out the quantity you do not need.",
+  "a": {
+   "q": "A trolley starts from rest and accelerates at 3 m/s² for 4 s. What is its final velocity?",
+   "opts": [
+    "12 m/s",
+    "7 m/s",
+    "24 m/s",
+    "0.75 m/s"
+   ],
+   "why": "Use v = u + at, so v = 0 + 3 × 4 = 12 m/s. Adding 3 and 4 to get 7 mixes up the quantities, as acceleration is multiplied by time.",
+   "clue": "Rest means u is 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "A car moving at 10 m/s accelerates at 2 m/s² for 5 s. How far does it travel in this time?",
+   "opts": [
+    "75 m",
+    "50 m",
+    "25 m",
+    "60 m"
+   ],
+   "why": "Use s = ut + ½at²: s = 10 × 5 + ½ × 2 × 25 = 50 + 25 = 75 m. Giving 50 m leaves out the extra distance gained from accelerating.",
+   "clue": "You need the equation with s, u, a and t, and no v."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12 m/s",
+   "also_right": []
+  },
+  "b": {
+   "best": "75 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: v = 0 + 3 × 4 = 12 m/s, and s = 10 × 5 + ½ × 2 × 5² = 75 m."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Equations of motion",
+  "card": [
+   "The equations apply only when acceleration is constant along a straight line. The symbols are u (initial velocity), v (final velocity), a (acceleration), t (time) and s (displacement).",
+   "v = u + at links final velocity, initial velocity, acceleration and time. It has no s in it.",
+   "s = ut + ½at² links displacement, initial velocity, acceleration and time. It has no v in it.",
+   "Pick the equation that holds the three quantities you know and the one you want. Take one direction as positive and give signs to match."
+  ],
+  "remember": "Constant acceleration only. Choose the equation that leaves out the quantity you do not need.",
+  "a": {
+   "q": "A trolley starts from rest and accelerates at 3 m/s² for 4 s. What is its final velocity?",
+   "opts": [
+    "12 m/s",
+    "7 m/s",
+    "24 m/s",
+    "0.75 m/s"
+   ],
+   "why": "Use v = u + at, so v = 0 + 3 × 4 = 12 m/s. Adding 3 and 4 to get 7 mixes up the quantities, as acceleration is multiplied by time.",
+   "clue": "Rest means u is 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "A car moving at 10 m/s accelerates at 2 m/s² for 5 s. How far does it travel in this time?",
+   "opts": [
+    "75 m",
+    "50 m",
+    "25 m",
+    "60 m"
+   ],
+   "why": "Use s = ut + ½at²: s = 10 × 5 + ½ × 2 × 25 = 50 + 25 = 75 m. Giving 50 m leaves out the extra distance gained from accelerating.",
+   "clue": "You need the equation with s, u, a and t, and no v."
+  }
+ },
+ "cleared_by": "checker"
+}

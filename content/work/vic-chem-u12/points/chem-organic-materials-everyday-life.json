@@ -1,0 +1,198 @@
+{
+ "id": "chem-organic-materials-everyday-life",
+ "title": "Organic materials in everyday life",
+ "brief": "7126d2f23a21",
+ "shortlist": [
+  [
+   "chem-chemical-tests-organic-compounds",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00447,
+  "check": 0.01066,
+  "fix": 0.01498
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches chemical tests for identifying functional groups, which is a different idea from the broad introduction to organic materials in everyday life that this point needs, and it is written for a Year 12 NSW course.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Organic materials in everyday life",
+  "card": [
+   "Organic compounds are built around carbon atoms, usually joined to hydrogen and often to oxygen, nitrogen or other elements. Many everyday materials are made of them.",
+   "Fabrics such as cotton, wool and nylon are organic. So are foods such as sugars, fats and proteins.",
+   "Many medicines, cosmetics and pesticides are organic compounds. Some come from living things and some are made in a laboratory.",
+   "Many parts of a car are organic too, such as tyres, seat fabric, paint and the plastic dashboard. Not every part is, because the metal body and the glass are not organic."
+  ],
+  "remember": "Organic compounds are in many things we wear, eat, use and drive.",
+  "a": {
+   "q": "Which of these everyday materials is made mainly of organic compounds?",
+   "opts": [
+    "A cotton shirt",
+    "A window pane of glass",
+    "A steel car body",
+    "A table salt crystal"
+   ],
+   "why": "Cotton is made of carbon-based compounds, so it is organic. Glass and salt are not built around carbon, and a steel body is mostly metal, so these are not organic.",
+   "clue": "Which one is built around carbon compounds from a plant?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ali's family car has the parts listed below. Which part is not made of organic compounds?",
+   "opts": [
+    "The steel engine block",
+    "The rubber tyres",
+    "The painted dashboard trim",
+    "The fabric seat covers"
+   ],
+   "why": "Steel is a metal, so it is not made of organic compounds. Rubber, paint and fabric are all organic. The tempting choice is the paint, but paint is made of organic compounds.",
+   "clue": "Think about which part is a metal."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A cotton shirt",
+   "also_right": []
+  },
+  "b": {
+   "best": "The steel engine block",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'built around carbon compounds from a plant' gives the answer away. Cotton is the only option that comes from a plant, so a student can pick it without knowing what makes a compound organic."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about which part is a metal' gives the answer away. Steel is the only metal listed, so the student only needs to spot the metal, not understand organic compounds."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct: cotton for (a) and the steel engine block for (b). Both clues all but name the right option, so they should be reworded to hint at the idea without giving the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'built around carbon compounds from a plant' gives the answer away. Cotton is the only option that comes from a plant, so a student can pick it without knowing what makes a compound organic.",
+  "Question b, other: The clue 'Think about which part is a metal' gives the answer away. Steel is the only metal listed, so the student only needs to spot the metal, not understand organic compounds."
+ ],
+ "proposal": {
+  "title": "Organic materials in everyday life",
+  "card": [
+   "Organic compounds are built around carbon atoms, usually joined to hydrogen and often to oxygen, nitrogen or other elements. Many everyday materials are made of them.",
+   "Fabrics such as cotton, wool and nylon are organic. So are foods such as sugars, fats and proteins.",
+   "Many medicines, cosmetics and pesticides are organic compounds. Some come from living things and some are made in a laboratory.",
+   "Many parts of a car are organic too, such as tyres, seat fabric, paint and the plastic dashboard. Not every part is: metal parts, such as the body and engine, and the glass are not organic."
+  ],
+  "remember": "Organic compounds are in many things we wear, eat, use and drive.",
+  "a": {
+   "q": "Which of these everyday materials is made mainly of organic compounds?",
+   "opts": [
+    "A cotton shirt",
+    "A window pane of glass",
+    "A steel car body",
+    "A table salt crystal"
+   ],
+   "why": "Cotton is made of compounds built around carbon joined to hydrogen and oxygen, so it is organic. Glass and salt are not built around carbon, and a steel body is mostly metal, so these are not organic.",
+   "clue": "Which material is built from carbon joined to hydrogen?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ali's family car has the parts listed below. Which part is not made of organic compounds?",
+   "opts": [
+    "The steel engine block",
+    "The rubber tyres",
+    "The painted dashboard trim",
+    "The fabric seat covers"
+   ],
+   "why": "Steel is a metal, and the card lists metal parts as not organic. Rubber, paint and fabric are all made of organic compounds. The tempting choice is the paint, but paint is organic too.",
+   "clue": "Check which kinds of car parts the card says are not organic."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'built around carbon compounds from a plant' gives the answer away. Cotton is the only option that comes from a plant, so a student can pick it without knowing what makes a compound organic."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Think about which part is a metal' gives the answer away. Steel is the only metal listed, so the student only needs to spot the metal, not understand organic compounds."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'built around carbon compounds from a plant' gives the answer away. Cotton is the only option that comes from a plant, so a student can pick it without knowing what makes a compound organic.",
+   "Question b, other: The clue 'Think about which part is a metal' gives the answer away. Steel is the only metal listed, so the student only needs to spot the metal, not understand organic compounds."
+  ]
+ },
+ "final": {
+  "title": "Organic materials in everyday life",
+  "card": [
+   "Organic compounds are built around carbon atoms, usually joined to hydrogen and often to oxygen, nitrogen or other elements. Many everyday materials are made of them.",
+   "Fabrics such as cotton, wool and nylon are organic. So are foods such as sugars, fats and proteins.",
+   "Many medicines, cosmetics and pesticides are organic compounds. Some come from living things and some are made in a laboratory.",
+   "Many parts of a car are organic too, such as tyres, seat fabric, paint and the plastic dashboard. Not every part is: metal parts, such as the body and engine, and the glass are not organic."
+  ],
+  "remember": "Organic compounds are in many things we wear, eat, use and drive.",
+  "a": {
+   "q": "Which of these everyday materials is made mainly of organic compounds?",
+   "opts": [
+    "A cotton shirt",
+    "A window pane of glass",
+    "A steel car body",
+    "A table salt crystal"
+   ],
+   "why": "Cotton is made of compounds built around carbon joined to hydrogen and oxygen, so it is organic. Glass and salt are not built around carbon, and a steel body is mostly metal, so these are not organic.",
+   "clue": "Which material is built from carbon joined to hydrogen?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ali's family car has the parts listed below. Which part is not made of organic compounds?",
+   "opts": [
+    "The steel engine block",
+    "The rubber tyres",
+    "The painted dashboard trim",
+    "The fabric seat covers"
+   ],
+   "why": "Steel is a metal, and the card lists metal parts as not organic. Rubber, paint and fabric are all made of organic compounds. The tempting choice is the paint, but paint is organic too.",
+   "clue": "Check which kinds of car parts the card says are not organic."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,231 @@
+{
+ "id": "mat-transforming-data-linearity",
+ "title": "Transforming data to linearity",
+ "brief": "f445ca6f1c2c",
+ "shortlist": [
+  [
+   "mat-logarithm-laws",
+   0.266
+  ],
+  [
+   "mat-linear-models",
+   0.248
+  ],
+  [
+   "mat-change-base",
+   0.207
+  ],
+  [
+   "mat-types-data",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00586,
+  "check": 0.0122,
+  "fix": 0.02125,
+  "recheck": 0.00997
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches plotting a transformed variable (x squared, 1/x or log x) to straighten a curved pattern; the logarithm, linear model, change of base and data type points cover related ideas but not this one.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Transforming data to linearity",
+  "card": [
+   "Some data curves when y is plotted against x. We can change x to a new variable and plot again. If the new graph is a straight line, the transformation suits the data.",
+   "Common transformations are x², 1/x and log x. A curve like y = kx² becomes a straight line when y is plotted against x².",
+   "A curve like y = k/x becomes a straight line when y is plotted against 1/x. The line passes through the origin and its gradient is k.",
+   "Example: x = 1, 2, 3 and y = 3, 12, 27. Then x² = 1, 4, 9. Each y ÷ x² equals 3, so y against x² is a straight line with gradient 3."
+  ],
+  "remember": "Choose the transformation that makes the plot a straight line.",
+  "a": {
+   "q": "Data follow y = 5x². Which plot gives a straight line?",
+   "opts": [
+    "y against x²",
+    "y against 1/x",
+    "y against x",
+    "x against y²"
+   ],
+   "why": "Since y = 5 × x², y is proportional to x², so y against x² is a line with gradient 5. Plotting y against x gives a curve, which is the tempting option.",
+   "clue": "Which form of x appears in the rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A table shows x = 1, 2, 4 and y = 12, 6, 3. Which plot gives a straight line, and with what gradient?",
+   "opts": [
+    "y against 1/x, gradient 12",
+    "y against 1/x, gradient 3",
+    "y against x², gradient 12",
+    "y against x², gradient 3"
+   ],
+   "why": "Here x × y = 12 each time, so y = 12/x. Plotting y against 1/x gives a straight line with gradient 12. The gradient is not 3, which is just the last y value.",
+   "clue": "Check whether x × y is constant."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "y against x²",
+   "also_right": []
+  },
+  "b": {
+   "best": "y against 1/x, gradient 12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card explains that the transformed line's gradient is k (for y = k/x, and gradient 3 in the example). Reading k from the transformed straight line is point 3's idea (Modelling non-linear data), so it should only be mentioned here."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b asks for the gradient, which is k. Finding k from the transformed line belongs to point 3, so this tests another point's idea rather than only choosing the transformation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both intended answers are correct. However, the card and question b teach and test reading k from the gradient of the transformed line, which belongs to point 3 (Modelling non-linear data)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card explains that the transformed line's gradient is k (for y = k/x, and gradient 3 in the example). Reading k from the transformed straight line is point 3's idea (Modelling non-linear data), so it should only be mentioned here.",
+  "Question b, other: Question b asks for the gradient, which is k. Finding k from the transformed line belongs to point 3, so this tests another point's idea rather than only choosing the transformation."
+ ],
+ "proposal": {
+  "title": "Transforming data to linearity",
+  "card": [
+   "Some data form a curve when y is plotted against x. We can replace x with a transformed value, such as x², and plot again. If the new plot is a straight line, the transformation suits the data.",
+   "Use x² when y rises more and more steeply, as in y = kx². Use log x when y rises quickly at first, then levels off.",
+   "Use 1/x when y falls quickly and then levels off, as in y = k/x. Plotting y against 1/x then gives a straight line.",
+   "Example: x = 1, 2, 3 and y = 3, 12, 27. Then x² = 1, 4, 9, and each y ÷ x² is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
+  ],
+  "remember": "Match the shape: x² for steepening rises, log x for rises that level off, 1/x for falls that level off.",
+  "a": {
+   "q": "Data follow the rule y = 5x². Which plot gives a straight line?",
+   "opts": [
+    "y against x²",
+    "y against 1/x",
+    "y against log x",
+    "y against x"
+   ],
+   "why": "Since y = 5 × x², each y is 5 times its x² value, so y against x² gives a straight line. Plotting y against x gives a curve that rises more and more steeply, so it is not a line.",
+   "clue": "Which form of x appears in the rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A table shows x = 1, 2, 4 and y = 12, 6, 3. Which plot gives a straight line?",
+   "opts": [
+    "y against 1/x",
+    "y against log x",
+    "y against x²",
+    "y against x"
+   ],
+   "why": "As x grows, y falls quickly and then levels off, which suits 1/x. The 1/x values are 1, 0.5 and 0.25, and each y is 12 times its 1/x value, so the points lie on a line. Log x is tempting because the data level off, but it suits data that rise, not fall.",
+   "clue": "Is y rising or falling as x grows?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "y against x²",
+    "also_right": []
+   },
+   "b": {
+    "best": "y against 1/x",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: y = 5x² is linear against x², and the table follows y = 12/x, which is linear against 1/x."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card explains that the transformed line's gradient is k (for y = k/x, and gradient 3 in the example). Reading k from the transformed straight line is point 3's idea (Modelling non-linear data), so it should only be mentioned here."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b asks for the gradient, which is k. Finding k from the transformed line belongs to point 3, so this tests another point's idea rather than only choosing the transformation."
+   }
+  ],
+  "flags": [
+   "Card, other: The card explains that the transformed line's gradient is k (for y = k/x, and gradient 3 in the example). Reading k from the transformed straight line is point 3's idea (Modelling non-linear data), so it should only be mentioned here.",
+   "Question b, other: Question b asks for the gradient, which is k. Finding k from the transformed line belongs to point 3, so this tests another point's idea rather than only choosing the transformation."
+  ]
+ },
+ "final": {
+  "title": "Transforming data to linearity",
+  "card": [
+   "Some data form a curve when y is plotted against x. We can replace x with a transformed value, such as x², and plot again. If the new plot is a straight line, the transformation suits the data.",
+   "Use x² when y rises more and more steeply, as in y = kx². Use log x when y rises quickly at first, then levels off.",
+   "Use 1/x when y falls quickly and then levels off, as in y = k/x. Plotting y against 1/x then gives a straight line.",
+   "Example: x = 1, 2, 3 and y = 3, 12, 27. Then x² = 1, 4, 9, and each y ÷ x² is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
+  ],
+  "remember": "Match the shape: x² for steepening rises, log x for rises that level off, 1/x for falls that level off.",
+  "a": {
+   "q": "Data follow the rule y = 5x². Which plot gives a straight line?",
+   "opts": [
+    "y against x²",
+    "y against 1/x",
+    "y against log x",
+    "y against x"
+   ],
+   "why": "Since y = 5 × x², each y is 5 times its x² value, so y against x² gives a straight line. Plotting y against x gives a curve that rises more and more steeply, so it is not a line.",
+   "clue": "Which form of x appears in the rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A table shows x = 1, 2, 4 and y = 12, 6, 3. Which plot gives a straight line?",
+   "opts": [
+    "y against 1/x",
+    "y against log x",
+    "y against x²",
+    "y against x"
+   ],
+   "why": "As x grows, y falls quickly and then levels off, which suits 1/x. The 1/x values are 1, 0.5 and 0.25, and each y is 12 times its 1/x value, so the points lie on a line. Log x is tempting because the data level off, but it suits data that rise, not fall.",
+   "clue": "Is y rising or falling as x grows?"
+  }
+ },
+ "cleared_by": "recheck"
+}

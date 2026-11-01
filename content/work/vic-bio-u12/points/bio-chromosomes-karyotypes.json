@@ -1,0 +1,209 @@
+{
+ "id": "bio-chromosomes-karyotypes",
+ "title": "Chromosomes and karyotypes",
+ "brief": "89a160a47c1b",
+ "shortlist": [
+  [
+   "bio-meiosis",
+   0.361
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00497,
+  "check": 0.01246,
+  "fix": 0.02785,
+  "recheck": 0.00909
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers meiosis, the cell division that makes gametes, while the new point teaches chromosome structure and karyotypes, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Chromosomes and karyotypes",
+  "card": [
+   "In a cell's nucleus, DNA is wound around proteins and coiled tightly into structures called chromosomes. This packing lets a very long DNA molecule fit inside a tiny nucleus.",
+   "Human body cells have 46 chromosomes. They come in 23 matching pairs, and in each pair one chromosome came from the mother and one from the father.",
+   "A karyotype is a picture of the chromosomes from one cell. The chromosomes are arranged in their pairs, from largest to smallest.",
+   "A karyotype can show the number of chromosomes and their size. If a cell has an extra or missing chromosome, the karyotype can show it."
+  ],
+  "remember": "Chromosomes are packed DNA in matching pairs. A karyotype lays them out by size so they can be counted and compared.",
+  "a": {
+   "q": "What does a karyotype show?",
+   "opts": [
+    "A cell's chromosomes arranged in pairs by size",
+    "The order of bases along one gene",
+    "The proteins made by a cell's genes",
+    "The alleles a person passes to their children"
+   ],
+   "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It does not show the base order of a gene, because chromosomes are too large a unit for that. It also does not show which proteins are made.",
+   "clue": "Think of a picture that sorts whole chromosomes, not parts of genes."
+  },
+  "b": {
+   "d": 2,
+   "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
+   "opts": [
+    "The cell has one chromosome more than usual",
+    "The cell has one pair more than usual",
+    "The cell has one gene more than usual",
+    "The cell has one allele more than usual"
+   ],
+   "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
+   "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A cell's chromosomes arranged in pairs by size",
+   "also_right": []
+  },
+  "b": {
+   "best": "The cell has one chromosome more than usual",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says human body cells have '23 matching pairs'. In males the sex chromosomes (X and Y) do not match, so not all 23 pairs are matching. Saying 'pairs' without 'matching', or 'mostly matching pairs', would avoid teaching something false without going into point 3."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are sound. One small inaccuracy: the card calls all 23 human chromosome pairs 'matching', but in males X and Y are not."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says human body cells have '23 matching pairs'. In males the sex chromosomes (X and Y) do not match, so not all 23 pairs are matching. Saying 'pairs' without 'matching', or 'mostly matching pairs', would avoid teaching something false without going into point 3."
+ ],
+ "proposal": {
+  "title": "Chromosomes and karyotypes",
+  "card": [
+   "In a cell's nucleus, DNA is wound around proteins and coiled tightly into structures called chromosomes. This packing lets a very long DNA molecule fit inside a tiny nucleus.",
+   "Human body cells have 46 chromosomes, in 23 pairs. In each pair, one chromosome came from the mother and one from the father.",
+   "A karyotype is a picture of the chromosomes from one cell. The chromosomes are arranged in their pairs, roughly from largest to smallest.",
+   "A karyotype shows the number and size of whole chromosomes, not the genes or bases within them. If a cell has an extra or missing chromosome, the karyotype can show it."
+  ],
+  "remember": "Chromosomes are packed DNA, found in pairs. A karyotype lays them out by size so they can be counted and compared.",
+  "a": {
+   "q": "What does a karyotype show?",
+   "opts": [
+    "A cell's chromosomes arranged in pairs by size",
+    "The order of bases along one gene",
+    "The proteins made by a cell's genes",
+    "The alleles a person passes to their children"
+   ],
+   "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It shows whole chromosomes, so it cannot show the base order of a gene or which alleles are passed on. It also does not show which proteins are made.",
+   "clue": "Think of a picture that sorts whole chromosomes, not parts of genes."
+  },
+  "b": {
+   "d": 2,
+   "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
+   "opts": [
+    "The cell has one chromosome more than usual",
+    "The cell has one pair more than usual",
+    "The cell has one gene more than usual",
+    "The cell has one allele more than usual"
+   ],
+   "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
+   "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A cell's chromosomes arranged in pairs by size",
+    "also_right": []
+   },
+   "b": {
+    "best": "The cell has one chromosome more than usual",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says human body cells have '23 matching pairs'. In males the sex chromosomes (X and Y) do not match, so not all 23 pairs are matching. Saying 'pairs' without 'matching', or 'mostly matching pairs', would avoid teaching something false without going into point 3."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says human body cells have '23 matching pairs'. In males the sex chromosomes (X and Y) do not match, so not all 23 pairs are matching. Saying 'pairs' without 'matching', or 'mostly matching pairs', would avoid teaching something false without going into point 3."
+  ]
+ },
+ "final": {
+  "title": "Chromosomes and karyotypes",
+  "card": [
+   "In a cell's nucleus, DNA is wound around proteins and coiled tightly into structures called chromosomes. This packing lets a very long DNA molecule fit inside a tiny nucleus.",
+   "Human body cells have 46 chromosomes, in 23 pairs. In each pair, one chromosome came from the mother and one from the father.",
+   "A karyotype is a picture of the chromosomes from one cell. The chromosomes are arranged in their pairs, roughly from largest to smallest.",
+   "A karyotype shows the number and size of whole chromosomes, not the genes or bases within them. If a cell has an extra or missing chromosome, the karyotype can show it."
+  ],
+  "remember": "Chromosomes are packed DNA, found in pairs. A karyotype lays them out by size so they can be counted and compared.",
+  "a": {
+   "q": "What does a karyotype show?",
+   "opts": [
+    "A cell's chromosomes arranged in pairs by size",
+    "The order of bases along one gene",
+    "The proteins made by a cell's genes",
+    "The alleles a person passes to their children"
+   ],
+   "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It shows whole chromosomes, so it cannot show the base order of a gene or which alleles are passed on. It also does not show which proteins are made.",
+   "clue": "Think of a picture that sorts whole chromosomes, not parts of genes."
+  },
+  "b": {
+   "d": 2,
+   "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
+   "opts": [
+    "The cell has one chromosome more than usual",
+    "The cell has one pair more than usual",
+    "The cell has one gene more than usual",
+    "The cell has one allele more than usual"
+   ],
+   "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
+   "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,207 @@
+{
+ "id": "mat-imaginary-unit",
+ "title": "The imaginary unit",
+ "brief": "9b27090a8791",
+ "shortlist": [
+  [
+   "mat-discriminant",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00553,
+  "check": 0.00984,
+  "fix": 0.0245,
+  "recheck": 0.00688
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the discriminant and the number of real roots of a quadratic, not the imaginary unit i or square roots of negative numbers, so no bank point covers this idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The imaginary unit",
+  "card": [
+   "No real number squares to give a negative answer. So we define a new number i with i² = −1.",
+   "Square roots of negative numbers can now be written using i. Split the root: √−9 = √9 × √−1 = 3i.",
+   "Powers of i repeat in a cycle of four: i¹ = i, i² = −1, i³ = −i, i⁴ = 1. Then i⁵ = i again.",
+   "Example: √−25 = 5i, and (5i)² = 25 × i² = −25."
+  ],
+  "remember": "i² = −1, so √−n = √n × i for n > 0.",
+  "a": {
+   "q": "Which expression equals √−16?",
+   "opts": [
+    "4i",
+    "−4i",
+    "4",
+    "−4"
+   ],
+   "why": "√−16 = √16 × √−1 = 4i. The option 4 ignores the negative sign, but 4² = 16, not −16.",
+   "clue": "Split the root into √16 and √−1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of i³ × i⁴?",
+   "opts": [
+    "−i",
+    "i",
+    "1",
+    "−1"
+   ],
+   "why": "i³ = −i and i⁴ = 1, so the product is −i × 1 = −i. Adding the powers gives i⁷, which is also −i, since i⁷ = i⁴ × i³. Taking i³ as i is a common slip.",
+   "clue": "Write each power as a simple value first, using the cycle of four."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4i",
+   "also_right": []
+  },
+  "b": {
+   "best": "−i",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "−4i also squares to −16, and the card's own check ((5i)² = −25) invites students to test by squaring. Neither the card nor the why says that √ means the principal root (4i), so a student may wonder why −4i is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct: 4i and −i. One small issue: nothing explains why −4i is not √−16 even though it also squares to −16, so a note on the principal root would help."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: −4i also squares to −16, and the card's own check ((5i)² = −25) invites students to test by squaring. Neither the card nor the why says that √ means the principal root (4i), so a student may wonder why −4i is wrong."
+ ],
+ "proposal": {
+  "title": "The imaginary unit",
+  "card": [
+   "No real number squares to give a negative answer. So we define a new number i with i² = −1.",
+   "Square roots of negative numbers can now be written using i. Split the root: √−9 = √9 × √−1 = 3i. Check: (3i)² = 9 × i² = −9.",
+   "Both 3i and −3i square to −9. The √ sign means the root 3i, just as √9 means 3 and not −3.",
+   "Powers of i repeat in a cycle of four: i¹ = i, i² = −1, i³ = −i, i⁴ = 1. Then i⁵ = i again."
+  ],
+  "remember": "i² = −1, so √−n = √n × i for n > 0.",
+  "a": {
+   "q": "Which expression equals √−16?",
+   "opts": [
+    "4i",
+    "−4i",
+    "4",
+    "−4"
+   ],
+   "why": "√−16 = √16 × √−1 = 4i. The option −4i also squares to −16, but the √ sign means the root 4i, just as √16 means 4. The option 4 ignores the negative sign, since 4² = 16, not −16.",
+   "clue": "Split the root into √16 and √−1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of i³ × i⁴?",
+   "opts": [
+    "−i",
+    "i",
+    "1",
+    "−1"
+   ],
+   "why": "i³ = −i and i⁴ = 1, so the product is −i × 1 = −i. Adding the powers gives i⁷, which is also −i, since i⁷ = i⁴ × i³. Taking i³ as i is a common slip.",
+   "clue": "Write each power as a simple value first, using the cycle of four."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "4i",
+    "also_right": []
+   },
+   "b": {
+    "best": "−i",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 19,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "−4i also squares to −16, and the card's own check ((5i)² = −25) invites students to test by squaring. Neither the card nor the why says that √ means the principal root (4i), so a student may wonder why −4i is wrong."
+   }
+  ],
+  "flags": [
+   "Question a, wording: −4i also squares to −16, and the card's own check ((5i)² = −25) invites students to test by squaring. Neither the card nor the why says that √ means the principal root (4i), so a student may wonder why −4i is wrong."
+  ]
+ },
+ "final": {
+  "title": "The imaginary unit",
+  "card": [
+   "No real number squares to give a negative answer. So we define a new number i with i² = −1.",
+   "Square roots of negative numbers can now be written using i. Split the root: √−9 = √9 × √−1 = 3i. Check: (3i)² = 9 × i² = −9.",
+   "Both 3i and −3i square to −9. The √ sign means the root 3i, just as √9 means 3 and not −3.",
+   "Powers of i repeat in a cycle of four: i¹ = i, i² = −1, i³ = −i, i⁴ = 1. Then i⁵ = i again."
+  ],
+  "remember": "i² = −1, so √−n = √n × i for n > 0.",
+  "a": {
+   "q": "Which expression equals √−16?",
+   "opts": [
+    "4i",
+    "−4i",
+    "4",
+    "−4"
+   ],
+   "why": "√−16 = √16 × √−1 = 4i. The option −4i also squares to −16, but the √ sign means the root 4i, just as √16 means 4. The option 4 ignores the negative sign, since 4² = 16, not −16.",
+   "clue": "Split the root into √16 and √−1."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of i³ × i⁴?",
+   "opts": [
+    "−i",
+    "i",
+    "1",
+    "−1"
+   ],
+   "why": "i³ = −i and i⁴ = 1, so the product is −i × 1 = −i. Adding the powers gives i⁷, which is also −i, since i⁷ = i⁴ × i³. Taking i³ as i is a common slip.",
+   "clue": "Write each power as a simple value first, using the cycle of four."
+  }
+ },
+ "cleared_by": "recheck"
+}

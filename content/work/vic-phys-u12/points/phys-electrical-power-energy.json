@@ -1,0 +1,120 @@
+{
+ "id": "phys-electrical-power-energy",
+ "title": "Electrical power and energy",
+ "brief": "0e1e6f5504f4",
+ "shortlist": [
+  [
+   "mat-energy-power",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00437,
+  "check": 0.00699
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers energy as power times time and billing in kWh, but it does not teach P = VI, which the new point requires, so adapting it would need a new step and it is a different scope from the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Electrical power and energy",
+  "card": [
+   "Electrical power is the rate at which a device transfers energy. P = VI, where P is in watts (W), V is in volts (V) and I is in amperes (A).",
+   "Energy transferred = power × time, or E = Pt. With P in watts and t in seconds, E is in joules (J). One watt is one joule per second.",
+   "Electricity bills use the kilowatt-hour (kWh). It is the energy used by a 1 kW device running for 1 hour.",
+   "To find kWh, change power to kilowatts and time to hours, then multiply. 1 kWh = 3.6 million joules."
+  ],
+  "remember": "Power is VI. Energy is power × time, and a kWh is 1 kW for 1 hour.",
+  "a": {
+   "q": "A heater runs from a 240 V supply and draws a current of 5.0 A. What is its power?",
+   "opts": [
+    "1200 W",
+    "48 W",
+    "245 W",
+    "0.021 W"
+   ],
+   "why": "P = VI = 240 × 5.0 = 1200 W. Dividing V by I gives 48, which is a resistance in ohms, not a power.",
+   "clue": "Multiply the voltage by the current."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a 2000 W fan heater for 3 hours. How much energy does she use, as billed?",
+   "opts": [
+    "6 kWh",
+    "6000 kWh",
+    "0.67 kWh",
+    "2 kWh"
+   ],
+   "why": "Change 2000 W to 2 kW, then E = 2 × 3 = 6 kWh. Leaving the power in watts gives 6000, which is in watt-hours, not kilowatt-hours.",
+   "clue": "Change watts to kilowatts before multiplying by hours."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1200 W",
+   "also_right": []
+  },
+  "b": {
+   "best": "6 kWh",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Electrical power and energy",
+  "card": [
+   "Electrical power is the rate at which a device transfers energy. P = VI, where P is in watts (W), V is in volts (V) and I is in amperes (A).",
+   "Energy transferred = power × time, or E = Pt. With P in watts and t in seconds, E is in joules (J). One watt is one joule per second.",
+   "Electricity bills use the kilowatt-hour (kWh). It is the energy used by a 1 kW device running for 1 hour.",
+   "To find kWh, change power to kilowatts and time to hours, then multiply. 1 kWh = 3.6 million joules."
+  ],
+  "remember": "Power is VI. Energy is power × time, and a kWh is 1 kW for 1 hour.",
+  "a": {
+   "q": "A heater runs from a 240 V supply and draws a current of 5.0 A. What is its power?",
+   "opts": [
+    "1200 W",
+    "48 W",
+    "245 W",
+    "0.021 W"
+   ],
+   "why": "P = VI = 240 × 5.0 = 1200 W. Dividing V by I gives 48, which is a resistance in ohms, not a power.",
+   "clue": "Multiply the voltage by the current."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a 2000 W fan heater for 3 hours. How much energy does she use, as billed?",
+   "opts": [
+    "6 kWh",
+    "6000 kWh",
+    "0.67 kWh",
+    "2 kWh"
+   ],
+   "why": "Change 2000 W to 2 kW, then E = 2 × 3 = 6 kWh. Leaving the power in watts gives 6000, which is in watt-hours, not kilowatt-hours.",
+   "clue": "Change watts to kilowatts before multiplying by hours."
+  }
+ },
+ "cleared_by": "checker"
+}

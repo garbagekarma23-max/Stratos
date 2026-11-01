@@ -1,0 +1,155 @@
+{
+ "id": "mat-independent-events-2",
+ "title": "Independent events",
+ "brief": "f5d4cf207163",
+ "shortlist": [
+  [
+   "mat-independent-events",
+   0.909
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-independent-events, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:07Z match: Claude Opus 5.5 says adapt mat-independent-events (1 change)",
+  "2026-11-01T08:24:33Z adapt: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "confirm": 0.00334,
+  "adapt": 0.00635,
+  "check": 0.00938
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-independent-events",
+  "changes": [
+   "Change the notation from P(...) to Pr(...) to match the VCE Mathematical Methods study design and the new point's brief.",
+   "Check that the examples and the Year 11 depth suit Victorian Mathematical Methods Units 1 and 2, since the card was written for the NSW Year 11 course."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same independence rule at a suitable Year 11 depth, and it needs only a notation change from P to Pr and a check of its examples for Victorian Methods.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-independent-events",
+  "changes": [
+   "Change the probability notation from P(...) to Pr(...) throughout the card, remember line and both questions, as the VCE Study Design uses Pr."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same multiplication test for independence at a Year 11 depth, but it should use the Pr(A) notation that VCE Mathematical Methods uses.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-independent-events",
+  "changes": [
+   "Change the probability notation from P(...) to Pr(...) throughout the card, remember line and both questions, as the VCE Study Design uses Pr."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Independent events",
+  "card": [
+   "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
+   "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
+   "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
+   "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+  ],
+  "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+  "a": {
+   "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+   "opts": [
+    "0.2",
+    "0.9",
+    "0.1",
+    "0.8"
+   ],
+   "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+   "clue": "Both events happen, and the events are independent."
+  },
+  "b": {
+   "d": 3,
+   "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+   "opts": [
+    "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+    "Independent, as 0.3 is between 0 and 1",
+    "Independent, as 0.5 + 0.4 is more than 0.3",
+    "Not independent, as 0.3 is less than Pr(A)"
+   ],
+   "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+   "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.2",
+   "also_right": []
+  },
+  "b": {
+   "best": "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Independent events",
+  "card": [
+   "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
+   "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
+   "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
+   "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+  ],
+  "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+  "a": {
+   "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+   "opts": [
+    "0.2",
+    "0.9",
+    "0.1",
+    "0.8"
+   ],
+   "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+   "clue": "Both events happen, and the events are independent."
+  },
+  "b": {
+   "d": 3,
+   "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+   "opts": [
+    "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+    "Independent, as 0.3 is between 0 and 1",
+    "Independent, as 0.5 + 0.4 is more than 0.3",
+    "Not independent, as 0.3 is less than Pr(A)"
+   ],
+   "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+   "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+  }
+ },
+ "cleared_by": "checker"
+}

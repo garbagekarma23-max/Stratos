@@ -1,0 +1,219 @@
+{
+ "id": "phys-voltage-dividers",
+ "title": "Voltage dividers",
+ "brief": "606188bd13c9",
+ "shortlist": [
+  [
+   "phys-transformers",
+   0.301
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:34Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00689,
+  "check": 0.01239,
+  "fix": 0.0188,
+  "recheck": 0.0078
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point on transformers teaches turns ratios and induction, which is a different idea from voltage division across series resistors, so no bank point matches the voltage divider point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Voltage dividers",
+  "card": [
+   "A voltage divider is two resistors in series across a supply. The supply voltage is shared between them.",
+   "The same current flows through both resistors. A larger resistance has a larger share of the voltage, since V = IR.",
+   "The voltages split in the same ratio as the resistances. If R2 is twice R1, then R2 has twice the voltage of R1. The two voltages add up to the supply.",
+   "A sensor such as a thermistor or light-dependent resistor can be one of the two resistors. When its resistance changes, the voltage across each resistor changes."
+  ],
+  "remember": "In a voltage divider, the larger resistor gets the larger share of the supply voltage.",
+  "a": {
+   "q": "A 12 V supply is connected across a 1 kΩ resistor and a 3 kΩ resistor in series. What is the voltage across the 3 kΩ resistor?",
+   "opts": [
+    "9 V",
+    "4 V",
+    "6 V",
+    "3 V"
+   ],
+   "why": "The resistances are in the ratio 1 to 3, so the voltage is shared 1 to 3. The 3 kΩ resistor gets 3 parts out of 4, which is 9 V. 4 V is the share of the smaller resistor's partner mixed up.",
+   "clue": "Split the supply in the same ratio as the resistances."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden light circuit has a 6 V supply, a fixed resistor and a light-dependent resistor (LDR) in series. At dusk the LDR's resistance rises. What happens to the voltage across the LDR?",
+   "opts": [
+    "It rises, as the LDR takes a larger share",
+    "It falls, as less current flows through the LDR",
+    "It stays at 6 V, as the supply is fixed",
+    "It stays the same, as the current is the same"
+   ],
+   "why": "The same current flows through both, so the larger resistance takes a larger share of the supply. The LDR's voltage rises while the fixed resistor's voltage falls. The supply stays 6 V in total, but the split changes.",
+   "clue": "Which resistor is now larger, and what share does it get?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "9 V",
+   "also_right": []
+  },
+  "b": {
+   "best": "It rises, as the LDR takes a larger share",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why's sentence '4 V is the share of the smaller resistor's partner mixed up' is garbled and wrong. The smaller resistor's share is 3 V; 4 V comes from wrongly dividing 12 V by 3. The explanation of this distractor would confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue ('Which resistor is now larger') and the why ('the larger resistance takes a larger share') imply the LDR becomes larger than the fixed resistor, which the question never states. The LDR's voltage rises because its share of the total resistance grows, whichever resistor is larger. This reasoning could mislead students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers (9 V; the LDR's voltage rises) are correct and the card is accurate. The why for (a) garbles the explanation of the 4 V distractor. The clue and why for (b) wrongly imply the LDR must become the larger resistor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why's sentence '4 V is the share of the smaller resistor's partner mixed up' is garbled and wrong. The smaller resistor's share is 3 V; 4 V comes from wrongly dividing 12 V by 3. The explanation of this distractor would confuse students.",
+  "Question b, wording: The clue ('Which resistor is now larger') and the why ('the larger resistance takes a larger share') imply the LDR becomes larger than the fixed resistor, which the question never states. The LDR's voltage rises because its share of the total resistance grows, whichever resistor is larger. This reasoning could mislead students."
+ ],
+ "proposal": {
+  "title": "Voltage dividers",
+  "card": [
+   "A voltage divider is two resistors in series across a supply. The supply voltage is shared between them.",
+   "The same current flows through both resistors. A larger resistance has a larger share of the voltage, since V = IR.",
+   "The voltages split in the same ratio as the resistances. If R2 is twice R1, then R2 has twice the voltage of R1. The two voltages add up to the supply.",
+   "A sensor such as a thermistor or light-dependent resistor can be one of the two resistors. If its resistance rises, its share of the total resistance grows, so its share of the voltage grows too."
+  ],
+  "remember": "Each resistor's share of the supply voltage matches its share of the total resistance.",
+  "a": {
+   "q": "A 12 V supply is connected across a 1 kΩ resistor and a 3 kΩ resistor in series. What is the voltage across the 3 kΩ resistor?",
+   "opts": [
+    "9 V",
+    "4 V",
+    "6 V",
+    "3 V"
+   ],
+   "why": "The resistances are in the ratio 1 to 3, so the 3 kΩ resistor gets 3 parts out of 4, which is 9 V. 3 V is the share of the 1 kΩ resistor, and 4 V comes from wrongly dividing 12 V by 3.",
+   "clue": "Split the supply in the same ratio as the resistances."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden light circuit has a 6 V supply, a fixed resistor and a light-dependent resistor (LDR) in series. At dusk the LDR's resistance rises. What happens to the voltage across the LDR?",
+   "opts": [
+    "It rises, as the LDR takes a larger share",
+    "It falls, as less current flows through the LDR",
+    "It stays at 6 V, as the supply is fixed",
+    "It stays the same, as the current is the same"
+   ],
+   "why": "The LDR's share of the total resistance grows, so its share of the 6 V grows too, whichever resistor is larger. The current does fall, but the voltages still split in the ratio of the resistances. The fixed resistor's voltage falls as the LDR's rises.",
+   "clue": "How does the LDR's share of the total resistance change?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "9 V",
+    "also_right": []
+   },
+   "b": {
+    "best": "It rises, as the LDR takes a larger share",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why's sentence '4 V is the share of the smaller resistor's partner mixed up' is garbled and wrong. The smaller resistor's share is 3 V; 4 V comes from wrongly dividing 12 V by 3. The explanation of this distractor would confuse students."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue ('Which resistor is now larger') and the why ('the larger resistance takes a larger share') imply the LDR becomes larger than the fixed resistor, which the question never states. The LDR's voltage rises because its share of the total resistance grows, whichever resistor is larger. This reasoning could mislead students."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why's sentence '4 V is the share of the smaller resistor's partner mixed up' is garbled and wrong. The smaller resistor's share is 3 V; 4 V comes from wrongly dividing 12 V by 3. The explanation of this distractor would confuse students.",
+   "Question b, wording: The clue ('Which resistor is now larger') and the why ('the larger resistance takes a larger share') imply the LDR becomes larger than the fixed resistor, which the question never states. The LDR's voltage rises because its share of the total resistance grows, whichever resistor is larger. This reasoning could mislead students."
+  ]
+ },
+ "final": {
+  "title": "Voltage dividers",
+  "card": [
+   "A voltage divider is two resistors in series across a supply. The supply voltage is shared between them.",
+   "The same current flows through both resistors. A larger resistance has a larger share of the voltage, since V = IR.",
+   "The voltages split in the same ratio as the resistances. If R2 is twice R1, then R2 has twice the voltage of R1. The two voltages add up to the supply.",
+   "A sensor such as a thermistor or light-dependent resistor can be one of the two resistors. If its resistance rises, its share of the total resistance grows, so its share of the voltage grows too."
+  ],
+  "remember": "Each resistor's share of the supply voltage matches its share of the total resistance.",
+  "a": {
+   "q": "A 12 V supply is connected across a 1 kΩ resistor and a 3 kΩ resistor in series. What is the voltage across the 3 kΩ resistor?",
+   "opts": [
+    "9 V",
+    "4 V",
+    "6 V",
+    "3 V"
+   ],
+   "why": "The resistances are in the ratio 1 to 3, so the 3 kΩ resistor gets 3 parts out of 4, which is 9 V. 3 V is the share of the 1 kΩ resistor, and 4 V comes from wrongly dividing 12 V by 3.",
+   "clue": "Split the supply in the same ratio as the resistances."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's garden light circuit has a 6 V supply, a fixed resistor and a light-dependent resistor (LDR) in series. At dusk the LDR's resistance rises. What happens to the voltage across the LDR?",
+   "opts": [
+    "It rises, as the LDR takes a larger share",
+    "It falls, as less current flows through the LDR",
+    "It stays at 6 V, as the supply is fixed",
+    "It stays the same, as the current is the same"
+   ],
+   "why": "The LDR's share of the total resistance grows, so its share of the 6 V grows too, whichever resistor is larger. The current does fall, but the voltages still split in the ratio of the resistances. The fixed resistor's voltage falls as the LDR's rises.",
+   "clue": "How does the LDR's share of the total resistance change?"
+  }
+ },
+ "cleared_by": "recheck"
+}

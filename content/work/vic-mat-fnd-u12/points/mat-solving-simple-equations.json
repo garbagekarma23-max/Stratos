@@ -1,0 +1,249 @@
+{
+ "id": "mat-solving-simple-equations",
+ "title": "Solving simple equations",
+ "brief": "50b6a21213c9",
+ "shortlist": [
+  [
+   "mat-solving-linear-equations",
+   0.55
+  ],
+  [
+   "mat-writing-equations-from-words",
+   0.331
+  ],
+  [
+   "mat-changing-subject-formula",
+   0.27
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.221
+  ],
+  [
+   "mat-solving-exponential-equations",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-solving-linear-equations, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.00913,
+  "write": 0.00449,
+  "check": 0.00939,
+  "fix": 0.01386,
+  "recheck": 0.00525
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-solving-linear-equations",
+  "changes": [
+   "Keep the Victorian Foundation Mathematics wording and check that the course covers the bracket and fraction steps, since the brief only asks for undoing operations in reverse order.",
+   "Replace the Year 11 New South Wales framing with the Victorian course's own context, such as an everyday money or measurement example."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same reverse-order method for solving linear equations, but it goes further than the brief into brackets and fractions, so it needs small adjustments for this Victorian Foundation course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Solving linear equations, is broader: it also teaches brackets and fractions, and one of its questions needs brackets. This course's brief asks only for simple two-step equations like 3x + 5 = 20, so a new, narrower point fits better.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Solving simple equations",
+  "card": [
+   "An equation says two things are equal. Solving it means finding the value of the unknown, such as x, that makes it true.",
+   "To solve it, undo the operations on the unknown in reverse order. Whatever you do to one side, do to the other.",
+   "Example: 3x + 5 = 20. The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get 3x = 15.",
+   "Then undo the multiplying: divide both sides by 3 to get x = 5. Check by putting 5 back in: 3 × 5 + 5 = 20."
+  ],
+  "remember": "Undo the last operation first, do the same to both sides, then check.",
+  "a": {
+   "q": "Solve 2x + 7 = 19. What is x?",
+   "opts": [
+    "6",
+    "13",
+    "5",
+    "12"
+   ],
+   "why": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 7 = 19. The answer 13 comes from dividing 19 by 2 first and then subtracting, which undoes the steps in the wrong order.",
+   "clue": "Undo the adding before the multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives 12 + 8n = 60. How many classes has she attended?",
+   "opts": [
+    "6",
+    "9",
+    "5",
+    "7"
+   ],
+   "why": "Subtract 12 from both sides to get 8n = 48, then divide by 8 to get n = 6. Check: 12 + 8 × 6 = 60. The answer 9 comes from dividing 60 by 8 and rounding, which ignores the joining fee.",
+   "clue": "Take away the joining fee before dividing."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 13 comes from dividing 19 by 2 first and then subtracting 7, but that gives 2.5, not 13. The distractor 13 actually comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 9 comes from dividing 60 by 8 and rounding, but 60 ÷ 8 = 7.5, which rounds to 8, not 9. The distractor 9 actually comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and the right answer to each is 6. Both explanations misdescribe how a wrong option arises: 13 in (a) and 9 in (b) come from adding instead of subtracting, not the steps the writer gives."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says 13 comes from dividing 19 by 2 first and then subtracting 7, but that gives 2.5, not 13. The distractor 13 actually comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+  "Question b, fact: The why says 9 comes from dividing 60 by 8 and rounding, but 60 ÷ 8 = 7.5, which rounds to 8, not 9. The distractor 9 actually comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9."
+ ],
+ "proposal": {
+  "title": "Solving simple equations",
+  "card": [
+   "An equation says two things are equal. Solving it means finding the value of the unknown, such as x, that makes it true.",
+   "To solve it, undo the operations on the unknown in reverse order. Whatever you do to one side, do to the other.",
+   "Example: 3x + 5 = 20. The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get 3x = 15.",
+   "Then undo the multiplying: divide both sides by 3 to get x = 5. Check by putting 5 back in: 3 × 5 + 5 = 20."
+  ],
+  "remember": "Undo the last operation first, do the same to both sides, then check.",
+  "a": {
+   "q": "Solve 2x + 7 = 19. What is x?",
+   "opts": [
+    "6",
+    "13",
+    "12",
+    "10"
+   ],
+   "why": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 7 = 19. The answer 13 comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+   "clue": "Undo the adding before the multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives 12 + 8n = 60. How many classes has she attended?",
+   "opts": [
+    "6",
+    "9",
+    "48",
+    "7.5"
+   ],
+   "why": "Subtract 12 from both sides to get 8n = 48, then divide by 8 to get n = 6. Check: 12 + 8 × 6 = 60. The answer 9 comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9.",
+   "clue": "Take away the joining fee before dividing."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6",
+    "also_right": []
+   },
+   "b": {
+    "best": "6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 13 comes from dividing 19 by 2 first and then subtracting 7, but that gives 2.5, not 13. The distractor 13 actually comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 9 comes from dividing 60 by 8 and rounding, but 60 ÷ 8 = 7.5, which rounds to 8, not 9. The distractor 9 actually comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says 13 comes from dividing 19 by 2 first and then subtracting 7, but that gives 2.5, not 13. The distractor 13 actually comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+   "Question b, fact: The why says 9 comes from dividing 60 by 8 and rounding, but 60 ÷ 8 = 7.5, which rounds to 8, not 9. The distractor 9 actually comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9."
+  ]
+ },
+ "final": {
+  "title": "Solving simple equations",
+  "card": [
+   "An equation says two things are equal. Solving it means finding the value of the unknown, such as x, that makes it true.",
+   "To solve it, undo the operations on the unknown in reverse order. Whatever you do to one side, do to the other.",
+   "Example: 3x + 5 = 20. The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get 3x = 15.",
+   "Then undo the multiplying: divide both sides by 3 to get x = 5. Check by putting 5 back in: 3 × 5 + 5 = 20."
+  ],
+  "remember": "Undo the last operation first, do the same to both sides, then check.",
+  "a": {
+   "q": "Solve 2x + 7 = 19. What is x?",
+   "opts": [
+    "6",
+    "13",
+    "12",
+    "10"
+   ],
+   "why": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 7 = 19. The answer 13 comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+   "clue": "Undo the adding before the multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives 12 + 8n = 60. How many classes has she attended?",
+   "opts": [
+    "6",
+    "9",
+    "48",
+    "7.5"
+   ],
+   "why": "Subtract 12 from both sides to get 8n = 48, then divide by 8 to get n = 6. Check: 12 + 8 × 6 = 60. The answer 9 comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9.",
+   "clue": "Take away the joining fee before dividing."
+  }
+ },
+ "cleared_by": "recheck"
+}

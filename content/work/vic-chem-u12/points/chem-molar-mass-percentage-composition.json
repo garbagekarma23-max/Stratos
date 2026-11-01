@@ -1,0 +1,142 @@
+{
+ "id": "chem-molar-mass-percentage-composition",
+ "title": "Molar mass and percentage composition",
+ "brief": "10d5f5f7f398",
+ "shortlist": [
+  [
+   "chem-molar-mass-moles",
+   0.609
+  ],
+  [
+   "chem-empirical-formulas-percentage-composition",
+   0.511
+  ],
+  [
+   "chem-mass-spectrometry",
+   0.249
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt chem-molar-mass-moles, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "confirm": 0.005,
+  "write": 0.00725,
+  "check": 0.00719
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-molar-mass-moles",
+  "changes": [
+   "Use the Victorian VCE Units 1 and 2 terms and notation, such as the mole concept and relative formula mass, and check the terminology against the Study Design.",
+   "Add percentage composition by mass, which the new point requires but the bank card does not teach (the card covers only molar mass and moles)."
+  ],
+  "sure": "medium",
+  "reason": "The bank card on molar mass and moles covers the same core idea at a suitable depth, but it lacks percentage composition and may need VCE-specific wording.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point pairs calculating molar mass with using it to find the percentage by mass of each element, but the closest bank points each cover only half of that: one links molar mass to moles and the other is built around empirical formulas, so neither matches without changing its idea.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Molar mass and percentage composition",
+  "card": [
+   "The molar mass of a compound is the mass of one mole of it, in g/mol. Add up the molar masses of all the atoms in its formula.",
+   "Count each atom using the subscripts. In CaCO₃ there is 1 Ca, 1 C and 3 O. With Ca = 40.1, C = 12.0 and O = 16.0, M = 40.1 + 12.0 + 48.0 = 100.1 g/mol.",
+   "The percentage by mass of an element is the mass of that element in one mole of the compound, divided by the molar mass, then × 100.",
+   "For CaCO₃, the percentage of oxygen is 48.0 ÷ 100.1 × 100, which is about 48%. The percentages of all the elements add to 100%."
+  ],
+  "remember": "Add the atoms' masses for molar mass. Then element mass ÷ molar mass × 100 gives the percentage.",
+  "a": {
+   "q": "What is the molar mass of water, H₂O? Use H = 1.0 g/mol and O = 16.0 g/mol.",
+   "opts": [
+    "18.0 g/mol",
+    "17.0 g/mol",
+    "16.0 g/mol",
+    "34.0 g/mol"
+   ],
+   "why": "Water has 2 H and 1 O, so M = 2 × 1.0 + 16.0 = 18.0 g/mol. Adding only one H gives 17.0 g/mol, which ignores the subscript 2.",
+   "clue": "Use the subscript to count each atom."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methane, CH₄, has C = 12.0 g/mol and H = 1.0 g/mol. What is the percentage of carbon by mass?",
+   "opts": [
+    "75%",
+    "25%",
+    "20%",
+    "80%"
+   ],
+   "why": "M = 12.0 + 4 × 1.0 = 16.0 g/mol. Carbon is 12.0 ÷ 16.0 × 100 = 75%. Counting atoms gives 1 in 5, or 20%, but percentage by mass depends on the atoms' masses.",
+   "clue": "Compare carbon's mass with the whole molar mass, not the atom count."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "18.0 g/mol",
+   "also_right": []
+  },
+  "b": {
+   "best": "75%",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The CaCO₃ molar mass (100.1 g/mol) and oxygen percentage (about 48%) are correct, and both questions have exactly one right answer."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Molar mass and percentage composition",
+  "card": [
+   "The molar mass of a compound is the mass of one mole of it, in g/mol. Add up the molar masses of all the atoms in its formula.",
+   "Count each atom using the subscripts. In CaCO₃ there is 1 Ca, 1 C and 3 O. With Ca = 40.1, C = 12.0 and O = 16.0, M = 40.1 + 12.0 + 48.0 = 100.1 g/mol.",
+   "The percentage by mass of an element is the mass of that element in one mole of the compound, divided by the molar mass, then × 100.",
+   "For CaCO₃, the percentage of oxygen is 48.0 ÷ 100.1 × 100, which is about 48%. The percentages of all the elements add to 100%."
+  ],
+  "remember": "Add the atoms' masses for molar mass. Then element mass ÷ molar mass × 100 gives the percentage.",
+  "a": {
+   "q": "What is the molar mass of water, H₂O? Use H = 1.0 g/mol and O = 16.0 g/mol.",
+   "opts": [
+    "18.0 g/mol",
+    "17.0 g/mol",
+    "16.0 g/mol",
+    "34.0 g/mol"
+   ],
+   "why": "Water has 2 H and 1 O, so M = 2 × 1.0 + 16.0 = 18.0 g/mol. Adding only one H gives 17.0 g/mol, which ignores the subscript 2.",
+   "clue": "Use the subscript to count each atom."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methane, CH₄, has C = 12.0 g/mol and H = 1.0 g/mol. What is the percentage of carbon by mass?",
+   "opts": [
+    "75%",
+    "25%",
+    "20%",
+    "80%"
+   ],
+   "why": "M = 12.0 + 4 × 1.0 = 16.0 g/mol. Carbon is 12.0 ÷ 16.0 × 100 = 75%. Counting atoms gives 1 in 5, or 20%, but percentage by mass depends on the atoms' masses.",
+   "clue": "Compare carbon's mass with the whole molar mass, not the atom count."
+  }
+ },
+ "cleared_by": "checker"
+}

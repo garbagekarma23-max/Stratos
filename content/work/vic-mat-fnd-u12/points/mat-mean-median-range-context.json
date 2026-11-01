@@ -1,0 +1,273 @@
+{
+ "id": "mat-mean-median-range-context",
+ "title": "Mean, median and spread",
+ "brief": "2a9abfa82b76",
+ "shortlist": [
+  [
+   "mat-measures-spread",
+   0.516
+  ],
+  [
+   "mat-measures-centre",
+   0.513
+  ],
+  [
+   "mat-spread-box-plots",
+   0.455
+  ],
+  [
+   "mat-features-normal-distribution",
+   0.215
+  ],
+  [
+   "mat-types-data",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: failed the content check, writing again",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01546,
+  "check": 0.01016,
+  "fix": 0.02952,
+  "recheck": 0.01035
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches both the mean and median (centre) and the range and IQR (spread) together, but no bank point covers both: mat-measures-centre has only centre, mat-measures-spread and mat-spread-box-plots have only spread, and the spread card also goes beyond Foundation level into standard deviation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Mean, median and spread",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of 15 ÷ 3 = 5."
+   ],
+   [
+    "Median",
+    "Put the values in order and take the middle one. With two middle values, take the number halfway between them. For 2, 4, 9 the median is 4."
+   ],
+   [
+    "Range",
+    "Range = highest value − lowest value. For 2, 4, 9 the range is 9 − 2 = 7."
+   ],
+   [
+    "IQR",
+    "The interquartile range (IQR) = Q3 − Q1, the spread of the middle half of the data. A very high or low value changes the mean and range a lot, but changes the median and IQR much less."
+   ]
+  ],
+  "remember": "Mean and median give a typical value. Range and IQR give the spread.",
+  "a": {
+   "q": "What is the mean of these quiz scores: 4, 7, 5, 8, 6?",
+   "opts": [
+    "6",
+    "5",
+    "7",
+    "30"
+   ],
+   "why": "Add the scores: 4 + 7 + 5 + 8 + 6 = 30. Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
+   "clue": "Add them up, then divide by how many scores there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five houses in a street sold for $500 000, $520 000, $540 000, $560 000 and $2 400 000. Which measure is changed least by the $2.4 million sale, and what is its value?",
+   "opts": [
+    "The median, $540 000",
+    "The mean, $904 000",
+    "The range, $1 900 000",
+    "The mean, $540 000"
+   ],
+   "why": "The middle of the five ordered prices is $540 000, and the very high sale does not move it. The mean is $904 000 and the range is $1 900 000, and both are pulled up a lot by that one sale.",
+   "clue": "Which measure is the middle value, not one pulled by a large value?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "The median, $540 000",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which measure is the middle value...' tells students the answer is the median, so they can pick it without reasoning about how outliers affect each measure."
+   },
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The IQR is given as Q3 − Q1, but the card never says what Q1 and Q3 (the quartiles) are or how to find them, so students meeting the term here cannot use it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All calculations are correct (mean 6; median $540 000, mean $904 000, range $1 900 000). The clue for question b gives the answer away by describing the median, and the card uses Q1 and Q3 without explaining quartiles."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Which measure is the middle value...' tells students the answer is the median, so they can pick it without reasoning about how outliers affect each measure.",
+  "Card, level: The IQR is given as Q3 − Q1, but the card never says what Q1 and Q3 (the quartiles) are or how to find them, so students meeting the term here cannot use it."
+ ],
+ "proposal": {
+  "title": "Mean, median and spread",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of 15 ÷ 3 = 5."
+   ],
+   [
+    "Median",
+    "Put the values in order and take the middle one. With two middle values, take the number halfway between them. For 2, 4, 9 the median is 4."
+   ],
+   [
+    "Range",
+    "Range = highest value − lowest value. For 2, 4, 9 it is 9 − 2 = 7. One very high or low value changes the mean and range a lot, but the median and IQR much less."
+   ],
+   [
+    "IQR",
+    "Split the ordered data into a lower and upper half. Q1 is the median of the lower half, Q3 the median of the upper half, and IQR = Q3 − Q1. For 2, 4, 6, 8, 10, 12: Q1 = 4, Q3 = 10, IQR = 6."
+   ]
+  ],
+  "remember": "Mean and median give a typical value. Range and IQR give the spread.",
+  "a": {
+   "q": "What is the mean of these quiz scores: 4, 7, 5, 8, 6?",
+   "opts": [
+    "6",
+    "5",
+    "7",
+    "30"
+   ],
+   "why": "Add the scores: 4 + 7 + 5 + 8 + 6 = 30. Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
+   "clue": "Add them up, then divide by how many scores there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five houses in a street sold for $500 000, $520 000, $540 000, $560 000 and $2 400 000. Which measure is changed least by the $2.4 million sale, and what is its value?",
+   "opts": [
+    "The median, $540 000",
+    "The mean, $904 000",
+    "The range, $1 900 000",
+    "The mean, $540 000"
+   ],
+   "why": "The middle of the five ordered prices is $540 000, and the very high sale barely moves it. The mean is 4 520 000 ÷ 5 = $904 000 and the range is $1 900 000, and both are pulled up a lot by that one sale.",
+   "clue": "Picture each measure with and without the $2.4 million sale."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6",
+    "also_right": []
+   },
+   "b": {
+    "best": "The median, $540 000",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked examples, both questions and both explanations are correct: the mean in (a) is 30 ÷ 5 = 6, and in (b) the median is $540 000, the mean is $904 000 and the range is $1 900 000."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Which measure is the middle value...' tells students the answer is the median, so they can pick it without reasoning about how outliers affect each measure."
+   },
+   {
+    "part": "card",
+    "kind": "level",
+    "detail": "The IQR is given as Q3 − Q1, but the card never says what Q1 and Q3 (the quartiles) are or how to find them, so students meeting the term here cannot use it."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Which measure is the middle value...' tells students the answer is the median, so they can pick it without reasoning about how outliers affect each measure.",
+   "Card, level: The IQR is given as Q3 − Q1, but the card never says what Q1 and Q3 (the quartiles) are or how to find them, so students meeting the term here cannot use it."
+  ]
+ },
+ "final": {
+  "title": "Mean, median and spread",
+  "card": [
+   [
+    "Mean",
+    "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of 15 ÷ 3 = 5."
+   ],
+   [
+    "Median",
+    "Put the values in order and take the middle one. With two middle values, take the number halfway between them. For 2, 4, 9 the median is 4."
+   ],
+   [
+    "Range",
+    "Range = highest value − lowest value. For 2, 4, 9 it is 9 − 2 = 7. One very high or low value changes the mean and range a lot, but the median and IQR much less."
+   ],
+   [
+    "IQR",
+    "Split the ordered data into a lower and upper half. Q1 is the median of the lower half, Q3 the median of the upper half, and IQR = Q3 − Q1. For 2, 4, 6, 8, 10, 12: Q1 = 4, Q3 = 10, IQR = 6."
+   ]
+  ],
+  "remember": "Mean and median give a typical value. Range and IQR give the spread.",
+  "a": {
+   "q": "What is the mean of these quiz scores: 4, 7, 5, 8, 6?",
+   "opts": [
+    "6",
+    "5",
+    "7",
+    "30"
+   ],
+   "why": "Add the scores: 4 + 7 + 5 + 8 + 6 = 30. Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
+   "clue": "Add them up, then divide by how many scores there are."
+  },
+  "b": {
+   "d": 3,
+   "q": "Five houses in a street sold for $500 000, $520 000, $540 000, $560 000 and $2 400 000. Which measure is changed least by the $2.4 million sale, and what is its value?",
+   "opts": [
+    "The median, $540 000",
+    "The mean, $904 000",
+    "The range, $1 900 000",
+    "The mean, $540 000"
+   ],
+   "why": "The middle of the five ordered prices is $540 000, and the very high sale barely moves it. The mean is 4 520 000 ÷ 5 = $904 000 and the range is $1 900 000, and both are pulled up a lot by that one sale.",
+   "clue": "Picture each measure with and without the $2.4 million sale."
+  }
+ },
+ "cleared_by": "recheck"
+}

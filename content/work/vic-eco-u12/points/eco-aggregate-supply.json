@@ -1,0 +1,237 @@
+{
+ "id": "eco-aggregate-supply",
+ "title": "Aggregate supply",
+ "brief": "a7f2c6e61c6c",
+ "shortlist": [
+  [
+   "eco-aggregate-supply-productivity",
+   0.4
+  ],
+  [
+   "e-sras",
+   0.309
+  ],
+  [
+   "e-supply",
+   0.257
+  ],
+  [
+   "bus-business-economy",
+   0.247
+  ],
+  [
+   "e-lrasshift",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt eco-aggregate-supply-productivity, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "confirm": 0.0082,
+  "write": 0.00705,
+  "check": 0.01137,
+  "fix": 0.01501,
+  "recheck": 0.00898
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eco-aggregate-supply-productivity",
+  "changes": [
+   "Add costs of production as a factor that sets aggregate supply, since the card covers inputs, technology and productivity but not costs.",
+   "Keep the card's focus on the VCE Units 1 and 2 context and check the wording suits Year 11 students rather than Year 12 NSW."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea at a suitable depth, but it omits costs of production, which the brief names as a factor, so it needs a short addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers inputs and productivity but leaves out costs of production, and the short-run supply card covers only costs and price-level curves, so neither teaches all the factors this brief lists without adding a new step.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Aggregate supply",
+  "card": [
+   "Aggregate supply (AS) is the total output of goods and services that businesses in an economy can make at each price level.",
+   "It depends on the quantity and quality of resources: land, labour and capital. More workers, or better trained workers, raise what the economy can produce.",
+   "Lower costs of production, such as cheaper energy or wages, can make businesses willing to produce more. Higher costs can reduce output.",
+   "Better technology and higher productivity (output per unit of input) let the same resources make more. These can increase AS."
+  ],
+  "remember": "AS is what businesses can produce, and it rises with better resources, lower costs, technology and productivity.",
+  "a": {
+   "q": "Which change is most likely to increase aggregate supply?",
+   "opts": [
+    "Farmers in Mildura adopt better irrigation technology",
+    "Households in Perth feel more confident about the future",
+    "The government increases spending on roads for a year",
+    "Overseas buyers order more Australian wine"
+   ],
+   "why": "Better technology lets the same resources produce more, which raises what the economy can supply. More confidence and more orders raise spending, so they work on demand rather than on the ability to produce.",
+   "clue": "Which option changes what can be made, not what is bought?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A fall in world oil prices cuts fuel costs for Victorian trucking and manufacturing firms. What is the likely effect on aggregate supply?",
+   "opts": [
+    "AS rises because costs of production fall",
+    "AS falls because firms earn less revenue",
+    "AS is unchanged because resources are the same",
+    "AS rises only if workers become more skilled"
+   ],
+   "why": "Lower input costs can make firms willing to produce more at each price level, so AS rises. Saying resources are unchanged is tempting, but the card shows costs of production also set AS.",
+   "clue": "Think about what cheaper fuel does to the cost of making things."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Farmers in Mildura adopt better irrigation technology",
+   "also_right": []
+  },
+  "b": {
+   "best": "AS rises because costs of production fall",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The option 'The government increases spending on roads for a year' can be defended as raising AS, because roads are infrastructure that can improve productivity and productive capacity. 'For a year' is meant to make it short-term spending (aggregate demand), but that is not clear. The why never explains why this option is wrong. Reword the option so it is clearly demand-side, such as government spending on one-off events, or explain it in the why."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question b are accurate. In question a, the roads-spending option could reasonably be argued to increase AS through infrastructure, and the why does not address it, so it should be reworded or explained."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The option 'The government increases spending on roads for a year' can be defended as raising AS, because roads are infrastructure that can improve productivity and productive capacity. 'For a year' is meant to make it short-term spending (aggregate demand), but that is not clear. The why never explains why this option is wrong. Reword the option so it is clearly demand-side, such as government spending on one-off events, or explain it in the why."
+ ],
+ "proposal": {
+  "title": "Aggregate supply",
+  "card": [
+   "Aggregate supply (AS) is the total output of goods and services that businesses in an economy can make at each price level. It is about the ability to produce, not how much people want to buy.",
+   "It depends on the quantity and quality of resources: land, labour and capital. More workers, or better trained workers, raise what the economy can produce.",
+   "Lower costs of production, such as cheaper energy or wages, can make businesses willing to produce more. Higher costs can reduce output.",
+   "Better technology and higher productivity (output per unit of input) let the same resources make more. These can increase AS."
+  ],
+  "remember": "AS is what businesses can produce. Better resources, lower costs, technology and productivity can raise it.",
+  "a": {
+   "q": "Which change is most likely to increase aggregate supply?",
+   "opts": [
+    "Farmers in Mildura adopt better irrigation technology",
+    "Households in Perth feel more confident about the future",
+    "The government gives households a one-off cash payment",
+    "Overseas buyers order more Australian wine"
+   ],
+   "why": "Better technology lets the same resources produce more, which raises what the economy can supply. A one-off cash payment is tempting because it comes from the government, but it only gives people more to spend. Like more confidence and more wine orders, it changes buying, not the resources, costs, technology or productivity behind production.",
+   "clue": "Which option changes what can be made, not what is bought?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A fall in world oil prices cuts fuel costs for Victorian trucking and manufacturing firms. What is the likely effect on aggregate supply?",
+   "opts": [
+    "AS rises because costs of production fall",
+    "AS falls because firms earn less revenue",
+    "AS is unchanged because resources are the same",
+    "AS rises only if workers become more skilled"
+   ],
+   "why": "Lower input costs can make firms willing to produce more at each price level, so AS rises. Saying resources are unchanged is tempting, but costs of production also set AS, not just the quantity of resources.",
+   "clue": "Think about what cheaper fuel does to the cost of making things."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Farmers in Mildura adopt better irrigation technology",
+    "also_right": []
+   },
+   "b": {
+    "best": "AS rises because costs of production fall",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The option 'The government increases spending on roads for a year' can be defended as raising AS, because roads are infrastructure that can improve productivity and productive capacity. 'For a year' is meant to make it short-term spending (aggregate demand), but that is not clear. The why never explains why this option is wrong. Reword the option so it is clearly demand-side, such as government spending on one-off events, or explain it in the why."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The option 'The government increases spending on roads for a year' can be defended as raising AS, because roads are infrastructure that can improve productivity and productive capacity. 'For a year' is meant to make it short-term spending (aggregate demand), but that is not clear. The why never explains why this option is wrong. Reword the option so it is clearly demand-side, such as government spending on one-off events, or explain it in the why."
+  ]
+ },
+ "final": {
+  "title": "Aggregate supply",
+  "card": [
+   "Aggregate supply (AS) is the total output of goods and services that businesses in an economy can make at each price level. It is about the ability to produce, not how much people want to buy.",
+   "It depends on the quantity and quality of resources: land, labour and capital. More workers, or better trained workers, raise what the economy can produce.",
+   "Lower costs of production, such as cheaper energy or wages, can make businesses willing to produce more. Higher costs can reduce output.",
+   "Better technology and higher productivity (output per unit of input) let the same resources make more. These can increase AS."
+  ],
+  "remember": "AS is what businesses can produce. Better resources, lower costs, technology and productivity can raise it.",
+  "a": {
+   "q": "Which change is most likely to increase aggregate supply?",
+   "opts": [
+    "Farmers in Mildura adopt better irrigation technology",
+    "Households in Perth feel more confident about the future",
+    "The government gives households a one-off cash payment",
+    "Overseas buyers order more Australian wine"
+   ],
+   "why": "Better technology lets the same resources produce more, which raises what the economy can supply. A one-off cash payment is tempting because it comes from the government, but it only gives people more to spend. Like more confidence and more wine orders, it changes buying, not the resources, costs, technology or productivity behind production.",
+   "clue": "Which option changes what can be made, not what is bought?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A fall in world oil prices cuts fuel costs for Victorian trucking and manufacturing firms. What is the likely effect on aggregate supply?",
+   "opts": [
+    "AS rises because costs of production fall",
+    "AS falls because firms earn less revenue",
+    "AS is unchanged because resources are the same",
+    "AS rises only if workers become more skilled"
+   ],
+   "why": "Lower input costs can make firms willing to produce more at each price level, so AS rises. Saying resources are unchanged is tempting, but costs of production also set AS, not just the quantity of resources.",
+   "clue": "Think about what cheaper fuel does to the cost of making things."
+  }
+ },
+ "cleared_by": "recheck"
+}

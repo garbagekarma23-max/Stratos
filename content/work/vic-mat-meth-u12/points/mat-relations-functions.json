@@ -1,0 +1,261 @@
+{
+ "id": "mat-relations-functions",
+ "title": "Relations and functions",
+ "brief": "d8c65f6e78bf",
+ "shortlist": [
+  [
+   "mat-functions-relations",
+   0.747
+  ],
+  [
+   "mat-function-notation",
+   0.528
+  ],
+  [
+   "mat-domain-range",
+   0.323
+  ],
+  [
+   "mat-chain-rule",
+   0.287
+  ],
+  [
+   "mat-quadratic-functions",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00456,
+  "check": 0.00861,
+  "fix": 0.02469,
+  "recheck": 0.00622
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-functions-relations, covers relations and the one-output rule but not function notation or domain and range, so the new point is broader than any single bank point and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Relations and functions",
+  "card": [
+   [
+    "Relation",
+    "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+   ],
+   [
+    "Function",
+    "a relation where each input gives exactly one output. No x-value is paired with two different y-values."
+   ],
+   [
+    "Notation",
+    "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."
+   ],
+   [
+    "Domain and range",
+    "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+   ]
+  ],
+  "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+  "a": {
+   "q": "Which set of ordered pairs is a function?",
+   "opts": [
+    "{(1, 2), (2, 2), (3, 5)}",
+    "{(1, 2), (1, 3), (2, 5)}",
+    "{(2, 1), (2, 4), (3, 5)}",
+    "{(0, 3), (4, 1), (4, 6)}"
+   ],
+   "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+   "clue": "Look for an x-value that appears twice."
+  },
+  "b": {
+   "d": 2,
+   "q": "Given f(x) = 3x − 4, what is f(−2)?",
+   "opts": [
+    "−10",
+    "2",
+    "−2",
+    "10"
+   ],
+   "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer 2 comes from the sign slip of −6 + 4, which is wrong because the −4 is subtracted.",
+   "clue": "Replace x with −2 in brackets, then follow the order of operations."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "{(1, 2), (2, 2), (3, 5)}",
+   "also_right": []
+  },
+  "b": {
+   "best": "−10",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the answer 2 comes from the sign slip −6 + 4, but −6 + 4 = −2, not 2. The distractor 2 comes from 6 − 4, treating 3 × (−2) as 6. The distractor −2 comes from −6 + 4. As written, the explanation contains an arithmetic error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are correct. The explanation for (b) wrongly says the distractor 2 comes from −6 + 4, which actually equals −2, so it needs fixing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says the answer 2 comes from the sign slip −6 + 4, but −6 + 4 = −2, not 2. The distractor 2 comes from 6 − 4, treating 3 × (−2) as 6. The distractor −2 comes from −6 + 4. As written, the explanation contains an arithmetic error."
+ ],
+ "proposal": {
+  "title": "Relations and functions",
+  "card": [
+   [
+    "Relation",
+    "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+   ],
+   [
+    "Function",
+    "a relation where each input gives exactly one output. No x-value is paired with two different y-values."
+   ],
+   [
+    "Notation",
+    "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."
+   ],
+   [
+    "Domain and range",
+    "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+   ]
+  ],
+  "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+  "a": {
+   "q": "Which set of ordered pairs is a function?",
+   "opts": [
+    "{(1, 2), (2, 2), (3, 5)}",
+    "{(1, 2), (1, 3), (2, 5)}",
+    "{(2, 1), (2, 4), (3, 5)}",
+    "{(0, 3), (4, 1), (4, 6)}"
+   ],
+   "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+   "clue": "Look for an x-value that appears twice."
+  },
+  "b": {
+   "d": 2,
+   "q": "Given f(x) = 3x − 4, what is f(−2)?",
+   "opts": [
+    "−10",
+    "2",
+    "−2",
+    "10"
+   ],
+   "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer −2 comes from working out −6 + 4, but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating 3 × (−2) as 6.",
+   "clue": "Replace x with −2 in brackets, then follow the order of operations."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "{(1, 2), (2, 2), (3, 5)}",
+    "also_right": []
+   },
+   "b": {
+    "best": "−10",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the answer 2 comes from the sign slip −6 + 4, but −6 + 4 = −2, not 2. The distractor 2 comes from 6 − 4, treating 3 × (−2) as 6. The distractor −2 comes from −6 + 4. As written, the explanation contains an arithmetic error."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says the answer 2 comes from the sign slip −6 + 4, but −6 + 4 = −2, not 2. The distractor 2 comes from 6 − 4, treating 3 × (−2) as 6. The distractor −2 comes from −6 + 4. As written, the explanation contains an arithmetic error."
+  ]
+ },
+ "final": {
+  "title": "Relations and functions",
+  "card": [
+   [
+    "Relation",
+    "a set of ordered pairs (x, y) linking inputs to outputs. Any rule that pairs numbers is a relation."
+   ],
+   [
+    "Function",
+    "a relation where each input gives exactly one output. No x-value is paired with two different y-values."
+   ],
+   [
+    "Notation",
+    "f(x) names the rule and its output. If f(x) = 2x + 1, then f(3) = 2 × 3 + 1 = 7."
+   ],
+   [
+    "Domain and range",
+    "The domain is the set of allowed inputs. The range is the set of outputs that result. For {(1, 4), (2, 4), (3, 5)}, the domain is {1, 2, 3} and the range is {4, 5}."
+   ]
+  ],
+  "remember": "A function never sends one input to two outputs. f(x) is the output for input x.",
+  "a": {
+   "q": "Which set of ordered pairs is a function?",
+   "opts": [
+    "{(1, 2), (2, 2), (3, 5)}",
+    "{(1, 2), (1, 3), (2, 5)}",
+    "{(2, 1), (2, 4), (3, 5)}",
+    "{(0, 3), (4, 1), (4, 6)}"
+   ],
+   "why": "Each input appears once, so each x has one output. It is fine for two inputs to share an output, as 1 and 2 both give 2. The other sets pair one input with two outputs.",
+   "clue": "Look for an x-value that appears twice."
+  },
+  "b": {
+   "d": 2,
+   "q": "Given f(x) = 3x − 4, what is f(−2)?",
+   "opts": [
+    "−10",
+    "2",
+    "−2",
+    "10"
+   ],
+   "why": "f(−2) = 3 × (−2) − 4 = −6 − 4 = −10. The answer −2 comes from working out −6 + 4, but the 4 is subtracted, so the result goes further below zero. The answer 2 comes from treating 3 × (−2) as 6.",
+   "clue": "Replace x with −2 in brackets, then follow the order of operations."
+  }
+ },
+ "cleared_by": "recheck"
+}

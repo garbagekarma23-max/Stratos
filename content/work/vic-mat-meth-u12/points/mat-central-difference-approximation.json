@@ -1,0 +1,207 @@
+{
+ "id": "mat-central-difference-approximation",
+ "title": "The central difference approximation",
+ "brief": "3df492297c2b",
+ "shortlist": [
+  [
+   "mat-number-e",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00635,
+  "check": 0.01084,
+  "fix": 0.01786,
+  "recheck": 0.01061
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the exponential function e to the x and its derivative, not the central difference approximation of a derivative from a chord, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The central difference approximation",
+  "card": [
+   "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
+   "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
+   "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 1.2, and 2h = 0.2.",
+   "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+  ],
+  "remember": "Subtract the two outer values, then divide by 2h.",
+  "a": {
+   "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
+   "opts": [
+    "8",
+    "7.5",
+    "16",
+    "4"
+   ],
+   "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h would give 16, which is the tempting mistake.",
+   "clue": "Find f at 4.5 and 3.5, then divide by 2h."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+   "opts": [
+    "12.01",
+    "12.02",
+    "24.02",
+    "11.6"
+   ],
+   "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart.",
+   "clue": "The two points are 2h apart, so divide by 0.2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8",
+   "also_right": []
+  },
+  "b": {
+   "best": "12.01",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Subtract the two outer values\" does not say which way round. A student who takes f(a − h) − f(a + h) gets the wrong sign. It would be clearer to say \"subtract the left value from the right value\" or to give f(a + h) − f(a − h)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All the calculations on the card and in both questions are correct, and each question has exactly one right answer (8 and 12.01). One minor issue: the remember line does not say which value to subtract from which, so a student could get the sign wrong."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"Subtract the two outer values\" does not say which way round. A student who takes f(a − h) − f(a + h) gets the wrong sign. It would be clearer to say \"subtract the left value from the right value\" or to give f(a + h) − f(a − h)."
+ ],
+ "proposal": {
+  "title": "The central difference approximation",
+  "card": [
+   "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
+   "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
+   "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 9.61 − 8.41 = 1.2, and 2h = 0.2.",
+   "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+  ],
+  "remember": "Right value minus left value, f(a + h) − f(a − h), then divide by 2h.",
+  "a": {
+   "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
+   "opts": [
+    "8",
+    "7.5",
+    "16",
+    "−8"
+   ],
+   "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 20.25 − 12.25 = 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h gives 16, and subtracting the right value from the left gives −8.",
+   "clue": "Find f at 4.5 and 3.5, take right minus left, then divide by 2h."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+   "opts": [
+    "12.01",
+    "24.02",
+    "12.61",
+    "11.41"
+   ],
+   "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart. 12.61 uses f(2.1) and f(2) only, which is not a point either side of 2.",
+   "clue": "Use one point either side of 2, and the points are 0.2 apart."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "8",
+    "also_right": []
+   },
+   "b": {
+    "best": "12.01",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 8 for x² at 4 and 12.01 for x³ at 2. Each distractor matches a common slip: dividing by h instead of 2h, subtracting the wrong way round, or using a one-sided difference."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Subtract the two outer values\" does not say which way round. A student who takes f(a − h) − f(a + h) gets the wrong sign. It would be clearer to say \"subtract the left value from the right value\" or to give f(a + h) − f(a − h)."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"Subtract the two outer values\" does not say which way round. A student who takes f(a − h) − f(a + h) gets the wrong sign. It would be clearer to say \"subtract the left value from the right value\" or to give f(a + h) − f(a − h)."
+  ]
+ },
+ "final": {
+  "title": "The central difference approximation",
+  "card": [
+   "A chord joins two points on a curve. Its gradient is rise over run. The derivative at x = a is the gradient of the tangent there.",
+   "The central difference uses one point either side of a. f′(a) ≈ (f(a + h) − f(a − h)) ÷ 2h, where h is a small positive number.",
+   "Take f(x) = x² with a = 3 and h = 0.1. f(3.1) = 9.61 and f(2.9) = 8.41. The difference is 9.61 − 8.41 = 1.2, and 2h = 0.2.",
+   "So the estimate is 1.2 ÷ 0.2 = 6. A smaller h usually gives a closer estimate."
+  ],
+  "remember": "Right value minus left value, f(a + h) − f(a − h), then divide by 2h.",
+  "a": {
+   "q": "For f(x) = x² with a = 4 and h = 0.5, what is the central difference estimate of f′(4)?",
+   "opts": [
+    "8",
+    "7.5",
+    "16",
+    "−8"
+   ],
+   "why": "f(4.5) = 20.25 and f(3.5) = 12.25. The difference is 20.25 − 12.25 = 8, and 2h = 1, so the estimate is 8 ÷ 1 = 8. Dividing by h instead of 2h gives 16, and subtracting the right value from the left gives −8.",
+   "clue": "Find f at 4.5 and 3.5, take right minus left, then divide by 2h."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya estimates f′(2) for f(x) = x³ using h = 0.1. What does she get?",
+   "opts": [
+    "12.01",
+    "24.02",
+    "12.61",
+    "11.41"
+   ],
+   "why": "f(2.1) = 9.261 and f(1.9) = 6.859. The difference is 2.402, and 2h = 0.2, so the estimate is 12.01. Dividing by h gives 24.02, which forgets that the points are 2h apart. 12.61 uses f(2.1) and f(2) only, which is not a point either side of 2.",
+   "clue": "Use one point either side of 2, and the points are 0.2 apart."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,358 @@
+{
+ "id": "chem-quality-evidence",
+ "title": "Quality of evidence",
+ "brief": "8f7e46e332e4",
+ "shortlist": [
+  [
+   "eng-supporting-reading-with-evidence",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b other)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01186,
+  "check": 0.01997,
+  "fix": 0.01738,
+  "recheck": 0.0117
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches how to use short quotations as support in English literary analysis, while the new point is about judging whether scientific evidence is valid, authoritative and free of error or bias, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('Who paid for the work, and what was left out of the report?') repeats the two reasons in the right option almost word for word, so a student can match it without understanding bias.",
+ "rejected": {
+  "title": "Quality of evidence",
+  "card": [
+   [
+    "Valid",
+    "Evidence is valid when the investigation measures what it claims to measure and fairly tests the question. A fair test changes one variable, keeps the others controlled and uses suitable methods."
+   ],
+   [
+    "Authoritative",
+    "An authoritative source is written by people with expertise in the area. Their work is usually reviewed by other experts and names its methods and data."
+   ],
+   [
+    "Errors",
+    "Random errors make repeated measurements scatter. Systematic errors push results the same way each time, such as a balance that reads too high. Both lower the quality of evidence."
+   ],
+   [
+    "Bias",
+    "Bias is when interests or expectations shape how an investigation is done or reported. Checking who paid for the work and what was left out helps spot it."
+   ]
+  ],
+  "remember": "Good evidence tests the right thing, comes from experts, and has its errors and bias checked.",
+  "a": {
+   "q": "Ravi wants to test whether a fertiliser makes bean plants grow taller. He gives the fertiliser to plants on a sunny windowsill and gives none to plants in a dark cupboard. Why is his evidence weak?",
+   "opts": [
+    "It is not valid, because light also differs between groups",
+    "It is biased, because the fertiliser was made by a company",
+    "It has random error, because the plants were measured twice",
+    "It is not authoritative, because Ravi is a school student"
+   ],
+   "why": "A fair test changes only one variable. Here light differs as well as fertiliser, so the investigation does not fairly test the question and the evidence is not valid. Being a student does not make results weak if the method is sound.",
+   "clue": "How many things differ between the two groups of plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A drink company pays a laboratory to test its bottled water. The report says the water is the purest available, but it does not give the methods or the data. Which concern about this evidence is the most direct?",
+   "opts": [
+    "Bias, because the company paid and left out its data",
+    "Random error, because the samples came from one factory",
+    "Systematic error, because the company paid for the test",
+    "Not valid, because the water was tested in a laboratory"
+   ],
+   "why": "The company paid for the report and has an interest in the result, and leaving out the methods and data stops others checking it. These are the signs of bias. Systematic error comes from the measuring, such as a faulty balance, not from who paid for the work.",
+   "clue": "Who paid for the work, and what was left out of the report?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue ('Who paid for the work, and what was left out of the report?') repeats the two reasons in the right option almost word for word, so a student can match it without understanding bias."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Quality of evidence",
+     "card": [
+      [
+       "Valid",
+       "Evidence is valid when the investigation measures what it claims to measure and fairly tests the question. A fair test changes one variable, keeps the others controlled and uses suitable methods."
+      ],
+      [
+       "Authoritative",
+       "An authoritative source is written by people with expertise in the area. Their work is usually reviewed by other experts and names its methods and data."
+      ],
+      [
+       "Errors",
+       "Random errors make repeated measurements scatter. Systematic errors push results the same way each time, such as a balance that reads too high. Both lower the quality of evidence."
+      ],
+      [
+       "Bias",
+       "Bias is when interests or expectations shape how an investigation is done or reported. Checking who paid for the work and what was left out helps spot it."
+      ]
+     ],
+     "remember": "Good evidence tests the right thing, comes from experts, and has its errors and bias checked.",
+     "a": {
+      "q": "Ravi wants to test whether a fertiliser makes bean plants grow taller. He gives the fertiliser to plants on a sunny windowsill and gives none to plants in a dark cupboard. Why is his evidence weak?",
+      "opts": [
+       "It is not valid, because light also differs between groups",
+       "It is biased, because the fertiliser was made by a company",
+       "It has random error, because the plants were measured twice",
+       "It is not authoritative, because Ravi is a school student"
+      ],
+      "why": "A fair test changes only one variable. Here light differs as well as fertiliser, so the investigation does not fairly test the question and the evidence is not valid. Being a student does not make results weak if the method is sound.",
+      "clue": "How many things differ between the two groups of plants?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A drink company pays a laboratory to test its bottled water. The report says the water is the purest available, but it does not give the methods or the data. Which concern about this evidence is the most direct?",
+      "opts": [
+       "Possible bias, and the methods are not shown for checking",
+       "Random error, because the water was tested in a laboratory",
+       "Systematic error, because the company sells bottled water",
+       "It is invalid, because laboratories cannot test water purity"
+      ],
+      "why": "The company paid for the report and has an interest in the result. The missing methods and data mean others cannot check it, so bias is a real concern. Testing in a laboratory does not by itself cause random error, and laboratories can test water purity.",
+      "clue": "Who paid for the work, and can anyone check how it was done?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It is not valid, because light also differs between groups",
+      "also_right": []
+     },
+     "b": {
+      "best": "Possible bias, and the methods are not shown for checking",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a hedge ('Possible') and the only one that names two linked concerns. The wrong options all make flat, absolute claims, so a student could pick the right answer by its cautious wording alone."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and the intended answers match. One flag: in question b the correct option stands out as the only hedged, two-part answer, which could give it away."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a hedge ('Possible') and the only one that names two linked concerns. The wrong options all make flat, absolute claims, so a student could pick the right answer by its cautious wording alone."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Quality of evidence",
+     "card": [
+      [
+       "Valid",
+       "Evidence is valid when the investigation measures what it claims to measure and fairly tests the question. A fair test changes one variable, keeps the others controlled and uses suitable methods."
+      ],
+      [
+       "Authoritative",
+       "An authoritative source is written by people with expertise in the area. Their work is usually reviewed by other experts and names its methods and data."
+      ],
+      [
+       "Errors",
+       "Random errors make repeated measurements scatter. Systematic errors push results the same way each time, such as a balance that reads too high. Both lower the quality of evidence."
+      ],
+      [
+       "Bias",
+       "Bias is when interests or expectations shape how an investigation is done or reported. Checking who paid for the work and what was left out helps spot it."
+      ]
+     ],
+     "remember": "Good evidence tests the right thing, comes from experts, and has its errors and bias checked.",
+     "a": {
+      "q": "Ravi wants to test whether a fertiliser makes bean plants grow taller. He gives the fertiliser to plants on a sunny windowsill and gives none to plants in a dark cupboard. Why is his evidence weak?",
+      "opts": [
+       "It is not valid, because light also differs between groups",
+       "It is biased, because the fertiliser was made by a company",
+       "It has random error, because the plants were measured twice",
+       "It is not authoritative, because Ravi is a school student"
+      ],
+      "why": "A fair test changes only one variable. Here light differs as well as fertiliser, so the investigation does not fairly test the question and the evidence is not valid. Being a student does not make results weak if the method is sound.",
+      "clue": "How many things differ between the two groups of plants?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A drink company pays a laboratory to test its bottled water. The report says the water is the purest available, but it does not give the methods or the data. Which concern about this evidence is the most direct?",
+      "opts": [
+       "Bias, because the company paid and left out its data",
+       "Random error, because the samples came from one factory",
+       "Systematic error, because the company paid for the test",
+       "Not valid, because the water was tested in a laboratory"
+      ],
+      "why": "The company paid for the report and has an interest in the result, and leaving out the methods and data stops others checking it. These are the signs of bias. Systematic error comes from the measuring, such as a faulty balance, not from who paid for the work.",
+      "clue": "Who paid for the work, and what was left out of the report?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It is not valid, because light also differs between groups",
+       "also_right": []
+      },
+      "b": {
+       "best": "Bias, because the company paid and left out its data",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue ('Who paid for the work, and what was left out of the report?') repeats the two reasons in the right option almost word for word, so a student can match it without understanding bias."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and the intended answers are correct. Question b's clue repeats the wording of the right option, so it gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue ('Who paid for the work, and what was left out of the report?') repeats the two reasons in the right option almost word for word, so a student can match it without understanding bias."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Quality of evidence",
+  "card": [
+   [
+    "Valid",
+    "Evidence is valid when the investigation measures what it claims to measure and fairly tests the question. A fair test changes one variable, keeps the others controlled and uses suitable methods."
+   ],
+   [
+    "Authoritative",
+    "An authoritative source is written by people with expertise in the area. Their work is usually reviewed by other experts and names its methods and data."
+   ],
+   [
+    "Errors",
+    "Random errors make repeated measurements scatter. Systematic errors push results the same way each time, such as a balance that reads too high. Both lower the quality of evidence."
+   ],
+   [
+    "Bias",
+    "Bias is when interests or expectations shape how an investigation is done or reported. Checking who paid for the work and what was left out helps spot it."
+   ]
+  ],
+  "remember": "Good evidence tests the right thing, comes from experts, and has its errors and bias checked.",
+  "a": {
+   "q": "Ravi wants to test whether a fertiliser makes bean plants grow taller. He gives the fertiliser to plants on a sunny windowsill and gives none to plants in a dark cupboard. Why is his evidence weak?",
+   "opts": [
+    "It is not valid, because light also differs between groups",
+    "It is biased, because the fertiliser was made by a company",
+    "It has random error, because the plants were measured twice",
+    "It is not authoritative, because Ravi is a school student"
+   ],
+   "why": "A fair test changes only one variable. Here light differs as well as fertiliser, so the investigation does not fairly test the question and the evidence is not valid. Being a student does not make results weak if the method is sound.",
+   "clue": "How many things differ between the two groups of plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A drink company pays a laboratory to test its bottled water. The report says the water is the purest available, but it does not give the methods or the data. Which concern about this evidence is the most direct?",
+   "opts": [
+    "Bias, because the company paid and left out its data",
+    "Random error, because the samples came from one factory",
+    "Systematic error, because the company paid for the test",
+    "Not valid, because the water was tested in a laboratory"
+   ],
+   "why": "The company paid for the report and has an interest in the result, and leaving out the methods and data stops others checking it. These are the signs of bias. Systematic error comes from the measuring, such as a faulty balance, not from who paid for the work.",
+   "clue": "Think about whose interests the report might serve, and whether anyone else could check it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is not valid, because light also differs between groups",
+   "also_right": []
+  },
+  "b": {
+   "best": "Bias, because the company paid and left out its data",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Quality of evidence",
+  "card": [
+   [
+    "Valid",
+    "Evidence is valid when the investigation measures what it claims to measure and fairly tests the question. A fair test changes one variable, keeps the others controlled and uses suitable methods."
+   ],
+   [
+    "Authoritative",
+    "An authoritative source is written by people with expertise in the area. Their work is usually reviewed by other experts and names its methods and data."
+   ],
+   [
+    "Errors",
+    "Random errors make repeated measurements scatter. Systematic errors push results the same way each time, such as a balance that reads too high. Both lower the quality of evidence."
+   ],
+   [
+    "Bias",
+    "Bias is when interests or expectations shape how an investigation is done or reported. Checking who paid for the work and what was left out helps spot it."
+   ]
+  ],
+  "remember": "Good evidence tests the right thing, comes from experts, and has its errors and bias checked.",
+  "a": {
+   "q": "Ravi wants to test whether a fertiliser makes bean plants grow taller. He gives the fertiliser to plants on a sunny windowsill and gives none to plants in a dark cupboard. Why is his evidence weak?",
+   "opts": [
+    "It is not valid, because light also differs between groups",
+    "It is biased, because the fertiliser was made by a company",
+    "It has random error, because the plants were measured twice",
+    "It is not authoritative, because Ravi is a school student"
+   ],
+   "why": "A fair test changes only one variable. Here light differs as well as fertiliser, so the investigation does not fairly test the question and the evidence is not valid. Being a student does not make results weak if the method is sound.",
+   "clue": "How many things differ between the two groups of plants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A drink company pays a laboratory to test its bottled water. The report says the water is the purest available, but it does not give the methods or the data. Which concern about this evidence is the most direct?",
+   "opts": [
+    "Bias, because the company paid and left out its data",
+    "Random error, because the samples came from one factory",
+    "Systematic error, because the company paid for the test",
+    "Not valid, because the water was tested in a laboratory"
+   ],
+   "why": "The company paid for the report and has an interest in the result, and leaving out the methods and data stops others checking it. These are the signs of bias. Systematic error comes from the measuring, such as a faulty balance, not from who paid for the work.",
+   "clue": "Think about whose interests the report might serve, and whether anyone else could check it."
+  }
+ }
+}

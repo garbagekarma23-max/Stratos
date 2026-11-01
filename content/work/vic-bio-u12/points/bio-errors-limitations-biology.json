@@ -1,0 +1,232 @@
+{
+ "id": "bio-errors-limitations-biology",
+ "title": "Errors and limitations in biology",
+ "brief": "d554ba45009f",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:29Z check: flagged",
+  "2026-11-01T08:33:48Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T09:35:10Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00526,
+  "check": 0.013,
+  "fix": 0.01702,
+  "recheck": 0.01139
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers instrument resolution and limits of accuracy in maths, while the new point is about random versus systematic errors and the limits of biological methods, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Errors and limitations in biology",
+  "card": [
+   [
+    "Random error",
+    "an unpredictable variation that pushes repeated measurements in both directions, some too high and some too low. It scatters results. Repeating the measurement and taking an average reduces its effect."
+   ],
+   [
+    "Systematic error",
+    "a fault that pushes every measurement the same way, such as a scale that always reads 2 g too high. It shifts results. Repeating does not remove it, so the equipment or method must be fixed or calibrated (checked against a known standard)."
+   ],
+   [
+    "Limitation",
+    "a weakness in a method or its scope that restricts what the results can show, such as a small sample or a short time frame. Limitations are reported honestly, even when they cannot be removed."
+   ],
+   "A mistake, such as writing down a wrong number, is a blunder and is not the same as a random or systematic error."
+  ],
+  "remember": "Random error scatters, systematic error shifts, and limitations are reported.",
+  "a": {
+   "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
+   "opts": [
+    "A systematic error, as every result is shifted the same way",
+    "A random error, as the results vary between trials",
+    "A random error, as the stopwatch is the cause of the fault",
+    "A systematic error, as the sample size was too small"
+   ],
+   "why": "The fault pushes every measurement in the same direction, so it shifts the results. This is a systematic error. It is not random, because random error would push results in both directions and scatter them.",
+   "clue": "Does the fault push results one way or both ways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia counts yeast cells under a microscope in five samples and gets 42, 55, 47, 60 and 49. She repeats and averages them. What does this reduce?",
+   "opts": [
+    "The effect of random error on her result",
+    "The effect of systematic error on her result",
+    "The effect of a faulty microscope lens",
+    "The limitation of using only one species of yeast"
+   ],
+   "why": "The counts vary in both directions, which is random error. Averaging repeated results reduces its effect. It would not fix a systematic error, as every repeat would be shifted the same way, and it cannot remove a limitation such as testing one species.",
+   "clue": "Which error is fixed by repeating, not by recalibrating?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A systematic error, as every result is shifted the same way",
+   "also_right": []
+  },
+  "b": {
+   "best": "The effect of random error on her result",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem describes counts from five different samples, so the spread could be real variation between samples rather than random measurement error. 'She repeats and averages them' also leaves unclear what is repeated. The why still calls the spread random error. Better to describe repeated counts of the same sample."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says random error is 'fixed by repeating'. The card says repeating and averaging only reduces its effect, so the clue overstates this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and correct. In question b, the counts come from five different samples, which mixes real variation with random error, and the clue wrongly says repeating 'fixes' random error when the card says it reduces its effect."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem describes counts from five different samples, so the spread could be real variation between samples rather than random measurement error. 'She repeats and averages them' also leaves unclear what is repeated. The why still calls the spread random error. Better to describe repeated counts of the same sample.",
+  "Question b, wording: The clue says random error is 'fixed by repeating'. The card says repeating and averaging only reduces its effect, so the clue overstates this."
+ ],
+ "proposal": {
+  "title": "Errors and limitations in biology",
+  "card": [
+   [
+    "Random error",
+    "an unpredictable variation that pushes repeated measurements in both directions, some too high and some too low. It scatters results. Repeating the measurement and taking an average reduces its effect."
+   ],
+   [
+    "Systematic error",
+    "a fault that pushes every measurement the same way, such as a scale that always reads 2 g too high. It shifts results. Repeating does not remove it, so the equipment or method must be fixed or calibrated (checked against a known standard)."
+   ],
+   [
+    "Limitation",
+    "a weakness in a method or its scope that restricts what the results can show, such as a small sample or a short time frame. Limitations are reported honestly, even when they cannot be removed."
+   ],
+   "A mistake, such as writing down a wrong number, is a blunder and is not the same as a random or systematic error."
+  ],
+  "remember": "Random error scatters, systematic error shifts, and limitations are reported.",
+  "a": {
+   "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
+   "opts": [
+    "A systematic error, as every result is shifted the same way",
+    "A random error, as the results vary between trials",
+    "A random error, as the stopwatch is the cause of the fault",
+    "A systematic error, as the sample size was too small"
+   ],
+   "why": "The fault pushes every measurement in the same direction, so it shifts the results. This is a systematic error. It is not random, because random error would push results in both directions and scatter them.",
+   "clue": "Does the fault push results one way or both ways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia counts the yeast cells in the same sample five times under a microscope and gets 42, 55, 47, 60 and 49. She averages the five counts. What does this reduce?",
+   "opts": [
+    "The effect of random error on her result",
+    "The effect of systematic error on her result",
+    "The effect of a faulty microscope lens",
+    "The limitation of using only one species of yeast"
+   ],
+   "why": "Her counts of the same sample vary in both directions, which shows random error. Averaging repeated counts reduces its effect. It would not fix a systematic error such as a faulty lens, as every count would be shifted the same way, and it cannot remove a limitation such as testing one species.",
+   "clue": "Are the counts scattered both ways or shifted one way?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "A systematic error, as every result is shifted the same way",
+    "also_right": []
+   },
+   "b": {
+    "best": "The effect of random error on her result",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "wording",
+     "detail": "The VCE Study Design calls mistakes such as misreading or miswriting a value 'personal errors', not 'blunders'. Students may meet 'personal error' in VCE exams, so the card should give that term, alongside or instead of 'blunder'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions are sound, each with one clear right answer, and the explanations match the card. One small fix: the card calls mistakes 'blunders', but VCE uses the term 'personal errors'."
+  },
+  "flags": [
+   "Card, wording: The VCE Study Design calls mistakes such as misreading or miswriting a value 'personal errors', not 'blunders'. Students may meet 'personal error' in VCE exams, so the card should give that term, alongside or instead of 'blunder'."
+  ]
+ },
+ "final": {
+  "title": "Errors and limitations in biology",
+  "card": [
+   [
+    "Random error",
+    "an unpredictable variation that pushes repeated measurements in both directions, some too high and some too low. It scatters results. Repeating the measurement and taking an average reduces its effect."
+   ],
+   [
+    "Systematic error",
+    "a fault that pushes every measurement the same way, such as a scale that always reads 2 g too high. It shifts results. Repeating does not remove it, so the equipment or method must be fixed or calibrated (checked against a known standard)."
+   ],
+   [
+    "Limitation",
+    "a weakness in a method or its scope that restricts what the results can show, such as a small sample or a short time frame. Limitations are reported honestly, even when they cannot be removed."
+   ],
+   "A mistake, such as writing down a wrong number, is a blunder and is not the same as a random or systematic error."
+  ],
+  "remember": "Random error scatters, systematic error shifts, and limitations are reported.",
+  "a": {
+   "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
+   "opts": [
+    "A systematic error, as every result is shifted the same way",
+    "A random error, as the results vary between trials",
+    "A random error, as the stopwatch is the cause of the fault",
+    "A systematic error, as the sample size was too small"
+   ],
+   "why": "The fault pushes every measurement in the same direction, so it shifts the results. This is a systematic error. It is not random, because random error would push results in both directions and scatter them.",
+   "clue": "Does the fault push results one way or both ways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia counts the yeast cells in the same sample five times under a microscope and gets 42, 55, 47, 60 and 49. She averages the five counts. What does this reduce?",
+   "opts": [
+    "The effect of random error on her result",
+    "The effect of systematic error on her result",
+    "The effect of a faulty microscope lens",
+    "The limitation of using only one species of yeast"
+   ],
+   "why": "Her counts of the same sample vary in both directions, which shows random error. Averaging repeated counts reduces its effect. It would not fix a systematic error such as a faulty lens, as every count would be shifted the same way, and it cannot remove a limitation such as testing one species.",
+   "clue": "Are the counts scattered both ways or shifted one way?"
+  }
+ },
+ "cleared_by": "owner"
+}

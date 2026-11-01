@@ -1,0 +1,158 @@
+{
+ "id": "mat-simple-interest-2",
+ "title": "Simple interest",
+ "brief": "db36a9742010",
+ "shortlist": [
+  [
+   "mat-simple-interest",
+   0.54
+  ],
+  [
+   "mat-compound-interest-by-repeated",
+   0.512
+  ],
+  [
+   "mat-compound-interest",
+   0.366
+  ],
+  [
+   "mat-reducing-balance-loans",
+   0.288
+  ],
+  [
+   "mat-comparing-investments",
+   0.254
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says adapt mat-simple-interest (2 changes)",
+  "2026-11-01T08:14:06Z adapt: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "adapt": 0.00591,
+  "check": 0.00698
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-simple-interest",
+  "changes": [
+   "Write the formula as I = PrT/100, with r as the yearly percentage rate and T as time, instead of I = Prn with r as a decimal and n as periods.",
+   "Replace the decimal-rate worked example with one that uses a percentage rate and the PrT/100 formula, so the card matches the VCE notation."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same simple interest idea at the right depth, but it uses different formula notation (Prn with decimal rate) from the VCE brief's PrT/100 form.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-simple-interest",
+  "changes": [
+   "Write the formula as I = PrT/100, with r as the yearly percentage rate and T as time, instead of I = Prn with r as a decimal and n as periods.",
+   "Replace the decimal-rate worked example with one that uses a percentage rate and the PrT/100 formula, so the card matches the VCE notation."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Simple interest",
+  "card": [
+   "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
+   "The formula is I = PrT/100. I is the interest, P is the principal, r is the yearly interest rate as a percentage, and T is the time in years.",
+   "The rate is per year, so T must be in years. For 6 months, T = 0.5. Put r in as 6, not 0.06, because the 100 in the formula does that job.",
+   "Example: $2000 at 5% per year for 3 years. I = 2000 × 5 × 3/100 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+  ],
+  "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
+  "a": {
+   "q": "Mia puts $4000 into an account paying 3% per year simple interest. She leaves it for 2 years. How much interest does she earn?",
+   "opts": [
+    "$240",
+    "$120",
+    "$4240",
+    "$24 000"
+   ],
+   "why": "I = 4000 × 3 × 2/100 = $240. $4240 is the total balance, but the question asks for the interest alone. $24 000 comes from leaving out the ÷ 100.",
+   "clue": "Use I = PrT/100 with r = 3 and T = 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam takes a loan of $5000 at 8% per year simple interest. He repays it after 18 months. How much interest does he pay in total?",
+   "opts": [
+    "$600",
+    "$7200",
+    "$400",
+    "$720"
+   ],
+   "why": "The rate is per year, so 18 months is T = 1.5 years. I = 5000 × 8 × 1.5/100 = $600. Using T = 18 gives $7200, which mixes months with a yearly rate.",
+   "clue": "Change the months into years before using the formula."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$240",
+   "also_right": []
+  },
+  "b": {
+   "best": "$600",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Simple interest",
+  "card": [
+   "Simple interest is worked out only on the starting amount, called the principal. The interest is not added to the principal each period, so it never earns interest itself.",
+   "The formula is I = PrT/100. I is the interest, P is the principal, r is the yearly interest rate as a percentage, and T is the time in years.",
+   "The rate is per year, so T must be in years. For 6 months, T = 0.5. Put r in as 6, not 0.06, because the 100 in the formula does that job.",
+   "Example: $2000 at 5% per year for 3 years. I = 2000 × 5 × 3/100 = $300. The total amount after 3 years is $2000 + $300 = $2300."
+  ],
+  "remember": "Simple interest is the same every period, because it is always worked out on the principal.",
+  "a": {
+   "q": "Mia puts $4000 into an account paying 3% per year simple interest. She leaves it for 2 years. How much interest does she earn?",
+   "opts": [
+    "$240",
+    "$120",
+    "$4240",
+    "$24 000"
+   ],
+   "why": "I = 4000 × 3 × 2/100 = $240. $4240 is the total balance, but the question asks for the interest alone. $24 000 comes from leaving out the ÷ 100.",
+   "clue": "Use I = PrT/100 with r = 3 and T = 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam takes a loan of $5000 at 8% per year simple interest. He repays it after 18 months. How much interest does he pay in total?",
+   "opts": [
+    "$600",
+    "$7200",
+    "$400",
+    "$720"
+   ],
+   "why": "The rate is per year, so 18 months is T = 1.5 years. I = 5000 × 8 × 1.5/100 = $600. Using T = 18 gives $7200, which mixes months with a yearly rate.",
+   "clue": "Change the months into years before using the formula."
+  }
+ },
+ "cleared_by": "checker"
+}

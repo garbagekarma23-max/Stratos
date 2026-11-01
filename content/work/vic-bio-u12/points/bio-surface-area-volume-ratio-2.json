@@ -1,0 +1,214 @@
+{
+ "id": "bio-surface-area-volume-ratio-2",
+ "title": "Surface area to volume ratio",
+ "brief": "f4e17ba0bbc9",
+ "shortlist": [
+  [
+   "bio-mitosis",
+   0.264
+  ],
+  [
+   "bio-adaptive-immune-response",
+   0.212
+  ],
+  [
+   "mat-volume-capacity",
+   0.209
+  ],
+  [
+   "mat-surface-area",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: failed the content check, writing again",
+  "2026-11-01T08:33:48Z write: done",
+  "2026-11-01T08:42:04Z check: flagged",
+  "2026-11-01T08:44:26Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: picked as a spot check. It would have been cleared with the fix (remember wording, b wording)",
+  "2026-11-01T09:35:05Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01164,
+  "check": 0.01071,
+  "fix": 0.02586
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how the surface area to volume ratio limits cell size; the mitosis and immune cards are unrelated, and the maths cards cover only volume and surface area calculations, not the ratio or its effect on exchange in cells.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area to volume ratio",
+  "card": [
+   "Materials such as oxygen and nutrients enter a cell, and wastes leave it, across its surface. The surface area is the total area of the cell's outer surface.",
+   "The volume is the space inside the cell. The inside needs a supply of materials, and the demand grows with volume.",
+   "As a cell grows, its volume increases faster than its surface area. So the surface area to volume ratio falls.",
+   "A cell with a low ratio has less surface for each unit of volume. Exchange may not meet its needs, which limits how large cells can grow."
+  ],
+  "remember": "Bigger cell, lower surface area to volume ratio, so exchange struggles to meet needs.",
+  "a": {
+   "q": "A cell doubles in diameter. What happens to its surface area to volume ratio?",
+   "opts": [
+    "It falls, because volume rises faster than surface area",
+    "It rises, because surface area rises faster than volume",
+    "It stays the same, because both increase together",
+    "It rises, because a larger cell has more surface"
+   ],
+   "why": "Volume increases faster than surface area as a cell grows, so there is less surface for each unit of volume. The ratio falls. A larger cell does have more surface in total, but the ratio compares it with volume.",
+   "clue": "Compare how fast volume rises with how fast surface area rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cell X is small and cell Y is much larger. Both have the same shape and need materials in proportion to their volume. Which statement is correct?",
+   "opts": [
+    "Cell Y has less surface for each unit of volume than cell X",
+    "Cell Y has more surface for each unit of volume than cell X",
+    "Cell Y has more total surface, so it exchanges more per unit",
+    "Cell X has a lower ratio, so it struggles to meet its needs"
+   ],
+   "why": "The larger cell has a lower ratio, so it has less surface for each unit of volume. It has more surface in total, but that is not enough to keep up with its needs. This is why the ratio limits cell size.",
+   "clue": "Think about surface for each unit of volume, not total surface."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It falls, because volume rises faster than surface area",
+   "also_right": []
+  },
+  "b": {
+   "best": "Cell Y has less surface for each unit of volume than cell X",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says exchange 'struggles to meet needs' for any bigger cell. The card says only that exchange 'may not meet its needs' when the ratio is low, so the remember line overstates it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the larger cell's surface 'is not enough to keep up with its needs'. This states as certain what the card says only may happen."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and each has one clear answer. The remember line and why (b) state as certain that larger cells fail to meet their needs, where the card says only that exchange 'may' fall short."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says exchange 'struggles to meet needs' for any bigger cell. The card says only that exchange 'may not meet its needs' when the ratio is low, so the remember line overstates it.",
+  "Question b, wording: Why (b) says the larger cell's surface 'is not enough to keep up with its needs'. This states as certain what the card says only may happen."
+ ],
+ "proposal": {
+  "title": "Surface area to volume ratio",
+  "card": [
+   "Materials such as oxygen and nutrients enter a cell, and wastes leave it, across its surface. The surface area is the total area of the cell's outer surface.",
+   "The volume is the space inside the cell. The inside needs a supply of materials, and the demand grows with volume.",
+   "As a cell grows, its volume increases faster than its surface area. So the surface area to volume ratio falls.",
+   "A cell with a low ratio has less surface for each unit of volume. Exchange may not meet its needs, which limits how large cells can grow."
+  ],
+  "remember": "Bigger cell, lower surface area to volume ratio, so exchange may not keep up.",
+  "a": {
+   "q": "A cell doubles in diameter. What happens to its surface area to volume ratio?",
+   "opts": [
+    "It falls, because volume rises faster than surface area",
+    "It rises, because surface area rises faster than volume",
+    "It stays the same, because both increase together",
+    "It rises, because a larger cell has more surface"
+   ],
+   "why": "Volume increases faster than surface area as a cell grows, so there is less surface for each unit of volume. The ratio falls. A larger cell does have more surface in total, but the ratio compares it with volume.",
+   "clue": "Compare how fast volume rises with how fast surface area rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cell X is small and cell Y is much larger. Both have the same shape and need materials in proportion to their volume. Which statement is correct?",
+   "opts": [
+    "Cell Y has less surface for each unit of volume than cell X",
+    "Cell Y has more surface for each unit of volume than cell X",
+    "Cell Y has more total surface, so it exchanges more per unit",
+    "Cell X has a lower ratio, because it has less total surface"
+   ],
+   "why": "The larger cell has a lower ratio, so it has less surface for each unit of volume. It has more surface in total, but less for each unit of volume it must supply. So exchange may not meet its needs, which is why the ratio limits cell size.",
+   "clue": "Think about surface for each unit of volume, not total surface."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says exchange 'struggles to meet needs' for any bigger cell. The card says only that exchange 'may not meet its needs' when the ratio is low, so the remember line overstates it."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says the larger cell's surface 'is not enough to keep up with its needs'. This states as certain what the card says only may happen."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says exchange 'struggles to meet needs' for any bigger cell. The card says only that exchange 'may not meet its needs' when the ratio is low, so the remember line overstates it.",
+   "Question b, wording: Why (b) says the larger cell's surface 'is not enough to keep up with its needs'. This states as certain what the card says only may happen."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Surface area to volume ratio",
+  "card": [
+   "Materials such as oxygen and nutrients enter a cell, and wastes leave it, across its surface. The surface area is the total area of the cell's outer surface.",
+   "The volume is the space inside the cell. The inside needs a supply of materials, and the demand grows with volume.",
+   "As a cell grows, its volume increases faster than its surface area. So the surface area to volume ratio falls.",
+   "A cell with a low ratio has less surface for each unit of volume. Exchange may not meet its needs, which limits how large cells can grow."
+  ],
+  "remember": "Bigger cell, lower surface area to volume ratio, so exchange may not keep up.",
+  "a": {
+   "q": "A cell doubles in diameter. What happens to its surface area to volume ratio?",
+   "opts": [
+    "It falls, because volume rises faster than surface area",
+    "It rises, because surface area rises faster than volume",
+    "It stays the same, because both increase together",
+    "It rises, because a larger cell has more surface"
+   ],
+   "why": "Volume increases faster than surface area as a cell grows, so there is less surface for each unit of volume. The ratio falls. A larger cell does have more surface in total, but the ratio compares it with volume.",
+   "clue": "Compare how fast volume rises with how fast surface area rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "Cell X is small and cell Y is much larger. Both have the same shape and need materials in proportion to their volume. Which statement is correct?",
+   "opts": [
+    "Cell Y has less surface for each unit of volume than cell X",
+    "Cell Y has more surface for each unit of volume than cell X",
+    "Cell Y has more total surface, so it exchanges more per unit",
+    "Cell X has a lower ratio, because it has less total surface"
+   ],
+   "why": "The larger cell has a lower ratio, so it has less surface for each unit of volume. It has more surface in total, but less for each unit of volume it must supply. So exchange may not meet its needs, which is why the ratio limits cell size.",
+   "clue": "Think about surface for each unit of volume, not total surface."
+  }
+ },
+ "cleared_by": "owner"
+}

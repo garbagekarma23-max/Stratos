@@ -1,0 +1,136 @@
+{
+ "id": "chem-stoichiometry-with-gases",
+ "title": "Stoichiometry with gases",
+ "brief": "c5c1981e8c4b",
+ "shortlist": [
+  [
+   "chem-molar-volume-gases",
+   0.408
+  ],
+  [
+   "chem-dilution",
+   0.236
+  ],
+  [
+   "chem-molar-mass-moles",
+   0.233
+  ],
+  [
+   "chem-ideal-gas-law",
+   0.224
+  ],
+  [
+   "chem-limiting-reagents",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00615,
+  "check": 0.00577
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches using equation mole ratios to find the mass or volume of a gas: the molar volume card covers only moles-to-volume conversion, and the limiting reagents card covers ratios but not gas volumes, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Stoichiometry with gases",
+  "card": [
+   "The coefficients in a balanced equation give the mole ratio of the substances. In 2H2 + O2 → 2H2O, 2 mol of H2 reacts with 1 mol of O2.",
+   "To find an unknown, first change the given quantity to moles. Use n = m ÷ M for a mass, where M is molar mass.",
+   "Then use the mole ratio to find the moles of the substance you want.",
+   "Last, change moles to the quantity asked for. For a mass, use m = n × M. For a gas volume at SLC, use V = n × 24.8 L, as 1 mol of any gas takes up 24.8 L at SLC."
+  ],
+  "remember": "Go from the given quantity to moles, use the mole ratio, then convert to the answer asked for.",
+  "a": {
+   "q": "In 2H2 + O2 → 2H2O, how many moles of O2 react with 6.0 mol of H2?",
+   "opts": [
+    "3.0 mol",
+    "6.0 mol",
+    "12 mol",
+    "2.0 mol"
+   ],
+   "why": "The ratio of H2 to O2 is 2 to 1, so 6.0 mol of H2 needs 3.0 mol of O2. Using 6.0 mol ignores the ratio.",
+   "clue": "Look at the coefficients in front of H2 and O2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Magnesium reacts with acid: Mg + 2HCl → MgCl2 + H2. What volume of H2 at SLC forms from 0.10 mol of Mg?",
+   "opts": [
+    "2.48 L",
+    "4.96 L",
+    "0.248 L",
+    "24.8 L"
+   ],
+   "why": "The ratio of Mg to H2 is 1 to 1, so 0.10 mol of H2 forms. V = 0.10 × 24.8 = 2.48 L. Forgetting to multiply by the moles gives 24.8 L.",
+   "clue": "Find the moles of H2 first, then change to volume."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3.0 mol",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.48 L",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Stoichiometry with gases",
+  "card": [
+   "The coefficients in a balanced equation give the mole ratio of the substances. In 2H2 + O2 → 2H2O, 2 mol of H2 reacts with 1 mol of O2.",
+   "To find an unknown, first change the given quantity to moles. Use n = m ÷ M for a mass, where M is molar mass.",
+   "Then use the mole ratio to find the moles of the substance you want.",
+   "Last, change moles to the quantity asked for. For a mass, use m = n × M. For a gas volume at SLC, use V = n × 24.8 L, as 1 mol of any gas takes up 24.8 L at SLC."
+  ],
+  "remember": "Go from the given quantity to moles, use the mole ratio, then convert to the answer asked for.",
+  "a": {
+   "q": "In 2H2 + O2 → 2H2O, how many moles of O2 react with 6.0 mol of H2?",
+   "opts": [
+    "3.0 mol",
+    "6.0 mol",
+    "12 mol",
+    "2.0 mol"
+   ],
+   "why": "The ratio of H2 to O2 is 2 to 1, so 6.0 mol of H2 needs 3.0 mol of O2. Using 6.0 mol ignores the ratio.",
+   "clue": "Look at the coefficients in front of H2 and O2."
+  },
+  "b": {
+   "d": 3,
+   "q": "Magnesium reacts with acid: Mg + 2HCl → MgCl2 + H2. What volume of H2 at SLC forms from 0.10 mol of Mg?",
+   "opts": [
+    "2.48 L",
+    "4.96 L",
+    "0.248 L",
+    "24.8 L"
+   ],
+   "why": "The ratio of Mg to H2 is 1 to 1, so 0.10 mol of H2 forms. V = 0.10 × 24.8 = 2.48 L. Forgetting to multiply by the moles gives 24.8 L.",
+   "clue": "Find the moles of H2 first, then change to volume."
+  }
+ },
+ "cleared_by": "checker"
+}

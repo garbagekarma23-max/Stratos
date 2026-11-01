@@ -1,0 +1,212 @@
+{
+ "id": "acc-accounting-decisions-assets",
+ "title": "Managing non-current assets",
+ "brief": "1f2e4f8573ce",
+ "shortlist": [
+  [
+   "bus-working-capital-management",
+   0.273
+  ],
+  [
+   "bus-matching-principle",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: flagged",
+  "2026-11-01T08:33:47Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T09:35:05Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00691,
+  "check": 0.0092,
+  "fix": 0.0199,
+  "recheck": 0.01037
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches an asset register or the recording and timely maintenance, insurance and replacement of non-current assets; they cover working capital and matching finance terms instead.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Managing non-current assets",
+  "card": [
+   "A business may own many non-current assets, such as vehicles, machines and shop fittings. It needs a record of each one.",
+   [
+    "Asset register",
+    "a list that records each asset's cost, location and depreciation."
+   ],
+   "The register shows where each asset is and how much of its cost has been written off. This helps the business keep track of its assets and maintain them.",
+   "It also shows what each asset is worth on the books and how old it is. This helps a business insure its assets and plan to replace them on time."
+  ],
+  "remember": "An asset register tracks each asset so it can be maintained, insured and replaced.",
+  "a": {
+   "q": "What does an asset register record for each non-current asset?",
+   "opts": [
+    "Its cost, location and depreciation",
+    "Its sales, customers and profit",
+    "Its supplier's debts and payment dates",
+    "Its wages, rent and running costs"
+   ],
+   "why": "An asset register lists details of each asset: what it cost, where it is and its depreciation. Running costs matter to the business, but the register is not a record of them.",
+   "clue": "The register describes the asset itself."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's Landscaping in Bendigo owns six mowers and two trucks. Which use of its asset register is most direct?",
+   "opts": [
+    "Checking which truck is oldest to plan its replacement",
+    "Working out how many customers to visit next week",
+    "Deciding what wages to pay its staff this month",
+    "Choosing how much stock to order from suppliers"
+   ],
+   "why": "The register shows each asset's cost and depreciation, so Tom can see which truck is oldest and plan to replace it on time. Customers, wages and stock are not recorded in an asset register.",
+   "clue": "Which job relates to the assets themselves?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Its cost, location and depreciation",
+   "also_right": []
+  },
+  "b": {
+   "best": "Checking which truck is oldest to plan its replacement",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines the register as recording cost, location and depreciation, then says it shows how old each asset is. Age comes from a purchase date the card never lists, and Why (b) implies age can be read from cost and depreciation, which is loose reasoning."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are sound. One minor issue: the card says the register shows each asset's age without mentioning a purchase date, and Why (b) loosely links age to cost and depreciation."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines the register as recording cost, location and depreciation, then says it shows how old each asset is. Age comes from a purchase date the card never lists, and Why (b) implies age can be read from cost and depreciation, which is loose reasoning."
+ ],
+ "proposal": {
+  "title": "Managing non-current assets",
+  "card": [
+   "A business may own many non-current assets, such as vehicles, machines and shop fittings. It needs a record of each one.",
+   [
+    "Asset register",
+    "a list that records each asset's cost, date of purchase, location and depreciation."
+   ],
+   "The location shows where each asset is kept. This helps the business find each asset, check it and maintain it.",
+   "The cost and depreciation show what each asset is worth on the books, and the purchase date shows how old it is. This helps the business insure its assets and plan to replace them on time."
+  ],
+  "remember": "An asset register tracks each asset so it can be maintained, insured and replaced on time.",
+  "a": {
+   "q": "Why does a business keep an asset register?",
+   "opts": [
+    "To maintain, insure and replace its assets on time",
+    "To record the cash it receives from its customers",
+    "To track how much stock it has ready to sell",
+    "To list the amounts it owes to its suppliers"
+   ],
+   "why": "The register records details of each asset the business owns and uses, which helps it maintain, insure and replace them. Stock is held for sale, not for use, so it is not tracked in an asset register.",
+   "clue": "The register is about things the business owns and uses."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kerr's Gardening in Bendigo owns six mowers and two trucks. The owner wants to know which truck is oldest. Which register detail tells her?",
+   "opts": [
+    "The date each truck was bought",
+    "The place each truck is kept",
+    "The price paid for each truck",
+    "The wages paid to each truck's driver"
+   ],
+   "why": "The purchase date shows when each truck was bought, so it shows which is oldest. The price paid shows the cost, not when the truck was bought, and a cheaper truck is not always an older one.",
+   "clue": "Age is about when, not how much."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "To maintain, insure and replace its assets on time",
+    "also_right": []
+   },
+   "b": {
+    "best": "The date each truck was bought",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "The right option is the only one that contains the word 'assets', which matches 'asset register' in the question. A student could pick it by word-matching without knowing the idea. The wrong options could also be about things the business owns, for example 'To record which customers have bought its assets'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and answers are correct. Question a's right option is the only one that uses the word 'assets', so a student could match it to 'asset register' without understanding the idea."
+  },
+  "flags": [
+   "Question a, wording: The right option is the only one that contains the word 'assets', which matches 'asset register' in the question. A student could pick it by word-matching without knowing the idea. The wrong options could also be about things the business owns, for example 'To record which customers have bought its assets'."
+  ]
+ },
+ "final": {
+  "title": "Managing non-current assets",
+  "card": [
+   "A business may own many non-current assets, such as vehicles, machines and shop fittings. It needs a record of each one.",
+   [
+    "Asset register",
+    "a list that records each asset's cost, date of purchase, location and depreciation."
+   ],
+   "The location shows where each asset is kept. This helps the business find each asset, check it and maintain it.",
+   "The cost and depreciation show what each asset is worth on the books, and the purchase date shows how old it is. This helps the business insure its assets and plan to replace them on time."
+  ],
+  "remember": "An asset register tracks each asset so it can be maintained, insured and replaced on time.",
+  "a": {
+   "q": "Why does a business keep an asset register?",
+   "opts": [
+    "To maintain, insure and replace its assets on time",
+    "To record the cash it receives from its customers",
+    "To track how much stock it has ready to sell",
+    "To list the amounts it owes to its suppliers"
+   ],
+   "why": "The register records details of each asset the business owns and uses, which helps it maintain, insure and replace them. Stock is held for sale, not for use, so it is not tracked in an asset register.",
+   "clue": "The register is about things the business owns and uses."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kerr's Gardening in Bendigo owns six mowers and two trucks. The owner wants to know which truck is oldest. Which register detail tells her?",
+   "opts": [
+    "The date each truck was bought",
+    "The place each truck is kept",
+    "The price paid for each truck",
+    "The wages paid to each truck's driver"
+   ],
+   "why": "The purchase date shows when each truck was bought, so it shows which is oldest. The price paid shows the cost, not when the truck was bought, and a cheaper truck is not always an older one.",
+   "clue": "Age is about when, not how much."
+  }
+ },
+ "cleared_by": "owner"
+}

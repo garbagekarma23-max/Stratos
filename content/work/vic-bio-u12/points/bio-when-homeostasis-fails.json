@@ -1,0 +1,236 @@
+{
+ "id": "bio-when-homeostasis-fails",
+ "title": "When homeostasis fails",
+ "brief": "1d413c7ee227",
+ "shortlist": [
+  [
+   "bio-homeostasis-negative-feedback",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00563,
+  "check": 0.01923,
+  "fix": 0.03136,
+  "recheck": 0.00928
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point teaches how negative feedback works in normal homeostasis, while the new point is about what happens when a regulating mechanism breaks down, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "When homeostasis fails",
+  "card": [
+   "Homeostasis fails when a part of a regulating mechanism stops working properly. The internal environment then drifts outside its normal range.",
+   [
+    "Type 1 diabetes",
+    "the body's immune system destroys the cells that make insulin. Without insulin, cells cannot take up glucose well, so blood glucose stays too high."
+   ],
+   [
+    "Hypoglycaemia",
+    "blood glucose falls too low. It can happen in a person with diabetes if too much insulin is taken, or after a long time without food. The brain gets too little glucose, which can cause shakiness, confusion and fainting."
+   ],
+   [
+    "Hyperthyroidism",
+    "the thyroid gland makes too much thyroid hormone. This speeds up metabolism, which can cause weight loss, a fast heart rate and feeling too hot."
+   ]
+  ],
+  "remember": "When a receptor, control centre, effector or hormone supply fails, a variable drifts out of its normal range.",
+  "a": {
+   "q": "Why does blood glucose stay too high in a person with untreated type 1 diabetes?",
+   "opts": [
+    "The body makes too little insulin to move glucose into cells",
+    "The body makes too much insulin, so cells ignore glucose",
+    "The body makes too little glucagon to release glucose",
+    "The body makes too much thyroid hormone, which burns glucose"
+   ],
+   "why": "In type 1 diabetes the cells that make insulin are destroyed, so glucose is not taken up well and stays in the blood. Too little glucagon would tend to lower blood glucose, not raise it.",
+   "clue": "Think about which hormone is missing and what it normally does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jas has type 1 diabetes. He takes his usual insulin but skips lunch and later feels shaky and confused. What best explains this?",
+   "opts": [
+    "His blood glucose has fallen too low, which is hypoglycaemia",
+    "His blood glucose has risen too high, which is hypoglycaemia",
+    "His thyroid makes too much hormone, which is hyperthyroidism",
+    "His body cannot make glucagon, which is type 1 diabetes"
+   ],
+   "why": "Insulin lowers blood glucose, and with no lunch there was little glucose coming in. Blood glucose fell too low, which is hypoglycaemia and leaves the brain short of glucose. Type 1 diabetes is about missing insulin, not glucagon, and it did not cause this drop by itself.",
+   "clue": "Insulin lowers glucose, and he did not eat."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The body makes too little insulin to move glucose into cells",
+   "also_right": []
+  },
+  "b": {
+   "best": "His blood glucose has fallen too low, which is hypoglycaemia",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts failures into receptor, control centre, effector or hormone supply. The card does not make this split; it only says 'a part of a regulating mechanism stops working properly'. The line also does not fit the card's hypoglycaemia examples (too much insulin taken, or a long time without food), which are not a broken part."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions check out, and each question has one clear answer. The only problem is that the remember line splits failure into receptor, control centre, effector or hormone supply, which the card never teaches and which does not fit its hypoglycaemia examples."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line sorts failures into receptor, control centre, effector or hormone supply. The card does not make this split; it only says 'a part of a regulating mechanism stops working properly'. The line also does not fit the card's hypoglycaemia examples (too much insulin taken, or a long time without food), which are not a broken part."
+ ],
+ "proposal": {
+  "title": "When homeostasis fails",
+  "card": [
+   "Homeostasis fails when a regulating mechanism breaks down or is pushed further than it can correct. The internal environment then drifts outside its normal range.",
+   [
+    "Type 1 diabetes",
+    "the body's immune system destroys the cells that make insulin. Without insulin, cells cannot take up glucose well, so blood glucose stays too high."
+   ],
+   [
+    "Hypoglycaemia",
+    "blood glucose falls too low, such as when a person with diabetes takes too much insulin or goes a long time without food. The brain gets too little glucose, which can cause shakiness, confusion and fainting."
+   ],
+   [
+    "Hyperthyroidism",
+    "the thyroid gland makes too much thyroid hormone. This speeds up metabolism, which can cause weight loss, a fast heart rate and feeling too hot."
+   ]
+  ],
+  "remember": "If regulation breaks down or is overwhelmed, a variable can drift outside its normal range.",
+  "a": {
+   "q": "Why does blood glucose stay too high in a person with untreated type 1 diabetes?",
+   "opts": [
+    "Too little insulin is made, so cells take up less glucose",
+    "Too much insulin is made, so cells take up less glucose",
+    "Too much thyroid hormone is made, so glucose builds up",
+    "The immune system destroys the cells that use glucose"
+   ],
+   "why": "In type 1 diabetes the immune system destroys the cells that make insulin. Without insulin, cells take up less glucose, so it stays in the blood. The tempting option of too much insulin gets it backwards: the problem is a lack of insulin.",
+   "clue": "Which cells does the immune system destroy, and what do they make?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jas has type 1 diabetes. He takes his usual insulin but skips lunch and later feels shaky and confused. What best explains this?",
+   "opts": [
+    "His blood glucose has fallen too low, which is hypoglycaemia",
+    "His blood glucose has risen too high, which is hypoglycaemia",
+    "His thyroid makes too much hormone, which is hyperthyroidism",
+    "His body cannot make glucagon, which is type 1 diabetes"
+   ],
+   "why": "Insulin lowers blood glucose, and with no lunch little glucose was coming in. His blood glucose fell too low, which is hypoglycaemia, and his brain is short of glucose. The tempting option uses the right term but says glucose rose: hypoglycaemia means blood glucose is too low.",
+   "clue": "Insulin lowers glucose, and he did not eat."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Too little insulin is made, so cells take up less glucose",
+    "also_right": []
+   },
+   "b": {
+    "best": "His blood glucose has fallen too low, which is hypoglycaemia",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts failures into receptor, control centre, effector or hormone supply. The card does not make this split; it only says 'a part of a regulating mechanism stops working properly'. The line also does not fit the card's hypoglycaemia examples (too much insulin taken, or a long time without food), which are not a broken part."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line sorts failures into receptor, control centre, effector or hormone supply. The card does not make this split; it only says 'a part of a regulating mechanism stops working properly'. The line also does not fit the card's hypoglycaemia examples (too much insulin taken, or a long time without food), which are not a broken part."
+  ]
+ },
+ "final": {
+  "title": "When homeostasis fails",
+  "card": [
+   "Homeostasis fails when a regulating mechanism breaks down or is pushed further than it can correct. The internal environment then drifts outside its normal range.",
+   [
+    "Type 1 diabetes",
+    "the body's immune system destroys the cells that make insulin. Without insulin, cells cannot take up glucose well, so blood glucose stays too high."
+   ],
+   [
+    "Hypoglycaemia",
+    "blood glucose falls too low, such as when a person with diabetes takes too much insulin or goes a long time without food. The brain gets too little glucose, which can cause shakiness, confusion and fainting."
+   ],
+   [
+    "Hyperthyroidism",
+    "the thyroid gland makes too much thyroid hormone. This speeds up metabolism, which can cause weight loss, a fast heart rate and feeling too hot."
+   ]
+  ],
+  "remember": "If regulation breaks down or is overwhelmed, a variable can drift outside its normal range.",
+  "a": {
+   "q": "Why does blood glucose stay too high in a person with untreated type 1 diabetes?",
+   "opts": [
+    "Too little insulin is made, so cells take up less glucose",
+    "Too much insulin is made, so cells take up less glucose",
+    "Too much thyroid hormone is made, so glucose builds up",
+    "The immune system destroys the cells that use glucose"
+   ],
+   "why": "In type 1 diabetes the immune system destroys the cells that make insulin. Without insulin, cells take up less glucose, so it stays in the blood. The tempting option of too much insulin gets it backwards: the problem is a lack of insulin.",
+   "clue": "Which cells does the immune system destroy, and what do they make?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jas has type 1 diabetes. He takes his usual insulin but skips lunch and later feels shaky and confused. What best explains this?",
+   "opts": [
+    "His blood glucose has fallen too low, which is hypoglycaemia",
+    "His blood glucose has risen too high, which is hypoglycaemia",
+    "His thyroid makes too much hormone, which is hyperthyroidism",
+    "His body cannot make glucagon, which is type 1 diabetes"
+   ],
+   "why": "Insulin lowers blood glucose, and with no lunch little glucose was coming in. His blood glucose fell too low, which is hypoglycaemia, and his brain is short of glucose. The tempting option uses the right term but says glucose rose: hypoglycaemia means blood glucose is too low.",
+   "clue": "Insulin lowers glucose, and he did not eat."
+  }
+ },
+ "cleared_by": "recheck"
+}

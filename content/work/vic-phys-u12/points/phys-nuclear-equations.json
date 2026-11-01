@@ -1,0 +1,219 @@
+{
+ "id": "phys-nuclear-equations",
+ "title": "Nuclear equations",
+ "brief": "d5c2125a8349",
+ "shortlist": [
+  [
+   "chem-atomic-structure",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:34Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00714,
+  "check": 0.01548,
+  "fix": 0.02844,
+  "recheck": 0.00894
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines atomic number, mass number and neutron count, while the new point teaches balancing mass and atomic numbers across a decay equation, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Nuclear equations",
+  "card": [
+   "A nuclear equation shows a nucleus changing in a decay. Each nuclide is written as its symbol with mass number A at the top and atomic number Z at the bottom.",
+   "The mass number A is the number of protons and neutrons. The atomic number Z is the number of protons, and it decides which element the atom is.",
+   "In every nuclear equation, the total A is the same on both sides. The total Z is also the same on both sides.",
+   "An alpha particle is written as He with A = 4 and Z = 2. A beta-minus particle is an electron with A = 0 and Z = -1. Use these to find the missing nuclide."
+  ],
+  "remember": "Add up the top numbers and the bottom numbers: each total must match on both sides.",
+  "a": {
+   "q": "In a decay, a nucleus with A = 20 and Z = 9 emits a beta-minus particle. What are A and Z of the new nucleus?",
+   "opts": [
+    "A = 20, Z = 10",
+    "A = 20, Z = 8",
+    "A = 19, Z = 9",
+    "A = 16, Z = 7"
+   ],
+   "why": "The beta-minus particle has A = 0 and Z = -1. A stays at 20, and Z must balance: 9 = Z + (-1), so Z = 10. Z = 8 comes from subtracting 1 instead of balancing the equation.",
+   "clue": "Z on the right must add up to 9, including the electron's Z."
+  },
+  "b": {
+   "d": 3,
+   "q": "Radium-226 (A = 226, Z = 88) decays by emitting an alpha particle. Which nuclide is formed?",
+   "opts": [
+    "Radon-222 (A = 222, Z = 86)",
+    "Radon-222 (A = 222, Z = 88)",
+    "Radon-224 (A = 224, Z = 87)",
+    "Francium-226 (A = 226, Z = 89)"
+   ],
+   "why": "An alpha particle has A = 4 and Z = 2. Subtracting gives A = 222 and Z = 86, which is radon. Keeping Z at 88 is tempting, but then the Z totals would not balance.",
+   "clue": "Take the alpha particle's A and Z away from both radium numbers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A = 20, Z = 10",
+   "also_right": []
+  },
+  "b": {
+   "best": "Radon-222 (A = 222, Z = 86)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Two distractors pair an element name with the wrong atomic number. 'Radon-224 (A = 224, Z = 87)' gives Z = 87, which is francium, and 'Radon-222 (A = 222, Z = 88)' gives Z = 88, which is radium. This contradicts the card's point that Z decides the element and could teach wrong element–Z links. Distractors should use the element that matches each Z (for example 'Radium-222 (A = 222, Z = 88)')."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options are both labelled 'Radon-222', and the right answer is one of them. A student can narrow the choice from the repeated name without balancing the equation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct: F-20 beta-minus gives A = 20, Z = 10, and Ra-226 alpha decay gives Rn-222 with Z = 86. Two distractors in question b name radon with atomic numbers that belong to francium and radium, which contradicts the card, and the repeated 'Radon-222' label hints at the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Two distractors pair an element name with the wrong atomic number. 'Radon-224 (A = 224, Z = 87)' gives Z = 87, which is francium, and 'Radon-222 (A = 222, Z = 88)' gives Z = 88, which is radium. This contradicts the card's point that Z decides the element and could teach wrong element–Z links. Distractors should use the element that matches each Z (for example 'Radium-222 (A = 222, Z = 88)').",
+  "Question b, wording: Two options are both labelled 'Radon-222', and the right answer is one of them. A student can narrow the choice from the repeated name without balancing the equation."
+ ],
+ "proposal": {
+  "title": "Nuclear equations",
+  "card": [
+   "A nuclear equation shows a nucleus changing in a decay. Each nuclide is written as its symbol with mass number A at the top and atomic number Z at the bottom.",
+   "The mass number A is the number of protons and neutrons. The atomic number Z is the number of protons, and it decides which element the atom is.",
+   "In every nuclear equation, the total A is the same on both sides. The total Z is also the same on both sides.",
+   "An alpha particle is written as He with A = 4 and Z = 2. A beta-minus particle is an electron with A = 0 and Z = -1. Use these to find the missing nuclide."
+  ],
+  "remember": "Add up the top numbers and the bottom numbers: each total must match on both sides.",
+  "a": {
+   "q": "In a decay, a nucleus with A = 20 and Z = 9 emits a beta-minus particle. What are A and Z of the new nucleus?",
+   "opts": [
+    "A = 20, Z = 10",
+    "A = 20, Z = 8",
+    "A = 19, Z = 9",
+    "A = 16, Z = 7"
+   ],
+   "why": "The beta-minus particle has A = 0 and Z = -1. A stays at 20, and Z must balance: 9 = Z + (-1), so Z = 10. Z = 8 comes from subtracting 1 instead of balancing the equation.",
+   "clue": "Z on the right must add up to 9, including the electron's Z."
+  },
+  "b": {
+   "d": 3,
+   "q": "Radium-226 (A = 226, Z = 88) decays by emitting an alpha particle. Which nuclide is formed?",
+   "opts": [
+    "Radon-222 (A = 222, Z = 86)",
+    "Radium-222 (A = 222, Z = 88)",
+    "Polonium-222 (A = 222, Z = 84)",
+    "Thorium-230 (A = 230, Z = 90)"
+   ],
+   "why": "An alpha particle has A = 4 and Z = 2. Subtracting gives A = 222 and Z = 86, which is radon. Radium-222 is tempting, but keeping Z at 88 means the Z totals would not balance, and the element would not have changed.",
+   "clue": "Take the alpha particle's A and Z away from both radium numbers."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A = 20, Z = 10",
+    "also_right": []
+   },
+   "b": {
+    "best": "Radon-222 (A = 222, Z = 86)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Two distractors pair an element name with the wrong atomic number. 'Radon-224 (A = 224, Z = 87)' gives Z = 87, which is francium, and 'Radon-222 (A = 222, Z = 88)' gives Z = 88, which is radium. This contradicts the card's point that Z decides the element and could teach wrong element–Z links. Distractors should use the element that matches each Z (for example 'Radium-222 (A = 222, Z = 88)')."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options are both labelled 'Radon-222', and the right answer is one of them. A student can narrow the choice from the repeated name without balancing the equation."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Two distractors pair an element name with the wrong atomic number. 'Radon-224 (A = 224, Z = 87)' gives Z = 87, which is francium, and 'Radon-222 (A = 222, Z = 88)' gives Z = 88, which is radium. This contradicts the card's point that Z decides the element and could teach wrong element–Z links. Distractors should use the element that matches each Z (for example 'Radium-222 (A = 222, Z = 88)').",
+   "Question b, wording: Two options are both labelled 'Radon-222', and the right answer is one of them. A student can narrow the choice from the repeated name without balancing the equation."
+  ]
+ },
+ "final": {
+  "title": "Nuclear equations",
+  "card": [
+   "A nuclear equation shows a nucleus changing in a decay. Each nuclide is written as its symbol with mass number A at the top and atomic number Z at the bottom.",
+   "The mass number A is the number of protons and neutrons. The atomic number Z is the number of protons, and it decides which element the atom is.",
+   "In every nuclear equation, the total A is the same on both sides. The total Z is also the same on both sides.",
+   "An alpha particle is written as He with A = 4 and Z = 2. A beta-minus particle is an electron with A = 0 and Z = -1. Use these to find the missing nuclide."
+  ],
+  "remember": "Add up the top numbers and the bottom numbers: each total must match on both sides.",
+  "a": {
+   "q": "In a decay, a nucleus with A = 20 and Z = 9 emits a beta-minus particle. What are A and Z of the new nucleus?",
+   "opts": [
+    "A = 20, Z = 10",
+    "A = 20, Z = 8",
+    "A = 19, Z = 9",
+    "A = 16, Z = 7"
+   ],
+   "why": "The beta-minus particle has A = 0 and Z = -1. A stays at 20, and Z must balance: 9 = Z + (-1), so Z = 10. Z = 8 comes from subtracting 1 instead of balancing the equation.",
+   "clue": "Z on the right must add up to 9, including the electron's Z."
+  },
+  "b": {
+   "d": 3,
+   "q": "Radium-226 (A = 226, Z = 88) decays by emitting an alpha particle. Which nuclide is formed?",
+   "opts": [
+    "Radon-222 (A = 222, Z = 86)",
+    "Radium-222 (A = 222, Z = 88)",
+    "Polonium-222 (A = 222, Z = 84)",
+    "Thorium-230 (A = 230, Z = 90)"
+   ],
+   "why": "An alpha particle has A = 4 and Z = 2. Subtracting gives A = 222 and Z = 86, which is radon. Radium-222 is tempting, but keeping Z at 88 means the Z totals would not balance, and the element would not have changed.",
+   "clue": "Take the alpha particle's A and Z away from both radium numbers."
+  }
+ },
+ "cleared_by": "recheck"
+}

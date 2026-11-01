@@ -1,0 +1,128 @@
+{
+ "id": "mat-symmetry-periodicity",
+ "title": "Symmetry and periodicity",
+ "brief": "f7c7a64b6c89",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.351
+  ],
+  [
+   "mat-unit-circle",
+   0.211
+  ],
+  [
+   "mat-tangents-normals",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00505,
+  "check": 0.00732
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the symmetry and periodicity relationships between quadrants; the graphs point covers periods and asymptotes, and the unit circle point covers coordinates and quadrant signs, so both are related but different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Symmetry and periodicity",
+  "card": [
+   "Sine and cosine repeat every 2π, so sin(θ + 2π) = sin θ and cos(θ + 2π) = cos θ. Tangent repeats every π, so tan(θ + π) = tan θ.",
+   "Reflecting an angle in the y-axis gives π − θ: sin(π − θ) = sin θ and cos(π − θ) = −cos θ.",
+   "Going half a turn round gives π + θ: sin(π + θ) = −sin θ and cos(π + θ) = −cos θ. Reflecting in the x-axis gives −θ or 2π − θ: sin(−θ) = −sin θ and cos(−θ) = cos θ.",
+   "Worked example: sin(5π/6) = sin(π − π/6) = sin(π/6) = 1/2. The angle 5π/6 is in quadrant 2, where sine is positive."
+  ],
+  "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
+  "a": {
+   "q": "Which expression is equal to cos(π − θ)?",
+   "opts": [
+    "−cos θ",
+    "cos θ",
+    "−sin θ",
+    "sin θ"
+   ],
+   "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: cos(π − θ) = −cos θ. The option cos θ is tempting, but that is the rule for sine, which keeps its sign.",
+   "clue": "Reflecting in the y-axis changes the x-coordinate."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of cos(4π/3)?",
+   "opts": [
+    "−1/2",
+    "1/2",
+    "−√3/2",
+    "√3/2"
+   ],
+   "why": "4π/3 = π + π/3, which is in quadrant 3, where cosine is negative. So cos(4π/3) = −cos(π/3) = −1/2. The option −√3/2 is tempting, but it is the value of sin(4π/3) and cos(7π/6), not of cos(4π/3).",
+   "clue": "Write 4π/3 as π + π/3, then check the quadrant."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "−cos θ",
+   "also_right": []
+  },
+  "b": {
+   "best": "−1/2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Symmetry and periodicity",
+  "card": [
+   "Sine and cosine repeat every 2π, so sin(θ + 2π) = sin θ and cos(θ + 2π) = cos θ. Tangent repeats every π, so tan(θ + π) = tan θ.",
+   "Reflecting an angle in the y-axis gives π − θ: sin(π − θ) = sin θ and cos(π − θ) = −cos θ.",
+   "Going half a turn round gives π + θ: sin(π + θ) = −sin θ and cos(π + θ) = −cos θ. Reflecting in the x-axis gives −θ or 2π − θ: sin(−θ) = −sin θ and cos(−θ) = cos θ.",
+   "Worked example: sin(5π/6) = sin(π − π/6) = sin(π/6) = 1/2. The angle 5π/6 is in quadrant 2, where sine is positive."
+  ],
+  "remember": "Find the matching angle in quadrant 1, then fix the sign using the quadrant.",
+  "a": {
+   "q": "Which expression is equal to cos(π − θ)?",
+   "opts": [
+    "−cos θ",
+    "cos θ",
+    "−sin θ",
+    "sin θ"
+   ],
+   "why": "Reflecting in the y-axis keeps the height but flips the x-coordinate, so cosine changes sign: cos(π − θ) = −cos θ. The option cos θ is tempting, but that is the rule for sine, which keeps its sign.",
+   "clue": "Reflecting in the y-axis changes the x-coordinate."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of cos(4π/3)?",
+   "opts": [
+    "−1/2",
+    "1/2",
+    "−√3/2",
+    "√3/2"
+   ],
+   "why": "4π/3 = π + π/3, which is in quadrant 3, where cosine is negative. So cos(4π/3) = −cos(π/3) = −1/2. The option −√3/2 is tempting, but it is the value of sin(4π/3) and cos(7π/6), not of cos(4π/3).",
+   "clue": "Write 4π/3 as π + π/3, then check the quadrant."
+  }
+ },
+ "cleared_by": "checker"
+}

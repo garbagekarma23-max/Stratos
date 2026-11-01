@@ -1,0 +1,164 @@
+{
+ "id": "mat-types-graphs",
+ "title": "Types of graphs",
+ "brief": "c6f57a72f273",
+ "shortlist": [
+  [
+   "mat-graphs-logarithmic-functions",
+   0.363
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.278
+  ],
+  [
+   "mat-horizontal-dilations",
+   0.268
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.255
+  ],
+  [
+   "mat-cubic-polynomial-graphs",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:34Z write: failed the content check, writing again",
+  "2026-11-01T08:33:52Z write: done",
+  "2026-11-01T08:42:07Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01033,
+  "check": 0.00809
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points covers graph theory: they all teach function graphs (logarithms, dilations, solving equations, rules from graphs, cubics), not simple, complete, bipartite or regular graphs, subgraphs, complements or isomorphism.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of graphs",
+  "card": [
+   [
+    "Simple",
+    "a graph with no loops and no more than one edge between any two vertices. Every graph here is simple."
+   ],
+   [
+    "Complete",
+    "every pair of vertices is joined by an edge. Kn has n vertices and n(n − 1)/2 edges. K5 has 5 × 4 ÷ 2 = 10 edges."
+   ],
+   [
+    "Regular",
+    "every vertex has the same degree. A regular graph with degree 3 is called 3-regular."
+   ],
+   [
+    "Complement",
+    "the complement of a simple graph has the same vertices and exactly the edges the graph lacks. A graph and its complement together make a complete graph."
+   ]
+  ],
+  "remember": "A complete graph has every possible edge. The complement has exactly the edges that are missing.",
+  "a": {
+   "q": "A simple graph has 6 vertices and is complete. How many edges does it have?",
+   "opts": [
+    "15",
+    "30",
+    "12",
+    "36"
+   ],
+   "why": "K6 has 6 × 5 ÷ 2 = 15 edges. Choosing 6 × 5 = 30 forgets that each edge is counted twice, once from each end.",
+   "clue": "Count each edge once, not from both ends."
+  },
+  "b": {
+   "d": 3,
+   "q": "A simple graph has 5 vertices and 4 edges. What is the number of edges in its complement?",
+   "opts": [
+    "6",
+    "4",
+    "10",
+    "5"
+   ],
+   "why": "K5 has 5 × 4 ÷ 2 = 10 edges. The graph and its complement together make K5, so the complement has 10 − 4 = 6 edges. Giving 4 wrongly treats the complement as having the same edges.",
+   "clue": "Find the edges of the complete graph on 5 vertices first."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15",
+   "also_right": []
+  },
+  "b": {
+   "best": "6",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both questions have one correct answer (15 and 6), consistent with the card and the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Types of graphs",
+  "card": [
+   [
+    "Simple",
+    "a graph with no loops and no more than one edge between any two vertices. Every graph here is simple."
+   ],
+   [
+    "Complete",
+    "every pair of vertices is joined by an edge. Kn has n vertices and n(n − 1)/2 edges. K5 has 5 × 4 ÷ 2 = 10 edges."
+   ],
+   [
+    "Regular",
+    "every vertex has the same degree. A regular graph with degree 3 is called 3-regular."
+   ],
+   [
+    "Complement",
+    "the complement of a simple graph has the same vertices and exactly the edges the graph lacks. A graph and its complement together make a complete graph."
+   ]
+  ],
+  "remember": "A complete graph has every possible edge. The complement has exactly the edges that are missing.",
+  "a": {
+   "q": "A simple graph has 6 vertices and is complete. How many edges does it have?",
+   "opts": [
+    "15",
+    "30",
+    "12",
+    "36"
+   ],
+   "why": "K6 has 6 × 5 ÷ 2 = 15 edges. Choosing 6 × 5 = 30 forgets that each edge is counted twice, once from each end.",
+   "clue": "Count each edge once, not from both ends."
+  },
+  "b": {
+   "d": 3,
+   "q": "A simple graph has 5 vertices and 4 edges. What is the number of edges in its complement?",
+   "opts": [
+    "6",
+    "4",
+    "10",
+    "5"
+   ],
+   "why": "K5 has 5 × 4 ÷ 2 = 10 edges. The graph and its complement together make K5, so the complement has 10 − 4 = 6 edges. Giving 4 wrongly treats the complement as having the same edges.",
+   "clue": "Find the edges of the complete graph on 5 vertices first."
+  }
+ },
+ "cleared_by": "checker"
+}

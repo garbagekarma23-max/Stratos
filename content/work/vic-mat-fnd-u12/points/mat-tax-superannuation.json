@@ -1,0 +1,239 @@
+{
+ "id": "mat-tax-superannuation",
+ "title": "Tax and superannuation",
+ "brief": "6204d28d12d4",
+ "shortlist": [
+  [
+   "mat-income-tax-net-pay",
+   0.335
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00488,
+  "check": 0.01159,
+  "fix": 0.034,
+  "recheck": 0.0081
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only income tax and net pay, with no mention of employer superannuation, which the new point requires, so it is not the same idea and the gap is not a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Tax and superannuation",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is taken out of a person's pay and sent to the government. It is a share of what they earn, so it is found by multiplying pay by a percentage."
+   ],
+   [
+    "Superannuation",
+    "Super is money an employer pays into a fund for the worker's retirement. It is also a share of earnings, and it is paid on top of the wages, not taken out of them."
+   ],
+   "Take-home pay = pay − tax. Super is not part of take-home pay, because it goes straight into the fund.",
+   "Example: Sam earns $1000 in a week. Tax is 20%, so tax = 0.2 × 1000 = $200 and take-home pay is $800. Super at 10% of $1000 is $100, paid into Sam's fund."
+  ],
+  "remember": "Tax is taken out of pay. Super is paid in addition by the employer, and both are a share of earnings.",
+  "a": {
+   "q": "Lena earns $800 in a week. Her tax is 25% of her pay. What is her take-home pay?",
+   "opts": [
+    "$600",
+    "$200",
+    "$1000",
+    "$775"
+   ],
+   "why": "Tax = 0.25 × 800 = $200, and take-home pay = 800 − 200 = $600. The $200 is the tax taken out, not what Lena keeps.",
+   "clue": "Find the tax first, then take it away from the pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar earns $2000 a fortnight. His tax is 15% of his pay. His employer pays super of 10% of his pay into a fund. How much does Omar take home?",
+   "opts": [
+    "$1700",
+    "$1500",
+    "$1800",
+    "$1900"
+   ],
+   "why": "Tax = 0.15 × 2000 = $300, so take-home pay = 2000 − 300 = $1700. Super is paid by the employer on top of wages and is not taken from Omar's pay, so the $200 super is not subtracted.",
+   "clue": "Does the super come out of Omar's pay?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$600",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1700",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says income tax 'is found by multiplying pay by a percentage', which suggests Australian income tax is one flat rate. It is actually progressive, with a tax-free threshold and rising marginal rates. A note that the flat rate is a simplification would stop students learning this as fact."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example uses super at 10%. The Superannuation Guarantee rate has been above 10% since July 2021 and is 12% from 1 July 2025. Students may take 10% as the real rate, so the example should use the current rate or say the rate is made up."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and well built. The card presents income tax as one flat percentage without saying this is a simplification, and its 10% super example is below the current 12% rate."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says income tax 'is found by multiplying pay by a percentage', which suggests Australian income tax is one flat rate. It is actually progressive, with a tax-free threshold and rising marginal rates. A note that the flat rate is a simplification would stop students learning this as fact.",
+  "Card, fact: The example uses super at 10%. The Superannuation Guarantee rate has been above 10% since July 2021 and is 12% from 1 July 2025. Students may take 10% as the real rate, so the example should use the current rate or say the rate is made up."
+ ],
+ "proposal": {
+  "title": "Tax and superannuation",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is taken out of pay and sent to the government. Here it is shown as one percentage of pay, a simplification: in real life income above a tax-free amount is taxed at rates that rise as income rises."
+   ],
+   [
+    "Superannuation",
+    "Super is money an employer pays into a fund for the worker's retirement. It is a share of earnings set by law, 12% from 1 July 2025, paid on top of wages, not taken out of them."
+   ],
+   "Take-home pay = pay − tax. Super goes straight into the fund, so it is not part of take-home pay and is not subtracted from it.",
+   "Example: Sam earns $1000 in a week, with a simple tax rate of 20%. Tax = 0.2 × 1000 = $200, so take-home pay is $800. Super = 0.12 × 1000 = $120, paid into Sam's fund."
+  ],
+  "remember": "Tax is taken out of pay. Super is paid in addition by the employer, and both are a share of earnings.",
+  "a": {
+   "q": "Lena earns $800 in a week. Her tax is 25% of her pay. What is her take-home pay?",
+   "opts": [
+    "$600",
+    "$200",
+    "$1000",
+    "$775"
+   ],
+   "why": "Tax = 0.25 × 800 = $200, and take-home pay = 800 − 200 = $600. The $200 is the tax taken out, not what Lena keeps.",
+   "clue": "Find the tax first, then take it away from the pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar earns $2000 a fortnight. His tax is 15% of his pay. His employer pays super of 12% of his pay into a fund. How much does Omar take home?",
+   "opts": [
+    "$1700",
+    "$1460",
+    "$1760",
+    "$1940"
+   ],
+   "why": "Tax = 0.15 × 2000 = $300, so take-home pay = 2000 − 300 = $1700. The super of 0.12 × 2000 = $240 is paid by the employer on top of wages, so subtracting it as well to get $1460 is wrong.",
+   "clue": "Does the super come out of Omar's pay?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$600",
+    "also_right": []
+   },
+   "b": {
+    "best": "$1700",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The 12% super guarantee rate from 1 July 2025 is correct, and both questions and their explanations have correct working."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says income tax 'is found by multiplying pay by a percentage', which suggests Australian income tax is one flat rate. It is actually progressive, with a tax-free threshold and rising marginal rates. A note that the flat rate is a simplification would stop students learning this as fact."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example uses super at 10%. The Superannuation Guarantee rate has been above 10% since July 2021 and is 12% from 1 July 2025. Students may take 10% as the real rate, so the example should use the current rate or say the rate is made up."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says income tax 'is found by multiplying pay by a percentage', which suggests Australian income tax is one flat rate. It is actually progressive, with a tax-free threshold and rising marginal rates. A note that the flat rate is a simplification would stop students learning this as fact.",
+   "Card, fact: The example uses super at 10%. The Superannuation Guarantee rate has been above 10% since July 2021 and is 12% from 1 July 2025. Students may take 10% as the real rate, so the example should use the current rate or say the rate is made up."
+  ]
+ },
+ "final": {
+  "title": "Tax and superannuation",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is taken out of pay and sent to the government. Here it is shown as one percentage of pay, a simplification: in real life income above a tax-free amount is taxed at rates that rise as income rises."
+   ],
+   [
+    "Superannuation",
+    "Super is money an employer pays into a fund for the worker's retirement. It is a share of earnings set by law, 12% from 1 July 2025, paid on top of wages, not taken out of them."
+   ],
+   "Take-home pay = pay − tax. Super goes straight into the fund, so it is not part of take-home pay and is not subtracted from it.",
+   "Example: Sam earns $1000 in a week, with a simple tax rate of 20%. Tax = 0.2 × 1000 = $200, so take-home pay is $800. Super = 0.12 × 1000 = $120, paid into Sam's fund."
+  ],
+  "remember": "Tax is taken out of pay. Super is paid in addition by the employer, and both are a share of earnings.",
+  "a": {
+   "q": "Lena earns $800 in a week. Her tax is 25% of her pay. What is her take-home pay?",
+   "opts": [
+    "$600",
+    "$200",
+    "$1000",
+    "$775"
+   ],
+   "why": "Tax = 0.25 × 800 = $200, and take-home pay = 800 − 200 = $600. The $200 is the tax taken out, not what Lena keeps.",
+   "clue": "Find the tax first, then take it away from the pay."
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar earns $2000 a fortnight. His tax is 15% of his pay. His employer pays super of 12% of his pay into a fund. How much does Omar take home?",
+   "opts": [
+    "$1700",
+    "$1460",
+    "$1760",
+    "$1940"
+   ],
+   "why": "Tax = 0.15 × 2000 = $300, so take-home pay = 2000 − 300 = $1700. The super of 0.12 × 2000 = $240 is paid by the employer on top of wages, so subtracting it as well to get $1460 is wrong.",
+   "clue": "Does the super come out of Omar's pay?"
+  }
+ },
+ "cleared_by": "recheck"
+}

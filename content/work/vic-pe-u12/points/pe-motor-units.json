@@ -1,0 +1,310 @@
+{
+ "id": "pe-motor-units",
+ "title": "Motor units",
+ "brief": "5423e80ea797",
+ "shortlist": [
+  [
+   "phys-ac-induction-motors",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: done",
+  "2026-11-01T08:24:34Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a other)",
+  "2026-11-01T13:41:59Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01195,
+  "check": 0.02291,
+  "fix": 0.01818,
+  "recheck": 0.00935
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers electromagnetic induction motors in Physics, which is a different idea from motor units and muscle fibre recruitment in the Physical Education course.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue ('A single unit has no setting between off and fully on') just restates the right option, so a student can pick it without knowing the all-or-none principle.",
+ "rejected": {
+  "title": "Motor units",
+  "card": [
+   "A motor unit is one motor neuron (nerve cell) and all the muscle fibres it controls. A muscle contains many motor units.",
+   "When the neuron sends a signal, every fibre in its unit contracts fully, or none of them contracts. This is the all-or-none principle.",
+   "Small motor units are recruited first. They have fewer fibres and make small, fine movements. Larger units join in when more force is needed.",
+   "A muscle makes more force by recruiting more and larger motor units. Signalling each unit more often, called frequency of stimulation, also adds force."
+  ],
+  "remember": "One neuron plus its fibres is a motor unit. More force comes from recruiting more, larger units, small ones first.",
+  "a": {
+   "q": "Which describes the all-or-none principle for a single motor unit?",
+   "opts": [
+    "All its fibres contract fully, or none do",
+    "Its fibres contract partly when little force is needed",
+    "Only some of its fibres contract at low effort",
+    "Its fibres contract in turn, one at a time"
+   ],
+   "why": "When the neuron sends a signal, every fibre in that unit contracts fully. A unit cannot give a partial contraction, so low effort does not mean some fibres or weaker fibres. The muscle uses fewer units instead.",
+   "clue": "A single unit has no setting between off and fully on."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks up a pen, then lifts a heavy box of books. How does his muscle change its force for the box?",
+   "opts": [
+    "It recruits more and larger motor units",
+    "Its active fibres switch to partial contractions",
+    "It switches off its small motor units",
+    "It recruits large units before the small ones"
+   ],
+   "why": "The box needs more force, so larger units join the small ones already working. The small units stay on, because they are recruited first, not swapped out. Fibres never give partial contractions under the all-or-none principle.",
+   "clue": "Think about which units join in, and in what order."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue ('A single unit has no setting between off and fully on') just restates the right option, so a student can pick it without knowing the all-or-none principle."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Motor units",
+     "card": [
+      "A motor unit is one motor neuron (nerve cell) and all the muscle fibres it controls. A muscle contains many motor units.",
+      "When the neuron sends a signal, every fibre in its unit contracts fully, or none of them contracts. This is the all-or-none principle.",
+      "Small motor units are recruited first. They have fewer fibres and make small, fine movements. Larger units join in when more force is needed.",
+      "So a muscle makes a stronger contraction by recruiting more motor units, not by making each unit contract harder."
+     ],
+     "remember": "One nerve plus its fibres is a unit, and a muscle gets stronger by recruiting more units.",
+     "a": {
+      "q": "Which describes the all-or-none principle for a single motor unit?",
+      "opts": [
+       "All its fibres contract fully, or none do",
+       "Its fibres contract more strongly for harder tasks",
+       "Only some of its fibres contract at low effort",
+       "Its fibres contract in turn, one at a time"
+      ],
+      "why": "When the neuron fires, every fibre in that unit contracts fully. A unit cannot give a partial contraction. Force changes by recruiting more units, not by each unit contracting harder.",
+      "clue": "A single unit has no setting between off and fully on."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam picks up a pen, then lifts a heavy box of books. How does his muscle change its force for the box?",
+      "opts": [
+       "It recruits more and larger motor units",
+       "Each active motor unit contracts harder",
+       "It switches off its small motor units",
+       "It recruits only one very large motor unit"
+      ],
+      "why": "More force needs more motor units, and larger ones join the small ones already working. A single unit cannot contract harder than fully. The small units are not switched off.",
+      "clue": "Units cannot vary their strength, so what can change?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "All its fibres contract fully, or none do",
+      "also_right": []
+     },
+     "b": {
+      "best": "It recruits more and larger motor units",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says a muscle makes a stronger contraction by recruiting more units, 'not by making each unit contract harder'. This is too absolute. Force also rises with the frequency of stimulation (rate coding, or summation): a unit fired more often produces more tension. VCE resources commonly list frequency of stimulation as a factor in muscle force. The all-or-none principle covers a single impulse, not the unit's total force output."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The clue 'Units cannot vary their strength' and the why 'A single unit cannot contract harder than fully' rule out rate coding. Under that mechanism, 'Each active motor unit contracts harder' is partly true, because faster firing increases each unit's force. Keep the intended answer, but soften the clue and the why, for example 'the main way is recruiting more units'."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "'A muscle gets stronger' can be read as long-term strength gains from training, not the force of a single contraction. Say 'makes more force' instead."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions have a single right answer. However, the card, the clue for (b) and the why for (b) state absolutely that a unit's force cannot vary, which ignores frequency of stimulation (rate coding), a recognised factor in VCE. The remember line's 'gets stronger' is also ambiguous."
+    },
+    "flags": [
+     "Card, fact: The card says a muscle makes a stronger contraction by recruiting more units, 'not by making each unit contract harder'. This is too absolute. Force also rises with the frequency of stimulation (rate coding, or summation): a unit fired more often produces more tension. VCE resources commonly list frequency of stimulation as a factor in muscle force. The all-or-none principle covers a single impulse, not the unit's total force output.",
+     "Question b, fact: The clue 'Units cannot vary their strength' and the why 'A single unit cannot contract harder than fully' rule out rate coding. Under that mechanism, 'Each active motor unit contracts harder' is partly true, because faster firing increases each unit's force. Keep the intended answer, but soften the clue and the why, for example 'the main way is recruiting more units'.",
+     "Remember, wording: 'A muscle gets stronger' can be read as long-term strength gains from training, not the force of a single contraction. Say 'makes more force' instead."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Motor units",
+     "card": [
+      "A motor unit is one motor neuron (nerve cell) and all the muscle fibres it controls. A muscle contains many motor units.",
+      "When the neuron sends a signal, every fibre in its unit contracts fully, or none of them contracts. This is the all-or-none principle.",
+      "Small motor units are recruited first. They have fewer fibres and make small, fine movements. Larger units join in when more force is needed.",
+      "A muscle makes more force by recruiting more and larger motor units. Signalling each unit more often, called frequency of stimulation, also adds force."
+     ],
+     "remember": "One neuron plus its fibres is a motor unit. More force comes from recruiting more, larger units, small ones first.",
+     "a": {
+      "q": "Which describes the all-or-none principle for a single motor unit?",
+      "opts": [
+       "All its fibres contract fully, or none do",
+       "Its fibres contract partly when little force is needed",
+       "Only some of its fibres contract at low effort",
+       "Its fibres contract in turn, one at a time"
+      ],
+      "why": "When the neuron sends a signal, every fibre in that unit contracts fully. A unit cannot give a partial contraction, so low effort does not mean some fibres or weaker fibres. The muscle uses fewer units instead.",
+      "clue": "A single unit has no setting between off and fully on."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam picks up a pen, then lifts a heavy box of books. How does his muscle change its force for the box?",
+      "opts": [
+       "It recruits more and larger motor units",
+       "Its active fibres switch to partial contractions",
+       "It switches off its small motor units",
+       "It recruits large units before the small ones"
+      ],
+      "why": "The box needs more force, so larger units join the small ones already working. The small units stay on, because they are recruited first, not swapped out. Fibres never give partial contractions under the all-or-none principle.",
+      "clue": "Think about which units join in, and in what order."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "All its fibres contract fully, or none do",
+       "also_right": []
+      },
+      "b": {
+       "best": "It recruits more and larger motor units",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue ('A single unit has no setting between off and fully on') just restates the right option, so a student can pick it without knowing the all-or-none principle."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct and both questions have one clear right answer. The clue for question a restates the answer and should be made less direct."
+     },
+     "flags": [
+      "Question a, other: The clue ('A single unit has no setting between off and fully on') just restates the right option, so a student can pick it without knowing the all-or-none principle."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Motor units",
+  "card": [
+   "A motor unit is one motor neuron (nerve cell) and all the muscle fibres it controls. A muscle contains many motor units.",
+   "When the neuron sends a signal, every fibre in its unit contracts fully, or none of them contracts. This is the all-or-none principle.",
+   "Small motor units are recruited first. They have fewer fibres and make small, fine movements. Larger units join in when more force is needed.",
+   "A muscle makes more force by recruiting more and larger motor units. Signalling each unit more often, called frequency of stimulation, also adds force."
+  ],
+  "remember": "One neuron plus its fibres is a motor unit. More force comes from recruiting more, larger units, small ones first.",
+  "a": {
+   "q": "Which describes the all-or-none principle for a single motor unit?",
+   "opts": [
+    "All its fibres contract fully, or none do",
+    "Its fibres contract partly when little force is needed",
+    "Only some of its fibres contract at low effort",
+    "Its fibres contract in turn, one at a time"
+   ],
+   "why": "When the neuron sends a signal, every fibre in that unit contracts fully. A unit cannot give a partial contraction, so low effort does not mean some fibres or weaker fibres. The muscle uses fewer units instead.",
+   "clue": "Think about what happens to the fibres in one unit each time its neuron sends a signal."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks up a pen, then lifts a heavy box of books. How does his muscle change its force for the box?",
+   "opts": [
+    "It recruits more and larger motor units",
+    "Its active fibres switch to partial contractions",
+    "It switches off its small motor units",
+    "It recruits large units before the small ones"
+   ],
+   "why": "The box needs more force, so larger units join the small ones already working. The small units stay on, because they are recruited first, not swapped out. Fibres never give partial contractions under the all-or-none principle.",
+   "clue": "Think about which units join in, and in what order."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "All its fibres contract fully, or none do",
+   "also_right": []
+  },
+  "b": {
+   "best": "It recruits more and larger motor units",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Motor units",
+  "card": [
+   "A motor unit is one motor neuron (nerve cell) and all the muscle fibres it controls. A muscle contains many motor units.",
+   "When the neuron sends a signal, every fibre in its unit contracts fully, or none of them contracts. This is the all-or-none principle.",
+   "Small motor units are recruited first. They have fewer fibres and make small, fine movements. Larger units join in when more force is needed.",
+   "A muscle makes more force by recruiting more and larger motor units. Signalling each unit more often, called frequency of stimulation, also adds force."
+  ],
+  "remember": "One neuron plus its fibres is a motor unit. More force comes from recruiting more, larger units, small ones first.",
+  "a": {
+   "q": "Which describes the all-or-none principle for a single motor unit?",
+   "opts": [
+    "All its fibres contract fully, or none do",
+    "Its fibres contract partly when little force is needed",
+    "Only some of its fibres contract at low effort",
+    "Its fibres contract in turn, one at a time"
+   ],
+   "why": "When the neuron sends a signal, every fibre in that unit contracts fully. A unit cannot give a partial contraction, so low effort does not mean some fibres or weaker fibres. The muscle uses fewer units instead.",
+   "clue": "Think about what happens to the fibres in one unit each time its neuron sends a signal."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam picks up a pen, then lifts a heavy box of books. How does his muscle change its force for the box?",
+   "opts": [
+    "It recruits more and larger motor units",
+    "Its active fibres switch to partial contractions",
+    "It switches off its small motor units",
+    "It recruits large units before the small ones"
+   ],
+   "why": "The box needs more force, so larger units join the small ones already working. The small units stay on, because they are recruited first, not swapped out. Fibres never give partial contractions under the all-or-none principle.",
+   "clue": "Think about which units join in, and in what order."
+  }
+ }
+}

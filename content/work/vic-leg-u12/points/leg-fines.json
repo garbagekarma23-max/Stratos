@@ -1,0 +1,308 @@
+{
+ "id": "leg-fines",
+ "title": "Fines",
+ "brief": "9b77d4add797",
+ "shortlist": [
+  [
+   "leg-alternative-methods-sentencing",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:51Z write: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b other)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.02153,
+  "check": 0.02969,
+  "fix": 0.02848,
+  "recheck": 0.0121
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers alternative sentencing methods (circle sentencing and restorative justice), not fines, so no bank point teaches the idea of a monetary penalty set by the offence and ability to pay.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue says the amount is set by the offence and what the offender can afford. Since the question says the offence is the same, this points straight to the ability-to-pay option, so a student could answer without applying the idea.",
+ "rejected": {
+  "title": "Fines",
+  "card": [
+   "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+   "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+   "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+   "A fine can punish the offender, deter them from reoffending and deter others from offending. It is often used for less serious offences, such as minor traffic matters."
+  ],
+  "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+  "a": {
+   "q": "Which statement best describes a fine?",
+   "opts": [
+    "Money paid to the state by the offender",
+    "Money paid to the victim by the offender",
+    "Unpaid work done in the community",
+    "Time spent under supervision by a court officer"
+   ],
+   "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+   "clue": "Think about who receives the money."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two drivers in Geelong are found guilty in court of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. How does the court approach setting their fines?",
+   "opts": [
+    "It considers what each driver is able to pay",
+    "It sets one amount, whatever each driver can pay",
+    "It gives Jo a larger fine, as she has less money",
+    "It looks at their incomes but not at the offence"
+   ],
+   "why": "The amount is set by the offence and also by the offender's ability to pay, so the court considers each driver's means. Setting one amount whatever each can pay is tempting because the offence is the same, but it ignores ability to pay.",
+   "clue": "Two things help set the amount: the offence and what the offender can afford."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue says the amount is set by the offence and what the offender can afford. Since the question says the offence is the same, this points straight to the ability-to-pay option, so a student could answer without applying the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Fines",
+     "card": [
+      "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+      "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+      "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+      "A fine can punish the offender and deter them and others from reoffending. It is often used for less serious offences, such as minor traffic matters."
+     ],
+     "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+     "a": {
+      "q": "Which statement best describes a fine?",
+      "opts": [
+       "Money paid to the state by the offender",
+       "Money paid to the victim by the offender",
+       "Unpaid work done in the community",
+       "Time spent under supervision by a court officer"
+      ],
+      "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+      "clue": "Think about who receives the money."
+     },
+     "b": {
+      "d": 3,
+      "q": "Two drivers in Geelong are found guilty of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. Which approach to their fines fits the card?",
+      "opts": [
+       "The court may weigh what each person can afford to pay",
+       "The court must set the same amount, whatever each can pay",
+       "The court must set a larger fine for Jo, who has less money",
+       "The court looks only at the driver's past, not the offence"
+      ],
+      "why": "The amount is set by the offence and also by the offender's ability to pay, so the court can take each driver's means into account. Setting the same sum whatever the means ignores ability to pay, which is the tempting wrong answer.",
+      "clue": "Two things help set the amount: the offence and what the offender can afford."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Money paid to the state by the offender",
+      "also_right": []
+     },
+     "b": {
+      "best": "The court may weigh what each person can afford to pay",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one with a soft 'may'. Every distractor uses an absolute: 'must' (twice) or 'only'. A test-wise student can pick the hedged option without knowing the idea."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "'deter them and others from reoffending' is slightly inaccurate. General deterrence stops others from offending at all, not from reoffending. It should read 'deter them from reoffending and others from offending'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and both questions have one clear answer. However, in question b the right option is the only one without 'must' or 'only', so it stands out, and the card's line about deterring others from 'reoffending' should be reworded."
+    },
+    "flags": [
+     "Question b, wording: The right option is the only one with a soft 'may'. Every distractor uses an absolute: 'must' (twice) or 'only'. A test-wise student can pick the hedged option without knowing the idea.",
+     "Card, wording: 'deter them and others from reoffending' is slightly inaccurate. General deterrence stops others from offending at all, not from reoffending. It should read 'deter them from reoffending and others from offending'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Fines",
+     "card": [
+      "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+      "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+      "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+      "A fine can punish the offender, deter them from reoffending and deter others from offending. It is often used for less serious offences, such as minor traffic matters."
+     ],
+     "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+     "a": {
+      "q": "Which statement best describes a fine?",
+      "opts": [
+       "Money paid to the state by the offender",
+       "Money paid to the victim by the offender",
+       "Unpaid work done in the community",
+       "Time spent under supervision by a court officer"
+      ],
+      "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+      "clue": "Think about who receives the money."
+     },
+     "b": {
+      "d": 3,
+      "q": "Two drivers in Geelong are found guilty in court of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. How does the court approach setting their fines?",
+      "opts": [
+       "It considers what each driver is able to pay",
+       "It sets one amount, whatever each driver can pay",
+       "It gives Jo a larger fine, as she has less money",
+       "It looks at their incomes but not at the offence"
+      ],
+      "why": "The amount is set by the offence and also by the offender's ability to pay, so the court considers each driver's means. Setting one amount whatever each can pay is tempting because the offence is the same, but it ignores ability to pay.",
+      "clue": "Two things help set the amount: the offence and what the offender can afford."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Money paid to the state by the offender",
+       "also_right": []
+      },
+      "b": {
+       "best": "It considers what each driver is able to pay",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue says the amount is set by the offence and what the offender can afford. Since the question says the offence is the same, this points straight to the ability-to-pay option, so a student could answer without applying the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, the remember line and both questions are accurate for Victorian sentencing. The only issue is that question b's clue nearly gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue says the amount is set by the offence and what the offender can afford. Since the question says the offence is the same, this points straight to the ability-to-pay option, so a student could answer without applying the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Fines",
+  "card": [
+   "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+   "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+   "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+   "A fine can punish the offender, deter them from reoffending and deter others from offending. It is often used for less serious offences, such as minor traffic matters."
+  ],
+  "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+  "a": {
+   "q": "Which statement best describes a fine?",
+   "opts": [
+    "Money paid to the state by the offender",
+    "Money paid to the victim by the offender",
+    "Unpaid work done in the community",
+    "Time spent under supervision by a court officer"
+   ],
+   "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+   "clue": "Think about who receives the money."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two drivers in Geelong are found guilty in court of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. How does the court approach setting their fines?",
+   "opts": [
+    "It considers what each driver is able to pay",
+    "It sets one amount, whatever each driver can pay",
+    "It gives Jo a larger fine, as she has less money",
+    "It looks at their incomes but not at the offence"
+   ],
+   "why": "The amount is set by the offence and also by the offender's ability to pay, so the court considers each driver's means. Setting one amount whatever each can pay is tempting because the offence is the same, but it ignores ability to pay.",
+   "clue": "Think about what else a court looks at besides the offence."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Money paid to the state by the offender",
+   "also_right": []
+  },
+  "b": {
+   "best": "It considers what each driver is able to pay",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card matches Victorian law: under the Sentencing Act 1991, a fine is paid to the state, and the court considers the offender's financial circumstances. Both questions have one clear right answer."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Fines",
+  "card": [
+   "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+   "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+   "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+   "A fine can punish the offender, deter them from reoffending and deter others from offending. It is often used for less serious offences, such as minor traffic matters."
+  ],
+  "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+  "a": {
+   "q": "Which statement best describes a fine?",
+   "opts": [
+    "Money paid to the state by the offender",
+    "Money paid to the victim by the offender",
+    "Unpaid work done in the community",
+    "Time spent under supervision by a court officer"
+   ],
+   "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+   "clue": "Think about who receives the money."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two drivers in Geelong are found guilty in court of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. How does the court approach setting their fines?",
+   "opts": [
+    "It considers what each driver is able to pay",
+    "It sets one amount, whatever each driver can pay",
+    "It gives Jo a larger fine, as she has less money",
+    "It looks at their incomes but not at the offence"
+   ],
+   "why": "The amount is set by the offence and also by the offender's ability to pay, so the court considers each driver's means. Setting one amount whatever each can pay is tempting because the offence is the same, but it ignores ability to pay.",
+   "clue": "Think about what else a court looks at besides the offence."
+  }
+ }
+}

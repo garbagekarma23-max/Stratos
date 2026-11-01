@@ -1,0 +1,213 @@
+{
+ "id": "mat-euler-hamilton",
+ "title": "Euler and Hamilton",
+ "brief": "6f60cc7981ab",
+ "shortlist": [
+  [
+   "mat-walks-paths-circuits",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:34Z write: done",
+  "2026-11-01T08:33:52Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00541,
+  "check": 0.01687,
+  "fix": 0.03018
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines walks, paths and circuits, and does not teach Euler trails (using every edge once) or Hamiltonian paths (visiting every vertex once), so the new point is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Euler and Hamilton",
+  "card": [
+   [
+    "Euler trail",
+    "a walk along the graph that uses every edge exactly once. Vertices may be visited more than once."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused."
+   ],
+   [
+    "Euler test",
+    "Count the vertices of odd degree. A connected graph has an Euler trail if it has 0 or 2 odd vertices. With 2, the trail must start at one and end at the other."
+   ],
+   "The Königsberg bridge problem asked for a walk crossing each of 7 bridges once. The land areas were vertices, the bridges were edges, and all 4 vertices were odd. So no Euler trail exists."
+  ],
+  "remember": "Euler trail: every edge once. Hamiltonian path: every vertex once.",
+  "a": {
+   "q": "A connected graph has 5 vertices with degrees 2, 2, 3, 3 and 4. Which statement is correct?",
+   "opts": [
+    "It has an Euler trail starting at a vertex of degree 3",
+    "It has no Euler trail, because two vertices are odd",
+    "It has an Euler trail starting at the vertex of degree 4",
+    "It has no Euler trail, because the degrees are not equal"
+   ],
+   "why": "Exactly two vertices are odd (the two of degree 3), so an Euler trail exists and must start at one of them and end at the other. Having two odd vertices does not rule a trail out, which is the tempting mistake.",
+   "clue": "Count the vertices with an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 6 vertices, and 4 of them have odd degree. Which statement must be true?",
+   "opts": [
+    "It has no Euler trail",
+    "It has an Euler trail starting at any vertex",
+    "It has an Euler trail starting at an odd vertex",
+    "It has no Hamiltonian path"
+   ],
+   "why": "An Euler trail needs 0 or 2 odd vertices, and this graph has 4, so no Euler trail exists. Odd degrees say nothing about Hamiltonian paths, which are about visiting vertices, not using edges.",
+   "clue": "The Euler test looks only at odd vertices, not at vertices visited."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It has an Euler trail starting at a vertex of degree 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has no Euler trail",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The Euler test says a connected graph has an Euler trail 'if' it has 0 or 2 odd vertices. Read strictly, that does not say a graph with 4 odd vertices has no trail. Question b depends on the converse, so the card should say 'if and only if', or state that with any other number of odd vertices there is no Euler trail. Only the Königsberg example implies it now."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly correct answer, and the facts check out, including the Königsberg degrees of 5, 3, 3 and 3. The card's Euler test is worded as 'if' rather than 'if and only if', but question b relies on the 'only if' direction."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The Euler test says a connected graph has an Euler trail 'if' it has 0 or 2 odd vertices. Read strictly, that does not say a graph with 4 odd vertices has no trail. Question b depends on the converse, so the card should say 'if and only if', or state that with any other number of odd vertices there is no Euler trail. Only the Königsberg example implies it now."
+ ],
+ "proposal": {
+  "title": "Euler and Hamilton",
+  "card": [
+   [
+    "Euler trail",
+    "a walk along the graph that uses every edge exactly once. Vertices may be visited more than once."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused, and counting degrees does not tell you whether one exists."
+   ],
+   [
+    "Euler test",
+    "Count the vertices of odd degree. A connected graph has an Euler trail if and only if it has 0 or 2 odd vertices, so with any other number there is none. With 2, the trail must start at one odd vertex and end at the other."
+   ],
+   "The Königsberg bridge problem asked for a walk crossing each of 7 bridges once. The land areas were vertices, the bridges were edges, and all 4 vertices were odd. So no Euler trail exists."
+  ],
+  "remember": "Euler trail: every edge once. Hamiltonian path: every vertex once.",
+  "a": {
+   "q": "A connected graph has 5 vertices with degrees 2, 2, 3, 3 and 4. Which statement is correct?",
+   "opts": [
+    "It has an Euler trail starting at a vertex of degree 3",
+    "It has no Euler trail, because two vertices are odd",
+    "It has an Euler trail starting at the vertex of degree 4",
+    "It has no Euler trail, because the degrees are not equal"
+   ],
+   "why": "Exactly two vertices are odd (the two of degree 3), so an Euler trail exists and must start at one of them and end at the other. Having two odd vertices does not rule a trail out, which is the tempting mistake.",
+   "clue": "Count the vertices with an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 6 vertices, and 4 of them have odd degree. Which statement must be true?",
+   "opts": [
+    "It has no Euler trail",
+    "It has an Euler trail starting at any vertex",
+    "It has an Euler trail starting at an odd vertex",
+    "It has no Hamiltonian path"
+   ],
+   "why": "A connected graph has an Euler trail only if it has 0 or 2 odd vertices. This graph has 4, so no Euler trail exists. Counting degrees does not decide whether a Hamiltonian path exists, so that option need not be true.",
+   "clue": "The Euler test looks only at odd vertices, not at vertices visited."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The Euler test says a connected graph has an Euler trail 'if' it has 0 or 2 odd vertices. Read strictly, that does not say a graph with 4 odd vertices has no trail. Question b depends on the converse, so the card should say 'if and only if', or state that with any other number of odd vertices there is no Euler trail. Only the Königsberg example implies it now."
+   }
+  ],
+  "flags": [
+   "Card, wording: The Euler test says a connected graph has an Euler trail 'if' it has 0 or 2 odd vertices. Read strictly, that does not say a graph with 4 odd vertices has no trail. Question b depends on the converse, so the card should say 'if and only if', or state that with any other number of odd vertices there is no Euler trail. Only the Königsberg example implies it now."
+  ]
+ },
+ "final": {
+  "title": "Euler and Hamilton",
+  "card": [
+   [
+    "Euler trail",
+    "a walk along the graph that uses every edge exactly once. Vertices may be visited more than once."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused, and counting degrees does not tell you whether one exists."
+   ],
+   [
+    "Euler test",
+    "Count the vertices of odd degree. A connected graph has an Euler trail if and only if it has 0 or 2 odd vertices, so with any other number there is none. With 2, the trail must start at one odd vertex and end at the other."
+   ],
+   "The Königsberg bridge problem asked for a walk crossing each of 7 bridges once. The land areas were vertices, the bridges were edges, and all 4 vertices were odd. So no Euler trail exists."
+  ],
+  "remember": "Euler trail: every edge once. Hamiltonian path: every vertex once.",
+  "a": {
+   "q": "A connected graph has 5 vertices with degrees 2, 2, 3, 3 and 4. Which statement is correct?",
+   "opts": [
+    "It has an Euler trail starting at a vertex of degree 3",
+    "It has no Euler trail, because two vertices are odd",
+    "It has an Euler trail starting at the vertex of degree 4",
+    "It has no Euler trail, because the degrees are not equal"
+   ],
+   "why": "Exactly two vertices are odd (the two of degree 3), so an Euler trail exists and must start at one of them and end at the other. Having two odd vertices does not rule a trail out, which is the tempting mistake.",
+   "clue": "Count the vertices with an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 6 vertices, and 4 of them have odd degree. Which statement must be true?",
+   "opts": [
+    "It has no Euler trail",
+    "It has an Euler trail starting at any vertex",
+    "It has an Euler trail starting at an odd vertex",
+    "It has no Hamiltonian path"
+   ],
+   "why": "A connected graph has an Euler trail only if it has 0 or 2 odd vertices. This graph has 4, so no Euler trail exists. Counting degrees does not decide whether a Hamiltonian path exists, so that option need not be true.",
+   "clue": "The Euler test looks only at odd vertices, not at vertices visited."
+  }
+ },
+ "cleared_by": "auto"
+}

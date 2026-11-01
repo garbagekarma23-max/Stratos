@@ -1,0 +1,243 @@
+{
+ "id": "acc-revenue-expenses",
+ "title": "Revenue and expenses",
+ "brief": "6c5ca6dd524c",
+ "shortlist": [
+  [
+   "bus-profit",
+   0.454
+  ],
+  [
+   "bus-income-statement",
+   0.226
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00462,
+  "check": 0.01729,
+  "fix": 0.01604,
+  "recheck": 0.00705
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-profit, covers revenue and expenses mainly as parts of profit and risk, whereas the new point defines them by their effect on owner's equity, which is a different idea and not just a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Revenue and expenses",
+  "card": [
+   [
+    "Revenue",
+    "an inflow that increases owner's equity, such as fees earned or sales. It comes from the business's normal activities."
+   ],
+   [
+    "Expense",
+    "an outflow that decreases owner's equity, such as wages, rent or electricity. It is the cost of running the business."
+   ],
+   "Revenue is recorded when it is earned, even if the cash has not yet arrived. Owner's equity rises when revenue is earned and falls when an expense is incurred.",
+   "The owner putting in more money is not revenue, and the owner taking money out is not an expense. These change equity in a different way."
+  ],
+  "remember": "Revenue increases owner's equity. Expenses decrease it.",
+  "a": {
+   "q": "Which item is an expense for a business?",
+   "opts": [
+    "Wages paid to a staff member",
+    "Fees earned from a client",
+    "Cash put in by the owner",
+    "Sales made to a customer"
+   ],
+   "why": "Wages are an outflow that decreases owner's equity, so they are an expense. Cash put in by the owner is tempting because it involves money, but it is not an expense or revenue, and it does not come from running the business.",
+   "clue": "Which one is a cost of running the business?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a tutoring business in Geelong. She tutors a student in June and sends a bill for the fee. The student pays in July. When does Priya earn the revenue?",
+   "opts": [
+    "In June, when she does the tutoring",
+    "In July, when the student pays",
+    "In June, when she buys her pens",
+    "When Priya next puts money in"
+   ],
+   "why": "Revenue is recorded when it is earned, even if the cash has not yet arrived. Priya earned the fee when she tutored in June. July is tempting because that is when the cash comes in, but the card says cash does not need to arrive first.",
+   "clue": "Revenue is recorded when it is earned, not when paid."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Wages paid to a staff member",
+   "also_right": []
+  },
+  "b": {
+   "best": "In June, when she does the tutoring",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says 'Revenue is recorded when it is earned, not when paid', which rules out July. With July gone, the June tutoring option is the only plausible answer left, so the clue gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Two distractors are implausible ('When Priya next puts money in' and 'In June, when she buys her pens'), so the only real choice is between the two plausible options, June tutoring and July payment. That makes the question too easy to test the earned-versus-received idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. In question b, the clue eliminates the only tempting distractor, and two other options are implausible, so the question gives its answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue says 'Revenue is recorded when it is earned, not when paid', which rules out July. With July gone, the June tutoring option is the only plausible answer left, so the clue gives the answer away.",
+  "Question b, level: Two distractors are implausible ('When Priya next puts money in' and 'In June, when she buys her pens'), so the only real choice is between the two plausible options, June tutoring and July payment. That makes the question too easy to test the earned-versus-received idea."
+ ],
+ "proposal": {
+  "title": "Revenue and expenses",
+  "card": [
+   [
+    "Revenue",
+    "an inflow that increases owner's equity, such as fees earned or sales. It comes from the business's normal activities."
+   ],
+   [
+    "Expense",
+    "an outflow that decreases owner's equity, such as wages, rent or electricity. It is the cost of running the business."
+   ],
+   "Revenue is earned when the business provides the goods or service, even if the bill or the cash comes later. Owner's equity rises when revenue is earned and falls when an expense is incurred.",
+   "The owner putting in more money is not revenue, and the owner taking money out is not an expense. These change equity in a different way."
+  ],
+  "remember": "Revenue increases owner's equity. Expenses decrease it.",
+  "a": {
+   "q": "Which item is an expense for a business?",
+   "opts": [
+    "Wages paid to a staff member",
+    "Fees earned from a client",
+    "Cash put in by the owner",
+    "Sales made to a customer"
+   ],
+   "why": "Wages are an outflow that decreases owner's equity, so they are an expense. Cash put in by the owner is tempting because it involves money, but it is not an expense or revenue, and it does not come from running the business.",
+   "clue": "Which one is a cost of running the business?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a tutoring business in Geelong. A student books a lesson in May. Priya tutors them in June, sends a bill in July, and is paid in August. When does Priya earn the revenue?",
+   "opts": [
+    "In June, when she tutors the student",
+    "In July, when she sends the bill",
+    "In August, when the student pays",
+    "In May, when the student books the lesson"
+   ],
+   "why": "Revenue is earned when the business provides the service, and Priya provided the tutoring in June. August is tempting because the cash arrives then, and July because the bill goes out, but the card says the bill or cash can come later. A booking in May is only a promise, as no service has been provided yet.",
+   "clue": "What must Priya actually do to earn a fee?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Wages paid to a staff member",
+    "also_right": []
+   },
+   "b": {
+    "best": "In June, when she tutors the student",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says 'Revenue is recorded when it is earned, not when paid', which rules out July. With July gone, the June tutoring option is the only plausible answer left, so the clue gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Two distractors are implausible ('When Priya next puts money in' and 'In June, when she buys her pens'), so the only real choice is between the two plausible options, June tutoring and July payment. That makes the question too easy to test the earned-versus-received idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue says 'Revenue is recorded when it is earned, not when paid', which rules out July. With July gone, the June tutoring option is the only plausible answer left, so the clue gives the answer away.",
+   "Question b, level: Two distractors are implausible ('When Priya next puts money in' and 'In June, when she buys her pens'), so the only real choice is between the two plausible options, June tutoring and July payment. That makes the question too easy to test the earned-versus-received idea."
+  ]
+ },
+ "final": {
+  "title": "Revenue and expenses",
+  "card": [
+   [
+    "Revenue",
+    "an inflow that increases owner's equity, such as fees earned or sales. It comes from the business's normal activities."
+   ],
+   [
+    "Expense",
+    "an outflow that decreases owner's equity, such as wages, rent or electricity. It is the cost of running the business."
+   ],
+   "Revenue is earned when the business provides the goods or service, even if the bill or the cash comes later. Owner's equity rises when revenue is earned and falls when an expense is incurred.",
+   "The owner putting in more money is not revenue, and the owner taking money out is not an expense. These change equity in a different way."
+  ],
+  "remember": "Revenue increases owner's equity. Expenses decrease it.",
+  "a": {
+   "q": "Which item is an expense for a business?",
+   "opts": [
+    "Wages paid to a staff member",
+    "Fees earned from a client",
+    "Cash put in by the owner",
+    "Sales made to a customer"
+   ],
+   "why": "Wages are an outflow that decreases owner's equity, so they are an expense. Cash put in by the owner is tempting because it involves money, but it is not an expense or revenue, and it does not come from running the business.",
+   "clue": "Which one is a cost of running the business?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a tutoring business in Geelong. A student books a lesson in May. Priya tutors them in June, sends a bill in July, and is paid in August. When does Priya earn the revenue?",
+   "opts": [
+    "In June, when she tutors the student",
+    "In July, when she sends the bill",
+    "In August, when the student pays",
+    "In May, when the student books the lesson"
+   ],
+   "why": "Revenue is earned when the business provides the service, and Priya provided the tutoring in June. August is tempting because the cash arrives then, and July because the bill goes out, but the card says the bill or cash can come later. A booking in May is only a promise, as no service has been provided yet.",
+   "clue": "What must Priya actually do to earn a fee?"
+  }
+ },
+ "cleared_by": "recheck"
+}

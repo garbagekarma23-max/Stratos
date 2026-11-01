@@ -1,0 +1,223 @@
+{
+ "id": "acc-reducing-balance-depreciation",
+ "title": "Reducing balance depreciation",
+ "brief": "ff752afb80cd",
+ "shortlist": [
+  [
+   "mat-declining-balance-depreciation",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 may adapt mat-declining-balance-depreciation, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.00288,
+  "write": 0.0052,
+  "check": 0.00953,
+  "fix": 0.02574,
+  "recheck": 0.00825
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-declining-balance-depreciation",
+  "changes": [
+   "Use the accounting terms carrying amount and depreciation expense in place of current value and the dollar loss, and show the accumulated depreciation for each year.",
+   "Remove the salvage value formula S = V₀(1 − r)ⁿ and the exponent notation, since VCE Accounting students work year by year and are not expected to use it.",
+   "Add the accounting setting: the asset is a non-current asset in a service or trading business, and the card explains how the expense is recorded each year.",
+   "Reword question a and question b to ask for the carrying amount at the end of each year, and keep the figures as they are."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same fixed-percentage idea, but it is written as a maths exponential model rather than as a VCE Accounting depreciation expense, so it needs accounting terms, a year-by-year layout and the formula removed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a maths treatment that uses the compound formula S = V₀(1 − r)ⁿ to find salvage value, while the VCE Accounting point needs the accounting view: a yearly depreciation expense worked out on the carrying amount, recorded in the accounts and leading to accumulated depreciation, which is a different focus and depth.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Reducing balance depreciation",
+  "card": [
+   "Reducing balance depreciation charges a fixed percentage each year. The percentage is applied to the asset's carrying amount at the start of that year.",
+   "Depreciation expense = carrying amount at start of year × depreciation rate. The rate stays the same, but the carrying amount falls each year.",
+   "Because the carrying amount gets smaller, the expense is largest in the first year and smaller in each year after.",
+   "Example: a machine costs $20 000 and the rate is 25%. Year 1 expense is $5 000, leaving $15 000. Year 2 expense is 25% × $15 000 = $3 750."
+  ],
+  "remember": "Same rate each year, applied to a falling carrying amount, so the expense shrinks.",
+  "a": {
+   "q": "Under reducing balance depreciation, why does the yearly expense get smaller over time?",
+   "opts": [
+    "The fixed rate is applied to a carrying amount that falls",
+    "The rate is lowered by the business each year",
+    "The same dollar amount is taken off the original cost",
+    "The asset's cost is gradually written back up"
+   ],
+   "why": "The rate stays fixed, but it is applied to the carrying amount, which falls after each year's depreciation. A smaller base gives a smaller expense. The rate does not change, so the second option is wrong.",
+   "clue": "What does the fixed rate get multiplied by each year?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a delivery van for $40 000 and uses a reducing balance rate of 20%. What is the depreciation expense in Year 2?",
+   "opts": [
+    "$6 400",
+    "$8 000",
+    "$5 120",
+    "$4 000"
+   ],
+   "why": "Year 1 expense is 20% × $40 000 = $8 000, so the carrying amount at the start of Year 2 is $32 000. Year 2 expense is 20% × $32 000 = $6 400. $8 000 is wrong because it applies the rate to the original cost again.",
+   "clue": "Take off Year 1's expense before applying the rate."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The fixed rate is applied to a carrying amount that falls",
+   "also_right": []
+  },
+  "b": {
+   "best": "$6 400",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'The rate does not change, so the second option is wrong.' Options are shown in random order, so 'the second option' does not reliably point to anything. As listed, the second option is the straight-line distractor ('same dollar amount'), not the 'rate is lowered' option, so the why mismatches the option it means to rule out."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct ($6 400 for Year 2). The only fix needed is in the why for question a: it refers to 'the second option' by position, which is unreliable with shuffled options and currently points to the wrong distractor."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says 'The rate does not change, so the second option is wrong.' Options are shown in random order, so 'the second option' does not reliably point to anything. As listed, the second option is the straight-line distractor ('same dollar amount'), not the 'rate is lowered' option, so the why mismatches the option it means to rule out."
+ ],
+ "proposal": {
+  "title": "Reducing balance depreciation",
+  "card": [
+   "Reducing balance depreciation charges a fixed percentage each year. The percentage is applied to the asset's carrying amount at the start of that year.",
+   "Depreciation expense = carrying amount at start of year × depreciation rate. The rate stays the same, but the carrying amount falls each year.",
+   "Because the carrying amount gets smaller, the expense is largest in the first year and smaller in each year after.",
+   "Example: a machine costs $20 000 and the rate is 25%. Year 1 expense is $5 000, leaving $15 000. Year 2 expense is 25% × $15 000 = $3 750."
+  ],
+  "remember": "Same rate each year, applied to a falling carrying amount, so the expense shrinks.",
+  "a": {
+   "q": "Under reducing balance depreciation, why does the yearly expense get smaller over time?",
+   "opts": [
+    "The fixed rate is applied to a falling carrying amount",
+    "The business lowers the depreciation rate each year",
+    "The same dollar amount is taken off the cost each year",
+    "The asset's cost is written back up a little each year"
+   ],
+   "why": "The rate stays fixed, but it is applied to the carrying amount, which falls after each year's depreciation. A smaller base gives a smaller expense. It is not because the business lowers the rate: the rate stays the same every year.",
+   "clue": "What does the fixed rate get multiplied by each year?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a delivery van for $40 000 and uses a reducing balance rate of 20%. What is the depreciation expense in Year 2?",
+   "opts": [
+    "$6 400",
+    "$8 000",
+    "$5 120",
+    "$4 000"
+   ],
+   "why": "Year 1 expense is 20% × $40 000 = $8 000, so the carrying amount at the start of Year 2 is $32 000. Year 2 expense is 20% × $32 000 = $6 400. $8 000 is wrong because it applies the rate to the original cost again.",
+   "clue": "Take off Year 1's expense before applying the rate."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The fixed rate is applied to a falling carrying amount",
+    "also_right": []
+   },
+   "b": {
+    "best": "$6 400",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'The rate does not change, so the second option is wrong.' Options are shown in random order, so 'the second option' does not reliably point to anything. As listed, the second option is the straight-line distractor ('same dollar amount'), not the 'rate is lowered' option, so the why mismatches the option it means to rule out."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why says 'The rate does not change, so the second option is wrong.' Options are shown in random order, so 'the second option' does not reliably point to anything. As listed, the second option is the straight-line distractor ('same dollar amount'), not the 'rate is lowered' option, so the why mismatches the option it means to rule out."
+  ]
+ },
+ "final": {
+  "title": "Reducing balance depreciation",
+  "card": [
+   "Reducing balance depreciation charges a fixed percentage each year. The percentage is applied to the asset's carrying amount at the start of that year.",
+   "Depreciation expense = carrying amount at start of year × depreciation rate. The rate stays the same, but the carrying amount falls each year.",
+   "Because the carrying amount gets smaller, the expense is largest in the first year and smaller in each year after.",
+   "Example: a machine costs $20 000 and the rate is 25%. Year 1 expense is $5 000, leaving $15 000. Year 2 expense is 25% × $15 000 = $3 750."
+  ],
+  "remember": "Same rate each year, applied to a falling carrying amount, so the expense shrinks.",
+  "a": {
+   "q": "Under reducing balance depreciation, why does the yearly expense get smaller over time?",
+   "opts": [
+    "The fixed rate is applied to a falling carrying amount",
+    "The business lowers the depreciation rate each year",
+    "The same dollar amount is taken off the cost each year",
+    "The asset's cost is written back up a little each year"
+   ],
+   "why": "The rate stays fixed, but it is applied to the carrying amount, which falls after each year's depreciation. A smaller base gives a smaller expense. It is not because the business lowers the rate: the rate stays the same every year.",
+   "clue": "What does the fixed rate get multiplied by each year?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jess buys a delivery van for $40 000 and uses a reducing balance rate of 20%. What is the depreciation expense in Year 2?",
+   "opts": [
+    "$6 400",
+    "$8 000",
+    "$5 120",
+    "$4 000"
+   ],
+   "why": "Year 1 expense is 20% × $40 000 = $8 000, so the carrying amount at the start of Year 2 is $32 000. Year 2 expense is 20% × $32 000 = $6 400. $8 000 is wrong because it applies the rate to the original cost again.",
+   "clue": "Take off Year 1's expense before applying the rate."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,122 @@
+{
+ "id": "acc-identified-cost-method",
+ "title": "The identified cost method",
+ "brief": "f8831f1a8cd5",
+ "shortlist": [
+  [
+   "bus-pricing-methods",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00489,
+  "check": 0.00726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers pricing methods (cost, market and competition-based), which is a different idea from the identified cost method for tracking inventory at each item's own cost.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The identified cost method",
+  "card": [
+   "The identified cost method tracks each item of inventory at its own cost. When an item is sold, the cost of sales is the actual cost of that exact item.",
+   "It works when each item can be told apart from the others, for example by a serial number. Cars, boats and pieces of jewellery are like this.",
+   "Say a dealer buys two used cars, one for $12,000 and one for $15,000. If the $15,000 car is sold, cost of sales is $15,000.",
+   "It does not suit goods that are all the same, such as bags of rice, because the items cannot be told apart once they are mixed together."
+  ],
+  "remember": "Identified cost: the cost of sales is the cost of the exact item sold.",
+  "a": {
+   "q": "Under the identified cost method, what is the cost of sales when an item is sold?",
+   "opts": [
+    "The actual cost of that exact item",
+    "The cost of the oldest item still on hand",
+    "The average cost of all items on hand",
+    "The selling price less the usual profit margin"
+   ],
+   "why": "Each item is tracked at its own cost, so the cost of sales is what that exact item cost. The cost of the oldest item is wrong because the method follows the item sold, not the order of purchase.",
+   "clue": "The method follows the item itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kenji sells jewellery in Ballarat. He holds two rings: one bought for $800 and one for $1,100. He sells the $1,100 ring, though he bought the $800 ring first. What is the cost of sales under the identified cost method?",
+   "opts": [
+    "$1,100, the cost of the ring sold",
+    "$800, the cost of the oldest ring",
+    "$950, the average cost of the two rings",
+    "$1,900, the cost of both rings together"
+   ],
+   "why": "The method uses the cost of the exact item sold. The ring sold cost $1,100, so that is the cost of sales. The $800 is tempting because it was bought first, but the order of purchase does not decide cost of sales here.",
+   "clue": "Which ring left the shop?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The actual cost of that exact item",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1,100, the cost of the ring sold",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The identified cost method",
+  "card": [
+   "The identified cost method tracks each item of inventory at its own cost. When an item is sold, the cost of sales is the actual cost of that exact item.",
+   "It works when each item can be told apart from the others, for example by a serial number. Cars, boats and pieces of jewellery are like this.",
+   "Say a dealer buys two used cars, one for $12,000 and one for $15,000. If the $15,000 car is sold, cost of sales is $15,000.",
+   "It does not suit goods that are all the same, such as bags of rice, because the items cannot be told apart once they are mixed together."
+  ],
+  "remember": "Identified cost: the cost of sales is the cost of the exact item sold.",
+  "a": {
+   "q": "Under the identified cost method, what is the cost of sales when an item is sold?",
+   "opts": [
+    "The actual cost of that exact item",
+    "The cost of the oldest item still on hand",
+    "The average cost of all items on hand",
+    "The selling price less the usual profit margin"
+   ],
+   "why": "Each item is tracked at its own cost, so the cost of sales is what that exact item cost. The cost of the oldest item is wrong because the method follows the item sold, not the order of purchase.",
+   "clue": "The method follows the item itself."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kenji sells jewellery in Ballarat. He holds two rings: one bought for $800 and one for $1,100. He sells the $1,100 ring, though he bought the $800 ring first. What is the cost of sales under the identified cost method?",
+   "opts": [
+    "$1,100, the cost of the ring sold",
+    "$800, the cost of the oldest ring",
+    "$950, the average cost of the two rings",
+    "$1,900, the cost of both rings together"
+   ],
+   "why": "The method uses the cost of the exact item sold. The ring sold cost $1,100, so that is the cost of sales. The $800 is tempting because it was bought first, but the order of purchase does not decide cost of sales here.",
+   "clue": "Which ring left the shop?"
+  }
+ },
+ "cleared_by": "checker"
+}

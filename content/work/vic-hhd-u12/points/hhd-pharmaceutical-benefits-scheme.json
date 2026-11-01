@@ -1,0 +1,259 @@
+{
+ "id": "hhd-pharmaceutical-benefits-scheme",
+ "title": "The Pharmaceutical Benefits Scheme",
+ "brief": "841af6ee1ca2",
+ "shortlist": [
+  [
+   "hms-australia-s-health-care",
+   0.31
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:50Z write: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01155,
+  "check": 0.02039,
+  "fix": 0.03672,
+  "recheck": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader card covering Medicare, the PBS and private insurance together, and it does not teach the concession card pricing that the new PBS brief requires, so a dedicated PBS point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The Pharmaceutical Benefits Scheme",
+  "card": [
+   "The Pharmaceutical Benefits Scheme (PBS) is an Australian Government program. It subsidises many prescription medicines, which means the government pays part of the cost.",
+   "Because of the subsidy, a PBS medicine costs a patient less than its full price. The patient pays a set amount towards each script, and there is a maximum a general patient pays.",
+   "Concession card holders pay a lower amount again. Concession cards are for groups such as pensioners and some people on low incomes.",
+   "Only medicines listed on the PBS are subsidised, and a doctor must prescribe them. Many other medicines are not listed, so the patient pays the full price."
+  ],
+  "remember": "The PBS lowers the cost of listed prescription medicines, and lowers it more for concession card holders.",
+  "a": {
+   "q": "What does the PBS do for a patient who is prescribed a listed medicine?",
+   "opts": [
+    "The government pays part of the cost, so they pay less",
+    "The patient pays nothing, because the medicine is free",
+    "The patient pays the full price and claims it back later",
+    "The government chooses which doctor the patient must see"
+   ],
+   "why": "The PBS is a subsidy, so the government pays part of the price and the patient pays a set amount. It does not make medicines free for everyone, because patients still pay something towards each script.",
+   "clue": "A subsidy means the government pays only part."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two people are prescribed the same PBS-listed medicine at a pharmacy in Bendigo. Sam holds a concession card and Jo does not. Which statement is correct?",
+   "opts": [
+    "Both pay less than full price, and Sam pays less than Jo",
+    "Both pay the same, because the medicine is the same",
+    "Only Sam gets a subsidy, because Jo has no card",
+    "Jo pays less than Sam, because Jo pays the full price"
+   ],
+   "why": "The subsidy applies to everyone for a listed medicine, so both pay less than the full price. Concession card holders pay a lower amount again, so Sam pays less than Jo. The tempting wrong answer says only card holders get a subsidy, but the card gives an extra reduction.",
+   "clue": "Everyone gets the subsidy, and the card adds more."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The government pays part of the cost, so they pay less",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both pay less than full price, and Sam pays less than Jo",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A doctor must prescribe them' is not quite right: nurse practitioners, authorised midwives, dentists and optometrists can also write PBS prescriptions for some medicines. Better: 'a doctor or other authorised prescriber'."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A PBS medicine costs a patient less than its full price' is not always true. When a listed medicine's price is below the general co-payment, a general patient pays the full (lower) price and gets no subsidy. A 'can' or 'usually' is needed."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option says both pay less than full price. For a low-cost PBS medicine priced under the general co-payment, Jo would pay the full price, so this is not true in every case. It holds for most medicines, but the card and the why state it as universal."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Everyone gets the subsidy, and the card adds more' all but restates the right option, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'A subsidy means the government pays only part' matches the wording of the right option ('pays part of the cost'), so it gives the answer away."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, but the card overstates two things: only doctors can prescribe PBS medicines, and every PBS medicine costs less than full price (not true for medicines priced below the co-payment). The clues also give the answers away, especially in question b."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'A doctor must prescribe them' is not quite right: nurse practitioners, authorised midwives, dentists and optometrists can also write PBS prescriptions for some medicines. Better: 'a doctor or other authorised prescriber'.",
+  "Card, fact: 'A PBS medicine costs a patient less than its full price' is not always true. When a listed medicine's price is below the general co-payment, a general patient pays the full (lower) price and gets no subsidy. A 'can' or 'usually' is needed.",
+  "Question b, fact: The right option says both pay less than full price. For a low-cost PBS medicine priced under the general co-payment, Jo would pay the full price, so this is not true in every case. It holds for most medicines, but the card and the why state it as universal.",
+  "Question b, other: The clue 'Everyone gets the subsidy, and the card adds more' all but restates the right option, so a student can pick it without knowing the idea.",
+  "Question a, other: The clue 'A subsidy means the government pays only part' matches the wording of the right option ('pays part of the cost'), so it gives the answer away."
+ ],
+ "proposal": {
+  "title": "The Pharmaceutical Benefits Scheme",
+  "card": [
+   "The Pharmaceutical Benefits Scheme (PBS) is an Australian Government program. It subsidises many prescription medicines, which means the government pays part of the cost.",
+   "For most listed medicines, the patient pays a set amount per script, called a co-payment, and the government pays the rest. If a medicine costs less than the co-payment, the patient just pays its price.",
+   "Concession card holders pay a lower co-payment again. Concession cards are for groups such as pensioners and some people on low incomes.",
+   "Only listed medicines are subsidised, and a doctor or other authorised prescriber must prescribe them. For medicines not listed, the patient usually pays the full price."
+  ],
+  "remember": "The PBS usually cuts the cost of listed medicines, and cuts it further for concession card holders.",
+  "a": {
+   "q": "What does the PBS do for a patient prescribed an expensive listed medicine?",
+   "opts": [
+    "The government covers part of the price, so they pay less",
+    "The medicine is free, so the patient pays nothing at all",
+    "The patient pays full price, then claims it all back later",
+    "The government picks which pharmacy the patient must use"
+   ],
+   "why": "For an expensive listed medicine, the patient pays a co-payment and the government pays the rest, so the patient pays less than the full price. It is not free, because the patient still pays the co-payment at the pharmacy.",
+   "clue": "Think about what happens at the pharmacy counter."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam and Jo are each prescribed the same expensive PBS-listed medicine at a pharmacy in Bendigo. Sam holds a concession card and Jo does not. Which statement is correct?",
+   "opts": [
+    "Both pay less than full price, and Sam pays less than Jo",
+    "Both pay the same, because the medicine is the same",
+    "Only Sam pays less than full price, as Jo has no card",
+    "Jo pays less than Sam, as general patients get more help"
+   ],
+   "why": "For an expensive listed medicine, the government pays part for every patient, so Jo pays the general co-payment and Sam pays the lower concession co-payment. The tempting wrong answer says only card holders are helped, but the concession card only adds a further reduction.",
+   "clue": "Work out what a general patient pays first, then the card holder."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The government covers part of the price, so they pay less",
+    "also_right": []
+   },
+   "b": {
+    "best": "Both pay less than full price, and Sam pays less than Jo",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A doctor must prescribe them' is not quite right: nurse practitioners, authorised midwives, dentists and optometrists can also write PBS prescriptions for some medicines. Better: 'a doctor or other authorised prescriber'."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A PBS medicine costs a patient less than its full price' is not always true. When a listed medicine's price is below the general co-payment, a general patient pays the full (lower) price and gets no subsidy. A 'can' or 'usually' is needed."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The right option says both pay less than full price. For a low-cost PBS medicine priced under the general co-payment, Jo would pay the full price, so this is not true in every case. It holds for most medicines, but the card and the why state it as universal."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Everyone gets the subsidy, and the card adds more' all but restates the right option, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'A subsidy means the government pays only part' matches the wording of the right option ('pays part of the cost'), so it gives the answer away."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'A doctor must prescribe them' is not quite right: nurse practitioners, authorised midwives, dentists and optometrists can also write PBS prescriptions for some medicines. Better: 'a doctor or other authorised prescriber'.",
+   "Card, fact: 'A PBS medicine costs a patient less than its full price' is not always true. When a listed medicine's price is below the general co-payment, a general patient pays the full (lower) price and gets no subsidy. A 'can' or 'usually' is needed.",
+   "Question b, fact: The right option says both pay less than full price. For a low-cost PBS medicine priced under the general co-payment, Jo would pay the full price, so this is not true in every case. It holds for most medicines, but the card and the why state it as universal.",
+   "Question b, other: The clue 'Everyone gets the subsidy, and the card adds more' all but restates the right option, so a student can pick it without knowing the idea.",
+   "Question a, other: The clue 'A subsidy means the government pays only part' matches the wording of the right option ('pays part of the cost'), so it gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "The Pharmaceutical Benefits Scheme",
+  "card": [
+   "The Pharmaceutical Benefits Scheme (PBS) is an Australian Government program. It subsidises many prescription medicines, which means the government pays part of the cost.",
+   "For most listed medicines, the patient pays a set amount per script, called a co-payment, and the government pays the rest. If a medicine costs less than the co-payment, the patient just pays its price.",
+   "Concession card holders pay a lower co-payment again. Concession cards are for groups such as pensioners and some people on low incomes.",
+   "Only listed medicines are subsidised, and a doctor or other authorised prescriber must prescribe them. For medicines not listed, the patient usually pays the full price."
+  ],
+  "remember": "The PBS usually cuts the cost of listed medicines, and cuts it further for concession card holders.",
+  "a": {
+   "q": "What does the PBS do for a patient prescribed an expensive listed medicine?",
+   "opts": [
+    "The government covers part of the price, so they pay less",
+    "The medicine is free, so the patient pays nothing at all",
+    "The patient pays full price, then claims it all back later",
+    "The government picks which pharmacy the patient must use"
+   ],
+   "why": "For an expensive listed medicine, the patient pays a co-payment and the government pays the rest, so the patient pays less than the full price. It is not free, because the patient still pays the co-payment at the pharmacy.",
+   "clue": "Think about what happens at the pharmacy counter."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam and Jo are each prescribed the same expensive PBS-listed medicine at a pharmacy in Bendigo. Sam holds a concession card and Jo does not. Which statement is correct?",
+   "opts": [
+    "Both pay less than full price, and Sam pays less than Jo",
+    "Both pay the same, because the medicine is the same",
+    "Only Sam pays less than full price, as Jo has no card",
+    "Jo pays less than Sam, as general patients get more help"
+   ],
+   "why": "For an expensive listed medicine, the government pays part for every patient, so Jo pays the general co-payment and Sam pays the lower concession co-payment. The tempting wrong answer says only card holders are helped, but the concession card only adds a further reduction.",
+   "clue": "Work out what a general patient pays first, then the card holder."
+  }
+ },
+ "cleared_by": "recheck"
+}

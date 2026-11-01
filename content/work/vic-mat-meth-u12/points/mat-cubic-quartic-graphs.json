@@ -1,0 +1,162 @@
+{
+ "id": "mat-cubic-quartic-graphs",
+ "title": "Cubic and quartic graphs",
+ "brief": "5aa549ea8cf0",
+ "shortlist": [
+  [
+   "mat-cubic-polynomial-graphs",
+   0.494
+  ],
+  [
+   "mat-vertical-dilations",
+   0.298
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-cubic-polynomial-graphs, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: failed the content check, writing again",
+  "2026-11-01T08:33:52Z write: done",
+  "2026-11-01T08:42:07Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.00722,
+  "write": 0.01133,
+  "check": 0.00689
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-cubic-polynomial-graphs",
+  "changes": [
+   "Replace the term 'roots' with 'zeros', which the VCE Mathematical Methods study design uses for the x-intercepts of a polynomial.",
+   "Add a quartic worked example, such as y = (x − 1)²(x + 2)(x − 3), because the card only works through cubics and the new point covers quartic graphs too."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of x-intercepts, repeated factors touching or flattening, and the y-intercept at the right depth, but it needs a quartic example and the VCE term 'zeros' in place of 'roots'.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches the same factor and repeated-root ideas but only for cubics, so covering quartics (whose ends both go the same way, with quartic examples and questions) would widen its scope rather than make a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Cubic and quartic graphs",
+  "card": [
+   "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
+   [
+    "Single factor",
+    "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."
+   ],
+   [
+    "Squared factor",
+    "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+   ],
+   [
+    "Cubed factor",
+    "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+   ]
+  ],
+  "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+  "a": {
+   "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+   "opts": [
+    "Touches the x-axis and turns back",
+    "Crosses the x-axis without flattening",
+    "Flattens as it crosses the x-axis",
+    "Does not meet the x-axis"
+   ],
+   "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
+   "clue": "Look at the power on the bracket (x − 4)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+   "opts": [
+    "Flattens as it crosses at x = 3, crosses at x = −2",
+    "Crosses at x = 3, flattens as it crosses at x = −2",
+    "Touches and turns at x = 3, crosses at x = −2",
+    "Flattens as it crosses at both x = 3 and x = −2"
+   ],
+   "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+   "clue": "Match each power to its own bracket, then set each bracket to zero."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Touches the x-axis and turns back",
+   "also_right": []
+  },
+  "b": {
+   "best": "Flattens as it crosses at x = 3, crosses at x = −2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cubic and quartic graphs",
+  "card": [
+   "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
+   [
+    "Single factor",
+    "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."
+   ],
+   [
+    "Squared factor",
+    "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+   ],
+   [
+    "Cubed factor",
+    "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+   ]
+  ],
+  "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+  "a": {
+   "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+   "opts": [
+    "Touches the x-axis and turns back",
+    "Crosses the x-axis without flattening",
+    "Flattens as it crosses the x-axis",
+    "Does not meet the x-axis"
+   ],
+   "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
+   "clue": "Look at the power on the bracket (x − 4)."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+   "opts": [
+    "Flattens as it crosses at x = 3, crosses at x = −2",
+    "Crosses at x = 3, flattens as it crosses at x = −2",
+    "Touches and turns at x = 3, crosses at x = −2",
+    "Flattens as it crosses at both x = 3 and x = −2"
+   ],
+   "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+   "clue": "Match each power to its own bracket, then set each bracket to zero."
+  }
+ },
+ "cleared_by": "checker"
+}

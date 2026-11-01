@@ -1,0 +1,124 @@
+{
+ "id": "acc-perpetual-inventory-records",
+ "title": "Perpetual inventory records",
+ "brief": "cfe03dc85a45",
+ "shortlist": [
+  [
+   "bus-inventory-management",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: failed the content check, writing again",
+  "2026-11-01T08:33:47Z write: done",
+  "2026-11-01T08:42:04Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.01039,
+  "check": 0.00855
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers inventory management and FIFO/LIFO valuation in Business Studies, not perpetual inventory records updated with every transaction, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Perpetual inventory records",
+  "card": [
+   "A perpetual inventory system keeps an inventory card for each item the business stocks. The card shows the quantity and cost of that item on hand.",
+   "The card is updated every time there is a purchase, a sale or a return. Each change is recorded when it happens, not at the end of the period.",
+   "After each update, the balance on the card shows how many units are on hand and what they cost. The business always knows its stock level.",
+   "The balances on all the cards can be checked against a physical count of stock. A difference may show an error, damage or theft."
+  ],
+  "remember": "Update the card at every movement, and the balance on hand is always known.",
+  "a": {
+   "q": "What makes an inventory system perpetual?",
+   "opts": [
+    "Each item's card changes at every purchase, sale and return",
+    "Each item's card is updated once, at the end of the year",
+    "Stock is counted by hand each time a sale is made",
+    "One total for all stock is updated at the end of each month"
+   ],
+   "why": "A perpetual system records every movement of stock as it happens, so the balance is always current. Updating only at the end of a period would leave the balance out of date between updates.",
+   "clue": "Think about when the card is changed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Cycles in Ballarat sells a helmet to a customer. The next day the customer returns it, and Priya puts it back on the shelf. What should Priya do on the helmet's inventory card?",
+   "opts": [
+    "Record the sale, then the return, so the balance rises again",
+    "Record the sale only, as the card ignores returns",
+    "Leave the card alone until the next stocktake",
+    "Record the return only, as the sale was cancelled"
+   ],
+   "why": "Every sale and every return changes the stock on hand, so both go on the card when they happen. The card then shows the helmet is back in stock. Recording only the sale would leave the balance too low.",
+   "clue": "Which movements does the card record?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each item's card changes at every purchase, sale and return",
+   "also_right": []
+  },
+  "b": {
+   "best": "Record the sale, then the return, so the balance rises again",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Perpetual inventory records",
+  "card": [
+   "A perpetual inventory system keeps an inventory card for each item the business stocks. The card shows the quantity and cost of that item on hand.",
+   "The card is updated every time there is a purchase, a sale or a return. Each change is recorded when it happens, not at the end of the period.",
+   "After each update, the balance on the card shows how many units are on hand and what they cost. The business always knows its stock level.",
+   "The balances on all the cards can be checked against a physical count of stock. A difference may show an error, damage or theft."
+  ],
+  "remember": "Update the card at every movement, and the balance on hand is always known.",
+  "a": {
+   "q": "What makes an inventory system perpetual?",
+   "opts": [
+    "Each item's card changes at every purchase, sale and return",
+    "Each item's card is updated once, at the end of the year",
+    "Stock is counted by hand each time a sale is made",
+    "One total for all stock is updated at the end of each month"
+   ],
+   "why": "A perpetual system records every movement of stock as it happens, so the balance is always current. Updating only at the end of a period would leave the balance out of date between updates.",
+   "clue": "Think about when the card is changed."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Cycles in Ballarat sells a helmet to a customer. The next day the customer returns it, and Priya puts it back on the shelf. What should Priya do on the helmet's inventory card?",
+   "opts": [
+    "Record the sale, then the return, so the balance rises again",
+    "Record the sale only, as the card ignores returns",
+    "Leave the card alone until the next stocktake",
+    "Record the return only, as the sale was cancelled"
+   ],
+   "why": "Every sale and every return changes the stock on hand, so both go on the card when they happen. The card then shows the helmet is back in stock. Recording only the sale would leave the balance too low.",
+   "clue": "Which movements does the card record?"
+  }
+ },
+ "cleared_by": "checker"
+}

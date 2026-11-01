@@ -1,0 +1,149 @@
+{
+ "id": "psy-who-supports-mental-wellbeing",
+ "title": "Who supports mental wellbeing",
+ "brief": "9559b6b71d4b",
+ "shortlist": [
+  [
+   "hms-mental-health-as-priority",
+   0.237
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:54Z fix: suggested"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00493,
+  "check": 0.01291,
+  "fix": 0.02364
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches that mental health conditions are common and that stigma and early support matter, while the new point teaches which professionals and organisations support wellbeing and diagnose and manage conditions, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Who supports mental wellbeing",
+  "card": [
+   [
+    "Psychologist",
+    "a professional trained in the study of behaviour and mental processes. They assess and treat mental health conditions using talk-based therapies, and they cannot prescribe medication."
+   ],
+   [
+    "Psychiatrist",
+    "a medical doctor who has specialised in mental health. They can diagnose conditions, prescribe medication and also offer therapy."
+   ],
+   [
+    "Mental health worker",
+    "a worker such as a mental health nurse, social worker or support worker. They help people manage day to day, often as part of a team of professionals."
+   ],
+   "Organisations such as Beyond Blue, headspace and Lifeline support wellbeing through information, counselling and referral to other services. Many people use a mix of these supports."
+  ],
+  "remember": "Psychiatrists are doctors who can prescribe medication. Psychologists, workers and organisations support wellbeing in other ways.",
+  "a": {
+   "q": "Which professional is a medical doctor who can prescribe medication for a mental health condition?",
+   "opts": [
+    "A psychiatrist",
+    "A psychologist",
+    "A social worker",
+    "A support worker"
+   ],
+   "why": "A psychiatrist has trained as a doctor and then specialised in mental health, so they can prescribe medication. A psychologist is the most tempting wrong option, but psychologists treat mainly through talk-based therapies and do not prescribe.",
+   "clue": "Think about who has a medical degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has felt very low for weeks. She wants a professional who can assess her and treat her with talk therapy, and she does not want medication. Who is the best fit?",
+   "opts": [
+    "A psychologist",
+    "A psychiatrist",
+    "A pharmacist",
+    "A mental health helpline only"
+   ],
+   "why": "A psychologist is trained to assess conditions and treat them with talk-based therapies. A psychiatrist can also offer therapy, but their special role is medication, which Priya does not want. A helpline can support her and refer her on, but it does not replace an assessment.",
+   "clue": "Which professional works mainly through talk therapy?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A psychiatrist",
+   "also_right": []
+  },
+  "b": {
+   "best": "A psychologist",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says psychiatrists 'can diagnose conditions' but describes psychologists only as assessing and treating. This implies psychologists cannot diagnose, yet psychologists in Australia, especially clinical psychologists, routinely diagnose mental health conditions."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "Both questions have a single clear answer and the facts are accurate for Australia. The one issue is that the card's contrast suggests only psychiatrists diagnose, when psychologists can also diagnose mental health conditions."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Card, fact: The card says psychiatrists 'can diagnose conditions' but describes psychologists only as assessing and treating. This implies psychologists cannot diagnose, yet psychologists in Australia, especially clinical psychologists, routinely diagnose mental health conditions."
+ ],
+ "proposal": {
+  "title": "Who supports mental wellbeing",
+  "card": [
+   [
+    "Psychologist",
+    "a professional trained in the study of behaviour and mental processes. They assess, diagnose and treat mental health conditions, mainly with talk-based therapies, and they cannot prescribe medication."
+   ],
+   [
+    "Psychiatrist",
+    "a medical doctor who has specialised in mental health. They also assess and diagnose conditions, and they can prescribe medication as well as offer therapy."
+   ],
+   [
+    "Mental health worker",
+    "a worker such as a mental health nurse, social worker or support worker. They help people manage everyday life, such as keeping a routine and getting to appointments, often as part of a team."
+   ],
+   "Organisations such as Beyond Blue, headspace and Lifeline support wellbeing through information, counselling and referral to other services. Many people use a mix of these supports."
+  ],
+  "remember": "Psychologists and psychiatrists can both diagnose. Psychiatrists are doctors, so they can also prescribe medication.",
+  "a": {
+   "q": "What can a psychiatrist do that a psychologist cannot?",
+   "opts": [
+    "Prescribe medication for a condition",
+    "Diagnose a mental health condition",
+    "Treat a condition with talk therapy",
+    "Assess a person's symptoms"
+   ],
+   "why": "A psychiatrist is a medical doctor, so they can prescribe medication, and a psychologist cannot. Diagnosis is the most tempting wrong option, but psychologists also assess and diagnose mental health conditions.",
+   "clue": "Which task needs a medical degree?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Jack is recovering from a mental health condition. His care team wants someone to help him keep a routine and get to his appointments. Which role fits best?",
+   "opts": [
+    "A mental health support worker",
+    "A psychiatrist",
+    "A psychologist",
+    "A crisis helpline counsellor"
+   ],
+   "why": "Support workers help people manage everyday life, such as routines and appointments, often as part of a team. A psychologist is tempting, but their role is to assess, diagnose and treat through talk-based therapy, not to give practical day to day help.",
+   "clue": "Which role is about help with everyday life?"
+  }
+ },
+ "proposal_problems": []
+}

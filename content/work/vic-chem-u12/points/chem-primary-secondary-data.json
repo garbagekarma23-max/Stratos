@@ -1,0 +1,163 @@
+{
+ "id": "chem-primary-secondary-data",
+ "title": "Primary and secondary data",
+ "brief": "7483ad3563f0",
+ "shortlist": [
+  [
+   "geo-fieldwork-primary-data",
+   0.351
+  ],
+  [
+   "soc-primary-secondary-research",
+   0.347
+  ],
+  [
+   "geo-secondary-data",
+   0.322
+  ],
+  [
+   "bus-market-research",
+   0.307
+  ],
+  [
+   "mat-types-data",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt soc-primary-secondary-research, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.00853,
+  "write": 0.0047,
+  "check": 0.00645
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "soc-primary-secondary-research",
+  "changes": [
+   "Replace the social-research examples (surveys handed out to Year 11 students, focus groups, council reports on teenagers) with chemistry examples such as titrations or measurements a student makes in the lab as primary data, and published journal studies or reference data tables as secondary data.",
+   "Add that secondary data must be checked for its source, date, method and purpose before it is used, since the brief asks that it be judged for quality.",
+   "Make the examples and the Remember line suit VCE Chemistry Units 1 and 2 students in Victoria."
+  ],
+  "sure": "medium",
+  "reason": "The soc-primary-secondary-research card teaches the same primary/secondary distinction at a suitable Year 11 depth, but its social-science examples and lack of a quality-checking step need small changes for this chemistry course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank cards that cover both primary and secondary data are set in social science or business contexts and do not teach judging secondary data for quality, while the one that does judge quality covers only secondary data, so a chemistry-focused point is needed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Primary and secondary data",
+  "card": [
+   [
+    "Primary data",
+    "Data collected first-hand by the person doing the investigation, such as measuring a temperature or a mass in the lab yourself."
+   ],
+   [
+    "Secondary data",
+    "Data that someone else collected and that you then use, such as values from a textbook, a database or a published report."
+   ],
+   "Secondary data must be judged before it is used. You did not control how it was collected, so you check where it came from and whether it suits your question.",
+   "The same kind of measurement can be either. A boiling point you measure is primary. The same boiling point read from a data table is secondary."
+  ],
+  "remember": "Primary data is what you collect yourself. Secondary data is what you take from others, so you must check it.",
+  "a": {
+   "q": "A student wants the density of ethanol. Which choice is primary data?",
+   "opts": [
+    "Measuring the mass and volume of ethanol in the lab",
+    "Reading the density from a chemistry data book",
+    "Copying the density from a classmate's report",
+    "Finding the density in a published journal article"
+   ],
+   "why": "The student collects the measurements first-hand, so this is primary data. The other three take values that other people collected, which makes them secondary data, even though the sources may be reliable.",
+   "clue": "Who made the measurement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests the pH of rainwater at her school in Ballarat. She then compares her results with a council report on rainwater pH in the region. Which statement is correct?",
+   "opts": [
+    "Her results are primary and the report is secondary",
+    "Her results are secondary and the report is primary",
+    "Both are primary because both are pH measurements",
+    "Both are secondary because both are about rainwater"
+   ],
+   "why": "Priya collected her own pH readings, so they are primary data for her. The council report was collected by others and she must judge its quality, so it is secondary. The type of measurement does not decide which kind of data it is.",
+   "clue": "Ask who collected each set of results, not what was measured."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Measuring the mass and volume of ethanol in the lab",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her results are primary and the report is secondary",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Primary and secondary data",
+  "card": [
+   [
+    "Primary data",
+    "Data collected first-hand by the person doing the investigation, such as measuring a temperature or a mass in the lab yourself."
+   ],
+   [
+    "Secondary data",
+    "Data that someone else collected and that you then use, such as values from a textbook, a database or a published report."
+   ],
+   "Secondary data must be judged before it is used. You did not control how it was collected, so you check where it came from and whether it suits your question.",
+   "The same kind of measurement can be either. A boiling point you measure is primary. The same boiling point read from a data table is secondary."
+  ],
+  "remember": "Primary data is what you collect yourself. Secondary data is what you take from others, so you must check it.",
+  "a": {
+   "q": "A student wants the density of ethanol. Which choice is primary data?",
+   "opts": [
+    "Measuring the mass and volume of ethanol in the lab",
+    "Reading the density from a chemistry data book",
+    "Copying the density from a classmate's report",
+    "Finding the density in a published journal article"
+   ],
+   "why": "The student collects the measurements first-hand, so this is primary data. The other three take values that other people collected, which makes them secondary data, even though the sources may be reliable.",
+   "clue": "Who made the measurement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests the pH of rainwater at her school in Ballarat. She then compares her results with a council report on rainwater pH in the region. Which statement is correct?",
+   "opts": [
+    "Her results are primary and the report is secondary",
+    "Her results are secondary and the report is primary",
+    "Both are primary because both are pH measurements",
+    "Both are secondary because both are about rainwater"
+   ],
+   "why": "Priya collected her own pH readings, so they are primary data for her. The council report was collected by others and she must judge its quality, so it is secondary. The type of measurement does not decide which kind of data it is.",
+   "clue": "Ask who collected each set of results, not what was measured."
+  }
+ },
+ "cleared_by": "checker"
+}

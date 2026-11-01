@@ -1,0 +1,196 @@
+{
+ "id": "mat-comparing-data-sets",
+ "title": "Comparing data sets",
+ "brief": "189054a7aeab",
+ "shortlist": [
+  [
+   "mat-types-data",
+   0.384
+  ],
+  [
+   "mat-displaying-data",
+   0.246
+  ],
+  [
+   "mat-interpolation-extrapolation",
+   0.215
+  ],
+  [
+   "geo-fieldwork-primary-data",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: done",
+  "2026-11-01T08:24:32Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00725,
+  "check": 0.00948,
+  "fix": 0.01494
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches comparing two data sets with summary numbers and side-by-side graphs; they cover data types, single displays, regression prediction and fieldwork, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Comparing data sets",
+  "card": [
+   "To compare two data sets, look at the same measures for both: a typical value (mean or median) and the spread (range or IQR).",
+   "Graphs help. Two box plots drawn on the same scale show the medians, spreads and ranges side by side.",
+   "Write the comparison in words and use the numbers. Example: Team A has a median of 40 and Team B has 32, so Team A usually scores higher.",
+   "A smaller spread means more consistent results. A fair conclusion uses both a typical value and the spread, and it is stated in the context of the data."
+  ],
+  "remember": "Compare the typical value and the spread, using the same measures for both sets.",
+  "a": {
+   "q": "Team A scores have a median of 40 and an IQR of 6. Team B scores have a median of 32 and an IQR of 12. Which is true?",
+   "opts": [
+    "Team A usually scores higher and is more consistent",
+    "Team B usually scores higher and is more consistent",
+    "Team A usually scores higher and is less consistent",
+    "Team B usually scores lower and is more consistent"
+   ],
+   "why": "Team A has the higher median, so it usually scores higher. Its IQR is smaller, so its scores are more consistent. A larger IQR does not mean better scores, it means more spread.",
+   "clue": "Compare the medians for typical scores, then the IQRs for consistency."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sells a median of 52 coffees a day with a range of 20. Sam's café sells a median of 52 with a range of 50. What is a fair conclusion?",
+   "opts": [
+    "Typical sales are equal, but Sam's sales vary more",
+    "Mia's café sells more coffees than Sam's",
+    "Sam's café sells more coffees than Mia's",
+    "Both cafés have the same spread of sales"
+   ],
+   "why": "The medians are equal, so typical daily sales are the same. Sam's range of 50 is larger than Mia's 20, so his sales vary more. A larger range does not mean higher sales.",
+   "clue": "Check the medians first, then compare the ranges."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Team A usually scores higher and is more consistent",
+   "also_right": []
+  },
+  "b": {
+   "best": "Typical sales are equal, but Sam's sales vary more",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest (about 50 characters against about 40) and the only one with two clauses covering both typical value and spread, so a student could pick it on its shape without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. In question b, the right option stands out as the longest and the only two-part statement, so it could be guessed without knowing the idea."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is clearly the longest (about 50 characters against about 40) and the only one with two clauses covering both typical value and spread, so a student could pick it on its shape without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Comparing data sets",
+  "card": [
+   "To compare two data sets, look at the same measures for both: a typical value (mean or median) and the spread (range or IQR).",
+   "Graphs help. Two box plots drawn on the same scale show the medians, spreads and ranges side by side.",
+   "Write the comparison in words and use the numbers. Example: Team A has a median of 40 and Team B has 32, so Team A usually scores higher.",
+   "A smaller spread means more consistent results. A fair conclusion uses both a typical value and the spread, and it is stated in the context of the data."
+  ],
+  "remember": "Compare the typical value and the spread, using the same measures for both sets.",
+  "a": {
+   "q": "Team A scores have a median of 40 and an IQR of 6. Team B scores have a median of 32 and an IQR of 12. Which is true?",
+   "opts": [
+    "Team A usually scores higher and is more consistent",
+    "Team B usually scores higher and is more consistent",
+    "Team A usually scores higher and is less consistent",
+    "Team B usually scores lower and is more consistent"
+   ],
+   "why": "Team A has the higher median, so it usually scores higher. Its IQR is smaller, so its scores are more consistent. A larger IQR does not mean better scores, it means more spread.",
+   "clue": "Compare the medians for typical scores, then the IQRs for consistency."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sells a median of 52 coffees a day with a range of 20. Sam's café sells a median of 52 with a range of 50. What is a fair conclusion?",
+   "opts": [
+    "Typical sales are equal, but Sam's sales vary more",
+    "Typical sales are equal, but Mia's sales vary more",
+    "Sam's typical sales are higher, and his sales vary more",
+    "Mia's typical sales are higher, and her sales vary less"
+   ],
+   "why": "The medians are equal, so typical daily sales are the same. Sam's range of 50 is larger than Mia's 20, so his sales vary more, not Mia's. A larger range shows more spread, not higher sales.",
+   "clue": "Check the medians first, then compare the ranges."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is clearly the longest (about 50 characters against about 40) and the only one with two clauses covering both typical value and spread, so a student could pick it on its shape without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is clearly the longest (about 50 characters against about 40) and the only one with two clauses covering both typical value and spread, so a student could pick it on its shape without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Comparing data sets",
+  "card": [
+   "To compare two data sets, look at the same measures for both: a typical value (mean or median) and the spread (range or IQR).",
+   "Graphs help. Two box plots drawn on the same scale show the medians, spreads and ranges side by side.",
+   "Write the comparison in words and use the numbers. Example: Team A has a median of 40 and Team B has 32, so Team A usually scores higher.",
+   "A smaller spread means more consistent results. A fair conclusion uses both a typical value and the spread, and it is stated in the context of the data."
+  ],
+  "remember": "Compare the typical value and the spread, using the same measures for both sets.",
+  "a": {
+   "q": "Team A scores have a median of 40 and an IQR of 6. Team B scores have a median of 32 and an IQR of 12. Which is true?",
+   "opts": [
+    "Team A usually scores higher and is more consistent",
+    "Team B usually scores higher and is more consistent",
+    "Team A usually scores higher and is less consistent",
+    "Team B usually scores lower and is more consistent"
+   ],
+   "why": "Team A has the higher median, so it usually scores higher. Its IQR is smaller, so its scores are more consistent. A larger IQR does not mean better scores, it means more spread.",
+   "clue": "Compare the medians for typical scores, then the IQRs for consistency."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sells a median of 52 coffees a day with a range of 20. Sam's café sells a median of 52 with a range of 50. What is a fair conclusion?",
+   "opts": [
+    "Typical sales are equal, but Sam's sales vary more",
+    "Typical sales are equal, but Mia's sales vary more",
+    "Sam's typical sales are higher, and his sales vary more",
+    "Mia's typical sales are higher, and her sales vary less"
+   ],
+   "why": "The medians are equal, so typical daily sales are the same. Sam's range of 50 is larger than Mia's 20, so his sales vary more, not Mia's. A larger range shows more spread, not higher sales.",
+   "clue": "Check the medians first, then compare the ranges."
+  }
+ },
+ "cleared_by": "auto"
+}

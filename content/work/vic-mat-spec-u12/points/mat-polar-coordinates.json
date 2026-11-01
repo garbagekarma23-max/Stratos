@@ -1,0 +1,148 @@
+{
+ "id": "mat-polar-coordinates",
+ "title": "Polar coordinates",
+ "brief": "00e6b7720d27",
+ "shortlist": [
+  [
+   "mat-unit-circle",
+   0.406
+  ],
+  [
+   "mat-pythagorean-identity",
+   0.337
+  ],
+  [
+   "mat-sine-rule",
+   0.254
+  ],
+  [
+   "mat-exact-values",
+   0.228
+  ],
+  [
+   "mat-area-any-triangle",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00492,
+  "check": 0.00678
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches polar coordinates; the closest, the unit circle card, covers only radius-1 cos and sin and does not introduce a general distance r from the origin, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Polar coordinates",
+  "card": [
+   "A point can be given as (r, θ). r is its distance from the origin. θ is the angle measured anticlockwise from the positive x-axis.",
+   [
+    "Polar to Cartesian",
+    "x = r cos θ and y = r sin θ. For (4, 60°): x = 4 × 1/2 = 2 and y = 4 × √3/2 = 2√3. The point is (2, 2√3)."
+   ],
+   [
+    "Cartesian to polar",
+    "r = √(x² + y²) and tan θ = y/x. Check which quadrant the point is in, because tan θ gives the same value in two opposite quadrants."
+   ],
+   "For (−3, 3), r = √(9 + 9) = 3√2. The point is in the second quadrant, so θ = 135°, not 45°."
+  ],
+  "remember": "x = r cos θ, y = r sin θ, and r = √(x² + y²). Use the quadrant to choose θ.",
+  "a": {
+   "q": "A point has polar coordinates (6, 30°). What is its y-coordinate?",
+   "opts": [
+    "3",
+    "3√3",
+    "6",
+    "√3/2"
+   ],
+   "why": "y = r sin θ = 6 × sin 30° = 6 × 1/2 = 3. The value 3√3 comes from using cos 30° instead, which is the formula for x.",
+   "clue": "y uses sine, not cosine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A drone is at the point (−2, −2) on a grid, with the origin as the centre. Which polar coordinates give its position?",
+   "opts": [
+    "(2√2, 225°)",
+    "(2√2, 45°)",
+    "(8, 225°)",
+    "(2√2, 135°)"
+   ],
+   "why": "r = √(4 + 4) = √8 = 2√2. The point is in the third quadrant, so θ = 180° + 45° = 225°. Using 45° ignores the quadrant, and 8 forgets the square root.",
+   "clue": "Both coordinates are negative, so which quadrant is the point in?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3",
+   "also_right": []
+  },
+  "b": {
+   "best": "(2√2, 225°)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Polar coordinates",
+  "card": [
+   "A point can be given as (r, θ). r is its distance from the origin. θ is the angle measured anticlockwise from the positive x-axis.",
+   [
+    "Polar to Cartesian",
+    "x = r cos θ and y = r sin θ. For (4, 60°): x = 4 × 1/2 = 2 and y = 4 × √3/2 = 2√3. The point is (2, 2√3)."
+   ],
+   [
+    "Cartesian to polar",
+    "r = √(x² + y²) and tan θ = y/x. Check which quadrant the point is in, because tan θ gives the same value in two opposite quadrants."
+   ],
+   "For (−3, 3), r = √(9 + 9) = 3√2. The point is in the second quadrant, so θ = 135°, not 45°."
+  ],
+  "remember": "x = r cos θ, y = r sin θ, and r = √(x² + y²). Use the quadrant to choose θ.",
+  "a": {
+   "q": "A point has polar coordinates (6, 30°). What is its y-coordinate?",
+   "opts": [
+    "3",
+    "3√3",
+    "6",
+    "√3/2"
+   ],
+   "why": "y = r sin θ = 6 × sin 30° = 6 × 1/2 = 3. The value 3√3 comes from using cos 30° instead, which is the formula for x.",
+   "clue": "y uses sine, not cosine."
+  },
+  "b": {
+   "d": 3,
+   "q": "A drone is at the point (−2, −2) on a grid, with the origin as the centre. Which polar coordinates give its position?",
+   "opts": [
+    "(2√2, 225°)",
+    "(2√2, 45°)",
+    "(8, 225°)",
+    "(2√2, 135°)"
+   ],
+   "why": "r = √(4 + 4) = √8 = 2√2. The point is in the third quadrant, so θ = 180° + 45° = 225°. Using 45° ignores the quadrant, and 8 forgets the square root.",
+   "clue": "Both coordinates are negative, so which quadrant is the point in?"
+  }
+ },
+ "cleared_by": "checker"
+}

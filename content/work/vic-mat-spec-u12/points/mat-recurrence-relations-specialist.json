@@ -1,0 +1,188 @@
+{
+ "id": "mat-recurrence-relations-specialist",
+ "title": "Recurrence relations in Specialist",
+ "brief": "7b08f9ca6b3a",
+ "shortlist": [
+  [
+   "mat-arithmetic-sequences",
+   0.254
+  ],
+  [
+   "mat-geometric-sequences",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.0104,
+  "check": 0.00999,
+  "fix": 0.01427
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches recurrence relations: both give explicit nth-term formulas for arithmetic and geometric sequences, not terms defined from earlier terms, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Recurrence relations in Specialist",
+  "card": [
+   "A recurrence relation gives each term using earlier terms. You also need starting values to get the sequence going.",
+   "A first-order relation uses only the previous term, such as t(n+1) = 2 × t(n). It needs one starting value.",
+   "A second-order relation uses the two previous terms, such as t(n+2) = t(n+1) + t(n). It needs two starting values.",
+   "The Fibonacci sequence has t1 = 1, t2 = 1 and t(n+2) = t(n+1) + t(n), giving 1, 1, 2, 3, 5, 8. Terms can also be multiplied first, such as t(n+2) = 3 × t(n+1) − t(n)."
+  ],
+  "remember": "Start with the given values, then build each new term from the earlier ones, one step at a time.",
+  "a": {
+   "q": "A sequence has t1 = 1, t2 = 3 and t(n+2) = t(n+1) + t(n). What is t6?",
+   "opts": [
+    "18",
+    "11",
+    "29",
+    "12"
+   ],
+   "why": "The terms are 1, 3, 4, 7, 11, 18, so t6 = 18. The value 11 is t5, which comes from stopping one term too soon.",
+   "clue": "Write out each term in order, adding the previous two."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sequence has t1 = 1, t2 = 2 and t(n+2) = 2 × t(n+1) + t(n). What is t5?",
+   "opts": [
+    "29",
+    "8",
+    "16",
+    "12"
+   ],
+   "why": "t3 = 2 × 2 + 1 = 5, t4 = 2 × 5 + 2 = 12 and t5 = 2 × 12 + 5 = 29. The value 12 is t4, and 8 comes from ignoring the 2 and adding the previous two terms.",
+   "clue": "The 2 multiplies the term just before, not the one before that."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "18",
+   "also_right": []
+  },
+  "b": {
+   "best": "29",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Terms can also be multiplied first\" is ambiguous. It could be read as multiplying terms by each other, when it means multiplying a term by a constant, as in 3 × t(n+1). Something like \"Earlier terms can also be multiplied by a number\" would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: t6 = 18 and t5 = 29, and the explanations are correct. The only issue is one ambiguous phrase in the card about multiplying terms."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Terms can also be multiplied first\" is ambiguous. It could be read as multiplying terms by each other, when it means multiplying a term by a constant, as in 3 × t(n+1). Something like \"Earlier terms can also be multiplied by a number\" would be clearer."
+ ],
+ "proposal": {
+  "title": "Recurrence relations in Specialist",
+  "card": [
+   "A recurrence relation gives each term using earlier terms. You also need starting values to get the sequence going.",
+   "A first-order relation uses only the previous term, such as t(n+1) = 2 × t(n). It needs one starting value.",
+   "A second-order relation uses the two previous terms, such as t(n+2) = t(n+1) + t(n). It needs two starting values.",
+   "The Fibonacci sequence has t1 = 1, t2 = 1 and t(n+2) = t(n+1) + t(n), giving 1, 1, 2, 3, 5, 8. Earlier terms can also be multiplied by a number, such as t(n+2) = 3 × t(n+1) − t(n)."
+  ],
+  "remember": "Start with the given values, then build each new term from the earlier ones, one step at a time.",
+  "a": {
+   "q": "A sequence has t1 = 1, t2 = 3 and t(n+2) = t(n+1) + t(n). What is t6?",
+   "opts": [
+    "18",
+    "11",
+    "29",
+    "12"
+   ],
+   "why": "The terms are 1, 3, 4, 7, 11, 18, so t6 = 18. The value 11 is t5, which comes from stopping one term too soon.",
+   "clue": "Write out each term in order, adding the previous two."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sequence has t1 = 1, t2 = 2 and t(n+2) = 2 × t(n+1) + t(n). What is t5?",
+   "opts": [
+    "29",
+    "8",
+    "16",
+    "12"
+   ],
+   "why": "t3 = 2 × 2 + 1 = 5, t4 = 2 × 5 + 2 = 12 and t5 = 2 × 12 + 5 = 29. The value 12 is t4, and 8 comes from ignoring the 2 and adding the previous two terms.",
+   "clue": "The 2 multiplies the term just before, not the one before that."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Terms can also be multiplied first\" is ambiguous. It could be read as multiplying terms by each other, when it means multiplying a term by a constant, as in 3 × t(n+1). Something like \"Earlier terms can also be multiplied by a number\" would be clearer."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Terms can also be multiplied first\" is ambiguous. It could be read as multiplying terms by each other, when it means multiplying a term by a constant, as in 3 × t(n+1). Something like \"Earlier terms can also be multiplied by a number\" would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Recurrence relations in Specialist",
+  "card": [
+   "A recurrence relation gives each term using earlier terms. You also need starting values to get the sequence going.",
+   "A first-order relation uses only the previous term, such as t(n+1) = 2 × t(n). It needs one starting value.",
+   "A second-order relation uses the two previous terms, such as t(n+2) = t(n+1) + t(n). It needs two starting values.",
+   "The Fibonacci sequence has t1 = 1, t2 = 1 and t(n+2) = t(n+1) + t(n), giving 1, 1, 2, 3, 5, 8. Earlier terms can also be multiplied by a number, such as t(n+2) = 3 × t(n+1) − t(n)."
+  ],
+  "remember": "Start with the given values, then build each new term from the earlier ones, one step at a time.",
+  "a": {
+   "q": "A sequence has t1 = 1, t2 = 3 and t(n+2) = t(n+1) + t(n). What is t6?",
+   "opts": [
+    "18",
+    "11",
+    "29",
+    "12"
+   ],
+   "why": "The terms are 1, 3, 4, 7, 11, 18, so t6 = 18. The value 11 is t5, which comes from stopping one term too soon.",
+   "clue": "Write out each term in order, adding the previous two."
+  },
+  "b": {
+   "d": 3,
+   "q": "A sequence has t1 = 1, t2 = 2 and t(n+2) = 2 × t(n+1) + t(n). What is t5?",
+   "opts": [
+    "29",
+    "8",
+    "16",
+    "12"
+   ],
+   "why": "t3 = 2 × 2 + 1 = 5, t4 = 2 × 5 + 2 = 12 and t5 = 2 × 12 + 5 = 29. The value 12 is t4, and 8 comes from ignoring the 2 and adding the previous two terms.",
+   "clue": "The 2 multiplies the term just before, not the one before that."
+  }
+ },
+ "cleared_by": "auto"
+}

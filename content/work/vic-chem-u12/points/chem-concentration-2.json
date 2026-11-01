@@ -1,0 +1,225 @@
+{
+ "id": "chem-concentration-2",
+ "title": "Concentration",
+ "brief": "64ee97647ca0",
+ "shortlist": [
+  [
+   "chem-concentration",
+   0.705
+  ],
+  [
+   "chem-dilution",
+   0.336
+  ],
+  [
+   "chem-titration",
+   0.268
+  ],
+  [
+   "chem-colorimetry-uv-visible-spectroscopy",
+   0.266
+  ],
+  [
+   "chem-atomic-absorption-spectroscopy",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00551,
+  "check": 0.0153,
+  "fix": 0.01907,
+  "recheck": 0.00749
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, chem-concentration, covers mol/L, g/L and ppm but does not teach %(m/v) or %(v/v), which the new brief requires, so it is too narrow to reuse or adapt with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Concentration",
+  "card": [
+   "Concentration is the amount of solute in a given amount of solution. Solute is the substance that dissolves. The volume used is that of the whole solution, not of the solvent alone.",
+   "Molar concentration is in mol/L: c = n ÷ V, with V in litres. Mass concentration is in g/L: mass of solute in grams ÷ volume of solution in litres.",
+   "Percentages: %(m/v) is grams of solute per 100 mL of solution. %(v/v) is millilitres of solute per 100 mL of solution. For very dilute solutions, ppm is used. 1 ppm is 1 mg of solute per litre of solution (mg/L) in water.",
+   "To convert between units, use the molar mass: g/L ÷ M = mol/L. For example, 58.5 g/L of NaCl is 1.00 mol/L, as M(NaCl) = 58.5 g/mol. Check that the volume is in the unit the formula needs."
+  ],
+  "remember": "Concentration is solute per volume of solution. Molar mass links g/L to mol/L.",
+  "a": {
+   "q": "A student dissolves 0.50 mol of sugar in water to make 250 mL of solution. What is the concentration in mol/L?",
+   "opts": [
+    "2.0 mol/L",
+    "0.50 mol/L",
+    "0.125 mol/L",
+    "125 mol/L"
+   ],
+   "why": "c = n ÷ V = 0.50 mol ÷ 0.250 L = 2.0 mol/L. Using 250 directly without converting to litres would give 125 mol/L, which is the mistake of leaving the volume in mL.",
+   "clue": "Convert the volume to litres before dividing."
+  },
+  "b": {
+   "d": 3,
+   "q": "A saline solution contains 9.0 g/L of NaCl (M = 58.5 g/mol). Which is closest to its concentration in mol/L?",
+   "opts": [
+    "0.15 mol/L",
+    "6.5 mol/L",
+    "0.90 mol/L",
+    "527 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 9.0 ÷ 58.5 = 0.15 mol/L. Multiplying by the molar mass gives 527, and this reverses the conversion. 0.90 would come from treating 9.0 g/L as 0.90 g per 100 mL, which is not the conversion asked for.",
+   "clue": "Moles are mass divided by molar mass."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.0 mol/L",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.15 mol/L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says using 250 directly without converting to litres gives 125 mol/L. It does not: 0.50 ÷ 250 = 0.002 mol/L. 125 comes from multiplying 0.50 × 250. The why misdescribes the error behind that distractor and could confuse students checking their working."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have the right answer (2.0 mol/L and 0.15 mol/L). The explanation for (a) wrongly says dividing by 250 mL gives 125 mol/L; that figure comes from multiplying, not dividing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says using 250 directly without converting to litres gives 125 mol/L. It does not: 0.50 ÷ 250 = 0.002 mol/L. 125 comes from multiplying 0.50 × 250. The why misdescribes the error behind that distractor and could confuse students checking their working."
+ ],
+ "proposal": {
+  "title": "Concentration",
+  "card": [
+   "Concentration is the amount of solute in a given amount of solution. Solute is the substance that dissolves. The volume used is that of the whole solution, not of the solvent alone.",
+   "Molar concentration is in mol/L: c = n ÷ V, with V in litres. Mass concentration is in g/L: mass of solute in grams ÷ volume of solution in litres.",
+   "Percentages: %(m/v) is grams of solute per 100 mL of solution. %(v/v) is millilitres of solute per 100 mL of solution. For very dilute solutions in water, ppm is used, and 1 ppm is about 1 mg of solute per litre (mg/L).",
+   "To convert between units, use the molar mass: g/L ÷ M = mol/L. For example, 58.5 g/L of NaCl is 1.00 mol/L, as M(NaCl) = 58.5 g/mol. Check that the volume is in the unit the formula needs."
+  ],
+  "remember": "Concentration is solute per volume of solution. Molar mass links g/L to mol/L.",
+  "a": {
+   "q": "A student dissolves 0.50 mol of sugar in water to make 250 mL of solution. What is the concentration in mol/L?",
+   "opts": [
+    "2.0 mol/L",
+    "0.50 mol/L",
+    "0.125 mol/L",
+    "0.0020 mol/L"
+   ],
+   "why": "c = n ÷ V = 0.50 mol ÷ 0.250 L = 2.0 mol/L. Dividing by 250 without converting mL to litres gives 0.0020 mol/L. Multiplying 0.50 by 0.250 instead of dividing gives 0.125 mol/L.",
+   "clue": "Convert the volume to litres before dividing."
+  },
+  "b": {
+   "d": 3,
+   "q": "A saline solution contains 9.0 g/L of NaCl (M = 58.5 g/mol). Which is closest to its concentration in mol/L?",
+   "opts": [
+    "0.15 mol/L",
+    "6.5 mol/L",
+    "0.90 mol/L",
+    "527 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 9.0 ÷ 58.5 = 0.15 mol/L. Multiplying by the molar mass gives 527, which reverses the conversion. 0.90 is the %(m/v) value, since 9.0 g/L is 0.90 g per 100 mL, so it is not in mol/L.",
+   "clue": "Moles are mass divided by molar mass."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2.0 mol/L",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.15 mol/L",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says using 250 directly without converting to litres gives 125 mol/L. It does not: 0.50 ÷ 250 = 0.002 mol/L. 125 comes from multiplying 0.50 × 250. The why misdescribes the error behind that distractor and could confuse students checking their working."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says using 250 directly without converting to litres gives 125 mol/L. It does not: 0.50 ÷ 250 = 0.002 mol/L. 125 comes from multiplying 0.50 × 250. The why misdescribes the error behind that distractor and could confuse students checking their working."
+  ]
+ },
+ "final": {
+  "title": "Concentration",
+  "card": [
+   "Concentration is the amount of solute in a given amount of solution. Solute is the substance that dissolves. The volume used is that of the whole solution, not of the solvent alone.",
+   "Molar concentration is in mol/L: c = n ÷ V, with V in litres. Mass concentration is in g/L: mass of solute in grams ÷ volume of solution in litres.",
+   "Percentages: %(m/v) is grams of solute per 100 mL of solution. %(v/v) is millilitres of solute per 100 mL of solution. For very dilute solutions in water, ppm is used, and 1 ppm is about 1 mg of solute per litre (mg/L).",
+   "To convert between units, use the molar mass: g/L ÷ M = mol/L. For example, 58.5 g/L of NaCl is 1.00 mol/L, as M(NaCl) = 58.5 g/mol. Check that the volume is in the unit the formula needs."
+  ],
+  "remember": "Concentration is solute per volume of solution. Molar mass links g/L to mol/L.",
+  "a": {
+   "q": "A student dissolves 0.50 mol of sugar in water to make 250 mL of solution. What is the concentration in mol/L?",
+   "opts": [
+    "2.0 mol/L",
+    "0.50 mol/L",
+    "0.125 mol/L",
+    "0.0020 mol/L"
+   ],
+   "why": "c = n ÷ V = 0.50 mol ÷ 0.250 L = 2.0 mol/L. Dividing by 250 without converting mL to litres gives 0.0020 mol/L. Multiplying 0.50 by 0.250 instead of dividing gives 0.125 mol/L.",
+   "clue": "Convert the volume to litres before dividing."
+  },
+  "b": {
+   "d": 3,
+   "q": "A saline solution contains 9.0 g/L of NaCl (M = 58.5 g/mol). Which is closest to its concentration in mol/L?",
+   "opts": [
+    "0.15 mol/L",
+    "6.5 mol/L",
+    "0.90 mol/L",
+    "527 mol/L"
+   ],
+   "why": "Divide the mass concentration by the molar mass: 9.0 ÷ 58.5 = 0.15 mol/L. Multiplying by the molar mass gives 527, which reverses the conversion. 0.90 is the %(m/v) value, since 9.0 g/L is 0.90 g per 100 mL, so it is not in mol/L.",
+   "clue": "Moles are mass divided by molar mass."
+  }
+ },
+ "cleared_by": "recheck"
+}

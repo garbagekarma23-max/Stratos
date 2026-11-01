@@ -1,0 +1,211 @@
+{
+ "id": "mat-venn-diagrams-karnaugh-maps",
+ "title": "Venn diagrams and Karnaugh maps",
+ "brief": "3626e098f5e6",
+ "shortlist": [
+  [
+   "mat-venn-diagrams-set-notation",
+   0.587
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00753,
+  "check": 0.01173,
+  "fix": 0.01852
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers Venn diagrams, union, intersection, complement and the addition rule, but the new point also asks for probability tables, which the card does not teach, and its Karnaugh map title is not part of VCE Methods, so no single bank point fits without a new step.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Venn diagrams and Karnaugh maps",
+  "card": [
+   "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, uses rows and columns for the same job.",
+   [
+    "Intersection",
+    "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+   ],
+   [
+    "Union",
+    "A ∪ B means A or B or both happen. It is everything inside either circle."
+   ],
+   [
+    "Complement",
+    "A' means A does not happen. It is everything outside circle A. Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6, Pr(B) = 0.5 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+   ]
+  ],
+  "remember": "Overlap is both, whole circles together is or, outside is not. All cells add to 1.",
+  "a": {
+   "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+   "opts": [
+    "0.3",
+    "0.4",
+    "0.6",
+    "1.1"
+   ],
+   "why": "A ∩ B' is the part of A that is not in B. So 0.7 − 0.4 = 0.3. Using 0.6 would be the mistake of finding 1 − 0.4, which ignores that the region must sit inside A.",
+   "clue": "Take the overlap away from all of A."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+   "opts": [
+    "0.3",
+    "0.1",
+    "0.5",
+    "0.7"
+   ],
+   "why": "Union = 0.5 + 0.4 − 0.2 = 0.7 by adding the three regions: sport only 0.3, both 0.2, music only 0.2. Neither is the rest: 1 − 0.7 = 0.3. Giving 0.1 comes from taking 1 − 0.5 − 0.4 and forgetting the overlap was counted twice.",
+   "clue": "Add the three filled regions, then subtract from 1."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.3",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) opens with the addition rule formula 'Union = 0.5 + 0.4 − 0.2', which belongs to point 2 (the addition rule). It should stay with the region-by-region method this card teaches: sport only 0.3, both 0.2, music only 0.2, neither = 1 − 0.7."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (0.3 and 0.3) and the card is accurate. One minor issue: the explanation for question b uses the addition rule formula from point 2 instead of only adding the Venn regions."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) opens with the addition rule formula 'Union = 0.5 + 0.4 − 0.2', which belongs to point 2 (the addition rule). It should stay with the region-by-region method this card teaches: sport only 0.3, both 0.2, music only 0.2, neither = 1 − 0.7."
+ ],
+ "proposal": {
+  "title": "Venn diagrams and Karnaugh maps",
+  "card": [
+   "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
+   [
+    "Intersection",
+    "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+   ],
+   [
+    "Union",
+    "A ∪ B means A or B or both happen. It is everything inside either circle."
+   ],
+   [
+    "Complement",
+    "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+   ]
+  ],
+  "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
+  "a": {
+   "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+   "opts": [
+    "0.3",
+    "0.4",
+    "0.6",
+    "1.1"
+   ],
+   "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
+   "clue": "Take the overlap away from all of A."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+   "opts": [
+    "0.3",
+    "0.1",
+    "0.5",
+    "0.7"
+   ],
+   "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+   "clue": "Fill the three regions inside the circles first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) opens with the addition rule formula 'Union = 0.5 + 0.4 − 0.2', which belongs to point 2 (the addition rule). It should stay with the region-by-region method this card teaches: sport only 0.3, both 0.2, music only 0.2, neither = 1 − 0.7."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) opens with the addition rule formula 'Union = 0.5 + 0.4 − 0.2', which belongs to point 2 (the addition rule). It should stay with the region-by-region method this card teaches: sport only 0.3, both 0.2, music only 0.2, neither = 1 − 0.7."
+  ]
+ },
+ "final": {
+  "title": "Venn diagrams and Karnaugh maps",
+  "card": [
+   "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
+   [
+    "Intersection",
+    "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+   ],
+   [
+    "Union",
+    "A ∪ B means A or B or both happen. It is everything inside either circle."
+   ],
+   [
+    "Complement",
+    "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+   ]
+  ],
+  "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
+  "a": {
+   "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+   "opts": [
+    "0.3",
+    "0.4",
+    "0.6",
+    "1.1"
+   ],
+   "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
+   "clue": "Take the overlap away from all of A."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+   "opts": [
+    "0.3",
+    "0.1",
+    "0.5",
+    "0.7"
+   ],
+   "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+   "clue": "Fill the three regions inside the circles first."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,120 @@
+{
+ "id": "mat-simulation",
+ "title": "Simulation",
+ "brief": "a28c0cf215a2",
+ "shortlist": [
+  [
+   "mat-discrete-probability-distributions",
+   0.239
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00492,
+  "check": 0.00751
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches discrete probability distributions and the rule that probabilities add to 1, whereas the new point asks students to simulate experiments with coins, dice and random number generators and use results to estimate probabilities, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Simulation",
+  "card": [
+   "A simulation copies a random experiment using a device that is easier to run. Coins, dice, spinners and random number generators are common choices.",
+   "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability 1/2.",
+   "Run the simulation many times. Estimated probability = number of trials with the event ÷ total number of trials.",
+   "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is 9/40 = 0.225. The true value is 1/5 = 0.2. More trials usually bring the estimate closer."
+  ],
+  "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+  "a": {
+   "q": "A fair six-sided die is rolled 50 times and shows a 6 on 7 rolls. What is the estimated probability of a 6?",
+   "opts": [
+    "7/50",
+    "1/6",
+    "7/43",
+    "43/50"
+   ],
+   "why": "The estimate is the number of trials with the event divided by all trials, so 7 ÷ 50 = 0.14. The value 1/6 is the theoretical probability, not the result of this simulation.",
+   "clue": "Divide the count of 6s by the total number of rolls."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to simulate whether a bus is late, with probability 1/4. Which device matches this chance?",
+   "opts": [
+    "A spinner with 4 equal sectors, one marked late",
+    "A fair coin, with heads meaning late",
+    "A fair die, with 1 meaning late",
+    "A spinner with 3 equal sectors, one marked late"
+   ],
+   "why": "One of 4 equal sectors gives a chance of 1/4. A coin gives 1/2, a die gives 1/6 for a single face, and a 3-sector spinner gives 1/3.",
+   "clue": "Find the device where the late outcome has chance 1/4."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7/50",
+   "also_right": []
+  },
+  "b": {
+   "best": "A spinner with 4 equal sectors, one marked late",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Simulation",
+  "card": [
+   "A simulation copies a random experiment using a device that is easier to run. Coins, dice, spinners and random number generators are common choices.",
+   "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability 1/2.",
+   "Run the simulation many times. Estimated probability = number of trials with the event ÷ total number of trials.",
+   "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is 9/40 = 0.225. The true value is 1/5 = 0.2. More trials usually bring the estimate closer."
+  ],
+  "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+  "a": {
+   "q": "A fair six-sided die is rolled 50 times and shows a 6 on 7 rolls. What is the estimated probability of a 6?",
+   "opts": [
+    "7/50",
+    "1/6",
+    "7/43",
+    "43/50"
+   ],
+   "why": "The estimate is the number of trials with the event divided by all trials, so 7 ÷ 50 = 0.14. The value 1/6 is the theoretical probability, not the result of this simulation.",
+   "clue": "Divide the count of 6s by the total number of rolls."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants to simulate whether a bus is late, with probability 1/4. Which device matches this chance?",
+   "opts": [
+    "A spinner with 4 equal sectors, one marked late",
+    "A fair coin, with heads meaning late",
+    "A fair die, with 1 meaning late",
+    "A spinner with 3 equal sectors, one marked late"
+   ],
+   "why": "One of 4 equal sectors gives a chance of 1/4. A coin gives 1/2, a die gives 1/6 for a single face, and a 3-sector spinner gives 1/3.",
+   "clue": "Find the device where the late outcome has chance 1/4."
+  }
+ },
+ "cleared_by": "checker"
+}

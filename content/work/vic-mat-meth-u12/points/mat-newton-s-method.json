@@ -1,0 +1,223 @@
+{
+ "id": "mat-newton-s-method",
+ "title": "Newton's method",
+ "brief": "7d107c0bbe51",
+ "shortlist": [
+  [
+   "mat-cubic-polynomial-graphs",
+   0.301
+  ],
+  [
+   "mat-tangents-normals",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00635,
+  "check": 0.01327,
+  "fix": 0.01787,
+  "recheck": 0.0107
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches Newton's method: the cubic graphs card covers root and sign features of cubics, and the tangents and normals card covers finding tangent and normal equations, not repeatedly using tangent lines to improve a root estimate.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Newton's method",
+  "card": [
+   "Newton's method improves a guess for a root, a value of x where f(x) = 0. Draw the tangent at the guess and see where it meets the x-axis.",
+   "That crossing point is the next guess. The rule is x₁ = x₀ − f(x₀) ÷ f′(x₀). Repeat it to get closer each time.",
+   "Example: f(x) = x³ − 8 with x₀ = 3. f(3) = 19 and f′(x) = 3x², so f′(3) = 27.",
+   "Then x₁ = 3 − 19/27 ≈ 2.30. This is closer to the root x = 2. The method can fail if f′(x₀) = 0."
+  ],
+  "remember": "New guess = old guess − f ÷ f′, found where the tangent meets the axis.",
+  "a": {
+   "q": "For f(x) = x³ − 8 with x₀ = 2.5, what is x₁ using Newton's method?",
+   "opts": [
+    "2.5 − 7.625/18.75 ≈ 2.09",
+    "2.5 + 7.625/18.75 ≈ 2.91",
+    "2.5 − 7.625/7.5 ≈ 1.48",
+    "2.5 − 18.75/7.625 ≈ 0.04"
+   ],
+   "why": "f(2.5) = 15.625 − 8 = 7.625, and f′(2.5) = 3 × 6.25 = 18.75. So x₁ = 2.5 − 7.625/18.75 ≈ 2.09. Adding instead of subtracting moves away from the root.",
+   "clue": "Subtract f divided by f′."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 2x − 5 with x₀ = 2, what is x₁?",
+   "opts": [
+    "2.1",
+    "1.9",
+    "3",
+    "2.5"
+   ],
+   "why": "f(2) = 8 − 4 − 5 = −1, and f′(x) = 3x² − 2, so f′(2) = 10. Then x₁ = 2 − (−1)/10 = 2.1. Forgetting the negative sign on f gives 1.9.",
+   "clue": "f(2) is negative, so subtracting it increases x."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2.5 − 7.625/18.75 ≈ 2.09",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.1",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Repeat it to get closer each time\" overstates the method. Newton's method does not always get closer on every step. It can overshoot, cycle or diverge, not only fail when f′(x₀) = 0. Better: \"Repeating it usually gets closer.\""
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue \"f(2) is negative, so subtracting it increases x\" is imprecise. The step subtracts f ÷ f′, not f, and x increases only because f′(2) is also positive. A student could take a false general rule from it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "All the calculations and both intended answers are correct. The card overclaims that each repeat gets closer, and the clue for question b ignores the sign of f′."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Repeat it to get closer each time\" overstates the method. Newton's method does not always get closer on every step. It can overshoot, cycle or diverge, not only fail when f′(x₀) = 0. Better: \"Repeating it usually gets closer.\"",
+  "Question b, wording: The clue \"f(2) is negative, so subtracting it increases x\" is imprecise. The step subtracts f ÷ f′, not f, and x increases only because f′(2) is also positive. A student could take a false general rule from it."
+ ],
+ "proposal": {
+  "title": "Newton's method",
+  "card": [
+   "Newton's method improves a guess for a root, a value of x where f(x) = 0. Draw the tangent at the guess and see where it meets the x-axis.",
+   "That crossing point is the next guess. The rule is x₁ = x₀ − f(x₀) ÷ f′(x₀). Repeating it usually gets closer.",
+   "Example: f(x) = x³ − 8 with x₀ = 3. f(3) = 19 and f′(x) = 3x², so f′(3) = 27.",
+   "Then x₁ = 3 − 19/27 ≈ 2.30. This is closer to the root x = 2. The method fails if f′(x₀) = 0, and a poor guess can overshoot or move away."
+  ],
+  "remember": "New guess = old guess − f ÷ f′, found where the tangent meets the axis.",
+  "a": {
+   "q": "For f(x) = x³ − 8 with x₀ = 2.5, what is x₁ using Newton's method?",
+   "opts": [
+    "2.5 − 7.625/18.75 ≈ 2.09",
+    "2.5 + 7.625/18.75 ≈ 2.91",
+    "2.5 − 7.625/7.5 ≈ 1.48",
+    "2.5 − 18.75/7.625 ≈ 0.04"
+   ],
+   "why": "f(2.5) = 15.625 − 8 = 7.625, and f′(2.5) = 3 × 6.25 = 18.75. So x₁ = 2.5 − 7.625/18.75 ≈ 2.09. Adding instead of subtracting moves away from the root.",
+   "clue": "Subtract f divided by f′."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 2x − 5 with x₀ = 2, what is x₁?",
+   "opts": [
+    "2.1",
+    "1.9",
+    "3",
+    "2.5"
+   ],
+   "why": "f(2) = 8 − 4 − 5 = −1, and f′(x) = 3x² − 2, so f′(2) = 10. Then x₁ = 2 − (−1)/10 = 2.1. Dropping the negative sign on f(2) gives 1.9, and forgetting to divide by f′(2) gives 3.",
+   "clue": "Find f(2) ÷ f′(2) first, keeping its sign, then subtract it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2.5 − 7.625/18.75 ≈ 2.09",
+    "also_right": []
+   },
+   "b": {
+    "best": "2.1",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example (x₁ ≈ 2.30) and both questions' answers (2.09 and 2.1) check out, and the distractors reflect plausible errors."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Repeat it to get closer each time\" overstates the method. Newton's method does not always get closer on every step. It can overshoot, cycle or diverge, not only fail when f′(x₀) = 0. Better: \"Repeating it usually gets closer.\""
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue \"f(2) is negative, so subtracting it increases x\" is imprecise. The step subtracts f ÷ f′, not f, and x increases only because f′(2) is also positive. A student could take a false general rule from it."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Repeat it to get closer each time\" overstates the method. Newton's method does not always get closer on every step. It can overshoot, cycle or diverge, not only fail when f′(x₀) = 0. Better: \"Repeating it usually gets closer.\"",
+   "Question b, wording: The clue \"f(2) is negative, so subtracting it increases x\" is imprecise. The step subtracts f ÷ f′, not f, and x increases only because f′(2) is also positive. A student could take a false general rule from it."
+  ]
+ },
+ "final": {
+  "title": "Newton's method",
+  "card": [
+   "Newton's method improves a guess for a root, a value of x where f(x) = 0. Draw the tangent at the guess and see where it meets the x-axis.",
+   "That crossing point is the next guess. The rule is x₁ = x₀ − f(x₀) ÷ f′(x₀). Repeating it usually gets closer.",
+   "Example: f(x) = x³ − 8 with x₀ = 3. f(3) = 19 and f′(x) = 3x², so f′(3) = 27.",
+   "Then x₁ = 3 − 19/27 ≈ 2.30. This is closer to the root x = 2. The method fails if f′(x₀) = 0, and a poor guess can overshoot or move away."
+  ],
+  "remember": "New guess = old guess − f ÷ f′, found where the tangent meets the axis.",
+  "a": {
+   "q": "For f(x) = x³ − 8 with x₀ = 2.5, what is x₁ using Newton's method?",
+   "opts": [
+    "2.5 − 7.625/18.75 ≈ 2.09",
+    "2.5 + 7.625/18.75 ≈ 2.91",
+    "2.5 − 7.625/7.5 ≈ 1.48",
+    "2.5 − 18.75/7.625 ≈ 0.04"
+   ],
+   "why": "f(2.5) = 15.625 − 8 = 7.625, and f′(2.5) = 3 × 6.25 = 18.75. So x₁ = 2.5 − 7.625/18.75 ≈ 2.09. Adding instead of subtracting moves away from the root.",
+   "clue": "Subtract f divided by f′."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 2x − 5 with x₀ = 2, what is x₁?",
+   "opts": [
+    "2.1",
+    "1.9",
+    "3",
+    "2.5"
+   ],
+   "why": "f(2) = 8 − 4 − 5 = −1, and f′(x) = 3x² − 2, so f′(2) = 10. Then x₁ = 2 − (−1)/10 = 2.1. Dropping the negative sign on f(2) gives 1.9, and forgetting to divide by f′(2) gives 3.",
+   "clue": "Find f(2) ÷ f′(2) first, keeping its sign, then subtract it."
+  }
+ },
+ "cleared_by": "recheck"
+}

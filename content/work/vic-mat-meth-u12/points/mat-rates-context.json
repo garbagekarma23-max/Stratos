@@ -1,0 +1,136 @@
+{
+ "id": "mat-rates-context",
+ "title": "Rates in context",
+ "brief": "28fcbdd7a489",
+ "shortlist": [
+  [
+   "mat-derivatives-as-rates-context",
+   0.267
+  ],
+  [
+   "mat-rates-change-context",
+   0.253
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.253
+  ],
+  [
+   "mat-average-rate-change",
+   0.23
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00981,
+  "check": 0.00793
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, mat-gradient-as-rate-change, covers only straight-line gradients, but this point also covers curved graphs of real data (temperature, motion, containers of different shapes), and the derivative cards are beyond Units 1 and 2 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Rates in context",
+  "card": [
+   "On a graph of real data, the gradient is a rate. Its units are the vertical units per horizontal unit, such as km per hour or °C per hour.",
+   "A steeper graph means a faster rate of change. A flat section means no change at that time, such as a cyclist who has stopped.",
+   "A line that slopes up means the quantity is increasing. A line that slopes down means it is decreasing.",
+   "Water filling a container at a steady rate: the depth rises quickly where the container is narrow and slowly where it is wide. A container with straight sides of the same width gives a straight line."
+  ],
+  "remember": "Read the gradient as a rate. Steeper means faster, flat means no change.",
+  "a": {
+   "q": "A graph of a cyclist's distance (km) against time (hours) is steepest between 2 and 3 hours. What does this show?",
+   "opts": [
+    "She was riding fastest then",
+    "She rode the furthest in total",
+    "She had stopped for a rest",
+    "She was riding slowest then"
+   ],
+   "why": "On a distance and time graph, the steepest part has the greatest distance per hour, so the fastest speed. A flat part would be a rest, not a steep one.",
+   "clue": "Steep means a lot of distance in a short time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A vase fills with water at a steady rate. The graph of depth against time rises steeply at first, then gets gradually less steep all the way to the top. Which vase fits?",
+   "opts": [
+    "Narrow at the bottom, getting wider towards the top",
+    "Wide at the bottom, getting narrower towards the top",
+    "The same width all the way up",
+    "Wide in the middle, narrow at the bottom and top"
+   ],
+   "why": "Depth rises fastest where the vase is narrow, so the vase starts narrow. The graph keeps flattening, so it keeps getting wider. A vase wide at the bottom would fill slowly at first, which is the reverse.",
+   "clue": "Steep depth graph means the water level is climbing quickly."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "She was riding fastest then",
+   "also_right": []
+  },
+  "b": {
+   "best": "Narrow at the bottom, getting wider towards the top",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Rates in context",
+  "card": [
+   "On a graph of real data, the gradient is a rate. Its units are the vertical units per horizontal unit, such as km per hour or °C per hour.",
+   "A steeper graph means a faster rate of change. A flat section means no change at that time, such as a cyclist who has stopped.",
+   "A line that slopes up means the quantity is increasing. A line that slopes down means it is decreasing.",
+   "Water filling a container at a steady rate: the depth rises quickly where the container is narrow and slowly where it is wide. A container with straight sides of the same width gives a straight line."
+  ],
+  "remember": "Read the gradient as a rate. Steeper means faster, flat means no change.",
+  "a": {
+   "q": "A graph of a cyclist's distance (km) against time (hours) is steepest between 2 and 3 hours. What does this show?",
+   "opts": [
+    "She was riding fastest then",
+    "She rode the furthest in total",
+    "She had stopped for a rest",
+    "She was riding slowest then"
+   ],
+   "why": "On a distance and time graph, the steepest part has the greatest distance per hour, so the fastest speed. A flat part would be a rest, not a steep one.",
+   "clue": "Steep means a lot of distance in a short time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A vase fills with water at a steady rate. The graph of depth against time rises steeply at first, then gets gradually less steep all the way to the top. Which vase fits?",
+   "opts": [
+    "Narrow at the bottom, getting wider towards the top",
+    "Wide at the bottom, getting narrower towards the top",
+    "The same width all the way up",
+    "Wide in the middle, narrow at the bottom and top"
+   ],
+   "why": "Depth rises fastest where the vase is narrow, so the vase starts narrow. The graph keeps flattening, so it keeps getting wider. A vase wide at the bottom would fill slowly at first, which is the reverse.",
+   "clue": "Steep depth graph means the water level is climbing quickly."
+  }
+ },
+ "cleared_by": "checker"
+}

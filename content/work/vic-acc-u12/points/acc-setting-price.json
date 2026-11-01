@@ -1,0 +1,257 @@
+{
+ "id": "acc-setting-price",
+ "title": "Setting a price",
+ "brief": "7ebed4485ee1",
+ "shortlist": [
+  [
+   "e-pricemech",
+   0.313
+  ],
+  [
+   "e-cpi",
+   0.285
+  ],
+  [
+   "e-ped",
+   0.263
+  ],
+  [
+   "bus-pricing-methods",
+   0.252
+  ],
+  [
+   "e-supply",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-01T09:34:52Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00461,
+  "check": 0.01518,
+  "fix": 0.02762,
+  "recheck": 0.01379
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Pricing methods, covers cost-based markup alongside market and competition pricing, but it does not teach setting prices from the recommended retail price or working out the sales needed to break even, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Setting a price",
+  "card": [
+   [
+    "Recommended retail price",
+    "a price suggested by the supplier. A business may charge it, or may charge more or less."
+   ],
+   [
+    "Mark-up",
+    "an amount added to the cost of an item to set its selling price. A 40% mark-up on a $50 cost gives a price of $50 + $20 = $70."
+   ],
+   [
+    "Cost-based pricing",
+    "the business works out its total costs, then finds how many sales it needs at a given price to cover them. Price × units sold must be at least the costs."
+   ],
+   "Each method starts from a different place: the supplier's suggestion, the cost of one item, or the costs of the whole business."
+  ],
+  "remember": "A price can start from the supplier's suggestion, the cost of each item, or the costs the business must cover.",
+  "a": {
+   "q": "Jo's Bikes in Geelong buys a helmet for $40 and adds 50% to the cost to set the selling price. What is the price?",
+   "opts": [
+    "$60",
+    "$50",
+    "$80",
+    "$90"
+   ],
+   "why": "A 50% mark-up on $40 is $20, so the price is $40 + $20 = $60. $80 is wrong because it adds 100% of the cost, and $90 adds the mark-up to a doubled cost.",
+   "clue": "Work out 50% of the cost, then add it to the cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's café in Bendigo has costs of $6000 a month. She plans to charge $12 a lunch. How many lunches must she sell to cover these costs?",
+   "opts": [
+    "500 lunches",
+    "72 lunches",
+    "50 lunches",
+    "6000 lunches"
+   ],
+   "why": "Sales needed = $6000 ÷ $12 = 500 lunches. Multiplying $6000 by $12 gives 72 000, which is not a number of lunches, and 72 lunches would only earn $864.",
+   "clue": "Price × units sold must reach the total costs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$60",
+   "also_right": []
+  },
+  "b": {
+   "best": "500 lunches",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says $90 'adds the mark-up to a doubled cost', but doubling the cost and adding the mark-up gives $80 + $20 = $100. $90 actually comes from adding $50 instead of 50% ($40 + $50). The explanation misdescribes the error."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card labels the break-even approach (sales needed to cover total costs) as 'cost-based pricing'. That term is usually used for cost-plus or mark-up pricing, so students may confuse the two methods. Check the label against the study design and the textbook; 'break-even' or 'covering costs' may be clearer."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both answers are correct ($60 and 500 lunches), but the why for (a) misexplains the $90 distractor: it comes from adding $50, not from a doubled cost plus mark-up. The card's label 'cost-based pricing' for the break-even approach may also confuse students, since mark-up pricing is itself based on cost."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says $90 'adds the mark-up to a doubled cost', but doubling the cost and adding the mark-up gives $80 + $20 = $100. $90 actually comes from adding $50 instead of 50% ($40 + $50). The explanation misdescribes the error.",
+  "Card, wording: The card labels the break-even approach (sales needed to cover total costs) as 'cost-based pricing'. That term is usually used for cost-plus or mark-up pricing, so students may confuse the two methods. Check the label against the study design and the textbook; 'break-even' or 'covering costs' may be clearer."
+ ],
+ "proposal": {
+  "title": "Setting a price",
+  "card": [
+   [
+    "Recommended retail price",
+    "a price suggested by the supplier. A business may charge it, or may charge more or less."
+   ],
+   [
+    "Mark-up",
+    "an amount added to the cost of an item to set its selling price. A 40% mark-up on a $50 cost gives a price of $50 + $20 = $70."
+   ],
+   [
+    "Covering costs",
+    "the business works out its total costs for a period, then how many sales it needs at a given price to cover them. Sales needed = total costs ÷ price."
+   ],
+   "Each method starts from a different place: the supplier's suggestion, the cost of one item, or the costs of the whole business."
+  ],
+  "remember": "A price can start from the supplier's suggestion, the cost of each item, or the costs the business must cover.",
+  "a": {
+   "q": "Jo's Bikes in Geelong buys a helmet for $40 and adds 50% to the cost to set the selling price. What is the price?",
+   "opts": [
+    "$60",
+    "$50",
+    "$80",
+    "$90"
+   ],
+   "why": "A 50% mark-up on $40 is $20, so the price is $40 + $20 = $60. $80 adds 100% of the cost instead of 50%, and $90 adds $50 instead of 50%.",
+   "clue": "Work out 50% of the cost, then add it to the cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's café in Bendigo has costs of $6000 a month. She plans to charge $12 a lunch. How many lunches must she sell to cover these costs?",
+   "opts": [
+    "500 lunches",
+    "50 lunches",
+    "6000 lunches",
+    "72 000 lunches"
+   ],
+   "why": "Sales needed = $6000 ÷ $12 = 500 lunches, and 500 × $12 = $6000. Multiplying $6000 by $12 gives 72 000, but costs are divided by the price, not multiplied by it. 50 lunches would only earn $600.",
+   "clue": "Divide the total costs by the price of one lunch."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "$60",
+    "also_right": []
+   },
+   "b": {
+    "best": "500 lunches",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "'Sales needed = total costs ÷ price' only works if all costs are fixed. Break-even is usually fixed costs ÷ (price − variable cost per unit). Costs such as food for each lunch rise with every sale, so dividing total costs by the full price understates the sales needed. The card should say the costs are fixed, or use the contribution margin."
+    },
+    {
+     "part": "b",
+     "kind": "fact",
+     "detail": "A café's $6000 monthly costs would normally include food that rises with each lunch sold. Dividing by the $12 price treats the whole price as covering those costs and gives a misleading break-even. The question should say the costs are fixed and ignore the cost of each lunch."
+    }
+   ],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "The arithmetic in both questions and the explanations is correct. However, the card's 'total costs ÷ price' formula ignores variable costs, which misrepresents break-even. The card and question b should say the costs are fixed, or use price minus variable cost."
+  },
+  "flags": [
+   "Card, fact: 'Sales needed = total costs ÷ price' only works if all costs are fixed. Break-even is usually fixed costs ÷ (price − variable cost per unit). Costs such as food for each lunch rise with every sale, so dividing total costs by the full price understates the sales needed. The card should say the costs are fixed, or use the contribution margin.",
+   "Question b, fact: A café's $6000 monthly costs would normally include food that rises with each lunch sold. Dividing by the $12 price treats the whole price as covering those costs and gives a misleading break-even. The question should say the costs are fixed and ignore the cost of each lunch."
+  ]
+ },
+ "final": {
+  "title": "Setting a price",
+  "card": [
+   [
+    "Recommended retail price",
+    "a price suggested by the supplier. A business may charge it, or may charge more or less."
+   ],
+   [
+    "Mark-up",
+    "an amount added to the cost of an item to set its selling price. A 40% mark-up on a $50 cost gives a price of $50 + $20 = $70."
+   ],
+   [
+    "Covering costs",
+    "the business works out its total costs for a period, then how many sales it needs at a given price to cover them. Sales needed = total costs ÷ price."
+   ],
+   "Each method starts from a different place: the supplier's suggestion, the cost of one item, or the costs of the whole business."
+  ],
+  "remember": "A price can start from the supplier's suggestion, the cost of each item, or the costs the business must cover.",
+  "a": {
+   "q": "Jo's Bikes in Geelong buys a helmet for $40 and adds 50% to the cost to set the selling price. What is the price?",
+   "opts": [
+    "$60",
+    "$50",
+    "$80",
+    "$90"
+   ],
+   "why": "A 50% mark-up on $40 is $20, so the price is $40 + $20 = $60. $80 adds 100% of the cost instead of 50%, and $90 adds $50 instead of 50%.",
+   "clue": "Work out 50% of the cost, then add it to the cost."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's café in Bendigo has costs of $6000 a month. She plans to charge $12 a lunch. How many lunches must she sell to cover these costs?",
+   "opts": [
+    "500 lunches",
+    "50 lunches",
+    "6000 lunches",
+    "72 000 lunches"
+   ],
+   "why": "Sales needed = $6000 ÷ $12 = 500 lunches, and 500 × $12 = $6000. Multiplying $6000 by $12 gives 72 000, but costs are divided by the price, not multiplied by it. 50 lunches would only earn $600.",
+   "clue": "Divide the total costs by the price of one lunch."
+  }
+ },
+ "cleared_by": "owner"
+}

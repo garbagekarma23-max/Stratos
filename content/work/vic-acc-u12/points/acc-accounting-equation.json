@@ -1,0 +1,221 @@
+{
+ "id": "acc-accounting-equation",
+ "title": "The accounting equation",
+ "brief": "c4e324e4fe71",
+ "shortlist": [
+  [
+   "bus-debt-equity-compared",
+   0.225
+  ],
+  [
+   "bus-financing-new-business",
+   0.211
+  ],
+  [
+   "bus-equity-finance",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00472,
+  "check": 0.00854,
+  "fix": 0.02516
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the accounting equation (assets equal liabilities plus owner's equity and the twofold effect of transactions); they all cover business finance sources such as debt and equity from Business Studies.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The accounting equation",
+  "card": [
+   [
+    "Assets",
+    "things the business owns that have value, such as cash, equipment and money owed to it by customers."
+   ],
+   [
+    "Liabilities",
+    "amounts the business owes to others, such as a bank loan or money owed to a supplier."
+   ],
+   [
+    "Owner's equity",
+    "the owner's share of the business. It is what is left of the assets after the liabilities are taken away."
+   ],
+   "The accounting equation is: Assets = Liabilities + Owner's equity. Every transaction has a twofold effect, so it changes at least two items and the equation stays in balance."
+  ],
+  "remember": "Assets = Liabilities + Owner's equity, and each transaction changes two items so both sides stay equal.",
+  "a": {
+   "q": "Mia's café has assets of $50 000 and liabilities of $20 000. What is the owner's equity?",
+   "opts": [
+    "$30 000",
+    "$70 000",
+    "$20 000",
+    "$50 000"
+   ],
+   "why": "Owner's equity = assets - liabilities = $50 000 - $20 000 = $30 000. Adding the two figures to get $70 000 mixes up the sides of the equation.",
+   "clue": "Equity is what is left after liabilities are taken from assets."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jon runs a gardening business in Geelong. He buys a mower for $800 on credit from a supplier. What is the effect on the equation?",
+   "opts": [
+    "Assets up $800 and liabilities up $800",
+    "Assets up $800 and owner's equity up $800",
+    "Assets up $800 and liabilities down $800",
+    "Assets down $800 and liabilities up $800"
+   ],
+   "why": "The mower is a new asset, and Jon owes the supplier $800, so liabilities rise by the same amount. Owner's equity does not change, because Jon has put in no money of his own and the business has made no profit.",
+   "clue": "Buying on credit means paying later. Who is owed the money?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$30 000",
+   "also_right": []
+  },
+  "b": {
+   "best": "Assets up $800 and liabilities up $800",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says each transaction changes 'at least two items', but the remember line says it 'changes two items'. This reads as exactly two and contradicts the card, since some transactions (for example, part cash and part credit) change more than two items."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and well built. The only issue is that the remember line says each transaction changes 'two items', while the card correctly says 'at least two'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The card says each transaction changes 'at least two items', but the remember line says it 'changes two items'. This reads as exactly two and contradicts the card, since some transactions (for example, part cash and part credit) change more than two items."
+ ],
+ "proposal": {
+  "title": "The accounting equation",
+  "card": [
+   [
+    "Assets",
+    "things the business owns that have value, such as cash, equipment and money owed to it by customers."
+   ],
+   [
+    "Liabilities",
+    "amounts the business owes to others, such as a bank loan or money owed to a supplier."
+   ],
+   [
+    "Owner's equity",
+    "the owner's share of the business. It is what is left of the assets after the liabilities are taken away."
+   ],
+   "The accounting equation is: Assets = Liabilities + Owner's equity. Every transaction has a twofold effect, so it changes at least two items and the equation stays in balance."
+  ],
+  "remember": "Assets = Liabilities + Owner's equity. Each transaction changes at least two items, so both sides stay equal.",
+  "a": {
+   "q": "Mia's café has assets of $50 000 and liabilities of $20 000. What is the owner's equity?",
+   "opts": [
+    "$30 000",
+    "$70 000",
+    "$20 000",
+    "$50 000"
+   ],
+   "why": "Owner's equity = assets - liabilities = $50 000 - $20 000 = $30 000. Adding the two figures to get $70 000 mixes up the sides of the equation.",
+   "clue": "Equity is what is left after liabilities are taken from assets."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jon runs a gardening business in Geelong. He buys a mower for $800 on credit from a supplier. What is the effect on the equation?",
+   "opts": [
+    "Assets up $800 and liabilities up $800",
+    "Assets up $800 and owner's equity up $800",
+    "Assets up $800 and liabilities down $800",
+    "Assets down $800 and liabilities up $800"
+   ],
+   "why": "The mower is a new asset, and the business now owes the supplier $800, so liabilities rise by the same amount and both sides stay equal. Owner's equity does not change, because Jon has not put in any of his own money.",
+   "clue": "Buying on credit means paying later. Who is owed the money?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says each transaction changes 'at least two items', but the remember line says it 'changes two items'. This reads as exactly two and contradicts the card, since some transactions (for example, part cash and part credit) change more than two items."
+   }
+  ],
+  "flags": [
+   "Remember, other: The card says each transaction changes 'at least two items', but the remember line says it 'changes two items'. This reads as exactly two and contradicts the card, since some transactions (for example, part cash and part credit) change more than two items."
+  ]
+ },
+ "final": {
+  "title": "The accounting equation",
+  "card": [
+   [
+    "Assets",
+    "things the business owns that have value, such as cash, equipment and money owed to it by customers."
+   ],
+   [
+    "Liabilities",
+    "amounts the business owes to others, such as a bank loan or money owed to a supplier."
+   ],
+   [
+    "Owner's equity",
+    "the owner's share of the business. It is what is left of the assets after the liabilities are taken away."
+   ],
+   "The accounting equation is: Assets = Liabilities + Owner's equity. Every transaction has a twofold effect, so it changes at least two items and the equation stays in balance."
+  ],
+  "remember": "Assets = Liabilities + Owner's equity. Each transaction changes at least two items, so both sides stay equal.",
+  "a": {
+   "q": "Mia's café has assets of $50 000 and liabilities of $20 000. What is the owner's equity?",
+   "opts": [
+    "$30 000",
+    "$70 000",
+    "$20 000",
+    "$50 000"
+   ],
+   "why": "Owner's equity = assets - liabilities = $50 000 - $20 000 = $30 000. Adding the two figures to get $70 000 mixes up the sides of the equation.",
+   "clue": "Equity is what is left after liabilities are taken from assets."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jon runs a gardening business in Geelong. He buys a mower for $800 on credit from a supplier. What is the effect on the equation?",
+   "opts": [
+    "Assets up $800 and liabilities up $800",
+    "Assets up $800 and owner's equity up $800",
+    "Assets up $800 and liabilities down $800",
+    "Assets down $800 and liabilities up $800"
+   ],
+   "why": "The mower is a new asset, and the business now owes the supplier $800, so liabilities rise by the same amount and both sides stay equal. Owner's equity does not change, because Jon has not put in any of his own money.",
+   "clue": "Buying on credit means paying later. Who is owed the money?"
+  }
+ },
+ "cleared_by": "auto"
+}

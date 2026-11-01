@@ -1,0 +1,124 @@
+{
+ "id": "mat-algorithms-pseudocode",
+ "title": "Algorithms and pseudocode",
+ "brief": "f8e633c5d8e0",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00473,
+  "check": 0.00655
+ },
+ "draft": {
+  "title": "Algorithms and pseudocode",
+  "card": [
+   "An algorithm is a list of steps that solves a problem and always ends. Pseudocode writes those steps in plain, code-like words, so any person can follow them.",
+   [
+    "Sequence",
+    "steps run one after another, in order. Changing the order can change the result."
+   ],
+   [
+    "Decision",
+    "an if-then step runs only when a condition is true. Example: if n > 10 then set n to 10."
+   ],
+   [
+    "Loop",
+    "a set of steps repeats. Example: set total to 0, then for each i from 1 to 3, set total to total + i. The steps run 3 times, so total becomes 1, then 3, then 6."
+   ]
+  ],
+  "remember": "Sequence gives the order, decisions choose, loops repeat.",
+  "a": {
+   "q": "An algorithm sets n to 4, then runs: if n > 10 then set n to 10. Then it sets n to n + 2. What is the final value of n?",
+   "opts": [
+    "6",
+    "12",
+    "10",
+    "4"
+   ],
+   "why": "n is 4, so n > 10 is false and the if-then step is skipped. Then n + 2 = 6. The answer 12 comes from running the if-then step as if it were true, which would make n 10 and then 12.",
+   "clue": "Check whether the condition is true before running the step."
+  },
+  "b": {
+   "d": 3,
+   "q": "An algorithm sets total to 0. Then for each i from 1 to 4, it sets total to total + 2 × i. What is the final value of total?",
+   "opts": [
+    "20",
+    "10",
+    "24",
+    "8"
+   ],
+   "why": "The loop adds 2, 4, 6 and 8, and 2 + 4 + 6 + 8 = 20. Check: 2 × (1 + 2 + 3 + 4) = 2 × 10 = 20. The answer 10 forgets the 2 ×, and 8 gives only the last pass.",
+   "clue": "List what is added on each pass of the loop, then add them up."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "20",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers are correct: n stays 4 because the condition is false, then becomes 6; the loop adds 2, 4, 6 and 8 to give 20."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Algorithms and pseudocode",
+  "card": [
+   "An algorithm is a list of steps that solves a problem and always ends. Pseudocode writes those steps in plain, code-like words, so any person can follow them.",
+   [
+    "Sequence",
+    "steps run one after another, in order. Changing the order can change the result."
+   ],
+   [
+    "Decision",
+    "an if-then step runs only when a condition is true. Example: if n > 10 then set n to 10."
+   ],
+   [
+    "Loop",
+    "a set of steps repeats. Example: set total to 0, then for each i from 1 to 3, set total to total + i. The steps run 3 times, so total becomes 1, then 3, then 6."
+   ]
+  ],
+  "remember": "Sequence gives the order, decisions choose, loops repeat.",
+  "a": {
+   "q": "An algorithm sets n to 4, then runs: if n > 10 then set n to 10. Then it sets n to n + 2. What is the final value of n?",
+   "opts": [
+    "6",
+    "12",
+    "10",
+    "4"
+   ],
+   "why": "n is 4, so n > 10 is false and the if-then step is skipped. Then n + 2 = 6. The answer 12 comes from running the if-then step as if it were true, which would make n 10 and then 12.",
+   "clue": "Check whether the condition is true before running the step."
+  },
+  "b": {
+   "d": 3,
+   "q": "An algorithm sets total to 0. Then for each i from 1 to 4, it sets total to total + 2 × i. What is the final value of total?",
+   "opts": [
+    "20",
+    "10",
+    "24",
+    "8"
+   ],
+   "why": "The loop adds 2, 4, 6 and 8, and 2 + 4 + 6 + 8 = 20. Check: 2 × (1 + 2 + 3 + 4) = 2 × 10 = 20. The answer 10 forgets the 2 ×, and 8 gives only the last pass.",
+   "clue": "List what is added on each pass of the loop, then add them up."
+  }
+ },
+ "cleared_by": "checker"
+}

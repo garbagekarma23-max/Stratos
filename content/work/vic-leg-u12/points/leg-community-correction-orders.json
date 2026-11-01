@@ -1,0 +1,235 @@
+{
+ "id": "leg-community-correction-orders",
+ "title": "Community correction orders",
+ "brief": "51e4483d1ad5",
+ "shortlist": [
+  [
+   "leg-types-penalties",
+   0.314
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:50Z write: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01169,
+  "check": 0.02373,
+  "fix": 0.03688,
+  "recheck": 0.01454
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader NSW overview of all penalties, with a community correction order described under NSW law (up to three years) rather than Victorian law, so it is related but not the same idea at the right depth for a Victorian single-sanction point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Community correction orders",
+  "card": [
+   "A community correction order (CCO) is a sanction served in the community, not in prison. In Victoria, a court can impose it for an offence of any seriousness, under the Sentencing Act 1991 (Vic).",
+   "Every CCO has core conditions. The offender must not commit another offence during the order, must report to Corrections Victoria when told, and must obey the court's directions.",
+   "The court adds other conditions to suit the offender and the offence. These can include unpaid community work, treatment for drug, alcohol or mental health issues, supervision, or a curfew.",
+   "A CCO limits the offender's freedom but lets them stay in work, study and family life. If the offender breaks a condition without a good reason, they can be brought back to court and resentenced."
+  ],
+  "remember": "A CCO is served in the community, under conditions set by the court to suit the offender.",
+  "a": {
+   "q": "Which description best fits a community correction order?",
+   "opts": [
+    "A sanction served in the community, with set conditions",
+    "A sum of money paid to the state by the offender",
+    "A sanction that removes the offender from the community",
+    "A promise by the offender to behave, with no conditions"
+   ],
+   "why": "A CCO is served in the community and the court attaches conditions to it. A fine is a payment, and imprisonment removes the offender from the community. A CCO always has conditions, so it is not an unconditional promise.",
+   "clue": "Think about where the order is served and what the court attaches to it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi is found guilty of an offence linked to his drug use. The court gives him a CCO with a treatment condition and unpaid work. Which statement best explains why a CCO suits him?",
+   "opts": [
+    "Conditions can target his drug use while he lives at home",
+    "Prison is the only place where drug treatment can be given",
+    "A CCO has no consequences if he breaks a condition",
+    "The order is the same for every offender who receives it"
+   ],
+   "why": "A court can choose conditions such as treatment to deal with the cause of the offending, and Ravi can keep his normal life. The claim that a CCO has no consequences is wrong: breaking a condition can lead to him being brought back to court and resentenced.",
+   "clue": "Look for the option that links the conditions to Ravi's own situation."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A sanction served in the community, with set conditions",
+   "also_right": []
+  },
+  "b": {
+   "best": "Conditions can target his drug use while he lives at home",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A court can impose it for an offence of any seriousness' is false. Under the Sentencing Act 1991 (Vic), a CCO cannot be imposed for category 1 offences such as murder. It is available for category 2 offences only in limited circumstances, and only for offences punishable by more than 5 penalty units."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The core conditions are stated loosely. The offender must not commit an offence punishable by imprisonment, not just 'another offence'. The core directions come from Corrections Victoria (the Secretary or a community corrections officer), not 'the court's directions'. Other core terms include not leaving Victoria without permission and reporting a change of address."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one using 'can'. The three wrong options are absolute claims ('no consequences', 'the same for every offender', 'the only place'). The right option also echoes 'drug use' from the stem, so a student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card wrongly says a CCO can be imposed for an offence of any seriousness; Victoria bars CCOs for category 1 offences such as murder and limits them for category 2 offences. The core conditions are also slightly misstated, and question b's right answer stands out because every distractor is an obvious absolute."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'A court can impose it for an offence of any seriousness' is false. Under the Sentencing Act 1991 (Vic), a CCO cannot be imposed for category 1 offences such as murder. It is available for category 2 offences only in limited circumstances, and only for offences punishable by more than 5 penalty units.",
+  "Card, fact: The core conditions are stated loosely. The offender must not commit an offence punishable by imprisonment, not just 'another offence'. The core directions come from Corrections Victoria (the Secretary or a community corrections officer), not 'the court's directions'. Other core terms include not leaving Victoria without permission and reporting a change of address.",
+  "Question b, wording: The right option is the only one using 'can'. The three wrong options are absolute claims ('no consequences', 'the same for every offender', 'the only place'). The right option also echoes 'drug use' from the stem, so a student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Community correction orders",
+  "card": [
+   "A community correction order (CCO) is a sanction served in the community, not in prison. It is set out in the Sentencing Act 1991 (Vic).",
+   "A court cannot impose a CCO for category 1 offences, the most serious group, such as murder. It can use one for category 2 offences only in limited cases.",
+   "Every CCO has core conditions. The offender must not commit an offence punishable by imprisonment, must report to and follow directions from Corrections Victoria, must report a change of address, and must not leave Victoria without permission.",
+   "The court must also add at least one condition to suit the offender and the offence, such as unpaid community work, treatment for drug, alcohol or mental health issues, supervision, or a curfew. If the offender breaks a condition without a good reason, they can be brought back to court and resentenced."
+  ],
+  "remember": "A CCO is served in the community, with core conditions plus ones the court adds to suit the case.",
+  "a": {
+   "q": "Which description best fits a community correction order?",
+   "opts": [
+    "A sanction served in the community, with set conditions",
+    "A sum of money paid to the state by the offender",
+    "A sanction that removes the offender from the community",
+    "A promise by the offender to behave, with no conditions"
+   ],
+   "why": "A CCO is served in the community and always comes with conditions. A fine is a payment, and imprisonment removes the offender from the community. Every CCO has core conditions, so it is not an unconditional promise.",
+   "clue": "Think about where the order is served and what comes with it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi is found guilty of an offence linked to his drug use. The court gives him a CCO with a treatment condition and unpaid work. Which statement about his CCO is correct?",
+   "opts": [
+    "The court set conditions aimed at why he offended",
+    "Corrections Victoria set his treatment and work conditions",
+    "His order has no core conditions, only the court's ones",
+    "He must do his unpaid work while held in prison"
+   ],
+   "why": "The court adds conditions such as treatment to suit the offender and the offence, here the cause of his offending. Corrections Victoria gives directions under the order, but it is the court that adds the treatment and work conditions.",
+   "clue": "Who adds the extra conditions to a CCO?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A sanction served in the community, with set conditions",
+    "also_right": []
+   },
+   "b": {
+    "best": "The court set conditions aimed at why he offended",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's details on CCOs under the Sentencing Act 1991 (Vic) are accurate, including the category 1 and 2 limits, the core conditions and the rule that the court must add at least one condition, and both questions have one clear answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A court can impose it for an offence of any seriousness' is false. Under the Sentencing Act 1991 (Vic), a CCO cannot be imposed for category 1 offences such as murder. It is available for category 2 offences only in limited circumstances, and only for offences punishable by more than 5 penalty units."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The core conditions are stated loosely. The offender must not commit an offence punishable by imprisonment, not just 'another offence'. The core directions come from Corrections Victoria (the Secretary or a community corrections officer), not 'the court's directions'. Other core terms include not leaving Victoria without permission and reporting a change of address."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one using 'can'. The three wrong options are absolute claims ('no consequences', 'the same for every offender', 'the only place'). The right option also echoes 'drug use' from the stem, so a student could pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'A court can impose it for an offence of any seriousness' is false. Under the Sentencing Act 1991 (Vic), a CCO cannot be imposed for category 1 offences such as murder. It is available for category 2 offences only in limited circumstances, and only for offences punishable by more than 5 penalty units.",
+   "Card, fact: The core conditions are stated loosely. The offender must not commit an offence punishable by imprisonment, not just 'another offence'. The core directions come from Corrections Victoria (the Secretary or a community corrections officer), not 'the court's directions'. Other core terms include not leaving Victoria without permission and reporting a change of address.",
+   "Question b, wording: The right option is the only one using 'can'. The three wrong options are absolute claims ('no consequences', 'the same for every offender', 'the only place'). The right option also echoes 'drug use' from the stem, so a student could pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Community correction orders",
+  "card": [
+   "A community correction order (CCO) is a sanction served in the community, not in prison. It is set out in the Sentencing Act 1991 (Vic).",
+   "A court cannot impose a CCO for category 1 offences, the most serious group, such as murder. It can use one for category 2 offences only in limited cases.",
+   "Every CCO has core conditions. The offender must not commit an offence punishable by imprisonment, must report to and follow directions from Corrections Victoria, must report a change of address, and must not leave Victoria without permission.",
+   "The court must also add at least one condition to suit the offender and the offence, such as unpaid community work, treatment for drug, alcohol or mental health issues, supervision, or a curfew. If the offender breaks a condition without a good reason, they can be brought back to court and resentenced."
+  ],
+  "remember": "A CCO is served in the community, with core conditions plus ones the court adds to suit the case.",
+  "a": {
+   "q": "Which description best fits a community correction order?",
+   "opts": [
+    "A sanction served in the community, with set conditions",
+    "A sum of money paid to the state by the offender",
+    "A sanction that removes the offender from the community",
+    "A promise by the offender to behave, with no conditions"
+   ],
+   "why": "A CCO is served in the community and always comes with conditions. A fine is a payment, and imprisonment removes the offender from the community. Every CCO has core conditions, so it is not an unconditional promise.",
+   "clue": "Think about where the order is served and what comes with it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi is found guilty of an offence linked to his drug use. The court gives him a CCO with a treatment condition and unpaid work. Which statement about his CCO is correct?",
+   "opts": [
+    "The court set conditions aimed at why he offended",
+    "Corrections Victoria set his treatment and work conditions",
+    "His order has no core conditions, only the court's ones",
+    "He must do his unpaid work while held in prison"
+   ],
+   "why": "The court adds conditions such as treatment to suit the offender and the offence, here the cause of his offending. Corrections Victoria gives directions under the order, but it is the court that adds the treatment and work conditions.",
+   "clue": "Who adds the extra conditions to a CCO?"
+  }
+ },
+ "cleared_by": "recheck"
+}

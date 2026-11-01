@@ -1,0 +1,229 @@
+{
+ "id": "bio-dihybrid-crosses-linked-genes",
+ "title": "Dihybrid crosses and linked genes",
+ "brief": "70d08daaeb6b",
+ "shortlist": [
+  [
+   "bio-cloning",
+   0.208
+  ],
+  [
+   "bio-recombinant-dna-transgenic-organisms",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:29Z check: flagged",
+  "2026-11-01T08:33:48Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00651,
+  "check": 0.01316,
+  "fix": 0.01731,
+  "recheck": 0.00884
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches dihybrid crosses, the 9:3:3:1 ratio, or gene linkage; they cover cloning and recombinant DNA, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Dihybrid crosses and linked genes",
+  "card": [
+   "A dihybrid cross follows two genes at once. Each parent is heterozygous for both, such as RrYy. A 16-box Punnett square is used.",
+   [
+    "Unlinked genes",
+    "Genes on different chromosomes are sorted into gametes independently. Two RrYy parents give offspring in a 9:3:3:1 phenotype ratio when both genes show complete dominance."
+   ],
+   [
+    "Linked genes",
+    "Genes close together on the same chromosome tend to be inherited together as a unit. They do not sort independently, so the 9:3:3:1 ratio does not appear."
+   ],
+   "Crossing over during meiosis can separate linked alleles now and then. It happens less often the closer two genes are."
+  ],
+  "remember": "Unlinked genes give 9:3:3:1. Linked genes travel together, so that ratio is not seen.",
+  "a": {
+   "q": "Two pea plants, both RrYy, are crossed. The genes are on different chromosomes and each shows complete dominance. What phenotype ratio is expected?",
+   "opts": [
+    "9:3:3:1",
+    "3:1",
+    "1:1:1:1",
+    "1:2:1"
+   ],
+   "why": "Unlinked genes sort independently, which gives 9:3:3:1 from two double heterozygotes. A 3:1 ratio would come from following only one gene.",
+   "clue": "Two genes on different chromosomes sort independently."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a cross of two heterozygous fruit flies, far fewer offspring than expected show new combinations of two traits. What is the best explanation?",
+   "opts": [
+    "The two genes are close together on one chromosome",
+    "The two genes are on different chromosomes",
+    "Both alleles are codominant for each gene",
+    "The environment has removed one of the alleles"
+   ],
+   "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give the 9:3:3:1 ratio with plenty of new combinations.",
+   "clue": "Which genes tend to stay together as a unit?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "9:3:3:1",
+   "also_right": []
+  },
+  "b": {
+   "best": "The two genes are close together on one chromosome",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says \"Each parent is heterozygous for both, such as RrYy\" as if this defines a dihybrid cross. A dihybrid cross only needs two genes followed at once: parents can be RRYY × rryy, or RrYy × rryy as a test cross. Better: \"Often both parents are heterozygous for both genes, such as RrYy.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card states that in a dihybrid cross each parent is heterozygous for both genes, but that is only one kind of dihybrid cross, so it should be softened to 'often'. The questions and explanations are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says \"Each parent is heterozygous for both, such as RrYy\" as if this defines a dihybrid cross. A dihybrid cross only needs two genes followed at once: parents can be RRYY × rryy, or RrYy × rryy as a test cross. Better: \"Often both parents are heterozygous for both genes, such as RrYy.\""
+ ],
+ "proposal": {
+  "title": "Dihybrid crosses and linked genes",
+  "card": [
+   "A dihybrid cross follows two genes at once. Often both parents are heterozygous for both genes, such as RrYy. A 16-box Punnett square then shows the possible offspring.",
+   [
+    "Unlinked genes",
+    "Genes on different chromosomes are sorted into gametes independently. Two RrYy parents give offspring in a 9:3:3:1 phenotype ratio when both genes show complete dominance."
+   ],
+   [
+    "Linked genes",
+    "Genes close together on the same chromosome tend to be inherited together as a unit. They do not sort independently, so offspring mostly show the parents' combinations of traits, not 9:3:3:1."
+   ],
+   "Crossing over during meiosis can separate linked alleles now and then, making new combinations. It happens less often the closer two genes are."
+  ],
+  "remember": "Unlinked genes give 9:3:3:1. Linked genes tend to travel together, so new combinations are rare.",
+  "a": {
+   "q": "Two pea plants, both RrYy, are crossed. The genes are on different chromosomes and each shows complete dominance. What phenotype ratio is expected?",
+   "opts": [
+    "9:3:3:1",
+    "3:1",
+    "1:1:1:1",
+    "1:2:1"
+   ],
+   "why": "Unlinked genes sort independently, which gives 9:3:3:1 from two double heterozygotes. A 3:1 ratio would come from following only one gene.",
+   "clue": "Two genes on different chromosomes sort independently."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a cross of two fruit flies heterozygous for two genes, far fewer offspring than expected show new combinations of traits. What is the best explanation?",
+   "opts": [
+    "The two genes are close together on one chromosome",
+    "The two genes are on different chromosomes",
+    "Crossing over often occurs between the two genes",
+    "The two genes are far apart on one chromosome"
+   ],
+   "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give 9:3:3:1, with plenty of new combinations. Frequent crossing over, or genes far apart, would also make new combinations more common.",
+   "clue": "Which genes tend to stay together as a unit?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "9:3:3:1",
+    "also_right": []
+   },
+   "b": {
+    "best": "The two genes are close together on one chromosome",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says \"Each parent is heterozygous for both, such as RrYy\" as if this defines a dihybrid cross. A dihybrid cross only needs two genes followed at once: parents can be RRYY × rryy, or RrYy × rryy as a test cross. Better: \"Often both parents are heterozygous for both genes, such as RrYy.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says \"Each parent is heterozygous for both, such as RrYy\" as if this defines a dihybrid cross. A dihybrid cross only needs two genes followed at once: parents can be RRYY × rryy, or RrYy × rryy as a test cross. Better: \"Often both parents are heterozygous for both genes, such as RrYy.\""
+  ]
+ },
+ "final": {
+  "title": "Dihybrid crosses and linked genes",
+  "card": [
+   "A dihybrid cross follows two genes at once. Often both parents are heterozygous for both genes, such as RrYy. A 16-box Punnett square then shows the possible offspring.",
+   [
+    "Unlinked genes",
+    "Genes on different chromosomes are sorted into gametes independently. Two RrYy parents give offspring in a 9:3:3:1 phenotype ratio when both genes show complete dominance."
+   ],
+   [
+    "Linked genes",
+    "Genes close together on the same chromosome tend to be inherited together as a unit. They do not sort independently, so offspring mostly show the parents' combinations of traits, not 9:3:3:1."
+   ],
+   "Crossing over during meiosis can separate linked alleles now and then, making new combinations. It happens less often the closer two genes are."
+  ],
+  "remember": "Unlinked genes give 9:3:3:1. Linked genes tend to travel together, so new combinations are rare.",
+  "a": {
+   "q": "Two pea plants, both RrYy, are crossed. The genes are on different chromosomes and each shows complete dominance. What phenotype ratio is expected?",
+   "opts": [
+    "9:3:3:1",
+    "3:1",
+    "1:1:1:1",
+    "1:2:1"
+   ],
+   "why": "Unlinked genes sort independently, which gives 9:3:3:1 from two double heterozygotes. A 3:1 ratio would come from following only one gene.",
+   "clue": "Two genes on different chromosomes sort independently."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a cross of two fruit flies heterozygous for two genes, far fewer offspring than expected show new combinations of traits. What is the best explanation?",
+   "opts": [
+    "The two genes are close together on one chromosome",
+    "The two genes are on different chromosomes",
+    "Crossing over often occurs between the two genes",
+    "The two genes are far apart on one chromosome"
+   ],
+   "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give 9:3:3:1, with plenty of new combinations. Frequent crossing over, or genes far apart, would also make new combinations more common.",
+   "clue": "Which genes tend to stay together as a unit?"
+  }
+ },
+ "cleared_by": "recheck"
+}

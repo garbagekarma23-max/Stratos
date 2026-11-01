@@ -1,0 +1,154 @@
+{
+ "id": "acc-cost-sales-gross-profit",
+ "title": "Cost of sales and gross profit",
+ "brief": "7824cfdff788",
+ "shortlist": [
+  [
+   "bus-income-statement",
+   0.408
+  ],
+  [
+   "bus-profitability-ratios",
+   0.37
+  ],
+  [
+   "bus-profitability-management",
+   0.258
+  ],
+  [
+   "bus-profit",
+   0.249
+  ],
+  [
+   "bus-choosing-location",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00591,
+  "check": 0.00739
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card, bus-income-statement, covers gross profit as sales minus cost of goods sold but is broader, adding net profit and losses, and it does not teach inventory in the balance sheet or purchases in the cash flow statement that this point needs, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Cost of sales and gross profit",
+  "card": [
+   [
+    "Sales revenue",
+    "the amount earned from selling goods to customers."
+   ],
+   [
+    "Cost of sales",
+    "the cost to the business of the goods it sold, not of all goods it bought."
+   ],
+   [
+    "Gross profit",
+    "sales revenue less cost of sales. It is found before other expenses such as rent and wages."
+   ],
+   "Unsold inventory is shown as a current asset in the balance sheet. Cash paid for purchases of inventory is shown in the cash flow statement."
+  ],
+  "remember": "Gross profit is sales revenue less the cost of the goods actually sold.",
+  "a": {
+   "q": "Kai's shop in Bendigo sold goods for $9 000. The goods sold had cost $5 500. What is the gross profit?",
+   "opts": [
+    "$3 500",
+    "$5 500",
+    "$9 000",
+    "$14 500"
+   ],
+   "why": "Gross profit is $9 000 less $5 500, which is $3 500. The $5 500 is the cost of sales, not the profit, so it is wrong.",
+   "clue": "Take the cost of the goods sold from the sales revenue."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's toy shop in Mildura bought $20 000 of goods. It sold goods that cost $14 000 for $22 000. Where do the $6 000 of unsold goods appear?",
+   "opts": [
+    "In the balance sheet as inventory",
+    "In cost of sales as an expense",
+    "In gross profit as revenue",
+    "Nowhere until they are sold"
+   ],
+   "why": "Goods not yet sold are still owned by the business, so they appear in the balance sheet as inventory. Only the $14 000 of goods sold is in cost of sales, so counting the $6 000 there is wrong.",
+   "clue": "Does the business still own those goods?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$3 500",
+   "also_right": []
+  },
+  "b": {
+   "best": "In the balance sheet as inventory",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cost of sales and gross profit",
+  "card": [
+   [
+    "Sales revenue",
+    "the amount earned from selling goods to customers."
+   ],
+   [
+    "Cost of sales",
+    "the cost to the business of the goods it sold, not of all goods it bought."
+   ],
+   [
+    "Gross profit",
+    "sales revenue less cost of sales. It is found before other expenses such as rent and wages."
+   ],
+   "Unsold inventory is shown as a current asset in the balance sheet. Cash paid for purchases of inventory is shown in the cash flow statement."
+  ],
+  "remember": "Gross profit is sales revenue less the cost of the goods actually sold.",
+  "a": {
+   "q": "Kai's shop in Bendigo sold goods for $9 000. The goods sold had cost $5 500. What is the gross profit?",
+   "opts": [
+    "$3 500",
+    "$5 500",
+    "$9 000",
+    "$14 500"
+   ],
+   "why": "Gross profit is $9 000 less $5 500, which is $3 500. The $5 500 is the cost of sales, not the profit, so it is wrong.",
+   "clue": "Take the cost of the goods sold from the sales revenue."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's toy shop in Mildura bought $20 000 of goods. It sold goods that cost $14 000 for $22 000. Where do the $6 000 of unsold goods appear?",
+   "opts": [
+    "In the balance sheet as inventory",
+    "In cost of sales as an expense",
+    "In gross profit as revenue",
+    "Nowhere until they are sold"
+   ],
+   "why": "Goods not yet sold are still owned by the business, so they appear in the balance sheet as inventory. Only the $14 000 of goods sold is in cost of sales, so counting the $6 000 there is wrong.",
+   "clue": "Does the business still own those goods?"
+  }
+ },
+ "cleared_by": "checker"
+}

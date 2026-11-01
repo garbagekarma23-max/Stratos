@@ -5730,5 +5730,1239 @@ MADE_BANKS.bus = {
       "why": "Benchmarking compares a business's results with those of other businesses or a standard. Priya is using turnover data, but the method is the comparison. A survey would ask her employees directly, which she has not done.",
       "clue": "Look at what she compares her result against."
     }
+  },
+  "bus-entrepreneurs-intrapreneurs": {
+    "title": "Entrepreneurs and intrapreneurs",
+    "card": [
+      [
+        "Entrepreneur",
+        "a person who spots an opportunity and takes on the risk of acting on it. They often start a new business and carry the risk themselves."
+      ],
+      [
+        "Intrapreneur",
+        "an employee who does the same kind of thing inside an existing business. They spot an opportunity and work to act on it for their employer."
+      ],
+      "Both look for an opportunity and drive an idea forward. The difference is where they work and who carries the risk if it fails.",
+      "An intrapreneur is still an employee, so the business funds the idea and takes on most of the risk. The intrapreneur carries much less financial risk."
+    ],
+    "remember": "Entrepreneurs and intrapreneurs both act on opportunities. Intrapreneurs do it inside a business that someone else owns.",
+    "a": {
+      "q": "Which person is best described as an intrapreneur?",
+      "opts": [
+        "An employee who pitches a new product line to her employer",
+        "A person who opens a new gym using her own savings",
+        "A manager who follows the daily routine set by the owner",
+        "A shareholder who buys shares in a large retail chain"
+      ],
+      "why": "An intrapreneur acts on an opportunity inside an existing business, and this employee does that by pitching a new product line. The person opening a gym is an entrepreneur, because she starts her own business and carries the risk herself.",
+      "clue": "Look for someone who acts on an idea while working for another business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq works for a bakery in Geelong. He notices customers asking for gluten-free bread, so he designs a range and persuades the owner to sell it. Who mainly carries the financial risk of the new range?",
+      "opts": [
+        "The bakery's owner, who funds the new range",
+        "Tariq, because he came up with the idea himself",
+        "Tariq, because he is acting as an entrepreneur",
+        "The customers, because they asked for the new range"
+      ],
+      "why": "Tariq acts on an opportunity inside a business he does not own, so he is an intrapreneur. The owner funds the range and carries most of the financial risk. Tariq came up with the idea, but as an employee he carries much less financial risk than the owner.",
+      "clue": "Ask who owns the bakery and who pays if the range fails."
+    }
+  },
+  "bus-people-start-business": {
+    "title": "Why people start a business",
+    "card": [
+      "People start a business for different reasons. Three common ones are independence, profit and meeting a need.",
+      ["Independence", "the wish to be your own boss. The owner decides what to sell, how to work and when to work."],
+      [
+        "Profit",
+        "the wish to earn more than the business costs to run. Profit is income minus expenses, and it can give the owner a better income than a wage."
+      ],
+      [
+        "Meeting a need",
+        "the wish to supply something that people in the market or community lack. An example is a bakery that opens in a town with no bakery."
+      ]
+    ],
+    "remember": "Many owners start out to be their own boss, earn a profit or fill an unmet need.",
+    "a": {
+      "q": "Priya leaves her job to open a gym in her town because the nearest gym is 60 km away. Which reason for starting a business is clearest?",
+      "opts": [
+        "To meet a need in the community",
+        "To make a profit above all else",
+        "To gain independence from a boss",
+        "To earn more than she did as an employee"
+      ],
+      "why": "Priya saw that her town lacked a gym and opened one to fill that gap, so she is meeting a need. Profit or independence may also matter to her, but nothing in the case points to them.",
+      "clue": "What was missing in her town?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is a chef who is tired of his head chef changing his menus. He opens his own café so he can decide the menu himself. Which reason fits best?",
+      "opts": [
+        "Independence, because he wants to make his own decisions",
+        "Profit, because he wants to earn more than his wage",
+        "Meeting a need, because the area has too few cafés",
+        "Profit, because chefs earn more as business owners"
+      ],
+      "why": "Tom's main aim is to control his own menu and decisions, which is independence. Profit is tempting because any café hopes to earn money, but the case gives no sign that earning more drives his choice.",
+      "clue": "Look at what he is trying to get away from."
+    }
+  },
+  "bus-traits-entrepreneur": {
+    "title": "Traits of successful entrepreneurs and managers",
+    "card": [
+      "A trait is a quality in how a person thinks and acts. Some traits help entrepreneurs and managers succeed, though none guarantees success.",
+      [
+        "Risk-taking",
+        "being willing to accept a chance of loss after weighing it up. Persistence is carrying on after setbacks."
+      ],
+      [
+        "Creativity and vision",
+        "creativity is coming up with new ideas. Vision is a clear picture of where the business should be in the future."
+      ],
+      [
+        "Planning and people skills",
+        "planning is setting goals and the steps to reach them. People skills are communicating with, motivating and working well with others, such as staff and customers."
+      ]
+    ],
+    "remember": "Success is helped by a mix of traits: risk-taking, persistence, creativity, vision, planning and people skills.",
+    "a": {
+      "q": "Sam's online shop lost money for its first year. He reviewed what went wrong, kept going and changed his prices. Which trait does this show?",
+      "opts": ["Persistence", "Vision", "Planning", "People skills"],
+      "why": "Sam carried on after a setback, which is persistence. Planning is setting goals and steps in advance, but Sam's main action here was not giving up after a loss.",
+      "clue": "What did Sam do after the loss?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a Geelong bakery. She holds a weekly meeting where she listens to staff worries, resolves a roster dispute and thanks the team. Which trait is she mainly using?",
+      "opts": ["People skills", "Risk-taking", "Creativity", "Vision"],
+      "why": "Listening, settling a dispute and motivating staff are people skills. Vision is a picture of the future of the business, but nothing in the meeting is about that.",
+      "clue": "Look at who Priya is dealing with and how."
+    }
+  },
+  "bus-sources-business-ideas": {
+    "title": "Sources of business opportunity",
+    "card": [
+      "A business opportunity is a chance to meet a need and earn a profit. Common sources include innovation, gaps in the market, changing customer needs, R&D, new technology and global markets.",
+      "A gap in the market is a need no business is meeting well, such as a suburb with no gluten-free bakery. Changing customer needs arise as tastes, ages and habits shift, such as an ageing population wanting home care.",
+      "Research and development (R&D) is work a business does to create new products or improve old ones. New technology is a new tool, such as an app or machine, that makes new products or cheaper methods possible.",
+      "Global markets are buyers in other countries. Selling overseas can give a business far more customers than it could reach in Australia alone."
+    ],
+    "remember": "Opportunities can come from unmet needs, shifting customers, R&D, new technology and overseas buyers.",
+    "a": {
+      "q": "Ava notices that no business in her town sells fresh pasta, though many residents ask for it. What source of opportunity is this?",
+      "opts": ["A gap in the market", "Research and development", "Selling to global markets", "A new technology"],
+      "why": "Customers want fresh pasta and no business supplies it, so there is an unmet need. That is a gap in the market. It is not R&D, because Ava has not developed or improved any product.",
+      "clue": "Is anyone in the town already meeting this need?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Over ten years, more shoppers in Geelong choose plant-based food for their health. Liam opens a deli stocking plant-based meals from local suppliers. Which source of opportunity did he act on?",
+      "opts": ["Changing customer needs", "Research and development", "Selling to global markets", "Using a new technology"],
+      "why": "Shoppers' tastes shifted over time, so they now want different food. That is changing customer needs. It is not R&D, because Liam sells meals that suppliers already make rather than developing new products himself.",
+      "clue": "What changed about the shoppers themselves?"
+    }
+  },
+  "bus-creativity-innovation": {
+    "title": "Creativity and innovation",
+    "card": [
+      [
+        "Creativity",
+        "coming up with a new idea or a new way of seeing a problem. An idea on its own has not changed anything yet."
+      ],
+      ["Innovation", "turning a new idea into a product, service or process that people actually use."],
+      "An innovation can be a new product, a new service, or a new process, which is a new way of doing a task inside the business.",
+      "Creativity comes first and innovation follows. A business can have many creative ideas and still not innovate if it never puts them to use."
+    ],
+    "remember": "Creativity is the idea. Innovation is the idea put to use.",
+    "a": {
+      "q": "Which situation is an example of innovation, not only creativity?",
+      "opts": [
+        "A bakery sells a new sourdough loaf it designed",
+        "A baker sketches ideas for new loaf flavours",
+        "A baker imagines a loaf shaped like a guitar",
+        "A bakery team lists ten ideas for new loaves"
+      ],
+      "why": "The new loaf has been turned into a product that customers can buy, so the idea has been put to use. The other options only describe ideas, which is creativity and not yet innovation.",
+      "clue": "Which idea has reached customers?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's cleaning company in Geelong has a team that suggests many new ideas each month, but none have been used. Which statement is correct?",
+      "opts": [
+        "The team is creative but the business has not innovated",
+        "The team is innovative because it produces many ideas",
+        "The business has innovated because ideas were suggested",
+        "The team is neither creative nor innovative"
+      ],
+      "why": "Producing new ideas is creativity. Innovation needs an idea to be turned into something people use, and none have been. The tempting option confuses having many ideas with putting them to use.",
+      "clue": "Has any idea been put to use?"
+    }
+  },
+  "bus-goal-setting-decision-making": {
+    "title": "Goal setting and decision-making",
+    "card": [
+      "A goal is a result a business wants to reach. A clear goal says what is wanted and by when, such as 'sell 200 coffees a day by the end of March'.",
+      "Clear goals give a new business direction. They tell the owner what matters most and let the owner check progress.",
+      "A decision is a choice between options. A good decision lists the options and weighs each one against the goals.",
+      "An option that looks cheap or easy may not help the goal. The owner picks the option that best moves the business towards its goals."
+    ],
+    "remember": "Set a clear goal first, then choose the option that best serves it.",
+    "a": {
+      "q": "Why does a new business owner set a clear goal before making decisions?",
+      "opts": [
+        "It gives a standard to weigh each option against",
+        "It removes the need to compare any options",
+        "It guarantees that every decision will succeed",
+        "It makes the cheapest option the right choice"
+      ],
+      "why": "A goal gives the owner something to measure options against, so choices point the same way. It does not remove the need to compare options or guarantee success, because a goal only guides the choice.",
+      "clue": "Think about what the owner compares each option with."
+    },
+    "b": {
+      "d": 3,
+      "q": "Aisha opens a bakery in Ballarat. Her goal is to build a base of regular local customers within a year. She can pay for a large online advert across Australia or run a loyalty card in her shop. Which choice fits her goal better, and why?",
+      "opts": [
+        "The loyalty card, as it rewards repeat local customers",
+        "The online advert, as it reaches the most people",
+        "The loyalty card, as it costs less than the online advert",
+        "The online advert, as bigger reach suits any new business"
+      ],
+      "why": "Her goal is regular local customers, and a loyalty card rewards people who come back to her shop. The online advert reaches many people, but most are far away, so it does not serve this goal. Cost alone is not the reason to choose.",
+      "clue": "Check each option against her goal, not against cost or size."
+    }
+  },
+  "bus-developing-business-concept": {
+    "title": "Developing the business concept",
+    "card": [
+      "A business concept is a clear description of the business idea. It turns a gap or opportunity in the market into something that can be sold.",
+      ["Product", "what the business will sell, whether a good or a service."],
+      ["Target market", "the group of customers the business aims to serve, such as students or busy parents."],
+      [
+        "Reason to choose",
+        "why customers would buy from this business instead of another, such as lower price, better quality or more convenience."
+      ]
+    ],
+    "remember": "A concept says what is sold, to whom, and why customers would choose it.",
+    "a": {
+      "q": "Which statement is a clear business concept?",
+      "opts": [
+        "Fresh healthy lunches delivered to Geelong office workers",
+        "A business that wants to make a lot of money in food",
+        "A café with a lease on a corner shop in Geelong",
+        "Healthy lunches for sale at a price that covers costs"
+      ],
+      "why": "It says what is sold (healthy lunches), to whom (Geelong office workers) and gives a reason to choose it (fresh and delivered). The lease option names a place but not who the customers are or why they would buy.",
+      "clue": "Look for the option that names a product, a customer group and a reason to buy."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya plans a bike repair service in Ballarat. She says it will fix all bikes for everyone at fair prices. Which change would best improve her concept?",
+      "opts": [
+        "Aim at students and offer repairs at their school",
+        "Lower her prices so that they are cheaper than any rival",
+        "Add car repairs so that more people can be customers",
+        "Choose a business name before she plans anything else"
+      ],
+      "why": "Her idea names a product, but everyone is not a target market, and fair prices is only a vague reason to choose her. Aiming at students with repairs at their school fixes both. Lowering prices makes her reason stronger but still leaves out who the customers are.",
+      "clue": "Which parts are missing or vague: what, to whom or why?"
+    }
+  },
+  "bus-market-research-new-idea": {
+    "title": "Market research and feasibility",
+    "card": [
+      [
+        "Primary research",
+        "new information a business collects itself for its own purpose, such as a survey, interview, focus group or trial product."
+      ],
+      [
+        "Secondary research",
+        "information that already exists and was collected by someone else, such as government statistics, industry reports or a competitor's website."
+      ],
+      "Research tests whether customers want the idea. A feasibility study then asks whether the idea can work and make a profit, using the costs, prices and likely sales the research suggests.",
+      "A first feasibility study is done early, before much money is spent. If the numbers do not work, the owner can change the idea or stop at a small cost."
+    ],
+    "remember": "Research tests what customers want. A feasibility study tests whether the idea can work and make money, before big spending.",
+    "a": {
+      "q": "Sam is planning a food truck in Geelong. He hands out a short questionnaire to office workers about what lunches they would buy. What type of research is this?",
+      "opts": [
+        "Primary research, because he collects the data himself",
+        "Secondary research, because office workers already know",
+        "Primary research, because it uses data from a report",
+        "Secondary research, because the questions are short"
+      ],
+      "why": "Sam collects new information himself for his own purpose, so it is primary research. Secondary research uses information someone else has already collected, such as a published report.",
+      "clue": "Who collected the information, and was it new?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to open a bike repair shop in Bendigo. Before signing a lease, she compares expected repair prices, rent and wages with the number of repairs she could expect. What does this comparison do?",
+      "opts": [
+        "It tests, before big spending, whether the shop could profit",
+        "It tests, after the shop opens, how much profit it has made",
+        "It tests whether customers want the shop, with no research",
+        "It tests, as secondary research, what other shops charge"
+      ],
+      "why": "Weighing likely prices and sales against costs is a first feasibility study, done before much money is spent to see if the idea could make a profit. It does not replace research: it uses the likely sales and prices that research suggests, and research is what tests whether customers want the idea.",
+      "clue": "Think about what Priya is weighing up, and when she does it."
+    }
+  },
+  "bus-businesses-matter-economy": {
+    "title": "Why businesses matter",
+    "card": [
+      "Businesses add to a nation's economic and social wellbeing. Wellbeing here means how well people in the nation are able to live.",
+      [
+        "Jobs",
+        "businesses employ people. Wages let workers pay for housing, food and other needs, and work can give people a sense of purpose."
+      ],
+      [
+        "Goods and services",
+        "businesses make and sell what people need and want, such as food, clothing and transport."
+      ],
+      [
+        "Tax and new ideas",
+        "businesses and their workers pay tax, which governments can use to fund schools, hospitals and roads. Businesses also try new products and ways of working, which can improve daily life."
+      ]
+    ],
+    "remember": "Businesses can add to wellbeing through jobs, goods and services, tax revenue and new ideas.",
+    "a": {
+      "q": "Mia opens a bakery in Ballarat and hires three local people. Which benefit to the nation does hiring them show?",
+      "opts": [
+        "It provides jobs that give people an income",
+        "It provides tax revenue from the bakery's profit",
+        "It provides new ideas that start other businesses",
+        "It provides goods that people want to buy"
+      ],
+      "why": "Hiring local people creates jobs, and wages give them an income. Selling bread does provide goods, but the question asks about what hiring the three people shows.",
+      "clue": "Look at what happens to the three local people."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Geelong company makes a new type of recyclable packaging. It sells the packaging to food makers and pays company tax. Which pair of benefits does this show?",
+      "opts": ["New ideas and tax revenue", "Jobs and new ideas", "Goods and services and jobs", "Tax revenue and jobs"],
+      "why": "A new type of packaging is a new idea, and paying company tax gives governments tax revenue. The story says nothing about hiring workers, so any pair with jobs is not fully shown, even though a real company would probably employ some.",
+      "clue": "Both benefits in the pair must appear in the story."
+    }
+  },
+  "bus-encouraging-innovation-nation": {
+    "title": "Encouraging innovation in a nation",
+    "card": [
+      "Innovation means new ideas, products or ways of working. A nation gains when many people try new ideas and start businesses.",
+      [
+        "Research funding",
+        "governments pay for research, for example at universities, so new knowledge can lead to new products and businesses."
+      ],
+      [
+        "Council grants",
+        "local councils, also called shires or cities, give money to small and new businesses, which helps them cover early costs."
+      ],
+      [
+        "School programs",
+        "programs in entrepreneurship teach students how to turn ideas into businesses. Regional start-up hubs give new businesses in country areas shared space, advice and contacts."
+      ]
+    ],
+    "remember": "Funding, grants, school programs and hubs all make it easier to turn new ideas into businesses.",
+    "a": {
+      "q": "A shire in western Victoria pays each new shop in its towns a set amount to help cover setup costs. Which type of support is this?",
+      "opts": ["A council grant", "Research funding", "A school program", "A regional start-up hub"],
+      "why": "A shire is a local council, and money it gives to new businesses for early costs is a council grant. Research funding is also money, but it pays for research such as at universities, not for a shop's setup costs.",
+      "clue": "What kind of body is a shire, and who gets the money?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Hana lives in a country town in Victoria. She wants to start an app business but has no office, no advice and no contacts. Which support would suit her need best?",
+      "opts": [
+        "A regional start-up hub in her area",
+        "Research funding paid to a university",
+        "A school program in entrepreneurship",
+        "A council grant paid to an older business"
+      ],
+      "why": "A regional start-up hub gives shared space, advice and contacts to new businesses in country areas, which matches what Hana lacks. A school program teaches students about starting businesses but does not give her space or contacts.",
+      "clue": "Which support offers space, advice and contacts together?"
+    }
+  },
+  "bus-legal-business-structures": {
+    "title": "Types of business",
+    "card": [
+      [
+        "Sole trader",
+        "one person owns and runs the business. They receive all the profit and make all the decisions."
+      ],
+      [
+        "Partnership",
+        "two or more people own the business together and share the profit. They usually agree how to split the work and the decisions."
+      ],
+      [
+        "Company",
+        "a separate legal entity owned by shareholders. A private limited company (Pty Ltd) has a limited number of shareholders, and its shares are not sold on the share market. A public listed company sells shares on the Australian Securities Exchange (ASX)."
+      ],
+      [
+        "Other types",
+        "a social enterprise aims mainly to help a community or cause, and uses its profit for that aim. This describes its purpose, so it can use any of the structures above. A government business enterprise is owned by government and sells goods or services to earn revenue."
+      ]
+    ],
+    "remember": "The type of business is chosen to suit who owns it and what the owners want from it.",
+    "a": {
+      "q": "Which type of business is owned by shareholders and sells its shares on the share market?",
+      "opts": ["A public listed company", "A private limited company", "A partnership", "A social enterprise"],
+      "why": "A public listed company sells its shares on the ASX, so anyone can buy them. A private limited company also has shareholders, but its shares are not sold on the share market.",
+      "clue": "Think about which business has shares that anyone can buy."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya starts a bakery in Ballarat. She wants to hire and train people who have been out of work, and spend any profit on this work. Which type of business best fits her aim?",
+      "opts": ["A social enterprise", "A sole trader", "A private limited company", "A government business enterprise"],
+      "why": "A social enterprise is defined by its aim of helping a community or cause and using its profit for that aim, which matches Priya's plan. She could still run it as a sole trader, but that term only describes who owns the business, not what it aims to do.",
+      "clue": "The question asks about her aim, not who owns the bakery."
+    }
+  },
+  "bus-unlimited-limited-liability": {
+    "title": "Unlimited and limited liability",
+    "card": [
+      "Liability is an owner's legal duty to pay the debts of the business. If the business cannot pay, creditors (the people it owes money to) may go after the owners.",
+      [
+        "Unlimited liability",
+        "the owner's personal assets, such as a house or savings, can be taken to pay business debts. Sole traders and partners have this. The business and the owner are not separate in law."
+      ],
+      [
+        "Limited liability",
+        "a shareholder can lose only the money they put into the company. Their personal assets are safe from the company's debts. Owners of companies have this."
+      ],
+      "In a partnership, each partner can be held responsible for the business debts, even debts made by another partner."
+    ],
+    "remember": "Unlimited liability puts the owner's own assets at risk. Limited liability risks only the money invested.",
+    "a": {
+      "q": "Jin is a sole trader whose bakery cannot pay its debts. What can happen to Jin?",
+      "opts": [
+        "Personal assets such as savings can be used to pay the debts",
+        "Only the money Jin first put into the bakery can be lost",
+        "Jin's own assets are safe because the bakery owes the debt",
+        "The debts pass to the customers who bought from the bakery"
+      ],
+      "why": "A sole trader has unlimited liability, so the business and the owner are not separate in law. Creditors can claim Jin's personal assets. The option about losing only the money put in describes limited liability, which sole traders do not have.",
+      "clue": "Think about whether a sole trader is separate from the business in law."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya invested $10,000 to buy shares in a private company. The company fails with debts of $400,000. What is the most Priya can lose?",
+      "opts": [
+        "The $10,000 she invested",
+        "The $400,000 owed by the company",
+        "Her $10,000 plus a share of the debts",
+        "Her house and savings, up to the debts owed"
+      ],
+      "why": "Shareholders have limited liability, so Priya can lose only what she invested. The large debt does not reach her personal assets. Losing a share of the debts or her house would be unlimited liability, which applies to sole traders and partners.",
+      "clue": "The size of the company's debt does not decide a shareholder's loss."
+    }
+  },
+  "bus-business-models": {
+    "title": "Business models",
+    "card": [
+      "A business model is how a business reaches customers and makes money. An online business sells through a website or app. A bricks-and-mortar business sells from a physical site, such as a shop or café.",
+      [
+        "Direct-to-consumer",
+        "the maker sells straight to its customers, with no retailer in between. This can happen online, in the maker's own shop, or both."
+      ],
+      [
+        "Franchise",
+        "a brand owner (the franchisor) lets others (franchisees) run outlets under its brand. Franchisees usually pay fees for this."
+      ],
+      [
+        "Importer or exporter",
+        "an importer buys goods from overseas to sell in Australia. An exporter sells goods to buyers in other countries."
+      ]
+    ],
+    "remember": "Many businesses combine models, such as a maker selling direct-to-consumer through its own website.",
+    "a": {
+      "q": "Which business is using a franchise model?",
+      "opts": [
+        "Sam pays a brand owner to run a store under its name",
+        "Sam sells her own jam from a stall at a local market",
+        "Sam buys tea from Sri Lanka and sells it in Victoria",
+        "Sam sells her own soap to customers through her website"
+      ],
+      "why": "In a franchise, the franchisee runs an outlet under the franchisor's brand and pays fees. Selling her own jam at a market is bricks-and-mortar and direct-to-consumer, but the brand is hers, so it is not a franchise. Buying tea from overseas makes her an importer.",
+      "clue": "Whose brand is on the business, and who runs it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's company in Geelong makes running shoes. It sells them only on its own website and posts them straight to customers. Which model best describes this?",
+      "opts": [
+        "Direct-to-consumer and online",
+        "Franchise and bricks-and-mortar",
+        "Importer and bricks-and-mortar",
+        "Exporter and franchise"
+      ],
+      "why": "Priya's company makes the shoes and sells them straight to buyers, so it is direct-to-consumer. It sells through a website, so it is online. Nothing says it sells overseas, buys from overseas or runs a shop, so the other options do not fit.",
+      "clue": "Who makes the shoes, who sells them, and where does the sale happen?"
+    }
+  },
+  "bus-buying-business-or-starting": {
+    "title": "Buying a business or starting one",
+    "card": [
+      [
+        "Buying",
+        "The owner takes over a business that already runs. Customers, staff and records come with it from the first day."
+      ],
+      [
+        "Starting new",
+        "The owner builds the business from nothing. It usually costs less to begin, but it takes longer to win customers and build a team."
+      ],
+      "An existing business may carry old problems, such as a poor reputation, unhappy staff or debts. The buyer should check these before paying.",
+      "A buyer usually pays more up front for a business that already works. A new owner usually pays less up front but must wait for income to grow."
+    ],
+    "remember": "Buying usually costs more but brings a running business. Starting new usually costs less but takes longer.",
+    "a": {
+      "q": "Which is a reason an owner might choose to buy an existing business rather than start a new one?",
+      "opts": [
+        "It already has customers and records from day one",
+        "It usually costs less to begin than a new business",
+        "It cannot carry any problems from past owners",
+        "It lets the owner build the team from nothing"
+      ],
+      "why": "An existing business comes with customers, staff and records, so it can earn income straight away. The lower cost belongs to starting new, because buyers usually pay more up front.",
+      "clue": "Think about what the buyer gets on the first day."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jas wants to open a bakery in Bendigo and has limited savings. Another bakery is for sale, but locals say its service has been poor. Which statement best describes her choice?",
+      "opts": [
+        "Starting new usually costs less but she must build customers",
+        "Buying usually costs less and avoids any wait for customers",
+        "Starting new usually gives her staff and records at once",
+        "Buying is usually risk free as the bakery already trades"
+      ],
+      "why": "Jas has limited savings, and starting new usually costs less to begin. The cost is time, because she must win customers herself. Buying would bring customers at once but may carry the old problem of poor service, so it is not risk free.",
+      "clue": "Which choice costs less to begin, and what does it cost in time?"
+    }
+  },
+  "bus-business-resources": {
+    "title": "Business resources",
+    "card": [
+      [
+        "Natural",
+        "things taken from the earth, such as land, water, timber and minerals. A farm or a mine depends on them."
+      ],
+      [
+        "Labour",
+        "the physical and mental work of people, including their skills and knowledge. A business hires staff to supply it."
+      ],
+      [
+        "Capital",
+        "made items used to produce goods or services, such as machinery, tools, vehicles and buildings. Money used to buy them is not itself this resource."
+      ],
+      "A business weighs the cost, availability and quality of each resource when it decides which to use and how much."
+    ],
+    "remember": "Natural comes from the earth, labour is people's work, and capital is made items used to produce. Cost, availability and quality guide the choice.",
+    "a": {
+      "q": "Priya's bakery in Ballarat buys a new commercial oven. Which resource is the oven?",
+      "opts": [
+        "Capital, because it is a made item used to produce bread",
+        "Natural, because it is made from metal taken from the earth",
+        "Labour, because it does the work that a baker would do",
+        "Natural, because it uses gas or electricity to run"
+      ],
+      "why": "The oven was made by people and is used to produce bread, so it is capital. The metal in it began as a natural resource, but the finished oven is a made item. It does not supply human work, so it is not labour.",
+      "clue": "Was it made by people to help produce goods?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom's joinery in Geelong has advertised for carpenters for six months with no applicants, and the few nearby ask for high wages. He buys a panel-cutting machine instead. What best explains his choice?",
+      "opts": [
+        "Labour was low in availability and high in cost",
+        "Capital was low in availability and high in cost",
+        "Natural resources were low in quality and high in cost",
+        "Labour was high in quality and low in cost"
+      ],
+      "why": "No applicants means labour is hard to get, and high wages mean it is costly, so Tom swapped some labour for capital. Capital cannot be the scarce resource, because he was able to buy the machine. Nothing in the case says the timber was poor.",
+      "clue": "Which resource is Tom using less of after the change?"
+    }
+  },
+  "bus-choosing-location-2": {
+    "title": "Choosing a location",
+    "card": [
+      "A business chooses where to set up. Location is part of the internal environment, because the owner decides it.",
+      "Factors to weigh include customers nearby, rent and other costs, competitors, suppliers, staff and access, such as parking, public transport and roads.",
+      "The best site depends on the business. A café needs foot traffic. A bakery that supplies other shops may want cheap rent and easy deliveries.",
+      "Some businesses do not need a physical site. A freelance web designer can work from home and serve clients anywhere, so the factors above matter less."
+    ],
+    "remember": "Match the site to what the business needs most, or ask if it needs a site at all.",
+    "a": {
+      "q": "Which choice shows a business weighing access when choosing a location?",
+      "opts": [
+        "Choosing a site with parking and a train stop nearby",
+        "Choosing a site with the lowest rent in the suburb",
+        "Choosing a site next to a rival that sells the same goods",
+        "Choosing a site close to where the owner lives"
+      ],
+      "why": "Access is about how easily customers, staff and deliveries can reach the site, so parking and a train stop are access. Low rent is a cost factor, not access.",
+      "clue": "Think about how people and deliveries reach the site."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs an online tutoring service from her home in Bendigo. Her students are across Victoria and lessons are by video. Why is location a minor factor for her?",
+      "opts": [
+        "She does not need a physical site to reach customers",
+        "She has no costs, so rent does not matter to her",
+        "She has no competitors in her local area",
+        "She can only work in the suburb where she lives"
+      ],
+      "why": "Priya delivers lessons by video, so her customers do not need to visit a site. This makes foot traffic, parking and nearby customers matter less. She still has costs, such as internet and equipment, so having no costs is wrong.",
+      "clue": "Do her customers ever need to come to her?"
+    }
+  },
+  "bus-sources-finance": {
+    "title": "Sources of finance",
+    "card": [
+      [
+        "Owner's savings",
+        "money the owner puts in from their own pocket. It costs no interest and gives away no control, but the amount is often small."
+      ],
+      [
+        "Loan",
+        "money borrowed from a bank or lender and paid back with interest. The owner keeps full ownership but must make repayments."
+      ],
+      [
+        "Investors",
+        "people who put in money in return for a share of the business. The business gets more funds, but the owner shares control and profits."
+      ],
+      [
+        "Leasing and crowdfunding",
+        "leasing means paying regular fees to use equipment instead of buying it. Crowdfunding means raising small amounts from many people, often online."
+      ]
+    ],
+    "remember": "Choose finance by weighing its cost, the control given up and what the business needs.",
+    "a": {
+      "q": "Priya starts a bakery in Ballarat. She sells a 30% share of it to a friend who puts in money. Which source of finance is this?",
+      "opts": ["Investors", "A loan", "Leasing", "Owner's savings"],
+      "why": "The friend gives money in return for a share of the business, so this is investor finance. It is not a loan, because a loan is paid back with interest and does not give the lender a share of the business.",
+      "clue": "The friend now owns part of the business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom opens a bike repair shop in Geelong. His savings will not cover the cash he needs to fit out the shop. He wants to keep full ownership and sole control, and he can afford regular repayments. Which source suits him best?",
+      "opts": [
+        "A bank loan repaid with interest",
+        "Selling a 20% share to an investor",
+        "Bringing in investors who share profits",
+        "Selling shares in the shop to the public"
+      ],
+      "why": "A loan gives Tom the cash he needs while he keeps full ownership and control, as long as he makes repayments with interest. Every other option gives away a share of the business, so others would have a say and take part of the profits.",
+      "clue": "Which option leaves every part of the shop in Tom's hands?"
+    }
+  },
+  "bus-business-support-services": {
+    "title": "Business support services",
+    "card": [
+      "Business support services are people and groups outside the business that give a new owner advice and help. They can help the owner avoid costly mistakes.",
+      [
+        "Professional services",
+        "lawyers advise on contracts, leases and legal duties. Accountants advise on record keeping, tax and budgets."
+      ],
+      [
+        "Technology help",
+        "an IT provider can set up a website, online payments or computer systems, so the owner does not have to learn it all alone."
+      ],
+      [
+        "People and groups",
+        "community groups, business networks and mentors share local knowledge, contacts and experience. A mentor is an experienced person who guides the owner, often for little or no fee."
+      ]
+    ],
+    "remember": "Outside help gives a new owner skills and advice they may lack, and can save them from costly mistakes.",
+    "a": {
+      "q": "Which is the best example of a business support service for a new owner?",
+      "opts": [
+        "An accountant advising on tax and record keeping",
+        "A bank lending the owner money to start",
+        "A customer buying a product from the owner",
+        "A new worker hired to serve customers"
+      ],
+      "why": "An accountant is an outside expert who gives advice that helps the owner avoid mistakes. The bank loan is a source of finance, not advice. Customers and employees are part of running the business, not outside support.",
+      "clue": "Look for outside advice or help, not money or sales."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tariq is opening a bike repair shop in Ballarat. He is about to sign a five-year lease and is unsure what the terms mean. Which support service should he use first?",
+      "opts": [
+        "A lawyer, to explain the lease before he signs",
+        "An IT provider, to build a website for the shop",
+        "A mentor, to help him choose a shop name",
+        "A business network, to find extra customers"
+      ],
+      "why": "A lawyer advises on contracts and leases, so can show Tariq what he is agreeing to and help him avoid a costly mistake. A website or customer contacts may help later, but they do not answer his problem about the lease.",
+      "clue": "Which service advises on contracts and leases?"
+    }
+  },
+  "bus-business-plan": {
+    "title": "The business plan",
+    "card": [
+      "A business plan is a written document that sets out how a new business will start and run.",
+      "It describes the business idea and its goals. It also covers the market, the competitors and the marketing.",
+      "It also explains staffing needs and the finances, such as expected costs and income.",
+      "The owner uses it as a guide for decisions. Lenders often ask to see one before they agree to lend money."
+    ],
+    "remember": "A business plan is the owner's written map, and lenders often want to read it.",
+    "a": {
+      "q": "Why might a bank ask Leila to show a business plan before she borrows money for her new florist shop?",
+      "opts": [
+        "To judge whether the business can succeed and repay",
+        "To set the prices Leila must charge customers",
+        "To choose which staff Leila must hire",
+        "To decide the shop's opening hours for her"
+      ],
+      "why": "A plan sets out the market, competitors and finances, so the bank can judge if the business is likely to repay. Banks do not set prices or choose staff. The owner makes those choices and records them in the plan.",
+      "clue": "Think about what a lender wants to be sure of."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam is writing a plan for a food truck in Bendigo. He lists the trucks that already sell lunch nearby. Which part of the plan is this?",
+      "opts": ["Competitors", "Staffing", "Goals", "Finances"],
+      "why": "Other food trucks selling to the same customers are competitors. Staffing covers the people Sam needs to hire, and finances cover costs and income.",
+      "clue": "Who else is trying to win the same customers?"
+    }
+  },
+  "bus-external-environment-2": {
+    "title": "The external environment",
+    "card": [
+      "The external environment is made up of factors outside a business that it cannot control. Factors it does control, such as its staff, products and opening hours, are internal.",
+      [
+        "Macro environment",
+        "the wider forces that act on many businesses at once, well beyond any one firm's own market."
+      ],
+      [
+        "Operating environment",
+        "the customers, suppliers and competitors a business deals with directly, so it differs from one business to the next."
+      ],
+      "A business cannot stop external changes, but it must plan for them and respond, such as by changing prices, products or plans. An owner cannot block a new law or a rival opening nearby."
+    ],
+    "remember": "A business cannot control external factors, so it plans and adapts. Macro forces are wide, operating factors are close to the business.",
+    "a": {
+      "q": "A new Victorian café is planning ahead. Which of these is an external factor it must plan for?",
+      "opts": [
+        "A new law on how food must be labelled",
+        "The skills of the café's own staff",
+        "The owner's choice of opening hours",
+        "The range of meals the café decides to sell"
+      ],
+      "why": "A new law comes from outside the café and the owner cannot change it, only respond. Staff skills, opening hours and the menu are things the business controls, so they are internal, not external.",
+      "clue": "Which one could the owner not change by making a decision?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bike shop in Ballarat faces a new rival bike store that opens across the street. Where does this sit?",
+      "opts": [
+        "Operating environment, outside Priya's control",
+        "Macro environment, outside Priya's control",
+        "Operating environment, within Priya's control",
+        "Internal environment, within Priya's control"
+      ],
+      "why": "A competitor is part of the operating environment, the customers, suppliers and competitors a business deals with directly. Priya cannot stop it opening, so it is outside her control. It is not the macro environment, because one new store is not a wide force acting on many businesses at once.",
+      "clue": "Does this rival act on many businesses, or mainly on shops like Priya's?"
+    }
+  },
+  "bus-macro-environment": {
+    "title": "The macro environment",
+    "card": [
+      "The macro environment is the set of wide forces that affect all businesses in a country or region. A single business cannot influence them.",
+      ["Economic", "the state of the economy, such as the level of employment and what people can afford to spend."],
+      ["Political and legal", "the decisions of governments and the laws that businesses must follow."],
+      [
+        "Social, technological and global",
+        "social factors are the values and habits of society. Technological factors are new tools and ways of doing things. Global factors are events and trends overseas that reach businesses at home."
+      ]
+    ],
+    "remember": "Macro forces are wide, shared by many businesses and beyond one business's control.",
+    "a": {
+      "q": "Which of these is part of the macro environment for a new bakery in Ballarat?",
+      "opts": [
+        "A new law that changes the rules for food labels",
+        "The price the bakery chooses for its sourdough loaf",
+        "The recipe the bakery uses for its meat pies",
+        "The roster the owner sets for the bakery's staff"
+      ],
+      "why": "A law is made by government and applies to many businesses. The bakery cannot change it. The price, the recipe and the roster are all decisions the owner makes, so they are not macro forces.",
+      "clue": "Which one is a wide force that the owner cannot change?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Nina plans a bike repair shop in Geelong. She is told that more people are choosing to cycle to work. Which macro factor is this?",
+      "opts": [
+        "A social factor, as it is a change in how people live",
+        "A legal factor, as it is a change in the rules for riders",
+        "A political factor, as it is a decision made by government",
+        "A technological factor, as it is a change in the tools used"
+      ],
+      "why": "People choosing to cycle is a shift in the habits of society, so it is a social factor. It is tempting to call it a legal or political factor, but the card links those to laws and government decisions, and none are described here.",
+      "clue": "Think about who is making the change: the government, or people in society?"
+    }
+  },
+  "bus-legal-political-factors": {
+    "title": "Legal and political factors",
+    "card": [
+      "Legal factors are the laws a business must follow. Political factors are the decisions and policies of governments, which can lead to new laws or rules.",
+      "Most new businesses get an Australian Business Number (ABN). A business name must be registered only if it trades under a name other than the owner's own. A business must register for GST once its yearly turnover reaches a set level.",
+      "Other laws set standards. Workplace health and safety laws protect workers. Consumer law, such as the Australian Consumer Law, protects buyers: businesses must be honest and sell goods that work as described.",
+      "A business cannot change these rules, but it can plan for them. Rules can change after an election, so owners watch for new laws that add costs or limit what they can sell."
+    ],
+    "remember": "Governments make and change the rules. A business cannot control them, but it can plan for them.",
+    "a": {
+      "q": "Which example shows a political factor affecting a new business?",
+      "opts": [
+        "A new government changes small business tax rules",
+        "A café owner chooses a shop on a busy street",
+        "A rival café opens across the road from the shop",
+        "A supplier offers a cheaper price on coffee beans"
+      ],
+      "why": "A government decision about tax is a political factor, and it can lead to a new rule the business must follow. The shop location is a choice the owner makes, and the rival and supplier come from the business's dealings with other firms, not from government.",
+      "clue": "Which one comes from a government decision?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jon sells handmade candles online from Geelong. A customer complains that a candle melted in minutes, though the listing said it burns for hours. Which type of law covers this?",
+      "opts": [
+        "Consumer law, which protects people who buy goods",
+        "Workplace safety law, which protects people at work",
+        "Business name rules, which cover registering a name",
+        "Tax law, which sets how much GST a business owes"
+      ],
+      "why": "The customer is a buyer who got a product that did not match its description, and consumer law protects buyers. Workplace safety law is tempting because a melting candle sounds like a hazard, but it protects workers, not customers.",
+      "clue": "Who is being protected here, a worker or a buyer?"
+    }
+  },
+  "bus-social-technological-change": {
+    "title": "Societal attitudes",
+    "card": [
+      "Societal attitudes are the values, beliefs and trends shared by many people in a community. They are part of the social factors in the macro environment, so a business cannot control them.",
+      "When attitudes shift, what customers want shifts too. More care for the environment can lead people to look for products with less packaging. A wish to eat healthily can lead people to choose fresh food.",
+      "A business that notices a shift early can change its products, ingredients or marketing to match. A business that ignores it may lose customers to rivals who adapt.",
+      "Attitudes differ between age groups, places and cultures, and they change over time. Planners watch for changes by reading research, surveys and trends before they set up."
+    ],
+    "remember": "Customers' values change over time, and a business plans around those changes.",
+    "a": {
+      "q": "More people in Geelong now say they want to cut down on waste. Which change by a new café is the best match to this shift?",
+      "opts": [
+        "Serving takeaway drinks in reusable cups",
+        "Cutting the price of its takeaway coffee",
+        "Opening an hour earlier on weekdays",
+        "Adding free wifi for customers to use"
+      ],
+      "why": "The shift is a change in values about waste, so the café matches it by offering reusable cups. A lower coffee price or longer hours may attract customers, but they do not respond to the new attitude.",
+      "clue": "Which change speaks to the value people now hold?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya plans a lunch bar in Ballarat. Surveys show more locals want healthy food. She keeps her fried menu and does not change it. What is the most likely risk?",
+      "opts": [
+        "Customers may choose rivals that offer healthier food",
+        "The council may refuse to register her business",
+        "Interest rates may rise and make her loan costlier",
+        "Suppliers may stop selling her cooking oil"
+      ],
+      "why": "The shift in attitudes changes what customers want, so a menu that ignores it may lose sales to rivals that adapt. Registration and loan costs belong to other factors, and nothing in the case points to them.",
+      "clue": "Ask what the survey says about what customers want."
+    }
+  },
+  "bus-economic-conditions": {
+    "title": "Economic conditions",
+    "card": [
+      "Economic conditions are the state of the wider economy. A business cannot control them, but they shape how much customers spend and what it costs to run.",
+      [
+        "Interest rates",
+        "the cost of borrowing money. When rates rise, loan repayments rise, so a business pays more to borrow and many households have less left to spend."
+      ],
+      [
+        "Employment and tax",
+        "when more people have jobs, more households have income to spend. Higher tax rates take more from income and profit, which can reduce spending and the money a business keeps."
+      ],
+      [
+        "Consumer confidence",
+        "how secure people feel about their money and jobs. When confidence is low, customers tend to delay big purchases and spend less, even if their income has not changed."
+      ]
+    ],
+    "remember": "Economic conditions change what customers can spend, what they are willing to spend, and what it costs a business to borrow.",
+    "a": {
+      "q": "Interest rates rise across Australia. How could this affect a new café owner who has a bank loan?",
+      "opts": [
+        "Loan repayments rise, and customers may spend less",
+        "Loan repayments fall, and customers may spend more",
+        "Loan repayments rise, and customers may spend more",
+        "Loan repayments stay the same, and customers spend less"
+      ],
+      "why": "Higher rates make borrowing cost more, so repayments on the loan rise. Households with loans also have less left to spend. Lower repayments would only follow a fall in rates, not a rise.",
+      "clue": "Think about what a higher cost of borrowing does to both the owner and customers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya sells prams from a shop in Geelong. Jobs are plentiful, but a news report makes many families worried about their finances. Which result is most likely?",
+      "opts": [
+        "Families delay buying prams, so her sales may fall",
+        "Families buy more prams, because jobs are plentiful",
+        "Her sales are unaffected, because incomes have not changed",
+        "Her loan costs fall, because families are worried"
+      ],
+      "why": "Low consumer confidence makes people put off big purchases, even when jobs are plentiful. Plentiful jobs alone would suggest more spending, which is the tempting wrong answer. Worry about finances can still hold spending back.",
+      "clue": "Confidence is about how people feel, not only about their income."
+    }
+  },
+  "bus-technological-change": {
+    "title": "Technological change",
+    "card": [
+      "Technological change means new tools, machines and software that change what people can buy and how things are made or sold. A business cannot control it, but it can plan for it.",
+      "It can change the market. New products may replace old ones, and customers may come to expect new ways to order, pay or get help.",
+      "It can also change how a business works. Software or automation may cut costs or save time, but it can cost money to set up and staff may need training.",
+      "Planners look ahead and ask how the market may look in a few years. They use the answer to decide whether to adopt new technology, change their product or prepare for new rivals."
+    ],
+    "remember": "Technology can change both the market and how a business runs, so planners look ahead.",
+    "a": {
+      "q": "Why do planners of a new business ask how the market may look in a few years?",
+      "opts": [
+        "New technology may change what customers want by then",
+        "The business may be able to set the pace of new technology",
+        "New technology may cut costs with no set-up spending needed",
+        "New technology may change payments but not the products sold"
+      ],
+      "why": "New technology can change what customers want, including which products they buy, so a plan built only on today's market may fail. The cost option is tempting, but the card says new technology can cost money to set up and staff may need training.",
+      "clue": "Think about what the market could be like later."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam plans to open a shop in Ballarat that hires out DVDs. Streaming services keep growing. What is the best use of technological thinking in Sam's plan?",
+      "opts": [
+        "Ask how customers may watch films in a few years",
+        "Wait to see if customers stop visiting the shop",
+        "Cut the hire price to match other local shops",
+        "Focus on shop layout, as technology is out of Sam's hands"
+      ],
+      "why": "Planners look ahead to see how technology may change what customers want. Sam cannot control technology, but can plan for it. The last option is tempting because Sam has no control, but that is a reason to plan, not to ignore it.",
+      "clue": "A business cannot control this factor, but it can still plan for it."
+    }
+  },
+  "bus-global-factors": {
+    "title": "Global factors",
+    "card": [
+      "Global factors are events and conditions overseas that affect a business. They include overseas competitors, overseas markets and online sales to buyers in other countries.",
+      [
+        "Offshoring",
+        "moving part of a business, such as making products or answering customer calls, to another country, often to cut costs."
+      ],
+      [
+        "Exchange rate",
+        "the price of one currency in another. If the Australian dollar falls, imports cost more and Australian goods become cheaper for overseas buyers. If it rises, the reverse happens."
+      ],
+      [
+        "Protecting ideas",
+        "patents protect inventions, copyright protects creative works and trademarks protect brand names and logos. Rules differ from country to country."
+      ]
+    ],
+    "remember": "Global factors reach a business through competitors, markets, costs, exchange rates and the protection of ideas.",
+    "a": {
+      "q": "A Melbourne firm moves its customer phone service to the Philippines. What is this called?",
+      "opts": ["Offshoring", "Exporting", "Franchising", "Trademarking"],
+      "why": "Offshoring means moving part of the business to another country, here the phone service. Exporting is different: it means selling goods to overseas buyers, not moving a business activity.",
+      "clue": "Which term means moving a business activity to another country?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Geelong firm sells wool scarves to buyers in Japan, priced in Australian dollars. The Australian dollar rises against the yen. What is the most likely effect?",
+      "opts": [
+        "Her scarves cost more for Japanese buyers",
+        "Her scarves cost less for Japanese buyers",
+        "Her imported dyes cost more in Australian dollars",
+        "Japanese buyers are likely to order more scarves"
+      ],
+      "why": "When the Australian dollar rises, Japanese buyers must swap more yen for each dollar, so her scarves cost them more. Cheaper scarves and more orders are what happen when the dollar falls, and a rising dollar makes imported dyes cheaper, not dearer.",
+      "clue": "Think about how many yen a Japanese buyer must swap for each Australian dollar."
+    }
+  },
+  "bus-customer-relationships": {
+    "title": "Customer relationships",
+    "card": [
+      "A customer relationship is the ongoing connection between a business and the people who buy from it. Businesses build it so customers come back.",
+      "Good service, loyalty programs and handling complaints well are three ways to keep customers. A loyalty program rewards repeat buying, for example with points or discounts.",
+      "Keeping an existing customer usually costs less than winning a new one, because finding new customers needs advertising and special offers.",
+      "A complaint dealt with quickly and fairly gives the business a chance to keep the customer. It also shows the business where its service falls short."
+    ],
+    "remember": "Keeping a customer usually costs less than finding a new one.",
+    "a": {
+      "q": "A café owner is weighing up keeping regulars against winning new customers. How do the costs usually compare?",
+      "opts": [
+        "Keeping regulars costs less, as less advertising is needed",
+        "Keeping regulars costs more, as loyalty rewards are dear",
+        "Both cost about the same, as both need special offers",
+        "Keeping regulars costs more, as complaints take staff time"
+      ],
+      "why": "New customers have to be found through advertising and special offers, so keeping existing ones usually costs less. Loyalty rewards and complaint handling do cost something, but not more than the effort of winning someone new.",
+      "clue": "Who already knows the café, and who does not?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bike repair shop in Ballarat. A customer complains that a repair took a week longer than promised. What should Priya do to best protect the relationship?",
+      "opts": [
+        "Apologise, fix the problem and offer a small discount",
+        "Explain that delays are normal and make no changes",
+        "Ask the customer to leave a review before anything else",
+        "Spend the money on advertising to find new customers"
+      ],
+      "why": "Dealing with the complaint quickly and fairly gives Priya the best chance of keeping the customer. Advertising for new customers usually costs more, and brushing off the complaint risks losing the customer.",
+      "clue": "A complaint is a chance to keep the customer."
+    }
+  },
+  "bus-promotion-social-media": {
+    "title": "Technology in marketing",
+    "card": [
+      [
+        "Social media",
+        "Platforms where a business posts content and talks with customers. Posts can be low cost and can reach many people."
+      ],
+      [
+        "Email marketing",
+        "Sending messages such as offers or news to people who have shared their email address. It is cheap and can be sent to many people at once."
+      ],
+      [
+        "SEO",
+        "Search engine optimisation is improving a website, such as by using the words people type when they search, so it appears higher in results. More people then find the business without paid advertising."
+      ],
+      [
+        "AI and data",
+        "Artificial intelligence can answer customer questions or suggest products. Data analytics studies customer data, such as past purchases, to learn what customers want."
+      ]
+    ],
+    "remember": "Marketing technology helps a business reach and learn about customers cheaply.",
+    "a": {
+      "q": "Lena rewrites her florist's website so it uses the words people type, such as \"flowers Bendigo\". What is she most likely trying to do?",
+      "opts": [
+        "Help her site appear near the top when people look online",
+        "Collect email addresses so she can send weekly offers",
+        "Study past orders to learn which flowers sell best",
+        "Gain more followers and comments on her social media"
+      ],
+      "why": "Using the words customers type helps her website rank higher in results, so more people find her without paid ads. That is SEO. Collecting email addresses is part of email marketing, and changing her website's wording does not send any messages.",
+      "clue": "Think about where those typed words get used by customers."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom runs a bakery in Geelong. He studies which items customers bought most over the last six months to decide what to bake. Which tool is he using?",
+      "opts": ["Data analytics", "Email marketing", "Search engine optimisation", "Social media posting"],
+      "why": "Tom is studying customer purchase data to learn what customers want, which is data analytics. He is not sending messages, posting content or changing a website.",
+      "clue": "He is looking at past purchase information."
+    }
+  },
+  "bus-public-relations": {
+    "title": "Public relations",
+    "card": [
+      "Public relations (PR) is how a business manages the way the public sees it. The public includes customers, the local community, the media and other groups.",
+      [
+        "Planned PR",
+        "activity a business sets up ahead of time to build goodwill, which is the public's positive feeling toward it. Examples are sponsoring a local netball club or sending a media release about a new product."
+      ],
+      [
+        "Crisis PR",
+        "the response when something goes wrong, such as a product fault or a social media complaint going viral. The aim is to limit damage to the business's reputation."
+      ],
+      "Crisis PR works best when the business acts quickly and tells the truth. Staying silent or hiding the problem can make the damage worse."
+    ],
+    "remember": "PR manages public opinion. Plan it ahead to build goodwill, or respond fast to limit damage.",
+    "a": {
+      "q": "Which of these is an example of crisis PR?",
+      "opts": [
+        "A bakery apologises and recalls rolls that have a fault",
+        "A bakery sponsors the local primary school's fun run",
+        "A bakery sends a media release about its new sourdough",
+        "A bakery hosts an open day so locals can see how it works"
+      ],
+      "why": "A recall and apology respond to a problem that has already happened, and aim to limit damage to the bakery's reputation. The sponsorship is tempting, but it is planned in advance to build goodwill.",
+      "clue": "Which one responds to something that has already gone wrong?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a gym in Ballarat. A video of a member slipping on a wet floor is shared widely online. Priya posts a quick apology and explains how she will fix the problem. What is she doing?",
+      "opts": [
+        "Using crisis PR to limit damage to the gym's reputation",
+        "Using planned PR to build goodwill before any problem",
+        "Using crisis PR to stop the video from being shared",
+        "Using planned PR to attract new members to the gym"
+      ],
+      "why": "The video is a problem that has already happened, so Priya is responding with crisis PR. Her aim is to limit damage to the gym's reputation. Planned PR is set up ahead of time, before anything goes wrong.",
+      "clue": "Did Priya set this up ahead of time, or react to a problem?"
+    }
+  },
+  "bus-social-responsibility-marketing": {
+    "title": "Social responsibility in marketing",
+    "card": [
+      "Social responsibility in marketing means a business treats its customers fairly and honestly. It does not only think about making sales.",
+      [
+        "Green marketing",
+        "promoting products as better for the environment, such as using recycled packaging. The claims must be true."
+      ],
+      "Making false or exaggerated environmental claims to win customers is called greenwashing. It misleads customers, so it is not responsible.",
+      [
+        "Data protection",
+        "a business holds customers' private details, such as addresses and payment information. Acting responsibly means keeping them secure and using them only as customers agreed."
+      ]
+    ],
+    "remember": "Responsible marketing means honest claims and protecting customers' private data.",
+    "a": {
+      "q": "A shop labels its bags 'made from 100% recycled plastic' but they are made from new plastic. What is this?",
+      "opts": [
+        "Greenwashing, because the claim is false",
+        "Green marketing, because it mentions recycling",
+        "Green marketing, because plastic bags can be reused",
+        "Data protection, because it informs customers"
+      ],
+      "why": "Green marketing needs true claims. Saying bags are recycled when they are not misleads customers, which is greenwashing. Mentioning recycling does not make a claim responsible if the claim is false.",
+      "clue": "Is the claim true?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena runs an online shoe store in Perth. Which action shows she is protecting her customers' private data?",
+      "opts": [
+        "Keeping card details secure and using them only for orders",
+        "Using buyers' emails for ads they never agreed to receive",
+        "Selling customer emails to a trusted partner business",
+        "Storing all customer details on an unlocked shared computer"
+      ],
+      "why": "Protecting data means keeping it secure and using it only as customers agreed. Sending ads customers never agreed to is tempting because Lena keeps the data herself, but it still uses their details in a way they did not agree to.",
+      "clue": "Check both how the data is stored and how it is used."
+    }
+  },
+  "bus-employment-arrangements": {
+    "title": "The National Employment Standards",
+    "card": [
+      "The National Employment Standards (NES) are 11 minimum conditions set by law. Every employee in the national workplace relations system gets them.",
+      "They include a maximum of 38 ordinary hours a week, plus reasonable additional hours. They also cover leave, such as annual leave, personal/carer's leave and parental leave.",
+      "They also include notice of termination. This is the warning an employer must give, or pay for, when ending a job, and it is longer for staff who have worked there longer.",
+      "The NES are a floor, not a ceiling. A contract or award can give an employee more, but it cannot give less."
+    ],
+    "remember": "The NES are the minimum. An employer can offer more but never less.",
+    "a": {
+      "q": "Which statement about the National Employment Standards is correct?",
+      "opts": [
+        "An employer may offer more than them but not less",
+        "An employer may offer less if the employee agrees",
+        "They only apply to full-time staff in large firms",
+        "They are suggestions that an employer can choose to follow"
+      ],
+      "why": "The NES are a legal minimum, so a contract can add to them but cannot go below them. Agreeing to less does not remove them, because they are a floor that the law sets.",
+      "clue": "Think of the NES as a floor."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi owns a bakery in Ballarat. He hires Dana and says she will get no annual leave, because she accepted that in her contract. Which is the best response?",
+      "opts": [
+        "The contract is not allowed to remove her NES leave",
+        "The contract is fine because Dana agreed to it",
+        "The contract is fine because the bakery is a small business",
+        "The contract is fine if Ravi pays a higher hourly wage"
+      ],
+      "why": "Annual leave is part of the NES, so a contract cannot take it away, even if the employee agrees. Small size or a higher wage does not remove the minimum, so these options are wrong.",
+      "clue": "Can agreement take away a legal minimum?"
+    }
+  },
+  "bus-employer-employee-rights": {
+    "title": "Employer and employee expectations",
+    "card": [
+      "An expectation is what each side hopes and assumes the other will do in a working relationship. Employers and employees each have their own.",
+      [
+        "Employer",
+        "expects a signed employment contract, loyalty to the business, and fair notice when an employee plans to leave."
+      ],
+      [
+        "Employee",
+        "expects fair pay and conditions, job security, and a work-life balance, which means time for life outside work."
+      ],
+      "Expectations can clash. A business that wants staff to be flexible may meet an employee who wants set hours."
+    ],
+    "remember": "Employers expect a contract, loyalty and notice. Employees expect fair pay, security and work-life balance.",
+    "a": {
+      "q": "Which of these is an employer's expectation of an employee?",
+      "opts": [
+        "Giving fair notice before leaving the job",
+        "Receiving fair pay for the work done",
+        "Having time for life outside of work",
+        "Having a secure job with ongoing hours"
+      ],
+      "why": "Employers expect fair notice so they can plan and find a replacement. The other three are what employees expect from the employer, so they are not employer expectations.",
+      "clue": "Which one is something the employer wants from staff?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jas works at a bakery in Ballarat. Her manager often asks her to work extra evening hours, and she says she has little time for her family. Which employee expectation is not being met?",
+      "opts": ["Work-life balance", "Job security", "Fair notice", "Loyalty to the business"],
+      "why": "The extra hours leave Jas with little time for family, so her work-life balance is the issue. Job security is about keeping the job, and she has not said her job is at risk. Fair notice and loyalty are what employers expect, not employees.",
+      "clue": "Look at what she says she has little time for."
+    }
+  },
+  "bus-legal-obligations-staffing": {
+    "title": "Legal obligations for staffing",
+    "card": [
+      "Employers must follow laws when they hire and manage staff. These laws apply to every employer, big or small.",
+      [
+        "Workplace health and safety",
+        "laws require an employer to provide a safe workplace, safe equipment and training, so that workers are not harmed. In Victoria, the main law is the Occupational Health and Safety Act 2004."
+      ],
+      [
+        "Equal employment opportunity",
+        "laws require an employer to treat people fairly when hiring, promoting and training. Staff must not be treated worse because of things such as their sex, age, race or disability."
+      ],
+      "An employer who breaks these laws can face penalties, such as fines or legal action."
+    ],
+    "remember": "Employers must keep staff safe and treat people fairly in hiring and work.",
+    "a": {
+      "q": "Which duty comes from equal employment opportunity laws?",
+      "opts": [
+        "Choosing staff by skills, not by their age or race",
+        "Giving every worker the same wage for any job",
+        "Hiring a set number of workers from each group",
+        "Making sure the workplace has safe equipment"
+      ],
+      "why": "Equal employment opportunity laws stop unfair treatment based on things such as age or race. They do not require identical pay for every job or set numbers from each group. Safe equipment comes from workplace health and safety laws.",
+      "clue": "Think about fair treatment, not safety."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jo runs a small bakery in Ballarat with four staff. She thinks safety laws are meant for large firms. Which statement about her duties is correct?",
+      "opts": [
+        "She must provide a safe workplace, equipment and training",
+        "She has no safety duties until she employs ten staff",
+        "Her safety duties begin once a worker has been hurt",
+        "Her staff, not she, are responsible for workplace safety"
+      ],
+      "why": "Workplace health and safety laws set duties for every employer, whatever the size, so Jo must keep her bakery safe, such as by training staff to use the ovens and slicers. The duty is to stop harm before it happens, so waiting until a worker is hurt is wrong.",
+      "clue": "Think about who these laws cover, and when the duties start."
+    }
+  },
+  "bus-social-responsibility-staffing": {
+    "title": "Social responsibility in staffing",
+    "card": [
+      "Social responsibility means a business acts ethically towards people, not only as the law requires. In staffing, it means treating workers fairly and with respect.",
+      "The law sets a minimum for every employer, such as minimum pay, payslips and a safe workplace. A socially responsible business may choose to go further than this minimum.",
+      "Going further could mean paying above the minimum wage, taking time to explain pay and rights in plain terms, or offering a supportive workplace with training and flexible hours.",
+      "The same applies to staff recruited from overseas. They may be new to Australia and unsure of their rights, so a responsible business explains the job clearly, pays them properly and does not take advantage of them."
+    ],
+    "remember": "Social responsibility in staffing is treating workers fairly, even where the law does not demand it.",
+    "a": {
+      "q": "Which action shows social responsibility in staffing, rather than only meeting a legal minimum?",
+      "opts": [
+        "Taking time to explain pay and rights in plain terms",
+        "Handing over only the documents the law requires",
+        "Paying exactly the legal minimum and nothing more",
+        "Meeting the safety duties the law sets for employers"
+      ],
+      "why": "Explaining pay and rights in plain terms goes beyond simply handing over the documents the law requires. The other three are lawful, but each one only meets the legal minimum rather than going further.",
+      "clue": "Which choice adds something the law does not ask for?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Geelong and hires a baker from overseas. Which choice is the most socially responsible?",
+      "opts": [
+        "Explain the job and pay in plain terms before they start",
+        "Pay the legal minimum and say little about the job",
+        "Offer a lower wage because they are new to Australia",
+        "Tell them rights are covered only by what they sign"
+      ],
+      "why": "Explaining the job and pay clearly treats the new worker fairly and helps them know their rights. Paying the legal minimum can be lawful, but saying little does not go beyond the law, and the other options take advantage of the worker.",
+      "clue": "A new arrival may not know their rights, so what would a fair employer do?"
+    }
   }
 };

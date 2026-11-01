@@ -1,0 +1,261 @@
+{
+ "id": "eco-limits-gdp",
+ "title": "Limits of GDP",
+ "brief": "aa86428fcb9c",
+ "shortlist": [
+  [
+   "e-living",
+   0.511
+  ],
+  [
+   "e-gdp",
+   0.486
+  ],
+  [
+   "e-outputgap",
+   0.227
+  ],
+  [
+   "eco-business-cycle",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00482,
+  "check": 0.01861,
+  "fix": 0.02377,
+  "recheck": 0.00884
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Comparing living standards (e-living), covers GDP's limits only as one of four bullets and its questions test purchasing power parity, so it is broader than the Limits of GDP point and its questions would not fairly test the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Limits of GDP",
+  "card": [
+   "Real GDP per person is the value of output in a year, with price rises removed, shared across the population. It is often used as a measure of living standards.",
+   "It counts only goods and services that are bought and sold. Unpaid work, such as caring for children or volunteering, is left out even though it meets needs.",
+   "It does not subtract damage to the environment, and it says nothing about how income is shared. A high average can hide a large gap between rich and poor.",
+   "It does not count leisure time. Because of these gaps, real GDP per person is an incomplete measure of living standards."
+  ],
+  "remember": "Real GDP per person is a useful average, but it leaves out much that affects how well people live.",
+  "a": {
+   "q": "Why can real GDP per person give a misleading picture of living standards?",
+   "opts": [
+    "It leaves out unpaid work, leisure and how income is shared",
+    "It includes price rises, so it overstates output each year",
+    "It counts only goods and not services made in the economy",
+    "It measures total output and not output for each person"
+   ],
+   "why": "Real GDP per person leaves out things that affect living standards but are not bought and sold, and it hides how income is shared. It does remove price rises, and it is already divided by population, so the other options are wrong.",
+   "clue": "Think about what is not bought or sold."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X's real GDP per person rises for five years. Over this time, most of the extra income goes to a small group of wealthy households. What does this show about real GDP per person?",
+   "opts": [
+    "It can rise even if most households gain little",
+    "It falls when income becomes less equally shared",
+    "It is not affected by how income is shared",
+    "It rises only when all households gain the same"
+   ],
+   "why": "Real GDP per person is an average, so it can rise while most households gain little. It does not record how income is shared, so it does not fall when sharing becomes less equal, and it does not need equal gains.",
+   "clue": "An average does not show who receives the income."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It leaves out unpaid work, leisure and how income is shared",
+   "also_right": []
+  },
+  "b": {
+   "best": "It can rise even if most households gain little",
+   "also_right": [
+    "It is not affected by how income is shared"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'It is not affected by how income is shared' is also defensible. The card says GDP per person 'says nothing about how income is shared', and the why for (b) itself says it 'does not record how income is shared'. So two options are right."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('can'). The other three are absolute ('falls', 'is not affected', 'rises only'), so a test-wise student could pick it without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'It counts only goods and services that are bought and sold' is not strictly true. GDP also includes government services provided free, valued at cost, and imputed items such as owner-occupiers' rent. It would be safer to say it leaves out most unpaid, non-market work."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines real GDP per person (output with price rises removed, divided by population). That definition belongs to points 2 and 5 and should only be mentioned here."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has two defensible answers: 'not affected by how income is shared' matches the card and the why, and the intended answer stands out as the only hedged option. The card also overstates that GDP counts only market transactions and re-defines real GDP per person from earlier points."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “It is not affected by how income is shared” could also be right.",
+  "Question b, wording: 'It is not affected by how income is shared' is also defensible. The card says GDP per person 'says nothing about how income is shared', and the why for (b) itself says it 'does not record how income is shared'. So two options are right.",
+  "Question b, wording: The right option is the only one with a hedge ('can'). The other three are absolute ('falls', 'is not affected', 'rises only'), so a test-wise student could pick it without knowing the idea.",
+  "Card, fact: 'It counts only goods and services that are bought and sold' is not strictly true. GDP also includes government services provided free, valued at cost, and imputed items such as owner-occupiers' rent. It would be safer to say it leaves out most unpaid, non-market work.",
+  "Card, other: The first bullet defines real GDP per person (output with price rises removed, divided by population). That definition belongs to points 2 and 5 and should only be mentioned here."
+ ],
+ "proposal": {
+  "title": "Limits of GDP",
+  "card": [
+   "Real GDP per person is often used to measure living standards. It misses several things that affect how well people live, so it is an incomplete measure.",
+   "It leaves out most unpaid work done outside markets, such as caring for children, housework or volunteering, even though this work meets needs.",
+   "It does not subtract damage to the environment, such as polluted rivers. It also does not count leisure time, so longer working hours can raise output while people have less free time.",
+   "It is an average, so it says nothing about how income is shared. A high or rising figure can hide a large gap between rich and poor."
+  ],
+  "remember": "A rising real GDP per person does not always mean most people are living better.",
+  "a": {
+   "q": "Why can real GDP per person give a misleading picture of living standards?",
+   "opts": [
+    "It leaves out unpaid work, leisure and how income is shared",
+    "It subtracts too much for damage done to the environment",
+    "It counts only goods and not services made in the economy",
+    "It counts leisure time as if it were paid work"
+   ],
+   "why": "Real GDP per person misses unpaid work and leisure, and as an average it hides how income is shared. It does not subtract environmental damage at all, so the option about subtracting too much is wrong.",
+   "clue": "Think about what people value but are not paid for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X's real GDP per person rises for five years, but most of the extra income goes to a small group of wealthy households. Why might the figure overstate gains for most people?",
+   "opts": [
+    "It is an average, so it hides who receives the income",
+    "It subtracts income that goes to wealthy households",
+    "It falls whenever income becomes less equally shared",
+    "It counts leisure, which wealthy households have more of"
+   ],
+   "why": "Real GDP per person is an average, so it can rise even when most of the gain goes to a few households. It does not fall when sharing becomes less equal, as this case shows: the figure rose while the gap widened.",
+   "clue": "What does an average not tell you about who gets the income?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It leaves out unpaid work, leisure and how income is shared",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is an average, so it hides who receives the income",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'It is not affected by how income is shared' is also defensible. The card says GDP per person 'says nothing about how income is shared', and the why for (b) itself says it 'does not record how income is shared'. So two options are right."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('can'). The other three are absolute ('falls', 'is not affected', 'rises only'), so a test-wise student could pick it without knowing the idea."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'It counts only goods and services that are bought and sold' is not strictly true. GDP also includes government services provided free, valued at cost, and imputed items such as owner-occupiers' rent. It would be safer to say it leaves out most unpaid, non-market work."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines real GDP per person (output with price rises removed, divided by population). That definition belongs to points 2 and 5 and should only be mentioned here."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “It is not affected by how income is shared” could also be right.",
+   "Question b, wording: 'It is not affected by how income is shared' is also defensible. The card says GDP per person 'says nothing about how income is shared', and the why for (b) itself says it 'does not record how income is shared'. So two options are right.",
+   "Question b, wording: The right option is the only one with a hedge ('can'). The other three are absolute ('falls', 'is not affected', 'rises only'), so a test-wise student could pick it without knowing the idea.",
+   "Card, fact: 'It counts only goods and services that are bought and sold' is not strictly true. GDP also includes government services provided free, valued at cost, and imputed items such as owner-occupiers' rent. It would be safer to say it leaves out most unpaid, non-market work.",
+   "Card, other: The first bullet defines real GDP per person (output with price rises removed, divided by population). That definition belongs to points 2 and 5 and should only be mentioned here."
+  ]
+ },
+ "final": {
+  "title": "Limits of GDP",
+  "card": [
+   "Real GDP per person is often used to measure living standards. It misses several things that affect how well people live, so it is an incomplete measure.",
+   "It leaves out most unpaid work done outside markets, such as caring for children, housework or volunteering, even though this work meets needs.",
+   "It does not subtract damage to the environment, such as polluted rivers. It also does not count leisure time, so longer working hours can raise output while people have less free time.",
+   "It is an average, so it says nothing about how income is shared. A high or rising figure can hide a large gap between rich and poor."
+  ],
+  "remember": "A rising real GDP per person does not always mean most people are living better.",
+  "a": {
+   "q": "Why can real GDP per person give a misleading picture of living standards?",
+   "opts": [
+    "It leaves out unpaid work, leisure and how income is shared",
+    "It subtracts too much for damage done to the environment",
+    "It counts only goods and not services made in the economy",
+    "It counts leisure time as if it were paid work"
+   ],
+   "why": "Real GDP per person misses unpaid work and leisure, and as an average it hides how income is shared. It does not subtract environmental damage at all, so the option about subtracting too much is wrong.",
+   "clue": "Think about what people value but are not paid for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X's real GDP per person rises for five years, but most of the extra income goes to a small group of wealthy households. Why might the figure overstate gains for most people?",
+   "opts": [
+    "It is an average, so it hides who receives the income",
+    "It subtracts income that goes to wealthy households",
+    "It falls whenever income becomes less equally shared",
+    "It counts leisure, which wealthy households have more of"
+   ],
+   "why": "Real GDP per person is an average, so it can rise even when most of the gain goes to a few households. It does not fall when sharing becomes less equal, as this case shows: the figure rose while the gap widened.",
+   "clue": "What does an average not tell you about who gets the income?"
+  }
+ },
+ "cleared_by": "recheck"
+}

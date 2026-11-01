@@ -1,0 +1,209 @@
+{
+ "id": "mat-pigeonhole-principle",
+ "title": "The pigeonhole principle",
+ "brief": "1fa4c043f125",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:34Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00602,
+  "check": 0.01043,
+  "fix": 0.02955,
+  "recheck": 0.00668
+ },
+ "draft": {
+  "title": "The pigeonhole principle",
+  "card": [
+   "If more than n items are placed into n boxes, at least one box holds two or more items. This is the pigeonhole principle.",
+   "To use it, decide what the items are and what the boxes are. The boxes are the possible categories each item can fall into.",
+   "Example: 13 people are in a room. There are 12 months, so at least two people share a birth month.",
+   "The principle says some box holds at least two. It does not say which box, and it does not say that every box is used."
+  ],
+  "remember": "More items than boxes means some box holds at least two.",
+  "a": {
+   "q": "A school has 40 students in a Year 11 class. What is the most that can be guaranteed using the pigeonhole principle about their birth months?",
+   "opts": [
+    "At least two share a birth month",
+    "At least four share a birth month",
+    "Every month has at least one student",
+    "Exactly two share a birth month"
+   ],
+   "why": "There are 40 items and 12 boxes, so 40 is more than 12 and some month holds at least two students. The principle does not guarantee that every month is used, and it does not say exactly two.",
+   "clue": "Items are students, boxes are months. Is there a box that must be shared?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a drawer with loose socks in 4 colours, and she picks socks in the dark. What is the smallest number of socks she must pick to be sure of a matching pair?",
+   "opts": [
+    "5",
+    "4",
+    "3",
+    "8"
+   ],
+   "why": "The boxes are the 4 colours. With 4 socks she could have one of each colour, so no pair is certain. A fifth sock must repeat a colour, so 5 is the smallest number that guarantees a pair.",
+   "clue": "Imagine the worst luck: one sock of each colour first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "At least four share a birth month",
+   "also_right": [
+    "At least two share a birth month"
+   ]
+  },
+  "b": {
+   "best": "5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question asks for the most that can be guaranteed. With 40 students and 12 months, ceil(40/12) = 4, so at least four must share a birth month. The intended answer 'At least two share a birth month' is true but is not the most that can be guaranteed. The why wrongly treats it as the best answer, and the option 'At least four share a birth month' is in fact the correct one."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Getting the 'most guaranteed' answer needs the generalised pigeonhole principle (some box holds at least ceil(n/k) items). The card teaches only the 'at least two' version, so the question goes beyond the card. Either reword it to ask what is guaranteed using the principle as stated, and remove the 'at least four' option, or teach the generalised form."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a is wrong as written: with 40 students and 12 months, at least four must share a month, so 'At least two' is not the most that can be guaranteed. The question also needs the generalised principle, which the card does not teach. Question b and the card are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker picked “At least four share a birth month”, not the writer’s answer “At least two share a birth month”.",
+  "Question a: the checker says “At least two share a birth month” could also be right.",
+  "Question a, fact: The question asks for the most that can be guaranteed. With 40 students and 12 months, ceil(40/12) = 4, so at least four must share a birth month. The intended answer 'At least two share a birth month' is true but is not the most that can be guaranteed. The why wrongly treats it as the best answer, and the option 'At least four share a birth month' is in fact the correct one.",
+  "Question a, level: Getting the 'most guaranteed' answer needs the generalised pigeonhole principle (some box holds at least ceil(n/k) items). The card teaches only the 'at least two' version, so the question goes beyond the card. Either reword it to ask what is guaranteed using the principle as stated, and remove the 'at least four' option, or teach the generalised form."
+ ],
+ "proposal": {
+  "title": "The pigeonhole principle",
+  "card": [
+   "If more than n items are placed into n boxes, at least one box holds two or more items. This is the pigeonhole principle.",
+   "To use it, decide what the items are and what the boxes are. The boxes are the possible categories each item can fall into.",
+   "Example: 13 people are in a room. There are 12 months, so at least two people share a birth month. With only 12 people, each could have a different month, so 13 is the fewest that guarantees a match.",
+   "The principle says some box holds at least two. It does not say which box, and it does not say that every box is used."
+  ],
+  "remember": "More items than boxes means some box holds at least two.",
+  "a": {
+   "q": "A Year 11 class has 15 students. Which statement about their birth months must be true?",
+   "opts": [
+    "At least two share a birth month",
+    "Every month has at least one student",
+    "At least two were born in January",
+    "Exactly two share a birth month"
+   ],
+   "why": "There are 15 items and 12 boxes, and 15 is more than 12, so some month holds at least two students. The principle does not say which month, so January is not guaranteed. It also does not say every month is used or that exactly two share.",
+   "clue": "Items are students, boxes are months. Which box is named?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a drawer with loose socks in 4 colours, and she picks socks in the dark. What is the smallest number of socks she must pick to be sure of a matching pair?",
+   "opts": [
+    "5",
+    "4",
+    "3",
+    "8"
+   ],
+   "why": "The boxes are the 4 colours. With 4 socks she could have one of each colour, so no pair is certain. A fifth sock must repeat a colour, so 5 is the smallest number that guarantees a pair.",
+   "clue": "Imagine the worst luck: one sock of each colour first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "At least two share a birth month",
+    "also_right": []
+   },
+   "b": {
+    "best": "5",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question asks for the most that can be guaranteed. With 40 students and 12 months, ceil(40/12) = 4, so at least four must share a birth month. The intended answer 'At least two share a birth month' is true but is not the most that can be guaranteed. The why wrongly treats it as the best answer, and the option 'At least four share a birth month' is in fact the correct one."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Getting the 'most guaranteed' answer needs the generalised pigeonhole principle (some box holds at least ceil(n/k) items). The card teaches only the 'at least two' version, so the question goes beyond the card. Either reword it to ask what is guaranteed using the principle as stated, and remove the 'at least four' option, or teach the generalised form."
+   }
+  ],
+  "flags": [
+   "Question a: the checker picked “At least four share a birth month”, not the writer’s answer “At least two share a birth month”.",
+   "Question a: the checker says “At least two share a birth month” could also be right.",
+   "Question a, fact: The question asks for the most that can be guaranteed. With 40 students and 12 months, ceil(40/12) = 4, so at least four must share a birth month. The intended answer 'At least two share a birth month' is true but is not the most that can be guaranteed. The why wrongly treats it as the best answer, and the option 'At least four share a birth month' is in fact the correct one.",
+   "Question a, level: Getting the 'most guaranteed' answer needs the generalised pigeonhole principle (some box holds at least ceil(n/k) items). The card teaches only the 'at least two' version, so the question goes beyond the card. Either reword it to ask what is guaranteed using the principle as stated, and remove the 'at least four' option, or teach the generalised form."
+  ]
+ },
+ "final": {
+  "title": "The pigeonhole principle",
+  "card": [
+   "If more than n items are placed into n boxes, at least one box holds two or more items. This is the pigeonhole principle.",
+   "To use it, decide what the items are and what the boxes are. The boxes are the possible categories each item can fall into.",
+   "Example: 13 people are in a room. There are 12 months, so at least two people share a birth month. With only 12 people, each could have a different month, so 13 is the fewest that guarantees a match.",
+   "The principle says some box holds at least two. It does not say which box, and it does not say that every box is used."
+  ],
+  "remember": "More items than boxes means some box holds at least two.",
+  "a": {
+   "q": "A Year 11 class has 15 students. Which statement about their birth months must be true?",
+   "opts": [
+    "At least two share a birth month",
+    "Every month has at least one student",
+    "At least two were born in January",
+    "Exactly two share a birth month"
+   ],
+   "why": "There are 15 items and 12 boxes, and 15 is more than 12, so some month holds at least two students. The principle does not say which month, so January is not guaranteed. It also does not say every month is used or that exactly two share.",
+   "clue": "Items are students, boxes are months. Which box is named?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a drawer with loose socks in 4 colours, and she picks socks in the dark. What is the smallest number of socks she must pick to be sure of a matching pair?",
+   "opts": [
+    "5",
+    "4",
+    "3",
+    "8"
+   ],
+   "why": "The boxes are the 4 colours. With 4 socks she could have one of each colour, so no pair is certain. A fifth sock must repeat a colour, so 5 is the smallest number that guarantees a pair.",
+   "clue": "Imagine the worst luck: one sock of each colour first."
+  }
+ },
+ "cleared_by": "recheck"
+}

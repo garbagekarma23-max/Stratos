@@ -1,0 +1,161 @@
+{
+ "id": "eco-income-wealth-inequality",
+ "title": "Income and wealth inequality",
+ "brief": "addb7eef239c",
+ "shortlist": [
+  [
+   "eco-sources-income-wealth",
+   0.581
+  ],
+  [
+   "eco-inequality-australia",
+   0.581
+  ],
+  [
+   "e-income",
+   0.36
+  ],
+  [
+   "e-consumption",
+   0.3
+  ],
+  [
+   "e-bop",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt eco-inequality-australia, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00048,
+  "confirm": 0.00828,
+  "write": 0.00468,
+  "check": 0.01072
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "eco-inequality-australia",
+  "changes": [
+   "Add a sentence stating that income is also spread unevenly across households, not only less unevenly than wealth, so the card matches the brief's claim that both are unequal."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches that wealth is spread more unevenly than income in Australia, which is the core of the new point, but it does not state that income is also unevenly spread, so one sentence needs adding.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point pairs the flow-versus-stock definitions with the idea that wealth is spread more unevenly than income, but no bank card does both: 'Sources of income and wealth' defines the terms without inequality, and 'Inequality in Australia' covers the uneven spread and group differences without the definitions.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Income and wealth inequality",
+  "card": [
+   [
+    "Income",
+    "a flow of money received over a period of time, such as wages, rent or interest. It is measured per week or per year."
+   ],
+   [
+    "Wealth",
+    "a stock of assets owned at one point in time, minus debts. Assets include a home, shares and savings."
+   ],
+   "Both are spread unevenly across households. This is called inequality.",
+   "Wealth is spread more unevenly than income. Many households own few assets, while a small share own a large amount."
+  ],
+  "remember": "Income is a flow over time. Wealth is a stock at a point in time. Wealth is more unevenly spread.",
+  "a": {
+   "q": "Which of these is an example of wealth rather than income?",
+   "opts": [
+    "A house that a family owns outright",
+    "A fortnightly wage paid to a nurse",
+    "Rent paid each week to a landlord",
+    "Interest paid on a bank account each year"
+   ],
+   "why": "A house is an asset owned at a point in time, so it is part of wealth. Interest is tempting because it comes from savings, but it is money received over a period, so it is income.",
+   "clue": "Which one is owned now, not received over time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya earns a high salary but has just started working and has savings of only $2000. Her uncle Tom is retired, earns little, and owns a paid-off house and shares. Which statement is correct?",
+   "opts": [
+    "Priya has the higher income and Tom has more wealth",
+    "Priya has the higher income and also more wealth",
+    "Tom has the higher income and also more wealth",
+    "Tom has the higher income and Priya has more wealth"
+   ],
+   "why": "Priya's salary is a high flow of income, but her assets are small. Tom's house and shares are a large stock of wealth, even though his income is low. Having a high income does not always mean having high wealth.",
+   "clue": "Compare the money coming in with the assets owned."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A house that a family owns outright",
+   "also_right": []
+  },
+  "b": {
+   "best": "Priya has the higher income and Tom has more wealth",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Income and wealth inequality",
+  "card": [
+   [
+    "Income",
+    "a flow of money received over a period of time, such as wages, rent or interest. It is measured per week or per year."
+   ],
+   [
+    "Wealth",
+    "a stock of assets owned at one point in time, minus debts. Assets include a home, shares and savings."
+   ],
+   "Both are spread unevenly across households. This is called inequality.",
+   "Wealth is spread more unevenly than income. Many households own few assets, while a small share own a large amount."
+  ],
+  "remember": "Income is a flow over time. Wealth is a stock at a point in time. Wealth is more unevenly spread.",
+  "a": {
+   "q": "Which of these is an example of wealth rather than income?",
+   "opts": [
+    "A house that a family owns outright",
+    "A fortnightly wage paid to a nurse",
+    "Rent paid each week to a landlord",
+    "Interest paid on a bank account each year"
+   ],
+   "why": "A house is an asset owned at a point in time, so it is part of wealth. Interest is tempting because it comes from savings, but it is money received over a period, so it is income.",
+   "clue": "Which one is owned now, not received over time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya earns a high salary but has just started working and has savings of only $2000. Her uncle Tom is retired, earns little, and owns a paid-off house and shares. Which statement is correct?",
+   "opts": [
+    "Priya has the higher income and Tom has more wealth",
+    "Priya has the higher income and also more wealth",
+    "Tom has the higher income and also more wealth",
+    "Tom has the higher income and Priya has more wealth"
+   ],
+   "why": "Priya's salary is a high flow of income, but her assets are small. Tom's house and shares are a large stock of wealth, even though his income is low. Having a high income does not always mean having high wealth.",
+   "clue": "Compare the money coming in with the assets owned."
+  }
+ },
+ "cleared_by": "checker"
+}

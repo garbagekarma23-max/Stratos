@@ -1,0 +1,148 @@
+{
+ "id": "mat-linear-models-context",
+ "title": "Linear models in context",
+ "brief": "89c768130482",
+ "shortlist": [
+  [
+   "mat-y-intercept-context",
+   0.396
+  ],
+  [
+   "mat-linear-models",
+   0.379
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.318
+  ],
+  [
+   "mat-linear-functions",
+   0.284
+  ],
+  [
+   "mat-derivatives-as-rates-context",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:32Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00615,
+  "check": 0.00656
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point teaches both the gradient as a rate and the intercept as a starting value, and the closest points either cover only one of these or are broader, covering prediction and extrapolation as well.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Linear models in context",
+  "card": [
+   "A linear model has the form y = mx + c. It fits a situation where something changes by the same amount for each step.",
+   [
+    "Gradient",
+    "m is a rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre."
+   ],
+   [
+    "Intercept",
+    "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+  ],
+  "remember": "In a linear model, the gradient is the rate and the intercept is the starting value.",
+  "a": {
+   "q": "A taxi fare in Geelong is F = 2.5d + 4, where d is the distance in km. What does the 2.5 mean?",
+   "opts": [
+    "The fare rises by $2.50 for each extra kilometre",
+    "The fare for a trip of 0 km is $2.50",
+    "The fare for a trip of 4 km is $2.50",
+    "The fare rises by $4 for each extra kilometre"
+   ],
+   "why": "The 2.5 is the gradient, so it is the rate: $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+   "clue": "Which number multiplies d?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya hires a ladder in Bendigo. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+   "opts": [
+    "$90",
+    "$60",
+    "$150",
+    "$102"
+   ],
+   "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The fare rises by $2.50 for each extra kilometre",
+   "also_right": []
+  },
+  "b": {
+   "best": "$90",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear models in context",
+  "card": [
+   "A linear model has the form y = mx + c. It fits a situation where something changes by the same amount for each step.",
+   [
+    "Gradient",
+    "m is a rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre."
+   ],
+   [
+    "Intercept",
+    "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+   ],
+   "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+  ],
+  "remember": "In a linear model, the gradient is the rate and the intercept is the starting value.",
+  "a": {
+   "q": "A taxi fare in Geelong is F = 2.5d + 4, where d is the distance in km. What does the 2.5 mean?",
+   "opts": [
+    "The fare rises by $2.50 for each extra kilometre",
+    "The fare for a trip of 0 km is $2.50",
+    "The fare for a trip of 4 km is $2.50",
+    "The fare rises by $4 for each extra kilometre"
+   ],
+   "why": "The 2.5 is the gradient, so it is the rate: $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+   "clue": "Which number multiplies d?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya hires a ladder in Bendigo. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+   "opts": [
+    "$90",
+    "$60",
+    "$150",
+    "$102"
+   ],
+   "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+   "clue": "Multiply the daily rate by 5, then add the fixed amount."
+  }
+ },
+ "cleared_by": "checker"
+}

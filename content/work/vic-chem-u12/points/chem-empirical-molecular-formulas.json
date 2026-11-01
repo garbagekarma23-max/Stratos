@@ -1,0 +1,148 @@
+{
+ "id": "chem-empirical-molecular-formulas",
+ "title": "Empirical and molecular formulas",
+ "brief": "dba395abc910",
+ "shortlist": [
+  [
+   "chem-empirical-formulas-percentage-composition",
+   0.685
+  ],
+  [
+   "chem-molar-mass-moles",
+   0.267
+  ],
+  [
+   "chem-balanced-equations",
+   0.234
+  ],
+  [
+   "chem-isomers",
+   0.221
+  ],
+  [
+   "chem-mass-spectrometry",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00735,
+  "check": 0.00829
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers empirical formulas from percentage composition but never teaches the step from molar mass to the actual molecular formula, which the new point requires, so a new point is needed rather than a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Empirical and molecular formulas",
+  "card": [
+   [
+    "Empirical formula",
+    "the simplest whole-number ratio of atoms of each element in a compound."
+   ],
+   [
+    "Molecular formula",
+    "the actual number of atoms of each element in one molecule. It is a whole-number multiple of the empirical formula."
+   ],
+   "To find the empirical formula, take the mass of each element, such as from percentage composition in a 100 g sample. Divide each by its molar mass to get moles, then divide all by the smallest number of moles.",
+   "To find the molecular formula, divide the compound's molar mass by the empirical formula's molar mass. Multiply the empirical formula by this whole number."
+  ],
+  "remember": "Percentage composition gives the ratio. Molar mass gives the multiple.",
+  "a": {
+   "q": "A compound has the empirical formula CH2O and a molar mass of 180 g/mol. The empirical formula mass is 30 g/mol. What is its molecular formula?",
+   "opts": [
+    "C6H12O6",
+    "C3H6O3",
+    "C2H4O2",
+    "CH2O"
+   ],
+   "why": "180 ÷ 30 = 6, so multiply every subscript in CH2O by 6 to get C6H12O6. C3H6O3 would be a multiple of 3, which gives only 90 g/mol.",
+   "clue": "How many times does the empirical mass fit into the molar mass?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound is 85.7% carbon and 14.3% hydrogen by mass. Its molar mass is 56 g/mol. Use C = 12 and H = 1. What is its molecular formula?",
+   "opts": [
+    "C4H8",
+    "CH2",
+    "C2H4",
+    "C3H6"
+   ],
+   "why": "In 100 g: C = 85.7 ÷ 12 = 7.14 mol and H = 14.3 ÷ 1 = 14.3 mol. The ratio is 1 : 2, so the empirical formula is CH2, with mass 14 g/mol. 56 ÷ 14 = 4, giving C4H8. CH2 is only the ratio, not the actual molecule.",
+   "clue": "Find the ratio first, then scale it up using the molar mass."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "C6H12O6",
+   "also_right": []
+  },
+  "b": {
+   "best": "C4H8",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both calculations check out (180 ÷ 30 = 6 gives C6H12O6; a 1:2 ratio gives CH2, and 56 ÷ 14 = 4 gives C4H8), and the card, remember line and explanations are accurate."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Empirical and molecular formulas",
+  "card": [
+   [
+    "Empirical formula",
+    "the simplest whole-number ratio of atoms of each element in a compound."
+   ],
+   [
+    "Molecular formula",
+    "the actual number of atoms of each element in one molecule. It is a whole-number multiple of the empirical formula."
+   ],
+   "To find the empirical formula, take the mass of each element, such as from percentage composition in a 100 g sample. Divide each by its molar mass to get moles, then divide all by the smallest number of moles.",
+   "To find the molecular formula, divide the compound's molar mass by the empirical formula's molar mass. Multiply the empirical formula by this whole number."
+  ],
+  "remember": "Percentage composition gives the ratio. Molar mass gives the multiple.",
+  "a": {
+   "q": "A compound has the empirical formula CH2O and a molar mass of 180 g/mol. The empirical formula mass is 30 g/mol. What is its molecular formula?",
+   "opts": [
+    "C6H12O6",
+    "C3H6O3",
+    "C2H4O2",
+    "CH2O"
+   ],
+   "why": "180 ÷ 30 = 6, so multiply every subscript in CH2O by 6 to get C6H12O6. C3H6O3 would be a multiple of 3, which gives only 90 g/mol.",
+   "clue": "How many times does the empirical mass fit into the molar mass?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound is 85.7% carbon and 14.3% hydrogen by mass. Its molar mass is 56 g/mol. Use C = 12 and H = 1. What is its molecular formula?",
+   "opts": [
+    "C4H8",
+    "CH2",
+    "C2H4",
+    "C3H6"
+   ],
+   "why": "In 100 g: C = 85.7 ÷ 12 = 7.14 mol and H = 14.3 ÷ 1 = 14.3 mol. The ratio is 1 : 2, so the empirical formula is CH2, with mass 14 g/mol. 56 ÷ 14 = 4, giving C4H8. CH2 is only the ratio, not the actual molecule.",
+   "clue": "Find the ratio first, then scale it up using the molar mass."
+  }
+ },
+ "cleared_by": "checker"
+}

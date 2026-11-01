@@ -1,0 +1,154 @@
+{
+ "id": "mat-transformations-graphs",
+ "title": "Transformations of graphs",
+ "brief": "f2af9f117443",
+ "shortlist": [
+  [
+   "mat-horizontal-dilations",
+   0.375
+  ],
+  [
+   "mat-reflections",
+   0.321
+  ],
+  [
+   "mat-vertical-dilations",
+   0.293
+  ],
+  [
+   "mat-combining-transformations",
+   0.283
+  ],
+  [
+   "mat-horizontal-translations",
+   0.273
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.0094,
+  "check": 0.01056
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers dilations, reflections and translations together as one overview, but each bank point teaches only one transformation type, and the Year 12 combining-transformations point goes beyond this Year 11 depth, so no single bank point is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Transformations of graphs",
+  "card": [
+   [
+    "Translation",
+    "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+   ],
+   [
+    "Reflection",
+    "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."
+   ],
+   [
+    "Dilation",
+    "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+   ],
+   "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+  ],
+  "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+  "a": {
+   "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
+   "opts": [
+    "y = (x − 3)² − 2",
+    "y = (x + 3)² − 2",
+    "y = (x − 3)² + 2",
+    "y = (x + 3)² + 2"
+   ],
+   "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+   "clue": "Right 3 puts a minus inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
+   "opts": [
+    "(12, −4)",
+    "(3, −4)",
+    "(−12, 4)",
+    "(12, 4)"
+   ],
+   "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
+   "clue": "Deal with x and y separately: one is stretched, one is flipped."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "y = (x − 3)² − 2",
+   "also_right": []
+  },
+  "b": {
+   "best": "(12, −4)",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transformations of graphs",
+  "card": [
+   [
+    "Translation",
+    "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+   ],
+   [
+    "Reflection",
+    "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."
+   ],
+   [
+    "Dilation",
+    "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+   ],
+   "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+  ],
+  "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+  "a": {
+   "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
+   "opts": [
+    "y = (x − 3)² − 2",
+    "y = (x + 3)² − 2",
+    "y = (x − 3)² + 2",
+    "y = (x + 3)² + 2"
+   ],
+   "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+   "clue": "Right 3 puts a minus inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
+   "opts": [
+    "(12, −4)",
+    "(3, −4)",
+    "(−12, 4)",
+    "(12, 4)"
+   ],
+   "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
+   "clue": "Deal with x and y separately: one is stretched, one is flipped."
+  }
+ },
+ "cleared_by": "checker"
+}

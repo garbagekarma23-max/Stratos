@@ -1,0 +1,387 @@
+{
+ "id": "chem-greenhouse-gases",
+ "title": "Greenhouse gases",
+ "brief": "a3836bdeda7e",
+ "shortlist": [
+  [
+   "geo-atmosphere",
+   0.375
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b fact)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: flagged",
+  "2026-11-01T13:49:26Z fix: suggested",
+  "2026-11-01T13:57:15Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 2,
+  "recheck": 2
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.01286,
+  "check": 0.02355,
+  "fix": 0.04603,
+  "recheck": 0.02223
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-atmosphere, covers the greenhouse effect only as one part of a broader geography card on atmospheric composition, weather and climate, and its questions are geography-focused, so it is not the same chemistry idea about infrared absorption at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, fact: Why (b) says warming depends on absorbing infrared radiation 'not on how much of a gas there is'. That is misleading. The amount of a greenhouse gas does matter, since more CO2 or methane means more warming. A gas must be able to absorb infrared to warm the air at all, but its concentration also affects how much it warms. Reword, for example: 'Being common does not matter if a gas cannot absorb infrared radiation.'",
+ "rejected": {
+  "title": "Greenhouse gases",
+  "card": [
+   "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation, which is heat we cannot see.",
+   "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+   "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. As their bonds stretch and bend, charge shifts unevenly across the molecule, which lets them absorb infrared radiation.",
+   "The main gases in air, nitrogen (N2) and oxygen (O2), are each made of two identical atoms. Their vibrations do not shift charge unevenly, so they absorb almost no infrared radiation and add almost nothing to this warming."
+  ],
+  "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+  "a": {
+   "q": "Why does carbon dioxide warm the atmosphere?",
+   "opts": [
+    "It absorbs infrared radiation from the warm surface",
+    "It reflects incoming sunlight back out into space",
+    "It makes up most of the gas in Earth's atmosphere",
+    "It releases new heat as it reacts with oxygen in air"
+   ],
+   "why": "Carbon dioxide absorbs infrared radiation from the warm surface and sends some back down, which warms the lower atmosphere. Reflecting sunlight away would cool Earth, not warm it.",
+   "clue": "Think about what the warm surface gives off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+   "opts": [
+    "Nitrogen molecules absorb almost no infrared radiation",
+    "Nitrogen molecules reflect infrared back to the surface",
+    "Nitrogen is present in too small an amount to matter",
+    "Nitrogen absorbs infrared but sends none back down"
+   ],
+   "why": "Warming depends on absorbing infrared radiation, not on how much of a gas there is. A nitrogen molecule is made of two identical atoms, so its vibrations do not shift charge unevenly and it absorbs almost no infrared. Saying nitrogen is too scarce is wrong, as Dev is right that it is the most common gas.",
+   "clue": "What must a gas do with infrared radiation to warm the air?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "recheck",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, fact: Why (b) says warming depends on absorbing infrared radiation 'not on how much of a gas there is'. That is misleading. The amount of a greenhouse gas does matter, since more CO2 or methane means more warming. A gas must be able to absorb infrared to warm the air at all, but its concentration also affects how much it warms. Reword, for example: 'Being common does not matter if a gas cannot absorb infrared radiation.'"
+   ],
+   "saved": {
+    "draft": {
+     "title": "Greenhouse gases",
+     "card": [
+      "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation, which is heat we cannot see.",
+      "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+      "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. Their molecules have more than two atoms and can absorb infrared radiation.",
+      "The main gases in air, nitrogen (N2) and oxygen (O2), are made of two atoms and absorb very little infrared radiation. They add almost nothing to this warming."
+     ],
+     "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+     "a": {
+      "q": "Why does carbon dioxide warm the atmosphere?",
+      "opts": [
+       "It absorbs infrared radiation given off by Earth's surface",
+       "It reflects all sunlight back into space",
+       "It makes up most of the air around us",
+       "It makes new heat when it reacts with oxygen"
+      ],
+      "why": "Carbon dioxide absorbs infrared radiation from the warm surface and sends some back down. Reflecting sunlight away would cool Earth, not warm it.",
+      "clue": "Think about what the warm surface gives off."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+      "opts": [
+       "Nitrogen molecules absorb very little infrared radiation",
+       "Nitrogen molecules absorb only visible light",
+       "Nitrogen is present in too small an amount to matter",
+       "Nitrogen absorbs infrared but sends none back down"
+      ],
+      "why": "Warming depends on absorbing infrared radiation, not on how much of a gas there is. Nitrogen has two atoms per molecule and absorbs very little, so it adds almost nothing.",
+      "clue": "What must a gas do with infrared radiation to warm the air?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It absorbs infrared radiation given off by Earth's surface",
+      "also_right": []
+     },
+     "b": {
+      "best": "Nitrogen molecules absorb very little infrared radiation",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card implies that having only two atoms is why N2 and O2 absorb little infrared. The real reason is that they are made of two identical atoms, so their vibrations cause no change in dipole. Two-atom molecules with different atoms, such as CO and HCl, do absorb infrared. Why (b) repeats this causal link ('Nitrogen has two atoms per molecule and absorbs very little'). Year 11 students could carry the wrong rule forward."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one with a precise detail ('given off by Earth's surface'), so a student could pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and correct. The card and why (b) suggest two-atom molecules can't absorb infrared because of their atom count, when it is really about the two atoms being identical (CO and HCl do absorb). In question a the right option stands out as the longest and most detailed."
+    },
+    "flags": [
+     "Card, fact: The card implies that having only two atoms is why N2 and O2 absorb little infrared. The real reason is that they are made of two identical atoms, so their vibrations cause no change in dipole. Two-atom molecules with different atoms, such as CO and HCl, do absorb infrared. Why (b) repeats this causal link ('Nitrogen has two atoms per molecule and absorbs very little'). Year 11 students could carry the wrong rule forward.",
+     "Question a, wording: The right option is clearly the longest and the only one with a precise detail ('given off by Earth's surface'), so a student could pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Greenhouse gases",
+     "card": [
+      "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation, which is heat we cannot see.",
+      "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+      "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. As their bonds stretch and bend, charge shifts unevenly across the molecule, which lets them absorb infrared radiation.",
+      "The main gases in air, nitrogen (N2) and oxygen (O2), are each made of two identical atoms. Their vibrations do not shift charge unevenly, so they absorb almost no infrared radiation and add almost nothing to this warming."
+     ],
+     "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+     "a": {
+      "q": "Why does carbon dioxide warm the atmosphere?",
+      "opts": [
+       "It absorbs infrared radiation from the warm surface",
+       "It reflects incoming sunlight back out into space",
+       "It makes up most of the gas in Earth's atmosphere",
+       "It releases new heat as it reacts with oxygen in air"
+      ],
+      "why": "Carbon dioxide absorbs infrared radiation from the warm surface and sends some back down, which warms the lower atmosphere. Reflecting sunlight away would cool Earth, not warm it.",
+      "clue": "Think about what the warm surface gives off."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+      "opts": [
+       "Nitrogen molecules absorb almost no infrared radiation",
+       "Nitrogen molecules reflect infrared back to the surface",
+       "Nitrogen is present in too small an amount to matter",
+       "Nitrogen absorbs infrared but sends none back down"
+      ],
+      "why": "Warming depends on absorbing infrared radiation, not on how much of a gas there is. A nitrogen molecule is made of two identical atoms, so its vibrations do not shift charge unevenly and it absorbs almost no infrared. Saying nitrogen is too scarce is wrong, as Dev is right that it is the most common gas.",
+      "clue": "What must a gas do with infrared radiation to warm the air?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It absorbs infrared radiation from the warm surface",
+       "also_right": []
+      },
+      "b": {
+       "best": "Nitrogen molecules absorb almost no infrared radiation",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "fact",
+        "detail": "Why (b) says warming depends on absorbing infrared radiation 'not on how much of a gas there is'. That is misleading. The amount of a greenhouse gas does matter, since more CO2 or methane means more warming. A gas must be able to absorb infrared to warm the air at all, but its concentration also affects how much it warms. Reword, for example: 'Being common does not matter if a gas cannot absorb infrared radiation.'"
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear answer. One problem: the explanation for question b wrongly suggests the amount of a gas does not affect warming, and it should be reworded."
+     },
+     "flags": [
+      "Question b, fact: Why (b) says warming depends on absorbing infrared radiation 'not on how much of a gas there is'. That is misleading. The amount of a greenhouse gas does matter, since more CO2 or methane means more warming. A gas must be able to absorb infrared to warm the air at all, but its concentration also affects how much it warms. Reword, for example: 'Being common does not matter if a gas cannot absorb infrared radiation.'"
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Greenhouse gases",
+  "card": [
+   "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation, which is heat we cannot see.",
+   "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+   "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. As their bonds stretch and bend, charge shifts unevenly across the molecule, which lets them absorb infrared radiation.",
+   "The main gases in air, nitrogen (N2) and oxygen (O2), are each made of two identical atoms. Their vibrations do not shift charge unevenly, so they absorb almost no infrared radiation and add almost nothing to this warming."
+  ],
+  "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+  "a": {
+   "q": "Why does carbon dioxide warm the atmosphere?",
+   "opts": [
+    "It absorbs infrared radiation from the warm surface",
+    "It reflects incoming sunlight back out into space",
+    "It makes up most of the gas in Earth's atmosphere",
+    "It releases new heat as it reacts with oxygen in air"
+   ],
+   "why": "Carbon dioxide absorbs infrared radiation from the warm surface and sends some back down, which warms the lower atmosphere. Reflecting sunlight away would cool Earth, not warm it.",
+   "clue": "Think about what the warm surface gives off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+   "opts": [
+    "Nitrogen molecules absorb almost no infrared radiation",
+    "Nitrogen molecules reflect infrared back to the surface",
+    "Nitrogen is present in too small an amount to matter",
+    "Nitrogen absorbs infrared but sends none back down"
+   ],
+   "why": "Being common does not matter if a gas cannot absorb infrared radiation. A nitrogen molecule is made of two identical atoms, so its vibrations do not shift charge unevenly and it absorbs almost no infrared. Saying nitrogen is too scarce is wrong, as Dev is right that it is the most common gas.",
+   "clue": "What must a gas do with infrared radiation to warm the air?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It absorbs infrared radiation from the warm surface",
+   "also_right": []
+  },
+  "b": {
+   "best": "Nitrogen molecules absorb almost no infrared radiation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Calling infrared radiation \"heat we cannot see\" blurs radiation with heat. Infrared is electromagnetic radiation that carries energy and warms what absorbs it. Better: \"invisible radiation that carries energy and warms what absorbs it.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer each. The only issue is a small imprecision on the card, which calls infrared radiation \"heat\"; it should be described as radiation that carries energy."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Calling infrared radiation \"heat we cannot see\" blurs radiation with heat. Infrared is electromagnetic radiation that carries energy and warms what absorbs it. Better: \"invisible radiation that carries energy and warms what absorbs it.\""
+ ],
+ "proposal": {
+  "title": "Greenhouse gases",
+  "card": [
+   "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation: invisible radiation that carries energy and warms what absorbs it.",
+   "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+   "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. As their bonds stretch and bend, charge shifts unevenly across the molecule, which lets them absorb infrared radiation.",
+   "The main gases in air, nitrogen (N2) and oxygen (O2), are each made of two identical atoms. Their vibrations do not shift charge unevenly, so they absorb almost no infrared radiation and add almost nothing to this warming."
+  ],
+  "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+  "a": {
+   "q": "Why does carbon dioxide warm the atmosphere?",
+   "opts": [
+    "It absorbs infrared radiation given off by Earth's surface",
+    "It reflects incoming sunlight back out into space",
+    "It makes up most of the gas in Earth's atmosphere",
+    "It releases new energy as it reacts with oxygen in air"
+   ],
+   "why": "Carbon dioxide absorbs infrared radiation from the surface and sends some back down, which warms the lower atmosphere. Reflecting sunlight away would cool Earth, not warm it.",
+   "clue": "Think about what the warm surface gives off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+   "opts": [
+    "Nitrogen molecules absorb almost no infrared radiation",
+    "Nitrogen molecules reflect infrared back to the surface",
+    "Nitrogen is present in too small an amount to matter",
+    "Nitrogen absorbs infrared but sends none back down"
+   ],
+   "why": "Being common does not matter if a gas cannot absorb infrared radiation. A nitrogen molecule is made of two identical atoms, so its vibrations do not shift charge unevenly and it absorbs almost no infrared. Saying nitrogen is too scarce is wrong, as Dev is right that it is the most common gas.",
+   "clue": "What must a gas do with infrared radiation to warm the air?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T13:57:15Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It absorbs infrared radiation given off by Earth's surface",
+    "also_right": []
+   },
+   "b": {
+    "best": "Nitrogen molecules absorb almost no infrared radiation",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T13:57:15Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 19,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Calling infrared radiation \"heat we cannot see\" blurs radiation with heat. Infrared is electromagnetic radiation that carries energy and warms what absorbs it. Better: \"invisible radiation that carries energy and warms what absorbs it.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: Calling infrared radiation \"heat we cannot see\" blurs radiation with heat. Infrared is electromagnetic radiation that carries energy and warms what absorbs it. Better: \"invisible radiation that carries energy and warms what absorbs it.\""
+  ]
+ },
+ "final": {
+  "title": "Greenhouse gases",
+  "card": [
+   "Sunlight warms Earth's surface. The warm surface gives off energy as infrared radiation: invisible radiation that carries energy and warms what absorbs it.",
+   "Greenhouse gases absorb some of this infrared radiation and send some of it back towards the surface. This warms the lower atmosphere.",
+   "Carbon dioxide (CO2), methane (CH4) and water vapour (H2O) are greenhouse gases. As their bonds stretch and bend, charge shifts unevenly across the molecule, which lets them absorb infrared radiation.",
+   "The main gases in air, nitrogen (N2) and oxygen (O2), are each made of two identical atoms. Their vibrations do not shift charge unevenly, so they absorb almost no infrared radiation and add almost nothing to this warming."
+  ],
+  "remember": "Greenhouse gases absorb infrared radiation from Earth's surface and warm the atmosphere.",
+  "a": {
+   "q": "Why does carbon dioxide warm the atmosphere?",
+   "opts": [
+    "It absorbs infrared radiation given off by Earth's surface",
+    "It reflects incoming sunlight back out into space",
+    "It makes up most of the gas in Earth's atmosphere",
+    "It releases new energy as it reacts with oxygen in air"
+   ],
+   "why": "Carbon dioxide absorbs infrared radiation from the surface and sends some back down, which warms the lower atmosphere. Reflecting sunlight away would cool Earth, not warm it.",
+   "clue": "Think about what the warm surface gives off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev says nitrogen is the most common gas in air, so it must cause most of the greenhouse warming. Why is he wrong?",
+   "opts": [
+    "Nitrogen molecules absorb almost no infrared radiation",
+    "Nitrogen molecules reflect infrared back to the surface",
+    "Nitrogen is present in too small an amount to matter",
+    "Nitrogen absorbs infrared but sends none back down"
+   ],
+   "why": "Being common does not matter if a gas cannot absorb infrared radiation. A nitrogen molecule is made of two identical atoms, so its vibrations do not shift charge unevenly and it absorbs almost no infrared. Saying nitrogen is too scarce is wrong, as Dev is right that it is the most common gas.",
+   "clue": "What must a gas do with infrared radiation to warm the air?"
+  }
+ }
+}

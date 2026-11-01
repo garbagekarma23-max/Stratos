@@ -1,0 +1,255 @@
+{
+ "id": "eco-relative-prices-resource-allocation",
+ "title": "Relative prices and resource allocation",
+ "brief": "b7db13b1f031",
+ "shortlist": [
+  [
+   "e-pricemech",
+   0.285
+  ],
+  [
+   "e-surplus",
+   0.282
+  ],
+  [
+   "e-cpi",
+   0.235
+  ],
+  [
+   "e-demand",
+   0.225
+  ],
+  [
+   "eco-terms-trade",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00506,
+  "check": 0.016,
+  "fix": 0.02636,
+  "recheck": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, e-pricemech, covers the price mechanism's rationing, signalling and incentive functions together, so it is broader than this point's focus on a good's price rising relative to others and resources shifting toward or away from it.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Relative prices and resource allocation",
+  "card": [
+   "A relative price is the price of one good compared with the prices of other goods. It can change even when no single price seems unusual, for example if one price rises while most others stay the same.",
+   [
+    "Producers",
+    "When a good's relative price rises, it becomes more profitable to make. Firms move resources such as labour, land and machinery toward that good."
+   ],
+   [
+    "Consumers",
+    "When a good's relative price rises, it becomes more costly compared with other goods. Consumers tend to buy less of it and switch to cheaper options."
+   ],
+   "A fall in a good's relative price works the other way. Producers move resources away from it, and consumers tend to buy more of it. In this way, prices help guide how resources are allocated."
+  ],
+  "remember": "A higher relative price pulls resources in to make the good and pushes buyers toward other goods.",
+  "a": {
+   "q": "The price of avocados rises while most other prices stay the same. What would producers be likely to do?",
+   "opts": [
+    "Move more resources into growing avocados",
+    "Move resources out of growing avocados",
+    "Leave resources unchanged as costs are fixed",
+    "Switch to making goods with falling prices"
+   ],
+   "why": "A higher relative price makes avocados more profitable to grow, so producers move resources toward them. Moving resources away is what a fall in relative price would lead to.",
+   "clue": "Think about where profit is now higher."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia runs a farm near Shepparton. The price of apples falls while the prices of pears and most other goods stay steady. What is most likely to happen?",
+   "opts": [
+    "Mia moves land toward pears, and buyers buy more apples",
+    "Mia moves land toward apples, and buyers buy more apples",
+    "Mia moves land toward pears, and buyers buy fewer apples",
+    "Mia moves land toward apples, and buyers buy fewer apples"
+   ],
+   "why": "Apples are now cheaper relative to other goods, so growing them is less profitable and Mia moves land toward pears. Apples are also cheaper for buyers than before, so they tend to buy more of them. Only the first option gets both responses right.",
+   "clue": "Producers follow profit, while buyers follow the cheaper good."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Move more resources into growing avocados",
+   "also_right": []
+  },
+  "b": {
+   "best": "Mia moves land toward pears, and buyers buy more apples",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 'Only the first option gets both responses right', but options are shown in random order. Here the correct option ('Mia moves land toward pears, and buyers buy more apples') is fourth, and the first option shown is wrong, so students could be misled. Refer to the option by its wording, not its position."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'It can change even when no single price seems unusual, for example if one price rises while most others stay the same' is muddled. The example describes a single price changing, which contradicts 'no single price seems unusual'. A clearer example would be all prices rising but one rising faster, or one price staying the same while others rise."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Answers and economics are correct. The why for (b) wrongly calls the correct answer 'the first option' when options are shuffled, and the card's first bullet gives a confusing example of a relative price change."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why says 'Only the first option gets both responses right', but options are shown in random order. Here the correct option ('Mia moves land toward pears, and buyers buy more apples') is fourth, and the first option shown is wrong, so students could be misled. Refer to the option by its wording, not its position.",
+  "Card, wording: 'It can change even when no single price seems unusual, for example if one price rises while most others stay the same' is muddled. The example describes a single price changing, which contradicts 'no single price seems unusual'. A clearer example would be all prices rising but one rising faster, or one price staying the same while others rise."
+ ],
+ "proposal": {
+  "title": "Relative prices and resource allocation",
+  "card": [
+   "A relative price is the price of one good compared with the prices of other goods. It can change even when every price rises, if one price rises faster than the rest.",
+   [
+    "Producers",
+    "When a good's relative price rises, it becomes more profitable to make. Firms move resources such as labour, land and machinery toward that good."
+   ],
+   [
+    "Consumers",
+    "When a good's relative price rises, it becomes more costly compared with other goods. Consumers tend to buy less of it and switch to cheaper options."
+   ],
+   "A fall in a good's relative price works the other way. Producers move resources away from it, and consumers tend to buy more of it. In this way, prices help guide how resources are allocated."
+  ],
+  "remember": "A higher relative price pulls resources in to make the good and pushes buyers toward other goods.",
+  "a": {
+   "q": "The price of avocados rises while most other prices stay the same. What would producers be likely to do?",
+   "opts": [
+    "Move more resources into growing avocados",
+    "Move resources out of growing avocados",
+    "Leave resources unchanged as costs are fixed",
+    "Switch to making goods with falling prices"
+   ],
+   "why": "A higher relative price makes avocados more profitable to grow, so producers move resources toward them. Moving resources away is what a fall in relative price would lead to.",
+   "clue": "Think about where profit is now higher."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia runs a farm near Shepparton. The price of apples falls while the prices of pears and most other goods stay steady. What is most likely to happen?",
+   "opts": [
+    "Mia moves land toward pears, and buyers buy more apples",
+    "Mia moves land toward apples, and buyers buy more apples",
+    "Mia moves land toward pears, and buyers buy fewer apples",
+    "Mia moves land toward apples, and buyers buy fewer apples"
+   ],
+   "why": "Apples are now cheaper relative to other goods, so growing them is less profitable and Mia moves land toward pears. For buyers, the lower relative price makes apples cheaper than before, so they tend to buy more. Thinking buyers would buy fewer apples mixes up the consumer response with the producer one.",
+   "clue": "Producers follow profit, while buyers follow the cheaper good."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Move more resources into growing avocados",
+    "also_right": []
+   },
+   "b": {
+    "best": "Mia moves land toward pears, and buyers buy more apples",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says 'Only the first option gets both responses right', but options are shown in random order. Here the correct option ('Mia moves land toward pears, and buyers buy more apples') is fourth, and the first option shown is wrong, so students could be misled. Refer to the option by its wording, not its position."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'It can change even when no single price seems unusual, for example if one price rises while most others stay the same' is muddled. The example describes a single price changing, which contradicts 'no single price seems unusual'. A clearer example would be all prices rising but one rising faster, or one price staying the same while others rise."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why says 'Only the first option gets both responses right', but options are shown in random order. Here the correct option ('Mia moves land toward pears, and buyers buy more apples') is fourth, and the first option shown is wrong, so students could be misled. Refer to the option by its wording, not its position.",
+   "Card, wording: 'It can change even when no single price seems unusual, for example if one price rises while most others stay the same' is muddled. The example describes a single price changing, which contradicts 'no single price seems unusual'. A clearer example would be all prices rising but one rising faster, or one price staying the same while others rise."
+  ]
+ },
+ "final": {
+  "title": "Relative prices and resource allocation",
+  "card": [
+   "A relative price is the price of one good compared with the prices of other goods. It can change even when every price rises, if one price rises faster than the rest.",
+   [
+    "Producers",
+    "When a good's relative price rises, it becomes more profitable to make. Firms move resources such as labour, land and machinery toward that good."
+   ],
+   [
+    "Consumers",
+    "When a good's relative price rises, it becomes more costly compared with other goods. Consumers tend to buy less of it and switch to cheaper options."
+   ],
+   "A fall in a good's relative price works the other way. Producers move resources away from it, and consumers tend to buy more of it. In this way, prices help guide how resources are allocated."
+  ],
+  "remember": "A higher relative price pulls resources in to make the good and pushes buyers toward other goods.",
+  "a": {
+   "q": "The price of avocados rises while most other prices stay the same. What would producers be likely to do?",
+   "opts": [
+    "Move more resources into growing avocados",
+    "Move resources out of growing avocados",
+    "Leave resources unchanged as costs are fixed",
+    "Switch to making goods with falling prices"
+   ],
+   "why": "A higher relative price makes avocados more profitable to grow, so producers move resources toward them. Moving resources away is what a fall in relative price would lead to.",
+   "clue": "Think about where profit is now higher."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia runs a farm near Shepparton. The price of apples falls while the prices of pears and most other goods stay steady. What is most likely to happen?",
+   "opts": [
+    "Mia moves land toward pears, and buyers buy more apples",
+    "Mia moves land toward apples, and buyers buy more apples",
+    "Mia moves land toward pears, and buyers buy fewer apples",
+    "Mia moves land toward apples, and buyers buy fewer apples"
+   ],
+   "why": "Apples are now cheaper relative to other goods, so growing them is less profitable and Mia moves land toward pears. For buyers, the lower relative price makes apples cheaper than before, so they tend to buy more. Thinking buyers would buy fewer apples mixes up the consumer response with the producer one.",
+   "clue": "Producers follow profit, while buyers follow the cheaper good."
+  }
+ },
+ "cleared_by": "recheck"
+}

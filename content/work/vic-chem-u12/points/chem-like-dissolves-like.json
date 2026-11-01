@@ -1,0 +1,215 @@
+{
+ "id": "chem-like-dissolves-like",
+ "title": "Like dissolves like",
+ "brief": "cc2d6c7b684c",
+ "shortlist": [
+  [
+   "chem-shapes-polarity-molecules",
+   0.43
+  ],
+  [
+   "chem-properties-hydrocarbons",
+   0.336
+  ],
+  [
+   "chem-concentration",
+   0.272
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00605,
+  "check": 0.01186,
+  "fix": 0.01318,
+  "recheck": 0.0085
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches the general like-dissolves-like principle: the shapes card covers molecular polarity only, and the hydrocarbons card is narrower, covering non-polar hydrocarbons and dispersion forces, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Like dissolves like",
+  "card": [
+   "A polar molecule has an uneven spread of charge, so one end is slightly positive and the other slightly negative. A non-polar molecule has an even spread of charge.",
+   "Polar solutes tend to dissolve in polar solvents, such as water. Ionic compounds like sodium chloride also dissolve in water, as the water molecules attract the ions.",
+   "Non-polar solutes tend to dissolve in non-polar solvents, such as hexane. Oils and fats dissolve in hexane.",
+   "A polar solute and a non-polar solvent usually do not mix. The attractions between the particles of each substance are stronger than the attractions between the two different substances."
+  ],
+  "remember": "Match the solute to the solvent: polar with polar, non-polar with non-polar.",
+  "a": {
+   "q": "Which solvent is best for dissolving a non-polar wax?",
+   "opts": [
+    "Hexane, a non-polar liquid",
+    "Water, a polar liquid",
+    "Salt water, a solution of ions",
+    "Ethanol, a polar liquid"
+   ],
+   "why": "Wax is non-polar, so it dissolves best in a non-polar solvent such as hexane. Water is the tempting choice because it is the most common solvent, but it is polar and does not dissolve non-polar wax well.",
+   "clue": "Match the polarity of the solvent to the wax."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya spills cooking oil on a bench. Water barely cleans it, but hexane removes it easily. What explains this?",
+   "opts": [
+    "Oil is non-polar, so it mixes with non-polar hexane",
+    "Oil is polar, so it mixes with non-polar hexane",
+    "Oil is non-polar, so it mixes with polar water",
+    "Oil is ionic, so it mixes with non-polar hexane"
+   ],
+   "why": "Oil is non-polar, so it dissolves in non-polar hexane but not in polar water. The option saying oil is non-polar and mixes with water is tempting, but it reverses the rule and does not fit what Priya saw.",
+   "clue": "Decide whether oil is polar, then pick the matching solvent."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Hexane, a non-polar liquid",
+   "also_right": []
+  },
+  "b": {
+   "best": "Oil is non-polar, so it mixes with non-polar hexane",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Ionic compounds like sodium chloride also dissolve in water' can be read as saying all ionic compounds dissolve in water. Many, such as silver chloride and calcium carbonate, are insoluble. A word like 'many' would avoid teaching a false generalisation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clearly correct answer each. The only problem is that the card's sentence on ionic compounds could suggest that all of them dissolve in water."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Ionic compounds like sodium chloride also dissolve in water' can be read as saying all ionic compounds dissolve in water. Many, such as silver chloride and calcium carbonate, are insoluble. A word like 'many' would avoid teaching a false generalisation."
+ ],
+ "proposal": {
+  "title": "Like dissolves like",
+  "card": [
+   "A polar molecule has an uneven spread of charge, so one end is slightly positive and the other slightly negative. A non-polar molecule has an even spread of charge.",
+   "Polar solutes tend to dissolve in polar solvents, such as water. Many ionic compounds, such as sodium chloride, also dissolve in water, as the water molecules attract the ions.",
+   "Non-polar solutes tend to dissolve in non-polar solvents, such as hexane. Oils and fats dissolve in hexane.",
+   "A polar solute and a non-polar solvent usually do not mix. The attractions between the particles of each substance are stronger than the attractions between the two different substances."
+  ],
+  "remember": "Match the solute to the solvent: polar with polar, non-polar with non-polar.",
+  "a": {
+   "q": "Which solvent is best for dissolving a non-polar wax?",
+   "opts": [
+    "Hexane, a non-polar liquid",
+    "Water, a polar liquid",
+    "Salt water, a solution of ions",
+    "Ethanol, a polar liquid"
+   ],
+   "why": "Wax is non-polar, so it dissolves best in a non-polar solvent such as hexane. Water is the tempting choice because it is the most common solvent, but it is polar and does not dissolve non-polar wax well.",
+   "clue": "Match the polarity of the solvent to the wax."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya spills cooking oil on a bench. Water barely cleans it, but hexane removes it easily. What explains this?",
+   "opts": [
+    "Oil is non-polar, so it mixes with non-polar hexane",
+    "Oil is polar, so it mixes with non-polar hexane",
+    "Oil is non-polar, so it mixes with polar water",
+    "Oil is ionic, so it mixes with non-polar hexane"
+   ],
+   "why": "Oil is non-polar, so it dissolves in non-polar hexane but not in polar water. The option saying oil is non-polar and mixes with water is tempting, but it reverses the rule and does not fit what Priya saw.",
+   "clue": "Decide whether oil is polar, then pick the matching solvent."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Hexane, a non-polar liquid",
+    "also_right": []
+   },
+   "b": {
+    "best": "Oil is non-polar, so it mixes with non-polar hexane",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Ionic compounds like sodium chloride also dissolve in water' can be read as saying all ionic compounds dissolve in water. Many, such as silver chloride and calcium carbonate, are insoluble. A word like 'many' would avoid teaching a false generalisation."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Ionic compounds like sodium chloride also dissolve in water' can be read as saying all ionic compounds dissolve in water. Many, such as silver chloride and calcium carbonate, are insoluble. A word like 'many' would avoid teaching a false generalisation."
+  ]
+ },
+ "final": {
+  "title": "Like dissolves like",
+  "card": [
+   "A polar molecule has an uneven spread of charge, so one end is slightly positive and the other slightly negative. A non-polar molecule has an even spread of charge.",
+   "Polar solutes tend to dissolve in polar solvents, such as water. Many ionic compounds, such as sodium chloride, also dissolve in water, as the water molecules attract the ions.",
+   "Non-polar solutes tend to dissolve in non-polar solvents, such as hexane. Oils and fats dissolve in hexane.",
+   "A polar solute and a non-polar solvent usually do not mix. The attractions between the particles of each substance are stronger than the attractions between the two different substances."
+  ],
+  "remember": "Match the solute to the solvent: polar with polar, non-polar with non-polar.",
+  "a": {
+   "q": "Which solvent is best for dissolving a non-polar wax?",
+   "opts": [
+    "Hexane, a non-polar liquid",
+    "Water, a polar liquid",
+    "Salt water, a solution of ions",
+    "Ethanol, a polar liquid"
+   ],
+   "why": "Wax is non-polar, so it dissolves best in a non-polar solvent such as hexane. Water is the tempting choice because it is the most common solvent, but it is polar and does not dissolve non-polar wax well.",
+   "clue": "Match the polarity of the solvent to the wax."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya spills cooking oil on a bench. Water barely cleans it, but hexane removes it easily. What explains this?",
+   "opts": [
+    "Oil is non-polar, so it mixes with non-polar hexane",
+    "Oil is polar, so it mixes with non-polar hexane",
+    "Oil is non-polar, so it mixes with polar water",
+    "Oil is ionic, so it mixes with non-polar hexane"
+   ],
+   "why": "Oil is non-polar, so it dissolves in non-polar hexane but not in polar water. The option saying oil is non-polar and mixes with water is tempting, but it reverses the rule and does not fit what Priya saw.",
+   "clue": "Decide whether oil is polar, then pick the matching solvent."
+  }
+ },
+ "cleared_by": "recheck"
+}

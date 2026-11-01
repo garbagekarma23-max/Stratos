@@ -1,0 +1,291 @@
+{
+ "id": "bio-meiosis-2",
+ "title": "Meiosis",
+ "brief": "875bd4e12652",
+ "shortlist": [
+  [
+   "bio-meiosis",
+   0.744
+  ],
+  [
+   "bio-mitosis",
+   0.261
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 says reuse bio-meiosis, so to the Opus match check, as every reuse is",
+  "2026-11-01T08:14:02Z match: Claude Opus 5.5 says reuse bio-meiosis, but its topic always comes to you",
+  "2026-11-01T09:35:11Z match: owner says adapt bio-meiosis (1 change)",
+  "2026-11-01T09:35:11Z review: adapting bio-meiosis on the next run",
+  "2026-11-01T13:41:58Z adapt: done",
+  "2026-11-01T13:47:17Z check: flagged",
+  "2026-11-01T13:49:26Z fix: suggested",
+  "2026-11-01T13:57:15Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "confirm": 0.00477,
+  "adapt": 0.00416,
+  "check": 0.01977,
+  "fix": 0.03003,
+  "recheck": 0.01239
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "bio-meiosis",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea at a suitable depth: meiosis makes four genetically different gametes, each with half the chromosome number, and both questions are fair for a VCE Unit 2 student.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "reuse",
+  "same": "bio-meiosis",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point on meiosis teaches the same idea at a depth that suits VCE Units 1 and 2: four gametes, half the chromosome number, and variation from crossing over and independent assortment. Nothing in it needs to change for Victoria.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "bio-meiosis",
+  "changes": [
+   "Fit it to this course and its syllabus, as the brief describes."
+  ],
+  "by": "owner",
+  "parts": [
+   "card1",
+   "card2",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Meiosis",
+  "card": [
+   "Meiosis is cell division that makes gametes, such as sperm and egg cells. One diploid cell, with two sets of chromosomes (homologous pairs), divides twice and makes four cells.",
+   "Each new cell is haploid. It has half the chromosome number of the parent cell. In humans, a body cell has 46 chromosomes and a gamete has 23.",
+   [
+    "Crossing over",
+    "matching chromosomes swap sections of DNA. This makes new combinations of alleles on a chromosome."
+   ],
+   [
+    "Independent assortment",
+    "the pairs of chromosomes line up and separate at random. Each gamete gets a different mix of chromosomes from the two parents."
+   ]
+  ],
+  "remember": "Meiosis makes four genetically different gametes, each with half the chromosome number.",
+  "a": {
+   "q": "A cell in a human ovary has 46 chromosomes and starts meiosis. What is made at the end?",
+   "opts": [
+    "Four cells, each with 23 chromosomes",
+    "Two cells, each with 23 chromosomes",
+    "Four cells, each with 46 chromosomes",
+    "Two cells, each with 46 chromosomes"
+   ],
+   "why": "Meiosis has two divisions, so one cell makes four cells, and each has half the chromosome number: 23. Two cells with 23 is tempting, but it counts only one division.",
+   "clue": "Count the divisions, then think about what a human gamete carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two brothers have the same parents but are not genetically identical. Which feature of meiosis helps explain this?",
+   "opts": [
+    "Chromosome pairs separate at random into each gamete",
+    "Each gamete keeps the full chromosome number",
+    "Each gamete is a copy of the parent cell",
+    "One cell divides once to make two gametes"
+   ],
+   "why": "Independent assortment gives each gamete a different mix of chromosomes, so each child gets a different combination. The other options describe gametes that copy the parent cell or have the wrong chromosome number, which would not explain the differences.",
+   "clue": "Think about how chromosomes are shared out into gametes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Four cells, each with 23 chromosomes",
+   "also_right": []
+  },
+  "b": {
+   "best": "Chromosome pairs separate at random into each gamete",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines and explains crossing over and independent assortment, which belong to point 5 (Crossing over and independent assortment). This point should only mention that meiosis makes varied gametes."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests independent assortment, the idea of point 5, rather than the basics of meiosis taught in this point."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question sets meiosis in a human ovary. There, meiosis makes one egg plus polar bodies (often three cells in total, and meiosis II finishes only after fertilisation). So 'four cells' is misleading here. Use a cell in a testis, or a generic cell, instead."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Meiosis makes four genetically different gametes' is not true in human females, where only one functional egg is made. The card itself says 'four cells', so the remember line overstates it."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Each gamete gets a different mix of chromosomes from the two parents' could confuse students. The parent cell is one cell; the chromosomes come from the organism's mother and father. Reword to say the chromosomes originally came from the organism's two parents."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question b teach crossing over and independent assortment, which belong to point 5. Question a and the remember line wrongly suggest meiosis in an ovary gives four gametes, when it gives one egg plus polar bodies."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines and explains crossing over and independent assortment, which belong to point 5 (Crossing over and independent assortment). This point should only mention that meiosis makes varied gametes.",
+  "Question b, other: Question b tests independent assortment, the idea of point 5, rather than the basics of meiosis taught in this point.",
+  "Question a, fact: The question sets meiosis in a human ovary. There, meiosis makes one egg plus polar bodies (often three cells in total, and meiosis II finishes only after fertilisation). So 'four cells' is misleading here. Use a cell in a testis, or a generic cell, instead.",
+  "Remember, fact: 'Meiosis makes four genetically different gametes' is not true in human females, where only one functional egg is made. The card itself says 'four cells', so the remember line overstates it.",
+  "Card, wording: 'Each gamete gets a different mix of chromosomes from the two parents' could confuse students. The parent cell is one cell; the chromosomes come from the organism's mother and father. Reword to say the chromosomes originally came from the organism's two parents."
+ ],
+ "proposal": {
+  "title": "Meiosis",
+  "card": [
+   "Meiosis is cell division that makes gametes, such as sperm and egg cells. One diploid cell, with two sets of chromosomes in homologous pairs, divides twice.",
+   "The two divisions make four haploid cells. Each has half the chromosome number of the parent cell. In humans, a body cell has 46 chromosomes and a gamete has 23.",
+   "The four cells are genetically different from each other and from the parent cell. Each gets a different mix of the chromosomes the organism first inherited from its own mother and father.",
+   "In a testis, all four cells become sperm. In an ovary, usually only one becomes an egg, and the other cells break down."
+  ],
+  "remember": "Two divisions halve the chromosome number and make genetically different cells.",
+  "a": {
+   "q": "A cell in a human testis has 46 chromosomes and starts meiosis. What is made at the end?",
+   "opts": [
+    "Four cells, each with 23 chromosomes",
+    "Two cells, each with 23 chromosomes",
+    "Four cells, each with 46 chromosomes",
+    "Two cells, each with 46 chromosomes"
+   ],
+   "why": "Meiosis has two divisions, so one cell makes four cells, and each has half the chromosome number: 23. Two cells with 23 is tempting, but it counts only one division.",
+   "clue": "Count the divisions, then think about what a human gamete carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "A body cell of a dog has 78 chromosomes. What is true of the sperm made by meiosis in a dog's testis?",
+   "opts": [
+    "Each has 39 chromosomes and differs genetically",
+    "Each has 78 chromosomes and differs genetically",
+    "Each has 39 chromosomes and is genetically identical",
+    "Each has 78 chromosomes and is genetically identical"
+   ],
+   "why": "Meiosis halves the chromosome number, so each sperm has 39, and the cells it makes are genetically different. Having 39 but being identical is tempting, but meiosis gives each gamete a different mix of chromosomes, unlike a simple copy of the parent cell.",
+   "clue": "Two things to check: the chromosome number, and whether the cells match."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T13:57:15Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Four cells, each with 23 chromosomes",
+    "also_right": []
+   },
+   "b": {
+    "best": "Each has 39 chromosomes and differs genetically",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T13:57:15Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines and explains crossing over and independent assortment, which belong to point 5 (Crossing over and independent assortment). This point should only mention that meiosis makes varied gametes."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests independent assortment, the idea of point 5, rather than the basics of meiosis taught in this point."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question sets meiosis in a human ovary. There, meiosis makes one egg plus polar bodies (often three cells in total, and meiosis II finishes only after fertilisation). So 'four cells' is misleading here. Use a cell in a testis, or a generic cell, instead."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Meiosis makes four genetically different gametes' is not true in human females, where only one functional egg is made. The card itself says 'four cells', so the remember line overstates it."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Each gamete gets a different mix of chromosomes from the two parents' could confuse students. The parent cell is one cell; the chromosomes come from the organism's mother and father. Reword to say the chromosomes originally came from the organism's two parents."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines and explains crossing over and independent assortment, which belong to point 5 (Crossing over and independent assortment). This point should only mention that meiosis makes varied gametes.",
+   "Question b, other: Question b tests independent assortment, the idea of point 5, rather than the basics of meiosis taught in this point.",
+   "Question a, fact: The question sets meiosis in a human ovary. There, meiosis makes one egg plus polar bodies (often three cells in total, and meiosis II finishes only after fertilisation). So 'four cells' is misleading here. Use a cell in a testis, or a generic cell, instead.",
+   "Remember, fact: 'Meiosis makes four genetically different gametes' is not true in human females, where only one functional egg is made. The card itself says 'four cells', so the remember line overstates it.",
+   "Card, wording: 'Each gamete gets a different mix of chromosomes from the two parents' could confuse students. The parent cell is one cell; the chromosomes come from the organism's mother and father. Reword to say the chromosomes originally came from the organism's two parents."
+  ]
+ },
+ "final": {
+  "title": "Meiosis",
+  "card": [
+   "Meiosis is cell division that makes gametes, such as sperm and egg cells. One diploid cell, with two sets of chromosomes in homologous pairs, divides twice.",
+   "The two divisions make four haploid cells. Each has half the chromosome number of the parent cell. In humans, a body cell has 46 chromosomes and a gamete has 23.",
+   "The four cells are genetically different from each other and from the parent cell. Each gets a different mix of the chromosomes the organism first inherited from its own mother and father.",
+   "In a testis, all four cells become sperm. In an ovary, usually only one becomes an egg, and the other cells break down."
+  ],
+  "remember": "Two divisions halve the chromosome number and make genetically different cells.",
+  "a": {
+   "q": "A cell in a human testis has 46 chromosomes and starts meiosis. What is made at the end?",
+   "opts": [
+    "Four cells, each with 23 chromosomes",
+    "Two cells, each with 23 chromosomes",
+    "Four cells, each with 46 chromosomes",
+    "Two cells, each with 46 chromosomes"
+   ],
+   "why": "Meiosis has two divisions, so one cell makes four cells, and each has half the chromosome number: 23. Two cells with 23 is tempting, but it counts only one division.",
+   "clue": "Count the divisions, then think about what a human gamete carries."
+  },
+  "b": {
+   "d": 3,
+   "q": "A body cell of a dog has 78 chromosomes. What is true of the sperm made by meiosis in a dog's testis?",
+   "opts": [
+    "Each has 39 chromosomes and differs genetically",
+    "Each has 78 chromosomes and differs genetically",
+    "Each has 39 chromosomes and is genetically identical",
+    "Each has 78 chromosomes and is genetically identical"
+   ],
+   "why": "Meiosis halves the chromosome number, so each sperm has 39, and the cells it makes are genetically different. Having 39 but being identical is tempting, but meiosis gives each gamete a different mix of chromosomes, unlike a simple copy of the parent cell.",
+   "clue": "Two things to check: the chromosome number, and whether the cells match."
+  }
+ },
+ "cleared_by": "recheck"
+}

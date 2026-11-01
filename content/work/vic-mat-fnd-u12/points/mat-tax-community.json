@@ -1,0 +1,236 @@
+{
+ "id": "mat-tax-community",
+ "title": "Tax and the community",
+ "brief": "3c0ad7b42019",
+ "shortlist": [
+  [
+   "mat-income-tax-net-pay",
+   0.232
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00447,
+  "check": 0.01199,
+  "fix": 0.02323,
+  "recheck": 0.00757
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches how to calculate income tax and net pay from a tax table, while the new point teaches what taxes pay for and which governments collect them, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Tax and the community",
+  "card": [
+   "Tax is money that people and businesses pay to governments. Governments use it to pay for shared services that most people use, such as roads, schools and hospitals.",
+   [
+    "Local",
+    "councils collect rates, which are based on property. They spend on local roads, parks, libraries and rubbish collection."
+   ],
+   [
+    "State",
+    "state governments collect taxes such as stamp duty on property sales. They spend on public schools, public hospitals and public transport."
+   ],
+   [
+    "Federal",
+    "the federal government collects the most tax, including income tax and GST. It spends on services such as Medicare, the age pension and defence."
+   ]
+  ],
+  "remember": "Taxes are collected by three levels of government and spent on services we share.",
+  "a": {
+   "q": "Which of these is paid for by tax?",
+   "opts": [
+    "A public hospital",
+    "A holiday at a private resort",
+    "A takeaway meal bought from a shop",
+    "A phone bought online from a retailer"
+   ],
+   "why": "Public hospitals are shared services that governments fund from tax. The other three are bought by people with their own money, and they are not shared services run by a government.",
+   "clue": "Think of a service that many people share."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya pays rates on her house in Ballarat. Which level of government collects them, and what is a likely use?",
+   "opts": [
+    "Local council, to maintain local roads",
+    "Federal government, to pay the age pension",
+    "State government, to run public hospitals",
+    "Local council, to pay for Medicare"
+   ],
+   "why": "Rates are collected by local councils and spent on local services such as roads. The age pension and Medicare are federal services, so the options linking them to the wrong level are wrong. Public hospitals are mainly a state service.",
+   "clue": "Rates are based on property, and the money stays local."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A public hospital",
+   "also_right": []
+  },
+  "b": {
+   "best": "Local council, to maintain local roads",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says the options 'linking them to the wrong level are wrong', but 'Federal government, to pay the age pension' and 'State government, to run public hospitals' pair each service with the right level. They are wrong only because federal and state governments do not collect rates. The why should say this plainly, so students do not think the age pension is not a federal service."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and match the Australian levels of government. The only problem is that Why (b) gives a misleading reason for the state and federal options: they are wrong because those governments do not collect rates, not because the services are matched to the wrong level."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says the options 'linking them to the wrong level are wrong', but 'Federal government, to pay the age pension' and 'State government, to run public hospitals' pair each service with the right level. They are wrong only because federal and state governments do not collect rates. The why should say this plainly, so students do not think the age pension is not a federal service."
+ ],
+ "proposal": {
+  "title": "Tax and the community",
+  "card": [
+   "Tax is money that people and businesses pay to governments. Governments use it to pay for shared services that most people use, such as roads, schools and hospitals.",
+   [
+    "Local",
+    "councils collect rates, which are based on property. They spend on local roads, parks, libraries and rubbish collection."
+   ],
+   [
+    "State",
+    "state governments collect taxes such as stamp duty on property sales. They spend on public schools, public hospitals and public transport."
+   ],
+   [
+    "Federal",
+    "the federal government collects the most tax, including income tax and GST. It spends on services such as Medicare, the age pension and defence."
+   ]
+  ],
+  "remember": "Taxes are collected by three levels of government and spent on services we share.",
+  "a": {
+   "q": "Which of these is paid for by tax?",
+   "opts": [
+    "A public hospital",
+    "A holiday at a private resort",
+    "A takeaway meal bought from a shop",
+    "A phone bought online from a retailer"
+   ],
+   "why": "Public hospitals are shared services that governments fund from tax. The other three are bought by people with their own money, and they are not shared services run by a government.",
+   "clue": "Think of a service that many people share."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya pays rates on her house in Ballarat. Which level of government collects them, and what is a likely use?",
+   "opts": [
+    "Local council, to maintain local roads",
+    "Federal government, to pay the age pension",
+    "State government, to run public hospitals",
+    "Local council, to pay for Medicare"
+   ],
+   "why": "Rates are collected by local councils and spent on local services such as roads. The age pension is a federal service and public hospitals are a state service, but neither of those governments collects rates. Medicare is a federal service, so councils do not pay for it.",
+   "clue": "Rates are based on property, and the money stays local."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A public hospital",
+    "also_right": []
+   },
+   "b": {
+    "best": "Local council, to maintain local roads",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says the options 'linking them to the wrong level are wrong', but 'Federal government, to pay the age pension' and 'State government, to run public hospitals' pair each service with the right level. They are wrong only because federal and state governments do not collect rates. The why should say this plainly, so students do not think the age pension is not a federal service."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says the options 'linking them to the wrong level are wrong', but 'Federal government, to pay the age pension' and 'State government, to run public hospitals' pair each service with the right level. They are wrong only because federal and state governments do not collect rates. The why should say this plainly, so students do not think the age pension is not a federal service."
+  ]
+ },
+ "final": {
+  "title": "Tax and the community",
+  "card": [
+   "Tax is money that people and businesses pay to governments. Governments use it to pay for shared services that most people use, such as roads, schools and hospitals.",
+   [
+    "Local",
+    "councils collect rates, which are based on property. They spend on local roads, parks, libraries and rubbish collection."
+   ],
+   [
+    "State",
+    "state governments collect taxes such as stamp duty on property sales. They spend on public schools, public hospitals and public transport."
+   ],
+   [
+    "Federal",
+    "the federal government collects the most tax, including income tax and GST. It spends on services such as Medicare, the age pension and defence."
+   ]
+  ],
+  "remember": "Taxes are collected by three levels of government and spent on services we share.",
+  "a": {
+   "q": "Which of these is paid for by tax?",
+   "opts": [
+    "A public hospital",
+    "A holiday at a private resort",
+    "A takeaway meal bought from a shop",
+    "A phone bought online from a retailer"
+   ],
+   "why": "Public hospitals are shared services that governments fund from tax. The other three are bought by people with their own money, and they are not shared services run by a government.",
+   "clue": "Think of a service that many people share."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya pays rates on her house in Ballarat. Which level of government collects them, and what is a likely use?",
+   "opts": [
+    "Local council, to maintain local roads",
+    "Federal government, to pay the age pension",
+    "State government, to run public hospitals",
+    "Local council, to pay for Medicare"
+   ],
+   "why": "Rates are collected by local councils and spent on local services such as roads. The age pension is a federal service and public hospitals are a state service, but neither of those governments collects rates. Medicare is a federal service, so councils do not pay for it.",
+   "clue": "Rates are based on property, and the money stays local."
+  }
+ },
+ "cleared_by": "recheck"
+}

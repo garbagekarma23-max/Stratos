@@ -1,0 +1,120 @@
+{
+ "id": "mat-simulation-2",
+ "title": "Simulation",
+ "brief": "b06c2732f806",
+ "shortlist": [
+  [
+   "mat-discrete-probability-distributions",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00573,
+  "check": 0.00626
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches discrete probability distributions, a different idea from estimating a probability by simulating a chance process with random numbers, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Simulation",
+  "card": [
+   "A simulation uses random numbers to act out a chance process again and again. Each run is called a trial.",
+   "First, decide how random digits stand for the outcomes. If a chance is 30%, let 3 of the 10 digits 0 to 9 stand for it, such as 0, 1 and 2.",
+   "Then run many trials and count how often the event happens. Estimated probability = number of trials with the event ÷ total number of trials.",
+   "Example: a bus is late 30% of the time. In 50 simulated days it is late on 14 days. The estimate is 14 ÷ 50 = 0.28. More trials usually give a more reliable estimate."
+  ],
+  "remember": "Assign digits to match the chances, run many trials, then divide the successes by the trials.",
+  "a": {
+   "q": "A shop's card reader fails 20% of the time. Which digit rule matches this for one random digit from 0 to 9?",
+   "opts": [
+    "Digits 0 and 1 mean a failure",
+    "Digit 2 means a failure",
+    "Digits 0 to 4 mean a failure",
+    "Digits 0 to 8 mean a failure"
+   ],
+   "why": "Two of the ten digits give 2 ÷ 10 = 20%. Digit 2 alone gives 10%, and digits 0 to 4 give 50%.",
+   "clue": "Count how many of the ten digits you need for 20%."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya simulates a free-throw shooter who scores 70% of the time. In 40 trials, she gets a score in 30 of them. What is her estimated probability of a score?",
+   "opts": [
+    "0.75",
+    "0.70",
+    "0.57",
+    "1.33"
+   ],
+   "why": "Estimate = 30 ÷ 40 = 0.75. It differs from 0.70 because simulations vary. Dividing 40 by 30 would give 1.33, which cannot be a probability.",
+   "clue": "Divide the trials with the event by all the trials."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Digits 0 and 1 mean a failure",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.75",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Simulation",
+  "card": [
+   "A simulation uses random numbers to act out a chance process again and again. Each run is called a trial.",
+   "First, decide how random digits stand for the outcomes. If a chance is 30%, let 3 of the 10 digits 0 to 9 stand for it, such as 0, 1 and 2.",
+   "Then run many trials and count how often the event happens. Estimated probability = number of trials with the event ÷ total number of trials.",
+   "Example: a bus is late 30% of the time. In 50 simulated days it is late on 14 days. The estimate is 14 ÷ 50 = 0.28. More trials usually give a more reliable estimate."
+  ],
+  "remember": "Assign digits to match the chances, run many trials, then divide the successes by the trials.",
+  "a": {
+   "q": "A shop's card reader fails 20% of the time. Which digit rule matches this for one random digit from 0 to 9?",
+   "opts": [
+    "Digits 0 and 1 mean a failure",
+    "Digit 2 means a failure",
+    "Digits 0 to 4 mean a failure",
+    "Digits 0 to 8 mean a failure"
+   ],
+   "why": "Two of the ten digits give 2 ÷ 10 = 20%. Digit 2 alone gives 10%, and digits 0 to 4 give 50%.",
+   "clue": "Count how many of the ten digits you need for 20%."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya simulates a free-throw shooter who scores 70% of the time. In 40 trials, she gets a score in 30 of them. What is her estimated probability of a score?",
+   "opts": [
+    "0.75",
+    "0.70",
+    "0.57",
+    "1.33"
+   ],
+   "why": "Estimate = 30 ÷ 40 = 0.75. It differs from 0.70 because simulations vary. Dividing 40 by 30 would give 1.33, which cannot be a probability.",
+   "clue": "Divide the trials with the event by all the trials."
+  }
+ },
+ "cleared_by": "checker"
+}

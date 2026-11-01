@@ -1,0 +1,132 @@
+{
+ "id": "acc-credit-purchases-accounts-payable",
+ "title": "Credit purchases and accounts payable",
+ "brief": "f4eb5769f4b4",
+ "shortlist": [
+  [
+   "bus-working-capital-management",
+   0.23
+  ],
+  [
+   "eco-capital-financial-account",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00512,
+  "check": 0.00781
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, working capital management, covers the broader idea of managing current assets and liabilities in New South Wales Business Studies, not how a credit purchase creates accounts payable for a Victorian VCE Accounting Year 11 student, so no bank point teaches this idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Credit purchases and accounts payable",
+  "card": [
+   "A credit purchase is when a business takes goods now and agrees to pay the supplier later. No cash leaves the business on the day of the purchase.",
+   [
+    "Accounts payable",
+    "the amount a business owes its suppliers for goods bought on credit. It is a liability, because it is a debt the business must settle."
+   ],
+   "A credit purchase of inventory raises inventory, an asset, and raises accounts payable, a liability. The business has more goods and a bigger debt.",
+   "When the business pays the supplier, cash falls and accounts payable falls by the same amount. The debt is then cleared."
+  ],
+  "remember": "Buy on credit and you owe the supplier. Pay them and the debt goes.",
+  "a": {
+   "q": "Harbour Bikes in Geelong buys $4000 of bicycles from a supplier on credit. What is the effect on the business's accounts?",
+   "opts": [
+    "Inventory rises and accounts payable rises",
+    "Inventory rises and cash falls",
+    "Accounts payable rises and cash rises",
+    "Inventory falls and accounts payable rises"
+   ],
+   "why": "The bikes are received, so inventory rises. The supplier is not yet paid, so the business owes $4000 and accounts payable rises. Cash does not fall until the bill is paid.",
+   "clue": "Has any money left the business yet?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Pantry in Ballarat owes a supplier $1500 for stock bought on credit. She pays the full $1500 by bank transfer. What happens?",
+   "opts": [
+    "Cash falls and accounts payable falls by $1500",
+    "Cash falls and inventory falls by $1500",
+    "Cash rises and accounts payable falls by $1500",
+    "Accounts payable rises and cash falls by $1500"
+   ],
+   "why": "Paying the supplier uses cash, so cash falls. The debt is cleared, so accounts payable falls by the same amount. Inventory was raised when the goods arrived, so it does not change now.",
+   "clue": "Which debt is being cleared, and what is used to clear it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Inventory rises and accounts payable rises",
+   "also_right": []
+  },
+  "b": {
+   "best": "Cash falls and accounts payable falls by $1500",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Credit purchases and accounts payable",
+  "card": [
+   "A credit purchase is when a business takes goods now and agrees to pay the supplier later. No cash leaves the business on the day of the purchase.",
+   [
+    "Accounts payable",
+    "the amount a business owes its suppliers for goods bought on credit. It is a liability, because it is a debt the business must settle."
+   ],
+   "A credit purchase of inventory raises inventory, an asset, and raises accounts payable, a liability. The business has more goods and a bigger debt.",
+   "When the business pays the supplier, cash falls and accounts payable falls by the same amount. The debt is then cleared."
+  ],
+  "remember": "Buy on credit and you owe the supplier. Pay them and the debt goes.",
+  "a": {
+   "q": "Harbour Bikes in Geelong buys $4000 of bicycles from a supplier on credit. What is the effect on the business's accounts?",
+   "opts": [
+    "Inventory rises and accounts payable rises",
+    "Inventory rises and cash falls",
+    "Accounts payable rises and cash rises",
+    "Inventory falls and accounts payable rises"
+   ],
+   "why": "The bikes are received, so inventory rises. The supplier is not yet paid, so the business owes $4000 and accounts payable rises. Cash does not fall until the bill is paid.",
+   "clue": "Has any money left the business yet?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Pantry in Ballarat owes a supplier $1500 for stock bought on credit. She pays the full $1500 by bank transfer. What happens?",
+   "opts": [
+    "Cash falls and accounts payable falls by $1500",
+    "Cash falls and inventory falls by $1500",
+    "Cash rises and accounts payable falls by $1500",
+    "Accounts payable rises and cash falls by $1500"
+   ],
+   "why": "Paying the supplier uses cash, so cash falls. The debt is cleared, so accounts payable falls by the same amount. Inventory was raised when the goods arrived, so it does not change now.",
+   "clue": "Which debt is being cleared, and what is used to clear it?"
+  }
+ },
+ "cleared_by": "checker"
+}

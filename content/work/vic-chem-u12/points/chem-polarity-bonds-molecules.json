@@ -1,0 +1,264 @@
+{
+ "id": "chem-polarity-bonds-molecules",
+ "title": "Polarity of bonds and molecules",
+ "brief": "e702faf76345",
+ "shortlist": [
+  [
+   "chem-shapes-polarity-molecules",
+   0.77
+  ],
+  [
+   "chem-intermolecular-forces",
+   0.391
+  ],
+  [
+   "chem-covalent-bonding",
+   0.357
+  ],
+  [
+   "chem-properties-hydrocarbons",
+   0.344
+  ],
+  [
+   "chem-bond-energies",
+   0.285
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt chem-shapes-polarity-molecules, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:02Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00852,
+  "write": 0.00559,
+  "check": 0.01045,
+  "fix": 0.01665,
+  "recheck": 0.00804
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-shapes-polarity-molecules",
+  "changes": [
+   "Define a polar bond by a difference in electronegativity between the atoms, using the syllabus term, instead of only saying the atoms share electrons unevenly.",
+   "Check that the shape and lone-pair content (VSEPR) suits the VCE Units 1 and 2 depth before use, since the brief covers only bond polarity and molecular shape."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of bond and molecule polarity from shape at a suitable Year 11 depth, but it needs the electronegativity wording the VCE syllabus uses and a check of its shape content against the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers both how electron pairs set molecular shape and polarity, and it never mentions electronegativity, so it is broader than this point and misses its key idea about bonds.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Polarity of bonds and molecules",
+  "card": [
+   "Electronegativity is how strongly an atom pulls shared electrons towards itself. When two bonded atoms differ in electronegativity, the shared pair sits closer to one atom.",
+   [
+    "Polar bond",
+    "a bond between atoms with different electronegativities. The atom with the stronger pull gains a slight negative charge and the other a slight positive charge."
+   ],
+   [
+    "Non-polar bond",
+    "a bond between atoms with the same, or almost the same, electronegativity, so the electrons are shared evenly."
+   ],
+   [
+    "Polar molecule",
+    "a molecule whose shape leaves the charges uneven, so one side is slightly negative and the other slightly positive. If polar bonds are arranged so their pulls cancel, the molecule is non-polar."
+   ]
+  ],
+  "remember": "Unequal pull makes a bond polar. Uneven charge across the whole shape makes a molecule polar.",
+  "a": {
+   "q": "Why is the bond in a hydrogen chloride molecule, H-Cl, polar?",
+   "opts": [
+    "Chlorine pulls the shared pair harder than hydrogen does",
+    "Hydrogen and chlorine share their electrons equally",
+    "Chlorine gives one of its electrons fully to hydrogen",
+    "Hydrogen pulls the shared pair harder than chlorine does"
+   ],
+   "why": "Chlorine and hydrogen differ in electronegativity, so the shared pair sits closer to chlorine, which becomes slightly negative. Equal sharing would make the bond non-polar.",
+   "clue": "Think about which atom pulls the shared pair harder."
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule has two polar bonds pointing in exactly opposite directions from the central atom, so the pulls cancel. How is the molecule best described?",
+   "opts": [
+    "Non-polar, because the charges are spread evenly",
+    "Polar, because each bond is polar",
+    "Non-polar, because its bonds are non-polar",
+    "Polar, because the central atom is slightly positive"
+   ],
+   "why": "Opposite pulls cancel, so the charges are even across the molecule and it is non-polar, even though each bond is polar. Having polar bonds does not make a molecule polar when the shape evens out the charges.",
+   "clue": "Look at what the two equal pulls do to each other."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Chlorine pulls the shared pair harder than hydrogen does",
+   "also_right": []
+  },
+  "b": {
+   "best": "Non-polar, because the charges are spread evenly",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The card never says that chlorine is more electronegative than hydrogen, and it gives no trend or values. A student using only the card cannot choose between 'Hydrogen pulls the shared pair harder' and 'Chlorine pulls the shared pair harder'. The clue does not settle it either. Add a line to the card giving chlorine's higher electronegativity, or the periodic trend."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer. Question a relies on knowing that chlorine is more electronegative than hydrogen, which the card does not teach. Add that fact or the trend to the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: The card never says that chlorine is more electronegative than hydrogen, and it gives no trend or values. A student using only the card cannot choose between 'Hydrogen pulls the shared pair harder' and 'Chlorine pulls the shared pair harder'. The clue does not settle it either. Add a line to the card giving chlorine's higher electronegativity, or the periodic trend."
+ ],
+ "proposal": {
+  "title": "Polarity of bonds and molecules",
+  "card": [
+   "Electronegativity is how strongly an atom pulls shared electrons towards itself. It rises across a period and up a group, so fluorine is the highest, and chlorine is higher than hydrogen.",
+   [
+    "Polar bond",
+    "a bond between atoms with different electronegativities. The shared pair sits closer to the atom with the stronger pull, which gains a slight negative charge, and the other a slight positive charge."
+   ],
+   [
+    "Non-polar bond",
+    "a bond between atoms with the same, or almost the same, electronegativity, so the electrons are shared evenly."
+   ],
+   [
+    "Polar molecule",
+    "a molecule whose shape leaves the charges uneven, so one side is slightly negative and the other slightly positive. If polar bonds are arranged so their pulls cancel, the molecule is non-polar."
+   ]
+  ],
+  "remember": "Unequal pull makes a bond polar. Uneven charge across the whole shape makes a molecule polar.",
+  "a": {
+   "q": "Why is the bond in a hydrogen chloride molecule, H-Cl, polar?",
+   "opts": [
+    "Chlorine pulls the shared pair harder than hydrogen does",
+    "Hydrogen and chlorine share their electrons equally",
+    "Chlorine gives one of its electrons fully to hydrogen",
+    "Hydrogen pulls the shared pair harder than chlorine does"
+   ],
+   "why": "Chlorine is more electronegative than hydrogen, so the shared pair sits closer to chlorine, which becomes slightly negative. Hydrogen has the weaker pull, so it becomes slightly positive, not negative.",
+   "clue": "Which of the two atoms has the higher electronegativity?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule has two polar bonds pointing in exactly opposite directions from the central atom, so the pulls cancel. How is the molecule best described?",
+   "opts": [
+    "Non-polar, because the charges are spread evenly",
+    "Polar, because each bond is polar",
+    "Non-polar, because its bonds are non-polar",
+    "Polar, because the central atom is slightly positive"
+   ],
+   "why": "Opposite pulls cancel, so the charges are even across the molecule and it is non-polar, even though each bond is polar. Having polar bonds does not make a molecule polar when the shape evens out the charges.",
+   "clue": "Look at what the two equal pulls do to each other."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Chlorine pulls the shared pair harder than hydrogen does",
+    "also_right": []
+   },
+   "b": {
+    "best": "Non-polar, because the charges are spread evenly",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The card never says that chlorine is more electronegative than hydrogen, and it gives no trend or values. A student using only the card cannot choose between 'Hydrogen pulls the shared pair harder' and 'Chlorine pulls the shared pair harder'. The clue does not settle it either. Add a line to the card giving chlorine's higher electronegativity, or the periodic trend."
+   }
+  ],
+  "flags": [
+   "Question a, level: The card never says that chlorine is more electronegative than hydrogen, and it gives no trend or values. A student using only the card cannot choose between 'Hydrogen pulls the shared pair harder' and 'Chlorine pulls the shared pair harder'. The clue does not settle it either. Add a line to the card giving chlorine's higher electronegativity, or the periodic trend."
+  ]
+ },
+ "final": {
+  "title": "Polarity of bonds and molecules",
+  "card": [
+   "Electronegativity is how strongly an atom pulls shared electrons towards itself. It rises across a period and up a group, so fluorine is the highest, and chlorine is higher than hydrogen.",
+   [
+    "Polar bond",
+    "a bond between atoms with different electronegativities. The shared pair sits closer to the atom with the stronger pull, which gains a slight negative charge, and the other a slight positive charge."
+   ],
+   [
+    "Non-polar bond",
+    "a bond between atoms with the same, or almost the same, electronegativity, so the electrons are shared evenly."
+   ],
+   [
+    "Polar molecule",
+    "a molecule whose shape leaves the charges uneven, so one side is slightly negative and the other slightly positive. If polar bonds are arranged so their pulls cancel, the molecule is non-polar."
+   ]
+  ],
+  "remember": "Unequal pull makes a bond polar. Uneven charge across the whole shape makes a molecule polar.",
+  "a": {
+   "q": "Why is the bond in a hydrogen chloride molecule, H-Cl, polar?",
+   "opts": [
+    "Chlorine pulls the shared pair harder than hydrogen does",
+    "Hydrogen and chlorine share their electrons equally",
+    "Chlorine gives one of its electrons fully to hydrogen",
+    "Hydrogen pulls the shared pair harder than chlorine does"
+   ],
+   "why": "Chlorine is more electronegative than hydrogen, so the shared pair sits closer to chlorine, which becomes slightly negative. Hydrogen has the weaker pull, so it becomes slightly positive, not negative.",
+   "clue": "Which of the two atoms has the higher electronegativity?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule has two polar bonds pointing in exactly opposite directions from the central atom, so the pulls cancel. How is the molecule best described?",
+   "opts": [
+    "Non-polar, because the charges are spread evenly",
+    "Polar, because each bond is polar",
+    "Non-polar, because its bonds are non-polar",
+    "Polar, because the central atom is slightly positive"
+   ],
+   "why": "Opposite pulls cancel, so the charges are even across the molecule and it is non-polar, even though each bond is polar. Having polar bonds does not make a molecule polar when the shape evens out the charges.",
+   "clue": "Look at what the two equal pulls do to each other."
+  }
+ },
+ "cleared_by": "recheck"
+}

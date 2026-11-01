@@ -1,0 +1,227 @@
+{
+ "id": "hhd-carbohydrates",
+ "title": "Carbohydrates",
+ "brief": "fa13d589e527",
+ "shortlist": [
+  [
+   "hms-nutrition-performance",
+   0.337
+  ],
+  [
+   "hms-muscle-fibre-types",
+   0.242
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: done",
+  "2026-11-01T08:24:31Z check: flagged",
+  "2026-11-01T08:33:50Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00591,
+  "check": 0.0104,
+  "fix": 0.0147
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the new point's idea: the brief covers carbohydrate as the main energy source, with complex carbohydrates and fibre releasing energy slowly and aiding digestion, while the nutrition card is about glycogen and timing for athletes at a different depth, and the muscle fibre card is unrelated.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Carbohydrates",
+  "card": [
+   "Carbohydrates are the body's main source of energy. The body breaks them down into glucose, which cells use as fuel.",
+   [
+    "Simple",
+    "sugars that are broken down quickly, so they release energy fast. Examples are the sugars in lollies and soft drink."
+   ],
+   [
+    "Complex",
+    "starches that take longer to break down, so they release energy slowly. Examples are wholegrain bread, oats, brown rice and legumes."
+   ],
+   [
+    "Fibre",
+    "a part of plant foods that the body does not break down for energy. It helps digestion and keeps bowel movements regular."
+   ]
+  ],
+  "remember": "Carbohydrates fuel the body. Complex ones and fibre give steady energy and help digestion.",
+  "a": {
+   "q": "Which food is the best source of a slow release of energy?",
+   "opts": [
+    "A bowl of rolled oats",
+    "A glass of soft drink",
+    "A handful of jelly lollies",
+    "A cup of fruit juice with added sugar"
+   ],
+   "why": "Oats are a complex carbohydrate, which takes longer to break down, so energy is released slowly. Soft drink is mostly simple sugar, which is broken down quickly and gives fast energy.",
+   "clue": "Look for the starchy whole food, not the sugary one."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom eats a wholegrain sandwich with salad at lunch. Mia eats a bag of lollies. Which statement best compares them?",
+   "opts": [
+    "Tom's lunch gives slower energy and fibre for digestion",
+    "Tom's lunch gives no energy because it has fibre",
+    "Mia's lollies give slower energy than Tom's lunch",
+    "Mia's lollies give more fibre than Tom's lunch"
+   ],
+   "why": "Wholegrain bread is a complex carbohydrate and the salad adds fibre, so energy is released slowly and digestion is helped. Fibre is not broken down for energy, but the bread still supplies energy, so the second option is wrong.",
+   "clue": "Fibre helps digestion, but the bread is still a fuel."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A bowl of rolled oats",
+   "also_right": []
+  },
+  "b": {
+   "best": "Tom's lunch gives slower energy and fibre for digestion",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says complex carbohydrates and fibre 'give steady energy'. This contradicts the card, which says the body does not break fibre down for energy. It should say complex carbohydrates give steady energy and fibre helps digestion."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls the 'no energy because it has fibre' option 'the second option'. Options appear in a random order, and here it is the third option, so the position reference will confuse students."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The remember line wrongly suggests fibre gives energy, which contradicts the card. The why for question b refers to an option by its position, which won't match the random order students see."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says complex carbohydrates and fibre 'give steady energy'. This contradicts the card, which says the body does not break fibre down for energy. It should say complex carbohydrates give steady energy and fibre helps digestion.",
+  "Question b, other: The why calls the 'no energy because it has fibre' option 'the second option'. Options appear in a random order, and here it is the third option, so the position reference will confuse students."
+ ],
+ "proposal": {
+  "title": "Carbohydrates",
+  "card": [
+   "Carbohydrates are the body's main source of energy. The body breaks them down into glucose, which cells use as fuel.",
+   [
+    "Simple",
+    "sugars that are broken down quickly, so they release energy fast. Examples are the sugars in lollies and soft drink."
+   ],
+   [
+    "Complex",
+    "starches that take longer to break down, so they release energy slowly. Examples are wholegrain bread, oats, brown rice and legumes."
+   ],
+   [
+    "Fibre",
+    "a type of carbohydrate in plant foods that the body does not break down for energy. It helps digestion and keeps bowel movements regular."
+   ]
+  ],
+  "remember": "Complex carbohydrates give steady energy, and fibre helps digestion.",
+  "a": {
+   "q": "Which food is the best source of a slow release of energy?",
+   "opts": [
+    "A bowl of rolled oats",
+    "A glass of soft drink",
+    "A handful of jelly lollies",
+    "A cup of sweetened fruit juice"
+   ],
+   "why": "Oats are a complex carbohydrate, which takes longer to break down, so energy is released slowly. Soft drink is mostly simple sugar, which is broken down quickly and gives fast energy.",
+   "clue": "Which one takes the longest to break down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom eats a wholegrain sandwich with salad at lunch. Mia eats a bag of lollies. Which statement best compares them?",
+   "opts": [
+    "Tom's lunch gives slower energy and fibre for digestion",
+    "Tom's lunch gives no energy because it has fibre",
+    "Mia's lollies give slower energy than Tom's lunch",
+    "Mia's lollies give more fibre than Tom's lunch"
+   ],
+   "why": "Wholegrain bread is a complex carbohydrate and the salad adds fibre, so energy is released slowly and digestion is helped. The option saying Tom's lunch gives no energy is wrong: fibre is not broken down for energy, but the bread still supplies energy.",
+   "clue": "Fibre helps digestion, but the bread is still a fuel."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says complex carbohydrates and fibre 'give steady energy'. This contradicts the card, which says the body does not break fibre down for energy. It should say complex carbohydrates give steady energy and fibre helps digestion."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why calls the 'no energy because it has fibre' option 'the second option'. Options appear in a random order, and here it is the third option, so the position reference will confuse students."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says complex carbohydrates and fibre 'give steady energy'. This contradicts the card, which says the body does not break fibre down for energy. It should say complex carbohydrates give steady energy and fibre helps digestion.",
+   "Question b, other: The why calls the 'no energy because it has fibre' option 'the second option'. Options appear in a random order, and here it is the third option, so the position reference will confuse students."
+  ]
+ },
+ "final": {
+  "title": "Carbohydrates",
+  "card": [
+   "Carbohydrates are the body's main source of energy. The body breaks them down into glucose, which cells use as fuel.",
+   [
+    "Simple",
+    "sugars that are broken down quickly, so they release energy fast. Examples are the sugars in lollies and soft drink."
+   ],
+   [
+    "Complex",
+    "starches that take longer to break down, so they release energy slowly. Examples are wholegrain bread, oats, brown rice and legumes."
+   ],
+   [
+    "Fibre",
+    "a type of carbohydrate in plant foods that the body does not break down for energy. It helps digestion and keeps bowel movements regular."
+   ]
+  ],
+  "remember": "Complex carbohydrates give steady energy, and fibre helps digestion.",
+  "a": {
+   "q": "Which food is the best source of a slow release of energy?",
+   "opts": [
+    "A bowl of rolled oats",
+    "A glass of soft drink",
+    "A handful of jelly lollies",
+    "A cup of sweetened fruit juice"
+   ],
+   "why": "Oats are a complex carbohydrate, which takes longer to break down, so energy is released slowly. Soft drink is mostly simple sugar, which is broken down quickly and gives fast energy.",
+   "clue": "Which one takes the longest to break down?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom eats a wholegrain sandwich with salad at lunch. Mia eats a bag of lollies. Which statement best compares them?",
+   "opts": [
+    "Tom's lunch gives slower energy and fibre for digestion",
+    "Tom's lunch gives no energy because it has fibre",
+    "Mia's lollies give slower energy than Tom's lunch",
+    "Mia's lollies give more fibre than Tom's lunch"
+   ],
+   "why": "Wholegrain bread is a complex carbohydrate and the salad adds fibre, so energy is released slowly and digestion is helped. The option saying Tom's lunch gives no energy is wrong: fibre is not broken down for energy, but the bread still supplies energy.",
+   "clue": "Fibre helps digestion, but the bread is still a fuel."
+  }
+ },
+ "cleared_by": "auto"
+}

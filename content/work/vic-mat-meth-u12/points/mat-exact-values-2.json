@@ -1,0 +1,172 @@
+{
+ "id": "mat-exact-values-2",
+ "title": "Exact values",
+ "brief": "24e8cd0798cf",
+ "shortlist": [
+  [
+   "mat-exact-values",
+   0.36
+  ],
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.352
+  ],
+  [
+   "mat-tangents-normals",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says adapt mat-exact-values (3 changes)",
+  "2026-11-01T08:14:07Z adapt: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "adapt": 0.00501,
+  "check": 0.00612
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-exact-values",
+  "changes": [
+   "State the angles in radians (π/6, π/4, π/3) instead of degrees, because the Mathematical Methods study design uses radians for circular functions.",
+   "Rewrite the worked examples and both practice questions in radian notation, for example cos(π/3) and sin(π/6) + tan(π/4).",
+   "Keep the special-triangle working and surd answers as they are, since they match the new point."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same exact values from the same two special triangles, but it uses degrees where the VCE course uses radians, so it needs notation changes rather than a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-exact-values",
+  "changes": [
+   "State the angles in radians (π/6, π/4, π/3) instead of degrees, because the Mathematical Methods study design uses radians for circular functions.",
+   "Rewrite the worked examples and both practice questions in radian notation, for example cos(π/3) and sin(π/6) + tan(π/4).",
+   "Keep the special-triangle working and surd answers as they are, since they match the new point."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card1 label",
+   "card1",
+   "card2 label",
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Exact values",
+  "card": [
+   [
+    "π/4 triangle",
+    "Half a square with side 1 has angles π/4, π/4 and π/2. By Pythagoras the hypotenuse is √2. So sin(π/4) = 1/√2, cos(π/4) = 1/√2 and tan(π/4) = 1."
+   ],
+   [
+    "π/6 and π/3 triangle",
+    "Half an equilateral triangle with side 2 has angles π/6, π/3 and π/2. Its short side is 1 and its other side is √3, by Pythagoras."
+   ],
+   [
+    "Reading it off",
+    "Opposite π/6 is 1, so sin(π/6) = 1/2, cos(π/6) = √3/2 and tan(π/6) = 1/√3. Opposite π/3 is √3, so sin(π/3) = √3/2, cos(π/3) = 1/2 and tan(π/3) = √3."
+   ],
+   "Leave answers as surds, not decimals. Example: sin(π/3) × cos(π/6) = (√3/2) × (√3/2) = 3/4."
+  ],
+  "remember": "Draw the special triangle, then read the ratio from its sides.",
+  "a": {
+   "q": "Find the exact value of cos(π/3).",
+   "opts": [
+    "1/2",
+    "√3/2",
+    "1/√2",
+    "√3"
+   ],
+   "why": "In the π/6, π/3, π/2 triangle, the side next to π/3 is 1 and the hypotenuse is 2, so cos(π/3) = 1/2. The value √3/2 is tempting, but that is sin(π/3) and cos(π/6).",
+   "clue": "Which side is next to the angle π/3?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Evaluate sin(π/6) + tan(π/4) exactly.",
+   "opts": [
+    "3/2",
+    "1/2",
+    "√3/2 + 1",
+    "1 + 1/√2"
+   ],
+   "why": "sin(π/6) = 1/2 and tan(π/4) = 1, so the sum is 1/2 + 1 = 3/2. The option 1/2 is tempting, but it leaves out the tan(π/4) term.",
+   "clue": "Find each value from its triangle, then add."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "3/2",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The exact values, the triangle sides and both answers (cos(π/3) = 1/2 and 1/2 + 1 = 3/2) are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Exact values",
+  "card": [
+   [
+    "π/4 triangle",
+    "Half a square with side 1 has angles π/4, π/4 and π/2. By Pythagoras the hypotenuse is √2. So sin(π/4) = 1/√2, cos(π/4) = 1/√2 and tan(π/4) = 1."
+   ],
+   [
+    "π/6 and π/3 triangle",
+    "Half an equilateral triangle with side 2 has angles π/6, π/3 and π/2. Its short side is 1 and its other side is √3, by Pythagoras."
+   ],
+   [
+    "Reading it off",
+    "Opposite π/6 is 1, so sin(π/6) = 1/2, cos(π/6) = √3/2 and tan(π/6) = 1/√3. Opposite π/3 is √3, so sin(π/3) = √3/2, cos(π/3) = 1/2 and tan(π/3) = √3."
+   ],
+   "Leave answers as surds, not decimals. Example: sin(π/3) × cos(π/6) = (√3/2) × (√3/2) = 3/4."
+  ],
+  "remember": "Draw the special triangle, then read the ratio from its sides.",
+  "a": {
+   "q": "Find the exact value of cos(π/3).",
+   "opts": [
+    "1/2",
+    "√3/2",
+    "1/√2",
+    "√3"
+   ],
+   "why": "In the π/6, π/3, π/2 triangle, the side next to π/3 is 1 and the hypotenuse is 2, so cos(π/3) = 1/2. The value √3/2 is tempting, but that is sin(π/3) and cos(π/6).",
+   "clue": "Which side is next to the angle π/3?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Evaluate sin(π/6) + tan(π/4) exactly.",
+   "opts": [
+    "3/2",
+    "1/2",
+    "√3/2 + 1",
+    "1 + 1/√2"
+   ],
+   "why": "sin(π/6) = 1/2 and tan(π/4) = 1, so the sum is 1/2 + 1 = 3/2. The option 1/2 is tempting, but it leaves out the tan(π/4) term.",
+   "clue": "Find each value from its triangle, then add."
+  }
+ },
+ "cleared_by": "checker"
+}

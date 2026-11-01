@@ -1,0 +1,168 @@
+{
+ "id": "mat-conditional-probability-2",
+ "title": "Conditional probability",
+ "brief": "e90825085ca4",
+ "shortlist": [
+  [
+   "mat-conditional-probability",
+   0.64
+  ],
+  [
+   "mat-discrete-probability-distributions",
+   0.445
+  ],
+  [
+   "mat-complementary-events",
+   0.299
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.271
+  ],
+  [
+   "mat-probability-density-functions",
+   0.261
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-conditional-probability, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:07Z match: Claude Opus 5.5 says adapt mat-conditional-probability (1 change)",
+  "2026-11-01T08:24:33Z adapt: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.00806,
+  "adapt": 0.00431,
+  "check": 0.00671
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-conditional-probability",
+  "changes": [
+   "Write the notation as Pr(A | B) throughout the card and its questions, in place of P(A | B), to match the Victorian Study Design and the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at a suitable Year 11 depth and formula, and only its P notation needs changing to Pr for the Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-conditional-probability",
+  "changes": [
+   "Change the probability notation from P(...) to Pr(...) throughout the card, remember line and questions (e.g. Pr(A | B) = Pr(A ∩ B)/Pr(B)), as the VCE Study Design uses Pr."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same conditional probability formula at a suitable Year 11 depth, and only needs VCE's Pr notation in place of P.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-conditional-probability",
+  "changes": [
+   "Change the probability notation from P(...) to Pr(...) throughout the card, remember line and questions (e.g. Pr(A | B) = Pr(A ∩ B)/Pr(B)), as the VCE Study Design uses Pr."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.why",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Conditional probability",
+  "card": [
+   "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+   "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
+   "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+  ],
+  "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+  "a": {
+   "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
+   "opts": [
+    "2/3",
+    "1/4",
+    "2/5",
+    "3/8"
+   ],
+   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.4",
+   "also_right": []
+  },
+  "b": {
+   "best": "2/3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Conditional probability",
+  "card": [
+   "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+   "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
+   "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+   "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+  ],
+  "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+  "a": {
+   "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+   "opts": [
+    "0.4",
+    "0.1",
+    "0.7",
+    "2.5"
+   ],
+   "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+   "clue": "The event after the bar goes on the bottom."
+  },
+  "b": {
+   "d": 3,
+   "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
+   "opts": [
+    "2/3",
+    "1/4",
+    "2/5",
+    "3/8"
+   ],
+   "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+   "clue": "Find the total number who chose archery first."
+  }
+ },
+ "cleared_by": "checker"
+}

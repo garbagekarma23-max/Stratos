@@ -1,0 +1,214 @@
+{
+ "id": "mat-sine-cosine-rules-three",
+ "title": "Sine and cosine rules in three dimensions",
+ "brief": "b8f4ed81eb56",
+ "shortlist": [
+  [
+   "mat-cosine-rule",
+   0.424
+  ],
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.418
+  ],
+  [
+   "mat-sine-rule",
+   0.354
+  ],
+  [
+   "mat-area-any-triangle",
+   0.278
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00979,
+  "check": 0.01231,
+  "fix": 0.0232
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank cards teach the sine and cosine rules only for plane triangles, while this point needs students to find and use triangles inside solid shapes, such as angles between planes, which none of the cards cover.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sine and cosine rules in three dimensions",
+  "card": [
+   "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
+   [
+    "Cosine rule",
+    "c² = a² + b² − 2ab cos C. Use it when you know two sides and the angle between them, or all three sides."
+   ],
+   [
+    "Sine rule",
+    "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+   ],
+   "Side a is opposite angle A. Example: sides 3 and 4 with an angle of 90° between them give c² = 9 + 16 − 0 = 25, so c = 5."
+  ],
+  "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
+  "a": {
+   "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+   "opts": [
+    "√39 m",
+    "√109 m",
+    "√74 m",
+    "12 m"
+   ],
+   "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+   "clue": "The angle is between the two known sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+   "opts": [
+    "36.9°",
+    "53.1°",
+    "90°",
+    "41.4°"
+   ],
+   "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, which is opposite the side PQ, not QR.",
+   "clue": "The side opposite the angle stands alone with a minus sign."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "√39 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "36.9°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'The side opposite the angle stands alone with a minus sign' is confusing. In the card's form c² = a² + b² − 2ab cos C, the opposite side stands alone with no minus sign. It only takes the minus sign once the rule is rearranged for cos, and the card never shows that rearrangement."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: BC = √39 m, and angle QPR ≈ 36.9° in the 6-8-10 right triangle. The only problem is the clue for question b, which describes the opposite side confusingly when set against the form of the cosine rule the card shows."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue 'The side opposite the angle stands alone with a minus sign' is confusing. In the card's form c² = a² + b² − 2ab cos C, the opposite side stands alone with no minus sign. It only takes the minus sign once the rule is rearranged for cos, and the card never shows that rearrangement."
+ ],
+ "proposal": {
+  "title": "Sine and cosine rules in three dimensions",
+  "card": [
+   "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
+   [
+    "Cosine rule",
+    "c² = a² + b² − 2ab cos C, where side c is opposite angle C. Use it when you know two sides and the angle between them, or all three sides."
+   ],
+   [
+    "Sine rule",
+    "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+   ],
+   "To find an angle from three sides, rearrange: cos C = (a² + b² − c²) ÷ (2ab). Example: sides 3, 4 and 5 give cos C = (9 + 16 − 25) ÷ 24 = 0, so C = 90°."
+  ],
+  "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
+  "a": {
+   "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+   "opts": [
+    "√39 m",
+    "√109 m",
+    "√74 m",
+    "12 m"
+   ],
+   "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+   "clue": "The angle is between the two known sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+   "opts": [
+    "36.9°",
+    "53.1°",
+    "90.0°",
+    "143.1°"
+   ],
+   "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 128 ÷ 160 = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, found by using PQ as the opposite side instead of QR. Getting cos P = −0.8 from a sign error gives 143.1°.",
+   "clue": "Which side is opposite angle P?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'The side opposite the angle stands alone with a minus sign' is confusing. In the card's form c² = a² + b² − 2ab cos C, the opposite side stands alone with no minus sign. It only takes the minus sign once the rule is rearranged for cos, and the card never shows that rearrangement."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue 'The side opposite the angle stands alone with a minus sign' is confusing. In the card's form c² = a² + b² − 2ab cos C, the opposite side stands alone with no minus sign. It only takes the minus sign once the rule is rearranged for cos, and the card never shows that rearrangement."
+  ]
+ },
+ "final": {
+  "title": "Sine and cosine rules in three dimensions",
+  "card": [
+   "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
+   [
+    "Cosine rule",
+    "c² = a² + b² − 2ab cos C, where side c is opposite angle C. Use it when you know two sides and the angle between them, or all three sides."
+   ],
+   [
+    "Sine rule",
+    "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+   ],
+   "To find an angle from three sides, rearrange: cos C = (a² + b² − c²) ÷ (2ab). Example: sides 3, 4 and 5 give cos C = (9 + 16 − 25) ÷ 24 = 0, so C = 90°."
+  ],
+  "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
+  "a": {
+   "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+   "opts": [
+    "√39 m",
+    "√109 m",
+    "√74 m",
+    "12 m"
+   ],
+   "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+   "clue": "The angle is between the two known sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+   "opts": [
+    "36.9°",
+    "53.1°",
+    "90.0°",
+    "143.1°"
+   ],
+   "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 128 ÷ 160 = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, found by using PQ as the opposite side instead of QR. Getting cos P = −0.8 from a sign error gives 143.1°.",
+   "clue": "Which side is opposite angle P?"
+  }
+ },
+ "cleared_by": "auto"
+}

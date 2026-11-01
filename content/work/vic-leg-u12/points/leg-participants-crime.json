@@ -1,0 +1,152 @@
+{
+ "id": "leg-participants-crime",
+ "title": "Participants in a crime",
+ "brief": "1156efdee1fc",
+ "shortlist": [
+  [
+   "leg-responses-international-crime",
+   0.326
+  ],
+  [
+   "leg-international-crime",
+   0.309
+  ],
+  [
+   "leg-crime",
+   0.308
+  ],
+  [
+   "leg-causes-crime",
+   0.298
+  ],
+  [
+   "leg-categories-crime",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:50Z write: done",
+  "2026-11-01T08:42:06Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01071,
+  "check": 0.01353
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teach who counts as a principal offender or accessory before or after a crime; they cover international crime, what a crime is, causes of crime and crime categories.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Participants in a crime",
+  "card": [
+   [
+    "Principal offender",
+    "the person who commits the crime, or who carries out the main act of it. Two or more people can both be principal offenders in the one crime."
+   ],
+   [
+    "Accessory",
+    "a person who helps an offender after the crime, knowing they committed it, so that they avoid arrest or punishment. An example is hiding the offender from police."
+   ],
+   "People can also be charged for helping before or during a crime. This includes planning it with the offender, or helping them while it happens, such as keeping watch.",
+   "The time of the help matters. Help after the crime makes someone an accessory. Help before or during it can lead to a charge for taking part in the crime itself."
+  ],
+  "remember": "Principal offenders commit the crime. Help after it makes an accessory.",
+  "a": {
+   "q": "Which person is an accessory to a burglary?",
+   "opts": [
+    "Sam, who hides the burglar from police the next day",
+    "Lena, who breaks in and takes a laptop",
+    "Noor, who helps plan the break-in with the burglar",
+    "Tom, who keeps watch outside during the break-in"
+   ],
+   "why": "Sam helps the burglar after the crime to avoid police, so he is an accessory. Tom is tempting, but he helps during the crime, so he can be charged for taking part in it instead.",
+   "clue": "Look for the person whose help comes after the crime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya knows her brother robbed a shop. The next day she drives him interstate so police cannot find him. What is Priya's role?",
+   "opts": [
+    "An accessory, as she helped after the crime",
+    "A principal offender, as she is helping the robber",
+    "A principal offender, as she knew about the crime",
+    "An accessory, as she is related to the robber"
+   ],
+   "why": "Priya did not commit the robbery. She helped her brother avoid police after it, knowing what he did, so she is an accessory. Being a relative is not what makes her one, and knowing about a crime alone does not make someone a principal offender.",
+   "clue": "Ask when her help happened and what she did."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sam, who hides the burglar from police the next day",
+   "also_right": []
+  },
+  "b": {
+   "best": "An accessory, as she helped after the crime",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Participants in a crime",
+  "card": [
+   [
+    "Principal offender",
+    "the person who commits the crime, or who carries out the main act of it. Two or more people can both be principal offenders in the one crime."
+   ],
+   [
+    "Accessory",
+    "a person who helps an offender after the crime, knowing they committed it, so that they avoid arrest or punishment. An example is hiding the offender from police."
+   ],
+   "People can also be charged for helping before or during a crime. This includes planning it with the offender, or helping them while it happens, such as keeping watch.",
+   "The time of the help matters. Help after the crime makes someone an accessory. Help before or during it can lead to a charge for taking part in the crime itself."
+  ],
+  "remember": "Principal offenders commit the crime. Help after it makes an accessory.",
+  "a": {
+   "q": "Which person is an accessory to a burglary?",
+   "opts": [
+    "Sam, who hides the burglar from police the next day",
+    "Lena, who breaks in and takes a laptop",
+    "Noor, who helps plan the break-in with the burglar",
+    "Tom, who keeps watch outside during the break-in"
+   ],
+   "why": "Sam helps the burglar after the crime to avoid police, so he is an accessory. Tom is tempting, but he helps during the crime, so he can be charged for taking part in it instead.",
+   "clue": "Look for the person whose help comes after the crime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya knows her brother robbed a shop. The next day she drives him interstate so police cannot find him. What is Priya's role?",
+   "opts": [
+    "An accessory, as she helped after the crime",
+    "A principal offender, as she is helping the robber",
+    "A principal offender, as she knew about the crime",
+    "An accessory, as she is related to the robber"
+   ],
+   "why": "Priya did not commit the robbery. She helped her brother avoid police after it, knowing what he did, so she is an accessory. Being a relative is not what makes her one, and knowing about a crime alone does not make someone a principal offender.",
+   "clue": "Ask when her help happened and what she did."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,184 @@
+{
+ "id": "phys-momentum-impulse-physics",
+ "title": "Momentum and impulse in physics",
+ "brief": "a44d8ca694ae",
+ "shortlist": [
+  [
+   "phys-mass-energy",
+   0.283
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00581,
+  "check": 0.01028,
+  "fix": 0.01432
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers relativistic mass-energy and momentum at far greater depth than the Year 11 VCE topic of momentum, impulse and conservation, so no bank point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Momentum and impulse",
+  "card": [
+   "Momentum is mass times velocity: p = mv. It is measured in kg m/s and has a direction, the same as the velocity.",
+   "Impulse is force times the time the force acts: impulse = FΔt. It equals the change in momentum: FΔt = Δp = mv - mu.",
+   "For the same change in momentum, a longer contact time means a smaller average force. This is why a crumple zone or a soft landing reduces the force.",
+   "In a system with no external force, total momentum stays the same. The momentum before a collision equals the momentum after it."
+  ],
+  "remember": "Impulse equals change in momentum. More time means less force for the same change.",
+  "a": {
+   "q": "A 0.50 kg ball moving at 6.0 m/s is caught by a player and brought to rest in 0.20 s. What is the average force on the ball?",
+   "opts": [
+    "15 N",
+    "3.0 N",
+    "30 N",
+    "0.60 N"
+   ],
+   "why": "The change in momentum is 0.50 × 6.0 = 3.0 kg m/s. Force = 3.0 ÷ 0.20 = 15 N. The answer 3.0 N is the momentum change, which has not been divided by the time.",
+   "clue": "Find the change in momentum first, then divide by the time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq lands from a jump with his knees bent, so he stops over a longer time than with stiff legs. His momentum change is the same both ways. Why is the force on him smaller?",
+   "opts": [
+    "The same impulse is spread over a longer time",
+    "The impulse is smaller when the time is longer",
+    "His momentum change is smaller with bent knees",
+    "The force and the time are not related to impulse"
+   ],
+   "why": "Impulse FΔt equals the change in momentum, which is the same in both landings. If Δt is larger, F must be smaller. The impulse does not shrink, because it is fixed by the momentum change.",
+   "clue": "The momentum change is fixed, so what must happen to F when Δt grows?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15 N",
+   "also_right": []
+  },
+  "b": {
+   "best": "The same impulse is spread over a longer time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card writes Δp = mv - mu but never says that u is the initial velocity and v is the final velocity. Some students may not know this convention."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer (15 N, and the same impulse spread over a longer time), and the physics checks out. The only issue is minor: the card uses u in mv - mu without defining it as the initial velocity."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card writes Δp = mv - mu but never says that u is the initial velocity and v is the final velocity. Some students may not know this convention."
+ ],
+ "proposal": {
+  "title": "Momentum and impulse in physics",
+  "card": [
+   "Momentum is mass times velocity: p = mv. It is measured in kg m/s and has a direction, the same as the velocity.",
+   "Impulse is force times the time the force acts: impulse = FΔt. It equals the change in momentum: FΔt = Δp = mv - mu, where u is the initial velocity and v is the final velocity.",
+   "For the same change in momentum, a longer contact time means a smaller average force. This is why a crumple zone or a soft landing reduces the force.",
+   "In a system with no external force, total momentum stays the same. The momentum before a collision equals the momentum after it."
+  ],
+  "remember": "Impulse equals change in momentum. More time means less average force for the same change.",
+  "a": {
+   "q": "A 0.50 kg ball moving at 6.0 m/s is caught by a player and brought to rest in 0.20 s. What is the average force on the ball?",
+   "opts": [
+    "15 N",
+    "3.0 N",
+    "30 N",
+    "0.60 N"
+   ],
+   "why": "The change in momentum has size 0.50 × 6.0 = 3.0 kg m/s, as the final velocity is 0. Force = 3.0 ÷ 0.20 = 15 N. The answer 3.0 N is the momentum change, which has not been divided by the time.",
+   "clue": "Find the change in momentum first, then divide by the time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq lands from a jump with his knees bent, so he stops over a longer time than with stiff legs. His momentum change is the same both ways. Why is the force on him smaller?",
+   "opts": [
+    "The same impulse is spread over a longer time",
+    "The impulse is smaller when the time is longer",
+    "His momentum change is smaller with bent knees",
+    "The force and the time are not related to impulse"
+   ],
+   "why": "Impulse FΔt equals the change in momentum, which is the same in both landings. If Δt is larger, F must be smaller. The impulse does not shrink, because it is fixed by the momentum change.",
+   "clue": "The momentum change is fixed, so what must happen to F when Δt grows?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card writes Δp = mv - mu but never says that u is the initial velocity and v is the final velocity. Some students may not know this convention."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card writes Δp = mv - mu but never says that u is the initial velocity and v is the final velocity. Some students may not know this convention."
+  ]
+ },
+ "final": {
+  "title": "Momentum and impulse in physics",
+  "card": [
+   "Momentum is mass times velocity: p = mv. It is measured in kg m/s and has a direction, the same as the velocity.",
+   "Impulse is force times the time the force acts: impulse = FΔt. It equals the change in momentum: FΔt = Δp = mv - mu, where u is the initial velocity and v is the final velocity.",
+   "For the same change in momentum, a longer contact time means a smaller average force. This is why a crumple zone or a soft landing reduces the force.",
+   "In a system with no external force, total momentum stays the same. The momentum before a collision equals the momentum after it."
+  ],
+  "remember": "Impulse equals change in momentum. More time means less average force for the same change.",
+  "a": {
+   "q": "A 0.50 kg ball moving at 6.0 m/s is caught by a player and brought to rest in 0.20 s. What is the average force on the ball?",
+   "opts": [
+    "15 N",
+    "3.0 N",
+    "30 N",
+    "0.60 N"
+   ],
+   "why": "The change in momentum has size 0.50 × 6.0 = 3.0 kg m/s, as the final velocity is 0. Force = 3.0 ÷ 0.20 = 15 N. The answer 3.0 N is the momentum change, which has not been divided by the time.",
+   "clue": "Find the change in momentum first, then divide by the time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq lands from a jump with his knees bent, so he stops over a longer time than with stiff legs. His momentum change is the same both ways. Why is the force on him smaller?",
+   "opts": [
+    "The same impulse is spread over a longer time",
+    "The impulse is smaller when the time is longer",
+    "His momentum change is smaller with bent knees",
+    "The force and the time are not related to impulse"
+   ],
+   "why": "Impulse FΔt equals the change in momentum, which is the same in both landings. If Δt is larger, F must be smaller. The impulse does not shrink, because it is fixed by the momentum change.",
+   "clue": "The momentum change is fixed, so what must happen to F when Δt grows?"
+  }
+ },
+ "cleared_by": "auto"
+}

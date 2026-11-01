@@ -1,0 +1,202 @@
+{
+ "id": "bio-cancer-cell-cycle",
+ "title": "Cancer and the cell cycle",
+ "brief": "8b0088689a48",
+ "shortlist": [
+  [
+   "bio-mitosis",
+   0.313
+  ],
+  [
+   "bio-types-non-infectious-disease",
+   0.26
+  ],
+  [
+   "bio-somatic-germline-mutations",
+   0.239
+  ],
+  [
+   "bio-adaptive-immune-response",
+   0.215
+  ],
+  [
+   "bio-causes-mutation",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00498,
+  "check": 0.01066,
+  "fix": 0.02629
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, on non-infectious disease, only mentions cancer as cells dividing out of control and is broader than this point, which teaches that mutations in cell-cycle control genes cause tumours, so no bank point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cancer and the cell cycle",
+  "card": [
+   "Some genes control when a cell divides and when it stops. A mutation is a change in the DNA sequence of a gene.",
+   "A mutation in one of these genes can stop the cell cycle from being controlled. The cell may then divide again and again when it should not.",
+   "The extra cells can build up as a lump of tissue called a tumour. A tumour may be benign, which stays in one place, or malignant, which can invade nearby tissue.",
+   "Cancer is a group of diseases caused by uncontrolled cell division. Most mutations do not cause cancer, because they do not change these control genes in a way that removes control."
+  ],
+  "remember": "Mutations in cell cycle control genes can cause uncontrolled division, which can form a tumour.",
+  "a": {
+   "q": "Which change in a cell could lead to cancer?",
+   "opts": [
+    "A mutation that removes control of the cell cycle",
+    "A mutation in a gene that makes a hair pigment",
+    "A cell dividing once to replace a dead skin cell",
+    "A cell stopping division after it has fully grown"
+   ],
+   "why": "Cancer starts when mutations in control genes let cells divide without proper control. A mutation in a pigment gene does not affect the cell cycle, and the other two options are normal, controlled behaviour.",
+   "clue": "Look for the change that breaks control of division."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
+   "opts": [
+    "Liver cells may divide without control and form a tumour",
+    "Liver cells stop copying DNA and so cannot divide",
+    "Liver cells all die at once from the mutation",
+    "Liver cells divide in a controlled way to repair damage"
+   ],
+   "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
+   "clue": "What happens when the signal to stop dividing is lost?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A mutation that removes control of the cell cycle",
+   "also_right": []
+  },
+  "b": {
+   "best": "Liver cells may divide without control and form a tumour",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for the change that breaks control of division' nearly restates the right option ('removes control of the cell cycle'), so a student can match words without understanding the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and both answers are accurate and match the card. The only issue is that question a's clue echoes the right option's wording closely enough to give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Look for the change that breaks control of division' nearly restates the right option ('removes control of the cell cycle'), so a student can match words without understanding the idea."
+ ],
+ "proposal": {
+  "title": "Cancer and the cell cycle",
+  "card": [
+   "Some genes control when a cell divides and when it stops. A mutation is a change in the DNA sequence of a gene.",
+   "A mutation in one of these genes can stop the cell cycle from being controlled. The cell may then divide again and again when it should not.",
+   "The extra cells can build up as a lump of tissue called a tumour. A tumour may be benign, which stays in one place, or malignant, which can invade nearby tissue.",
+   "Cancer is a group of diseases caused by uncontrolled cell division. Most mutations do not cause cancer, because they do not change these control genes in a way that removes control."
+  ],
+  "remember": "Mutations in cell cycle control genes can cause uncontrolled division, which can form a tumour.",
+  "a": {
+   "q": "Which change in a cell could lead to cancer?",
+   "opts": [
+    "A mutation that removes control of the cell cycle",
+    "A mutation in a gene that makes a hair pigment",
+    "A cell dividing once to replace a dead skin cell",
+    "A cell stopping division after it has fully grown"
+   ],
+   "why": "Cancer starts when mutations in control genes let cells divide without proper control. A mutation in a pigment gene does not affect the cell cycle, and the other two options are normal, controlled behaviour.",
+   "clue": "A mutation matters here only if it affects the right kind of gene."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
+   "opts": [
+    "Liver cells may divide without control and form a tumour",
+    "Liver cells stop copying DNA and so cannot divide",
+    "Liver cells all die at once from the mutation",
+    "Liver cells divide in a controlled way to repair damage"
+   ],
+   "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
+   "clue": "What happens when the signal to stop dividing is lost?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Look for the change that breaks control of division' nearly restates the right option ('removes control of the cell cycle'), so a student can match words without understanding the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Look for the change that breaks control of division' nearly restates the right option ('removes control of the cell cycle'), so a student can match words without understanding the idea."
+  ]
+ },
+ "final": {
+  "title": "Cancer and the cell cycle",
+  "card": [
+   "Some genes control when a cell divides and when it stops. A mutation is a change in the DNA sequence of a gene.",
+   "A mutation in one of these genes can stop the cell cycle from being controlled. The cell may then divide again and again when it should not.",
+   "The extra cells can build up as a lump of tissue called a tumour. A tumour may be benign, which stays in one place, or malignant, which can invade nearby tissue.",
+   "Cancer is a group of diseases caused by uncontrolled cell division. Most mutations do not cause cancer, because they do not change these control genes in a way that removes control."
+  ],
+  "remember": "Mutations in cell cycle control genes can cause uncontrolled division, which can form a tumour.",
+  "a": {
+   "q": "Which change in a cell could lead to cancer?",
+   "opts": [
+    "A mutation that removes control of the cell cycle",
+    "A mutation in a gene that makes a hair pigment",
+    "A cell dividing once to replace a dead skin cell",
+    "A cell stopping division after it has fully grown"
+   ],
+   "why": "Cancer starts when mutations in control genes let cells divide without proper control. A mutation in a pigment gene does not affect the cell cycle, and the other two options are normal, controlled behaviour.",
+   "clue": "A mutation matters here only if it affects the right kind of gene."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
+   "opts": [
+    "Liver cells may divide without control and form a tumour",
+    "Liver cells stop copying DNA and so cannot divide",
+    "Liver cells all die at once from the mutation",
+    "Liver cells divide in a controlled way to repair damage"
+   ],
+   "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
+   "clue": "What happens when the signal to stop dividing is lost?"
+  }
+ },
+ "cleared_by": "auto"
+}

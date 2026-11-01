@@ -1,0 +1,233 @@
+{
+ "id": "chem-indicators-ph-meters",
+ "title": "Indicators and pH meters",
+ "brief": "54e2735abee9",
+ "shortlist": [
+  [
+   "chem-choosing-indicator",
+   0.343
+  ],
+  [
+   "chem-properties-acids-bases",
+   0.337
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00533,
+  "check": 0.01357,
+  "fix": 0.02178,
+  "recheck": 0.00861
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point compares the accuracy and precision of natural indicators, commercial indicators and pH meters; one covers choosing an indicator for a titration's equivalence point and the other covers basic properties of acids and bases, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Indicators and pH meters",
+  "card": [
+   [
+    "Natural indicator",
+    "a plant extract, such as red cabbage juice, that changes colour with pH. It gives a rough pH, because the colours blend into each other and are hard to match to exact values."
+   ],
+   [
+    "Commercial indicator",
+    "a made dye or mix of dyes, such as universal indicator, with colour changes set against a chart. It narrows pH down to about one unit, but it still relies on the eye matching a colour."
+   ],
+   [
+    "pH meter",
+    "an electronic probe that reads pH as a number, often to two decimal places. It needs calibrating with buffer solutions of known pH, or its readings can be consistently off."
+   ],
+   "Accuracy is how close a reading is to the true value. Precision is how close repeated readings are to each other, and how finely the scale is divided."
+  ],
+  "remember": "Meters usually give the finest readings, but only a calibrated meter is also accurate.",
+  "a": {
+   "q": "Which tool is the most precise way to measure the pH of a solution?",
+   "opts": [
+    "A pH meter that reads to two decimal places",
+    "Universal indicator matched to a colour chart",
+    "Red cabbage juice matched to a colour guide",
+    "Litmus paper that turns either red or blue"
+   ],
+   "why": "A meter gives a numerical reading to two decimal places, so its scale is divided most finely. Indicators rely on matching colours by eye, which gives only a rough value. Universal indicator is better than cabbage juice but still reads to about one unit.",
+   "clue": "Which tool gives a number with the most decimal places?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's pH meter reads 7.52 each time in a buffer of pH 7.00. What does this show about the meter?",
+   "opts": [
+    "It is precise but not accurate, so it needs calibrating",
+    "It is accurate but not precise, so it needs calibrating",
+    "It is both accurate and precise, so it can be used",
+    "It is neither accurate nor precise, so it is faulty"
+   ],
+   "why": "The readings are identical, so they are close to each other and the meter is precise. They are 0.52 away from the true value of 7.00, so it is not accurate. Calibrating with buffers can fix this kind of consistent error.",
+   "clue": "Compare the readings with each other, then with the buffer's true pH."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A pH meter that reads to two decimal places",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is precise but not accurate, so it needs calibrating",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines precision as partly 'how finely the scale is divided'. That is resolution, which the VCE Study Design glossary keeps separate. In VCE, precision is how closely repeated measurements agree. This conflation could teach students a non-standard definition."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a's answer rests on the conflated definition: it treats the finest scale divisions as 'most precise'. The why repeats this ('its scale is divided most finely')."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail ('reads to two decimal places'), so it stands out. The clue ('Which tool gives a number with the most decimal places?') also points straight to it, so a student can answer without knowing the idea."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'only a calibrated meter is also accurate' uses 'only', where the card says an uncalibrated meter's readings 'can be' consistently off. It also implies that indicators are never accurate, which the card does not say."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card blends resolution into its definition of precision, which is not the VCE definition, and question a's answer and why rely on that blend. In question a, both the right option's precise detail and the clue give the answer away, and the remember line uses 'only' where the card says 'can'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines precision as partly 'how finely the scale is divided'. That is resolution, which the VCE Study Design glossary keeps separate. In VCE, precision is how closely repeated measurements agree. This conflation could teach students a non-standard definition.",
+  "Question a, other: Question a's answer rests on the conflated definition: it treats the finest scale divisions as 'most precise'. The why repeats this ('its scale is divided most finely').",
+  "Question a, wording: The right option is the only one with a precise detail ('reads to two decimal places'), so it stands out. The clue ('Which tool gives a number with the most decimal places?') also points straight to it, so a student can answer without knowing the idea.",
+  "Remember, wording: 'only a calibrated meter is also accurate' uses 'only', where the card says an uncalibrated meter's readings 'can be' consistently off. It also implies that indicators are never accurate, which the card does not say."
+ ],
+ "proposal": {
+  "title": "Indicators and pH meters",
+  "card": [
+   [
+    "Natural indicator",
+    "a plant extract, such as red cabbage juice, that changes colour with pH. It gives a rough pH, because the colours blend into each other and are hard to match to exact values."
+   ],
+   [
+    "Commercial indicator",
+    "a made dye or mix of dyes, such as universal indicator, with colour changes set against a chart. It narrows pH down to about one unit, but it still relies on the eye matching a colour."
+   ],
+   [
+    "pH meter",
+    "an electronic probe that reads pH as a number, often to two decimal places. It needs calibrating with buffer solutions of known pH, or its readings can be consistently off."
+   ],
+   "Accuracy is how close a reading is to the true value. Precision is how closely repeated readings of the same sample agree, which is separate from how finely a scale reads."
+  ],
+  "remember": "Indicators rely on matching colours by eye. A meter gives a number, but calibrate it so its readings are not consistently off.",
+  "a": {
+   "q": "Why does universal indicator give a less exact pH than a calibrated pH meter?",
+   "opts": [
+    "It relies on the eye matching a colour to a chart",
+    "It must be calibrated with buffers before each use",
+    "It can only show if a solution is acidic or basic",
+    "It is a plant extract whose colours blend together"
+   ],
+   "why": "Universal indicator is read by matching its colour to a chart by eye, which narrows pH to about one unit. Calibrating with buffers is what a pH meter needs, not an indicator. Blending plant colours describes a natural indicator such as red cabbage juice.",
+   "clue": "Think about how a person reads the result from an indicator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's pH meter reads 7.52 each time in a buffer of pH 7.00. What does this show about the meter?",
+   "opts": [
+    "It is precise but not accurate, so it needs calibrating",
+    "It is accurate but not precise, so it needs calibrating",
+    "It is both accurate and precise, so it can be used",
+    "It is neither accurate nor precise, so it is faulty"
+   ],
+   "why": "The repeated readings agree with each other, so the meter is precise. They are 0.52 away from the true value of 7.00, so it is not accurate. Calibrating with buffers can fix this kind of consistent error.",
+   "clue": "Compare the readings with each other, then with the buffer's true pH."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It relies on the eye matching a colour to a chart",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is precise but not accurate, so it needs calibrating",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines precision as partly 'how finely the scale is divided'. That is resolution, which the VCE Study Design glossary keeps separate. In VCE, precision is how closely repeated measurements agree. This conflation could teach students a non-standard definition."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a's answer rests on the conflated definition: it treats the finest scale divisions as 'most precise'. The why repeats this ('its scale is divided most finely')."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a precise detail ('reads to two decimal places'), so it stands out. The clue ('Which tool gives a number with the most decimal places?') also points straight to it, so a student can answer without knowing the idea."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'only a calibrated meter is also accurate' uses 'only', where the card says an uncalibrated meter's readings 'can be' consistently off. It also implies that indicators are never accurate, which the card does not say."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines precision as partly 'how finely the scale is divided'. That is resolution, which the VCE Study Design glossary keeps separate. In VCE, precision is how closely repeated measurements agree. This conflation could teach students a non-standard definition.",
+   "Question a, other: Question a's answer rests on the conflated definition: it treats the finest scale divisions as 'most precise'. The why repeats this ('its scale is divided most finely').",
+   "Question a, wording: The right option is the only one with a precise detail ('reads to two decimal places'), so it stands out. The clue ('Which tool gives a number with the most decimal places?') also points straight to it, so a student can answer without knowing the idea.",
+   "Remember, wording: 'only a calibrated meter is also accurate' uses 'only', where the card says an uncalibrated meter's readings 'can be' consistently off. It also implies that indicators are never accurate, which the card does not say."
+  ]
+ }
+}

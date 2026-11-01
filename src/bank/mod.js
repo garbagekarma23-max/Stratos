@@ -1459,5 +1459,317 @@ MADE_BANKS.mod = {
       "why": "A permanent member's no vote defeats the resolution, however many others support it. The majority does not decide the matter here, so passing on a large majority is the tempting but wrong answer.",
       "clue": "Does a large majority matter when a permanent member votes no?"
     }
+  },
+  "mod-end-empires": {
+    "title": "The end of empires",
+    "card": [
+      "An empire is a state that rules over other lands and peoples, often by force. From the late 1800s, European empires such as Britain and France competed to gain more colonies and power.",
+      "At the same time, new nation states formed. A nation state is a country whose people share a common identity, such as language or culture, and are ruled by one government.",
+      "Italy was unified in 1861 and Germany in 1871. Both joined smaller states into single, stronger countries that could compete with older powers.",
+      "Meiji Japan, from 1868, built a modern state with a new army, industry and government. It then gained colonies of its own, such as Taiwan in 1895 and Korea in 1910."
+    ],
+    "remember": "Old empires and new nation states competed for land and power from the late 1800s.",
+    "a": {
+      "q": "What was a new nation state, as formed in Italy and Germany?",
+      "opts": [
+        "A country whose people share an identity and one government",
+        "A colony ruled by a distant European empire",
+        "A group of states that each kept its own separate government",
+        "A territory held by force for another country's army"
+      ],
+      "why": "Italy and Germany joined many smaller states into one country with a shared identity and one government. A colony is the opposite, because it is ruled by another state.",
+      "clue": "Think of what joined the people of Italy or Germany together."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which of these shows a new nation state forming, rather than an empire growing?",
+      "opts": [
+        "German states joining under one government in 1871",
+        "Japan taking Korea as a colony of its own in 1910",
+        "Britain claiming new colonies across Africa in the 1880s",
+        "France expanding its rule over Indochina in the 1880s"
+      ],
+      "why": "In 1871 separate German states became one country under one government, so a nation state formed. Japan was a new modern state, but taking Korea meant ruling another people by force, which is empire building, just like Britain in Africa and France in Indochina.",
+      "clue": "Ask whether people are joining together or another people is being ruled."
+    }
+  },
+  "mod-world-after-first-world": {
+    "title": "The world after the First World War",
+    "card": [
+      "The First World War ended in 1918. About nine to ten million soldiers had died, and many civilians as well. Families and towns across Europe were left grieving.",
+      "Four empires collapsed: the German, Austro-Hungarian, Russian and Ottoman empires. New states such as Poland and Czechoslovakia appeared in their place, with new and untested governments.",
+      "Winners and losers alike came out of the war in debt. Britain and France had borrowed heavily, much of it from the United States, and parts of France and Belgium were badly damaged.",
+      "Grief, debt and new, unsettled states left Europe unstable. These conditions set up the tensions of the next two decades."
+    ],
+    "remember": "The war left Europe grieving, in debt and without its old empires, so it was unstable.",
+    "a": {
+      "q": "Which statement best describes Europe's finances after the war?",
+      "opts": [
+        "Winners and losers alike were left in debt",
+        "Only the defeated powers were left in debt",
+        "The United States owed Britain and France large sums",
+        "Britain and France paid for the war from their savings"
+      ],
+      "why": "Both sides came out of the war in debt. Britain and France were on the winning side, yet they had borrowed heavily, much of it from the United States. So it was not only the losers who owed money, and the lending ran from the United States to Europe, not the other way.",
+      "clue": "Did winning the war mean a country had no debts?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A historian says Europe in 1919 was 'a house built on sand'. Which point best supports this view?",
+      "opts": [
+        "Weak new states and heavy debts left Europe unstable",
+        "Russia's empire grew to fill the space left behind",
+        "The winning powers came out of the war rich and secure",
+        "The old empires survived and blocked any change"
+      ],
+      "why": "Sand is an unsteady base, so the historian means Europe was unstable. New, untested states and heavy debts support that. The idea that the winners were rich and secure is tempting, but Britain and France were deeply in debt too.",
+      "clue": "Sand shifts. Look for what made Europe unsteady."
+    }
+  },
+  "mod-fourteen-points-self-determination": {
+    "title": "The Fourteen Points and self-determination",
+    "card": [
+      "In January 1918, United States President Woodrow Wilson set out Fourteen Points as a plan for peace. He wanted a fairer world after the war.",
+      [
+        "Self-determination",
+        "the idea that a people has the right to rule itself, rather than be ruled by an empire or foreign power."
+      ],
+      "Wilson's plan said borders in Europe should follow where peoples lived. This shaped new borders and new states, such as Poland and Czechoslovakia.",
+      "People in colonies heard the idea too, and many hoped it would apply to them. The peacemakers mostly did not extend it to colonies, so many were disappointed."
+    ],
+    "remember": "Self-determination means a people can rule itself. It shaped new borders and raised hopes in colonies.",
+    "a": {
+      "q": "What does self-determination mean?",
+      "opts": [
+        "A people has the right to rule itself",
+        "A country has the right to take over its neighbours",
+        "A people must accept rule by the strongest power",
+        "An empire may keep control of the lands it holds"
+      ],
+      "why": "Self-determination is the right of a people to govern itself. It is the opposite of an empire or a strong power ruling over others, so the options about empires and strong powers are wrong.",
+      "clue": "Think about who gets to make the rules for a people."
+    },
+    "b": {
+      "d": 3,
+      "q": "A newspaper in a colony in 1919 praises Wilson's plan. What in the plan would many colonial readers have welcomed?",
+      "opts": [
+        "Its idea that peoples should rule themselves",
+        "Its promise of independence for all colonies",
+        "Its plan to make colonies pay war debts",
+        "Its call for empires to grow stronger"
+      ],
+      "why": "Wilson spoke of peoples ruling themselves, so colonial readers hoped the idea would apply to them. It was not a promise of independence for colonies: the peacemakers mostly did not extend it to them, which is why many were disappointed.",
+      "clue": "Was it a promise to colonies, or an idea they hoped would reach them?"
+    }
+  },
+  "mod-treaty-versailles": {
+    "title": "The Treaty of Versailles",
+    "card": [
+      "The Treaty of Versailles was the peace treaty signed with Germany in 1919. Germany had to sign it and had no say in its terms.",
+      [
+        "Blame",
+        "Germany had to accept responsibility for causing the war. This was set out in what is known as the war guilt clause."
+      ],
+      ["Reparations", "Germany had to pay money to the winners to cover the cost of war damage."],
+      "Germany also lost land, including some territory in Europe and its overseas colonies, and its army was cut to a small size. Many Germans saw the treaty as harsh and unfair."
+    ],
+    "remember": "Versailles made Germany accept blame, pay, lose land and cut its army, and many Germans resented it.",
+    "a": {
+      "q": "Which of these was a term of the Treaty of Versailles?",
+      "opts": [
+        "Germany had to accept blame for the war",
+        "Germany was allowed to keep a large army",
+        "Germany helped write the terms of the treaty",
+        "Germany gained land from its neighbours"
+      ],
+      "why": "Under the war guilt clause, Germany had to accept blame for the war. Germany's army was cut, it lost land, and it had no say in the terms, so the other three options are wrong.",
+      "clue": "Three options treat Germany more gently than the treaty did."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1920, a German veteran complains that the treaty was a peace dictated to Germany. What is his complaint about?",
+      "opts": [
+        "Germany had no say in the terms it signed",
+        "Germany had to pay money for war damage",
+        "Germany lost its colonies overseas",
+        "Germany's army was cut to a small size"
+      ],
+      "why": "A dictated peace is one handed over with no chance to negotiate, and Germany had no say in the terms. Paying reparations, losing colonies and cutting the army were all real terms, but they describe what the treaty said, not how it was made.",
+      "clue": "His complaint is about how the deal was made, not what it said."
+    }
+  },
+  "mod-arms-race": {
+    "title": "The arms race",
+    "card": [
+      "The United States tested the first atomic bomb in 1945 and used it on Japan. The Soviet Union tested its own in 1949, and each side then built more and better weapons.",
+      "This competition is the arms race. Each superpower feared falling behind, so every gain by one side pushed the other to match it.",
+      "Both sides came to hold enough nuclear weapons to destroy the other even after being attacked first. This led to the idea of mutually assured destruction (MAD).",
+      "Under MAD, starting a nuclear war would mean destroying yourself as well. Supporters argued this fear helped deter a direct attack."
+    ],
+    "remember": "Each side matched the other's weapons, until a first strike meant its own destruction too.",
+    "a": {
+      "q": "What does mutually assured destruction mean?",
+      "opts": [
+        "Each side could destroy the other even after being hit",
+        "Only the side that strikes first would be destroyed",
+        "One side held weapons that the other could not match",
+        "Both sides agreed to destroy their weapons together"
+      ],
+      "why": "MAD rests on both sides keeping enough weapons to hit back after an attack, so neither could win a nuclear war. It is not an agreement to disarm, because both sides kept and built weapons.",
+      "clue": "Think about what happens to the attacker as well."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the Soviet Union built more nuclear weapons after 1949 only because it wanted to attack the United States. Which reply fits the arms race best?",
+      "opts": [
+        "Each side feared falling behind, so it matched the other",
+        "Each side built weapons only after the other had used them",
+        "Each side built weapons to settle a shared border dispute",
+        "Only one side built weapons while the other held back"
+      ],
+      "why": "The arms race was driven by fear of falling behind, so each gain by one side led the other to match it. It was not a one-sided build-up, and the weapons were not built only in response to being used.",
+      "clue": "Think about how each side reacted to the other's gains."
+    }
+  },
+  "mod-proxy-wars": {
+    "title": "Proxy wars",
+    "card": [
+      "A proxy war is a conflict in which two powers support opposing sides, rather than fighting each other directly. The USA and the Soviet Union did this during the Cold War.",
+      "They avoided direct war because both had nuclear weapons. A direct clash risked escalating into a nuclear war.",
+      "In Korea (1950 to 1953), the Soviet Union and China backed North Korea, while the USA led a United Nations force backing South Korea.",
+      "In Vietnam, the USA backed South Vietnam against the communist North, which was supplied by the Soviet Union and China. In Afghanistan (1979 to 1989), Soviet troops fought rebels who received weapons and money from the USA."
+    ],
+    "remember": "Proxy wars let the superpowers compete by backing others, without fighting each other directly.",
+    "a": {
+      "q": "Why is the Korean War described as a proxy war?",
+      "opts": [
+        "The superpowers backed opposing sides in Korea",
+        "The superpowers declared war on each other",
+        "Korea fought as a part of the Soviet Union",
+        "Korea was a battle between the USA and China only"
+      ],
+      "why": "The Soviet Union and China backed North Korea, and the USA backed South Korea, so the rivals competed through others. It was not a war declared between the superpowers themselves.",
+      "clue": "Look at who supported each side."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did the USA and the Soviet Union fight proxy wars rather than attack each other directly?",
+      "opts": [
+        "A direct war risked escalating to nuclear war",
+        "Neither superpower had enough soldiers to fight",
+        "The United Nations had banned them from fighting",
+        "Both superpowers wanted to stay out of other countries"
+      ],
+      "why": "Both superpowers had nuclear weapons, so a direct clash could have escalated into a nuclear war. Both were in fact heavily involved in other countries, so wanting to stay out is wrong.",
+      "clue": "Think about the weapons both sides held."
+    }
+  },
+  "mod-divided-berlin": {
+    "title": "Divided Berlin",
+    "card": [
+      "After 1945, Germany was divided into four zones run by the USA, Britain, France and the Soviet Union. Berlin lay inside the Soviet zone and was also split into four sectors.",
+      "The three western sectors became West Berlin, linked to West Germany. The Soviet sector became East Berlin, in communist East Germany.",
+      "Many East Germans left through West Berlin to live in the West. In 1961, East Germany built the Berlin Wall to stop them.",
+      "The Wall stood until 1989, when it fell. It became a symbol of the division between East and West."
+    ],
+    "remember": "Berlin was split after 1945, and the Wall of 1961 to 1989 stopped East Germans leaving.",
+    "a": {
+      "q": "Why did East Germany build the Berlin Wall in 1961?",
+      "opts": [
+        "To stop East Germans leaving for the West",
+        "To keep West Germans out of East Berlin",
+        "To mark the border between Germany and Poland",
+        "To protect East Berlin from a Western invasion"
+      ],
+      "why": "Many East Germans were leaving through West Berlin, so the Wall was built to stop them. The Wall was aimed at keeping people in, not at keeping invaders out.",
+      "clue": "Think about which way people were moving."
+    },
+    "b": {
+      "d": 2,
+      "q": "Lena lived in East Berlin in 1970. Which description fits her situation?",
+      "opts": [
+        "She could not freely cross into West Berlin",
+        "She lived in a sector run by the USA",
+        "She could cross to West Berlin whenever she liked",
+        "She lived in a city that was not divided"
+      ],
+      "why": "The Wall stood from 1961 to 1989, so East Berliners could not freely cross it. East Berlin was the Soviet sector, not a US one.",
+      "clue": "Check whether the Wall stood in 1970."
+    }
+  },
+  "mod-dissent-soviet-bloc": {
+    "title": "Dissent in the Soviet bloc",
+    "card": [
+      "The Soviet bloc was the group of Eastern European states under strong Soviet influence after 1945. Dissent means open disagreement with those in power.",
+      [
+        "Poland 1956",
+        "Workers' protests in Poznań were put down by Polish forces. The Soviet Union then accepted Władysław Gomułka as leader, as he kept Poland communist and loyal to Moscow."
+      ],
+      [
+        "Hungary 1956",
+        "An uprising led Hungary's new government to say it would leave the Warsaw Pact, the Soviet-led military alliance. Soviet troops and tanks crushed the uprising."
+      ],
+      [
+        "Czechoslovakia 1968",
+        "The Prague Spring brought popular reforms that loosened government control. Soviet leaders saw a threat, and Warsaw Pact forces led by the Soviet Union invaded and ended them."
+      ]
+    ],
+    "remember": "Soviet leaders allowed some change, but used force when reform threatened communist rule or loyalty to Moscow.",
+    "a": {
+      "q": "What was the Prague Spring of 1968?",
+      "opts": [
+        "A reform movement in Czechoslovakia ended by invasion",
+        "An uprising in Hungary crushed by Soviet tanks",
+        "A series of protests in Poland that won independence",
+        "A Soviet plan to reform its own government"
+      ],
+      "why": "The Prague Spring was a reform movement in Czechoslovakia, ended by a Warsaw Pact invasion. The Hungarian uprising was a different event, in 1956, and the Soviet Union did not allow independence.",
+      "clue": "Which country, and what happened in 1968?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A student claims that Soviet leaders accepted reform in the bloc whenever it was popular. Which event best shows the claim is wrong?",
+      "opts": [
+        "Soviet-led forces ended Czechoslovakia's reforms in 1968",
+        "Moscow accepted Gomułka as Poland's leader in 1956",
+        "Polish forces put down protests in Poznań in 1956",
+        "Czechoslovakia's reformers were popular at home in 1968"
+      ],
+      "why": "The invasion of Czechoslovakia shows Soviet leaders stopped popular reform by force. Accepting Gomułka shows Moscow allowing some change, which fits the claim rather than disproving it, and the Poznań protests were put down by Polish forces, not Soviet leaders.",
+      "clue": "Check who acted in each event, and whether they allowed or stopped change."
+    }
+  },
+  "mod-cuban-missile-crisis": {
+    "title": "The Cuban Missile Crisis",
+    "card": [
+      "In 1962 the United States found that the Soviet Union was placing nuclear missiles in Cuba, an island close to the American coast.",
+      "President John F. Kennedy ordered a naval blockade of Cuba to stop more weapons arriving. He demanded that the missiles be removed.",
+      "For about two weeks the world feared nuclear war. Both leaders faced pressure to act, and a mistake could have led to a direct clash.",
+      "The crisis ended when Soviet leader Nikita Khrushchev agreed to remove the missiles. The United States publicly promised not to invade Cuba, and it also agreed privately to remove its missiles from Turkey."
+    ],
+    "remember": "Both sides stepped back from the brink: missiles left Cuba in return for promises.",
+    "a": {
+      "q": "How did Kennedy first respond to the missiles in Cuba?",
+      "opts": [
+        "He ordered a naval blockade of Cuba",
+        "He ordered air strikes on the missile sites",
+        "He sent American troops to invade Cuba",
+        "He took US missiles out of Turkey at once"
+      ],
+      "why": "Kennedy chose a blockade to stop more weapons arriving while he demanded the missiles be removed. Removing missiles from Turkey came later, as part of the deal that ended the crisis, not as his first step.",
+      "clue": "It was a way to stop ships without firing the first shot."
+    },
+    "b": {
+      "d": 3,
+      "q": "At the end of the crisis, which part of the deal was agreed privately rather than in public?",
+      "opts": [
+        "US missiles would be taken out of Turkey",
+        "The US would not invade Cuba in the future",
+        "Soviet missiles would be taken out of Cuba",
+        "US ships would stop more weapons reaching Cuba"
+      ],
+      "why": "The United States agreed privately to remove its missiles from Turkey. The promise not to invade Cuba is tempting because it was also part of the deal, but it was made publicly.",
+      "clue": "One promise by the United States was kept out of public view."
+    }
   }
 };

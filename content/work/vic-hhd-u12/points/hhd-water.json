@@ -1,0 +1,231 @@
+{
+ "id": "hhd-water",
+ "title": "Water",
+ "brief": "573b35f1814a",
+ "shortlist": [
+  [
+   "geo-managing-water",
+   0.241
+  ],
+  [
+   "geo-hydrosphere",
+   0.222
+  ],
+  [
+   "chem-calorimetry",
+   0.208
+  ],
+  [
+   "geo-water-cycle",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: done",
+  "2026-11-01T08:24:31Z check: flagged",
+  "2026-11-01T08:33:50Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00591,
+  "check": 0.01255,
+  "fix": 0.02476,
+  "recheck": 0.00935
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the role of water in the human body (transporting nutrients, removing wastes, regulating body temperature), since they all cover Earth's water, water management or chemistry.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Water",
+  "card": [
+   "Most of the body is water. It is found in blood, in the fluid around cells and inside cells.",
+   "Water carries nutrients around the body in the blood, so cells can get what they need.",
+   "Water helps remove wastes. The body loses it in urine and sweat, and this carries wastes out.",
+   "Water controls body temperature. When the body is hot, sweat evaporates from the skin and cools it. Fluid lost this way must be replaced."
+  ],
+  "remember": "Water makes up most of the body. It carries nutrients, removes wastes and controls temperature.",
+  "a": {
+   "q": "Why does sweating help a runner on a hot day?",
+   "opts": [
+    "Sweat evaporates and cools the skin",
+    "Sweat stores energy for the muscles",
+    "Sweat helps absorb vitamins from food",
+    "Sweat keeps heat inside the body"
+   ],
+   "why": "Water in sweat evaporates from the skin and takes heat away, so body temperature is controlled. Keeping heat in is the job of insulation, not sweat.",
+   "clue": "Think about what happens to sweat on the skin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai plays football for two hours on a hot day and drinks no fluid. Which is the best explanation of why this is a problem?",
+   "opts": [
+    "He loses water in sweat that he has not replaced",
+    "He has used up all the water stored in his bones",
+    "He has stopped making sweat, so his body stays cool",
+    "He needs water only after eating food"
+   ],
+   "why": "Sweat removes water from the body, and without drinking it is not replaced. This can affect temperature control and the carrying of nutrients and wastes. Sweating does not stop on its own, so the third option is wrong.",
+   "clue": "Sweat is water leaving the body."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sweat evaporates and cools the skin",
+   "also_right": []
+  },
+  "b": {
+   "best": "He loses water in sweat that he has not replaced",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the wrong option 'the third option', but options are shown in random order. In the order shown here, the third option is the correct answer, so the explanation would confuse students. Refer to the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Sweating does not stop on its own', which is not accurate. Severe dehydration or heat stroke can reduce or stop sweating. Better to say the option is wrong because stopping sweating would make the body hotter, not cooler."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and answerable from the card. Why (b) refers to 'the third option', which is unreliable because option order is random, and it wrongly claims sweating never stops on its own."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) calls the wrong option 'the third option', but options are shown in random order. In the order shown here, the third option is the correct answer, so the explanation would confuse students. Refer to the option by its content instead.",
+  "Question b, fact: Why (b) says 'Sweating does not stop on its own', which is not accurate. Severe dehydration or heat stroke can reduce or stop sweating. Better to say the option is wrong because stopping sweating would make the body hotter, not cooler."
+ ],
+ "proposal": {
+  "title": "Water",
+  "card": [
+   "Most of the body is water. It is found in blood, in the fluid around cells and inside cells.",
+   "Water carries nutrients around the body in the blood, so cells can get what they need.",
+   "Water helps remove wastes. The body loses it in urine and sweat, and this carries wastes out.",
+   "Water controls body temperature. When the body is hot, sweat evaporates from the skin and cools it. Fluid lost this way must be replaced."
+  ],
+  "remember": "Water makes up most of the body. It carries nutrients, removes wastes and controls temperature.",
+  "a": {
+   "q": "Why does sweating help a runner on a hot day?",
+   "opts": [
+    "Sweat evaporates and cools the skin",
+    "Sweat stores energy for the muscles",
+    "Sweat helps absorb vitamins from food",
+    "Sweat keeps heat inside the body"
+   ],
+   "why": "Water in sweat evaporates from the skin and takes heat away, so body temperature is controlled. Keeping heat in is the job of insulation, not sweat.",
+   "clue": "Think about what happens to sweat on the skin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai plays football for two hours on a hot day and drinks no fluid. Which is the best explanation of why this is a problem?",
+   "opts": [
+    "He loses water in sweat that he has not replaced",
+    "He has used up all the water stored in his bones",
+    "He has stopped making sweat, so his body stays cool",
+    "He needs water only after he has eaten a meal"
+   ],
+   "why": "Sweat removes water from the body, and without drinking it is not replaced. This can affect temperature control and the carrying of nutrients and wastes. The option saying he has stopped sweating is wrong: sweat cools the body, so if it stopped he would get hotter, not cooler.",
+   "clue": "Sweat is water leaving the body."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Sweat evaporates and cools the skin",
+    "also_right": []
+   },
+   "b": {
+    "best": "He loses water in sweat that he has not replaced",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls the wrong option 'the third option', but options are shown in random order. In the order shown here, the third option is the correct answer, so the explanation would confuse students. Refer to the option by its content instead."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 'Sweating does not stop on its own', which is not accurate. Severe dehydration or heat stroke can reduce or stop sweating. Better to say the option is wrong because stopping sweating would make the body hotter, not cooler."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) calls the wrong option 'the third option', but options are shown in random order. In the order shown here, the third option is the correct answer, so the explanation would confuse students. Refer to the option by its content instead.",
+   "Question b, fact: Why (b) says 'Sweating does not stop on its own', which is not accurate. Severe dehydration or heat stroke can reduce or stop sweating. Better to say the option is wrong because stopping sweating would make the body hotter, not cooler."
+  ]
+ },
+ "final": {
+  "title": "Water",
+  "card": [
+   "Most of the body is water. It is found in blood, in the fluid around cells and inside cells.",
+   "Water carries nutrients around the body in the blood, so cells can get what they need.",
+   "Water helps remove wastes. The body loses it in urine and sweat, and this carries wastes out.",
+   "Water controls body temperature. When the body is hot, sweat evaporates from the skin and cools it. Fluid lost this way must be replaced."
+  ],
+  "remember": "Water makes up most of the body. It carries nutrients, removes wastes and controls temperature.",
+  "a": {
+   "q": "Why does sweating help a runner on a hot day?",
+   "opts": [
+    "Sweat evaporates and cools the skin",
+    "Sweat stores energy for the muscles",
+    "Sweat helps absorb vitamins from food",
+    "Sweat keeps heat inside the body"
+   ],
+   "why": "Water in sweat evaporates from the skin and takes heat away, so body temperature is controlled. Keeping heat in is the job of insulation, not sweat.",
+   "clue": "Think about what happens to sweat on the skin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jai plays football for two hours on a hot day and drinks no fluid. Which is the best explanation of why this is a problem?",
+   "opts": [
+    "He loses water in sweat that he has not replaced",
+    "He has used up all the water stored in his bones",
+    "He has stopped making sweat, so his body stays cool",
+    "He needs water only after he has eaten a meal"
+   ],
+   "why": "Sweat removes water from the body, and without drinking it is not replaced. This can affect temperature control and the carrying of nutrients and wastes. The option saying he has stopped sweating is wrong: sweat cools the body, so if it stopped he would get hotter, not cooler.",
+   "clue": "Sweat is water leaving the body."
+  }
+ },
+ "cleared_by": "recheck"
+}

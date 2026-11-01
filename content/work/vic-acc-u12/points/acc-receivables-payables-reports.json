@@ -1,0 +1,223 @@
+{
+ "id": "acc-receivables-payables-reports",
+ "title": "Receivables and payables in the reports",
+ "brief": "8612a37a6c84",
+ "shortlist": [
+  [
+   "bus-cash-flow-statement",
+   0.346
+  ],
+  [
+   "bus-working-capital-management",
+   0.252
+  ],
+  [
+   "bus-cash-flow-management",
+   0.236
+  ],
+  [
+   "bus-balance-sheet",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-01T09:35:03Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00513,
+  "check": 0.01315,
+  "fix": 0.02636,
+  "recheck": 0.01159
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers how receivables and payables appear across all three statements, including bad debts and discounts in the income statement; the closest points each teach only one statement (cash flow or balance sheet) and are narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Receivables and payables in the reports",
+  "card": [
+   "The balance sheet shows what a business owns and owes on one date. Accounts receivable are listed as a current asset. Accounts payable are listed as a current liability.",
+   "The cash flow statement shows cash that actually moved in and out. A credit sale appears only when the customer pays. A credit purchase appears only when the business pays the supplier.",
+   "The income statement shows revenue and expenses for a period. Bad debts are an expense, because the business will never collect that money.",
+   "Discounts given to customers for early payment are also shown in the income statement, where they reduce the income the business earns from sales."
+  ],
+  "remember": "Balance sheet: what is owed. Cash flow statement: cash that moved. Income statement: bad debts and discounts.",
+  "a": {
+   "q": "A business sells goods on credit, and the customer has not yet paid. Where is the amount owed shown?",
+   "opts": [
+    "In the balance sheet, as accounts receivable",
+    "In the balance sheet, as accounts payable",
+    "In the cash flow statement, as cash received",
+    "In the income statement, as a bad debt"
+   ],
+   "why": "The customer owes the business money, so it is an asset called accounts receivable, shown in the balance sheet. The cash flow statement is wrong because no cash has been received yet.",
+   "clue": "Think about which report lists what the business owns on one date."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Geelong writes off a customer's $400 account as unrecoverable. Which report shows this as an expense, and why is it not a cash outflow?",
+   "opts": [
+    "Income statement, because no cash was ever collected",
+    "Income statement, because the supplier has been paid",
+    "Cash flow statement, because cash was lost on the sale",
+    "Cash flow statement, because the debt is now a liability"
+   ],
+   "why": "A bad debt is an expense, and expenses are shown in the income statement. No cash left the business, because the customer simply never paid. The cash flow statement only records cash that actually moved.",
+   "clue": "Did any cash actually move when the customer failed to pay?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "In the balance sheet, as accounts receivable",
+   "also_right": []
+  },
+  "b": {
+   "best": "Income statement, because no cash was ever collected",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "In VCE Accounting, a discount given to customers for early payment is recorded as Discount Expense, an expense in the income statement. It is not a reduction of sales revenue. Saying it 'reduces the income the business earns from sales' conflicts with the classification students will be assessed on."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound, but the card describes discounts given to customers as reducing sales income, whereas VCE treats them as Discount Expense, an expense. Reword that line to call it an expense."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: In VCE Accounting, a discount given to customers for early payment is recorded as Discount Expense, an expense in the income statement. It is not a reduction of sales revenue. Saying it 'reduces the income the business earns from sales' conflicts with the classification students will be assessed on."
+ ],
+ "proposal": {
+  "title": "Receivables and payables in the reports",
+  "card": [
+   "The balance sheet shows what a business owns and owes on one date. Accounts receivable are a current asset, and accounts payable are a current liability.",
+   "The cash flow statement shows cash that actually moved in and out. A credit sale or credit purchase appears only when the cash is received or paid.",
+   "The income statement shows revenue and expenses for a period. Bad debts are an expense, because the business will never collect that money.",
+   "A discount given to a customer for paying early is discount expense in the income statement. A discount received from a supplier is discount revenue."
+  ],
+  "remember": "Balance sheet: what is owed. Cash flow statement: cash that moved. Income statement: bad debts and discounts.",
+  "a": {
+   "q": "A business sells goods on credit, and the customer has not yet paid. Where is the amount owed shown?",
+   "opts": [
+    "In the balance sheet, as accounts receivable",
+    "In the balance sheet, as accounts payable",
+    "In the cash flow statement, as cash received",
+    "In the income statement, as a bad debt"
+   ],
+   "why": "The customer owes the business money, so it is an asset called accounts receivable, shown in the balance sheet. The cash flow statement is wrong because no cash has been received yet.",
+   "clue": "Think about which report lists what the business owns on one date."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Geelong writes off a customer's $400 account as unrecoverable. Which report shows this as an expense, and why is it not a cash outflow?",
+   "opts": [
+    "Income statement, because no cash was ever collected",
+    "Income statement, because the supplier has been paid",
+    "Cash flow statement, because cash was lost on the sale",
+    "Cash flow statement, because the debt is now a liability"
+   ],
+   "why": "A bad debt is an expense, and expenses are shown in the income statement. No cash left the business, because the customer simply never paid. The cash flow statement only records cash that actually moved.",
+   "clue": "Did any cash actually move when the customer failed to pay?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "In the balance sheet, as accounts receivable",
+    "also_right": []
+   },
+   "b": {
+    "best": "Income statement, because no cash was ever collected",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "In VCE Accounting, a discount given to customers for early payment is recorded as Discount Expense, an expense in the income statement. It is not a reduction of sales revenue. Saying it 'reduces the income the business earns from sales' conflicts with the classification students will be assessed on."
+   }
+  ],
+  "flags": [
+   "Card, fact: In VCE Accounting, a discount given to customers for early payment is recorded as Discount Expense, an expense in the income statement. It is not a reduction of sales revenue. Saying it 'reduces the income the business earns from sales' conflicts with the classification students will be assessed on."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Receivables and payables in the reports",
+  "card": [
+   "The balance sheet shows what a business owns and owes on one date. Accounts receivable are a current asset, and accounts payable are a current liability.",
+   "The cash flow statement shows cash that actually moved in and out. A credit sale or credit purchase appears only when the cash is received or paid.",
+   "The income statement shows revenue and expenses for a period. Bad debts are an expense, because the business will never collect that money.",
+   "A discount given to a customer for paying early is discount expense in the income statement. A discount received from a supplier is discount revenue."
+  ],
+  "remember": "Balance sheet: what is owed. Cash flow statement: cash that moved. Income statement: bad debts and discounts.",
+  "a": {
+   "q": "A business sells goods on credit, and the customer has not yet paid. Where is the amount owed shown?",
+   "opts": [
+    "In the balance sheet, as accounts receivable",
+    "In the balance sheet, as accounts payable",
+    "In the cash flow statement, as cash received",
+    "In the income statement, as a bad debt"
+   ],
+   "why": "The customer owes the business money, so it is an asset called accounts receivable, shown in the balance sheet. The cash flow statement is wrong because no cash has been received yet.",
+   "clue": "Think about which report lists what the business owns on one date."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Geelong writes off a customer's $400 account as unrecoverable. Which report shows this as an expense, and why is it not a cash outflow?",
+   "opts": [
+    "Income statement, because no cash was ever collected",
+    "Income statement, because the supplier has been paid",
+    "Cash flow statement, because cash was lost on the sale",
+    "Cash flow statement, because the debt is now a liability"
+   ],
+   "why": "A bad debt is an expense, and expenses are shown in the income statement. No cash left the business, because the customer simply never paid. The cash flow statement only records cash that actually moved.",
+   "clue": "Did any cash actually move when the customer failed to pay?"
+  }
+ },
+ "cleared_by": "owner"
+}

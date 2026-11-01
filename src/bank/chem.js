@@ -2809,5 +2809,712 @@ MADE_BANKS.chem = {
       "why": "Very high pressure needs stronger, costlier equipment and more energy to compress the gases. Higher pressure still shifts the equilibrium towards ammonia, because fewer gas moles are on the product side, so the yield is not the problem.",
       "clue": "Apply Le Chatelier's principle first, then look beyond equilibrium."
     }
+  },
+  "chem-isotopes-relative-atomic-mass": {
+    "title": "Isotopes and relative atomic mass",
+    "card": [
+      "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. They have different masses.",
+      "Relative isotopic mass compares the mass of an isotope with carbon-12. One unit is one twelfth of the mass of a carbon-12 atom.",
+      "A mass spectrometer measures the mass of each isotope and its abundance, which is the percentage of atoms of that isotope in a natural sample.",
+      "Relative atomic mass is the weighted average of the isotopic masses. Multiply each mass by its abundance as a fraction, then add the results."
+    ],
+    "remember": "Relative atomic mass is an average of isotopic masses, weighted by abundance.",
+    "a": {
+      "q": "Which pair of atoms are isotopes of the same element?",
+      "opts": [
+        "Both have 17 protons, one has 18 neutrons and one has 20",
+        "Both have 17 neutrons, one has 17 protons and one has 18",
+        "Both have 17 protons and 18 neutrons, but different charges",
+        "Both have a mass number of 35, but different protons"
+      ],
+      "why": "Isotopes have the same number of protons but different numbers of neutrons. Any pair with different numbers of protons are atoms of different elements. The pair with 17 protons and 18 neutrons each have identical nuclei, so a different charge does not make them different isotopes.",
+      "clue": "Same element means same protons. What differs?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A sample of element X is 75% X-35 and 25% X-37. Using these mass numbers as the isotopic masses, what is its relative atomic mass?",
+      "opts": ["35.5", "36.0", "35.0", "36.5"],
+      "why": "Weighted average = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5. A simple average of 35 and 37 gives 36.0, but that ignores that X-35 is far more abundant.",
+      "clue": "Multiply each mass by its abundance as a fraction, then add."
+    }
+  },
+  "chem-mole": {
+    "title": "The mole",
+    "card": [
+      "The mole (mol) is the unit for amount of substance. One mole of any particle is 6.02 × 10²³ particles. The Avogadro constant, N_A, is 6.02 × 10²³ mol⁻¹.",
+      "The particles can be atoms, molecules or ions. So 1 mol of carbon atoms and 1 mol of water molecules each hold 6.02 × 10²³ particles.",
+      "Molar mass (M) is the mass of one mole of a substance, in g/mol. For an element, it has the same number as its relative atomic mass. Carbon is 12.0 g/mol.",
+      "Amount in moles, mass and molar mass are linked by n = m/M. Here n is in mol, m is in g and M is in g/mol."
+    ],
+    "remember": "Mass divided by molar mass gives moles, and each mole is 6.02 × 10²³ particles.",
+    "a": {
+      "q": "Magnesium has a molar mass of 24.3 g/mol. Which sample contains 6.02 × 10²³ magnesium atoms?",
+      "opts": ["24.3 g of magnesium", "1.0 g of magnesium", "12.0 g of magnesium", "6.02 g of magnesium"],
+      "why": "6.02 × 10²³ atoms is one mole, and the mass of one mole is the molar mass, 24.3 g. A common mistake is to think one mole always weighs 1.0 g, but the mass of a mole depends on the substance.",
+      "clue": "What does molar mass tell you the mass of?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A sample of carbon is 6.0 g. Carbon has a molar mass of 12.0 g/mol. How many moles of carbon atoms are in it?",
+      "opts": ["0.50 mol", "2.0 mol", "72 mol", "6.0 mol"],
+      "why": "n = m/M = 6.0 ÷ 12.0 = 0.50 mol. Dividing the other way round gives 2.0 mol, which is a common mistake.",
+      "clue": "Divide mass by molar mass."
+    }
+  },
+  "chem-molar-mass-percentage-composition": {
+    "title": "Molar mass and percentage composition",
+    "card": [
+      "The molar mass of a compound is the mass of one mole of it, in g/mol. Add up the molar masses of all the atoms in its formula.",
+      "Count each atom using the subscripts. In CaCO₃ there is 1 Ca, 1 C and 3 O. With Ca = 40.1, C = 12.0 and O = 16.0, M = 40.1 + 12.0 + 48.0 = 100.1 g/mol.",
+      "The percentage by mass of an element is the mass of that element in one mole of the compound, divided by the molar mass, then × 100.",
+      "For CaCO₃, the percentage of oxygen is 48.0 ÷ 100.1 × 100, which is about 48%. The percentages of all the elements add to 100%."
+    ],
+    "remember": "Add the atoms' masses for molar mass. Then element mass ÷ molar mass × 100 gives the percentage.",
+    "a": {
+      "q": "What is the molar mass of water, H₂O? Use H = 1.0 g/mol and O = 16.0 g/mol.",
+      "opts": ["18.0 g/mol", "17.0 g/mol", "16.0 g/mol", "34.0 g/mol"],
+      "why": "Water has 2 H and 1 O, so M = 2 × 1.0 + 16.0 = 18.0 g/mol. Adding only one H gives 17.0 g/mol, which ignores the subscript 2.",
+      "clue": "Use the subscript to count each atom."
+    },
+    "b": {
+      "d": 3,
+      "q": "Methane, CH₄, has C = 12.0 g/mol and H = 1.0 g/mol. What is the percentage of carbon by mass?",
+      "opts": ["75%", "25%", "20%", "80%"],
+      "why": "M = 12.0 + 4 × 1.0 = 16.0 g/mol. Carbon is 12.0 ÷ 16.0 × 100 = 75%. Counting atoms gives 1 in 5, or 20%, but percentage by mass depends on the atoms' masses.",
+      "clue": "Compare carbon's mass with the whole molar mass, not the atom count."
+    }
+  },
+  "chem-empirical-molecular-formulas": {
+    "title": "Empirical and molecular formulas",
+    "card": [
+      ["Empirical formula", "the simplest whole-number ratio of atoms of each element in a compound."],
+      [
+        "Molecular formula",
+        "the actual number of atoms of each element in one molecule. It is a whole-number multiple of the empirical formula."
+      ],
+      "To find the empirical formula, take the mass of each element, such as from percentage composition in a 100 g sample. Divide each by its molar mass to get moles, then divide all by the smallest number of moles.",
+      "To find the molecular formula, divide the compound's molar mass by the empirical formula's molar mass. Multiply the empirical formula by this whole number."
+    ],
+    "remember": "Percentage composition gives the ratio. Molar mass gives the multiple.",
+    "a": {
+      "q": "A compound has the empirical formula CH2O and a molar mass of 180 g/mol. The empirical formula mass is 30 g/mol. What is its molecular formula?",
+      "opts": ["C6H12O6", "C3H6O3", "C2H4O2", "CH2O"],
+      "why": "180 ÷ 30 = 6, so multiply every subscript in CH2O by 6 to get C6H12O6. C3H6O3 would be a multiple of 3, which gives only 90 g/mol.",
+      "clue": "How many times does the empirical mass fit into the molar mass?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A compound is 85.7% carbon and 14.3% hydrogen by mass. Its molar mass is 56 g/mol. Use C = 12 and H = 1. What is its molecular formula?",
+      "opts": ["C4H8", "CH2", "C2H4", "C3H6"],
+      "why": "In 100 g: C = 85.7 ÷ 12 = 7.14 mol and H = 14.3 ÷ 1 = 14.3 mol. The ratio is 1 : 2, so the empirical formula is CH2, with mass 14 g/mol. 56 ÷ 14 = 4, giving C4H8. CH2 is only the ratio, not the actual molecule.",
+      "clue": "Find the ratio first, then scale it up using the molar mass."
+    }
+  },
+  "chem-water-earth": {
+    "title": "Water on Earth",
+    "card": [
+      "Water exists in all three states at Earth's surface. It is solid as ice and snow, liquid in oceans, rivers and groundwater, and gas as water vapour in the air.",
+      "Most of Earth's water is in the oceans. Ocean water is salty, so it is not fit to drink without treatment.",
+      "Only a small share of Earth's water is fresh water, which has very little dissolved salt.",
+      "Much of that fresh water is locked up as ice in glaciers and ice sheets. Only a small part is liquid water in rivers, lakes and groundwater that people can reach and drink."
+    ],
+    "remember": "Water is plentiful on Earth, but drinkable fresh water is only a small share.",
+    "a": {
+      "q": "Why is most of the water on Earth not fit to drink?",
+      "opts": [
+        "It is mostly salty ocean water",
+        "It is mostly water vapour in the air",
+        "It is mostly polluted river water",
+        "It is mostly groundwater deep underground"
+      ],
+      "why": "Most of Earth's water is in the oceans, and ocean water is salty. Groundwater can be fresh, and only a small share of all water is vapour in the air.",
+      "clue": "Think about where most of the water is stored."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sees that a large share of Earth's fresh water is frozen in glaciers. What does this mean for drinking water?",
+      "opts": [
+        "Much fresh water is not easy for people to reach",
+        "Fresh water cannot exist as a liquid",
+        "Glacier ice is salty and cannot be drunk",
+        "Most fresh water is found in the oceans"
+      ],
+      "why": "Fresh water locked in ice sheets and glaciers is hard to reach, so the supply people can use is smaller than the total fresh water. It is not salty, and fresh water does exist as a liquid in rivers, lakes and groundwater.",
+      "clue": "Fresh and easy to reach are not the same thing."
+    }
+  },
+  "chem-water-s-unusual-properties": {
+    "title": "Water's unusual properties",
+    "card": [
+      "A water molecule is polar. The hydrogen atoms of one molecule are attracted to the oxygen atom of a neighbour. This attraction is a hydrogen bond, and it is stronger than the weak forces between most small molecules.",
+      "Compare the hydrides of Group 16: H2S, H2Se and H2Te. Their boiling points rise as the molecules get larger. Water breaks this pattern and boils at a much higher temperature than all of them, because extra energy is needed to overcome its hydrogen bonds.",
+      "In liquid water, hydrogen bonds keep forming and breaking as the molecules move past each other and sit close together.",
+      "In ice, each molecule is held by hydrogen bonds in a fixed, open lattice with gaps in it. This spaces the molecules further apart than in the liquid, so ice is less dense than liquid water and floats."
+    ],
+    "remember": "Hydrogen bonding lifts water's boiling point and gives ice an open structure, so ice floats.",
+    "a": {
+      "q": "Why does water boil at a higher temperature than H2S, even though H2S molecules are larger?",
+      "opts": [
+        "Hydrogen bonds between its molecules need more energy",
+        "Water molecules are larger than H2S molecules",
+        "The O-H bonds inside water molecules are easier to break",
+        "Water molecules have no attraction to each other when liquid"
+      ],
+      "why": "Boiling separates whole molecules, so it must overcome the attractions between them. Water's hydrogen bonds are stronger than the forces between H2S molecules, so more energy is needed. Size does not explain it, because water is the smaller molecule.",
+      "clue": "Boiling pulls molecules apart from each other, not atoms apart within a molecule."
+    },
+    "b": {
+      "d": 3,
+      "q": "A lake in Victoria's high country freezes in winter. Which statement best explains why the ice forms a layer on top of the water?",
+      "opts": [
+        "Hydrogen bonds hold ice in an open, less dense lattice",
+        "Ice molecules are lighter than liquid water molecules",
+        "Hydrogen bonds break as water freezes, so ice is less dense",
+        "Cold water molecules move faster and rise to the surface"
+      ],
+      "why": "In ice, hydrogen bonds hold the molecules in a fixed open lattice with gaps, so the molecules are further apart and the ice is less dense. The molecules themselves are the same in both states, so ice is not made of lighter molecules. Hydrogen bonds do not break on freezing. They hold the molecules in place.",
+      "clue": "The molecules are identical in ice and water, so think about how they are arranged."
+    }
+  },
+  "chem-specific-heat-capacity": {
+    "title": "Specific heat capacity",
+    "card": [
+      "Specific heat capacity is the energy needed to raise the temperature of 1 g of a substance by 1 °C. Its unit is J g⁻¹ °C⁻¹.",
+      "Energy needed = mass × specific heat capacity × temperature change, or q = mcΔT.",
+      "Water's specific heat capacity is high, about 4.18 J g⁻¹ °C⁻¹. It takes a lot of energy to warm water and water gives out a lot of energy as it cools.",
+      "So water warms and cools slowly compared with a substance of lower specific heat capacity, such as most metals. This helps keep oceans and living things at steady temperatures."
+    ],
+    "remember": "The higher the specific heat capacity, the more energy it takes to change the temperature, so the slower it warms and cools.",
+    "a": {
+      "q": "Why does a lake warm up more slowly than the sand on its shore in the same sunshine?",
+      "opts": [
+        "Water has a higher specific heat capacity than sand",
+        "Water has a lower specific heat capacity than sand",
+        "Water absorbs less energy from the Sun than sand",
+        "Water needs less energy for each degree of warming"
+      ],
+      "why": "Water needs more energy per gram for each degree of warming, so the same sunshine raises its temperature less. The tempting option is the one saying water needs less energy per degree: that would make it warm faster, not slower.",
+      "clue": "Think about how much energy each gram needs for a 1 °C rise."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia heats 200 g of water in a kettle in Geelong and its temperature rises by 10 °C. About how much energy does the water absorb? (Specific heat capacity of water = 4.18 J g⁻¹ °C⁻¹)",
+      "opts": ["8360 J", "836 J", "418 J", "2090 J"],
+      "why": "q = mcΔT = 200 × 4.18 × 10 = 8360 J. The value 836 J comes from leaving out the factor of 10, which is a common slip when the temperature change is forgotten.",
+      "clue": "Multiply mass, specific heat capacity and temperature change."
+    }
+  },
+  "chem-latent-heat-vaporisation": {
+    "title": "Latent heat of vaporisation",
+    "card": [
+      "Latent heat of vaporisation is the energy needed to change a liquid into a gas at its boiling point or during evaporation, with no change in temperature. The energy is used to separate particles, not to speed them up.",
+      "Water has a high latent heat of vaporisation. Many hydrogen bonds between water molecules must be broken before a molecule can escape as vapour.",
+      "When water evaporates from a surface, the energy it takes comes from what is left behind. The remaining water and the surface cool down.",
+      "This is why sweating cools the body, and why evaporation from oceans and lakes helps limit how much their temperatures rise."
+    ],
+    "remember": "Evaporating water absorbs a lot of energy, so evaporation cools the surface it leaves.",
+    "a": {
+      "q": "Why does a large amount of energy need to be absorbed for liquid water to evaporate?",
+      "opts": [
+        "Hydrogen bonds between molecules must be broken",
+        "Covalent bonds inside each molecule must be broken",
+        "The water must first be cooled to a lower temperature",
+        "The molecules must be made to move more slowly"
+      ],
+      "why": "Molecules can only escape as vapour once the hydrogen bonds holding them to their neighbours are broken, and this takes a lot of energy. The covalent bonds inside each molecule stay intact, so that option is wrong.",
+      "clue": "Think about what holds one water molecule to the next."
+    },
+    "b": {
+      "d": 3,
+      "q": "Layla steps out of a pool on a warm day and feels cold as the water on her skin dries. What best explains this?",
+      "opts": [
+        "Evaporating water takes energy from her skin",
+        "Evaporating water gives energy to her skin",
+        "Water on her skin is colder than the air",
+        "Her skin loses energy by breaking covalent bonds"
+      ],
+      "why": "Water needs a lot of energy to evaporate, and this energy comes from her skin, so her skin cools. The water gaining energy is true, but it takes that energy from her skin rather than giving it to her.",
+      "clue": "Where does the energy for evaporation come from?"
+    }
+  },
+  "chem-oxidation-reduction-2": {
+    "title": "Oxidation and reduction",
+    "card": [
+      [
+        "Oxidation",
+        "the loss of electrons. The species that loses electrons is oxidised, and its oxidation number goes up."
+      ],
+      [
+        "Reduction",
+        "the gain of electrons. The species that gains electrons is reduced, and its oxidation number goes down."
+      ],
+      "A half-equation shows one side of a redox reaction, with electrons written as e-. Example: Zn(s) → Zn²⁺(aq) + 2e- is oxidation, because electrons are on the product side.",
+      "In acidic conditions, balance a half-equation in order: balance atoms other than O and H, add H2O to balance O, add H⁺ to balance H, then add e- to balance charge. Example: MnO4⁻ + 8H⁺ + 5e- → Mn²⁺ + 4H2O."
+    ],
+    "remember": "Electrons lost means oxidation. Electrons gained means reduction. Both always happen together.",
+    "a": {
+      "q": "In the half-equation Fe³⁺(aq) + e- → Fe²⁺(aq), what happens to the iron?",
+      "opts": [
+        "It is reduced, because it gains an electron",
+        "It is oxidised, because it gains an electron",
+        "It is reduced, because it loses an electron",
+        "It is oxidised, because it loses an electron"
+      ],
+      "why": "The electron is on the reactant side, so the iron ion gains an electron. Gaining electrons is reduction. Saying it is oxidised is a common mix-up, but oxidation is a loss of electrons.",
+      "clue": "Look at which side of the arrow the electron is on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dichromate is reduced in acidic conditions: Cr2O7²⁻ + 14H⁺ + ?e- → 2Cr³⁺ + 7H2O. How many electrons are needed to balance the charge?",
+      "opts": ["6 on the reactant side", "6 on the product side", "12 on the reactant side", "3 on the reactant side"],
+      "why": "The left side has a charge of -2 + 14 = +12. The right side has 2 × 3 = +6. Six electrons added to the left give +6 on both sides. They go on the reactant side because this is reduction, a gain of electrons.",
+      "clue": "Add up the charge on each side before adding electrons."
+    }
+  },
+  "chem-reactivity-series-corrosion": {
+    "title": "The reactivity series of metals",
+    "card": [
+      "The reactivity series ranks metals by how easily they lose electrons to form positive ions. The metal at the top loses electrons most easily, so it is the most reactive.",
+      "A more reactive metal displaces a less reactive metal from a solution of its ions. The more reactive metal goes into solution as ions and the less reactive metal forms as a solid.",
+      "Example: zinc placed in copper(II) sulfate solution becomes coated in copper, because zinc is more reactive than copper. Copper placed in zinc sulfate solution shows no change.",
+      "Metals in order from most to least reactive include magnesium, zinc, iron, tin, lead, copper and silver."
+    ],
+    "remember": "The more easily a metal loses electrons, the higher it sits in the reactivity series, and it displaces metals below it.",
+    "a": {
+      "q": "What puts a metal near the top of the reactivity series?",
+      "opts": [
+        "It loses electrons very easily",
+        "It gains electrons very easily",
+        "It has a very high density",
+        "It is very hard to cut"
+      ],
+      "why": "The series ranks metals by how easily they lose electrons, so a metal near the top loses them most easily. Metals form positive ions by losing electrons, not gaining them. Density and hardness are physical properties and do not set the order.",
+      "clue": "Think about what the reactivity series ranks metals by."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia places a strip of magnesium in one beaker of iron(II) sulfate solution and a strip of copper in another. What does she see?",
+      "opts": [
+        "Iron forms on the magnesium only",
+        "Iron forms on the copper strip only",
+        "Iron forms on both of the strips",
+        "Iron forms on neither of the strips"
+      ],
+      "why": "Magnesium is more reactive than iron, so it displaces iron from solution and iron forms as a solid. Copper is less reactive than iron, so it cannot displace iron and nothing happens.",
+      "clue": "Only a metal above iron in the reactivity series can displace iron."
+    }
+  },
+  "chem-corrosion-simple-cells": {
+    "title": "Corrosion and simple cells",
+    "card": [
+      [
+        "Corrosion",
+        "the slow breakdown of a metal by reaction with its surroundings. Rusting is the corrosion of iron, and it is a redox reaction."
+      ],
+      [
+        "Rusting",
+        "iron is oxidised: Fe → Fe²⁺ + 2e-. Oxygen is reduced. Water must be present, and salt in the water speeds the process up. The iron ions go on to form hydrated iron oxide, or rust."
+      ],
+      [
+        "Simple cell",
+        "a set-up where redox turns chemical energy into electrical energy. The two half-reactions happen at separate electrodes, and electrons travel along an external wire."
+      ],
+      "Oxidation happens at the anode and reduction at the cathode. Electrons flow from the anode to the cathode through the wire. A primary cell cannot be recharged."
+    ],
+    "remember": "Rusting and cells are both redox. In a cell, electrons flow from the anode to the cathode.",
+    "a": {
+      "q": "What happens to iron when it rusts?",
+      "opts": [
+        "It is oxidised, losing electrons to form iron ions",
+        "It is reduced, gaining electrons to form iron ions",
+        "It is oxidised, gaining electrons from oxygen",
+        "It is reduced, losing electrons to oxygen"
+      ],
+      "why": "Iron atoms lose electrons to become iron ions, which is oxidation. Oxygen gains those electrons and is the species reduced. Saying iron is reduced mixes up the direction of electron transfer.",
+      "clue": "Iron forms positive ions."
+    },
+    "b": {
+      "d": 2,
+      "q": "In a simple cell, a zinc electrode is oxidised and a copper electrode is where reduction occurs. Which describes the electron flow in the external wire?",
+      "opts": [
+        "From the zinc anode to the copper cathode",
+        "From the copper cathode to the zinc anode",
+        "From the zinc cathode to the copper anode",
+        "From the copper anode to the zinc cathode"
+      ],
+      "why": "Oxidation happens at the anode, so zinc is the anode and releases electrons. Electrons flow through the wire to the cathode, where reduction occurs. That is the copper electrode, so the flow is from zinc to copper.",
+      "clue": "Oxidation happens at the anode, and electrons flow away from it."
+    }
+  },
+  "chem-concentration-2": {
+    "title": "Concentration",
+    "card": [
+      "Concentration is the amount of solute in a given amount of solution. Solute is the substance that dissolves. The volume used is that of the whole solution, not of the solvent alone.",
+      "Molar concentration is in mol/L: c = n ÷ V, with V in litres. Mass concentration is in g/L: mass of solute in grams ÷ volume of solution in litres.",
+      "Percentages: %(m/v) is grams of solute per 100 mL of solution. %(v/v) is millilitres of solute per 100 mL of solution. For very dilute solutions in water, ppm is used, and 1 ppm is about 1 mg of solute per litre (mg/L).",
+      "To convert between units, use the molar mass: g/L ÷ M = mol/L. For example, 58.5 g/L of NaCl is 1.00 mol/L, as M(NaCl) = 58.5 g/mol. Check that the volume is in the unit the formula needs."
+    ],
+    "remember": "Concentration is solute per volume of solution. Molar mass links g/L to mol/L.",
+    "a": {
+      "q": "A student dissolves 0.50 mol of sugar in water to make 250 mL of solution. What is the concentration in mol/L?",
+      "opts": ["2.0 mol/L", "0.50 mol/L", "0.125 mol/L", "0.0020 mol/L"],
+      "why": "c = n ÷ V = 0.50 mol ÷ 0.250 L = 2.0 mol/L. Dividing by 250 without converting mL to litres gives 0.0020 mol/L. Multiplying 0.50 by 0.250 instead of dividing gives 0.125 mol/L.",
+      "clue": "Convert the volume to litres before dividing."
+    },
+    "b": {
+      "d": 3,
+      "q": "A saline solution contains 9.0 g/L of NaCl (M = 58.5 g/mol). Which is closest to its concentration in mol/L?",
+      "opts": ["0.15 mol/L", "6.5 mol/L", "0.90 mol/L", "527 mol/L"],
+      "why": "Divide the mass concentration by the molar mass: 9.0 ÷ 58.5 = 0.15 mol/L. Multiplying by the molar mass gives 527, which reverses the conversion. 0.90 is the %(m/v) value, since 9.0 g/L is 0.90 g per 100 mL, so it is not in mol/L.",
+      "clue": "Moles are mass divided by molar mass."
+    }
+  },
+  "chem-water-as-solvent": {
+    "title": "Solubility",
+    "card": [
+      "Solubility is the maximum mass of a solute that dissolves in a given amount of solvent at a set temperature, such as g per 100 g of water. A solution holding that maximum is saturated.",
+      "A solubility curve plots solubility against temperature. A point on the curve is a saturated solution. A point below it is unsaturated, and more solute can still dissolve.",
+      "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
+      "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
+    ],
+    "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
+    "a": {
+      "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
+      "opts": [
+        "Unsaturated, as more solute can still dissolve",
+        "Saturated, as the solute has all dissolved",
+        "Saturated, as it is below the curve",
+        "Unsaturated, as it holds less than 100 g"
+      ],
+      "why": "The curve gives the maximum at 50 °C, which is 40 g. A solution with 25 g holds less than this, so more solute can dissolve and it is unsaturated. Having all the solute dissolved does not make a solution saturated.",
+      "clue": "Compare 25 g with the maximum at that temperature."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia cools a saturated solution of a solid in water from 60 °C to 20 °C. The solid's solubility rises with temperature. What happens?",
+      "opts": [
+        "Crystals form, as the solid is less soluble at 20 °C",
+        "Nothing, as the solution is still saturated and clear",
+        "Crystals form, as cold water cannot dissolve any solid",
+        "The solution becomes unsaturated as the solid dissolves"
+      ],
+      "why": "This solid is less soluble at 20 °C, so the water can hold less than before and the extra comes out as crystals. Cold water still dissolves some of the solid, so the idea that it dissolves none is wrong.",
+      "clue": "Think about how much solid the water can hold once it is cooler."
+    }
+  },
+  "chem-precipitation-reactions-2": {
+    "title": "Removing impurities from water",
+    "card": [
+      "An unwanted ion in water can be removed by adding a chemical that forms a precipitate with it. A precipitate is an insoluble solid that forms when two solutions are mixed.",
+      "Choose a reagent whose ions combine with the unwanted ion to make an insoluble compound, using a solubility table to check. The reagent's other ion should stay dissolved and be harmless: sodium, potassium and nitrate compounds are all soluble.",
+      "Once the precipitate forms, it is separated from the water by filtration. The water that passes through has much less of the unwanted ion.",
+      "Example: lead(II) ions, Pb2+, can be removed by adding sodium sulfate. Pb2+(aq) + SO4 2-(aq) → PbSO4(s). Lead(II) sulfate is insoluble, and sodium ions stay in solution."
+    ],
+    "remember": "Add a reagent that makes the unwanted ion into an insoluble solid, then filter it out.",
+    "a": {
+      "q": "Why is a precipitate formed when removing an unwanted ion from water?",
+      "opts": [
+        "It is an insoluble solid that can be filtered out",
+        "It is a gas that bubbles out of the water",
+        "It is a soluble salt that is easier to measure",
+        "It is an acid that neutralises the unwanted ion"
+      ],
+      "why": "A precipitate is an insoluble solid, so filtration separates it from the water and takes the unwanted ion with it. A soluble salt would stay dissolved, so the ion would not be removed.",
+      "clue": "Think about what filtration can separate."
+    },
+    "b": {
+      "d": 3,
+      "q": "Water from a mine in Ballarat contains dissolved silver ions, Ag+. Which reagent could remove them as a precipitate?",
+      "opts": [
+        "Sodium chloride solution",
+        "Sodium nitrate solution",
+        "Potassium nitrate solution",
+        "Calcium nitrate solution"
+      ],
+      "why": "Chloride ions combine with silver ions to make silver chloride, which is insoluble, so it can be filtered out. Calcium nitrate is tempting because calcium forms some precipitates, but all nitrates are soluble, so silver nitrate stays dissolved and the silver ions remain in the water.",
+      "clue": "Use a solubility table to find which pairing with silver is insoluble."
+    }
+  },
+  "chem-volumetric-analysis": {
+    "title": "Volumetric analysis",
+    "card": [
+      "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a solution is added from a burette to a measured volume of another solution in a conical flask, until the reaction is complete.",
+      "One solution is a standard solution, which has an accurately known concentration. The standard is often in the burette, but it can be in the flask instead. The volume delivered from the burette at the end point is the titre.",
+      "The equivalence point is when the reactants have been added in exactly the mole ratio of the balanced equation. The end point is when the indicator changes colour, and a suitable indicator puts it as close as possible to the equivalence point.",
+      "Use n = c × V (V in litres) on the standard solution to find its moles. Use the equation's mole ratio to find moles of the unknown, then divide by the unknown's volume in litres. If the unknown was diluted first, multiply the answer by the dilution factor."
+    ],
+    "remember": "Moles of the standard, then the equation's ratio, then moles divided by volume gives the unknown concentration.",
+    "a": {
+      "q": "In a titration, what is the end point?",
+      "opts": [
+        "When the indicator changes colour",
+        "When reactants are in the exact mole ratio",
+        "When the solution reaches a pH of exactly 7",
+        "When the burette has been completely emptied"
+      ],
+      "why": "The end point is the moment the indicator changes colour. Reactants in the exact mole ratio describes the equivalence point, which a suitable indicator makes the end point as close as possible to, but the two are not the same thing.",
+      "clue": "One of these is what you see, the other is what the reaction does."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH from the burette. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+      "opts": ["0.0750 mol/L", "0.150 mol/L", "0.300 mol/L", "0.0333 mol/L"],
+      "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+      "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+    }
+  },
+  "chem-salts-water-soil": {
+    "title": "Salts in water and soil",
+    "card": [
+      "Water and soil contain dissolved salts. Many are minerals that come from rocks, such as calcium, magnesium and sodium salts.",
+      "Heavy metals such as lead, mercury and cadmium can also get into water and soil. Mining, industry and old pipes are common sources.",
+      "A salt dissolved in water splits into ions that can move. More dissolved ions means the water carries electric current better.",
+      "Electrical conductivity measures how well a sample conducts electricity. A higher reading means more dissolved ions, so the sample is saltier."
+    ],
+    "remember": "More dissolved ions means higher conductivity, which means a saltier sample.",
+    "a": {
+      "q": "Why does a higher electrical conductivity show that a water sample is saltier?",
+      "opts": [
+        "There are more dissolved ions to carry current",
+        "There are more undissolved solids settled at the bottom",
+        "The water molecules themselves carry more current",
+        "The sample contains more heavy metals than minerals"
+      ],
+      "why": "Dissolved salts form mobile ions, and these carry current through the water. More ions means a higher reading. Heavy metals add ions too, but conductivity does not tell which ions are present.",
+      "clue": "Think about what moves to carry the current in the solution."
+    },
+    "b": {
+      "d": 3,
+      "q": "Farmer Sam tests water from two dams. Dam A has a conductivity reading twice that of Dam B. What can Sam conclude?",
+      "opts": [
+        "Dam A has more dissolved ions than Dam B",
+        "Dam A has more lead than Dam B",
+        "Dam A has less dissolved salt than Dam B",
+        "Dam A has more mineral salts but no heavy metals"
+      ],
+      "why": "A higher reading means more dissolved ions, so Dam A is saltier. Conductivity cannot show which ions are present, so Sam cannot say the extra ions are lead, or that no heavy metals are there.",
+      "clue": "Conductivity counts ions but does not name them."
+    }
+  },
+  "chem-water-crystallisation": {
+    "title": "Water of crystallisation",
+    "card": [
+      "Some salt crystals hold water molecules inside their structure. This is water of crystallisation, and the salt is called hydrated. It is written with a dot, such as CuSO4·5H2O.",
+      "Heating a hydrated salt drives off the water as vapour. The solid left behind is the anhydrous salt, which has no water in it.",
+      "The mass lost is the mass of water. The mass left is the mass of anhydrous salt. Heat until the mass stops changing, so you know all the water has gone.",
+      "Divide each mass by its molar mass to get moles. The ratio of moles of water to moles of salt gives x in the formula salt·xH2O. Round to a whole number."
+    ],
+    "remember": "Mass lost is water. Convert both masses to moles, then find the ratio.",
+    "a": {
+      "q": "A student heats a hydrated salt until its mass stops changing. What does the mass lost show?",
+      "opts": [
+        "The mass of water that was in the crystals",
+        "The mass of anhydrous salt that remains",
+        "The mass of salt that has decomposed into gas",
+        "The mass of water added from the air"
+      ],
+      "why": "Heating drives off the water of crystallisation, so the mass lost equals the mass of water. The mass of anhydrous salt is what is left behind, not what is lost, so that option is the tempting reversal.",
+      "clue": "What leaves the crucible as vapour?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Heating 4.99 g of hydrated copper sulfate leaves 3.19 g of anhydrous CuSO4 (M = 159.6 g/mol). Water has M = 18.0 g/mol. What is x in CuSO4·xH2O?",
+      "opts": ["5", "1", "3", "10"],
+      "why": "Water lost = 4.99 - 3.19 = 1.80 g, which is 0.100 mol. The salt is 3.19 ÷ 159.6 = 0.0200 mol. The ratio is 0.100 ÷ 0.0200 = 5. Using the masses 1.80 and 3.19 directly without converting to moles gives a wrong ratio.",
+      "clue": "Find the water lost, then turn both masses into moles."
+    }
+  },
+  "chem-stoichiometry": {
+    "title": "Mass-mass stoichiometry",
+    "card": [
+      "A balanced equation shows the mole ratio of the substances. In 2H2 + O2 → 2H2O, 2 mol of H2 react with 1 mol of O2 to make 2 mol of H2O.",
+      "Equations give ratios of moles, not of masses. To use the ratio, first change the given mass to moles using n = m ÷ M.",
+      "Then use the coefficients in the equation to find the moles of the substance you want. Multiply the known moles by (wanted coefficient ÷ known coefficient).",
+      "Finally change moles to mass using m = n × M. The steps are: mass to moles, mole ratio, moles to mass."
+    ],
+    "remember": "Mass to moles, apply the mole ratio, then moles back to mass.",
+    "a": {
+      "q": "In 2Mg + O2 → 2MgO, why can you not compare the masses of Mg and MgO directly using the coefficients?",
+      "opts": [
+        "The coefficients give mole ratios, not mass ratios",
+        "The coefficients give mass ratios, not mole ratios",
+        "Mg and MgO have the same molar mass",
+        "Oxygen changes the mass of the magnesium"
+      ],
+      "why": "Coefficients in a balanced equation show the ratio of moles. Each substance has a different molar mass, so the masses are not in the same ratio. Treating coefficients as masses is the common mistake.",
+      "clue": "What do the numbers in front of formulas count?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Zinc reacts with hydrochloric acid: Zn + 2HCl → ZnCl2 + H2. What mass of H2 (M = 2.0 g/mol) forms from 6.54 g of Zn (M = 65.4 g/mol) in excess acid?",
+      "opts": ["0.20 g", "0.10 g", "0.40 g", "6.54 g"],
+      "why": "n(Zn) = 6.54 ÷ 65.4 = 0.100 mol. The ratio of Zn to H2 is 1:1, so n(H2) = 0.100 mol. Mass = 0.100 × 2.0 = 0.20 g. Giving 0.10 g stops at the moles and forgets to convert to mass.",
+      "clue": "Check the Zn to H2 ratio, then finish with m = n × M."
+    }
+  },
+  "chem-aims-hypotheses-models-theories": {
+    "title": "Aims, hypotheses, models and theories",
+    "card": [
+      [
+        "Aim",
+        "states what an investigation will find out. It is the purpose, such as to determine how temperature affects the rate of a reaction."
+      ],
+      [
+        "Hypothesis",
+        "a testable prediction of the result, often linking two variables. For example, if temperature rises, the reaction rate will increase."
+      ],
+      [
+        "Model",
+        "a simplified representation that helps explain or predict how something behaves, such as particles drawn as spheres."
+      ],
+      [
+        "Theory and law",
+        "a theory is a well-tested explanation of why something happens. A law describes a pattern in observations, often as a relationship, without explaining why."
+      ]
+    ],
+    "remember": "Aim: what you will find out. Hypothesis: what you expect. Theory: why it happens. Law: the pattern.",
+    "a": {
+      "q": "Which of these is a hypothesis for an investigation into zinc and acid?",
+      "opts": [
+        "If acid concentration increases, the reaction will be faster",
+        "To investigate how acid concentration affects reaction rate",
+        "Particles are modelled as spheres that collide and react",
+        "Mass is neither created nor destroyed in a reaction"
+      ],
+      "why": "A hypothesis is a testable prediction, and the statement that a higher acid concentration will make the reaction faster predicts a result. The statement starting 'to investigate' gives a purpose, so it is an aim. The particles as spheres statement is a model, and the statement about mass is a law.",
+      "clue": "Which option predicts what will happen?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya says, 'Gases are made of tiny particles that move randomly and collide, which explains why gases fill their containers.' What is this?",
+      "opts": [
+        "A theory, because it explains why gases behave as they do",
+        "A law, because it describes a pattern in gas behaviour",
+        "A hypothesis, because it predicts a result for a test",
+        "An aim, because it states what will be investigated"
+      ],
+      "why": "The statement gives a well-tested explanation of why gases behave as they do, so it is a theory. A law would describe a pattern, such as a relationship between pressure and volume, without explaining why.",
+      "clue": "Does the statement explain why, or only describe a pattern?"
+    }
+  },
+  "chem-accuracy-precision-validity": {
+    "title": "Accuracy, precision and validity",
+    "card": [
+      [
+        "Accuracy",
+        "how close a result is to the true value. A measured boiling point of 99.8 °C for pure water at sea level is very accurate."
+      ],
+      [
+        "Precision",
+        "how close repeated measurements are to each other. Results can be precise even if all are far from the true value."
+      ],
+      [
+        "Validity",
+        "whether the investigation measures what it set out to measure. It needs a fair test, where only the independent variable changes."
+      ],
+      "Results can be precise but not accurate, for example if a faulty balance gives the same wrong mass each time."
+    ],
+    "remember": "Accurate: near the true value. Precise: close together. Valid: measures the right thing.",
+    "a": {
+      "q": "Four titrations give volumes of 20.10, 20.12, 20.11 and 20.10 mL. The true value is 19.50 mL. How are these results best described?",
+      "opts": [
+        "Precise but not accurate",
+        "Accurate but not precise",
+        "Both accurate and precise",
+        "Neither accurate nor precise"
+      ],
+      "why": "The results agree closely with each other, so they are precise. They are all about 0.6 mL from the true value, so they are not accurate. Accuracy depends on the true value, not on agreement.",
+      "clue": "Compare the results with each other, then with the true value."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jo tests how temperature affects how fast sugar dissolves in water. She also uses a larger amount of sugar in the hotter samples. Which statement is correct?",
+      "opts": [
+        "Not valid, as sugar amount and temperature both changed",
+        "Not precise, as sugar amount and temperature both changed",
+        "Not accurate, as sugar amount changed between samples",
+        "Valid, as temperature was the independent variable"
+      ],
+      "why": "A valid test changes only the independent variable. Jo changed the amount of sugar as well, so she cannot tell which change affected dissolving. Precision is about whether repeated measurements agree, not about how many variables changed.",
+      "clue": "Which idea is about measuring what the test set out to measure?"
+    }
+  },
+  "chem-repeatability-reproducibility": {
+    "title": "Repeatability and reproducibility",
+    "card": [
+      [
+        "Repeatability",
+        "the same person, using the same method and equipment, gets close to the same results when the investigation is repeated."
+      ],
+      ["Reproducibility", "different people, or a different method or equipment, get close to the same results."],
+      "Repeating trials helps show whether results are repeatable. It also helps spot a result that does not fit.",
+      "Results that other groups can reproduce are more trustworthy, because a one-off result might come from something unusual in one setup."
+    ],
+    "remember": "Repeatable: same person, same method. Reproducible: different people or methods.",
+    "a": {
+      "q": "Sam measures the heat released by burning ethanol three times with the same set-up and gets very similar results. What has Sam shown?",
+      "opts": [
+        "The results are repeatable",
+        "The results are reproducible",
+        "The results are repeatable and reproducible",
+        "The results are neither repeatable nor reproducible"
+      ],
+      "why": "The same person repeated the same method and got similar results, so they are repeatable. Reproducible would need a different person, method or equipment to get similar results, and nobody else has tried yet.",
+      "clue": "Who did the repeating, and which method did they use?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A school group finds the mass of copper formed in a reaction. A group at another school follows the same method and gets a similar mass. What does this show?",
+      "opts": [
+        "The result is reproducible",
+        "The result is repeatable",
+        "The result is not reproducible",
+        "The result came from one unusual setup"
+      ],
+      "why": "A different group of people got a similar result, so the result is reproducible. Repeatable would describe the first group repeating it themselves. Because two separate setups agreed, the result is unlikely to come from something unusual in one setup.",
+      "clue": "Was it the same people or different people?"
+    }
+  },
+  "chem-errors-limitations": {
+    "title": "Errors and limitations",
+    "card": [
+      [
+        "Random error",
+        "an error that changes from one measurement to the next, sometimes too high and sometimes too low. It scatters results around the true value."
+      ],
+      [
+        "Systematic error",
+        "an error that pushes every measurement the same way, such as a balance that always reads 0.5 g too high. It shifts results away from the true value."
+      ],
+      "Repeating a measurement and averaging helps reduce the effect of random error. It does not remove a systematic error, because every repeat is shifted the same way.",
+      [
+        "Limitations",
+        "Every method has limits, such as the smallest scale division on the equipment, a small sample or conditions that were hard to control. Report them, so readers know how far to trust the results."
+      ]
+    ],
+    "remember": "Random error scatters results. Systematic error shifts them one way. Report the limits of the method.",
+    "a": {
+      "q": "A student heats a sample in a crucible. The balance reads 0.3 g too high every time it is used. What type of error is this?",
+      "opts": [
+        "Systematic error, as every reading is shifted the same way",
+        "Random error, as the balance is not reading correctly",
+        "Random error, as the readings were taken several times",
+        "Systematic error, as the readings are scattered widely"
+      ],
+      "why": "The balance shifts every reading by the same amount in the same direction, so the error is systematic. It is not random, because random errors vary from one reading to the next and scatter results.",
+      "clue": "Does the error change between readings, or push them all the same way?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Noah measures the temperature of a solution five times. His thermometer reads 1.5 °C too high every time. Why does averaging his five readings not remove this error?",
+      "opts": [
+        "Every reading is shifted the same way, so the average is too",
+        "Averaging adds more scatter to the results, so error grows",
+        "Averaging only works if all the readings are exactly equal",
+        "The thermometer causes random error, which averaging keeps"
+      ],
+      "why": "A thermometer that always reads 1.5 °C too high is a systematic error, so every reading is shifted up by the same amount. The average of shifted readings is still shifted. Averaging helps reduce random scatter, and calling this error random is the tempting mistake.",
+      "clue": "Think about what each repeat does to a shift that is the same every time."
+    }
   }
 };

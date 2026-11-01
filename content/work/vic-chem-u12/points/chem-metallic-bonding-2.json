@@ -1,0 +1,234 @@
+{
+ "id": "chem-metallic-bonding-2",
+ "title": "Metallic bonding",
+ "brief": "bfb9e515dcb7",
+ "shortlist": [
+  [
+   "chem-metallic-bonding",
+   0.601
+  ],
+  [
+   "chem-ionic-bonding",
+   0.349
+  ],
+  [
+   "chem-covalent-bonding",
+   0.251
+  ],
+  [
+   "chem-activity-series-metals",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt chem-metallic-bonding, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.00801,
+  "write": 0.0102,
+  "check": 0.01356,
+  "fix": 0.01597,
+  "recheck": 0.00734
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-metallic-bonding",
+  "changes": [
+   "Add a sentence explaining that delocalised electrons reflect light, which gives metals their lustre.",
+   "Add a sentence explaining that the strong attraction between the ions and the electron sea gives metals high melting points.",
+   "Add a sentence explaining that delocalised electrons carry heat energy through the metal, so metals conduct heat."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same metallic bonding idea at a suitable Year 11 depth, but it does not yet explain lustre, high melting points or heat conduction, which the new point's brief requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's metallic bonding card uses the same sea-of-electrons model but only explains electrical conduction and malleability, while this brief also needs lustre, high melting points and heat conduction, so the new point is broader than the bank card.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Metallic bonding",
+  "card": [
+   "A metal is a lattice of positive metal ions. The outer electrons leave their atoms and move freely between the ions. These are delocalised electrons, often called a sea of electrons.",
+   "Metallic bonding is the electrostatic attraction between the positive ions and the delocalised electrons. It is strong, so metals have high melting points.",
+   "The electrons are free to move, so they carry electric charge and pass on heat energy. This is why metals conduct electricity and heat.",
+   "Layers of ions can slide over each other without breaking the bonding, because the electrons still surround the ions. This makes metals malleable, which means they can be hammered into shape without breaking. The electrons also reflect light, which gives metals their lustre."
+  ],
+  "remember": "Positive ions in a sea of moving electrons: the attraction holds the metal together, and the free electrons carry charge and heat.",
+  "a": {
+   "q": "Which feature of metallic bonding explains why copper conducts electricity?",
+   "opts": [
+    "Delocalised electrons that are free to move",
+    "Positive ions that are free to move",
+    "Electrons held tightly between two atoms",
+    "Neutral atoms that are free to move"
+   ],
+   "why": "Delocalised electrons move through the lattice and carry charge. The ions stay in fixed positions in the lattice, so they do not carry the current in a solid metal.",
+   "clue": "What moves in a solid metal to carry charge?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana hammers a sheet of silver into a thin shape and it does not shatter. Which statement best explains this?",
+   "opts": [
+    "Layers of ions slide while the electrons keep bonding them",
+    "Layers of ions slide and the bonding between them breaks",
+    "The ions are replaced by neutral atoms as it is hammered",
+    "The electrons are pushed out of the metal as it is hammered"
+   ],
+   "why": "When the layers slide, the delocalised electrons still surround the ions, so the attraction remains and the metal stays in one piece. The idea that the bonding breaks is tempting, but breaking bonds would make the metal crack.",
+   "clue": "After the layers slide, what still surrounds the ions?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Delocalised electrons that are free to move",
+   "also_right": []
+  },
+  "b": {
+   "best": "Layers of ions slide while the electrons keep bonding them",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says metals have high melting points without a qualifier such as 'most' or 'generally'. Some metals have low melting points: mercury is a liquid at room temperature, and sodium and potassium melt below 100 °C. Saying 'most metals have high melting points' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clear right answer each. The only issue is that the card says metals have high melting points with no 'most' or 'generally', and mercury is an obvious exception."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says metals have high melting points without a qualifier such as 'most' or 'generally'. Some metals have low melting points: mercury is a liquid at room temperature, and sodium and potassium melt below 100 °C. Saying 'most metals have high melting points' would be accurate."
+ ],
+ "proposal": {
+  "title": "Metallic bonding",
+  "card": [
+   "A metal is a lattice of positive metal ions. Their outer electrons leave the atoms and move freely between the ions as delocalised electrons, often called a sea of electrons.",
+   "Metallic bonding is the electrostatic attraction between the positive ions and the delocalised electrons. It is generally strong, so most metals have high melting points.",
+   "Free-moving electrons carry electric charge and pass on heat energy, so metals conduct electricity and heat. The electrons also reflect light, which gives metals their lustre.",
+   "Layers of ions can slide over each other without breaking the bonding, because the electrons still surround the ions. This makes metals malleable, which means they can be hammered into shape without breaking."
+  ],
+  "remember": "Positive ions in a sea of moving electrons: the attraction holds the metal together, and the free electrons carry charge and heat.",
+  "a": {
+   "q": "Which feature of metallic bonding explains why copper conducts electricity?",
+   "opts": [
+    "Delocalised electrons that are free to move",
+    "Positive ions that are free to move",
+    "Electrons held tightly between two atoms",
+    "Neutral atoms that are free to move"
+   ],
+   "why": "Delocalised electrons move through the lattice and carry charge. The ions stay in fixed positions in the lattice, so they do not carry the current in a solid metal.",
+   "clue": "What moves in a solid metal to carry charge?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana hammers a sheet of silver into a thin shape and it does not shatter. Which statement best explains this?",
+   "opts": [
+    "Layers of ions slide while the electrons keep bonding them",
+    "Layers of ions slide and the bonding between them breaks",
+    "The ions are replaced by neutral atoms as it is hammered",
+    "The electrons are pushed out of the metal as it is hammered"
+   ],
+   "why": "When the layers slide, the delocalised electrons still surround the ions, so the attraction remains and the metal stays in one piece. The idea that the bonding breaks is tempting, but breaking the bonding would make the metal crack.",
+   "clue": "After the layers slide, what still surrounds the ions?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Delocalised electrons that are free to move",
+    "also_right": []
+   },
+   "b": {
+    "best": "Layers of ions slide while the electrons keep bonding them",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says metals have high melting points without a qualifier such as 'most' or 'generally'. Some metals have low melting points: mercury is a liquid at room temperature, and sodium and potassium melt below 100 °C. Saying 'most metals have high melting points' would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says metals have high melting points without a qualifier such as 'most' or 'generally'. Some metals have low melting points: mercury is a liquid at room temperature, and sodium and potassium melt below 100 °C. Saying 'most metals have high melting points' would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Metallic bonding",
+  "card": [
+   "A metal is a lattice of positive metal ions. Their outer electrons leave the atoms and move freely between the ions as delocalised electrons, often called a sea of electrons.",
+   "Metallic bonding is the electrostatic attraction between the positive ions and the delocalised electrons. It is generally strong, so most metals have high melting points.",
+   "Free-moving electrons carry electric charge and pass on heat energy, so metals conduct electricity and heat. The electrons also reflect light, which gives metals their lustre.",
+   "Layers of ions can slide over each other without breaking the bonding, because the electrons still surround the ions. This makes metals malleable, which means they can be hammered into shape without breaking."
+  ],
+  "remember": "Positive ions in a sea of moving electrons: the attraction holds the metal together, and the free electrons carry charge and heat.",
+  "a": {
+   "q": "Which feature of metallic bonding explains why copper conducts electricity?",
+   "opts": [
+    "Delocalised electrons that are free to move",
+    "Positive ions that are free to move",
+    "Electrons held tightly between two atoms",
+    "Neutral atoms that are free to move"
+   ],
+   "why": "Delocalised electrons move through the lattice and carry charge. The ions stay in fixed positions in the lattice, so they do not carry the current in a solid metal.",
+   "clue": "What moves in a solid metal to carry charge?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Hana hammers a sheet of silver into a thin shape and it does not shatter. Which statement best explains this?",
+   "opts": [
+    "Layers of ions slide while the electrons keep bonding them",
+    "Layers of ions slide and the bonding between them breaks",
+    "The ions are replaced by neutral atoms as it is hammered",
+    "The electrons are pushed out of the metal as it is hammered"
+   ],
+   "why": "When the layers slide, the delocalised electrons still surround the ions, so the attraction remains and the metal stays in one piece. The idea that the bonding breaks is tempting, but breaking the bonding would make the metal crack.",
+   "clue": "After the layers slide, what still surrounds the ions?"
+  }
+ },
+ "cleared_by": "recheck"
+}

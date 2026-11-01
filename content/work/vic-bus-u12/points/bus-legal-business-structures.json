@@ -1,0 +1,273 @@
+{
+ "id": "bus-legal-business-structures",
+ "title": "Types of business",
+ "brief": "800e9e70b0d4",
+ "shortlist": [
+  [
+   "bus-government-enterprises",
+   0.449
+  ],
+  [
+   "bus-sole-traders-partnerships",
+   0.424
+  ],
+  [
+   "bus-companies-limited-liability",
+   0.327
+  ],
+  [
+   "bus-businesses-close",
+   0.209
+  ],
+  [
+   "bus-business",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00465,
+  "check": 0.01292,
+  "fix": 0.02779,
+  "recheck": 0.00904
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers all six business types, including social enterprises, which no bank point teaches, and each bank point covers only one or two types in narrower depth, so none teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns and runs the business. They keep all profit and make all decisions."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business together and share the profit. They usually agree how to split the work and the decisions."
+   ],
+   [
+    "Company",
+    "a company is a separate legal entity owned by shareholders. A private limited company has a few shareholders and its shares are not sold on the share market. A public listed company sells shares on the Australian Securities Exchange (ASX)."
+   ],
+   [
+    "Other types",
+    "A social enterprise aims mainly to help a community or cause, and uses its profit for that aim. A government business enterprise is owned by government and sells goods or services to earn revenue."
+   ]
+  ],
+  "remember": "The type of business is chosen to suit who owns it and what the owners want from it.",
+  "a": {
+   "q": "Which type of business is owned by shareholders and sells its shares on the share market?",
+   "opts": [
+    "A public listed company",
+    "A private limited company",
+    "A partnership",
+    "A social enterprise"
+   ],
+   "why": "A public listed company sells its shares on the ASX, so anyone can buy them. A private limited company also has shareholders, but its shares are not sold on the share market.",
+   "clue": "Think about which business has shares that anyone can buy."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts a bakery in Ballarat. She wants to hire and train people who have been out of work, and spend any profit on this work. Which type of business best fits her aim?",
+   "opts": [
+    "A social enterprise",
+    "A sole trader",
+    "A private limited company",
+    "A government business enterprise"
+   ],
+   "why": "A social enterprise aims mainly to help a community or cause, and uses its profit for that aim. A sole trader keeps the profit for the owner, so it does not fit Priya's aim of spending profit on helping others.",
+   "clue": "Look at what Priya wants to do with the profit."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A public listed company",
+   "also_right": []
+  },
+  "b": {
+   "best": "A social enterprise",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says a sole trader 'keeps the profit for the owner, so it does not fit Priya's aim'. A social enterprise describes a business's purpose, not a legal structure, so a social enterprise can be run as a sole trader. A sole trader can also spend profit on a cause. The why should only say a social enterprise fits her aim best, not that a sole trader cannot."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A private limited company has a few shareholders' is vague. A proprietary limited company in Australia can have up to 50 non-employee shareholders, so 'a limited number of shareholders' would be more accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have a clear, correct answer. The why for (b) wrongly treats a sole trader and a social enterprise as mutually exclusive, and the card's 'a few shareholders' for private companies is vague."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says a sole trader 'keeps the profit for the owner, so it does not fit Priya's aim'. A social enterprise describes a business's purpose, not a legal structure, so a social enterprise can be run as a sole trader. A sole trader can also spend profit on a cause. The why should only say a social enterprise fits her aim best, not that a sole trader cannot.",
+  "Card, wording: 'A private limited company has a few shareholders' is vague. A proprietary limited company in Australia can have up to 50 non-employee shareholders, so 'a limited number of shareholders' would be more accurate."
+ ],
+ "proposal": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns and runs the business. They receive all the profit and make all the decisions."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business together and share the profit. They usually agree how to split the work and the decisions."
+   ],
+   [
+    "Company",
+    "a separate legal entity owned by shareholders. A private limited company (Pty Ltd) has a limited number of shareholders, and its shares are not sold on the share market. A public listed company sells shares on the Australian Securities Exchange (ASX)."
+   ],
+   [
+    "Other types",
+    "a social enterprise aims mainly to help a community or cause, and uses its profit for that aim. This describes its purpose, so it can use any of the structures above. A government business enterprise is owned by government and sells goods or services to earn revenue."
+   ]
+  ],
+  "remember": "The type of business is chosen to suit who owns it and what the owners want from it.",
+  "a": {
+   "q": "Which type of business is owned by shareholders and sells its shares on the share market?",
+   "opts": [
+    "A public listed company",
+    "A private limited company",
+    "A partnership",
+    "A social enterprise"
+   ],
+   "why": "A public listed company sells its shares on the ASX, so anyone can buy them. A private limited company also has shareholders, but its shares are not sold on the share market.",
+   "clue": "Think about which business has shares that anyone can buy."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts a bakery in Ballarat. She wants to hire and train people who have been out of work, and spend any profit on this work. Which type of business best fits her aim?",
+   "opts": [
+    "A social enterprise",
+    "A sole trader",
+    "A private limited company",
+    "A government business enterprise"
+   ],
+   "why": "A social enterprise is defined by its aim of helping a community or cause and using its profit for that aim, which matches Priya's plan. She could still run it as a sole trader, but that term only describes who owns the business, not what it aims to do.",
+   "clue": "The question asks about her aim, not who owns the bakery."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A public listed company",
+    "also_right": []
+   },
+   "b": {
+    "best": "A social enterprise",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says a sole trader 'keeps the profit for the owner, so it does not fit Priya's aim'. A social enterprise describes a business's purpose, not a legal structure, so a social enterprise can be run as a sole trader. A sole trader can also spend profit on a cause. The why should only say a social enterprise fits her aim best, not that a sole trader cannot."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A private limited company has a few shareholders' is vague. A proprietary limited company in Australia can have up to 50 non-employee shareholders, so 'a limited number of shareholders' would be more accurate."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says a sole trader 'keeps the profit for the owner, so it does not fit Priya's aim'. A social enterprise describes a business's purpose, not a legal structure, so a social enterprise can be run as a sole trader. A sole trader can also spend profit on a cause. The why should only say a social enterprise fits her aim best, not that a sole trader cannot.",
+   "Card, wording: 'A private limited company has a few shareholders' is vague. A proprietary limited company in Australia can have up to 50 non-employee shareholders, so 'a limited number of shareholders' would be more accurate."
+  ]
+ },
+ "final": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns and runs the business. They receive all the profit and make all the decisions."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business together and share the profit. They usually agree how to split the work and the decisions."
+   ],
+   [
+    "Company",
+    "a separate legal entity owned by shareholders. A private limited company (Pty Ltd) has a limited number of shareholders, and its shares are not sold on the share market. A public listed company sells shares on the Australian Securities Exchange (ASX)."
+   ],
+   [
+    "Other types",
+    "a social enterprise aims mainly to help a community or cause, and uses its profit for that aim. This describes its purpose, so it can use any of the structures above. A government business enterprise is owned by government and sells goods or services to earn revenue."
+   ]
+  ],
+  "remember": "The type of business is chosen to suit who owns it and what the owners want from it.",
+  "a": {
+   "q": "Which type of business is owned by shareholders and sells its shares on the share market?",
+   "opts": [
+    "A public listed company",
+    "A private limited company",
+    "A partnership",
+    "A social enterprise"
+   ],
+   "why": "A public listed company sells its shares on the ASX, so anyone can buy them. A private limited company also has shareholders, but its shares are not sold on the share market.",
+   "clue": "Think about which business has shares that anyone can buy."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya starts a bakery in Ballarat. She wants to hire and train people who have been out of work, and spend any profit on this work. Which type of business best fits her aim?",
+   "opts": [
+    "A social enterprise",
+    "A sole trader",
+    "A private limited company",
+    "A government business enterprise"
+   ],
+   "why": "A social enterprise is defined by its aim of helping a community or cause and using its profit for that aim, which matches Priya's plan. She could still run it as a sole trader, but that term only describes who owns the business, not what it aims to do.",
+   "clue": "The question asks about her aim, not who owns the bakery."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,246 @@
+{
+ "id": "mat-index-laws",
+ "title": "Index laws",
+ "brief": "88177afcdbe2",
+ "shortlist": [
+  [
+   "mat-power-rule",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00719,
+  "check": 0.01152,
+  "fix": 0.02933,
+  "recheck": 0.00681
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches differentiation with the power rule, not the index laws for simplifying products and powers of exponents, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Index laws",
+  "card": [
+   "A power a^n means n copies of a multiplied together. The small number n is the index, and a is the base.",
+   [
+    "Multiply",
+    "when the bases are the same, add the indices: a^m × a^n = a^(m+n). For example, 3² × 3⁴ = 3⁶."
+   ],
+   [
+    "Divide",
+    "when the bases are the same, subtract the indices: a^m ÷ a^n = a^(m−n). For example, 5⁷ ÷ 5³ = 5⁴."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices: (a^m)^n = a^(mn). For example, (2³)² = 2⁶. Also a⁰ = 1, and a^(−n) = 1/a^n."
+   ]
+  ],
+  "remember": "Same base: add indices to multiply, subtract to divide, multiply for a power of a power.",
+  "a": {
+   "q": "Which expression is equal to x⁵ × x³?",
+   "opts": [
+    "x⁸",
+    "x¹⁵",
+    "x²",
+    "2x⁸"
+   ],
+   "why": "Same base, multiplying, so add the indices: 5 + 3 = 8. Multiplying the indices to get x¹⁵ is the rule for a power of a power, not for a product.",
+   "clue": "The bases match and you are multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify (2x³)² × x⁴.",
+   "opts": [
+    "4x¹⁰",
+    "2x¹⁰",
+    "4x⁹",
+    "4x²⁴"
+   ],
+   "why": "(2x³)² = 2² × x⁶ = 4x⁶, because both the 2 and the x³ are squared. Then 4x⁶ × x⁴ = 4x¹⁰. Leaving the 2 unsquared gives 2x¹⁰, which is the tempting mistake.",
+   "clue": "The square applies to the 2 as well as to x³."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x⁸",
+   "also_right": []
+  },
+  "b": {
+   "best": "4x¹⁰",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs the power-of-a-product rule, (ab)^n = a^n b^n, to square the coefficient 2. The card never teaches this rule. Only the clue hints at it, so a student relying on the card alone may not know to square the 2."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'a⁰ = 1' and 'a^(−n) = 1/a^n' are stated without the condition a ≠ 0. Also, the opening definition of a power as 'n copies of a multiplied together' only works for positive whole-number n, yet the same card then uses zero and negative indices without noting this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct and unique. However, question b relies on the power-of-a-product rule (squaring the 2), which the card does not teach. The card also states a⁰ = 1 and a^(−n) = 1/a^n without the condition a ≠ 0."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question needs the power-of-a-product rule, (ab)^n = a^n b^n, to square the coefficient 2. The card never teaches this rule. Only the clue hints at it, so a student relying on the card alone may not know to square the 2.",
+  "Card, fact: 'a⁰ = 1' and 'a^(−n) = 1/a^n' are stated without the condition a ≠ 0. Also, the opening definition of a power as 'n copies of a multiplied together' only works for positive whole-number n, yet the same card then uses zero and negative indices without noting this."
+ ],
+ "proposal": {
+  "title": "Index laws",
+  "card": [
+   "For a positive whole number n, a^n means n copies of the base a multiplied together. The number n is the index.",
+   [
+    "Multiply or divide",
+    "with the same base, add the indices to multiply and subtract them to divide: a^m × a^n = a^(m+n) and a^m ÷ a^n = a^(m−n). For example, 3² × 3⁴ = 3⁶ and 5⁷ ÷ 5³ = 5⁴."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices: (a^m)^n = a^(mn). For example, (2³)² = 2⁶."
+   ],
+   [
+    "Power of a product",
+    "raise every factor inside the brackets to the power: (ab)^n = a^n × b^n. For example, (3x²)² = 3² × x⁴ = 9x⁴."
+   ]
+  ],
+  "remember": "Same base: add indices to multiply, subtract to divide. A power outside brackets applies to every factor inside.",
+  "a": {
+   "q": "Which expression is equal to x⁵ × x³?",
+   "opts": [
+    "x⁸",
+    "x¹⁵",
+    "x²",
+    "2x⁸"
+   ],
+   "why": "Same base, multiplying, so add the indices: 5 + 3 = 8. Multiplying the indices to get x¹⁵ is the rule for a power of a power, not for a product.",
+   "clue": "The bases match and you are multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify (2x³)² × x⁴.",
+   "opts": [
+    "4x¹⁰",
+    "2x¹⁰",
+    "4x⁹",
+    "4x²⁴"
+   ],
+   "why": "Every factor in the brackets is squared: (2x³)² = 2² × x⁶ = 4x⁶. Then 4x⁶ × x⁴ = 4x¹⁰. Leaving the 2 unsquared gives 2x¹⁰, which is the tempting mistake.",
+   "clue": "Every factor inside the brackets is squared."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x⁸",
+    "also_right": []
+   },
+   "b": {
+    "best": "4x¹⁰",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question needs the power-of-a-product rule, (ab)^n = a^n b^n, to square the coefficient 2. The card never teaches this rule. Only the clue hints at it, so a student relying on the card alone may not know to square the 2."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'a⁰ = 1' and 'a^(−n) = 1/a^n' are stated without the condition a ≠ 0. Also, the opening definition of a power as 'n copies of a multiplied together' only works for positive whole-number n, yet the same card then uses zero and negative indices without noting this."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question needs the power-of-a-product rule, (ab)^n = a^n b^n, to square the coefficient 2. The card never teaches this rule. Only the clue hints at it, so a student relying on the card alone may not know to square the 2.",
+   "Card, fact: 'a⁰ = 1' and 'a^(−n) = 1/a^n' are stated without the condition a ≠ 0. Also, the opening definition of a power as 'n copies of a multiplied together' only works for positive whole-number n, yet the same card then uses zero and negative indices without noting this."
+  ]
+ },
+ "final": {
+  "title": "Index laws",
+  "card": [
+   "For a positive whole number n, a^n means n copies of the base a multiplied together. The number n is the index.",
+   [
+    "Multiply or divide",
+    "with the same base, add the indices to multiply and subtract them to divide: a^m × a^n = a^(m+n) and a^m ÷ a^n = a^(m−n). For example, 3² × 3⁴ = 3⁶ and 5⁷ ÷ 5³ = 5⁴."
+   ],
+   [
+    "Power of a power",
+    "multiply the indices: (a^m)^n = a^(mn). For example, (2³)² = 2⁶."
+   ],
+   [
+    "Power of a product",
+    "raise every factor inside the brackets to the power: (ab)^n = a^n × b^n. For example, (3x²)² = 3² × x⁴ = 9x⁴."
+   ]
+  ],
+  "remember": "Same base: add indices to multiply, subtract to divide. A power outside brackets applies to every factor inside.",
+  "a": {
+   "q": "Which expression is equal to x⁵ × x³?",
+   "opts": [
+    "x⁸",
+    "x¹⁵",
+    "x²",
+    "2x⁸"
+   ],
+   "why": "Same base, multiplying, so add the indices: 5 + 3 = 8. Multiplying the indices to get x¹⁵ is the rule for a power of a power, not for a product.",
+   "clue": "The bases match and you are multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "Simplify (2x³)² × x⁴.",
+   "opts": [
+    "4x¹⁰",
+    "2x¹⁰",
+    "4x⁹",
+    "4x²⁴"
+   ],
+   "why": "Every factor in the brackets is squared: (2x³)² = 2² × x⁶ = 4x⁶. Then 4x⁶ × x⁴ = 4x¹⁰. Leaving the 2 unsquared gives 2x¹⁰, which is the tempting mistake.",
+   "clue": "Every factor inside the brackets is squared."
+  }
+ },
+ "cleared_by": "recheck"
+}

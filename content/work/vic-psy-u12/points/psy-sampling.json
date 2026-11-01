@@ -1,0 +1,242 @@
+{
+ "id": "psy-sampling",
+ "title": "Sampling",
+ "brief": "9eec968d8f5a",
+ "shortlist": [
+  [
+   "mat-sampling-methods",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 may adapt mat-sampling-methods, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:10Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:35Z write: failed the content check, writing again",
+  "2026-11-01T08:33:54Z write: done",
+  "2026-11-01T08:42:08Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "confirm": 0.00492,
+  "write": 0.01132,
+  "check": 0.01627,
+  "fix": 0.02729,
+  "recheck": 0.0088
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-sampling-methods",
+  "changes": [
+   "Reframe the card for psychology research, using the terms participants and generalisation so that results can be applied to the wider population.",
+   "Replace the Wagga Wagga council question with a Victorian or psychology research example, such as a survey of Year 11 students about social media use.",
+   "Make the card's point explicit that random and stratified sampling help results be generalised, not only that biased samples mismatch the population."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same sampling idea at a suitable Year 11 depth, but its maths framing, NSW example and missing link to generalising results need small changes for this Victorian psychology course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is a broader maths survey of four sampling methods, and both its questions test systematic and self-selected sampling, while this psychology point focuses on random and stratified sampling and generalising results to a population, so it would need different content and questions rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Sampling",
+  "card": [
+   "A population is the whole group a researcher wants to learn about. A sample is the smaller group taken from it and actually studied.",
+   [
+    "Random sampling",
+    "every member of the population has an equal chance of being chosen, such as drawing names from a hat."
+   ],
+   [
+    "Stratified sampling",
+    "the population is split into groups, such as age groups, and people are chosen from each group in the same proportions as in the population."
+   ],
+   "A sample that represents the population lets researchers generalise, which means applying the results to the whole population. A sample that does not represent it makes generalising unreliable."
+  ],
+  "remember": "Study a sample, but choose it so it mirrors the population. Then results can be generalised.",
+  "a": {
+   "q": "Why do researchers try to draw a representative sample from a population?",
+   "opts": [
+    "So the results can be generalised to the population",
+    "So every participant gives the same results",
+    "So the whole population can be studied directly",
+    "So the researcher can predict the results in advance"
+   ],
+   "why": "A representative sample has the same makeup as the population, so what is found in the sample is likely to apply to the population. It does not make participants give the same results, and a sample is used because the whole population is not studied.",
+   "clue": "Think about what the researchers want to say about the whole group."
+  },
+  "b": {
+   "d": 3,
+   "q": "A school has 600 students in Year 7 to Year 12, and 100 students in each year level. Mia wants a sample of 60 that matches the school by year level. Which method does this?",
+   "opts": [
+    "Stratified sampling, taking 10 students from each year level",
+    "Random sampling, choosing 60 names from one year level",
+    "Stratified sampling, choosing 60 students from Year 12",
+    "Random sampling, choosing the first 60 students she meets"
+   ],
+   "why": "Each year level is 1/6 of the school, so choosing 10 from each year level matches the population and is stratified sampling. Choosing from one year level cannot represent the school, and taking the first 60 students she meets gives some students no chance of being chosen.",
+   "clue": "Which option keeps each year level in the same proportion as the school?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "So the results can be generalised to the population",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stratified sampling, taking 10 students from each year level",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The stratified sampling line says people are 'chosen' from each group but leaves out that they are chosen randomly within each stratum. The VCE Study Design treats random selection within strata as part of the definition, so students could lose marks if they learn this version."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer and the explanations match the card. The only issue is that the card's definition of stratified sampling leaves out random selection within each group, which VCE expects students to include."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The stratified sampling line says people are 'chosen' from each group but leaves out that they are chosen randomly within each stratum. The VCE Study Design treats random selection within strata as part of the definition, so students could lose marks if they learn this version."
+ ],
+ "proposal": {
+  "title": "Sampling",
+  "card": [
+   "A population is the whole group a researcher wants to learn about. A sample is the smaller group taken from it and actually studied.",
+   [
+    "Random sampling",
+    "every member of the population has an equal chance of being chosen, such as drawing names from a hat."
+   ],
+   [
+    "Stratified sampling",
+    "the population is split into groups called strata, such as age groups. People are then chosen at random from each stratum, in the same proportions as in the population."
+   ],
+   "A sample that represents the population lets researchers generalise, which means applying the results to the whole population. A sample that does not represent it makes generalising unreliable."
+  ],
+  "remember": "Study a sample, but choose it so it mirrors the population. Then results can be generalised.",
+  "a": {
+   "q": "Why do researchers try to draw a representative sample from a population?",
+   "opts": [
+    "So the results can be generalised to the population",
+    "So every participant gives the same results",
+    "So the whole population can be studied directly",
+    "So the researcher can predict the results in advance"
+   ],
+   "why": "A representative sample has the same makeup as the population, so what is found in the sample is likely to apply to the population. It does not make participants give the same results, and a sample is used because the whole population is not studied.",
+   "clue": "Think about what the researchers want to say about the whole group."
+  },
+  "b": {
+   "d": 3,
+   "q": "A school has 600 students in Year 7 to Year 12, and 100 students in each year level. Mia wants a sample of 60 that matches the school by year level. Which method does this?",
+   "opts": [
+    "Stratified, randomly choosing 10 from each year level",
+    "Random, drawing 60 names from one year level only",
+    "Stratified, randomly choosing 60 students from Year 12",
+    "Random, choosing the first 60 students she meets"
+   ],
+   "why": "Each year level is 1/6 of the school, so randomly choosing 10 from each year level keeps the same proportions and is stratified sampling. Choosing all 60 from one year level cannot represent the school, even if the names are chosen at random, and taking the first 60 students she meets gives some students no chance of being chosen.",
+   "clue": "Which option keeps each year level in the same proportion as the school?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "So the results can be generalised to the population",
+    "also_right": []
+   },
+   "b": {
+    "best": "Stratified, randomly choosing 10 from each year level",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The stratified sampling line says people are 'chosen' from each group but leaves out that they are chosen randomly within each stratum. The VCE Study Design treats random selection within strata as part of the definition, so students could lose marks if they learn this version."
+   }
+  ],
+  "flags": [
+   "Card, fact: The stratified sampling line says people are 'chosen' from each group but leaves out that they are chosen randomly within each stratum. The VCE Study Design treats random selection within strata as part of the definition, so students could lose marks if they learn this version."
+  ]
+ },
+ "final": {
+  "title": "Sampling",
+  "card": [
+   "A population is the whole group a researcher wants to learn about. A sample is the smaller group taken from it and actually studied.",
+   [
+    "Random sampling",
+    "every member of the population has an equal chance of being chosen, such as drawing names from a hat."
+   ],
+   [
+    "Stratified sampling",
+    "the population is split into groups called strata, such as age groups. People are then chosen at random from each stratum, in the same proportions as in the population."
+   ],
+   "A sample that represents the population lets researchers generalise, which means applying the results to the whole population. A sample that does not represent it makes generalising unreliable."
+  ],
+  "remember": "Study a sample, but choose it so it mirrors the population. Then results can be generalised.",
+  "a": {
+   "q": "Why do researchers try to draw a representative sample from a population?",
+   "opts": [
+    "So the results can be generalised to the population",
+    "So every participant gives the same results",
+    "So the whole population can be studied directly",
+    "So the researcher can predict the results in advance"
+   ],
+   "why": "A representative sample has the same makeup as the population, so what is found in the sample is likely to apply to the population. It does not make participants give the same results, and a sample is used because the whole population is not studied.",
+   "clue": "Think about what the researchers want to say about the whole group."
+  },
+  "b": {
+   "d": 3,
+   "q": "A school has 600 students in Year 7 to Year 12, and 100 students in each year level. Mia wants a sample of 60 that matches the school by year level. Which method does this?",
+   "opts": [
+    "Stratified, randomly choosing 10 from each year level",
+    "Random, drawing 60 names from one year level only",
+    "Stratified, randomly choosing 60 students from Year 12",
+    "Random, choosing the first 60 students she meets"
+   ],
+   "why": "Each year level is 1/6 of the school, so randomly choosing 10 from each year level keeps the same proportions and is stratified sampling. Choosing all 60 from one year level cannot represent the school, even if the names are chosen at random, and taking the first 60 students she meets gives some students no chance of being chosen.",
+   "clue": "Which option keeps each year level in the same proportion as the school?"
+  }
+ },
+ "cleared_by": "recheck"
+}

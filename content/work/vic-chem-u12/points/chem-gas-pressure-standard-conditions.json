@@ -1,0 +1,128 @@
+{
+ "id": "chem-gas-pressure-standard-conditions",
+ "title": "Gas pressure and standard conditions",
+ "brief": "e2ae7076d310",
+ "shortlist": [
+  [
+   "chem-molar-volume-gases",
+   0.381
+  ],
+  [
+   "chem-ideal-gas-law",
+   0.377
+  ],
+  [
+   "chem-gas-laws",
+   0.306
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00615,
+  "check": 0.00751
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points defines gas pressure as force per area or introduces standard laboratory conditions; the closest, molar volume, only uses 25°C and 100 kPa as conditions for a calculation, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Gas pressure and standard conditions",
+  "card": [
+   "Pressure is force divided by the area it acts on. Gas pressure comes from particles hitting the walls of their container.",
+   "The unit of pressure is the pascal (Pa). One kilopascal (kPa) is 1000 Pa.",
+   "More collisions or harder collisions on the same area mean a higher pressure. Squeezing the same gas into a smaller container raises its pressure.",
+   "Standard laboratory conditions (SLC) are a temperature of 25 °C and a pressure of 100 kPa. Using the same conditions lets chemists compare gases fairly."
+  ],
+  "remember": "Pressure is force per area. Standard laboratory conditions are 25 °C and 100 kPa.",
+  "a": {
+   "q": "A force of 600 N acts on an area of 2 m². What is the pressure?",
+   "opts": [
+    "300 Pa",
+    "1200 Pa",
+    "600 Pa",
+    "0.003 Pa"
+   ],
+   "why": "Pressure = force ÷ area = 600 ÷ 2 = 300 Pa. Multiplying instead of dividing gives 1200 Pa, which is the tempting mistake.",
+   "clue": "Divide the force by the area."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya collects a gas in her school lab at 25 °C and 100 kPa. What can she say about these conditions?",
+   "opts": [
+    "They are standard laboratory conditions",
+    "They are the conditions at 0 °C",
+    "They are only found at sea level",
+    "They give a pressure of 100 Pa"
+   ],
+   "why": "A temperature of 25 °C and a pressure of 100 kPa are the standard laboratory conditions. The pressure is 100 kPa, which is 100 000 Pa, not 100 Pa.",
+   "clue": "Compare her numbers with the card."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "300 Pa",
+   "also_right": []
+  },
+  "b": {
+   "best": "They are standard laboratory conditions",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Gas pressure and standard conditions",
+  "card": [
+   "Pressure is force divided by the area it acts on. Gas pressure comes from particles hitting the walls of their container.",
+   "The unit of pressure is the pascal (Pa). One kilopascal (kPa) is 1000 Pa.",
+   "More collisions or harder collisions on the same area mean a higher pressure. Squeezing the same gas into a smaller container raises its pressure.",
+   "Standard laboratory conditions (SLC) are a temperature of 25 °C and a pressure of 100 kPa. Using the same conditions lets chemists compare gases fairly."
+  ],
+  "remember": "Pressure is force per area. Standard laboratory conditions are 25 °C and 100 kPa.",
+  "a": {
+   "q": "A force of 600 N acts on an area of 2 m². What is the pressure?",
+   "opts": [
+    "300 Pa",
+    "1200 Pa",
+    "600 Pa",
+    "0.003 Pa"
+   ],
+   "why": "Pressure = force ÷ area = 600 ÷ 2 = 300 Pa. Multiplying instead of dividing gives 1200 Pa, which is the tempting mistake.",
+   "clue": "Divide the force by the area."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya collects a gas in her school lab at 25 °C and 100 kPa. What can she say about these conditions?",
+   "opts": [
+    "They are standard laboratory conditions",
+    "They are the conditions at 0 °C",
+    "They are only found at sea level",
+    "They give a pressure of 100 Pa"
+   ],
+   "why": "A temperature of 25 °C and a pressure of 100 kPa are the standard laboratory conditions. The pressure is 100 kPa, which is 100 000 Pa, not 100 Pa.",
+   "clue": "Compare her numbers with the card."
+  }
+ },
+ "cleared_by": "checker"
+}

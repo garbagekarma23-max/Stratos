@@ -1,0 +1,130 @@
+{
+ "id": "mat-units-precision",
+ "title": "Units and precision",
+ "brief": "fe420f7bb5eb",
+ "shortlist": [
+  [
+   "mat-significant-figures-scientific-notation",
+   0.306
+  ],
+  [
+   "mat-volume-capacity",
+   0.249
+  ],
+  [
+   "mat-unit-conversions",
+   0.24
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00522,
+  "check": 0.00676
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers only significant figures and scientific notation, while the new point also covers units of length, angle, area, volume and capacity and exact versus approximate answers, so no single bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Units and precision",
+  "card": [
+   "Convert units by multiplying or dividing. 1 m = 100 cm = 1000 mm, and 1 km = 1000 m. For area, square the factor: 1 m² = 10 000 cm². For volume, cube it: 1 m³ = 1 000 000 cm³.",
+   "Capacity is how much a container holds. 1 L = 1000 mL, and 1 L = 1000 cm³. So 1 mL = 1 cm³.",
+   "Scientific notation writes a number as a × 10ⁿ, with a from 1 up to (but not including) 10. So 45 000 = 4.5 × 10⁴ and 0.0032 = 3.2 × 10⁻³.",
+   "Significant figures start at the first non-zero digit. 0.004 07 has 3 significant figures. To round, look at the next digit: 5 or more rounds up. So 0.004 07 to 2 significant figures is 0.0041."
+  ],
+  "remember": "Square the factor for area, cube it for volume. Count significant figures from the first non-zero digit.",
+  "a": {
+   "q": "What is 3 m² written in cm²?",
+   "opts": [
+    "30 000 cm²",
+    "300 cm²",
+    "3000 cm²",
+    "300 000 cm²"
+   ],
+   "why": "1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². Then 3 × 10 000 = 30 000 cm². Using 100 instead of 10 000 gives 300, which is the length factor, not the area factor.",
+   "clue": "Square the length factor first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank holds 2.5 m³ of water. How many litres is this?",
+   "opts": [
+    "2500 L",
+    "250 L",
+    "25 000 L",
+    "2 500 000 L"
+   ],
+   "why": "1 m³ = 1 000 000 cm³, and 1000 cm³ = 1 L, so 1 m³ = 1000 L. Then 2.5 × 1000 = 2500 L. Choosing 2 500 000 stops at cm³ and does not convert to litres.",
+   "clue": "Change m³ to cm³ first, then use 1 L = 1000 cm³."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "30 000 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "2500 L",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Units and precision",
+  "card": [
+   "Convert units by multiplying or dividing. 1 m = 100 cm = 1000 mm, and 1 km = 1000 m. For area, square the factor: 1 m² = 10 000 cm². For volume, cube it: 1 m³ = 1 000 000 cm³.",
+   "Capacity is how much a container holds. 1 L = 1000 mL, and 1 L = 1000 cm³. So 1 mL = 1 cm³.",
+   "Scientific notation writes a number as a × 10ⁿ, with a from 1 up to (but not including) 10. So 45 000 = 4.5 × 10⁴ and 0.0032 = 3.2 × 10⁻³.",
+   "Significant figures start at the first non-zero digit. 0.004 07 has 3 significant figures. To round, look at the next digit: 5 or more rounds up. So 0.004 07 to 2 significant figures is 0.0041."
+  ],
+  "remember": "Square the factor for area, cube it for volume. Count significant figures from the first non-zero digit.",
+  "a": {
+   "q": "What is 3 m² written in cm²?",
+   "opts": [
+    "30 000 cm²",
+    "300 cm²",
+    "3000 cm²",
+    "300 000 cm²"
+   ],
+   "why": "1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². Then 3 × 10 000 = 30 000 cm². Using 100 instead of 10 000 gives 300, which is the length factor, not the area factor.",
+   "clue": "Square the length factor first."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank holds 2.5 m³ of water. How many litres is this?",
+   "opts": [
+    "2500 L",
+    "250 L",
+    "25 000 L",
+    "2 500 000 L"
+   ],
+   "why": "1 m³ = 1 000 000 cm³, and 1000 cm³ = 1 L, so 1 m³ = 1000 L. Then 2.5 × 1000 = 2500 L. Choosing 2 500 000 stops at cm³ and does not convert to litres.",
+   "clue": "Change m³ to cm³ first, then use 1 L = 1000 cm³."
+  }
+ },
+ "cleared_by": "checker"
+}

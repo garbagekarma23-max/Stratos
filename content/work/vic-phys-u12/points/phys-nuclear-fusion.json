@@ -1,0 +1,188 @@
+{
+ "id": "phys-nuclear-fusion",
+ "title": "Nuclear fusion",
+ "brief": "a98f830c4d15",
+ "shortlist": [
+  [
+   "phys-fission-fusion",
+   0.406
+  ],
+  [
+   "phys-fusion-stars",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "write": 0.0074,
+  "check": 0.00922,
+  "fix": 0.01926
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point is the same idea at the right depth: phys-fission-fusion is broader (it covers fission, binding energy per nucleon and the mass defect), and phys-fusion-stars is narrower (it covers only fusion in stars) and goes into the CNO cycle, which is beyond what the brief asks for.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Nuclear fusion",
+  "card": [
+   "Fusion is when two light nuclei join to form a heavier nucleus. It releases energy. An example is hydrogen nuclei fusing to form helium.",
+   "Fusion powers the Sun and other stars. In the Sun, hydrogen is fused into helium in the core.",
+   "Nuclei are positively charged, so they repel each other. To fuse, they must be moving very fast and get very close. This needs extremely high temperatures and pressures, as in the core of the Sun.",
+   "Fusion is different from fission. Fusion joins light nuclei, while fission splits a heavy nucleus."
+  ],
+  "remember": "Fusion joins light nuclei into a heavier one and releases energy. It needs extreme temperature and pressure to overcome repulsion.",
+  "a": {
+   "q": "Why does fusion need extremely high temperatures?",
+   "opts": [
+    "Nuclei must move fast enough to overcome their repulsion",
+    "Nuclei must be heavy enough to split into smaller ones",
+    "Neutrons must be slowed down so they are absorbed",
+    "Nuclei must be melted so they can be joined together"
+   ],
+   "why": "Nuclei are positively charged and repel each other. High temperature gives them enough speed to get close and fuse. Slowing neutrons is part of fission in a reactor, not fusion.",
+   "clue": "What do two positive charges do when they approach?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Which process happens in the core of the Sun?",
+   "opts": [
+    "Hydrogen nuclei fuse to form helium",
+    "Uranium nuclei split into smaller nuclei",
+    "Helium nuclei split into hydrogen nuclei",
+    "Hydrogen burns with oxygen to form water"
+   ],
+   "why": "The Sun gets its energy from fusion of hydrogen into helium. Splitting uranium is fission, which is not what powers the Sun. Burning hydrogen is a chemical reaction and is not a nuclear process.",
+   "clue": "Light nuclei join to form a heavier one."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Nuclei must move fast enough to overcome their repulsion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hydrogen nuclei fuse to form helium",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The last bullet defines fission ('fission splits a heavy nucleus'), which belongs to point 1 (Nuclear fission). It should only mention fission, not explain it here."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each has one clear answer. The only issue is that the card briefly defines fission, which belongs to point 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The last bullet defines fission ('fission splits a heavy nucleus'), which belongs to point 1 (Nuclear fission). It should only mention fission, not explain it here."
+ ],
+ "proposal": {
+  "title": "Nuclear fusion",
+  "card": [
+   "Fusion is when two light nuclei join to form a heavier nucleus. It releases energy. An example is hydrogen nuclei fusing to form helium.",
+   "Fusion powers the Sun and other stars. In the Sun, hydrogen is fused into helium in the core.",
+   "Nuclei are positively charged, so they repel each other. To fuse, they must be moving very fast and get very close. This needs extremely high temperatures and pressures, as in the core of the Sun.",
+   "Fusion is a different process from fission, which is a separate idea. Scientists are testing fusion reactors on Earth, but none yet supplies power to homes."
+  ],
+  "remember": "Fusion joins light nuclei, but only extreme heat and pressure push them close enough.",
+  "a": {
+   "q": "Why does fusion need extremely high temperatures?",
+   "opts": [
+    "Nuclei must move fast enough to overcome their repulsion",
+    "Nuclei must be heavy enough to split into smaller ones",
+    "Heat makes the nuclei attract each other more strongly",
+    "Nuclei must be melted so they can be joined together"
+   ],
+   "why": "Nuclei are positively charged and repel each other. High temperature gives them enough speed to get close and fuse. Heat does not make nuclei attract: they still repel, and speed is what lets them get close anyway.",
+   "clue": "What do two positive charges do when they approach?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Which process happens in the core of the Sun?",
+   "opts": [
+    "Hydrogen nuclei fuse to form helium",
+    "Uranium nuclei split into smaller nuclei",
+    "Helium nuclei split into hydrogen nuclei",
+    "Hydrogen burns with oxygen to form water"
+   ],
+   "why": "The Sun gets its energy from fusion, where light hydrogen nuclei join to form helium. Splitting nuclei is not fusion, so the uranium and helium options are wrong. Burning hydrogen is a chemical reaction, not a nuclear one.",
+   "clue": "Light nuclei join to form a heavier one."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The last bullet defines fission ('fission splits a heavy nucleus'), which belongs to point 1 (Nuclear fission). It should only mention fission, not explain it here."
+   }
+  ],
+  "flags": [
+   "Card, other: The last bullet defines fission ('fission splits a heavy nucleus'), which belongs to point 1 (Nuclear fission). It should only mention fission, not explain it here."
+  ]
+ },
+ "final": {
+  "title": "Nuclear fusion",
+  "card": [
+   "Fusion is when two light nuclei join to form a heavier nucleus. It releases energy. An example is hydrogen nuclei fusing to form helium.",
+   "Fusion powers the Sun and other stars. In the Sun, hydrogen is fused into helium in the core.",
+   "Nuclei are positively charged, so they repel each other. To fuse, they must be moving very fast and get very close. This needs extremely high temperatures and pressures, as in the core of the Sun.",
+   "Fusion is a different process from fission, which is a separate idea. Scientists are testing fusion reactors on Earth, but none yet supplies power to homes."
+  ],
+  "remember": "Fusion joins light nuclei, but only extreme heat and pressure push them close enough.",
+  "a": {
+   "q": "Why does fusion need extremely high temperatures?",
+   "opts": [
+    "Nuclei must move fast enough to overcome their repulsion",
+    "Nuclei must be heavy enough to split into smaller ones",
+    "Heat makes the nuclei attract each other more strongly",
+    "Nuclei must be melted so they can be joined together"
+   ],
+   "why": "Nuclei are positively charged and repel each other. High temperature gives them enough speed to get close and fuse. Heat does not make nuclei attract: they still repel, and speed is what lets them get close anyway.",
+   "clue": "What do two positive charges do when they approach?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Which process happens in the core of the Sun?",
+   "opts": [
+    "Hydrogen nuclei fuse to form helium",
+    "Uranium nuclei split into smaller nuclei",
+    "Helium nuclei split into hydrogen nuclei",
+    "Hydrogen burns with oxygen to form water"
+   ],
+   "why": "The Sun gets its energy from fusion, where light hydrogen nuclei join to form helium. Splitting nuclei is not fusion, so the uranium and helium options are wrong. Burning hydrogen is a chemical reaction, not a nuclear one.",
+   "clue": "Light nuclei join to form a heavier one."
+  }
+ },
+ "cleared_by": "auto"
+}

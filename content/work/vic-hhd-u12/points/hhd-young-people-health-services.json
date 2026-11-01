@@ -1,0 +1,277 @@
+{
+ "id": "hhd-young-people-health-services",
+ "title": "Access to health services",
+ "brief": "0ef8b20818ca",
+ "shortlist": [
+  [
+   "hms-health-literacy",
+   0.424
+  ],
+  [
+   "hms-community-health-resources",
+   0.422
+  ],
+  [
+   "hms-young-people-s-health",
+   0.395
+  ],
+  [
+   "hms-health-promotion",
+   0.331
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.308
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt hms-community-health-resources, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:04Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:50Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00757,
+  "write": 0.00508,
+  "check": 0.01124,
+  "fix": 0.0329,
+  "recheck": 0.00817
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "hms-community-health-resources",
+  "changes": [
+   "Add confidentiality worries as a barrier that stops young people using health services, since the card does not mention it.",
+   "Add cultural factors as a barrier to using health services, since the card covers language but not culture.",
+   "Frame the barriers around young people's use of both health services and health information, since the card is about community resources in general."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already teaches that cost, distance, language, hours and not knowing a service stop people reaching it, which matches most of the new point, but it lacks confidentiality and culture and is not framed around young people.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, community health resources, mainly teaches types of services and treats barriers in one line, without confidentiality or culture and without a focus on young people, so this needs its own point on what stops young people using health services and information.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Access to health services",
+  "card": [
+   "Access means how easily a person can reach and use a health service or reliable health information. Some young people want help but face barriers.",
+   [
+    "Cost and location",
+    "fees, travel costs and long distances can stop a young person going, especially in rural areas or where public transport is limited."
+   ],
+   [
+    "Confidentiality worries",
+    "a young person may fear that a parent, teacher or friend will find out. This worry can lead them to delay or avoid care."
+   ],
+   [
+    "Knowledge and culture",
+    "a person may not know what services exist or how to book. Cultural beliefs, language or past experiences can also make a service feel unwelcoming."
+   ]
+  ],
+  "remember": "Barriers such as cost, distance, privacy fears, low knowledge and culture can stop young people using help they need.",
+  "a": {
+   "q": "Sam, 16, needs to see a counsellor but does not go. He worries that someone at school will find out. Which barrier is this?",
+   "opts": [
+    "A confidentiality worry",
+    "A cost barrier",
+    "A location barrier",
+    "A lack of knowledge about services"
+   ],
+   "why": "Sam fears other people learning about his visit, which is a confidentiality worry. Cost and location are not mentioned, and Sam knows the service exists, so a lack of knowledge does not fit.",
+   "clue": "Look at what Sam is afraid will happen."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, 15, lives on a farm 90 km from the nearest town. Her family speaks Tamil at home and she has never been told which clinics offer free youth appointments. Which barrier is most directly about information, not distance or money?",
+   "opts": [
+    "She does not know which free services exist",
+    "She lives 90 km from the nearest town",
+    "Her family speaks Tamil at home",
+    "She fears her parents will find out"
+   ],
+   "why": "Not knowing which free clinics exist is a knowledge barrier, because Priya lacks information about what is available. The 90 km is a location barrier. The home language is a cultural detail, and the card says it may add a barrier, not that it is about information. Nothing says she fears being found out.",
+   "clue": "Which option is about what Priya has not been told?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A confidentiality worry",
+   "also_right": []
+  },
+  "b": {
+   "best": "She does not know which free services exist",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'what Priya has not been told' repeats the stem's 'she has never been told' and points straight at the only option about not knowing, so students can answer without understanding knowledge barriers."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says Sam 'worries' that someone will find out, and the right option is the only one using 'worry'. That echo, plus a clue about what he is afraid of, gives the answer away and makes the question trivial for Year 11."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the keyed answers are correct. Both questions give their answers away: question b's clue repeats 'not been told', and question a's stem says 'worries', matching the only option with 'worry'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'what Priya has not been told' repeats the stem's 'she has never been told' and points straight at the only option about not knowing, so students can answer without understanding knowledge barriers.",
+  "Question a, wording: The stem says Sam 'worries' that someone will find out, and the right option is the only one using 'worry'. That echo, plus a clue about what he is afraid of, gives the answer away and makes the question trivial for Year 11."
+ ],
+ "proposal": {
+  "title": "Access to health services",
+  "card": [
+   "Access means how easily a person can reach and use a health service or reliable health information. Some young people want help but face barriers.",
+   [
+    "Cost and location",
+    "fees, travel costs and long distances can stop a young person going, especially in rural areas or where public transport is limited."
+   ],
+   [
+    "Confidentiality worries",
+    "a young person may fear that a parent, teacher or friend will find out. This worry can lead them to delay or avoid care."
+   ],
+   [
+    "Knowledge and culture",
+    "a person may not know what services exist or how to book. Cultural beliefs, language or past experiences can also make a service feel unwelcoming."
+   ]
+  ],
+  "remember": "Barriers such as cost, distance, privacy fears, low knowledge and culture can stop young people using help they need.",
+  "a": {
+   "q": "Sam, 16, knows his school has a free counsellor on site. He stays away because her room is next to the staffroom, where teachers could see him go in. Which barrier is this?",
+   "opts": [
+    "A confidentiality barrier",
+    "A cost barrier",
+    "A location barrier",
+    "A knowledge barrier"
+   ],
+   "why": "Sam avoids care because teachers might learn about his visit, which is a confidentiality barrier. The room being near the staffroom is not a distance problem: the service is on site and free, and Sam knows it exists.",
+   "clue": "The service is free, close and known to him."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, 15, attends a school next to a youth clinic that charges young people nothing. She has not used it because she has not heard of it and would not know how to book. What would best address her barrier?",
+   "opts": [
+    "Telling students what the clinic offers and how to book",
+    "Cutting the fees the clinic charges young people",
+    "Opening a second clinic closer to Priya's home",
+    "Running a bus from Priya's school to the clinic"
+   ],
+   "why": "Priya faces a knowledge barrier: she does not know the service exists or how to use it, so sharing that information targets her problem. Cutting fees, adding a clinic or running a bus fix cost and location barriers, but the clinic is already free and next to her school.",
+   "clue": "Rule out barriers that the scenario shows are already solved."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A confidentiality barrier",
+    "also_right": []
+   },
+   "b": {
+    "best": "Telling students what the clinic offers and how to book",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'what Priya has not been told' repeats the stem's 'she has never been told' and points straight at the only option about not knowing, so students can answer without understanding knowledge barriers."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem says Sam 'worries' that someone will find out, and the right option is the only one using 'worry'. That echo, plus a clue about what he is afraid of, gives the answer away and makes the question trivial for Year 11."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'what Priya has not been told' repeats the stem's 'she has never been told' and points straight at the only option about not knowing, so students can answer without understanding knowledge barriers.",
+   "Question a, wording: The stem says Sam 'worries' that someone will find out, and the right option is the only one using 'worry'. That echo, plus a clue about what he is afraid of, gives the answer away and makes the question trivial for Year 11."
+  ]
+ },
+ "final": {
+  "title": "Access to health services",
+  "card": [
+   "Access means how easily a person can reach and use a health service or reliable health information. Some young people want help but face barriers.",
+   [
+    "Cost and location",
+    "fees, travel costs and long distances can stop a young person going, especially in rural areas or where public transport is limited."
+   ],
+   [
+    "Confidentiality worries",
+    "a young person may fear that a parent, teacher or friend will find out. This worry can lead them to delay or avoid care."
+   ],
+   [
+    "Knowledge and culture",
+    "a person may not know what services exist or how to book. Cultural beliefs, language or past experiences can also make a service feel unwelcoming."
+   ]
+  ],
+  "remember": "Barriers such as cost, distance, privacy fears, low knowledge and culture can stop young people using help they need.",
+  "a": {
+   "q": "Sam, 16, knows his school has a free counsellor on site. He stays away because her room is next to the staffroom, where teachers could see him go in. Which barrier is this?",
+   "opts": [
+    "A confidentiality barrier",
+    "A cost barrier",
+    "A location barrier",
+    "A knowledge barrier"
+   ],
+   "why": "Sam avoids care because teachers might learn about his visit, which is a confidentiality barrier. The room being near the staffroom is not a distance problem: the service is on site and free, and Sam knows it exists.",
+   "clue": "The service is free, close and known to him."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, 15, attends a school next to a youth clinic that charges young people nothing. She has not used it because she has not heard of it and would not know how to book. What would best address her barrier?",
+   "opts": [
+    "Telling students what the clinic offers and how to book",
+    "Cutting the fees the clinic charges young people",
+    "Opening a second clinic closer to Priya's home",
+    "Running a bus from Priya's school to the clinic"
+   ],
+   "why": "Priya faces a knowledge barrier: she does not know the service exists or how to use it, so sharing that information targets her problem. Cutting fees, adding a clinic or running a bus fix cost and location barriers, but the clinic is already free and next to her school.",
+   "clue": "Rule out barriers that the scenario shows are already solved."
+  }
+ },
+ "cleared_by": "recheck"
+}

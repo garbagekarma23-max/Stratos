@@ -1,0 +1,156 @@
+{
+ "id": "mat-ratios-rates",
+ "title": "Ratios and rates",
+ "brief": "471f6b38ed64",
+ "shortlist": [
+  [
+   "mat-ratios",
+   0.379
+  ],
+  [
+   "mat-derivatives-as-rates-context",
+   0.316
+  ],
+  [
+   "mat-rates-conversions",
+   0.284
+  ],
+  [
+   "mat-overtime-penalty-rates",
+   0.281
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.278
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00464,
+  "check": 0.0083
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches both halves of this point: mat-ratios covers only ratios (with sharing, which the brief does not mention), and mat-rates-conversions covers only rates and unit conversion, so a new point that defines the ratio-versus-rate distinction is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Ratios and rates",
+  "card": [
+   [
+    "Ratio",
+    "A ratio compares amounts of the same kind, in the same unit. A ratio of 2:3 means 2 parts to 3 parts."
+   ],
+   [
+    "Rate",
+    "A rate compares amounts in different units, such as km per hour or dollars per kilogram. To find a rate, divide by the amount of the second unit."
+   ],
+   [
+    "Sharing",
+    "To share in a ratio, add the parts, then divide the total by that number to find one part. Example: share $40 in the ratio 1:3. Parts = 1 + 3 = 4, so one part = 40 ÷ 4 = $10. The shares are $10 and $30."
+   ],
+   "Rate example: 150 km in 3 hours is 150 ÷ 3 = 50 km per hour."
+  ],
+  "remember": "A ratio compares the same units. A rate compares different units.",
+  "a": {
+   "q": "Which of these is a rate?",
+   "opts": [
+    "240 km travelled in 3 hours",
+    "3 red cups for every 5 blue cups",
+    "20 girls in a class of 30 students",
+    "A 4 m rope cut into 2 m pieces"
+   ],
+   "why": "Kilometres and hours are different units, so 240 km in 3 hours is a rate (80 km per hour). Red cups to blue cups compares the same kind of thing, so it is a ratio.",
+   "clue": "Look for two different units."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam and Ava share $350 in the ratio 3:4. How much does Ava get?",
+   "opts": [
+    "$200",
+    "$150",
+    "$262.50",
+    "$140"
+   ],
+   "why": "Parts = 3 + 4 = 7, so one part = 350 ÷ 7 = $50. Ava has 4 parts, so 4 × 50 = $200. Liam's share is $150, which is the tempting wrong answer.",
+   "clue": "Find the value of one part first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "240 km travelled in 3 hours",
+   "also_right": []
+  },
+  "b": {
+   "best": "$200",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Ratios and rates",
+  "card": [
+   [
+    "Ratio",
+    "A ratio compares amounts of the same kind, in the same unit. A ratio of 2:3 means 2 parts to 3 parts."
+   ],
+   [
+    "Rate",
+    "A rate compares amounts in different units, such as km per hour or dollars per kilogram. To find a rate, divide by the amount of the second unit."
+   ],
+   [
+    "Sharing",
+    "To share in a ratio, add the parts, then divide the total by that number to find one part. Example: share $40 in the ratio 1:3. Parts = 1 + 3 = 4, so one part = 40 ÷ 4 = $10. The shares are $10 and $30."
+   ],
+   "Rate example: 150 km in 3 hours is 150 ÷ 3 = 50 km per hour."
+  ],
+  "remember": "A ratio compares the same units. A rate compares different units.",
+  "a": {
+   "q": "Which of these is a rate?",
+   "opts": [
+    "240 km travelled in 3 hours",
+    "3 red cups for every 5 blue cups",
+    "20 girls in a class of 30 students",
+    "A 4 m rope cut into 2 m pieces"
+   ],
+   "why": "Kilometres and hours are different units, so 240 km in 3 hours is a rate (80 km per hour). Red cups to blue cups compares the same kind of thing, so it is a ratio.",
+   "clue": "Look for two different units."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam and Ava share $350 in the ratio 3:4. How much does Ava get?",
+   "opts": [
+    "$200",
+    "$150",
+    "$262.50",
+    "$140"
+   ],
+   "why": "Parts = 3 + 4 = 7, so one part = 350 ÷ 7 = $50. Ava has 4 parts, so 4 × 50 = $200. Liam's share is $150, which is the tempting wrong answer.",
+   "clue": "Find the value of one part first."
+  }
+ },
+ "cleared_by": "checker"
+}

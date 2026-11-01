@@ -1,0 +1,236 @@
+{
+ "id": "chem-errors-limitations",
+ "title": "Errors and limitations",
+ "brief": "f7e5467bedf6",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.249
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: failed the content check, writing again",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01151,
+  "check": 0.01533,
+  "fix": 0.02627,
+  "recheck": 0.00764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers instrument resolution, absolute error and limits of accuracy in maths, while the new point teaches random versus systematic errors and the limits of a method in VCE Chemistry, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Errors and limitations",
+  "card": [
+   [
+    "Random error",
+    "an error that changes from one measurement to the next, sometimes too high and sometimes too low. It scatters results around the true value."
+   ],
+   [
+    "Systematic error",
+    "an error that pushes every measurement the same way, such as a balance that always reads 0.5 g too high. It shifts results away from the true value."
+   ],
+   "Repeating a measurement and averaging helps reduce the effect of random error. It does not remove a systematic error, because every repeat is shifted the same way.",
+   [
+    "Limitations",
+    "Every method has limits, such as the smallest scale division on the equipment, a small sample or conditions that were hard to control. Report them, so readers know how far to trust the results."
+   ]
+  ],
+  "remember": "Random error scatters results. Systematic error shifts them one way. Report the limits of the method.",
+  "a": {
+   "q": "A student heats a sample in a crucible. The balance reads 0.3 g too high every time it is used. What type of error is this?",
+   "opts": [
+    "Systematic error, as every reading is shifted the same way",
+    "Random error, as the balance is not reading correctly",
+    "Random error, as the readings were taken several times",
+    "Systematic error, as the readings are scattered widely"
+   ],
+   "why": "The balance shifts every reading by the same amount in the same direction, so the error is systematic. It is not random, because random errors vary from one reading to the next and scatter results.",
+   "clue": "Does the error change between readings, or push them all the same way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noah titrates a solution five times and averages his burette readings. Why does averaging NOT fix a burette that was wrongly marked 0.2 mL too low?",
+   "opts": [
+    "Every reading is shifted the same way, so the average is too",
+    "Averaging adds more scatter to the results, so error grows",
+    "Averaging only works if all the readings are exactly equal",
+    "A wrongly marked burette gives random error, so it stays"
+   ],
+   "why": "A wrongly marked burette is a systematic error, so every reading is shifted by the same amount. The average of shifted readings is still shifted. Averaging helps with random scatter, but it does not remove a shift.",
+   "clue": "Think about what each repeat does to a shift that is the same every time."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Systematic error, as every reading is shifted the same way",
+   "also_right": []
+  },
+  "b": {
+   "best": "Every reading is shifted the same way, so the average is too",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A burette that was wrongly marked 0.2 mL too low' is unclear: it does not say which way the readings are shifted. In a real titration a constant scale offset cancels out when the titre is worked out as final minus initial reading, so the scenario could confuse careful students. A balance or pipette example would be cleaner, or the stem could state the readings are each 0.2 mL off."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Card and question a are correct. Question b's burette example is worded unclearly, and in practice a constant burette offset cancels out in the titre, which could confuse careful students. Consider a clearer example."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: 'A burette that was wrongly marked 0.2 mL too low' is unclear: it does not say which way the readings are shifted. In a real titration a constant scale offset cancels out when the titre is worked out as final minus initial reading, so the scenario could confuse careful students. A balance or pipette example would be cleaner, or the stem could state the readings are each 0.2 mL off."
+ ],
+ "proposal": {
+  "title": "Errors and limitations",
+  "card": [
+   [
+    "Random error",
+    "an error that changes from one measurement to the next, sometimes too high and sometimes too low. It scatters results around the true value."
+   ],
+   [
+    "Systematic error",
+    "an error that pushes every measurement the same way, such as a balance that always reads 0.5 g too high. It shifts results away from the true value."
+   ],
+   "Repeating a measurement and averaging helps reduce the effect of random error. It does not remove a systematic error, because every repeat is shifted the same way.",
+   [
+    "Limitations",
+    "Every method has limits, such as the smallest scale division on the equipment, a small sample or conditions that were hard to control. Report them, so readers know how far to trust the results."
+   ]
+  ],
+  "remember": "Random error scatters results. Systematic error shifts them one way. Report the limits of the method.",
+  "a": {
+   "q": "A student heats a sample in a crucible. The balance reads 0.3 g too high every time it is used. What type of error is this?",
+   "opts": [
+    "Systematic error, as every reading is shifted the same way",
+    "Random error, as the balance is not reading correctly",
+    "Random error, as the readings were taken several times",
+    "Systematic error, as the readings are scattered widely"
+   ],
+   "why": "The balance shifts every reading by the same amount in the same direction, so the error is systematic. It is not random, because random errors vary from one reading to the next and scatter results.",
+   "clue": "Does the error change between readings, or push them all the same way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noah measures the temperature of a solution five times. His thermometer reads 1.5 °C too high every time. Why does averaging his five readings not remove this error?",
+   "opts": [
+    "Every reading is shifted the same way, so the average is too",
+    "Averaging adds more scatter to the results, so error grows",
+    "Averaging only works if all the readings are exactly equal",
+    "The thermometer causes random error, which averaging keeps"
+   ],
+   "why": "A thermometer that always reads 1.5 °C too high is a systematic error, so every reading is shifted up by the same amount. The average of shifted readings is still shifted. Averaging helps reduce random scatter, and calling this error random is the tempting mistake.",
+   "clue": "Think about what each repeat does to a shift that is the same every time."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Systematic error, as every reading is shifted the same way",
+    "also_right": []
+   },
+   "b": {
+    "best": "Every reading is shifted the same way, so the average is too",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'A burette that was wrongly marked 0.2 mL too low' is unclear: it does not say which way the readings are shifted. In a real titration a constant scale offset cancels out when the titre is worked out as final minus initial reading, so the scenario could confuse careful students. A balance or pipette example would be cleaner, or the stem could state the readings are each 0.2 mL off."
+   }
+  ],
+  "flags": [
+   "Question b, wording: 'A burette that was wrongly marked 0.2 mL too low' is unclear: it does not say which way the readings are shifted. In a real titration a constant scale offset cancels out when the titre is worked out as final minus initial reading, so the scenario could confuse careful students. A balance or pipette example would be cleaner, or the stem could state the readings are each 0.2 mL off."
+  ]
+ },
+ "final": {
+  "title": "Errors and limitations",
+  "card": [
+   [
+    "Random error",
+    "an error that changes from one measurement to the next, sometimes too high and sometimes too low. It scatters results around the true value."
+   ],
+   [
+    "Systematic error",
+    "an error that pushes every measurement the same way, such as a balance that always reads 0.5 g too high. It shifts results away from the true value."
+   ],
+   "Repeating a measurement and averaging helps reduce the effect of random error. It does not remove a systematic error, because every repeat is shifted the same way.",
+   [
+    "Limitations",
+    "Every method has limits, such as the smallest scale division on the equipment, a small sample or conditions that were hard to control. Report them, so readers know how far to trust the results."
+   ]
+  ],
+  "remember": "Random error scatters results. Systematic error shifts them one way. Report the limits of the method.",
+  "a": {
+   "q": "A student heats a sample in a crucible. The balance reads 0.3 g too high every time it is used. What type of error is this?",
+   "opts": [
+    "Systematic error, as every reading is shifted the same way",
+    "Random error, as the balance is not reading correctly",
+    "Random error, as the readings were taken several times",
+    "Systematic error, as the readings are scattered widely"
+   ],
+   "why": "The balance shifts every reading by the same amount in the same direction, so the error is systematic. It is not random, because random errors vary from one reading to the next and scatter results.",
+   "clue": "Does the error change between readings, or push them all the same way?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Noah measures the temperature of a solution five times. His thermometer reads 1.5 °C too high every time. Why does averaging his five readings not remove this error?",
+   "opts": [
+    "Every reading is shifted the same way, so the average is too",
+    "Averaging adds more scatter to the results, so error grows",
+    "Averaging only works if all the readings are exactly equal",
+    "The thermometer causes random error, which averaging keeps"
+   ],
+   "why": "A thermometer that always reads 1.5 °C too high is a systematic error, so every reading is shifted up by the same amount. The average of shifted readings is still shifted. Averaging helps reduce random scatter, and calling this error random is the tempting mistake.",
+   "clue": "Think about what each repeat does to a shift that is the same every time."
+  }
+ },
+ "cleared_by": "recheck"
+}

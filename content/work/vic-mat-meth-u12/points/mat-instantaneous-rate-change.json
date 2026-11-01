@@ -1,0 +1,200 @@
+{
+ "id": "mat-instantaneous-rate-change",
+ "title": "Instantaneous rate of change",
+ "brief": "dc81e92f475d",
+ "shortlist": [
+  [
+   "mat-gradient-as-rate-change",
+   0.452
+  ],
+  [
+   "mat-tangents-normals",
+   0.422
+  ],
+  [
+   "mat-average-rate-change",
+   0.338
+  ],
+  [
+   "mat-linear-functions",
+   0.313
+  ],
+  [
+   "mat-number-e",
+   0.298
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00981,
+  "check": 0.00922,
+  "fix": 0.01287
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the limit definition of the instantaneous rate of change; the closest, average rate of change, is a secant gradient, and the tangents card assumes f'(a) is already known rather than building it from chord gradients.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Instantaneous rate of change",
+  "card": [
+   "The instantaneous rate of change is how fast a function is changing at one exact point. It is the gradient of the tangent, the line that just touches the curve there.",
+   "To find it, take a chord from the point to a second point a small distance h away. Then let h get smaller and smaller.",
+   "The chord gradients settle towards one number. That number is the limit, and it is the instantaneous rate of change.",
+   "Example: for f(x) = x², the chord from x = 1 to x = 1 + h has gradient ((1 + h)² − 1) ÷ h = 2 + h. As h shrinks towards 0, this gets close to 2. So the rate at x = 1 is 2."
+  ],
+  "remember": "Shrink the gap h towards 0. The chord gradient settles on the instantaneous rate.",
+  "a": {
+   "q": "For f(x) = x², the chord from x = 3 to x = 3 + h has gradient 6 + h. What is the instantaneous rate of change at x = 3?",
+   "opts": [
+    "6",
+    "9",
+    "3",
+    "7"
+   ],
+   "why": "As h shrinks towards 0, the gradient 6 + h gets close to 6. The value 9 is f(3), a height on the curve, not a rate.",
+   "clue": "What does 6 + h get close to as h gets tiny?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = 2x², the chord from x = 3 to x = 3 + h is used to find the rate at x = 3. What is the instantaneous rate of change there?",
+   "opts": [
+    "12",
+    "14",
+    "18",
+    "6"
+   ],
+   "why": "The chord gradient is (2(3 + h)² − 18) ÷ h = (12h + 2h²) ÷ h = 12 + 2h. As h gets close to 0, this gets close to 12. The value 14 is the chord gradient when h = 1, which is not the limit.",
+   "clue": "Expand (3 + h)², then divide every term by h."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Expand (3 + h)², then divide every term by h' skips steps. You must first multiply by 2 and subtract f(3) = 18, and only then divide by h. Followed literally, the clue gives 9/h + 6 + h and could lead students to the distractor 6."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct: 6 for (a) and 12 for (b). The clue for question b is misleading because it leaves out multiplying by 2 and subtracting f(3) before dividing by h."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue 'Expand (3 + h)², then divide every term by h' skips steps. You must first multiply by 2 and subtract f(3) = 18, and only then divide by h. Followed literally, the clue gives 9/h + 6 + h and could lead students to the distractor 6."
+ ],
+ "proposal": {
+  "title": "Instantaneous rate of change",
+  "card": [
+   "The instantaneous rate of change is how fast a function is changing at one exact point. It is the gradient of the tangent, the line that just touches the curve there.",
+   "To find it, take a chord from the point to a second point a small distance h away. Then let h get smaller and smaller.",
+   "The chord gradients settle towards one number. That number is the limit, and it is the instantaneous rate of change.",
+   "Example: for f(x) = x², the chord from x = 1 to x = 1 + h has gradient ((1 + h)² − 1) ÷ h = 2 + h. As h shrinks towards 0, this gets close to 2. So the rate at x = 1 is 2."
+  ],
+  "remember": "Shrink the gap h towards 0. The chord gradient settles on the instantaneous rate.",
+  "a": {
+   "q": "For f(x) = x², the chord from x = 3 to x = 3 + h has gradient 6 + h. What is the instantaneous rate of change at x = 3?",
+   "opts": [
+    "6",
+    "9",
+    "3",
+    "7"
+   ],
+   "why": "As h shrinks towards 0, the gradient 6 + h gets close to 6. The value 9 is f(3), a height on the curve, not a rate.",
+   "clue": "What does 6 + h get close to as h gets tiny?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = 2x², the chord from x = 3 to x = 3 + h is used to find the rate at x = 3. What is the instantaneous rate of change there?",
+   "opts": [
+    "12",
+    "14",
+    "18",
+    "6"
+   ],
+   "why": "The chord gradient is (2(3 + h)² − 18) ÷ h = (12h + 2h²) ÷ h = 12 + 2h. As h gets close to 0, this gets close to 12. The value 14 is the chord gradient when h = 1, which is not the limit.",
+   "clue": "Work out 2(3 + h)² − f(3) first, and only then divide by h."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'Expand (3 + h)², then divide every term by h' skips steps. You must first multiply by 2 and subtract f(3) = 18, and only then divide by h. Followed literally, the clue gives 9/h + 6 + h and could lead students to the distractor 6."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue 'Expand (3 + h)², then divide every term by h' skips steps. You must first multiply by 2 and subtract f(3) = 18, and only then divide by h. Followed literally, the clue gives 9/h + 6 + h and could lead students to the distractor 6."
+  ]
+ },
+ "final": {
+  "title": "Instantaneous rate of change",
+  "card": [
+   "The instantaneous rate of change is how fast a function is changing at one exact point. It is the gradient of the tangent, the line that just touches the curve there.",
+   "To find it, take a chord from the point to a second point a small distance h away. Then let h get smaller and smaller.",
+   "The chord gradients settle towards one number. That number is the limit, and it is the instantaneous rate of change.",
+   "Example: for f(x) = x², the chord from x = 1 to x = 1 + h has gradient ((1 + h)² − 1) ÷ h = 2 + h. As h shrinks towards 0, this gets close to 2. So the rate at x = 1 is 2."
+  ],
+  "remember": "Shrink the gap h towards 0. The chord gradient settles on the instantaneous rate.",
+  "a": {
+   "q": "For f(x) = x², the chord from x = 3 to x = 3 + h has gradient 6 + h. What is the instantaneous rate of change at x = 3?",
+   "opts": [
+    "6",
+    "9",
+    "3",
+    "7"
+   ],
+   "why": "As h shrinks towards 0, the gradient 6 + h gets close to 6. The value 9 is f(3), a height on the curve, not a rate.",
+   "clue": "What does 6 + h get close to as h gets tiny?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = 2x², the chord from x = 3 to x = 3 + h is used to find the rate at x = 3. What is the instantaneous rate of change there?",
+   "opts": [
+    "12",
+    "14",
+    "18",
+    "6"
+   ],
+   "why": "The chord gradient is (2(3 + h)² − 18) ÷ h = (12h + 2h²) ÷ h = 12 + 2h. As h gets close to 0, this gets close to 12. The value 14 is the chord gradient when h = 1, which is not the limit.",
+   "clue": "Work out 2(3 + h)² − f(3) first, and only then divide by h."
+  }
+ },
+ "cleared_by": "auto"
+}

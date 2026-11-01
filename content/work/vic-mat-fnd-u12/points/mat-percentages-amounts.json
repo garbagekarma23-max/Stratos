@@ -1,0 +1,217 @@
+{
+ "id": "mat-percentages-amounts",
+ "title": "Percentages of amounts",
+ "brief": "5f1da684ebcf",
+ "shortlist": [
+  [
+   "mat-percentage-increase-decrease",
+   0.542
+  ],
+  [
+   "mat-exponential-models",
+   0.208
+  ],
+  [
+   "mat-commission-piecework",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00417,
+  "check": 0.01322,
+  "fix": 0.02528,
+  "recheck": 0.00601
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches simply finding a percentage of an amount; the closest cards cover percentage increase and decrease, exponential models, and commission, which are broader or different ideas that use percentages.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Percentages of amounts",
+  "card": [
+   "Percent means out of 100. To find a percentage of an amount, change the percentage to a decimal by dividing by 100, then multiply.",
+   "Example: 15% of $80. 15% = 0.15, and 0.15 × 80 = $12.",
+   "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is 3 × 10%.",
+   "To find a percentage increase, work out the percentage of the amount, then add it to the amount. For a decrease, subtract it."
+  ],
+  "remember": "Percentage of an amount: change the percentage to a decimal, then multiply.",
+  "a": {
+   "q": "What is 35% of $60?",
+   "opts": [
+    "$21",
+    "$2.10",
+    "$25",
+    "$210"
+   ],
+   "why": "35% = 0.35, and 0.35 × 60 = 21. The answer $2.10 comes from using 0.035, which is dividing by 100 twice.",
+   "clue": "Write 35% as a decimal first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's phone costs $400. It is on sale with a 20% discount. What is the sale price?",
+   "opts": [
+    "$320",
+    "$80",
+    "$420",
+    "$380"
+   ],
+   "why": "20% of 400 = 0.2 × 400 = $80. A discount is taken off the price, so 400 − 80 = $320. The answer $80 is only the discount, not the sale price.",
+   "clue": "Find the discount, then decide whether to add or subtract it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$21",
+   "also_right": []
+  },
+  "b": {
+   "best": "$320",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $2.10 comes from using 0.035, 'which is dividing by 100 twice'. Dividing 35 by 100 twice gives 0.0035, not 0.035. Using 0.035 comes from dividing by 1000, and 0.0035 × 60 = $0.21. The explanation of the error is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer ($21 and $320), and the card is accurate. The why for question a wrongly says 0.035 comes from dividing by 100 twice; it actually comes from dividing by 1000, so that explanation needs fixing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says $2.10 comes from using 0.035, 'which is dividing by 100 twice'. Dividing 35 by 100 twice gives 0.0035, not 0.035. Using 0.035 comes from dividing by 1000, and 0.0035 × 60 = $0.21. The explanation of the error is wrong."
+ ],
+ "proposal": {
+  "title": "Percentages of amounts",
+  "card": [
+   "Percent means out of 100. To find a percentage of an amount, change the percentage to a decimal by dividing by 100, then multiply.",
+   "Example: 15% of $80. 15% = 0.15, and 0.15 × 80 = $12.",
+   "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is 3 × 10%.",
+   "To find a percentage increase, work out the percentage of the amount, then add it to the amount. For a decrease, such as a discount, subtract it."
+  ],
+  "remember": "Percentage of an amount: change the percentage to a decimal, then multiply.",
+  "a": {
+   "q": "What is 35% of $60?",
+   "opts": [
+    "$21",
+    "$2.10",
+    "$25",
+    "$210"
+   ],
+   "why": "35% = 0.35, and 0.35 × 60 = $21. As a check, 30% is 3 × $6 = $18 and 5% is $3, giving $21. The answer $2.10 comes from writing 35% as 0.035, which moves the decimal point one place too far.",
+   "clue": "Write 35% as a decimal first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's phone costs $400. It is on sale with a 20% discount. What is the sale price?",
+   "opts": [
+    "$320",
+    "$80",
+    "$480",
+    "$380"
+   ],
+   "why": "20% of 400 = 0.2 × 400 = $80. A discount is taken off the price, so 400 − 80 = $320. The answer $80 is only the discount, not the sale price.",
+   "clue": "Find the discount, then decide whether to add or subtract it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$21",
+    "also_right": []
+   },
+   "b": {
+    "best": "$320",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 35% of $60 is $21, and $400 with a 20% discount is $320."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says $2.10 comes from using 0.035, 'which is dividing by 100 twice'. Dividing 35 by 100 twice gives 0.0035, not 0.035. Using 0.035 comes from dividing by 1000, and 0.0035 × 60 = $0.21. The explanation of the error is wrong."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says $2.10 comes from using 0.035, 'which is dividing by 100 twice'. Dividing 35 by 100 twice gives 0.0035, not 0.035. Using 0.035 comes from dividing by 1000, and 0.0035 × 60 = $0.21. The explanation of the error is wrong."
+  ]
+ },
+ "final": {
+  "title": "Percentages of amounts",
+  "card": [
+   "Percent means out of 100. To find a percentage of an amount, change the percentage to a decimal by dividing by 100, then multiply.",
+   "Example: 15% of $80. 15% = 0.15, and 0.15 × 80 = $12.",
+   "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is 3 × 10%.",
+   "To find a percentage increase, work out the percentage of the amount, then add it to the amount. For a decrease, such as a discount, subtract it."
+  ],
+  "remember": "Percentage of an amount: change the percentage to a decimal, then multiply.",
+  "a": {
+   "q": "What is 35% of $60?",
+   "opts": [
+    "$21",
+    "$2.10",
+    "$25",
+    "$210"
+   ],
+   "why": "35% = 0.35, and 0.35 × 60 = $21. As a check, 30% is 3 × $6 = $18 and 5% is $3, giving $21. The answer $2.10 comes from writing 35% as 0.035, which moves the decimal point one place too far.",
+   "clue": "Write 35% as a decimal first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's phone costs $400. It is on sale with a 20% discount. What is the sale price?",
+   "opts": [
+    "$320",
+    "$80",
+    "$480",
+    "$380"
+   ],
+   "why": "20% of 400 = 0.2 × 400 = $80. A discount is taken off the price, so 400 − 80 = $320. The answer $80 is only the discount, not the sale price.",
+   "clue": "Find the discount, then decide whether to add or subtract it."
+  }
+ },
+ "cleared_by": "recheck"
+}

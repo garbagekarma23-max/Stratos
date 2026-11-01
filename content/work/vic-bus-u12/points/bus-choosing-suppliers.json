@@ -1,0 +1,351 @@
+{
+ "id": "bus-choosing-suppliers",
+ "title": "Choosing suppliers",
+ "brief": "94e6521a9ca4",
+ "shortlist": [
+  [
+   "bus-customers-suppliers-competitors",
+   0.339
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01174,
+  "check": 0.02125,
+  "fix": 0.03423,
+  "recheck": 0.00894
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point describes suppliers as one part of the market environment alongside customers and competitors, while the new point teaches how a business weighs price, quality, reliability and social and environmental standards when choosing a supplier, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The card says only that 'some businesses also check' social and environmental standards. The remember line tells every business to check them, which states the idea more strongly than the card does.",
+ "rejected": {
+  "title": "Choosing suppliers",
+  "card": [
+   "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+   [
+    "Price and quality",
+    "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+   ],
+   [
+    "Reliability",
+    "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+   ],
+   [
+    "Social and environmental standards",
+    "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+   ]
+  ],
+  "remember": "Weigh price, quality and reliability, and check the supplier's social and environmental standards.",
+  "a": {
+   "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+   "opts": [
+    "She checks whether its orders arrive on time each week",
+    "She compares delivery fees across three suppliers",
+    "She checks whether delivered flour meets her recipe standard",
+    "She asks whether its delivery trucks cut their emissions"
+   ],
+   "why": "Reliability means the right goods arrive on time, every time, so checking weekly arrival times tests it. Delivery fees are about price, the flour's standard is about quality, and truck emissions are an environmental standard.",
+   "clue": "Which factor is about the supplier doing what it promised, every time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+   "opts": [
+    "Supplier A's standards could harm her store's reputation",
+    "Supplier B could deliver more reliably than Supplier A",
+    "Supplier B's higher price could raise her profit per item",
+    "Supplier B could cost her less once delivery is counted"
+   ],
+   "why": "Her customers care about ethics, so using unsafe factories could make them think less of her store. Reliability is not a reason, because Supplier A is always on time. Paying more for stock lowers her profit per item rather than raising it, and Supplier A is the cheapest.",
+   "clue": "Check each reason against the facts given about A and B."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The card says only that 'some businesses also check' social and environmental standards. The remember line tells every business to check them, which states the idea more strongly than the card does."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Choosing suppliers",
+     "card": [
+      "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+      [
+       "Price and quality",
+       "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+      ],
+      [
+       "Reliability",
+       "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+      ],
+      [
+       "Social and environmental standards",
+       "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+      ]
+     ],
+     "remember": "Weigh price, quality and reliability, and check the supplier's social and environmental standards.",
+     "a": {
+      "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+      "opts": [
+       "She checks whether the supplier delivers on time each week",
+       "She compares the price per bag across three suppliers",
+       "She tastes a sample of each supplier's flour",
+       "She asks whether the mill treats its workers fairly"
+      ],
+      "why": "Reliability is about delivering the right goods on time, every time, so checking weekly delivery record tests it. Comparing prices is about price, and tasting samples is about quality.",
+      "clue": "Reliability is about delivery, not cost or taste."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+      "opts": [
+       "Supplier A's standards could harm her store's reputation",
+       "Supplier A's goods are certain to be poor quality",
+       "Supplier B will deliver faster than Supplier A",
+       "Price should never matter when choosing a supplier"
+      ],
+      "why": "Customers who care about ethics may think less of a store that uses unsafe factories, so reputation is at risk. Supplier A is on time, and nothing says its quality is poor. Price is still one factor to weigh, so it cannot be ignored.",
+      "clue": "Think about what her customers care about, not delivery or cost."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "She checks whether the supplier delivers on time each week",
+      "also_right": []
+     },
+     "b": {
+      "best": "Supplier A's standards could harm her store's reputation",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue says reliability is about delivery. Only one option mentions delivery, so the clue hands students the answer."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only hedged one ('could harm'). The wrong options use absolutes ('certain to be', 'never', 'will deliver'), so a student can pick it from wording alone. The clue also rules out the delivery and price options."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and intended answers are correct. Question a's clue gives the answer away, and in question b the right option is the only one with a qualifier while the others use absolutes."
+    },
+    "flags": [
+     "Question a, other: The clue says reliability is about delivery. Only one option mentions delivery, so the clue hands students the answer.",
+     "Question b, wording: The right option is the only hedged one ('could harm'). The wrong options use absolutes ('certain to be', 'never', 'will deliver'), so a student can pick it from wording alone. The clue also rules out the delivery and price options."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Choosing suppliers",
+     "card": [
+      "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+      [
+       "Price and quality",
+       "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+      ],
+      [
+       "Reliability",
+       "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+      ],
+      [
+       "Social and environmental standards",
+       "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+      ]
+     ],
+     "remember": "Weigh price, quality and reliability, and check the supplier's social and environmental standards.",
+     "a": {
+      "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+      "opts": [
+       "She checks whether its orders arrive on time each week",
+       "She compares delivery fees across three suppliers",
+       "She checks whether delivered flour meets her recipe standard",
+       "She asks whether its delivery trucks cut their emissions"
+      ],
+      "why": "Reliability means the right goods arrive on time, every time, so checking weekly arrival times tests it. Delivery fees are about price, the flour's standard is about quality, and truck emissions are an environmental standard.",
+      "clue": "Which factor is about the supplier doing what it promised, every time?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+      "opts": [
+       "Supplier A's standards could harm her store's reputation",
+       "Supplier B could deliver more reliably than Supplier A",
+       "Supplier B's higher price could raise her profit per item",
+       "Supplier B could cost her less once delivery is counted"
+      ],
+      "why": "Her customers care about ethics, so using unsafe factories could make them think less of her store. Reliability is not a reason, because Supplier A is always on time. Paying more for stock lowers her profit per item rather than raising it, and Supplier A is the cheapest.",
+      "clue": "Check each reason against the facts given about A and B."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "She checks whether its orders arrive on time each week",
+       "also_right": []
+      },
+      "b": {
+       "best": "Supplier A's standards could harm her store's reputation",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The card says only that 'some businesses also check' social and environmental standards. The remember line tells every business to check them, which states the idea more strongly than the card does."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound and have one clear right answer each. One minor problem: the remember line tells every business to check social and environmental standards, while the card says only some businesses do."
+     },
+     "flags": [
+      "Remember, other: The card says only that 'some businesses also check' social and environmental standards. The remember line tells every business to check them, which states the idea more strongly than the card does."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Choosing suppliers",
+  "card": [
+   "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+   [
+    "Price and quality",
+    "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+   ],
+   [
+    "Reliability",
+    "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+   ],
+   [
+    "Social and environmental standards",
+    "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+   ]
+  ],
+  "remember": "Weigh price, quality and reliability. Some businesses also check a supplier's social and environmental standards.",
+  "a": {
+   "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+   "opts": [
+    "She checks whether its orders arrive on time each week",
+    "She compares delivery fees across three suppliers",
+    "She checks whether delivered flour meets her recipe standard",
+    "She asks whether its delivery trucks cut their emissions"
+   ],
+   "why": "Reliability means the right goods arrive on time, every time, so checking weekly arrival times tests it. Delivery fees are about price, the flour's standard is about quality, and truck emissions are an environmental standard.",
+   "clue": "Which factor is about the supplier doing what it promised, every time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+   "opts": [
+    "Supplier A's standards could harm her store's reputation",
+    "Supplier B could deliver more reliably than Supplier A",
+    "Supplier B's higher price could raise her profit per item",
+    "Supplier B could cost her less once delivery is counted"
+   ],
+   "why": "Her customers care about ethics, so using unsafe factories could make them think less of her store. Reliability is not a reason, because Supplier A is always on time. Paying more for stock lowers her profit per item rather than raising it, and Supplier A is the cheapest.",
+   "clue": "Check each reason against the facts given about A and B."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "She checks whether its orders arrive on time each week",
+   "also_right": []
+  },
+  "b": {
+   "best": "Supplier A's standards could harm her store's reputation",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Choosing suppliers",
+  "card": [
+   "A supplier sells a business the goods or services it needs, such as ingredients, fabric or packaging. A business weighs several factors when it picks one.",
+   [
+    "Price and quality",
+    "Price is what the business pays. Quality is how well the goods meet the standard its customers expect. The cheapest supplier may deliver poorer quality."
+   ],
+   [
+    "Reliability",
+    "A reliable supplier delivers the right goods on time, every time. Late or missing orders can leave a business unable to serve its customers."
+   ],
+   [
+    "Social and environmental standards",
+    "Some businesses also check whether a supplier treats workers fairly and limits harm to the environment. Customers may care about this, so it can affect the business's reputation."
+   ]
+  ],
+  "remember": "Weigh price, quality and reliability. Some businesses also check a supplier's social and environmental standards.",
+  "a": {
+   "q": "A bakery owner is choosing a flour supplier. Which choice shows she is weighing reliability?",
+   "opts": [
+    "She checks whether its orders arrive on time each week",
+    "She compares delivery fees across three suppliers",
+    "She checks whether delivered flour meets her recipe standard",
+    "She asks whether its delivery trucks cut their emissions"
+   ],
+   "why": "Reliability means the right goods arrive on time, every time, so checking weekly arrival times tests it. Delivery fees are about price, the flour's standard is about quality, and truck emissions are an environmental standard.",
+   "clue": "Which factor is about the supplier doing what it promised, every time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a clothing store in Geelong. Supplier A is cheapest and always on time, but uses factories with unsafe conditions. Supplier B costs more and meets fair work standards. Her customers care about ethical clothing. Which reason best supports choosing B?",
+   "opts": [
+    "Supplier A's standards could harm her store's reputation",
+    "Supplier B could deliver more reliably than Supplier A",
+    "Supplier B's higher price could raise her profit per item",
+    "Supplier B could cost her less once delivery is counted"
+   ],
+   "why": "Her customers care about ethics, so using unsafe factories could make them think less of her store. Reliability is not a reason, because Supplier A is always on time. Paying more for stock lowers her profit per item rather than raising it, and Supplier A is the cheapest.",
+   "clue": "Check each reason against the facts given about A and B."
+  }
+ }
+}

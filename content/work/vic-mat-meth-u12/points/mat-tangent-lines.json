@@ -1,0 +1,250 @@
+{
+ "id": "mat-tangent-lines",
+ "title": "Tangent lines",
+ "brief": "af986d0d4fbb",
+ "shortlist": [
+  [
+   "mat-tangents-normals",
+   0.66
+  ],
+  [
+   "mat-where-function-not-differentiable",
+   0.371
+  ],
+  [
+   "mat-gradient-as-rate-change",
+   0.312
+  ],
+  [
+   "mat-linear-functions",
+   0.247
+  ],
+  [
+   "mat-derivative-from-first-principles",
+   0.242
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00981,
+  "check": 0.00938,
+  "fix": 0.01273,
+  "recheck": 0.00827
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's tangent card teaches finding tangent and normal equations for NSW Year 11, while the new point is about reading the tangent gradient as an instantaneous rate of change and its sign, so no bank point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tangent lines",
+  "card": [
+   "A tangent line touches a curve at one point and has the same direction as the curve there. Its gradient is the instantaneous rate of change at that point.",
+   [
+    "Positive gradient",
+    "the tangent slopes up, so the function is increasing at that point."
+   ],
+   [
+    "Negative gradient",
+    "the tangent slopes down, so the function is decreasing at that point."
+   ],
+   [
+    "Zero gradient",
+    "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to y = x² at x = 0 is flat, so the rate there is 0."
+   ]
+  ],
+  "remember": "Tangent up is positive, down is negative, flat is zero.",
+  "a": {
+   "q": "The tangent to a curve at point P is horizontal. What does this tell you about the curve at P?",
+   "opts": [
+    "The rate of change at P is zero",
+    "The rate of change at P is 1",
+    "The curve is decreasing at P",
+    "The rate of change at P is undefined"
+   ],
+   "why": "A horizontal line has gradient 0, so the instantaneous rate of change at P is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
+   "clue": "What is the gradient of a horizontal line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent to a curve at (0, 5) also passes through (2, 1). What is the instantaneous rate of change at (0, 5)?",
+   "opts": [
+    "−2",
+    "2",
+    "−4",
+    "−1/2"
+   ],
+   "why": "The gradient is (1 − 5) ÷ (2 − 0) = −2, so the curve is decreasing at that point. The value −4 is only the change in height and has not been divided by the run.",
+   "clue": "Rise over run, and check which way the line slopes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The rate of change at P is zero",
+   "also_right": []
+  },
+  "b": {
+   "best": "−2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"A tangent line touches a curve at one point\" repeats a common misconception. A tangent can meet or cross the curve at other points, for example the tangent to y = x³ at x = 1 meets the curve again at x = −2. It can also cross the curve at the point of contact, as at an inflection point. Better: \"A tangent line touches the curve at a point and has the same direction as the curve there.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with single correct answers (zero and −2). The card's opening line wrongly suggests a tangent meets the curve at only one point and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"A tangent line touches a curve at one point\" repeats a common misconception. A tangent can meet or cross the curve at other points, for example the tangent to y = x³ at x = 1 meets the curve again at x = −2. It can also cross the curve at the point of contact, as at an inflection point. Better: \"A tangent line touches the curve at a point and has the same direction as the curve there.\""
+ ],
+ "proposal": {
+  "title": "Tangent lines",
+  "card": [
+   "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise ÷ run between any two points on the line, is the instantaneous rate of change at that point.",
+   [
+    "Positive gradient",
+    "the tangent slopes up, so the function is increasing at that point."
+   ],
+   [
+    "Negative gradient",
+    "the tangent slopes down, so the function is decreasing at that point."
+   ],
+   [
+    "Zero gradient",
+    "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to y = x² at x = 0 is flat, so the rate there is 0."
+   ]
+  ],
+  "remember": "Tangent up is positive, down is negative, flat is zero.",
+  "a": {
+   "q": "The tangent to a curve at point P is horizontal. What does this tell you about the curve at P?",
+   "opts": [
+    "The rate of change at P is zero",
+    "The rate of change at P is 1",
+    "The curve is decreasing at P",
+    "The rate of change at P is undefined"
+   ],
+   "why": "A horizontal line has gradient 0, so the instantaneous rate of change at P is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
+   "clue": "What is the gradient of a horizontal line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent to a curve at (0, 5) also passes through (2, 1). What is the instantaneous rate of change at (0, 5)?",
+   "opts": [
+    "−2",
+    "2",
+    "−4",
+    "−1/2"
+   ],
+   "why": "The gradient is (1 − 5) ÷ (2 − 0) = −4 ÷ 2 = −2, so the curve is decreasing at that point. The value −4 is only the rise and has not been divided by the run.",
+   "clue": "Rise over run, and check which way the line slopes."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The rate of change at P is zero",
+    "also_right": []
+   },
+   "b": {
+    "best": "−2",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"A tangent line touches a curve at one point\" repeats a common misconception. A tangent can meet or cross the curve at other points, for example the tangent to y = x³ at x = 1 meets the curve again at x = −2. It can also cross the curve at the point of contact, as at an inflection point. Better: \"A tangent line touches the curve at a point and has the same direction as the curve there.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: \"A tangent line touches a curve at one point\" repeats a common misconception. A tangent can meet or cross the curve at other points, for example the tangent to y = x³ at x = 1 meets the curve again at x = −2. It can also cross the curve at the point of contact, as at an inflection point. Better: \"A tangent line touches the curve at a point and has the same direction as the curve there.\""
+  ]
+ },
+ "final": {
+  "title": "Tangent lines",
+  "card": [
+   "A tangent line touches the curve at a point and has the same direction as the curve there. Its gradient, rise ÷ run between any two points on the line, is the instantaneous rate of change at that point.",
+   [
+    "Positive gradient",
+    "the tangent slopes up, so the function is increasing at that point."
+   ],
+   [
+    "Negative gradient",
+    "the tangent slopes down, so the function is decreasing at that point."
+   ],
+   [
+    "Zero gradient",
+    "the tangent is horizontal, so the function is not rising or falling at that point. Example: the tangent to y = x² at x = 0 is flat, so the rate there is 0."
+   ]
+  ],
+  "remember": "Tangent up is positive, down is negative, flat is zero.",
+  "a": {
+   "q": "The tangent to a curve at point P is horizontal. What does this tell you about the curve at P?",
+   "opts": [
+    "The rate of change at P is zero",
+    "The rate of change at P is 1",
+    "The curve is decreasing at P",
+    "The rate of change at P is undefined"
+   ],
+   "why": "A horizontal line has gradient 0, so the instantaneous rate of change at P is 0. It is not decreasing, because a decreasing curve has a tangent that slopes down.",
+   "clue": "What is the gradient of a horizontal line?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A tangent to a curve at (0, 5) also passes through (2, 1). What is the instantaneous rate of change at (0, 5)?",
+   "opts": [
+    "−2",
+    "2",
+    "−4",
+    "−1/2"
+   ],
+   "why": "The gradient is (1 − 5) ÷ (2 − 0) = −4 ÷ 2 = −2, so the curve is decreasing at that point. The value −4 is only the rise and has not been divided by the run.",
+   "clue": "Rise over run, and check which way the line slopes."
+  }
+ },
+ "cleared_by": "recheck"
+}

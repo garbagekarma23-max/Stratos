@@ -1,0 +1,219 @@
+{
+ "id": "mat-inverse-circular-functions",
+ "title": "Inverse circular functions",
+ "brief": "a9d29948394e",
+ "shortlist": [
+  [
+   "mat-pythagorean-identity",
+   0.261
+  ],
+  [
+   "mat-integrals-exponential-trigonometric-functions",
+   0.216
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00619,
+  "check": 0.00958,
+  "fix": 0.01614
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches inverse circular functions: the Pythagorean identity, integrals and derivatives of trig functions are related to sine, cosine and tangent but do not define arcsin, arccos or arctan, their restricted domains or their graphs.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Inverse circular functions",
+  "card": [
+   "Sin, cos and tan repeat, so they are not one-to-one over all x. To have an inverse, each is restricted to a domain where it is one-to-one.",
+   [
+    "arcsin",
+    "the inverse of sin x on [−π/2, π/2]. It has domain [−1, 1] and range [−π/2, π/2]."
+   ],
+   [
+    "arccos",
+    "the inverse of cos x on [0, π]. It has domain [−1, 1] and range [0, π]."
+   ],
+   [
+    "arctan",
+    "the inverse of tan x on (−π/2, π/2). It has domain all real numbers and range (−π/2, π/2). Example: arcsin(1/2) = π/6, because sin(π/6) = 1/2."
+   ]
+  ],
+  "remember": "An inverse swaps domain and range, and its answer lies in the restricted range.",
+  "a": {
+   "q": "What is the exact value of arccos(0)?",
+   "opts": [
+    "π/2",
+    "0",
+    "π",
+    "3π/2"
+   ],
+   "why": "arccos(0) is the angle in [0, π] with cosine 0, which is π/2. The value 3π/2 also has cosine 0, but it lies outside the range [0, π].",
+   "clue": "The answer must lie between 0 and π."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of arcsin(−1/2)?",
+   "opts": [
+    "−π/6",
+    "π/6",
+    "11π/6",
+    "−π/3"
+   ],
+   "why": "The answer must lie in [−π/2, π/2], and sin(−π/6) = −1/2. The value 11π/6 also has sine −1/2, but it is outside the range of arcsin. The positive π/6 gives sine +1/2.",
+   "clue": "Check which angles fall inside the range of arcsin."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "π/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "−π/6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example arcsin(1/2) = π/6 is attached to the end of the arctan bullet, so it reads as if it illustrates arctan. It belongs with the arcsin bullet or on its own line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, answers and explanations are correct. The only problem is that the arcsin example sits inside the arctan bullet, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The worked example arcsin(1/2) = π/6 is attached to the end of the arctan bullet, so it reads as if it illustrates arctan. It belongs with the arcsin bullet or on its own line."
+ ],
+ "proposal": {
+  "title": "Inverse circular functions",
+  "card": [
+   "Sin, cos and tan repeat, so each is restricted to a domain where it is one-to-one before it can have an inverse. The inverse swaps domain and range, and its graph is the reflection of the restricted graph in y = x.",
+   [
+    "arcsin",
+    "the inverse of sin x on [−π/2, π/2], so it has domain [−1, 1] and range [−π/2, π/2]. For example, arcsin(1/2) = π/6, because sin(π/6) = 1/2."
+   ],
+   [
+    "arccos",
+    "the inverse of cos x on [0, π]. It has domain [−1, 1] and range [0, π]."
+   ],
+   [
+    "arctan",
+    "the inverse of tan x on (−π/2, π/2). It has domain all real numbers and range (−π/2, π/2)."
+   ]
+  ],
+  "remember": "Many angles share a sine, cosine or tangent. The inverse gives the one in its restricted range.",
+  "a": {
+   "q": "What is the exact value of arccos(0)?",
+   "opts": [
+    "π/2",
+    "0",
+    "π",
+    "3π/2"
+   ],
+   "why": "arccos(0) is the angle in [0, π] with cosine 0, which is π/2. The value 3π/2 also has cosine 0, but it lies outside the range [0, π].",
+   "clue": "The answer must lie between 0 and π."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of arcsin(−1/2)?",
+   "opts": [
+    "−π/6",
+    "π/6",
+    "11π/6",
+    "−π/3"
+   ],
+   "why": "The answer must lie in [−π/2, π/2], and sin(−π/6) = −1/2. The value 11π/6 also has sine −1/2, but it is outside the range of arcsin. The positive π/6 gives sine +1/2.",
+   "clue": "Check which angles fall inside the range of arcsin."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example arcsin(1/2) = π/6 is attached to the end of the arctan bullet, so it reads as if it illustrates arctan. It belongs with the arcsin bullet or on its own line."
+   }
+  ],
+  "flags": [
+   "Card, wording: The worked example arcsin(1/2) = π/6 is attached to the end of the arctan bullet, so it reads as if it illustrates arctan. It belongs with the arcsin bullet or on its own line."
+  ]
+ },
+ "final": {
+  "title": "Inverse circular functions",
+  "card": [
+   "Sin, cos and tan repeat, so each is restricted to a domain where it is one-to-one before it can have an inverse. The inverse swaps domain and range, and its graph is the reflection of the restricted graph in y = x.",
+   [
+    "arcsin",
+    "the inverse of sin x on [−π/2, π/2], so it has domain [−1, 1] and range [−π/2, π/2]. For example, arcsin(1/2) = π/6, because sin(π/6) = 1/2."
+   ],
+   [
+    "arccos",
+    "the inverse of cos x on [0, π]. It has domain [−1, 1] and range [0, π]."
+   ],
+   [
+    "arctan",
+    "the inverse of tan x on (−π/2, π/2). It has domain all real numbers and range (−π/2, π/2)."
+   ]
+  ],
+  "remember": "Many angles share a sine, cosine or tangent. The inverse gives the one in its restricted range.",
+  "a": {
+   "q": "What is the exact value of arccos(0)?",
+   "opts": [
+    "π/2",
+    "0",
+    "π",
+    "3π/2"
+   ],
+   "why": "arccos(0) is the angle in [0, π] with cosine 0, which is π/2. The value 3π/2 also has cosine 0, but it lies outside the range [0, π].",
+   "clue": "The answer must lie between 0 and π."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of arcsin(−1/2)?",
+   "opts": [
+    "−π/6",
+    "π/6",
+    "11π/6",
+    "−π/3"
+   ],
+   "why": "The answer must lie in [−π/2, π/2], and sin(−π/6) = −1/2. The value 11π/6 also has sine −1/2, but it is outside the range of arcsin. The positive π/6 gives sine +1/2.",
+   "clue": "Check which angles fall inside the range of arcsin."
+  }
+ },
+ "cleared_by": "auto"
+}

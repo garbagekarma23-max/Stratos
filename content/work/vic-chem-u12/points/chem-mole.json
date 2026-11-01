@@ -1,0 +1,261 @@
+{
+ "id": "chem-mole",
+ "title": "The mole",
+ "brief": "9f761464348b",
+ "shortlist": [
+  [
+   "chem-mole-avogadro-s-number",
+   0.629
+  ],
+  [
+   "chem-molar-mass-moles",
+   0.508
+  ],
+  [
+   "chem-dilution",
+   0.36
+  ],
+  [
+   "chem-gravimetric-analysis",
+   0.332
+  ],
+  [
+   "chem-empirical-formulas-percentage-composition",
+   0.316
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt chem-mole-avogadro-s-number, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:02Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.00733,
+  "write": 0.00725,
+  "check": 0.01455,
+  "fix": 0.01762,
+  "recheck": 0.00721
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-mole-avogadro-s-number",
+  "changes": [
+   "Add the relation n = m/M, linking mass in grams to moles through molar mass, since the brief requires it and the bank card does not state it.",
+   "Use 6.02 × 10²³ as the value of the mole, as the brief gives it, in place of 6.022 × 10²³."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the mole and Avogadro's number at the right depth for Year 11, but it lacks the n = m/M mass link the brief asks for, so that line and the constant need adding.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point covers both Avogadro's number and n = m/M, but the bank splits these into two separate points, so neither bank point alone teaches the whole idea.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The mole",
+  "card": [
+   "The mole (mol) is the unit for amount of substance. One mole of any particle is 6.02 × 10²³ particles. This number is called the Avogadro constant.",
+   "The particles can be atoms, molecules or ions. So 1 mol of carbon atoms and 1 mol of water molecules each hold 6.02 × 10²³ particles.",
+   "Molar mass (M) is the mass of one mole of a substance, in g/mol. For an element, it has the same number as its relative atomic mass. Carbon is 12.0 g/mol.",
+   "Amount in moles, mass and molar mass are linked by n = m/M. Here n is in mol, m is in g and M is in g/mol."
+  ],
+  "remember": "Mass divided by molar mass gives moles, and each mole is 6.02 × 10²³ particles.",
+  "a": {
+   "q": "Which sample contains 6.02 × 10²³ particles?",
+   "opts": [
+    "1 mol of neon atoms",
+    "1 g of neon atoms",
+    "1 mol of neon atoms and 1 mol of neon ions only",
+    "10 g of neon atoms"
+   ],
+   "why": "One mole of any kind of particle is 6.02 × 10²³ particles. A mass of 1 g or 10 g is not 1 mol, because the number of moles depends on the molar mass.",
+   "clue": "Which option states an amount in moles?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A sample of carbon is 6.0 g. Carbon has a molar mass of 12.0 g/mol. How many moles of carbon atoms are in it?",
+   "opts": [
+    "0.50 mol",
+    "2.0 mol",
+    "72 mol",
+    "6.0 mol"
+   ],
+   "why": "n = m/M = 6.0 ÷ 12.0 = 0.50 mol. Dividing the other way round gives 2.0 mol, which is a common mistake.",
+   "clue": "Divide mass by molar mass."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1 mol of neon atoms",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.50 mol",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor '1 mol of neon atoms and 1 mol of neon ions only' is confusing. It could be read as two separate samples that each contain 6.02 × 10²³ particles, which is defensible, or as one combined sample of 2 mol, which is wrong. The stray 'only' makes it harder to read. Neon also does not normally form ions, so the example is chemically odd for Year 11."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which option states an amount in moles?' cuts the choice to the two mole options, and one of those is the confusing distractor. The question then tests reading the wording rather than the mole concept."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card calls 6.02 × 10²³ 'the Avogadro constant'. The Avogadro constant (N_A) has units: 6.02 × 10²³ mol⁻¹. The bare number is Avogadro's number. VCE uses N_A = 6.02 × 10²³ mol⁻¹."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear: 1 mol of neon atoms, and 0.50 mol. Question a has a confusing distractor about 'neon ions only', and its clue narrows the choice to that distractor and the right answer. The card also gives the Avogadro constant without its unit, mol⁻¹."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The distractor '1 mol of neon atoms and 1 mol of neon ions only' is confusing. It could be read as two separate samples that each contain 6.02 × 10²³ particles, which is defensible, or as one combined sample of 2 mol, which is wrong. The stray 'only' makes it harder to read. Neon also does not normally form ions, so the example is chemically odd for Year 11.",
+  "Question a, other: The clue 'Which option states an amount in moles?' cuts the choice to the two mole options, and one of those is the confusing distractor. The question then tests reading the wording rather than the mole concept.",
+  "Card, fact: The card calls 6.02 × 10²³ 'the Avogadro constant'. The Avogadro constant (N_A) has units: 6.02 × 10²³ mol⁻¹. The bare number is Avogadro's number. VCE uses N_A = 6.02 × 10²³ mol⁻¹."
+ ],
+ "proposal": {
+  "title": "The mole",
+  "card": [
+   "The mole (mol) is the unit for amount of substance. One mole of any particle is 6.02 × 10²³ particles. The Avogadro constant, N_A, is 6.02 × 10²³ mol⁻¹.",
+   "The particles can be atoms, molecules or ions. So 1 mol of carbon atoms and 1 mol of water molecules each hold 6.02 × 10²³ particles.",
+   "Molar mass (M) is the mass of one mole of a substance, in g/mol. For an element, it has the same number as its relative atomic mass. Carbon is 12.0 g/mol.",
+   "Amount in moles, mass and molar mass are linked by n = m/M. Here n is in mol, m is in g and M is in g/mol."
+  ],
+  "remember": "Mass divided by molar mass gives moles, and each mole is 6.02 × 10²³ particles.",
+  "a": {
+   "q": "Magnesium has a molar mass of 24.3 g/mol. Which sample contains 6.02 × 10²³ magnesium atoms?",
+   "opts": [
+    "24.3 g of magnesium",
+    "1.0 g of magnesium",
+    "12.0 g of magnesium",
+    "6.02 g of magnesium"
+   ],
+   "why": "6.02 × 10²³ atoms is one mole, and the mass of one mole is the molar mass, 24.3 g. A common mistake is to think one mole always weighs 1.0 g, but the mass of a mole depends on the substance.",
+   "clue": "What does molar mass tell you the mass of?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A sample of carbon is 6.0 g. Carbon has a molar mass of 12.0 g/mol. How many moles of carbon atoms are in it?",
+   "opts": [
+    "0.50 mol",
+    "2.0 mol",
+    "72 mol",
+    "6.0 mol"
+   ],
+   "why": "n = m/M = 6.0 ÷ 12.0 = 0.50 mol. Dividing the other way round gives 2.0 mol, which is a common mistake.",
+   "clue": "Divide mass by molar mass."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "24.3 g of magnesium",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.50 mol",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor '1 mol of neon atoms and 1 mol of neon ions only' is confusing. It could be read as two separate samples that each contain 6.02 × 10²³ particles, which is defensible, or as one combined sample of 2 mol, which is wrong. The stray 'only' makes it harder to read. Neon also does not normally form ions, so the example is chemically odd for Year 11."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which option states an amount in moles?' cuts the choice to the two mole options, and one of those is the confusing distractor. The question then tests reading the wording rather than the mole concept."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card calls 6.02 × 10²³ 'the Avogadro constant'. The Avogadro constant (N_A) has units: 6.02 × 10²³ mol⁻¹. The bare number is Avogadro's number. VCE uses N_A = 6.02 × 10²³ mol⁻¹."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The distractor '1 mol of neon atoms and 1 mol of neon ions only' is confusing. It could be read as two separate samples that each contain 6.02 × 10²³ particles, which is defensible, or as one combined sample of 2 mol, which is wrong. The stray 'only' makes it harder to read. Neon also does not normally form ions, so the example is chemically odd for Year 11.",
+   "Question a, other: The clue 'Which option states an amount in moles?' cuts the choice to the two mole options, and one of those is the confusing distractor. The question then tests reading the wording rather than the mole concept.",
+   "Card, fact: The card calls 6.02 × 10²³ 'the Avogadro constant'. The Avogadro constant (N_A) has units: 6.02 × 10²³ mol⁻¹. The bare number is Avogadro's number. VCE uses N_A = 6.02 × 10²³ mol⁻¹."
+  ]
+ },
+ "final": {
+  "title": "The mole",
+  "card": [
+   "The mole (mol) is the unit for amount of substance. One mole of any particle is 6.02 × 10²³ particles. The Avogadro constant, N_A, is 6.02 × 10²³ mol⁻¹.",
+   "The particles can be atoms, molecules or ions. So 1 mol of carbon atoms and 1 mol of water molecules each hold 6.02 × 10²³ particles.",
+   "Molar mass (M) is the mass of one mole of a substance, in g/mol. For an element, it has the same number as its relative atomic mass. Carbon is 12.0 g/mol.",
+   "Amount in moles, mass and molar mass are linked by n = m/M. Here n is in mol, m is in g and M is in g/mol."
+  ],
+  "remember": "Mass divided by molar mass gives moles, and each mole is 6.02 × 10²³ particles.",
+  "a": {
+   "q": "Magnesium has a molar mass of 24.3 g/mol. Which sample contains 6.02 × 10²³ magnesium atoms?",
+   "opts": [
+    "24.3 g of magnesium",
+    "1.0 g of magnesium",
+    "12.0 g of magnesium",
+    "6.02 g of magnesium"
+   ],
+   "why": "6.02 × 10²³ atoms is one mole, and the mass of one mole is the molar mass, 24.3 g. A common mistake is to think one mole always weighs 1.0 g, but the mass of a mole depends on the substance.",
+   "clue": "What does molar mass tell you the mass of?"
+  },
+  "b": {
+   "d": 2,
+   "q": "A sample of carbon is 6.0 g. Carbon has a molar mass of 12.0 g/mol. How many moles of carbon atoms are in it?",
+   "opts": [
+    "0.50 mol",
+    "2.0 mol",
+    "72 mol",
+    "6.0 mol"
+   ],
+   "why": "n = m/M = 6.0 ÷ 12.0 = 0.50 mol. Dividing the other way round gives 2.0 mol, which is a common mistake.",
+   "clue": "Divide mass by molar mass."
+  }
+ },
+ "cleared_by": "recheck"
+}

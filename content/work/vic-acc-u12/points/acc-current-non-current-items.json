@@ -1,0 +1,148 @@
+{
+ "id": "acc-current-non-current-items",
+ "title": "Current and non-current items",
+ "brief": "60e994f97fff",
+ "shortlist": [
+  [
+   "bus-liquidity-ratio",
+   0.323
+  ],
+  [
+   "bus-working-capital-management",
+   0.278
+  ],
+  [
+   "eco-australia-runs-current-account",
+   0.222
+  ],
+  [
+   "e-bop",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: failed the content check, writing again",
+  "2026-11-01T08:33:47Z write: done",
+  "2026-11-01T08:42:04Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01096,
+  "check": 0.0079
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the basic distinction between current and non-current items; the closest ones cover liquidity ratios and working capital management, which are broader ideas, and the economics points are unrelated.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Current and non-current items",
+  "card": [
+   [
+    "Current",
+    "an asset that will be used or turned into cash within 12 months, or a liability that will be paid within 12 months. Cash, accounts receivable and inventory are current assets."
+   ],
+   [
+    "Non-current",
+    "an asset the business will keep for longer than 12 months, or a liability it will not need to pay for more than 12 months. Equipment and vehicles are non-current assets."
+   ],
+   "Sort an item by when it will be used, received or paid, not by what it is. A bank loan repaid over five years is non-current, but the part due within 12 months is current.",
+   "The 12 months are counted forward from the date of the report. Accountants list current items separately from non-current items so the owner can see what is due soon."
+  ],
+  "remember": "Current means within 12 months. Non-current means longer than 12 months.",
+  "a": {
+   "q": "Which item would a service business record as a non-current asset?",
+   "opts": [
+    "A delivery van it expects to use for six years",
+    "Cash held in its bank account",
+    "Money a client must pay in 30 days",
+    "Office stationery it will use up within months"
+   ],
+   "why": "The van will be used for much longer than 12 months, so it is non-current. Money owed by a client in 30 days is tempting because it is an asset, but it will be received within 12 months, so it is current.",
+   "clue": "Which asset will the business still be using after 12 months?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cleaning took a $60 000 bank loan to be repaid in equal yearly amounts over five years. How should the loan be shown at the start of the first year?",
+   "opts": [
+    "Mostly non-current, with the next year's repayment current",
+    "All current, because the bank can ask for repayment",
+    "All non-current, because the loan lasts five years",
+    "All current, because it was borrowed this year"
+   ],
+   "why": "The part due within 12 months is a current liability, and the rest is due later, so it is non-current. Calling it all non-current is tempting because the loan lasts five years, but the next year's repayment must be paid within 12 months.",
+   "clue": "Ask how much of the loan must be paid in the next 12 months."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A delivery van it expects to use for six years",
+   "also_right": []
+  },
+  "b": {
+   "best": "Mostly non-current, with the next year's repayment current",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Current and non-current items",
+  "card": [
+   [
+    "Current",
+    "an asset that will be used or turned into cash within 12 months, or a liability that will be paid within 12 months. Cash, accounts receivable and inventory are current assets."
+   ],
+   [
+    "Non-current",
+    "an asset the business will keep for longer than 12 months, or a liability it will not need to pay for more than 12 months. Equipment and vehicles are non-current assets."
+   ],
+   "Sort an item by when it will be used, received or paid, not by what it is. A bank loan repaid over five years is non-current, but the part due within 12 months is current.",
+   "The 12 months are counted forward from the date of the report. Accountants list current items separately from non-current items so the owner can see what is due soon."
+  ],
+  "remember": "Current means within 12 months. Non-current means longer than 12 months.",
+  "a": {
+   "q": "Which item would a service business record as a non-current asset?",
+   "opts": [
+    "A delivery van it expects to use for six years",
+    "Cash held in its bank account",
+    "Money a client must pay in 30 days",
+    "Office stationery it will use up within months"
+   ],
+   "why": "The van will be used for much longer than 12 months, so it is non-current. Money owed by a client in 30 days is tempting because it is an asset, but it will be received within 12 months, so it is current.",
+   "clue": "Which asset will the business still be using after 12 months?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cleaning took a $60 000 bank loan to be repaid in equal yearly amounts over five years. How should the loan be shown at the start of the first year?",
+   "opts": [
+    "Mostly non-current, with the next year's repayment current",
+    "All current, because the bank can ask for repayment",
+    "All non-current, because the loan lasts five years",
+    "All current, because it was borrowed this year"
+   ],
+   "why": "The part due within 12 months is a current liability, and the rest is due later, so it is non-current. Calling it all non-current is tempting because the loan lasts five years, but the next year's repayment must be paid within 12 months.",
+   "clue": "Ask how much of the loan must be paid in the next 12 months."
+  }
+ },
+ "cleared_by": "checker"
+}

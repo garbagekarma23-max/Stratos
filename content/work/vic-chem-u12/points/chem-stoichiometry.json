@@ -1,0 +1,136 @@
+{
+ "id": "chem-stoichiometry",
+ "title": "Mass-mass stoichiometry",
+ "brief": "16ac335fd7ed",
+ "shortlist": [
+  [
+   "chem-molar-mass-moles",
+   0.507
+  ],
+  [
+   "chem-empirical-formulas-percentage-composition",
+   0.271
+  ],
+  [
+   "chem-mass-spectrometry",
+   0.25
+  ],
+  [
+   "chem-balanced-equations",
+   0.244
+  ],
+  [
+   "phys-mass-energy",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00759,
+  "check": 0.00711
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches mole ratios from a balanced equation to find one substance's mass from another's; the closest, Molar mass and moles, covers only mass-to-mole conversion and the balanced-equations card covers only balancing, so the mole-ratio step would be new material.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Mass-mass stoichiometry",
+  "card": [
+   "A balanced equation shows the mole ratio of the substances. In 2H2 + O2 → 2H2O, 2 mol of H2 react with 1 mol of O2 to make 2 mol of H2O.",
+   "Equations give ratios of moles, not of masses. To use the ratio, first change the given mass to moles using n = m ÷ M.",
+   "Then use the coefficients in the equation to find the moles of the substance you want. Multiply the known moles by (wanted coefficient ÷ known coefficient).",
+   "Finally change moles to mass using m = n × M. The steps are: mass to moles, mole ratio, moles to mass."
+  ],
+  "remember": "Mass to moles, apply the mole ratio, then moles back to mass.",
+  "a": {
+   "q": "In 2Mg + O2 → 2MgO, why can you not compare the masses of Mg and MgO directly using the coefficients?",
+   "opts": [
+    "The coefficients give mole ratios, not mass ratios",
+    "The coefficients give mass ratios, not mole ratios",
+    "Mg and MgO have the same molar mass",
+    "Oxygen changes the mass of the magnesium"
+   ],
+   "why": "Coefficients in a balanced equation show the ratio of moles. Each substance has a different molar mass, so the masses are not in the same ratio. Treating coefficients as masses is the common mistake.",
+   "clue": "What do the numbers in front of formulas count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Zinc reacts with hydrochloric acid: Zn + 2HCl → ZnCl2 + H2. What mass of H2 (M = 2.0 g/mol) forms from 6.54 g of Zn (M = 65.4 g/mol) in excess acid?",
+   "opts": [
+    "0.20 g",
+    "0.10 g",
+    "0.40 g",
+    "6.54 g"
+   ],
+   "why": "n(Zn) = 6.54 ÷ 65.4 = 0.100 mol. The ratio of Zn to H2 is 1:1, so n(H2) = 0.100 mol. Mass = 0.100 × 2.0 = 0.20 g. Giving 0.10 g stops at the moles and forgets to convert to mass.",
+   "clue": "Check the Zn to H2 ratio, then finish with m = n × M."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The coefficients give mole ratios, not mass ratios",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.20 g",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Mass-mass stoichiometry",
+  "card": [
+   "A balanced equation shows the mole ratio of the substances. In 2H2 + O2 → 2H2O, 2 mol of H2 react with 1 mol of O2 to make 2 mol of H2O.",
+   "Equations give ratios of moles, not of masses. To use the ratio, first change the given mass to moles using n = m ÷ M.",
+   "Then use the coefficients in the equation to find the moles of the substance you want. Multiply the known moles by (wanted coefficient ÷ known coefficient).",
+   "Finally change moles to mass using m = n × M. The steps are: mass to moles, mole ratio, moles to mass."
+  ],
+  "remember": "Mass to moles, apply the mole ratio, then moles back to mass.",
+  "a": {
+   "q": "In 2Mg + O2 → 2MgO, why can you not compare the masses of Mg and MgO directly using the coefficients?",
+   "opts": [
+    "The coefficients give mole ratios, not mass ratios",
+    "The coefficients give mass ratios, not mole ratios",
+    "Mg and MgO have the same molar mass",
+    "Oxygen changes the mass of the magnesium"
+   ],
+   "why": "Coefficients in a balanced equation show the ratio of moles. Each substance has a different molar mass, so the masses are not in the same ratio. Treating coefficients as masses is the common mistake.",
+   "clue": "What do the numbers in front of formulas count?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Zinc reacts with hydrochloric acid: Zn + 2HCl → ZnCl2 + H2. What mass of H2 (M = 2.0 g/mol) forms from 6.54 g of Zn (M = 65.4 g/mol) in excess acid?",
+   "opts": [
+    "0.20 g",
+    "0.10 g",
+    "0.40 g",
+    "6.54 g"
+   ],
+   "why": "n(Zn) = 6.54 ÷ 65.4 = 0.100 mol. The ratio of Zn to H2 is 1:1, so n(H2) = 0.100 mol. Mass = 0.100 × 2.0 = 0.20 g. Giving 0.10 g stops at the moles and forgets to convert to mass.",
+   "clue": "Check the Zn to H2 ratio, then finish with m = n × M."
+  }
+ },
+ "cleared_by": "checker"
+}

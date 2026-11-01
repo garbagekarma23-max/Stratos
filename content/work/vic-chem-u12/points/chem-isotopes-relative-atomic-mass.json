@@ -1,0 +1,194 @@
+{
+ "id": "chem-isotopes-relative-atomic-mass",
+ "title": "Isotopes and relative atomic mass",
+ "brief": "37c37de854e9",
+ "shortlist": [
+  [
+   "chem-isotopes",
+   0.663
+  ],
+  [
+   "chem-molar-mass-moles",
+   0.313
+  ],
+  [
+   "chem-atomic-structure",
+   0.263
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: failed the content check, writing again",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:48Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.0131,
+  "check": 0.01344,
+  "fix": 0.02525
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers isotopes and weighted-average relative atomic mass, but it does not set isotope masses against the carbon-12 standard or explain how mass spectrometry gives isotope abundances, so adapting it would mean adding new steps and ideas rather than making small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Isotopes and relative atomic mass",
+  "card": [
+   "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. They have different masses.",
+   "Relative isotopic mass compares the mass of an isotope with carbon-12. One unit is one twelfth of the mass of a carbon-12 atom.",
+   "A mass spectrometer measures the mass of each isotope and its abundance, which is the percentage of atoms of that isotope in a natural sample.",
+   "Relative atomic mass is the weighted average of the isotopic masses. Multiply each mass by its abundance as a fraction, then add the results."
+  ],
+  "remember": "Relative atomic mass is an average of isotopic masses, weighted by abundance.",
+  "a": {
+   "q": "Which pair of atoms are isotopes of the same element?",
+   "opts": [
+    "Both have 17 protons, one has 18 neutrons and one has 20",
+    "Both have 17 neutrons, one has 17 protons and one has 18",
+    "Both have 17 protons and 18 neutrons, but different charges",
+    "Both have a mass number of 35, but different protons"
+   ],
+   "why": "Isotopes have the same number of protons but different numbers of neutrons. The second option changes the protons, so the atoms are different elements. The third option has identical nuclei, so the atoms are not different isotopes.",
+   "clue": "Same element means same protons. What differs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of element X is 75% X-35 and 25% X-37. Using these mass numbers as the isotopic masses, what is its relative atomic mass?",
+   "opts": [
+    "35.5",
+    "36.0",
+    "35.0",
+    "36.5"
+   ],
+   "why": "Weighted average = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5. A simple average of 35 and 37 gives 36.0, but that ignores that X-35 is far more abundant.",
+   "clue": "Multiply each mass by its abundance as a fraction, then add."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Both have 17 protons, one has 18 neutrons and one has 20",
+   "also_right": []
+  },
+  "b": {
+   "best": "35.5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position, but the options are shown in random order, so it does not match. As shown, the option that changes protons is the third, and the option with identical nuclei is the second. The why says the reverse, which would confuse a student checking their answer. Describe the options by content instead of position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. Why (a) refers to options by position and gets them the wrong way round for the order shown, so it should describe each option by its content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) names options by position, but the options are shown in random order, so it does not match. As shown, the option that changes protons is the third, and the option with identical nuclei is the second. The why says the reverse, which would confuse a student checking their answer. Describe the options by content instead of position."
+ ],
+ "proposal": {
+  "title": "Isotopes and relative atomic mass",
+  "card": [
+   "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. They have different masses.",
+   "Relative isotopic mass compares the mass of an isotope with carbon-12. One unit is one twelfth of the mass of a carbon-12 atom.",
+   "A mass spectrometer measures the mass of each isotope and its abundance, which is the percentage of atoms of that isotope in a natural sample.",
+   "Relative atomic mass is the weighted average of the isotopic masses. Multiply each mass by its abundance as a fraction, then add the results."
+  ],
+  "remember": "Relative atomic mass is an average of isotopic masses, weighted by abundance.",
+  "a": {
+   "q": "Which pair of atoms are isotopes of the same element?",
+   "opts": [
+    "Both have 17 protons, one has 18 neutrons and one has 20",
+    "Both have 17 neutrons, one has 17 protons and one has 18",
+    "Both have 17 protons and 18 neutrons, but different charges",
+    "Both have a mass number of 35, but different protons"
+   ],
+   "why": "Isotopes have the same number of protons but different numbers of neutrons. Any pair with different numbers of protons are atoms of different elements. The pair with 17 protons and 18 neutrons each have identical nuclei, so a different charge does not make them different isotopes.",
+   "clue": "Same element means same protons. What differs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of element X is 75% X-35 and 25% X-37. Using these mass numbers as the isotopic masses, what is its relative atomic mass?",
+   "opts": [
+    "35.5",
+    "36.0",
+    "35.0",
+    "36.5"
+   ],
+   "why": "Weighted average = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5. A simple average of 35 and 37 gives 36.0, but that ignores that X-35 is far more abundant.",
+   "clue": "Multiply each mass by its abundance as a fraction, then add."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position, but the options are shown in random order, so it does not match. As shown, the option that changes protons is the third, and the option with identical nuclei is the second. The why says the reverse, which would confuse a student checking their answer. Describe the options by content instead of position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) names options by position, but the options are shown in random order, so it does not match. As shown, the option that changes protons is the third, and the option with identical nuclei is the second. The why says the reverse, which would confuse a student checking their answer. Describe the options by content instead of position."
+  ]
+ },
+ "final": {
+  "title": "Isotopes and relative atomic mass",
+  "card": [
+   "Isotopes are atoms of the same element with the same number of protons but different numbers of neutrons. They have different masses.",
+   "Relative isotopic mass compares the mass of an isotope with carbon-12. One unit is one twelfth of the mass of a carbon-12 atom.",
+   "A mass spectrometer measures the mass of each isotope and its abundance, which is the percentage of atoms of that isotope in a natural sample.",
+   "Relative atomic mass is the weighted average of the isotopic masses. Multiply each mass by its abundance as a fraction, then add the results."
+  ],
+  "remember": "Relative atomic mass is an average of isotopic masses, weighted by abundance.",
+  "a": {
+   "q": "Which pair of atoms are isotopes of the same element?",
+   "opts": [
+    "Both have 17 protons, one has 18 neutrons and one has 20",
+    "Both have 17 neutrons, one has 17 protons and one has 18",
+    "Both have 17 protons and 18 neutrons, but different charges",
+    "Both have a mass number of 35, but different protons"
+   ],
+   "why": "Isotopes have the same number of protons but different numbers of neutrons. Any pair with different numbers of protons are atoms of different elements. The pair with 17 protons and 18 neutrons each have identical nuclei, so a different charge does not make them different isotopes.",
+   "clue": "Same element means same protons. What differs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of element X is 75% X-35 and 25% X-37. Using these mass numbers as the isotopic masses, what is its relative atomic mass?",
+   "opts": [
+    "35.5",
+    "36.0",
+    "35.0",
+    "36.5"
+   ],
+   "why": "Weighted average = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5. A simple average of 35 and 37 gives 36.0, but that ignores that X-35 is far more abundant.",
+   "clue": "Multiply each mass by its abundance as a fraction, then add."
+  }
+ },
+ "cleared_by": "auto"
+}

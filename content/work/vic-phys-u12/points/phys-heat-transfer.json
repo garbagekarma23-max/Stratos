@@ -1,0 +1,140 @@
+{
+ "id": "phys-heat-transfer",
+ "title": "Heat transfer",
+ "brief": "85fda5627f4d",
+ "shortlist": [
+  [
+   "chem-calorimetry",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:35Z write: done",
+  "2026-11-01T08:33:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00493,
+  "check": 0.01279
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's calorimetry point teaches measuring heat from temperature change using q = mcΔT in chemistry reactions, not the three modes of heat transfer (conduction, convection, radiation) that the new point covers, so no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Heat transfer",
+  "card": [
+   "Heat is energy that moves from a hotter place to a cooler place. It moves in three ways: conduction, convection and radiation.",
+   [
+    "Conduction",
+    "heat passing through direct contact. Vibrating particles pass energy to their neighbours without the material itself moving. Metals conduct well."
+   ],
+   [
+    "Convection",
+    "heat carried by the movement of a fluid, which is a liquid or a gas. Warmer fluid is less dense and rises, and cooler fluid sinks to replace it."
+   ],
+   [
+    "Radiation",
+    "heat carried by electromagnetic waves, mainly infrared. It needs no particles, so it can cross empty space."
+   ]
+  ],
+  "remember": "Conduction needs contact, convection needs a moving fluid, and radiation needs neither.",
+  "a": {
+   "q": "Which way of transferring heat can carry energy from the Sun to Earth through space?",
+   "opts": [
+    "Radiation",
+    "Conduction",
+    "Convection",
+    "Conduction and convection together"
+   ],
+   "why": "Space is almost empty, so there are no particles to pass energy on or to flow as a fluid. Radiation uses electromagnetic waves, which need no particles. Conduction and convection both rely on particles.",
+   "clue": "Which way does not need any particles?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin holds one end of a steel spoon. The other end sits in hot soup, and soon his hand feels warm. How did the heat mostly travel along the spoon?",
+   "opts": [
+    "By conduction, as vibrating particles passed energy on",
+    "By convection, as hot steel moved up the spoon",
+    "By radiation, as waves crossed the air to his hand",
+    "By convection, as hot soup flowed along the handle"
+   ],
+   "why": "The spoon is a solid, so its particles stay in place and pass energy to their neighbours by vibrating. That is conduction. Convection is tempting because soup is hot, but it needs a fluid to move, and the steel does not flow.",
+   "clue": "Does the steel itself move along the spoon?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Radiation",
+   "also_right": []
+  },
+  "b": {
+   "best": "By conduction, as vibrating particles passed energy on",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Heat transfer",
+  "card": [
+   "Heat is energy that moves from a hotter place to a cooler place. It moves in three ways: conduction, convection and radiation.",
+   [
+    "Conduction",
+    "heat passing through direct contact. Vibrating particles pass energy to their neighbours without the material itself moving. Metals conduct well."
+   ],
+   [
+    "Convection",
+    "heat carried by the movement of a fluid, which is a liquid or a gas. Warmer fluid is less dense and rises, and cooler fluid sinks to replace it."
+   ],
+   [
+    "Radiation",
+    "heat carried by electromagnetic waves, mainly infrared. It needs no particles, so it can cross empty space."
+   ]
+  ],
+  "remember": "Conduction needs contact, convection needs a moving fluid, and radiation needs neither.",
+  "a": {
+   "q": "Which way of transferring heat can carry energy from the Sun to Earth through space?",
+   "opts": [
+    "Radiation",
+    "Conduction",
+    "Convection",
+    "Conduction and convection together"
+   ],
+   "why": "Space is almost empty, so there are no particles to pass energy on or to flow as a fluid. Radiation uses electromagnetic waves, which need no particles. Conduction and convection both rely on particles.",
+   "clue": "Which way does not need any particles?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jin holds one end of a steel spoon. The other end sits in hot soup, and soon his hand feels warm. How did the heat mostly travel along the spoon?",
+   "opts": [
+    "By conduction, as vibrating particles passed energy on",
+    "By convection, as hot steel moved up the spoon",
+    "By radiation, as waves crossed the air to his hand",
+    "By convection, as hot soup flowed along the handle"
+   ],
+   "why": "The spoon is a solid, so its particles stay in place and pass energy to their neighbours by vibrating. That is conduction. Convection is tempting because soup is hot, but it needs a fluid to move, and the steel does not flow.",
+   "clue": "Does the steel itself move along the spoon?"
+  }
+ },
+ "cleared_by": "checker"
+}

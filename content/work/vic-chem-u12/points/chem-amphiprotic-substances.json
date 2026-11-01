@@ -1,0 +1,488 @@
+{
+ "id": "chem-amphiprotic-substances",
+ "title": "Amphiprotic substances",
+ "brief": "3d1c710b1600",
+ "shortlist": [
+  [
+   "chem-reactions-acids",
+   0.306
+  ],
+  [
+   "chem-buffers",
+   0.261
+  ],
+  [
+   "chem-properties-acids-bases",
+   0.257
+  ],
+  [
+   "chem-pure-substances-mixtures",
+   0.253
+  ],
+  [
+   "chem-strong-weak-acids",
+   0.226
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a other)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: flagged",
+  "2026-11-01T13:49:26Z fix: suggested",
+  "2026-11-01T13:57:15Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:59:17Z autoreject: rejected, to be written again (card other)",
+  "2026-11-01T14:05:56Z write: done",
+  "2026-11-01T14:08:00Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 3,
+  "fix": 2,
+  "recheck": 2
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.03002,
+  "check": 0.03712,
+  "fix": 0.0615,
+  "recheck": 0.02378
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches that a substance such as water or HCO₃⁻ can act as either an acid or a base; the buffer point mentions HCO₃⁻ only as a buffer component, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The first bullet restates the Brønsted-Lowry definition of acids and bases, which belongs to point 1. A brief mention is reasonable context, but it is given here as a full definition.",
+ "rejected": {
+  "title": "Amphiprotic substances",
+  "card": [
+   "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+   "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+   "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+   "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+  ],
+  "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+  "a": {
+   "q": "HCO₃⁻ reacts with H₃O⁺ to form H₂CO₃, and with OH⁻ to form CO₃²⁻. Why do these reactions show HCO₃⁻ is amphiprotic?",
+   "opts": [
+    "It accepts a proton in one and donates in the other",
+    "It donates a proton in both of the two reactions",
+    "It accepts a proton in both of the two reactions",
+    "It is neutral, so it neither donates nor accepts"
+   ],
+   "why": "With H₃O⁺, HCO₃⁻ gains an H⁺ to become H₂CO₃, so it acts as a base. With OH⁻, it loses an H⁺ to become CO₃²⁻, so it acts as an acid. Amphiprotic does not mean neutral: it means the substance can take either role.",
+   "clue": "Compare HCO₃⁻ with each product. Has it gained or lost a hydrogen?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+   "opts": [
+    "An acid, because it donates a proton to HCO₃⁻",
+    "A base, because it accepts a proton from HCO₃⁻",
+    "An acid, because it accepts a proton from HCO₃⁻",
+    "A base, because it donates a proton to HCO₃⁻"
+   ],
+   "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+   "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+  }
+ },
+ "rewrites": 2,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The why for (a) defines 'polyprotic acid' ('Donating more than one proton describes a polyprotic acid'), a term that belongs to point 1. It should only be mentioned here, not explained."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Amphiprotic substances",
+     "card": [
+      "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+      "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+      "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+      "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+     ],
+     "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+     "a": {
+      "q": "What makes HCO₃⁻ amphiprotic?",
+      "opts": [
+       "It can both donate and accept a proton",
+       "It can donate more than one proton",
+       "It ionises fully when it dissolves in water",
+       "It has no hydrogen, so it can only accept"
+      ],
+      "why": "HCO₃⁻ can lose its H⁺ to form CO₃²⁻ or gain an H⁺ to form H₂CO₃. Donating more than one proton describes a polyprotic acid, which is a different idea.",
+      "clue": "Amphiprotic is about two roles, not the number of protons."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+      "opts": [
+       "A base, because it accepts a proton from HCO₃⁻",
+       "An acid, because it accepts a proton from HCO₃⁻",
+       "A base, because it donates a proton to HCO₃⁻",
+       "An acid, because it donates a proton to HCO₃⁻"
+      ],
+      "why": "Water becomes OH⁻ in the products? No: H₂O gains H⁺ to form H₃O⁺ in other cases, but here H₂CO₃ has one more H than HCO₃⁻, so HCO₃⁻ gains a proton. Check the equation: OH⁻ has one less H than H₂O, so water donates a proton and acts as an acid.",
+      "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It can both donate and accept a proton",
+      "also_right": []
+     },
+     "b": {
+      "best": "An acid, because it donates a proton to HCO₃⁻",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The why for (b) is garbled. It opens with 'Water becomes OH⁻ in the products? No:', which seems to deny something true, then brings in H₃O⁺ from other reactions before reaching the right conclusion. A student could come away confused about whether water forms OH⁻ here. It should simply say that H₂O loses an H⁺ to become OH⁻ and HCO₃⁻ gains it to become H₂CO₃, so water acts as an acid."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each question has one clear right answer. The explanation for question b is muddled: it starts with a misleading 'No:' and an irrelevant H₃O⁺ aside, and should be rewritten."
+    },
+    "flags": [
+     "Question b: the checker picked “An acid, because it donates a proton to HCO₃⁻”, not the writer’s answer “A base, because it accepts a proton from HCO₃⁻”.",
+     "Question b, wording: The why for (b) is garbled. It opens with 'Water becomes OH⁻ in the products? No:', which seems to deny something true, then brings in H₃O⁺ from other reactions before reaching the right conclusion. A student could come away confused about whether water forms OH⁻ here. It should simply say that H₂O loses an H⁺ to become OH⁻ and HCO₃⁻ gains it to become H₂CO₃, so water acts as an acid."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Amphiprotic substances",
+     "card": [
+      "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+      "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+      "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+      "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+     ],
+     "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+     "a": {
+      "q": "What makes HCO₃⁻ amphiprotic?",
+      "opts": [
+       "It can both donate and accept a proton",
+       "It can donate more than one proton",
+       "It ionises fully when it dissolves in water",
+       "It has no hydrogen, so it can only accept"
+      ],
+      "why": "HCO₃⁻ can lose its H⁺ to form CO₃²⁻ or gain an H⁺ to form H₂CO₃. Donating more than one proton describes a polyprotic acid, which is a different idea.",
+      "clue": "Amphiprotic is about two roles, not the number of protons."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+      "opts": [
+       "An acid, because it donates a proton to HCO₃⁻",
+       "A base, because it accepts a proton from HCO₃⁻",
+       "An acid, because it accepts a proton from HCO₃⁻",
+       "A base, because it donates a proton to HCO₃⁻"
+      ],
+      "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+      "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It can both donate and accept a proton",
+       "also_right": []
+      },
+      "b": {
+       "best": "An acid, because it donates a proton to HCO₃⁻",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The why for (a) defines 'polyprotic acid' ('Donating more than one proton describes a polyprotic acid'), a term that belongs to point 1. It should only be mentioned here, not explained."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, equations and both answers are correct. The only issue is minor: the why for (a) defines 'polyprotic', which belongs to point 1."
+     },
+     "flags": [
+      "Question a, other: The why for (a) defines 'polyprotic acid' ('Donating more than one proton describes a polyprotic acid'), a term that belongs to point 1. It should only be mentioned here, not explained."
+     ]
+    }
+   }
+  },
+  {
+   "at": "2026-11-01T13:59:17Z",
+   "rules": 1,
+   "rewrites": 2,
+   "flags": [
+    "Card, other: The first bullet restates the Brønsted-Lowry definition of acids and bases, which belongs to point 1. A brief mention is reasonable context, but it is given here as a full definition."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Amphiprotic substances",
+     "card": [
+      "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+      "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+      "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+      "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+     ],
+     "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+     "a": {
+      "q": "What makes HCO₃⁻ amphiprotic?",
+      "opts": [
+       "It can both donate and accept a proton",
+       "It can donate a proton but never accept one",
+       "It can accept a proton but never donate one",
+       "It ionises fully when it dissolves in water"
+      ],
+      "why": "HCO₃⁻ can lose its H⁺ to form CO₃²⁻ or gain an H⁺ to form H₂CO₃. Being amphiprotic is about having both roles. A substance that can only donate, or only accept, is not amphiprotic.",
+      "clue": "Amphiprotic is about having two possible roles."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+      "opts": [
+       "An acid, because it donates a proton to HCO₃⁻",
+       "A base, because it accepts a proton from HCO₃⁻",
+       "An acid, because it accepts a proton from HCO₃⁻",
+       "A base, because it donates a proton to HCO₃⁻"
+      ],
+      "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+      "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "It can both donate and accept a proton",
+      "also_right": []
+     },
+     "b": {
+      "best": "An acid, because it donates a proton to HCO₃⁻",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "Two distractors use 'never' ('never accept one', 'never donate one'). Together with the clue about 'two possible roles', this leaves the right option as the only one without an absolute, so students can pick it without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The chemistry on the card and in both questions is correct. In question a, the 'never' wording in two distractors and the 'two roles' clue make the right answer easy to spot without understanding."
+    },
+    "flags": [
+     "Question a, wording: Two distractors use 'never' ('never accept one', 'never donate one'). Together with the clue about 'two possible roles', this leaves the right option as the only one without an absolute, so students can pick it without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Amphiprotic substances",
+     "card": [
+      "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+      "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+      "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+      "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+     ],
+     "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+     "a": {
+      "q": "HCO₃⁻ reacts with H₃O⁺ to form H₂CO₃, and with OH⁻ to form CO₃²⁻. Why do these reactions show HCO₃⁻ is amphiprotic?",
+      "opts": [
+       "It accepts a proton in one and donates in the other",
+       "It donates a proton in both of the two reactions",
+       "It accepts a proton in both of the two reactions",
+       "It is neutral, so it neither donates nor accepts"
+      ],
+      "why": "With H₃O⁺, HCO₃⁻ gains an H⁺ to become H₂CO₃, so it acts as a base. With OH⁻, it loses an H⁺ to become CO₃²⁻, so it acts as an acid. Amphiprotic does not mean neutral: it means the substance can take either role.",
+      "clue": "Compare HCO₃⁻ with each product. Has it gained or lost a hydrogen?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+      "opts": [
+       "An acid, because it donates a proton to HCO₃⁻",
+       "A base, because it accepts a proton from HCO₃⁻",
+       "An acid, because it accepts a proton from HCO₃⁻",
+       "A base, because it donates a proton to HCO₃⁻"
+      ],
+      "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+      "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T13:57:15Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It accepts a proton in one and donates in the other",
+       "also_right": []
+      },
+      "b": {
+       "best": "An acid, because it donates a proton to HCO₃⁻",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The first bullet restates the Brønsted-Lowry definition of acids and bases, which belongs to point 1. A brief mention is reasonable context, but it is given here as a full definition."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The chemistry, equations, questions and explanations are all correct, and each question has one clear answer. The only minor issue is that the card re-defines Brønsted-Lowry acids and bases, which belongs to point 1."
+     },
+     "flags": [
+      "Card, other: The first bullet restates the Brønsted-Lowry definition of acids and bases, which belongs to point 1. A brief mention is reasonable context, but it is given here as a full definition."
+     ]
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The why for (a) defines 'polyprotic acid' ('Donating more than one proton describes a polyprotic acid'), a term that belongs to point 1. It should only be mentioned here, not explained.",
+    "rejected": {
+     "title": "Amphiprotic substances",
+     "card": [
+      "In the Brønsted-Lowry model, an acid donates a proton (H⁺) and a base accepts one.",
+      "An amphiprotic substance can do both. It can donate a proton and act as an acid, or accept a proton and act as a base.",
+      "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+      "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺."
+     ],
+     "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+     "a": {
+      "q": "What makes HCO₃⁻ amphiprotic?",
+      "opts": [
+       "It can both donate and accept a proton",
+       "It can donate more than one proton",
+       "It ionises fully when it dissolves in water",
+       "It has no hydrogen, so it can only accept"
+      ],
+      "why": "HCO₃⁻ can lose its H⁺ to form CO₃²⁻ or gain an H⁺ to form H₂CO₃. Donating more than one proton describes a polyprotic acid, which is a different idea.",
+      "clue": "Amphiprotic is about two roles, not the number of protons."
+     },
+     "b": {
+      "d": 3,
+      "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+      "opts": [
+       "An acid, because it donates a proton to HCO₃⁻",
+       "A base, because it accepts a proton from HCO₃⁻",
+       "An acid, because it accepts a proton from HCO₃⁻",
+       "A base, because it donates a proton to HCO₃⁻"
+      ],
+      "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+      "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+     }
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Amphiprotic substances",
+  "card": [
+   "An amphiprotic substance can donate a proton (H⁺) and can also accept one. So it can act as an acid or as a base.",
+   "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+   "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺.",
+   "Amphiprotic does not mean neutral. It means the substance can take either role, depending on its partner."
+  ],
+  "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+  "a": {
+   "q": "HCO₃⁻ reacts with H₃O⁺ to form H₂CO₃, and with OH⁻ to form CO₃²⁻. Why do these reactions show HCO₃⁻ is amphiprotic?",
+   "opts": [
+    "It accepts a proton in one and donates in the other",
+    "It donates a proton in both of the two reactions",
+    "It accepts a proton in both of the two reactions",
+    "It is neutral, so it neither donates nor accepts"
+   ],
+   "why": "With H₃O⁺, HCO₃⁻ gains an H⁺ to become H₂CO₃, so it acts as a base. With OH⁻, it loses an H⁺ to become CO₃²⁻, so it acts as an acid. Amphiprotic does not mean neutral: it means the substance can take either role.",
+   "clue": "Compare HCO₃⁻ with each product. Has it gained or lost a hydrogen?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+   "opts": [
+    "An acid, because it donates a proton to HCO₃⁻",
+    "A base, because it accepts a proton from HCO₃⁻",
+    "An acid, because it accepts a proton from HCO₃⁻",
+    "A base, because it donates a proton to HCO₃⁻"
+   ],
+   "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+   "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It accepts a proton in one and donates in the other",
+   "also_right": []
+  },
+  "b": {
+   "best": "An acid, because it donates a proton to HCO₃⁻",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Amphiprotic substances",
+  "card": [
+   "An amphiprotic substance can donate a proton (H⁺) and can also accept one. So it can act as an acid or as a base.",
+   "To donate, it needs a hydrogen it can lose. To accept, it needs a lone pair of electrons to bond to H⁺. Water and HCO₃⁻ have both.",
+   "Which role it plays depends on what it reacts with. Water acts as a base with HCl: H₂O + HCl → H₃O⁺ + Cl⁻. It acts as an acid with NH₃: H₂O + NH₃ ⇌ OH⁻ + NH₄⁺.",
+   "Amphiprotic does not mean neutral. It means the substance can take either role, depending on its partner."
+  ],
+  "remember": "Amphiprotic means it can give or take a proton, depending on its partner.",
+  "a": {
+   "q": "HCO₃⁻ reacts with H₃O⁺ to form H₂CO₃, and with OH⁻ to form CO₃²⁻. Why do these reactions show HCO₃⁻ is amphiprotic?",
+   "opts": [
+    "It accepts a proton in one and donates in the other",
+    "It donates a proton in both of the two reactions",
+    "It accepts a proton in both of the two reactions",
+    "It is neutral, so it neither donates nor accepts"
+   ],
+   "why": "With H₃O⁺, HCO₃⁻ gains an H⁺ to become H₂CO₃, so it acts as a base. With OH⁻, it loses an H⁺ to become CO₃²⁻, so it acts as an acid. Amphiprotic does not mean neutral: it means the substance can take either role.",
+   "clue": "Compare HCO₃⁻ with each product. Has it gained or lost a hydrogen?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In the reaction H₂O + HCO₃⁻ ⇌ OH⁻ + H₂CO₃, what role does water play?",
+   "opts": [
+    "An acid, because it donates a proton to HCO₃⁻",
+    "A base, because it accepts a proton from HCO₃⁻",
+    "An acid, because it accepts a proton from HCO₃⁻",
+    "A base, because it donates a proton to HCO₃⁻"
+   ],
+   "why": "H₂O loses an H⁺ to become OH⁻, and HCO₃⁻ gains that H⁺ to become H₂CO₃. Water donates a proton, so it acts as an acid here. It is tempting to call water a base, as it is with HCl, but its role depends on what it reacts with.",
+   "clue": "Compare H₂O with OH⁻. Which has lost a hydrogen?"
+  }
+ }
+}
