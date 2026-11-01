@@ -9,7 +9,9 @@ Run it from the repository folder. On Windows, type py where this says python3.
   python3 content/pipeline.py autoreview                                  clears them, with no API calls
   python3 content/pipeline.py recheck --dry-run                           which fixes it would check again, and the cost
   python3 content/pipeline.py recheck --max-dollars 5                     a fresh Opus check of each fix waiting for you
-  python3 content/pipeline.py rebalance --dry-run                         which questions have a right option that stands out by length
+  python3 content/pipeline.py autoreject --dry-run                        which points it would send for a rewrite
+  python3 content/pipeline.py autoreject                                  sends them, with no API calls
+  python3 content/pipeline.py rebalance --dry-run                        which questions have a right option that stands out by length
   python3 content/pipeline.py rebalance --max-new-dollars 3               rewrites their wrong options to match it, and checks them
   python3 content/pipeline.py review                                      the review page, at http://localhost:8765
   python3 content/pipeline.py publish content/outlines/nsw-bus-11.yaml    writes the cleared points into src/
@@ -41,6 +43,9 @@ How a point goes through it:
            with nothing about the first draft or its problems. If the check picks the fix's answers, finds nothing
            else right, no problems and no topic, and is highly sure, the point is cleared with the fix. 1 in 10 stay
            for you as spot checks. A sensitive topic and a point you sent back with --undo are never sent.
+  autoreject only when you run autoreject: a point recheck kept for you only because the fresh check found a problem is
+           rejected as you would reject it, and written again on the next run. A sensitive topic, a possible match, a
+           spot check and a point rewritten twice already stay with you.
   rebalance only when you run rebalance: in a cleared point, a question whose right option is clearly the longest gets
            its three wrong options rewritten to match it in length and detail. The question and the right option never
            change. A rewrite that passes the content check and no longer has the right option clearly the longest
@@ -146,6 +151,8 @@ AUTO_SAFE_KINDS = ('wording', 'other')
 AUTO_UNSAFE_WORDS = re.compile(r'\b(incorrect\w*|wrong\w*|false\w*|inaccura\w*|not true|errors?|erroneous\w*|mistake\w*|mistaken\w*)\b', re.I)
 # Saved with each automatic decision, so decisions made under older rules can be told apart.
 AUTO_RULES = 1
+# autoreject: a point rejected and written again this many times, by the owner or by autoreject, stays with the owner.
+AUTOREJECT_MOST = 2
 # --now sends 4 requests at a time, and only for a run of at most 50 points. Bigger runs use batches.
 NOW_PARALLEL, NOW_MOST = 4, 50
 # A batch holds at most this many requests and bytes. More are split into several batches. The API allows 100,000
@@ -686,10 +693,26 @@ DRAFT_KEYS = ['draft', 'redo', 'redone', 'local', 'check', 'flags', 'sensitive',
               'screen', 'screen_passed', 'screen_sensitive', 'screen_missed', 'to_opus', 'alone', 'auto', 'auto_undone', 'recheck', 'recheck_tries',
               'rebalance', 'rebalance_tries']
 
+def rewrites(rec):
+    """How many times a point has been rejected and sent to be written again, by the owner or by autoreject. A point
+    rejected before this count was kept has its rejections in its log. Changing the outline starts the count again."""
+    if 'rewrites' in rec: return rec['rewrites']
+    n = 0
+    for line in rec.get('log', []):
+        if ' the outline changed' in line: n = 0
+        elif ' review: rejected, to be written again' in line: n += 1
+    return n
+
+def reject(rec, rejected, note):
+    """Sends a point to be written again, whoever rejected it. The writer is shown the rejected version and the note."""
+    n = rewrites(rec) + 1
+    for k in DRAFT_KEYS: rec.pop(k, None)
+    rec.update(stage='write', note=note, rejected=rejected, rewrites=n)
+
 def fresh(rec, course, d, pt):
     """Puts a point at its first step: reuse (named in the outline), match (the shortlist found bank points that may
     teach the same idea) or write."""
-    for k in DRAFT_KEYS + ['final', 'match', 'confirm', 'matched', 'shortlist', 'reuse', 'rejected', 'note', 'cleared_by']:
+    for k in DRAFT_KEYS + ['final', 'match', 'confirm', 'matched', 'shortlist', 'reuse', 'rejected', 'note', 'cleared_by', 'rewrites', 'autoreject']:
         rec.pop(k, None)
     if pt['reuse']:
         rec.update(stage='reuse', reuse=pt['reuse'])
@@ -1800,6 +1823,7 @@ def auto_lines(work, recs):
     if done or spots:
         out.append('Cleared automatically with the checker\'s fix: ' + str(len(done)) + '. Spot checks waiting for you: ' + str(len(spots)) + '.')
     out += recheck_lines(recs)
+    out += autoreject_lines(recs)
     out += rebalance_lines(recs)
     answers = auto_state(work)['spot_answers']
     if answers:
@@ -1911,12 +1935,18 @@ def cmd_autoreview(args):
 
 
 # ---------- recheck: a fresh Opus check of each fix waiting for the owner ----------
+RECHECK_PROBLEM = 'the fresh check found a problem'
+
+def topic_named(rec):
+    """True when a checker named a sensitive topic for this point."""
+    return any(s and s != 'none' for s in [rec.get('sensitive'), (rec.get('check') or {}).get('sensitive'), rec.get('screen_sensitive')])
+
 def recheck_skip(rec):
     """Why a point waiting for the owner is not rechecked, or None if its fix can be sent for a fresh check."""
     if rec['stage'] != 'review': return 'not waiting for you'
     if (rec.get('auto') or {}).get('spot'): return 'a spot check'
     if rec.get('auto_undone'): return 'you undid its automatic decision'
-    if any(s and s != 'none' for s in [rec.get('sensitive'), (rec.get('check') or {}).get('sensitive'), rec.get('screen_sensitive')]): return 'a sensitive topic'
+    if topic_named(rec): return 'a sensitive topic'
     if rec.get('recheck'): return 'rechecked already'
     if not rec.get('check') or not rec.get('proposal'): return 'no fix'
     if rec.get('proposal_problems'): return 'the fix fails the content check'
@@ -1932,7 +1962,7 @@ def recheck_why(p, c):
     for k in ['a', 'b']:
         if norm(c[k]['best']) != norm(p[k]['opts'][0]): why.append('the fresh check picked another answer')
         if any(norm(o) != norm(c[k]['best']) for o in c[k]['also_right']): why.append('the fresh check says another option could also be right')
-    if c['problems']: why.append('the fresh check found a problem')
+    if c['problems']: why.append(RECHECK_PROBLEM)
     return list(dict.fromkeys(why))
 
 def recheck_requests(job):
@@ -2087,6 +2117,108 @@ def cmd_recheck(args):
             say('  ' + j.label + ': its share of --max-dollars is ' + money(s_) + ', counting the ' + money(j.work.state['spent']['usd']) + ' spent already.')
     say('')
     drive(api, jobs, args, many=len(jobs) > 1)
+
+
+# ---------- autoreject: a rewrite for a point whose fix the fresh check found a problem in ----------
+# What a rejection clears, and what it replaces. A copy is kept with each decision, so --undo can put them back.
+AUTOREJECT_KEEPS = DRAFT_KEYS + ['note', 'rejected']
+
+def only_a_problem(rec):
+    """True when recheck kept a point for one reason: the fresh check found a problem in the fix."""
+    rc = rec.get('recheck') or {}
+    return rc.get('result') == 'kept' and rc.get('why') == [RECHECK_PROBLEM]
+
+def autoreject_skip(rec, pt):
+    """Why a point is not rejected automatically, or None if it can be. The word check is on purpose stricter than the
+    checkers: a word in another sense (an economic depression) only leaves the point with the owner."""
+    if rec['stage'] == 'match-review': return 'a possible match in the bank'
+    if rec['stage'] == 'failed': return 'not written'
+    if rec['stage'] != 'review': return 'not waiting for you'
+    if (rec.get('auto') or {}).get('spot'): return 'a spot check'
+    if rec.get('auto_undone'): return 'you undid its automatic decision'
+    if topic_named(rec): return 'a sensitive topic'
+    if SENSITIVE.search(pt['title'] + ' ' + pt['brief'] + ' ' + json.dumps([rec.get('draft'), rec.get('proposal')], ensure_ascii=False)): return 'a word that may mean a sensitive topic'
+    if not rec.get('recheck'): return 'not rechecked'
+    if not only_a_problem(rec): return 'the fresh check kept it for another reason'
+    if rec.get('proposal_problems'): return 'the fix fails the content check'
+    if rewrites(rec) >= AUTOREJECT_MOST: return 'rewritten ' + str(AUTOREJECT_MOST) + ' times already'
+    return None
+
+def autoreject_lines(recs):
+    """Lines for a course's summary. They count the decisions in each point's file, because recheck's entry goes with a
+    rejection and cleared_by changes once the rewrite is decided."""
+    made = [e for r in recs for e in r.get('autoreject', []) if not e.get('undone')]
+    held = [r for r in recs if r['stage'] == 'review' and only_a_problem(r) and rewrites(r) >= AUTOREJECT_MOST]
+    if not made and not held: return []
+    waiting = [r for r in recs if r['stage'] == 'write' and r.get('cleared_by') == 'autoreject']
+    return ['Rejected automatically and sent for a rewrite: ' + str(len(made)) + '. Waiting to be rewritten: ' + str(len(waiting)) +
+            '. Left for you after ' + str(AUTOREJECT_MOST) + ' rewrites: ' + str(len(held)) + '.']
+
+def autoreject(work, meta, dry):
+    """Rejects, as the owner would, each point recheck kept only because the fresh check found a problem. The writer gets
+    the fix, since that is the version the fresh check read, and the problems as the note."""
+    recs = meta_recs(work, meta)
+    pts = {pt['id']: pt for u in meta['units'] for c in u['chapters'] for pt in c['points']}
+    why = {r['id']: autoreject_skip(r, pts[r['id']]) for r in recs}
+    ready = [r for r in recs if not why[r['id']]]
+    parts = {r['id']: auto_parts({'check': r['recheck']['check']}) for r in ready}
+    say(meta['name'] + ' (' + meta['id'] + '):')
+    say('  ' + ('Would reject' if dry else 'Rejected') + ' and send for a rewrite: ' + str(len(ready)) + '.')
+    for r in ready:
+        say('    ' + r['id'] + ' (' + parts[r['id']] + ')')
+        if dry: continue
+        flags, saved = r['recheck']['flags'], {k: r[k] for k in AUTOREJECT_KEEPS if k in r}
+        reject(r, r['proposal'], 'A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- ' + '\n- '.join(flags))
+        r['cleared_by'] = 'autoreject'
+        r.setdefault('autoreject', []).append({'at': now(), 'rules': AUTO_RULES, 'rewrites': r['rewrites'], 'flags': flags, 'saved': saved})
+        log(r, 'autoreject: rejected, to be written again (' + parts[r['id']] + ')')
+        work.put(r)
+    left = {}
+    for w in why.values():
+        if w and w != 'not waiting for you': left[w] = left.get(w, 0) + 1
+    say('  Left for you in the review list: ' + str(sum(left.values())) + '.' + (' Why:' if left else ''))
+    for w, k in sorted(left.items(), key=lambda x: -x[1]): say('    ' + w + ': ' + str(k))
+    for line in autoreject_lines(recs): say('  ' + line)
+    return len(ready)
+
+def autoreject_undo(work, meta, point, dry):
+    """Puts points autoreject rejected back in the review list as they were, with the fresh check of the fix. A rewrite
+    made since is kept in the decision, as replaced. A rewrite something has cleared or the owner rejected has its own
+    decision, so it stays. These points are never rejected or cleared automatically again."""
+    recs = [r for r in meta_recs(work, meta) if r.get('cleared_by') == 'autoreject' and (not point or r['id'] == point)]
+    if point and not recs: raise Stop(point + ' has no automatic rejection to undo in ' + meta['name'] + '. Once its rewrite is cleared, the rewrite stands.')
+    say(meta['name'] + ' (' + meta['id'] + '): ' + str(len(recs)) + (' would go' if dry else ' went') + ' back to the review list.')
+    for r in recs:
+        say('    ' + r['id'])
+        if dry: continue
+        entry = r['autoreject'][-1]
+        if r['stage'] == 'write': r['rewrites'] -= 1
+        else: entry['replaced'] = {k: r[k] for k in AUTOREJECT_KEEPS if k in r}
+        for k in AUTOREJECT_KEEPS: r.pop(k, None)
+        r.update(entry.pop('saved'), stage='review', auto_undone={'by': 'autoreject', 'undone': now()})
+        entry['undone'] = now()
+        r.pop('cleared_by')
+        log(r, 'autoreject: undone, back to the review list')
+        work.put(r)
+
+def cmd_autoreject(args):
+    repo = args.repo or REPO
+    root = work_root(args, repo)
+    if args.point and not args.undo: raise Stop('--point works with --undo.')
+    courses = auto_courses(args, root)
+    if args.point and len(courses) != 1: raise Stop('--point needs the one outline its point is in.')
+    if not courses:
+        say('No courses to look at in ' + root + '. Run the run command first.'); return
+    if args.dry_run: say('Dry run: nothing is changed.')
+    sent = 0
+    for i, (work, meta) in enumerate(courses):
+        if i: say('')
+        if args.undo:
+            # A rewrite still in a batch would come back to a point that has moved on.
+            if run_open(work): say(meta['name'] + ' (' + meta['id'] + '): a run\'s batch is still open. Run the run command to collect it, then undo.')
+            else: autoreject_undo(work, meta, args.point, args.dry_run)
+        else: sent += autoreject(work, meta, args.dry_run)
+    if sent and not args.dry_run: say('\nNext: in the key window, run each of these courses again to rewrite them (content/README.md, step 7).')
 
 
 # ---------- rebalance: wrong options as long and detailed as the right one ----------
@@ -2440,9 +2572,8 @@ def decide(root, repo, body):
         rec.update(stage='cleared', final=p, cleared_by='owner', edited=True); return done('edited and approved')
     if action == 'reject':
         note = (body.get('note') or '').strip()[:1000]
-        rejected = rec.get('draft')
-        for k in DRAFT_KEYS: rec.pop(k, None)
-        rec.update(stage='write', note=note, rejected=rejected)
+        reject(rec, rec.get('draft'), note)
+        rec.pop('cleared_by', None)   # a rewrite autoreject asked for is decided now, so --undo leaves it
         return done('rejected, to be written again' + (' with a note' if note else ''))
     return {'ok': False, 'message': 'Unknown action.'}
 
@@ -2461,7 +2592,7 @@ def side(rec):
     if not rec or rec['stage'] == 'reuse': return None
     p = rec.get('final') or rec.get('proposal') or rec.get('draft')
     return {'point': p, 'which': 'final' if rec.get('final') else 'the fix' if rec.get('proposal') else 'draft', 'stage': STAGE_WORDS.get(rec['stage'], rec['stage']),
-            'clearedBy': rec.get('cleared_by'), 'flags': rec.get('flags') or [], 'summary': (rec.get('check') or {}).get('summary'),
+            'clearedBy': rec.get('cleared_by') if rec['stage'] == 'cleared' else None, 'flags': rec.get('flags') or [], 'summary': (rec.get('check') or {}).get('summary'),
             'screen': (rec.get('screen') or {}).get('summary'), 'screenPassed': bool(rec.get('screen_passed')), 'toOpus': rec.get('to_opus'),
             'usd': round(sum((rec.get('usd') or {}).values()), 4) if rec.get('usd') else None}
 
@@ -2575,6 +2706,11 @@ def main(argv=None):
     rc.add_argument('--dry-run', action='store_true', help='show what it would recheck and the estimate, and send nothing')
     rc.add_argument('--no-wait', action='store_true', help='send or collect once, then stop instead of waiting for the batch')
     rc.set_defaults(now=False)
+    aj = sub.add_parser('autoreject', help='send each point recheck kept only because the fresh check found a problem for a rewrite, with no API calls')
+    aj.add_argument('outline', nargs='*', help='outline files, or folders of them. With none, every course in content/work')
+    aj.add_argument('--dry-run', action='store_true', help='show what it would do, and change nothing')
+    aj.add_argument('--undo', action='store_true', help='send the points it rejected back to the review list')
+    aj.add_argument('--point', help='with --undo, only this point id')
     rb = sub.add_parser('rebalance', help='rewrite the wrong options of questions whose right option is clearly the longest')
     rb.add_argument('outline', nargs='*', help='outline files, or folders of them. With none, every course in content/work')
     lim = rb.add_mutually_exclusive_group()
@@ -2589,7 +2725,7 @@ def main(argv=None):
     args = ap.parse_args(argv)
     try:
         {'estimate': cmd_estimate, 'status': cmd_status, 'run': cmd_run, 'run-many': cmd_run_many, 'publish': cmd_publish, 'review': cmd_review,
-         'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'rebalance': cmd_rebalance}[args.cmd](args)
+         'autoreview': cmd_autoreview, 'recheck': cmd_recheck, 'autoreject': cmd_autoreject, 'rebalance': cmd_rebalance}[args.cmd](args)
     except Stop as e:
         say(str(e))
         return 1

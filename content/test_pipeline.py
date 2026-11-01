@@ -18,7 +18,8 @@ words, points written on their own, each point's cost, the numbers after a run);
 tab; run-many with shared batches and each course's share of --max-dollars; autoreview (what it clears with the fix and
 what stays, the word guard, the dry run, spot checks and their warning, undo, the replay); recheck (which fixes it sends
 and which never, the checker seeing only the fix, the estimate, --max-dollars, what it clears and keeps, its spot checks,
-undo, nothing decided twice); rebalance (the questions whose right option is clearly the longest, the estimate on Sonnet,
+undo, nothing decided twice); autoreject (who it rejects and who stays, the rejection, the count of rewrites, the dry run,
+undo, the summary, and the whole loop up to the owner); rebalance (the questions whose right option is clearly the longest, the estimate on Sonnet,
 --max-dollars and --max-new-dollars, new wrong options with the question and right option kept, the check of each
 rewrite on Opus, what it keeps and why, nothing sent twice, and check_content's warning before and after); reuse, adapt and new
 across states (the shortlist with no API call, the split and estimate before sending, Haiku's match, Opus only for a
@@ -632,6 +633,185 @@ def recheck_tests(tmp, repo, printed, api):
     W.state['batches'].append({'id': 'msgbatch_open', 'items': {'c_x': {'pid': 'trc-flag', 'stage': 'check', 'model': pipeline.OPUS}}}); W.save()
     code, out = go(outline, '--dry-run')
     check('A run\'s batch is still open' in out, 'a course with a run\'s batch still open is left until the run collects it')
+
+AUTOREJECT = """id: tst-rej
+subject: Testing
+bank: tsj
+name: Testing Autoreject, Year 9
+about: NSW, Autoreject topic
+years: [9]
+place: nsw
+kind: standard
+note: A made course for the autoreject tests.
+units:
+  - title: Autoreject unit
+    chapters:
+      - title: Rewrites chapter
+        points:
+          - title: Plain Miss
+            brief: The checker finds a problem in every version of it.
+          - title: Plain Clean
+            brief: The checker passes it.
+"""
+
+def autoreject_tests(tmp, repo, printed, api):
+    """autoreject, on a work folder of held points made here (who it rejects and who stays, the rejection itself, the dry
+    run, undo), then a full loop on a course run here: recheck, autoreject and a rewrite, until the point reaches the owner."""
+    work = os.path.join(tmp, 'work-autoreject')
+    def go(*argv):
+        code, out = run(['--repo', repo, '--work', work, 'autoreject'] + list(argv)); printed.append(out); return code, out
+    P = pipeline.RECHECK_PROBLEM
+    pts = []
+    def point(title, why=(P,), brief=None, **extra):
+        pid = 'tar-' + '-'.join(title.lower().split())
+        draft = pipeline.to_bank(fake_point(title))
+        fix = json.loads(json.dumps(draft)); fix['remember'] = 'THEFIX: a clearer remember line.'
+        first = {'a': {'best': draft['a']['opts'][0], 'also_right': []}, 'b': {'best': draft['b']['opts'][0], 'also_right': []}, 'sure': 'high', 'sensitive': 'none', 'summary': 'Problems found.',
+                 'problems': [{'part': 'card', 'kind': 'fact', 'detail': 'OLDPROBLEM: the second line may not be right.'}]}
+        again = dict(first, problems=[{'part': 'a', 'kind': 'fact', 'detail': 'NEWPROBLEM: the fix names another year.'}])
+        rec = {'id': pid, 'title': title, 'brief': 'x', 'stage': 'review', 'draft': draft, 'proposal': fix, 'proposal_problems': [], 'check': first, 'sensitive': 'none',
+               'flags': ['Card, fact: OLDPROBLEM: the second line may not be right.'], 'local': [], 'log': [], 'note': 'An older note.',
+               'recheck': {'at': pipeline.now(), 'result': 'kept', 'why': list(why), 'check': again, 'flags': ['Question a, fact: NEWPROBLEM: the fix names another year.']}}
+        rec.update(extra)
+        pts.append({'id': pid, 'title': title, 'brief': brief or 'The brief of ' + title.lower() + '.', 'codes': [], 'reuse': None, 'unit': 0, 'chapter': 0})
+        return rec
+    rejected_line, changed_line = '2026-10-28T11:49:12Z review: rejected, to be written again', '2026-10-29T11:49:12Z the outline changed, so it starts again at write'
+    ready = [point('Ready one'), point('Ready two'), point('Second go', rewrites=1), point('Old log', log=[rejected_line]), point('Log reset', log=[rejected_line, rejected_line, changed_line])]
+    sure = point('Topic first check'); sure['check'] = dict(sure['check'], sensitive='drugs')
+    unsent = point('Not rechecked'); del unsent['recheck']
+    never = {'tar-topic-named': (point('Topic named', sensitive='drugs'), 'a sensitive topic'),
+             sure['id']: (sure, 'a sensitive topic'),
+             'tar-topic-screen': (point('Topic screen', screen_sensitive='drugs'), 'a sensitive topic'),
+             'tar-topic-word': (point('Topic word', brief='How vaping harms the lungs.'), 'a word that may mean a sensitive topic'),
+             'tar-topic-fresh': (point('Topic fresh', why=['the fresh check named a sensitive topic', P]), 'the fresh check kept it for another reason'),
+             'tar-possible-match': (point('Possible match', stage='match-review'), 'a possible match in the bank'),
+             'tar-spot-check': (point('Spot check', auto={'spot': True, 'by': 'recheck'}), 'a spot check'),
+             'tar-undone-one': (point('Undone one', auto_undone={'by': 'recheck', 'undone': pipeline.now()}), 'you undid its automatic decision'),
+             'tar-also-unsure': (point('Also unsure', why=['the fresh check was not highly sure', P]), 'the fresh check kept it for another reason'),
+             'tar-another-answer': (point('Another answer', why=['the fresh check picked another answer']), 'the fresh check kept it for another reason'),
+             'tar-bad-fix': (point('Bad fix', proposal_problems=['A banned word.']), 'the fix fails the content check'),
+             'tar-twice-counted': (point('Twice counted', rewrites=2), 'rewritten 2 times already'),
+             'tar-twice-in-log': (point('Twice in log', log=[rejected_line, rejected_line]), 'rewritten 2 times already'),
+             unsent['id']: (unsent, 'not rechecked')}
+    done = point('Decided already', stage='cleared', cleared_by='owner')
+    twin = point('Owner twin')
+    W = pipeline.Work(work, 'tst-autoreject')
+    for r in ready + [r for r, _ in never.values()] + [done, twin]: W.put(r)
+    pipeline.write_json(os.path.join(W.dir, 'course.json'), {'id': 'tst-autoreject', 'subject': 'Testing', 'name': 'Testing Autoreject, Year 9', 'about': 'NSW', 'kind': 'standard', 'years': [9],
+                        'syllabus': 'The syllabus', 'units': [{'title': 'A unit', 'chapters': [{'id': 'tar-1-1', 'title': 'A chapter', 'points': pts}]}]})
+    outline = os.path.join(tmp, 'tst-autoreject.yaml')
+    with open(outline, 'w', encoding='utf-8') as f: f.write('id: tst-autoreject\nsubject: Testing\n')
+    files = lambda: {os.path.join(r_, f): open(os.path.join(r_, f), encoding='utf-8').read() for r_, _, fs in os.walk(work) for f in fs}
+    course = lambda: pipeline.meta_recs(W, pipeline.read_json(os.path.join(W.dir, 'course.json')))
+    ids = [r['id'] for r in ready]
+    pipeline.decide(work, repo, {'course': 'tst-autoreject', 'id': twin['id'], 'action': 'reject', 'note': 'No.'})
+    check(W.load(twin['id'])['rewrites'] == 1 and any(' review: rejected, to be written again' in l for l in W.load(twin['id'])['log']), 'a rejection on the review page counts as a rewrite')
+
+    del os.environ['ANTHROPIC_API_KEY']
+    before, first = files(), api.created
+    code, out = go(outline, '--dry-run')
+    os.environ['ANTHROPIC_API_KEY'] = KEY
+    check(code == 0 and 'Would reject and send for a rewrite: 5.' in out and all('    ' + i + ' (a fact)' in out for i in ids) and files() == before and api.created == first,
+          'the dry run needs no key, names the points it would reject, and changes nothing')
+    check(not any(i in out.split('Left for you')[0] for i in never), 'it would reject only points kept for a problem alone')
+    tally = {}
+    for _, w in never.values(): tally[w] = tally.get(w, 0) + 1
+    check(all('    ' + w + ': ' + str(n) in out for w, n in tally.items()) and 'Left for you in the review list: ' + str(len(never)) + '.' in out,
+          'and says why each other point stays: a sensitive topic, a possible match, a spot check, undone, another reason, a failing fix, rewritten twice')
+    code, out = go(outline, '--point', ids[0])
+    check(code == 1 and '--point works with --undo' in out and files() == before, '--point works only with --undo')
+
+    code, out = go(outline)
+    recs = {i: W.load(i) for i in ids}
+    check(code == 0 and 'Rejected and send for a rewrite: 5.' in out and 'Next: in the key window' in out and api.created == first, 'autoreject rejects them, with no API call')
+    check(all(r['stage'] == 'write' and r['cleared_by'] == 'autoreject' for r in recs.values()), 'each goes to be written again, marked cleared_by autoreject')
+    check(all(not any(k in r for k in ['draft', 'proposal', 'check', 'flags', 'recheck']) for r in recs.values()) and
+          set(recs[ids[0]]) - {'cleared_by', 'autoreject', 'note', 'rejected'} == set(W.load(twin['id'])) - {'note', 'rejected'}, 'as a rejection from the owner leaves it')
+    check(all(r['rejected']['remember'] == 'THEFIX: a clearer remember line.' and 'NEWPROBLEM' in r['note'] and 'OLDPROBLEM' not in r['note'] for r in recs.values()),
+          'the writer gets the fix, the version the fresh check read, with the fresh check\'s problems')
+    us = pipeline.write_user({'units': [{'title': 'U', 'chapters': [{'title': 'C', 'points': pts}]}], 'subject': 'S', 'about': 'A', 'years': [9], 'place': 'nsw', 'placeName': 'NSW'}, pts[0], recs[ids[0]])
+    check('The owner rejected this earlier version' in us and 'THEFIX' in us and 'NEWPROBLEM' in us and 'Hold on to' not in us, 'and the writing request shows them')
+    check([recs[i]['rewrites'] for i in ids] == [1, 1, 2, 2, 1], 'the count of rewrites carries on, also from a point rejected before it was kept, and starts again when the outline changed')
+    a = recs[ids[0]]['autoreject'][0]
+    check(a['flags'] and a['rules'] == pipeline.AUTO_RULES and a['rewrites'] == 1 and a['saved']['proposal'] == ready[0]['proposal'] and any('autoreject: rejected, to be written again (a fact)' in l for l in recs[ids[0]]['log']),
+          'the decision is recorded in the point\'s file and its log')
+    check(all(W.load(i) == r for i, (r, _) in never.items()) and W.load(done['id']) == done, 'the others stay exactly as they were')
+    check(not pipeline.read_json(pipeline.auto_path(W)), 'it counts as no spot check, and shows no warning')
+    summary = 'Rejected automatically and sent for a rewrite: 5. Waiting to be rewritten: 5. Left for you after 2 rewrites: 2.'
+    check(summary in out and any(summary in l for l in pipeline.auto_lines(W, course())), 'the summary shows the counts, here and in every other summary')
+    saved = files()
+    code, out = go(outline)
+    check(code == 0 and 'Rejected and send for a rewrite: 0.' in out and files() == saved, 'running it again decides nothing twice')
+
+    # Undo.
+    code, out = go(outline, '--undo', '--dry-run')
+    check(code == 0 and '5 would go back' in out and files() == saved, 'undo\'s dry run says what would go back, and changes nothing')
+    W.state['batches'].append({'id': 'msgbatch_open', 'items': {'w_x': {'pid': ids[0], 'stage': 'write', 'model': pipeline.OPUS}}}); W.save()
+    code, out = go(outline, '--undo')
+    check(code == 0 and 'batch is still open' in out and W.load(ids[0])['stage'] == 'write', 'undo waits while a run\'s batch is open, in case a rewrite is in it')
+    W.state['batches'] = []; W.save()
+    code, out = go(outline, '--undo', '--point', ids[0])
+    u = W.load(ids[0])
+    check(code == 0 and '1 went back' in out and u['stage'] == 'review' and 'cleared_by' not in u and 'rejected' not in u and u['note'] == 'An older note.' and u['rewrites'] == 0, 'undo for one point puts it back in the review list')
+    check(all(u[k] == ready[0][k] for k in ['draft', 'proposal', 'check', 'flags', 'recheck']) and u['autoreject'][0]['undone'] and 'saved' not in u['autoreject'][0], 'as it was, with the fresh check of the fix')
+    check(u['auto_undone']['by'] == 'autoreject' and any('autoreject: undone' in l for l in u['log']), 'and the undo is recorded')
+    code, out = go(outline)
+    check(W.load(ids[0])['stage'] == 'review' and 'you undid its automatic decision: 2' in out, 'it is never rejected automatically again')
+    check(pipeline.recheck_skip(W.load(ids[0])) and pipeline.auto_problems(W.load(ids[0])) == ['you undid its automatic decision'], 'or cleared automatically')
+    code, out = go(outline, '--undo', '--point', ids[0])
+    check(code == 1 and 'no automatic rejection to undo' in out, 'and there is nothing left to undo on it')
+
+    # A rewrite something else has decided stands.
+    r = W.load(ids[1]); r.update(stage='cleared', final=r['rejected'], cleared_by='checker'); W.put(r)
+    r = W.load(ids[2]); r.update(stage='review', draft=r['rejected'], flags=[]); W.put(r)
+    check(pipeline.side(r)['clearedBy'] is None, 'the Compare tab never calls a point cleared until it is')
+    pipeline.decide(work, repo, {'course': 'tst-autoreject', 'id': ids[2], 'action': 'reject', 'note': 'Not this either.'})
+    code, out = go(outline, '--undo')
+    check(code == 0 and '2 went back' in out and W.load(ids[1])['cleared_by'] == 'checker' and W.load(ids[2])['stage'] == 'write', 'undo leaves a rewrite that was cleared, and one the owner rejected')
+    check(W.load(ids[3])['stage'] == 'review' and W.load(ids[4])['stage'] == 'review', 'and with no outline names, sends back every other point it rejected')
+    check(any('Rejected automatically and sent for a rewrite: 2. Waiting to be rewritten: 0.' in l for l in pipeline.auto_lines(W, course())),
+          'the summary keeps a rewrite that stands, drops one undone, and does not count one the owner rejected as waiting for autoreject')
+    code, out = go(outline, '--undo', '--point', ids[1])
+    check(code == 1, 'and undo has nothing to do for a rewrite that was cleared')
+    trial = os.path.join(work, 'tst-autoreject-t'); shutil.copytree(W.dir, trial)
+    meta = pipeline.read_json(os.path.join(trial, 'course.json')); meta.update(id='tst-autoreject-t', trial_of='tst-autoreject'); pipeline.write_json(os.path.join(trial, 'course.json'), meta)
+    r = pipeline.read_json(os.path.join(trial, 'points', 'tar-log-reset.json')); r.pop('auto_undone'); r.pop('rewrites'); pipeline.write_json(os.path.join(trial, 'points', 'tar-log-reset.json'), r)
+    code, out = go('--dry-run')
+    check('tst-autoreject-t' not in out, 'with no outline it looks at every course, and trials are left out')
+
+    # The whole loop, on a course run here. The checker finds a problem in every version of Plain Miss.
+    repo_r, work_r = os.path.join(tmp, 'repo-rej'), os.path.join(tmp, 'work-rej')
+    copy_repo(repo_r)
+    course_file = os.path.join(tmp, 'tst-rej.yaml')
+    with open(course_file, 'w', encoding='utf-8') as f: f.write(AUTOREJECT)
+    def on(*argv):
+        code, out = run(['--repo', repo_r, '--work', work_r] + list(argv)); printed.append(out); return code, out
+    on('run', course_file, '--max-dollars', '5')
+    R = pipeline.Work(work_r, 'tst-rej')
+    pid = 'tsj-plain-miss'
+    rec = R.load(pid)
+    check(rec['stage'] == 'review' and R.load('tsj-plain-clean')['stage'] == 'cleared', 'a course for the loop is written and checked')
+    for n in [1, 2]:
+        on('recheck', course_file, '--max-dollars', '5')
+        check(R.load(pid)['recheck']['why'] == [P], 'round ' + str(n) + ': recheck keeps the fix for a problem alone')
+        code, out = on('autoreject', course_file)
+        check(R.load(pid)['stage'] == 'write' and R.load(pid)['rewrites'] == n, 'autoreject sends it for rewrite ' + str(n))
+        seen = len([r for b in api.batches.values() for r in b['requests']])
+        code, out = on('run', course_file, '--max-dollars', '5')
+        new = [r for b in api.batches.values() for r in b['requests']][seen:]
+        ask = [r for r in new if stage_of(r['params']) == 'write']
+        check(R.load(pid)['stage'] == 'review' and len(ask) == 1 and 'The owner\'s note: A fresh check found these problems' in ask[0]['params']['messages'][0]['content'], 'the next run writes it again, with the note, and checks it')
+    on('recheck', course_file, '--max-dollars', '5')
+    code, out = on('autoreject', course_file)
+    rec = R.load(pid)
+    check(code == 0 and rec['stage'] == 'review' and rec['rewrites'] == 2 and 'Rejected and send for a rewrite: 0.' in out and 'rewritten 2 times already: 1' in out, 'after two rewrites the point goes to the owner instead')
+    code, out = on('status', course_file)
+    check('Rejected automatically and sent for a rewrite: 2. Waiting to be rewritten: 0. Left for you after 2 rewrites: 1.' in out, 'status shows the counts')
+    check(rec['id'] in [i['id'] for i in pipeline.review_items(work_r, repo_r)['items']], 'and the point is on the review page')
+    written = rec['draft']
+    code, out = on('autoreject', course_file, '--undo', '--point', pid)
+    rec = R.load(pid)
+    check(code == 0 and rec['stage'] == 'review' and rec['autoreject'][-1]['replaced']['draft'] == written and rec['rewrites'] == 2, 'undo after a rewrite brings back the rejected version, and keeps the rewrite in the file')
 
 REBAL = """id: tst-rebal
 subject: Testing
@@ -1266,6 +1446,7 @@ def main():
     # ---------- autoreview ----------
     auto_tests(tmp, repo, printed)
     recheck_tests(tmp, repo, printed, api)
+    autoreject_tests(tmp, repo, printed, api)
     rebalance_tests(tmp, printed, api)
 
     # ---------- the key ----------
