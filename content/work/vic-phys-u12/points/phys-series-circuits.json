@@ -1,0 +1,189 @@
+{
+ "id": "phys-series-circuits",
+ "title": "Series circuits",
+ "brief": "6ccd714b7398",
+ "shortlist": [],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:21Z new, write",
+  "2026-11-01T08:04:36Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00455,
+  "check": 0.01007,
+  "fix": 0.0144,
+  "recheck": 0.0069
+ },
+ "draft": {
+  "title": "Series circuits",
+  "card": [
+   "In a series circuit, the components are connected one after another in a single loop. The charge has only one path to follow.",
+   [
+    "Current",
+    "is the same at every point in the loop, because charge is not used up and has nowhere else to go. I is the same through every component."
+   ],
+   [
+    "Voltage",
+    "is shared between the components. The voltages across them add up to the supply voltage: V = V1 + V2 + ..."
+   ],
+   [
+    "Resistance",
+    "adds up. The total is R = R1 + R2 + ... and it is larger than any single resistor. Current then follows from I = V ÷ R."
+   ]
+  ],
+  "remember": "In series, current is shared by all, while voltage and resistance add.",
+  "a": {
+   "q": "Two resistors are connected in series to a 12 V supply. The voltage across one is 5 V. What is the voltage across the other?",
+   "opts": [
+    "7 V",
+    "5 V",
+    "12 V",
+    "17 V"
+   ],
+   "why": "In series the voltages across the components add up to the supply voltage, so the other resistor has 12 - 5 = 7 V. It is not 5 V, because that would only be so if the resistors were equal, and we are not told that.",
+   "clue": "The voltages must add up to the supply."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 4 ohm resistor and a 8 ohm resistor are in series with a 6 V supply. What is the current through the 4 ohm resistor?",
+   "opts": [
+    "0.5 A",
+    "1.5 A",
+    "0.75 A",
+    "2.0 A"
+   ],
+   "why": "The total resistance is 4 + 8 = 12 ohm, so I = 6 ÷ 12 = 0.5 A. The same current flows through every component in series. 1.5 A comes from dividing the supply by the 4 ohm resistor alone, which ignores the other resistor.",
+   "clue": "Add the resistances first, then use I = V ÷ R."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "7 V",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.5 A",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Current is shared by all\" can be read as current being divided between components. That contradicts the card, which says current is the same at every point, and the card uses \"shared\" for voltage. It should say current is the same everywhere."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 5 V across the other resistor would be right if the resistors were equal. That is false: equal resistors on a 12 V supply would each have 6 V. 5 V is impossible here because 5 + 5 is not 12."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have correct, unique answers (7 V and 0.5 A). The remember line's \"current is shared by all\" could suggest current divides, contradicting the card. The why for (a) wrongly claims 5 V would be correct if the resistors were equal (it would be 6 V)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: \"Current is shared by all\" can be read as current being divided between components. That contradicts the card, which says current is the same at every point, and the card uses \"shared\" for voltage. It should say current is the same everywhere.",
+  "Question a, fact: The why says 5 V across the other resistor would be right if the resistors were equal. That is false: equal resistors on a 12 V supply would each have 6 V. 5 V is impossible here because 5 + 5 is not 12."
+ ],
+ "proposal": {
+  "title": "Series circuits",
+  "card": [
+   "In a series circuit, the components are connected one after another in a single loop. The charge has only one path to follow.",
+   [
+    "Current",
+    "is the same at every point in the loop, because charge is not used up and has nowhere else to go. I is the same through every component."
+   ],
+   [
+    "Voltage",
+    "is shared between the components. The voltages across them add up to the supply voltage: V = V1 + V2 + ..."
+   ],
+   [
+    "Resistance",
+    "adds up. The total is R = R1 + R2 + ... and it is larger than any single resistor. Current then follows from I = V ÷ R."
+   ]
+  ],
+  "remember": "In series, current is the same everywhere. Voltages add up to the supply, and resistances add.",
+  "a": {
+   "q": "Two resistors are connected in series to a 12 V supply. The voltage across one is 5 V. What is the voltage across the other?",
+   "opts": [
+    "7 V",
+    "5 V",
+    "12 V",
+    "17 V"
+   ],
+   "why": "In series the voltages across the components add up to the supply voltage, so the other resistor has 12 - 5 = 7 V. It cannot be 5 V, because 5 + 5 is only 10 V, not the 12 V supply.",
+   "clue": "The voltages must add up to the supply."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 4 ohm resistor and an 8 ohm resistor are in series with a 6 V supply. What is the current through the 4 ohm resistor?",
+   "opts": [
+    "0.5 A",
+    "1.5 A",
+    "0.75 A",
+    "2.25 A"
+   ],
+   "why": "The total resistance is 4 + 8 = 12 ohms, so I = 6 ÷ 12 = 0.5 A. The same current flows through every component in series. 1.5 A comes from dividing the supply by the 4 ohm resistor alone, which ignores the other resistor.",
+   "clue": "Add the resistances first, then use I = V ÷ R."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "7 V",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.5 A",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out (12 − 5 = 7 V; 6 ÷ 12 = 0.5 A), and the distractors reflect common mistakes."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Current is shared by all\" can be read as current being divided between components. That contradicts the card, which says current is the same at every point, and the card uses \"shared\" for voltage. It should say current is the same everywhere."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says 5 V across the other resistor would be right if the resistors were equal. That is false: equal resistors on a 12 V supply would each have 6 V. 5 V is impossible here because 5 + 5 is not 12."
+   }
+  ],
+  "flags": [
+   "Remember, other: \"Current is shared by all\" can be read as current being divided between components. That contradicts the card, which says current is the same at every point, and the card uses \"shared\" for voltage. It should say current is the same everywhere.",
+   "Question a, fact: The why says 5 V across the other resistor would be right if the resistors were equal. That is false: equal resistors on a 12 V supply would each have 6 V. 5 V is impossible here because 5 + 5 is not 12."
+  ]
+ }
+}

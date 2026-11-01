@@ -1,0 +1,138 @@
+{
+ "id": "acc-cash-credit-transactions",
+ "title": "Cash and credit transactions",
+ "brief": "251b37fec633",
+ "shortlist": [
+  [
+   "bus-cash-flow-statement",
+   0.275
+  ],
+  [
+   "bus-cash-flow-management",
+   0.244
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.005,
+  "check": 0.00703
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the basic distinction between cash and credit transactions; one covers cash flow statement classification and the other covers cash flow management strategies, which are broader and different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cash and credit transactions",
+  "card": [
+   [
+    "Cash transaction",
+    "The money is paid or received at the time of the sale or purchase. Payment by EFTPOS, card or bank transfer on the spot counts as cash."
+   ],
+   [
+    "Credit transaction",
+    "The goods or services are provided now, but payment is made later. No money changes hands on the day."
+   ],
+   "When a business sells on credit, the customer owes it money. This amount is an account receivable, and the business is owed it.",
+   "When a business buys on credit, it owes the supplier money. This amount is an account payable, and the business must pay it later."
+  ],
+  "remember": "Cash is paid at once. Credit is paid later, so someone owes someone.",
+  "a": {
+   "q": "Priya runs a bookkeeping service in Geelong. She finishes a job for a client today, and the client will pay in 30 days. What is this?",
+   "opts": [
+    "A credit sale, so the client owes Priya money",
+    "A cash sale, so the client owes Priya money",
+    "A credit sale, so Priya owes the client money",
+    "A cash sale, so Priya has been paid in full"
+   ],
+   "why": "The service was given today but payment comes later, so it is a credit sale. Because the client has not yet paid, the client owes Priya, and the amount is an account receivable. It is not a cash sale, as no money was received today.",
+   "clue": "Has any money been received today?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Mowing in Bendigo buys a new mower from a supplier today and agrees to pay in 14 days. Which describes Tom's Mowing now?",
+   "opts": [
+    "It has an account payable to the supplier",
+    "It has an account receivable from the supplier",
+    "It has made a cash purchase from the supplier",
+    "It is owed money by the supplier until payment"
+   ],
+   "why": "Tom's Mowing got the mower now but has not paid, so it is a credit purchase. The business owes the supplier, which is an account payable. An account receivable is the reverse: money owed to the business by a customer.",
+   "clue": "Who has to pay money later, Tom's Mowing or the supplier?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A credit sale, so the client owes Priya money",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has an account payable to the supplier",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cash and credit transactions",
+  "card": [
+   [
+    "Cash transaction",
+    "The money is paid or received at the time of the sale or purchase. Payment by EFTPOS, card or bank transfer on the spot counts as cash."
+   ],
+   [
+    "Credit transaction",
+    "The goods or services are provided now, but payment is made later. No money changes hands on the day."
+   ],
+   "When a business sells on credit, the customer owes it money. This amount is an account receivable, and the business is owed it.",
+   "When a business buys on credit, it owes the supplier money. This amount is an account payable, and the business must pay it later."
+  ],
+  "remember": "Cash is paid at once. Credit is paid later, so someone owes someone.",
+  "a": {
+   "q": "Priya runs a bookkeeping service in Geelong. She finishes a job for a client today, and the client will pay in 30 days. What is this?",
+   "opts": [
+    "A credit sale, so the client owes Priya money",
+    "A cash sale, so the client owes Priya money",
+    "A credit sale, so Priya owes the client money",
+    "A cash sale, so Priya has been paid in full"
+   ],
+   "why": "The service was given today but payment comes later, so it is a credit sale. Because the client has not yet paid, the client owes Priya, and the amount is an account receivable. It is not a cash sale, as no money was received today.",
+   "clue": "Has any money been received today?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Mowing in Bendigo buys a new mower from a supplier today and agrees to pay in 14 days. Which describes Tom's Mowing now?",
+   "opts": [
+    "It has an account payable to the supplier",
+    "It has an account receivable from the supplier",
+    "It has made a cash purchase from the supplier",
+    "It is owed money by the supplier until payment"
+   ],
+   "why": "Tom's Mowing got the mower now but has not paid, so it is a credit purchase. The business owes the supplier, which is an account payable. An account receivable is the reverse: money owed to the business by a customer.",
+   "clue": "Who has to pay money later, Tom's Mowing or the supplier?"
+  }
+ },
+ "cleared_by": "checker"
+}

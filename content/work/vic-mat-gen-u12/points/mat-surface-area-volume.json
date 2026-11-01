@@ -1,0 +1,162 @@
+{
+ "id": "mat-surface-area-volume",
+ "title": "Surface area and volume",
+ "brief": "b2ea3c9771a3",
+ "shortlist": [
+  [
+   "mat-surface-area",
+   0.64
+  ],
+  [
+   "mat-volume-capacity",
+   0.573
+  ],
+  [
+   "mat-areas-under-curves",
+   0.319
+  ],
+  [
+   "mat-area-any-triangle",
+   0.305
+  ],
+  [
+   "mat-area-between-two-curves",
+   0.28
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00483,
+  "check": 0.01158
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point covers both surface area and volume of prisms, but no single bank point does: mat-surface-area covers only surface area and mat-volume-capacity covers only volume and capacity, so neither fits exactly and combining them would be more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Surface area and volume",
+  "card": [
+   [
+    "Volume",
+    "A prism has the same cross-section (base) all the way along. Volume of a prism = base area × height, where height is the distance between the two ends."
+   ],
+   [
+    "Surface area",
+    "Surface area is the total area of every face of a solid. Add the areas of all the faces, including the two ends."
+   ],
+   [
+    "Units",
+    "Volume is in cubic units such as cm³. Surface area is in square units such as cm²."
+   ],
+   [
+    "Worked example",
+    "A box is 5 cm by 3 cm by 4 cm. Volume = (5 × 3) × 4 = 60 cm³. Faces: 2 × (5×3) + 2 × (5×4) + 2 × (3×4) = 30 + 40 + 24 = 94 cm²."
+   ]
+  ],
+  "remember": "Volume is base area × height in cubic units. Surface area adds every face in square units.",
+  "a": {
+   "q": "A prism has a base area of 12 cm² and a height of 7 cm. What is its volume?",
+   "opts": [
+    "84 cm³",
+    "19 cm³",
+    "84 cm²",
+    "38 cm³"
+   ],
+   "why": "Volume = base area × height = 12 × 7 = 84 cm³. Adding 12 and 7 gives 19, which mixes up the operation. Volume is measured in cubic units, so cm² is wrong.",
+   "clue": "Multiply the base area by the height."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed box measures 6 cm by 2 cm by 5 cm. What is its surface area?",
+   "opts": [
+    "104 cm²",
+    "60 cm²",
+    "52 cm²",
+    "104 cm³"
+   ],
+   "why": "The faces are 2 × (6×2) + 2 × (6×5) + 2 × (2×5) = 24 + 60 + 20 = 104 cm². Finding 6 × 2 × 5 = 60 gives the volume, not the surface area. Using each face type only once gives 52, which skips the pairs of faces.",
+   "clue": "A box has three pairs of matching faces."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "84 cm³",
+   "also_right": []
+  },
+  "b": {
+   "best": "104 cm²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card, the worked example (60 cm³ and 94 cm²) and both answers (84 cm³ and 104 cm²) check out, and the distractors reflect common errors."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Surface area and volume",
+  "card": [
+   [
+    "Volume",
+    "A prism has the same cross-section (base) all the way along. Volume of a prism = base area × height, where height is the distance between the two ends."
+   ],
+   [
+    "Surface area",
+    "Surface area is the total area of every face of a solid. Add the areas of all the faces, including the two ends."
+   ],
+   [
+    "Units",
+    "Volume is in cubic units such as cm³. Surface area is in square units such as cm²."
+   ],
+   [
+    "Worked example",
+    "A box is 5 cm by 3 cm by 4 cm. Volume = (5 × 3) × 4 = 60 cm³. Faces: 2 × (5×3) + 2 × (5×4) + 2 × (3×4) = 30 + 40 + 24 = 94 cm²."
+   ]
+  ],
+  "remember": "Volume is base area × height in cubic units. Surface area adds every face in square units.",
+  "a": {
+   "q": "A prism has a base area of 12 cm² and a height of 7 cm. What is its volume?",
+   "opts": [
+    "84 cm³",
+    "19 cm³",
+    "84 cm²",
+    "38 cm³"
+   ],
+   "why": "Volume = base area × height = 12 × 7 = 84 cm³. Adding 12 and 7 gives 19, which mixes up the operation. Volume is measured in cubic units, so cm² is wrong.",
+   "clue": "Multiply the base area by the height."
+  },
+  "b": {
+   "d": 3,
+   "q": "A closed box measures 6 cm by 2 cm by 5 cm. What is its surface area?",
+   "opts": [
+    "104 cm²",
+    "60 cm²",
+    "52 cm²",
+    "104 cm³"
+   ],
+   "why": "The faces are 2 × (6×2) + 2 × (6×5) + 2 × (2×5) = 24 + 60 + 20 = 104 cm². Finding 6 × 2 × 5 = 60 gives the volume, not the surface area. Using each face type only once gives 52, which skips the pairs of faces.",
+   "clue": "A box has three pairs of matching faces."
+  }
+ },
+ "cleared_by": "checker"
+}

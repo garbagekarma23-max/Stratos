@@ -1,0 +1,234 @@
+{
+ "id": "mat-logic-gates-circuits",
+ "title": "Logic gates and circuits",
+ "brief": "c3a4e558a5e8",
+ "shortlist": [
+  [
+   "mat-walks-paths-circuits",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00622,
+  "check": 0.00987,
+  "fix": 0.01948,
+  "recheck": 0.00734
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches walks, paths and circuits in networks, which is a different idea from Boolean logic gates and simplifying logic circuits, so no bank point fits.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Logic gates and circuits",
+  "card": [
+   [
+    "AND gate",
+    "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."
+   ],
+   [
+    "OR gate",
+    "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."
+   ],
+   [
+    "NOT gate",
+    "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."
+   ],
+   "Gates joined together make a circuit, and its output follows a Boolean expression. Simplifying the expression gives a circuit with fewer gates. For example, A·B + A·B' simplifies to A, so the circuit is just a wire from A."
+  ],
+  "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
+  "a": {
+   "q": "A circuit has inputs A = 1 and B = 0. A and B go into an AND gate, and its output goes into a NOT gate. What is the final output?",
+   "opts": [
+    "1",
+    "0",
+    "A",
+    "B"
+   ],
+   "why": "The AND gate gives 1·0 = 0. The NOT gate flips 0 to 1, so the final output is 1. Answering 0 stops after the AND gate and forgets the NOT gate.",
+   "clue": "Work through the gates in order, one at a time."
+  },
+  "b": {
+   "d": 3,
+   "q": "A circuit has the output A·B + A·B'. How can the circuit be simplified?",
+   "opts": [
+    "Replace it with a wire carrying A",
+    "Replace it with a wire carrying B",
+    "Replace it with a single AND gate on A and B",
+    "Replace it with a single OR gate on A and B"
+   ],
+   "why": "Factor out A: A·(B + B'). B + B' is always 1, so the output is A·1 = A. The circuit is just a wire from A, with no gates needed. An AND gate on A and B would give 0 when A = 1 and B = 0, but the original gives 1.",
+   "clue": "Factor out A, then think about B + B'."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1",
+   "also_right": []
+  },
+  "b": {
+   "best": "Replace it with a wire carrying A",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The options 'A' and 'B' are odd distractors for a numeric output. Since A = 1 here, a student could argue the output 'is A' in value, even though the circuit computes (A·B)', not A. Replacing them with numeric or clearly wrong options would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. The only issue is that question a includes the letter options 'A' and 'B' alongside numeric answers, and 'A' has the value 1 here, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The options 'A' and 'B' are odd distractors for a numeric output. Since A = 1 here, a student could argue the output 'is A' in value, even though the circuit computes (A·B)', not A. Replacing them with numeric or clearly wrong options would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "Logic gates and circuits",
+  "card": [
+   [
+    "AND gate",
+    "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."
+   ],
+   [
+    "OR gate",
+    "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."
+   ],
+   [
+    "NOT gate",
+    "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."
+   ],
+   "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, A·B + A·B' = A·(B + B') = A·1 = A, since B + B' is always 1. So that circuit is just a wire from A."
+  ],
+  "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
+  "a": {
+   "q": "Inputs A and B go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
+   "opts": [
+    "A = 1 and B = 1",
+    "A = 1 and B = 0",
+    "A = 0 and B = 1",
+    "A = 0 and B = 0"
+   ],
+   "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing A = 0 and B = 0 forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
+   "clue": "What must the AND gate give for the NOT gate to output 0?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A circuit has the output A·B + A'·B. How can the circuit be simplified?",
+   "opts": [
+    "Replace it with a wire carrying B",
+    "Replace it with a wire carrying A",
+    "Replace it with a single AND gate on A and B",
+    "Replace it with a single OR gate on A and B"
+   ],
+   "why": "Factor out B: (A + A')·B. A + A' is always 1, so the output is 1·B = B, a wire from B with no gates. An AND gate on A and B is wrong: when A = 0 and B = 1 it gives 0, but the original gives 0·1 + 1·1 = 1.",
+   "clue": "Find the input that appears in both terms and factor it out."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A = 1 and B = 1",
+    "also_right": []
+   },
+   "b": {
+    "best": "Replace it with a wire carrying B",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The options 'A' and 'B' are odd distractors for a numeric output. Since A = 1 here, a student could argue the output 'is A' in value, even though the circuit computes (A·B)', not A. Replacing them with numeric or clearly wrong options would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The options 'A' and 'B' are odd distractors for a numeric output. Since A = 1 here, a student could argue the output 'is A' in value, even though the circuit computes (A·B)', not A. Replacing them with numeric or clearly wrong options would remove the ambiguity."
+  ]
+ },
+ "final": {
+  "title": "Logic gates and circuits",
+  "card": [
+   [
+    "AND gate",
+    "gives output 1 only when both inputs are 1. It matches the Boolean product A·B."
+   ],
+   [
+    "OR gate",
+    "gives output 1 when at least one input is 1. It matches the Boolean sum A + B."
+   ],
+   [
+    "NOT gate",
+    "has one input and flips it: 1 becomes 0 and 0 becomes 1. It matches the complement A'."
+   ],
+   "Gates joined together make a circuit whose output follows a Boolean expression. Simplifying the expression gives fewer gates. For example, A·B + A·B' = A·(B + B') = A·1 = A, since B + B' is always 1. So that circuit is just a wire from A."
+  ],
+  "remember": "Each gate matches a Boolean operation, so a simpler expression means a simpler circuit.",
+  "a": {
+   "q": "Inputs A and B go into an AND gate, and its output goes into a NOT gate. For which inputs is the final output 0?",
+   "opts": [
+    "A = 1 and B = 1",
+    "A = 1 and B = 0",
+    "A = 0 and B = 1",
+    "A = 0 and B = 0"
+   ],
+   "why": "The NOT gate gives 0 only when the AND gate gives 1, and the AND gate gives 1 only when both inputs are 1. Choosing A = 0 and B = 0 forgets the NOT gate: the AND output there is 0, which the NOT gate flips to 1.",
+   "clue": "What must the AND gate give for the NOT gate to output 0?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A circuit has the output A·B + A'·B. How can the circuit be simplified?",
+   "opts": [
+    "Replace it with a wire carrying B",
+    "Replace it with a wire carrying A",
+    "Replace it with a single AND gate on A and B",
+    "Replace it with a single OR gate on A and B"
+   ],
+   "why": "Factor out B: (A + A')·B. A + A' is always 1, so the output is 1·B = B, a wire from B with no gates. An AND gate on A and B is wrong: when A = 0 and B = 1 it gives 0, but the original gives 0·1 + 1·1 = 1.",
+   "clue": "Find the input that appears in both terms and factor it out."
+  }
+ },
+ "cleared_by": "recheck"
+}

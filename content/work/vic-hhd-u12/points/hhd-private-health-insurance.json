@@ -1,0 +1,153 @@
+{
+ "id": "hhd-private-health-insurance",
+ "title": "Private health insurance",
+ "brief": "ffac18959e31",
+ "shortlist": [
+  [
+   "hms-australia-s-health-care",
+   0.325
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:50Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00502,
+  "check": 0.01969,
+  "fix": 0.0322
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a broad overview of Medicare, the PBS and private insurance, and it mentions private insurance only briefly as adding choice, without the extras cover, government rebates or levies that the new point teaches, so no bank point teaches the same idea at this depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Private health insurance",
+  "card": [
+   "Private health insurance is optional. People pay a premium to an insurer, which then pays part or all of some health costs.",
+   [
+    "Hospital cover",
+    "pays for care as a private patient in a hospital, such as choosing your doctor or having a private room. Medicare still covers public hospital care for everyone."
+   ],
+   [
+    "Extras cover",
+    "pays part of services that Medicare mostly does not cover, such as dental, physiotherapy and glasses."
+   ],
+   "The government encourages people to buy cover. The private health insurance rebate lowers the premium for many people. The Medicare levy surcharge is an extra charge on some higher earners who do not have hospital cover."
+  ],
+  "remember": "Private cover is a choice, and the government uses a rebate and a levy to push people towards it.",
+  "a": {
+   "q": "Which statement best describes private health insurance in Australia?",
+   "opts": [
+    "An optional cover that pays for some private care and extras",
+    "A compulsory scheme paid for through the Medicare levy",
+    "A scheme that only lowers the cost of prescription medicines",
+    "A service that replaces public hospital care for members"
+   ],
+   "why": "People choose whether to buy private cover, and it pays towards private hospital care and extras. It is not compulsory, and Medicare still covers public hospital care for everyone, so it does not replace it.",
+   "clue": "Think about whether anyone has to buy it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jonas, 35, earns a high income in Geelong and has no private hospital cover. Which government measure is meant to encourage him to buy it?",
+   "opts": [
+    "The Medicare levy surcharge, an extra charge for no cover",
+    "The private health insurance rebate, which he is paying now",
+    "The Medicare levy, which is waived once cover is bought",
+    "A fine that every person without cover must pay"
+   ],
+   "why": "The Medicare levy surcharge applies to some higher earners without hospital cover, which gives them a reason to buy it. The rebate lowers premiums for people who already hold cover, so it cannot apply to Jonas as he has none. The surcharge is not a fine on everyone without cover.",
+   "clue": "Which measure is an extra charge for higher earners?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An optional cover that pays for some private care and extras",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Medicare levy surcharge, an extra charge for no cover",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Which measure is an extra charge for higher earners?') repeats the wording of the right option ('an extra charge for no cover'). A student can match the words without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the rebate 'cannot apply to Jonas as he has none'. That is misleading. The rebate is itself a measure meant to encourage people without cover to buy it, and it would lower his premium once he buys (though it shrinks or is nil at the highest incomes). The rebate option is wrong because he is not 'paying' the rebate. The why should say that instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are accurate. In question b, the clue gives the answer away by echoing the right option, and the why wrongly suggests the rebate cannot encourage someone without cover."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue ('Which measure is an extra charge for higher earners?') repeats the wording of the right option ('an extra charge for no cover'). A student can match the words without knowing the idea.",
+  "Question b, fact: The why says the rebate 'cannot apply to Jonas as he has none'. That is misleading. The rebate is itself a measure meant to encourage people without cover to buy it, and it would lower his premium once he buys (though it shrinks or is nil at the highest incomes). The rebate option is wrong because he is not 'paying' the rebate. The why should say that instead."
+ ],
+ "proposal": {
+  "title": "Private health insurance",
+  "card": [
+   "Private health insurance is optional. People pay a premium to an insurer, which then pays part or all of some health costs.",
+   [
+    "Hospital cover",
+    "pays for care as a private patient in a hospital, such as choosing your doctor or having a private room. Medicare still covers public hospital care for everyone."
+   ],
+   [
+    "Extras cover",
+    "pays part of services that Medicare mostly does not cover, such as dental, physiotherapy and glasses."
+   ],
+   "The government encourages people to buy cover. The private health insurance rebate lowers the premium for many people, though it can be smaller for high earners. The Medicare levy surcharge is an extra charge on some higher earners who do not have hospital cover."
+  ],
+  "remember": "Private cover is a choice, and the government uses a rebate and a levy to push people towards it.",
+  "a": {
+   "q": "Which statement best describes private health insurance in Australia?",
+   "opts": [
+    "An optional cover that pays for some private care and extras",
+    "A compulsory scheme paid for through the Medicare levy",
+    "A scheme that only lowers the cost of prescription medicines",
+    "A service that replaces public hospital care for members"
+   ],
+   "why": "People choose whether to buy private cover, and it pays towards private hospital care and extras. It is not compulsory, and Medicare still covers public hospital care for everyone, so it does not replace it.",
+   "clue": "Think about whether anyone has to buy it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jonas, 35, earns a high income in Geelong and has no private hospital cover. What extra cost might he face because he has no cover?",
+   "opts": [
+    "The Medicare levy surcharge, for some higher earners",
+    "The private health insurance rebate, for people without cover",
+    "A fine that every adult without hospital cover must pay",
+    "A Medicare fee for each visit he makes to a public hospital"
+   ],
+   "why": "The Medicare levy surcharge is an extra charge on some higher earners without hospital cover, so it may apply to Jonas. The rebate is tempting, but it is not something he pays: it would lower his premium once he buys cover, though it can be smaller at high incomes. The surcharge is not charged to everyone without cover, and Medicare covers public hospital care.",
+   "clue": "Which one is money he pays, rather than money he saves?"
+  }
+ },
+ "proposal_problems": [
+  "hhd-private-health-insuranceb option is 61 characters: The private health insurance rebate, for people without cover"
+ ]
+}

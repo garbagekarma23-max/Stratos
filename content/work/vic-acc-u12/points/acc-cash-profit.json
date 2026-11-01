@@ -1,0 +1,265 @@
+{
+ "id": "acc-cash-profit",
+ "title": "Cash and profit",
+ "brief": "51f7a04135cf",
+ "shortlist": [
+  [
+   "bus-profit",
+   0.51
+  ],
+  [
+   "bus-cash-flow-statement",
+   0.449
+  ],
+  [
+   "bus-cash-flow-management",
+   0.439
+  ],
+  [
+   "bus-business",
+   0.327
+  ],
+  [
+   "bus-income-statement",
+   0.304
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: flagged",
+  "2026-11-01T08:33:47Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00575,
+  "check": 0.01193,
+  "fix": 0.01737,
+  "recheck": 0.00676
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-cash-flow-management, makes the same profit-versus-cash contrast but is mostly about cash flow strategies, which is broader than this point, and no bank card isolates the profit-and-cash distinction at this depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Cash and profit",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses for a period. Revenue counts when it is earned, even if the client has not yet paid."
+   ],
+   [
+    "Cash",
+    "money the business has in the bank or on hand. It rises when money is received and falls when money is paid out."
+   ],
+   "The two can differ. A business may earn a fee in one month but be paid in the next, so profit rises before cash does.",
+   "A business can make a profit and still be short of cash, for example if clients are slow to pay while bills are due."
+  ],
+  "remember": "Profit is not the same as cash, so a profitable business can still run short of cash.",
+  "a": {
+   "q": "Which statement about profit and cash is correct?",
+   "opts": [
+    "A business can earn a profit but have little cash",
+    "A business with a profit must have a lot of cash",
+    "A business with little cash must be making a loss",
+    "A business has the same profit and cash each month"
+   ],
+   "why": "Profit counts revenue when it is earned, but cash only changes when money is paid or received. A profit with unpaid clients leaves little cash, so profit does not guarantee cash.",
+   "clue": "Think about work done but not yet paid for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs a web design service in Geelong. In May he finished $12,000 of work for clients who will pay in June. His expenses of $5,000 were all paid in May. What is his position at the end of May?",
+   "opts": [
+    "A profit of $7,000, but his cash fell by $5,000",
+    "A profit of $7,000, and his cash rose by $7,000",
+    "A loss of $5,000, and his cash fell by $5,000",
+    "A profit of $12,000, and his cash rose by $12,000"
+   ],
+   "why": "The $12,000 is revenue earned in May, so profit is $12,000 - $5,000 = $7,000. No money was received, and $5,000 was paid out, so cash fell. The tempting wrong answer treats profit as cash.",
+   "clue": "Was any money actually received in May?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A business can earn a profit but have little cash",
+   "also_right": []
+  },
+  "b": {
+   "best": "A profit of $7,000, but his cash fell by $5,000",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('can'). Every distractor uses an absolute ('the same', 'must', 'must'), so a test-wise student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one joined by 'but' (the others use 'and'). The contrast word hints that profit and cash move differently, which is the point being tested."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A profit with unpaid clients leaves little cash' as a certainty, but the card says this can or may happen. It should say 'can leave little cash'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. Question a's right option is the only hedged one among absolute distractors, question b's right option is the only one with 'but', and why (a) overstates 'leaves' where the card says 'can'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only hedged one ('can'). Every distractor uses an absolute ('the same', 'must', 'must'), so a test-wise student can pick it without knowing the idea.",
+  "Question b, wording: The right option is the only one joined by 'but' (the others use 'and'). The contrast word hints that profit and cash move differently, which is the point being tested.",
+  "Question a, wording: Why (a) says 'A profit with unpaid clients leaves little cash' as a certainty, but the card says this can or may happen. It should say 'can leave little cash'."
+ ],
+ "proposal": {
+  "title": "Cash and profit",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses for a period. Revenue counts when it is earned, even if the client has not yet paid."
+   ],
+   [
+    "Cash",
+    "money the business has in the bank or on hand. It rises when money is received and falls when money is paid out."
+   ],
+   "The two can differ. A business may earn a fee in one month but be paid in the next, so profit rises before cash does.",
+   "A business can make a profit and still be short of cash, for example if clients are slow to pay while bills are due."
+  ],
+  "remember": "Profit is not the same as cash, so a profitable business can still run short of cash.",
+  "a": {
+   "q": "Why can a business report a profit while its bank balance is low?",
+   "opts": [
+    "Revenue counts when it is earned, even before clients pay",
+    "Profit counts only the money received during the period",
+    "Cash rises as soon as the work for a client is done",
+    "Profit is the money left in the bank at the period's end"
+   ],
+   "why": "Profit counts revenue when it is earned, so work done for clients who have not yet paid can raise profit while cash stays low. Profit is not the money left in the bank: cash only changes when money is received or paid out.",
+   "clue": "Think about work done but not yet paid for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs a web design service in Geelong. In May he finished $12,000 of work for clients who will pay in June. His expenses of $5,000 were all paid in May. What is his position at the end of May?",
+   "opts": [
+    "A profit of $7,000, and his cash fell by $5,000",
+    "A profit of $7,000, and his cash rose by $7,000",
+    "A loss of $5,000, and his cash fell by $5,000",
+    "A profit of $12,000, and his cash rose by $12,000"
+   ],
+   "why": "The $12,000 is revenue earned in May, so profit is $12,000 - $5,000 = $7,000. No money was received, and $5,000 was paid out, so cash fell by $5,000. The tempting wrong answer treats the $7,000 profit as cash received.",
+   "clue": "Was any money actually received in May?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Revenue counts when it is earned, even before clients pay",
+    "also_right": []
+   },
+   "b": {
+    "best": "A profit of $7,000, and his cash fell by $5,000",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('can'). Every distractor uses an absolute ('the same', 'must', 'must'), so a test-wise student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one joined by 'but' (the others use 'and'). The contrast word hints that profit and cash move differently, which is the point being tested."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says 'A profit with unpaid clients leaves little cash' as a certainty, but the card says this can or may happen. It should say 'can leave little cash'."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only hedged one ('can'). Every distractor uses an absolute ('the same', 'must', 'must'), so a test-wise student can pick it without knowing the idea.",
+   "Question b, wording: The right option is the only one joined by 'but' (the others use 'and'). The contrast word hints that profit and cash move differently, which is the point being tested.",
+   "Question a, wording: Why (a) says 'A profit with unpaid clients leaves little cash' as a certainty, but the card says this can or may happen. It should say 'can leave little cash'."
+  ]
+ },
+ "final": {
+  "title": "Cash and profit",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses for a period. Revenue counts when it is earned, even if the client has not yet paid."
+   ],
+   [
+    "Cash",
+    "money the business has in the bank or on hand. It rises when money is received and falls when money is paid out."
+   ],
+   "The two can differ. A business may earn a fee in one month but be paid in the next, so profit rises before cash does.",
+   "A business can make a profit and still be short of cash, for example if clients are slow to pay while bills are due."
+  ],
+  "remember": "Profit is not the same as cash, so a profitable business can still run short of cash.",
+  "a": {
+   "q": "Why can a business report a profit while its bank balance is low?",
+   "opts": [
+    "Revenue counts when it is earned, even before clients pay",
+    "Profit counts only the money received during the period",
+    "Cash rises as soon as the work for a client is done",
+    "Profit is the money left in the bank at the period's end"
+   ],
+   "why": "Profit counts revenue when it is earned, so work done for clients who have not yet paid can raise profit while cash stays low. Profit is not the money left in the bank: cash only changes when money is received or paid out.",
+   "clue": "Think about work done but not yet paid for."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs a web design service in Geelong. In May he finished $12,000 of work for clients who will pay in June. His expenses of $5,000 were all paid in May. What is his position at the end of May?",
+   "opts": [
+    "A profit of $7,000, and his cash fell by $5,000",
+    "A profit of $7,000, and his cash rose by $7,000",
+    "A loss of $5,000, and his cash fell by $5,000",
+    "A profit of $12,000, and his cash rose by $12,000"
+   ],
+   "why": "The $12,000 is revenue earned in May, so profit is $12,000 - $5,000 = $7,000. No money was received, and $5,000 was paid out, so cash fell by $5,000. The tempting wrong answer treats the $7,000 profit as cash received.",
+   "clue": "Was any money actually received in May?"
+  }
+ },
+ "cleared_by": "recheck"
+}

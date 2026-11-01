@@ -1,0 +1,120 @@
+{
+ "id": "mat-first-order-recurrence-relations",
+ "title": "First-order recurrence relations",
+ "brief": "dfb66ceeb8b0",
+ "shortlist": [
+  [
+   "mat-functions-relations",
+   0.238
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00584,
+  "check": 0.00705
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches functions and relations in general, not recurrence relations, which define each term from the previous one with a starting value, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "First-order recurrence relations",
+  "card": [
+   "A recurrence relation gives each term from the term just before it. It needs a starting value, written u0, so the list can begin.",
+   "The rule u(n+1) = u(n) + 4 means the next term is the current term plus 4. The rule u(n+1) = 3 × u(n) means the next term is 3 times the current term.",
+   "To use it, start with u0 and apply the rule again and again. Each answer becomes the input for the next step.",
+   "Example: u0 = 5 and u(n+1) = u(n) + 4. Then u1 = 5 + 4 = 9, u2 = 9 + 4 = 13 and u3 = 13 + 4 = 17."
+  ],
+  "remember": "Start with u0, then apply the rule to each term to get the next one.",
+  "a": {
+   "q": "A sequence has u0 = 2 and u(n+1) = 3 × u(n) − 1. What is u2?",
+   "opts": [
+    "14",
+    "5",
+    "17",
+    "8"
+   ],
+   "why": "u1 = 3 × 2 − 1 = 5. Then u2 = 3 × 5 − 1 = 14. The answer 5 is only u1, so one step was missed.",
+   "clue": "Find u1 first, then use it to find u2."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam saves for a bike. His savings follow u0 = 30 and u(n+1) = u(n) + 12, where n is the week. How much does he have at the end of week 3?",
+   "opts": [
+    "$66",
+    "$42",
+    "$54",
+    "$78"
+   ],
+   "why": "u1 = 42, u2 = 54 and u3 = 66. The answer $54 is u2, which stops one step too early.",
+   "clue": "Apply the rule three times, starting from u0."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "14",
+   "also_right": []
+  },
+  "b": {
+   "best": "$66",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: u2 = 14 in (a), and u3 = $66 in (b)."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "First-order recurrence relations",
+  "card": [
+   "A recurrence relation gives each term from the term just before it. It needs a starting value, written u0, so the list can begin.",
+   "The rule u(n+1) = u(n) + 4 means the next term is the current term plus 4. The rule u(n+1) = 3 × u(n) means the next term is 3 times the current term.",
+   "To use it, start with u0 and apply the rule again and again. Each answer becomes the input for the next step.",
+   "Example: u0 = 5 and u(n+1) = u(n) + 4. Then u1 = 5 + 4 = 9, u2 = 9 + 4 = 13 and u3 = 13 + 4 = 17."
+  ],
+  "remember": "Start with u0, then apply the rule to each term to get the next one.",
+  "a": {
+   "q": "A sequence has u0 = 2 and u(n+1) = 3 × u(n) − 1. What is u2?",
+   "opts": [
+    "14",
+    "5",
+    "17",
+    "8"
+   ],
+   "why": "u1 = 3 × 2 − 1 = 5. Then u2 = 3 × 5 − 1 = 14. The answer 5 is only u1, so one step was missed.",
+   "clue": "Find u1 first, then use it to find u2."
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam saves for a bike. His savings follow u0 = 30 and u(n+1) = u(n) + 12, where n is the week. How much does he have at the end of week 3?",
+   "opts": [
+    "$66",
+    "$42",
+    "$54",
+    "$78"
+   ],
+   "why": "u1 = 42, u2 = 54 and u3 = 66. The answer $54 is u2, which stops one step too early.",
+   "clue": "Apply the rule three times, starting from u0."
+  }
+ },
+ "cleared_by": "checker"
+}

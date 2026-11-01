@@ -1,0 +1,197 @@
+{
+ "id": "hhd-areas-needing-action",
+ "title": "Areas needing action",
+ "brief": "0a2d33d0b5b9",
+ "shortlist": [
+  [
+   "hms-health-promotion",
+   0.339
+  ],
+  [
+   "hms-community-health-resources",
+   0.334
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.333
+  ],
+  [
+   "hms-ottawa-charter",
+   0.324
+  ],
+  [
+   "hms-health-literacy",
+   0.299
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:50Z write: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check named a sensitive topic; the fresh check found a problem)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01034,
+  "check": 0.01357,
+  "fix": 0.03416,
+  "recheck": 0.01188
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how health data identifies the youth health areas that most need action; they cover health promotion, resources, health as dynamic, the Ottawa Charter and health literacy, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Areas needing action",
+  "card": [
+   "Health data counts how many young people have a health problem, are hurt by it or die from it. Researchers use it to see which problems affect the most young people.",
+   "Data can also show which problems are growing, which groups are hit hardest and which cause the most harm. These problems are the ones that most need action.",
+   "In Australia, areas often named for young people include mental health, injury and alcohol use. Governments and health groups can change their priorities as the data changes.",
+   "Action is aimed at where the data shows the greatest need. A problem that affects few young people or is falling is less of a priority."
+  ],
+  "remember": "Health data shows where young people most need action, so priorities are chosen from evidence.",
+  "a": {
+   "q": "Why does a health agency use data to choose areas of youth health to act on?",
+   "opts": [
+    "It shows which problems affect and harm many young people",
+    "It shows which problems young people find most interesting",
+    "It shows which problems are cheapest for the agency to fix",
+    "It shows which problems adults have stopped worrying about"
+   ],
+   "why": "Data counts how many young people are affected and how badly, so it points to the greatest need. Cost and interest are not what the data measures, so they do not decide the priority.",
+   "clue": "Think about what the numbers count."
+  },
+  "b": {
+   "d": 3,
+   "q": "A state report finds that hospital visits for injury among 15 to 19 year olds have risen for five years, while visits for another problem have fallen. What should the health department most likely do?",
+   "opts": [
+    "Make injury a priority area for action",
+    "Make the falling problem the main priority",
+    "Wait, because rising numbers are not a concern",
+    "Ignore the data until a young person dies"
+   ],
+   "why": "Rising injury visits show a growing problem, so it needs action. The falling problem is less urgent, though the data does not mean it has gone. Waiting for a death ignores what the data already shows.",
+   "clue": "Which problem is growing in the data?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shows which problems affect and harm many young people",
+   "also_right": []
+  },
+  "b": {
+   "best": "Make injury a priority area for action",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"A problem that affects few young people or is falling is less of a priority\" overgeneralises. A falling problem that still affects many young people, or a rare problem that causes severe harm such as death, can remain a priority. This also sits awkwardly with the card's earlier point about problems that cause the most harm."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says cost is not what the data measures and does not decide priority. Health data often includes costs, and cost and cost-effectiveness are real factors in setting priorities. Costs are also the subject of point 5. The why should not state that cost plays no part."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The distractors ('Wait, because rising numbers are not a concern', 'Ignore the data until a young person dies') are implausible. A Year 11 student could pick the answer without understanding the idea, which makes the question too easy."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The answers are correct, but the card overstates that a falling or less common problem is a lower priority. The why for (a) wrongly says cost plays no part in setting priorities, and question b has absurd distractors that make it too easy."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"A problem that affects few young people or is falling is less of a priority\" overgeneralises. A falling problem that still affects many young people, or a rare problem that causes severe harm such as death, can remain a priority. This also sits awkwardly with the card's earlier point about problems that cause the most harm.",
+  "Question a, other: The why says cost is not what the data measures and does not decide priority. Health data often includes costs, and cost and cost-effectiveness are real factors in setting priorities. Costs are also the subject of point 5. The why should not state that cost plays no part.",
+  "Question b, level: The distractors ('Wait, because rising numbers are not a concern', 'Ignore the data until a young person dies') are implausible. A Year 11 student could pick the answer without understanding the idea, which makes the question too easy."
+ ],
+ "proposal": {
+  "title": "Areas needing action",
+  "card": [
+   "Health data counts how many young people have a health problem, are hurt by it or die from it. Researchers use it to see which problems affect the most young people.",
+   "Data can also show which problems are growing, which groups are hit hardest and which cause the most harm, such as death or lasting injury.",
+   "In Australia, areas often named for young people include mental health, injury and alcohol use. Governments and health groups can change their priorities as the data changes.",
+   "Action is aimed where the data shows the greatest need. No single measure decides this: how common, how fast-growing and how harmful a problem is are weighed together."
+  ],
+  "remember": "Priorities come from evidence: how many young people a problem affects, how it is changing and how much harm it does.",
+  "a": {
+   "q": "Why does a health agency use data to choose areas of youth health to act on?",
+   "opts": [
+    "It shows which problems affect and harm many young people",
+    "It shows which problems get the most attention in the media",
+    "It shows which problems young people find most interesting",
+    "It shows which problems adults say they worry about most"
+   ],
+   "why": "Data counts how many young people are affected and how badly, so it points to the greatest need. Media attention, interest and worry reflect what people talk about, not how many young people are actually harmed.",
+   "clue": "Think about what the numbers count."
+  },
+  "b": {
+   "d": 3,
+   "q": "A report finds alcohol-related harm among young Victorians has fallen slightly, but it still affects far more of them than any other problem in the report. What does this mean for action?",
+   "opts": [
+    "It can stay a priority, as it still harms many young people",
+    "It can be dropped, as a falling trend means it is solved",
+    "It should wait for action until the trend rises again",
+    "It ranks below any problem that is rising, however small"
+   ],
+   "why": "Priorities weigh how common, how fast-growing and how harmful a problem is together. A slight fall does not change the fact that this problem still harms more young people than any other. Dropping it confuses a falling trend with a solved problem.",
+   "clue": "Does a small fall change how many are still affected?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "kept",
+  "why": [
+   "the fresh check named a sensitive topic",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "It shows which problems affect and harm many young people",
+    "also_right": []
+   },
+   "b": {
+    "best": "It can stay a priority, as it still harms many young people",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "The distractor 'It should wait for action until the trend rises again' is awkward: 'it' seems to refer to the alcohol problem, which cannot wait for action. It should be reworded, for example 'Action should wait until the trend rises again'."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "drugs",
+   "summary": "The content is accurate and matches the card. The answers are clear and the explanations agree with them. One question b distractor is awkwardly worded and should be fixed."
+  },
+  "flags": [
+   "Question b, wording: The distractor 'It should wait for action until the trend rises again' is awkward: 'it' seems to refer to the alcohol problem, which cannot wait for action. It should be reworded, for example 'Action should wait until the trend rises again'."
+  ]
+ }
+}

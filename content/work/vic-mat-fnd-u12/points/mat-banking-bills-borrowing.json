@@ -1,0 +1,211 @@
+{
+ "id": "mat-banking-bills-borrowing",
+ "title": "Banking, bills and borrowing",
+ "brief": "c6e00435ffd7",
+ "shortlist": [
+  [
+   "mat-household-bills",
+   0.203
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00458,
+  "check": 0.01646,
+  "fix": 0.02549,
+  "recheck": 0.00691
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers fixed and usage charges on household bills and comparing energy plans, but the new point is about bank accounts, card payments, paying bills on time and the cost of borrowing, which it does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Banking, bills and borrowing",
+  "card": [
+   [
+    "Bank accounts",
+    "A transaction account holds money for daily spending. A savings account holds money you do not plan to spend soon, and it usually pays interest."
+   ],
+   [
+    "Card payments",
+    "A debit card takes money straight from your account. A credit card lends you money, and you must pay it back to the card company."
+   ],
+   [
+    "Bills",
+    "A bill is money you owe for a service, such as power or phone. Paying after the due date can add a late fee, so check the date."
+   ],
+   [
+    "Borrowing",
+    "If you borrow, you repay more than you borrowed. Example: borrow $500 and repay $550 in total. Borrowing cost $550 − $500 = $50."
+   ]
+  ],
+  "remember": "Borrowing means repaying more than you borrowed. The extra is the cost of borrowing.",
+  "a": {
+   "q": "Tom pays for a $40 meal with his debit card. What happens?",
+   "opts": [
+    "$40 is taken from his account straight away",
+    "He borrows $40 and repays the bank later",
+    "$40 is added to his savings account interest",
+    "He is given 30 days before paying $40"
+   ],
+   "why": "A debit card takes money directly from the account. The credit card is the one that lends money, so the idea of borrowing and repaying later is wrong for a debit card.",
+   "clue": "Debit and credit cards work differently."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya borrows $2000 for a laptop. She repays $2300 in total. What did the borrowing cost her?",
+   "opts": [
+    "$300",
+    "$2000",
+    "$2300",
+    "$4300"
+   ],
+   "why": "The cost is the total repaid minus the amount borrowed: $2300 − $2000 = $300. Choosing $2300 gives the total repaid, not the extra cost.",
+   "clue": "Subtract what she borrowed from what she repaid."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$40 is taken from his account straight away",
+   "also_right": []
+  },
+  "b": {
+   "best": "$300",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Borrowing line says that if you borrow, you repay more than you borrowed. That is not always true: interest-free loans exist, and a credit card paid in full within the interest-free period costs nothing extra. It should say you usually or can repay more."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Borrowing means repaying more than you borrowed' states as a rule something that is only usually true. Interest-free borrowing has no extra cost, so this line should be softened, for example to 'usually means'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer. The card and the remember line say borrowing always means repaying more, which ignores interest-free loans and credit cards paid off in time, so this should be softened to 'usually'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The Borrowing line says that if you borrow, you repay more than you borrowed. That is not always true: interest-free loans exist, and a credit card paid in full within the interest-free period costs nothing extra. It should say you usually or can repay more.",
+  "Remember, fact: 'Borrowing means repaying more than you borrowed' states as a rule something that is only usually true. Interest-free borrowing has no extra cost, so this line should be softened, for example to 'usually means'."
+ ],
+ "proposal": {
+  "title": "Banking, bills and borrowing",
+  "card": [
+   [
+    "Bank accounts",
+    "A transaction account holds money for daily spending. A savings account holds money you do not plan to spend soon, and it usually pays interest."
+   ],
+   [
+    "Card payments",
+    "A debit card takes money straight from your account. A credit card lends you money, and you must pay it back to the card company."
+   ],
+   [
+    "Bills",
+    "A bill is money you owe for a service, such as power or phone. Paying after the due date can add a late fee, so check the date."
+   ],
+   [
+    "Borrowing",
+    "When you borrow, you usually repay more than you borrowed, and the extra is the cost of borrowing. Example: borrow $500 and repay $550 in total, so the cost is $550 − $500 = $50."
+   ]
+  ],
+  "remember": "Cost of borrowing = total repaid − amount borrowed. It is usually more than zero.",
+  "a": {
+   "q": "Tom pays for a $40 meal with his debit card. What happens?",
+   "opts": [
+    "$40 is taken from his account straight away",
+    "He borrows $40 and repays the bank later",
+    "$40 is added to his savings account interest",
+    "He is given 30 days before paying $40"
+   ],
+   "why": "A debit card takes money directly from the account. The credit card is the one that lends money, so the idea of borrowing and repaying later is wrong for a debit card.",
+   "clue": "Debit and credit cards work differently."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya borrows $2000 for a laptop. She repays $2300 in total. What did the borrowing cost her?",
+   "opts": [
+    "$300",
+    "$2000",
+    "$2300",
+    "$4300"
+   ],
+   "why": "The cost is the total repaid minus the amount borrowed: $2300 − $2000 = $300. Choosing $2300 gives the total repaid, not the extra cost.",
+   "clue": "Subtract what she borrowed from what she repaid."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$40 is taken from his account straight away",
+    "also_right": []
+   },
+   "b": {
+    "best": "$300",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Borrowing line says that if you borrow, you repay more than you borrowed. That is not always true: interest-free loans exist, and a credit card paid in full within the interest-free period costs nothing extra. It should say you usually or can repay more."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Borrowing means repaying more than you borrowed' states as a rule something that is only usually true. Interest-free borrowing has no extra cost, so this line should be softened, for example to 'usually means'."
+   }
+  ],
+  "flags": [
+   "Card, fact: The Borrowing line says that if you borrow, you repay more than you borrowed. That is not always true: interest-free loans exist, and a credit card paid in full within the interest-free period costs nothing extra. It should say you usually or can repay more.",
+   "Remember, fact: 'Borrowing means repaying more than you borrowed' states as a rule something that is only usually true. Interest-free borrowing has no extra cost, so this line should be softened, for example to 'usually means'."
+  ]
+ }
+}

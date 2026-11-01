@@ -1,0 +1,146 @@
+{
+ "id": "mat-scaling-area-volume",
+ "title": "Scaling area and volume",
+ "brief": "6634226f00e6",
+ "shortlist": [
+  [
+   "mat-volume-capacity",
+   0.361
+  ],
+  [
+   "mat-scale-drawings-plans",
+   0.355
+  ],
+  [
+   "geo-scale",
+   0.232
+  ],
+  [
+   "mat-unit-conversions",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00476,
+  "check": 0.00562
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the general principle that scaling lengths by k scales areas by k² and volumes by k³; the closest cards apply the squaring and cubing to plans or unit conversions, which is narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Scaling area and volume",
+  "card": [
+   "When every length of a shape or solid is multiplied by k, the new shape is similar to the old one. Here k is the scale factor for lengths.",
+   [
+    "Area",
+    "area scales by k². Area is length × length, so both lengths are multiplied by k. Example: k = 3 makes every area 9 times as large."
+   ],
+   [
+    "Volume",
+    "volume scales by k³. Volume is length × length × length, so three lengths are multiplied by k. Example: k = 2 makes every volume 8 times as large."
+   ],
+   "To find k from areas or volumes, go backwards. If the area ratio is 25, then k = √25 = 5. If the volume ratio is 27, then k = ∛27 = 3."
+  ],
+  "remember": "Lengths × k, areas × k², volumes × k³.",
+  "a": {
+   "q": "A small tin has a base area of 12 cm². A larger similar tin has all lengths 3 times as long. What is the base area of the larger tin?",
+   "opts": [
+    "108 cm²",
+    "36 cm²",
+    "324 cm²",
+    "27 cm²"
+   ],
+   "why": "Area scales by k² = 3² = 9, so the base area is 12 × 9 = 108 cm². Multiplying by 3 gives 36 cm², which scales the area as if it were a length.",
+   "clue": "Area is length × length, so k is used twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two similar water tanks hold 40 L and 320 L. The small tank is 50 cm tall. How tall is the large tank?",
+   "opts": [
+    "100 cm",
+    "200 cm",
+    "400 cm",
+    "150 cm"
+   ],
+   "why": "The volume ratio is 320 ÷ 40 = 8, so k³ = 8 and k = 2. The height is 50 × 2 = 100 cm. Using 8 as the length factor gives 400 cm, which forgets that volume scales by k³.",
+   "clue": "Find k by going backwards from the volume ratio."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "108 cm²",
+   "also_right": []
+  },
+  "b": {
+   "best": "100 cm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Scaling area and volume",
+  "card": [
+   "When every length of a shape or solid is multiplied by k, the new shape is similar to the old one. Here k is the scale factor for lengths.",
+   [
+    "Area",
+    "area scales by k². Area is length × length, so both lengths are multiplied by k. Example: k = 3 makes every area 9 times as large."
+   ],
+   [
+    "Volume",
+    "volume scales by k³. Volume is length × length × length, so three lengths are multiplied by k. Example: k = 2 makes every volume 8 times as large."
+   ],
+   "To find k from areas or volumes, go backwards. If the area ratio is 25, then k = √25 = 5. If the volume ratio is 27, then k = ∛27 = 3."
+  ],
+  "remember": "Lengths × k, areas × k², volumes × k³.",
+  "a": {
+   "q": "A small tin has a base area of 12 cm². A larger similar tin has all lengths 3 times as long. What is the base area of the larger tin?",
+   "opts": [
+    "108 cm²",
+    "36 cm²",
+    "324 cm²",
+    "27 cm²"
+   ],
+   "why": "Area scales by k² = 3² = 9, so the base area is 12 × 9 = 108 cm². Multiplying by 3 gives 36 cm², which scales the area as if it were a length.",
+   "clue": "Area is length × length, so k is used twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two similar water tanks hold 40 L and 320 L. The small tank is 50 cm tall. How tall is the large tank?",
+   "opts": [
+    "100 cm",
+    "200 cm",
+    "400 cm",
+    "150 cm"
+   ],
+   "why": "The volume ratio is 320 ÷ 40 = 8, so k³ = 8 and k = 2. The height is 50 × 2 = 100 cm. Using 8 as the length factor gives 400 cm, which forgets that volume scales by k³.",
+   "clue": "Find k by going backwards from the volume ratio."
+  }
+ },
+ "cleared_by": "checker"
+}

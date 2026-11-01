@@ -1,0 +1,211 @@
+{
+ "id": "mat-patterns-rules",
+ "title": "Patterns and rules",
+ "brief": "ac8e1bf1817c",
+ "shortlist": [
+  [
+   "eng-archetypes-story-patterns",
+   0.226
+  ],
+  [
+   "mat-product-rule",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: done",
+  "2026-11-01T08:24:32Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00452,
+  "check": 0.00948,
+  "fix": 0.01285,
+  "recheck": 0.00587
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches writing a pattern as a rule to find any value: one covers literary archetypes and the other is calculus product rule, so no bank point matches the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Patterns and rules",
+  "card": [
+   "A pattern is a list of numbers that changes by the same amount each step. A rule is a short sentence or formula that gives any value in the pattern.",
+   "To find a rule, look at how much the value goes up each step. This is the amount that multiplies the step number. Then check whether anything extra is added or taken away.",
+   "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost = 5 × number of classes.",
+   "Once you have the rule, put in any number. For 12 classes, cost = 5 × 12 = $60. You do not need to list every step."
+  ],
+  "remember": "Find the change each step, write it as a rule, then use the rule for any value.",
+  "a": {
+   "q": "A pattern of costs is $3, $6, $9, $12 for 1, 2, 3, 4 items. Which rule fits?",
+   "opts": [
+    "cost = 3 × number of items",
+    "cost = 3 + number of items",
+    "cost = 6 × number of items",
+    "cost = 12 × number of items"
+   ],
+   "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: 3 × 4 = 12. The rule 3 + number of items gives 4 for 1 item, which is wrong.",
+   "clue": "How much does the cost go up for each extra item?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam's rule for a pizza night is cost = 8 × number of people. What is the cost for 7 people?",
+   "opts": [
+    "$56",
+    "$15",
+    "$48",
+    "$64"
+   ],
+   "why": "Put 7 into the rule: 8 × 7 = 56, so the cost is $56. Adding gives $15, which treats the rule as 8 + 7, but the rule multiplies.",
+   "clue": "Replace the number of people with 7, then follow the operation in the rule."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "cost = 3 × number of items",
+   "also_right": []
+  },
+  "b": {
+   "best": "$56",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says 'A pattern is a list of numbers that changes by the same amount each step.' That defines only linear (arithmetic) patterns. Patterns can also double, square and so on, so students may learn too narrow a meaning. Something like 'Some patterns change by the same amount each step' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, and each has a single right answer. The card's definition of a pattern is too narrow: it describes only patterns that change by the same amount each step, and should be qualified."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says 'A pattern is a list of numbers that changes by the same amount each step.' That defines only linear (arithmetic) patterns. Patterns can also double, square and so on, so students may learn too narrow a meaning. Something like 'Some patterns change by the same amount each step' would be accurate."
+ ],
+ "proposal": {
+  "title": "Patterns and rules",
+  "card": [
+   "A pattern is a list of numbers that follows a rule. Some patterns change by the same amount each step. A rule is a short sentence or formula that gives any value in the pattern.",
+   "When a pattern goes up by the same amount each step, that amount multiplies the step number. Then check whether anything extra is added or taken away.",
+   "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost = 5 × number of classes.",
+   "Once you have the rule, put in any number. For 12 classes, cost = 5 × 12 = $60. You do not need to list every step."
+  ],
+  "remember": "Find the change each step, write it as a rule, then use the rule for any value.",
+  "a": {
+   "q": "A pattern of costs is $3, $6, $9, $12 for 1, 2, 3, 4 items. Which rule fits?",
+   "opts": [
+    "cost = 3 × number of items",
+    "cost = 3 + number of items",
+    "cost = 6 × number of items",
+    "cost = 12 × number of items"
+   ],
+   "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: 3 × 4 = 12. The rule 3 + number of items gives $4 for 1 item, which is wrong.",
+   "clue": "How much does the cost go up for each extra item?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam's rule for a pizza night is cost = 8 × number of people. What is the cost for 7 people?",
+   "opts": [
+    "$56",
+    "$15",
+    "$48",
+    "$64"
+   ],
+   "why": "Put 7 into the rule: 8 × 7 = 56, so the cost is $56. Adding gives $15, which treats the rule as 8 + 7, but the rule multiplies.",
+   "clue": "Replace the number of people with 7, then follow the operation in the rule."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "cost = 3 × number of items",
+    "also_right": []
+   },
+   "b": {
+    "best": "$56",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says 'A pattern is a list of numbers that changes by the same amount each step.' That defines only linear (arithmetic) patterns. Patterns can also double, square and so on, so students may learn too narrow a meaning. Something like 'Some patterns change by the same amount each step' would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says 'A pattern is a list of numbers that changes by the same amount each step.' That defines only linear (arithmetic) patterns. Patterns can also double, square and so on, so students may learn too narrow a meaning. Something like 'Some patterns change by the same amount each step' would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Patterns and rules",
+  "card": [
+   "A pattern is a list of numbers that follows a rule. Some patterns change by the same amount each step. A rule is a short sentence or formula that gives any value in the pattern.",
+   "When a pattern goes up by the same amount each step, that amount multiplies the step number. Then check whether anything extra is added or taken away.",
+   "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost = 5 × number of classes.",
+   "Once you have the rule, put in any number. For 12 classes, cost = 5 × 12 = $60. You do not need to list every step."
+  ],
+  "remember": "Find the change each step, write it as a rule, then use the rule for any value.",
+  "a": {
+   "q": "A pattern of costs is $3, $6, $9, $12 for 1, 2, 3, 4 items. Which rule fits?",
+   "opts": [
+    "cost = 3 × number of items",
+    "cost = 3 + number of items",
+    "cost = 6 × number of items",
+    "cost = 12 × number of items"
+   ],
+   "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: 3 × 4 = 12. The rule 3 + number of items gives $4 for 1 item, which is wrong.",
+   "clue": "How much does the cost go up for each extra item?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Sam's rule for a pizza night is cost = 8 × number of people. What is the cost for 7 people?",
+   "opts": [
+    "$56",
+    "$15",
+    "$48",
+    "$64"
+   ],
+   "why": "Put 7 into the rule: 8 × 7 = 56, so the cost is $56. Adding gives $15, which treats the rule as 8 + 7, but the rule multiplies.",
+   "clue": "Replace the number of people with 7, then follow the operation in the rule."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "mat-domain-range-notation",
+ "title": "Domain and range notation",
+ "brief": "daa846e79bef",
+ "shortlist": [
+  [
+   "mat-domain-range",
+   0.617
+  ],
+  [
+   "mat-function-notation",
+   0.285
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00457,
+  "check": 0.00739
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches interval bracket notation or the f: domain → codomain mapping notation; mat-domain-range covers domain and range as sets of values, and mat-function-notation covers evaluating f(x), so the new point is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Domain and range notation",
+  "card": [
+   "An interval is a set of numbers between two ends. A square bracket [ or ] includes the end number. A round bracket ( or ) leaves it out.",
+   "Example: [0, 5) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
+   "The symbol ∞ means the numbers go on without end. It is not a number, so it always gets a round bracket, as in [0, ∞).",
+   "A restricted domain is written f: [0, ∞) → R. This reads: f is a function whose inputs are x ≥ 0, and whose outputs are real numbers. For f(x) = x² on this domain, the range is [0, ∞)."
+  ],
+  "remember": "Square bracket includes the end. Round bracket leaves it out. Infinity always gets a round bracket.",
+  "a": {
+   "q": "Which interval contains every x with −2 < x ≤ 3?",
+   "opts": [
+    "(−2, 3]",
+    "[−2, 3]",
+    "[−2, 3)",
+    "(−2, 3)"
+   ],
+   "why": "−2 is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. [−2, 3] is tempting, but it wrongly includes −2.",
+   "clue": "Check each end on its own: is it included or not?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A function is f: [1, ∞) → R, where f(x) = x². Which input is NOT allowed?",
+   "opts": [
+    "x = 0",
+    "x = 1",
+    "x = 2",
+    "x = 100"
+   ],
+   "why": "The domain [1, ∞) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. x = 1 is allowed because the square bracket includes 1.",
+   "clue": "The domain is the set of allowed inputs, not the outputs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(−2, 3]",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 0",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Domain and range notation",
+  "card": [
+   "An interval is a set of numbers between two ends. A square bracket [ or ] includes the end number. A round bracket ( or ) leaves it out.",
+   "Example: [0, 5) means all numbers from 0 up to but not including 5. So 0 is in the interval and 5 is not.",
+   "The symbol ∞ means the numbers go on without end. It is not a number, so it always gets a round bracket, as in [0, ∞).",
+   "A restricted domain is written f: [0, ∞) → R. This reads: f is a function whose inputs are x ≥ 0, and whose outputs are real numbers. For f(x) = x² on this domain, the range is [0, ∞)."
+  ],
+  "remember": "Square bracket includes the end. Round bracket leaves it out. Infinity always gets a round bracket.",
+  "a": {
+   "q": "Which interval contains every x with −2 < x ≤ 3?",
+   "opts": [
+    "(−2, 3]",
+    "[−2, 3]",
+    "[−2, 3)",
+    "(−2, 3)"
+   ],
+   "why": "−2 is not included, so it gets a round bracket. 3 is included, so it gets a square bracket. [−2, 3] is tempting, but it wrongly includes −2.",
+   "clue": "Check each end on its own: is it included or not?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A function is f: [1, ∞) → R, where f(x) = x². Which input is NOT allowed?",
+   "opts": [
+    "x = 0",
+    "x = 1",
+    "x = 2",
+    "x = 100"
+   ],
+   "why": "The domain [1, ∞) holds only numbers from 1 upwards, with 1 included. So 0 is outside it and is not allowed. x = 1 is allowed because the square bracket includes 1.",
+   "clue": "The domain is the set of allowed inputs, not the outputs."
+  }
+ },
+ "cleared_by": "checker"
+}

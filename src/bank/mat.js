@@ -4987,5 +4987,1987 @@ MADE_BANKS.mat = {
       "why": "For 511 g, z = (511 − 500) ÷ 5 = 2.2, which is outside the limits. The 490 g jar has z = −2, which equals a limit, so it is acceptable. It is tempting only because it is the lightest jar.",
       "clue": "Work out each jar's z-score. Does a z-score equal to a limit count?"
     }
+  },
+  "mat-order-operations": {
+    "title": "Order of operations",
+    "card": [
+      "When a calculation has more than one operation, do them in a set order. Brackets come first, then powers, then multiplication and division, then addition and subtraction.",
+      "Multiplication and division have equal rank, so work through them from left to right. Addition and subtraction also have equal rank, so work through them from left to right.",
+      "Example: 20 − 4 × 3. Multiply first: 4 × 3 = 12. Then subtract: 20 − 12 = 8.",
+      "Example: 24 ÷ 4 × 2. Division and multiplication have equal rank, so go left to right: 24 ÷ 4 = 6, then 6 × 2 = 12."
+    ],
+    "remember": "Brackets, powers, then × and ÷, then + and −, working left to right within each rank.",
+    "a": {
+      "q": "What is the value of 5 + 3 × 4?",
+      "opts": ["17", "32", "12", "27"],
+      "why": "Multiplication comes before addition, so 3 × 4 = 12, then 5 + 12 = 17. The answer 32 comes from adding first (5 + 3 = 8, then 8 × 4), which ignores the order.",
+      "clue": "Which operation is done first, + or ×?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia works out 30 − 12 ÷ 3 + 2 for a bake sale. What is the correct value?",
+      "opts": ["28", "24", "8", "27.6"],
+      "why": "Divide first: 12 ÷ 3 = 4. Then work left to right: 30 − 4 = 26, and 26 + 2 = 28. The answer 24 comes from adding 4 + 2 before subtracting, but addition and subtraction have equal rank, so they go left to right.",
+      "clue": "After dividing, which comes first from the left, − or +?"
+    }
+  },
+  "mat-fractions-decimals-percentages": {
+    "title": "Fractions, decimals and percentages",
+    "card": [
+      "A fraction, a decimal and a percentage can show the same amount. For example, 1/4 = 0.25 = 25%.",
+      ["Fraction to decimal", "divide the top number by the bottom number. 3/5 = 3 ÷ 5 = 0.6."],
+      ["Decimal to percentage", "multiply by 100. 0.6 × 100 = 60%. To go back, divide by 100."],
+      ["Percentage to fraction", "write the percentage over 100, then simplify. 60% = 60/100 = 3/5."]
+    ],
+    "remember": "Percent means out of 100. Divide by 100 to go from a percentage to a decimal, and multiply by 100 to go back.",
+    "a": {
+      "q": "Which decimal is equal to 3/8?",
+      "opts": ["0.375", "0.38", "2.67", "0.83"],
+      "why": "Divide the top by the bottom: 3 ÷ 8 = 0.375. Dividing 8 by 3 instead gives 2.67, which is the mistake of turning the fraction upside down.",
+      "clue": "Divide the top number by the bottom number."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia scored 0.7 on one quiz, 65% on another and 3/4 on a third. Which list puts these in order from smallest to largest?",
+      "opts": ["65%, 0.7, 3/4", "0.7, 65%, 3/4", "3/4, 0.7, 65%", "65%, 3/4, 0.7"],
+      "why": "Write each as a percentage: 0.7 = 70%, 65% stays 65%, and 3/4 = 75%. The order is 65%, 70%, 75%. Comparing 0.7 with 65 without converting wrongly makes 0.7 look smaller.",
+      "clue": "Write all three amounts in the same form first."
+    }
+  },
+  "mat-percentages-amounts": {
+    "title": "Percentages of amounts",
+    "card": [
+      "Percent means out of 100. To find a percentage of an amount, change the percentage to a decimal by dividing by 100, then multiply.",
+      "Example: 15% of $80. 15% = 0.15, and 0.15 × 80 = $12.",
+      "Some percentages are quick: 50% is half, 10% is dividing by 10, and 1% is dividing by 100. Use them to build other percentages, so 30% is 3 × 10%.",
+      "To find a percentage increase, work out the percentage of the amount, then add it to the amount. For a decrease, such as a discount, subtract it."
+    ],
+    "remember": "Percentage of an amount: change the percentage to a decimal, then multiply.",
+    "a": {
+      "q": "What is 35% of $60?",
+      "opts": ["$21", "$2.10", "$25", "$210"],
+      "why": "35% = 0.35, and 0.35 × 60 = $21. As a check, 30% is 3 × $6 = $18 and 5% is $3, giving $21. The answer $2.10 comes from writing 35% as 0.035, which moves the decimal point one place too far.",
+      "clue": "Write 35% as a decimal first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's phone costs $400. It is on sale with a 20% discount. What is the sale price?",
+      "opts": ["$320", "$80", "$480", "$380"],
+      "why": "20% of 400 = 0.2 × 400 = $80. A discount is taken off the price, so 400 − 80 = $320. The answer $80 is only the discount, not the sale price.",
+      "clue": "Find the discount, then decide whether to add or subtract it."
+    }
+  },
+  "mat-ratios-rates": {
+    "title": "Ratios and rates",
+    "card": [
+      [
+        "Ratio",
+        "A ratio compares amounts of the same kind, in the same unit. A ratio of 2:3 means 2 parts to 3 parts."
+      ],
+      [
+        "Rate",
+        "A rate compares amounts in different units, such as km per hour or dollars per kilogram. To find a rate, divide by the amount of the second unit."
+      ],
+      [
+        "Sharing",
+        "To share in a ratio, add the parts, then divide the total by that number to find one part. Example: share $40 in the ratio 1:3. Parts = 1 + 3 = 4, so one part = 40 ÷ 4 = $10. The shares are $10 and $30."
+      ],
+      "Rate example: 150 km in 3 hours is 150 ÷ 3 = 50 km per hour."
+    ],
+    "remember": "A ratio compares the same units. A rate compares different units.",
+    "a": {
+      "q": "Which of these is a rate?",
+      "opts": [
+        "240 km travelled in 3 hours",
+        "3 red cups for every 5 blue cups",
+        "20 girls in a class of 30 students",
+        "A 4 m rope cut into 2 m pieces"
+      ],
+      "why": "Kilometres and hours are different units, so 240 km in 3 hours is a rate (80 km per hour). Red cups to blue cups compares the same kind of thing, so it is a ratio.",
+      "clue": "Look for two different units."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam and Ava share $350 in the ratio 3:4. How much does Ava get?",
+      "opts": ["$200", "$150", "$262.50", "$140"],
+      "why": "Parts = 3 + 4 = 7, so one part = 350 ÷ 7 = $50. Ava has 4 parts, so 4 × 50 = $200. Liam's share is $150, which is the tempting wrong answer.",
+      "clue": "Find the value of one part first."
+    }
+  },
+  "mat-estimating-rounding": {
+    "title": "Estimating and rounding",
+    "card": [
+      "To round, look at the digit just after the place you want. If it is 5 or more, round up. If it is 4 or less, leave the digit as it is.",
+      "Round to a sensible place for the job. Money is usually rounded to the nearest cent, and a count of people is a whole number.",
+      "To estimate, round each number to one or two non-zero digits, then work with the easy numbers. For 38 × 52, think 40 × 50 = 2000.",
+      "Estimate before you use a calculator. If the calculator shows 1976 for 38 × 52, it is close to 2000, so it is sensible. An answer of 19 760 is about ten times too big, so a typing slip is likely."
+    ],
+    "remember": "Estimate first with easy numbers, then check that the calculator answer is close.",
+    "a": {
+      "q": "What is 6.48 rounded to the nearest whole number?",
+      "opts": ["6", "7", "6.5", "6.4"],
+      "why": "The digit after the units place is 4, so the 6 stays the same. Rounding up to 7 would only be right if that digit were 5 or more.",
+      "clue": "Look at the first digit after the decimal point."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam uses a calculator for 49 × 21 and gets 10 290. Which estimate shows the answer is about ten times too big?",
+      "opts": [
+        "50 × 20 = 1000, so the answer should be near 1000",
+        "50 × 20 = 100, so the answer should be near 100",
+        "50 × 20 = 10 000, so the answer should be near 10 000",
+        "50 × 20 = 700, so the answer should be near 700"
+      ],
+      "why": "49 rounds to 50 and 21 rounds to 20, and 50 × 20 = 1000. The calculator answer of 10 290 is about ten times that, so a typing slip is likely. The correct answer is 1029.",
+      "clue": "Round each number, then multiply the easy numbers."
+    }
+  },
+  "mat-patterns-rules": {
+    "title": "Patterns and rules",
+    "card": [
+      "A pattern is a list of numbers that follows a rule. Some patterns change by the same amount each step. A rule is a short sentence or formula that gives any value in the pattern.",
+      "When a pattern goes up by the same amount each step, that amount multiplies the step number. Then check whether anything extra is added or taken away.",
+      "Example: a gym charges $5, $10, $15, $20 for 1, 2, 3, 4 classes. It goes up by 5 each time, so cost = 5 × number of classes.",
+      "Once you have the rule, put in any number. For 12 classes, cost = 5 × 12 = $60. You do not need to list every step."
+    ],
+    "remember": "Find the change each step, write it as a rule, then use the rule for any value.",
+    "a": {
+      "q": "A pattern of costs is $3, $6, $9, $12 for 1, 2, 3, 4 items. Which rule fits?",
+      "opts": [
+        "cost = 3 × number of items",
+        "cost = 3 + number of items",
+        "cost = 6 × number of items",
+        "cost = 12 × number of items"
+      ],
+      "why": "Each extra item adds $3, so the cost is 3 times the number of items. Check: 3 × 4 = 12. The rule 3 + number of items gives $4 for 1 item, which is wrong.",
+      "clue": "How much does the cost go up for each extra item?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's rule for a pizza night is cost = 8 × number of people. What is the cost for 7 people?",
+      "opts": ["$56", "$15", "$48", "$64"],
+      "why": "Put 7 into the rule: 8 × 7 = 56, so the cost is $56. Adding gives $15, which treats the rule as 8 + 7, but the rule multiplies.",
+      "clue": "Replace the number of people with 7, then follow the operation in the rule."
+    }
+  },
+  "mat-solving-simple-equations": {
+    "title": "Solving simple equations",
+    "card": [
+      "An equation says two things are equal. Solving it means finding the value of the unknown, such as x, that makes it true.",
+      "To solve it, undo the operations on the unknown in reverse order. Whatever you do to one side, do to the other.",
+      "Example: 3x + 5 = 20. The unknown was multiplied by 3, then 5 was added. Undo the adding first: subtract 5 from both sides to get 3x = 15.",
+      "Then undo the multiplying: divide both sides by 3 to get x = 5. Check by putting 5 back in: 3 × 5 + 5 = 20."
+    ],
+    "remember": "Undo the last operation first, do the same to both sides, then check.",
+    "a": {
+      "q": "Solve 2x + 7 = 19. What is x?",
+      "opts": ["6", "13", "12", "10"],
+      "why": "Subtract 7 from both sides to get 2x = 12, then divide by 2 to get x = 6. Check: 2 × 6 + 7 = 19. The answer 13 comes from adding 7 instead of subtracting it: (19 + 7) ÷ 2 = 13.",
+      "clue": "Undo the adding before the multiplying."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila pays $12 to join a gym, then $8 per class. She has paid $60 in total. This gives 12 + 8n = 60. How many classes has she attended?",
+      "opts": ["6", "9", "48", "7.5"],
+      "why": "Subtract 12 from both sides to get 8n = 48, then divide by 8 to get n = 6. Check: 12 + 8 × 6 = 60. The answer 9 comes from adding the joining fee instead of subtracting it: (60 + 12) ÷ 8 = 9.",
+      "clue": "Take away the joining fee before dividing."
+    }
+  },
+  "mat-mean-median-range-context": {
+    "title": "Mean, median and spread",
+    "card": [
+      ["Mean", "Add all the values, then divide by how many there are. Example: 2, 4, 9 has a mean of 15 ÷ 3 = 5."],
+      [
+        "Median",
+        "Put the values in order and take the middle one. With two middle values, take the number halfway between them. For 2, 4, 9 the median is 4."
+      ],
+      [
+        "Range",
+        "Range = highest value − lowest value. For 2, 4, 9 it is 9 − 2 = 7. One very high or low value changes the mean and range a lot, but the median and IQR much less."
+      ],
+      [
+        "IQR",
+        "Split the ordered data into a lower and upper half. Q1 is the median of the lower half, Q3 the median of the upper half, and IQR = Q3 − Q1. For 2, 4, 6, 8, 10, 12: Q1 = 4, Q3 = 10, IQR = 6."
+      ]
+    ],
+    "remember": "Mean and median give a typical value. Range and IQR give the spread.",
+    "a": {
+      "q": "What is the mean of these quiz scores: 4, 7, 5, 8, 6?",
+      "opts": ["6", "5", "7", "30"],
+      "why": "Add the scores: 4 + 7 + 5 + 8 + 6 = 30. Divide by 5 scores to get 6. The answer 30 is only the total, and the division step has been skipped.",
+      "clue": "Add them up, then divide by how many scores there are."
+    },
+    "b": {
+      "d": 3,
+      "q": "Five houses in a street sold for $500 000, $520 000, $540 000, $560 000 and $2 400 000. Which measure is changed least by the $2.4 million sale, and what is its value?",
+      "opts": ["The median, $540 000", "The mean, $904 000", "The range, $1 900 000", "The mean, $540 000"],
+      "why": "The middle of the five ordered prices is $540 000, and the very high sale barely moves it. The mean is 4 520 000 ÷ 5 = $904 000 and the range is $1 900 000, and both are pulled up a lot by that one sale.",
+      "clue": "Picture each measure with and without the $2.4 million sale."
+    }
+  },
+  "mat-comparing-data-sets": {
+    "title": "Comparing data sets",
+    "card": [
+      "To compare two data sets, look at the same measures for both: a typical value (mean or median) and the spread (range or IQR).",
+      "Graphs help. Two box plots drawn on the same scale show the medians, spreads and ranges side by side.",
+      "Write the comparison in words and use the numbers. Example: Team A has a median of 40 and Team B has 32, so Team A usually scores higher.",
+      "A smaller spread means more consistent results. A fair conclusion uses both a typical value and the spread, and it is stated in the context of the data."
+    ],
+    "remember": "Compare the typical value and the spread, using the same measures for both sets.",
+    "a": {
+      "q": "Team A scores have a median of 40 and an IQR of 6. Team B scores have a median of 32 and an IQR of 12. Which is true?",
+      "opts": [
+        "Team A usually scores higher and is more consistent",
+        "Team B usually scores higher and is more consistent",
+        "Team A usually scores higher and is less consistent",
+        "Team B usually scores lower and is more consistent"
+      ],
+      "why": "Team A has the higher median, so it usually scores higher. Its IQR is smaller, so its scores are more consistent. A larger IQR does not mean better scores, it means more spread.",
+      "clue": "Compare the medians for typical scores, then the IQRs for consistency."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's café sells a median of 52 coffees a day with a range of 20. Sam's café sells a median of 52 with a range of 50. What is a fair conclusion?",
+      "opts": [
+        "Typical sales are equal, but Sam's sales vary more",
+        "Typical sales are equal, but Mia's sales vary more",
+        "Sam's typical sales are higher, and his sales vary more",
+        "Mia's typical sales are higher, and her sales vary less"
+      ],
+      "why": "The medians are equal, so typical daily sales are the same. Sam's range of 50 is larger than Mia's 20, so his sales vary more, not Mia's. A larger range shows more spread, not higher sales.",
+      "clue": "Check the medians first, then compare the ranges."
+    }
+  },
+  "mat-unit-pricing": {
+    "title": "Comparing products",
+    "card": [
+      "To compare products of different sizes, work out the price per unit. Price per unit = price ÷ amount.",
+      "Example: a 500 g jar of peanut butter costs $4.00 and a 750 g jar costs $5.25. $4.00 ÷ 500 = $0.008 per g, and $5.25 ÷ 750 = $0.007 per g. The 750 g jar is cheaper per gram.",
+      "Check that the units match before you divide. Change kg to g, or mL to L, so both products use the same unit.",
+      "Price is not the only thing to compare. Look at features, such as data in a phone plan, and terms, such as contract length or extra fees. The cheapest price per unit may not suit your needs."
+    ],
+    "remember": "Compare in the same unit, then check features and terms as well as price.",
+    "a": {
+      "q": "A 2 L bottle of juice costs $3.60. A 750 mL bottle costs $1.50. Which is cheaper per litre, and what is its price per litre?",
+      "opts": [
+        "The 2 L bottle, at $1.80 per litre",
+        "The 750 mL bottle, at $2.00 per litre",
+        "The 2 L bottle, at $1.80 per 100 mL",
+        "The 750 mL bottle, at $1.50 per litre"
+      ],
+      "why": "$3.60 ÷ 2 = $1.80 per litre. For the small bottle, 750 mL is 0.75 L, so $1.50 ÷ 0.75 = $2.00 per litre. The 2 L bottle is cheaper per litre. Using $1.50 as the price per litre skips the unit change.",
+      "clue": "Change 750 mL to litres before you divide."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya compares two phone plans. Plan X costs $40 a month and gives 20 GB of data. Plan Y costs $55 a month and gives 50 GB. Priya uses about 15 GB a month. Which plan suits Priya better, and why?",
+      "opts": [
+        "Plan X, because 20 GB covers her use for $15 less",
+        "Plan Y, because its lower price per GB saves her money",
+        "Plan X, because its price per GB is lower than Plan Y's",
+        "Plan Y, because 50 GB gives her more data for $15 more"
+      ],
+      "why": "Plan X covers her 15 GB and costs $15 less each month. Plan Y is cheaper per GB ($1.10 against $2.00), but Priya would not use most of the extra data, so she would pay more for no real gain. The lowest price per unit may not suit her needs.",
+      "clue": "How much of the extra data would Priya actually use?"
+    }
+  },
+  "mat-planning-life-stages": {
+    "title": "Planning for life stages",
+    "card": [
+      "Money needs change as life moves from school to work, renting, family and retirement. A plan that suits one stage may not suit the next.",
+      "At school, income is often small, such as pocket money or a part-time job. Starting full-time work brings a regular wage. Moving out to rent adds costs such as rent, bills and transport.",
+      "A family adds costs such as child care, nappies and a larger home. Income may fall if a parent works less. Example: Sam earns $900 a week and pays $350 rent, and a new baby means Sam's plan needs to change.",
+      "Near retirement, the aim moves to having enough to live on once work income stops, such as from superannuation and savings."
+    ],
+    "remember": "Each life stage can change both income and costs, so review the plan at each change.",
+    "a": {
+      "q": "Leo finishes school, starts a full-time job and moves into a rented flat. How do his money needs change?",
+      "opts": [
+        "Income rises, and costs such as rent and bills begin",
+        "Income rises, so he no longer needs to plan spending",
+        "Costs rise, but his income stays at part-time levels",
+        "Income stays the same, but rent replaces fun spending"
+      ],
+      "why": "A full-time job brings a regular wage, usually more than school income, and renting adds rent, bills and transport. A higher income does not remove the need for a plan, because the new costs still have to fit within it.",
+      "clue": "Look at what comes in and what goes out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya and her partner have their first child. Priya will work part-time for a year. Which change to their plan fits this stage?",
+      "opts": [
+        "Plan for new costs and a lower income for a while",
+        "Plan for new costs while income stays the same",
+        "Plan for lower costs, as she will be home more",
+        "Plan to live on super, as her work income stops"
+      ],
+      "why": "A baby adds costs such as child care and nappies, and part-time work means Priya earns less, so the plan must cover both. Planning only for the new costs is the tempting mistake, because it misses the drop in income.",
+      "clue": "Part-time work changes more than her hours."
+    }
+  },
+  "mat-study-debts-government-support": {
+    "title": "Study debts and government support",
+    "card": [
+      [
+        "HECS-HELP",
+        "a government loan that covers university fees. Compulsory repayments start only once a person's income passes a set threshold."
+      ],
+      [
+        "Repayments",
+        "these are usually collected through the tax system, often taken from pay by the employer. People can also choose to make extra voluntary repayments."
+      ],
+      [
+        "Government support",
+        "payments such as child-care support lower what a family pays. The government pays part of the cost, so the family pays the rest."
+      ],
+      "Below the threshold, no compulsory repayment is due that year, but the debt stays. The threshold and rates change over time, so check current figures."
+    ],
+    "remember": "HECS-HELP is repaid through tax once income passes the threshold. Support payments cut what a family pays.",
+    "a": {
+      "q": "Jai has a HECS-HELP debt. His income this year is below the repayment threshold. What happens to his debt repayments this year?",
+      "opts": [
+        "No compulsory repayment is due this year",
+        "He must pay the full debt at once",
+        "He pays a bill straight to the university",
+        "The debt is cancelled for good"
+      ],
+      "why": "Compulsory HECS-HELP repayments start only once income passes the threshold, so none is due this year. The debt is not cancelled, because it stays and is repaid in a later year when income is high enough.",
+      "clue": "Compare Jai's income with the threshold."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya's child-care costs $120 a day. A government payment covers $70 of it. How much does Priya pay for each day?",
+      "opts": ["$50", "$70", "$120", "$190"],
+      "why": "The government pays part of the cost, so Priya pays the rest: $120 − $70 = $50. Paying $70 is a mistake, because that is the amount the government covers.",
+      "clue": "Take the government's share away from the full cost."
+    }
+  },
+  "mat-financial-trends": {
+    "title": "Financial trends",
+    "card": [
+      "A financial trend is the way a money figure changes over time, such as prices, interest rates, wages or house prices. Looking at data over several years shows the pattern, not just one number.",
+      [
+        "CPI",
+        "The Consumer Price Index (CPI) tracks the price of a typical basket of goods and services. If the CPI rises from 100 to 105, prices have risen by 5%."
+      ],
+      [
+        "Wages",
+        "Wages show what people earn. If prices rise by 5% and wages rise by 2%, a worker can buy less than before, even though their pay went up."
+      ],
+      "Percentage change = (new − old) ÷ old × 100. Example: a wage rises from $1000 to $1030 a week. The change is 30 ÷ 1000 × 100 = 3%."
+    ],
+    "remember": "Compare how fast prices and wages change: if prices rise faster than wages, buying power falls.",
+    "a": {
+      "q": "The CPI rises from 120 to 126 over a year. By what percentage have prices risen?",
+      "opts": ["5%", "6%", "4.8%", "126%"],
+      "why": "The change is 126 − 120 = 6. Then 6 ÷ 120 × 100 = 5%. Using 6 as the percentage forgets to divide by the old value, which is the tempting mistake.",
+      "clue": "Divide the change by the starting value."
+    },
+    "b": {
+      "d": 3,
+      "q": "Over a year, Sam's wage rises by 2% and prices rise by 4%. What has happened to what Sam's wage can buy?",
+      "opts": [
+        "It has fallen, as prices rose faster than the wage",
+        "It has risen, as the wage went up by 2%",
+        "It has stayed the same, as both figures rose",
+        "It has fallen, as the wage rose by less than 4 dollars"
+      ],
+      "why": "Prices rose by more than the wage, so each dollar buys less and Sam can afford less than before. A pay rise alone does not mean buying power rises, because it must be compared with price changes.",
+      "clue": "Compare the two percentages, not just the wage."
+    }
+  },
+  "mat-shapes-objects": {
+    "title": "Shapes and objects",
+    "card": [
+      [
+        "Shapes",
+        "A 2D shape is flat. It is described by its sides and angles. A triangle has 3 sides and 3 angles. A rectangle has 4 sides and 4 right angles (90°)."
+      ],
+      [
+        "Objects",
+        "A 3D object takes up space. It is described by its faces (flat surfaces), edges (where two faces meet) and vertices (corners). A cube has 6 faces, 12 edges and 8 vertices."
+      ],
+      [
+        "Composite",
+        "A composite shape or object is made by joining simpler ones. An L-shape is two rectangles joined. A house can be a rectangular prism with a triangular prism as its roof."
+      ],
+      "To describe a composite, split it into simple parts and name each part. A tent shape is a triangle on top of a rectangle. Where two parts join along a whole side, that side is inside, so it is not on the outline."
+    ],
+    "remember": "Shapes have sides and angles. Objects have faces, edges and vertices. Composites are built from simple parts.",
+    "a": {
+      "q": "How many faces does a rectangular prism (a box shape) have?",
+      "opts": ["6", "8", "12", "4"],
+      "why": "A box has a top, a bottom and four sides, so 6 faces. 12 is the number of edges and 8 is the number of vertices, which are different parts of the object.",
+      "clue": "Faces are the flat surfaces. Count top, bottom and sides."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jo draws a flat shape made of a square with an equilateral triangle joined along one of its sides, with no gap. How many sides does the new outline have?",
+      "opts": ["5", "7", "6", "4"],
+      "why": "The square has 4 sides and the triangle has 3, which makes 7. The shared side is inside the shape, and it was counted once for each part, so 7 − 2 = 5 sides. 7 counts the shared side twice, and 6 still counts it once.",
+      "clue": "The joined side is no longer on the outside."
+    }
+  },
+  "mat-reading-plans-diagrams": {
+    "title": "Reading plans and diagrams",
+    "card": [
+      "A plan is a drawing of a place seen from above. Its scale tells you how much smaller it is: 1:100 means 1 cm on the plan is 100 cm in real life.",
+      "To find a real length, multiply the plan length by the scale number, then change units (100 cm = 1 m). Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+      "The scale applies to each length, not to an area. For a real area, change the length and width to real lengths first, then multiply. Example: 2 cm by 4 cm on a 1:50 plan is 1 m by 2 m, so the area is 2 m².",
+      "Symbols show features such as doors, windows and stairs. A legend on the plan explains what each symbol means."
+    ],
+    "remember": "Real length = plan length × scale number. For an area, scale each length first, then multiply.",
+    "a": {
+      "q": "A bedroom is 6 cm long on a plan with a scale of 1:50. How long is the real bedroom?",
+      "opts": ["3 m", "300 m", "30 m", "30 cm"],
+      "why": "6 × 50 = 300 cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
+      "clue": "Multiply by 50, then change cm to m."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a 1:100 plan, Ava's deck is 5 cm long and 3 cm wide. What is the real area of the deck?",
+      "opts": ["15 m²", "1500 m²", "0.15 m²", "8 m²"],
+      "why": "The real deck is 5 m by 3 m, because 5 × 100 = 500 cm and 3 × 100 = 300 cm. Then 5 × 3 = 15 m². Multiplying the plan area of 15 cm² by 100 gives 0.15 m², which is wrong because the scale applies to each length, not to the area.",
+      "clue": "Find the real length and width first, in metres."
+    }
+  },
+  "mat-scale-maps": {
+    "title": "Scale and maps",
+    "card": [
+      "A map scale such as 1:50 000 means 1 unit on the map is 50 000 of the same unit in real life. So 1 cm on the map is 50 000 cm on the ground.",
+      "To find a real distance, measure the map distance and multiply by the second number in the scale. Then change the units to something sensible.",
+      "Useful changes: 100 cm = 1 m, 1000 m = 1 km, and 100 000 cm = 1 km. So on a 1:50 000 map, 2 cm on the map is 100 000 cm, which is 1 km.",
+      "Worked example: on a 1:25 000 map, two towns are 6 cm apart. 6 × 25 000 = 150 000 cm. Divide by 100 000 to get 1.5 km."
+    ],
+    "remember": "Map length × scale number gives real length. Then change the units.",
+    "a": {
+      "q": "On a 1:50 000 map, a walking track measures 4 cm. What is its real length?",
+      "opts": ["2 km", "200 m", "20 km", "4 km"],
+      "why": "4 × 50 000 = 200 000 cm. Dividing by 100 000 gives 2 km. The option 200 m comes from dividing by 1000 instead of 100 000, which is a unit mistake.",
+      "clue": "Multiply by 50 000, then change cm to km."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a 1:25 000 map, Priya measures 7.2 cm from a campsite to a lake. What is the real distance?",
+      "opts": ["1.8 km", "18 km", "180 m", "3.6 km"],
+      "why": "7.2 × 25 000 = 180 000 cm. Dividing by 100 000 gives 1.8 km. The option 18 km comes from dividing by 10 000, which mixes up the cm to km change.",
+      "clue": "Multiply by 25 000, then use 100 000 cm = 1 km."
+    }
+  },
+  "mat-routes-travel-times": {
+    "title": "Routes and travel times",
+    "card": [
+      "A map or app gives the distance of each route. Speed is how far you travel in one hour, such as 60 km/h.",
+      "Time = distance ÷ speed. The answer is in hours when distance is in km and speed is in km/h.",
+      "To turn hours into minutes, multiply by 60. So 0.5 hours is 30 minutes, and 0.25 hours is 15 minutes.",
+      "Example: 90 km at 60 km/h takes 90 ÷ 60 = 1.5 hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
+    ],
+    "remember": "Time = distance ÷ speed, then change hours to minutes if needed.",
+    "a": {
+      "q": "Noah drives 120 km at an average speed of 80 km/h. How long does the trip take?",
+      "opts": ["1 hour 30 minutes", "1 hour 20 minutes", "1 hour 50 minutes", "1 hour 5 minutes"],
+      "why": "120 ÷ 80 = 1.5 hours, which is 1 hour 30 minutes. 1 hour 50 minutes is tempting, but it reads the .5 as 50 minutes instead of 0.5 × 60 = 30 minutes.",
+      "clue": "Divide distance by speed, then change any part of an hour to minutes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya cycles 18 km at 24 km/h, stops for a 10 minute break, then cycles 6 km at 12 km/h. How long is the whole trip?",
+      "opts": ["1 hour 25 minutes", "1 hour 15 minutes", "1 hour 10 minutes", "1 hour 35 minutes"],
+      "why": "The first part takes 18 ÷ 24 = 0.75 hours, or 45 minutes. The second takes 6 ÷ 12 = 0.5 hours, or 30 minutes. 45 + 10 + 30 = 85 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
+      "clue": "Work out each ride separately, then add the break."
+    }
+  },
+  "mat-finding-linear-rule": {
+    "title": "Finding a linear rule",
+    "card": [
+      "A straight line has a rule y = mx + c. Two points on the line are enough to find m and c.",
+      [
+        "Step 1",
+        "Find the gradient. m = (y₂ − y₁) ÷ (x₂ − x₁). Subtract the y values and the x values in the same order."
+      ],
+      ["Step 2", "Substitute m and one of the points into y = mx + c. Then solve for c."],
+      [
+        "Example",
+        "The line passes through (1, 5) and (3, 11). m = (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = 3. Using (1, 5): 5 = 3 × 1 + c, so c = 2. The rule is y = 3x + 2."
+      ]
+    ],
+    "remember": "Gradient from the two points first, then substitute one point to get c.",
+    "a": {
+      "q": "A line passes through (2, 7) and (5, 16). What is its gradient?",
+      "opts": ["3", "9", "3/9", "−3"],
+      "why": "m = (16 − 7) ÷ (5 − 2) = 9 ÷ 3 = 3. Dividing the x change by the y change gives 3/9, which is the wrong way up.",
+      "clue": "Divide the change in y by the change in x."
+    },
+    "b": {
+      "d": 3,
+      "q": "A line passes through (2, 3) and (4, 11). What is its rule?",
+      "opts": ["y = 4x − 5", "y = 4x + 5", "y = 4x − 1", "y = 2x − 1"],
+      "why": "m = (11 − 3) ÷ (4 − 2) = 8 ÷ 2 = 4. Using (2, 3): 3 = 4 × 2 + c, so c = −5. The rule is y = 4x − 5, and it also gives 11 when x = 4. Writing y = 4x + 5 comes from a sign error when solving for c.",
+      "clue": "Your rule should give the right y value for both points."
+    }
+  },
+  "mat-linear-models-context": {
+    "title": "Linear models in context",
+    "card": [
+      "A linear model has the form y = mx + c. It fits a situation where something changes by the same amount for each step.",
+      [
+        "Gradient",
+        "m is a rate. It tells you how much y changes for each 1 unit increase in x, such as dollars per kilometre."
+      ],
+      [
+        "Intercept",
+        "c is the starting value, the value of y when x = 0. It is a fixed amount, such as a call-out fee paid before any work is done."
+      ],
+      "Example: a plumber charges C = 45t + 80, where t is hours worked. The rate is $45 per hour and the call-out fee is $80. For 3 hours, C = 45 × 3 + 80 = $215."
+    ],
+    "remember": "In a linear model, the gradient is the rate and the intercept is the starting value.",
+    "a": {
+      "q": "A taxi fare in Geelong is F = 2.5d + 4, where d is the distance in km. What does the 2.5 mean?",
+      "opts": [
+        "The fare rises by $2.50 for each extra kilometre",
+        "The fare for a trip of 0 km is $2.50",
+        "The fare for a trip of 4 km is $2.50",
+        "The fare rises by $4 for each extra kilometre"
+      ],
+      "why": "The 2.5 is the gradient, so it is the rate: $2.50 for each extra km. The 4 is the intercept, the fixed starting fee, so the option giving $4 per kilometre mixes up the two.",
+      "clue": "Which number multiplies d?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya hires a ladder in Bendigo. The cost is C = 12n + 30, where n is the number of days. What is the cost for 5 days?",
+      "opts": ["$90", "$60", "$150", "$102"],
+      "why": "C = 12 × 5 + 30 = 60 + 30 = $90. Leaving out the $30 starting fee gives $60, which is the tempting mistake.",
+      "clue": "Multiply the daily rate by 5, then add the fixed amount."
+    }
+  },
+  "mat-simultaneous-linear-equations-2": {
+    "title": "Simultaneous linear equations",
+    "card": [
+      "Two linear equations are simultaneous when we want the x and y values that make both true. This is the point where their graphs cross. A break-even point is one such point: where cost equals income, so there is no profit or loss.",
+      ["Graphing", "Draw both lines and read off the point where they intersect."],
+      [
+        "Substitution",
+        "Write one equation as y = ..., then put that into the other equation and solve for x. Then find y. For break-even, set the cost rule equal to the income rule and solve."
+      ],
+      [
+        "Elimination",
+        "Add or subtract the equations to cancel one variable. Example: x + y = 10 and x − y = 4. Adding gives 2x = 14, so x = 7, and then y = 3."
+      ]
+    ],
+    "remember": "The solution is the point where both equations are true, which is where the lines cross.",
+    "a": {
+      "q": "Solve x + y = 12 and x − y = 2. What is the solution?",
+      "opts": ["x = 7, y = 5", "x = 5, y = 7", "x = 10, y = 2", "x = 6, y = 6"],
+      "why": "Adding the equations gives 2x = 14, so x = 7. Then y = 12 − 7 = 5. Swapping the values gives x = 5, y = 7, which fails x − y = 2.",
+      "clue": "Add the two equations to cancel y."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo sells mugs in Ballarat. His cost is C = 400 + 5n and his income is R = 13n, where n is the number of mugs. How many mugs give the break-even point?",
+      "opts": ["50", "30", "80", "400"],
+      "why": "Break-even is where cost equals income: 400 + 5n = 13n, so 400 = 8n and n = 50. Check: C = 400 + 250 = 650 and R = 13 × 50 = 650. Dividing 400 by 5 gives 80, but that ignores the income of 13 per mug.",
+      "clue": "Set the cost rule equal to the income rule."
+    }
+  },
+  "mat-piecewise-step-graphs": {
+    "title": "Piecewise and step graphs",
+    "card": [
+      [
+        "Piecewise graph",
+        "A piecewise graph is made of line segments, each with its own rule over its own range of x values. The segments can join up where the rule changes, as on a tax scale."
+      ],
+      [
+        "Step graph",
+        "A step graph is made of horizontal segments with jumps between them. The value stays fixed over a range, then jumps to a new amount."
+      ],
+      ["Open and closed dots", "A closed dot means the end value is included. An open dot means it is not."],
+      "Example: a car park charges $5 for up to 1 hour, then $9 for over 1 hour up to 2 hours. A stay of exactly 1 hour costs $5. A stay of 1.5 hours costs $9."
+    ],
+    "remember": "Piecewise graphs change rule at set points. Step graphs hold a value, then jump.",
+    "a": {
+      "q": "A car park charges $4 for up to 1 hour, $7 for over 1 hour up to 2 hours, and $10 for over 2 hours up to 3 hours. What does a stay of 2.5 hours cost?",
+      "opts": ["$10", "$7", "$4", "$17"],
+      "why": "2.5 hours is over 2 hours and up to 3 hours, so the charge is $10. The charge is read from one step, not added up across steps, so $17 is wrong.",
+      "clue": "Find which time range 2.5 hours falls in."
+    },
+    "b": {
+      "d": 3,
+      "q": "A step graph for a car park shows $6 for up to 2 hours, then $11 for over 2 hours up to 4 hours. Which cost applies to a stay of exactly 2 hours?",
+      "opts": [
+        "$6, because the first step includes 2 hours",
+        "$11, because the next step starts at 2 hours",
+        "$8.50, the average of the two steps",
+        "$17, as both steps are charged"
+      ],
+      "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step starts just after 2 hours, so it has an open dot there. A stay has one charge, not an average or a total.",
+      "clue": "Check which step has the closed dot at 2 hours."
+    }
+  },
+  "mat-direct-inverse-variation": {
+    "title": "Direct and inverse variation",
+    "card": [
+      [
+        "Direct",
+        "y = kx, where k is a constant. When x doubles, y doubles. The graph is a straight line through the origin."
+      ],
+      [
+        "Inverse",
+        "y = k/x, where k is a constant. When x doubles, y halves. The graph is a curve that falls and never touches either axis."
+      ],
+      "From a table, test the pattern. In direct variation y ÷ x is always the same. In inverse variation x × y is always the same.",
+      "Example: x = 2, 4, 5 and y = 20, 10, 8. Here x × y = 40 every time, so y = 40/x and the variation is inverse."
+    ],
+    "remember": "Direct: y ÷ x stays constant. Inverse: x × y stays constant.",
+    "a": {
+      "q": "A table gives x = 2, 4, 6 and y = 6, 12, 18. Which rule fits?",
+      "opts": ["y = 3x", "y = 12/x", "y = x + 4", "y = 3/x"],
+      "why": "Each y ÷ x equals 3, so y = 3x and the variation is direct. The rule y = 12/x is tempting because 12 appears in the table, but x × y is not constant: 2 × 6 = 12 and 4 × 12 = 48.",
+      "clue": "Divide each y by its x and compare."
+    },
+    "b": {
+      "d": 2,
+      "q": "Cars on a road travel the same 120 km. Time taken t hours varies with speed v km/h as t = 120/v. What happens to t when v is doubled?",
+      "opts": ["t is halved", "t is doubled", "t is reduced by 120", "t stays the same"],
+      "why": "The rule is inverse variation, so doubling v halves t. Doubling t would be direct variation, which is the tempting mistake.",
+      "clue": "Is the rule y = kx or y = k/x?"
+    }
+  },
+  "mat-transforming-data-linearity": {
+    "title": "Transforming data to linearity",
+    "card": [
+      "Some data form a curve when y is plotted against x. We can replace x with a transformed value, such as x², and plot again. If the new plot is a straight line, the transformation suits the data.",
+      "Use x² when y rises more and more steeply, as in y = kx². Use log x when y rises quickly at first, then levels off.",
+      "Use 1/x when y falls quickly and then levels off, as in y = k/x. Plotting y against 1/x then gives a straight line.",
+      "Example: x = 1, 2, 3 and y = 3, 12, 27. Then x² = 1, 4, 9, and each y ÷ x² is 3. So the points (1, 3), (4, 12) and (9, 27) lie on a straight line."
+    ],
+    "remember": "Match the shape: x² for steepening rises, log x for rises that level off, 1/x for falls that level off.",
+    "a": {
+      "q": "Data follow the rule y = 5x². Which plot gives a straight line?",
+      "opts": ["y against x²", "y against 1/x", "y against log x", "y against x"],
+      "why": "Since y = 5 × x², each y is 5 times its x² value, so y against x² gives a straight line. Plotting y against x gives a curve that rises more and more steeply, so it is not a line.",
+      "clue": "Which form of x appears in the rule?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A table shows x = 1, 2, 4 and y = 12, 6, 3. Which plot gives a straight line?",
+      "opts": ["y against 1/x", "y against log x", "y against x²", "y against x"],
+      "why": "As x grows, y falls quickly and then levels off, which suits 1/x. The 1/x values are 1, 0.5 and 0.25, and each y is 12 times its 1/x value, so the points lie on a line. Log x is tempting because the data level off, but it suits data that rise, not fall.",
+      "clue": "Is y rising or falling as x grows?"
+    }
+  },
+  "mat-modelling-non-linear-data": {
+    "title": "Modelling non-linear data",
+    "card": [
+      "Some curved data fit a rule y = kx^n, where n is a power such as 2, 3 or 1/2. The constant k sets the size of y.",
+      "Once you pick the power n, plot y against x^n. If the points lie on a straight line through the origin, the rule fits.",
+      "The gradient of that line is k. Find it as y ÷ x^n for any point on the line.",
+      "Example: x = 2 and y = 24 fit y = kx³. Then x³ = 8, so k = 24 ÷ 8 = 3 and the rule is y = 3x³."
+    ],
+    "remember": "Plot y against x^n. The gradient of the straight line is k.",
+    "a": {
+      "q": "Data fit y = kx². The point x = 3, y = 45 lies on the curve. What is k?",
+      "opts": ["5", "15", "135", "7.5"],
+      "why": "x² = 9, so k = 45 ÷ 9 = 5. The value 15 comes from dividing by x instead of x².",
+      "clue": "Square x before you divide."
+    },
+    "b": {
+      "d": 3,
+      "q": "The area of a circular garden bed is modelled as A = kr². When r = 2 m, A = 12.56 m². Which is the area when r = 5 m?",
+      "opts": ["78.5 m²", "31.4 m²", "62.8 m²", "25.12 m²"],
+      "why": "k = 12.56 ÷ 4 = 3.14. Then A = 3.14 × 25 = 78.5. The value 31.4 comes from scaling the area by 5 ÷ 2 instead of squaring the radius ratio.",
+      "clue": "Find k first, then square 5."
+    }
+  },
+  "mat-units-precision": {
+    "title": "Units and precision",
+    "card": [
+      "Convert units by multiplying or dividing. 1 m = 100 cm = 1000 mm, and 1 km = 1000 m. For area, square the factor: 1 m² = 10 000 cm². For volume, cube it: 1 m³ = 1 000 000 cm³.",
+      "Capacity is how much a container holds. 1 L = 1000 mL, and 1 L = 1000 cm³. So 1 mL = 1 cm³.",
+      "Scientific notation writes a number as a × 10ⁿ, with a from 1 up to (but not including) 10. So 45 000 = 4.5 × 10⁴ and 0.0032 = 3.2 × 10⁻³.",
+      "Significant figures start at the first non-zero digit. 0.004 07 has 3 significant figures. To round, look at the next digit: 5 or more rounds up. So 0.004 07 to 2 significant figures is 0.0041."
+    ],
+    "remember": "Square the factor for area, cube it for volume. Count significant figures from the first non-zero digit.",
+    "a": {
+      "q": "What is 3 m² written in cm²?",
+      "opts": ["30 000 cm²", "300 cm²", "3000 cm²", "300 000 cm²"],
+      "why": "1 m = 100 cm, so 1 m² = 100 × 100 = 10 000 cm². Then 3 × 10 000 = 30 000 cm². Using 100 instead of 10 000 gives 300, which is the length factor, not the area factor.",
+      "clue": "Square the length factor first."
+    },
+    "b": {
+      "d": 3,
+      "q": "A tank holds 2.5 m³ of water. How many litres is this?",
+      "opts": ["2500 L", "250 L", "25 000 L", "2 500 000 L"],
+      "why": "1 m³ = 1 000 000 cm³, and 1000 cm³ = 1 L, so 1 m³ = 1000 L. Then 2.5 × 1000 = 2500 L. Choosing 2 500 000 stops at cm³ and does not convert to litres.",
+      "clue": "Change m³ to cm³ first, then use 1 L = 1000 cm³."
+    }
+  },
+  "mat-perimeter-area-2": {
+    "title": "Perimeter and area",
+    "card": [
+      [
+        "Perimeter",
+        "the distance around the outside of a shape, in units such as cm. For a circle it is called the circumference: C = 2πr."
+      ],
+      [
+        "Area",
+        "the space inside a shape, in square units such as cm². Rectangle: length × width. Triangle: ½ × base × perpendicular height. Parallelogram: base × perpendicular height. Circle: πr²."
+      ],
+      [
+        "Arcs and sectors",
+        "A sector is a slice of a circle, and its arc is the curved edge. Take the fraction θ/360 of the whole circle. Arc length = θ/360 × 2πr. Sector area = θ/360 × πr²."
+      ],
+      [
+        "Composite shapes",
+        "Split the shape into simple parts, find each area, then add or subtract. Example: a 10 cm by 6 cm rectangle with a 4 cm by 3 cm rectangle cut out has area 60 − 12 = 48 cm²."
+      ]
+    ],
+    "remember": "Perimeter is the distance around. Area is the space inside. Split composite shapes into simple parts.",
+    "a": {
+      "q": "A triangle has a base of 10 cm and a perpendicular height of 6 cm. What is its area?",
+      "opts": ["30 cm²", "60 cm²", "16 cm²", "32 cm²"],
+      "why": "Area = ½ × 10 × 6 = 30 cm². 60 cm² is wrong because it leaves out the ½, which is the rectangle's area. 16 comes from adding the base and height.",
+      "clue": "A triangle is half of a rectangle with the same base and height."
+    },
+    "b": {
+      "d": 3,
+      "q": "A sector has a radius of 6 cm and an angle of 90°. What is its area, to the nearest cm²?",
+      "opts": ["28 cm²", "113 cm²", "9 cm²", "57 cm²"],
+      "why": "The sector is 90/360 = 1/4 of a circle. Area = 1/4 × π × 6² = 9π, which is about 28 cm². 113 cm² is the whole circle. 57 cm² uses 1/2 instead of 1/4.",
+      "clue": "Find the fraction of the circle first, then use πr²."
+    }
+  },
+  "mat-surface-area-volume": {
+    "title": "Surface area and volume",
+    "card": [
+      [
+        "Volume",
+        "A prism has the same cross-section (base) all the way along. Volume of a prism = base area × height, where height is the distance between the two ends."
+      ],
+      [
+        "Surface area",
+        "Surface area is the total area of every face of a solid. Add the areas of all the faces, including the two ends."
+      ],
+      ["Units", "Volume is in cubic units such as cm³. Surface area is in square units such as cm²."],
+      [
+        "Worked example",
+        "A box is 5 cm by 3 cm by 4 cm. Volume = (5 × 3) × 4 = 60 cm³. Faces: 2 × (5×3) + 2 × (5×4) + 2 × (3×4) = 30 + 40 + 24 = 94 cm²."
+      ]
+    ],
+    "remember": "Volume is base area × height in cubic units. Surface area adds every face in square units.",
+    "a": {
+      "q": "A prism has a base area of 12 cm² and a height of 7 cm. What is its volume?",
+      "opts": ["84 cm³", "19 cm³", "84 cm²", "38 cm³"],
+      "why": "Volume = base area × height = 12 × 7 = 84 cm³. Adding 12 and 7 gives 19, which mixes up the operation. Volume is measured in cubic units, so cm² is wrong.",
+      "clue": "Multiply the base area by the height."
+    },
+    "b": {
+      "d": 3,
+      "q": "A closed box measures 6 cm by 2 cm by 5 cm. What is its surface area?",
+      "opts": ["104 cm²", "60 cm²", "52 cm²", "104 cm³"],
+      "why": "The faces are 2 × (6×2) + 2 × (6×5) + 2 × (2×5) = 24 + 60 + 20 = 104 cm². Finding 6 × 2 × 5 = 60 gives the volume, not the surface area. Using each face type only once gives 52, which skips the pairs of faces.",
+      "clue": "A box has three pairs of matching faces."
+    }
+  },
+  "mat-similarity-scale-factors": {
+    "title": "Similarity and scale factors",
+    "card": [
+      "Two shapes are similar if they have the same shape but may differ in size. Matching angles are equal, and matching sides are in the same ratio.",
+      "The scale factor is the ratio of matching sides: new length ÷ original length. Example: a side of 4 cm becomes 10 cm, so the scale factor is 10 ÷ 4 = 2.5.",
+      "To find a missing side, multiply or divide by the scale factor. If the scale factor from small to large is 2.5, a 6 cm side on the small shape matches 6 × 2.5 = 15 cm on the large one.",
+      "Two triangles are similar if two pairs of angles are equal, or if all three pairs of sides are in the same ratio. Two equal angles are enough, as the third angle must then match too."
+    ],
+    "remember": "Similar shapes have equal angles and sides in a constant ratio, the scale factor.",
+    "a": {
+      "q": "Triangle ABC is similar to triangle PQR. Side AB is 6 cm and matching side PQ is 15 cm. Side BC is 8 cm. How long is the matching side QR?",
+      "opts": ["20 cm", "3.2 cm", "17 cm", "23 cm"],
+      "why": "The scale factor is 15 ÷ 6 = 2.5, so QR = 8 × 2.5 = 20 cm. Adding the difference of 9 cm to get 17 cm is tempting, but similar shapes scale by multiplying, not adding.",
+      "clue": "Find the scale factor first, then multiply."
+    },
+    "b": {
+      "d": 3,
+      "q": "In triangle DEF, angle D is 50° and angle E is 70°. In triangle XYZ, angle X is 50° and angle Z is 60°. What can be said about the two triangles?",
+      "opts": [
+        "They are similar, because two pairs of angles are equal",
+        "They are not similar, because the sides are not given",
+        "They are not similar, because only one angle matches",
+        "They are similar only if the side lengths are equal"
+      ],
+      "why": "Angle F = 180° − 50° − 70° = 60°, and angle Y = 180° − 50° − 60° = 70°. So all three angles match (D and X, E and Y, F and Z), and the triangles are similar. Side lengths are not needed, as equal angles are enough.",
+      "clue": "Find the missing angle in each triangle first."
+    }
+  },
+  "mat-scaling-area-volume": {
+    "title": "Scaling area and volume",
+    "card": [
+      "When every length of a shape or solid is multiplied by k, the new shape is similar to the old one. Here k is the scale factor for lengths.",
+      [
+        "Area",
+        "area scales by k². Area is length × length, so both lengths are multiplied by k. Example: k = 3 makes every area 9 times as large."
+      ],
+      [
+        "Volume",
+        "volume scales by k³. Volume is length × length × length, so three lengths are multiplied by k. Example: k = 2 makes every volume 8 times as large."
+      ],
+      "To find k from areas or volumes, go backwards. If the area ratio is 25, then k = √25 = 5. If the volume ratio is 27, then k = ∛27 = 3."
+    ],
+    "remember": "Lengths × k, areas × k², volumes × k³.",
+    "a": {
+      "q": "A small tin has a base area of 12 cm². A larger similar tin has all lengths 3 times as long. What is the base area of the larger tin?",
+      "opts": ["108 cm²", "36 cm²", "324 cm²", "27 cm²"],
+      "why": "Area scales by k² = 3² = 9, so the base area is 12 × 9 = 108 cm². Multiplying by 3 gives 36 cm², which scales the area as if it were a length.",
+      "clue": "Area is length × length, so k is used twice."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two similar water tanks hold 40 L and 320 L. The small tank is 50 cm tall. How tall is the large tank?",
+      "opts": ["100 cm", "200 cm", "400 cm", "150 cm"],
+      "why": "The volume ratio is 320 ÷ 40 = 8, so k³ = 8 and k = 2. The height is 50 × 2 = 100 cm. Using 8 as the length factor gives 400 cm, which forgets that volume scales by k³.",
+      "clue": "Find k by going backwards from the volume ratio."
+    }
+  },
+  "mat-quadratic-graphs": {
+    "title": "Quadratic graphs",
+    "card": [
+      "A quadratic graph is a parabola. In turning point form, y = a(x − h)² + k, the vertex (turning point) is (h, k). Note the sign: (x − 3) gives h = 3, and (x + 3) = (x − (−3)) gives h = −3.",
+      "If a is positive, the parabola opens upwards and the vertex is the lowest point. If a is negative, it opens downwards and the vertex is the highest point.",
+      "For the y-intercept, put x = 0. For the x-intercepts, put y = 0, then solve by factorising or by the quadratic formula.",
+      "Example: y = (x − 2)² − 9 has vertex (2, −9). Setting y = 0 gives (x − 2)² = 9, so x − 2 = 3 or −3, and x = 5 or −1."
+    ],
+    "remember": "To get h, flip the sign of the number inside the bracket. k is read as it is. Set y = 0 for x-intercepts.",
+    "a": {
+      "q": "What is the vertex of y = 2(x + 4)² − 7?",
+      "opts": ["(−4, −7)", "(4, −7)", "(−4, 7)", "(4, 7)"],
+      "why": "Write (x + 4) as (x − (−4)), so h = −4. The k value is −7, so the vertex is (−4, −7). The option (4, −7) is tempting but copies the sign inside the bracket.",
+      "clue": "Whatever is added inside the bracket, h has the opposite sign."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya graphs y = −(x − 1)² + 16. What are the x-intercepts?",
+      "opts": ["x = −3 and x = 5", "x = −5 and x = 3", "x = 1 and x = 16", "x = 0 and x = 2"],
+      "why": "Set y = 0: (x − 1)² = 16, so x − 1 = 4 or −4. That gives x = 5 or x = −3. The option x = −5 and x = 3 comes from taking h as −1.",
+      "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
+    }
+  },
+  "mat-cubic-quartic-graphs": {
+    "title": "Cubic and quartic graphs",
+    "card": [
+      "A factorised polynomial shows its x-intercepts. Set each bracket to zero. For y = (x + 2)(x − 1)(x − 3), the x-intercepts are x = −2, 1 and 3.",
+      ["Single factor", "a bracket that appears once, such as (x − 1). The graph crosses the x-axis at that point."],
+      [
+        "Squared factor",
+        "a bracket that appears twice, such as (x − 1)². The graph touches the axis and turns back without crossing."
+      ],
+      [
+        "Cubed factor",
+        "a bracket that appears three times, such as (x − 1)³. The graph flattens at the axis as it crosses."
+      ]
+    ],
+    "remember": "Read the x-intercepts from the brackets. One factor crosses, a squared factor touches, a cubed factor flattens.",
+    "a": {
+      "q": "For y = (x − 4)²(x + 1), what does the graph do at x = 4?",
+      "opts": [
+        "Touches the x-axis and turns back",
+        "Crosses the x-axis without flattening",
+        "Flattens as it crosses the x-axis",
+        "Does not meet the x-axis"
+      ],
+      "why": "The factor (x − 4) is squared, so x = 4 is an x-intercept where the graph touches the axis and turns. A single factor would cross. A cubed factor would flatten as it crosses.",
+      "clue": "Look at the power on the bracket (x − 4)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A graph is y = (x + 2)(x − 3)³. What does it do at x = 3 and at x = −2?",
+      "opts": [
+        "Flattens as it crosses at x = 3, crosses at x = −2",
+        "Crosses at x = 3, flattens as it crosses at x = −2",
+        "Touches and turns at x = 3, crosses at x = −2",
+        "Flattens as it crosses at both x = 3 and x = −2"
+      ],
+      "why": "The bracket (x − 3) is cubed, so the graph flattens as it crosses at x = 3. The bracket (x + 2) appears once, so the graph simply crosses at x = −2. The powers belong to the brackets, not to the numbers inside them.",
+      "clue": "Match each power to its own bracket, then set each bracket to zero."
+    }
+  },
+  "mat-power-functions": {
+    "title": "Power functions",
+    "card": [
+      "A power function has the form y = xⁿ, where n can be negative or a fraction. Its graph is shaped by values it cannot reach.",
+      [
+        "1/x and 1/x²",
+        "x cannot be 0, so the y-axis is a vertical asymptote, a line the graph approaches but never touches. y = 0 is a horizontal asymptote. For y = 1/x the branches are in opposite quadrants. For y = 1/x² both branches are above the x-axis."
+      ],
+      [
+        "√x",
+        "y = √x needs x ≥ 0, so the graph starts at the point (0, 0) and rises to the right. It has no part to the left of the y-axis."
+      ],
+      "Example: y = 1/x has no point at x = 0. When x = 2, y = 1/2. When x = −2, y = −1/2."
+    ],
+    "remember": "The values a power function cannot use, such as x = 0 for 1/x or negative x for √x, set its shape.",
+    "a": {
+      "q": "Which statement is true for the graph of y = 1/x²?",
+      "opts": [
+        "It has the y-axis as an asymptote and lies above the x-axis",
+        "It has the y-axis as an asymptote and dips below the x-axis",
+        "It passes through the origin and lies above the x-axis",
+        "It starts at the origin and has no part for negative x"
+      ],
+      "why": "x = 0 is not allowed, so the y-axis is an asymptote. Squaring makes every x² positive, so y is always positive. A branch below the x-axis belongs to y = 1/x, not 1/x².",
+      "clue": "Is x² ever negative?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam graphs y = √x. Which x-value gives no point on the graph?",
+      "opts": ["x = −4", "x = 0", "x = 4", "x = 9"],
+      "why": "The square root of a negative number is not a real number, so the graph has no point for x = −4. The value x = 0 is tempting, but it is allowed and gives the start point (0, 0).",
+      "clue": "Which x-value would put a negative number under the root?"
+    }
+  },
+  "mat-transformations-graphs": {
+    "title": "Transformations of graphs",
+    "card": [
+      [
+        "Translation",
+        "y = f(x − h) + k moves the graph h units right and k units up. A minus inside the bracket moves the graph right."
+      ],
+      ["Reflection", "y = −f(x) reflects the graph in the x-axis. y = f(−x) reflects it in the y-axis."],
+      [
+        "Dilation",
+        "y = a f(x) stretches the graph by a factor of a from the x-axis. y = f(x/b) stretches it by a factor of b from the y-axis."
+      ],
+      "Each point (x, y) moves in a set way. For example, y = (x + 1)² − 4 is y = x² moved 1 left and 4 down, so its vertex is (−1, −4)."
+    ],
+    "remember": "Outside the bracket changes y. Inside the bracket changes x, and in the opposite way to how it looks.",
+    "a": {
+      "q": "The graph of y = x² is translated 3 units right and 2 units down. What is the new rule?",
+      "opts": ["y = (x − 3)² − 2", "y = (x + 3)² − 2", "y = (x − 3)² + 2", "y = (x + 3)² + 2"],
+      "why": "Moving right by 3 means x is replaced by (x − 3), and moving down by 2 means subtracting 2. The option with (x + 3) moves the graph left, which is the tempting mistake.",
+      "clue": "Right 3 puts a minus inside the bracket."
+    },
+    "b": {
+      "d": 3,
+      "q": "The point (6, 4) lies on y = f(x). Which point lies on y = −f(x/2)?",
+      "opts": ["(12, −4)", "(3, −4)", "(−12, 4)", "(12, 4)"],
+      "why": "Replacing x with x/2 stretches the graph by a factor of 2 from the y-axis, so x goes from 6 to 12. The negative sign outside reflects in the x-axis, so y goes from 4 to −4. (3, −4) is tempting, but it halves x instead of doubling it.",
+      "clue": "Deal with x and y separately: one is stretched, one is flipped."
+    }
+  },
+  "mat-families-functions": {
+    "title": "Families of functions",
+    "card": [
+      "A parameter is a letter in a rule that can take many values. In y = ax², each value of a gives a different parabola, and together they form a family.",
+      "If a > 0 the parabola opens up. If a < 0 it opens down. The larger the size of a, the narrower the parabola.",
+      "To find the rule for one member of the family, put a given point into the rule and solve for the parameter.",
+      "Example: y = ax² passes through (2, 12). Then 12 = a × 2², so 12 = 4a and a = 3. The rule is y = 3x²."
+    ],
+    "remember": "A parameter names a family. A point on the graph fixes which member it is.",
+    "a": {
+      "q": "The graph of y = ax² passes through (3, 18). What is the value of a?",
+      "opts": ["2", "6", "9", "54"],
+      "why": "Put in x = 3 and y = 18: 18 = a × 3², so 18 = 9a and a = 2. Using 3 instead of 3² gives 6, which is the tempting mistake.",
+      "clue": "Square the x-value before dividing."
+    },
+    "b": {
+      "d": 3,
+      "q": "The graph of y = ax² + 1 passes through (2, −7). What is its rule?",
+      "opts": ["y = −2x² + 1", "y = −1.5x² + 1", "y = −1.75x² + 1", "y = 2x² + 1"],
+      "why": "Put in the point: −7 = 4a + 1, so 4a = −8 and a = −2. Adding 1 instead of subtracting it gives 4a = −6, so −1.5, which is the tempting mistake.",
+      "clue": "Subtract the constant from both sides before dividing."
+    }
+  },
+  "mat-simultaneous-equations": {
+    "title": "Simultaneous equations",
+    "card": [
+      [
+        "Substitution",
+        "Rearrange one equation to give y (or x), then put it into the other. Example: y = 2x + 1 and 3x + y = 11 give 3x + 2x + 1 = 11, so x = 2 and y = 5."
+      ],
+      [
+        "Elimination",
+        "Add or subtract the equations to remove one variable. Example: x + y = 7 and x − y = 3 add to give 2x = 10, so x = 5 and y = 2."
+      ],
+      "A line can meet a parabola. Substitute the line into the parabola to get a quadratic, then solve it. There can be two solutions, one or none.",
+      "Find y for each x using the line's rule. The answer is a point (x, y), so always give both coordinates."
+    ],
+    "remember": "Combine the equations to get one variable, solve it, then go back for the other.",
+    "a": {
+      "q": "Solve y = 3x − 2 and 2x + y = 13 together. What is the solution (x, y)?",
+      "opts": ["(3, 7)", "(7, 3)", "(3, 11)", "(3, 10)"],
+      "why": "Substituting gives 2x + 3x − 2 = 13, so 5x = 15 and x = 3. Then y = 3 × 3 − 2 = 7, which also checks in 2 × 3 + 7 = 13. (7, 3) has the coordinates swapped.",
+      "clue": "Replace y in the second equation with 3x − 2."
+    },
+    "b": {
+      "d": 3,
+      "q": "The line y = x + 2 meets the parabola y = x². Where do they meet?",
+      "opts": ["(2, 4) and (−1, 1)", "(2, 4) and (1, 1)", "(−2, 0) and (1, 3)", "(2, 4) only"],
+      "why": "Set x² = x + 2, so x² − x − 2 = 0, which factorises as (x − 2)(x + 1) = 0. So x = 2 or x = −1, and the points are (2, 4) and (−1, 1). (2, 4) only is tempting, but the quadratic has two solutions.",
+      "clue": "Put x + 2 equal to x², then factorise."
+    }
+  },
+  "mat-simulation": {
+    "title": "Simulation",
+    "card": [
+      "A simulation copies a random experiment using a device that is easier to run. Coins, dice, spinners and random number generators are common choices.",
+      "The device must match the chances in the real experiment. A fair coin has two equally likely outcomes, so it can stand in for any yes or no event with probability 1/2.",
+      "Run the simulation many times. Estimated probability = number of trials with the event ÷ total number of trials.",
+      "Example: a spinner has 5 equal sectors. Let 1 stand for rain and 2 to 5 for no rain. In 40 spins, 1 comes up 9 times. The estimate for rain is 9/40 = 0.225. The true value is 1/5 = 0.2. More trials usually bring the estimate closer."
+    ],
+    "remember": "Match the device to the chances, run many trials, then divide successes by trials.",
+    "a": {
+      "q": "A fair six-sided die is rolled 50 times and shows a 6 on 7 rolls. What is the estimated probability of a 6?",
+      "opts": ["7/50", "1/6", "7/43", "43/50"],
+      "why": "The estimate is the number of trials with the event divided by all trials, so 7 ÷ 50 = 0.14. The value 1/6 is the theoretical probability, not the result of this simulation.",
+      "clue": "Divide the count of 6s by the total number of rolls."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to simulate whether a bus is late, with probability 1/4. Which device matches this chance?",
+      "opts": [
+        "A spinner with 4 equal sectors, one marked late",
+        "A fair coin, with heads meaning late",
+        "A fair die, with 1 meaning late",
+        "A spinner with 3 equal sectors, one marked late"
+      ],
+      "why": "One of 4 equal sectors gives a chance of 1/4. A coin gives 1/2, a die gives 1/6 for a single face, and a 3-sector spinner gives 1/3.",
+      "clue": "Find the device where the late outcome has chance 1/4."
+    }
+  },
+  "mat-permutations": {
+    "title": "Counting principles",
+    "card": [
+      [
+        "Multiplication",
+        "When choices are made one after another, multiply the number of ways for each step. A meal with 3 mains and then 4 drinks gives 3 × 4 = 12 meals."
+      ],
+      [
+        "Addition",
+        "When you pick one option from separate groups, and only one choice is made, add the numbers. Choosing one book from 5 novels or 6 atlases gives 5 + 6 = 11 books."
+      ],
+      "Ask first: do I make one choice after another, or do I pick just one item from different groups?",
+      "Some problems use both. Work out each part, then combine them with the right principle."
+    ],
+    "remember": "Steps one after another: multiply. Alternatives: add.",
+    "a": {
+      "q": "Priya chooses one of 4 hats and then one of 5 scarves. How many hat and scarf outfits are possible?",
+      "opts": ["20", "9", "16", "25"],
+      "why": "The two choices are made one after another, so multiply: 4 × 5 = 20. Adding gives 9, which would count only a single item from the two groups, not an outfit of both.",
+      "clue": "She picks a hat and then a scarf."
+    },
+    "b": {
+      "d": 3,
+      "q": "A café sells 6 hot drinks and 4 cold drinks. Sam buys one drink, then picks one of 3 snacks. How many drink and snack choices are there?",
+      "opts": ["30", "13", "72", "24"],
+      "why": "The drink is one choice from two groups, so add: 6 + 4 = 10 drinks. The snack comes after, so multiply: 10 × 3 = 30. Using 6 × 4 × 3 = 72 wrongly multiplies the two drink groups, which are alternatives.",
+      "clue": "Hot and cold drinks are alternatives. The snack is a second step."
+    }
+  },
+  "mat-combinations": {
+    "title": "Combinations",
+    "card": [
+      "A combination is a selection where order does not matter. Choosing Ana and Ben is the same as choosing Ben and Ana.",
+      "The number of ways to choose r items from n is nCr = n! ÷ (r! × (n − r)!). Here n! means n × (n − 1) × ... × 1.",
+      "Example: choose 2 from 5. 5C2 = 5! ÷ (2! × 3!) = 120 ÷ (2 × 6) = 10.",
+      "Shortcut: multiply r numbers counting down from n, then divide by r!. So 5C2 = (5 × 4) ÷ (2 × 1) = 10. Dividing by r! removes repeats, as each group can be ordered in r! ways."
+    ],
+    "remember": "When order does not matter, divide by r! so each group is counted once.",
+    "a": {
+      "q": "What is 6C2?",
+      "opts": ["15", "30", "12", "8"],
+      "why": "6C2 = (6 × 5) ÷ (2 × 1) = 15. The answer 30 is 6 × 5 without dividing by 2!, so it counts each pair twice, once in each order.",
+      "clue": "Each pair can be ordered in 2! ways."
+    },
+    "b": {
+      "d": 2,
+      "q": "A coach picks 3 players from a squad of 8 to attend a clinic. The order of picking does not matter. How many different groups can be picked?",
+      "opts": ["56", "336", "24", "5"],
+      "why": "This is 8C3 = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56. The answer 336 counts each group in every order, so it is 3! = 6 times too large.",
+      "clue": "Work out which number is n and which is r."
+    }
+  },
+  "mat-venn-diagrams-karnaugh-maps": {
+    "title": "Venn diagrams and Karnaugh maps",
+    "card": [
+      "A Venn diagram uses a rectangle for all outcomes and overlapping circles for events. A probability table, or Karnaugh map, does the same job with rows and columns, and in both the probabilities of all regions add to 1.",
+      [
+        "Intersection",
+        "A ∩ B means both A and B happen. It is the overlap of the two circles, or the cell where row A meets column B."
+      ],
+      ["Union", "A ∪ B means A or B or both happen. It is everything inside either circle."],
+      [
+        "Complement",
+        "A' means A does not happen. It is everything outside circle A, so Pr(A') = 1 − Pr(A). Example: if Pr(A) = 0.6 and Pr(A ∩ B) = 0.3, then Pr(A ∩ B') = 0.6 − 0.3 = 0.3."
+      ]
+    ],
+    "remember": "Overlap is both, whole circles together is or, outside is not. All regions add to 1.",
+    "a": {
+      "q": "In a table, Pr(A) = 0.7 and Pr(A ∩ B) = 0.4. What is Pr(A ∩ B')?",
+      "opts": ["0.3", "0.4", "0.6", "1.1"],
+      "why": "A ∩ B' is the part of A that is not in B, so 0.7 − 0.4 = 0.3. Giving 0.6 comes from finding 1 − 0.4, which ignores that the region must sit inside A.",
+      "clue": "Take the overlap away from all of A."
+    },
+    "b": {
+      "d": 3,
+      "q": "In Year 11 at a Ballarat school, Pr(plays sport) = 0.5, Pr(plays music) = 0.4 and Pr(both) = 0.2. What is the probability a student does neither?",
+      "opts": ["0.3", "0.1", "0.5", "0.7"],
+      "why": "Fill each region: sport only 0.5 − 0.2 = 0.3, both 0.2, music only 0.4 − 0.2 = 0.2. These add to 0.7, so neither is 1 − 0.7 = 0.3. Giving 0.1 comes from 1 − 0.5 − 0.4, which counts the overlap twice.",
+      "clue": "Fill the three regions inside the circles first."
+    }
+  },
+  "mat-addition-rule": {
+    "title": "The addition rule",
+    "card": [
+      "Pr(A ∪ B) is the chance that A happens, or B happens, or both. The rule is Pr(A ∪ B) = Pr(A) + Pr(B) − Pr(A ∩ B).",
+      "We subtract Pr(A ∩ B) because outcomes in both A and B are counted twice when we add Pr(A) and Pr(B).",
+      "Mutually exclusive events cannot happen together, so Pr(A ∩ B) = 0. Then Pr(A ∪ B) = Pr(A) + Pr(B).",
+      "Example: Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.2. Then Pr(A ∪ B) = 0.5 + 0.4 − 0.2 = 0.7."
+    ],
+    "remember": "Add the two chances, then take away the overlap so it is counted once.",
+    "a": {
+      "q": "Pr(A) = 0.6, Pr(B) = 0.3 and Pr(A ∩ B) = 0.1. What is Pr(A ∪ B)?",
+      "opts": ["0.8", "0.9", "0.7", "0.18"],
+      "why": "Pr(A ∪ B) = 0.6 + 0.3 − 0.1 = 0.8. Adding only Pr(A) and Pr(B) gives 0.9, which counts the overlap twice.",
+      "clue": "Take away the overlap once."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a Ballarat school, Pr(a student plays netball) = 0.35 and Pr(a student plays chess) = 0.15. No student does both. What is the chance a student plays netball or chess?",
+      "opts": ["0.50", "0.20", "0.0525", "0.4475"],
+      "why": "No student does both, so the events are mutually exclusive and Pr(A ∩ B) = 0. Then Pr(A ∪ B) = 0.35 + 0.15 = 0.50. The product 0.0525 is not used here, because the rule adds the chances.",
+      "clue": "If no one does both, what is the overlap?"
+    }
+  },
+  "mat-conditional-probability-2": {
+    "title": "Conditional probability",
+    "card": [
+      "Pr(A | B) is the probability of A given that B has happened. Knowing B has happened shrinks the sample space to just the outcomes in B.",
+      "Formula: Pr(A | B) = Pr(A ∩ B)/Pr(B). The bottom is the event we are given. The top is the part of it that is also A.",
+      "From a table, Pr(A | B) = (number in both A and B) ÷ (number in B). Use only the row or column for B as the total.",
+      "Example: in a class of 30, 12 play netball, and 8 of those 12 also play tennis. Pr(tennis | netball) = 8/12 = 2/3. The total is 12, not 30."
+    ],
+    "remember": "Given B means B is the new total. Divide by Pr(B), not by everything.",
+    "a": {
+      "q": "For two events, Pr(A ∩ B) = 0.2 and Pr(B) = 0.5. Find Pr(A | B).",
+      "opts": ["0.4", "0.1", "0.7", "2.5"],
+      "why": "Pr(A | B) = Pr(A ∩ B) ÷ Pr(B) = 0.2 ÷ 0.5 = 0.4. Multiplying gives 0.1, but the formula divides by the probability of the given event.",
+      "clue": "The event after the bar goes on the bottom."
+    },
+    "b": {
+      "d": 3,
+      "q": "At a school camp, 40 students chose activities. 25 chose kayaking, and 10 of those also chose archery. 5 chose only archery. One archery student is picked at random. What is the probability they also chose kayaking?",
+      "opts": ["2/3", "1/4", "2/5", "3/8"],
+      "why": "Archery has 10 + 5 = 15 students, and 10 of them chose kayaking, so the probability is 10/15 = 2/3. The option 2/5 is 10/25, which divides by the kayakers and so reverses the condition. The given event is archery, so it goes on the bottom.",
+      "clue": "Find the total number who chose archery first."
+    }
+  },
+  "mat-law-total-probability": {
+    "title": "The law of total probability",
+    "card": [
+      "Sometimes an event can happen in more than one way. The law of total probability adds up the chance of each way.",
+      "Split on A and not A: Pr(B) = Pr(B | A) × Pr(A) + Pr(B | A') × Pr(A').",
+      "Each path is a product: the chance of the first step times the chance of the second step given the first. Then the paths that end in B are added.",
+      "Example: Pr(A) = 0.4, Pr(B | A) = 0.5 and Pr(B | A') = 0.2. Then Pr(B) = 0.5 × 0.4 + 0.2 × 0.6 = 0.2 + 0.12 = 0.32."
+    ],
+    "remember": "Multiply along each path to B, then add the paths.",
+    "a": {
+      "q": "Pr(A) = 0.3, Pr(B | A) = 0.6 and Pr(B | A') = 0.1. What is Pr(B)?",
+      "opts": ["0.25", "0.18", "0.70", "0.35"],
+      "why": "Pr(B) = 0.6 × 0.3 + 0.1 × 0.7 = 0.18 + 0.07 = 0.25. Giving 0.18 counts only the path through A and misses the path through not A.",
+      "clue": "B can happen after A or after not A."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya cycles to school in Geelong on 20% of days, and otherwise takes the bus. She is late on 10% of cycling days and 30% of bus days. What is the probability she is late on a random day?",
+      "opts": ["0.26", "0.20", "0.40", "0.06"],
+      "why": "Late = 0.1 × 0.2 + 0.3 × 0.8 = 0.02 + 0.24 = 0.26. Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
+      "clue": "Weight each lateness chance by how often she uses that way."
+    }
+  },
+  "mat-independent-events-2": {
+    "title": "Independent events",
+    "card": [
+      "Two events are independent if knowing that one happened does not change the probability of the other. Flipping a coin and rolling a die are independent.",
+      "For independent events A and B, Pr(A ∩ B) = Pr(A) × Pr(B). This means both happen.",
+      "Example: Pr(heads) = 1/2 and Pr(roll a 6) = 1/6. Pr(heads and a 6) = 1/2 × 1/6 = 1/12.",
+      "To test for independence, check whether Pr(A ∩ B) equals Pr(A) × Pr(B). If it does, the events are independent. If it does not, they are not."
+    ],
+    "remember": "Independent events: multiply the probabilities to find Pr(A ∩ B).",
+    "a": {
+      "q": "Events A and B are independent, with Pr(A) = 0.4 and Pr(B) = 0.5. Find Pr(A ∩ B).",
+      "opts": ["0.2", "0.9", "0.1", "0.8"],
+      "why": "For independent events, Pr(A ∩ B) = 0.4 × 0.5 = 0.2. Adding gives 0.9, which is the mistake of using the wrong operation and would not be a probability of both happening.",
+      "clue": "Both events happen, and the events are independent."
+    },
+    "b": {
+      "d": 3,
+      "q": "Pr(A) = 0.5, Pr(B) = 0.4 and Pr(A ∩ B) = 0.3. Which statement is correct?",
+      "opts": [
+        "Not independent, as 0.5 × 0.4 = 0.2, not 0.3",
+        "Independent, as 0.3 is between 0 and 1",
+        "Independent, as 0.5 + 0.4 is more than 0.3",
+        "Not independent, as 0.3 is less than Pr(A)"
+      ],
+      "why": "Independent events need Pr(A ∩ B) = Pr(A) × Pr(B). Here 0.5 × 0.4 = 0.2, which is not 0.3, so the events are not independent. Being a valid probability between 0 and 1 does not test independence.",
+      "clue": "Multiply Pr(A) and Pr(B), then compare with Pr(A ∩ B)."
+    }
+  },
+  "mat-graph-theory-specialist": {
+    "title": "Graph theory in Specialist",
+    "card": [
+      "A graph is a set of vertices (points) joined by edges (lines). It can model a molecule, where atoms are vertices and bonds are edges, or a network of computers and cables.",
+      "The degree of a vertex is the number of edges that meet it. An edge that starts and ends at the same vertex, called a loop, adds 2 to that vertex's degree.",
+      "Every edge has two ends, so it adds 2 to the total of all the degrees. This gives the handshake rule: the sum of the degrees = 2 × the number of edges.",
+      "Example: a graph has 5 edges. The degrees add to 2 × 5 = 10. If four vertices have degrees 3, 2, 2 and 1, the fifth has degree 10 − 8 = 2."
+    ],
+    "remember": "Add up every vertex's degree and you get twice the number of edges.",
+    "a": {
+      "q": "A network of 6 computers has 9 cables, and each cable joins two computers. What is the sum of the degrees of all the vertices?",
+      "opts": ["18", "9", "15", "12"],
+      "why": "Each edge adds 2 to the total, so the sum is 2 × 9 = 18. The answer 9 is the number of edges, which is only half of the degree sum.",
+      "clue": "Each edge has two ends."
+    },
+    "b": {
+      "d": 3,
+      "q": "A graph has 4 vertices with degrees 4, 3, 3 and x. It has 7 edges. What is x?",
+      "opts": ["4", "3", "7", "14"],
+      "why": "The degrees add to 2 × 7 = 14. The three known degrees give 4 + 3 + 3 = 10, so x = 14 − 10 = 4. Using 7 as the total forgets to double the number of edges.",
+      "clue": "Find the degree sum first, then subtract."
+    }
+  },
+  "mat-types-graphs": {
+    "title": "Types of graphs",
+    "card": [
+      [
+        "Simple",
+        "a graph with no loops and no more than one edge between any two vertices. Every graph here is simple."
+      ],
+      [
+        "Complete",
+        "every pair of vertices is joined by an edge. Kn has n vertices and n(n − 1)/2 edges. K5 has 5 × 4 ÷ 2 = 10 edges."
+      ],
+      ["Regular", "every vertex has the same degree. A regular graph with degree 3 is called 3-regular."],
+      [
+        "Complement",
+        "the complement of a simple graph has the same vertices and exactly the edges the graph lacks. A graph and its complement together make a complete graph."
+      ]
+    ],
+    "remember": "A complete graph has every possible edge. The complement has exactly the edges that are missing.",
+    "a": {
+      "q": "A simple graph has 6 vertices and is complete. How many edges does it have?",
+      "opts": ["15", "30", "12", "36"],
+      "why": "K6 has 6 × 5 ÷ 2 = 15 edges. Choosing 6 × 5 = 30 forgets that each edge is counted twice, once from each end.",
+      "clue": "Count each edge once, not from both ends."
+    },
+    "b": {
+      "d": 3,
+      "q": "A simple graph has 5 vertices and 4 edges. What is the number of edges in its complement?",
+      "opts": ["6", "4", "10", "5"],
+      "why": "K5 has 5 × 4 ÷ 2 = 10 edges. The graph and its complement together make K5, so the complement has 10 − 4 = 6 edges. Giving 4 wrongly treats the complement as having the same edges.",
+      "clue": "Find the edges of the complete graph on 5 vertices first."
+    }
+  },
+  "mat-planar-graphs-euler-s-2": {
+    "title": "Planar graphs and Euler's formula",
+    "card": [
+      "A planar graph can be drawn on a flat page so that no edges cross. A face is a region bounded by edges, and the outside region counts as one face.",
+      "Euler's formula is for a connected planar graph: v − e + f = 2. Here v is the number of vertices, e the number of edges and f the number of faces.",
+      "Worked example: a connected planar graph has 6 vertices and 9 edges. Then 6 − 9 + f = 2, so f = 5.",
+      "A common slip is to forget the outside face when counting. Also, a graph that is drawn with crossing edges may still be planar, if it can be redrawn with no crossings."
+    ],
+    "remember": "For a connected planar graph, v − e + f = 2, and the outside face counts.",
+    "a": {
+      "q": "A connected planar graph has 7 vertices and 10 edges. How many faces does it have?",
+      "opts": ["5", "3", "4", "6"],
+      "why": "Use v − e + f = 2. Then 7 − 10 + f = 2, so −3 + f = 2 and f = 5. Choosing 3 comes from calculating 10 − 7 and stopping before adding the 2.",
+      "clue": "Put the numbers into v − e + f = 2, then solve for f."
+    },
+    "b": {
+      "d": 3,
+      "q": "A connected planar graph has 8 faces, counting the outside face, and 12 edges. How many vertices does it have?",
+      "opts": ["6", "4", "7", "18"],
+      "why": "Use v − e + f = 2. Then v − 12 + 8 = 2, so v − 4 = 2 and v = 6. Choosing 4 comes from leaving out the 2 on the right side, which gives v − 12 + 8 = 0. Choosing 7 comes from taking away the outside face as well, so f becomes 7.",
+      "clue": "The 8 faces already include the outside one."
+    }
+  },
+  "mat-trees-algorithms": {
+    "title": "Trees",
+    "card": [
+      "A network is connected if there is a route between every pair of vertices.",
+      "A tree is a connected network that contains no circuits. Take away any one edge and it is no longer connected.",
+      "A tree with n vertices has n − 1 edges. Example: a tree with 6 vertices has 6 − 1 = 5 edges.",
+      "To test a network, check that it is connected and has no circuits. If a connected network has n vertices and more than n − 1 edges, it must contain a circuit, so it is not a tree."
+    ],
+    "remember": "A tree is connected with no circuits, and n vertices means n − 1 edges.",
+    "a": {
+      "q": "A tree has 12 vertices. How many edges does it have?",
+      "opts": ["11", "12", "13", "10"],
+      "why": "A tree with n vertices has n − 1 edges, so 12 − 1 = 11. Choosing 12 mixes up the number of edges with the number of vertices.",
+      "clue": "Sketch a tree with 3 vertices and count its edges."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council plans a walking track network joining 7 lookouts around Bendigo. It has 7 vertices, is connected and has 7 edges. Is it a tree?",
+      "opts": [
+        "No, because a tree would have only 6 edges",
+        "Yes, because it is connected",
+        "Yes, because it has as many edges as vertices",
+        "No, because a tree would have 8 edges"
+      ],
+      "why": "A tree with 7 vertices has 7 − 1 = 6 edges. This network has one extra edge, so it must contain a circuit. Being connected is not enough, because a tree also needs no circuits.",
+      "clue": "Work out how many edges a tree with 7 vertices has, then compare."
+    }
+  },
+  "mat-euler-hamilton": {
+    "title": "Euler and Hamilton",
+    "card": [
+      [
+        "Euler trail",
+        "a walk along the graph that uses every edge exactly once. Vertices may be visited more than once."
+      ],
+      [
+        "Hamiltonian path",
+        "a path that visits every vertex exactly once. It may leave some edges unused, and counting degrees does not tell you whether one exists."
+      ],
+      [
+        "Euler test",
+        "Count the vertices of odd degree. A connected graph has an Euler trail if and only if it has 0 or 2 odd vertices, so with any other number there is none. With 2, the trail must start at one odd vertex and end at the other."
+      ],
+      "The Königsberg bridge problem asked for a walk crossing each of 7 bridges once. The land areas were vertices, the bridges were edges, and all 4 vertices were odd. So no Euler trail exists."
+    ],
+    "remember": "Euler trail: every edge once. Hamiltonian path: every vertex once.",
+    "a": {
+      "q": "A connected graph has 5 vertices with degrees 2, 2, 3, 3 and 4. Which statement is correct?",
+      "opts": [
+        "It has an Euler trail starting at a vertex of degree 3",
+        "It has no Euler trail, because two vertices are odd",
+        "It has an Euler trail starting at the vertex of degree 4",
+        "It has no Euler trail, because the degrees are not equal"
+      ],
+      "why": "Exactly two vertices are odd (the two of degree 3), so an Euler trail exists and must start at one of them and end at the other. Having two odd vertices does not rule a trail out, which is the tempting mistake.",
+      "clue": "Count the vertices with an odd degree."
+    },
+    "b": {
+      "d": 3,
+      "q": "A connected graph has 6 vertices, and 4 of them have odd degree. Which statement must be true?",
+      "opts": [
+        "It has no Euler trail",
+        "It has an Euler trail starting at any vertex",
+        "It has an Euler trail starting at an odd vertex",
+        "It has no Hamiltonian path"
+      ],
+      "why": "A connected graph has an Euler trail only if it has 0 or 2 odd vertices. This graph has 4, so no Euler trail exists. Counting degrees does not decide whether a Hamiltonian path exists, so that option need not be true.",
+      "clue": "The Euler test looks only at odd vertices, not at vertices visited."
+    }
+  },
+  "mat-matrix-operations-specialist": {
+    "title": "Matrix operations",
+    "card": [
+      "A matrix is a rectangle of numbers in rows and columns. Its order is rows × columns, so a matrix with 2 rows and 3 columns has order 2 × 3.",
+      "To add matrices, they must have the same order. Add the entries in matching positions. To scale a matrix, multiply every entry by the number.",
+      "To multiply A × B, the number of columns in A must equal the number of rows in B. The result has A's rows and B's columns.",
+      "Each entry of the product is a row of A times a column of B: multiply in pairs, then add. Example: (2 3) × (4 5)ᵀ, where the column is 4 then 5, gives 2×4 + 3×5 = 23."
+    ],
+    "remember": "Add needs equal orders. Multiply needs columns of the first to equal rows of the second.",
+    "a": {
+      "q": "Matrix A has order 2 × 3 and matrix B has order 3 × 4. What is the order of A × B?",
+      "opts": ["2 × 4", "3 × 3", "2 × 3", "3 × 4"],
+      "why": "The columns of A (3) match the rows of B (3), so the product exists. It has the rows of A and the columns of B, so its order is 2 × 4. Order 3 × 3 comes from taking the matching numbers instead.",
+      "clue": "Keep the outer numbers."
+    },
+    "b": {
+      "d": 3,
+      "q": "A shop sells 2 items. Row matrix P = (10 20) holds the prices in dollars. Column matrix Q holds the numbers sold on one day: 3 of the first item and 4 of the second. What does P × Q give?",
+      "opts": [
+        "110, the total takings in dollars",
+        "70, the total takings in dollars",
+        "110, the total number of items sold",
+        "30, the total price of the two items"
+      ],
+      "why": "P × Q = 10×3 + 20×4 = 30 + 80 = 110, which is price times number sold, added up: the takings in dollars. Adding 3 + 4 gives the items sold, 7, not 110.",
+      "clue": "Multiply in pairs, then add the results."
+    }
+  },
+  "mat-determinants-matrix-equations": {
+    "title": "Determinants and matrix equations",
+    "card": [
+      "For a 2 × 2 matrix A with rows (a b) and (c d), the determinant is det(A) = ad − bc.",
+      "A square matrix has an inverse only if its determinant is not 0. If det(A) = 0, there is no inverse.",
+      "When det(A) = D is not 0, the inverse A⁻¹ is 1/D times the matrix with rows (d −b) and (−c a).",
+      "To solve AX = B, multiply both sides on the left by A⁻¹. This gives X = A⁻¹B. The order matters: A⁻¹ goes before B."
+    ],
+    "remember": "No inverse if det = 0. Otherwise X = A⁻¹B, with A⁻¹ on the left.",
+    "a": {
+      "q": "Matrix A has rows (3 2) and (4 5). What is det(A)?",
+      "opts": ["7", "23", "−7", "15"],
+      "why": "det(A) = ad − bc = 3×5 − 2×4 = 15 − 8 = 7. The answer 23 comes from adding the products instead of subtracting.",
+      "clue": "Main diagonal product, take away the other."
+    },
+    "b": {
+      "d": 3,
+      "q": "For which value of k does the matrix with rows (2 k) and (6 3) have no inverse?",
+      "opts": ["k = 1", "k = 9", "k = 0", "k = 4"],
+      "why": "det = 2×3 − 6k = 6 − 6k. There is no inverse when this is 0, so k = 1. The value k = 9 does not give 0, since 6 − 54 = −48.",
+      "clue": "Set the determinant equal to 0."
+    }
+  },
+  "mat-sums-random-variables": {
+    "title": "Sums of random variables",
+    "card": [
+      "Let X be a discrete random variable. X1 + X2 means two independent copies of X: two separate trials, added together. 2X means one trial, then doubled.",
+      "Example: a spinner gives X = 1 or 3, each with probability 1/2. Doubling one spin gives 2X = 2 or 6, each with probability 1/2.",
+      "Adding two spins gives the sums 1+1 = 2, 1+3 = 4, 3+1 = 4 and 3+3 = 6. So X1 + X2 is 2 with probability 1/4, 4 with probability 1/2 and 6 with probability 1/4.",
+      "Both have a mean of 4, but the distributions differ. X1 + X2 can take the middle value 4, and 2X cannot. The sum is less likely to land on the extremes."
+    ],
+    "remember": "2X repeats one outcome. X1 + X2 combines two outcomes, so its distribution is different.",
+    "a": {
+      "q": "A fair coin scores X = 1 for heads and 0 for tails. It is tossed twice, independently. What is P(X1 + X2 = 1)?",
+      "opts": ["1/2", "1/4", "1/3", "0"],
+      "why": "A sum of 1 happens with heads then tails, or tails then heads. Each has probability 1/4, so the total is 1/2. The value 0 would be right for 2X, which can only be 0 or 2, but not for the sum of two tosses.",
+      "clue": "Count the ways two tosses can add to 1."
+    },
+    "b": {
+      "d": 3,
+      "q": "A spinner scores 2 or 4, each with probability 1/2. Mia spins once and doubles the score. Sam spins twice and adds the scores. What is each person's chance of getting 8?",
+      "opts": ["Mia 1/2, Sam 1/4", "Mia 1/4, Sam 1/2", "Mia 1/2, Sam 1/2", "Mia 1/4, Sam 1/4"],
+      "why": "Mia gets 8 when her one spin is 4, which has probability 1/2. Sam needs 4 + 4, which has probability 1/2 × 1/2 = 1/4. The tempting answer of 1/2 for both treats adding two spins as the same as doubling one.",
+      "clue": "Sam needs both spins to be the same high score."
+    }
+  },
+  "mat-simulation-2": {
+    "title": "Simulation",
+    "card": [
+      "A simulation uses random numbers to act out a chance process again and again. Each run is called a trial.",
+      "First, decide how random digits stand for the outcomes. If a chance is 30%, let 3 of the 10 digits 0 to 9 stand for it, such as 0, 1 and 2.",
+      "Then run many trials and count how often the event happens. Estimated probability = number of trials with the event ÷ total number of trials.",
+      "Example: a bus is late 30% of the time. In 50 simulated days it is late on 14 days. The estimate is 14 ÷ 50 = 0.28. More trials usually give a more reliable estimate."
+    ],
+    "remember": "Assign digits to match the chances, run many trials, then divide the successes by the trials.",
+    "a": {
+      "q": "A shop's card reader fails 20% of the time. Which digit rule matches this for one random digit from 0 to 9?",
+      "opts": [
+        "Digits 0 and 1 mean a failure",
+        "Digit 2 means a failure",
+        "Digits 0 to 4 mean a failure",
+        "Digits 0 to 8 mean a failure"
+      ],
+      "why": "Two of the ten digits give 2 ÷ 10 = 20%. Digit 2 alone gives 10%, and digits 0 to 4 give 50%.",
+      "clue": "Count how many of the ten digits you need for 20%."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya simulates a free-throw shooter who scores 70% of the time. In 40 trials, she gets a score in 30 of them. What is her estimated probability of a score?",
+      "opts": ["0.75", "0.70", "0.57", "1.33"],
+      "why": "Estimate = 30 ÷ 40 = 0.75. It differs from 0.70 because simulations vary. Dividing 40 by 30 would give 1.33, which cannot be a probability.",
+      "clue": "Divide the trials with the event by all the trials."
+    }
+  },
+  "mat-sample-means-vary": {
+    "title": "Sample means vary",
+    "card": [
+      "A sample is a group taken from a larger population. Its mean is found by adding the values and dividing by the number of values.",
+      "Different samples contain different values, so their means usually differ, even when each sample is taken and worked out correctly. This is called sample variation.",
+      "Example: two samples of 3 students have heights 160, 170, 180 and 165, 175, 185. The means are 510 ÷ 3 = 170 and 525 ÷ 3 = 175.",
+      "Larger samples tend to have means that vary less from sample to sample. A single extreme value has less pull on a big sample."
+    ],
+    "remember": "Sample means usually differ from sample to sample, and larger samples tend to differ less.",
+    "a": {
+      "q": "Two correctly chosen random samples of 10 from the same population have different means. What does this show?",
+      "opts": [
+        "Sample means vary from one sample to the next",
+        "One of the two samples was chosen wrongly",
+        "The population mean changed between samples",
+        "One of the means was calculated incorrectly"
+      ],
+      "why": "Each sample holds different values, so their means usually differ even when nothing has gone wrong. A difference does not mean a sample was chosen badly or a mean was worked out wrongly, and the population itself stays the same.",
+      "clue": "Do two samples usually contain the same values?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam takes many samples of 5 from a school's students, and Lee takes many samples of 50. Whose sample means will tend to vary less?",
+      "opts": [
+        "Lee's, because the samples are larger",
+        "Sam's, because the samples are smaller",
+        "Both the same, because the school is the same",
+        "Sam's, because there are fewer values to add"
+      ],
+      "why": "A larger sample is less affected by any one extreme value, so Lee's means tend to stay closer together. Taking samples from the same school does not make the variation equal, because sample size still matters.",
+      "clue": "Think about how much one extreme value matters in a big sample."
+    }
+  },
+  "mat-distributions-sample-means": {
+    "title": "Distributions of sample means",
+    "card": [
+      "Take many samples of the same size from one population. Find each sample's mean, then plot all the means on a dot plot or histogram. This shows the distribution of sample means.",
+      "The spread of this plot shows how much the sample means vary.",
+      "When the sample size is larger, the plot is narrower. The means bunch more tightly.",
+      "Example: means of samples of 4 might range from 10 to 30. Means of samples of 40 from the same population might range from 18 to 22."
+    ],
+    "remember": "Plot many sample means to see their spread: bigger samples give a narrower plot.",
+    "a": {
+      "q": "What does each dot represent in a dot plot of sample means?",
+      "opts": [
+        "The mean of one sample",
+        "One value from the population",
+        "The size of one sample",
+        "The mean of the whole population"
+      ],
+      "why": "Each dot is the mean of one sample. A single value from the population is not a sample mean. The sample size is the same for every dot.",
+      "clue": "The plot is made after finding a mean for each sample."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia plots 100 means of samples of size 10. She repeats it with samples of size 100 from the same population. How will the second plot look?",
+      "opts": [
+        "Narrower, with means closer together",
+        "Wider, with means further apart",
+        "The same width, only shifted",
+        "Narrower, because there are fewer samples"
+      ],
+      "why": "Larger samples give means that vary less, so the plot is narrower. The number of samples is 100 both times, so it is not the reason.",
+      "clue": "Compare the sample size, not the number of samples."
+    }
+  },
+  "mat-radians-arcs-segments": {
+    "title": "Radians, arcs and segments",
+    "card": [
+      "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is π radians, so π radians = 180°.",
+      "To change degrees to radians, multiply by π/180. To change radians to degrees, multiply by 180/π.",
+      "With θ in radians, arc length = rθ and sector area = ½r²θ. These formulas only work when θ is in radians.",
+      "A segment is a sector with its triangle removed. The triangle has area ½r² sin θ, so segment area = ½r²(θ − sin θ). Example: r = 6 and θ = π/3 give arc length 2π and sector area 6π."
+    ],
+    "remember": "Use radians in the formulas: arc = rθ, sector = ½r²θ, segment = sector − triangle.",
+    "a": {
+      "q": "A sector of a circle has radius 5 cm and centre angle 2 radians. What is its arc length?",
+      "opts": ["10 cm", "25 cm", "5 cm", "20 cm"],
+      "why": "Arc length = rθ = 5 × 2 = 10 cm. The value 25 comes from the sector area formula ½r²θ, which gives an area in cm², not a length.",
+      "clue": "Multiply the radius by the angle in radians."
+    },
+    "b": {
+      "d": 3,
+      "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle π/2. What is the area of the segment?",
+      "opts": ["4π − 8 cm²", "4π cm²", "8π − 8 cm²", "4π − 4 cm²"],
+      "why": "Sector = ½ × 16 × π/2 = 4π. Triangle = ½ × 16 × sin(π/2) = 8. Segment = 4π − 8 cm². Choosing 4π gives the whole sector, which still includes the triangle.",
+      "clue": "Take the triangle's area away from the sector's area."
+    }
+  },
+  "mat-sine-cosine-rules-three": {
+    "title": "Sine and cosine rules in three dimensions",
+    "card": [
+      "To solve a solid shape, find a flat triangle inside it. Draw that triangle on its own and label the sides and angles you know.",
+      [
+        "Cosine rule",
+        "c² = a² + b² − 2ab cos C, where side c is opposite angle C. Use it when you know two sides and the angle between them, or all three sides."
+      ],
+      [
+        "Sine rule",
+        "a/sin A = b/sin B. Use it when you know a side and the angle opposite it, plus one more side or angle."
+      ],
+      "To find an angle from three sides, rearrange: cos C = (a² + b² − c²) ÷ (2ab). Example: sides 3, 4 and 5 give cos C = (9 + 16 − 25) ÷ 24 = 0, so C = 90°."
+    ],
+    "remember": "Pull a flat triangle out of the solid, then pick the sine or cosine rule to suit what you know.",
+    "a": {
+      "q": "Triangle ABC lies on one face of a box. AB = 5 m, AC = 7 m and angle BAC = 60°. What is BC?",
+      "opts": ["√39 m", "√109 m", "√74 m", "12 m"],
+      "why": "BC² = 25 + 49 − 2 × 5 × 7 × cos 60° = 74 − 35 = 39, so BC = √39 m. Adding 35 instead of taking it away gives √109, which is a sign error.",
+      "clue": "The angle is between the two known sides."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a pyramid, triangle PQR has PQ = 8 m, PR = 10 m and QR = 6 m. What is angle QPR, to one decimal place?",
+      "opts": ["36.9°", "53.1°", "90.0°", "143.1°"],
+      "why": "QR is opposite P, so cos P = (64 + 100 − 36) ÷ (2 × 8 × 10) = 128 ÷ 160 = 0.8 and P ≈ 36.9°. The angle 53.1° is the angle at R, found by using PQ as the opposite side instead of QR. Getting cos P = −0.8 from a sign error gives 143.1°.",
+      "clue": "Which side is opposite angle P?"
+    }
+  },
+  "mat-trigonometric-identities": {
+    "title": "Compound and double angle formulas",
+    "card": [
+      "Sine: sin(A + B) = sin A cos B + cos A sin B, and sin(A − B) = sin A cos B − cos A sin B. The sign between the products matches the sign inside.",
+      "Cosine: cos(A + B) = cos A cos B − sin A sin B, and cos(A − B) = cos A cos B + sin A sin B. The sign between the products is the opposite of the sign inside.",
+      "Double angle formulas: sin 2A = 2 sin A cos A, and cos 2A = cos²A − sin²A. Also cos 2A = 2cos²A − 1 = 1 − 2sin²A.",
+      "Exact values: sin 45° = cos 45° = √2/2, sin 30° = 1/2 and cos 30° = √3/2. Example: sin 75° = sin 45° cos 30° + cos 45° sin 30° = (√6 + √2)/4."
+    ],
+    "remember": "Split an angle into known angles. Sine keeps the sign inside, cosine flips it.",
+    "a": {
+      "q": "Angle A is acute and sin A = 3/5. What is sin 2A?",
+      "opts": ["24/25", "7/25", "6/5", "12/25"],
+      "why": "Since A is acute, cos A = 4/5. Then sin 2A = 2 × 3/5 × 4/5 = 24/25. The value 7/25 is cos 2A, which is a neighbouring formula.",
+      "clue": "Find cos A first, using a 3, 4, 5 triangle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which is the exact value of cos 75°?",
+      "opts": ["(√6 − √2)/4", "(√6 + √2)/4", "(√3 − 1)/4", "(√6 − √2)/2"],
+      "why": "cos 75° = cos 45° cos 30° − sin 45° sin 30° = √6/4 − √2/4 = (√6 − √2)/4. The option with a plus sign is sin 75°, which comes from keeping the plus sign as the sine formula does.",
+      "clue": "For cos(A + B), the sign between the products flips."
+    }
+  },
+  "mat-matrices-as-transformations": {
+    "title": "Matrices as transformations",
+    "card": [
+      "A 2 × 2 matrix can move every point (x, y) in the plane. Write the point as a column and multiply: [a b; c d] times (x, y) gives (ax + by, cx + dy).",
+      "The first column of the matrix is where the point (1, 0) lands. The second column is where (0, 1) lands.",
+      "Some common matrices: [k 0; 0 k] is a dilation by factor k from the origin. [1 0; 0 −1] reflects in the x-axis. [0 −1; 1 0] rotates 90° anticlockwise about the origin. [1 k; 0 1] is a shear that moves points parallel to the x-axis.",
+      "Example: [2 0; 0 2] sends (3, 1) to (2×3 + 0×1, 0×3 + 2×1) = (6, 2). Every coordinate doubles."
+    ],
+    "remember": "Multiply the matrix by the point's column. The columns show where (1, 0) and (0, 1) go.",
+    "a": {
+      "q": "What does the matrix [1 0; 0 −1] do to the point (4, 3)?",
+      "opts": ["Sends it to (4, −3)", "Sends it to (−4, 3)", "Sends it to (−4, −3)", "Sends it to (3, 4)"],
+      "why": "The new point is (1×4 + 0×3, 0×4 + (−1)×3) = (4, −3). The x-value stays and the y-value changes sign, so this is a reflection in the x-axis. Reflection in the y-axis would give (−4, 3).",
+      "clue": "Multiply each row of the matrix by the column (4, 3)."
+    },
+    "b": {
+      "d": 3,
+      "q": "A matrix sends (1, 0) to (0, 1) and (0, 1) to (−1, 0). Where does it send the point (2, 5)?",
+      "opts": ["(−5, 2)", "(5, −2)", "(−2, 5)", "(2, −5)"],
+      "why": "The columns are (0, 1) and (−1, 0), so the matrix is [0 −1; 1 0], a 90° anticlockwise rotation. Then (2, 5) goes to (0×2 + (−1)×5, 1×2 + 0×5) = (−5, 2). Putting the columns in as rows would give (5, −2).",
+      "clue": "Where (1, 0) and (0, 1) land are the columns of the matrix."
+    }
+  },
+  "mat-composition-inverse-transformations": {
+    "title": "Composition and inverse transformations",
+    "card": [
+      "To do transformation A and then transformation B, multiply the matrices as BA. The matrix for the first transformation is written on the right, next to the point.",
+      "Order matters. For A = [1 0; 0 −1] and B = [0 −1; 1 0], BA = [0 1; 1 0] but AB = [0 −1; −1 0]. Swapping the order can give a different result.",
+      "The inverse of a matrix M is written M⁻¹. It undoes M, so M⁻¹M is the identity matrix [1 0; 0 1], which leaves every point unchanged.",
+      "For [a b; c d], the inverse is 1/(ad − bc) × [d −b; −c a], when ad − bc is not 0. Example: the inverse of the dilation [2 0; 0 2] is 1/4 × [2 0; 0 2] = [1/2 0; 0 1/2], a dilation by 1/2."
+    ],
+    "remember": "Do A then B is BA. The inverse matrix undoes the transformation.",
+    "a": {
+      "q": "A = [1 0; 0 −1] reflects in the x-axis. B = [0 −1; 1 0] rotates 90° anticlockwise about the origin. Where does A then B send (1, 2)?",
+      "opts": ["(2, 1)", "(−2, −1)", "(1, −2)", "(−2, 1)"],
+      "why": "A then B is BA = [0 1; 1 0], which sends (1, 2) to (2, 1). Step by step, the reflection gives (1, −2) and the rotation then gives (2, 1). Doing B first, using AB, gives (−2, −1), which is the wrong order.",
+      "clue": "The matrix closest to the point acts first."
+    },
+    "b": {
+      "d": 2,
+      "q": "M = [3 0; 0 5] stretches the plane. What is M⁻¹?",
+      "opts": ["[1/3 0; 0 1/5]", "[−3 0; 0 −5]", "[5 0; 0 3]", "[1/5 0; 0 1/3]"],
+      "why": "Here ad − bc = 15, so M⁻¹ = 1/15 × [5 0; 0 3] = [1/3 0; 0 1/5]. It undoes the stretch, so it scales x by 1/3 and y by 1/5. Swapping d and a without dividing by the 15 gives [5 0; 0 3], which is wrong.",
+      "clue": "The inverse must undo the stretch of 3 in x and 5 in y."
+    }
+  },
+  "mat-determinants-area": {
+    "title": "Determinants and area",
+    "card": [
+      "For the matrix [a b; c d], the determinant is det = ad − bc.",
+      "A transformation scales every area by the absolute value of the determinant. New area = |det| × old area.",
+      "If det is negative, the shape is flipped over (its orientation reverses), and the area still scales by |det|. If det = 0, the plane collapses onto a line or a point.",
+      "Example: [3 1; 2 2] has det = 3×2 − 1×2 = 4, so a triangle of area 5 becomes area 20. Rotations, reflections and shears have |det| = 1, so they keep areas the same, though a shear can change lengths."
+    ],
+    "remember": "Area scales by |ad − bc|. The sign of the determinant tells you whether the shape is flipped.",
+    "a": {
+      "q": "A matrix [4 1; 2 3] is applied to a shape of area 6. What is the area of the image?",
+      "opts": ["60", "84", "72", "10"],
+      "why": "det = 4×3 − 1×2 = 10, so the new area is 10 × 6 = 60. Adding instead of subtracting gives 14 and an area of 84, which uses the wrong formula.",
+      "clue": "Work out ad − bc first, then multiply by the old area."
+    },
+    "b": {
+      "d": 3,
+      "q": "The matrix [1 2; 3 1] is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
+      "opts": ["20, and it is flipped", "20, and it is not flipped", "−20, and it is flipped", "28, and it is flipped"],
+      "why": "det = 1×1 − 2×3 = −5. Area scales by |−5| = 5, so the new area is 20. The negative sign means the orientation is reversed, but an area is never negative.",
+      "clue": "Area uses the absolute value, but the sign still tells you about flipping."
+    }
+  },
+  "mat-imaginary-unit": {
+    "title": "The imaginary unit",
+    "card": [
+      "No real number squares to give a negative answer. So we define a new number i with i² = −1.",
+      "Square roots of negative numbers can now be written using i. Split the root: √−9 = √9 × √−1 = 3i. Check: (3i)² = 9 × i² = −9.",
+      "Both 3i and −3i square to −9. The √ sign means the root 3i, just as √9 means 3 and not −3.",
+      "Powers of i repeat in a cycle of four: i¹ = i, i² = −1, i³ = −i, i⁴ = 1. Then i⁵ = i again."
+    ],
+    "remember": "i² = −1, so √−n = √n × i for n > 0.",
+    "a": {
+      "q": "Which expression equals √−16?",
+      "opts": ["4i", "−4i", "4", "−4"],
+      "why": "√−16 = √16 × √−1 = 4i. The option −4i also squares to −16, but the √ sign means the root 4i, just as √16 means 4. The option 4 ignores the negative sign, since 4² = 16, not −16.",
+      "clue": "Split the root into √16 and √−1."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is the value of i³ × i⁴?",
+      "opts": ["−i", "i", "1", "−1"],
+      "why": "i³ = −i and i⁴ = 1, so the product is −i × 1 = −i. Adding the powers gives i⁷, which is also −i, since i⁷ = i⁴ × i³. Taking i³ as i is a common slip.",
+      "clue": "Write each power as a simple value first, using the cycle of four."
+    }
+  },
+  "mat-arithmetic-with-complex-numbers": {
+    "title": "Arithmetic with complex numbers",
+    "card": [
+      "A complex number has the form a + bi, where a is the real part and b is the imaginary part.",
+      "To add or subtract, combine the real parts and the imaginary parts separately. (2 + 3i) + (4 − i) = 6 + 2i.",
+      "To multiply, expand like binomials, then replace i² with −1.",
+      "Example: (1 + 2i)(3 + i) = 3 + i + 6i + 2i² = 3 + 7i − 2 = 1 + 7i."
+    ],
+    "remember": "Treat i like a pronumeral, then replace i² with −1.",
+    "a": {
+      "q": "What is (5 − 2i) − (1 + 4i)?",
+      "opts": ["4 − 6i", "4 + 2i", "6 − 6i", "4 − 2i"],
+      "why": "Subtract the real parts: 5 − 1 = 4. Subtract the imaginary parts: −2 − 4 = −6. The option 4 + 2i comes from not subtracting the sign of the whole bracket.",
+      "clue": "Subtract the whole bracket, including the sign of 4i."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is (2 + 3i)(4 − i)?",
+      "opts": ["11 + 10i", "5 + 10i", "8 + 3i", "11 + 14i"],
+      "why": "Expand: 8 − 2i + 12i − 3i² = 8 + 10i + 3 = 11 + 10i. The option 5 + 10i comes from using i² = +1 and getting 8 − 3.",
+      "clue": "The term −3i² becomes +3."
+    }
+  },
+  "mat-conjugates-division": {
+    "title": "Conjugates and division",
+    "card": [
+      "The conjugate of a + bi is a − bi. Only the sign of the imaginary part changes.",
+      "A number times its conjugate is real: (a + bi)(a − bi) = a² + b².",
+      "To divide, multiply the top and bottom by the conjugate of the denominator. This makes the denominator real.",
+      "Example: 1/(2 + i) = (2 − i)/((2 + i)(2 − i)) = (2 − i)/5 = 2/5 − i/5."
+    ],
+    "remember": "To divide, multiply top and bottom by the denominator's conjugate.",
+    "a": {
+      "q": "What is (3 + 2i)(3 − 2i)?",
+      "opts": ["13", "5", "9 − 4i", "9 + 4i"],
+      "why": "A number times its conjugate is a² + b² = 9 + 4 = 13. The option 5 comes from a sign error, treating the result as a² − b².",
+      "clue": "Expand it, then use i² = −1."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is 5/(1 − 2i) in the form a + bi?",
+      "opts": ["1 + 2i", "1 − 2i", "5 + 10i", "1/5 + 2i/5"],
+      "why": "Multiply top and bottom by the conjugate 1 + 2i. The bottom becomes 1 + 4 = 5 and the top becomes 5 + 10i, so the result is 1 + 2i. The option 1 − 2i flips the sign of the imaginary part of this result, and 5 + 10i forgets to divide by 5.",
+      "clue": "Multiply top and bottom by the conjugate of 1 − 2i."
+    }
+  },
+  "mat-argand-plane": {
+    "title": "The Argand plane",
+    "card": [
+      "A complex number z = a + bi has a real part a and an imaginary part b. Both a and b are ordinary real numbers.",
+      "The Argand plane shows complex numbers as points. The horizontal axis is the real axis. The vertical axis is the imaginary axis.",
+      "To plot z = a + bi, go a units along the real axis and b units up the imaginary axis. This gives the point (a, b).",
+      "Example: 3 − 2i has real part 3 and imaginary part −2. It is plotted at (3, −2), which is 3 right and 2 down from the origin."
+    ],
+    "remember": "Real part goes across, imaginary part goes up: a + bi is the point (a, b).",
+    "a": {
+      "q": "At which point is the complex number −4 + 5i plotted on the Argand plane?",
+      "opts": ["(−4, 5)", "(5, −4)", "(−4, 5i)", "(4, −5)"],
+      "why": "The real part −4 gives the horizontal position and the imaginary part 5 gives the vertical position, so the point is (−4, 5). (5, −4) swaps the axes. The i is not part of the coordinate, because the imaginary part is the number 5.",
+      "clue": "Real part first, then the number in front of i."
+    },
+    "b": {
+      "d": 3,
+      "q": "Zara plots the complex number 2i − 6 on an Argand plane. Where does it lie?",
+      "opts": [
+        "6 left of the origin and 2 up",
+        "6 right of the origin and 2 up",
+        "2 left of the origin and 6 up",
+        "2 right of the origin and 6 down"
+      ],
+      "why": "Written as −6 + 2i, the real part is −6 and the imaginary part is 2. So the point is (−6, 2): 6 left and 2 up. Taking the first number written (2) as the real part swaps the axes and gives the tempting wrong answer.",
+      "clue": "Rewrite it as a + bi before reading off the parts."
+    }
+  },
+  "mat-modulus-argument": {
+    "title": "Modulus and argument",
+    "card": [
+      "A complex number z = a + bi is plotted on the Argand plane as the point (a, b). The horizontal axis is real and the vertical axis is imaginary.",
+      ["Modulus", "|z| is the distance from the origin to the point. |z| = √(a² + b²)."],
+      [
+        "Argument",
+        "Arg z is the angle from the positive real axis to the line joining the origin to the point, with −π < Arg z ≤ π. Anticlockwise angles are positive and clockwise angles are negative, and adding or subtracting 2π brings an angle into the range."
+      ],
+      "Example: z = 1 − √3i. |z| = √(1 + 3) = 2. The point is in the fourth quadrant. Measured anticlockwise the angle is 5π/3, which is too big, so Arg z = 5π/3 − 2π = −π/3."
+    ],
+    "remember": "Modulus is the distance from the origin. Argument is the angle from the positive real axis, kept between −π and π.",
+    "a": {
+      "q": "What is the modulus of z = 3 − 4i?",
+      "opts": ["5", "7", "25", "1"],
+      "why": "|z| = √(3² + (−4)²) = √(9 + 16) = √25 = 5. Giving 25 is tempting, but that is the value before taking the square root.",
+      "clue": "Use the distance formula from the origin, then take the root."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is Arg z for z = −2i?",
+      "opts": ["−π/2", "π/2", "3π/2", "π"],
+      "why": "The point (0, −2) lies on the negative imaginary axis. Measured anticlockwise it is 3π/2, which is outside the range, so subtract 2π to get −π/2. That is the same as turning a quarter turn clockwise. The option π/2 is the positive imaginary axis.",
+      "clue": "Which axis is the point on, and is the angle within −π to π?"
+    }
+  },
+  "mat-polar-form": {
+    "title": "Polar form",
+    "card": [
+      "Polar form writes a complex number as z = r cis θ, where r is the modulus and θ is the argument. cis θ means cos θ + i sin θ.",
+      "To convert from a + bi, find r = √(a² + b²) and the angle θ from the position of the point. For example, 1 + i = √2 cis(π/4).",
+      "To multiply, multiply the moduli and add the arguments: (r₁ cis θ₁)(r₂ cis θ₂) = r₁r₂ cis(θ₁ + θ₂). For example, (2 cis(π/6))(3 cis(π/3)) = 6 cis(π/2), which is 6i.",
+      "The principal argument lies in the range −π < θ ≤ π. If a sum of arguments falls outside it, add or subtract 2π, which gives the same point. For example, cis(5π/4) = cis(−3π/4)."
+    ],
+    "remember": "Multiply the moduli, add the arguments, then add or subtract 2π if the angle leaves the range −π to π.",
+    "a": {
+      "q": "What is (4 cis(π/5))(2 cis(π/10)) in polar form?",
+      "opts": ["8 cis(3π/10)", "8 cis(π/50)", "6 cis(3π/10)", "6 cis(π/50)"],
+      "why": "Multiply the moduli: 4 × 2 = 8. Add the arguments: π/5 + π/10 = 2π/10 + π/10 = 3π/10. Adding the moduli or multiplying the arguments are the tempting mistakes.",
+      "clue": "Moduli are multiplied. Arguments are added."
+    },
+    "b": {
+      "d": 3,
+      "q": "What is 3 cis(2π/3) × 2 cis(π/2) written with its argument in the range −π < θ ≤ π?",
+      "opts": ["6 cis(−5π/6)", "6 cis(7π/6)", "5 cis(−5π/6)", "6 cis(π/6)"],
+      "why": "The modulus is 3 × 2 = 6. The arguments add to 2π/3 + π/2 = 7π/6, which is above π, so subtract 2π to get −5π/6. The option 6 cis(7π/6) is the same number, but its argument is outside the range asked for.",
+      "clue": "After adding, check whether the angle is bigger than π."
+    }
+  },
+  "mat-solving-quadratics-over-complex": {
+    "title": "Solving quadratics over the complex numbers",
+    "card": [
+      "The discriminant of ax² + bx + c is Δ = b² − 4ac. If Δ is negative, there are no real roots, but there are two complex roots.",
+      "Use the quadratic formula: z = (−b ± √Δ) ÷ 2a. Write √(negative number) using i, where i² = −1. For example, √(−16) = 4i.",
+      "The two roots are conjugates: they have the same real part and opposite imaginary parts, as in p + qi and p − qi. This holds when a, b and c are all real.",
+      ["Example", "Solve z² − 4z + 13 = 0. Δ = 16 − 52 = −36, so √Δ = 6i. Then z = (4 ± 6i) ÷ 2 = 2 ± 3i."]
+    ],
+    "remember": "Negative discriminant: two complex roots, found with the formula, and they are conjugates.",
+    "a": {
+      "q": "Solve z² + 6z + 10 = 0. What are the roots?",
+      "opts": ["−3 + i and −3 − i", "3 + i and 3 − i", "−3 + 2i and −3 − 2i", "−6 + i and −6 − i"],
+      "why": "Δ = 36 − 40 = −4, so √Δ = 2i. Then z = (−6 ± 2i) ÷ 2 = −3 ± i. Using 3 ± i comes from dropping the sign of −b.",
+      "clue": "Divide both parts of −b ± √Δ by 2a."
+    },
+    "b": {
+      "d": 3,
+      "q": "A quadratic with real coefficients has one root 5 − 2i. What is true of its other root?",
+      "opts": ["It is 5 + 2i", "It is −5 + 2i", "It is 5 − 2i again", "It is a real number"],
+      "why": "Real coefficients and a negative discriminant give conjugate roots, so the other root is 5 + 2i. Negating both parts, as in −5 + 2i, is not the conjugate: only the imaginary part changes sign.",
+      "clue": "Only the sign of the imaginary part changes."
+    }
+  },
+  "mat-regions-complex-plane": {
+    "title": "Regions in the complex plane",
+    "card": [
+      "|z − w| is the distance between the points z and w. So |z − w| = r is a circle with centre w and radius r.",
+      "|z − w| < r is the inside of that circle. |z − w| > r is the outside.",
+      "|z − a| = |z − b| is the set of points equally far from a and b. It is a straight line, the perpendicular bisector of the segment joining them.",
+      "Arg(z − w) = θ is a ray starting at w, at angle θ from the positive real direction. Re(z) = k is a vertical line and Im(z) = k is a horizontal line."
+    ],
+    "remember": "Read |z − w| as a distance from w, and Arg(z − w) as a direction from w.",
+    "a": {
+      "q": "What does |z − (2 + i)| = 3 describe on the Argand plane?",
+      "opts": [
+        "A circle with centre (2, 1) and radius 3",
+        "A circle with centre (−2, −1) and radius 3",
+        "A circle with centre (2, 1) and radius 9",
+        "A line through (2, 1) at a gradient of 3"
+      ],
+      "why": "|z − w| = r is a circle with centre w, so the centre is 2 + i, which is (2, 1), and the radius is 3. The sign is not flipped: the centre is w, not −w.",
+      "clue": "Read it as: the distance from z to 2 + i is 3."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which description fits |z − 1| = |z + 3|?",
+      "opts": [
+        "The vertical line Re(z) = −1",
+        "The vertical line Re(z) = 1",
+        "The horizontal line Im(z) = −1",
+        "A circle with centre −1 and radius 2"
+      ],
+      "why": "The equation says z is equally far from 1 and −3. The perpendicular bisector of those two points on the real axis is the vertical line through their midpoint, −1. The midpoint is not 1, which is only one of the points.",
+      "clue": "Write |z + 3| as |z − (−3)|, then find the midpoint of 1 and −3."
+    }
+  },
+  "mat-partial-fractions": {
+    "title": "Partial fractions",
+    "card": [
+      "Partial fractions split one rational function into a sum of simpler fractions. First factorise the denominator. If the top has a lower degree than the bottom, no division is needed.",
+      [
+        "Linear factors",
+        "Each different linear factor gets its own fraction with a constant on top. For (x − 1)(x + 2), write A/(x − 1) + B/(x + 2)."
+      ],
+      [
+        "Quadratic factor",
+        "A quadratic factor that cannot be factorised gets a linear top. For x² + 1, write (Cx + D)/(x² + 1)."
+      ],
+      "Add the parts over the common denominator, then equate coefficients of matching powers of x on each side. Example: 5/((x − 1)(x + 4)) = A/(x − 1) + B/(x + 4). So 5 = A(x + 4) + B(x − 1). The left has no x term, so A + B = 0. The constants give 4A − B = 5. So A = 1 and B = −1."
+    ],
+    "remember": "Factorise the bottom, give each factor a fraction with unknown tops, then equate coefficients.",
+    "a": {
+      "q": "Which is the correct form of the partial fractions for 7/((x − 2)(x + 3))?",
+      "opts": ["A/(x − 2) + B/(x + 3)", "A/((x − 2)(x + 3))", "(Ax + B)/(x − 2) + C/(x + 3)", "A/(x − 2) × B/(x + 3)"],
+      "why": "Each different linear factor gets its own fraction with a constant on top, and the parts are added. A linear top is only needed for a quadratic factor that cannot be factorised, and multiplying the parts would not split the fraction into a sum.",
+      "clue": "Each linear factor gets a constant on top."
+    },
+    "b": {
+      "d": 3,
+      "q": "Write (3x + 7)/((x + 1)(x + 3)) as A/(x + 1) + B/(x + 3). What are A and B?",
+      "opts": ["A = 2 and B = 1", "A = 1 and B = 2", "A = 2 and B = −1", "A = 3 and B = 7"],
+      "why": "Equating gives 3x + 7 = A(x + 3) + B(x + 1). The x terms give A + B = 3 and the constants give 3A + B = 7, so A = 2 and B = 1. Swapping them fails: 1(x + 3) + 2(x + 1) = 3x + 5, not 3x + 7.",
+      "clue": "Match the x terms on each side, then match the constants."
+    }
+  },
+  "mat-reciprocal-functions-2": {
+    "title": "Reciprocal functions",
+    "card": [
+      "The graph of y = 1/f(x) comes from the graph of y = f(x). Each y-value is replaced by its reciprocal, so a point (a, b) becomes (a, 1/b).",
+      "Where f(x) = 0, the reciprocal is undefined. So y = 1/f(x) has a vertical asymptote at every x-intercept of f.",
+      "Points where f(x) = 1 or f(x) = −1 stay on the graph, because 1/1 = 1 and 1/(−1) = −1. Where f is positive, 1/f is positive. Where f is negative, 1/f is negative.",
+      "The reciprocal circular functions are sec x = 1/cos x, cosec x = 1/sin x and cot x = 1/tan x. Example: cos x = 0 at x = π/2, so sec x has a vertical asymptote at x = π/2."
+    ],
+    "remember": "Reciprocal graphs have a vertical asymptote wherever f(x) = 0.",
+    "a": {
+      "q": "The graph of y = f(x) crosses the x-axis at x = 3 and x = −2. What does y = 1/f(x) have at these x-values?",
+      "opts": ["Vertical asymptotes", "x-intercepts", "Turning points", "Horizontal asymptotes"],
+      "why": "At each x-intercept f(x) = 0, and 1/0 is undefined, so the graph has a vertical asymptote there. It does not have x-intercepts, because 1/f(x) is never 0 when f(x) is a finite number.",
+      "clue": "What happens when you divide 1 by zero?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which equations give the vertical asymptotes of y = cosec x for 0 ≤ x ≤ 2π?",
+      "opts": ["x = 0, x = π and x = 2π", "x = π/2 and x = 3π/2", "x = π/4 and x = 3π/4", "x = 0 and x = 2π only"],
+      "why": "cosec x = 1/sin x, and sin x = 0 at x = 0, π and 2π. Those are the asymptotes. The values x = π/2 and 3π/2 are where cos x = 0, which gives the asymptotes of sec x, not cosec x.",
+      "clue": "Find where sin x equals zero."
+    }
+  },
+  "mat-inverse-circular-functions": {
+    "title": "Inverse circular functions",
+    "card": [
+      "Sin, cos and tan repeat, so each is restricted to a domain where it is one-to-one before it can have an inverse. The inverse swaps domain and range, and its graph is the reflection of the restricted graph in y = x.",
+      [
+        "arcsin",
+        "the inverse of sin x on [−π/2, π/2], so it has domain [−1, 1] and range [−π/2, π/2]. For example, arcsin(1/2) = π/6, because sin(π/6) = 1/2."
+      ],
+      ["arccos", "the inverse of cos x on [0, π]. It has domain [−1, 1] and range [0, π]."],
+      ["arctan", "the inverse of tan x on (−π/2, π/2). It has domain all real numbers and range (−π/2, π/2)."]
+    ],
+    "remember": "Many angles share a sine, cosine or tangent. The inverse gives the one in its restricted range.",
+    "a": {
+      "q": "What is the exact value of arccos(0)?",
+      "opts": ["π/2", "0", "π", "3π/2"],
+      "why": "arccos(0) is the angle in [0, π] with cosine 0, which is π/2. The value 3π/2 also has cosine 0, but it lies outside the range [0, π].",
+      "clue": "The answer must lie between 0 and π."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which is the exact value of arcsin(−1/2)?",
+      "opts": ["−π/6", "π/6", "11π/6", "−π/3"],
+      "why": "The answer must lie in [−π/2, π/2], and sin(−π/6) = −1/2. The value 11π/6 also has sine −1/2, but it is outside the range of arcsin. The positive π/6 gives sine +1/2.",
+      "clue": "Check which angles fall inside the range of arcsin."
+    }
+  },
+  "mat-absolute-value-function": {
+    "title": "The absolute value function",
+    "card": [
+      "The absolute value |x| is the distance of x from 0, so it is never negative. |x| = x when x ≥ 0, and |x| = −x when x < 0.",
+      "The graph of y = |x| is a V with its vertex at (0, 0). The part of y = x below the x-axis is reflected above it.",
+      "For y = |f(x)|, any part of the graph of f below the x-axis is reflected in the x-axis. Parts on or above the axis stay the same.",
+      "Transformations apply as usual. y = |x − 2| + 3 is a V with its vertex moved to (2, 3). Example: |−5| = 5 and |5| = 5."
+    ],
+    "remember": "Absolute value makes outputs non-negative by flipping any negative part upwards.",
+    "a": {
+      "q": "What is the vertex of the graph of y = |x + 1| − 4?",
+      "opts": ["(−1, −4)", "(1, −4)", "(−1, 4)", "(1, 4)"],
+      "why": "Inside the bars, x + 1 = 0 when x = −1, so the vertex has x = −1. The −4 outside moves the graph down 4, giving (−1, −4). The sign inside the bars shifts the graph the opposite way to what it looks like.",
+      "clue": "Find the x-value that makes the inside zero."
+    },
+    "b": {
+      "d": 2,
+      "q": "The graph of y = x − 3 is reflected using y = |x − 3|. What is the y-intercept?",
+      "opts": ["3", "−3", "0", "1/3"],
+      "why": "At x = 0, y = |0 − 3| = |−3| = 3. The value −3 is the y-intercept of y = x − 3, but the absolute value makes it positive.",
+      "clue": "Substitute x = 0, then take the absolute value."
+    }
   }
 };

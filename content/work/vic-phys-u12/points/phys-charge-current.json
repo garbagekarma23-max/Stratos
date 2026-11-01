@@ -1,0 +1,132 @@
+{
+ "id": "phys-charge-current",
+ "title": "Charge and current",
+ "brief": "cbbe78f4ef55",
+ "shortlist": [
+  [
+   "phys-charges-electric-fields",
+   0.245
+  ],
+  [
+   "phys-charges-magnetic-fields",
+   0.236
+  ],
+  [
+   "phys-force-current-carrying-wire",
+   0.217
+  ],
+  [
+   "phys-millikan-s-oil-drop",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:34Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00689,
+  "check": 0.00556
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points defines current as the rate of flow of charge (I = q/t); they cover electric fields, magnetic forces, wire forces and Millikan's oil drop, which only use charge and current in passing.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Charge and current",
+  "card": [
+   "Electric charge is measured in coulombs (C). In a metal wire, the moving charges are electrons.",
+   "Current is the rate at which charge flows past a point. I = q/t, where q is charge in coulombs and t is time in seconds.",
+   "Current is measured in amperes (A). One ampere is one coulomb passing a point each second.",
+   "A larger current means more charge passes each second. The same current for a longer time moves more charge in total."
+  ],
+  "remember": "Current is charge per second: I = q/t, and 1 A is 1 C each second.",
+  "a": {
+   "q": "A phone charger cable carries a steady 2 A. How much charge passes a point in the cable each second?",
+   "opts": [
+    "2 C",
+    "0.5 C",
+    "2 J",
+    "4 C"
+   ],
+   "why": "One ampere is one coulomb per second, so 2 A means 2 C passes each second. 0.5 C comes from dividing the wrong way round.",
+   "clue": "Think of an ampere as coulombs each second."
+  },
+  "b": {
+   "d": 3,
+   "q": "A torch in Bendigo has a steady current of 0.50 A. How much charge passes through the bulb in 2.0 minutes?",
+   "opts": [
+    "60 C",
+    "0.25 C",
+    "1.0 C",
+    "240 C"
+   ],
+   "why": "Time must be in seconds: 2.0 min = 120 s. Then q = It = 0.50 × 120 = 60 C. Using 2.0 for the time gives 1.0 C, which is the tempting mistake.",
+   "clue": "Change minutes to seconds first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 C",
+   "also_right": []
+  },
+  "b": {
+   "best": "60 C",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Charge and current",
+  "card": [
+   "Electric charge is measured in coulombs (C). In a metal wire, the moving charges are electrons.",
+   "Current is the rate at which charge flows past a point. I = q/t, where q is charge in coulombs and t is time in seconds.",
+   "Current is measured in amperes (A). One ampere is one coulomb passing a point each second.",
+   "A larger current means more charge passes each second. The same current for a longer time moves more charge in total."
+  ],
+  "remember": "Current is charge per second: I = q/t, and 1 A is 1 C each second.",
+  "a": {
+   "q": "A phone charger cable carries a steady 2 A. How much charge passes a point in the cable each second?",
+   "opts": [
+    "2 C",
+    "0.5 C",
+    "2 J",
+    "4 C"
+   ],
+   "why": "One ampere is one coulomb per second, so 2 A means 2 C passes each second. 0.5 C comes from dividing the wrong way round.",
+   "clue": "Think of an ampere as coulombs each second."
+  },
+  "b": {
+   "d": 3,
+   "q": "A torch in Bendigo has a steady current of 0.50 A. How much charge passes through the bulb in 2.0 minutes?",
+   "opts": [
+    "60 C",
+    "0.25 C",
+    "1.0 C",
+    "240 C"
+   ],
+   "why": "Time must be in seconds: 2.0 min = 120 s. Then q = It = 0.50 × 120 = 60 C. Using 2.0 for the time gives 1.0 C, which is the tempting mistake.",
+   "clue": "Change minutes to seconds first."
+  }
+ },
+ "cleared_by": "checker"
+}

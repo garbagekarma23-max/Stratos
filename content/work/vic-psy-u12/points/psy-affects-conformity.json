@@ -1,0 +1,202 @@
+{
+ "id": "psy-affects-conformity",
+ "title": "What affects conformity",
+ "brief": "2fb64dc20794",
+ "shortlist": [
+  [
+   "soc-conformity",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:54Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00722,
+  "check": 0.01208,
+  "fix": 0.01593
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only defines conformity in general and does not cover the factors that affect conformity or the normative and informational explanations the new point requires, so it is a different and broader idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "What affects conformity",
+  "card": [
+   "Conformity is more likely in some situations than others. Larger groups tend to increase it, up to a point. A group that is unanimous, where everyone agrees, also makes it more likely. A single person who disagrees makes it easier to resist.",
+   [
+    "Deindividuation",
+    "losing your sense of personal identity and responsibility in a group, such as in a crowd or when anonymous. People may then act more like the group and less like themselves."
+   ],
+   [
+    "Social proof",
+    "copying what others do because their behaviour suggests what is correct. For example, joining a long queue because it seems to be worth it."
+   ],
+   "Two kinds of influence explain why. Normative influence is conforming to be liked or to avoid rejection. Informational influence is conforming because you think the group knows more than you do."
+  ],
+  "remember": "Group size, unanimity, deindividuation and social proof change conformity. Normative influence seeks acceptance. Informational influence seeks accuracy.",
+  "a": {
+   "q": "Sam is unsure of the answer in a quiz, so he goes with what the rest of his team picks because he thinks they know more. Which influence is this?",
+   "opts": [
+    "Informational influence",
+    "Normative influence",
+    "Deindividuation",
+    "Unanimity"
+   ],
+   "why": "Sam conforms because he believes the group is more likely to be right, which is informational influence. Normative influence would be about being liked or avoiding rejection, which is not his reason.",
+   "clue": "Why does Sam think the group is worth following?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Everyone in Lena's class says they will skip the excursion. Lena wants to go, but when one classmate says they will go, she says so too. Which factor best explains this change?",
+   "opts": [
+    "The group was no longer unanimous",
+    "The group became larger",
+    "Lena lost her sense of identity",
+    "Lena saw others doing it as proof it was right"
+   ],
+   "why": "Once one person disagreed, the group was no longer unanimous, and that makes it easier to resist. Social proof would push Lena toward the majority, not toward the one who broke from it.",
+   "clue": "What changed about how united the group was?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Informational influence",
+   "also_right": []
+  },
+  "b": {
+   "best": "The group was no longer unanimous",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'What changed about how united the group was?' points straight at unanimity. 'United' is a near-synonym of 'unanimous', so a student can pick the answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the remember line and both answers are accurate. Question b's clue gives the answer away by asking how 'united' the group was, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'What changed about how united the group was?' points straight at unanimity. 'United' is a near-synonym of 'unanimous', so a student can pick the answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "What affects conformity",
+  "card": [
+   "Larger groups tend to increase conformity, up to a point. A unanimous group, where everyone agrees, also raises it, while a single person who disagrees makes it easier to resist.",
+   [
+    "Deindividuation",
+    "losing your sense of personal identity and responsibility in a group, such as in a crowd or when anonymous. People may then act more like the group and less like themselves."
+   ],
+   [
+    "Social proof",
+    "copying what others do because their behaviour suggests what is correct. For example, joining a long queue because it seems to be worth it."
+   ],
+   "Normative influence is conforming to be liked or to avoid rejection. Informational influence is conforming because you think the group knows more than you do."
+  ],
+  "remember": "Group size, unanimity, deindividuation and social proof change conformity. Normative influence seeks acceptance. Informational influence seeks accuracy.",
+  "a": {
+   "q": "Sam is unsure of the answer in a quiz, so he goes with what the rest of his team picks because he thinks they know more. Which influence is this?",
+   "opts": [
+    "Informational influence",
+    "Normative influence",
+    "Deindividuation",
+    "Unanimity"
+   ],
+   "why": "Sam conforms because he believes the group is more likely to be right, which is informational influence. Normative influence would be about being liked or avoiding rejection, which is not his reason.",
+   "clue": "Why does Sam think the group is worth following?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Everyone in Lena's class says they will skip the excursion. Lena wants to go, but when one classmate says they will go, she says so too. Which factor best explains this change?",
+   "opts": [
+    "The group was no longer unanimous",
+    "The group had grown larger",
+    "Lena lost her sense of identity",
+    "Lena copied others as proof of what is right"
+   ],
+   "why": "Once one person disagreed, the group was no longer unanimous, and that makes it easier to resist. Social proof would push Lena toward what most people do, not toward the one person who broke from them.",
+   "clue": "Think about what one classmate speaking up did for Lena."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'What changed about how united the group was?' points straight at unanimity. 'United' is a near-synonym of 'unanimous', so a student can pick the answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'What changed about how united the group was?' points straight at unanimity. 'United' is a near-synonym of 'unanimous', so a student can pick the answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "What affects conformity",
+  "card": [
+   "Larger groups tend to increase conformity, up to a point. A unanimous group, where everyone agrees, also raises it, while a single person who disagrees makes it easier to resist.",
+   [
+    "Deindividuation",
+    "losing your sense of personal identity and responsibility in a group, such as in a crowd or when anonymous. People may then act more like the group and less like themselves."
+   ],
+   [
+    "Social proof",
+    "copying what others do because their behaviour suggests what is correct. For example, joining a long queue because it seems to be worth it."
+   ],
+   "Normative influence is conforming to be liked or to avoid rejection. Informational influence is conforming because you think the group knows more than you do."
+  ],
+  "remember": "Group size, unanimity, deindividuation and social proof change conformity. Normative influence seeks acceptance. Informational influence seeks accuracy.",
+  "a": {
+   "q": "Sam is unsure of the answer in a quiz, so he goes with what the rest of his team picks because he thinks they know more. Which influence is this?",
+   "opts": [
+    "Informational influence",
+    "Normative influence",
+    "Deindividuation",
+    "Unanimity"
+   ],
+   "why": "Sam conforms because he believes the group is more likely to be right, which is informational influence. Normative influence would be about being liked or avoiding rejection, which is not his reason.",
+   "clue": "Why does Sam think the group is worth following?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Everyone in Lena's class says they will skip the excursion. Lena wants to go, but when one classmate says they will go, she says so too. Which factor best explains this change?",
+   "opts": [
+    "The group was no longer unanimous",
+    "The group had grown larger",
+    "Lena lost her sense of identity",
+    "Lena copied others as proof of what is right"
+   ],
+   "why": "Once one person disagreed, the group was no longer unanimous, and that makes it easier to resist. Social proof would push Lena toward what most people do, not toward the one person who broke from them.",
+   "clue": "Think about what one classmate speaking up did for Lena."
+  }
+ },
+ "cleared_by": "auto"
+}

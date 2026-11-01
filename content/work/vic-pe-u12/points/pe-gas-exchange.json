@@ -1,0 +1,225 @@
+{
+ "id": "pe-gas-exchange",
+ "title": "Gas exchange",
+ "brief": "ae5dbcd8cc6d",
+ "shortlist": [
+  [
+   "hms-respiratory-system",
+   0.268
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: done",
+  "2026-11-01T08:24:34Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00759,
+  "check": 0.01087,
+  "fix": 0.01792,
+  "recheck": 0.00725
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only gas exchange at the alveoli, but the new point also needs exchange between capillaries and muscles, which the card does not teach, so it is too narrow to reuse or adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Gas exchange",
+  "card": [
+   "Gas exchange is the movement of oxygen and carbon dioxide between air, blood and body cells. The gases move by diffusion, which is movement from where there is more of a gas to where there is less.",
+   [
+    "In the lungs",
+    "Air in the alveoli has more oxygen than the blood in the nearby capillaries. Oxygen diffuses into the blood. Carbon dioxide diffuses the other way, into the alveoli, and is breathed out."
+   ],
+   [
+    "In the muscles",
+    "Working muscle has used up oxygen and made carbon dioxide. Oxygen diffuses from the capillaries into the muscle cells. Carbon dioxide diffuses from the muscle cells into the blood."
+   ],
+   "In both places, each gas moves from the side with more of it to the side with less. Gas exchange happens across very thin walls."
+  ],
+  "remember": "Each gas diffuses from more to less, in the lungs and in the muscles.",
+  "a": {
+   "q": "Blood arrives at the capillaries around the alveoli. Which way does carbon dioxide move?",
+   "opts": [
+    "From the blood into the alveoli",
+    "From the alveoli into the blood",
+    "From the blood into the trachea",
+    "From the alveoli into the muscles"
+   ],
+   "why": "Blood returning from the body has more carbon dioxide than the air in the alveoli, so it diffuses into the alveoli and is breathed out. The reverse is tempting because oxygen moves into the blood, but carbon dioxide moves the opposite way.",
+   "clue": "Each gas moves towards the side with less of it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is cycling hard on a hill. Her leg muscles have used up much of their oxygen. What happens at her muscle capillaries?",
+   "opts": [
+    "Oxygen diffuses into the muscle, carbon dioxide diffuses out",
+    "Carbon dioxide diffuses into the muscle, oxygen diffuses out",
+    "Both gases diffuse out of the muscle into the blood",
+    "Both gases diffuse from the blood into the muscle"
+   ],
+   "why": "The muscle has less oxygen and more carbon dioxide than the blood, so oxygen moves in and carbon dioxide moves out. Reversing the directions is tempting because that is not what happens in the alveoli, but the rule is the same: more to less.",
+   "clue": "Which gas is low in the muscle, and which is high?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "From the blood into the alveoli",
+   "also_right": []
+  },
+  "b": {
+   "best": "Oxygen diffuses into the muscle, carbon dioxide diffuses out",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says reversing the directions is tempting 'because that is not what happens in the alveoli'. This is confusing and does not explain the mistake. The likely reason is that students copy the alveoli pattern, where oxygen goes into the blood, and so wrongly expect oxygen to go into the blood here too."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one clear right answer. The explanation for question b gives a confusing reason for why the wrong answer is tempting and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Why (b) says reversing the directions is tempting 'because that is not what happens in the alveoli'. This is confusing and does not explain the mistake. The likely reason is that students copy the alveoli pattern, where oxygen goes into the blood, and so wrongly expect oxygen to go into the blood here too."
+ ],
+ "proposal": {
+  "title": "Gas exchange",
+  "card": [
+   "Gas exchange is the movement of oxygen and carbon dioxide between air, blood and body cells. The gases move by diffusion, which is movement from where there is more of a gas to where there is less.",
+   [
+    "In the lungs",
+    "Air in the alveoli has more oxygen than the blood in the nearby capillaries, so oxygen diffuses into the blood. The blood has more carbon dioxide, so carbon dioxide diffuses into the alveoli and is breathed out."
+   ],
+   [
+    "In the muscles",
+    "Working muscle has used up oxygen and made carbon dioxide. Oxygen diffuses from the capillaries into the muscle cells. Carbon dioxide diffuses from the muscle cells into the blood."
+   ],
+   "In both places, each gas moves from the side with more of it to the side with less. Gas exchange happens across very thin walls."
+  ],
+  "remember": "Each gas diffuses from more to less, in the lungs and in the muscles.",
+  "a": {
+   "q": "Blood arrives at the capillaries around the alveoli. Which way does carbon dioxide move?",
+   "opts": [
+    "From the blood into the alveoli",
+    "From the alveoli into the blood",
+    "From the blood into the trachea",
+    "From the alveoli into the muscles"
+   ],
+   "why": "Blood returning from the body has more carbon dioxide than the air in the alveoli, so it diffuses into the alveoli and is breathed out. The reverse is tempting because oxygen moves into the blood, but carbon dioxide moves the opposite way.",
+   "clue": "Each gas moves towards the side with less of it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is cycling hard on a hill. Her leg muscles have used up much of their oxygen. What happens at her muscle capillaries?",
+   "opts": [
+    "Oxygen diffuses into the muscle, carbon dioxide diffuses out",
+    "Carbon dioxide diffuses into the muscle, oxygen diffuses out",
+    "Both gases diffuse out of the muscle into the blood",
+    "Both gases diffuse from the blood into the muscle"
+   ],
+   "why": "The muscle has less oxygen and more carbon dioxide than the blood, so oxygen moves in and carbon dioxide moves out. The reverse is tempting if you copy the alveoli, where oxygen goes into the blood. At the muscles, the blood is the side with more oxygen, so oxygen leaves it.",
+   "clue": "Which gas is low in the muscle, and which is high?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "From the blood into the alveoli",
+    "also_right": []
+   },
+   "b": {
+    "best": "Oxygen diffuses into the muscle, carbon dioxide diffuses out",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Why (b) says reversing the directions is tempting 'because that is not what happens in the alveoli'. This is confusing and does not explain the mistake. The likely reason is that students copy the alveoli pattern, where oxygen goes into the blood, and so wrongly expect oxygen to go into the blood here too."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Why (b) says reversing the directions is tempting 'because that is not what happens in the alveoli'. This is confusing and does not explain the mistake. The likely reason is that students copy the alveoli pattern, where oxygen goes into the blood, and so wrongly expect oxygen to go into the blood here too."
+  ]
+ },
+ "final": {
+  "title": "Gas exchange",
+  "card": [
+   "Gas exchange is the movement of oxygen and carbon dioxide between air, blood and body cells. The gases move by diffusion, which is movement from where there is more of a gas to where there is less.",
+   [
+    "In the lungs",
+    "Air in the alveoli has more oxygen than the blood in the nearby capillaries, so oxygen diffuses into the blood. The blood has more carbon dioxide, so carbon dioxide diffuses into the alveoli and is breathed out."
+   ],
+   [
+    "In the muscles",
+    "Working muscle has used up oxygen and made carbon dioxide. Oxygen diffuses from the capillaries into the muscle cells. Carbon dioxide diffuses from the muscle cells into the blood."
+   ],
+   "In both places, each gas moves from the side with more of it to the side with less. Gas exchange happens across very thin walls."
+  ],
+  "remember": "Each gas diffuses from more to less, in the lungs and in the muscles.",
+  "a": {
+   "q": "Blood arrives at the capillaries around the alveoli. Which way does carbon dioxide move?",
+   "opts": [
+    "From the blood into the alveoli",
+    "From the alveoli into the blood",
+    "From the blood into the trachea",
+    "From the alveoli into the muscles"
+   ],
+   "why": "Blood returning from the body has more carbon dioxide than the air in the alveoli, so it diffuses into the alveoli and is breathed out. The reverse is tempting because oxygen moves into the blood, but carbon dioxide moves the opposite way.",
+   "clue": "Each gas moves towards the side with less of it."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya is cycling hard on a hill. Her leg muscles have used up much of their oxygen. What happens at her muscle capillaries?",
+   "opts": [
+    "Oxygen diffuses into the muscle, carbon dioxide diffuses out",
+    "Carbon dioxide diffuses into the muscle, oxygen diffuses out",
+    "Both gases diffuse out of the muscle into the blood",
+    "Both gases diffuse from the blood into the muscle"
+   ],
+   "why": "The muscle has less oxygen and more carbon dioxide than the blood, so oxygen moves in and carbon dioxide moves out. The reverse is tempting if you copy the alveoli, where oxygen goes into the blood. At the muscles, the blood is the side with more oxygen, so oxygen leaves it.",
+   "clue": "Which gas is low in the muscle, and which is high?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,252 @@
+{
+ "id": "eco-aggregate-demand-2",
+ "title": "Aggregate demand",
+ "brief": "2ce21a167c59",
+ "shortlist": [
+  [
+   "e-ad",
+   0.557
+  ],
+  [
+   "e-consumption",
+   0.446
+  ],
+  [
+   "e-govtrade",
+   0.298
+  ],
+  [
+   "e-inflation",
+   0.26
+  ],
+  [
+   "e-fiscal",
+   0.259
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt e-ad, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.01092,
+  "write": 0.00705,
+  "check": 0.01305,
+  "fix": 0.03162,
+  "recheck": 0.00679
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "e-ad",
+  "changes": [
+   "Replace the Chile and New Zealand figures and scenario in question a and question b with an Australian economy, so the examples are local to Victoria.",
+   "Drop or simplify the downward-sloping AD curve and movement-versus-shift material, since the brief covers only the components of total spending and what changes them, not the price-level effect."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same definition of AD (C + I + G + X - M) at about the right depth, but its examples are foreign and it goes beyond the brief's price-level content, so it needs localising and trimming.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point e-ad shares the definition and the C + I + G + (X - M) formula, but it spends its depth on why the AD curve slopes down and on movements versus shifts, and it never covers how confidence, interest rates and income change spending, which is the focus of this brief for Year 11; fitting it would mean rewriting half the card, so a new point is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Aggregate demand",
+  "card": [
+   "Aggregate demand (AD) is the total spending on an economy's goods and services over a period. AD = C + I + G + (X - M).",
+   [
+    "Components",
+    "C is household consumption, I is business investment, G is government spending, and X - M is exports less imports."
+   ],
+   "Higher consumer and business confidence can lift spending and so raise AD. Lower confidence can reduce it.",
+   "Lower interest rates make borrowing cheaper, which can raise consumption and investment. Higher incomes can raise consumption. Changes in these can shift AD."
+  ],
+  "remember": "AD is all spending in the economy, and confidence, interest rates and income can shift it.",
+  "a": {
+   "q": "Which of these is part of the investment (I) component of AD?",
+   "opts": [
+    "A bakery in Ballarat buys a new oven",
+    "A family in Geelong buys a new sofa",
+    "The Victorian Government pays hospital nurses",
+    "A Melbourne shop sells jackets to a buyer in Japan"
+   ],
+   "why": "Investment is spending by businesses on capital goods such as machinery, and an oven is one. The sofa is consumption, which is tempting because it is also a purchase, but households buy it.",
+   "clue": "Who is doing the buying, and is it a business?"
+  },
+  "b": {
+   "d": 3,
+   "q": "The Reserve Bank lowers interest rates. Households in Bendigo borrow more and spend more on cars and renovations. What is the likely effect on AD?",
+   "opts": [
+    "AD rises because consumption rises",
+    "AD falls because borrowing rises",
+    "AD stays the same because spending only moves",
+    "AD rises only if imports also rise"
+   ],
+   "why": "Cheaper borrowing can lift household spending, which raises the consumption part of AD. The idea that AD falls because borrowing rises is tempting but wrong, since borrowed money is spent on goods and services.",
+   "clue": "Which part of C + I + G + (X - M) is changing?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A bakery in Ballarat buys a new oven",
+   "also_right": []
+  },
+  "b": {
+   "best": "AD rises because consumption rises",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Who is doing the buying, and is it a business?' nearly gives the answer away. The bakery is the only option where a business is buying, so a student can pick it without knowing what investment means."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "In Australian national accounts, household spending on renovations (alterations and additions to dwellings) counts as private dwelling investment, not consumption. The answer still holds because of the car purchases, but 'renovations' muddies the C vs I distinction. Use another consumption item, such as holidays or furniture."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly correct answer. The clue in (a) nearly hands over the answer, and household renovations in (b) are technically counted as investment rather than consumption, so that example should be swapped."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Who is doing the buying, and is it a business?' nearly gives the answer away. The bakery is the only option where a business is buying, so a student can pick it without knowing what investment means.",
+  "Question b, fact: In Australian national accounts, household spending on renovations (alterations and additions to dwellings) counts as private dwelling investment, not consumption. The answer still holds because of the car purchases, but 'renovations' muddies the C vs I distinction. Use another consumption item, such as holidays or furniture."
+ ],
+ "proposal": {
+  "title": "Aggregate demand",
+  "card": [
+   "Aggregate demand (AD) is the total spending on an economy's goods and services over a period. AD = C + I + G + (X - M).",
+   "C is consumption: household spending on goods and services, such as food and furniture. I is investment: business spending on capital goods, such as machinery and buildings.",
+   "G is government spending, such as paying nurses and building roads. X - M is spending on our exports by other countries, less our spending on imports.",
+   "Lower interest rates make borrowing cheaper, so they can lift C and I. Higher confidence and higher incomes can also raise spending. The reverse of each can lower AD."
+  ],
+  "remember": "Add up C, I, G and X - M to get AD. Confidence, interest rates and income can shift it.",
+  "a": {
+   "q": "Which of these is part of the investment (I) component of AD?",
+   "opts": [
+    "A bakery in Ballarat buys a new oven",
+    "A family in Geelong buys a new sofa",
+    "The Victorian Government pays hospital nurses",
+    "A Melbourne shop sells jackets to a buyer in Japan"
+   ],
+   "why": "Investment is business spending on capital goods, and an oven is used to make bread for sale. The sofa is tempting because it is a large purchase, but it is household spending, so it is consumption.",
+   "clue": "Think about what each item will be used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Reserve Bank lowers interest rates. Households in Bendigo borrow more and spend more on furniture and meals at local cafés. What is the likely effect on AD?",
+   "opts": [
+    "AD rises because consumption rises",
+    "AD rises because investment rises",
+    "AD falls because borrowing rises",
+    "AD stays the same because spending only moves"
+   ],
+   "why": "Cheaper borrowing lifts household spending on goods and services, which is consumption, so AD rises. Investment is tempting because borrowing is involved, but investment is business spending on capital goods, and here households are doing the spending.",
+   "clue": "Who is doing the extra spending?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A bakery in Ballarat buys a new oven",
+    "also_right": []
+   },
+   "b": {
+    "best": "AD rises because consumption rises",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Who is doing the buying, and is it a business?' nearly gives the answer away. The bakery is the only option where a business is buying, so a student can pick it without knowing what investment means."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "In Australian national accounts, household spending on renovations (alterations and additions to dwellings) counts as private dwelling investment, not consumption. The answer still holds because of the car purchases, but 'renovations' muddies the C vs I distinction. Use another consumption item, such as holidays or furniture."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Who is doing the buying, and is it a business?' nearly gives the answer away. The bakery is the only option where a business is buying, so a student can pick it without knowing what investment means.",
+   "Question b, fact: In Australian national accounts, household spending on renovations (alterations and additions to dwellings) counts as private dwelling investment, not consumption. The answer still holds because of the car purchases, but 'renovations' muddies the C vs I distinction. Use another consumption item, such as holidays or furniture."
+  ]
+ },
+ "final": {
+  "title": "Aggregate demand",
+  "card": [
+   "Aggregate demand (AD) is the total spending on an economy's goods and services over a period. AD = C + I + G + (X - M).",
+   "C is consumption: household spending on goods and services, such as food and furniture. I is investment: business spending on capital goods, such as machinery and buildings.",
+   "G is government spending, such as paying nurses and building roads. X - M is spending on our exports by other countries, less our spending on imports.",
+   "Lower interest rates make borrowing cheaper, so they can lift C and I. Higher confidence and higher incomes can also raise spending. The reverse of each can lower AD."
+  ],
+  "remember": "Add up C, I, G and X - M to get AD. Confidence, interest rates and income can shift it.",
+  "a": {
+   "q": "Which of these is part of the investment (I) component of AD?",
+   "opts": [
+    "A bakery in Ballarat buys a new oven",
+    "A family in Geelong buys a new sofa",
+    "The Victorian Government pays hospital nurses",
+    "A Melbourne shop sells jackets to a buyer in Japan"
+   ],
+   "why": "Investment is business spending on capital goods, and an oven is used to make bread for sale. The sofa is tempting because it is a large purchase, but it is household spending, so it is consumption.",
+   "clue": "Think about what each item will be used for."
+  },
+  "b": {
+   "d": 3,
+   "q": "The Reserve Bank lowers interest rates. Households in Bendigo borrow more and spend more on furniture and meals at local cafés. What is the likely effect on AD?",
+   "opts": [
+    "AD rises because consumption rises",
+    "AD rises because investment rises",
+    "AD falls because borrowing rises",
+    "AD stays the same because spending only moves"
+   ],
+   "why": "Cheaper borrowing lifts household spending on goods and services, which is consumption, so AD rises. Investment is tempting because borrowing is involved, but investment is business spending on capital goods, and here households are doing the spending.",
+   "clue": "Who is doing the extra spending?"
+  }
+ },
+ "cleared_by": "recheck"
+}

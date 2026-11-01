@@ -1,0 +1,213 @@
+{
+ "id": "mat-reading-plans-diagrams",
+ "title": "Reading plans and diagrams",
+ "brief": "2c73c9991443",
+ "shortlist": [
+  [
+   "mat-scale-drawings-plans",
+   0.297
+  ],
+  [
+   "mat-venn-diagrams-set-notation",
+   0.294
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: failed the content check, writing again",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01547,
+  "check": 0.00968,
+  "fix": 0.02916,
+  "recheck": 0.00757
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers scale calculations at a Year 12 NSW depth, including squared area scaling, but it does not teach the symbols or the reading of layouts that this everyday Foundation point needs, so the change in depth and content is too large to adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reading plans and diagrams",
+  "card": [
+   "A plan is a drawing of a place seen from above. Every length on the plan is a smaller copy of a real length.",
+   "The scale tells you how much smaller. A scale of 1:100 means 1 cm on the plan is 100 cm in real life.",
+   "To find a real length, measure the plan and multiply by the scale number. Then change the units, because 100 cm = 1 m. Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "Symbols show features such as doors, windows and stairs. A legend on the plan explains what each symbol means."
+  ],
+  "remember": "Real length = plan length × scale number. Then check the units.",
+  "a": {
+   "q": "A bedroom is 6 cm long on a plan with a scale of 1:50. How long is the real bedroom?",
+   "opts": [
+    "3 m",
+    "300 m",
+    "30 m",
+    "30 cm"
+   ],
+   "why": "6 × 50 = 300 cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
+   "clue": "Multiply by 50, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:100 plan, Ava's deck is 5 cm long and 3 cm wide. What is the real area of the deck?",
+   "opts": [
+    "15 m²",
+    "1500 m²",
+    "150 m²",
+    "8 m²"
+   ],
+   "why": "The real size is 5 m by 3 m, because 5 × 100 = 500 cm = 5 m and 3 × 100 = 300 cm = 3 m. Then 5 × 3 = 15 m². Multiplying 15 by 100 gives 1500, which is wrong because the scale applies to each length, not to the area.",
+   "clue": "Find the real length and width first, in metres."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "15 m²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question asks for a real area, but the card only teaches converting lengths. The key step, that the scale applies to each length and not to the area, is not on the card. Only the clue and the why explain it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: 3 m for (a) and 15 m² for (b). The one problem is that question b needs an area step the card does not teach; the card could add a line on finding real area from real lengths."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question asks for a real area, but the card only teaches converting lengths. The key step, that the scale applies to each length and not to the area, is not on the card. Only the clue and the why explain it."
+ ],
+ "proposal": {
+  "title": "Reading plans and diagrams",
+  "card": [
+   "A plan is a drawing of a place seen from above. Its scale tells you how much smaller it is: 1:100 means 1 cm on the plan is 100 cm in real life.",
+   "To find a real length, multiply the plan length by the scale number, then change units (100 cm = 1 m). Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "The scale applies to each length, not to an area. For a real area, change the length and width to real lengths first, then multiply. Example: 2 cm by 4 cm on a 1:50 plan is 1 m by 2 m, so the area is 2 m².",
+   "Symbols show features such as doors, windows and stairs. A legend on the plan explains what each symbol means."
+  ],
+  "remember": "Real length = plan length × scale number. For an area, scale each length first, then multiply.",
+  "a": {
+   "q": "A bedroom is 6 cm long on a plan with a scale of 1:50. How long is the real bedroom?",
+   "opts": [
+    "3 m",
+    "300 m",
+    "30 m",
+    "30 cm"
+   ],
+   "why": "6 × 50 = 300 cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
+   "clue": "Multiply by 50, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:100 plan, Ava's deck is 5 cm long and 3 cm wide. What is the real area of the deck?",
+   "opts": [
+    "15 m²",
+    "1500 m²",
+    "0.15 m²",
+    "8 m²"
+   ],
+   "why": "The real deck is 5 m by 3 m, because 5 × 100 = 500 cm and 3 × 100 = 300 cm. Then 5 × 3 = 15 m². Multiplying the plan area of 15 cm² by 100 gives 0.15 m², which is wrong because the scale applies to each length, not to the area.",
+   "clue": "Find the real length and width first, in metres."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3 m",
+    "also_right": []
+   },
+   "b": {
+    "best": "15 m²",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question asks for a real area, but the card only teaches converting lengths. The key step, that the scale applies to each length and not to the area, is not on the card. Only the clue and the why explain it."
+   }
+  ],
+  "flags": [
+   "Question b, level: The question asks for a real area, but the card only teaches converting lengths. The key step, that the scale applies to each length and not to the area, is not on the card. Only the clue and the why explain it."
+  ]
+ },
+ "final": {
+  "title": "Reading plans and diagrams",
+  "card": [
+   "A plan is a drawing of a place seen from above. Its scale tells you how much smaller it is: 1:100 means 1 cm on the plan is 100 cm in real life.",
+   "To find a real length, multiply the plan length by the scale number, then change units (100 cm = 1 m). Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "The scale applies to each length, not to an area. For a real area, change the length and width to real lengths first, then multiply. Example: 2 cm by 4 cm on a 1:50 plan is 1 m by 2 m, so the area is 2 m².",
+   "Symbols show features such as doors, windows and stairs. A legend on the plan explains what each symbol means."
+  ],
+  "remember": "Real length = plan length × scale number. For an area, scale each length first, then multiply.",
+  "a": {
+   "q": "A bedroom is 6 cm long on a plan with a scale of 1:50. How long is the real bedroom?",
+   "opts": [
+    "3 m",
+    "300 m",
+    "30 m",
+    "30 cm"
+   ],
+   "why": "6 × 50 = 300 cm, which is 3 m. The option 300 m is tempting, but it forgets to change centimetres to metres.",
+   "clue": "Multiply by 50, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "On a 1:100 plan, Ava's deck is 5 cm long and 3 cm wide. What is the real area of the deck?",
+   "opts": [
+    "15 m²",
+    "1500 m²",
+    "0.15 m²",
+    "8 m²"
+   ],
+   "why": "The real deck is 5 m by 3 m, because 5 × 100 = 500 cm and 3 × 100 = 300 cm. Then 5 × 3 = 15 m². Multiplying the plan area of 15 cm² by 100 gives 0.15 m², which is wrong because the scale applies to each length, not to the area.",
+   "clue": "Find the real length and width first, in metres."
+  }
+ },
+ "cleared_by": "recheck"
+}

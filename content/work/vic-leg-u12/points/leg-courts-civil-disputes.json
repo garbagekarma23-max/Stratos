@@ -1,0 +1,221 @@
+{
+ "id": "leg-courts-civil-disputes",
+ "title": "Courts in civil disputes",
+ "brief": "e188fda0304a",
+ "shortlist": [
+  [
+   "leg-courts-ngos-protecting-environment",
+   0.303
+  ],
+  [
+   "leg-children-s-court",
+   0.287
+  ],
+  [
+   "leg-international-courts",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: failed the content check, writing again",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:50Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01121,
+  "check": 0.0106,
+  "fix": 0.01338
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the Victorian civil court hierarchy (Magistrates', County and Supreme Courts by claim size). They cover environmental NGOs and the NSW Land and Environment Court, the NSW Children's Court, and international courts, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has three levels of court that hear civil disputes. The level depends on the size and complexity of the claim.",
+   [
+    "Magistrates' Court",
+    "hears smaller claims, such as a dispute over an unpaid bill for a modest amount."
+   ],
+   [
+    "County Court",
+    "hears larger claims than the Magistrates' Court, so it sits above it in the court hierarchy."
+   ],
+   [
+    "Supreme Court",
+    "hears the largest and most complex claims. It is the highest court in Victoria."
+   ]
+  ],
+  "remember": "The bigger and more complex the claim, the higher the court.",
+  "a": {
+   "q": "Which Victorian court hears the largest and most complex civil claims?",
+   "opts": [
+    "The Supreme Court",
+    "The County Court",
+    "The Magistrates' Court",
+    "The Children's Court"
+   ],
+   "why": "The Supreme Court is the highest Victorian court and hears the largest and most complex claims. The County Court is tempting, but it hears claims that are larger than those in the Magistrates' Court and sits below the Supreme Court.",
+   "clue": "Think of the top of the three levels."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas runs a cleaning business and sues a customer for a small unpaid invoice. Which court is the best fit for this claim?",
+   "opts": [
+    "The Magistrates' Court",
+    "The Supreme Court",
+    "The County Court",
+    "The Coroners Court"
+   ],
+   "why": "A small unpaid invoice is a smaller claim, which the Magistrates' Court hears. The Supreme Court is wrong because it is for the largest and most complex claims.",
+   "clue": "Is the claim small, or large and complex?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The Supreme Court",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Magistrates' Court",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The County Court line says it hears larger claims 'so it sits above' the Magistrates' Court. This suggests a court's place in the hierarchy is caused by claim size, when the hierarchy is set by law and also reflects appeals. Stating the two facts side by side, without 'so', would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear answer each. The only issue is a minor wording problem: the card implies the County Court ranks higher because it hears larger claims."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The County Court line says it hears larger claims 'so it sits above' the Magistrates' Court. This suggests a court's place in the hierarchy is caused by claim size, when the hierarchy is set by law and also reflects appeals. Stating the two facts side by side, without 'so', would be clearer."
+ ],
+ "proposal": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has three levels of court that hear civil disputes. The level depends on the size and complexity of the claim.",
+   [
+    "Magistrates' Court",
+    "hears smaller claims, such as a dispute over an unpaid bill for a modest amount."
+   ],
+   [
+    "County Court",
+    "hears larger claims than the Magistrates' Court. It sits above the Magistrates' Court and below the Supreme Court in the court hierarchy."
+   ],
+   [
+    "Supreme Court",
+    "hears the largest and most complex claims. It is the highest court in Victoria."
+   ]
+  ],
+  "remember": "The bigger and more complex the claim, the higher the court.",
+  "a": {
+   "q": "Which Victorian court hears the largest and most complex civil claims?",
+   "opts": [
+    "The Supreme Court",
+    "The County Court",
+    "The Magistrates' Court",
+    "The Children's Court"
+   ],
+   "why": "The Supreme Court is the highest Victorian court and hears the largest and most complex claims. The County Court is tempting, but it hears claims larger than those in the Magistrates' Court and sits below the Supreme Court.",
+   "clue": "Think of the top of the three levels."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas runs a cleaning business and sues a customer for a small unpaid invoice. Which court is the best fit for this claim?",
+   "opts": [
+    "The Magistrates' Court",
+    "The Supreme Court",
+    "The County Court",
+    "The Coroners Court"
+   ],
+   "why": "A small unpaid invoice is a smaller claim, which the Magistrates' Court hears. The Supreme Court is wrong because it is for the largest and most complex claims.",
+   "clue": "Is the claim small, or large and complex?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The County Court line says it hears larger claims 'so it sits above' the Magistrates' Court. This suggests a court's place in the hierarchy is caused by claim size, when the hierarchy is set by law and also reflects appeals. Stating the two facts side by side, without 'so', would be clearer."
+   }
+  ],
+  "flags": [
+   "Card, wording: The County Court line says it hears larger claims 'so it sits above' the Magistrates' Court. This suggests a court's place in the hierarchy is caused by claim size, when the hierarchy is set by law and also reflects appeals. Stating the two facts side by side, without 'so', would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has three levels of court that hear civil disputes. The level depends on the size and complexity of the claim.",
+   [
+    "Magistrates' Court",
+    "hears smaller claims, such as a dispute over an unpaid bill for a modest amount."
+   ],
+   [
+    "County Court",
+    "hears larger claims than the Magistrates' Court. It sits above the Magistrates' Court and below the Supreme Court in the court hierarchy."
+   ],
+   [
+    "Supreme Court",
+    "hears the largest and most complex claims. It is the highest court in Victoria."
+   ]
+  ],
+  "remember": "The bigger and more complex the claim, the higher the court.",
+  "a": {
+   "q": "Which Victorian court hears the largest and most complex civil claims?",
+   "opts": [
+    "The Supreme Court",
+    "The County Court",
+    "The Magistrates' Court",
+    "The Children's Court"
+   ],
+   "why": "The Supreme Court is the highest Victorian court and hears the largest and most complex claims. The County Court is tempting, but it hears claims larger than those in the Magistrates' Court and sits below the Supreme Court.",
+   "clue": "Think of the top of the three levels."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tomas runs a cleaning business and sues a customer for a small unpaid invoice. Which court is the best fit for this claim?",
+   "opts": [
+    "The Magistrates' Court",
+    "The Supreme Court",
+    "The County Court",
+    "The Coroners Court"
+   ],
+   "why": "A small unpaid invoice is a smaller claim, which the Magistrates' Court hears. The Supreme Court is wrong because it is for the largest and most complex claims.",
+   "clue": "Is the claim small, or large and complex?"
+  }
+ },
+ "cleared_by": "auto"
+}

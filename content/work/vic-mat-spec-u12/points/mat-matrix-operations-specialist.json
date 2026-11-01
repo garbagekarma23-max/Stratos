@@ -1,0 +1,104 @@
+{
+ "id": "mat-matrix-operations-specialist",
+ "title": "Matrix operations in Specialist",
+ "brief": "3ab1d25bba4a",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: done",
+  "2026-11-01T08:14:07Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "write": 0.00715,
+  "check": 0.00922
+ },
+ "draft": {
+  "title": "Matrix operations",
+  "card": [
+   "A matrix is a rectangle of numbers in rows and columns. Its order is rows × columns, so a matrix with 2 rows and 3 columns has order 2 × 3.",
+   "To add matrices, they must have the same order. Add the entries in matching positions. To scale a matrix, multiply every entry by the number.",
+   "To multiply A × B, the number of columns in A must equal the number of rows in B. The result has A's rows and B's columns.",
+   "Each entry of the product is a row of A times a column of B: multiply in pairs, then add. Example: (2 3) × (4 5)ᵀ, where the column is 4 then 5, gives 2×4 + 3×5 = 23."
+  ],
+  "remember": "Add needs equal orders. Multiply needs columns of the first to equal rows of the second.",
+  "a": {
+   "q": "Matrix A has order 2 × 3 and matrix B has order 3 × 4. What is the order of A × B?",
+   "opts": [
+    "2 × 4",
+    "3 × 3",
+    "2 × 3",
+    "3 × 4"
+   ],
+   "why": "The columns of A (3) match the rows of B (3), so the product exists. It has the rows of A and the columns of B, so its order is 2 × 4. Order 3 × 3 comes from taking the matching numbers instead.",
+   "clue": "Keep the outer numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shop sells 2 items. Row matrix P = (10 20) holds the prices in dollars. Column matrix Q holds the numbers sold on one day: 3 of the first item and 4 of the second. What does P × Q give?",
+   "opts": [
+    "110, the total takings in dollars",
+    "70, the total takings in dollars",
+    "110, the total number of items sold",
+    "30, the total price of the two items"
+   ],
+   "why": "P × Q = 10×3 + 20×4 = 30 + 80 = 110, which is price times number sold, added up: the takings in dollars. Adding 3 + 4 gives the items sold, 7, not 110.",
+   "clue": "Multiply in pairs, then add the results."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 × 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "110, the total takings in dollars",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Matrix operations",
+  "card": [
+   "A matrix is a rectangle of numbers in rows and columns. Its order is rows × columns, so a matrix with 2 rows and 3 columns has order 2 × 3.",
+   "To add matrices, they must have the same order. Add the entries in matching positions. To scale a matrix, multiply every entry by the number.",
+   "To multiply A × B, the number of columns in A must equal the number of rows in B. The result has A's rows and B's columns.",
+   "Each entry of the product is a row of A times a column of B: multiply in pairs, then add. Example: (2 3) × (4 5)ᵀ, where the column is 4 then 5, gives 2×4 + 3×5 = 23."
+  ],
+  "remember": "Add needs equal orders. Multiply needs columns of the first to equal rows of the second.",
+  "a": {
+   "q": "Matrix A has order 2 × 3 and matrix B has order 3 × 4. What is the order of A × B?",
+   "opts": [
+    "2 × 4",
+    "3 × 3",
+    "2 × 3",
+    "3 × 4"
+   ],
+   "why": "The columns of A (3) match the rows of B (3), so the product exists. It has the rows of A and the columns of B, so its order is 2 × 4. Order 3 × 3 comes from taking the matching numbers instead.",
+   "clue": "Keep the outer numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "A shop sells 2 items. Row matrix P = (10 20) holds the prices in dollars. Column matrix Q holds the numbers sold on one day: 3 of the first item and 4 of the second. What does P × Q give?",
+   "opts": [
+    "110, the total takings in dollars",
+    "70, the total takings in dollars",
+    "110, the total number of items sold",
+    "30, the total price of the two items"
+   ],
+   "why": "P × Q = 10×3 + 20×4 = 30 + 80 = 110, which is price times number sold, added up: the takings in dollars. Adding 3 + 4 gives the items sold, 7, not 110.",
+   "clue": "Multiply in pairs, then add the results."
+  }
+ },
+ "cleared_by": "checker"
+}

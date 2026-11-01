@@ -1,0 +1,203 @@
+{
+ "id": "mat-determinants-area",
+ "title": "Determinants and area",
+ "brief": "7ac4a705b6d2",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:34Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00654,
+  "check": 0.01683,
+  "fix": 0.02811,
+  "recheck": 0.00691
+ },
+ "draft": {
+  "title": "Determinants and area",
+  "card": [
+   "For the matrix [a b; c d], the determinant is det = ad − bc.",
+   "A transformation scales every area by the absolute value of the determinant. New area = |det| × old area.",
+   "If det is negative, the shape is flipped over (its orientation reverses), but the area still scales by |det|. If det = 0, the plane collapses onto a line or point.",
+   "Example: [3 1; 2 2] has det = 3×2 − 1×2 = 4. A triangle of area 5 becomes a triangle of area 20. Rotations and reflections have |det| = 1, so they keep areas and lengths the same."
+  ],
+  "remember": "Areas scale by |ad − bc|. A negative determinant flips the shape but does not shrink area.",
+  "a": {
+   "q": "A matrix [4 1; 2 3] is applied to a shape of area 6. What is the area of the image?",
+   "opts": [
+    "60",
+    "30",
+    "12",
+    "36"
+   ],
+   "why": "det = 4×3 − 1×2 = 10, so the area is 10 × 6 = 60. Using 4×3 alone, or adding instead of subtracting, gives a different scale factor that is wrong.",
+   "clue": "Work out ad − bc first, then multiply by the old area."
+  },
+  "b": {
+   "d": 3,
+   "q": "The matrix [1 2; 3 1] is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
+   "opts": [
+    "20, and it is flipped",
+    "20, and it is not flipped",
+    "−20, and it is flipped",
+    "5, and it is flipped"
+   ],
+   "why": "det = 1×1 − 2×3 = −5. Area scales by |−5| = 5, so the new area is 20. The negative sign means the orientation is reversed, but an area is never negative.",
+   "clue": "Area uses the absolute value, but the sign still tells you about flipping."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "60",
+   "also_right": []
+  },
+  "b": {
+   "best": "20, and it is flipped",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'A negative determinant flips the shape but does not shrink area' is false as a general statement. A determinant such as −0.5 flips the shape and halves its area. The card only says the area scales by |det|. The line means the sign does not shrink the area, but students will read it as negative determinants never shrinking area."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Rotations and reflections have |det| = 1, so they keep areas and lengths the same' implies that |det| = 1 is why lengths are kept. It is not: a shear such as [1 1; 0 1] has det = 1 but changes lengths. |det| = 1 only guarantees that area is kept."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct (60; 20 and flipped). The remember line wrongly suggests a negative determinant never shrinks area, and the card implies |det| = 1 keeps lengths, which shears disprove."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: 'A negative determinant flips the shape but does not shrink area' is false as a general statement. A determinant such as −0.5 flips the shape and halves its area. The card only says the area scales by |det|. The line means the sign does not shrink the area, but students will read it as negative determinants never shrinking area.",
+  "Card, fact: 'Rotations and reflections have |det| = 1, so they keep areas and lengths the same' implies that |det| = 1 is why lengths are kept. It is not: a shear such as [1 1; 0 1] has det = 1 but changes lengths. |det| = 1 only guarantees that area is kept."
+ ],
+ "proposal": {
+  "title": "Determinants and area",
+  "card": [
+   "For the matrix [a b; c d], the determinant is det = ad − bc.",
+   "A transformation scales every area by the absolute value of the determinant. New area = |det| × old area.",
+   "If det is negative, the shape is flipped over (its orientation reverses), and the area still scales by |det|. If det = 0, the plane collapses onto a line or a point.",
+   "Example: [3 1; 2 2] has det = 3×2 − 1×2 = 4, so a triangle of area 5 becomes area 20. Rotations, reflections and shears have |det| = 1, so they keep areas the same, though a shear can change lengths."
+  ],
+  "remember": "Area scales by |ad − bc|. The sign of the determinant tells you whether the shape is flipped.",
+  "a": {
+   "q": "A matrix [4 1; 2 3] is applied to a shape of area 6. What is the area of the image?",
+   "opts": [
+    "60",
+    "84",
+    "72",
+    "10"
+   ],
+   "why": "det = 4×3 − 1×2 = 10, so the new area is 10 × 6 = 60. Adding instead of subtracting gives 14 and an area of 84, which uses the wrong formula.",
+   "clue": "Work out ad − bc first, then multiply by the old area."
+  },
+  "b": {
+   "d": 3,
+   "q": "The matrix [1 2; 3 1] is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
+   "opts": [
+    "20, and it is flipped",
+    "20, and it is not flipped",
+    "−20, and it is flipped",
+    "28, and it is flipped"
+   ],
+   "why": "det = 1×1 − 2×3 = −5. Area scales by |−5| = 5, so the new area is 20. The negative sign means the orientation is reversed, but an area is never negative.",
+   "clue": "Area uses the absolute value, but the sign still tells you about flipping."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "60",
+    "also_right": []
+   },
+   "b": {
+    "best": "20, and it is flipped",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 20,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'A negative determinant flips the shape but does not shrink area' is false as a general statement. A determinant such as −0.5 flips the shape and halves its area. The card only says the area scales by |det|. The line means the sign does not shrink the area, but students will read it as negative determinants never shrinking area."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Rotations and reflections have |det| = 1, so they keep areas and lengths the same' implies that |det| = 1 is why lengths are kept. It is not: a shear such as [1 1; 0 1] has det = 1 but changes lengths. |det| = 1 only guarantees that area is kept."
+   }
+  ],
+  "flags": [
+   "Remember, fact: 'A negative determinant flips the shape but does not shrink area' is false as a general statement. A determinant such as −0.5 flips the shape and halves its area. The card only says the area scales by |det|. The line means the sign does not shrink the area, but students will read it as negative determinants never shrinking area.",
+   "Card, fact: 'Rotations and reflections have |det| = 1, so they keep areas and lengths the same' implies that |det| = 1 is why lengths are kept. It is not: a shear such as [1 1; 0 1] has det = 1 but changes lengths. |det| = 1 only guarantees that area is kept."
+  ]
+ },
+ "final": {
+  "title": "Determinants and area",
+  "card": [
+   "For the matrix [a b; c d], the determinant is det = ad − bc.",
+   "A transformation scales every area by the absolute value of the determinant. New area = |det| × old area.",
+   "If det is negative, the shape is flipped over (its orientation reverses), and the area still scales by |det|. If det = 0, the plane collapses onto a line or a point.",
+   "Example: [3 1; 2 2] has det = 3×2 − 1×2 = 4, so a triangle of area 5 becomes area 20. Rotations, reflections and shears have |det| = 1, so they keep areas the same, though a shear can change lengths."
+  ],
+  "remember": "Area scales by |ad − bc|. The sign of the determinant tells you whether the shape is flipped.",
+  "a": {
+   "q": "A matrix [4 1; 2 3] is applied to a shape of area 6. What is the area of the image?",
+   "opts": [
+    "60",
+    "84",
+    "72",
+    "10"
+   ],
+   "why": "det = 4×3 − 1×2 = 10, so the new area is 10 × 6 = 60. Adding instead of subtracting gives 14 and an area of 84, which uses the wrong formula.",
+   "clue": "Work out ad − bc first, then multiply by the old area."
+  },
+  "b": {
+   "d": 3,
+   "q": "The matrix [1 2; 3 1] is applied to a square of area 4. What is the area of the image, and what happens to its orientation?",
+   "opts": [
+    "20, and it is flipped",
+    "20, and it is not flipped",
+    "−20, and it is flipped",
+    "28, and it is flipped"
+   ],
+   "why": "det = 1×1 − 2×3 = −5. Area scales by |−5| = 5, so the new area is 20. The negative sign means the orientation is reversed, but an area is never negative.",
+   "clue": "Area uses the absolute value, but the sign still tells you about flipping."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,196 @@
+{
+ "id": "mat-sine-cosine-tangent-ratios",
+ "title": "Sine, cosine and tangent ratios",
+ "brief": "aa3729d0a4d5",
+ "shortlist": [
+  [
+   "mat-right-angled-trigonometry",
+   0.402
+  ],
+  [
+   "mat-sine-rule",
+   0.392
+  ],
+  [
+   "mat-cosine-rule",
+   0.385
+  ],
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.376
+  ],
+  [
+   "mat-area-any-triangle",
+   0.324
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-right-angled-trigonometry, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: failed the content check, writing again",
+  "2026-11-01T08:33:51Z write: done",
+  "2026-11-01T08:42:07Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.00832,
+  "write": 0.01393,
+  "check": 0.01514,
+  "fix": 0.02998,
+  "recheck": 0.00891
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-right-angled-trigonometry",
+  "changes": [
+   "Add a short explanation of angles of elevation and depression, measured from the horizontal, since the card does not mention them.",
+   "Add one elevation or depression example to the card, since the existing ladder example is not framed as an angle of elevation."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same sine, cosine and tangent ratios at the right depth, but it does not cover angles of elevation and depression that the brief names, so it needs that addition.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card on right-angled trigonometry covers the three ratios but not angles of elevation and depression, which the brief includes; adding them would be a new step, so this needs a new point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Sine, cosine and tangent ratios",
+  "card": [
+   "In a right-angled triangle, name the sides from the angle θ you are using. The hypotenuse is opposite the right angle. The opposite side faces θ. The adjacent side touches θ.",
+   "sin θ = opposite ÷ hypotenuse. cos θ = adjacent ÷ hypotenuse. tan θ = opposite ÷ adjacent.",
+   "To find a side, put the ratio in an equation and solve it. To find an angle, use the inverse function on the calculator: θ = sin⁻¹, cos⁻¹ or tan⁻¹ of the ratio. Set the calculator to degrees.",
+   "An angle of elevation is measured up from the horizontal to a line of sight. An angle of depression is measured down from the horizontal. Example: a ladder 5 m long makes 60° with the ground. Height = 5 × sin 60° = 4.33 m, correct to 2 decimal places."
+  ],
+  "remember": "Match the two sides you have or want to the ratio: opposite, adjacent, hypotenuse.",
+  "a": {
+   "q": "A right-angled triangle has an angle θ with opposite side 6 cm and adjacent side 8 cm. Which ratio gives tan θ?",
+   "opts": [
+    "6/8",
+    "8/6",
+    "6/10",
+    "8/10"
+   ],
+   "why": "tan θ = opposite ÷ adjacent = 6/8. The option 8/6 turns the ratio upside down. The hypotenuse is not used in tan, so 6/10 and 8/10 are not tan θ.",
+   "clue": "Tan uses the two sides that are not the hypotenuse."
+  },
+  "b": {
+   "d": 3,
+   "q": "From the top of a cliff, the angle of depression to a boat is 30°. The boat is 100 m from the base of the cliff, on level water. Which expression gives the cliff's height in metres?",
+   "opts": [
+    "100 × tan 30°",
+    "100 × sin 30°",
+    "100 ÷ tan 30°",
+    "100 × cos 30°"
+   ],
+   "why": "The angle of depression equals the angle of elevation from the boat, so the angle at the boat is 30°. The cliff is opposite it and the 100 m is adjacent, so height = 100 × tan 30°. Dividing by tan 30° would be a mistake in rearranging.",
+   "clue": "Put the angle at the boat, then name the sides opposite and adjacent to it."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6/8",
+   "also_right": []
+  },
+  "b": {
+   "best": "100 × tan 30°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question relies on the angle of depression from the cliff top equalling the angle of elevation from the boat (alternate angles). The card defines both angles but never states this link, so students must bring it from outside the card. The why depends on it too."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b relies on the fact that the angle of depression equals the angle of elevation from the boat, which the card does not teach; consider adding one line to the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The question relies on the angle of depression from the cliff top equalling the angle of elevation from the boat (alternate angles). The card defines both angles but never states this link, so students must bring it from outside the card. The why depends on it too."
+ ],
+ "proposal": {
+  "title": "Sine, cosine and tangent ratios",
+  "card": [
+   "In a right-angled triangle, name the sides from the angle θ you are using. The hypotenuse is opposite the right angle. The opposite side faces θ. The adjacent side touches θ.",
+   "sin θ = opposite ÷ hypotenuse. cos θ = adjacent ÷ hypotenuse. tan θ = opposite ÷ adjacent.",
+   "To find a side, put the ratio in an equation and solve it. Example: a 5 m ladder at 60° to the ground reaches 5 × sin 60° = 4.33 m high. To find an angle, use sin⁻¹, cos⁻¹ or tan⁻¹ with the calculator set to degrees.",
+   "An angle of elevation is measured up from the horizontal to a line of sight. An angle of depression is measured down from the horizontal. The angle of depression from A to B equals the angle of elevation from B to A, because the two horizontals are parallel."
+  ],
+  "remember": "Match the two sides you have or want to the ratio: opposite, adjacent, hypotenuse.",
+  "a": {
+   "q": "A right-angled triangle has an angle θ with opposite side 6 cm and adjacent side 8 cm. Which ratio gives tan θ?",
+   "opts": [
+    "6/8",
+    "8/6",
+    "6/10",
+    "8/10"
+   ],
+   "why": "tan θ = opposite ÷ adjacent = 6/8. The option 8/6 turns the ratio upside down. The hypotenuse is not used in tan, so 6/10 and 8/10 are not tan θ.",
+   "clue": "Tan uses the two sides that are not the hypotenuse."
+  },
+  "b": {
+   "d": 3,
+   "q": "From the top of a cliff, the angle of depression to a boat is 30°. The boat is 100 m from the base of the cliff, on level water. Which expression gives the cliff's height in metres?",
+   "opts": [
+    "100 × tan 30°",
+    "100 × sin 30°",
+    "100 ÷ tan 30°",
+    "100 × cos 30°"
+   ],
+   "why": "The angle of depression from the cliff top equals the angle of elevation from the boat, so the angle at the boat is 30°. The cliff is opposite it and the 100 m is adjacent, so tan 30° = height ÷ 100 and height = 100 × tan 30°. Dividing by tan 30° is a mistake in rearranging.",
+   "clue": "Put the angle at the boat, then name the sides opposite and adjacent to it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "6/8",
+    "also_right": []
+   },
+   "b": {
+    "best": "100 × tan 30°",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "wording",
+     "detail": "\"The adjacent side touches θ\" is ambiguous, because the hypotenuse also touches θ. The card should say the adjacent side is the side next to θ that is not the hypotenuse."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The facts, the worked example (5 × sin 60° ≈ 4.33 m) and both questions are correct. The only issue is that the card describes the adjacent side as the one touching θ without excluding the hypotenuse, which also touches θ."
+  },
+  "flags": [
+   "Card, wording: \"The adjacent side touches θ\" is ambiguous, because the hypotenuse also touches θ. The card should say the adjacent side is the side next to θ that is not the hypotenuse."
+  ]
+ }
+}

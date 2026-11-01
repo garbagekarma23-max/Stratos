@@ -1,0 +1,209 @@
+{
+ "id": "mat-mathematical-induction",
+ "title": "Mathematical induction",
+ "brief": "44b07d202d8c",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:34Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00633,
+  "check": 0.01304,
+  "fix": 0.01753,
+  "recheck": 0.00952
+ },
+ "draft": {
+  "title": "Mathematical induction",
+  "card": [
+   [
+    "Basis step",
+    "show the statement is true for the first case, such as n = 1."
+   ],
+   [
+    "Inductive step",
+    "assume the statement is true for n = k. Then show it must be true for n = k + 1."
+   ],
+   "If both steps work, the statement is true for n = 1. Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
+   "Example: 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides equal 1. Assuming it holds for k, adding k + 1 to both sides gives the formula for k + 1."
+  ],
+  "remember": "Prove the first case, then prove that one case leads to the next.",
+  "a": {
+   "q": "In an induction proof, what must the inductive step show?",
+   "opts": [
+    "If the statement is true for n = k, it is true for n = k + 1",
+    "The statement is true for n = k and for n = k + 1 by testing",
+    "The statement is true for every n up to a large number",
+    "If the statement is true for n = k + 1, it is true for n = k"
+   ],
+   "why": "The inductive step assumes the statement for k and shows it follows for k + 1. Reversing the direction is a mistake, as it would not carry the first case forward.",
+   "clue": "The chain moves from one case to the next one up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana tries to prove by induction that 2n > n + 5 for all n. She shows that if it holds for k, it holds for k + 1. She checks no first case. Why is her proof incomplete?",
+   "opts": [
+    "The basis step is missing, so the chain never starts",
+    "The inductive step must be shown for n = k − 1",
+    "Induction cannot be used for inequalities",
+    "She should have assumed the statement false"
+   ],
+   "why": "The inductive step only passes truth along from one case to the next. Without a true first case, nothing starts the chain. In fact 2n > n + 5 fails for n = 1, so the statement is not true for all n.",
+   "clue": "A chain of dominoes needs the first one to fall."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "If the statement is true for n = k, it is true for n = k + 1",
+   "also_right": []
+  },
+  "b": {
+   "best": "The basis step is missing, so the chain never starts",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says outright that she 'checks no first case', and the right option is the only one about a first case or basis step. It is also slightly the longest. A student can match the stem to the option without understanding why the basis step matters."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both intended answers are correct, including the check that 2n > n + 5 fails at n = 1. Question b gives its answer away, because the stem states that no first case was checked."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem says outright that she 'checks no first case', and the right option is the only one about a first case or basis step. It is also slightly the longest. A student can match the stem to the option without understanding why the basis step matters."
+ ],
+ "proposal": {
+  "title": "Mathematical induction",
+  "card": [
+   [
+    "Basis step",
+    "show the statement is true for the first case, such as n = 1."
+   ],
+   [
+    "Inductive step",
+    "assume the statement is true for n = k. Then show it must be true for n = k + 1."
+   ],
+   "If both steps work, the statement is true for n = 1. Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
+   "Example: 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides equal 1. Assuming it holds for k, adding k + 1 to both sides gives the formula for k + 1."
+  ],
+  "remember": "Prove the first case, then prove that one case leads to the next.",
+  "a": {
+   "q": "In an induction proof, what must the inductive step show?",
+   "opts": [
+    "If the statement is true for n = k, it is true for n = k + 1",
+    "The statement is true for n = k and for n = k + 1 by testing",
+    "The statement is true for every n up to a large number",
+    "If the statement is true for n = k + 1, it is true for n = k"
+   ],
+   "why": "The inductive step assumes the statement for k and shows it follows for k + 1. Reversing the direction is a mistake, as it would not carry the first case forward.",
+   "clue": "The chain moves from one case to the next one up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana shows that if 2k > k + 5, then 2(k + 1) > (k + 1) + 5. She concludes that 2n > n + 5 for every whole number n ≥ 1. Which is correct?",
+   "opts": [
+    "It fails, since the statement is false for n = 1",
+    "It is complete, since the inductive step works for all k",
+    "It fails, since the inductive step should go from k + 1 to k",
+    "It is complete, since inequalities need no basis step"
+   ],
+   "why": "For n = 1, 2 > 6 is false, so the basis step fails and the chain never starts. Her inductive step is correct, but it only passes truth from one case to the next. On its own it proves nothing, so the proof is not complete.",
+   "clue": "Test the first case she claims."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "If the statement is true for n = k, it is true for n = k + 1",
+    "also_right": []
+   },
+   "b": {
+    "best": "It fails, since the statement is false for n = 1",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says outright that she 'checks no first case', and the right option is the only one about a first case or basis step. It is also slightly the longest. A student can match the stem to the option without understanding why the basis step matters."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem says outright that she 'checks no first case', and the right option is the only one about a first case or basis step. It is also slightly the longest. A student can match the stem to the option without understanding why the basis step matters."
+  ]
+ },
+ "final": {
+  "title": "Mathematical induction",
+  "card": [
+   [
+    "Basis step",
+    "show the statement is true for the first case, such as n = 1."
+   ],
+   [
+    "Inductive step",
+    "assume the statement is true for n = k. Then show it must be true for n = k + 1."
+   ],
+   "If both steps work, the statement is true for n = 1. Then it is true for 2, then 3, and so on, so it holds for every whole number from the first case.",
+   "Example: 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides equal 1. Assuming it holds for k, adding k + 1 to both sides gives the formula for k + 1."
+  ],
+  "remember": "Prove the first case, then prove that one case leads to the next.",
+  "a": {
+   "q": "In an induction proof, what must the inductive step show?",
+   "opts": [
+    "If the statement is true for n = k, it is true for n = k + 1",
+    "The statement is true for n = k and for n = k + 1 by testing",
+    "The statement is true for every n up to a large number",
+    "If the statement is true for n = k + 1, it is true for n = k"
+   ],
+   "why": "The inductive step assumes the statement for k and shows it follows for k + 1. Reversing the direction is a mistake, as it would not carry the first case forward.",
+   "clue": "The chain moves from one case to the next one up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ana shows that if 2k > k + 5, then 2(k + 1) > (k + 1) + 5. She concludes that 2n > n + 5 for every whole number n ≥ 1. Which is correct?",
+   "opts": [
+    "It fails, since the statement is false for n = 1",
+    "It is complete, since the inductive step works for all k",
+    "It fails, since the inductive step should go from k + 1 to k",
+    "It is complete, since inequalities need no basis step"
+   ],
+   "why": "For n = 1, 2 > 6 is false, so the basis step fails and the chain never starts. Her inductive step is correct, but it only passes truth from one case to the next. On its own it proves nothing, so the proof is not complete.",
+   "clue": "Test the first case she claims."
+  }
+ },
+ "cleared_by": "recheck"
+}

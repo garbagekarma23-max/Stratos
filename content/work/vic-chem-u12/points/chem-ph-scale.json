@@ -1,0 +1,138 @@
+{
+ "id": "chem-ph-scale",
+ "title": "The pH scale",
+ "brief": "cb9e793c471b",
+ "shortlist": [
+  [
+   "chem-reactions-acids",
+   0.334
+  ],
+  [
+   "chem-strong-weak-acids",
+   0.318
+  ],
+  [
+   "chem-ionic-bonding",
+   0.283
+  ],
+  [
+   "geo-scale",
+   0.276
+  ],
+  [
+   "chem-buffers",
+   0.273
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0065,
+  "check": 0.00902
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the pH scale as a logarithm of hydrogen ion concentration or the ionic product of water; the closest, Strong and weak acids, covers ionisation and concentration but not pH calculation, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The pH scale",
+  "card": [
+   "pH = -log₁₀[H₃O⁺], where [H₃O⁺] is the hydronium ion concentration in mol L⁻¹. The scale is logarithmic, so a change of 1 pH unit means the concentration changes by a factor of 10.",
+   "At 25 °C, the ionic product of water is Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴. In pure water, [H₃O⁺] = [OH⁻] = 1.0 × 10⁻⁷ M, so the pH is 7. This is neutral.",
+   "A strong monoprotic acid ionises fully, so [H₃O⁺] equals the acid concentration. For 0.010 M HCl, [H₃O⁺] = 1.0 × 10⁻² M and pH = 2.",
+   "A strong base such as NaOH gives [OH⁻] equal to its concentration. Use Kw to find [H₃O⁺] = Kw ÷ [OH⁻], then take the pH. For 0.010 M NaOH, [H₃O⁺] = 1.0 × 10⁻¹² M and pH = 12."
+  ],
+  "remember": "Each pH unit is a tenfold change in [H₃O⁺]. Kw links [H₃O⁺] and [OH⁻].",
+  "a": {
+   "q": "Solution X has a pH of 3 and solution Y has a pH of 5. How do their hydronium ion concentrations compare?",
+   "opts": [
+    "X has 100 times the [H₃O⁺] of Y",
+    "X has 2 times the [H₃O⁺] of Y",
+    "Y has 100 times the [H₃O⁺] of X",
+    "Y has 2 times the [H₃O⁺] of X"
+   ],
+   "why": "The scale is logarithmic, so a difference of 2 pH units is a factor of 10² = 100. The lower pH means the higher [H₃O⁺], so X has 100 times more. Saying 2 times treats the scale as if it were linear.",
+   "clue": "Each pH unit is a factor of 10, and lower pH means more H₃O⁺."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina dissolves NaOH in water to make a 0.0010 M solution at 25 °C. What is its pH?",
+   "opts": [
+    "11",
+    "3",
+    "10",
+    "14"
+   ],
+   "why": "NaOH is a strong base, so [OH⁻] = 1.0 × 10⁻³ M. Then [H₃O⁺] = 1.0 × 10⁻¹⁴ ÷ 1.0 × 10⁻³ = 1.0 × 10⁻¹¹ M, so pH = 11. A pH of 3 comes from taking -log of [OH⁻] directly, which gives the pOH, not the pH.",
+   "clue": "Use Kw to turn [OH⁻] into [H₃O⁺] before taking the log."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "X has 100 times the [H₃O⁺] of Y",
+   "also_right": []
+  },
+  "b": {
+   "best": "11",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The pH scale",
+  "card": [
+   "pH = -log₁₀[H₃O⁺], where [H₃O⁺] is the hydronium ion concentration in mol L⁻¹. The scale is logarithmic, so a change of 1 pH unit means the concentration changes by a factor of 10.",
+   "At 25 °C, the ionic product of water is Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴. In pure water, [H₃O⁺] = [OH⁻] = 1.0 × 10⁻⁷ M, so the pH is 7. This is neutral.",
+   "A strong monoprotic acid ionises fully, so [H₃O⁺] equals the acid concentration. For 0.010 M HCl, [H₃O⁺] = 1.0 × 10⁻² M and pH = 2.",
+   "A strong base such as NaOH gives [OH⁻] equal to its concentration. Use Kw to find [H₃O⁺] = Kw ÷ [OH⁻], then take the pH. For 0.010 M NaOH, [H₃O⁺] = 1.0 × 10⁻¹² M and pH = 12."
+  ],
+  "remember": "Each pH unit is a tenfold change in [H₃O⁺]. Kw links [H₃O⁺] and [OH⁻].",
+  "a": {
+   "q": "Solution X has a pH of 3 and solution Y has a pH of 5. How do their hydronium ion concentrations compare?",
+   "opts": [
+    "X has 100 times the [H₃O⁺] of Y",
+    "X has 2 times the [H₃O⁺] of Y",
+    "Y has 100 times the [H₃O⁺] of X",
+    "Y has 2 times the [H₃O⁺] of X"
+   ],
+   "why": "The scale is logarithmic, so a difference of 2 pH units is a factor of 10² = 100. The lower pH means the higher [H₃O⁺], so X has 100 times more. Saying 2 times treats the scale as if it were linear.",
+   "clue": "Each pH unit is a factor of 10, and lower pH means more H₃O⁺."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina dissolves NaOH in water to make a 0.0010 M solution at 25 °C. What is its pH?",
+   "opts": [
+    "11",
+    "3",
+    "10",
+    "14"
+   ],
+   "why": "NaOH is a strong base, so [OH⁻] = 1.0 × 10⁻³ M. Then [H₃O⁺] = 1.0 × 10⁻¹⁴ ÷ 1.0 × 10⁻³ = 1.0 × 10⁻¹¹ M, so pH = 11. A pH of 3 comes from taking -log of [OH⁻] directly, which gives the pOH, not the pH.",
+   "clue": "Use Kw to turn [OH⁻] into [H₃O⁺] before taking the log."
+  }
+ },
+ "cleared_by": "checker"
+}

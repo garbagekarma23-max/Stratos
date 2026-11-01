@@ -1,0 +1,63 @@
+{
+ "id": "mat-geometric-sequences-2",
+ "title": "Geometric sequences",
+ "brief": "98a6a4bc4537",
+ "shortlist": [
+  [
+   "mat-geometric-sequences",
+   0.696
+  ],
+  [
+   "mat-geometric-series",
+   0.501
+  ],
+  [
+   "mat-arithmetic-sequences",
+   0.451
+  ],
+  [
+   "mat-annuities-as-geometric-series",
+   0.229
+  ],
+  [
+   "mat-arithmetic-series",
+   0.225
+  ]
+ ],
+ "stage": "match-review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-geometric-sequences, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 may adapt mat-geometric-sequences, but is not highly sure, so it is for you to review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.00971
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-geometric-sequences",
+  "changes": [
+   "Change the notation from Tₙ to tₙ, the form used in the VCE General Mathematics study design.",
+   "Add the recursive rule tₙ₊₁ = r × tₙ alongside the explicit rule, since this chapter is on sequences and recursion and VCE Units 1 and 2 teach both forms.",
+   "Check the examples and wording against the VCE General Mathematics Units 1 and 2 study design, since the card is written for NSW Year 12."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same geometric sequence idea at about the right depth, but it uses NSW notation and omits the recursive form that this VCE chapter covers.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-geometric-sequences",
+  "changes": [
+   "Write the nth term as tₙ = arⁿ⁻¹ with a lowercase t, as VCE General Mathematics resources do, instead of Tₙ."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea at the right depth: finding the common ratio and using a × r^(n − 1), with fair questions. Only the term notation should match the lowercase tₙ used in VCE General Mathematics.",
+  "model": "claude-opus-5-5"
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "id": "mat-bisection-method",
+ "title": "The bisection method",
+ "brief": "9ed0f1a7797e",
+ "shortlist": [],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:33Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00679,
+  "check": 0.0201,
+  "fix": 0.02802,
+  "recheck": 0.0089
+ },
+ "draft": {
+  "title": "The bisection method",
+  "card": [
+   "If f(x) is continuous and f(a) and f(b) have opposite signs, then f has a root between a and b. The root is where f(x) = 0.",
+   "Find the midpoint m = (a + b) ÷ 2 and work out f(m). Keep the half of the interval where the signs at the two ends are still opposite.",
+   "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
+   "Example: f(x) = x² − 5 has f(2) = −1 and f(3) = 4. The midpoint is 2.5 and f(2.5) = 1.25, which is positive. So the root lies between 2 and 2.5."
+  ],
+  "remember": "Halve the interval and keep the half where f changes sign. The root stays trapped inside.",
+  "a": {
+   "q": "f(x) = x³ − 10 has f(2) = −2 and f(3) = 17. After one bisection step, which interval holds the root?",
+   "opts": [
+    "Between 2 and 2.5",
+    "Between 2.5 and 3",
+    "Between 2 and 2.25",
+    "Between 2.25 and 2.75"
+   ],
+   "why": "The midpoint is 2.5 and f(2.5) = 15.625 − 10 = 5.625, which is positive. The signs at 2 and 2.5 are opposite, so the root is between 2 and 2.5. Between 2.5 and 3 is wrong, because f is positive at both ends.",
+   "clue": "Find f at the midpoint and check which end has the opposite sign."
+  },
+  "b": {
+   "d": 2,
+   "q": "f(x) = x² − 7 has f(2) = −3 and f(3) = 2. What is f(2.5), and which interval holds the root next?",
+   "opts": [
+    "−0.75, so between 2.5 and 3",
+    "−0.75, so between 2 and 2.5",
+    "1.25, so between 2.5 and 3",
+    "1.25, so between 2 and 2.5"
+   ],
+   "why": "f(2.5) = 6.25 − 7 = −0.75, which is negative. The signs at 2.5 and 3 are opposite (−0.75 and 2), so the root is between 2.5 and 3. The option with 2 and 2.5 fails, because f is negative at both ends.",
+   "clue": "Square 2.5 first, then subtract 7."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Between 2 and 2.5",
+   "also_right": [
+    "Between 2 and 2.25"
+   ]
+  },
+  "b": {
+   "best": "−0.75, so between 2.5 and 3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Which interval holds the root?' is literally also true of 'Between 2 and 2.25', since the root (about 2.154) lies in it. That is the interval after a second step, not after one. Reword to ask which interval the method keeps after one step."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and calculations are all correct (f(2.5) = 5.625 in (a), −0.75 in (b)). Question (a) asks which interval 'holds the root', and the distractor 'Between 2 and 2.25' also holds it, so the question should ask which interval the method keeps."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “Between 2 and 2.25” could also be right.",
+  "Question a, wording: 'Which interval holds the root?' is literally also true of 'Between 2 and 2.25', since the root (about 2.154) lies in it. That is the interval after a second step, not after one. Reword to ask which interval the method keeps after one step."
+ ],
+ "proposal": {
+  "title": "The bisection method",
+  "card": [
+   "If f(x) is continuous and f(a) and f(b) have opposite signs, then f has a root between a and b. The root is where f(x) = 0.",
+   "Find the midpoint m = (a + b) ÷ 2 and work out f(m). Keep the half of the interval where the signs at the two ends are still opposite.",
+   "Repeat. Each step halves the interval, so the root is trapped in a smaller and smaller interval. You can stop when the interval is as small as the accuracy you need.",
+   "Example: f(x) = x² − 5 has f(2) = −1 and f(3) = 4. The midpoint is 2.5 and f(2.5) = 1.25, which is positive. So the root lies between 2 and 2.5."
+  ],
+  "remember": "Halve the interval and keep the half where f changes sign. The root stays trapped inside.",
+  "a": {
+   "q": "f(x) = x³ − 10 has f(2) = −2 and f(3) = 17. Which interval does the method keep after one bisection step?",
+   "opts": [
+    "Between 2 and 2.5",
+    "Between 2.5 and 3",
+    "Between 2 and 3",
+    "Between 2.25 and 2.75"
+   ],
+   "why": "The midpoint is 2.5 and f(2.5) = 15.625 − 10 = 5.625, which is positive. The signs at 2 and 2.5 are opposite, so the method keeps 2 to 2.5. Between 2.5 and 3 is wrong, because f is positive at both ends.",
+   "clue": "Find f at the midpoint and check which end has the opposite sign."
+  },
+  "b": {
+   "d": 2,
+   "q": "f(x) = x² − 7 has f(2) = −3 and f(3) = 2. What is f(2.5), and which interval does the method keep next?",
+   "opts": [
+    "−0.75, so between 2.5 and 3",
+    "−0.75, so between 2 and 2.5",
+    "1.25, so between 2.5 and 3",
+    "1.25, so between 2 and 2.5"
+   ],
+   "why": "f(2.5) = 6.25 − 7 = −0.75, which is negative. The signs at 2.5 and 3 are opposite (−0.75 and 2), so the method keeps 2.5 to 3. The option with 2 and 2.5 fails, because f is negative at both ends.",
+   "clue": "Square 2.5 first, then subtract 7."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Between 2 and 2.5",
+    "also_right": []
+   },
+   "b": {
+    "best": "−0.75, so between 2.5 and 3",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Which interval holds the root?' is literally also true of 'Between 2 and 2.25', since the root (about 2.154) lies in it. That is the interval after a second step, not after one. Reword to ask which interval the method keeps after one step."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “Between 2 and 2.25” could also be right.",
+   "Question a, wording: 'Which interval holds the root?' is literally also true of 'Between 2 and 2.25', since the root (about 2.154) lies in it. That is the interval after a second step, not after one. Reword to ask which interval the method keeps after one step."
+  ]
+ }
+}

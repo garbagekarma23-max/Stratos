@@ -1,0 +1,318 @@
+{
+ "id": "chem-volumetric-analysis",
+ "title": "Volumetric analysis",
+ "brief": "b839535fd4fc",
+ "shortlist": [
+  [
+   "chem-titration",
+   0.441
+  ],
+  [
+   "chem-dilution",
+   0.392
+  ],
+  [
+   "chem-concentration",
+   0.23
+  ],
+  [
+   "chem-molar-volume-gases",
+   0.228
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.01745,
+  "check": 0.01866,
+  "fix": 0.02189,
+  "recheck": 0.01054
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's Titration card covers the same core idea, but the new point also needs dilution and volume-volume stoichiometry, which the card does not teach, so it is not a small change to that card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card describes the titration as always adding the standard solution from the burette to the unknown. In VCE practice the unknown can be in the burette and the standard in the flask, so the titre is just the volume delivered from the burette. Stating it as 'the standard ... is added from a burette' could mislead students.",
+ "rejected": {
+  "title": "Volumetric analysis",
+  "card": [
+   "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a standard solution (one with an accurately known concentration) is added from a burette to a measured volume of the unknown solution.",
+   "The equivalence point is when the reactants have been added in exactly the mole ratio of the balanced equation. The end point is when the indicator changes colour, and a suitable indicator puts it as close as possible to the equivalence point.",
+   "The volume of standard solution added at the end point is the titre. Use it to find moles of the standard with n = c × V (V in litres), then use the equation's mole ratio to find moles of the unknown.",
+   "Divide the moles of the unknown by its volume in litres to get its concentration. If the unknown was diluted first, multiply the answer by the dilution factor."
+  ],
+  "remember": "Titre gives moles of the standard, the equation's ratio gives moles of the unknown, and moles divided by volume gives concentration.",
+  "a": {
+   "q": "In a titration, what is the end point?",
+   "opts": [
+    "When the indicator changes colour",
+    "When reactants are in the exact mole ratio",
+    "When the solution reaches a pH of exactly 7",
+    "When the burette has been completely emptied"
+   ],
+   "why": "The end point is the moment the indicator changes colour. Reactants in the exact mole ratio describes the equivalence point, which a suitable indicator makes the end point as close as possible to, but the two are not the same thing.",
+   "clue": "One of these is what you see, the other is what the reaction does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+   "opts": [
+    "0.0750 mol/L",
+    "0.150 mol/L",
+    "0.300 mol/L",
+    "0.0333 mol/L"
+   ],
+   "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+   "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: The card describes the titration as always adding the standard solution from the burette to the unknown. In VCE practice the unknown can be in the burette and the standard in the flask, so the titre is just the volume delivered from the burette. Stating it as 'the standard ... is added from a burette' could mislead students."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Volumetric analysis",
+     "card": [
+      "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a standard solution (one with a accurately known concentration) is added from a burette to a measured volume of the unknown solution.",
+      "An indicator changes colour at the end point, when the reaction is just complete. The volume of standard solution added at that point is called the titre.",
+      "Use the titre to find moles of the standard solution: n = c × V, with V in litres. Then use the balanced equation's mole ratio to find moles of the unknown.",
+      "Divide the moles of the unknown by its volume in litres to get its concentration. If the unknown was diluted first, multiply the answer by the dilution factor."
+     ],
+     "remember": "Titre gives moles of the standard, the equation's ratio gives moles of the unknown, and moles divided by volume gives concentration.",
+     "a": {
+      "q": "In a titration, what does the colour change of the indicator show?",
+      "opts": [
+       "The reaction has just reached completion",
+       "The solution has reached a pH of exactly 7",
+       "The standard solution has been fully diluted",
+       "The unknown solution has run out of solute"
+      ],
+      "why": "The indicator changes colour at the end point, when the reaction is just complete. The pH at that point is not always 7, since it depends on the acid and base used, so that option is wrong.",
+      "clue": "Think about what the end point means for the reaction."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+      "opts": [
+       "0.0750 mol/L",
+       "0.150 mol/L",
+       "0.300 mol/L",
+       "0.0333 mol/L"
+      ],
+      "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+      "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The reaction has just reached completion",
+      "also_right": []
+     },
+     "b": {
+      "best": "0.0750 mol/L",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says the end point is 'when the reaction is just complete'. Strictly, that is the equivalence point. The end point is when the indicator changes colour, chosen to be as close as possible to the equivalence point. VCE expects students to tell these apart, and question a and why (a) repeat the same blurring."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "Grammar error: 'a accurately known concentration' should be 'an accurately known concentration'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers check out (b: 0.0750 mol/L). The card treats the end point as the moment the reaction is complete, which blurs it with the equivalence point, and it has a small grammar slip ('a accurately')."
+    },
+    "flags": [
+     "Card, fact: The card says the end point is 'when the reaction is just complete'. Strictly, that is the equivalence point. The end point is when the indicator changes colour, chosen to be as close as possible to the equivalence point. VCE expects students to tell these apart, and question a and why (a) repeat the same blurring.",
+     "Card, wording: Grammar error: 'a accurately known concentration' should be 'an accurately known concentration'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Volumetric analysis",
+     "card": [
+      "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a standard solution (one with an accurately known concentration) is added from a burette to a measured volume of the unknown solution.",
+      "The equivalence point is when the reactants have been added in exactly the mole ratio of the balanced equation. The end point is when the indicator changes colour, and a suitable indicator puts it as close as possible to the equivalence point.",
+      "The volume of standard solution added at the end point is the titre. Use it to find moles of the standard with n = c × V (V in litres), then use the equation's mole ratio to find moles of the unknown.",
+      "Divide the moles of the unknown by its volume in litres to get its concentration. If the unknown was diluted first, multiply the answer by the dilution factor."
+     ],
+     "remember": "Titre gives moles of the standard, the equation's ratio gives moles of the unknown, and moles divided by volume gives concentration.",
+     "a": {
+      "q": "In a titration, what is the end point?",
+      "opts": [
+       "When the indicator changes colour",
+       "When reactants are in the exact mole ratio",
+       "When the solution reaches a pH of exactly 7",
+       "When the burette has been completely emptied"
+      ],
+      "why": "The end point is the moment the indicator changes colour. Reactants in the exact mole ratio describes the equivalence point, which a suitable indicator makes the end point as close as possible to, but the two are not the same thing.",
+      "clue": "One of these is what you see, the other is what the reaction does."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+      "opts": [
+       "0.0750 mol/L",
+       "0.150 mol/L",
+       "0.300 mol/L",
+       "0.0333 mol/L"
+      ],
+      "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+      "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "When the indicator changes colour",
+       "also_right": []
+      },
+      "b": {
+       "best": "0.0750 mol/L",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "The card describes the titration as always adding the standard solution from the burette to the unknown. In VCE practice the unknown can be in the burette and the standard in the flask, so the titre is just the volume delivered from the burette. Stating it as 'the standard ... is added from a burette' could mislead students."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct, with sound answers and explanations. One minor issue: the card implies the standard solution is always the one in the burette, but either solution can be in the burette."
+     },
+     "flags": [
+      "Card, fact: The card describes the titration as always adding the standard solution from the burette to the unknown. In VCE practice the unknown can be in the burette and the standard in the flask, so the titre is just the volume delivered from the burette. Stating it as 'the standard ... is added from a burette' could mislead students."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Volumetric analysis",
+  "card": [
+   "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a solution is added from a burette to a measured volume of another solution in a conical flask, until the reaction is complete.",
+   "One solution is a standard solution, which has an accurately known concentration. The standard is often in the burette, but it can be in the flask instead. The volume delivered from the burette at the end point is the titre.",
+   "The equivalence point is when the reactants have been added in exactly the mole ratio of the balanced equation. The end point is when the indicator changes colour, and a suitable indicator puts it as close as possible to the equivalence point.",
+   "Use n = c × V (V in litres) on the standard solution to find its moles. Use the equation's mole ratio to find moles of the unknown, then divide by the unknown's volume in litres. If the unknown was diluted first, multiply the answer by the dilution factor."
+  ],
+  "remember": "Moles of the standard, then the equation's ratio, then moles divided by volume gives the unknown concentration.",
+  "a": {
+   "q": "In a titration, what is the end point?",
+   "opts": [
+    "When the indicator changes colour",
+    "When reactants are in the exact mole ratio",
+    "When the solution reaches a pH of exactly 7",
+    "When the burette has been completely emptied"
+   ],
+   "why": "The end point is the moment the indicator changes colour. Reactants in the exact mole ratio describes the equivalence point, which a suitable indicator makes the end point as close as possible to, but the two are not the same thing.",
+   "clue": "One of these is what you see, the other is what the reaction does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH from the burette. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+   "opts": [
+    "0.0750 mol/L",
+    "0.150 mol/L",
+    "0.300 mol/L",
+    "0.0333 mol/L"
+   ],
+   "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+   "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "When the indicator changes colour",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.0750 mol/L",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volumetric analysis",
+  "card": [
+   "Volumetric analysis finds an unknown concentration by measuring volumes. In a titration, a solution is added from a burette to a measured volume of another solution in a conical flask, until the reaction is complete.",
+   "One solution is a standard solution, which has an accurately known concentration. The standard is often in the burette, but it can be in the flask instead. The volume delivered from the burette at the end point is the titre.",
+   "The equivalence point is when the reactants have been added in exactly the mole ratio of the balanced equation. The end point is when the indicator changes colour, and a suitable indicator puts it as close as possible to the equivalence point.",
+   "Use n = c × V (V in litres) on the standard solution to find its moles. Use the equation's mole ratio to find moles of the unknown, then divide by the unknown's volume in litres. If the unknown was diluted first, multiply the answer by the dilution factor."
+  ],
+  "remember": "Moles of the standard, then the equation's ratio, then moles divided by volume gives the unknown concentration.",
+  "a": {
+   "q": "In a titration, what is the end point?",
+   "opts": [
+    "When the indicator changes colour",
+    "When reactants are in the exact mole ratio",
+    "When the solution reaches a pH of exactly 7",
+    "When the burette has been completely emptied"
+   ],
+   "why": "The end point is the moment the indicator changes colour. Reactants in the exact mole ratio describes the equivalence point, which a suitable indicator makes the end point as close as possible to, but the two are not the same thing.",
+   "clue": "One of these is what you see, the other is what the reaction does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia titrates 20.0 mL of sulfuric acid, H2SO4, with 0.100 mol/L NaOH from the burette. The titre is 30.0 mL. The equation is H2SO4 + 2NaOH → Na2SO4 + 2H2O. What is the concentration of the acid?",
+   "opts": [
+    "0.0750 mol/L",
+    "0.150 mol/L",
+    "0.300 mol/L",
+    "0.0333 mol/L"
+   ],
+   "why": "n(NaOH) = 0.100 × 0.0300 = 0.00300 mol. The ratio is 1 acid to 2 NaOH, so n(H2SO4) = 0.00150 mol. Dividing by 0.0200 L gives 0.0750 mol/L. The value 0.150 mol/L comes from ignoring the 1 to 2 ratio.",
+   "clue": "Use the mole ratio from the balanced equation before dividing by the acid's volume."
+  }
+ }
+}

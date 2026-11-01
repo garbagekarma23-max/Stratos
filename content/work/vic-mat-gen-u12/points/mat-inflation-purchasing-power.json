@@ -1,0 +1,196 @@
+{
+ "id": "mat-inflation-purchasing-power",
+ "title": "Inflation and purchasing power",
+ "brief": "67a75766c4c1",
+ "shortlist": [
+  [
+   "mat-inflation-appreciation",
+   0.325
+  ],
+  [
+   "eco-inflation-target",
+   0.254
+  ],
+  [
+   "mat-power-rule",
+   0.207
+  ],
+  [
+   "e-cpi",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.0074,
+  "check": 0.00888,
+  "fix": 0.01546
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-inflation-appreciation, only teaches how prices grow over time with FV = PV(1 + r)ⁿ and does not teach purchasing power or real value, which is the idea this new point needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Inflation and purchasing power",
+  "card": [
+   "Inflation is a general rise in prices over time. It is usually given as a percentage per year.",
+   "Purchasing power is how much a sum of money can buy. When prices rise, the same money buys less, so its purchasing power falls.",
+   "A price that rises at the same rate as inflation has not changed in real terms. It buys the same amount of goods as before, even though the dollar figure is higher.",
+   "Example: a $50 item rises by 4% inflation to $50 × 1.04 = $52. In real terms it costs the same. If your $50 stays the same, it now buys less than the item."
+  ],
+  "remember": "If prices rise, money buys less. A price rising with inflation is unchanged in real terms.",
+  "a": {
+   "q": "Over a year, prices in general rise by 3%. Sam keeps $200 in a drawer. What happens to its purchasing power?",
+   "opts": [
+    "It falls, as $200 buys less than before",
+    "It rises, as $200 is the same amount",
+    "It stays the same, as the dollar amount is unchanged",
+    "It rises by 3%, as prices have gone up"
+   ],
+   "why": "Inflation means prices rise, so the same $200 buys fewer goods. The dollar figure is unchanged, but its purchasing power is not, so staying the same is a tempting but wrong answer.",
+   "clue": "Think about what $200 can buy after prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "A loaf of bread in Geelong costs $4.00. With 5% inflation over a year, it rises to $4.20. In real terms, what has happened to the price of bread?",
+   "opts": [
+    "It is unchanged, as it rose at the same rate as inflation",
+    "It has risen, as $4.20 is more than $4.00",
+    "It has fallen, as inflation makes money worth less",
+    "It has risen by 5%, as the dollar price went up by 5%"
+   ],
+   "why": "$4.00 × 1.05 = $4.20, so the bread rose in line with inflation. In real terms the price is unchanged. The dollar price did rise by 5%, but so did prices in general.",
+   "clue": "Compare the bread's rise with the rise in prices in general."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It falls, as $200 buys less than before",
+   "also_right": []
+  },
+  "b": {
+   "best": "It is unchanged, as it rose at the same rate as inflation",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"If your $50 stays the same, it now buys less than the item\" is confusing. The $50 no longer covers the $52 item; it does not 'buy less than' it. Better: \"it is no longer enough to buy the item.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each question has one clear right answer. One sentence in the card's example is awkwardly worded (\"buys less than the item\") and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"If your $50 stays the same, it now buys less than the item\" is confusing. The $50 no longer covers the $52 item; it does not 'buy less than' it. Better: \"it is no longer enough to buy the item.\""
+ ],
+ "proposal": {
+  "title": "Inflation and purchasing power",
+  "card": [
+   "Inflation is a general rise in prices over time. It is usually given as a percentage per year.",
+   "Purchasing power is how much a sum of money can buy. When prices rise, the same money buys less, so its purchasing power falls.",
+   "A price that rises at the same rate as inflation has not changed in real terms. The dollar figure is higher, but money is worth less by the same amount.",
+   "Example: a $50 item rises with 4% inflation to $50 × 1.04 = $52. In real terms it costs the same. If your $50 stays the same, it is no longer enough to buy the item."
+  ],
+  "remember": "If prices rise, money buys less. A price rising with inflation is unchanged in real terms.",
+  "a": {
+   "q": "Over a year, prices in general rise by 3%. Sam keeps $200 in a drawer. What happens to its purchasing power?",
+   "opts": [
+    "It falls, as $200 buys less than before",
+    "It rises, as $200 is still the same amount",
+    "It stays the same, as the dollar amount is unchanged",
+    "It rises by 3%, as prices have gone up"
+   ],
+   "why": "Inflation means prices rise, so the same $200 buys fewer goods. The dollar figure is unchanged, but its purchasing power is not, so staying the same is a tempting but wrong answer.",
+   "clue": "Think about what $200 can buy after prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "A loaf of bread in Geelong costs $4.00. With 5% inflation over a year, it rises to $4.20. In real terms, what has happened to the price of bread?",
+   "opts": [
+    "It is unchanged, as it rose at the same rate as inflation",
+    "It has risen, as $4.20 is more than $4.00",
+    "It has fallen, as inflation makes money worth less",
+    "It has risen by 5%, as the dollar price went up by 5%"
+   ],
+   "why": "$4.00 × 1.05 = $4.20, so the bread rose in line with inflation. In real terms the price is unchanged. The dollar price did rise by 5%, but so did prices in general.",
+   "clue": "Compare the bread's rise with the rise in prices in general."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"If your $50 stays the same, it now buys less than the item\" is confusing. The $50 no longer covers the $52 item; it does not 'buy less than' it. Better: \"it is no longer enough to buy the item.\""
+   }
+  ],
+  "flags": [
+   "Card, wording: \"If your $50 stays the same, it now buys less than the item\" is confusing. The $50 no longer covers the $52 item; it does not 'buy less than' it. Better: \"it is no longer enough to buy the item.\""
+  ]
+ },
+ "final": {
+  "title": "Inflation and purchasing power",
+  "card": [
+   "Inflation is a general rise in prices over time. It is usually given as a percentage per year.",
+   "Purchasing power is how much a sum of money can buy. When prices rise, the same money buys less, so its purchasing power falls.",
+   "A price that rises at the same rate as inflation has not changed in real terms. The dollar figure is higher, but money is worth less by the same amount.",
+   "Example: a $50 item rises with 4% inflation to $50 × 1.04 = $52. In real terms it costs the same. If your $50 stays the same, it is no longer enough to buy the item."
+  ],
+  "remember": "If prices rise, money buys less. A price rising with inflation is unchanged in real terms.",
+  "a": {
+   "q": "Over a year, prices in general rise by 3%. Sam keeps $200 in a drawer. What happens to its purchasing power?",
+   "opts": [
+    "It falls, as $200 buys less than before",
+    "It rises, as $200 is still the same amount",
+    "It stays the same, as the dollar amount is unchanged",
+    "It rises by 3%, as prices have gone up"
+   ],
+   "why": "Inflation means prices rise, so the same $200 buys fewer goods. The dollar figure is unchanged, but its purchasing power is not, so staying the same is a tempting but wrong answer.",
+   "clue": "Think about what $200 can buy after prices rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "A loaf of bread in Geelong costs $4.00. With 5% inflation over a year, it rises to $4.20. In real terms, what has happened to the price of bread?",
+   "opts": [
+    "It is unchanged, as it rose at the same rate as inflation",
+    "It has risen, as $4.20 is more than $4.00",
+    "It has fallen, as inflation makes money worth less",
+    "It has risen by 5%, as the dollar price went up by 5%"
+   ],
+   "why": "$4.00 × 1.05 = $4.20, so the bread rose in line with inflation. In real terms the price is unchanged. The dollar price did rise by 5%, but so did prices in general.",
+   "clue": "Compare the bread's rise with the rise in prices in general."
+  }
+ },
+ "cleared_by": "auto"
+}

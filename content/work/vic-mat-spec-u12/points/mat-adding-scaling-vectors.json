@@ -1,0 +1,193 @@
+{
+ "id": "mat-adding-scaling-vectors",
+ "title": "Adding and scaling vectors",
+ "brief": "db8f427f5a8f",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01025,
+  "check": 0.01049,
+  "fix": 0.02746,
+  "recheck": 0.00794
+ },
+ "draft": {
+  "title": "Adding and scaling vectors",
+  "card": [
+   "To add vectors, add the matching components. If a = 3i + 2j and b = i − 4j, then a + b = 4i − 2j. Drawn as arrows, you place the tail of b at the head of a (head to tail).",
+   "To subtract, subtract the matching components. a − b = (3 − 1)i + (2 − (−4))j = 2i + 6j. Take care with the sign when the second component is negative.",
+   "A scalar is an ordinary number. Multiplying a vector by a scalar k multiplies every component by k. So 2a = 6i + 4j.",
+   "If k > 1, the vector gets longer. If 0 < k < 1, it gets shorter. If k is negative, the vector points the opposite way. So −a = −3i − 2j."
+  ],
+  "remember": "Add or scale each component. A negative scalar reverses the direction.",
+  "a": {
+   "q": "Let p = 2i + 5j and q = 4i − j. What is p + q?",
+   "opts": [
+    "6i + 4j",
+    "−2i + 6j",
+    "6i + 6j",
+    "8i − 5j"
+   ],
+   "why": "Add the i components: 2 + 4 = 6. Add the j components: 5 + (−1) = 4. So p + q = 6i + 4j. The option 6i + 6j comes from ignoring the negative sign on the j component of q.",
+   "clue": "Add the i parts together and the j parts together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let u = 3i − 2j and v = i + 4j. What is 2u − v?",
+   "opts": [
+    "5i − 8j",
+    "5i + 2j",
+    "7i − 8j",
+    "5i − 4j"
+   ],
+   "why": "2u = 6i − 4j. Subtract v: (6 − 1)i + (−4 − 4)j = 5i − 8j. The option 5i + 2j comes from the sign error of adding 4 to −4... no: it comes from treating −4 − 4 as −4 + 4 + 2, while the correct step is subtracting 4 from −4.",
+   "clue": "Scale u first, then subtract each component of v."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6i + 4j",
+   "also_right": []
+  },
+  "b": {
+   "best": "5i − 8j",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) contains leftover drafting text ('... no:'). Its account of the 5i + 2j distractor ('treating −4 − 4 as −4 + 4 + 2') is nonsensical. That option actually comes from not scaling the j component of u and adding instead of subtracting: −2 + 4 = 2. Rewrite it so students see the real error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer (6i + 4j and 5i − 8j), and the card is accurate. The explanation for (b) is garbled, with leftover drafting text and a wrong account of how the 5i + 2j distractor arises, so it needs rewriting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why for (b) contains leftover drafting text ('... no:'). Its account of the 5i + 2j distractor ('treating −4 − 4 as −4 + 4 + 2') is nonsensical. That option actually comes from not scaling the j component of u and adding instead of subtracting: −2 + 4 = 2. Rewrite it so students see the real error."
+ ],
+ "proposal": {
+  "title": "Adding and scaling vectors",
+  "card": [
+   "To add vectors, add the matching components. If a = 3i + 2j and b = i − 4j, then a + b = 4i − 2j. Drawn as arrows, you place the tail of b at the head of a (head to tail).",
+   "To subtract, subtract the matching components. a − b = (3 − 1)i + (2 − (−4))j = 2i + 6j. Take care with the sign when the second component is negative.",
+   "A scalar is an ordinary number. Multiplying a vector by a scalar k multiplies every component by k. So 2a = 6i + 4j.",
+   "If k > 1, the vector gets longer. If 0 < k < 1, it gets shorter. If k is negative, the vector points the opposite way. So −a = −3i − 2j."
+  ],
+  "remember": "Add or scale each component. A negative scalar reverses the direction.",
+  "a": {
+   "q": "Let p = 2i + 5j and q = 4i − j. What is p + q?",
+   "opts": [
+    "6i + 4j",
+    "−2i + 6j",
+    "6i + 6j",
+    "8i − 5j"
+   ],
+   "why": "Add the i components: 2 + 4 = 6. Add the j components: 5 + (−1) = 4. So p + q = 6i + 4j. The option 6i + 6j comes from ignoring the negative sign on the j component of q.",
+   "clue": "Add the i parts together and the j parts together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let u = 3i − 2j and v = i + 4j. What is 2u − v?",
+   "opts": [
+    "5i − 8j",
+    "5i + 2j",
+    "7i − 8j",
+    "5i − 4j"
+   ],
+   "why": "First 2u = 6i − 4j. Then 2u − v = (6 − 1)i + (−4 − 4)j = 5i − 8j. The option 5i + 2j comes from two slips: leaving the j part of u as −2 instead of doubling it, then adding 4 instead of subtracting it, so −2 + 4 = 2.",
+   "clue": "Scale u first, then subtract each component of v."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6i + 4j",
+    "also_right": []
+   },
+   "b": {
+    "best": "5i − 8j",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) contains leftover drafting text ('... no:'). Its account of the 5i + 2j distractor ('treating −4 − 4 as −4 + 4 + 2') is nonsensical. That option actually comes from not scaling the j component of u and adding instead of subtracting: −2 + 4 = 2. Rewrite it so students see the real error."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why for (b) contains leftover drafting text ('... no:'). Its account of the 5i + 2j distractor ('treating −4 − 4 as −4 + 4 + 2') is nonsensical. That option actually comes from not scaling the j component of u and adding instead of subtracting: −2 + 4 = 2. Rewrite it so students see the real error."
+  ]
+ },
+ "final": {
+  "title": "Adding and scaling vectors",
+  "card": [
+   "To add vectors, add the matching components. If a = 3i + 2j and b = i − 4j, then a + b = 4i − 2j. Drawn as arrows, you place the tail of b at the head of a (head to tail).",
+   "To subtract, subtract the matching components. a − b = (3 − 1)i + (2 − (−4))j = 2i + 6j. Take care with the sign when the second component is negative.",
+   "A scalar is an ordinary number. Multiplying a vector by a scalar k multiplies every component by k. So 2a = 6i + 4j.",
+   "If k > 1, the vector gets longer. If 0 < k < 1, it gets shorter. If k is negative, the vector points the opposite way. So −a = −3i − 2j."
+  ],
+  "remember": "Add or scale each component. A negative scalar reverses the direction.",
+  "a": {
+   "q": "Let p = 2i + 5j and q = 4i − j. What is p + q?",
+   "opts": [
+    "6i + 4j",
+    "−2i + 6j",
+    "6i + 6j",
+    "8i − 5j"
+   ],
+   "why": "Add the i components: 2 + 4 = 6. Add the j components: 5 + (−1) = 4. So p + q = 6i + 4j. The option 6i + 6j comes from ignoring the negative sign on the j component of q.",
+   "clue": "Add the i parts together and the j parts together."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let u = 3i − 2j and v = i + 4j. What is 2u − v?",
+   "opts": [
+    "5i − 8j",
+    "5i + 2j",
+    "7i − 8j",
+    "5i − 4j"
+   ],
+   "why": "First 2u = 6i − 4j. Then 2u − v = (6 − 1)i + (−4 − 4)j = 5i − 8j. The option 5i + 2j comes from two slips: leaving the j part of u as −2 instead of doubling it, then adding 4 instead of subtracting it, so −2 + 4 = 2.",
+   "clue": "Scale u first, then subtract each component of v."
+  }
+ },
+ "cleared_by": "recheck"
+}

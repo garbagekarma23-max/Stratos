@@ -1,0 +1,179 @@
+{
+ "id": "mat-multiplying-matrices",
+ "title": "Multiplying matrices",
+ "brief": "4ae5927823e4",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:32Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00496,
+  "check": 0.00884,
+  "fix": 0.01697
+ },
+ "draft": {
+  "title": "Multiplying matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
+   "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+   "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
+   [
+    "Example",
+    "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+   ]
+  ],
+  "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
+  "a": {
+   "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
+   "opts": [
+    "2 × 4",
+    "3 × 3",
+    "2 × 3",
+    "3 × 4"
+   ],
+   "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+   "clue": "Look at the outer numbers once the inner ones match."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the element in the first row and first column of the product of [2 3] (a row) and [4 5] (a column, read down)... use [1 2 3] times the column [4 5 6]?",
+   "opts": [
+    "32",
+    "15",
+    "21",
+    "24"
+   ],
+   "why": "Multiply the pairs and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 21 comes from adding the pairs wrongly, as 1 + 2 + 3 + 4 + 5 + 6. The answer 15 is only the sum of the second matrix.",
+   "clue": "Multiply each pair in order, then add the results."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 × 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "32",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem is garbled. It starts asking about [2 3] times [4 5], whose answer is 23 and is not an option, then breaks off with '...' and switches to [1 2 3] times [4 5 6]. Students cannot tell which product is being asked about. The stem should ask only about [1 2 3] times the column [4 5 6]."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b's stem is a broken draft that mixes the card's [2 3]×[4 5] example with a new [1 2 3]×[4 5 6] product, so it needs rewriting to ask about one product only. Everything else checks out: (a) is 2 × 4 and (b) is 32."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem is garbled. It starts asking about [2 3] times [4 5], whose answer is 23 and is not an option, then breaks off with '...' and switches to [1 2 3] times [4 5 6]. Students cannot tell which product is being asked about. The stem should ask only about [1 2 3] times the column [4 5 6]."
+ ],
+ "proposal": {
+  "title": "Multiplying matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
+   "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+   "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
+   [
+    "Example",
+    "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+   ]
+  ],
+  "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
+  "a": {
+   "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
+   "opts": [
+    "2 × 4",
+    "3 × 3",
+    "2 × 3",
+    "3 × 4"
+   ],
+   "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+   "clue": "Look at the outer numbers once the inner ones match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A is the row [1 2 3] and B is the column [4 5 6], read down. AB has one element. What is it?",
+   "opts": [
+    "32",
+    "28",
+    "21",
+    "18"
+   ],
+   "why": "Multiply the pairs in order and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
+   "clue": "Pair the first of the row with the top of the column."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem is garbled. It starts asking about [2 3] times [4 5], whose answer is 23 and is not an option, then breaks off with '...' and switches to [1 2 3] times [4 5 6]. Students cannot tell which product is being asked about. The stem should ask only about [1 2 3] times the column [4 5 6]."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem is garbled. It starts asking about [2 3] times [4 5], whose answer is 23 and is not an option, then breaks off with '...' and switches to [1 2 3] times [4 5 6]. Students cannot tell which product is being asked about. The stem should ask only about [1 2 3] times the column [4 5 6]."
+  ]
+ },
+ "final": {
+  "title": "Multiplying matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. A 2 × 3 matrix has 2 rows and 3 columns.",
+   "Two matrices can be multiplied only if the number of columns in the first equals the number of rows in the second. An m × n matrix times an n × p matrix gives an m × p matrix.",
+   "Each element of the answer is a row of the first matrix times a column of the second. Multiply the pairs in order, then add them.",
+   [
+    "Example",
+    "Row [2 3] times column [4 5] (read down) = 2 × 4 + 3 × 5 = 8 + 15 = 23. This is one element of the answer."
+   ]
+  ],
+  "remember": "Columns of the first must match rows of the second. Each element is row times column, then add.",
+  "a": {
+   "q": "A is a 2 × 3 matrix and B is a 3 × 4 matrix. What is the order of the product AB?",
+   "opts": [
+    "2 × 4",
+    "3 × 3",
+    "2 × 3",
+    "3 × 4"
+   ],
+   "why": "The inner numbers (3 and 3) match, so the product exists. The answer has the outer numbers: 2 rows from A and 4 columns from B. 3 × 3 is wrong because it uses the inner numbers, which are used up in the multiplying.",
+   "clue": "Look at the outer numbers once the inner ones match."
+  },
+  "b": {
+   "d": 2,
+   "q": "A is the row [1 2 3] and B is the column [4 5 6], read down. AB has one element. What is it?",
+   "opts": [
+    "32",
+    "28",
+    "21",
+    "18"
+   ],
+   "why": "Multiply the pairs in order and add: 1 × 4 + 2 × 5 + 3 × 6 = 4 + 10 + 18 = 32. The answer 28 comes from reading the column upwards, pairing 1 with 6 and 3 with 4. The answer 21 adds all six numbers instead of multiplying pairs.",
+   "clue": "Pair the first of the row with the top of the column."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,180 @@
+{
+ "id": "mat-combinations",
+ "title": "Combinations",
+ "brief": "19a5897d6da1",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:33Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember other, b other)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.00675,
+  "check": 0.00999,
+  "fix": 0.02685
+ },
+ "draft": {
+  "title": "Combinations",
+  "card": [
+   "A combination is a selection where order does not matter. Choosing Ana and Ben is the same as choosing Ben and Ana.",
+   "The number of ways to choose r items from n is nCr = n! ÷ (r! × (n − r)!). Here n! means n × (n − 1) × ... × 1.",
+   "Example: choose 2 from 5. 5C2 = 5! ÷ (2! × 3!) = 120 ÷ (2 × 6) = 10.",
+   "A shortcut is 5C2 = (5 × 4) ÷ (2 × 1) = 10. Also nCr = nC(n − r), so 5C2 = 5C3."
+  ],
+  "remember": "If order does not matter, divide the ordered count by r!.",
+  "a": {
+   "q": "What is 6C2?",
+   "opts": [
+    "15",
+    "30",
+    "12",
+    "8"
+   ],
+   "why": "6C2 = (6 × 5) ÷ (2 × 1) = 15. The answer 30 is wrong because it is 6 × 5 and does not divide by 2! to remove repeated pairs.",
+   "clue": "Divide by 2! to remove repeats."
+  },
+  "b": {
+   "d": 2,
+   "q": "A coach picks 3 players from a squad of 8 to attend a clinic. The order of picking does not matter. How many different groups can be picked?",
+   "opts": [
+    "56",
+    "336",
+    "24",
+    "5"
+   ],
+   "why": "8C3 = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56. The answer 336 counts each group in every order, so it is 6 times too large.",
+   "clue": "Divide 8 × 7 × 6 by 3!."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15",
+   "also_right": []
+  },
+  "b": {
+   "best": "56",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line uses the idea of an 'ordered count', which the card never names or explains. The card only shows the shortcut (5 × 4) ÷ (2 × 1). Students may not see what 'the ordered count' refers to."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue spells out the whole calculation ('Divide 8 × 7 × 6 by 3!'), so a student can get 56 by arithmetic alone without knowing how to set up a combination."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths is correct: 6C2 = 15 and 8C3 = 56, and the card's working is right. There are two minor issues. The remember line refers to an 'ordered count' the card never explains, and question b's clue gives away the full calculation."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line uses the idea of an 'ordered count', which the card never names or explains. The card only shows the shortcut (5 × 4) ÷ (2 × 1). Students may not see what 'the ordered count' refers to.",
+  "Question b, other: The clue spells out the whole calculation ('Divide 8 × 7 × 6 by 3!'), so a student can get 56 by arithmetic alone without knowing how to set up a combination."
+ ],
+ "proposal": {
+  "title": "Combinations",
+  "card": [
+   "A combination is a selection where order does not matter. Choosing Ana and Ben is the same as choosing Ben and Ana.",
+   "The number of ways to choose r items from n is nCr = n! ÷ (r! × (n − r)!). Here n! means n × (n − 1) × ... × 1.",
+   "Example: choose 2 from 5. 5C2 = 5! ÷ (2! × 3!) = 120 ÷ (2 × 6) = 10.",
+   "Shortcut: multiply r numbers counting down from n, then divide by r!. So 5C2 = (5 × 4) ÷ (2 × 1) = 10. Dividing by r! removes repeats, as each group can be ordered in r! ways."
+  ],
+  "remember": "When order does not matter, divide by r! so each group is counted once.",
+  "a": {
+   "q": "What is 6C2?",
+   "opts": [
+    "15",
+    "30",
+    "12",
+    "8"
+   ],
+   "why": "6C2 = (6 × 5) ÷ (2 × 1) = 15. The answer 30 is 6 × 5 without dividing by 2!, so it counts each pair twice, once in each order.",
+   "clue": "Each pair can be ordered in 2! ways."
+  },
+  "b": {
+   "d": 2,
+   "q": "A coach picks 3 players from a squad of 8 to attend a clinic. The order of picking does not matter. How many different groups can be picked?",
+   "opts": [
+    "56",
+    "336",
+    "24",
+    "5"
+   ],
+   "why": "This is 8C3 = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56. The answer 336 counts each group in every order, so it is 3! = 6 times too large.",
+   "clue": "Work out which number is n and which is r."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line uses the idea of an 'ordered count', which the card never names or explains. The card only shows the shortcut (5 × 4) ÷ (2 × 1). Students may not see what 'the ordered count' refers to."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue spells out the whole calculation ('Divide 8 × 7 × 6 by 3!'), so a student can get 56 by arithmetic alone without knowing how to set up a combination."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line uses the idea of an 'ordered count', which the card never names or explains. The card only shows the shortcut (5 × 4) ÷ (2 × 1). Students may not see what 'the ordered count' refers to.",
+   "Question b, other: The clue spells out the whole calculation ('Divide 8 × 7 × 6 by 3!'), so a student can get 56 by arithmetic alone without knowing how to set up a combination."
+  ]
+ },
+ "final": {
+  "title": "Combinations",
+  "card": [
+   "A combination is a selection where order does not matter. Choosing Ana and Ben is the same as choosing Ben and Ana.",
+   "The number of ways to choose r items from n is nCr = n! ÷ (r! × (n − r)!). Here n! means n × (n − 1) × ... × 1.",
+   "Example: choose 2 from 5. 5C2 = 5! ÷ (2! × 3!) = 120 ÷ (2 × 6) = 10.",
+   "Shortcut: multiply r numbers counting down from n, then divide by r!. So 5C2 = (5 × 4) ÷ (2 × 1) = 10. Dividing by r! removes repeats, as each group can be ordered in r! ways."
+  ],
+  "remember": "When order does not matter, divide by r! so each group is counted once.",
+  "a": {
+   "q": "What is 6C2?",
+   "opts": [
+    "15",
+    "30",
+    "12",
+    "8"
+   ],
+   "why": "6C2 = (6 × 5) ÷ (2 × 1) = 15. The answer 30 is 6 × 5 without dividing by 2!, so it counts each pair twice, once in each order.",
+   "clue": "Each pair can be ordered in 2! ways."
+  },
+  "b": {
+   "d": 2,
+   "q": "A coach picks 3 players from a squad of 8 to attend a clinic. The order of picking does not matter. How many different groups can be picked?",
+   "opts": [
+    "56",
+    "336",
+    "24",
+    "5"
+   ],
+   "why": "This is 8C3 = (8 × 7 × 6) ÷ (3 × 2 × 1) = 336 ÷ 6 = 56. The answer 336 counts each group in every order, so it is 3! = 6 times too large.",
+   "clue": "Work out which number is n and which is r."
+  }
+ },
+ "cleared_by": "auto"
+}

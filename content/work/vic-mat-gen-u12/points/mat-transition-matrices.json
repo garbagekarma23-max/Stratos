@@ -1,0 +1,284 @@
+{
+ "id": "mat-transition-matrices",
+ "title": "Transition matrices",
+ "brief": "3c0abc87d6ac",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b other)",
+  "2026-11-01T13:41:59Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.02002,
+  "check": 0.01874,
+  "fix": 0.01852,
+  "recheck": 0.01077
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The starting state [200 ; 300] is already the steady state (0.3 × 200 = 0.2 × 300), so the right answer, 200, is Mia's starting number. A student who assumes nothing changes, or who just copies the given figure, gets it right without using the matrix. Use starting numbers that are not the steady state.",
+ "rejected": {
+  "title": "Transition matrices",
+  "card": [
+   "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
+   "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
+   "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
+   "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+  ],
+  "remember": "Next state = T × current state. Each column of T adds to 1.",
+  "a": {
+   "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [50 ; 150], how many people are at gym A after one week?",
+   "opts": [
+    "55",
+    "70",
+    "40",
+    "145"
+   ],
+   "why": "Gym A keeps 0.8 × 50 = 40 and gains 0.1 × 150 = 15 from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
+   "clue": "Multiply the top row of T by the column S0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 200 customers and the rival 300. How many does Mia have next month?",
+   "opts": [
+    "200",
+    "140",
+    "230",
+    "300"
+   ],
+   "why": "Mia keeps 0.7 × 200 = 140 and gains 0.2 × 300 = 60, so 200. Choosing 140 forgets the customers who arrive from the rival, and 300 is the rival's new total, not Mia's.",
+   "clue": "Add those who stay to those who arrive."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The starting state [200 ; 300] is already the steady state (0.3 × 200 = 0.2 × 300), so the right answer, 200, is Mia's starting number. A student who assumes nothing changes, or who just copies the given figure, gets it right without using the matrix. Use starting numbers that are not the steady state."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Transition matrices",
+     "card": [
+      "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
+      "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
+      "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
+      "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+     ],
+     "remember": "Next state = T × current state. Each column of T adds to 1.",
+     "a": {
+      "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [100 ; 50], how many people are at gym A after one week?",
+      "opts": [
+       "85",
+       "90",
+       "80",
+       "75"
+      ],
+      "why": "Gym A gets 0.8 × 100 = 80 from those who stay and 0.1 × 50 = 5 from gym B, so 85. Using 90 would come from adding 80 and 10 without scaling by 50 people.",
+      "clue": "Multiply the top row of T by the column S0."
+     },
+     "b": {
+      "d": 3,
+      "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 200 customers and the rival 300. How many does Mia have next month?",
+      "opts": [
+       "200",
+       "140",
+       "260",
+       "240"
+      ],
+      "why": "Mia keeps 0.7 × 200 = 140 and gains 0.2 × 300 = 60, so 200. Choosing 140 forgets the customers who arrive from the rival.",
+      "clue": "Add those who stay to those who arrive."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "85",
+      "also_right": []
+     },
+     "b": {
+      "best": "200",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a repeats the card's worked example exactly (same T, same S0 = [100 ; 50]). The card already shows gym A = 85 after one step, so a student can copy the answer without applying the idea. Use different starting numbers."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both answers are correct (a: 85, b: 200). However, question a reuses the card's worked example, so its answer is printed on the card; it needs new starting numbers."
+    },
+    "flags": [
+     "Question a, level: Question a repeats the card's worked example exactly (same T, same S0 = [100 ; 50]). The card already shows gym A = 85 after one step, so a student can copy the answer without applying the idea. Use different starting numbers."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Transition matrices",
+     "card": [
+      "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
+      "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
+      "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
+      "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+     ],
+     "remember": "Next state = T × current state. Each column of T adds to 1.",
+     "a": {
+      "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [50 ; 150], how many people are at gym A after one week?",
+      "opts": [
+       "55",
+       "70",
+       "40",
+       "145"
+      ],
+      "why": "Gym A keeps 0.8 × 50 = 40 and gains 0.1 × 150 = 15 from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
+      "clue": "Multiply the top row of T by the column S0."
+     },
+     "b": {
+      "d": 3,
+      "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 200 customers and the rival 300. How many does Mia have next month?",
+      "opts": [
+       "200",
+       "140",
+       "230",
+       "300"
+      ],
+      "why": "Mia keeps 0.7 × 200 = 140 and gains 0.2 × 300 = 60, so 200. Choosing 140 forgets the customers who arrive from the rival, and 300 is the rival's new total, not Mia's.",
+      "clue": "Add those who stay to those who arrive."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "55",
+       "also_right": []
+      },
+      "b": {
+       "best": "200",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The starting state [200 ; 300] is already the steady state (0.3 × 200 = 0.2 × 300), so the right answer, 200, is Mia's starting number. A student who assumes nothing changes, or who just copies the given figure, gets it right without using the matrix. Use starting numbers that are not the steady state."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and the arithmetic are correct (a = 55, b = 200). However, question b starts at the steady state, so the answer equals Mia's starting number and a student can get it right without doing the multiplication."
+     },
+     "flags": [
+      "Question b, other: The starting state [200 ; 300] is already the steady state (0.3 × 200 = 0.2 × 300), so the right answer, 200, is Mia's starting number. A student who assumes nothing changes, or who just copies the given figure, gets it right without using the matrix. Use starting numbers that are not the steady state."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Transition matrices",
+  "card": [
+   "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
+   "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
+   "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
+   "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+  ],
+  "remember": "Next state = T × current state. Each column of T adds to 1.",
+  "a": {
+   "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [50 ; 150], how many people are at gym A after one week?",
+   "opts": [
+    "55",
+    "70",
+    "40",
+    "145"
+   ],
+   "why": "Gym A keeps 0.8 × 50 = 40 and gains 0.1 × 150 = 15 from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
+   "clue": "Multiply the top row of T by the column S0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 400 customers and the rival 100. How many does Mia have next month?",
+   "opts": [
+    "300",
+    "280",
+    "360",
+    "200"
+   ],
+   "why": "Mia keeps 0.7 × 400 = 280 and gains 0.2 × 100 = 20, so 300. Choosing 280 forgets the customers who arrive from the rival, and 200 is the rival's new total, not Mia's.",
+   "clue": "Add those who stay to those who arrive."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "55",
+   "also_right": []
+  },
+  "b": {
+   "best": "300",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's worked example and both answers check out: 55 for gym A and 300 for Mia, and each distractor matches a plausible mistake."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transition matrices",
+  "card": [
+   "A transition matrix shows the chance of moving from each state to each state in one step. Each column is the starting state and each row is the next state. Each column adds to 1.",
+   "Example: each week, 80% of people at gym A stay and 20% move to gym B. Of people at gym B, 10% move to A and 90% stay. T = [0.8 0.1 ; 0.2 0.9], written row by row, with a semicolon between rows.",
+   "Write the starting numbers as a column matrix S0. The next state is S1 = T × S0, and then S2 = T × S1. Each step is one more multiplication by T.",
+   "Example: if S0 = [100 ; 50], then S1 = [0.8×100 + 0.1×50 ; 0.2×100 + 0.9×50] = [85 ; 65]. After many steps, the numbers often settle to a steady state that stops changing."
+  ],
+  "remember": "Next state = T × current state. Each column of T adds to 1.",
+  "a": {
+   "q": "Using the gym matrix T = [0.8 0.1 ; 0.2 0.9] and S0 = [50 ; 150], how many people are at gym A after one week?",
+   "opts": [
+    "55",
+    "70",
+    "40",
+    "145"
+   ],
+   "why": "Gym A keeps 0.8 × 50 = 40 and gains 0.1 × 150 = 15 from gym B, so 55. The answer 70 comes from using 0.2, the share that leaves A, instead of the 0.1 that arrives from B.",
+   "clue": "Multiply the top row of T by the column S0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 70% of Mia's café customers stay and 30% move to a rival. Of the rival's customers, 20% move to Mia and 80% stay. Mia has 400 customers and the rival 100. How many does Mia have next month?",
+   "opts": [
+    "300",
+    "280",
+    "360",
+    "200"
+   ],
+   "why": "Mia keeps 0.7 × 400 = 280 and gains 0.2 × 100 = 20, so 300. Choosing 280 forgets the customers who arrive from the rival, and 200 is the rival's new total, not Mia's.",
+   "clue": "Add those who stay to those who arrive."
+  }
+ }
+}

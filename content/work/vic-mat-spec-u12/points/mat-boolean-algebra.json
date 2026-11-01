@@ -1,0 +1,197 @@
+{
+ "id": "mat-boolean-algebra",
+ "title": "Boolean algebra",
+ "brief": "c8e7439de5cf",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00581,
+  "check": 0.01507,
+  "fix": 0.01872
+ },
+ "draft": {
+  "title": "Boolean algebra",
+  "card": [
+   "Boolean algebra uses rules to rewrite a statement in a simpler form with the same truth value. Write ∧ for and, ∨ for or, and ¬ for not.",
+   [
+    "Laws",
+    "P ∧ P = P, P ∨ ¬P = true, P ∧ ¬P = false, and ¬(¬P) = P. De Morgan's laws: ¬(P ∧ Q) = ¬P ∨ ¬Q, and ¬(P ∨ Q) = ¬P ∧ ¬Q."
+   ],
+   [
+    "Worked example",
+    "Simplify ¬(P ∨ Q) ∨ P. De Morgan gives (¬P ∧ ¬Q) ∨ P. This is true when P is true. When P is false, ¬P is true, so it equals ¬Q. So the result is P ∨ ¬Q."
+   ],
+   [
+    "Tautology",
+    "A tautology is a statement that is true for every combination of truth values, such as P ∨ ¬P. The same laws work for sets, with union for or, intersection for and, and complement for not."
+   ]
+  ],
+  "remember": "Use the laws to rewrite a statement more simply. A tautology is always true.",
+  "a": {
+   "q": "Using De Morgan's law, which statement equals ¬(P ∧ Q)?",
+   "opts": [
+    "¬P ∨ ¬Q",
+    "¬P ∧ ¬Q",
+    "P ∨ Q",
+    "¬P ∨ Q"
+   ],
+   "why": "De Morgan's law negates each part and swaps and with or, so ¬(P ∧ Q) = ¬P ∨ ¬Q. The option ¬P ∧ ¬Q is tempting, but it keeps the and, so it equals ¬(P ∨ Q).",
+   "clue": "Negate each part and swap the connective."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is a tautology?",
+   "opts": [
+    "(P ∧ Q) ∨ ¬(P ∧ Q)",
+    "(P ∨ Q) ∧ ¬P",
+    "P ∧ (Q ∨ ¬Q)",
+    "¬(P ∨ Q) ∨ P"
+   ],
+   "why": "The first has the form R ∨ ¬R with R = P ∧ Q, so it is true every time. The third equals P, which is false when P is false, so it is not a tautology. The second is false when P is true, and the fourth is false when P is false and Q is true.",
+   "clue": "Look for the form R ∨ ¬R, where R is a whole statement."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "¬P ∨ ¬Q",
+   "also_right": []
+  },
+  "b": {
+   "best": "(P ∧ Q) ∨ ¬(P ∧ Q)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the first', 'the third'), and these do not match the order shown. It calls the tautology 'the first', but (P ∧ Q) ∨ ¬(P ∧ Q) is listed third. It says 'the third equals P', but P ∧ (Q ∨ ¬Q) is listed first. A student would be told the listed third option, which is the right answer, is not a tautology. The why should name each option by its expression, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the laws, the worked example and both answers are correct. The explanation for question b refers to options by position, and that order does not match the options shown, so it wrongly says the listed third option (the correct answer) is not a tautology."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why refers to options by position ('the first', 'the third'), and these do not match the order shown. It calls the tautology 'the first', but (P ∧ Q) ∨ ¬(P ∧ Q) is listed third. It says 'the third equals P', but P ∧ (Q ∨ ¬Q) is listed first. A student would be told the listed third option, which is the right answer, is not a tautology. The why should name each option by its expression, not its position."
+ ],
+ "proposal": {
+  "title": "Boolean algebra",
+  "card": [
+   "Boolean algebra uses rules to rewrite a statement in a simpler form with the same truth value. Write ∧ for and, ∨ for or, and ¬ for not.",
+   [
+    "Laws",
+    "P ∧ P = P, P ∨ ¬P = true, P ∧ ¬P = false, and ¬(¬P) = P. De Morgan's laws: ¬(P ∧ Q) = ¬P ∨ ¬Q, and ¬(P ∨ Q) = ¬P ∧ ¬Q."
+   ],
+   [
+    "Worked example",
+    "Simplify ¬(P ∨ Q) ∨ P. De Morgan gives (¬P ∧ ¬Q) ∨ P. This is true when P is true. When P is false, ¬P is true, so it equals ¬Q. So the result is P ∨ ¬Q."
+   ],
+   [
+    "Tautology",
+    "A tautology is a statement that is true for every combination of truth values, such as P ∨ ¬P. The same laws work for sets, with union for or, intersection for and, and complement for not."
+   ]
+  ],
+  "remember": "Use the laws to rewrite a statement more simply. A tautology is always true.",
+  "a": {
+   "q": "Using De Morgan's law, which statement equals ¬(P ∧ Q)?",
+   "opts": [
+    "¬P ∨ ¬Q",
+    "¬P ∧ ¬Q",
+    "P ∨ Q",
+    "¬P ∨ Q"
+   ],
+   "why": "De Morgan's law negates each part and swaps and with or, so ¬(P ∧ Q) = ¬P ∨ ¬Q. The option ¬P ∧ ¬Q is tempting, but it keeps the and, so it equals ¬(P ∨ Q).",
+   "clue": "Negate each part and swap the connective."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is a tautology?",
+   "opts": [
+    "(P ∧ Q) ∨ ¬(P ∧ Q)",
+    "(P ∨ Q) ∧ ¬P",
+    "P ∧ (Q ∨ ¬Q)",
+    "¬(P ∨ Q) ∨ P"
+   ],
+   "why": "(P ∧ Q) ∨ ¬(P ∧ Q) has the form R ∨ ¬R with R = P ∧ Q, so it is true every time. P ∧ (Q ∨ ¬Q) is tempting, but it equals P, which is false when P is false. (P ∨ Q) ∧ ¬P is false when P is true, and ¬(P ∨ Q) ∨ P is false when P is false and Q is true.",
+   "clue": "Look for the form R ∨ ¬R, where R is a whole statement."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why refers to options by position ('the first', 'the third'), and these do not match the order shown. It calls the tautology 'the first', but (P ∧ Q) ∨ ¬(P ∧ Q) is listed third. It says 'the third equals P', but P ∧ (Q ∨ ¬Q) is listed first. A student would be told the listed third option, which is the right answer, is not a tautology. The why should name each option by its expression, not its position."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why refers to options by position ('the first', 'the third'), and these do not match the order shown. It calls the tautology 'the first', but (P ∧ Q) ∨ ¬(P ∧ Q) is listed third. It says 'the third equals P', but P ∧ (Q ∨ ¬Q) is listed first. A student would be told the listed third option, which is the right answer, is not a tautology. The why should name each option by its expression, not its position."
+  ]
+ },
+ "final": {
+  "title": "Boolean algebra",
+  "card": [
+   "Boolean algebra uses rules to rewrite a statement in a simpler form with the same truth value. Write ∧ for and, ∨ for or, and ¬ for not.",
+   [
+    "Laws",
+    "P ∧ P = P, P ∨ ¬P = true, P ∧ ¬P = false, and ¬(¬P) = P. De Morgan's laws: ¬(P ∧ Q) = ¬P ∨ ¬Q, and ¬(P ∨ Q) = ¬P ∧ ¬Q."
+   ],
+   [
+    "Worked example",
+    "Simplify ¬(P ∨ Q) ∨ P. De Morgan gives (¬P ∧ ¬Q) ∨ P. This is true when P is true. When P is false, ¬P is true, so it equals ¬Q. So the result is P ∨ ¬Q."
+   ],
+   [
+    "Tautology",
+    "A tautology is a statement that is true for every combination of truth values, such as P ∨ ¬P. The same laws work for sets, with union for or, intersection for and, and complement for not."
+   ]
+  ],
+  "remember": "Use the laws to rewrite a statement more simply. A tautology is always true.",
+  "a": {
+   "q": "Using De Morgan's law, which statement equals ¬(P ∧ Q)?",
+   "opts": [
+    "¬P ∨ ¬Q",
+    "¬P ∧ ¬Q",
+    "P ∨ Q",
+    "¬P ∨ Q"
+   ],
+   "why": "De Morgan's law negates each part and swaps and with or, so ¬(P ∧ Q) = ¬P ∨ ¬Q. The option ¬P ∧ ¬Q is tempting, but it keeps the and, so it equals ¬(P ∨ Q).",
+   "clue": "Negate each part and swap the connective."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which of these statements is a tautology?",
+   "opts": [
+    "(P ∧ Q) ∨ ¬(P ∧ Q)",
+    "(P ∨ Q) ∧ ¬P",
+    "P ∧ (Q ∨ ¬Q)",
+    "¬(P ∨ Q) ∨ P"
+   ],
+   "why": "(P ∧ Q) ∨ ¬(P ∧ Q) has the form R ∨ ¬R with R = P ∧ Q, so it is true every time. P ∧ (Q ∨ ¬Q) is tempting, but it equals P, which is false when P is false. (P ∨ Q) ∧ ¬P is false when P is true, and ¬(P ∨ Q) ∨ P is false when P is false and Q is true.",
+   "clue": "Look for the form R ∨ ¬R, where R is a whole statement."
+  }
+ },
+ "cleared_by": "auto"
+}

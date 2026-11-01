@@ -1,0 +1,186 @@
+{
+ "id": "acc-carrying-amount",
+ "title": "Carrying amount",
+ "brief": "b0aac2d973d6",
+ "shortlist": [
+  [
+   "bus-balance-sheet",
+   0.239
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: flagged",
+  "2026-11-01T08:33:47Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-01T09:35:04Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00691,
+  "check": 0.0105,
+  "fix": 0.01353
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the balance sheet and owner's equity in general, not carrying amount, depreciation or its treatment in the income statement, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Carrying amount",
+  "card": [
+   "Accumulated depreciation is the total depreciation charged on an asset since it was bought. It grows each year the asset is used.",
+   "Carrying amount = cost less accumulated depreciation. It is the part of the asset's cost not yet written off as an expense.",
+   "Each year's depreciation is an expense in the income statement. It lowers profit for that year.",
+   "The carrying amount is reported in the balance sheet, under non-current assets. It falls each year as accumulated depreciation grows."
+  ],
+  "remember": "Depreciation goes in the income statement. Carrying amount goes in the balance sheet.",
+  "a": {
+   "q": "Which of these is the carrying amount of an asset?",
+   "opts": [
+    "Cost less accumulated depreciation",
+    "Cost plus accumulated depreciation",
+    "The depreciation expense for the latest year",
+    "The price the asset could be sold for today"
+   ],
+   "why": "Carrying amount is what is left of the cost after the total depreciation so far is taken off. The latest year's expense is only one year of depreciation, not the total, so it is not the carrying amount.",
+   "clue": "Think of cost with the total depreciation so far taken off."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Bakery in Ballarat bought an oven for $24 000. After three years its accumulated depreciation is $9 000. Where is the $15 000 shown?",
+   "opts": [
+    "In the balance sheet, as the oven's carrying amount",
+    "In the income statement, as the oven's carrying amount",
+    "In the income statement, as a depreciation expense",
+    "In the balance sheet, as accumulated depreciation"
+   ],
+   "why": "$24 000 less $9 000 is $15 000, which is the carrying amount, and carrying amount is shown in the balance sheet. Accumulated depreciation is the $9 000, not the $15 000.",
+   "clue": "Work out cost less accumulated depreciation first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cost less accumulated depreciation",
+   "also_right": []
+  },
+  "b": {
+   "best": "In the balance sheet, as the oven's carrying amount",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think of cost with the total depreciation so far taken off') restates the right option almost word for word. A student could match it without knowing what carrying amount is."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts, questions and explanations are correct and consistent with the card. The only issue is that question a's clue paraphrases the right answer and gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('Think of cost with the total depreciation so far taken off') restates the right option almost word for word. A student could match it without knowing what carrying amount is."
+ ],
+ "proposal": {
+  "title": "Carrying amount",
+  "card": [
+   "Accumulated depreciation is the total depreciation charged on an asset since it was bought. It grows each year the asset is used.",
+   "Carrying amount = cost less accumulated depreciation. It is the part of the asset's cost not yet written off as an expense.",
+   "Each year's depreciation is an expense in the income statement. It lowers profit for that year.",
+   "The carrying amount is reported in the balance sheet, under non-current assets. It falls each year as accumulated depreciation grows."
+  ],
+  "remember": "Depreciation goes in the income statement. Carrying amount goes in the balance sheet.",
+  "a": {
+   "q": "Which of these is the carrying amount of an asset?",
+   "opts": [
+    "Cost less accumulated depreciation",
+    "Cost plus accumulated depreciation",
+    "The depreciation expense for the latest year",
+    "The price the asset could be sold for today"
+   ],
+   "why": "Carrying amount is what is left of the cost after the total depreciation so far is taken off. The latest year's expense is only one year of depreciation, not the total, so it is not the carrying amount.",
+   "clue": "Does the carrying amount rise or fall as the asset gets older?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Bakery in Ballarat bought an oven for $24 000. After three years its accumulated depreciation is $9 000. Where is the $15 000 shown?",
+   "opts": [
+    "In the balance sheet, as the oven's carrying amount",
+    "In the income statement, as the oven's carrying amount",
+    "In the income statement, as a depreciation expense",
+    "In the balance sheet, as accumulated depreciation"
+   ],
+   "why": "$24 000 less $9 000 is $15 000, which is the carrying amount, and carrying amount is shown in the balance sheet. Accumulated depreciation is the $9 000, not the $15 000.",
+   "clue": "Work out cost less accumulated depreciation first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think of cost with the total depreciation so far taken off') restates the right option almost word for word. A student could match it without knowing what carrying amount is."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('Think of cost with the total depreciation so far taken off') restates the right option almost word for word. A student could match it without knowing what carrying amount is."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Carrying amount",
+  "card": [
+   "Accumulated depreciation is the total depreciation charged on an asset since it was bought. It grows each year the asset is used.",
+   "Carrying amount = cost less accumulated depreciation. It is the part of the asset's cost not yet written off as an expense.",
+   "Each year's depreciation is an expense in the income statement. It lowers profit for that year.",
+   "The carrying amount is reported in the balance sheet, under non-current assets. It falls each year as accumulated depreciation grows."
+  ],
+  "remember": "Depreciation goes in the income statement. Carrying amount goes in the balance sheet.",
+  "a": {
+   "q": "Which of these is the carrying amount of an asset?",
+   "opts": [
+    "Cost less accumulated depreciation",
+    "Cost plus accumulated depreciation",
+    "The depreciation expense for the latest year",
+    "The price the asset could be sold for today"
+   ],
+   "why": "Carrying amount is what is left of the cost after the total depreciation so far is taken off. The latest year's expense is only one year of depreciation, not the total, so it is not the carrying amount.",
+   "clue": "Does the carrying amount rise or fall as the asset gets older?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Bakery in Ballarat bought an oven for $24 000. After three years its accumulated depreciation is $9 000. Where is the $15 000 shown?",
+   "opts": [
+    "In the balance sheet, as the oven's carrying amount",
+    "In the income statement, as the oven's carrying amount",
+    "In the income statement, as a depreciation expense",
+    "In the balance sheet, as accumulated depreciation"
+   ],
+   "why": "$24 000 less $9 000 is $15 000, which is the carrying amount, and carrying amount is shown in the balance sheet. Accumulated depreciation is the $9 000, not the $15 000.",
+   "clue": "Work out cost less accumulated depreciation first."
+  }
+ },
+ "cleared_by": "owner"
+}

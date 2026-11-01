@@ -1,0 +1,239 @@
+{
+ "id": "mat-graphs-derivative-functions",
+ "title": "Graphs of derivative functions",
+ "brief": "6b36e88300af",
+ "shortlist": [
+  [
+   "mat-chain-rule",
+   0.354
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.346
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.329
+  ],
+  [
+   "mat-derivatives-exponentials-logarithms",
+   0.329
+  ],
+  [
+   "mat-stationary-points",
+   0.318
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00635,
+  "check": 0.01456,
+  "fix": 0.02673,
+  "recheck": 0.00996
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how the sign of f′ relates to whether f rises or falls; the stationary points card only covers solving f′(x) = 0 and classifying turning points, which is related but a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Graphs of derivative functions",
+  "card": [
+   "The derivative f′(x) gives the gradient of the graph of f at each x. So its graph shows how steep f is and which way it slopes.",
+   "Where f rises as x increases, the gradient is positive, so f′ is above the x-axis. Where f falls, f′ is below the x-axis.",
+   "At a stationary point, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
+   "Example: a curve falls until x = 2, then rises. So f′ is negative for x < 2, zero at x = 2 and positive for x > 2."
+  ],
+  "remember": "Read f′ from the slope of f: above the axis means rising, below means falling.",
+  "a": {
+   "q": "The graph of f falls for x < 1 and rises for x > 1. Which describes f′?",
+   "opts": [
+    "Negative for x < 1, zero at x = 1, positive after",
+    "Positive for x < 1, zero at x = 1, negative after",
+    "Negative everywhere, with a zero at x = 1",
+    "Zero for x < 1 and positive for x > 1"
+   ],
+   "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at x = 1 gives zero. Swapping the signs is the tempting mistake.",
+   "clue": "Falling means a negative gradient."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of f has a peak at x = −1 and a dip at x = 3. Where is f′ negative?",
+   "opts": [
+    "Between x = −1 and x = 3",
+    "For x < −1 and for x > 3",
+    "Only at x = −1 and x = 3",
+    "Between x = −1 and x = 3, and nowhere else is zero"
+   ],
+   "why": "After a peak the graph falls until the dip, so f′ is negative between −1 and 3. Outside that interval f rises, so f′ is positive. The values −1 and 3 are where f′ is zero, not negative.",
+   "clue": "What does the graph do just after a peak?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Negative for x < 1, zero at x = 1, positive after",
+   "also_right": []
+  },
+  "b": {
+   "best": "Between x = −1 and x = 3",
+   "also_right": [
+    "Between x = −1 and x = 3, and nowhere else is zero"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option 'Between x = −1 and x = 3, and nowhere else is zero' is ungrammatical and unclear. Read as 'and nowhere else', it is also right, so the question has two defensible answers. Reword or replace this distractor."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question assumes the peak and dip are the only stationary points, but never says so. Without that, f′ need not be negative on the whole interval or positive outside it. Add 'and has no other stationary points'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has a garbled distractor ('…and nowhere else is zero') that can be read as a second right answer. It also never states that the peak and dip are the only stationary points. The card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Between x = −1 and x = 3, and nowhere else is zero” could also be right.",
+  "Question b, wording: The option 'Between x = −1 and x = 3, and nowhere else is zero' is ungrammatical and unclear. Read as 'and nowhere else', it is also right, so the question has two defensible answers. Reword or replace this distractor.",
+  "Question b, wording: The question assumes the peak and dip are the only stationary points, but never says so. Without that, f′ need not be negative on the whole interval or positive outside it. Add 'and has no other stationary points'."
+ ],
+ "proposal": {
+  "title": "Graphs of derivative functions",
+  "card": [
+   "The derivative f′(x) gives the gradient of the graph of f at each x. So its graph shows how steep f is and which way it slopes.",
+   "Where f rises as x increases, the gradient is positive, so f′ is above the x-axis. Where f falls, f′ is below the x-axis.",
+   "At a stationary point, such as a peak or a dip, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
+   "Example: a curve falls until x = 2, then rises. So f′ is negative for x < 2, zero at x = 2 and positive for x > 2."
+  ],
+  "remember": "Read f′ from the slope of f: above the axis means rising, below means falling.",
+  "a": {
+   "q": "The graph of f falls for x < 1 and rises for x > 1. Which describes f′?",
+   "opts": [
+    "Negative for x < 1, zero at x = 1, positive after",
+    "Positive for x < 1, zero at x = 1, negative after",
+    "Negative everywhere, with a zero at x = 1",
+    "Zero for x < 1 and positive for x > 1"
+   ],
+   "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at x = 1 gives zero. Swapping the signs is the tempting mistake.",
+   "clue": "Falling means a negative gradient."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of f has a peak at x = −1, a dip at x = 3 and no other stationary points. Where is f′ negative?",
+   "opts": [
+    "Between x = −1 and x = 3",
+    "For x < −1 and for x > 3",
+    "At x = −1 and at x = 3",
+    "For all x less than 3"
+   ],
+   "why": "After a peak the graph falls until the dip, so f′ is negative between −1 and 3. Before the peak f rises, so f′ is positive for x < −1, which rules out all x less than 3. At −1 and 3 the gradient is zero, not negative.",
+   "clue": "What does the graph do just after a peak?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Negative for x < 1, zero at x = 1, positive after",
+    "also_right": []
+   },
+   "b": {
+    "best": "Between x = −1 and x = 3",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The option 'Between x = −1 and x = 3, and nowhere else is zero' is ungrammatical and unclear. Read as 'and nowhere else', it is also right, so the question has two defensible answers. Reword or replace this distractor."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question assumes the peak and dip are the only stationary points, but never says so. Without that, f′ need not be negative on the whole interval or positive outside it. Add 'and has no other stationary points'."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Between x = −1 and x = 3, and nowhere else is zero” could also be right.",
+   "Question b, wording: The option 'Between x = −1 and x = 3, and nowhere else is zero' is ungrammatical and unclear. Read as 'and nowhere else', it is also right, so the question has two defensible answers. Reword or replace this distractor.",
+   "Question b, wording: The question assumes the peak and dip are the only stationary points, but never says so. Without that, f′ need not be negative on the whole interval or positive outside it. Add 'and has no other stationary points'."
+  ]
+ },
+ "final": {
+  "title": "Graphs of derivative functions",
+  "card": [
+   "The derivative f′(x) gives the gradient of the graph of f at each x. So its graph shows how steep f is and which way it slopes.",
+   "Where f rises as x increases, the gradient is positive, so f′ is above the x-axis. Where f falls, f′ is below the x-axis.",
+   "At a stationary point, such as a peak or a dip, the tangent is flat. The gradient is zero, so the graph of f′ touches or crosses the x-axis there.",
+   "Example: a curve falls until x = 2, then rises. So f′ is negative for x < 2, zero at x = 2 and positive for x > 2."
+  ],
+  "remember": "Read f′ from the slope of f: above the axis means rising, below means falling.",
+  "a": {
+   "q": "The graph of f falls for x < 1 and rises for x > 1. Which describes f′?",
+   "opts": [
+    "Negative for x < 1, zero at x = 1, positive after",
+    "Positive for x < 1, zero at x = 1, negative after",
+    "Negative everywhere, with a zero at x = 1",
+    "Zero for x < 1 and positive for x > 1"
+   ],
+   "why": "A falling graph has a negative gradient, and a rising graph has a positive one. The flat point at x = 1 gives zero. Swapping the signs is the tempting mistake.",
+   "clue": "Falling means a negative gradient."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of f has a peak at x = −1, a dip at x = 3 and no other stationary points. Where is f′ negative?",
+   "opts": [
+    "Between x = −1 and x = 3",
+    "For x < −1 and for x > 3",
+    "At x = −1 and at x = 3",
+    "For all x less than 3"
+   ],
+   "why": "After a peak the graph falls until the dip, so f′ is negative between −1 and 3. Before the peak f rises, so f′ is positive for x < −1, which rules out all x less than 3. At −1 and 3 the gradient is zero, not negative.",
+   "clue": "What does the graph do just after a peak?"
+  }
+ },
+ "cleared_by": "recheck"
+}

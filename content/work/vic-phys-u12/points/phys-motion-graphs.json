@@ -1,0 +1,192 @@
+{
+ "id": "phys-motion-graphs",
+ "title": "Motion graphs",
+ "brief": "1f21fc7fe546",
+ "shortlist": [
+  [
+   "phys-uniform-circular-motion",
+   0.364
+  ],
+  [
+   "phys-projectile-motion",
+   0.335
+  ],
+  [
+   "mat-reading-motion-from-graphs",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:35Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00673,
+  "check": 0.01169,
+  "fix": 0.02599
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Reading motion from graphs, is a Year 12 maths card that covers only displacement and velocity graphs, while this point also needs acceleration graphs and changing acceleration at a Year 11 physics depth, so it is not the same point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Motion graphs",
+  "card": [
+   "On a position-time graph, the gradient is the velocity. A straight line means constant velocity, and a flat line means the object is at rest.",
+   "On a velocity-time graph, the gradient is the acceleration. The area between the line and the time axis is the displacement.",
+   "On an acceleration-time graph, the area under the line is the change in velocity.",
+   "A curved line means the gradient is changing. On a position-time graph, a curve means the velocity is changing. On a velocity-time graph, a curve means the acceleration is changing."
+  ],
+  "remember": "Gradient gives the next quantity along. Area gives the one before.",
+  "a": {
+   "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
+   "opts": [
+    "Constant acceleration",
+    "Constant velocity",
+    "Zero acceleration",
+    "Velocity that is decreasing"
+   ],
+   "why": "The gradient of a velocity-time graph is acceleration. A straight sloping line has a constant gradient, so the acceleration is constant. Constant velocity would be a flat line.",
+   "clue": "Gradient on a velocity-time graph gives acceleration."
+  },
+  "b": {
+   "d": 3,
+   "q": "A runner's position-time graph is a straight line sloping up for 10 s, then a curve that gets steeper. What does the curve show?",
+   "opts": [
+    "The runner's velocity is increasing",
+    "The runner's velocity is constant",
+    "The runner is at rest",
+    "The runner's acceleration is constant at zero"
+   ],
+   "why": "On a position-time graph, the gradient is velocity. A curve that gets steeper has an increasing gradient, so the velocity is increasing. The straight section was the part with constant velocity.",
+   "clue": "Steeper means a larger gradient, and gradient means velocity."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Constant acceleration",
+   "also_right": []
+  },
+  "b": {
+   "best": "The runner's velocity is increasing",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Area gives the one before' is looser than the card. The area under a velocity-time graph gives the displacement (change in position), and the area under an acceleration-time graph gives the change in velocity, not the velocity itself. The card says 'change in velocity', so the remember line could teach students that the area gives the actual value. Suggest 'Area gives the change in the one before.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The physics and both questions are correct, each with one clear right answer. The only issue is that the remember line says area gives 'the one before' rather than the change in it, which loosens what the card says."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: 'Area gives the one before' is looser than the card. The area under a velocity-time graph gives the displacement (change in position), and the area under an acceleration-time graph gives the change in velocity, not the velocity itself. The card says 'change in velocity', so the remember line could teach students that the area gives the actual value. Suggest 'Area gives the change in the one before.'"
+ ],
+ "proposal": {
+  "title": "Motion graphs",
+  "card": [
+   "On a position-time graph, the gradient is the velocity. A straight line means constant velocity, and a flat line means the object is at rest.",
+   "On a velocity-time graph, the gradient is the acceleration. The area between the line and the time axis is the displacement.",
+   "On an acceleration-time graph, the area under the line is the change in velocity.",
+   "A curved line means the gradient is changing. So a curve on a position-time graph shows changing velocity, and a curve on a velocity-time graph shows changing acceleration."
+  ],
+  "remember": "Position, velocity, acceleration: gradient gives the next one along, and area gives the change in the one before.",
+  "a": {
+   "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
+   "opts": [
+    "Constant acceleration",
+    "Constant velocity",
+    "Zero acceleration",
+    "Decreasing velocity"
+   ],
+   "why": "The gradient of a velocity-time graph is acceleration. A straight sloping line has a constant gradient, so the acceleration is constant. Constant velocity would need a flat line, with zero gradient.",
+   "clue": "Gradient on a velocity-time graph gives acceleration."
+  },
+  "b": {
+   "d": 3,
+   "q": "A runner's position-time graph is a straight line sloping up for 10 s, then a curve that gets steeper. What does the curve show?",
+   "opts": [
+    "The runner's velocity is increasing",
+    "The runner's velocity is constant",
+    "The runner is at rest",
+    "The runner's acceleration is zero"
+   ],
+   "why": "On a position-time graph, the gradient is velocity. A curve that gets steeper has an increasing gradient, so the velocity is increasing. Constant velocity, with zero acceleration, describes the straight section, not the curve.",
+   "clue": "Steeper means a larger gradient, and gradient means velocity."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "'Area gives the one before' is looser than the card. The area under a velocity-time graph gives the displacement (change in position), and the area under an acceleration-time graph gives the change in velocity, not the velocity itself. The card says 'change in velocity', so the remember line could teach students that the area gives the actual value. Suggest 'Area gives the change in the one before.'"
+   }
+  ],
+  "flags": [
+   "Remember, other: 'Area gives the one before' is looser than the card. The area under a velocity-time graph gives the displacement (change in position), and the area under an acceleration-time graph gives the change in velocity, not the velocity itself. The card says 'change in velocity', so the remember line could teach students that the area gives the actual value. Suggest 'Area gives the change in the one before.'"
+  ]
+ },
+ "final": {
+  "title": "Motion graphs",
+  "card": [
+   "On a position-time graph, the gradient is the velocity. A straight line means constant velocity, and a flat line means the object is at rest.",
+   "On a velocity-time graph, the gradient is the acceleration. The area between the line and the time axis is the displacement.",
+   "On an acceleration-time graph, the area under the line is the change in velocity.",
+   "A curved line means the gradient is changing. So a curve on a position-time graph shows changing velocity, and a curve on a velocity-time graph shows changing acceleration."
+  ],
+  "remember": "Position, velocity, acceleration: gradient gives the next one along, and area gives the change in the one before.",
+  "a": {
+   "q": "A cyclist's velocity-time graph is a straight line sloping upwards from the origin. What does this show?",
+   "opts": [
+    "Constant acceleration",
+    "Constant velocity",
+    "Zero acceleration",
+    "Decreasing velocity"
+   ],
+   "why": "The gradient of a velocity-time graph is acceleration. A straight sloping line has a constant gradient, so the acceleration is constant. Constant velocity would need a flat line, with zero gradient.",
+   "clue": "Gradient on a velocity-time graph gives acceleration."
+  },
+  "b": {
+   "d": 3,
+   "q": "A runner's position-time graph is a straight line sloping up for 10 s, then a curve that gets steeper. What does the curve show?",
+   "opts": [
+    "The runner's velocity is increasing",
+    "The runner's velocity is constant",
+    "The runner is at rest",
+    "The runner's acceleration is zero"
+   ],
+   "why": "On a position-time graph, the gradient is velocity. A curve that gets steeper has an increasing gradient, so the velocity is increasing. Constant velocity, with zero acceleration, describes the straight section, not the curve.",
+   "clue": "Steeper means a larger gradient, and gradient means velocity."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "phys-displacement-velocity-acceleration",
+ "title": "Displacement, velocity and acceleration",
+ "brief": "7ac0c03046dc",
+ "shortlist": [
+  [
+   "mat-displacement-velocity-acceleration",
+   0.402
+  ],
+  [
+   "phys-projectile-motion",
+   0.341
+  ],
+  [
+   "mat-reading-motion-from-graphs",
+   0.218
+  ],
+  [
+   "phys-uniform-circular-motion",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 may adapt mat-displacement-velocity-acceleration, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:09Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:35Z write: done",
+  "2026-11-01T08:33:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "confirm": 0.00572,
+  "write": 0.00514,
+  "check": 0.00655
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-displacement-velocity-acceleration",
+  "changes": [
+   "Present the definitions in plain words for Year 11 students: velocity is the rate of change of displacement and acceleration is the rate of change of velocity, with the calculus notation (dx/dt, dv/dt) and the integration steps removed or made optional, as the VCE Units 1 and 2 study design does not require calculus.",
+   "Replace the integration worked example and the constant-of-integration material with a simple worked example using the kinematic idea of rate of change, such as reading velocity from a displacement-time graph gradient.",
+   "Use Australian VCE terms and units (metres, seconds, m/s, m/s²) and align the depth to the VCE Units 1 and 2 Describing motion outcomes."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same core idea of displacement, velocity and acceleration as rates of change, but it is written at Year 12 calculus depth in the NSW Mathematics course, so it needs its calculus removed and its depth lowered to suit VCE Year 11 Physics.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point teaches the same definitions through calculus (differentiating and integrating with constants), which is beyond VCE Units 1 and 2 Physics, where motion is described with average rates of change, so a new point at Year 11 physics depth is needed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Displacement, velocity and acceleration",
+  "card": [
+   [
+    "Displacement",
+    "the straight-line change in position, from start to finish, with a direction. It is not the same as the distance travelled along the path."
+   ],
+   [
+    "Velocity",
+    "the rate of change of displacement. Average velocity = change in displacement ÷ time taken. Its unit is m s⁻¹."
+   ],
+   [
+    "Acceleration",
+    "the rate of change of velocity. Average acceleration = change in velocity ÷ time taken. Its unit is m s⁻²."
+   ],
+   "Change in velocity is final velocity minus initial velocity. Velocity changes if speed changes, if direction changes, or both, so a body can accelerate while its speed stays the same."
+  ],
+  "remember": "Displacement over time gives velocity. Velocity change over time gives acceleration.",
+  "a": {
+   "q": "A cyclist's velocity changes from 2 m s⁻¹ east to 8 m s⁻¹ east in 3 s. What is the average acceleration?",
+   "opts": [
+    "2 m s⁻² east",
+    "6 m s⁻² east",
+    "2.7 m s⁻² east",
+    "5 m s⁻² east"
+   ],
+   "why": "Change in velocity = 8 - 2 = 6 m s⁻¹, and 6 ÷ 3 = 2 m s⁻². Dividing the final velocity by the time gives 2.7, but acceleration depends on the change in velocity, not the final value.",
+   "clue": "Find the change in velocity first, then divide by the time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya walks 60 m east along a track, then 20 m west, in 40 s. What is her average velocity?",
+   "opts": [
+    "1.0 m s⁻¹ east",
+    "2.0 m s⁻¹ east",
+    "1.5 m s⁻¹ east",
+    "0.5 m s⁻¹ east"
+   ],
+   "why": "Her displacement is 60 - 20 = 40 m east, so average velocity = 40 ÷ 40 = 1.0 m s⁻¹ east. Using the 80 m distance travelled gives 2.0, but velocity uses displacement, not distance.",
+   "clue": "Velocity uses the change in position, not the path length."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 m s⁻² east",
+   "also_right": []
+  },
+  "b": {
+   "best": "1.0 m s⁻¹ east",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Displacement, velocity and acceleration",
+  "card": [
+   [
+    "Displacement",
+    "the straight-line change in position, from start to finish, with a direction. It is not the same as the distance travelled along the path."
+   ],
+   [
+    "Velocity",
+    "the rate of change of displacement. Average velocity = change in displacement ÷ time taken. Its unit is m s⁻¹."
+   ],
+   [
+    "Acceleration",
+    "the rate of change of velocity. Average acceleration = change in velocity ÷ time taken. Its unit is m s⁻²."
+   ],
+   "Change in velocity is final velocity minus initial velocity. Velocity changes if speed changes, if direction changes, or both, so a body can accelerate while its speed stays the same."
+  ],
+  "remember": "Displacement over time gives velocity. Velocity change over time gives acceleration.",
+  "a": {
+   "q": "A cyclist's velocity changes from 2 m s⁻¹ east to 8 m s⁻¹ east in 3 s. What is the average acceleration?",
+   "opts": [
+    "2 m s⁻² east",
+    "6 m s⁻² east",
+    "2.7 m s⁻² east",
+    "5 m s⁻² east"
+   ],
+   "why": "Change in velocity = 8 - 2 = 6 m s⁻¹, and 6 ÷ 3 = 2 m s⁻². Dividing the final velocity by the time gives 2.7, but acceleration depends on the change in velocity, not the final value.",
+   "clue": "Find the change in velocity first, then divide by the time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya walks 60 m east along a track, then 20 m west, in 40 s. What is her average velocity?",
+   "opts": [
+    "1.0 m s⁻¹ east",
+    "2.0 m s⁻¹ east",
+    "1.5 m s⁻¹ east",
+    "0.5 m s⁻¹ east"
+   ],
+   "why": "Her displacement is 60 - 20 = 40 m east, so average velocity = 40 ÷ 40 = 1.0 m s⁻¹ east. Using the 80 m distance travelled gives 2.0, but velocity uses displacement, not distance.",
+   "clue": "Velocity uses the change in position, not the path length."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -2005,5 +2005,584 @@ MADE_BANKS.eco = {
       "why": "Strong demand with rising inflation calls for contractionary settings, and both policies should pull the same way. Lower spending and higher interest rates both slow demand. Higher spending with higher rates pulls in opposite directions, so it is the tempting but weaker choice.",
       "clue": "Both policies should slow demand, not push it up."
     }
+  },
+  "eco-economic-agents-sectors": {
+    "title": "Economic agents and sectors",
+    "card": [
+      "An economic agent is a decision-maker in the economy. There are three: consumers, businesses and government.",
+      ["Consumers", "households that decide what goods and services to buy with their income."],
+      ["Businesses", "organisations that decide what to produce, how to produce it and what to sell."],
+      [
+        "Government",
+        "decides on laws, taxes and spending, and also provides some goods and services, such as public schools. The private sector is owned by individuals and firms. The public sector is owned and run by government."
+      ]
+    ],
+    "remember": "Three agents make decisions. Who owns an organisation decides its sector.",
+    "a": {
+      "q": "Which of these is part of the public sector in Victoria?",
+      "opts": [
+        "A state government school",
+        "A café owned by Mia in Geelong",
+        "A bakery chain owned by shareholders",
+        "A family-owned plumbing firm in Bendigo"
+      ],
+      "why": "A state government school is owned and run by government, so it is in the public sector. The café, the bakery chain and the plumbing firm are owned by people or firms, so they are private, even though they serve the public.",
+      "clue": "Ask who owns the organisation."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev opens a gym in Ballarat and decides what classes to offer and what to charge. In which role is Dev making these decisions, and in which sector is the gym?",
+      "opts": [
+        "A business owner, in the private sector",
+        "A business owner, in the public sector",
+        "A consumer, in the private sector",
+        "A government agent, in the public sector"
+      ],
+      "why": "Dev decides what to sell and at what price, which is what a business does. The gym is owned by an individual, not by government, so it is private. Serving the public does not make an organisation public sector.",
+      "clue": "Decide the role by what is being decided, and the sector by who owns it."
+    }
+  },
+  "eco-traditional-view-consumers": {
+    "title": "The traditional view of consumers",
+    "card": [
+      "Traditional economics makes assumptions about how consumers behave. These assumptions let economists predict choices with simple models.",
+      [
+        "Self-interest",
+        "consumers act to benefit themselves and their own household, rather than to help others or the economy."
+      ],
+      [
+        "Rational and informed",
+        "consumers choose sensibly, using full and accurate information about prices, quality and alternatives."
+      ],
+      [
+        "Utility",
+        "the satisfaction a consumer gets from a good or service. Consumers try to get the most utility they can from what they spend."
+      ]
+    ],
+    "remember": "The traditional consumer is self-interested, rational and well informed, and aims for the most utility.",
+    "a": {
+      "q": "Which describes the traditional view of a consumer buying a phone?",
+      "opts": [
+        "They compare all models and pick the one with most utility",
+        "They pick the model most popular with friends and family",
+        "They pick the cheapest model, whatever it can do",
+        "They pick a model after seeing one advertisement for it"
+      ],
+      "why": "The traditional consumer is well informed and rational, so they compare the alternatives and choose the one that gives the most utility. Choosing the cheapest is tempting, but the aim is satisfaction, not the lowest price.",
+      "clue": "Think about information and the aim of the purchase."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has $60 to spend on lunch in Geelong. A traditional economist assumes she will do which of these?",
+      "opts": [
+        "Spend it where she expects the most satisfaction for herself",
+        "Spend it where it helps the most local café owners",
+        "Spend it on whatever her friends buy that day",
+        "Spend it on the item with the highest price"
+      ],
+      "why": "The traditional view says consumers act in their own interest and try to get the most utility from their spending. Helping café owners puts others first, which the view does not assume. Following friends is not a rational comparison of utility.",
+      "clue": "Whose benefit does the traditional consumer put first?"
+    }
+  },
+  "eco-marginal-thinking": {
+    "title": "Marginal thinking",
+    "card": [
+      "Marginal means extra. Marginal benefit is the extra benefit from one more unit. Marginal cost is the extra cost of one more unit.",
+      "A rational decision compares the two. If the marginal benefit is greater than the marginal cost, doing one more unit makes the decision-maker better off.",
+      "If the marginal cost is greater than the marginal benefit, one more unit makes them worse off, so they should not do it.",
+      "A rational decision-maker keeps going while marginal benefit is higher than marginal cost, and stops where the two meet. Marginal benefit often falls as more units are used."
+    ],
+    "remember": "Do one more unit while its extra benefit beats its extra cost. Stop where they meet.",
+    "a": {
+      "q": "Leila is deciding how many hours to study for a test. What does a rational decision about the next hour compare?",
+      "opts": [
+        "The extra benefit of that hour with its extra cost",
+        "The total hours studied so far with the hours left",
+        "The cost of the first hour with the cost of the last",
+        "The benefit of all her study with the benefit of none"
+      ],
+      "why": "Marginal thinking looks at the one extra hour, comparing the extra benefit it brings with the extra cost it carries. Comparing totals or earlier hours does not tell her whether one more hour is worth it.",
+      "clue": "Look at the next unit only, not the whole amount."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam runs a food truck in Geelong. Opening for one more hour tonight would cost him $60 in wages and fuel, and he expects it to bring in $40 of extra benefit. What should a rational Sam do?",
+      "opts": [
+        "Close, because the extra cost is more than the extra benefit",
+        "Open, because he has already spent money on the truck today",
+        "Open, because the extra hour would still earn some benefit",
+        "Close, because the first hours tonight earned less than $60"
+      ],
+      "why": "The extra hour costs $60 and brings only $40, so marginal cost is greater than marginal benefit and he would be worse off. Some benefit is not enough: the extra benefit has to be at least as large as the extra cost.",
+      "clue": "Compare the extra $ the hour brings with the extra $ it costs."
+    }
+  },
+  "eco-incentives-decisions": {
+    "title": "Incentives and disincentives",
+    "card": [
+      [
+        "Incentive",
+        "something that makes an action more rewarding or cheaper, so people and businesses are more likely to choose it."
+      ],
+      [
+        "Disincentive",
+        "something that makes an action less rewarding or dearer, so people and businesses are less likely to choose it."
+      ],
+      "Subsidies and rebates are incentives. A subsidy is a payment from government, often to a producer. A rebate gives a buyer back part of the cost. Both lower the cost of an action.",
+      "Taxes raise the cost of an action, so they are disincentives. Regulations are rules that can require or ban actions, and they can also change what is cheap or dear to choose."
+    ],
+    "remember": "Incentives make a choice cheaper or more rewarding. Disincentives make it dearer.",
+    "a": {
+      "q": "The government gives households a rebate on part of the cost of installing solar panels. What is the likely effect?",
+      "opts": [
+        "It lowers the cost, so more households may install panels",
+        "It raises the cost, so fewer households may install panels",
+        "It bans panels, so households must choose another option",
+        "It changes nothing, because rebates do not affect cost"
+      ],
+      "why": "A rebate gives back part of the cost, so installing panels becomes cheaper and more households may choose it. It does not raise the cost, which is what a tax would do.",
+      "clue": "Does a rebate make the action cheaper or dearer for the buyer?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Suppose the federal government put a new tax on a sugary drink, and its price rose. Which describes the tax and its likely effect on Mia, who runs a café in Bendigo?",
+      "opts": [
+        "A disincentive, so Mia may choose to stock less of it",
+        "An incentive, so Mia may choose to stock more of it",
+        "A disincentive, so Mia must stop selling it",
+        "An incentive, because government collects the money"
+      ],
+      "why": "The tax makes the drink dearer to buy and sell, so it is a disincentive and Mia may stock less. It does not force her to stop, because a tax changes the cost and she still chooses. Government collecting the money does not make it an incentive.",
+      "clue": "Does the tax make selling the drink cheaper or dearer?"
+    }
+  },
+  "eco-traditional-view-business-government": {
+    "title": "The traditional view of business and government",
+    "card": [
+      [
+        "Business",
+        "Traditional economics assumes a business aims to maximise profit. Profit is total revenue minus total costs."
+      ],
+      [
+        "Government",
+        "Traditional economics assumes government aims to maximise the living standards of the community, not to make a profit."
+      ],
+      "Government pursues this aim in three ways: stabilising the economy, improving efficiency and redistributing income.",
+      "Stabilising means working to keep growth steady, prices stable and jobs available. Redistributing means moving income from some households to others, so that the gap between rich and poor is smaller."
+    ],
+    "remember": "Business aims for the most profit. Government aims for the highest living standards for the community.",
+    "a": {
+      "q": "Which statement best describes the traditional view of the main aim of a business?",
+      "opts": [
+        "To maximise the gap between its revenue and its costs",
+        "To maximise the number of workers it employs",
+        "To maximise the living standards of its community",
+        "To maximise the sales it makes in each year"
+      ],
+      "why": "The traditional view says a business seeks the most profit, which is revenue minus costs. Sales matter only as one part of revenue, and a business can sell a lot and still make a poor profit.",
+      "clue": "Think about what is left after costs are paid."
+    },
+    "b": {
+      "d": 3,
+      "q": "The Australian Government raises the income tax paid by high earners and uses it to fund payments for low-income families. Which government role does this show?",
+      "opts": ["Redistributing income", "Stabilising the economy", "Maximising its own profit", "Maximising business profit"],
+      "why": "Moving income from high earners to low-income families is redistribution. It is not stabilising, which is about steady growth, stable prices and jobs. Government does not aim for profit under the traditional view.",
+      "clue": "Who pays the money, and who receives it?"
+    }
+  },
+  "eco-law-demand": {
+    "title": "The law of demand",
+    "card": [
+      "Demand is the quantity of a good that buyers are willing and able to buy at each price over a period of time.",
+      "The law of demand says that as the price of a good rises, the quantity demanded falls, other things equal. As the price falls, the quantity demanded rises.",
+      "A demand curve slopes downward. It shows price on the vertical axis and quantity demanded on the horizontal axis.",
+      "A change in the good's own price moves buyers along the same demand curve. The curve itself does not move. Other things equal means that everything else that affects buying is held constant."
+    ],
+    "remember": "A price change moves buyers along the demand curve: higher price, lower quantity demanded.",
+    "a": {
+      "q": "Which statement best describes the law of demand?",
+      "opts": [
+        "A higher price lowers the quantity demanded, all else equal",
+        "A higher price raises the quantity demanded, all else equal",
+        "A higher price lowers the demand for every other good",
+        "A higher quantity demanded raises the price, all else equal"
+      ],
+      "why": "The law links a good's own price to the quantity demanded, and they move in opposite directions. The option saying a higher quantity demanded raises the price reverses cause and effect, because the law says price changes quantity demanded, not the other way round.",
+      "clue": "Ask what the price change does to how much buyers want."
+    },
+    "b": {
+      "d": 2,
+      "q": "A café in Geelong raises the price of its meat pies from $5 to $6, and no other factor changes. What happens on the demand curve for its pies?",
+      "opts": [
+        "A movement along the curve to a lower quantity demanded",
+        "A movement along the curve to a higher quantity demanded",
+        "The whole demand curve shifts to the left",
+        "The whole demand curve shifts to the right"
+      ],
+      "why": "The pie's own price changed, so buyers move along the same demand curve to a lower quantity demanded. A shift of the whole curve would need a change in something other than the pie's own price.",
+      "clue": "Only the pie's own price changed."
+    }
+  },
+  "eco-factors-that-shift-demand": {
+    "title": "Factors that shift demand",
+    "card": [
+      "A change in a good's own price moves buyers along the demand curve. A change in any other factor shifts the whole curve. A shift right means more is demanded at every price. A shift left means less.",
+      [
+        "Income and tastes",
+        "Higher disposable income (income after tax) usually raises demand for most goods. A rise in popularity, or tastes moving towards a good, shifts its demand right."
+      ],
+      [
+        "Related goods",
+        "Substitutes can replace each other, such as tea and coffee. If the price of one rises, demand for the other rises. Complements are used together, such as printers and ink. If the price of one rises, demand for the other falls."
+      ],
+      [
+        "Other factors",
+        "Lower interest rates make borrowing cheaper, which can raise demand for goods bought on credit. A larger population and higher consumer confidence (optimism about the economy) can also raise demand."
+      ]
+    ],
+    "remember": "Only a change in the good's own price moves along the curve. Other factors shift the whole curve.",
+    "a": {
+      "q": "The price of coffee rises sharply, and cafés in Geelong find that more customers buy tea at every price. What happened to the demand for tea?",
+      "opts": [
+        "It shifted right, because a substitute became dearer",
+        "It shifted left, because a substitute became dearer",
+        "It shifted right, because a complement became dearer",
+        "It moved along the curve, because the price of tea rose"
+      ],
+      "why": "Coffee and tea are substitutes, so a dearer coffee sends buyers to tea at every price. That shifts the whole demand curve for tea right. The price of tea did not change, so there is no movement along the curve.",
+      "clue": "Tea and coffee can replace each other, and tea's own price did not change."
+    },
+    "b": {
+      "d": 3,
+      "q": "Printer prices in Melbourne rise, and fewer people buy printers. What is the likely effect on demand for printer ink, and why?",
+      "opts": [
+        "It shifts left, because ink is a complement to printers",
+        "It shifts right, because ink is a substitute for printers",
+        "It shifts left, because the price of ink has risen",
+        "It shifts right, because ink is a complement to printers"
+      ],
+      "why": "Ink is used together with printers, so it is a complement. Fewer printers bought means less ink wanted at every price, so ink demand shifts left. Ink's own price did not change, so the cause is not a movement along the curve.",
+      "clue": "Ink is used together with printers, and ink's own price has not changed."
+    }
+  },
+  "eco-law-supply": {
+    "title": "The law of supply",
+    "card": [
+      "Supply is the quantity of a good that producers are willing and able to sell at each price over a period of time.",
+      "The law of supply says that as the price of a good rises, the quantity supplied rises, other things equal. As the price falls, the quantity supplied falls.",
+      "The reason is profit. A higher price makes each extra unit more profitable to sell, so producers are willing to make and sell more.",
+      "A change in the good's own price is a movement along the supply curve. It does not shift the curve. The curve slopes upward from left to right."
+    ],
+    "remember": "A higher price makes selling more profitable, so quantity supplied rises along the curve.",
+    "a": {
+      "q": "Why do producers supply a larger quantity when the price of their good rises?",
+      "opts": [
+        "Each extra unit sold becomes more profitable",
+        "Their costs of production fall as the price rises",
+        "Consumers demand less of the good at a higher price",
+        "Producers want to lower the price again quickly"
+      ],
+      "why": "A higher price raises the profit on each unit, so selling more is worth it. Costs of production are not changed by the good's own price rising, so the cost option is wrong.",
+      "clue": "Think about what a higher price does to profit."
+    },
+    "b": {
+      "d": 2,
+      "q": "The price of strawberries rises, and Priya's farm near Warragul picks and sells more of them. What does this show on a supply diagram?",
+      "opts": [
+        "A movement up along the supply curve",
+        "A shift of the supply curve to the right",
+        "A movement down along the supply curve",
+        "A shift of the supply curve to the left"
+      ],
+      "why": "The change started with the price of strawberries, so the farm moves along its existing supply curve to a higher quantity. A shift of the curve needs a change in something other than the good's own price.",
+      "clue": "What caused the change: the good's own price or something else?"
+    }
+  },
+  "eco-factors-that-shift-supply": {
+    "title": "Factors that shift supply",
+    "card": [
+      "A supply curve shows how much sellers will supply at each price. A change in the good's own price moves along the curve. A change in anything else shifts the whole curve.",
+      "Costs of production: if wages, rent or materials rise, selling is less profitable at each price. Supply falls and the curve shifts left. Lower costs shift it right.",
+      "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
+      "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
+    ],
+    "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
+    "a": {
+      "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
+      "opts": [
+        "The supply curve shifts right",
+        "The supply curve shifts left",
+        "There is a movement up along the curve",
+        "There is a movement down along the curve"
+      ],
+      "why": "The machine raises productivity, so the bakery can supply more bread at every price. That shifts the whole curve right. A movement along the curve happens only when the bread's own price changes.",
+      "clue": "Did the price of bread change, or did the bakery's ability to produce?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A flood destroys much of the tomato crop in a Victorian farming region. What is the effect on the supply curve for tomatoes?",
+      "opts": [
+        "It shifts left, as less can be produced at each price",
+        "It shifts right, as tomatoes become scarcer and dearer",
+        "There is a movement along the curve to a higher price",
+        "There is a movement along the curve to a lower price"
+      ],
+      "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. Scarcer tomatoes mean less supply, not more, and a movement along the curve would need a change in the tomato price to start it.",
+      "clue": "The flood changes what growers can produce, not the price they are offered."
+    }
+  },
+  "eco-market-equilibrium": {
+    "title": "Market equilibrium",
+    "card": [
+      "Market equilibrium is the price at which quantity demanded equals quantity supplied. At this price, buyers want to buy exactly what sellers want to sell.",
+      [
+        "Shortage",
+        "the price is below equilibrium, so quantity demanded is greater than quantity supplied. Buyers compete for the limited goods, which pushes the price up."
+      ],
+      [
+        "Surplus",
+        "the price is above equilibrium, so quantity supplied is greater than quantity demanded. Sellers are left with unsold goods and cut prices, which pushes the price down."
+      ],
+      "Prices keep moving until the shortage or surplus is gone. The market then settles at the equilibrium price and quantity."
+    ],
+    "remember": "Shortage: price rises. Surplus: price falls. Both end at equilibrium.",
+    "a": {
+      "q": "A market has a surplus. Which statement describes it?",
+      "opts": [
+        "Quantity supplied is greater than quantity demanded",
+        "Quantity demanded is greater than quantity supplied",
+        "Quantity demanded equals quantity supplied",
+        "The price is below the equilibrium price"
+      ],
+      "why": "A surplus means sellers offer more than buyers want at the current price, so quantity supplied is greater than quantity demanded. The option with quantity demanded greater than quantity supplied describes a shortage, which is the reverse.",
+      "clue": "Think about who is left with goods they cannot sell."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sells fresh mangoes at a market stall in Mildura. At $4 each, she has 80 mangoes left over at the end of the day. What is most likely to happen to the price if the market keeps adjusting?",
+      "opts": [
+        "It falls, because $4 is above the equilibrium price",
+        "It rises, because $4 is below the equilibrium price",
+        "It stays at $4, because Mia sets the price",
+        "It rises, because there are goods left to sell"
+      ],
+      "why": "Unsold mangoes mean quantity supplied is greater than quantity demanded at $4, which is a surplus. A surplus shows the price is above equilibrium, so sellers cut prices until it clears. Leftover goods do not push prices up.",
+      "clue": "Leftover stock means sellers offered more than buyers wanted."
+    }
+  },
+  "eco-changes-equilibrium": {
+    "title": "Changes in equilibrium",
+    "card": [
+      "A shift in demand or supply moves the market to a new equilibrium price and quantity. The skill is working out which way each one moves.",
+      [
+        "Demand shifts",
+        "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+      ],
+      [
+        "Supply shifts",
+        "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+      ],
+      "First decide which curve shifted and which way. A change in something other than the good's own price shifts demand if it affects buyers, and shifts supply if it affects sellers."
+    ],
+    "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+    "a": {
+      "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+      "opts": [
+        "Price rises and quantity falls",
+        "Price rises and quantity rises",
+        "Price falls and quantity falls",
+        "Price falls and quantity rises"
+      ],
+      "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+      "clue": "Does the rain affect buyers or sellers?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+      "opts": [
+        "Price rises and quantity rises",
+        "Price rises and quantity falls",
+        "Price falls and quantity rises",
+        "Price falls and quantity falls"
+      ],
+      "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+      "clue": "Start by asking whose plans a change in income affects."
+    }
+  },
+  "eco-market": {
+    "title": "What a market is",
+    "card": [
+      "A market is any place or system where buyers and sellers trade. It can be face to face, such as a farmers market, or online, such as a shopping website.",
+      "A market does not need one building or one location. What makes it a market is that buyers and sellers are able to trade with each other.",
+      "In a market, the amount buyers want and the amount sellers offer help set a price.",
+      "Prices send signals. A high price tells producers that buyers want more of a good, so they may make more. A low price may lead them to make less."
+    ],
+    "remember": "A market is where buyers and sellers trade, and its prices guide what is made.",
+    "a": {
+      "q": "Which of these is a market?",
+      "opts": [
+        "An online site where people buy and sell used phones",
+        "A factory that makes phones for its own company",
+        "A household that makes its own meals each night",
+        "A government plan for how many phones to make"
+      ],
+      "why": "A market is any place or system where buyers and sellers trade, and an online site fits that. The factory is tempting, but it makes phones for its own use and no buyers and sellers trade there.",
+      "clue": "Look for buyers and sellers trading, in any form."
+    },
+    "b": {
+      "d": 3,
+      "q": "Crowds at Mia's café in Geelong grow, so she can charge more for coffee. How does this price help guide what is made?",
+      "opts": [
+        "It signals strong demand, so sellers may make more coffee",
+        "It signals weak demand, so sellers may make less coffee",
+        "It shows that coffee must now be sold in a single building",
+        "It tells buyers how much coffee the government wants made"
+      ],
+      "why": "A higher price signals that buyers want more of the good, so producers may make more. The option about weak demand misreads the signal: a rising price points to strong demand, not weak demand.",
+      "clue": "What does a higher price tell producers about what buyers want?"
+    }
+  },
+  "eco-perfect-competition-2": {
+    "title": "Perfect competition",
+    "card": [
+      "Perfect competition is a model of a market. It is a standard to compare real markets against, and very few real markets match it fully.",
+      "It has four features: many small buyers and sellers, identical products, full information, and free entry and exit. Full information means buyers and sellers know the prices and quality on offer.",
+      "Each seller is so small that changing its output does not move the market price. Each buyer is also too small to move it.",
+      "So no one controls the price. Sellers are price takers: they accept the market price. If a seller charged more, buyers would switch to an identical product at the market price."
+    ],
+    "remember": "Many small sellers with identical products means no one controls the price.",
+    "a": {
+      "q": "Why can a single seller in a perfectly competitive market not set its own price?",
+      "opts": [
+        "Buyers could buy an identical product at the market price",
+        "Sellers must follow a price set by the government",
+        "Buyers are all large enough to bargain over the price",
+        "New sellers cannot enter, so prices stay fixed"
+      ],
+      "why": "Products are identical and there are many sellers, so a seller that charged more would lose its buyers to others at the market price. The model does not rely on the government setting prices, and entry is free.",
+      "clue": "Think about where a buyer could go if one seller charged more."
+    },
+    "b": {
+      "d": 3,
+      "q": "Wheat farmers in Victoria sell the same grade of wheat to many buyers. Everyone knows the going price, and any farmer can start or stop growing it. Farmer Ana raises her price 10% above the going price. What is most likely to happen?",
+      "opts": [
+        "She sells almost none, as buyers use other farmers",
+        "She sells the same amount, as her farm is well known",
+        "She sells less, but the market price rises by 10%",
+        "She sells the same amount, as buyers dislike switching"
+      ],
+      "why": "The wheat is identical and buyers know the going price, so they can buy from other farmers at no extra cost. Ana is one small seller, so she is a price taker and cannot move the market price. Her brand being well known does not matter when the product is identical.",
+      "clue": "Ana's wheat is the same as everyone else's, and buyers know the price."
+    }
+  },
+  "eco-relative-prices-resource-allocation": {
+    "title": "Relative prices and resource allocation",
+    "card": [
+      "A relative price is the price of one good compared with the prices of other goods. It can change even when every price rises, if one price rises faster than the rest.",
+      [
+        "Producers",
+        "When a good's relative price rises, it becomes more profitable to make. Firms move resources such as labour, land and machinery toward that good."
+      ],
+      [
+        "Consumers",
+        "When a good's relative price rises, it becomes more costly compared with other goods. Consumers tend to buy less of it and switch to cheaper options."
+      ],
+      "A fall in a good's relative price works the other way. Producers move resources away from it, and consumers tend to buy more of it. In this way, prices help guide how resources are allocated."
+    ],
+    "remember": "A higher relative price pulls resources in to make the good and pushes buyers toward other goods.",
+    "a": {
+      "q": "The price of avocados rises while most other prices stay the same. What would producers be likely to do?",
+      "opts": [
+        "Move more resources into growing avocados",
+        "Move resources out of growing avocados",
+        "Leave resources unchanged as costs are fixed",
+        "Switch to making goods with falling prices"
+      ],
+      "why": "A higher relative price makes avocados more profitable to grow, so producers move resources toward them. Moving resources away is what a fall in relative price would lead to.",
+      "clue": "Think about where profit is now higher."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia runs a farm near Shepparton. The price of apples falls while the prices of pears and most other goods stay steady. What is most likely to happen?",
+      "opts": [
+        "Mia moves land toward pears, and buyers buy more apples",
+        "Mia moves land toward apples, and buyers buy more apples",
+        "Mia moves land toward pears, and buyers buy fewer apples",
+        "Mia moves land toward apples, and buyers buy fewer apples"
+      ],
+      "why": "Apples are now cheaper relative to other goods, so growing them is less profitable and Mia moves land toward pears. For buyers, the lower relative price makes apples cheaper than before, so they tend to buy more. Thinking buyers would buy fewer apples mixes up the consumer response with the producer one.",
+      "clue": "Producers follow profit, while buyers follow the cheaper good."
+    }
+  },
+  "eco-market-structures": {
+    "title": "Market structures",
+    "card": [
+      "Market structures sort markets by market power: a firm's ability to influence the price it charges. More market power usually means higher prices and less efficient use of resources.",
+      ["Perfect competition", "many small sellers of identical products, so no firm has any power over price."],
+      [
+        "Monopolistic competition",
+        "many sellers of similar but differentiated products, such as cafés. Each firm has a little market power."
+      ],
+      [
+        "Oligopoly and monopoly",
+        "an oligopoly has a few large firms that dominate the market. A monopoly has one seller and the most market power."
+      ]
+    ],
+    "remember": "From perfect competition to monopoly, market power grows, and prices usually rise with it.",
+    "a": {
+      "q": "In one country, three large firms supply almost all mobile phone plans. Which market structure is this?",
+      "opts": ["Oligopoly", "Monopoly", "Monopolistic competition", "Perfect competition"],
+      "why": "A market dominated by a few large firms is an oligopoly. A monopoly is tempting, but it has only one seller, not three.",
+      "clue": "Count the sellers: not one, and not many."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai runs the only petrol station in a remote town, and the nearest rival is hours away. Compared with many sellers, what is most likely?",
+      "opts": [
+        "Higher prices and less efficient use of resources",
+        "Lower prices and more efficient use of resources",
+        "Higher prices and more efficient use of resources",
+        "Lower prices and less efficient use of resources"
+      ],
+      "why": "As the only seller with no nearby rivals, Kai has a monopoly and the most market power. More market power usually means higher prices and less efficient use of resources. Higher prices with more efficient use is tempting, but the card links more power with less efficient use.",
+      "clue": "Think about how much power the only seller has over price."
+    }
+  },
+  "eco-business-strategies-raise-profit": {
+    "title": "Business strategies to raise profit",
+    "card": [
+      [
+        "Price discrimination",
+        "charging different groups different prices for the same good or service, such as cheaper tickets for students. It works when the firm can separate groups with different willingness to pay."
+      ],
+      [
+        "Multiple brands",
+        "selling several brands of one type of product, often at different quality levels, such as a budget brand and a premium brand. Each brand is built to appeal to a different group of buyers. They are different products, not one product sold at different prices."
+      ],
+      [
+        "Anti-competitive conduct",
+        "acts that harm competition, such as competitors agreeing to fix prices. The Competition and Consumer Act 2010 bans these acts, and the ACCC (Australian Competition and Consumer Commission) can take action against firms that break it."
+      ],
+      "Price discrimination and selling several brands are generally legal ways to raise profit. Anti-competitive conduct is banned, even though it may raise profit."
+    ],
+    "remember": "Firms may raise profit by pricing groups differently or selling several brands. Anti-competitive conduct may also raise profit, but it is banned.",
+    "a": {
+      "q": "A cinema in Geelong charges students less than adults for the same film. Which strategy is this?",
+      "opts": ["Price discrimination", "Selling several brands", "Anti-competitive conduct", "Price fixing with a rival"],
+      "why": "The same film is sold to different groups at different prices, which is price discrimination. It is not selling several brands, because there is only one product. Nothing here harms competition.",
+      "clue": "Same product, different prices for different groups."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two petrol stations in a Victorian town secretly agree to charge the same high price. What is true of this agreement?",
+      "opts": [
+        "It is banned because it harms competition",
+        "It is legal because both sell the same product",
+        "It is legal because it is a form of price discrimination",
+        "It is banned because the price is above the cost"
+      ],
+      "why": "Competitors agreeing to fix prices is anti-competitive conduct, which the Competition and Consumer Act bans. It is not price discrimination, which means charging different groups different prices. A high price alone is not what makes it illegal.",
+      "clue": "Look at who agreed on the price, not how high it is."
+    }
   }
 };

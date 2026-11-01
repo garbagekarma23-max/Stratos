@@ -1,0 +1,190 @@
+{
+ "id": "chem-precipitation-reactions-2",
+ "title": "Removing impurities from water",
+ "brief": "4f9e75cff410",
+ "shortlist": [
+  [
+   "chem-tests-ions",
+   0.229
+  ],
+  [
+   "chem-calorimetry",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00516,
+  "check": 0.01178,
+  "fix": 0.01964
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Tests for ions, uses precipitation to detect an ion, not to remove an unwanted ion from water, and the calorimetry point is unrelated, so no bank point teaches this idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Removing impurities from water",
+  "card": [
+   "An unwanted ion in water can be removed by adding a chemical that forms a precipitate with it. A precipitate is an insoluble solid that forms when two solutions are mixed.",
+   "Choose a reagent whose ions combine with the unwanted ion to make an insoluble compound. Use a solubility table to check. The other ion from the reagent should stay dissolved, and should be harmless.",
+   "Once the precipitate forms, it is separated from the water by filtration. The water that passes through has much less of the unwanted ion.",
+   "Example: lead(II) ions, Pb2+, can be removed by adding sodium sulfate. Pb2+(aq) + SO4 2-(aq) → PbSO4(s). Lead(II) sulfate is insoluble, and sodium ions stay in solution."
+  ],
+  "remember": "Add a reagent that makes the unwanted ion into an insoluble solid, then filter it out.",
+  "a": {
+   "q": "Why is a precipitate formed when removing an unwanted ion from water?",
+   "opts": [
+    "It is an insoluble solid that can be filtered out",
+    "It is a gas that bubbles out of the water",
+    "It is a soluble salt that is easier to measure",
+    "It is an acid that neutralises the unwanted ion"
+   ],
+   "why": "A precipitate is an insoluble solid, so filtration separates it from the water and takes the unwanted ion with it. A soluble salt would stay dissolved, so the ion would not be removed.",
+   "clue": "Think about what filtration can separate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water from a mine in Ballarat contains dissolved silver ions, Ag+. Which reagent could remove them as a precipitate?",
+   "opts": [
+    "Sodium chloride solution",
+    "Sodium nitrate solution",
+    "Potassium nitrate solution",
+    "Sodium ethanoate solution"
+   ],
+   "why": "Chloride ions combine with silver ions to make silver chloride, which is insoluble, so it can be filtered out. Sodium nitrate is tempting, but all nitrates are soluble, so no precipitate forms and the silver ions stay in the water.",
+   "clue": "Use a solubility table to find which pairing with silver is insoluble."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is an insoluble solid that can be filtered out",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sodium chloride solution",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Some solubility tables list silver ethanoate as only slightly or sparingly soluble, so a student using one of them might hesitate over sodium ethanoate as a distractor. Sodium chloride is still clearly the best answer, but a distractor that every common table shows as soluble would be safer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, questions and explanations are accurate, and each question has one clear answer. One minor note: some solubility tables show silver ethanoate as only sparingly soluble, so the sodium ethanoate distractor in question b could confuse a student using one of them."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Some solubility tables list silver ethanoate as only slightly or sparingly soluble, so a student using one of them might hesitate over sodium ethanoate as a distractor. Sodium chloride is still clearly the best answer, but a distractor that every common table shows as soluble would be safer."
+ ],
+ "proposal": {
+  "title": "Removing impurities from water",
+  "card": [
+   "An unwanted ion in water can be removed by adding a chemical that forms a precipitate with it. A precipitate is an insoluble solid that forms when two solutions are mixed.",
+   "Choose a reagent whose ions combine with the unwanted ion to make an insoluble compound, using a solubility table to check. The reagent's other ion should stay dissolved and be harmless: sodium, potassium and nitrate compounds are all soluble.",
+   "Once the precipitate forms, it is separated from the water by filtration. The water that passes through has much less of the unwanted ion.",
+   "Example: lead(II) ions, Pb2+, can be removed by adding sodium sulfate. Pb2+(aq) + SO4 2-(aq) → PbSO4(s). Lead(II) sulfate is insoluble, and sodium ions stay in solution."
+  ],
+  "remember": "Add a reagent that makes the unwanted ion into an insoluble solid, then filter it out.",
+  "a": {
+   "q": "Why is a precipitate formed when removing an unwanted ion from water?",
+   "opts": [
+    "It is an insoluble solid that can be filtered out",
+    "It is a gas that bubbles out of the water",
+    "It is a soluble salt that is easier to measure",
+    "It is an acid that neutralises the unwanted ion"
+   ],
+   "why": "A precipitate is an insoluble solid, so filtration separates it from the water and takes the unwanted ion with it. A soluble salt would stay dissolved, so the ion would not be removed.",
+   "clue": "Think about what filtration can separate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water from a mine in Ballarat contains dissolved silver ions, Ag+. Which reagent could remove them as a precipitate?",
+   "opts": [
+    "Sodium chloride solution",
+    "Sodium nitrate solution",
+    "Potassium nitrate solution",
+    "Calcium nitrate solution"
+   ],
+   "why": "Chloride ions combine with silver ions to make silver chloride, which is insoluble, so it can be filtered out. Calcium nitrate is tempting because calcium forms some precipitates, but all nitrates are soluble, so silver nitrate stays dissolved and the silver ions remain in the water.",
+   "clue": "Use a solubility table to find which pairing with silver is insoluble."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Some solubility tables list silver ethanoate as only slightly or sparingly soluble, so a student using one of them might hesitate over sodium ethanoate as a distractor. Sodium chloride is still clearly the best answer, but a distractor that every common table shows as soluble would be safer."
+   }
+  ],
+  "flags": [
+   "Question b, other: Some solubility tables list silver ethanoate as only slightly or sparingly soluble, so a student using one of them might hesitate over sodium ethanoate as a distractor. Sodium chloride is still clearly the best answer, but a distractor that every common table shows as soluble would be safer."
+  ]
+ },
+ "final": {
+  "title": "Removing impurities from water",
+  "card": [
+   "An unwanted ion in water can be removed by adding a chemical that forms a precipitate with it. A precipitate is an insoluble solid that forms when two solutions are mixed.",
+   "Choose a reagent whose ions combine with the unwanted ion to make an insoluble compound, using a solubility table to check. The reagent's other ion should stay dissolved and be harmless: sodium, potassium and nitrate compounds are all soluble.",
+   "Once the precipitate forms, it is separated from the water by filtration. The water that passes through has much less of the unwanted ion.",
+   "Example: lead(II) ions, Pb2+, can be removed by adding sodium sulfate. Pb2+(aq) + SO4 2-(aq) → PbSO4(s). Lead(II) sulfate is insoluble, and sodium ions stay in solution."
+  ],
+  "remember": "Add a reagent that makes the unwanted ion into an insoluble solid, then filter it out.",
+  "a": {
+   "q": "Why is a precipitate formed when removing an unwanted ion from water?",
+   "opts": [
+    "It is an insoluble solid that can be filtered out",
+    "It is a gas that bubbles out of the water",
+    "It is a soluble salt that is easier to measure",
+    "It is an acid that neutralises the unwanted ion"
+   ],
+   "why": "A precipitate is an insoluble solid, so filtration separates it from the water and takes the unwanted ion with it. A soluble salt would stay dissolved, so the ion would not be removed.",
+   "clue": "Think about what filtration can separate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water from a mine in Ballarat contains dissolved silver ions, Ag+. Which reagent could remove them as a precipitate?",
+   "opts": [
+    "Sodium chloride solution",
+    "Sodium nitrate solution",
+    "Potassium nitrate solution",
+    "Calcium nitrate solution"
+   ],
+   "why": "Chloride ions combine with silver ions to make silver chloride, which is insoluble, so it can be filtered out. Calcium nitrate is tempting because calcium forms some precipitates, but all nitrates are soluble, so silver nitrate stays dissolved and the silver ions remain in the water.",
+   "clue": "Use a solubility table to find which pairing with silver is insoluble."
+  }
+ },
+ "cleared_by": "auto"
+}

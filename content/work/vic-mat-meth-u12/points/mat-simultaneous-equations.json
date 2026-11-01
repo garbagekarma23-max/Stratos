@@ -1,0 +1,233 @@
+{
+ "id": "mat-simultaneous-equations",
+ "title": "Simultaneous equations",
+ "brief": "6d9646b20077",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations",
+   0.531
+  ],
+  [
+   "mat-writing-equations-from-words",
+   0.274
+  ],
+  [
+   "mat-equation-y-mx-c",
+   0.248
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.0094,
+  "check": 0.00868,
+  "fix": 0.02669,
+  "recheck": 0.00821
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only two linear equations solved by substitution or graphing, while the new point also needs elimination and a line meeting a parabola, which are new steps rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Simultaneous equations",
+  "card": [
+   [
+    "Substitution",
+    "Rearrange one equation to give y (or x), then put it into the other. Example: y = 2x + 1 and 3x + y = 11 give 3x + 2x + 1 = 11, so x = 2 and y = 5."
+   ],
+   [
+    "Elimination",
+    "Add or subtract the equations to remove one variable. Example: x + y = 7 and x − y = 3 add to give 2x = 10, so x = 5 and y = 2."
+   ],
+   "A line can meet a parabola. Substitute the line into the parabola to get a quadratic, then solve it. There can be two solutions, one or none.",
+   "Find y for each x using the line's rule. The answer is a point (x, y), so always give both coordinates."
+  ],
+  "remember": "Combine the equations to get one variable, solve it, then go back for the other.",
+  "a": {
+   "q": "Solve y = 2x + 1 and 3x + y = 11 together. What is the solution (x, y)?",
+   "opts": [
+    "(2, 5)",
+    "(5, 2)",
+    "(2, 3)",
+    "(3, 7)"
+   ],
+   "why": "Substituting gives 3x + 2x + 1 = 11, so 5x = 10 and x = 2. Then y = 2 × 2 + 1 = 5. (5, 2) has the coordinates swapped.",
+   "clue": "Replace y in the second equation with 2x + 1."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = x + 2 meets the parabola y = x². Where do they meet?",
+   "opts": [
+    "(2, 4) and (−1, 1)",
+    "(2, 4) and (1, 1)",
+    "(−2, 0) and (1, 3)",
+    "(2, 4) only"
+   ],
+   "why": "Set x² = x + 2, so x² − x − 2 = 0, which factorises as (x − 2)(x + 1) = 0. So x = 2 or x = −1, and the points are (2, 4) and (−1, 1). (2, 4) only is tempting, but the quadratic has two solutions.",
+   "clue": "Put x + 2 equal to x², then factorise."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(2, 5)",
+   "also_right": []
+  },
+  "b": {
+   "best": "(2, 4) and (−1, 1)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same pair of equations as the card's substitution example, which already gives the answer x = 2, y = 5. A student can answer from memory of the card without solving anything. Use a different pair of equations."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths is correct throughout. The one problem is that question a repeats the card's worked example word for word, so it tests recall rather than the skill."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a uses exactly the same pair of equations as the card's substitution example, which already gives the answer x = 2, y = 5. A student can answer from memory of the card without solving anything. Use a different pair of equations."
+ ],
+ "proposal": {
+  "title": "Simultaneous equations",
+  "card": [
+   [
+    "Substitution",
+    "Rearrange one equation to give y (or x), then put it into the other. Example: y = 2x + 1 and 3x + y = 11 give 3x + 2x + 1 = 11, so x = 2 and y = 5."
+   ],
+   [
+    "Elimination",
+    "Add or subtract the equations to remove one variable. Example: x + y = 7 and x − y = 3 add to give 2x = 10, so x = 5 and y = 2."
+   ],
+   "A line can meet a parabola. Substitute the line into the parabola to get a quadratic, then solve it. There can be two solutions, one or none.",
+   "Find y for each x using the line's rule. The answer is a point (x, y), so always give both coordinates."
+  ],
+  "remember": "Combine the equations to get one variable, solve it, then go back for the other.",
+  "a": {
+   "q": "Solve y = 3x − 2 and 2x + y = 13 together. What is the solution (x, y)?",
+   "opts": [
+    "(3, 7)",
+    "(7, 3)",
+    "(3, 11)",
+    "(3, 10)"
+   ],
+   "why": "Substituting gives 2x + 3x − 2 = 13, so 5x = 15 and x = 3. Then y = 3 × 3 − 2 = 7, which also checks in 2 × 3 + 7 = 13. (7, 3) has the coordinates swapped.",
+   "clue": "Replace y in the second equation with 3x − 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = x + 2 meets the parabola y = x². Where do they meet?",
+   "opts": [
+    "(2, 4) and (−1, 1)",
+    "(2, 4) and (1, 1)",
+    "(−2, 0) and (1, 3)",
+    "(2, 4) only"
+   ],
+   "why": "Set x² = x + 2, so x² − x − 2 = 0, which factorises as (x − 2)(x + 1) = 0. So x = 2 or x = −1, and the points are (2, 4) and (−1, 1). (2, 4) only is tempting, but the quadratic has two solutions.",
+   "clue": "Put x + 2 equal to x², then factorise."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "(3, 7)",
+    "also_right": []
+   },
+   "b": {
+    "best": "(2, 4) and (−1, 1)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses exactly the same pair of equations as the card's substitution example, which already gives the answer x = 2, y = 5. A student can answer from memory of the card without solving anything. Use a different pair of equations."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a uses exactly the same pair of equations as the card's substitution example, which already gives the answer x = 2, y = 5. A student can answer from memory of the card without solving anything. Use a different pair of equations."
+  ]
+ },
+ "final": {
+  "title": "Simultaneous equations",
+  "card": [
+   [
+    "Substitution",
+    "Rearrange one equation to give y (or x), then put it into the other. Example: y = 2x + 1 and 3x + y = 11 give 3x + 2x + 1 = 11, so x = 2 and y = 5."
+   ],
+   [
+    "Elimination",
+    "Add or subtract the equations to remove one variable. Example: x + y = 7 and x − y = 3 add to give 2x = 10, so x = 5 and y = 2."
+   ],
+   "A line can meet a parabola. Substitute the line into the parabola to get a quadratic, then solve it. There can be two solutions, one or none.",
+   "Find y for each x using the line's rule. The answer is a point (x, y), so always give both coordinates."
+  ],
+  "remember": "Combine the equations to get one variable, solve it, then go back for the other.",
+  "a": {
+   "q": "Solve y = 3x − 2 and 2x + y = 13 together. What is the solution (x, y)?",
+   "opts": [
+    "(3, 7)",
+    "(7, 3)",
+    "(3, 11)",
+    "(3, 10)"
+   ],
+   "why": "Substituting gives 2x + 3x − 2 = 13, so 5x = 15 and x = 3. Then y = 3 × 3 − 2 = 7, which also checks in 2 × 3 + 7 = 13. (7, 3) has the coordinates swapped.",
+   "clue": "Replace y in the second equation with 3x − 2."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = x + 2 meets the parabola y = x². Where do they meet?",
+   "opts": [
+    "(2, 4) and (−1, 1)",
+    "(2, 4) and (1, 1)",
+    "(−2, 0) and (1, 3)",
+    "(2, 4) only"
+   ],
+   "why": "Set x² = x + 2, so x² − x − 2 = 0, which factorises as (x − 2)(x + 1) = 0. So x = 2 or x = −1, and the points are (2, 4) and (−1, 1). (2, 4) only is tempting, but the quadratic has two solutions.",
+   "clue": "Put x + 2 equal to x², then factorise."
+  }
+ },
+ "cleared_by": "recheck"
+}

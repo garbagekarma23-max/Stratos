@@ -1,0 +1,243 @@
+{
+ "id": "acc-managing-accounts-receivable",
+ "title": "Managing accounts receivable",
+ "brief": "005489c33ff1",
+ "shortlist": [
+  [
+   "eco-capital-financial-account",
+   0.236
+  ],
+  [
+   "bus-efficiency-ratios",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00505,
+  "check": 0.0127,
+  "fix": 0.01521,
+  "recheck": 0.01037
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches how to manage accounts receivable: the capital and financial account card covers international investment flows, and the efficiency ratios card covers measuring receivable turnover, not credit checks, terms, invoicing or ageing lists.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Managing accounts receivable",
+  "card": [
+   "Accounts receivable are amounts customers owe the business. A business manages them so customers pay on time and cash does not run short.",
+   [
+    "Before and when selling",
+    "a credit check looks at whether a customer is likely to pay before credit is given. Clear terms state how many days the customer has to pay. An invoice sent promptly starts that clock sooner."
+   ],
+   [
+    "After selling",
+    "an ageing list sorts what each customer owes by how long it has been unpaid, such as 30, 60 or 90 days. It shows which overdue accounts need a reminder or a phone call first."
+   ],
+   "A spreadsheet can model options, such as the effect on cash of shorter payment terms. The business can compare choices before it picks one."
+  ],
+  "remember": "Check customers first, state the terms, invoice quickly, then chase the oldest debts.",
+  "a": {
+   "q": "What does an ageing list of accounts receivable show a business?",
+   "opts": [
+    "How long each customer's debt has been unpaid",
+    "How likely a new customer is to pay in future",
+    "How many days a customer is given to pay",
+    "How much stock each customer has bought"
+   ],
+   "why": "An ageing list groups debts by how long they have been overdue, so the business knows whom to chase first. Checking if a new customer will pay is a credit check, not an ageing list.",
+   "clue": "Think about the 30, 60 and 90 day groups."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a timber supplier in Geelong. Some customers are paying late, and she wants to contact the ones most overdue first. Which action helps her most?",
+   "opts": [
+    "Reviewing an ageing list of overdue accounts",
+    "Running a credit check on each customer now",
+    "Sending future invoices more promptly",
+    "Shortening the payment terms on the next sale"
+   ],
+   "why": "An ageing list shows which debts are oldest, so Priya knows whom to contact first. A credit check is done before credit is given, so it does not help with debts already overdue.",
+   "clue": "Which tool sorts existing debts by how long they are unpaid?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "How long each customer's debt has been unpaid",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reviewing an ageing list of overdue accounts",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that repeats the stem's word 'overdue' ('most overdue' / 'overdue accounts'). A student could match the words without knowing what an ageing list does. The clue also restates the card's definition of an ageing list, which nearly names the answer."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says an ageing list groups debts by how long they have been 'overdue'. The card says 'unpaid'. These differ: a debt still within its terms is unpaid but not overdue. Aligning the why with the card would avoid confusion."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate. In question b, the right option echoes the stem's word 'overdue' and the clue nearly gives the answer away. The why for a says 'overdue' where the card says 'unpaid'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one that repeats the stem's word 'overdue' ('most overdue' / 'overdue accounts'). A student could match the words without knowing what an ageing list does. The clue also restates the card's definition of an ageing list, which nearly names the answer.",
+  "Question a, other: The why says an ageing list groups debts by how long they have been 'overdue'. The card says 'unpaid'. These differ: a debt still within its terms is unpaid but not overdue. Aligning the why with the card would avoid confusion."
+ ],
+ "proposal": {
+  "title": "Managing accounts receivable",
+  "card": [
+   "Accounts receivable are amounts customers owe the business. A business manages them so customers pay on time and cash does not run short.",
+   [
+    "Before and when selling",
+    "a credit check looks at whether a customer is likely to pay before credit is given. Clear terms state how many days the customer has to pay. An invoice sent promptly starts that clock sooner."
+   ],
+   [
+    "After selling",
+    "an ageing list sorts what each customer owes by how long it has been unpaid, such as 30, 60 or 90 days. It shows which overdue accounts need a reminder or a phone call first."
+   ],
+   "A spreadsheet can model options, such as the effect on cash of shorter payment terms. The business can compare choices before it picks one."
+  ],
+  "remember": "Check customers first, state the terms, invoice quickly, then chase the oldest debts.",
+  "a": {
+   "q": "What does an ageing list of accounts receivable show a business?",
+   "opts": [
+    "How long each customer's debt has been unpaid",
+    "How likely a new customer is to pay in future",
+    "How many days a customer is given to pay",
+    "How much stock each customer has bought"
+   ],
+   "why": "An ageing list groups what each customer owes by how long it has been unpaid, so the business knows whom to chase first. Checking whether a new customer will pay is a credit check, not an ageing list.",
+   "clue": "Think about the 30, 60 and 90 day groups."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a timber supplier in Geelong. Some customers are paying late, and she wants to know which ones to call first. Which action helps her most?",
+   "opts": [
+    "Reviewing an ageing list of accounts receivable",
+    "Running a credit check on each customer now",
+    "Sending future invoices more promptly",
+    "Shortening the payment terms on the next sale"
+   ],
+   "why": "An ageing list shows which debts have been unpaid longest, so Priya can call those customers first. A credit check is done before credit is given, so it does not sort debts that already exist.",
+   "clue": "Which option deals with money already owed, not future sales?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "How long each customer's debt has been unpaid",
+    "also_right": []
+   },
+   "b": {
+    "best": "Reviewing an ageing list of accounts receivable",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that repeats the stem's word 'overdue' ('most overdue' / 'overdue accounts'). A student could match the words without knowing what an ageing list does. The clue also restates the card's definition of an ageing list, which nearly names the answer."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says an ageing list groups debts by how long they have been 'overdue'. The card says 'unpaid'. These differ: a debt still within its terms is unpaid but not overdue. Aligning the why with the card would avoid confusion."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one that repeats the stem's word 'overdue' ('most overdue' / 'overdue accounts'). A student could match the words without knowing what an ageing list does. The clue also restates the card's definition of an ageing list, which nearly names the answer.",
+   "Question a, other: The why says an ageing list groups debts by how long they have been 'overdue'. The card says 'unpaid'. These differ: a debt still within its terms is unpaid but not overdue. Aligning the why with the card would avoid confusion."
+  ]
+ },
+ "final": {
+  "title": "Managing accounts receivable",
+  "card": [
+   "Accounts receivable are amounts customers owe the business. A business manages them so customers pay on time and cash does not run short.",
+   [
+    "Before and when selling",
+    "a credit check looks at whether a customer is likely to pay before credit is given. Clear terms state how many days the customer has to pay. An invoice sent promptly starts that clock sooner."
+   ],
+   [
+    "After selling",
+    "an ageing list sorts what each customer owes by how long it has been unpaid, such as 30, 60 or 90 days. It shows which overdue accounts need a reminder or a phone call first."
+   ],
+   "A spreadsheet can model options, such as the effect on cash of shorter payment terms. The business can compare choices before it picks one."
+  ],
+  "remember": "Check customers first, state the terms, invoice quickly, then chase the oldest debts.",
+  "a": {
+   "q": "What does an ageing list of accounts receivable show a business?",
+   "opts": [
+    "How long each customer's debt has been unpaid",
+    "How likely a new customer is to pay in future",
+    "How many days a customer is given to pay",
+    "How much stock each customer has bought"
+   ],
+   "why": "An ageing list groups what each customer owes by how long it has been unpaid, so the business knows whom to chase first. Checking whether a new customer will pay is a credit check, not an ageing list.",
+   "clue": "Think about the 30, 60 and 90 day groups."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a timber supplier in Geelong. Some customers are paying late, and she wants to know which ones to call first. Which action helps her most?",
+   "opts": [
+    "Reviewing an ageing list of accounts receivable",
+    "Running a credit check on each customer now",
+    "Sending future invoices more promptly",
+    "Shortening the payment terms on the next sale"
+   ],
+   "why": "An ageing list shows which debts have been unpaid longest, so Priya can call those customers first. A credit check is done before credit is given, so it does not sort debts that already exist.",
+   "clue": "Which option deals with money already owed, not future sales?"
+  }
+ },
+ "cleared_by": "recheck"
+}

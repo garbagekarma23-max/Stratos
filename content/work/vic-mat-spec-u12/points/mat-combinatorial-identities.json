@@ -1,0 +1,104 @@
+{
+ "id": "mat-combinatorial-identities",
+ "title": "Combinatorial identities",
+ "brief": "3fbeff479268",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: done",
+  "2026-11-01T08:14:07Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "write": 0.00602,
+  "check": 0.01288
+ },
+ "draft": {
+  "title": "Combinatorial identities",
+  "card": [
+   "A combinatorial identity is an equation between counts, such as nCr = nC(n − r). It can be proved by counting the same thing in two different ways.",
+   "Example: choosing r people from n to join a team gives nCr ways. Choosing the n − r people to leave out gives nC(n − r) ways. Each team matches exactly one leave-out group, so the counts are equal.",
+   "Another identity is nC0 + nC1 + ... + nCn = 2ⁿ. Count all subsets of n items. Each item is in or out, giving 2ⁿ. Sorting subsets by size gives the sum.",
+   "The method is to describe one situation, count it two ways, and set the counts equal."
+  ],
+  "remember": "Count one situation in two ways, and the two answers must be equal.",
+  "a": {
+   "q": "Which statement is true for every n and r, because choosing r items to keep is the same as choosing which items to leave out?",
+   "opts": [
+    "nCr = nC(n − r)",
+    "nCr = nC(r − n)",
+    "nCr = nC(n + r)",
+    "nCr = nPr"
+   ],
+   "why": "Each group of r chosen items matches exactly one group of n − r left-out items, so the counts are equal. nPr counts ordered arrangements, so it is larger in general.",
+   "clue": "Choosing who is in matches choosing who is out."
+  },
+  "b": {
+   "d": 2,
+   "q": "A club has 5 members. Counting every possible committee of any size, including none, which number is the total?",
+   "opts": [
+    "32",
+    "25",
+    "10",
+    "120"
+   ],
+   "why": "Each member is either on the committee or not, so there are 2 choices for each of 5 members: 2⁵ = 32. This equals 5C0 + 5C1 + ... + 5C5. Using 5² = 25 swaps the base and the power.",
+   "clue": "Each member has two choices: in or out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "nCr = nC(n − r)",
+   "also_right": []
+  },
+  "b": {
+   "best": "32",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Combinatorial identities",
+  "card": [
+   "A combinatorial identity is an equation between counts, such as nCr = nC(n − r). It can be proved by counting the same thing in two different ways.",
+   "Example: choosing r people from n to join a team gives nCr ways. Choosing the n − r people to leave out gives nC(n − r) ways. Each team matches exactly one leave-out group, so the counts are equal.",
+   "Another identity is nC0 + nC1 + ... + nCn = 2ⁿ. Count all subsets of n items. Each item is in or out, giving 2ⁿ. Sorting subsets by size gives the sum.",
+   "The method is to describe one situation, count it two ways, and set the counts equal."
+  ],
+  "remember": "Count one situation in two ways, and the two answers must be equal.",
+  "a": {
+   "q": "Which statement is true for every n and r, because choosing r items to keep is the same as choosing which items to leave out?",
+   "opts": [
+    "nCr = nC(n − r)",
+    "nCr = nC(r − n)",
+    "nCr = nC(n + r)",
+    "nCr = nPr"
+   ],
+   "why": "Each group of r chosen items matches exactly one group of n − r left-out items, so the counts are equal. nPr counts ordered arrangements, so it is larger in general.",
+   "clue": "Choosing who is in matches choosing who is out."
+  },
+  "b": {
+   "d": 2,
+   "q": "A club has 5 members. Counting every possible committee of any size, including none, which number is the total?",
+   "opts": [
+    "32",
+    "25",
+    "10",
+    "120"
+   ],
+   "why": "Each member is either on the committee or not, so there are 2 choices for each of 5 members: 2⁵ = 32. This equals 5C0 + 5C1 + ... + 5C5. Using 5² = 25 swaps the base and the power.",
+   "clue": "Each member has two choices: in or out."
+  }
+ },
+ "cleared_by": "checker"
+}

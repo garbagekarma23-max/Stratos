@@ -17,7 +17,12 @@ const R = [], ROOT = fileURLToPath(new URL('..', import.meta.url)), shots = proc
 const build = spawnSync(process.platform === 'win32' ? 'py' : 'python3', ['build.py', '--extra', 'tests/units', '--out', 'v2-units.html'], {cwd: ROOT, encoding: 'utf8'});
 check(build.status === 0, 'build.py adds the Victorian test courses from tests/units and writes v2-units.html', R);
 const C = loadContent(ROOT + 'tests/units');
-const VIC = C.MADE_COURSES.filter(c => c.place === 'vic').map(c => c.id);
+// The Victorian courses in the fixture, apart from the VCE courses the repository has published itself.
+const OWN = new Set(loadContent().MADE_COURSES.map(c => c.id));
+const VIC = C.MADE_COURSES.filter(c => c.place === 'vic' && !OWN.has(c.id)).map(c => c.id);
+// Every Victorian course at a level, test or real, in the sheet's order: A to Z by subject, then by name.
+const atLevel = lv => C.MADE_COURSES.filter(c => c.place === 'vic' && c.level === lv)
+  .sort((a, b) => a.course.localeCompare(b.course, 'en') || a.name.localeCompare(b.name, 'en')).map(c => c.id);
 const NSW = C.MADE_COURSES.filter(c => c.place === 'nsw').map(c => c.id).concat(['eco', 'maths']);
 const text = (p, sel) => p.locator(sel).first().textContent();
 // The courses on a step, by place and then by heading: [[place, [[heading, [course ids]], ...]], ...].
@@ -44,7 +49,8 @@ const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window
   check((await p.locator('#sheetBody [aria-checked="true"]').textContent()).startsWith('Victoria'), 'a phone in Melbourne has Victoria picked', R);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   const g = await grouped(p, '#sheetBody');
-  check(JSON.stringify(g[0]) === JSON.stringify(['Victoria', [['Units 1 and 2', ['tsv-units-12']], ['Units 3 and 4', ['tsv-units-34']]]]),
+  check(atLevel('Units 1 and 2').includes('tsv-units-12') && JSON.stringify(atLevel('Units 3 and 4')) === JSON.stringify(['tsv-units-34']) &&
+    JSON.stringify(g[0]) === JSON.stringify(['Victoria', [['Units 1 and 2', atLevel('Units 1 and 2')], ['Units 3 and 4', atLevel('Units 3 and 4')]]]),
     'Victoria\'s courses are grouped by units, Units 1 and 2 before Units 3 and 4: ' + JSON.stringify(g[0]), R);
   check(g[1][0] === 'International courses' && g[1][1].map(x => x[0]).join(',') === 'AS', 'then the international courses, under AS', R);
   check((await p.locator('#sheetBody .sub').first().textContent()) === 'More Victorian subjects are coming.', 'with Victoria\'s line under its courses', R);

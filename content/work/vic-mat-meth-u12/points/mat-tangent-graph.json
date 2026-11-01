@@ -1,0 +1,215 @@
+{
+ "id": "mat-tangent-graph",
+ "title": "The tangent graph",
+ "brief": "fdeb1cc5c72f",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.561
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.46
+  ],
+  [
+   "mat-tangents-normals",
+   0.389
+  ],
+  [
+   "mat-where-function-not-differentiable",
+   0.328
+  ],
+  [
+   "mat-pythagorean-identity",
+   0.272
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-graphs-sine-cosine-tangent, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.00731,
+  "write": 0.0047,
+  "check": 0.0084,
+  "fix": 0.02492
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-graphs-sine-cosine-tangent",
+  "changes": [
+   "State the period first in radians as π, and give the asymptotes in radians as ±π/2, ±3π/2, since Victorian Mathematics Methods works mainly in radians rather than degrees.",
+   "Restate the example in radians, using tan 0 = 0 and tan(π/4) = 1 in place of the degree values.",
+   "Trim or set aside the sine and cosine material so the card teaches only the tangent graph, as this point does."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same tangent graph, with its period and asymptotes where cos x = 0, but it is written in degrees and also covers sine and cosine, so it needs small changes to suit the Victorian radian-based course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers the sine, cosine and tangent graphs together, which is broader than this point on the tangent graph alone, and it works in degrees where VCE Methods mainly uses radians, so a new point is needed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The tangent graph",
+  "card": [
+   "The graph of y = tan x comes from tan x = sin x ÷ cos x. It repeats every π radians, so its period is π.",
+   "When cos x = 0, the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
+   "In one period from −π/2 to π/2, the asymptotes are at x = −π/2 and x = π/2. Others are at x = 3π/2, −3π/2 and so on, every π apart.",
+   "The graph crosses the x-axis where sin x = 0, so at x = 0, π, 2π and so on. For example, tan(π/4) = 1, because sin and cos are equal there."
+  ],
+  "remember": "tan x = sin x ÷ cos x: period π, with asymptotes wherever cos x = 0.",
+  "a": {
+   "q": "Which of these is a vertical asymptote of y = tan x?",
+   "opts": [
+    "x = π/2",
+    "x = π",
+    "x = 0",
+    "x = 2π"
+   ],
+   "why": "At x = π/2, cos x = 0, so tan x cannot be worked out and there is an asymptote. At x = π, sin x = 0 and cos x = −1, so tan π = 0 and the graph crosses the x-axis there.",
+   "clue": "Look for the value of x where cos x = 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = tan x has a vertical asymptote at x = π/2. Which is the next asymptote to the right?",
+   "opts": [
+    "x = 3π/2",
+    "x = π",
+    "x = 2π",
+    "x = 5π/2"
+   ],
+   "why": "Asymptotes repeat every period, which is π. So the next one is π/2 + π = 3π/2. The value x = π is tempting, but tan π = 0 there, so the graph crosses the axis.",
+   "clue": "Add one period to π/2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = π/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 3π/2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "In the last bullet, 'For example, tan(π/4) = 1' follows the sentence about where the graph crosses the x-axis, so it reads as an example of an x-intercept. It is not one, so it could confuse students. Make it a separate point or remove it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and the explanations are accurate. The only problem is a card example (tan(π/4) = 1) placed where it reads like an example of the graph crossing the x-axis."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: In the last bullet, 'For example, tan(π/4) = 1' follows the sentence about where the graph crosses the x-axis, so it reads as an example of an x-intercept. It is not one, so it could confuse students. Make it a separate point or remove it."
+ ],
+ "proposal": {
+  "title": "The tangent graph",
+  "card": [
+   "The graph of y = tan x comes from tan x = sin x ÷ cos x. It repeats every π radians, so its period is π.",
+   "When cos x = 0, the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
+   "In one period from −π/2 to π/2, the asymptotes are at x = −π/2 and x = π/2. Others are at x = 3π/2, −3π/2 and so on, every π apart.",
+   "The graph crosses the x-axis where sin x = 0, so at x = 0, π, −π, 2π and so on. Between each pair of asymptotes, the curve rises from left to right."
+  ],
+  "remember": "tan x = sin x ÷ cos x: period π, with asymptotes wherever cos x = 0.",
+  "a": {
+   "q": "Which of these is a vertical asymptote of y = tan x?",
+   "opts": [
+    "x = π/2",
+    "x = π",
+    "x = 0",
+    "x = 2π"
+   ],
+   "why": "At x = π/2, cos x = 0, so tan x cannot be worked out and there is an asymptote. At x = π, sin x = 0 and cos x = −1, so tan π = 0 and the graph crosses the x-axis there.",
+   "clue": "Look for the value of x where cos x = 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = tan x has a vertical asymptote at x = π/2. Which is the next asymptote to the right?",
+   "opts": [
+    "x = 3π/2",
+    "x = π",
+    "x = 2π",
+    "x = 5π/2"
+   ],
+   "why": "Asymptotes repeat every period, which is π. So the next one is π/2 + π = 3π/2. The value x = π is tempting, but tan π = 0 there, so the graph crosses the axis.",
+   "clue": "Add one period to π/2."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "In the last bullet, 'For example, tan(π/4) = 1' follows the sentence about where the graph crosses the x-axis, so it reads as an example of an x-intercept. It is not one, so it could confuse students. Make it a separate point or remove it."
+   }
+  ],
+  "flags": [
+   "Card, wording: In the last bullet, 'For example, tan(π/4) = 1' follows the sentence about where the graph crosses the x-axis, so it reads as an example of an x-intercept. It is not one, so it could confuse students. Make it a separate point or remove it."
+  ]
+ },
+ "final": {
+  "title": "The tangent graph",
+  "card": [
+   "The graph of y = tan x comes from tan x = sin x ÷ cos x. It repeats every π radians, so its period is π.",
+   "When cos x = 0, the fraction cannot be worked out. The graph has a vertical asymptote there, a line it gets closer to but never touches.",
+   "In one period from −π/2 to π/2, the asymptotes are at x = −π/2 and x = π/2. Others are at x = 3π/2, −3π/2 and so on, every π apart.",
+   "The graph crosses the x-axis where sin x = 0, so at x = 0, π, −π, 2π and so on. Between each pair of asymptotes, the curve rises from left to right."
+  ],
+  "remember": "tan x = sin x ÷ cos x: period π, with asymptotes wherever cos x = 0.",
+  "a": {
+   "q": "Which of these is a vertical asymptote of y = tan x?",
+   "opts": [
+    "x = π/2",
+    "x = π",
+    "x = 0",
+    "x = 2π"
+   ],
+   "why": "At x = π/2, cos x = 0, so tan x cannot be worked out and there is an asymptote. At x = π, sin x = 0 and cos x = −1, so tan π = 0 and the graph crosses the x-axis there.",
+   "clue": "Look for the value of x where cos x = 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "The graph of y = tan x has a vertical asymptote at x = π/2. Which is the next asymptote to the right?",
+   "opts": [
+    "x = 3π/2",
+    "x = π",
+    "x = 2π",
+    "x = 5π/2"
+   ],
+   "why": "Asymptotes repeat every period, which is π. So the next one is π/2 + π = 3π/2. The value x = π is tempting, but tan π = 0 there, so the graph crosses the axis.",
+   "clue": "Add one period to π/2."
+  }
+ },
+ "cleared_by": "auto"
+}

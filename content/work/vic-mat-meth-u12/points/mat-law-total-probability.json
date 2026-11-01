@@ -1,0 +1,136 @@
+{
+ "id": "mat-law-total-probability",
+ "title": "The law of total probability",
+ "brief": "8bce6a292ce1",
+ "shortlist": [
+  [
+   "mat-discrete-probability-distributions",
+   0.575
+  ],
+  [
+   "mat-conditional-probability",
+   0.501
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.444
+  ],
+  [
+   "mat-probability-density-functions",
+   0.353
+  ],
+  [
+   "mat-multi-stage-experiments",
+   0.336
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00753,
+  "check": 0.00745
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, Multi-stage experiments, adds path probabilities in counter-and-tree problems but never states the law in terms of conditional probabilities given A and given not A, and the conditional probability card does not cover summing over a partition, so no bank point teaches this idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The law of total probability",
+  "card": [
+   "Sometimes an event can happen in more than one way. The law of total probability adds up the chance of each way.",
+   "Split on A and not A: Pr(B) = Pr(B | A) × Pr(A) + Pr(B | A') × Pr(A').",
+   "Each path is a product: the chance of the first step times the chance of the second step given the first. Then the paths that end in B are added.",
+   "Example: Pr(A) = 0.4, Pr(B | A) = 0.5 and Pr(B | A') = 0.2. Then Pr(B) = 0.5 × 0.4 + 0.2 × 0.6 = 0.2 + 0.12 = 0.32."
+  ],
+  "remember": "Multiply along each path to B, then add the paths.",
+  "a": {
+   "q": "Pr(A) = 0.3, Pr(B | A) = 0.6 and Pr(B | A') = 0.1. What is Pr(B)?",
+   "opts": [
+    "0.25",
+    "0.18",
+    "0.70",
+    "0.35"
+   ],
+   "why": "Pr(B) = 0.6 × 0.3 + 0.1 × 0.7 = 0.18 + 0.07 = 0.25. Giving 0.18 counts only the path through A and misses the path through not A.",
+   "clue": "B can happen after A or after not A."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cycles to school in Geelong on 20% of days, and otherwise takes the bus. She is late on 10% of cycling days and 30% of bus days. What is the probability she is late on a random day?",
+   "opts": [
+    "0.26",
+    "0.20",
+    "0.40",
+    "0.06"
+   ],
+   "why": "Late = 0.1 × 0.2 + 0.3 × 0.8 = 0.02 + 0.24 = 0.26. Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
+   "clue": "Weight each lateness chance by how often she uses that way."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.25",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.26",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's formula and worked example are correct. Both questions have exactly one right answer: 0.25 for (a) and 0.26 for (b)."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The law of total probability",
+  "card": [
+   "Sometimes an event can happen in more than one way. The law of total probability adds up the chance of each way.",
+   "Split on A and not A: Pr(B) = Pr(B | A) × Pr(A) + Pr(B | A') × Pr(A').",
+   "Each path is a product: the chance of the first step times the chance of the second step given the first. Then the paths that end in B are added.",
+   "Example: Pr(A) = 0.4, Pr(B | A) = 0.5 and Pr(B | A') = 0.2. Then Pr(B) = 0.5 × 0.4 + 0.2 × 0.6 = 0.2 + 0.12 = 0.32."
+  ],
+  "remember": "Multiply along each path to B, then add the paths.",
+  "a": {
+   "q": "Pr(A) = 0.3, Pr(B | A) = 0.6 and Pr(B | A') = 0.1. What is Pr(B)?",
+   "opts": [
+    "0.25",
+    "0.18",
+    "0.70",
+    "0.35"
+   ],
+   "why": "Pr(B) = 0.6 × 0.3 + 0.1 × 0.7 = 0.18 + 0.07 = 0.25. Giving 0.18 counts only the path through A and misses the path through not A.",
+   "clue": "B can happen after A or after not A."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cycles to school in Geelong on 20% of days, and otherwise takes the bus. She is late on 10% of cycling days and 30% of bus days. What is the probability she is late on a random day?",
+   "opts": [
+    "0.26",
+    "0.20",
+    "0.40",
+    "0.06"
+   ],
+   "why": "Late = 0.1 × 0.2 + 0.3 × 0.8 = 0.02 + 0.24 = 0.26. Giving 0.40 adds 0.1 and 0.3 without weighting each by how often that path is used.",
+   "clue": "Weight each lateness chance by how often she uses that way."
+  }
+ },
+ "cleared_by": "checker"
+}

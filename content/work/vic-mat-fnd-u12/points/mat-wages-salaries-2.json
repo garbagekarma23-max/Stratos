@@ -1,0 +1,146 @@
+{
+ "id": "mat-wages-salaries-2",
+ "title": "Pay and payslips",
+ "brief": "9be8345cfa2a",
+ "shortlist": [
+  [
+   "mat-overtime-penalty-rates",
+   0.41
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00496,
+  "check": 0.01075
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only overtime and penalty rates, while the new point also requires working out pay from a salary and reading what a payslip shows, so no bank point teaches the whole idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Pay and payslips",
+  "card": [
+   [
+    "Hourly pay",
+    "Pay = hours worked × hourly rate. At $25 an hour, 6 hours pays 6 × 25 = $150."
+   ],
+   [
+    "Overtime and penalty rates",
+    "Some hours are paid at a higher rate, such as overtime or a weekend shift. A rate of time and a half means rate × 1.5. Double time means rate × 2."
+   ],
+   [
+    "Salary",
+    "A salary is a fixed yearly amount. Pay for one period = yearly salary ÷ number of pay periods. A salary of $52 000 paid fortnightly gives 52 000 ÷ 26 = $2000 each fortnight."
+   ],
+   [
+    "Payslip",
+    "A payslip shows the pay period, hours and rates, gross pay (pay before anything is taken out), deductions and net pay (pay after deductions). Net pay = gross pay − deductions."
+   ]
+  ],
+  "remember": "Pay is hours × rate, with a higher rate for penalty hours. Net pay is gross pay minus deductions.",
+  "a": {
+   "q": "Sam earns $20 an hour. On Sunday the rate is double time. How much does Sam earn for a 5 hour Sunday shift?",
+   "opts": [
+    "$200",
+    "$100",
+    "$120",
+    "$40"
+   ],
+   "why": "Double time means 20 × 2 = $40 an hour, so 5 hours pays 5 × 40 = $200. $100 is the answer if the double rate is forgotten.",
+   "clue": "Work out the Sunday hourly rate first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's payslip shows gross pay of $1850 and deductions of $370 for the fortnight. What is her net pay?",
+   "opts": [
+    "$1480",
+    "$2220",
+    "$370",
+    "$1850"
+   ],
+   "why": "Net pay = gross pay − deductions = 1850 − 370 = $1480. Adding the deductions gives $2220, which mixes up the direction: deductions are taken out of gross pay.",
+   "clue": "Net pay is what is left after deductions come out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$200",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1480",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out ($20 × 2 × 5 = $200 and $1850 − $370 = $1480), and the card's facts and the explanations are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Pay and payslips",
+  "card": [
+   [
+    "Hourly pay",
+    "Pay = hours worked × hourly rate. At $25 an hour, 6 hours pays 6 × 25 = $150."
+   ],
+   [
+    "Overtime and penalty rates",
+    "Some hours are paid at a higher rate, such as overtime or a weekend shift. A rate of time and a half means rate × 1.5. Double time means rate × 2."
+   ],
+   [
+    "Salary",
+    "A salary is a fixed yearly amount. Pay for one period = yearly salary ÷ number of pay periods. A salary of $52 000 paid fortnightly gives 52 000 ÷ 26 = $2000 each fortnight."
+   ],
+   [
+    "Payslip",
+    "A payslip shows the pay period, hours and rates, gross pay (pay before anything is taken out), deductions and net pay (pay after deductions). Net pay = gross pay − deductions."
+   ]
+  ],
+  "remember": "Pay is hours × rate, with a higher rate for penalty hours. Net pay is gross pay minus deductions.",
+  "a": {
+   "q": "Sam earns $20 an hour. On Sunday the rate is double time. How much does Sam earn for a 5 hour Sunday shift?",
+   "opts": [
+    "$200",
+    "$100",
+    "$120",
+    "$40"
+   ],
+   "why": "Double time means 20 × 2 = $40 an hour, so 5 hours pays 5 × 40 = $200. $100 is the answer if the double rate is forgotten.",
+   "clue": "Work out the Sunday hourly rate first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's payslip shows gross pay of $1850 and deductions of $370 for the fortnight. What is her net pay?",
+   "opts": [
+    "$1480",
+    "$2220",
+    "$370",
+    "$1850"
+   ],
+   "why": "Net pay = gross pay − deductions = 1850 − 370 = $1480. Adding the deductions gives $2220, which mixes up the direction: deductions are taken out of gross pay.",
+   "clue": "Net pay is what is left after deductions come out."
+  }
+ },
+ "cleared_by": "checker"
+}

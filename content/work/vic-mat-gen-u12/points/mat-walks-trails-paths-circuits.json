@@ -1,0 +1,158 @@
+{
+ "id": "mat-walks-trails-paths-circuits",
+ "title": "Walks, trails, paths and circuits",
+ "brief": "e0ee3a5dff68",
+ "shortlist": [
+  [
+   "mat-walks-paths-circuits",
+   0.714
+  ],
+  [
+   "mat-minimum-spanning-trees",
+   0.27
+  ],
+  [
+   "mat-trees",
+   0.234
+  ],
+  [
+   "mat-shortest-paths",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00481,
+  "check": 0.00987
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point covers walks, paths and circuits but never defines a trail, which the new point also teaches, so no bank point teaches the full idea as it stands.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Walks, trails, paths and circuits",
+  "card": [
+   [
+    "Walk",
+    "any route along edges from one vertex to another. It may repeat edges and vertices."
+   ],
+   [
+    "Trail",
+    "a walk that repeats no edge. It may pass through the same vertex more than once."
+   ],
+   [
+    "Path",
+    "a walk that repeats no vertex. This means it repeats no edge either."
+   ],
+   [
+    "Circuit and cycle",
+    "a circuit is a trail that starts and ends at the same vertex. A cycle is a circuit that repeats no vertex, except the start and end."
+   ]
+  ],
+  "remember": "Trail: no repeated edge. Path: no repeated vertex. Circuit and cycle: end where they began.",
+  "a": {
+   "q": "A route on a graph goes A-B-C-B-D. It uses edges AB, BC, CB and BD, with BC and CB being the same edge. What is the best name for it?",
+   "opts": [
+    "A walk only, as an edge is repeated",
+    "A trail, as no vertex is repeated",
+    "A path, as it ends at a new vertex",
+    "A circuit, as it passes through B twice"
+   ],
+   "why": "The edge between B and C is used twice, so the route is not a trail or a path. It is a walk only. A circuit needs to end where it began, and this route starts at A and ends at D.",
+   "clue": "Check whether any edge is used twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a graph, Priya travels P-Q-R-S-Q-T using each edge once only. Which description is correct?",
+   "opts": [
+    "A trail, but not a path",
+    "A path, but not a trail",
+    "A circuit, as it passes Q twice",
+    "A cycle, as no edge is repeated"
+   ],
+   "why": "No edge is repeated, so it is a trail. Vertex Q is visited twice, so it is not a path. It is not a circuit or cycle, as it starts at P and ends at T. Not repeating an edge does not make it a cycle.",
+   "clue": "Look for a repeated vertex, then check where the route starts and ends."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A walk only, as an edge is repeated",
+   "also_right": []
+  },
+  "b": {
+   "best": "A trail, but not a path",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The definitions match the VCE General Mathematics usage, and both questions have exactly one correct option."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Walks, trails, paths and circuits",
+  "card": [
+   [
+    "Walk",
+    "any route along edges from one vertex to another. It may repeat edges and vertices."
+   ],
+   [
+    "Trail",
+    "a walk that repeats no edge. It may pass through the same vertex more than once."
+   ],
+   [
+    "Path",
+    "a walk that repeats no vertex. This means it repeats no edge either."
+   ],
+   [
+    "Circuit and cycle",
+    "a circuit is a trail that starts and ends at the same vertex. A cycle is a circuit that repeats no vertex, except the start and end."
+   ]
+  ],
+  "remember": "Trail: no repeated edge. Path: no repeated vertex. Circuit and cycle: end where they began.",
+  "a": {
+   "q": "A route on a graph goes A-B-C-B-D. It uses edges AB, BC, CB and BD, with BC and CB being the same edge. What is the best name for it?",
+   "opts": [
+    "A walk only, as an edge is repeated",
+    "A trail, as no vertex is repeated",
+    "A path, as it ends at a new vertex",
+    "A circuit, as it passes through B twice"
+   ],
+   "why": "The edge between B and C is used twice, so the route is not a trail or a path. It is a walk only. A circuit needs to end where it began, and this route starts at A and ends at D.",
+   "clue": "Check whether any edge is used twice."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a graph, Priya travels P-Q-R-S-Q-T using each edge once only. Which description is correct?",
+   "opts": [
+    "A trail, but not a path",
+    "A path, but not a trail",
+    "A circuit, as it passes Q twice",
+    "A cycle, as no edge is repeated"
+   ],
+   "why": "No edge is repeated, so it is a trail. Vertex Q is visited twice, so it is not a path. It is not a circuit or cycle, as it starts at P and ends at T. Not repeating an edge does not make it a cycle.",
+   "clue": "Look for a repeated vertex, then check where the route starts and ends."
+  }
+ },
+ "cleared_by": "checker"
+}

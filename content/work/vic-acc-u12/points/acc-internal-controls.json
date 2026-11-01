@@ -1,0 +1,236 @@
+{
+ "id": "acc-internal-controls",
+ "title": "Internal controls",
+ "brief": "a184bb7a8a67",
+ "shortlist": [
+  [
+   "bus-internal-environment",
+   0.332
+  ],
+  [
+   "bus-internal-sources-finance",
+   0.236
+  ],
+  [
+   "bus-cash-flow-statement",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T09:34:53Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00493,
+  "check": 0.00918,
+  "fix": 0.01844,
+  "recheck": 0.01017
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches internal controls against theft and fraud: they cover the internal business environment, internal sources of finance and the cash flow statement, which are different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Internal controls",
+  "card": [
+   "Internal controls are steps a business sets up to protect its assets and records. They help prevent theft, fraud and honest mistakes, and they help catch problems early.",
+   [
+    "Separating duties",
+    "no one person handles a whole transaction from start to finish. For example, the person who receives cash does not also record it, so one person cannot take money and hide it."
+   ],
+   [
+    "Banking cash daily",
+    "cash received is deposited in the bank each day. Less cash sits in the till or office, so there is less to lose or steal."
+   ],
+   [
+    "Checking records",
+    "the business compares its own records with outside records, such as a bank statement. A difference shows a mistake or missing money, and the business can then investigate."
+   ]
+  ],
+  "remember": "Controls protect assets and records by sharing out tasks, limiting cash on hand and checking records against outside evidence.",
+  "a": {
+   "q": "Why does a business keep the person who receives cash separate from the person who records it?",
+   "opts": [
+    "One person cannot take cash and hide it in the records",
+    "The records can be completed faster by two people",
+    "The bank requires two people to sign every deposit",
+    "Cash received no longer needs a source document"
+   ],
+   "why": "If two people handle the steps, hiding a theft would need both of them to agree. The speed of the work is not the purpose of separating duties, and the card says nothing about banks requiring two signatures.",
+   "clue": "Think about what one person could do if they controlled both steps."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pilates studio in Geelong takes cash and card payments. Her bank statement shows less money deposited than her records say was received. Which control found the problem?",
+   "opts": [
+    "Checking records against the bank statement",
+    "Banking cash daily",
+    "Separating duties between staff",
+    "Keeping cash in a locked drawer"
+   ],
+   "why": "Comparing the studio's records with the bank statement showed the gap between the two. Banking cash daily reduces the cash on hand, but it does not compare two sets of records, so it did not reveal the difference.",
+   "clue": "Which control compares the business's records with an outside record?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "One person cannot take cash and hide it in the records",
+   "also_right": []
+  },
+  "b": {
+   "best": "Checking records against the bank statement",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that repeats 'bank statement' from the question, and the clue says the same thing. A student could match the words without understanding the control."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and answers are accurate. Question b's right option repeats 'bank statement' from the question, so students can pick it by word matching; reword the option, for example 'Comparing records with outside evidence'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one that repeats 'bank statement' from the question, and the clue says the same thing. A student could match the words without understanding the control."
+ ],
+ "proposal": {
+  "title": "Internal controls",
+  "card": [
+   "Internal controls are steps a business sets up to protect its assets and records. They help prevent theft, fraud and honest mistakes, and they help catch problems early.",
+   [
+    "Separating duties",
+    "no one person handles a whole transaction from start to finish. For example, the person who receives cash does not also record it, so one person cannot take money and hide it."
+   ],
+   [
+    "Banking cash daily",
+    "cash received is deposited in the bank each day. Less cash sits in the till or office, so there is less to lose or steal."
+   ],
+   [
+    "Checking records",
+    "the business compares its own records with outside records, such as a bank statement. A difference shows a mistake or missing money, and the business can then investigate."
+   ]
+  ],
+  "remember": "Controls protect assets and records by sharing out tasks, limiting cash on hand and checking records against outside evidence.",
+  "a": {
+   "q": "Why does a business keep the person who receives cash separate from the person who records it?",
+   "opts": [
+    "One person cannot take cash and hide it in the records",
+    "The records can be completed faster by two people",
+    "The bank requires two people to sign every deposit",
+    "Cash received no longer needs a source document"
+   ],
+   "why": "If two people handle the steps, hiding a theft would need both of them to agree. Speed is not the purpose of separating duties, and the control is about stopping one person hiding a theft, not about bank rules.",
+   "clue": "Think about what one person could do if they controlled both steps."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a Pilates studio in Geelong. Each month she lists the cash the studio took and ticks each amount off against the deposits shown by her bank. Which control is she using?",
+   "opts": [
+    "Comparing her figures with outside evidence",
+    "Putting the takings in the bank every day",
+    "Splitting cash tasks between staff members",
+    "Keeping the takings in a locked drawer"
+   ],
+   "why": "Priya is matching her own figures against a record from outside the business, so any gap would show a mistake or missing money. Banking takings daily is tempting because deposits are mentioned, but it only limits the cash on hand. It does not compare two sets of figures.",
+   "clue": "Is Priya moving money, or comparing two sets of figures?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "One person cannot take cash and hide it in the records",
+    "also_right": []
+   },
+   "b": {
+    "best": "Comparing her figures with outside evidence",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The clue asks 'Is Priya moving money, or comparing two sets of figures?' Its word 'comparing' matches the right option ('Comparing her figures with outside evidence'), so a student can pick it without knowing the control."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and both questions are accurate, and each has one clearly right answer. The clue for question b uses the word 'comparing', which matches the right option and nearly gives the answer away."
+  },
+  "flags": [
+   "Question b, other: The clue asks 'Is Priya moving money, or comparing two sets of figures?' Its word 'comparing' matches the right option ('Comparing her figures with outside evidence'), so a student can pick it without knowing the control."
+  ]
+ },
+ "final": {
+  "title": "Internal controls",
+  "card": [
+   "Internal controls are steps a business sets up to protect its assets and records. They help prevent theft, fraud and honest mistakes, and they help catch problems early.",
+   [
+    "Separating duties",
+    "no one person handles a whole transaction from start to finish. For example, the person who receives cash does not also record it, so one person cannot take money and hide it."
+   ],
+   [
+    "Banking cash daily",
+    "cash received is deposited in the bank each day. Less cash sits in the till or office, so there is less to lose or steal."
+   ],
+   [
+    "Checking records",
+    "the business compares its own records with outside records, such as a bank statement. A difference shows a mistake or missing money, and the business can then investigate."
+   ]
+  ],
+  "remember": "Controls protect assets and records by sharing out tasks, limiting cash on hand and checking records against outside evidence.",
+  "a": {
+   "q": "Why does a business keep the person who receives cash separate from the person who records it?",
+   "opts": [
+    "One person cannot take cash and hide it in the records",
+    "The records can be completed faster by two people",
+    "The bank requires two people to sign every deposit",
+    "Cash received no longer needs a source document"
+   ],
+   "why": "If two people handle the steps, hiding a theft would need both of them to agree. Speed is not the purpose of separating duties, and the control is about stopping one person hiding a theft, not about bank rules.",
+   "clue": "Think about what one person could do if they controlled both steps."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a Pilates studio in Geelong. Each month she lists the cash the studio took and ticks each amount off against the deposits shown by her bank. Which control is she using?",
+   "opts": [
+    "Comparing her figures with outside evidence",
+    "Putting the takings in the bank every day",
+    "Splitting cash tasks between staff members",
+    "Keeping the takings in a locked drawer"
+   ],
+   "why": "Priya is matching her own figures against a record from outside the business, so any gap would show a mistake or missing money. Banking takings daily is tempting because deposits are mentioned, but it only limits the cash on hand. It does not compare two sets of figures.",
+   "clue": "Is Priya moving money, or comparing two sets of figures?"
+  }
+ },
+ "cleared_by": "owner"
+}

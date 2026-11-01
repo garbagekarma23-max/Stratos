@@ -1,0 +1,207 @@
+{
+ "id": "phys-conservation-energy-efficiency",
+ "title": "Conservation of energy and efficiency",
+ "brief": "3ab4dda37842",
+ "shortlist": [
+  [
+   "phys-mass-energy",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:10Z write: done",
+  "2026-11-01T08:24:34Z check: flagged",
+  "2026-11-01T08:33:53Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00581,
+  "check": 0.00994,
+  "fix": 0.01219,
+  "recheck": 0.00679
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers mass-energy equivalence and relativistic momentum, which are far beyond VCE Units 1 and 2, whereas the new point needs conservation of energy, power and efficiency at an introductory level.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Conservation of energy and efficiency",
+  "card": [
+   "Energy changes from one form to another but is not created or destroyed. The total energy stays the same.",
+   "Some energy usually ends up as thermal energy that spreads into the surroundings. It is not lost, but it is not useful for the task.",
+   "Power is the rate of energy transfer: P = E ÷ t. It is measured in watts (W), where 1 W is 1 J each second.",
+   "Efficiency is the share of input energy that becomes useful output. Efficiency = useful output ÷ total input, often written as a percentage."
+  ],
+  "remember": "Energy is never lost, but only the useful share counts toward efficiency.",
+  "a": {
+   "q": "A motor takes in 500 J of energy and gives out 350 J of useful energy. What is its efficiency?",
+   "opts": [
+    "70%",
+    "30%",
+    "150 J",
+    "143%"
+   ],
+   "why": "Efficiency = 350 ÷ 500 = 0.70, or 70%. The 30% figure is the share wasted as thermal energy, not the useful share.",
+   "clue": "Divide the useful output by the total input."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina's kettle transfers 180 000 J of electrical energy in 90 s. What is its power?",
+   "opts": [
+    "2000 W",
+    "16 200 000 W",
+    "0.0005 W",
+    "90 W"
+   ],
+   "why": "Power = energy ÷ time = 180 000 ÷ 90 = 2000 W. Multiplying the two numbers gives a far larger value, but power is a rate, so it needs division by the time.",
+   "clue": "Power is energy transferred each second."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "70%",
+   "also_right": []
+  },
+  "b": {
+   "best": "2000 W",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says the remaining 30% is all wasted as thermal energy. The question does not say this, and the card says only that wasted energy 'usually' ends up as thermal energy; some could be sound or other forms. It would be better to say the 30% is the share that is not useful (mostly thermal energy)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and suit Year 11. One small issue: the why for (a) states that all the wasted 30% is thermal energy, which is more definite than the card's 'usually'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Why (a) says the remaining 30% is all wasted as thermal energy. The question does not say this, and the card says only that wasted energy 'usually' ends up as thermal energy; some could be sound or other forms. It would be better to say the 30% is the share that is not useful (mostly thermal energy)."
+ ],
+ "proposal": {
+  "title": "Conservation of energy and efficiency",
+  "card": [
+   "Energy changes from one form to another but is not created or destroyed. The total energy stays the same.",
+   "Some energy usually ends up as thermal energy that spreads into the surroundings. It is not lost, but it is not useful for the task.",
+   "Power is the rate of energy transfer: P = E ÷ t. It is measured in watts (W), where 1 W is 1 J each second.",
+   "Efficiency is the share of input energy that becomes useful output. Efficiency = useful output ÷ total input, often written as a percentage."
+  ],
+  "remember": "Energy is never lost, but only the useful share counts toward efficiency.",
+  "a": {
+   "q": "A motor takes in 500 J of energy and gives out 350 J of useful energy. What is its efficiency?",
+   "opts": [
+    "70%",
+    "30%",
+    "150 J",
+    "143%"
+   ],
+   "why": "Efficiency = 350 ÷ 500 = 0.70, or 70%. The 30% figure is the share of the input that is not useful, mostly thermal energy, so it is not the efficiency.",
+   "clue": "Divide the useful output by the total input."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina's kettle transfers 180 000 J of electrical energy in 90 s. What is its power?",
+   "opts": [
+    "2000 W",
+    "16 200 000 W",
+    "0.0005 W",
+    "90 W"
+   ],
+   "why": "Power = energy ÷ time = 180 000 ÷ 90 = 2000 W. Multiplying the two numbers gives a far larger value, but power is a rate, so it needs division by the time.",
+   "clue": "Power is energy transferred each second."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "70%",
+    "also_right": []
+   },
+   "b": {
+    "best": "2000 W",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says the remaining 30% is all wasted as thermal energy. The question does not say this, and the card says only that wasted energy 'usually' ends up as thermal energy; some could be sound or other forms. It would be better to say the 30% is the share that is not useful (mostly thermal energy)."
+   }
+  ],
+  "flags": [
+   "Question a, fact: Why (a) says the remaining 30% is all wasted as thermal energy. The question does not say this, and the card says only that wasted energy 'usually' ends up as thermal energy; some could be sound or other forms. It would be better to say the 30% is the share that is not useful (mostly thermal energy)."
+  ]
+ },
+ "final": {
+  "title": "Conservation of energy and efficiency",
+  "card": [
+   "Energy changes from one form to another but is not created or destroyed. The total energy stays the same.",
+   "Some energy usually ends up as thermal energy that spreads into the surroundings. It is not lost, but it is not useful for the task.",
+   "Power is the rate of energy transfer: P = E ÷ t. It is measured in watts (W), where 1 W is 1 J each second.",
+   "Efficiency is the share of input energy that becomes useful output. Efficiency = useful output ÷ total input, often written as a percentage."
+  ],
+  "remember": "Energy is never lost, but only the useful share counts toward efficiency.",
+  "a": {
+   "q": "A motor takes in 500 J of energy and gives out 350 J of useful energy. What is its efficiency?",
+   "opts": [
+    "70%",
+    "30%",
+    "150 J",
+    "143%"
+   ],
+   "why": "Efficiency = 350 ÷ 500 = 0.70, or 70%. The 30% figure is the share of the input that is not useful, mostly thermal energy, so it is not the efficiency.",
+   "clue": "Divide the useful output by the total input."
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina's kettle transfers 180 000 J of electrical energy in 90 s. What is its power?",
+   "opts": [
+    "2000 W",
+    "16 200 000 W",
+    "0.0005 W",
+    "90 W"
+   ],
+   "why": "Power = energy ÷ time = 180 000 ÷ 90 = 2000 W. Multiplying the two numbers gives a far larger value, but power is a rate, so it needs division by the time.",
+   "clue": "Power is energy transferred each second."
+  }
+ },
+ "cleared_by": "recheck"
+}

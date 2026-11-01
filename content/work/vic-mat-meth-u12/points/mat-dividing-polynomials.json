@@ -1,0 +1,289 @@
+{
+ "id": "mat-dividing-polynomials",
+ "title": "Dividing polynomials",
+ "brief": "747952d67392",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: done",
+  "2026-11-01T08:14:07Z check: flagged",
+  "2026-11-01T08:24:33Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (a other, b fact)",
+  "2026-11-01T13:41:59Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01817,
+  "check": 0.01985,
+  "fix": 0.03189,
+  "recheck": 0.01496
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'work out 4 − 12 carefully' gives away the remainder. Once the quotient x + 4 is found, it settles the choice between 8 and −8 without the student finishing the division.\n- Question b, fact: The why says +3 comes from 'subtracting −2 as if it were +2', but that slip gives −5 − 2 = −7, not +3. The +3 distractor comes from a different error, such as subtracting the wrong way round, so the explanation misdescribes it.",
+ "rejected": {
+  "title": "Dividing polynomials",
+  "card": [
+   "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+   "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+   "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+   "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+  ],
+  "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+  "a": {
+   "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+   "opts": [
+    "Quotient x + 4, remainder −8",
+    "Quotient x + 4, remainder 8",
+    "Quotient x + 10, remainder 34",
+    "Quotient x + 7, remainder 4"
+   ],
+   "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+   "clue": "After the second subtraction, work out 4 − 12 carefully."
+  },
+  "b": {
+   "d": 3,
+   "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+   "opts": [
+    "(x − 1)(x² − x + 2) − 3",
+    "(x − 1)(x² − x + 2) + 3",
+    "(x − 1)(x² − x + 2) − 5",
+    "(x − 1)(x² − x + 4) − 9"
+   ],
+   "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from subtracting −2 as if it were +2.",
+   "clue": "Subtract each line carefully, especially when a term is negative."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'work out 4 − 12 carefully' gives away the remainder. Once the quotient x + 4 is found, it settles the choice between 8 and −8 without the student finishing the division.",
+    "Question b, fact: The why says +3 comes from 'subtracting −2 as if it were +2', but that slip gives −5 − 2 = −7, not +3. The +3 distractor comes from a different error, such as subtracting the wrong way round, so the explanation misdescribes it."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Dividing polynomials",
+     "card": [
+      "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+      "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+      "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+      "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+     ],
+     "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+     "a": {
+      "q": "x² + 5x + 7 is divided by x + 2. What is the quotient?",
+      "opts": [
+       "x + 3",
+       "x + 5",
+       "x + 2",
+       "x + 1"
+      ],
+      "why": "x² ÷ x = x, and subtracting x² + 2x leaves 3x + 7. Then 3x ÷ x = 3, leaving a remainder of 1. The number 1 is the remainder, not part of the quotient.",
+      "clue": "Divide the first terms, multiply back, subtract, and repeat."
+     },
+     "b": {
+      "d": 3,
+      "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+      "opts": [
+       "(x − 1)(x² − x + 2) − 3",
+       "(x − 1)(x² − x + 2) + 3",
+       "(x − 1)(x² − x + 2) − 5",
+       "(x − 1)(x² − x + 4) − 9"
+      ],
+      "why": "x³ ÷ x = x², and subtracting x³ − x² leaves −x² + 3x − 5. Then −x² ÷ x = −x, and subtracting −x² + x leaves 2x − 5. Then 2x ÷ x = 2, and subtracting 2x − 2 leaves −3. So the quotient is x² − x + 2 and the remainder is −3. Using +3 gets the sign of the last subtraction wrong.",
+      "clue": "Subtract each line carefully, especially when a term is negative."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "x + 3",
+      "also_right": []
+     },
+     "b": {
+      "best": "(x − 1)(x² − x + 2) − 3",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a uses exactly the card's worked example (x² + 5x + 7 ÷ x + 2), so students can copy the quotient from the card without doing any division. A fresh division would test the method."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both answers check out: a is x + 3, and b is (x − 1)(x² − x + 2) − 3. The only issue is that question a repeats the card's worked example word for word, so it tests recall rather than the method."
+    },
+    "flags": [
+     "Question a, level: Question a uses exactly the card's worked example (x² + 5x + 7 ÷ x + 2), so students can copy the quotient from the card without doing any division. A fresh division would test the method."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Dividing polynomials",
+     "card": [
+      "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+      "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+      "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+      "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+     ],
+     "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+     "a": {
+      "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+      "opts": [
+       "Quotient x + 4, remainder −8",
+       "Quotient x + 4, remainder 8",
+       "Quotient x + 10, remainder 34",
+       "Quotient x + 7, remainder 4"
+      ],
+      "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+      "clue": "After the second subtraction, work out 4 − 12 carefully."
+     },
+     "b": {
+      "d": 3,
+      "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+      "opts": [
+       "(x − 1)(x² − x + 2) − 3",
+       "(x − 1)(x² − x + 2) + 3",
+       "(x − 1)(x² − x + 2) − 5",
+       "(x − 1)(x² − x + 4) − 9"
+      ],
+      "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from subtracting −2 as if it were +2.",
+      "clue": "Subtract each line carefully, especially when a term is negative."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Quotient x + 4, remainder −8",
+       "also_right": []
+      },
+      "b": {
+       "best": "(x − 1)(x² − x + 2) − 3",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'work out 4 − 12 carefully' gives away the remainder. Once the quotient x + 4 is found, it settles the choice between 8 and −8 without the student finishing the division."
+       },
+       {
+        "part": "b",
+        "kind": "fact",
+        "detail": "The why says +3 comes from 'subtracting −2 as if it were +2', but that slip gives −5 − 2 = −7, not +3. The +3 distractor comes from a different error, such as subtracting the wrong way round, so the explanation misdescribes it."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both intended answers are correct. Question a's clue all but gives away the remainder, and question b's explanation describes the wrong slip as the source of the +3 distractor."
+     },
+     "flags": [
+      "Question a, other: The clue 'work out 4 − 12 carefully' gives away the remainder. Once the quotient x + 4 is found, it settles the choice between 8 and −8 without the student finishing the division.",
+      "Question b, fact: The why says +3 comes from 'subtracting −2 as if it were +2', but that slip gives −5 − 2 = −7, not +3. The +3 distractor comes from a different error, such as subtracting the wrong way round, so the explanation misdescribes it."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Dividing polynomials",
+  "card": [
+   "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+   "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+   "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+   "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+  ],
+  "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+  "a": {
+   "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+   "opts": [
+    "Quotient x + 4, remainder −8",
+    "Quotient x + 4, remainder 8",
+    "Quotient x + 4, remainder 12",
+    "Quotient x + 7, remainder 4"
+   ],
+   "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves 4 − 12 = −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+   "clue": "Subtract after every step, and stop only when the leftover has a lower degree than the divisor."
+  },
+  "b": {
+   "d": 3,
+   "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+   "opts": [
+    "(x − 1)(x² − x + 2) − 3",
+    "(x − 1)(x² − x + 2) + 3",
+    "(x − 1)(x² − x + 2) − 5",
+    "(x − 1)(x² − x + 4) − 9"
+   ],
+   "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from taking the constants the wrong way round, −2 − (−5).",
+   "clue": "Subtract each line carefully, especially when a term is negative."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Quotient x + 4, remainder −8",
+   "also_right": []
+  },
+  "b": {
+   "best": "(x − 1)(x² − x + 2) − 3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's example, both answers (remainder −8, and quotient x² − x + 2 with remainder −3) and the explanations all check out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Dividing polynomials",
+  "card": [
+   "Long division of polynomials works like long division of numbers. Any polynomial P(x) can be written as P(x) = D(x) × Q(x) + R(x), where D is the divisor, Q is the quotient and R is the remainder.",
+   "The remainder has a lower degree than the divisor. If the divisor is x − a, the remainder is a number.",
+   "Step 1: divide the first term of what is left by the first term of the divisor. Step 2: multiply the divisor by that result and subtract. Step 3: repeat until what is left has a lower degree than the divisor.",
+   "Example: divide x² + 5x + 7 by x + 2. x² ÷ x = x, and x(x + 2) = x² + 2x, leaving 3x + 7. Then 3x ÷ x = 3, and 3(x + 2) = 3x + 6, leaving 1. So x² + 5x + 7 = (x + 2)(x + 3) + 1."
+  ],
+  "remember": "P(x) = divisor × quotient + remainder, and the remainder has a lower degree than the divisor.",
+  "a": {
+   "q": "x² + 7x + 4 is divided by x + 3. What are the quotient and the remainder?",
+   "opts": [
+    "Quotient x + 4, remainder −8",
+    "Quotient x + 4, remainder 8",
+    "Quotient x + 4, remainder 12",
+    "Quotient x + 7, remainder 4"
+   ],
+   "why": "x² ÷ x = x, and subtracting x² + 3x leaves 4x + 4. Then 4x ÷ x = 4, and subtracting 4x + 12 leaves 4 − 12 = −8. A remainder of 8 comes from subtracting 12 from 4 the wrong way round.",
+   "clue": "Subtract after every step, and stop only when the leftover has a lower degree than the divisor."
+  },
+  "b": {
+   "d": 3,
+   "q": "x³ − 2x² + 3x − 5 is divided by x − 1. Which is the correct way to write it?",
+   "opts": [
+    "(x − 1)(x² − x + 2) − 3",
+    "(x − 1)(x² − x + 2) + 3",
+    "(x − 1)(x² − x + 2) − 5",
+    "(x − 1)(x² − x + 4) − 9"
+   ],
+   "why": "Dividing the first terms in turn gives x², then −x, then 2, so the quotient is x² − x + 2. The last step leaves 2x − 5 − (2x − 2) = −3. Writing +3 comes from taking the constants the wrong way round, −2 − (−5).",
+   "clue": "Subtract each line carefully, especially when a term is negative."
+  }
+ }
+}

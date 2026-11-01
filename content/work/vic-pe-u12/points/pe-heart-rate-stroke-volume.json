@@ -1,0 +1,140 @@
+{
+ "id": "pe-heart-rate-stroke-volume",
+ "title": "Heart rate, stroke volume and cardiac output",
+ "brief": "ce8fceab3779",
+ "shortlist": [
+  [
+   "hms-physiological-adaptations-training",
+   0.258
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:34Z write: done",
+  "2026-11-01T08:33:53Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00522,
+  "check": 0.00783
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is about training adaptations, covering VO2 max, hypertrophy and resting heart rate over months, so it is broader than the new point's narrow definition of cardiac output as heart rate times stroke volume.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Cardiac output",
+  "card": [
+   [
+    "Heart rate",
+    "the number of times the heart beats each minute. It is measured in beats per minute (bpm)."
+   ],
+   [
+    "Stroke volume",
+    "the amount of blood pumped out by one ventricle in a single beat. It is measured in millilitres (mL)."
+   ],
+   [
+    "Cardiac output",
+    "the amount of blood pumped out by the heart each minute. Cardiac output = heart rate × stroke volume."
+   ],
+   "Cardiac output can rise if heart rate rises, if stroke volume rises, or if both rise. For example, 70 bpm × 70 mL = 4900 mL per minute."
+  ],
+  "remember": "Cardiac output is how much blood leaves the heart each minute: beats per minute times blood per beat.",
+  "a": {
+   "q": "What does stroke volume measure?",
+   "opts": [
+    "The blood pumped out by a ventricle in one beat",
+    "The blood pumped out by the heart in one minute",
+    "The number of heartbeats in one minute",
+    "The total amount of blood in the body"
+   ],
+   "why": "Stroke volume is the blood ejected from one ventricle in a single beat. The amount pumped each minute is cardiac output, which is the tempting wrong answer because it also describes blood pumped.",
+   "clue": "Think about one single beat, not a whole minute."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's heart rate is 60 bpm and his stroke volume is 80 mL. After a fitness program, his resting heart rate is 50 bpm and his stroke volume is 96 mL. What happens to his resting cardiac output?",
+   "opts": [
+    "It stays the same at 4800 mL per minute",
+    "It rises from 4800 to 5600 mL per minute",
+    "It falls from 4800 to 4000 mL per minute",
+    "It rises from 4800 to 5200 mL per minute"
+   ],
+   "why": "Before: 60 × 80 = 4800 mL per minute. After: 50 × 96 = 4800 mL per minute. The lower heart rate is cancelled out by the larger stroke volume, so the output is unchanged. Looking only at heart rate would suggest it fell.",
+   "clue": "Work out heart rate × stroke volume both before and after."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The blood pumped out by a ventricle in one beat",
+   "also_right": []
+  },
+  "b": {
+   "best": "It stays the same at 4800 mL per minute",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Cardiac output",
+  "card": [
+   [
+    "Heart rate",
+    "the number of times the heart beats each minute. It is measured in beats per minute (bpm)."
+   ],
+   [
+    "Stroke volume",
+    "the amount of blood pumped out by one ventricle in a single beat. It is measured in millilitres (mL)."
+   ],
+   [
+    "Cardiac output",
+    "the amount of blood pumped out by the heart each minute. Cardiac output = heart rate × stroke volume."
+   ],
+   "Cardiac output can rise if heart rate rises, if stroke volume rises, or if both rise. For example, 70 bpm × 70 mL = 4900 mL per minute."
+  ],
+  "remember": "Cardiac output is how much blood leaves the heart each minute: beats per minute times blood per beat.",
+  "a": {
+   "q": "What does stroke volume measure?",
+   "opts": [
+    "The blood pumped out by a ventricle in one beat",
+    "The blood pumped out by the heart in one minute",
+    "The number of heartbeats in one minute",
+    "The total amount of blood in the body"
+   ],
+   "why": "Stroke volume is the blood ejected from one ventricle in a single beat. The amount pumped each minute is cardiac output, which is the tempting wrong answer because it also describes blood pumped.",
+   "clue": "Think about one single beat, not a whole minute."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's heart rate is 60 bpm and his stroke volume is 80 mL. After a fitness program, his resting heart rate is 50 bpm and his stroke volume is 96 mL. What happens to his resting cardiac output?",
+   "opts": [
+    "It stays the same at 4800 mL per minute",
+    "It rises from 4800 to 5600 mL per minute",
+    "It falls from 4800 to 4000 mL per minute",
+    "It rises from 4800 to 5200 mL per minute"
+   ],
+   "why": "Before: 60 × 80 = 4800 mL per minute. After: 50 × 96 = 4800 mL per minute. The lower heart rate is cancelled out by the larger stroke volume, so the output is unchanged. Looking only at heart rate would suggest it fell.",
+   "clue": "Work out heart rate × stroke volume both before and after."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,262 @@
+{
+ "id": "bio-dominant-recessive-codominant-alleles",
+ "title": "Dominant, recessive and codominant alleles",
+ "brief": "a23d381348dc",
+ "shortlist": [
+  [
+   "bio-dominant-recessive-alleles",
+   0.579
+  ],
+  [
+   "bio-sex-linked-inheritance",
+   0.401
+  ],
+  [
+   "bio-codominance-incomplete-dominance",
+   0.388
+  ],
+  [
+   "bio-variation-populations",
+   0.278
+  ],
+  [
+   "bio-pedigrees",
+   0.253
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:29Z check: flagged",
+  "2026-11-01T08:33:48Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00651,
+  "check": 0.01247,
+  "fix": 0.01822,
+  "recheck": 0.01052
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers dominant and recessive alleles together with codominance and incomplete dominance, which is broader than either bank point: the dominant/recessive point lacks codominance, and the codominance point lacks the basic dominance idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Dominant, recessive and codominant alleles",
+  "card": [
+   [
+    "Dominant",
+    "A dominant allele shows in the phenotype when one copy is present. A recessive allele shows only when two copies are present, with no dominant allele."
+   ],
+   [
+    "Codominance",
+    "Both alleles show fully and separately in a heterozygous individual. Human AB blood is an example: both A and B markers appear on the red blood cells."
+   ],
+   [
+    "Incomplete dominance",
+    "Neither allele fully covers the other, so a heterozygote has a blend of the two parent traits. Red and white flowers can give pink offspring."
+   ],
+   "Alleles are written as letters. A capital letter, such as R, is dominant and a small letter, such as r, is recessive. In codominance, each allele is often given its own capital letter."
+  ],
+  "remember": "Dominant hides recessive. Codominant shows both. Incomplete dominance shows a blend.",
+  "a": {
+   "q": "A plant with red flowers is crossed with a plant with white flowers. All the offspring have pink flowers. Which pattern is this?",
+   "opts": [
+    "Incomplete dominance",
+    "Codominance",
+    "Complete dominance",
+    "Recessive inheritance"
+   ],
+   "why": "The offspring show a blend of the two parent colours, so neither allele fully covers the other. In codominance both traits would show separately, such as red and white patches, so that is not the pattern here.",
+   "clue": "Is the colour a blend, or are both colours seen side by side?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A cattle breeder in Gippsland crosses a red cow with a white bull. The calf has a coat with patches of solid red and patches of solid white. What does this show?",
+   "opts": [
+    "Both alleles are fully expressed in the heterozygote",
+    "The red allele is dominant over the white allele",
+    "The two alleles have blended into one new colour",
+    "The white allele is recessive and has been lost"
+   ],
+   "why": "Red and white both appear fully and separately, so the alleles are codominant. A blend would give one in-between colour such as pink or roan-like mixing, and a dominant allele would hide the other, so the calf would be all one colour.",
+   "clue": "Look at whether the two colours are mixed or sit side by side."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Incomplete dominance",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both alleles are fully expressed in the heterozygote",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why calls 'roan-like mixing' a blend. Roan in cattle, with red and white hairs intermixed, is the standard textbook example of codominance, not blending. This contradicts what students are taught and could confuse them."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A recessive allele shows only when two copies are present' is not always true. An X-linked recessive allele shows in males with one copy. This clashes with the sex-linked inheritance taught in the pedigree point. Qualifying it, for example 'for genes on autosomes', would fix it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. The why for (b) wrongly treats roan as blending, when roan is a classic case of codominance. The card's 'only when two copies' rule needs a qualifier for sex-linked genes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why calls 'roan-like mixing' a blend. Roan in cattle, with red and white hairs intermixed, is the standard textbook example of codominance, not blending. This contradicts what students are taught and could confuse them.",
+  "Card, fact: 'A recessive allele shows only when two copies are present' is not always true. An X-linked recessive allele shows in males with one copy. This clashes with the sex-linked inheritance taught in the pedigree point. Qualifying it, for example 'for genes on autosomes', would fix it."
+ ],
+ "proposal": {
+  "title": "Dominant, recessive and codominant alleles",
+  "card": [
+   [
+    "Complete dominance",
+    "For a gene on an autosome (a non-sex chromosome), a dominant allele shows in the phenotype when one copy is present. A recessive allele shows only when two copies are present, with no dominant allele."
+   ],
+   [
+    "Codominance",
+    "Both alleles show fully and separately in a heterozygous individual. Human AB blood is an example: both A and B markers appear on the red blood cells."
+   ],
+   [
+    "Incomplete dominance",
+    "Neither allele fully covers the other, so a heterozygote has a blend of the two parent traits. Red and white flowers can give pink offspring."
+   ],
+   "Alleles are written as letters. A capital letter, such as R, is dominant and a small letter, such as r, is recessive. In codominance, each allele is often given its own capital letter."
+  ],
+  "remember": "Dominant hides recessive. Codominant shows both. Incomplete dominance shows a blend.",
+  "a": {
+   "q": "A plant with red flowers is crossed with a plant with white flowers. All the offspring have pink flowers. Which pattern is this?",
+   "opts": [
+    "Incomplete dominance",
+    "Codominance",
+    "Complete dominance",
+    "Recessive inheritance"
+   ],
+   "why": "The offspring show a blend of the two parent colours, so neither allele fully covers the other. In codominance both traits would show separately, such as red and white patches, so that is not the pattern here.",
+   "clue": "Is the colour a blend, or are both colours seen side by side?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Gippsland breeder crosses a red cow with a white bull. The calf's coat has red hairs and white hairs mixed all over. Each single hair is fully red or fully white. What does this show?",
+   "opts": [
+    "Both alleles are fully expressed in the heterozygote",
+    "The red allele is dominant over the white allele",
+    "The two alleles have blended into one new colour",
+    "The white allele is recessive and has been lost"
+   ],
+   "why": "Every hair is fully red or fully white, so both alleles are expressed side by side. This is codominance. A blend would make each hair one in-between colour, and a dominant allele would hide the other, giving an all-red coat.",
+   "clue": "Look at the colour of each single hair."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Incomplete dominance",
+    "also_right": []
+   },
+   "b": {
+    "best": "Both alleles are fully expressed in the heterozygote",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why calls 'roan-like mixing' a blend. Roan in cattle, with red and white hairs intermixed, is the standard textbook example of codominance, not blending. This contradicts what students are taught and could confuse them."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A recessive allele shows only when two copies are present' is not always true. An X-linked recessive allele shows in males with one copy. This clashes with the sex-linked inheritance taught in the pedigree point. Qualifying it, for example 'for genes on autosomes', would fix it."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why calls 'roan-like mixing' a blend. Roan in cattle, with red and white hairs intermixed, is the standard textbook example of codominance, not blending. This contradicts what students are taught and could confuse them.",
+   "Card, fact: 'A recessive allele shows only when two copies are present' is not always true. An X-linked recessive allele shows in males with one copy. This clashes with the sex-linked inheritance taught in the pedigree point. Qualifying it, for example 'for genes on autosomes', would fix it."
+  ]
+ },
+ "final": {
+  "title": "Dominant, recessive and codominant alleles",
+  "card": [
+   [
+    "Complete dominance",
+    "For a gene on an autosome (a non-sex chromosome), a dominant allele shows in the phenotype when one copy is present. A recessive allele shows only when two copies are present, with no dominant allele."
+   ],
+   [
+    "Codominance",
+    "Both alleles show fully and separately in a heterozygous individual. Human AB blood is an example: both A and B markers appear on the red blood cells."
+   ],
+   [
+    "Incomplete dominance",
+    "Neither allele fully covers the other, so a heterozygote has a blend of the two parent traits. Red and white flowers can give pink offspring."
+   ],
+   "Alleles are written as letters. A capital letter, such as R, is dominant and a small letter, such as r, is recessive. In codominance, each allele is often given its own capital letter."
+  ],
+  "remember": "Dominant hides recessive. Codominant shows both. Incomplete dominance shows a blend.",
+  "a": {
+   "q": "A plant with red flowers is crossed with a plant with white flowers. All the offspring have pink flowers. Which pattern is this?",
+   "opts": [
+    "Incomplete dominance",
+    "Codominance",
+    "Complete dominance",
+    "Recessive inheritance"
+   ],
+   "why": "The offspring show a blend of the two parent colours, so neither allele fully covers the other. In codominance both traits would show separately, such as red and white patches, so that is not the pattern here.",
+   "clue": "Is the colour a blend, or are both colours seen side by side?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A Gippsland breeder crosses a red cow with a white bull. The calf's coat has red hairs and white hairs mixed all over. Each single hair is fully red or fully white. What does this show?",
+   "opts": [
+    "Both alleles are fully expressed in the heterozygote",
+    "The red allele is dominant over the white allele",
+    "The two alleles have blended into one new colour",
+    "The white allele is recessive and has been lost"
+   ],
+   "why": "Every hair is fully red or fully white, so both alleles are expressed side by side. This is codominance. A blend would make each hair one in-between colour, and a dominant allele would hide the other, giving an all-red coat.",
+   "clue": "Look at the colour of each single hair."
+  }
+ },
+ "cleared_by": "recheck"
+}

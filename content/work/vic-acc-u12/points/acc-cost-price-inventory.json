@@ -1,0 +1,186 @@
+{
+ "id": "acc-cost-price-inventory",
+ "title": "The cost price of inventory",
+ "brief": "541245675805",
+ "shortlist": [
+  [
+   "bus-inventory-management",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.0047,
+  "check": 0.00973,
+  "fix": 0.01354
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers inventory management, holding costs and FIFO/LIFO valuation, not the cost price of inventory (purchase cost plus freight in, excluding GST) that the new point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The cost price of inventory",
+  "card": [
+   "Inventory is recorded at its cost price. This is what the business paid to buy the goods and get them ready for sale.",
+   "Costs of getting the goods ready for sale are added to the invoice price. Freight in, which is the cost of delivering the goods to the business, is one example.",
+   "GST is not part of the cost price. A business that is registered for GST can claim it back from the Australian Taxation Office, so it is not a cost to the business.",
+   "Costs after the goods are ready for sale, such as the wages of a shop assistant, are not added to the cost price of inventory."
+  ],
+  "remember": "Cost price is what it cost to buy the goods and get them ready for sale, without GST.",
+  "a": {
+   "q": "Which amount is included in the cost price of inventory?",
+   "opts": [
+    "Freight in paid to deliver the goods to the shop",
+    "GST paid on the purchase of the goods",
+    "Wages paid to a person who serves customers",
+    "Advertising paid to promote the goods for sale"
+   ],
+   "why": "Freight in is a cost of getting the goods to the business so they are ready for sale. Wages for serving customers are a cost after the goods are ready, so they are not added. GST is also left out.",
+   "clue": "Think about costs that happen before the goods can be put on the shelf."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiran's Cycles in Ballarat buys a bike for $600 plus $60 GST. It also pays $40 freight in, plus $4 GST. At what cost price is the bike recorded as inventory?",
+   "opts": [
+    "$640",
+    "$704",
+    "$600",
+    "$660"
+   ],
+   "why": "The cost price is $600 plus $40 freight in, which is $640. Both GST amounts are left out because the business can claim them back. $704 is wrong because it includes GST.",
+   "clue": "Add the cost of getting the bike ready for sale, then leave out all GST."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Freight in paid to deliver the goods to the shop",
+   "also_right": []
+  },
+  "b": {
+   "best": "$640",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card says GST is left out only when a business is registered for GST, but the question never says Kiran's Cycles is registered. For an unregistered business, $704 would be the cost. Add 'which is registered for GST' to the question."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. Question b should say the business is registered for GST, because the card makes leaving out GST depend on registration."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The card says GST is left out only when a business is registered for GST, but the question never says Kiran's Cycles is registered. For an unregistered business, $704 would be the cost. Add 'which is registered for GST' to the question."
+ ],
+ "proposal": {
+  "title": "The cost price of inventory",
+  "card": [
+   "Inventory is recorded at its cost price. This is what the business paid to buy the goods and get them ready for sale.",
+   "Costs of getting the goods ready for sale are added to the invoice price. Freight in, which is the cost of delivering the goods to the business, is one example.",
+   "For a business registered for GST, GST is not part of the cost price. The business can claim it back from the Australian Taxation Office, so it is not a cost to the business.",
+   "Costs after the goods are ready for sale, such as the wages of a shop assistant, are not added to the cost price of inventory."
+  ],
+  "remember": "Cost price is what it cost to buy the goods and get them ready for sale, without GST.",
+  "a": {
+   "q": "A shop registered for GST buys goods to sell. Which amount is included in the cost price of its inventory?",
+   "opts": [
+    "Freight in paid to deliver the goods to the shop",
+    "GST paid on the purchase of the goods",
+    "Wages paid to a person who serves customers",
+    "Advertising paid to promote the goods for sale"
+   ],
+   "why": "Freight in is a cost of getting the goods to the business so they are ready for sale. GST is left out because a registered business can claim it back. Wages for serving customers come after the goods are ready, so they are not added.",
+   "clue": "Think about costs that happen before the goods can be put on the shelf."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiran's Cycles in Ballarat, which is registered for GST, buys a bike for $600 plus $60 GST. It also pays $40 freight in, plus $4 GST. At what cost price is the bike recorded as inventory?",
+   "opts": [
+    "$640",
+    "$704",
+    "$600",
+    "$660"
+   ],
+   "why": "The cost price is $600 plus $40 freight in, which is $640. Both GST amounts are left out because the business is registered for GST and can claim them back. $704 is wrong because it includes GST.",
+   "clue": "Add the cost of getting the bike ready for sale, then leave out all GST."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card says GST is left out only when a business is registered for GST, but the question never says Kiran's Cycles is registered. For an unregistered business, $704 would be the cost. Add 'which is registered for GST' to the question."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The card says GST is left out only when a business is registered for GST, but the question never says Kiran's Cycles is registered. For an unregistered business, $704 would be the cost. Add 'which is registered for GST' to the question."
+  ]
+ },
+ "final": {
+  "title": "The cost price of inventory",
+  "card": [
+   "Inventory is recorded at its cost price. This is what the business paid to buy the goods and get them ready for sale.",
+   "Costs of getting the goods ready for sale are added to the invoice price. Freight in, which is the cost of delivering the goods to the business, is one example.",
+   "For a business registered for GST, GST is not part of the cost price. The business can claim it back from the Australian Taxation Office, so it is not a cost to the business.",
+   "Costs after the goods are ready for sale, such as the wages of a shop assistant, are not added to the cost price of inventory."
+  ],
+  "remember": "Cost price is what it cost to buy the goods and get them ready for sale, without GST.",
+  "a": {
+   "q": "A shop registered for GST buys goods to sell. Which amount is included in the cost price of its inventory?",
+   "opts": [
+    "Freight in paid to deliver the goods to the shop",
+    "GST paid on the purchase of the goods",
+    "Wages paid to a person who serves customers",
+    "Advertising paid to promote the goods for sale"
+   ],
+   "why": "Freight in is a cost of getting the goods to the business so they are ready for sale. GST is left out because a registered business can claim it back. Wages for serving customers come after the goods are ready, so they are not added.",
+   "clue": "Think about costs that happen before the goods can be put on the shelf."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiran's Cycles in Ballarat, which is registered for GST, buys a bike for $600 plus $60 GST. It also pays $40 freight in, plus $4 GST. At what cost price is the bike recorded as inventory?",
+   "opts": [
+    "$640",
+    "$704",
+    "$600",
+    "$660"
+   ],
+   "why": "The cost price is $600 plus $40 freight in, which is $640. Both GST amounts are left out because the business is registered for GST and can claim them back. $704 is wrong because it includes GST.",
+   "clue": "Add the cost of getting the bike ready for sale, then leave out all GST."
+  }
+ },
+ "cleared_by": "auto"
+}

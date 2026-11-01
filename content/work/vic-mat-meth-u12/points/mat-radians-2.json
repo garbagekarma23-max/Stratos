@@ -1,0 +1,52 @@
+{
+ "id": "mat-radians-2",
+ "title": "Radians",
+ "brief": "fd4c5e5f1f46",
+ "shortlist": [
+  [
+   "mat-arcs-sectors",
+   0.714
+  ],
+  [
+   "mat-radians",
+   0.537
+  ],
+  [
+   "mat-sine-rule",
+   0.2
+  ]
+ ],
+ "stage": "match-review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says reuse mat-radians, so to the Opus match check, as every reuse is",
+  "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 may adapt mat-radians, but is not highly sure, so it is for you to review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.0096
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-radians",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at a suitable depth: a radian is the angle whose arc length equals the radius, a full turn is 2π, and it covers conversion to and from degrees, with both questions correct and fair for Year 11 Methods.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-radians",
+  "changes": [
+   "Define the radian through arc length on the unit circle, as the Victorian Mathematical Methods course does, rather than only through a general circle where the arc equals the radius.",
+   "Add a line stating that arc length equals radius times angle in radians (l = rθ). The card's own definition already implies this."
+  ],
+  "sure": "medium",
+  "reason": "The bank's Radians card teaches the same idea at a Year 11 depth, with a full turn of 2π. It needs only the unit-circle framing and an explicit arc-length line to match the Victorian brief.",
+  "model": "claude-opus-5-5"
+ }
+}

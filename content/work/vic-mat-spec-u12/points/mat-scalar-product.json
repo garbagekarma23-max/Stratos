@@ -1,0 +1,193 @@
+{
+ "id": "mat-scalar-product",
+ "title": "The scalar product",
+ "brief": "c5c604321dab",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00504,
+  "check": 0.00894,
+  "fix": 0.01385,
+  "recheck": 0.00787
+ },
+ "draft": {
+  "title": "The scalar product",
+  "card": [
+   "The scalar product of two vectors a and b is a·b = |a||b|cos θ, where θ is the angle between them when they start at the same point. The answer is a number, not a vector.",
+   "With components, if a = a₁i + a₂j and b = b₁i + b₂j, then a·b = a₁b₁ + a₂b₂. Example: (2i + 3j)·(4i − j) = 2×4 + 3×(−1) = 5.",
+   "If θ = 90°, then cos θ = 0, so a·b = 0. If two non-zero vectors have a·b = 0, they are perpendicular.",
+   "To find the angle, rearrange: cos θ = a·b ÷ (|a||b|). A positive scalar product means θ is below 90°. A negative one means θ is above 90°."
+  ],
+  "remember": "Multiply matching components and add. A result of zero means the vectors are perpendicular.",
+  "a": {
+   "q": "What is the scalar product of a = 3i + 2j and b = 4i − 5j?",
+   "opts": [
+    "2",
+    "22",
+    "−2",
+    "12i − 10j"
+   ],
+   "why": "a·b = 3×4 + 2×(−5) = 12 − 10 = 2. The answer 22 comes from a sign error, treating −5 as 5. The answer 12i − 10j wrongly keeps the vector form, but a scalar product is a number.",
+   "clue": "Multiply the i parts, multiply the j parts, then add."
+  },
+  "b": {
+   "d": 3,
+   "q": "For which value of k are p = 3i + kj and q = 2i + 6j perpendicular?",
+   "opts": [
+    "k = −1",
+    "k = 1",
+    "k = −9",
+    "k = 9"
+   ],
+   "why": "Perpendicular means p·q = 0. So 3×2 + k×6 = 0, which gives 6 + 6k = 0 and k = −1. Check: 6 + 6×(−1) = 0. The value k = 1 gives 12, not zero, so it comes from a sign error.",
+   "clue": "Set the scalar product equal to zero and solve for k."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2",
+   "also_right": []
+  },
+  "b": {
+   "best": "k = −1",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The remember line says a scalar product of zero means the vectors are perpendicular. It drops the card's condition that both vectors must be non-zero, and the zero vector gives a scalar product of zero with any vector."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct. The remember line leaves out the card's 'non-zero vectors' condition, so it overstates when a zero scalar product means the vectors are perpendicular."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: The remember line says a scalar product of zero means the vectors are perpendicular. It drops the card's condition that both vectors must be non-zero, and the zero vector gives a scalar product of zero with any vector."
+ ],
+ "proposal": {
+  "title": "The scalar product",
+  "card": [
+   "The scalar product of two vectors a and b is a·b = |a||b|cos θ, where θ is the angle between them when they start at the same point. The answer is a number, not a vector.",
+   "With components, if a = a₁i + a₂j and b = b₁i + b₂j, then a·b = a₁b₁ + a₂b₂. Example: (2i + 3j)·(4i − j) = 2×4 + 3×(−1) = 5.",
+   "If θ = 90°, then cos θ = 0, so a·b = 0. If two non-zero vectors have a·b = 0, they are perpendicular.",
+   "To find the angle, rearrange: cos θ = a·b ÷ (|a||b|). A positive scalar product means θ is below 90°. A negative one means θ is above 90°."
+  ],
+  "remember": "Multiply matching components and add. For two non-zero vectors, a result of zero means they are perpendicular.",
+  "a": {
+   "q": "What is the scalar product of a = 3i + 2j and b = 4i − 5j?",
+   "opts": [
+    "2",
+    "22",
+    "−2",
+    "12i − 10j"
+   ],
+   "why": "a·b = 3×4 + 2×(−5) = 12 − 10 = 2. The answer 22 comes from a sign error, treating −5 as 5. The answer 12i − 10j wrongly keeps the vector form, but a scalar product is a number.",
+   "clue": "Multiply the i parts, multiply the j parts, then add."
+  },
+  "b": {
+   "d": 3,
+   "q": "For which value of k are p = 3i + kj and q = 2i + 6j perpendicular?",
+   "opts": [
+    "k = −1",
+    "k = 1",
+    "k = −9",
+    "k = 9"
+   ],
+   "why": "Both vectors are non-zero, so they are perpendicular when p·q = 0. So 3×2 + k×6 = 0, which gives 6 + 6k = 0 and k = −1. The value k = 1 gives 12, not zero, so it comes from a sign error. The value k = −9 comes from multiplying the wrong components together.",
+   "clue": "Set the scalar product equal to zero and solve for k."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2",
+    "also_right": []
+   },
+   "b": {
+    "best": "k = −1",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: a·b = 12 − 10 = 2, and 6 + 6k = 0 gives k = −1. The distractors match the errors the explanations describe."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The remember line says a scalar product of zero means the vectors are perpendicular. It drops the card's condition that both vectors must be non-zero, and the zero vector gives a scalar product of zero with any vector."
+   }
+  ],
+  "flags": [
+   "Remember, fact: The remember line says a scalar product of zero means the vectors are perpendicular. It drops the card's condition that both vectors must be non-zero, and the zero vector gives a scalar product of zero with any vector."
+  ]
+ },
+ "final": {
+  "title": "The scalar product",
+  "card": [
+   "The scalar product of two vectors a and b is a·b = |a||b|cos θ, where θ is the angle between them when they start at the same point. The answer is a number, not a vector.",
+   "With components, if a = a₁i + a₂j and b = b₁i + b₂j, then a·b = a₁b₁ + a₂b₂. Example: (2i + 3j)·(4i − j) = 2×4 + 3×(−1) = 5.",
+   "If θ = 90°, then cos θ = 0, so a·b = 0. If two non-zero vectors have a·b = 0, they are perpendicular.",
+   "To find the angle, rearrange: cos θ = a·b ÷ (|a||b|). A positive scalar product means θ is below 90°. A negative one means θ is above 90°."
+  ],
+  "remember": "Multiply matching components and add. For two non-zero vectors, a result of zero means they are perpendicular.",
+  "a": {
+   "q": "What is the scalar product of a = 3i + 2j and b = 4i − 5j?",
+   "opts": [
+    "2",
+    "22",
+    "−2",
+    "12i − 10j"
+   ],
+   "why": "a·b = 3×4 + 2×(−5) = 12 − 10 = 2. The answer 22 comes from a sign error, treating −5 as 5. The answer 12i − 10j wrongly keeps the vector form, but a scalar product is a number.",
+   "clue": "Multiply the i parts, multiply the j parts, then add."
+  },
+  "b": {
+   "d": 3,
+   "q": "For which value of k are p = 3i + kj and q = 2i + 6j perpendicular?",
+   "opts": [
+    "k = −1",
+    "k = 1",
+    "k = −9",
+    "k = 9"
+   ],
+   "why": "Both vectors are non-zero, so they are perpendicular when p·q = 0. So 3×2 + k×6 = 0, which gives 6 + 6k = 0 and k = −1. The value k = 1 gives 12, not zero, so it comes from a sign error. The value k = −9 comes from multiplying the wrong components together.",
+   "clue": "Set the scalar product equal to zero and solve for k."
+  }
+ },
+ "cleared_by": "recheck"
+}

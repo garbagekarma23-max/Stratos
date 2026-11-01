@@ -1,0 +1,128 @@
+{
+ "id": "mat-radians-arcs-segments",
+ "title": "Radians, arcs and segments",
+ "brief": "2a94adbf8f0b",
+ "shortlist": [
+  [
+   "mat-arcs-sectors",
+   0.723
+  ],
+  [
+   "mat-radians",
+   0.424
+  ],
+  [
+   "bus-market-segmentation",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00979,
+  "check": 0.00862
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point also covers radian measure and segment areas, which neither bank point teaches fully: mat-arcs-sectors lacks segments and mat-radians lacks arc length and sector area, so no single bank point matches it.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Radians, arcs and segments",
+  "card": [
+   "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is π radians, so π radians = 180°.",
+   "To change degrees to radians, multiply by π/180. To change radians to degrees, multiply by 180/π.",
+   "With θ in radians, arc length = rθ and sector area = ½r²θ. These formulas only work when θ is in radians.",
+   "A segment is a sector with its triangle removed. The triangle has area ½r² sin θ, so segment area = ½r²(θ − sin θ). Example: r = 6 and θ = π/3 give arc length 2π and sector area 6π."
+  ],
+  "remember": "Use radians in the formulas: arc = rθ, sector = ½r²θ, segment = sector − triangle.",
+  "a": {
+   "q": "A sector of a circle has radius 5 cm and centre angle 2 radians. What is its arc length?",
+   "opts": [
+    "10 cm",
+    "25 cm",
+    "5 cm",
+    "20 cm"
+   ],
+   "why": "Arc length = rθ = 5 × 2 = 10 cm. The value 25 comes from the sector area formula ½r²θ, which gives an area in cm², not a length.",
+   "clue": "Multiply the radius by the angle in radians."
+  },
+  "b": {
+   "d": 3,
+   "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle π/2. What is the area of the segment?",
+   "opts": [
+    "4π − 8 cm²",
+    "4π cm²",
+    "8π − 8 cm²",
+    "4π − 4 cm²"
+   ],
+   "why": "Sector = ½ × 16 × π/2 = 4π. Triangle = ½ × 16 × sin(π/2) = 8. Segment = 4π − 8 cm². Choosing 4π gives the whole sector, which still includes the triangle.",
+   "clue": "Take the triangle's area away from the sector's area."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "4π − 8 cm²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's worked example, both questions and both explanations are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Radians, arcs and segments",
+  "card": [
+   "One radian is the angle at the centre of a circle when the arc is as long as the radius. A half turn is π radians, so π radians = 180°.",
+   "To change degrees to radians, multiply by π/180. To change radians to degrees, multiply by 180/π.",
+   "With θ in radians, arc length = rθ and sector area = ½r²θ. These formulas only work when θ is in radians.",
+   "A segment is a sector with its triangle removed. The triangle has area ½r² sin θ, so segment area = ½r²(θ − sin θ). Example: r = 6 and θ = π/3 give arc length 2π and sector area 6π."
+  ],
+  "remember": "Use radians in the formulas: arc = rθ, sector = ½r²θ, segment = sector − triangle.",
+  "a": {
+   "q": "A sector of a circle has radius 5 cm and centre angle 2 radians. What is its arc length?",
+   "opts": [
+    "10 cm",
+    "25 cm",
+    "5 cm",
+    "20 cm"
+   ],
+   "why": "Arc length = rθ = 5 × 2 = 10 cm. The value 25 comes from the sector area formula ½r²θ, which gives an area in cm², not a length.",
+   "clue": "Multiply the radius by the angle in radians."
+  },
+  "b": {
+   "d": 3,
+   "q": "A circle has radius 4 cm. A chord cuts off a segment with centre angle π/2. What is the area of the segment?",
+   "opts": [
+    "4π − 8 cm²",
+    "4π cm²",
+    "8π − 8 cm²",
+    "4π − 4 cm²"
+   ],
+   "why": "Sector = ½ × 16 × π/2 = 4π. Triangle = ½ × 16 × sin(π/2) = 8. Segment = 4π − 8 cm². Choosing 4π gives the whole sector, which still includes the triangle.",
+   "clue": "Take the triangle's area away from the sector's area."
+  }
+ },
+ "cleared_by": "checker"
+}

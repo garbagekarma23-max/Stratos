@@ -1,0 +1,433 @@
+{
+ "id": "eco-changes-equilibrium",
+ "title": "Changes in equilibrium",
+ "brief": "2ed7a0eb958f",
+ "shortlist": [
+  [
+   "e-equilibrium",
+   0.668
+  ],
+  [
+   "e-maxmin",
+   0.319
+  ],
+  [
+   "e-supply",
+   0.3
+  ],
+  [
+   "e-demand",
+   0.29
+  ],
+  [
+   "e-macroeq",
+   0.283
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt e-equilibrium, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:33:49Z write: done",
+  "2026-11-01T08:42:05Z check: flagged",
+  "2026-11-01T08:44:26Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (card other)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: flagged",
+  "2026-11-01T13:49:26Z fix: suggested",
+  "2026-11-01T14:33:56Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 2,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.00857,
+  "write": 0.01601,
+  "check": 0.02288,
+  "fix": 0.05426,
+  "recheck": 0.01258
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "e-equilibrium",
+  "changes": [
+   "Replace the Netherlands electric bike and China pork examples in the questions with Australian or Victorian market examples, since the course is for students in Victoria."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea at the right depth, including the rule that demand shifts move price and quantity together while supply shifts move them oppositely, but its examples are foreign and should be localised for a Victorian VCE course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, e-equilibrium, also covers what equilibrium is and how a market clears, so it is broader than this point, which teaches only how shifts in demand or supply change the equilibrium.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The first bullet defines market equilibrium (quantity demanded equals quantity supplied), which is point 5's idea. This point could simply mention equilibrium rather than define it again.",
+ "rejected": {
+  "title": "Changes in equilibrium",
+  "card": [
+   "A market is in equilibrium where quantity demanded equals quantity supplied. A shift in demand or supply breaks that balance, and the market settles at a new equilibrium price and quantity.",
+   [
+    "Demand shifts",
+    "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+   ],
+   [
+    "Supply shifts",
+    "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+   ],
+   "First decide which curve shifted and which way. A change that affects buyers shifts demand, and a change that affects sellers shifts supply. Then read off the new price and quantity."
+  ],
+  "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+  "a": {
+   "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+   "opts": [
+    "Price rises and quantity falls",
+    "Price rises and quantity rises",
+    "Price falls and quantity falls",
+    "Price falls and quantity rises"
+   ],
+   "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+   "clue": "Does the rain affect buyers or sellers?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+   "opts": [
+    "Price rises and quantity rises",
+    "Price rises and quantity falls",
+    "Price falls and quantity rises",
+    "Price falls and quantity falls"
+   ],
+   "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+   "clue": "Start by asking whose plans a change in income affects."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "auto",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The first bullet defines market equilibrium (quantity demanded equals quantity supplied), which is point 5's idea. This point could simply mention equilibrium rather than define it again."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Changes in equilibrium",
+     "card": [
+      "A market is in equilibrium where quantity demanded equals quantity supplied. A shift in demand or supply breaks that balance, and the market settles at a new equilibrium price and quantity.",
+      [
+       "Demand shifts",
+       "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+      ],
+      [
+       "Supply shifts",
+       "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+      ],
+      "To work out a change, first decide which curve shifted and which way. Then read off the new price and quantity. Demand moves price and quantity the same way. Supply moves them in opposite ways."
+     ],
+     "remember": "Find the curve that shifted and its direction, then read off the new price and quantity.",
+     "a": {
+      "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+      "opts": [
+       "Price rises and quantity falls",
+       "Price rises and quantity rises",
+       "Price falls and quantity falls",
+       "Price falls and quantity rises"
+      ],
+      "why": "The crop loss decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens only when demand increases.",
+      "clue": "Which curve shifted, and which way?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+      "opts": [
+       "Price rises and quantity rises",
+       "Price rises and quantity falls",
+       "Price falls and quantity rises",
+       "Price falls and quantity falls"
+      ],
+      "why": "Higher incomes increase demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price does not fall, because falling price comes with an increase in supply.",
+      "clue": "Demand moves price and quantity the same way."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Price rises and quantity falls",
+      "also_right": []
+     },
+     "b": {
+      "best": "Price rises and quantity rises",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says a falling price 'comes with an increase in supply', but a decrease in demand also lowers price. It should say that a falling price here would need an increase in supply or a decrease in demand, neither of which happened."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Demand moves price and quantity the same way' tells the student that demand is the curve that shifted, which is the step the question is testing. That leaves only two options, so the clue gives away much of the answer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are clear and correct. The why for (b) wrongly says a falling price comes only from an increase in supply (a fall in demand also lowers price), and the clue for (b) gives away which curve shifted."
+    },
+    "flags": [
+     "Question b, fact: The why says a falling price 'comes with an increase in supply', but a decrease in demand also lowers price. It should say that a falling price here would need an increase in supply or a decrease in demand, neither of which happened.",
+     "Question b, other: The clue 'Demand moves price and quantity the same way' tells the student that demand is the curve that shifted, which is the step the question is testing. That leaves only two options, so the clue gives away much of the answer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Changes in equilibrium",
+     "card": [
+      "A market is in equilibrium where quantity demanded equals quantity supplied. A shift in demand or supply breaks that balance, and the market settles at a new equilibrium price and quantity.",
+      [
+       "Demand shifts",
+       "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+      ],
+      [
+       "Supply shifts",
+       "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+      ],
+      "First decide which curve shifted and which way. A change that affects buyers shifts demand, and a change that affects sellers shifts supply. Then read off the new price and quantity."
+     ],
+     "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+     "a": {
+      "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+      "opts": [
+       "Price rises and quantity falls",
+       "Price rises and quantity rises",
+       "Price falls and quantity falls",
+       "Price falls and quantity rises"
+      ],
+      "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+      "clue": "Does the rain affect buyers or sellers?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+      "opts": [
+       "Price rises and quantity rises",
+       "Price rises and quantity falls",
+       "Price falls and quantity rises",
+       "Price falls and quantity falls"
+      ],
+      "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+      "clue": "Start by asking whose plans a change in income affects."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Price rises and quantity falls",
+       "also_right": []
+      },
+      "b": {
+       "best": "Price rises and quantity rises",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The first bullet defines market equilibrium (quantity demanded equals quantity supplied), which is point 5's idea. This point could simply mention equilibrium rather than define it again."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and the explanations agree with the card. The only issue is minor: the card re-defines market equilibrium, which belongs to point 5."
+     },
+     "flags": [
+      "Card, other: The first bullet defines market equilibrium (quantity demanded equals quantity supplied), which is point 5's idea. This point could simply mention equilibrium rather than define it again."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Changes in equilibrium",
+  "card": [
+   "A shift in demand or supply moves the market to a new equilibrium price and quantity. The skill is working out which way each one moves.",
+   [
+    "Demand shifts",
+    "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+   ],
+   [
+    "Supply shifts",
+    "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+   ],
+   "First decide which curve shifted and which way. A change that affects buyers shifts demand, and a change that affects sellers shifts supply. Then read off the new price and quantity."
+  ],
+  "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+  "a": {
+   "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+   "opts": [
+    "Price rises and quantity falls",
+    "Price rises and quantity rises",
+    "Price falls and quantity falls",
+    "Price falls and quantity rises"
+   ],
+   "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+   "clue": "Does the rain affect buyers or sellers?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+   "opts": [
+    "Price rises and quantity rises",
+    "Price rises and quantity falls",
+    "Price falls and quantity rises",
+    "Price falls and quantity falls"
+   ],
+   "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+   "clue": "Start by asking whose plans a change in income affects."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Price rises and quantity falls",
+   "also_right": []
+  },
+  "b": {
+   "best": "Price rises and quantity rises",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"A change that affects buyers shifts demand, and a change that affects sellers shifts supply\" is too broad. A change in the good's own price affects both buyers and sellers, yet it causes a movement along the curves, not a shift. Limit the rule to non-price factors, for example \"a change in something other than the price\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and each has one right answer. One card line needs tightening: the buyers/sellers rule should say it applies to changes other than the good's own price, since a price change moves along the curves rather than shifting them."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"A change that affects buyers shifts demand, and a change that affects sellers shifts supply\" is too broad. A change in the good's own price affects both buyers and sellers, yet it causes a movement along the curves, not a shift. Limit the rule to non-price factors, for example \"a change in something other than the price\"."
+ ],
+ "proposal": {
+  "title": "Changes in equilibrium",
+  "card": [
+   "A shift in demand or supply moves the market to a new equilibrium price and quantity. The skill is working out which way each one moves.",
+   [
+    "Demand shifts",
+    "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+   ],
+   [
+    "Supply shifts",
+    "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+   ],
+   "First decide which curve shifted and which way. A change in something other than the good's own price shifts demand if it affects buyers, and shifts supply if it affects sellers."
+  ],
+  "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+  "a": {
+   "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+   "opts": [
+    "Price rises and quantity falls",
+    "Price rises and quantity rises",
+    "Price falls and quantity falls",
+    "Price falls and quantity rises"
+   ],
+   "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+   "clue": "Does the rain affect buyers or sellers?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+   "opts": [
+    "Price rises and quantity rises",
+    "Price rises and quantity falls",
+    "Price falls and quantity rises",
+    "Price falls and quantity falls"
+   ],
+   "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+   "clue": "Start by asking whose plans a change in income affects."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T14:33:56Z",
+  "rules": 1,
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"A change that affects buyers shifts demand, and a change that affects sellers shifts supply\" is too broad. A change in the good's own price affects both buyers and sellers, yet it causes a movement along the curves, not a shift. Limit the rule to non-price factors, for example \"a change in something other than the price\"."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"A change that affects buyers shifts demand, and a change that affects sellers shifts supply\" is too broad. A change in the good's own price affects both buyers and sellers, yet it causes a movement along the curves, not a shift. Limit the rule to non-price factors, for example \"a change in something other than the price\"."
+  ]
+ },
+ "final": {
+  "title": "Changes in equilibrium",
+  "card": [
+   "A shift in demand or supply moves the market to a new equilibrium price and quantity. The skill is working out which way each one moves.",
+   [
+    "Demand shifts",
+    "An increase in demand shifts the curve right, so price and quantity both rise. A decrease in demand shifts it left, so price and quantity both fall."
+   ],
+   [
+    "Supply shifts",
+    "An increase in supply shifts the curve right, so price falls and quantity rises. A decrease in supply shifts it left, so price rises and quantity falls."
+   ],
+   "First decide which curve shifted and which way. A change in something other than the good's own price shifts demand if it affects buyers, and shifts supply if it affects sellers."
+  ],
+  "remember": "Demand shifts move price and quantity the same way. Supply shifts move them in opposite ways.",
+  "a": {
+   "q": "Heavy rain destroys part of the tomato crop in Victoria, and nothing else changes. What happens in the tomato market?",
+   "opts": [
+    "Price rises and quantity falls",
+    "Price rises and quantity rises",
+    "Price falls and quantity falls",
+    "Price falls and quantity rises"
+   ],
+   "why": "The crop loss affects sellers and decreases supply, so the supply curve shifts left. Price rises and the quantity traded falls. Price and quantity do not both rise, because that happens when demand increases.",
+   "clue": "Does the rain affect buyers or sellers?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Incomes rise across Geelong, and nothing else changes. What happens in the market for restaurant meals there?",
+   "opts": [
+    "Price rises and quantity rises",
+    "Price rises and quantity falls",
+    "Price falls and quantity rises",
+    "Price falls and quantity falls"
+   ],
+   "why": "Higher incomes let buyers spend more, which increases demand for restaurant meals, so the demand curve shifts right. Price and quantity both rise. Price would fall only with an increase in supply or a decrease in demand, and neither happened here.",
+   "clue": "Start by asking whose plans a change in income affects."
+  }
+ }
+}

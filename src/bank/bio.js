@@ -1829,5 +1829,1838 @@ MADE_BANKS.bio = {
       "why": "Dialysis does the filtering job of the failed kidneys, so wastes do not build up in his blood. The option about repairing the kidneys is the tempting wrong answer: dialysis treats the effect of kidney failure but does not restore the organ.",
       "clue": "Dialysis takes over a job. Does it fix the organ?"
     }
+  },
+  "bio-cell-theory-2": {
+    "title": "Cell theory",
+    "card": [
+      "Cell theory has three parts. The first is that all living things are made of one or more cells.",
+      "The second is that the cell is the basic unit of life. It is the smallest thing that can carry out the functions of life, such as growing, using energy and responding to its surroundings. Molecules inside a cell are smaller, but they cannot live on their own.",
+      "The third is that new cells come only from existing cells. Cells form when a cell that was already there divides, not from non-living matter.",
+      "Some organisms are a single cell, such as an amoeba. Others, such as a eucalypt tree, are made of billions of cells."
+    ],
+    "remember": "Life is made of cells, cells are the basic unit, and cells come from cells.",
+    "a": {
+      "q": "What does it mean to say the cell is the basic unit of life?",
+      "opts": [
+        "It is the smallest thing that can carry out life's functions",
+        "It is the smallest particle that makes up a living thing",
+        "It is a structure found only in organisms with many cells",
+        "It is the largest structure found inside a living thing"
+      ],
+      "why": "A cell is the smallest thing that can grow, use energy and respond by itself. It is not the smallest particle in a living thing: molecules inside a cell are smaller, but they cannot live on their own.",
+      "clue": "Think about what can stay alive by itself."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia sterilises a nutrient broth in a sealed flask and finds no cells in it. Weeks later it is still sealed and still has no cells. Which idea does this fit?",
+      "opts": [
+        "New cells come only from existing cells",
+        "All living things are made of cells",
+        "The cell is the basic unit of life",
+        "Living things can form from non-living matter"
+      ],
+      "why": "No cells appeared because there were no existing cells in the flask to divide. This fits the idea that new cells come only from existing cells. The result says nothing about what living things are made of, and it goes against the idea that life forms from non-living matter.",
+      "clue": "Where could new cells in the flask have come from?"
+    }
+  },
+  "bio-prokaryotic-eukaryotic-cells-2": {
+    "title": "Prokaryotic and eukaryotic cells",
+    "card": [
+      [
+        "Prokaryotic cell",
+        "a cell with no nucleus and no membrane-bound organelles. Its DNA lies free in the cytoplasm. Bacteria are prokaryotes."
+      ],
+      [
+        "Eukaryotic cell",
+        "a cell with a nucleus and membrane-bound organelles. The nucleus holds the DNA inside its own membrane. Animals, plants, fungi and protists are made of eukaryotic cells."
+      ],
+      "A membrane-bound organelle is a compartment inside a cell that is wrapped in its own membrane. It lets different jobs happen in separate spaces.",
+      "Both types of cell have a plasma membrane, cytoplasm, ribosomes and DNA. The difference is whether the DNA and organelles sit inside membranes."
+    ],
+    "remember": "Prokaryotes have no nucleus or membrane-bound organelles. Eukaryotes have both.",
+    "a": {
+      "q": "A cell is examined under an electron microscope. Its DNA lies free in the cytoplasm and no organelles have membranes. What type of cell is it?",
+      "opts": [
+        "Prokaryotic, because it has no nucleus",
+        "Eukaryotic, because it has DNA",
+        "Prokaryotic, because it has no ribosomes",
+        "Eukaryotic, because it has cytoplasm"
+      ],
+      "why": "DNA that lies free, with no membrane-bound organelles, shows a prokaryotic cell. Having DNA does not make a cell eukaryotic, because both types have DNA.",
+      "clue": "Which feature do only eukaryotes have around their DNA?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dr Lin finds that a cell from a pond sample has ribosomes, a plasma membrane and DNA inside a nucleus. What can she conclude?",
+      "opts": [
+        "It is eukaryotic, because its DNA is in a nucleus",
+        "It is prokaryotic, because it has ribosomes",
+        "It is prokaryotic, because it has a plasma membrane",
+        "It is eukaryotic, because it has ribosomes"
+      ],
+      "why": "A nucleus means the cell is eukaryotic. Ribosomes and a plasma membrane are found in both prokaryotic and eukaryotic cells, so they cannot show which type it is.",
+      "clue": "Only one of these features is found in just one cell type."
+    }
+  },
+  "bio-surface-area-volume-ratio-2": {
+    "title": "Surface area to volume ratio",
+    "card": [
+      "Materials such as oxygen and nutrients enter a cell, and wastes leave it, across its surface. The surface area is the total area of the cell's outer surface.",
+      "The volume is the space inside the cell. The inside needs a supply of materials, and the demand grows with volume.",
+      "As a cell grows, its volume increases faster than its surface area. So the surface area to volume ratio falls.",
+      "A cell with a low ratio has less surface for each unit of volume. Exchange may not meet its needs, which limits how large cells can grow."
+    ],
+    "remember": "Bigger cell, lower surface area to volume ratio, so exchange may not keep up.",
+    "a": {
+      "q": "A cell doubles in diameter. What happens to its surface area to volume ratio?",
+      "opts": [
+        "It falls, because volume rises faster than surface area",
+        "It rises, because surface area rises faster than volume",
+        "It stays the same, because both increase together",
+        "It rises, because a larger cell has more surface"
+      ],
+      "why": "Volume increases faster than surface area as a cell grows, so there is less surface for each unit of volume. The ratio falls. A larger cell does have more surface in total, but the ratio compares it with volume.",
+      "clue": "Compare how fast volume rises with how fast surface area rises."
+    },
+    "b": {
+      "d": 3,
+      "q": "Cell X is small and cell Y is much larger. Both have the same shape and need materials in proportion to their volume. Which statement is correct?",
+      "opts": [
+        "Cell Y has less surface for each unit of volume than cell X",
+        "Cell Y has more surface for each unit of volume than cell X",
+        "Cell Y has more total surface, so it exchanges more per unit",
+        "Cell X has a lower ratio, because it has less total surface"
+      ],
+      "why": "The larger cell has a lower ratio, so it has less surface for each unit of volume. It has more surface in total, but less for each unit of volume it must supply. So exchange may not meet its needs, which is why the ratio limits cell size.",
+      "clue": "Think about surface for each unit of volume, not total surface."
+    }
+  },
+  "bio-organelles-their-jobs-2": {
+    "title": "Organelles and their jobs",
+    "card": [
+      "Organelles are small structures inside a cell. Each one does a particular job, so the cell can carry out many tasks at once.",
+      ["Nucleus", "holds the cell's DNA, which contains the instructions for making proteins."],
+      [
+        "Mitochondria",
+        "release energy from glucose in a form the cell can use, called ATP. Ribosomes make proteins by joining amino acids together."
+      ],
+      [
+        "Chloroplasts",
+        "carry out photosynthesis, which uses light energy to make glucose. They are found in plant cells and some other organisms, such as algae."
+      ]
+    ],
+    "remember": "Nucleus: DNA. Mitochondria: energy release. Ribosomes: proteins. Chloroplasts: photosynthesis.",
+    "a": {
+      "q": "A cell is making large amounts of protein. Which organelle is directly joining amino acids together?",
+      "opts": ["Ribosome", "Nucleus", "Mitochondrion", "Chloroplast"],
+      "why": "Ribosomes join amino acids to make proteins. The nucleus holds the DNA instructions, but it does not assemble the protein itself.",
+      "clue": "Which organelle does the building, not the storing of instructions?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Heart muscle cells contract nonstop and need a steady supply of ATP. Which organelle supplies this ATP, so it is found in large numbers?",
+      "opts": ["Mitochondria", "Ribosomes", "Nuclei", "Chloroplasts"],
+      "why": "Mitochondria release energy from glucose as ATP, so cells with a constant energy demand have many of them. Ribosomes make proteins and the nucleus holds DNA, so neither supplies ATP. Heart cells do not photosynthesise, so they have no chloroplasts.",
+      "clue": "Which organelle releases energy in a form the cell can use?"
+    }
+  },
+  "bio-plant-animal-cells-compared-2": {
+    "title": "Plant and animal cells compared",
+    "card": [
+      "Plant cells and animal cells are both eukaryotic. Both have a nucleus, mitochondria, ribosomes and a plasma membrane.",
+      [
+        "Cell wall",
+        "a rigid layer outside the plasma membrane of a plant cell. It supports the cell and gives it a fixed, regular shape. Animal cells have no cell wall."
+      ],
+      [
+        "Chloroplasts",
+        "found in the green parts of plants, where they carry out photosynthesis. Animal cells have no chloroplasts, so they cannot make food this way."
+      ],
+      [
+        "Large vacuole",
+        "a plant cell often has one large central vacuole that stores water and dissolved substances. Animal cells have no large central vacuole, though some have small ones."
+      ]
+    ],
+    "remember": "A cell wall marks a plant cell. Chloroplasts and a large central vacuole are plant features, but not every plant cell has them.",
+    "a": {
+      "q": "Which structure is found in a plant cell but not in an animal cell?",
+      "opts": ["A cell wall", "A nucleus", "A plasma membrane", "A mitochondrion"],
+      "why": "A cell wall sits outside the plasma membrane of plant cells only. The nucleus, plasma membrane and mitochondria are found in both cell types, so they cannot tell the two apart.",
+      "clue": "Both cell types are eukaryotic, so think of what only plants add."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student views a cell under a microscope. It has a nucleus and mitochondria, but no cell wall, no chloroplasts and no large central vacuole. What can the student conclude?",
+      "opts": [
+        "It is consistent with an animal cell",
+        "It must be a prokaryotic cell",
+        "It is consistent with a root cell of a plant",
+        "It cannot be a eukaryotic cell"
+      ],
+      "why": "A nucleus and mitochondria show the cell is eukaryotic. With no cell wall, it fits an animal cell. A plant root cell may lack chloroplasts because it is not green, but it would still have a cell wall.",
+      "clue": "Which plant feature is found in every plant cell, green or not?"
+    }
+  },
+  "bio-fluid-mosaic-model-2": {
+    "title": "The fluid mosaic model",
+    "card": [
+      "The plasma membrane is made of a phospholipid bilayer: two layers of phospholipids. Each phospholipid has a water-loving head and two water-fearing tails.",
+      "The heads face the watery fluid inside and outside the cell. The tails face each other in the middle, away from water.",
+      "Proteins, cholesterol and carbohydrates are scattered through or on the bilayer. Cholesterol sits between phospholipids. Carbohydrates are attached to the outer surface.",
+      "The parts can move sideways within the layer, so the membrane is fluid. The mix of different parts looks like a mosaic, so the model is called fluid mosaic."
+    ],
+    "remember": "The membrane is a flexible bilayer with mixed parts that can move within it.",
+    "a": {
+      "q": "In the plasma membrane, why do the phospholipid tails face the middle of the bilayer?",
+      "opts": [
+        "They are water-fearing, so they face away from water",
+        "They are water-loving, so they face towards water",
+        "They bond to the cholesterol in the centre",
+        "They are attached to carbohydrates on the outside"
+      ],
+      "why": "The tails are water-fearing, so they point inwards, away from the watery fluid on both sides of the membrane. The heads are the water-loving part, and they face the fluid.",
+      "clue": "Think about which part of a phospholipid avoids water."
+    },
+    "b": {
+      "d": 2,
+      "q": "A student studies a plasma membrane and sees that its proteins are not fixed in one place but drift sideways. Which part of the fluid mosaic model does this show?",
+      "opts": [
+        "The membrane is fluid because its parts can move",
+        "The membrane is a mosaic because it has two layers",
+        "The membrane is fluid because it has no proteins",
+        "The membrane is a mosaic because its parts are fixed"
+      ],
+      "why": "Parts that drift sideways within the layer make the membrane fluid. The mosaic describes the mixture of different parts, not the two layers of the bilayer.",
+      "clue": "Fluid describes movement, and mosaic describes the mix of parts."
+    }
+  },
+  "bio-diffusion-osmosis-2": {
+    "title": "Diffusion and osmosis",
+    "card": [
+      [
+        "Diffusion",
+        "the net movement of particles from a region of higher concentration to a region of lower concentration. It needs no energy from the cell."
+      ],
+      [
+        "Osmosis",
+        "the diffusion of water across a selectively permeable membrane, one that lets some substances through but not others. Water moves from higher to lower water concentration."
+      ],
+      "A solution with more dissolved solute has a lower water concentration. So water moves towards the side with more solute.",
+      "Movement continues until the concentrations are equal, or until something stops it. Particles still move at equilibrium, but there is no net change."
+    ],
+    "remember": "Both are passive and move from higher to lower concentration. Osmosis is the water version.",
+    "a": {
+      "q": "Which statement correctly describes osmosis?",
+      "opts": [
+        "Water moves across a membrane to the side with more solute",
+        "Solute moves across a membrane to the side with less solute",
+        "Water moves across a membrane to the side with less solute",
+        "Water moves across a membrane using energy from the cell"
+      ],
+      "why": "Water moves from a higher to a lower water concentration, and the side with more solute has less water. So water moves towards more solute. Moving water to the side with less solute reverses this.",
+      "clue": "More solute means a lower concentration of water."
+    },
+    "b": {
+      "d": 3,
+      "q": "A piece of potato is placed in a strong salt solution. Mass is measured after an hour. What is the likely result?",
+      "opts": [
+        "Mass falls as water leaves the potato cells",
+        "Mass rises as water enters the potato cells",
+        "Mass falls as salt leaves the potato cells",
+        "Mass stays the same as no water crosses the membranes"
+      ],
+      "why": "The salt solution has more solute, so a lower water concentration than the potato cells. Water moves out of the cells by osmosis, so mass falls. Salt leaving is wrong: salt is more concentrated outside the cells, so any net salt movement would be into them, not out.",
+      "clue": "Which side has the lower water concentration?"
+    }
+  },
+  "bio-facilitated-diffusion-active-transport": {
+    "title": "Facilitated diffusion and active transport",
+    "card": [
+      "Many substances, such as ions and glucose, cannot easily cross the phospholipid part of the plasma membrane. They cross through transport proteins instead.",
+      [
+        "Facilitated diffusion",
+        "movement down a concentration gradient, from high to low, through a channel or carrier protein. It needs no energy from the cell."
+      ],
+      [
+        "Active transport",
+        "movement against a concentration gradient, from low to high, through a carrier protein. It uses energy from ATP."
+      ],
+      "Both processes use proteins and are specific to the substance moved. The difference is the direction of movement and whether the cell must spend ATP."
+    ],
+    "remember": "Down the gradient with no ATP is facilitated. Against the gradient with ATP is active.",
+    "a": {
+      "q": "A cell takes in a mineral ion from soil water that has a lower concentration of the ion than the cell. Which process moves it?",
+      "opts": [
+        "Active transport, which uses ATP",
+        "Facilitated diffusion, which uses ATP",
+        "Facilitated diffusion, which needs no ATP",
+        "Active transport, which needs no ATP"
+      ],
+      "why": "The ion moves from low to high concentration, which is against the gradient. Only active transport does this, and it needs ATP. Facilitated diffusion is tempting because it also uses a protein, but it only moves substances down the gradient.",
+      "clue": "Which way is the ion moving compared with the gradient?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A muscle cell has a low glucose level inside and a higher level outside. Glucose enters through a carrier protein, and the cell uses no ATP for this. What best describes the process?",
+      "opts": [
+        "Facilitated diffusion, as glucose moves down its gradient",
+        "Active transport, as glucose moves through a protein",
+        "Simple diffusion, as glucose crosses the lipid part",
+        "Active transport, as glucose moves into the cell"
+      ],
+      "why": "Glucose moves from high outside to low inside, which is down its gradient, and no ATP is used. This is facilitated diffusion. Using a carrier protein does not make it active transport, because active transport needs ATP and moves substances against the gradient.",
+      "clue": "Check the direction of the gradient and whether ATP is used."
+    }
+  },
+  "bio-binary-fission": {
+    "title": "Binary fission",
+    "card": [
+      "Binary fission is how prokaryotes such as bacteria divide. Prokaryotes have no nucleus, and one cell becomes two cells.",
+      "First the cell copies its circular DNA. The two copies attach to different parts of the cell membrane.",
+      "The cell then grows longer, which moves the two DNA copies apart. The membrane and cell wall grow inwards and split the cell in two.",
+      "Each new cell gets a full copy of the DNA, so they are genetically identical to the parent unless a mutation occurs. Fission can be fast: some bacteria divide about every 20 minutes in good conditions."
+    ],
+    "remember": "Binary fission: copy the DNA, move the copies apart, split into two identical cells.",
+    "a": {
+      "q": "Which of these happens during binary fission in a bacterium?",
+      "opts": [
+        "The DNA is copied and the cell splits into two cells",
+        "The nucleus divides and the chromosomes line up",
+        "The cell splits first and then copies its DNA",
+        "Two cells join and mix their DNA to make a new cell"
+      ],
+      "why": "The DNA must be copied before the cell splits, so that each new cell gets a copy. Splitting first would leave one cell with no DNA. Bacteria have no nucleus, so no nuclear division occurs.",
+      "clue": "Each new cell needs its own DNA before the cell splits."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev grows a bacterial culture in a warm lab. Ignoring mutations, how does the DNA of the cells compare after many rounds of binary fission?",
+      "opts": [
+        "Identical, because each cell gets a full copy of the DNA",
+        "Different, because the DNA is shuffled at each split",
+        "Half the DNA each, because the parent's DNA is shared out",
+        "Different, because two cells join and mix their DNA"
+      ],
+      "why": "The DNA is copied before each split, so every new cell gets a full, identical copy. The DNA is not shared out in halves, because copying comes first. No shuffling or joining of cells happens in binary fission.",
+      "clue": "Think about what happens to the DNA before the cell splits."
+    }
+  },
+  "bio-eukaryotic-cell-cycle": {
+    "title": "The eukaryotic cell cycle",
+    "card": [
+      "The cell cycle is the series of events from one cell division to the next. In eukaryotic cells it has three parts: interphase, mitosis and cytokinesis.",
+      [
+        "Interphase",
+        "the longest part of the cycle. The cell grows, makes new organelles and copies its DNA, so each chromosome ends up as two identical copies."
+      ],
+      [
+        "Mitosis",
+        "the nucleus divides. The copied chromosomes are shared out so that two nuclei form, each with a full set of the cell's DNA."
+      ],
+      [
+        "Cytokinesis",
+        "the cytoplasm and cell membrane divide, so one cell becomes two separate daughter cells. It usually follows mitosis."
+      ]
+    ],
+    "remember": "Interphase prepares the cell, mitosis divides the nucleus, and cytokinesis divides the cell.",
+    "a": {
+      "q": "A cell has just finished copying all of its DNA. In which part of the cell cycle did this happen?",
+      "opts": ["Interphase", "Mitosis", "Cytokinesis", "Binary fission"],
+      "why": "DNA is copied during interphase, before the nucleus divides. Mitosis is tempting, but it shares out DNA that has already been copied. It does not make the copies.",
+      "clue": "Think about what must happen before a nucleus can be divided."
+    },
+    "b": {
+      "d": 3,
+      "q": "A researcher sees a cell with two nuclei inside one shared cytoplasm. Which part of the cell cycle has most likely not happened?",
+      "opts": ["Cytokinesis", "Mitosis", "Interphase", "DNA copying"],
+      "why": "Two nuclei mean mitosis has divided the nucleus. The cytoplasm has not split, so cytokinesis has not happened yet. DNA copying must have happened earlier, in interphase, or the two nuclei could not each hold a full set of DNA.",
+      "clue": "Which part divides the cell itself, not just the nucleus?"
+    }
+  },
+  "bio-stages-mitosis": {
+    "title": "Stages of mitosis",
+    "card": [
+      "Before mitosis, each chromosome is copied. It then has two identical sister chromatids joined together. Mitosis shares these copies equally between two nuclei.",
+      ["Prophase", "the chromosomes coil up and become visible. The nuclear membrane breaks down."],
+      ["Metaphase", "the chromosomes line up across the middle of the cell, attached to spindle fibres."],
+      [
+        "Anaphase and telophase",
+        "in anaphase, spindle fibres pull sister chromatids to opposite ends, and each becomes a chromosome. In telophase, a nuclear membrane forms around each set, giving two identical nuclei."
+      ]
+    ],
+    "remember": "Mitosis ends with two identical nuclei, because sister chromatids are pulled apart.",
+    "a": {
+      "q": "During which stage of mitosis are sister chromatids pulled to opposite ends of the cell?",
+      "opts": ["Anaphase", "Metaphase", "Prophase", "Telophase"],
+      "why": "In anaphase the spindle fibres pull the sister chromatids apart. In metaphase they are only lined up across the middle and are still joined.",
+      "clue": "Think about what happens just after the chromosomes line up."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student views a dividing onion root cell. The chromosomes are lined up across the middle of the cell and the nuclear membrane is absent. Which stage is this?",
+      "opts": ["Metaphase", "Prophase", "Anaphase", "Telophase"],
+      "why": "Chromosomes lined up across the middle of the cell, attached to spindle fibres, show metaphase. By the end of prophase the nuclear membrane has broken down, but the chromosomes are not yet lined up in the middle.",
+      "clue": "Look at where the chromosomes are sitting in the cell."
+    }
+  },
+  "bio-apoptosis": {
+    "title": "Apoptosis",
+    "card": [
+      "Apoptosis is programmed cell death. The cell follows its own set of internal instructions and breaks itself down in a controlled way.",
+      "The cell shrinks and its contents are packaged into small pieces. Neighbouring cells or immune cells then take up these pieces, so nothing harmful spills into the tissue.",
+      "Apoptosis removes cells that are damaged, such as cells with DNA damage that cannot be repaired. It also removes cells that are no longer needed, such as the tissue between developing fingers in an embryo.",
+      "Apoptosis is different from necrosis, where a cell dies from injury and bursts open. This can release its contents and cause inflammation in the tissue around it."
+    ],
+    "remember": "Apoptosis is a cell's planned, tidy self-destruction, which removes cells the body does not need.",
+    "a": {
+      "q": "Which statement best describes apoptosis?",
+      "opts": [
+        "A cell breaks itself down in a controlled way",
+        "A cell bursts open after a physical injury",
+        "A cell stops dividing and stays alive for good",
+        "A cell is destroyed by a toxin from outside"
+      ],
+      "why": "Apoptosis follows the cell's own internal instructions and ends with the cell packaged into pieces. Bursting open after injury describes necrosis, which is not controlled and can harm nearby cells.",
+      "clue": "Think about who or what is in control of the cell's death."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a human embryo, the cells between the developing fingers die and the fingers separate. Why is this best described as apoptosis?",
+      "opts": [
+        "The cells die on a program because they are not needed",
+        "The cells die from injury and burst open",
+        "The cells die because their DNA has been damaged",
+        "The cells stop dividing, so the tissue shrinks away"
+      ],
+      "why": "The webbing cells are healthy but no longer needed, and they die by a controlled program. DNA damage is one trigger for apoptosis, but it is not the reason here, and the tissue is not injured.",
+      "clue": "The cells are healthy, so look for another reason for removing them."
+    }
+  },
+  "bio-cancer-cell-cycle": {
+    "title": "Cancer and the cell cycle",
+    "card": [
+      "Some genes control when a cell divides and when it stops. A mutation is a change in the DNA sequence of a gene.",
+      "A mutation in one of these genes can stop the cell cycle from being controlled. The cell may then divide again and again when it should not.",
+      "The extra cells can build up as a lump of tissue called a tumour. A tumour may be benign, which stays in one place, or malignant, which can invade nearby tissue.",
+      "Cancer is a group of diseases caused by uncontrolled cell division. Most mutations do not cause cancer, because they do not change these control genes in a way that removes control."
+    ],
+    "remember": "Mutations in cell cycle control genes can cause uncontrolled division, which can form a tumour.",
+    "a": {
+      "q": "Which change in a cell could lead to cancer?",
+      "opts": [
+        "A mutation that removes control of the cell cycle",
+        "A mutation in a gene that makes a hair pigment",
+        "A cell dividing once to replace a dead skin cell",
+        "A cell stopping division after it has fully grown"
+      ],
+      "why": "Cancer starts when mutations in control genes let cells divide without proper control. A mutation in a pigment gene does not affect the cell cycle, and the other two options are normal, controlled behaviour.",
+      "clue": "A mutation matters here only if it affects the right kind of gene."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev has a mutation in a gene that normally tells his liver cells when to stop dividing. Which outcome is most likely to follow?",
+      "opts": [
+        "Liver cells may divide without control and form a tumour",
+        "Liver cells stop copying DNA and so cannot divide",
+        "Liver cells all die at once from the mutation",
+        "Liver cells divide in a controlled way to repair damage"
+      ],
+      "why": "A mutation in a gene that signals cells to stop dividing can let them keep dividing, and the extra cells may form a tumour. Repair by controlled division is tempting, but that is normal division, which a loss of control does not produce.",
+      "clue": "What happens when the signal to stop dividing is lost?"
+    }
+  },
+  "bio-stem-cells": {
+    "title": "Stem cells",
+    "card": [
+      "A stem cell can renew itself by dividing to make more stem cells. It can also differentiate, which means it becomes a specialised cell with a particular job.",
+      [
+        "Totipotent",
+        "a cell that can become any cell type, including the cells of the placenta. A fertilised egg and the first few cells it makes are totipotent."
+      ],
+      [
+        "Pluripotent",
+        "a cell that can become most cell types in the body, but not the placenta. Cells in an early embryo, after the totipotent stage, are pluripotent."
+      ],
+      "Cells differentiate because different genes are switched on in different cells. The cell's DNA does not change."
+    ],
+    "remember": "Stem cells renew themselves and differentiate. Totipotent cells can become any cell, pluripotent cells can become most.",
+    "a": {
+      "q": "Which pair of abilities makes a cell a stem cell?",
+      "opts": [
+        "It renews itself and differentiates into specialised cells",
+        "It copies its DNA and keeps the same job in every cell",
+        "It divides by binary fission and makes identical cells",
+        "It differentiates once and then cannot divide again"
+      ],
+      "why": "A stem cell can divide to make more stem cells and can also become a specialised cell. The option about keeping the same job is wrong because stem cells can change into cells with different jobs.",
+      "clue": "One ability keeps the supply of stem cells going. The other gives cells a job."
+    },
+    "b": {
+      "d": 3,
+      "q": "Researchers grow a cell that can form nerve, muscle and blood cells, but cannot form the placenta. How should the cell be described?",
+      "opts": [
+        "Pluripotent, because it can become most cell types",
+        "Totipotent, because it can become many cell types",
+        "Pluripotent, because it can become only one cell type",
+        "Totipotent, because it can become the placenta only"
+      ],
+      "why": "The cell can form most body cells but not the placenta, so it is pluripotent. Totipotent is tempting because the cell makes many types, but a totipotent cell could also form the placenta.",
+      "clue": "Check whether this cell can become every cell type, or only most."
+    }
+  },
+  "bio-levels-organisation-2": {
+    "title": "Levels of organisation",
+    "card": [
+      "Cells in a multicellular organism are specialised. Each type has a structure that suits its job.",
+      ["Tissue", "a group of similar cells that work together to do one job, such as muscle tissue."],
+      ["Organ", "a structure made of several different tissues that work together, such as the stomach."],
+      ["System", "a group of organs that work together to carry out a major function, such as the digestive system."]
+    ],
+    "remember": "Cells make tissues, tissues make organs, and organs make systems.",
+    "a": {
+      "q": "Which of these is an example of an organ?",
+      "opts": ["The heart", "Cardiac muscle tissue", "A single red blood cell", "The circulatory system"],
+      "why": "The heart is made of several different tissues, such as muscle, nerve and connective tissue, working together, so it is an organ. Cardiac muscle tissue is one tissue made of similar cells. The circulatory system is a group of organs, so it is a system.",
+      "clue": "Which level sits above tissue but below system?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A leaf contains epidermis, palisade tissue and xylem, which together carry out photosynthesis. At which level of organisation is the leaf?",
+      "opts": [
+        "Organ, as it is made of several tissues working together",
+        "Tissue, as it is made of similar cells doing one job",
+        "System, as it carries out a major function",
+        "Cell, as it is the smallest unit of a plant"
+      ],
+      "why": "The leaf is made of different tissues that work together, so it is an organ. It is not a tissue, because its cells are not all of one type. It is not a system, because it is a single structure and not a group of organs.",
+      "clue": "Count how many different tissues are in the leaf."
+    }
+  },
+  "bio-water-transport-plants": {
+    "title": "Water transport in plants",
+    "card": [
+      "Xylem is a tissue of tubes that carries water and dissolved minerals from the roots up to the stem and leaves. Water moves in one direction only: upward.",
+      "Transpiration is the loss of water vapour from a leaf, mostly through tiny pores. As water leaves the leaf, it creates a pull on the water in the xylem.",
+      "Water molecules stick together, so the pull passes down a continuous column of water from the leaf to the root. More water then enters the root from the soil.",
+      "The plant does not need to use energy to pump this water. The main driving force is the evaporation of water from the leaves."
+    ],
+    "remember": "Water evaporates from leaves and pulls a column of water up the xylem from the roots.",
+    "a": {
+      "q": "What mainly causes water to move up the xylem of a tall tree?",
+      "opts": [
+        "Evaporation of water from the leaves pulls it upward",
+        "Pressure from the roots pushes it up like a pump",
+        "The stem muscles squeeze water up the xylem",
+        "Gravity draws water up from the soil to the leaves"
+      ],
+      "why": "Water lost from the leaves pulls the connected column of water up the xylem. Root pressure is a tempting answer, but the card shows the main force is the pull from the leaves, with no pumping by the plant.",
+      "clue": "Think about where the water is leaving the plant."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya covers all the leaves of a potted tomato plant with plastic bags and leaves the plant in a sunny spot. What is the most likely effect on water movement in its xylem?",
+      "opts": [
+        "Less water moves up, as less water vapour leaves",
+        "More water moves up, as the leaves hold extra water",
+        "Water moves down the xylem to the roots instead",
+        "No change, as the roots pump water at the same rate"
+      ],
+      "why": "The bags reduce the loss of water vapour from the leaves. This weakens the pull on the water column, so less water moves up the xylem. Water does not run the other way, as xylem carries water upward only.",
+      "clue": "With a weaker pull from the leaves, what happens to the column of water?"
+    }
+  },
+  "bio-stomata": {
+    "title": "Stomata",
+    "card": [
+      "Stomata are tiny pores, mostly on the underside of leaves. Each pore sits between two guard cells, which change shape to open or close it.",
+      "When a stoma is open, carbon dioxide diffuses in for photosynthesis and oxygen diffuses out. Water vapour also diffuses out of the leaf.",
+      "A plant cannot have gas exchange without some water loss. Open stomata favour photosynthesis, and closed stomata save water.",
+      "Stomata tend to open in bright light when water is plentiful, and close when the plant is short of water, such as on a hot, dry day. This is how a vascular plant regulates its water."
+    ],
+    "remember": "Open stomata let carbon dioxide in and water out. Closing them saves water.",
+    "a": {
+      "q": "Which statement best explains why a plant cannot keep its stomata open all the time?",
+      "opts": [
+        "Open stomata let water vapour escape from the leaf",
+        "Open stomata stop oxygen leaving the leaf",
+        "Open stomata block carbon dioxide from entering",
+        "Open stomata stop the guard cells changing shape"
+      ],
+      "why": "Water vapour diffuses out through open stomata, so a plant that stayed open would lose too much water. The oxygen and carbon dioxide options reverse what happens, since both gases pass through open pores. The guard cell option is false, because guard cells change shape to open and close the pore.",
+      "clue": "Think about what else leaves the leaf when a pore is open."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a hot, dry afternoon in Mildura, a grapevine is short of water. What is the most likely response of its stomata, and the effect on photosynthesis?",
+      "opts": [
+        "They close, saving water but limiting carbon dioxide intake",
+        "They close, saving water and raising carbon dioxide intake",
+        "They open, saving water but limiting carbon dioxide intake",
+        "They open, gaining water and raising carbon dioxide intake"
+      ],
+      "why": "A plant short of water tends to close its stomata to cut water loss. With the pores closed, less carbon dioxide can enter, so photosynthesis is limited. Opening them would increase water loss, not save water.",
+      "clue": "Closed pores block water vapour and carbon dioxide both."
+    }
+  },
+  "bio-digestive-system": {
+    "title": "The digestive system",
+    "card": [
+      [
+        "Mechanical digestion",
+        "the physical breaking of food into smaller pieces, such as chewing and the churning of the stomach. It does not change the food's chemicals."
+      ],
+      [
+        "Chemical digestion",
+        "enzymes break large molecules into small ones. For example, amylase in saliva starts to break starch into sugars."
+      ],
+      "Food passes through the mouth, oesophagus, stomach and small intestine, then the large intestine. The liver and pancreas help digestion, but food does not pass through them.",
+      "Absorption happens mostly in the small intestine. Its folds and villi give a large surface area, so digested nutrients pass into the blood."
+    ],
+    "remember": "Food is broken down physically and chemically, then absorbed in the small intestine.",
+    "a": {
+      "q": "Where are most digested nutrients absorbed into the blood?",
+      "opts": ["The small intestine", "The stomach", "The oesophagus", "The mouth"],
+      "why": "The small intestine has folds and villi that give a large surface area for absorption. The stomach mainly churns food to break it into smaller pieces, so it is not the main site of absorption.",
+      "clue": "Think about where villi are found."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jin chews a piece of bread for a long time and notices it starts to taste sweet. What best explains this?",
+      "opts": [
+        "Amylase in saliva is breaking starch into sugars",
+        "Chewing is turning starch into sugars mechanically",
+        "The stomach is absorbing sugars from the bread",
+        "Villi in the mouth are absorbing the starch"
+      ],
+      "why": "Amylase is an enzyme, so it causes chemical digestion of starch into sugars. Chewing is mechanical digestion, which makes smaller pieces but does not change the starch into sugar.",
+      "clue": "Which type of digestion changes the chemicals in food?"
+    }
+  },
+  "bio-endocrine-system": {
+    "title": "The endocrine system",
+    "card": [
+      "The endocrine system is made of glands, such as the pancreas and thyroid. Glands release hormones, which are chemical messengers.",
+      "Hormones are released straight into the blood. The blood carries them around the body.",
+      "A hormone acts only on target cells. These cells have receptors that match the shape of that hormone.",
+      "Cells without the matching receptor do not respond to the hormone, even though the blood carries it past them."
+    ],
+    "remember": "Glands release hormones into the blood, and only cells with matching receptors respond.",
+    "a": {
+      "q": "Why do only some cells in the body respond to a particular hormone?",
+      "opts": [
+        "Only those cells have receptors that match the hormone",
+        "Only those cells are reached by blood carrying the hormone",
+        "The gland sends the hormone directly to those cells",
+        "Only those cells are close to the gland"
+      ],
+      "why": "A hormone reaches most of the body in the blood, but only target cells have matching receptors. Blood passing a cell is not enough to cause a response.",
+      "clue": "Think about what the hormone must attach to."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam has a drug that blocks the receptors for a hormone on liver cells only. Blood levels of the hormone stay normal. What is the likely result?",
+      "opts": [
+        "Liver cells do not respond, but other target cells still do",
+        "All cells stop responding to the hormone",
+        "The gland stops releasing the hormone into the blood",
+        "Other cells with different receptors respond instead"
+      ],
+      "why": "Without working receptors, the liver cells cannot respond, even though the hormone is in the blood. Other target cells still have their receptors, so they respond as usual.",
+      "clue": "Which cells lose their receptors?"
+    }
+  },
+  "bio-excretory-system": {
+    "title": "The excretory system",
+    "card": [
+      "The kidneys filter the blood. Useful substances such as water and salts are mostly taken back into the blood, and waste is left behind.",
+      [
+        "Urea",
+        "a waste made when the body breaks down proteins. The kidneys remove it from the blood and it leaves the body in urine."
+      ],
+      [
+        "Balance",
+        "the kidneys adjust how much water and salt is returned to the blood. This keeps the amounts in the body steady."
+      ],
+      "Urine travels from the kidneys through tubes to the bladder, where it is stored until it is released from the body."
+    ],
+    "remember": "Kidneys filter blood: waste leaves in urine, and water and salts are kept in balance.",
+    "a": {
+      "q": "Which job do the kidneys do?",
+      "opts": [
+        "Remove urea from blood and balance water and salts",
+        "Break down proteins into amino acids for absorption",
+        "Store urine until it is released from the body",
+        "Make urea from the water and salts in the blood"
+      ],
+      "why": "The kidneys filter blood, removing urea and adjusting water and salts. Storing urine is tempting, but that is done by the bladder, and urea is made when proteins are broken down, not by the kidneys.",
+      "clue": "Focus on what happens to the blood as it passes through the kidneys."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom drinks a lot of water after a game and his body has more water than it needs. How do his kidneys help restore balance?",
+      "opts": [
+        "They return less water to the blood, so more leaves in urine",
+        "They return more water to the blood, so less leaves in urine",
+        "They stop filtering the blood until the extra water is used",
+        "They turn the extra water into urea to remove it"
+      ],
+      "why": "The kidneys adjust how much water goes back into the blood. With extra water, less is returned, so more leaves in urine. Returning more water would add to the excess and not restore balance.",
+      "clue": "Extra water needs to leave the body, not stay in the blood."
+    }
+  },
+  "bio-homeostasis": {
+    "title": "Homeostasis",
+    "card": [
+      "Homeostasis is the process of keeping the internal environment of the body stable, within a narrow range, even when the outside conditions change. Body temperature, blood glucose and water balance are examples.",
+      "A stimulus is a change in the internal or external environment. A receptor is a cell or structure that detects the stimulus.",
+      "The control centre receives information from the receptor and decides what to do. In humans it is often the brain, such as the hypothalamus.",
+      "An effector, such as a muscle or gland, carries out the instruction. The change it produces is the response."
+    ],
+    "remember": "Homeostasis works as a chain: stimulus, receptor, control centre, effector, response.",
+    "a": {
+      "q": "A house has a thermostat that switches on a heater when the room gets cold. If this worked like homeostasis, what part would the heater play?",
+      "opts": ["The effector", "The receptor", "The control centre", "The stimulus"],
+      "why": "The heater is the part that carries out the instruction and changes the room's temperature, so it acts as the effector. The thermostat is the tempting choice for the receptor or control centre, but it is the part that senses the cold and switches the heater on, not the part that warms the room.",
+      "clue": "Which part actually makes the change happen?"
+    },
+    "b": {
+      "d": 3,
+      "q": "During a run, carbon dioxide builds up in Ella's blood. Sensors in her blood vessels signal her brainstem, then her diaphragm works harder. Which part of the pathway is her faster breathing?",
+      "opts": ["The response", "The effector", "The stimulus", "The control centre"],
+      "why": "Faster breathing is the change that results, so it is the response. The diaphragm is the effector, because it is the muscle that does the work. The rise in carbon dioxide is the stimulus, and the brainstem is the control centre.",
+      "clue": "Is faster breathing a body part, or a change that happens?"
+    }
+  },
+  "bio-regulating-blood-glucose": {
+    "title": "Regulating blood glucose",
+    "card": [
+      "Cells use glucose from the blood to release energy. Blood glucose must stay within a narrow range, so hormones adjust it. The pancreas detects the level and releases the hormones.",
+      [
+        "Insulin",
+        "released when blood glucose is high, such as after a meal. It causes cells to take up glucose from the blood, and the liver to store it as glycogen. Blood glucose falls."
+      ],
+      [
+        "Glucagon",
+        "released when blood glucose is low, such as between meals. It causes the liver to break down glycogen and release glucose into the blood. Blood glucose rises."
+      ],
+      "In type 1 diabetes, the body cannot make insulin. Cells cannot take up glucose properly, so blood glucose stays high."
+    ],
+    "remember": "Insulin lowers blood glucose, glucagon raises it, and without insulin blood glucose stays high.",
+    "a": {
+      "q": "Ravi has just eaten a large meal and his blood glucose rises. What does his pancreas do in response?",
+      "opts": [
+        "Releases insulin, so blood glucose falls",
+        "Releases glucagon, so blood glucose falls",
+        "Releases insulin, so blood glucose rises",
+        "Releases glucagon, so blood glucose rises"
+      ],
+      "why": "A high blood glucose level triggers the release of insulin, which moves glucose into cells and into storage as glycogen. Glucagon is the tempting wrong choice, but it is released when blood glucose is low and it raises the level.",
+      "clue": "Which hormone is released when blood glucose is high?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia has type 1 diabetes and has not taken any insulin. She eats a meal. Why does her blood glucose stay high?",
+      "opts": [
+        "Her cells cannot take up glucose properly without insulin",
+        "Her liver releases too much glycogen without glucagon",
+        "Her pancreas makes too much insulin after the meal",
+        "Her cells need glucagon, not insulin, to take up glucose"
+      ],
+      "why": "Type 1 diabetes means the body cannot make insulin. Without it, cells cannot take up glucose properly and the liver does not store it as glycogen, so glucose stays in the blood. Glucagon is not the answer: it raises blood glucose and does not move glucose into cells.",
+      "clue": "Which hormone is missing in type 1 diabetes, and what does it do to glucose in cells?"
+    }
+  },
+  "bio-regulating-water-balance": {
+    "title": "Regulating water balance",
+    "card": [
+      "The body must keep the water in its blood and tissues within a narrow range. Water is lost in urine, sweat and breath, and gained from food and drink.",
+      "When the body is short of water, the blood becomes more concentrated. Receptors in the hypothalamus detect this change.",
+      "The hypothalamus signals the pituitary gland to release more antidiuretic hormone (ADH) into the blood. ADH makes the kidneys reabsorb more water back into the blood, so less water leaves in urine and the urine is small in volume and concentrated.",
+      "When the body has too much water, less ADH is released. The kidneys reabsorb less water, so more water leaves in a larger volume of dilute urine."
+    ],
+    "remember": "Short of water: more ADH, more water reabsorbed, less urine. Too much water: less ADH, more urine.",
+    "a": {
+      "q": "What does ADH do when the body is short of water?",
+      "opts": [
+        "It makes the kidneys reabsorb more water into the blood",
+        "It makes the kidneys release more water into the urine",
+        "It makes the sweat glands release more water onto the skin",
+        "It makes the hypothalamus stop detecting blood concentration"
+      ],
+      "why": "ADH acts on the kidneys so that more water returns to the blood. This saves water for the body. Sending more water into urine would make the shortage worse.",
+      "clue": "Think about whether the body needs to save water or get rid of it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jin plays football on a hot day, sweats a lot and drinks nothing for two hours. What happens to his ADH release and urine?",
+      "opts": [
+        "More ADH is released, and his urine is more concentrated",
+        "More ADH is released, and his urine is more dilute",
+        "Less ADH is released, and his urine is more concentrated",
+        "Less ADH is released, and his urine is more dilute"
+      ],
+      "why": "Sweating without drinking makes his blood more concentrated, so more ADH is released. The kidneys reabsorb more water, leaving a small volume of concentrated urine. Dilute urine would waste water he cannot spare.",
+      "clue": "Losing water makes the blood more concentrated, so the body must save water."
+    }
+  },
+  "bio-when-homeostasis-fails": {
+    "title": "When homeostasis fails",
+    "card": [
+      "Homeostasis fails when a regulating mechanism breaks down or is pushed further than it can correct. The internal environment then drifts outside its normal range.",
+      [
+        "Type 1 diabetes",
+        "the body's immune system destroys the cells that make insulin. Without insulin, cells cannot take up glucose well, so blood glucose stays too high."
+      ],
+      [
+        "Hypoglycaemia",
+        "blood glucose falls too low, such as when a person with diabetes takes too much insulin or goes a long time without food. The brain gets too little glucose, which can cause shakiness, confusion and fainting."
+      ],
+      [
+        "Hyperthyroidism",
+        "the thyroid gland makes too much thyroid hormone. This speeds up metabolism, which can cause weight loss, a fast heart rate and feeling too hot."
+      ]
+    ],
+    "remember": "If regulation breaks down or is overwhelmed, a variable can drift outside its normal range.",
+    "a": {
+      "q": "Why does blood glucose stay too high in a person with untreated type 1 diabetes?",
+      "opts": [
+        "Too little insulin is made, so cells take up less glucose",
+        "Too much insulin is made, so cells take up less glucose",
+        "Too much thyroid hormone is made, so glucose builds up",
+        "The immune system destroys the cells that use glucose"
+      ],
+      "why": "In type 1 diabetes the immune system destroys the cells that make insulin. Without insulin, cells take up less glucose, so it stays in the blood. The tempting option of too much insulin gets it backwards: the problem is a lack of insulin.",
+      "clue": "Which cells does the immune system destroy, and what do they make?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jas has type 1 diabetes. He takes his usual insulin but skips lunch and later feels shaky and confused. What best explains this?",
+      "opts": [
+        "His blood glucose has fallen too low, which is hypoglycaemia",
+        "His blood glucose has risen too high, which is hypoglycaemia",
+        "His thyroid makes too much hormone, which is hyperthyroidism",
+        "His body cannot make glucagon, which is type 1 diabetes"
+      ],
+      "why": "Insulin lowers blood glucose, and with no lunch little glucose was coming in. His blood glucose fell too low, which is hypoglycaemia, and his brain is short of glucose. The tempting option uses the right term but says glucose rose: hypoglycaemia means blood glucose is too low.",
+      "clue": "Insulin lowers glucose, and he did not eat."
+    }
+  },
+  "bio-aims-hypotheses-models-theories": {
+    "title": "Aims, hypotheses, models and theories",
+    "card": [
+      [
+        "Aim",
+        "states what an investigation will find out. It is the purpose, often written as \"to investigate the effect of...\"."
+      ],
+      [
+        "Hypothesis",
+        "is a testable prediction of the result, often linking a changed factor to an outcome. It can be supported or not supported by the data."
+      ],
+      [
+        "Model",
+        "is a simplified representation of something, such as a diagram of a cell membrane. It helps explain or predict how a system works."
+      ],
+      [
+        "Theory",
+        "is a well-tested explanation that fits a wide range of evidence, such as cell theory. A law describes a pattern that is seen consistently."
+      ]
+    ],
+    "remember": "An aim says what you are finding out. A hypothesis predicts the result. Models and theories explain.",
+    "a": {
+      "q": "Which statement is a hypothesis?",
+      "opts": [
+        "Warmer water will make yeast produce more gas",
+        "To investigate how water temperature affects yeast",
+        "Yeast cells are small living organisms",
+        "Yeast was kept in water at four temperatures"
+      ],
+      "why": "A hypothesis is a testable prediction of a result, and \"Warmer water will make yeast produce more gas\" predicts what warmer water will do. \"To investigate how water temperature affects yeast\" is an aim, because it states what is investigated without predicting an outcome.",
+      "clue": "Look for the statement that predicts a result."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya builds a plastic tube and balloon device to show how the diaphragm changes the volume of the lungs. What does her device represent?",
+      "opts": [
+        "A model, as it simplifies a system to explain it",
+        "A hypothesis, as it predicts the volume of the lungs",
+        "A theory, as it is a well-tested explanation of evidence",
+        "An aim, as it states what Priya will investigate"
+      ],
+      "why": "The device is a simplified representation of a real system, so it is a model. It is not a hypothesis, because it does not predict a result that can be supported or not supported by data.",
+      "clue": "Think about what a simplified version of a real system is called."
+    }
+  },
+  "bio-methods-biology": {
+    "title": "Methods in biology",
+    "card": [
+      [
+        "Controlled experiment",
+        "changes one factor on purpose and keeps the others the same. It suits questions about cause and effect."
+      ],
+      [
+        "Correlational study",
+        "looks for a relationship between two factors without changing either. It shows a link, but cannot show that one factor causes the other."
+      ],
+      [
+        "Fieldwork",
+        "collects data in a natural setting, such as a creek or forest. It suits questions about organisms in their real environment, though conditions are harder to control."
+      ],
+      [
+        "Modelling",
+        "uses a physical, mathematical or computer model to represent a system. It suits questions that are too large, slow, small or risky to test directly."
+      ]
+    ],
+    "remember": "Match the method to the question: cause and effect, links, natural settings or systems too hard to test directly.",
+    "a": {
+      "q": "Which question is best answered by a controlled experiment?",
+      "opts": [
+        "Does light change the rate of photosynthesis in pondweed?",
+        "Do areas with more trees also have more bird species?",
+        "How many frog species live along a river in Gippsland?",
+        "How might a virus spread through a city in ten years?"
+      ],
+      "why": "A controlled experiment changes one factor, light, and keeps the others the same, so it can test cause and effect. The tree and bird question suits a correlational study, because it only looks for a link.",
+      "clue": "Which question lets you change one factor on purpose?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A researcher records the daily steps and resting heart rates of 200 adults and finds that more active adults have lower heart rates. What can she conclude?",
+      "opts": [
+        "The two factors are linked, but this study cannot show cause",
+        "More steps cause a lower resting heart rate in adults",
+        "A lower resting heart rate causes adults to take more steps",
+        "There is no relationship between steps and heart rate"
+      ],
+      "why": "She measured two factors without changing either, so this is a correlational study. It shows a link, but it cannot show that one factor causes the other. Fitter adults could have other differences that explain the pattern.",
+      "clue": "She did not change either factor."
+    }
+  },
+  "bio-accuracy-precision-validity-biology": {
+    "title": "Accuracy, precision and validity",
+    "card": [
+      [
+        "Accuracy",
+        "is how close a measurement is to the true value. A scale reading 50.0 g for a 50.0 g mass is accurate."
+      ],
+      ["Precision", "is how close repeated measurements are to each other. Results can be precise but not accurate."],
+      [
+        "Validity",
+        "is whether an investigation measures what it set out to measure. It needs a fair test, with only the factor being tested changing."
+      ],
+      [
+        "Link",
+        "A result can be precise and still be off target. A study can have accurate tools but not be valid if it measures the wrong thing or other factors change."
+      ]
+    ],
+    "remember": "Accurate is close to the true value. Precise is close together. Valid is measuring what you meant to.",
+    "a": {
+      "q": "A thermometer reads 24.1, 24.0 and 24.2 °C in water that is truly 20.0 °C. What describes these readings?",
+      "opts": [
+        "Precise but not accurate",
+        "Accurate but not precise",
+        "Both accurate and precise",
+        "Neither accurate nor precise"
+      ],
+      "why": "The readings are close to each other, so they are precise. They are not close to the true value of 20.0 °C, so they are not accurate.",
+      "clue": "Compare the readings with each other, then with the true value."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam tests whether fertiliser makes bean plants grow taller. He gives the fertilised plants a sunny bench and the others a dark shelf. Why is his investigation not valid?",
+      "opts": [
+        "Light also differs, so height may not be due to fertiliser",
+        "His height measurements are not close to the true value",
+        "His repeated measurements do not agree with each other",
+        "He used too few types of fertiliser in the investigation"
+      ],
+      "why": "Validity needs a fair test where only the tested factor changes. Light also changed, so Sam cannot tell whether fertiliser or light caused the difference. Accuracy is about closeness to the true value, which is a different idea.",
+      "clue": "Count how many factors changed between the two groups."
+    }
+  },
+  "bio-errors-limitations-biology": {
+    "title": "Errors and limitations in biology",
+    "card": [
+      [
+        "Random error",
+        "an unpredictable variation that pushes repeated measurements in both directions, some too high and some too low. It scatters results. Repeating the measurement and taking an average reduces its effect."
+      ],
+      [
+        "Systematic error",
+        "a fault that pushes every measurement the same way, such as a scale that always reads 2 g too high. It shifts results. Repeating does not remove it, so the equipment or method must be fixed or calibrated (checked against a known standard)."
+      ],
+      [
+        "Limitation",
+        "a weakness in a method or its scope that restricts what the results can show, such as a small sample or a short time frame. Limitations are reported honestly, even when they cannot be removed."
+      ],
+      "A mistake, such as writing down a wrong number, is a blunder and is not the same as a random or systematic error."
+    ],
+    "remember": "Random error scatters, systematic error shifts, and limitations are reported.",
+    "a": {
+      "q": "A student times a heart rate with a stopwatch that runs 3 seconds fast every time. What kind of error is this?",
+      "opts": [
+        "A systematic error, as every result is shifted the same way",
+        "A random error, as the results vary between trials",
+        "A random error, as the stopwatch is the cause of the fault",
+        "A systematic error, as the sample size was too small"
+      ],
+      "why": "The fault pushes every measurement in the same direction, so it shifts the results. This is a systematic error. It is not random, because random error would push results in both directions and scatter them.",
+      "clue": "Does the fault push results one way or both ways?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia counts the yeast cells in the same sample five times under a microscope and gets 42, 55, 47, 60 and 49. She averages the five counts. What does this reduce?",
+      "opts": [
+        "The effect of random error on her result",
+        "The effect of systematic error on her result",
+        "The effect of a faulty microscope lens",
+        "The limitation of using only one species of yeast"
+      ],
+      "why": "Her counts of the same sample vary in both directions, which shows random error. Averaging repeated counts reduces its effect. It would not fix a systematic error such as a faulty lens, as every count would be shifted the same way, and it cannot remove a limitation such as testing one species.",
+      "clue": "Are the counts scattered both ways or shifted one way?"
+    }
+  },
+  "bio-genomes-genes-alleles": {
+    "title": "Genomes, genes and alleles",
+    "card": [
+      ["Genome", "all of an organism's DNA, including the genes and the DNA between them."],
+      [
+        "Gene",
+        "a section of DNA that codes for a product, such as a protein. A gene sits at a set position on a chromosome."
+      ],
+      [
+        "Allele",
+        "one version of a gene. Different alleles of the same gene can code for slightly different products."
+      ],
+      "An organism can carry two different alleles of one gene. For example, a person can have an A allele and a B allele of the ABO blood group gene. This is one reason individuals of a species differ."
+    ],
+    "remember": "The genome is all the DNA. A gene is one section of it, and alleles are versions of that gene.",
+    "a": {
+      "q": "Which statement correctly describes the relationship between a gene and its alleles?",
+      "opts": [
+        "Alleles are different versions of the same gene",
+        "Alleles are different genes found in the same genome",
+        "Alleles are the products that a gene codes for",
+        "Alleles are sections of DNA that sit outside any gene"
+      ],
+      "why": "An allele is one version of a gene, so alleles of a gene sit at the same position and code for variations of the same product. They are not separate genes, because separate genes code for different products.",
+      "clue": "What do the A and B blood group alleles have in common?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's dog has one allele for black fur and one allele for brown fur of the same gene. Which statement about this dog is correct?",
+      "opts": [
+        "Both alleles are versions of one gene in its genome",
+        "The two alleles are two different genes in its genome",
+        "The brown allele is not part of the dog's genome",
+        "The dog's genome is only the gene for fur colour"
+      ],
+      "why": "Black and brown are two versions of a single fur colour gene, and both are DNA in the dog's genome. Calling them two genes is tempting, but different alleles of the same gene are versions, not separate genes.",
+      "clue": "Is the genome bigger or smaller than one gene?"
+    }
+  },
+  "bio-chromosomes-karyotypes": {
+    "title": "Chromosomes and karyotypes",
+    "card": [
+      "In a cell's nucleus, DNA is wound around proteins and coiled tightly into structures called chromosomes. This packing lets a very long DNA molecule fit inside a tiny nucleus.",
+      "Human body cells have 46 chromosomes, in 23 pairs. In each pair, one chromosome came from the mother and one from the father.",
+      "A karyotype is a picture of the chromosomes from one cell. The chromosomes are arranged in their pairs, roughly from largest to smallest.",
+      "A karyotype shows the number and size of whole chromosomes, not the genes or bases within them. If a cell has an extra or missing chromosome, the karyotype can show it."
+    ],
+    "remember": "Chromosomes are packed DNA, found in pairs. A karyotype lays them out by size so they can be counted and compared.",
+    "a": {
+      "q": "What does a karyotype show?",
+      "opts": [
+        "A cell's chromosomes arranged in pairs by size",
+        "The order of bases along one gene",
+        "The proteins made by a cell's genes",
+        "The alleles a person passes to their children"
+      ],
+      "why": "A karyotype is a picture of a cell's chromosomes sorted into pairs by size. It shows whole chromosomes, so it cannot show the base order of a gene or which alleles are passed on. It also does not show which proteins are made.",
+      "clue": "Think of a picture that sorts whole chromosomes, not parts of genes."
+    },
+    "b": {
+      "d": 2,
+      "q": "A karyotype of a cell from Sam shows 47 chromosomes instead of the usual 46. What can be concluded from the karyotype?",
+      "opts": [
+        "The cell has one chromosome more than usual",
+        "The cell has one pair more than usual",
+        "The cell has one gene more than usual",
+        "The cell has one allele more than usual"
+      ],
+      "why": "A karyotype lets chromosomes be counted, so 47 means one extra chromosome. It would not be a whole extra pair, as that would give 48. A karyotype does not show single genes or alleles.",
+      "clue": "A karyotype counts whole chromosomes, so compare 47 with 46."
+    }
+  },
+  "bio-autosomes-sex-chromosomes": {
+    "title": "Autosomes and sex chromosomes",
+    "card": [
+      "Homologous chromosomes are a matching pair, one from each parent. They are the same length and carry the same genes in the same order, but they may carry different alleles.",
+      [
+        "Autosomes",
+        "all chromosomes that are not sex chromosomes. Humans have 22 pairs, and these pairs look the same in females and males."
+      ],
+      [
+        "Sex chromosomes",
+        "the pair that differs between the sexes and helps decide whether a person is female or male. Humans have one pair, made of X and Y chromosomes."
+      ],
+      "A human female has two X chromosomes, which are homologous. A human male has one X and one Y. The X and Y are different sizes and carry mostly different genes, so they are not a true matching pair."
+    ],
+    "remember": "Homologous chromosomes carry the same genes. Autosomes look alike in both sexes, but the sex chromosomes can differ.",
+    "a": {
+      "q": "Which statement correctly describes a pair of homologous autosomes in a human?",
+      "opts": [
+        "They carry the same genes, perhaps with different alleles",
+        "They carry the same genes and always identical alleles",
+        "They carry different genes, so each has its own role",
+        "They differ in size between females and males"
+      ],
+      "why": "Homologous chromosomes carry the same genes in the same order, but each one may carry a different allele of a gene. They do not always carry identical alleles, and autosomes look the same in females and males.",
+      "clue": "Think about genes and alleles on a matching pair."
+    },
+    "b": {
+      "d": 3,
+      "q": "A karyotype of one human cell shows 22 matching pairs and a 23rd pair of chromosomes of clearly different sizes. What does this tell you about the person?",
+      "opts": [
+        "The person is male, with an X and a Y chromosome",
+        "The person is female, with two X chromosomes",
+        "The person is male, because one autosome is smaller",
+        "The person has an extra pair of sex chromosomes"
+      ],
+      "why": "The 22 matching pairs are autosomes. A 23rd pair of different sizes is an X and a Y, which is a male. A female has two X chromosomes, which match in size.",
+      "clue": "Which sex has a 23rd pair that does not match in size?"
+    }
+  },
+  "bio-meiosis-2": {
+    "title": "Meiosis",
+    "card": [
+      "Meiosis is cell division that makes gametes, such as sperm and egg cells. One diploid cell, with two sets of chromosomes in homologous pairs, divides twice.",
+      "The two divisions make four haploid cells. Each has half the chromosome number of the parent cell. In humans, a body cell has 46 chromosomes and a gamete has 23.",
+      "The four cells are genetically different from each other and from the parent cell. Each gets a different mix of the chromosomes the organism first inherited from its own mother and father.",
+      "In a testis, all four cells become sperm. In an ovary, usually only one becomes an egg, and the other cells break down."
+    ],
+    "remember": "Two divisions halve the chromosome number and make genetically different cells.",
+    "a": {
+      "q": "A cell in a human testis has 46 chromosomes and starts meiosis. What is made at the end?",
+      "opts": [
+        "Four cells, each with 23 chromosomes",
+        "Two cells, each with 23 chromosomes",
+        "Four cells, each with 46 chromosomes",
+        "Two cells, each with 46 chromosomes"
+      ],
+      "why": "Meiosis has two divisions, so one cell makes four cells, and each has half the chromosome number: 23. Two cells with 23 is tempting, but it counts only one division.",
+      "clue": "Count the divisions, then think about what a human gamete carries."
+    },
+    "b": {
+      "d": 3,
+      "q": "A body cell of a dog has 78 chromosomes. What is true of the sperm made by meiosis in a dog's testis?",
+      "opts": [
+        "Each has 39 chromosomes and differs genetically",
+        "Each has 78 chromosomes and differs genetically",
+        "Each has 39 chromosomes and is genetically identical",
+        "Each has 78 chromosomes and is genetically identical"
+      ],
+      "why": "Meiosis halves the chromosome number, so each sperm has 39, and the cells it makes are genetically different. Having 39 but being identical is tempting, but meiosis gives each gamete a different mix of chromosomes, unlike a simple copy of the parent cell.",
+      "clue": "Two things to check: the chromosome number, and whether the cells match."
+    }
+  },
+  "bio-crossing-over-independent-assortment": {
+    "title": "Crossing over and independent assortment",
+    "card": [
+      [
+        "Crossing over",
+        "in prophase I of meiosis, homologous chromosomes pair up and swap matching sections. This makes new combinations of alleles on the same chromosome."
+      ],
+      [
+        "Independent assortment",
+        "in metaphase I, each homologous pair lines up at the cell's centre in a random way. Which chromosome of a pair goes to which side does not depend on how any other pair lines up."
+      ],
+      "A human cell has 23 pairs, so independent assortment alone can make 2^23 (over 8 million) combinations of chromosomes in a gamete.",
+      "Both processes happen during meiosis. Together they mean the gametes from one person carry different mixes of alleles, which adds to variation in offspring."
+    ],
+    "remember": "Crossing over mixes alleles within a chromosome. Independent assortment mixes whole chromosomes between gametes.",
+    "a": {
+      "q": "Which event in meiosis creates a chromosome with a new combination of alleles along its length?",
+      "opts": [
+        "Swapping of sections between homologous chromosomes",
+        "Random lining-up of homologous pairs at the centre",
+        "Halving of the chromosome number in each gamete",
+        "Copying of DNA before the cell begins to divide"
+      ],
+      "why": "Swapping sections between homologous chromosomes (crossing over) puts alleles from one chromosome onto the other, so each chromosome carries a new mix. Random lining-up moves whole chromosomes into different gametes, but it does not change the alleles along a single chromosome.",
+      "clue": "Think about which event changes a chromosome itself, not just where it ends up."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiri's cells have 3 homologous pairs of chromosomes. Ignoring crossing over, how many different combinations of chromosomes can her gametes have?",
+      "opts": ["8", "6", "9", "3"],
+      "why": "Each pair lines up independently and can go either way, so the number of combinations is 2 × 2 × 2 = 2^3 = 8. Six is a tempting answer from adding 2 + 2 + 2, but the pairs combine by multiplying because each choice is independent.",
+      "clue": "Each pair has two ways to line up, and the pairs do not affect each other."
+    }
+  },
+  "bio-dominant-recessive-codominant-alleles": {
+    "title": "Dominant, recessive and codominant alleles",
+    "card": [
+      [
+        "Complete dominance",
+        "For a gene on an autosome (a non-sex chromosome), a dominant allele shows in the phenotype when one copy is present. A recessive allele shows only when two copies are present, with no dominant allele."
+      ],
+      [
+        "Codominance",
+        "Both alleles show fully and separately in a heterozygous individual. Human AB blood is an example: both A and B markers appear on the red blood cells."
+      ],
+      [
+        "Incomplete dominance",
+        "Neither allele fully covers the other, so a heterozygote has a blend of the two parent traits. Red and white flowers can give pink offspring."
+      ],
+      "Alleles are written as letters. A capital letter, such as R, is dominant and a small letter, such as r, is recessive. In codominance, each allele is often given its own capital letter."
+    ],
+    "remember": "Dominant hides recessive. Codominant shows both. Incomplete dominance shows a blend.",
+    "a": {
+      "q": "A plant with red flowers is crossed with a plant with white flowers. All the offspring have pink flowers. Which pattern is this?",
+      "opts": ["Incomplete dominance", "Codominance", "Complete dominance", "Recessive inheritance"],
+      "why": "The offspring show a blend of the two parent colours, so neither allele fully covers the other. In codominance both traits would show separately, such as red and white patches, so that is not the pattern here.",
+      "clue": "Is the colour a blend, or are both colours seen side by side?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A Gippsland breeder crosses a red cow with a white bull. The calf's coat has red hairs and white hairs mixed all over. Each single hair is fully red or fully white. What does this show?",
+      "opts": [
+        "Both alleles are fully expressed in the heterozygote",
+        "The red allele is dominant over the white allele",
+        "The two alleles have blended into one new colour",
+        "The white allele is recessive and has been lost"
+      ],
+      "why": "Every hair is fully red or fully white, so both alleles are expressed side by side. This is codominance. A blend would make each hair one in-between colour, and a dominant allele would hide the other, giving an all-red coat.",
+      "clue": "Look at the colour of each single hair."
+    }
+  },
+  "bio-genes-environment-epigenetics": {
+    "title": "Genes, environment and epigenetics",
+    "card": [
+      "Phenotype is shaped by genes, by the environment and by how the two interact. Two people with the same genes can still differ in traits such as height or skin colour.",
+      [
+        "Environment",
+        "Factors such as diet, sunlight and temperature can change how a trait shows. Hydrangeas with the same genes can have blue or pink flowers depending on the acidity of the soil."
+      ],
+      [
+        "Epigenetics",
+        "Epigenetic marks are chemical tags on DNA or on the proteins it wraps around. They switch genes on or off without changing the DNA sequence."
+      ],
+      "Epigenetic marks can be affected by the environment, and some can be passed on when cells divide. The order of bases in the DNA stays the same."
+    ],
+    "remember": "Phenotype comes from genes, environment and epigenetic marks that switch genes on or off.",
+    "a": {
+      "q": "What is the effect of an epigenetic mark on a gene?",
+      "opts": [
+        "It switches the gene on or off, leaving the bases unchanged",
+        "It changes one base in the gene into a different base",
+        "It removes the gene from the chromosome",
+        "It turns the gene into a different allele"
+      ],
+      "why": "Epigenetic marks are chemical tags that change whether a gene is used. The order of bases stays the same. A change to a base would be a change to the DNA itself, and that is not what epigenetic marks do.",
+      "clue": "The DNA sequence itself stays the same."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two genetically identical clover plants are grown, one in a shady garden in Ballarat and one in full sun. The sunny plant grows shorter and thicker. What best explains this?",
+      "opts": [
+        "The environment changed how the same genes were expressed",
+        "The two plants carry different alleles for height",
+        "The sun changed the DNA sequence of the sunny plant",
+        "Environment has no effect on plants with identical genes"
+      ],
+      "why": "The plants have the same genes, so the difference comes from the environment affecting how the genes show in the phenotype. The option about changed DNA is tempting, but light affecting growth does not mean the DNA sequence changed.",
+      "clue": "The genes are the same, so what is left that differs?"
+    }
+  },
+  "bio-monohybrid-crosses": {
+    "title": "Monohybrid crosses",
+    "card": [
+      "A monohybrid cross follows one gene with two alleles. A Punnett square shows the gametes (sex cells) of each parent along the sides and the possible offspring genotypes inside the boxes.",
+      "Each parent gives one allele to each gamete. A heterozygous parent, such as Bb, makes two kinds of gamete, B and b, in equal numbers.",
+      "Two heterozygous parents (Bb x Bb) give offspring genotypes in the ratio 1 BB : 2 Bb : 1 bb. If B is completely dominant, the phenotype ratio is 3 dominant : 1 recessive.",
+      "The square gives probabilities for each offspring, not a guarantee. Each fertilisation is a separate chance event, so a small family may not match the ratio."
+    ],
+    "remember": "A Punnett square predicts the chance of each outcome. It does not fix the result for any one child.",
+    "a": {
+      "q": "Two pea plants that are both Tt are crossed. T is completely dominant over t. What fraction of offspring are expected to show the recessive trait?",
+      "opts": ["One quarter", "One half", "Three quarters", "None of them"],
+      "why": "Only the tt offspring show the recessive trait, and the square has one tt box out of four. Three quarters is tempting, but that is the share showing the dominant trait.",
+      "clue": "Which genotype shows the recessive trait, and how many boxes is it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two heterozygous parents in Geelong each carry one allele for a recessive condition. They have three children, all unaffected. What is the chance that their fourth child is affected?",
+      "opts": ["One quarter", "Zero, as the ratio is already filled", "One half", "One in sixteen"],
+      "why": "Each child is a separate chance event, so the chance stays 1 in 4 for every birth. The ratio does not run out after three children, so the first three do not change the fourth.",
+      "clue": "Does a past fertilisation change the next one?"
+    }
+  },
+  "bio-test-crosses": {
+    "title": "Test crosses",
+    "card": [
+      "An individual with a dominant phenotype could be homozygous dominant (AA) or heterozygous (Aa). Both look the same, so the genotype cannot be told by looking.",
+      "A test cross mates this individual with a homozygous recessive (aa). The aa partner can only pass on a, so it does not hide any allele in the offspring.",
+      "If the individual is AA, all offspring get one A and show the dominant trait.",
+      "If the individual is Aa, about half the offspring are Aa (dominant) and half are aa (recessive). Even one recessive offspring shows the individual is heterozygous."
+    ],
+    "remember": "A recessive offspring from a test cross means the tested parent carries a recessive allele.",
+    "a": {
+      "q": "Why is a homozygous recessive individual used as the partner in a test cross?",
+      "opts": [
+        "It can only pass on a recessive allele",
+        "It always passes on a dominant allele",
+        "It makes every offspring heterozygous",
+        "It makes the recessive trait disappear"
+      ],
+      "why": "The partner gives only a recessive allele, so the tested parent's alleles show in the offspring phenotypes. Making all offspring heterozygous only happens if the tested parent is AA, so it is not the reason for the choice.",
+      "clue": "What can the aa partner pass on?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Kofi has a black-coated guinea pig. Black (B) is dominant over brown (b). He crosses it with a brown guinea pig and gets six black and two brown young. What is the genotype of the black parent?",
+      "opts": [
+        "Bb, as brown young appeared",
+        "BB, as most young are black",
+        "bb, as brown young appeared",
+        "Not possible to tell from this cross"
+      ],
+      "why": "A brown young must be bb, so it got a b from each parent. The black parent therefore carries b and is Bb. Having mostly black young does not mean BB, as a Bb parent gives about half black.",
+      "clue": "Where did the brown young get a b allele from?"
+    }
+  },
+  "bio-dihybrid-crosses-linked-genes": {
+    "title": "Dihybrid crosses and linked genes",
+    "card": [
+      "A dihybrid cross follows two genes at once. Often both parents are heterozygous for both genes, such as RrYy. A 16-box Punnett square then shows the possible offspring.",
+      [
+        "Unlinked genes",
+        "Genes on different chromosomes are sorted into gametes independently. Two RrYy parents give offspring in a 9:3:3:1 phenotype ratio when both genes show complete dominance."
+      ],
+      [
+        "Linked genes",
+        "Genes close together on the same chromosome tend to be inherited together as a unit. They do not sort independently, so offspring mostly show the parents' combinations of traits, not 9:3:3:1."
+      ],
+      "Crossing over during meiosis can separate linked alleles now and then, making new combinations. It happens less often the closer two genes are."
+    ],
+    "remember": "Unlinked genes give 9:3:3:1. Linked genes tend to travel together, so new combinations are rare.",
+    "a": {
+      "q": "Two pea plants, both RrYy, are crossed. The genes are on different chromosomes and each shows complete dominance. What phenotype ratio is expected?",
+      "opts": ["9:3:3:1", "3:1", "1:1:1:1", "1:2:1"],
+      "why": "Unlinked genes sort independently, which gives 9:3:3:1 from two double heterozygotes. A 3:1 ratio would come from following only one gene.",
+      "clue": "Two genes on different chromosomes sort independently."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a cross of two fruit flies heterozygous for two genes, far fewer offspring than expected show new combinations of traits. What is the best explanation?",
+      "opts": [
+        "The two genes are close together on one chromosome",
+        "The two genes are on different chromosomes",
+        "Crossing over often occurs between the two genes",
+        "The two genes are far apart on one chromosome"
+      ],
+      "why": "Genes close together on the same chromosome tend to be inherited together, so new combinations are rare. Genes on different chromosomes would sort independently and give 9:3:3:1, with plenty of new combinations. Frequent crossing over, or genes far apart, would also make new combinations more common.",
+      "clue": "Which genes tend to stay together as a unit?"
+    }
+  },
+  "bio-asexual-reproduction": {
+    "title": "Asexual reproduction",
+    "card": [
+      [
+        "Binary fission",
+        "a single-celled organism, such as a bacterium, copies its DNA and splits into two cells. As in all asexual reproduction, one parent makes offspring without gametes or fertilisation."
+      ],
+      ["Budding", "a small outgrowth forms on the parent and detaches as a new individual. Yeast and hydra do this."],
+      [
+        "Fragmentation",
+        "a piece of the parent breaks off and grows into a new organism. Some sea stars and flatworms do this."
+      ],
+      [
+        "Vegetative propagation",
+        "a plant grows new plants from its parts, such as runners or tubers, as strawberries and potatoes do. In every method, the offspring are genetically identical to the parent, apart from rare mutations."
+      ]
+    ],
+    "remember": "One parent, no gametes, and offspring that are genetically identical to it.",
+    "a": {
+      "q": "Which feature is shared by all forms of asexual reproduction?",
+      "opts": [
+        "One parent produces offspring with the same genes",
+        "Two parents each give half of the offspring's genes",
+        "The parent splits into two equal single cells",
+        "Offspring grow from a fertilised egg cell"
+      ],
+      "why": "All forms use one parent and give genetically identical offspring. Splitting into two equal cells is only binary fission, so it is not shared by budding, fragmentation or vegetative propagation.",
+      "clue": "Think about what budding, fission and runners have in common."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ravi plants one piece of a potato tuber and a new potato plant grows from it. Which describes this?",
+      "opts": [
+        "Vegetative propagation, and the new plant is identical",
+        "Budding, and the new plant has genes from two parents",
+        "Binary fission, and the new plant is identical",
+        "Vegetative propagation, and the new plant is varied"
+      ],
+      "why": "A new plant grown from a part of one parent plant is vegetative propagation, and the offspring is genetically identical to that parent. Calling it varied is wrong, because no gametes or second parent are involved.",
+      "clue": "A plant part grows into a whole plant, with only one parent."
+    }
+  },
+  "bio-sexual-reproduction": {
+    "title": "Sexual reproduction",
+    "card": [
+      "In sexual reproduction, two parents each make gametes. Gametes are sex cells, such as sperm and egg cells.",
+      "A sperm and an egg join in fertilisation. This forms a zygote, which has a mix of genes from both parents.",
+      "Each offspring gets a different combination of genes. So offspring differ from each other and from their parents, apart from identical twins.",
+      "This variation can help a population survive change, such as a new disease or a hotter climate. Some individuals may have features that suit the new conditions."
+    ],
+    "remember": "Two gametes join, so offspring vary, and variation gives a population a better chance when conditions change.",
+    "a": {
+      "q": "Why are offspring from sexual reproduction usually different from their parents?",
+      "opts": [
+        "Each offspring gets a new mix of genes from two gametes",
+        "Each offspring gets all of its genes from one parent",
+        "Offspring copy their genes from the parent that is stronger",
+        "Offspring change their genes to suit their surroundings"
+      ],
+      "why": "Fertilisation joins two gametes, one from each parent, so each zygote has a new mix of genes. Offspring do not choose or alter their genes to suit their surroundings.",
+      "clue": "Think about what fertilisation joins together."
+    },
+    "b": {
+      "d": 3,
+      "q": "A fungus kills many plants in a field of wild daisies that reproduce sexually. Why might some daisies still survive?",
+      "opts": [
+        "They differ in their genes, so some may resist the fungus",
+        "They have identical genes, so all may resist the fungus",
+        "They alter their genes, so some may resist the fungus",
+        "They have two parents, so all may resist the fungus"
+      ],
+      "why": "Sexually produced daisies each have a different mix of genes, so some may carry genes that resist the fungus and survive to breed. Individuals cannot alter their own genes to meet a threat, and having two parents gives no protection by itself.",
+      "clue": "Are the daisies all the same, and can a plant change its genes?"
+    }
+  },
+  "bio-advantages-each-strategy": {
+    "title": "Advantages of each strategy",
+    "card": [
+      [
+        "Asexual",
+        "One parent can reproduce alone, so it does not need to find a mate. It can often produce many offspring quickly. Growing plants from cuttings is one example."
+      ],
+      [
+        "Sexual",
+        "Gametes from two parents combine, so offspring differ from each other and from their parents. Plants grown from seed are one example."
+      ],
+      "Asexual reproduction suits a stable environment. Offspring match a parent that already survives there, and a population can grow fast.",
+      "Sexual reproduction suits a changing environment. Its variation means some individuals may survive a new disease or a shift in climate."
+    ],
+    "remember": "Asexual reproduction gives speed without a partner. Sexual reproduction gives variation.",
+    "a": {
+      "q": "A lone plant is carried to an empty island and soon spreads across it. Which advantage of asexual reproduction best explains this?",
+      "opts": [
+        "It can reproduce without finding a mate",
+        "It produces offspring that differ from the parent",
+        "It makes offspring that resist every disease",
+        "It combines gametes from two different parents"
+      ],
+      "why": "One parent can reproduce alone, so a single plant can start a new population. Producing differing offspring is an advantage of sexual reproduction, and asexual offspring match the parent, so they do not gain new resistance.",
+      "clue": "Only one plant arrived on the island."
+    },
+    "b": {
+      "d": 3,
+      "q": "A fungus disease spreads through two orchards. Orchard A has trees grown from cuttings of one tree. Orchard B has trees grown from seed. Why is Orchard B more likely to have survivors?",
+      "opts": [
+        "Seed-grown trees vary, so some may resist the disease",
+        "Seed-grown trees match their parent, so some may resist it",
+        "Cutting-grown trees vary, so some may be harmed less",
+        "Seed-grown trees need no partner, so some may spread fast"
+      ],
+      "why": "Trees grown from seed come from sexual reproduction, so they differ and some may resist the disease. Trees from cuttings are identical to the one parent tree, not varied, so a disease that harms one is likely to harm them all. Matching a parent and needing no partner describe asexual reproduction, not seed.",
+      "clue": "Which orchard has trees that differ from each other?"
+    }
+  },
+  "bio-reproductive-cloning": {
+    "title": "Reproductive cloning",
+    "card": [
+      "Reproductive cloning makes a new organism that is genetically identical to an existing one. It is done in a laboratory and needs no fertilisation by sperm.",
+      "In somatic cell nuclear transfer (SCNT), the nucleus is removed from an egg cell. A nucleus from a body (somatic) cell of the donor is put in its place.",
+      "The egg is stimulated to divide and grow into an embryo. The embryo is placed in a surrogate mother, who carries it to birth.",
+      "The clone has the same nuclear DNA as the donor, not the egg provider or the surrogate. Dolly the sheep, born in 1996, was made this way."
+    ],
+    "remember": "In SCNT, a donor's body-cell nucleus goes into an emptied egg, so the clone matches the donor.",
+    "a": {
+      "q": "In SCNT, the clone is genetically identical to which animal?",
+      "opts": [
+        "The animal that donated the body-cell nucleus",
+        "The animal that provided the egg cell",
+        "The surrogate mother that carried the embryo",
+        "The animal whose sperm fertilised the egg"
+      ],
+      "why": "The nucleus from the donor's body cell holds the DNA the clone grows from. The egg's own nucleus is removed, and the surrogate only carries the embryo. No sperm is used in SCNT.",
+      "clue": "Which cell's nucleus ends up inside the egg?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A farm clones a prize ram, Max, using SCNT. A body cell from Max is used, an egg from ewe Ola, and ewe Pia carries the embryo. The lamb is most similar genetically to which sheep?",
+      "opts": [
+        "Max, because his nucleus was put in the egg",
+        "Ola, because her egg cell grew into the lamb",
+        "Pia, because she carried the lamb to birth",
+        "Max and Ola equally, because both gave cells"
+      ],
+      "why": "The lamb's nuclear DNA comes from Max's body cell. Ola's egg nucleus was removed before the swap, so her nuclear DNA is not in the lamb, even though her egg grew into the embryo. Pia only carries the embryo to birth.",
+      "clue": "Whose nucleus stays in the egg after the swap?"
+    }
+  },
+  "bio-genetic-diversity-matters": {
+    "title": "Why genetic diversity matters",
+    "card": [
+      "Genetic diversity is the variation in alleles (versions of genes) among the individuals in a population. It comes from mutation and from sexual reproduction mixing alleles.",
+      "In a diverse population, individuals differ in traits such as disease resistance or heat tolerance. These differences exist before any change happens.",
+      "If a new disease or a change in conditions arrives, some individuals may have alleles that let them survive and reproduce. They pass those alleles to their offspring.",
+      "A population with little variation is more at risk. If the disease or change harms one individual, it is likely to harm most of them, and the population could die out."
+    ],
+    "remember": "More variation means a better chance that some individuals survive a change.",
+    "a": {
+      "q": "Why is a population with high genetic diversity more likely to survive a new disease?",
+      "opts": [
+        "Some individuals may already carry alleles that resist it",
+        "The disease changes to match each individual's alleles",
+        "Every individual develops resistance after being infected",
+        "Individuals with the same alleles cooperate against it"
+      ],
+      "why": "Variation exists before the disease arrives, so some individuals may carry alleles that help them survive and breed. Resistance is not gained by catching the disease, which is the tempting wrong idea.",
+      "clue": "Do survivors gain their resistance from the infection itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two orchards grow the same fruit. Orchard A has trees grown from many different seeds. Orchard B has cloned trees, which are genetically identical. A new fungus arrives that kills trees lacking one particular allele. What is most likely?",
+      "opts": [
+        "Some trees in A survive, but all in B face the same risk",
+        "Trees in B survive, as identical trees share resistance",
+        "Trees in A and B are equally likely to survive",
+        "Trees in A all die, as variation weakens trees"
+      ],
+      "why": "The trees in A differ, so some may carry the allele that gives resistance. The clones in B are identical, so if one lacks the allele, all do. Identical trees do not guarantee resistance: they share the same weakness or strength.",
+      "clue": "Identical individuals respond to a threat in the same way."
+    }
+  },
+  "bio-structural-physiological-behavioural-adaptations": {
+    "title": "Structural, physiological and behavioural adaptations",
+    "card": [
+      "An adaptation is a trait that helps an organism survive and reproduce in its environment. Adaptations build up in a population over many generations through natural selection.",
+      [
+        "Structural",
+        "a physical feature of the body, such as the thick blubber of a seal or the sharp claws of an eagle."
+      ],
+      ["Physiological", "an internal process, such as a snake making venom or a mammal sweating to lose heat."],
+      [
+        "Behavioural",
+        "an action an organism takes, such as birds migrating or a lizard basking in the sun to warm up."
+      ]
+    ],
+    "remember": "Adaptations can be what an organism has, what its body does inside, or what it does.",
+    "a": {
+      "q": "A frog living in a cold region produces a chemical in its blood that stops its cells from freezing. What type of adaptation is this?",
+      "opts": ["Physiological", "Structural", "Behavioural", "Acquired"],
+      "why": "The chemical is made by an internal process in the body, so it is physiological. It is not structural, because it is not a physical body feature such as fur or claws. It is not behavioural, because it is not an action the frog takes.",
+      "clue": "Is it a body part, an internal process or an action?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which of these is a behavioural adaptation?",
+      "opts": [
+        "A meerkat standing upright to watch for hawks",
+        "A camel having a hump that stores fat",
+        "A cactus having a thick, waxy skin",
+        "A desert rat making very concentrated urine"
+      ],
+      "why": "Standing up to watch for predators is an action the animal takes, so it is behavioural. The camel's hump is tempting, but it is a physical body feature, so it is structural. The waxy skin is structural and the concentrated urine is physiological.",
+      "clue": "Look for the option where the organism does something."
+    }
+  },
+  "bio-adaptations-australian-conditions": {
+    "title": "Adaptations to Australian conditions",
+    "card": [
+      "Much of Australia is hot and dry, with unreliable rain and regular bushfires. Many native species have adaptations that help them survive these conditions.",
+      [
+        "Heat and drought",
+        "Some plants have deep roots that reach water far below the surface, or thick, waxy leaves that lose less water. Some animals shelter in burrows, where it is cooler and more humid than above ground."
+      ],
+      [
+        "Fire",
+        "Some eucalypts have thick bark that protects the tree, and buds under the bark that regrow new leaves after a fire. Some plants, such as many banksias, keep seeds in woody fruits that open after fire."
+      ],
+      "These features are inherited. Individuals with them were more likely to survive and reproduce in Australian conditions, so the features became common in the population."
+    ],
+    "remember": "Many Australian species have inherited features that suit heat, drought and fire.",
+    "a": {
+      "q": "Why is a burrow an adaptation to hot, dry conditions for a desert animal?",
+      "opts": [
+        "It shelters the animal in cooler, more humid air",
+        "It lets the animal make its own water underground",
+        "It lets the animal warm its body to match the outside air",
+        "It lets the animal avoid needing water at any time"
+      ],
+      "why": "The air in a burrow is cooler and more humid than the surface, so the animal loses less water and heat stress is lower. It does not remove the need for water, because the animal still has to drink or get water from food.",
+      "clue": "Think about how the air underground differs from the air above."
+    },
+    "b": {
+      "d": 3,
+      "q": "After a bushfire in the Victorian bush, a eucalypt with blackened bark grows new leaves from its trunk. Which adaptation allows this?",
+      "opts": [
+        "Buds protected under thick bark that regrow after fire",
+        "Deep roots that reach water far below the surface",
+        "Seeds held in woody fruits that open after fire",
+        "Waxy leaves that lose less water in hot weather"
+      ],
+      "why": "New leaves growing from the trunk come from buds protected under the bark, so the same tree recovers. Seeds in woody fruits are also a fire adaptation, but they start new plants from seed rather than regrowing from the trunk.",
+      "clue": "The new leaves grow from the tree that survived, not from seed."
+    }
+  },
+  "bio-interdependencies-between-species": {
+    "title": "Interdependencies between species",
+    "card": [
+      [
+        "Predator-prey",
+        "one species (the predator) kills and eats another (the prey). Prey numbers affect predator numbers, and the reverse."
+      ],
+      [
+        "Competition",
+        "two or more species use the same limited resource, such as food, water or space. Both are usually harmed, as each has less of the resource."
+      ],
+      [
+        "Mutualism",
+        "both species benefit from the relationship, such as a bee that feeds on nectar and pollinates the flower."
+      ],
+      [
+        "Parasitism",
+        "one species (the parasite) lives on or in a host and gains, while the host is harmed. Commensalism is when one species gains and the other is neither helped nor harmed."
+      ]
+    ],
+    "remember": "Ask how each species is affected. Competitors usually both lose. A predator kills its prey, while a parasite lives on a host and harms it.",
+    "a": {
+      "q": "A tick feeds on the blood of a kangaroo and the kangaroo becomes weaker. Which relationship is this?",
+      "opts": ["Parasitism", "Commensalism", "Mutualism", "Predator-prey"],
+      "why": "The tick gains food from a host that it lives on, and the host is harmed. That is parasitism. It is not predator-prey, because the tick does not kill and eat the kangaroo.",
+      "clue": "Does the tick live on its victim, and is the victim harmed?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two species of lizard on an island both hunt the same few insects, and both are now less well fed. What is the relationship between the two lizard species?",
+      "opts": ["Competition", "Mutualism", "Commensalism", "Predator-prey"],
+      "why": "The two lizard species use the same limited resource, the insects, and both are worse off. That is competition. It is not predator-prey, because neither lizard species kills and eats the other.",
+      "clue": "Do the lizards eat each other, or share one limited resource?"
+    }
+  },
+  "bio-keystone-species": {
+    "title": "Species with outsized effects",
+    "card": [
+      "Some species have a much larger effect on their ecosystem than their numbers or body size would suggest. The effect reaches the whole community, not just the species itself.",
+      "If such a species is removed, other species can change a great deal. Some may increase sharply, and others may decline or disappear.",
+      "A top predator can be one of these species. It can hold down the numbers of its prey, which stops those prey from overusing food or habitat.",
+      "Example: sea otters eat sea urchins. Urchins graze on kelp, so with otters present, kelp forests can thrive and shelter many other species. If otters are lost, urchins can increase and strip the kelp."
+    ],
+    "remember": "A species can matter far more than its numbers, so losing it can reshape the whole community.",
+    "a": {
+      "q": "Which statement best describes a species that shapes its ecosystem far beyond its numbers?",
+      "opts": [
+        "Removing it would change many other species in the community",
+        "It has the largest population in the ecosystem",
+        "It feeds on every other species in the community",
+        "It survives in a wider range of habitats than others"
+      ],
+      "why": "What marks this kind of species is its effect on the community, which is far greater than its numbers suggest. Having the largest population is a tempting idea, but such species are often not the most numerous.",
+      "clue": "Think about effect compared with numbers, not population size."
+    },
+    "b": {
+      "d": 3,
+      "q": "A wetland has a few dingoes that hunt feral goats. Goats overgraze shoreline plants that shelter many insects and birds. The dingoes are removed. What is the most likely result?",
+      "opts": [
+        "Goats increase and shoreline plants decline",
+        "Goats decline and shoreline plants grow back thicker",
+        "Little changes, because dingoes are few in number",
+        "Only dingoes are affected, as other species stay the same"
+      ],
+      "why": "The dingoes hold down goat numbers, so without them goats can increase and overgraze the plants that shelter other species. Few dingoes does not mean a small effect, because such a species can shape the community far beyond its numbers.",
+      "clue": "Few in number does not mean small in effect."
+    }
+  },
+  "bio-aboriginal-knowledge-ecosystems": {
+    "title": "Aboriginal knowledge of ecosystems",
+    "card": [
+      "Aboriginal and Torres Strait Islander peoples have lived on and cared for Country for tens of thousands of years. Over that time they built detailed knowledge of plants, animals, seasons and the land.",
+      "This knowledge is passed on through stories, songs, art, ceremony and practice. It is held by communities and Elders, and it is part of living cultures today.",
+      "Fire management is one example. Cultural burning uses small, cool fires lit at chosen times and places, guided by knowledge of the local plants, animals and season.",
+      "Cultural burning can reduce fuel build-up and support the growth of some plants. Many land managers now work with Aboriginal and Torres Strait Islander people to use this knowledge."
+    ],
+    "remember": "Long-held Aboriginal and Torres Strait Islander knowledge of ecosystems, such as cultural burning, guides how land is cared for.",
+    "a": {
+      "q": "Which statement about Aboriginal and Torres Strait Islander knowledge of ecosystems is accurate?",
+      "opts": [
+        "It has built up over generations and is still used today",
+        "It was recorded once in the past and has not changed since",
+        "It was mostly lost and is no longer used in caring for land",
+        "It covers stories and art but not plants, animals or land"
+      ],
+      "why": "The knowledge was built over tens of thousands of years and is part of living cultures today, and land managers now work with it. It is not fixed or lost, and it covers plants, animals, seasons and the land, not only stories and art.",
+      "clue": "Think about how long the knowledge took to build and whether it is used now."
+    },
+    "b": {
+      "d": 3,
+      "q": "A park ranger in Victoria works with a Traditional Owner group to plan a cultural burn. Which plan best matches cultural burning?",
+      "opts": [
+        "Small, cool fires timed to the local season and plants",
+        "Large, hot fires in summer to clear all the fuel at once",
+        "Small fires lit on any day of the year to save planning",
+        "Cool fires lit across the whole state on the same day"
+      ],
+      "why": "Cultural burning uses small, cool fires lit at chosen times and places, guided by the local plants, animals and season. A large, hot fire is tempting because it burns fuel, but it is not the small, cool, planned fire the card describes.",
+      "clue": "Two things matter here: the size of the fire and how it is timed."
+    }
+  },
+  "bio-judging-scientific-evidence": {
+    "title": "Judging scientific evidence",
+    "card": [
+      [
+        "Primary data",
+        "data collected first-hand by the investigator, such as measuring the growth of bean plants in your own experiment."
+      ],
+      [
+        "Secondary data",
+        "data collected by someone else, such as figures from a published study or a government health report."
+      ],
+      "Good evidence is valid: the method tests what it claims to test. It is also authoritative: it comes from people with expertise, and it is often published and checked by other experts.",
+      "Good evidence is also checked for bias, such as a funder who gains from a certain result. An opinion or a personal story (an anecdote) is not good evidence, because it is not measured or tested."
+    ],
+    "remember": "Judge a source by its method, its author and its bias, not by how sure it sounds.",
+    "a": {
+      "q": "Which source is the best scientific evidence that a new fertiliser increases crop yield?",
+      "opts": [
+        "A controlled trial published in a peer-reviewed journal",
+        "A farmer's story that her crops did well last year",
+        "A social media post praising the fertiliser",
+        "A company advertisement stating that yields doubled"
+      ],
+      "why": "A controlled trial that other experts have reviewed is valid and authoritative. The farmer's story is an anecdote, so it is not measured or tested, and it is the most tempting wrong option because it comes from real experience.",
+      "clue": "Which source was tested and checked by experts?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to know if sleep affects memory. She uses test scores that a university team collected and published. What kind of data is this, and what should she check?",
+      "opts": [
+        "Secondary data, and whether the team had bias",
+        "Secondary data, and that she collected it herself",
+        "Primary data, and whether the team had bias",
+        "Primary data, and that she collected it herself"
+      ],
+      "why": "Priya did not collect the scores, so they are secondary data. Published data can still be affected by bias, such as a funder who gains from a result, so she should check for it. It is not primary data, because primary data is collected first-hand by the investigator.",
+      "clue": "Who collected the data, and could that group gain from the result?"
+    }
+  },
+  "bio-identifying-bioethical-issues": {
+    "title": "Identifying bioethical issues",
+    "card": [
+      "A bioethical issue arises when biology or medicine raises a question of right and wrong. Science can show what is possible, but it cannot alone say whether we should do it.",
+      "Gene editing is one example. Scientists can change the DNA of an organism, and people disagree about whether it is right to do so, especially in human embryos.",
+      "Cloning is another. Making a genetic copy of an animal is possible, and people ask whether it is right to do it and how the animals are treated.",
+      "A question about how something works, such as how many chromosomes a cell has, can be answered with evidence alone. It is not a bioethical issue."
+    ],
+    "remember": "A bioethical issue is a question of right and wrong that biology or medicine makes us ask.",
+    "a": {
+      "q": "Which of these is a bioethical issue?",
+      "opts": [
+        "Whether it is right to edit genes in human embryos",
+        "How many chromosomes a human body cell contains",
+        "Which stage of mitosis comes after metaphase",
+        "How a clone's DNA compares with its parent's DNA"
+      ],
+      "why": "Whether editing human embryos is right is a question of right and wrong, so it is a bioethical issue. The other three can be answered with evidence alone, so they are not.",
+      "clue": "Which question asks whether something should be done, not how it works?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A lab in Geelong can clone a prize sheep. Which question about this is a bioethical issue?",
+      "opts": [
+        "Is it right to clone animals for profit",
+        "How many cells does the clone start from",
+        "Does the clone have the same DNA as the sheep",
+        "Which tools does the lab use to make the clone"
+      ],
+      "why": "Whether cloning for profit is right is a question of right and wrong. The other options ask about how cloning works or what it produces, and evidence can answer these. The DNA question is tempting because it is about cloning, but it is a factual question.",
+      "clue": "A topic being about cloning is not enough. Look for a question of right and wrong."
+    }
+  },
+  "bio-approaches-bioethics": {
+    "title": "Approaches to bioethics",
+    "card": [
+      [
+        "Consequences-based",
+        "judges an action by its outcomes. The right choice is the one that gives the best overall result, such as the most good for the most people."
+      ],
+      [
+        "Duty-based",
+        "judges an action by whether it follows moral rules or duties, such as telling the truth or not harming others. Outcomes do not decide it."
+      ],
+      [
+        "Virtue-based",
+        "asks what a person of good character would do, such as someone who is honest, fair and caring."
+      ],
+      "The same issue can be weighed in all three ways. Each approach asks a different question, so they can lead to different answers."
+    ],
+    "remember": "Outcomes, rules or character: each approach asks a different question about the same issue.",
+    "a": {
+      "q": "A scientist says a trial is right because it will probably save many lives. Which approach is this?",
+      "opts": [
+        "Consequences-based, as it judges by the outcome",
+        "Duty-based, as it judges by the outcome",
+        "Virtue-based, as it judges by the outcome",
+        "Duty-based, as it follows a moral rule"
+      ],
+      "why": "The scientist judges the trial by its likely result, which is lives saved. That is a consequences-based approach. A duty-based approach would ask whether the trial follows moral rules, whatever the outcome.",
+      "clue": "What is the scientist using to decide: outcome, rule or character?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dr Lee refuses to hide a risk of a new treatment from patients, even though telling them may cut the number who join the study. She says patients have a right to the truth. Which approach is she using?",
+      "opts": [
+        "Duty-based, as she follows a rule of honesty",
+        "Consequences-based, as she wants the best outcome",
+        "Virtue-based, as she wants to be seen as honest",
+        "Consequences-based, as she expects fewer joiners"
+      ],
+      "why": "Dr Lee follows a rule that patients must be told the truth, even when this may lead to a worse result for the study. That is duty-based. The tempting option is consequences-based, but she is ignoring the outcome and putting the rule first.",
+      "clue": "She sticks to the rule even when the result may be worse."
+    }
+  },
+  "bio-ethical-concepts-biology": {
+    "title": "Ethical concepts in biology",
+    "card": [
+      [
+        "Integrity",
+        "honest, careful work. Researchers report results truthfully and do not make up, hide or change data."
+      ],
+      [
+        "Justice",
+        "fairness. The benefits and burdens of research are shared fairly, and no group is treated unfairly."
+      ],
+      ["Beneficence", "acting to do good. A study should aim to bring benefit, such as better health."],
+      [
+        "Non-maleficence and respect",
+        "Non-maleficence is avoiding harm, so risks to people, animals or the environment are kept low. Respect is valuing the rights and choices of others, so people join freely after being told the facts."
+      ]
+    ],
+    "remember": "Ask of any research: is it honest, fair, helpful, harmless and respectful?",
+    "a": {
+      "q": "A research team sets up a trial of a new drug. It tells each volunteer the possible risks and lets them choose freely whether to join. Which concept does this best show?",
+      "opts": ["Respect", "Integrity", "Beneficence", "Justice"],
+      "why": "Telling people the facts and letting them choose freely shows respect for their rights and choices. Integrity is about honest reporting of results, which is not what the team is doing here.",
+      "clue": "Think about who makes the choice to join."
+    },
+    "b": {
+      "d": 3,
+      "q": "A company tests a new vaccine and finds that some volunteers had a mild reaction. It leaves these results out of its report so the vaccine looks safer. Which concept is most clearly broken?",
+      "opts": ["Integrity", "Justice", "Beneficence", "Respect"],
+      "why": "Leaving out results to change the picture is dishonest reporting, which breaks integrity. Beneficence is the tempting option, but the main fault is not about the aim of doing good. It is about being truthful with data.",
+      "clue": "Focus on what was done with the results, not the vaccine itself."
+    }
   }
 };

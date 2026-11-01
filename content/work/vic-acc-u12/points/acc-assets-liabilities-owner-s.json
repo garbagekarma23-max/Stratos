@@ -1,0 +1,168 @@
+{
+ "id": "acc-assets-liabilities-owner-s",
+ "title": "Assets, liabilities and owner's equity",
+ "brief": "797713527ec7",
+ "shortlist": [
+  [
+   "bus-sole-traders-partnerships",
+   0.359
+  ],
+  [
+   "bus-financing-new-business",
+   0.355
+  ],
+  [
+   "bus-debt-equity-compared",
+   0.264
+  ],
+  [
+   "bus-balance-sheet",
+   0.263
+  ],
+  [
+   "bus-gearing-ratio",
+   0.262
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 may adapt bus-balance-sheet, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00046,
+  "confirm": 0.01077,
+  "write": 0.0049,
+  "check": 0.00688
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-balance-sheet",
+  "changes": [
+   "Define an asset as a resource the business controls, not only something it owns, to match the VCE Accounting wording.",
+   "Describe owner's equity as the owner's claim on the business's assets, rather than the owner's share of the business."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same three elements and the accounting equation at a suitable depth, but it uses 'owns' rather than the 'controls' wording the brief uses and frames equity as a share rather than a claim.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, on the balance sheet, teaches the statement as a snapshot and the accounting equation rather than the three elements themselves, and its 'owns' definition of assets does not match the VCE 'controls' definition, so a new point is needed.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Assets, liabilities and owner's equity",
+  "card": [
+   [
+    "Asset",
+    "a resource the business controls that has value, such as cash, equipment or a van. The business expects to gain from it."
+   ],
+   [
+    "Liability",
+    "an amount the business owes to someone outside it, such as a bank loan or money owed to a supplier."
+   ],
+   [
+    "Owner's equity",
+    "the owner's claim on the assets of the business. It is what is left after the liabilities are taken away from the assets."
+   ],
+   "This gives the accounting equation: Assets = Liabilities + Owner's equity. If assets are $50 000 and liabilities are $20 000, owner's equity is $30 000."
+  ],
+  "remember": "Assets = Liabilities + Owner's equity. Equity is what is left for the owner.",
+  "a": {
+   "q": "Mia's café in Dubbo owes $8 000 to its coffee bean supplier. How does the café's accounting treat this amount?",
+   "opts": [
+    "As a liability, because it is owed to an outsider",
+    "As an asset, because it is a resource the café holds",
+    "As owner's equity, because Mia is responsible for it",
+    "As an asset, because the beans have a value to the café"
+   ],
+   "why": "The $8 000 is owed to someone outside the business, so it is a liability. It is tempting to call it an asset because the beans are useful, but the amount owing is a debt, not a resource the café controls.",
+   "clue": "Does the café own this amount, or owe it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jun runs a bike repair shop in Geelong. It has assets of $60 000 and liabilities of $24 000. What is Jun's owner's equity?",
+   "opts": [
+    "$36 000",
+    "$24 000",
+    "$84 000",
+    "$60 000"
+   ],
+   "why": "Owner's equity = assets - liabilities = $60 000 - $24 000 = $36 000. Adding the two figures to get $84 000 is the tempting mistake, because it treats the liabilities as part of the owner's claim instead of a claim by outsiders.",
+   "clue": "Equity is what is left after the debts are taken from the assets."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "As a liability, because it is owed to an outsider",
+   "also_right": []
+  },
+  "b": {
+   "best": "$36 000",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Assets, liabilities and owner's equity",
+  "card": [
+   [
+    "Asset",
+    "a resource the business controls that has value, such as cash, equipment or a van. The business expects to gain from it."
+   ],
+   [
+    "Liability",
+    "an amount the business owes to someone outside it, such as a bank loan or money owed to a supplier."
+   ],
+   [
+    "Owner's equity",
+    "the owner's claim on the assets of the business. It is what is left after the liabilities are taken away from the assets."
+   ],
+   "This gives the accounting equation: Assets = Liabilities + Owner's equity. If assets are $50 000 and liabilities are $20 000, owner's equity is $30 000."
+  ],
+  "remember": "Assets = Liabilities + Owner's equity. Equity is what is left for the owner.",
+  "a": {
+   "q": "Mia's café in Dubbo owes $8 000 to its coffee bean supplier. How does the café's accounting treat this amount?",
+   "opts": [
+    "As a liability, because it is owed to an outsider",
+    "As an asset, because it is a resource the café holds",
+    "As owner's equity, because Mia is responsible for it",
+    "As an asset, because the beans have a value to the café"
+   ],
+   "why": "The $8 000 is owed to someone outside the business, so it is a liability. It is tempting to call it an asset because the beans are useful, but the amount owing is a debt, not a resource the café controls.",
+   "clue": "Does the café own this amount, or owe it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jun runs a bike repair shop in Geelong. It has assets of $60 000 and liabilities of $24 000. What is Jun's owner's equity?",
+   "opts": [
+    "$36 000",
+    "$24 000",
+    "$84 000",
+    "$60 000"
+   ],
+   "why": "Owner's equity = assets - liabilities = $60 000 - $24 000 = $36 000. Adding the two figures to get $84 000 is the tempting mistake, because it treats the liabilities as part of the owner's claim instead of a claim by outsiders.",
+   "clue": "Equity is what is left after the debts are taken from the assets."
+  }
+ },
+ "cleared_by": "checker"
+}

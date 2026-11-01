@@ -1,0 +1,176 @@
+{
+ "id": "mat-misleading-graphs",
+ "title": "Misleading graphs",
+ "brief": "fed26cf5affc",
+ "shortlist": [
+  [
+   "mat-graphs-logarithmic-functions",
+   0.248
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.207
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: failed the content check, writing again",
+  "2026-11-01T08:33:51Z write: done",
+  "2026-11-01T08:42:06Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01697,
+  "check": 0.01739,
+  "fix": 0.02904
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches how misleading graphs distort data through truncated axes, uneven scales or unfairly sized pictures; the logarithmic graphs card and the solving-equations card are on unrelated ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Misleading graphs",
+  "card": [
+   "A graph can show true numbers and still give the wrong picture. Check the axes, the scale and the pictures before you trust the shape.",
+   [
+    "Axis not at zero",
+    "if a column graph starts at a value above zero, short columns look tiny next to tall ones. A small difference then looks huge."
+   ],
+   [
+    "Uneven scale",
+    "if the gaps between marks are not equal, such as 0, 10, 20, 50, the line or columns bend and the change looks faster or slower than it is."
+   ],
+   [
+    "Unfair pictures",
+    "if a picture is made twice as tall and also twice as wide, its area is 4 times bigger. Example: sales double from 10 to 20, but the picture looks 4 times as large."
+   ]
+  ],
+  "remember": "Read the axis numbers first. Then ask if the shape matches the real change.",
+  "a": {
+   "q": "A column graph of phone sales starts its vertical axis at 90, not 0. Sales of 100 and 110 are shown. What is the effect?",
+   "opts": [
+    "The 110 column looks much more than 10% taller than 100",
+    "The 110 column looks the same height as the 100 column",
+    "The 110 column looks shorter than the 100 column",
+    "The two sales figures are changed to different numbers"
+   ],
+   "why": "Starting at 90 cuts off the bottom of both columns. The columns look 10 and 20 tall, so the second looks double the first. The sales numbers stay the same, so the numbers are not changed, only the picture.",
+   "clue": "Compare the heights you see above the starting value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sold 10 cups on Monday and 20 on Tuesday. A graph shows each as a cup picture, with Tuesday's cup twice as tall and twice as wide. Why is this misleading?",
+   "opts": [
+    "Its area is 4 times bigger, so sales look 4 times bigger",
+    "Its area is 2 times bigger, so sales look 2 times bigger",
+    "Its width is bigger, so sales look smaller than Monday's",
+    "Pictures can only be used when the axis starts at zero"
+   ],
+   "why": "Doubling both height and width makes the area 2 × 2 = 4 times as large. Sales only doubled, so the eye reads a bigger rise than the real one. Doubling only the height would have kept the picture fair.",
+   "clue": "Area depends on height and width together."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The 110 column looks much more than 10% taller than 100",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its area is 4 times bigger, so sales look 4 times bigger",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The uneven-scale line says 'the gaps between marks are not equal, such as 0, 10, 20, 50'. The marks are usually evenly spaced on the page while the values jump unevenly, so it is unclear what 'gaps' means. It also says 'the line or columns bend', but columns do not bend. This could confuse students about what an uneven scale looks like."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are correct. The card's uneven-scale line is confusing: it is unclear whether 'gaps' means spacing or values, and it says columns 'bend'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The uneven-scale line says 'the gaps between marks are not equal, such as 0, 10, 20, 50'. The marks are usually evenly spaced on the page while the values jump unevenly, so it is unclear what 'gaps' means. It also says 'the line or columns bend', but columns do not bend. This could confuse students about what an uneven scale looks like."
+ ],
+ "proposal": {
+  "title": "Misleading graphs",
+  "card": [
+   "A graph can show true numbers and still give the wrong picture. Check the axes, the scale and the pictures before you trust the shape.",
+   [
+    "Axis not at zero",
+    "if the vertical axis starts above zero, the bottom of every column is cut off. A small difference then looks huge."
+   ],
+   [
+    "Uneven scale",
+    "the marks on an axis are evenly spaced, but the values jump unevenly, such as 0, 10, 20, 50. Equal distances then stand for unequal amounts, so a change can look faster or slower than it is."
+   ],
+   [
+    "Unfair pictures",
+    "if a picture is made twice as tall and also twice as wide, its area is 4 times bigger. Example: sales double from 10 to 20, but the picture looks 4 times as large."
+   ]
+  ],
+  "remember": "Read the axis numbers first. Then ask if the shape matches the real change.",
+  "a": {
+   "q": "A column graph of phone sales starts its vertical axis at 90, not 0. Sales of 100 and 110 are shown. What is the effect?",
+   "opts": [
+    "The 110 column looks much more than 10% taller than 100",
+    "The 110 column looks the same height as the 100 column",
+    "The 110 column looks shorter than the 100 column",
+    "The two sales figures are changed to different numbers"
+   ],
+   "why": "Starting at 90 cuts off the bottom of both columns. The columns look 10 and 20 tall, so the second looks double the first, not 10% taller. The sales numbers stay the same: only the picture changes.",
+   "clue": "Compare the heights you see above the starting value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sold 10 cups on Monday and 20 on Tuesday. A graph shows each as a cup picture, with Tuesday's cup twice as tall and twice as wide. Why is this misleading?",
+   "opts": [
+    "Its area is 4 times bigger, so sales look 4 times bigger",
+    "Its area is 2 times bigger, so sales look 2 times bigger",
+    "Its width is bigger, so sales look smaller than Monday's",
+    "Pictures can only be used when the axis starts at zero"
+   ],
+   "why": "Doubling both height and width makes the area 2 × 2 = 4 times as large. Sales only doubled, so the eye reads a bigger rise than the real one. The area is not 2 times bigger, because both measurements were doubled.",
+   "clue": "Area depends on height and width together."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The uneven-scale line says 'the gaps between marks are not equal, such as 0, 10, 20, 50'. The marks are usually evenly spaced on the page while the values jump unevenly, so it is unclear what 'gaps' means. It also says 'the line or columns bend', but columns do not bend. This could confuse students about what an uneven scale looks like."
+   }
+  ],
+  "flags": [
+   "Card, wording: The uneven-scale line says 'the gaps between marks are not equal, such as 0, 10, 20, 50'. The marks are usually evenly spaced on the page while the values jump unevenly, so it is unclear what 'gaps' means. It also says 'the line or columns bend', but columns do not bend. This could confuse students about what an uneven scale looks like."
+  ]
+ }
+}

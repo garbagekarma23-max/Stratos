@@ -1,0 +1,278 @@
+{
+ "id": "bus-marketing-business-objectives",
+ "title": "Marketing and business objectives",
+ "brief": "c567e01253b0",
+ "shortlist": [
+  [
+   "bus-marketing-objectives",
+   0.615
+  ],
+  [
+   "bus-strategic-role-marketing",
+   0.496
+  ],
+  [
+   "bus-marketing",
+   0.411
+  ],
+  [
+   "bus-performance-objectives",
+   0.365
+  ],
+  [
+   "bus-financial-objectives",
+   0.36
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt bus-strategic-role-marketing, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:02Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:29Z write: failed the content check, writing again",
+  "2026-11-01T08:33:48Z write: done",
+  "2026-11-01T08:42:05Z check: flagged",
+  "2026-11-01T08:44:26Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00044,
+  "confirm": 0.01073,
+  "write": 0.01217,
+  "check": 0.01559,
+  "fix": 0.03138,
+  "recheck": 0.00895
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-strategic-role-marketing",
+  "changes": [
+   "Change the Orange bakery example in question b to a Victorian town, since the point is for students in Victoria.",
+   "Keep the card's focus on how marketing builds customers, sales, market share and profit, and make clear it links to the business objectives in the brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same link between winning and keeping customers and building sales, share and profit, but its framing and bakery example are set in New South Wales and it adds a strategic-direction focus beyond the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, on the strategic role of marketing, does touch on winning customers and building sales, share and profit, but its main idea and first question are about marketing guiding the whole business's direction, so it is a related idea rather than this point's focus on how building a customer base helps meet business objectives.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Marketing and business objectives",
+  "card": [
+   "Marketing is how a business finds, attracts and keeps customers. The customers it wins and keeps are its customer base.",
+   [
+    "Sales",
+    "the amount of goods or services sold, counted in units or dollars. A larger customer base can lift sales."
+   ],
+   [
+    "Profit",
+    "what is left after costs are taken from revenue. More customers can lift profit, but only if the extra revenue is greater than the extra costs."
+   ],
+   [
+    "Market share",
+    "the percentage of all sales in a market that one business makes. It can rise when the business wins customers faster than its rivals do."
+   ]
+  ],
+  "remember": "Marketing builds a customer base, and that can help a business reach its objectives.",
+  "a": {
+   "q": "Which objective is measured as a business's percentage of all sales in its market?",
+   "opts": [
+    "Market share",
+    "Sales",
+    "Profit",
+    "Customer base"
+   ],
+   "why": "Market share compares a business's sales with the sales of the whole market. Sales only counts what the business sells, so it does not show how the business compares with its rivals.",
+   "clue": "Which objective compares the business with its rivals?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. A social media campaign brings in many new customers, but she gives big discounts to win them. Which statement is most accurate?",
+   "opts": [
+    "Sales may rise, but profit may not if costs rise too",
+    "Profit will rise, because sales have risen",
+    "Market share will fall, because prices have fallen",
+    "Sales will rise, but the customer base will not grow"
+   ],
+   "why": "Discounts can bring more customers and sales, but they cut the revenue earned on each item. Profit only rises if revenue grows by more than costs, so rising sales alone do not guarantee it.",
+   "clue": "Profit is revenue minus costs, not just sales."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Market share",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sales may rise, but profit may not if costs rise too",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one hedged with 'may'. The three wrong options all say 'will', so a student can pick the answer from its wording without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The scenario's risk to profit is the discount cutting revenue on each sale, which is what the why explains. The right option instead blames costs rising, so the option and the why do not match the scenario's mechanism."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. In question b, the right option is the only hedged one, which gives it away, and it attributes the profit risk to rising costs while the scenario and the why are about discounts cutting revenue."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one hedged with 'may'. The three wrong options all say 'will', so a student can pick the answer from its wording without knowing the idea.",
+  "Question b, other: The scenario's risk to profit is the discount cutting revenue on each sale, which is what the why explains. The right option instead blames costs rising, so the option and the why do not match the scenario's mechanism."
+ ],
+ "proposal": {
+  "title": "Marketing and business objectives",
+  "card": [
+   "Marketing is how a business finds, attracts and keeps customers. The customers it wins and keeps are its customer base.",
+   [
+    "Sales",
+    "the amount of goods or services sold, counted in units or dollars. A larger customer base can lift sales."
+   ],
+   [
+    "Profit",
+    "what is left after costs are taken from revenue. More customers can lift profit, but discounts cut the revenue from each sale, so profit may not rise."
+   ],
+   [
+    "Market share",
+    "the percentage of all sales in a market that one business makes. It can rise when the business wins customers faster than its rivals do."
+   ]
+  ],
+  "remember": "Marketing builds a customer base, and that can help a business reach its objectives.",
+  "a": {
+   "q": "Which objective is measured as a business's percentage of all sales in its market?",
+   "opts": [
+    "Market share",
+    "Sales",
+    "Profit",
+    "Customer base"
+   ],
+   "why": "Market share compares a business's sales with the sales of the whole market. Sales only counts what the business sells, so it does not show how the business compares with its rivals.",
+   "clue": "Which objective compares the business with its rivals?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. A social media campaign brings in many new customers, but she gives big discounts to win them. Which statement is most accurate?",
+   "opts": [
+    "Sales may rise, but discounts may stop profit from rising",
+    "Profit may rise, since profit depends only on sales",
+    "Market share may fall, as discounts lower her prices",
+    "Her customer base may shrink, as she used discounts"
+   ],
+   "why": "The new customers can lift sales, but each discounted item brings in less revenue. If that revenue does not cover costs, profit may not rise. Profit depends on revenue and costs, not on sales alone.",
+   "clue": "Think about how much each discounted sale earns."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Market share",
+    "also_right": []
+   },
+   "b": {
+    "best": "Sales may rise, but discounts may stop profit from rising",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one hedged with 'may'. The three wrong options all say 'will', so a student can pick the answer from its wording without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The scenario's risk to profit is the discount cutting revenue on each sale, which is what the why explains. The right option instead blames costs rising, so the option and the why do not match the scenario's mechanism."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one hedged with 'may'. The three wrong options all say 'will', so a student can pick the answer from its wording without knowing the idea.",
+   "Question b, other: The scenario's risk to profit is the discount cutting revenue on each sale, which is what the why explains. The right option instead blames costs rising, so the option and the why do not match the scenario's mechanism."
+  ]
+ },
+ "final": {
+  "title": "Marketing and business objectives",
+  "card": [
+   "Marketing is how a business finds, attracts and keeps customers. The customers it wins and keeps are its customer base.",
+   [
+    "Sales",
+    "the amount of goods or services sold, counted in units or dollars. A larger customer base can lift sales."
+   ],
+   [
+    "Profit",
+    "what is left after costs are taken from revenue. More customers can lift profit, but discounts cut the revenue from each sale, so profit may not rise."
+   ],
+   [
+    "Market share",
+    "the percentage of all sales in a market that one business makes. It can rise when the business wins customers faster than its rivals do."
+   ]
+  ],
+  "remember": "Marketing builds a customer base, and that can help a business reach its objectives.",
+  "a": {
+   "q": "Which objective is measured as a business's percentage of all sales in its market?",
+   "opts": [
+    "Market share",
+    "Sales",
+    "Profit",
+    "Customer base"
+   ],
+   "why": "Market share compares a business's sales with the sales of the whole market. Sales only counts what the business sells, so it does not show how the business compares with its rivals.",
+   "clue": "Which objective compares the business with its rivals?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bakery in Ballarat. A social media campaign brings in many new customers, but she gives big discounts to win them. Which statement is most accurate?",
+   "opts": [
+    "Sales may rise, but discounts may stop profit from rising",
+    "Profit may rise, since profit depends only on sales",
+    "Market share may fall, as discounts lower her prices",
+    "Her customer base may shrink, as she used discounts"
+   ],
+   "why": "The new customers can lift sales, but each discounted item brings in less revenue. If that revenue does not cover costs, profit may not rise. Profit depends on revenue and costs, not on sales alone.",
+   "clue": "Think about how much each discounted sale earns."
+  }
+ },
+ "cleared_by": "recheck"
+}

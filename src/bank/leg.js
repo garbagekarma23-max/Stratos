@@ -2679,5 +2679,297 @@ MADE_BANKS.leg = {
       "why": "The ICC tries individuals for war crimes, and it can act when a state is unwilling to prosecute. The ICJ is the tempting wrong answer, but it hears disputes between states and does not try individuals, even when a state consents.",
       "clue": "Who is accused, and which court tries individuals?"
     }
+  },
+  "leg-negligence": {
+    "title": "Negligence",
+    "card": [
+      "Negligence is a civil wrong based on carelessness. The plaintiff (the person harmed) sues the defendant, and does not need to prove the defendant meant to cause harm.",
+      [
+        "Duty of care",
+        "a legal duty to take reasonable care not to harm people who could foreseeably be affected by what you do. A driver, for example, owes a duty to other road users."
+      ],
+      ["Breach", "the defendant fell short of what a reasonable person would have done in the same situation."],
+      [
+        "Causation and remoteness",
+        "the breach must have caused the harm, and the harm must not be too remote, meaning too unlikely or too far removed from the breach to be fairly blamed on the defendant."
+      ]
+    ],
+    "remember": "Liable in negligence: duty of care, breach, and harm caused that was not too remote. All three are needed.",
+    "a": {
+      "q": "Nadia shows that Leo owed her a duty of care and breached it. Why might her negligence claim still fail?",
+      "opts": [
+        "His breach did not cause the harm she suffered",
+        "He did not mean to cause her any harm",
+        "He was never charged by police over it",
+        "He acted carelessly rather than on purpose"
+      ],
+      "why": "Duty and breach are not enough: the breach must also have caused harm that is not too remote. Leo not meaning to cause harm does not matter, because negligence is about carelessness, not intention.",
+      "clue": "Count the elements Nadia has proved so far."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam, a cyclist, is hit by a van when its driver, Priya, looks at her phone and drifts into the bike lane. Sam's arm is broken. Which statement describes Priya's breach of duty?",
+      "opts": [
+        "She failed to take the care a reasonable driver would",
+        "She owed a duty to other road users on the road",
+        "Sam's arm was broken when the van hit him",
+        "Sam's injury was not too remote from her driving"
+      ],
+      "why": "A breach means falling short of what a reasonable person would do, and a reasonable driver would watch the road. The other options match other steps: the duty, the harm and remoteness. Harm alone does not prove a breach.",
+      "clue": "Look at how Priya acted, not whom she owed or what resulted."
+    }
+  },
+  "leg-defences-negligence": {
+    "title": "Defences to negligence",
+    "card": [
+      "A defence is an argument by the defendant that they should not have to pay the full amount, or anything at all, even if the plaintiff proves negligence.",
+      [
+        "Contributory negligence",
+        "the plaintiff did not take reasonable care for their own safety, and this helped cause their own harm. The court can reduce the damages to reflect the plaintiff's share of the blame."
+      ],
+      [
+        "Voluntary assumption of risk",
+        "the plaintiff knew about a specific risk and freely chose to accept it. If the defendant proves this, the claim can fail completely."
+      ],
+      "The difference is the result. Contributory negligence can lower the damages. Voluntary assumption of risk can defeat the claim."
+    ],
+    "remember": "Contributory negligence can cut the damages. Voluntary assumption of risk can defeat the claim.",
+    "a": {
+      "q": "A court finds a driver negligent, but the injured passenger was not wearing a seatbelt, which made their injuries worse. If the driver raises this, what is the likely effect?",
+      "opts": [
+        "The damages are reduced to reflect the passenger's share",
+        "The claim fails completely because the risk was accepted",
+        "The driver is found to owe no duty of care to the passenger",
+        "The driver is found not to have breached the duty of care"
+      ],
+      "why": "Not wearing a seatbelt is a failure to take reasonable care for one's own safety, so it is contributory negligence, which lets the court reduce the damages. It is not voluntary assumption of risk, because the passenger did not knowingly accept a specific risk from the driver. The driver was still negligent.",
+      "clue": "Did the passenger accept a known risk, or fail to take care?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq is hit by a cricket ball while sitting in a marked area of a ground, under a sign warning of flying balls. He sues the club. Which defence is the club most likely to use?",
+      "opts": [
+        "Voluntary assumption of risk, as he accepted a known risk",
+        "Contributory negligence, as he accepted a known risk",
+        "Voluntary assumption of risk, as the club breached its duty",
+        "Contributory negligence, as the club breached its duty"
+      ],
+      "why": "Tariq knew the specific risk from the sign and chose to sit there, so voluntary assumption of risk fits, and if proven it can defeat the claim. Contributory negligence is tempting, but it is about the plaintiff failing to take reasonable care, not knowingly accepting a risk. A breach by the club is part of proving negligence, not a defence.",
+      "clue": "Tariq was warned of a specific risk and chose to stay."
+    }
+  },
+  "leg-defamation": {
+    "title": "Defamation",
+    "card": [
+      "Defamation is a civil wrong. It happens when a person publishes material about someone that harms that person's reputation.",
+      "Publishing means sharing the material with at least one other person. It can be spoken, written, posted online or shown in a picture.",
+      [
+        "Defences",
+        "The defendant may argue the material was true, or that it was an honest opinion on a matter of public interest. If a defence succeeds, the claim can fail."
+      ],
+      [
+        "Remedy",
+        "The usual remedy is damages, which is money paid to the person defamed for the harm to their reputation."
+      ]
+    ],
+    "remember": "Defamation is publishing material that harms a reputation. Truth and honest opinion are defences, and damages are the usual remedy.",
+    "a": {
+      "q": "Which situation is most likely to be defamation?",
+      "opts": [
+        "Leo posts online that a neighbour stole, which is false",
+        "Leo privately tells a neighbour he dislikes her haircut",
+        "Leo writes in his diary that a neighbour is rude, unseen",
+        "Leo tells a neighbour to her face that she sings badly"
+      ],
+      "why": "Leo shares a false claim with others online, and it harms his neighbour's reputation. In the other options nothing is published to anyone else, or no reputation is harmed. A private comment to the person alone is not publication.",
+      "clue": "Look for material shared with others that damages a reputation."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia, a food critic in Geelong, publishes a review saying a café's soup was bland. The café owner sues for defamation. Which defence is most suited to Mia's case?",
+      "opts": [
+        "Honest opinion, because the review states her view of it",
+        "Truth, because the café has been open for many years",
+        "Honest opinion, because the review was published for money",
+        "Truth, because the owner agreed to be reviewed"
+      ],
+      "why": "A review of how food tasted is a view about a matter of public interest, so honest opinion fits. Truth is the tempting option, but it must show the material was true, and the length of time a café has been open or the owner's agreement does not do that. Being paid to publish is also not what makes an opinion honest.",
+      "clue": "Is the review a statement of fact or a view, and what shows the defence?"
+    }
+  },
+  "leg-impact-civil-wrong": {
+    "title": "The impact of a civil wrong",
+    "card": [
+      "A civil wrong, such as negligence or defamation, can affect both sides of a dispute. The effects can reach beyond the court case.",
+      [
+        "Injured party",
+        "the person who says they were wronged. They may lose money through medical bills, lost wages or repair costs. They may lose health, or have their reputation damaged."
+      ],
+      [
+        "Defendant",
+        "the person or organisation accused of the wrong. If found liable, they may have to pay damages and legal costs. They may also lose standing, meaning the respect others have for them."
+      ],
+      "Not every effect is a money loss. Harm to health or reputation is real even when no bill has been paid. A court can usually only order money to make up for it."
+    ],
+    "remember": "A civil wrong can cost both sides money, and also health, reputation or standing.",
+    "a": {
+      "q": "A gym member in Geelong is hurt by faulty equipment and cannot work for two months. Which impact does lost pay show?",
+      "opts": [
+        "A financial cost to the injured party",
+        "A loss of standing for the defendant",
+        "A harm to the injured party's reputation",
+        "A legal cost paid by the injured party"
+      ],
+      "why": "Pay the member could not earn is a loss of money, so it is a financial cost to the injured party. It is not a legal cost, which is the cost of running the case, and it has nothing to do with reputation.",
+      "clue": "Think about what the member could not earn while off work."
+    },
+    "b": {
+      "d": 3,
+      "q": "A newspaper in Ballarat is found liable for defaming a local chef and must pay damages. Which impact is a loss of standing for the defendant?",
+      "opts": [
+        "Readers trust the newspaper less after the ruling",
+        "The newspaper must pay damages to the chef",
+        "The chef's restaurant loses customers after the story",
+        "The newspaper pays its own lawyers for the case"
+      ],
+      "why": "Standing is the respect others hold for a person or organisation, so readers trusting the newspaper less is a loss of standing for the defendant. Paying damages or lawyers is a money cost, and the lost customers are harm to the chef, not the newspaper.",
+      "clue": "First work out who the defendant is, then recall what standing means."
+    }
+  },
+  "leg-purposes-remedies": {
+    "title": "Purposes of remedies",
+    "card": [
+      "A remedy is what a court orders to deal with a wrong in a civil dispute. The person who sued is the plaintiff. A remedy is not a fine or a finding of guilt, which belong to criminal cases.",
+      [
+        "Restore",
+        "the main aim is to put the plaintiff back in the position they were in before the wrong, as far as money or an order can do this. The aim is not to leave them better off."
+      ],
+      [
+        "Stop",
+        "another aim is to stop the wrong continuing, so that the harm to the plaintiff does not go on or happen again."
+      ],
+      "A court looks at the harm in the case and picks a remedy that suits it. Some wrongs are in the past and some are still going on."
+    ],
+    "remember": "A remedy puts the plaintiff back where they were, or stops the wrong carrying on.",
+    "a": {
+      "q": "What is the main purpose of a remedy in a civil dispute?",
+      "opts": [
+        "To put the plaintiff back in their earlier position",
+        "To make the defendant pay a fine to the state",
+        "To decide whether the defendant is guilty of a crime",
+        "To make sure the plaintiff ends up better off than before"
+      ],
+      "why": "A remedy aims to restore the plaintiff to where they were before the wrong. Making them better off is tempting, but the aim is to restore, not to give a gain. Fines and guilt belong to criminal cases.",
+      "clue": "A civil remedy is about the parties, not about punishing a crime."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's neighbour Tom keeps running a loud machine at night in Geelong, and it still disturbs her sleep. Which purpose of a remedy fits her need most directly?",
+      "opts": [
+        "Stopping the wrong from continuing",
+        "Restoring her to her position before the wrong",
+        "Deciding whether Tom is guilty of an offence",
+        "Recording that the wrong happened in the past"
+      ],
+      "why": "The wrong is still going on, so the most direct need is to stop it continuing. Restoring her position is also a purpose, but it deals with harm already done. Deciding guilt belongs to criminal cases, and recording a past wrong is not one of the aims on the card.",
+      "clue": "Is the wrong over, or is it still happening?"
+    }
+  },
+  "leg-compensatory-damages": {
+    "title": "Compensatory damages",
+    "card": [
+      "Compensatory damages are a sum of money paid by the defendant to the plaintiff. They aim to make up for the loss the plaintiff suffered because of the wrong.",
+      [
+        "Economic loss",
+        "money lost or spent because of the wrong, such as medical bills, repair costs and wages the plaintiff could not earn."
+      ],
+      [
+        "Non-economic loss",
+        "harm that has no price tag, such as pain and suffering, loss of enjoyment of life and emotional distress."
+      ],
+      "The plaintiff must show the loss. A court sets an amount that it thinks fairly covers it. The aim is to compensate, not to punish the defendant."
+    ],
+    "remember": "Compensatory damages pay for the plaintiff's loss, both money lost and pain suffered.",
+    "a": {
+      "q": "Which best describes the purpose of compensatory damages?",
+      "opts": [
+        "To make up for the loss the plaintiff suffered",
+        "To punish the defendant for how they behaved",
+        "To stop the defendant repeating the wrong",
+        "To show the claim was a waste of time"
+      ],
+      "why": "Compensatory damages are paid to make up for the plaintiff's loss. Punishing the defendant is tempting, but that is not the aim of compensatory damages: they compensate, not punish.",
+      "clue": "Think about who the money is meant to help."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is hurt when a delivery van driven carelessly hits her car in Ballarat. She wins her case. Which part of her claim is for non-economic loss?",
+      "opts": [
+        "The pain and distress she suffered from her injuries",
+        "The cost of repairing her damaged car",
+        "The wages she lost while off work",
+        "The hospital bills she paid after the crash"
+      ],
+      "why": "Pain and distress cannot be measured by a bill, so they are non-economic loss. Repair costs, lost wages and hospital bills are all money lost or spent, so they are economic loss.",
+      "clue": "Which loss has no receipt or pay slip behind it?"
+    }
+  },
+  "leg-other-kinds-damages": {
+    "title": "Other kinds of damages",
+    "card": [
+      [
+        "Nominal",
+        "a very small sum that recognises the plaintiff's rights were breached, even though they suffered little or no real loss."
+      ],
+      [
+        "Contemptuous",
+        "a tiny sum, such as one cent, awarded when the plaintiff technically wins but the court thinks the claim was worthless or should not have been brought."
+      ],
+      [
+        "Exemplary",
+        "a larger sum to punish the defendant for very bad conduct and to warn others. It is not paid to cover loss."
+      ],
+      "Exemplary damages are usually added on top of compensatory damages, not given instead of them."
+    ],
+    "remember": "Nominal recognises a wrong, contemptuous shows disapproval of the claim, exemplary punishes.",
+    "a": {
+      "q": "Which kind of damages is awarded mainly to punish the defendant?",
+      "opts": ["Exemplary damages", "Nominal damages", "Contemptuous damages", "Compensatory damages"],
+      "why": "Exemplary damages punish the defendant for very bad conduct and warn others. Contemptuous damages are a tiny sum that shows the court's low opinion of the claim, not a punishment of the defendant.",
+      "clue": "Which kind looks at the defendant's conduct, not the claim?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam sues a neighbour in Geelong for walking across his lawn. The court finds a wrong occurred but Sam lost nothing, so it awards one dollar to recognise the breach. What kind of damages is this?",
+      "opts": ["Nominal damages", "Contemptuous damages", "Exemplary damages", "Compensatory damages"],
+      "why": "A small sum that recognises a wrong where there was little or no loss is nominal damages. Contemptuous damages are also tiny, but they are used when the court thinks the claim itself was worthless, and nothing here says that.",
+      "clue": "The court is recognising the wrong, not judging the claim."
+    }
+  },
+  "leg-injunctions": {
+    "title": "Injunctions",
+    "card": [
+      "An injunction is a court order that tells a person to act in a certain way, or to stop. It is a remedy that is not paid in money.",
+      [
+        "Restrictive",
+        "an order to stop doing something, or not to start, such as stopping a business from making loud noise at night."
+      ],
+      ["Mandatory", "an order to do something, such as removing a fence built on a neighbour's land."],
+      "A person who ignores an injunction can be punished by the court for contempt of court. Injunctions are often used when money would not fix the problem."
+    ],
+    "remember": "A restrictive injunction orders a person to stop. A mandatory one orders them to act.",
+    "a": {
+      "q": "A court orders a factory in Dandenong to stop dumping waste into a creek. What kind of order is this?",
+      "opts": ["A restrictive injunction", "A mandatory injunction", "Exemplary damages", "Compensatory damages"],
+      "why": "The order tells the factory to stop doing something, so it is a restrictive injunction. A mandatory injunction would order the factory to do something, such as clean up the creek.",
+      "clue": "Is the order telling the factory to stop or to act?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Leila builds a shed that blocks her neighbour's driveway in Bendigo. The court orders her to knock it down. What kind of order is this?",
+      "opts": ["A mandatory injunction", "A restrictive injunction", "Nominal damages", "Contemptuous damages"],
+      "why": "Knocking the shed down is something Leila must do, so the order is a mandatory injunction. A restrictive injunction would only stop her from doing something, such as stopping her building more.",
+      "clue": "Ask whether Leila must take an action."
+    }
   }
 };

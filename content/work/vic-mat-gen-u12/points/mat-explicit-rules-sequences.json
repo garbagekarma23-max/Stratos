@@ -1,0 +1,142 @@
+{
+ "id": "mat-explicit-rules-sequences",
+ "title": "Explicit rules for sequences",
+ "brief": "9458efda3e8f",
+ "shortlist": [
+  [
+   "mat-arithmetic-sequences",
+   0.4
+  ],
+  [
+   "mat-geometric-sequences",
+   0.387
+  ],
+  [
+   "mat-power-rule",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-arithmetic-sequences, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.0103,
+  "write": 0.0047,
+  "check": 0.00774
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-arithmetic-sequences",
+  "changes": [
+   "Change the notation from Tₙ to tₙ, the term symbol the VCE Mathematics Study Design uses for the nth term.",
+   "Check the card's wording against the VCE Unit 2 treatment of the explicit rule t_n = a + (n − 1)d, so the card does not go beyond what that unit asks of students."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same nth-term rule for arithmetic sequences at a suitable depth, but it uses the NSW notation Tₙ and covers arithmetic sequences only, so it needs a notation change and a check against the VCE unit.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's arithmetic sequences point introduces common difference and uses the nth-term formula, but the new point is about what an explicit rule does: finding any term directly instead of stepping through a recursive list, which is the focus of this recursion chapter. That is a different emphasis, so the bank card would need a new step rather than small changes.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Explicit rules for sequences",
+  "card": [
+   "An explicit rule gives the nth term directly from n. You put in the term number and get that term, with no need to list the terms before it.",
+   "For an arithmetic sequence, the rule is t(n) = a + (n − 1)d. Here a is the first term and d is the common difference.",
+   "Worked example: the sequence 7, 12, 17, 22, ... has a = 7 and d = 5. So t(n) = 7 + (n − 1) × 5.",
+   "To find the 30th term, put n = 30. t(30) = 7 + 29 × 5 = 7 + 145 = 152. Do the bracket and the multiplication before the addition."
+  ],
+  "remember": "An explicit rule takes n and gives that term straight away.",
+  "a": {
+   "q": "An arithmetic sequence has first term 4 and common difference 3. What is the 21st term?",
+   "opts": [
+    "64",
+    "67",
+    "63",
+    "84"
+   ],
+   "why": "t(21) = 4 + (21 − 1) × 3 = 4 + 60 = 64. Using 21 × 3 instead of 20 × 3 gives 67, which forgets that the first term is already there.",
+   "clue": "Multiply d by n − 1, not by n."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using t(n) = a + (n − 1)d, how much has she in week 12?",
+   "opts": [
+    "$215",
+    "$230",
+    "$195",
+    "$180"
+   ],
+   "why": "Here a = 50 and d = 15. t(12) = 50 + 11 × 15 = 50 + 165 = $215. Using 12 × 15 gives $230, because it counts one extra step of $15.",
+   "clue": "Week 1 is the first term, so count how many steps come after it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "64",
+   "also_right": []
+  },
+  "b": {
+   "best": "$215",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out (64 and $215), the worked example is correct, and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Explicit rules for sequences",
+  "card": [
+   "An explicit rule gives the nth term directly from n. You put in the term number and get that term, with no need to list the terms before it.",
+   "For an arithmetic sequence, the rule is t(n) = a + (n − 1)d. Here a is the first term and d is the common difference.",
+   "Worked example: the sequence 7, 12, 17, 22, ... has a = 7 and d = 5. So t(n) = 7 + (n − 1) × 5.",
+   "To find the 30th term, put n = 30. t(30) = 7 + 29 × 5 = 7 + 145 = 152. Do the bracket and the multiplication before the addition."
+  ],
+  "remember": "An explicit rule takes n and gives that term straight away.",
+  "a": {
+   "q": "An arithmetic sequence has first term 4 and common difference 3. What is the 21st term?",
+   "opts": [
+    "64",
+    "67",
+    "63",
+    "84"
+   ],
+   "why": "t(21) = 4 + (21 − 1) × 3 = 4 + 60 = 64. Using 21 × 3 instead of 20 × 3 gives 67, which forgets that the first term is already there.",
+   "clue": "Multiply d by n − 1, not by n."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia saves for a bike. She has $50 in week 1 and adds $15 each week. Using t(n) = a + (n − 1)d, how much has she in week 12?",
+   "opts": [
+    "$215",
+    "$230",
+    "$195",
+    "$180"
+   ],
+   "why": "Here a = 50 and d = 15. t(12) = 50 + 11 × 15 = 50 + 165 = $215. Using 12 × 15 gives $230, because it counts one extra step of $15.",
+   "clue": "Week 1 is the first term, so count how many steps come after it."
+  }
+ },
+ "cleared_by": "checker"
+}

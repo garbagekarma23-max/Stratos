@@ -1,0 +1,215 @@
+{
+ "id": "eco-factors-that-shift-supply",
+ "title": "Factors that shift supply",
+ "brief": "716e2c62560f",
+ "shortlist": [
+  [
+   "e-supply",
+   0.551
+  ],
+  [
+   "e-sras",
+   0.371
+  ],
+  [
+   "e-equilibrium",
+   0.309
+  ],
+  [
+   "e-lrasshift",
+   0.303
+  ],
+  [
+   "e-pes",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 may adapt e-supply, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:30Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:33:49Z write: done",
+  "2026-11-01T08:42:05Z check: flagged",
+  "2026-11-01T08:44:26Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.00817,
+  "write": 0.00503,
+  "check": 0.01081,
+  "fix": 0.02583
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "e-supply",
+  "changes": [
+   "Add productivity as a named shift factor alongside technology, since the brief lists it and the card does not mention it."
+  ],
+  "sure": "medium",
+  "reason": "The bank point's shift factors (costs, technology, taxes, subsidies, weather, number of firms) match the brief at the right depth, but productivity is not named, so one small addition is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, e-supply, covers the whole supply curve (the law of supply, movements along the curve and shifts), which is broader than this point on what shifts supply, and it leaves out productivity and other disruptions, so a focused new point fits better.",
+  "model": "claude-opus-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Factors that shift supply",
+  "card": [
+   "A supply curve shows how much sellers will supply at each price. A change in the good's own price moves along the curve. A change in anything else shifts the whole curve.",
+   "Costs of production: if wages, rent or materials rise, selling is less profitable at each price. Supply falls and the curve shifts left. Lower costs shift it right.",
+   "Technology and productivity: better machines or methods let firms make more output from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
+   "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
+  ],
+  "remember": "Anything that changes the cost or ability to produce shifts the supply curve, not just the price.",
+  "a": {
+   "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
+   "opts": [
+    "The supply curve shifts right",
+    "The supply curve shifts left",
+    "There is a movement up along the curve",
+    "There is a movement down along the curve"
+   ],
+   "why": "The machine raises productivity, so the bakery can supply more bread at every price. That shifts the whole curve right. A movement along the curve happens only when the bread's own price changes.",
+   "clue": "Did the price of bread change, or did the bakery's ability to produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A flood destroys much of the tomato crop in a Victorian farming region. What is the effect on the supply curve for tomatoes?",
+   "opts": [
+    "It shifts left, as less can be produced at each price",
+    "It shifts right, as tomatoes become scarcer and dearer",
+    "There is a movement along the curve to a higher price",
+    "There is a movement along the curve to a lower price"
+   ],
+   "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. A movement along the curve would need a change in the tomato price to start it, but here the flood is the cause.",
+   "clue": "The flood changes what growers can produce, not the price they are offered."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The supply curve shifts right",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shifts left, as less can be produced at each price",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Shifts the supply curve, not just the price\" reads as though a change in the good's own price also shifts the curve. The card says a change in own price is a movement along the curve. Reword it, for example: \"Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and their intended answers are correct. The remember line's \"not just the price\" wrongly suggests that a price change shifts the supply curve, which contradicts the card, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: \"Shifts the supply curve, not just the price\" reads as though a change in the good's own price also shifts the curve. The card says a change in own price is a movement along the curve. Reword it, for example: \"Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.\""
+ ],
+ "proposal": {
+  "title": "Factors that shift supply",
+  "card": [
+   "A supply curve shows how much sellers will supply at each price. A change in the good's own price moves along the curve. A change in anything else shifts the whole curve.",
+   "Costs of production: if wages, rent or materials rise, selling is less profitable at each price. Supply falls and the curve shifts left. Lower costs shift it right.",
+   "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
+   "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
+  ],
+  "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
+  "a": {
+   "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
+   "opts": [
+    "The supply curve shifts right",
+    "The supply curve shifts left",
+    "There is a movement up along the curve",
+    "There is a movement down along the curve"
+   ],
+   "why": "The machine raises productivity, so the bakery can supply more bread at every price. That shifts the whole curve right. A movement along the curve happens only when the bread's own price changes.",
+   "clue": "Did the price of bread change, or did the bakery's ability to produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A flood destroys much of the tomato crop in a Victorian farming region. What is the effect on the supply curve for tomatoes?",
+   "opts": [
+    "It shifts left, as less can be produced at each price",
+    "It shifts right, as tomatoes become scarcer and dearer",
+    "There is a movement along the curve to a higher price",
+    "There is a movement along the curve to a lower price"
+   ],
+   "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. Scarcer tomatoes mean less supply, not more, and a movement along the curve would need a change in the tomato price to start it.",
+   "clue": "The flood changes what growers can produce, not the price they are offered."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "\"Shifts the supply curve, not just the price\" reads as though a change in the good's own price also shifts the curve. The card says a change in own price is a movement along the curve. Reword it, for example: \"Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.\""
+   }
+  ],
+  "flags": [
+   "Remember, other: \"Shifts the supply curve, not just the price\" reads as though a change in the good's own price also shifts the curve. The card says a change in own price is a movement along the curve. Reword it, for example: \"Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.\""
+  ]
+ },
+ "final": {
+  "title": "Factors that shift supply",
+  "card": [
+   "A supply curve shows how much sellers will supply at each price. A change in the good's own price moves along the curve. A change in anything else shifts the whole curve.",
+   "Costs of production: if wages, rent or materials rise, selling is less profitable at each price. Supply falls and the curve shifts left. Lower costs shift it right.",
+   "Technology and productivity: productivity is output per unit of input. Better machines or methods let firms make more from the same inputs, at a lower cost per unit. Supply rises and the curve shifts right.",
+   "The weather and other disruptions: a drought, flood, fire or strike can cut how much sellers can produce. Supply falls at each price and the curve shifts left."
+  ],
+  "remember": "Anything other than the good's own price that changes the cost or ability to produce shifts the whole supply curve.",
+  "a": {
+   "q": "A new machine lets a bakery in Ballarat bake more loaves from the same flour and labour. What happens to the supply of its bread?",
+   "opts": [
+    "The supply curve shifts right",
+    "The supply curve shifts left",
+    "There is a movement up along the curve",
+    "There is a movement down along the curve"
+   ],
+   "why": "The machine raises productivity, so the bakery can supply more bread at every price. That shifts the whole curve right. A movement along the curve happens only when the bread's own price changes.",
+   "clue": "Did the price of bread change, or did the bakery's ability to produce?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A flood destroys much of the tomato crop in a Victorian farming region. What is the effect on the supply curve for tomatoes?",
+   "opts": [
+    "It shifts left, as less can be produced at each price",
+    "It shifts right, as tomatoes become scarcer and dearer",
+    "There is a movement along the curve to a higher price",
+    "There is a movement along the curve to a lower price"
+   ],
+   "why": "The flood cuts how much growers can produce, so they supply less at every price. That shifts the whole curve left. Scarcer tomatoes mean less supply, not more, and a movement along the curve would need a change in the tomato price to start it.",
+   "clue": "The flood changes what growers can produce, not the price they are offered."
+  }
+ },
+ "cleared_by": "auto"
+}

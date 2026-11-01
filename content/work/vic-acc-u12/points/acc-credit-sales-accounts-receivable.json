@@ -1,0 +1,190 @@
+{
+ "id": "acc-credit-sales-accounts-receivable",
+ "title": "Credit sales and accounts receivable",
+ "brief": "bbd452c8b8d1",
+ "shortlist": [
+  [
+   "bus-efficiency-ratios",
+   0.335
+  ],
+  [
+   "eco-capital-financial-account",
+   0.257
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00515,
+  "check": 0.00985,
+  "fix": 0.01668
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches accounts receivable as an asset created by credit sales; the first covers efficiency ratios and the second covers the capital and financial account, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Credit sales and accounts receivable",
+  "card": [
+   "A credit sale is when a business gives goods to a customer now and the customer agrees to pay later. No cash is received on the day of the sale.",
+   "The amount the customer owes is called accounts receivable. It is an asset, because the business expects to receive money from it.",
+   "A credit sale still counts as sales revenue on the day it is made. Cash does not rise until the customer pays.",
+   "When the customer pays, accounts receivable falls and cash rises by the same amount. The business is not richer, as one asset has been swapped for another."
+  ],
+  "remember": "A credit sale makes an asset, accounts receivable, which turns into cash when the customer pays.",
+  "a": {
+   "q": "Harbour Hardware in Geelong sells $800 of tools to a builder on credit. What does the business record straight away?",
+   "opts": [
+    "Accounts receivable of $800, an asset",
+    "Accounts payable of $800, a liability",
+    "Cash rises by $800 from the sale",
+    "Accounts receivable falls by $800"
+   ],
+   "why": "The builder owes $800, so accounts receivable, an asset, rises by $800. Cash does not rise yet because the builder has not paid. Accounts payable is wrong because it records what the business owes, not what it is owed.",
+   "clue": "Has the builder handed over any money yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat sold $500 of goods on credit to a café. Two weeks later the café pays the full $500. What happens at that point?",
+   "opts": [
+    "Cash rises by $500 and accounts receivable falls by $500",
+    "Cash rises by $500 and total assets rise by $500",
+    "Cash rises by $500 and accounts payable falls by $500",
+    "Sales revenue rises by a further $500"
+   ],
+   "why": "The café's payment swaps one asset for another: accounts receivable falls by $500 and cash rises by $500, so total assets stay the same. Total assets do not rise, because the sale was already recorded when the goods were sold on credit.",
+   "clue": "The sale was already counted when the goods left the shop."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Accounts receivable of $800, an asset",
+   "also_right": []
+  },
+  "b": {
+   "best": "Cash rises by $500 and accounts receivable falls by $500",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for (a) explains accounts payable ('it records what the business owes'). That term belongs to point 2 and should only be mentioned here, not explained."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and each has one clear answer. The only flag is minor: the why for (a) explains accounts payable, which belongs to the next point."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why for (a) explains accounts payable ('it records what the business owes'). That term belongs to point 2 and should only be mentioned here, not explained."
+ ],
+ "proposal": {
+  "title": "Credit sales and accounts receivable",
+  "card": [
+   "A credit sale is when a business gives goods to a customer now and the customer agrees to pay later. No cash is received on the day of the sale.",
+   "The amount the customer owes is called accounts receivable. It is an asset, because the business expects to receive money from it.",
+   "A credit sale still counts as sales revenue on the day it is made. Cash does not rise until the customer pays.",
+   "When the customer pays, accounts receivable falls and cash rises by the same amount. The business is not richer, as one asset has been swapped for another."
+  ],
+  "remember": "A credit sale makes an asset, accounts receivable, which turns into cash when the customer pays.",
+  "a": {
+   "q": "Harbour Hardware in Geelong sells $800 of tools to a builder on credit. What does the business record straight away?",
+   "opts": [
+    "Accounts receivable of $800, an asset",
+    "Accounts payable of $800, a liability",
+    "Cash rises by $800 from the sale",
+    "Accounts receivable falls by $800"
+   ],
+   "why": "The builder owes the business $800, so accounts receivable, an asset, rises by $800. Cash does not rise yet because the builder has not paid. Accounts payable is the wrong account, because money owed to the business by a customer is accounts receivable.",
+   "clue": "Has the builder handed over any money yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat sold $500 of goods on credit to a café. Two weeks later the café pays the full $500. What happens at that point?",
+   "opts": [
+    "Cash rises by $500 and accounts receivable falls by $500",
+    "Cash rises by $500 and total assets rise by $500",
+    "Cash rises by $500 and accounts payable falls by $500",
+    "Cash rises by $500 and sales revenue rises by $500"
+   ],
+   "why": "The café's payment swaps one asset for another: accounts receivable falls by $500 and cash rises by $500, so total assets stay the same. Total assets and sales revenue do not rise, because the sale was already recorded when the goods were sold on credit.",
+   "clue": "The sale was already counted when the goods left the shop."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for (a) explains accounts payable ('it records what the business owes'). That term belongs to point 2 and should only be mentioned here, not explained."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why for (a) explains accounts payable ('it records what the business owes'). That term belongs to point 2 and should only be mentioned here, not explained."
+  ]
+ },
+ "final": {
+  "title": "Credit sales and accounts receivable",
+  "card": [
+   "A credit sale is when a business gives goods to a customer now and the customer agrees to pay later. No cash is received on the day of the sale.",
+   "The amount the customer owes is called accounts receivable. It is an asset, because the business expects to receive money from it.",
+   "A credit sale still counts as sales revenue on the day it is made. Cash does not rise until the customer pays.",
+   "When the customer pays, accounts receivable falls and cash rises by the same amount. The business is not richer, as one asset has been swapped for another."
+  ],
+  "remember": "A credit sale makes an asset, accounts receivable, which turns into cash when the customer pays.",
+  "a": {
+   "q": "Harbour Hardware in Geelong sells $800 of tools to a builder on credit. What does the business record straight away?",
+   "opts": [
+    "Accounts receivable of $800, an asset",
+    "Accounts payable of $800, a liability",
+    "Cash rises by $800 from the sale",
+    "Accounts receivable falls by $800"
+   ],
+   "why": "The builder owes the business $800, so accounts receivable, an asset, rises by $800. Cash does not rise yet because the builder has not paid. Accounts payable is the wrong account, because money owed to the business by a customer is accounts receivable.",
+   "clue": "Has the builder handed over any money yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat sold $500 of goods on credit to a café. Two weeks later the café pays the full $500. What happens at that point?",
+   "opts": [
+    "Cash rises by $500 and accounts receivable falls by $500",
+    "Cash rises by $500 and total assets rise by $500",
+    "Cash rises by $500 and accounts payable falls by $500",
+    "Cash rises by $500 and sales revenue rises by $500"
+   ],
+   "why": "The café's payment swaps one asset for another: accounts receivable falls by $500 and cash rises by $500, so total assets stay the same. Total assets and sales revenue do not rise, because the sale was already recorded when the goods were sold on credit.",
+   "clue": "The sale was already counted when the goods left the shop."
+  }
+ },
+ "cleared_by": "auto"
+}

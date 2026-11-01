@@ -1,0 +1,211 @@
+{
+ "id": "mat-pythagoras-theorem",
+ "title": "Pythagoras' theorem",
+ "brief": "b0e8bc6de4e4",
+ "shortlist": [
+  [
+   "mat-right-angled-trigonometry",
+   0.415
+  ],
+  [
+   "mat-exact-values",
+   0.304
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:32Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.01003,
+  "check": 0.00806,
+  "fix": 0.02356,
+  "recheck": 0.0059
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches Pythagoras' theorem itself: right-angled trigonometry covers the sine, cosine and tangent ratios, and exact values uses the theorem only in passing to find side lengths of special triangles, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Pythagoras' theorem",
+  "card": [
+   "A right-angled triangle has one angle of 90°. The longest side, opposite the right angle, is the hypotenuse.",
+   "Pythagoras' theorem says a² + b² = c², where c is the hypotenuse and a and b are the other two sides.",
+   "To find the hypotenuse, add the squares and take the square root. To find a shorter side, subtract the square of the known short side from c², then take the root. Example: sides 6 and 8 give c² = 36 + 64 = 100, so c = 10.",
+   "In a box with length l, width w and height h, the longest straight line from corner to opposite corner is d, where d² = l² + w² + h²."
+  ],
+  "remember": "Square the sides, then add for the hypotenuse or subtract for a shorter side.",
+  "a": {
+   "q": "A right-angled triangle has shorter sides of 5 cm and 12 cm. How long is the hypotenuse?",
+   "opts": [
+    "13 cm",
+    "17 cm",
+    "169 cm",
+    "60 cm"
+   ],
+   "why": "c² = 5² + 12² = 25 + 144 = 169, so c = √169 = 13 cm. The answer 169 stops one step early, because it is c² and not c.",
+   "clue": "Square both sides, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq has a storage box 2 m long, 3 m wide and 6 m high. What is the longest straight rod that fits inside it from corner to opposite corner?",
+   "opts": [
+    "7 m",
+    "11 m",
+    "49 m",
+    "3.6 m"
+   ],
+   "why": "d² = 2² + 3² + 6² = 4 + 9 + 36 = 49, so d = 7 m. Adding the sides to get 11 m skips the squaring and rooting steps.",
+   "clue": "Use all three measurements, each squared."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "13 cm",
+   "also_right": []
+  },
+  "b": {
+   "best": "7 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says to square the sides and then add or subtract, but leaves out the final square-root step. That is exactly the slip behind the 169 cm distractor in question a, so the summary could reinforce the error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with single right answers (13 cm and 7 m). The remember line leaves out taking the square root, which could lead students to stop at c²."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says to square the sides and then add or subtract, but leaves out the final square-root step. That is exactly the slip behind the 169 cm distractor in question a, so the summary could reinforce the error."
+ ],
+ "proposal": {
+  "title": "Pythagoras' theorem",
+  "card": [
+   "A right-angled triangle has one angle of 90°. The longest side, opposite the right angle, is the hypotenuse.",
+   "Pythagoras' theorem says a² + b² = c², where c is the hypotenuse and a and b are the other two sides.",
+   "To find the hypotenuse, add the squares and take the square root. To find a shorter side, subtract the square of the known short side from c², then take the root. Example: sides 6 and 8 give c² = 36 + 64 = 100, so c = 10.",
+   "In a box with length l, width w and height h, the longest straight line from corner to opposite corner is d, where d² = l² + w² + h²."
+  ],
+  "remember": "Square the sides, add or subtract, then take the square root to get the length.",
+  "a": {
+   "q": "A right-angled triangle has shorter sides of 5 cm and 12 cm. How long is the hypotenuse?",
+   "opts": [
+    "13 cm",
+    "17 cm",
+    "169 cm",
+    "60 cm"
+   ],
+   "why": "c² = 5² + 12² = 25 + 144 = 169, so c = √169 = 13 cm. The answer 169 stops one step early, because it is c² and not c.",
+   "clue": "Square both sides, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq has a storage box 2 m long, 3 m wide and 6 m high. What is the longest straight rod that fits inside it from corner to opposite corner?",
+   "opts": [
+    "7 m",
+    "11 m",
+    "49 m",
+    "3.6 m"
+   ],
+   "why": "d² = 2² + 3² + 6² = 4 + 9 + 36 = 49, so d = 7 m. Adding the sides to get 11 m skips the squaring and rooting steps.",
+   "clue": "Use all three measurements, each squared."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "13 cm",
+    "also_right": []
+   },
+   "b": {
+    "best": "7 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says to square the sides and then add or subtract, but leaves out the final square-root step. That is exactly the slip behind the 169 cm distractor in question a, so the summary could reinforce the error."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says to square the sides and then add or subtract, but leaves out the final square-root step. That is exactly the slip behind the 169 cm distractor in question a, so the summary could reinforce the error."
+  ]
+ },
+ "final": {
+  "title": "Pythagoras' theorem",
+  "card": [
+   "A right-angled triangle has one angle of 90°. The longest side, opposite the right angle, is the hypotenuse.",
+   "Pythagoras' theorem says a² + b² = c², where c is the hypotenuse and a and b are the other two sides.",
+   "To find the hypotenuse, add the squares and take the square root. To find a shorter side, subtract the square of the known short side from c², then take the root. Example: sides 6 and 8 give c² = 36 + 64 = 100, so c = 10.",
+   "In a box with length l, width w and height h, the longest straight line from corner to opposite corner is d, where d² = l² + w² + h²."
+  ],
+  "remember": "Square the sides, add or subtract, then take the square root to get the length.",
+  "a": {
+   "q": "A right-angled triangle has shorter sides of 5 cm and 12 cm. How long is the hypotenuse?",
+   "opts": [
+    "13 cm",
+    "17 cm",
+    "169 cm",
+    "60 cm"
+   ],
+   "why": "c² = 5² + 12² = 25 + 144 = 169, so c = √169 = 13 cm. The answer 169 stops one step early, because it is c² and not c.",
+   "clue": "Square both sides, add, then take the root."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tariq has a storage box 2 m long, 3 m wide and 6 m high. What is the longest straight rod that fits inside it from corner to opposite corner?",
+   "opts": [
+    "7 m",
+    "11 m",
+    "49 m",
+    "3.6 m"
+   ],
+   "why": "d² = 2² + 3² + 6² = 4 + 9 + 36 = 49, so d = 7 m. Adding the sides to get 11 m skips the squaring and rooting steps.",
+   "clue": "Use all three measurements, each squared."
+  }
+ },
+ "cleared_by": "recheck"
+}

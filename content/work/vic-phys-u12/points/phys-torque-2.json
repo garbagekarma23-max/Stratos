@@ -1,0 +1,128 @@
+{
+ "id": "phys-torque-2",
+ "title": "Torque and equilibrium",
+ "brief": "738a7b1477c6",
+ "shortlist": [
+  [
+   "phys-torque",
+   0.653
+  ],
+  [
+   "phys-dc-motors",
+   0.249
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:09Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:35Z write: failed the content check, writing again",
+  "2026-11-01T08:33:53Z write: done",
+  "2026-11-01T08:42:07Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01126,
+  "check": 0.01263
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, phys-torque, covers only the definition of torque with sin θ, and it has no content on equilibrium, where forces and torques balance, which the new point requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Torque and equilibrium",
+  "card": [
+   "Torque is the turning effect of a force about a pivot. Torque = force × perpendicular distance from the pivot, so its unit is the newton metre (N m).",
+   "Only the distance measured at right angles to the line of the force counts. A bigger force or a longer distance gives a bigger torque.",
+   "A torque can turn an object clockwise or anticlockwise. A structure is in equilibrium when the forces balance (net force is zero) and the torques balance (clockwise torque equals anticlockwise torque).",
+   "Balanced torques mean the object does not start to rotate. Balanced forces mean it does not start to accelerate in a straight line. Both conditions must hold."
+  ],
+  "remember": "Torque = force × perpendicular distance. Equilibrium needs balanced forces and balanced torques.",
+  "a": {
+   "q": "Why is a door easier to push open at the handle than near the hinges?",
+   "opts": [
+    "A longer distance from the pivot gives a larger torque",
+    "A longer distance from the pivot gives a larger net force",
+    "The push has a smaller size when applied near the hinges",
+    "The handle is lighter, so it needs less torque to turn"
+   ],
+   "why": "The hinges are the pivot. The same force applied further away has a larger perpendicular distance, so the torque is larger. The size of the force does not change, and torque is not the same as net force.",
+   "clue": "The hinges are the pivot. What changes when you push further from it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A 30 N child sits 2.0 m from the pivot of a see-saw. A second child sits on the other side. The see-saw stays level. If the second child weighs 20 N, how far from the pivot do they sit?",
+   "opts": [
+    "3.0 m",
+    "1.3 m",
+    "2.0 m",
+    "0.33 m"
+   ],
+   "why": "For torques to balance, 30 × 2.0 = 20 × d, so d = 3.0 m. The lighter child must sit further away. Sitting at 2.0 m would give a smaller torque, so the see-saw would tip toward the heavier child.",
+   "clue": "Set the clockwise torque equal to the anticlockwise torque."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A longer distance from the pivot gives a larger torque",
+   "also_right": []
+  },
+  "b": {
+   "best": "3.0 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Torque and equilibrium",
+  "card": [
+   "Torque is the turning effect of a force about a pivot. Torque = force × perpendicular distance from the pivot, so its unit is the newton metre (N m).",
+   "Only the distance measured at right angles to the line of the force counts. A bigger force or a longer distance gives a bigger torque.",
+   "A torque can turn an object clockwise or anticlockwise. A structure is in equilibrium when the forces balance (net force is zero) and the torques balance (clockwise torque equals anticlockwise torque).",
+   "Balanced torques mean the object does not start to rotate. Balanced forces mean it does not start to accelerate in a straight line. Both conditions must hold."
+  ],
+  "remember": "Torque = force × perpendicular distance. Equilibrium needs balanced forces and balanced torques.",
+  "a": {
+   "q": "Why is a door easier to push open at the handle than near the hinges?",
+   "opts": [
+    "A longer distance from the pivot gives a larger torque",
+    "A longer distance from the pivot gives a larger net force",
+    "The push has a smaller size when applied near the hinges",
+    "The handle is lighter, so it needs less torque to turn"
+   ],
+   "why": "The hinges are the pivot. The same force applied further away has a larger perpendicular distance, so the torque is larger. The size of the force does not change, and torque is not the same as net force.",
+   "clue": "The hinges are the pivot. What changes when you push further from it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A 30 N child sits 2.0 m from the pivot of a see-saw. A second child sits on the other side. The see-saw stays level. If the second child weighs 20 N, how far from the pivot do they sit?",
+   "opts": [
+    "3.0 m",
+    "1.3 m",
+    "2.0 m",
+    "0.33 m"
+   ],
+   "why": "For torques to balance, 30 × 2.0 = 20 × d, so d = 3.0 m. The lighter child must sit further away. Sitting at 2.0 m would give a smaller torque, so the see-saw would tip toward the heavier child.",
+   "clue": "Set the clockwise torque equal to the anticlockwise torque."
+  }
+ },
+ "cleared_by": "checker"
+}

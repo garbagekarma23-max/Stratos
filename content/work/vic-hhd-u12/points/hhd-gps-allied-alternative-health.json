@@ -1,0 +1,252 @@
+{
+ "id": "hhd-gps-allied-alternative-health",
+ "title": "GPs, allied and alternative health",
+ "brief": "2692652d546e",
+ "shortlist": [
+  [
+   "hms-community-health-resources",
+   0.308
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.261
+  ],
+  [
+   "hms-health-promotion",
+   0.249
+  ],
+  [
+   "hms-health-literacy",
+   0.215
+  ],
+  [
+   "hms-young-people-s-health",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:50Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00483,
+  "check": 0.01041,
+  "fix": 0.02416,
+  "recheck": 0.0074
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the distinction between GPs, allied health (such as physiotherapists and psychologists) and alternative health (such as naturopathy); the closest point, community health resources, only covers GPs in passing and focuses on access barriers, so it is a related idea rather than the same one.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "GPs, allied and alternative health",
+  "card": [
+   [
+    "GP",
+    "a general practitioner, a doctor who treats common problems and checks overall health. A GP is usually the first stop and can refer a patient to a specialist or another health professional."
+   ],
+   [
+    "Allied health",
+    "university-trained professionals who each work in one area of care, such as physiotherapists, psychologists and dietitians. They are regulated and use treatments backed by scientific evidence."
+   ],
+   [
+    "Alternative health",
+    "practices outside conventional medicine, such as naturopathy and homeopathy. Their treatments often have limited scientific evidence of working."
+   ],
+   "People may use these services together. For example, a GP may suggest a physiotherapist for an injury, while a person may choose to see a naturopath on their own."
+  ],
+  "remember": "GPs are usually the first stop, allied health adds focused care, and alternative health sits outside conventional medicine.",
+  "a": {
+   "q": "Which health professional is an example of allied health?",
+   "opts": [
+    "A psychologist",
+    "A naturopath",
+    "A general practitioner",
+    "A homeopath"
+   ],
+   "why": "A psychologist is trained in one area of care, mental health, and uses evidence-based methods, so is allied health. A naturopath is the most tempting wrong answer, but naturopathy is an alternative health practice outside conventional medicine.",
+   "clue": "Look for a university-trained professional who works in one area of care."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi hurts his knee playing netball in Geelong. He books a visit with his local doctor, who sends him to a physiotherapist. Which describes these two services?",
+   "opts": [
+    "A GP as first stop, then allied health",
+    "Allied health first, then a GP referral",
+    "Alternative health first, then a GP referral",
+    "A GP as first stop, then alternative health"
+   ],
+   "why": "The doctor is a GP, who is usually the first stop and can refer a patient on. A physiotherapist works in one area of care and uses evidence-based treatment, so is allied health, not alternative health.",
+   "clue": "Name each person's role, then check the order Ravi saw them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A psychologist",
+   "also_right": []
+  },
+  "b": {
+   "best": "A GP as first stop, then allied health",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says allied health professionals 'are regulated', right after listing dietitians. In Australia, dietitians (and some other allied health groups, such as speech pathologists) are not registered under AHPRA; they are self-regulated through professional bodies. A safer wording is 'many are registered with AHPRA' or 'most are regulated'."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound and each has one clear right answer. One small fact issue: the card says allied health professionals are all regulated, but dietitians are not nationally registered in Australia, so the wording should be softened."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says allied health professionals 'are regulated', right after listing dietitians. In Australia, dietitians (and some other allied health groups, such as speech pathologists) are not registered under AHPRA; they are self-regulated through professional bodies. A safer wording is 'many are registered with AHPRA' or 'most are regulated'."
+ ],
+ "proposal": {
+  "title": "GPs, allied and alternative health",
+  "card": [
+   [
+    "GP",
+    "a general practitioner, a doctor who treats common problems and checks overall health. A GP is usually the first stop and can refer a patient to a specialist or another health professional."
+   ],
+   [
+    "Allied health",
+    "university-trained professionals who each work in one area of care, such as physiotherapists, psychologists and dietitians. Many are registered with a national regulator, and they use treatments backed by scientific evidence."
+   ],
+   [
+    "Alternative health",
+    "practices outside conventional medicine, such as naturopathy and homeopathy. Their treatments often have limited scientific evidence of working."
+   ],
+   "People may use these services together. For example, a GP may suggest a physiotherapist for an injury, while a person may choose to see a naturopath on their own."
+  ],
+  "remember": "GPs are usually the first stop, allied health adds focused care, and alternative health sits outside conventional medicine.",
+  "a": {
+   "q": "Which health professional is an example of allied health?",
+   "opts": [
+    "A psychologist",
+    "A naturopath",
+    "A general practitioner",
+    "A homeopath"
+   ],
+   "why": "A psychologist is trained in one area of care, mental health, and uses evidence-based methods, so is allied health. A naturopath is the most tempting wrong answer, but naturopathy is an alternative health practice outside conventional medicine.",
+   "clue": "Look for a university-trained professional who works in one area of care."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi hurts his knee playing netball in Geelong. He books a visit with his local doctor, who sends him to a physiotherapist. Which describes these two services?",
+   "opts": [
+    "A GP as first stop, then allied health",
+    "Allied health first, then a GP referral",
+    "Alternative health first, then a GP referral",
+    "A GP as first stop, then alternative health"
+   ],
+   "why": "The doctor is a GP, who is usually the first stop and can refer a patient on. A physiotherapist works in one area of care and uses evidence-based treatment, so is allied health, not alternative health.",
+   "clue": "Name each person's role, then check the order Ravi saw them."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A psychologist",
+    "also_right": []
+   },
+   "b": {
+    "best": "A GP as first stop, then allied health",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says allied health professionals 'are regulated', right after listing dietitians. In Australia, dietitians (and some other allied health groups, such as speech pathologists) are not registered under AHPRA; they are self-regulated through professional bodies. A safer wording is 'many are registered with AHPRA' or 'most are regulated'."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says allied health professionals 'are regulated', right after listing dietitians. In Australia, dietitians (and some other allied health groups, such as speech pathologists) are not registered under AHPRA; they are self-regulated through professional bodies. A safer wording is 'many are registered with AHPRA' or 'most are regulated'."
+  ]
+ },
+ "final": {
+  "title": "GPs, allied and alternative health",
+  "card": [
+   [
+    "GP",
+    "a general practitioner, a doctor who treats common problems and checks overall health. A GP is usually the first stop and can refer a patient to a specialist or another health professional."
+   ],
+   [
+    "Allied health",
+    "university-trained professionals who each work in one area of care, such as physiotherapists, psychologists and dietitians. Many are registered with a national regulator, and they use treatments backed by scientific evidence."
+   ],
+   [
+    "Alternative health",
+    "practices outside conventional medicine, such as naturopathy and homeopathy. Their treatments often have limited scientific evidence of working."
+   ],
+   "People may use these services together. For example, a GP may suggest a physiotherapist for an injury, while a person may choose to see a naturopath on their own."
+  ],
+  "remember": "GPs are usually the first stop, allied health adds focused care, and alternative health sits outside conventional medicine.",
+  "a": {
+   "q": "Which health professional is an example of allied health?",
+   "opts": [
+    "A psychologist",
+    "A naturopath",
+    "A general practitioner",
+    "A homeopath"
+   ],
+   "why": "A psychologist is trained in one area of care, mental health, and uses evidence-based methods, so is allied health. A naturopath is the most tempting wrong answer, but naturopathy is an alternative health practice outside conventional medicine.",
+   "clue": "Look for a university-trained professional who works in one area of care."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi hurts his knee playing netball in Geelong. He books a visit with his local doctor, who sends him to a physiotherapist. Which describes these two services?",
+   "opts": [
+    "A GP as first stop, then allied health",
+    "Allied health first, then a GP referral",
+    "Alternative health first, then a GP referral",
+    "A GP as first stop, then alternative health"
+   ],
+   "why": "The doctor is a GP, who is usually the first stop and can refer a patient on. A physiotherapist works in one area of care and uses evidence-based treatment, so is allied health, not alternative health.",
+   "clue": "Name each person's role, then check the order Ravi saw them."
+  }
+ },
+ "cleared_by": "recheck"
+}

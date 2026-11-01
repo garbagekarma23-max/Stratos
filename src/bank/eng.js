@@ -2790,5 +2790,152 @@ MADE_BANKS.eng = {
       "why": "The lunch paragraph does not serve the purpose of the piece, so it should go, and a few short sentences would vary the rhythm and add emphasis. Joining sentences makes the sameness worse, because all the sentences are already long.",
       "clue": "Fix both problems: one part is off topic, and the sentence lengths are all the same."
     }
+  },
+  "eng-persuasion-spoken-texts": {
+    "title": "Persuasion in spoken texts",
+    "card": [
+      "In a speech, podcast or video, a speaker persuades with the voice as well as the words. The same sentence can sound different, and so have a different effect, depending on how it is said.",
+      [
+        "Intonation and stress",
+        "Intonation is the rise and fall of the voice. Stress is extra force on one word. A speaker can stress a word to make the audience notice it, as in \"This is *our* town\"."
+      ],
+      [
+        "Volume and pace",
+        "Volume is how loud the voice is. Pace is how fast the speaker talks. A louder voice can show anger or urgency. A slow pace can make a point sound serious and give listeners time to take it in."
+      ],
+      [
+        "Pause",
+        "A pause is a short silence. A pause before an important point builds attention. A pause after it gives listeners time to think about it."
+      ]
+    ],
+    "remember": "Voice choices such as stress, volume, pace and pauses shape how an audience reacts to the words.",
+    "a": {
+      "q": "A speaker says, \"We have one chance to fix this,\" then stays silent for three seconds before continuing. What is the likely effect of the silence?",
+      "opts": [
+        "It gives the audience time to think about the point",
+        "It shows the speaker has forgotten what to say",
+        "It makes the point sound less important",
+        "It speeds up the speech and adds urgency"
+      ],
+      "why": "A pause after a main point lets it sink in, so the audience thinks about it. The silence does not make the point weaker. It is a planned choice, not a sign the speaker has lost their place.",
+      "clue": "What do listeners do during a silence after a big claim?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a school assembly, Jada speaks slowly and quietly about a classmate who was left out, then raises her volume and stresses the word \"never\" in \"This must never happen again.\" What does the change in volume and stress mainly do?",
+      "opts": [
+        "Signals strong feeling and draws attention to the demand",
+        "Shows that she is nervous and unsure of her view",
+        "Slows the speech so listeners can take in each word",
+        "Changes the topic so the audience hears a new idea"
+      ],
+      "why": "Raising volume and stressing \"never\" makes the demand stand out and shows strong feeling. The slow, quiet start is what gives time to take in the words, which is a different effect from the rise in volume. The change does not introduce a new topic.",
+      "clue": "Think about which word is stressed, and what a louder voice usually shows."
+    }
+  },
+  "eng-context-argument": {
+    "title": "Context and argument",
+    "card": [
+      "Context is the when, where and for whom of an argument. It includes the time, the place, the occasion and the audience.",
+      "A writer or speaker shapes the argument to fit its context. The same issue can be argued in very different ways for different audiences.",
+      "Audience affects tone, language and evidence. Young students may respond to simple words and a friendly tone. A formal group, such as a school board, may expect evidence and formal language.",
+      "Context also affects how people react. An argument that suits one time or place may be ignored or rejected in another."
+    ],
+    "remember": "Ask when, where and for whom, then ask how that shaped the argument.",
+    "a": {
+      "q": "Why might a speaker use a different tone for a school assembly than for a council meeting on the same issue?",
+      "opts": [
+        "The audience and occasion differ, so the speaker adapts",
+        "The issue itself shifts between the two events",
+        "The speaker's mood on each day sets the tone",
+        "The speaker wants to show off a range of techniques"
+      ],
+      "why": "Context includes the occasion and the audience, and a speaker shapes the argument to fit them. The issue can stay the same in both places, so the change comes from the context, not from a different issue.",
+      "clue": "Think about who is listening in each room."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya argues for a later school start. She first speaks to her Year 7 classmates, then writes to the school board. Which change best shows her adapting to context?",
+      "opts": [
+        "She adds survey data and a formal tone for the board",
+        "She adds survey data and a formal tone for her Year 7s",
+        "She adds slang and class jokes to her letter to the board",
+        "She swaps her main point for a new one for the board"
+      ],
+      "why": "A school board is a formal group that may expect evidence, so data and a formal tone suit that audience. Giving the same features to her Year 7 classmates uses the right tools for the wrong audience, since young students may respond better to simple words and a friendly tone.",
+      "clue": "Match each style to the group most likely to expect it."
+    }
+  },
+  "eng-logic-reasoning-flaws": {
+    "title": "Evaluating arguments",
+    "card": [
+      "Listen or read closely, then ask questions about the argument. Does the evidence really support the claim? Is anything left out?",
+      [
+        "Hasty generalisation",
+        "a claim about a whole group based on one or a few cases. One rude waiter does not show that all waiters are rude."
+      ],
+      [
+        "Personal attack",
+        "going after the person instead of the idea. Saying a speaker is silly does not show that their point is wrong."
+      ],
+      "Spotting a flaw like these shows that an argument is weak. It does not prove the conclusion is false, only that the reasons given do not support it."
+    ],
+    "remember": "Question the evidence and reasoning, not the speaker.",
+    "a": {
+      "q": "A speaker says her cousin failed after using one app, so the app makes everyone fail. What is the flaw?",
+      "opts": [
+        "A hasty generalisation from one case",
+        "A personal attack on the app's maker",
+        "A claim with no evidence at all",
+        "A reasoned claim backed by many cases"
+      ],
+      "why": "One cousin's result is used to make a claim about everyone. That is a hasty generalisation. It is not a personal attack, because no person is criticised in place of the idea.",
+      "clue": "How many cases does the speaker use?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam argues for a longer lunch break. Ravi replies, \"Sam is always late, so ignore his idea.\" What is the best evaluation of Ravi's reply?",
+      "opts": [
+        "It attacks Sam, not the idea about lunch",
+        "It shows Sam's idea about lunch is false",
+        "It generalises from many cases of lateness",
+        "It answers Sam's reasons with better evidence"
+      ],
+      "why": "Ravi targets Sam's habits, which have no link to whether a longer lunch is a good idea. That is a personal attack. It does not show the idea is false, because the idea itself is never tested.",
+      "clue": "Does Ravi say anything about lunch breaks?"
+    }
+  },
+  "eng-writing-your-own-point": {
+    "title": "Presenting your own point of view",
+    "card": [
+      "Start by planning. Decide your main point, who your audience is, and what you want them to think or do.",
+      "Choose arguments that suit the audience. Pick reasons and examples that they care about and can follow, not just the ones you like best.",
+      "Choose techniques to match. A story can make a point real for classmates, and a statistic can help with an audience who want proof.",
+      "When you present, use your voice on purpose. Pace, pauses and emphasis help the audience hear your main points."
+    ],
+    "remember": "Plan for your audience, then pick arguments and techniques that suit them.",
+    "a": {
+      "q": "Mia has chosen her main point for a speech to Year 7 students. What should guide her choice of arguments?",
+      "opts": [
+        "What her Year 7 listeners care about and can follow",
+        "Which reasons she finds the most convincing herself",
+        "Which reasons sound the most complex and impressive",
+        "Which reasons her own teacher used in class"
+      ],
+      "why": "Arguments should be chosen for the audience, so Mia needs reasons Year 7 students care about and can follow. Picking the reasons she finds most convincing is tempting, but her listeners may not share her concerns.",
+      "clue": "Who does the speech need to persuade?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jack wants the school council to fund a bike shed. Members say they back only projects with clear evidence. What should he use?",
+      "opts": [
+        "Survey results on how many students ride to school",
+        "A personal story about his bike being stolen at school",
+        "A lively description of how much students love cycling",
+        "His own strong opinion, repeated with firm emphasis"
+      ],
+      "why": "This audience wants proof, so survey figures give them evidence they can weigh. A personal story is tempting because it makes the problem feel real, but it is one case, not the evidence this council asks for.",
+      "clue": "What kind of support does the card link to an audience who want proof?"
+    }
   }
 };

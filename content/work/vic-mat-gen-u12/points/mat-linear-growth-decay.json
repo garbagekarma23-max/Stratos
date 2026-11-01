@@ -1,0 +1,124 @@
+{
+ "id": "mat-linear-growth-decay",
+ "title": "Linear growth and decay",
+ "brief": "2f09ea3605dc",
+ "shortlist": [
+  [
+   "mat-exponential-growth-decay",
+   0.312
+  ],
+  [
+   "mat-simple-interest",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00584,
+  "check": 0.0066
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches the recursive same-amount-each-step idea of this sequences chapter: the simple interest card is a narrower interest formula I = Prn, and the exponential card is a different idea at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Linear growth and decay",
+  "card": [
+   "In linear growth, the same amount is added at each step. In linear decay, the same amount is taken away at each step.",
+   "As a recurrence relation, growth is u(n+1) = u(n) + d and decay is u(n+1) = u(n) − d. The amount d stays fixed.",
+   "Simple interest is linear growth. The interest is worked out on the original amount only, so the same dollar amount is added each year.",
+   "Flat-rate depreciation is linear decay. An item loses the same dollar amount each year. Example: a $2000 laptop losing $300 a year is worth $2000 − 3 × $300 = $1100 after 3 years."
+  ],
+  "remember": "Linear means the same amount is added or taken away at each step.",
+  "a": {
+   "q": "Priya invests $1500 at 4% simple interest per year. How much interest is added each year?",
+   "opts": [
+    "$60",
+    "$62.40",
+    "$6",
+    "$1560"
+   ],
+   "why": "Simple interest is 4% of the original $1500, which is $60 every year. The amount $62.40 is 4% of $1560, which is not how simple interest works.",
+   "clue": "Simple interest always uses the original amount."
+  },
+  "b": {
+   "d": 3,
+   "q": "A van bought for $42 000 loses $6000 in value each year under flat-rate depreciation. What is its value after 4 years?",
+   "opts": [
+    "$18 000",
+    "$24 000",
+    "$36 000",
+    "$12 000"
+   ],
+   "why": "The loss is 4 × $6000 = $24 000. So the value is $42 000 − $24 000 = $18 000. The answer $24 000 is the total loss, not the value left.",
+   "clue": "Find the total loss, then subtract it from the start."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$60",
+   "also_right": []
+  },
+  "b": {
+   "best": "$18 000",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out ($60 a year and $18 000 after 4 years), and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear growth and decay",
+  "card": [
+   "In linear growth, the same amount is added at each step. In linear decay, the same amount is taken away at each step.",
+   "As a recurrence relation, growth is u(n+1) = u(n) + d and decay is u(n+1) = u(n) − d. The amount d stays fixed.",
+   "Simple interest is linear growth. The interest is worked out on the original amount only, so the same dollar amount is added each year.",
+   "Flat-rate depreciation is linear decay. An item loses the same dollar amount each year. Example: a $2000 laptop losing $300 a year is worth $2000 − 3 × $300 = $1100 after 3 years."
+  ],
+  "remember": "Linear means the same amount is added or taken away at each step.",
+  "a": {
+   "q": "Priya invests $1500 at 4% simple interest per year. How much interest is added each year?",
+   "opts": [
+    "$60",
+    "$62.40",
+    "$6",
+    "$1560"
+   ],
+   "why": "Simple interest is 4% of the original $1500, which is $60 every year. The amount $62.40 is 4% of $1560, which is not how simple interest works.",
+   "clue": "Simple interest always uses the original amount."
+  },
+  "b": {
+   "d": 3,
+   "q": "A van bought for $42 000 loses $6000 in value each year under flat-rate depreciation. What is its value after 4 years?",
+   "opts": [
+    "$18 000",
+    "$24 000",
+    "$36 000",
+    "$12 000"
+   ],
+   "why": "The loss is 4 × $6000 = $24 000. So the value is $42 000 − $24 000 = $18 000. The answer $24 000 is the total loss, not the value left.",
+   "clue": "Find the total loss, then subtract it from the start."
+  }
+ },
+ "cleared_by": "checker"
+}

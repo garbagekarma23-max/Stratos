@@ -1,0 +1,217 @@
+{
+ "id": "mat-order-operations",
+ "title": "Order of operations",
+ "brief": "5a362e81ddc0",
+ "shortlist": [
+  [
+   "mat-substituting-into-formulas",
+   0.307
+  ],
+  [
+   "mat-solving-linear-equations",
+   0.276
+  ],
+  [
+   "mat-horizontal-translations",
+   0.232
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00449,
+  "check": 0.00909,
+  "fix": 0.02722,
+  "recheck": 0.00614
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Substituting into formulas, is about substitution and only includes the order of operations as one step, so it is broader than the new point and no bank point teaches order of operations on its own.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Order of operations",
+  "card": [
+   "When a calculation has more than one operation, do them in a set order. Brackets come first, then powers, then multiplication and division, then addition and subtraction.",
+   "Multiplication and division have equal rank, so work through them from left to right. Addition and subtraction also have equal rank, so work through them from left to right.",
+   "Example: 20 − 4 × 3. Multiply first: 4 × 3 = 12. Then subtract: 20 − 12 = 8.",
+   "Example: 24 ÷ 4 × 2. Division and multiplication have equal rank, so go left to right: 24 ÷ 4 = 6, then 6 × 2 = 12."
+  ],
+  "remember": "Brackets, powers, then × and ÷, then + and −, working left to right within each rank.",
+  "a": {
+   "q": "What is the value of 5 + 3 × 4?",
+   "opts": [
+    "17",
+    "32",
+    "12",
+    "27"
+   ],
+   "why": "Multiplication comes before addition, so 3 × 4 = 12, then 5 + 12 = 17. The answer 32 comes from adding first (5 + 3 = 8, then 8 × 4), which ignores the order.",
+   "clue": "Which operation is done first, + or ×?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out 30 − 12 ÷ 3 + 2 for a bake sale. What is the correct value?",
+   "opts": [
+    "28",
+    "8",
+    "16",
+    "24"
+   ],
+   "why": "Divide first: 12 ÷ 3 = 4. Then work left to right: 30 − 4 = 26, and 26 + 2 = 28. The answer 16 comes from doing 30 − 12 = 18 first, which skips the division.",
+   "clue": "Do the division first, then go left to right."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "17",
+   "also_right": []
+  },
+  "b": {
+   "best": "28",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 16 comes from working out 30 − 12 = 18 first. Continuing that way gives 18 ÷ 3 + 2 = 8, not 16, so the why explains the distractor wrongly. No usual error gives 16. The error the why describes actually gives the option 8."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one correct answer (17 and 28), and the card is accurate. The explanation for question b wrongly says that doing 30 − 12 first gives 16; that error actually gives 8."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says 16 comes from working out 30 − 12 = 18 first. Continuing that way gives 18 ÷ 3 + 2 = 8, not 16, so the why explains the distractor wrongly. No usual error gives 16. The error the why describes actually gives the option 8."
+ ],
+ "proposal": {
+  "title": "Order of operations",
+  "card": [
+   "When a calculation has more than one operation, do them in a set order. Brackets come first, then powers, then multiplication and division, then addition and subtraction.",
+   "Multiplication and division have equal rank, so work through them from left to right. Addition and subtraction also have equal rank, so work through them from left to right.",
+   "Example: 20 − 4 × 3. Multiply first: 4 × 3 = 12. Then subtract: 20 − 12 = 8.",
+   "Example: 24 ÷ 4 × 2. Division and multiplication have equal rank, so go left to right: 24 ÷ 4 = 6, then 6 × 2 = 12."
+  ],
+  "remember": "Brackets, powers, then × and ÷, then + and −, working left to right within each rank.",
+  "a": {
+   "q": "What is the value of 5 + 3 × 4?",
+   "opts": [
+    "17",
+    "32",
+    "12",
+    "27"
+   ],
+   "why": "Multiplication comes before addition, so 3 × 4 = 12, then 5 + 12 = 17. The answer 32 comes from adding first (5 + 3 = 8, then 8 × 4), which ignores the order.",
+   "clue": "Which operation is done first, + or ×?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out 30 − 12 ÷ 3 + 2 for a bake sale. What is the correct value?",
+   "opts": [
+    "28",
+    "24",
+    "8",
+    "27.6"
+   ],
+   "why": "Divide first: 12 ÷ 3 = 4. Then work left to right: 30 − 4 = 26, and 26 + 2 = 28. The answer 24 comes from adding 4 + 2 before subtracting, but addition and subtraction have equal rank, so they go left to right.",
+   "clue": "After dividing, which comes first from the left, − or +?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "17",
+    "also_right": []
+   },
+   "b": {
+    "best": "28",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says 16 comes from working out 30 − 12 = 18 first. Continuing that way gives 18 ÷ 3 + 2 = 8, not 16, so the why explains the distractor wrongly. No usual error gives 16. The error the why describes actually gives the option 8."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says 16 comes from working out 30 − 12 = 18 first. Continuing that way gives 18 ÷ 3 + 2 = 8, not 16, so the why explains the distractor wrongly. No usual error gives 16. The error the why describes actually gives the option 8."
+  ]
+ },
+ "final": {
+  "title": "Order of operations",
+  "card": [
+   "When a calculation has more than one operation, do them in a set order. Brackets come first, then powers, then multiplication and division, then addition and subtraction.",
+   "Multiplication and division have equal rank, so work through them from left to right. Addition and subtraction also have equal rank, so work through them from left to right.",
+   "Example: 20 − 4 × 3. Multiply first: 4 × 3 = 12. Then subtract: 20 − 12 = 8.",
+   "Example: 24 ÷ 4 × 2. Division and multiplication have equal rank, so go left to right: 24 ÷ 4 = 6, then 6 × 2 = 12."
+  ],
+  "remember": "Brackets, powers, then × and ÷, then + and −, working left to right within each rank.",
+  "a": {
+   "q": "What is the value of 5 + 3 × 4?",
+   "opts": [
+    "17",
+    "32",
+    "12",
+    "27"
+   ],
+   "why": "Multiplication comes before addition, so 3 × 4 = 12, then 5 + 12 = 17. The answer 32 comes from adding first (5 + 3 = 8, then 8 × 4), which ignores the order.",
+   "clue": "Which operation is done first, + or ×?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia works out 30 − 12 ÷ 3 + 2 for a bake sale. What is the correct value?",
+   "opts": [
+    "28",
+    "24",
+    "8",
+    "27.6"
+   ],
+   "why": "Divide first: 12 ÷ 3 = 4. Then work left to right: 30 − 4 = 26, and 26 + 2 = 28. The answer 24 comes from adding 4 + 2 before subtracting, but addition and subtraction have equal rank, so they go left to right.",
+   "clue": "After dividing, which comes first from the left, − or +?"
+  }
+ },
+ "cleared_by": "recheck"
+}

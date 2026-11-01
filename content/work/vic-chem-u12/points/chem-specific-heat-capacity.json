@@ -1,0 +1,126 @@
+{
+ "id": "chem-specific-heat-capacity",
+ "title": "Specific heat capacity",
+ "brief": "3973d6a8781e",
+ "shortlist": [
+  [
+   "chem-calorimetry",
+   0.437
+  ],
+  [
+   "chem-exothermic-endothermic-reactions",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00504,
+  "check": 0.00826
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank's calorimetry points use specific heat capacity only as a step in q = mcΔT and ΔH sign calculations, while the new point teaches the property itself (the energy to heat 1 g by 1 °C and why water warms and cools slowly), so no bank point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Specific heat capacity",
+  "card": [
+   "Specific heat capacity is the energy needed to raise the temperature of 1 g of a substance by 1 °C. Its unit is J g⁻¹ °C⁻¹.",
+   "Energy needed = mass × specific heat capacity × temperature change, or q = mcΔT.",
+   "Water's specific heat capacity is high, about 4.18 J g⁻¹ °C⁻¹. It takes a lot of energy to warm water and water gives out a lot of energy as it cools.",
+   "So water warms and cools slowly compared with a substance of lower specific heat capacity, such as most metals. This helps keep oceans and living things at steady temperatures."
+  ],
+  "remember": "The higher the specific heat capacity, the more energy it takes to change the temperature, so the slower it warms and cools.",
+  "a": {
+   "q": "Why does a lake warm up more slowly than the sand on its shore in the same sunshine?",
+   "opts": [
+    "Water has a higher specific heat capacity than sand",
+    "Water has a lower specific heat capacity than sand",
+    "Water absorbs less energy from the Sun than sand",
+    "Water needs less energy for each degree of warming"
+   ],
+   "why": "Water needs more energy per gram for each degree of warming, so the same sunshine raises its temperature less. The tempting option is the one saying water needs less energy per degree: that would make it warm faster, not slower.",
+   "clue": "Think about how much energy each gram needs for a 1 °C rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia heats 200 g of water in a kettle in Geelong and its temperature rises by 10 °C. About how much energy does the water absorb? (Specific heat capacity of water = 4.18 J g⁻¹ °C⁻¹)",
+   "opts": [
+    "8360 J",
+    "836 J",
+    "418 J",
+    "2090 J"
+   ],
+   "why": "q = mcΔT = 200 × 4.18 × 10 = 8360 J. The value 836 J comes from leaving out the factor of 10, which is a common slip when the temperature change is forgotten.",
+   "clue": "Multiply mass, specific heat capacity and temperature change."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Water has a higher specific heat capacity than sand",
+   "also_right": []
+  },
+  "b": {
+   "best": "8360 J",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Specific heat capacity",
+  "card": [
+   "Specific heat capacity is the energy needed to raise the temperature of 1 g of a substance by 1 °C. Its unit is J g⁻¹ °C⁻¹.",
+   "Energy needed = mass × specific heat capacity × temperature change, or q = mcΔT.",
+   "Water's specific heat capacity is high, about 4.18 J g⁻¹ °C⁻¹. It takes a lot of energy to warm water and water gives out a lot of energy as it cools.",
+   "So water warms and cools slowly compared with a substance of lower specific heat capacity, such as most metals. This helps keep oceans and living things at steady temperatures."
+  ],
+  "remember": "The higher the specific heat capacity, the more energy it takes to change the temperature, so the slower it warms and cools.",
+  "a": {
+   "q": "Why does a lake warm up more slowly than the sand on its shore in the same sunshine?",
+   "opts": [
+    "Water has a higher specific heat capacity than sand",
+    "Water has a lower specific heat capacity than sand",
+    "Water absorbs less energy from the Sun than sand",
+    "Water needs less energy for each degree of warming"
+   ],
+   "why": "Water needs more energy per gram for each degree of warming, so the same sunshine raises its temperature less. The tempting option is the one saying water needs less energy per degree: that would make it warm faster, not slower.",
+   "clue": "Think about how much energy each gram needs for a 1 °C rise."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia heats 200 g of water in a kettle in Geelong and its temperature rises by 10 °C. About how much energy does the water absorb? (Specific heat capacity of water = 4.18 J g⁻¹ °C⁻¹)",
+   "opts": [
+    "8360 J",
+    "836 J",
+    "418 J",
+    "2090 J"
+   ],
+   "why": "q = mcΔT = 200 × 4.18 × 10 = 8360 J. The value 836 J comes from leaving out the factor of 10, which is a common slip when the temperature change is forgotten.",
+   "clue": "Multiply mass, specific heat capacity and temperature change."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,255 @@
+{
+ "id": "chem-chromatography",
+ "title": "Chromatography",
+ "brief": "bf219b7b4169",
+ "shortlist": [
+  [
+   "chem-pure-substances-mixtures",
+   0.348
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00605,
+  "check": 0.01195,
+  "fix": 0.03046,
+  "recheck": 0.00695
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a broad introduction to pure substances and mixtures that mentions chromatography only in passing, while the new point is about chromatography itself, with its stationary phase and different travel distances, so no existing point teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Chromatography",
+  "card": [
+   "Chromatography separates the components of a mixture. The sample sits on a stationary phase, such as paper, and a mobile phase, the solvent, moves through it.",
+   "Each component is attracted to the stationary phase and dissolves in the mobile phase to a different degree. So the components travel different distances.",
+   "A component more attracted to the mobile phase travels further. A component more attracted to the stationary phase travels less far.",
+   "The number of spots shows how many components are in the sample. A pure substance gives one spot. A sample with more than one spot is a mixture."
+  ],
+  "remember": "Different components travel different distances, so spots show what is in a sample.",
+  "a": {
+   "q": "A sample of food dye is run on paper and gives three separate spots. What does this show?",
+   "opts": [
+    "The dye is a mixture of at least three components",
+    "The dye is a pure substance",
+    "The dye has only one component",
+    "The dye is attracted to the paper equally"
+   ],
+   "why": "Each spot is a component that travelled a different distance, so three spots means a mixture. A pure substance would give only one spot, which is the tempting wrong idea.",
+   "clue": "Count the spots."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs two samples of ink. Sample X gives one spot and sample Y gives two. Which conclusion is best?",
+   "opts": [
+    "Y is a mixture, and X may be pure",
+    "X is a mixture, and Y is pure",
+    "Both are pure, as they were run together",
+    "Both are mixtures, as both ran up the paper"
+   ],
+   "why": "Two spots in Y means at least two components, so Y is a mixture. One spot in X suggests it is pure, though X could be a mixture whose parts travel the same distance. That is why the wording is 'may be pure'.",
+   "clue": "One spot suggests pure and more spots mean a mixture."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The dye is a mixture of at least three components",
+   "also_right": []
+  },
+  "b": {
+   "best": "Y is a mixture, and X may be pure",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The number of spots shows how many components are in the sample' overstates it. Components that travel the same distance give one spot, so the number of spots shows only the minimum number of components. Likewise one spot does not prove a substance is pure."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says X could be a mixture whose parts travel the same distance. The card never teaches this and implies the opposite (spots show how many components; a pure substance gives one spot), so the 'may be pure' hedge rests on an idea the card does not support."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier ('may be pure'), so it stands out from the confident wrong options."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'One spot suggests pure and more spots mean a mixture' gives the answer away almost directly."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one with a precise qualifier ('at least three components'), so it stands out. 'At least' also goes beyond what the card says, since the card says spots show how many components."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card wrongly says the number of spots shows exactly how many components there are; it is only a minimum, and the why for (b) relies on this unstated point. Both right options stand out by length or hedging, and the clue for (b) gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'The number of spots shows how many components are in the sample' overstates it. Components that travel the same distance give one spot, so the number of spots shows only the minimum number of components. Likewise one spot does not prove a substance is pure.",
+  "Question b, other: The why says X could be a mixture whose parts travel the same distance. The card never teaches this and implies the opposite (spots show how many components; a pure substance gives one spot), so the 'may be pure' hedge rests on an idea the card does not support.",
+  "Question b, wording: The right option is the only one with a qualifier ('may be pure'), so it stands out from the confident wrong options.",
+  "Question b, other: The clue 'One spot suggests pure and more spots mean a mixture' gives the answer away almost directly.",
+  "Question a, wording: The right option is the longest and the only one with a precise qualifier ('at least three components'), so it stands out. 'At least' also goes beyond what the card says, since the card says spots show how many components."
+ ],
+ "proposal": {
+  "title": "Chromatography",
+  "card": [
+   "Chromatography separates the components of a mixture. The sample sits on a stationary phase, such as paper, and a mobile phase, the solvent, moves through it.",
+   "Components can differ in how strongly they are attracted to the stationary phase and how well they dissolve in the mobile phase. So they can travel different distances.",
+   "A component more attracted to the mobile phase travels further. A component more attracted to the stationary phase travels less far.",
+   "Each spot holds at least one component. Components that travel the same distance share a spot, so one spot does not prove a substance is pure. More than one spot shows a mixture."
+  ],
+  "remember": "More than one spot means a mixture. One spot alone does not prove purity.",
+  "a": {
+   "q": "A sample of food dye is run on paper and gives three separate spots. What does this show?",
+   "opts": [
+    "A mixture with at least three components",
+    "A mixture with exactly three components",
+    "A pure substance that split into three parts",
+    "A pure substance with three different colours"
+   ],
+   "why": "Each spot holds at least one component, so three spots show a mixture of at least three. Exactly three goes too far, because two components that travel the same distance would share one spot.",
+   "clue": "Can one spot hold more than one component?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs two samples of ink. Sample X gives one spot and sample Y gives two. Which conclusion is best?",
+   "opts": [
+    "Y is a mixture, and X may be pure or a mixture",
+    "Y is a mixture, and X is certainly pure",
+    "Y may be pure or a mixture, and X is pure",
+    "X is a mixture, and Y is certainly pure"
+   ],
+   "why": "Two spots show Y has at least two components, so Y is a mixture. X gave one spot, but components that travel the same distance share a spot, so X may still be a mixture. Saying X is certainly pure claims more than one spot can prove.",
+   "clue": "Could two components in X have travelled the same distance?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A mixture with at least three components",
+    "also_right": []
+   },
+   "b": {
+    "best": "Y is a mixture, and X may be pure or a mixture",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The number of spots shows how many components are in the sample' overstates it. Components that travel the same distance give one spot, so the number of spots shows only the minimum number of components. Likewise one spot does not prove a substance is pure."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says X could be a mixture whose parts travel the same distance. The card never teaches this and implies the opposite (spots show how many components; a pure substance gives one spot), so the 'may be pure' hedge rests on an idea the card does not support."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier ('may be pure'), so it stands out from the confident wrong options."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'One spot suggests pure and more spots mean a mixture' gives the answer away almost directly."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one with a precise qualifier ('at least three components'), so it stands out. 'At least' also goes beyond what the card says, since the card says spots show how many components."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'The number of spots shows how many components are in the sample' overstates it. Components that travel the same distance give one spot, so the number of spots shows only the minimum number of components. Likewise one spot does not prove a substance is pure.",
+   "Question b, other: The why says X could be a mixture whose parts travel the same distance. The card never teaches this and implies the opposite (spots show how many components; a pure substance gives one spot), so the 'may be pure' hedge rests on an idea the card does not support.",
+   "Question b, wording: The right option is the only one with a qualifier ('may be pure'), so it stands out from the confident wrong options.",
+   "Question b, other: The clue 'One spot suggests pure and more spots mean a mixture' gives the answer away almost directly.",
+   "Question a, wording: The right option is the longest and the only one with a precise qualifier ('at least three components'), so it stands out. 'At least' also goes beyond what the card says, since the card says spots show how many components."
+  ]
+ },
+ "final": {
+  "title": "Chromatography",
+  "card": [
+   "Chromatography separates the components of a mixture. The sample sits on a stationary phase, such as paper, and a mobile phase, the solvent, moves through it.",
+   "Components can differ in how strongly they are attracted to the stationary phase and how well they dissolve in the mobile phase. So they can travel different distances.",
+   "A component more attracted to the mobile phase travels further. A component more attracted to the stationary phase travels less far.",
+   "Each spot holds at least one component. Components that travel the same distance share a spot, so one spot does not prove a substance is pure. More than one spot shows a mixture."
+  ],
+  "remember": "More than one spot means a mixture. One spot alone does not prove purity.",
+  "a": {
+   "q": "A sample of food dye is run on paper and gives three separate spots. What does this show?",
+   "opts": [
+    "A mixture with at least three components",
+    "A mixture with exactly three components",
+    "A pure substance that split into three parts",
+    "A pure substance with three different colours"
+   ],
+   "why": "Each spot holds at least one component, so three spots show a mixture of at least three. Exactly three goes too far, because two components that travel the same distance would share one spot.",
+   "clue": "Can one spot hold more than one component?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom runs two samples of ink. Sample X gives one spot and sample Y gives two. Which conclusion is best?",
+   "opts": [
+    "Y is a mixture, and X may be pure or a mixture",
+    "Y is a mixture, and X is certainly pure",
+    "Y may be pure or a mixture, and X is pure",
+    "X is a mixture, and Y is certainly pure"
+   ],
+   "why": "Two spots show Y has at least two components, so Y is a mixture. X gave one spot, but components that travel the same distance share a spot, so X may still be a mixture. Saying X is certainly pure claims more than one spot can prove.",
+   "clue": "Could two components in X have travelled the same distance?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,235 @@
+{
+ "id": "mat-trigonometric-identities",
+ "title": "Compound and double angle formulas",
+ "brief": "804990ce837f",
+ "shortlist": [
+  [
+   "mat-pythagorean-identity",
+   0.317
+  ],
+  [
+   "mat-exact-values",
+   0.245
+  ],
+  [
+   "mat-sine-rule",
+   0.238
+  ],
+  [
+   "mat-solving-trigonometric-equations",
+   0.234
+  ],
+  [
+   "mat-unit-circle",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00979,
+  "check": 0.01109,
+  "fix": 0.01888,
+  "recheck": 0.00879
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the five bank points teaches the compound or double angle formulas; they cover the Pythagorean identity, exact values, the sine rule, solving trig equations and the unit circle, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Compound and double angle formulas",
+  "card": [
+   "Compound angle formulas: sin(A + B) = sin A cos B + cos A sin B, and cos(A + B) = cos A cos B − sin A sin B. For A − B, change the signs inside the formula the same way.",
+   "Double angle formulas: sin 2A = 2 sin A cos A, and cos 2A = cos²A − sin²A. Also cos 2A = 2cos²A − 1 = 1 − 2sin²A.",
+   "Exact values: sin 45° = √2/2, cos 45° = √2/2, sin 30° = 1/2 and cos 30° = √3/2. Split an angle such as 75° into 45° + 30° to get exact values.",
+   "Example: sin 75° = sin 45° cos 30° + cos 45° sin 30° = (√6 + √2)/4."
+  ],
+  "remember": "Split a angle into known angles, then use the formula with the right signs.",
+  "a": {
+   "q": "Angle A is acute and sin A = 3/5. What is sin 2A?",
+   "opts": [
+    "24/25",
+    "7/25",
+    "6/5",
+    "12/25"
+   ],
+   "why": "Since A is acute, cos A = 4/5. Then sin 2A = 2 × 3/5 × 4/5 = 24/25. The value 7/25 is cos 2A, which is a neighbouring formula.",
+   "clue": "Find cos A first, using a 3, 4, 5 triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of cos 75°?",
+   "opts": [
+    "(√6 − √2)/4",
+    "(√6 + √2)/4",
+    "(√3 − 1)/4",
+    "(√6 − √2)/2"
+   ],
+   "why": "cos 75° = cos 45° cos 30° − sin 45° sin 30° = (√6 − √2)/4. The option with a plus sign is sin 75°, which comes from using the sine formula's sign.",
+   "clue": "The cosine formula has a minus sign between the two products."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "24/25",
+   "also_right": []
+  },
+  "b": {
+   "best": "(√6 − √2)/4",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"For A − B, change the signs inside the formula the same way\" is vague and could mislead. The signs do not change the same way in both formulas: sin(A − B) = sin A cos B − cos A sin B, but cos(A − B) = cos A cos B + sin A sin B. Both formulas should be stated outright."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "Grammar error: \"Split a angle\" should be \"Split an angle\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct. The card's one-line rule for A − B is vague and could mislead students about the signs, so it should give both formulas in full. The remember line also has a typo (\"a angle\")."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"For A − B, change the signs inside the formula the same way\" is vague and could mislead. The signs do not change the same way in both formulas: sin(A − B) = sin A cos B − cos A sin B, but cos(A − B) = cos A cos B + sin A sin B. Both formulas should be stated outright.",
+  "Remember, wording: Grammar error: \"Split a angle\" should be \"Split an angle\"."
+ ],
+ "proposal": {
+  "title": "Compound and double angle formulas",
+  "card": [
+   "Sine: sin(A + B) = sin A cos B + cos A sin B, and sin(A − B) = sin A cos B − cos A sin B. The sign between the products matches the sign inside.",
+   "Cosine: cos(A + B) = cos A cos B − sin A sin B, and cos(A − B) = cos A cos B + sin A sin B. The sign between the products is the opposite of the sign inside.",
+   "Double angle formulas: sin 2A = 2 sin A cos A, and cos 2A = cos²A − sin²A. Also cos 2A = 2cos²A − 1 = 1 − 2sin²A.",
+   "Exact values: sin 45° = cos 45° = √2/2, sin 30° = 1/2 and cos 30° = √3/2. Example: sin 75° = sin 45° cos 30° + cos 45° sin 30° = (√6 + √2)/4."
+  ],
+  "remember": "Split an angle into known angles. Sine keeps the sign inside, cosine flips it.",
+  "a": {
+   "q": "Angle A is acute and sin A = 3/5. What is sin 2A?",
+   "opts": [
+    "24/25",
+    "7/25",
+    "6/5",
+    "12/25"
+   ],
+   "why": "Since A is acute, cos A = 4/5. Then sin 2A = 2 × 3/5 × 4/5 = 24/25. The value 7/25 is cos 2A, which is a neighbouring formula.",
+   "clue": "Find cos A first, using a 3, 4, 5 triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of cos 75°?",
+   "opts": [
+    "(√6 − √2)/4",
+    "(√6 + √2)/4",
+    "(√3 − 1)/4",
+    "(√6 − √2)/2"
+   ],
+   "why": "cos 75° = cos 45° cos 30° − sin 45° sin 30° = √6/4 − √2/4 = (√6 − √2)/4. The option with a plus sign is sin 75°, which comes from keeping the plus sign as the sine formula does.",
+   "clue": "For cos(A + B), the sign between the products flips."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "24/25",
+    "also_right": []
+   },
+   "b": {
+    "best": "(√6 − √2)/4",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The formulas, the worked example, both answers (24/25 and (√6 − √2)/4) and the explanations are all correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"For A − B, change the signs inside the formula the same way\" is vague and could mislead. The signs do not change the same way in both formulas: sin(A − B) = sin A cos B − cos A sin B, but cos(A − B) = cos A cos B + sin A sin B. Both formulas should be stated outright."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "Grammar error: \"Split a angle\" should be \"Split an angle\"."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"For A − B, change the signs inside the formula the same way\" is vague and could mislead. The signs do not change the same way in both formulas: sin(A − B) = sin A cos B − cos A sin B, but cos(A − B) = cos A cos B + sin A sin B. Both formulas should be stated outright.",
+   "Remember, wording: Grammar error: \"Split a angle\" should be \"Split an angle\"."
+  ]
+ },
+ "final": {
+  "title": "Compound and double angle formulas",
+  "card": [
+   "Sine: sin(A + B) = sin A cos B + cos A sin B, and sin(A − B) = sin A cos B − cos A sin B. The sign between the products matches the sign inside.",
+   "Cosine: cos(A + B) = cos A cos B − sin A sin B, and cos(A − B) = cos A cos B + sin A sin B. The sign between the products is the opposite of the sign inside.",
+   "Double angle formulas: sin 2A = 2 sin A cos A, and cos 2A = cos²A − sin²A. Also cos 2A = 2cos²A − 1 = 1 − 2sin²A.",
+   "Exact values: sin 45° = cos 45° = √2/2, sin 30° = 1/2 and cos 30° = √3/2. Example: sin 75° = sin 45° cos 30° + cos 45° sin 30° = (√6 + √2)/4."
+  ],
+  "remember": "Split an angle into known angles. Sine keeps the sign inside, cosine flips it.",
+  "a": {
+   "q": "Angle A is acute and sin A = 3/5. What is sin 2A?",
+   "opts": [
+    "24/25",
+    "7/25",
+    "6/5",
+    "12/25"
+   ],
+   "why": "Since A is acute, cos A = 4/5. Then sin 2A = 2 × 3/5 × 4/5 = 24/25. The value 7/25 is cos 2A, which is a neighbouring formula.",
+   "clue": "Find cos A first, using a 3, 4, 5 triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the exact value of cos 75°?",
+   "opts": [
+    "(√6 − √2)/4",
+    "(√6 + √2)/4",
+    "(√3 − 1)/4",
+    "(√6 − √2)/2"
+   ],
+   "why": "cos 75° = cos 45° cos 30° − sin 45° sin 30° = √6/4 − √2/4 = (√6 − √2)/4. The option with a plus sign is sin 75°, which comes from keeping the plus sign as the sine formula does.",
+   "clue": "For cos(A + B), the sign between the products flips."
+  }
+ },
+ "cleared_by": "recheck"
+}

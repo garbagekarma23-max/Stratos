@@ -1,0 +1,126 @@
+{
+ "id": "chem-naming-simple-organic-compounds",
+ "title": "Naming simple organic compounds",
+ "brief": "6bd2f3bbff63",
+ "shortlist": [
+  [
+   "chem-chemical-tests-organic-compounds",
+   0.308
+  ],
+  [
+   "chem-naming-hydrocarbons",
+   0.263
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00504,
+  "check": 0.00958
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, chem-naming-hydrocarbons, covers only hydrocarbon naming (stem, bond endings, branches), while the new point also requires naming compounds with functional groups, so it is broader and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Naming simple organic compounds",
+  "card": [
+   "An IUPAC name has a stem for the number of carbons in the longest chain: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).",
+   "The ending shows the bonds or family. -ane means only single bonds between carbons, and -ene means a C=C double bond. -ol means an alcohol, and -oic acid means a carboxylic acid.",
+   "A number shows where a feature sits on the chain. Count from the end that gives the lower number. In but-2-ene, the double bond starts at carbon 2.",
+   "A halogen on the chain is named as a prefix: chloro, bromo or fluoro. The number shows which carbon it is attached to, as in 2-chloropropane."
+  ],
+  "remember": "Read a name in parts: the stem gives the chain length, the ending gives the bonds or family, and numbers give the position.",
+  "a": {
+   "q": "What does the name pent-1-ene tell you about this compound?",
+   "opts": [
+    "Five carbons in the chain and a double bond at carbon 1",
+    "Five carbons in the chain and a single bond at carbon 1",
+    "One carbon in the chain and five double bonds",
+    "Five carbons in the chain and an alcohol group on carbon 1"
+   ],
+   "why": "Pent means five carbons, -ene means a C=C double bond, and 1 gives its position. The alcohol option is tempting, but an alcohol would end in -ol, not -ene.",
+   "clue": "Split the name into stem, number and ending."
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound has a chain of three carbons, only single bonds, and a chlorine atom on the second carbon. What is its name?",
+   "opts": [
+    "2-chloropropane",
+    "2-chloropropene",
+    "3-chloropropane",
+    "2-chlorobutane"
+   ],
+   "why": "Three carbons gives prop, and only single bonds gives -ane. Chlorine on carbon 2 gives the prefix 2-chloro. Propene is wrong because that ending would mean a double bond.",
+   "clue": "Which ending matches only single bonds?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Five carbons in the chain and a double bond at carbon 1",
+   "also_right": []
+  },
+  "b": {
+   "best": "2-chloropropane",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Naming simple organic compounds",
+  "card": [
+   "An IUPAC name has a stem for the number of carbons in the longest chain: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).",
+   "The ending shows the bonds or family. -ane means only single bonds between carbons, and -ene means a C=C double bond. -ol means an alcohol, and -oic acid means a carboxylic acid.",
+   "A number shows where a feature sits on the chain. Count from the end that gives the lower number. In but-2-ene, the double bond starts at carbon 2.",
+   "A halogen on the chain is named as a prefix: chloro, bromo or fluoro. The number shows which carbon it is attached to, as in 2-chloropropane."
+  ],
+  "remember": "Read a name in parts: the stem gives the chain length, the ending gives the bonds or family, and numbers give the position.",
+  "a": {
+   "q": "What does the name pent-1-ene tell you about this compound?",
+   "opts": [
+    "Five carbons in the chain and a double bond at carbon 1",
+    "Five carbons in the chain and a single bond at carbon 1",
+    "One carbon in the chain and five double bonds",
+    "Five carbons in the chain and an alcohol group on carbon 1"
+   ],
+   "why": "Pent means five carbons, -ene means a C=C double bond, and 1 gives its position. The alcohol option is tempting, but an alcohol would end in -ol, not -ene.",
+   "clue": "Split the name into stem, number and ending."
+  },
+  "b": {
+   "d": 3,
+   "q": "A compound has a chain of three carbons, only single bonds, and a chlorine atom on the second carbon. What is its name?",
+   "opts": [
+    "2-chloropropane",
+    "2-chloropropene",
+    "3-chloropropane",
+    "2-chlorobutane"
+   ],
+   "why": "Three carbons gives prop, and only single bonds gives -ane. Chlorine on carbon 2 gives the prefix 2-chloro. Propene is wrong because that ending would mean a double bond.",
+   "clue": "Which ending matches only single bonds?"
+  }
+ },
+ "cleared_by": "checker"
+}

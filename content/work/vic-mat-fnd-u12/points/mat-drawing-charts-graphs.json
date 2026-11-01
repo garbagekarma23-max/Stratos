@@ -1,0 +1,256 @@
+{
+ "id": "mat-drawing-charts-graphs",
+ "title": "Drawing charts and graphs",
+ "brief": "b50ecd9d5ebb",
+ "shortlist": [
+  [
+   "mat-graphs-logarithmic-functions",
+   0.271
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.228
+  ],
+  [
+   "mat-types-data",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.0043,
+  "check": 0.01135,
+  "fix": 0.03172,
+  "recheck": 0.00724
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how to choose and draw a column graph, line graph, pie chart or table with a title, labels and scale; the closest, Types of data, only covers classifying data before choosing a display, which is related but a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Drawing charts and graphs",
+  "card": [
+   [
+    "Column graph",
+    "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
+   ],
+   [
+    "Line graph",
+    "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
+   ],
+   [
+    "Pie chart",
+    "Use it to show how parts make up a whole. Each slice is a share of 360°. Example: 1/4 of the whole is 1/4 × 360° = 90°."
+   ],
+   "Every graph needs a title, labels on both axes and an even scale, such as 0, 10, 20, 30. A table is a good choice when exact values matter."
+  ],
+  "remember": "Match the graph to the data, then add a title, labels and an even scale.",
+  "a": {
+   "q": "Which graph best shows a town's rainfall each month over one year?",
+   "opts": [
+    "A line graph",
+    "A pie chart",
+    "A column graph with no labels",
+    "A table with no title"
+   ],
+   "why": "Rainfall each month is a change over time, so a line graph suits it. A pie chart shows parts of a whole, and the rainfall figures are not shares of a total that matter here.",
+   "clue": "Think about change over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
+   "opts": [
+    "90°",
+    "10°",
+    "40°",
+    "144°"
+   ],
+   "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from 40 ÷ 10 mixed up with 360 × 0.4, so it does not match the share of students who chose bus.",
+   "clue": "Find the fraction of the whole, then take that share of 360°."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A line graph",
+   "also_right": []
+  },
+  "b": {
+   "best": "90°",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Every graph needs a title, labels on both axes and an even scale' is placed straight after the pie chart, but a pie chart has no axes or scale. Say this applies to column and line graphs, and that a pie chart needs a title and labelled slices."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's account of 144° ('40 ÷ 10 mixed up with 360 × 0.4') is muddled and could confuse students. 144° is 0.4 × 360°, which comes from wrongly using 40% instead of 10/40 = 25%."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have a clear correct answer (line graph; 90°). The card wrongly implies a pie chart needs labels on both axes, and the why for (b) explains the 144° distractor in a confusing way."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Every graph needs a title, labels on both axes and an even scale' is placed straight after the pie chart, but a pie chart has no axes or scale. Say this applies to column and line graphs, and that a pie chart needs a title and labelled slices.",
+  "Question b, wording: The why's account of 144° ('40 ÷ 10 mixed up with 360 × 0.4') is muddled and could confuse students. 144° is 0.4 × 360°, which comes from wrongly using 40% instead of 10/40 = 25%."
+ ],
+ "proposal": {
+  "title": "Drawing charts and graphs",
+  "card": [
+   [
+    "Column graph",
+    "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
+   ],
+   [
+    "Line graph",
+    "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
+   ],
+   [
+    "Pie chart",
+    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: 1/4 of the whole is 1/4 × 360° = 90°."
+   ],
+   "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
+  ],
+  "remember": "Match the graph to the data, then add a title and clear labels.",
+  "a": {
+   "q": "Which graph best shows a town's rainfall each month over one year?",
+   "opts": [
+    "A line graph with a title and labels",
+    "A pie chart with a title and labels",
+    "A column graph with no axis labels",
+    "A table of values with no title"
+   ],
+   "why": "Rainfall each month is a change over time, so a labelled line graph suits it. A pie chart shows parts of a whole, and the monthly rainfall figures are not shares of a total that matter here. The other two are missing a title or labels.",
+   "clue": "Think about change over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
+   "opts": [
+    "90°",
+    "10°",
+    "40°",
+    "144°"
+   ],
+   "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from wrongly using 40% as the share, since 0.4 × 360° = 144°. But 10 out of 40 is 25%, not 40%.",
+   "clue": "Find the fraction of the whole, then take that share of 360°."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A line graph with a title and labels",
+    "also_right": []
+   },
+   "b": {
+    "best": "90°",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Every graph needs a title, labels on both axes and an even scale' is placed straight after the pie chart, but a pie chart has no axes or scale. Say this applies to column and line graphs, and that a pie chart needs a title and labelled slices."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's account of 144° ('40 ÷ 10 mixed up with 360 × 0.4') is muddled and could confuse students. 144° is 0.4 × 360°, which comes from wrongly using 40% instead of 10/40 = 25%."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Every graph needs a title, labels on both axes and an even scale' is placed straight after the pie chart, but a pie chart has no axes or scale. Say this applies to column and line graphs, and that a pie chart needs a title and labelled slices.",
+   "Question b, wording: The why's account of 144° ('40 ÷ 10 mixed up with 360 × 0.4') is muddled and could confuse students. 144° is 0.4 × 360°, which comes from wrongly using 40% instead of 10/40 = 25%."
+  ]
+ },
+ "final": {
+  "title": "Drawing charts and graphs",
+  "card": [
+   [
+    "Column graph",
+    "Use it to compare separate groups, such as the number of students in each year level. Draw gaps between the columns."
+   ],
+   [
+    "Line graph",
+    "Use it to show how something changes over time, such as a temperature each month. Join the points with a line."
+   ],
+   [
+    "Pie chart",
+    "Use it to show how parts make up a whole, with a title and labelled slices. Each slice is a share of 360°: 1/4 of the whole is 1/4 × 360° = 90°."
+   ],
+   "Column and line graphs need a title, labels on both axes and an even scale, such as 0, 10, 20, 30. Use a table when exact values matter."
+  ],
+  "remember": "Match the graph to the data, then add a title and clear labels.",
+  "a": {
+   "q": "Which graph best shows a town's rainfall each month over one year?",
+   "opts": [
+    "A line graph with a title and labels",
+    "A pie chart with a title and labels",
+    "A column graph with no axis labels",
+    "A table of values with no title"
+   ],
+   "why": "Rainfall each month is a change over time, so a labelled line graph suits it. A pie chart shows parts of a whole, and the monthly rainfall figures are not shares of a total that matter here. The other two are missing a title or labels.",
+   "clue": "Think about change over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a survey of 40 students, 10 chose bus to get to school. What angle is the bus slice on a pie chart?",
+   "opts": [
+    "90°",
+    "10°",
+    "40°",
+    "144°"
+   ],
+   "why": "The bus share is 10/40 = 1/4, and 1/4 × 360° = 90°. The answer 144° comes from wrongly using 40% as the share, since 0.4 × 360° = 144°. But 10 out of 40 is 25%, not 40%.",
+   "clue": "Find the fraction of the whole, then take that share of 360°."
+  }
+ },
+ "cleared_by": "recheck"
+}

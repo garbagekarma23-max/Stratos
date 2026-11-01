@@ -1,0 +1,219 @@
+{
+ "id": "mat-proof-by-contrapositive",
+ "title": "Proof by contrapositive",
+ "brief": "8b529d182813",
+ "shortlist": [
+  [
+   "leg-burden-standard-proof",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00527,
+  "check": 0.01261,
+  "fix": 0.03054,
+  "recheck": 0.00731
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is about the legal burden and standard of proof in criminal trials, not the mathematical method of proof by contrapositive, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Proof by contrapositive",
+  "card": [
+   "A statement of the form \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
+   "A statement and its contrapositive are logically equivalent. Both are true or both are false. So proving the contrapositive proves the original.",
+   "Use this method when not Q gives you something easier to work with than P does. It is often so when Q is a negative claim such as \"n is not even\" or \"n is odd\".",
+   "Example: prove that if n² is even, then n is even. The contrapositive is: if n is not even, then n² is not even. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd. So the contrapositive is true, and so is the original."
+  ],
+  "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
+  "a": {
+   "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+   "opts": [
+    "If x is not even, then x is not a multiple of 6",
+    "If x is even, then x is a multiple of 6",
+    "If x is not a multiple of 6, then x is not even",
+    "If x is not a multiple of 6, then x is even"
+   ],
+   "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
+   "clue": "Swap the parts, then negate both."
+  },
+  "b": {
+   "d": 3,
+   "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+   "opts": [
+    "If n is even, then n² is even",
+    "If n is odd, then n² is odd",
+    "If n² is even, then n is even",
+    "If n² is odd, then n is even"
+   ],
+   "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive is \"if not Q then not P\": if n is even, then n² is even. The option \"if n² is even, then n is even\" is the converse of the negated parts in the wrong order, so it does not prove the original.",
+   "clue": "Not odd means even. Put not Q first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "If x is not even, then x is not a multiple of 6",
+   "also_right": []
+  },
+  "b": {
+   "best": "If n is even, then n² is even",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says to use contrapositive when Q is a negative claim, giving 'n is odd' as an example of a negative claim. Calling 'odd' a negative claim is confusing. The worked example also does not fit the advice: there Q is 'n is even', which is not negative, and the real reason the method helps is that P ('n² is even') is hard to use directly."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls 'if n² is even, then n is even' 'the converse of the negated parts in the wrong order'. That is muddled. This statement is the inverse (if not P then not Q), and the why should name it as such."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear correct answer. The card's advice on when to use the method calls 'n is odd' a negative claim and does not match its own example, and why (b) misnames the inverse in a confusing way."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says to use contrapositive when Q is a negative claim, giving 'n is odd' as an example of a negative claim. Calling 'odd' a negative claim is confusing. The worked example also does not fit the advice: there Q is 'n is even', which is not negative, and the real reason the method helps is that P ('n² is even') is hard to use directly.",
+  "Question b, other: Why (b) calls 'if n² is even, then n is even' 'the converse of the negated parts in the wrong order'. That is muddled. This statement is the inverse (if not P then not Q), and the why should name it as such."
+ ],
+ "proposal": {
+  "title": "Proof by contrapositive",
+  "card": [
+   "A statement \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
+   "A statement and its contrapositive are logically equivalent: both are true or both are false. The converse (swap only) and the inverse (negate only) are not equivalent to the original.",
+   "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for n.",
+   "Example: prove that if n² is even, then the integer n is even. Knowing n² is even tells you little about n, so prove the contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd, so the original is true."
+  ],
+  "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
+  "a": {
+   "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+   "opts": [
+    "If x is not even, then x is not a multiple of 6",
+    "If x is even, then x is a multiple of 6",
+    "If x is not a multiple of 6, then x is not even",
+    "If x is not a multiple of 6, then x is even"
+   ],
+   "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
+   "clue": "Swap the parts, then negate both."
+  },
+  "b": {
+   "d": 3,
+   "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+   "opts": [
+    "If n is even, then n² is even",
+    "If n is odd, then n² is odd",
+    "If n² is even, then n is even",
+    "If n² is odd, then n is even"
+   ],
+   "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive, if not Q then not P, is: if n is even, then n² is even. The option \"if n² is even, then n is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
+   "clue": "Not odd means even. Put not Q first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "If x is not even, then x is not a multiple of 6",
+    "also_right": []
+   },
+   "b": {
+    "best": "If n is even, then n² is even",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says to use contrapositive when Q is a negative claim, giving 'n is odd' as an example of a negative claim. Calling 'odd' a negative claim is confusing. The worked example also does not fit the advice: there Q is 'n is even', which is not negative, and the real reason the method helps is that P ('n² is even') is hard to use directly."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) calls 'if n² is even, then n is even' 'the converse of the negated parts in the wrong order'. That is muddled. This statement is the inverse (if not P then not Q), and the why should name it as such."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says to use contrapositive when Q is a negative claim, giving 'n is odd' as an example of a negative claim. Calling 'odd' a negative claim is confusing. The worked example also does not fit the advice: there Q is 'n is even', which is not negative, and the real reason the method helps is that P ('n² is even') is hard to use directly.",
+   "Question b, other: Why (b) calls 'if n² is even, then n is even' 'the converse of the negated parts in the wrong order'. That is muddled. This statement is the inverse (if not P then not Q), and the why should name it as such."
+  ]
+ },
+ "final": {
+  "title": "Proof by contrapositive",
+  "card": [
+   "A statement \"if P then Q\" has a contrapositive: \"if not Q then not P\". Swap the two parts, then negate both.",
+   "A statement and its contrapositive are logically equivalent: both are true or both are false. The converse (swap only) and the inverse (negate only) are not equivalent to the original.",
+   "Use this method when P is hard to use directly, but not Q gives you something concrete to work with, such as a formula for n.",
+   "Example: prove that if n² is even, then the integer n is even. Knowing n² is even tells you little about n, so prove the contrapositive: if n is odd, then n² is odd. Let n = 2k + 1. Then n² = 4k² + 4k + 1 = 2(2k² + 2k) + 1, which is odd, so the original is true."
+  ],
+  "remember": "To prove if P then Q, prove if not Q then not P. The two are equivalent.",
+  "a": {
+   "q": "What is the contrapositive of \"if x is a multiple of 6, then x is even\"?",
+   "opts": [
+    "If x is not even, then x is not a multiple of 6",
+    "If x is even, then x is a multiple of 6",
+    "If x is not a multiple of 6, then x is not even",
+    "If x is not a multiple of 6, then x is even"
+   ],
+   "why": "Swap the two parts and negate both: not even comes first, and not a multiple of 6 follows. The option that only swaps the parts is the converse, which is a different statement and need not be true.",
+   "clue": "Swap the parts, then negate both."
+  },
+  "b": {
+   "d": 3,
+   "q": "To prove \"if n² is odd, then n is odd\" by contrapositive, which statement should be proved?",
+   "opts": [
+    "If n is even, then n² is even",
+    "If n is odd, then n² is odd",
+    "If n² is even, then n is even",
+    "If n² is odd, then n is even"
+   ],
+   "why": "P is \"n² is odd\" and Q is \"n is odd\". The contrapositive, if not Q then not P, is: if n is even, then n² is even. The option \"if n² is even, then n is even\" is the inverse (if not P then not Q), which is not equivalent to the original.",
+   "clue": "Not odd means even. Put not Q first."
+  }
+ },
+ "cleared_by": "recheck"
+}

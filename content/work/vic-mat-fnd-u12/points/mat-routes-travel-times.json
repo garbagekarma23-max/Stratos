@@ -1,0 +1,188 @@
+{
+ "id": "mat-routes-travel-times",
+ "title": "Routes and travel times",
+ "brief": "ad44110bd698",
+ "shortlist": [
+  [
+   "mat-shortest-paths",
+   0.304
+  ],
+  [
+   "mat-speed-distance-time",
+   0.244
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:32Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00718,
+  "check": 0.00908,
+  "fix": 0.01385
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point teaches planning a route with maps or apps and estimating trip time from distance and speed: the shortest-paths point is about weighted networks, and the speed-distance-time point is Year 12 depth built around distance-time graphs, so matching it would mean a change of depth rather than a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Routes and travel times",
+  "card": [
+   "A map or app gives the distance of each route. Speed is how far you travel in one hour, such as 60 km/h.",
+   "Time = distance ÷ speed. The answer is in hours when distance is in km and speed is in km/h.",
+   "To turn hours into minutes, multiply by 60. So 0.5 hours is 30 minutes, and 0.25 hours is 15 minutes.",
+   "Example: 90 km at 60 km/h takes 90 ÷ 60 = 1.5 hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
+  ],
+  "remember": "Time = distance ÷ speed, then change hours to minutes if needed.",
+  "a": {
+   "q": "Noah drives 120 km at an average speed of 80 km/h. How long does the trip take?",
+   "opts": [
+    "1 hour 30 minutes",
+    "1 hour 20 minutes",
+    "1 hour 50 minutes",
+    "1 hour 5 minutes"
+   ],
+   "why": "120 ÷ 80 = 1.5 hours, which is 1 hour 30 minutes. 1 hour 20 minutes is tempting, but it reads 0.5 hours as 20 minutes instead of 30.",
+   "clue": "Divide distance by speed, then change 0.5 hours to minutes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cycles 18 km at 24 km/h, stops for a 10 minute break, then cycles 6 km at 12 km/h. How long is the whole trip?",
+   "opts": [
+    "1 hour 25 minutes",
+    "1 hour 15 minutes",
+    "1 hour 10 minutes",
+    "1 hour 35 minutes"
+   ],
+   "why": "The first part takes 18 ÷ 24 = 0.75 hours, or 45 minutes. The second takes 6 ÷ 12 = 0.5 hours, or 30 minutes. 45 + 10 + 30 = 85 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
+   "clue": "Work out each ride separately, then add the break."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1 hour 30 minutes",
+   "also_right": []
+  },
+  "b": {
+   "best": "1 hour 25 minutes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says 'change 0.5 hours to minutes', which tells the student that the division gives 1.5 hours. It does the main working for them and gives the answer away. The clue should only say 'Divide distance by speed, then change any part of an hour to minutes.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out: 1 hour 30 minutes for (a) and 1 hour 25 minutes for (b). The only problem is the clue for question a, which reveals the 0.5 hours and so gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue says 'change 0.5 hours to minutes', which tells the student that the division gives 1.5 hours. It does the main working for them and gives the answer away. The clue should only say 'Divide distance by speed, then change any part of an hour to minutes.'"
+ ],
+ "proposal": {
+  "title": "Routes and travel times",
+  "card": [
+   "A map or app gives the distance of each route. Speed is how far you travel in one hour, such as 60 km/h.",
+   "Time = distance ÷ speed. The answer is in hours when distance is in km and speed is in km/h.",
+   "To turn hours into minutes, multiply by 60. So 0.5 hours is 30 minutes, and 0.25 hours is 15 minutes.",
+   "Example: 90 km at 60 km/h takes 90 ÷ 60 = 1.5 hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
+  ],
+  "remember": "Time = distance ÷ speed, then change hours to minutes if needed.",
+  "a": {
+   "q": "Noah drives 120 km at an average speed of 80 km/h. How long does the trip take?",
+   "opts": [
+    "1 hour 30 minutes",
+    "1 hour 20 minutes",
+    "1 hour 50 minutes",
+    "1 hour 5 minutes"
+   ],
+   "why": "120 ÷ 80 = 1.5 hours, which is 1 hour 30 minutes. 1 hour 50 minutes is tempting, but it reads the .5 as 50 minutes instead of 0.5 × 60 = 30 minutes.",
+   "clue": "Divide distance by speed, then change any part of an hour to minutes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cycles 18 km at 24 km/h, stops for a 10 minute break, then cycles 6 km at 12 km/h. How long is the whole trip?",
+   "opts": [
+    "1 hour 25 minutes",
+    "1 hour 15 minutes",
+    "1 hour 10 minutes",
+    "1 hour 35 minutes"
+   ],
+   "why": "The first part takes 18 ÷ 24 = 0.75 hours, or 45 minutes. The second takes 6 ÷ 12 = 0.5 hours, or 30 minutes. 45 + 10 + 30 = 85 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
+   "clue": "Work out each ride separately, then add the break."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says 'change 0.5 hours to minutes', which tells the student that the division gives 1.5 hours. It does the main working for them and gives the answer away. The clue should only say 'Divide distance by speed, then change any part of an hour to minutes.'"
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue says 'change 0.5 hours to minutes', which tells the student that the division gives 1.5 hours. It does the main working for them and gives the answer away. The clue should only say 'Divide distance by speed, then change any part of an hour to minutes.'"
+  ]
+ },
+ "final": {
+  "title": "Routes and travel times",
+  "card": [
+   "A map or app gives the distance of each route. Speed is how far you travel in one hour, such as 60 km/h.",
+   "Time = distance ÷ speed. The answer is in hours when distance is in km and speed is in km/h.",
+   "To turn hours into minutes, multiply by 60. So 0.5 hours is 30 minutes, and 0.25 hours is 15 minutes.",
+   "Example: 90 km at 60 km/h takes 90 ÷ 60 = 1.5 hours, which is 1 hour 30 minutes. Real trips can take longer because of traffic and stops."
+  ],
+  "remember": "Time = distance ÷ speed, then change hours to minutes if needed.",
+  "a": {
+   "q": "Noah drives 120 km at an average speed of 80 km/h. How long does the trip take?",
+   "opts": [
+    "1 hour 30 minutes",
+    "1 hour 20 minutes",
+    "1 hour 50 minutes",
+    "1 hour 5 minutes"
+   ],
+   "why": "120 ÷ 80 = 1.5 hours, which is 1 hour 30 minutes. 1 hour 50 minutes is tempting, but it reads the .5 as 50 minutes instead of 0.5 × 60 = 30 minutes.",
+   "clue": "Divide distance by speed, then change any part of an hour to minutes."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya cycles 18 km at 24 km/h, stops for a 10 minute break, then cycles 6 km at 12 km/h. How long is the whole trip?",
+   "opts": [
+    "1 hour 25 minutes",
+    "1 hour 15 minutes",
+    "1 hour 10 minutes",
+    "1 hour 35 minutes"
+   ],
+   "why": "The first part takes 18 ÷ 24 = 0.75 hours, or 45 minutes. The second takes 6 ÷ 12 = 0.5 hours, or 30 minutes. 45 + 10 + 30 = 85 minutes. Leaving out the break gives 1 hour 15 minutes, which is wrong.",
+   "clue": "Work out each ride separately, then add the break."
+  }
+ },
+ "cleared_by": "auto"
+}

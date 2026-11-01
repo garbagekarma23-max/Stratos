@@ -1,0 +1,211 @@
+{
+ "id": "mat-adding-scaling-matrices",
+ "title": "Adding and scaling matrices",
+ "brief": "5f6178c6a808",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:34Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.00442,
+  "check": 0.01052,
+  "fix": 0.01604,
+  "recheck": 0.0083
+ },
+ "draft": {
+  "title": "Adding and scaling matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. Two matrices can be added only if they have the same order.",
+   [
+    "Adding",
+    "add the elements in the same position. For example, [2 5] + [3 −1] = [5 4]."
+   ],
+   [
+    "Scalar multiplication",
+    "a scalar is an ordinary number. To multiply a matrix by it, multiply every element. For example, 3 × [2 −4] = [6 −12]."
+   ],
+   "Subtracting works the same way as adding. Take away the element in the same position, and watch the signs."
+  ],
+  "remember": "Add matching positions. A scalar multiplies every element.",
+  "a": {
+   "q": "What is 2 × [3 −5] + [1 4]?",
+   "opts": [
+    "[7 −6]",
+    "[4 −1]",
+    "[7 −1]",
+    "[7 −14]"
+   ],
+   "why": "First, 2 × [3 −5] = [6 −10]. Then add [1 4] to get [7 −6]. Multiplying only the first element by 2 would give [7 −1], but a scalar multiplies every element.",
+   "clue": "Scale first, then add matching positions."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café sells these items on two days. Monday: 12 coffees, 8 muffins. Tuesday: 15 coffees, 6 muffins. She expects next week's sales to be 3 times the total of these two days. How many muffins does she expect?",
+   "opts": [
+    "42",
+    "14",
+    "24",
+    "18"
+   ],
+   "why": "Total muffins over the two days is 8 + 6 = 14. Multiplying by 3 gives 42. The answer 14 stops before the scalar step.",
+   "clue": "Add the two days first, then multiply the muffin total."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "[7 −6]",
+   "also_right": []
+  },
+  "b": {
+   "best": "42",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question does not set out any matrix, so students can answer with plain arithmetic (8 + 6 = 14, then × 3) and it does not test matrix addition or scaling. Its sales-by-day setting also leans into point 5 (Matrices in context). Showing the two days as row matrices, such as [12 8] + [15 6], would tie it to this point."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: [7 −6] for a and 42 for b, and the explanations are correct. Question b can be solved without matrices and overlaps with the 'Matrices in context' point, so it should present the data as matrices."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The question does not set out any matrix, so students can answer with plain arithmetic (8 + 6 = 14, then × 3) and it does not test matrix addition or scaling. Its sales-by-day setting also leans into point 5 (Matrices in context). Showing the two days as row matrices, such as [12 8] + [15 6], would tie it to this point."
+ ],
+ "proposal": {
+  "title": "Adding and scaling matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. Two matrices can be added only if they have the same order.",
+   [
+    "Adding",
+    "add the elements in the same position. For example, [2 5] + [3 −1] = [5 4]."
+   ],
+   [
+    "Scalar multiplication",
+    "a scalar is an ordinary number. To multiply a matrix by it, multiply every element. For example, 3 × [2 −4] = [6 −12]."
+   ],
+   "Subtracting works the same way as adding. Take away the element in the same position, and watch the signs."
+  ],
+  "remember": "Add matching positions. A scalar multiplies every element.",
+  "a": {
+   "q": "What is 2 × [3 −5] + [1 4]?",
+   "opts": [
+    "[7 −6]",
+    "[4 −1]",
+    "[7 −1]",
+    "[7 −14]"
+   ],
+   "why": "First, 2 × [3 −5] = [6 −10]. Then add [1 4] to get [7 −6]. Multiplying only the first element by 2 would give [7 −1], but a scalar multiplies every element.",
+   "clue": "Scale first, then add matching positions."
+  },
+  "b": {
+   "d": 3,
+   "q": "A = [5 −3] and B = [2 4]. What is 2 × (A − B)?",
+   "opts": [
+    "[6 −14]",
+    "[8 −10]",
+    "[6 2]",
+    "[6 −7]"
+   ],
+   "why": "A − B = [5 − 2 −3 − 4] = [3 −7], and 2 × [3 −7] = [6 −14]. The answer [8 −10] comes from 2A − B, which doubles A but not B. The scalar multiplies the whole bracket.",
+   "clue": "Work out the bracket first, and watch the sign of −3 − 4."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "[7 −6]",
+    "also_right": []
+   },
+   "b": {
+    "best": "[6 −14]",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The question does not set out any matrix, so students can answer with plain arithmetic (8 + 6 = 14, then × 3) and it does not test matrix addition or scaling. Its sales-by-day setting also leans into point 5 (Matrices in context). Showing the two days as row matrices, such as [12 8] + [15 6], would tie it to this point."
+   }
+  ],
+  "flags": [
+   "Question b, other: The question does not set out any matrix, so students can answer with plain arithmetic (8 + 6 = 14, then × 3) and it does not test matrix addition or scaling. Its sales-by-day setting also leans into point 5 (Matrices in context). Showing the two days as row matrices, such as [12 8] + [15 6], would tie it to this point."
+  ]
+ },
+ "final": {
+  "title": "Adding and scaling matrices",
+  "card": [
+   "The order of a matrix is its number of rows × its number of columns. Two matrices can be added only if they have the same order.",
+   [
+    "Adding",
+    "add the elements in the same position. For example, [2 5] + [3 −1] = [5 4]."
+   ],
+   [
+    "Scalar multiplication",
+    "a scalar is an ordinary number. To multiply a matrix by it, multiply every element. For example, 3 × [2 −4] = [6 −12]."
+   ],
+   "Subtracting works the same way as adding. Take away the element in the same position, and watch the signs."
+  ],
+  "remember": "Add matching positions. A scalar multiplies every element.",
+  "a": {
+   "q": "What is 2 × [3 −5] + [1 4]?",
+   "opts": [
+    "[7 −6]",
+    "[4 −1]",
+    "[7 −1]",
+    "[7 −14]"
+   ],
+   "why": "First, 2 × [3 −5] = [6 −10]. Then add [1 4] to get [7 −6]. Multiplying only the first element by 2 would give [7 −1], but a scalar multiplies every element.",
+   "clue": "Scale first, then add matching positions."
+  },
+  "b": {
+   "d": 3,
+   "q": "A = [5 −3] and B = [2 4]. What is 2 × (A − B)?",
+   "opts": [
+    "[6 −14]",
+    "[8 −10]",
+    "[6 2]",
+    "[6 −7]"
+   ],
+   "why": "A − B = [5 − 2 −3 − 4] = [3 −7], and 2 × [3 −7] = [6 −14]. The answer [8 −10] comes from 2A − B, which doubles A but not B. The scalar multiplies the whole bracket.",
+   "clue": "Work out the bracket first, and watch the sign of −3 − 4."
+  }
+ },
+ "cleared_by": "recheck"
+}

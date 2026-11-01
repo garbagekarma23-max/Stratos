@@ -1,0 +1,227 @@
+{
+ "id": "mat-comparing-distributions",
+ "title": "Comparing distributions",
+ "brief": "282df2102190",
+ "shortlist": [
+  [
+   "mat-features-normal-distribution",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.01078,
+  "check": 0.01133,
+  "fix": 0.03347,
+  "recheck": 0.00912
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the shape and features of a single normal distribution, not comparing centre and spread across groups with back-to-back stem plots or parallel boxplots, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Comparing distributions",
+  "card": [
+   "To compare groups, look at the same variable in each group. Back-to-back stem plots share one stem. Parallel boxplots sit on one scale, one above the other.",
+   [
+    "Centre",
+    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+   ],
+   [
+    "Spread",
+    "Compare the IQRs (Q3 − Q1) or the ranges. A larger IQR means a wider spread. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+   ],
+   "Write the comparison in context, using both centre and spread. Example: A's typical score is higher and more consistent than B's."
+  ],
+  "remember": "Compare medians for centre and IQRs for spread, in context.",
+  "a": {
+   "q": "Parallel boxplots show test scores. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+   "opts": [
+    "Same centre, but Q's scores are more spread out",
+    "Same centre, but P's scores are more spread out",
+    "Q has a higher centre and a wider spread",
+    "P has a higher centre and a narrower spread"
+   ],
+   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+   "clue": "Compare the medians first, then the IQRs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily sales (in dollars) at two Geelong cafés are shown in parallel boxplots. Café X: min 200, Q1 300, median 360, Q3 420, max 520. Café Y: min 150, Q1 280, median 400, Q3 480, max 600. Which comparison is correct?",
+   "opts": [
+    "Y has the higher median and the larger IQR",
+    "Y has the higher median and the smaller IQR",
+    "X has the higher median and the smaller IQR",
+    "X has the higher median and the larger IQR"
+   ],
+   "why": "Y's median is 400 and X's is 360, so Y is higher. The IQR for X is 420 − 300 = 120 and for Y is 480 − 280 = 200, so Y's is larger. The ranges are 320 and 450, so they agree.",
+   "clue": "Work out Q3 − Q1 for each café."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Same centre, but Q's scores are more spread out",
+   "also_right": []
+  },
+  "b": {
+   "best": "Y has the higher median and the larger IQR",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card gives the IQR formula '(Q3 − Q1)', which belongs to point 5 (Range, IQR and standard deviation). Here the IQR should only be mentioned, not defined."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer, and the facts and calculations check out. The only minor issue is that the card restates the IQR formula, which belongs to point 5."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card gives the IQR formula '(Q3 − Q1)', which belongs to point 5 (Range, IQR and standard deviation). Here the IQR should only be mentioned, not defined."
+ ],
+ "proposal": {
+  "title": "Comparing distributions",
+  "card": [
+   "To compare groups, look at the same variable in each group. Back-to-back stem plots share one stem. Parallel boxplots sit on one scale, one above the other.",
+   [
+    "Centre",
+    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+   ],
+   [
+    "Spread",
+    "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+   ],
+   "Write the comparison in context, using both centre and spread. Take care with the range, as one extreme value can stretch it."
+  ],
+  "remember": "Compare medians for centre and IQRs for spread, in context.",
+  "a": {
+   "q": "Parallel boxplots show test scores. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+   "opts": [
+    "Same centre, but Q's scores are more spread out",
+    "Same centre, but P's scores are more spread out",
+    "Q has a higher centre and a wider spread",
+    "P has a higher centre and a narrower spread"
+   ],
+   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+   "clue": "Compare the medians first, then the IQRs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel boxplots show daily sales (in dollars) at two Geelong cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
+   "opts": [
+    "X is centred higher, and Y is more spread out",
+    "X is centred higher, and X is more spread out",
+    "Y is centred higher, and Y is more spread out",
+    "Y is centred higher, and X is more spread out"
+   ],
+   "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
+   "clue": "Ignore the ranges and compare the IQRs."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Same centre, but Q's scores are more spread out",
+    "also_right": []
+   },
+   "b": {
+    "best": "X is centred higher, and Y is more spread out",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card gives the IQR formula '(Q3 − Q1)', which belongs to point 5 (Range, IQR and standard deviation). Here the IQR should only be mentioned, not defined."
+   }
+  ],
+  "flags": [
+   "Card, other: The card gives the IQR formula '(Q3 − Q1)', which belongs to point 5 (Range, IQR and standard deviation). Here the IQR should only be mentioned, not defined."
+  ]
+ },
+ "final": {
+  "title": "Comparing distributions",
+  "card": [
+   "To compare groups, look at the same variable in each group. Back-to-back stem plots share one stem. Parallel boxplots sit on one scale, one above the other.",
+   [
+    "Centre",
+    "Compare the medians. Example: group A has median 62 and group B has median 55. Group A is centred 7 higher."
+   ],
+   [
+    "Spread",
+    "Compare the IQRs. A larger IQR means the middle half of the data is more spread out. Example: A has IQR 10 and B has IQR 18, so B is more spread out."
+   ],
+   "Write the comparison in context, using both centre and spread. Take care with the range, as one extreme value can stretch it."
+  ],
+  "remember": "Compare medians for centre and IQRs for spread, in context.",
+  "a": {
+   "q": "Parallel boxplots show test scores. Class P has median 70 and IQR 8. Class Q has median 70 and IQR 20. What is the best comparison?",
+   "opts": [
+    "Same centre, but Q's scores are more spread out",
+    "Same centre, but P's scores are more spread out",
+    "Q has a higher centre and a wider spread",
+    "P has a higher centre and a narrower spread"
+   ],
+   "why": "Both medians are 70, so the centres are the same. Q's IQR of 20 is larger than P's IQR of 8, so Q is more spread out. Saying P is more spread out reverses what a larger IQR means.",
+   "clue": "Compare the medians first, then the IQRs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel boxplots show daily sales (in dollars) at two Geelong cafés. Café X: median 400, IQR 120, range 500. Café Y: median 360, IQR 200, range 380. Using medians and IQRs, which comparison is correct?",
+   "opts": [
+    "X is centred higher, and Y is more spread out",
+    "X is centred higher, and X is more spread out",
+    "Y is centred higher, and Y is more spread out",
+    "Y is centred higher, and X is more spread out"
+   ],
+   "why": "X's median of 400 is higher than Y's 360, so X is centred higher. Y's IQR of 200 is larger than X's 120, so Y's middle half is more spread out. X's larger range is tempting, but one extreme day can stretch the range.",
+   "clue": "Ignore the ranges and compare the IQRs."
+  }
+ },
+ "cleared_by": "recheck"
+}

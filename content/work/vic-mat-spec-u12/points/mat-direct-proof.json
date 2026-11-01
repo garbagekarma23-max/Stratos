@@ -1,0 +1,289 @@
+{
+ "id": "mat-direct-proof",
+ "title": "Direct proof",
+ "brief": "be8554ad5c1a",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, write",
+  "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:14:08Z write: failed the content check, writing again",
+  "2026-11-01T08:24:34Z write: done (still fails the content check)",
+  "2026-11-01T08:33:52Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b other)",
+  "2026-11-01T13:41:59Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.02352,
+  "check": 0.02164,
+  "fix": 0.02841,
+  "recheck": 0.01048
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'Write the answer in the form 2k + 1 for an integer k' gives the answer away. Only one option is written in the form 2(…) + 1, so a student can match the pattern without doing the algebra.",
+ "rejected": {
+  "title": "Direct proof",
+  "card": [
+   "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+   "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+   "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+   "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+  ],
+  "remember": "Use letters for any case, then reason step by step to the result.",
+  "a": {
+   "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+   "opts": [
+    "The letters can be any integers, so every pair is covered",
+    "The letters make the working shorter than checking numbers",
+    "Testing a number such as 4 + 6 always gives a wrong answer",
+    "Two letters are enough to cover every possible number"
+   ],
+   "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+   "clue": "Think about how many cases the letters cover."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+   "opts": [
+    "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n + 1), which is even",
+    "2m + 2n + 1 = 4mn + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n), which is even"
+   ],
+   "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this has the form 2k + 1, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+   "clue": "Write the answer in the form 2k + 1 for an integer k."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue 'Write the answer in the form 2k + 1 for an integer k' gives the answer away. Only one option is written in the form 2(…) + 1, so a student can match the pattern without doing the algebra."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Direct proof",
+     "card": [
+      "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+      "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+      "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+      "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+     ],
+     "remember": "Use letters for any case, then reason step by step to the result.",
+     "a": {
+      "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+      "opts": [
+       "The letters m and n can be any integers, so all pairs are covered",
+       "The letters make the working shorter than checking numbers",
+       "Testing a number such as 4 + 6 always gives a wrong answer",
+       "Two letters are enough to cover every possible number"
+      ],
+      "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+      "clue": "Think about how many cases the letters cover."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+      "opts": [
+       "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+       "2m + 2n + 1 = 2(m + n + 1), which is even",
+       "2m + 2n + 1 = 4mn + 1, which is odd",
+       "2m + 2n + 1 = 2(m + n), which is even"
+      ],
+      "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this has the form 2k + 1, so it is odd. The option 2(m + n + 1) would need the 1 inside the bracket, which would make the total 2 more than the sum.",
+      "clue": "Write the answer in the form 2k + 1 for an integer k."
+     }
+    },
+    "redone": true,
+    "local": [
+     "mat-direct-proofa option is 65 characters: The letters m and n can be any integers, so all pairs are covered"
+    ],
+    "check": {
+     "a": {
+      "best": "The letters m and n can be any integers, so all pairs are covered",
+      "also_right": []
+     },
+     "b": {
+      "best": "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 2(m + n + 1) would make the total 2 more than the sum. In fact 2(m + n + 1) = 2m + 2n + 2, which is 1 more than 2m + 2n + 1, not 2 more."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are sound. The explanation for (b) wrongly says 2(m + n + 1) is 2 more than the sum, when it is only 1 more."
+    },
+    "flags": [
+     "Question b, fact: The why says 2(m + n + 1) would make the total 2 more than the sum. In fact 2(m + n + 1) = 2m + 2n + 2, which is 1 more than 2m + 2n + 1, not 2 more.",
+     "Content check: mat-direct-proofa option is 65 characters: The letters m and n can be any integers, so all pairs are covered"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Direct proof",
+     "card": [
+      "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+      "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+      "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+      "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+     ],
+     "remember": "Use letters for any case, then reason step by step to the result.",
+     "a": {
+      "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+      "opts": [
+       "The letters can be any integers, so every pair is covered",
+       "The letters make the working shorter than checking numbers",
+       "Testing a number such as 4 + 6 always gives a wrong answer",
+       "Two letters are enough to cover every possible number"
+      ],
+      "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+      "clue": "Think about how many cases the letters cover."
+     },
+     "b": {
+      "d": 3,
+      "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+      "opts": [
+       "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+       "2m + 2n + 1 = 2(m + n + 1), which is even",
+       "2m + 2n + 1 = 4mn + 1, which is odd",
+       "2m + 2n + 1 = 2(m + n), which is even"
+      ],
+      "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this has the form 2k + 1, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+      "clue": "Write the answer in the form 2k + 1 for an integer k."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The letters can be any integers, so every pair is covered",
+       "also_right": []
+      },
+      "b": {
+       "best": "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Write the answer in the form 2k + 1 for an integer k' gives the answer away. Only one option is written in the form 2(…) + 1, so a student can match the pattern without doing the algebra."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, the questions and the explanations are correct. Question b's clue names the exact form of the right answer, and only one option has that form, so the clue gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue 'Write the answer in the form 2k + 1 for an integer k' gives the answer away. Only one option is written in the form 2(…) + 1, so a student can match the pattern without doing the algebra."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Direct proof",
+  "card": [
+   "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+   "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+   "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+   "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+  ],
+  "remember": "Use letters for any case, then reason step by step to the result.",
+  "a": {
+   "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+   "opts": [
+    "The letters can be any integers, so every pair is covered",
+    "The letters make the working shorter than checking numbers",
+    "Testing a number such as 4 + 6 always gives a wrong answer",
+    "Two letters are enough to cover every possible number"
+   ],
+   "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+   "clue": "Think about how many cases the letters cover."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+   "opts": [
+    "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n + 1), which is even",
+    "2m + 2n + 1 = 4mn + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n), which is even"
+   ],
+   "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this is one more than a multiple of 2, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+   "clue": "Take a common factor out of the terms that have a 2, then check each line expands back to the sum."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The letters can be any integers, so every pair is covered",
+   "also_right": []
+  },
+  "b": {
+   "best": "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Direct proof",
+  "card": [
+   "A direct proof starts from what is known and reasons step by step to the result. Every step must follow from the one before. Checking a few cases is not a proof.",
+   "To prove something about all even numbers, write them with a letter. An even number is 2k, where k is any integer. An odd number is 2k + 1.",
+   "Example: prove that the sum of two even numbers is even. Let the numbers be 2m and 2n, where m and n are integers. Their sum is 2m + 2n = 2(m + n).",
+   "Since m + n is an integer, 2(m + n) is a multiple of 2, so it is even. The letters stand for any integers, so this works for every pair of even numbers."
+  ],
+  "remember": "Use letters for any case, then reason step by step to the result.",
+  "a": {
+   "q": "Why does writing two even numbers as 2m and 2n give a proof, when testing 4 + 6 does not?",
+   "opts": [
+    "The letters can be any integers, so every pair is covered",
+    "The letters make the working shorter than checking numbers",
+    "Testing a number such as 4 + 6 always gives a wrong answer",
+    "Two letters are enough to cover every possible number"
+   ],
+   "why": "Because m and n can be any integers, the argument covers every pair of even numbers at once. Testing 4 + 6 gives a correct result, but it only covers one pair.",
+   "clue": "Think about how many cases the letters cover."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which line completes a direct proof that the sum of an even number 2m and an odd number 2n + 1 is odd?",
+   "opts": [
+    "2m + 2n + 1 = 2(m + n) + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n + 1), which is even",
+    "2m + 2n + 1 = 4mn + 1, which is odd",
+    "2m + 2n + 1 = 2(m + n), which is even"
+   ],
+   "why": "Taking out a factor of 2 from 2m + 2n leaves 2(m + n) + 1. Since m + n is an integer, this is one more than a multiple of 2, so it is odd. The option 2(m + n + 1) is false: it expands to 2m + 2n + 2, which is 1 more than the sum.",
+   "clue": "Take a common factor out of the terms that have a 2, then check each line expands back to the sum."
+  }
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "id": "mat-inverse-functions",
+ "title": "Inverse functions",
+ "brief": "388bd8b9d3d6",
+ "shortlist": [
+  [
+   "mat-functions-relations",
+   0.383
+  ],
+  [
+   "mat-function-notation",
+   0.258
+  ],
+  [
+   "mat-where-function-not-differentiable",
+   0.253
+  ],
+  [
+   "mat-absolute-value-functions",
+   0.247
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.247
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00554,
+  "check": 0.01334,
+  "fix": 0.0287
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches inverse functions: the closest matches cover relations, function notation, differentiability and logarithms, which are related but not the same idea as reversing a function by swapping x and y.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Inverse functions",
+  "card": [
+   "The inverse of f, written f⁻¹, reverses f. If f takes 2 to 7, then f⁻¹ takes 7 back to 2.",
+   "To find it, write y = f(x), swap x and y, then solve for y. Example: f(x) = 2x + 3. Write y = 2x + 3, swap to x = 2y + 3, so y = (x − 3)/2. This gives f⁻¹(x) = (x − 3)/2.",
+   "An inverse exists only if f is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So y = x² on all of R has no inverse, because 2 and −2 both give 4.",
+   "The graph of f⁻¹ is the graph of f reflected in the line y = x. The domain of f⁻¹ is the range of f, and the range of f⁻¹ is the domain of f."
+  ],
+  "remember": "Swap x and y to reverse a function. Only a one-to-one function has an inverse.",
+  "a": {
+   "q": "What is the inverse of f(x) = 3x − 6?",
+   "opts": [
+    "f⁻¹(x) = (x + 6)/3",
+    "f⁻¹(x) = (x − 6)/3",
+    "f⁻¹(x) = x/3 + 6",
+    "f⁻¹(x) = 3x + 6"
+   ],
+   "why": "Swap to x = 3y − 6, so 3y = x + 6 and y = (x + 6)/3. Check: f(3) = 3, and f⁻¹(3) = 3 gives back 3. The option (x − 6)/3 has a sign error when moving the 6 across.",
+   "clue": "Swap x and y first, then undo the subtraction before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function has an inverse that is also a function, with its rule defined on the whole domain given?",
+   "opts": [
+    "f(x) = 2x + 1, for x in R",
+    "f(x) = x², for x in R",
+    "f(x) = |x|, for x in R",
+    "f(x) = 4 − x², for x in R"
+   ],
+   "why": "Only f(x) = 2x + 1 is one-to-one, so any horizontal line cuts it once. The other three each give the same output for x and −x, so a horizontal line cuts them twice. Having a rule that can be rearranged does not make a function one-to-one.",
+   "clue": "Does any output come from two different inputs, such as 2 and −2?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "f⁻¹(x) = (x + 6)/3",
+   "also_right": []
+  },
+  "b": {
+   "best": "f(x) = 2x + 1, for x in R",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'has an inverse that is also a function, with its rule defined on the whole domain given' is awkward and confusing. It also suggests an inverse might exist without being a function, which clashes with the card's statement that an inverse exists only when f is one-to-one. A simpler stem would be clearer: 'Which function, on the domain given, has an inverse function?'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: (x + 6)/3 for a and 2x + 1 for b. The only issue is that question b's stem is awkwardly worded and implies inverses can exist without being functions, which the card does not teach."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem 'has an inverse that is also a function, with its rule defined on the whole domain given' is awkward and confusing. It also suggests an inverse might exist without being a function, which clashes with the card's statement that an inverse exists only when f is one-to-one. A simpler stem would be clearer: 'Which function, on the domain given, has an inverse function?'"
+ ],
+ "proposal": {
+  "title": "Inverse functions",
+  "card": [
+   "The inverse of f, written f⁻¹, reverses f. If f takes 2 to 7, then f⁻¹ takes 7 back to 2.",
+   "To find it, write y = f(x), swap x and y, then solve for y. Example: f(x) = 2x + 3. Write y = 2x + 3, swap to x = 2y + 3, so y = (x − 3)/2. This gives f⁻¹(x) = (x − 3)/2.",
+   "An inverse exists only if f is one-to-one: each output comes from exactly one input. A horizontal line must cut the graph at most once. So y = x² on all of R has no inverse, because 2 and −2 both give 4.",
+   "The graph of f⁻¹ is the graph of f reflected in the line y = x. The domain of f⁻¹ is the range of f, and the range of f⁻¹ is the domain of f."
+  ],
+  "remember": "Swap x and y to reverse a function. Only a one-to-one function has an inverse.",
+  "a": {
+   "q": "What is the inverse of f(x) = 3x − 6?",
+   "opts": [
+    "f⁻¹(x) = (x + 6)/3",
+    "f⁻¹(x) = (x − 6)/3",
+    "f⁻¹(x) = x/3 + 6",
+    "f⁻¹(x) = 3x + 6"
+   ],
+   "why": "Swap to x = 3y − 6, so 3y = x + 6 and y = (x + 6)/3. Check: f(4) = 6, and f⁻¹(6) = 12/3 = 4 gives back 4. The option (x − 6)/3 has a sign error when moving the 6 across.",
+   "clue": "Swap x and y first, then undo the subtraction before the multiplication."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function, on the domain given, has an inverse function?",
+   "opts": [
+    "f(x) = 2x + 1, for x in R",
+    "f(x) = x², for x in R",
+    "f(x) = |x|, for x in R",
+    "f(x) = 4 − x², for x in R"
+   ],
+   "why": "Only f(x) = 2x + 1 is one-to-one, so any horizontal line cuts it once. The other three each give the same output for x and −x, such as 2 and −2, so a horizontal line can cut them twice. Having a rule that can be rearranged does not make a function one-to-one.",
+   "clue": "Does any output come from two different inputs, such as 2 and −2?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'has an inverse that is also a function, with its rule defined on the whole domain given' is awkward and confusing. It also suggests an inverse might exist without being a function, which clashes with the card's statement that an inverse exists only when f is one-to-one. A simpler stem would be clearer: 'Which function, on the domain given, has an inverse function?'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem 'has an inverse that is also a function, with its rule defined on the whole domain given' is awkward and confusing. It also suggests an inverse might exist without being a function, which clashes with the card's statement that an inverse exists only when f is one-to-one. A simpler stem would be clearer: 'Which function, on the domain given, has an inverse function?'"
+  ]
+ }
+}

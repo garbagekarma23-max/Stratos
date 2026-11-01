@@ -1,0 +1,166 @@
+{
+ "id": "phys-electromagnetic-spectrum-2",
+ "title": "The electromagnetic spectrum",
+ "brief": "2398563a4426",
+ "shortlist": [
+  [
+   "phys-electromagnetic-spectrum",
+   0.403
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:21Z new, match",
+  "2026-11-01T08:04:36Z match: Claude Haiku 5.5 may adapt phys-electromagnetic-spectrum, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:09Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:35Z write: failed the content check, writing again",
+  "2026-11-01T08:33:53Z write: done",
+  "2026-11-01T08:42:07Z check: flagged",
+  "2026-11-01T08:44:27Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "confirm": 0.00476,
+  "write": 0.01728,
+  "check": 0.01457,
+  "fix": 0.02732
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-electromagnetic-spectrum",
+  "changes": [
+   "Add a sentence that the Sun gives out mostly ultraviolet, visible and infrared radiation, which the bank card does not mention.",
+   "Check that the card's c = fλ relation and its wavelength-frequency depth suit the VCE Units 1 and 2 Light chapter, since the card was written for NSW Year 12."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same spectrum and the same speed-in-vacuum idea, and its questions are fair, but it needs the Sun-output fact added and its depth checked against the VCE syllabus.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the order of the spectrum and the common speed c, but it does not cover the new point's second idea, that the Sun gives out mostly ultraviolet, visible and infrared, and adding that idea would be more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "The electromagnetic spectrum",
+  "card": [
+   "The electromagnetic spectrum is the family of electromagnetic waves. In order of increasing frequency: radio, microwave, infrared, visible, ultraviolet, x-rays and gamma rays.",
+   "All of them travel at the same speed, c, in a vacuum. This is about 3.0 × 10^8 m/s.",
+   "Because the speed is fixed at c in a vacuum, a higher frequency means a shorter wavelength. Radio waves have the longest wavelengths and gamma rays the shortest.",
+   "The Sun gives out mostly ultraviolet, visible and infrared. The waves differ in frequency and wavelength, not in speed."
+  ],
+  "remember": "One speed in a vacuum, so higher frequency means shorter wavelength.",
+  "a": {
+   "q": "Which statement about radio waves and x-rays travelling through a vacuum is correct?",
+   "opts": [
+    "Same speed, and x-rays have the higher frequency",
+    "Same speed, and x-rays have the longer wavelength",
+    "X-rays travel faster because their frequency is higher",
+    "Radio waves travel faster because their wavelength is longer"
+   ],
+   "why": "All electromagnetic waves travel at c in a vacuum. Since v = fλ, the wave with the higher frequency has the shorter wavelength, so x-rays have the higher frequency. Frequency does not change the speed.",
+   "clue": "Speed is fixed, so what must happen to wavelength when frequency rises?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia compares infrared and ultraviolet waves from the Sun reaching Earth through space. Which comparison is correct?",
+   "opts": [
+    "Ultraviolet has the shorter wavelength, and both travel at c",
+    "Ultraviolet has the shorter wavelength and travels faster",
+    "Infrared has the shorter wavelength, and both travel at c",
+    "Infrared has the shorter wavelength and travels faster"
+   ],
+   "why": "Ultraviolet has a higher frequency than infrared, so with the same speed c its wavelength is shorter. The tempting idea that higher frequency means faster is wrong, because both travel at c in a vacuum.",
+   "clue": "Place both in the spectrum order, then recall that the speed is the same."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Same speed, and x-rays have the higher frequency",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ultraviolet has the shorter wavelength, and both travel at c",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why's reasoning runs backwards. It says the higher-frequency wave has the shorter wavelength, 'so x-rays have the higher frequency', but it never says x-rays have the shorter wavelength. The conclusion does not follow as written. It should say that x-rays are higher in frequency in the spectrum order, so their wavelength is shorter."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and each question has one clear answer. The only issue is that the explanation for question a reaches its conclusion with muddled logic, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The why's reasoning runs backwards. It says the higher-frequency wave has the shorter wavelength, 'so x-rays have the higher frequency', but it never says x-rays have the shorter wavelength. The conclusion does not follow as written. It should say that x-rays are higher in frequency in the spectrum order, so their wavelength is shorter."
+ ],
+ "proposal": {
+  "title": "The electromagnetic spectrum",
+  "card": [
+   "The electromagnetic spectrum is the family of electromagnetic waves. In order of increasing frequency: radio, microwave, infrared, visible, ultraviolet, x-rays and gamma rays.",
+   "All of them travel at the same speed, c, in a vacuum. This is about 3.0 × 10^8 m/s.",
+   "Because the speed is fixed at c in a vacuum, a higher frequency means a shorter wavelength. Radio waves have the longest wavelengths and gamma rays the shortest.",
+   "The Sun gives out mostly ultraviolet, visible and infrared. The waves differ in frequency and wavelength, not in speed."
+  ],
+  "remember": "One speed in a vacuum, so higher frequency means shorter wavelength.",
+  "a": {
+   "q": "Which statement about radio waves and x-rays travelling through a vacuum is correct?",
+   "opts": [
+    "Same speed, and x-rays have the higher frequency",
+    "Same speed, and x-rays have the longer wavelength",
+    "X-rays travel faster because their frequency is higher",
+    "Radio waves travel faster because their wavelength is longer"
+   ],
+   "why": "In the spectrum order, x-rays come well after radio waves, so x-rays have the higher frequency. All electromagnetic waves travel at c in a vacuum, so that higher frequency gives x-rays the shorter wavelength, not the longer one. Frequency does not change the speed.",
+   "clue": "Speed is fixed, so what must happen to wavelength when frequency rises?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia compares infrared and ultraviolet waves from the Sun reaching Earth through space. Which comparison is correct?",
+   "opts": [
+    "Ultraviolet has the shorter wavelength, and both travel at c",
+    "Ultraviolet has the shorter wavelength and travels faster",
+    "Infrared has the shorter wavelength, and both travel at c",
+    "Infrared has the shorter wavelength and travels faster"
+   ],
+   "why": "Ultraviolet has a higher frequency than infrared, so with the same speed c its wavelength is shorter. The tempting idea that higher frequency means faster is wrong, because both travel at c in a vacuum.",
+   "clue": "Place both in the spectrum order, then recall that the speed is the same."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why's reasoning runs backwards. It says the higher-frequency wave has the shorter wavelength, 'so x-rays have the higher frequency', but it never says x-rays have the shorter wavelength. The conclusion does not follow as written. It should say that x-rays are higher in frequency in the spectrum order, so their wavelength is shorter."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The why's reasoning runs backwards. It says the higher-frequency wave has the shorter wavelength, 'so x-rays have the higher frequency', but it never says x-rays have the shorter wavelength. The conclusion does not follow as written. It should say that x-rays are higher in frequency in the spectrum order, so their wavelength is shorter."
+  ]
+ }
+}

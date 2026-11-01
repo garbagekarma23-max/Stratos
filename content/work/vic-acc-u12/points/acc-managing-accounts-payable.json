@@ -1,0 +1,228 @@
+{
+ "id": "acc-managing-accounts-payable",
+ "title": "Managing accounts payable",
+ "brief": "8fd826da95f5",
+ "shortlist": [
+  [
+   "bus-working-capital-management",
+   0.291
+  ],
+  [
+   "eco-capital-financial-account",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:29Z write: failed the content check, writing again",
+  "2026-11-01T08:33:47Z write: done",
+  "2026-11-01T08:42:04Z check: flagged",
+  "2026-11-01T08:44:26Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (card other, card wording, b wording, a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01234,
+  "check": 0.01657,
+  "fix": 0.03003
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches managing accounts payable for paying suppliers within terms: one covers working capital in general and the other covers the balance of payments, so no bank point matches the new point's idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Managing accounts payable",
+  "card": [
+   "Accounts payable are amounts a business owes its suppliers for goods bought on credit. Each supplier sets credit terms, such as 'net 30', which means pay within 30 days of the invoice date.",
+   "Paying within the terms keeps a good credit record. Suppliers are then more willing to sell on credit again, and they may offer better terms.",
+   "Paying early is not always better. Cash paid out sooner is cash the business cannot use for other things, such as wages or rent, so it often pays on or just before the due date.",
+   "Paying late can damage the credit record, and the supplier may refuse further credit or ask for cash on delivery. The exception is a discount for early payment, which may be worth taking if it is large enough and the business has the cash."
+  ],
+  "remember": "Pay on time to protect credit, but not so early that cash is tied up for no gain.",
+  "a": {
+   "q": "Why does a trading business usually avoid paying a supplier invoice weeks before it is due?",
+   "opts": [
+    "It keeps cash available for other needs until the due date",
+    "It stops the supplier from sending any further invoices",
+    "It lowers the amount the supplier charges on the invoice",
+    "It gives a better credit record than paying on the due date"
+   ],
+   "why": "Cash paid out early cannot be used for wages, rent or other costs, and paying on the due date still keeps a good credit record. Paying early does not change the invoice amount or improve the record beyond paying on time.",
+   "clue": "Think about what else the cash could be used for in the meantime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat buys stock on terms of net 30. The invoice is dated 1 March, and Priya has the cash now but needs it for wages on 15 March. When is the best day to pay?",
+   "opts": [
+    "On or just before 31 March, within the terms",
+    "On 2 March, so the debt is cleared at once",
+    "On 15 March, to pay the wages and the supplier together",
+    "On 10 April, because suppliers rarely check due dates"
+   ],
+   "why": "Paying around 31 March keeps the good credit record and leaves the cash free for wages until then. Paying on 2 March ties up cash for no gain, and paying on 10 April is late and risks the supplier refusing credit.",
+   "clue": "Find the due date from the terms, then ask what the cash is needed for before then."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It keeps cash available for other needs until the due date",
+   "also_right": []
+  },
+  "b": {
+   "best": "On or just before 31 March, within the terms",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines accounts payable ('amounts a business owes its suppliers for goods bought on credit'), which is point 2's idea. Here it should only be mentioned, not explained again."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The early-payment discount is called 'the exception' but sits in the bullet about paying late. It is really an exception to 'paying early is not always better', so its placement could confuse students. The discount also belongs to point 3 and is explained here rather than only mentioned."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Priya needs her cash for wages on 15 March but does not say she will still have enough to pay the supplier by 31 March. That gap makes the intended reasoning slightly unclear."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says paying early 'does not change the invoice amount'. The card says a discount for early payment may be offered, so this flat statement partly contradicts the card. It should be qualified, for example 'unless a discount is offered'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: net 30 from 1 March is due 31 March. Minor issues: the card re-defines accounts payable from point 2, the discount 'exception' is misplaced, Question b's scenario has a small gap about the cash, and Why (a) overstates that early payment never changes the amount."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first bullet defines accounts payable ('amounts a business owes its suppliers for goods bought on credit'), which is point 2's idea. Here it should only be mentioned, not explained again.",
+  "Card, wording: The early-payment discount is called 'the exception' but sits in the bullet about paying late. It is really an exception to 'paying early is not always better', so its placement could confuse students. The discount also belongs to point 3 and is explained here rather than only mentioned.",
+  "Question b, wording: The stem says Priya needs her cash for wages on 15 March but does not say she will still have enough to pay the supplier by 31 March. That gap makes the intended reasoning slightly unclear.",
+  "Question a, other: Why (a) says paying early 'does not change the invoice amount'. The card says a discount for early payment may be offered, so this flat statement partly contradicts the card. It should be qualified, for example 'unless a discount is offered'."
+ ],
+ "proposal": {
+  "title": "Managing accounts payable",
+  "card": [
+   "Managing accounts payable means choosing when to pay each supplier. Suppliers set credit terms, such as 'net 30', which means pay within 30 days of the invoice date.",
+   "Paying within the terms keeps a good credit record. Suppliers are then more willing to sell on credit again, and they may offer better terms.",
+   "Paying early is not always better. Cash paid out sooner cannot be used for other things, such as wages or rent, so a business often pays on or just before the due date. This can change if a supplier offers a discount for paying early.",
+   "Paying late can damage the credit record. The supplier may then refuse further credit or ask for cash on delivery."
+  ],
+  "remember": "Pay within the terms to protect credit, but not so early that cash is tied up for no gain.",
+  "a": {
+   "q": "Why does a trading business usually avoid paying a supplier invoice weeks before it is due?",
+   "opts": [
+    "It keeps cash available for other needs until the due date",
+    "It stops the supplier from sending any further invoices",
+    "It lowers the amount the supplier charges on the invoice",
+    "It gives a better credit record than paying on the due date"
+   ],
+   "why": "Cash paid out early cannot be used for wages, rent or other costs, and paying on the due date still keeps a good credit record. Unless a discount is offered, paying early does not lower the amount owed, and it does not improve the record beyond paying on time.",
+   "clue": "Think about what else the cash could be used for in the meantime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat buys stock on terms of net 30, with no discount offered. The invoice is dated 1 March. Priya has the cash now but needs it for wages on 15 March, and her sales will cover the invoice by late March. When is the best day to pay?",
+   "opts": [
+    "On or just before 31 March, within the terms",
+    "On 2 March, so the debt is cleared at once",
+    "On 15 March, to pay the wages and the supplier together",
+    "On 10 April, because suppliers rarely check due dates"
+   ],
+   "why": "Paying around 31 March keeps the good credit record and leaves the cash free for wages, with sales covering the invoice by then. Paying on 2 March ties up cash for no gain, and paying on 10 April is late and risks the supplier refusing credit.",
+   "clue": "Find the due date from the terms, then ask what the cash is needed for before then."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet defines accounts payable ('amounts a business owes its suppliers for goods bought on credit'), which is point 2's idea. Here it should only be mentioned, not explained again."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The early-payment discount is called 'the exception' but sits in the bullet about paying late. It is really an exception to 'paying early is not always better', so its placement could confuse students. The discount also belongs to point 3 and is explained here rather than only mentioned."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says Priya needs her cash for wages on 15 March but does not say she will still have enough to pay the supplier by 31 March. That gap makes the intended reasoning slightly unclear."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says paying early 'does not change the invoice amount'. The card says a discount for early payment may be offered, so this flat statement partly contradicts the card. It should be qualified, for example 'unless a discount is offered'."
+   }
+  ],
+  "flags": [
+   "Card, other: The first bullet defines accounts payable ('amounts a business owes its suppliers for goods bought on credit'), which is point 2's idea. Here it should only be mentioned, not explained again.",
+   "Card, wording: The early-payment discount is called 'the exception' but sits in the bullet about paying late. It is really an exception to 'paying early is not always better', so its placement could confuse students. The discount also belongs to point 3 and is explained here rather than only mentioned.",
+   "Question b, wording: The stem says Priya needs her cash for wages on 15 March but does not say she will still have enough to pay the supplier by 31 March. That gap makes the intended reasoning slightly unclear.",
+   "Question a, other: Why (a) says paying early 'does not change the invoice amount'. The card says a discount for early payment may be offered, so this flat statement partly contradicts the card. It should be qualified, for example 'unless a discount is offered'."
+  ]
+ },
+ "final": {
+  "title": "Managing accounts payable",
+  "card": [
+   "Managing accounts payable means choosing when to pay each supplier. Suppliers set credit terms, such as 'net 30', which means pay within 30 days of the invoice date.",
+   "Paying within the terms keeps a good credit record. Suppliers are then more willing to sell on credit again, and they may offer better terms.",
+   "Paying early is not always better. Cash paid out sooner cannot be used for other things, such as wages or rent, so a business often pays on or just before the due date. This can change if a supplier offers a discount for paying early.",
+   "Paying late can damage the credit record. The supplier may then refuse further credit or ask for cash on delivery."
+  ],
+  "remember": "Pay within the terms to protect credit, but not so early that cash is tied up for no gain.",
+  "a": {
+   "q": "Why does a trading business usually avoid paying a supplier invoice weeks before it is due?",
+   "opts": [
+    "It keeps cash available for other needs until the due date",
+    "It stops the supplier from sending any further invoices",
+    "It lowers the amount the supplier charges on the invoice",
+    "It gives a better credit record than paying on the due date"
+   ],
+   "why": "Cash paid out early cannot be used for wages, rent or other costs, and paying on the due date still keeps a good credit record. Unless a discount is offered, paying early does not lower the amount owed, and it does not improve the record beyond paying on time.",
+   "clue": "Think about what else the cash could be used for in the meantime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat buys stock on terms of net 30, with no discount offered. The invoice is dated 1 March. Priya has the cash now but needs it for wages on 15 March, and her sales will cover the invoice by late March. When is the best day to pay?",
+   "opts": [
+    "On or just before 31 March, within the terms",
+    "On 2 March, so the debt is cleared at once",
+    "On 15 March, to pay the wages and the supplier together",
+    "On 10 April, because suppliers rarely check due dates"
+   ],
+   "why": "Paying around 31 March keeps the good credit record and leaves the cash free for wages, with sales covering the invoice by then. Paying on 2 March ties up cash for no gain, and paying on 10 April is late and risks the supplier refusing credit.",
+   "clue": "Find the due date from the terms, then ask what the cash is needed for before then."
+  }
+ },
+ "cleared_by": "auto"
+}

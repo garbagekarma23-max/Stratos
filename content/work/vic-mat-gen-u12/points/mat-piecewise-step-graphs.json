@@ -1,0 +1,211 @@
+{
+ "id": "mat-piecewise-step-graphs",
+ "title": "Piecewise and step graphs",
+ "brief": "0646f1368ef7",
+ "shortlist": [
+  [
+   "mat-graphs-logarithmic-functions",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:06Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:51Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00615,
+  "check": 0.00861,
+  "fix": 0.01504
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches logarithmic graphs, a different idea from piecewise and step graphs for modelling, so no bank point covers the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Piecewise and step graphs",
+  "card": [
+   [
+    "Piecewise graph",
+    "A piecewise graph is made of separate line segments, each with its own rule over its own range of x values. The rule changes at a set point."
+   ],
+   [
+    "Step graph",
+    "A step graph is made of horizontal segments with jumps between them. The value stays fixed over a range, then jumps to a new amount."
+   ],
+   [
+    "Open and closed dots",
+    "A closed dot means the end value is included. An open dot means it is not."
+   ],
+   "Example: a car park charges $5 for up to 1 hour, then $9 for over 1 hour up to 2 hours. A stay of exactly 1 hour costs $5. A stay of 1.5 hours costs $9."
+  ],
+  "remember": "Piecewise graphs change rule at set points. Step graphs hold a value, then jump.",
+  "a": {
+   "q": "A car park charges $4 for up to 1 hour, $7 for over 1 hour up to 2 hours, and $10 for over 2 hours up to 3 hours. What does a stay of 2.5 hours cost?",
+   "opts": [
+    "$10",
+    "$7",
+    "$4",
+    "$17"
+   ],
+   "why": "2.5 hours is over 2 hours and up to 3 hours, so the charge is $10. The charge is not added up across steps, so $17 is wrong.",
+   "clue": "Find which time range 2.5 hours falls in."
+  },
+  "b": {
+   "d": 3,
+   "q": "A step graph for a car park shows $6 for up to 2 hours, then $11 for over 2 hours up to 4 hours. Which cost applies to a stay of exactly 2 hours?",
+   "opts": [
+    "$6, because the first step includes 2 hours",
+    "$11, because the next step starts at 2 hours",
+    "$8.50, the average of the two steps",
+    "$6 and $11 are both charged"
+   ],
+   "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step only starts just after 2 hours. A stay has one charge, not an average.",
+   "clue": "Check which step has the closed dot at 2 hours."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$10",
+   "also_right": []
+  },
+  "b": {
+   "best": "$6, because the first step includes 2 hours",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Saying a piecewise graph is made of 'separate' line segments could suggest the segments must be disconnected. Many piecewise graphs, such as tax scales, join up at the points where the rule changes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and fair. The only issue is that 'separate line segments' on the card could wrongly suggest piecewise graphs are always disconnected."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: Saying a piecewise graph is made of 'separate' line segments could suggest the segments must be disconnected. Many piecewise graphs, such as tax scales, join up at the points where the rule changes."
+ ],
+ "proposal": {
+  "title": "Piecewise and step graphs",
+  "card": [
+   [
+    "Piecewise graph",
+    "A piecewise graph is made of line segments, each with its own rule over its own range of x values. The segments can join up where the rule changes, as on a tax scale."
+   ],
+   [
+    "Step graph",
+    "A step graph is made of horizontal segments with jumps between them. The value stays fixed over a range, then jumps to a new amount."
+   ],
+   [
+    "Open and closed dots",
+    "A closed dot means the end value is included. An open dot means it is not."
+   ],
+   "Example: a car park charges $5 for up to 1 hour, then $9 for over 1 hour up to 2 hours. A stay of exactly 1 hour costs $5. A stay of 1.5 hours costs $9."
+  ],
+  "remember": "Piecewise graphs change rule at set points. Step graphs hold a value, then jump.",
+  "a": {
+   "q": "A car park charges $4 for up to 1 hour, $7 for over 1 hour up to 2 hours, and $10 for over 2 hours up to 3 hours. What does a stay of 2.5 hours cost?",
+   "opts": [
+    "$10",
+    "$7",
+    "$4",
+    "$17"
+   ],
+   "why": "2.5 hours is over 2 hours and up to 3 hours, so the charge is $10. The charge is read from one step, not added up across steps, so $17 is wrong.",
+   "clue": "Find which time range 2.5 hours falls in."
+  },
+  "b": {
+   "d": 3,
+   "q": "A step graph for a car park shows $6 for up to 2 hours, then $11 for over 2 hours up to 4 hours. Which cost applies to a stay of exactly 2 hours?",
+   "opts": [
+    "$6, because the first step includes 2 hours",
+    "$11, because the next step starts at 2 hours",
+    "$8.50, the average of the two steps",
+    "$17, as both steps are charged"
+   ],
+   "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step starts just after 2 hours, so it has an open dot there. A stay has one charge, not an average or a total.",
+   "clue": "Check which step has the closed dot at 2 hours."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "Saying a piecewise graph is made of 'separate' line segments could suggest the segments must be disconnected. Many piecewise graphs, such as tax scales, join up at the points where the rule changes."
+   }
+  ],
+  "flags": [
+   "Card, wording: Saying a piecewise graph is made of 'separate' line segments could suggest the segments must be disconnected. Many piecewise graphs, such as tax scales, join up at the points where the rule changes."
+  ]
+ },
+ "final": {
+  "title": "Piecewise and step graphs",
+  "card": [
+   [
+    "Piecewise graph",
+    "A piecewise graph is made of line segments, each with its own rule over its own range of x values. The segments can join up where the rule changes, as on a tax scale."
+   ],
+   [
+    "Step graph",
+    "A step graph is made of horizontal segments with jumps between them. The value stays fixed over a range, then jumps to a new amount."
+   ],
+   [
+    "Open and closed dots",
+    "A closed dot means the end value is included. An open dot means it is not."
+   ],
+   "Example: a car park charges $5 for up to 1 hour, then $9 for over 1 hour up to 2 hours. A stay of exactly 1 hour costs $5. A stay of 1.5 hours costs $9."
+  ],
+  "remember": "Piecewise graphs change rule at set points. Step graphs hold a value, then jump.",
+  "a": {
+   "q": "A car park charges $4 for up to 1 hour, $7 for over 1 hour up to 2 hours, and $10 for over 2 hours up to 3 hours. What does a stay of 2.5 hours cost?",
+   "opts": [
+    "$10",
+    "$7",
+    "$4",
+    "$17"
+   ],
+   "why": "2.5 hours is over 2 hours and up to 3 hours, so the charge is $10. The charge is read from one step, not added up across steps, so $17 is wrong.",
+   "clue": "Find which time range 2.5 hours falls in."
+  },
+  "b": {
+   "d": 3,
+   "q": "A step graph for a car park shows $6 for up to 2 hours, then $11 for over 2 hours up to 4 hours. Which cost applies to a stay of exactly 2 hours?",
+   "opts": [
+    "$6, because the first step includes 2 hours",
+    "$11, because the next step starts at 2 hours",
+    "$8.50, the average of the two steps",
+    "$17, as both steps are charged"
+   ],
+   "why": "The first step covers up to and including 2 hours, so the dot at 2 hours is closed on $6. The $11 step starts just after 2 hours, so it has an open dot there. A stay has one charge, not an average or a total.",
+   "clue": "Check which step has the closed dot at 2 hours."
+  }
+ },
+ "cleared_by": "auto"
+}

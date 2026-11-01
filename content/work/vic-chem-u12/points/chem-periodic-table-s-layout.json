@@ -1,0 +1,341 @@
+{
+ "id": "chem-periodic-table-s-layout",
+ "title": "The periodic table's layout",
+ "brief": "156a1018c347",
+ "shortlist": [
+  [
+   "chem-periodic-table-trends",
+   0.449
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (card fact, card fact)",
+  "2026-11-01T13:41:58Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.01734,
+  "check": 0.02029,
+  "fix": 0.01997,
+  "recheck": 0.01285
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches how elements are arranged by atomic number into groups and periods, while the bank point teaches periodic trends in radius, ionisation energy and electronegativity, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: \"Moving along a period, atomic number rises by one each step\" is not quite true in the usual 18-column table. In periods 6 and 7 the lanthanides and actinides are shown separately below the table, so atomic number jumps at group 3 (for example, from Ba 56 to Hf 72). Adding \"in the main table, apart from where the f-block is placed below\" would fix it, or the claim could be softened.\n- Card, fact: \"Group 1 holds the alkali metals\" leaves out hydrogen. Hydrogen sits in group 1 but is not an alkali metal and does not share their properties. A brief note (\"apart from hydrogen\") would stop students wrongly grouping it with the alkali metals.",
+ "rejected": {
+  "title": "The periodic table's layout",
+  "card": [
+   "The periodic table lists the elements in order of increasing atomic number, starting with hydrogen.",
+   [
+    "Groups",
+    "the vertical columns, numbered 1 to 18. Elements in the same group have similar chemical properties, and each one sits in a different period."
+   ],
+   [
+    "Periods",
+    "the horizontal rows, numbered from 1 at the top. Moving along a period, atomic number rises by one each step."
+   ],
+   "Group 1 holds the alkali metals and group 18 holds the noble gases. Noble gases are very unreactive."
+  ],
+  "remember": "Columns are groups with similar properties. Rows are periods in order of atomic number.",
+  "a": {
+   "q": "Lithium, sodium and potassium are in group 1. What does this tell you about them?",
+   "opts": [
+    "They have similar chemical properties",
+    "They have the same atomic number",
+    "They are in the same period",
+    "They are all noble gases"
+   ],
+   "why": "Elements in one group, a column, have similar chemical properties. Each sits in a different period, and atomic number rises through the table, so they cannot share a period or an atomic number. Group 1 holds the alkali metals, not the noble gases.",
+   "clue": "A group is a column, not a row."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neon and argon are both noble gases, and argon has the higher atomic number. Which statement is correct?",
+   "opts": [
+    "Both are in group 18, in different periods",
+    "Both are in group 1, in different periods",
+    "Both are in group 18, in the same period",
+    "Both are in the same period, in different groups"
+   ],
+   "why": "Noble gases make up group 18, so neon and argon share a column. Each element in a group sits in a different period, so they are in different rows. Saying they share group 18 and a period is tempting, but one column has only one element in each row.",
+   "clue": "Can two elements in one column share a row?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: \"Moving along a period, atomic number rises by one each step\" is not quite true in the usual 18-column table. In periods 6 and 7 the lanthanides and actinides are shown separately below the table, so atomic number jumps at group 3 (for example, from Ba 56 to Hf 72). Adding \"in the main table, apart from where the f-block is placed below\" would fix it, or the claim could be softened.",
+    "Card, fact: \"Group 1 holds the alkali metals\" leaves out hydrogen. Hydrogen sits in group 1 but is not an alkali metal and does not share their properties. A brief note (\"apart from hydrogen\") would stop students wrongly grouping it with the alkali metals."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The periodic table's layout",
+     "card": [
+      "The periodic table lists elements in order of increasing atomic number, which is the number of protons in an atom.",
+      [
+       "Groups",
+       "the vertical columns, numbered 1 to 18. Elements in the same group have similar chemical properties."
+      ],
+      [
+       "Periods",
+       "the horizontal rows, numbered from 1 at the top. Moving along a period, atomic number rises by one each step."
+      ],
+      "Group 1 holds the alkali metals and group 18 the noble gases. Noble gases are very unreactive."
+     ],
+     "remember": "Columns are groups with similar properties. Rows are periods in order of atomic number.",
+     "a": {
+      "q": "Lithium, sodium and potassium are in group 1. What does this tell you about them?",
+      "opts": [
+       "They have similar chemical properties",
+       "They have the same atomic number",
+       "They are in the same period",
+       "They have the same number of protons"
+      ],
+      "why": "Elements in one group (a column) have similar chemical properties. They have different atomic numbers and sit in different periods, so they have different numbers of protons.",
+      "clue": "A group is a column, not a row."
+     },
+     "b": {
+      "d": 2,
+      "q": "Neon has atomic number 10 and argon has atomic number 18. Which statement is correct?",
+      "opts": [
+       "Both are in group 18, in different periods",
+       "Both are in period 2, in different groups",
+       "Both are in group 10, in different periods",
+       "Both are in the same group and the same period"
+      ],
+      "why": "Both are noble gases, so they share group 18. Argon has more protons and sits in a lower row, so it is in a different period. Group numbers are not the same as atomic numbers.",
+      "clue": "Noble gases share a column."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "They have similar chemical properties",
+      "also_right": []
+     },
+     "b": {
+      "best": "Both are in group 18, in different periods",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The card defines atomic number as the number of protons in an atom. That definition belongs to point 1 (Atomic structure) and should only be mentioned here, not explained."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The question expects students to know that neon and argon are noble gases, or which periods they sit in, but the card does not say so. It only says group 18 holds the noble gases. The clue assumes the same knowledge."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and both intended answers are correct. Two minor problems: the card defines atomic number, which belongs to point 1, and question b assumes students know neon and argon are noble gases, which the card never states."
+    },
+    "flags": [
+     "Card, other: The card defines atomic number as the number of protons in an atom. That definition belongs to point 1 (Atomic structure) and should only be mentioned here, not explained.",
+     "Question b, level: The question expects students to know that neon and argon are noble gases, or which periods they sit in, but the card does not say so. It only says group 18 holds the noble gases. The clue assumes the same knowledge."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The periodic table's layout",
+     "card": [
+      "The periodic table lists the elements in order of increasing atomic number, starting with hydrogen.",
+      [
+       "Groups",
+       "the vertical columns, numbered 1 to 18. Elements in the same group have similar chemical properties, and each one sits in a different period."
+      ],
+      [
+       "Periods",
+       "the horizontal rows, numbered from 1 at the top. Moving along a period, atomic number rises by one each step."
+      ],
+      "Group 1 holds the alkali metals and group 18 holds the noble gases. Noble gases are very unreactive."
+     ],
+     "remember": "Columns are groups with similar properties. Rows are periods in order of atomic number.",
+     "a": {
+      "q": "Lithium, sodium and potassium are in group 1. What does this tell you about them?",
+      "opts": [
+       "They have similar chemical properties",
+       "They have the same atomic number",
+       "They are in the same period",
+       "They are all noble gases"
+      ],
+      "why": "Elements in one group, a column, have similar chemical properties. Each sits in a different period, and atomic number rises through the table, so they cannot share a period or an atomic number. Group 1 holds the alkali metals, not the noble gases.",
+      "clue": "A group is a column, not a row."
+     },
+     "b": {
+      "d": 3,
+      "q": "Neon and argon are both noble gases, and argon has the higher atomic number. Which statement is correct?",
+      "opts": [
+       "Both are in group 18, in different periods",
+       "Both are in group 1, in different periods",
+       "Both are in group 18, in the same period",
+       "Both are in the same period, in different groups"
+      ],
+      "why": "Noble gases make up group 18, so neon and argon share a column. Each element in a group sits in a different period, so they are in different rows. Saying they share group 18 and a period is tempting, but one column has only one element in each row.",
+      "clue": "Can two elements in one column share a row?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "They have similar chemical properties",
+       "also_right": []
+      },
+      "b": {
+       "best": "Both are in group 18, in different periods",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "\"Moving along a period, atomic number rises by one each step\" is not quite true in the usual 18-column table. In periods 6 and 7 the lanthanides and actinides are shown separately below the table, so atomic number jumps at group 3 (for example, from Ba 56 to Hf 72). Adding \"in the main table, apart from where the f-block is placed below\" would fix it, or the claim could be softened."
+       },
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "\"Group 1 holds the alkali metals\" leaves out hydrogen. Hydrogen sits in group 1 but is not an alkali metal and does not share their properties. A brief note (\"apart from hydrogen\") would stop students wrongly grouping it with the alkali metals."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the explanations match the card. The card has two small accuracy issues: the 'atomic number rises by one each step' claim ignores the f-block gap in periods 6 and 7, and hydrogen is not an alkali metal even though it sits in group 1."
+     },
+     "flags": [
+      "Card, fact: \"Moving along a period, atomic number rises by one each step\" is not quite true in the usual 18-column table. In periods 6 and 7 the lanthanides and actinides are shown separately below the table, so atomic number jumps at group 3 (for example, from Ba 56 to Hf 72). Adding \"in the main table, apart from where the f-block is placed below\" would fix it, or the claim could be softened.",
+      "Card, fact: \"Group 1 holds the alkali metals\" leaves out hydrogen. Hydrogen sits in group 1 but is not an alkali metal and does not share their properties. A brief note (\"apart from hydrogen\") would stop students wrongly grouping it with the alkali metals."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "The periodic table's layout",
+  "card": [
+   "The periodic table lists the elements in order of increasing atomic number, starting with hydrogen.",
+   [
+    "Groups",
+    "the vertical columns, numbered 1 to 18. Elements in the same group have similar chemical properties, and each one sits in a different period."
+   ],
+   [
+    "Periods",
+    "the horizontal rows, numbered from 1 at the top. Atomic number increases from left to right along a period. The f-block elements are shown in two rows below the main table."
+   ],
+   "Group 1, apart from hydrogen, holds the alkali metals. Group 18 holds the noble gases, which are very unreactive."
+  ],
+  "remember": "Columns are groups with similar properties. Rows are periods in order of atomic number.",
+  "a": {
+   "q": "Lithium, sodium and potassium are in group 1. What does this tell you about them?",
+   "opts": [
+    "They have similar chemical properties",
+    "They have the same atomic number",
+    "They are in the same period",
+    "They are all noble gases"
+   ],
+   "why": "Elements in one group, a column, have similar chemical properties. Each sits in a different period, and atomic number rises through the table, so they cannot share a period or an atomic number. Group 1 holds the alkali metals, not the noble gases.",
+   "clue": "A group is a column, not a row."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neon and argon are both noble gases, and argon has the higher atomic number. Which statement is correct?",
+   "opts": [
+    "Both are in group 18, in different periods",
+    "Both are in group 1, in different periods",
+    "Both are in group 18, in the same period",
+    "Both are in the same period, in different groups"
+   ],
+   "why": "Noble gases make up group 18, so neon and argon share a column. Each element in a group sits in a different period, so they are in different rows. Saying they share group 18 and a period is tempting, but one column has only one element in each row.",
+   "clue": "Can two elements in one column share a row?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They have similar chemical properties",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both are in group 18, in different periods",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The periodic table's layout",
+  "card": [
+   "The periodic table lists the elements in order of increasing atomic number, starting with hydrogen.",
+   [
+    "Groups",
+    "the vertical columns, numbered 1 to 18. Elements in the same group have similar chemical properties, and each one sits in a different period."
+   ],
+   [
+    "Periods",
+    "the horizontal rows, numbered from 1 at the top. Atomic number increases from left to right along a period. The f-block elements are shown in two rows below the main table."
+   ],
+   "Group 1, apart from hydrogen, holds the alkali metals. Group 18 holds the noble gases, which are very unreactive."
+  ],
+  "remember": "Columns are groups with similar properties. Rows are periods in order of atomic number.",
+  "a": {
+   "q": "Lithium, sodium and potassium are in group 1. What does this tell you about them?",
+   "opts": [
+    "They have similar chemical properties",
+    "They have the same atomic number",
+    "They are in the same period",
+    "They are all noble gases"
+   ],
+   "why": "Elements in one group, a column, have similar chemical properties. Each sits in a different period, and atomic number rises through the table, so they cannot share a period or an atomic number. Group 1 holds the alkali metals, not the noble gases.",
+   "clue": "A group is a column, not a row."
+  },
+  "b": {
+   "d": 3,
+   "q": "Neon and argon are both noble gases, and argon has the higher atomic number. Which statement is correct?",
+   "opts": [
+    "Both are in group 18, in different periods",
+    "Both are in group 1, in different periods",
+    "Both are in group 18, in the same period",
+    "Both are in the same period, in different groups"
+   ],
+   "why": "Noble gases make up group 18, so neon and argon share a column. Each element in a group sits in a different period, so they are in different rows. Saying they share group 18 and a period is tempting, but one column has only one element in each row.",
+   "clue": "Can two elements in one column share a row?"
+  }
+ }
+}

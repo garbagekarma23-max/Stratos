@@ -1,0 +1,148 @@
+{
+ "id": "mat-arithmetic-geometric-series",
+ "title": "Arithmetic and geometric series",
+ "brief": "1b2e02fc0092",
+ "shortlist": [
+  [
+   "mat-geometric-series",
+   0.582
+  ],
+  [
+   "mat-arithmetic-series",
+   0.475
+  ],
+  [
+   "mat-annuities-as-geometric-series",
+   0.42
+  ],
+  [
+   "mat-limiting-sums",
+   0.28
+  ],
+  [
+   "mat-arithmetic-sequences",
+   0.24
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:08Z write: done",
+  "2026-11-01T08:24:34Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.0104,
+  "check": 0.00763
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point teaches both the arithmetic and geometric series sum formulas together, but each bank point covers only one of these series, so no single point fits without adding a new idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Arithmetic and geometric series",
+  "card": [
+   [
+    "Arithmetic",
+    "Terms differ by a constant d. With first term a and n terms, the sum is Sn = n/2 × (2a + (n − 1)d)."
+   ],
+   [
+    "Geometric",
+    "Each term is r times the one before. With first term a and n terms, the sum is Sn = a(rⁿ − 1)/(r − 1), where r ≠ 1."
+   ],
+   "Example: 3 + 7 + 11 + ... with 10 terms has a = 3, d = 4 and n = 10. So S = 10/2 × (6 + 9 × 4) = 5 × 42 = 210.",
+   "Example: 2 + 6 + 18 + 54 + 162 has a = 2, r = 3 and n = 5. So S = 2 × (3⁵ − 1)/(3 − 1) = 2 × 242/2 = 242."
+  ],
+  "remember": "Arithmetic adds the same amount each time, geometric multiplies by the same amount. Put n, a and d or r into the right formula.",
+  "a": {
+   "q": "What is 4 + 8 + 16 + 32 + ... for the first 6 terms?",
+   "opts": [
+    "252",
+    "63",
+    "256",
+    "508"
+   ],
+   "why": "The ratio is r = 2, so S = 4 × (2⁶ − 1)/(2 − 1) = 4 × 63 = 252. The option 256 forgets to take 1 away from 2⁶, and 63 forgets to multiply by a.",
+   "clue": "Each term is double the one before, so use the geometric formula."
+  },
+  "b": {
+   "d": 2,
+   "q": "A hall has 15 rows. Row 1 has 12 seats and each row has 2 more than the row before. How many seats are in the hall?",
+   "opts": [
+    "390",
+    "405",
+    "780",
+    "180"
+   ],
+   "why": "The seats form an arithmetic series with a = 12, d = 2 and n = 15. So S = 15/2 × (24 + 14 × 2) = 15/2 × 52 = 390. Using 15 × 2 instead of 14 × 2 inside the bracket gives 405, which is wrong.",
+   "clue": "Inside the bracket, d is multiplied by one less than the number of rows."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "252",
+   "also_right": []
+  },
+  "b": {
+   "best": "390",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both card examples and both questions work out correctly (252 and 390), and the explanations match."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Arithmetic and geometric series",
+  "card": [
+   [
+    "Arithmetic",
+    "Terms differ by a constant d. With first term a and n terms, the sum is Sn = n/2 × (2a + (n − 1)d)."
+   ],
+   [
+    "Geometric",
+    "Each term is r times the one before. With first term a and n terms, the sum is Sn = a(rⁿ − 1)/(r − 1), where r ≠ 1."
+   ],
+   "Example: 3 + 7 + 11 + ... with 10 terms has a = 3, d = 4 and n = 10. So S = 10/2 × (6 + 9 × 4) = 5 × 42 = 210.",
+   "Example: 2 + 6 + 18 + 54 + 162 has a = 2, r = 3 and n = 5. So S = 2 × (3⁵ − 1)/(3 − 1) = 2 × 242/2 = 242."
+  ],
+  "remember": "Arithmetic adds the same amount each time, geometric multiplies by the same amount. Put n, a and d or r into the right formula.",
+  "a": {
+   "q": "What is 4 + 8 + 16 + 32 + ... for the first 6 terms?",
+   "opts": [
+    "252",
+    "63",
+    "256",
+    "508"
+   ],
+   "why": "The ratio is r = 2, so S = 4 × (2⁶ − 1)/(2 − 1) = 4 × 63 = 252. The option 256 forgets to take 1 away from 2⁶, and 63 forgets to multiply by a.",
+   "clue": "Each term is double the one before, so use the geometric formula."
+  },
+  "b": {
+   "d": 2,
+   "q": "A hall has 15 rows. Row 1 has 12 seats and each row has 2 more than the row before. How many seats are in the hall?",
+   "opts": [
+    "390",
+    "405",
+    "780",
+    "180"
+   ],
+   "why": "The seats form an arithmetic series with a = 12, d = 2 and n = 15. So S = 15/2 × (24 + 14 × 2) = 15/2 × 52 = 390. Using 15 × 2 instead of 14 × 2 inside the bracket gives 405, which is wrong.",
+   "clue": "Inside the bracket, d is multiplied by one less than the number of rows."
+  }
+ },
+ "cleared_by": "checker"
+}

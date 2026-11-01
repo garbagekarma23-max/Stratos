@@ -1,0 +1,173 @@
+{
+ "id": "chem-rf-values",
+ "title": "Rf values",
+ "brief": "3f369a62f86c",
+ "shortlist": [
+  [
+   "chem-pure-substances-mixtures",
+   0.227
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: done",
+  "2026-11-01T08:24:30Z check: flagged",
+  "2026-11-01T08:33:49Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00605,
+  "check": 0.01043,
+  "fix": 0.01918,
+  "recheck": 0.00615
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only introduces chromatography as a way to separate mixtures and never teaches the Rf calculation (spot distance divided by solvent distance) used to identify substances, so it does not teach the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Rf values",
+  "card": [
+   "The Rf value of a spot is the distance the spot travelled divided by the distance the solvent travelled. Both are measured from the starting line.",
+   "Rf = distance moved by the spot ÷ distance moved by the solvent front. Rf has no units, and it is between 0 and 1.",
+   "Rf depends on the substance, the solvent and the stationary phase. With the same solvent and paper, a substance gives the same Rf each time.",
+   "Matching a spot's Rf to a known value helps identify the substance. A matching Rf suggests the same substance but does not prove it."
+  ],
+  "remember": "Rf = spot distance ÷ solvent distance. Compare it with known values to help identify a substance.",
+  "a": {
+   "q": "A spot moves 3.0 cm while the solvent front moves 12.0 cm. What is the Rf value?",
+   "opts": [
+    "0.25",
+    "4.0",
+    "0.75",
+    "0.25 cm"
+   ],
+   "why": "Rf = 3.0 ÷ 12.0 = 0.25. The value 4.0 comes from dividing the wrong way round. Rf has no units, so 0.25 cm is wrong.",
+   "clue": "Spot distance goes on top."
+  },
+  "b": {
+   "d": 2,
+   "q": "Aisha runs a pen ink and a known dye with the same solvent and paper. The ink spot has Rf 0.40 and the dye has Rf 0.62. What is the best conclusion?",
+   "opts": [
+    "The ink spot is probably not that dye",
+    "The ink spot is that dye",
+    "The solvent was wrong for the dye",
+    "The ink spot is pure"
+   ],
+   "why": "Under the same conditions, the same substance gives the same Rf. The values differ, so the ink spot is probably a different substance. The Rf says nothing about purity from a single spot.",
+   "clue": "Same substance, same conditions, same Rf."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.25",
+   "also_right": []
+  },
+  "b": {
+   "best": "The ink spot is probably not that dye",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier (\"probably\"). The other three are flat, absolute claims, so a student could pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers check out. In question b, the right option is the only one hedged with \"probably\", which gives it away; consider making the distractors similarly worded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the only one with a qualifier (\"probably\"). The other three are flat, absolute claims, so a student could pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Rf values",
+  "card": [
+   "The Rf value of a spot is the distance the spot travelled divided by the distance the solvent travelled. Both are measured from the starting line.",
+   "Rf = distance moved by the spot ÷ distance moved by the solvent front. Rf has no units, and it is between 0 and 1.",
+   "Rf depends on the substance, the solvent and the stationary phase. With the same solvent and paper, a substance gives the same Rf each time.",
+   "Matching a spot's Rf to a known value helps identify the substance. A matching Rf suggests the same substance but does not prove it."
+  ],
+  "remember": "Rf = spot distance ÷ solvent distance. Compare it with known values to help identify a substance.",
+  "a": {
+   "q": "A spot moves 3.0 cm while the solvent front moves 12.0 cm. What is the Rf value?",
+   "opts": [
+    "0.25",
+    "4.0",
+    "0.75",
+    "0.25 cm"
+   ],
+   "why": "Rf = 3.0 ÷ 12.0 = 0.25. The value 4.0 comes from dividing the wrong way round. Rf has no units, so 0.25 cm is wrong.",
+   "clue": "Spot distance goes on top."
+  },
+  "b": {
+   "d": 2,
+   "q": "Aisha runs a pen ink and a known dye on the same sheet of paper with the same solvent. The ink spot has Rf 0.40 and the dye has Rf 0.62. What can she conclude?",
+   "opts": [
+    "The ink spot is not the same substance as the dye",
+    "The ink spot is the same substance as the dye",
+    "The ink spot travelled further up the paper than the dye",
+    "The ink spot would give Rf 0.62 in any other solvent"
+   ],
+   "why": "Under the same conditions, a substance gives the same Rf each time. The values 0.40 and 0.62 differ, so the ink spot is not that dye. On the same sheet the solvent front is shared, so the lower Rf means the ink spot travelled a shorter distance, not further.",
+   "clue": "Same substance, same conditions, same Rf."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "0.25",
+    "also_right": []
+   },
+   "b": {
+    "best": "The ink spot is not the same substance as the dye",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one with a qualifier (\"probably\"). The other three are flat, absolute claims, so a student could pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the only one with a qualifier (\"probably\"). The other three are flat, absolute claims, so a student could pick it without knowing the idea."
+  ]
+ }
+}

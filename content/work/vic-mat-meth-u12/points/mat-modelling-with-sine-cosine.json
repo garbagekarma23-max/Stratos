@@ -1,0 +1,351 @@
+{
+ "id": "mat-modelling-with-sine-cosine",
+ "title": "Modelling with sine and cosine",
+ "brief": "4712b9124f09",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.461
+  ],
+  [
+   "mat-modelling-with-functions",
+   0.347
+  ],
+  [
+   "mat-cosine-rule",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-01T13:35:05Z autoreject: rejected, to be written again (b fact)",
+  "2026-11-01T13:41:59Z write: done",
+  "2026-11-01T13:47:17Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01331,
+  "check": 0.0178,
+  "fix": 0.02676,
+  "recheck": 0.01333
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points either only graph sine, cosine and tangent without modelling real data with amplitude, period and mean, or only cover choosing between model types, so neither teaches the same idea at the right depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, fact: A real place, Port Fairy, is named with a model giving a 4 m tidal range (depth 4 m to 8 m). Port Fairy's actual tidal range is about a metre, so the setting implies an unrealistic tide. A generic jetty, or a smaller amplitude, would avoid this. Minor.",
+ "rejected": {
+  "title": "Modelling with sine and cosine",
+  "card": [
+   "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+   [
+    "Mean",
+    "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+   ],
+   [
+    "Amplitude",
+    "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+   ],
+   [
+    "Period",
+    "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+   ]
+  ],
+  "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
+  "a": {
+   "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
+   "opts": [
+    "4°C",
+    "8°C",
+    "18°C",
+    "36°C"
+   ],
+   "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+   "clue": "Amplitude is measured from the middle line, not from bottom to top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water depth at a Port Fairy jetty is modelled by d = 2 sin(nt) + 6, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
+   "opts": [
+    "π/6",
+    "6/π",
+    "24π",
+    "π/12"
+   ],
+   "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. Check: 2π ÷ (π/6) = 12. The option 6/π comes from dividing 12 by 2π, which turns the division upside down.",
+   "clue": "Put the period into period = 2π ÷ n and solve for n."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-01T13:35:05Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, fact: A real place, Port Fairy, is named with a model giving a 4 m tidal range (depth 4 m to 8 m). Port Fairy's actual tidal range is about a metre, so the setting implies an unrealistic tide. A generic jetty, or a smaller amplitude, would avoid this. Minor."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Modelling with sine and cosine",
+     "card": [
+      "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+      [
+       "Mean",
+       "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+      ],
+      [
+       "Amplitude",
+       "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+      ],
+      [
+       "Period",
+       "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+      ]
+     ],
+     "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
+     "a": {
+      "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
+      "opts": [
+       "4°C",
+       "8°C",
+       "18°C",
+       "36°C"
+      ],
+      "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+      "clue": "Amplitude is measured from the middle line, not from bottom to top."
+     },
+     "b": {
+      "d": 3,
+      "q": "Water depth at a Port Fairy jetty is modelled by d = 2 sin(nt) + 6, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
+      "opts": [
+       "π/6",
+       "6π",
+       "12π",
+       "2π/3"
+      ],
+      "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. The option 6π comes from multiplying instead of dividing.",
+      "clue": "Put the period into period = 2π ÷ n and solve for n."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "4°C",
+      "also_right": []
+     },
+     "b": {
+      "best": "π/6",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 6π comes from multiplying instead of dividing, but multiplying gives 2π × 12 = 24π, not 6π. The explanation of the distractor is wrong."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are correct. The only problem is the explanation for question b: it wrongly says the 6π distractor comes from multiplying, when 2π × 12 = 24π."
+    },
+    "flags": [
+     "Question b, fact: The why says 6π comes from multiplying instead of dividing, but multiplying gives 2π × 12 = 24π, not 6π. The explanation of the distractor is wrong."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Modelling with sine and cosine",
+     "card": [
+      "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+      [
+       "Mean",
+       "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+      ],
+      [
+       "Amplitude",
+       "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+      ],
+      [
+       "Period",
+       "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+      ]
+     ],
+     "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
+     "a": {
+      "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
+      "opts": [
+       "4°C",
+       "8°C",
+       "18°C",
+       "36°C"
+      ],
+      "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+      "clue": "Amplitude is measured from the middle line, not from bottom to top."
+     },
+     "b": {
+      "d": 3,
+      "q": "Water depth at a Port Fairy jetty is modelled by d = 2 sin(nt) + 6, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
+      "opts": [
+       "π/6",
+       "6/π",
+       "24π",
+       "π/12"
+      ],
+      "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. Check: 2π ÷ (π/6) = 12. The option 6/π comes from dividing 12 by 2π, which turns the division upside down.",
+      "clue": "Put the period into period = 2π ÷ n and solve for n."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-01T09:32:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "4°C",
+       "also_right": []
+      },
+      "b": {
+       "best": "π/6",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "fact",
+        "detail": "A real place, Port Fairy, is named with a model giving a 4 m tidal range (depth 4 m to 8 m). Port Fairy's actual tidal range is about a metre, so the setting implies an unrealistic tide. A generic jetty, or a smaller amplitude, would avoid this. Minor."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clearly right answer (4°C and π/6), and the card, remember line and explanations are correct and consistent. The only minor issue is that question b's tide model is unrealistically large for the real Port Fairy."
+     },
+     "flags": [
+      "Question b, fact: A real place, Port Fairy, is named with a model giving a 4 m tidal range (depth 4 m to 8 m). Port Fairy's actual tidal range is about a metre, so the setting implies an unrealistic tide. A generic jetty, or a smaller amplitude, would avoid this. Minor."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Modelling with sine and cosine",
+  "card": [
+   "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+   [
+    "Mean",
+    "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+   ],
+   [
+    "Amplitude",
+    "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+   ],
+   [
+    "Period",
+    "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+   ]
+  ],
+  "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
+  "a": {
+   "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
+   "opts": [
+    "4°C",
+    "8°C",
+    "18°C",
+    "36°C"
+   ],
+   "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+   "clue": "Amplitude is measured from the middle line, not from bottom to top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water depth at a small harbour jetty is modelled by d = 0.5 sin(nt) + 2, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
+   "opts": [
+    "π/6",
+    "6/π",
+    "24π",
+    "π/12"
+   ],
+   "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. Check: 2π ÷ (π/6) = 12. The option 6/π comes from dividing 12 by 2π, which turns the division upside down.",
+   "clue": "Put the period into period = 2π ÷ n and solve for n."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4°C",
+   "also_right": []
+  },
+  "b": {
+   "best": "π/6",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Modelling with sine and cosine",
+  "card": [
+   "Things that rise and fall in a regular cycle, such as tides, daylight hours and temperatures, can be modelled by y = a sin(nx) + k or y = a cos(nx) + k.",
+   [
+    "Mean",
+    "The mean k is the middle value of the cycle. It is halfway between the greatest and least values, so k = (greatest + least) ÷ 2."
+   ],
+   [
+    "Amplitude",
+    "The amplitude a is how far the value rises above the mean. It is half the gap between greatest and least, so a = (greatest − least) ÷ 2."
+   ],
+   [
+    "Period",
+    "The period is the time for one full cycle, and it equals 2π ÷ n. Example: a tide with high 5 m, low 1 m and a 12 hour cycle has mean 3 m, amplitude 2 m and n = 2π ÷ 12 = π/6."
+   ]
+  ],
+  "remember": "Mean is halfway between the extremes, amplitude is half the gap, period is one cycle.",
+  "a": {
+   "q": "The temperature in a cool room cycles between 14°C and 22°C. What is the amplitude of a sine model for it?",
+   "opts": [
+    "4°C",
+    "8°C",
+    "18°C",
+    "36°C"
+   ],
+   "why": "The amplitude is half the gap: (22 − 14) ÷ 2 = 4. The option 8°C is the whole gap from least to greatest, not the distance from the middle.",
+   "clue": "Amplitude is measured from the middle line, not from bottom to top."
+  },
+  "b": {
+   "d": 3,
+   "q": "Water depth at a small harbour jetty is modelled by d = 0.5 sin(nt) + 2, in metres, with t in hours. One full tide cycle takes 12 hours. What is n?",
+   "opts": [
+    "π/6",
+    "6/π",
+    "24π",
+    "π/12"
+   ],
+   "why": "The period is 2π ÷ n = 12, so n = 2π ÷ 12 = π/6. Check: 2π ÷ (π/6) = 12. The option 6/π comes from dividing 12 by 2π, which turns the division upside down.",
+   "clue": "Put the period into period = 2π ÷ n and solve for n."
+  }
+ }
+}

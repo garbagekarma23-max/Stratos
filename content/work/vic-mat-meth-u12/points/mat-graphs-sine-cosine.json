@@ -1,0 +1,227 @@
+{
+ "id": "mat-graphs-sine-cosine",
+ "title": "Graphs of sine and cosine",
+ "brief": "75e31d9cb12d",
+ "shortlist": [
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.687
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.374
+  ],
+  [
+   "mat-transforming-trigonometric-graphs",
+   0.367
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.322
+  ],
+  [
+   "mat-solving-equations-with-graphs",
+   0.312
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00716,
+  "check": 0.00957,
+  "fix": 0.01265
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point only covers the basic graphs of sin x and cos x with amplitude 1 and tangent, so it does not teach the general a, n and k transformations this point needs, which is a change of depth rather than a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   "The graphs of y = a sin(nx) + k and y = a cos(nx) + k are smooth waves that repeat. Here a, n and k are numbers, and a and n are positive.",
+   [
+    "Amplitude",
+    "The amplitude is a. It is the distance from the middle line up to a peak. The wave goes from k − a to k + a."
+   ],
+   [
+    "Period",
+    "The period is 2π ÷ n. It is the length of one full wave along the x-axis. A larger n gives a shorter period."
+   ],
+   [
+    "Mean value",
+    "The mean value is k. It is the height of the middle line. Example: y = 3 sin(2x) + 1 has amplitude 3, period 2π ÷ 2 = π, mean 1, and goes from −2 to 4."
+   ]
+  ],
+  "remember": "a is the height of the wave, 2π ÷ n is its length, and k is its middle.",
+  "a": {
+   "q": "What is the period of y = 2 cos(4x) + 5?",
+   "opts": [
+    "π/2",
+    "8π",
+    "π/4",
+    "2π"
+   ],
+   "why": "Period = 2π ÷ n = 2π ÷ 4 = π/2. The tempting answer 2π is the period of y = cos x, which only applies when n = 1.",
+   "clue": "Divide 2π by the number multiplying x."
+  },
+  "b": {
+   "d": 3,
+   "q": "What are the greatest and least values of y = 4 sin(3x) − 2?",
+   "opts": [
+    "2 and −6",
+    "4 and −4",
+    "1 and −5",
+    "6 and −2"
+   ],
+   "why": "The mean is −2 and the amplitude is 4, so y goes from −2 − 4 = −6 up to −2 + 4 = 2. The option 4 and −4 forgets to shift the wave by k.",
+   "clue": "Start at the middle line, then go up and down by the amplitude."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "π/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "2 and −6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"a is the height of the wave\" is ambiguous. A student could read it as the full peak-to-trough height (2a), but the card defines a as the distance from the middle line up to a peak. Something like \"a is the distance from the middle to a peak\" would match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with a single right answer each (π/2; 2 and −6). The only problem is that the remember line calls a \"the height of the wave\", which could be misread as peak-to-trough height and does not match the card's definition of amplitude."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"a is the height of the wave\" is ambiguous. A student could read it as the full peak-to-trough height (2a), but the card defines a as the distance from the middle line up to a peak. Something like \"a is the distance from the middle to a peak\" would match the card."
+ ],
+ "proposal": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   "The graphs of y = a sin(nx) + k and y = a cos(nx) + k are smooth waves that repeat. Here a, n and k are numbers, and a and n are positive.",
+   [
+    "Amplitude",
+    "The amplitude is a. It is the distance from the middle line up to a peak. The wave goes from k − a to k + a."
+   ],
+   [
+    "Period",
+    "The period is 2π ÷ n. It is the length of one full wave along the x-axis. A larger n gives a shorter period."
+   ],
+   [
+    "Mean value",
+    "The mean value is k. It is the height of the middle line. Example: y = 3 sin(2x) + 1 has amplitude 3, period 2π ÷ 2 = π, mean 1, and goes from −2 to 4."
+   ]
+  ],
+  "remember": "a is the distance from the middle to a peak, 2π ÷ n is the length of one wave, and k is the height of the middle line.",
+  "a": {
+   "q": "What is the period of y = 2 cos(4x) + 5?",
+   "opts": [
+    "π/2",
+    "8π",
+    "π/4",
+    "2π"
+   ],
+   "why": "Period = 2π ÷ n = 2π ÷ 4 = π/2. The tempting answer 2π is the period of y = cos x, which applies when n = 1.",
+   "clue": "Divide 2π by the number multiplying x."
+  },
+  "b": {
+   "d": 3,
+   "q": "What are the greatest and least values of y = 4 sin(3x) − 2?",
+   "opts": [
+    "2 and −6",
+    "4 and −4",
+    "1 and −5",
+    "6 and −2"
+   ],
+   "why": "The mean is −2 and the amplitude is 4, so y goes from −2 − 4 = −6 up to −2 + 4 = 2. The option 4 and −4 forgets to shift the wave by k.",
+   "clue": "Start at the middle line, then go up and down by the amplitude."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"a is the height of the wave\" is ambiguous. A student could read it as the full peak-to-trough height (2a), but the card defines a as the distance from the middle line up to a peak. Something like \"a is the distance from the middle to a peak\" would match the card."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"a is the height of the wave\" is ambiguous. A student could read it as the full peak-to-trough height (2a), but the card defines a as the distance from the middle line up to a peak. Something like \"a is the distance from the middle to a peak\" would match the card."
+  ]
+ },
+ "final": {
+  "title": "Graphs of sine and cosine",
+  "card": [
+   "The graphs of y = a sin(nx) + k and y = a cos(nx) + k are smooth waves that repeat. Here a, n and k are numbers, and a and n are positive.",
+   [
+    "Amplitude",
+    "The amplitude is a. It is the distance from the middle line up to a peak. The wave goes from k − a to k + a."
+   ],
+   [
+    "Period",
+    "The period is 2π ÷ n. It is the length of one full wave along the x-axis. A larger n gives a shorter period."
+   ],
+   [
+    "Mean value",
+    "The mean value is k. It is the height of the middle line. Example: y = 3 sin(2x) + 1 has amplitude 3, period 2π ÷ 2 = π, mean 1, and goes from −2 to 4."
+   ]
+  ],
+  "remember": "a is the distance from the middle to a peak, 2π ÷ n is the length of one wave, and k is the height of the middle line.",
+  "a": {
+   "q": "What is the period of y = 2 cos(4x) + 5?",
+   "opts": [
+    "π/2",
+    "8π",
+    "π/4",
+    "2π"
+   ],
+   "why": "Period = 2π ÷ n = 2π ÷ 4 = π/2. The tempting answer 2π is the period of y = cos x, which applies when n = 1.",
+   "clue": "Divide 2π by the number multiplying x."
+  },
+  "b": {
+   "d": 3,
+   "q": "What are the greatest and least values of y = 4 sin(3x) − 2?",
+   "opts": [
+    "2 and −6",
+    "4 and −4",
+    "1 and −5",
+    "6 and −2"
+   ],
+   "why": "The mean is −2 and the amplitude is 4, so y goes from −2 − 4 = −6 up to −2 + 4 = 2. The option 4 and −4 forgets to shift the wave by k.",
+   "clue": "Start at the middle line, then go up and down by the amplitude."
+  }
+ },
+ "cleared_by": "auto"
+}

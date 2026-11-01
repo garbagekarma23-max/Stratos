@@ -1,0 +1,230 @@
+{
+ "id": "acc-cash-receipts-cash-payments",
+ "title": "Special journals",
+ "brief": "c85f9d1db068",
+ "shortlist": [
+  [
+   "bus-cash-flow-statement",
+   0.22
+  ],
+  [
+   "bus-cash-flow-management",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check was not highly sure)",
+  "2026-11-01T09:34:52Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00493,
+  "check": 0.01373,
+  "fix": 0.02901,
+  "recheck": 0.012
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches special journals, which record similar transactions in date order from source documents; both cover cash flow, a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Special journals",
+  "card": [
+   "A journal is the book of original entry, where each transaction is first recorded. A special journal lists only one kind of transaction, in date order, so similar entries sit together.",
+   [
+    "Sales journal",
+    "credit sales of goods, each recorded from a copy of the invoice the business sent to the customer."
+   ],
+   [
+    "Purchases journal",
+    "credit purchases of goods, each recorded from the invoice the business received from the supplier."
+   ],
+   [
+    "Cash receipts and cash payments",
+    "the cash receipts journal lists money coming in, such as a receipt copy. The cash payments journal lists money going out, such as a cheque butt."
+   ]
+  ],
+  "remember": "Each special journal holds one kind of transaction, in date order, from its source document.",
+  "a": {
+   "q": "Which transaction is recorded in the purchases journal?",
+   "opts": [
+    "Goods bought on credit from a supplier",
+    "Goods sold on credit to a customer",
+    "Money received from a customer",
+    "Money paid by cheque to a supplier"
+   ],
+   "why": "The purchases journal lists goods bought on credit, from the supplier's invoice. Goods sold on credit go in the sales journal, which is the tempting mix-up because both come from invoices.",
+   "clue": "Is the business buying or selling, and is it paid yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tara's Tiles in Geelong sends an invoice to a builder for tiles sold on credit. Later, the builder pays by cheque and Tara banks it. Which journals record these two events, in order?",
+   "opts": [
+    "Sales journal, then cash receipts journal",
+    "Cash receipts journal, then sales journal",
+    "Sales journal, then cash payments journal",
+    "Purchases journal, then cash receipts journal"
+   ],
+   "why": "The credit sale is listed in the sales journal from the invoice copy. The cheque is money coming in, so it goes in the cash receipts journal. The cash payments journal is wrong because Tara is receiving money, not paying it.",
+   "clue": "Sort each event by selling or buying, and by money in or out."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Goods bought on credit from a supplier",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sales journal, then cash receipts journal",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says the cash receipts journal lists money coming in, 'such as a receipt copy', and the cash payments journal lists money going out, 'such as a cheque butt'. This presents source documents as examples of money in or out. It should say these journals are recorded from a receipt copy or a cheque butt."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The chapter is 'Recording for a service business', but the card describes the sales and purchases journals only for goods. Question b uses a tile seller, which is a trading business. For a service business, credit sales would be fees or services on credit, so this could confuse students about the context the chapter covers."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both answers are correct and unambiguous. The card's cash journals line confuses source documents with the money they record, and the examples use goods and a trading business in a chapter about service businesses."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says the cash receipts journal lists money coming in, 'such as a receipt copy', and the cash payments journal lists money going out, 'such as a cheque butt'. This presents source documents as examples of money in or out. It should say these journals are recorded from a receipt copy or a cheque butt.",
+  "Card, other: The chapter is 'Recording for a service business', but the card describes the sales and purchases journals only for goods. Question b uses a tile seller, which is a trading business. For a service business, credit sales would be fees or services on credit, so this could confuse students about the context the chapter covers."
+ ],
+ "proposal": {
+  "title": "Special journals",
+  "card": [
+   "A journal is the book of original entry, where each transaction is first recorded. A special journal lists only one kind of transaction, in date order, so similar entries sit together.",
+   [
+    "Sales journal",
+    "services provided on credit, such as fees for work billed to a client. Each is recorded from a copy of the invoice the business sent."
+   ],
+   [
+    "Purchases journal",
+    "items bought on credit, such as office supplies. Each is recorded from the invoice the business received from the supplier."
+   ],
+   [
+    "Cash journals",
+    "the cash receipts journal lists money coming in, recorded from a receipt copy. The cash payments journal lists money going out, recorded from a cheque butt."
+   ]
+  ],
+  "remember": "Each special journal holds one kind of transaction, in date order, from its source document.",
+  "a": {
+   "q": "Which transaction is recorded in the purchases journal?",
+   "opts": [
+    "Office supplies bought on credit from a supplier",
+    "Repair work provided on credit to a client",
+    "Money received from a client for past work",
+    "Money paid by cheque to a supplier"
+   ],
+   "why": "The purchases journal lists items bought on credit, from the supplier's invoice. Paying a supplier by cheque is tempting, but that is money going out, so it goes in the cash payments journal.",
+   "clue": "Is the business buying or selling, and has money changed hands yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's Plumbing in Geelong sends an invoice to a client for repairs done on credit. Later, the client pays by cheque and Sam banks it. Which journals record these two events, in order?",
+   "opts": [
+    "Sales journal, then cash receipts journal",
+    "Cash receipts journal, then sales journal",
+    "Sales journal, then cash payments journal",
+    "Purchases journal, then cash receipts journal"
+   ],
+   "why": "The repairs on credit are listed in the sales journal from the invoice copy. The cheque is money coming in, so it goes in the cash receipts journal from the receipt copy. The cash payments journal is wrong because Sam is receiving money, not paying it.",
+   "clue": "Sort each event by selling or buying, and by money in or out."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure"
+  ],
+  "check": {
+   "a": {
+    "best": "Office supplies bought on credit from a supplier",
+    "also_right": []
+   },
+   "b": {
+    "best": "Sales journal, then cash receipts journal",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "No problems found. Some textbooks keep the purchases journal for credit purchases of inventory and record other credit purchases in the general journal, so the owner may want to check that office supplies matches the course text."
+  },
+  "flags": []
+ },
+ "final": {
+  "title": "Special journals",
+  "card": [
+   "A journal is the book of original entry, where each transaction is first recorded. A special journal lists only one kind of transaction, in date order, so similar entries sit together.",
+   [
+    "Sales journal",
+    "services provided on credit, such as fees for work billed to a client. Each is recorded from a copy of the invoice the business sent."
+   ],
+   [
+    "Purchases journal",
+    "items bought on credit, such as office supplies. Each is recorded from the invoice the business received from the supplier."
+   ],
+   [
+    "Cash journals",
+    "the cash receipts journal lists money coming in, recorded from a receipt copy. The cash payments journal lists money going out, recorded from a cheque butt."
+   ]
+  ],
+  "remember": "Each special journal holds one kind of transaction, in date order, from its source document.",
+  "a": {
+   "q": "Which transaction is recorded in the purchases journal?",
+   "opts": [
+    "Office supplies bought on credit from a supplier",
+    "Repair work provided on credit to a client",
+    "Money received from a client for past work",
+    "Money paid by cheque to a supplier"
+   ],
+   "why": "The purchases journal lists items bought on credit, from the supplier's invoice. Paying a supplier by cheque is tempting, but that is money going out, so it goes in the cash payments journal.",
+   "clue": "Is the business buying or selling, and has money changed hands yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam's Plumbing in Geelong sends an invoice to a client for repairs done on credit. Later, the client pays by cheque and Sam banks it. Which journals record these two events, in order?",
+   "opts": [
+    "Sales journal, then cash receipts journal",
+    "Cash receipts journal, then sales journal",
+    "Sales journal, then cash payments journal",
+    "Purchases journal, then cash receipts journal"
+   ],
+   "why": "The repairs on credit are listed in the sales journal from the invoice copy. The cheque is money coming in, so it goes in the cash receipts journal from the receipt copy. The cash payments journal is wrong because Sam is receiving money, not paying it.",
+   "clue": "Sort each event by selling or buying, and by money in or out."
+  }
+ },
+ "cleared_by": "owner"
+}

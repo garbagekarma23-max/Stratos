@@ -1,0 +1,222 @@
+{
+ "id": "acc-returns-bad-debts-discounts",
+ "title": "Returns, bad debts and discounts",
+ "brief": "4387c3bea66a",
+ "shortlist": [
+  [
+   "eco-government-debt",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:28Z write: done",
+  "2026-11-01T08:33:47Z check: flagged",
+  "2026-11-01T08:42:04Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00504,
+  "check": 0.01235,
+  "fix": 0.01698
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only bank point is about government debt and budget deficits in Economics, which is a different idea from returns, bad debts and discounts in accounts receivable and payable.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Returns, bad debts and discounts",
+  "card": [
+   [
+    "Sales return",
+    "goods a customer sends back to the seller. The seller lowers the amount the customer owes, so accounts receivable falls."
+   ],
+   [
+    "Purchase return",
+    "goods the business sends back to a supplier. The business owes less, so accounts payable falls."
+   ],
+   [
+    "Bad debt",
+    "an amount a customer will not pay. The seller writes it off, which removes it from accounts receivable and records it as an expense."
+   ],
+   [
+    "Discount",
+    "a cut in the amount owed, offered to a customer who pays early. The customer pays less than the invoice total, and the seller receives less cash."
+   ]
+  ],
+  "remember": "Returns and write-offs cut what is owed. A discount cuts what is paid for paying early.",
+  "a": {
+   "q": "Priya's Pantry sells goods on credit to a café. The café returns damaged goods. What happens in Priya's records?",
+   "opts": [
+    "Accounts receivable falls",
+    "Accounts receivable rises",
+    "Accounts payable falls",
+    "Accounts payable rises"
+   ],
+   "why": "A sales return means the customer owes less, so the seller's accounts receivable falls. Accounts payable is what the business owes its own suppliers, and a customer's return does not change it.",
+   "clue": "Priya is the seller, so think about what the café owes her."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Tyres buys stock on credit from a supplier and sends some faulty tyres back. Which result is correct?",
+   "opts": [
+    "Tom owes the supplier less, so accounts payable falls",
+    "Tom is owed less by the supplier, so receivable falls",
+    "Tom writes the amount off as a bad debt",
+    "Tom receives a discount for paying the supplier early"
+   ],
+   "why": "Tom is the buyer, so a purchase return cuts what he owes and accounts payable falls. It is not a bad debt, because a bad debt is an amount a customer will not pay, and it is not a discount, because nothing was paid early.",
+   "clue": "Tom is the buyer. Whose debt shrinks when goods go back?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Accounts receivable falls",
+   "also_right": []
+  },
+  "b": {
+   "best": "Tom owes the supplier less, so accounts payable falls",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says returns and write-offs cut what is owed, while a discount cuts what is paid. This implies a discount does not reduce the amount owed, but the card defines a discount as 'a cut in the amount owed'. A discount also reduces accounts receivable, so the remember line's neat split contradicts the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, each with one clear answer. The remember line splits returns and write-offs (cut what is owed) from discounts (cut what is paid), which contradicts the card's definition of a discount as a cut in the amount owed."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says returns and write-offs cut what is owed, while a discount cuts what is paid. This implies a discount does not reduce the amount owed, but the card defines a discount as 'a cut in the amount owed'. A discount also reduces accounts receivable, so the remember line's neat split contradicts the card."
+ ],
+ "proposal": {
+  "title": "Returns, bad debts and discounts",
+  "card": [
+   [
+    "Sales return",
+    "goods a customer sends back to the seller. The seller lowers the amount the customer owes, so accounts receivable falls."
+   ],
+   [
+    "Purchase return",
+    "goods the business sends back to a supplier. The business owes less, so accounts payable falls."
+   ],
+   [
+    "Bad debt",
+    "an amount a customer will not pay. The seller writes it off, which removes it from accounts receivable and records it as an expense."
+   ],
+   [
+    "Discount",
+    "a cut in the amount owed, offered to a customer who pays early. The customer pays less than the invoice total, and the seller receives less cash."
+   ]
+  ],
+  "remember": "All four cut a debt: returns for goods sent back, bad debts for unpaid amounts, discounts for paying early.",
+  "a": {
+   "q": "Priya's Pantry sells goods on credit to a café. The café returns damaged goods. What happens in Priya's records?",
+   "opts": [
+    "Accounts receivable falls",
+    "Accounts receivable rises",
+    "Accounts payable falls",
+    "Accounts payable rises"
+   ],
+   "why": "A sales return means the customer owes less, so the seller's accounts receivable falls. Accounts payable is what the business owes its own suppliers, and a customer's return does not change it.",
+   "clue": "Priya is the seller, so think about what the café owes her."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Tyres buys stock on credit from a supplier and sends some faulty tyres back. Which result is correct?",
+   "opts": [
+    "Tom owes the supplier less, so accounts payable falls",
+    "The supplier owes Tom, so accounts receivable rises",
+    "Tom writes the amount off, so bad debts expense rises",
+    "Tom earns a discount, so the supplier receives less cash"
+   ],
+   "why": "Tom is the buyer, so a purchase return cuts what he owes and accounts payable falls. The supplier does not owe Tom money, because the return only lowers Tom's own debt. It is not a bad debt or a discount, because no customer failed to pay and nothing was paid early.",
+   "clue": "Tom is the buyer. Whose debt shrinks when goods go back?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says returns and write-offs cut what is owed, while a discount cuts what is paid. This implies a discount does not reduce the amount owed, but the card defines a discount as 'a cut in the amount owed'. A discount also reduces accounts receivable, so the remember line's neat split contradicts the card."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says returns and write-offs cut what is owed, while a discount cuts what is paid. This implies a discount does not reduce the amount owed, but the card defines a discount as 'a cut in the amount owed'. A discount also reduces accounts receivable, so the remember line's neat split contradicts the card."
+  ]
+ },
+ "final": {
+  "title": "Returns, bad debts and discounts",
+  "card": [
+   [
+    "Sales return",
+    "goods a customer sends back to the seller. The seller lowers the amount the customer owes, so accounts receivable falls."
+   ],
+   [
+    "Purchase return",
+    "goods the business sends back to a supplier. The business owes less, so accounts payable falls."
+   ],
+   [
+    "Bad debt",
+    "an amount a customer will not pay. The seller writes it off, which removes it from accounts receivable and records it as an expense."
+   ],
+   [
+    "Discount",
+    "a cut in the amount owed, offered to a customer who pays early. The customer pays less than the invoice total, and the seller receives less cash."
+   ]
+  ],
+  "remember": "All four cut a debt: returns for goods sent back, bad debts for unpaid amounts, discounts for paying early.",
+  "a": {
+   "q": "Priya's Pantry sells goods on credit to a café. The café returns damaged goods. What happens in Priya's records?",
+   "opts": [
+    "Accounts receivable falls",
+    "Accounts receivable rises",
+    "Accounts payable falls",
+    "Accounts payable rises"
+   ],
+   "why": "A sales return means the customer owes less, so the seller's accounts receivable falls. Accounts payable is what the business owes its own suppliers, and a customer's return does not change it.",
+   "clue": "Priya is the seller, so think about what the café owes her."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Tyres buys stock on credit from a supplier and sends some faulty tyres back. Which result is correct?",
+   "opts": [
+    "Tom owes the supplier less, so accounts payable falls",
+    "The supplier owes Tom, so accounts receivable rises",
+    "Tom writes the amount off, so bad debts expense rises",
+    "Tom earns a discount, so the supplier receives less cash"
+   ],
+   "why": "Tom is the buyer, so a purchase return cuts what he owes and accounts payable falls. The supplier does not owe Tom money, because the return only lowers Tom's own debt. It is not a bad debt or a discount, because no customer failed to pay and nothing was paid early.",
+   "clue": "Tom is the buyer. Whose debt shrinks when goods go back?"
+  }
+ },
+ "cleared_by": "auto"
+}

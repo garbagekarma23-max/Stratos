@@ -35,7 +35,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   check(await shown(d.p, '#setup') && !(await shown(d.p, '#welcome')) && !(await shown(d.p, '#sheet')), 'the intro fades into the country step, full screen, not the sheet', R);
   check((await title(d.p)) === 'Where do you study?' && (await d.p.locator('#setup .rule').textContent()) === GUESS, 'Where do you study?, with the line about the guess', R);
   check((await checked(d.p))[0].startsWith('Australia') && (await d.p.locator('#setup .places .choice').first().textContent()).startsWith('Australia'), 'Australia is guessed, picked and first', R);
-  check((await d.p.locator('#setup .places .choice').first().locator('small').textContent()) === 'NSW courses and international courses', 'with its line under it', R);
+  check((await d.p.locator('#setup .places .choice').first().locator('small').textContent()) === 'NSW and VIC courses and international courses', 'with its line under it, naming the states with courses', R);
   check((await d.p.locator('#placeIn').getAttribute('placeholder')) === 'Search countries' && await d.p.evaluate(() => document.activeElement.id !== 'placeIn'), 'the search box is there, but not focused, so no keyboard comes up', R);
   check((await d.p.locator('#setup .fine').textContent()) === 'This uses no location, and nothing is sent anywhere.', 'and the line that nothing is sent', R);
   check((await d.p.locator('#setup [data-act="placenext"]').textContent()) === 'Next', 'the button says Next, for a country with states', R);
@@ -46,7 +46,7 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   await tap(d.p, '#setup [data-act="placenext"]');
   check((await title(d.p)) === 'Which state or territory?' && (await d.p.locator('#setup .rule').textContent()) === 'Pick yours to see its courses.', 'Next shows Which state or territory?', R);
   const states = await d.p.locator('#setup .choice').allTextContents();
-  check(states.length === 8 && states[0] === 'New South WalesHSC' && states.slice(1).every(t => t.endsWith('Courses coming')), 'the eight, with NSW saying HSC and the others Courses coming', R);
+  check(states.length === 8 && states[0] === 'New South WalesHSC' && states[1] === 'VictoriaVCE' && states.slice(2).every(t => t.endsWith('Courses coming')), 'the eight, with NSW saying HSC, Victoria VCE and the others Courses coming', R);
   check((await checked(d.p))[0] === 'New South WalesHSC', 'NSW is picked, from the time zone', R);
   check((await d.p.locator('#setup .cta .primary').textContent()) === 'Show courses' && (await d.p.locator('#setup .cta .ghost').textContent()) === 'Back', 'with Show courses and Back', R);
   await tap(d.p, '#setup [data-act="placeback"]');
@@ -133,15 +133,30 @@ function watch(d) { const seen = []; d.p.on('request', r => { if (!/^http:\/\/(1
   await close(d);
 }
 {
-  // Victoria has no courses of its own yet: the first international course.
-  const d = await open({setup: true, tz: 'Australia/Melbourne'});
+  // Queensland has no courses of its own yet: the first international course.
+  const d = await open({setup: true, tz: 'Australia/Brisbane'});
   await tap(d.p, '#setup [data-act="placenext"]');
-  check((await checked(d.p))[0] === 'VictoriaCourses coming', 'a Melbourne phone guesses Victoria', R);
+  check((await checked(d.p))[0] === 'QueenslandCourses coming', 'a Brisbane phone guesses Queensland', R);
   await tap(d.p, '#setup [data-act="placedone"]');
-  check((await d.p.locator('#setup .p-in > .sub').first().textContent()) === 'Courses for Victoria are coming. The international courses below work anywhere.', 'Victoria says its courses are coming', R);
+  check((await d.p.locator('#setup .p-in > .sub').first().textContent()) === 'Courses for Queensland are coming. The international courses below work anywhere.', 'Queensland says its courses are coming', R);
   check(JSON.stringify(await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub))) === JSON.stringify(['edexcel']), 'and lists only the international course', R);
   await tap(d.p, '#setup [data-act="firstnone"]', 200);
   check((await d.p.locator('.subject').textContent()) === 'Economics, International A Level (Edexcel)' && (await toastText(d.p)) === TRY, 'My course isn’t here yet opens Home on the international course, with the toast', R);
+  await close(d);
+}
+{
+  // Victoria has courses of its own: its VCE courses, then the international one, and My course isn’t here yet
+  // picks Victoria's first course.
+  const d = await open({setup: true, tz: 'Australia/Melbourne'});
+  await tap(d.p, '#setup [data-act="placenext"]');
+  check((await checked(d.p))[0] === 'VictoriaVCE', 'a Melbourne phone guesses Victoria, which says VCE', R);
+  await tap(d.p, '#setup [data-act="placedone"]');
+  const vic = loadContent().CURRICULA.vic.courses;
+  const subs = await d.p.locator('#setup .pick[data-sub]').evaluateAll(b => b.map(x => x.dataset.sub));
+  check(vic.length > 0 && subs.length === vic.length + 1 && subs[subs.length - 1] === 'edexcel' && vic.every(id => subs.includes(id)) && (await d.p.locator('#setup .p-in > .sub').first().textContent()) === 'More Victorian subjects are coming.', 'Victoria lists its ' + vic.length + ' VCE courses, its line, then the international course', R);
+  await tap(d.p, '#setup [data-act="firstnone"]', 200);
+  const s = await saved(d.p);
+  check(s.subject === vic[0] && s.picked === 1 && (await toastText(d.p)) === TRY, 'My course isn’t here yet opens Home on Victoria\'s first course, with the toast', R);
   await close(d);
 }
 {

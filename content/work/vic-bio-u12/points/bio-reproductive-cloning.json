@@ -1,0 +1,188 @@
+{
+ "id": "bio-reproductive-cloning",
+ "title": "Reproductive cloning",
+ "brief": "832da08c9d0b",
+ "shortlist": [
+  [
+   "bio-cloning",
+   0.38
+  ],
+  [
+   "bio-reproductive-technologies",
+   0.262
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:18Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:29Z check: flagged",
+  "2026-11-01T08:33:48Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00625,
+  "check": 0.01079,
+  "fix": 0.02634
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers cloning at gene, cell and organism levels, including plant cuttings and Dolly, so it is broader than the new point on reproductive cloning by somatic cell nuclear transfer, and its questions focus on plant cloning rather than that technique.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reproductive cloning",
+  "card": [
+   "Reproductive cloning makes a new organism that is genetically identical to an existing one. It is done in a laboratory and needs no fertilisation by sperm.",
+   "In somatic cell nuclear transfer (SCNT), the nucleus is removed from an egg cell. A nucleus from a body (somatic) cell of the donor is put in its place.",
+   "The egg is stimulated to divide and grow into an embryo. The embryo is placed in a surrogate mother, who carries it to birth.",
+   "The clone has the same nuclear DNA as the donor, not the egg provider or the surrogate. Dolly the sheep, born in 1996, was made this way."
+  ],
+  "remember": "In SCNT, a donor's body-cell nucleus goes into an emptied egg, so the clone matches the donor.",
+  "a": {
+   "q": "In SCNT, the clone is genetically identical to which animal?",
+   "opts": [
+    "The animal that donated the body-cell nucleus",
+    "The animal that provided the egg cell",
+    "The surrogate mother that carried the embryo",
+    "A father whose sperm fertilised the egg"
+   ],
+   "why": "The nucleus from the donor's body cell holds the DNA the clone grows from. The egg's own nucleus is removed, and the surrogate only carries the embryo.",
+   "clue": "Which cell's nucleus ends up inside the egg?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm clones a prize ram, Max, using SCNT. A body cell from Max is used, an egg from ewe Ola, and ewe Pia carries the embryo. The lamb is most similar genetically to which sheep?",
+   "opts": [
+    "Max, because his nucleus was put in the egg",
+    "Ola, because her egg cell grew into the lamb",
+    "Pia, because she carried the lamb to birth",
+    "Max and Ola equally, because both gave cells"
+   ],
+   "why": "The lamb's nuclear DNA comes from Max's body cell. Ola's egg nucleus was removed, so it gives almost none of the lamb's DNA, and Pia only provides a womb.",
+   "clue": "Whose nucleus stays in the egg after the swap?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The animal that donated the body-cell nucleus",
+   "also_right": []
+  },
+  "b": {
+   "best": "Max, because his nucleus was put in the egg",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says Ola's egg gives 'almost none' of the lamb's DNA. This hints at mitochondrial DNA, which the card never mentions. The card's first line calls the clone 'genetically identical', so a student may be confused about where any of Ola's DNA comes from."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out (SCNT steps; Dolly born 1996), and both questions have one clear right answer. The only issue is minor: why (b) mentions the egg giving 'almost none' of the DNA, which hints at mitochondrial DNA the card never explains."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says Ola's egg gives 'almost none' of the lamb's DNA. This hints at mitochondrial DNA, which the card never mentions. The card's first line calls the clone 'genetically identical', so a student may be confused about where any of Ola's DNA comes from."
+ ],
+ "proposal": {
+  "title": "Reproductive cloning",
+  "card": [
+   "Reproductive cloning makes a new organism that is genetically identical to an existing one. It is done in a laboratory and needs no fertilisation by sperm.",
+   "In somatic cell nuclear transfer (SCNT), the nucleus is removed from an egg cell. A nucleus from a body (somatic) cell of the donor is put in its place.",
+   "The egg is stimulated to divide and grow into an embryo. The embryo is placed in a surrogate mother, who carries it to birth.",
+   "The clone has the same nuclear DNA as the donor, not the egg provider or the surrogate. Dolly the sheep, born in 1996, was made this way."
+  ],
+  "remember": "In SCNT, a donor's body-cell nucleus goes into an emptied egg, so the clone matches the donor.",
+  "a": {
+   "q": "In SCNT, the clone is genetically identical to which animal?",
+   "opts": [
+    "The animal that donated the body-cell nucleus",
+    "The animal that provided the egg cell",
+    "The surrogate mother that carried the embryo",
+    "The animal whose sperm fertilised the egg"
+   ],
+   "why": "The nucleus from the donor's body cell holds the DNA the clone grows from. The egg's own nucleus is removed, and the surrogate only carries the embryo. No sperm is used in SCNT.",
+   "clue": "Which cell's nucleus ends up inside the egg?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm clones a prize ram, Max, using SCNT. A body cell from Max is used, an egg from ewe Ola, and ewe Pia carries the embryo. The lamb is most similar genetically to which sheep?",
+   "opts": [
+    "Max, because his nucleus was put in the egg",
+    "Ola, because her egg cell grew into the lamb",
+    "Pia, because she carried the lamb to birth",
+    "Max and Ola equally, because both gave cells"
+   ],
+   "why": "The lamb's nuclear DNA comes from Max's body cell. Ola's egg nucleus was removed before the swap, so her nuclear DNA is not in the lamb, even though her egg grew into the embryo. Pia only carries the embryo to birth.",
+   "clue": "Whose nucleus stays in the egg after the swap?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says Ola's egg gives 'almost none' of the lamb's DNA. This hints at mitochondrial DNA, which the card never mentions. The card's first line calls the clone 'genetically identical', so a student may be confused about where any of Ola's DNA comes from."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says Ola's egg gives 'almost none' of the lamb's DNA. This hints at mitochondrial DNA, which the card never mentions. The card's first line calls the clone 'genetically identical', so a student may be confused about where any of Ola's DNA comes from."
+  ]
+ },
+ "final": {
+  "title": "Reproductive cloning",
+  "card": [
+   "Reproductive cloning makes a new organism that is genetically identical to an existing one. It is done in a laboratory and needs no fertilisation by sperm.",
+   "In somatic cell nuclear transfer (SCNT), the nucleus is removed from an egg cell. A nucleus from a body (somatic) cell of the donor is put in its place.",
+   "The egg is stimulated to divide and grow into an embryo. The embryo is placed in a surrogate mother, who carries it to birth.",
+   "The clone has the same nuclear DNA as the donor, not the egg provider or the surrogate. Dolly the sheep, born in 1996, was made this way."
+  ],
+  "remember": "In SCNT, a donor's body-cell nucleus goes into an emptied egg, so the clone matches the donor.",
+  "a": {
+   "q": "In SCNT, the clone is genetically identical to which animal?",
+   "opts": [
+    "The animal that donated the body-cell nucleus",
+    "The animal that provided the egg cell",
+    "The surrogate mother that carried the embryo",
+    "The animal whose sperm fertilised the egg"
+   ],
+   "why": "The nucleus from the donor's body cell holds the DNA the clone grows from. The egg's own nucleus is removed, and the surrogate only carries the embryo. No sperm is used in SCNT.",
+   "clue": "Which cell's nucleus ends up inside the egg?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A farm clones a prize ram, Max, using SCNT. A body cell from Max is used, an egg from ewe Ola, and ewe Pia carries the embryo. The lamb is most similar genetically to which sheep?",
+   "opts": [
+    "Max, because his nucleus was put in the egg",
+    "Ola, because her egg cell grew into the lamb",
+    "Pia, because she carried the lamb to birth",
+    "Max and Ola equally, because both gave cells"
+   ],
+   "why": "The lamb's nuclear DNA comes from Max's body cell. Ola's egg nucleus was removed before the swap, so her nuclear DNA is not in the lamb, even though her egg grew into the embryo. Pia only carries the embryo to birth.",
+   "clue": "Whose nucleus stays in the egg after the swap?"
+  }
+ },
+ "cleared_by": "auto"
+}

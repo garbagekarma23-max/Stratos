@@ -1,0 +1,257 @@
+{
+ "id": "mat-gst-price",
+ "title": "GST and price",
+ "brief": "244848f0aace",
+ "shortlist": [
+  [
+   "mat-gst",
+   0.877
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says reuse mat-gst, so to the Opus match check, as every reuse is",
+  "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "confirm": 0.006,
+  "write": 0.00448,
+  "check": 0.01329,
+  "fix": 0.02471,
+  "recheck": 0.00561
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-gst",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches the same rule, that GST is 10% and a GST-inclusive price is found by multiplying by 1.1, at the right Year 11 depth, and GST is a federal rate so it applies in Victoria unchanged; its extra material on finding the GST is consistent with the new point and its questions are fair.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point also teaches finding the GST inside a GST-inclusive price by dividing by 11, and its second question tests that, so it is broader than this brief, which covers only adding 10% GST by multiplying by 1.1.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "GST and price",
+  "card": [
+   "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
+   [
+    "Adding GST",
+    "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+   ],
+   [
+    "Removing GST",
+    "price without GST = price with GST ÷ 1.1. The GST is the 10% of the price without GST, not 10% of the total."
+   ],
+   [
+    "Example",
+    "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."
+   ]
+  ],
+  "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
+  "a": {
+   "q": "A printer costs $450 before GST. What is its price including GST?",
+   "opts": [
+    "$495",
+    "$405",
+    "$450.10",
+    "$409.09"
+   ],
+   "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% gives $405, which takes GST off instead of adding it.",
+   "clue": "Adding GST means multiplying the price before GST."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia buys a desk for $1100 including GST. How much of that price is GST?",
+   "opts": [
+    "$100",
+    "$110",
+    "$1000",
+    "$990"
+   ],
+   "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+   "clue": "Find the price without GST first, then subtract."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$495",
+   "also_right": []
+  },
+  "b": {
+   "best": "$100",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says subtracting 10% to get $405 'takes GST off'. That is not how GST is removed: the card says to divide by 1.1, which would give $409.09. The why should say $405 is simply wrong, so students do not learn that taking 10% off removes GST."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'The GST is the 10% of the price without GST' has a stray 'the' and reads awkwardly. It should read 'GST is 10% of the price without GST'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with answers $495 and $100. Why (a) wrongly implies that subtracting 10% removes GST, which contradicts the card's divide-by-1.1 method, and there is a small grammar slip on the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says subtracting 10% to get $405 'takes GST off'. That is not how GST is removed: the card says to divide by 1.1, which would give $409.09. The why should say $405 is simply wrong, so students do not learn that taking 10% off removes GST.",
+  "Card, wording: 'The GST is the 10% of the price without GST' has a stray 'the' and reads awkwardly. It should read 'GST is 10% of the price without GST'."
+ ],
+ "proposal": {
+  "title": "GST and price",
+  "card": [
+   "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
+   [
+    "Adding GST",
+    "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+   ],
+   [
+    "Removing GST",
+    "price without GST = price with GST ÷ 1.1. GST is 10% of the price without GST, not 10% of the total."
+   ],
+   [
+    "Example",
+    "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."
+   ]
+  ],
+  "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
+  "a": {
+   "q": "A printer costs $450 before GST. What is its price including GST?",
+   "opts": [
+    "$495",
+    "$405",
+    "$450.10",
+    "$409.09"
+   ],
+   "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
+   "clue": "Adding GST means multiplying the price before GST."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia buys a desk for $1100 including GST. How much of that price is GST?",
+   "opts": [
+    "$100",
+    "$110",
+    "$1000",
+    "$990"
+   ],
+   "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+   "clue": "Find the price without GST first, then subtract."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$495",
+    "also_right": []
+   },
+   "b": {
+    "best": "$100",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says subtracting 10% to get $405 'takes GST off'. That is not how GST is removed: the card says to divide by 1.1, which would give $409.09. The why should say $405 is simply wrong, so students do not learn that taking 10% off removes GST."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'The GST is the 10% of the price without GST' has a stray 'the' and reads awkwardly. It should read 'GST is 10% of the price without GST'."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says subtracting 10% to get $405 'takes GST off'. That is not how GST is removed: the card says to divide by 1.1, which would give $409.09. The why should say $405 is simply wrong, so students do not learn that taking 10% off removes GST.",
+   "Card, wording: 'The GST is the 10% of the price without GST' has a stray 'the' and reads awkwardly. It should read 'GST is 10% of the price without GST'."
+  ]
+ },
+ "final": {
+  "title": "GST and price",
+  "card": [
+   "GST is the goods and services tax. In Australia it is 10% of the price before tax. It is added to the price of most goods and services.",
+   [
+    "Adding GST",
+    "price with GST = price without GST × 1.1. Example: a $200 bike has GST of $20, so it costs $200 × 1.1 = $220."
+   ],
+   [
+    "Removing GST",
+    "price without GST = price with GST ÷ 1.1. GST is 10% of the price without GST, not 10% of the total."
+   ],
+   [
+    "Example",
+    "A jacket costs $330 with GST. Without GST it is $330 ÷ 1.1 = $300. The GST is $330 − $300 = $30."
+   ]
+  ],
+  "remember": "Times 1.1 to add GST. Divide by 1.1 to take it off.",
+  "a": {
+   "q": "A printer costs $450 before GST. What is its price including GST?",
+   "opts": [
+    "$495",
+    "$405",
+    "$450.10",
+    "$409.09"
+   ],
+   "why": "Price with GST = $450 × 1.1 = $495. Subtracting 10% to get $405 is simply wrong, because adding GST makes the price go up. Dividing by 1.1 gives $409.09, which is how you would remove GST, not add it.",
+   "clue": "Adding GST means multiplying the price before GST."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia buys a desk for $1100 including GST. How much of that price is GST?",
+   "opts": [
+    "$100",
+    "$110",
+    "$1000",
+    "$990"
+   ],
+   "why": "Price without GST = $1100 ÷ 1.1 = $1000, so the GST is $1100 − $1000 = $100. Taking 10% of $1100 gives $110, but GST is 10% of the price before GST, not of the total.",
+   "clue": "Find the price without GST first, then subtract."
+  }
+ },
+ "cleared_by": "recheck"
+}

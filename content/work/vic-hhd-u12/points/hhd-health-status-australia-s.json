@@ -1,0 +1,149 @@
+{
+ "id": "hhd-health-status-australia-s",
+ "title": "The health status of Australia's youth",
+ "brief": "b5ba466839f6",
+ "shortlist": [
+  [
+   "hms-young-people-s-health",
+   0.387
+  ],
+  [
+   "hms-mental-health-as-priority",
+   0.371
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.363
+  ],
+  [
+   "hms-community-health-resources",
+   0.335
+  ],
+  [
+   "hms-health-promotion",
+   0.331
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: failed the content check, writing again",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:50Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01052,
+  "check": 0.01075,
+  "fix": 0.01716
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point describes the overall health status of young Australians, such as self-rated health and the common concerns of mental health, injury and overweight. The closest, 'Young people's health', covers linked influences and location, and 'Mental health as a priority' covers only mental health, so neither teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Health status of Australia's youth",
+  "card": [
+   "Most young Australians aged 12 to 24 rate their own health as good, very good or excellent.",
+   "Mental health conditions, such as anxiety and depression, are among the most common health concerns for young people.",
+   "Injury is a major cause of illness and death among young people. Road crashes and self-harm are examples.",
+   "Overweight and obesity affect a large share of young people, and this can raise the risk of later chronic conditions."
+  ],
+  "remember": "Young people mostly feel healthy, but mental health, injury and overweight are common concerns.",
+  "a": {
+   "q": "Which statement best describes the health of young Australians overall?",
+   "opts": [
+    "Most rate their health highly, but some concerns are common",
+    "Most rate their health poorly because of chronic disease",
+    "Their health is excellent with no major concerns",
+    "Their health is poor and worse than that of older adults"
+   ],
+   "why": "Most young people report good health, yet mental health conditions, injury and overweight are common. Saying there are no concerns ignores these patterns.",
+   "clue": "Think of both self-rated health and the common concerns."
+  },
+  "b": {
+   "d": 2,
+   "q": "A school nurse in Ballarat plans a program for Year 11 students. Which issue is a common health concern for young Australians?",
+   "opts": [
+    "Mental health conditions such as anxiety",
+    "Age-related dementia",
+    "Osteoporosis from old age",
+    "Hearing loss from ageing"
+   ],
+   "why": "Anxiety and other mental health conditions are common among young people. The other options are mainly conditions of older age.",
+   "clue": "Pick the condition that often appears in youth."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Most rate their health highly, but some concerns are common",
+   "also_right": []
+  },
+  "b": {
+   "best": "Mental health conditions such as anxiety",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Each wrong option is labelled as a condition of old age ('from old age', 'from ageing', 'age-related'). A question about young people therefore gives the answer away without any knowledge of youth health. The clue ('often appears in youth') makes it even more obvious. Use plausible distractors that also occur in youth but are less common, such as hearing loss or a rare condition, without the age labels."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "The facts on the card check out and both intended answers are correct. Question b is too easy, because every distractor is labelled as an old-age condition, so students can pick the answer without knowing the content."
+ },
+ "sensitive": "mental-health",
+ "flags": [
+  "Question b, wording: Each wrong option is labelled as a condition of old age ('from old age', 'from ageing', 'age-related'). A question about young people therefore gives the answer away without any knowledge of youth health. The clue ('often appears in youth') makes it even more obvious. Use plausible distractors that also occur in youth but are less common, such as hearing loss or a rare condition, without the age labels."
+ ],
+ "proposal": {
+  "title": "Health status of Australia's youth",
+  "card": [
+   "Most young Australians aged 12 to 24 rate their own health as good, very good or excellent.",
+   "Mental health conditions, such as anxiety and depression, are among the most common health concerns for young people.",
+   "Injury is a major cause of illness and death among young people. Road crashes and self-harm are examples.",
+   "Overweight and obesity affect a large share of young people, and this can raise the risk of later chronic conditions."
+  ],
+  "remember": "Young people mostly feel healthy, but mental health, injury and overweight are common concerns.",
+  "a": {
+   "q": "Which statement best describes the health of young Australians overall?",
+   "opts": [
+    "Most rate their health highly, but some concerns are common",
+    "Most rate their health poorly because of chronic disease",
+    "Their health is excellent with no major concerns",
+    "Their health is poor and worse than that of older adults"
+   ],
+   "why": "Most young people report good health, yet mental health conditions, injury and overweight are common. Saying there are no concerns ignores these patterns.",
+   "clue": "Think of both self-rated health and the common concerns."
+  },
+  "b": {
+   "d": 2,
+   "q": "A school nurse in Ballarat plans a program for Year 11 students. Which issue is among the most common health concerns for young Australians?",
+   "opts": [
+    "Anxiety and other mental health conditions",
+    "Epilepsy and other seizure conditions",
+    "Hearing loss and other ear conditions",
+    "Coeliac disease and other gut conditions"
+   ],
+   "why": "Mental health conditions such as anxiety are among the most common concerns for young people. Epilepsy, hearing loss and coeliac disease can occur in young people, but they affect a much smaller share of them.",
+   "clue": "Which concerns does the card name as common?"
+  }
+ },
+ "proposal_problems": []
+}

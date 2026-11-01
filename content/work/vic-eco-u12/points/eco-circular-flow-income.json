@@ -1,0 +1,203 @@
+{
+ "id": "eco-circular-flow-income",
+ "title": "The three-sector circular flow",
+ "brief": "37fcdb5e73a9",
+ "shortlist": [
+  [
+   "bus-industry-sectors",
+   0.3
+  ],
+  [
+   "bus-business-economy",
+   0.241
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:31Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:06Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00491,
+  "check": 0.01298,
+  "fix": 0.02201,
+  "recheck": 0.00965
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the three-sector circular flow of money between households, businesses and government; they cover industry sectors and business effects on the economy, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The three-sector circular flow",
+  "card": [
+   "The circular flow is a simple model of how money, resources, goods and services move around an economy. It has three sectors: households, businesses and government.",
+   [
+    "Households and businesses",
+    "Households supply labour and other resources to businesses. Businesses pay them income, such as wages. Households spend that income on goods and services from businesses."
+   ],
+   [
+    "Government",
+    "Households and businesses pay taxes to the government. The government spends this money on services such as schools and hospitals, and it also buys goods and services from businesses."
+   ],
+   "Each sector's spending becomes another sector's income, so money keeps moving in a loop. The flow of money runs the opposite way to the flow of resources, goods and services."
+  ],
+  "remember": "Spending by one sector is income for another, so money moves in a loop.",
+  "a": {
+   "q": "In the three-sector circular flow, which of these is a flow of money from the government to households?",
+   "opts": [
+    "A pension payment to a retired person",
+    "A wage paid by a cafe to a worker",
+    "Income tax paid by a nurse",
+    "A household buying groceries"
+   ],
+   "why": "The pension is a payment from the government to a household. The wage is a payment from a business to a household. Income tax runs the other way, from a household to the government, which makes it a tempting wrong answer.",
+   "clue": "Look for money that leaves the government and arrives at a household."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena works at a bakery in Geelong and spends her wages at a local shop. The shop owner pays tax on profits. Which sector receives the money Lena spends at the shop?",
+   "opts": [
+    "Businesses, as income from sales",
+    "Households, as wages for her labour",
+    "Government, as tax on her spending",
+    "Households, as tax on her purchases"
+   ],
+   "why": "When Lena spends money on goods, it goes to a business as income from sales. Her wages came from a business, so the money has moved from business to household and back to business. The government only receives money later, when taxes are paid.",
+   "clue": "Who sells the goods Lena buys?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A pension payment to a retired person",
+   "also_right": []
+  },
+  "b": {
+   "best": "Businesses, as income from sales",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The card never mentions money flowing from the government to households, such as pensions, welfare or other transfer payments, or wages for public servants. It only says the government provides services and buys from businesses. Students can reach the answer only by ruling out the other options, not from what the card teaches."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says money always runs the opposite way to resources, goods and services, but it leaves out government payments to households. Transfer payments such as the pension, which question a relies on, have no matching flow of goods or resources going the other way. The card should mention government payments to households, such as pensions and public-sector wages."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a asks about a government payment to households (a pension), but the card never teaches that this flow exists. Add transfer payments and public-sector wages to the government part of the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: The card never mentions money flowing from the government to households, such as pensions, welfare or other transfer payments, or wages for public servants. It only says the government provides services and buys from businesses. Students can reach the answer only by ruling out the other options, not from what the card teaches.",
+  "Card, fact: The card says money always runs the opposite way to resources, goods and services, but it leaves out government payments to households. Transfer payments such as the pension, which question a relies on, have no matching flow of goods or resources going the other way. The card should mention government payments to households, such as pensions and public-sector wages."
+ ],
+ "proposal": {
+  "title": "The three-sector circular flow",
+  "card": [
+   "The circular flow is a simple model of how money, resources, goods and services move around an economy. It has three sectors: households, businesses and government.",
+   [
+    "Households and businesses",
+    "Households supply labour and other resources to businesses. Businesses pay them income, such as wages. Households spend that income on goods and services from businesses."
+   ],
+   [
+    "Government",
+    "Households and businesses pay taxes to the government. The government spends this money on services such as schools, on goods from businesses, and on wages for public servants."
+   ],
+   "The government also makes transfer payments to households, such as the pension. These are payments with no good or service given in return. Each sector's spending becomes another sector's income, so money keeps moving in a loop."
+  ],
+  "remember": "Money moves in a loop: what one sector spends, another sector receives as income.",
+  "a": {
+   "q": "In the three-sector circular flow, which of these is a flow of money from the government to households?",
+   "opts": [
+    "A pension payment to a retired person",
+    "A wage paid by a café to its worker",
+    "Income tax paid by a nurse",
+    "A public school buying new textbooks"
+   ],
+   "why": "The pension is a transfer payment from the government to a household. The textbook purchase is government spending, but it goes to a business, not a household. Income tax runs the other way, from a household to the government.",
+   "clue": "Look for money that leaves the government and arrives at a household."
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena works at a bakery in Geelong and spends her wages at a local shop. The shop owner pays tax on profits. Which sector receives the money Lena spends at the shop?",
+   "opts": [
+    "Businesses, as income from sales",
+    "Households, as wages for her labour",
+    "Government, as a transfer payment",
+    "Government, as tax on the shop's profit"
+   ],
+   "why": "Lena buys goods from the shop, so her spending goes to a business as income from sales. Her wages came from a business, so the money has moved from business to household and back to business. The tax on profit is a later, separate flow from the shop to the government.",
+   "clue": "Who sells the goods Lena buys?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A pension payment to a retired person",
+    "also_right": []
+   },
+   "b": {
+    "best": "Businesses, as income from sales",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The card never mentions money flowing from the government to households, such as pensions, welfare or other transfer payments, or wages for public servants. It only says the government provides services and buys from businesses. Students can reach the answer only by ruling out the other options, not from what the card teaches."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says money always runs the opposite way to resources, goods and services, but it leaves out government payments to households. Transfer payments such as the pension, which question a relies on, have no matching flow of goods or resources going the other way. The card should mention government payments to households, such as pensions and public-sector wages."
+   }
+  ],
+  "flags": [
+   "Question a, level: The card never mentions money flowing from the government to households, such as pensions, welfare or other transfer payments, or wages for public servants. It only says the government provides services and buys from businesses. Students can reach the answer only by ruling out the other options, not from what the card teaches.",
+   "Card, fact: The card says money always runs the opposite way to resources, goods and services, but it leaves out government payments to households. Transfer payments such as the pension, which question a relies on, have no matching flow of goods or resources going the other way. The card should mention government payments to households, such as pensions and public-sector wages."
+  ]
+ }
+}

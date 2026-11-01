@@ -1,0 +1,190 @@
+{
+ "id": "chem-water-as-solvent",
+ "title": "Solubility",
+ "brief": "e3ae1a828ddc",
+ "shortlist": [
+  [
+   "chem-solubility-product",
+   0.344
+  ],
+  [
+   "chem-precipitation-reactions",
+   0.302
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:30Z write: done",
+  "2026-11-01T08:33:49Z check: flagged",
+  "2026-11-01T08:42:05Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00532,
+  "check": 0.00935,
+  "fix": 0.01412
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches reading solubility tables and graphs or how temperature changes solubility of solids and gases: the Ksp card is an equilibrium-constant point at a higher Year 12 depth, and the precipitation card is about predicting reactions, so no bank point is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Solubility",
+  "card": [
+   "Solubility is the maximum mass of a solute that dissolves in a given amount of solvent at a set temperature, such as g per 100 g of water. A solution holding that maximum is saturated.",
+   "A solubility curve plots solubility against temperature. A point on the curve is a saturated solution. A point below it is unsaturated, and more solute can still dissolve.",
+   "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
+   "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
+  ],
+  "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
+  "a": {
+   "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
+   "opts": [
+    "Unsaturated, as more solute can still dissolve",
+    "Saturated, as the solute has all dissolved",
+    "Saturated, as it is below the curve",
+    "Unsaturated, as it holds less than 100 g"
+   ],
+   "why": "The curve gives the maximum at 50 °C, which is 40 g. A solution with 25 g holds less than this, so more solute can dissolve and it is unsaturated. Having all the solute dissolved does not make a solution saturated.",
+   "clue": "Compare 25 g with the maximum at that temperature."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cools a saturated solution of a solid in water from 60 °C to 20 °C. The solid's solubility rises with temperature. What happens?",
+   "opts": [
+    "Crystals form, as the solid is less soluble at 20 °C",
+    "Nothing, as the solution is still saturated and clear",
+    "Crystals form, as cold water cannot dissolve any solid",
+    "The solution becomes unsaturated as the solid dissolves"
+   ],
+   "why": "This solid is less soluble at 20 °C, so the water can hold less than before and the extra comes out as crystals. Cold water still dissolves some of the solid, so the idea that it dissolves none is wrong.",
+   "clue": "Read the curve at the lower temperature."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Unsaturated, as more solute can still dissolve",
+   "also_right": []
+  },
+  "b": {
+   "best": "Crystals form, as the solid is less soluble at 20 °C",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Read the curve at the lower temperature', but question b gives no curve or values. Students are told only that solubility rises with temperature, so the clue points to information that isn't there and could confuse them."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, the remember line and both questions are accurate, and each question has one clear right answer. The only problem is that question b's clue refers to a solubility curve the question does not provide."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The clue says 'Read the curve at the lower temperature', but question b gives no curve or values. Students are told only that solubility rises with temperature, so the clue points to information that isn't there and could confuse them."
+ ],
+ "proposal": {
+  "title": "Solubility",
+  "card": [
+   "Solubility is the maximum mass of a solute that dissolves in a given amount of solvent at a set temperature, such as g per 100 g of water. A solution holding that maximum is saturated.",
+   "A solubility curve plots solubility against temperature. A point on the curve is a saturated solution. A point below it is unsaturated, and more solute can still dissolve.",
+   "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
+   "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
+  ],
+  "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
+  "a": {
+   "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
+   "opts": [
+    "Unsaturated, as more solute can still dissolve",
+    "Saturated, as the solute has all dissolved",
+    "Saturated, as it is below the curve",
+    "Unsaturated, as it holds less than 100 g"
+   ],
+   "why": "The curve gives the maximum at 50 °C, which is 40 g. A solution with 25 g holds less than this, so more solute can dissolve and it is unsaturated. Having all the solute dissolved does not make a solution saturated.",
+   "clue": "Compare 25 g with the maximum at that temperature."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cools a saturated solution of a solid in water from 60 °C to 20 °C. The solid's solubility rises with temperature. What happens?",
+   "opts": [
+    "Crystals form, as the solid is less soluble at 20 °C",
+    "Nothing, as the solution is still saturated and clear",
+    "Crystals form, as cold water cannot dissolve any solid",
+    "The solution becomes unsaturated as the solid dissolves"
+   ],
+   "why": "This solid is less soluble at 20 °C, so the water can hold less than before and the extra comes out as crystals. Cold water still dissolves some of the solid, so the idea that it dissolves none is wrong.",
+   "clue": "Think about how much solid the water can hold once it is cooler."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue says 'Read the curve at the lower temperature', but question b gives no curve or values. Students are told only that solubility rises with temperature, so the clue points to information that isn't there and could confuse them."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The clue says 'Read the curve at the lower temperature', but question b gives no curve or values. Students are told only that solubility rises with temperature, so the clue points to information that isn't there and could confuse them."
+  ]
+ },
+ "final": {
+  "title": "Solubility",
+  "card": [
+   "Solubility is the maximum mass of a solute that dissolves in a given amount of solvent at a set temperature, such as g per 100 g of water. A solution holding that maximum is saturated.",
+   "A solubility curve plots solubility against temperature. A point on the curve is a saturated solution. A point below it is unsaturated, and more solute can still dissolve.",
+   "For most solids, solubility rises as temperature rises, so the curve slopes up. If a saturated solution is cooled, the extra solute comes out as crystals.",
+   "For gases, solubility falls as temperature rises, so the curve slopes down. A warm drink holds less dissolved carbon dioxide than a cold one."
+  ],
+  "remember": "Solids usually dissolve better when hot. Gases dissolve better when cold.",
+  "a": {
+   "q": "A solubility curve shows a solid dissolving at 40 g per 100 g of water at 50 °C. A solution at 50 °C holds 25 g in 100 g of water. How is it best described?",
+   "opts": [
+    "Unsaturated, as more solute can still dissolve",
+    "Saturated, as the solute has all dissolved",
+    "Saturated, as it is below the curve",
+    "Unsaturated, as it holds less than 100 g"
+   ],
+   "why": "The curve gives the maximum at 50 °C, which is 40 g. A solution with 25 g holds less than this, so more solute can dissolve and it is unsaturated. Having all the solute dissolved does not make a solution saturated.",
+   "clue": "Compare 25 g with the maximum at that temperature."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia cools a saturated solution of a solid in water from 60 °C to 20 °C. The solid's solubility rises with temperature. What happens?",
+   "opts": [
+    "Crystals form, as the solid is less soluble at 20 °C",
+    "Nothing, as the solution is still saturated and clear",
+    "Crystals form, as cold water cannot dissolve any solid",
+    "The solution becomes unsaturated as the solid dissolves"
+   ],
+   "why": "This solid is less soluble at 20 °C, so the water can hold less than before and the extra comes out as crystals. Cold water still dissolves some of the solid, so the idea that it dissolves none is wrong.",
+   "clue": "Think about how much solid the water can hold once it is cooler."
+  }
+ },
+ "cleared_by": "auto"
+}

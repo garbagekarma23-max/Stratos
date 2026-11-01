@@ -1,0 +1,196 @@
+{
+ "id": "acc-inventory-management",
+ "title": "Inventory management",
+ "brief": "0262d4eac882",
+ "shortlist": [
+  [
+   "bus-inventory-management",
+   0.405
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: flagged",
+  "2026-11-01T08:33:47Z fix: suggested",
+  "2026-11-01T09:24:23Z autoreview: cleared with the fix (b other, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00591,
+  "check": 0.01081,
+  "fix": 0.01607
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the costs of holding stock and FIFO/LIFO valuation, while the new point is about management controls such as regular counts, rotating stock, expected levels and strong controls, so it teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Inventory management",
+  "card": [
+   "Holding inventory ties up cash, and stock can go missing or go out of date. Good management reduces these problems.",
+   "Regular counts compare stock on the shelves with the records, so losses are found early. Setting expected levels shows when to reorder and warns of too much or too little stock.",
+   "Rotating stock means selling older items first, so goods do not spoil or go out of date. Stocking goods that sell together, such as phone cases with phones, can lift sales.",
+   "Strong controls, such as locked storerooms and limits on who can access or change stock records, help stop theft and mistakes."
+  ],
+  "remember": "Good inventory management keeps stock available, fresh and safe without tying up too much cash.",
+  "a": {
+   "q": "Ravi's deli in Shepparton sells fresh dairy goods. Which practice best stops older items from passing their use-by date?",
+   "opts": [
+    "Selling the older items first",
+    "Buying much more stock each week",
+    "Counting stock once a year",
+    "Selling the newest items first"
+   ],
+   "why": "Rotating stock by selling older items first means goods are used before they expire. Buying more stock would tie up more cash and leave more to spoil.",
+   "clue": "Think about which items should leave the shelf first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ella's hardware store in Wodonga holds far more paint than it sells. What is the main problem this causes?",
+   "opts": [
+    "Cash is tied up in unsold stock",
+    "Gross profit is overstated",
+    "Sales revenue is too high",
+    "Stock cannot be counted"
+   ],
+   "why": "Stock that sits unsold uses up cash that could be used elsewhere. It does not raise sales revenue or gross profit, which come only from goods sold.",
+   "clue": "Money spent on paint is not available for other uses."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Selling the older items first",
+   "also_right": []
+  },
+  "b": {
+   "best": "Cash is tied up in unsold stock",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Money spent on paint is not available for other uses' restates the right option, so students can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why explains where sales revenue and gross profit come from ('which come only from goods sold'). Gross profit belongs to point 3 (Cost of sales and gross profit), so it should only be mentioned here, not explained."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are accurate and each has one clear answer. The clue for b gives the answer away, and the why for b explains gross profit, which belongs to point 3."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Money spent on paint is not available for other uses' restates the right option, so students can pick it without knowing the idea.",
+  "Question b, other: The why explains where sales revenue and gross profit come from ('which come only from goods sold'). Gross profit belongs to point 3 (Cost of sales and gross profit), so it should only be mentioned here, not explained."
+ ],
+ "proposal": {
+  "title": "Inventory management",
+  "card": [
+   "Holding inventory ties up cash, and stock can go missing or go out of date. Good management reduces these problems.",
+   "Regular counts compare stock on the shelves with the records, so losses are found early. Setting expected levels shows when to reorder and warns of too much or too little stock.",
+   "Rotating stock means selling older items first, so goods do not spoil or go out of date. Stocking goods that sell together, such as phone cases with phones, can lift sales.",
+   "Strong controls, such as locked storerooms and limits on who can access or change stock records, help stop theft and mistakes."
+  ],
+  "remember": "Good inventory management keeps stock available, fresh and safe without tying up too much cash.",
+  "a": {
+   "q": "Ravi's deli in Shepparton sells fresh dairy goods. Which practice best stops older items from passing their use-by date?",
+   "opts": [
+    "Selling the older items first",
+    "Buying much more stock each week",
+    "Counting stock once a year",
+    "Selling the newest items first"
+   ],
+   "why": "Rotating stock by selling older items first means goods are used before they expire. Buying more stock would tie up more cash and leave more to spoil.",
+   "clue": "Think about which items should leave the shelf first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ella's hardware store in Wodonga holds far more paint than it sells. What is the main problem this causes?",
+   "opts": [
+    "Cash is tied up in unsold stock",
+    "The store is likely to run out of paint",
+    "The store will soon need to reorder paint",
+    "Anyone can change the stock records"
+   ],
+   "why": "Paint that sits unsold holds money the store could have used for wages, bills or other goods. Running out and needing to reorder are problems of too little stock, not too much.",
+   "clue": "Think about what Ella spent to fill her shelves."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:23Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Money spent on paint is not available for other uses' restates the right option, so students can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why explains where sales revenue and gross profit come from ('which come only from goods sold'). Gross profit belongs to point 3 (Cost of sales and gross profit), so it should only be mentioned here, not explained."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Money spent on paint is not available for other uses' restates the right option, so students can pick it without knowing the idea.",
+   "Question b, other: The why explains where sales revenue and gross profit come from ('which come only from goods sold'). Gross profit belongs to point 3 (Cost of sales and gross profit), so it should only be mentioned here, not explained."
+  ]
+ },
+ "final": {
+  "title": "Inventory management",
+  "card": [
+   "Holding inventory ties up cash, and stock can go missing or go out of date. Good management reduces these problems.",
+   "Regular counts compare stock on the shelves with the records, so losses are found early. Setting expected levels shows when to reorder and warns of too much or too little stock.",
+   "Rotating stock means selling older items first, so goods do not spoil or go out of date. Stocking goods that sell together, such as phone cases with phones, can lift sales.",
+   "Strong controls, such as locked storerooms and limits on who can access or change stock records, help stop theft and mistakes."
+  ],
+  "remember": "Good inventory management keeps stock available, fresh and safe without tying up too much cash.",
+  "a": {
+   "q": "Ravi's deli in Shepparton sells fresh dairy goods. Which practice best stops older items from passing their use-by date?",
+   "opts": [
+    "Selling the older items first",
+    "Buying much more stock each week",
+    "Counting stock once a year",
+    "Selling the newest items first"
+   ],
+   "why": "Rotating stock by selling older items first means goods are used before they expire. Buying more stock would tie up more cash and leave more to spoil.",
+   "clue": "Think about which items should leave the shelf first."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ella's hardware store in Wodonga holds far more paint than it sells. What is the main problem this causes?",
+   "opts": [
+    "Cash is tied up in unsold stock",
+    "The store is likely to run out of paint",
+    "The store will soon need to reorder paint",
+    "Anyone can change the stock records"
+   ],
+   "why": "Paint that sits unsold holds money the store could have used for wages, bills or other goods. Running out and needing to reorder are problems of too little stock, not too much.",
+   "clue": "Think about what Ella spent to fill her shelves."
+  }
+ },
+ "cleared_by": "auto"
+}

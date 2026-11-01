@@ -1,0 +1,187 @@
+{
+ "id": "mat-vertices-edges-degree",
+ "title": "Vertices, edges and degree",
+ "brief": "7f155813296e",
+ "shortlist": [
+  [
+   "mat-network-terms",
+   0.711
+  ],
+  [
+   "mat-trees",
+   0.44
+  ],
+  [
+   "mat-walks-paths-circuits",
+   0.364
+  ],
+  [
+   "mat-minimum-spanning-trees",
+   0.334
+  ],
+  [
+   "mat-cuts",
+   0.252
+  ]
+ ],
+ "stage": "review",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 may adapt mat-network-terms, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:24:33Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.00807,
+  "write": 0.00454,
+  "check": 0.01121,
+  "fix": 0.03525
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-network-terms",
+  "changes": [
+   "Name the structure a graph, as the brief does, rather than a network, since the new point uses the term graph."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same vertex, edge and degree ideas at the right depth, but it calls the structure a network and adds weighted networks, so a small wording change is needed to match this point.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-network-terms, also teaches weighted networks and tests weights in one of its questions, so it is broader than this point, which covers only vertices, edges and degree.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Vertices, edges and degree",
+  "card": [
+   [
+    "Vertex",
+    "a point on a graph, often drawn as a dot. It can stand for a place, a person or a team."
+   ],
+   [
+    "Edge",
+    "a line that joins two vertices. It can stand for a road, a friendship or a match between two teams."
+   ],
+   [
+    "Degree",
+    "the number of edges that meet a vertex. A vertex with 3 edges meeting it has degree 3."
+   ],
+   "Example: a graph has vertices A, B, C and D, with edges AB, AC, AD and BC. A has 3 edges meeting it, so its degree is 3. D has only AD, so its degree is 1."
+  ],
+  "remember": "Count the edges at a vertex to find its degree, not the vertices it touches by name.",
+  "a": {
+   "q": "A graph has vertices P, Q, R and S, and edges PQ, PR, PS and QR. What is the degree of vertex R?",
+   "opts": [
+    "2",
+    "3",
+    "1",
+    "4"
+   ],
+   "why": "The edges meeting R are PR and QR, so the degree of R is 2. The answer 3 is the degree of P, which has PQ, PR and PS.",
+   "clue": "List only the edges that include the letter R."
+  },
+  "b": {
+   "d": 2,
+   "q": "A graph shows five towns as vertices and has 6 edges for the roads between them. The towns have degrees 3, 3, 2, 2 and 2. Which town has the most roads meeting it?",
+   "opts": [
+    "A town with degree 3",
+    "A town with degree 2",
+    "A town with degree 6",
+    "A town with degree 5"
+   ],
+   "why": "Degree is the number of edges meeting a vertex, so the largest degree has the most roads. The largest degree listed is 3. The number 6 counts all the edges on the graph, not the edges at one town.",
+   "clue": "Which degree in the list is the largest?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2",
+   "also_right": []
+  },
+  "b": {
+   "best": "A town with degree 3",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The contrast 'not the vertices it touches by name' is unclear. In a simple graph like the card's example, counting edges and counting neighbouring vertices give the same number, so students may not see what mistake they are being warned about."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The stem lists the degrees, so a student only has to pick the largest number. The clue says exactly that, so the question barely tests the idea of degree at Year 11 level."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct. The remember line's contrast is unclear, and question b is so easy, with its clue, that it gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The contrast 'not the vertices it touches by name' is unclear. In a simple graph like the card's example, counting edges and counting neighbouring vertices give the same number, so students may not see what mistake they are being warned about.",
+  "Question b, level: The stem lists the degrees, so a student only has to pick the largest number. The clue says exactly that, so the question barely tests the idea of degree at Year 11 level."
+ ],
+ "proposal": {
+  "title": "Vertices, edges and degree",
+  "card": [
+   [
+    "Vertex",
+    "a point on a graph, often drawn as a dot. It can stand for a place, a person or a team."
+   ],
+   [
+    "Edge",
+    "a line that joins two vertices. It can stand for a road, a friendship or a match between two teams."
+   ],
+   [
+    "Degree",
+    "the number of edges that meet a vertex. Each edge joins two vertices, so it adds 1 to the degree of both of them."
+   ],
+   "Example: a graph has edges AB, AC, AD and BC. A meets AB, AC and AD, so its degree is 3. B meets AB and BC, so its degree is 2, even though B is named second in AB."
+  ],
+  "remember": "Degree counts the edges at one vertex. Check every edge, whichever end the vertex is named at.",
+  "a": {
+   "q": "A graph has vertices P, Q, R and S, and edges PQ, PR, PS and QR. What is the degree of vertex R?",
+   "opts": [
+    "2",
+    "3",
+    "1",
+    "4"
+   ],
+   "why": "The edges meeting R are PR and QR, so the degree of R is 2. The answer 3 is the degree of P, which has PQ, PR and PS.",
+   "clue": "List only the edges that include the letter R."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph shows roads between towns: Ash–Bell, Ash–Cole, Ash–Dale, Bell–Cole, Cole–Dale and Cole–Eden. Which town has the largest degree?",
+   "opts": [
+    "Cole, with degree 4",
+    "Ash, with degree 3",
+    "Cole, with degree 6",
+    "Bell, with degree 2"
+   ],
+   "why": "Cole meets Ash–Cole, Bell–Cole, Cole–Dale and Cole–Eden, so its degree is 4, more than Ash's 3. Counting only roads where a town is named first makes Ash look largest, but an edge counts at both ends. The number 6 is the total number of roads, not the roads at one town.",
+   "clue": "A town can be named second in a road and still meet it."
+  }
+ },
+ "proposal_problems": [
+  "mat-vertices-edges-degree dash in: A graph shows roads between towns: Ash–Bell, Ash–Cole, Ash–Dale, Bell–Cole, Cole–Dale and Cole–Eden. Which town has the largest degree?",
+  "mat-vertices-edges-degree dash in: Cole meets Ash–Cole, Bell–Cole, Cole–Dale and Cole–Eden, so its degree is 4, more than Ash's 3. Counting only roads where a town is named first makes Ash look largest, but an edge counts at both ends. The number 6 is the total number of roads, not the roads at one town."
+ ]
+}

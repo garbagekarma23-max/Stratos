@@ -1,0 +1,130 @@
+{
+ "id": "mat-solving-polynomial-equations",
+ "title": "Solving polynomial equations",
+ "brief": "4296899e4fc0",
+ "shortlist": [
+  [
+   "mat-cubic-polynomial-graphs",
+   0.333
+  ],
+  [
+   "mat-using-tables-interest-factors",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00762,
+  "check": 0.00878
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers reading roots and graph features from an already factorised cubic, but it does not teach solving equations by factorising a polynomial or using the factor theorem to find a first factor, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Solving polynomial equations",
+  "card": [
+   "To solve a polynomial equation, move every term to one side so the other side is 0. Then factorise the polynomial.",
+   "If a product is 0, at least one factor is 0. So set each factor equal to 0 and solve each one.",
+   "For a cubic with no obvious factor, test small values such as ±1, ±2 in P(x). When P(a) = 0, the factor theorem says (x − a) is a factor. Divide it out to leave a quadratic.",
+   [
+    "Example",
+    "Solve x³ − 2x² − 5x + 6 = 0. P(1) = 0, so (x − 1) is a factor. Dividing gives (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2), so x = 1, 3 or −2."
+   ]
+  ],
+  "remember": "Make one side 0, factorise, then set each factor to 0.",
+  "a": {
+   "q": "What are the solutions of (x − 4)(x + 1)(2x − 3) = 0?",
+   "opts": [
+    "x = 4, −1, 3/2",
+    "x = −4, 1, −3/2",
+    "x = 4, −1, 2/3",
+    "x = 4, −1, −3/2"
+   ],
+   "why": "Set each factor to 0: x = 4, x = −1, and 2x = 3 gives x = 3/2. The option with 2/3 flips the fraction, which is a common slip.",
+   "clue": "Solve each bracket separately, including 2x − 3 = 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve x³ − 7x + 6 = 0. What are all the solutions?",
+   "opts": [
+    "x = 1, 2, −3",
+    "x = −1, −2, 3",
+    "x = 1, −2, 3",
+    "x = 1, 2, 3"
+   ],
+   "why": "P(1) = 1 − 7 + 6 = 0, so (x − 1) is a factor. Dividing gives x² + x − 6 = (x + 3)(x − 2), so x = 1, 2 or −3. Check x = 3: 27 − 21 + 6 = 12, so it is not a solution.",
+   "clue": "Test x = 1 first, then factorise the quadratic that is left."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 4, −1, 3/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 1, 2, −3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's worked example and both answers check out: (x − 1)(x² − x − 6) expands correctly, and x³ − 7x + 6 = (x − 1)(x − 2)(x + 3)."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Solving polynomial equations",
+  "card": [
+   "To solve a polynomial equation, move every term to one side so the other side is 0. Then factorise the polynomial.",
+   "If a product is 0, at least one factor is 0. So set each factor equal to 0 and solve each one.",
+   "For a cubic with no obvious factor, test small values such as ±1, ±2 in P(x). When P(a) = 0, the factor theorem says (x − a) is a factor. Divide it out to leave a quadratic.",
+   [
+    "Example",
+    "Solve x³ − 2x² − 5x + 6 = 0. P(1) = 0, so (x − 1) is a factor. Dividing gives (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2), so x = 1, 3 or −2."
+   ]
+  ],
+  "remember": "Make one side 0, factorise, then set each factor to 0.",
+  "a": {
+   "q": "What are the solutions of (x − 4)(x + 1)(2x − 3) = 0?",
+   "opts": [
+    "x = 4, −1, 3/2",
+    "x = −4, 1, −3/2",
+    "x = 4, −1, 2/3",
+    "x = 4, −1, −3/2"
+   ],
+   "why": "Set each factor to 0: x = 4, x = −1, and 2x = 3 gives x = 3/2. The option with 2/3 flips the fraction, which is a common slip.",
+   "clue": "Solve each bracket separately, including 2x − 3 = 0."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve x³ − 7x + 6 = 0. What are all the solutions?",
+   "opts": [
+    "x = 1, 2, −3",
+    "x = −1, −2, 3",
+    "x = 1, −2, 3",
+    "x = 1, 2, 3"
+   ],
+   "why": "P(1) = 1 − 7 + 6 = 0, so (x − 1) is a factor. Dividing gives x² + x − 6 = (x + 3)(x − 2), so x = 1, 2 or −3. Check x = 3: 27 − 21 + 6 = 12, so it is not a solution.",
+   "clue": "Test x = 1 first, then factorise the quadratic that is left."
+  }
+ },
+ "cleared_by": "checker"
+}

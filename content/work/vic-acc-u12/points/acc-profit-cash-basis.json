@@ -1,0 +1,235 @@
+{
+ "id": "acc-profit-cash-basis",
+ "title": "The income statement",
+ "brief": "42ef4030944f",
+ "shortlist": [
+  [
+   "bus-income-statement",
+   0.614
+  ],
+  [
+   "bus-profit",
+   0.435
+  ],
+  [
+   "bus-limits-financial-reports",
+   0.272
+  ],
+  [
+   "e-income",
+   0.231
+  ],
+  [
+   "bus-ethics-financial-reporting",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:17Z new, match",
+  "2026-11-01T08:04:31Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:01Z write: done",
+  "2026-11-01T08:24:28Z check: flagged",
+  "2026-11-01T08:33:47Z fix: suggested",
+  "2026-11-01T09:32:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "write": 0.00575,
+  "check": 0.01109,
+  "fix": 0.01705,
+  "recheck": 0.00596
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-income-statement, is written for a trading business at Year 12 depth, with gross profit and cost of goods sold at its core, so a service-business income statement would need its structure and both questions rewritten rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The income statement",
+  "card": [
+   "An income statement reports the revenue and expenses of a business for a period of time, such as a month or a year.",
+   "Revenue is the income earned from the services the business provides. Expenses are the costs of running the business in that period, such as wages and rent.",
+   "Net profit = revenue - expenses. If expenses are greater than revenue, the business has a net loss.",
+   "The income statement shows the result for the period only. It does not list assets or liabilities."
+  ],
+  "remember": "The income statement shows revenue less expenses, which gives the profit or loss for a period.",
+  "a": {
+   "q": "Which of these is reported on an income statement?",
+   "opts": [
+    "Fees earned and wages paid in March",
+    "The money owed to suppliers on 31 March",
+    "The value of the van at 31 March",
+    "The owner's equity at 31 March"
+   ],
+   "why": "Fees earned are revenue and wages paid are an expense, so both belong on the income statement for the period. The other options are amounts at a date, which are not part of this report.",
+   "clue": "Look for the option that covers a period of time."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya runs a dog grooming service in Bendigo. In June she earned $9,000 in fees and had expenses of $9,800. What does her income statement show for June?",
+   "opts": [
+    "A net loss of $800",
+    "A net profit of $800",
+    "A net loss of $9,800",
+    "A net profit of $9,000"
+   ],
+   "why": "Net profit = revenue - expenses, so $9,000 - $9,800 = -$800. Expenses are greater than revenue, so this is a net loss, not a profit.",
+   "clue": "Take expenses away from revenue and check the sign."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fees earned and wages paid in March",
+   "also_right": []
+  },
+  "b": {
+   "best": "A net loss of $800",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one not ending 'at 31 March' and the only one naming two items, so it stands out from the three matching distractors. The clue then points straight to it, so a student could pick it without knowing what an income statement reports."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Wages paid' describes a cash payment, which belongs on the cash flow statement. The card defines expenses as costs of running the business in the period, so 'wages for March' or 'wages expense' would avoid blurring the income statement with cash flows (point 4, cash and profit)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. In question a, the right option stands out from the 'at 31 March' distractors, and 'wages paid' suggests cash rather than an expense for the period."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one not ending 'at 31 March' and the only one naming two items, so it stands out from the three matching distractors. The clue then points straight to it, so a student could pick it without knowing what an income statement reports.",
+  "Question a, wording: 'Wages paid' describes a cash payment, which belongs on the cash flow statement. The card defines expenses as costs of running the business in the period, so 'wages for March' or 'wages expense' would avoid blurring the income statement with cash flows (point 4, cash and profit)."
+ ],
+ "proposal": {
+  "title": "The income statement",
+  "card": [
+   "An income statement reports the revenue and expenses of a business for a period of time, such as a month or a year.",
+   "Revenue is the income earned from the services the business provides. Expenses are the costs of running the business in that period, such as wages and rent.",
+   "Net profit = revenue - expenses. If expenses are greater than revenue, the business has a net loss.",
+   "The income statement shows the result for the period only. It does not list assets, such as cash and equipment, or liabilities, such as loans."
+  ],
+  "remember": "The income statement shows revenue less expenses, which gives the profit or loss for a period.",
+  "a": {
+   "q": "Which of these would appear on a service business's income statement?",
+   "opts": [
+    "Electricity expense",
+    "Loan owed to the bank",
+    "Value of the office laptop",
+    "Cash held in the bank"
+   ],
+   "why": "Electricity is a cost of running the business in the period, so it is an expense on the income statement. Cash in the bank can seem like income, but it is an asset, and the income statement does not list assets or liabilities.",
+   "clue": "Which item changes the profit for the period?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya runs a dog grooming service in Bendigo. In June she earned $9,000 in fees and had expenses of $9,800. What does her income statement show for June?",
+   "opts": [
+    "A net loss of $800",
+    "A net profit of $800",
+    "A net loss of $9,800",
+    "A net profit of $9,000"
+   ],
+   "why": "Net profit = revenue - expenses, so $9,000 - $9,800 = -$800. Expenses are greater than revenue, so this is a net loss, not a profit.",
+   "clue": "Take expenses away from revenue and check the sign."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Electricity expense",
+    "also_right": []
+   },
+   "b": {
+    "best": "A net loss of $800",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one not ending 'at 31 March' and the only one naming two items, so it stands out from the three matching distractors. The clue then points straight to it, so a student could pick it without knowing what an income statement reports."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "'Wages paid' describes a cash payment, which belongs on the cash flow statement. The card defines expenses as costs of running the business in the period, so 'wages for March' or 'wages expense' would avoid blurring the income statement with cash flows (point 4, cash and profit)."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one not ending 'at 31 March' and the only one naming two items, so it stands out from the three matching distractors. The clue then points straight to it, so a student could pick it without knowing what an income statement reports.",
+   "Question a, wording: 'Wages paid' describes a cash payment, which belongs on the cash flow statement. The card defines expenses as costs of running the business in the period, so 'wages for March' or 'wages expense' would avoid blurring the income statement with cash flows (point 4, cash and profit)."
+  ]
+ },
+ "final": {
+  "title": "The income statement",
+  "card": [
+   "An income statement reports the revenue and expenses of a business for a period of time, such as a month or a year.",
+   "Revenue is the income earned from the services the business provides. Expenses are the costs of running the business in that period, such as wages and rent.",
+   "Net profit = revenue - expenses. If expenses are greater than revenue, the business has a net loss.",
+   "The income statement shows the result for the period only. It does not list assets, such as cash and equipment, or liabilities, such as loans."
+  ],
+  "remember": "The income statement shows revenue less expenses, which gives the profit or loss for a period.",
+  "a": {
+   "q": "Which of these would appear on a service business's income statement?",
+   "opts": [
+    "Electricity expense",
+    "Loan owed to the bank",
+    "Value of the office laptop",
+    "Cash held in the bank"
+   ],
+   "why": "Electricity is a cost of running the business in the period, so it is an expense on the income statement. Cash in the bank can seem like income, but it is an asset, and the income statement does not list assets or liabilities.",
+   "clue": "Which item changes the profit for the period?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya runs a dog grooming service in Bendigo. In June she earned $9,000 in fees and had expenses of $9,800. What does her income statement show for June?",
+   "opts": [
+    "A net loss of $800",
+    "A net profit of $800",
+    "A net loss of $9,800",
+    "A net profit of $9,000"
+   ],
+   "why": "Net profit = revenue - expenses, so $9,000 - $9,800 = -$800. Expenses are greater than revenue, so this is a net loss, not a profit.",
+   "clue": "Take expenses away from revenue and check the sign."
+  }
+ },
+ "cleared_by": "recheck"
+}

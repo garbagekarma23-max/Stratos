@@ -1,0 +1,233 @@
+{
+ "id": "mat-simple-interest-everyday-life",
+ "title": "Fees and interest",
+ "brief": "db936523c976",
+ "shortlist": [
+  [
+   "mat-simple-interest",
+   0.441
+  ],
+  [
+   "mat-compound-interest-by-repeated",
+   0.317
+  ],
+  [
+   "mat-comparing-investments",
+   0.238
+  ],
+  [
+   "mat-compound-interest",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:05Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T08:24:32Z write: done",
+  "2026-11-01T08:33:51Z check: flagged",
+  "2026-11-01T08:42:07Z fix: suggested",
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00475,
+  "check": 0.00986,
+  "fix": 0.02516,
+  "recheck": 0.00645
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-simple-interest, covers only simple interest, while the new point also covers account fees and late fees, so the bank point is narrower and no single existing point teaches the whole idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fees and interest",
+  "card": [
+   "Fees add to what you pay. An account fee is charged for keeping an account, often each month. A late fee is charged when a bill is paid after its due date.",
+   "Interest is the cost of borrowing money. Simple interest is worked out on the original amount only. I = P × r × t, where P is the amount, r is the yearly rate as a decimal, and t is the time in years.",
+   "Worked example: borrow $2000 at 6% per year for 3 years. I = 2000 × 0.06 × 3 = $360. The total to repay is 2000 + 360 = $2360.",
+   "If the time is in months, change it to years first. 6 months is 6 ÷ 12 = 0.5 years."
+  ],
+  "remember": "Fees and interest add to the cost. Simple interest = amount × rate × time in years.",
+  "a": {
+   "q": "Sam borrows $1500 at 4% simple interest per year for 2 years. How much interest does he pay?",
+   "opts": [
+    "$120",
+    "$60",
+    "$80",
+    "$1620"
+   ],
+   "why": "I = 1500 × 0.04 × 2 = $120. The answer $60 is for one year only, because the time was left out. $1620 is the total to repay, not the interest.",
+   "clue": "Change 4% to a decimal, then multiply all three numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya borrows $3000 at 5% simple interest per year for 18 months. What is the total she must repay?",
+   "opts": [
+    "$3225",
+    "$3150",
+    "$3750",
+    "$3225.00 per year"
+   ],
+   "why": "18 months is 1.5 years. I = 3000 × 0.05 × 1.5 = $225, so the total is 3000 + 225 = $3225. $3150 comes from using 1 year, and $3750 comes from using 18 as the time.",
+   "clue": "Turn 18 months into years before you multiply."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$120",
+   "also_right": []
+  },
+  "b": {
+   "best": "$3225",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says $3750 comes from using 18 as the time, but 3000 × 0.05 × 18 = $2700, which gives a total of $5700. $3750 is not explained by that error, so the explanation is false."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor '$3225.00 per year' repeats the figure in the right answer. Because 3225 appears twice, a student can guess it is the right figure without working it out. The 'per year' version is also more a trick of units than a test of the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. In question b, the why wrongly says $3750 comes from using 18 as the time (that error gives $5700), and the repeated 3225 figure in the options hints at the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why says $3750 comes from using 18 as the time, but 3000 × 0.05 × 18 = $2700, which gives a total of $5700. $3750 is not explained by that error, so the explanation is false.",
+  "Question b, wording: The distractor '$3225.00 per year' repeats the figure in the right answer. Because 3225 appears twice, a student can guess it is the right figure without working it out. The 'per year' version is also more a trick of units than a test of the idea."
+ ],
+ "proposal": {
+  "title": "Fees and interest",
+  "card": [
+   "Fees add to what you pay. An account fee is charged for keeping an account, often each month. A late fee is charged when a bill is paid after its due date.",
+   "Interest is the cost of borrowing money. Simple interest is worked out on the original amount only. I = P × r × t, where P is the amount, r is the yearly rate as a decimal, and t is the time in years.",
+   "Worked example: borrow $2000 at 6% per year for 3 years. I = 2000 × 0.06 × 3 = $360. The total to repay is 2000 + 360 = $2360.",
+   "If the time is in months, change it to years first. 6 months is 6 ÷ 12 = 0.5 years."
+  ],
+  "remember": "Fees and interest add to the cost. Simple interest = amount × rate × time in years.",
+  "a": {
+   "q": "Sam borrows $1500 at 4% simple interest per year for 2 years. How much interest does he pay?",
+   "opts": [
+    "$120",
+    "$60",
+    "$1200",
+    "$1620"
+   ],
+   "why": "I = 1500 × 0.04 × 2 = $120. The answer $60 is for one year only, because the time was left out. $1200 comes from writing 4% as 0.4, and $1620 is the total to repay, not the interest.",
+   "clue": "Change 4% to a decimal, then multiply all three numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya borrows $3000 at 5% simple interest per year for 18 months. What is the total she must repay?",
+   "opts": [
+    "$3225",
+    "$3150",
+    "$5700",
+    "$225"
+   ],
+   "why": "18 months is 18 ÷ 12 = 1.5 years. I = 3000 × 0.05 × 1.5 = $225, so the total is 3000 + 225 = $3225. $3150 comes from using 1 year, $5700 from using 18 as the time, and $225 is the interest only, not the total.",
+   "clue": "Turn 18 months into years, then add the interest to the amount."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-01T09:32:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$120",
+    "also_right": []
+   },
+   "b": {
+    "best": "$3225",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both calculations are correct, and the wrong options match the common errors the explanations describe."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-01T09:32:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says $3750 comes from using 18 as the time, but 3000 × 0.05 × 18 = $2700, which gives a total of $5700. $3750 is not explained by that error, so the explanation is false."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The distractor '$3225.00 per year' repeats the figure in the right answer. Because 3225 appears twice, a student can guess it is the right figure without working it out. The 'per year' version is also more a trick of units than a test of the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why says $3750 comes from using 18 as the time, but 3000 × 0.05 × 18 = $2700, which gives a total of $5700. $3750 is not explained by that error, so the explanation is false.",
+   "Question b, wording: The distractor '$3225.00 per year' repeats the figure in the right answer. Because 3225 appears twice, a student can guess it is the right figure without working it out. The 'per year' version is also more a trick of units than a test of the idea."
+  ]
+ },
+ "final": {
+  "title": "Fees and interest",
+  "card": [
+   "Fees add to what you pay. An account fee is charged for keeping an account, often each month. A late fee is charged when a bill is paid after its due date.",
+   "Interest is the cost of borrowing money. Simple interest is worked out on the original amount only. I = P × r × t, where P is the amount, r is the yearly rate as a decimal, and t is the time in years.",
+   "Worked example: borrow $2000 at 6% per year for 3 years. I = 2000 × 0.06 × 3 = $360. The total to repay is 2000 + 360 = $2360.",
+   "If the time is in months, change it to years first. 6 months is 6 ÷ 12 = 0.5 years."
+  ],
+  "remember": "Fees and interest add to the cost. Simple interest = amount × rate × time in years.",
+  "a": {
+   "q": "Sam borrows $1500 at 4% simple interest per year for 2 years. How much interest does he pay?",
+   "opts": [
+    "$120",
+    "$60",
+    "$1200",
+    "$1620"
+   ],
+   "why": "I = 1500 × 0.04 × 2 = $120. The answer $60 is for one year only, because the time was left out. $1200 comes from writing 4% as 0.4, and $1620 is the total to repay, not the interest.",
+   "clue": "Change 4% to a decimal, then multiply all three numbers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya borrows $3000 at 5% simple interest per year for 18 months. What is the total she must repay?",
+   "opts": [
+    "$3225",
+    "$3150",
+    "$5700",
+    "$225"
+   ],
+   "why": "18 months is 18 ÷ 12 = 1.5 years. I = 3000 × 0.05 × 1.5 = $225, so the total is 3000 + 225 = $3225. $3150 comes from using 1 year, $5700 from using 18 as the time, and $225 is the interest only, not the total.",
+   "clue": "Turn 18 months into years, then add the interest to the amount."
+  }
+ },
+ "cleared_by": "recheck"
+}

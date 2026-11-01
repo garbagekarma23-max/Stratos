@@ -1,0 +1,156 @@
+{
+ "id": "hhd-indicators-youth-health",
+ "title": "Measuring health status",
+ "brief": "de7276778c4f",
+ "shortlist": [
+  [
+   "hms-measures-health-status",
+   0.374
+  ],
+  [
+   "hms-australia-s-health-status",
+   0.216
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.211
+  ],
+  [
+   "hms-health-promotion",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:04Z write: done",
+  "2026-11-01T08:24:31Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00564,
+  "check": 0.00853
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only morbidity, mortality, life expectancy and infant mortality, while the new point also requires incidence, prevalence, hospitalisation and burden of disease, which would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Measuring health status",
+  "card": [
+   [
+    "Incidence",
+    "the number of new cases of a condition in a population during a set period, such as one year."
+   ],
+   [
+    "Prevalence",
+    "the total number of existing cases, new and old, in a population at a point in time or over a period."
+   ],
+   [
+    "Morbidity",
+    "the presence of illness, injury or disease in a population. Hospitalisation, which counts admissions to hospital, is one way to measure it."
+   ],
+   [
+    "Mortality",
+    "the number of deaths in a population. Life expectancy is the average number of years a person born now is expected to live. Burden of disease combines years lost to early death and years lived with illness."
+   ]
+  ],
+  "remember": "Incidence counts new cases. Prevalence counts all current cases.",
+  "a": {
+   "q": "In 2023, 400 teenagers in a region were newly diagnosed with asthma. Which measure does this number show?",
+   "opts": [
+    "Incidence of asthma",
+    "Prevalence of asthma",
+    "Mortality from asthma",
+    "Life expectancy"
+   ],
+   "why": "The 400 are new cases in a set period, which is incidence. Prevalence would also count teenagers diagnosed in earlier years who still have asthma.",
+   "clue": "Were these cases new or already existing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has 1000 young people with type 1 diabetes at the start of a year. During the year 50 more are diagnosed and none die or recover. What is true at year's end?",
+   "opts": [
+    "Prevalence is 1050 and incidence is 50",
+    "Prevalence is 50 and incidence is 1050",
+    "Prevalence is 1000 and incidence is 50",
+    "Prevalence is 1050 and incidence is 1050"
+   ],
+   "why": "Incidence counts only the 50 new cases. Prevalence counts all existing cases, so 1000 plus 50 gives 1050. Treating the 50 as the prevalence mixes up the two measures.",
+   "clue": "Prevalence includes cases from before the year began."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Incidence of asthma",
+   "also_right": []
+  },
+  "b": {
+   "best": "Prevalence is 1050 and incidence is 50",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Measuring health status",
+  "card": [
+   [
+    "Incidence",
+    "the number of new cases of a condition in a population during a set period, such as one year."
+   ],
+   [
+    "Prevalence",
+    "the total number of existing cases, new and old, in a population at a point in time or over a period."
+   ],
+   [
+    "Morbidity",
+    "the presence of illness, injury or disease in a population. Hospitalisation, which counts admissions to hospital, is one way to measure it."
+   ],
+   [
+    "Mortality",
+    "the number of deaths in a population. Life expectancy is the average number of years a person born now is expected to live. Burden of disease combines years lost to early death and years lived with illness."
+   ]
+  ],
+  "remember": "Incidence counts new cases. Prevalence counts all current cases.",
+  "a": {
+   "q": "In 2023, 400 teenagers in a region were newly diagnosed with asthma. Which measure does this number show?",
+   "opts": [
+    "Incidence of asthma",
+    "Prevalence of asthma",
+    "Mortality from asthma",
+    "Life expectancy"
+   ],
+   "why": "The 400 are new cases in a set period, which is incidence. Prevalence would also count teenagers diagnosed in earlier years who still have asthma.",
+   "clue": "Were these cases new or already existing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has 1000 young people with type 1 diabetes at the start of a year. During the year 50 more are diagnosed and none die or recover. What is true at year's end?",
+   "opts": [
+    "Prevalence is 1050 and incidence is 50",
+    "Prevalence is 50 and incidence is 1050",
+    "Prevalence is 1000 and incidence is 50",
+    "Prevalence is 1050 and incidence is 1050"
+   ],
+   "why": "Incidence counts only the 50 new cases. Prevalence counts all existing cases, so 1000 plus 50 gives 1050. Treating the 50 as the prevalence mixes up the two measures.",
+   "clue": "Prevalence includes cases from before the year began."
+  }
+ },
+ "cleared_by": "checker"
+}

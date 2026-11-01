@@ -1,0 +1,64 @@
+{
+ "id": "leg-defences",
+ "title": "Defences",
+ "brief": "4d243d92d2ef",
+ "shortlist": [
+  [
+   "leg-defences-criminal-charges",
+   0.56
+  ],
+  [
+   "leg-prosecution-defence",
+   0.307
+  ],
+  [
+   "leg-strict-absolute-liability",
+   0.254
+  ],
+  [
+   "leg-actus-reus-mens-rea",
+   0.224
+  ],
+  [
+   "leg-peacekeeping",
+   0.208
+  ]
+ ],
+ "stage": "match-review",
+ "log": [
+  "2026-11-01T07:54:19Z new, match",
+  "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt leg-defences-criminal-charges, but is not highly sure, so to the Opus match check",
+  "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 may adapt leg-defences-criminal-charges, but is not highly sure, so it is for you to review"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.01309
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-defences-criminal-charges",
+  "changes": [
+   "Replace the NSW partial defence examples with Victorian ones: defensive homicide, which reduces murder to a lesser offence, and the mental impairment defence, rather than substantial impairment and manslaughter.",
+   "Update the Remember line and the Question a answer so they name the Victorian lesser offence rather than manslaughter.",
+   "Make the self-defence and duress wording and examples fit Victorian law and a Victorian setting rather than NSW."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same complete and partial defence idea at the right depth, but its partial defence examples and the manslaughter outcome are NSW law, so they need Victorian adjustments.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-defences-criminal-charges",
+  "changes": [
+   "Replace the NSW partial defence example (substantial impairment) with one that applies under Victorian law, since Victoria does not have that defence.",
+   "Add sudden or extraordinary emergency as a Victorian example of a complete defence alongside self-defence and duress, to match Victorian law and the course's terms."
+  ],
+  "sure": "medium",
+  "reason": "The NSW card teaches the same idea at a suitable depth: self-defence and duress lead to acquittal, while partial defences lead to a lesser offence. Its partial defence example is NSW law, so it needs a Victorian one.",
+  "model": "claude-opus-5-5"
+ }
+}

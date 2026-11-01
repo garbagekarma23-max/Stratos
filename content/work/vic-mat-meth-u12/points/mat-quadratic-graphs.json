@@ -1,0 +1,200 @@
+{
+ "id": "mat-quadratic-graphs",
+ "title": "Quadratic graphs",
+ "brief": "d3d283ecb193",
+ "shortlist": [
+  [
+   "mat-quadratic-functions",
+   0.588
+  ],
+  [
+   "mat-quadratic-models",
+   0.323
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.258
+  ],
+  [
+   "mat-cubic-polynomial-graphs",
+   0.231
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T07:54:20Z new, match",
+  "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T08:14:07Z write: done",
+  "2026-11-01T08:24:33Z check: flagged",
+  "2026-11-01T08:33:52Z fix: suggested",
+  "2026-11-01T09:24:24Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00742,
+  "check": 0.01032,
+  "fix": 0.02709
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-quadratic-functions, finds the vertex through the axis x = -b/2a and never teaches turning point form y = a(x − h)² + k, which is the core of the new point, so adding it would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Quadratic graphs",
+  "card": [
+   "A quadratic graph is a parabola. In turning point form, y = a(x − h)² + k, the vertex (turning point) is (h, k). Note the sign: (x − 3) gives h = 3, and (x + 3) gives h = −3.",
+   "If a is positive, the parabola opens upwards and the vertex is the lowest point. If a is negative, it opens downwards and the vertex is the highest point.",
+   "For the y-intercept, put x = 0. For the x-intercepts, put y = 0, then solve by factorising or by the quadratic formula.",
+   "Example: y = (x − 2)² − 9 has vertex (2, −9). Setting y = 0 gives (x − 2)² = 9, so x − 2 = 3 or −3, and x = 5 or −1."
+  ],
+  "remember": "Read the vertex (h, k) from the turning point form, with the sign of h flipped. Set y = 0 for x-intercepts.",
+  "a": {
+   "q": "What is the vertex of y = 2(x + 4)² − 7?",
+   "opts": [
+    "(−4, −7)",
+    "(4, −7)",
+    "(−4, 7)",
+    "(4, 7)"
+   ],
+   "why": "Write (x + 4) as (x − (−4)), so h = −4. The k value is −7, so the vertex is (−4, −7). The option (4, −7) is tempting but copies the sign inside the bracket.",
+   "clue": "Whatever is added inside the bracket, h has the opposite sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya models a ball's path as y = −(x − 1)² + 16, with y in metres. What are the x-intercepts?",
+   "opts": [
+    "x = −3 and x = 5",
+    "x = −5 and x = 3",
+    "x = 1 and x = 16",
+    "x = 0 and x = 2"
+   ],
+   "why": "Set y = 0: (x − 1)² = 16, so x − 1 = 4 or −4. That gives x = 5 or x = −3. The option x = −5 and x = 3 comes from taking h as −1.",
+   "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(−4, −7)",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = −3 and x = 5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Read the vertex (h, k) ... with the sign of h flipped\" is misleading. In y = a(x − h)² + k, h is already the x-coordinate of the vertex. What gets flipped is the number shown inside the bracket, not h. Read literally, the line suggests the vertex is (−h, k), which contradicts the card's own note that (x − 3) gives h = 3. Suggested fix: \"flip the sign of the number inside the bracket to get h\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: (−4, −7) and x = −3, 5. The remember line's \"with the sign of h flipped\" is misleading, because it is the number in the bracket that is flipped, not h, and it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"Read the vertex (h, k) ... with the sign of h flipped\" is misleading. In y = a(x − h)² + k, h is already the x-coordinate of the vertex. What gets flipped is the number shown inside the bracket, not h. Read literally, the line suggests the vertex is (−h, k), which contradicts the card's own note that (x − 3) gives h = 3. Suggested fix: \"flip the sign of the number inside the bracket to get h\"."
+ ],
+ "proposal": {
+  "title": "Quadratic graphs",
+  "card": [
+   "A quadratic graph is a parabola. In turning point form, y = a(x − h)² + k, the vertex (turning point) is (h, k). Note the sign: (x − 3) gives h = 3, and (x + 3) = (x − (−3)) gives h = −3.",
+   "If a is positive, the parabola opens upwards and the vertex is the lowest point. If a is negative, it opens downwards and the vertex is the highest point.",
+   "For the y-intercept, put x = 0. For the x-intercepts, put y = 0, then solve by factorising or by the quadratic formula.",
+   "Example: y = (x − 2)² − 9 has vertex (2, −9). Setting y = 0 gives (x − 2)² = 9, so x − 2 = 3 or −3, and x = 5 or −1."
+  ],
+  "remember": "To get h, flip the sign of the number inside the bracket. k is read as it is. Set y = 0 for x-intercepts.",
+  "a": {
+   "q": "What is the vertex of y = 2(x + 4)² − 7?",
+   "opts": [
+    "(−4, −7)",
+    "(4, −7)",
+    "(−4, 7)",
+    "(4, 7)"
+   ],
+   "why": "Write (x + 4) as (x − (−4)), so h = −4. The k value is −7, so the vertex is (−4, −7). The option (4, −7) is tempting but copies the sign inside the bracket.",
+   "clue": "Whatever is added inside the bracket, h has the opposite sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya graphs y = −(x − 1)² + 16. What are the x-intercepts?",
+   "opts": [
+    "x = −3 and x = 5",
+    "x = −5 and x = 3",
+    "x = 1 and x = 16",
+    "x = 0 and x = 2"
+   ],
+   "why": "Set y = 0: (x − 1)² = 16, so x − 1 = 4 or −4. That gives x = 5 or x = −3. The option x = −5 and x = 3 comes from taking h as −1.",
+   "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-01T09:24:24Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Read the vertex (h, k) ... with the sign of h flipped\" is misleading. In y = a(x − h)² + k, h is already the x-coordinate of the vertex. What gets flipped is the number shown inside the bracket, not h. Read literally, the line suggests the vertex is (−h, k), which contradicts the card's own note that (x − 3) gives h = 3. Suggested fix: \"flip the sign of the number inside the bracket to get h\"."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"Read the vertex (h, k) ... with the sign of h flipped\" is misleading. In y = a(x − h)² + k, h is already the x-coordinate of the vertex. What gets flipped is the number shown inside the bracket, not h. Read literally, the line suggests the vertex is (−h, k), which contradicts the card's own note that (x − 3) gives h = 3. Suggested fix: \"flip the sign of the number inside the bracket to get h\"."
+  ]
+ },
+ "final": {
+  "title": "Quadratic graphs",
+  "card": [
+   "A quadratic graph is a parabola. In turning point form, y = a(x − h)² + k, the vertex (turning point) is (h, k). Note the sign: (x − 3) gives h = 3, and (x + 3) = (x − (−3)) gives h = −3.",
+   "If a is positive, the parabola opens upwards and the vertex is the lowest point. If a is negative, it opens downwards and the vertex is the highest point.",
+   "For the y-intercept, put x = 0. For the x-intercepts, put y = 0, then solve by factorising or by the quadratic formula.",
+   "Example: y = (x − 2)² − 9 has vertex (2, −9). Setting y = 0 gives (x − 2)² = 9, so x − 2 = 3 or −3, and x = 5 or −1."
+  ],
+  "remember": "To get h, flip the sign of the number inside the bracket. k is read as it is. Set y = 0 for x-intercepts.",
+  "a": {
+   "q": "What is the vertex of y = 2(x + 4)² − 7?",
+   "opts": [
+    "(−4, −7)",
+    "(4, −7)",
+    "(−4, 7)",
+    "(4, 7)"
+   ],
+   "why": "Write (x + 4) as (x − (−4)), so h = −4. The k value is −7, so the vertex is (−4, −7). The option (4, −7) is tempting but copies the sign inside the bracket.",
+   "clue": "Whatever is added inside the bracket, h has the opposite sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya graphs y = −(x − 1)² + 16. What are the x-intercepts?",
+   "opts": [
+    "x = −3 and x = 5",
+    "x = −5 and x = 3",
+    "x = 1 and x = 16",
+    "x = 0 and x = 2"
+   ],
+   "why": "Set y = 0: (x − 1)² = 16, so x − 1 = 4 or −4. That gives x = 5 or x = −3. The option x = −5 and x = 3 comes from taking h as −1.",
+   "clue": "Set y = 0, then take the square root of both sides, remembering both signs."
+  }
+ },
+ "cleared_by": "auto"
+}
