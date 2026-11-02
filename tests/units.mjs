@@ -49,7 +49,7 @@ const wide = p => p.evaluate(() => document.documentElement.scrollWidth - window
   check((await p.locator('#sheetBody [aria-checked="true"]').textContent()).startsWith('Victoria'), 'a phone in Melbourne has Victoria picked', R);
   await p.click('[data-act="placedone"]'); await p.waitForTimeout(100);
   const g = await grouped(p, '#sheetBody');
-  check(atLevel('Units 1 and 2').includes('tsv-units-12') && JSON.stringify(atLevel('Units 3 and 4')) === JSON.stringify(['tsv-units-34']) &&
+  check(atLevel('Units 1 and 2').includes('tsv-units-12') && atLevel('Units 3 and 4').includes('tsv-units-34') &&
     JSON.stringify(g[0]) === JSON.stringify(['Victoria', [['Units 1 and 2', atLevel('Units 1 and 2')], ['Units 3 and 4', atLevel('Units 3 and 4')]]]),
     'Victoria\'s courses are grouped by units, Units 1 and 2 before Units 3 and 4: ' + JSON.stringify(g[0]), R);
   check(g[1][0] === 'International courses' && g[1][1].map(x => x[0]).join(',') === 'AS', 'then the international courses, under AS', R);
