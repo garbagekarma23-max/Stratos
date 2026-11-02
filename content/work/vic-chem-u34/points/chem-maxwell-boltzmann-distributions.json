@@ -1,0 +1,199 @@
+{
+ "id": "chem-maxwell-boltzmann-distributions",
+ "title": "Maxwell-Boltzmann distributions",
+ "brief": "5b62f51b18a7",
+ "shortlist": [
+  [
+   "chem-activation-energy-catalysts",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: failed the content check, writing again",
+  "2026-11-01T15:05:25Z write: done (still fails the content check)",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01248,
+  "check": 0.01267,
+  "fix": 0.02837,
+  "recheck": 0.0132
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers activation energy and catalysts but never teaches the Maxwell-Boltzmann distribution graph of particle energies or how temperature shifts it, so it is a related idea rather than the same one.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Maxwell-Boltzmann distributions",
+  "card": [
+   "Particles in a gas or liquid do not all have the same energy. A Maxwell-Boltzmann distribution is a graph of this spread of energies.",
+   "The vertical axis shows the number of particles. The horizontal axis shows their energy. The area under the curve is the total number of particles.",
+   "The activation energy is marked as a line on the energy axis. Only particles to the right of that line have enough energy to react in a collision.",
+   "At a higher temperature the curve flattens and shifts right. The peak is lower and more particles lie past the activation energy."
+  ],
+  "remember": "Higher temperature moves the curve right, so more particles pass the activation energy.",
+  "a": {
+   "q": "On a Maxwell-Boltzmann graph, which particles have enough energy to react?",
+   "opts": [
+    "Those to the right of the activation energy line",
+    "Those to the left of the activation energy line",
+    "Those at the peak of the curve",
+    "Those under the whole area of the curve"
+   ],
+   "why": "Particles with energy at or above the activation energy lie to its right on the energy axis. The peak shows the most common energy, which is usually below the activation energy.",
+   "clue": "Higher energy is further along the horizontal axis."
+  },
+  "b": {
+   "d": 3,
+   "q": "A solution of reactants in Geelong is warmed by 10 degrees Celsius. How does its Maxwell-Boltzmann curve change, and why does this matter for the rate?",
+   "opts": [
+    "It shifts right, so more particles pass the activation energy",
+    "It shifts right, so the activation energy line moves left",
+    "It shifts left, so more particles pass the activation energy",
+    "It stays still, but the number of particles under it rises"
+   ],
+   "why": "Warming moves the curve right and flattens it, so a larger share of particles lie past the activation energy. The activation energy itself does not change with temperature, and the area under the curve stays the same.",
+   "clue": "The activation energy line stays where it is."
+  }
+ },
+ "redone": true,
+ "local": [
+  "chem-maxwell-boltzmann-distributionsb option is 61 characters: It shifts right, so more particles pass the activation energy"
+ ],
+ "check": {
+  "a": {
+   "best": "Those to the right of the activation energy line",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shifts right, so more particles pass the activation energy",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: chem-maxwell-boltzmann-distributionsb option is 61 characters: It shifts right, so more particles pass the activation energy"
+ ],
+ "proposal": {
+  "title": "Maxwell-Boltzmann distributions",
+  "card": [
+   "Particles in a gas or liquid do not all have the same energy. A Maxwell-Boltzmann distribution is a graph of this spread of energies.",
+   "The vertical axis shows the number of particles. The horizontal axis shows their energy. The area under the curve is the total number of particles.",
+   "The activation energy is marked as a line on the energy axis, and temperature does not move it. Only particles to the right of that line have enough energy to react in a collision.",
+   "At a higher temperature the curve flattens and shifts right, with a lower peak. The area stays the same, but more particles lie past the activation energy."
+  ],
+  "remember": "Higher temperature moves the curve right, so more particles pass the activation energy.",
+  "a": {
+   "q": "On a Maxwell-Boltzmann graph, which particles have enough energy to react?",
+   "opts": [
+    "Those to the right of the activation energy line",
+    "Those to the left of the activation energy line",
+    "Those at the peak of the curve",
+    "Those under the whole area of the curve"
+   ],
+   "why": "Particles with energy at or above the activation energy lie to its right on the energy axis. The peak shows the most common energy, which is usually below the activation energy.",
+   "clue": "Higher energy is further along the horizontal axis."
+  },
+  "b": {
+   "d": 3,
+   "q": "A solution of reactants is warmed by 10 degrees Celsius. How does its Maxwell-Boltzmann curve change, and why does this matter for the rate?",
+   "opts": [
+    "Shifts right, so more particles pass the activation energy",
+    "Shifts right, so the activation energy line moves left",
+    "Shifts left, so more particles pass the activation energy",
+    "Stays still, but the number of particles under it rises"
+   ],
+   "why": "Warming moves the curve right and flattens it, so a larger share of particles lie past the activation energy. The activation energy line does not move with temperature, and the area under the curve stays the same because no particles are added.",
+   "clue": "The activation energy line stays where it is."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Those to the right of the activation energy line",
+    "also_right": []
+   },
+   "b": {
+    "best": "Shifts right, so more particles pass the activation energy",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: chem-maxwell-boltzmann-distributionsb option is 61 characters: It shifts right, so more particles pass the activation energy"
+  ]
+ },
+ "final": {
+  "title": "Maxwell-Boltzmann distributions",
+  "card": [
+   "Particles in a gas or liquid do not all have the same energy. A Maxwell-Boltzmann distribution is a graph of this spread of energies.",
+   "The vertical axis shows the number of particles. The horizontal axis shows their energy. The area under the curve is the total number of particles.",
+   "The activation energy is marked as a line on the energy axis, and temperature does not move it. Only particles to the right of that line have enough energy to react in a collision.",
+   "At a higher temperature the curve flattens and shifts right, with a lower peak. The area stays the same, but more particles lie past the activation energy."
+  ],
+  "remember": "Higher temperature moves the curve right, so more particles pass the activation energy.",
+  "a": {
+   "q": "On a Maxwell-Boltzmann graph, which particles have enough energy to react?",
+   "opts": [
+    "Those to the right of the activation energy line",
+    "Those to the left of the activation energy line",
+    "Those at the peak of the curve",
+    "Those under the whole area of the curve"
+   ],
+   "why": "Particles with energy at or above the activation energy lie to its right on the energy axis. The peak shows the most common energy, which is usually below the activation energy.",
+   "clue": "Higher energy is further along the horizontal axis."
+  },
+  "b": {
+   "d": 3,
+   "q": "A solution of reactants is warmed by 10 degrees Celsius. How does its Maxwell-Boltzmann curve change, and why does this matter for the rate?",
+   "opts": [
+    "Shifts right, so more particles pass the activation energy",
+    "Shifts right, so the activation energy line moves left",
+    "Shifts left, so more particles pass the activation energy",
+    "Stays still, but the number of particles under it rises"
+   ],
+   "why": "Warming moves the curve right and flattens it, so a larger share of particles lie past the activation energy. The activation energy line does not move with temperature, and the area under the curve stays the same because no particles are added.",
+   "clue": "The activation energy line stays where it is."
+  }
+ },
+ "cleared_by": "recheck"
+}

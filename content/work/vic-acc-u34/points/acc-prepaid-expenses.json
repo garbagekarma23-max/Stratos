@@ -1,0 +1,186 @@
+{
+ "id": "acc-prepaid-expenses",
+ "title": "Prepaid expenses",
+ "brief": "522df9197ba3",
+ "shortlist": [
+  [
+   "acc-reducing-balance-depreciation",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00504,
+  "check": 0.01572,
+  "fix": 0.01373
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches reducing balance depreciation, a different idea from prepaid expenses, which needs an asset recorded then moved to expense as used up, so no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Prepaid expenses",
+  "card": [
+   "A prepaid expense is an expense paid in cash before the business has used it. Insurance paid for the next 12 months is an example.",
+   "When the payment is made, the unused part is recorded as an asset, Prepaid insurance. The business has paid for a benefit it will receive later.",
+   "On balance day, work out how much has been used up. Debit the expense account and credit the prepaid asset by that amount.",
+   "The part not yet used stays as an asset in the Balance Sheet. The used part is an expense in the Income Statement for the period."
+  ],
+  "remember": "Paid early and not yet used is an asset. Once used, it becomes an expense.",
+  "a": {
+   "q": "On balance day, a business has paid for a service that it has not yet used. How is the unused part recorded?",
+   "opts": [
+    "As an asset, because the benefit is still to come",
+    "As an expense, because the cash has been paid",
+    "As a liability, because the service is still owed",
+    "As revenue, because the payment has been made"
+   ],
+   "why": "The business has paid for a benefit it will receive later, so the unused part is an asset. It is not an expense yet, even though cash has left the business, because the service has not been used.",
+   "clue": "Think about what the business still has the right to receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 1 April, Priya's Bakery in Ballarat pays $2400 for 12 months of insurance. Its year ends on 30 June. What does the adjustment on 30 June record?",
+   "opts": [
+    "Insurance expense $600, Prepaid insurance $1800",
+    "Insurance expense $1800, Prepaid insurance $600",
+    "Insurance expense $2400, Prepaid insurance $0",
+    "Insurance expense $0, Prepaid insurance $2400"
+   ],
+   "why": "April, May and June are 3 of 12 months, so $600 has been used and is an expense. The other $1800 covers the next 9 months and stays as an asset. Expensing the full $2400 ignores that most of the cover is still to come.",
+   "clue": "Count how many of the 12 months have passed by balance day."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "As an asset, because the benefit is still to come",
+   "also_right": []
+  },
+  "b": {
+   "best": "Insurance expense $600, Prepaid insurance $1800",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks what 'the adjustment' records, but the intended option gives Prepaid insurance $1800, which is the balance left after the adjustment. The adjustment itself debits Insurance expense $600 and credits Prepaid insurance $600, as the card teaches ('credit the prepaid asset by that amount'). Reword it to ask for the amounts reported after the adjustment, or for the balances in the Income Statement and Balance Sheet."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b mixes up the adjustment amount with the remaining balance: the adjustment credits Prepaid insurance $600, but the intended option shows the $1800 balance left after it. Everything else checks out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks what 'the adjustment' records, but the intended option gives Prepaid insurance $1800, which is the balance left after the adjustment. The adjustment itself debits Insurance expense $600 and credits Prepaid insurance $600, as the card teaches ('credit the prepaid asset by that amount'). Reword it to ask for the amounts reported after the adjustment, or for the balances in the Income Statement and Balance Sheet."
+ ],
+ "proposal": {
+  "title": "Prepaid expenses",
+  "card": [
+   "A prepaid expense is an expense paid in cash before the business has used it. Insurance paid for the next 12 months is an example.",
+   "When the payment is made, the unused part is recorded as an asset, Prepaid insurance. The business has paid for a benefit it will receive later.",
+   "On balance day, work out how much has been used up. Debit the expense account and credit the prepaid asset by that amount.",
+   "The part not yet used stays as an asset in the Balance Sheet. The used part is an expense in the Income Statement for the period."
+  ],
+  "remember": "Paid early and not yet used is an asset. Once used, it becomes an expense.",
+  "a": {
+   "q": "On balance day, a business has paid for a service that it has not yet used. How is the unused part recorded?",
+   "opts": [
+    "As an asset, because the benefit is still to come",
+    "As an expense, because the cash has been paid",
+    "As a liability, because the service is still owed",
+    "As revenue, because the payment has been made"
+   ],
+   "why": "The business has paid for a benefit it will receive later, so the unused part is an asset. It is not an expense yet, even though cash has left the business, because the service has not been used.",
+   "clue": "Think about what the business still has the right to receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 1 April, Priya's Bakery in Ballarat pays $2400 for 12 months of insurance. Its year ends on 30 June. After the 30 June adjustment, what amounts are reported in the Income Statement and Balance Sheet?",
+   "opts": [
+    "Insurance expense $600, Prepaid insurance $1800",
+    "Insurance expense $1800, Prepaid insurance $600",
+    "Insurance expense $2400, Prepaid insurance $0",
+    "Insurance expense $0, Prepaid insurance $2400"
+   ],
+   "why": "April, May and June are 3 of 12 months, so $600 has been used and is an expense in the Income Statement. The other $1800 covers the next 9 months and stays as an asset in the Balance Sheet. Expensing the full $2400 ignores that most of the cover is still to come.",
+   "clue": "Count how many of the 12 months have passed by balance day."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks what 'the adjustment' records, but the intended option gives Prepaid insurance $1800, which is the balance left after the adjustment. The adjustment itself debits Insurance expense $600 and credits Prepaid insurance $600, as the card teaches ('credit the prepaid asset by that amount'). Reword it to ask for the amounts reported after the adjustment, or for the balances in the Income Statement and Balance Sheet."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks what 'the adjustment' records, but the intended option gives Prepaid insurance $1800, which is the balance left after the adjustment. The adjustment itself debits Insurance expense $600 and credits Prepaid insurance $600, as the card teaches ('credit the prepaid asset by that amount'). Reword it to ask for the amounts reported after the adjustment, or for the balances in the Income Statement and Balance Sheet."
+  ]
+ },
+ "final": {
+  "title": "Prepaid expenses",
+  "card": [
+   "A prepaid expense is an expense paid in cash before the business has used it. Insurance paid for the next 12 months is an example.",
+   "When the payment is made, the unused part is recorded as an asset, Prepaid insurance. The business has paid for a benefit it will receive later.",
+   "On balance day, work out how much has been used up. Debit the expense account and credit the prepaid asset by that amount.",
+   "The part not yet used stays as an asset in the Balance Sheet. The used part is an expense in the Income Statement for the period."
+  ],
+  "remember": "Paid early and not yet used is an asset. Once used, it becomes an expense.",
+  "a": {
+   "q": "On balance day, a business has paid for a service that it has not yet used. How is the unused part recorded?",
+   "opts": [
+    "As an asset, because the benefit is still to come",
+    "As an expense, because the cash has been paid",
+    "As a liability, because the service is still owed",
+    "As revenue, because the payment has been made"
+   ],
+   "why": "The business has paid for a benefit it will receive later, so the unused part is an asset. It is not an expense yet, even though cash has left the business, because the service has not been used.",
+   "clue": "Think about what the business still has the right to receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 1 April, Priya's Bakery in Ballarat pays $2400 for 12 months of insurance. Its year ends on 30 June. After the 30 June adjustment, what amounts are reported in the Income Statement and Balance Sheet?",
+   "opts": [
+    "Insurance expense $600, Prepaid insurance $1800",
+    "Insurance expense $1800, Prepaid insurance $600",
+    "Insurance expense $2400, Prepaid insurance $0",
+    "Insurance expense $0, Prepaid insurance $2400"
+   ],
+   "why": "April, May and June are 3 of 12 months, so $600 has been used and is an expense in the Income Statement. The other $1800 covers the next 9 months and stays as an asset in the Balance Sheet. Expensing the full $2400 ignores that most of the cover is still to come.",
+   "clue": "Count how many of the 12 months have passed by balance day."
+  }
+ },
+ "cleared_by": "auto"
+}

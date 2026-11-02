@@ -1,0 +1,192 @@
+{
+ "id": "mat-earliest-latest-start-times",
+ "title": "Earliest and latest start times",
+ "brief": "98dcab81f16a",
+ "shortlist": [
+  [
+   "mat-float-time",
+   0.522
+  ],
+  [
+   "mat-latest-starting-times",
+   0.42
+  ],
+  [
+   "mat-earliest-starting-times",
+   0.415
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00992,
+  "check": 0.01597,
+  "fix": 0.02815
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers both the forward scan for earliest start times and the backward scan for latest start times; the two closest cards each teach only one half, and the float card is a related but different idea, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Earliest and latest start times",
+  "card": [
+   "The earliest start time (EST) is the soonest an activity can begin. Scan forward from the start, where the first activities have EST 0.",
+   "EST of an activity = the largest of (EST + duration) over all its predecessors. It must wait for the slowest one.",
+   "The latest start time (LST) is the last time an activity can begin without delaying the project. Scan backward from the finish, which is the project time.",
+   "LST = the smallest LST of its successors − its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST 12 − 5 = 7."
+  ],
+  "remember": "Forward scan: take the largest. Backward scan: take the smallest, then subtract.",
+  "a": {
+   "q": "P (4 days) and Q (6 days) have no predecessors. R (3 days) needs P. S (5 days) needs P and Q. What is the EST of S?",
+   "opts": [
+    "6",
+    "4",
+    "10",
+    "11"
+   ],
+   "why": "S cannot start until both P and Q are done. P finishes at 4 and Q finishes at 6, so the largest is 6. Taking 4 ignores that Q is still running.",
+   "clue": "S waits for the slower of its two predecessors."
+  },
+  "b": {
+   "d": 3,
+   "q": "A (2 days) has no predecessors. B (5 days) and C (3 days) both need A. D (4 days) needs B and C. The project takes 11 days. What is the LST of C?",
+   "opts": [
+    "4",
+    "2",
+    "5",
+    "8"
+   ],
+   "why": "D must start by 11 − 4 = 7. C takes 3 days, so its LST is 7 − 3 = 4. The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
+   "clue": "Work back from the finish, finding D's LST first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6",
+   "also_right": []
+  },
+  "b": {
+   "best": "4",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'It must wait for the slowest one' (and the clue in a, 'the slower of its two predecessors') suggests choosing the predecessor with the longest duration. The rule is the predecessor that finishes latest (largest EST + duration), and that is not always the longest one. Better: 'It must wait for the one that finishes last.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: the EST of S is 6 and the LST of C is 4. One wording fix is needed: 'slowest' predecessor should read 'the predecessor that finishes last', so students do not confuse it with the longest duration."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'It must wait for the slowest one' (and the clue in a, 'the slower of its two predecessors') suggests choosing the predecessor with the longest duration. The rule is the predecessor that finishes latest (largest EST + duration), and that is not always the longest one. Better: 'It must wait for the one that finishes last.'"
+ ],
+ "proposal": {
+  "title": "Earliest and latest start times",
+  "card": [
+   "The earliest start time (EST) is the soonest an activity can begin. Scan forward from the start, where the first activities have EST 0.",
+   "EST of an activity = the largest of (EST + duration) over all its predecessors. It must wait for the one that finishes last.",
+   "The latest start time (LST) is the last time an activity can begin without delaying the project. Scan backward from the finish, which is the project time.",
+   "LST = the smallest LST of its successors − its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST 12 − 5 = 7."
+  ],
+  "remember": "Forward scan: take the largest. Backward scan: take the smallest, then subtract.",
+  "a": {
+   "q": "P (4 days) and Q (6 days) have no predecessors. R (3 days) needs P. S (5 days) needs P and Q. What is the EST of S?",
+   "opts": [
+    "6",
+    "4",
+    "10",
+    "11"
+   ],
+   "why": "S cannot start until both P and Q are done. P finishes at 0 + 4 = 4 and Q finishes at 0 + 6 = 6, so the largest is 6. Taking 4 ignores that Q is still running.",
+   "clue": "S waits for whichever predecessor finishes last."
+  },
+  "b": {
+   "d": 3,
+   "q": "A (2 days) has no predecessors. B (5 days) and C (3 days) both need A. D (4 days) needs B and C. The project takes 11 days. What is the LST of C?",
+   "opts": [
+    "4",
+    "2",
+    "5",
+    "8"
+   ],
+   "why": "D must start by 11 − 4 = 7. C takes 3 days, so its LST is 7 − 3 = 4. The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
+   "clue": "Work back from the finish, finding D's LST first."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'It must wait for the slowest one' (and the clue in a, 'the slower of its two predecessors') suggests choosing the predecessor with the longest duration. The rule is the predecessor that finishes latest (largest EST + duration), and that is not always the longest one. Better: 'It must wait for the one that finishes last.'"
+   }
+  ],
+  "flags": [
+   "Card, wording: 'It must wait for the slowest one' (and the clue in a, 'the slower of its two predecessors') suggests choosing the predecessor with the longest duration. The rule is the predecessor that finishes latest (largest EST + duration), and that is not always the longest one. Better: 'It must wait for the one that finishes last.'"
+  ]
+ },
+ "final": {
+  "title": "Earliest and latest start times",
+  "card": [
+   "The earliest start time (EST) is the soonest an activity can begin. Scan forward from the start, where the first activities have EST 0.",
+   "EST of an activity = the largest of (EST + duration) over all its predecessors. It must wait for the one that finishes last.",
+   "The latest start time (LST) is the last time an activity can begin without delaying the project. Scan backward from the finish, which is the project time.",
+   "LST = the smallest LST of its successors − its own duration. Example: A (3 days) then B (4) and C (2), then D (5). D has EST 7, so the project takes 12 days and D has LST 12 − 5 = 7."
+  ],
+  "remember": "Forward scan: take the largest. Backward scan: take the smallest, then subtract.",
+  "a": {
+   "q": "P (4 days) and Q (6 days) have no predecessors. R (3 days) needs P. S (5 days) needs P and Q. What is the EST of S?",
+   "opts": [
+    "6",
+    "4",
+    "10",
+    "11"
+   ],
+   "why": "S cannot start until both P and Q are done. P finishes at 0 + 4 = 4 and Q finishes at 0 + 6 = 6, so the largest is 6. Taking 4 ignores that Q is still running.",
+   "clue": "S waits for whichever predecessor finishes last."
+  },
+  "b": {
+   "d": 3,
+   "q": "A (2 days) has no predecessors. B (5 days) and C (3 days) both need A. D (4 days) needs B and C. The project takes 11 days. What is the LST of C?",
+   "opts": [
+    "4",
+    "2",
+    "5",
+    "8"
+   ],
+   "why": "D must start by 11 − 4 = 7. C takes 3 days, so its LST is 7 − 3 = 4. The value 8 comes from forgetting that D takes time, and 2 is C's earliest start.",
+   "clue": "Work back from the finish, finding D's LST first."
+  }
+ },
+ "cleared_by": "auto"
+}

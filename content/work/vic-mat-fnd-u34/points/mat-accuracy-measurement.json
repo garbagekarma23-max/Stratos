@@ -1,0 +1,211 @@
+{
+ "id": "mat-accuracy-measurement",
+ "title": "Tolerance, accuracy and precision",
+ "brief": "f8f5757f571a",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.306
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00601,
+  "check": 0.01611,
+  "fix": 0.02697
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point only covers absolute error and limits of accuracy from an instrument's smallest unit, so it lacks the brief's ideas of tolerance as allowed error and precision as the fineness of a measure, and it is narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tolerance, accuracy and precision",
+  "card": [
+   [
+    "Tolerance",
+    "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+   ],
+   [
+    "Accuracy",
+    "how close a measurement is to the true value."
+   ],
+   [
+    "Precision",
+    "how fine the measure is. A ruler marked in millimetres is more precise than one marked in centimetres."
+   ],
+   "A measure can be precise but not accurate, such as a scale that reads 2.35 kg for a true mass of 2.00 kg. A reading is within tolerance if it falls inside the allowed range."
+  ],
+  "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
+  "a": {
+   "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+   "opts": [
+    "119.6 mm",
+    "119.4 mm",
+    "120.6 mm",
+    "121 mm"
+   ],
+   "why": "The allowed range is 119.5 mm to 120.5 mm. 119.6 mm is inside it. 119.4 mm is just outside, so it is not allowed.",
+   "clue": "Work out the lowest and highest allowed lengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A true mass is 500 g. Ali's scale reads 512.35 g. Jo's scale reads 499 g. Which describes the scales?",
+   "opts": [
+    "Ali's is more precise, Jo's is more accurate",
+    "Ali's is more accurate, Jo's is more precise",
+    "Both are equally accurate",
+    "Jo's is more precise and less accurate"
+   ],
+   "why": "Ali's reads to two decimal places, so it is finer, but it is 12.35 g from the true mass. Jo's is only 1 g away, so it is more accurate. More decimal places do not mean closer to the true value.",
+   "clue": "Compare how far each reading is from 500 g."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "119.6 mm",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ali's is more precise, Jo's is more accurate",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Precision is judged only from how many decimal places one reading shows. A reading of 499 g does not prove Jo's scale is marked only in whole grams. Saying what each scale reads to (for example, 'Ali's reads to 0.01 g, Jo's to 1 g') would make the comparison clear."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, and each has exactly one right option. Question b infers each scale's precision from the decimals in a single reading; stating each scale's resolution would remove any doubt."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: Precision is judged only from how many decimal places one reading shows. A reading of 499 g does not prove Jo's scale is marked only in whole grams. Saying what each scale reads to (for example, 'Ali's reads to 0.01 g, Jo's to 1 g') would make the comparison clear."
+ ],
+ "proposal": {
+  "title": "Tolerance, accuracy and precision",
+  "card": [
+   [
+    "Tolerance",
+    "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+   ],
+   [
+    "Accuracy",
+    "how close a measurement is to the true value. Every measurement has some error, so the closer it is, the more accurate it is."
+   ],
+   [
+    "Precision",
+    "how fine the measure is. A ruler marked in millimetres is more precise than one marked in centimetres."
+   ],
+   "A measure can be precise but not accurate, such as a scale that reads 2.35 kg for a true mass of 2.00 kg. A reading is within tolerance if it falls inside the allowed range."
+  ],
+  "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
+  "a": {
+   "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+   "opts": [
+    "119.6 mm",
+    "119.4 mm",
+    "120.6 mm",
+    "121 mm"
+   ],
+   "why": "The allowed range is 119.5 mm to 120.5 mm. 119.6 mm is inside it. 119.4 mm is just outside, so it is not allowed.",
+   "clue": "Work out the lowest and highest allowed lengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A bag has a true mass of 500 g. Ali's scale reads to 0.01 g and shows 512.35 g. Jo's scale reads to 1 g and shows 499 g. Which describes the scales?",
+   "opts": [
+    "Ali's is more precise, Jo's is more accurate",
+    "Ali's is more accurate, Jo's is more precise",
+    "Ali's is more precise and more accurate",
+    "Jo's is more precise and more accurate"
+   ],
+   "why": "Ali's scale reads to 0.01 g, which is finer than 1 g, so it is more precise. But its reading is 12.35 g from the true mass, while Jo's is only 1 g away, so Jo's is more accurate. A finer scale does not mean a reading closer to the true value.",
+   "clue": "Precision is how fine the scale is. Accuracy is how close to 500 g."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Precision is judged only from how many decimal places one reading shows. A reading of 499 g does not prove Jo's scale is marked only in whole grams. Saying what each scale reads to (for example, 'Ali's reads to 0.01 g, Jo's to 1 g') would make the comparison clear."
+   }
+  ],
+  "flags": [
+   "Question b, wording: Precision is judged only from how many decimal places one reading shows. A reading of 499 g does not prove Jo's scale is marked only in whole grams. Saying what each scale reads to (for example, 'Ali's reads to 0.01 g, Jo's to 1 g') would make the comparison clear."
+  ]
+ },
+ "final": {
+  "title": "Tolerance, accuracy and precision",
+  "card": [
+   [
+    "Tolerance",
+    "the error allowed in a measurement. A part of 50 mm ± 0.2 mm must be between 49.8 mm and 50.2 mm."
+   ],
+   [
+    "Accuracy",
+    "how close a measurement is to the true value. Every measurement has some error, so the closer it is, the more accurate it is."
+   ],
+   [
+    "Precision",
+    "how fine the measure is. A ruler marked in millimetres is more precise than one marked in centimetres."
+   ],
+   "A measure can be precise but not accurate, such as a scale that reads 2.35 kg for a true mass of 2.00 kg. A reading is within tolerance if it falls inside the allowed range."
+  ],
+  "remember": "Tolerance is the allowed error, accuracy is closeness to true, precision is how fine the scale is.",
+  "a": {
+   "q": "A steel rod must be 120 mm ± 0.5 mm. Which length is within tolerance?",
+   "opts": [
+    "119.6 mm",
+    "119.4 mm",
+    "120.6 mm",
+    "121 mm"
+   ],
+   "why": "The allowed range is 119.5 mm to 120.5 mm. 119.6 mm is inside it. 119.4 mm is just outside, so it is not allowed.",
+   "clue": "Work out the lowest and highest allowed lengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A bag has a true mass of 500 g. Ali's scale reads to 0.01 g and shows 512.35 g. Jo's scale reads to 1 g and shows 499 g. Which describes the scales?",
+   "opts": [
+    "Ali's is more precise, Jo's is more accurate",
+    "Ali's is more accurate, Jo's is more precise",
+    "Ali's is more precise and more accurate",
+    "Jo's is more precise and more accurate"
+   ],
+   "why": "Ali's scale reads to 0.01 g, which is finer than 1 g, so it is more precise. But its reading is 12.35 g from the true mass, while Jo's is only 1 g away, so Jo's is more accurate. A finer scale does not mean a reading closer to the true value.",
+   "clue": "Precision is how fine the scale is. Accuracy is how close to 500 g."
+  }
+ },
+ "cleared_by": "auto"
+}

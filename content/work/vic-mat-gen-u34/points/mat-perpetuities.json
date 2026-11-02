@@ -1,0 +1,227 @@
+{
+ "id": "mat-perpetuities",
+ "title": "Perpetuities",
+ "brief": "d6d48938e2c1",
+ "shortlist": [
+  [
+   "mat-reducing-balance-loans",
+   0.326
+  ],
+  [
+   "mat-compound-interest-by-repeated",
+   0.273
+  ],
+  [
+   "mat-comparing-investments",
+   0.269
+  ],
+  [
+   "mat-compound-interest",
+   0.261
+  ],
+  [
+   "mat-annuity",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:12Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00449,
+  "check": 0.00904,
+  "fix": 0.02532,
+  "recheck": 0.00841
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches a perpetuity, where only the interest is paid out so the balance never falls; the closest, reducing balance loans, is the opposite case where repayments clear the balance to zero.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Perpetuities",
+  "card": [
+   "A perpetuity is an investment that pays out only the interest it earns each period. The balance stays the same, so the payments can go on forever.",
+   "Payment = principal × interest rate per period. The rate must match the payment period, so a yearly rate of 6% paid monthly becomes 0.5% per month.",
+   "Worked example: $200 000 invested at 5% per year, paid yearly. Payment = 200 000 × 0.05 = $10 000 each year, and the balance stays at $200 000.",
+   "To find the principal needed for a set payment, rearrange: principal = payment ÷ interest rate per period."
+  ],
+  "remember": "A perpetuity pays only the interest, so the balance never falls.",
+  "a": {
+   "q": "$300 000 is invested in a perpetuity at 4% per year, paid yearly. What is the yearly payment?",
+   "opts": [
+    "$12 000",
+    "$7 500",
+    "$312 000",
+    "$1 200"
+   ],
+   "why": "Payment = 300 000 × 0.04 = $12 000. Dividing by 0.04 instead gives $7 500, but that finds a principal, not a payment.",
+   "clue": "Multiply the principal by the rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants a perpetuity paying $2 000 each month. The interest rate is 6% per year, paid monthly. What principal does she need?",
+   "opts": [
+    "$400 000",
+    "$33 333",
+    "$24 000",
+    "$40 000"
+   ],
+   "why": "The monthly rate is 6% ÷ 12 = 0.5%. Principal = 2 000 ÷ 0.005 = $400 000. Using 6% gives $33 333, which mixes a yearly rate with a monthly payment.",
+   "clue": "Change the yearly rate to a monthly rate first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$12 000",
+   "also_right": []
+  },
+  "b": {
+   "best": "$400 000",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing by 0.04 gives $7 500, but 300 000 ÷ 0.04 = $7 500 000. The $7 500 distractor does not match the mistake the why describes, so the explanation teaches wrong arithmetic."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card are correct. The explanation for question a wrongly says 300 000 ÷ 0.04 gives $7 500, when it gives $7 500 000, so that distractor or the why needs fixing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says dividing by 0.04 gives $7 500, but 300 000 ÷ 0.04 = $7 500 000. The $7 500 distractor does not match the mistake the why describes, so the explanation teaches wrong arithmetic."
+ ],
+ "proposal": {
+  "title": "Perpetuities",
+  "card": [
+   "A perpetuity is an investment that pays out only the interest it earns each period. The balance stays the same, so the payments can go on forever.",
+   "Payment = principal × interest rate per period. The rate must match the payment period, so a yearly rate of 6% paid monthly becomes 0.5% per month.",
+   "Worked example: $200 000 invested at 5% per year, paid yearly. Payment = 200 000 × 0.05 = $10 000 each year, and the balance stays at $200 000.",
+   "To find the principal needed for a set payment, rearrange: principal = payment ÷ interest rate per period."
+  ],
+  "remember": "A perpetuity pays only the interest, so the balance never falls.",
+  "a": {
+   "q": "$300 000 is invested in a perpetuity at 4% per year, paid yearly. What is the yearly payment?",
+   "opts": [
+    "$12 000",
+    "$7 500 000",
+    "$312 000",
+    "$1 200"
+   ],
+   "why": "Payment = 300 000 × 0.04 = $12 000. Dividing by 0.04 instead gives 300 000 ÷ 0.04 = $7 500 000, which uses the rearranged rule for a principal, not a payment. $312 000 adds the interest to the balance, but a perpetuity pays out only the interest.",
+   "clue": "Multiply the principal by the rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants a perpetuity paying $2 000 each month. The interest rate is 6% per year, paid monthly. What principal does she need?",
+   "opts": [
+    "$400 000",
+    "$33 333",
+    "$24 000",
+    "$40 000"
+   ],
+   "why": "The monthly rate is 6% ÷ 12 = 0.5%. Principal = 2 000 ÷ 0.005 = $400 000. Using 6% gives $33 333, which mixes a yearly rate with a monthly payment.",
+   "clue": "Change the yearly rate to a monthly rate first."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$12 000",
+    "also_right": []
+   },
+   "b": {
+    "best": "$400 000",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says dividing by 0.04 gives $7 500, but 300 000 ÷ 0.04 = $7 500 000. The $7 500 distractor does not match the mistake the why describes, so the explanation teaches wrong arithmetic."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says dividing by 0.04 gives $7 500, but 300 000 ÷ 0.04 = $7 500 000. The $7 500 distractor does not match the mistake the why describes, so the explanation teaches wrong arithmetic."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Perpetuities",
+  "card": [
+   "A perpetuity is an investment that pays out only the interest it earns each period. The balance stays the same, so the payments can go on forever.",
+   "Payment = principal × interest rate per period. The rate must match the payment period, so a yearly rate of 6% paid monthly becomes 0.5% per month.",
+   "Worked example: $200 000 invested at 5% per year, paid yearly. Payment = 200 000 × 0.05 = $10 000 each year, and the balance stays at $200 000.",
+   "To find the principal needed for a set payment, rearrange: principal = payment ÷ interest rate per period."
+  ],
+  "remember": "A perpetuity pays only the interest, so the balance never falls.",
+  "a": {
+   "q": "$300 000 is invested in a perpetuity at 4% per year, paid yearly. What is the yearly payment?",
+   "opts": [
+    "$12 000",
+    "$7 500 000",
+    "$312 000",
+    "$1 200"
+   ],
+   "why": "Payment = 300 000 × 0.04 = $12 000. Dividing by 0.04 instead gives 300 000 ÷ 0.04 = $7 500 000, which uses the rearranged rule for a principal, not a payment. $312 000 adds the interest to the balance, but a perpetuity pays out only the interest.",
+   "clue": "Multiply the principal by the rate."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wants a perpetuity paying $2 000 each month. The interest rate is 6% per year, paid monthly. What principal does she need?",
+   "opts": [
+    "$400 000",
+    "$33 333",
+    "$24 000",
+    "$40 000"
+   ],
+   "why": "The monthly rate is 6% ÷ 12 = 0.5%. Principal = 2 000 ÷ 0.005 = $400 000. Using 6% gives $33 333, which mixes a yearly rate with a monthly payment.",
+   "clue": "Change the yearly rate to a monthly rate first."
+  }
+ },
+ "cleared_by": "owner"
+}

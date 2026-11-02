@@ -1,0 +1,122 @@
+{
+ "id": "mat-projectile-motion-with-vectors",
+ "title": "Projectile motion with vectors",
+ "brief": "8119e41c2fbf",
+ "shortlist": [
+  [
+   "phys-projectile-motion",
+   0.329
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00544,
+  "check": 0.00768
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches projectile motion as separate horizontal and vertical kinematics with no vectors, position vector, or integration, whereas the new point is about writing the position vector as a function of time under vector calculus, which is a different idea and depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Projectile motion with vectors",
+  "card": [
+   "A projectile moves under gravity alone. Take i as horizontal and j as vertical (up), and ignore air resistance. Then acceleration is a = −g j, with g = 9.8 m/s².",
+   "Horizontal motion has no acceleration, so the horizontal velocity stays constant. Vertical velocity changes at a steady rate of −g.",
+   "For a launch from the origin with speed u at angle θ above the horizontal: r(t) = (u cos θ)t i + ((u sin θ)t − 4.9t²) j.",
+   "Example: a ball leaves the origin with velocity 12i + 20j m/s. Then r(t) = 12t i + (20t − 4.9t²) j. It lands when the j part is 0 again: 20t − 4.9t² = 0, so t = 20/4.9 ≈ 4.08 s."
+  ],
+  "remember": "Horizontal: constant velocity. Vertical: constant acceleration of −g.",
+  "a": {
+   "q": "A projectile is launched from the origin with velocity 15i + 10j m/s. Which is its position vector at time t seconds, in metres?",
+   "opts": [
+    "15t i + (10t − 4.9t²) j",
+    "15t i + (10t − 9.8t²) j",
+    "(15t − 4.9t²) i + 10t j",
+    "15t i + (10 − 4.9t²) j"
+   ],
+   "why": "Horizontal velocity is constant, so the i part is 15t. The j part is 10t − ½gt² = 10t − 4.9t². Using 9.8t² forgets the half that comes from integrating the acceleration twice.",
+   "clue": "Gravity acts only on the j part, and the half matters."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ball is thrown from the origin with velocity 8i + 14.7j m/s. How far horizontally has it travelled when it returns to j = 0?",
+   "opts": [
+    "24 m",
+    "12 m",
+    "48 m",
+    "3 m"
+   ],
+   "why": "The j part is 14.7t − 4.9t² = 4.9t(3 − t), so it returns to 0 at t = 3 s. Horizontal distance is 8 × 3 = 24 m. Using t = 1.5 s, the time to the top, gives 12 m, which is only halfway.",
+   "clue": "Find t when the j part is zero again, then use the i part."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "15t i + (10t − 4.9t²) j",
+   "also_right": []
+  },
+  "b": {
+   "best": "24 m",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's formula and worked example are correct, and both questions have a single correct option that matches the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Projectile motion with vectors",
+  "card": [
+   "A projectile moves under gravity alone. Take i as horizontal and j as vertical (up), and ignore air resistance. Then acceleration is a = −g j, with g = 9.8 m/s².",
+   "Horizontal motion has no acceleration, so the horizontal velocity stays constant. Vertical velocity changes at a steady rate of −g.",
+   "For a launch from the origin with speed u at angle θ above the horizontal: r(t) = (u cos θ)t i + ((u sin θ)t − 4.9t²) j.",
+   "Example: a ball leaves the origin with velocity 12i + 20j m/s. Then r(t) = 12t i + (20t − 4.9t²) j. It lands when the j part is 0 again: 20t − 4.9t² = 0, so t = 20/4.9 ≈ 4.08 s."
+  ],
+  "remember": "Horizontal: constant velocity. Vertical: constant acceleration of −g.",
+  "a": {
+   "q": "A projectile is launched from the origin with velocity 15i + 10j m/s. Which is its position vector at time t seconds, in metres?",
+   "opts": [
+    "15t i + (10t − 4.9t²) j",
+    "15t i + (10t − 9.8t²) j",
+    "(15t − 4.9t²) i + 10t j",
+    "15t i + (10 − 4.9t²) j"
+   ],
+   "why": "Horizontal velocity is constant, so the i part is 15t. The j part is 10t − ½gt² = 10t − 4.9t². Using 9.8t² forgets the half that comes from integrating the acceleration twice.",
+   "clue": "Gravity acts only on the j part, and the half matters."
+  },
+  "b": {
+   "d": 3,
+   "q": "A ball is thrown from the origin with velocity 8i + 14.7j m/s. How far horizontally has it travelled when it returns to j = 0?",
+   "opts": [
+    "24 m",
+    "12 m",
+    "48 m",
+    "3 m"
+   ],
+   "why": "The j part is 14.7t − 4.9t² = 4.9t(3 − t), so it returns to 0 at t = 3 s. Horizontal distance is 8 × 3 = 24 m. Using t = 1.5 s, the time to the top, gives 12 m, which is only halfway.",
+   "clue": "Find t when the j part is zero again, then use the i part."
+  }
+ },
+ "cleared_by": "checker"
+}

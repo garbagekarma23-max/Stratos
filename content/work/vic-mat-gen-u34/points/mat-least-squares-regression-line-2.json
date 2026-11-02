@@ -1,0 +1,219 @@
+{
+ "id": "mat-least-squares-regression-line-2",
+ "title": "The least squares regression line",
+ "brief": "afcaf857256d",
+ "shortlist": [
+  [
+   "mat-least-squares-regression-line",
+   0.526
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00603,
+  "check": 0.01514,
+  "fix": 0.02706,
+  "recheck": 0.0109
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers reading and using a least-squares line for prediction, but it does not teach the defining idea of minimising squared residuals or the slope formula b = r × sy/sx that the new point requires, so it would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Least squares regression line",
+  "card": [
+   "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible. A residual is the vertical gap between a data point and the line.",
+   "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
+   "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
+   "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 18."
+  ],
+  "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+  "a": {
+   "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+   "opts": [
+    "1.8",
+    "0.2",
+    "7.2",
+    "5"
+   ],
+   "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 1/3 = 0.2, which turns the ratio upside down.",
+   "clue": "The standard deviation of y goes on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
+   "opts": [
+    "15",
+    "−15",
+    "45",
+    "105"
+   ],
+   "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. Adding instead of subtracting gives 105, a sign error. Using 60 − 45 without the slope times the mean gives wrong values like 45 only by skipping the subtraction.",
+   "clue": "The line passes through the point of the two means."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1.8",
+   "also_right": []
+  },
+  "b": {
+   "best": "15",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines a residual ('the vertical gap between a data point and the line'), which belongs to point 4 (Residuals and residual plots). It should only be mentioned here. 'Gap' also suggests a positive distance, while point 4 defines a residual as a signed value, actual minus predicted."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The explanation's last sentence is confusing and self-contradictory: '60 − 45' is the correct working, yet it is described as giving wrong values like 45. It should say that 45 is just b × x̄ with the subtraction from ȳ skipped, and that −15 comes from subtracting the wrong way round."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct (1.8 and 15), and the worked example checks out. The card defines 'residual', which belongs to point 4, and the explanation for question b has a garbled sentence about the distractor 45."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines a residual ('the vertical gap between a data point and the line'), which belongs to point 4 (Residuals and residual plots). It should only be mentioned here. 'Gap' also suggests a positive distance, while point 4 defines a residual as a signed value, actual minus predicted.",
+  "Question b, wording: The explanation's last sentence is confusing and self-contradictory: '60 − 45' is the correct working, yet it is described as giving wrong values like 45. It should say that 45 is just b × x̄ with the subtraction from ȳ skipped, and that −15 comes from subtracting the wrong way round."
+ ],
+ "proposal": {
+  "title": "Least squares regression line",
+  "card": [
+   "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
+   "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
+   "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
+   "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 50 − 32 = 18."
+  ],
+  "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+  "a": {
+   "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+   "opts": [
+    "1.8",
+    "0.2",
+    "7.2",
+    "3"
+   ],
+   "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 4/12 = 0.2, which turns the ratio upside down. Leaving out r gives 3.",
+   "clue": "The standard deviation of y goes on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
+   "opts": [
+    "15",
+    "−15",
+    "45",
+    "105"
+   ],
+   "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. The value 45 is just b × x̄ with the subtraction from ȳ skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, 45 − 60, gives −15.",
+   "clue": "The line passes through the point of the two means."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "1.8",
+    "also_right": []
+   },
+   "b": {
+    "best": "15",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: b = 0.6 × 12/4 = 1.8 and a = 60 − 1.5 × 30 = 15."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines a residual ('the vertical gap between a data point and the line'), which belongs to point 4 (Residuals and residual plots). It should only be mentioned here. 'Gap' also suggests a positive distance, while point 4 defines a residual as a signed value, actual minus predicted."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The explanation's last sentence is confusing and self-contradictory: '60 − 45' is the correct working, yet it is described as giving wrong values like 45. It should say that 45 is just b × x̄ with the subtraction from ȳ skipped, and that −15 comes from subtracting the wrong way round."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines a residual ('the vertical gap between a data point and the line'), which belongs to point 4 (Residuals and residual plots). It should only be mentioned here. 'Gap' also suggests a positive distance, while point 4 defines a residual as a signed value, actual minus predicted.",
+   "Question b, wording: The explanation's last sentence is confusing and self-contradictory: '60 − 45' is the correct working, yet it is described as giving wrong values like 45. It should say that 45 is just b × x̄ with the subtraction from ȳ skipped, and that −15 comes from subtracting the wrong way round."
+  ]
+ },
+ "final": {
+  "title": "Least squares regression line",
+  "card": [
+   "The least squares regression line is written y = a + bx. It is the line that makes the sum of the squared residuals as small as possible, which is where its name comes from.",
+   "The slope is b = r × sy/sx. Here r is the correlation coefficient, sy is the standard deviation of the response y, and sx is the standard deviation of the explanatory variable x.",
+   "The intercept is a = ȳ − b × x̄, where x̄ and ȳ are the means. This means the line always passes through the point (x̄, ȳ).",
+   "Worked example: r = 0.8, sx = 5, sy = 10. Then b = 0.8 × 10/5 = 1.6. If x̄ = 20 and ȳ = 50, then a = 50 − 1.6 × 20 = 50 − 32 = 18."
+  ],
+  "remember": "Slope b = r × sy/sx, and the line passes through (x̄, ȳ).",
+  "a": {
+   "q": "A data set has r = 0.6, sx = 4 and sy = 12. What is the slope of the least squares line?",
+   "opts": [
+    "1.8",
+    "0.2",
+    "7.2",
+    "3"
+   ],
+   "why": "b = r × sy/sx = 0.6 × 12/4 = 0.6 × 3 = 1.8. Using sx/sy instead gives 0.6 × 4/12 = 0.2, which turns the ratio upside down. Leaving out r gives 3.",
+   "clue": "The standard deviation of y goes on top."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a group of runners, x̄ = 30, ȳ = 60, and the least squares line has slope 1.5. What is the intercept a?",
+   "opts": [
+    "15",
+    "−15",
+    "45",
+    "105"
+   ],
+   "why": "a = ȳ − b × x̄ = 60 − 1.5 × 30 = 60 − 45 = 15. The value 45 is just b × x̄ with the subtraction from ȳ skipped, and adding instead of subtracting gives 105. Subtracting the wrong way round, 45 − 60, gives −15.",
+   "clue": "The line passes through the point of the two means."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,202 @@
+{
+ "id": "eco-discretionary-changes",
+ "title": "Discretionary changes",
+ "brief": "56073a7be4a9",
+ "shortlist": [
+  [
+   "eco-structural-cyclical-budget-parts",
+   0.334
+  ],
+  [
+   "e-fiscal",
+   0.265
+  ],
+  [
+   "eco-automatic-stabilisers",
+   0.261
+  ],
+  [
+   "e-taxsub",
+   0.245
+  ],
+  [
+   "eco-tax-reform",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:00Z write: failed the content check, writing again",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "write": 0.01309,
+  "check": 0.01483,
+  "fix": 0.03072
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Fiscal policy, covers deliberate spending and tax changes but as a broader card on fiscal policy in general, without the discretionary-versus-automatic distinction this point teaches, and the structural-cyclical card covers a related but different concept, so a new point is the safer match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Discretionary changes",
+  "card": [
+   "A discretionary change is a deliberate decision by the government to alter tax rates or government spending. It needs a choice, such as a new law or a new budget measure.",
+   "These changes make up the structural part of the budget. The structural part is the budget balance that results from the government's own policy settings.",
+   "This differs from the cyclical part, which moves up and down by itself as the economy grows or slows, with no new decision.",
+   "Examples are cutting income tax rates to lift household spending in a downturn, or funding a new road project. A government may also raise tax or cut spending to slow an overheated economy."
+  ],
+  "remember": "Discretionary changes are chosen by the government, and they shape the structural budget.",
+  "a": {
+   "q": "Which of these is a discretionary change to the budget?",
+   "opts": [
+    "Parliament passes a cut to the tax rate for small firms",
+    "Company tax revenue falls as profits drop in a downturn",
+    "More people claim unemployment payments as jobs are lost",
+    "Income tax collected rises as wages grow in a boom"
+   ],
+   "why": "Passing a tax cut is a deliberate decision, so it is discretionary. The other three happen on their own as the economy changes, without any new decision, so they belong to the cyclical part.",
+   "clue": "Which one needs the government to make a choice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages in a country rise during a boom, so the government collects more income tax with no change to tax rates. Why is this not a discretionary change?",
+   "opts": [
+    "No new decision was made, as revenue rose with the economy",
+    "It raised revenue, and discretionary changes only cut taxes",
+    "It affects households, and these changes only affect firms",
+    "It came in a boom, and these changes only happen in busts"
+   ],
+   "why": "A discretionary change needs a deliberate decision to alter tax or spending. Here the rates stayed the same and revenue rose by itself with wages. Discretionary changes can raise or cut tax, and can be made in a boom or a downturn, so the other options are wrong.",
+   "clue": "Did anyone in government have to decide anything?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Parliament passes a cut to the tax rate for small firms",
+   "also_right": []
+  },
+  "b": {
+   "best": "No new decision was made, as revenue rose with the economy",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The third bullet explains the cyclical part of the budget (it moves by itself as the economy grows or slows, with no new decision). That idea belongs to point 1, Automatic stabilisers, and should only be mentioned here, not explained. This is a minor issue, since the contrast helps define the structural part."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each question has one clear right answer. The only issue is minor: the card briefly explains the cyclical part of the budget, which belongs to the Automatic stabilisers point."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The third bullet explains the cyclical part of the budget (it moves by itself as the economy grows or slows, with no new decision). That idea belongs to point 1, Automatic stabilisers, and should only be mentioned here, not explained. This is a minor issue, since the contrast helps define the structural part."
+ ],
+ "proposal": {
+  "title": "Discretionary changes",
+  "card": [
+   "A discretionary change is a deliberate decision by the government to alter tax rates or government spending. It needs a choice, such as a new law or a new budget measure.",
+   "These changes make up the structural part of the budget. The structural part is the budget balance that results from the government's own policy settings. The rest of the budget is the cyclical part.",
+   "In a downturn, a government may cut income tax rates to lift household spending, or fund a new road project to create jobs.",
+   "In a boom, a government may raise tax or cut spending to slow an overheated economy. Either way, the change comes from a choice the government makes."
+  ],
+  "remember": "Discretionary changes are chosen by the government, and they shape the structural budget.",
+  "a": {
+   "q": "Which of these is a discretionary change to the budget?",
+   "opts": [
+    "Parliament passes a cut to the tax rate for small firms",
+    "Company tax revenue falls as profits drop in a downturn",
+    "More people claim unemployment payments as jobs are lost",
+    "Income tax collected rises as wages grow in a boom"
+   ],
+   "why": "Passing a tax cut is a deliberate decision, so it is discretionary. The other three happen as the economy changes, with no new decision by the government, so they are not discretionary.",
+   "clue": "Which one needs the government to make a choice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages in a country rise during a boom, so the government collects more income tax with no change to tax rates. Why is this not a discretionary change?",
+   "opts": [
+    "No new decision was made, as revenue rose with the economy",
+    "It raised revenue, and discretionary changes only cut taxes",
+    "It affects households, and these changes only affect firms",
+    "It came in a boom, and these changes only happen in busts"
+   ],
+   "why": "A discretionary change needs a deliberate decision to alter tax or spending. Here the rates stayed the same and revenue rose with wages. Discretionary changes can raise or cut tax, and can be made in a boom or a downturn, so the other options are wrong.",
+   "clue": "Did anyone in government have to decide anything?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The third bullet explains the cyclical part of the budget (it moves by itself as the economy grows or slows, with no new decision). That idea belongs to point 1, Automatic stabilisers, and should only be mentioned here, not explained. This is a minor issue, since the contrast helps define the structural part."
+   }
+  ],
+  "flags": [
+   "Card, other: The third bullet explains the cyclical part of the budget (it moves by itself as the economy grows or slows, with no new decision). That idea belongs to point 1, Automatic stabilisers, and should only be mentioned here, not explained. This is a minor issue, since the contrast helps define the structural part."
+  ]
+ },
+ "final": {
+  "title": "Discretionary changes",
+  "card": [
+   "A discretionary change is a deliberate decision by the government to alter tax rates or government spending. It needs a choice, such as a new law or a new budget measure.",
+   "These changes make up the structural part of the budget. The structural part is the budget balance that results from the government's own policy settings. The rest of the budget is the cyclical part.",
+   "In a downturn, a government may cut income tax rates to lift household spending, or fund a new road project to create jobs.",
+   "In a boom, a government may raise tax or cut spending to slow an overheated economy. Either way, the change comes from a choice the government makes."
+  ],
+  "remember": "Discretionary changes are chosen by the government, and they shape the structural budget.",
+  "a": {
+   "q": "Which of these is a discretionary change to the budget?",
+   "opts": [
+    "Parliament passes a cut to the tax rate for small firms",
+    "Company tax revenue falls as profits drop in a downturn",
+    "More people claim unemployment payments as jobs are lost",
+    "Income tax collected rises as wages grow in a boom"
+   ],
+   "why": "Passing a tax cut is a deliberate decision, so it is discretionary. The other three happen as the economy changes, with no new decision by the government, so they are not discretionary.",
+   "clue": "Which one needs the government to make a choice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages in a country rise during a boom, so the government collects more income tax with no change to tax rates. Why is this not a discretionary change?",
+   "opts": [
+    "No new decision was made, as revenue rose with the economy",
+    "It raised revenue, and discretionary changes only cut taxes",
+    "It affects households, and these changes only affect firms",
+    "It came in a boom, and these changes only happen in busts"
+   ],
+   "why": "A discretionary change needs a deliberate decision to alter tax or spending. Here the rates stayed the same and revenue rose with wages. Discretionary changes can raise or cut tax, and can be made in a boom or a downturn, so the other options are wrong.",
+   "clue": "Did anyone in government have to decide anything?"
+  }
+ },
+ "cleared_by": "auto"
+}

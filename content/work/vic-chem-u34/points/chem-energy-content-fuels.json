@@ -1,0 +1,215 @@
+{
+ "id": "chem-energy-content-fuels",
+ "title": "Energy content and efficiency",
+ "brief": "8b4d57da0d83",
+ "shortlist": [
+  [
+   "phys-conservation-energy-efficiency",
+   0.33
+  ],
+  [
+   "chem-bond-energies",
+   0.215
+  ],
+  [
+   "chem-activation-energy-catalysts",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00653,
+  "check": 0.01403,
+  "fix": 0.02817,
+  "recheck": 0.01275
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's only close match is a Year 11 physics card on general efficiency and power, which lacks the new point's core idea of estimating a fuel's energy content by heating water, so it would need new steps rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Energy content and efficiency",
+  "card": [
+   "To estimate a fuel's energy content, burn a known mass of it under a container of water. Measure the water's temperature rise. The energy gained by the water is q = m × c × ΔT, where c is 4.18 J g⁻¹ °C⁻¹ for water.",
+   "Energy content is the energy released per unit of fuel, such as kJ g⁻¹. Divide the energy gained by the water by the mass of fuel burnt.",
+   "Some energy is lost to the air, the container and incomplete burning. So the energy found this way is usually lower than the true energy content.",
+   "Efficiency is the useful energy output divided by the chemical energy released by the fuel, usually given as a percentage."
+  ],
+  "remember": "Water's energy gain estimates the fuel's energy, and efficiency is useful energy out as a share of energy released.",
+  "a": {
+   "q": "Burning 0.50 g of a fuel raises the temperature of 100 g of water by 10 °C. About how much energy did the water gain? (c = 4.18 J g⁻¹ °C⁻¹)",
+   "opts": [
+    "4180 J",
+    "418 J",
+    "41.8 J",
+    "2090 J"
+   ],
+   "why": "q = 100 × 4.18 × 10 = 4180 J. The 2090 J option wrongly divides by the mass of fuel, which is only needed later to find the energy content.",
+   "clue": "Use the mass of water, not the mass of fuel."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heater releases 800 kJ of chemical energy from gas, and 600 kJ of it warms a room. What is its efficiency, and where did the rest go?",
+   "opts": [
+    "75%, lost as waste heat to the surroundings",
+    "75%, and it counts as useful energy",
+    "25%, lost as waste heat to the surroundings",
+    "133%, because more energy was released"
+   ],
+   "why": "Efficiency = 600 ÷ 800 × 100 = 75%. The other 200 kJ is not useful, so it is lost to the surroundings. The 25% option is the lost share, not the efficiency.",
+   "clue": "Divide useful energy by the energy released."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4180 J",
+   "also_right": []
+  },
+  "b": {
+   "best": "75%, lost as waste heat to the surroundings",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the 2090 J option 'wrongly divides by the mass of fuel', but 4180 ÷ 0.50 = 8360 J. 2090 J comes from multiplying by the fuel mass (4180 × 0.50), so the explanation misdescribes the error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both intended answers are correct. The explanation for question a misdescribes the 2090 J distractor: that value comes from multiplying by the 0.50 g fuel mass, not dividing by it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: The why says the 2090 J option 'wrongly divides by the mass of fuel', but 4180 ÷ 0.50 = 8360 J. 2090 J comes from multiplying by the fuel mass (4180 × 0.50), so the explanation misdescribes the error."
+ ],
+ "proposal": {
+  "title": "Energy content and efficiency",
+  "card": [
+   "To estimate a fuel's energy content, burn a known mass of it under a container of water. Measure the water's temperature rise. The energy gained by the water is q = m × c × ΔT, where m is the mass of water and c is 4.18 J g⁻¹ °C⁻¹.",
+   "Energy content is the energy released per unit of fuel, such as kJ g⁻¹. Divide the energy gained by the water by the mass of fuel burnt.",
+   "Some heat is lost to the air and the container, and the fuel may burn incompletely. So the value found this way is usually lower than the true energy content.",
+   "Efficiency is the useful energy output divided by the chemical energy released by the fuel, usually given as a percentage. The rest is wasted, mostly as heat to the surroundings."
+  ],
+  "remember": "Water's energy gain estimates the fuel's energy, and efficiency is useful energy out as a share of energy released.",
+  "a": {
+   "q": "Burning 0.50 g of a fuel raises the temperature of 100 g of water by 10 °C. About how much energy did the water gain? (c = 4.18 J g⁻¹ °C⁻¹)",
+   "opts": [
+    "4180 J",
+    "418 J",
+    "41.8 J",
+    "2090 J"
+   ],
+   "why": "q = 100 × 4.18 × 10 = 4180 J. The 2090 J option wrongly multiplies by the mass of fuel as well. The fuel mass is only needed later, to divide by when finding the energy content.",
+   "clue": "Use the mass of water, not the mass of fuel."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heater releases 800 kJ of chemical energy from gas, and 600 kJ of it warms a room. What is its efficiency, and where did the rest go?",
+   "opts": [
+    "75%, lost as waste heat to the surroundings",
+    "75%, destroyed during the chemical reaction",
+    "25%, lost as waste heat to the surroundings",
+    "133%, because more energy was released"
+   ],
+   "why": "Efficiency = 600 ÷ 800 × 100 = 75%. The other 200 kJ is not useful, so it is wasted, mostly as heat to the surroundings. The 25% option is the wasted share, not the efficiency.",
+   "clue": "Divide useful energy by the energy released."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "4180 J",
+    "also_right": []
+   },
+   "b": {
+    "best": "75%, lost as waste heat to the surroundings",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The why says the 2090 J option 'wrongly divides by the mass of fuel', but 4180 ÷ 0.50 = 8360 J. 2090 J comes from multiplying by the fuel mass (4180 × 0.50), so the explanation misdescribes the error."
+   }
+  ],
+  "flags": [
+   "Question a, fact: The why says the 2090 J option 'wrongly divides by the mass of fuel', but 4180 ÷ 0.50 = 8360 J. 2090 J comes from multiplying by the fuel mass (4180 × 0.50), so the explanation misdescribes the error."
+  ]
+ },
+ "final": {
+  "title": "Energy content and efficiency",
+  "card": [
+   "To estimate a fuel's energy content, burn a known mass of it under a container of water. Measure the water's temperature rise. The energy gained by the water is q = m × c × ΔT, where m is the mass of water and c is 4.18 J g⁻¹ °C⁻¹.",
+   "Energy content is the energy released per unit of fuel, such as kJ g⁻¹. Divide the energy gained by the water by the mass of fuel burnt.",
+   "Some heat is lost to the air and the container, and the fuel may burn incompletely. So the value found this way is usually lower than the true energy content.",
+   "Efficiency is the useful energy output divided by the chemical energy released by the fuel, usually given as a percentage. The rest is wasted, mostly as heat to the surroundings."
+  ],
+  "remember": "Water's energy gain estimates the fuel's energy, and efficiency is useful energy out as a share of energy released.",
+  "a": {
+   "q": "Burning 0.50 g of a fuel raises the temperature of 100 g of water by 10 °C. About how much energy did the water gain? (c = 4.18 J g⁻¹ °C⁻¹)",
+   "opts": [
+    "4180 J",
+    "418 J",
+    "41.8 J",
+    "2090 J"
+   ],
+   "why": "q = 100 × 4.18 × 10 = 4180 J. The 2090 J option wrongly multiplies by the mass of fuel as well. The fuel mass is only needed later, to divide by when finding the energy content.",
+   "clue": "Use the mass of water, not the mass of fuel."
+  },
+  "b": {
+   "d": 3,
+   "q": "A heater releases 800 kJ of chemical energy from gas, and 600 kJ of it warms a room. What is its efficiency, and where did the rest go?",
+   "opts": [
+    "75%, lost as waste heat to the surroundings",
+    "75%, destroyed during the chemical reaction",
+    "25%, lost as waste heat to the surroundings",
+    "133%, because more energy was released"
+   ],
+   "why": "Efficiency = 600 ÷ 800 × 100 = 75%. The other 200 kJ is not useful, so it is wasted, mostly as heat to the surroundings. The 25% option is the wasted share, not the efficiency.",
+   "clue": "Divide useful energy by the energy released."
+  }
+ },
+ "cleared_by": "recheck"
+}

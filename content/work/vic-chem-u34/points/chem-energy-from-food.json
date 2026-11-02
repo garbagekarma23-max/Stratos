@@ -1,0 +1,194 @@
+{
+ "id": "chem-energy-from-food",
+ "title": "Energy from food",
+ "brief": "a669b8ce2a96",
+ "shortlist": [
+  [
+   "hhd-carbohydrates",
+   0.219
+  ],
+  [
+   "hhd-fats",
+   0.205
+  ],
+  [
+   "hms-nutrition-performance",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-02T06:18:33Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00631,
+  "check": 0.01485,
+  "fix": 0.0257
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points gives energy values in kJ per gram for carbohydrates, proteins and fats; they cover diet types and sports nutrition, at a different depth and for different subjects, so a new point is needed for Chemistry Units 3 and 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Energy from food",
+  "card": [
+   "Carbohydrates, proteins and fats are the main fuels in food. The body breaks them down and uses the energy they release.",
+   "Energy values are measured in kilojoules per gram (kJ/g). This is the energy released from one gram of the food.",
+   "Fats release about 37 kJ/g. Carbohydrates release about 16 kJ/g and proteins about 17 kJ/g.",
+   "To find the energy in a food, multiply the mass of each nutrient in grams by its energy value, then add the results."
+  ],
+  "remember": "Gram for gram, fats hold more than twice the energy of carbohydrates or proteins.",
+  "a": {
+   "q": "Which statement about the energy values of nutrients is correct?",
+   "opts": [
+    "Fat releases more energy per gram than carbohydrate",
+    "Carbohydrate releases more energy per gram than fat",
+    "Protein releases more energy per gram than fat",
+    "Fat and carbohydrate release the same energy per gram"
+   ],
+   "why": "Fat releases about 37 kJ/g, which is more than twice the 16 kJ/g of carbohydrate. Many students think carbohydrate is the richest fuel because it is the main source of energy, but its value per gram is lower than fat.",
+   "clue": "Compare the kJ/g values on the card."
+  },
+  "b": {
+   "d": 2,
+   "q": "A snack bar made by Priya contains 10 g of carbohydrate and 5 g of fat, and no other nutrients that release energy. About how much energy does it release?",
+   "opts": [
+    "345 kJ",
+    "160 kJ",
+    "185 kJ",
+    "525 kJ"
+   ],
+   "why": "Carbohydrate gives 10 × 16 = 160 kJ and fat gives 5 × 37 = 185 kJ. The total is 345 kJ. Using only one nutrient, such as 160 kJ, leaves out part of the energy.",
+   "clue": "Work out each nutrient separately, then add."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fat releases more energy per gram than carbohydrate",
+   "also_right": []
+  },
+  "b": {
+   "best": "345 kJ",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet says the kJ/g value is 'the energy released from one gram of the food', but the values given (37, 16, 17 kJ/g) are per gram of the nutrient (fat, carbohydrate, protein), not per gram of a whole food. It should say 'one gram of the nutrient'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The values match the VCE data book (fats 37, carbohydrates 16, proteins 17 kJ/g), and both questions and explanations are correct. One small wording fix: the card says the kJ/g value is per gram of 'the food' when it means per gram of the nutrient."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The second bullet says the kJ/g value is 'the energy released from one gram of the food', but the values given (37, 16, 17 kJ/g) are per gram of the nutrient (fat, carbohydrate, protein), not per gram of a whole food. It should say 'one gram of the nutrient'."
+ ],
+ "proposal": {
+  "title": "Energy from food",
+  "card": [
+   "Carbohydrates, proteins and fats are the main fuels in food. The body breaks them down and uses the energy they release.",
+   "Energy values are measured in kilojoules per gram (kJ/g). This is the energy released from one gram of the nutrient.",
+   "Fats release about 37 kJ/g. Carbohydrates release about 16 kJ/g and proteins about 17 kJ/g.",
+   "To find the energy in a food, multiply the mass of each nutrient in grams by its energy value, then add the results."
+  ],
+  "remember": "Gram for gram, fats hold more than twice the energy of carbohydrates or proteins.",
+  "a": {
+   "q": "Which statement about the energy values of nutrients is correct?",
+   "opts": [
+    "Fat releases more energy per gram than carbohydrate",
+    "Carbohydrate releases more energy per gram than fat",
+    "Protein releases more energy per gram than fat",
+    "Fat and carbohydrate release the same energy per gram"
+   ],
+   "why": "Fat releases about 37 kJ/g, which is more than twice the 16 kJ/g of carbohydrate. Many students think carbohydrate is the richest fuel because it is the main source of energy, but its value per gram is lower than fat.",
+   "clue": "Compare the kJ/g values on the card."
+  },
+  "b": {
+   "d": 2,
+   "q": "A snack bar made by Priya contains 10 g of carbohydrate and 5 g of fat, and no other nutrients that release energy. About how much energy does it release?",
+   "opts": [
+    "345 kJ",
+    "160 kJ",
+    "185 kJ",
+    "450 kJ"
+   ],
+   "why": "Carbohydrate gives 10 × 16 = 160 kJ and fat gives 5 × 37 = 185 kJ. The total is 345 kJ. Matching each mass to the wrong energy value gives 450 kJ, and using only one nutrient, such as 160 kJ, leaves out part of the energy.",
+   "clue": "Work out each nutrient separately, then add."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet says the kJ/g value is 'the energy released from one gram of the food', but the values given (37, 16, 17 kJ/g) are per gram of the nutrient (fat, carbohydrate, protein), not per gram of a whole food. It should say 'one gram of the nutrient'."
+   }
+  ],
+  "flags": [
+   "Card, wording: The second bullet says the kJ/g value is 'the energy released from one gram of the food', but the values given (37, 16, 17 kJ/g) are per gram of the nutrient (fat, carbohydrate, protein), not per gram of a whole food. It should say 'one gram of the nutrient'."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Energy from food",
+  "card": [
+   "Carbohydrates, proteins and fats are the main fuels in food. The body breaks them down and uses the energy they release.",
+   "Energy values are measured in kilojoules per gram (kJ/g). This is the energy released from one gram of the nutrient.",
+   "Fats release about 37 kJ/g. Carbohydrates release about 16 kJ/g and proteins about 17 kJ/g.",
+   "To find the energy in a food, multiply the mass of each nutrient in grams by its energy value, then add the results."
+  ],
+  "remember": "Gram for gram, fats hold more than twice the energy of carbohydrates or proteins.",
+  "a": {
+   "q": "Which statement about the energy values of nutrients is correct?",
+   "opts": [
+    "Fat releases more energy per gram than carbohydrate",
+    "Carbohydrate releases more energy per gram than fat",
+    "Protein releases more energy per gram than fat",
+    "Fat and carbohydrate release the same energy per gram"
+   ],
+   "why": "Fat releases about 37 kJ/g, which is more than twice the 16 kJ/g of carbohydrate. Many students think carbohydrate is the richest fuel because it is the main source of energy, but its value per gram is lower than fat.",
+   "clue": "Compare the kJ/g values on the card."
+  },
+  "b": {
+   "d": 2,
+   "q": "A snack bar made by Priya contains 10 g of carbohydrate and 5 g of fat, and no other nutrients that release energy. About how much energy does it release?",
+   "opts": [
+    "345 kJ",
+    "160 kJ",
+    "185 kJ",
+    "450 kJ"
+   ],
+   "why": "Carbohydrate gives 10 × 16 = 160 kJ and fat gives 5 × 37 = 185 kJ. The total is 345 kJ. Matching each mass to the wrong energy value gives 450 kJ, and using only one nutrient, such as 160 kJ, leaves out part of the energy.",
+   "clue": "Work out each nutrient separately, then add."
+  }
+ },
+ "cleared_by": "owner"
+}

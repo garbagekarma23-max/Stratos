@@ -19,14 +19,53 @@ MADE_COURSES.push({
       "title": "Unit 1: Reading and crafting texts",
       "chapters": [
         {"id": "vic-eng-u12-1-1", "title": "Reading and exploring texts", "check": "checked", "points": []},
-        {"id": "vic-eng-u12-1-2", "title": "Crafting texts", "check": "checked", "points": []}
+        {
+          "id": "vic-eng-u12-1-2",
+          "title": "Crafting texts",
+          "check": "checked",
+          "points": [
+            "eng-purpose-audience-context",
+            "eng-generating-ideas",
+            "eng-learning-from-mentor-text",
+            "eng-text-types-forms",
+            "eng-language-modes",
+            "eng-language-choices-effect",
+            "eng-finding-voice",
+            "eng-drafting-refining",
+            "eng-reflection-statements"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Reading texts and exploring argument",
       "chapters": [
-        {"id": "vic-eng-u12-2-1", "title": "Reading and exploring a second text", "check": "checked", "points": []},
-        {"id": "vic-eng-u12-2-2", "title": "Exploring argument", "check": "checked", "points": []},
+        {
+          "id": "vic-eng-u12-2-1",
+          "title": "Reading and exploring a second text",
+          "check": "checked",
+          "points": [
+            "eng-analysing-text-built",
+            "eng-values-text",
+            "eng-context-text",
+            "eng-building-analytical-paragraph",
+            "eng-embedding-evidence"
+          ]
+        },
+        {
+          "id": "vic-eng-u12-2-2",
+          "title": "Exploring argument",
+          "check": "checked",
+          "points": [
+            "eng-issues-media",
+            "eng-contention",
+            "eng-arguments-evidence",
+            "eng-sequence-structure-argument",
+            "eng-persuasive-techniques",
+            "eng-tone-effect",
+            "eng-visuals-persuasive-texts"
+          ]
+        },
         {
           "id": "vic-eng-u12-2-3",
           "title": "Spoken argument and point of view",

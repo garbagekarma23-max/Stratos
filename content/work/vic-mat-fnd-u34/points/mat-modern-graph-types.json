@@ -1,0 +1,222 @@
+{
+ "id": "mat-modern-graph-types",
+ "title": "Modern graph types",
+ "brief": "e7bbd47d7b5c",
+ "shortlist": [
+  [
+   "mat-types-data",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00985,
+  "check": 0.0155,
+  "fix": 0.02535
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the types of data (categorical and numerical) and basic displays such as bar charts and histograms, while the new point teaches modern graph types like bubble, radar, heat map, sunburst, Mekko and stacked area charts, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Modern graph types",
+  "card": [
+   [
+    "Bubble chart",
+    "Each bubble is one item, placed by two number values on the axes. The size of the bubble shows a third number. It suits comparing items on three measures at once."
+   ],
+   [
+    "Radar chart",
+    "Several measures for one item are drawn on spokes from a centre point, and joined to make a shape. It suits comparing the profile of a few items across the same measures."
+   ],
+   [
+    "Heat map",
+    "A grid of cells, where the colour of each cell shows its value. It suits spotting high and low values across two categories, such as day and hour."
+   ],
+   [
+    "Others",
+    "A sunburst uses rings to show parts inside parts. A Mekko chart has bars of varying width, so it shows two sizes at once. A stacked area chart shows how the parts of a total change over time."
+   ]
+  ],
+  "remember": "Match the graph to the job: size on a third measure, a profile, colour on a grid, parts in parts, or parts over time.",
+  "a": {
+   "q": "A gym wants to show how busy it is for each day of the week and each hour of the day. Which graph suits this best?",
+   "opts": [
+    "Heat map",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A heat map uses a grid with day on one side and hour on the other, and colour shows how busy each cell is. A radar chart suits several measures for one item, not a grid of two categories.",
+   "clue": "Think of a grid where colour shows the value."
+  },
+  "b": {
+   "d": 3,
+   "q": "A school wants to show how its sport, music and drama participation each changed from 2019 to 2024, with the total shown too. Which graph suits best?",
+   "opts": [
+    "Stacked area chart",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A stacked area chart shows how parts of a total change over time, and the top edge shows the total. A sunburst shows parts inside parts at one point in time, so it does not show change across years.",
+   "clue": "The data runs over several years and has a total made of parts."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Heat map",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stacked area chart",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think of a grid where colour shows the value' nearly repeats the card's heat map definition, so a student can match it to the answer without thinking about the gym data."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer, and the card is accurate. The only problem is that question a's clue nearly repeats the heat map definition and gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Think of a grid where colour shows the value' nearly repeats the card's heat map definition, so a student can match it to the answer without thinking about the gym data."
+ ],
+ "proposal": {
+  "title": "Modern graph types",
+  "card": [
+   [
+    "Bubble chart",
+    "Each bubble is one item, placed by two number values on the axes. The size of the bubble shows a third number. It suits comparing items on three measures at once."
+   ],
+   [
+    "Radar chart",
+    "Several measures for one item are drawn on spokes from a centre point, and joined to make a shape. It suits comparing the profile of a few items across the same measures."
+   ],
+   [
+    "Heat map",
+    "A grid of cells, where the colour of each cell shows its value. It suits spotting high and low values across two categories, such as day and hour."
+   ],
+   [
+    "Others",
+    "A sunburst uses rings to show parts inside parts. A Mekko chart has bars of varying width, so it shows two sizes at once. A stacked area chart shows how the parts of a total change over time."
+   ]
+  ],
+  "remember": "Match the graph to the job: a third measure, a profile, a grid, parts in parts, two sizes, or parts over time.",
+  "a": {
+   "q": "A gym wants to show how busy it is for each day of the week and each hour of the day. Which graph suits this best?",
+   "opts": [
+    "Heat map",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A heat map uses a grid with day on one side and hour on the other, and colour shows how busy each cell is. A radar chart suits several measures for one item, not a grid of two categories.",
+   "clue": "How many ways is each busy level sorted?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A school wants to show how its sport, music and drama participation each changed from 2019 to 2024, with the total shown too. Which graph suits best?",
+   "opts": [
+    "Stacked area chart",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A stacked area chart shows how parts of a total change over time, and the top edge shows the total. A sunburst shows parts inside parts at one point in time, so it does not show change across years.",
+   "clue": "What does the school want to see, and across what span?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think of a grid where colour shows the value' nearly repeats the card's heat map definition, so a student can match it to the answer without thinking about the gym data."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Think of a grid where colour shows the value' nearly repeats the card's heat map definition, so a student can match it to the answer without thinking about the gym data."
+  ]
+ },
+ "final": {
+  "title": "Modern graph types",
+  "card": [
+   [
+    "Bubble chart",
+    "Each bubble is one item, placed by two number values on the axes. The size of the bubble shows a third number. It suits comparing items on three measures at once."
+   ],
+   [
+    "Radar chart",
+    "Several measures for one item are drawn on spokes from a centre point, and joined to make a shape. It suits comparing the profile of a few items across the same measures."
+   ],
+   [
+    "Heat map",
+    "A grid of cells, where the colour of each cell shows its value. It suits spotting high and low values across two categories, such as day and hour."
+   ],
+   [
+    "Others",
+    "A sunburst uses rings to show parts inside parts. A Mekko chart has bars of varying width, so it shows two sizes at once. A stacked area chart shows how the parts of a total change over time."
+   ]
+  ],
+  "remember": "Match the graph to the job: a third measure, a profile, a grid, parts in parts, two sizes, or parts over time.",
+  "a": {
+   "q": "A gym wants to show how busy it is for each day of the week and each hour of the day. Which graph suits this best?",
+   "opts": [
+    "Heat map",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A heat map uses a grid with day on one side and hour on the other, and colour shows how busy each cell is. A radar chart suits several measures for one item, not a grid of two categories.",
+   "clue": "How many ways is each busy level sorted?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A school wants to show how its sport, music and drama participation each changed from 2019 to 2024, with the total shown too. Which graph suits best?",
+   "opts": [
+    "Stacked area chart",
+    "Radar chart",
+    "Bubble chart",
+    "Sunburst chart"
+   ],
+   "why": "A stacked area chart shows how parts of a total change over time, and the top edge shows the total. A sunburst shows parts inside parts at one point in time, so it does not show change across years.",
+   "clue": "What does the school want to see, and across what span?"
+  }
+ },
+ "cleared_by": "auto"
+}

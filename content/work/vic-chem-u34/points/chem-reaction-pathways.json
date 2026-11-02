@@ -1,0 +1,229 @@
+{
+ "id": "chem-reaction-pathways",
+ "title": "Reaction pathways",
+ "brief": "7f8b972869cf",
+ "shortlist": [
+  [
+   "chem-reaction-quotient",
+   0.31
+  ],
+  [
+   "chem-amines-amides",
+   0.266
+  ],
+  [
+   "chem-chemical-tests-organic-compounds",
+   0.238
+  ],
+  [
+   "chem-rates-reaction",
+   0.227
+  ],
+  [
+   "chem-static-dynamic-equilibrium",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T06:18:42Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00541,
+  "check": 0.01694,
+  "fix": 0.01936,
+  "recheck": 0.01872
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches planning a multi-step synthesis pathway; the closest, chem-amines-amides, covers amine basicity and amide formation only, not how a series of reactions builds a target compound.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Reaction pathways",
+  "card": [
+   "A reaction pathway is a series of reactions that turns a starting compound into a target compound. The product of one step becomes the reactant of the next.",
+   "Each step uses a known reaction that changes one functional group. Examples: an alkene and HBr give a haloalkane, and a haloalkane and water give an alcohol.",
+   "To make a primary amine, react a haloalkane with excess ammonia. To make a carboxylic acid, oxidise a primary alcohol using acidified dichromate or permanganate.",
+   "To plan a pathway, work backwards from the target. Ask which functional group is needed, and which reaction makes it from the group you have."
+  ],
+  "remember": "Plan a pathway by working backwards from the target, one functional group change per step.",
+  "a": {
+   "q": "Which pathway makes propanoic acid from propene?",
+   "opts": [
+    "Add H2O to make propan-1-ol, then oxidise it",
+    "Add Br2 to make a dibromopropane, then add ammonia",
+    "Add H2 to make propane, then swap in a chlorine atom",
+    "Add HBr to make a bromopropane, then add excess ammonia"
+   ],
+   "why": "Propanoic acid is made by oxidising the primary alcohol propan-1-ol. The last option ends in an amine, not a carboxylic acid, because ammonia reacts with a haloalkane to make an amine.",
+   "clue": "Which functional group is oxidised to give a carboxylic acid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana wants to make ethylamine from ethene. Which two-step pathway should she use?",
+   "opts": [
+    "Ethene and HBr give bromoethane, then excess ammonia",
+    "Ethene and H2O give ethanol, then acidified dichromate",
+    "Ethene and H2 give ethane, then ethane and water",
+    "Ethene and Br2 give dibromoethane, then acidified dichromate"
+   ],
+   "why": "Bromoethane reacts with excess ammonia to give the primary amine ethylamine. The ethanol option is tempting because it is a real pathway, but oxidising ethanol gives ethanoic acid, which is a carboxylic acid and not an amine.",
+   "clue": "Work backwards: which compound reacts with ammonia to make an amine?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Add H2O to make propan-1-ol, then oxidise it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ethene and HBr give bromoethane, then excess ammonia",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Adding water to propene mainly gives propan-2-ol (Markovnikov), not propan-1-ol. Oxidising propan-2-ol gives propanone, not propanoic acid, so the intended pathway is chemically misleading. Use a symmetrical alkene, such as ethene to ethanoic acid, or start from propan-1-ol or 1-bromopropane."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the amine-ending option 'the last option', but the options are in a random order and the last option shown is the H2 then chlorine pathway. Name the option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a's right answer says hydrating propene gives propan-1-ol, but it mainly gives propan-2-ol, which oxidises to propanone rather than propanoic acid. Why (a) also refers to 'the last option', which does not match the random option order. Question b is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Adding water to propene mainly gives propan-2-ol (Markovnikov), not propan-1-ol. Oxidising propan-2-ol gives propanone, not propanoic acid, so the intended pathway is chemically misleading. Use a symmetrical alkene, such as ethene to ethanoic acid, or start from propan-1-ol or 1-bromopropane.",
+  "Question a, other: Why (a) calls the amine-ending option 'the last option', but the options are in a random order and the last option shown is the H2 then chlorine pathway. Name the option by its content instead."
+ ],
+ "proposal": {
+  "title": "Reaction pathways",
+  "card": [
+   "A reaction pathway is a series of reactions that turns a starting compound into a target compound. The product of one step becomes the reactant of the next.",
+   "Each step uses a known reaction that changes one functional group. Examples: an alkene and HBr give a haloalkane, and a haloalkane and water give an alcohol.",
+   "To make a primary amine, react a haloalkane with excess ammonia. To make a carboxylic acid, oxidise a primary alcohol using acidified dichromate or permanganate.",
+   "To plan a pathway, work backwards from the target. Ask which functional group is needed, and which reaction makes it from the group you have."
+  ],
+  "remember": "Plan a pathway by working backwards from the target, one functional group change per step.",
+  "a": {
+   "q": "Which pathway makes propanoic acid from 1-bromopropane?",
+   "opts": [
+    "Add water to make propan-1-ol, then oxidise it",
+    "Add excess ammonia to make propan-1-amine, then oxidise it",
+    "Add water to make propan-1-ol, then add excess ammonia",
+    "Oxidise it with dichromate, then add water to the product"
+   ],
+   "why": "Water turns the haloalkane into the primary alcohol propan-1-ol, and oxidising a primary alcohol gives a carboxylic acid. The option that adds excess ammonia first is tempting, but it makes an amine, and only a primary alcohol is oxidised to a carboxylic acid.",
+   "clue": "Which functional group is oxidised to give a carboxylic acid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana wants to make ethylamine from ethene. Which two-step pathway should she use?",
+   "opts": [
+    "Ethene and HBr give bromoethane, then excess ammonia",
+    "Ethene and H2O give ethanol, then acidified dichromate",
+    "Ethene and H2 give ethane, then ethane and water",
+    "Ethene and Br2 give dibromoethane, then acidified dichromate"
+   ],
+   "why": "Bromoethane reacts with excess ammonia to give the primary amine ethylamine. The ethanol option is tempting because it is a real pathway, but oxidising ethanol gives ethanoic acid, which is a carboxylic acid and not an amine.",
+   "clue": "Work backwards: which compound reacts with ammonia to make an amine?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "Add water to make propan-1-ol, then oxidise it",
+    "also_right": []
+   },
+   "b": {
+    "best": "Ethene and HBr give bromoethane, then excess ammonia",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "wording",
+     "detail": "Why (a) says \"only a primary alcohol is oxidised to a carboxylic acid\". The card does not say \"only\", and it is not strictly true, since aldehydes also oxidise to carboxylic acids. Reword to \"oxidising a primary alcohol gives a carboxylic acid\"."
+    },
+    {
+     "part": "b",
+     "kind": "wording",
+     "detail": "Question b uses the common name \"ethylamine\", while question a uses the IUPAC name \"propan-1-amine\". VCE expects IUPAC naming, so use \"ethanamine\" (or give both) to stay consistent."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "Both questions have one clear right answer and the card is accurate. Why (a) wrongly adds \"only\" to the primary alcohol oxidisation claim, and question b uses the non-IUPAC name \"ethylamine\" where question a uses IUPAC naming."
+  },
+  "flags": [
+   "Question a, wording: Why (a) says \"only a primary alcohol is oxidised to a carboxylic acid\". The card does not say \"only\", and it is not strictly true, since aldehydes also oxidise to carboxylic acids. Reword to \"oxidising a primary alcohol gives a carboxylic acid\".",
+   "Question b, wording: Question b uses the common name \"ethylamine\", while question a uses the IUPAC name \"propan-1-amine\". VCE expects IUPAC naming, so use \"ethanamine\" (or give both) to stay consistent."
+  ]
+ },
+ "final": {
+  "title": "Reaction pathways",
+  "card": [
+   "A reaction pathway is a series of reactions that turns a starting compound into a target compound. The product of one step becomes the reactant of the next.",
+   "Each step uses a known reaction that changes one functional group. Examples: an alkene and HBr give a haloalkane, and a haloalkane and water give an alcohol.",
+   "To make a primary amine, react a haloalkane with excess ammonia. To make a carboxylic acid, oxidise a primary alcohol using acidified dichromate or permanganate.",
+   "To plan a pathway, work backwards from the target. Ask which functional group is needed, and which reaction makes it from the group you have."
+  ],
+  "remember": "Plan a pathway by working backwards from the target, one functional group change per step.",
+  "a": {
+   "q": "Which pathway makes propanoic acid from 1-bromopropane?",
+   "opts": [
+    "Add water to make propan-1-ol, then oxidise it",
+    "Add excess ammonia to make propan-1-amine, then oxidise it",
+    "Add water to make propan-1-ol, then add excess ammonia",
+    "Oxidise it with dichromate, then add water to the product"
+   ],
+   "why": "Water turns the haloalkane into the primary alcohol propan-1-ol, and oxidising a primary alcohol gives a carboxylic acid. The option that adds excess ammonia first is tempting, but it makes an amine, and only a primary alcohol is oxidised to a carboxylic acid.",
+   "clue": "Which functional group is oxidised to give a carboxylic acid?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana wants to make ethylamine from ethene. Which two-step pathway should she use?",
+   "opts": [
+    "Ethene and HBr give bromoethane, then excess ammonia",
+    "Ethene and H2O give ethanol, then acidified dichromate",
+    "Ethene and H2 give ethane, then ethane and water",
+    "Ethene and Br2 give dibromoethane, then acidified dichromate"
+   ],
+   "why": "Bromoethane reacts with excess ammonia to give the primary amine ethylamine. The ethanol option is tempting because it is a real pathway, but oxidising ethanol gives ethanoic acid, which is a carboxylic acid and not an amine.",
+   "clue": "Work backwards: which compound reacts with ammonia to make an amine?"
+  }
+ },
+ "cleared_by": "owner"
+}

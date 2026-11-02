@@ -1,0 +1,136 @@
+{
+ "id": "mat-percentage-error",
+ "title": "Percentage error",
+ "brief": "975910223a59",
+ "shortlist": [
+  [
+   "mat-accuracy-measurements",
+   0.374
+  ],
+  [
+   "mat-percentages-amounts",
+   0.37
+  ],
+  [
+   "chem-errors-limitations",
+   0.279
+  ],
+  [
+   "mat-percentage-increase-decrease",
+   0.229
+  ],
+  [
+   "bio-errors-limitations-biology",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:27Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00559,
+  "check": 0.01117
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches percentage error (the error as a percentage of the true value); the closest, the accuracy-of-measurements point, covers only absolute error and limits of accuracy, which is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Percentage error",
+  "card": [
+   "Error = estimate − true value. Ignore the sign to find the size of the error: it is the gap between the two.",
+   "Percentage error = error ÷ true value × 100%. Always divide by the true value, not by the estimate.",
+   "A small percentage error means the estimate is close to the true value. The same error matters more when the true value is small.",
+   "Example: you estimate 45 people, and the true number is 50. The error is 5, so 5 ÷ 50 × 100% = 10%."
+  ],
+  "remember": "Divide the size of the error by the true value, then multiply by 100.",
+  "a": {
+   "q": "Sam measures a board as 2.4 m. Its true length is 2.5 m. What is the percentage error?",
+   "opts": [
+    "4%",
+    "4.17%",
+    "0.1%",
+    "10%"
+   ],
+   "why": "The error is 0.1 m. Then 0.1 ÷ 2.5 × 100% = 4%. The answer 4.17% divides by the estimate 2.4 instead of the true value.",
+   "clue": "Which number goes on the bottom of the fraction?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A crowd is estimated at 1200. The true count is 1000. What is the percentage error?",
+   "opts": [
+    "20%",
+    "16.7%",
+    "200%",
+    "2%"
+   ],
+   "why": "The error is 1200 − 1000 = 200. Then 200 ÷ 1000 × 100% = 20%. The answer 16.7% divides by the estimate 1200 instead of the true value.",
+   "clue": "The true value is the number that was actually counted."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4%",
+   "also_right": []
+  },
+  "b": {
+   "best": "20%",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers are correct: 0.1 ÷ 2.5 × 100% = 4% and 200 ÷ 1000 × 100% = 20%, and the distractors reflect real mistakes such as dividing by the estimate."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Percentage error",
+  "card": [
+   "Error = estimate − true value. Ignore the sign to find the size of the error: it is the gap between the two.",
+   "Percentage error = error ÷ true value × 100%. Always divide by the true value, not by the estimate.",
+   "A small percentage error means the estimate is close to the true value. The same error matters more when the true value is small.",
+   "Example: you estimate 45 people, and the true number is 50. The error is 5, so 5 ÷ 50 × 100% = 10%."
+  ],
+  "remember": "Divide the size of the error by the true value, then multiply by 100.",
+  "a": {
+   "q": "Sam measures a board as 2.4 m. Its true length is 2.5 m. What is the percentage error?",
+   "opts": [
+    "4%",
+    "4.17%",
+    "0.1%",
+    "10%"
+   ],
+   "why": "The error is 0.1 m. Then 0.1 ÷ 2.5 × 100% = 4%. The answer 4.17% divides by the estimate 2.4 instead of the true value.",
+   "clue": "Which number goes on the bottom of the fraction?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A crowd is estimated at 1200. The true count is 1000. What is the percentage error?",
+   "opts": [
+    "20%",
+    "16.7%",
+    "200%",
+    "2%"
+   ],
+   "why": "The error is 1200 − 1000 = 200. Then 200 ÷ 1000 × 100% = 20%. The answer 16.7% divides by the estimate 1200 instead of the true value.",
+   "clue": "The true value is the number that was actually counted."
+  }
+ },
+ "cleared_by": "checker"
+}

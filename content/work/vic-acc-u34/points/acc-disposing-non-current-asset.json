@@ -1,0 +1,321 @@
+{
+ "id": "acc-disposing-non-current-asset",
+ "title": "Disposing of a non-current asset",
+ "brief": "0af3204c7ba2",
+ "shortlist": [
+  [
+   "acc-accounting-decisions-assets",
+   0.469
+  ],
+  [
+   "acc-cost-non-current-asset",
+   0.465
+  ],
+  [
+   "acc-current-non-current-items",
+   0.438
+  ],
+  [
+   "bus-working-capital-management",
+   0.251
+  ],
+  [
+   "bus-liquidity-ratio",
+   0.242
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.0183,
+  "check": 0.029,
+  "fix": 0.01631,
+  "recheck": 0.01771
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teach disposing of a non-current asset, recording a gain or loss on sale, or the GST difference between a cash sale and a trade-in; they cover asset registers, cost, current versus non-current items, working capital and liquidity.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The stem says the mower sells 'at $1 000 plus GST', which already tells students GST is charged. The two 'no GST is charged' options are ruled out without knowing the idea. The clue then states that GST is not part of the gain, so together the stem and clue give away almost the whole answer.",
+ "rejected": {
+  "title": "Disposing of a non-current asset",
+  "card": [
+   "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+   "If the asset sells for more than its carrying amount, the difference is a gain on disposal, which is revenue. If it sells for less, the difference is a loss on disposal, which is an expense.",
+   "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+   "A cash sale by a business registered for GST includes GST on the sale price. In VCE Accounting, by convention, no GST is recorded on a trade-in value. This keeps the entries simple. It is not a rule of tax law."
+  ],
+  "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+  "a": {
+   "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+   "opts": [
+    "A loss on disposal of $3 000",
+    "A gain on disposal of $3 000",
+    "A loss on disposal of $15 000",
+    "A gain on disposal of $5 000"
+   ],
+   "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+   "clue": "Work out the carrying amount before comparing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Mowing Service sells a mower for cash at $1 000 plus GST. Its carrying amount is $800. Which statement is correct?",
+   "opts": [
+    "A gain of $200 is recorded, and GST is charged on $1 000",
+    "A gain of $300 is recorded, and GST is charged on $1 000",
+    "A gain of $200 is recorded, and no GST is charged",
+    "A gain of $300 is recorded, and no GST is charged"
+   ],
+   "why": "The gain compares the price before GST, $1 000, with the carrying amount, $800, so it is $200. GST is charged because it is a cash sale. A gain of $300 wrongly counts the GST as part of the sale price.",
+   "clue": "GST is collected for the government, so it is not part of the gain."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The stem says the mower sells 'at $1 000 plus GST', which already tells students GST is charged. The two 'no GST is charged' options are ruled out without knowing the idea. The clue then states that GST is not part of the gain, so together the stem and clue give away almost the whole answer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Disposing of a non-current asset",
+     "card": [
+      "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+      [
+       "Gain",
+       "the asset sells for more than its carrying amount. The difference is a gain on disposal, which is income. If it sells for less, the difference is a loss on disposal, which is an expense."
+      ],
+      "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+      "A cash sale by a business registered for GST includes GST on the sale price. A trade-in is not a cash sale, so no GST is recorded on the trade-in value."
+     ],
+     "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+     "a": {
+      "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+      "opts": [
+       "A loss on disposal of $3 000",
+       "A gain on disposal of $3 000",
+       "A loss on disposal of $15 000",
+       "A gain on disposal of $5 000"
+      ],
+      "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+      "clue": "Work out the carrying amount before comparing."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tom's Landscaping sells a mower for cash at $1 000 plus GST. Its carrying amount is $800. Which statement is correct?",
+      "opts": [
+       "A gain of $200 is recorded, and GST is charged on $1 000",
+       "A gain of $300 is recorded, and GST is charged on $1 000",
+       "A gain of $200 is recorded, and no GST is charged",
+       "A gain of $300 is recorded, and no GST is charged"
+      ],
+      "why": "The gain compares the price before GST, $1 000, with the carrying amount, $800, so it is $200. The GST is charged because it is a cash sale. A gain of $300 wrongly counts the GST as part of the sale price.",
+      "clue": "GST is collected for the government, so it is not part of the gain."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A loss on disposal of $3 000",
+      "also_right": []
+     },
+     "b": {
+      "best": "A gain of $200 is recorded, and GST is charged on $1 000",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says a trade-in is not a cash sale, so no GST is recorded. Under Australian GST law, a GST-registered business trading in an asset is still making a taxable supply, so GST does apply. Not recording GST on trade-ins is a simplifying convention in VCE Accounting, not a rule of tax law. The card should present it as the course convention rather than give a false reason."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions and explanations are correct. The card's reason for leaving GST off trade-ins ('not a cash sale') is misleading: in Australian tax law a trade-in is still a taxable supply, so this should be framed as the VCE convention."
+    },
+    "flags": [
+     "Card, fact: The card says a trade-in is not a cash sale, so no GST is recorded. Under Australian GST law, a GST-registered business trading in an asset is still making a taxable supply, so GST does apply. Not recording GST on trade-ins is a simplifying convention in VCE Accounting, not a rule of tax law. The card should present it as the course convention rather than give a false reason."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Disposing of a non-current asset",
+     "card": [
+      "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+      "If the asset sells for more than its carrying amount, the difference is a gain on disposal, which is revenue. If it sells for less, the difference is a loss on disposal, which is an expense.",
+      "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+      "A cash sale by a business registered for GST includes GST on the sale price. In VCE Accounting, by convention, no GST is recorded on a trade-in value. This keeps the entries simple. It is not a rule of tax law."
+     ],
+     "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+     "a": {
+      "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+      "opts": [
+       "A loss on disposal of $3 000",
+       "A gain on disposal of $3 000",
+       "A loss on disposal of $15 000",
+       "A gain on disposal of $5 000"
+      ],
+      "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+      "clue": "Work out the carrying amount before comparing."
+     },
+     "b": {
+      "d": 3,
+      "q": "Tom's Mowing Service sells a mower for cash at $1 000 plus GST. Its carrying amount is $800. Which statement is correct?",
+      "opts": [
+       "A gain of $200 is recorded, and GST is charged on $1 000",
+       "A gain of $300 is recorded, and GST is charged on $1 000",
+       "A gain of $200 is recorded, and no GST is charged",
+       "A gain of $300 is recorded, and no GST is charged"
+      ],
+      "why": "The gain compares the price before GST, $1 000, with the carrying amount, $800, so it is $200. GST is charged because it is a cash sale. A gain of $300 wrongly counts the GST as part of the sale price.",
+      "clue": "GST is collected for the government, so it is not part of the gain."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:49Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A loss on disposal of $3 000",
+       "also_right": []
+      },
+      "b": {
+       "best": "A gain of $200 is recorded, and GST is charged on $1 000",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The stem says the mower sells 'at $1 000 plus GST', which already tells students GST is charged. The two 'no GST is charged' options are ruled out without knowing the idea. The clue then states that GST is not part of the gain, so together the stem and clue give away almost the whole answer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both answers are correct and match the chapter. In question b, the stem ('plus GST') and the clue together nearly give the answer away, so it tests little."
+     },
+     "flags": [
+      "Question b, wording: The stem says the mower sells 'at $1 000 plus GST', which already tells students GST is charged. The two 'no GST is charged' options are ruled out without knowing the idea. The clue then states that GST is not part of the gain, so together the stem and clue give away almost the whole answer."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Disposing of a non-current asset",
+  "card": [
+   "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+   "If the asset sells for more than its carrying amount, the difference is a gain on disposal, which is revenue. If it sells for less, the difference is a loss on disposal, which is an expense.",
+   "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+   "A cash sale by a business registered for GST includes GST on the sale price. In VCE Accounting, by convention, no GST is recorded on a trade-in value. This keeps the entries simple. It is not a rule of tax law."
+  ],
+  "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+  "a": {
+   "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+   "opts": [
+    "A loss on disposal of $3 000",
+    "A gain on disposal of $3 000",
+    "A loss on disposal of $15 000",
+    "A gain on disposal of $5 000"
+   ],
+   "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+   "clue": "Work out the carrying amount before comparing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Mowing Service is registered for GST. It sells a mower to a customer for $1 100 cash, including GST. The mower's carrying amount is $800. Which statement is correct?",
+   "opts": [
+    "A gain of $200 is recorded, and $100 GST is recorded",
+    "A gain of $300 is recorded, and $100 GST is recorded",
+    "A gain of $200 is recorded, and no GST is recorded",
+    "A gain of $300 is recorded, and no GST is recorded"
+   ],
+   "why": "A cash sale includes GST, so $100 GST is recorded and the sale price before GST is $1 000. The gain is $1 000 - $800 = $200. A gain of $300 wrongly counts the GST as part of the sale price.",
+   "clue": "Split the $1 100 into the price and the GST before comparing."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A loss on disposal of $3 000",
+   "also_right": []
+  },
+  "b": {
+   "best": "A gain of $200 is recorded, and $100 GST is recorded",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Disposing of a non-current asset",
+  "card": [
+   "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+   "If the asset sells for more than its carrying amount, the difference is a gain on disposal, which is revenue. If it sells for less, the difference is a loss on disposal, which is an expense.",
+   "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+   "A cash sale by a business registered for GST includes GST on the sale price. In VCE Accounting, by convention, no GST is recorded on a trade-in value. This keeps the entries simple. It is not a rule of tax law."
+  ],
+  "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+  "a": {
+   "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+   "opts": [
+    "A loss on disposal of $3 000",
+    "A gain on disposal of $3 000",
+    "A loss on disposal of $15 000",
+    "A gain on disposal of $5 000"
+   ],
+   "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+   "clue": "Work out the carrying amount before comparing."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Mowing Service is registered for GST. It sells a mower to a customer for $1 100 cash, including GST. The mower's carrying amount is $800. Which statement is correct?",
+   "opts": [
+    "A gain of $200 is recorded, and $100 GST is recorded",
+    "A gain of $300 is recorded, and $100 GST is recorded",
+    "A gain of $200 is recorded, and no GST is recorded",
+    "A gain of $300 is recorded, and no GST is recorded"
+   ],
+   "why": "A cash sale includes GST, so $100 GST is recorded and the sale price before GST is $1 000. The gain is $1 000 - $800 = $200. A gain of $300 wrongly counts the GST as part of the sale price.",
+   "clue": "Split the $1 100 into the price and the GST before comparing."
+  }
+ }
+}

@@ -1,0 +1,250 @@
+{
+ "id": "bus-roles-workplace-relations",
+ "title": "Roles in workplace relations",
+ "brief": "a7739f14e2ae",
+ "shortlist": [
+  [
+   "bus-stakeholders-workplace",
+   0.297
+  ],
+  [
+   "bus-employer-employee-rights",
+   0.252
+  ],
+  [
+   "bus-employment-contracts",
+   0.219
+  ],
+  [
+   "bus-fair-work-system",
+   0.208
+  ],
+  [
+   "bus-managers-do",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (a wording, remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.0047,
+  "check": 0.01825,
+  "fix": 0.0259
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Stakeholders in the workplace, is broader: it covers stakeholders in general and society's influence, but does not teach the specific roles of HR managers and the Fair Work Commission in setting pay and conditions.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Roles in workplace relations",
+  "card": [
+   [
+    "Employees",
+    "They do the work and can raise concerns about pay and conditions. They may join a union to have a stronger voice."
+   ],
+   [
+    "HR managers",
+    "They work for the business. They apply the pay and conditions the business must follow and handle day-to-day staff matters."
+   ],
+   [
+    "Unions and employer associations",
+    "A union represents employees. An employer association represents businesses. Each speaks for its members when pay and conditions are discussed."
+   ],
+   [
+    "Fair Work Commission",
+    "It is the national workplace tribunal, which is independent of both sides. It sets minimum pay and conditions in awards, and it approves enterprise agreements."
+   ]
+  ],
+  "remember": "Employees and unions speak for staff, employers and their associations speak for business, and the Fair Work Commission is independent.",
+  "a": {
+   "q": "Which body represents the interests of employees when pay and conditions are discussed?",
+   "opts": [
+    "A union",
+    "An employer association",
+    "The human resource manager",
+    "The Fair Work Commission"
+   ],
+   "why": "A union speaks for its employee members. The Fair Work Commission is the tribunal that sets minimum pay and conditions in awards, so it is independent and does not represent either side.",
+   "clue": "Which body do employees join to have a stronger voice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Bakers in Ballarat want higher pay. Which body is independent of both the bakers and their employers and sets minimum pay in an award?",
+   "opts": [
+    "The Fair Work Commission",
+    "A union for bakery workers",
+    "An association of bakery owners",
+    "The bakery's human resource manager"
+   ],
+   "why": "The Fair Work Commission is the independent tribunal that sets minimum pay and conditions in awards. A union and an employer association each speak for one side. The HR manager works for the business, so none of them is independent.",
+   "clue": "Three of these options speak for one side of the workplace."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A union",
+   "also_right": []
+  },
+  "b": {
+   "best": "The Fair Work Commission",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says the Fair Work Commission sets minimum pay in awards, 'so it is independent'. Setting awards does not make a body independent. It should simply state that the Commission is independent of both sides."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says 'employers' speak for business, but the card never presents employers as a role. It also leaves out HR managers, which are what the card actually describes as working for the business. It should match the card's roles."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both answers are correct (a union; the Fair Work Commission). Two small fixes: why (a) wrongly suggests that setting awards makes the Commission independent, and the remember line names 'employers' instead of the card's HR managers."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: Why (a) says the Fair Work Commission sets minimum pay in awards, 'so it is independent'. Setting awards does not make a body independent. It should simply state that the Commission is independent of both sides.",
+  "Remember, other: The remember line says 'employers' speak for business, but the card never presents employers as a role. It also leaves out HR managers, which are what the card actually describes as working for the business. It should match the card's roles."
+ ],
+ "proposal": {
+  "title": "Roles in workplace relations",
+  "card": [
+   [
+    "Employees",
+    "They do the work and can raise concerns about pay and conditions. They may join a union to have a stronger voice."
+   ],
+   [
+    "HR managers",
+    "They work for the business. They apply the pay and conditions the business must follow and handle day-to-day staff matters."
+   ],
+   [
+    "Unions and employer associations",
+    "A union represents employees. An employer association represents businesses. Each speaks for its members when pay and conditions are discussed."
+   ],
+   [
+    "Fair Work Commission",
+    "It is the national workplace tribunal, which is independent of both sides. It sets minimum pay and conditions in awards, and it approves enterprise agreements."
+   ]
+  ],
+  "remember": "Employees and unions speak for staff. HR managers and employer associations work for business. The Fair Work Commission is independent.",
+  "a": {
+   "q": "Which body represents the interests of employees when pay and conditions are discussed?",
+   "opts": [
+    "A union",
+    "An employer association",
+    "The human resource manager",
+    "The Fair Work Commission"
+   ],
+   "why": "A union speaks for its employee members. The Fair Work Commission is independent of both sides, so it does not represent employees or businesses. The HR manager works for the business.",
+   "clue": "Which body do employees join to have a stronger voice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Bakers in Ballarat want higher pay. Which body is independent of both the bakers and their employers and sets minimum pay in an award?",
+   "opts": [
+    "The Fair Work Commission",
+    "A union for bakery workers",
+    "An association of bakery owners",
+    "The bakery's human resource manager"
+   ],
+   "why": "The Fair Work Commission is the independent tribunal that sets minimum pay and conditions in awards. A union and an employer association each speak for one side. The HR manager works for the business, so none of them is independent.",
+   "clue": "Three of these options speak for one side of the workplace."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "Why (a) says the Fair Work Commission sets minimum pay in awards, 'so it is independent'. Setting awards does not make a body independent. It should simply state that the Commission is independent of both sides."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says 'employers' speak for business, but the card never presents employers as a role. It also leaves out HR managers, which are what the card actually describes as working for the business. It should match the card's roles."
+   }
+  ],
+  "flags": [
+   "Question a, wording: Why (a) says the Fair Work Commission sets minimum pay in awards, 'so it is independent'. Setting awards does not make a body independent. It should simply state that the Commission is independent of both sides.",
+   "Remember, other: The remember line says 'employers' speak for business, but the card never presents employers as a role. It also leaves out HR managers, which are what the card actually describes as working for the business. It should match the card's roles."
+  ]
+ },
+ "final": {
+  "title": "Roles in workplace relations",
+  "card": [
+   [
+    "Employees",
+    "They do the work and can raise concerns about pay and conditions. They may join a union to have a stronger voice."
+   ],
+   [
+    "HR managers",
+    "They work for the business. They apply the pay and conditions the business must follow and handle day-to-day staff matters."
+   ],
+   [
+    "Unions and employer associations",
+    "A union represents employees. An employer association represents businesses. Each speaks for its members when pay and conditions are discussed."
+   ],
+   [
+    "Fair Work Commission",
+    "It is the national workplace tribunal, which is independent of both sides. It sets minimum pay and conditions in awards, and it approves enterprise agreements."
+   ]
+  ],
+  "remember": "Employees and unions speak for staff. HR managers and employer associations work for business. The Fair Work Commission is independent.",
+  "a": {
+   "q": "Which body represents the interests of employees when pay and conditions are discussed?",
+   "opts": [
+    "A union",
+    "An employer association",
+    "The human resource manager",
+    "The Fair Work Commission"
+   ],
+   "why": "A union speaks for its employee members. The Fair Work Commission is independent of both sides, so it does not represent employees or businesses. The HR manager works for the business.",
+   "clue": "Which body do employees join to have a stronger voice?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Bakers in Ballarat want higher pay. Which body is independent of both the bakers and their employers and sets minimum pay in an award?",
+   "opts": [
+    "The Fair Work Commission",
+    "A union for bakery workers",
+    "An association of bakery owners",
+    "The bakery's human resource manager"
+   ],
+   "why": "The Fair Work Commission is the independent tribunal that sets minimum pay and conditions in awards. A union and an employer association each speak for one side. The HR manager works for the business, so none of them is independent.",
+   "clue": "Three of these options speak for one side of the workplace."
+  }
+ },
+ "cleared_by": "auto"
+}

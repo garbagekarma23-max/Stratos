@@ -1,0 +1,132 @@
+{
+ "id": "acc-double-entry-accounting",
+ "title": "Double entry accounting",
+ "brief": "4deb5e1dc5c3",
+ "shortlist": [
+  [
+   "eco-capital-financial-account",
+   0.253
+  ],
+  [
+   "acc-accounting-equation",
+   0.243
+  ],
+  [
+   "acc-source-documents",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01495,
+  "check": 0.012
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches debit and credit recording; the accounting equation card is related but covers the balance equation rather than how each transaction is posted with debits and credits, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Double entry accounting",
+  "card": [
+   "Every transaction affects at least two accounts. A business records each one with at least one debit and at least one credit.",
+   "The total of the debits must equal the total of the credits for every transaction. The two sides are always equal in value.",
+   "Some transactions have more than two parts. A sale of goods might be recorded with one debit and two credits, as long as the debit total equals the credit total.",
+   "Because each transaction is balanced, the ledger as a whole stays in balance. Recording only one side would break this."
+  ],
+  "remember": "Every transaction needs debits and credits of equal total value.",
+  "a": {
+   "q": "Why does double entry accounting keep the ledger in balance?",
+   "opts": [
+    "Each transaction has debits and credits of equal total value",
+    "Each transaction is recorded in only one account at a time",
+    "Each account is made to finish the period with no balance",
+    "The owner checks each transaction before it is entered"
+   ],
+   "why": "Every transaction is recorded with debits equal to credits, so adding it never upsets the balance. Recording in one account only would break the balance, not keep it.",
+   "clue": "Think about the two sides of each single transaction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's Bikes in Geelong records a sale with a debit of $300 to Cash and a credit of $200 to Sales. What is needed for the entry to follow double entry?",
+   "opts": [
+    "Further credits of $100 in total",
+    "Further debits of $100 in total",
+    "Nothing, as the entry is already complete",
+    "The $200 credit to be removed"
+   ],
+   "why": "Debits are $300 but credits are only $200. A further credit of $100 in total is needed so both sides equal $300. Adding a debit would widen the gap.",
+   "clue": "Which side is currently smaller?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each transaction has debits and credits of equal total value",
+   "also_right": []
+  },
+  "b": {
+   "best": "Further credits of $100 in total",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Double entry accounting",
+  "card": [
+   "Every transaction affects at least two accounts. A business records each one with at least one debit and at least one credit.",
+   "The total of the debits must equal the total of the credits for every transaction. The two sides are always equal in value.",
+   "Some transactions have more than two parts. A sale of goods might be recorded with one debit and two credits, as long as the debit total equals the credit total.",
+   "Because each transaction is balanced, the ledger as a whole stays in balance. Recording only one side would break this."
+  ],
+  "remember": "Every transaction needs debits and credits of equal total value.",
+  "a": {
+   "q": "Why does double entry accounting keep the ledger in balance?",
+   "opts": [
+    "Each transaction has debits and credits of equal total value",
+    "Each transaction is recorded in only one account at a time",
+    "Each account is made to finish the period with no balance",
+    "The owner checks each transaction before it is entered"
+   ],
+   "why": "Every transaction is recorded with debits equal to credits, so adding it never upsets the balance. Recording in one account only would break the balance, not keep it.",
+   "clue": "Think about the two sides of each single transaction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's Bikes in Geelong records a sale with a debit of $300 to Cash and a credit of $200 to Sales. What is needed for the entry to follow double entry?",
+   "opts": [
+    "Further credits of $100 in total",
+    "Further debits of $100 in total",
+    "Nothing, as the entry is already complete",
+    "The $200 credit to be removed"
+   ],
+   "why": "Debits are $300 but credits are only $200. A further credit of $100 in total is needed so both sides equal $300. Adding a debit would widen the gap.",
+   "clue": "Which side is currently smaller?"
+  }
+ },
+ "cleared_by": "checker"
+}

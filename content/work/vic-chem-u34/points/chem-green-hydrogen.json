@@ -1,0 +1,219 @@
+{
+ "id": "chem-green-hydrogen",
+ "title": "Green hydrogen",
+ "brief": "630452ec8091",
+ "shortlist": [
+  [
+   "chem-proton-nmr",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00732,
+  "check": 0.01538,
+  "fix": 0.02087,
+  "recheck": 0.01327
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers green hydrogen or electrolysis powered by renewables; the only candidate, proton NMR, is an unrelated topic from a different course.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Green hydrogen",
+  "card": [
+   "Hydrogen can be made by the electrolysis of water: 2H₂O(l) → 2H₂(g) + O₂(g). Hydrogen forms at the cathode and oxygen at the anode.",
+   "Hydrogen is called green when the electricity for electrolysis comes from renewable sources such as solar or wind. No fossil fuels are burned to make it.",
+   "Hydrogen made from fossil fuels, such as natural gas, releases carbon dioxide during production. Green hydrogen avoids these emissions.",
+   "Artificial photosynthesis is another route. A device uses sunlight to split water into hydrogen and oxygen directly, without a separate power supply."
+  ],
+  "remember": "Green hydrogen is made from water using renewable energy, not fossil fuels.",
+  "a": {
+   "q": "What makes hydrogen made by electrolysis of water green?",
+   "opts": [
+    "The electricity comes from solar or wind power",
+    "The electrolysis uses water rather than molten salt",
+    "The hydrogen gas is collected at the cathode",
+    "The oxygen made at the anode is also collected"
+   ],
+   "why": "Green refers to how the energy is supplied. If the electricity came from burning fossil fuels, the hydrogen would not be green even though it still comes from water.",
+   "clue": "Think about where the electrical energy comes from."
+  },
+  "b": {
+   "d": 2,
+   "q": "A company in South Australia uses a wind farm to power electrolysers that split water. What is made at the cathode?",
+   "opts": [
+    "Hydrogen gas",
+    "Oxygen gas",
+    "Carbon dioxide",
+    "Water vapour"
+   ],
+   "why": "Water is reduced at the cathode to form hydrogen gas. Oxygen forms at the anode, where oxidation happens. No carbon dioxide forms, since no fossil fuel is used.",
+   "clue": "Reduction happens at the cathode."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The electricity comes from solar or wind power",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hydrogen gas",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says no carbon dioxide forms 'since no fossil fuel is used'. This implies fossil-powered electrolysis would make CO₂ at the cathode. Electrolysis of water never makes CO₂ at the electrodes, whatever the power source; the emissions happen at the power station. This could teach a misconception."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests which product forms at the cathode, which is point 1's idea (predicting electrolysis products). The wind farm detail is decoration, so the question does not test green hydrogen. The clue about reduction at the cathode is also point 1 content not taught on this card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b mainly tests electrode products, which belong to point 1, rather than green hydrogen. Its explanation wrongly implies CO₂ would form in the cell if fossil fuels powered it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says no carbon dioxide forms 'since no fossil fuel is used'. This implies fossil-powered electrolysis would make CO₂ at the cathode. Electrolysis of water never makes CO₂ at the electrodes, whatever the power source; the emissions happen at the power station. This could teach a misconception.",
+  "Question b, other: Question b tests which product forms at the cathode, which is point 1's idea (predicting electrolysis products). The wind farm detail is decoration, so the question does not test green hydrogen. The clue about reduction at the cathode is also point 1 content not taught on this card."
+ ],
+ "proposal": {
+  "title": "Green hydrogen",
+  "card": [
+   "Electrolysis of water uses electricity to split water: 2H₂O(l) → 2H₂(g) + O₂(g). The only products at the electrodes are hydrogen and oxygen.",
+   "Hydrogen is called green when the electricity for electrolysis comes from renewable sources such as solar or wind. No fossil fuels are burned to make it.",
+   "If the electricity comes from burning coal or gas, the electrodes still make no carbon dioxide. The power station releases it instead, so that hydrogen is not green.",
+   "Artificial photosynthesis is another route. A device uses sunlight to split water into hydrogen and oxygen directly, without a separate power supply."
+  ],
+  "remember": "Green hydrogen is made from water using renewable energy, not fossil fuels.",
+  "a": {
+   "q": "What makes hydrogen made by electrolysis of water green?",
+   "opts": [
+    "The electricity comes from solar or wind power",
+    "The electrolysis uses water rather than molten salt",
+    "The water used comes from a renewable source",
+    "The oxygen made at the anode is also collected"
+   ],
+   "why": "Green refers to how the energy is supplied. If the electricity came from burning fossil fuels, the hydrogen would not be green, even though it still comes from water.",
+   "clue": "Think about where the electrical energy comes from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Queensland plant electrolyses water using grid power made mostly by burning coal. Which statement about its hydrogen is correct?",
+   "opts": [
+    "Not green, as CO₂ is released where the power is made",
+    "Green, as the hydrogen is made only from water",
+    "Not green, as CO₂ forms at the electrodes",
+    "Green, as no fuel is burned inside the electrolyser"
+   ],
+   "why": "The electrodes make only hydrogen and oxygen, but burning coal for the electricity releases carbon dioxide at the power station. So the hydrogen is not green. Saying CO₂ forms at the electrodes is wrong, because water contains no carbon.",
+   "clue": "Where is the coal burned?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The electricity comes from solar or wind power",
+    "also_right": []
+   },
+   "b": {
+    "best": "Not green, as CO₂ is released where the power is made",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says no carbon dioxide forms 'since no fossil fuel is used'. This implies fossil-powered electrolysis would make CO₂ at the cathode. Electrolysis of water never makes CO₂ at the electrodes, whatever the power source; the emissions happen at the power station. This could teach a misconception."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Question b tests which product forms at the cathode, which is point 1's idea (predicting electrolysis products). The wind farm detail is decoration, so the question does not test green hydrogen. The clue about reduction at the cathode is also point 1 content not taught on this card."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says no carbon dioxide forms 'since no fossil fuel is used'. This implies fossil-powered electrolysis would make CO₂ at the cathode. Electrolysis of water never makes CO₂ at the electrodes, whatever the power source; the emissions happen at the power station. This could teach a misconception.",
+   "Question b, other: Question b tests which product forms at the cathode, which is point 1's idea (predicting electrolysis products). The wind farm detail is decoration, so the question does not test green hydrogen. The clue about reduction at the cathode is also point 1 content not taught on this card."
+  ]
+ },
+ "final": {
+  "title": "Green hydrogen",
+  "card": [
+   "Electrolysis of water uses electricity to split water: 2H₂O(l) → 2H₂(g) + O₂(g). The only products at the electrodes are hydrogen and oxygen.",
+   "Hydrogen is called green when the electricity for electrolysis comes from renewable sources such as solar or wind. No fossil fuels are burned to make it.",
+   "If the electricity comes from burning coal or gas, the electrodes still make no carbon dioxide. The power station releases it instead, so that hydrogen is not green.",
+   "Artificial photosynthesis is another route. A device uses sunlight to split water into hydrogen and oxygen directly, without a separate power supply."
+  ],
+  "remember": "Green hydrogen is made from water using renewable energy, not fossil fuels.",
+  "a": {
+   "q": "What makes hydrogen made by electrolysis of water green?",
+   "opts": [
+    "The electricity comes from solar or wind power",
+    "The electrolysis uses water rather than molten salt",
+    "The water used comes from a renewable source",
+    "The oxygen made at the anode is also collected"
+   ],
+   "why": "Green refers to how the energy is supplied. If the electricity came from burning fossil fuels, the hydrogen would not be green, even though it still comes from water.",
+   "clue": "Think about where the electrical energy comes from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Queensland plant electrolyses water using grid power made mostly by burning coal. Which statement about its hydrogen is correct?",
+   "opts": [
+    "Not green, as CO₂ is released where the power is made",
+    "Green, as the hydrogen is made only from water",
+    "Not green, as CO₂ forms at the electrodes",
+    "Green, as no fuel is burned inside the electrolyser"
+   ],
+   "why": "The electrodes make only hydrogen and oxygen, but burning coal for the electricity releases carbon dioxide at the power station. So the hydrogen is not green. Saying CO₂ forms at the electrodes is wrong, because water contains no carbon.",
+   "clue": "Where is the coal burned?"
+  }
+ },
+ "cleared_by": "recheck"
+}

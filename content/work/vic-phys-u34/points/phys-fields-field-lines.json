@@ -1,0 +1,225 @@
+{
+ "id": "phys-fields-field-lines",
+ "title": "Fields and field lines",
+ "brief": "32ad3e06567a",
+ "shortlist": [
+  [
+   "phys-gravitational-field-strength",
+   0.559
+  ],
+  [
+   "phys-magnetic-flux",
+   0.53
+  ],
+  [
+   "phys-charges-magnetic-fields",
+   0.517
+  ],
+  [
+   "phys-force-current-carrying-wire",
+   0.48
+  ],
+  [
+   "phys-charges-electric-fields",
+   0.39
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.0043,
+  "check": 0.01499,
+  "fix": 0.02751,
+  "recheck": 0.01281
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches field lines or the general idea that a field is a region where a force acts; they each cover a specific quantity such as gravitational field strength, flux, or force on a charge or wire.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fields and field lines",
+  "card": [
+   "A field is a region of space where an object feels a force without touching anything. Gravity, electric charge and magnets each have a field.",
+   "A field line shows the direction of the force on a small test object placed at that point. An arrow on the line gives the direction.",
+   "Where field lines are closer together, the field is stronger. Where they are further apart, the field is weaker.",
+   "Field lines never cross. If two lines crossed, the field would point in two directions at one point, which is not possible."
+  ],
+  "remember": "Line arrows give the direction of the force. Line spacing gives the strength.",
+  "a": {
+   "q": "What does it tell you if field lines are drawn closer together in one region than in another?",
+   "opts": [
+    "The field is stronger in the closer region",
+    "The field is weaker in the closer region",
+    "The force points toward the closer region",
+    "The field in the closer region is uniform"
+   ],
+   "why": "Closer lines mean a stronger field, so the force on a test object is larger there. The spacing does not show direction, which is given by the arrows on the lines.",
+   "clue": "Think of spacing as a measure of strength, not direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Field lines around a planet are drawn twice as close together at point P as at point Q. What can be said about P and Q?",
+   "opts": [
+    "The field is stronger at P than at Q",
+    "The field is stronger at Q than at P",
+    "The force at P points toward Q",
+    "The field has the same strength at P and Q"
+   ],
+   "why": "Lines that are closer together show a stronger field, so the field at P is stronger. The same strength would need the same spacing, and the spacing does not show which way the force points.",
+   "clue": "Compare how tightly the lines are packed at each point."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The field is stronger in the closer region",
+   "also_right": []
+  },
+  "b": {
+   "best": "The field is stronger at P than at Q",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A field line shows the direction of the force on a small test object' is too loose. For electric fields it is the force on a positive test charge, since a negative charge is pushed the opposite way. For magnetic fields it is the force on a north pole, while a moving charge or a current feels a force perpendicular to the lines. Year 12 students will meet both ideas, so the card should name the test object (test mass, positive test charge, north pole)."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with one clear right answer, and the explanations match the card. The card's phrase 'small test object' should name the test object (positive test charge, north pole), because for electric charges of either sign and for magnetic fields the force is not always along the line's arrow."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'A field line shows the direction of the force on a small test object' is too loose. For electric fields it is the force on a positive test charge, since a negative charge is pushed the opposite way. For magnetic fields it is the force on a north pole, while a moving charge or a current feels a force perpendicular to the lines. Year 12 students will meet both ideas, so the card should name the test object (test mass, positive test charge, north pole)."
+ ],
+ "proposal": {
+  "title": "Fields and field lines",
+  "card": [
+   "A field is a region of space where an object feels a force without touching anything. Gravity, electric charge and magnets each have a field.",
+   "An arrow on a field line shows the direction of the force on a test object at that point: a small test mass for gravity, a positive test charge for electric fields and a north pole for magnetic fields.",
+   "Where field lines are closer together, the field is stronger. Where they are further apart, the field is weaker.",
+   "Field lines never cross. If two lines crossed, the field would point in two directions at one point, which is not possible."
+  ],
+  "remember": "Line arrows give the direction of the force. Line spacing gives the strength.",
+  "a": {
+   "q": "What does it tell you if field lines are drawn closer together in one region than in another?",
+   "opts": [
+    "The field is stronger in the closer region",
+    "The field is weaker in the closer region",
+    "The force points toward the closer region",
+    "The field in the closer region is uniform"
+   ],
+   "why": "Closer lines mean a stronger field, so a test object placed there would feel a larger force. The spacing does not show direction, which is given by the arrows on the lines.",
+   "clue": "Think of spacing as a measure of strength, not direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Field lines around a planet are drawn twice as close together at point P as at point Q. What can be said about P and Q?",
+   "opts": [
+    "The field is stronger at P than at Q",
+    "The field is stronger at Q than at P",
+    "The force at P points toward Q",
+    "The field has the same strength at P and Q"
+   ],
+   "why": "Lines that are closer together show a stronger field, so a test mass at P would feel a larger force than at Q. The same strength would need the same spacing, and the spacing does not show which way the force points.",
+   "clue": "Compare how tightly the lines are packed at each point."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The field is stronger in the closer region",
+    "also_right": []
+   },
+   "b": {
+    "best": "The field is stronger at P than at Q",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'A field line shows the direction of the force on a small test object' is too loose. For electric fields it is the force on a positive test charge, since a negative charge is pushed the opposite way. For magnetic fields it is the force on a north pole, while a moving charge or a current feels a force perpendicular to the lines. Year 12 students will meet both ideas, so the card should name the test object (test mass, positive test charge, north pole)."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'A field line shows the direction of the force on a small test object' is too loose. For electric fields it is the force on a positive test charge, since a negative charge is pushed the opposite way. For magnetic fields it is the force on a north pole, while a moving charge or a current feels a force perpendicular to the lines. Year 12 students will meet both ideas, so the card should name the test object (test mass, positive test charge, north pole)."
+  ]
+ },
+ "final": {
+  "title": "Fields and field lines",
+  "card": [
+   "A field is a region of space where an object feels a force without touching anything. Gravity, electric charge and magnets each have a field.",
+   "An arrow on a field line shows the direction of the force on a test object at that point: a small test mass for gravity, a positive test charge for electric fields and a north pole for magnetic fields.",
+   "Where field lines are closer together, the field is stronger. Where they are further apart, the field is weaker.",
+   "Field lines never cross. If two lines crossed, the field would point in two directions at one point, which is not possible."
+  ],
+  "remember": "Line arrows give the direction of the force. Line spacing gives the strength.",
+  "a": {
+   "q": "What does it tell you if field lines are drawn closer together in one region than in another?",
+   "opts": [
+    "The field is stronger in the closer region",
+    "The field is weaker in the closer region",
+    "The force points toward the closer region",
+    "The field in the closer region is uniform"
+   ],
+   "why": "Closer lines mean a stronger field, so a test object placed there would feel a larger force. The spacing does not show direction, which is given by the arrows on the lines.",
+   "clue": "Think of spacing as a measure of strength, not direction."
+  },
+  "b": {
+   "d": 2,
+   "q": "Field lines around a planet are drawn twice as close together at point P as at point Q. What can be said about P and Q?",
+   "opts": [
+    "The field is stronger at P than at Q",
+    "The field is stronger at Q than at P",
+    "The force at P points toward Q",
+    "The field has the same strength at P and Q"
+   ],
+   "why": "Lines that are closer together show a stronger field, so a test mass at P would feel a larger force than at Q. The same strength would need the same spacing, and the spacing does not show which way the force points.",
+   "clue": "Compare how tightly the lines are packed at each point."
+  }
+ },
+ "cleared_by": "recheck"
+}

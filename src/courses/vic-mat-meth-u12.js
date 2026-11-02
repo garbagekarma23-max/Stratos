@@ -18,7 +18,17 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Polynomial and power functions, rates of change and counting",
       "chapters": [
-        {"id": "vic-mat-meth-u12-1-1", "title": "Functions", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-1-1",
+          "title": "Functions",
+          "check": "checked",
+          "points": [
+            "mat-relations-functions",
+            "mat-domain-range-notation",
+            "mat-inverse-functions",
+            "mat-reading-graphs-real-data"
+          ]
+        },
         {
           "id": "vic-mat-meth-u12-1-2-2",
           "title": "Polynomial and power graphs",
@@ -31,14 +41,30 @@ MADE_COURSES.push({
             "mat-power-functions"
           ]
         },
-        {"id": "vic-mat-meth-u12-2-1", "title": "Polynomial algebra", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-2-1",
+          "title": "Polynomial algebra",
+          "check": "checked",
+          "points": [
+            "mat-expanding-factorising",
+            "mat-dividing-polynomials",
+            "mat-remainder-factor-theorems",
+            "mat-solving-polynomial-equations",
+            "mat-bisection-method"
+          ]
+        },
         {
           "id": "vic-mat-meth-u12-1-4",
           "title": "Transformations and simultaneous equations",
           "check": "checked",
           "points": ["mat-transformations-graphs", "mat-families-functions", "mat-simultaneous-equations"]
         },
-        {"id": "vic-mat-meth-u12-3-1", "title": "Rates of change", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-3-1",
+          "title": "Rates of change",
+          "check": "checked",
+          "points": ["mat-average-rate-change", "mat-instantaneous-rate-change", "mat-rates-context", "mat-tangent-lines"]
+        },
         {
           "id": "vic-mat-meth-u12-4-1",
           "title": "Counting and probability",
@@ -51,14 +77,44 @@ MADE_COURSES.push({
       "title": "Unit 2: Circular, exponential and logarithmic functions, calculus and probability",
       "chapters": [
         {"id": "vic-mat-meth-u12-1-3", "title": "Circular functions", "check": "checked", "points": []},
-        {"id": "vic-mat-meth-u12-2-2", "title": "Circular graphs and equations", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-2-2",
+          "title": "Circular graphs and equations",
+          "check": "checked",
+          "points": [
+            "mat-graphs-sine-cosine",
+            "mat-tangent-graph",
+            "mat-modelling-with-sine-cosine",
+            "mat-solving-trigonometric-equations"
+          ]
+        },
         {
           "id": "vic-mat-meth-u12-1-2",
           "title": "Exponential and logarithmic functions",
           "check": "checked",
-          "points": []
+          "points": [
+            "mat-index-laws",
+            "mat-exponential-functions",
+            "mat-logarithm",
+            "mat-logarithm-laws",
+            "mat-solving-exponential-equations",
+            "mat-exponential-models-2"
+          ]
         },
-        {"id": "vic-mat-meth-u12-2-4", "title": "Differentiation", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-2-4",
+          "title": "Differentiation",
+          "check": "checked",
+          "points": [
+            "mat-derivative-from-first-principles",
+            "mat-central-difference-approximation",
+            "mat-power-rule",
+            "mat-graphs-derivative-functions",
+            "mat-stationary-points",
+            "mat-antidifferentiation",
+            "mat-newton-s-method"
+          ]
+        },
         {
           "id": "vic-mat-meth-u12-2-5",
           "title": "Probability",

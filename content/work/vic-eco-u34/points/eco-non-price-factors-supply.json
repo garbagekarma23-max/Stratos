@@ -1,0 +1,72 @@
+{
+ "id": "eco-non-price-factors-supply",
+ "title": "Non-price factors in supply",
+ "brief": "5dc51066b2f6",
+ "shortlist": [
+  [
+   "e-supply",
+   0.511
+  ],
+  [
+   "eco-factors-that-shift-supply",
+   0.482
+  ],
+  [
+   "e-pes",
+   0.366
+  ],
+  [
+   "eco-changes-equilibrium",
+   0.315
+  ],
+  [
+   "e-equilibrium",
+   0.296
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 may adapt e-supply, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:59Z confirm: Claude Opus 5.5 may adapt eco-factors-that-shift-supply, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:19:03Z review: reusing eco-factors-that-shift-supply"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "confirm": 0.01397
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "e-supply",
+  "changes": [
+   "Name productivity as its own non-price factor, since the brief asks for it and the card only covers it under technology.",
+   "Use the term climate alongside weather, as the brief frames it.",
+   "Note that the number of suppliers is a non-price factor that moves supply, as the brief lists it."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of non-price factors shifting the whole supply curve, but it needs small wording changes to match this brief's list of factors.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "eco-factors-that-shift-supply",
+  "changes": [
+   "Add the number of suppliers as a factor: more firms entering the market shifts supply right, and firms leaving shifts it left.",
+   "Label the weather point as 'climate' to match the Units 3 and 4 study design wording."
+  ],
+  "sure": "medium",
+  "reason": "The Victorian Units 1 and 2 point already teaches costs, technology, productivity and weather as shifters at a suitable depth, but it leaves out the number of suppliers that this brief lists, so that factor needs adding.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "eco-factors-that-shift-supply",
+ "matched": {
+  "verdict": "reuse",
+  "from": "eco-factors-that-shift-supply",
+  "by": "owner",
+  "at": "2026-11-02T06:19:03Z"
+ }
+}

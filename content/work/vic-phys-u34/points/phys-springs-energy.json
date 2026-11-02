@@ -1,0 +1,237 @@
+{
+ "id": "phys-springs-energy",
+ "title": "Springs and energy",
+ "brief": "26fd14477753",
+ "shortlist": [
+  [
+   "phys-work-energy",
+   0.38
+  ],
+  [
+   "phys-temperature-internal-energy",
+   0.349
+  ],
+  [
+   "phys-hooke-s-law",
+   0.296
+  ],
+  [
+   "phys-mass-energy",
+   0.275
+  ],
+  [
+   "phys-escape-velocity-gravitational-potential",
+   0.273
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:24:55Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.0064,
+  "check": 0.0168,
+  "fix": 0.02669,
+  "recheck": 0.01219
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Hooke's law, covers only spring force and stored elastic energy, while the new point is broader: it covers energy moving between kinetic, elastic and gravitational forms and finding work from the area under force-distance graphs, which no bank point teaches.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Springs and energy",
+  "card": [
+   "A spring that obeys Hooke's law has force F = kx, where k is the spring constant and x is the extension or compression from its natural length.",
+   "The energy stored in a stretched or compressed spring is elastic potential energy. It equals the area under the force-extension graph: E = ½kx².",
+   "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
+   "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
+  ],
+  "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
+  "a": {
+   "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
+   "opts": [
+    "1.0 J",
+    "20 J",
+    "2.0 J",
+    "0.10 J"
+   ],
+   "why": "E = ½kx² = ½ × 200 × 0.10² = 1.0 J. Using kx² gives 2.0 J, which forgets the half. Using F × x with F = kx has the same mistake.",
+   "clue": "Use the area under the force-extension graph, which is a triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spring with k = 400 N/m is compressed 0.20 m and launches a 0.10 kg ball straight up. Ignoring energy losses, how high does the ball rise above the launch point? Use g = 10 m/s².",
+   "opts": [
+    "8.0 m",
+    "4.0 m",
+    "16 m",
+    "80 m"
+   ],
+   "why": "Stored energy is ½ × 400 × 0.20² = 8.0 J. All of it becomes gravitational potential energy: mgh = 0.10 × 10 × h = 8.0, so h = 8.0 m. Taking the energy as 4.0 J forgets the squared term and gives 4.0 m only by mistake.",
+   "clue": "Find the spring energy first, then set it equal to mgh."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1.0 J",
+   "also_right": []
+  },
+  "b": {
+   "best": "8.0 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says taking the energy as 4.0 J 'forgets the squared term'. Forgetting the square gives ½ × 400 × 0.20 = 40 J, which leads to 40 m, not 4.0 m. The 4.0 m distractor comes from a different slip, such as halving twice, so the why misexplains the error."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Above the launch point' is slightly ambiguous. The ball rises 0.20 m while the spring extends, so the height above the point where it leaves the spring is about 7.8 m, not 8.0 m. Saying 'above its starting (compressed) position' would remove the ambiguity."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both intended answers (1.0 J and 8.0 m) are correct. The why for (b) wrongly says 4.0 J comes from forgetting the square (that slip gives 40 J), and 'launch point' in (b) is slightly ambiguous."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says taking the energy as 4.0 J 'forgets the squared term'. Forgetting the square gives ½ × 400 × 0.20 = 40 J, which leads to 40 m, not 4.0 m. The 4.0 m distractor comes from a different slip, such as halving twice, so the why misexplains the error.",
+  "Question b, wording: 'Above the launch point' is slightly ambiguous. The ball rises 0.20 m while the spring extends, so the height above the point where it leaves the spring is about 7.8 m, not 8.0 m. Saying 'above its starting (compressed) position' would remove the ambiguity."
+ ],
+ "proposal": {
+  "title": "Springs and energy",
+  "card": [
+   "A spring that obeys Hooke's law has force F = kx, where k is the spring constant and x is the extension or compression from its natural length.",
+   "The energy stored in a stretched or compressed spring is elastic potential energy. It equals the area under the force-extension graph: E = ½kx².",
+   "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
+   "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
+  ],
+  "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
+  "a": {
+   "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
+   "opts": [
+    "1.0 J",
+    "20 J",
+    "2.0 J",
+    "0.10 J"
+   ],
+   "why": "E = ½kx² = ½ × 200 × 0.10² = 1.0 J. Using kx² gives 2.0 J, which forgets the half. Using F × x with F = kx has the same mistake.",
+   "clue": "Use the area under the force-extension graph, which is a triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spring with k = 400 N/m is compressed 0.20 m and launches a 0.10 kg ball straight up. Ignoring energy losses, how high does the ball rise above its starting, compressed position? Use g = 10 m/s².",
+   "opts": [
+    "8.0 m",
+    "16 m",
+    "40 m",
+    "0.80 m"
+   ],
+   "why": "Stored energy is ½ × 400 × 0.20² = 8.0 J. All of it becomes gravitational potential energy: mgh = 0.10 × 10 × h = 8.0, so h = 8.0 m. Leaving out the half gives 16 J and 16 m, and leaving out the square gives 40 J and 40 m.",
+   "clue": "Find the spring energy first, then set it equal to mgh."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "1.0 J",
+    "also_right": []
+   },
+   "b": {
+    "best": "8.0 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says taking the energy as 4.0 J 'forgets the squared term'. Forgetting the square gives ½ × 400 × 0.20 = 40 J, which leads to 40 m, not 4.0 m. The 4.0 m distractor comes from a different slip, such as halving twice, so the why misexplains the error."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'Above the launch point' is slightly ambiguous. The ball rises 0.20 m while the spring extends, so the height above the point where it leaves the spring is about 7.8 m, not 8.0 m. Saying 'above its starting (compressed) position' would remove the ambiguity."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says taking the energy as 4.0 J 'forgets the squared term'. Forgetting the square gives ½ × 400 × 0.20 = 40 J, which leads to 40 m, not 4.0 m. The 4.0 m distractor comes from a different slip, such as halving twice, so the why misexplains the error.",
+   "Question b, wording: 'Above the launch point' is slightly ambiguous. The ball rises 0.20 m while the spring extends, so the height above the point where it leaves the spring is about 7.8 m, not 8.0 m. Saying 'above its starting (compressed) position' would remove the ambiguity."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Springs and energy",
+  "card": [
+   "A spring that obeys Hooke's law has force F = kx, where k is the spring constant and x is the extension or compression from its natural length.",
+   "The energy stored in a stretched or compressed spring is elastic potential energy. It equals the area under the force-extension graph: E = ½kx².",
+   "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
+   "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
+  ],
+  "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
+  "a": {
+   "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
+   "opts": [
+    "1.0 J",
+    "20 J",
+    "2.0 J",
+    "0.10 J"
+   ],
+   "why": "E = ½kx² = ½ × 200 × 0.10² = 1.0 J. Using kx² gives 2.0 J, which forgets the half. Using F × x with F = kx has the same mistake.",
+   "clue": "Use the area under the force-extension graph, which is a triangle."
+  },
+  "b": {
+   "d": 3,
+   "q": "A spring with k = 400 N/m is compressed 0.20 m and launches a 0.10 kg ball straight up. Ignoring energy losses, how high does the ball rise above its starting, compressed position? Use g = 10 m/s².",
+   "opts": [
+    "8.0 m",
+    "16 m",
+    "40 m",
+    "0.80 m"
+   ],
+   "why": "Stored energy is ½ × 400 × 0.20² = 8.0 J. All of it becomes gravitational potential energy: mgh = 0.10 × 10 × h = 8.0, so h = 8.0 m. Leaving out the half gives 16 J and 16 m, and leaving out the square gives 40 J and 40 m.",
+   "clue": "Find the spring energy first, then set it equal to mgh."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,246 @@
+{
+ "id": "chem-tests-functional-groups",
+ "title": "Tests for functional groups",
+ "brief": "08b1c3d27e3e",
+ "shortlist": [
+  [
+   "chem-carbon-13-nmr",
+   0.277
+  ],
+  [
+   "chem-chemical-tests-organic-compounds",
+   0.27
+  ],
+  [
+   "chem-alcohols",
+   0.239
+  ],
+  [
+   "chem-alkanes-alkenes-alkynes",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:24Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.0066,
+  "check": 0.01601,
+  "fix": 0.02968,
+  "recheck": 0.01405
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers the bromine water test for C=C and the sodium carbonate test for carboxylic acids, but it has no test for the hydroxyl group, so it is narrower than the new point and would need a new step to fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Tests for functional groups",
+  "card": [
+   [
+    "C=C double bond",
+    "Add bromine water, which is orange-brown. An alkene decolourises it quickly, because bromine adds across the double bond. A saturated compound does not decolourise it quickly in the dark."
+   ],
+   [
+    "Hydroxyl group",
+    "An alcohol has an -OH group. Warm it with acidified potassium dichromate, which is orange. A primary or secondary alcohol turns the mixture green, as the dichromate is reduced to chromium(III) ions."
+   ],
+   [
+    "Carboxyl group",
+    "A carboxylic acid has a -COOH group. Add sodium carbonate or sodium hydrogencarbonate. A carboxylic acid fizzes, because carbon dioxide gas forms."
+   ],
+   "Each test gives one visible change, such as a colour change or bubbles. The change points to one functional group."
+  ],
+  "remember": "Match the change to the group: bromine water goes colourless for C=C, dichromate goes green for an alcohol, and fizzing shows a carboxylic acid.",
+  "a": {
+   "q": "A colourless liquid is added to sodium carbonate powder and fizzes. Which functional group does it contain?",
+   "opts": [
+    "Carboxyl group",
+    "Hydroxyl group",
+    "Carbon-carbon double bond",
+    "Carbon-carbon single bond only"
+   ],
+   "why": "Fizzing with a carbonate means carbon dioxide formed, which shows an acid with a carboxyl group. A hydroxyl group is tested with dichromate, which gives a colour change, not bubbles.",
+   "clue": "Which group makes a carbonate release gas?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests a sample of unknown liquid X. It stays orange-brown with bromine water, but warmed acidified dichromate turns green. What does X most likely contain?",
+   "opts": [
+    "A hydroxyl group but no C=C double bond",
+    "A C=C double bond but no hydroxyl group",
+    "Both a hydroxyl group and a C=C double bond",
+    "A carboxyl group and no hydroxyl group"
+   ],
+   "why": "Bromine water was not decolourised, so there is no C=C bond. Dichromate turning green shows an alcohol with a hydroxyl group. A carboxyl group would not be shown by the dichromate test.",
+   "clue": "Read each test result separately, then combine them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Carboxyl group",
+   "also_right": []
+  },
+  "b": {
+   "best": "A hydroxyl group but no C=C double bond",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The change points to one functional group' overstates it. Aldehydes also turn acidified dichromate green, and VCE students meet aldehydes as oxidation products of primary alcohols. Tertiary alcohols have an -OH group but give no change. Better wording: the change 'suggests' the group, with the main exceptions noted."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match the card. One minor issue: the card says each test's change points to only one functional group, but aldehydes also turn dichromate green, so that line should be softened."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'The change points to one functional group' overstates it. Aldehydes also turn acidified dichromate green, and VCE students meet aldehydes as oxidation products of primary alcohols. Tertiary alcohols have an -OH group but give no change. Better wording: the change 'suggests' the group, with the main exceptions noted."
+ ],
+ "proposal": {
+  "title": "Tests for functional groups",
+  "card": [
+   [
+    "C=C double bond",
+    "Add bromine water, which is orange-brown. An alkene decolourises it quickly, because bromine adds across the double bond. A saturated compound does not decolourise it quickly in the dark."
+   ],
+   [
+    "Hydroxyl group",
+    "An alcohol has an -OH group. Warm it with acidified potassium dichromate, which is orange. A primary or secondary alcohol turns the mixture green, as the dichromate is reduced to chromium(III) ions."
+   ],
+   [
+    "Carboxyl group",
+    "A carboxylic acid has a -COOH group. Add sodium carbonate or sodium hydrogencarbonate. A carboxylic acid fizzes, because carbon dioxide gas forms."
+   ],
+   "Each test gives a visible change, such as a colour change or bubbles. The change suggests a group but does not prove it: aldehydes also turn dichromate green, and tertiary alcohols give no change."
+  ],
+  "remember": "Each result suggests a group: colourless bromine water for C=C, green dichromate for a primary or secondary alcohol, fizzing for a carboxylic acid.",
+  "a": {
+   "q": "A colourless liquid is added to sodium carbonate powder and fizzes. Which functional group does it contain?",
+   "opts": [
+    "Carboxyl group",
+    "Hydroxyl group",
+    "Carbon-carbon double bond",
+    "Carbon-carbon single bond only"
+   ],
+   "why": "Fizzing with a carbonate means carbon dioxide formed, which shows an acid with a carboxyl group. A hydroxyl group is tested with dichromate, which gives a colour change, not bubbles.",
+   "clue": "Which group makes a carbonate release gas?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests a sample of unknown liquid X. It stays orange-brown with bromine water, but warmed acidified dichromate turns green. What does X most likely contain?",
+   "opts": [
+    "A hydroxyl group but no C=C double bond",
+    "A C=C double bond but no hydroxyl group",
+    "Both a hydroxyl group and a C=C double bond",
+    "A carboxyl group and no hydroxyl group"
+   ],
+   "why": "Bromine water was not decolourised, so there is no C=C bond. Green dichromate suggests a primary or secondary alcohol, though an aldehyde would give the same result. A carboxyl group does not turn dichromate green, so that option does not explain the second result.",
+   "clue": "Read each test result separately, then combine them."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Carboxyl group",
+    "also_right": []
+   },
+   "b": {
+    "best": "A hydroxyl group but no C=C double bond",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'The change points to one functional group' overstates it. Aldehydes also turn acidified dichromate green, and VCE students meet aldehydes as oxidation products of primary alcohols. Tertiary alcohols have an -OH group but give no change. Better wording: the change 'suggests' the group, with the main exceptions noted."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'The change points to one functional group' overstates it. Aldehydes also turn acidified dichromate green, and VCE students meet aldehydes as oxidation products of primary alcohols. Tertiary alcohols have an -OH group but give no change. Better wording: the change 'suggests' the group, with the main exceptions noted."
+  ]
+ },
+ "final": {
+  "title": "Tests for functional groups",
+  "card": [
+   [
+    "C=C double bond",
+    "Add bromine water, which is orange-brown. An alkene decolourises it quickly, because bromine adds across the double bond. A saturated compound does not decolourise it quickly in the dark."
+   ],
+   [
+    "Hydroxyl group",
+    "An alcohol has an -OH group. Warm it with acidified potassium dichromate, which is orange. A primary or secondary alcohol turns the mixture green, as the dichromate is reduced to chromium(III) ions."
+   ],
+   [
+    "Carboxyl group",
+    "A carboxylic acid has a -COOH group. Add sodium carbonate or sodium hydrogencarbonate. A carboxylic acid fizzes, because carbon dioxide gas forms."
+   ],
+   "Each test gives a visible change, such as a colour change or bubbles. The change suggests a group but does not prove it: aldehydes also turn dichromate green, and tertiary alcohols give no change."
+  ],
+  "remember": "Each result suggests a group: colourless bromine water for C=C, green dichromate for a primary or secondary alcohol, fizzing for a carboxylic acid.",
+  "a": {
+   "q": "A colourless liquid is added to sodium carbonate powder and fizzes. Which functional group does it contain?",
+   "opts": [
+    "Carboxyl group",
+    "Hydroxyl group",
+    "Carbon-carbon double bond",
+    "Carbon-carbon single bond only"
+   ],
+   "why": "Fizzing with a carbonate means carbon dioxide formed, which shows an acid with a carboxyl group. A hydroxyl group is tested with dichromate, which gives a colour change, not bubbles.",
+   "clue": "Which group makes a carbonate release gas?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya tests a sample of unknown liquid X. It stays orange-brown with bromine water, but warmed acidified dichromate turns green. What does X most likely contain?",
+   "opts": [
+    "A hydroxyl group but no C=C double bond",
+    "A C=C double bond but no hydroxyl group",
+    "Both a hydroxyl group and a C=C double bond",
+    "A carboxyl group and no hydroxyl group"
+   ],
+   "why": "Bromine water was not decolourised, so there is no C=C bond. Green dichromate suggests a primary or secondary alcohol, though an aldehyde would give the same result. A carboxyl group does not turn dichromate green, so that option does not explain the second result.",
+   "clue": "Read each test result separately, then combine them."
+  }
+ },
+ "cleared_by": "recheck"
+}

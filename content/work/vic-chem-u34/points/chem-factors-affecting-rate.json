@@ -1,0 +1,238 @@
+{
+ "id": "chem-factors-affecting-rate",
+ "title": "Factors affecting rate",
+ "brief": "784e62151d20",
+ "shortlist": [
+  [
+   "chem-rates-reaction",
+   0.297
+  ],
+  [
+   "chem-temperature-equilibrium-constant",
+   0.274
+  ],
+  [
+   "chem-reaction-quotient",
+   0.251
+  ],
+  [
+   "chem-industrial-process",
+   0.227
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 may adapt chem-rates-reaction, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:25Z write: failed the content check, writing again",
+  "2026-11-01T15:14:44Z write: done",
+  "2026-11-01T15:19:03Z check: flagged",
+  "2026-11-01T15:21:20Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.01234,
+  "write": 0.01252,
+  "check": 0.01081,
+  "fix": 0.01269
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-rates-reaction",
+  "changes": [
+   "Add that increasing the pressure speeds up a reaction involving gases, because it raises the concentration of gas particles in the same volume."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers temperature, concentration, surface area and catalysts, but it omits pressure for gaseous reactants, which the new point requires, so one sentence needs adding.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point on rates of reaction teaches the same factors except gas pressure, which the brief lists, and adding that factor would mean new content on the card rather than a small change, so a new point is safer.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Factors affecting rate",
+  "card": [
+   "The rate of a reaction is how fast reactants are used up or products form. A faster rate means more successful collisions each second.",
+   [
+    "Temperature",
+    "Higher temperature makes particles move faster, so they collide more often and more of them collide with enough energy."
+   ],
+   [
+    "Concentration and pressure",
+    "More particles in the same volume means more collisions each second. Raising the pressure of a gas does this by squeezing the same particles into a smaller volume."
+   ],
+   [
+    "Surface area and catalyst",
+    "Crushing a solid exposes more particles to collide with. A catalyst speeds up a reaction by giving it an easier path."
+   ]
+  ],
+  "remember": "Each factor raises the number of successful collisions per second.",
+  "a": {
+   "q": "Why does a reaction speed up when a solution is made more concentrated?",
+   "opts": [
+    "More particles in each volume, so more collisions per second",
+    "Each particle moves faster, so more have enough energy",
+    "Each particle gains energy, so every collision succeeds",
+    "The particles have a larger surface area to collide with"
+   ],
+   "why": "A higher concentration puts more reactant particles in the same volume, so collisions happen more often. Moving faster is the effect of a higher temperature, not of concentration.",
+   "clue": "Think about how crowded the particles are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kofi reacts a 5 g lump of zinc with acid, then repeats it with 5 g of zinc powder. Nothing else changes. Why is the powder faster?",
+   "opts": [
+    "More zinc particles are exposed to the acid",
+    "The zinc particles move faster in the acid",
+    "The acid becomes more concentrated",
+    "The zinc particles have more energy to start with"
+   ],
+   "why": "Powder has a much larger surface area, so more zinc particles can meet acid particles at once. The temperature and acid concentration are the same, so particle speed and energy are unchanged.",
+   "clue": "The mass of zinc is the same, but how much of it is exposed?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More particles in each volume, so more collisions per second",
+   "also_right": []
+  },
+  "b": {
+   "best": "More zinc particles are exposed to the acid",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue asks 'how much of it is exposed?', repeating the key word 'exposed' from the right option, so a student can match words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The only problem is that the clue for question b repeats the word 'exposed' from the right option, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue asks 'how much of it is exposed?', repeating the key word 'exposed' from the right option, so a student can match words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Factors affecting rate",
+  "card": [
+   "The rate of a reaction is how fast reactants are used up or products form. A faster rate means more successful collisions each second.",
+   [
+    "Temperature",
+    "Higher temperature makes particles move faster, so they collide more often and more of them collide with enough energy."
+   ],
+   [
+    "Concentration and pressure",
+    "More particles in the same volume means more collisions each second. Raising the pressure of a gas does this by squeezing the same particles into a smaller volume."
+   ],
+   [
+    "Surface area and catalyst",
+    "Crushing a solid exposes more particles to collide with. A catalyst speeds up a reaction by giving it an easier path."
+   ]
+  ],
+  "remember": "Each factor raises the number of successful collisions per second.",
+  "a": {
+   "q": "Why does a reaction speed up when a solution is made more concentrated?",
+   "opts": [
+    "More particles in each volume, so more collisions per second",
+    "Each particle moves faster, so more have enough energy",
+    "Each particle gains energy, so every collision succeeds",
+    "The particles have a larger surface area to collide with"
+   ],
+   "why": "A higher concentration puts more reactant particles in the same volume, so collisions happen more often. Moving faster is the effect of a higher temperature, not of concentration.",
+   "clue": "Think about how crowded the particles are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kofi reacts a 5 g lump of zinc with acid, then repeats it with 5 g of zinc powder. Nothing else changes. Why is the powder faster?",
+   "opts": [
+    "More zinc particles are exposed to the acid",
+    "The zinc particles move faster in the acid",
+    "The acid becomes more concentrated",
+    "The zinc particles have more energy to start with"
+   ],
+   "why": "Powder has a much larger surface area, so more zinc particles can meet acid particles at once. The temperature and acid concentration are the same, so particle speed and energy are unchanged.",
+   "clue": "On a solid, which particles can the acid actually reach?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue asks 'how much of it is exposed?', repeating the key word 'exposed' from the right option, so a student can match words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue asks 'how much of it is exposed?', repeating the key word 'exposed' from the right option, so a student can match words without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Factors affecting rate",
+  "card": [
+   "The rate of a reaction is how fast reactants are used up or products form. A faster rate means more successful collisions each second.",
+   [
+    "Temperature",
+    "Higher temperature makes particles move faster, so they collide more often and more of them collide with enough energy."
+   ],
+   [
+    "Concentration and pressure",
+    "More particles in the same volume means more collisions each second. Raising the pressure of a gas does this by squeezing the same particles into a smaller volume."
+   ],
+   [
+    "Surface area and catalyst",
+    "Crushing a solid exposes more particles to collide with. A catalyst speeds up a reaction by giving it an easier path."
+   ]
+  ],
+  "remember": "Each factor raises the number of successful collisions per second.",
+  "a": {
+   "q": "Why does a reaction speed up when a solution is made more concentrated?",
+   "opts": [
+    "More particles in each volume, so more collisions per second",
+    "Each particle moves faster, so more have enough energy",
+    "Each particle gains energy, so every collision succeeds",
+    "The particles have a larger surface area to collide with"
+   ],
+   "why": "A higher concentration puts more reactant particles in the same volume, so collisions happen more often. Moving faster is the effect of a higher temperature, not of concentration.",
+   "clue": "Think about how crowded the particles are."
+  },
+  "b": {
+   "d": 2,
+   "q": "Kofi reacts a 5 g lump of zinc with acid, then repeats it with 5 g of zinc powder. Nothing else changes. Why is the powder faster?",
+   "opts": [
+    "More zinc particles are exposed to the acid",
+    "The zinc particles move faster in the acid",
+    "The acid becomes more concentrated",
+    "The zinc particles have more energy to start with"
+   ],
+   "why": "Powder has a much larger surface area, so more zinc particles can meet acid particles at once. The temperature and acid concentration are the same, so particle speed and energy are unchanged.",
+   "clue": "On a solid, which particles can the acid actually reach?"
+  }
+ },
+ "cleared_by": "auto"
+}

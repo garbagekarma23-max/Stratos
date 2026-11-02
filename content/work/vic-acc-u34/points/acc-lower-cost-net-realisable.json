@@ -1,0 +1,340 @@
+{
+ "id": "acc-lower-cost-net-realisable",
+ "title": "Lower of cost and net realisable value",
+ "brief": "ba9ce813f497",
+ "shortlist": [
+  [
+   "acc-cost-price-inventory",
+   0.32
+  ],
+  [
+   "acc-identified-cost-method",
+   0.285
+  ],
+  [
+   "acc-cost-sales-gross-profit",
+   0.249
+  ],
+  [
+   "acc-other-inventory-movements",
+   0.238
+  ],
+  [
+   "bus-quality-expectations-cost-based",
+   0.224
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01119,
+  "check": 0.03296,
+  "fix": 0.0262,
+  "recheck": 0.01436
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches writing inventory down to net realisable value; the closest, the cost price card, covers only how cost is measured and not the lower-of-cost-and-NRV test.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Think of what is left after the costs of selling' restates the definition and points straight to the right option, so a student can answer without knowing what NRV means.",
+ "rejected": {
+  "title": "Lower of cost and net realisable value",
+  "card": [
+   "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+   [
+    "NRV",
+    "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+   ],
+   "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+   "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+  ],
+  "remember": "Compare cost with NRV and use the lower. Write down a fall, but never value inventory above cost.",
+  "a": {
+   "q": "Which description matches net realisable value?",
+   "opts": [
+    "Expected selling price less the costs of making the sale",
+    "Expected selling price plus the costs of making the sale",
+    "The price the business paid, plus freight in",
+    "The price the business would pay to replace the goods"
+   ],
+   "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+   "clue": "Think of what is left after the costs of selling."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+   "opts": [
+    "$3,800, the NRV of $380 per bike",
+    "$4,000, the cost of $400 per bike",
+    "$4,800, the selling price of $480 per bike",
+    "$800, the profit margin of $80 per bike"
+   ],
+   "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+   "clue": "Take selling costs off the price before comparing it with cost."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Think of what is left after the costs of selling' restates the definition and points straight to the right option, so a student can answer without knowing what NRV means."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Lower of cost and net realisable value",
+     "card": [
+      "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+      [
+       "NRV",
+       "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+      ],
+      "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+      "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+     ],
+     "remember": "Report inventory at the lower of cost and NRV. Write down a fall, but never write up a gain.",
+     "a": {
+      "q": "Which description matches net realisable value?",
+      "opts": [
+       "Expected selling price less the costs of making the sale",
+       "Expected selling price plus the costs of making the sale",
+       "The price the business paid, plus freight in",
+       "The price the business would pay to replace the goods"
+      ],
+      "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+      "clue": "Think of what is left after the costs of selling."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+      "opts": [
+       "$3,800, the NRV of $380 per bike",
+       "$4,000, the cost of $400 per bike",
+       "$4,800, the selling price of $480 per bike",
+       "$3,800, the selling price less cost per bike"
+      ],
+      "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+      "clue": "Take selling costs off the price before comparing it with cost."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Expected selling price less the costs of making the sale",
+      "also_right": []
+     },
+     "b": {
+      "best": "$3,800, the NRV of $380 per bike",
+      "also_right": [
+       "$3,800, the selling price less cost per bike"
+      ]
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "Two options give the same correct total of $3,800. The distractor '$3,800, the selling price less cost per bike' is ambiguous. If 'cost' means the $400 purchase cost, the working is wrong ($80 per bike) but the figure is still right. If 'cost' means the selling cost, it is simply correct. A student who calculates correctly can be marked wrong for picking the reported value the question asks for. Replace it with a distractor that has a different figure, such as $800 (selling price less cost, $80 per bike)."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "'Never write up a gain' is stronger than the card and could mislead. Under AASB 102, a previous write-down can be reversed, back up to original cost, if NRV later rises. What is never allowed is reporting inventory above cost. Safer wording: 'never value inventory above cost.'"
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and question a are correct. In question b, two options show the correct $3,800 figure, one with ambiguous or wrong working, so a correct student could be marked wrong. The remember line's 'never write up a gain' overstates the rule, since reversals of earlier write-downs are allowed up to cost."
+    },
+    "flags": [
+     "Question b: the checker says “$3,800, the selling price less cost per bike” could also be right.",
+     "Question b, wording: Two options give the same correct total of $3,800. The distractor '$3,800, the selling price less cost per bike' is ambiguous. If 'cost' means the $400 purchase cost, the working is wrong ($80 per bike) but the figure is still right. If 'cost' means the selling cost, it is simply correct. A student who calculates correctly can be marked wrong for picking the reported value the question asks for. Replace it with a distractor that has a different figure, such as $800 (selling price less cost, $80 per bike).",
+     "Remember, wording: 'Never write up a gain' is stronger than the card and could mislead. Under AASB 102, a previous write-down can be reversed, back up to original cost, if NRV later rises. What is never allowed is reporting inventory above cost. Safer wording: 'never value inventory above cost.'"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Lower of cost and net realisable value",
+     "card": [
+      "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+      [
+       "NRV",
+       "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+      ],
+      "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+      "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+     ],
+     "remember": "Compare cost with NRV and use the lower. Write down a fall, but never value inventory above cost.",
+     "a": {
+      "q": "Which description matches net realisable value?",
+      "opts": [
+       "Expected selling price less the costs of making the sale",
+       "Expected selling price plus the costs of making the sale",
+       "The price the business paid, plus freight in",
+       "The price the business would pay to replace the goods"
+      ],
+      "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+      "clue": "Think of what is left after the costs of selling."
+     },
+     "b": {
+      "d": 3,
+      "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+      "opts": [
+       "$3,800, the NRV of $380 per bike",
+       "$4,000, the cost of $400 per bike",
+       "$4,800, the selling price of $480 per bike",
+       "$800, the profit margin of $80 per bike"
+      ],
+      "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+      "clue": "Take selling costs off the price before comparing it with cost."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:49Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Expected selling price less the costs of making the sale",
+       "also_right": []
+      },
+      "b": {
+       "best": "$3,800, the NRV of $380 per bike",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Think of what is left after the costs of selling' restates the definition and points straight to the right option, so a student can answer without knowing what NRV means."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are correct. The only issue is that the clue for question a gives the answer away by restating the NRV definition."
+     },
+     "flags": [
+      "Question a, other: The clue 'Think of what is left after the costs of selling' restates the definition and points straight to the right option, so a student can answer without knowing what NRV means."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Lower of cost and net realisable value",
+  "card": [
+   "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+   [
+    "NRV",
+    "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+   ],
+   "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+   "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+  ],
+  "remember": "Compare cost with NRV and use the lower. Write down a fall, but never value inventory above cost.",
+  "a": {
+   "q": "Which description matches net realisable value?",
+   "opts": [
+    "Expected selling price less the costs of making the sale",
+    "Expected selling price plus the costs of making the sale",
+    "The price the business paid, plus freight in",
+    "The price the business would pay to replace the goods"
+   ],
+   "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+   "clue": "Look at the second card line, and ask whether selling costs help or hurt the business."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+   "opts": [
+    "$3,800, the NRV of $380 per bike",
+    "$4,000, the cost of $400 per bike",
+    "$4,800, the selling price of $480 per bike",
+    "$800, the profit margin of $80 per bike"
+   ],
+   "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+   "clue": "Take selling costs off the price before comparing it with cost."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Expected selling price less the costs of making the sale",
+   "also_right": []
+  },
+  "b": {
+   "best": "$3,800, the NRV of $380 per bike",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card matches the lower of cost and NRV rule, and both questions have one clearly correct answer that matches the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Lower of cost and net realisable value",
+  "card": [
+   "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+   [
+    "NRV",
+    "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+   ],
+   "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+   "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+  ],
+  "remember": "Compare cost with NRV and use the lower. Write down a fall, but never value inventory above cost.",
+  "a": {
+   "q": "Which description matches net realisable value?",
+   "opts": [
+    "Expected selling price less the costs of making the sale",
+    "Expected selling price plus the costs of making the sale",
+    "The price the business paid, plus freight in",
+    "The price the business would pay to replace the goods"
+   ],
+   "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+   "clue": "Look at the second card line, and ask whether selling costs help or hurt the business."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+   "opts": [
+    "$3,800, the NRV of $380 per bike",
+    "$4,000, the cost of $400 per bike",
+    "$4,800, the selling price of $480 per bike",
+    "$800, the profit margin of $80 per bike"
+   ],
+   "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+   "clue": "Take selling costs off the price before comparing it with cost."
+  }
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "id": "chem-homologous-series",
+ "title": "Homologous series",
+ "brief": "75faa668b35f",
+ "shortlist": [
+  [
+   "chem-amines-amides",
+   0.291
+  ],
+  [
+   "chem-esterification",
+   0.262
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00522,
+  "check": 0.01546,
+  "fix": 0.02818
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the general idea of homologous series or how to draw molecular, structural, semi-structural and skeletal formulas; they cover only specific reactions of amines, amides and esters, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Homologous series",
+  "card": [
+   "A homologous series is a family of organic compounds with the same functional group and similar chemical properties. Each member differs from the next by one CH2 unit.",
+   "Examples: alkanes have only C-C single bonds. Alkenes have a C=C double bond. Alcohols have an -OH group. Amines have an -NH2 group. Carboxylic acids have -COOH. Esters have -COO- between two carbon chains. Amides have -CONH2 or a similar C(=O)N link.",
+   [
+    "Molecular formula",
+    "shows only the number of each atom, such as C2H6O. It does not show how the atoms are joined."
+   ],
+   [
+    "Semi-structural formula",
+    "shows the atoms in groups along the chain, such as CH3CH2OH. A structural formula draws every atom and bond. A skeletal formula shows only the carbon backbone as lines, with functional groups written in."
+   ]
+  ],
+  "remember": "A series shares a functional group and grows by CH2. Different formulas show different amounts of detail.",
+  "a": {
+   "q": "Ethanol, propan-1-ol and butan-1-ol all contain an -OH group and differ by one CH2 unit each. What are they?",
+   "opts": [
+    "Members of one homologous series",
+    "Structural isomers of one another",
+    "Members of the alkane series",
+    "Compounds with the same molecular formula"
+   ],
+   "why": "They share the -OH functional group and differ by CH2, so they are members of the alcohol homologous series. They are not isomers, because isomers have the same molecular formula and these have different numbers of carbons.",
+   "clue": "Look at what they share and how each differs from the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule is written as CH3CH2COOH. Which description is correct?",
+   "opts": [
+    "A semi-structural formula of a carboxylic acid",
+    "A molecular formula of an ester",
+    "A skeletal formula of a carboxylic acid",
+    "A semi-structural formula of an alcohol"
+   ],
+   "why": "The atoms are grouped along the chain, so it is a semi-structural formula. The -COOH group makes it a carboxylic acid. An ester would have -COO- between two carbon chains, not a -COOH group at the end.",
+   "clue": "Check how the atoms are written, then name the group at the end."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Members of one homologous series",
+   "also_right": []
+  },
+  "b": {
+   "best": "A semi-structural formula of a carboxylic acid",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for (a) explains structural isomers ('isomers have the same molecular formula'), a term that belongs to point 4. It should only be mentioned here, not explained."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and each question has one clear answer. One minor issue: the explanation for (a) defines structural isomers, which belongs to a later point."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why for (a) explains structural isomers ('isomers have the same molecular formula'), a term that belongs to point 4. It should only be mentioned here, not explained."
+ ],
+ "proposal": {
+  "title": "Homologous series",
+  "card": [
+   "A homologous series is a family of organic compounds with the same functional group and similar chemical properties. Each member differs from the next by one CH2 unit.",
+   "Examples: alkanes have only C-C single bonds. Alkenes have a C=C double bond. Alcohols have an -OH group. Amines have an -NH2 group. Carboxylic acids have -COOH. Esters have -COO- between two carbon chains. Amides have -CONH2 or a similar C(=O)N link.",
+   [
+    "Molecular formula",
+    "shows only the number of each atom, such as C2H6O. It does not show how the atoms are joined."
+   ],
+   [
+    "Semi-structural formula",
+    "shows the atoms in groups along the chain, such as CH3CH2OH. A structural formula draws every atom and bond. A skeletal formula shows only the carbon backbone as lines, with functional groups written in."
+   ]
+  ],
+  "remember": "A series shares a functional group and grows by CH2. Different formulas show different amounts of detail.",
+  "a": {
+   "q": "Ethanol, propan-1-ol and butan-1-ol all contain an -OH group and differ by one CH2 unit each. What are they?",
+   "opts": [
+    "Members of one homologous series",
+    "Members of the alkane series",
+    "Compounds with the same molecular formula",
+    "Members of the carboxylic acid series"
+   ],
+   "why": "They share the -OH functional group and each differs from the next by CH2, so they belong to one homologous series, the alcohols. Each extra CH2 changes the molecular formula, so they cannot share one. Alkanes have no -OH group, and carboxylic acids need -COOH.",
+   "clue": "Look at what they share and how each differs from the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule is written as CH3CH2COOH. Which description is correct?",
+   "opts": [
+    "A semi-structural formula of a carboxylic acid",
+    "A molecular formula of an ester",
+    "A skeletal formula of a carboxylic acid",
+    "A semi-structural formula of an alcohol"
+   ],
+   "why": "The atoms are grouped along the chain, so it is a semi-structural formula. The -COOH group makes it a carboxylic acid. An ester would have -COO- between two carbon chains, not a -COOH group at the end.",
+   "clue": "Check how the atoms are written, then name the group at the end."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why for (a) explains structural isomers ('isomers have the same molecular formula'), a term that belongs to point 4. It should only be mentioned here, not explained."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why for (a) explains structural isomers ('isomers have the same molecular formula'), a term that belongs to point 4. It should only be mentioned here, not explained."
+  ]
+ },
+ "final": {
+  "title": "Homologous series",
+  "card": [
+   "A homologous series is a family of organic compounds with the same functional group and similar chemical properties. Each member differs from the next by one CH2 unit.",
+   "Examples: alkanes have only C-C single bonds. Alkenes have a C=C double bond. Alcohols have an -OH group. Amines have an -NH2 group. Carboxylic acids have -COOH. Esters have -COO- between two carbon chains. Amides have -CONH2 or a similar C(=O)N link.",
+   [
+    "Molecular formula",
+    "shows only the number of each atom, such as C2H6O. It does not show how the atoms are joined."
+   ],
+   [
+    "Semi-structural formula",
+    "shows the atoms in groups along the chain, such as CH3CH2OH. A structural formula draws every atom and bond. A skeletal formula shows only the carbon backbone as lines, with functional groups written in."
+   ]
+  ],
+  "remember": "A series shares a functional group and grows by CH2. Different formulas show different amounts of detail.",
+  "a": {
+   "q": "Ethanol, propan-1-ol and butan-1-ol all contain an -OH group and differ by one CH2 unit each. What are they?",
+   "opts": [
+    "Members of one homologous series",
+    "Members of the alkane series",
+    "Compounds with the same molecular formula",
+    "Members of the carboxylic acid series"
+   ],
+   "why": "They share the -OH functional group and each differs from the next by CH2, so they belong to one homologous series, the alcohols. Each extra CH2 changes the molecular formula, so they cannot share one. Alkanes have no -OH group, and carboxylic acids need -COOH.",
+   "clue": "Look at what they share and how each differs from the next."
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule is written as CH3CH2COOH. Which description is correct?",
+   "opts": [
+    "A semi-structural formula of a carboxylic acid",
+    "A molecular formula of an ester",
+    "A skeletal formula of a carboxylic acid",
+    "A semi-structural formula of an alcohol"
+   ],
+   "why": "The atoms are grouped along the chain, so it is a semi-structural formula. The -COOH group makes it a carboxylic acid. An ester would have -COO- between two carbon chains, not a -COOH group at the end.",
+   "clue": "Check how the atoms are written, then name the group at the end."
+  }
+ },
+ "cleared_by": "auto"
+}

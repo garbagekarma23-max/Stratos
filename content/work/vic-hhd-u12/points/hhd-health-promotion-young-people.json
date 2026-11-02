@@ -24,7 +24,7 @@
    0.31
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -33,7 +33,8 @@
   "2026-11-01T08:33:50Z write: done",
   "2026-11-01T08:42:06Z check: flagged",
   "2026-11-01T08:44:27Z fix: suggested",
-  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check was not highly sure)"
+  "2026-11-01T09:32:51Z recheck: kept for you (the fresh check was not highly sure)",
+  "2026-11-02T06:20:03Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
@@ -199,5 +200,45 @@
    "summary": "No problems found. The card's rule that who runs a program, not who funds it, sets its type is clear and both questions follow it. Some resources class government-funded programs differently, so the owner may want to confirm this matches the textbook in use."
   },
   "flags": []
- }
+ },
+ "final": {
+  "title": "Programs for youth health",
+  "card": [
+   "A health program is a planned set of actions that aims to improve the health of a group. Youth health programs aim at young people, for example by cutting road injuries or supporting mental health.",
+   [
+    "Government program",
+    "run by a government department or agency, such as a state road safety campaign. Governments can reach large numbers of people, and they draw on public money."
+   ],
+   [
+    "Non-government program",
+    "run by a group outside government, such as a charity or community organisation. It may be funded by donations or by government grants. Who runs a program, not who pays, decides its type."
+   ],
+   "Programs often target an area where health data shows young people need help. A program can be judged by asking who it aims to reach and whether it improves health for them."
+  ],
+  "remember": "Government or non-government depends on who runs the program, and either kind aims to improve young people's health.",
+  "a": {
+   "q": "Which of these is a non-government youth health program?",
+   "opts": [
+    "A charity runs free mental health talks at local schools",
+    "A state agency airs a TV ad about drink driving",
+    "A state education department adds health to school classes",
+    "A council uses its own funds to build a youth clinic"
+   ],
+   "why": "A charity is outside government, so its program is non-government. The other three are run by a government body, including a local council, so they are government programs.",
+   "clue": "Look for who runs the program, not who it helps."
+  },
+  "b": {
+   "d": 3,
+   "q": "A state government pays a youth charity to run a peer-led mental health program in country towns. What is the best description of this program?",
+   "opts": [
+    "A non-government program, as the charity runs it",
+    "A government program, as the government pays for it",
+    "A government program, as it is aimed at young people",
+    "A non-government program, as it is aimed at country towns"
+   ],
+   "why": "The charity runs the program, so it is a non-government program. Government funding does not change the type, because non-government programs may be paid for by government grants. Who the program is aimed at does not decide the type either.",
+   "clue": "Two groups are involved here. Which detail sets the type?"
+  }
+ },
+ "cleared_by": "owner"
 }

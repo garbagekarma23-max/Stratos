@@ -1,0 +1,200 @@
+{
+ "id": "mat-derivatives-inverse-circular-functions",
+ "title": "Derivatives of inverse circular functions",
+ "brief": "0a52329c1da8",
+ "shortlist": [
+  [
+   "mat-derivatives-exponentials-logarithms",
+   0.494
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.408
+  ],
+  [
+   "mat-inverse-circular-functions",
+   0.338
+  ],
+  [
+   "mat-chain-rule",
+   0.32
+  ],
+  [
+   "mat-integrals-giving-logarithms",
+   0.238
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:05Z write: done",
+  "2026-11-01T15:05:29Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00598,
+  "check": 0.01285,
+  "fix": 0.02739
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the derivatives of arcsin and arctan: the inverse circular functions point covers only their domains, ranges and values, and the trigonometric derivatives point covers sin, cos and tan rather than their inverses.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Derivatives of inverse circular functions",
+  "card": [
+   "The derivative of arcsin(x) is 1/√(1 − x²), for −1 < x < 1.",
+   "The derivative of arctan(x) is 1/(1 + x²), for all real x.",
+   "When the input is a function u of x, use the chain rule. The derivative of arctan(u) is u′/(1 + u²).",
+   "Example: for y = arctan(3x), u = 3x and u′ = 3. So dy/dx = 3/(1 + 9x²)."
+  ],
+  "remember": "Arcsin gives 1/√(1 − x²), arctan gives 1/(1 + x²), and the chain rule adds u′.",
+  "a": {
+   "q": "What is the derivative of arcsin(x)?",
+   "opts": [
+    "1/√(1 − x²)",
+    "1/(1 + x²)",
+    "1/√(1 + x²)",
+    "−1/√(1 − x²)"
+   ],
+   "why": "The derivative of arcsin(x) is 1/√(1 − x²). The option 1/(1 + x²) is the derivative of arctan(x), a neighbouring result.",
+   "clue": "The answer has a square root in the denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is dy/dx when y = arctan(2x) at x = 1/2?",
+   "opts": [
+    "1",
+    "2",
+    "1/2",
+    "4/5"
+   ],
+   "why": "By the chain rule, dy/dx = 2/(1 + 4x²). At x = 1/2, 4x² = 1, so dy/dx = 2/2 = 1. The option 2 leaves out the 1 + 4x² in the denominator.",
+   "clue": "Let u = 2x and multiply by u′ = 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1/√(1 − x²)",
+   "also_right": []
+  },
+  "b": {
+   "best": "1",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"the chain rule adds u′\" could be read as adding u′. The chain rule multiplies by u′ (u′/(1 + u²)), so it should say \"multiplies by u′\" or \"puts u′ on top\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have exactly one correct answer, and the facts and explanations check out. The only problem is the remember line, which says the chain rule \"adds u′\" when it multiplies by u′."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"the chain rule adds u′\" could be read as adding u′. The chain rule multiplies by u′ (u′/(1 + u²)), so it should say \"multiplies by u′\" or \"puts u′ on top\"."
+ ],
+ "proposal": {
+  "title": "Derivatives of inverse circular functions",
+  "card": [
+   "The derivative of arcsin(x) is 1/√(1 − x²), for −1 < x < 1.",
+   "The derivative of arctan(x) is 1/(1 + x²), for all real x.",
+   "When the input is a function u of x, use the chain rule. The derivative of arctan(u) is u′/(1 + u²).",
+   "Example: for y = arctan(3x), u = 3x and u′ = 3. So dy/dx = 3/(1 + 9x²)."
+  ],
+  "remember": "Arcsin gives 1/√(1 − x²), arctan gives 1/(1 + x²), and the chain rule puts u′ on top.",
+  "a": {
+   "q": "What is the derivative of arcsin(x)?",
+   "opts": [
+    "1/√(1 − x²)",
+    "1/(1 + x²)",
+    "1/√(1 + x²)",
+    "−1/√(1 − x²)"
+   ],
+   "why": "The derivative of arcsin(x) is 1/√(1 − x²). The option 1/(1 + x²) is the derivative of arctan(x), a neighbouring result.",
+   "clue": "The answer has a square root in the denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is dy/dx when y = arctan(2x) at x = 1/2?",
+   "opts": [
+    "1",
+    "2",
+    "1/2",
+    "4/5"
+   ],
+   "why": "By the chain rule, dy/dx = 2/(1 + 4x²). At x = 1/2, 4x² = 1, so dy/dx = 2/2 = 1. The option 1/2 forgets to multiply by u′ = 2.",
+   "clue": "Let u = 2x and multiply by u′ = 2."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"the chain rule adds u′\" could be read as adding u′. The chain rule multiplies by u′ (u′/(1 + u²)), so it should say \"multiplies by u′\" or \"puts u′ on top\"."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"the chain rule adds u′\" could be read as adding u′. The chain rule multiplies by u′ (u′/(1 + u²)), so it should say \"multiplies by u′\" or \"puts u′ on top\"."
+  ]
+ },
+ "final": {
+  "title": "Derivatives of inverse circular functions",
+  "card": [
+   "The derivative of arcsin(x) is 1/√(1 − x²), for −1 < x < 1.",
+   "The derivative of arctan(x) is 1/(1 + x²), for all real x.",
+   "When the input is a function u of x, use the chain rule. The derivative of arctan(u) is u′/(1 + u²).",
+   "Example: for y = arctan(3x), u = 3x and u′ = 3. So dy/dx = 3/(1 + 9x²)."
+  ],
+  "remember": "Arcsin gives 1/√(1 − x²), arctan gives 1/(1 + x²), and the chain rule puts u′ on top.",
+  "a": {
+   "q": "What is the derivative of arcsin(x)?",
+   "opts": [
+    "1/√(1 − x²)",
+    "1/(1 + x²)",
+    "1/√(1 + x²)",
+    "−1/√(1 − x²)"
+   ],
+   "why": "The derivative of arcsin(x) is 1/√(1 − x²). The option 1/(1 + x²) is the derivative of arctan(x), a neighbouring result.",
+   "clue": "The answer has a square root in the denominator."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is dy/dx when y = arctan(2x) at x = 1/2?",
+   "opts": [
+    "1",
+    "2",
+    "1/2",
+    "4/5"
+   ],
+   "why": "By the chain rule, dy/dx = 2/(1 + 4x²). At x = 1/2, 4x² = 1, so dy/dx = 2/2 = 1. The option 1/2 forgets to multiply by u′ = 2.",
+   "clue": "Let u = 2x and multiply by u′ = 2."
+  }
+ },
+ "cleared_by": "auto"
+}

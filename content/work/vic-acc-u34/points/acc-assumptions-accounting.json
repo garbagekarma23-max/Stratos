@@ -1,0 +1,223 @@
+{
+ "id": "acc-assumptions-accounting",
+ "title": "Assumptions of accounting",
+ "brief": "141d154f4a6a",
+ "shortlist": [
+  [
+   "acc-entity-assumption",
+   0.255
+  ],
+  [
+   "eco-capital-financial-account",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: done",
+  "2026-11-01T15:05:22Z check: flagged",
+  "2026-11-01T15:14:43Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00573,
+  "check": 0.01612,
+  "fix": 0.02876,
+  "recheck": 0.0092
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers only the entity and going concern assumptions plus qualitative characteristics, while the new point needs all five assumptions, including period, accrual basis and monetary unit, so it is broader and cannot be fixed with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Assumptions of accounting",
+  "card": [
+   [
+    "Entity",
+    "the business is treated as separate from its owner. Only the business's transactions are recorded, not the owner's personal ones."
+   ],
+   [
+    "Going concern",
+    "the business is assumed to keep operating into the future, so it is not about to close down."
+   ],
+   [
+    "Period",
+    "the life of the business is divided into set time periods, such as a month or a year, so that reports can be prepared."
+   ],
+   [
+    "Accrual basis",
+    "revenue and expenses are recorded when they are earned or incurred, not when cash is received or paid. The monetary unit assumption means only items that can be measured in dollars are recorded."
+   ]
+  ],
+  "remember": "Assumptions set what is recorded and when: separate entity, ongoing, in periods, when earned or incurred, in dollars.",
+  "a": {
+   "q": "Under the accrual basis, when is revenue from a service recorded?",
+   "opts": [
+    "When the service is provided",
+    "When the customer pays cash",
+    "When the invoice is filed",
+    "When the period ends"
+   ],
+   "why": "Accrual basis records revenue when it is earned, which is when the service is done. Recording it when cash arrives is the cash basis, which is the tempting mistake.",
+   "clue": "Think about when the revenue is earned, not when money moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya owns a florist shop in Geelong. She pays her family's holiday from the shop's bank account. Which assumption means this should not be treated as a business expense?",
+   "opts": [
+    "Entity",
+    "Going concern",
+    "Period",
+    "Monetary unit"
+   ],
+   "why": "The entity assumption keeps the owner's personal affairs separate from the business. A family holiday is personal, so it is not a business expense. The monetary unit assumption is about measuring in dollars, not about whose transaction it is.",
+   "clue": "Whose transaction is it: the business's or the owner's?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "When the service is provided",
+   "also_right": []
+  },
+  "b": {
+   "best": "Entity",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The monetary unit assumption is tucked into the end of the accrual basis bullet instead of having its own bullet. Students could read it as part of the accrual basis or miss it as a separate assumption."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one clear right answer. The card merges the monetary unit assumption into the accrual basis bullet, which could confuse students. It should have its own bullet."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The monetary unit assumption is tucked into the end of the accrual basis bullet instead of having its own bullet. Students could read it as part of the accrual basis or miss it as a separate assumption."
+ ],
+ "proposal": {
+  "title": "Assumptions of accounting",
+  "card": [
+   "The entity assumption treats the business as separate from its owner. Only the business's transactions are recorded, not the owner's personal ones.",
+   "The going concern assumption treats the business as continuing to operate into the foreseeable future, rather than being about to close down.",
+   "The period assumption divides the life of the business into set periods, such as a month or a year, so reports can be prepared. The accrual basis assumption records revenue when it is earned and expenses when they are incurred (used up), not when cash is received or paid.",
+   "The monetary unit assumption means only items that can be measured in dollars are recorded. Items that cannot be given a dollar value stay out of the records."
+  ],
+  "remember": "Assumptions set what is recorded and when: separate entity, ongoing, in periods, when earned or incurred, in dollars.",
+  "a": {
+   "q": "Under the accrual basis, when is revenue from a service recorded?",
+   "opts": [
+    "When the service is provided",
+    "When the customer pays cash",
+    "When the invoice is filed",
+    "When the period ends"
+   ],
+   "why": "The accrual basis records revenue when it is earned, which is when the service is done. Recording it when cash arrives is the tempting mistake, because the accrual basis does not depend on when cash moves.",
+   "clue": "Think about when the revenue is earned, not when money moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya owns a florist shop in Geelong. She pays her family's holiday from the shop's bank account. Which assumption means this should not be treated as a business expense?",
+   "opts": [
+    "Entity",
+    "Going concern",
+    "Period",
+    "Monetary unit"
+   ],
+   "why": "The entity assumption keeps the owner's personal affairs separate from the business. A family holiday is personal, so it is not a business expense. The monetary unit assumption is about measuring in dollars, not about whose transaction it is.",
+   "clue": "Whose transaction is it: the business's or the owner's?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "When the service is provided",
+    "also_right": []
+   },
+   "b": {
+    "best": "Entity",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The monetary unit assumption is tucked into the end of the accrual basis bullet instead of having its own bullet. Students could read it as part of the accrual basis or miss it as a separate assumption."
+   }
+  ],
+  "flags": [
+   "Card, wording: The monetary unit assumption is tucked into the end of the accrual basis bullet instead of having its own bullet. Students could read it as part of the accrual basis or miss it as a separate assumption."
+  ]
+ },
+ "final": {
+  "title": "Assumptions of accounting",
+  "card": [
+   "The entity assumption treats the business as separate from its owner. Only the business's transactions are recorded, not the owner's personal ones.",
+   "The going concern assumption treats the business as continuing to operate into the foreseeable future, rather than being about to close down.",
+   "The period assumption divides the life of the business into set periods, such as a month or a year, so reports can be prepared. The accrual basis assumption records revenue when it is earned and expenses when they are incurred (used up), not when cash is received or paid.",
+   "The monetary unit assumption means only items that can be measured in dollars are recorded. Items that cannot be given a dollar value stay out of the records."
+  ],
+  "remember": "Assumptions set what is recorded and when: separate entity, ongoing, in periods, when earned or incurred, in dollars.",
+  "a": {
+   "q": "Under the accrual basis, when is revenue from a service recorded?",
+   "opts": [
+    "When the service is provided",
+    "When the customer pays cash",
+    "When the invoice is filed",
+    "When the period ends"
+   ],
+   "why": "The accrual basis records revenue when it is earned, which is when the service is done. Recording it when cash arrives is the tempting mistake, because the accrual basis does not depend on when cash moves.",
+   "clue": "Think about when the revenue is earned, not when money moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya owns a florist shop in Geelong. She pays her family's holiday from the shop's bank account. Which assumption means this should not be treated as a business expense?",
+   "opts": [
+    "Entity",
+    "Going concern",
+    "Period",
+    "Monetary unit"
+   ],
+   "why": "The entity assumption keeps the owner's personal affairs separate from the business. A family holiday is personal, so it is not a business expense. The monetary unit assumption is about measuring in dollars, not about whose transaction it is.",
+   "clue": "Whose transaction is it: the business's or the owner's?"
+  }
+ },
+ "cleared_by": "recheck"
+}

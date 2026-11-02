@@ -1,0 +1,316 @@
+{
+ "id": "eco-costs-unemployment",
+ "title": "The costs of unemployment",
+ "brief": "c9bb55e2dcbd",
+ "shortlist": [
+  [
+   "eco-natural-rate-unemployment",
+   0.5
+  ],
+  [
+   "eco-hidden-long-term-unemployment",
+   0.443
+  ],
+  [
+   "e-unemployment",
+   0.438
+  ],
+  [
+   "e-labour",
+   0.368
+  ],
+  [
+   "eco-inflation-target",
+   0.305
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.0111,
+  "check": 0.02629,
+  "fix": 0.0258,
+  "recheck": 0.01504
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches just the costs of unemployment: e-unemployment is broader, covering causes and types as well as costs, and none of the points covers the inflation cost of unemployment that is too low.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The scenario is set in one Victorian town, but inflation is a rise in the general price level across the economy. One town's labour shortage would not, by itself, be expected to lift inflation. The card describes very low unemployment economy-wide, so the stem could say unemployment across Australia has fallen very low.",
+ "rejected": {
+  "title": "The costs of unemployment",
+  "card": [
+   "High unemployment wastes resources. Workers who want jobs are idle, so the economy produces less than it could. Real GDP ends up below its potential.",
+   "The government also loses income tax from people without jobs, and it pays more in income support such as JobSeeker. This puts pressure on the budget.",
+   "Unemployed people and their families can face lower income, loss of skills and poorer wellbeing. Long spells can strain communities, especially in areas where jobs are scarce.",
+   "Unemployment that falls too low can also cost the economy. Firms struggle to find workers and may raise wages to attract them. This can push up prices and so lift inflation."
+  ],
+  "remember": "High unemployment wastes output and hurts people. Very low unemployment can push up inflation.",
+  "a": {
+   "q": "Which is a cost to the government when unemployment rises?",
+   "opts": [
+    "Less income tax collected and more income support paid",
+    "More income tax collected and less income support paid",
+    "Less income tax collected and less income support paid",
+    "More income tax collected and more income support paid"
+   ],
+   "why": "Fewer people earning means less income tax, and more people claim support such as JobSeeker. The tempting option with less support paid gets the second half wrong: more people without jobs means more claims, not fewer.",
+   "clue": "Think about what people without jobs pay and receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Unemployment in a Victorian town has fallen very low. Mia's building firm cannot find workers and lifts wages to hire staff. Which cost is this most likely to lead to?",
+   "opts": [
+    "Higher inflation as firms pass on higher costs",
+    "Lower real GDP as workers sit idle",
+    "Less income tax collected from workers",
+    "More income support paid to jobseekers"
+   ],
+   "why": "When labour is scarce, firms bid up wages and may raise prices, which can lift inflation. The tempting option, lower real GDP, is a cost of high unemployment, not of very low unemployment.",
+   "clue": "Are workers idle here, or hard to find?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The scenario is set in one Victorian town, but inflation is a rise in the general price level across the economy. One town's labour shortage would not, by itself, be expected to lift inflation. The card describes very low unemployment economy-wide, so the stem could say unemployment across Australia has fallen very low."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The costs of unemployment",
+     "card": [
+      "High unemployment wastes resources. Workers who want jobs are idle, so the economy produces less than it could. Real GDP ends up below its potential.",
+      "The government also loses income tax from people without jobs, and it pays more in income support such as JobSeeker. This puts pressure on the budget.",
+      "Unemployed people and their families can face lower income, loss of skills and poorer wellbeing. Long spells can strain communities, especially in areas where jobs are scarce.",
+      "Unemployment that falls too low can also cost the economy. Firms struggle to find workers and may raise wages to attract them. This can push up prices and so lift inflation."
+     ],
+     "remember": "High unemployment wastes output and hurts people. Very low unemployment can push up inflation.",
+     "a": {
+      "q": "Which is a cost to the government when unemployment rises?",
+      "opts": [
+       "Less income tax collected and more income support paid",
+       "More income tax collected and less income support paid",
+       "Less income support paid and more output produced",
+       "More wages paid to firms and less tax collected"
+      ],
+      "why": "Fewer people earning means less income tax, and more people claim support such as JobSeeker. The second option reverses cause and effect, because rising unemployment lowers tax collected.",
+      "clue": "Think about what people without jobs pay and receive."
+     },
+     "b": {
+      "d": 3,
+      "q": "Unemployment in a Victorian town has fallen very low. Mia's building firm cannot find workers and lifts wages to hire staff. Which cost is this most likely to lead to?",
+      "opts": [
+       "Higher inflation as firms pass on higher costs",
+       "Lower real GDP as workers sit idle",
+       "Less income tax collected from workers",
+       "More income support paid to jobseekers"
+      ],
+      "why": "When labour is scarce, firms bid up wages and may raise prices, which can lift inflation. The tempting option, lower real GDP, is a cost of high unemployment, not of very low unemployment.",
+      "clue": "Are workers idle here, or hard to find?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Less income tax collected and more income support paid",
+      "also_right": []
+     },
+     "b": {
+      "best": "Higher inflation as firms pass on higher costs",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The why says the second option 'reverses cause and effect, because rising unemployment lowers tax collected', but that option already says 'less tax collected'. What is actually wrong with it is 'more wages paid to firms': firms pay wages rather than receive them, and wages paid fall when unemployment rises. The why misdescribes the distractor and could confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each has one clear right answer. The explanation for question a misstates why the second option is wrong: that option correctly says less tax is collected, and its error is the 'more wages paid to firms' part."
+    },
+    "flags": [
+     "Question a, other: The why says the second option 'reverses cause and effect, because rising unemployment lowers tax collected', but that option already says 'less tax collected'. What is actually wrong with it is 'more wages paid to firms': firms pay wages rather than receive them, and wages paid fall when unemployment rises. The why misdescribes the distractor and could confuse students."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The costs of unemployment",
+     "card": [
+      "High unemployment wastes resources. Workers who want jobs are idle, so the economy produces less than it could. Real GDP ends up below its potential.",
+      "The government also loses income tax from people without jobs, and it pays more in income support such as JobSeeker. This puts pressure on the budget.",
+      "Unemployed people and their families can face lower income, loss of skills and poorer wellbeing. Long spells can strain communities, especially in areas where jobs are scarce.",
+      "Unemployment that falls too low can also cost the economy. Firms struggle to find workers and may raise wages to attract them. This can push up prices and so lift inflation."
+     ],
+     "remember": "High unemployment wastes output and hurts people. Very low unemployment can push up inflation.",
+     "a": {
+      "q": "Which is a cost to the government when unemployment rises?",
+      "opts": [
+       "Less income tax collected and more income support paid",
+       "More income tax collected and less income support paid",
+       "Less income tax collected and less income support paid",
+       "More income tax collected and more income support paid"
+      ],
+      "why": "Fewer people earning means less income tax, and more people claim support such as JobSeeker. The tempting option with less support paid gets the second half wrong: more people without jobs means more claims, not fewer.",
+      "clue": "Think about what people without jobs pay and receive."
+     },
+     "b": {
+      "d": 3,
+      "q": "Unemployment in a Victorian town has fallen very low. Mia's building firm cannot find workers and lifts wages to hire staff. Which cost is this most likely to lead to?",
+      "opts": [
+       "Higher inflation as firms pass on higher costs",
+       "Lower real GDP as workers sit idle",
+       "Less income tax collected from workers",
+       "More income support paid to jobseekers"
+      ],
+      "why": "When labour is scarce, firms bid up wages and may raise prices, which can lift inflation. The tempting option, lower real GDP, is a cost of high unemployment, not of very low unemployment.",
+      "clue": "Are workers idle here, or hard to find?"
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Less income tax collected and more income support paid",
+       "also_right": []
+      },
+      "b": {
+       "best": "Higher inflation as firms pass on higher costs",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The scenario is set in one Victorian town, but inflation is a rise in the general price level across the economy. One town's labour shortage would not, by itself, be expected to lift inflation. The card describes very low unemployment economy-wide, so the stem could say unemployment across Australia has fallen very low."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and both questions are accurate, and the intended answers are correct. One minor issue: question b sets an inflation cost in a single town, when it would be clearer to describe very low unemployment across the economy."
+     },
+     "flags": [
+      "Question b, wording: The scenario is set in one Victorian town, but inflation is a rise in the general price level across the economy. One town's labour shortage would not, by itself, be expected to lift inflation. The card describes very low unemployment economy-wide, so the stem could say unemployment across Australia has fallen very low."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "The costs of unemployment",
+  "card": [
+   "High unemployment wastes resources. Workers who want jobs are idle, so the economy produces less than it could. Real GDP ends up below its potential.",
+   "The government also loses income tax from people without jobs, and it pays more in income support such as JobSeeker. This puts pressure on the budget.",
+   "Unemployed people and their families can face lower income, loss of skills and poorer wellbeing. Long spells can strain communities, especially in areas where jobs are scarce.",
+   "Unemployment that falls too low across the whole economy can also cost it. Firms struggle to find workers and may raise wages to attract them. This can push up prices and so lift inflation."
+  ],
+  "remember": "High unemployment wastes output and hurts people. Very low unemployment can push up inflation.",
+  "a": {
+   "q": "Which is a cost to the government when unemployment rises?",
+   "opts": [
+    "Less income tax collected and more income support paid",
+    "More income tax collected and less income support paid",
+    "Less income tax collected and less income support paid",
+    "More income tax collected and more income support paid"
+   ],
+   "why": "Fewer people earning means less income tax, and more people claim support such as JobSeeker. The tempting option with less support paid gets the second half wrong: more people without jobs means more claims, not fewer.",
+   "clue": "Think about what people without jobs pay and receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Unemployment across Australia has fallen very low. Firms like Mia's building company cannot find workers and lift wages to hire staff. Which cost is this most likely to lead to?",
+   "opts": [
+    "Higher inflation as firms pass on higher costs",
+    "Lower real GDP as workers sit idle",
+    "Less income tax collected from workers",
+    "More income support paid to jobseekers"
+   ],
+   "why": "When labour is scarce across the economy, many firms bid up wages and may raise prices, which can lift inflation. The tempting option, lower real GDP, is a cost of high unemployment, not of very low unemployment.",
+   "clue": "Are workers idle here, or hard to find?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Less income tax collected and more income support paid",
+   "also_right": []
+  },
+  "b": {
+   "best": "Higher inflation as firms pass on higher costs",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The costs of unemployment",
+  "card": [
+   "High unemployment wastes resources. Workers who want jobs are idle, so the economy produces less than it could. Real GDP ends up below its potential.",
+   "The government also loses income tax from people without jobs, and it pays more in income support such as JobSeeker. This puts pressure on the budget.",
+   "Unemployed people and their families can face lower income, loss of skills and poorer wellbeing. Long spells can strain communities, especially in areas where jobs are scarce.",
+   "Unemployment that falls too low across the whole economy can also cost it. Firms struggle to find workers and may raise wages to attract them. This can push up prices and so lift inflation."
+  ],
+  "remember": "High unemployment wastes output and hurts people. Very low unemployment can push up inflation.",
+  "a": {
+   "q": "Which is a cost to the government when unemployment rises?",
+   "opts": [
+    "Less income tax collected and more income support paid",
+    "More income tax collected and less income support paid",
+    "Less income tax collected and less income support paid",
+    "More income tax collected and more income support paid"
+   ],
+   "why": "Fewer people earning means less income tax, and more people claim support such as JobSeeker. The tempting option with less support paid gets the second half wrong: more people without jobs means more claims, not fewer.",
+   "clue": "Think about what people without jobs pay and receive."
+  },
+  "b": {
+   "d": 3,
+   "q": "Unemployment across Australia has fallen very low. Firms like Mia's building company cannot find workers and lift wages to hire staff. Which cost is this most likely to lead to?",
+   "opts": [
+    "Higher inflation as firms pass on higher costs",
+    "Lower real GDP as workers sit idle",
+    "Less income tax collected from workers",
+    "More income support paid to jobseekers"
+   ],
+   "why": "When labour is scarce across the economy, many firms bid up wages and may raise prices, which can lift inflation. The tempting option, lower real GDP, is a cost of high unemployment, not of very low unemployment.",
+   "clue": "Are workers idle here, or hard to find?"
+  }
+ }
+}

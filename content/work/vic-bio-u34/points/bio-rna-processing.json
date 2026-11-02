@@ -1,0 +1,305 @@
+{
+ "id": "bio-rna-processing",
+ "title": "RNA processing",
+ "brief": "5992a89c240e",
+ "shortlist": [
+  [
+   "bio-making-proteins",
+   0.355
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01161,
+  "check": 0.0355,
+  "fix": 0.02736,
+  "recheck": 0.01557
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point 'Making proteins' covers transcription and translation but does not teach pre-mRNA processing (intron removal, 5' cap and poly-A tail), so no bank point teaches the new idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The card calls pre-mRNA 'a copy of the gene's coding region, including both exons and introns'. Introns do not code, and point 3 teaches that exons are the parts that code. Calling the stretch with introns the 'coding region' could confuse students. 'A copy of the gene, including both exons and introns' would be clearer.",
+ "rejected": {
+  "title": "RNA processing",
+  "card": [
+   "In eukaryotes, transcription makes pre-mRNA in the nucleus. Pre-mRNA is a copy of the gene's coding region, including both exons and introns.",
+   [
+    "Splicing",
+    "introns are cut out and the exons are joined together. Only the exons stay in the finished message."
+   ],
+   [
+    "Cap and tail",
+    "a cap is added to the start of the RNA and a poly-A tail, a string of adenine nucleotides, is added to the end. These help protect the mRNA and let the cell use it."
+   ],
+   "The result is mature mRNA. It leaves the nucleus through a nuclear pore and goes to the cytoplasm for translation."
+  ],
+  "remember": "Pre-mRNA is edited before use: introns out, cap and tail on.",
+  "a": {
+   "q": "Which change turns pre-mRNA into mature mRNA in a human cell?",
+   "opts": [
+    "Introns are removed and a cap and tail are added",
+    "Exons are removed and a cap and tail are added",
+    "Introns are joined and the promoter is added",
+    "Uracil is swapped for thymine and introns are kept"
+   ],
+   "why": "Pre-mRNA contains introns, and splicing cuts them out so only the exons remain. A cap and a poly-A tail are also added. Removing exons would delete the parts that stay in the finished message.",
+   "clue": "Which parts of the gene stay in the finished message?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A mutation stops a cell from adding a poly-A tail to its mRNA, but splicing works normally. Which statement fits this cell?",
+   "opts": [
+    "Its mRNA has no introns and no poly-A tail",
+    "Its mRNA still contains all of its introns",
+    "Its mRNA has a poly-A tail but no introns",
+    "Its mRNA has no exons and no poly-A tail"
+   ],
+   "why": "Splicing and adding the tail are separate changes. Splicing still works, so the introns are removed and the exons are kept. Only the tail is missing, so the mRNA is not fully mature.",
+   "clue": "Splicing and adding the tail are separate changes."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The card calls pre-mRNA 'a copy of the gene's coding region, including both exons and introns'. Introns do not code, and point 3 teaches that exons are the parts that code. Calling the stretch with introns the 'coding region' could confuse students. 'A copy of the gene, including both exons and introns' would be clearer."
+   ],
+   "saved": {
+    "draft": {
+     "title": "RNA processing",
+     "card": [
+      "In eukaryotes, transcription makes pre-mRNA in the nucleus. Pre-mRNA is a copy of the whole gene, so it contains both exons and introns.",
+      [
+       "Splicing",
+       "introns are cut out and the exons are joined together. Only the exons stay in the finished message."
+      ],
+      [
+       "Cap and tail",
+       "a cap is added to the start of the RNA and a poly-A tail, a string of adenine nucleotides, is added to the end. These help protect the mRNA and let the cell use it."
+      ],
+      "The result is mature mRNA. It leaves the nucleus through a nuclear pore and goes to the cytoplasm for translation."
+     ],
+     "remember": "Pre-mRNA is edited before use: introns out, cap and tail on.",
+     "a": {
+      "q": "Which change turns pre-mRNA into mature mRNA in a human cell?",
+      "opts": [
+       "Introns are removed and a cap and tail are added",
+       "Exons are removed and a cap and tail are added",
+       "Introns are joined and the promoter is added",
+       "Uracil is swapped for thymine and introns are kept"
+      ],
+      "why": "Pre-mRNA copies the whole gene, so the introns must be cut out. The cap and poly-A tail are then added. Removing exons would delete the parts that stay in the message.",
+      "clue": "Which parts of the gene stay in the finished message?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A mutation stops a cell from adding a poly-A tail to its mRNA, but splicing works normally. Which statement fits this cell?",
+      "opts": [
+       "Its mRNA has no introns but lacks a tail",
+       "Its mRNA still contains its introns",
+       "Its pre-mRNA is not made by transcription",
+       "Its mRNA has a cap but also has an extra cap"
+      ],
+      "why": "Splicing removes introns and adding the tail is a separate step. If only the tail step fails, the introns are still removed. The tail is missing, so the mRNA is not fully mature.",
+      "clue": "Splicing and adding the tail are separate steps."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Introns are removed and a cap and tail are added",
+      "also_right": []
+     },
+     "b": {
+      "best": "Its mRNA has no introns but lacks a tail",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says pre-mRNA is 'a copy of the whole gene'. The promoter is part of the gene (point 3) but is not transcribed, so this could mislead students. Better: 'a copy of the gene's coding region, including both exons and introns'."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "Why (a) says the introns are cut out and the cap and tail are 'then' added, which implies capping happens after splicing. In fact the 5' cap is added during transcription, usually before splicing is complete. The card gives no order, so the why should not suggest one."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. The card wrongly calls pre-mRNA a copy of the 'whole gene' (the promoter is not transcribed), and Why (a) wrongly implies the cap is added after splicing."
+    },
+    "flags": [
+     "Card, fact: The card says pre-mRNA is 'a copy of the whole gene'. The promoter is part of the gene (point 3) but is not transcribed, so this could mislead students. Better: 'a copy of the gene's coding region, including both exons and introns'.",
+     "Question a, fact: Why (a) says the introns are cut out and the cap and tail are 'then' added, which implies capping happens after splicing. In fact the 5' cap is added during transcription, usually before splicing is complete. The card gives no order, so the why should not suggest one."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "RNA processing",
+     "card": [
+      "In eukaryotes, transcription makes pre-mRNA in the nucleus. Pre-mRNA is a copy of the gene's coding region, including both exons and introns.",
+      [
+       "Splicing",
+       "introns are cut out and the exons are joined together. Only the exons stay in the finished message."
+      ],
+      [
+       "Cap and tail",
+       "a cap is added to the start of the RNA and a poly-A tail, a string of adenine nucleotides, is added to the end. These help protect the mRNA and let the cell use it."
+      ],
+      "The result is mature mRNA. It leaves the nucleus through a nuclear pore and goes to the cytoplasm for translation."
+     ],
+     "remember": "Pre-mRNA is edited before use: introns out, cap and tail on.",
+     "a": {
+      "q": "Which change turns pre-mRNA into mature mRNA in a human cell?",
+      "opts": [
+       "Introns are removed and a cap and tail are added",
+       "Exons are removed and a cap and tail are added",
+       "Introns are joined and the promoter is added",
+       "Uracil is swapped for thymine and introns are kept"
+      ],
+      "why": "Pre-mRNA contains introns, and splicing cuts them out so only the exons remain. A cap and a poly-A tail are also added. Removing exons would delete the parts that stay in the finished message.",
+      "clue": "Which parts of the gene stay in the finished message?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A mutation stops a cell from adding a poly-A tail to its mRNA, but splicing works normally. Which statement fits this cell?",
+      "opts": [
+       "Its mRNA has no introns and no poly-A tail",
+       "Its mRNA still contains all of its introns",
+       "Its mRNA has a poly-A tail but no introns",
+       "Its mRNA has no exons and no poly-A tail"
+      ],
+      "why": "Splicing and adding the tail are separate changes. Splicing still works, so the introns are removed and the exons are kept. Only the tail is missing, so the mRNA is not fully mature.",
+      "clue": "Splicing and adding the tail are separate changes."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Introns are removed and a cap and tail are added",
+       "also_right": []
+      },
+      "b": {
+       "best": "Its mRNA has no introns and no poly-A tail",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The card calls pre-mRNA 'a copy of the gene's coding region, including both exons and introns'. Introns do not code, and point 3 teaches that exons are the parts that code. Calling the stretch with introns the 'coding region' could confuse students. 'A copy of the gene, including both exons and introns' would be clearer."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are sound, each has one clear right answer, and the explanations match the card. The only issue is a minor wording problem: the card calls the intron-containing stretch the gene's 'coding region', which clashes with introns being non-coding."
+     },
+     "flags": [
+      "Card, wording: The card calls pre-mRNA 'a copy of the gene's coding region, including both exons and introns'. Introns do not code, and point 3 teaches that exons are the parts that code. Calling the stretch with introns the 'coding region' could confuse students. 'A copy of the gene, including both exons and introns' would be clearer."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "RNA processing",
+  "card": [
+   "In eukaryotes, transcription makes pre-mRNA in the nucleus. Pre-mRNA is a copy of the gene, including both its exons and its introns.",
+   [
+    "Splicing",
+    "introns are cut out and the exons are joined together. Only the exons stay in the finished message."
+   ],
+   [
+    "Cap and tail",
+    "a cap is added to the start of the RNA and a poly-A tail, a string of adenine nucleotides, is added to the end. These help protect the mRNA and let the cell use it."
+   ],
+   "The result is mature mRNA. It leaves the nucleus through a nuclear pore and goes to the cytoplasm for translation."
+  ],
+  "remember": "Pre-mRNA is edited before use: introns out, cap and tail on.",
+  "a": {
+   "q": "Which change turns pre-mRNA into mature mRNA in a human cell?",
+   "opts": [
+    "Introns are removed and a cap and tail are added",
+    "Exons are removed and a cap and tail are added",
+    "Introns are joined and the promoter is added",
+    "Uracil is swapped for thymine and introns are kept"
+   ],
+   "why": "Pre-mRNA contains introns, and splicing cuts them out so only the exons remain. A cap and a poly-A tail are also added. Removing exons would delete the parts that stay in the finished message.",
+   "clue": "Which parts of the gene stay in the finished message?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A mutation stops a cell from adding a poly-A tail to its mRNA, but splicing works normally. Which statement fits this cell?",
+   "opts": [
+    "Its mRNA has no introns and no poly-A tail",
+    "Its mRNA still contains all of its introns",
+    "Its mRNA has a poly-A tail but no introns",
+    "Its mRNA has no exons and no poly-A tail"
+   ],
+   "why": "Splicing and adding the tail are separate changes. Splicing still works, so the introns are removed and the exons are kept. Only the tail is missing, so the mRNA is not fully mature.",
+   "clue": "Splicing and adding the tail are separate changes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Introns are removed and a cap and tail are added",
+   "also_right": []
+  },
+  "b": {
+   "best": "Its mRNA has no introns and no poly-A tail",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card calls pre-mRNA 'a copy of the gene'. In this chapter a gene includes its promoter, which is not transcribed. The card would be more accurate as 'a copy of the gene's exons and introns' or 'of the transcribed part of the gene'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and each has one clear right answer. One small fix: the card calls pre-mRNA a copy of 'the gene', but the gene's promoter is not copied into it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card calls pre-mRNA 'a copy of the gene'. In this chapter a gene includes its promoter, which is not transcribed. The card would be more accurate as 'a copy of the gene's exons and introns' or 'of the transcribed part of the gene'."
+ ]
+}

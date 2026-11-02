@@ -1,0 +1,246 @@
+{
+ "id": "hhd-human-development-index",
+ "title": "The Human Development Index",
+ "brief": "2a7559568e9c",
+ "shortlist": [
+  [
+   "geo-patterns-development",
+   0.294
+  ],
+  [
+   "e-living",
+   0.219
+  ],
+  [
+   "hms-global-health-inequities",
+   0.212
+  ],
+  [
+   "bus-development",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: done",
+  "2026-11-01T15:05:27Z check: flagged",
+  "2026-11-01T15:14:46Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "write": 0.00548,
+  "check": 0.01433,
+  "fix": 0.02394,
+  "recheck": 0.01222
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, geo-patterns-development, covers HDI but is broader, centred on development patterns and within-country differences, and its questions test GDP and regional gaps rather than what the HDI combines, so no bank point teaches this idea exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Human Development Index",
+  "card": [
+   "The Human Development Index (HDI) is a single number that measures a country's level of human development. It is used to compare countries.",
+   [
+    "Health",
+    "measured by life expectancy at birth, the average number of years a newborn would live."
+   ],
+   [
+    "Education",
+    "measured by years of schooling, which shows how well people can learn and take part in society."
+   ],
+   [
+    "Income",
+    "measured by income per person, which shows the standard of living people can afford."
+   ]
+  ],
+  "remember": "The HDI joins health, education and income into one score.",
+  "a": {
+   "q": "Which set of measures is combined to produce a country's HDI?",
+   "opts": [
+    "Life expectancy, education and income per person",
+    "Population size, land area and total exports",
+    "Life expectancy, rainfall and number of hospitals",
+    "Education, crime rates and total government debt"
+   ],
+   "why": "The HDI uses one measure each for health, education and income per person. The other sets include measures that are not part of the HDI.",
+   "clue": "Think of health, learning and living standards."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X and Country Y have the same income per person. People in Country X live longer and spend more years in school. What is the likely result for their HDIs?",
+   "opts": [
+    "Country X has a higher HDI than Country Y",
+    "Country X has a lower HDI than Country Y",
+    "The two countries have the same HDI",
+    "The HDI cannot be compared without population data"
+   ],
+   "why": "The HDI combines all three measures. With equal income, Country X's longer life expectancy and more schooling lift its score. Equal income does not mean equal HDI, which is the tempting mistake.",
+   "clue": "Count how many of the three measures differ."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Life expectancy, education and income per person",
+   "also_right": []
+  },
+  "b": {
+   "best": "Country X has a higher HDI than Country Y",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Education in the HDI uses two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school. 'Years of schooling' alone is incomplete, and Year 12 VCE students may be expected to know both indicators."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and the intended answers are correct. The only issue is that the card reduces the HDI education measure to 'years of schooling' instead of naming mean and expected years of schooling."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Education in the HDI uses two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school. 'Years of schooling' alone is incomplete, and Year 12 VCE students may be expected to know both indicators."
+ ],
+ "proposal": {
+  "title": "The Human Development Index",
+  "card": [
+   "The Human Development Index (HDI) is a single score from 0 to 1 that measures a country's level of human development. A higher score means higher development, so the HDI is used to compare countries.",
+   [
+    "Health",
+    "measured by life expectancy at birth, the average number of years a newborn would be expected to live."
+   ],
+   [
+    "Education",
+    "measured by two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school."
+   ],
+   [
+    "Income",
+    "measured by gross national income (GNI) per person, which shows the standard of living people can afford."
+   ]
+  ],
+  "remember": "The HDI joins health, education and income into one score.",
+  "a": {
+   "q": "Which set of measures is combined to produce a country's HDI?",
+   "opts": [
+    "Life expectancy, education and income per person",
+    "Population size, land area and total exports",
+    "Life expectancy, rainfall and number of hospitals",
+    "Education, crime rates and total government debt"
+   ],
+   "why": "The HDI combines health (life expectancy), education (years of schooling) and income per person. The other sets include measures such as exports, rainfall or crime, which are not part of the HDI.",
+   "clue": "Think of health, learning and living standards."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X and Country Y have the same income per person. People in Country X live longer and spend more years in school. What is the likely result for their HDIs?",
+   "opts": [
+    "Country X has a higher HDI than Country Y",
+    "Country X has a lower HDI than Country Y",
+    "The two countries have the same HDI",
+    "The HDI cannot be compared without population data"
+   ],
+   "why": "The HDI combines health, education and income. With equal income, Country X's longer life expectancy and more schooling lift its score. Equal income does not mean equal HDI, which is the tempting mistake.",
+   "clue": "Count how many of the three areas differ."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Life expectancy, education and income per person",
+    "also_right": []
+   },
+   "b": {
+    "best": "Country X has a higher HDI than Country Y",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card gives the HDI's three dimensions and their indicators correctly: life expectancy at birth, mean and expected years of schooling, and GNI per person. Both questions have one clearly right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Education in the HDI uses two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school. 'Years of schooling' alone is incomplete, and Year 12 VCE students may be expected to know both indicators."
+   }
+  ],
+  "flags": [
+   "Card, fact: Education in the HDI uses two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school. 'Years of schooling' alone is incomplete, and Year 12 VCE students may be expected to know both indicators."
+  ]
+ },
+ "final": {
+  "title": "The Human Development Index",
+  "card": [
+   "The Human Development Index (HDI) is a single score from 0 to 1 that measures a country's level of human development. A higher score means higher development, so the HDI is used to compare countries.",
+   [
+    "Health",
+    "measured by life expectancy at birth, the average number of years a newborn would be expected to live."
+   ],
+   [
+    "Education",
+    "measured by two indicators: mean years of schooling for adults aged 25 and over, and expected years of schooling for children starting school."
+   ],
+   [
+    "Income",
+    "measured by gross national income (GNI) per person, which shows the standard of living people can afford."
+   ]
+  ],
+  "remember": "The HDI joins health, education and income into one score.",
+  "a": {
+   "q": "Which set of measures is combined to produce a country's HDI?",
+   "opts": [
+    "Life expectancy, education and income per person",
+    "Population size, land area and total exports",
+    "Life expectancy, rainfall and number of hospitals",
+    "Education, crime rates and total government debt"
+   ],
+   "why": "The HDI combines health (life expectancy), education (years of schooling) and income per person. The other sets include measures such as exports, rainfall or crime, which are not part of the HDI.",
+   "clue": "Think of health, learning and living standards."
+  },
+  "b": {
+   "d": 3,
+   "q": "Country X and Country Y have the same income per person. People in Country X live longer and spend more years in school. What is the likely result for their HDIs?",
+   "opts": [
+    "Country X has a higher HDI than Country Y",
+    "Country X has a lower HDI than Country Y",
+    "The two countries have the same HDI",
+    "The HDI cannot be compared without population data"
+   ],
+   "why": "The HDI combines health, education and income. With equal income, Country X's longer life expectancy and more schooling lift its score. Equal income does not mean equal HDI, which is the tempting mistake.",
+   "clue": "Count how many of the three areas differ."
+  }
+ },
+ "cleared_by": "recheck"
+}

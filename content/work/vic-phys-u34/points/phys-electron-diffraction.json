@@ -1,0 +1,332 @@
+{
+ "id": "phys-electron-diffraction",
+ "title": "Electron diffraction",
+ "brief": "615384e0370d",
+ "shortlist": [
+  [
+   "phys-matter-waves",
+   0.545
+  ],
+  [
+   "phys-diffraction-gratings",
+   0.247
+  ],
+  [
+   "phys-photoelectric-effect",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 may adapt phys-matter-waves, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:49Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-02T04:50:16Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.0086,
+  "write": 0.01176,
+  "check": 0.0296,
+  "fix": 0.03919,
+  "recheck": 0.01495
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-matter-waves",
+  "changes": [
+   "Express the de Broglie relation as p = h/λ, the form the VCE Study Design uses, alongside or in place of λ = h/mv.",
+   "Remove or shorten the Schrödinger wave-model point, which is beyond the Victorian Units 3 and 4 content."
+  ],
+  "sure": "medium",
+  "reason": "The bank point Matter waves teaches the same idea at the same Year 12 depth, but it uses the NSW formulation and includes Schrödinger content that the Victorian study design does not cover.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Matter waves, is broader: it covers de Broglie's wavelength formula and Schrödinger's atom model, which is not part of VCE, and mentions electron diffraction only briefly, while this point is about electron diffraction itself.",
+  "model": "claude-opus-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The right option is the longest and the only one with a precise detail ('near the atom spacing'). It repeats the card's phrase 'close to the atom spacing', so a student could pick it by matching words without understanding.",
+ "rejected": {
+  "title": "Electron diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+   "A crystal has atoms in regular rows. The rows act like a grating that can diffract electrons whose wavelength is close to the atom spacing.",
+   "The amount of spreading depends on the wavelength, not on how many electrons arrive. If the wavelength is much smaller than the spacing, the spread is too small to see.",
+   "When electrons pass through a thin crystal, they land on a screen in rings or spots, not one blob. Only waves make this pattern, which confirmed de Broglie's idea that electrons have a wavelength."
+  ],
+  "remember": "A diffraction pattern from electrons shows they behave as waves.",
+  "a": {
+   "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+   "opts": [
+    "Electrons behave as waves",
+    "Electrons behave as tiny particles",
+    "Electrons turn into photons in the crystal",
+    "The crystal's atoms are not in regular rows"
+   ],
+   "why": "Rings come from waves spreading and overlapping, so the electrons behave as waves. Particles alone would not make rings, and it is the electrons, not light, that land in the pattern. The regular rows of atoms are what make the pattern possible.",
+   "clue": "Which kind of model makes bright and dark patterns?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. She expected rings. Which change would most likely bring the rings back?",
+   "opts": [
+    "Using electrons with a wavelength near the atom spacing",
+    "Using electrons with a much shorter wavelength",
+    "Making the beam brighter with more electrons",
+    "Firing the same electrons at a slower rate"
+   ],
+   "why": "The crystal can diffract electrons clearly when their wavelength is close to the spacing of its atoms. A much shorter wavelength spreads even less, so the rings would stay too small to see. Changing how many electrons arrive, or how often, does not change how much they spread.",
+   "clue": "What does the amount of spreading depend on?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The right option is the longest and the only one with a precise detail ('near the atom spacing'). It repeats the card's phrase 'close to the atom spacing', so a student could pick it by matching words without understanding."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Electron diffraction",
+     "card": [
+      "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+      "A crystal has atoms in regular rows, with spacings close to the size of an electron's wavelength. The rows act like a grating that can diffract the electrons.",
+      "When a beam of electrons passes through a thin crystal, the electrons land on a screen in rings or spots, not as one blob. Only waves make this kind of pattern.",
+      "This confirmed de Broglie's idea that electrons have a wavelength. The pattern's spacing gives the wavelength, and it matches λ = h/p."
+     ],
+     "remember": "A diffraction pattern from electrons shows they behave as waves.",
+     "a": {
+      "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+      "opts": [
+       "Electrons can behave as waves",
+       "Electrons are heavier than atoms",
+       "Electrons carry no electric charge",
+       "Electrons travel faster than light"
+      ],
+      "why": "Rings come from waves overlapping after passing the crystal, so the electrons behave as waves. Mass, charge and speed do not make a diffraction pattern, so they cannot explain the rings.",
+      "clue": "Which kind of model makes bright and dark patterns?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. She expected rings. Which change would most likely bring the rings back?",
+      "opts": [
+       "Using electrons with a wavelength near the atom spacing",
+       "Using electrons with a much shorter wavelength",
+       "Making the beam brighter with more electrons",
+       "Using a screen that is much larger"
+      ],
+      "why": "The crystal diffracts electrons well only when their wavelength is close to the spacing of its atoms. A much shorter wavelength would diffract even less. More electrons or a bigger screen does not change how the waves spread.",
+      "clue": "Diffraction needs the wavelength to match the size of the gaps."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Electrons can behave as waves",
+      "also_right": []
+     },
+     "b": {
+      "best": "Using electrons with a wavelength near the atom spacing",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Diffraction needs the wavelength to match the size of the gaps' all but states the right option, so a student can answer without understanding the scenario."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The why says the crystal diffracts electrons well 'only' when the wavelength is close to the atom spacing, while the card says the rows 'can diffract' electrons with spacings close to their wavelength."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is the only one with a qualifier ('can behave'), and the distractors are obviously false (faster than light, no charge, heavier than atoms), so the answer is easy to spot without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The physics is correct. Question b's clue nearly gives the answer away and its why uses 'only' where the card says 'can'. Question a's right option stands out with the only qualifier and very weak distractors."
+    },
+    "flags": [
+     "Question b, other: The clue 'Diffraction needs the wavelength to match the size of the gaps' all but states the right option, so a student can answer without understanding the scenario.",
+     "Question b, wording: The why says the crystal diffracts electrons well 'only' when the wavelength is close to the atom spacing, while the card says the rows 'can diffract' electrons with spacings close to their wavelength.",
+     "Question a, wording: The right option is the only one with a qualifier ('can behave'), and the distractors are obviously false (faster than light, no charge, heavier than atoms), so the answer is easy to spot without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Electron diffraction",
+     "card": [
+      "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+      "A crystal has atoms in regular rows. The rows act like a grating that can diffract electrons whose wavelength is close to the atom spacing.",
+      "The amount of spreading depends on the wavelength, not on how many electrons arrive. If the wavelength is much smaller than the spacing, the spread is too small to see.",
+      "When electrons pass through a thin crystal, they land on a screen in rings or spots, not one blob. Only waves make this pattern, which confirmed de Broglie's idea that electrons have a wavelength."
+     ],
+     "remember": "A diffraction pattern from electrons shows they behave as waves.",
+     "a": {
+      "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+      "opts": [
+       "Electrons behave as waves",
+       "Electrons behave as tiny particles",
+       "Electrons turn into photons in the crystal",
+       "The crystal's atoms are not in regular rows"
+      ],
+      "why": "Rings come from waves spreading and overlapping, so the electrons behave as waves. Particles alone would not make rings, and it is the electrons, not light, that land in the pattern. The regular rows of atoms are what make the pattern possible.",
+      "clue": "Which kind of model makes bright and dark patterns?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. She expected rings. Which change would most likely bring the rings back?",
+      "opts": [
+       "Using electrons with a wavelength near the atom spacing",
+       "Using electrons with a much shorter wavelength",
+       "Making the beam brighter with more electrons",
+       "Firing the same electrons at a slower rate"
+      ],
+      "why": "The crystal can diffract electrons clearly when their wavelength is close to the spacing of its atoms. A much shorter wavelength spreads even less, so the rings would stay too small to see. Changing how many electrons arrive, or how often, does not change how much they spread.",
+      "clue": "What does the amount of spreading depend on?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Electrons behave as waves",
+       "also_right": []
+      },
+      "b": {
+       "best": "Using electrons with a wavelength near the atom spacing",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The right option is the longest and the only one with a precise detail ('near the atom spacing'). It repeats the card's phrase 'close to the atom spacing', so a student could pick it by matching words without understanding."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The physics is correct and both questions have one clear answer. In question b, the right option stands out as the longest and echoes the card's wording, so it could be picked without understanding."
+     },
+     "flags": [
+      "Question b, wording: The right option is the longest and the only one with a precise detail ('near the atom spacing'). It repeats the card's phrase 'close to the atom spacing', so a student could pick it by matching words without understanding."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Electron diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+   "A crystal has atoms in regular rows. The rows act like a grating that can diffract electrons whose wavelength is close to the atom spacing.",
+   "The amount of spreading depends on the wavelength, not on how many electrons arrive. If the wavelength is much smaller than the spacing, the spread is too small to see.",
+   "When electrons pass through a thin crystal, they land on a screen in rings or spots, not one blob. Only waves make this pattern, which confirmed de Broglie's idea that electrons have a wavelength."
+  ],
+  "remember": "A diffraction pattern from electrons shows they behave as waves.",
+  "a": {
+   "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+   "opts": [
+    "Electrons behave as waves",
+    "Electrons behave as tiny particles",
+    "Electrons turn into photons in the crystal",
+    "The crystal's atoms are not in regular rows"
+   ],
+   "why": "Rings come from waves spreading and overlapping, so the electrons behave as waves. Particles alone would not make rings, and it is the electrons, not light, that land in the pattern. The regular rows of atoms are what make the pattern possible.",
+   "clue": "Which kind of model makes bright and dark patterns?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. Which change would most likely bring the rings back?",
+   "opts": [
+    "Slowing the electrons so each has a longer wavelength",
+    "Speeding the electrons up so each has a shorter wavelength",
+    "Sending more electrons at the crystal each second",
+    "Sending fewer electrons at the crystal each second"
+   ],
+   "why": "The spot means the spread is too small to see, so the wavelength is much smaller than the atom spacing. Slower electrons have a longer wavelength, which spreads more and can bring the rings back. A shorter wavelength spreads even less, and the number of electrons does not change the spread.",
+   "clue": "What does the amount of spreading depend on, and which way must it change?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Electrons behave as waves",
+   "also_right": []
+  },
+  "b": {
+   "best": "Slowing the electrons so each has a longer wavelength",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Electron diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+   "A crystal has atoms in regular rows. The rows act like a grating that can diffract electrons whose wavelength is close to the atom spacing.",
+   "The amount of spreading depends on the wavelength, not on how many electrons arrive. If the wavelength is much smaller than the spacing, the spread is too small to see.",
+   "When electrons pass through a thin crystal, they land on a screen in rings or spots, not one blob. Only waves make this pattern, which confirmed de Broglie's idea that electrons have a wavelength."
+  ],
+  "remember": "A diffraction pattern from electrons shows they behave as waves.",
+  "a": {
+   "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+   "opts": [
+    "Electrons behave as waves",
+    "Electrons behave as tiny particles",
+    "Electrons turn into photons in the crystal",
+    "The crystal's atoms are not in regular rows"
+   ],
+   "why": "Rings come from waves spreading and overlapping, so the electrons behave as waves. Particles alone would not make rings, and it is the electrons, not light, that land in the pattern. The regular rows of atoms are what make the pattern possible.",
+   "clue": "Which kind of model makes bright and dark patterns?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. Which change would most likely bring the rings back?",
+   "opts": [
+    "Slowing the electrons so each has a longer wavelength",
+    "Speeding the electrons up so each has a shorter wavelength",
+    "Sending more electrons at the crystal each second",
+    "Sending fewer electrons at the crystal each second"
+   ],
+   "why": "The spot means the spread is too small to see, so the wavelength is much smaller than the atom spacing. Slower electrons have a longer wavelength, which spreads more and can bring the rings back. A shorter wavelength spreads even less, and the number of electrons does not change the spread.",
+   "clue": "What does the amount of spreading depend on, and which way must it change?"
+  }
+ }
+}

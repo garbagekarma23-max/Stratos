@@ -8,7 +8,7 @@
    0.224
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -16,7 +16,8 @@
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:37Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -170,6 +171,41 @@
   ],
   "flags": [
    "Question b, other: The why names wrong options by position ('the second option swaps but does not negate, and the third negates but does not swap'), but options are shown in random order. Even in the order given the labels do not match: the converse is listed first and the inverse second. Students reading the why would be pointed to the wrong options. Describe them by content instead, e.g. 'If four equal sides, then a square' swaps but does not negate."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Conditional statements",
+  "card": [
+   "A conditional statement has the form if P then Q. P is the condition and Q is the result. It makes a promise: whenever P is true, Q is true too.",
+   "The promise is broken in only one case: P is true and Q is false. In every other case the statement is true, including when P is false.",
+   "The contrapositive of if P then Q is if not Q then not P. It is true in exactly the same cases, so it means the same as the original.",
+   "Example: if a number ends in 0, then it is divisible by 5. The contrapositive is: if a number is not divisible by 5, then it does not end in 0. Both are true."
+  ],
+  "remember": "If P then Q fails only when P is true and Q is false. The contrapositive says the same thing.",
+  "a": {
+   "q": "Ravi says: if it rains, then the match is cancelled. It rains, but the match goes ahead. Is Ravi's statement true or false?",
+   "opts": [
+    "False, because P is true and Q is false",
+    "True, because the match was not cancelled",
+    "True, because the statement only needs P to be true",
+    "False, because it is not always raining"
+   ],
+   "why": "The only way if P then Q fails is P true and Q false. Here it rained and the match was not cancelled, so the statement is false. Saying it is true because the match went ahead ignores the promise that rain leads to cancellation.",
+   "clue": "Check whether the promise was broken when P happened."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is the contrapositive of: if a shape is a square, then it has four equal sides?",
+   "opts": [
+    "If not four equal sides, then not a square",
+    "If four equal sides, then a square",
+    "If not a square, then not four equal sides",
+    "If a square, then not four equal sides"
+   ],
+   "why": "The contrapositive swaps P and Q and negates both: if not Q then not P. So not having four equal sides leads to not being a square. 'If four equal sides, then a square' swaps but does not negate, and 'If not a square, then not four equal sides' negates but does not swap, so neither means the same as the original.",
+   "clue": "Swap the two parts and put not on both."
+  }
+ },
+ "cleared_by": "owner"
 }

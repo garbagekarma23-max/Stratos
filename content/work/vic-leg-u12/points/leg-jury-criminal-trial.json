@@ -12,11 +12,13 @@
    0.266
   ]
  ],
- "stage": "match-review",
+ "stage": "adapt",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt leg-juries, but is not highly sure, so to the Opus match check",
-  "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 may adapt leg-juries, but is not highly sure, so it is for you to review"
+  "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 may adapt leg-juries, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:22:20Z match: owner says adapt leg-juries (4 changes)",
+  "2026-11-02T06:22:20Z review: adapting leg-juries on the next run"
  ],
  "sent": {
   "match": 1,
@@ -50,5 +52,15 @@
   "sure": "medium",
   "reason": "The bank point teaches the same idea of the criminal jury at a fitting depth, but its majority verdict rules and murder example follow NSW law, so they must be changed to Victorian law.",
   "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "leg-juries",
+  "changes": [
+   "Change all references to NSW to Victoria, and name the Victorian higher courts (County Court and Supreme Court) that hear indictable offences before a jury.",
+   "Update the majority verdict rule to Victorian law under the Juries Act 2000 (Vic): an 11 to 1 majority may be accepted only after at least six hours of deliberation, and not for murder, treason or certain serious drug offences.",
+   "Rewrite question b so it is not a murder trial, because murder needs a unanimous verdict in Victoria. Use an offence such as armed robbery or burglary, and state that the jury has deliberated for at least six hours.",
+   "Add a line to the card that the jury decides guilt beyond reasonable doubt, to match the brief."
+  ],
+  "by": "owner"
  }
 }

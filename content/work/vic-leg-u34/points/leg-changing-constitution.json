@@ -1,0 +1,246 @@
+{
+ "id": "leg-changing-constitution",
+ "title": "Changing the Constitution",
+ "brief": "a5940a2a91c6",
+ "shortlist": [
+  [
+   "leg-rights-australian-constitution",
+   0.261
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:27Z check: flagged",
+  "2026-11-01T15:14:46Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00682,
+  "check": 0.01786,
+  "fix": 0.02157,
+  "recheck": 0.01506
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches express and implied rights in the Constitution, not the referendum process of passing both houses and winning a double majority, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Changing the Constitution",
+  "card": [
+   "The Constitution can be changed only by a referendum, which is a vote of electors on a proposed change.",
+   [
+    "Step one",
+    "The proposed law must first pass both houses of the Commonwealth Parliament, the House of Representatives and the Senate."
+   ],
+   [
+    "Step two",
+    "It is then put to voters in a referendum. It needs a double majority to pass."
+   ],
+   [
+    "Double majority",
+    "A national majority of all voters, and a majority of voters in a majority of states, which means at least four of the six states."
+   ]
+  ],
+  "remember": "Both houses of Parliament first, then a double majority of voters: a national one and a majority of states.",
+  "a": {
+   "q": "What is a double majority in a referendum?",
+   "opts": [
+    "A national majority and a majority of voters in most states",
+    "A majority in the House and a majority in the Senate",
+    "A majority of voters in every state and territory",
+    "Two separate referendums that both receive a majority"
+   ],
+   "why": "A double majority means a majority of all voters across Australia and a majority of voters in at least four of the six states. The two houses of Parliament vote earlier, as step one, so they are not the double majority.",
+   "clue": "Think about what voters must deliver, not Parliament."
+  },
+  "b": {
+   "d": 3,
+   "q": "A proposed change wins 55% of the national vote, but only three of the six states vote yes. What is the result?",
+   "opts": [
+    "It fails, because most states did not vote yes",
+    "It passes, because a national majority voted yes",
+    "It passes, because three states is half of six",
+    "It goes back to Parliament to be voted on again"
+   ],
+   "why": "A change needs a national majority and a majority of voters in at least four of six states. Only three states voted yes, so the second part is not met and it fails despite the national majority.",
+   "clue": "Count how many states are needed out of six."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A national majority and a majority of voters in most states",
+   "also_right": []
+  },
+  "b": {
+   "best": "It fails, because most states did not vote yes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Step one says the proposed law 'must' pass both houses. Section 128 also has a deadlock path: if one house passes it twice, three months apart, and the other refuses, the Governor-General may put it to voters. The card should say 'usually' or mention this exception. The card also leaves out that each house must pass it by an absolute majority."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option's reason, 'most states did not vote yes', is loosely worded. Three of six states voted no, which is not 'most', so a careful student may reject a true answer. Clearer wording: 'It fails, because it did not win a majority in at least four states'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer. The card overstates that a change 'must' pass both houses, which ignores the s128 deadlock provision, and question b's right option is loosely worded ('most states did not vote yes' when only half voted no)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Step one says the proposed law 'must' pass both houses. Section 128 also has a deadlock path: if one house passes it twice, three months apart, and the other refuses, the Governor-General may put it to voters. The card should say 'usually' or mention this exception. The card also leaves out that each house must pass it by an absolute majority.",
+  "Question b, wording: The right option's reason, 'most states did not vote yes', is loosely worded. Three of six states voted no, which is not 'most', so a careful student may reject a true answer. Clearer wording: 'It fails, because it did not win a majority in at least four states'."
+ ],
+ "proposal": {
+  "title": "Changing the Constitution",
+  "card": [
+   "The Constitution can be changed only by a referendum, which is a vote of electors on a proposed change. Section 128 of the Constitution sets out the steps.",
+   [
+    "Step one",
+    "The proposed law usually passes both houses of the Commonwealth Parliament. Each house must pass it by an absolute majority, which is more than half of all its members."
+   ],
+   [
+    "Deadlock",
+    "If one house passes it twice, three months apart, and the other house refuses, the Governor-General may still put it to voters."
+   ],
+   [
+    "Step two",
+    "Voters then decide in a referendum. It needs a double majority: a national majority of all voters, and a majority of voters in at least four of the six states."
+   ]
+  ],
+  "remember": "Parliament first, usually both houses, then a double majority of voters: a national one and at least four of the six states.",
+  "a": {
+   "q": "What is a double majority in a referendum?",
+   "opts": [
+    "A national majority and a majority of voters in most states",
+    "A majority in the House and a majority in the Senate",
+    "A majority of voters in every state and territory",
+    "Two separate referendums that both receive a majority"
+   ],
+   "why": "A double majority means a majority of all voters across Australia and a majority of voters in at least four of the six states. The two houses of Parliament vote earlier, in step one, so their votes are not the double majority.",
+   "clue": "Think about what voters must deliver, not Parliament."
+  },
+  "b": {
+   "d": 3,
+   "q": "A proposed change wins 55% of the national vote, but only three of the six states vote yes. What is the result?",
+   "opts": [
+    "It fails, because fewer than four states voted yes",
+    "It passes, because a national majority voted yes",
+    "It passes, because three states is half of six",
+    "It goes back to Parliament to be voted on again"
+   ],
+   "why": "A change needs a national majority and a majority of voters in at least four of the six states. Only three states voted yes, so the second part is not met and it fails despite the national majority. Half of the states is not a majority.",
+   "clue": "Count how many states are needed out of six."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A national majority and a majority of voters in most states",
+    "also_right": []
+   },
+   "b": {
+    "best": "It fails, because fewer than four states voted yes",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card accurately reflects section 128, including the absolute majority, the deadlock provision and the double majority, and both questions have one clearly right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Step one says the proposed law 'must' pass both houses. Section 128 also has a deadlock path: if one house passes it twice, three months apart, and the other refuses, the Governor-General may put it to voters. The card should say 'usually' or mention this exception. The card also leaves out that each house must pass it by an absolute majority."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option's reason, 'most states did not vote yes', is loosely worded. Three of six states voted no, which is not 'most', so a careful student may reject a true answer. Clearer wording: 'It fails, because it did not win a majority in at least four states'."
+   }
+  ],
+  "flags": [
+   "Card, fact: Step one says the proposed law 'must' pass both houses. Section 128 also has a deadlock path: if one house passes it twice, three months apart, and the other refuses, the Governor-General may put it to voters. The card should say 'usually' or mention this exception. The card also leaves out that each house must pass it by an absolute majority.",
+   "Question b, wording: The right option's reason, 'most states did not vote yes', is loosely worded. Three of six states voted no, which is not 'most', so a careful student may reject a true answer. Clearer wording: 'It fails, because it did not win a majority in at least four states'."
+  ]
+ },
+ "final": {
+  "title": "Changing the Constitution",
+  "card": [
+   "The Constitution can be changed only by a referendum, which is a vote of electors on a proposed change. Section 128 of the Constitution sets out the steps.",
+   [
+    "Step one",
+    "The proposed law usually passes both houses of the Commonwealth Parliament. Each house must pass it by an absolute majority, which is more than half of all its members."
+   ],
+   [
+    "Deadlock",
+    "If one house passes it twice, three months apart, and the other house refuses, the Governor-General may still put it to voters."
+   ],
+   [
+    "Step two",
+    "Voters then decide in a referendum. It needs a double majority: a national majority of all voters, and a majority of voters in at least four of the six states."
+   ]
+  ],
+  "remember": "Parliament first, usually both houses, then a double majority of voters: a national one and at least four of the six states.",
+  "a": {
+   "q": "What is a double majority in a referendum?",
+   "opts": [
+    "A national majority and a majority of voters in most states",
+    "A majority in the House and a majority in the Senate",
+    "A majority of voters in every state and territory",
+    "Two separate referendums that both receive a majority"
+   ],
+   "why": "A double majority means a majority of all voters across Australia and a majority of voters in at least four of the six states. The two houses of Parliament vote earlier, in step one, so their votes are not the double majority.",
+   "clue": "Think about what voters must deliver, not Parliament."
+  },
+  "b": {
+   "d": 3,
+   "q": "A proposed change wins 55% of the national vote, but only three of the six states vote yes. What is the result?",
+   "opts": [
+    "It fails, because fewer than four states voted yes",
+    "It passes, because a national majority voted yes",
+    "It passes, because three states is half of six",
+    "It goes back to Parliament to be voted on again"
+   ],
+   "why": "A change needs a national majority and a majority of voters in at least four of the six states. Only three states voted yes, so the second part is not met and it fails despite the national majority. Half of the states is not a majority.",
+   "clue": "Count how many states are needed out of six."
+  }
+ },
+ "cleared_by": "recheck"
+}

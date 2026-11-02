@@ -1,0 +1,184 @@
+{
+ "id": "mat-comparing-groups-with-statistics",
+ "title": "Comparing groups with statistics",
+ "brief": "f3a3d3662b8f",
+ "shortlist": [
+  [
+   "mat-empirical-rule",
+   0.248
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00738,
+  "check": 0.01196,
+  "fix": 0.02695
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the empirical rule for normal distributions, while the new point is about comparing medians, means, percentiles and standard deviations between two groups, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Comparing groups with statistics",
+  "card": [
+   "To compare two groups, compare their centre and their spread. Centre is the median or mean. Spread is the range, the interquartile range (IQR) or the standard deviation.",
+   "A higher median or mean means the typical value is higher. A larger standard deviation or IQR means the values are more spread out and less consistent.",
+   "A percentile shows the share of values at or below a point. If a score is at the 80th percentile, about 80% of the group scored at or below it.",
+   "Example: Group A has a median of $30 and an IQR of $4. Group B has a median of $34 and an IQR of $12. B is typically higher, but A is more consistent."
+  ],
+  "remember": "Compare the centre first, then the spread, and state both in the context.",
+  "a": {
+   "q": "Two bakeries record daily sales. Bakery P has a median of $900 and an IQR of $100. Bakery Q has a median of $900 and an IQR of $400. Which is true?",
+   "opts": [
+    "Sales at P are more consistent than at Q",
+    "Sales at Q are more consistent than at P",
+    "Sales at P are typically higher than at Q",
+    "Sales at Q are typically higher than at P"
+   ],
+   "why": "The medians are equal, so the typical sales are the same. P has the smaller IQR, so its sales are more tightly grouped and more consistent. A larger spread does not mean a higher centre.",
+   "clue": "The medians match, so look at the spread."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages per hour: Job X has a mean of $32 and a standard deviation of $2. Job Y has a mean of $35 and a standard deviation of $9. Which statement is best supported?",
+   "opts": [
+    "Y pays more on average, but X wages vary less",
+    "X pays more on average, and X wages vary less",
+    "Y pays more on average, and Y wages vary less",
+    "X pays more on average, but X wages vary more"
+   ],
+   "why": "Y has the higher mean, $35 against $32, so it pays more on average. X has the smaller standard deviation, so its wages are closer together. The tempting mistake is to think a larger standard deviation means a higher wage, but it only shows spread.",
+   "clue": "Use the mean for the centre and the standard deviation for the spread."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Sales at P are more consistent than at Q",
+   "also_right": []
+  },
+  "b": {
+   "best": "Y pays more on average, but X wages vary less",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The third bullet defines what a percentile is, which is the job of point 2 (Cumulative frequency and percentiles). This point should only use percentiles to compare groups, and the card never does that."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, and each has one clear right answer. The only issue is that the card defines percentiles, which belongs to point 2, instead of using them to compare groups."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The third bullet defines what a percentile is, which is the job of point 2 (Cumulative frequency and percentiles). This point should only use percentiles to compare groups, and the card never does that."
+ ],
+ "proposal": {
+  "title": "Comparing groups with statistics",
+  "card": [
+   "To compare two groups, compare their centre and their spread. Centre is the median or mean. Spread is the range, the interquartile range (IQR) or the standard deviation.",
+   "A higher median or mean means the typical value is higher. A larger standard deviation or IQR means the values are more spread out and less consistent.",
+   "You can also compare the same percentile in each group. If the 90th percentile wage is $45 in Job A and $38 in Job B, then A pays more at the upper end.",
+   "Example: Group A has a median of $30 and an IQR of $4. Group B has a median of $34 and an IQR of $12. B is typically higher, but A is more consistent."
+  ],
+  "remember": "Compare the centre first, then the spread, and state both in the context.",
+  "a": {
+   "q": "Two bakeries record daily sales. Bakery P has a median of $900 and an IQR of $100. Bakery Q has a median of $900 and an IQR of $400. Which is true?",
+   "opts": [
+    "Sales at P are more consistent than at Q",
+    "Sales at Q are more consistent than at P",
+    "Sales at P are typically higher than at Q",
+    "Sales at Q are typically higher than at P"
+   ],
+   "why": "The medians are equal, so the typical sales are the same. P has the smaller IQR, so its sales are more tightly grouped and more consistent. A larger spread does not mean a higher centre.",
+   "clue": "The medians match, so look at the spread."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages per hour: Job X has a mean of $32 and a standard deviation of $2. Job Y has a mean of $35 and a standard deviation of $9. Which statement is best supported?",
+   "opts": [
+    "Y pays more on average, but X wages vary less",
+    "X pays more on average, and X wages vary less",
+    "Y pays more on average, and Y wages vary less",
+    "X pays more on average, but X wages vary more"
+   ],
+   "why": "Y has the higher mean, $35 against $32, so it pays more on average. X has the smaller standard deviation, so its wages are closer together. The tempting mistake is to think a larger standard deviation means a higher wage, but it only shows spread.",
+   "clue": "Use the mean for the centre and the standard deviation for the spread."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The third bullet defines what a percentile is, which is the job of point 2 (Cumulative frequency and percentiles). This point should only use percentiles to compare groups, and the card never does that."
+   }
+  ],
+  "flags": [
+   "Card, other: The third bullet defines what a percentile is, which is the job of point 2 (Cumulative frequency and percentiles). This point should only use percentiles to compare groups, and the card never does that."
+  ]
+ },
+ "final": {
+  "title": "Comparing groups with statistics",
+  "card": [
+   "To compare two groups, compare their centre and their spread. Centre is the median or mean. Spread is the range, the interquartile range (IQR) or the standard deviation.",
+   "A higher median or mean means the typical value is higher. A larger standard deviation or IQR means the values are more spread out and less consistent.",
+   "You can also compare the same percentile in each group. If the 90th percentile wage is $45 in Job A and $38 in Job B, then A pays more at the upper end.",
+   "Example: Group A has a median of $30 and an IQR of $4. Group B has a median of $34 and an IQR of $12. B is typically higher, but A is more consistent."
+  ],
+  "remember": "Compare the centre first, then the spread, and state both in the context.",
+  "a": {
+   "q": "Two bakeries record daily sales. Bakery P has a median of $900 and an IQR of $100. Bakery Q has a median of $900 and an IQR of $400. Which is true?",
+   "opts": [
+    "Sales at P are more consistent than at Q",
+    "Sales at Q are more consistent than at P",
+    "Sales at P are typically higher than at Q",
+    "Sales at Q are typically higher than at P"
+   ],
+   "why": "The medians are equal, so the typical sales are the same. P has the smaller IQR, so its sales are more tightly grouped and more consistent. A larger spread does not mean a higher centre.",
+   "clue": "The medians match, so look at the spread."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wages per hour: Job X has a mean of $32 and a standard deviation of $2. Job Y has a mean of $35 and a standard deviation of $9. Which statement is best supported?",
+   "opts": [
+    "Y pays more on average, but X wages vary less",
+    "X pays more on average, and X wages vary less",
+    "Y pays more on average, and Y wages vary less",
+    "X pays more on average, but X wages vary more"
+   ],
+   "why": "Y has the higher mean, $35 against $32, so it pays more on average. X has the smaller standard deviation, so its wages are closer together. The tempting mistake is to think a larger standard deviation means a higher wage, but it only shows spread.",
+   "clue": "Use the mean for the centre and the standard deviation for the spread."
+  }
+ },
+ "cleared_by": "auto"
+}

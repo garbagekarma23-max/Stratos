@@ -12,7 +12,7 @@
    0.337
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -20,7 +20,8 @@
   "2026-11-01T08:24:30Z write: done",
   "2026-11-01T08:33:49Z check: flagged",
   "2026-11-01T08:42:05Z fix: suggested",
-  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:18:31Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -228,6 +229,50 @@
    "Question a, other: Question a's answer rests on the conflated definition: it treats the finest scale divisions as 'most precise'. The why repeats this ('its scale is divided most finely').",
    "Question a, wording: The right option is the only one with a precise detail ('reads to two decimal places'), so it stands out. The clue ('Which tool gives a number with the most decimal places?') also points straight to it, so a student can answer without knowing the idea.",
    "Remember, wording: 'only a calibrated meter is also accurate' uses 'only', where the card says an uncalibrated meter's readings 'can be' consistently off. It also implies that indicators are never accurate, which the card does not say."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Indicators and pH meters",
+  "card": [
+   [
+    "Natural indicator",
+    "a plant extract, such as red cabbage juice, that changes colour with pH. It gives a rough pH, because the colours blend into each other and are hard to match to exact values."
+   ],
+   [
+    "Commercial indicator",
+    "a made dye or mix of dyes, such as universal indicator, with colour changes set against a chart. It narrows pH down to about one unit, but it still relies on the eye matching a colour."
+   ],
+   [
+    "pH meter",
+    "an electronic probe that reads pH as a number, often to two decimal places. It needs calibrating with buffer solutions of known pH, or its readings can be consistently off."
+   ],
+   "Accuracy is how close a reading is to the true value. Precision is how closely repeated readings of the same sample agree, which is separate from how finely a scale reads."
+  ],
+  "remember": "Indicators rely on matching colours by eye. A meter gives a number, but calibrate it so its readings are not consistently off.",
+  "a": {
+   "q": "Why does universal indicator give a less exact pH than a calibrated pH meter?",
+   "opts": [
+    "It relies on the eye matching a colour to a chart",
+    "It must be calibrated with buffers before each use",
+    "It can only show if a solution is acidic or basic",
+    "It is a plant extract whose colours blend together"
+   ],
+   "why": "Universal indicator is read by matching its colour to a chart by eye, which narrows pH to about one unit. Calibrating with buffers is what a pH meter needs, not an indicator. Blending plant colours describes a natural indicator such as red cabbage juice.",
+   "clue": "Think about how a person reads the result from an indicator."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's pH meter reads 7.52 each time in a buffer of pH 7.00. What does this show about the meter?",
+   "opts": [
+    "It is precise but not accurate, so it needs calibrating",
+    "It is accurate but not precise, so it needs calibrating",
+    "It is both accurate and precise, so it can be used",
+    "It is neither accurate nor precise, so it is faulty"
+   ],
+   "why": "The repeated readings agree with each other, so the meter is precise. They are 0.52 away from the true value of 7.00, so it is not accurate. Calibrating with buffers can fix this kind of consistent error.",
+   "clue": "Compare the readings with each other, then with the buffer's true pH."
+  }
+ },
+ "cleared_by": "owner"
 }

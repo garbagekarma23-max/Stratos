@@ -1,0 +1,118 @@
+{
+ "id": "mat-proof-by-induction-unit",
+ "title": "Proof by induction in Unit 3",
+ "brief": "7228cbec4bd2",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, write",
+  "2026-11-01T14:46:40Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T14:56:05Z write: done",
+  "2026-11-01T15:05:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "alone": true,
+ "usd": {
+  "write": 0.01027,
+  "check": 0.01381
+ },
+ "draft": {
+  "title": "Proof by induction",
+  "card": [
+   "Induction proves that a statement P(n) is true for every natural number n from a starting value. It has two steps, and both are needed.",
+   [
+    "Base case",
+    "show the statement is true for the first value, usually n = 1."
+   ],
+   [
+    "Inductive step",
+    "assume P(k) is true for some k. Then use that to show P(k + 1) is true."
+   ],
+   "Example: prove 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides are 1. If it holds for k, then adding k + 1 gives k(k + 1)/2 + (k + 1) = (k + 1)(k + 2)/2, which is the formula with n = k + 1."
+  ],
+  "remember": "Induction needs a true base case and a step that takes k to k + 1.",
+  "a": {
+   "q": "A student proves the inductive step for a statement but never checks the base case. What has the student failed to do?",
+   "opts": [
+    "Show the statement is true for the first value",
+    "Show the statement is true for every value of k",
+    "Show that P(k + 1) can be assumed true",
+    "Show that the statement is true for k + 1 only"
+   ],
+   "why": "Without a base case, the step has nothing true to start from, so the chain never begins. The step assumes P(k) and proves P(k + 1), so it does not show the statement is true for every k directly.",
+   "clue": "The step passes truth along, but where does the chain start?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In proving 1 + 3 + 5 + ... + (2n − 1) = n² by induction, the statement is assumed true for n = k. What must be shown next?",
+   "opts": [
+    "k² + (2k + 1) = (k + 1)²",
+    "k² + (2k − 1) = (k + 1)²",
+    "k² + (2k + 1) = k²",
+    "(k + 1)² + (2k + 1) = k²"
+   ],
+   "why": "The next odd number after 2k − 1 is 2k + 1. Adding it to the assumed sum k² gives k² + 2k + 1 = (k + 1)², which is the formula with n = k + 1. Adding 2k − 1 again would repeat the last term instead of adding the new one.",
+   "clue": "What is the next odd number after 2k − 1?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Show the statement is true for the first value",
+   "also_right": []
+  },
+  "b": {
+   "best": "k² + (2k + 1) = (k + 1)²",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Proof by induction",
+  "card": [
+   "Induction proves that a statement P(n) is true for every natural number n from a starting value. It has two steps, and both are needed.",
+   [
+    "Base case",
+    "show the statement is true for the first value, usually n = 1."
+   ],
+   [
+    "Inductive step",
+    "assume P(k) is true for some k. Then use that to show P(k + 1) is true."
+   ],
+   "Example: prove 1 + 2 + ... + n = n(n + 1)/2. For n = 1, both sides are 1. If it holds for k, then adding k + 1 gives k(k + 1)/2 + (k + 1) = (k + 1)(k + 2)/2, which is the formula with n = k + 1."
+  ],
+  "remember": "Induction needs a true base case and a step that takes k to k + 1.",
+  "a": {
+   "q": "A student proves the inductive step for a statement but never checks the base case. What has the student failed to do?",
+   "opts": [
+    "Show the statement is true for the first value",
+    "Show the statement is true for every value of k",
+    "Show that P(k + 1) can be assumed true",
+    "Show that the statement is true for k + 1 only"
+   ],
+   "why": "Without a base case, the step has nothing true to start from, so the chain never begins. The step assumes P(k) and proves P(k + 1), so it does not show the statement is true for every k directly.",
+   "clue": "The step passes truth along, but where does the chain start?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In proving 1 + 3 + 5 + ... + (2n − 1) = n² by induction, the statement is assumed true for n = k. What must be shown next?",
+   "opts": [
+    "k² + (2k + 1) = (k + 1)²",
+    "k² + (2k − 1) = (k + 1)²",
+    "k² + (2k + 1) = k²",
+    "(k + 1)² + (2k + 1) = k²"
+   ],
+   "why": "The next odd number after 2k − 1 is 2k + 1. Adding it to the assumed sum k² gives k² + 2k + 1 = (k + 1)², which is the formula with n = k + 1. Adding 2k − 1 again would repeat the last term instead of adding the new one.",
+   "clue": "What is the next odd number after 2k − 1?"
+  }
+ },
+ "cleared_by": "checker"
+}

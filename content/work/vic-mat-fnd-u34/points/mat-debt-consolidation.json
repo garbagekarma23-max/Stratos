@@ -1,0 +1,315 @@
+{
+ "id": "mat-debt-consolidation",
+ "title": "Debt consolidation",
+ "brief": "acd496c6dce5",
+ "shortlist": [
+  [
+   "mat-total-interest-loan",
+   0.286
+  ],
+  [
+   "eco-government-debt",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card wording, b other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.01331,
+  "check": 0.03054,
+  "fix": 0.02817,
+  "recheck": 0.01655
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Total interest on a loan, covers how term length affects total interest, but it does not teach combining several debts into one loan, so the consolidation idea is missing.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The example multiplies Sam's old $200 a month by 12 months, but never says the old debts would be paid off in 12 months. Students may think a year of old payments is being compared with the whole 36-month new loan. Say the old debts would be cleared in 12 months.\n- Question b, other: The question mostly tests total paid = repayment × number of payments, and the clue spells that rule out. That rule is point 2's idea (loans and repayments). Only the comparison with the $3,000 owed is about consolidation.",
+ "rejected": {
+  "title": "Debt consolidation",
+  "card": [
+   "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
+   "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
+   "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
+   "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan, so $200 × 12 months = $2,400. One new loan at $100 a month for 36 months costs $100 × 36 = $3,600, which is $1,200 more."
+  ],
+  "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
+  "a": {
+   "q": "Which of these is an example of debt consolidation?",
+   "opts": [
+    "Taking one loan to pay off a car loan and two cards",
+    "Getting a new credit card to spend more each month",
+    "Paying only the interest on each of three debts",
+    "Taking a second loan to buy a newer, bigger car"
+   ],
+   "why": "Using one new loan to clear the car loan and both cards leaves one debt and one repayment. Paying only the interest keeps all three debts separate. A second loan for a car adds a debt instead of combining them.",
+   "clue": "Count how many debts are left after each choice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar owes $3,000 in total. He consolidates and pays $150 a month for 30 months. What is his total paid, and how does it compare with the $3,000 owed?",
+   "opts": [
+    "$4,500, which is $1,500 more",
+    "$4,500, which is $1,500 less",
+    "$450, which is $2,550 less",
+    "$3,000, which is the same"
+   ],
+   "why": "Total paid = $150 × 30 = $4,500. That is $4,500 − $3,000 = $1,500 more than owed. The lower payment is paid over a long time, so the total can rise.",
+   "clue": "Multiply the repayment by the number of payments."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The example multiplies Sam's old $200 a month by 12 months, but never says the old debts would be paid off in 12 months. Students may think a year of old payments is being compared with the whole 36-month new loan. Say the old debts would be cleared in 12 months.",
+    "Question b, other: The question mostly tests total paid = repayment × number of payments, and the clue spells that rule out. That rule is point 2's idea (loans and repayments). Only the comparison with the $3,000 owed is about consolidation."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Debt consolidation",
+     "card": [
+      "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
+      "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
+      "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
+      "Example: Sam pays $200 a month for 12 months on one debt, which is $2,400. Consolidating to $100 a month for 36 months costs $3,600 in total. The payment is lower but the total is $1,200 higher."
+     ],
+     "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
+     "a": {
+      "q": "Lena combines three debts into one new loan. What is debt consolidation?",
+      "opts": [
+       "Paying off several debts with one new loan",
+       "Spending more with a new credit card",
+       "Paying only the interest on each debt",
+       "Borrowing more to buy a bigger item"
+      ],
+      "why": "Consolidation replaces several debts with a single loan and one repayment. Paying only the interest on each debt does not combine them. Borrowing for a purchase is a different matter.",
+      "clue": "Think of several debts becoming one."
+     },
+     "b": {
+      "d": 3,
+      "q": "Omar owes $3,000 in total. He consolidates and pays $150 a month for 30 months. What is his total paid, and how does it compare with the $3,000 owed?",
+      "opts": [
+       "$4,500, which is $1,500 more",
+       "$4,500, which is $1,500 less",
+       "$450, which is $2,550 less",
+       "$3,000, which is the same"
+      ],
+      "why": "Total paid = $150 × 30 = $4,500. That is $4,500 − $3,000 = $1,500 more than owed. The lower payment is paid over a long time, so the total can rise.",
+      "clue": "Multiply the repayment by the number of payments."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Paying off several debts with one new loan",
+      "also_right": []
+     },
+     "b": {
+      "best": "$4,500, which is $1,500 more",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The example says Sam pays $200 a month 'on one debt', but the card defines consolidation as combining several debts into one loan. An example of consolidating a single debt clashes with the definition. It should describe several debts being combined."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The stem says 'Lena combines three debts into one new loan' and then asks what debt consolidation is. This gives the answer away, and the clue repeats it ('several debts becoming one'). A student can match the wording without knowing the idea."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card's example consolidates 'one debt', which contradicts the definition of combining several debts. Question a's stem and clue give the answer away. The arithmetic and the intended answers are correct."
+    },
+    "flags": [
+     "Card, fact: The example says Sam pays $200 a month 'on one debt', but the card defines consolidation as combining several debts into one loan. An example of consolidating a single debt clashes with the definition. It should describe several debts being combined.",
+     "Question a, wording: The stem says 'Lena combines three debts into one new loan' and then asks what debt consolidation is. This gives the answer away, and the clue repeats it ('several debts becoming one'). A student can match the wording without knowing the idea."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Debt consolidation",
+     "card": [
+      "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
+      "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
+      "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
+      "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan, so $200 × 12 months = $2,400. One new loan at $100 a month for 36 months costs $100 × 36 = $3,600, which is $1,200 more."
+     ],
+     "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
+     "a": {
+      "q": "Which of these is an example of debt consolidation?",
+      "opts": [
+       "Taking one loan to pay off a car loan and two cards",
+       "Getting a new credit card to spend more each month",
+       "Paying only the interest on each of three debts",
+       "Taking a second loan to buy a newer, bigger car"
+      ],
+      "why": "Using one new loan to clear the car loan and both cards leaves one debt and one repayment. Paying only the interest keeps all three debts separate. A second loan for a car adds a debt instead of combining them.",
+      "clue": "Count how many debts are left after each choice."
+     },
+     "b": {
+      "d": 3,
+      "q": "Omar owes $3,000 in total. He consolidates and pays $150 a month for 30 months. What is his total paid, and how does it compare with the $3,000 owed?",
+      "opts": [
+       "$4,500, which is $1,500 more",
+       "$4,500, which is $1,500 less",
+       "$450, which is $2,550 less",
+       "$3,000, which is the same"
+      ],
+      "why": "Total paid = $150 × 30 = $4,500. That is $4,500 − $3,000 = $1,500 more than owed. The lower payment is paid over a long time, so the total can rise.",
+      "clue": "Multiply the repayment by the number of payments."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Taking one loan to pay off a car loan and two cards",
+       "also_right": []
+      },
+      "b": {
+       "best": "$4,500, which is $1,500 more",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The example multiplies Sam's old $200 a month by 12 months, but never says the old debts would be paid off in 12 months. Students may think a year of old payments is being compared with the whole 36-month new loan. Say the old debts would be cleared in 12 months."
+       },
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The question mostly tests total paid = repayment × number of payments, and the clue spells that rule out. That rule is point 2's idea (loans and repayments). Only the comparison with the $3,000 owed is about consolidation."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both answers are correct. The card's example does not say the old debts would last 12 months, so the $2,400 vs $3,600 comparison is unclear. Question b leans on point 2's repayment × payments rule."
+     },
+     "flags": [
+      "Card, wording: The example multiplies Sam's old $200 a month by 12 months, but never says the old debts would be paid off in 12 months. Students may think a year of old payments is being compared with the whole 36-month new loan. Say the old debts would be cleared in 12 months.",
+      "Question b, other: The question mostly tests total paid = repayment × number of payments, and the clue spells that rule out. That rule is point 2's idea (loans and repayments). Only the comparison with the $3,000 owed is about consolidation."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Debt consolidation",
+  "card": [
+   "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
+   "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
+   "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
+   "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan. Both would be cleared in 12 months, so the total is $200 × 12 = $2,400. One new loan at $100 a month for 36 months costs $100 × 36 = $3,600, which is $1,200 more."
+  ],
+  "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
+  "a": {
+   "q": "Which of these is an example of debt consolidation?",
+   "opts": [
+    "Taking one loan to pay off a car loan and two cards",
+    "Getting a new credit card to spend more each month",
+    "Paying only the interest on each of three debts",
+    "Taking a second loan to buy a newer, bigger car"
+   ],
+   "why": "Using one new loan to clear the car loan and both cards leaves one debt and one repayment. Paying only the interest keeps all three debts separate. A second loan for a car adds a debt instead of combining them.",
+   "clue": "Count how many debts are left after each choice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a card and a store loan. Together they cost $300 a month and would be cleared in 10 months. She consolidates to $200 a month for 24 months. What happens?",
+   "opts": [
+    "Her repayment falls, but she pays $1,800 more in total",
+    "Her repayment falls, and she pays $1,800 less in total",
+    "Her repayment rises, and she pays $1,800 more in total",
+    "Her repayment falls, and she pays the same in total"
+   ],
+   "why": "Her old debts total $300 × 10 = $3,000. The new loan costs $200 × 24 = $4,800, which is $1,800 more. The lower repayment looks better each month, but it is spread over a longer time, so the total paid rises.",
+   "clue": "Compare the total of the old debts with the total of the new loan."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Taking one loan to pay off a car loan and two cards",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her repayment falls, but she pays $1,800 more in total",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The example sums ($2,400 and $3,600; $3,000 and $4,800) are correct, and both questions have exactly one right option."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Debt consolidation",
+  "card": [
+   "Debt consolidation means combining several debts into one new loan. The new loan pays off the old debts, and you then make one repayment.",
+   "It can cut the interest if the new loan has a lower rate than the old debts. It can also lower each repayment.",
+   "A lower repayment may mean a longer loan. A longer loan can mean more interest, so the total paid may rise.",
+   "Example: Sam pays $120 a month on a credit card and $80 a month on a personal loan. Both would be cleared in 12 months, so the total is $200 × 12 = $2,400. One new loan at $100 a month for 36 months costs $100 × 36 = $3,600, which is $1,200 more."
+  ],
+  "remember": "Consolidation can give one smaller repayment, but a longer loan may cost more in total.",
+  "a": {
+   "q": "Which of these is an example of debt consolidation?",
+   "opts": [
+    "Taking one loan to pay off a car loan and two cards",
+    "Getting a new credit card to spend more each month",
+    "Paying only the interest on each of three debts",
+    "Taking a second loan to buy a newer, bigger car"
+   ],
+   "why": "Using one new loan to clear the car loan and both cards leaves one debt and one repayment. Paying only the interest keeps all three debts separate. A second loan for a car adds a debt instead of combining them.",
+   "clue": "Count how many debts are left after each choice."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya has a card and a store loan. Together they cost $300 a month and would be cleared in 10 months. She consolidates to $200 a month for 24 months. What happens?",
+   "opts": [
+    "Her repayment falls, but she pays $1,800 more in total",
+    "Her repayment falls, and she pays $1,800 less in total",
+    "Her repayment rises, and she pays $1,800 more in total",
+    "Her repayment falls, and she pays the same in total"
+   ],
+   "why": "Her old debts total $300 × 10 = $3,000. The new loan costs $200 × 24 = $4,800, which is $1,800 more. The lower repayment looks better each month, but it is spread over a longer time, so the total paid rises.",
+   "clue": "Compare the total of the old debts with the total of the new loan."
+  }
+ }
+}

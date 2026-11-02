@@ -1,0 +1,219 @@
+{
+ "id": "mat-acceleration-different-forms",
+ "title": "Acceleration in different forms",
+ "brief": "6f0225195d82",
+ "shortlist": [
+  [
+   "mat-displacement-velocity-acceleration",
+   0.349
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:05Z write: done",
+  "2026-11-01T15:05:29Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00729,
+  "check": 0.01442,
+  "fix": 0.02822,
+  "recheck": 0.01179
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only teaches acceleration as dv/dt and integration back to velocity and displacement, and does not teach the v dv/dx or d/dx(½v²) forms, which is the new point's idea, so it is a different idea rather than a match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Acceleration in different forms",
+  "card": [
+   "Acceleration is the rate of change of velocity. When velocity is given in terms of time t, use a = dv/dt.",
+   "When velocity is given in terms of position x, use a = v dv/dx. This comes from the chain rule: dv/dt = dv/dx × dx/dt, and dx/dt = v.",
+   "The same thing can be written a = d/dx(½v²). Differentiate ½v² with respect to x and you get v dv/dx.",
+   "Example: v² = 16 − x². Then ½v² = 8 − ½x², so a = d/dx(8 − ½x²) = −x."
+  ],
+  "remember": "Use dv/dt when v depends on t. Use v dv/dx or d/dx(½v²) when v depends on x.",
+  "a": {
+   "q": "A particle has velocity v = 3x at position x. Which expression gives its acceleration in terms of x?",
+   "opts": [
+    "v dv/dx = 3x × 3 = 9x",
+    "dv/dx = 3",
+    "v dv/dt = 9x",
+    "d/dx(v²) = 18x"
+   ],
+   "why": "With v = 3x, dv/dx = 3, so a = v dv/dx = 3x × 3 = 9x. The option dv/dx = 3 is only the rate of change of velocity with position, not with time.",
+   "clue": "Velocity depends on x, so multiply dv/dx by v."
+  },
+  "b": {
+   "d": 3,
+   "q": "A particle moves so that v² = 25 − 4x². What is its acceleration at position x?",
+   "opts": [
+    "−4x",
+    "−8x",
+    "25 − 4x",
+    "−2x"
+   ],
+   "why": "½v² = 12.5 − 2x², so a = d/dx(12.5 − 2x²) = −4x. The option −8x comes from differentiating v² and forgetting the ½.",
+   "clue": "Halve v² first, then differentiate with respect to x."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "v dv/dx = 3x × 3 = 9x",
+   "also_right": []
+  },
+  "b": {
+   "best": "−4x",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one that shows working (3x × 3), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'multiply dv/dx by v' names the expression v dv/dx, which appears only in the right option, so it gives the answer away."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and the answers are correct. In question a, the right option stands out because it is the only one with working shown, and the clue directly names the right expression."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option stands out. It is the longest and the only one that shows working (3x × 3), so a student could pick it without knowing the idea.",
+  "Question a, other: The clue 'multiply dv/dx by v' names the expression v dv/dx, which appears only in the right option, so it gives the answer away."
+ ],
+ "proposal": {
+  "title": "Acceleration in different forms",
+  "card": [
+   "Acceleration is the rate of change of velocity. When velocity is given in terms of time t, use a = dv/dt.",
+   "When velocity is given in terms of position x, use a = v dv/dx. This comes from the chain rule: dv/dt = dv/dx × dx/dt, and dx/dt = v.",
+   "The same thing can be written a = d/dx(½v²). Differentiate ½v² with respect to x and you get v dv/dx.",
+   "Example: v² = 16 − x². Then ½v² = 8 − ½x², so a = d/dx(8 − ½x²) = −x."
+  ],
+  "remember": "Use dv/dt when v depends on t. Use v dv/dx or d/dx(½v²) when v depends on x.",
+  "a": {
+   "q": "A particle has velocity v = 3x at position x. Which gives its acceleration in terms of x?",
+   "opts": [
+    "v dv/dx = 9x",
+    "dv/dx = 3",
+    "d/dx(v²) = 18x",
+    "dv/dt = 0"
+   ],
+   "why": "With v = 3x, dv/dx = 3, so a = v dv/dx = 3x × 3 = 9x. The option dv/dx = 3 is the rate of change of velocity with position, not with time, so it is missing the factor v.",
+   "clue": "Velocity here depends on position. Which form suits that?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A particle moves so that v² = 25 − 4x². What is its acceleration at position x?",
+   "opts": [
+    "−4x",
+    "−8x",
+    "25 − 4x",
+    "−2x"
+   ],
+   "why": "½v² = 12.5 − 2x², so a = d/dx(12.5 − 2x²) = −4x. The option −8x comes from differentiating v² and forgetting the ½.",
+   "clue": "Halve v² first, then differentiate with respect to x."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "v dv/dx = 9x",
+    "also_right": []
+   },
+   "b": {
+    "best": "−4x",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest and the only one that shows working (3x × 3), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'multiply dv/dx by v' names the expression v dv/dx, which appears only in the right option, so it gives the answer away."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option stands out. It is the longest and the only one that shows working (3x × 3), so a student could pick it without knowing the idea.",
+   "Question a, other: The clue 'multiply dv/dx by v' names the expression v dv/dx, which appears only in the right option, so it gives the answer away."
+  ]
+ },
+ "final": {
+  "title": "Acceleration in different forms",
+  "card": [
+   "Acceleration is the rate of change of velocity. When velocity is given in terms of time t, use a = dv/dt.",
+   "When velocity is given in terms of position x, use a = v dv/dx. This comes from the chain rule: dv/dt = dv/dx × dx/dt, and dx/dt = v.",
+   "The same thing can be written a = d/dx(½v²). Differentiate ½v² with respect to x and you get v dv/dx.",
+   "Example: v² = 16 − x². Then ½v² = 8 − ½x², so a = d/dx(8 − ½x²) = −x."
+  ],
+  "remember": "Use dv/dt when v depends on t. Use v dv/dx or d/dx(½v²) when v depends on x.",
+  "a": {
+   "q": "A particle has velocity v = 3x at position x. Which gives its acceleration in terms of x?",
+   "opts": [
+    "v dv/dx = 9x",
+    "dv/dx = 3",
+    "d/dx(v²) = 18x",
+    "dv/dt = 0"
+   ],
+   "why": "With v = 3x, dv/dx = 3, so a = v dv/dx = 3x × 3 = 9x. The option dv/dx = 3 is the rate of change of velocity with position, not with time, so it is missing the factor v.",
+   "clue": "Velocity here depends on position. Which form suits that?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A particle moves so that v² = 25 − 4x². What is its acceleration at position x?",
+   "opts": [
+    "−4x",
+    "−8x",
+    "25 − 4x",
+    "−2x"
+   ],
+   "why": "½v² = 12.5 − 2x², so a = d/dx(12.5 − 2x²) = −4x. The option −8x comes from differentiating v² and forgetting the ½.",
+   "clue": "Halve v² first, then differentiate with respect to x."
+  }
+ },
+ "cleared_by": "recheck"
+}

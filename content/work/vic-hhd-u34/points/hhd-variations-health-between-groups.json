@@ -1,0 +1,101 @@
+{
+ "id": "hhd-variations-health-between-groups",
+ "title": "Variations in health between groups",
+ "brief": "33c710fcacff",
+ "shortlist": [
+  [
+   "hms-health-aboriginal-torres-strait",
+   0.46
+  ],
+  [
+   "hms-rural-remote-low-income",
+   0.439
+  ],
+  [
+   "hms-community-health-resources",
+   0.321
+  ],
+  [
+   "hms-health-promotion",
+   0.312
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.283
+  ]
+ ],
+ "stage": "write",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T06:20:33Z review: rejected, to be written again"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00542,
+  "check": 0.01731,
+  "fix": 0.04296
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers all three groups in the brief: the Aboriginal and Torres Strait Islander card covers only that group, and the rural and low-income card covers only those two, so both are narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "",
+ "rejected": {
+  "title": "Variations in health between groups",
+  "card": [
+   "Health is not the same for all Australians. Some groups have poorer health outcomes than the national average, such as a shorter life expectancy or more illness.",
+   [
+    "Aboriginal and Torres Strait Islander peoples",
+    "on average have a lower life expectancy and a higher rate of chronic disease than other Australians. This gap is linked to the effects of colonisation, dispossession and racism, and to unequal access to services."
+   ],
+   [
+    "Rural areas",
+    "People in rural and remote areas have poorer health on average than people in cities. They often live further from hospitals, doctors and specialists, and they have higher rates of injury and some chronic diseases."
+   ],
+   [
+    "Low incomes",
+    "People on low incomes have poorer health on average than people on high incomes. They may find it harder to afford healthy food, housing and health care."
+   ]
+  ],
+  "remember": "Health varies by group: Aboriginal and Torres Strait Islander peoples, rural residents and people on low incomes have poorer outcomes on average.",
+  "a": {
+   "q": "Which statement best describes health differences between groups in Australia?",
+   "opts": [
+    "Some groups have poorer health on average than others",
+    "All groups have the same health, as care is available to all",
+    "Poorer health is found only among people living in cities",
+    "Differences in health are caused only by personal choices"
+   ],
+   "why": "Aboriginal and Torres Strait Islander peoples, rural residents and people on low incomes have poorer outcomes on average. The card links this to access to services and living conditions, so it is not caused only by personal choices.",
+   "clue": "Think about which groups the card says do worse than the national average."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dale lives on a farm 400 km from the nearest large hospital. He has a long-running heart condition. Which reason best explains why people like Dale often have poorer health outcomes?",
+   "opts": [
+    "They live further from doctors, specialists and hospitals",
+    "They are all on low incomes, so they cannot buy any food",
+    "They have a shorter life expectancy because of colonisation",
+    "They have the same access to services as people in cities"
+   ],
+   "why": "Distance from hospitals, doctors and specialists makes care harder to reach, which is a reason for poorer rural health outcomes. The colonisation link applies to Aboriginal and Torres Strait Islander peoples, and it is not the reason given for rural areas in this case.",
+   "clue": "Look at what Dale lives far from."
+  }
+ },
+ "rewrites": 1
+}

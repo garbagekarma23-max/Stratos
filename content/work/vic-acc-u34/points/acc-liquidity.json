@@ -1,0 +1,352 @@
+{
+ "id": "acc-liquidity",
+ "title": "Liquidity",
+ "brief": "f8e48f5ad921",
+ "shortlist": [
+  [
+   "bus-liquidity-ratio",
+   0.509
+  ],
+  [
+   "bus-comparing-ratios",
+   0.289
+  ],
+  [
+   "bus-efficiency-ratios",
+   0.23
+  ],
+  [
+   "bus-working-capital-management",
+   0.23
+  ],
+  [
+   "bus-businesses-close",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (remember other)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01159,
+  "check": 0.0287,
+  "fix": 0.03059,
+  "recheck": 0.01528
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the VCE Accounting liquidity ratios (working capital ratio and quick asset ratio) as a measure of ability to pay debts; the closest, bus-liquidity-ratio, covers only the current ratio from NSW Business Studies and omits the quick asset ratio, so it is too narrow.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, other: The remember line says both ratios compare 'assets that turn into cash soon' with debts due soon. The working capital ratio uses all current assets, including prepaid expenses, which the card itself says are used up rather than turned into cash. The line blurs the difference between the two ratios that the card draws.",
+ "rejected": {
+  "title": "Liquidity",
+  "card": [
+   "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+   [
+    "Working capital ratio",
+    "current assets ÷ current liabilities. A result below 1 means current liabilities are larger than current assets."
+   ],
+   [
+    "Quick asset ratio",
+    "(current assets - inventory - prepaid expenses) ÷ (current liabilities - bank overdraft). Inventory must be sold before it becomes cash, and prepaid expenses are used up rather than turned into cash."
+   ],
+   "The bank overdraft is removed because it is usually an ongoing arrangement, not a debt to repay straight away. For both ratios, a higher result means the business is better placed to pay its debts on time."
+  ],
+  "remember": "Liquidity is about paying debts on time. Both ratios compare assets that turn into cash soon with debts due soon.",
+  "a": {
+   "q": "What does a working capital ratio of 0.8 tell you about a business?",
+   "opts": [
+    "Current liabilities are larger than current assets",
+    "Current assets are larger than current liabilities",
+    "The business is making a loss this year",
+    "The business has too much inventory on hand"
+   ],
+   "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+   "clue": "Below 1 means the top number is smaller than the bottom number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000, with no bank overdraft. What is its quick asset ratio?",
+   "opts": [
+    "0.9",
+    "1.8",
+    "0.8",
+    "1.0"
+   ],
+   "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. With no overdraft to remove, dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+   "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, other: The remember line says both ratios compare 'assets that turn into cash soon' with debts due soon. The working capital ratio uses all current assets, including prepaid expenses, which the card itself says are used up rather than turned into cash. The line blurs the difference between the two ratios that the card draws."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Liquidity",
+     "card": [
+      "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+      [
+       "Working capital ratio",
+       "current assets ÷ current liabilities. It shows how many dollars of current assets the business has for each dollar of current liabilities."
+      ],
+      [
+       "Quick asset ratio",
+       "(current assets - inventory - prepaid expenses) ÷ current liabilities. It leaves out items that are slow to turn into cash."
+      ],
+      "A higher ratio means the business is better placed to pay its debts on time. A working capital ratio below 1 means current liabilities are larger than current assets."
+     ],
+     "remember": "Liquidity is about paying debts on time. Both ratios compare assets that turn into cash soon with debts due soon.",
+     "a": {
+      "q": "What does a working capital ratio of 0.8 tell you about a business?",
+      "opts": [
+       "Current liabilities are larger than current assets",
+       "Current assets are larger than current liabilities",
+       "The business is making a loss this year",
+       "The business has too much inventory on hand"
+      ],
+      "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+      "clue": "Below 1 means the top number is smaller than the bottom number."
+     },
+     "b": {
+      "d": 3,
+      "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000. What is its quick asset ratio?",
+      "opts": [
+       "0.9",
+       "1.8",
+       "0.8",
+       "1.0"
+      ],
+      "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. Dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+      "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Current liabilities are larger than current assets",
+      "also_right": []
+     },
+     "b": {
+      "best": "0.9",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The VCE Accounting quick asset ratio is (current assets − inventory − prepaid expenses) ÷ (current liabilities − bank overdraft). The card leaves out the bank overdraft adjustment to the denominator, so students would calculate the ratio wrongly whenever an overdraft is present. Question b has no overdraft, so its answer of 0.9 still holds."
+      },
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The card says the quick asset ratio 'leaves out items that are slow to turn into cash'. Prepaid expenses do not turn into cash at all; they are used up as the expense is incurred. 'Slow' could mislead students about why prepayments are excluded."
+      }
+     ],
+     "sure": "medium",
+     "sensitive": "none",
+     "summary": "Both questions are correct: 'Current liabilities are larger than current assets' and 0.9. The card's quick asset ratio formula leaves out the VCE adjustment that subtracts bank overdraft from current liabilities, and it loosely calls prepaid expenses 'slow to turn into cash'."
+    },
+    "flags": [
+     "Card, fact: The VCE Accounting quick asset ratio is (current assets − inventory − prepaid expenses) ÷ (current liabilities − bank overdraft). The card leaves out the bank overdraft adjustment to the denominator, so students would calculate the ratio wrongly whenever an overdraft is present. Question b has no overdraft, so its answer of 0.9 still holds.",
+     "Card, wording: The card says the quick asset ratio 'leaves out items that are slow to turn into cash'. Prepaid expenses do not turn into cash at all; they are used up as the expense is incurred. 'Slow' could mislead students about why prepayments are excluded."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Liquidity",
+     "card": [
+      "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+      [
+       "Working capital ratio",
+       "current assets ÷ current liabilities. A result below 1 means current liabilities are larger than current assets."
+      ],
+      [
+       "Quick asset ratio",
+       "(current assets - inventory - prepaid expenses) ÷ (current liabilities - bank overdraft). Inventory must be sold before it becomes cash, and prepaid expenses are used up rather than turned into cash."
+      ],
+      "The bank overdraft is removed because it is usually an ongoing arrangement, not a debt to repay straight away. For both ratios, a higher result means the business is better placed to pay its debts on time."
+     ],
+     "remember": "Liquidity is about paying debts on time. Both ratios compare assets that turn into cash soon with debts due soon.",
+     "a": {
+      "q": "What does a working capital ratio of 0.8 tell you about a business?",
+      "opts": [
+       "Current liabilities are larger than current assets",
+       "Current assets are larger than current liabilities",
+       "The business is making a loss this year",
+       "The business has too much inventory on hand"
+      ],
+      "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+      "clue": "Below 1 means the top number is smaller than the bottom number."
+     },
+     "b": {
+      "d": 3,
+      "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000, with no bank overdraft. What is its quick asset ratio?",
+      "opts": [
+       "0.9",
+       "1.8",
+       "0.8",
+       "1.0"
+      ],
+      "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. With no overdraft to remove, dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+      "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:49Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Current liabilities are larger than current assets",
+       "also_right": []
+      },
+      "b": {
+       "best": "0.9",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "other",
+        "detail": "The remember line says both ratios compare 'assets that turn into cash soon' with debts due soon. The working capital ratio uses all current assets, including prepaid expenses, which the card itself says are used up rather than turned into cash. The line blurs the difference between the two ratios that the card draws."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts, formulas and both questions check out (0.9 is correct for question b). One minor problem: the remember line says both ratios use assets that turn into cash, which does not fit the working capital ratio as the card describes it."
+     },
+     "flags": [
+      "Remember, other: The remember line says both ratios compare 'assets that turn into cash soon' with debts due soon. The working capital ratio uses all current assets, including prepaid expenses, which the card itself says are used up rather than turned into cash. The line blurs the difference between the two ratios that the card draws."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Liquidity",
+  "card": [
+   "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+   [
+    "Working capital ratio",
+    "current assets ÷ current liabilities. A result below 1 means current liabilities are larger than current assets."
+   ],
+   [
+    "Quick asset ratio",
+    "(current assets - inventory - prepaid expenses) ÷ (current liabilities - bank overdraft). Inventory must be sold before it becomes cash, and prepaid expenses are used up rather than turned into cash."
+   ],
+   "The bank overdraft is removed because it is usually an ongoing arrangement, not a debt to repay straight away. For both ratios, a higher result means the business is better placed to pay its debts on time."
+  ],
+  "remember": "Liquidity is about paying debts on time. The working capital ratio uses all current assets, and the quick asset ratio leaves out inventory and prepaid expenses.",
+  "a": {
+   "q": "What does a working capital ratio of 0.8 tell you about a business?",
+   "opts": [
+    "Current liabilities are larger than current assets",
+    "Current assets are larger than current liabilities",
+    "The business is making a loss this year",
+    "The business has too much inventory on hand"
+   ],
+   "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+   "clue": "Below 1 means the top number is smaller than the bottom number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000, with no bank overdraft. What is its quick asset ratio?",
+   "opts": [
+    "0.9",
+    "1.8",
+    "0.8",
+    "1.0"
+   ],
+   "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. With no overdraft to remove, dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+   "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Current liabilities are larger than current assets",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.9",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both ratio formulas match the VCE versions, and the quick asset ratio calculation (45,000 ÷ 50,000 = 0.9) checks out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Liquidity",
+  "card": [
+   "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+   [
+    "Working capital ratio",
+    "current assets ÷ current liabilities. A result below 1 means current liabilities are larger than current assets."
+   ],
+   [
+    "Quick asset ratio",
+    "(current assets - inventory - prepaid expenses) ÷ (current liabilities - bank overdraft). Inventory must be sold before it becomes cash, and prepaid expenses are used up rather than turned into cash."
+   ],
+   "The bank overdraft is removed because it is usually an ongoing arrangement, not a debt to repay straight away. For both ratios, a higher result means the business is better placed to pay its debts on time."
+  ],
+  "remember": "Liquidity is about paying debts on time. The working capital ratio uses all current assets, and the quick asset ratio leaves out inventory and prepaid expenses.",
+  "a": {
+   "q": "What does a working capital ratio of 0.8 tell you about a business?",
+   "opts": [
+    "Current liabilities are larger than current assets",
+    "Current assets are larger than current liabilities",
+    "The business is making a loss this year",
+    "The business has too much inventory on hand"
+   ],
+   "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+   "clue": "Below 1 means the top number is smaller than the bottom number."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000, with no bank overdraft. What is its quick asset ratio?",
+   "opts": [
+    "0.9",
+    "1.8",
+    "0.8",
+    "1.0"
+   ],
+   "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. With no overdraft to remove, dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+   "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+  }
+ }
+}

@@ -1,0 +1,235 @@
+{
+ "id": "phys-momentum-photons-matter",
+ "title": "Momentum of photons and matter",
+ "brief": "62f2abd271d1",
+ "shortlist": [
+  [
+   "phys-photons",
+   0.513
+  ],
+  [
+   "phys-momentum-impulse-physics",
+   0.384
+  ],
+  [
+   "phys-matter-waves",
+   0.278
+  ],
+  [
+   "phys-standard-model",
+   0.269
+  ],
+  [
+   "phys-bohr-model",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.0062,
+  "check": 0.01706,
+  "fix": 0.01494,
+  "recheck": 0.01178
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, phys-matter-waves, covers the de Broglie relation for matter only, while the new point also needs photon momentum, which no bank card teaches, so adding it would change the card's idea rather than make a small adjustment.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Momentum of photons and matter",
+  "card": [
+   "A photon has momentum even though it has no mass. Its momentum is p = h/λ, where λ is its wavelength and h is Planck's constant.",
+   "De Broglie proposed that a particle with momentum p has a wavelength λ = h/p. This is the same relation, written the other way round.",
+   "So a photon and a particle with the same wavelength have the same momentum. A shorter wavelength means a larger momentum.",
+   "The particle moves much more slowly than the photon. An electron with the same momentum as a photon still has a speed far below the speed of light."
+  ],
+  "remember": "Same wavelength means same momentum, p = h/λ, for photons and for particles.",
+  "a": {
+   "q": "An electron and a photon both have a wavelength of 0.20 nm. How do their momenta compare?",
+   "opts": [
+    "They are equal",
+    "The electron's is larger",
+    "The photon's is larger",
+    "The photon's is zero, as it has no mass"
+   ],
+   "why": "Both follow p = h/λ, and λ and h are the same, so the momenta are equal. A photon has no mass, but it still has momentum.",
+   "clue": "Use the same equation for both and compare the wavelengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A proton has the same momentum as an X-ray photon. Which statement about their wavelengths is correct?",
+   "opts": [
+    "They are equal, since λ = h/p for both",
+    "The proton's is longer, since it has mass",
+    "The photon's is longer, since it moves faster",
+    "The proton's is shorter, since it is heavier"
+   ],
+   "why": "Wavelength is h divided by momentum, and the momentum is the same, so the wavelengths are equal. Mass and speed do not matter once the momentum is known.",
+   "clue": "Wavelength depends only on h and momentum."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They are equal",
+   "also_right": []
+  },
+  "b": {
+   "best": "They are equal, since λ = h/p for both",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last bullet says an electron with the same momentum as a photon 'still has a speed far below the speed of light.' That is true for everyday wavelengths like 0.2 nm, but it is not true in general. An electron matched to a high-energy photon (for example, MeV gamma rays) moves at close to the speed of light. Limit it with 'typically' or 'at these wavelengths', or remove it."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Wavelength depends only on h and momentum' effectively states the answer. It rules out every option that appeals to mass or speed."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card overstates that an electron with the same momentum as a photon always moves far below light speed. This is false at high momenta. Question b's clue also gives the answer away. Both answers (equal momenta, equal wavelengths) are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The last bullet says an electron with the same momentum as a photon 'still has a speed far below the speed of light.' That is true for everyday wavelengths like 0.2 nm, but it is not true in general. An electron matched to a high-energy photon (for example, MeV gamma rays) moves at close to the speed of light. Limit it with 'typically' or 'at these wavelengths', or remove it.",
+  "Question b, other: The clue 'Wavelength depends only on h and momentum' effectively states the answer. It rules out every option that appeals to mass or speed."
+ ],
+ "proposal": {
+  "title": "Momentum of photons and matter",
+  "card": [
+   "A photon has momentum even though it has no mass. Its momentum is p = h/λ, where λ is its wavelength and h is Planck's constant.",
+   "De Broglie proposed that a particle with momentum p has a wavelength λ = h/p. This is the same relation, written the other way round.",
+   "So a photon and a particle with the same wavelength have the same momentum. A shorter wavelength means a larger momentum.",
+   "Equal momentum does not mean equal speed. For example, an electron with a wavelength of 0.20 nm moves at only about 1% of the speed of light."
+  ],
+  "remember": "Same wavelength means same momentum, p = h/λ, for photons and for particles.",
+  "a": {
+   "q": "An electron and a photon both have a wavelength of 0.20 nm. How do their momenta compare?",
+   "opts": [
+    "They are equal",
+    "The electron's is larger",
+    "The photon's is larger",
+    "The photon's is zero, as it has no mass"
+   ],
+   "why": "Both follow p = h/λ, and λ and h are the same, so the momenta are equal. A photon has no mass, but it still has momentum.",
+   "clue": "Use the same equation for both and compare the wavelengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A proton has the same momentum as an X-ray photon. Which statement about their wavelengths is correct?",
+   "opts": [
+    "They are equal, since λ = h/p for both",
+    "The proton's is longer, since it has mass",
+    "The photon's is longer, since it moves faster",
+    "The proton's is shorter, since it is heavier"
+   ],
+   "why": "Wavelength is h divided by momentum, and the momentum is the same, so the wavelengths are equal. The proton is heavier and slower, but those differences are already accounted for in its momentum.",
+   "clue": "Check which quantities appear in the relation for wavelength."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They are equal",
+    "also_right": []
+   },
+   "b": {
+    "best": "They are equal, since λ = h/p for both",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The 1% figure checks out: an electron with a 0.20 nm wavelength moves at about 3.6 × 10⁶ m/s, roughly 1.2% of c."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last bullet says an electron with the same momentum as a photon 'still has a speed far below the speed of light.' That is true for everyday wavelengths like 0.2 nm, but it is not true in general. An electron matched to a high-energy photon (for example, MeV gamma rays) moves at close to the speed of light. Limit it with 'typically' or 'at these wavelengths', or remove it."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Wavelength depends only on h and momentum' effectively states the answer. It rules out every option that appeals to mass or speed."
+   }
+  ],
+  "flags": [
+   "Card, fact: The last bullet says an electron with the same momentum as a photon 'still has a speed far below the speed of light.' That is true for everyday wavelengths like 0.2 nm, but it is not true in general. An electron matched to a high-energy photon (for example, MeV gamma rays) moves at close to the speed of light. Limit it with 'typically' or 'at these wavelengths', or remove it.",
+   "Question b, other: The clue 'Wavelength depends only on h and momentum' effectively states the answer. It rules out every option that appeals to mass or speed."
+  ]
+ },
+ "final": {
+  "title": "Momentum of photons and matter",
+  "card": [
+   "A photon has momentum even though it has no mass. Its momentum is p = h/λ, where λ is its wavelength and h is Planck's constant.",
+   "De Broglie proposed that a particle with momentum p has a wavelength λ = h/p. This is the same relation, written the other way round.",
+   "So a photon and a particle with the same wavelength have the same momentum. A shorter wavelength means a larger momentum.",
+   "Equal momentum does not mean equal speed. For example, an electron with a wavelength of 0.20 nm moves at only about 1% of the speed of light."
+  ],
+  "remember": "Same wavelength means same momentum, p = h/λ, for photons and for particles.",
+  "a": {
+   "q": "An electron and a photon both have a wavelength of 0.20 nm. How do their momenta compare?",
+   "opts": [
+    "They are equal",
+    "The electron's is larger",
+    "The photon's is larger",
+    "The photon's is zero, as it has no mass"
+   ],
+   "why": "Both follow p = h/λ, and λ and h are the same, so the momenta are equal. A photon has no mass, but it still has momentum.",
+   "clue": "Use the same equation for both and compare the wavelengths."
+  },
+  "b": {
+   "d": 2,
+   "q": "A proton has the same momentum as an X-ray photon. Which statement about their wavelengths is correct?",
+   "opts": [
+    "They are equal, since λ = h/p for both",
+    "The proton's is longer, since it has mass",
+    "The photon's is longer, since it moves faster",
+    "The proton's is shorter, since it is heavier"
+   ],
+   "why": "Wavelength is h divided by momentum, and the momentum is the same, so the wavelengths are equal. The proton is heavier and slower, but those differences are already accounted for in its momentum.",
+   "clue": "Check which quantities appear in the relation for wavelength."
+  }
+ },
+ "cleared_by": "recheck"
+}

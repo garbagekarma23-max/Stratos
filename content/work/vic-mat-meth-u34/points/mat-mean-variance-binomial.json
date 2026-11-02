@@ -1,0 +1,120 @@
+{
+ "id": "mat-mean-variance-binomial",
+ "title": "Mean and variance of a binomial",
+ "brief": "10d9ab6897e9",
+ "shortlist": [
+  [
+   "mat-variance-standard-deviation-random",
+   0.422
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00608,
+  "check": 0.01016
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the general definition of variance for any discrete random variable, not the binomial shortcut formulas E(X) = np and Var(X) = np(1 − p), so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Mean and variance of a binomial",
+  "card": [
+   "Suppose X is binomial with n trials and chance of success p on each trial. Then the mean is E(X) = np.",
+   "The variance is Var(X) = np(1 − p). The standard deviation is the square root of the variance.",
+   "Example: n = 50 and p = 0.2. E(X) = 50 × 0.2 = 10.",
+   "Var(X) = 50 × 0.2 × 0.8 = 8. The standard deviation is √8, about 2.83."
+  ],
+  "remember": "Mean is np. Variance is np(1 − p), and the standard deviation is its square root.",
+  "a": {
+   "q": "X is binomial with n = 40 and p = 0.25. What is E(X)?",
+   "opts": [
+    "10",
+    "7.5",
+    "30",
+    "0.625"
+   ],
+   "why": "E(X) = np = 40 × 0.25 = 10. The value 7.5 is the variance, np(1 − p), not the mean.",
+   "clue": "Multiply the number of trials by the chance of success."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bakery in Ballarat finds 10% of its pies are underbaked. In a batch of 80 pies, X is the number underbaked. What is the standard deviation of X, to 2 decimal places?",
+   "opts": [
+    "2.68",
+    "7.2",
+    "8",
+    "2.83"
+   ],
+   "why": "Var(X) = 80 × 0.1 × 0.9 = 7.2. The standard deviation is √7.2 = 2.68. The value 7.2 is the variance, and 8 is the mean.",
+   "clue": "Find the variance first, then take the square root."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.68",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: E(X) = 40 × 0.25 = 10, and SD = √(80 × 0.1 × 0.9) = √7.2 ≈ 2.68."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Mean and variance of a binomial",
+  "card": [
+   "Suppose X is binomial with n trials and chance of success p on each trial. Then the mean is E(X) = np.",
+   "The variance is Var(X) = np(1 − p). The standard deviation is the square root of the variance.",
+   "Example: n = 50 and p = 0.2. E(X) = 50 × 0.2 = 10.",
+   "Var(X) = 50 × 0.2 × 0.8 = 8. The standard deviation is √8, about 2.83."
+  ],
+  "remember": "Mean is np. Variance is np(1 − p), and the standard deviation is its square root.",
+  "a": {
+   "q": "X is binomial with n = 40 and p = 0.25. What is E(X)?",
+   "opts": [
+    "10",
+    "7.5",
+    "30",
+    "0.625"
+   ],
+   "why": "E(X) = np = 40 × 0.25 = 10. The value 7.5 is the variance, np(1 − p), not the mean.",
+   "clue": "Multiply the number of trials by the chance of success."
+  },
+  "b": {
+   "d": 3,
+   "q": "A bakery in Ballarat finds 10% of its pies are underbaked. In a batch of 80 pies, X is the number underbaked. What is the standard deviation of X, to 2 decimal places?",
+   "opts": [
+    "2.68",
+    "7.2",
+    "8",
+    "2.83"
+   ],
+   "why": "Var(X) = 80 × 0.1 × 0.9 = 7.2. The standard deviation is √7.2 = 2.68. The value 7.2 is the variance, and 8 is the mean.",
+   "clue": "Find the variance first, then take the square root."
+  }
+ },
+ "cleared_by": "checker"
+}

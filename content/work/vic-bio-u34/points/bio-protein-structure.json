@@ -1,0 +1,198 @@
+{
+ "id": "bio-protein-structure",
+ "title": "Protein structure",
+ "brief": "c3ef980a1c61",
+ "shortlist": [
+  [
+   "bio-making-proteins",
+   0.363
+  ],
+  [
+   "bio-organelles-their-jobs-2",
+   0.256
+  ],
+  [
+   "hhd-protein",
+   0.234
+  ],
+  [
+   "bio-types-pathogens",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00479,
+  "check": 0.01443,
+  "fix": 0.02361
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches how amino acids fold through the four levels of protein structure or the idea of a proteome; the closest, Making proteins, covers transcription and translation rather than structure, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Protein structure",
+  "card": [
+   "Amino acids join by peptide bonds to form a chain called a polypeptide. The order of amino acids in the chain is the primary structure.",
+   "Parts of the chain fold into coils (alpha helices) and pleats (beta pleated sheets), held by hydrogen bonds. This is the secondary structure.",
+   "The whole chain then folds into a 3D shape, the tertiary structure. Bonds and attractions between the side groups of amino acids hold this shape.",
+   "Some proteins have two or more polypeptides joined together. This is the quaternary structure. All of an organism's proteins together make its proteome."
+  ],
+  "remember": "Sequence, then coils and pleats, then 3D fold, then joined chains. Shape decides function.",
+  "a": {
+   "q": "What is the primary structure of a protein?",
+   "opts": [
+    "The sequence of amino acids in a polypeptide",
+    "The coils and pleats in part of a polypeptide",
+    "The 3D shape of one whole polypeptide",
+    "Two or more polypeptides joined together"
+   ],
+   "why": "Primary structure is only the order of amino acids in the chain. Coils and pleats are secondary structure, and the 3D fold of the whole chain is tertiary.",
+   "clue": "Think about the first level, before any folding."
+  },
+  "b": {
+   "d": 3,
+   "q": "A protein is made of four separate polypeptides that join to work as one unit. Which level of structure does this joining describe?",
+   "opts": [
+    "Quaternary structure",
+    "Tertiary structure",
+    "Secondary structure",
+    "Primary structure"
+   ],
+   "why": "Quaternary structure is the joining of two or more polypeptides. Tertiary structure is tempting, but it describes the fold of a single polypeptide chain.",
+   "clue": "Count how many chains are involved."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sequence of amino acids in a polypeptide",
+   "also_right": []
+  },
+  "b": {
+   "best": "Quaternary structure",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line ends with 'Shape decides function', but the card never teaches that a protein's shape determines its function. The remember line should not add an idea the card does not cover. Either add it to the card or drop it from the remember line."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are correct, and each question has one clear answer. The only issue is that the remember line adds 'Shape decides function', which the card never teaches."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line ends with 'Shape decides function', but the card never teaches that a protein's shape determines its function. The remember line should not add an idea the card does not cover. Either add it to the card or drop it from the remember line."
+ ],
+ "proposal": {
+  "title": "Protein structure",
+  "card": [
+   "Amino acids join by peptide bonds to form a chain called a polypeptide. The order of amino acids in the chain is the primary structure.",
+   "Parts of the chain fold into coils (alpha helices) and pleats (beta pleated sheets), held by hydrogen bonds. This is the secondary structure.",
+   "The whole chain then folds into a 3D shape, the tertiary structure. Bonds and attractions between the side groups of amino acids hold this shape.",
+   "Some proteins have two or more polypeptides joined together. This is the quaternary structure. All of an organism's proteins together make its proteome."
+  ],
+  "remember": "Sequence, then coils and pleats, then 3D fold, then joined chains. All proteins together form the proteome.",
+  "a": {
+   "q": "What is the primary structure of a protein?",
+   "opts": [
+    "The sequence of amino acids in a polypeptide",
+    "The coils and pleats in part of a polypeptide",
+    "The 3D shape of one whole polypeptide",
+    "Two or more polypeptides joined together"
+   ],
+   "why": "Primary structure is only the order of amino acids in the chain. Coils and pleats are secondary structure, and the 3D fold of the whole chain is tertiary.",
+   "clue": "Think about the first level, before any folding."
+  },
+  "b": {
+   "d": 3,
+   "q": "A protein is made of four separate polypeptides that join to work as one unit. Which level of structure does this joining describe?",
+   "opts": [
+    "Quaternary structure",
+    "Tertiary structure",
+    "Secondary structure",
+    "Primary structure"
+   ],
+   "why": "Quaternary structure is the joining of two or more polypeptides. Tertiary structure is tempting, but it describes the fold of a single polypeptide chain.",
+   "clue": "Count how many chains are involved."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line ends with 'Shape decides function', but the card never teaches that a protein's shape determines its function. The remember line should not add an idea the card does not cover. Either add it to the card or drop it from the remember line."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line ends with 'Shape decides function', but the card never teaches that a protein's shape determines its function. The remember line should not add an idea the card does not cover. Either add it to the card or drop it from the remember line."
+  ]
+ },
+ "final": {
+  "title": "Protein structure",
+  "card": [
+   "Amino acids join by peptide bonds to form a chain called a polypeptide. The order of amino acids in the chain is the primary structure.",
+   "Parts of the chain fold into coils (alpha helices) and pleats (beta pleated sheets), held by hydrogen bonds. This is the secondary structure.",
+   "The whole chain then folds into a 3D shape, the tertiary structure. Bonds and attractions between the side groups of amino acids hold this shape.",
+   "Some proteins have two or more polypeptides joined together. This is the quaternary structure. All of an organism's proteins together make its proteome."
+  ],
+  "remember": "Sequence, then coils and pleats, then 3D fold, then joined chains. All proteins together form the proteome.",
+  "a": {
+   "q": "What is the primary structure of a protein?",
+   "opts": [
+    "The sequence of amino acids in a polypeptide",
+    "The coils and pleats in part of a polypeptide",
+    "The 3D shape of one whole polypeptide",
+    "Two or more polypeptides joined together"
+   ],
+   "why": "Primary structure is only the order of amino acids in the chain. Coils and pleats are secondary structure, and the 3D fold of the whole chain is tertiary.",
+   "clue": "Think about the first level, before any folding."
+  },
+  "b": {
+   "d": 3,
+   "q": "A protein is made of four separate polypeptides that join to work as one unit. Which level of structure does this joining describe?",
+   "opts": [
+    "Quaternary structure",
+    "Tertiary structure",
+    "Secondary structure",
+    "Primary structure"
+   ],
+   "why": "Quaternary structure is the joining of two or more polypeptides. Tertiary structure is tempting, but it describes the fold of a single polypeptide chain.",
+   "clue": "Count how many chains are involved."
+  }
+ },
+ "cleared_by": "auto"
+}

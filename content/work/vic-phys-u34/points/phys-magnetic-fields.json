@@ -1,0 +1,316 @@
+{
+ "id": "phys-magnetic-fields",
+ "title": "Magnetic fields",
+ "brief": "7b3f596759c8",
+ "shortlist": [
+  [
+   "phys-magnetic-flux",
+   0.633
+  ],
+  [
+   "phys-charges-magnetic-fields",
+   0.59
+  ],
+  [
+   "phys-force-current-carrying-wire",
+   0.427
+  ],
+  [
+   "phys-gravitational-field-strength",
+   0.426
+  ],
+  [
+   "phys-ac-induction-motors",
+   0.338
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01086,
+  "check": 0.02594,
+  "fix": 0.0298,
+  "recheck": 0.01485
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the basic idea that magnets and currents create magnetic fields with field lines running from north to south; the closest matches (magnetic flux, forces on moving charges and wires) assume the field already exists and teach different ideas at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: 'Lines that are closer together show a stronger field' re-explains the field-line spacing idea that belongs to point 1 (Fields and field lines). It could simply be mentioned rather than taught again here.",
+ "rejected": {
+  "title": "Magnetic fields",
+  "card": [
+   "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+   "Outside a magnet, field lines curve from the north pole round to the south pole. Inside the magnet they run from south to north, so each line is a closed loop.",
+   "Lines that are closer together show a stronger field. A compass needle lines up with the field, and its north end points in the field direction.",
+   "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+  ],
+  "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+  "a": {
+   "q": "A compass sits beside the middle of a bar magnet, level with its centre. Which way does the compass's north end point?",
+   "opts": [
+    "Parallel to the magnet, towards its south pole",
+    "Parallel to the magnet, towards its north pole",
+    "At right angles to the magnet, away from it",
+    "At right angles to the magnet, towards it"
+   ],
+   "why": "Outside the magnet, field lines curve from north round to south, so beside the middle they run parallel to the magnet towards the south pole. The north end of the needle points in the field direction. Pointing towards the north pole reverses the direction of the lines.",
+   "clue": "Which way do field lines run outside a magnet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+   "opts": [
+    "Circular lines around the wire, anticlockwise from above",
+    "Circular lines around the wire, clockwise from above",
+    "Straight lines pointing away from the wire",
+    "Straight lines running parallel to the current"
+   ],
+   "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+   "clue": "Point your right thumb up and see which way your fingers curl."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: 'Lines that are closer together show a stronger field' re-explains the field-line spacing idea that belongs to point 1 (Fields and field lines). It could simply be mentioned rather than taught again here."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Magnetic fields",
+     "card": [
+      "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+      "Outside a magnet, field lines run from the north pole to the south pole. Inside the magnet they continue from south to north, so each line is a closed loop.",
+      "Lines that are closer together show a stronger field. A compass needle lines up with the field and points along the field line at that spot.",
+      "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+     ],
+     "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+     "a": {
+      "q": "A student places a compass beside a bar magnet. In which direction does the compass needle point?",
+      "opts": [
+       "Along the field line at that spot",
+       "Towards the nearest south pole only",
+       "At right angles to the field line",
+       "Towards the centre of the Earth"
+      ],
+      "why": "The needle lines up with the field, so it points along the field line at its position. It does not always point to the south pole of the magnet: it follows the line direction, which curves around the magnet.",
+      "clue": "The needle lines up with the field."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+      "opts": [
+       "Circular lines around the wire, anticlockwise from above",
+       "Circular lines around the wire, clockwise from above",
+       "Straight lines pointing away from the wire",
+       "Straight lines running parallel to the current"
+      ],
+      "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+      "clue": "Point your right thumb up and see which way your fingers curl."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Along the field line at that spot",
+      "also_right": []
+     },
+     "b": {
+      "best": "Circular lines around the wire, anticlockwise from above",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue 'The needle lines up with the field' all but states the answer. It points straight at 'Along the field line at that spot', so a student can pick it without understanding compass behaviour."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The physics is correct and both intended answers are right. The only issue is that the clue for question a nearly gives the answer away."
+    },
+    "flags": [
+     "Question a, other: The clue 'The needle lines up with the field' all but states the answer. It points straight at 'Along the field line at that spot', so a student can pick it without understanding compass behaviour."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Magnetic fields",
+     "card": [
+      "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+      "Outside a magnet, field lines curve from the north pole round to the south pole. Inside the magnet they run from south to north, so each line is a closed loop.",
+      "Lines that are closer together show a stronger field. A compass needle lines up with the field, and its north end points in the field direction.",
+      "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+     ],
+     "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+     "a": {
+      "q": "A compass sits beside the middle of a bar magnet, level with its centre. Which way does the compass's north end point?",
+      "opts": [
+       "Parallel to the magnet, towards its south pole",
+       "Parallel to the magnet, towards its north pole",
+       "At right angles to the magnet, away from it",
+       "At right angles to the magnet, towards it"
+      ],
+      "why": "Outside the magnet, field lines curve from north round to south, so beside the middle they run parallel to the magnet towards the south pole. The north end of the needle points in the field direction. Pointing towards the north pole reverses the direction of the lines.",
+      "clue": "Which way do field lines run outside a magnet?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+      "opts": [
+       "Circular lines around the wire, anticlockwise from above",
+       "Circular lines around the wire, clockwise from above",
+       "Straight lines pointing away from the wire",
+       "Straight lines running parallel to the current"
+      ],
+      "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+      "clue": "Point your right thumb up and see which way your fingers curl."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Parallel to the magnet, towards its south pole",
+       "also_right": []
+      },
+      "b": {
+       "best": "Circular lines around the wire, anticlockwise from above",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "'Lines that are closer together show a stronger field' re-explains the field-line spacing idea that belongs to point 1 (Fields and field lines). It could simply be mentioned rather than taught again here."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The physics is correct, and both intended answers are right: the needle points along the magnet towards the south pole, and the field is anticlockwise from above. One minor overlap: the card re-teaches the field-line spacing idea from point 1."
+     },
+     "flags": [
+      "Card, other: 'Lines that are closer together show a stronger field' re-explains the field-line spacing idea that belongs to point 1 (Fields and field lines). It could simply be mentioned rather than taught again here."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Magnetic fields",
+  "card": [
+   "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+   "Outside a magnet, field lines curve from the north pole round to the south pole. Inside the magnet they run from south to north, so each line is a closed loop.",
+   "A compass needle lines up with the field, and its north end points in the field direction.",
+   "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+  ],
+  "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+  "a": {
+   "q": "A compass sits beside the middle of a bar magnet, level with its centre. Which way does the compass's north end point?",
+   "opts": [
+    "Parallel to the magnet, towards its south pole",
+    "Parallel to the magnet, towards its north pole",
+    "At right angles to the magnet, away from it",
+    "At right angles to the magnet, towards it"
+   ],
+   "why": "Outside the magnet, field lines curve from north round to south, so beside the middle they run parallel to the magnet towards the south pole. The north end of the needle points in the field direction. Pointing towards the north pole reverses the direction of the lines.",
+   "clue": "Which way do field lines run outside a magnet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+   "opts": [
+    "Circular lines around the wire, anticlockwise from above",
+    "Circular lines around the wire, clockwise from above",
+    "Straight lines pointing away from the wire",
+    "Straight lines running parallel to the current"
+   ],
+   "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+   "clue": "Point your right thumb up and see which way your fingers curl."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Parallel to the magnet, towards its south pole",
+   "also_right": []
+  },
+  "b": {
+   "best": "Circular lines around the wire, anticlockwise from above",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Magnetic fields",
+  "card": [
+   "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+   "Outside a magnet, field lines curve from the north pole round to the south pole. Inside the magnet they run from south to north, so each line is a closed loop.",
+   "A compass needle lines up with the field, and its north end points in the field direction.",
+   "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+  ],
+  "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+  "a": {
+   "q": "A compass sits beside the middle of a bar magnet, level with its centre. Which way does the compass's north end point?",
+   "opts": [
+    "Parallel to the magnet, towards its south pole",
+    "Parallel to the magnet, towards its north pole",
+    "At right angles to the magnet, away from it",
+    "At right angles to the magnet, towards it"
+   ],
+   "why": "Outside the magnet, field lines curve from north round to south, so beside the middle they run parallel to the magnet towards the south pole. The north end of the needle points in the field direction. Pointing towards the north pole reverses the direction of the lines.",
+   "clue": "Which way do field lines run outside a magnet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+   "opts": [
+    "Circular lines around the wire, anticlockwise from above",
+    "Circular lines around the wire, clockwise from above",
+    "Straight lines pointing away from the wire",
+    "Straight lines running parallel to the current"
+   ],
+   "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+   "clue": "Point your right thumb up and see which way your fingers curl."
+  }
+ }
+}

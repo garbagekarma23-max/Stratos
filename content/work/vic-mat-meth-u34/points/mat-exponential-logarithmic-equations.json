@@ -1,0 +1,175 @@
+{
+ "id": "mat-exponential-logarithmic-equations",
+ "title": "Exponential and logarithmic equations",
+ "brief": "3c7ba3e3454c",
+ "shortlist": [
+  [
+   "mat-solving-exponential-equations",
+   0.461
+  ],
+  [
+   "mat-logarithm",
+   0.314
+  ],
+  [
+   "mat-change-base",
+   0.268
+  ],
+  [
+   "mat-logarithm-laws",
+   0.249
+  ],
+  [
+   "mat-graphs-logarithmic-functions",
+   0.235
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 may adapt mat-solving-exponential-equations, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "confirm": 0.00822,
+  "write": 0.00488,
+  "check": 0.01234
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-solving-exponential-equations",
+  "changes": [
+   "Add the same-base method: write both sides as powers of the same base and equate the indices, which the bank point does not cover.",
+   "Add the domain check for any logarithm in the equation, requiring the argument to be positive and rejecting solutions outside the domain.",
+   "Use the Victorian Study Design wording and notation for logarithms and the natural logarithm, if it differs from the New South Wales card."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers solving exponential equations by logarithms but lacks the same-base method and the log domain check the brief requires, so it needs small additions rather than a full replacement.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point only solves simple exponential equations by taking logs, while this point also covers matching bases and solving logarithmic equations with domain checks at Year 12 Methods depth, so it is broader and needs its own card.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Exponential and logarithmic equations",
+  "card": [
+   [
+    "Same base",
+    "If both sides can be written with the same base, equate the indices. Example: 2^(x+1) = 32 = 2⁵, so x + 1 = 5 and x = 4."
+   ],
+   [
+    "Take logs",
+    "If the bases cannot match, take logs of both sides. Example: 3^x = 20 gives x = log₃(20) = log(20) ÷ log(3), which is about 2.73."
+   ],
+   [
+    "Log equations",
+    "Combine the logs into one using the log laws, then rewrite in index form. Example: log₂(x) + log₂(x − 2) = 3 gives log₂(x(x − 2)) = 3, so x² − 2x = 8."
+   ],
+   [
+    "Domain check",
+    "A log needs a positive input. Test each answer in the original equation. For x² − 2x = 8, x = 4 or x = −2. Only x = 4 works, as log₂(−2) is undefined."
+   ]
+  ],
+  "remember": "Match the base or take logs, then check every answer against the log's domain.",
+  "a": {
+   "q": "Solve 3^(2x) = 81.",
+   "opts": [
+    "x = 2",
+    "x = 4",
+    "x = 9",
+    "x = 40"
+   ],
+   "why": "81 = 3⁴, so 2x = 4 and x = 2. Choosing x = 4 comes from stopping at the index 4 and forgetting to divide by 2.",
+   "clue": "Write 81 as a power of 3, then equate the indices."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve log₃(x) + log₃(x − 6) = 3 for x.",
+   "opts": [
+    "x = 9",
+    "x = −3",
+    "x = 9 or x = −3",
+    "x = 27"
+   ],
+   "why": "Combining gives x(x − 6) = 27, so x² − 6x − 27 = 0 and (x − 9)(x + 3) = 0. The input of a log must be positive, so x = −3 is rejected and only x = 9 remains. Giving both values skips the domain check.",
+   "clue": "Test each solution in the original equation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 2",
+   "also_right": []
+  },
+  "b": {
+   "best": "x = 9",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's worked examples are correct, and both questions have a single right answer (x = 2 and x = 9) that matches the explanations."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Exponential and logarithmic equations",
+  "card": [
+   [
+    "Same base",
+    "If both sides can be written with the same base, equate the indices. Example: 2^(x+1) = 32 = 2⁵, so x + 1 = 5 and x = 4."
+   ],
+   [
+    "Take logs",
+    "If the bases cannot match, take logs of both sides. Example: 3^x = 20 gives x = log₃(20) = log(20) ÷ log(3), which is about 2.73."
+   ],
+   [
+    "Log equations",
+    "Combine the logs into one using the log laws, then rewrite in index form. Example: log₂(x) + log₂(x − 2) = 3 gives log₂(x(x − 2)) = 3, so x² − 2x = 8."
+   ],
+   [
+    "Domain check",
+    "A log needs a positive input. Test each answer in the original equation. For x² − 2x = 8, x = 4 or x = −2. Only x = 4 works, as log₂(−2) is undefined."
+   ]
+  ],
+  "remember": "Match the base or take logs, then check every answer against the log's domain.",
+  "a": {
+   "q": "Solve 3^(2x) = 81.",
+   "opts": [
+    "x = 2",
+    "x = 4",
+    "x = 9",
+    "x = 40"
+   ],
+   "why": "81 = 3⁴, so 2x = 4 and x = 2. Choosing x = 4 comes from stopping at the index 4 and forgetting to divide by 2.",
+   "clue": "Write 81 as a power of 3, then equate the indices."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve log₃(x) + log₃(x − 6) = 3 for x.",
+   "opts": [
+    "x = 9",
+    "x = −3",
+    "x = 9 or x = −3",
+    "x = 27"
+   ],
+   "why": "Combining gives x(x − 6) = 27, so x² − 6x − 27 = 0 and (x − 9)(x + 3) = 0. The input of a log must be positive, so x = −3 is rejected and only x = 9 remains. Giving both values skips the domain check.",
+   "clue": "Test each solution in the original equation."
+  }
+ },
+ "cleared_by": "checker"
+}

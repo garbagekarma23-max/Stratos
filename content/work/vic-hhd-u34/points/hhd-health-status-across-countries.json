@@ -1,0 +1,238 @@
+{
+ "id": "hhd-health-status-across-countries",
+ "title": "Health status across countries",
+ "brief": "bd8faada3390",
+ "shortlist": [
+  [
+   "hms-measures-health-status",
+   0.395
+  ],
+  [
+   "hms-australia-s-health-status",
+   0.293
+  ],
+  [
+   "hms-global-health-inequities",
+   0.275
+  ],
+  [
+   "hms-world-health-organization",
+   0.221
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 may adapt hms-global-health-inequities, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:35:40Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "confirm": 0.00893,
+  "write": 0.00706,
+  "check": 0.01416,
+  "fix": 0.02858
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "hms-global-health-inequities",
+  "changes": [
+   "The card should be reframed around health status measured by life expectancy, child mortality and causes of death, matching the Victorian syllabus focus on high-income versus low- and middle-income countries rather than general inequity and poverty drivers.",
+   "Add child (under-five) mortality as a named measure, as the syllabus brief requires.",
+   "Use the syllabus terms low- and middle-income countries and high-income countries in place of rich and poor countries."
+  ],
+  "sure": "medium",
+  "reason": "The bank card on global health inequities covers the same idea of life expectancy gaps between countries, but it needs reframing to the Victorian brief on child mortality and causes of death and to the syllabus terminology.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point compares life expectancy, child mortality and causes of death between high-income and low- and middle-income countries: 'Global health inequities' explains what drives the gaps rather than describing them, and the other points cover definitions of measures or Australia alone.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Health status across countries",
+  "card": [
+   "Health status is how healthy a population is. It is often shown by life expectancy, child mortality and the main causes of death.",
+   [
+    "Life expectancy",
+    "the average number of years a newborn is expected to live. It is usually higher in high-income countries than in low-income countries."
+   ],
+   [
+    "Child mortality",
+    "the number of children who die before their fifth birthday, usually counted per 1000 live births. It is usually much higher in low- and middle-income countries."
+   ],
+   [
+    "Causes of death",
+    "In high-income countries, most deaths come from non-communicable diseases such as heart disease and cancer. In low-income countries, infectious diseases, such as pneumonia and diarrhoeal disease, cause a larger share of deaths."
+   ]
+  ],
+  "remember": "Low-income countries tend to have lower life expectancy, higher child mortality and more deaths from infectious disease.",
+  "a": {
+   "q": "Which pattern in health status is most likely in a low-income country compared with a high-income country?",
+   "opts": [
+    "Higher child mortality and lower life expectancy",
+    "Lower child mortality and higher life expectancy",
+    "Higher life expectancy and lower child mortality",
+    "Lower life expectancy and lower child mortality"
+   ],
+   "why": "Low-income countries tend to have more child deaths and shorter lives on average. The last option is tempting but mixes a low life expectancy with low child mortality, and the two usually move in opposite directions.",
+   "clue": "Think about which measures usually worsen together."
+  },
+  "b": {
+   "d": 3,
+   "q": "In Country X, pneumonia and diarrhoeal disease cause many deaths. In Country Y, heart disease and cancer cause most deaths. What is the best conclusion?",
+   "opts": [
+    "Country X is more likely to be low income than Country Y",
+    "Country Y is more likely to be low income than Country X",
+    "Both countries have the same level of income",
+    "Country Y has a higher child mortality rate than Country X"
+   ],
+   "why": "A larger share of deaths from infectious disease is typical of low-income countries. Heart disease and cancer are more common causes of death in high-income countries, so Country Y is not the likely low-income one.",
+   "clue": "Which type of disease is linked with low-income countries?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Higher child mortality and lower life expectancy",
+   "also_right": []
+  },
+  "b": {
+   "best": "Country X is more likely to be low income than Country Y",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the tempting option 'the last option' and describes it as low life expectancy with low child mortality. The options are shuffled, and that description matches 'Lower life expectancy and lower child mortality', not the last-listed option 'Higher life expectancy and lower child mortality'. The explanation should name the distractor by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and each has one clear right answer. Why (a) refers to a distractor by position ('the last option'), which does not match the shuffled options and should name the option by its content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) calls the tempting option 'the last option' and describes it as low life expectancy with low child mortality. The options are shuffled, and that description matches 'Lower life expectancy and lower child mortality', not the last-listed option 'Higher life expectancy and lower child mortality'. The explanation should name the distractor by its content, not its position."
+ ],
+ "proposal": {
+  "title": "Health status across countries",
+  "card": [
+   "Health status is how healthy a population is. It is often shown by life expectancy, child mortality and the main causes of death.",
+   [
+    "Life expectancy",
+    "the average number of years a newborn is expected to live. It is usually higher in high-income countries than in low-income countries."
+   ],
+   [
+    "Child mortality",
+    "the number of children who die before their fifth birthday, usually counted per 1000 live births. It is usually much higher in low- and middle-income countries."
+   ],
+   [
+    "Causes of death",
+    "In high-income countries, most deaths come from non-communicable diseases such as heart disease and cancer. In low-income countries, infectious diseases, such as pneumonia and diarrhoeal disease, cause a larger share of deaths."
+   ]
+  ],
+  "remember": "Low-income countries tend to have lower life expectancy, higher child mortality and more deaths from infectious disease.",
+  "a": {
+   "q": "Which pattern in health status is most likely in a low-income country compared with a high-income country?",
+   "opts": [
+    "Higher child mortality and lower life expectancy",
+    "Lower child mortality and higher life expectancy",
+    "Higher child mortality and higher life expectancy",
+    "Lower child mortality and lower life expectancy"
+   ],
+   "why": "Low-income countries tend to have more child deaths and shorter lives on average. Lower child mortality with lower life expectancy is tempting, but child mortality is usually higher in low-income countries, not lower.",
+   "clue": "Check each measure on its own: higher or lower in low-income countries?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Country X, pneumonia and diarrhoeal disease cause many deaths. In Country Y, heart disease and cancer cause most deaths. What is the best conclusion?",
+   "opts": [
+    "Country X is more likely to be low income than Country Y",
+    "Country Y is more likely to be low income than Country X",
+    "Both countries have the same level of income",
+    "Country Y has a higher child mortality rate than Country X"
+   ],
+   "why": "A larger share of deaths from infectious disease is typical of low-income countries. Heart disease and cancer are more common causes of death in high-income countries, so Country Y is not the likely low-income one.",
+   "clue": "Which type of disease is linked with low-income countries?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:40Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) calls the tempting option 'the last option' and describes it as low life expectancy with low child mortality. The options are shuffled, and that description matches 'Lower life expectancy and lower child mortality', not the last-listed option 'Higher life expectancy and lower child mortality'. The explanation should name the distractor by its content, not its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) calls the tempting option 'the last option' and describes it as low life expectancy with low child mortality. The options are shuffled, and that description matches 'Lower life expectancy and lower child mortality', not the last-listed option 'Higher life expectancy and lower child mortality'. The explanation should name the distractor by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "Health status across countries",
+  "card": [
+   "Health status is how healthy a population is. It is often shown by life expectancy, child mortality and the main causes of death.",
+   [
+    "Life expectancy",
+    "the average number of years a newborn is expected to live. It is usually higher in high-income countries than in low-income countries."
+   ],
+   [
+    "Child mortality",
+    "the number of children who die before their fifth birthday, usually counted per 1000 live births. It is usually much higher in low- and middle-income countries."
+   ],
+   [
+    "Causes of death",
+    "In high-income countries, most deaths come from non-communicable diseases such as heart disease and cancer. In low-income countries, infectious diseases, such as pneumonia and diarrhoeal disease, cause a larger share of deaths."
+   ]
+  ],
+  "remember": "Low-income countries tend to have lower life expectancy, higher child mortality and more deaths from infectious disease.",
+  "a": {
+   "q": "Which pattern in health status is most likely in a low-income country compared with a high-income country?",
+   "opts": [
+    "Higher child mortality and lower life expectancy",
+    "Lower child mortality and higher life expectancy",
+    "Higher child mortality and higher life expectancy",
+    "Lower child mortality and lower life expectancy"
+   ],
+   "why": "Low-income countries tend to have more child deaths and shorter lives on average. Lower child mortality with lower life expectancy is tempting, but child mortality is usually higher in low-income countries, not lower.",
+   "clue": "Check each measure on its own: higher or lower in low-income countries?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Country X, pneumonia and diarrhoeal disease cause many deaths. In Country Y, heart disease and cancer cause most deaths. What is the best conclusion?",
+   "opts": [
+    "Country X is more likely to be low income than Country Y",
+    "Country Y is more likely to be low income than Country X",
+    "Both countries have the same level of income",
+    "Country Y has a higher child mortality rate than Country X"
+   ],
+   "why": "A larger share of deaths from infectious disease is typical of low-income countries. Heart disease and cancer are more common causes of death in high-income countries, so Country Y is not the likely low-income one.",
+   "clue": "Which type of disease is linked with low-income countries?"
+  }
+ },
+ "cleared_by": "auto"
+}

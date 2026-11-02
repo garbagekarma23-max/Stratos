@@ -1,0 +1,211 @@
+{
+ "id": "acc-general-journal",
+ "title": "The general journal",
+ "brief": "616064f60430",
+ "shortlist": [
+  [
+   "acc-cash-receipts-cash-payments",
+   0.456
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:17:04Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00569,
+  "check": 0.01738,
+  "fix": 0.02946,
+  "recheck": 0.01567
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches special journals (sales, purchases and cash journals) for credit and cash transactions, while the new point teaches the general journal, which records the wider range of transactions such as returns, drawings, advertising stock, owner contributions and corrections, so it is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The general journal",
+  "card": [
+   "The general journal is the book of original entry. Each transaction is recorded here first, in date order, before it goes to the ledger. Each entry shows the date, the accounts debited and credited, the amounts and a short narration.",
+   "Not every transaction has its own special journal in Unit 3, so all kinds are shown as general journal entries. These include cash and credit sales and purchases, returns, drawings, stock used for advertising, assets the owner contributes and corrections.",
+   "Drawings are stock or cash the owner takes for personal use. Debit Drawings, credit Cash at Bank or Inventory. Stock used for advertising is debited to Advertising and credited to Inventory.",
+   "A correction is a new entry that fixes an earlier mistake. It reverses the wrong accounts and records the right ones. The original entry is not erased."
+  ],
+  "remember": "Journal first, ledger second: every transaction and every correction is a dated entry with equal debits and credits.",
+  "a": {
+   "q": "Priya owns a shoe shop. She takes a pair of shoes from inventory for her own use. Which journal entry records this?",
+   "opts": [
+    "Debit Drawings, credit Inventory",
+    "Debit Inventory, credit Drawings",
+    "Debit Advertising, credit Inventory",
+    "Debit Drawings, credit Capital"
+   ],
+   "why": "Taking stock for personal use is drawings, so Drawings is debited and Inventory, an asset that falls, is credited. Debit Advertising is tempting, but that is for stock used to promote the business, not for the owner's personal use.",
+   "clue": "Who benefits from the shoes, the business or the owner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's Cycles debited Repairs Expense instead of Advertising Expense for a $200 poster bill paid by cash at bank. How is this fixed in the journal?",
+   "opts": [
+    "Debit Advertising Expense, credit Repairs Expense",
+    "Debit Repairs Expense, credit Advertising Expense",
+    "Debit Advertising Expense, credit Cash at Bank",
+    "Erase the original entry and write it again"
+   ],
+   "why": "The wrong expense was debited, so it must be credited to cancel it, and the right expense is debited. Crediting Cash at Bank would pay the bill a second time, since cash was already paid correctly. The original entry stays, and a new entry corrects it.",
+   "clue": "Cash was right. Only the expense account was wrong."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit Drawings, credit Inventory",
+   "also_right": []
+  },
+  "b": {
+   "best": "Debit Advertising Expense, credit Repairs Expense",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Not every transaction has its own special journal in Unit 3\" implies some Unit 3 transactions do have special journals. Under the 2025 Study Design, the general journal is used for every transaction (the chapter point says so), so this line could mislead students. Something like \"In Unit 3, every transaction is recorded in the general journal\" would be clearer."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly correct answer, and the entries for drawings, stock used for advertising and the correction are accurate. The only issue is a card line that wrongly suggests some Unit 3 transactions have special journals, when the general journal is used for all of them."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Not every transaction has its own special journal in Unit 3\" implies some Unit 3 transactions do have special journals. Under the 2025 Study Design, the general journal is used for every transaction (the chapter point says so), so this line could mislead students. Something like \"In Unit 3, every transaction is recorded in the general journal\" would be clearer."
+ ],
+ "proposal": {
+  "title": "The general journal",
+  "card": [
+   "The general journal is the book of original entry: each transaction is recorded here first, in date order, before it is posted to the ledger. Each entry shows the date, the accounts debited and credited, the amounts and a short narration.",
+   "In Unit 3, every transaction is recorded in the general journal. This includes cash and credit sales and purchases, returns, drawings, stock used for advertising, assets the owner contributes and corrections.",
+   "Drawings are cash or stock the owner takes for personal use: debit Drawings, credit Cash at Bank or Inventory. Stock used for advertising is debited to Advertising and credited to Inventory.",
+   "A correction is a new entry that fixes an earlier mistake, so the original entry is not erased. It reverses the wrong account and records the right one."
+  ],
+  "remember": "Journal first, ledger second: every transaction and every correction is a dated entry with equal debits and credits.",
+  "a": {
+   "q": "Priya owns a shoe shop. She takes a pair of shoes from inventory for her own use. Which journal entry records this?",
+   "opts": [
+    "Debit Drawings, credit Inventory",
+    "Debit Inventory, credit Drawings",
+    "Debit Advertising, credit Inventory",
+    "Debit Drawings, credit Capital"
+   ],
+   "why": "Taking stock for personal use is drawings, so Drawings is debited and Inventory, an asset that falls, is credited. Debit Advertising is tempting, but that is for stock used to promote the business, not for the owner's personal use.",
+   "clue": "Who benefits from the shoes, the business or the owner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's Cycles debited Repairs Expense instead of Advertising Expense for a $200 poster bill paid by cash at bank. How is this fixed in the journal?",
+   "opts": [
+    "Debit Advertising Expense, credit Repairs Expense",
+    "Debit Repairs Expense, credit Advertising Expense",
+    "Debit Advertising Expense, credit Cash at Bank",
+    "Erase the original entry and write it again"
+   ],
+   "why": "The wrong expense was debited, so it must be credited to cancel it, and the right expense is debited. Crediting Cash at Bank would record the payment a second time, since cash was already recorded correctly. The original entry stays, and a new entry corrects it.",
+   "clue": "Cash was right. Only the expense account was wrong."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Debit Drawings, credit Inventory",
+    "also_right": []
+   },
+   "b": {
+    "best": "Debit Advertising Expense, credit Repairs Expense",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Not every transaction has its own special journal in Unit 3\" implies some Unit 3 transactions do have special journals. Under the 2025 Study Design, the general journal is used for every transaction (the chapter point says so), so this line could mislead students. Something like \"In Unit 3, every transaction is recorded in the general journal\" would be clearer."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Not every transaction has its own special journal in Unit 3\" implies some Unit 3 transactions do have special journals. Under the 2025 Study Design, the general journal is used for every transaction (the chapter point says so), so this line could mislead students. Something like \"In Unit 3, every transaction is recorded in the general journal\" would be clearer."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "The general journal",
+  "card": [
+   "The general journal is the book of original entry: each transaction is recorded here first, in date order, before it is posted to the ledger. Each entry shows the date, the accounts debited and credited, the amounts and a short narration.",
+   "In Unit 3, every transaction is recorded in the general journal. This includes cash and credit sales and purchases, returns, drawings, stock used for advertising, assets the owner contributes and corrections.",
+   "Drawings are cash or stock the owner takes for personal use: debit Drawings, credit Cash at Bank or Inventory. Stock used for advertising is debited to Advertising and credited to Inventory.",
+   "A correction is a new entry that fixes an earlier mistake, so the original entry is not erased. It reverses the wrong account and records the right one."
+  ],
+  "remember": "Journal first, ledger second: every transaction and every correction is a dated entry with equal debits and credits.",
+  "a": {
+   "q": "Priya owns a shoe shop. She takes a pair of shoes from inventory for her own use. Which journal entry records this?",
+   "opts": [
+    "Debit Drawings, credit Inventory",
+    "Debit Inventory, credit Drawings",
+    "Debit Advertising, credit Inventory",
+    "Debit Drawings, credit Capital"
+   ],
+   "why": "Taking stock for personal use is drawings, so Drawings is debited and Inventory, an asset that falls, is credited. Debit Advertising is tempting, but that is for stock used to promote the business, not for the owner's personal use.",
+   "clue": "Who benefits from the shoes, the business or the owner?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's Cycles debited Repairs Expense instead of Advertising Expense for a $200 poster bill paid by cash at bank. How is this fixed in the journal?",
+   "opts": [
+    "Debit Advertising Expense, credit Repairs Expense",
+    "Debit Repairs Expense, credit Advertising Expense",
+    "Debit Advertising Expense, credit Cash at Bank",
+    "Erase the original entry and write it again"
+   ],
+   "why": "The wrong expense was debited, so it must be credited to cancel it, and the right expense is debited. Crediting Cash at Bank would record the payment a second time, since cash was already recorded correctly. The original entry stays, and a new entry corrects it.",
+   "clue": "Cash was right. Only the expense account was wrong."
+  }
+ },
+ "cleared_by": "owner"
+}

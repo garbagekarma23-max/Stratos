@@ -1,0 +1,277 @@
+{
+ "id": "acc-efficiency-ratios",
+ "title": "Efficiency ratios",
+ "brief": "1353ae928aad",
+ "shortlist": [
+  [
+   "bus-efficiency-ratios",
+   0.583
+  ],
+  [
+   "bus-comparing-ratios",
+   0.231
+  ],
+  [
+   "acc-inventory",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00536,
+  "check": 0.01535,
+  "fix": 0.01956,
+  "recheck": 0.01609
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers expense ratio and receivable turnover from NSW Business Studies, but the new point asks for asset turnover, inventory turnover, days receivable and days payable, so it needs more than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Efficiency ratios",
+  "card": [
+   [
+    "Asset turnover",
+    "net sales ÷ average total assets. It shows how many dollars of sales each dollar of assets earns. A higher result means assets are used more fully."
+   ],
+   [
+    "Inventory turnover",
+    "cost of sales ÷ average inventory. It shows how many times stock is sold and replaced in a year. A higher result means stock sells faster."
+   ],
+   [
+    "Days receivable",
+    "average accounts receivable ÷ credit sales × 365. It shows how many days customers take to pay. A lower result means debts are collected faster."
+   ],
+   [
+    "Days payable",
+    "average accounts payable ÷ credit purchases × 365. It shows how many days the business takes to pay its suppliers. A higher result means it pays later."
+   ]
+  ],
+  "remember": "Turnover ratios ask how hard resources work. Days ratios count how long money is waiting to be collected or paid.",
+  "a": {
+   "q": "A business's inventory turnover rises from 6 times to 9 times in a year. What does this show?",
+   "opts": [
+    "Stock is being sold and replaced more quickly",
+    "Stock is being sold and replaced more slowly",
+    "Customers are taking longer to pay their accounts",
+    "The business is paying its suppliers more slowly"
+   ],
+   "why": "Inventory turnover counts how many times stock is sold and replaced, so a rise from 6 to 9 means faster sales of stock. It does not measure how long customers or suppliers take to be paid, which are the days ratios.",
+   "clue": "Turnover counts how many times stock is sold and replaced."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Dubbo sells mostly on credit to local businesses. Its days receivable fall from 45 days to 30 days. What does this show?",
+   "opts": [
+    "Customers are paying their accounts more quickly",
+    "Customers are paying their accounts more slowly",
+    "The café is paying its suppliers more quickly",
+    "The café is selling its stock more quickly"
+   ],
+   "why": "Days receivable counts how many days customers take to pay, so a fall from 45 to 30 days means debts are collected faster. The tempting answer is that a lower number means slower payment, but a lower number means less waiting. Paying suppliers is days payable, and stock speed is inventory turnover.",
+   "clue": "Days receivable is about customers, and a lower number means less waiting."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Stock is being sold and replaced more quickly",
+   "also_right": []
+  },
+  "b": {
+   "best": "Customers are paying their accounts more quickly",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The VCE Accounting Study Design calculates Inventory Turnover in days: average inventory ÷ cost of sales × 365. A lower result means stock sells faster. The card gives the 'times per year' version (cost of sales ÷ average inventory) and says higher is better. Students will meet the days version in VCE exams and textbooks."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question treats inventory turnover as 'times' (6 to 9 times). Under the VCE days-based Inventory Turnover, a rise in the figure would mean stock is selling more slowly. The question teaches an interpretation that conflicts with the VCE convention."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "VCE names these ratios Accounts Receivable Turnover and Accounts Payable Turnover, both expressed in days. The card uses 'days receivable' and 'days payable' and does not mention the VCE names. This may confuse students when they read exam questions."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "The card defines inventory turnover as 'times per year', where higher is better. VCE Accounting uses a days-based Inventory Turnover (average inventory ÷ cost of sales × 365), where lower is better, so the card and question a conflict with the VCE convention and need rewriting."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The VCE Accounting Study Design calculates Inventory Turnover in days: average inventory ÷ cost of sales × 365. A lower result means stock sells faster. The card gives the 'times per year' version (cost of sales ÷ average inventory) and says higher is better. Students will meet the days version in VCE exams and textbooks.",
+  "Question a, fact: The question treats inventory turnover as 'times' (6 to 9 times). Under the VCE days-based Inventory Turnover, a rise in the figure would mean stock is selling more slowly. The question teaches an interpretation that conflicts with the VCE convention.",
+  "Card, wording: VCE names these ratios Accounts Receivable Turnover and Accounts Payable Turnover, both expressed in days. The card uses 'days receivable' and 'days payable' and does not mention the VCE names. This may confuse students when they read exam questions."
+ ],
+ "proposal": {
+  "title": "Efficiency ratios",
+  "card": [
+   [
+    "Asset turnover",
+    "sales ÷ average total assets. It shows how many dollars of sales each dollar of assets earns, measured in times. A higher result means assets are used more fully."
+   ],
+   [
+    "Inventory turnover",
+    "average inventory ÷ cost of sales × 365. It shows how many days stock is held before it is sold. A lower result means stock sells faster."
+   ],
+   [
+    "Accounts receivable turnover",
+    "average accounts receivable ÷ credit sales × 365. It shows how many days customers take to pay. A lower result means debts are collected faster."
+   ],
+   [
+    "Accounts payable turnover",
+    "average accounts payable ÷ credit purchases × 365. It shows how many days the business takes to pay its suppliers. A higher result means it pays later."
+   ]
+  ],
+  "remember": "Asset turnover counts times, so higher means busier assets. The other three count days that stock or money waits.",
+  "a": {
+   "q": "A business's inventory turnover rises from 40 days to 60 days. What does this show?",
+   "opts": [
+    "Stock is being sold more slowly than before",
+    "Stock is being sold more quickly than before",
+    "Customers are taking longer to pay their accounts",
+    "The business is paying its suppliers more slowly"
+   ],
+   "why": "Inventory turnover is measured in days, so a rise from 40 to 60 means stock sits for longer before it is sold. The tempting answer treats a higher turnover as faster sales, but in days a higher number means more waiting. Customer and supplier payments are the receivable and payable ratios.",
+   "clue": "The result is in days, so think about what more days means."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Dubbo sells mostly on credit to local businesses. Its accounts receivable turnover falls from 45 days to 30 days. What does this show?",
+   "opts": [
+    "Customers are paying their accounts more quickly",
+    "Customers are paying their accounts more slowly",
+    "The café is paying its suppliers more quickly",
+    "The café is selling its stock more quickly"
+   ],
+   "why": "Accounts receivable turnover counts how many days customers take to pay, so a fall from 45 to 30 days means debts are collected faster. The tempting answer reads a lower turnover as slower, but in days a lower number means less waiting. Paying suppliers is accounts payable turnover, and stock speed is inventory turnover.",
+   "clue": "This ratio is about customers, and it is measured in days."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Stock is being sold more slowly than before",
+    "also_right": []
+   },
+   "b": {
+    "best": "Customers are paying their accounts more quickly",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The formulas and their meanings match the VCE Study Design, both questions have one clear right answer, and the explanations agree with the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The VCE Accounting Study Design calculates Inventory Turnover in days: average inventory ÷ cost of sales × 365. A lower result means stock sells faster. The card gives the 'times per year' version (cost of sales ÷ average inventory) and says higher is better. Students will meet the days version in VCE exams and textbooks."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The question treats inventory turnover as 'times' (6 to 9 times). Under the VCE days-based Inventory Turnover, a rise in the figure would mean stock is selling more slowly. The question teaches an interpretation that conflicts with the VCE convention."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "VCE names these ratios Accounts Receivable Turnover and Accounts Payable Turnover, both expressed in days. The card uses 'days receivable' and 'days payable' and does not mention the VCE names. This may confuse students when they read exam questions."
+   }
+  ],
+  "flags": [
+   "Card, fact: The VCE Accounting Study Design calculates Inventory Turnover in days: average inventory ÷ cost of sales × 365. A lower result means stock sells faster. The card gives the 'times per year' version (cost of sales ÷ average inventory) and says higher is better. Students will meet the days version in VCE exams and textbooks.",
+   "Question a, fact: The question treats inventory turnover as 'times' (6 to 9 times). Under the VCE days-based Inventory Turnover, a rise in the figure would mean stock is selling more slowly. The question teaches an interpretation that conflicts with the VCE convention.",
+   "Card, wording: VCE names these ratios Accounts Receivable Turnover and Accounts Payable Turnover, both expressed in days. The card uses 'days receivable' and 'days payable' and does not mention the VCE names. This may confuse students when they read exam questions."
+  ]
+ },
+ "final": {
+  "title": "Efficiency ratios",
+  "card": [
+   [
+    "Asset turnover",
+    "sales ÷ average total assets. It shows how many dollars of sales each dollar of assets earns, measured in times. A higher result means assets are used more fully."
+   ],
+   [
+    "Inventory turnover",
+    "average inventory ÷ cost of sales × 365. It shows how many days stock is held before it is sold. A lower result means stock sells faster."
+   ],
+   [
+    "Accounts receivable turnover",
+    "average accounts receivable ÷ credit sales × 365. It shows how many days customers take to pay. A lower result means debts are collected faster."
+   ],
+   [
+    "Accounts payable turnover",
+    "average accounts payable ÷ credit purchases × 365. It shows how many days the business takes to pay its suppliers. A higher result means it pays later."
+   ]
+  ],
+  "remember": "Asset turnover counts times, so higher means busier assets. The other three count days that stock or money waits.",
+  "a": {
+   "q": "A business's inventory turnover rises from 40 days to 60 days. What does this show?",
+   "opts": [
+    "Stock is being sold more slowly than before",
+    "Stock is being sold more quickly than before",
+    "Customers are taking longer to pay their accounts",
+    "The business is paying its suppliers more slowly"
+   ],
+   "why": "Inventory turnover is measured in days, so a rise from 40 to 60 means stock sits for longer before it is sold. The tempting answer treats a higher turnover as faster sales, but in days a higher number means more waiting. Customer and supplier payments are the receivable and payable ratios.",
+   "clue": "The result is in days, so think about what more days means."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Dubbo sells mostly on credit to local businesses. Its accounts receivable turnover falls from 45 days to 30 days. What does this show?",
+   "opts": [
+    "Customers are paying their accounts more quickly",
+    "Customers are paying their accounts more slowly",
+    "The café is paying its suppliers more quickly",
+    "The café is selling its stock more quickly"
+   ],
+   "why": "Accounts receivable turnover counts how many days customers take to pay, so a fall from 45 to 30 days means debts are collected faster. The tempting answer reads a lower turnover as slower, but in days a lower number means less waiting. Paying suppliers is accounts payable turnover, and stock speed is inventory turnover.",
+   "clue": "This ratio is about customers, and it is measured in days."
+  }
+ },
+ "cleared_by": "recheck"
+}

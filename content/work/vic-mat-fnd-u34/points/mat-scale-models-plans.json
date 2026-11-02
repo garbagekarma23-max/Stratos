@@ -1,0 +1,233 @@
+{
+ "id": "mat-scale-models-plans",
+ "title": "Scale models and plans",
+ "brief": "d910e9dc515b",
+ "shortlist": [
+  [
+   "mat-scale-drawings-plans",
+   0.441
+  ],
+  [
+   "mat-reading-plans-diagrams",
+   0.311
+  ],
+  [
+   "mat-similarity-scale-factors",
+   0.258
+  ],
+  [
+   "mat-linear-models",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:22:46Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00601,
+  "check": 0.01652,
+  "fix": 0.02638,
+  "recheck": 0.01299
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank points cover plans with a 1:n scale and areas, but none covers enlarging or reducing three-dimensional models by a scale factor, which needs a new step on volumes, so no bank point fits as it is or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Scale models and plans",
+  "card": [
+   "A scale compares a length on a plan or model with the real length. A scale of 1:50 means 1 unit on the plan is 50 of the same unit in real life.",
+   "To find a real length, multiply the plan length by the scale number. To find a plan length, divide the real length by the scale number.",
+   "Change units after you scale. Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "A scale factor applies to lengths only. Area changes by the scale factor squared, so on a 1:50 plan every real area is 50² = 2500 times the plan area."
+  ],
+  "remember": "Multiply by the scale number to go from plan to real. Divide to go from real to plan.",
+  "a": {
+   "q": "A plan has a scale of 1:200. A wall measures 3 cm on the plan. How long is the real wall?",
+   "opts": [
+    "6 m",
+    "600 m",
+    "0.6 m",
+    "60 m"
+   ],
+   "why": "Real length = 3 × 200 = 600 cm, which is 6 m. The option 600 m forgets to change the units from centimetres to metres.",
+   "clue": "Multiply, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a model of a bridge in Geelong at a scale of 1:80. The real bridge is 24 m long. How long is her model?",
+   "opts": [
+    "30 cm",
+    "1920 cm",
+    "30 m",
+    "3 cm"
+   ],
+   "why": "24 m is 2400 cm. Model length = 2400 ÷ 80 = 30 cm. The option 1920 cm multiplies instead of dividing, which is the wrong direction for going from real to model.",
+   "clue": "Real to model means divide. Use the same units first."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6 m",
+   "also_right": []
+  },
+  "b": {
+   "best": "30 cm",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says 'Use the same units first', which contradicts the card's advice to 'Change units after you scale'. The why also converts 24 m to 2400 cm before dividing, so students get two opposite procedures."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the option 1920 cm comes from multiplying instead of dividing. But multiplying gives 24 × 80 = 1920 m, or 2400 × 80 = 192000 cm, so 1920 cm is not what the wrong method gives. This mislabels the error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct (6 m and 30 cm). Question b's clue tells students to convert units first, which contradicts the card's 'change units after you scale'. Its why also misdescribes how the 1920 cm distractor arises."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue says 'Use the same units first', which contradicts the card's advice to 'Change units after you scale'. The why also converts 24 m to 2400 cm before dividing, so students get two opposite procedures.",
+  "Question b, fact: The why says the option 1920 cm comes from multiplying instead of dividing. But multiplying gives 24 × 80 = 1920 m, or 2400 × 80 = 192000 cm, so 1920 cm is not what the wrong method gives. This mislabels the error."
+ ],
+ "proposal": {
+  "title": "Scale models and plans",
+  "card": [
+   "A scale compares a length on a plan or model with the real length. A scale of 1:50 means 1 unit on the plan is 50 of the same unit in real life.",
+   "To find a real length, multiply the plan length by the scale number. To find a plan length, divide the real length by the scale number.",
+   "Change units after you scale. Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "A scale factor applies to lengths only. Area changes by the scale factor squared, so on a 1:50 plan every real area is 50² = 2500 times the plan area."
+  ],
+  "remember": "Multiply by the scale number to go from plan to real. Divide to go from real to plan.",
+  "a": {
+   "q": "A plan has a scale of 1:200. A wall measures 3 cm on the plan. How long is the real wall?",
+   "opts": [
+    "6 m",
+    "600 m",
+    "0.6 m",
+    "60 m"
+   ],
+   "why": "Real length = 3 × 200 = 600 cm, which is 6 m. The option 600 m forgets to change the units from centimetres to metres.",
+   "clue": "Multiply, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a model of a bridge in Geelong at a scale of 1:80. The real bridge is 24 m long. How long is her model?",
+   "opts": [
+    "30 cm",
+    "1920 m",
+    "3 cm",
+    "0.3 cm"
+   ],
+   "why": "Model length = 24 ÷ 80 = 0.3 m, and 0.3 m is 30 cm. The option 1920 m multiplies instead of dividing, which is the wrong direction for going from real to model. The option 0.3 cm keeps the number but forgets to change metres to centimetres.",
+   "clue": "Real to model means divide. Then change the units."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6 m",
+    "also_right": []
+   },
+   "b": {
+    "best": "30 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 3 × 200 = 600 cm = 6 m, and 24 ÷ 80 = 0.3 m = 30 cm."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says 'Use the same units first', which contradicts the card's advice to 'Change units after you scale'. The why also converts 24 m to 2400 cm before dividing, so students get two opposite procedures."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says the option 1920 cm comes from multiplying instead of dividing. But multiplying gives 24 × 80 = 1920 m, or 2400 × 80 = 192000 cm, so 1920 cm is not what the wrong method gives. This mislabels the error."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue says 'Use the same units first', which contradicts the card's advice to 'Change units after you scale'. The why also converts 24 m to 2400 cm before dividing, so students get two opposite procedures.",
+   "Question b, fact: The why says the option 1920 cm comes from multiplying instead of dividing. But multiplying gives 24 × 80 = 1920 m, or 2400 × 80 = 192000 cm, so 1920 cm is not what the wrong method gives. This mislabels the error."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Scale models and plans",
+  "card": [
+   "A scale compares a length on a plan or model with the real length. A scale of 1:50 means 1 unit on the plan is 50 of the same unit in real life.",
+   "To find a real length, multiply the plan length by the scale number. To find a plan length, divide the real length by the scale number.",
+   "Change units after you scale. Example: 4 cm on a 1:50 plan is 4 × 50 = 200 cm, which is 2 m.",
+   "A scale factor applies to lengths only. Area changes by the scale factor squared, so on a 1:50 plan every real area is 50² = 2500 times the plan area."
+  ],
+  "remember": "Multiply by the scale number to go from plan to real. Divide to go from real to plan.",
+  "a": {
+   "q": "A plan has a scale of 1:200. A wall measures 3 cm on the plan. How long is the real wall?",
+   "opts": [
+    "6 m",
+    "600 m",
+    "0.6 m",
+    "60 m"
+   ],
+   "why": "Real length = 3 × 200 = 600 cm, which is 6 m. The option 600 m forgets to change the units from centimetres to metres.",
+   "clue": "Multiply, then change cm to m."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya builds a model of a bridge in Geelong at a scale of 1:80. The real bridge is 24 m long. How long is her model?",
+   "opts": [
+    "30 cm",
+    "1920 m",
+    "3 cm",
+    "0.3 cm"
+   ],
+   "why": "Model length = 24 ÷ 80 = 0.3 m, and 0.3 m is 30 cm. The option 1920 m multiplies instead of dividing, which is the wrong direction for going from real to model. The option 0.3 cm keeps the number but forgets to change metres to centimetres.",
+   "clue": "Real to model means divide. Then change the units."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,252 @@
+{
+ "id": "eco-government-spending",
+ "title": "Government spending",
+ "brief": "e6a33c3234e4",
+ "shortlist": [
+  [
+   "e-fiscal",
+   0.313
+  ],
+  [
+   "bus-economic-conditions",
+   0.26
+  ],
+  [
+   "e-govtrade",
+   0.229
+  ],
+  [
+   "bus-working-capital-management",
+   0.21
+  ],
+  [
+   "eco-budget-outcomes",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00471,
+  "check": 0.01401,
+  "fix": 0.01531,
+  "recheck": 0.01158
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches the split of government spending into current, capital and transfer payments; e-govtrade only defines government spending within aggregate demand and excludes transfers, and the other matches cover fiscal policy, budget outcomes or unrelated topics.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Government spending",
+  "card": [
+   [
+    "Current spending",
+    "spending on the day-to-day running of services, such as wages for public servants, teachers and nurses, and the cost of running hospitals and schools."
+   ],
+   [
+    "Capital spending",
+    "spending on long-lasting assets that are used for many years, such as roads, railways, hospitals and school buildings."
+   ],
+   [
+    "Transfer payments",
+    "money paid to people with no good or service given back in return, such as the Age Pension and JobSeeker Payment."
+   ],
+   "Transfer payments move income from one group to another. They are not payment for work, so the government does not receive output in exchange."
+  ],
+  "remember": "Current runs services now, capital builds assets that last, and transfers pass money to people.",
+  "a": {
+   "q": "Which of these is an example of government capital spending?",
+   "opts": [
+    "Building a new railway line between two suburbs",
+    "Paying the wages of nurses in a public hospital",
+    "Paying the Age Pension to retired people",
+    "Buying paper and power for a public school"
+   ],
+   "why": "A railway line is a long-lasting asset used for many years, so it is capital spending. Nurses' wages are tempting, but they pay for a service delivered now, which is current spending.",
+   "clue": "Which one is an asset that lasts for many years?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the Victorian Government paid teachers' wages, built a new hospital wing and paid carer payments to families. Which row matches these in order?",
+   "opts": [
+    "Current, capital, transfer",
+    "Capital, current, transfer",
+    "Current, transfer, capital",
+    "Transfer, capital, current"
+   ],
+   "why": "Teachers' wages pay for a service now, so they are current. A hospital wing lasts for years, so it is capital. Carer payments are given with nothing supplied in return, so they are transfers. Wages can look like transfers because money goes to people, but the government receives work in exchange.",
+   "clue": "Ask of each item: is it a service now, a lasting asset, or money with nothing supplied back?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Building a new railway line between two suburbs",
+   "also_right": []
+  },
+  "b": {
+   "best": "Current, capital, transfer",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question says the Victorian Government paid carer payments to families, but Carer Payment (like other income-support transfers) is paid by the Commonwealth through Services Australia. The chapter is about the Commonwealth budget, so the scenario should use the Australian Government, or an item a state actually pays."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b wrongly has the Victorian Government paying carer payments, which are a Commonwealth transfer, in a chapter about the Commonwealth budget. The rest of the point is accurate, and both questions have one clear right answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The question says the Victorian Government paid carer payments to families, but Carer Payment (like other income-support transfers) is paid by the Commonwealth through Services Australia. The chapter is about the Commonwealth budget, so the scenario should use the Australian Government, or an item a state actually pays."
+ ],
+ "proposal": {
+  "title": "Government spending",
+  "card": [
+   [
+    "Current spending",
+    "spending on the day-to-day running of services, such as wages for public servants, teachers and nurses, and the cost of running hospitals and schools."
+   ],
+   [
+    "Capital spending",
+    "spending on long-lasting assets that are used for many years, such as roads, railways, hospitals and school buildings."
+   ],
+   [
+    "Transfer payments",
+    "money paid to people with no good or service given back in return, such as the Age Pension and JobSeeker Payment."
+   ],
+   "Transfer payments move income from one group to another. They are not payment for work, so the government does not receive output in exchange."
+  ],
+  "remember": "Current runs services now, capital builds assets that last, and transfers pass money to people.",
+  "a": {
+   "q": "Which of these is an example of government capital spending?",
+   "opts": [
+    "Building a new railway line between two suburbs",
+    "Paying the wages of nurses in a public hospital",
+    "Paying the Age Pension to retired people",
+    "Buying paper and power for a public school"
+   ],
+   "why": "A railway line is a long-lasting asset used for many years, so it is capital spending. Nurses' wages are tempting, but they pay for a service delivered now, which is current spending.",
+   "clue": "Which one is an asset that lasts for many years?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the Australian Government paid wages to Australian Taxation Office staff, built a new defence base and paid Carer Payment to people caring for a family member. Which list matches these in order?",
+   "opts": [
+    "Current, capital, transfer",
+    "Capital, current, transfer",
+    "Current, transfer, capital",
+    "Transfer, capital, current"
+   ],
+   "why": "Tax office wages pay for a service now, so they are current, and a defence base lasts for years, so it is capital. Carer Payment gives money with nothing supplied in return, so it is a transfer. Wages can look like transfers because money goes to people, but the government receives work in exchange.",
+   "clue": "Ask of each item: is it a service now, a lasting asset, or money with nothing supplied back?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Building a new railway line between two suburbs",
+    "also_right": []
+   },
+   "b": {
+    "best": "Current, capital, transfer",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question says the Victorian Government paid carer payments to families, but Carer Payment (like other income-support transfers) is paid by the Commonwealth through Services Australia. The chapter is about the Commonwealth budget, so the scenario should use the Australian Government, or an item a state actually pays."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The question says the Victorian Government paid carer payments to families, but Carer Payment (like other income-support transfers) is paid by the Commonwealth through Services Australia. The chapter is about the Commonwealth budget, so the scenario should use the Australian Government, or an item a state actually pays."
+  ]
+ },
+ "final": {
+  "title": "Government spending",
+  "card": [
+   [
+    "Current spending",
+    "spending on the day-to-day running of services, such as wages for public servants, teachers and nurses, and the cost of running hospitals and schools."
+   ],
+   [
+    "Capital spending",
+    "spending on long-lasting assets that are used for many years, such as roads, railways, hospitals and school buildings."
+   ],
+   [
+    "Transfer payments",
+    "money paid to people with no good or service given back in return, such as the Age Pension and JobSeeker Payment."
+   ],
+   "Transfer payments move income from one group to another. They are not payment for work, so the government does not receive output in exchange."
+  ],
+  "remember": "Current runs services now, capital builds assets that last, and transfers pass money to people.",
+  "a": {
+   "q": "Which of these is an example of government capital spending?",
+   "opts": [
+    "Building a new railway line between two suburbs",
+    "Paying the wages of nurses in a public hospital",
+    "Paying the Age Pension to retired people",
+    "Buying paper and power for a public school"
+   ],
+   "why": "A railway line is a long-lasting asset used for many years, so it is capital spending. Nurses' wages are tempting, but they pay for a service delivered now, which is current spending.",
+   "clue": "Which one is an asset that lasts for many years?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the Australian Government paid wages to Australian Taxation Office staff, built a new defence base and paid Carer Payment to people caring for a family member. Which list matches these in order?",
+   "opts": [
+    "Current, capital, transfer",
+    "Capital, current, transfer",
+    "Current, transfer, capital",
+    "Transfer, capital, current"
+   ],
+   "why": "Tax office wages pay for a service now, so they are current, and a defence base lasts for years, so it is capital. Carer Payment gives money with nothing supplied in return, so it is a transfer. Wages can look like transfers because money goes to people, but the government receives work in exchange.",
+   "clue": "Ask of each item: is it a service now, a lasting asset, or money with nothing supplied back?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,198 @@
+{
+ "id": "mat-differential-equations",
+ "title": "Differential equations",
+ "brief": "07b422e20b13",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations",
+   0.282
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.264
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.249
+  ],
+  [
+   "mat-solving-linear-equations",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00521,
+  "check": 0.01394,
+  "fix": 0.02514
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches differential equations or equations involving rates; they cover simultaneous linear equations and solving linear equations, which are different ideas and too shallow for Specialist Mathematics Units 3 and 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Differential equations",
+  "card": [
+   "A differential equation links a quantity to its rate of change. For example, dy/dt = 3y says the rate of change of y is 3 times y.",
+   "To form one from a context, write the rate as a derivative and set it equal to what the words describe. \"A tank loses salt at a rate proportional to the amount S present\" gives dS/dt = −kS, with k > 0.",
+   "A solution is a function that makes the equation true. To check one, differentiate it and substitute both y and dy/dt into the equation.",
+   "Worked check: is y = 2e^(3t) a solution of dy/dt = 3y? Differentiating gives dy/dt = 6e^(3t). Also 3y = 3 × 2e^(3t) = 6e^(3t). The two sides match, so it is a solution."
+  ],
+  "remember": "Write the rate as a derivative to form the equation. Substitute the function and its derivative to check a solution.",
+  "a": {
+   "q": "A biologist says the rate of growth of a bacteria population N is proportional to N, with constant k > 0. Which differential equation matches?",
+   "opts": [
+    "dN/dt = kN",
+    "N = kt",
+    "dN/dt = k",
+    "dN/dt = N + k"
+   ],
+   "why": "A rate of change is written as dN/dt, and proportional to N means it equals k times N. The option dN/dt = k is tempting, but that rate stays the same whatever N is, so it is not proportional to N.",
+   "clue": "Rate means a derivative, and proportional means a constant multiple of N."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function is a solution of dy/dt = −2y?",
+   "opts": [
+    "y = 5e^(−2t)",
+    "y = 5e^(2t)",
+    "y = −2t + 5",
+    "y = 5 − 2t²"
+   ],
+   "why": "For y = 5e^(−2t), dy/dt = −10e^(−2t), and −2y = −2 × 5e^(−2t) = −10e^(−2t). The two sides match. For y = 5e^(2t), dy/dt = 10e^(2t), but −2y = −10e^(2t), so the sign is wrong.",
+   "clue": "Differentiate each function, then compare dy/dt with −2y."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "dN/dt = kN",
+   "also_right": []
+  },
+  "b": {
+   "best": "y = 5e^(−2t)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says rate means a derivative and proportional means a constant multiple of N. Together these state dN/dt = kN outright, so a student can pick the answer without forming the equation themselves."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, answers and explanations are correct. The only problem is that question a's clue spells out the answer (rate is a derivative, proportional is a constant multiple of N), so it should hint without stating it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue says rate means a derivative and proportional means a constant multiple of N. Together these state dN/dt = kN outright, so a student can pick the answer without forming the equation themselves."
+ ],
+ "proposal": {
+  "title": "Differential equations",
+  "card": [
+   "A differential equation links a quantity to its rate of change. For example, dy/dt = 3y says the rate of change of y is 3 times y.",
+   "To form one from a context, write the rate as a derivative and set it equal to what the words describe. \"A tank loses salt at a rate proportional to the amount S present\" gives dS/dt = −kS, with k > 0.",
+   "A solution is a function that makes the equation true. To check one, differentiate it and substitute both y and dy/dt into the equation.",
+   "Worked check: is y = 2e^(3t) a solution of dy/dt = 3y? Differentiating gives dy/dt = 6e^(3t). Also 3y = 3 × 2e^(3t) = 6e^(3t). The two sides match, so it is a solution."
+  ],
+  "remember": "Write the rate as a derivative to form the equation. Substitute the function and its derivative to check a solution.",
+  "a": {
+   "q": "A biologist says the rate of growth of a bacteria population N is proportional to N, with constant k > 0. Which differential equation matches?",
+   "opts": [
+    "dN/dt = kN",
+    "N = kt",
+    "dN/dt = k",
+    "dN/dt = N + k"
+   ],
+   "why": "A rate of change is written as dN/dt, and proportional to N means it equals k times N. The option dN/dt = k is tempting, but that rate stays the same whatever N is, so it is not proportional to N.",
+   "clue": "Follow the same steps used for the salt tank on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function is a solution of dy/dt = −2y?",
+   "opts": [
+    "y = 5e^(−2t)",
+    "y = 5e^(2t)",
+    "y = −2t + 5",
+    "y = 5 − 2t²"
+   ],
+   "why": "For y = 5e^(−2t), dy/dt = −10e^(−2t), and −2y = −2 × 5e^(−2t) = −10e^(−2t). The two sides match. For y = 5e^(2t), dy/dt = 10e^(2t), but −2y = −10e^(2t), so the sign is wrong.",
+   "clue": "Differentiate each function, then compare dy/dt with −2y."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue says rate means a derivative and proportional means a constant multiple of N. Together these state dN/dt = kN outright, so a student can pick the answer without forming the equation themselves."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue says rate means a derivative and proportional means a constant multiple of N. Together these state dN/dt = kN outright, so a student can pick the answer without forming the equation themselves."
+  ]
+ },
+ "final": {
+  "title": "Differential equations",
+  "card": [
+   "A differential equation links a quantity to its rate of change. For example, dy/dt = 3y says the rate of change of y is 3 times y.",
+   "To form one from a context, write the rate as a derivative and set it equal to what the words describe. \"A tank loses salt at a rate proportional to the amount S present\" gives dS/dt = −kS, with k > 0.",
+   "A solution is a function that makes the equation true. To check one, differentiate it and substitute both y and dy/dt into the equation.",
+   "Worked check: is y = 2e^(3t) a solution of dy/dt = 3y? Differentiating gives dy/dt = 6e^(3t). Also 3y = 3 × 2e^(3t) = 6e^(3t). The two sides match, so it is a solution."
+  ],
+  "remember": "Write the rate as a derivative to form the equation. Substitute the function and its derivative to check a solution.",
+  "a": {
+   "q": "A biologist says the rate of growth of a bacteria population N is proportional to N, with constant k > 0. Which differential equation matches?",
+   "opts": [
+    "dN/dt = kN",
+    "N = kt",
+    "dN/dt = k",
+    "dN/dt = N + k"
+   ],
+   "why": "A rate of change is written as dN/dt, and proportional to N means it equals k times N. The option dN/dt = k is tempting, but that rate stays the same whatever N is, so it is not proportional to N.",
+   "clue": "Follow the same steps used for the salt tank on the card."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which function is a solution of dy/dt = −2y?",
+   "opts": [
+    "y = 5e^(−2t)",
+    "y = 5e^(2t)",
+    "y = −2t + 5",
+    "y = 5 − 2t²"
+   ],
+   "why": "For y = 5e^(−2t), dy/dt = −10e^(−2t), and −2y = −2 × 5e^(−2t) = −10e^(−2t). The two sides match. For y = 5e^(2t), dy/dt = 10e^(2t), but −2y = −10e^(2t), so the sign is wrong.",
+   "clue": "Differentiate each function, then compare dy/dt with −2y."
+  }
+ },
+ "cleared_by": "auto"
+}

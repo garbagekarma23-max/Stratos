@@ -1,0 +1,239 @@
+{
+ "id": "phys-standing-waves",
+ "title": "Standing waves",
+ "brief": "62f07ab2c7d6",
+ "shortlist": [
+  [
+   "phys-matter-waves",
+   0.459
+  ],
+  [
+   "phys-maxwell-electromagnetic-waves",
+   0.383
+  ],
+  [
+   "phys-electromagnetic-spectrum",
+   0.233
+  ],
+  [
+   "phys-young-s-double-slit",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00495,
+  "check": 0.01311,
+  "fix": 0.02196,
+  "recheck": 0.01058
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches standing waves; they cover matter waves, Maxwell's electromagnetic waves, the electromagnetic spectrum and Young's double slit interference, so the standing wave idea needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Standing waves",
+  "card": [
+   "A wave that meets a boundary is reflected. The incoming wave and the reflected wave travel in opposite directions and add together as they overlap.",
+   [
+    "Node",
+    "a point that stays still, because the two waves always arrive opposite and cancel there. Nodes are fixed in place."
+   ],
+   [
+    "Antinode",
+    "a point where the two waves always arrive together and add, so the medium moves with the largest amplitude. Antinodes are also fixed in place."
+   ],
+   "The pattern does not travel along the medium, which is why it is called a standing wave. Neighbouring nodes are half a wavelength apart, and a node and the next antinode are a quarter of a wavelength apart."
+  ],
+  "remember": "A wave plus its reflection gives a standing wave: fixed nodes of no movement and fixed antinodes of largest movement.",
+  "a": {
+   "q": "A guitar string is plucked and a standing wave forms on it. What is true of a node on the string?",
+   "opts": [
+    "It stays still because the two waves cancel there",
+    "It moves most because the two waves add there",
+    "It moves along the string at the wave speed",
+    "It stays still because no wave reaches it"
+   ],
+   "why": "At a node the incoming and reflected waves always arrive opposite, so they cancel and the string does not move. The tempting last option is wrong because both waves do reach the node. It is the cancelling that keeps it still.",
+   "clue": "Think about what the two waves do when they arrive opposite."
+  },
+  "b": {
+   "d": 3,
+   "q": "A standing wave forms on a rope with a wavelength of 1.2 m. What is the distance from one node to the next antinode?",
+   "opts": [
+    "0.30 m",
+    "0.60 m",
+    "1.2 m",
+    "2.4 m"
+   ],
+   "why": "Neighbouring nodes are half a wavelength apart, which is 0.60 m. An antinode sits midway between two nodes, so a node and the next antinode are a quarter of a wavelength apart: 1.2 ÷ 4 = 0.30 m. The tempting 0.60 m is the distance from node to node.",
+   "clue": "An antinode lies halfway between two neighbouring nodes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It stays still because the two waves cancel there",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.30 m",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why calls 'the tempting last option' the one that is wrong 'because both waves do reach the node', meaning 'It stays still because no wave reaches it'. The options are shuffled, so that option is not last here, and the last option shown is 'It moves along the string at the wave speed'. Name the option by its wording, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and each question has one clear right answer (a: the node stays still because the waves cancel; b: 0.30 m). The only issue is that the why for (a) refers to 'the last option', which does not match the shuffled order. It should name the option by its wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why calls 'the tempting last option' the one that is wrong 'because both waves do reach the node', meaning 'It stays still because no wave reaches it'. The options are shuffled, so that option is not last here, and the last option shown is 'It moves along the string at the wave speed'. Name the option by its wording, not its position."
+ ],
+ "proposal": {
+  "title": "Standing waves",
+  "card": [
+   "A wave that meets a boundary is reflected. The incoming wave and the reflected wave travel in opposite directions and add together as they overlap.",
+   [
+    "Node",
+    "a point that stays still, because the two waves always arrive opposite and cancel there. Nodes are fixed in place."
+   ],
+   [
+    "Antinode",
+    "a point where the two waves always arrive together and add, so the medium moves with the largest amplitude. Antinodes are also fixed in place."
+   ],
+   "The pattern does not travel along the medium, which is why it is called a standing wave. Neighbouring nodes are half a wavelength apart, and a node and the next antinode are a quarter of a wavelength apart."
+  ],
+  "remember": "A wave plus its reflection gives a standing wave: fixed nodes of no movement and fixed antinodes of largest movement.",
+  "a": {
+   "q": "A guitar string is plucked and a standing wave forms on it. What is true of a node on the string?",
+   "opts": [
+    "It stays still because the two waves cancel there",
+    "It moves most because the two waves add there",
+    "It moves along the string at the wave speed",
+    "It stays still because no wave reaches it"
+   ],
+   "why": "At a node the incoming and reflected waves always arrive opposite, so they cancel and the string does not move. The option saying it stays still because no wave reaches it is wrong: both waves do reach the node, and it is their cancelling that keeps it still.",
+   "clue": "Think about what the two waves do when they arrive opposite."
+  },
+  "b": {
+   "d": 3,
+   "q": "A standing wave forms on a rope with a wavelength of 1.2 m. What is the distance from one node to the next antinode?",
+   "opts": [
+    "0.30 m",
+    "0.60 m",
+    "1.2 m",
+    "2.4 m"
+   ],
+   "why": "Neighbouring nodes are half a wavelength apart, which is 0.60 m. An antinode sits midway between two nodes, so a node and the next antinode are a quarter of a wavelength apart: 1.2 ÷ 4 = 0.30 m. The tempting 0.60 m is the distance from node to node.",
+   "clue": "An antinode lies halfway between two neighbouring nodes."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It stays still because the two waves cancel there",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.30 m",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why calls 'the tempting last option' the one that is wrong 'because both waves do reach the node', meaning 'It stays still because no wave reaches it'. The options are shuffled, so that option is not last here, and the last option shown is 'It moves along the string at the wave speed'. Name the option by its wording, not its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why calls 'the tempting last option' the one that is wrong 'because both waves do reach the node', meaning 'It stays still because no wave reaches it'. The options are shuffled, so that option is not last here, and the last option shown is 'It moves along the string at the wave speed'. Name the option by its wording, not its position."
+  ]
+ },
+ "final": {
+  "title": "Standing waves",
+  "card": [
+   "A wave that meets a boundary is reflected. The incoming wave and the reflected wave travel in opposite directions and add together as they overlap.",
+   [
+    "Node",
+    "a point that stays still, because the two waves always arrive opposite and cancel there. Nodes are fixed in place."
+   ],
+   [
+    "Antinode",
+    "a point where the two waves always arrive together and add, so the medium moves with the largest amplitude. Antinodes are also fixed in place."
+   ],
+   "The pattern does not travel along the medium, which is why it is called a standing wave. Neighbouring nodes are half a wavelength apart, and a node and the next antinode are a quarter of a wavelength apart."
+  ],
+  "remember": "A wave plus its reflection gives a standing wave: fixed nodes of no movement and fixed antinodes of largest movement.",
+  "a": {
+   "q": "A guitar string is plucked and a standing wave forms on it. What is true of a node on the string?",
+   "opts": [
+    "It stays still because the two waves cancel there",
+    "It moves most because the two waves add there",
+    "It moves along the string at the wave speed",
+    "It stays still because no wave reaches it"
+   ],
+   "why": "At a node the incoming and reflected waves always arrive opposite, so they cancel and the string does not move. The option saying it stays still because no wave reaches it is wrong: both waves do reach the node, and it is their cancelling that keeps it still.",
+   "clue": "Think about what the two waves do when they arrive opposite."
+  },
+  "b": {
+   "d": 3,
+   "q": "A standing wave forms on a rope with a wavelength of 1.2 m. What is the distance from one node to the next antinode?",
+   "opts": [
+    "0.30 m",
+    "0.60 m",
+    "1.2 m",
+    "2.4 m"
+   ],
+   "why": "Neighbouring nodes are half a wavelength apart, which is 0.60 m. An antinode sits midway between two nodes, so a node and the next antinode are a quarter of a wavelength apart: 1.2 ÷ 4 = 0.30 m. The tempting 0.60 m is the distance from node to node.",
+   "clue": "An antinode lies halfway between two neighbouring nodes."
+  }
+ },
+ "cleared_by": "recheck"
+}

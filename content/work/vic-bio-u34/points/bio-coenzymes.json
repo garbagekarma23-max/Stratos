@@ -1,0 +1,327 @@
+{
+ "id": "bio-coenzymes",
+ "title": "Coenzymes",
+ "brief": "dae74c397fd7",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, write",
+  "2026-11-01T14:46:35Z write: done",
+  "2026-11-01T14:55:56Z check: flagged",
+  "2026-11-01T15:05:24Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card wording)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01208,
+  "check": 0.02738,
+  "fix": 0.0308,
+  "recheck": 0.0146
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, wording: The NADH line says NADH 'picks up electrons and hydrogen'. But NADH is already the loaded form; it is NAD+ that picks them up to become NADH. Reword, e.g. 'NAD+ picks up electrons and hydrogen in breakdown reactions such as cellular respiration, becoming NADH, which later unloads back to NAD+'.",
+ "rejected": {
+  "title": "Coenzymes",
+  "card": [
+   "A coenzyme is a small organic molecule that is not a protein. It helps an enzyme by carrying energy, electrons or hydrogen from one reaction to another.",
+   [
+    "ATP",
+    "carries energy. When ATP loses a phosphate it becomes ADP, and the energy released powers other reactions. ADP is later recharged to ATP."
+   ],
+   [
+    "NADH",
+    "the loaded form of NAD+. It picks up electrons and hydrogen in reactions that break down food, such as cellular respiration, and unloads to NAD+."
+   ],
+   [
+    "NADPH",
+    "the loaded form of NADP+. It delivers electrons and hydrogen to reactions that build molecules, such as making sugar in photosynthesis, and becomes NADP+ again."
+   ]
+  ],
+  "remember": "Coenzymes cycle between loaded and unloaded forms. NADH works in breakdown reactions, NADPH in building ones.",
+  "a": {
+   "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+   "opts": [
+    "ATP",
+    "NADH",
+    "NADPH",
+    "ADP"
+   ],
+   "why": "ATP carries energy, which is released when it loses a phosphate and becomes ADP. ADP is tempting, but it is the unloaded form that must be recharged before it can carry energy again.",
+   "clue": "Which form still has its energy to give?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A chloroplast is building sugar. Which coenzyme supplies the electrons and hydrogen, and what form does it end up as?",
+   "opts": [
+    "NADPH, which ends up as NADP+",
+    "NADH, which ends up as NAD+",
+    "ATP, which ends up as ADP",
+    "NADP+, which ends up as NADPH"
+   ],
+   "why": "NADPH delivers electrons and hydrogen to building reactions such as making sugar, and unloads to NADP+. NADH is tempting, but it works in breakdown reactions like respiration. NADP+ is the unloaded form, so it has nothing to supply.",
+   "clue": "Is this reaction building or breaking down, and which form is loaded?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, wording: The NADH line says NADH 'picks up electrons and hydrogen'. But NADH is already the loaded form; it is NAD+ that picks them up to become NADH. Reword, e.g. 'NAD+ picks up electrons and hydrogen in breakdown reactions such as cellular respiration, becoming NADH, which later unloads back to NAD+'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Coenzymes",
+     "card": [
+      "A coenzyme is a small molecule that helps an enzyme by carrying something between reactions. It is not a protein enzyme itself.",
+      [
+       "ATP",
+       "carries energy. Energy is released when ATP is broken down, and this energy powers other reactions in the cell."
+      ],
+      [
+       "NADH",
+       "carries electrons and hydrogen from one reaction to another, such as those that release energy from food."
+      ],
+      [
+       "NADPH",
+       "also carries electrons and hydrogen. Cells use it to supply them to reactions that build molecules, such as sugars in photosynthesis."
+      ]
+     ],
+     "remember": "Coenzymes such as ATP, NADH and NADPH carry energy, electrons or hydrogen between reactions.",
+     "a": {
+      "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+      "opts": [
+       "ATP",
+       "NADH",
+       "NADPH",
+       "Glucose"
+      ],
+      "why": "ATP carries energy that is released when it is broken down. NADH is tempting, but it carries electrons and hydrogen.",
+      "clue": "Think about which one is broken down to release energy."
+     },
+     "b": {
+      "d": 2,
+      "q": "A cell needs to deliver electrons and hydrogen to a reaction that builds sugar. Which coenzyme is used?",
+      "opts": [
+       "NADPH",
+       "ATP",
+       "Amylase",
+       "Water"
+      ],
+      "why": "NADPH carries electrons and hydrogen to reactions that build molecules. ATP carries energy rather than electrons and hydrogen.",
+      "clue": "Which carrier moves electrons and hydrogen for building reactions?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "ATP",
+      "also_right": []
+     },
+     "b": {
+      "best": "NADPH",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "Two of the four options, Amylase (an enzyme) and Water, are plainly not coenzymes. That leaves a choice between ATP and NADPH, which the question's own wording ('electrons and hydrogen', 'builds sugar') settles directly. This is too easy for Year 12."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct and the intended answers (ATP, NADPH) are right. Question b is very easy because two of its distractors are not coenzymes at all."
+    },
+    "flags": [
+     "Question b, level: Two of the four options, Amylase (an enzyme) and Water, are plainly not coenzymes. That leaves a choice between ATP and NADPH, which the question's own wording ('electrons and hydrogen', 'builds sugar') settles directly. This is too easy for Year 12."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Coenzymes",
+     "card": [
+      "A coenzyme is a small organic molecule that is not a protein. It helps an enzyme by carrying energy, electrons or hydrogen from one reaction to another.",
+      [
+       "ATP",
+       "carries energy. When ATP loses a phosphate it becomes ADP, and the energy released powers other reactions. ADP is later recharged to ATP."
+      ],
+      [
+       "NADH",
+       "the loaded form of NAD+. It picks up electrons and hydrogen in reactions that break down food, such as cellular respiration, and unloads to NAD+."
+      ],
+      [
+       "NADPH",
+       "the loaded form of NADP+. It delivers electrons and hydrogen to reactions that build molecules, such as making sugar in photosynthesis, and becomes NADP+ again."
+      ]
+     ],
+     "remember": "Coenzymes cycle between loaded and unloaded forms. NADH works in breakdown reactions, NADPH in building ones.",
+     "a": {
+      "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+      "opts": [
+       "ATP",
+       "NADH",
+       "NADPH",
+       "ADP"
+      ],
+      "why": "ATP carries energy, which is released when it loses a phosphate and becomes ADP. ADP is tempting, but it is the unloaded form that must be recharged before it can carry energy again.",
+      "clue": "Which form still has its energy to give?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A chloroplast is building sugar. Which coenzyme supplies the electrons and hydrogen, and what form does it end up as?",
+      "opts": [
+       "NADPH, which ends up as NADP+",
+       "NADH, which ends up as NAD+",
+       "ATP, which ends up as ADP",
+       "NADP+, which ends up as NADPH"
+      ],
+      "why": "NADPH delivers electrons and hydrogen to building reactions such as making sugar, and unloads to NADP+. NADH is tempting, but it works in breakdown reactions like respiration. NADP+ is the unloaded form, so it has nothing to supply.",
+      "clue": "Is this reaction building or breaking down, and which form is loaded?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "ATP",
+       "also_right": []
+      },
+      "b": {
+       "best": "NADPH, which ends up as NADP+",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "wording",
+        "detail": "The NADH line says NADH 'picks up electrons and hydrogen'. But NADH is already the loaded form; it is NAD+ that picks them up to become NADH. Reword, e.g. 'NAD+ picks up electrons and hydrogen in breakdown reactions such as cellular respiration, becoming NADH, which later unloads back to NAD+'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The questions and answers are correct and fit the card. The card's NADH line wrongly says the loaded form NADH 'picks up' electrons and hydrogen; NAD+ is what picks them up, so the line should be reworded."
+     },
+     "flags": [
+      "Card, wording: The NADH line says NADH 'picks up electrons and hydrogen'. But NADH is already the loaded form; it is NAD+ that picks them up to become NADH. Reword, e.g. 'NAD+ picks up electrons and hydrogen in breakdown reactions such as cellular respiration, becoming NADH, which later unloads back to NAD+'."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Coenzymes",
+  "card": [
+   "A coenzyme is a small organic molecule that is not a protein. It helps an enzyme by carrying energy, electrons or hydrogen from one reaction to another.",
+   [
+    "ATP",
+    "carries energy. When ATP loses a phosphate it becomes ADP, and the energy released powers other reactions. ADP is later recharged to ATP."
+   ],
+   [
+    "NADH",
+    "the loaded form of NAD+. NAD+ picks up electrons and hydrogen in reactions that break down food, such as cellular respiration, and becomes NADH. NADH later unloads back to NAD+."
+   ],
+   [
+    "NADPH",
+    "the loaded form of NADP+. It delivers electrons and hydrogen to reactions that build molecules, such as making sugar in photosynthesis, and becomes NADP+ again."
+   ]
+  ],
+  "remember": "Coenzymes cycle between loaded and unloaded forms. NADH works in breakdown reactions, NADPH in building ones.",
+  "a": {
+   "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+   "opts": [
+    "ATP",
+    "NADH",
+    "NADPH",
+    "ADP"
+   ],
+   "why": "ATP carries energy, which is released when it loses a phosphate and becomes ADP. ADP is tempting, but it is the unloaded form that must be recharged before it can carry energy again.",
+   "clue": "Which form still has its energy to give?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A chloroplast is building sugar. Which coenzyme supplies the electrons and hydrogen, and what form does it end up as?",
+   "opts": [
+    "NADPH, which ends up as NADP+",
+    "NADH, which ends up as NAD+",
+    "ATP, which ends up as ADP",
+    "NADP+, which ends up as NADPH"
+   ],
+   "why": "NADPH delivers electrons and hydrogen to building reactions such as making sugar, and unloads to NADP+. NADH is tempting, but it works in breakdown reactions like respiration. NADP+ is the unloaded form, so it has nothing to supply.",
+   "clue": "Is this reaction building or breaking down, and which form is loaded?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "ATP",
+   "also_right": []
+  },
+  "b": {
+   "best": "NADPH, which ends up as NADP+",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Coenzymes",
+  "card": [
+   "A coenzyme is a small organic molecule that is not a protein. It helps an enzyme by carrying energy, electrons or hydrogen from one reaction to another.",
+   [
+    "ATP",
+    "carries energy. When ATP loses a phosphate it becomes ADP, and the energy released powers other reactions. ADP is later recharged to ATP."
+   ],
+   [
+    "NADH",
+    "the loaded form of NAD+. NAD+ picks up electrons and hydrogen in reactions that break down food, such as cellular respiration, and becomes NADH. NADH later unloads back to NAD+."
+   ],
+   [
+    "NADPH",
+    "the loaded form of NADP+. It delivers electrons and hydrogen to reactions that build molecules, such as making sugar in photosynthesis, and becomes NADP+ again."
+   ]
+  ],
+  "remember": "Coenzymes cycle between loaded and unloaded forms. NADH works in breakdown reactions, NADPH in building ones.",
+  "a": {
+   "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+   "opts": [
+    "ATP",
+    "NADH",
+    "NADPH",
+    "ADP"
+   ],
+   "why": "ATP carries energy, which is released when it loses a phosphate and becomes ADP. ADP is tempting, but it is the unloaded form that must be recharged before it can carry energy again.",
+   "clue": "Which form still has its energy to give?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A chloroplast is building sugar. Which coenzyme supplies the electrons and hydrogen, and what form does it end up as?",
+   "opts": [
+    "NADPH, which ends up as NADP+",
+    "NADH, which ends up as NAD+",
+    "ATP, which ends up as ADP",
+    "NADP+, which ends up as NADPH"
+   ],
+   "why": "NADPH delivers electrons and hydrogen to building reactions such as making sugar, and unloads to NADP+. NADH is tempting, but it works in breakdown reactions like respiration. NADP+ is the unloaded form, so it has nothing to supply.",
+   "clue": "Is this reaction building or breaking down, and which form is loaded?"
+  }
+ }
+}

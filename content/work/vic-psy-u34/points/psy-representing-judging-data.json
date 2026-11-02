@@ -1,0 +1,242 @@
+{
+ "id": "psy-representing-judging-data",
+ "title": "Representing and judging data",
+ "brief": "92e588f5fc4e",
+ "shortlist": [
+  [
+   "psy-primary-secondary-data-psychology",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:29Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:07Z write: done",
+  "2026-11-01T15:05:31Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:25:51Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00613,
+  "check": 0.01149,
+  "fix": 0.03119,
+  "recheck": 0.01323
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers whether data is primary or secondary and how to check its source quality, while the new point is about reading tables and graphs, spotting outliers and limits, and claiming only what the data supports.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Representing and judging data",
+  "card": [
+   "Tables list results clearly. Graphs, such as bar graphs and line graphs, make patterns and differences easier to see.",
+   "A conclusion should claim only what the data supports. If the data shows a link between two variables, it does not by itself show that one caused the other.",
+   [
+    "Outlier",
+    "A result far from the rest. Note it and consider what may have caused it, rather than hiding it."
+   ],
+   "Limits such as a small sample or a short study should be stated, because they narrow what the conclusion can claim."
+  ],
+  "remember": "Say only what the data supports, and state outliers and limits.",
+  "a": {
+   "q": "A graph shows that students who slept more scored higher on a memory test. Which conclusion is best supported?",
+   "opts": [
+    "More sleep was linked with higher scores in this sample",
+    "More sleep caused higher scores in all students",
+    "Sleep is the only factor that affects memory scores",
+    "Students who sleep less cannot score well"
+   ],
+   "why": "The graph shows a pattern in this sample, so a link is supported. Claiming cause, all students, or only one factor goes beyond the data.",
+   "clue": "Which option stays within what the graph shows?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a class of 12, 11 students improved their quiz score after a mindfulness program. One student dropped sharply. What is the best way to report this?",
+   "opts": [
+    "Report the result, note the outlier and the small sample",
+    "Remove the outlier so the data looks consistent",
+    "Claim the program works for every student",
+    "Ignore the results, as one student did worse"
+   ],
+   "why": "Honest reporting includes the outlier and states limits such as the small sample. Removing it hides data, and claiming it works for every student contradicts the result. One lower score does not make the rest worthless.",
+   "clue": "Report all the data and state what it cannot show."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "More sleep was linked with higher scores in this sample",
+   "also_right": []
+  },
+  "b": {
+   "best": "Report the result, note the outlier and the small sample",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest, it is the only one with precise detail, and it echoes the card's wording ('note it', 'small sample'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Report all the data and state what it cannot show' all but restates the right option, which gives the answer away."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('in this sample'). Every distractor uses an absolute ('cannot', 'only', 'all'), so a test-savvy student can pick it by elimination alone."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts are correct and the intended answers are right. Both questions give their answers away: in (b) the right option is longest and most detailed and the clue nearly restates it, and in (a) it is the only option without an absolute."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option stands out. It is the longest, it is the only one with precise detail, and it echoes the card's wording ('note it', 'small sample'), so a student could pick it without knowing the idea.",
+  "Question b, other: The clue 'Report all the data and state what it cannot show' all but restates the right option, which gives the answer away.",
+  "Question a, wording: The right option is the only hedged one ('in this sample'). Every distractor uses an absolute ('cannot', 'only', 'all'), so a test-savvy student can pick it by elimination alone."
+ ],
+ "proposal": {
+  "title": "Representing and judging data",
+  "card": [
+   "Tables list results clearly. Graphs, such as bar graphs and line graphs, make patterns and differences easier to see.",
+   "A conclusion should claim only what the data supports. If the data shows a link between two variables, it does not by itself show that one caused the other.",
+   [
+    "Outlier",
+    "A result far from the rest. Note it and consider what may have caused it, rather than hiding it."
+   ],
+   "Limits such as a small sample or a short study should be stated, because they narrow what the conclusion can claim."
+  ],
+  "remember": "Say only what the data supports, and state outliers and limits.",
+  "a": {
+   "q": "A graph shows that students who slept more scored higher on a memory test. Which conclusion is best supported?",
+   "opts": [
+    "More sleep went with higher memory scores",
+    "More sleep caused the higher memory scores",
+    "Higher memory scores caused students to sleep more",
+    "Sleep and memory scores were unrelated here"
+   ],
+   "why": "The graph shows the two variables go together, so a link is supported. A link alone does not show which caused which, so both causal options go beyond the data. Saying they are unrelated ignores the pattern the graph shows.",
+   "clue": "Does a pattern on a graph tell you what caused what?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a class of 12, 11 students improved their quiz score after a mindfulness program. One student's score dropped sharply. Which report is best?",
+   "opts": [
+    "Keep the low score and say 12 is too few to generalise",
+    "Remove the low score and say the program helped everyone",
+    "Keep the low score and say the program helps all students",
+    "Remove the low score and say 12 is too few to generalise"
+   ],
+   "why": "An outlier should be kept and noted, not removed to make the data look tidy. With only 12 students, the result cannot be claimed for everyone, so that limit should be stated. Keeping the score but claiming the program helps all students ignores the limit.",
+   "clue": "There are two choices here: what to do with the odd score, and how far to claim."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "More sleep went with higher memory scores",
+    "also_right": []
+   },
+   "b": {
+    "best": "Keep the low score and say 12 is too few to generalise",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option stands out. It is the longest, it is the only one with precise detail, and it echoes the card's wording ('note it', 'small sample'), so a student could pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Report all the data and state what it cannot show' all but restates the right option, which gives the answer away."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('in this sample'). Every distractor uses an absolute ('cannot', 'only', 'all'), so a test-savvy student can pick it by elimination alone."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option stands out. It is the longest, it is the only one with precise detail, and it echoes the card's wording ('note it', 'small sample'), so a student could pick it without knowing the idea.",
+   "Question b, other: The clue 'Report all the data and state what it cannot show' all but restates the right option, which gives the answer away.",
+   "Question a, wording: The right option is the only hedged one ('in this sample'). Every distractor uses an absolute ('cannot', 'only', 'all'), so a test-savvy student can pick it by elimination alone."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Representing and judging data",
+  "card": [
+   "Tables list results clearly. Graphs, such as bar graphs and line graphs, make patterns and differences easier to see.",
+   "A conclusion should claim only what the data supports. If the data shows a link between two variables, it does not by itself show that one caused the other.",
+   [
+    "Outlier",
+    "A result far from the rest. Note it and consider what may have caused it, rather than hiding it."
+   ],
+   "Limits such as a small sample or a short study should be stated, because they narrow what the conclusion can claim."
+  ],
+  "remember": "Say only what the data supports, and state outliers and limits.",
+  "a": {
+   "q": "A graph shows that students who slept more scored higher on a memory test. Which conclusion is best supported?",
+   "opts": [
+    "More sleep went with higher memory scores",
+    "More sleep caused the higher memory scores",
+    "Higher memory scores caused students to sleep more",
+    "Sleep and memory scores were unrelated here"
+   ],
+   "why": "The graph shows the two variables go together, so a link is supported. A link alone does not show which caused which, so both causal options go beyond the data. Saying they are unrelated ignores the pattern the graph shows.",
+   "clue": "Does a pattern on a graph tell you what caused what?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a class of 12, 11 students improved their quiz score after a mindfulness program. One student's score dropped sharply. Which report is best?",
+   "opts": [
+    "Keep the low score and say 12 is too few to generalise",
+    "Remove the low score and say the program helped everyone",
+    "Keep the low score and say the program helps all students",
+    "Remove the low score and say 12 is too few to generalise"
+   ],
+   "why": "An outlier should be kept and noted, not removed to make the data look tidy. With only 12 students, the result cannot be claimed for everyone, so that limit should be stated. Keeping the score but claiming the program helps all students ignores the limit.",
+   "clue": "There are two choices here: what to do with the odd score, and how far to claim."
+  }
+ },
+ "cleared_by": "owner"
+}

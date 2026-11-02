@@ -1771,5 +1771,1491 @@ MADE_BANKS.mod = {
       "why": "The United States agreed privately to remove its missiles from Turkey. The promise not to invade Cuba is tempting because it was also part of the deal, but it was made publicly.",
       "clue": "One promise by the United States was kept out of public view."
     }
+  },
+  "mod-weimar-republic": {
+    "title": "The Weimar Republic",
+    "card": [
+      "The Weimar Republic was Germany's democracy from 1919 to 1933. It began after Germany lost the First World War and the Kaiser gave up the throne.",
+      "It was weak from the start. Many Germans blamed the new government for the Treaty of Versailles of 1919, and there were uprisings from the extreme left and right.",
+      "In 1923 hyperinflation made money almost worthless and wiped out the savings of many families. Later, a period of recovery in the mid 1920s was helped by American loans.",
+      "The Great Depression after 1929 ended the American loans and raised unemployment sharply. Support for extreme parties, including the Nazis, grew, and in 1933 the Nazis ended the republic."
+    ],
+    "remember": "Weimar was a democracy born in defeat, shaken by crises, and ended when the Depression helped the Nazis rise.",
+    "a": {
+      "q": "Why did many Germans distrust the Weimar Republic from its early years?",
+      "opts": [
+        "They blamed it for the defeat and the Treaty of Versailles",
+        "They believed it had started the First World War",
+        "They thought it gave too much power to the Kaiser",
+        "They saw it as too slow to join the Allied powers"
+      ],
+      "why": "The republic took power as Germany lost the war, so many people blamed it for the defeat and the Treaty of Versailles. It did not start the war, and the Kaiser had already gone.",
+      "clue": "Think about who was in government when the war ended."
+    },
+    "b": {
+      "d": 3,
+      "q": "Karl, a clerk in Hamburg, says the republic was safe in 1927 but in danger by 1932. Which event best explains the change?",
+      "opts": [
+        "The Depression ended American loans and raised unemployment",
+        "Hyperinflation destroyed the value of German money",
+        "An uprising removed the Kaiser from power",
+        "The Treaty of Versailles placed harsh terms on Germany"
+      ],
+      "why": "The Depression ended the American loans that had helped the recovery and raised unemployment, so extreme parties gained support. Hyperinflation is a tempting answer, but it happened in 1923, and the Treaty of Versailles and the Kaiser's fall came even earlier, all before 1927.",
+      "clue": "Check which event came after 1927."
+    }
+  },
+  "mod-new-deal": {
+    "title": "The New Deal",
+    "card": [
+      "The New Deal was a set of programs begun by President Franklin Roosevelt in 1933. Its aim was to fight the Great Depression in the United States.",
+      "Roosevelt used government spending to create jobs. Public works programs paid unemployed people to build roads, bridges and parks.",
+      "New agencies dealt with particular problems. The Federal Deposit Insurance Corporation (FDIC) insured bank savings, so a bank failure no longer wiped them out. This restored trust in banks.",
+      "New laws also helped, such as the Social Security Act of 1935, which set up pensions for older people. Unemployment fell but stayed high, and full recovery came only later."
+    ],
+    "remember": "The New Deal used government spending, new agencies and new laws to ease the Depression, but it did not end it alone.",
+    "a": {
+      "q": "Which action is an example of the New Deal's approach?",
+      "opts": [
+        "Paying unemployed people to build public roads",
+        "Leaving the economy to recover without any help",
+        "Raising taxes to cut government spending",
+        "Cutting relief payments to balance the budget"
+      ],
+      "why": "The New Deal used government spending to create jobs, such as building roads. Leaving the economy alone is the opposite approach, and cutting spending or relief would not have created work.",
+      "clue": "Did the New Deal spend more or less?"
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1934, Dana in Ohio feared her bank would fail and her savings would vanish. Which New Deal measure was meant to ease this fear?",
+      "opts": [
+        "Government insurance of bank deposits",
+        "Government pensions for older people",
+        "Paying jobless people to build roads",
+        "A rise in income taxes on the rich"
+      ],
+      "why": "The FDIC insured bank deposits, so savers would not lose their money if a bank failed. Pensions from the Social Security Act are tempting, but they supported older people, not bank savers.",
+      "clue": "What would stop a bank failure costing Dana her money?"
+    }
+  },
+  "mod-road-second-world-war": {
+    "title": "The road to the Second World War",
+    "card": [
+      "In the 1930s, Japan, Italy and Germany used force or threats to expand their power. Japan invaded Manchuria in 1931. Italy invaded Ethiopia in 1935.",
+      "Germany under Hitler broke the Treaty of Versailles. It rearmed, moved troops into the Rhineland in 1936, annexed (took over) Austria in 1938 and took the Sudetenland from Czechoslovakia in 1938.",
+      [
+        "Appeasement",
+        "Britain and France gave in to some demands, hoping to avoid another war. At Munich in 1938, they agreed that Germany could take the Sudetenland."
+      ],
+      [
+        "War",
+        "In March 1939, Germany took the rest of Czechoslovakia. Germany invaded Poland on 1 September 1939, and Britain and France then declared war."
+      ]
+    ],
+    "remember": "Aggression went unchecked as appeasement failed, until the invasion of Poland brought war.",
+    "a": {
+      "q": "What was the main aim of Britain and France in following appeasement?",
+      "opts": [
+        "To avoid another war by giving in to some demands",
+        "To help Germany rebuild its army after Versailles",
+        "To prepare their own armies for an invasion of Germany",
+        "To win Italy and Japan over as allies against Germany"
+      ],
+      "why": "Appeasement meant giving in to some demands in the hope of keeping peace. It was not a plan to attack Germany, because Britain and France wanted to avoid war at that point.",
+      "clue": "Think about what Munich in 1938 was meant to achieve."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which event led directly to Britain and France declaring war on Germany in 1939?",
+      "opts": [
+        "Germany's invasion of Poland",
+        "Germany's takeover of the Sudetenland",
+        "Italy's invasion of Ethiopia",
+        "Japan's invasion of Manchuria"
+      ],
+      "why": "Britain and France declared war after Germany invaded Poland on 1 September 1939. The Sudetenland was taken in 1938 with their agreement at Munich, so it is the tempting wrong option, but it did not lead to war then.",
+      "clue": "Look for the event that came just before the declarations of war."
+    }
+  },
+  "mod-1920s-modern-life": {
+    "title": "The 1920s and modern life",
+    "card": [
+      "In the 1920s, new technology changed daily life in countries such as the United States, Britain and Australia. Cars, radio and cinema became part of ordinary life for many people.",
+      "Cars let people travel further and faster, so more people could live away from where they worked. Radio brought news, music and sport into the home at the same time for many listeners.",
+      "Cinema was cheap entertainment for large audiences. Jazz music and new dances spread through records, radio and dance halls.",
+      "Many young people took up these new styles and ideas. Older people often saw this as a challenge to traditional values and manners."
+    ],
+    "remember": "New technology and popular culture changed daily life, and young people often led the way.",
+    "a": {
+      "q": "Why did radio change daily life in the 1920s?",
+      "opts": [
+        "It let many people hear the same news and music at home",
+        "It replaced the need for newspapers and cinemas",
+        "It let people travel further from their workplaces",
+        "It let families watch films cheaply in their own homes"
+      ],
+      "why": "Radio brought the same news, music and sport into many homes at the same time. It did not replace newspapers or cinemas, and films were watched at the cinema, not on the radio.",
+      "clue": "Think about what radio brought into the home."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1926, Hana's grandparents in a small town are upset that she goes to a dance hall to hear jazz and wears new fashions. What does this best show?",
+      "opts": [
+        "Young people challenging older ways through new culture",
+        "Older people leading the spread of new technology",
+        "Cars letting families live further from their work",
+        "Cinema replacing dance halls as the main entertainment"
+      ],
+      "why": "Hana is taking up new music and styles, and her grandparents see them as a break from tradition. Cars did let people live further from work, but this case is about generations and values, not about travel or cinema.",
+      "clue": "Look at who likes the new styles and who objects."
+    }
+  },
+  "mod-women-between-wars": {
+    "title": "Women between the wars",
+    "card": [
+      "Many women won the vote after the First World War: Germany in November 1918 and the United States in 1920. Britain gave it to women over 30 who met a property qualification in 1918, then to all women over 21 in 1928.",
+      "The war had put many women into paid work, and in the 1920s more women worked in offices, shops and factories. Most were paid less than men and were expected to leave work when they married.",
+      "Some young women, often called flappers, wore shorter skirts and short hair, and went out without a chaperone. This was a new freedom, but it was mostly seen among younger women in towns and cities.",
+      "Most women still faced limits. Many were expected to care for the home and children, and many jobs and professions were closed to them. Gains were real but uneven."
+    ],
+    "remember": "Women gained votes and some new freedoms, but pay, jobs and home duties still held most of them back.",
+    "a": {
+      "q": "Which statement best describes women's lives in the 1920s?",
+      "opts": [
+        "Many won the vote, but most still earned less than men",
+        "Many won equal pay, but few were allowed to vote",
+        "Many won the vote, but fewer worked in offices and shops",
+        "Many wore shorter skirts, but few were able to vote"
+      ],
+      "why": "Women won the vote in Germany, the United States and Britain, yet most were still paid less than men. The option about fewer office and shop jobs is tempting because it pairs a real gain with a limit, but more women worked in offices and shops in the 1920s, not fewer.",
+      "clue": "Check both halves of each option against the card."
+    },
+    "b": {
+      "d": 3,
+      "q": "Edith, a young typist in Manchester in 1926, wears her hair short and goes dancing with friends. She earns less than the men in her office and will be expected to quit if she marries. What does her case show?",
+      "opts": [
+        "Gains in dress and social life sat beside limits at work",
+        "Gains in dress and social life had ended limits at work",
+        "Gains in pay at work sat beside old limits on her dress",
+        "Limits at work had stopped any gains in her social life"
+      ],
+      "why": "Edith's short hair and dancing show new freedoms in dress and social life. Her lower pay and the expectation that she leave work on marriage show limits remained. The option claiming that dress changes ended work limits is tempting, but her own case disproves it.",
+      "clue": "Compare what Edith does in her free time with what happens in her office."
+    }
+  },
+  "mod-challenges-social-order": {
+    "title": "Challenges to the social order",
+    "card": [
+      "The social order is the accepted set of roles and ranks in a society, such as who holds power by class, race or gender. Between the wars, many people began to question it.",
+      [
+        "Class",
+        "Workers used strikes to demand better pay and conditions. In Britain in 1926, a general strike was called to back coal miners facing pay cuts and longer hours. It was not a bid for revolution, and it ended after nine days."
+      ],
+      [
+        "Race",
+        "Groups pushed back against racial discrimination. In the United States, the Harlem Renaissance and groups such as the NAACP asserted Black pride and rights."
+      ],
+      [
+        "Gender",
+        "Some women challenged ideas that their place was in the home, by taking jobs, voting and joining protests. Challenges often met resistance and did not always succeed."
+      ]
+    ],
+    "remember": "Between the wars, strikes, protests and movements questioned who held power by class, race and gender.",
+    "a": {
+      "q": "What was the main aim of the 1926 general strike in Britain?",
+      "opts": [
+        "To back coal miners against cuts to pay and longer hours",
+        "To overthrow the government through an armed revolution",
+        "To win equal pay for women working in the coal mines",
+        "To demand a shorter working week for factory workers"
+      ],
+      "why": "The strike was called to support coal miners facing pay cuts and longer hours, a challenge based on class. Some feared it was a revolution, but it was not a bid to overthrow the government, and it ended after nine days.",
+      "clue": "Think about which group the strike was called to help."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1925, Maya, a Black writer in New York, publishes poems that celebrate Black life and demand equal rights. Which challenge to the social order does this show?",
+      "opts": [
+        "A challenge to racial roles through culture and protest",
+        "A challenge to class roles through a workers' strike",
+        "A challenge to gender roles through women's writing",
+        "A challenge to government through an armed uprising"
+      ],
+      "why": "Maya's poems assert Black pride and demand equal rights, which questions racial hierarchy, as the Harlem Renaissance did. Being a woman writer does not make it a gender challenge: her poems demand racial equality, not changes to women's roles.",
+      "clue": "Focus on what her poems demand, not who wrote them."
+    }
+  },
+  "mod-modern-art-culture": {
+    "title": "Modern art and culture",
+    "card": [
+      "Modern artists broke from realistic styles to show a changed and unsettled world. This break began before the First World War and grew after 1918, as new film and jazz also reflected the modern age.",
+      [
+        "Expressionism",
+        "began in Germany around 1905. It shows strong feelings through distorted shapes and bold colours, rather than a true-to-life picture."
+      ],
+      [
+        "Cubism",
+        "began around 1907 with Pablo Picasso and Georges Braque. It breaks objects into shapes and shows them from several angles at once."
+      ],
+      [
+        "Surrealism",
+        "began in 1924, between the wars. It draws on dreams and the unconscious mind to create strange, dreamlike images."
+      ]
+    ],
+    "remember": "Modern art broke from realism, starting before 1914 and growing after the war.",
+    "a": {
+      "q": "An artist paints an ordinary room where clocks melt and furniture floats, in a strange scene that makes no logical sense. Which movement does this match?",
+      "opts": ["Surrealism", "Cubism", "Expressionism", "Realism"],
+      "why": "Strange, illogical scenes that come from the unconscious mind are the mark of Surrealism. Expressionism also distorts things, but it does so to show strong feeling, not to create an impossible scene.",
+      "clue": "Think about where the impossible images come from."
+    },
+    "b": {
+      "d": 3,
+      "q": "A painting shows a violin as flat shapes, seen from the front and the side at the same time. Which movement does it best match?",
+      "opts": ["Cubism", "Expressionism", "Surrealism", "Realism"],
+      "why": "Showing an object from several angles at once as broken shapes is the mark of Cubism. Expressionism distorts shapes too, but its aim is to show emotion, and Surrealism draws on dreams.",
+      "clue": "Look at how the object is shown from different angles."
+    }
+  },
+  "mod-propaganda-control": {
+    "title": "Propaganda and control",
+    "card": [
+      "A totalitarian state tries to control nearly every part of public and private life. It wants people to obey, and also to believe what the regime tells them.",
+      [
+        "Propaganda and censorship",
+        "propaganda is posters, films and speeches that promote the regime and its leader. Censorship is the state blocking or removing information that does not suit it."
+      ],
+      [
+        "Youth groups",
+        "children joined organisations such as the Hitler Youth in Germany. These taught loyalty to the regime and the leader."
+      ],
+      [
+        "Secret police",
+        "forces such as the Gestapo in Germany used spying, arrest and fear. People worried that anyone might report them."
+      ]
+    ],
+    "remember": "Totalitarian states used persuasion, blocked information, trained the young and used fear to control people.",
+    "a": {
+      "q": "A regime bans a newspaper that criticised the leader and allows only news approved by officials. Which method of control is this?",
+      "opts": ["Censorship", "Propaganda", "Youth group training", "Secret police surveillance"],
+      "why": "The state is blocking information it dislikes and approving only what suits it, which is censorship. Propaganda is the tempting answer, but it promotes the regime's messages rather than blocking others.",
+      "clue": "Focus on what is being stopped, not what is being promoted."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a totalitarian state, a shopkeeper stops making jokes about the leader after hearing that a neighbour was arrested for a remark overheard by a customer. Which method of control is at work?",
+      "opts": [
+        "Secret police, who spy on and arrest people",
+        "Censorship, which removes critical words from print",
+        "Propaganda, which promotes the leader in public",
+        "Youth groups, which teach children to obey"
+      ],
+      "why": "The shopkeeper stays quiet because people can be spied on and arrested for what they say, which is how the secret police controlled behaviour. Censorship is tempting because his words are silenced, but no official is blocking or removing any information. He changes what he says because of the risk of being reported.",
+      "clue": "Who could overhear him, and what could happen next?"
+    }
+  },
+  "mod-art-culture-under-dictatorship": {
+    "title": "Art and culture under dictatorship",
+    "card": [
+      "Dictatorships treated art, film, music and writing as tools of power. They wanted culture to spread the regime's ideas and to build loyalty to the leader and the state.",
+      "Artists, writers and filmmakers were pushed to make work that praised the regime. In the Soviet Union, this approach was called socialist realism. It showed workers, farmers and leaders as heroic and the future as bright.",
+      "Work seen as dangerous was banned. In Nazi Germany in 1933, books by Jewish authors and by writers who opposed the Nazis were burned. Modern art the Nazis disliked was labelled 'degenerate' and removed from galleries.",
+      "Those who refused to follow the rules could lose their jobs, be stopped from working, be jailed or leave the country. Many artists went into exile."
+    ],
+    "remember": "Dictators used culture to promote their ideas and banned work that challenged them.",
+    "a": {
+      "q": "Why did dictatorships such as Nazi Germany and Stalin's Soviet Union control art and writing so closely?",
+      "opts": [
+        "They saw culture as a way to spread their ideas",
+        "They wanted artists to be free to sell abroad",
+        "They thought art had no effect on what people believed",
+        "They hoped to raise money by taxing galleries"
+      ],
+      "why": "Dictatorships saw art, film and writing as tools for shaping what people thought and for building loyalty to the regime. The claim that art had no effect is wrong, because the regime's close control shows they believed it mattered a great deal.",
+      "clue": "Think about what the regime wanted people to believe."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1930s Moscow, a painter is asked to show a smiling crowd of farmers and a heroic leader. Which approach is the state asking for?",
+      "opts": ["Socialist realism", "Degenerate art", "Book burning", "Exile art"],
+      "why": "Socialist realism was the Soviet style that showed workers, farmers and leaders as heroic and the future as bright. Degenerate art is the Nazi label for modern work they banned, so it does not describe a request for praise.",
+      "clue": "Which style praised the regime in a Soviet setting?"
+    }
+  },
+  "mod-persecution-minorities": {
+    "title": "Persecution of minorities",
+    "card": [
+      "The Nazi regime in Germany blamed Jews for the country's problems. This idea was spread by propaganda and hatred long before the war.",
+      [
+        "Nuremberg Laws",
+        "passed in 1935. They took away German citizenship from Jews and banned marriage between Jews and non-Jews."
+      ],
+      [
+        "Violence",
+        "Persecution grew from lost rights to attacks. On Kristallnacht in November 1938, Jewish shops, homes and synagogues were attacked across Germany."
+      ],
+      [
+        "Holocaust",
+        "During the Second World War (1939 to 1945) the Nazis murdered about six million Jews. Sinti and Roma people were also persecuted and many were murdered."
+      ]
+    ],
+    "remember": "Persecution of Jews in Nazi Germany moved from loss of rights to violence and, in the war, mass murder.",
+    "a": {
+      "q": "What did the Nuremberg Laws of 1935 do?",
+      "opts": [
+        "Took away the citizenship of Jews in Germany",
+        "Ordered the murder of Jews across Europe",
+        "Forced Jews to leave Germany within a year",
+        "Closed all Jewish shops in Germany in one night"
+      ],
+      "why": "The laws removed citizenship and banned marriage between Jews and non-Jews. They did not order mass murder, which came later in the war. Mass murder is the tempting answer, but the laws were about removing rights.",
+      "clue": "The laws took away status, not lives."
+    },
+    "b": {
+      "d": 2,
+      "q": "Lena is making a timeline of Nazi persecution of Jews for a class display. Which order of events is correct?",
+      "opts": [
+        "Nuremberg Laws, then Kristallnacht, then the Holocaust",
+        "Kristallnacht, then Nuremberg Laws, then the Holocaust",
+        "Nuremberg Laws, then the Holocaust, then Kristallnacht",
+        "The Holocaust, then Nuremberg Laws, then Kristallnacht"
+      ],
+      "why": "The Nuremberg Laws came in 1935, Kristallnacht in November 1938, and the Holocaust during the war from 1939 to 1945. Putting Kristallnacht first is tempting because it was so well known, but rights were removed three years before it.",
+      "clue": "Check the year or period given for each event."
+    }
+  },
+  "mod-great-purge": {
+    "title": "The Great Purge",
+    "card": [
+      "The Great Purge was a campaign of terror in the Soviet Union in the late 1930s. It was led by Joseph Stalin, the Soviet leader.",
+      "The secret police, the NKVD, arrested huge numbers of people accused of disloyalty. Many were pressed into confessing.",
+      "Some were put on public show trials. Many were sent to labour camps, and many were shot.",
+      "Party members, army officers and ordinary citizens were all targeted. The purge spread fear and removed people who might oppose Stalin."
+    ],
+    "remember": "The Great Purge used the secret police to remove people accused of disloyalty and to spread fear.",
+    "a": {
+      "q": "Who carried out the arrests during the Great Purge?",
+      "opts": [
+        "The NKVD, the Soviet secret police",
+        "The Gestapo, the German secret police",
+        "The Red Army, the Soviet military",
+        "The Politburo, the Party leadership"
+      ],
+      "why": "The NKVD made the arrests on charges of disloyalty. The Red Army was a target of the purge, not the force making arrests, as many of its officers were seized. The Gestapo was the German secret police and had no role in the Soviet Union.",
+      "clue": "One group on this list belongs to another country, and one was a target."
+    },
+    "b": {
+      "d": 3,
+      "q": "Anya, a factory worker in 1937, is not a Party member. A neighbour tells the NKVD she criticised Stalin. What is most likely?",
+      "opts": [
+        "She is arrested, as ordinary citizens were targeted too",
+        "She is ignored, as only Party members were targeted",
+        "She is warned, as only army officers faced arrest",
+        "She is ignored, as only Stalin's rivals were at risk"
+      ],
+      "why": "The purge reached far beyond the Party and the army: ordinary citizens accused of disloyalty were arrested too. The tempting idea that only Party members or Stalin's rivals were at risk is wrong, since anyone reported for disloyalty could be seized.",
+      "clue": "Look at which groups the purge reached."
+    }
+  },
+  "mod-white-australia": {
+    "title": "White Australia",
+    "card": [
+      "The Immigration Restriction Act 1901 was one of the first laws passed by the new Australian Parliament after Federation. It was the main law behind the White Australia policy.",
+      "The Act did not name any race. Instead it gave officials the power to give a dictation test to a person who wanted to enter. The test could be set in any European language, chosen by the officer.",
+      "Officers could pick a language the person did not know, so most non-European migrants failed and were kept out. People from Europe were rarely tested.",
+      "The policy rested on racist beliefs and on fears about jobs and wages. It shaped who could migrate to Australia for decades, and its main parts ended in the 1960s and 1970s."
+    ],
+    "remember": "The 1901 Act used a dictation test to keep most non-European migrants out.",
+    "a": {
+      "q": "How did the Immigration Restriction Act 1901 keep most non-European migrants out without naming any race?",
+      "opts": [
+        "A dictation test in a language chosen by the officer",
+        "An English reading test that every migrant had to pass",
+        "A yearly limit on the number of migrants from each country",
+        "An entry fee charged to every migrant arriving by ship"
+      ],
+      "why": "Officials could set the test in any European language, so they could make sure certain people failed. An English test sat by every migrant is wrong: the language was not fixed, and people from Europe were rarely tested at all.",
+      "clue": "Think about how a rule could look fair yet still exclude people."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1903, an officer gives Wen, a man from China, a dictation test in Dutch. Wen does not know Dutch. Why does this show the Act worked as a tool of exclusion?",
+      "opts": [
+        "The officer could choose a language Wen would fail",
+        "The test measured whether Wen could read English",
+        "The test was only given to people with a criminal record",
+        "The test was fair because every migrant sat it in Dutch"
+      ],
+      "why": "The officer chose the language, so the test could be made impossible to pass. It did not check English, because it could be set in any European language, and it was not given equally to all migrants.",
+      "clue": "Ask whether Wen had any real chance to pass."
+    }
+  },
+  "mod-yalta-potsdam": {
+    "title": "Yalta and Potsdam",
+    "card": [
+      "In 1945 the Allied leaders met twice to plan the end of the war and postwar Europe. Yalta was in February, in the Crimea. Potsdam was in July and August, near Berlin, after Germany had surrendered.",
+      "At Yalta, Roosevelt, Churchill and Stalin agreed that Germany must surrender unconditionally and be split into zones run by the Allies. Stalin also promised free elections in Eastern Europe.",
+      "At Potsdam, Truman, Stalin and Churchill (later replaced by Attlee) confirmed the zones and moved Poland's borders west. They also confirmed that Germany's capital, Berlin, was divided into zones.",
+      "Disagreements grew. Soviet forces stayed in Eastern Europe, and in most countries there the promised free elections were not held or were rigged. The Western leaders came to distrust Stalin's promises, and Stalin distrusted them."
+    ],
+    "remember": "The conferences planned postwar Europe, but broken promises and clashing aims fed distrust.",
+    "a": {
+      "q": "Which agreement was made about Germany at Yalta and Potsdam?",
+      "opts": [
+        "It would be divided into zones run by the Allies",
+        "It would be joined to Poland as one state",
+        "It would be run by the Soviet Union alone",
+        "It would be left free to rule itself at once"
+      ],
+      "why": "The Allies agreed to divide Germany into zones, and Berlin was split too. Soviet control of all Germany is wrong, because the Western Allies ran zones as well.",
+      "clue": "What did Potsdam confirm from the Yalta plan?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did the Yalta and Potsdam conferences add to Cold War distrust?",
+      "opts": [
+        "Promised free elections in the east often did not happen",
+        "Germany was left united and armed after the war",
+        "Stalin refused to attend the Potsdam conference",
+        "The Western leaders agreed to give up their zones"
+      ],
+      "why": "Stalin had promised free elections in Eastern Europe, but Soviet forces stayed and in most countries the elections were not held or were rigged. The West saw this as a broken promise. Stalin did attend Potsdam, so that option is wrong.",
+      "clue": "Look at what Stalin promised and what then happened."
+    }
+  },
+  "mod-communism-capitalism": {
+    "title": "Communism and capitalism",
+    "card": [
+      "After 1945 the Soviet Union and the United States ran their countries in very different ways. These differences were a main source of Cold War rivalry.",
+      [
+        "Soviet Union",
+        "a one-party state run by the Communist Party, with no free choice between parties. The state owned most industry and farmland and used a central plan to set what was made."
+      ],
+      [
+        "United States",
+        "a democracy where citizens voted in elections between competing parties. Most businesses were privately owned and prices were set mainly by the free market."
+      ],
+      "Each side saw the other's system as a threat to its own way of life. This made it hard to trust each other."
+    ],
+    "remember": "The Soviet Union had one party and a planned economy. The United States had elections and free markets.",
+    "a": {
+      "q": "Which feature belonged to the Soviet Union after 1945?",
+      "opts": [
+        "A central plan set what factories made",
+        "Private owners set prices in free markets",
+        "Voters chose between several parties",
+        "Businesses competed to win customers"
+      ],
+      "why": "In the Soviet system the state owned most industry and a central plan decided output. The other options describe the free market and multiparty democracy of the United States.",
+      "clue": "Was the Soviet economy run by the state or by the market?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1950 a citizen can vote between two parties and open a private shop to compete with others. Which country is this most likely to be, and why?",
+      "opts": [
+        "United States, as it had elections and private business",
+        "Soviet Union, as it had elections and private business",
+        "United States, as the state planned all production",
+        "Soviet Union, as the state allowed several parties"
+      ],
+      "why": "Choice between parties and privately owned businesses matched the United States. The Soviet Union allowed only one party and the state owned most industry, so the other options mix up the two systems.",
+      "clue": "Match both the voting and the shop to one system."
+    }
+  },
+  "mod-united-nations": {
+    "title": "The United Nations",
+    "card": [
+      "The United Nations (UN) was founded in 1945, just after the Second World War. Its main aim was to keep international peace and prevent another world war.",
+      "Member states meet in the General Assembly, where each has one vote. The Security Council deals with threats to peace. The United States, the Soviet Union, Britain, France and China held permanent seats.",
+      "The UN also took on other work. In 1948 it adopted the Universal Declaration of Human Rights, a statement of rights for all people.",
+      "It also worked on economic and social problems, such as poverty and health, and helped refugees, who are people forced to flee their homes."
+    ],
+    "remember": "The UN began to keep peace and also worked on rights, social problems and refugees.",
+    "a": {
+      "q": "What was the main reason the United Nations was founded in 1945?",
+      "opts": [
+        "To keep international peace after the war",
+        "To manage trade between member countries",
+        "To rule over the countries that joined",
+        "To help only refugees return home"
+      ],
+      "why": "The UN was set up to stop another world war. It later took on other work, such as refugees, but that was not its main founding aim. It was not a government over its members.",
+      "clue": "Think about what the world had just been through."
+    },
+    "b": {
+      "d": 2,
+      "q": "A student claims the UN's only job was to stop wars between states. Which UN action best shows the student is wrong?",
+      "opts": [
+        "Giving aid to people forced to flee their homes",
+        "A Security Council debate on a threat to peace",
+        "A General Assembly vote to end a border war",
+        "Permanent members meeting to stop an invasion"
+      ],
+      "why": "Helping refugees is UN work beyond keeping peace, so it shows the student's claim is wrong. The other three are the Security Council or General Assembly acting against wars, which fits the claim rather than disproving it.",
+      "clue": "Which action is not about stopping a war?"
+    }
+  },
+  "mod-iron-curtain-europe-divided": {
+    "title": "The Iron Curtain and Europe divided",
+    "card": [
+      "After the war Soviet forces held much of eastern Europe. Communist governments, backed by the Soviet Union, took power in countries such as Poland, Hungary and Czechoslovakia.",
+      "In 1946 Winston Churchill said an \"iron curtain\" had come down across Europe. It was a figure of speech, not a real barrier, for the split between the communist, Soviet-controlled east and the western countries.",
+      "Germany was divided into four zones run by the United States, Britain, France and the Soviet Union. Berlin lay inside the Soviet zone but was also split into four sectors.",
+      "In 1949 the western zones became West Germany and the Soviet zone became East Germany. Europe now had two opposing blocs."
+    ],
+    "remember": "Europe split into a Soviet east and a western bloc, and Germany and Berlin were divided too.",
+    "a": {
+      "q": "In his 1946 speech, what was Churchill describing with the words \"iron curtain\"?",
+      "opts": [
+        "A divide between Europe's communist east and its west",
+        "A concrete wall built through the middle of Berlin",
+        "A peace treaty that ended the war in Europe in 1945",
+        "A trade ban the west placed on the Soviet Union"
+      ],
+      "why": "Churchill used the phrase as a figure of speech for the division of Europe into a communist east and a western bloc. It was not a real wall in Berlin, which is the tempting answer because a wall was built there years later.",
+      "clue": "Churchill was speaking about the whole continent, not one city."
+    },
+    "b": {
+      "d": 3,
+      "q": "Berlin lay deep inside the Soviet zone of Germany. How was the city governed after the war?",
+      "opts": [
+        "Split into four sectors run by the four powers",
+        "Run wholly by the Soviet Union as its capital",
+        "Run by Britain alone as a neutral city",
+        "Split in two, with the west of Berlin under Germany"
+      ],
+      "why": "Berlin was divided into four sectors, even though it lay inside the Soviet zone. It was not under Soviet control alone, which is tempting because of where it was.",
+      "clue": "Berlin copied the way Germany itself was divided."
+    }
+  },
+  "mod-containment-truman-doctrine": {
+    "title": "Containment and the Truman Doctrine",
+    "card": [
+      [
+        "Containment",
+        "the United States policy of stopping communism from spreading to new countries, rather than trying to remove it where it already ruled."
+      ],
+      [
+        "Truman Doctrine",
+        "in 1947 President Truman promised American support for free peoples resisting pressure from armed groups or outside powers. Aid to Greece and Turkey was the first test."
+      ],
+      [
+        "Marshall Plan",
+        "from 1948 the United States gave billions of dollars to help rebuild Western Europe. It aimed to ease the poverty in which communism could gain support."
+      ],
+      [
+        "NATO",
+        "in 1949 the United States, Canada and several Western European states formed a military alliance. An attack on one member would be treated as an attack on all."
+      ]
+    ],
+    "remember": "Containment used aid and alliances to stop communism spreading, not to remove it.",
+    "a": {
+      "q": "What was the main aim of the American policy of containment?",
+      "opts": [
+        "To stop communism spreading to new countries",
+        "To end communism in the Soviet Union by force",
+        "To rebuild the Soviet economy after the war",
+        "To remove all American troops from Europe"
+      ],
+      "why": "Containment aimed to hold communism within its existing limits. Ending it in the Soviet Union by force is tempting but wrong, because containment did not try to remove it where it already ruled.",
+      "clue": "Think of the word contain: to hold within limits."
+    },
+    "b": {
+      "d": 2,
+      "q": "A war-damaged Western European country has food shortages and growing support for communists. Which American step was meant to help in this case?",
+      "opts": [
+        "The Marshall Plan, giving money to rebuild",
+        "NATO, a military alliance of member states",
+        "The Potsdam agreement, dividing Germany",
+        "The Soviet plan to rebuild its own economy"
+      ],
+      "why": "The Marshall Plan gave money to rebuild economies and ease poverty, where communism could gain support. NATO is a tempting choice, but it was a military alliance, not economic aid.",
+      "clue": "The problem is poverty, not an army."
+    }
+  },
+  "mod-decolonisation": {
+    "title": "Decolonisation",
+    "card": [
+      "Decolonisation is the process by which colonies gained independence from the European powers that ruled them. Many colonies in Asia and Africa won it after 1945.",
+      "The Second World War weakened Britain, France and the Netherlands. Many colonised peoples had also come to expect self-rule, and nationalist movements grew stronger.",
+      [
+        "Peaceful transfer",
+        "the colonial power agreed to leave through talks and a set date. Britain handed over India and Pakistan in 1947, though partition, the split into two countries, brought mass violence. Ghana followed in 1957."
+      ],
+      [
+        "Independence by war",
+        "the colonial power resisted, and independence came after armed conflict. Indonesia fought the Dutch from 1945 to 1949, and Algeria fought France from 1954 to 1962."
+      ]
+    ],
+    "remember": "Many colonies won independence after 1945, by agreement in some cases and by war in others.",
+    "a": {
+      "q": "Which best describes decolonisation?",
+      "opts": [
+        "Colonies winning independence from the powers ruling them",
+        "Colonial powers taking over new land in Asia and Africa",
+        "Colonies agreeing to be ruled by a neighbouring country",
+        "Colonial powers moving their people into their colonies"
+      ],
+      "why": "Decolonisation means a colony gaining independence from the power that ruled it. Taking over new land is the reverse, which is colonisation.",
+      "clue": "Think about who ends up in control of the colony."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1954 fighters in Algeria began an armed struggle against France, which refused to leave. Independence came in 1962. What does this case show about decolonisation?",
+      "opts": [
+        "It could come through war when the ruler resisted",
+        "It always came through war once nationalists organised",
+        "It could only come once the ruler agreed to leave",
+        "It came only to colonies that were not ruled by France"
+      ],
+      "why": "France resisted and independence followed armed conflict, so decolonisation could come through war. It did not always do so, because Ghana gained independence through talks with Britain.",
+      "clue": "Compare Algeria with Ghana in 1957."
+    }
+  },
+  "mod-civil-rights-movement-united": {
+    "title": "The civil rights movement in the United States",
+    "card": [
+      "Segregation was the legal separation of Black and white Americans in schools, buses and public places, mostly in the Southern states. Black citizens were also often stopped from voting.",
+      [
+        "Boycotts",
+        "People refused to use a service to put pressure on its owners. In the Montgomery bus boycott of 1955 to 1956, Black residents stayed off the city's buses for over a year."
+      ],
+      [
+        "Court cases",
+        "Lawyers argued that segregation broke the Constitution. In Brown v. Board of Education in 1954, the Supreme Court ruled that segregated public schools were unlawful."
+      ],
+      [
+        "Marches and laws",
+        "The March on Washington in 1963 built support for the Civil Rights Act of 1964. The Selma to Montgomery march in 1965 exposed the denial of voting rights, and the Voting Rights Act followed that year."
+      ]
+    ],
+    "remember": "Boycotts, court cases and marches together pushed the United States to change its laws.",
+    "a": {
+      "q": "What was the main aim of the Montgomery bus boycott?",
+      "opts": [
+        "To pressure the bus company into ending segregation",
+        "To make the Supreme Court rule on school segregation",
+        "To win the vote for Black citizens in Alabama",
+        "To pass a national law against discrimination in jobs"
+      ],
+      "why": "Black residents stopped riding the buses so the company lost income and faced pressure to end segregated seating. The school ruling in Brown v. Board of Education was a separate court case, not the aim of this boycott.",
+      "clue": "A boycott works by refusing to use something."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1965 marchers walked from Selma to Montgomery, Alabama. Which problem were they mainly protesting about?",
+      "opts": [
+        "Black citizens being blocked from voting",
+        "Black children being kept out of white schools",
+        "Black passengers being made to sit at the back of buses",
+        "Black workers being paid less than white workers"
+      ],
+      "why": "The Selma march exposed the denial of voting rights, and the Voting Rights Act followed in 1965. School segregation is tempting, but that was the issue in Brown v. Board of Education in 1954, a court case rather than the Selma march.",
+      "clue": "Think about which law followed the march in the same year."
+    }
+  },
+  "mod-aboriginal-torres-strait-islander": {
+    "title": "Aboriginal and Torres Strait Islander rights",
+    "card": [
+      "After 1945, Aboriginal and Torres Strait Islander people and their supporters campaigned against discrimination. Many were denied equal pay, services and a say in the laws that affected them.",
+      [
+        "Freedom Ride",
+        "In 1965, students led by Charles Perkins travelled through country towns in New South Wales. They protested against racial discrimination, such as bans from pools and clubs, and media coverage made it a national issue."
+      ],
+      [
+        "1967 referendum",
+        "Australians voted Yes by a very large majority to change the Constitution, so the Commonwealth could make laws for Aboriginal people and count them in the census. It did not itself give land, equal pay or the vote, which all Aboriginal people had in federal elections from 1962."
+      ],
+      [
+        "Land rights",
+        "Land campaigns ran alongside the others, such as the Yirrkala bark petitions (1963), the Gurindji walk-off at Wave Hill (1966) and the Tent Embassy (1972). This push led to land rights laws and the Mabo decision in 1992."
+      ]
+    ],
+    "remember": "Protest, media and a referendum challenged discrimination, while land campaigns ran alongside them.",
+    "a": {
+      "q": "What was the main result of the 1967 referendum?",
+      "opts": [
+        "The Commonwealth could make laws for Aboriginal people",
+        "Aboriginal people were given ownership of traditional land",
+        "Aboriginal people won the right to vote for the first time",
+        "Aboriginal workers won equal pay in law straight away"
+      ],
+      "why": "The referendum changed the Constitution so the Commonwealth could make laws for Aboriginal people and count them in the census. It did not give the vote, which Aboriginal people already had in federal elections from 1962, and it did not give land or equal pay.",
+      "clue": "A referendum changes the Constitution. What does a constitution set out?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1965, students travelled by bus through towns in New South Wales and protested at a pool that barred Aboriginal children. What did this action mainly achieve?",
+      "opts": [
+        "It drew national attention to everyday racial discrimination",
+        "It changed the Constitution to count Aboriginal people",
+        "It returned traditional land to the people of the town",
+        "It won the Gurindji ownership of their land at Wave Hill"
+      ],
+      "why": "The Freedom Ride exposed discrimination in country towns, and media coverage made it a national issue. The census change came from the 1967 referendum, and land gains came through separate land campaigns, so those options describe other events.",
+      "clue": "Think about what media coverage of a protest in a town can do."
+    }
+  },
+  "mod-women-s-movement": {
+    "title": "The women's movement",
+    "card": [
+      "From the 1960s, many women in Western countries began to campaign together for change. This is often called second-wave feminism. It built on earlier campaigns, such as the fight for the vote.",
+      "Women often earned less than men for the same work, and some laws treated them unequally. Campaigners called for equal pay and for equal legal rights, such as owning property and getting credit in their own name.",
+      "Campaigners also wanted more control over their own lives. This included access to contraception, choices about having children, and protection from violence in the home.",
+      "Groups used protests, marches, public meetings, writing and court cases. In Australia, the Women's Electoral Lobby formed in 1972 to press political parties on women's issues."
+    ],
+    "remember": "The movement sought equal pay, equal legal rights and more say over women's own lives.",
+    "a": {
+      "q": "Which demand was about women having more say over their own lives?",
+      "opts": [
+        "Access to contraception so women could plan families",
+        "Equal pay for women doing the same work as men",
+        "Equal rights for women to get credit in their own name",
+        "Equal rights for married women to own property"
+      ],
+      "why": "Contraception let women decide whether and when to have children, a choice about their own lives. Equal pay and equal rights to credit or property are tempting, but the card groups them under pay and legal rights, not control over women's own lives.",
+      "clue": "Which demand is about a choice in a woman's private life?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1975, Dana in Adelaide finds that her male co-worker is paid more for the same job. She joins a campaign to change this. Which demand is she supporting?",
+      "opts": ["Equal pay", "Equal rights to get credit", "Control over family size", "Protection from violence at home"],
+      "why": "Being paid less than a man for the same work is the problem the call for equal pay aimed to fix. Equal rights to credit is tempting because it is also about money and fairness, but it concerns how the law treated women, not their wages.",
+      "clue": "Think about what is different between Dana and her co-worker."
+    }
+  },
+  "mod-end-apartheid": {
+    "title": "The end of apartheid",
+    "card": [
+      "Apartheid was the system of racial separation and white minority rule in South Africa. It was enforced by law from 1948 and denied the Black majority political rights.",
+      [
+        "Protest inside",
+        "Black South Africans, with allies of other groups, resisted through strikes, school and community protests, and the African National Congress (ANC). The government often answered with force and bans."
+      ],
+      [
+        "Pressure from abroad",
+        "Other countries and groups used sanctions (trade and financial penalties) and sporting boycotts. These raised the cost of keeping apartheid."
+      ],
+      [
+        "Outcome",
+        "Under growing pressure, the government freed Nelson Mandela in 1990 and held talks with the ANC. South Africa's first elections open to all races were held in 1994, and Mandela became president."
+      ]
+    ],
+    "remember": "Apartheid ended because protest at home and pressure from abroad pushed the government to negotiate.",
+    "a": {
+      "q": "Which action is an example of pressure from abroad on South Africa's apartheid government?",
+      "opts": [
+        "Other countries placing sanctions on South African trade",
+        "ANC supporters joining strikes in South African cities",
+        "Students in Soweto protesting about their schooling",
+        "South Africa's government banning protest groups"
+      ],
+      "why": "Sanctions were imposed by other countries to make apartheid costly to keep. The strikes and student protests were protest inside South Africa, and bans were the government's own response.",
+      "clue": "Look for action taken by people outside South Africa."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best explains why South Africa held elections open to all races in 1994?",
+      "opts": [
+        "Protest at home and pressure abroad led to talks",
+        "Sanctions from abroad ended apartheid on their own",
+        "Protest at home ended apartheid without outside help",
+        "The government ended apartheid before protest began"
+      ],
+      "why": "Protest inside South Africa and pressure from abroad worked together, leading to Mandela's release, talks with the ANC and the 1994 vote. The options about sanctions alone or protest alone are tempting, but each leaves out one of the two sources of pressure.",
+      "clue": "The change came from more than one source of pressure."
+    }
+  },
+  "mod-methods-protest-change": {
+    "title": "Methods of protest and change",
+    "card": [
+      [
+        "Non-violent protest",
+        "marches, boycotts, strikes and sit-ins used to pressure those in power. They show how many people support a cause and can disrupt business as usual."
+      ],
+      [
+        "Legal action",
+        "taking a case to court or pushing for new laws. It can change the rules, but it is often slow, so many movements used it alongside other methods."
+      ],
+      [
+        "Media",
+        "newspapers, photographs and television can carry a cause to people far away and win public sympathy."
+      ],
+      [
+        "Violence",
+        "force used by some movements, such as attacks on property. It can draw attention, but it can also lose public support or lead to harsher crackdowns."
+      ]
+    ],
+    "remember": "Each method has strengths and risks, and movements often combined several.",
+    "a": {
+      "q": "Why did movements often use the media as part of their campaigns?",
+      "opts": [
+        "To spread their cause and win wider public sympathy",
+        "To avoid the need for any other method of protest",
+        "To force courts to change the law straight away",
+        "To stop the government from responding to them"
+      ],
+      "why": "Newspapers, photographs and television carried a cause to people who had never seen it first-hand. This could build sympathy. The media did not replace other methods or force the courts to act.",
+      "clue": "Think about who could see a photograph in a newspaper."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1955 in the city of Marlow, a group of workers refused to ride the buses for a year to protest unfair seating rules. At the same time, their lawyers took the bus company to court. Which description fits their approach?",
+      "opts": [
+        "A boycott combined with legal action",
+        "Legal action alone, since the boycott was passive",
+        "A violent campaign backed by a court case",
+        "Media coverage only, with no direct pressure"
+      ],
+      "why": "Refusing to ride the buses is a non-violent boycott, and the court case is legal action. Using both at once is a combination of methods. It is wrong to call it legal action alone, because the boycott was a protest that disrupted the company's business.",
+      "clue": "Count how many separate methods the group used."
+    }
+  },
+  "mod-resisting-change": {
+    "title": "Resisting change",
+    "card": [
+      "Movements for change often threaten people who hold power. Governments and other powerful groups may act to protect their position and the existing order.",
+      [
+        "Laws",
+        "rules that ban or limit a movement, or keep a group out of power. South Africa's apartheid government banned the African National Congress in 1960."
+      ],
+      [
+        "Police and force",
+        "arrests, bans on meetings and violence used to break up protests. At Sharpeville in 1960, South African police shot into a crowd of protesters."
+      ],
+      [
+        "Propaganda",
+        "messages that shape opinion, such as claiming a movement is dangerous or foreign. Resistance often used several of these tools together."
+      ]
+    ],
+    "remember": "Those with power can resist change through laws, force and propaganda, and often use more than one.",
+    "a": {
+      "q": "A government bans a protest group, then runs newspaper stories calling its members dangerous. What does this show?",
+      "opts": [
+        "Resistance to change using law and propaganda",
+        "A movement using media to win public support",
+        "A government agreeing to a movement's demands",
+        "A movement using legal action to gain rights"
+      ],
+      "why": "The ban is a law used against the group, and the stories are propaganda meant to turn opinion against it. Media use by a movement is different, because here the government is the one acting to block change.",
+      "clue": "Ask who is using the tools, and what they want."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1963, officials in Birmingham, Alabama, got a court order banning civil rights marches. When marchers went ahead, police turned fire hoses and dogs on them. Which tools were used?",
+      "opts": [
+        "A legal ban, then police force",
+        "Propaganda, then police force",
+        "A legal ban, then propaganda",
+        "Propaganda, then a legal ban"
+      ],
+      "why": "The court order was a legal rule that banned the marches, and the hoses and dogs were force used to break them up. Propaganda is tempting because officials wanted to stop the movement, but neither action was a message meant to shape opinion.",
+      "clue": "Which action was a rule, and which was physical?"
+    }
+  },
+  "mod-measuring-change": {
+    "title": "Measuring change",
+    "card": [
+      "Historians judge a movement by asking how far it reached its goals. To do this they compare what it wanted with what actually happened.",
+      ["Short term", "the changes seen soon after a movement, such as a new law or a leader stepping down."],
+      ["Long term", "the effects seen years or decades later, such as changed attitudes or lasting inequality."],
+      "A movement can win some goals and not others. Some things change, such as laws, while others stay the same, such as everyday attitudes. So historians rarely judge a movement a complete success or failure."
+    ],
+    "remember": "Judge a movement by its goals, and look at what changed and what stayed the same, soon and later.",
+    "a": {
+      "q": "A movement won a new law in 1965, but unfair treatment in daily life continued for decades. How would a historian judge this?",
+      "opts": [
+        "As a partial success, with change and continuity",
+        "As a complete success, because a law was passed",
+        "As a complete failure, because unfairness continued",
+        "As having no effect, because attitudes stayed the same"
+      ],
+      "why": "The law is a short-term change, while unfair treatment shows continuity in the long term. Together they point to partial success. Calling it complete success ignores the unfairness that remained.",
+      "clue": "Look at both what changed and what did not."
+    },
+    "b": {
+      "d": 3,
+      "q": "In the 1970s, miners in a country town demanded safer mines and higher pay. Safety rules came in within a year, but pay stayed low for ten years. Which judgement fits best?",
+      "opts": [
+        "It partly succeeded: safety improved but pay stayed low",
+        "It failed, because it did not win every demand it made",
+        "It fully succeeded, because safety rules came in quickly",
+        "It had no effect, because pay stayed low for ten years"
+      ],
+      "why": "The safety rules are a change, while low pay shows continuity, so the movement reached some of its goals but not all. Calling it a failure because one demand was not met ignores the change it did win, and historians rarely judge a movement a complete failure.",
+      "clue": "Check each demand on its own: was it met or not?"
+    }
+  },
+  "mod-first-bolshevik-decrees": {
+    "title": "The first Bolshevik decrees",
+    "card": [
+      "The Bolsheviks took power in Petrograd on 25 October 1917 (7 November in the new calendar). The next day, the Second Congress of Soviets passed their first two decrees.",
+      [
+        "Decree on Peace",
+        "it called on all fighting nations to begin talks for a peace without forced land transfers or payments. It was a call to end the war, not a peace treaty."
+      ],
+      [
+        "Decree on Land",
+        "it abolished private ownership of land without payment. Estates of the nobility, the Church and the Crown were handed to local peasant committees to share out."
+      ],
+      "The decrees kept the Bolsheviks' promise of peace and land. They aimed to win over war-weary soldiers, workers and peasants, and many soldiers were peasants themselves."
+    ],
+    "remember": "In their first decrees, the Bolsheviks turned the promise of peace and land into law to win mass support.",
+    "a": {
+      "q": "What did the Decree on Land do?",
+      "opts": [
+        "Took large estates without payment and gave them to peasants",
+        "Let landowners keep their estates if they paid a new tax",
+        "Put all farmland under the control of Bolshevik officials",
+        "Bought large estates from nobles and sold them to peasants"
+      ],
+      "why": "The decree ended private ownership of land without payment, and peasant committees shared out the estates. It did not make the peasants pay, since the land was taken without compensation.",
+      "clue": "Think about who paid for the land, and who received it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did the Decree on Peace help the Bolsheviks win support in late 1917?",
+      "opts": [
+        "Many soldiers and workers were tired of war and wanted peace",
+        "Germany had agreed to its terms before the decree was issued",
+        "It ended the war at once and kept Russia safe from attack",
+        "Most peasants wanted the war to go on until Russia had won"
+      ],
+      "why": "The decree matched the wishes of war-weary soldiers and workers, which won the Bolsheviks support. It did not end the war itself, because it only called on nations to begin talks.",
+      "clue": "The decree was a call to talk, not a treaty. Who wanted it?"
+    }
+  },
+  "mod-constituent-assembly": {
+    "title": "The Constituent Assembly",
+    "card": [
+      "The Constituent Assembly was a parliament meant to write a new constitution for Russia. The Provisional Government had promised it, and elections were held in November 1917, after the Bolsheviks took power.",
+      "The Socialist Revolutionaries won the most seats. The Bolsheviks won fewer than a quarter, so they did not have a majority.",
+      "The Assembly met once, in January 1918. It refused to accept the Bolshevik decrees and the authority of the Soviets, the councils the Bolsheviks used to govern.",
+      "The next day Bolshevik forces closed it, and it never met again. The Bolsheviks said the Soviets spoke for the people better than an elected assembly did."
+    ],
+    "remember": "The Bolsheviks lost the election, so they shut the Assembly and kept power.",
+    "a": {
+      "q": "Why did the Bolsheviks close the Constituent Assembly in January 1918?",
+      "opts": [
+        "It would not accept their rule and they lacked a majority",
+        "It had finished writing the constitution they wanted",
+        "The Provisional Government had ordered it to be closed",
+        "It had voted to bring back the tsar to rule Russia"
+      ],
+      "why": "The Bolsheviks won fewer than a quarter of the seats, and the Assembly refused to back their decrees or the Soviets. They closed it to keep power. It had not finished any constitution, as it met only once.",
+      "clue": "Think about who won the most seats in the election."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best describes what the closing of the Assembly showed about the Bolsheviks in early 1918?",
+      "opts": [
+        "They put holding power ahead of the result of a free vote",
+        "They accepted the vote and shared power with the winners",
+        "They believed the Assembly had been elected unfairly",
+        "They wanted the Provisional Government to run the Assembly"
+      ],
+      "why": "The Assembly came from an election the Bolsheviks lost, and they shut it rather than accept the result. They did not share power. They claimed the Soviets were more representative, but that was a reason they gave, not proof the vote was unfair.",
+      "clue": "Ask what the Bolsheviks did once the election result went against them."
+    }
+  },
+  "mod-treaty-brest-litovsk": {
+    "title": "The Treaty of Brest-Litovsk",
+    "card": [
+      "The Bolsheviks took power in November 1917 (October in the old Russian calendar). They had promised peace, and the army was worn out and falling apart after years of heavy losses.",
+      "Talks with Germany and its allies were held at Brest-Litovsk. The Bolsheviks hoped to delay and win better terms. Trotsky led the Russian side for much of the talks.",
+      "When Germany resumed its advance in February 1918, the Bolsheviks gave in. The treaty was signed in March 1918, and Russia left the war, against the wishes of its allies, Britain and France.",
+      "Russia gave up large territories in the west, including Poland, the Baltic lands and Ukraine. These held much of its farmland, industry and population. Many Bolsheviks and their opponents saw the terms as harsh, but Lenin argued that peace was needed to keep the revolution alive."
+    ],
+    "remember": "Lenin accepted a harsh peace with Germany to end the war and keep Bolshevik power.",
+    "a": {
+      "q": "Why did Lenin accept the harsh terms of the Treaty of Brest-Litovsk?",
+      "opts": [
+        "He believed peace was needed to save Bolshevik rule",
+        "He thought Germany would soon lose the war anyway",
+        "He wanted Russia to keep its western farmland and industry",
+        "He had promised the Allies that Russia would stay in the war"
+      ],
+      "why": "Lenin argued that the army was broken and the revolution could not survive more fighting. Accepting the terms ended the war and protected Bolshevik power. The treaty did not keep Russia's western lands, as it gave up many of them.",
+      "clue": "Think about the state of the army and what the Bolsheviks most needed to protect."
+    },
+    "b": {
+      "d": 3,
+      "q": "In March 1918, Olga, a Bolshevik, votes to accept the treaty. Which argument for signing matches the one Lenin made?",
+      "opts": [
+        "The army is broken, and peace will keep the revolution alive",
+        "The lost lands held little of Russia's farmland or industry",
+        "Signing will please Russia's allies, Britain and France",
+        "The army is strong and can win the lands back soon"
+      ],
+      "why": "Lenin argued that the worn-out army could not keep fighting, so peace was needed for the revolution to survive. The claim that the army could soon win the lands back is wrong, because it was falling apart. The lost lands held much of Russia's farmland and industry, and Britain and France opposed Russia leaving the war.",
+      "clue": "What condition was the Russian army in by early 1918?"
+    }
+  },
+  "mod-civil-war": {
+    "title": "The Civil War",
+    "card": [
+      "The Civil War was fought in Russia from 1918 to 1921. The Reds were the Bolsheviks and their Red Army. They fought many groups that opposed Bolshevik rule.",
+      [
+        "The Whites",
+        "a loose set of anti-Bolshevik forces, including army officers, monarchists and some liberals. They were united mainly by opposition to the Bolsheviks, and they had no effective single leader or shared plan."
+      ],
+      [
+        "Foreign intervention",
+        "Some foreign powers, including Britain, France, Japan and the United States, sent troops or supplies to the Whites. Their help was limited and did not win the war."
+      ],
+      "The Reds won by 1921. They held the central cities and railways, had one command and one aim, and could call on the Bolsheviks' wartime control of the economy to supply the army. The Whites were split and fought far apart."
+    ],
+    "remember": "The Reds won because they were united and held the centre. The Whites were divided.",
+    "a": {
+      "q": "Which was a main weakness of the Whites in the Civil War?",
+      "opts": [
+        "They were united mainly by opposition to the Bolsheviks",
+        "They had no help from any foreign power",
+        "They held the central cities and railways",
+        "They fought under one command with one clear plan"
+      ],
+      "why": "The Whites included monarchists, officers and liberals who wanted different things. They agreed mainly on opposing the Bolsheviks, so they had no shared plan. Foreign powers did help them, but that help was limited.",
+      "clue": "Think about what held the anti-Bolshevik groups together."
+    },
+    "b": {
+      "d": 3,
+      "q": "Britain and Japan sent troops to Russia, yet the Reds still won. Which reason best explains this?",
+      "opts": [
+        "Foreign help was limited and the Whites stayed divided",
+        "Foreign powers helped the Reds more than the Whites",
+        "Foreign troops left because the Whites had already won",
+        "Foreign powers fought each other instead of in Russia"
+      ],
+      "why": "Foreign help to the Whites was limited and could not fix their lack of unity or their wide spread. The Reds held the centre with one command. The idea that foreign powers helped the Reds is wrong: they sent aid to the Whites.",
+      "clue": "Did outside help fix the Whites' own problems?"
+    }
+  },
+  "mod-war-communism-red-terror": {
+    "title": "War Communism and the Red Terror",
+    "card": [
+      "War Communism was the Bolsheviks' economic policy during the Civil War, from 1918 to 1921. The state took over large factories, banned private trade and took grain to feed the Red Army and the cities.",
+      [
+        "Grain requisitioning",
+        "Armed squads took grain from peasants with little or no payment, so peasants had less reason to grow extra and many planted less. Along with drought, this helped cause the famine of 1921 to 1922, in which millions died."
+      ],
+      [
+        "Red Terror",
+        "From 1918 the Cheka, the Bolshevik secret police, arrested, imprisoned and executed people seen as enemies of the revolution. The aim was to crush opposition through fear."
+      ],
+      [
+        "Revolt",
+        "Anger at grain requisitioning led to peasant revolts, such as the Tambov revolt of 1920 to 1921. In March 1921 sailors at the Kronstadt naval base also rebelled."
+      ]
+    ],
+    "remember": "Seizing grain and using terror kept the Bolsheviks going in the war, but by 1921 it had brought famine and revolt.",
+    "a": {
+      "q": "Why did grain requisitioning help cause famine in Russia?",
+      "opts": [
+        "Peasants had less reason to grow extra grain, so output fell",
+        "Peasants were paid well, so they chose to stop farming",
+        "The Cheka banned peasants from owning any farm land at all",
+        "Factories stopped making goods, so cities bought less grain"
+      ],
+      "why": "Armed squads took grain with little or no payment, so many peasants planted less. With drought, the smaller harvests helped cause the famine of 1921 to 1922. The factory option is tempting, but the card links the famine to falling grain output, not to what factories made.",
+      "clue": "Think about what a peasant gained from growing more grain."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1921 peasants in a grain-growing region rose up against the Bolsheviks. Which policy most directly caused their anger?",
+      "opts": [
+        "Armed squads taking their grain with little or no payment",
+        "The state taking over large factories in the cities",
+        "The Cheka arresting people seen as enemies of the revolution",
+        "The ban on private trade in city shops and markets"
+      ],
+      "why": "Peasant revolts such as Tambov grew out of anger at grain requisitioning, which stripped peasants of their harvest. The Red Terror and the factory takeover also caused hardship, but they did not take grain from the peasants themselves.",
+      "clue": "Which policy took something from farmers themselves?"
+    }
+  },
+  "mod-building-one-party-state": {
+    "title": "Building a one-party state",
+    "card": [
+      "After the Bolsheviks took power in 1917, other parties still existed for a time. Over the next few years the Bolsheviks, who renamed themselves the Communist Party in 1918, pushed them out of politics.",
+      "The Civil War made this easier. The Communists treated rival socialist parties, such as the Mensheviks and Socialist Revolutionaries, as enemies. They arrested their members and closed their newspapers.",
+      "At the 1921 party congress, Lenin had factions (organised groups) inside the party banned. As rival parties were pushed out, the party was the main place left for debate, and members now had to follow the party line.",
+      "By the mid-1920s no other party could legally take part in politics. The Communist Party controlled the government, the soviets (councils) and the army, so the state and the party worked as one."
+    ],
+    "remember": "By the mid-1920s the Communist Party was the only legal party, and it ran the state.",
+    "a": {
+      "q": "Which change shows that Russia had become a one-party state by the mid-1920s?",
+      "opts": [
+        "Rival parties were banned and the party controlled the state",
+        "Several parties shared seats in the soviets by agreement",
+        "Rival parties were allowed but won very few votes",
+        "The party gave control of the army to the soviets"
+      ],
+      "why": "A one-party state means only one party is allowed to take part in politics, and it controls the state. Rival parties winning few votes is tempting, but in that case they would still be legal, and by the mid-1920s they were not.",
+      "clue": "Think about whether other parties were still allowed to exist."
+    },
+    "b": {
+      "d": 3,
+      "q": "In 1921 Lenin had factions inside the Communist Party banned. How did this help the party build a one-party state?",
+      "opts": [
+        "It stopped organised opposition inside the ruling party",
+        "It let the Mensheviks take part in party debates again",
+        "It ended the Civil War by removing the party's enemies",
+        "It gave the soviets power to overrule party decisions"
+      ],
+      "why": "By 1921 rival parties were being pushed out, so the Communist Party was the main place left where opposition could form. Banning factions meant members had to follow the party line. The ban was aimed at groups inside the party, not at outside enemies, so it did not end the Civil War.",
+      "clue": "As rival parties were pushed out, where else could opposition form?"
+    }
+  },
+  "mod-leaders-new-state": {
+    "title": "Leaders of the new state",
+    "card": [
+      [
+        "Lenin",
+        "Leader of the Bolsheviks and head of the new government. He set its main policies, including the decrees, the peace and later the New Economic Policy."
+      ],
+      [
+        "Trotsky",
+        "A leading Bolshevik who organised the Red Army. He built it into a disciplined force that fought the Civil War."
+      ],
+      [
+        "Dzerzhinsky",
+        "Head of the Cheka, the secret police set up in December 1917. It used arrests and terror to crush opposition to Bolshevik rule."
+      ],
+      [
+        "Kollontai",
+        "A Bolshevik who became a commissar for social welfare. She pushed for women's rights, such as easier divorce and support for mothers."
+      ]
+    ],
+    "remember": "Each leader shaped the new state in a different area: government, army, security and women's rights.",
+    "a": {
+      "q": "Which leader was in charge of the Cheka, the Bolshevik secret police?",
+      "opts": ["Dzerzhinsky", "Trotsky", "Kollontai", "Lenin"],
+      "why": "Dzerzhinsky headed the Cheka, which crushed opposition to Bolshevik rule. Trotsky is the tempting answer, but he organised the Red Army, not the secret police.",
+      "clue": "This person's name is linked to the Cheka on the card."
+    },
+    "b": {
+      "d": 2,
+      "q": "A new law in 1918 makes divorce easier and gives more support to mothers. Which leader is most linked with this kind of change?",
+      "opts": ["Alexandra Kollontai", "Leon Trotsky", "Felix Dzerzhinsky", "Vladimir Lenin"],
+      "why": "Kollontai worked for women's rights as a commissar for social welfare. Lenin led the government overall, but the card links this area of reform to her.",
+      "clue": "Which leader worked on women's rights?"
+    }
+  },
+  "mod-change-continuity-russia": {
+    "title": "Change and continuity in Russia",
+    "card": [
+      [
+        "Change",
+        "In 1896 Russia was ruled by a tsar with almost unlimited power. By 1927 the tsar was gone, and the Communist Party ruled in the name of workers and peasants."
+      ],
+      "Land had passed to the peasants, and the Soviets and the party replaced the old tsarist government and its nobles.",
+      [
+        "Continuity",
+        "Power stayed in the hands of a few, with no free elections and little room for opponents. The Tsar's secret police, the Okhrana, was followed by the Cheka."
+      ],
+      "Historians weigh both. The rulers and the ideas had changed, but some of the methods of control stayed the same."
+    ],
+    "remember": "The tsar was replaced, but one-party rule and secret police echoed the old pattern of power.",
+    "a": {
+      "q": "Which is an example of continuity between tsarist and Bolshevik Russia?",
+      "opts": [
+        "A secret police force that watched and punished opponents",
+        "A tsar who ruled with almost unlimited power",
+        "Land that was owned mainly by nobles",
+        "A ruling class made up of the old nobility"
+      ],
+      "why": "The Okhrana under the tsar and the Cheka under the Bolsheviks both policed opponents. The other options describe tsarist Russia, which had ended by 1927, so they show change, not continuity.",
+      "clue": "Look for something that existed under both the tsar and the Bolsheviks."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student argues that Russia in 1927 had changed little since 1896. Which fact best supports a claim of change, not continuity?",
+      "opts": [
+        "The tsar had been removed and a party ruled in his place",
+        "Opponents could not freely stand in elections",
+        "A secret police force still arrested political critics",
+        "Power was held by a small group at the top"
+      ],
+      "why": "Removing the tsar and replacing him with party rule is a real change in who held power. The other three show the same old pattern of control, which is continuity, even though the secret police had a new name.",
+      "clue": "Pick the fact that shows something different from 1896."
+    }
+  },
+  "mod-fall-qing-dynasty": {
+    "title": "The early Republic",
+    "card": [
+      "The Qing dynasty fell in 1912 after the Xinhai Revolution of 1911. China became a republic, ending about 2000 years of imperial rule.",
+      "Sun Yixian was the first provisional president. He soon handed the presidency to Yuan Shikai, a powerful general who commanded the strongest army in the north.",
+      "Yuan ruled as a strongman. He weakened the elected parliament and the Nationalist Party, and in 1915 he moved to make himself emperor.",
+      "Many people opposed the plan, including provincial leaders and generals, and Yuan gave it up. He died in 1916. The Republic had not united China or built lasting institutions."
+    ],
+    "remember": "The Republic began in 1912, but Yuan's grab for power left it weak and China divided.",
+    "a": {
+      "q": "Which action by Yuan Shikai most clearly worked against the idea of a republic?",
+      "opts": [
+        "Trying to make himself emperor in 1915",
+        "Taking over the presidency from Sun Yixian",
+        "Commanding the strongest army in northern China",
+        "Dying in office in 1916 with no clear successor"
+      ],
+      "why": "Trying to take the throne would have turned China back into an empire, so it went against the Republic directly. Becoming president was part of the Republic's own arrangements, since Sun handed the office over, so it is not the clearest attack on the idea.",
+      "clue": "Which action would have changed the kind of state China was?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Why did Yuan Shikai's years in power leave the early Republic weak?",
+      "opts": [
+        "He weakened parliament and faced wide opposition to his plan",
+        "He let the elected parliament take over many of his powers",
+        "He gave up the presidency soon after Sun Yixian chose him",
+        "He united China under strong and lasting new institutions"
+      ],
+      "why": "Yuan weakened parliament and the Nationalist Party, then lost support when he tried to become emperor. This left the Republic with few lasting institutions. The Republic was not weakened by too much parliamentary power, because Yuan worked to reduce it.",
+      "clue": "Did Yuan share power, or gather it into his own hands?"
+    }
+  },
+  "mod-warlord-era": {
+    "title": "The warlord era",
+    "card": [
+      "Yuan Shikai died in 1916. After his death, no one held power over the whole country, and China broke up into regions.",
+      "Warlords were military commanders who ruled regions with their own armies. Their power came from the soldiers they controlled, not from the central government.",
+      "The government in Beijing was weak. It had little control outside its own area, and different warlords backed it or fought over it at different times.",
+      "Warlords fought one another for land and money. They taxed local people heavily, and ordinary people suffered from the fighting and the taxes."
+    ],
+    "remember": "After 1916, armed regional commanders held the real power, and the national government was too weak to rule China.",
+    "a": {
+      "q": "Why is the period after 1916 called the warlord era?",
+      "opts": [
+        "Military commanders ruled regions with their own armies",
+        "A single general ruled China through a strong government",
+        "Foreign armies took over and divided China into regions",
+        "Local councils elected by villagers ran each region"
+      ],
+      "why": "After 1916 real power lay with commanders who controlled their own armies and ruled regions. The tempting wrong option is the single general: no one held power over the whole country, and the Beijing government was weak.",
+      "clue": "Think about who held the real power, and what backed it."
+    },
+    "b": {
+      "d": 2,
+      "q": "In 1920, a farming family in a region of China pays heavy taxes to the local commander, while the Beijing government does nothing about it. What does this show about China at that time?",
+      "opts": [
+        "The Beijing government could not control regional rulers",
+        "The Beijing government taxed farmers to pay for its army",
+        "The commander was following orders from Beijing",
+        "The family was taxed by the Qing emperor's officials"
+      ],
+      "why": "Warlords taxed people in their regions, and the Beijing government had little control beyond its own area. So it could not stop the commander. The Qing option is wrong because the Qing had fallen in 1912.",
+      "clue": "Ask who really held power in the region, and whether Beijing could change that."
+    }
+  },
+  "mod-may-fourth-movement": {
+    "title": "The May Fourth Movement",
+    "card": [
+      [
+        "New Culture Movement",
+        "from about 1915, writers and teachers such as Chen Duxiu attacked old Confucian customs and called for science, democracy and a new way of thinking. Its ideas were spread by magazines such as New Youth."
+      ],
+      [
+        "4 May 1919",
+        "China had joined the Allies in the First World War. The Treaty of Versailles gave German rights in Shandong to Japan, not back to China. Students in Beijing protested, and the anger spread to other cities."
+      ],
+      "The protests made nationalism, the wish to see China strong and free of foreign control, a mass cause. Many people came to see the old ideas and the weak government as a reason for China's loss.",
+      "Many young Chinese now looked abroad for answers. Some turned to Marxism, and the Russian Revolution of 1917 made it seem a real option. Chen Duxiu and Li Dazhao were among the founders of the Chinese Communist Party in 1921."
+    ],
+    "remember": "The 1919 anger at Versailles and the New Culture Movement's new ideas led some young Chinese to communism.",
+    "a": {
+      "q": "Why did the Treaty of Versailles cause protests in China in 1919?",
+      "opts": [
+        "It handed Germany's rights in Shandong to Japan",
+        "It let Germany keep its rights in Shandong",
+        "It returned Shandong to China under Allied control",
+        "It treated China as a defeated ally of Germany"
+      ],
+      "why": "China had fought on the Allied side and expected Germany's rights in Shandong to come back to it, but the treaty gave them to Japan. Letting Germany keep them is wrong because the treaty took those rights from Germany. The anger was that China did not get them.",
+      "clue": "China was on the winning side. What did it expect to gain?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lin is a Beijing student in 1920. She reads New Youth and has joined a study group on Marxism. Which best explains why she is drawn to new ideas?",
+      "opts": [
+        "Versailles and New Culture ideas turned her from old ways",
+        "The Communist Party had recruited her to its study group",
+        "New Culture writers urged her to revive Confucian values",
+        "Versailles had raised her trust in the Republic's leaders"
+      ],
+      "why": "The anger at Versailles and the New Culture Movement's attack on old customs led many young people to look abroad for answers, including Marxism. The Communist Party is tempting, but it was not founded until 1921, so in 1920 it could not have recruited her.",
+      "clue": "Think about what made young people lose faith in old answers."
+    }
+  },
+  "mod-guomindang-communists": {
+    "title": "The Guomindang and the Communists",
+    "card": [
+      "The Guomindang (GMD), or Nationalist Party, was led first by Sun Yixian. It aimed to unite China and end foreign influence.",
+      [
+        "Three Principles",
+        "Sun's guide for the GMD: nationalism (a China free of foreign control), democracy (government by the people) and the people's livelihood (a better living for ordinary Chinese)."
+      ],
+      [
+        "First United Front",
+        "In the 1920s the GMD allowed Communists to join it and worked with them, as both wanted to defeat the warlords and unite China."
+      ],
+      [
+        "1927 split",
+        "After Sun died, Jiang Jieshi took over the GMD. In April 1927 in Shanghai, his forces attacked and killed many Communists and union members. This Shanghai Massacre ended the cooperation."
+      ]
+    ],
+    "remember": "The GMD and Communists united against the warlords until Jiang Jieshi turned on the Communists in 1927.",
+    "a": {
+      "q": "What did the GMD and the Communists have in common in the 1920s that led them to work together?",
+      "opts": [
+        "Both wanted to defeat the warlords and unite China",
+        "Both wanted to bring back rule by an emperor",
+        "Both wanted the warlords to keep ruling their regions",
+        "Both wanted foreign powers to keep their rights in China"
+      ],
+      "why": "The warlords had split China, and both parties wanted to defeat them and unite the country, so they cooperated. Communists joined the GMD as individual members and accepted Sun's principles, but this shared aim against the warlords was the main reason for the alliance. Letting foreign powers keep their rights goes against the GMD's aim of nationalism.",
+      "clue": "Think about the problem facing China after 1916."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best describes the result of the April 1927 Shanghai Massacre?",
+      "opts": [
+        "It ended GMD cooperation with the Communists",
+        "It started the alliance between the GMD and Communists",
+        "It made Sun Yixian the leader of the GMD",
+        "It brought the warlords' rule in China to an end"
+      ],
+      "why": "Jiang Jieshi's forces killed many Communists and union members, so the two parties stopped working together. It did not start the alliance, which began earlier, and Sun Yixian had already died.",
+      "clue": "Who attacked whom, and what did that do to their partnership?"
+    }
+  },
+  "mod-long-march": {
+    "title": "The Long March",
+    "card": [
+      "By 1934 the Nationalist government under Jiang Jieshi had surrounded the Communists' base in Jiangxi in south-east China. Nationalist forces were closing in, and staying put risked destruction.",
+      "In October 1934 the Red Army broke out and retreated. Over about a year it marched thousands of kilometres through mountains, rivers and grasslands to the north-west, ending in Shaanxi in late 1935.",
+      "The march was costly. Most of the people who set out did not arrive, because of fighting, hunger, cold and illness.",
+      "At a meeting at Zunyi in January 1935, party leaders gave Mao Zedong a leading role in directing the army. The march saved the Communists as a force, and Mao's authority in the party grew from it."
+    ],
+    "remember": "The Long March was a costly retreat that saved the Communists and raised Mao to lead them.",
+    "a": {
+      "q": "Why did the Communists begin the Long March in 1934?",
+      "opts": [
+        "Nationalist forces had surrounded their Jiangxi base",
+        "They had defeated the Nationalists and were moving north",
+        "Japan had invaded and forced them out of their base",
+        "They wanted to spread communism to the cities of the coast"
+      ],
+      "why": "The Nationalists had closed in on the Jiangxi base, so the Communists broke out to survive. It was a retreat, not an advance after a victory, so the option about defeating the Nationalists is wrong.",
+      "clue": "Think about whether the Communists were attacking or in danger."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the Long March was a failure because most marchers did not survive. Which reply best uses the card?",
+      "opts": [
+        "It kept the Communists alive as a force and lifted Mao",
+        "It gave them a bigger army than they had at the start",
+        "It won Communist control of the cities of eastern China",
+        "It showed the Communists had dropped their revolution"
+      ],
+      "why": "Despite heavy losses, the march let the Communists escape destruction and reach a new base in Shaanxi, and Mao rose to lead them. The losses were real, but they do not make it a failure in outcome. The army was much smaller at the end, not bigger, and the march was a retreat, not a conquest of cities.",
+      "clue": "Ask what the Communists had at the end that they might have lost."
+    }
+  },
+  "mod-mao-zedong-thought": {
+    "title": "Mao Zedong Thought",
+    "card": [
+      "Classical Marxism expected revolution to come from the urban working class, called the proletariat. China in the 1920s was mostly a farming country, with few factory workers.",
+      "Mao Zedong adapted communism to these conditions. He saw the peasants, who made up most of China's people, as the main force for revolution.",
+      "Mao's views were shaped by his study of rural Hunan, where he saw peasants angry about high rents, debt and landlord power. He believed they could be organised to fight.",
+      "This approach is called Mao Zedong Thought. It joined Marxist ideas to Chinese conditions, and it placed peasants, not city workers, at the centre of the revolution."
+    ],
+    "remember": "Mao changed the Marxist plan for China: peasants, not city workers, would drive the revolution.",
+    "a": {
+      "q": "Why did Mao Zedong place peasants at the centre of revolution in China?",
+      "opts": [
+        "China had many peasants and few factory workers",
+        "China's factory workers had already taken power",
+        "Classical Marxism looked to peasants to lead revolution",
+        "Peasants owned most land and wanted to protect it"
+      ],
+      "why": "China was mostly a farming country with few factory workers, so Mao looked to the peasants, the largest group. The option about classical Marxism is tempting but wrong: Marx looked to city workers, which is why Mao had to adapt his ideas.",
+      "clue": "Compare China's society with the one Marx had in mind."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says that Mao Zedong Thought was simply the original Marxist plan applied without change. Why is the student wrong?",
+      "opts": [
+        "Mao shifted the main role from city workers to peasants",
+        "Mao rejected Marxism and made peasants the ruling class",
+        "Mao relied on the urban working class more than Marx did",
+        "Mao copied the plan directly from the Guomindang"
+      ],
+      "why": "Mao kept Marxist ideas but adapted them to China by making peasants, not the urban proletariat, the main revolutionary force. The tempting option about rejecting Marxism is wrong because Mao adapted communism and did not abandon it.",
+      "clue": "Who did classical Marxism expect to lead revolution, and who did Mao choose?"
+    }
+  },
+  "mod-war-against-japan": {
+    "title": "The war against Japan",
+    "card": [
+      "Japan took Manchuria in 1931. In 1937 it launched a full invasion of China. The Nationalist government under Jiang Jieshi and the Communists faced a common enemy.",
+      "Japan's forces took the major coastal cities and richest farmland. The Nationalists lost their main sources of tax and industry and moved their capital inland to Chongqing.",
+      "The Nationalist army fought large battles and suffered heavy losses. Its government also faced inflation and corruption, and it lost public support.",
+      "The Communists, based in the north-west, used guerrilla warfare behind Japanese lines. They won peasant support by resisting Japan and by reducing rents in the areas they held. Their army and party grew much larger."
+    ],
+    "remember": "The war drained the Nationalists and gave the Communists room to grow among peasants.",
+    "a": {
+      "q": "Why did the war against Japan weaken the Nationalist government?",
+      "opts": [
+        "It lost its richest cities, and its army took heavy losses",
+        "It handed control of its army to the Communist leaders",
+        "It lost peasant support by making peace with Japan early",
+        "It moved its capital into the Communist base area"
+      ],
+      "why": "The Nationalists lost the coastal cities and farmland that funded them, and their army suffered heavy losses in large battles. They did not hand over their army or make an early peace. Their capital moved to Chongqing, not to the Communist base.",
+      "clue": "Think about what the Nationalists lost and what their army faced."
+    },
+    "b": {
+      "d": 3,
+      "q": "A village in northern China in 1940 lies behind Japanese lines. Its farmers begin to back the Communists. What is the most likely reason?",
+      "opts": [
+        "The Communists resisted Japan and cut the farmers' rents",
+        "The Nationalists had seized the village's land for the war",
+        "The farmers had studied Marxist books on class struggle",
+        "The Communists held the cities and sent food to the village"
+      ],
+      "why": "The Communists won peasant support by resisting Japan and reducing rents in the areas they held. They did not hold the cities at this time, and peasant support came from what the Communists did, not from reading Marxist books or from Nationalist land seizures.",
+      "clue": "Look at what the Communists did in the areas they held."
+    }
+  },
+  "mod-civil-war-1949": {
+    "title": "The civil war and 1949",
+    "card": [
+      "The Nationalists and Communists resumed their civil war after Japan surrendered in 1945. The Nationalist government, led by Jiang Jieshi, had the larger army, more weapons and aid from the United States, and held the major cities.",
+      "The Nationalists lost support. Prices rose very fast, officials were often corrupt, and many people lost faith in the government.",
+      "The Communist People's Liberation Army won over many peasants, gained captured weapons and soldiers, and took Manchuria in 1948. It then won major battles and took Beijing in early 1949.",
+      "On 1 October 1949 Mao Zedong proclaimed the People's Republic of China in Beijing. Jiang Jieshi and the Nationalists withdrew to the island of Taiwan."
+    ],
+    "remember": "The Communists won because Nationalist support collapsed while their own grew, and they proclaimed the People's Republic in 1949.",
+    "a": {
+      "q": "Why were the Nationalists defeated in the civil war, even though they began with a larger army?",
+      "opts": [
+        "They lost public support while the Communists gained it",
+        "The Communists had more foreign aid and weapons from 1945",
+        "The Communists held most major cities from the start",
+        "Peasants backed them, but city workers turned against them"
+      ],
+      "why": "Rising prices and corruption cost the Nationalists support, while the Communists won over peasants and captured weapons. It was the Nationalists, not the Communists, who began with more weapons, US aid and the major cities.",
+      "clue": "Think beyond the size of each army."
+    },
+    "b": {
+      "d": 3,
+      "q": "Which statement best describes China at the end of 1949?",
+      "opts": [
+        "Communists ruled the mainland, Nationalists held Taiwan",
+        "Nationalists ruled the mainland, Communists held Taiwan",
+        "Communists and Nationalists shared a government in Beijing",
+        "Communists ruled the north, Nationalists held the south"
+      ],
+      "why": "Mao proclaimed the People's Republic in Beijing after the Communists won the mainland, and Jiang Jieshi's Nationalists withdrew to Taiwan. A north and south split is tempting, but the Nationalists did not keep a part of the mainland.",
+      "clue": "Which side proclaimed a new state, and where did the other side go?"
+    }
   }
 };

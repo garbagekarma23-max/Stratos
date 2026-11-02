@@ -16,11 +16,13 @@
    0.2
   ]
  ],
- "stage": "match-review",
+ "stage": "adapt",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 says reuse mat-radians, so to the Opus match check, as every reuse is",
-  "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 may adapt mat-radians, but is not highly sure, so it is for you to review"
+  "2026-11-01T08:14:07Z confirm: Claude Opus 5.5 may adapt mat-radians, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:23:18Z match: owner says adapt mat-radians (2 changes)",
+  "2026-11-02T06:23:18Z review: adapting mat-radians on the next run"
  ],
  "sent": {
   "match": 1,
@@ -48,5 +50,13 @@
   "sure": "medium",
   "reason": "The bank's Radians card teaches the same idea at a Year 11 depth, with a full turn of 2π. It needs only the unit-circle framing and an explicit arc-length line to match the Victorian brief.",
   "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "mat-radians",
+  "changes": [
+   "Define the radian through arc length on the unit circle, as the Victorian Mathematical Methods course does, rather than only through a general circle where the arc equals the radius.",
+   "Add a line stating that arc length equals radius times angle in radians (l = rθ). The card's own definition already implies this."
+  ],
+  "by": "owner"
  }
 }

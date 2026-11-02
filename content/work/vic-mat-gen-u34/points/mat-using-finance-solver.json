@@ -1,0 +1,229 @@
+{
+ "id": "mat-using-finance-solver",
+ "title": "Using a finance solver",
+ "brief": "fa2805cea9a1",
+ "shortlist": [
+  [
+   "bus-finance-other-parts-business",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00543,
+  "check": 0.01784,
+  "fix": 0.02881,
+  "recheck": 0.00939
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers how finance interacts with business functions like operations, marketing and HR in a Business Studies course, not using a finance solver to find N, I%, PV, PMT or FV in a loans and annuities context, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Using a finance solver",
+  "card": [
+   "A finance solver is a tool on a calculator or in software. You enter four of N, I%, PV, PMT and FV, and it finds the fifth. It also needs PPY, the payments per year, and CPY, the compounding periods per year.",
+   "N is the number of payments. I% is the annual interest rate. PV is the amount at the start. PMT is the regular payment. FV is the amount at the end.",
+   "Money you receive is entered as positive. Money you pay out is entered as negative. If you get it wrong, the solver gives a wrong or impossible answer.",
+   "Example: you borrow $20 000, so PV = 20 000. You repay it with PMT = -500 each month at 6% a year, and FV = 0 at the end. The solver then gives N, the number of months to repay."
+  ],
+  "remember": "Enter four values, find the fifth, and give money in and money out opposite signs.",
+  "a": {
+   "q": "Sam borrows $15 000 to buy a car. In a finance solver, how should PV and PMT be entered?",
+   "opts": [
+    "PV = 15 000 and PMT as a negative number",
+    "PV = -15 000 and PMT as a negative number",
+    "PV = 15 000 and PMT as a positive number",
+    "PV = -15 000 and PMT as a positive number"
+   ],
+   "why": "Sam receives the loan, so PV is positive. Sam pays out each repayment, so PMT is negative. Giving both the same sign is the common mistake, and the solver needs opposite signs.",
+   "clue": "Which amount does Sam receive, and which does Sam pay out?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya invests $8 000 in an account. She will add nothing more and wants to find FV after 5 years. In the solver, what should PV and PMT be?",
+   "opts": [
+    "PV = -8 000 and PMT = 0",
+    "PV = 8 000 and PMT = 0",
+    "PV = -8 000 and PMT = 8 000",
+    "PV = 8 000 and PMT = -8 000"
+   ],
+   "why": "Priya pays the $8 000 into the account, so it is money out for her and PV is negative. She adds no regular amounts, so PMT is 0. Entering PV as positive is tempting because it is the starting amount, but the sign depends on who pays.",
+   "clue": "Does Priya receive the $8 000 or pay it in?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "PV = 15 000 and PMT as a negative number",
+   "also_right": [
+    "PV = -15 000 and PMT as a positive number"
+   ]
+  },
+  "b": {
+   "best": "PV = -8 000 and PMT = 0",
+   "also_right": [
+    "PV = 8 000 and PMT = 0"
+   ]
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question does not say whose point of view to use. From the lender's view, PV = -15 000 with PMT positive also gives correct solver results, because the signs are still opposite. The stem should say 'from Sam's point of view'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question does not say whose point of view to use. From the bank's view, PV = 8 000 with PMT = 0 is also a consistent entry and gives the same size of FV, only negative. The stem should say 'from Priya's point of view'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have a second defensible answer. The finance solver works with either consistent sign convention, so the stems should say the amounts are from Sam's and Priya's point of view. The card and the explanations are otherwise accurate."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “PV = -15 000 and PMT as a positive number” could also be right.",
+  "Question b: the checker says “PV = 8 000 and PMT = 0” could also be right.",
+  "Question a, wording: The question does not say whose point of view to use. From the lender's view, PV = -15 000 with PMT positive also gives correct solver results, because the signs are still opposite. The stem should say 'from Sam's point of view'.",
+  "Question b, wording: The question does not say whose point of view to use. From the bank's view, PV = 8 000 with PMT = 0 is also a consistent entry and gives the same size of FV, only negative. The stem should say 'from Priya's point of view'."
+ ],
+ "proposal": {
+  "title": "Using a finance solver",
+  "card": [
+   "A finance solver is a tool on a calculator or in software. You enter four of N, I%, PV, PMT and FV, and it finds the fifth. It also needs PPY, the payments per year, and CPY, the compounding periods per year.",
+   "N is the number of payments. I% is the annual interest rate. PV is the amount at the start. PMT is the regular payment, or 0 if there is none. FV is the amount at the end.",
+   "Choose one person's point of view and keep it. Money that person receives is positive. Money that person pays out is negative. If the signs are wrong, the solver gives a wrong or impossible answer.",
+   "Example: from your point of view, you borrow $20 000, so PV = 20 000. You repay PMT = -500 each month at 6% a year, and FV = 0 at the end. The solver then gives N, the number of months to repay."
+  ],
+  "remember": "Enter four values, find the fifth, and sign money in and out from one point of view.",
+  "a": {
+   "q": "Sam borrows $15 000 to buy a car. From Sam's point of view, how should PV and PMT be entered in a finance solver?",
+   "opts": [
+    "PV = 15 000 and PMT as a negative number",
+    "PV = -15 000 and PMT as a negative number",
+    "PV = 15 000 and PMT as a positive number",
+    "PV = -15 000 and PMT as a positive number"
+   ],
+   "why": "Sam receives the loan, so PV is positive for Sam. Sam pays out each repayment, so PMT is negative. PV = -15 000 with PMT positive is the lender's point of view, not Sam's.",
+   "clue": "Which amount does Sam receive, and which does Sam pay out?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya puts $8 000 into an account. She will add nothing more and wants FV after 5 years. From Priya's point of view, what are PV and PMT?",
+   "opts": [
+    "PV = -8 000 and PMT = 0",
+    "PV = 8 000 and PMT = 0",
+    "PV = -8 000 and PMT = 8 000",
+    "PV = 8 000 and PMT = -8 000"
+   ],
+   "why": "Priya pays the $8 000 into the account, so it is money out for her and PV is negative. She makes no regular additions, so PMT is 0. Entering PV as positive is tempting because it is the starting amount, but for Priya it is money paid out.",
+   "clue": "Does Priya receive the $8 000 or pay it in?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "PV = 15 000 and PMT as a negative number",
+    "also_right": []
+   },
+   "b": {
+    "best": "PV = -8 000 and PMT = 0",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question does not say whose point of view to use. From the lender's view, PV = -15 000 with PMT positive also gives correct solver results, because the signs are still opposite. The stem should say 'from Sam's point of view'."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question does not say whose point of view to use. From the bank's view, PV = 8 000 with PMT = 0 is also a consistent entry and gives the same size of FV, only negative. The stem should say 'from Priya's point of view'."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “PV = -15 000 and PMT as a positive number” could also be right.",
+   "Question b: the checker says “PV = 8 000 and PMT = 0” could also be right.",
+   "Question a, wording: The question does not say whose point of view to use. From the lender's view, PV = -15 000 with PMT positive also gives correct solver results, because the signs are still opposite. The stem should say 'from Sam's point of view'.",
+   "Question b, wording: The question does not say whose point of view to use. From the bank's view, PV = 8 000 with PMT = 0 is also a consistent entry and gives the same size of FV, only negative. The stem should say 'from Priya's point of view'."
+  ]
+ },
+ "final": {
+  "title": "Using a finance solver",
+  "card": [
+   "A finance solver is a tool on a calculator or in software. You enter four of N, I%, PV, PMT and FV, and it finds the fifth. It also needs PPY, the payments per year, and CPY, the compounding periods per year.",
+   "N is the number of payments. I% is the annual interest rate. PV is the amount at the start. PMT is the regular payment, or 0 if there is none. FV is the amount at the end.",
+   "Choose one person's point of view and keep it. Money that person receives is positive. Money that person pays out is negative. If the signs are wrong, the solver gives a wrong or impossible answer.",
+   "Example: from your point of view, you borrow $20 000, so PV = 20 000. You repay PMT = -500 each month at 6% a year, and FV = 0 at the end. The solver then gives N, the number of months to repay."
+  ],
+  "remember": "Enter four values, find the fifth, and sign money in and out from one point of view.",
+  "a": {
+   "q": "Sam borrows $15 000 to buy a car. From Sam's point of view, how should PV and PMT be entered in a finance solver?",
+   "opts": [
+    "PV = 15 000 and PMT as a negative number",
+    "PV = -15 000 and PMT as a negative number",
+    "PV = 15 000 and PMT as a positive number",
+    "PV = -15 000 and PMT as a positive number"
+   ],
+   "why": "Sam receives the loan, so PV is positive for Sam. Sam pays out each repayment, so PMT is negative. PV = -15 000 with PMT positive is the lender's point of view, not Sam's.",
+   "clue": "Which amount does Sam receive, and which does Sam pay out?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya puts $8 000 into an account. She will add nothing more and wants FV after 5 years. From Priya's point of view, what are PV and PMT?",
+   "opts": [
+    "PV = -8 000 and PMT = 0",
+    "PV = 8 000 and PMT = 0",
+    "PV = -8 000 and PMT = 8 000",
+    "PV = 8 000 and PMT = -8 000"
+   ],
+   "why": "Priya pays the $8 000 into the account, so it is money out for her and PV is negative. She makes no regular additions, so PMT is 0. Entering PV as positive is tempting because it is the starting amount, but for Priya it is money paid out.",
+   "clue": "Does Priya receive the $8 000 or pay it in?"
+  }
+ },
+ "cleared_by": "recheck"
+}

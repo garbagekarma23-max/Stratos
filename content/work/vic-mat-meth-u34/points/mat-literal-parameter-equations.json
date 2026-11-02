@@ -1,0 +1,146 @@
+{
+ "id": "mat-literal-parameter-equations",
+ "title": "Literal and parameter equations",
+ "brief": "c46be393fd3c",
+ "shortlist": [
+  [
+   "mat-families-functions",
+   0.337
+  ],
+  [
+   "mat-simultaneous-linear-equations",
+   0.259
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.244
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.0047,
+  "check": 0.00696
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches solving an equation with a parameter and deciding how many solutions it has depending on the parameter; the closest, Families of functions, only uses a parameter to name a family of curves and fix one member from a point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Literal and parameter equations",
+  "card": [
+   "A parameter is a letter that stands for a fixed number whose value is not given, such as k in kx + 2 = 3. The unknown to solve for is x.",
+   "Collect the x terms and write the equation as ax = b, where a and b may involve k. Then check whether a is zero before dividing.",
+   [
+    "One solution",
+    "if a ≠ 0, divide to get x = b/a. For kx + 2 = 3, we get kx = 1, so x = 1/k when k ≠ 0."
+   ],
+   [
+    "None or infinitely many",
+    "if a = 0, the equation becomes 0 = b. If b ≠ 0 it is false for every x, so there is no solution. If b = 0 it is true for every x, so there are infinitely many."
+   ]
+  ],
+  "remember": "Write ax = b. Only divide by a when a ≠ 0. If a = 0, look at b.",
+  "a": {
+   "q": "For which value of k does kx + 2 = 3 have no solution?",
+   "opts": [
+    "k = 0",
+    "k = 1",
+    "k = 2",
+    "k = 3"
+   ],
+   "why": "Rearranging gives kx = 1. If k = 0 this becomes 0 = 1, which is false for every x, so there is no solution. For k = 1, 2 or 3 we can divide by k and get one solution.",
+   "clue": "Which value of k makes you unable to divide?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For which value of m does the equation 3x + 5 = mx + 5 have infinitely many solutions?",
+   "opts": [
+    "m = 3",
+    "m = 0",
+    "m = 5",
+    "m = −3"
+   ],
+   "why": "Collecting x terms gives (3 − m)x = 0. If m = 3 this is 0 = 0, which is true for every x. If m = 0 the equation is 3x = 0, which has the single solution x = 0.",
+   "clue": "Make the x coefficient zero, then check what is left on the right."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "k = 0",
+   "also_right": []
+  },
+  "b": {
+   "best": "m = 3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Literal and parameter equations",
+  "card": [
+   "A parameter is a letter that stands for a fixed number whose value is not given, such as k in kx + 2 = 3. The unknown to solve for is x.",
+   "Collect the x terms and write the equation as ax = b, where a and b may involve k. Then check whether a is zero before dividing.",
+   [
+    "One solution",
+    "if a ≠ 0, divide to get x = b/a. For kx + 2 = 3, we get kx = 1, so x = 1/k when k ≠ 0."
+   ],
+   [
+    "None or infinitely many",
+    "if a = 0, the equation becomes 0 = b. If b ≠ 0 it is false for every x, so there is no solution. If b = 0 it is true for every x, so there are infinitely many."
+   ]
+  ],
+  "remember": "Write ax = b. Only divide by a when a ≠ 0. If a = 0, look at b.",
+  "a": {
+   "q": "For which value of k does kx + 2 = 3 have no solution?",
+   "opts": [
+    "k = 0",
+    "k = 1",
+    "k = 2",
+    "k = 3"
+   ],
+   "why": "Rearranging gives kx = 1. If k = 0 this becomes 0 = 1, which is false for every x, so there is no solution. For k = 1, 2 or 3 we can divide by k and get one solution.",
+   "clue": "Which value of k makes you unable to divide?"
+  },
+  "b": {
+   "d": 3,
+   "q": "For which value of m does the equation 3x + 5 = mx + 5 have infinitely many solutions?",
+   "opts": [
+    "m = 3",
+    "m = 0",
+    "m = 5",
+    "m = −3"
+   ],
+   "why": "Collecting x terms gives (3 − m)x = 0. If m = 3 this is 0 = 0, which is true for every x. If m = 0 the equation is 3x = 0, which has the single solution x = 0.",
+   "clue": "Make the x coefficient zero, then check what is left on the right."
+  }
+ },
+ "cleared_by": "checker"
+}

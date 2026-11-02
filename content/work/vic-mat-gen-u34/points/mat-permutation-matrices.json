@@ -1,0 +1,249 @@
+{
+ "id": "mat-permutation-matrices",
+ "title": "Binary and permutation matrices",
+ "brief": "344a76c76854",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.351
+  ],
+  [
+   "mat-matrix-operations-specialist",
+   0.239
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00555,
+  "check": 0.01599,
+  "fix": 0.029,
+  "recheck": 0.00861
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches 0-1 matrices for links or yes-no data, or permutation matrices that reorder rows or columns; the transformations and matrix operations cards cover different ideas, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Binary and permutation matrices",
+  "card": [
+   [
+    "Binary matrix",
+    "A matrix whose elements are only 0 or 1. A 1 means yes or a link, and a 0 means no or no link."
+   ],
+   [
+    "Permutation matrix",
+    "A square matrix with exactly one 1 in each row and each column. All other elements are 0. Multiplying by it reorders the rows or columns of another matrix."
+   ],
+   [
+    "Rows",
+    "P × A reorders the rows of A. Row i of P has its 1 in column j, so row i of the answer is row j of A."
+   ],
+   [
+    "Example",
+    "P = [0 1; 1 0] and A = [2 3; 4 5]. Then P × A = [4 5; 2 3], so the two rows of A swap places."
+   ]
+  ],
+  "remember": "A binary matrix records yes or no with 1 and 0. A permutation matrix on the left reorders rows.",
+  "a": {
+   "q": "Which of these 3 × 3 matrices is a permutation matrix?",
+   "opts": [
+    "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 1 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 0 1 0, row 2: 0 1 0, row 3: 1 0 0",
+    "Row 1: 1 0 0, row 2: 0 2 0, row 3: 0 0 1"
+   ],
+   "why": "Each row and each column has exactly one 1, and every other element is 0. The second option has two 1s in row 1. The third has two 1s in column 2. The last has a 2, so it is not even binary.",
+   "clue": "Count the 1s in every row and every column."
+  },
+  "b": {
+   "d": 3,
+   "q": "P = [0 1; 1 0] and A = [3 6; 8 1]. What is P × A?",
+   "opts": [
+    "Row 1: 8 1, row 2: 3 6",
+    "Row 1: 6 3, row 2: 1 8",
+    "Row 1: 3 6, row 2: 8 1",
+    "Row 1: 1 8, row 2: 6 3"
+   ],
+   "why": "Row 1 of P has its 1 in column 2, so row 1 of the answer is row 2 of A: 8 1. Row 2 of P has its 1 in column 1, so row 2 is 3 6. Swapping columns instead gives 6 3 and 1 8, which is A × P.",
+   "clue": "P is on the left, so it moves rows, not columns."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
+   "also_right": []
+  },
+  "b": {
+   "best": "Row 1: 8 1, row 2: 3 6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to the wrong options by position ('the second option has two 1s in row 1', 'the third', 'the last'). The options are shuffled, so these positions will not match what students see. In the order shown, the matrix with two 1s in row 1 is the first option, not the second. The why should describe each wrong matrix by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Why (a) names wrong options by position ('second option', 'third', 'last'), which will not match the shuffled order, so it should describe each matrix by its content."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) refers to the wrong options by position ('the second option has two 1s in row 1', 'the third', 'the last'). The options are shuffled, so these positions will not match what students see. In the order shown, the matrix with two 1s in row 1 is the first option, not the second. The why should describe each wrong matrix by its content, not its position."
+ ],
+ "proposal": {
+  "title": "Binary and permutation matrices",
+  "card": [
+   [
+    "Binary matrix",
+    "A matrix whose elements are only 0 or 1. A 1 means yes or a link, and a 0 means no or no link."
+   ],
+   [
+    "Permutation matrix",
+    "A square matrix with exactly one 1 in each row and each column. All other elements are 0. Multiplying by it reorders the rows or columns of another matrix."
+   ],
+   [
+    "Rows",
+    "P × A reorders the rows of A. Row i of P has its 1 in column j, so row i of the answer is row j of A. A × P reorders the columns instead."
+   ],
+   [
+    "Example",
+    "P = [0 1; 1 0] and A = [2 3; 4 5], where ; starts a new row. Then P × A = [4 5; 2 3], so the two rows of A swap places."
+   ]
+  ],
+  "remember": "A binary matrix records yes or no with 1 and 0. A permutation matrix on the left reorders rows.",
+  "a": {
+   "q": "Which of these 3 × 3 matrices is a permutation matrix?",
+   "opts": [
+    "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 1 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 0 1 0, row 2: 0 1 0, row 3: 1 0 0",
+    "Row 1: 1 0 0, row 2: 0 2 0, row 3: 0 0 1"
+   ],
+   "why": "In the right matrix, each row and each column has exactly one 1, and every other element is 0. The matrix starting with 1 1 0 has two 1s in row 1. The one with 0 1 0 in both rows 1 and 2 has two 1s in column 2 and none in column 3. The one containing a 2 is not even binary.",
+   "clue": "Count the 1s in every row and every column."
+  },
+  "b": {
+   "d": 3,
+   "q": "P = [0 1; 1 0] and A = [3 6; 8 1]. What is P × A?",
+   "opts": [
+    "Row 1: 8 1, row 2: 3 6",
+    "Row 1: 6 3, row 2: 1 8",
+    "Row 1: 3 6, row 2: 8 1",
+    "Row 1: 1 8, row 2: 6 3"
+   ],
+   "why": "Row 1 of P has its 1 in column 2, so row 1 of the answer is row 2 of A: 8 1. Row 2 of P has its 1 in column 1, so row 2 is 3 6. Swapping columns instead gives 6 3 and 1 8, which is A × P.",
+   "clue": "P is on the left, so it moves rows, not columns."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "also_right": []
+   },
+   "b": {
+    "best": "Row 1: 8 1, row 2: 3 6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to the wrong options by position ('the second option has two 1s in row 1', 'the third', 'the last'). The options are shuffled, so these positions will not match what students see. In the order shown, the matrix with two 1s in row 1 is the first option, not the second. The why should describe each wrong matrix by its content, not its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) refers to the wrong options by position ('the second option has two 1s in row 1', 'the third', 'the last'). The options are shuffled, so these positions will not match what students see. In the order shown, the matrix with two 1s in row 1 is the first option, not the second. The why should describe each wrong matrix by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "Binary and permutation matrices",
+  "card": [
+   [
+    "Binary matrix",
+    "A matrix whose elements are only 0 or 1. A 1 means yes or a link, and a 0 means no or no link."
+   ],
+   [
+    "Permutation matrix",
+    "A square matrix with exactly one 1 in each row and each column. All other elements are 0. Multiplying by it reorders the rows or columns of another matrix."
+   ],
+   [
+    "Rows",
+    "P × A reorders the rows of A. Row i of P has its 1 in column j, so row i of the answer is row j of A. A × P reorders the columns instead."
+   ],
+   [
+    "Example",
+    "P = [0 1; 1 0] and A = [2 3; 4 5], where ; starts a new row. Then P × A = [4 5; 2 3], so the two rows of A swap places."
+   ]
+  ],
+  "remember": "A binary matrix records yes or no with 1 and 0. A permutation matrix on the left reorders rows.",
+  "a": {
+   "q": "Which of these 3 × 3 matrices is a permutation matrix?",
+   "opts": [
+    "Row 1: 0 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 1 1 0, row 2: 0 0 1, row 3: 1 0 0",
+    "Row 1: 0 1 0, row 2: 0 1 0, row 3: 1 0 0",
+    "Row 1: 1 0 0, row 2: 0 2 0, row 3: 0 0 1"
+   ],
+   "why": "In the right matrix, each row and each column has exactly one 1, and every other element is 0. The matrix starting with 1 1 0 has two 1s in row 1. The one with 0 1 0 in both rows 1 and 2 has two 1s in column 2 and none in column 3. The one containing a 2 is not even binary.",
+   "clue": "Count the 1s in every row and every column."
+  },
+  "b": {
+   "d": 3,
+   "q": "P = [0 1; 1 0] and A = [3 6; 8 1]. What is P × A?",
+   "opts": [
+    "Row 1: 8 1, row 2: 3 6",
+    "Row 1: 6 3, row 2: 1 8",
+    "Row 1: 3 6, row 2: 8 1",
+    "Row 1: 1 8, row 2: 6 3"
+   ],
+   "why": "Row 1 of P has its 1 in column 2, so row 1 of the answer is row 2 of A: 8 1. Row 2 of P has its 1 in column 1, so row 2 is 3 6. Swapping columns instead gives 6 3 and 1 8, which is A × P.",
+   "clue": "P is on the left, so it moves rows, not columns."
+  }
+ },
+ "cleared_by": "recheck"
+}

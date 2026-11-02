@@ -1,0 +1,225 @@
+{
+ "id": "eco-consequences-inflation",
+ "title": "Consequences of inflation",
+ "brief": "727b6c28d5d4",
+ "shortlist": [
+  [
+   "eco-inflation-target",
+   0.47
+  ],
+  [
+   "e-inflation",
+   0.345
+  ],
+  [
+   "e-cpi",
+   0.307
+  ],
+  [
+   "eco-monetary-policy-works",
+   0.232
+  ],
+  [
+   "eco-inflationary-expectations",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00527,
+  "check": 0.01273,
+  "fix": 0.02691,
+  "recheck": 0.01216
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point covers this point's consequences alone: e-inflation is broader, mixing causes with effects, and it omits the job losses from inflation that is too low, while the other matches cover the target, measurement, policy transmission or expectations only.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Consequences of inflation",
+  "card": [
+   "High inflation erodes buying power. Each dollar buys fewer goods and services, so people whose incomes rise more slowly than prices can afford less.",
+   "High inflation can start a wage-price spiral. Workers ask for higher wages to keep up with prices, firms may raise prices to cover the wage costs, and prices rise again.",
+   "High inflation also distorts spending and investment. Prices become hard to compare and future costs hard to predict, so people and firms may buy goods as a hedge against rising prices or hold back from long-term projects.",
+   "Inflation that is too low can also cause harm. Buyers may delay spending, expecting lower prices later. Falling sales can lead firms to cut back production and jobs."
+  ],
+  "remember": "Too high erodes buying power and can spiral. Too low can delay spending and cost jobs.",
+  "a": {
+   "q": "Ravi's wage stays the same for a year while prices across the economy rise by 6%. What has happened to his buying power?",
+   "opts": [
+    "It has fallen, as his wage buys fewer goods",
+    "It has risen, as his wage is unchanged",
+    "It has stayed the same, as his wage is unchanged",
+    "It has fallen, as firms cut his hours of work"
+   ],
+   "why": "His wage is the same but prices are higher, so each dollar buys less. The tempting answer is that buying power is unchanged because the wage is unchanged, but buying power depends on what the wage can buy.",
+   "clue": "Compare what his wage buys now with a year ago."
+  },
+  "b": {
+   "d": 3,
+   "q": "Prices in a town are expected to fall slightly next year. Many households put off buying a new fridge or sofa. What is the most likely effect on local retailers and jobs?",
+   "opts": [
+    "Sales fall, and retailers may cut staff",
+    "Sales rise, and retailers may hire more staff",
+    "Sales fall, and wages are bid up by workers",
+    "Sales stay steady, as the goods are needed"
+   ],
+   "why": "When buyers expect lower prices, they delay spending. Falling sales can lead retailers to cut production and jobs. Wages being bid up is a feature of a wage-price spiral, which comes from high inflation.",
+   "clue": "What do buyers do when they expect lower prices later?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It has fallen, as his wage buys fewer goods",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sales fall, and retailers may cut staff",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last bullet ties delayed spending to 'inflation that is too low', but buyers only expect lower prices later when prices are expected to fall (deflation). Low but positive inflation does not by itself lead buyers to expect lower prices, so the mechanism should be linked to very low inflation turning into expected deflation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match the card. One problem: the card links delayed spending to low inflation, when expecting lower prices really means expecting deflation, so the wording should say so."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The last bullet ties delayed spending to 'inflation that is too low', but buyers only expect lower prices later when prices are expected to fall (deflation). Low but positive inflation does not by itself lead buyers to expect lower prices, so the mechanism should be linked to very low inflation turning into expected deflation."
+ ],
+ "proposal": {
+  "title": "Consequences of inflation",
+  "card": [
+   "High inflation erodes buying power. Each dollar buys fewer goods and services, so people whose incomes rise more slowly than prices can afford less.",
+   "High inflation can start a wage-price spiral. Workers ask for higher wages to keep up with prices, firms may raise prices to cover the wage costs, and prices rise again.",
+   "High inflation also distorts spending and investment. Prices become hard to compare and future costs hard to predict, so people and firms may buy goods as a hedge against rising prices or hold back from long-term projects.",
+   "Inflation that is too low can also cause harm. If it slides far enough that buyers expect prices to fall, they may delay spending to wait for lower prices. Falling sales can lead firms to cut production and jobs."
+  ],
+  "remember": "Too high erodes buying power and can spiral. Too low can lead buyers to expect price falls, delay spending and cost jobs.",
+  "a": {
+   "q": "Ravi's wage stays the same for a year while prices across the economy rise by 6%. What has happened to his buying power?",
+   "opts": [
+    "It has fallen, as his wage buys fewer goods",
+    "It has risen, as his wage is unchanged",
+    "It has stayed the same, as his wage is unchanged",
+    "It has fallen, as firms cut his hours of work"
+   ],
+   "why": "His wage is the same but prices are higher, so each dollar buys less. The tempting answer is that buying power is unchanged because the wage is unchanged, but buying power depends on what the wage can buy.",
+   "clue": "Compare what his wage buys now with a year ago."
+  },
+  "b": {
+   "d": 3,
+   "q": "Inflation has been very low, and households now expect prices to fall next year. Many put off buying a new fridge or sofa. What is the most likely effect on retailers and jobs?",
+   "opts": [
+    "Sales fall, and retailers may cut staff",
+    "Sales rise, and retailers may hire more staff",
+    "Sales fall, and wages are bid up by workers",
+    "Sales stay steady, as the goods are needed"
+   ],
+   "why": "When buyers expect lower prices later, they may delay spending. Falling sales can lead retailers to cut production and jobs. Wages being bid up is a feature of a wage-price spiral, which comes from high inflation, not very low inflation.",
+   "clue": "What do buyers do when they expect lower prices later?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It has fallen, as his wage buys fewer goods",
+    "also_right": []
+   },
+   "b": {
+    "best": "Sales fall, and retailers may cut staff",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The last bullet ties delayed spending to 'inflation that is too low', but buyers only expect lower prices later when prices are expected to fall (deflation). Low but positive inflation does not by itself lead buyers to expect lower prices, so the mechanism should be linked to very low inflation turning into expected deflation."
+   }
+  ],
+  "flags": [
+   "Card, fact: The last bullet ties delayed spending to 'inflation that is too low', but buyers only expect lower prices later when prices are expected to fall (deflation). Low but positive inflation does not by itself lead buyers to expect lower prices, so the mechanism should be linked to very low inflation turning into expected deflation."
+  ]
+ },
+ "final": {
+  "title": "Consequences of inflation",
+  "card": [
+   "High inflation erodes buying power. Each dollar buys fewer goods and services, so people whose incomes rise more slowly than prices can afford less.",
+   "High inflation can start a wage-price spiral. Workers ask for higher wages to keep up with prices, firms may raise prices to cover the wage costs, and prices rise again.",
+   "High inflation also distorts spending and investment. Prices become hard to compare and future costs hard to predict, so people and firms may buy goods as a hedge against rising prices or hold back from long-term projects.",
+   "Inflation that is too low can also cause harm. If it slides far enough that buyers expect prices to fall, they may delay spending to wait for lower prices. Falling sales can lead firms to cut production and jobs."
+  ],
+  "remember": "Too high erodes buying power and can spiral. Too low can lead buyers to expect price falls, delay spending and cost jobs.",
+  "a": {
+   "q": "Ravi's wage stays the same for a year while prices across the economy rise by 6%. What has happened to his buying power?",
+   "opts": [
+    "It has fallen, as his wage buys fewer goods",
+    "It has risen, as his wage is unchanged",
+    "It has stayed the same, as his wage is unchanged",
+    "It has fallen, as firms cut his hours of work"
+   ],
+   "why": "His wage is the same but prices are higher, so each dollar buys less. The tempting answer is that buying power is unchanged because the wage is unchanged, but buying power depends on what the wage can buy.",
+   "clue": "Compare what his wage buys now with a year ago."
+  },
+  "b": {
+   "d": 3,
+   "q": "Inflation has been very low, and households now expect prices to fall next year. Many put off buying a new fridge or sofa. What is the most likely effect on retailers and jobs?",
+   "opts": [
+    "Sales fall, and retailers may cut staff",
+    "Sales rise, and retailers may hire more staff",
+    "Sales fall, and wages are bid up by workers",
+    "Sales stay steady, as the goods are needed"
+   ],
+   "why": "When buyers expect lower prices later, they may delay spending. Falling sales can lead retailers to cut production and jobs. Wages being bid up is a feature of a wage-price spiral, which comes from high inflation, not very low inflation.",
+   "clue": "What do buyers do when they expect lower prices later?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "mat-area-under-between-curves",
+ "title": "Area under and between curves",
+ "brief": "452a16895830",
+ "shortlist": [
+  [
+   "mat-area-between-two-curves",
+   0.657
+  ],
+  [
+   "mat-areas-under-curves",
+   0.595
+  ],
+  [
+   "mat-probability-density-functions",
+   0.32
+  ],
+  [
+   "mat-integrals-giving-logarithms",
+   0.313
+  ],
+  [
+   "mat-reciprocal-functions",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00599,
+  "check": 0.01418
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point combines two ideas: area between curves (covered by mat-area-between-two-curves) and splitting at where curves cross the x-axis (covered by mat-areas-under-curves), and neither bank point teaches both, so it is broader than either and needs a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Area under and between curves",
+  "card": [
+   "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
+   "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+   "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
+   "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+  ],
+  "remember": "Area = integral of top − bottom, and split at every crossing.",
+  "a": {
+   "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+   "opts": [
+    "∫ from 0 to 2 of (4 − x²) dx",
+    "∫ from 0 to 2 of (x² − 4) dx",
+    "∫ from 0 to 2 of (4 + x²) dx",
+    "∫ from 0 to 4 of (4 − x²) dx"
+   ],
+   "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+   "clue": "Subtract the lower curve from the upper curve."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
+   "opts": [
+    "23/3",
+    "5/3",
+    "−23/3",
+    "7/3"
+   ],
+   "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+   "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "∫ from 0 to 2 of (4 − x²) dx",
+   "also_right": []
+  },
+  "b": {
+   "best": "23/3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both questions have one clearly correct answer that matches the card, and the working in the explanations checks out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Area under and between curves",
+  "card": [
+   "The area between two curves from x = a to x = b is the integral of (top curve − bottom curve). Area = ∫ from a to b of [f(x) − g(x)] dx, where f(x) ≥ g(x) on [a, b].",
+   "For the area between a curve and the x-axis, the axis is the bottom curve (g(x) = 0). Where the curve is below the axis, the integral is negative, so take the positive size of that part.",
+   "If the curves cross, or the curve crosses the x-axis, find the crossing points. Split the interval there and find each area on its own, using top − bottom each time.",
+   "Example: f(x) = x and g(x) = x² between x = 0 and x = 1. They meet where x = x², at x = 0 and x = 1, and x ≥ x² between them. Area = ∫ from 0 to 1 of (x − x²) dx = 1/2 − 1/3 = 1/6."
+  ],
+  "remember": "Area = integral of top − bottom, and split at every crossing.",
+  "a": {
+   "q": "Between x = 0 and x = 2, the line y = 4 lies above the curve y = x². Which integral gives the area between them?",
+   "opts": [
+    "∫ from 0 to 2 of (4 − x²) dx",
+    "∫ from 0 to 2 of (x² − 4) dx",
+    "∫ from 0 to 2 of (4 + x²) dx",
+    "∫ from 0 to 4 of (4 − x²) dx"
+   ],
+   "why": "The top curve is y = 4, so the integrand is top − bottom = 4 − x², over the x-values 0 to 2. Using x² − 4 reverses the order and gives a negative number, which is not an area.",
+   "clue": "Subtract the lower curve from the upper curve."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the total area enclosed between y = x² − 4 and the x-axis, from x = 0 to x = 3?",
+   "opts": [
+    "23/3",
+    "5/3",
+    "−23/3",
+    "7/3"
+   ],
+   "why": "The curve crosses the axis at x = 2, so split there. From 0 to 2 the integral is [x³/3 − 4x] = 8/3 − 8 = −16/3, so that area is 16/3. From 2 to 3 it is (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3. The total is 16/3 + 7/3 = 23/3. Integrating straight from 0 to 3 gives −16/3 + 7/3 = −3, which cancels the parts instead of adding them.",
+   "clue": "Find where the curve crosses the axis, and add the two areas as positive numbers."
+  }
+ },
+ "cleared_by": "checker"
+}

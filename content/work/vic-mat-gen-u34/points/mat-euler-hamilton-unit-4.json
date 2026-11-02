@@ -1,0 +1,243 @@
+{
+ "id": "mat-euler-hamilton-unit-4",
+ "title": "Eulerian trails and Hamiltonian paths",
+ "brief": "82cd74154497",
+ "shortlist": [
+  [
+   "mat-euler-hamilton",
+   0.415
+  ],
+  [
+   "mat-walks-paths-circuits",
+   0.228
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 may adapt mat-euler-hamilton, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.00974,
+  "write": 0.00595,
+  "check": 0.01707,
+  "fix": 0.03501,
+  "recheck": 0.0169
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-euler-hamilton",
+  "changes": [
+   "Rename 'Euler trail' to 'Eulerian trail' to match the terminology used in the Study Design.",
+   "Add the Eulerian circuit condition, that a connected graph has an Eulerian circuit only if every vertex has even degree, since the brief covers circuits and the card covers only trails."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same Euler and Hamilton ideas at a suitable depth, but it needs a terminology change and a circuit condition added to match the Units 3 and 4 brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches Euler trails and Hamiltonian paths but leaves out the degree test for Eulerian circuits (all vertices even), which this brief asks for, so the new point is broader than a small adaptation can cover.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Eulerian trails and Hamiltonian paths",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk that uses every edge exactly once. It may pass through a vertex more than once. If it starts and ends at the same vertex, it is an Eulerian circuit."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused. If it starts and ends at the same vertex, it is a Hamiltonian cycle."
+   ],
+   "For a connected graph, count the vertices of odd degree. If all vertices have even degree, an Eulerian circuit exists. If exactly two have odd degree, an Eulerian trail exists, and it starts at one odd vertex and ends at the other.",
+   "Example: a connected graph has vertex degrees 2, 2, 3, 3 and 4. Exactly two are odd, so it has an Eulerian trail but no Eulerian circuit."
+  ],
+  "remember": "Eulerian is about edges, Hamiltonian is about vertices. Two odd vertices give a trail, none give a circuit.",
+  "a": {
+   "q": "A connected graph has vertices with degrees 2, 4, 3, 3 and 2. What can be said about Eulerian trails and circuits?",
+   "opts": [
+    "It has an Eulerian trail but no Eulerian circuit",
+    "It has an Eulerian circuit",
+    "It has neither an Eulerian trail nor a circuit",
+    "It has an Eulerian trail only if it starts at degree 2"
+   ],
+   "why": "Exactly two vertices have odd degree (the two with degree 3), so an Eulerian trail exists. A circuit needs every degree to be even, so there is no circuit. The trail must start at one odd vertex, not at a degree 2 vertex.",
+   "clue": "Count how many vertices have an odd degree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has vertex degrees 4, 4, 2, 3, 3 and 4. Mia wants to walk along every edge exactly once and finish where she started. What is the correct conclusion?",
+   "opts": [
+    "She cannot, because two vertices have odd degree",
+    "She can, because the degrees add to an even number",
+    "She can, because most vertices have even degree",
+    "She cannot, because a Hamiltonian path is needed"
+   ],
+   "why": "Finishing where she started needs an Eulerian circuit, which needs every degree to be even. Two vertices have degree 3, so there is no circuit, only a trail. The degrees do add to an even number (20), but that is true for every graph, so it proves nothing.",
+   "clue": "A circuit needs all degrees even, not most of them."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It has an Eulerian trail but no Eulerian circuit",
+   "also_right": []
+  },
+  "b": {
+   "best": "She cannot, because two vertices have odd degree",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses the same degrees as the card's worked example (2, 2, 3, 3, 4), only reordered. A student can match it to the example without applying the rule, so it is too easy for Year 12."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts on the card and both answers are correct. Question a repeats the card's example with the degrees reordered, so it tests recall rather than understanding."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, level: Question a uses the same degrees as the card's worked example (2, 2, 3, 3, 4), only reordered. A student can match it to the example without applying the rule, so it is too easy for Year 12."
+ ],
+ "proposal": {
+  "title": "Eulerian trails and Hamiltonian paths",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk that uses every edge exactly once. It may pass through a vertex more than once. If it starts and ends at the same vertex, it is an Eulerian circuit."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused. If it starts and ends at the same vertex, it is a Hamiltonian cycle."
+   ],
+   "For a connected graph, count the vertices of odd degree. None odd: an Eulerian circuit exists. Exactly two odd: an Eulerian trail exists, from one odd vertex to the other. More than two odd: neither exists.",
+   "Example: a connected graph has vertex degrees 2, 2, 3, 3 and 4. Exactly two are odd, so it has an Eulerian trail but no Eulerian circuit."
+  ],
+  "remember": "Eulerian is about edges, Hamiltonian is about vertices. Two odd vertices give a trail, none give a circuit.",
+  "a": {
+   "q": "A connected graph has vertices with degrees 3, 5, 2, 4, 1 and 3. What can be said about Eulerian trails and circuits?",
+   "opts": [
+    "It has neither an Eulerian trail nor an Eulerian circuit",
+    "It has an Eulerian trail but no Eulerian circuit",
+    "It has an Eulerian circuit, since the degree sum is even",
+    "It has an Eulerian trail starting at the degree 1 vertex"
+   ],
+   "why": "The odd degrees are 3, 5, 1 and 3, so four vertices are odd. More than two odd vertices means there is no Eulerian trail and no circuit. The degree sum of 18 is even, but that is true of every graph, so it proves nothing.",
+   "clue": "Count the odd degrees, then check whether there are zero, two or more."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has vertex degrees 4, 4, 2, 3, 3 and 4. Mia wants to walk along every edge exactly once and finish where she started. What is the correct conclusion?",
+   "opts": [
+    "She cannot, because two vertices have odd degree",
+    "She can, because the degrees add to an even number",
+    "She can, because most vertices have even degree",
+    "She cannot, because a Hamiltonian path is needed"
+   ],
+   "why": "Finishing where she started needs an Eulerian circuit, which needs every degree to be even. Two vertices have degree 3, so there is no circuit, only a trail. The degrees do add to an even number (20), but that is true for every graph, so it proves nothing.",
+   "clue": "A circuit needs all degrees even, not most of them."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It has neither an Eulerian trail nor an Eulerian circuit",
+    "also_right": []
+   },
+   "b": {
+    "best": "She cannot, because two vertices have odd degree",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "Question a uses the same degrees as the card's worked example (2, 2, 3, 3, 4), only reordered. A student can match it to the example without applying the rule, so it is too easy for Year 12."
+   }
+  ],
+  "flags": [
+   "Question a, level: Question a uses the same degrees as the card's worked example (2, 2, 3, 3, 4), only reordered. A student can match it to the example without applying the rule, so it is too easy for Year 12."
+  ]
+ },
+ "final": {
+  "title": "Eulerian trails and Hamiltonian paths",
+  "card": [
+   [
+    "Eulerian trail",
+    "a walk that uses every edge exactly once. It may pass through a vertex more than once. If it starts and ends at the same vertex, it is an Eulerian circuit."
+   ],
+   [
+    "Hamiltonian path",
+    "a path that visits every vertex exactly once. It may leave some edges unused. If it starts and ends at the same vertex, it is a Hamiltonian cycle."
+   ],
+   "For a connected graph, count the vertices of odd degree. None odd: an Eulerian circuit exists. Exactly two odd: an Eulerian trail exists, from one odd vertex to the other. More than two odd: neither exists.",
+   "Example: a connected graph has vertex degrees 2, 2, 3, 3 and 4. Exactly two are odd, so it has an Eulerian trail but no Eulerian circuit."
+  ],
+  "remember": "Eulerian is about edges, Hamiltonian is about vertices. Two odd vertices give a trail, none give a circuit.",
+  "a": {
+   "q": "A connected graph has vertices with degrees 3, 5, 2, 4, 1 and 3. What can be said about Eulerian trails and circuits?",
+   "opts": [
+    "It has neither an Eulerian trail nor an Eulerian circuit",
+    "It has an Eulerian trail but no Eulerian circuit",
+    "It has an Eulerian circuit, since the degree sum is even",
+    "It has an Eulerian trail starting at the degree 1 vertex"
+   ],
+   "why": "The odd degrees are 3, 5, 1 and 3, so four vertices are odd. More than two odd vertices means there is no Eulerian trail and no circuit. The degree sum of 18 is even, but that is true of every graph, so it proves nothing.",
+   "clue": "Count the odd degrees, then check whether there are zero, two or more."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has vertex degrees 4, 4, 2, 3, 3 and 4. Mia wants to walk along every edge exactly once and finish where she started. What is the correct conclusion?",
+   "opts": [
+    "She cannot, because two vertices have odd degree",
+    "She can, because the degrees add to an even number",
+    "She can, because most vertices have even degree",
+    "She cannot, because a Hamiltonian path is needed"
+   ],
+   "why": "Finishing where she started needs an Eulerian circuit, which needs every degree to be even. Two vertices have degree 3, so there is no circuit, only a trail. The degrees do add to an even number (20), but that is true for every graph, so it proves nothing.",
+   "clue": "A circuit needs all degrees even, not most of them."
+  }
+ },
+ "cleared_by": "recheck"
+}

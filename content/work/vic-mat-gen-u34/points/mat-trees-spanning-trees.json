@@ -1,0 +1,243 @@
+{
+ "id": "mat-trees-spanning-trees",
+ "title": "Trees and spanning trees",
+ "brief": "02365abacf40",
+ "shortlist": [
+  [
+   "mat-trees",
+   0.422
+  ],
+  [
+   "mat-trees-algorithms",
+   0.422
+  ],
+  [
+   "mat-minimum-spanning-trees",
+   0.376
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: failed the content check, writing again",
+  "2026-11-01T15:14:47Z write: done",
+  "2026-11-01T15:19:04Z check: flagged",
+  "2026-11-01T15:21:20Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.01522,
+  "check": 0.0134,
+  "fix": 0.01495,
+  "recheck": 0.01201
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's tree cards teach trees and their edge counts but never define a spanning tree as one that includes every vertex of a graph, so the new point adds an idea none of them covers.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Trees and spanning trees",
+  "card": [
+   [
+    "Tree",
+    "a connected graph with no cycles. A cycle is a path that starts and ends at the same vertex without repeating an edge."
+   ],
+   [
+    "Edges",
+    "a tree with n vertices has exactly n − 1 edges. A tree with 6 vertices has 5 edges."
+   ],
+   [
+    "Spanning tree",
+    "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
+   ],
+   [
+    "Example",
+    "A connected graph has 5 vertices and 7 edges. Any spanning tree of it has 4 edges, so 7 − 4 = 3 edges must be left out to break every cycle."
+   ]
+  ],
+  "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
+  "a": {
+   "q": "Mia draws a connected graph with no cycles on 12 vertices. How many edges does her graph have?",
+   "opts": [
+    "11",
+    "12",
+    "13",
+    "10"
+   ],
+   "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but 12 edges on 12 vertices would force a cycle.",
+   "clue": "No cycles and connected means it is a tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 8 vertices and 11 edges. How many edges must be removed to leave a spanning tree?",
+   "opts": [
+    "4",
+    "3",
+    "7",
+    "10"
+   ],
+   "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+   "clue": "First find how many edges the spanning tree keeps."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "11",
+   "also_right": []
+  },
+  "b": {
+   "best": "4",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a cycle as 'a path that starts and ends at the same vertex without repeating an edge.' In VCE terms, that describes a circuit (a closed trail). A cycle is a closed walk with no repeated vertices other than the start and end. Also, by the VCE definition a path cannot start and end at the same vertex. Suggested fix: 'a walk that starts and ends at the same vertex without repeating any other vertex or any edge.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct, with answers 11 and 4. The card's definition of a cycle actually describes a circuit and misuses 'path' by VCE definitions, so it should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines a cycle as 'a path that starts and ends at the same vertex without repeating an edge.' In VCE terms, that describes a circuit (a closed trail). A cycle is a closed walk with no repeated vertices other than the start and end. Also, by the VCE definition a path cannot start and end at the same vertex. Suggested fix: 'a walk that starts and ends at the same vertex without repeating any other vertex or any edge.'"
+ ],
+ "proposal": {
+  "title": "Trees and spanning trees",
+  "card": [
+   [
+    "Tree",
+    "a connected graph with no cycles. A cycle is a walk that starts and ends at the same vertex without repeating any other vertex or any edge."
+   ],
+   "A tree with n vertices has exactly n − 1 edges. For example, a tree with 6 vertices has 5 edges.",
+   [
+    "Spanning tree",
+    "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
+   ],
+   "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has 5 − 1 = 4 edges, so 7 − 4 = 3 edges are left out to break every cycle."
+  ],
+  "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
+  "a": {
+   "q": "Mia draws a connected graph with no cycles on 12 vertices. How many edges does her graph have?",
+   "opts": [
+    "11",
+    "12",
+    "13",
+    "10"
+   ],
+   "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
+   "clue": "No cycles and connected means it is a tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 8 vertices and 11 edges. How many edges must be removed to leave a spanning tree?",
+   "opts": [
+    "4",
+    "3",
+    "7",
+    "10"
+   ],
+   "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+   "clue": "First find how many edges the spanning tree keeps."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "11",
+    "also_right": []
+   },
+   "b": {
+    "best": "4",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines a cycle as 'a path that starts and ends at the same vertex without repeating an edge.' In VCE terms, that describes a circuit (a closed trail). A cycle is a closed walk with no repeated vertices other than the start and end. Also, by the VCE definition a path cannot start and end at the same vertex. Suggested fix: 'a walk that starts and ends at the same vertex without repeating any other vertex or any edge.'"
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines a cycle as 'a path that starts and ends at the same vertex without repeating an edge.' In VCE terms, that describes a circuit (a closed trail). A cycle is a closed walk with no repeated vertices other than the start and end. Also, by the VCE definition a path cannot start and end at the same vertex. Suggested fix: 'a walk that starts and ends at the same vertex without repeating any other vertex or any edge.'"
+  ]
+ },
+ "final": {
+  "title": "Trees and spanning trees",
+  "card": [
+   [
+    "Tree",
+    "a connected graph with no cycles. A cycle is a walk that starts and ends at the same vertex without repeating any other vertex or any edge."
+   ],
+   "A tree with n vertices has exactly n − 1 edges. For example, a tree with 6 vertices has 5 edges.",
+   [
+    "Spanning tree",
+    "a tree made from some of the edges of a connected graph. It reaches every vertex of that graph."
+   ],
+   "Example: a connected graph has 5 vertices and 7 edges. Any spanning tree of it has 5 − 1 = 4 edges, so 7 − 4 = 3 edges are left out to break every cycle."
+  ],
+  "remember": "A tree is connected with no cycles, and it has one fewer edge than vertices.",
+  "a": {
+   "q": "Mia draws a connected graph with no cycles on 12 vertices. How many edges does her graph have?",
+   "opts": [
+    "11",
+    "12",
+    "13",
+    "10"
+   ],
+   "why": "A connected graph with no cycles is a tree, and a tree with n vertices has n − 1 edges, so 12 − 1 = 11. The answer 12 is tempting, but a connected graph with 12 edges on 12 vertices would contain a cycle.",
+   "clue": "No cycles and connected means it is a tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected graph has 8 vertices and 11 edges. How many edges must be removed to leave a spanning tree?",
+   "opts": [
+    "4",
+    "3",
+    "7",
+    "10"
+   ],
+   "why": "A spanning tree reaches all 8 vertices, so it has 8 − 1 = 7 edges. Edges removed = 11 − 7 = 4. The answer 3 comes from taking 11 − 8, which forgets that a tree has one fewer edge than vertices.",
+   "clue": "First find how many edges the spanning tree keeps."
+  }
+ },
+ "cleared_by": "recheck"
+}

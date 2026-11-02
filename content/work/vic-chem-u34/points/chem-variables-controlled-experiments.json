@@ -1,0 +1,157 @@
+{
+ "id": "chem-variables-controlled-experiments",
+ "title": "Variables and controlled experiments",
+ "brief": "91a734e4bf39",
+ "shortlist": [
+  [
+   "psy-controlled-extraneous-variables",
+   0.291
+  ],
+  [
+   "psy-variables-hypotheses",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 may adapt psy-controlled-extraneous-variables, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:58Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00035,
+  "confirm": 0.00757,
+  "write": 0.00494,
+  "check": 0.01234
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "psy-controlled-extraneous-variables",
+  "changes": [
+   "Replace the psychology examples, including the room temperature reaction time study and the Leo revision app study, with chemistry examples such as a rate of reaction experiment.",
+   "Change the word participants to a chemistry-appropriate term such as trials or reaction mixtures.",
+   "Trim or rephrase the confounding variable content so it fits the brief's focus on controlled experiments showing cause and effect."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same controlled-variable idea, but its examples and wording are psychology-based and need to be rewritten for Chemistry.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The new point teaches the independent, dependent and controlled variables together as the basis of a fair test that shows cause and effect, but the bank points split this differently: one adds hypotheses and populations, the other adds extraneous and confounding variables, and both use psychology participant studies rather than chemistry investigations.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Variables and controlled experiments",
+  "card": [
+   [
+    "Independent variable",
+    "the one factor the experimenter deliberately changes, such as the temperature of a reaction mixture."
+   ],
+   [
+    "Dependent variable",
+    "the factor that is measured to see the effect, such as the time taken for a reaction to finish. It may change because of the independent variable."
+   ],
+   [
+    "Controlled variables",
+    "all other factors that could affect the result, such as concentration and volume. They are kept the same in every trial."
+   ],
+   "If only the independent variable changes, any change in the dependent variable can be linked to it. This is how a controlled experiment shows cause and effect."
+  ],
+  "remember": "Change one thing, measure the result, and keep everything else the same.",
+  "a": {
+   "q": "A student heats the same acid at different temperatures and times how long a piece of magnesium ribbon takes to dissolve. What is the dependent variable?",
+   "opts": [
+    "The time taken for the magnesium to dissolve",
+    "The temperature of the acid",
+    "The mass of the magnesium ribbon",
+    "The concentration of the acid"
+   ],
+   "why": "The dependent variable is what is measured to see the effect, which is the dissolving time. The temperature is tempting, but the student deliberately changes it, so it is the independent variable.",
+   "clue": "Which quantity is measured as the outcome, not set by the student?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam tests how the concentration of hydrochloric acid affects the rate of gas production from marble chips. He uses large chips in the weakest acid and powdered chips in the strongest acid. Why can he not conclude that concentration caused the change in rate?",
+   "opts": [
+    "Chip size also changed, so it was not controlled",
+    "Gas production is not a suitable dependent variable",
+    "He changed concentration, which is the dependent variable",
+    "He used more than one concentration of acid"
+   ],
+   "why": "Chip size changed along with concentration, so a difference in rate could come from either. Only the independent variable should change, with other factors controlled. Using several concentrations is needed to test the effect, so it is not a flaw.",
+   "clue": "Count how many factors differ between the trials."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The time taken for the magnesium to dissolve",
+   "also_right": []
+  },
+  "b": {
+   "best": "Chip size also changed, so it was not controlled",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Variables and controlled experiments",
+  "card": [
+   [
+    "Independent variable",
+    "the one factor the experimenter deliberately changes, such as the temperature of a reaction mixture."
+   ],
+   [
+    "Dependent variable",
+    "the factor that is measured to see the effect, such as the time taken for a reaction to finish. It may change because of the independent variable."
+   ],
+   [
+    "Controlled variables",
+    "all other factors that could affect the result, such as concentration and volume. They are kept the same in every trial."
+   ],
+   "If only the independent variable changes, any change in the dependent variable can be linked to it. This is how a controlled experiment shows cause and effect."
+  ],
+  "remember": "Change one thing, measure the result, and keep everything else the same.",
+  "a": {
+   "q": "A student heats the same acid at different temperatures and times how long a piece of magnesium ribbon takes to dissolve. What is the dependent variable?",
+   "opts": [
+    "The time taken for the magnesium to dissolve",
+    "The temperature of the acid",
+    "The mass of the magnesium ribbon",
+    "The concentration of the acid"
+   ],
+   "why": "The dependent variable is what is measured to see the effect, which is the dissolving time. The temperature is tempting, but the student deliberately changes it, so it is the independent variable.",
+   "clue": "Which quantity is measured as the outcome, not set by the student?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam tests how the concentration of hydrochloric acid affects the rate of gas production from marble chips. He uses large chips in the weakest acid and powdered chips in the strongest acid. Why can he not conclude that concentration caused the change in rate?",
+   "opts": [
+    "Chip size also changed, so it was not controlled",
+    "Gas production is not a suitable dependent variable",
+    "He changed concentration, which is the dependent variable",
+    "He used more than one concentration of acid"
+   ],
+   "why": "Chip size changed along with concentration, so a difference in rate could come from either. Only the independent variable should change, with other factors controlled. Using several concentrations is needed to test the effect, so it is not a flaw.",
+   "clue": "Count how many factors differ between the trials."
+  }
+ },
+ "cleared_by": "checker"
+}

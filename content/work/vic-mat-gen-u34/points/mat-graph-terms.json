@@ -1,0 +1,162 @@
+{
+ "id": "mat-graph-terms",
+ "title": "Graph terms",
+ "brief": "976272fae812",
+ "shortlist": [
+  [
+   "mat-planar-graphs-euler-s-2",
+   0.489
+  ],
+  [
+   "mat-types-graphs",
+   0.467
+  ],
+  [
+   "mat-network-terms",
+   0.377
+  ],
+  [
+   "mat-graph-theory-specialist",
+   0.368
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.314
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00464,
+  "check": 0.01192
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers the whole brief: mat-network-terms covers vertices, edges, degree and weighted networks but not planar graphs, Euler's rule or digraphs, and the planar card is only one part of the brief, so adding those topics would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Graph terms",
+  "card": [
+   [
+    "Vertices and edges",
+    "A graph is made of points called vertices, joined by lines called edges. The degree of a vertex is the number of edge ends at that vertex. A loop adds 2 to the degree."
+   ],
+   [
+    "Planar graph",
+    "A graph is planar if it can be drawn with no edges crossing. Euler's rule for a connected planar graph is v + f = e + 2, where v is vertices, e is edges and f is faces. The outside region counts as a face."
+   ],
+   [
+    "Digraph",
+    "A directed graph (digraph) has edges with arrows. Each edge can only be used in the direction of its arrow."
+   ],
+   [
+    "Weighted network",
+    "A weighted network has a number on each edge, such as a distance, time or cost."
+   ]
+  ],
+  "remember": "Degree counts edge ends at a vertex. Euler's rule: v + f = e + 2.",
+  "a": {
+   "q": "A connected planar graph has 6 vertices and 9 edges. Using Euler's rule, how many faces does it have?",
+   "opts": [
+    "5",
+    "3",
+    "4",
+    "17"
+   ],
+   "why": "v + f = e + 2 gives 6 + f = 9 + 2 = 11, so f = 5. Answering 4 comes from forgetting that the outside region counts as a face.",
+   "clue": "Put the numbers into v + f = e + 2, then solve for f."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected planar graph has 5 faces and 8 vertices. How many edges does it have?",
+   "opts": [
+    "11",
+    "15",
+    "13",
+    "9"
+   ],
+   "why": "v + f = e + 2 gives 8 + 5 = e + 2, so e = 11. Choosing 15 comes from adding 2 instead of subtracting it: 8 + 5 + 2 = 15 is a sign error.",
+   "clue": "The 2 is on the same side as e, so take it away from v + f."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5",
+   "also_right": []
+  },
+  "b": {
+   "best": "11",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out with Euler's rule: 6 + f = 9 + 2 gives f = 5, and 8 + 5 = e + 2 gives e = 11. The card's definitions are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Graph terms",
+  "card": [
+   [
+    "Vertices and edges",
+    "A graph is made of points called vertices, joined by lines called edges. The degree of a vertex is the number of edge ends at that vertex. A loop adds 2 to the degree."
+   ],
+   [
+    "Planar graph",
+    "A graph is planar if it can be drawn with no edges crossing. Euler's rule for a connected planar graph is v + f = e + 2, where v is vertices, e is edges and f is faces. The outside region counts as a face."
+   ],
+   [
+    "Digraph",
+    "A directed graph (digraph) has edges with arrows. Each edge can only be used in the direction of its arrow."
+   ],
+   [
+    "Weighted network",
+    "A weighted network has a number on each edge, such as a distance, time or cost."
+   ]
+  ],
+  "remember": "Degree counts edge ends at a vertex. Euler's rule: v + f = e + 2.",
+  "a": {
+   "q": "A connected planar graph has 6 vertices and 9 edges. Using Euler's rule, how many faces does it have?",
+   "opts": [
+    "5",
+    "3",
+    "4",
+    "17"
+   ],
+   "why": "v + f = e + 2 gives 6 + f = 9 + 2 = 11, so f = 5. Answering 4 comes from forgetting that the outside region counts as a face.",
+   "clue": "Put the numbers into v + f = e + 2, then solve for f."
+  },
+  "b": {
+   "d": 3,
+   "q": "A connected planar graph has 5 faces and 8 vertices. How many edges does it have?",
+   "opts": [
+    "11",
+    "15",
+    "13",
+    "9"
+   ],
+   "why": "v + f = e + 2 gives 8 + 5 = e + 2, so e = 11. Choosing 15 comes from adding 2 instead of subtracting it: 8 + 5 + 2 = 15 is a sign error.",
+   "clue": "The 2 is on the same side as e, so take it away from v + f."
+  }
+ },
+ "cleared_by": "checker"
+}

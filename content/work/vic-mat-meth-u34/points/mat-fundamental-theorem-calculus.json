@@ -1,0 +1,275 @@
+{
+ "id": "mat-fundamental-theorem-calculus",
+ "title": "The fundamental theorem of calculus",
+ "brief": "f421d1911d1d",
+ "shortlist": [
+  [
+   "mat-antiderivatives",
+   0.292
+  ]
+ ],
+ "stage": "check",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
+  "2026-11-02T04:50:15Z write: done"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01058,
+  "check": 0.01733,
+  "fix": 0.03284,
+  "recheck": 0.01553
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point Antiderivatives covers only the power rule and the constant of integration, not the link between the area under a curve and antiderivatives that the fundamental theorem of calculus teaches, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: Each option shows its working, and the clue spells out the rule (upper limit value minus lower limit value). A student can match the clue to the option '18, from F(4) − F(1)' without knowing or applying the idea, so the clue gives the answer away.",
+ "rejected": {
+  "title": "The fundamental theorem of calculus",
+  "card": [
+   "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+   "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+   "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+   "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+  ],
+  "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+  "a": {
+   "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+   "opts": [
+    "8",
+    "6",
+    "12",
+    "4"
+   ],
+   "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+   "clue": "Find F first, then work out F(2) − F(0)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+   "opts": [
+    "18, from F(4) − F(1) = 20 − 2",
+    "22, from F(4) + F(1) = 20 + 2",
+    "20, from F(4) − F(0) = 20 − 0",
+    "−18, from F(1) − F(4) = 2 − 20"
+   ],
+   "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a): the value at the lower limit is taken away from the value at the upper limit.",
+   "clue": "Use the upper limit first, then take away the value at the lower limit."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: Each option shows its working, and the clue spells out the rule (upper limit value minus lower limit value). A student can match the clue to the option '18, from F(4) − F(1)' without knowing or applying the idea, so the clue gives the answer away."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The fundamental theorem of calculus",
+     "card": [
+      "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+      "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+      "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+      "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+     ],
+     "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+     "a": {
+      "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+      "opts": [
+       "8",
+       "6",
+       "12",
+       "4"
+      ],
+      "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+      "clue": "Find F first, then work out F(2) − F(0)."
+     },
+     "b": {
+      "d": 3,
+      "q": "Mia says that ∫ from 1 to 4 of f(x) dx = 10, where f(x) = 2x + 1. She finds F(x) = x² + x. What is the actual value, and what is her error?",
+      "opts": [
+       "16, because F(4) − F(1) = 20 − 2 = 18 is wrong; it is 18",
+       "18, because F(4) − F(1) = 20 − 2",
+       "10, because F(4) + F(1) = 22",
+       "20, because only F(4) is needed"
+      ],
+      "why": "x",
+      "clue": "x"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "8",
+      "also_right": []
+     },
+     "b": {
+      "best": "18, because F(4) − F(1) = 20 − 2",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The question asks for the actual value and Mia's error, but no option says what her error was. The option with 18 only gives the correct working. We also cannot tell how Mia got 10, so her 'error' cannot be identified."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The option '16, because F(4) − F(1) = 20 − 2 = 18 is wrong; it is 18' contradicts itself and makes no sense. A student could be confused by it."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The option '10, because F(4) + F(1) = 22' contains a false statement: 22 is not 10, and adding F(4) and F(1) does not give 10. As a distractor it is nonsensical rather than a plausible mistake."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue for question b is just a placeholder 'x', not a real hint."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why for question b is just a placeholder 'x', so there is no explanation of the intended answer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, remember line and question a are correct (∫₀² 3x² dx = 8). Question b is unfinished: its clue and why are placeholders, it asks for Mia's error but no option names one, and two distractors are self-contradictory or nonsensical. It needs rewriting."
+    },
+    "flags": [
+     "Question b: the checker picked “18, because F(4) − F(1) = 20 − 2”, not the writer’s answer “16, because F(4) − F(1) = 20 − 2 = 18 is wrong; it is 18”.",
+     "Question b, wording: The question asks for the actual value and Mia's error, but no option says what her error was. The option with 18 only gives the correct working. We also cannot tell how Mia got 10, so her 'error' cannot be identified.",
+     "Question b, other: The option '16, because F(4) − F(1) = 20 − 2 = 18 is wrong; it is 18' contradicts itself and makes no sense. A student could be confused by it.",
+     "Question b, fact: The option '10, because F(4) + F(1) = 22' contains a false statement: 22 is not 10, and adding F(4) and F(1) does not give 10. As a distractor it is nonsensical rather than a plausible mistake.",
+     "Question b, other: The clue for question b is just a placeholder 'x', not a real hint.",
+     "Question b, other: The why for question b is just a placeholder 'x', so there is no explanation of the intended answer."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The fundamental theorem of calculus",
+     "card": [
+      "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+      "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+      "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+      "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+     ],
+     "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+     "a": {
+      "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+      "opts": [
+       "8",
+       "6",
+       "12",
+       "4"
+      ],
+      "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+      "clue": "Find F first, then work out F(2) − F(0)."
+     },
+     "b": {
+      "d": 2,
+      "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+      "opts": [
+       "18, from F(4) − F(1) = 20 − 2",
+       "22, from F(4) + F(1) = 20 + 2",
+       "20, from F(4) − F(0) = 20 − 0",
+       "−18, from F(1) − F(4) = 2 − 20"
+      ],
+      "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a): the value at the lower limit is taken away from the value at the upper limit.",
+      "clue": "Use the upper limit first, then take away the value at the lower limit."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "8",
+       "also_right": []
+      },
+      "b": {
+       "best": "18, from F(4) − F(1) = 20 − 2",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Each option shows its working, and the clue spells out the rule (upper limit value minus lower limit value). A student can match the clue to the option '18, from F(4) − F(1)' without knowing or applying the idea, so the clue gives the answer away."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The maths, card and explanations are correct. The only issue is in question b: its clue states the F(b) − F(a) rule, and the options show their working, so the right option can be picked by matching the clue alone."
+     },
+     "flags": [
+      "Question b, other: Each option shows its working, and the clue spells out the rule (upper limit value minus lower limit value). A student can match the clue to the option '18, from F(4) − F(1)' without knowing or applying the idea, so the clue gives the answer away."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "The fundamental theorem of calculus",
+  "card": [
+   "Differentiating and integrating undo each other. If F′(x) = f(x), then F is an antiderivative of f.",
+   "To find a definite integral, find an antiderivative F, then work out F(b) − F(a). The constant of integration cancels, so leave it out.",
+   "Worked example: ∫ from 1 to 3 of 2x dx. An antiderivative of 2x is x². So the integral = 3² − 1² = 9 − 1 = 8.",
+   "The same rule works the other way. The derivative of ∫ from a to x of f(t) dt is f(x). Where f is positive, the integral is the area under the curve."
+  ],
+  "remember": "Integral from a to b of f = F(b) − F(a), where F′ = f.",
+  "a": {
+   "q": "What is the value of ∫ from 0 to 2 of 3x² dx?",
+   "opts": [
+    "8",
+    "6",
+    "12",
+    "4"
+   ],
+   "why": "An antiderivative of 3x² is x³. The integral is 2³ − 0³ = 8. Using the value 3x² = 12 at x = 2 is the tempting mistake, because that is the function's value, not F(2) − F(0).",
+   "clue": "Find F first, then use its values at both limits."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia finds that an antiderivative of 2x + 1 is F(x) = x² + x. What is ∫ from 1 to 4 of (2x + 1) dx?",
+   "opts": [
+    "18",
+    "22",
+    "20",
+    "−18"
+   ],
+   "why": "F(4) = 16 + 4 = 20 and F(1) = 1 + 1 = 2, so the integral is 20 − 2 = 18. Adding the two values gives 22, and using F(4) alone gives 20. Working out F(1) − F(4) gives −18, but the rule is F(b) − F(a).",
+   "clue": "Both limits are needed, and the order matters."
+  }
+ },
+ "local": []
+}

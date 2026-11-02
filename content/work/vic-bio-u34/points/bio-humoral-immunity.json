@@ -1,0 +1,231 @@
+{
+ "id": "bio-humoral-immunity",
+ "title": "Humoral immunity",
+ "brief": "290cf4c49704",
+ "shortlist": [
+  [
+   "bio-adaptive-immune-response",
+   0.345
+  ],
+  [
+   "bio-herd-immunity",
+   0.286
+  ],
+  [
+   "bio-cell-theory-2",
+   0.213
+  ],
+  [
+   "bio-mitosis",
+   0.209
+  ],
+  [
+   "bio-immune-memory",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done (still fails the content check)",
+  "2026-11-01T17:33:06Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.01111,
+  "check": 0.017,
+  "fix": 0.01631,
+  "recheck": 0.01525
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bio-adaptive-immune-response, covers the whole adaptive response, including T cells and the innate-versus-adaptive contrast, so it is broader than the humoral immunity point and its questions do not test antibody action.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Humoral immunity",
+  "card": [
+   "Humoral immunity is the part of the adaptive response that works through antibodies in body fluids such as blood and lymph. It targets antigens that are outside cells.",
+   "An antibody is a protein made by B cells. Each antibody has a binding site that fits one specific antigen, like a lock that only one type of key can open.",
+   "When a B cell meets its matching antigen, it is activated and divides. Many of its daughter cells become plasma cells, which release large amounts of antibody.",
+   "Antibodies bind the antigen. This can neutralise it, for example by blocking a toxin or stopping a virus from attaching to a cell. It can also mark the pathogen so that phagocytes destroy it."
+  ],
+  "remember": "B cells make antibodies that bind antigens outside cells, to block them or tag them for destruction.",
+  "a": {
+   "q": "Which cells release large amounts of antibody into the blood during a humoral response?",
+   "opts": [
+    "Plasma cells that formed from activated B cells",
+    "Phagocytes that have engulfed the pathogen",
+    "Antigens that have bound to a B cell",
+    "Infected body cells that display the antigen"
+   ],
+   "why": "Activated B cells divide, and many daughter cells become plasma cells that release antibody. Phagocytes destroy pathogens that antibodies have marked, but they do not make the antibodies.",
+   "clue": "Think about which cells come from a dividing B cell."
+  },
+  "b": {
+   "d": 3,
+   "q": "Bacteria in Ravi's blood release a toxin. Antibodies bind the toxin, so it cannot attach to his cells. Which describes this action?",
+   "opts": [
+    "Neutralisation of the antigen by antibodies",
+    "Marking of the toxin for destruction by phagocytes",
+    "Destruction of infected cells by antibodies",
+    "Production of antibodies by the toxin"
+   ],
+   "why": "The antibodies block the toxin from attaching to cells, which is neutralisation. Marking would mean the antibody tags the antigen so a phagocyte destroys it, but the case describes the toxin being blocked.",
+   "clue": "What stops the toxin from reaching his cells?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "bio-humoral-immunity banned word in: An antibody is a protein made by B cells. Each antibody has a binding site that fits one specific antigen, like a lock that only one type of key can open."
+ ],
+ "check": {
+  "a": {
+   "best": "Plasma cells that formed from activated B cells",
+   "also_right": []
+  },
+  "b": {
+   "best": "Neutralisation of the antigen by antibodies",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Each antibody has a binding site\" is slightly inaccurate. A typical (Y-shaped) antibody has two identical antigen-binding sites, which VCE students learn. Better: \"Each antibody has binding sites that fit one specific antigen.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Accurate card and sound questions. One minor fact to fix: the card says an antibody has 'a binding site' when antibodies have two identical antigen-binding sites."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Each antibody has a binding site\" is slightly inaccurate. A typical (Y-shaped) antibody has two identical antigen-binding sites, which VCE students learn. Better: \"Each antibody has binding sites that fit one specific antigen.\"",
+  "Content check: bio-humoral-immunity banned word in: An antibody is a protein made by B cells. Each antibody has a binding site that fits one specific antigen, like a lock that only one type of key can open."
+ ],
+ "proposal": {
+  "title": "Humoral immunity",
+  "card": [
+   "Humoral immunity is the part of the adaptive response that works through antibodies in body fluids such as blood and lymph. It targets antigens that are outside cells.",
+   "An antibody is a Y-shaped protein made by B cells. Each antibody has two identical binding sites that fit one specific antigen, the way a lock fits only one shape.",
+   "When a B cell meets its matching antigen, it is activated and divides. Many of its daughter cells become plasma cells, which release large amounts of antibody.",
+   "Antibodies bind the antigen. This can neutralise it, for example by blocking a toxin or stopping a virus from attaching to a cell. It can also mark the pathogen so that phagocytes destroy it."
+  ],
+  "remember": "B cells make antibodies that bind antigens outside cells, to block them or tag them for destruction.",
+  "a": {
+   "q": "Which cells release large amounts of antibody into the blood during a humoral response?",
+   "opts": [
+    "Plasma cells that formed from activated B cells",
+    "Phagocytes that have engulfed the pathogen",
+    "Antigens that have bound to a B cell",
+    "Infected body cells that display the antigen"
+   ],
+   "why": "Activated B cells divide, and many daughter cells become plasma cells that release antibody. Phagocytes destroy pathogens that antibodies have marked, but they do not make the antibodies.",
+   "clue": "Think about which cells come from a dividing B cell."
+  },
+  "b": {
+   "d": 3,
+   "q": "Bacteria in Ravi's blood release a toxin. Antibodies bind the toxin, so it cannot attach to his cells. Which describes this action?",
+   "opts": [
+    "Neutralisation of the antigen by antibodies",
+    "Marking of the toxin for destruction by phagocytes",
+    "Destruction of infected cells by antibodies",
+    "Production of antibodies by the toxin"
+   ],
+   "why": "The antibodies block the toxin from attaching to cells, which is neutralisation. Marking would mean the antibody tags the antigen so a phagocyte destroys it, but the case describes the toxin being blocked.",
+   "clue": "What stops the toxin from reaching his cells?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Plasma cells that formed from activated B cells",
+    "also_right": []
+   },
+   "b": {
+    "best": "Neutralisation of the antigen by antibodies",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Each antibody has a binding site\" is slightly inaccurate. A typical (Y-shaped) antibody has two identical antigen-binding sites, which VCE students learn. Better: \"Each antibody has binding sites that fit one specific antigen.\""
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Each antibody has a binding site\" is slightly inaccurate. A typical (Y-shaped) antibody has two identical antigen-binding sites, which VCE students learn. Better: \"Each antibody has binding sites that fit one specific antigen.\"",
+   "Content check: bio-humoral-immunity banned word in: An antibody is a protein made by B cells. Each antibody has a binding site that fits one specific antigen, like a lock that only one type of key can open."
+  ]
+ },
+ "final": {
+  "title": "Humoral immunity",
+  "card": [
+   "Humoral immunity is the part of the adaptive response that works through antibodies in body fluids such as blood and lymph. It targets antigens that are outside cells.",
+   "An antibody is a Y-shaped protein made by B cells. Each antibody has two identical binding sites that fit one specific antigen, the way a lock fits only one shape.",
+   "When a B cell meets its matching antigen, it is activated and divides. Many of its daughter cells become plasma cells, which release large amounts of antibody.",
+   "Antibodies bind the antigen. This can neutralise it, for example by blocking a toxin or stopping a virus from attaching to a cell. It can also mark the pathogen so that phagocytes destroy it."
+  ],
+  "remember": "B cells make antibodies that bind antigens outside cells, to block them or tag them for destruction.",
+  "a": {
+   "q": "Which cells release large amounts of antibody into the blood during a humoral response?",
+   "opts": [
+    "Plasma cells that formed from activated B cells",
+    "Phagocytes that have engulfed the pathogen",
+    "Antigens that have bound to a B cell",
+    "Infected body cells that display the antigen"
+   ],
+   "why": "Activated B cells divide, and many daughter cells become plasma cells that release antibody. Phagocytes destroy pathogens that antibodies have marked, but they do not make the antibodies.",
+   "clue": "Think about which cells come from a dividing B cell."
+  },
+  "b": {
+   "d": 3,
+   "q": "Bacteria in Ravi's blood release a toxin. Antibodies bind the toxin, so it cannot attach to his cells. Which describes this action?",
+   "opts": [
+    "Neutralisation of the antigen by antibodies",
+    "Marking of the toxin for destruction by phagocytes",
+    "Destruction of infected cells by antibodies",
+    "Production of antibodies by the toxin"
+   ],
+   "why": "The antibodies block the toxin from attaching to cells, which is neutralisation. Marking would mean the antibody tags the antigen so a phagocyte destroys it, but the case describes the toxin being blocked.",
+   "clue": "What stops the toxin from reaching his cells?"
+  }
+ },
+ "cleared_by": "recheck"
+}

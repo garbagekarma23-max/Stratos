@@ -1,0 +1,225 @@
+{
+ "id": "mat-composite-functions",
+ "title": "Composite functions",
+ "brief": "48147f3ab9c2",
+ "shortlist": [
+  [
+   "mat-domain-range",
+   0.33
+  ],
+  [
+   "mat-chain-rule",
+   0.271
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.25
+  ],
+  [
+   "mat-inverse-circular-functions",
+   0.232
+  ],
+  [
+   "mat-functions-relations",
+   0.224
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.0052,
+  "check": 0.01538,
+  "fix": 0.02678,
+  "recheck": 0.01617
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches composition: domain and range covers the domain of single functions, the chain rule covers differentiating composites, and the others cover trig derivatives, inverse circular functions and relations, so none explains f(g(x)) or the range-inside-domain condition.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Composite functions",
+  "card": [
+   "A composite function applies one function and then another. In f(g(x)), g is applied first and f is applied to the result.",
+   "Worked example: f(x) = 2x + 1 and g(x) = x². Then f(g(x)) = 2(x²) + 1 = 2x² + 1. For x = 3: g(3) = 9, then f(9) = 19.",
+   "The order matters. Here g(f(x)) = (2x + 1)², and g(f(3)) = 7² = 49, which is not 19.",
+   "f(g(x)) exists only when the range of g sits inside the domain of f. Every output of g must be an input that f accepts."
+  ],
+  "remember": "In f(g(x)), work from the inside out. It exists only if the range of g fits inside the domain of f.",
+  "a": {
+   "q": "Let f(x) = 3x − 2 and g(x) = x + 4. What is f(g(x))?",
+   "opts": [
+    "3x + 10",
+    "3x + 2",
+    "3x − 6",
+    "x + 2"
+   ],
+   "why": "Apply g first: g(x) = x + 4. Then f of that is 3(x + 4) − 2 = 3x + 10. The option 3x + 2 comes from adding 4 after f, which is g(f(x)) and applies the functions in the wrong order.",
+   "clue": "Put x + 4 into f in place of x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let f(x) = √x with domain [0, ∞) and g(x) = x − 5 with domain R. Why does f(g(x)) not exist on the whole domain R?",
+   "opts": [
+    "The range of g is not inside the domain of f",
+    "The range of f is not inside the domain of g",
+    "The domain of g is not inside the range of f",
+    "The functions give different outputs when swapped"
+   ],
+   "why": "The range of g is all real numbers, but f accepts only inputs of 0 or more, so g(x) can be an input that f cannot take. The second option swaps the roles. For f(g(x)), g's range must fit inside f's domain, and g's domain is not the test.",
+   "clue": "g goes first, so its outputs become inputs for f."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3x + 10",
+   "also_right": []
+  },
+  "b": {
+   "best": "The range of g is not inside the domain of f",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the second option'. Options are shown in a random order, so a student may see a different option in second place, and the explanation would then point to the wrong one. It should name the option by its wording ('the domain of g is not inside the range of f')."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. The only problem is that Why (b) refers to 'the second option', which may not match the shuffled order students see, so it should name the option by its wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) refers to 'the second option'. Options are shown in a random order, so a student may see a different option in second place, and the explanation would then point to the wrong one. It should name the option by its wording ('the domain of g is not inside the range of f')."
+ ],
+ "proposal": {
+  "title": "Composite functions",
+  "card": [
+   "A composite function applies one function and then another. In f(g(x)), g is applied first and f is applied to the result.",
+   "Worked example: f(x) = 2x + 1 and g(x) = x². Then f(g(x)) = 2(x²) + 1 = 2x² + 1. For x = 3: g(3) = 9, then f(9) = 19.",
+   "The order matters. Here g(f(x)) = (2x + 1)², and g(f(3)) = 7² = 49, which is not 19.",
+   "f(g(x)) exists only when the range of g sits inside the domain of f. Every output of g must be an input that f accepts."
+  ],
+  "remember": "In f(g(x)), work from the inside out. It exists only if the range of g fits inside the domain of f.",
+  "a": {
+   "q": "Let f(x) = 3x − 2 and g(x) = x + 4. What is f(g(x))?",
+   "opts": [
+    "3x + 10",
+    "3x + 2",
+    "3x − 6",
+    "x + 2"
+   ],
+   "why": "Apply g first: g(x) = x + 4. Then f of that is 3(x + 4) − 2 = 3x + 10. The option 3x + 2 comes from adding 4 after f, which is g(f(x)) and applies the functions in the wrong order.",
+   "clue": "Put x + 4 into f in place of x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let f(x) = √x with domain [0, ∞) and g(x) = x − 5 with domain R. Why does f(g(x)) not exist on the whole domain R?",
+   "opts": [
+    "The range of g is not inside the domain of f",
+    "The range of f is not inside the domain of g",
+    "The domain of g is not inside the range of f",
+    "The functions give different outputs when swapped"
+   ],
+   "why": "The range of g is all real numbers, but f accepts only inputs of 0 or more, so some outputs of g cannot go into f. The option 'the range of f is not inside the domain of g' swaps the roles: that is the test for g(f(x)), and it is false here anyway, since g accepts every real number. The domain of g is not the test for f(g(x)), so 'the domain of g is not inside the range of f' is wrong too.",
+   "clue": "g goes first, so its outputs become inputs for f."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "3x + 10",
+    "also_right": []
+   },
+   "b": {
+    "best": "The range of g is not inside the domain of f",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) refers to 'the second option'. Options are shown in a random order, so a student may see a different option in second place, and the explanation would then point to the wrong one. It should name the option by its wording ('the domain of g is not inside the range of f')."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) refers to 'the second option'. Options are shown in a random order, so a student may see a different option in second place, and the explanation would then point to the wrong one. It should name the option by its wording ('the domain of g is not inside the range of f')."
+  ]
+ },
+ "final": {
+  "title": "Composite functions",
+  "card": [
+   "A composite function applies one function and then another. In f(g(x)), g is applied first and f is applied to the result.",
+   "Worked example: f(x) = 2x + 1 and g(x) = x². Then f(g(x)) = 2(x²) + 1 = 2x² + 1. For x = 3: g(3) = 9, then f(9) = 19.",
+   "The order matters. Here g(f(x)) = (2x + 1)², and g(f(3)) = 7² = 49, which is not 19.",
+   "f(g(x)) exists only when the range of g sits inside the domain of f. Every output of g must be an input that f accepts."
+  ],
+  "remember": "In f(g(x)), work from the inside out. It exists only if the range of g fits inside the domain of f.",
+  "a": {
+   "q": "Let f(x) = 3x − 2 and g(x) = x + 4. What is f(g(x))?",
+   "opts": [
+    "3x + 10",
+    "3x + 2",
+    "3x − 6",
+    "x + 2"
+   ],
+   "why": "Apply g first: g(x) = x + 4. Then f of that is 3(x + 4) − 2 = 3x + 10. The option 3x + 2 comes from adding 4 after f, which is g(f(x)) and applies the functions in the wrong order.",
+   "clue": "Put x + 4 into f in place of x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let f(x) = √x with domain [0, ∞) and g(x) = x − 5 with domain R. Why does f(g(x)) not exist on the whole domain R?",
+   "opts": [
+    "The range of g is not inside the domain of f",
+    "The range of f is not inside the domain of g",
+    "The domain of g is not inside the range of f",
+    "The functions give different outputs when swapped"
+   ],
+   "why": "The range of g is all real numbers, but f accepts only inputs of 0 or more, so some outputs of g cannot go into f. The option 'the range of f is not inside the domain of g' swaps the roles: that is the test for g(f(x)), and it is false here anyway, since g accepts every real number. The domain of g is not the test for f(g(x)), so 'the domain of g is not inside the range of f' is wrong too.",
+   "clue": "g goes first, so its outputs become inputs for f."
+  }
+ },
+ "cleared_by": "recheck"
+}

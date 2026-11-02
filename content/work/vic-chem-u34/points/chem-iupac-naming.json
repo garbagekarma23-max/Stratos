@@ -1,0 +1,207 @@
+{
+ "id": "chem-iupac-naming",
+ "title": "IUPAC naming",
+ "brief": "f35f830340d8",
+ "shortlist": [
+  [
+   "chem-naming-hydrocarbons",
+   0.372
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T06:18:39Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00531,
+  "check": 0.01804,
+  "fix": 0.03339,
+  "recheck": 0.01494
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only hydrocarbon naming (stems, -ane/-ene/-yne endings and branches), but the new point also requires naming functional groups, which it does not teach, so it is narrower and no bank point fits exactly.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "IUPAC naming",
+  "card": [
+   "An IUPAC name is built in parts. The stem shows the number of carbons in the longest chain: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).",
+   "The ending shows the functional group. Alkanes end in -ane, alkenes in -ene, alcohols in -ol and carboxylic acids in -oic acid.",
+   "Numbers show where a branch or functional group sits. Count from the end of the chain that gives the lowest numbers. A branch is named by its own stem with -yl, such as methyl, and goes in front of the main name.",
+   "Example: in 2-methylbutane, the main chain is 4 carbons (butane) and a methyl branch is on carbon 2. In butan-2-ol, the -OH group is on carbon 2 of a 4-carbon chain."
+  ],
+  "remember": "A name gives the chain length, the functional group, and the position of each branch or group.",
+  "a": {
+   "q": "What does the 'pent' in pentan-1-ol tell you?",
+   "opts": [
+    "The longest chain has five carbons",
+    "The -OH group is on carbon 5",
+    "There are five hydroxyl groups",
+    "There is a branch with five carbons"
+   ],
+   "why": "The stem pent shows a longest chain of five carbons. The position of the -OH group is shown by the number 1, not by the stem. Mixing up the stem with the position is a common mistake.",
+   "clue": "The stem counts carbons in the longest chain."
+  },
+  "b": {
+   "d": 3,
+   "q": "A molecule has a 4-carbon chain with a single -OH group on carbon 2 and a methyl branch on carbon 3. Which name fits it?",
+   "opts": [
+    "3-methylbutan-2-ol",
+    "2-methylbutan-3-ol",
+    "3-methylbutan-1-ol",
+    "2-methylpentan-3-ol"
+   ],
+   "why": "The chain has four carbons, so it is butane, and the ending -ol shows the alcohol. The -OH group is on carbon 2 and the methyl branch on carbon 3, so the name is 3-methylbutan-2-ol. 2-methylbutan-3-ol is tempting, but it swaps the positions and so numbers the chain from the wrong end.",
+   "clue": "Name the chain, then place the -OH and the branch by number."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The longest chain has five carbons",
+   "also_right": []
+  },
+  "b": {
+   "best": "3-methylbutan-2-ol",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Both 3-methylbutan-2-ol and 2-methylbutan-3-ol use the locants 2 and 3, so the card's only rule ('count from the end that gives the lowest numbers') cannot tell them apart. Choosing the right name needs the rule that the functional group (-OH) gets the lowest possible number before branches do, and the card never teaches it."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The numbering rule says only to give the lowest numbers. It leaves out that the functional group takes priority for the lowest number over branches, so a student following the card could wrongly accept 2-methylbutan-3-ol."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and intended answers are correct. However, question b depends on the rule that the -OH group gets the lowest number before branches do, and the card does not teach it. Add that rule to the card's numbering line."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: Both 3-methylbutan-2-ol and 2-methylbutan-3-ol use the locants 2 and 3, so the card's only rule ('count from the end that gives the lowest numbers') cannot tell them apart. Choosing the right name needs the rule that the functional group (-OH) gets the lowest possible number before branches do, and the card never teaches it.",
+  "Card, wording: The numbering rule says only to give the lowest numbers. It leaves out that the functional group takes priority for the lowest number over branches, so a student following the card could wrongly accept 2-methylbutan-3-ol."
+ ],
+ "proposal": {
+  "title": "IUPAC naming",
+  "card": [
+   "An IUPAC name is built in parts. The stem shows the number of carbons in the longest chain: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).",
+   "The ending shows the functional group. Alkanes end in -ane, alkenes in -ene, alcohols in -ol and carboxylic acids in -oic acid.",
+   "Numbers show where a branch or functional group sits. Number the chain from the end that gives the functional group the lowest number. Branches get the lowest numbers only when that still leaves a choice.",
+   "A branch is named by its own stem with -yl, such as methyl, and goes in front of the main name. In 2-methylbutane, a methyl branch sits on carbon 2 of a 4-carbon chain."
+  ],
+  "remember": "A name gives chain length, functional group and positions, and the functional group claims the lowest number first.",
+  "a": {
+   "q": "What does the 'pent' in pentan-1-ol tell you?",
+   "opts": [
+    "The longest chain has five carbons",
+    "The -OH group is on carbon 5",
+    "There are five hydroxyl groups",
+    "There is a branch with five carbons"
+   ],
+   "why": "The stem pent shows a longest chain of five carbons. The position of the -OH group is shown by the number 1, not by the stem. Mixing up the stem with the position is a common mistake.",
+   "clue": "The stem counts carbons in the longest chain."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the IUPAC name of CH3CH(OH)CH(CH3)CH3?",
+   "opts": [
+    "3-methylbutan-2-ol",
+    "2-methylbutan-3-ol",
+    "3-methylbutan-1-ol",
+    "2-methylpentan-3-ol"
+   ],
+   "why": "The longest chain has four carbons, so it is butane with an -ol ending. Numbering from the end nearer the -OH puts it on carbon 2 and the methyl on carbon 3. 2-methylbutan-3-ol is tempting because it gives the branch a lower number, but the functional group takes priority.",
+   "clue": "Which part of the molecule gets first claim on the lowest number?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "The longest chain has five carbons",
+    "also_right": []
+   },
+   "b": {
+    "best": "3-methylbutan-2-ol",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "a",
+     "kind": "other",
+     "detail": "The clue ('The stem counts carbons in the longest chain') restates the right option almost word for word, so a student can pick it without knowing the idea."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card, remember line, answers and explanations are all chemically correct; 3-methylbutan-2-ol is the right name for question b. The only problem is that question a's clue restates the right answer almost word for word."
+  },
+  "flags": [
+   "Question a, other: The clue ('The stem counts carbons in the longest chain') restates the right option almost word for word, so a student can pick it without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "IUPAC naming",
+  "card": [
+   "An IUPAC name is built in parts. The stem shows the number of carbons in the longest chain: meth (1), eth (2), prop (3), but (4), pent (5), hex (6).",
+   "The ending shows the functional group. Alkanes end in -ane, alkenes in -ene, alcohols in -ol and carboxylic acids in -oic acid.",
+   "Numbers show where a branch or functional group sits. Number the chain from the end that gives the functional group the lowest number. Branches get the lowest numbers only when that still leaves a choice.",
+   "A branch is named by its own stem with -yl, such as methyl, and goes in front of the main name. In 2-methylbutane, a methyl branch sits on carbon 2 of a 4-carbon chain."
+  ],
+  "remember": "A name gives chain length, functional group and positions, and the functional group claims the lowest number first.",
+  "a": {
+   "q": "What does the 'pent' in pentan-1-ol tell you?",
+   "opts": [
+    "The longest chain has five carbons",
+    "The -OH group is on carbon 5",
+    "There are five hydroxyl groups",
+    "There is a branch with five carbons"
+   ],
+   "why": "The stem pent shows a longest chain of five carbons. The position of the -OH group is shown by the number 1, not by the stem. Mixing up the stem with the position is a common mistake.",
+   "clue": "The stem counts carbons in the longest chain."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the IUPAC name of CH3CH(OH)CH(CH3)CH3?",
+   "opts": [
+    "3-methylbutan-2-ol",
+    "2-methylbutan-3-ol",
+    "3-methylbutan-1-ol",
+    "2-methylpentan-3-ol"
+   ],
+   "why": "The longest chain has four carbons, so it is butane with an -ol ending. Numbering from the end nearer the -OH puts it on carbon 2 and the methyl on carbon 3. 2-methylbutan-3-ol is tempting because it gives the branch a lower number, but the functional group takes priority.",
+   "clue": "Which part of the molecule gets first claim on the lowest number?"
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,184 @@
+{
+ "id": "bio-molecular-evidence",
+ "title": "Molecular evidence",
+ "brief": "0c7d5d5a6143",
+ "shortlist": [
+  [
+   "bio-keystone-species",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: done",
+  "2026-11-01T15:05:23Z check: flagged",
+  "2026-11-01T15:14:43Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.0047,
+  "check": 0.01411,
+  "fix": 0.02445
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point on keystone species teaches how a species' ecological impact exceeds its numbers, which is unrelated to comparing DNA and amino acid sequences to show how closely species are related.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Molecular evidence",
+  "card": [
+   "DNA is a sequence of bases. Proteins are chains of amino acids, and their order is set by the DNA sequence.",
+   "Mutations add differences to a sequence over time. Two species that share a recent common ancestor have had less time to collect differences.",
+   "So the fewer differences between the DNA or amino acid sequences of two species, the more closely related they are likely to be.",
+   "Scientists line up the same gene or protein in each species and count the differences. For example, human and chimpanzee sequences differ at far fewer sites than human and mouse sequences."
+  ],
+  "remember": "Fewer sequence differences means a more recent common ancestor.",
+  "a": {
+   "q": "A protein is compared in species P, Q and R. P and Q differ by 2 amino acids. P and R differ by 14. What does this suggest?",
+   "opts": [
+    "P is more closely related to Q than to R",
+    "P is more closely related to R than to Q",
+    "P and Q have a more distant common ancestor",
+    "P and R have the same DNA sequence"
+   ],
+   "why": "Fewer differences suggest less time since the shared ancestor, so P and Q are more closely related. A larger count, as between P and R, points to a more distant ancestor, not a closer one.",
+   "clue": "Which pair has had less time to collect differences?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A gene is compared across four species. Each count is the number of base differences from the same gene in a koala. Which species is likely the koala's closest relative?",
+   "opts": [
+    "Wombat, with 40 differences",
+    "Kangaroo, with 85 differences",
+    "Platypus, with 190 differences",
+    "Mouse, with 230 differences"
+   ],
+   "why": "The wombat has the fewest differences from the koala, so it likely shares the most recent common ancestor with it. The mouse is tempting only if a student reads a bigger count as closer, but more differences mean a more distant relationship.",
+   "clue": "Look for the smallest number of differences."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "P is more closely related to Q than to R",
+   "also_right": []
+  },
+  "b": {
+   "best": "Wombat, with 40 differences",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says fewer differences 'means' a more recent common ancestor, stated as certain, while the card says species are 'likely' to be more closely related. Consider 'usually means' or 'suggests'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and both answers check out: P–Q is the closer pair, and the wombat is the koala's closest relative. The only issue is that the remember line drops the card's 'likely' and states the rule as certain."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says fewer differences 'means' a more recent common ancestor, stated as certain, while the card says species are 'likely' to be more closely related. Consider 'usually means' or 'suggests'."
+ ],
+ "proposal": {
+  "title": "Molecular evidence",
+  "card": [
+   "DNA is a sequence of bases. Proteins are chains of amino acids, and their order is set by the DNA sequence.",
+   "Mutations add differences to a sequence over time. Two species that share a recent common ancestor have had less time to collect differences.",
+   "So the fewer differences between the DNA or amino acid sequences of two species, the more closely related they are likely to be.",
+   "Scientists line up the same gene or protein in each species and count the differences. For example, human and chimpanzee sequences differ at far fewer sites than human and mouse sequences."
+  ],
+  "remember": "Fewer sequence differences usually means a more recent common ancestor.",
+  "a": {
+   "q": "A protein is compared in species P, Q and R. P and Q differ by 2 amino acids. P and R differ by 14. What does this suggest?",
+   "opts": [
+    "P is more closely related to Q than to R",
+    "P is more closely related to R than to Q",
+    "P and Q share a more distant ancestor than P and R",
+    "P and R have the same DNA sequence"
+   ],
+   "why": "Fewer differences suggest less time since the shared ancestor, so P and Q are more closely related. A larger count, as between P and R, points to a more distant ancestor, not a closer one.",
+   "clue": "Which pair has had less time to collect differences?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A gene is compared across four species. Each count is the number of base differences from the same gene in a koala. Which species is likely the koala's closest relative?",
+   "opts": [
+    "Wombat, with 40 differences",
+    "Kangaroo, with 85 differences",
+    "Platypus, with 190 differences",
+    "Mouse, with 230 differences"
+   ],
+   "why": "The wombat has the fewest differences from the koala, so it likely shares the most recent common ancestor with it. The mouse is tempting only if a student reads a bigger count as closer, but more differences suggest a more distant relationship.",
+   "clue": "Look for the smallest number of differences."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says fewer differences 'means' a more recent common ancestor, stated as certain, while the card says species are 'likely' to be more closely related. Consider 'usually means' or 'suggests'."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says fewer differences 'means' a more recent common ancestor, stated as certain, while the card says species are 'likely' to be more closely related. Consider 'usually means' or 'suggests'."
+  ]
+ },
+ "final": {
+  "title": "Molecular evidence",
+  "card": [
+   "DNA is a sequence of bases. Proteins are chains of amino acids, and their order is set by the DNA sequence.",
+   "Mutations add differences to a sequence over time. Two species that share a recent common ancestor have had less time to collect differences.",
+   "So the fewer differences between the DNA or amino acid sequences of two species, the more closely related they are likely to be.",
+   "Scientists line up the same gene or protein in each species and count the differences. For example, human and chimpanzee sequences differ at far fewer sites than human and mouse sequences."
+  ],
+  "remember": "Fewer sequence differences usually means a more recent common ancestor.",
+  "a": {
+   "q": "A protein is compared in species P, Q and R. P and Q differ by 2 amino acids. P and R differ by 14. What does this suggest?",
+   "opts": [
+    "P is more closely related to Q than to R",
+    "P is more closely related to R than to Q",
+    "P and Q share a more distant ancestor than P and R",
+    "P and R have the same DNA sequence"
+   ],
+   "why": "Fewer differences suggest less time since the shared ancestor, so P and Q are more closely related. A larger count, as between P and R, points to a more distant ancestor, not a closer one.",
+   "clue": "Which pair has had less time to collect differences?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A gene is compared across four species. Each count is the number of base differences from the same gene in a koala. Which species is likely the koala's closest relative?",
+   "opts": [
+    "Wombat, with 40 differences",
+    "Kangaroo, with 85 differences",
+    "Platypus, with 190 differences",
+    "Mouse, with 230 differences"
+   ],
+   "why": "The wombat has the fewest differences from the koala, so it likely shares the most recent common ancestor with it. The mouse is tempting only if a student reads a bigger count as closer, but more differences suggest a more distant relationship.",
+   "clue": "Look for the smallest number of differences."
+  }
+ },
+ "cleared_by": "auto"
+}

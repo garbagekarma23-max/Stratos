@@ -1,0 +1,253 @@
+{
+ "id": "leg-plea-negotiations",
+ "title": "Plea negotiations",
+ "brief": "17d0725bbba4",
+ "shortlist": [
+  [
+   "leg-pleas-charge-negotiation",
+   0.695
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 may adapt leg-pleas-charge-negotiation, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:01Z match: Claude Opus 5.5 says adapt leg-pleas-charge-negotiation (2 changes)",
+  "2026-11-01T15:05:27Z adapt: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "confirm": 0.00649,
+  "adapt": 0.00688,
+  "check": 0.0189,
+  "fix": 0.0196,
+  "recheck": 0.01478
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-pleas-charge-negotiation",
+  "changes": [
+   "Rename the point from 'charge negotiation' to 'plea negotiations' to match the syllabus term, and use that term in the card and remember line."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of trading a guilty plea for fewer or lesser charges and its fairness concerns, but it uses a different term and is framed as charge negotiation, so it needs a small wording change for Victorian Year 12 Legal Studies.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "leg-pleas-charge-negotiation",
+  "changes": [
+   "Use the VCE term 'plea negotiations' in place of 'charge negotiation' throughout the card, remember line and questions.",
+   "Frame the drawbacks against the VCE principles of justice, especially fairness, and mention that in Victoria the Office of Public Prosecutions conducts the negotiations and must consider victims' views under the Victims' Charter Act 2006 (Vic)."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same idea at Year 12 depth, but it uses the NSW term 'charge negotiation' where the VCE Study Design says 'plea negotiations', and it should refer to Victorian bodies and law.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "leg-pleas-charge-negotiation",
+  "changes": [
+   "Use the VCE term 'plea negotiations' in place of 'charge negotiation' throughout the card, remember line and questions.",
+   "Frame the drawbacks against the VCE principles of justice, especially fairness, and mention that in Victoria the Office of Public Prosecutions conducts the negotiations and must consider victims' views under the Victims' Charter Act 2006 (Vic)."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Plea negotiations",
+  "card": [
+   "A plea is the accused's answer to a charge. A guilty plea admits the offence, so there is no trial on guilt and the court moves to sentencing. A not guilty plea sends the case to trial, where the prosecution must prove it.",
+   "In plea negotiations, the prosecution and defence talk before the trial. The accused agrees to plead guilty, often to a lesser charge or fewer charges. In return, the prosecution drops the other charges. In Victoria, the Office of Public Prosecutions conducts the talks.",
+   "It saves time and cost, and the court does not need a full trial. Witnesses, including victims, may not have to give evidence. This supports efficiency in the justice system.",
+   "It can raise concerns about fairness. The accused may be convicted of a lesser offence than the victim believes was committed, and the sentence may be lighter. The Office of Public Prosecutions must consider the victim's views under the Victims' Charter Act 2006 (Vic)."
+  ],
+  "remember": "Plea negotiations trade a guilty plea for fewer or lesser charges. They save time and cost but can cut against fairness for victims.",
+  "a": {
+   "q": "In a plea negotiation, what does the accused usually agree to do?",
+   "opts": [
+    "Plead guilty in return for fewer or lesser charges",
+    "Plead not guilty to every charge so the case goes on",
+    "Stay silent and ask the judge to dismiss the case",
+    "Plead guilty to all charges in return for a jury trial"
+   ],
+   "why": "In plea negotiations the accused gives a guilty plea. In return, the prosecution drops some charges or accepts a lesser one. Pleading not guilty to every charge sends the case to trial, so nothing is negotiated.",
+   "clue": "The accused gives something up and gets something back."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev faces two charges. In plea negotiations he pleads guilty to one and the other is dropped. The victim, Sam, says the outcome lacks fairness. What is the most likely reason?",
+   "opts": [
+    "Dev is convicted of less than Sam believes he did",
+    "Dev must face a full jury trial on both charges",
+    "Sam must give evidence for several days at a trial",
+    "Dev's guilty plea means the court cannot sentence him"
+   ],
+   "why": "Dev is convicted of only one offence, though Sam believes he committed both. The outcome does not match what Sam thinks happened. A full trial is wrong because a guilty plea avoids a trial on guilt.",
+   "clue": "Think about what the dropped charge means for the outcome."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Plead guilty in return for fewer or lesser charges",
+   "also_right": []
+  },
+  "b": {
+   "best": "Dev is convicted of less than Sam believes he did",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"In Victoria, the Office of Public Prosecutions conducts the talks\" is too absolute. The OPP negotiates for indictable matters in the higher courts, but Victoria Police prosecutors also conduct plea negotiations, for example in the Magistrates' Court. It should say the OPP conducts them for serious (indictable) cases."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clearly correct answer each. The card overstates that the OPP conducts all plea negotiations in Victoria, when police prosecutors also do so in summary matters."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"In Victoria, the Office of Public Prosecutions conducts the talks\" is too absolute. The OPP negotiates for indictable matters in the higher courts, but Victoria Police prosecutors also conduct plea negotiations, for example in the Magistrates' Court. It should say the OPP conducts them for serious (indictable) cases."
+ ],
+ "proposal": {
+  "title": "Plea negotiations",
+  "card": [
+   "A plea is the accused's answer to a charge. A guilty plea admits the offence, so there is no trial on guilt and the court moves to sentencing. A not guilty plea sends the case to trial, where the prosecution must prove it.",
+   "In plea negotiations, the prosecution and defence talk before trial. The accused agrees to plead guilty, often to a lesser charge or fewer charges, and in return the prosecution drops the other charges. For serious (indictable) cases in Victoria, the Office of Public Prosecutions conducts the talks.",
+   "It saves time and cost, and the court does not need a full trial. Witnesses, including victims, may not have to give evidence. This supports efficiency in the justice system.",
+   "It can raise concerns about fairness. The accused may be convicted of a lesser offence than the victim believes was committed, and the sentence may be lighter. Under the Victims' Charter Act 2006 (Vic), prosecutors should seek the victim's views."
+  ],
+  "remember": "Plea negotiations trade a guilty plea for fewer or lesser charges. They save time and cost but can cut against fairness for victims.",
+  "a": {
+   "q": "In a plea negotiation, what does the accused usually agree to do?",
+   "opts": [
+    "Plead guilty in return for fewer or lesser charges",
+    "Plead not guilty to every charge so the case goes on",
+    "Stay silent and ask the judge to dismiss the case",
+    "Plead guilty to all charges in return for a jury trial"
+   ],
+   "why": "In plea negotiations the accused gives a guilty plea. In return, the prosecution drops some charges or accepts a lesser one. Pleading not guilty to every charge sends the case to trial, so nothing is negotiated.",
+   "clue": "The accused gives something up and gets something back."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev faces two charges. In plea negotiations he pleads guilty to one and the other is dropped. The victim, Sam, says the outcome lacks fairness. What is the most likely reason?",
+   "opts": [
+    "Dev is convicted of less than Sam believes he did",
+    "Dev must face a full jury trial on both charges",
+    "Sam must give evidence for several days at a trial",
+    "Dev's guilty plea means the court cannot sentence him"
+   ],
+   "why": "Dev is convicted of only one offence, though Sam believes he committed both. The outcome does not match what Sam thinks happened. A full trial is wrong because a guilty plea avoids a trial on guilt.",
+   "clue": "Think about what the dropped charge means for the outcome."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Plead guilty in return for fewer or lesser charges",
+    "also_right": []
+   },
+   "b": {
+    "best": "Dev is convicted of less than Sam believes he did",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"In Victoria, the Office of Public Prosecutions conducts the talks\" is too absolute. The OPP negotiates for indictable matters in the higher courts, but Victoria Police prosecutors also conduct plea negotiations, for example in the Magistrates' Court. It should say the OPP conducts them for serious (indictable) cases."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"In Victoria, the Office of Public Prosecutions conducts the talks\" is too absolute. The OPP negotiates for indictable matters in the higher courts, but Victoria Police prosecutors also conduct plea negotiations, for example in the Magistrates' Court. It should say the OPP conducts them for serious (indictable) cases."
+  ]
+ },
+ "final": {
+  "title": "Plea negotiations",
+  "card": [
+   "A plea is the accused's answer to a charge. A guilty plea admits the offence, so there is no trial on guilt and the court moves to sentencing. A not guilty plea sends the case to trial, where the prosecution must prove it.",
+   "In plea negotiations, the prosecution and defence talk before trial. The accused agrees to plead guilty, often to a lesser charge or fewer charges, and in return the prosecution drops the other charges. For serious (indictable) cases in Victoria, the Office of Public Prosecutions conducts the talks.",
+   "It saves time and cost, and the court does not need a full trial. Witnesses, including victims, may not have to give evidence. This supports efficiency in the justice system.",
+   "It can raise concerns about fairness. The accused may be convicted of a lesser offence than the victim believes was committed, and the sentence may be lighter. Under the Victims' Charter Act 2006 (Vic), prosecutors should seek the victim's views."
+  ],
+  "remember": "Plea negotiations trade a guilty plea for fewer or lesser charges. They save time and cost but can cut against fairness for victims.",
+  "a": {
+   "q": "In a plea negotiation, what does the accused usually agree to do?",
+   "opts": [
+    "Plead guilty in return for fewer or lesser charges",
+    "Plead not guilty to every charge so the case goes on",
+    "Stay silent and ask the judge to dismiss the case",
+    "Plead guilty to all charges in return for a jury trial"
+   ],
+   "why": "In plea negotiations the accused gives a guilty plea. In return, the prosecution drops some charges or accepts a lesser one. Pleading not guilty to every charge sends the case to trial, so nothing is negotiated.",
+   "clue": "The accused gives something up and gets something back."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev faces two charges. In plea negotiations he pleads guilty to one and the other is dropped. The victim, Sam, says the outcome lacks fairness. What is the most likely reason?",
+   "opts": [
+    "Dev is convicted of less than Sam believes he did",
+    "Dev must face a full jury trial on both charges",
+    "Sam must give evidence for several days at a trial",
+    "Dev's guilty plea means the court cannot sentence him"
+   ],
+   "why": "Dev is convicted of only one offence, though Sam believes he committed both. The outcome does not match what Sam thinks happened. A full trial is wrong because a guilty plea avoids a trial on guilt.",
+   "clue": "Think about what the dropped charge means for the outcome."
+  }
+ },
+ "cleared_by": "recheck"
+}

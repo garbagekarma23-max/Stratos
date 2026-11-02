@@ -1,0 +1,199 @@
+{
+ "id": "mat-dijkstra-s-algorithm",
+ "title": "Dijkstra's algorithm",
+ "brief": "3a30cd6cf5ef",
+ "shortlist": [
+  [
+   "mat-latest-starting-times",
+   0.229
+  ],
+  [
+   "mat-walks-paths-circuits",
+   0.219
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01339,
+  "check": 0.01774,
+  "fix": 0.01871
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches Dijkstra's shortest-path method: the latest starting times card is a backward critical-path scan, and the walks, paths and circuits card only classifies routes, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Dijkstra's algorithm",
+  "card": [
+   "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
+   "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+   [
+    "Example",
+    "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Start at A. Fix C (2). B drops from 4 to 3 via C, and D gets 10. Fix B (3). D drops to 8. Fix D (8)."
+   ],
+   "The shortest distance from A to D is 8. Trace back through the labels to find the path: A-C-B-D."
+  ],
+  "remember": "Fix the smallest label, update its neighbours, and keep only smaller labels.",
+  "a": {
+   "q": "After the start is fixed, the unvisited vertices have labels B 6, C 3 and D 9. Which vertex is fixed next?",
+   "opts": [
+    "C, as it has the smallest label",
+    "D, as it has the largest label",
+    "B, as it comes next after A in order",
+    "D, as it is furthest from the start"
+   ],
+   "why": "The algorithm always fixes the unvisited vertex with the smallest label, so C is fixed. Choosing B because of its place in the alphabet ignores the labels, which is what the method is based on.",
+   "clue": "Look at the numbers, not the letters."
+  },
+  "b": {
+   "d": 3,
+   "q": "Four towns are joined by roads (in km): P-Q 7, P-R 3, R-Q 2, Q-S 4 and R-S 9. Using Dijkstra's algorithm from P, what is the shortest distance from P to S?",
+   "opts": [
+    "9 km",
+    "11 km",
+    "12 km",
+    "5 km"
+   ],
+   "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9. The path P-R-Q-S is 3 + 2 + 4 = 9. The 11 km answer comes from P-Q-S, which uses the first label for Q and misses the cheaper route through R.",
+   "clue": "Check whether going through R makes Q closer."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "C, as it has the smallest label",
+   "also_right": []
+  },
+  "b": {
+   "best": "9 km",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example skips the first step. It does not say that A is fixed first and that its neighbours get labels (B 4, C 2), so 'B drops from 4 to 3' refers to a label the student never saw assigned."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's example and both answers check out (A to D is 8; P to S is 9 km via P-R-Q-S). The only issue is minor: the worked example leaves out fixing A and labelling its neighbours, so B's starting label of 4 appears without explanation."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The example skips the first step. It does not say that A is fixed first and that its neighbours get labels (B 4, C 2), so 'B drops from 4 to 3' refers to a label the student never saw assigned."
+ ],
+ "proposal": {
+  "title": "Dijkstra's algorithm",
+  "card": [
+   "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
+   "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+   [
+    "Example",
+    "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Fix A (0), so B gets 4 and C gets 2. Fix C (2): B drops from 4 to 3 via C, and D gets 10."
+   ],
+   "Fix B (3): D drops from 10 to 8. Fix D (8). The shortest distance from A to D is 8, and tracing back through the labels gives the path A-C-B-D."
+  ],
+  "remember": "Fix the smallest label, update its neighbours, and keep only smaller labels.",
+  "a": {
+   "q": "After the start is fixed, the unvisited vertices have labels B 6, C 3 and D 9. Which vertex is fixed next?",
+   "opts": [
+    "C, as it has the smallest label",
+    "D, as it has the largest label",
+    "B, as it comes next after A in order",
+    "D, as it is furthest from the start"
+   ],
+   "why": "The algorithm always fixes the unvisited vertex with the smallest label, so C is fixed. Choosing B because of its place in the alphabet ignores the labels, which is what the method is based on.",
+   "clue": "Look at the numbers, not the letters."
+  },
+  "b": {
+   "d": 3,
+   "q": "Four towns are joined by roads (in km): P-Q 7, P-R 3, R-Q 2, Q-S 4 and R-S 9. Using Dijkstra's algorithm from P, what is the shortest distance from P to S?",
+   "opts": [
+    "9 km",
+    "11 km",
+    "12 km",
+    "5 km"
+   ],
+   "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of 3 + 2 + 4. The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
+   "clue": "Check whether going through R makes Q closer."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example skips the first step. It does not say that A is fixed first and that its neighbours get labels (B 4, C 2), so 'B drops from 4 to 3' refers to a label the student never saw assigned."
+   }
+  ],
+  "flags": [
+   "Card, wording: The example skips the first step. It does not say that A is fixed first and that its neighbours get labels (B 4, C 2), so 'B drops from 4 to 3' refers to a label the student never saw assigned."
+  ]
+ },
+ "final": {
+  "title": "Dijkstra's algorithm",
+  "card": [
+   "Dijkstra's algorithm finds the shortest path from one start vertex to every other vertex in a weighted network. The start gets the label 0. Every other vertex starts with no label.",
+   "Each step, fix the unvisited vertex with the smallest label. Then look at its neighbours. New label = fixed label + edge weight. Keep the new label only if it is smaller than the old one.",
+   [
+    "Example",
+    "Edges are A-B 4, A-C 2, C-B 1, B-D 5 and C-D 8. Fix A (0), so B gets 4 and C gets 2. Fix C (2): B drops from 4 to 3 via C, and D gets 10."
+   ],
+   "Fix B (3): D drops from 10 to 8. Fix D (8). The shortest distance from A to D is 8, and tracing back through the labels gives the path A-C-B-D."
+  ],
+  "remember": "Fix the smallest label, update its neighbours, and keep only smaller labels.",
+  "a": {
+   "q": "After the start is fixed, the unvisited vertices have labels B 6, C 3 and D 9. Which vertex is fixed next?",
+   "opts": [
+    "C, as it has the smallest label",
+    "D, as it has the largest label",
+    "B, as it comes next after A in order",
+    "D, as it is furthest from the start"
+   ],
+   "why": "The algorithm always fixes the unvisited vertex with the smallest label, so C is fixed. Choosing B because of its place in the alphabet ignores the labels, which is what the method is based on.",
+   "clue": "Look at the numbers, not the letters."
+  },
+  "b": {
+   "d": 3,
+   "q": "Four towns are joined by roads (in km): P-Q 7, P-R 3, R-Q 2, Q-S 4 and R-S 9. Using Dijkstra's algorithm from P, what is the shortest distance from P to S?",
+   "opts": [
+    "9 km",
+    "11 km",
+    "12 km",
+    "5 km"
+   ],
+   "why": "Fix P (0). Then R gets 3 and Q gets 7. Fix R (3): Q drops to 5 via R, and S gets 12. Fix Q (5): S drops to 9, the path P-R-Q-S of 3 + 2 + 4. The 11 km answer comes from P-Q-S, which keeps the first label for Q and misses the cheaper route through R.",
+   "clue": "Check whether going through R makes Q closer."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "phys-satellites-orbits",
+ "title": "Satellites and orbits",
+ "brief": "776e86e4ac94",
+ "shortlist": [
+  [
+   "phys-orbital-motion",
+   0.615
+  ],
+  [
+   "phys-kepler-s-laws",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: failed the content check, writing again",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01362,
+  "check": 0.00586
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Orbital motion, covers only orbital speed, while the new point also requires the period for each orbit radius, which would need a new derivation step (T = 2πr/v), so it is not a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Satellites and orbits",
+  "card": [
+   "A satellite in a circular orbit is pulled towards the centre of the planet by gravity. This gravitational force is the centripetal force that keeps it moving in a circle.",
+   "Set the two forces equal: GMm/r² = mv²/r. The satellite's mass m cancels, so the orbital speed is v = √(GM/r). M is the mass of the planet and r is the distance from the planet's centre.",
+   "A larger orbit radius means a smaller speed. The period is T = 2πr/v, so a larger radius also means a longer period.",
+   "Speed and period depend on the orbit radius and the planet's mass, not on the satellite's mass. A heavy satellite and a light one at the same radius move the same way."
+  ],
+  "remember": "Gravity is the centripetal force, so each radius has one speed and one period.",
+  "a": {
+   "q": "A 500 kg communications satellite and a 1000 kg one are placed in the same circular orbit around Earth. What can be said about their orbital periods?",
+   "opts": [
+    "They are equal",
+    "The 1000 kg one is longer",
+    "The 1000 kg one is shorter",
+    "The 1000 kg one is twice as long"
+   ],
+   "why": "The satellite's mass cancels when gravity is set equal to the centripetal force, so speed depends only on Earth's mass and the radius. The same speed over the same path gives the same period. The heavier satellite feels a bigger pull, but it also needs a bigger force to curve.",
+   "clue": "Does the satellite's mass survive when you equate the two forces?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A weather satellite orbits a planet at radius r. A second satellite of the same planet orbits at a larger radius. Which statement is correct?",
+   "opts": [
+    "The second has a lower speed and a longer period",
+    "The second has a lower speed and a shorter period",
+    "The second has a higher speed and a longer period",
+    "The second has a higher speed and a shorter period"
+   ],
+   "why": "Since v = √(GM/r), a larger radius gives a lower speed. The satellite also has a longer path and moves slower along it, so its period is longer. A higher speed at a larger radius is a tempting error, but gravity is weaker there.",
+   "clue": "Gravity gets weaker with distance, so think about the speed first."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They are equal",
+   "also_right": []
+  },
+  "b": {
+   "best": "The second has a lower speed and a longer period",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Satellites and orbits",
+  "card": [
+   "A satellite in a circular orbit is pulled towards the centre of the planet by gravity. This gravitational force is the centripetal force that keeps it moving in a circle.",
+   "Set the two forces equal: GMm/r² = mv²/r. The satellite's mass m cancels, so the orbital speed is v = √(GM/r). M is the mass of the planet and r is the distance from the planet's centre.",
+   "A larger orbit radius means a smaller speed. The period is T = 2πr/v, so a larger radius also means a longer period.",
+   "Speed and period depend on the orbit radius and the planet's mass, not on the satellite's mass. A heavy satellite and a light one at the same radius move the same way."
+  ],
+  "remember": "Gravity is the centripetal force, so each radius has one speed and one period.",
+  "a": {
+   "q": "A 500 kg communications satellite and a 1000 kg one are placed in the same circular orbit around Earth. What can be said about their orbital periods?",
+   "opts": [
+    "They are equal",
+    "The 1000 kg one is longer",
+    "The 1000 kg one is shorter",
+    "The 1000 kg one is twice as long"
+   ],
+   "why": "The satellite's mass cancels when gravity is set equal to the centripetal force, so speed depends only on Earth's mass and the radius. The same speed over the same path gives the same period. The heavier satellite feels a bigger pull, but it also needs a bigger force to curve.",
+   "clue": "Does the satellite's mass survive when you equate the two forces?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A weather satellite orbits a planet at radius r. A second satellite of the same planet orbits at a larger radius. Which statement is correct?",
+   "opts": [
+    "The second has a lower speed and a longer period",
+    "The second has a lower speed and a shorter period",
+    "The second has a higher speed and a longer period",
+    "The second has a higher speed and a shorter period"
+   ],
+   "why": "Since v = √(GM/r), a larger radius gives a lower speed. The satellite also has a longer path and moves slower along it, so its period is longer. A higher speed at a larger radius is a tempting error, but gravity is weaker there.",
+   "clue": "Gravity gets weaker with distance, so think about the speed first."
+  }
+ },
+ "cleared_by": "checker"
+}

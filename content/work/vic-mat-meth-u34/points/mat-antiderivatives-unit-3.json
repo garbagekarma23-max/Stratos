@@ -1,0 +1,262 @@
+{
+ "id": "mat-antiderivatives-unit-3",
+ "title": "Antiderivatives in Unit 3",
+ "brief": "7d9ddd244628",
+ "shortlist": [
+  [
+   "mat-antiderivatives",
+   0.718
+  ],
+  [
+   "mat-trigonometric-identities",
+   0.251
+  ],
+  [
+   "mat-unit-circle",
+   0.243
+  ],
+  [
+   "mat-pythagorean-identity",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:30Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00529,
+  "check": 0.01441,
+  "fix": 0.03118,
+  "recheck": 0.013
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's Antiderivatives card covers only power functions xⁿ, while the new point also needs e^(kx), 1/x, sin(kx) and cos(kx), which it does not teach, so it is narrower and no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative of f(x) is a function whose derivative is f(x). Because a constant disappears when we differentiate, every antiderivative has + c.",
+   [
+    "Powers",
+    "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+   ],
+   [
+    "Exponential",
+    "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."
+   ],
+   [
+    "Trig",
+    "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+   ]
+  ],
+  "remember": "Raise the power and divide, or divide by k, then always add c.",
+  "a": {
+   "q": "What is ∫6x² dx?",
+   "opts": [
+    "2x³ + c",
+    "3x³ + c",
+    "12x + c",
+    "2x³"
+   ],
+   "why": "Add 1 to the power to get x³, then divide by 3: 6x³/3 = 2x³. Multiplying by 2 instead gives 12x, which is the derivative, not the antiderivative. Leaving out c is also incomplete.",
+   "clue": "Raise the power by 1, then divide by the new power."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+   "opts": [
+    "(1/3)e^(3x) − (1/2)cos(2x) + c",
+    "(1/3)e^(3x) + (1/2)cos(2x) + c",
+    "3e^(3x) − 2cos(2x) + c",
+    "(1/3)e^(3x) − 2cos(2x) + c"
+   ],
+   "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin. Multiplying by k instead of dividing is a common slip.",
+   "clue": "Divide by k in each term, and check the sign for sin."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2x³ + c",
+   "also_right": []
+  },
+  "b": {
+   "best": "(1/3)e^(3x) − (1/2)cos(2x) + c",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Every antiderivative has + c\" is loose. A single antiderivative such as 2x³ is a valid antiderivative without c. It is the general antiderivative (the indefinite integral) that carries + c. VCE questions asking for \"an antiderivative\" accept answers without c, so this wording could mislead students."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"Multiplying by 2 instead gives 12x\". Multiplying 6x² by 2 gives 12x², not 12x. The 12x distractor comes from differentiating: multiply by the power and lower it by 1. The explanation of this slip is confusing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The questions and keyed answers are correct. The card's claim that every antiderivative has + c is imprecise, since only the general antiderivative does. The why for (a) wrongly says multiplying by 2 gives 12x, when 12x comes from differentiating."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Every antiderivative has + c\" is loose. A single antiderivative such as 2x³ is a valid antiderivative without c. It is the general antiderivative (the indefinite integral) that carries + c. VCE questions asking for \"an antiderivative\" accept answers without c, so this wording could mislead students.",
+  "Question a, wording: The why says \"Multiplying by 2 instead gives 12x\". Multiplying 6x² by 2 gives 12x², not 12x. The 12x distractor comes from differentiating: multiply by the power and lower it by 1. The explanation of this slip is confusing."
+ ],
+ "proposal": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+   [
+    "Powers",
+    "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+   ],
+   [
+    "Exponential",
+    "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."
+   ],
+   [
+    "Trig",
+    "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+   ]
+  ],
+  "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+  "a": {
+   "q": "What is ∫6x² dx?",
+   "opts": [
+    "2x³ + c",
+    "3x³ + c",
+    "12x + c",
+    "6x³ + c"
+   ],
+   "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+   "clue": "Raise the power by 1, then divide by the new power."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+   "opts": [
+    "(1/3)e^(3x) − (1/2)cos(2x) + c",
+    "(1/3)e^(3x) + (1/2)cos(2x) + c",
+    "3e^(3x) − 2cos(2x) + c",
+    "(1/3)e^(3x) − 2cos(2x) + c"
+   ],
+   "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
+   "clue": "Divide by k in each term, and check the sign for sin."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2x³ + c",
+    "also_right": []
+   },
+   "b": {
+    "best": "(1/3)e^(3x) − (1/2)cos(2x) + c",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Every antiderivative has + c\" is loose. A single antiderivative such as 2x³ is a valid antiderivative without c. It is the general antiderivative (the indefinite integral) that carries + c. VCE questions asking for \"an antiderivative\" accept answers without c, so this wording could mislead students."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"Multiplying by 2 instead gives 12x\". Multiplying 6x² by 2 gives 12x², not 12x. The 12x distractor comes from differentiating: multiply by the power and lower it by 1. The explanation of this slip is confusing."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Every antiderivative has + c\" is loose. A single antiderivative such as 2x³ is a valid antiderivative without c. It is the general antiderivative (the indefinite integral) that carries + c. VCE questions asking for \"an antiderivative\" accept answers without c, so this wording could mislead students.",
+   "Question a, wording: The why says \"Multiplying by 2 instead gives 12x\". Multiplying 6x² by 2 gives 12x², not 12x. The 12x distractor comes from differentiating: multiply by the power and lower it by 1. The explanation of this slip is confusing."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Antiderivatives",
+  "card": [
+   "An antiderivative of f(x) is a function whose derivative is f(x). A constant disappears when we differentiate, so the general antiderivative, written ∫f(x) dx, includes + c, where c is any constant.",
+   [
+    "Powers",
+    "∫xⁿ dx = xⁿ⁺¹/(n + 1) + c, for n ≠ −1. Add 1 to the power, then divide by the new power. For 1/x, ∫1/x dx = loge|x| + c."
+   ],
+   [
+    "Exponential",
+    "∫e^(kx) dx = (1/k)e^(kx) + c, for k ≠ 0. Divide by the number k in front of x."
+   ],
+   [
+    "Trig",
+    "∫sin(kx) dx = −(1/k)cos(kx) + c and ∫cos(kx) dx = (1/k)sin(kx) + c. Example: ∫cos(2x) dx = (1/2)sin(2x) + c."
+   ]
+  ],
+  "remember": "Raise the power and divide by the new power, or divide by k. The general antiderivative adds + c.",
+  "a": {
+   "q": "What is ∫6x² dx?",
+   "opts": [
+    "2x³ + c",
+    "3x³ + c",
+    "12x + c",
+    "6x³ + c"
+   ],
+   "why": "Add 1 to the power to get x³, then divide by the new power 3: 6x³/3 = 2x³. The option 12x comes from differentiating instead: multiplying by the power and lowering it by 1. The option 3x³ divides by the old power 2, and 6x³ forgets to divide at all.",
+   "clue": "Raise the power by 1, then divide by the new power."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is ∫(e^(3x) + sin(2x)) dx?",
+   "opts": [
+    "(1/3)e^(3x) − (1/2)cos(2x) + c",
+    "(1/3)e^(3x) + (1/2)cos(2x) + c",
+    "3e^(3x) − 2cos(2x) + c",
+    "(1/3)e^(3x) − 2cos(2x) + c"
+   ],
+   "why": "Integrate each term. e^(3x) gives (1/3)e^(3x), and sin(2x) gives −(1/2)cos(2x). The sign is negative because the derivative of cos is −sin, and multiplying by k instead of dividing is a common slip.",
+   "clue": "Divide by k in each term, and check the sign for sin."
+  }
+ },
+ "cleared_by": "owner"
+}

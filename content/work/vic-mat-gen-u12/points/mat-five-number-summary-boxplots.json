@@ -12,7 +12,7 @@
    0.251
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -20,7 +20,8 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:22:49Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -195,6 +196,41 @@
    "Question b: the checker says “The maximum of 95 is a possible outlier” could also be right.",
    "Question b, wording: The fences are 10 and 90, so 8 and 95 are both possible outliers. That makes 'The minimum of 8 is a possible outlier' and 'The maximum of 95 is a possible outlier' true statements as well. 'Which statement is correct?' has three literally correct answers. Reword it, for example 'Which statement best describes the outliers?', or change the data so only one option is true.",
    "Question a, other: Why (a) explains distractors that are not among the options. Adding only the IQR gives 70, and adding 1.5 to Q3 gives 51.5. The actual distractors are 75, 60 and 100, and they are not explained."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "The five-number summary and boxplots",
+  "card": [
+   "The five-number summary lists the minimum, Q1, median, Q3 and maximum. Q1 is the median of the lower half of the data, and Q3 is the median of the upper half.",
+   "A boxplot draws these five values. The box runs from Q1 to Q3 with a line at the median. Whiskers reach out to the smallest and largest values that are not outliers.",
+   "The fences are 1.5 × IQR below Q1 and 1.5 × IQR above Q3, where IQR = Q3 − Q1. A value beyond a fence is a possible outlier, and it is shown as a separate dot.",
+   "Example: Q1 = 12 and Q3 = 20. IQR = 8, and 1.5 × 8 = 12. The fences are 12 − 12 = 0 and 20 + 12 = 32. A value of 35 is a possible outlier."
+  ],
+  "remember": "A boxplot shows five values, and anything beyond a fence is a possible outlier.",
+  "a": {
+   "q": "A data set has Q1 = 30 and Q3 = 50. What is the upper fence for outliers?",
+   "opts": [
+    "80",
+    "70",
+    "60",
+    "75"
+   ],
+   "why": "IQR = 50 − 30 = 20, and 1.5 × 20 = 30. The upper fence is Q3 + 30 = 80. Adding only the IQR to Q3 gives 70, adding 30 to Q1 instead of Q3 gives 60, and multiplying Q3 by 1.5 gives 75.",
+   "clue": "Find the IQR first, then multiply it by 1.5."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's daily steps (in hundreds) have Q1 = 40 and Q3 = 60. Her minimum is 8 and her maximum is 88. Which statement is correct?",
+   "opts": [
+    "Only the minimum of 8 is a possible outlier",
+    "Only the maximum of 88 is a possible outlier",
+    "Both 8 and 88 are possible outliers",
+    "Neither 8 nor 88 is a possible outlier"
+   ],
+   "why": "IQR = 20, and 1.5 × 20 = 30, so the fences are 40 − 30 = 10 and 60 + 30 = 90. The value 8 is below 10, so it is a possible outlier, but 88 is inside the upper fence of 90. Using the IQR alone gives fences of 20 and 80, which wrongly flags both values.",
+   "clue": "Work out both fences, then check each end value against them."
+  }
+ },
+ "cleared_by": "owner"
 }

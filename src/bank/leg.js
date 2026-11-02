@@ -2971,5 +2971,3428 @@ MADE_BANKS.leg = {
       "why": "Knocking the shed down is something Leila must do, so the order is a mandatory injunction. A restrictive injunction would only stop her from doing something, such as stopping her building more.",
       "clue": "Ask whether Leila must take an action."
     }
+  },
+  "leg-role-laws": {
+    "title": "Laws and social cohesion",
+    "card": [
+      "Social cohesion means people in a society live together peacefully and trust that others will follow the same rules.",
+      "Laws set out how people must behave and what they can expect from others. They protect each person's rights, such as safety and property.",
+      "The legal system, which includes parliament, police and courts, makes laws and enforces them. It also gives people a peaceful way to settle disputes with each other.",
+      "Individuals play a part too. When most people obey the law and use the legal system to settle disputes, society stays stable."
+    ],
+    "remember": "A stable society needs three things working together: people, laws and the legal system.",
+    "a": {
+      "q": "Which statement best describes how laws help social cohesion?",
+      "opts": [
+        "They set shared rules and protect each person's rights",
+        "They remove all disagreements between people in society",
+        "They stop every person from ever breaking the rules",
+        "They mean people never need to use the courts at all"
+      ],
+      "why": "Laws give people shared rules and protect their rights, so they can trust each other and live together peacefully. Laws do not remove all disagreements. The legal system gives a way to settle disputes when they happen.",
+      "clue": "Think about what people can rely on when everyone follows the same rules."
+    },
+    "b": {
+      "d": 3,
+      "q": "Neighbours in a Ballarat street dispute a fence. Instead of fighting, they take the matter to a court, which makes a decision they both accept. How does this support social cohesion?",
+      "opts": [
+        "Individuals used the legal system to settle it peacefully",
+        "The decision stopped any further disputes in the street",
+        "Laws alone settled the dispute without the neighbours",
+        "The neighbours' rights were set aside for the sake of peace"
+      ],
+      "why": "The neighbours chose to use the legal system, and the court settled the dispute without conflict. A decision does not mean disputes never happen again. Laws do not settle things alone, because individuals must choose to use the system.",
+      "clue": "Look at what the neighbours did and what the court did."
+    }
+  },
+  "leg-principles-justice": {
+    "title": "Principles of justice",
+    "card": [
+      [
+        "Fairness",
+        "the law uses fair processes. Decisions are made without bias, everyone gets a chance to be heard, and the process is open to scrutiny."
+      ],
+      [
+        "Equality",
+        "people are treated the same way, whatever their wealth or status. Where people start from different positions, such as having a disability, different treatment can be needed so each person gets a fair outcome."
+      ],
+      [
+        "Access",
+        "a person can understand the legal system and use it. Cost, language, distance and not knowing their rights can all get in the way."
+      ],
+      "The three principles work together. A system is more just when its processes are fair, people are treated equally and people can reach it."
+    ],
+    "remember": "Justice asks three things: is the process fair, is treatment equal, and can people get into the system?",
+    "a": {
+      "q": "A court provides a free interpreter for a witness who speaks little English. Which principle is this mainly meant to meet?",
+      "opts": [
+        "Access, so the person can understand and take part",
+        "Fairness, so the judge can be free of all bias",
+        "Equality, so every person is treated in the same way",
+        "Fairness, so the public can watch the hearing"
+      ],
+      "why": "An interpreter helps the witness understand the system and take part in it, which is access. Equality is the tempting option, but giving everyone identical treatment would leave this witness unable to follow the case.",
+      "clue": "What stops this person from using the system?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two people are found guilty of the same theft, done the same way, with no past offences. One is a wealthy business owner and one is unemployed. The magistrate gives both the same penalty. Why does this meet equality?",
+      "opts": [
+        "People in the same position get the same treatment",
+        "Different treatment was given to meet each person's needs",
+        "Each person was given a chance to be heard in court",
+        "Both people were able to understand the court process"
+      ],
+      "why": "The two offenders are in the same position, and equality means the same treatment whatever a person's wealth or status. The option about different treatment is tempting, but that part of equality applies where people start from different positions, and these two did not.",
+      "clue": "Does a person's wealth change how equality treats them?"
+    }
+  },
+  "leg-characteristics-effective-law": {
+    "title": "Characteristics of an effective law",
+    "card": [
+      "An effective law is one that people follow and that does its job. It has five characteristics: it reflects society's values, and it is enforceable, known, clear and stable.",
+      "Reflecting values means the law matches what most people believe is right, so they are more willing to obey it. Enforceable means police and courts can detect breaches and apply a penalty.",
+      "Known means people can find out about the law. Clear means its wording is easy to understand, so people can tell what it requires.",
+      "Stable means the law does not change too often, so people can plan around it. It can still change over time when society changes."
+    ],
+    "remember": "People are more likely to follow a law they agree with, know about, understand, can be caught breaking and can rely on.",
+    "a": {
+      "q": "A new law is written in such complicated wording that most people cannot tell what it requires. Which characteristic is it missing?",
+      "opts": ["It is not clear", "It is not stable", "It is not enforceable", "It does not reflect values"],
+      "why": "Clear means the wording can be understood, so people can tell what the law requires. Stability is about how often a law changes, not how it is worded.",
+      "clue": "Think about the wording, not how often the law changes."
+    },
+    "b": {
+      "d": 3,
+      "q": "A council has banned dogs from a beach for ten years. Signs at each entrance explain the ban and most locals support it, but there are no rangers and no way to check who brings a dog. Which characteristic is the law weakest on?",
+      "opts": ["It is hard to enforce", "It does not reflect values", "It is not well known", "It is not stable"],
+      "why": "Without rangers or any way to detect breaches, the council cannot apply a penalty, so the law is hard to enforce. It does reflect values, because most locals support it, and the signs mean it is known.",
+      "clue": "Most locals agree with the ban, so look at what happens after someone breaks it."
+    }
+  },
+  "leg-parliament-courts": {
+    "title": "Parliament and the courts",
+    "card": [
+      "Parliament makes most laws by passing Acts. It can make new laws and change or repeal old ones.",
+      "Courts apply the law to the cases that come before them. A judge or magistrate decides what the law means for the facts of that case.",
+      [
+        "Precedent",
+        "when a higher court, such as the Supreme Court, decides a case, its reasons can become a rule that later courts follow in similar cases. Higher courts bind lower courts in the same hierarchy."
+      ],
+      [
+        "Statutory interpretation",
+        "when the words of an Act are unclear in a case, a court works out what they mean. If a higher court does this, its reading can guide how the Act is applied later."
+      ]
+    ],
+    "remember": "Parliament makes most laws. Courts apply them and also shape law through precedent and interpretation.",
+    "a": {
+      "q": "Which of these is an example of a court making law, rather than only applying it?",
+      "opts": [
+        "The Supreme Court explains an unclear word in an Act",
+        "A magistrate applies a clear section of an Act",
+        "A judge decides what happened between two parties",
+        "A judge sentences an offender within the set maximum"
+      ],
+      "why": "When a higher court explains an unclear word, its reading can guide later cases, so it shapes the law. The other options only apply the law to the facts of one case, and applying the law is not the same as making it.",
+      "clue": "Which option sets something later courts may follow?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian Act bans \"vehicles\" from a park. In a Supreme Court case, a judge must decide if an electric scooter is a vehicle, and rules that it is. Which statement best describes what the judge did?",
+      "opts": [
+        "Interpreted the Act, and the ruling can guide later cases",
+        "Made a new Act that now replaces the original one",
+        "Repealed the ban because its wording was unclear",
+        "Followed a lower court's ruling that bound the judge"
+      ],
+      "why": "The word \"vehicle\" was unclear in this case, so the judge worked out its meaning. That is statutory interpretation, and because the Supreme Court is a higher court, the reading can guide later cases. The judge did not make or repeal an Act, because parliament does that, and a lower court's ruling cannot bind a higher court.",
+      "clue": "The Act already exists, and one word in it is unclear."
+    }
+  },
+  "leg-sources-law": {
+    "title": "Sources of law",
+    "card": [
+      "Law in Victoria comes from two main sources: parliament, and the decisions judges make when they decide court cases.",
+      [
+        "Statute law",
+        "law made by parliament and set out in an Act of Parliament, such as the Crimes Act 1958 (Vic). A bill is only a proposed law until parliament passes it."
+      ],
+      [
+        "Common law",
+        "law made by judges when they decide cases. It is also called case law, and it is recorded in the judge's written reasons for the decision."
+      ],
+      "The two sources do not rank equally. Where a statute and a common law rule are inconsistent, the statute prevails and the common law rule no longer applies."
+    ],
+    "remember": "Acts make statute law, judges' decisions make common law, and statute wins if they clash.",
+    "a": {
+      "q": "Which of these is an example of common law?",
+      "opts": [
+        "A rule set out in a judge's reasons for deciding a case",
+        "A rule set out in a new Act passed by parliament",
+        "A rule set out in a bill before parliament",
+        "A rule set out in a council's list of local fees"
+      ],
+      "why": "Common law is made by judges when they decide cases, and it is recorded in their reasons. An Act of Parliament is statute law, not common law. A bill is only a proposed law until parliament passes it.",
+      "clue": "Who makes common law?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Parliament passes an Act that changes a rule judges had set in earlier cases. Which statement is correct?",
+      "opts": [
+        "The new rule is statute law and replaces the judges' rule",
+        "The new rule is common law because it replaces a case",
+        "The judges' rule stays in force over the new Act",
+        "The new rule is common law until a court approves it"
+      ],
+      "why": "An Act of Parliament is statute law, whatever rule it changes. Where a statute and a common law rule are inconsistent, the statute prevails, so the judges' rule no longer applies. Replacing a rule from a case does not make the Act common law.",
+      "clue": "Look at who made the new rule, not what it replaced."
+    }
+  },
+  "leg-victorian-court-hierarchy": {
+    "title": "The Victorian court hierarchy",
+    "card": [
+      "Victorian courts are ranked in a hierarchy. From the bottom up, the main courts are the Magistrates' Court, the County Court and the Supreme Court.",
+      [
+        "Original jurisdiction",
+        "the power of a court to hear a case for the first time. Each court can hear only the types of case its jurisdiction allows."
+      ],
+      [
+        "Appellate jurisdiction",
+        "the power of a court to hear an appeal, which asks a higher court to review a decision made by a lower court."
+      ],
+      "Less serious matters usually begin in the Magistrates' Court, and more serious ones in the County Court or Supreme Court. So each case goes to a court suited to it, and a party who thinks a decision was wrong can ask a higher court to review it."
+    ],
+    "remember": "The hierarchy matches cases to suitable courts and lets decisions be appealed upward.",
+    "a": {
+      "q": "Why does Victoria have a court hierarchy, with different courts hearing different cases?",
+      "opts": [
+        "Cases go to courts suited to them, and appeals are possible",
+        "Every case is heard by each court in turn, from the bottom",
+        "Lower courts hear only cases about laws that are brand new",
+        "Higher courts decide every case, so appeals are not needed"
+      ],
+      "why": "A ranking lets serious or complex cases go to higher courts, and lets a party ask a higher court to review a decision. The option about every court hearing each case is wrong because cases usually begin in one court, not all of them.",
+      "clue": "What happens to a serious case, or to a party who disagrees with a result?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam is unhappy with a decision made in the Magistrates' Court and asks the County Court to review it. Which power is the County Court using?",
+      "opts": ["Appellate jurisdiction", "Original jurisdiction", "Statutory interpretation", "Precedent"],
+      "why": "The County Court is reviewing a decision from a lower court, which is appellate jurisdiction. Original jurisdiction is wrong because that is hearing a case for the first time, and Sam's case has already been decided.",
+      "clue": "Has this case already been decided once?"
+    }
+  },
+  "leg-criminal-civil-law-2": {
+    "title": "Criminal and civil law",
+    "card": [
+      [
+        "Criminal law",
+        "deals with offences against society, such as theft or assault. The state brings the case, through police and prosecutors. The aim is mainly to punish the offender and protect society."
+      ],
+      [
+        "Civil law",
+        "deals with disputes between people or organisations, such as a broken contract or damage to a fence. The person who says they were harmed brings the case. The aim is usually to put things right, for example by paying compensation."
+      ],
+      "One act can lead to both. If Sam punches Ali, the state may charge Sam with assault. Ali may also sue Sam for the harm caused.",
+      "The two types of case are separate. They are brought by different parties, they have different aims, and both can go ahead."
+    ],
+    "remember": "Criminal: the state acts against an offence. Civil: one party sues another. One act can bring both.",
+    "a": {
+      "q": "Which case is a civil dispute?",
+      "opts": [
+        "A tenant sues a landlord over a bond not repaid",
+        "Police charge a man with stealing a car",
+        "Prosecutors charge a driver with dangerous driving",
+        "The state charges a woman with assault"
+      ],
+      "why": "A tenant suing a landlord is a dispute between two people, brought by the person who says they were harmed. The other three are offences against society, brought by the state.",
+      "clue": "Who is bringing the case: the state or a person?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jo is hit by a cyclist who rides through a red light. Police charge the cyclist, and Jo also sues for medical costs. What is true of these two cases?",
+      "opts": [
+        "They are separate cases arising from one act",
+        "They are one case heard in two different courts",
+        "Both cases are brought by the state against the cyclist",
+        "Jo's civil claim replaces the criminal charge"
+      ],
+      "why": "The one act led to a criminal case brought by the state and a civil case brought by Jo. They are separate cases with different aims, and both can go ahead. Jo's claim is not a second state case, because Jo, the person harmed, brings it.",
+      "clue": "Think about who brings each case and what each one wants."
+    }
+  },
+  "leg-purposes-criminal-law": {
+    "title": "Purposes of criminal law",
+    "card": [
+      "Criminal law deals with conduct that harms individuals or the community as a whole. The state, not the victim, brings the case against the accused.",
+      ["Protect", "it protects people and property from harm, such as assault, theft and damage."],
+      ["Set standards", "it sets out the behaviour the community expects, by making some conduct a crime."],
+      ["Punish", "it allows courts to punish those found guilty, which can also discourage others from offending."]
+    ],
+    "remember": "Criminal law protects, sets standards and allows punishment.",
+    "a": {
+      "q": "Parliament makes it a crime to carry a knife in a public place without a good reason. Which purpose of criminal law does this show most clearly?",
+      "opts": [
+        "Setting standards of behaviour in the community",
+        "Allowing a victim to claim money for loss",
+        "Punishing a person who has already been found guilty",
+        "Settling a dispute between two neighbours"
+      ],
+      "why": "Making conduct a crime tells the community what behaviour is expected. It is not about punishing a particular person yet, and the state, not a victim, enforces criminal law.",
+      "clue": "Think about what the rule tells everyone before anyone breaks it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is found guilty of stealing a bicycle from a shop in Ballarat, and the court orders a penalty. Which purpose is the court mainly carrying out?",
+      "opts": [
+        "Allowing punishment of a person who broke the law",
+        "Protecting property by making theft a crime",
+        "Setting the standard that theft is wrong",
+        "Helping the shop owner recover the bicycle's value"
+      ],
+      "why": "The court is dealing with a person already found guilty, so it is using its power to punish. Protecting property and setting standards are served by the law itself, before any case reaches court.",
+      "clue": "Look at the stage of the case: guilt has already been decided."
+    }
+  },
+  "leg-presumption-innocence": {
+    "title": "The presumption of innocence",
+    "card": [
+      "A person accused of a crime is treated as innocent until they are proven guilty. They do not have to prove that they did not do it.",
+      "The presumption applies to everyone charged, however serious the charge or however strong the claims in the news seem.",
+      "The accused also has the right to silence. They can choose not to answer police questions or give evidence at trial.",
+      "Staying silent does not prove guilt. The accused is still presumed innocent."
+    ],
+    "remember": "Innocent until proven guilty, and silence is not an admission.",
+    "a": {
+      "q": "Tom is charged with burglary in Geelong. Before his trial, how must the law treat him?",
+      "opts": [
+        "As innocent, until he is proven guilty",
+        "As guilty, unless he can show he is innocent",
+        "As innocent, but only if the charge is minor",
+        "As guilty, if he refuses to answer police questions"
+      ],
+      "why": "The presumption of innocence applies to every accused person until guilt is proven. It is not limited to minor charges, and Tom does not have to prove anything.",
+      "clue": "Who is treated as innocent, and until when?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Police question Mei about a fire at a Bendigo warehouse. She says she will not answer any questions. What does this silence mean in law?",
+      "opts": [
+        "Nothing: it is her right, and does not prove guilt",
+        "It shows she has something to hide and is probably guilty",
+        "It is an admission that she started the fire",
+        "It removes the presumption of innocence for her"
+      ],
+      "why": "The right to silence lets an accused person decline to answer without it being treated as guilt. The tempting idea that silence looks suspicious is wrong, because Mei is still presumed innocent.",
+      "clue": "Choosing not to speak is a right, not evidence."
+    }
+  },
+  "leg-burden-standard-proof-criminal": {
+    "title": "Burden and standard of proof",
+    "card": [
+      [
+        "Burden of proof",
+        "the duty to prove the case. In a criminal trial it rests on the prosecution, because the accused is presumed innocent. The accused does not have to prove innocence."
+      ],
+      [
+        "Standard of proof",
+        "how strongly the case must be proved. In a criminal trial the prosecution must prove guilt beyond reasonable doubt."
+      ],
+      "If the jury or magistrate is left with a reasonable doubt about guilt, the accused must be found not guilty. Thinking the accused probably did it is not enough.",
+      "This is higher than the civil standard, the balance of probabilities, which only asks whether a claim is more likely than not."
+    ],
+    "remember": "Any reasonable doubt about guilt means a not guilty verdict, and the accused never has to prove innocence.",
+    "a": {
+      "q": "In a Victorian criminal trial, which side must prove the case, and to what standard?",
+      "opts": [
+        "The prosecution, to prove guilt beyond reasonable doubt",
+        "The defence, to prove innocence beyond reasonable doubt",
+        "The prosecution, to show guilt is more likely than not",
+        "The defence, to raise some doubt about the evidence"
+      ],
+      "why": "The burden sits with the prosecution because the accused is presumed innocent, and the standard is beyond reasonable doubt. Showing guilt is more likely than not is the lower civil standard, so it is not enough in a criminal trial.",
+      "clue": "The accused is presumed innocent, so who must do the proving?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaya is tried by a jury in the County Court of Victoria for armed robbery of a service station in Footscray. The jury thinks she probably did it but still has a reasonable doubt. What should the verdict be?",
+      "opts": [
+        "Not guilty, because the standard of proof was not met",
+        "Guilty, because the jury thinks she probably did it",
+        "Not guilty, because Jaya proved she was innocent",
+        "Guilty, because Jaya could not prove her innocence"
+      ],
+      "why": "Probably guilty is not enough. The prosecution must remove reasonable doubt, so a jury that still has such doubt must find her not guilty. The options about Jaya proving or failing to prove her innocence both wrongly put the burden on her.",
+      "clue": "Does the jury's doubt mean the standard has been met?"
+    }
+  },
+  "leg-strict-liability-offences": {
+    "title": "Strict liability offences",
+    "card": [
+      "Most crimes need the prosecution to prove both a guilty act and a guilty mind.",
+      "A strict liability offence is different. The prosecution need only prove the act happened. It does not have to prove the accused intended it.",
+      "Many traffic offences work this way, such as driving over the speed limit. It does not matter if the driver did not mean to speed.",
+      "The accused may still raise a defence, such as an honest and reasonable mistake of fact. But the prosecution does not need to prove intent."
+    ],
+    "remember": "Strict liability: prove the act, not the intent.",
+    "a": {
+      "q": "Sam is fined for driving 15 km/h over the limit in Mildura. He says he did not notice his speed. Why is this not a good reason to avoid the offence?",
+      "opts": [
+        "Speeding is strict liability, so intent need not be proven",
+        "Speeding needs proof that the driver meant to go too fast",
+        "Speeding is an offence only if someone is hurt by it",
+        "A driver who did not notice their speed cannot be charged"
+      ],
+      "why": "For a strict liability offence the prosecution only needs to prove the act. Sam not noticing means he did not intend to speed, but intent does not have to be proven, so he can still be found guilty.",
+      "clue": "What must the prosecution prove for this kind of offence?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Which feature makes an offence strict liability?",
+      "opts": [
+        "The prosecution does not have to prove the accused's intent",
+        "The accused must prove to the court they had no intent",
+        "The penalty is always a fine and never a prison term",
+        "The act must have caused serious harm to another person"
+      ],
+      "why": "What marks a strict liability offence is that only the act needs to be proven. The accused does not have to prove a lack of intent, and neither the type of penalty nor the harm caused is what defines it.",
+      "clue": "Focus on what the prosecution can leave out."
+    }
+  },
+  "leg-summary-indictable-offences-2": {
+    "title": "Summary and indictable offences",
+    "card": [
+      [
+        "Summary offence",
+        "a minor offence, such as offensive language or a minor traffic offence. It is heard by a magistrate in the Magistrates' Court, with no jury."
+      ],
+      [
+        "Indictable offence",
+        "a serious offence, such as murder, armed robbery or large-scale drug supply. It can be tried by a judge and jury in a higher court, such as the County Court or the Supreme Court."
+      ],
+      "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to a higher court for trial.",
+      "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+    ],
+    "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+    "a": {
+      "q": "Which feature is normally true of a summary offence in Victoria?",
+      "opts": [
+        "It is heard by a magistrate without a jury",
+        "It is tried by a judge and jury",
+        "It is heard in the Supreme Court",
+        "It is decided by the police, not a court"
+      ],
+      "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the option saying it is tried by a judge and jury is the tempting mistake.",
+      "clue": "Think about who hears minor matters and whether a jury is used."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev is charged with armed robbery. His first court appearance is in the Magistrates' Court. How is his offence best classed, and why?",
+      "opts": [
+        "Indictable, because it is serious and can go before a jury",
+        "Summary, because it first appears in the Magistrates' Court",
+        "Summary, because Dev may plead guilty to the charge",
+        "Indictable, because a magistrate hears it without a jury"
+      ],
+      "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+      "clue": "Where a case first appears may not tell you its type."
+    }
+  },
+  "leg-participants-crime": {
+    "title": "Participants in a crime",
+    "card": [
+      [
+        "Principal offender",
+        "the person who commits the crime, or who carries out the main act of it. Two or more people can both be principal offenders in the one crime."
+      ],
+      [
+        "Accessory",
+        "a person who helps an offender after the crime, knowing they committed it, so that they avoid arrest or punishment. An example is hiding the offender from police."
+      ],
+      "People can also be charged for helping before or during a crime. This includes planning it with the offender, or helping them while it happens, such as keeping watch.",
+      "The time of the help matters. Help after the crime makes someone an accessory. Help before or during it can lead to a charge for taking part in the crime itself."
+    ],
+    "remember": "Principal offenders commit the crime. Help after it makes an accessory.",
+    "a": {
+      "q": "Which person is an accessory to a burglary?",
+      "opts": [
+        "Sam, who hides the burglar from police the next day",
+        "Lena, who breaks in and takes a laptop",
+        "Noor, who helps plan the break-in with the burglar",
+        "Tom, who keeps watch outside during the break-in"
+      ],
+      "why": "Sam helps the burglar after the crime to avoid police, so he is an accessory. Tom is tempting, but he helps during the crime, so he can be charged for taking part in it instead.",
+      "clue": "Look for the person whose help comes after the crime."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya knows her brother robbed a shop. The next day she drives him interstate so police cannot find him. What is Priya's role?",
+      "opts": [
+        "An accessory, as she helped after the crime",
+        "A principal offender, as she is helping the robber",
+        "A principal offender, as she knew about the crime",
+        "An accessory, as she is related to the robber"
+      ],
+      "why": "Priya did not commit the robbery. She helped her brother avoid police after it, knowing what he did, so she is an accessory. Being a relative is not what makes her one, and knowing about a crime alone does not make someone a principal offender.",
+      "clue": "Ask when her help happened and what she did."
+    }
+  },
+  "leg-offence-against-person": {
+    "title": "An offence against the person",
+    "card": [
+      "An offence against the person harms, or threatens to harm, a person's body or life. Assault and homicide are examples.",
+      "Every offence has elements. These are the parts that make up the offence, and the prosecution must prove each one beyond reasonable doubt.",
+      "Most offences have two kinds of element: a physical act (the conduct) and a mental state (such as intending to cause harm, or being reckless about it).",
+      "If the prosecution cannot prove even one element, the accused is not guilty of that offence. The accused does not have to prove their innocence."
+    ],
+    "remember": "Offences against the person harm a body or a life, and the prosecution must prove every element.",
+    "a": {
+      "q": "Why must the prosecution prove the elements of an offence against the person?",
+      "opts": [
+        "Each element is part of the offence, so all must be proved",
+        "Only the physical act needs proof, as the mind is assumed",
+        "The accused must prove the elements did not happen",
+        "The judge decides which elements are needed in each case"
+      ],
+      "why": "The elements make up the offence, so the prosecution must prove every one beyond reasonable doubt. The mental state is not assumed: it is an element too, and the accused does not have to prove the elements did not happen.",
+      "clue": "Think about who has to prove guilt, and how much of it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev is charged with an offence against the person. The prosecution proves he did the act, but the jury is not satisfied about his mental state. What is the likely outcome for that charge?",
+      "opts": [
+        "Not guilty, as one element has not been proved",
+        "Guilty, as the physical act was proved",
+        "Guilty, unless Dev proves he lacked the mental state",
+        "A retrial, as the jury must find every element proved"
+      ],
+      "why": "Every element must be proved beyond reasonable doubt, and the mental state is an element. If the jury is not satisfied about it, Dev is not guilty of that offence. Proving the act alone is not enough.",
+      "clue": "Does proving the act alone complete the offence?"
+    }
+  },
+  "leg-offence-against-property": {
+    "title": "An offence against property",
+    "card": [
+      "An offence against property takes, damages or interferes with someone's property. Theft and burglary are two examples. Criminal damage is another.",
+      "Each offence has elements. The prosecution must prove every element beyond reasonable doubt. If one element is not proved, the accused is not guilty of that offence.",
+      [
+        "Theft",
+        "dishonestly taking property that belongs to another person, with the intention of permanently depriving them of it."
+      ],
+      [
+        "Burglary",
+        "entering a building as a trespasser, with the intention of stealing or committing certain other offences inside. The accused does not need to take anything."
+      ]
+    ],
+    "remember": "Property offences have elements, and the prosecution must prove every one.",
+    "a": {
+      "q": "Sam borrows his neighbour's ladder without asking, and plans to return it the next day. Which element of theft is most clearly missing?",
+      "opts": [
+        "Intention to permanently deprive the owner of it",
+        "Property that belongs to another person",
+        "A taking of the property",
+        "Dishonesty in how the property was taken"
+      ],
+      "why": "Theft requires an intention to permanently deprive the owner. Sam plans to return the ladder, so that element is missing. The ladder does belong to another person and Sam did take it, so those elements are present.",
+      "clue": "Sam plans to give the ladder back."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya climbs through an unlocked window into a shop after closing, planning to steal stock. A guard stops her before she touches anything. Which statement is correct?",
+      "opts": [
+        "She can face a burglary charge, as entry with intent counts",
+        "She cannot face a burglary charge, as nothing was taken",
+        "She can only face a theft charge, as she planned to steal",
+        "She cannot face any charge, as the window was unlocked"
+      ],
+      "why": "Burglary needs entry as a trespasser with intent to steal, and nothing needs to be taken. Priya entered the shop without permission and intended to steal, so the elements can be proved. Saying nothing was taken confuses burglary with theft.",
+      "clue": "Does burglary need anything to be taken?"
+    }
+  },
+  "leg-trends-impact-offence": {
+    "title": "Trends and impact of an offence",
+    "card": [
+      "Crime statistics count how many offences are recorded over a period. In Victoria, the Crime Statistics Agency publishes them.",
+      "A trend is the pattern in those counts over time, such as a rise or fall across several years. Comparing Victoria with other places shows whether a trend is local or wider.",
+      "Statistics only count offences that are recorded. Some offences are never reported, so the real number of offences may be higher than the figures show.",
+      "The impact of an offence is its harm. It can reach the victim, their family and friends, and the wider community, for example through injury, lost money, fear or the cost of services."
+    ],
+    "remember": "Statistics show how often an offence is recorded. Impact shows how far its harm spreads.",
+    "a": {
+      "q": "Recorded car thefts in a Victorian city fall each year for five years. What does this describe?",
+      "opts": [
+        "A trend in the recorded offence",
+        "The impact of the offence on victims",
+        "A defence to the offence",
+        "The harm done to the wider community"
+      ],
+      "why": "A pattern in recorded counts over several years is a trend. Impact is about harm to people, which a count alone does not show.",
+      "clue": "Look at the pattern across the years."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dan's shop in Bendigo is burgled and police record it. He loses stock, his daughter who works there feels afraid, and nearby shops pay for extra security. Which part shows harm to the wider community?",
+      "opts": [
+        "Nearby shops paying for extra security",
+        "Dan losing stock from his shop",
+        "Dan's daughter feeling afraid at work",
+        "Police recording the burglary"
+      ],
+      "why": "The nearby shops were not targeted, yet they bear a cost, so the harm has spread to the wider community. Dan losing stock is harm to the direct victim, and his daughter's fear is harm to his family. Police recording the burglary adds to the statistics but is not itself a harm.",
+      "clue": "Find the people who were not targeted and are not Dan's family."
+    }
+  },
+  "leg-purposes-sanctions": {
+    "title": "Purposes of sanctions",
+    "card": [
+      "Deterrence discourages crime through fear of a sanction. Specific deterrence aims at the offender, and general deterrence aims at others who might offend.",
+      "Punishment makes the offender pay for the wrong, in proportion to how serious the crime was. Denunciation is the court publicly stating that the conduct is wrong.",
+      "Rehabilitation helps the offender change, for example through treatment or training, so they do not reoffend. Protection keeps the community safe, for example by keeping the offender in prison.",
+      "A sanction can serve several of these purposes at once, and they can pull against each other. The judge weighs them to reach a fitting sentence."
+    ],
+    "remember": "Judges balance five aims: punish, deter, denounce, protect and rehabilitate.",
+    "a": {
+      "q": "A court orders an offender to complete a drug treatment program so they can change their behaviour. Which purpose does this mainly serve?",
+      "opts": ["Rehabilitation", "Punishment", "General deterrence", "Protection"],
+      "why": "Treatment aims to change the offender so they do not reoffend, which is rehabilitation. Protection is the tempting wrong answer, but it keeps the community safe by removing the offender, not by changing the person.",
+      "clue": "Which purpose is about changing the offender?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In sentencing a fraudster to a long prison term, a judge says it should warn others who might commit similar frauds. Which purpose is the judge relying on?",
+      "opts": ["General deterrence", "Specific deterrence", "Punishment", "Denunciation"],
+      "why": "The warning is aimed at other people who might offend, which is general deterrence. Specific deterrence is the tempting wrong answer, but it aims to discourage this offender, not the wider public.",
+      "clue": "Who is the warning meant for: the offender or others?"
+    }
+  },
+  "leg-fines": {
+    "title": "Fines",
+    "card": [
+      "A fine is a sanction where the offender pays a sum of money to the state. It is the least serious of the main sanctions, and it does not remove the offender's freedom.",
+      "The court sets the amount by looking at the offence. A more serious offence usually brings a larger fine, up to the limit the law allows for that offence.",
+      "The court also looks at the offender's ability to pay. The same fine can hurt a person on a low income much more than a person on a high income.",
+      "A fine can punish the offender, deter them from reoffending and deter others from offending. It is often used for less serious offences, such as minor traffic matters."
+    ],
+    "remember": "A fine is money paid to the state, set by how serious the offence is and what the offender can afford.",
+    "a": {
+      "q": "Which statement best describes a fine?",
+      "opts": [
+        "Money paid to the state by the offender",
+        "Money paid to the victim by the offender",
+        "Unpaid work done in the community",
+        "Time spent under supervision by a court officer"
+      ],
+      "why": "A fine is a sum of money paid to the state, not to the victim. Unpaid work and supervision are conditions of a community correction order, which is a different sanction.",
+      "clue": "Think about who receives the money."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two drivers in Geelong are found guilty in court of the same minor speeding offence. Sam earns a very high income. Jo is a student with little money. How does the court approach setting their fines?",
+      "opts": [
+        "It considers what each driver is able to pay",
+        "It sets one amount, whatever each driver can pay",
+        "It gives Jo a larger fine, as she has less money",
+        "It looks at their incomes but not at the offence"
+      ],
+      "why": "The amount is set by the offence and also by the offender's ability to pay, so the court considers each driver's means. Setting one amount whatever each can pay is tempting because the offence is the same, but it ignores ability to pay.",
+      "clue": "Think about what else a court looks at besides the offence."
+    }
+  },
+  "leg-community-correction-orders": {
+    "title": "Community correction orders",
+    "card": [
+      "A community correction order (CCO) is a sanction served in the community, not in prison. It is set out in the Sentencing Act 1991 (Vic).",
+      "A court cannot impose a CCO for category 1 offences, the most serious group, such as murder. It can use one for category 2 offences only in limited cases.",
+      "Every CCO has core conditions. The offender must not commit an offence punishable by imprisonment, must report to and follow directions from Corrections Victoria, must report a change of address, and must not leave Victoria without permission.",
+      "The court must also add at least one condition to suit the offender and the offence, such as unpaid community work, treatment for drug, alcohol or mental health issues, supervision, or a curfew. If the offender breaks a condition without a good reason, they can be brought back to court and resentenced."
+    ],
+    "remember": "A CCO is served in the community, with core conditions plus ones the court adds to suit the case.",
+    "a": {
+      "q": "Which description best fits a community correction order?",
+      "opts": [
+        "A sanction served in the community, with set conditions",
+        "A sum of money paid to the state by the offender",
+        "A sanction that removes the offender from the community",
+        "A promise by the offender to behave, with no conditions"
+      ],
+      "why": "A CCO is served in the community and always comes with conditions. A fine is a payment, and imprisonment removes the offender from the community. Every CCO has core conditions, so it is not an unconditional promise.",
+      "clue": "Think about where the order is served and what comes with it."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi is found guilty of an offence linked to his drug use. The court gives him a CCO with a treatment condition and unpaid work. Which statement about his CCO is correct?",
+      "opts": [
+        "The court set conditions aimed at why he offended",
+        "Corrections Victoria set his treatment and work conditions",
+        "His order has no core conditions, only the court's ones",
+        "He must do his unpaid work while held in prison"
+      ],
+      "why": "The court adds conditions such as treatment to suit the offender and the offence, here the cause of his offending. Corrections Victoria gives directions under the order, but it is the court that adds the treatment and work conditions.",
+      "clue": "Who adds the extra conditions to a CCO?"
+    }
+  },
+  "leg-imprisonment": {
+    "title": "Imprisonment",
+    "card": [
+      "Imprisonment is a sanction that removes the offender from the community and holds them in a prison. It is the most serious sanction a court in Victoria can impose.",
+      "Courts treat it as a last resort. A judge or magistrate considers whether a less serious sanction, such as a fine or a community correction order, could meet the purposes of sentencing.",
+      "Imprisonment can punish the offender and protect the community, because the offender cannot reoffend in the community while held. It can also deter others by warning them of the penalty, and denounce the crime by showing the community's disapproval.",
+      "It has limits. The offender may lose a job, housing and family contact, which can make returning to the community harder. Rehabilitation programs in prison may help, but this is not certain."
+    ],
+    "remember": "Imprisonment is the most serious sanction, used when less serious sanctions would not be enough.",
+    "a": {
+      "q": "What does it mean to say imprisonment is a last resort?",
+      "opts": [
+        "Less serious sanctions are considered before it is imposed",
+        "It can only be imposed after an offender has reoffended",
+        "It is only used for offences that involve violence",
+        "It is chosen when the offender cannot pay a fine"
+      ],
+      "why": "A last resort means a court first asks whether a less serious sanction could meet the purposes of sentencing. Prison is not limited to repeat offenders or violent crimes, and it is not a simple backup for an unpaid fine.",
+      "clue": "Think about what a court looks at first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq has seriously assaulted two people. The judge wants to stop him harming anyone for the next few years and sends him to prison. What best explains how prison achieves this aim?",
+      "opts": [
+        "He cannot offend in the community while he is held",
+        "The sentence warns others that the crime leads to prison",
+        "The sentence shows the public disapproves of his crime",
+        "Prison programs are sure to change his behaviour"
+      ],
+      "why": "While Tariq is held, he cannot reoffend in the community, so people are protected for the length of his sentence. Warning others is deterrence and showing disapproval is denunciation: both are real purposes, but neither stops Tariq himself. Rehabilitation in prison may help, but it is not certain.",
+      "clue": "Which option is about Tariq himself, during his sentence?"
+    }
+  },
+  "leg-alternative-approaches-sentencing": {
+    "title": "Alternative approaches to sentencing",
+    "card": [
+      "Alternative approaches look at the reasons behind a person's offending and try to address them. The aim is to make the offender less likely to offend again.",
+      [
+        "Drug Court",
+        "a Victorian court for some offenders whose offending is linked to drug or alcohol dependence. It can order treatment and regular testing, with close supervision by the court."
+      ],
+      [
+        "Koori Court",
+        "a Victorian court for Aboriginal and Torres Strait Islander offenders who plead guilty. Elders or respected persons take part, so sentencing is more culturally appropriate and helps reconnect the offender with community and culture."
+      ],
+      [
+        "Diversion program",
+        "a way to deal with an offence without a full court process. The accused may agree to conditions, such as counselling or an apology, and the case can then be dealt with without a conviction."
+      ]
+    ],
+    "remember": "Alternative approaches look beyond the offence itself, aiming to reduce reoffending.",
+    "a": {
+      "q": "What do the Drug Court, the Koori Court and diversion programs have in common?",
+      "opts": [
+        "They try to address the reasons behind offending",
+        "They aim to give the offender the longest sentence",
+        "They only apply to people who plead not guilty",
+        "They replace the need for any sanction at all"
+      ],
+      "why": "Each approach looks at what lies behind the offending, such as drug or alcohol dependence, and tries to reduce reoffending. They do not aim for the longest sentence, and the Koori Court needs a guilty plea.",
+      "clue": "Think about what each approach tries to change in the offender's life."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jack has been charged with theft. His offending is linked to heroin dependence. Which approach is most suited to the cause of his offending?",
+      "opts": [
+        "The Drug Court, with treatment and court supervision",
+        "The Koori Court, with Elders taking part in the hearing",
+        "A larger fine, to increase the penalty for him",
+        "A longer prison term, to keep him away from drugs"
+      ],
+      "why": "The Drug Court is for offending linked to drug or alcohol dependence and can order treatment with close supervision. The Koori Court is for Aboriginal and Torres Strait Islander offenders, and nothing suggests Jack is one. A fine or prison would not address the dependence.",
+      "clue": "Match the approach to the cause of Jack's offending."
+    }
+  },
+  "leg-sentencing-another-state": {
+    "title": "Sentencing in another state",
+    "card": [
+      "Each Australian state and territory makes its own sentencing laws. The same offence can lead to different sanctions in different places.",
+      "Sanctions in every jurisdiction aim at the same purposes, such as punishment, deterrence, protecting the community and rehabilitation.",
+      "Comparing Victoria with another state shows different ways to meet those purposes. For example, a state may use a different type of order or set different limits on a sanction.",
+      "A comparison can show what works well in one place. It can also give reasons to reform the law in another."
+    ],
+    "remember": "Jurisdictions share sentencing purposes but may use different sanctions to meet them.",
+    "a": {
+      "q": "Why is it useful to compare Victoria's sentencing with that of another state?",
+      "opts": [
+        "It shows other ways of meeting the same sentencing purposes",
+        "It shows that other states pursue different purposes",
+        "It shows that Victorian courts must follow that state's laws",
+        "It shows that one offence gets the same sanction everywhere"
+      ],
+      "why": "The purposes are shared, so a comparison shows different ways to reach them, which can suggest reform. The tempting option about different purposes is wrong, because every jurisdiction aims at the same purposes. Each state also makes its own laws, so outcomes can differ and one state does not bind another.",
+      "clue": "Think about what stays the same and what differs between states."
+    },
+    "b": {
+      "d": 3,
+      "q": "A law reform group notes that another state uses a type of order that Victoria does not. The order aims to rehabilitate offenders. What does this comparison show?",
+      "opts": [
+        "It shows another way to meet a purpose Victoria shares",
+        "It shows Victoria's courts must adopt that state's order",
+        "It shows Victoria has no way to rehabilitate offenders",
+        "It shows the other state pursues different purposes"
+      ],
+      "why": "Rehabilitation is a shared purpose, and the other state meets it with a different tool. The comparison may support reform, but it does not bind Victoria. The tempting wrong option says the purposes differ, but they are the same in every jurisdiction.",
+      "clue": "The purpose is the same. What differs is the method."
+    }
+  },
+  "leg-purposes-civil-law": {
+    "title": "Purposes of civil law",
+    "card": [
+      "Civil law deals with disputes between people, groups or businesses. It protects their rights, such as the right to have the other party keep their promise in a contract, or to be free from harm caused by someone else's carelessness.",
+      "When someone's rights have been infringed, civil law aims to put the wronged party back where they were before the wrong. It usually does this by ordering the other party to pay money, called damages.",
+      "Civil law covers many areas. Negligence deals with careless harm to a person or their property. Defamation deals with harm to a person's reputation. Contract law deals with broken agreements. Nuisance deals with interference with the use of land.",
+      "The aim is to fix the harm to the wronged party. It is not mainly to punish the wrongdoer, which is the focus of criminal law."
+    ],
+    "remember": "Civil law protects rights and puts the wronged party back where they were.",
+    "a": {
+      "q": "What is the main purpose of an order to pay damages in a civil case?",
+      "opts": [
+        "To restore the wronged party to their earlier position",
+        "To punish the wrongdoer for breaking the law",
+        "To warn the public against similar behaviour",
+        "To decide whether the wrongdoer goes to prison"
+      ],
+      "why": "Civil law aims to put the wronged party back where they were, and money is the usual way to do this. Punishing the wrongdoer is the focus of criminal law, so it is not the main purpose here.",
+      "clue": "Think about who the civil law is trying to help."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's neighbour runs a loud workshop each night, so Sam cannot use his backyard in peace. Which area of civil law does this dispute fall under?",
+      "opts": ["Nuisance", "Defamation", "Contract", "Negligence"],
+      "why": "Nuisance deals with interference with a person's use of their land, and the noise stops Sam enjoying his yard. Negligence is tempting, but no one has been carelessly harmed and nothing has been carelessly damaged. The problem is the ongoing interference with the use of land.",
+      "clue": "Look at what the noise interferes with."
+    }
+  },
+  "leg-breach-causation-loss": {
+    "title": "Breach, causation and loss",
+    "card": [
+      "To win a civil claim, the plaintiff usually must show three things: a breach, causation and a loss. If one is missing, the claim will usually fail or gain little.",
+      ["Breach", "the defendant broke a legal duty or obligation, such as a duty of care or a term of a contract."],
+      [
+        "Causation",
+        "the breach caused the harm. The harm must have happened because of the breach, not for some other reason."
+      ],
+      [
+        "Loss",
+        "the plaintiff suffered real harm, such as injury, damage to property or lost income. A breach with no loss leaves little to compensate."
+      ]
+    ],
+    "remember": "Broken duty, harm caused by it, real loss: without one, a claim usually fails or gains little.",
+    "a": {
+      "q": "Which situation is a loss, as needed for a civil claim?",
+      "opts": [
+        "A cyclist cannot work for a month because of a broken arm",
+        "A driver ignores a stop sign but no one is nearby",
+        "A shop promises delivery by Friday and delivers on Monday",
+        "A neighbour plays loud music but you are away all week"
+      ],
+      "why": "A month of lost work is real harm, in the form of injury and lost income. Ignoring a stop sign may be a breach, but with no harm to anyone there is no loss.",
+      "clue": "Look for actual harm, not just a rule being broken."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo hires Priya to paint his fence. She finishes a week late, which breaches the contract. The fence is later damaged by a storm. Leo sues for the storm damage. Why is his claim likely to fail?",
+      "opts": [
+        "The breach did not cause the storm damage",
+        "There was no breach of the contract",
+        "Leo did not suffer any loss",
+        "Storm damage cannot be claimed in court"
+      ],
+      "why": "Priya's lateness was a breach, and the fence was damaged, so a loss exists. But the storm caused the damage, not the late work, so causation is missing. Without causation, his claim for the storm damage is likely to fail.",
+      "clue": "Ask what actually caused the damage."
+    }
+  },
+  "leg-burden-standard-proof-civil": {
+    "title": "Burden and standard of proof in civil cases",
+    "card": [
+      "The burden of proof is the duty to prove the case. In a civil case, it falls on the plaintiff, who brings the claim.",
+      "The standard of proof is how strongly the case must be proved. In a civil case, it is the balance of probabilities.",
+      "On the balance of probabilities means it is more likely than not that the plaintiff's version is true. The court weighs the evidence from both sides to decide this.",
+      "The defendant does not have to prove that they are not liable. If the plaintiff does not meet the standard, the claim fails."
+    ],
+    "remember": "In a civil case, the plaintiff must show their case is more likely true than not.",
+    "a": {
+      "q": "Which statement best describes the standard of proof in a civil case?",
+      "opts": [
+        "The plaintiff's version is more likely true than not",
+        "The plaintiff's version is certain beyond any doubt",
+        "The defendant must show that they are not at fault",
+        "The plaintiff's version has some chance of being true"
+      ],
+      "why": "The balance of probabilities means the plaintiff's case is more probable than not. Certainty beyond any doubt is too high a standard for a civil case, and a mere chance of being true is too low.",
+      "clue": "Picture a set of scales tipping one way, even slightly."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev sues a builder in the County Court of Victoria for faulty work. The judge thinks it is slightly more likely than not that the work was faulty. What is the result?",
+      "opts": [
+        "Dev meets the standard of proof and can succeed",
+        "Dev fails, because the judge has some doubt",
+        "Dev fails, because the fault is not proven beyond doubt",
+        "Dev must wait for the builder to prove the work was sound"
+      ],
+      "why": "A civil plaintiff only needs to show the claim is more probable than not. A slight lean in Dev's favour is enough, and some doubt remaining does not defeat the claim. The builder does not have to prove that the work was sound.",
+      "clue": "Does the plaintiff need to remove all doubt?"
+    }
+  },
+  "leg-parties-civil-dispute": {
+    "title": "Parties to a civil dispute",
+    "card": [
+      [
+        "Plaintiff",
+        "the person or group who brings the civil claim. They say they have been wronged and ask the court for a remedy."
+      ],
+      [
+        "Defendant",
+        "the person or group who answers the claim. They may be an individual, a business or a government body."
+      ],
+      "A civil dispute is between these two parties. The plaintiff starts it, and the defendant responds to it.",
+      [
+        "Class action",
+        "a claim brought by one person on behalf of a group of at least seven people who have been wronged in a similar way. The group members share the same type of complaint against the same defendant."
+      ]
+    ],
+    "remember": "The plaintiff sues and the defendant answers. A class action lets one person act for a group.",
+    "a": {
+      "q": "Which description fits the defendant in a civil dispute?",
+      "opts": [
+        "The party who responds to the claim made against them",
+        "The party who starts the claim and asks for a remedy",
+        "The party who decides which side wins the dispute",
+        "The party who acts for a group in a class action"
+      ],
+      "why": "The defendant is the party who answers the claim. Starting the claim and asking for a remedy is the plaintiff's role, and so is acting for a group in a class action. The defendant is the one the claim is made against.",
+      "clue": "Think about who is being claimed against."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hundreds of customers of a Geelong gym were overcharged in the same way. Ana brings one claim for all of them against the gym. Who is the plaintiff, and what is the claim called?",
+      "opts": [
+        "Ana, in a class action against the gym",
+        "The gym, in a class action against Ana",
+        "Ana, in a claim where each customer is a defendant",
+        "The customers, with the gym as the plaintiff"
+      ],
+      "why": "Ana starts the claim, so she is the plaintiff. She acts for a group with a similar complaint against the same defendant, so it is a class action. The gym answers the claim, so it is the defendant, and the other customers are not defendants.",
+      "clue": "Who starts the claim, and who answers it?"
+    }
+  },
+  "leg-limitation-actions": {
+    "title": "Limitation of actions",
+    "card": [
+      "A limitation period is the time limit for starting a civil claim. It is set by law, in Victoria mainly by the Limitation of Actions Act 1958 (Vic).",
+      "The length depends on the type of claim. Many claims, such as those in contract, have a period of six years.",
+      "The period usually runs from the day the cause of action arises, for example when the breach of contract happens. If the plaintiff files after it ends, the defendant can raise the time limit as a defence and the claim can be lost.",
+      "Time limits keep evidence fresh and give defendants certainty that old disputes will not suddenly return. Some situations, such as claims by children, have different rules."
+    ],
+    "remember": "A civil claim must be started within the time the law allows, or it can be lost.",
+    "a": {
+      "q": "Why does the law set limitation periods for civil claims?",
+      "opts": [
+        "So claims are brought while evidence is still fresh",
+        "So defendants never have to pay for any harm they cause",
+        "So only claims about contracts can reach a court",
+        "So plaintiffs must prove their case more strongly"
+      ],
+      "why": "Over time witnesses forget and documents are lost, so a time limit helps keep evidence reliable and gives defendants certainty. It does not remove liability for harm brought in time, and it does not change how strongly a plaintiff must prove the case.",
+      "clue": "Think about what happens to witnesses and records as years pass."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's builder breached their contract in 2015. Sam files a claim in 2024, nine years later, where the period is six years. What is the likely result?",
+      "opts": [
+        "The claim can be lost because it was filed too late",
+        "The claim succeeds because the breach really happened",
+        "The claim succeeds because the time limit is only a guide",
+        "The claim is moved to a criminal court instead"
+      ],
+      "why": "The six-year period ended before Sam filed, so the defendant can use the time limit as a defence and the claim can be lost. It does not matter that the breach really happened, because the time limit is a separate bar set by law, not a guide.",
+      "clue": "Count the years between the breach and the filing."
+    }
+  },
+  "leg-justice-civil-disputes": {
+    "title": "Justice in civil disputes",
+    "card": [
+      [
+        "Fairness",
+        "The process is fair. Each side knows the case against it, can put its own side and has the case decided without bias."
+      ],
+      [
+        "Equality",
+        "Everyone is treated equally in the process, with the same chance to be heard. Equality does not mean every party gets the same outcome."
+      ],
+      [
+        "Access",
+        "People can understand their rights and use the system. Cost, distance, delay and complex rules can block access."
+      ],
+      "A civil dispute can fail on one of these three without failing on the others. For example, a fair hearing is of no use to a person who cannot afford to bring the case."
+    ],
+    "remember": "A just civil dispute needs a fair process, equal treatment and access to the system.",
+    "a": {
+      "q": "Which situation is mainly a problem of access in a civil dispute?",
+      "opts": [
+        "A tenant cannot afford the fees to start a claim",
+        "A judge shows bias toward one side at a hearing",
+        "One party is not told the case against it",
+        "One party is given less time to speak than the other"
+      ],
+      "why": "Being unable to afford to start a claim stops the person from using the system at all. The other three are problems with how the hearing itself is run, so they concern fairness or equality. Cost is the barrier to access.",
+      "clue": "Which person is kept out before any hearing begins?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has a strong claim against a builder. The court process is fair, but the rules are so complex she cannot work out how to file it. Which idea is most clearly lacking?",
+      "opts": [
+        "Access, as she cannot use the system",
+        "Fairness, as the court is biased against her",
+        "Equality, as the builder gets a better result",
+        "Fairness, as she was not told of the claim"
+      ],
+      "why": "The process itself is fair, but Priya cannot use it because the rules are too complex. That is a failure of access. The tempting option is fairness, but nothing in the case shows bias or a denied chance to be heard.",
+      "clue": "The process is fine. What stops Priya reaching it?"
+    }
+  },
+  "leg-ways-settling-civil-disputes": {
+    "title": "Ways of settling civil disputes",
+    "card": [
+      [
+        "Negotiation",
+        "The parties talk directly, sometimes with their lawyers, and try to agree. No neutral third party is involved."
+      ],
+      [
+        "Mediation",
+        "A neutral mediator helps the parties talk and reach their own agreement. The mediator does not decide the outcome."
+      ],
+      [
+        "Conciliation",
+        "A neutral conciliator helps the parties and may suggest terms for settlement. The parties still make the final choice."
+      ],
+      [
+        "Arbitration",
+        "A neutral arbitrator hears both sides and makes a decision that is binding on the parties. Parties often agree to use it, and it is still not a full trial in court."
+      ]
+    ],
+    "remember": "Only an arbitrator decides. Mediators and conciliators help the parties reach their own agreement.",
+    "a": {
+      "q": "In which method does a neutral third person hear both sides and make a decision for them?",
+      "opts": ["Arbitration", "Mediation", "Negotiation", "Conciliation"],
+      "why": "An arbitrator hears both sides and makes a binding decision. A mediator only helps the parties reach their own agreement. A conciliator may suggest terms, but the parties still make the final choice.",
+      "clue": "Which person acts a little like a judge, but outside court?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Two neighbours in Geelong argue over a fence. They meet with no one else and agree to share the cost. Which method did they use?",
+      "opts": ["Negotiation", "Mediation", "Conciliation", "Arbitration"],
+      "why": "They talked directly and reached agreement with no neutral third party helping. Mediation would need a neutral mediator. The other two also involve a neutral third person.",
+      "clue": "Was any neutral person in the room?"
+    }
+  },
+  "leg-bodies-that-settle-disputes": {
+    "title": "Bodies that settle disputes",
+    "card": [
+      "Many civil disputes are settled by bodies outside the courts. These bodies are usually quicker, cheaper and less formal than a court.",
+      [
+        "Tribunal",
+        "a body that hears both sides and makes a decision. The Victorian Civil and Administrative Tribunal (VCAT) hears matters such as tenancy and building disputes."
+      ],
+      [
+        "Ombudsman",
+        "a body that investigates complaints about the actions of an organisation, such as a government department. It looks into the complaint and does not act as a judge."
+      ],
+      [
+        "Complaints body",
+        "a body such as Consumer Affairs Victoria that gives information about consumer and tenancy rights and can help the parties reach agreement. It is not a court."
+      ]
+    ],
+    "remember": "Tribunals decide, ombudsmen investigate and complaints bodies inform and assist, all without going to court.",
+    "a": {
+      "q": "Which description best fits the role of VCAT?",
+      "opts": [
+        "It hears both sides and decides tenancy disputes",
+        "It investigates complaints about a government department",
+        "It gives consumers information and helps parties agree",
+        "It hears the largest civil claims in front of a jury"
+      ],
+      "why": "VCAT is a tribunal, so it hears both sides and makes a decision. Investigating complaints is the role of an ombudsman, and giving information and help is what a body such as Consumer Affairs Victoria does.",
+      "clue": "A tribunal is the body that makes a decision."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya believes her energy provider billed her wrongly. She wants her complaint investigated, not a judge's ruling. Which body suits her aim best?",
+      "opts": ["An ombudsman", "VCAT", "The Supreme Court", "The County Court"],
+      "why": "An ombudsman investigates complaints about the actions of an organisation, which is what Priya wants. VCAT is tempting because it settles disputes, but it hears both sides and decides, and the courts are formal and not needed here.",
+      "clue": "Which body looks into complaints rather than deciding like a judge?"
+    }
+  },
+  "leg-courts-civil-disputes": {
+    "title": "Courts in civil disputes",
+    "card": [
+      "Victoria has three levels of court that hear civil disputes. The level depends on the size and complexity of the claim.",
+      ["Magistrates' Court", "hears smaller claims, such as a dispute over an unpaid bill for a modest amount."],
+      [
+        "County Court",
+        "hears larger claims than the Magistrates' Court. It sits above the Magistrates' Court and below the Supreme Court in the court hierarchy."
+      ],
+      ["Supreme Court", "hears the largest and most complex claims. It is the highest court in Victoria."]
+    ],
+    "remember": "The bigger and more complex the claim, the higher the court.",
+    "a": {
+      "q": "Which Victorian court hears the largest and most complex civil claims?",
+      "opts": ["The Supreme Court", "The County Court", "The Magistrates' Court", "The Children's Court"],
+      "why": "The Supreme Court is the highest Victorian court and hears the largest and most complex claims. The County Court is tempting, but it hears claims larger than those in the Magistrates' Court and sits below the Supreme Court.",
+      "clue": "Think of the top of the three levels."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tomas runs a cleaning business and sues a customer for a small unpaid invoice. Which court is the best fit for this claim?",
+      "opts": ["The Magistrates' Court", "The Supreme Court", "The County Court", "The Coroners Court"],
+      "why": "A small unpaid invoice is a smaller claim, which the Magistrates' Court hears. The Supreme Court is wrong because it is for the largest and most complex claims.",
+      "clue": "Is the claim small, or large and complex?"
+    }
+  },
+  "leg-jury-civil-trial": {
+    "title": "The jury in a civil trial",
+    "card": [
+      "A civil trial may be heard with a jury. A civil jury has six people, and not every civil trial has one.",
+      "The jury decides the facts. It weighs the evidence and decides what happened.",
+      "The jury also decides whether the defendant is liable, which means legally responsible for the harm.",
+      "In some cases the jury also decides the damages, the amount of money awarded to the plaintiff. The judge manages the trial and explains the law."
+    ],
+    "remember": "A civil jury of six decides the facts and liability, and sometimes the damages.",
+    "a": {
+      "q": "How many people make up a jury in a civil trial?",
+      "opts": ["Six", "Four", "Twelve", "Three"],
+      "why": "A civil jury has six people. Twelve is tempting because it is the usual number in a criminal trial, but it is not the number in a civil trial.",
+      "clue": "It is fewer than in a criminal jury."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a civil trial with a jury, who decides whether the defendant is liable?",
+      "opts": ["The jury", "The judge alone", "The plaintiff", "A tribunal member"],
+      "why": "The jury decides the facts and whether the defendant is liable. The judge is tempting, but the judge manages the trial and explains the law, while the jury makes the decision on liability.",
+      "clue": "Who decides the facts in a jury trial?"
+    }
+  },
+  "leg-groups-facing-difficulties-civil": {
+    "title": "Groups facing difficulties in civil justice",
+    "card": [
+      [
+        "First Nations people",
+        "may face cultural barriers, distrust of the system and a lack of services that fit their needs."
+      ],
+      ["Low incomes", "People on low incomes may not be able to pay for lawyers, fees or time off work."],
+      [
+        "Young people",
+        "may not know their rights, and may find it hard to bring a claim without the help of an adult."
+      ],
+      [
+        "Rural and remote",
+        "People far from cities may have to travel long distances to reach courts, lawyers and other services."
+      ]
+    ],
+    "remember": "Cost, culture, age and distance can each make civil justice hard to reach.",
+    "a": {
+      "q": "Which barrier is most likely to affect a person living in a remote town?",
+      "opts": [
+        "Long travel to reach courts and lawyers",
+        "Not knowing their rights because of their age",
+        "Distrust of the system based on past experience",
+        "Being unable to pay for a lawyer"
+      ],
+      "why": "Distance means travel to reach courts and lawyers, which is the barrier the card links to rural and remote people. Age, cultural distrust and cost are linked to the other groups, though they can affect anyone.",
+      "clue": "Think about where the remote town is, not who lives there."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai, aged 16, lives in Geelong and is owed wages by a café. He does not know he has a right to claim them. Which difficulty fits best?",
+      "opts": [
+        "Young people may not know their rights",
+        "Remote people may have to travel far to court",
+        "People on low incomes may not afford lawyers",
+        "First Nations people may face cultural barriers"
+      ],
+      "why": "Kai does not know he has a right to claim, and the card links not knowing your rights to young people, which fits a 16 year old. Nothing says he lives far from a city, cannot pay for help or faces cultural barriers. Cost is tempting because he is owed money, but the problem described is a lack of knowledge.",
+      "clue": "What does Kai lack: money, distance or knowledge?"
+    }
+  },
+  "leg-human-rights-are-2": {
+    "title": "What human rights are",
+    "card": [
+      "Human rights are basic rights and freedoms that every person has because they are human. They do not depend on a person's nationality, race, religion or status.",
+      "The idea grew over centuries, from earlier documents such as Magna Carta in 1215. After the Second World War, the world saw the harm done when governments ignored people's dignity.",
+      "In 1948 the United Nations General Assembly adopted the Universal Declaration of Human Rights (UDHR). It was the first global statement of the rights all people should have.",
+      "The UDHR is a declaration, which sets out shared standards. It is not itself a treaty that binds countries."
+    ],
+    "remember": "Human rights belong to everyone as people, and the UDHR of 1948 set them out.",
+    "a": {
+      "q": "Why are human rights described as universal?",
+      "opts": [
+        "Every person has them simply by being human",
+        "Every country has agreed to enforce them in court",
+        "Every person receives them when they become a citizen",
+        "Every person has them once a parliament passes a law"
+      ],
+      "why": "Human rights belong to people because they are human, whatever their nationality or status. Citizenship is a tempting answer, but the card says rights do not depend on nationality.",
+      "clue": "Think about what a person needs to have these rights."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leila says the UDHR in 1948 created human rights for the first time, so no one had them before it. What is the best reply?",
+      "opts": [
+        "The idea grew from history and the UDHR set it out",
+        "The UDHR gave rights only to people in member countries",
+        "The UDHR was a treaty that gave rights legal force",
+        "Rights existed only for people who lived in democracies"
+      ],
+      "why": "The idea of human rights grew over centuries, from documents such as Magna Carta, and the UDHR in 1948 set the rights out in a global statement. The treaty option is tempting, but the UDHR is a declaration, not a binding treaty.",
+      "clue": "Check what the card says about the centuries before 1948."
+    }
+  },
+  "leg-rights-statute-common-law": {
+    "title": "Rights in statute and common law",
+    "card": [
+      [
+        "Statute law",
+        "Law made by parliament. Parliaments can protect rights by passing acts, such as anti-discrimination acts, that ban unfair treatment in areas like work and education."
+      ],
+      [
+        "Common law",
+        "Law developed by judges in court cases. Courts can protect rights through their decisions, such as the right to a fair trial."
+      ],
+      "Parliament can change or override common law by passing a statute. A court cannot override a valid statute by common law.",
+      "Both sources can protect rights. A person whose rights are breached may use a statute, or a court may apply a common law principle."
+    ],
+    "remember": "Parliaments protect rights by making statutes. Courts protect them through common law decisions.",
+    "a": {
+      "q": "Which example shows a right being protected by statute law?",
+      "opts": [
+        "Parliament passes an act banning disability discrimination",
+        "A judge applies a rule from earlier court decisions",
+        "A court decides a case on a fair trial principle",
+        "A tribunal member gives a personal opinion on fairness"
+      ],
+      "why": "A statute is made by parliament, and an anti-discrimination act is one. The judge's rule and the fair trial decision come from courts, so they are common law. A personal opinion is not law.",
+      "clue": "Who makes statute law?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A court's common law ruling gives a person less protection than they want. Parliament then passes an act giving more protection. What is the effect?",
+      "opts": [
+        "The statute prevails over the common law ruling",
+        "The common law ruling prevails over the statute",
+        "The two cancel out and neither applies",
+        "The court must first approve the statute"
+      ],
+      "why": "Parliament can change or override common law by passing a statute. The common law ruling does not defeat a valid statute, and courts do not need to approve it first.",
+      "clue": "Which source can change the other?"
+    }
+  },
+  "leg-victorian-charter-human-rights": {
+    "title": "The Victorian Charter of Rights",
+    "card": [
+      "The Charter of Human Rights and Responsibilities Act 2006 (Vic) is a Victorian statute. It lists the human rights that the Victorian Parliament has chosen to protect, such as freedom of expression and the right to life.",
+      [
+        "Reading laws",
+        "Courts and tribunals must interpret Victorian laws in a way that is consistent with the listed rights, as long as that fits the purpose of the law."
+      ],
+      [
+        "Public authorities",
+        "Bodies such as Victoria Police, local councils and government departments are public authorities. They must act compatibly with the rights and give proper consideration to them when they make decisions."
+      ],
+      "The Charter is an ordinary Act of the Victorian Parliament, not part of the Australian Constitution. It applies to Victorian laws and Victorian public authorities."
+    ],
+    "remember": "The Charter lists rights, and it shapes how Victorian laws are read and how public authorities decide.",
+    "a": {
+      "q": "A Victorian council is deciding how to handle a request from a community group. What does the Charter require of the council?",
+      "opts": [
+        "To give proper consideration to the listed rights",
+        "To ask the High Court to approve its decision",
+        "To follow the rights set out in the Constitution",
+        "To apply the rights only if a court orders it"
+      ],
+      "why": "A local council is a public authority, so the Charter requires it to act compatibly with the listed rights and to consider them when deciding. The Charter is a Victorian statute, not part of the Constitution, and the duty applies without any court order.",
+      "clue": "What kind of body is a local council under the Charter?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A court in Victoria is unsure what a word in a state law means. One reading limits a right listed in the Charter. The other does not and still fits the law's purpose. What should the court do?",
+      "opts": [
+        "Prefer the reading that is consistent with the right",
+        "Prefer the reading that limits the right",
+        "Send the law back to the Victorian Parliament",
+        "Apply the Constitution in place of the state law"
+      ],
+      "why": "The Charter requires courts to interpret Victorian laws consistently with the listed rights, where that fits the law's purpose. Here one reading does both, so the court should choose it. The Charter shapes how a law is read. It does not make the court hand the law back to parliament or swap in the Constitution.",
+      "clue": "Think of the duty the Charter places on courts when they read laws."
+    }
+  },
+  "leg-australia-international-rights": {
+    "title": "International treaties and Australia",
+    "card": [
+      "A treaty is a formal agreement between countries. A human rights treaty sets out rights that the countries agree to respect.",
+      "Australia first signs a treaty and then ratifies it. Ratifying binds Australia as a nation under international law. Both steps are taken by the executive government.",
+      "A treaty does not automatically become part of Australian law. It binds people and courts here only when parliament passes a statute that includes it.",
+      "Example: Australia is a party to the International Covenant on Civil and Political Rights. Its rights can be enforced in Australian courts only to the extent that parliament has put them into Australian law."
+    ],
+    "remember": "A ratified treaty binds Australia internationally. It binds locally only once parliament legislates.",
+    "a": {
+      "q": "Australia ratifies a human rights treaty, but parliament has passed no law about it. What is the effect in Australian courts?",
+      "opts": [
+        "The treaty does not bind people or courts here",
+        "The treaty binds courts here as soon as it is ratified",
+        "The treaty binds only the High Court, not other courts",
+        "The treaty binds only public servants, not other people"
+      ],
+      "why": "A treaty becomes enforceable in Australian courts only when parliament makes it part of Australian law. Ratifying it binds Australia internationally, but ratification alone does not create rights that a court here can enforce.",
+      "clue": "Which body has to act before a treaty becomes local law?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya says a treaty Australia ratified last year lets her sue a business in a Victorian court. Parliament has not passed any law about it. Why is she likely to fail?",
+      "opts": [
+        "Parliament has not made the treaty part of Australian law",
+        "Treaties apply only to governments, never to businesses",
+        "Only the High Court can hear cases about treaties",
+        "Australia has not agreed to be bound by the treaty"
+      ],
+      "why": "Priya is likely to fail because no statute has made the treaty part of Australian law, so a court here cannot enforce it. The option saying Australia has not agreed to be bound is tempting, but ratifying does bind Australia under international law. That is a different thing from binding people locally.",
+      "clue": "Ratifying binds Australia as a nation. What else is needed for local courts?"
+    }
+  },
+  "leg-studying-human-rights-issue": {
+    "title": "Studying a human rights issue",
+    "card": [
+      "A human rights issue is studied by picking one right and looking at how it applies in Australia. The right to vote is one example. Freedom of expression is another.",
+      "Studying how the right developed means tracing how it changed over time. For voting, this includes who was first allowed to vote and who was added later.",
+      "Studying how the right is protected means finding the laws that protect it. These can be Acts of Parliament, the Australian Constitution and court decisions.",
+      "Studying an issue also asks how well the right is protected today, and whether some people still miss out on it."
+    ],
+    "remember": "Study one right by asking how it developed, which laws protect it, and how well it is protected.",
+    "a": {
+      "q": "A student studies the right to vote in Australia. Which task is part of studying how the right developed?",
+      "opts": [
+        "Tracing how the group of people allowed to vote changed",
+        "Listing the penalties for breaking a particular voting law",
+        "Comparing voting rules in two different school elections",
+        "Predicting which party will win the next federal election"
+      ],
+      "why": "Development is about change over time, such as who gained the vote and when. Listing penalties looks at how a law is enforced, not at how the right changed over time.",
+      "clue": "Development means change over time."
+    },
+    "b": {
+      "d": 2,
+      "q": "Ravi is studying freedom of expression in Australia. He reads an Act of Parliament and a High Court decision that deal with this right. What is Ravi studying?",
+      "opts": [
+        "Which laws protect the right",
+        "How the right developed over time",
+        "How people disagree about the right",
+        "Which people campaigned for the right"
+      ],
+      "why": "Acts of Parliament and court decisions are laws that can protect a right, so Ravi is studying its protection. Development would mean looking at how the right changed over time, which is a different task.",
+      "clue": "An Act and a court decision are both kinds of law."
+    }
+  },
+  "leg-conflicting-attitudes-right": {
+    "title": "Conflicting attitudes to a right",
+    "card": [
+      "People and groups often agree that a right matters but disagree on how far it should go. Their attitudes come from their values, experiences and interests.",
+      "Rights can clash with each other. Freedom of expression can clash with a person's right to a good reputation, or with the right to be free from discrimination.",
+      "Rights can also clash with the wider interests of the community, such as safety and public order. Lawmakers have to decide where to draw the line.",
+      "Because of this, most rights are not absolute. A right can be limited by law where the limit is reasonable, and different groups may argue that the limit is too wide or too narrow."
+    ],
+    "remember": "People agree a right matters but disagree on its limits, because rights are balanced against other rights and community interests.",
+    "a": {
+      "q": "Two groups both support freedom of expression. One wants limits on hateful speech and the other wants none. What does this show?",
+      "opts": [
+        "They disagree on how far the right should go",
+        "They disagree that the right exists at all",
+        "They share the same view of the right's limits",
+        "Their attitudes have no basis in their values"
+      ],
+      "why": "Both groups accept the right. They differ on its limits, which is a conflict of attitudes about how far it should go. The option about not accepting the right is wrong because both groups support it.",
+      "clue": "Do both groups accept the right itself?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council bans protest marches on a main highway at peak hour to stop crashes and traffic chaos. Organiser Priya says the ban is too wide. What clash is this?",
+      "opts": [
+        "A right weighed against safety and public order",
+        "A right weighed against another person's right",
+        "A dispute over whether the right should exist",
+        "A dispute over whether the right has any limits"
+      ],
+      "why": "The council limits the right to protest to protect safety and public order, which are interests of the wider community. No other person's right, such as reputation, is at stake. Priya accepts some limit but says this one is too wide, so she is not denying the right or all limits.",
+      "clue": "Look at the reason the council gives for its ban."
+    }
+  },
+  "leg-reforming-rights-protection": {
+    "title": "Reforming rights protection",
+    "card": [
+      "Reform means a change to make a right better protected. In Australia, reform can come through parliament, a charter of rights or the courts.",
+      [
+        "New laws",
+        "parliament can pass a new Act or change an old one. For example, an anti-discrimination Act can give people a way to complain when their rights are not respected."
+      ],
+      [
+        "Charter of rights",
+        "a law that lists certain rights and says how governments and public bodies must treat them. Victoria has one, the Charter of Human Rights and Responsibilities Act 2006."
+      ],
+      [
+        "Courts",
+        "when judges decide a case, they may interpret a law in a way that protects a right. This can change how the law is applied in later cases."
+      ]
+    ],
+    "remember": "Rights protection can be reformed by parliament, by a charter, or by court decisions.",
+    "a": {
+      "q": "What does a charter of rights do?",
+      "opts": [
+        "Lists rights and how public bodies must treat them",
+        "Records how judges read unclear laws in past cases",
+        "Protects one right, such as freedom from discrimination",
+        "Sets rules for private businesses, not governments"
+      ],
+      "why": "A charter is a law that lists a set of rights and says how governments and public bodies must treat them. Recording how judges read laws describes reform through the courts, not a charter. A charter also covers many rights, not just one.",
+      "clue": "Think about who a charter tells how to act."
+    },
+    "b": {
+      "d": 3,
+      "q": "A judge hears a case and reads an unclear law so that it protects a person's right. No new Act is passed and no charter is relied on. Other judges then follow this reading in later cases. What kind of reform is this?",
+      "opts": [
+        "Reform through the courts",
+        "Reform through a new Act of parliament",
+        "Reform through a charter of rights",
+        "Reform through a change of government"
+      ],
+      "why": "The change came from a judge interpreting a law in a case, and it then shaped later cases. No new Act was passed, so it is not reform through parliament. The question says no charter was relied on, so reform through a charter is also wrong.",
+      "clue": "Who made the change, and in what setting?"
+    }
+  },
+  "leg-people-who-changed-rights": {
+    "title": "People who changed rights",
+    "card": [
+      "Rights are not only set by governments. Individuals and groups have pushed parliaments and courts to protect rights better.",
+      [
+        "Cases",
+        "a person takes a dispute to court. A ruling can change how a right is understood and applied. Eddie Mabo's case led the High Court in 1992 to recognise native title."
+      ],
+      [
+        "Campaigns",
+        "a group organises over time to win public support and press for law change. The 1967 referendum campaign led to a change to the Constitution. Aboriginal and Torres Strait Islander people were counted in official population figures and brought under Commonwealth law-making power."
+      ],
+      [
+        "Protest",
+        "people take public action, such as marches and rallies, to show strong support for change and draw attention to a right."
+      ]
+    ],
+    "remember": "Change in rights can come from people acting, not only from governments.",
+    "a": {
+      "q": "Eddie Mabo took a dispute about land to the High Court, and the Court recognised native title in 1992. Which method of change does this show?",
+      "opts": [
+        "A case that changed how a right is applied",
+        "A campaign run to win a public vote",
+        "A protest march to draw public attention",
+        "A law passed by parliament without any court"
+      ],
+      "why": "Mabo used a court case, and the High Court's ruling changed how land rights were recognised. It is not a protest, because the change came from a court ruling rather than from public action to draw attention.",
+      "clue": "Where was the dispute decided?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A group in a town spends years gathering signatures, speaking to the media and meeting MPs until parliament passes a law protecting a right. What method is this mainly?",
+      "opts": [
+        "A campaign, as the group worked over time on many fronts",
+        "A case, as the group sought a ruling on its dispute",
+        "A protest, as the group marched to show its support",
+        "A referendum, as the group asked voters to decide"
+      ],
+      "why": "The group spent years building support and persuading MPs, which makes it a campaign. It is not a case, because no court ruled on a dispute. It is not a protest, because the group did not hold marches or rallies.",
+      "clue": "Look at how long the group worked and who it aimed to persuade."
+    }
+  },
+  "leg-summary-indictable-offences-unit": {
+    "title": "Summary and indictable offences",
+    "card": [
+      [
+        "Summary offence",
+        "a minor offence, such as a minor traffic offence or offensive behaviour in a public place. It is heard by a magistrate in the Magistrates' Court of Victoria, with no jury."
+      ],
+      [
+        "Indictable offence",
+        "a serious offence, such as murder, armed robbery or large-scale drug trafficking. It can be tried by a judge and jury in the County Court or the Supreme Court of Victoria."
+      ],
+      "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to the County Court or Supreme Court for trial.",
+      "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+    ],
+    "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+    "a": {
+      "q": "Which feature usually applies to a summary offence in Victoria?",
+      "opts": [
+        "It is heard by a magistrate without a jury",
+        "It is tried by a judge and jury",
+        "It is heard in the Supreme Court of Victoria",
+        "It is decided by the police, not a court"
+      ],
+      "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the second option is the tempting mistake.",
+      "clue": "Think about who hears minor matters and whether a jury is used."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev is charged with armed robbery. His first appearance is in the Magistrates' Court of Victoria. How is the offence best classed, and why?",
+      "opts": [
+        "Indictable, because it is serious and can go before a jury",
+        "Summary, because it first appears in the Magistrates' Court",
+        "Summary, because Dev may plead guilty to the charge",
+        "Indictable, because a magistrate hears it without a jury"
+      ],
+      "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+      "clue": "Where a case first appears may not tell you its type."
+    }
+  },
+  "leg-principles-criminal-justice": {
+    "title": "The burden and standard of proof",
+    "card": [
+      [
+        "Burden of proof",
+        "the duty to prove the case. In a criminal trial it rests on the prosecution, not the accused."
+      ],
+      [
+        "Presumption of innocence",
+        "the accused is treated as innocent until the prosecution proves guilt. The accused does not have to prove innocence."
+      ],
+      [
+        "Standard of proof",
+        "how strongly the case must be proved. The prosecution must prove guilt beyond reasonable doubt."
+      ],
+      "If the court has a reasonable doubt about guilt, the accused must be found not guilty. Proof beyond reasonable doubt is a higher standard than the one used in civil cases."
+    ],
+    "remember": "The prosecution must prove guilt beyond reasonable doubt, so the accused need not prove innocence.",
+    "a": {
+      "q": "In a Victorian criminal trial, which side must prove the case, and to what standard?",
+      "opts": [
+        "The prosecution, to prove guilt beyond reasonable doubt",
+        "The defence, to prove innocence beyond reasonable doubt",
+        "The prosecution, to show guilt is more likely than not",
+        "The defence, to raise some doubt about the evidence"
+      ],
+      "why": "The burden sits with the prosecution because the accused is presumed innocent. The standard is beyond reasonable doubt. Showing guilt is only more likely than not is too low a standard for a criminal trial.",
+      "clue": "The accused is presumed innocent, so who must do the proving?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Jaya is on trial in the County Court in Melbourne for armed robbery of a service station in Footscray. The jury thinks she probably did it but still has a reasonable doubt. What should the verdict be?",
+      "opts": [
+        "Not guilty, because the standard of proof was not met",
+        "Guilty, because the jury thinks she probably did it",
+        "Not guilty, because Jaya proved she was innocent",
+        "Guilty, because Jaya chose not to give evidence at trial"
+      ],
+      "why": "Probably guilty is not enough. The prosecution must remove reasonable doubt, so a jury with such doubt must find her not guilty. Jaya did not have to prove anything, so the options 'Jaya proved she was innocent' and 'Jaya chose not to give evidence' both wrongly put the burden on her.",
+      "clue": "Does the jury's doubt mean the standard has been met?"
+    }
+  },
+  "leg-fairness-justice-system": {
+    "title": "Fairness in the justice system",
+    "card": [
+      "In the VCE study design, fairness is about the processes used to reach an outcome. It does not mean everyone gets the result they want.",
+      [
+        "Independent decision-maker",
+        "the person or body deciding the case is impartial and free from outside influence, such as pressure from the government or a party."
+      ],
+      [
+        "Knowing the case",
+        "each party has a chance to know the case against them and the evidence behind it, so they can prepare a response."
+      ],
+      [
+        "Fair hearing",
+        "each party has a chance to present their side, to question the other side's evidence, and to be heard before a decision is made."
+      ]
+    ],
+    "remember": "A fair process is impartial, open about the case and lets each side be heard.",
+    "a": {
+      "q": "Which of these best shows fairness in the justice system?",
+      "opts": [
+        "A judge with no link to either party hears the case",
+        "Both parties get the same outcome in the case",
+        "The accused is told the verdict before the hearing",
+        "The most serious charges are always heard first"
+      ],
+      "why": "Fairness is about the process, and an impartial judge is part of an independent decision-maker. Getting the same outcome is the tempting option, but fairness does not guarantee any particular result.",
+      "clue": "Fairness looks at how a decision is reached, not what it is."
+    },
+    "b": {
+      "d": 3,
+      "q": "Before her hearing, Priya is given none of the evidence the prosecution will use against her. Which element of fairness is most directly missing?",
+      "opts": [
+        "A chance to know the case against her",
+        "An independent decision-maker",
+        "A chance to question the other side's evidence",
+        "A lighter sentence than other offenders receive"
+      ],
+      "why": "Priya has not been given the evidence, so she cannot prepare a response. Questioning evidence at the hearing is related, but the missing step here is knowing the case beforehand.",
+      "clue": "What does she need to have before the hearing begins?"
+    }
+  },
+  "leg-equality-justice-system": {
+    "title": "Equality in the justice system",
+    "card": [
+      "Equality means people are treated the same by the justice system, with the same rules and the same chance to take part.",
+      "Treating everyone exactly the same can sometimes leave a person at a disadvantage. For example, a person who does not speak English well may not follow a hearing.",
+      "Where that would happen, measures are taken to correct it. This helps each person take part on a similar footing.",
+      "An interpreter for a witness is one such measure. It does not favour the witness. It removes a barrier that others do not face."
+    ],
+    "remember": "Equality is the same treatment, adjusted where sameness would disadvantage someone.",
+    "a": {
+      "q": "Why might a court sometimes treat people differently to achieve equality?",
+      "opts": [
+        "Identical treatment could leave some people disadvantaged",
+        "Some people should receive a better outcome than others",
+        "Rules should apply only to people who can follow them",
+        "Courts must treat each party differently in every case"
+      ],
+      "why": "Measures are used where the same treatment would disadvantage a person, so that they can take part on a similar footing. The option about some people receiving a better outcome is tempting, but the aim is to remove a barrier, not to favour anyone.",
+      "clue": "Think about what sameness can do to a person who faces a barrier."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tomas, a witness, is deaf and cannot follow questions in court. The court provides an Auslan interpreter. What does this show?",
+      "opts": [
+        "A measure to correct a disadvantage sameness would cause",
+        "Unfair treatment, as other witnesses receive no interpreter",
+        "A change to the verdict so that Tomas is favoured",
+        "The court treating every witness in exactly the same way"
+      ],
+      "why": "Without the interpreter, identical treatment would leave Tomas unable to take part. The interpreter removes that barrier. It is not unfair to other witnesses, as it does not favour his evidence.",
+      "clue": "Ask what Tomas could not do if he were treated exactly like the other witnesses."
+    }
+  },
+  "leg-access-justice-system": {
+    "title": "Access in the justice system",
+    "card": [
+      "Access means people can learn about their rights and use the justice system to protect them. It is one of the principles used to judge whether the system is working well.",
+      [
+        "Knowing",
+        "People need information about their rights and how the system works. Plain language, community legal education and interpreters help people understand."
+      ],
+      [
+        "Using",
+        "People also need to be able to take part. Cost, distance, language and a lack of legal help can all stand in the way."
+      ],
+      "Access is about being able to reach and use the system. It is not a promise of any particular result, and it is separate from how fair the hearing itself is."
+    ],
+    "remember": "Access means knowing your rights and being able to use the system to protect them.",
+    "a": {
+      "q": "Which situation is mainly a problem of access to the justice system?",
+      "opts": [
+        "A person cannot afford a lawyer to explain their options",
+        "A judge refuses to hear a person's side of the case",
+        "A person is treated differently from others for no reason",
+        "A court reaches a decision the person disagrees with"
+      ],
+      "why": "Not being able to pay for legal help can stop a person from using the system to protect their rights. A judge refusing to hear a side is about the fairness of the hearing, not access.",
+      "clue": "Which one stops a person from getting into the system?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tran has lived in Australia for one year and speaks little English. He has a legal problem but does not understand his rights. Which step would best improve his access?",
+      "opts": [
+        "Free legal information and an interpreter in his language",
+        "A judge with no personal link to either party in the case",
+        "The same English court forms that every other party gets",
+        "A written statement of reasons after the case is decided"
+      ],
+      "why": "Tran's barriers are language and not knowing his rights, and information with an interpreter removes both. Giving him the same English forms as everyone else treats him alike but leaves the language barrier in place. An unbiased judge and written reasons concern the fairness of the hearing, not his ability to reach and use the system.",
+      "clue": "Which step removes the barriers Tran actually faces?"
+    }
+  },
+  "leg-rights-accused": {
+    "title": "Rights of the accused",
+    "card": [
+      ["Presumed innocent", "The accused is treated as not guilty until the prosecution proves guilt in court."],
+      [
+        "Silence",
+        "In general, the accused does not have to answer police questions or give evidence at trial, though in some situations they must give police their name and address. Staying silent is not an admission of guilt."
+      ],
+      [
+        "No unreasonable delay",
+        "The accused has a right to be tried without unreasonable delay, so they are not left waiting years for a verdict."
+      ],
+      [
+        "Jury",
+        "If the accused pleads not guilty to an indictable offence and is tried in the County or Supreme Court, a jury of citizens decides the verdict. A guilty plea, or an indictable offence heard summarily in the Magistrates' Court, has no jury."
+      ]
+    ],
+    "remember": "Four rights protect the accused: innocence until proven guilty, silence, a timely trial and, in some trials, a jury.",
+    "a": {
+      "q": "Police question Priya about a theft, and she chooses to say nothing. Which right is she using?",
+      "opts": [
+        "The right to silence",
+        "The right to be presumed innocent",
+        "The right to trial by jury",
+        "The right to trial without delay"
+      ],
+      "why": "Priya is choosing not to answer questions, which is the right to silence. Presumed innocence is about how her guilt is treated until it is proven, not whether she answers police questions.",
+      "clue": "What is she choosing not to do?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In which of these cases would a jury decide the verdict?",
+      "opts": [
+        "Not guilty plea to an indictable offence, County Court",
+        "Guilty plea to an indictable offence, County Court",
+        "Not guilty plea to a summary offence, Magistrates' Court",
+        "Indictable offence heard summarily, Magistrates' Court"
+      ],
+      "why": "A jury is used when the accused pleads not guilty to an indictable offence tried in a higher court such as the County Court. A guilty plea in the County Court is tempting, but with no dispute about guilt there is no verdict for a jury to reach.",
+      "clue": "Does the accused deny the charge, and which court hears it?"
+    }
+  },
+  "leg-rights-victims": {
+    "title": "Rights of victims",
+    "card": [
+      "Victims of crime have rights in the criminal justice system. These recognise that victims have an interest in the case and that giving evidence can be stressful.",
+      [
+        "Evidence",
+        "Victims can give evidence in other ways, such as by video link from a separate room, so they do not face the accused in the courtroom."
+      ],
+      [
+        "Information",
+        "Victims can be told about the proceedings, such as what charges have been laid and how the case is going."
+      ],
+      [
+        "Release",
+        "Victims of violent crime can join the Victims Register. They can then be told when the offender is likely to be released from prison."
+      ]
+    ],
+    "remember": "Victims are supported to take part and are kept informed.",
+    "a": {
+      "q": "The victim in a violent assault case gives evidence by video link from another room. What is the main purpose of this?",
+      "opts": [
+        "To reduce the stress of facing the accused in court",
+        "To make the trial a summary hearing",
+        "To stop the accused from hearing the evidence",
+        "To give the victim a say in the sentence"
+      ],
+      "why": "Video link lets the victim give evidence without being in the same room as the accused, which reduces stress. It does not change the type of hearing, and the accused still hears the evidence.",
+      "clue": "Think about how the victim feels in the courtroom."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jess was assaulted, and the offender was jailed. Years later, a letter from the Victims Register tells her he will soon leave prison. Which right is this?",
+      "opts": [
+        "The right to be told about the offender's likely release",
+        "The right to be told about the charges and the case",
+        "The right to give evidence from a separate room",
+        "The right to be presumed innocent until proven guilty"
+      ],
+      "why": "The letter is about when the offender will get out of prison, which is the right to be told about likely release. Being told about the charges and the case is about the proceedings, which ended at sentencing. Presumed innocence is a right of the accused, not the victim.",
+      "clue": "The letter is about what happens after the sentence."
+    }
+  },
+  "leg-victoria-legal-aid": {
+    "title": "Victoria Legal Aid",
+    "card": [
+      "Victoria Legal Aid (VLA) is a statutory body set up by the Victorian Parliament. It gives legal help to people in Victoria who might not be able to pay for it.",
+      "VLA gives free legal information and advice to anyone who asks, including accused people and victims of crime.",
+      "Lawyers are provided only to those who qualify. Before it funds a lawyer, VLA looks at a person's income and assets (a means test) and at the type of case.",
+      "VLA also supports victims of crime, for example by giving them information and advice about the criminal justice process."
+    ],
+    "remember": "VLA gives free advice to all, but a funded lawyer depends on qualifying.",
+    "a": {
+      "q": "Tom is charged with theft and has never been to court. He phones VLA for help. What can VLA give him whether or not he qualifies for a lawyer?",
+      "opts": [
+        "Free legal information and advice",
+        "A VLA lawyer to appear for him in court",
+        "A guarantee that the charge will be dropped",
+        "Payment of any fine a court gives him"
+      ],
+      "why": "VLA gives free information and advice to anyone who asks. A funded lawyer depends on qualifying, so it is not given to everyone. VLA does not decide outcomes or pay fines.",
+      "clue": "Think about what VLA gives to everyone, not only those who qualify."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya is accused of a serious offence. She earns a high income and owns several properties. Which statement best describes her likely position with VLA?",
+      "opts": [
+        "Unlikely to get a VLA lawyer, but can still get advice",
+        "Likely to get a VLA lawyer, as the offence is serious",
+        "Unlikely to get any VLA help, including information",
+        "Likely to get a VLA lawyer, as all accused people do"
+      ],
+      "why": "VLA applies a means test to a person's income and assets before funding a lawyer, so Priya's wealth means she is unlikely to qualify. The seriousness of the offence is only one factor and does not get her past the means test. Free information and advice is open to anyone, so she can still get that.",
+      "clue": "A funded lawyer depends on more than the type of case."
+    }
+  },
+  "leg-community-legal-centres": {
+    "title": "Community legal centres",
+    "card": [
+      "Community legal centres (CLCs) are independent, non-profit services. They give free legal help to people in their community.",
+      "CLCs help accused people and victims of crime. They can give advice, information and, in some cases, representation.",
+      "They are independent of Victoria Legal Aid. Many help people who cannot get a lawyer through Legal Aid.",
+      "Some CLCs serve a local area. Others focus on a group, such as young people or people on low incomes."
+    ],
+    "remember": "CLCs are free, independent services that often help where Legal Aid does not.",
+    "a": {
+      "q": "Which description best fits a community legal centre?",
+      "opts": [
+        "An independent service giving free legal help",
+        "A court that hears minor criminal cases",
+        "A government body that prosecutes accused people",
+        "A private firm that charges standard fees"
+      ],
+      "why": "CLCs are independent services that give free legal help to accused people and victims. A private firm charging fees is wrong because CLCs do not charge for this help. They also do not prosecute or hear cases.",
+      "clue": "Think about who runs them and what they charge."
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess is accused of a driving offence. VLA will not fund a lawyer for her, and she cannot afford a private one. What could she do?",
+      "opts": [
+        "Ask a local community legal centre for free help",
+        "Wait for the court to appoint her a free lawyer",
+        "Ask the prosecution to give her legal advice",
+        "Plead guilty because no help is available"
+      ],
+      "why": "CLCs often help people who cannot get Legal Aid, so Jess can ask one for free help. Pleading guilty is wrong because help may still be available. The prosecution acts against her, so it cannot advise her.",
+      "clue": "Which service often helps people that Legal Aid cannot?"
+    }
+  },
+  "leg-plea-negotiations": {
+    "title": "Plea negotiations",
+    "card": [
+      "A plea is the accused's answer to a charge. A guilty plea admits the offence, so there is no trial on guilt and the court moves to sentencing. A not guilty plea sends the case to trial, where the prosecution must prove it.",
+      "In plea negotiations, the prosecution and defence talk before trial. The accused agrees to plead guilty, often to a lesser charge or fewer charges, and in return the prosecution drops the other charges. For serious (indictable) cases in Victoria, the Office of Public Prosecutions conducts the talks.",
+      "It saves time and cost, and the court does not need a full trial. Witnesses, including victims, may not have to give evidence. This supports efficiency in the justice system.",
+      "It can raise concerns about fairness. The accused may be convicted of a lesser offence than the victim believes was committed, and the sentence may be lighter. Under the Victims' Charter Act 2006 (Vic), prosecutors should seek the victim's views."
+    ],
+    "remember": "Plea negotiations trade a guilty plea for fewer or lesser charges. They save time and cost but can cut against fairness for victims.",
+    "a": {
+      "q": "In a plea negotiation, what does the accused usually agree to do?",
+      "opts": [
+        "Plead guilty in return for fewer or lesser charges",
+        "Plead not guilty to every charge so the case goes on",
+        "Stay silent and ask the judge to dismiss the case",
+        "Plead guilty to all charges in return for a jury trial"
+      ],
+      "why": "In plea negotiations the accused gives a guilty plea. In return, the prosecution drops some charges or accepts a lesser one. Pleading not guilty to every charge sends the case to trial, so nothing is negotiated.",
+      "clue": "The accused gives something up and gets something back."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev faces two charges. In plea negotiations he pleads guilty to one and the other is dropped. The victim, Sam, says the outcome lacks fairness. What is the most likely reason?",
+      "opts": [
+        "Dev is convicted of less than Sam believes he did",
+        "Dev must face a full jury trial on both charges",
+        "Sam must give evidence for several days at a trial",
+        "Dev's guilty plea means the court cannot sentence him"
+      ],
+      "why": "Dev is convicted of only one offence, though Sam believes he committed both. The outcome does not match what Sam thinks happened. A full trial is wrong because a guilty plea avoids a trial on guilt.",
+      "clue": "Think about what the dropped charge means for the outcome."
+    }
+  },
+  "leg-legal-practitioners": {
+    "title": "Legal practitioners",
+    "card": [
+      "Legal practitioners are lawyers. They know the law and court procedure, which most accused people and victims do not.",
+      "They prepare the case. This can include gathering evidence, advising on the strongest approach and getting documents ready for court.",
+      "They present the case in court. They can speak for their client, question witnesses and make arguments on the law, but the court decides the outcome.",
+      "They also help a client understand their options, such as what a charge means and what choices they have. The client then makes the decision."
+    ],
+    "remember": "A lawyer brings knowledge of law and procedure to prepare, present and explain a case.",
+    "a": {
+      "q": "Which task is a legal practitioner's role for an accused person?",
+      "opts": [
+        "Presenting the accused person's case in court",
+        "Deciding whether the accused is guilty",
+        "Setting the penalty after a guilty finding",
+        "Choosing which charges the police lay"
+      ],
+      "why": "A lawyer presents the client's case in court. Deciding guilt is for the magistrate or jury, and setting the penalty is for the magistrate or judge, so those two options are tempting but wrong. Police choose the charges.",
+      "clue": "A lawyer acts for the client, not as the decision maker."
+    },
+    "b": {
+      "d": 3,
+      "q": "Liam is charged with an offence and does not understand the charge or what he can do next. How can a lawyer best help him?",
+      "opts": [
+        "By explaining his options so he can choose",
+        "By deciding for him how he should plead",
+        "By ensuring he is found not guilty at court",
+        "By taking his place so he can skip court"
+      ],
+      "why": "A lawyer helps a client understand their options, but the client still makes the decision, so deciding his plea for him is wrong. A lawyer cannot ensure a particular result, because the court decides the outcome. The accused generally still needs to attend court.",
+      "clue": "The lawyer advises, and the client makes the choice."
+    }
+  },
+  "leg-have-court-hierarchy": {
+    "title": "Why have a court hierarchy",
+    "card": [
+      "A court hierarchy ranks courts from lowest to highest. Victoria's criminal courts run from the Magistrates' Court to the County Court, then the Supreme Court (Trial Division), then the Supreme Court (Court of Appeal). The High Court of Australia sits above them all.",
+      [
+        "Specialisation",
+        "Each court hears cases of a set seriousness and type. Less serious cases go to lower courts, and the most serious go to higher courts. Courts can then build skill and use resources to suit the cases they hear."
+      ],
+      [
+        "Appeals",
+        "A party who thinks a court made a mistake may ask a higher court to review the decision. The hierarchy gives them somewhere to go."
+      ],
+      "Appeals can also correct errors in law and help the law stay consistent, as lower courts follow the decisions of higher courts."
+    ],
+    "remember": "A hierarchy sorts cases by seriousness and gives a path to appeal.",
+    "a": {
+      "q": "Which is a reason for having a court hierarchy?",
+      "opts": [
+        "It lets a party ask a higher court to review a decision",
+        "It lets every case be heard in the highest court",
+        "It stops a party from challenging a court's decision",
+        "It lets the lowest court overrule the higher courts"
+      ],
+      "why": "A hierarchy gives a path for appeal to a higher court. It does not put every case in the highest court, because cases are sorted by seriousness. It opens a way to challenge decisions rather than closing one, and lower courts follow higher ones rather than overruling them.",
+      "clue": "Think about where a party goes if they think a court got it wrong."
+    },
+    "b": {
+      "d": 2,
+      "q": "Dev is charged with a minor traffic offence, and Priya is charged with a very serious offence. Why does the hierarchy help with their cases?",
+      "opts": [
+        "Each case can go to a court suited to its seriousness",
+        "Both cases must start in the Supreme Court",
+        "Each case must be appealed before it is heard",
+        "Priya's case can skip the hearing and go to appeal"
+      ],
+      "why": "The hierarchy sends less serious cases to lower courts and more serious cases to higher courts. This is specialisation by seriousness, so a minor traffic offence does not go to the Supreme Court. Appeals come after a decision, so a case is not appealed before it is heard.",
+      "clue": "The two charges differ in how serious they are."
+    }
+  },
+  "leg-judges-magistrates-criminal-cases": {
+    "title": "Judges and magistrates in criminal cases",
+    "card": [
+      "In a criminal case, the judge or magistrate acts as an impartial umpire. They manage the hearing and make sure it runs fairly and follows the rules.",
+      [
+        "Law",
+        "They decide questions of law, such as whether a piece of evidence can be used. In a jury trial, the jury decides the facts, and the judge directs it on the law it must apply."
+      ],
+      ["Sentence", "If the accused is found guilty or pleads guilty, the judge or magistrate passes sentence."],
+      "The parties, the prosecution and the defence, present their own cases. The judge or magistrate does not run either side's case."
+    ],
+    "remember": "The judge or magistrate manages, rules on law and sentences. The parties argue their cases.",
+    "a": {
+      "q": "Which task is done by the judge in a criminal jury trial?",
+      "opts": [
+        "Explaining to the jury the law it must apply",
+        "Calling the witnesses for the prosecution",
+        "Planning the defence for the accused",
+        "Deciding the facts and giving the verdict"
+      ],
+      "why": "The judge directs the jury on the law. The prosecution calls its own witnesses and the defence plans its own case, as the parties present their cases. Deciding the facts is the jury's job in a jury trial, so it is not the judge's task here.",
+      "clue": "The judge is an umpire, not one of the parties."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a County Court trial, the defence asks to use a document, and the prosecution objects. Who decides whether it can be used?",
+      "opts": [
+        "The judge, as the umpire of the hearing",
+        "The jury, as it decides the facts of the case",
+        "The prosecution, as it raised the objection",
+        "The defence, as it wants to use the document"
+      ],
+      "why": "Whether a document can be used as evidence is a question of law, and the judge decides questions of law. The jury decides the facts, not whether evidence is allowed. The parties argue their sides, but neither one decides the issue.",
+      "clue": "Is this about what happened, or about the rules of the trial?"
+    }
+  },
+  "leg-juries-criminal-trials": {
+    "title": "Juries in criminal trials",
+    "card": [
+      "A jury is a group of ordinary citizens who decide the facts in a criminal trial. In Victoria, a jury of 12 is used in serious (indictable) trials in the County Court and the Supreme Court.",
+      "The jury decides whether the accused is guilty or not guilty. The judge directs the jury on the law and runs the trial, but the jury decides guilt.",
+      "A jury is first asked to reach a unanimous verdict, where all 12 agree. In some cases, after long deliberation, a majority verdict may be accepted instead.",
+      "Under the Juries Act 2000 (Vic), an 11 to 1 verdict may be accepted only after at least six hours of deliberation. It is not available for murder, treason, some large commercial drug offences or any Commonwealth offence."
+    ],
+    "remember": "A jury of 12 decides guilt. Unanimity comes first, and 11 to 1 is allowed only after six hours and for some offences.",
+    "a": {
+      "q": "In a Victorian County Court trial with a jury, who decides if the accused is guilty?",
+      "opts": [
+        "The jury of 12 citizens",
+        "The judge who runs the trial",
+        "The prosecutor for the state",
+        "The defence lawyer for the accused"
+      ],
+      "why": "The jury decides the facts and reaches the verdict. The judge runs the trial and directs the jury on the law, which is why the judge is the most tempting wrong answer, but the judge does not decide guilt.",
+      "clue": "Think about who weighs the evidence, not who runs the court."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian jury in an armed robbery trial has deliberated for seven hours and is split 11 to 1 for guilty. Can the judge accept this verdict?",
+      "opts": [
+        "Yes, as the time and offence allow a majority verdict",
+        "No, as every criminal verdict must be unanimous",
+        "No, as a majority verdict needs at least two days",
+        "No, as armed robbery is treated the same as murder"
+      ],
+      "why": "Armed robbery is not one of the excluded offences, and more than six hours have passed, so the judge may accept 11 to 1. The tempting wrong answer is that every verdict must be unanimous: a jury is asked for unanimity first, but a majority can be accepted for most offences.",
+      "clue": "Compare this trial with the limits on majority verdicts."
+    }
+  },
+  "leg-factors-affecting-justice-criminal": {
+    "title": "Factors affecting justice in criminal cases",
+    "card": [
+      "The principles of justice are fairness, equality and access. Fairness means impartial, open processes that people can take part in. Equality means the same chance to present a case. Access means people can engage with the system on an informed basis.",
+      [
+        "Cost",
+        "Legal representation can be expensive. An accused who cannot afford a lawyer, or cannot get legal aid, may struggle to present their case. This can affect fairness, equality and access."
+      ],
+      [
+        "Time",
+        "Cases can take a long time to reach trial. Delay can weaken witness memories, which can affect the fairness of the trial. It can also add stress for the accused and victims."
+      ],
+      [
+        "Cultural differences",
+        "People from some backgrounds may have limited English or may not know court processes. Without an interpreter or support, they may not follow the case or take part fully. This can affect access and fairness."
+      ]
+    ],
+    "remember": "Cost, time and cultural differences are factors that can stop the system being fair, equal or accessible.",
+    "a": {
+      "q": "Zoran is accused of theft but cannot afford a lawyer and is refused legal aid. Which factor is most directly limiting justice for him?",
+      "opts": [
+        "Cost, because he has no lawyer to help present his case",
+        "Time, because he must wait a long time for his trial",
+        "Cultural differences, because court customs are unfamiliar",
+        "Jury size, because twelve people will decide his case"
+      ],
+      "why": "Zoran has no legal help because he cannot pay and legal aid was refused, so this is a cost issue. Nothing in the case mentions a delay, so time is not the factor here.",
+      "clue": "Use only the facts given about Zoran."
+    },
+    "b": {
+      "d": 3,
+      "q": "Linh has limited English and is tried without an interpreter. She cannot follow the evidence. Which factor is most directly limiting her access to justice?",
+      "opts": [
+        "Cultural differences, as she cannot follow the court process",
+        "Cost, as she has paid too much for her lawyer",
+        "Time, as her trial has been delayed for too long",
+        "Equality, as it is a factor that makes trials slower"
+      ],
+      "why": "Limited English and no interpreter stop Linh understanding the case, so this is a cultural difference that limits her access. Equality is tempting, but it is a principle of justice, not a factor that affects justice, and nothing suggests delay.",
+      "clue": "Check which options name a factor and which name a principle."
+    }
+  },
+  "leg-purposes-sanctions-unit-3": {
+    "title": "Purposes of sanctions",
+    "card": [
+      "Deterrence discourages crime through fear of a sanction. Specific deterrence aims at the offender, and general deterrence aims at others who might offend.",
+      "Punishment makes the offender face a just penalty for the wrong, in proportion to how serious the crime was. Denunciation is the court publicly stating that the conduct is wrong.",
+      "Rehabilitation helps the offender change, for example through treatment or training, so they do not reoffend. Protection keeps the community safe from the offender, for example by keeping them in prison.",
+      "Section 5(1) of the Sentencing Act 1991 (Vic) sets out these five purposes. A sentence can serve several at once, and they can pull against each other. The judge weighs them to reach a fitting sentence."
+    ],
+    "remember": "Judges balance five purposes: rehabilitate, punish, deter, denounce and protect.",
+    "a": {
+      "q": "A court orders an offender to complete a drug treatment program so they can change their behaviour and stop reoffending. Which purpose does this mainly serve?",
+      "opts": ["Rehabilitation", "Punishment", "General deterrence", "Protection"],
+      "why": "Treatment aims to change the offender so they do not reoffend, which is rehabilitation. Protection is the tempting wrong answer, but it keeps the community safe from the offender, not by changing the person.",
+      "clue": "Which purpose is about changing the offender?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A judge imposes a long prison term on a fraudster and says it should warn other people tempted to commit similar frauds. Which purpose is the judge relying on?",
+      "opts": ["General deterrence", "Specific deterrence", "Punishment", "Denunciation"],
+      "why": "The warning is aimed at other people who might offend, which is general deterrence. Specific deterrence is the tempting wrong answer, but it aims to discourage this offender, not the wider public.",
+      "clue": "Who is the warning meant for: the offender or others?"
+    }
+  },
+  "leg-sanctions-their-purposes": {
+    "title": "Sanctions and their purposes",
+    "card": [
+      [
+        "Fine",
+        "A sum of money the offender must pay. It punishes and can deter, and it suits less serious offences. It does little to rehabilitate."
+      ],
+      [
+        "Community correction order",
+        "A CCO lets the offender stay in the community under conditions set by the court, such as unpaid work, treatment or supervision. It can rehabilitate and punish while the offender stays connected to family and work."
+      ],
+      [
+        "Imprisonment",
+        "The offender is held in custody. It punishes, denounces the crime and protects the community while the offender is held. It can also deter, but time in prison may make rehabilitation harder."
+      ],
+      "A court chooses the sanction that best fits the purposes it wants to achieve in the case in front of it."
+    ],
+    "remember": "Each sanction fits some purposes better than others, so the court matches the sanction to the purposes it needs.",
+    "a": {
+      "q": "Which purpose does imprisonment serve better than a fine or a CCO?",
+      "opts": [
+        "Protecting the community while the offender is held",
+        "Rehabilitating the offender through treatment",
+        "Keeping the offender connected to family and work",
+        "Suiting offences that are less serious"
+      ],
+      "why": "Imprisonment holds the offender in custody, so others are protected for that time. Rehabilitation through treatment and staying connected to family and work are strengths of a CCO, and prison may make rehabilitation harder.",
+      "clue": "Which sanction removes the offender from the public?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dani, 24, has no prior convictions. She stole from the café where she works to pay gambling debts, and the café has kept her on. The judge wants a sanction that punishes her and helps her change, while she keeps working. Which sanction best fits?",
+      "opts": [
+        "A CCO with unpaid work and treatment conditions",
+        "A fine set at the value of what she stole",
+        "A short prison term to punish and deter her",
+        "A long prison term to denounce the crime"
+      ],
+      "why": "A CCO can punish through unpaid work and help rehabilitate through treatment, while Dani stays in her job. A fine punishes but does little to rehabilitate, so it would not address her gambling. Either prison term would take her away from work.",
+      "clue": "Which sanction can punish and rehabilitate while she stays in the community?"
+    }
+  },
+  "leg-factors-sentencing-unit-3": {
+    "title": "Factors in sentencing",
+    "card": [
+      [
+        "Aggravating factor",
+        "a feature of the offence or offender that can make the sentence more severe, such as planning the offence, using a weapon or a prior record of similar offences."
+      ],
+      [
+        "Mitigating factor",
+        "a feature that can make the sentence less severe, such as genuine remorse, good prospects of rehabilitation or a difficult personal background."
+      ],
+      [
+        "Guilty plea",
+        "an early plea of guilty can lead to a lower sentence. It saves court time and spares witnesses and victims from giving evidence."
+      ],
+      [
+        "Victim impact statement",
+        "the victim can tell the court how the offence has affected them. The judge may consider it when weighing the harm done."
+      ]
+    ],
+    "remember": "The judge weighs factors that can increase or reduce a sentence, along with a guilty plea and the victim's account of harm.",
+    "a": {
+      "q": "Which of these is a mitigating factor at sentencing?",
+      "opts": [
+        "The offender shows genuine remorse",
+        "The offender has prior convictions for similar offences",
+        "The offender used a weapon in the offence",
+        "The offender planned the offence in advance"
+      ],
+      "why": "Genuine remorse can reduce a sentence, so it mitigates. The other three can make a sentence more severe, so they aggravate. Prior similar convictions are the most tempting wrong option, but they count against the offender.",
+      "clue": "Which one could lead to a lighter sentence?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam pleaded guilty to a burglary in Bendigo at the first hearing. The homeowner's victim impact statement describes ongoing fear at home. How may the judge use these?",
+      "opts": [
+        "Plea may reduce the sentence, statement shows the harm",
+        "Both are aggravating factors that raise the sentence",
+        "Statement is ignored, as only the plea can matter",
+        "The sentence is cut because the victim has suffered"
+      ],
+      "why": "An early guilty plea can reduce the sentence, and the victim impact statement helps the judge understand the harm done. The plea is not aggravating, and the victim's suffering is weighed as harm, not as a reason to reduce the sentence.",
+      "clue": "Think about what each one tells the judge about the case."
+    }
+  },
+  "leg-principles-civil-justice": {
+    "title": "Principles of civil justice",
+    "card": [
+      "In a civil case, one person or organisation sues another to fix a wrong, usually by getting money or another remedy. The person who sues is the plaintiff. The person sued is the defendant.",
+      "The plaintiff bears the burden of proof. This means the plaintiff must prove the claim. The defendant does not have to prove that the claim is false.",
+      "The standard of proof is the balance of probabilities. The plaintiff must show that their version of events is more likely than not to be true.",
+      "This standard is lower than in a criminal case, where the prosecution must prove guilt beyond reasonable doubt. A civil plaintiff does not need to remove all doubt."
+    ],
+    "remember": "The plaintiff must prove the claim, and more likely than not is enough.",
+    "a": {
+      "q": "What must a plaintiff do to succeed in a civil claim?",
+      "opts": [
+        "Show their version is more likely than not true",
+        "Show the defendant is guilty beyond reasonable doubt",
+        "Show that the defendant cannot disprove the claim",
+        "Show that the defendant broke the law on purpose"
+      ],
+      "why": "The plaintiff carries the burden of proof and meets it by showing their claim is more likely than not true. Beyond reasonable doubt is the criminal standard, so it is the tempting wrong option here.",
+      "clue": "Think about who must prove the claim, and how strongly."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya sues Tom, a builder, for faulty work on her deck. At trial, the evidence leaves it about 60% likely that the work was faulty. Tom has not proved the work was sound. What is the result?",
+      "opts": [
+        "Priya meets the standard, because it is more likely than not",
+        "Priya fails, because some doubt remains about the work",
+        "Priya fails, because Tom did not have to prove anything",
+        "Tom must lose, because he did not prove the work was sound"
+      ],
+      "why": "Priya has the burden of proof, and a 60% likelihood is more likely than not, so she meets the balance of probabilities. The option saying Tom must lose for not proving the work was sound is wrong: the burden stays with Priya, and she wins by meeting her own standard, not because Tom failed to prove anything. The option saying some doubt remains is wrong too, because a civil plaintiff does not need to remove all doubt.",
+      "clue": "Does Priya need to remove all doubt, or only tip the balance?"
+    }
+  },
+  "leg-before-starting-civil-claim": {
+    "title": "Before starting a civil claim",
+    "card": [
+      "A plaintiff is the person who starts a civil claim. Before filing, a plaintiff should weigh up whether the claim is worth pursuing.",
+      [
+        "Costs",
+        "Court cases can cost a lot in legal fees, court fees and time. A plaintiff may also have to pay the defendant's costs if the claim fails."
+      ],
+      [
+        "Time limit",
+        "Each type of claim has a limitation period set by law. If the plaintiff starts the claim after it ends, the defendant can ask the court to stop the claim."
+      ],
+      [
+        "Enforcement",
+        "A court order is only useful if it can be carried out. If the defendant has no money or assets, the plaintiff may win but never be paid."
+      ]
+    ],
+    "remember": "Before suing, ask: what will it cost, is there still time, and can a win be enforced?",
+    "a": {
+      "q": "Which of these is a reason a plaintiff might decide not to start a civil claim?",
+      "opts": [
+        "The likely legal costs are close to the amount claimed",
+        "The defendant has said they disagree with the claim",
+        "The plaintiff has never been to court before",
+        "The defendant is likely to hire a lawyer"
+      ],
+      "why": "If costs are close to what the plaintiff could win, the claim may leave them no better off, and they may even pay the defendant's costs if they lose. A defendant disagreeing is normal in a dispute and is not one of the factors on the card.",
+      "clue": "Think about whether winning would leave the plaintiff better off."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wins a court order that Dan pay her $20,000 for a faulty renovation. Dan has no job, no savings and owns no property. Which factor should Priya have weighed more carefully before starting her claim?",
+      "opts": [
+        "Whether a win could be enforced",
+        "Whether the limitation period had passed",
+        "Whether the defendant disagreed with her",
+        "Whether the court fees were affordable"
+      ],
+      "why": "Dan has no money or assets, so the order may never be carried out and Priya may not be paid. That is the enforcement factor. The time limit was not a problem, since her claim went ahead and she won, and nothing in the case suggests the fees were the issue.",
+      "clue": "She won the case. What could still stop her getting paid?"
+    }
+  },
+  "leg-mediation-conciliation-arbitration": {
+    "title": "Mediation, conciliation and arbitration",
+    "card": [
+      [
+        "Mediation",
+        "a neutral third person helps the parties talk and reach their own agreement. The mediator does not give advice on the outcome or decide it."
+      ],
+      [
+        "Conciliation",
+        "a neutral third person also helps the parties talk, and may suggest options for settling. The parties still make the final decision."
+      ],
+      [
+        "Arbitration",
+        "a neutral third person, the arbitrator, hears both sides and makes a decision. The decision is binding, so the parties must follow it."
+      ],
+      "These are forms of dispute resolution outside a courtroom. The main difference is who controls the outcome: the parties, or the third person."
+    ],
+    "remember": "Mediation and conciliation leave the decision with the parties. In arbitration the third person decides.",
+    "a": {
+      "q": "Two neighbours use a neutral person who suggests ways to settle their fence dispute, but they decide the result. Which method is this?",
+      "opts": ["Conciliation", "Mediation", "Arbitration", "A court hearing"],
+      "why": "The neutral person suggests options, which is what separates conciliation from mediation. The neighbours still decide, so it is not arbitration, where the third person makes the decision.",
+      "clue": "Who suggests options, and who decides?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya and a builder take their dispute over a bill to arbitration. Priya is unhappy with the outcome. Where does that leave her?",
+      "opts": [
+        "She is bound by the outcome and has to follow it",
+        "She can reject it and keep negotiating with the builder",
+        "She can ignore it, as the parties make the final decision",
+        "She has to follow it only if the builder also agrees to it"
+      ],
+      "why": "In arbitration the third person makes the decision, and it is binding on both parties. Saying the parties make the final decision is true of mediation and conciliation, not arbitration.",
+      "clue": "In this method, who controls the outcome?"
+    }
+  },
+  "leg-consumer-affairs-victoria": {
+    "title": "Consumer Affairs Victoria",
+    "card": [
+      "Consumer Affairs Victoria (CAV) is a Victorian government body. It deals with the rights and duties of consumers, traders, renters and rental providers (landlords).",
+      "It gives information for free. It explains the law to these groups, so people know their rights and duties before a dispute grows.",
+      "It also helps people settle consumer and tenancy disputes for free, such as over a faulty product. It contacts the other party and tries to help the two sides reach agreement.",
+      "CAV is not a court. It does not hear evidence and make a binding ruling. If a dispute is not settled, a person can take it to another body, such as VCAT."
+    ],
+    "remember": "CAV is a free government service that informs and helps settle disputes, but it does not rule on them.",
+    "a": {
+      "q": "Which statement best describes the role of Consumer Affairs Victoria in a dispute?",
+      "opts": [
+        "It helps the parties reach agreement, at no cost",
+        "It hears evidence and makes a binding order",
+        "It represents the consumer as their lawyer in court",
+        "It charges a fee based on the size of the claim"
+      ],
+      "why": "CAV helps parties settle disputes and does not charge for this. It is not a court, so it does not hear evidence and make a binding order. That is the most tempting wrong option.",
+      "clue": "Think about what it costs and who makes the final call."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jack buys a fridge from a store in Bendigo. It breaks, and the store refuses a refund. He asks CAV for help, but the dispute is not settled. What is true of CAV's role?",
+      "opts": [
+        "It can contact the store, but cannot make a binding ruling",
+        "It can order the store to refund him, as a tribunal would",
+        "It can act as his lawyer if he sues the store in court",
+        "It can give him information, but cannot contact the store"
+      ],
+      "why": "CAV helps settle consumer disputes for free, which includes contacting the other party. It does not make a binding ruling, so an unsettled dispute can go to another body such as VCAT. Ordering a refund is the tempting option, but that is what a tribunal or court does, not CAV.",
+      "clue": "Recall what Jack can do next if CAV cannot settle it."
+    }
+  },
+  "leg-victorian-civil-administrative-tribunal": {
+    "title": "The Victorian Civil and Administrative Tribunal",
+    "card": [
+      "The Victorian Civil and Administrative Tribunal (VCAT) is a Victorian body that settles many civil disputes. It is a tribunal, not a court.",
+      "It hears matters such as consumer claims, tenancy disputes between landlords and renters, and building disputes.",
+      "VCAT is designed to be cheaper and quicker than a court. Its fees are generally lower, and its procedures are less formal. Parties can often represent themselves without a lawyer.",
+      "A VCAT member hears the case and, if the parties do not settle, makes a decision. That decision is binding, so the parties must follow it."
+    ],
+    "remember": "VCAT is a tribunal, not a court. It is designed to settle civil disputes more cheaply and quickly, and its decisions bind the parties.",
+    "a": {
+      "q": "Which statement about VCAT is accurate?",
+      "opts": [
+        "It makes binding decisions but is not a court",
+        "It is a court, so its decisions are binding",
+        "It is not a court, so its decisions are only advice",
+        "It is a court that hears minor criminal matters"
+      ],
+      "why": "VCAT is a tribunal, not a court, yet a VCAT member can make a decision the parties must follow. The tempting idea that being outside the court system means its decisions are only advice is wrong, because its decisions are binding.",
+      "clue": "Check two things separately: what VCAT is, and what its decisions do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants a refund from a Geelong furniture store for a faulty $900 table. The store refuses, and she cannot afford a lawyer. Why does VCAT suit her claim?",
+      "opts": [
+        "It has lower fees and simpler steps, so she may act alone",
+        "It is a court, so it can make the store pay her back",
+        "It gives her a free lawyer, so she need not pay for one",
+        "It only gives advice, so neither side takes a risk"
+      ],
+      "why": "VCAT hears consumer claims, its fees are generally lower and its procedures less formal, so parties can often represent themselves. The option calling it a court is wrong: VCAT can make a binding decision, but it is a tribunal, not a court.",
+      "clue": "Test each option against what VCAT is and how its hearings run."
+    }
+  },
+  "leg-courts-civil-disputes-2": {
+    "title": "Courts in civil disputes",
+    "card": [
+      "Victoria has a hierarchy of courts, ranked from lowest to highest. Each court's jurisdiction, its power to hear a case, depends on the size and complexity of the civil claim.",
+      [
+        "Magistrates' Court",
+        "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and has a limit on the amount it can deal with."
+      ],
+      [
+        "County and Supreme Courts",
+        "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount claimed."
+      ],
+      "One reason for the hierarchy is administrative convenience: spreading cases lets each court's judges, time and money be used well. Another is that it allows appeals, where a higher court reviews a lower court's decision."
+    ],
+    "remember": "The hierarchy spreads cases so courts run efficiently, and lets higher courts review decisions on appeal.",
+    "a": {
+      "q": "What is one reason Victoria has a hierarchy of civil courts?",
+      "opts": [
+        "It spreads cases so each court's resources are used well",
+        "It lets parties pick the court most likely to favour them",
+        "It means the Supreme Court hears every claim first",
+        "It stops any court decision from being reviewed later"
+      ],
+      "why": "Spreading cases by size and complexity is administrative convenience: each court's judges, time and money are used well. Letting parties pick a court that favours them is not a reason for the hierarchy. Courts are ranked by the size and complexity of claims, not to suit the parties.",
+      "clue": "One of the card's reasons is about running the courts."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+      "opts": [
+        "Appeal to a higher court to review the decision",
+        "Appeal to the Magistrates' Court to review the decision",
+        "Appeal to the same judge to rehear the whole case",
+        "Appeal to any court she chooses, higher or lower"
+      ],
+      "why": "The hierarchy allows a higher court to review a lower court's decision, so Priya may appeal upwards. The Magistrates' Court sits below the County Court, so it cannot review a County Court decision.",
+      "clue": "Think about which way an appeal travels in the hierarchy."
+    }
+  },
+  "leg-judges-juries-lawyers-civil": {
+    "title": "Judges, juries and lawyers in civil cases",
+    "card": [
+      [
+        "Judge",
+        "A judge manages the case before and during the hearing. In case management, the judge sets timelines and helps the parties narrow the issues in dispute, so the hearing is shorter and more focused."
+      ],
+      "A judge also decides questions of law, such as which rules apply and what evidence is allowed. If there is no jury, the judge decides the facts too.",
+      [
+        "Jury",
+        "In some civil cases in Victoria, a jury of six people may decide the facts, such as what happened. The judge tells the jury the law to apply. A jury is not used in every civil case, and a party may choose to have one."
+      ],
+      [
+        "Lawyers",
+        "Lawyers present each side. They advise their client, prepare the case, question witnesses and argue for their client's position."
+      ]
+    ],
+    "remember": "The judge manages the case and decides law. A jury of six may decide facts. Lawyers argue for each side.",
+    "a": {
+      "q": "In a civil trial with a jury, which task belongs to the jury rather than the judge?",
+      "opts": [
+        "Deciding what happened on the facts",
+        "Deciding which rules of law apply",
+        "Setting timelines for the case",
+        "Questioning witnesses for one party"
+      ],
+      "why": "A civil jury of six may decide the facts, such as what happened. The judge decides questions of law and manages the case. Lawyers, not the jury, question witnesses for each side.",
+      "clue": "Think of facts versus law."
+    },
+    "b": {
+      "d": 3,
+      "q": "Before a civil hearing in Geelong, a judge meets both parties and gets them to agree on which issues are still in dispute. What is the main purpose of this step?",
+      "opts": [
+        "To shorten and focus the hearing on the real issues",
+        "To let the judge decide the facts without a jury",
+        "To allow the lawyers to give evidence themselves",
+        "To make the jury responsible for the law in the case"
+      ],
+      "why": "This is case management. Narrowing the issues means the hearing deals only with what is truly disputed, which saves time. It does not decide who has a jury, and the lawyers present each side rather than give evidence.",
+      "clue": "Which role does the judge play before the hearing?"
+    }
+  },
+  "leg-class-actions": {
+    "title": "Class actions",
+    "card": [
+      "A class action is one civil claim brought by one person for a whole group. Seven or more people must have claims against the same defendant, the claims must arise from related circumstances, and they must raise a common issue of law or fact.",
+      "The person who starts it is the lead plaintiff. They act for the group members, who are usually not named in the case and do not each have to appear in court.",
+      "Costs are shared across the group. A person with a small loss, who could not afford to sue alone, may be able to have their claim heard.",
+      "The court deals with the common issues once, instead of in many separate cases. This can save time and avoid different results for similar claims."
+    ],
+    "remember": "One lead plaintiff, one case for many people, with costs shared.",
+    "a": {
+      "q": "Why can a class action give access to justice to a person with a small loss?",
+      "opts": [
+        "The group shares the costs of one case",
+        "The court waives legal fees for group members",
+        "Each member gets a separate hearing for free",
+        "The court lowers the loss needed to sue"
+      ],
+      "why": "The costs of one case are spread across the group, so a person with a small loss does not face the full expense alone. The court does not waive fees, and members do not get separate hearings: the common issues are decided once.",
+      "clue": "Think about what stops a person with a small loss suing alone."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hundreds of customers of a Geelong energy company were each overcharged a small amount by the same billing error. Which is the best reason a class action suits them?",
+      "opts": [
+        "Their similar claims can be heard together in one case",
+        "Each customer must appear and give evidence in court",
+        "Each customer will win a larger amount than alone",
+        "The company must admit it was at fault to the group"
+      ],
+      "why": "The claims arise from the same error, so the common issue can be decided once, and the costs are shared. Members do not each have to appear, and a class action does not guarantee a larger payment or an admission of fault.",
+      "clue": "Look for what the claims have in common."
+    }
+  },
+  "leg-remedies-civil-cases": {
+    "title": "Remedies in civil cases",
+    "card": [
+      "A remedy is what a court orders when the plaintiff wins a civil case. Most remedies aim to restore the plaintiff, as far as possible, to the position they were in before the wrong.",
+      [
+        "Damages",
+        "a sum of money paid to the plaintiff. Most damages compensate for loss, such as lost income, medical bills or damage to property. Exemplary damages are rarer and can punish very serious misconduct."
+      ],
+      [
+        "Injunction",
+        "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+      ],
+      "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+    ],
+    "remember": "Damages are money, mostly to compensate for loss. An injunction orders a party to stop or to act.",
+    "a": {
+      "q": "A court orders a party to stop running loud machines at night. Which remedy is this, and why?",
+      "opts": [
+        "An injunction, because it orders a party to stop conduct",
+        "Damages, because it compensates for the harm of the noise",
+        "An injunction, because it orders a payment to the plaintiff",
+        "Damages, because it punishes a party for serious misconduct"
+      ],
+      "why": "An order to stop conduct is an injunction, because it deals with the problem itself and not with money. Damages are a payment, so an order to stop running machines is not damages, even though it responds to harm.",
+      "clue": "Think about what the order actually requires the party to do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wins a case against her neighbour Tom. His loud workshop keeps running every night, and she lost rent when a tenant left because of the noise. Which remedies fit her case?",
+      "opts": [
+        "An injunction to stop the noise, and damages for the rent",
+        "Damages only, because the lost rent is the only harm",
+        "An injunction only, because the noise is still going on",
+        "Damages to stop the noise, and an injunction for the rent"
+      ],
+      "why": "The noise is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. The option with damages to stop the noise and an injunction for the rent swaps the two: damages are money, and an injunction deals with conduct, not with paying for a loss.",
+      "clue": "One harm is still happening and one is a past money loss."
+    }
+  },
+  "leg-factors-affecting-justice-civil": {
+    "title": "Factors affecting justice in civil cases",
+    "card": [
+      "The civil system is judged against three principles of justice. Fairness is a fair process and hearing, equality is a level footing for all parties, and access is being able to use the system.",
+      [
+        "Costs",
+        "a party may pay lawyers, court fees and expert witnesses. High costs can stop people starting a case or push them to settle, which harms access. A party who can afford better lawyers may gain an advantage, which harms equality."
+      ],
+      [
+        "Time",
+        "a case can take months or years to reach a hearing. Long delays add to costs, wear down parties and make evidence harder to gather, which harms fairness. Parties may give up or accept a poor settlement."
+      ],
+      "Lower costs and quicker steps give parties a better chance of a fair outcome. The system works to reduce both, but they can still limit justice."
+    ],
+    "remember": "High costs and long delays can shut people out of court or push them into weak settlements.",
+    "a": {
+      "q": "Why can high legal costs reduce access to justice in a civil dispute?",
+      "opts": [
+        "Some people cannot afford to start or continue a case",
+        "Courts refuse to hear cases from people with low incomes",
+        "Judges give more weight to the party who spent more",
+        "Costs make every civil case last longer than a year"
+      ],
+      "why": "Access means being able to use the system. If people cannot pay for lawyers and fees, they may not start a case or may give up. Courts do not turn people away because of their income, so the option about courts refusing low-income people is wrong.",
+      "clue": "Think about whether a person can get into the system at all."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya sues a builder over faulty work. The case takes two years to reach a hearing. By then her main witness has moved overseas, and she accepts a low settlement. Which principle did the delay most directly harm, and why?",
+      "opts": [
+        "Fairness, as her witness was gone before the hearing",
+        "Access, as she was never able to file her claim",
+        "Equality, as the delay was longer than the law allows",
+        "Fairness, as the law does not let civil cases settle"
+      ],
+      "why": "Delay made her evidence harder to gather, so she could not fully present her case. That harms a fair hearing, which is fairness. Access is wrong because Priya did start her case, and settling a civil case is allowed.",
+      "clue": "What did the two years do to her evidence?"
+    }
+  },
+  "leg-commonwealth-constitution": {
+    "title": "The Commonwealth Constitution",
+    "card": [
+      "The Commonwealth Constitution is the document that set up Australia's federal system in 1901. It is the highest law for the national government.",
+      "It says how federal parliament is made up: the Crown, the Senate and the House of Representatives.",
+      "It lists the subjects the Commonwealth Parliament may make laws on, such as trade and commerce, defence and immigration. Parliament cannot make laws outside its listed powers, and a law made outside them can be found invalid.",
+      "It also shares power between the Commonwealth and the states. The states keep their own parliaments and their own law-making powers."
+    ],
+    "remember": "The Constitution builds federal parliament, limits what it may legislate on and shares power with the states.",
+    "a": {
+      "q": "Which statement best describes a role of the Commonwealth Constitution?",
+      "opts": [
+        "It sets out the subjects federal parliament may legislate on",
+        "It lists every offence that a person can be charged with",
+        "It decides each case brought before the federal courts",
+        "It sets the policies that a government must follow"
+      ],
+      "why": "The Constitution gives federal parliament a list of subjects it may make laws on. It does not list offences, because those are made in ordinary laws. It does not decide cases, because courts do that.",
+      "clue": "Think about what limits the reach of federal parliament."
+    },
+    "b": {
+      "d": 2,
+      "q": "Federal parliament passes a law on a subject the Constitution does not give it. The law could be found invalid. What does this show about the Constitution?",
+      "opts": [
+        "It limits what federal parliament may make laws on",
+        "It lets parliament pass any law that both houses agree to",
+        "It gives the states control over federal parliament",
+        "It stops the states from making their own laws"
+      ],
+      "why": "The Constitution lists the subjects federal parliament may legislate on, so a law outside that list can be found invalid. Both houses agreeing is not enough, because the law must still fit within the listed powers. The states keep their own law-making powers, so the last option is wrong.",
+      "clue": "Ask why a law passed by parliament could still fail."
+    }
+  },
+  "leg-roles-parliament-courts": {
+    "title": "The Crown and the Houses of Parliament",
+    "card": [
+      "Federal parliament has three parts: the House of Representatives, the Senate and the Crown. Victoria's parliament has the Legislative Assembly, the Legislative Council and the Crown.",
+      "A bill is a proposed law. It must be passed by both houses in the same form before it can go further.",
+      "The Crown is represented by the Governor-General for the Commonwealth and by the Governor for a state. This person gives royal assent.",
+      "A bill becomes an Act, which is law, only after royal assent. A bill that has passed both houses is not yet law until assent is given."
+    ],
+    "remember": "A bill needs both houses and then royal assent before it is law.",
+    "a": {
+      "q": "When does a bill in the federal parliament become law?",
+      "opts": [
+        "After both houses pass it and royal assent is given",
+        "After one house passes it and royal assent is given",
+        "After both houses pass it and the Prime Minister signs it",
+        "After the Senate passes it and the High Court approves it"
+      ],
+      "why": "A bill needs both houses to pass it and then royal assent from the Crown's representative, the Governor-General. Passing both houses alone is not enough, because the bill is not law until assent is given.",
+      "clue": "Two houses pass it, then one more step."
+    },
+    "b": {
+      "d": 3,
+      "q": "A bill on bike helmets has passed the Legislative Assembly and the Legislative Council of Victoria in the same form. What is its legal status?",
+      "opts": [
+        "It is not yet law, because royal assent is still needed",
+        "It is law, because both houses have passed it",
+        "It is not yet law, because the Governor-General must assent",
+        "It is law once the Premier announces it publicly"
+      ],
+      "why": "Both houses have passed the bill, but it becomes an Act only when the Governor gives royal assent. The Governor-General is wrong here because that role is for federal bills, not Victorian ones.",
+      "clue": "Which representative of the Crown acts for a state?"
+    }
+  },
+  "leg-division-law-making-powers": {
+    "title": "The division of law-making powers",
+    "card": [
+      [
+        "Exclusive",
+        "a power only the Commonwealth parliament may use. The states cannot make laws on it. Examples are customs and excise duties, and the power to coin money."
+      ],
+      [
+        "Concurrent",
+        "a power both the Commonwealth and the states may use. Examples are taxation (apart from customs and excise), marriage and trade."
+      ],
+      [
+        "Residual",
+        "a power the Constitution does not give to the Commonwealth, so it stays with the states. Examples are criminal law, education and public transport."
+      ],
+      "If a state law and a Commonwealth law clash on a concurrent power, the Commonwealth law wins. This rule comes from section 109 of the Constitution."
+    ],
+    "remember": "Exclusive is Commonwealth only, concurrent is shared, residual is left to the states.",
+    "a": {
+      "q": "The Constitution does not give the Commonwealth power over a topic, so only the states make laws on it. What kind of power is this?",
+      "opts": ["A residual power", "An exclusive power", "A concurrent power", "A delegated power"],
+      "why": "Powers left with the states because the Constitution does not give them to the Commonwealth are residual powers. An exclusive power is the reverse: only the Commonwealth may use it.",
+      "clue": "Think about who is left with the power."
+    },
+    "b": {
+      "d": 3,
+      "q": "Victoria and the Commonwealth have both validly passed laws on the same topic, and the laws clash. Which statement is correct?",
+      "opts": [
+        "The topic is concurrent, so the Commonwealth law prevails",
+        "The topic is exclusive, so the Commonwealth law prevails",
+        "The topic is concurrent, so the Victorian law prevails",
+        "The topic is residual, so the Commonwealth law prevails"
+      ],
+      "why": "Both parliaments can only make valid laws on the same topic if the power is concurrent, and where such laws clash the Commonwealth law wins. An exclusive power would not allow a Victorian law at all, and a residual power would not allow a Commonwealth law.",
+      "clue": "Which kind of power can both parliaments use?"
+    }
+  },
+  "leg-section-109": {
+    "title": "Section 109",
+    "card": [
+      "Section 109 of the Commonwealth Constitution deals with a clash between a state law and a Commonwealth law. It applies only when both laws are valid and cover the same matter.",
+      "If the two laws are inconsistent, the Commonwealth law prevails. The state law is invalid to the extent of the inconsistency.",
+      "Only the part that clashes is invalid. The rest of the state law stays in force, and the state law is not repealed.",
+      "Laws can be inconsistent when it is impossible to obey both. They can also be inconsistent when the Commonwealth law is meant to cover the whole field, leaving no room for a state law."
+    ],
+    "remember": "If valid Commonwealth and state laws clash, the Commonwealth law wins and the state law is invalid to that extent.",
+    "a": {
+      "q": "A valid state law and a valid Commonwealth law on the same matter are inconsistent. What is the effect under section 109?",
+      "opts": [
+        "The state law is invalid to the extent of the clash",
+        "The whole state law is repealed by the Commonwealth",
+        "The state law wins because the state acted first",
+        "Both laws are invalid until the High Court rules"
+      ],
+      "why": "Section 109 makes the Commonwealth law prevail, and the state law is invalid only to the extent of the inconsistency. It is not repealed, and the rest of it stays in force. The idea that the whole state law is repealed is tempting, but the card says only the clashing part is affected.",
+      "clue": "Think about which law prevails and how much of the other is affected."
+    },
+    "b": {
+      "d": 3,
+      "q": "A valid Commonwealth law says a worker must be paid at least a set weekly amount. A valid Victorian law says the same worker must be paid no more than a lower weekly amount. The Victorian law also sets rules on rest breaks, which the Commonwealth law does not cover. What is the result?",
+      "opts": [
+        "The Victorian pay rule is invalid, but rest breaks remain",
+        "The whole Victorian law is invalid, including rest breaks",
+        "The Victorian law wins on pay because it is more specific",
+        "Both pay rules apply, and the employer chooses between them"
+      ],
+      "why": "An employer cannot obey both pay rules: paying the Commonwealth minimum breaks the Victorian cap. So the Commonwealth rule prevails and the Victorian pay rule is invalid to that extent, while the rest break rules clash with nothing and stay in force. Striking down the whole Victorian law is tempting, but section 109 reaches only the inconsistent part.",
+      "clue": "Could an employer obey both pay rules at once?"
+    }
+  },
+  "leg-high-court-case-law": {
+    "title": "High Court cases on law-making powers",
+    "card": [
+      "The High Court of Australia decides what the Constitution means. When it rules on a law, it can decide whether the parliament that made it had the power to do so.",
+      "Section 90 says only the Commonwealth may impose duties of excise, which are taxes on the production or sale of goods. States cannot impose them.",
+      "In Ha v New South Wales (1997), the High Court read excise widely. It held that state licence fees on tobacco, based on the value of tobacco sold, were excises. The state fees were therefore invalid.",
+      "The ruling cut the states' power to raise their own revenue and left more power with the Commonwealth. A court decision can shift power between the states and the Commonwealth without any change to the wording of the Constitution."
+    ],
+    "remember": "The High Court's reading of the Constitution can shift power between the Commonwealth and the states.",
+    "a": {
+      "q": "What did the High Court's decision in Ha v New South Wales do to the balance of power?",
+      "opts": [
+        "It limited state taxing power, favouring the Commonwealth",
+        "It gave the states more power to tax goods such as tobacco",
+        "It changed the wording of section 90 of the Constitution",
+        "It made state and Commonwealth taxing powers equal"
+      ],
+      "why": "The Court read excise widely, so the state tobacco licence fees were invalid. That limited the states' ability to raise revenue and left the power with the Commonwealth. The Court did not change the wording of section 90, as it only interpreted it.",
+      "clue": "Ask who is allowed to impose excise under section 90."
+    },
+    "b": {
+      "d": 3,
+      "q": "The High Court reads section 90 widely, as it did in Ha v New South Wales. A state charges a fee on each litre of fuel sold. What follows?",
+      "opts": [
+        "The fee is invalid, because it counts as an excise",
+        "The fee is valid, because states can set their own taxes",
+        "The Court amends section 90, so the fee stays valid",
+        "The Commonwealth loses its own power to tax fuel"
+      ],
+      "why": "Under a wide reading, a fee on each litre of fuel sold is a tax on the sale of goods, so it is an excise. Section 90 gives excise to the Commonwealth only, so the state fee is invalid. States can raise some taxes of their own, but not excise, and the Court interprets section 90 rather than changing it.",
+      "clue": "Is a fee on each litre sold a tax on the sale of goods?"
+    }
+  },
+  "leg-bicameral-structure-parliament": {
+    "title": "Bicameral structure of parliament",
+    "card": [
+      "A bicameral parliament has two houses. The federal parliament has the House of Representatives (lower house) and the Senate (upper house). Victoria's parliament has the Legislative Assembly and the Legislative Council.",
+      "A bill must pass both houses before it can become law. Each house can debate it, change it or vote it down.",
+      "If the government does not control the upper house, the upper house may block a bill or amend it. This can slow or change the government's plans.",
+      "If the government does control the upper house, bills may pass with little review. Scrutiny of the bill is then weaker."
+    ],
+    "remember": "Two houses share the work. Who controls the upper house affects how closely a bill is checked.",
+    "a": {
+      "q": "Why does having two houses affect how laws are made?",
+      "opts": [
+        "A bill needs both houses to pass it, so each can check it",
+        "A bill needs only the house the government controls",
+        "Only the upper house can debate and change a bill",
+        "The lower house passes bills and the upper house cannot vote"
+      ],
+      "why": "A bill must pass both houses, so each house can debate, amend or reject it. The tempting option that only the government's house matters is wrong, because the other house can still block a bill.",
+      "clue": "Think about what must happen before a bill becomes law."
+    },
+    "b": {
+      "d": 3,
+      "q": "A state government has a majority in its lower house but not in its upper house. It introduces a controversial bill. What is the most likely effect?",
+      "opts": [
+        "The upper house amends or rejects it, slowing the plan",
+        "It becomes law as soon as the lower house passes it",
+        "It passes the upper house quickly with little review",
+        "The upper house has to pass it once the lower house does"
+      ],
+      "why": "The government does not control the upper house, so that house is likely to amend, delay or reject a controversial bill. Passing the lower house is not enough, because both houses must pass a bill. Quick passage with little review is what happens when the government controls the upper house.",
+      "clue": "Which house does the government not control?"
+    }
+  },
+  "leg-other-pressures-parliament": {
+    "title": "Other pressures on parliament",
+    "card": [
+      "Parliament does not make laws in isolation. Outside forces shape what laws it can make and what laws it is willing to make.",
+      [
+        "International pressure",
+        "Australia signs treaties, which are agreements with other countries. A treaty becomes Australian law only when parliament passes a statute for it, which the Constitution's external affairs power lets the Commonwealth do."
+      ],
+      [
+        "Other countries and bodies",
+        "Governments and international bodies can also press Australia to change a law, for example through public criticism or trade and diplomatic pressure."
+      ],
+      [
+        "Voters",
+        "MPs want to be re-elected, so they tend to avoid laws voters strongly oppose and favour laws voters want. This is political pressure, not a legal rule: voter opposition does not make a law invalid."
+      ]
+    ],
+    "remember": "A treaty needs a statute to become law, and other countries and voters can push parliament towards or away from laws.",
+    "a": {
+      "q": "Australia signs a treaty on protecting wetlands. What must happen before it becomes part of Australian law?",
+      "opts": [
+        "Parliament passes a statute to give it effect",
+        "The Prime Minister signs it on behalf of Australia",
+        "The other countries to the treaty vote to approve it",
+        "The High Court declares that it applies in Australia"
+      ],
+      "why": "A treaty binds Australia internationally, but it becomes Australian law only when parliament passes a statute to put it into effect. Signing is tempting, but signing is done by the executive and is not law-making.",
+      "clue": "Does signing a treaty change the law inside Australia?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A government has a bill that polls show most voters strongly oppose. Which of these is most likely to happen?",
+      "opts": [
+        "The government changes or drops the bill to keep votes",
+        "The bill becomes invalid because voters did not approve it",
+        "The Governor-General refuses royal assent to the bill",
+        "The High Court strikes the bill down before it is passed"
+      ],
+      "why": "Governments want to be re-elected, so strong voter opposition tends to lead them to change or drop a bill. Voter opinion is political pressure, not a legal rule, so it does not make a bill invalid or lead a court or official to block it.",
+      "clue": "Think about what MPs need at the next election."
+    }
+  },
+  "leg-high-court-constitution": {
+    "title": "The High Court and the Constitution",
+    "card": [
+      "The High Court of Australia is the final court of appeal. It also interprets the Constitution, which sets out the powers of the Commonwealth Parliament.",
+      "The Commonwealth Parliament can only make laws on topics the Constitution gives it. A law outside those powers is invalid.",
+      "If someone challenges a law, the High Court decides whether it is within power. It can strike down a law that is not, so the law has no effect.",
+      "The High Court also protects representative government. It has found that the Constitution implies a freedom of political communication, which lets people discuss political matters."
+    ],
+    "remember": "The High Court checks parliament by striking down laws made outside the Constitution.",
+    "a": {
+      "q": "What can the High Court do if the Commonwealth Parliament passes a law outside its constitutional power?",
+      "opts": [
+        "Strike the law down so it has no effect",
+        "Amend the law so that it fits the Constitution",
+        "Send the law back to parliament to be voted on again",
+        "Ask the Governor-General to repeal the law"
+      ],
+      "why": "The High Court interprets the Constitution and can declare a law invalid. Amending a law is tempting, but that is a job for parliament, not a court.",
+      "clue": "Think about what a court can do to an invalid law."
+    },
+    "b": {
+      "d": 3,
+      "q": "A business owner in Geelong challenges a Commonwealth law, arguing that it covers a topic the Constitution does not give parliament power over. Which body decides whether the law is valid?",
+      "opts": [
+        "The High Court, by interpreting the Constitution",
+        "The Commonwealth Parliament, by reviewing its own law",
+        "The Governor-General, by refusing to sign the law",
+        "The Victorian Supreme Court, by amending the law"
+      ],
+      "why": "The High Court decides if a law is within the Constitution and can strike it down if not. Parliament made the law, so it does not rule on its own validity.",
+      "clue": "Which court interprets the Constitution?"
+    }
+  },
+  "leg-separation-powers-2": {
+    "title": "Separation of powers",
+    "card": [
+      "The Constitution sets up three kinds of government power. Spreading them out means no one body holds too much power.",
+      ["Legislative", "the power to make laws. It is held by parliament."],
+      [
+        "Executive",
+        "the power to carry out laws and run government, used by the Governor-General, ministers and departments. Under responsible government, ministers must also sit in parliament and answer to it, so this power overlaps with legislative power."
+      ],
+      [
+        "Judicial",
+        "the power to decide disputes and apply the law. It is held only by courts, which are kept strictly separate from parliament and the executive."
+      ]
+    ],
+    "remember": "Power is spread so no one body has too much. Only judicial power is kept strictly apart.",
+    "a": {
+      "q": "Which statement about the separation of powers in Australia is correct?",
+      "opts": [
+        "Judicial power is kept strictly separate from the others",
+        "All three powers are kept strictly separate from each other",
+        "Ministers are not allowed to be members of parliament",
+        "Courts share judicial power with ministers and parliament"
+      ],
+      "why": "Only courts hold judicial power, and they are kept strictly apart from the other two. All three are not strictly separate, because ministers sit in parliament, so legislative and executive power overlap.",
+      "clue": "Think about where ministers sit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is a federal minister and a member of parliament. He votes for a bill, and once it is law his department carries it out. A friend says this breaks the separation of powers. Is the friend right?",
+      "opts": [
+        "No, legislative and executive power overlap in Australia",
+        "Yes, each power must be held by a completely separate body",
+        "Yes, ministers are not meant to vote on their own bills",
+        "No, because ministers also hold some judicial power"
+      ],
+      "why": "Under responsible government, ministers sit in parliament, so legislative and executive power overlap. The friend assumes all three powers are strictly separate, but in Australia only judicial power is. Ministers do not hold judicial power, which belongs only to courts.",
+      "clue": "Which two powers are not strictly kept apart?"
+    }
+  },
+  "leg-express-rights-constitution": {
+    "title": "Express rights in the Constitution",
+    "card": [
+      "An express right is a right written directly into the words of the Constitution. Australia's Constitution has only a few.",
+      "Section 80 gives a right to trial by jury for a Commonwealth indictable offence. An indictable offence is a serious crime.",
+      "Other express rights include freedom of religion from Commonwealth laws, and a ban on discrimination against people because of the state they live in.",
+      "Because these rights are in the Constitution, the High Court can strike down a Commonwealth law that breaks them. It does not rewrite the law."
+    ],
+    "remember": "A few rights are written into the Constitution, so an ordinary law cannot override them.",
+    "a": {
+      "q": "What does it mean to say that the right to trial by jury is an express right?",
+      "opts": [
+        "It is written in the words of the Constitution",
+        "It is drawn from the structure of the Constitution",
+        "It is set out in a Commonwealth Act of parliament",
+        "It was created by a High Court decision in a case"
+      ],
+      "why": "An express right is stated in the actual words of the Constitution. A right drawn from the Constitution's structure is not written down, so it is not express, even though it also comes from the Constitution.",
+      "clue": "In everyday speech, what does it mean to say something expressly?"
+    },
+    "b": {
+      "d": 3,
+      "q": "The Commonwealth Parliament passes a law saying people charged with a Commonwealth indictable offence must be tried by a judge alone. If the law is challenged, what would the High Court most likely do?",
+      "opts": [
+        "Strike it down, as it breaches the right to a jury",
+        "Uphold it, as parliament can override the Constitution",
+        "Uphold it, as the jury right covers only state crimes",
+        "Rewrite it, so that a jury hears the trial instead"
+      ],
+      "why": "Section 80 of the Constitution gives a right to a jury for Commonwealth indictable offences, so the law breaks an express right and can be struck down. Parliament cannot override the Constitution with an ordinary law, and the High Court strikes laws down rather than rewriting them.",
+      "clue": "Can an ordinary law change what the Constitution says?"
+    }
+  },
+  "leg-courts-statutory-interpretation": {
+    "title": "Courts and statutory interpretation",
+    "card": [
+      "Parliament writes Acts, but the words cannot cover every case. When a word or phrase in an Act is unclear, a court must decide what it means in the case before it.",
+      "This is statutory interpretation. The judge works out what the words mean, and does not rewrite the Act.",
+      "A court can read a word widely, so more situations are covered. It can read the word narrowly, so fewer situations are covered.",
+      "The meaning the court gives becomes part of the common law. It is a precedent that later courts may need to follow when the same words arise again."
+    ],
+    "remember": "Courts decide what unclear words in an Act mean, and that meaning can guide later cases.",
+    "a": {
+      "q": "A court is asked what an unclear word in an Act means. What is the court doing?",
+      "opts": [
+        "Interpreting the Act to decide how it applies to the case",
+        "Repealing the word so that it no longer has any effect",
+        "Passing a new Act to replace the unclear wording",
+        "Asking parliament to vote on the meaning of the word"
+      ],
+      "why": "The court applies the Act to the case, so it must decide what the unclear word means. It cannot repeal or replace the Act, because that is a job for parliament.",
+      "clue": "The court must still decide the case in front of it."
+    },
+    "b": {
+      "d": 3,
+      "q": "An Act bans 'vehicles' in Wattle Park. A Supreme Court judge rules that an electric scooter is not a vehicle, and so is allowed. What is the effect of this ruling?",
+      "opts": [
+        "It narrows the word and may bind lower courts later",
+        "It widens the word and covers more things than before",
+        "It changes the Act, so parliament must now vote on it",
+        "It applies only to this scooter and to no later case"
+      ],
+      "why": "The judge read 'vehicles' so that it covers less, which narrows it. The meaning becomes precedent, so lower courts may have to follow it. Widening would mean scooters were caught by the ban.",
+      "clue": "Did the ruling bring more things under the ban or fewer?"
+    }
+  },
+  "leg-doctrine-precedent": {
+    "title": "The doctrine of precedent",
+    "card": [
+      [
+        "Binding",
+        "A decision of a higher court in the same court hierarchy must be followed by lower courts in later cases with similar facts. For example, a Victorian County Court must follow the Victorian Court of Appeal."
+      ],
+      [
+        "Persuasive",
+        "Other decisions need not be followed but a court may consider them. These include decisions of lower courts, courts in other hierarchies and courts overseas."
+      ],
+      "A higher court can reverse a decision on appeal in the same case. It can overrule an earlier precedent in a different case, so that the old rule no longer stands.",
+      "A court can distinguish a precedent if the facts of the new case are materially different, and so not follow it. A court can disapprove of a decision, which expresses doubt without changing the result."
+    ],
+    "remember": "Higher courts bind lower courts in the same hierarchy, and the rest only persuade.",
+    "a": {
+      "q": "A Magistrates' Court in Victoria hears a case with facts like an earlier Victorian Court of Appeal decision. What must the Magistrates' Court do?",
+      "opts": [
+        "Follow the Court of Appeal decision, which is binding",
+        "Consider the decision, but it is only persuasive",
+        "Overrule the Court of Appeal decision",
+        "Wait for parliament to pass a new Act"
+      ],
+      "why": "The Court of Appeal is higher in the same hierarchy, so its decision binds the Magistrates' Court. It is not merely persuasive, and a lower court cannot overrule a higher one.",
+      "clue": "Think about which court is higher in the same hierarchy."
+    },
+    "b": {
+      "d": 3,
+      "q": "A County Court judge in Victoria finds that the facts before her differ in an important way from a binding precedent. She decides not to follow it. What has she done?",
+      "opts": [
+        "Distinguished the precedent",
+        "Overruled the precedent",
+        "Reversed the precedent",
+        "Disapproved the precedent"
+      ],
+      "why": "Distinguishing means finding a material difference in the facts, so the precedent does not apply. Overruling is done by a higher court in a later case. Reversing happens on appeal in the same case.",
+      "clue": "Her reason was the facts, not a view that the old rule was wrong."
+    }
+  },
+  "leg-strengths-weaknesses-courts-as": {
+    "title": "Factors affecting courts as law-makers",
+    "card": [
+      [
+        "Standing",
+        "a person must be directly affected by a legal issue to bring a case. Courts cannot start changing the law on their own, so they wait for a suitable case brought by someone with standing."
+      ],
+      [
+        "Cost and time",
+        "court cases can be expensive and slow. This can stop people bringing cases, so some issues never reach a court."
+      ],
+      [
+        "Precedent",
+        "lower courts must follow binding precedent from higher courts in their hierarchy. This makes the law stable but limits how far a judge can change it."
+      ],
+      [
+        "Conservatism or activism",
+        "a conservative judge keeps to existing law and leaves reform to parliament. An activist judge is more willing to develop the law to meet new social needs."
+      ]
+    ],
+    "remember": "Courts can only make law when a suitable case reaches them, and precedent and judicial approach shape what they do with it.",
+    "a": {
+      "q": "Why can a court not change an unfair law as soon as a judge notices it?",
+      "opts": [
+        "It must wait for a case from someone with standing",
+        "It may only change laws that parliament has just passed",
+        "It can only change the law after a public vote",
+        "It needs the approval of the Attorney-General first"
+      ],
+      "why": "Courts make law only when a dispute is brought by a person with standing, so judges cannot start reform on their own. The Attorney-General's approval may seem likely, but the limit is not permission from anyone: it is waiting for a suitable case to reach the court.",
+      "clue": "Who has to start a court case?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Two judges hear similar cases. Judge Ng follows earlier decisions closely and says reform is for parliament. Judge Roy develops the law to meet new social needs. How would you describe them?",
+      "opts": [
+        "Ng is conservative and Roy is activist",
+        "Ng is activist and Roy is conservative",
+        "Both are conservative, as both are bound by precedent",
+        "Both are activist, as both are making law in court"
+      ],
+      "why": "A conservative judge sticks to existing law and leaves change to parliament. An activist judge is more willing to develop the law. Precedent binds both judges, so it does not show who is conservative or activist.",
+      "clue": "Which judge leaves reform to parliament?"
+    }
+  },
+  "leg-courts-parliament": {
+    "title": "Courts and parliament",
+    "card": [
+      [
+        "Supremacy",
+        "Parliament is supreme in law-making. If a statute and common law conflict, the statute prevails, within the limits of the Constitution."
+      ],
+      ["Codify", "parliament can collect common law rules into an Act. The rules then become statute law."],
+      ["Abrogate", "parliament can override a common law rule by passing an Act that cancels or changes it."],
+      [
+        "Court influence",
+        "a court decision may expose a gap in the law, or judges may comment that reform is needed. This does not change the law itself, and parliament may act but does not have to."
+      ]
+    ],
+    "remember": "Parliament can codify or abrogate common law, and court decisions and comments can prompt it to act.",
+    "a": {
+      "q": "Parliament passes an Act that cancels a common law rule made in an earlier case. What is this called?",
+      "opts": ["Abrogation", "Codification", "Distinguishing", "Persuasion"],
+      "why": "Abrogating means overriding or cancelling common law by statute. Codification is the tempting wrong answer: it puts common law rules into an Act, rather than cancelling them.",
+      "clue": "Think of the Act removing the rule, not collecting it."
+    },
+    "b": {
+      "d": 3,
+      "q": "A judge in Ballarat says a gap in the law caused an unfair result and suggests parliament should consider reform. What is the effect of this comment?",
+      "opts": [
+        "It can prompt reform, and parliament decides if it acts",
+        "It can prompt reform, and the judge decides if it happens",
+        "It binds parliament, so parliament must pass a new Act",
+        "It changes the law, and parliament can later reverse it"
+      ],
+      "why": "A judge's comment can draw attention to a problem and may lead parliament to reform the law, but parliament is supreme and decides whether to act. The tempting wrong answer gives that choice to the judge, yet the comment does not bind parliament or change the law itself.",
+      "clue": "Who has the final say in law-making?"
+    }
+  },
+  "leg-laws-change": {
+    "title": "Why laws change",
+    "card": [
+      "Laws are not fixed. Parliament and the courts can change them when they stop suiting the community.",
+      [
+        "Changing values",
+        "what people think is acceptable can shift over time. Laws may then be changed to match the new view."
+      ],
+      [
+        "New technology",
+        "inventions can create situations that old laws never planned for. New or updated laws may be needed to cover them."
+      ],
+      [
+        "A law that no longer works",
+        "a law may be unclear, hard to enforce or fail to achieve its purpose. It may then be reformed or repealed (removed)."
+      ]
+    ],
+    "remember": "Laws change to keep up with the community, with new technology and with what works.",
+    "a": {
+      "q": "Which situation is the best example of a law changing because of new technology?",
+      "opts": [
+        "Parliament creates an offence for misusing drones in crowds",
+        "Parliament lowers a penalty after public attitudes soften",
+        "Parliament repeals a law that police could not enforce",
+        "Parliament rewrites an unclear law that courts dispute"
+      ],
+      "why": "Drones are a new invention that older laws did not plan for, so a new offence was needed. The option about softer attitudes shows changing values, not technology.",
+      "clue": "Look for the option where a new invention creates the need."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian law bans an activity, but police rarely charge anyone because the wording is vague and courts keep dismissing cases. Which reason for change does this show best?",
+      "opts": [
+        "The law no longer works",
+        "Society's values have shifted",
+        "New technology has appeared",
+        "The community wants a harsher penalty"
+      ],
+      "why": "The law is failing in practice because it is unclear and hard to enforce. Nothing in the case says attitudes changed, so changing values is the tempting but wrong choice.",
+      "clue": "Ask whether the problem is the community, a new invention, or the law itself."
+    }
+  },
+  "leg-petitions-demonstrations": {
+    "title": "Petitions and demonstrations",
+    "card": [
+      [
+        "Petition",
+        "a written request to parliament, signed by many people, asking for a law to be made or changed. It shows how many people support the change."
+      ],
+      [
+        "Demonstration",
+        "a public gathering, such as a march or rally, held to show support for or opposition to a law or issue. It draws public and media attention to the issue."
+      ],
+      "Both are ways for people to take part in law reform without holding office. Parliament can see that an issue matters to the community.",
+      "Neither can force parliament to change the law. Members of parliament decide whether to act, and they may take public support into account."
+    ],
+    "remember": "A petition shows how many people want change. A demonstration shows the issue to the public and the media.",
+    "a": {
+      "q": "What is the main thing a petition shows parliament about a proposed law change?",
+      "opts": [
+        "How many people support the change",
+        "How the change would work in practice",
+        "That the change must now be debated",
+        "That the courts have approved the change"
+      ],
+      "why": "A petition collects signatures, so its strength is showing the number of people who want change. It does not make parliament debate or pass anything, because members of parliament still decide whether to act.",
+      "clue": "Think about what a long list of signatures counts."
+    },
+    "b": {
+      "d": 3,
+      "q": "Residents of a Ballarat suburb want a law changed to protect a local creek. They hold a rally in the main street and the evening news covers it. What is the main effect of the rally on law reform?",
+      "opts": [
+        "It draws public and media attention to the issue",
+        "It shows the exact number of people who back it",
+        "It requires parliament to debate a bill on the creek",
+        "It changes the law through a court decision"
+      ],
+      "why": "A rally is a demonstration, and its main strength is drawing public and media attention to the issue. It does not count supporters the way a petition does, and it cannot require parliament to act because members of parliament decide.",
+      "clue": "A rally gets seen. Does it get counted or does it compel?"
+    }
+  },
+  "leg-courts-law-reform": {
+    "title": "Courts and law reform",
+    "card": [
+      "Courts apply the law to real cases. A case can show that a law is unclear, unfair or out of date.",
+      [
+        "Pushing parliament",
+        "a judge may point out a problem in a decision. Parliament can then pass a statute to fix it."
+      ],
+      [
+        "Changing common law",
+        "common law is law made by judges through their decisions. A court can change it directly by setting a new precedent, if a higher court does not overturn it."
+      ],
+      "Courts cannot change a statute themselves. Only parliament can amend or repeal a statute, though courts interpret it."
+    ],
+    "remember": "Cases can expose problems that parliament fixes, and courts can change common law themselves.",
+    "a": {
+      "q": "A judge finds a statute has a gap that leads to an unfair result, and parliament later amends it. How did the court contribute to reform?",
+      "opts": [
+        "The case exposed the problem and pushed parliament to act",
+        "The court amended the statute itself in its judgment",
+        "The court changed the common law by creating a precedent",
+        "The court wrote the new law and parliament only approved it"
+      ],
+      "why": "The case revealed the gap, and parliament, which has the power over statutes, made the change. The court did not amend the statute, which is the tempting wrong choice.",
+      "clue": "Who has the power to amend a statute?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Kai wins a case in the Supreme Court of Victoria, and the judge sets a new rule on a point covered only by common law. What has happened?",
+      "opts": [
+        "The court has changed the common law directly",
+        "The court has amended a statute on this point",
+        "Parliament has passed a new Act on this point",
+        "The case has no effect beyond Kai's own dispute"
+      ],
+      "why": "The point was covered only by common law, which judges make, so the new rule changes it directly as a precedent. No statute was involved, and courts cannot amend one anyway. Nothing shows parliament has acted, and only parliament can pass an Act.",
+      "clue": "Common law is made by judges, not parliament."
+    }
+  },
+  "leg-media-law-reform": {
+    "title": "The media and law reform",
+    "card": [
+      "The media is the channel that carries information to the public. Traditional media includes television, radio and newspapers. Social media includes platforms where users share posts and videos.",
+      [
+        "Raising awareness",
+        "media coverage can bring a problem with the law to many people who did not know about it. Social media can spread a story quickly, and anyone can share it."
+      ],
+      [
+        "Pressure on parliament",
+        "when many people take notice of an issue, members of parliament may feel pressure to respond. This is more likely when coverage is sustained and public concern is strong."
+      ],
+      [
+        "Limits",
+        "the media does not make or change laws. Only parliament can pass a new law, and it may choose not to act."
+      ]
+    ],
+    "remember": "The media can raise awareness and add pressure, but parliament decides whether to pass a new law.",
+    "a": {
+      "q": "Which statement best describes how the media can contribute to law reform?",
+      "opts": [
+        "It informs the public, which may put pressure on parliament",
+        "It may pass a new law once public concern becomes strong",
+        "It can force parliament to change a law that people dislike",
+        "It can overturn an unfair law by reporting on it widely"
+      ],
+      "why": "The media can spread information and build public concern, which may put pressure on parliament to respond. It cannot force parliament to act, because parliament may choose not to. It cannot pass or overturn laws either, as only parliament can pass a new law.",
+      "clue": "Does the media make laws, or does it influence those who do?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A newspaper series in Victoria exposes a gap in the law, and the story spreads widely on social media. Several MPs then speak about the issue. What does this best show?",
+      "opts": [
+        "Media coverage added pressure, but parliament still decides",
+        "Media coverage has changed the law through public pressure",
+        "Parliament must now pass a new law to fix the gap",
+        "Social media has replaced parliament as a source of law"
+      ],
+      "why": "The coverage raised awareness and MPs responded, which shows pressure on parliament. Speaking about an issue does not change the law, and parliament may still choose not to act. The option saying the law has changed treats pressure as if it were the outcome.",
+      "clue": "Has anything been passed by parliament yet?"
+    }
+  },
+  "leg-victorian-law-reform-commission": {
+    "title": "The Victorian Law Reform Commission",
+    "card": [
+      "The Victorian Law Reform Commission (VLRC) is an independent body set up by an Act of the Victorian Parliament. It researches the law and suggests how to improve it.",
+      "It mainly works on references: topics the Attorney-General sends it to review. It studies the current law, looks at other places' laws and asks the public for views, then writes a report with recommendations.",
+      "The VLRC cannot make or change laws. Parliament decides whether to act on its report. Governments often accept recommendations, but they do not have to.",
+      "Example: in 2021 the VLRC reported on how the justice system responds to sexual offences. In 2022 Parliament acted on many of its recommendations, including changes to how consent is defined."
+    ],
+    "remember": "The VLRC researches and recommends. Parliament decides what becomes law.",
+    "a": {
+      "q": "What is the main role of the VLRC in law reform?",
+      "opts": [
+        "To research a referred issue and recommend changes",
+        "To pass a law once it has finished its research",
+        "To hear appeals about laws that are unfair",
+        "To order the government to adopt its reports"
+      ],
+      "why": "The VLRC investigates an issue sent to it and reports with recommendations. It cannot make law or order change, and Parliament decides whether to act on its advice. Passing a law is the most tempting wrong option, but it confuses a body that recommends with one that makes law.",
+      "clue": "Does the VLRC decide, or does it advise?"
+    },
+    "b": {
+      "d": 3,
+      "q": "The Attorney-General refers a topic to the VLRC. After public consultation, the VLRC reports, but Parliament does not act on every recommendation. What does this show?",
+      "opts": [
+        "The VLRC advises, and Parliament chooses what to adopt",
+        "The VLRC failed, because its reports must become law",
+        "The VLRC is not independent, as it acts on a referral",
+        "The VLRC can pass its own laws if Parliament delays"
+      ],
+      "why": "The VLRC's role is to recommend, so Parliament may adopt some, all or none of its advice. A referral does not remove its independence, because the VLRC still researches and reaches its own conclusions. The option about failure is tempting but wrongly treats its reports as binding.",
+      "clue": "Who holds the power to make the final decision?"
+    }
+  },
+  "leg-royal-commissions": {
+    "title": "Royal commissions",
+    "card": [
+      "A royal commission is a public inquiry set up by government to investigate a matter of great public concern.",
+      [
+        "Strong powers",
+        "it can summon witnesses, require documents and hold public hearings. These powers are stronger than those of most other inquiries."
+      ],
+      [
+        "Recommendations",
+        "it reports its findings and recommends changes to law or practice. Government is not bound to adopt them all."
+      ],
+      [
+        "Examples",
+        "the Royal Commission into Institutional Responses to Child Sexual Abuse and the Royal Commission into Aged Care Quality and Safety led to reforms."
+      ]
+    ],
+    "remember": "Royal commissions use strong powers to investigate and recommend, but government decides what to adopt.",
+    "a": {
+      "q": "What power makes a royal commission different from most other inquiries?",
+      "opts": [
+        "It can summon witnesses and require documents",
+        "It can pass laws based on its findings",
+        "It can overturn court decisions it disagrees with",
+        "It can force government to adopt every recommendation"
+      ],
+      "why": "Royal commissions can compel witnesses and documents. They only recommend, so they cannot pass laws, which is the tempting wrong choice.",
+      "clue": "Think about how it gathers evidence."
+    },
+    "b": {
+      "d": 2,
+      "q": "A royal commission into aged care publishes a report with many recommendations. What happens next?",
+      "opts": [
+        "Government decides which recommendations to act on",
+        "Every recommendation automatically becomes law",
+        "The commission passes the changes in parliament",
+        "The courts review and enforce each recommendation"
+      ],
+      "why": "The commission recommends, and government and parliament choose what to adopt. Recommendations do not become law automatically, which is the tempting wrong choice.",
+      "clue": "The commission reports but does not make law."
+    }
+  },
+  "leg-parliamentary-committees": {
+    "title": "Parliamentary committees",
+    "card": [
+      "A parliamentary committee is a small group of members of parliament. It looks into a particular issue and reports back to parliament.",
+      "Members often come from different parties, so a committee can look at an issue with views from across parliament. It can take written submissions, hold public hearings and call witnesses.",
+      "After its inquiry, the committee writes a report with findings and recommendations for law reform. Parliament and the government can then decide whether to act on them.",
+      "A committee can only recommend. It cannot pass a bill or make statute law itself, because only parliament can do that."
+    ],
+    "remember": "A committee investigates and recommends. Parliament decides whether a bill becomes law.",
+    "a": {
+      "q": "What is the main role of a parliamentary committee in law reform?",
+      "opts": [
+        "To investigate an issue and recommend changes to parliament",
+        "To pass a bill into law once its inquiry has finished",
+        "To decide cases that raise a problem in the law",
+        "To make sure the government acts on every recommendation"
+      ],
+      "why": "A committee inquires into an issue and reports with recommendations. It cannot pass bills, because only parliament can do that, so the option about passing a bill is wrong.",
+      "clue": "Think about what a committee can do with its findings."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Victorian parliamentary committee inquires into e-scooter safety and recommends new rules for riders. Who decides whether those rules become statute law?",
+      "opts": [
+        "Parliament, by voting on a bill",
+        "The committee, by approving its report",
+        "The courts, by applying the report",
+        "Voters, by holding a referendum"
+      ],
+      "why": "Only parliament can pass a bill, so the rules become statute law only if parliament votes for one. The committee is tempting because it wrote the recommendations, but it can only recommend. It has no power to pass a bill.",
+      "clue": "Who has the power to pass a bill?"
+    }
+  },
+  "leg-change-constitution": {
+    "title": "Why change the Constitution",
+    "card": [
+      "The Australian Constitution was drafted in the 1890s and took effect in 1901. It is still in force, and there is no set timetable for changing it.",
+      [
+        "Values",
+        "Australian society has changed a great deal since 1901. Changes may be sought so the document reflects what Australians now believe is fair or important."
+      ],
+      [
+        "Rights",
+        "The Constitution protects only a few rights directly, such as freedom of religion. Changes may be sought to protect rights it does not mention."
+      ],
+      [
+        "Ways of governing",
+        "Changes may be sought to update how power is shared or how government is set up, such as recognising local councils or becoming a republic."
+      ]
+    ],
+    "remember": "An 1890s document may not fit today, so change may be sought to reflect new values, protect rights or update how Australia is governed.",
+    "a": {
+      "q": "The Constitution does not mention the Prime Minister. A group wants to add rules about the role. Which reason best fits?",
+      "opts": [
+        "Updating how power is shared in government",
+        "Adding protection for a right it lacks",
+        "Reflecting new beliefs about what is fair",
+        "Meeting a set timetable for regular review"
+      ],
+      "why": "Rules about the Prime Minister's role change how government is set up and how power is shared, so this is about ways of governing. It is not a right held by people, and there is no set timetable that requires review.",
+      "clue": "Would the change affect people's freedoms, or how government is set up?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Jess argues that the Constitution should be changed to protect a right that Australians now widely value but it does not mention. Which idea does her argument rest on?",
+      "opts": [
+        "Ideas about rights have changed since the 1890s",
+        "The Constitution has ceased to be law",
+        "Changes are required every few years",
+        "The Constitution already protects most rights"
+      ],
+      "why": "Jess is saying the 1890s document leaves out a right people now value, so change may be sought to protect it. The Constitution protects only a few rights directly, so her argument does not assume it already protects most of them.",
+      "clue": "Her argument is about a gap between an old document and what people value today."
+    }
+  },
+  "leg-changing-constitution": {
+    "title": "Changing the Constitution",
+    "card": [
+      "The Constitution can be changed only by a referendum, which is a vote of electors on a proposed change. Section 128 of the Constitution sets out the steps.",
+      [
+        "Step one",
+        "The proposed law usually passes both houses of the Commonwealth Parliament. Each house must pass it by an absolute majority, which is more than half of all its members."
+      ],
+      [
+        "Deadlock",
+        "If one house passes it twice, three months apart, and the other house refuses, the Governor-General may still put it to voters."
+      ],
+      [
+        "Step two",
+        "Voters then decide in a referendum. It needs a double majority: a national majority of all voters, and a majority of voters in at least four of the six states."
+      ]
+    ],
+    "remember": "Parliament first, usually both houses, then a double majority of voters: a national one and at least four of the six states.",
+    "a": {
+      "q": "What is a double majority in a referendum?",
+      "opts": [
+        "A national majority and a majority of voters in most states",
+        "A majority in the House and a majority in the Senate",
+        "A majority of voters in every state and territory",
+        "Two separate referendums that both receive a majority"
+      ],
+      "why": "A double majority means a majority of all voters across Australia and a majority of voters in at least four of the six states. The two houses of Parliament vote earlier, in step one, so their votes are not the double majority.",
+      "clue": "Think about what voters must deliver, not Parliament."
+    },
+    "b": {
+      "d": 3,
+      "q": "A proposed change wins 55% of the national vote, but only three of the six states vote yes. What is the result?",
+      "opts": [
+        "It fails, because fewer than four states voted yes",
+        "It passes, because a national majority voted yes",
+        "It passes, because three states is half of six",
+        "It goes back to Parliament to be voted on again"
+      ],
+      "why": "A change needs a national majority and a majority of voters in at least four of the six states. Only three states voted yes, so the second part is not met and it fails despite the national majority. Half of the states is not a majority.",
+      "clue": "Count how many states are needed out of six."
+    }
+  },
+  "leg-makes-referendum-succeed": {
+    "title": "What makes a referendum succeed",
+    "card": [
+      "Very few referendums to change the Constitution have passed. Since 1901, only 8 of 45 have been approved, and success usually needs several factors at once.",
+      [
+        "Bipartisan support",
+        "the major parties back the change and campaign for it. When parties split, voters often hear reasons to vote No."
+      ],
+      [
+        "Public understanding",
+        "voters know what the change means and why it is proposed. Voters who are unsure tend to vote No, even when the parties agree."
+      ],
+      [
+        "Clear, simple question",
+        "the wording is short and easy to follow, so voters can see what a Yes vote would do."
+      ]
+    ],
+    "remember": "Referendums are more likely to pass with major party backing, informed voters and a simple question.",
+    "a": {
+      "q": "Which situation makes a referendum more likely to pass?",
+      "opts": [
+        "Both major parties campaign for a Yes vote",
+        "One major party campaigns hard for a No vote",
+        "Most voters have little information about the change",
+        "The question is long and has several parts"
+      ],
+      "why": "When both major parties back a change, voters hear one message and fewer reasons to vote No. A split between the major parties does the reverse, because it gives voters reasons to doubt the change.",
+      "clue": "Think about whether voters hear one message or two."
+    },
+    "b": {
+      "d": 3,
+      "q": "A government proposes a change. Both major parties support it, but surveys show most voters cannot explain what it would do. What is the most likely outcome?",
+      "opts": [
+        "It may fail, because unsure voters tend to vote No",
+        "It should pass, because party support outweighs doubt",
+        "It may fail, because bipartisan support puts voters off",
+        "It should pass, because unsure voters tend to vote Yes"
+      ],
+      "why": "Party support helps, but it does not make up for voters who do not understand the change. Voters who are unsure tend to vote No, even when the parties agree. Bipartisan support is one factor, not enough on its own.",
+      "clue": "Which of the three factors is missing here?"
+    }
+  },
+  "leg-1967-2023-referendums": {
+    "title": "The 1967 and 2023 referendums",
+    "card": [
+      [
+        "1967",
+        "A referendum in 1967 asked voters to change the Constitution about First Nations people. It passed with a very large Yes vote."
+      ],
+      [
+        "What changed",
+        "First Nations people were to be counted in the census. The Commonwealth could now make special laws for First Nations people in the states."
+      ],
+      [
+        "2023",
+        "The Voice referendum asked whether to add an Aboriginal and Torres Strait Islander Voice, an advisory body, to the Constitution. It did not pass."
+      ],
+      [
+        "Contrast",
+        "The 1967 change had wide support across parties. In 2023 the major parties were split, and the Yes vote did not win a national majority."
+      ]
+    ],
+    "remember": "1967 passed with wide support. The 2023 Voice referendum did not pass.",
+    "a": {
+      "q": "What did the 1967 referendum change?",
+      "opts": [
+        "Census counting and wider Commonwealth law-making power",
+        "A Voice to Parliament was added to the Constitution",
+        "Australia became a republic with an elected president",
+        "Commonwealth lost its power to make laws for the states"
+      ],
+      "why": "After 1967, First Nations people were counted in the census, and the Commonwealth could make special laws for First Nations people in the states. The Voice was the 2023 proposal, and it did not pass.",
+      "clue": "Think of the census and who could make laws."
+    },
+    "b": {
+      "d": 2,
+      "q": "Which statement correctly compares the 1967 and 2023 referendums?",
+      "opts": [
+        "1967 passed, while 2023 did not pass",
+        "Both passed, but 2023 had a smaller Yes vote",
+        "Both failed to win a national majority",
+        "1967 did not pass, while 2023 passed"
+      ],
+      "why": "The 1967 referendum passed with a very large Yes vote. The 2023 Voice referendum did not pass. Reversing the two results is the common mistake.",
+      "clue": "One result was a clear Yes and the other was a No."
+    }
   }
 };

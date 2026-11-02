@@ -1,0 +1,289 @@
+{
+ "id": "mat-median-smoothing",
+ "title": "Median smoothing",
+ "brief": "22575f542ddf",
+ "shortlist": [
+  [
+   "mat-measures-centre",
+   0.413
+  ],
+  [
+   "mat-mean-median-range-context",
+   0.411
+  ],
+  [
+   "mat-spread-box-plots",
+   0.322
+  ],
+  [
+   "mat-features-normal-distribution",
+   0.218
+  ],
+  [
+   "mat-comparing-data-sets",
+   0.202
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.0112,
+  "check": 0.02607,
+  "fix": 0.02352,
+  "recheck": 0.01303
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches median smoothing of a time series (replacing each value with the median of it and its neighbours); they only cover the median as a measure of centre, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: 'Replace each value with the middle of it and its neighbours' drops 'in order' and 'median'. A student could read 'middle' as the middle position, which would just be the original value. That is exactly the mistake the 9 distractor in question a targets. Say 'the median (middle value in order)'.",
+ "rejected": {
+  "title": "Median smoothing",
+  "card": [
+   "Median smoothing replaces each value with the median of it and its neighbours. The median is the middle value when they are put in order.",
+   "For 3-median smoothing, take a value and the one before and after it. Put the three in order and pick the middle one.",
+   "Example: values 4, 20, 6. In order they are 4, 6, 20. The median is 6, so the middle value 20 is replaced by 6.",
+   "A single extreme value is not the middle one, so it does not pull the result. This is why median smoothing resists outliers. It can be done on the graph by eye."
+  ],
+  "remember": "Replace each value with the middle of it and its neighbours, so outliers have little effect.",
+  "a": {
+   "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+   "opts": [
+    "12",
+    "9",
+    "14",
+    "21"
+   ],
+   "why": "In order the values are 9, 12, 21, so the median is 12. The mean of the three is 42 ÷ 3 = 14, but median smoothing uses the middle value in order, not the mean.",
+   "clue": "Put the three values in order first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+   "opts": [
+    "32",
+    "31",
+    "53",
+    "95"
+   ],
+   "why": "The three values are 32, 95 and 31. In order: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+   "clue": "Use the 95 and the two values beside it."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: 'Replace each value with the middle of it and its neighbours' drops 'in order' and 'median'. A student could read 'middle' as the middle position, which would just be the original value. That is exactly the mistake the 9 distractor in question a targets. Say 'the median (middle value in order)'."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Median smoothing",
+     "card": [
+      "Median smoothing replaces each value with the median of it and its neighbours. The median is the middle value when they are put in order.",
+      "For 3-median smoothing, take a value and the one before and after it. Put the three in order and pick the middle one.",
+      "Example: values 4, 20, 6. In order they are 4, 6, 20. The median is 6, so the middle value 20 is replaced by 6.",
+      "A single extreme value is not the middle one, so it does not pull the result. This is why median smoothing resists outliers. It can be done on the graph by eye."
+     ],
+     "remember": "Replace each value with the middle of it and its neighbours, so outliers have little effect.",
+     "a": {
+      "q": "Three consecutive values in a time series are 12, 9 and 15. What is the 3-median smoothed value for the middle point?",
+      "opts": [
+       "12",
+       "9",
+       "15",
+       "12.5"
+      ],
+      "why": "In order the values are 9, 12, 15, so the median is 12. The mean of the three is 12, but the method uses the middle value, not the mean.",
+      "clue": "Put the three values in order first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+      "opts": [
+       "32",
+       "31",
+       "53",
+       "95"
+      ],
+      "why": "The three values are 32, 95 and 31. In order: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+      "clue": "Use the 95 and the two values beside it."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "12",
+      "also_right": []
+     },
+     "b": {
+      "best": "32",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The mean of 12, 9 and 15 is also 12, so a student who wrongly averages the three values still gets the right answer. The question cannot tell median smoothing from mean smoothing, even though the why says it makes that distinction. Values whose mean and median differ would test the idea properly."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both answers are correct. Question a uses values whose mean equals their median, so it does not tell median smoothing from averaging; changing the numbers would fix this."
+    },
+    "flags": [
+     "Question a, other: The mean of 12, 9 and 15 is also 12, so a student who wrongly averages the three values still gets the right answer. The question cannot tell median smoothing from mean smoothing, even though the why says it makes that distinction. Values whose mean and median differ would test the idea properly."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Median smoothing",
+     "card": [
+      "Median smoothing replaces each value with the median of it and its neighbours. The median is the middle value when they are put in order.",
+      "For 3-median smoothing, take a value and the one before and after it. Put the three in order and pick the middle one.",
+      "Example: values 4, 20, 6. In order they are 4, 6, 20. The median is 6, so the middle value 20 is replaced by 6.",
+      "A single extreme value is not the middle one, so it does not pull the result. This is why median smoothing resists outliers. It can be done on the graph by eye."
+     ],
+     "remember": "Replace each value with the middle of it and its neighbours, so outliers have little effect.",
+     "a": {
+      "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+      "opts": [
+       "12",
+       "9",
+       "14",
+       "21"
+      ],
+      "why": "In order the values are 9, 12, 21, so the median is 12. The mean of the three is 42 ÷ 3 = 14, but median smoothing uses the middle value in order, not the mean.",
+      "clue": "Put the three values in order first."
+     },
+     "b": {
+      "d": 3,
+      "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+      "opts": [
+       "32",
+       "31",
+       "53",
+       "95"
+      ],
+      "why": "The three values are 32, 95 and 31. In order: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+      "clue": "Use the 95 and the two values beside it."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "12",
+       "also_right": []
+      },
+      "b": {
+       "best": "32",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "'Replace each value with the middle of it and its neighbours' drops 'in order' and 'median'. A student could read 'middle' as the middle position, which would just be the original value. That is exactly the mistake the 9 distractor in question a targets. Say 'the median (middle value in order)'."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct with one right answer each (12 and 32), and the explanations match. The remember line says 'the middle' without 'in order', which could be misread as the middle position."
+     },
+     "flags": [
+      "Remember, wording: 'Replace each value with the middle of it and its neighbours' drops 'in order' and 'median'. A student could read 'middle' as the middle position, which would just be the original value. That is exactly the mistake the 9 distractor in question a targets. Say 'the median (middle value in order)'."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Median smoothing",
+  "card": [
+   "Median smoothing replaces each value with the median of it and its neighbours. The median is the middle value when they are put in order.",
+   "For 3-median smoothing, take a value and the one before and after it. Put the three in order and pick the middle one.",
+   "Example: values 4, 20, 6. In order they are 4, 6, 20. The median is 6, so the middle value 20 is replaced by 6.",
+   "A single extreme value is not the middle one, so it does not pull the result. This is why median smoothing resists outliers. It can be done on the graph by eye."
+  ],
+  "remember": "Replace each value with the median (the middle value in order) of it and its neighbours, so outliers have little effect.",
+  "a": {
+   "q": "Three consecutive values in a time series are 12, 9 and 21. What is the 3-median smoothed value for the middle point?",
+   "opts": [
+    "12",
+    "9",
+    "14",
+    "21"
+   ],
+   "why": "In order the values are 9, 12, 21, so the median is 12. The middle point's own value, 9, is not the median, because the middle value is found after putting the three in order. The mean of the three is 14, but median smoothing does not use the mean.",
+   "clue": "Put the three values in order first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Daily sales at a Ballarat bakery are 30, 32, 95, 31, 33. What is the 3-median smoothed value for the day with 95?",
+   "opts": [
+    "32",
+    "31",
+    "53",
+    "95"
+   ],
+   "why": "The three values are 32, 95 and 31. In order: 31, 32, 95, so the median is 32. A 3-mean would give about 53, because the outlier pulls it up.",
+   "clue": "Use the 95 and the two values beside it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "12",
+   "also_right": []
+  },
+  "b": {
+   "best": "32",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card defines the median as 'the middle value when they are put in order', then in the example calls 20 'the middle value' (meaning the middle position). Using 'middle value' for both the median and the middle position could confuse students. Saying 'the middle point's value 20' would avoid this."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with single right answers (12 and 32). One minor wording issue: the card uses 'middle value' for both the median and the value in the middle position."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card defines the median as 'the middle value when they are put in order', then in the example calls 20 'the middle value' (meaning the middle position). Using 'middle value' for both the median and the middle position could confuse students. Saying 'the middle point's value 20' would avoid this."
+ ]
+}

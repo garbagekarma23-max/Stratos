@@ -1,0 +1,215 @@
+{
+ "id": "phys-transmission-losses",
+ "title": "Transmission losses",
+ "brief": "9ac3c7f77fa5",
+ "shortlist": [
+  [
+   "phys-transformers",
+   0.329
+  ],
+  [
+   "phys-electric-shock",
+   0.232
+  ],
+  [
+   "phys-force-between-parallel-wires",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00597,
+  "check": 0.01342,
+  "fix": 0.02647,
+  "recheck": 0.01071
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Transformers, is mainly about how transformers work and only touches transmission losses in one bullet and one question, so it teaches a broader idea than the new point and is not a match.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Transmission losses",
+  "card": [
+   "Wires have resistance, so some electrical energy is lost as heat when current flows. The power lost is P = I²R, where I is the current and R is the resistance of the wires.",
+   "The loss depends on the square of the current. Halving the current cuts the power lost to a quarter.",
+   "Power sent is P = VI. For the same power, a higher voltage means a lower current.",
+   "So electricity is sent over long distances at high voltage and low current. This keeps the heat loss in the wires small."
+  ],
+  "remember": "High voltage means low current, and low current means less heat lost.",
+  "a": {
+   "q": "Why is electricity sent along power lines at high voltage?",
+   "opts": [
+    "It lowers the current, so less power is lost as heat",
+    "It lowers the resistance of the wires",
+    "It makes the current flow faster along the wires",
+    "It raises the power the generator produces"
+   ],
+   "why": "For the same power, a higher voltage means a lower current, and the loss is I²R. The resistance of the wires does not change with the voltage, so lowering the resistance is not the reason.",
+   "clue": "Think about what happens to current when voltage rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "A power line carries 100 A and loses 40 kW as heat. The same power is sent at ten times the voltage, so the current is 10 A. How much power is lost in the same line?",
+   "opts": [
+    "0.4 kW",
+    "4 kW",
+    "40 kW",
+    "0.04 kW"
+   ],
+   "why": "The current falls to one tenth, and the loss depends on I², so it falls to one hundredth: 40 kW ÷ 100 = 0.4 kW. A fall to 4 kW would treat the loss as proportional to I, but it depends on the square.",
+   "clue": "The loss depends on the square of the current."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It lowers the current, so less power is lost as heat",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.4 kW",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"High voltage means low current\" drops the card's qualifier \"for the same power\". Without it the line is false in general, since V = IR suggests a higher voltage across a resistance gives a higher current. This is a common student misconception, so the line should read \"For the same power, high voltage means low current...\"."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The physics and both answers are correct (0.4 kW for question b). The remember line leaves out \"for the same power\", which could feed the V = IR misconception, and should be reworded."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"High voltage means low current\" drops the card's qualifier \"for the same power\". Without it the line is false in general, since V = IR suggests a higher voltage across a resistance gives a higher current. This is a common student misconception, so the line should read \"For the same power, high voltage means low current...\"."
+ ],
+ "proposal": {
+  "title": "Transmission losses",
+  "card": [
+   "Wires have resistance, so some electrical energy is lost as heat when current flows. The power lost is P = I²R, where I is the current and R is the resistance of the wires.",
+   "The loss depends on the square of the current. Halving the current cuts the power lost to a quarter.",
+   "Power sent is P = VI. For the same power, a higher voltage means a lower current. The resistance of the wires does not change with the voltage.",
+   "So electricity is sent over long distances at high voltage and low current. This keeps the heat loss in the wires small."
+  ],
+  "remember": "For the same power, high voltage means low current, and low current means less heat lost.",
+  "a": {
+   "q": "Why is electricity sent along power lines at high voltage?",
+   "opts": [
+    "It lowers the current, so less power is lost as heat",
+    "It lowers the resistance, so the wires heat up less",
+    "It raises the current, so more power reaches homes",
+    "It raises the generator's output, so homes get more power"
+   ],
+   "why": "For the same power, a higher voltage means a lower current, and the loss is I²R. The resistance of the wires does not change with the voltage, so lowering the resistance is not the reason.",
+   "clue": "Think about what happens to current when voltage rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "A power line carries 100 A and loses 40 kW as heat. The same power is sent at ten times the voltage, so the current is 10 A. How much power is lost in the same line?",
+   "opts": [
+    "0.4 kW",
+    "4 kW",
+    "40 kW",
+    "0.04 kW"
+   ],
+   "why": "The current falls to one tenth, and the loss depends on I², so it falls to one hundredth: 40 kW ÷ 100 = 0.4 kW. A fall to 4 kW would treat the loss as proportional to I, but it depends on the square.",
+   "clue": "The loss depends on the square of the current."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It lowers the current, so less power is lost as heat",
+    "also_right": []
+   },
+   "b": {
+    "best": "0.4 kW",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"High voltage means low current\" drops the card's qualifier \"for the same power\". Without it the line is false in general, since V = IR suggests a higher voltage across a resistance gives a higher current. This is a common student misconception, so the line should read \"For the same power, high voltage means low current...\"."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"High voltage means low current\" drops the card's qualifier \"for the same power\". Without it the line is false in general, since V = IR suggests a higher voltage across a resistance gives a higher current. This is a common student misconception, so the line should read \"For the same power, high voltage means low current...\"."
+  ]
+ },
+ "final": {
+  "title": "Transmission losses",
+  "card": [
+   "Wires have resistance, so some electrical energy is lost as heat when current flows. The power lost is P = I²R, where I is the current and R is the resistance of the wires.",
+   "The loss depends on the square of the current. Halving the current cuts the power lost to a quarter.",
+   "Power sent is P = VI. For the same power, a higher voltage means a lower current. The resistance of the wires does not change with the voltage.",
+   "So electricity is sent over long distances at high voltage and low current. This keeps the heat loss in the wires small."
+  ],
+  "remember": "For the same power, high voltage means low current, and low current means less heat lost.",
+  "a": {
+   "q": "Why is electricity sent along power lines at high voltage?",
+   "opts": [
+    "It lowers the current, so less power is lost as heat",
+    "It lowers the resistance, so the wires heat up less",
+    "It raises the current, so more power reaches homes",
+    "It raises the generator's output, so homes get more power"
+   ],
+   "why": "For the same power, a higher voltage means a lower current, and the loss is I²R. The resistance of the wires does not change with the voltage, so lowering the resistance is not the reason.",
+   "clue": "Think about what happens to current when voltage rises."
+  },
+  "b": {
+   "d": 3,
+   "q": "A power line carries 100 A and loses 40 kW as heat. The same power is sent at ten times the voltage, so the current is 10 A. How much power is lost in the same line?",
+   "opts": [
+    "0.4 kW",
+    "4 kW",
+    "40 kW",
+    "0.04 kW"
+   ],
+   "why": "The current falls to one tenth, and the loss depends on I², so it falls to one hundredth: 40 kW ÷ 100 = 0.4 kW. A fall to 4 kW would treat the loss as proportional to I, but it depends on the square.",
+   "clue": "The loss depends on the square of the current."
+  }
+ },
+ "cleared_by": "recheck"
+}

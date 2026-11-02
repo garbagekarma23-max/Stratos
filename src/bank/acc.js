@@ -1576,5 +1576,1498 @@ MADE_BANKS.acc = {
       "why": "The purchase date shows when each truck was bought, so it shows which is oldest. The price paid shows the cost, not when the truck was bought, and a cheaper truck is not always an older one.",
       "clue": "Age is about when, not how much."
     }
+  },
+  "acc-qualitative-characteristics": {
+    "title": "Qualitative characteristics",
+    "card": [
+      "Qualitative characteristics describe what makes financial information useful. Two are fundamental: information must be relevant and a faithful representation.",
+      [
+        "Relevant",
+        "it can make a difference to a decision, for example by helping a user predict the future or check past results."
+      ],
+      ["Faithful representation", "it shows what really happened, in a complete, neutral way and free from error."],
+      [
+        "Enhancing",
+        "information is better when it is comparable (can be set beside other years or businesses), verifiable (others can check it), timely (available in time to be used) and understandable (clear to users)."
+      ]
+    ],
+    "remember": "Useful information is relevant and a faithful representation. Comparable, verifiable, timely and understandable make it better.",
+    "a": {
+      "q": "A bank manager reads a business's report and finds it shows the true position, complete and without bias. Which characteristic is this?",
+      "opts": ["Faithful representation", "Relevance", "Timeliness", "Comparability"],
+      "why": "Showing what really happened in a complete and neutral way is faithful representation. Relevance is about making a difference to a decision, not about whether the report is accurate.",
+      "clue": "Think about whether the report matches what really happened."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jarrah Hardware in Bendigo gives its owner the June sales report in November, after the owner has already chosen to hire more staff. Which characteristic is the report mainly lacking?",
+      "opts": ["Timeliness", "Verifiability", "Comparability", "Understandability"],
+      "why": "The report arrived after the decision was made, so it could not be used. That is a lack of timeliness. Relevance is also affected, but timeliness is the enhancing characteristic that explains the problem here.",
+      "clue": "When did the owner need the information?"
+    }
+  },
+  "acc-assumptions-accounting": {
+    "title": "Assumptions of accounting",
+    "card": [
+      "The entity assumption treats the business as separate from its owner. Only the business's transactions are recorded, not the owner's personal ones.",
+      "The going concern assumption treats the business as continuing to operate into the foreseeable future, rather than being about to close down.",
+      "The period assumption divides the life of the business into set periods, such as a month or a year, so reports can be prepared. The accrual basis assumption records revenue when it is earned and expenses when they are incurred (used up), not when cash is received or paid.",
+      "The monetary unit assumption means only items that can be measured in dollars are recorded. Items that cannot be given a dollar value stay out of the records."
+    ],
+    "remember": "Assumptions set what is recorded and when: separate entity, ongoing, in periods, when earned or incurred, in dollars.",
+    "a": {
+      "q": "Under the accrual basis, when is revenue from a service recorded?",
+      "opts": [
+        "When the service is provided",
+        "When the customer pays cash",
+        "When the invoice is filed",
+        "When the period ends"
+      ],
+      "why": "The accrual basis records revenue when it is earned, which is when the service is done. Recording it when cash arrives is the tempting mistake, because the accrual basis does not depend on when cash moves.",
+      "clue": "Think about when the revenue is earned, not when money moves."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a florist shop in Geelong. She pays her family's holiday from the shop's bank account. Which assumption means this should not be treated as a business expense?",
+      "opts": ["Entity", "Going concern", "Period", "Monetary unit"],
+      "why": "The entity assumption keeps the owner's personal affairs separate from the business. A family holiday is personal, so it is not a business expense. The monetary unit assumption is about measuring in dollars, not about whose transaction it is.",
+      "clue": "Whose transaction is it: the business's or the owner's?"
+    }
+  },
+  "acc-elements-financial-reports": {
+    "title": "Elements of financial reports",
+    "card": [
+      "An asset is a resource the business controls that is expected to bring future economic benefits, such as cash or equipment. A liability is a present obligation to give up economic benefits, such as a loan or accounts payable.",
+      "Assets and liabilities are current if expected to be used, sold or paid within 12 months, and non-current if longer. Owner's equity is the owner's claim: assets minus liabilities.",
+      [
+        "Revenue",
+        "an inflow of economic benefits, as an increase in assets or a decrease in liabilities, that increases owner's equity, other than capital contributions. It includes non-trading items such as interest or rent received."
+      ],
+      [
+        "Expense",
+        "an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. Buying equipment is not an expense: cash becomes another asset, so equity does not change."
+      ]
+    ],
+    "remember": "Revenue raises owner's equity and expenses lower it. Current means within 12 months, non-current means longer.",
+    "a": {
+      "q": "A business owes a supplier $4,000, due in 30 days. How is this classified?",
+      "opts": ["Current liability", "Non-current liability", "Current asset", "Expense"],
+      "why": "It is an amount owed, so it is a liability. It is due within 12 months, so it is current. A non-current liability would be due after more than 12 months.",
+      "clue": "Does the business owe it or own it, and when is it due?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena's Florist in Geelong earns $300 interest on its business bank account. How should the interest be classified?",
+      "opts": [
+        "Revenue, as it increases owner's equity",
+        "Not revenue, as it does not come from sales",
+        "A capital contribution, as it adds to equity",
+        "A current liability owed to the bank"
+      ],
+      "why": "The interest is an inflow of economic benefits that increases owner's equity, and it did not come from the owner, so it is revenue. Revenue is not limited to sales, so the claim that it is not revenue is wrong.",
+      "clue": "Revenue is not only income from selling goods."
+    }
+  },
+  "acc-ethical-considerations": {
+    "title": "Ethical considerations",
+    "card": [
+      "Ethics is about what is right and fair, not only what the law allows. Business owners and accountants make decisions that affect many people.",
+      [
+        "Honesty in reporting",
+        "reports should show the true position and performance of the business. They should not hide debts or overstate profit to mislead owners, lenders or the tax office."
+      ],
+      [
+        "Fair treatment",
+        "staff should be paid what they are owed and work in safe conditions. Suppliers should be paid on the agreed terms and not misled about when payment will come."
+      ],
+      [
+        "Environment and community",
+        "a business can affect the environment through waste or pollution, and the community through jobs and local impact. A good decision weighs these effects as well as profit."
+      ]
+    ],
+    "remember": "Ethical decisions weigh honesty, fair treatment of staff and suppliers, and effects on the environment and community, not just profit.",
+    "a": {
+      "q": "Which action shows honesty in reporting?",
+      "opts": [
+        "Recording a large unpaid loan as a liability",
+        "Delaying a loan record until after the year ends",
+        "Leaving out a debt when the owner is selling",
+        "Listing sales that have not yet happened as income"
+      ],
+      "why": "Recording the loan shows the true position of the business, so users of the report are not misled. The other options hide a debt or inflate results, which gives readers a false picture.",
+      "clue": "Which action gives readers the true picture?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bakery in Geelong. Cash is tight, so she pays her flour supplier 60 days late with no warning, though the agreed terms are 30 days. Which ethical consideration does this mainly break?",
+      "opts": ["Fair treatment of suppliers", "Honesty in reporting", "Effects on the environment", "Fair treatment of staff"],
+      "why": "The supplier is not being paid on the agreed terms and was not told, so this is unfair treatment of a supplier. Honesty in reporting is the tempting choice, but nothing here says the reports were changed or misstated.",
+      "clue": "Who is affected by the late payment?"
+    }
+  },
+  "acc-double-entry-accounting": {
+    "title": "Double entry accounting",
+    "card": [
+      "Every transaction affects at least two accounts. A business records each one with at least one debit and at least one credit.",
+      "The total of the debits must equal the total of the credits for every transaction. The two sides are always equal in value.",
+      "Some transactions have more than two parts. A sale of goods might be recorded with one debit and two credits, as long as the debit total equals the credit total.",
+      "Because each transaction is balanced, the ledger as a whole stays in balance. Recording only one side would break this."
+    ],
+    "remember": "Every transaction needs debits and credits of equal total value.",
+    "a": {
+      "q": "Why does double entry accounting keep the ledger in balance?",
+      "opts": [
+        "Each transaction has debits and credits of equal total value",
+        "Each transaction is recorded in only one account at a time",
+        "Each account is made to finish the period with no balance",
+        "The owner checks each transaction before it is entered"
+      ],
+      "why": "Every transaction is recorded with debits equal to credits, so adding it never upsets the balance. Recording in one account only would break the balance, not keep it.",
+      "clue": "Think about the two sides of each single transaction."
+    },
+    "b": {
+      "d": 2,
+      "q": "Mia's Bikes in Geelong records a sale with a debit of $300 to Cash and a credit of $200 to Sales. What is needed for the entry to follow double entry?",
+      "opts": [
+        "Further credits of $100 in total",
+        "Further debits of $100 in total",
+        "Nothing, as the entry is already complete",
+        "The $200 credit to be removed"
+      ],
+      "why": "Debits are $300 but credits are only $200. A further credit of $100 in total is needed so both sides equal $300. Adding a debit would widen the gap.",
+      "clue": "Which side is currently smaller?"
+    }
+  },
+  "acc-debit-credit-rules": {
+    "title": "Debit and credit rules",
+    "card": [
+      "Every account has a debit side (left) and a credit side (right). Whether a debit raises or lowers an account depends on the type of account.",
+      ["Debit increases", "assets and expenses. A credit decreases them."],
+      ["Credit increases", "liabilities, owner's equity and revenue. A debit decreases them."],
+      "Cash received from a customer for a sale: debit Cash (an asset rises) and credit Sales (revenue rises). Paying wages: debit Wages (an expense rises) and credit Cash (an asset falls)."
+    ],
+    "remember": "Debit raises assets and expenses. Credit raises liabilities, owner's equity and revenue.",
+    "a": {
+      "q": "Which entry correctly records a business paying its electricity bill in cash?",
+      "opts": [
+        "Debit Electricity expense, credit Cash",
+        "Debit Cash, credit Electricity expense",
+        "Credit Electricity expense, credit Cash",
+        "Debit Electricity expense, debit Cash"
+      ],
+      "why": "Electricity is an expense, so it rises with a debit. Cash is an asset and falls, so it is credited. Debiting Cash would wrongly increase the cash held.",
+      "clue": "An expense rises on the debit side, and cash goes out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Bikes borrows $5,000 from a bank and the money is paid into its bank account. Which entry records this?",
+      "opts": [
+        "Debit Bank, credit Loan payable",
+        "Debit Loan payable, credit Bank",
+        "Debit Bank, credit Owner's equity",
+        "Credit Bank, credit Loan payable"
+      ],
+      "why": "The bank account is an asset and rises, so it is debited. The loan is a liability and rises, so it is credited. Crediting Owner's equity is tempting because it also rises with a credit, but the money is borrowed and not put in by the owner.",
+      "clue": "Is the money owed back to someone outside the business?"
+    }
+  },
+  "acc-general-journal": {
+    "title": "The general journal",
+    "card": [
+      "The general journal is the book of original entry: each transaction is recorded here first, in date order, before it is posted to the ledger. Each entry shows the date, the accounts debited and credited, the amounts and a short narration.",
+      "In Unit 3, every transaction is recorded in the general journal. This includes cash and credit sales and purchases, returns, drawings, stock used for advertising, assets the owner contributes and corrections.",
+      "Drawings are cash or stock the owner takes for personal use: debit Drawings, credit Cash at Bank or Inventory. Stock used for advertising is debited to Advertising and credited to Inventory.",
+      "A correction is a new entry that fixes an earlier mistake, so the original entry is not erased. It reverses the wrong account and records the right one."
+    ],
+    "remember": "Journal first, ledger second: every transaction and every correction is a dated entry with equal debits and credits.",
+    "a": {
+      "q": "Priya owns a shoe shop. She takes a pair of shoes from inventory for her own use. Which journal entry records this?",
+      "opts": [
+        "Debit Drawings, credit Inventory",
+        "Debit Inventory, credit Drawings",
+        "Debit Advertising, credit Inventory",
+        "Debit Drawings, credit Capital"
+      ],
+      "why": "Taking stock for personal use is drawings, so Drawings is debited and Inventory, an asset that falls, is credited. Debit Advertising is tempting, but that is for stock used to promote the business, not for the owner's personal use.",
+      "clue": "Who benefits from the shoes, the business or the owner?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Leo's Cycles debited Repairs Expense instead of Advertising Expense for a $200 poster bill paid by cash at bank. How is this fixed in the journal?",
+      "opts": [
+        "Debit Advertising Expense, credit Repairs Expense",
+        "Debit Repairs Expense, credit Advertising Expense",
+        "Debit Advertising Expense, credit Cash at Bank",
+        "Erase the original entry and write it again"
+      ],
+      "why": "The wrong expense was debited, so it must be credited to cancel it, and the right expense is debited. Crediting Cash at Bank would record the payment a second time, since cash was already recorded correctly. The original entry stays, and a new entry corrects it.",
+      "clue": "Cash was right. Only the expense account was wrong."
+    }
+  },
+  "acc-special-journals-ledger": {
+    "title": "The general ledger",
+    "card": [
+      "The general ledger is the book that holds a separate account for each item, such as Cash at Bank, Inventory, Sales or Rent Expense. Each account is drawn as a T, with debits on the left and credits on the right.",
+      "Posting means copying each line of a journal entry into the ledger. The debit goes to the left side of one account and the credit goes to the right side of another. The journal is where the entry is first recorded.",
+      "Each posted entry shows the date, the name of the other account involved and the amount. New entries are added without changing earlier ones.",
+      "At the end of the period, each T account is balanced. The balance is the difference between the two sides, and the larger side tells you if it is a debit or credit balance. It is carried down (c/d) and brought down (b/d) to open the next period."
+    ],
+    "remember": "One T account per item. Posting moves journal entries in, and balancing finds each account's balance.",
+    "a": {
+      "q": "Zara's Pet Supplies pays $400 cash for shop rent. The journal entry is complete. What is posting this entry to the ledger?",
+      "opts": [
+        "Copying the debit and credit into their own accounts",
+        "Adding up all the accounts to check they balance",
+        "Writing the entry in the journal for the first time",
+        "Closing the Rent Expense account at the end of the year"
+      ],
+      "why": "Posting means copying each part of a journal entry into the ledger account it belongs to. Writing the entry in the journal is the step before posting, so it is not posting.",
+      "clue": "Posting happens after the journal entry is written."
+    },
+    "b": {
+      "d": 2,
+      "q": "At the end of the month, Ben's Bikes balances its Cash at Bank account. It has debits of $5,000 and credits of $3,200. What is its balance?",
+      "opts": ["$1,800 debit", "$1,800 credit", "$8,200 debit", "$8,200 credit"],
+      "why": "The balance is the difference between the two sides: $5,000 minus $3,200 is $1,800. The debit side is larger, so it is a debit balance. Adding the two sides gives $8,200, which is not a balance.",
+      "clue": "Find the difference between the two sides, then see which side is larger."
+    }
+  },
+  "acc-recording-gst": {
+    "title": "Recording GST",
+    "card": [
+      "GST is a 10% tax added to most goods and services in Australia. A business collects it from customers and pays it on its own purchases.",
+      [
+        "GST collected",
+        "GST charged on sales. It is owed to the tax office, so it is recorded as a credit in the GST Clearing account."
+      ],
+      [
+        "GST paid",
+        "GST paid on purchases. The business can claim it back, so it is recorded as a debit in the GST Clearing account."
+      ],
+      "If the credits (GST collected) are larger than the debits (GST paid), the account has a credit balance. The business owes that amount to the tax office. If the debits are larger, the tax office owes the business a refund."
+    ],
+    "remember": "GST Clearing: credit for GST collected, debit for GST paid. The balance shows who owes whom.",
+    "a": {
+      "q": "Priya's Cycles sells a bike for $1100 including $100 GST. How is the $100 GST recorded in the GST Clearing account?",
+      "opts": [
+        "Credit, because it is owed to the tax office",
+        "Debit, because it is owed to the tax office",
+        "Credit, because it can be claimed back",
+        "Debit, because it can be claimed back"
+      ],
+      "why": "The $100 was collected from the customer on a sale, and the business must pass it on to the tax office. Money owed is recorded as a credit. A debit is for GST paid on purchases, which can be claimed back.",
+      "clue": "Was the GST charged on a sale or paid on a purchase?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In one quarter, Tom's Timber has $6000 in GST collected and $7500 in GST paid. What does the GST Clearing account show?",
+      "opts": [
+        "A debit balance of $1500, so a refund is due to Tom",
+        "A credit balance of $1500, so Tom owes the tax office",
+        "A debit balance of $6000, so a refund is due to Tom",
+        "A credit balance of $7500, so Tom owes the tax office"
+      ],
+      "why": "GST paid ($7500) is debited and GST collected ($6000) is credited. The debits are larger by $1500, so the account has a debit balance and the tax office owes Tom a refund. A credit balance would mean Tom had collected more than he paid.",
+      "clue": "Subtract the smaller total from the larger, then see which side is larger."
+    }
+  },
+  "acc-trial-balance": {
+    "title": "The trial balance",
+    "card": [
+      "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+      "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+      "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+      "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+    ],
+    "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+    "a": {
+      "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What does this show?",
+      "opts": [
+        "The debit and credit totals are equal",
+        "Every account in the ledger has the correct balance",
+        "No transaction has been left out of the ledger",
+        "Each entry was posted to the correct account"
+      ],
+      "why": "Equal totals show only that the debit and credit totals agree. A transaction left out or posted to a wrong account can still be present, so the other options claim more than the trial balance can prove.",
+      "clue": "Equal totals test one thing only."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+      "opts": [
+        "Equal totals, so the error is not detected",
+        "Debits higher than credits by $300",
+        "Credits higher than debits by $300",
+        "Debits higher than credits by $600"
+      ],
+      "why": "The debit and credit were both $300, so the totals still agree. The debit went to the wrong expense account, and a trial balance cannot detect that. A $300 difference would need an error such as a debit posted with no matching credit.",
+      "clue": "Were the debit and credit amounts equal?"
+    }
+  },
+  "acc-inventory-ledger": {
+    "title": "Inventory in the ledger",
+    "card": [
+      "With a perpetual system, the Inventory account in the ledger is updated with every purchase and sale. The balance shows the cost of stock that should be on hand.",
+      "An inventory card backs up the ledger. There is one card for each item, showing units and cost in, out and on hand. FIFO or identified cost is used to value each sale.",
+      "The total value on hand across all the inventory cards must equal the balance of the Inventory account. This is how the business checks that its records agree.",
+      "A write-down or a stock loss, such as theft or damage found in a stocktake, is recorded in both places. The ledger account is reduced and the inventory card is adjusted."
+    ],
+    "remember": "Cards and ledger must agree, so any change to stock is recorded in both.",
+    "a": {
+      "q": "Under a perpetual system, a business totals the value of stock on hand from every item's card. Which ledger balance should this match?",
+      "opts": [
+        "The Inventory account balance",
+        "The Cost of sales account balance",
+        "The Sales revenue account balance",
+        "The Accounts payable account balance"
+      ],
+      "why": "The cards are the detailed record behind the Inventory account, so the total on hand must match its balance. Cost of sales is the cost of goods already sold, not the stock still on hand.",
+      "clue": "Is the total about stock sold or stock still held?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's gift shop in Bendigo uses a perpetual system. A stocktake finds that 5 vases on hand have been stolen. How should the loss be recorded?",
+      "opts": [
+        "Reduce both the Inventory account and the inventory card",
+        "Reduce the Inventory account only, as cards are not changed",
+        "Reduce the inventory card only, as the ledger is not changed",
+        "Record nothing until the next sale of vases takes place"
+      ],
+      "why": "A stock loss changes the stock on hand, so it is recorded in both the ledger and the card. If only one is changed, the cards and the ledger no longer agree. Waiting for a sale would leave both overstated.",
+      "clue": "The two records must still agree afterwards."
+    }
+  },
+  "acc-product-period-costs": {
+    "title": "Product and period costs",
+    "card": [
+      [
+        "Product cost",
+        "a cost of getting goods to the business and ready for sale, such as the purchase price and freight in. It is added to the cost of inventory."
+      ],
+      [
+        "Period cost",
+        "any other cost of running the business, such as rent, wages and advertising. It is expensed in the period it occurs."
+      ],
+      "A product cost sits in inventory, an asset, until the goods are sold. Then it becomes cost of sales, an expense.",
+      "Freight in is the cost of delivering goods to the business. Freight out is the cost of delivering goods to customers, so it is a period cost."
+    ],
+    "remember": "Costs to get goods ready for sale go into inventory. All other costs are expensed as they occur.",
+    "a": {
+      "q": "Which cost is a product cost for a trading business?",
+      "opts": [
+        "Freight paid to bring goods from the supplier",
+        "Wages paid to the shop assistants",
+        "Advertising for the end of year sale",
+        "Delivery of goods to a customer's home"
+      ],
+      "why": "Freight in is a cost of getting goods to the business ready for sale, so it is added to inventory. Delivery to a customer happens after the goods are ready for sale, so it is a period cost, like the wages and advertising.",
+      "clue": "Which cost happens before the goods are ready to sell?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Pantry in Ballarat buys goods for $8000 and pays $600 freight in and $400 freight out. At what cost is the inventory recorded?",
+      "opts": ["$8600", "$8000", "$9000", "$8400"],
+      "why": "Freight in is a product cost, so inventory is $8000 + $600 = $8600. Freight out is a period cost and is expensed, so adding it to give $9000 is wrong.",
+      "clue": "Only costs to get the goods ready for sale are added."
+    }
+  },
+  "acc-lower-cost-net-realisable": {
+    "title": "Lower of cost and net realisable value",
+    "card": [
+      "Inventory is reported at the lower of its cost and its net realisable value (NRV). This stops inventory being shown at more than the business can expect to recover.",
+      [
+        "NRV",
+        "the expected selling price less any costs needed to make the sale, such as delivery or sales commission."
+      ],
+      "If NRV is below cost, the inventory is written down to NRV. The write-down is recorded as an expense, and the inventory account falls.",
+      "If NRV is above cost, inventory stays at cost. A gain is not recorded until the goods are sold."
+    ],
+    "remember": "Compare cost with NRV and use the lower. Write down a fall, but never value inventory above cost.",
+    "a": {
+      "q": "Which description matches net realisable value?",
+      "opts": [
+        "Expected selling price less the costs of making the sale",
+        "Expected selling price plus the costs of making the sale",
+        "The price the business paid, plus freight in",
+        "The price the business would pay to replace the goods"
+      ],
+      "why": "NRV is what the business can expect to recover from a sale after selling costs are taken off. Adding the selling costs is wrong, because they reduce the amount the business keeps.",
+      "clue": "Look at the second card line, and ask whether selling costs help or hurt the business."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's Cycles in Geelong holds 10 bikes costing $400 each. Each can be sold for $480, but selling costs are $100 per bike. At what value are the 10 bikes reported?",
+      "opts": [
+        "$3,800, the NRV of $380 per bike",
+        "$4,000, the cost of $400 per bike",
+        "$4,800, the selling price of $480 per bike",
+        "$800, the profit margin of $80 per bike"
+      ],
+      "why": "NRV per bike is $480 less $100, which is $380. This is below the cost of $400, so the bikes are written down to $3,800 in total. Cost of $4,000 is tempting because the selling price is above cost, but selling costs must come off first.",
+      "clue": "Take selling costs off the price before comparing it with cost."
+    }
+  },
+  "acc-allowance-doubtful-debts": {
+    "title": "Allowance for doubtful debts",
+    "card": [
+      "Some customers who buy on credit will not pay. At the end of the period, the business estimates how much of its accounts receivable will not be collected.",
+      "The estimate is recorded as an expense, called doubtful debts expense. This matches the cost to the period in which the credit sales were made.",
+      "The other side of the entry is a credit to the allowance for doubtful debts. This is a contra asset account: it sits against accounts receivable instead of changing it.",
+      "The balance sheet shows accounts receivable in full, then deducts the allowance. The result, net accounts receivable, is the amount expected to be collected. No named customer's account is changed."
+    ],
+    "remember": "Doubtful debts are an expense now. The allowance lowers net receivables, and no customer's account is changed.",
+    "a": {
+      "q": "At balance date, Ravi's Hardware in Geelong estimates that $2 000 of its accounts receivable will not be collected. How is this recorded?",
+      "opts": [
+        "Debit doubtful debts expense, credit allowance",
+        "Debit allowance, credit accounts receivable",
+        "Debit doubtful debts expense, credit accounts receivable",
+        "Debit accounts receivable, credit doubtful debts expense"
+      ],
+      "why": "The estimate is an expense, so doubtful debts expense is debited, and the allowance for doubtful debts is credited. Crediting accounts receivable is tempting, but that would change customers' accounts, and no particular customer's debt has been dealt with yet.",
+      "clue": "Has Ravi worked out which customer will not pay?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Cycles in Bendigo has accounts receivable of $30 000. At balance date it records an allowance for doubtful debts of $1 500. What net accounts receivable does the balance sheet report?",
+      "opts": [
+        "$28 500, receivables less the allowance",
+        "$30 000, the total owed by customers",
+        "$31 500, receivables plus the allowance",
+        "$1 500, the estimate of doubtful debts"
+      ],
+      "why": "Net accounts receivable is $30 000 less the $1 500 allowance, which is $28 500, the amount Priya expects to collect. The $30 000 is tempting because it does appear on the balance sheet, but it is the gross figure before the allowance is deducted.",
+      "clue": "Net means after the contra account is taken off."
+    }
+  },
+  "acc-writing-off-bad-debts": {
+    "title": "Writing off bad debts",
+    "card": [
+      "In the next period, a customer may be known to be unable to pay. The business then writes off that debt as a bad debt, using the allowance for doubtful debts made at the end of the last period.",
+      "The write-off debits Allowance for doubtful debts and credits Accounts receivable (and the customer's account).",
+      "It is not a new expense. The expense was recorded when the allowance was set up, so recording it again would count it twice.",
+      "The write-off lowers both accounts receivable and the allowance by the same amount. The net amount expected to be collected stays the same."
+    ],
+    "remember": "A write-off lowers accounts receivable and the allowance by the same amount, with no new expense.",
+    "a": {
+      "q": "In the next period, Tran Traders writes off a customer's debt of $400 against its allowance. Which entry is made?",
+      "opts": [
+        "Dr Allowance for doubtful debts, Cr Accounts receivable",
+        "Dr Bad debts expense, Cr Accounts receivable",
+        "Dr Accounts receivable, Cr Allowance for doubtful debts",
+        "Dr Bad debts expense, Cr Allowance for doubtful debts"
+      ],
+      "why": "The write-off removes the debt from accounts receivable and uses up part of the allowance. The expense was already recorded when the allowance was created, so debiting Bad debts expense again would count it twice.",
+      "clue": "The expense was recorded in the previous period."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiah's Cycles has accounts receivable of $20,000 and an allowance of $1,500. It writes off a $600 debt against the allowance. What is the net amount expected to be collected afterwards?",
+      "opts": [
+        "$18,500, the same as before the write-off",
+        "$17,900, which is $600 lower than before",
+        "$19,400, which is $600 higher than before",
+        "$18,500, which is $600 lower than before"
+      ],
+      "why": "Before, net receivables are $20,000 less $1,500, which is $18,500. After the write-off, receivables are $19,400 and the allowance is $900, so net is still $18,500. The $17,900 option wrongly treats the write-off as a new expense that lowers net receivables.",
+      "clue": "Both accounts fall by the same amount."
+    }
+  },
+  "acc-turnover-indicators": {
+    "title": "Turnover indicators",
+    "card": [
+      [
+        "Inventory turnover",
+        "shows how many days, on average, stock sits before it is sold. It compares average inventory with cost of sales, then converts the result to days."
+      ],
+      [
+        "Receivables turnover",
+        "shows how many days, on average, customers take to pay what they owe. It compares average accounts receivable with credit sales, then converts the result to days."
+      ],
+      [
+        "Payables turnover",
+        "shows how many days, on average, the business takes to pay its suppliers. It compares average accounts payable with credit purchases, then converts the result to days."
+      ],
+      "Each result is in days. A business wants stock sold and customers paying quickly. Taking longer to pay suppliers keeps cash in the business for longer, but a very long time may harm supplier relationships."
+    ],
+    "remember": "Each turnover indicator counts days: stock held, customers paying and the business paying.",
+    "a": {
+      "q": "A business reports that its accounts receivable turnover rose from 30 days to 45 days. What does this show?",
+      "opts": [
+        "Customers are taking longer to pay the business",
+        "Customers are paying the business more quickly",
+        "The business is taking longer to pay its suppliers",
+        "Stock is sitting in the store for longer before sale"
+      ],
+      "why": "Accounts receivable turnover counts the days customers take to pay. A rise from 30 to 45 days means customers are slower. Stock days belong to inventory turnover, and the days the business takes to pay belong to payables turnover.",
+      "clue": "Receivables are money owed by customers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Harbour Hardware in Geelong had an inventory turnover of 40 days last year and has one of 55 days this year. What is the most likely meaning?",
+      "opts": [
+        "Stock is taking longer to sell than it did last year",
+        "Stock is selling faster than it did last year",
+        "The business is paying its suppliers more slowly",
+        "Customers are taking longer to pay their accounts"
+      ],
+      "why": "Inventory turnover in days shows how long stock sits before it is sold. A rise from 40 to 55 days means stock is sitting longer, so it sells more slowly. The option 'Stock is selling faster' reverses the change, as faster sales would mean fewer days.",
+      "clue": "Think about what the days in this indicator are counting."
+    }
+  },
+  "acc-managing-inventory-credit": {
+    "title": "Managing inventory and credit",
+    "card": [
+      "Internal controls are checks that protect assets and keep records reliable. Examples are regular stocktakes, separate people for ordering and receiving stock, and credit checks on new customers.",
+      "Non-financial information is not measured in dollars. Examples are customer complaints, late deliveries, stock damaged in storage and how long customers wait for service. It can show problems that the financial reports do not.",
+      "To manage credit, a business can tighten its credit terms, such as shortening the time customers have to pay. It can also offer a discount for early payment. Customers then pay sooner, which can lower the days they take to pay.",
+      "To manage inventory, a business can improve stock control. For example, it can order smaller amounts more often or stop buying slow-moving lines. Less stock sits unsold, which can lower the days stock is held."
+    ],
+    "remember": "Controls protect assets and records, non-financial information shows what reports miss, and credit and stock strategies can cut days.",
+    "a": {
+      "q": "Which action is an example of tightening credit terms?",
+      "opts": [
+        "Cutting the time customers have to pay an invoice",
+        "Holding more stock so that popular items never run out",
+        "Counting stock on shelves each month against the records",
+        "Recording customer complaints about late deliveries"
+      ],
+      "why": "Giving customers less time to pay is a tighter credit term, so cash is collected sooner. Counting stock is tempting, but it is an internal control that checks records, not a change to how customers pay.",
+      "clue": "Which one changes what customers must do to pay?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's hardware store in Geelong sells on credit. Her records show customers are taking longer and longer to pay. Which step is most likely to fix this?",
+      "opts": [
+        "Offer a small discount to customers who pay early",
+        "Order smaller amounts of stock more often",
+        "Hold a full stocktake at the end of each month",
+        "Ask staff to log late deliveries from suppliers"
+      ],
+      "why": "A discount for early payment gives customers a reason to pay sooner, which can lower the days they take to pay. Ordering smaller amounts more often is tempting, but it is stock control, so it affects how long stock is held, not how long customers take to pay.",
+      "clue": "The problem is customers paying slowly, not stock sitting unsold."
+    }
+  },
+  "acc-balancing-ledger": {
+    "title": "Balancing the ledger",
+    "card": [
+      "At the end of the period, each asset, liability and owner's equity account in the general ledger is balanced. This means finding the difference between the debit side and the credit side.",
+      "Add up both sides. Put the difference on the smaller side as the balancing figure, so both totals are equal. Label it Balance c/d (carried down).",
+      "Write the same amount on the opposite side below the totals as Balance b/d (brought down). This is the opening balance of the next period.",
+      "Assets normally have a debit balance. Liabilities and owner's equity normally have a credit balance."
+    ],
+    "remember": "Balance c/d closes the old period. Balance b/d opens the new one on the opposite side.",
+    "a": {
+      "q": "An account has debits totalling $9,000 and credits totalling $6,500 at the end of the period. What is the balancing entry?",
+      "opts": [
+        "Credit side: Balance c/d $2,500",
+        "Debit side: Balance c/d $2,500",
+        "Credit side: Balance c/d $15,500",
+        "Debit side: Balance c/d $6,500"
+      ],
+      "why": "The debit side is larger, so the difference of $2,500 goes on the credit side as Balance c/d. Both sides then total $9,000. Putting it on the debit side would make the totals unequal.",
+      "clue": "The balancing figure goes on the smaller side."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya's Plumbing Supplies balances its Equipment account. After the balancing figure is added, both sides total $24,000, with Balance c/d on the credit side. Where is Balance b/d recorded?",
+      "opts": [
+        "Debit side, below the totals",
+        "Credit side, below the totals",
+        "Debit side, above the totals",
+        "Credit side, above the totals"
+      ],
+      "why": "Balance b/d is written on the opposite side to Balance c/d, below the totals. Balance c/d is on the credit side, so Balance b/d is a debit, which suits an asset. Writing it on the credit side would repeat the same side.",
+      "clue": "Brought down goes on the opposite side to carried down."
+    }
+  },
+  "acc-closing-entries": {
+    "title": "Closing entries",
+    "card": [
+      "Revenue and expense accounts are temporary. At the end of the period they are closed, so each starts the next period at zero.",
+      "Each revenue account is debited and each expense account is credited, for its balance. The matching entries go to the Profit and Loss Summary account.",
+      "Credits in the Profit and Loss Summary (revenue) less debits (expenses) give the profit. A profit is transferred by debiting Profit and Loss Summary and crediting Capital.",
+      "Drawings, which are the owner's withdrawals, are closed by debiting Capital and crediting Drawings."
+    ],
+    "remember": "Revenue and expenses close to Profit and Loss Summary. Profit and drawings then go to Capital.",
+    "a": {
+      "q": "At the end of the year, Sales revenue has a credit balance of $80,000. What is the closing entry for this account?",
+      "opts": [
+        "Debit Sales, credit Profit and Loss Summary",
+        "Debit Profit and Loss Summary, credit Sales",
+        "Debit Sales, credit Capital",
+        "Debit Capital, credit Sales"
+      ],
+      "why": "A credit balance is cleared by a debit, so Sales is debited. The credit goes to Profit and Loss Summary. Revenue is not sent straight to Capital, because profit is worked out first.",
+      "clue": "To clear a credit balance, do the opposite."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom's Tiles has a profit of $30,000 in Profit and Loss Summary. Tom took $12,000 in drawings. How are these closed to Capital?",
+      "opts": [
+        "Credit Capital $30,000, debit Capital $12,000",
+        "Debit Capital $30,000, credit Capital $12,000",
+        "Credit Capital $30,000, credit Capital $12,000",
+        "Credit Capital $18,000, debit Drawings $12,000"
+      ],
+      "why": "Profit increases the owner's equity, so Capital is credited $30,000. Drawings reduce it, so Capital is debited $12,000. The net effect is a $18,000 rise, but each is still closed with its own entry.",
+      "clue": "Profit adds to Capital and drawings take away from it."
+    }
+  },
+  "acc-balance-sheet": {
+    "title": "The balance sheet",
+    "card": [
+      "The balance sheet reports assets, liabilities and owner's equity at one date, not over a period. Assets equal liabilities plus owner's equity.",
+      ["Current", "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."],
+      ["Non-current", "held or due after more than 12 months, such as vehicles and buildings."],
+      "Assets and liabilities are each split into current and non-current. A loan repaid in instalments is split too: the part due in the next 12 months is current, and the rest is non-current."
+    ],
+    "remember": "A balance sheet is a snapshot at one date. Sort each asset and liability by whether it is used or due within 12 months.",
+    "a": {
+      "q": "Which item would be reported as a non-current asset of a trading business?",
+      "opts": [
+        "Delivery van used for several years",
+        "Inventory held for sale next month",
+        "Cash at bank used to pay wages this week",
+        "Accounts receivable due in 30 days"
+      ],
+      "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+      "clue": "Ask how long the business will keep the asset."
+    },
+    "b": {
+      "d": 3,
+      "q": "On 30 June, Mia's Bikes owes $30,000 on a bank loan repaid at $10,000 a year over the next three years. How is the loan reported?",
+      "opts": [
+        "$10,000 current and $20,000 non-current",
+        "$20,000 current and $10,000 non-current",
+        "$30,000 non-current, as it runs for three years",
+        "$30,000 current, as repayments start this year"
+      ],
+      "why": "Only the $10,000 due in the next 12 months is current. The remaining $20,000 is due later, so it is non-current. Reporting the whole loan as non-current is tempting, but an instalment loan is split by when each part is due.",
+      "clue": "How much must be repaid in the next 12 months?"
+    }
+  },
+  "acc-classifying-cash-flows": {
+    "title": "Classifying cash flows",
+    "card": [
+      [
+        "Operating",
+        "cash from day-to-day trading, such as cash from customers and cash paid to suppliers, for wages, rent and GST. Interest paid on a loan is also operating."
+      ],
+      [
+        "Investing",
+        "cash spent on or received from buying or selling non-current assets, such as equipment, vehicles or premises."
+      ],
+      [
+        "Financing",
+        "cash that changes how the business is funded: capital contributions and loans coming in, and drawings and loan repayments going out."
+      ],
+      "To classify a cash flow, ask what the cash was for, not how large it was. Interest on a loan is operating, but repaying the loan itself is financing."
+    ],
+    "remember": "Sort by purpose: trading is operating, non-current assets are investing, funding is financing.",
+    "a": {
+      "q": "A business pays $3,000 cash for a new office computer it will use for years. How is this cash flow classified?",
+      "opts": ["An investing outflow", "An operating outflow", "A financing outflow", "An investing inflow"],
+      "why": "The computer is a non-current asset, so paying for it is an investing outflow. Operating is tempting because the computer is used in the office, but cash for non-current assets is investing.",
+      "clue": "Is the computer used up in a year, or kept for years?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lachlan's surf shop in Torquay pays $500 interest on its bank loan and repays $4,000 of the loan itself. How are these classified?",
+      "opts": [
+        "Interest operating, loan repayment financing",
+        "Interest financing, loan repayment financing",
+        "Interest operating, loan repayment operating",
+        "Interest investing, loan repayment financing"
+      ],
+      "why": "Interest paid is classed as operating, while repaying the amount borrowed changes how the business is funded, so it is financing. Classing both as financing is tempting because both relate to the loan, but interest is treated as operating.",
+      "clue": "The interest and the repayment go to the same bank, but are they for the same thing?"
+    }
+  },
+  "acc-cash-profit-compared": {
+    "title": "Cash and profit compared",
+    "card": [
+      [
+        "Profit",
+        "revenue less expenses. Under accrual accounting, revenue is recorded when it is earned and expenses when they are incurred, whether or not cash has moved."
+      ],
+      ["Cash", "the money actually received and paid in the period. The cash flow statement reports it."],
+      "The two differ because of timing. A credit sale adds revenue now but brings in cash later. Paying for inventory uses cash, but inventory is not an expense until it is sold.",
+      "Depreciation is an expense that uses no cash in the period. So a business can report a profit and still have too little cash to pay its bills on time."
+    ],
+    "remember": "Profit follows when revenue and expenses are recorded. Cash follows when money moves.",
+    "a": {
+      "q": "Why can a business report a profit for the year and still run short of cash?",
+      "opts": [
+        "Revenue is recorded when earned, but cash may arrive later",
+        "Profit is worked out from cash received, so it matches cash",
+        "Expenses are recorded only when they are paid in cash",
+        "Profit is always paid out to the owner as drawings"
+      ],
+      "why": "Under accrual accounting, a credit sale is revenue now, but the cash comes in later. Profit is not worked out from cash received, so it can be well above the cash on hand.",
+      "clue": "Think about a sale made on credit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Cycles in Ballarat made a profit this year. It sold many bikes on credit, and it paid cash for a large amount of inventory that is still unsold. Which statement best explains why its bank balance fell?",
+      "opts": [
+        "Credit sales are not yet cash, and unsold stock used cash",
+        "Credit sales are not yet cash, and unsold stock is expensed",
+        "Credit sales cut profit, and unsold stock used cash",
+        "Credit sales are not revenue, and unsold stock is expensed"
+      ],
+      "why": "Credit sales are recorded as revenue, so profit rises, but the cash has not arrived. Paying for inventory sends cash out, yet it is not an expense until the bikes are sold. The tempting option treats unsold stock as an expense, but inventory only becomes an expense when it is sold.",
+      "clue": "Is inventory an expense before it is sold?"
+    }
+  },
+  "acc-buying-non-current-asset": {
+    "title": "Buying a non-current asset",
+    "card": [
+      "A non-current asset is something a business owns and expects to use for more than one year, such as a van or a machine.",
+      "It is recorded at cost. Cost is the price paid plus any amount needed to get the asset ready for use, such as delivery and installation.",
+      [
+        "Cash purchase",
+        "the asset account is debited and the bank account is credited. Total assets stay the same, because one asset rises and another falls."
+      ],
+      [
+        "Loan purchase",
+        "the asset account is debited at cost and a loan account is credited. The loan is a liability, and each repayment reduces it over time."
+      ]
+    ],
+    "remember": "Record the asset at cost. Cash lowers the bank account, while a loan adds a liability.",
+    "a": {
+      "q": "Ravi's Bakery in Ballarat buys an oven for $9,000 cash. How is the purchase recorded?",
+      "opts": ["Debit Oven, credit Bank", "Debit Bank, credit Oven", "Debit Oven, credit Loan", "Debit Expense, credit Bank"],
+      "why": "The oven is an asset the bakery will use for years, so the asset account is debited at cost. Cash leaves the bank account, so it is credited. An expense entry is wrong because the oven will be used for more than one year.",
+      "clue": "The oven comes in and cash goes out."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tess's Garden Care in Geelong buys a trailer for $12,000 using a bank loan. What is the effect of the purchase?",
+      "opts": [
+        "Assets and liabilities both rise by $12,000",
+        "Assets rise by $12,000 and liabilities stay the same",
+        "Assets fall by $12,000 and liabilities rise",
+        "Assets and liabilities both stay the same"
+      ],
+      "why": "The trailer is recorded at cost, so assets rise by $12,000. The business borrowed the money, so it now owes a new $12,000 loan to the bank and liabilities rise by the same amount. Liabilities would not change if the trailer were paid for in cash, but here the money is borrowed.",
+      "clue": "Ask who is owed the money after the purchase."
+    }
+  },
+  "acc-depreciation-adjustments": {
+    "title": "Depreciation adjustments",
+    "card": [
+      "Depreciation spreads the cost of a non-current asset over its useful life. At the end of each period, an adjusting entry records that period's share.",
+      [
+        "Straight-line",
+        "the same amount each year. Annual depreciation = (cost - residual value) ÷ useful life in years."
+      ],
+      [
+        "Reducing balance",
+        "a fixed percentage of the carrying amount at the start of the year, so the amount falls each year. Carrying amount = cost - accumulated depreciation."
+      ],
+      "The entry is debit Depreciation expense and credit Accumulated depreciation. Accumulated depreciation is a contra asset account. It is shown against the asset, and the asset account itself stays at cost."
+    ],
+    "remember": "Each year: debit Depreciation expense, credit Accumulated depreciation. The asset stays at cost.",
+    "a": {
+      "q": "At 30 June, Lena's bakery records a year's depreciation on its oven. Which entry is correct?",
+      "opts": [
+        "Dr Depreciation expense, Cr Accumulated depreciation",
+        "Dr Accumulated depreciation, Cr Depreciation expense",
+        "Dr Depreciation expense, Cr Oven",
+        "Dr Oven, Cr Accumulated depreciation"
+      ],
+      "why": "The period's share of cost is an expense, so it is debited. The credit goes to Accumulated depreciation, which sits against the asset. Crediting the Oven account is tempting, but the asset account stays at cost.",
+      "clue": "Where does the credit go, if the asset stays at cost?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Omar's courier firm buys a van for $50 000 with a residual value of $10 000 and a useful life of 5 years. It uses reducing balance at 30% a year. What is the depreciation expense for Year 2?",
+      "opts": ["$10 500", "$12 000", "$15 000", "$8 000"],
+      "why": "Year 1 depreciation is 30% of $50 000 = $15 000, so the carrying amount is $35 000. Year 2 is 30% of $35 000 = $10 500. $15 000 wrongly applies the rate to the original cost again.",
+      "clue": "Apply the rate to the carrying amount at the start of Year 2."
+    }
+  },
+  "acc-depreciation-methods-compared": {
+    "title": "Depreciation methods compared",
+    "card": [
+      [
+        "Straight-line",
+        "the same depreciation expense every year. Annual expense = (cost - residual value) ÷ useful life."
+      ],
+      [
+        "Reducing balance",
+        "a fixed percentage of the carrying amount each year. The expense is largest in year 1 and falls each year after."
+      ],
+      "Carrying amount = cost - accumulated depreciation. A bigger expense in a year lowers that year's profit and lowers the carrying amount more.",
+      "When the reducing balance rate is set so the asset ends at its residual value, both methods depreciate the same total. Reducing balance is then higher than straight-line in the early years and lower in the later years."
+    ],
+    "remember": "The method mainly shifts when the expense falls, which moves each year's profit and carrying amount.",
+    "a": {
+      "q": "A business uses reducing balance instead of straight-line for a new machine, with both set to reach the same residual value. What is true of year 1?",
+      "opts": [
+        "Depreciation is higher, so profit is lower",
+        "Depreciation is lower, so profit is higher",
+        "Depreciation is higher, so profit is higher",
+        "Depreciation is lower, so profit is lower"
+      ],
+      "why": "When both methods reach the same residual value, reducing balance gives a larger expense than straight-line in the early years. A larger expense lowers profit, so higher depreciation cannot lead to higher profit.",
+      "clue": "Which method has the larger expense early on, and what do expenses do to profit?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena buys a van for $50,000 with a $5,000 residual value and a 5-year life. The reducing balance rate is set so the van ends at $5,000. All else equal, which method gives higher profit in year 5?",
+      "opts": [
+        "Reducing balance, as its year 5 expense is lower",
+        "Straight-line, as its year 5 expense is lower",
+        "Reducing balance, as its year 5 expense is higher",
+        "Neither, as the total depreciated is the same"
+      ],
+      "why": "Straight-line charges $9,000 every year, but reducing balance falls each year and is lower than straight-line in the later years. A lower expense in year 5 means higher profit that year. The totals match over the full life, but that does not make each year's profit the same.",
+      "clue": "Reducing balance is not always the method with the bigger expense."
+    }
+  },
+  "acc-disposing-non-current-asset": {
+    "title": "Disposing of a non-current asset",
+    "card": [
+      "Carrying amount = cost - accumulated depreciation. When a business sells an asset, it compares the sale price with the carrying amount.",
+      "If the asset sells for more than its carrying amount, the difference is a gain on disposal, which is revenue. If it sells for less, the difference is a loss on disposal, which is an expense.",
+      "Depreciation is recorded up to the date of sale first. The asset and its accumulated depreciation are then removed from the ledger.",
+      "A cash sale by a business registered for GST includes GST on the sale price. In VCE Accounting, by convention, no GST is recorded on a trade-in value. This keeps the entries simple. It is not a rule of tax law."
+    ],
+    "remember": "Compare the sale price with the carrying amount: more is a gain, less is a loss.",
+    "a": {
+      "q": "Cara's Bakery bought an oven for $20 000. Its accumulated depreciation is $12 000. It sells the oven for $5 000, ignoring GST. What is recorded?",
+      "opts": [
+        "A loss on disposal of $3 000",
+        "A gain on disposal of $3 000",
+        "A loss on disposal of $15 000",
+        "A gain on disposal of $5 000"
+      ],
+      "why": "Carrying amount = $20 000 - $12 000 = $8 000. The oven sold for $3 000 less than that, so it is a loss. A gain would need a sale price above $8 000.",
+      "clue": "Work out the carrying amount before comparing."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom's Mowing Service is registered for GST. It sells a mower to a customer for $1 100 cash, including GST. The mower's carrying amount is $800. Which statement is correct?",
+      "opts": [
+        "A gain of $200 is recorded, and $100 GST is recorded",
+        "A gain of $300 is recorded, and $100 GST is recorded",
+        "A gain of $200 is recorded, and no GST is recorded",
+        "A gain of $300 is recorded, and no GST is recorded"
+      ],
+      "why": "A cash sale includes GST, so $100 GST is recorded and the sale price before GST is $1 000. The gain is $1 000 - $800 = $200. A gain of $300 wrongly counts the GST as part of the sale price.",
+      "clue": "Split the $1 100 into the price and the GST before comparing."
+    }
+  },
+  "acc-adjustments-are-made": {
+    "title": "Why adjustments are made",
+    "card": [
+      "A business reports its profit for a set period, such as a year. Revenue and expenses must be matched to the period they relate to.",
+      "Cash does not always move in the same period as the revenue or expense. A bill may be paid early, or paid late, or money may arrive after the work is done.",
+      "At the end of the period, called balance day, the business makes adjusting entries. These move revenue and expenses into the period they belong to.",
+      "Without adjustments, profit would be overstated or understated, and assets and liabilities would be wrong in the reports."
+    ],
+    "remember": "Adjustments match revenue and expenses to the period they relate to, not to when cash moves.",
+    "a": {
+      "q": "Why does a business make adjustments on balance day?",
+      "opts": [
+        "To place revenue and expenses in the period they relate to",
+        "To record every cash payment on the day it is made",
+        "To make sure profit is as high as possible each year",
+        "To remove all assets and liabilities from the records"
+      ],
+      "why": "Adjustments fix the timing of revenue and expenses so profit for the period is reported fairly. They are not about raising profit: the aim is a fair figure, which may be higher or lower.",
+      "clue": "Think about which period the revenue or expense belongs to."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jas runs a gym in Bendigo. On balance day, 30 June, she has used electricity for June but the bill arrives in July. If she makes no adjustment, what is the effect on the June report?",
+      "opts": [
+        "Expenses are understated and profit is overstated",
+        "Expenses are overstated and profit is understated",
+        "Revenue is understated and profit is overstated",
+        "Expenses and profit are both unaffected"
+      ],
+      "why": "June's electricity was used in June, so it is a June expense even though no bill has been paid. Leaving it out makes expenses too low and profit too high. Profit is not unaffected just because no cash moved.",
+      "clue": "Which period used the electricity?"
+    }
+  },
+  "acc-prepaid-expenses": {
+    "title": "Prepaid expenses",
+    "card": [
+      "A prepaid expense is an expense paid in cash before the business has used it. Insurance paid for the next 12 months is an example.",
+      "When the payment is made, the unused part is recorded as an asset, Prepaid insurance. The business has paid for a benefit it will receive later.",
+      "On balance day, work out how much has been used up. Debit the expense account and credit the prepaid asset by that amount.",
+      "The part not yet used stays as an asset in the Balance Sheet. The used part is an expense in the Income Statement for the period."
+    ],
+    "remember": "Paid early and not yet used is an asset. Once used, it becomes an expense.",
+    "a": {
+      "q": "On balance day, a business has paid for a service that it has not yet used. How is the unused part recorded?",
+      "opts": [
+        "As an asset, because the benefit is still to come",
+        "As an expense, because the cash has been paid",
+        "As a liability, because the service is still owed",
+        "As revenue, because the payment has been made"
+      ],
+      "why": "The business has paid for a benefit it will receive later, so the unused part is an asset. It is not an expense yet, even though cash has left the business, because the service has not been used.",
+      "clue": "Think about what the business still has the right to receive."
+    },
+    "b": {
+      "d": 3,
+      "q": "On 1 April, Priya's Bakery in Ballarat pays $2400 for 12 months of insurance. Its year ends on 30 June. After the 30 June adjustment, what amounts are reported in the Income Statement and Balance Sheet?",
+      "opts": [
+        "Insurance expense $600, Prepaid insurance $1800",
+        "Insurance expense $1800, Prepaid insurance $600",
+        "Insurance expense $2400, Prepaid insurance $0",
+        "Insurance expense $0, Prepaid insurance $2400"
+      ],
+      "why": "April, May and June are 3 of 12 months, so $600 has been used and is an expense in the Income Statement. The other $1800 covers the next 9 months and stays as an asset in the Balance Sheet. Expensing the full $2400 ignores that most of the cover is still to come.",
+      "clue": "Count how many of the 12 months have passed by balance day."
+    }
+  },
+  "acc-accrued-expenses": {
+    "title": "Accrued expenses",
+    "card": [
+      "An accrued expense is an expense that has been used or incurred in the period but has not yet been paid. Wages owing at balance day is a common example.",
+      "On balance day, the business records the expense, which reduces profit for the period. It also records a liability, such as accrued wages, for the amount owing.",
+      "The liability appears on the balance sheet at the end of the period, because the business owes the money.",
+      "In the next period, when the business pays, the payment clears the liability. It is not recorded as a new expense for that period."
+    ],
+    "remember": "Accrued expense: record the expense and a liability now, then clear the liability when paid.",
+    "a": {
+      "q": "On balance day a business owes employees for work done but has not paid them. What is recorded?",
+      "opts": [
+        "A wages expense and a liability for wages owing",
+        "A wages expense and an asset for wages owing",
+        "A liability only, with no change to expenses",
+        "An asset only, with no change to expenses"
+      ],
+      "why": "The work was done this period, so the wages are an expense now. The business owes the money, so a liability is created. An asset is wrong because the business has not gained anything it owns.",
+      "clue": "Does the business own the amount, or owe it?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Tariq owns a landscaping firm in Geelong. At 30 June he owes workers $1 200 for the last week of June, to be paid on 4 July. What happens when he pays on 4 July?",
+      "opts": [
+        "The accrued wages liability is cleared",
+        "A new $1 200 wages expense is recorded for July",
+        "Accrued wages are recorded as revenue",
+        "The $1 200 is added to assets as a prepayment"
+      ],
+      "why": "The expense was already recorded in June, so the July payment clears the liability. Recording a new expense would count the same wages twice.",
+      "clue": "The expense was recorded on balance day."
+    }
+  },
+  "acc-accrued-revenue": {
+    "title": "Accrued revenue",
+    "card": [
+      "Accrued revenue is revenue a business has earned by balance day but has not yet received in cash. The service has been done, but the money has not arrived.",
+      "On balance day, record the revenue in the period it was earned. Debit Accrued revenue, a current asset account, and credit the revenue account.",
+      "The asset shows that the business is owed money. Revenue is higher in the period it was earned, even though no cash has come in.",
+      "In the next period, when the cash arrives, debit Cash at bank and credit Accrued revenue. This clears the asset. No revenue is recorded again, as it was already counted."
+    ],
+    "remember": "Earned but not received: record revenue and an asset now, then clear the asset when the cash arrives.",
+    "a": {
+      "q": "On 30 June, Priya's Tutoring has earned $600 in fees that the client will pay in July. How is this recorded on 30 June?",
+      "opts": [
+        "Debit Accrued revenue, credit Fee revenue",
+        "Debit Cash at bank, credit Fee revenue",
+        "Debit Fee revenue, credit Accrued revenue",
+        "Debit Accrued revenue, credit Cash at bank"
+      ],
+      "why": "The fees are earned in June, so revenue is credited. The business is owed $600, so the Accrued revenue asset is debited. Cash at bank is wrong because no cash has been received yet.",
+      "clue": "Money is owed to the business, and no cash has come in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leon's Lawn Care has a 30 June balance day. On 30 June it recorded accrued revenue of $900 for lawns mowed in June. The client pays the $900 in July. What is recorded in July?",
+      "opts": [
+        "Debit Cash at bank, credit Accrued revenue",
+        "Debit Cash at bank, credit Fee revenue",
+        "Debit Accrued revenue, credit Fee revenue",
+        "Debit Accrued revenue, credit Cash at bank"
+      ],
+      "why": "The revenue was recorded on 30 June, so in July the cash clears the asset: debit Cash at bank and credit Accrued revenue. Crediting Fee revenue is tempting, but it would count the same revenue twice.",
+      "clue": "What happens to the amount owed once the client pays?"
+    }
+  },
+  "acc-unearned-revenue": {
+    "title": "Unearned revenue",
+    "card": [
+      "Unearned revenue is money received before the business has provided the goods or services. The business has the cash, but it has not yet earned the revenue.",
+      "The business owes the customer the goods or services, or a refund. So the amount is recorded as a liability, not as revenue.",
+      "On balance day, the business works out how much has now been earned. It debits Unearned Revenue (reducing the liability) and credits Revenue for that amount.",
+      "Any part not yet earned stays as a liability. It moves to revenue in a later period, when the goods or services are provided."
+    ],
+    "remember": "Cash received early is a liability until the work is done, then it becomes revenue.",
+    "a": {
+      "q": "Ben's Tutoring in Geelong receives $900 in December for lessons to be given next year. How is the $900 recorded on 31 December?",
+      "opts": [
+        "As a liability, because the lessons are still owed",
+        "As revenue, because the cash has been received",
+        "As an asset, because the lessons will earn money",
+        "As an expense, because the lessons will cost time"
+      ],
+      "why": "The lessons have not been given, so the revenue is not earned and Ben's Tutoring owes the service. That makes it a liability. It is not revenue just because the cash has arrived.",
+      "clue": "Has Ben done the lessons yet?"
+    },
+    "b": {
+      "d": 3,
+      "q": "On 1 May, Kara's Pool Care in Bendigo receives $1 200 for 12 months of weekly cleaning. Her balance day is 30 June. What is the adjustment on 30 June, assuming the service is given evenly?",
+      "opts": [
+        "Debit Unearned Revenue $200, credit Revenue $200",
+        "Debit Unearned Revenue $1 000, credit Revenue $1 000",
+        "Debit Revenue $200, credit Unearned Revenue $200",
+        "Debit Cash $200, credit Revenue $200"
+      ],
+      "why": "Two months of the 12 have been earned, so $1 200 ÷ 12 × 2 = $200. Debiting Unearned Revenue reduces the liability and crediting Revenue records the amount earned. The $1 000 is the part still owed, so it stays as a liability.",
+      "clue": "Count how many months of service have been given by balance day."
+    }
+  },
+  "acc-adjusted-trial-balance": {
+    "title": "The adjusted trial balance",
+    "card": [
+      "A trial balance lists every ledger account balance in a debit column and a credit column. If the records are correct, the totals are equal, but equal totals do not prove there are no errors.",
+      "An adjusted trial balance is prepared after the balance day adjustments have been posted to the ledger. It shows each account's balance once the adjustments are included.",
+      "Each adjusting entry has an equal debit and credit, so the columns should still be equal. If they are not, an error has been made, such as posting only one side of an adjusting entry.",
+      "Its balances are used to prepare the end-of-period reports. Revenue and expenses go to the income statement, and assets, liabilities and equity go to the balance sheet."
+    ],
+    "remember": "The adjusted trial balance gives the final balances for the reports, and its columns should still be equal.",
+    "a": {
+      "q": "Why is an adjusted trial balance prepared before the end-of-period reports?",
+      "opts": [
+        "It shows account balances that include the adjustments",
+        "It replaces the need to post adjustments to the ledger",
+        "It proves that no errors are in the accounts",
+        "It lists only the accounts that were adjusted"
+      ],
+      "why": "The reports need balances that include the adjustments, and the adjusted trial balance gives them. It does not replace posting the adjustments, as it is prepared after they are posted. Equal columns also do not prove there are no errors.",
+      "clue": "Think about which balances the reports should use."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's adjusted trial balance for her bakery in Ballarat has debits of $58,400 and credits of $57,900. What is the most likely cause?",
+      "opts": [
+        "One side of an adjusting entry was not posted",
+        "The reports were prepared before the trial balance",
+        "The adjustments were made in the wrong period",
+        "Some accounts were left out of the income statement"
+      ],
+      "why": "Each adjusting entry has an equal debit and credit, so a $500 gap points to an error such as posting only one side of an entry. An entry made in the wrong period would still have equal debits and credits, so it would not make the columns unequal. The income statement is prepared from the trial balance, so it cannot cause the gap.",
+      "clue": "Each adjusting entry has a debit and a credit."
+    }
+  },
+  "acc-businesses-budget": {
+    "title": "Why businesses budget",
+    "card": [
+      "A budget is a plan that states expected figures for a future period, such as the next quarter or year. It turns the owner's goals into numbers.",
+      "Budgets set targets. Managers and staff can aim for a sales figure or a limit on spending, and they know what is expected of them.",
+      "A budget can warn of a cash shortfall before it happens. If planned cash payments are higher than planned cash receipts, the owner has time to act, for example by arranging a loan or delaying a purchase.",
+      "After the period ends, actual results are compared with the budget. The budget is the benchmark used to judge how the business performed."
+    ],
+    "remember": "A budget plans, sets targets, warns of shortfalls and gives a benchmark for actual results.",
+    "a": {
+      "q": "Why does a business keep its budget after the period has ended and actual results are known?",
+      "opts": [
+        "To compare actual results against the planned figures",
+        "To change the figures so the plan looks accurate",
+        "To record the transactions that took place in the period",
+        "To replace the actual results in the financial reports"
+      ],
+      "why": "The budget is the benchmark that actual results are judged against. Recording transactions is the job of the accounting records, and the budget does not replace or alter actual results.",
+      "clue": "Think about what the budget gives you to judge performance."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a plumbing business in Geelong. Her budget shows cash payments will exceed cash receipts in March, when insurance is due. Which purpose of budgeting does this show?",
+      "opts": [
+        "It warns of a cash shortfall so she can plan ahead",
+        "It sets a sales target for her staff to reach",
+        "It proves the business will make a loss for the year",
+        "It compares actual results with the planned figures"
+      ],
+      "why": "The budget shows payments higher than receipts in one month, so Priya has time to arrange extra cash. It does not show a yearly loss, because one month of low cash does not decide the result for the whole year.",
+      "clue": "Look at what happens to cash in March, before it happens."
+    }
+  },
+  "acc-budgeted-cash-flow-statement": {
+    "title": "The budgeted cash flow statement",
+    "card": [
+      "A budgeted cash flow statement estimates the cash a business will receive and pay out in a future period. It counts cash only, so a credit sale appears when the customer pays, even though it counts towards profit when the sale is made.",
+      "Cash flows are grouped by activity. Operating activities are day-to-day trading, such as cash from customers and payments to suppliers and for wages.",
+      "Investing activities are buying or selling non-current assets, such as equipment. Financing activities are changes in cash from owners and lenders, such as a new loan, capital contributed or drawings.",
+      "The statement ends with the estimated closing cash balance. If it is low or negative, the business can plan ahead, for example by arranging a loan, before the shortfall happens."
+    ],
+    "remember": "A budgeted cash flow statement shows when cash will move, so the owner can see if cash will run short.",
+    "a": {
+      "q": "Why might a business with a budgeted profit still need a budgeted cash flow statement?",
+      "opts": [
+        "Credit sales count in profit before customers pay the cash",
+        "Profit counts sales when customers pay the cash for them",
+        "A budgeted profit already shows the closing cash balance",
+        "Profit is grouped into operating, investing and financing"
+      ],
+      "why": "A credit sale adds to profit when it is made, but no cash arrives until the customer pays, so the bank balance can run low. Saying profit counts sales when the cash is paid reverses this: that timing belongs to the cash flow statement.",
+      "clue": "Think about when cash arrives compared with when a sale is made."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bike shop in Geelong. Her budget shows she will buy a new delivery van for cash in March. In which section of the budgeted cash flow statement is the payment shown?",
+      "opts": [
+        "Investing activities, as a payment for a non-current asset",
+        "Operating activities, as a payment for a day-to-day cost",
+        "Financing activities, as a payment to a lender or owner",
+        "Operating activities, as the van is used to deliver stock"
+      ],
+      "why": "A van is a non-current asset, so buying it is an investing activity. The tempting answer is operating, because the van helps trading, but operating activities are day-to-day trading flows, not asset purchases.",
+      "clue": "Ask what kind of item the cash is being spent on."
+    }
+  },
+  "acc-budgeted-income-statement": {
+    "title": "The budgeted income statement",
+    "card": [
+      "A budgeted income statement estimates a business's revenue and expenses for the coming period. The difference is the budgeted profit or loss.",
+      "It is built on the accrual basis. Revenue is counted in the period it is earned, and expenses in the period they are incurred, whether or not cash changes hands.",
+      "So a credit sale made in the period is budgeted revenue, even if the customer pays next period. Expenses are budgeted when used, such as wages for work done in the period.",
+      "Some cash items are not income statement items. Buying equipment or repaying a loan is not an expense. Depreciation is an expense, even though it uses no cash."
+    ],
+    "remember": "A budgeted income statement estimates profit by matching revenue earned with expenses incurred, not cash received and paid.",
+    "a": {
+      "q": "Mia's café in Geelong expects to sell $6000 of catering on credit in June. Customers will pay in July. How is this treated in the June budgeted income statement?",
+      "opts": [
+        "It is budgeted as June revenue",
+        "It is budgeted as July revenue",
+        "It is left out until the cash arrives",
+        "It is budgeted as a June expense"
+      ],
+      "why": "On the accrual basis, revenue is counted when it is earned, so the credit sale is June revenue. Counting it in July would follow the cash received, which is not the basis used for an income statement.",
+      "clue": "Revenue is counted when it is earned, not when it is paid."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev's gym in Bendigo budgets to buy $20000 of new equipment in March, paid in cash. It will use $2000 of the equipment's value in the year. What goes in the budgeted income statement?",
+      "opts": [
+        "$2000 depreciation expense only",
+        "$20000 equipment expense only",
+        "Both $20000 and $2000 as expenses",
+        "Neither, because no expense is incurred"
+      ],
+      "why": "Buying equipment is not an expense, so the $20000 is left out. The $2000 of value used up is depreciation, which is an expense even though it uses no cash. Counting the $20000 would follow the cash paid.",
+      "clue": "Which part of the equipment is used up in the period?"
+    }
+  },
+  "acc-budgeted-balance-sheet": {
+    "title": "The budgeted balance sheet",
+    "card": [
+      "A budgeted balance sheet estimates the assets, liabilities and owner's equity a business expects to have on one date, the end of the coming period.",
+      "It starts from the closing balances of the last actual balance sheet. The budgeted cash flow statement and budgeted income statement then show the changes to each item.",
+      "Cash comes from the closing balance in the budgeted cash flow statement. Owner's equity is the opening equity, plus budgeted profit and capital contributed, less drawings.",
+      "The accounting equation must still hold: assets = liabilities + owner's equity. If the totals differ, there is an error in the budget."
+    ],
+    "remember": "A budgeted balance sheet is a forecast of the business's position on one future date, and it must balance.",
+    "a": {
+      "q": "What does a budgeted balance sheet estimate?",
+      "opts": [
+        "The assets, liabilities and equity at the end of the period",
+        "The revenue and expenses expected over the coming period",
+        "The cash received and paid out during the coming period",
+        "The difference between budgeted and actual results"
+      ],
+      "why": "A balance sheet shows the position on one date, so the budgeted version estimates the position at the end of the coming period. Revenue and expenses belong to the income statement, and cash receipts and payments belong to the cash flow statement.",
+      "clue": "A balance sheet is a snapshot on one date, not a record over time."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's Pet Supplies has opening equity of $80 000. For the coming year, it budgets a profit of $30 000 and drawings of $12 000, with no new capital. What is the budgeted closing equity?",
+      "opts": ["$98 000", "$110 000", "$62 000", "$92 000"],
+      "why": "Closing equity = opening equity + profit - drawings = $80 000 + $30 000 - $12 000 = $98 000. The $110 000 option ignores the drawings altogether, but drawings take value out of the business and reduce owner's equity.",
+      "clue": "Profit adds to equity and drawings take away from it."
+    }
+  },
+  "acc-variance-reports": {
+    "title": "Variance reports",
+    "card": [
+      "A variance report compares budgeted figures with actual figures. The variance is the difference between them, shown in dollars and often as a percentage of the budget.",
+      [
+        "Favourable",
+        "the business ends up better off than planned: more profit for income statement items, or more cash for cash flow items. Revenue or cash received above budget is favourable, as is an expense or cash payment below budget."
+      ],
+      [
+        "Unfavourable",
+        "the business ends up worse off than planned: less profit for income statement items, or less cash for cash flow items. Revenue or cash received below budget is unfavourable, as is an expense or cash payment above budget."
+      ],
+      "Variances are compared over several periods to spot trends. A manager then looks for the cause of each large variance and decides what action to take."
+    ],
+    "remember": "Judge a variance by its effect on profit or cash, not by whether the actual figure is higher or lower.",
+    "a": {
+      "q": "A business budgeted $18,000 for wages but actually paid $20,500. How is this variance described in the income statement report?",
+      "opts": [
+        "Unfavourable, because it lowers profit",
+        "Favourable, because the actual figure is higher",
+        "Favourable, because it raises profit",
+        "Unfavourable, because it raises profit"
+      ],
+      "why": "Wages were $2,500 above budget. A higher expense lowers profit, so the variance is unfavourable. A higher actual figure is not favourable in itself: it depends on whether the item is revenue or an expense.",
+      "clue": "Ask what the extra $2,500 of wages does to profit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's café in Bendigo budgeted sales of $40,000 for each of three months. Actual sales were $39,000, $37,000 and $34,000. What do these variances show?",
+      "opts": [
+        "Unfavourable and growing, so the causes need review",
+        "Unfavourable and shrinking, so no action is needed",
+        "Favourable and growing, so sales are improving",
+        "Favourable and shrinking, so sales are recovering"
+      ],
+      "why": "Actual sales were below budget each month, by $1,000, $3,000 and $6,000. Lower revenue lowers profit, so the variances are unfavourable, and the gap is widening. A manager should look for the cause, such as lost customers.",
+      "clue": "Compare each month's actual sales with $40,000, then see how the gap changes."
+    }
+  },
+  "acc-profitability": {
+    "title": "Profitability",
+    "card": [
+      "Profit is a dollar amount. Profitability asks how good that profit is, by comparing it with something else the business has or earns.",
+      "Profit can be compared with sales, with the assets the business uses, and with the money the owner has put in.",
+      "A larger profit does not always mean higher profitability. If sales, assets or the owner's investment grew by a larger percentage than profit, the business is making less profit for each dollar.",
+      "Profitability is used to judge whether a business is using its sales, assets and the owner's money well."
+    ],
+    "remember": "Profitability is profit measured against something else, not profit alone.",
+    "a": {
+      "q": "Why is profitability a better guide to performance than the profit figure alone?",
+      "opts": [
+        "It compares profit with sales, assets or owner's investment",
+        "It shows how much cash the business has in the bank",
+        "It shows only the profit earned from selling inventory",
+        "It shows whether the business can pay its debts on time"
+      ],
+      "why": "Profitability sets profit against something else, so the size of the business is taken into account. Cash held and paying debts are about other ideas, so they do not describe profitability.",
+      "clue": "Think about what profit is being set against."
+    },
+    "b": {
+      "d": 3,
+      "q": "Last year Ava's bakery in Ballarat made a profit of $40,000 on assets of $200,000. This year profit rose to $44,000, but assets grew to $320,000. What has happened to profitability?",
+      "opts": [
+        "It fell, because profit grew more slowly than assets",
+        "It rose, because the profit figure is now higher",
+        "It stayed the same, as the business still makes a profit",
+        "It rose, because the business now has more assets"
+      ],
+      "why": "Profit rose by 10%, but assets rose by 60%. Each dollar of assets now earns less profit, so profitability fell. A higher dollar profit is the tempting answer, but it ignores what the profit is compared with.",
+      "clue": "Compare the percentage growth in profit with that in assets."
+    }
+  },
+  "acc-profitability-ratios": {
+    "title": "Profitability ratios",
+    "card": [
+      [
+        "Gross profit margin",
+        "gross profit ÷ sales × 100. It shows how much of each sales dollar is left after the cost of the goods sold."
+      ],
+      [
+        "Net profit margin",
+        "net profit ÷ sales × 100. It shows how much of each sales dollar is left after all expenses."
+      ],
+      [
+        "Return on assets",
+        "net profit ÷ average total assets × 100. It shows the profit earned from each dollar of assets the business uses, however they were funded."
+      ],
+      [
+        "Return on owner's investment",
+        "net profit ÷ average owner's equity × 100. Owner's equity is the capital the owner has in the business, so this shows the return on the owner's own money."
+      ]
+    ],
+    "remember": "Each profitability ratio is profit divided by something: sales, assets or the owner's equity.",
+    "a": {
+      "q": "Jo wants to know if the capital she has in her business earns more than a term deposit would. Which ratio should she use?",
+      "opts": ["Return on owner's investment", "Return on assets", "Net profit margin", "Gross profit margin"],
+      "why": "Jo's capital is her owner's equity, and return on owner's investment divides net profit by average owner's equity. Return on assets is tempting, but it divides by total assets, which include assets funded by liabilities as well as by Jo.",
+      "clue": "Which ratio divides profit by the money Jo herself has put in?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi's bike shop in Ballarat had sales of $200,000, gross profit of $80,000 and net profit of $20,000. What is its net profit margin?",
+      "opts": ["10%", "40%", "25%", "50%"],
+      "why": "Net profit margin = net profit ÷ sales × 100 = 20,000 ÷ 200,000 × 100 = 10%. The 40% result is the gross profit margin, which uses gross profit instead of net profit.",
+      "clue": "Use net profit, not gross profit, and divide by sales."
+    }
+  },
+  "acc-liquidity": {
+    "title": "Liquidity",
+    "card": [
+      "Liquidity is a business's ability to pay its debts as they fall due. A business can be profitable and still run short of cash to pay bills on time.",
+      [
+        "Working capital ratio",
+        "current assets ÷ current liabilities. A result below 1 means current liabilities are larger than current assets."
+      ],
+      [
+        "Quick asset ratio",
+        "(current assets - inventory - prepaid expenses) ÷ (current liabilities - bank overdraft). Inventory must be sold before it becomes cash, and prepaid expenses are used up rather than turned into cash."
+      ],
+      "The bank overdraft is removed because it is usually an ongoing arrangement, not a debt to repay straight away. For both ratios, a higher result means the business is better placed to pay its debts on time."
+    ],
+    "remember": "Liquidity is about paying debts on time. The working capital ratio uses all current assets, and the quick asset ratio leaves out inventory and prepaid expenses.",
+    "a": {
+      "q": "What does a working capital ratio of 0.8 tell you about a business?",
+      "opts": [
+        "Current liabilities are larger than current assets",
+        "Current assets are larger than current liabilities",
+        "The business is making a loss this year",
+        "The business has too much inventory on hand"
+      ],
+      "why": "The ratio is current assets ÷ current liabilities. A result below 1 means the business has less than a dollar of current assets for each dollar of current liabilities. It says nothing directly about profit or inventory.",
+      "clue": "Below 1 means the top number is smaller than the bottom number."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiri's Hardware in Ballarat has current assets of $90,000, of which $40,000 is inventory and $5,000 is prepaid expenses. Current liabilities are $50,000, with no bank overdraft. What is its quick asset ratio?",
+      "opts": ["0.9", "1.8", "0.8", "1.0"],
+      "why": "Quick assets = $90,000 - $40,000 - $5,000 = $45,000. With no overdraft to remove, dividing by $50,000 gives 0.9. The 1.8 option is the working capital ratio, which does not remove inventory or prepaid expenses.",
+      "clue": "Take inventory and prepaid expenses out of current assets before dividing."
+    }
+  },
+  "acc-efficiency-ratios": {
+    "title": "Efficiency ratios",
+    "card": [
+      [
+        "Asset turnover",
+        "sales ÷ average total assets. It shows how many dollars of sales each dollar of assets earns, measured in times. A higher result means assets are used more fully."
+      ],
+      [
+        "Inventory turnover",
+        "average inventory ÷ cost of sales × 365. It shows how many days stock is held before it is sold. A lower result means stock sells faster."
+      ],
+      [
+        "Accounts receivable turnover",
+        "average accounts receivable ÷ credit sales × 365. It shows how many days customers take to pay. A lower result means debts are collected faster."
+      ],
+      [
+        "Accounts payable turnover",
+        "average accounts payable ÷ credit purchases × 365. It shows how many days the business takes to pay its suppliers. A higher result means it pays later."
+      ]
+    ],
+    "remember": "Asset turnover counts times, so higher means busier assets. The other three count days that stock or money waits.",
+    "a": {
+      "q": "A business's inventory turnover rises from 40 days to 60 days. What does this show?",
+      "opts": [
+        "Stock is being sold more slowly than before",
+        "Stock is being sold more quickly than before",
+        "Customers are taking longer to pay their accounts",
+        "The business is paying its suppliers more slowly"
+      ],
+      "why": "Inventory turnover is measured in days, so a rise from 40 to 60 means stock sits for longer before it is sold. The tempting answer treats a higher turnover as faster sales, but in days a higher number means more waiting. Customer and supplier payments are the receivable and payable ratios.",
+      "clue": "The result is in days, so think about what more days means."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's café in Dubbo sells mostly on credit to local businesses. Its accounts receivable turnover falls from 45 days to 30 days. What does this show?",
+      "opts": [
+        "Customers are paying their accounts more quickly",
+        "Customers are paying their accounts more slowly",
+        "The café is paying its suppliers more quickly",
+        "The café is selling its stock more quickly"
+      ],
+      "why": "Accounts receivable turnover counts how many days customers take to pay, so a fall from 45 to 30 days means debts are collected faster. The tempting answer reads a lower turnover as slower, but in days a lower number means less waiting. Paying suppliers is accounts payable turnover, and stock speed is inventory turnover.",
+      "clue": "This ratio is about customers, and it is measured in days."
+    }
+  },
+  "acc-non-financial-information": {
+    "title": "Non-financial information",
+    "card": [
+      "Non-financial information is information that is not measured in dollars in the financial reports. Four common examples are customer satisfaction, staff turnover, product quality and reputation.",
+      "Customer satisfaction can be found from surveys, reviews and complaints. Staff turnover is the share of employees who leave in a period. Product quality can be tracked by the rate of returns or faults. Reputation is how the public views the business.",
+      "This information helps explain the numbers. For example, a rise in product returns may help explain a fall in sales or in the gross profit margin.",
+      "It also guides decisions. A business with high staff turnover may review its pay or training, because replacing staff costs money. The numbers alone may not show these causes."
+    ],
+    "remember": "Non-financial information helps explain why the financial results changed and what to do next.",
+    "a": {
+      "q": "Why would an accountant look at non-financial information as well as the financial reports?",
+      "opts": [
+        "It helps explain the causes behind the financial results",
+        "It removes the need to calculate financial ratios",
+        "It is audited to the same standard as the financial reports",
+        "It records reputation as a dollar figure in the reports"
+      ],
+      "why": "Non-financial information helps explain why the numbers changed, such as why sales fell. It does not remove the need for ratios, because both kinds of information are used together. Reputation is not measured in dollars in the reports.",
+      "clue": "Think about what the dollar figures cannot show by themselves."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bakery in Ballarat has seen its sales fall for two years. Customer surveys show that satisfaction with freshness has dropped, and several bakers have left. Which conclusion best uses this information?",
+      "opts": [
+        "Lower freshness and lost bakers may explain the sales fall",
+        "Higher prices may explain the sales fall at the bakery",
+        "Bakers leaving may mean the bakery pays too much in wages",
+        "The surveys may be set aside, as sales figures say enough"
+      ],
+      "why": "The surveys and staff departures point to possible causes of the sales fall, which the sales figures alone do not show. The price conclusion is tempting, but nothing in the information is about prices. It says freshness has dropped.",
+      "clue": "Rely only on the facts the question gives you."
+    }
+  },
+  "acc-comparing-performance": {
+    "title": "Comparing performance",
+    "card": [
+      "A ratio on its own says little. A net profit margin of 8% is neither good nor bad until it is compared with something.",
+      "Three useful comparisons are past results of the same business, the budget (what the business planned), and similar businesses in the same industry.",
+      "Comparisons can mislead if businesses use different methods, such as different depreciation or inventory methods. They can also mislead if the periods differ, such as a seasonal peak against a quiet season.",
+      "A one-off event, such as the sale of a building at a large gain, can distort one year's result. It does not show how the business normally performs."
+    ],
+    "remember": "A ratio means most when compared, but methods, timing and one-off events can distort the comparison.",
+    "a": {
+      "q": "Kim's shop has a net profit margin of 8% this year. Which comparison would best help Kim judge whether 8% is a good result?",
+      "opts": [
+        "The shop's margin in earlier years and the industry's margin",
+        "The shop's margin and its total assets this year",
+        "The shop's margin and the number of staff it employs",
+        "The shop's margin this year and its closing cash balance"
+      ],
+      "why": "A ratio says little on its own. It is best judged against past results, the budget or similar businesses. The other options pair the margin with another of the shop's own figures from this year, which gives no standard to judge it against.",
+      "clue": "Compare the ratio with a standard, not with another of the shop's own figures from this year."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two bakeries in Ballarat have the same gross profit margin. Bakery A sold a delivery van this year at a large gain, which is included in its net profit. Why is comparing their net profit margins unreliable?",
+      "opts": [
+        "The one-off gain on the van inflates Bakery A's net profit",
+        "The gain on the van lowers Bakery A's net profit margin",
+        "The van sale shows how Bakery A normally performs",
+        "Equal gross margins mean their net margins are equal"
+      ],
+      "why": "The gain on the van is a one-off event, so it lifts Bakery A's net profit for this year and does not show its normal performance. It is tempting to think the van sale reflects normal trading, but a one-off gain is not likely to happen again next year.",
+      "clue": "Ask whether the van sale will happen again next year."
+    }
+  },
+  "acc-strategies-improve-performance": {
+    "title": "Strategies to improve performance",
+    "card": [
+      "A business can lift profit by raising prices or cutting costs. Higher prices raise revenue per sale, but customers may buy less. Lower costs raise profit if quality and sales hold up.",
+      "Managing inventory means holding enough stock to meet sales and no more. Less stock ties up less cash and cuts storage costs and the risk of stock going out of date.",
+      "Collecting debts faster means getting cash from accounts receivable sooner, for example by asking customers to pay within a shorter time. This lifts cash. By itself it does not change profit, though a discount for early payment or fewer bad debts can.",
+      "Selling idle assets, such as equipment the business no longer uses, brings in cash and can cut running costs. Each strategy has a trade-off, so a business weighs the gain against the risk."
+    ],
+    "remember": "Some strategies lift profit, some lift cash, and each has a trade-off to weigh.",
+    "a": {
+      "q": "A business asks its credit customers to pay in 20 days instead of 45. What is the most direct effect?",
+      "opts": [
+        "Cash comes in sooner from accounts receivable",
+        "Sales revenue rises because customers buy more",
+        "Cost of sales falls because less stock is held",
+        "Profit rises because revenue is earned sooner"
+      ],
+      "why": "A shorter payment time means the business receives cash from customers sooner, so cash improves. The sale was already counted as revenue when it was made, so this step alone does not raise profit. That is why the profit option is wrong.",
+      "clue": "Think about when the money arrives, not how much is earned."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev's hardware store in Ballarat has a lot of cash tied up in items that sit on its shelves for months. Which strategy best frees that cash without changing prices?",
+      "opts": [
+        "Reorder smaller amounts of those lines",
+        "Raise prices on all items by 10%",
+        "Cut staff hours on the busiest days",
+        "Give customers longer to pay accounts"
+      ],
+      "why": "Reordering smaller amounts means less cash is spent on inventory that sits unsold, and prices stay the same. Raising prices changes what customers pay and may cut sales. Giving customers longer to pay slows cash coming in, which works against the aim.",
+      "clue": "How did the cash get tied up in the first place?"
+    }
   }
 };

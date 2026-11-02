@@ -1,0 +1,260 @@
+{
+ "id": "mat-credit-cards-buy-now",
+ "title": "Credit and debit",
+ "brief": "39a32c0b5482",
+ "shortlist": [
+  [
+   "mat-credit-cards",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-02T06:22:45Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.00702,
+  "check": 0.017,
+  "fix": 0.03785,
+  "recheck": 0.01764
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a daily-interest calculation card for credit cards, while the new point teaches the concept of debit spending your own money versus credit and buy now pay later borrowing, so it is a related but different idea and its questions do not test that.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Credit and debit",
+  "card": [
+   [
+    "Debit",
+    "Spending from your own money in your bank account. The money leaves your account, so you cannot spend more than you have."
+   ],
+   [
+    "Credit",
+    "Borrowing the bank's money to pay now, then paying it back later. Credit cards and buy now pay later (BNPL) both work this way."
+   ],
+   [
+    "Costs",
+    "Credit cards can charge interest on what is not paid by the due date. Late fees can be added too, so the total paid can be much more than the price."
+   ],
+   [
+    "Example",
+    "Ben buys a $400 jacket on a card and pays $100 a month with no extra costs. He pays $400 in total. If fees are added, he pays $400 plus the fees."
+   ]
+  ],
+  "remember": "Debit uses your money now. Credit borrows, and fees or interest can lift the total above the price.",
+  "a": {
+   "q": "Priya pays $60 for shoes with her debit card. Whose money is used to pay the shop?",
+   "opts": [
+    "Her own money from her bank account",
+    "Money borrowed from the bank",
+    "Money lent by the shop",
+    "Money from a buy now pay later provider"
+   ],
+   "why": "Debit takes the money straight from her own account. The other options all describe borrowing, which is credit. Her account balance drops by $60.",
+   "clue": "Debit means spending what you already have."
+  },
+  "b": {
+   "d": 2,
+   "q": "Jack buys a $250 game console with buy now pay later. He misses a payment and is charged a $10 late fee. He pays $250 plus the fee. What is the total he pays?",
+   "opts": [
+    "$260",
+    "$250",
+    "$240",
+    "$2,500"
+   ],
+   "why": "Total paid = price + late fee = $250 + $10 = $260. Paying only $250 forgets the fee. Subtracting the fee, giving $240, is a sign error.",
+   "clue": "A late fee is an extra cost on top of the price."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Her own money from her bank account",
+   "also_right": []
+  },
+  "b": {
+   "best": "$260",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines credit as 'borrowing the bank's money' and says BNPL works this way. BNPL providers such as Afterpay and Zip are usually not banks, so this is inaccurate. Question a also lists 'a buy now pay later provider' separately from 'the bank', which clashes with the card's wording."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'You cannot spend more than you have' is stated as absolute. In Australia, debit accounts can be overdrawn, for example through an overdraft facility or certain offline transactions, and this can bring fees. 'Usually cannot' would be accurate."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example says Ben buys 'on a card' without saying whether it is a debit or credit card, although the monthly repayments imply credit."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem says 'He pays $250 plus the fee', which gives the working and the answer away. The question tests reading rather than understanding."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Adding $10 to $250 is far too easy for Year 12. A question needing more thought, such as several fees or interest, would suit the level better."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. The card wrongly says BNPL borrows 'the bank's money' and states debit spending can never exceed the balance. Question b's stem gives the answer away and is too easy for Year 12."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines credit as 'borrowing the bank's money' and says BNPL works this way. BNPL providers such as Afterpay and Zip are usually not banks, so this is inaccurate. Question a also lists 'a buy now pay later provider' separately from 'the bank', which clashes with the card's wording.",
+  "Card, fact: 'You cannot spend more than you have' is stated as absolute. In Australia, debit accounts can be overdrawn, for example through an overdraft facility or certain offline transactions, and this can bring fees. 'Usually cannot' would be accurate.",
+  "Card, wording: The example says Ben buys 'on a card' without saying whether it is a debit or credit card, although the monthly repayments imply credit.",
+  "Question b, wording: The stem says 'He pays $250 plus the fee', which gives the working and the answer away. The question tests reading rather than understanding.",
+  "Question b, level: Adding $10 to $250 is far too easy for Year 12. A question needing more thought, such as several fees or interest, would suit the level better."
+ ],
+ "proposal": {
+  "title": "Credit and debit",
+  "card": [
+   [
+    "Debit",
+    "You spend your own money from your bank account. You usually cannot spend more than you have, and going overdrawn can bring fees."
+   ],
+   [
+    "Credit",
+    "You borrow money from a lender to pay now, then repay it later. Lenders include banks, credit card providers and buy now pay later (BNPL) companies."
+   ],
+   [
+    "Costs",
+    "A credit card charges interest on the amount not paid by the due date. The interest is a percentage of that unpaid amount. Missed payments on cards or BNPL can also bring late fees."
+   ],
+   [
+    "Example",
+    "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: 0.02 × 300 = $6, so he now owes $306."
+   ]
+  ],
+  "remember": "Debit spends what you have. Credit is borrowed, and interest and fees can push the cost above the price.",
+  "a": {
+   "q": "Priya pays $60 for shoes with her debit card. Whose money is used to pay the shop?",
+   "opts": [
+    "Her own money from her bank account",
+    "Money her bank lends her until payday",
+    "Money lent by a buy now pay later company",
+    "Money lent by a credit card provider"
+   ],
+   "why": "A debit card takes the money straight from Priya's own account, so her balance drops by $60. The other options all involve a lender, which is credit, not debit.",
+   "clue": "Does debit involve borrowing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack buys a $900 laptop on his credit card. He pays $300 by the due date and is charged 1.5% interest for the month on the rest. How much does he now owe?",
+   "opts": [
+    "$609",
+    "$613.50",
+    "$600",
+    "$913.50"
+   ],
+   "why": "Interest is charged only on the unpaid amount: $900 − $300 = $600, and 0.015 × 600 = $9, so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
+   "clue": "Work out what is still unpaid before finding the interest."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "Her own money from her bank account",
+    "also_right": []
+   },
+   "b": {
+    "best": "$609",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card says a credit card charges interest only on the amount not paid by the due date. Many Australian credit cards drop the interest-free period when the closing balance is not paid in full, and then charge interest on the whole purchase from the purchase date. The model is a common textbook simplification, but it is not how many real Australian cards work. Why (b) also calls charging on the full $900 'wrong', which is not true for every card. Consider adding 'in this simple model' or 'for some cards'."
+    }
+   ],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "Both questions have one clear right answer, and the arithmetic checks out ($600 unpaid, $9 interest, $609 owed). The only concern is that the card's interest rule (interest only on the unpaid part) simplifies how many Australian credit cards work, so it should be framed as a simple model."
+  },
+  "flags": [
+   "Card, fact: The card says a credit card charges interest only on the amount not paid by the due date. Many Australian credit cards drop the interest-free period when the closing balance is not paid in full, and then charge interest on the whole purchase from the purchase date. The model is a common textbook simplification, but it is not how many real Australian cards work. Why (b) also calls charging on the full $900 'wrong', which is not true for every card. Consider adding 'in this simple model' or 'for some cards'."
+  ]
+ },
+ "final": {
+  "title": "Credit and debit",
+  "card": [
+   [
+    "Debit",
+    "You spend your own money from your bank account. You usually cannot spend more than you have, and going overdrawn can bring fees."
+   ],
+   [
+    "Credit",
+    "You borrow money from a lender to pay now, then repay it later. Lenders include banks, credit card providers and buy now pay later (BNPL) companies."
+   ],
+   [
+    "Costs",
+    "A credit card charges interest on the amount not paid by the due date. The interest is a percentage of that unpaid amount. Missed payments on cards or BNPL can also bring late fees."
+   ],
+   [
+    "Example",
+    "Ben buys a $400 jacket on his credit card and pays $100 by the due date. He is charged 2% interest for the month on the unpaid $300: 0.02 × 300 = $6, so he now owes $306."
+   ]
+  ],
+  "remember": "Debit spends what you have. Credit is borrowed, and interest and fees can push the cost above the price.",
+  "a": {
+   "q": "Priya pays $60 for shoes with her debit card. Whose money is used to pay the shop?",
+   "opts": [
+    "Her own money from her bank account",
+    "Money her bank lends her until payday",
+    "Money lent by a buy now pay later company",
+    "Money lent by a credit card provider"
+   ],
+   "why": "A debit card takes the money straight from Priya's own account, so her balance drops by $60. The other options all involve a lender, which is credit, not debit.",
+   "clue": "Does debit involve borrowing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Jack buys a $900 laptop on his credit card. He pays $300 by the due date and is charged 1.5% interest for the month on the rest. How much does he now owe?",
+   "opts": [
+    "$609",
+    "$613.50",
+    "$600",
+    "$913.50"
+   ],
+   "why": "Interest is charged only on the unpaid amount: $900 − $300 = $600, and 0.015 × 600 = $9, so he owes $609. The answer $613.50 wrongly charges 1.5% on the full $900 instead of the unpaid $600.",
+   "clue": "Work out what is still unpaid before finding the interest."
+  }
+ },
+ "cleared_by": "owner"
+}

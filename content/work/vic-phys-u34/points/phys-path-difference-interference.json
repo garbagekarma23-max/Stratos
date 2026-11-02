@@ -1,0 +1,243 @@
+{
+ "id": "phys-path-difference-interference",
+ "title": "Path difference and interference",
+ "brief": "9d66c9b73816",
+ "shortlist": [
+  [
+   "phys-young-s-double-slit",
+   0.343
+  ],
+  [
+   "phys-matter-waves",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00551,
+  "check": 0.0176,
+  "fix": 0.02848,
+  "recheck": 0.01114
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Young's double slit, covers the fringe pattern and in-phase and out-of-phase interference, but it never teaches the path-difference condition itself (whole wavelengths for bright, half wavelengths for dark), so it is broader and related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Path difference and interference",
+  "card": [
+   "Path difference is the difference in the distances travelled by two waves from their sources to the same point. It is measured in wavelengths (λ).",
+   [
+    "Constructive",
+    "if the path difference is 0, λ, 2λ and so on (nλ), the waves arrive in phase. Crests meet crests, so the light is bright."
+   ],
+   [
+    "Destructive",
+    "if the path difference is ½λ, 1½λ, 2½λ and so on ((n + ½)λ), the waves arrive out of phase. Crests meet troughs, so the light is dark."
+   ],
+   "This works when the two sources are coherent, meaning they have the same wavelength and a fixed phase relationship. In a double slit pattern, the centre of the screen is equally far from both slits, so its path difference is 0 and it is bright."
+  ],
+  "remember": "Path difference of a whole number of wavelengths gives bright. A half-wavelength offset gives dark.",
+  "a": {
+   "q": "Light from two coherent sources reaches a point on a screen. One path is 3.0 wavelengths longer than the other. What is seen at that point?",
+   "opts": [
+    "A bright band, as the waves arrive in phase",
+    "A dark band, as the waves arrive out of phase",
+    "A dark band, as the path difference is an odd number",
+    "A bright band, as the waves cancel each other out"
+   ],
+   "why": "A path difference of 3λ is a whole number of wavelengths, so crests meet crests and the light is bright. A dark band needs a half-wavelength offset such as 2.5λ or 3.5λ, not a whole number.",
+   "clue": "Is 3.0 a whole number of wavelengths or a half-way value?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a double slit setup, a point P on the screen is 2.5 wavelengths further from slit 1 than from slit 2. A point Q is 2.0 wavelengths further from slit 1 than from slit 2. What is seen at P and Q?",
+   "opts": [
+    "P is dark and Q is bright",
+    "P is bright and Q is dark",
+    "P and Q are both bright",
+    "P and Q are both dark"
+   ],
+   "why": "At P the path difference is 2.5λ, a half-wavelength offset, so the waves arrive out of phase and P is dark. At Q it is 2.0λ, a whole number, so Q is bright. Taking 2.5 as the larger number does not make P brighter.",
+   "clue": "Check which path difference is a whole number and which ends in a half."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A bright band, as the waves arrive in phase",
+   "also_right": []
+  },
+  "b": {
+   "best": "P is dark and Q is bright",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says path difference 'is measured in wavelengths (λ)'. Path difference is a distance, measured in metres, that is often expressed as a multiple of λ. As written, students may think wavelengths are its unit."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Coherence is defined as 'a fixed phase relationship', but the rules nλ = bright and (n + ½)λ = dark, and the bright centre, only hold when the sources are in phase. Coherent sources with a constant non-zero phase difference would shift the pattern. The card should say the sources are in phase, as in a double slit lit by one source."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct with one clear answer each. The card blurs path difference (a distance in metres) with its expression in wavelengths, and it does not say the bright/dark rules assume the sources are in phase, not just coherent."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says path difference 'is measured in wavelengths (λ)'. Path difference is a distance, measured in metres, that is often expressed as a multiple of λ. As written, students may think wavelengths are its unit.",
+  "Card, fact: Coherence is defined as 'a fixed phase relationship', but the rules nλ = bright and (n + ½)λ = dark, and the bright centre, only hold when the sources are in phase. Coherent sources with a constant non-zero phase difference would shift the pattern. The card should say the sources are in phase, as in a double slit lit by one source."
+ ],
+ "proposal": {
+  "title": "Path difference and interference",
+  "card": [
+   "Path difference is the difference in the distances travelled by two waves from their sources to the same point. It is a distance in metres, often written as a multiple of the wavelength (λ).",
+   [
+    "Constructive",
+    "if the path difference is 0, λ, 2λ and so on (nλ), the waves arrive in phase. Crests meet crests, so the light is bright."
+   ],
+   [
+    "Destructive",
+    "if the path difference is ½λ, 1½λ, 2½λ and so on ((n + ½)λ), the waves arrive out of phase. Crests meet troughs, so the light is dark."
+   ],
+   "These rules hold when the two sources are coherent and in phase, as in a double slit lit by one source. The centre of the screen is equally far from both slits, so its path difference is 0 and it is bright."
+  ],
+  "remember": "Path difference of a whole number of wavelengths gives bright. A half-wavelength offset gives dark.",
+  "a": {
+   "q": "Light from two coherent, in-phase sources reaches a point on a screen. One path is 3.0 wavelengths longer than the other. What is seen there?",
+   "opts": [
+    "A bright band, as the waves arrive in phase",
+    "A dark band, as the waves arrive out of phase",
+    "A dark band, as the path difference is an odd number",
+    "A bright band, as the waves cancel each other out"
+   ],
+   "why": "A path difference of 3λ is a whole number of wavelengths, so crests meet crests and the light is bright. A dark band needs a half-wavelength offset such as 2.5λ or 3.5λ. Being an odd whole number does not matter.",
+   "clue": "Is 3.0 a whole number of wavelengths or a half-way value?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a double slit setup, a point P on the screen is 2.5 wavelengths further from slit 1 than from slit 2. A point Q is 2.0 wavelengths further from slit 1 than from slit 2. What is seen at P and Q?",
+   "opts": [
+    "P is dark and Q is bright",
+    "P is bright and Q is dark",
+    "P and Q are both bright",
+    "P and Q are both dark"
+   ],
+   "why": "At P the path difference is 2.5λ, a half-wavelength offset, so the waves arrive out of phase and P is dark. At Q it is 2.0λ, a whole number, so Q is bright. Choosing P bright and Q dark swaps the two rules.",
+   "clue": "Check which path difference is a whole number and which ends in a half."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A bright band, as the waves arrive in phase",
+    "also_right": []
+   },
+   "b": {
+    "best": "P is dark and Q is bright",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says path difference 'is measured in wavelengths (λ)'. Path difference is a distance, measured in metres, that is often expressed as a multiple of λ. As written, students may think wavelengths are its unit."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Coherence is defined as 'a fixed phase relationship', but the rules nλ = bright and (n + ½)λ = dark, and the bright centre, only hold when the sources are in phase. Coherent sources with a constant non-zero phase difference would shift the pattern. The card should say the sources are in phase, as in a double slit lit by one source."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says path difference 'is measured in wavelengths (λ)'. Path difference is a distance, measured in metres, that is often expressed as a multiple of λ. As written, students may think wavelengths are its unit.",
+   "Card, fact: Coherence is defined as 'a fixed phase relationship', but the rules nλ = bright and (n + ½)λ = dark, and the bright centre, only hold when the sources are in phase. Coherent sources with a constant non-zero phase difference would shift the pattern. The card should say the sources are in phase, as in a double slit lit by one source."
+  ]
+ },
+ "final": {
+  "title": "Path difference and interference",
+  "card": [
+   "Path difference is the difference in the distances travelled by two waves from their sources to the same point. It is a distance in metres, often written as a multiple of the wavelength (λ).",
+   [
+    "Constructive",
+    "if the path difference is 0, λ, 2λ and so on (nλ), the waves arrive in phase. Crests meet crests, so the light is bright."
+   ],
+   [
+    "Destructive",
+    "if the path difference is ½λ, 1½λ, 2½λ and so on ((n + ½)λ), the waves arrive out of phase. Crests meet troughs, so the light is dark."
+   ],
+   "These rules hold when the two sources are coherent and in phase, as in a double slit lit by one source. The centre of the screen is equally far from both slits, so its path difference is 0 and it is bright."
+  ],
+  "remember": "Path difference of a whole number of wavelengths gives bright. A half-wavelength offset gives dark.",
+  "a": {
+   "q": "Light from two coherent, in-phase sources reaches a point on a screen. One path is 3.0 wavelengths longer than the other. What is seen there?",
+   "opts": [
+    "A bright band, as the waves arrive in phase",
+    "A dark band, as the waves arrive out of phase",
+    "A dark band, as the path difference is an odd number",
+    "A bright band, as the waves cancel each other out"
+   ],
+   "why": "A path difference of 3λ is a whole number of wavelengths, so crests meet crests and the light is bright. A dark band needs a half-wavelength offset such as 2.5λ or 3.5λ. Being an odd whole number does not matter.",
+   "clue": "Is 3.0 a whole number of wavelengths or a half-way value?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In a double slit setup, a point P on the screen is 2.5 wavelengths further from slit 1 than from slit 2. A point Q is 2.0 wavelengths further from slit 1 than from slit 2. What is seen at P and Q?",
+   "opts": [
+    "P is dark and Q is bright",
+    "P is bright and Q is dark",
+    "P and Q are both bright",
+    "P and Q are both dark"
+   ],
+   "why": "At P the path difference is 2.5λ, a half-wavelength offset, so the waves arrive out of phase and P is dark. At Q it is 2.0λ, a whole number, so Q is bright. Choosing P bright and Q dark swaps the two rules.",
+   "clue": "Check which path difference is a whole number and which ends in a half."
+  }
+ },
+ "cleared_by": "recheck"
+}

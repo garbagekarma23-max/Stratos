@@ -1,0 +1,158 @@
+{
+ "id": "mat-predicting-from-data",
+ "title": "Predicting from data",
+ "brief": "3cf55c8aba9f",
+ "shortlist": [
+  [
+   "mat-interpolation-extrapolation",
+   0.701
+  ],
+  [
+   "mat-types-data",
+   0.307
+  ],
+  [
+   "mat-linear-models",
+   0.291
+  ],
+  [
+   "mat-least-squares-regression-line",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 says adapt mat-interpolation-extrapolation (1 change)",
+  "2026-11-01T14:56:02Z adapt: done",
+  "2026-11-01T15:05:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "adapt": 0.00407,
+  "check": 0.01016
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-interpolation-extrapolation",
+  "changes": [
+   "Replace 'regression line' with 'line of best fit', the term the VCE Foundation Mathematics study design uses for fitted lines on bivariate data."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea (interpolation is safer than extrapolation) at a suitable depth, but it names the line as a 'regression line', which VCE Foundation Mathematics does not use, so it needs that small terminology change.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "mat-interpolation-extrapolation",
+  "changes": [
+   "Replace 'regression line' with 'line of best fit', the term the VCE Foundation Mathematics study design uses for fitted lines on bivariate data."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card1",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "Interpolation and extrapolation",
+  "card": [
+   "A line of best fit can be used to predict values. The range of the data runs from the smallest to the largest x-value in the data set.",
+   [
+    "Interpolation",
+    "predicting for an x-value inside the range of the data. It is fairly reliable, because the line is built from data on both sides of that value."
+   ],
+   [
+    "Extrapolation",
+    "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
+   ],
+   "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+  ],
+  "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
+  "a": {
+   "q": "A line of best fit is fitted to data with x-values from 20 to 50. Which prediction is extrapolation?",
+   "opts": [
+    "Predicting y when x = 70",
+    "Predicting y when x = 35",
+    "Predicting y when x = 22",
+    "Predicting y when x = 48"
+   ],
+   "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+   "clue": "Compare each x-value with the data the line was built from."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana records study time (2 to 10 hours) and test scores for 30 students. Her line of best fit predicts scores at 6 hours and at 14 hours. Which statement is correct?",
+   "opts": [
+    "The 6 hour prediction is more reliable than the 14 hour one",
+    "The 14 hour prediction is more reliable than the 6 hour one",
+    "Both predictions are equally reliable, as they use one line",
+    "Neither prediction is reliable, as it is only an estimate"
+   ],
+   "why": "The value 6 hours is inside the range of 2 to 10, so it is interpolation and fairly reliable. The value 14 hours is outside the range, so it is extrapolation and less reliable, even though both use the same line.",
+   "clue": "Which prediction has data on both sides of it?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Predicting y when x = 70",
+   "also_right": []
+  },
+  "b": {
+   "best": "The 6 hour prediction is more reliable than the 14 hour one",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Interpolation and extrapolation",
+  "card": [
+   "A line of best fit can be used to predict values. The range of the data runs from the smallest to the largest x-value in the data set.",
+   [
+    "Interpolation",
+    "predicting for an x-value inside the range of the data. It is fairly reliable, because the line is built from data on both sides of that value."
+   ],
+   [
+    "Extrapolation",
+    "predicting for an x-value outside the range of the data. It is less reliable, because the pattern may not continue beyond the data."
+   ],
+   "Example: a line is fitted to data for x from 10 to 40. Predicting at x = 25 is interpolation. Predicting at x = 60 is extrapolation."
+  ],
+  "remember": "Inside the data range is interpolation and fairly reliable. Outside it is extrapolation and less reliable.",
+  "a": {
+   "q": "A line of best fit is fitted to data with x-values from 20 to 50. Which prediction is extrapolation?",
+   "opts": [
+    "Predicting y when x = 70",
+    "Predicting y when x = 35",
+    "Predicting y when x = 22",
+    "Predicting y when x = 48"
+   ],
+   "why": "The value x = 70 is outside the range of 20 to 50, so it is extrapolation. The values 22, 35 and 48 all lie inside the range, so they are interpolation, even 22 and 48, which sit close to the ends.",
+   "clue": "Compare each x-value with the data the line was built from."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dana records study time (2 to 10 hours) and test scores for 30 students. Her line of best fit predicts scores at 6 hours and at 14 hours. Which statement is correct?",
+   "opts": [
+    "The 6 hour prediction is more reliable than the 14 hour one",
+    "The 14 hour prediction is more reliable than the 6 hour one",
+    "Both predictions are equally reliable, as they use one line",
+    "Neither prediction is reliable, as it is only an estimate"
+   ],
+   "why": "The value 6 hours is inside the range of 2 to 10, so it is interpolation and fairly reliable. The value 14 hours is outside the range, so it is extrapolation and less reliable, even though both use the same line.",
+   "clue": "Which prediction has data on both sides of it?"
+  }
+ },
+ "cleared_by": "checker"
+}

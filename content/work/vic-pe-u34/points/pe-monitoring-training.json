@@ -1,0 +1,236 @@
+{
+ "id": "pe-monitoring-training",
+ "title": "Monitoring training",
+ "brief": "e8951f1e9b70",
+ "shortlist": [
+  [
+   "hms-monitoring-training-intensity",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:05Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:24:45Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0058,
+  "check": 0.01562,
+  "fix": 0.0285,
+  "recheck": 0.01127
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only teaches measuring exercise intensity by heart rate zones, RPE and the talk test, while the new point also covers training diaries and tracking whether training is working, which the bank point does not teach.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Monitoring training",
+  "card": [
+   [
+    "Training diary",
+    "a written or digital record of each session: what was done, how long, how it felt and the results. Comparing entries over weeks shows whether performance is improving."
+   ],
+   [
+    "Heart rate",
+    "beats per minute, measured with a monitor or by finding a pulse. It shows how hard the body is working. Maximum heart rate is estimated as 220 minus age."
+   ],
+   [
+    "RPE",
+    "rating of perceived exertion. The athlete scores how hard a session feels, often on a scale of 6 to 20 or 0 to 10. It is a personal judgement, so it needs no equipment."
+   ],
+   "A coach uses these together. If the same workout gets easier, with a lower heart rate or a lower RPE, training is probably working."
+  ],
+  "remember": "Diaries track progress over time. Heart rate and RPE show how hard a session is.",
+  "a": {
+   "q": "Which method gives a score based on how hard an athlete feels they are working?",
+   "opts": [
+    "Rating of perceived exertion",
+    "Heart rate monitoring",
+    "A training diary",
+    "Estimating maximum heart rate"
+   ],
+   "why": "RPE is the athlete's own judgement of effort. Heart rate is a measurement of beats per minute, so it is not a feeling, even though it also shows how hard the body is working.",
+   "clue": "Which method relies on the athlete's own judgement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs the same 5 km route each week. After six weeks her average heart rate on it has dropped and her RPE is lower, while her time is unchanged. What does this most likely show?",
+   "opts": [
+    "Her training is working, as the same effort is now easier",
+    "Her training is not working, as her time has not improved",
+    "She is training too hard and should stop",
+    "Her maximum heart rate has fallen by the same amount"
+   ],
+   "why": "The same workout at the same pace now causes a lower heart rate and feels easier, so she has probably improved. An unchanged time does not mean failure, because the effort for it has dropped.",
+   "clue": "Look at how hard the same run is now."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Rating of perceived exertion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her training is working, as the same effort is now easier",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line splits the tools more neatly than the card does: diaries track progress, while heart rate and RPE show session intensity. But the card's last bullet, and question b, use heart rate and RPE to judge whether training is working over time."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and both questions are sound, and each question has one clear right answer. One minor issue: the remember line says only diaries track progress, though the card and question b use heart rate and RPE to show progress too."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line splits the tools more neatly than the card does: diaries track progress, while heart rate and RPE show session intensity. But the card's last bullet, and question b, use heart rate and RPE to judge whether training is working over time."
+ ],
+ "proposal": {
+  "title": "Monitoring training",
+  "card": [
+   [
+    "Training diary",
+    "a written or digital record of each session: what was done, how long, how it felt and the results. Comparing entries over weeks shows whether performance is improving."
+   ],
+   [
+    "Heart rate",
+    "beats per minute, measured with a monitor or by finding a pulse. It shows how hard the body is working. Maximum heart rate is estimated as 220 minus age."
+   ],
+   [
+    "RPE",
+    "rating of perceived exertion. The athlete scores how hard a session feels, often on a scale of 6 to 20 or 0 to 10. It is a personal judgement, so it needs no equipment."
+   ],
+   "A coach uses these together. If the same workout gets easier, with a lower heart rate or a lower RPE, training is probably working."
+  ],
+  "remember": "Used together, diaries, heart rate and RPE show how hard training is and whether it is working.",
+  "a": {
+   "q": "Which method gives a score based on how hard an athlete feels they are working?",
+   "opts": [
+    "Rating of perceived exertion",
+    "Heart rate monitoring",
+    "A training diary",
+    "Estimating maximum heart rate"
+   ],
+   "why": "RPE is the athlete's own judgement of effort. Heart rate is a measurement of beats per minute, so it is not a feeling, even though it also shows how hard the body is working.",
+   "clue": "Which method relies on the athlete's own judgement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs the same 5 km route each week. After six weeks her average heart rate on it has dropped and her RPE is lower, while her time is unchanged. What does this most likely show?",
+   "opts": [
+    "Her training is working, as the same run is now easier",
+    "Her training is not working, as her time has not improved",
+    "Her fitness has dropped, as her heart rate is now lower",
+    "She needs a diary, as heart rate and RPE cannot show this"
+   ],
+   "why": "The same run at the same pace now gives a lower heart rate and feels easier, so she has probably improved. An unchanged time does not mean failure, because the effort needed for that time has dropped.",
+   "clue": "Look at how hard the same run is for her now."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Rating of perceived exertion",
+    "also_right": []
+   },
+   "b": {
+    "best": "Her training is working, as the same run is now easier",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line splits the tools more neatly than the card does: diaries track progress, while heart rate and RPE show session intensity. But the card's last bullet, and question b, use heart rate and RPE to judge whether training is working over time."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line splits the tools more neatly than the card does: diaries track progress, while heart rate and RPE show session intensity. But the card's last bullet, and question b, use heart rate and RPE to judge whether training is working over time."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Monitoring training",
+  "card": [
+   [
+    "Training diary",
+    "a written or digital record of each session: what was done, how long, how it felt and the results. Comparing entries over weeks shows whether performance is improving."
+   ],
+   [
+    "Heart rate",
+    "beats per minute, measured with a monitor or by finding a pulse. It shows how hard the body is working. Maximum heart rate is estimated as 220 minus age."
+   ],
+   [
+    "RPE",
+    "rating of perceived exertion. The athlete scores how hard a session feels, often on a scale of 6 to 20 or 0 to 10. It is a personal judgement, so it needs no equipment."
+   ],
+   "A coach uses these together. If the same workout gets easier, with a lower heart rate or a lower RPE, training is probably working."
+  ],
+  "remember": "Used together, diaries, heart rate and RPE show how hard training is and whether it is working.",
+  "a": {
+   "q": "Which method gives a score based on how hard an athlete feels they are working?",
+   "opts": [
+    "Rating of perceived exertion",
+    "Heart rate monitoring",
+    "A training diary",
+    "Estimating maximum heart rate"
+   ],
+   "why": "RPE is the athlete's own judgement of effort. Heart rate is a measurement of beats per minute, so it is not a feeling, even though it also shows how hard the body is working.",
+   "clue": "Which method relies on the athlete's own judgement?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs the same 5 km route each week. After six weeks her average heart rate on it has dropped and her RPE is lower, while her time is unchanged. What does this most likely show?",
+   "opts": [
+    "Her training is working, as the same run is now easier",
+    "Her training is not working, as her time has not improved",
+    "Her fitness has dropped, as her heart rate is now lower",
+    "She needs a diary, as heart rate and RPE cannot show this"
+   ],
+   "why": "The same run at the same pace now gives a lower heart rate and feels easier, so she has probably improved. An unchanged time does not mean failure, because the effort needed for that time has dropped.",
+   "clue": "Look at how hard the same run is for her now."
+  }
+ },
+ "cleared_by": "owner"
+}

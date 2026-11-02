@@ -1,0 +1,244 @@
+{
+ "id": "mat-separation-variables",
+ "title": "Separation of variables",
+ "brief": "ed28eb44f5e4",
+ "shortlist": [
+  [
+   "mat-simultaneous-equations",
+   0.314
+  ],
+  [
+   "mat-optimisation",
+   0.235
+  ],
+  [
+   "mat-correlation-causation",
+   0.209
+  ],
+  [
+   "mat-scatterplots",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:45Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00534,
+  "check": 0.01362,
+  "fix": 0.03436,
+  "recheck": 0.01295
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches solving differential equations by separating variables; they cover simultaneous equations, optimisation, correlation and scatterplots, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Separation of variables",
+  "card": [
+   "A differential equation of the form dy/dx = f(x) × g(y) can be solved by separating the variables. Get all the y terms on one side with dy, and all the x terms on the other with dx.",
+   "Then integrate both sides: ∫ 1/g(y) dy = ∫ f(x) dx. Put a single constant c on one side only, as the two constants combine into one.",
+   "Use a given point to find c, then solve for y if the question asks for it.",
+   [
+    "Example",
+    "dy/dx = 2xy, with y = 1 when x = 0. Separate: ∫ 1/y dy = ∫ 2x dx, so ln y = x² + c. Putting in x = 0, y = 1 gives 0 = 0 + c, so c = 0. Then y = e^(x²)."
+   ]
+  ],
+  "remember": "Put y with dy and x with dx, integrate both sides, then use the point to find c.",
+  "a": {
+   "q": "Which line is the correct first step in separating dy/dx = 3y²x?",
+   "opts": [
+    "∫ 1/y² dy = ∫ 3x dx",
+    "∫ y² dy = ∫ 3x dx",
+    "∫ 1/y² dy = ∫ 3 dx",
+    "∫ 1/y dy = ∫ 3x dx"
+   ],
+   "why": "Dividing both sides by y² and multiplying by dx puts all the y terms with dy and all the x terms with dx. This gives 1/y² dy = 3x dx. Multiplying by y² instead, as in the second option, would leave y on the wrong side.",
+   "clue": "Divide by whatever y expression multiplies dx."
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve dy/dx = 2y, given y = 3 when x = 0. What is y when x = ln 2?",
+   "opts": [
+    "12",
+    "6",
+    "9",
+    "3 ln 2"
+   ],
+   "why": "Separating gives ∫ 1/y dy = ∫ 2 dx, so ln y = 2x + c. Then c = ln 3, so y = 3e^(2x). At x = ln 2, y = 3e^(2 ln 2) = 3 × 4 = 12. The answer 6 comes from treating e^(2 ln 2) as 2.",
+   "clue": "Use e^(2 ln 2) = e^(ln 4)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "∫ 1/y² dy = ∫ 3x dx",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option', but options are shown in random order, so this position may not match what students see. It also says multiplying by y² gives ∫ y² dy = ∫ 3x dx, which is wrong: multiplying both sides by y² gives y² dy/dx = 3y⁴x. That option comes from leaving y² with dy without dividing."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example writes ∫ 1/y dy = ln y. The general result is ln|y| + c, as expected in VCE Specialist. Dropping the modulus is only justified here because y = 1 > 0, and the card does not say so. Students may learn to omit the absolute value."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct (answers ∫ 1/y² dy = ∫ 3x dx and 12). Two small issues: the why for (a) refers to an option by position and misdescribes how the distractor arises, and the card writes ln y without the modulus or any note on why it can be dropped."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why refers to 'the second option', but options are shown in random order, so this position may not match what students see. It also says multiplying by y² gives ∫ y² dy = ∫ 3x dx, which is wrong: multiplying both sides by y² gives y² dy/dx = 3y⁴x. That option comes from leaving y² with dy without dividing.",
+  "Card, fact: The example writes ∫ 1/y dy = ln y. The general result is ln|y| + c, as expected in VCE Specialist. Dropping the modulus is only justified here because y = 1 > 0, and the card does not say so. Students may learn to omit the absolute value."
+ ],
+ "proposal": {
+  "title": "Separation of variables",
+  "card": [
+   "A differential equation of the form dy/dx = f(x) × g(y) can be solved by separating the variables. Get all the y terms on one side with dy, and all the x terms on the other with dx.",
+   "Then integrate both sides: ∫ 1/g(y) dy = ∫ f(x) dx. Note that ∫ 1/y dy = ln|y|. Put a single constant c on one side only, as the two constants combine into one.",
+   "Use a given point to find c. If y > 0 at that point, ln|y| can be written as ln y. Then solve for y if the question asks for it.",
+   [
+    "Example",
+    "dy/dx = 2xy, with y = 1 when x = 0. Separate: ∫ 1/y dy = ∫ 2x dx, so ln|y| = x² + c. At x = 0, y = 1, so c = 0. As y > 0, ln y = x², so y = e^(x²)."
+   ]
+  ],
+  "remember": "Put y with dy and x with dx, integrate both sides, then use the point to find c.",
+  "a": {
+   "q": "Which line is the correct first step in separating dy/dx = 3y²x?",
+   "opts": [
+    "∫ 1/y² dy = ∫ 3x dx",
+    "∫ y² dy = ∫ 3x dx",
+    "∫ 1/y² dy = ∫ 3 dx",
+    "∫ 1/y dy = ∫ 3x dx"
+   ],
+   "why": "Dividing both sides by y² gives (1/y²) dy/dx = 3x, so 1/y² goes with dy and 3x with dx. Writing ∫ y² dy = ∫ 3x dx leaves y² with dy without dividing by it, so the equation is no longer the same.",
+   "clue": "Which operation moves y² off the x side?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve dy/dx = 2y, given y = 3 when x = 0. What is y when x = ln 2?",
+   "opts": [
+    "12",
+    "6",
+    "7",
+    "4 + ln 3"
+   ],
+   "why": "Separating gives ∫ 1/y dy = ∫ 2 dx, so ln|y| = 2x + c, and c = ln 3. As y > 0, y = e^(2x + ln 3) = 3e^(2x). At x = ln 2, y = 3e^(ln 4) = 3 × 4 = 12. The answer 6 comes from treating e^(2 ln 2) as 2.",
+   "clue": "e^(a + b) = e^a × e^b, and 2 ln 2 = ln 4."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "∫ 1/y² dy = ∫ 3x dx",
+    "also_right": []
+   },
+   "b": {
+    "best": "12",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why refers to 'the second option', but options are shown in random order, so this position may not match what students see. It also says multiplying by y² gives ∫ y² dy = ∫ 3x dx, which is wrong: multiplying both sides by y² gives y² dy/dx = 3y⁴x. That option comes from leaving y² with dy without dividing."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The example writes ∫ 1/y dy = ln y. The general result is ln|y| + c, as expected in VCE Specialist. Dropping the modulus is only justified here because y = 1 > 0, and the card does not say so. Students may learn to omit the absolute value."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why refers to 'the second option', but options are shown in random order, so this position may not match what students see. It also says multiplying by y² gives ∫ y² dy = ∫ 3x dx, which is wrong: multiplying both sides by y² gives y² dy/dx = 3y⁴x. That option comes from leaving y² with dy without dividing.",
+   "Card, fact: The example writes ∫ 1/y dy = ln y. The general result is ln|y| + c, as expected in VCE Specialist. Dropping the modulus is only justified here because y = 1 > 0, and the card does not say so. Students may learn to omit the absolute value."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Separation of variables",
+  "card": [
+   "A differential equation of the form dy/dx = f(x) × g(y) can be solved by separating the variables. Get all the y terms on one side with dy, and all the x terms on the other with dx.",
+   "Then integrate both sides: ∫ 1/g(y) dy = ∫ f(x) dx. Note that ∫ 1/y dy = ln|y|. Put a single constant c on one side only, as the two constants combine into one.",
+   "Use a given point to find c. If y > 0 at that point, ln|y| can be written as ln y. Then solve for y if the question asks for it.",
+   [
+    "Example",
+    "dy/dx = 2xy, with y = 1 when x = 0. Separate: ∫ 1/y dy = ∫ 2x dx, so ln|y| = x² + c. At x = 0, y = 1, so c = 0. As y > 0, ln y = x², so y = e^(x²)."
+   ]
+  ],
+  "remember": "Put y with dy and x with dx, integrate both sides, then use the point to find c.",
+  "a": {
+   "q": "Which line is the correct first step in separating dy/dx = 3y²x?",
+   "opts": [
+    "∫ 1/y² dy = ∫ 3x dx",
+    "∫ y² dy = ∫ 3x dx",
+    "∫ 1/y² dy = ∫ 3 dx",
+    "∫ 1/y dy = ∫ 3x dx"
+   ],
+   "why": "Dividing both sides by y² gives (1/y²) dy/dx = 3x, so 1/y² goes with dy and 3x with dx. Writing ∫ y² dy = ∫ 3x dx leaves y² with dy without dividing by it, so the equation is no longer the same.",
+   "clue": "Which operation moves y² off the x side?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Solve dy/dx = 2y, given y = 3 when x = 0. What is y when x = ln 2?",
+   "opts": [
+    "12",
+    "6",
+    "7",
+    "4 + ln 3"
+   ],
+   "why": "Separating gives ∫ 1/y dy = ∫ 2 dx, so ln|y| = 2x + c, and c = ln 3. As y > 0, y = e^(2x + ln 3) = 3e^(2x). At x = ln 2, y = 3e^(ln 4) = 3 × 4 = 12. The answer 6 comes from treating e^(2 ln 2) as 2.",
+   "clue": "e^(a + b) = e^a × e^b, and 2 ln 2 = ln 4."
+  }
+ },
+ "cleared_by": "owner"
+}

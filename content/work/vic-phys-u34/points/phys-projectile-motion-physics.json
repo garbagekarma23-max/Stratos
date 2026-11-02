@@ -1,0 +1,253 @@
+{
+ "id": "phys-projectile-motion-physics",
+ "title": "Projectile motion in physics",
+ "brief": "2ade5f130c8b",
+ "shortlist": [
+  [
+   "phys-projectile-motion",
+   0.649
+  ],
+  [
+   "phys-uniform-circular-motion",
+   0.303
+  ],
+  [
+   "phys-equations-motion",
+   0.28
+  ],
+  [
+   "phys-motion-graphs",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 may adapt phys-projectile-motion, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:06Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: picked as a spot check. It would have been cleared with the fix (b other, card wording, b wording)",
+  "2026-11-02T06:24:54Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00036,
+  "confirm": 0.00941,
+  "write": 0.00524,
+  "check": 0.01809,
+  "fix": 0.02863
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-projectile-motion",
+  "changes": [
+   "Add a sentence saying that air resistance acts against the motion and shortens the path, since the card only says to ignore air resistance and the new point teaches that it shortens the path."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same independent horizontal and vertical motion at a suitable depth for VCE, but it ignores air resistance, which the new point needs mentioned.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The NSW projectile card teaches the same independence of horizontal and vertical motion but deliberately ignores air resistance, so covering the brief's qualitative effect of air resistance would mean adding a new step, not a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Projectile motion in physics",
+  "card": [
+   "A projectile is an object moving through the air with only gravity acting on it. Its horizontal and vertical motions are independent, so we treat them separately.",
+   [
+    "Horizontal",
+    "No horizontal force acts, so the horizontal velocity stays steady. The object covers equal horizontal distances in equal times."
+   ],
+   [
+    "Vertical",
+    "Gravity gives a constant downward acceleration of about 9.8 m/s². The vertical velocity changes by the same amount each second."
+   ],
+   "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance. Time of flight is linked to the vertical motion only."
+  ],
+  "remember": "Horizontal: steady velocity. Vertical: constant acceleration downward. The two share only the time.",
+  "a": {
+   "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
+   "opts": [
+    "It stays the same, as no horizontal force acts on it",
+    "It increases, because the ball is falling faster",
+    "It decreases, because gravity pulls the ball down",
+    "It increases, because the ball keeps being pushed forward"
+   ],
+   "why": "With no air resistance, no horizontal force acts, so the horizontal velocity stays steady. Gravity acts only downwards, so it changes the vertical velocity, not the horizontal one.",
+   "clue": "Which direction does gravity act, and is there any force sideways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a stone from a bridge. At the same instant, Tom throws an identical stone horizontally from the same height. Ignoring air resistance, which stone lands first?",
+   "opts": [
+    "They land at the same time",
+    "Mia's stone lands first",
+    "Tom's stone lands first",
+    "Tom's stone, because it has more speed overall"
+   ],
+   "why": "Both stones start with zero vertical velocity and fall with the same downward acceleration from the same height, so they take the same time. Tom's stone has extra horizontal velocity, but that does not change its vertical motion.",
+   "clue": "Time of flight depends on the vertical motion only."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It stays the same, as no horizontal force acts on it",
+   "also_right": []
+  },
+  "b": {
+   "best": "They land at the same time",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Time of flight depends on the vertical motion only' states the principle outright, so a student can pick 'They land at the same time' without understanding the idea."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Time of flight is linked to the vertical motion only' sits in the air resistance bullet, so it reads as if it holds with air resistance too. With real drag, the horizontal and vertical motions are coupled. Move it to the vertical bullet, or say it applies when air resistance is ignored."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options both say Tom's stone lands first ('Tom's stone lands first' and 'Tom's stone, because it has more speed overall'), so the choices overlap and one distractor is wasted."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct. The clue for question b gives the answer away, and the card puts 'time of flight depends on vertical motion only' in the air resistance bullet, where it is not strictly true. Question b also has two overlapping 'Tom's stone' options."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Time of flight depends on the vertical motion only' states the principle outright, so a student can pick 'They land at the same time' without understanding the idea.",
+  "Card, wording: 'Time of flight is linked to the vertical motion only' sits in the air resistance bullet, so it reads as if it holds with air resistance too. With real drag, the horizontal and vertical motions are coupled. Move it to the vertical bullet, or say it applies when air resistance is ignored.",
+  "Question b, wording: Two options both say Tom's stone lands first ('Tom's stone lands first' and 'Tom's stone, because it has more speed overall'), so the choices overlap and one distractor is wasted."
+ ],
+ "proposal": {
+  "title": "Projectile motion in physics",
+  "card": [
+   "A projectile is an object launched through the air. In the simple model only gravity acts on it, so its horizontal and vertical motions are independent and we treat them separately.",
+   [
+    "Horizontal",
+    "No horizontal force acts, so the horizontal velocity stays steady. The object covers equal horizontal distances in equal times."
+   ],
+   [
+    "Vertical",
+    "Gravity gives a constant downward acceleration of about 9.8 m/s², so the vertical velocity changes by the same amount each second. Ignoring air resistance, the time in the air depends only on the vertical motion."
+   ],
+   "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance."
+  ],
+  "remember": "With no air resistance, horizontal velocity stays steady, vertical velocity changes steadily, and the two share only the time.",
+  "a": {
+   "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
+   "opts": [
+    "It stays the same, as no horizontal force acts on it",
+    "It increases, because the ball is falling faster",
+    "It decreases, because gravity pulls the ball down",
+    "It increases, because the ball keeps being pushed forward"
+   ],
+   "why": "With no air resistance, no horizontal force acts, so the horizontal velocity stays steady. Gravity acts only downwards, so it changes the vertical velocity, not the horizontal one.",
+   "clue": "Which direction does gravity act, and is there any force sideways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a stone from a bridge. At the same instant, Tom throws an identical stone horizontally from the same height. Ignoring air resistance, which stone lands first?",
+   "opts": [
+    "They land at the same time",
+    "Mia's stone lands first",
+    "Tom's stone lands first",
+    "It depends on how fast Tom throws his"
+   ],
+   "why": "Both stones start with zero vertical velocity and fall with the same downward acceleration from the same height, so they take the same time. Tom's stone has extra horizontal velocity, but however fast he throws it, that does not change its vertical motion.",
+   "clue": "Compare how each stone starts moving up or down."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Time of flight depends on the vertical motion only' states the principle outright, so a student can pick 'They land at the same time' without understanding the idea."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Time of flight is linked to the vertical motion only' sits in the air resistance bullet, so it reads as if it holds with air resistance too. With real drag, the horizontal and vertical motions are coupled. Move it to the vertical bullet, or say it applies when air resistance is ignored."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Two options both say Tom's stone lands first ('Tom's stone lands first' and 'Tom's stone, because it has more speed overall'), so the choices overlap and one distractor is wasted."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Time of flight depends on the vertical motion only' states the principle outright, so a student can pick 'They land at the same time' without understanding the idea.",
+   "Card, wording: 'Time of flight is linked to the vertical motion only' sits in the air resistance bullet, so it reads as if it holds with air resistance too. With real drag, the horizontal and vertical motions are coupled. Move it to the vertical bullet, or say it applies when air resistance is ignored.",
+   "Question b, wording: Two options both say Tom's stone lands first ('Tom's stone lands first' and 'Tom's stone, because it has more speed overall'), so the choices overlap and one distractor is wasted."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Projectile motion in physics",
+  "card": [
+   "A projectile is an object launched through the air. In the simple model only gravity acts on it, so its horizontal and vertical motions are independent and we treat them separately.",
+   [
+    "Horizontal",
+    "No horizontal force acts, so the horizontal velocity stays steady. The object covers equal horizontal distances in equal times."
+   ],
+   [
+    "Vertical",
+    "Gravity gives a constant downward acceleration of about 9.8 m/s², so the vertical velocity changes by the same amount each second. Ignoring air resistance, the time in the air depends only on the vertical motion."
+   ],
+   "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance."
+  ],
+  "remember": "With no air resistance, horizontal velocity stays steady, vertical velocity changes steadily, and the two share only the time.",
+  "a": {
+   "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
+   "opts": [
+    "It stays the same, as no horizontal force acts on it",
+    "It increases, because the ball is falling faster",
+    "It decreases, because gravity pulls the ball down",
+    "It increases, because the ball keeps being pushed forward"
+   ],
+   "why": "With no air resistance, no horizontal force acts, so the horizontal velocity stays steady. Gravity acts only downwards, so it changes the vertical velocity, not the horizontal one.",
+   "clue": "Which direction does gravity act, and is there any force sideways?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia drops a stone from a bridge. At the same instant, Tom throws an identical stone horizontally from the same height. Ignoring air resistance, which stone lands first?",
+   "opts": [
+    "They land at the same time",
+    "Mia's stone lands first",
+    "Tom's stone lands first",
+    "It depends on how fast Tom throws his"
+   ],
+   "why": "Both stones start with zero vertical velocity and fall with the same downward acceleration from the same height, so they take the same time. Tom's stone has extra horizontal velocity, but however fast he throws it, that does not change its vertical motion.",
+   "clue": "Compare how each stone starts moving up or down."
+  }
+ },
+ "cleared_by": "owner"
+}

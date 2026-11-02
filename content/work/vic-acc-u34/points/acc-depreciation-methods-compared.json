@@ -1,0 +1,295 @@
+{
+ "id": "acc-depreciation-methods-compared",
+ "title": "Depreciation methods compared",
+ "brief": "ae1a984de336",
+ "shortlist": [
+  [
+   "acc-carrying-amount",
+   0.433
+  ],
+  [
+   "acc-choosing-depreciation-method",
+   0.32
+  ],
+  [
+   "acc-reducing-balance-depreciation",
+   0.311
+  ],
+  [
+   "acc-depreciation",
+   0.297
+  ],
+  [
+   "bus-balance-sheet",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00491,
+  "check": 0.01834,
+  "fix": 0.03565,
+  "recheck": 0.01593
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Choosing a depreciation method, covers when to use each method but not how the method changes yearly profit and carrying amount while the total depreciated stays the same, so the comparison is a different idea and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Depreciation methods compared",
+  "card": [
+   [
+    "Straight-line",
+    "the same depreciation expense every year. Annual expense = (cost - residual value) ÷ useful life."
+   ],
+   [
+    "Reducing balance",
+    "a fixed percentage of the carrying amount each year. The expense is largest in year 1 and falls each year after."
+   ],
+   "Carrying amount = cost - accumulated depreciation. A bigger expense in a year lowers that year's profit and lowers the carrying amount more.",
+   "Over the whole useful life, both methods depreciate the same total: cost less residual value. Only the timing of the expense differs."
+  ],
+  "remember": "The method changes when the expense falls, not the total depreciated over the asset's life.",
+  "a": {
+   "q": "A business uses reducing balance instead of straight-line for a new machine. What is true of the first year?",
+   "opts": [
+    "Depreciation is higher, so profit is lower",
+    "Depreciation is lower, so profit is higher",
+    "Depreciation is higher, so profit is higher",
+    "Depreciation is lower, so profit is lower"
+   ],
+   "why": "Reducing balance applies the percentage to the full cost in year 1, so the expense is larger than the straight-line amount here. A larger expense lowers profit. Higher depreciation cannot lead to higher profit.",
+   "clue": "Which method front-loads the expense, and what do expenses do to profit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena buys a van for $50,000 with no residual value and a 5-year life. She compares straight-line with reducing balance over the full 5 years. What is true at the end of year 5?",
+   "opts": [
+    "Both methods have depreciated a total of $50,000",
+    "Reducing balance has depreciated less in total",
+    "Straight-line has depreciated less in total",
+    "Reducing balance has depreciated more in total"
+   ],
+   "why": "Both methods spread the same depreciable amount, cost less residual value, which is $50,000 here. The method changes how much falls in each year, not the total. Reducing balance is higher early and lower later, but the totals match.",
+   "clue": "Think about what the total depreciated is made up of."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Depreciation is higher, so profit is lower",
+   "also_right": []
+  },
+  "b": {
+   "best": "Both methods have depreciated a total of $50,000",
+   "also_right": [
+    "Reducing balance has depreciated less in total"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "With no residual value, a fixed percentage of the carrying amount can never bring the van to $0. Reducing balance therefore depreciates less than $50,000 over 5 years, unless the rate is 100% or the final year is adjusted. This makes 'Reducing balance has depreciated less in total' defensible, and the intended answer is strictly false."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says both methods always depreciate exactly cost less residual value over the useful life. In VCE practice, reducing balance at a given rate usually does not land exactly on the residual value. The card should say the totals are designed to match, or match when the rate is set so the asset reaches its residual value."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The remember line repeats the unqualified claim that the method never changes the total depreciated, which is not exactly true for reducing balance at a set rate."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The intended option is the only one with a precise figure ($50,000) and the only one framed as 'both methods', so it stands out from the three vague comparisons."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) asserts that the reducing balance total matches $50,000. This cannot happen with a zero residual value and a percentage below 100%."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Question a is fine. Question b uses a zero residual value, so reducing balance cannot fully depreciate the van, and the intended 'both $50,000' answer is strictly false. The card and remember line also overstate that the totals always match, and the right option in b stands out as the only precise one. Use a non-zero residual value and qualify the card's claim."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Reducing balance has depreciated less in total” could also be right.",
+  "Question b, fact: With no residual value, a fixed percentage of the carrying amount can never bring the van to $0. Reducing balance therefore depreciates less than $50,000 over 5 years, unless the rate is 100% or the final year is adjusted. This makes 'Reducing balance has depreciated less in total' defensible, and the intended answer is strictly false.",
+  "Card, fact: The card says both methods always depreciate exactly cost less residual value over the useful life. In VCE practice, reducing balance at a given rate usually does not land exactly on the residual value. The card should say the totals are designed to match, or match when the rate is set so the asset reaches its residual value.",
+  "Remember, fact: The remember line repeats the unqualified claim that the method never changes the total depreciated, which is not exactly true for reducing balance at a set rate.",
+  "Question b, wording: The intended option is the only one with a precise figure ($50,000) and the only one framed as 'both methods', so it stands out from the three vague comparisons.",
+  "Question b, other: Why (b) asserts that the reducing balance total matches $50,000. This cannot happen with a zero residual value and a percentage below 100%."
+ ],
+ "proposal": {
+  "title": "Depreciation methods compared",
+  "card": [
+   [
+    "Straight-line",
+    "the same depreciation expense every year. Annual expense = (cost - residual value) ÷ useful life."
+   ],
+   [
+    "Reducing balance",
+    "a fixed percentage of the carrying amount each year. The expense is largest in year 1 and falls each year after."
+   ],
+   "Carrying amount = cost - accumulated depreciation. A bigger expense in a year lowers that year's profit and lowers the carrying amount more.",
+   "When the reducing balance rate is set so the asset ends at its residual value, both methods depreciate the same total. Reducing balance is then higher than straight-line in the early years and lower in the later years."
+  ],
+  "remember": "The method mainly shifts when the expense falls, which moves each year's profit and carrying amount.",
+  "a": {
+   "q": "A business uses reducing balance instead of straight-line for a new machine, with both set to reach the same residual value. What is true of year 1?",
+   "opts": [
+    "Depreciation is higher, so profit is lower",
+    "Depreciation is lower, so profit is higher",
+    "Depreciation is higher, so profit is higher",
+    "Depreciation is lower, so profit is lower"
+   ],
+   "why": "When both methods reach the same residual value, reducing balance gives a larger expense than straight-line in the early years. A larger expense lowers profit, so higher depreciation cannot lead to higher profit.",
+   "clue": "Which method has the larger expense early on, and what do expenses do to profit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena buys a van for $50,000 with a $5,000 residual value and a 5-year life. The reducing balance rate is set so the van ends at $5,000. All else equal, which method gives higher profit in year 5?",
+   "opts": [
+    "Reducing balance, as its year 5 expense is lower",
+    "Straight-line, as its year 5 expense is lower",
+    "Reducing balance, as its year 5 expense is higher",
+    "Neither, as the total depreciated is the same"
+   ],
+   "why": "Straight-line charges $9,000 every year, but reducing balance falls each year and is lower than straight-line in the later years. A lower expense in year 5 means higher profit that year. The totals match over the full life, but that does not make each year's profit the same.",
+   "clue": "Reducing balance is not always the method with the bigger expense."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Depreciation is higher, so profit is lower",
+    "also_right": []
+   },
+   "b": {
+    "best": "Reducing balance, as its year 5 expense is lower",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "With no residual value, a fixed percentage of the carrying amount can never bring the van to $0. Reducing balance therefore depreciates less than $50,000 over 5 years, unless the rate is 100% or the final year is adjusted. This makes 'Reducing balance has depreciated less in total' defensible, and the intended answer is strictly false."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says both methods always depreciate exactly cost less residual value over the useful life. In VCE practice, reducing balance at a given rate usually does not land exactly on the residual value. The card should say the totals are designed to match, or match when the rate is set so the asset reaches its residual value."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The remember line repeats the unqualified claim that the method never changes the total depreciated, which is not exactly true for reducing balance at a set rate."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The intended option is the only one with a precise figure ($50,000) and the only one framed as 'both methods', so it stands out from the three vague comparisons."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) asserts that the reducing balance total matches $50,000. This cannot happen with a zero residual value and a percentage below 100%."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Reducing balance has depreciated less in total” could also be right.",
+   "Question b, fact: With no residual value, a fixed percentage of the carrying amount can never bring the van to $0. Reducing balance therefore depreciates less than $50,000 over 5 years, unless the rate is 100% or the final year is adjusted. This makes 'Reducing balance has depreciated less in total' defensible, and the intended answer is strictly false.",
+   "Card, fact: The card says both methods always depreciate exactly cost less residual value over the useful life. In VCE practice, reducing balance at a given rate usually does not land exactly on the residual value. The card should say the totals are designed to match, or match when the rate is set so the asset reaches its residual value.",
+   "Remember, fact: The remember line repeats the unqualified claim that the method never changes the total depreciated, which is not exactly true for reducing balance at a set rate.",
+   "Question b, wording: The intended option is the only one with a precise figure ($50,000) and the only one framed as 'both methods', so it stands out from the three vague comparisons.",
+   "Question b, other: Why (b) asserts that the reducing balance total matches $50,000. This cannot happen with a zero residual value and a percentage below 100%."
+  ]
+ },
+ "final": {
+  "title": "Depreciation methods compared",
+  "card": [
+   [
+    "Straight-line",
+    "the same depreciation expense every year. Annual expense = (cost - residual value) ÷ useful life."
+   ],
+   [
+    "Reducing balance",
+    "a fixed percentage of the carrying amount each year. The expense is largest in year 1 and falls each year after."
+   ],
+   "Carrying amount = cost - accumulated depreciation. A bigger expense in a year lowers that year's profit and lowers the carrying amount more.",
+   "When the reducing balance rate is set so the asset ends at its residual value, both methods depreciate the same total. Reducing balance is then higher than straight-line in the early years and lower in the later years."
+  ],
+  "remember": "The method mainly shifts when the expense falls, which moves each year's profit and carrying amount.",
+  "a": {
+   "q": "A business uses reducing balance instead of straight-line for a new machine, with both set to reach the same residual value. What is true of year 1?",
+   "opts": [
+    "Depreciation is higher, so profit is lower",
+    "Depreciation is lower, so profit is higher",
+    "Depreciation is higher, so profit is higher",
+    "Depreciation is lower, so profit is lower"
+   ],
+   "why": "When both methods reach the same residual value, reducing balance gives a larger expense than straight-line in the early years. A larger expense lowers profit, so higher depreciation cannot lead to higher profit.",
+   "clue": "Which method has the larger expense early on, and what do expenses do to profit?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena buys a van for $50,000 with a $5,000 residual value and a 5-year life. The reducing balance rate is set so the van ends at $5,000. All else equal, which method gives higher profit in year 5?",
+   "opts": [
+    "Reducing balance, as its year 5 expense is lower",
+    "Straight-line, as its year 5 expense is lower",
+    "Reducing balance, as its year 5 expense is higher",
+    "Neither, as the total depreciated is the same"
+   ],
+   "why": "Straight-line charges $9,000 every year, but reducing balance falls each year and is lower than straight-line in the later years. A lower expense in year 5 means higher profit that year. The totals match over the full life, but that does not make each year's profit the same.",
+   "clue": "Reducing balance is not always the method with the bigger expense."
+  }
+ },
+ "cleared_by": "recheck"
+}

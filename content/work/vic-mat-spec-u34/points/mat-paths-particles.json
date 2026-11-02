@@ -1,0 +1,227 @@
+{
+ "id": "mat-paths-particles",
+ "title": "Paths of particles",
+ "brief": "bb5ab7522cee",
+ "shortlist": [
+  [
+   "mat-critical-path",
+   0.272
+  ],
+  [
+   "mat-law-total-probability",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00564,
+  "check": 0.01926,
+  "fix": 0.04207,
+  "recheck": 0.01366
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches position vectors as functions of time or particle paths and collisions; the critical path point is about project networks and the total probability point is about probability, so no bank point matches the idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Paths of particles",
+  "card": [
+   "A position vector r(t) = x(t)i + y(t)j gives a particle's position at time t. The path is the curve traced as t changes.",
+   "To find the path, eliminate t. For r(t) = 3cos(t)i + 2sin(t)j, cos(t) = x/3 and sin(t) = y/2. Since cos²(t) + sin²(t) = 1, the path is x²/9 + y²/4 = 1, an ellipse.",
+   "A circle has equal multipliers, such as r(t) = 5cos(t)i + 5sin(t)j, which gives x² + y² = 25. A circle of radius 5 centred at the origin.",
+   "Two particles collide only if they are at the same point at the same time. Set the i components equal and the j components equal, then check that one value of t satisfies both."
+  ],
+  "remember": "Eliminate t to find the path. For a collision, one t must match every component.",
+  "a": {
+   "q": "A particle has position r(t) = 4cos(t)i + 3sin(t)j. What is the Cartesian equation of its path?",
+   "opts": [
+    "x²/16 + y²/9 = 1",
+    "x²/4 + y²/3 = 1",
+    "x²/9 + y²/16 = 1",
+    "x² + y² = 25"
+   ],
+   "why": "Since cos(t) = x/4 and sin(t) = y/3, using cos²(t) + sin²(t) = 1 gives x²/16 + y²/9 = 1. The option x²/4 + y²/3 = 1 forgets to square the 4 and the 3.",
+   "clue": "Divide each component by its multiplier, then square."
+  },
+  "b": {
+   "d": 3,
+   "q": "Particle A has r(t) = ti + (t²)j and particle B has r(t) = (6 − t)i + (4t − 4)j, for t ≥ 0. Which statement is correct?",
+   "opts": [
+    "They collide at t = 2",
+    "They collide at t = 3",
+    "They pass through the same point at different times",
+    "They never pass through the same point"
+   ],
+   "why": "Equal i components: t = 6 − t, so t = 3. Equal j components: t² = 4t − 4, so (t − 2)² = 0 and t = 2. No single t satisfies both, so there is no collision. At t = 2, A is at (2, 4) and B is at (4, 4), so they are not at the same point then. They do not meet at t = 3 either, since A has y = 9 and B has y = 8.",
+   "clue": "Solve each component separately and compare the t values."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x²/16 + y²/9 = 1",
+   "also_right": []
+  },
+  "b": {
+   "best": "They pass through the same point at different times",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why only shows there is no collision. It never shows that the paths cross, so it does not separate the two 'no collision' options. A's path is y = x² and B's path is y = 20 − 4x. They meet at x = −2 + 2√6 ≈ 2.90, which A reaches at t ≈ 2.90 and B reaches at t ≈ 3.10. So 'same point at different times' is right, and the why should show this."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Telling 'pass through the same point at different times' apart from 'never pass through the same point' means intersecting the two Cartesian paths, here a parabola and a line. The card does not teach this step, and the clue ('solve each component separately and compare the t values') only covers the collision check."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are correct. Question b's right answer (same point at different times) needs a path-intersection step that the card, the clue and the why never show, so students cannot rule out 'never pass through the same point' from what they are taught."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “They pass through the same point at different times”, not the writer’s answer “They collide at t = 2”.",
+  "Question b, other: The why only shows there is no collision. It never shows that the paths cross, so it does not separate the two 'no collision' options. A's path is y = x² and B's path is y = 20 − 4x. They meet at x = −2 + 2√6 ≈ 2.90, which A reaches at t ≈ 2.90 and B reaches at t ≈ 3.10. So 'same point at different times' is right, and the why should show this.",
+  "Question b, level: Telling 'pass through the same point at different times' apart from 'never pass through the same point' means intersecting the two Cartesian paths, here a parabola and a line. The card does not teach this step, and the clue ('solve each component separately and compare the t values') only covers the collision check."
+ ],
+ "proposal": {
+  "title": "Paths of particles",
+  "card": [
+   "A position vector r(t) = x(t)i + y(t)j gives a particle's position at time t. To find the Cartesian equation of its path, eliminate t.",
+   "For r(t) = 3cos(t)i + 2sin(t)j, cos(t) = x/3 and sin(t) = y/2. Since cos²(t) + sin²(t) = 1, the path is the ellipse x²/9 + y²/4 = 1. Equal multipliers give a circle: 5cos(t)i + 5sin(t)j gives x² + y² = 25.",
+   "Two particles collide only if they are at the same point at the same time. Set the i components equal and the j components equal, then check that one value of t satisfies both.",
+   "Paths can cross without a collision. Solve the two Cartesian equations together to find where the paths meet, then find when each particle is there. Different times means no collision."
+  ],
+  "remember": "A path comes from eliminating t. A collision needs the same point at the same time.",
+  "a": {
+   "q": "A particle has position r(t) = 4cos(t)i + 3sin(t)j. What is the Cartesian equation of its path?",
+   "opts": [
+    "x²/16 + y²/9 = 1",
+    "x²/4 + y²/3 = 1",
+    "x²/9 + y²/16 = 1",
+    "x² + y² = 25"
+   ],
+   "why": "Since cos(t) = x/4 and sin(t) = y/3, using cos²(t) + sin²(t) = 1 gives x²/16 + y²/9 = 1. The option x²/4 + y²/3 = 1 forgets to square the 4 and the 3.",
+   "clue": "Divide each component by its multiplier, then square."
+  },
+  "b": {
+   "d": 3,
+   "q": "Particle A has r(t) = ti + 2tj and particle B has r(t) = (6 − t)i + tj, for t ≥ 0. Which statement is correct?",
+   "opts": [
+    "They pass through (2, 4) at different times",
+    "They collide at (2, 4) when t = 2",
+    "They collide when t = 3",
+    "Their paths never cross each other"
+   ],
+   "why": "Equal i components give t = 3, but equal j components give t = 0, so no single t works and there is no collision. The paths are y = 2x and y = 6 − x, which meet at (2, 4). A is there at t = 2, but B is there at t = 4, since at t = 2 B is at (4, 2).",
+   "clue": "Find where the paths meet, then when each particle gets there."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x²/16 + y²/9 = 1",
+    "also_right": []
+   },
+   "b": {
+    "best": "They pass through (2, 4) at different times",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: the ellipse is x²/16 + y²/9 = 1, and the paths meet at (2, 4) at t = 2 for A and t = 4 for B, so there is no collision."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why only shows there is no collision. It never shows that the paths cross, so it does not separate the two 'no collision' options. A's path is y = x² and B's path is y = 20 − 4x. They meet at x = −2 + 2√6 ≈ 2.90, which A reaches at t ≈ 2.90 and B reaches at t ≈ 3.10. So 'same point at different times' is right, and the why should show this."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Telling 'pass through the same point at different times' apart from 'never pass through the same point' means intersecting the two Cartesian paths, here a parabola and a line. The card does not teach this step, and the clue ('solve each component separately and compare the t values') only covers the collision check."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “They pass through the same point at different times”, not the writer’s answer “They collide at t = 2”.",
+   "Question b, other: The why only shows there is no collision. It never shows that the paths cross, so it does not separate the two 'no collision' options. A's path is y = x² and B's path is y = 20 − 4x. They meet at x = −2 + 2√6 ≈ 2.90, which A reaches at t ≈ 2.90 and B reaches at t ≈ 3.10. So 'same point at different times' is right, and the why should show this.",
+   "Question b, level: Telling 'pass through the same point at different times' apart from 'never pass through the same point' means intersecting the two Cartesian paths, here a parabola and a line. The card does not teach this step, and the clue ('solve each component separately and compare the t values') only covers the collision check."
+  ]
+ },
+ "final": {
+  "title": "Paths of particles",
+  "card": [
+   "A position vector r(t) = x(t)i + y(t)j gives a particle's position at time t. To find the Cartesian equation of its path, eliminate t.",
+   "For r(t) = 3cos(t)i + 2sin(t)j, cos(t) = x/3 and sin(t) = y/2. Since cos²(t) + sin²(t) = 1, the path is the ellipse x²/9 + y²/4 = 1. Equal multipliers give a circle: 5cos(t)i + 5sin(t)j gives x² + y² = 25.",
+   "Two particles collide only if they are at the same point at the same time. Set the i components equal and the j components equal, then check that one value of t satisfies both.",
+   "Paths can cross without a collision. Solve the two Cartesian equations together to find where the paths meet, then find when each particle is there. Different times means no collision."
+  ],
+  "remember": "A path comes from eliminating t. A collision needs the same point at the same time.",
+  "a": {
+   "q": "A particle has position r(t) = 4cos(t)i + 3sin(t)j. What is the Cartesian equation of its path?",
+   "opts": [
+    "x²/16 + y²/9 = 1",
+    "x²/4 + y²/3 = 1",
+    "x²/9 + y²/16 = 1",
+    "x² + y² = 25"
+   ],
+   "why": "Since cos(t) = x/4 and sin(t) = y/3, using cos²(t) + sin²(t) = 1 gives x²/16 + y²/9 = 1. The option x²/4 + y²/3 = 1 forgets to square the 4 and the 3.",
+   "clue": "Divide each component by its multiplier, then square."
+  },
+  "b": {
+   "d": 3,
+   "q": "Particle A has r(t) = ti + 2tj and particle B has r(t) = (6 − t)i + tj, for t ≥ 0. Which statement is correct?",
+   "opts": [
+    "They pass through (2, 4) at different times",
+    "They collide at (2, 4) when t = 2",
+    "They collide when t = 3",
+    "Their paths never cross each other"
+   ],
+   "why": "Equal i components give t = 3, but equal j components give t = 0, so no single t works and there is no collision. The paths are y = 2x and y = 6 − x, which meet at (2, 4). A is there at t = 2, but B is there at t = 4, since at t = 2 B is at (4, 2).",
+   "clue": "Find where the paths meet, then when each particle gets there."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,232 @@
+{
+ "id": "phys-photoelectric-effect-2",
+ "title": "The photoelectric effect",
+ "brief": "3a027a72859c",
+ "shortlist": [
+  [
+   "phys-photoelectric-effect",
+   0.676
+  ],
+  [
+   "phys-matter-waves",
+   0.267
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 says adapt phys-photoelectric-effect (3 changes)",
+  "2026-11-01T14:56:06Z adapt: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (card other, card other, card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "adapt": 0.00365,
+  "check": 0.01785,
+  "fix": 0.03222
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-photoelectric-effect",
+  "changes": [
+   "Add the VCE term work function (W0) for the minimum energy needed to free an electron, and link it to threshold frequency.",
+   "State the formulas students must know for this course, E = hf and Ek(max) = hf − W0, since the card currently gives only qualitative explanation.",
+   "Keep the Victorian Study Design wording for the wave model failure, since the card's account already covers it."
+  ],
+  "sure": "high",
+  "reason": "The bank card teaches the same idea at a suitable depth, but it needs the VCE work function term and the formulas this Study Design expects students to know.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "phys-photoelectric-effect",
+  "changes": [
+   "Add the VCE term work function (W0) for the minimum energy needed to free an electron, and link it to threshold frequency.",
+   "State the formulas students must know for this course, E = hf and Ek(max) = hf − W0, since the card currently gives only qualitative explanation.",
+   "Keep the Victorian Study Design wording for the wave model failure, since the card's account already covers it."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card2",
+   "card3",
+   "card4",
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "The photoelectric effect",
+  "card": [
+   "When light shines on a metal surface, it can eject electrons from the metal. These electrons are called photoelectrons.",
+   "Ejection happens only if the light is above a threshold frequency, which depends on the metal. Below it, no electrons are ejected, however bright the light is. The threshold matches the work function (W0), the least energy needed to free an electron.",
+   "Above the threshold, even very dim light ejects electrons straight away. Brighter light ejects more electrons per second. A higher frequency raises the maximum kinetic energy of the photoelectrons, Ek(max), though many leave with less.",
+   "The wave model predicted that a bright enough light of any frequency would eventually eject electrons. Einstein used photons, each with energy E = hf. One photon gives all its energy to one electron, so Ek(max) = hf − W0."
+  ],
+  "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
+  "a": {
+   "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
+   "opts": [
+    "The red light is below the metal's threshold frequency",
+    "The red light is too bright to eject electrons",
+    "The metal needs a longer time to absorb the red light",
+    "The red light has too many photons to eject electrons"
+   ],
+   "why": "Each photon of red light has too little energy to free an electron, so none are ejected. Making the light brighter only adds more photons of the same low energy, so waiting or brightening cannot help.",
+   "clue": "Think about the energy of one photon, not the number of photons."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ultraviolet light ejects electrons from a zinc plate. The lamp is then dimmed a lot, with the frequency kept the same. What happens?",
+   "opts": [
+    "Electrons are still ejected, but fewer each second",
+    "Electrons stop being ejected until the light is brighter",
+    "Electrons are ejected, but with a lower maximum energy",
+    "Electrons are ejected only after a long delay"
+   ],
+   "why": "The frequency is unchanged, so each photon still has enough energy to free an electron, and the maximum kinetic energy stays the same. Dimmer light has fewer photons, so fewer electrons are ejected each second. Dimness does not cause a delay or lower the energy of each photon.",
+   "clue": "The frequency stays the same, so the energy of each photon stays the same."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The red light is below the metal's threshold frequency",
+   "also_right": []
+  },
+  "b": {
+   "best": "Electrons are still ejected, but fewer each second",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines the work function (W0) as the least energy needed to free an electron. That idea belongs to point 3 (Work function and stopping voltage), so here it should only be mentioned, not defined."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card explains photon energy E = hf and how one photon's energy goes into freeing an electron and its kinetic energy, giving Ek(max) = hf − W0. This is the content of point 2 (Photons and energy) and partly point 3, taught here instead of only mentioned."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'The threshold matches the work function' compares a frequency with an energy. Strictly, the threshold photon energy hf0 equals W0, and this loose wording could confuse students about units."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with one clear right answer. The card strays into later points: it defines the work function and teaches E = hf and Ek(max) = hf − W0, which belong to points 2 and 3. It also loosely says a frequency 'matches' an energy."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines the work function (W0) as the least energy needed to free an electron. That idea belongs to point 3 (Work function and stopping voltage), so here it should only be mentioned, not defined.",
+  "Card, other: The card explains photon energy E = hf and how one photon's energy goes into freeing an electron and its kinetic energy, giving Ek(max) = hf − W0. This is the content of point 2 (Photons and energy) and partly point 3, taught here instead of only mentioned.",
+  "Card, wording: 'The threshold matches the work function' compares a frequency with an energy. Strictly, the threshold photon energy hf0 equals W0, and this loose wording could confuse students about units."
+ ],
+ "proposal": {
+  "title": "The photoelectric effect",
+  "card": [
+   "When light shines on a metal surface, it can eject electrons from the metal. These electrons are called photoelectrons.",
+   "Electrons are ejected only if the light's frequency is above a threshold frequency, f0, which depends on the metal. Below f0, no electrons are ejected, however bright the light is.",
+   "Above f0, even very dim light ejects electrons with no measurable delay. Brighter light ejects more electrons per second. A higher frequency, not brighter light, raises the electrons' maximum kinetic energy.",
+   "The wave model said light energy spreads out and builds up over time. So bright enough light of any frequency should eject electrons, after a delay if the light is dim. Experiments showed neither, and Einstein explained the results with photons, a particle model of light."
+  ],
+  "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
+  "a": {
+   "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
+   "opts": [
+    "The red light is below the metal's threshold frequency",
+    "The red light is above the metal's threshold frequency",
+    "The metal needs longer to absorb enough red light",
+    "The red light is too bright to eject any electrons"
+   ],
+   "why": "Below the threshold frequency, no electrons are ejected, however bright the light is. The wave model suggested that waiting longer would let energy build up, but experiments show no electrons at any brightness or time below the threshold.",
+   "clue": "Brightness did not help, so what property of the light matters?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ultraviolet light ejects electrons from a zinc plate. The lamp is then dimmed a lot, with the frequency kept the same. What happens?",
+   "opts": [
+    "Electrons are still ejected, but fewer each second",
+    "Electrons stop being ejected until the light is brighter",
+    "Electrons are ejected, but with a lower maximum energy",
+    "Electrons are ejected only after a long delay"
+   ],
+   "why": "The frequency is unchanged and still above the threshold, so electrons are still ejected straight away. Dimmer light ejects fewer electrons per second. The maximum kinetic energy depends on frequency, not brightness, and the delay the wave model predicted is not seen.",
+   "clue": "Which property of the light was kept the same?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines the work function (W0) as the least energy needed to free an electron. That idea belongs to point 3 (Work function and stopping voltage), so here it should only be mentioned, not defined."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card explains photon energy E = hf and how one photon's energy goes into freeing an electron and its kinetic energy, giving Ek(max) = hf − W0. This is the content of point 2 (Photons and energy) and partly point 3, taught here instead of only mentioned."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'The threshold matches the work function' compares a frequency with an energy. Strictly, the threshold photon energy hf0 equals W0, and this loose wording could confuse students about units."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines the work function (W0) as the least energy needed to free an electron. That idea belongs to point 3 (Work function and stopping voltage), so here it should only be mentioned, not defined.",
+   "Card, other: The card explains photon energy E = hf and how one photon's energy goes into freeing an electron and its kinetic energy, giving Ek(max) = hf − W0. This is the content of point 2 (Photons and energy) and partly point 3, taught here instead of only mentioned.",
+   "Card, wording: 'The threshold matches the work function' compares a frequency with an energy. Strictly, the threshold photon energy hf0 equals W0, and this loose wording could confuse students about units."
+  ]
+ },
+ "final": {
+  "title": "The photoelectric effect",
+  "card": [
+   "When light shines on a metal surface, it can eject electrons from the metal. These electrons are called photoelectrons.",
+   "Electrons are ejected only if the light's frequency is above a threshold frequency, f0, which depends on the metal. Below f0, no electrons are ejected, however bright the light is.",
+   "Above f0, even very dim light ejects electrons with no measurable delay. Brighter light ejects more electrons per second. A higher frequency, not brighter light, raises the electrons' maximum kinetic energy.",
+   "The wave model said light energy spreads out and builds up over time. So bright enough light of any frequency should eject electrons, after a delay if the light is dim. Experiments showed neither, and Einstein explained the results with photons, a particle model of light."
+  ],
+  "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
+  "a": {
+   "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
+   "opts": [
+    "The red light is below the metal's threshold frequency",
+    "The red light is above the metal's threshold frequency",
+    "The metal needs longer to absorb enough red light",
+    "The red light is too bright to eject any electrons"
+   ],
+   "why": "Below the threshold frequency, no electrons are ejected, however bright the light is. The wave model suggested that waiting longer would let energy build up, but experiments show no electrons at any brightness or time below the threshold.",
+   "clue": "Brightness did not help, so what property of the light matters?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ultraviolet light ejects electrons from a zinc plate. The lamp is then dimmed a lot, with the frequency kept the same. What happens?",
+   "opts": [
+    "Electrons are still ejected, but fewer each second",
+    "Electrons stop being ejected until the light is brighter",
+    "Electrons are ejected, but with a lower maximum energy",
+    "Electrons are ejected only after a long delay"
+   ],
+   "why": "The frequency is unchanged and still above the threshold, so electrons are still ejected straight away. Dimmer light ejects fewer electrons per second. The maximum kinetic energy depends on frequency, not brightness, and the delay the wave model predicted is not seen.",
+   "clue": "Which property of the light was kept the same?"
+  }
+ },
+ "cleared_by": "auto"
+}

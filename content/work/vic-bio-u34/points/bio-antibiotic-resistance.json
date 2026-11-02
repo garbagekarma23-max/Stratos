@@ -1,0 +1,178 @@
+{
+ "id": "bio-antibiotic-resistance",
+ "title": "Antibiotic resistance",
+ "brief": "ad2006ebe40d",
+ "shortlist": [
+  [
+   "bio-antibiotics-antivirals",
+   0.579
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done (still fails the content check)",
+  "2026-11-01T17:33:06Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (the content check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.01178,
+  "check": 0.01287,
+  "fix": 0.01896
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point is broader than the new point: it covers antibiotics versus antivirals as its main idea, with resistance as only one part, and it does not frame resistance as natural selection, so a new point is the safer fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Antibiotic resistance",
+  "card": [
+   "Antibiotics are drugs that kill bacteria or stop them growing. They do not work on viruses.",
+   "In a large bacterial population, a random mutation may give a few cells a resistant allele. The mutation is not caused by the antibiotic.",
+   "When the antibiotic is used, it kills susceptible bacteria. Resistant bacteria survive, reproduce and pass on the resistant allele.",
+   "Over generations, the resistant allele becomes more common in the population. This is natural selection, with the antibiotic as the selection pressure."
+  ],
+  "remember": "The antibiotic does not create resistance. It selects for resistant bacteria that already exist.",
+  "a": {
+   "q": "A patient takes an antibiotic and most of the bacteria die. A few survive and multiply. Why are the survivors resistant?",
+   "opts": [
+    "They already carried an allele that gave resistance",
+    "They changed their DNA to cope with the antibiotic",
+    "They were exposed to the drug and learned to resist it",
+    "They took in the drug and became stronger over time"
+   ],
+   "why": "The resistant allele was already present in a few cells, from a random mutation. The antibiotic killed the susceptible cells, so the resistant ones survived and reproduced. It did not make the bacteria change on purpose.",
+   "clue": "Did the resistant allele appear before or after the drug was used?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A hospital ward uses the same antibiotic on many patients for a year. The share of resistant bacteria on the ward rises. Which explanation is best?",
+   "opts": [
+    "Resistant bacteria survived and reproduced more than others",
+    "Each bacterium slowly became resistant during its own life",
+    "The drug caused new resistant alleles to form in the bacteria",
+    "Susceptible bacteria chose to become resistant to the drug"
+   ],
+   "why": "Resistant bacteria lived through each course of the drug and left more offspring, so the resistant allele became more common. This is natural selection. The tempting option about the drug causing new alleles is wrong, because mutations arise at random and the drug only selects among them.",
+   "clue": "Think about which bacteria are left to reproduce after each course."
+  }
+ },
+ "redone": true,
+ "local": [
+  "bio-antibiotic-resistanceb option is 61 characters: The drug caused new resistant alleles to form in the bacteria"
+ ],
+ "check": {
+  "a": {
+   "best": "They already carried an allele that gave resistance",
+   "also_right": []
+  },
+  "b": {
+   "best": "Resistant bacteria survived and reproduced more than others",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Content check: bio-antibiotic-resistanceb option is 61 characters: The drug caused new resistant alleles to form in the bacteria"
+ ],
+ "proposal": {
+  "title": "Antibiotic resistance",
+  "card": [
+   "Antibiotics are drugs that kill bacteria or stop them growing. They do not work on viruses.",
+   "In a large bacterial population, a random mutation may give a few cells a resistant allele. The mutation is not caused by the antibiotic.",
+   "When the antibiotic is used, it kills susceptible bacteria. Resistant bacteria survive, reproduce and pass on the resistant allele.",
+   "Over generations, the resistant allele becomes more common in the population. This is natural selection, with the antibiotic as the selection pressure."
+  ],
+  "remember": "The antibiotic does not create resistance. It selects for resistant bacteria that already exist.",
+  "a": {
+   "q": "A patient takes an antibiotic and most of the bacteria die. A few survive and multiply. Why are the survivors resistant?",
+   "opts": [
+    "They already carried an allele that gave resistance",
+    "They changed their DNA to cope with the antibiotic",
+    "They were exposed to the drug and learned to resist it",
+    "They took in the drug and became stronger over time"
+   ],
+   "why": "The resistant allele was already present in a few cells, from a random mutation. The antibiotic killed the susceptible cells, so the resistant ones survived and reproduced. It did not make the bacteria change on purpose.",
+   "clue": "Did the resistant allele appear before or after the drug was used?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A hospital ward uses the same antibiotic on many patients for a year. The share of resistant bacteria on the ward rises. Which explanation is best?",
+   "opts": [
+    "Resistant bacteria survived and reproduced more than others",
+    "Each bacterium slowly became resistant during its own life",
+    "The drug caused new resistant alleles to form in bacteria",
+    "Susceptible bacteria chose to become resistant to the drug"
+   ],
+   "why": "Resistant bacteria lived through each course of the drug and left more offspring, so the resistant allele became more common. This is natural selection. The tempting option about the drug causing new alleles is wrong, because mutations arise at random and the drug only selects among them.",
+   "clue": "Think about which bacteria are left to reproduce after each course."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [],
+  "flags": [
+   "Content check: bio-antibiotic-resistanceb option is 61 characters: The drug caused new resistant alleles to form in the bacteria"
+  ]
+ },
+ "final": {
+  "title": "Antibiotic resistance",
+  "card": [
+   "Antibiotics are drugs that kill bacteria or stop them growing. They do not work on viruses.",
+   "In a large bacterial population, a random mutation may give a few cells a resistant allele. The mutation is not caused by the antibiotic.",
+   "When the antibiotic is used, it kills susceptible bacteria. Resistant bacteria survive, reproduce and pass on the resistant allele.",
+   "Over generations, the resistant allele becomes more common in the population. This is natural selection, with the antibiotic as the selection pressure."
+  ],
+  "remember": "The antibiotic does not create resistance. It selects for resistant bacteria that already exist.",
+  "a": {
+   "q": "A patient takes an antibiotic and most of the bacteria die. A few survive and multiply. Why are the survivors resistant?",
+   "opts": [
+    "They already carried an allele that gave resistance",
+    "They changed their DNA to cope with the antibiotic",
+    "They were exposed to the drug and learned to resist it",
+    "They took in the drug and became stronger over time"
+   ],
+   "why": "The resistant allele was already present in a few cells, from a random mutation. The antibiotic killed the susceptible cells, so the resistant ones survived and reproduced. It did not make the bacteria change on purpose.",
+   "clue": "Did the resistant allele appear before or after the drug was used?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A hospital ward uses the same antibiotic on many patients for a year. The share of resistant bacteria on the ward rises. Which explanation is best?",
+   "opts": [
+    "Resistant bacteria survived and reproduced more than others",
+    "Each bacterium slowly became resistant during its own life",
+    "The drug caused new resistant alleles to form in bacteria",
+    "Susceptible bacteria chose to become resistant to the drug"
+   ],
+   "why": "Resistant bacteria lived through each course of the drug and left more offspring, so the resistant allele became more common. This is natural selection. The tempting option about the drug causing new alleles is wrong, because mutations arise at random and the drug only selects among them.",
+   "clue": "Think about which bacteria are left to reproduce after each course."
+  }
+ },
+ "cleared_by": "auto"
+}

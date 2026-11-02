@@ -44,7 +44,20 @@ MADE_COURSES.push({
             "psy-neuroimaging"
           ]
         },
-        {"id": "vic-psy-u12-1-4", "title": "The brain and behaviour", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u12-1-4",
+          "title": "The brain and behaviour",
+          "check": "checked",
+          "points": [
+            "psy-hindbrain-midbrain-forebrain",
+            "psy-cerebellum",
+            "psy-cerebral-cortex-lobes",
+            "psy-neuroplasticity",
+            "psy-acquired-brain-injury",
+            "psy-research-neurological-disorders",
+            "psy-chronic-traumatic-encephalopathy"
+          ]
+        },
         {
           "id": "vic-psy-u12-1-5",
           "title": "Science skills: evaluating research",
@@ -61,8 +74,33 @@ MADE_COURSES.push({
     {
       "title": "Unit 2: How do internal and external factors influence behaviour and mental processes?",
       "chapters": [
-        {"id": "vic-psy-u12-2-1", "title": "Social cognition", "check": "checked", "points": []},
-        {"id": "vic-psy-u12-2-2", "title": "Social influence", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u12-2-1",
+          "title": "Social cognition",
+          "check": "checked",
+          "points": [
+            "psy-person-perception",
+            "psy-attributions",
+            "psy-tri-component-model-attitudes",
+            "psy-stereotypes-prejudice-discrimination",
+            "psy-cognitive-dissonance",
+            "psy-heuristics-decisions",
+            "psy-reducing-prejudice"
+          ]
+        },
+        {
+          "id": "vic-psy-u12-2-2",
+          "title": "Social influence",
+          "check": "checked",
+          "points": [
+            "psy-status-power-culture",
+            "soc-theories-conformity",
+            "psy-affects-conformity",
+            "psy-obedience-milgram",
+            "psy-media-behaviour",
+            "psy-independence-anti-conformity"
+          ]
+        },
         {
           "id": "vic-psy-u12-2-3",
           "title": "Perception",
@@ -77,7 +115,17 @@ MADE_COURSES.push({
             "psy-perceptual-set"
           ]
         },
-        {"id": "vic-psy-u12-2-4-2", "title": "Taste and distortions of perception", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u12-2-4-2",
+          "title": "Taste and distortions of perception",
+          "check": "checked",
+          "points": [
+            "psy-gustatory-perception",
+            "psy-visual-illusions",
+            "psy-distortions-taste",
+            "psy-synaesthesia-spatial-neglect"
+          ]
+        },
         {
           "id": "vic-psy-u12-2-4",
           "title": "Research methods in psychology",

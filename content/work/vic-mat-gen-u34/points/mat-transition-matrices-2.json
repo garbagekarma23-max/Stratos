@@ -1,0 +1,124 @@
+{
+ "id": "mat-transition-matrices-2",
+ "title": "Transition matrices",
+ "brief": "87e630c5b773",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.396
+  ],
+  [
+   "mat-matrix-operations-specialist",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00943,
+  "check": 0.01361
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches transition matrices: one covers matrices as geometric transformations of the plane and the other covers basic matrix operations, with no probabilities, states or predictions over time.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Transition matrices",
+  "card": [
+   "A transition matrix T shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
+   "The entry in row i, column j is the chance of moving from state j to state i. The entry in row j, column j is the chance of staying put.",
+   "A state matrix S lists how many are in each state. The next state matrix is T × S.",
+   "Example: T = [0.8 0.3; 0.2 0.7] (rows separated by a semicolon) and S = [100; 50]. T × S = [0.8×100 + 0.3×50; 0.2×100 + 0.7×50] = [95; 55]."
+  ],
+  "remember": "Read a column as where that state's members go next. T × S gives the next state.",
+  "a": {
+   "q": "Commuters in a city use the bus or the train. T = [0.8 0.3; 0.2 0.7] has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
+   "opts": [
+    "Chance a train user switches to the bus",
+    "Chance a bus user switches to the train",
+    "Chance a train user stays on the train",
+    "Share of all commuters who use the bus"
+   ],
+   "why": "Row 1 is the bus and column 2 is the train, so 0.3 is the chance of moving from train to bus. The reverse option reads the row and column the wrong way round.",
+   "clue": "Column is where they start, row is where they end up."
+  },
+  "b": {
+   "d": 2,
+   "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. T = [0.9 0.2; 0.1 0.8] has rows and columns in the order A, B. How many customers will use Café A next week?",
+   "opts": [
+    "620",
+    "580",
+    "540",
+    "380"
+   ],
+   "why": "Café A next week = 0.9 × 600 + 0.2 × 400 = 540 + 80 = 620. The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
+   "clue": "Multiply row 1 of T by the column of customer numbers."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Chance a train user switches to the bus",
+   "also_right": []
+  },
+  "b": {
+   "best": "620",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's convention (columns are 'from', rows are 'to', columns sum to 1) matches VCE General Mathematics, the worked example is correct, and both questions have exactly one correct option: 0.3 is train to bus, and Café A gets 0.9×600 + 0.2×400 = 620."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Transition matrices",
+  "card": [
+   "A transition matrix T shows the chance of moving between states in one step. Each column is one starting state, and the numbers in a column add to 1.",
+   "The entry in row i, column j is the chance of moving from state j to state i. The entry in row j, column j is the chance of staying put.",
+   "A state matrix S lists how many are in each state. The next state matrix is T × S.",
+   "Example: T = [0.8 0.3; 0.2 0.7] (rows separated by a semicolon) and S = [100; 50]. T × S = [0.8×100 + 0.3×50; 0.2×100 + 0.7×50] = [95; 55]."
+  ],
+  "remember": "Read a column as where that state's members go next. T × S gives the next state.",
+  "a": {
+   "q": "Commuters in a city use the bus or the train. T = [0.8 0.3; 0.2 0.7] has rows and columns in the order bus, train. What does the 0.3 in row 1, column 2 mean?",
+   "opts": [
+    "Chance a train user switches to the bus",
+    "Chance a bus user switches to the train",
+    "Chance a train user stays on the train",
+    "Share of all commuters who use the bus"
+   ],
+   "why": "Row 1 is the bus and column 2 is the train, so 0.3 is the chance of moving from train to bus. The reverse option reads the row and column the wrong way round.",
+   "clue": "Column is where they start, row is where they end up."
+  },
+  "b": {
+   "d": 2,
+   "q": "Two cafés share a town. This week 600 customers use Café A and 400 use Café B. T = [0.9 0.2; 0.1 0.8] has rows and columns in the order A, B. How many customers will use Café A next week?",
+   "opts": [
+    "620",
+    "580",
+    "540",
+    "380"
+   ],
+   "why": "Café A next week = 0.9 × 600 + 0.2 × 400 = 540 + 80 = 620. The 580 comes from using 0.1 instead of 0.2, which reads the column instead of the row. The 380 is the number at Café B.",
+   "clue": "Multiply row 1 of T by the column of customer numbers."
+  }
+ },
+ "cleared_by": "checker"
+}

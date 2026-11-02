@@ -1,0 +1,252 @@
+{
+ "id": "mat-circular-function-graphs",
+ "title": "Circular function graphs",
+ "brief": "38ec8a3c1e29",
+ "shortlist": [
+  [
+   "mat-transforming-trigonometric-graphs",
+   0.448
+  ],
+  [
+   "mat-graphs-sine-cosine-tangent",
+   0.373
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.266
+  ],
+  [
+   "mat-power-functions",
+   0.252
+  ],
+  [
+   "mat-inverse-circular-functions",
+   0.25
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "write": 0.00535,
+  "check": 0.01679,
+  "fix": 0.02868,
+  "recheck": 0.01301
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point teaches the same idea but covers only the sine form, using k, a and x + b, while the new point needs the cosine and tangent forms in the a, n, b, c notation with x − b, so it is narrower in scope and the gap is more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Circular function graphs",
+  "card": [
+   "The graph of y = a sin(n(x − b)) + c is a wave. The same four numbers shape y = a cos(n(x − b)) + c.",
+   [
+    "Amplitude and centre",
+    "The amplitude is |a|, the height from the centre line to a peak. The centre line is y = c, so the range is from c − |a| to c + |a|."
+   ],
+   [
+    "Period and phase",
+    "The period is 2π ÷ n for sine and cosine, and π ÷ n for tangent. The graph shifts b units right, so b is the phase shift."
+   ],
+   [
+    "Example",
+    "y = 3 sin(2(x − π/4)) + 1 has amplitude 3, period 2π ÷ 2 = π, centre line y = 1, and a shift of π/4 right. Its range is from −2 to 4."
+   ]
+  ],
+  "remember": "a sets the height, n the period, b the shift right, c the centre line.",
+  "a": {
+   "q": "For y = 5 cos(4x) − 2, what are the amplitude and the period?",
+   "opts": [
+    "Amplitude 5, period π/2",
+    "Amplitude 5, period 8π",
+    "Amplitude 2, period π/2",
+    "Amplitude 4, period π/2"
+   ],
+   "why": "The amplitude is |a| = 5. The period is 2π ÷ 4 = π/2. Amplitude 2 is wrong because −2 only moves the centre line down, it does not set the height of the wave.",
+   "clue": "Amplitude comes from a, and the period is 2π divided by n."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tide height in metres is h = 2 sin(π/6 (t − 3)) + 5, with t in hours. What are the lowest height and the period?",
+   "opts": [
+    "3 m and 12 hours",
+    "3 m and 6 hours",
+    "7 m and 12 hours",
+    "2 m and 12 hours"
+   ],
+   "why": "The lowest height is c − |a| = 5 − 2 = 3 m. The period is 2π ÷ (π/6) = 12 hours. 7 m is the highest height, not the lowest, and a period of 6 hours comes from dividing π by n, which is the tangent rule.",
+   "clue": "Lowest height is the centre line minus the amplitude."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Amplitude 5, period π/2",
+   "also_right": []
+  },
+  "b": {
+   "best": "3 m and 12 hours",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The period is given as 2π ÷ n and π ÷ n, but it is 2π ÷ |n| and π ÷ |n|. A negative n would give a negative period. This is inconsistent with the card's careful use of |a| for amplitude."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the worked example are correct, and each question has a single right answer. One small issue: the period rule should use |n| (2π ÷ |n|), to match the card's use of |a|."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The period is given as 2π ÷ n and π ÷ n, but it is 2π ÷ |n| and π ÷ |n|. A negative n would give a negative period. This is inconsistent with the card's careful use of |a| for amplitude."
+ ],
+ "proposal": {
+  "title": "Circular function graphs",
+  "card": [
+   "The graph of y = a sin(n(x − b)) + c is a wave. The same four numbers shape y = a cos(n(x − b)) + c and y = a tan(n(x − b)) + c.",
+   [
+    "Amplitude and centre",
+    "The amplitude is |a|, the height from the centre line to a peak. The centre line is y = c, so the range of sine and cosine is from c − |a| to c + |a|. Tangent has no peaks, so it has no amplitude."
+   ],
+   [
+    "Period and phase",
+    "The period is 2π ÷ |n| for sine and cosine, and π ÷ |n| for tangent. The graph shifts b units right, so b is the phase shift."
+   ],
+   [
+    "Example",
+    "y = 3 sin(2(x − π/4)) + 1 has amplitude 3, period 2π ÷ 2 = π, centre line y = 1, and a shift of π/4 right. Its range is from −2 to 4."
+   ]
+  ],
+  "remember": "a sets the height, n the period, b the shift right, c the centre line.",
+  "a": {
+   "q": "For y = 5 cos(4x) − 2, what are the amplitude and the period?",
+   "opts": [
+    "Amplitude 5, period π/2",
+    "Amplitude 5, period 8π",
+    "Amplitude 2, period π/2",
+    "Amplitude 4, period π/2"
+   ],
+   "why": "The amplitude is |a| = 5. The period is 2π ÷ |4| = π/2. Amplitude 2 is wrong because −2 only moves the centre line down, it does not set the height of the wave.",
+   "clue": "Amplitude comes from a, and the period is 2π divided by |n|."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tide height in metres is h = 2 sin(π/6 (t − 3)) + 5, with t in hours. What are the lowest height and the period?",
+   "opts": [
+    "3 m and 12 hours",
+    "3 m and 6 hours",
+    "7 m and 12 hours",
+    "2 m and 12 hours"
+   ],
+   "why": "The lowest height is c − |a| = 5 − 2 = 3 m. The period is 2π ÷ (π/6) = 12 hours. 7 m is the highest height, not the lowest, and a period of 6 hours comes from dividing π by n, which is the tangent rule.",
+   "clue": "Lowest height is the centre line minus the amplitude."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Amplitude 5, period π/2",
+    "also_right": []
+   },
+   "b": {
+    "best": "3 m and 12 hours",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The period is given as 2π ÷ n and π ÷ n, but it is 2π ÷ |n| and π ÷ |n|. A negative n would give a negative period. This is inconsistent with the card's careful use of |a| for amplitude."
+   }
+  ],
+  "flags": [
+   "Card, fact: The period is given as 2π ÷ n and π ÷ n, but it is 2π ÷ |n| and π ÷ |n|. A negative n would give a negative period. This is inconsistent with the card's careful use of |a| for amplitude."
+  ]
+ },
+ "final": {
+  "title": "Circular function graphs",
+  "card": [
+   "The graph of y = a sin(n(x − b)) + c is a wave. The same four numbers shape y = a cos(n(x − b)) + c and y = a tan(n(x − b)) + c.",
+   [
+    "Amplitude and centre",
+    "The amplitude is |a|, the height from the centre line to a peak. The centre line is y = c, so the range of sine and cosine is from c − |a| to c + |a|. Tangent has no peaks, so it has no amplitude."
+   ],
+   [
+    "Period and phase",
+    "The period is 2π ÷ |n| for sine and cosine, and π ÷ |n| for tangent. The graph shifts b units right, so b is the phase shift."
+   ],
+   [
+    "Example",
+    "y = 3 sin(2(x − π/4)) + 1 has amplitude 3, period 2π ÷ 2 = π, centre line y = 1, and a shift of π/4 right. Its range is from −2 to 4."
+   ]
+  ],
+  "remember": "a sets the height, n the period, b the shift right, c the centre line.",
+  "a": {
+   "q": "For y = 5 cos(4x) − 2, what are the amplitude and the period?",
+   "opts": [
+    "Amplitude 5, period π/2",
+    "Amplitude 5, period 8π",
+    "Amplitude 2, period π/2",
+    "Amplitude 4, period π/2"
+   ],
+   "why": "The amplitude is |a| = 5. The period is 2π ÷ |4| = π/2. Amplitude 2 is wrong because −2 only moves the centre line down, it does not set the height of the wave.",
+   "clue": "Amplitude comes from a, and the period is 2π divided by |n|."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tide height in metres is h = 2 sin(π/6 (t − 3)) + 5, with t in hours. What are the lowest height and the period?",
+   "opts": [
+    "3 m and 12 hours",
+    "3 m and 6 hours",
+    "7 m and 12 hours",
+    "2 m and 12 hours"
+   ],
+   "why": "The lowest height is c − |a| = 5 − 2 = 3 m. The period is 2π ÷ (π/6) = 12 hours. 7 m is the highest height, not the lowest, and a period of 6 hours comes from dividing π by n, which is the tangent rule.",
+   "clue": "Lowest height is the centre line minus the amplitude."
+  }
+ },
+ "cleared_by": "recheck"
+}

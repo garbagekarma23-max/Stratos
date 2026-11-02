@@ -1,0 +1,223 @@
+{
+ "id": "chem-stoichiometry-fuels",
+ "title": "Stoichiometry of fuels",
+ "brief": "6362d5d7de84",
+ "shortlist": [
+  [
+   "chem-stoichiometry",
+   0.314
+  ],
+  [
+   "mat-fuel-consumption",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00631,
+  "check": 0.01252,
+  "fix": 0.02684,
+  "recheck": 0.01173
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, chem-stoichiometry, only covers mass-to-mole-to-mass conversions, while this point also needs gas volumes at standard conditions and the energy released by burning a fuel, which are new steps rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Stoichiometry of fuels",
+  "card": [
+   "The coefficients in a balanced equation give mole ratios. For C3H8 + 5O2 → 3CO2 + 4H2O, 1 mol of propane makes 3 mol of carbon dioxide.",
+   "Moles of a substance = mass ÷ molar mass (n = m/M). Energy released = moles of fuel × energy per mole.",
+   "At standard temperature and pressure (STP, 0 °C and 100 kPa), 1 mol of any gas has a volume of 22.7 L.",
+   "Steps: find moles of the known substance, use the mole ratio to find moles of the wanted substance, then convert to mass, volume or energy."
+  ],
+  "remember": "Convert to moles, use the equation's ratio, then convert to what is asked.",
+  "a": {
+   "q": "In C3H8 + 5O2 → 3CO2 + 4H2O, how many moles of carbon dioxide form when 2.0 mol of propane burns completely?",
+   "opts": [
+    "6.0 mol",
+    "3.0 mol",
+    "2.0 mol",
+    "10 mol"
+   ],
+   "why": "The ratio of propane to carbon dioxide is 1 to 3, so 2.0 mol of propane gives 6.0 mol. Giving 3.0 mol uses the coefficient without scaling it to the amount of propane.",
+   "clue": "Multiply the moles of propane by the ratio from the equation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methane burns: CH4 + 2O2 → CO2 + 2H2O. What volume of carbon dioxide forms at STP from 8.0 g of CH4? (M(CH4) = 16 g/mol)",
+   "opts": [
+    "11.4 L",
+    "22.7 L",
+    "5.7 L",
+    "45.4 L"
+   ],
+   "why": "Moles of CH4 = 8.0 ÷ 16 = 0.50 mol. The ratio is 1 to 1, so CO2 is 0.50 mol, and 0.50 × 22.7 = 11.4 L. Using 22.7 L ignores that only half a mole reacts.",
+   "clue": "Find moles of methane first, then use the 1 to 1 ratio."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "6.0 mol",
+   "also_right": []
+  },
+  "b": {
+   "best": "11.4 L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The VCE Chemistry Study Design (2023) does gas calculations at standard laboratory conditions (SLC, 25 °C and 100 kPa), where the molar volume is 24.8 L/mol, as given in the VCE Data Book. STP and 22.7 L are not used in VCE, so students taught this would get wrong answers on VCE questions (for example 12.4 L, not 11.4 L, in question b)."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question is set at STP with 22.7 L/mol. It is internally consistent, but it does not match VCE, which uses SLC and 24.8 L/mol. It should be reworded to SLC, with the answer 0.50 × 24.8 = 12.4 L."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question b use STP (22.7 L/mol), but VCE Chemistry from 2023 uses SLC (25 °C, 100 kPa, 24.8 L/mol). Change the card to SLC and rework question b to 12.4 L; question a is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The VCE Chemistry Study Design (2023) does gas calculations at standard laboratory conditions (SLC, 25 °C and 100 kPa), where the molar volume is 24.8 L/mol, as given in the VCE Data Book. STP and 22.7 L are not used in VCE, so students taught this would get wrong answers on VCE questions (for example 12.4 L, not 11.4 L, in question b).",
+  "Question b, fact: The question is set at STP with 22.7 L/mol. It is internally consistent, but it does not match VCE, which uses SLC and 24.8 L/mol. It should be reworded to SLC, with the answer 0.50 × 24.8 = 12.4 L."
+ ],
+ "proposal": {
+  "title": "Stoichiometry of fuels",
+  "card": [
+   "The coefficients in a balanced equation give mole ratios. For C3H8 + 5O2 → 3CO2 + 4H2O, 1 mol of propane makes 3 mol of carbon dioxide.",
+   "Moles of a substance = mass ÷ molar mass (n = m/M). Energy released = moles of fuel × energy per mole.",
+   "At standard laboratory conditions (SLC, 25 °C and 100 kPa), 1 mol of any gas has a volume of 24.8 L. So volume of gas = moles × 24.8 L.",
+   "Steps: find moles of the known substance, use the mole ratio to find moles of the wanted substance, then convert to mass, volume or energy."
+  ],
+  "remember": "Convert to moles, use the equation's ratio, then convert to what is asked.",
+  "a": {
+   "q": "In C3H8 + 5O2 → 3CO2 + 4H2O, how many moles of carbon dioxide form when 2.0 mol of propane burns completely?",
+   "opts": [
+    "6.0 mol",
+    "3.0 mol",
+    "2.0 mol",
+    "10 mol"
+   ],
+   "why": "The ratio of propane to carbon dioxide is 1 to 3, so 2.0 mol of propane gives 6.0 mol. Giving 3.0 mol uses the coefficient without scaling it to the amount of propane.",
+   "clue": "Multiply the moles of propane by the ratio from the equation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methane burns: CH4 + 2O2 → CO2 + 2H2O. What volume of carbon dioxide forms at SLC from 8.0 g of CH4? (M(CH4) = 16 g/mol)",
+   "opts": [
+    "12.4 L",
+    "24.8 L",
+    "6.2 L",
+    "49.6 L"
+   ],
+   "why": "Moles of CH4 = 8.0 ÷ 16 = 0.50 mol. The ratio is 1 to 1, so CO2 is 0.50 mol, and 0.50 × 24.8 = 12.4 L. Giving 24.8 L ignores that only half a mole of methane reacts.",
+   "clue": "Find moles of methane first, then use the 1 to 1 ratio."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "6.0 mol",
+    "also_right": []
+   },
+   "b": {
+    "best": "12.4 L",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The SLC molar volume of 24.8 L/mol matches the VCE data book, both answers check out (6.0 mol and 12.4 L), and the explanations agree with the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The VCE Chemistry Study Design (2023) does gas calculations at standard laboratory conditions (SLC, 25 °C and 100 kPa), where the molar volume is 24.8 L/mol, as given in the VCE Data Book. STP and 22.7 L are not used in VCE, so students taught this would get wrong answers on VCE questions (for example 12.4 L, not 11.4 L, in question b)."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question is set at STP with 22.7 L/mol. It is internally consistent, but it does not match VCE, which uses SLC and 24.8 L/mol. It should be reworded to SLC, with the answer 0.50 × 24.8 = 12.4 L."
+   }
+  ],
+  "flags": [
+   "Card, fact: The VCE Chemistry Study Design (2023) does gas calculations at standard laboratory conditions (SLC, 25 °C and 100 kPa), where the molar volume is 24.8 L/mol, as given in the VCE Data Book. STP and 22.7 L are not used in VCE, so students taught this would get wrong answers on VCE questions (for example 12.4 L, not 11.4 L, in question b).",
+   "Question b, fact: The question is set at STP with 22.7 L/mol. It is internally consistent, but it does not match VCE, which uses SLC and 24.8 L/mol. It should be reworded to SLC, with the answer 0.50 × 24.8 = 12.4 L."
+  ]
+ },
+ "final": {
+  "title": "Stoichiometry of fuels",
+  "card": [
+   "The coefficients in a balanced equation give mole ratios. For C3H8 + 5O2 → 3CO2 + 4H2O, 1 mol of propane makes 3 mol of carbon dioxide.",
+   "Moles of a substance = mass ÷ molar mass (n = m/M). Energy released = moles of fuel × energy per mole.",
+   "At standard laboratory conditions (SLC, 25 °C and 100 kPa), 1 mol of any gas has a volume of 24.8 L. So volume of gas = moles × 24.8 L.",
+   "Steps: find moles of the known substance, use the mole ratio to find moles of the wanted substance, then convert to mass, volume or energy."
+  ],
+  "remember": "Convert to moles, use the equation's ratio, then convert to what is asked.",
+  "a": {
+   "q": "In C3H8 + 5O2 → 3CO2 + 4H2O, how many moles of carbon dioxide form when 2.0 mol of propane burns completely?",
+   "opts": [
+    "6.0 mol",
+    "3.0 mol",
+    "2.0 mol",
+    "10 mol"
+   ],
+   "why": "The ratio of propane to carbon dioxide is 1 to 3, so 2.0 mol of propane gives 6.0 mol. Giving 3.0 mol uses the coefficient without scaling it to the amount of propane.",
+   "clue": "Multiply the moles of propane by the ratio from the equation."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methane burns: CH4 + 2O2 → CO2 + 2H2O. What volume of carbon dioxide forms at SLC from 8.0 g of CH4? (M(CH4) = 16 g/mol)",
+   "opts": [
+    "12.4 L",
+    "24.8 L",
+    "6.2 L",
+    "49.6 L"
+   ],
+   "why": "Moles of CH4 = 8.0 ÷ 16 = 0.50 mol. The ratio is 1 to 1, so CO2 is 0.50 mol, and 0.50 × 24.8 = 12.4 L. Giving 24.8 L ignores that only half a mole of methane reacts.",
+   "clue": "Find moles of methane first, then use the 1 to 1 ratio."
+  }
+ },
+ "cleared_by": "recheck"
+}

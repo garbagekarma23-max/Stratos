@@ -1,0 +1,231 @@
+{
+ "id": "mat-type-i-type-ii",
+ "title": "Type I and type II errors",
+ "brief": "b89a9062714b",
+ "shortlist": [
+  [
+   "chem-errors-limitations",
+   0.221
+  ],
+  [
+   "mat-accuracy-measurements",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00513,
+  "check": 0.00901,
+  "fix": 0.02507,
+  "recheck": 0.01082
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches hypothesis-test errors: the chemistry card covers random and systematic measurement error, and the mathematics card covers absolute error and limits of accuracy in measurement, so no existing point matches the Type I and Type II error idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Type I and type II errors",
+  "card": [
+   "A test ends in one of two decisions: reject the null hypothesis or do not reject it. Either decision can be wrong, because a sample can mislead.",
+   [
+    "Type I error",
+    "rejecting a null hypothesis that is true. The test claims an effect that is not really there."
+   ],
+   [
+    "Type II error",
+    "failing to reject a null hypothesis that is false. The test misses an effect that is really there."
+   ],
+   "Example: H₀ says a new battery lasts the same time as the old one. If the batteries are really the same but the test says they differ, that is a type I error. If the new battery really lasts longer but the test finds no difference, that is a type II error."
+  ],
+  "remember": "Type I: reject a true H₀. Type II: keep a false H₀.",
+  "a": {
+   "q": "Which situation describes a type II error?",
+   "opts": [
+    "Not rejecting H₀ when H₀ is false",
+    "Rejecting H₀ when H₀ is true",
+    "Not rejecting H₀ when H₀ is true",
+    "Rejecting H₀ when H₀ is false"
+   ],
+   "why": "A type II error is a failure to reject a null hypothesis that is actually false, so a real effect is missed. Rejecting a true H₀ is the tempting option, but that is a type I error.",
+   "clue": "Type II means the test missed something real."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tests H₀: a bakery's loaves have mean mass 700 g. The loaves really do have a mean mass below 700 g, but her sample leads her not to reject H₀. What has happened?",
+   "opts": [
+    "A type II error, because H₀ is false and was kept",
+    "A type I error, because H₀ is false and was kept",
+    "A type II error, because H₀ is true and was kept",
+    "A type I error, because H₀ is true and was rejected"
+   ],
+   "why": "The true mean is below 700 g, so H₀ is false. Mia did not reject it, which is a type II error. A type I error needs a true H₀ to be rejected, and that did not happen here.",
+   "clue": "First decide whether H₀ is true, then whether Mia rejected it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Not rejecting H₀ when H₀ is false",
+   "also_right": []
+  },
+  "b": {
+   "best": "A type II error, because H₀ is false and was kept",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'keep a false H₀', while the card says 'failing to reject'. 'Keep' can suggest accepting or proving H₀, which VCE teaching avoids. 'Fail to reject a false H₀' would match the card. The options in question b also use 'kept'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and the card is accurate. One minor wording issue: the remember line and question b say 'keep' H₀ instead of 'fail to reject' it, which could suggest accepting H₀."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says 'keep a false H₀', while the card says 'failing to reject'. 'Keep' can suggest accepting or proving H₀, which VCE teaching avoids. 'Fail to reject a false H₀' would match the card. The options in question b also use 'kept'."
+ ],
+ "proposal": {
+  "title": "Type I and type II errors",
+  "card": [
+   "A test ends in one of two decisions: reject the null hypothesis (H₀) or do not reject it. Either decision can be wrong, because a sample can mislead.",
+   [
+    "Type I error",
+    "rejecting a null hypothesis that is true. The test claims an effect that is not really there."
+   ],
+   [
+    "Type II error",
+    "failing to reject a null hypothesis that is false. The test misses an effect that is really there."
+   ],
+   "Example: H₀ says a new battery lasts the same time as the old one. If the batteries are really the same but the test says they differ, that is a type I error. If the new battery really lasts longer but the test finds no difference, that is a type II error."
+  ],
+  "remember": "Type I: reject a true H₀. Type II: fail to reject a false H₀.",
+  "a": {
+   "q": "Which situation describes a type II error?",
+   "opts": [
+    "Not rejecting H₀ when H₀ is false",
+    "Rejecting H₀ when H₀ is true",
+    "Not rejecting H₀ when H₀ is true",
+    "Rejecting H₀ when H₀ is false"
+   ],
+   "why": "A type II error is a failure to reject a null hypothesis that is actually false, so a real effect is missed. Rejecting a true H₀ is the tempting option, but that is a type I error.",
+   "clue": "Type II means the test missed something real."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tests H₀: a bakery's loaves have mean mass 700 g. The loaves really do have a mean mass below 700 g, but her sample leads her not to reject H₀. What has happened?",
+   "opts": [
+    "A type II error, because a false H₀ was not rejected",
+    "A type I error, because a false H₀ was not rejected",
+    "A type II error, because a true H₀ was not rejected",
+    "A type I error, because a true H₀ was wrongly rejected"
+   ],
+   "why": "The true mean is below 700 g, so H₀ is false. Mia did not reject it, which is a type II error. A type I error needs a true H₀ to be rejected, and that did not happen here.",
+   "clue": "First decide whether H₀ is true, then whether Mia rejected it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Not rejecting H₀ when H₀ is false",
+    "also_right": []
+   },
+   "b": {
+    "best": "A type II error, because a false H₀ was not rejected",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says 'keep a false H₀', while the card says 'failing to reject'. 'Keep' can suggest accepting or proving H₀, which VCE teaching avoids. 'Fail to reject a false H₀' would match the card. The options in question b also use 'kept'."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says 'keep a false H₀', while the card says 'failing to reject'. 'Keep' can suggest accepting or proving H₀, which VCE teaching avoids. 'Fail to reject a false H₀' would match the card. The options in question b also use 'kept'."
+  ]
+ },
+ "final": {
+  "title": "Type I and type II errors",
+  "card": [
+   "A test ends in one of two decisions: reject the null hypothesis (H₀) or do not reject it. Either decision can be wrong, because a sample can mislead.",
+   [
+    "Type I error",
+    "rejecting a null hypothesis that is true. The test claims an effect that is not really there."
+   ],
+   [
+    "Type II error",
+    "failing to reject a null hypothesis that is false. The test misses an effect that is really there."
+   ],
+   "Example: H₀ says a new battery lasts the same time as the old one. If the batteries are really the same but the test says they differ, that is a type I error. If the new battery really lasts longer but the test finds no difference, that is a type II error."
+  ],
+  "remember": "Type I: reject a true H₀. Type II: fail to reject a false H₀.",
+  "a": {
+   "q": "Which situation describes a type II error?",
+   "opts": [
+    "Not rejecting H₀ when H₀ is false",
+    "Rejecting H₀ when H₀ is true",
+    "Not rejecting H₀ when H₀ is true",
+    "Rejecting H₀ when H₀ is false"
+   ],
+   "why": "A type II error is a failure to reject a null hypothesis that is actually false, so a real effect is missed. Rejecting a true H₀ is the tempting option, but that is a type I error.",
+   "clue": "Type II means the test missed something real."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia tests H₀: a bakery's loaves have mean mass 700 g. The loaves really do have a mean mass below 700 g, but her sample leads her not to reject H₀. What has happened?",
+   "opts": [
+    "A type II error, because a false H₀ was not rejected",
+    "A type I error, because a false H₀ was not rejected",
+    "A type II error, because a true H₀ was not rejected",
+    "A type I error, because a true H₀ was wrongly rejected"
+   ],
+   "why": "The true mean is below 700 g, so H₀ is false. Mia did not reject it, which is a type II error. A type I error needs a true H₀ to be rejected, and that did not happen here.",
+   "clue": "First decide whether H₀ is true, then whether Mia rejected it."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -6964,5 +6964,2190 @@ MADE_BANKS.bus = {
       "why": "Explaining the job and pay clearly treats the new worker fairly and helps them know their rights. Paying the legal minimum can be lawful, but saying little does not go beyond the law, and the other options take advantage of the worker.",
       "clue": "A new arrival may not know their rights, so what would a fair employer do?"
     }
+  },
+  "bus-customers": {
+    "title": "Customers",
+    "card": [
+      "Customers are the people or groups who buy a business's products. A new business plans what to sell, how to price it and how to promote it around what its customers need and expect.",
+      "A business can find out what customers want by asking them, for example with surveys, and by watching what they buy.",
+      "Customer needs change over time. Tastes, incomes, technology and concerns such as health can all shift what people want.",
+      "A business that keeps checking its customers can change its products as their needs change. One that does not may find its sales falling."
+    ],
+    "remember": "Plan around what customers want now, and keep checking as it changes.",
+    "a": {
+      "q": "Why does a new business ask possible customers what they want before it opens?",
+      "opts": [
+        "So it can plan products and prices around their needs",
+        "So it can set its prices well above those of others",
+        "So it can avoid paying for any promotion later",
+        "So it can be sure customers will never change"
+      ],
+      "why": "Asking customers shows what they need and expect, so the business can plan what to sell and at what price. It cannot make sure customers never change, because needs shift over time.",
+      "clue": "Think about what the answers help the owner decide."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya opened a bakery in Ballarat. Over two years, more customers ask for gluten-free bread, and her regular loaf sales slip. What should Priya do?",
+      "opts": [
+        "Add gluten-free breads, as customer needs have changed",
+        "Keep her range the same, as her first plan was sound",
+        "Raise the price of her regular loaf to cover lost sales",
+        "Stop asking customers, as their requests are too varied"
+      ],
+      "why": "Customer needs change, and a business plans around them. Keeping the range the same ignores the shift in what customers ask for, so sales may keep falling.",
+      "clue": "What are the customers now asking for?"
+    }
+  },
+  "bus-competitors": {
+    "title": "Competitors",
+    "card": [
+      "Competitors are other businesses that sell similar products to the same customers. A new business must plan with them in mind.",
+      "A new business looks at what competitors charge, what they sell and how they promote. This helps it set its own prices and choose its range.",
+      "It can also look for a gap, such as a product or service that competitors do not offer well, and plan to fill it.",
+      "Competitors keep acting after the new business opens. They may cut prices or add products, so the plans may need to change."
+    ],
+    "remember": "Know what competitors charge, sell and might do next, then plan to stand out.",
+    "a": {
+      "q": "Why does a new business study the prices and products of its competitors?",
+      "opts": [
+        "To help it plan prices and products that stand out",
+        "To copy every price and product that they offer",
+        "To prove that no changes will be needed later",
+        "To make sure that customers have no other choices"
+      ],
+      "why": "Studying competitors helps the business set prices and choose products that give customers a reason to pick it. It does not need to copy them, and it cannot remove customers' other choices.",
+      "clue": "Think about how the information helps its own plan."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom plans a bike repair shop in Geelong. Two nearby shops repair bikes, but neither offers pick-up. What is the best use of this information?",
+      "opts": [
+        "Plan a pick-up service to fill the gap in the market",
+        "Charge less than both shops to attract more customers",
+        "Open without a plan, as the two shops do the same job",
+        "Drop the plan, as repair shops already exist nearby"
+      ],
+      "why": "Competitors do not offer pick-up, so this is a gap Tom can plan to fill. Charging less is possible, but it ignores the gap, and the existing shops do not mean there is no room.",
+      "clue": "Look at what the competitors do not offer."
+    }
+  },
+  "bus-suppliers-supply-chain": {
+    "title": "Suppliers and the supply chain",
+    "card": [
+      "Suppliers are the businesses that provide the materials, goods or services a business needs. The supply chain is the full path from raw materials, through suppliers and the business, to the final customer.",
+      [
+        "Cost",
+        "the prices suppliers charge, and the cost of transport along the supply chain, add to what it costs the business to make or sell its product."
+      ],
+      ["Reliability", "if a supplier delivers late or short, the business may run out of stock and lose sales."],
+      [
+        "Reputation",
+        "customers may care how goods are made. A supplier with poor practices can harm the business's reputation."
+      ]
+    ],
+    "remember": "Suppliers affect a business's cost, reliability and reputation.",
+    "a": {
+      "q": "A café's milk supplier often delivers late, so the café sometimes has none. Which effect of suppliers does this show?",
+      "opts": ["Reliability", "Cost", "Reputation", "Competition"],
+      "why": "Late deliveries mean the café cannot count on getting stock when it needs it, which is a question of reliability. Cost is about prices, not about whether goods arrive on time.",
+      "clue": "The problem is about goods arriving when needed."
+    },
+    "b": {
+      "d": 3,
+      "q": "Nina sells T-shirts online from Bendigo. A cheaper supplier has been criticised for poor working conditions. What risk does using it bring?",
+      "opts": [
+        "Harm to her reputation with customers",
+        "A rise in the cost of her stock",
+        "Late delivery of her stock each week",
+        "Fewer choices of stock for her to sell"
+      ],
+      "why": "Customers may care how goods are made, so a supplier with poor practices can harm Nina's reputation. The supplier is cheaper, so the risk is not a higher cost, and the case says nothing about late delivery.",
+      "clue": "Think about what customers may think of how the shirts are made."
+    }
+  },
+  "bus-special-interest-groups": {
+    "title": "Special interest groups",
+    "card": [
+      "A special interest group is an organised group of people who share a cause. It tries to influence what businesses do, but it does not own or run them.",
+      [
+        "Environmental group",
+        "pushes businesses to protect the environment, for example by cutting waste or pollution."
+      ],
+      [
+        "Business association",
+        "represents businesses in an industry. It may lobby governments and offer members advice and support."
+      ],
+      ["Union", "represents employees. It may push for better pay, safer conditions and fair treatment at work."]
+    ],
+    "remember": "Special interest groups try to influence a business from outside, each for its own cause.",
+    "a": {
+      "q": "A group of workers at a bakery chain joins an organisation that pushes the chain for safer working conditions. What type of group is it?",
+      "opts": ["A union", "An environmental group", "A business association", "A competitor of the chain"],
+      "why": "A union represents employees and pushes for better conditions at work. A business association speaks for businesses, not their workers, so it does not fit.",
+      "clue": "Who does the group speak for: owners or employees?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a small cabinet-making business in Geelong. A group she does not belong to campaigns for her to stop using timber from old forests. What best describes this group's influence?",
+      "opts": [
+        "It can pressure her, but it cannot run her business",
+        "It can direct her business, as it speaks for the industry",
+        "It can pressure her, as it represents her employees",
+        "It can pressure her only if she is a member of it"
+      ],
+      "why": "An environmental group tries to influence a business from outside through pressure and campaigns, but it does not own or run it. The tempting option is that it directs her business, but a special interest group has no control over decisions.",
+      "clue": "Think about what the group wants, and whether it has any say in running the business."
+    }
+  },
+  "bus-registering-business": {
+    "title": "Registering a business",
+    "card": [
+      [
+        "ABN",
+        "An Australian Business Number is an 11-digit number that identifies a business to the government and other businesses. A new business applies for one."
+      ],
+      [
+        "Business name",
+        "A name other than the owner's own must be registered with ASIC, the Australian Securities and Investments Commission. Many businesses also register a website domain that matches the name."
+      ],
+      [
+        "GST",
+        "A business must register for GST once its yearly turnover reaches the government's set limit. Turnover is the total sales before costs are taken out."
+      ],
+      [
+        "Licences",
+        "Some activities need a licence or permit before trading, such as serving food or selling alcohol. Which ones depend on what the business does."
+      ]
+    ],
+    "remember": "Register what the business needs: an ABN, a name, GST once turnover reaches the limit, and any licences for its activity.",
+    "a": {
+      "q": "Priya starts a bakery called Crust Co. She wants to trade under that name, not her own. What must she do about the name?",
+      "opts": [
+        "Register it as a business name with ASIC",
+        "Apply for it as a GST registration",
+        "Ask the council for a food licence for it",
+        "Use it only after turnover reaches the limit"
+      ],
+      "why": "A trading name that is not the owner's own name must be registered with ASIC. GST registration is about turnover, not names, so it does not cover the name.",
+      "clue": "Which body does the card link to business names?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom's new dog-walking business in Geelong sold $30,000 of services in its first year. A friend says he must register for GST straight away because he is a new business. Why is the friend's reason wrong?",
+      "opts": [
+        "GST registration depends on turnover reaching the limit",
+        "GST registration is only needed by businesses with a licence",
+        "GST registration is only needed once a name is registered",
+        "GST registration is done by getting an ABN"
+      ],
+      "why": "GST registration is needed once turnover reaches the set limit, not simply because a business is new. A new business with turnover below the limit does not have to register on that basis. Getting an ABN is a separate step, so it is not the same as registering for GST.",
+      "clue": "What does the card say triggers GST registration?"
+    }
+  },
+  "bus-taxation-business": {
+    "title": "Tax compliance",
+    "card": [
+      "Tax compliance means meeting a business's tax duties, on time. The Australian Taxation Office (ATO) collects most of these taxes.",
+      [
+        "Income tax",
+        "A business lodges a return each year and pays tax on its profit. A company pays company tax. A sole trader pays income tax on the profit as part of their own return."
+      ],
+      [
+        "GST",
+        "A business registered for GST adds it to its prices, collects it from customers and passes it on to the ATO."
+      ],
+      [
+        "PAYG withholding",
+        "An employer takes tax out of each worker's wages and sends it to the ATO. The worker's pay is the amount after this tax is taken out."
+      ]
+    ],
+    "remember": "Lodge returns, pay income or company tax, collect GST and withhold tax from wages, all on time.",
+    "a": {
+      "q": "Mei runs a registered café with two employees. Each pay day she takes tax out of their wages and sends it to the ATO. What is this duty called?",
+      "opts": ["PAYG withholding", "GST collection", "Company tax", "Lodging a return"],
+      "why": "Taking tax out of wages and sending it to the ATO is PAYG withholding. GST is the tax added to prices, so it is the tempting wrong answer, but it is collected from customers, not taken from wages.",
+      "clue": "Whose money is the tax taken from?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Luca's plumbing business is registered for GST and charges it on every job. He spends all the GST on a new van and never pays any of it to the ATO. Why is this a breach of his tax duties?",
+      "opts": [
+        "GST is collected for the ATO, not kept as income",
+        "GST is a tax on profit, paid with his yearly return",
+        "GST should have been taken out of his workers' wages",
+        "GST is paid by the business itself, not by customers"
+      ],
+      "why": "A business registered for GST collects it from customers and passes it on to the ATO, so it is not the business's own money to spend. The tax on profit is income tax, a separate duty, which is why the yearly return option is wrong.",
+      "clue": "Who does the GST money really belong to?"
+    }
+  },
+  "bus-worksafe-insurance": {
+    "title": "WorkSafe insurance",
+    "card": [
+      "In Victoria, most employers must hold WorkSafe insurance, also called workers' compensation insurance. The duty applies once yearly wages pass a small threshold, or if the business employs apprentices or trainees.",
+      "It covers employees who are injured or become ill because of their work. This includes the cost of medical treatment and some of the wages the worker loses while recovering.",
+      "The employer pays a premium, which is the regular cost of the insurance. The injured worker does not pay for it.",
+      "The duty comes from the law. An employer it applies to cannot choose to go without it, even if the work seems low risk, such as office work."
+    ],
+    "remember": "Past the wages threshold, WorkSafe cover is a legal duty, paid by the employer, that protects injured staff.",
+    "a": {
+      "q": "Why do most Victorian employers hold WorkSafe insurance?",
+      "opts": [
+        "The law requires it to cover staff injured at work",
+        "It covers the owner's losses if customers stop buying",
+        "It covers damage to the business's stock and equipment",
+        "It is optional, but it lowers the tax the business pays"
+      ],
+      "why": "For most employers, WorkSafe insurance is a legal duty, and it covers staff who are injured or become ill because of work. It does not cover lost sales or stock, and for an employer the duty applies to, it is not an optional way to cut tax.",
+      "clue": "Think about who the insurance protects and whether the employer has a choice."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya opens a bakery in Ballarat and hires two part-time workers. Her yearly wages are well above the WorkSafe threshold. One worker burns her hand on an oven at work. What should cover her medical treatment?",
+      "opts": [
+        "Priya's WorkSafe insurance, which Priya pays for",
+        "The injured worker, through her own health savings",
+        "The ACCC, because it enforces rules on businesses",
+        "Customers, through a charge Priya adds to prices"
+      ],
+      "why": "Priya's wages pass the threshold, so she must hold WorkSafe insurance. It covers staff injured at work, such as the worker burnt at the oven. The worker does not pay for this cover, because the employer pays the premium.",
+      "clue": "Who must hold the insurance, and who pays the premium?"
+    }
+  },
+  "bus-external-professionals": {
+    "title": "External professionals",
+    "card": [
+      "External professionals are experts outside the business who give advice or services. The owner pays them for their time.",
+      ["Accountant", "Helps with records, tax returns and GST, and can advise on the business's finances."],
+      ["Lawyer", "Advises on legal duties and checks documents such as leases and contracts."],
+      [
+        "Other advisers",
+        "A bank manager can advise on loans, and an insurance broker on cover. A business adviser can help plan the business."
+      ]
+    ],
+    "remember": "External experts help an owner meet legal duties and set the business up well.",
+    "a": {
+      "q": "Sam is about to sign a five-year lease for a shop. He wants an expert to check the lease before he signs. Who should he ask?",
+      "opts": ["A lawyer", "An accountant", "A bank manager", "An insurance broker"],
+      "why": "A lawyer checks documents such as leases and contracts. An accountant is the tempting wrong answer, but accountants deal with records, tax and finances, not the legal terms of a lease.",
+      "clue": "Which expert checks legal documents?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Aisha's new florist in Ballarat is growing, and she is unsure how to keep her records and lodge her tax returns correctly. Who is best placed to help her?",
+      "opts": ["An accountant", "A lawyer", "A bank manager", "An insurance broker"],
+      "why": "An accountant helps with records, tax returns and GST. A lawyer advises on legal duties and documents, so it is the tempting wrong answer, but records and tax returns are the accountant's work.",
+      "clue": "Which expert handles records and tax?"
+    }
+  },
+  "bus-marketing-business-objectives": {
+    "title": "Marketing and business objectives",
+    "card": [
+      "Marketing is how a business finds, attracts and keeps customers. The customers it wins and keeps are its customer base.",
+      [
+        "Sales",
+        "the amount of goods or services sold, counted in units or dollars. A larger customer base can lift sales."
+      ],
+      [
+        "Profit",
+        "what is left after costs are taken from revenue. More customers can lift profit, but discounts cut the revenue from each sale, so profit may not rise."
+      ],
+      [
+        "Market share",
+        "the percentage of all sales in a market that one business makes. It can rise when the business wins customers faster than its rivals do."
+      ]
+    ],
+    "remember": "Marketing builds a customer base, and that can help a business reach its objectives.",
+    "a": {
+      "q": "Which objective is measured as a business's percentage of all sales in its market?",
+      "opts": ["Market share", "Sales", "Profit", "Customer base"],
+      "why": "Market share compares a business's sales with the sales of the whole market. Sales only counts what the business sells, so it does not show how the business compares with its rivals.",
+      "clue": "Which objective compares the business with its rivals?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Ballarat. A social media campaign brings in many new customers, but she gives big discounts to win them. Which statement is most accurate?",
+      "opts": [
+        "Sales may rise, but discounts may stop profit from rising",
+        "Profit may rise, since profit depends only on sales",
+        "Market share may fall, as discounts lower her prices",
+        "Her customer base may shrink, as she used discounts"
+      ],
+      "why": "The new customers can lift sales, but each discounted item brings in less revenue. If that revenue does not cover costs, profit may not rise. Profit depends on revenue and costs, not on sales alone.",
+      "clue": "Think about how much each discounted sale earns."
+    }
+  },
+  "bus-market-research-practices": {
+    "title": "Market research practices",
+    "card": [
+      "Market research is collecting and analysing data to learn what customers want. Data only helps once it is analysed for patterns, which then guide better decisions.",
+      [
+        "Surveys",
+        "a set of questions given to many people, often online. They give answers from a large group that are easy to count."
+      ],
+      [
+        "Interviews",
+        "a one-on-one or small group conversation. They give detailed answers about why people think or choose as they do."
+      ],
+      [
+        "Observation",
+        "watching what customers actually do, such as which shelves they stop at. It shows behaviour rather than what people say."
+      ]
+    ],
+    "remember": "Research gathers data from customers, then analysis turns it into answers.",
+    "a": {
+      "q": "Which research practice records what customers actually do, rather than what they say?",
+      "opts": ["Observation", "Survey", "Interview", "Analysis"],
+      "why": "Observation means watching real behaviour. A survey and an interview both depend on what people choose to say, and analysis is the step after the data is collected.",
+      "clue": "Think of watching, not asking."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam opens a gym in Geelong. He wants detailed reasons why local people have quit other gyms. Which practice suits this best?",
+      "opts": [
+        "Interviews with people who have left a gym",
+        "An online survey with only tick-box answers",
+        "Counting cars in a rival gym's car park",
+        "Watching members as they train at a rival gym"
+      ],
+      "why": "Interviews let people explain their reasons in detail. Watching members shows what they do, not why they quit. A tick-box survey reaches more people but gives little on why, and counting cars shows numbers only.",
+      "clue": "Which practice gives detailed answers about why?"
+    }
+  },
+  "bus-target-market": {
+    "title": "Target market",
+    "card": [
+      "A target market is the group of customers a business aims its products at. A business cannot suit everyone, so it chooses who it will serve.",
+      [
+        "Market size",
+        "the number of potential customers, or the total sales, in the group. It shows whether the group is big enough to earn a profit."
+      ],
+      [
+        "Segments",
+        "smaller groups inside a market, split by traits such as age, income, gender or location. A business picks the segment that suits its product."
+      ],
+      [
+        "Trends",
+        "changes in what customers do or want over time, such as buying more online. A business watches trends to see if its target market is growing or shrinking."
+      ]
+    ],
+    "remember": "A target market is the group a business chooses, described by its size, its segments and its trends.",
+    "a": {
+      "q": "Priya opens a gym in Ballarat for people aged 60 and over. What does choosing this age group show?",
+      "opts": [
+        "She has picked a market segment",
+        "She has measured the market size",
+        "She has found a customer trend",
+        "She has set a business objective"
+      ],
+      "why": "Age is a trait used to split a market into segments, and she has chosen one segment to serve. Market size would be the number of people in that group, which she has not stated.",
+      "clue": "Age is one way to split a market into smaller groups."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Geelong bakery finds that more people each year are buying gluten-free bread. Which description fits this finding?",
+      "opts": [
+        "A trend in what customers want",
+        "A segment based on location",
+        "A measure of market size",
+        "A segment based on income"
+      ],
+      "why": "The finding shows a change in customer behaviour over time, which is a trend. It is not market size, because it does not count the total number of customers or total sales. It is not a location segment, because no place is used to split the market.",
+      "clue": "Look for the word that shows change over time."
+    }
+  },
+  "bus-branding": {
+    "title": "Branding",
+    "card": [
+      "A brand is the name, logo and image that set a business and its products apart from others. Customers use it to tell businesses apart.",
+      [
+        "Inside factors",
+        "things the business controls that shape its brand, such as its values, its staff and the quality of its products."
+      ],
+      [
+        "Outside factors",
+        "things beyond the business that shape its brand, such as competitors, customer opinions and social trends."
+      ],
+      "A strong brand builds recognition, so customers know the business at a glance. It can also build loyalty, so customers keep coming back."
+    ],
+    "remember": "A brand sets a business apart. It is shaped from inside and outside, and can build recognition and loyalty.",
+    "a": {
+      "q": "Which of these is an inside factor that shapes a business's brand?",
+      "opts": [
+        "The values its owners set for the business",
+        "A rival opening a shop across the road",
+        "Customers posting negative reviews online",
+        "A fall in local spending on eating out"
+      ],
+      "why": "Owners decide a business's values, so the business controls this factor. The other options come from competitors, customers or the economy, which the business does not control.",
+      "clue": "Which one does the business itself decide?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam's Surf Shop in Torquay uses the same blue wave logo on its signs, bags and website. Which result is this most likely to help build?",
+      "opts": [
+        "Recognition, as customers spot the shop easily",
+        "Market size, as the whole town becomes customers",
+        "Competition, as rivals copy the logo",
+        "A product extension for older surfboards"
+      ],
+      "why": "A logo used the same way everywhere helps customers know the shop at a glance, which is recognition. It does not change how many people live in the town, so market size is wrong.",
+      "clue": "What does a repeated logo help customers do?"
+    }
+  },
+  "bus-product-life-cycle": {
+    "title": "The product life cycle",
+    "card": [
+      "The product life cycle shows the stages a product goes through over time. The stages are introduction, growth, maturity and decline.",
+      [
+        "Introduction and growth",
+        "In introduction, the product is new and sales are low, so the business makes people aware of it. In growth, sales rise quickly and rivals may enter."
+      ],
+      [
+        "Maturity and decline",
+        "In maturity, sales level off and competition is strong. In decline, sales fall as customers move on to other products."
+      ],
+      "A business can try an extension strategy, such as a new flavour or a new market, to lift sales again. The best marketing changes at each stage."
+    ],
+    "remember": "Products move through four stages, and a business can try an extension. Its marketing should change with the stage.",
+    "a": {
+      "q": "A new energy drink has just been released in Perth and few people know it. Which stage is it in, and what is the main marketing aim?",
+      "opts": [
+        "Introduction, to make people aware of it",
+        "Growth, to make people aware of it",
+        "Introduction, to beat the many rivals",
+        "Maturity, to beat the many rivals"
+      ],
+      "why": "A new product with low sales and little awareness is in introduction, so the main aim is to make people aware of it. Beating many rivals fits maturity, when competition is strong.",
+      "clue": "Few people know it, and it has only just launched."
+    },
+    "b": {
+      "d": 3,
+      "q": "A Hobart chocolate maker sees sales of its dark chocolate bar level off, with many rivals. It adds a chilli flavour to lift sales. What is this?",
+      "opts": [
+        "An extension strategy used at maturity",
+        "A move into the growth stage",
+        "A move into the introduction stage",
+        "A sign the product has reached decline"
+      ],
+      "why": "Sales levelling off with strong competition shows maturity. Adding a new flavour to lift sales again is an extension strategy. It is not decline, because sales have levelled off, not fallen.",
+      "clue": "Sales have levelled off, not fallen."
+    }
+  },
+  "bus-staff-business-objectives": {
+    "title": "Staff and business objectives",
+    "card": [
+      "A business objective is a goal the business wants to reach, such as higher sales, better customer service or lower costs.",
+      "Staff do the work that moves a business towards its objectives. A cook, a sales assistant or a driver each carries out tasks that the objectives depend on.",
+      "When staff perform well, they can lift sales, keep customers happy and use time and materials with less waste. This helps the business meet its objectives.",
+      "Staff who are poorly matched to a job may make more errors or work more slowly. This can make objectives harder to reach, so hiring the right people matters."
+    ],
+    "remember": "Good staff help a business reach its goals, so choosing the right people matters.",
+    "a": {
+      "q": "Why does hiring the right people matter to a business?",
+      "opts": [
+        "Staff who perform well help it meet its objectives",
+        "Staff who perform well remove the need for objectives",
+        "Staff are only needed once objectives have been met",
+        "Staff choose the objectives the business will set"
+      ],
+      "why": "Staff do the work that moves the business towards its goals, so good performers help it meet its objectives. Objectives are still needed to give that work direction, so staff do not replace them.",
+      "clue": "Think about who does the work that reaches the goals."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Geelong. Her objective is to cut wasted ingredients this year. Which new hire would most help her reach it?",
+      "opts": [
+        "A baker who measures carefully and bakes to the daily orders",
+        "A baker who bakes fast and makes extra loaves to be safe",
+        "A sales assistant who is friendly and chats with customers",
+        "A driver who is always on time and delivers to plan"
+      ],
+      "why": "Wasted ingredients come mostly from the baking, so a baker who measures and bakes to orders links most directly to the objective. The fast baker may be productive, but extra loaves go unsold and add waste. Friendly service and on-time driving are good, but they do not target this objective.",
+      "clue": "Match the objective to the job where the waste happens."
+    }
+  },
+  "bus-staffing-needs": {
+    "title": "Staffing needs",
+    "card": [
+      "Before hiring, a business works out what it needs from its staff. It looks at the knowledge, skills and ideas that will help it meet its objectives.",
+      ["Knowledge", "what a person knows, such as food safety rules or how to read financial reports."],
+      ["Skills", "what a person can do, such as using a till, repairing a machine or serving customers well."],
+      [
+        "Ideas",
+        "new ways to solve problems or improve products, which staff may bring from their own experience. Technology can change all three needs, such as adding a need for digital skills."
+      ]
+    ],
+    "remember": "Work out the knowledge, skills and ideas needed, and check how technology changes them.",
+    "a": {
+      "q": "Mia runs a bakery in Ballarat. She wants a new employee who can decorate cakes to a high standard. Which staffing need is this?",
+      "opts": [
+        "A skill, because it is something a person can do",
+        "Knowledge, because it is something a person knows",
+        "An idea, because it is a new way to improve products",
+        "A change from technology, because decorating uses tools"
+      ],
+      "why": "Decorating cakes is something a person can do, so it is a skill. Knowledge is what a person knows, such as food safety rules, and the task here is a practical ability rather than a fact.",
+      "clue": "Is it about doing something or knowing something?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev owns a small clothing shop in Geelong. He starts selling through an online store. Which statement best describes the effect on his staffing needs?",
+      "opts": [
+        "It adds a need for digital skills to run the online store",
+        "It removes the need to plan staffing before he hires",
+        "It changes his products but not what he needs from staff",
+        "It swaps his need for skills into a need for new ideas"
+      ],
+      "why": "Technology can change what a business needs from staff, and an online store adds a need for digital skills such as managing orders and the website. Saying it changes nothing about staff is wrong, because technology can change all three needs. Planning still happens before hiring, and a new tool adds skills rather than turning skills into ideas.",
+      "clue": "Think about what new tasks an online store creates."
+    }
+  },
+  "bus-job-analysis": {
+    "title": "Job analysis",
+    "card": [
+      "Job analysis is the study of a job to find out what it involves. A business may watch workers, interview them or ask them to fill in a survey.",
+      "The findings are used for job design, which is deciding what tasks a job includes and how they fit together.",
+      [
+        "Job description",
+        "a list of the duties of the job, such as what tasks are done and who the worker reports to."
+      ],
+      [
+        "Job specification",
+        "a list of the skills, knowledge, qualifications and experience a person needs to do the job well."
+      ]
+    ],
+    "remember": "Job analysis studies the job. The description lists the duties. The specification lists what the person needs.",
+    "a": {
+      "q": "Which item belongs in a job specification for a bakery assistant?",
+      "opts": [
+        "A food safety certificate and experience using ovens",
+        "Opening the shop, serving customers and cleaning up",
+        "Reporting to the head baker each morning",
+        "Studying how the bakery assistants spend their shifts"
+      ],
+      "why": "A job specification lists what a person needs to do the job, such as qualifications and experience. Serving customers and reporting to the head baker are duties and reporting lines, so they belong in the job description.",
+      "clue": "Which one describes the person, not the tasks?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a gym in Geelong. She watches the front desk staff for a week, then lists the qualifications she wants in a new hire. What did she do?",
+      "opts": [
+        "Job analysis, then a job specification",
+        "Job analysis, then a job description",
+        "Job design, then a job specification",
+        "Job specification, then a job analysis"
+      ],
+      "why": "Watching staff to learn what the job involves is job analysis. A list of the qualifications a person needs is a job specification. A job description would list duties, not qualifications, and the study must come before the documents.",
+      "clue": "Studying comes first. Then ask whether the list names duties or person needs."
+    }
+  },
+  "bus-recruitment-2": {
+    "title": "Recruitment",
+    "card": [
+      "Recruitment is finding people who might apply for a job. It happens before the business chooses among them.",
+      [
+        "Internal",
+        "looking for applicants already in the business, through the intranet (the business's private network) or word of mouth. It is usually quicker and cheaper, and the business already knows the person. The pool of applicants is small, and it leaves a gap in the old role."
+      ],
+      [
+        "External",
+        "looking for applicants outside the business, through job websites, recruitment agencies and social media. It reaches many people and can bring in new ideas. It can cost more and take longer, and the business knows less about each person."
+      ],
+      "A business weighs these pros and cons against the job. Agencies charge a fee, but they can do much of the searching for the business."
+    ],
+    "remember": "Internal is usually quicker and cheaper but draws on few people. External reaches wider but can cost more.",
+    "a": {
+      "q": "Which is a limit of recruiting internally, rather than externally?",
+      "opts": [
+        "Only people already in the business can apply",
+        "The business knows little about each applicant",
+        "It usually costs more than advertising widely",
+        "It cannot be done through the intranet"
+      ],
+      "why": "Internal recruitment draws only on current staff, so the pool is small. The business knows its own staff well, and internal recruitment is usually cheaper, so the other options describe external recruitment or are wrong.",
+      "clue": "Think about who is able to see an internal notice."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bakery in Geelong needs a manager with new ideas for online sales, and no current staff have this skill. Which method suits best?",
+      "opts": [
+        "Advertising on job websites and social media",
+        "Posting the job on the bakery's intranet",
+        "Telling current staff about it by word of mouth",
+        "Promoting the bakery's most senior baker"
+      ],
+      "why": "External methods look outside the bakery, so they can reach people with skills it lacks, and websites and social media reach many people. The intranet, word of mouth and promotion are internal, so they draw on current staff, who lack the skill.",
+      "clue": "Where would people with skills the bakery lacks be found?"
+    }
+  },
+  "bus-selection": {
+    "title": "Selection",
+    "card": [
+      [
+        "Interview",
+        "a conversation with the applicant. It shows communication and fit with the team, but it takes time and the interviewer's bias can sway the result."
+      ],
+      [
+        "Psychological test",
+        "a test of personality, attitudes or thinking style. It gives a consistent measure across applicants, but it may not show how well someone does the job."
+      ],
+      [
+        "Work test",
+        "the applicant does a sample of the real job. It shows actual skills, but it takes time and may cost the business money to run."
+      ],
+      [
+        "Online selection",
+        "applicants answer screening questions or complete tasks on a computer. It is fast for large numbers of applicants, but it shows less about the person than meeting them."
+      ]
+    ],
+    "remember": "Selection is choosing the best applicant. Each method has strengths and limits, so a business picks the ones that suit the job.",
+    "a": {
+      "q": "Which selection method asks an applicant to do a sample of the real job?",
+      "opts": ["Work test", "Interview", "Psychological test", "Online selection"],
+      "why": "A work test has the applicant do real tasks, so the business sees their skills first hand. An interview is only a conversation, so it does not show how well the person does the tasks.",
+      "clue": "Which method lets the business watch the applicant do the job?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bakery in Ballarat gets 200 applications for one part-time role. She wants a quick, low-cost way to cut the list to a few people. Which method suits best?",
+      "opts": [
+        "Online selection with screening questions",
+        "A full day work test for every applicant",
+        "An interview with every applicant",
+        "A psychological test followed by a work test"
+      ],
+      "why": "Online screening is fast and can handle many applicants at once, so it suits a long list. A work test or interview for all 200 would take far too much time and cost, even though they show more about each person.",
+      "clue": "Think about which method handles many applicants quickly."
+    }
+  },
+  "bus-induction": {
+    "title": "Induction",
+    "card": [
+      "Induction is the process of introducing a new employee to the business. It happens when they start, after selection, once they have already been chosen for the job.",
+      "The new employee learns about their job, meets the people they will work with, and is shown the workplace safety rules.",
+      "They also learn the business's culture, which is its shared values and the usual way people behave and work together.",
+      "A good induction helps the employee settle in faster, so they can work well sooner and are more likely to feel part of the team."
+    ],
+    "remember": "Induction helps a new employee settle in by covering the job, people, safety and culture.",
+    "a": {
+      "q": "Which of these is part of an induction?",
+      "opts": [
+        "Showing a new employee the safety rules",
+        "Advertising the job on a website",
+        "Asking applicants to do a sample task",
+        "Writing a list of the duties for the role"
+      ],
+      "why": "Induction happens after someone is hired, and it includes workplace safety. The other options are about finding or choosing staff, or about designing the job, which come before induction.",
+      "clue": "Induction happens after the person has been hired."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom starts at a Geelong cycle shop. On day one his manager introduces him to the team and explains how the shop expects staff to treat customers. What is the main benefit to the shop?",
+      "opts": [
+        "Tom can settle in and start working well sooner",
+        "Tom can skip learning the duties of his new job",
+        "Tom can show the shop he has the skills it needs",
+        "The shop can leave out safety training for Tom"
+      ],
+      "why": "Meeting the team and learning the shop's culture helps a new employee settle in, so he can work well sooner. Showing his skills belongs to selection, which is already over because he has been hired. Induction includes learning his duties and the safety rules, so it does not replace them.",
+      "clue": "Induction comes after the shop has already chosen Tom."
+    }
+  },
+  "bus-types-business": {
+    "title": "Types of business",
+    "card": [
+      [
+        "Sole trader",
+        "one person owns the business, and in law the owner and business are not separate. The owner has unlimited liability, so personal assets can be used to pay the business's debts."
+      ],
+      [
+        "Partnership",
+        "two or more people own the business and share its profits and risks. In a general partnership, each partner has unlimited liability."
+      ],
+      [
+        "Company",
+        "a separate legal entity owned by shareholders, who have limited liability. A private company's shares are not traded on the stock exchange. A public listed company's shares are traded on the Australian Securities Exchange (ASX)."
+      ],
+      "Aims also differ. Sole traders, partnerships and most companies aim to make a profit for their owners. Social enterprises and government business enterprises (GBEs) have other aims as well."
+    ],
+    "remember": "Types of business differ in who owns them, who is liable for debts, and what they aim to do.",
+    "a": {
+      "q": "Jai runs a gardening business alone. It cannot pay a large debt. What is his position as a sole trader?",
+      "opts": [
+        "His personal assets can be used to pay the debt",
+        "His liability is limited to the money he put in",
+        "The business is a separate entity that alone owes the debt",
+        "Shareholders must share the debt with him"
+      ],
+      "why": "A sole trader has unlimited liability, so personal assets can be used to pay business debts. Limited liability applies to company shareholders, not sole traders.",
+      "clue": "Is a sole trader separate from the business in law?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena and Tom want to open a bakery in Geelong. They want the owners' personal assets protected from business debts, and they want shares kept out of the stock exchange. Which type of business suits them?",
+      "opts": ["A private company", "A public listed company", "A general partnership", "A sole trader"],
+      "why": "A private company gives shareholders limited liability, and its shares are not traded on the stock exchange. A public listed company also has limited liability, but its shares are traded on the ASX. A general partnership leaves partners with unlimited liability.",
+      "clue": "Which type has limited liability and no stock exchange listing?"
+    }
+  },
+  "bus-social-enterprises": {
+    "title": "Social enterprises",
+    "card": [
+      "A social enterprise is a business that trades to meet a social or environmental purpose. It sells goods or services, as other businesses do.",
+      "Most of its profit goes back into that purpose, such as training people or protecting the environment. Little is paid out to owners.",
+      "Its main aim is the social or environmental purpose, not profit for owners. It still needs to earn enough to keep trading.",
+      "This is different from a charity that relies mainly on donations. A social enterprise earns its income by selling."
+    ],
+    "remember": "A social enterprise sells to earn income, then puts most profit into its purpose.",
+    "a": {
+      "q": "Which description best fits a social enterprise?",
+      "opts": [
+        "It sells products and puts most profit into a social purpose",
+        "It collects donations and gives all of them to a cause",
+        "It sells products and pays most profit to its owners",
+        "It is owned by government and sells to make a profit"
+      ],
+      "why": "A social enterprise earns income by trading and directs most profit to its purpose. A donation-based group is different, because a social enterprise earns its income by selling.",
+      "clue": "Think about how it earns income and where profit goes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq opens a bakery in Geelong that employs people who have been out of work for years. Most of its profit pays for more training places. Why is it a social enterprise?",
+      "opts": [
+        "It trades and puts most profit into a social purpose",
+        "It employs people, which all businesses do",
+        "It makes a profit, so it must serve its owner",
+        "It sells bread, which meets a basic need"
+      ],
+      "why": "The bakery sells goods and puts most profit into training, a social purpose. Making a profit alone does not make a business a social enterprise, because many businesses do that.",
+      "clue": "Look at what happens to the profit."
+    }
+  },
+  "bus-government-business-enterprises": {
+    "title": "Government business enterprises",
+    "card": [
+      "A government business enterprise (GBE) is a business owned by a government. This can be the federal, a state or a local government. Australia Post, owned by the Australian Government, is one example.",
+      "A GBE exists to provide a service the government wants provided, such as mail, water or public transport. It often serves everyone, even places where a private business might not make money.",
+      "Many GBEs also aim to make a profit. Making a profit does not stop a business being a GBE. The profit can be paid back to the government as owner.",
+      "Ownership is the test. Serving every town or earning a profit does not decide it. A business is a GBE because a government owns it."
+    ],
+    "remember": "Government ownership makes a GBE. Profit and who it serves do not decide it.",
+    "a": {
+      "q": "Which statement about GBEs is correct?",
+      "opts": [
+        "A GBE can make a profit and still be a GBE",
+        "A GBE must not aim to make any profit at all",
+        "A GBE is owned by the customers it serves",
+        "A GBE can only be owned by the federal government"
+      ],
+      "why": "Many GBEs aim to make a profit, and the profit can be paid to the government that owns them. A GBE can be owned by the federal, a state or a local government, so it is not limited to the federal level.",
+      "clue": "Check what the card says about profit and about levels of government."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ashby Valley Water supplies water to every town in its region and pays a profit each year. Which fact shows that it is a GBE?",
+      "opts": [
+        "The Victorian Government owns the business",
+        "It supplies water to every town in its region",
+        "It pays a profit to its owner each year",
+        "It provides an essential service to the public"
+      ],
+      "why": "Ownership is the test, so the business is a GBE because the Victorian Government owns it. Serving every town is common for GBEs, but it does not decide what the business is. Making a profit does not decide it either.",
+      "clue": "Which fact is the test, rather than something GBEs often do?"
+    }
+  },
+  "bus-business-objectives-unit-3": {
+    "title": "Business objectives",
+    "card": [
+      "A business objective is a goal the business sets to work towards. Objectives guide the decisions managers make.",
+      [
+        "Profit",
+        "making money after costs are paid. Market share is the business's portion of total sales in its market, and a business can aim to increase it."
+      ],
+      [
+        "Efficiency",
+        "using resources such as time, labour and materials with little waste. Effectiveness is how well the business achieves its objectives."
+      ],
+      [
+        "Social need and shareholders",
+        "a business may aim to meet a social need in the community. A listed company may aim to meet shareholder expectations, such as returns on their investment."
+      ]
+    ],
+    "remember": "Objectives are the goals that guide a business, and a business can hold several at once.",
+    "a": {
+      "q": "A business reorganises its factory so it makes the same products using less material and fewer hours. Which objective is it pursuing?",
+      "opts": ["Improving efficiency", "Increasing market share", "Meeting a social need", "Meeting shareholder expectations"],
+      "why": "Using fewer resources for the same output is improving efficiency. It is not market share, because nothing here is about taking a larger portion of sales.",
+      "clue": "Focus on resources used for the same output."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's phone repair shop in Ballarat cuts its prices so that people stop using the other two repair shops in town. Which objective is this?",
+      "opts": [
+        "Increasing market share",
+        "Improving efficiency",
+        "Improving effectiveness",
+        "Meeting shareholder expectations"
+      ],
+      "why": "Drawing customers away from rivals means Priya's shop gains more of the town's total repair sales, which is increasing market share. It is not efficiency, because nothing here changes how much time, labour or materials each repair uses.",
+      "clue": "Think about where her new customers come from."
+    }
+  },
+  "bus-management-styles": {
+    "title": "Management styles",
+    "card": [
+      "A management style is the way a manager makes decisions and deals with staff. The styles run along a line, and staff get more say at each step.",
+      [
+        "Autocratic",
+        "the manager decides alone and tells staff what to do. Persuasive is next: the manager still decides alone, but explains the reasons to win support."
+      ],
+      ["Consultative", "the manager asks staff for views before deciding, but makes the final decision."],
+      [
+        "Participative",
+        "staff share in the decision, and the group decides together. Laissez-faire goes further: staff decide largely for themselves."
+      ]
+    ],
+    "remember": "From autocratic to laissez-faire, staff have more say in decisions at each step.",
+    "a": {
+      "q": "A manager asks staff for ideas about a new roster, then chooses the roster alone. Which style is this?",
+      "opts": ["Consultative", "Persuasive", "Participative", "Autocratic"],
+      "why": "The manager asks for views first, then makes the final call alone, which is consultative. Participative is tempting, but there staff share in making the decision.",
+      "clue": "Who makes the final decision after the staff are asked?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya announces a new opening time, then spends ten minutes explaining why it helps customers. She did not ask staff beforehand. Which style is this?",
+      "opts": ["Persuasive", "Consultative", "Autocratic", "Laissez-faire"],
+      "why": "Priya decided alone and then explained her reasons to win support, which is persuasive. Autocratic is tempting, but an autocratic manager just tells staff what to do without explaining reasons to win them over.",
+      "clue": "Did Priya ask for views before or only explain after?"
+    }
+  },
+  "bus-choosing-management-style": {
+    "title": "Choosing a management style",
+    "card": [
+      "No single management style is best in every case. A manager chooses a style to suit the situation.",
+      [
+        "Task and time",
+        "a task that is urgent or risky often suits a style where the manager decides alone. A task with time to spare can allow staff to be consulted or to take part in the decision."
+      ],
+      [
+        "Staff experience",
+        "skilled, experienced staff can often work well with more say and less supervision. New or unsure staff may need clearer direction from the manager."
+      ],
+      [
+        "Manager's preference",
+        "a manager's own beliefs and habits also shape the style they pick. A manager who trusts staff may share decisions more often."
+      ]
+    ],
+    "remember": "The best style fits the task, the time, the staff and the manager.",
+    "a": {
+      "q": "A fire breaks out in a warehouse run by Sam, and staff must leave at once. Why is a style where Sam decides alone most suitable?",
+      "opts": [
+        "The task is urgent, so there is no time to consult staff",
+        "The staff are inexperienced, so they need more say",
+        "Sam prefers to share decisions with the whole team",
+        "The task has time to spare, so staff can be consulted"
+      ],
+      "why": "With an urgent and risky task, there is no time to ask staff for ideas, so deciding alone suits the situation. The option saying inexperienced staff need more say is tempting, but the card says new or unsure staff may need clearer direction, not more say.",
+      "clue": "Think about how much time Sam has to ask others."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a design studio in Geelong. Her team is highly experienced, and a new project has three months to run. Which approach fits the situation best?",
+      "opts": [
+        "Give the team a large say in how the project is done",
+        "Make every decision herself and check each step",
+        "Give orders and expect staff to follow without question",
+        "Use one style because it suits her, whatever the team"
+      ],
+      "why": "Experienced staff and plenty of time both suit giving staff more say. Making every decision herself would suit an urgent task or new staff, not this case. Choosing only by her own preference ignores the task, the time and the team.",
+      "clue": "Look at both the staff experience and the time available."
+    }
+  },
+  "bus-management-skills-2": {
+    "title": "Management skills",
+    "card": [
+      "Communicating is passing on information clearly and listening to staff. Delegating is giving a task, and the authority to do it, to another person.",
+      "Planning is setting goals and deciding the steps and resources needed to reach them. Decision-making is choosing between options.",
+      "Leading is guiding and motivating staff. Interpersonal skills are getting on well with people, such as building trust and handling conflict.",
+      "Each management style leans on some skills more than others. A style that gives staff more say leans more on communicating and delegating."
+    ],
+    "remember": "Managers use all six skills, but each style relies on some more than others.",
+    "a": {
+      "q": "Tom hands the ordering of stock to his supervisor and gives her the authority to choose suppliers. Which skill is Tom using?",
+      "opts": ["Delegating", "Planning", "Leading", "Decision-making"],
+      "why": "Tom passes a task and the authority to do it to someone else, which is delegating. Decision-making is tempting, but that is choosing between options, not handing over a task.",
+      "clue": "What is being handed to another person?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Zoe runs a Melbourne café and asks her staff for ideas before every big change. Which skill does this rely on most?",
+      "opts": ["Communicating", "Decision-making", "Delegating", "Planning"],
+      "why": "Asking staff for ideas means listening to their views, which is part of communicating. Decision-making is tempting because Zoe makes the final choice later, but asking for ideas is not choosing between options. She is not handing over a task, so it is not delegating.",
+      "clue": "Which skill includes listening to staff?"
+    }
+  },
+  "bus-corporate-culture-unit-3": {
+    "title": "Corporate culture",
+    "card": [
+      ["Official culture", "the values a business states, such as in a mission statement or on its website."],
+      ["Real culture", "how staff actually behave day to day. It may match the official culture or differ from it."],
+      "Managers can shape culture through rewards, such as praise or bonuses for the behaviour they want.",
+      "They can also use symbols, such as logos, uniforms or awards, and their own example. Staff watch what managers do, and tend to follow actions over words."
+    ],
+    "remember": "Culture is both what a business says and what staff do. Managers can shape it through rewards, symbols and example.",
+    "a": {
+      "q": "A firm says it values teamwork, but staff mostly work alone and rarely help each other. What does this show?",
+      "opts": [
+        "Its real culture differs from its official culture",
+        "Its official culture is its real culture",
+        "Its managers have used rewards well",
+        "Its staff follow its stated values closely"
+      ],
+      "why": "The stated value is teamwork, but behaviour shows otherwise, so real culture differs from official culture. The official culture is only what is stated, not what happens.",
+      "clue": "Compare what the firm says with what staff do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's bakery in Geelong says 'customers first' on its website, and staff wear badges saying so. Priya often leaves complaints unanswered to finish paperwork. What is most likely?",
+      "opts": [
+        "Staff are likely to copy her and put complaints aside",
+        "Staff are likely to follow the website's stated values",
+        "The badges are likely to lead staff to put customers first",
+        "Official culture is likely to change to match her behaviour"
+      ],
+      "why": "Staff watch what managers do and tend to follow actions over words, so Priya's example is likely to shape the real culture. The website and badges are tempting, but they state values that her own behaviour contradicts. Official culture is the stated values, so her actions change the real culture, not the official one.",
+      "clue": "Think about whose behaviour staff look to."
+    }
+  },
+  "bus-training-options": {
+    "title": "Training options",
+    "card": [
+      [
+        "On-the-job",
+        "training that happens at the workplace while the employee does real work, such as shadowing a colleague or being coached by a supervisor."
+      ],
+      [
+        "Off-the-job",
+        "training that happens away from the normal work task, such as a course at a TAFE, a workshop or an online program."
+      ],
+      "On-the-job training is usually cheaper and relevant to the actual job. It can be uneven, because the quality depends on the trainer, and mistakes can happen on real work.",
+      "Off-the-job training can teach new skills and ideas from experts, without the pressure of real work. It often costs more, and the employee is away from their duties while they learn."
+    ],
+    "remember": "On-the-job is learning while working. Off-the-job is learning away from the task. Each trades cost and relevance against expert teaching.",
+    "a": {
+      "q": "Ravi starts at a bakery in Ballarat. For his first week he works beside an experienced baker and copies how she shapes loaves. What type of training is this?",
+      "opts": ["On-the-job training", "Off-the-job training", "Performance appraisal", "Self-evaluation"],
+      "why": "Ravi learns while doing real work at the bakery, so it is on-the-job training. It is not off-the-job, because he has not left the work setting to learn in a class or workshop.",
+      "clue": "Where is Ravi while he learns?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a small accounting firm in Geelong. She sends two staff to a two-day workshop run by experts on new tax software. What is a likely disadvantage of this choice?",
+      "opts": [
+        "The staff are away from client work while they learn",
+        "The training is limited to what a supervisor knows",
+        "The staff may make costly mistakes on live client work",
+        "The training is less relevant to any job tasks"
+      ],
+      "why": "A workshop is off-the-job training, so the staff are away from their duties, which costs the firm time and money. Mistakes on live work and reliance on one supervisor are risks of on-the-job training, which is the tempting wrong choice here.",
+      "clue": "Think about where the staff are while the workshop runs."
+    }
+  },
+  "bus-performance-management-2": {
+    "title": "Performance management",
+    "card": [
+      "Performance management is how a business sets goals for staff, then measures how well each person meets them. It aims to lift the work of individuals and so of the whole business.",
+      [
+        "Management by objectives",
+        "a manager and employee agree on clear, measurable goals, such as a sales target, then check progress against them."
+      ],
+      [
+        "Appraisal",
+        "a formal review, often once or twice a year, where a manager rates an employee's work against set standards and gives feedback."
+      ],
+      [
+        "Self-evaluation",
+        "the employee rates their own work against the goals. Observation is when a manager watches the employee at work and notes how they perform."
+      ]
+    ],
+    "remember": "Performance management sets goals, then measures staff against them using several methods.",
+    "a": {
+      "q": "Which of these is the best example of management by objectives?",
+      "opts": [
+        "Ravi and his manager agree on a target, then check progress",
+        "Ravi's manager watches him serve customers for an hour",
+        "Ravi completes a form rating his own work this year",
+        "Ravi's manager gives him a yearly rating on a set form"
+      ],
+      "why": "Management by objectives means agreeing on measurable goals and then checking progress against them. Watching Ravi at work is observation, and the yearly rating on a form is an appraisal, which reviews work against standards but does not start by agreeing goals.",
+      "clue": "Look for the option where the goal is agreed first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia runs a bakery in Ballarat. Each year she sits with each baker, rates their work against set standards and gives feedback. Which method is this?",
+      "opts": ["An appraisal", "Self-evaluation", "Observation", "Management by objectives"],
+      "why": "A formal review where a manager rates work against standards and gives feedback is an appraisal. Management by objectives is the most tempting wrong answer, but it centres on goals agreed beforehand and checked over time, not on a review meeting.",
+      "clue": "Who does the rating, and is it a formal review?"
+    }
+  },
+  "bus-termination-management": {
+    "title": "Termination management",
+    "card": [
+      "Termination is when employment ends. A business must manage it fairly and follow the law, whoever ends the job.",
+      [
+        "Resignation",
+        "the employee chooses to leave. Retirement is also the employee's choice, when they stop working, usually later in life."
+      ],
+      [
+        "Redundancy",
+        "the employer ends the job because the role is no longer needed, for example after new technology replaces it. It is not about the worker's performance."
+      ],
+      [
+        "Dismissal",
+        "the employer ends the job because of the employee's conduct or performance. The business must follow a fair process and give notice where required."
+      ]
+    ],
+    "remember": "Termination can start with the employee or the business, and the business has duties either way.",
+    "a": {
+      "q": "Sam's employer closes a packing line, so Sam's job no longer exists. Sam's work was good. Which type of termination is this?",
+      "opts": ["Redundancy", "Dismissal", "Resignation", "Retirement"],
+      "why": "The employer ended the job because the role is no longer needed, which is redundancy. Dismissal is the tempting option, but it relates to conduct or performance, and Sam's work was good.",
+      "clue": "Ask why the job ended: the person or the role?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Ballarat. She ends a baker's job after repeated warnings about arriving late. Which type of termination is this, and why?",
+      "opts": [
+        "Dismissal, because it is about the baker's conduct",
+        "Redundancy, because the employer ended the job",
+        "Resignation, because the baker chose to be late",
+        "Dismissal, because the baker chose to leave the job"
+      ],
+      "why": "The employer ended the job because of the employee's conduct, so it is dismissal. Redundancy is tempting because the employer also ends that job, but redundancy is about the role no longer being needed, not the worker's behaviour.",
+      "clue": "Look at the reason the employer gives for ending the job."
+    }
+  },
+  "bus-entitlements-transition": {
+    "title": "Entitlements and transition",
+    "card": [
+      "Entitlements are what a departing employee is owed by law or by their contract. They include unpaid wages and accrued (built up) annual leave that has not been taken.",
+      "Long service leave may also be owed, depending on how long the person worked for the business and the rules that apply to them.",
+      "Redundancy pay is owed only in some cases. It is paid when the job no longer exists, and the amount usually depends on how long the person has worked there. It is not paid when an employee simply resigns.",
+      "Transition support helps the person move on. Outplacement is one example: the business pays for services such as résumé writing, interview coaching and job search help."
+    ],
+    "remember": "Entitlements are what the employee is owed. Transition support is extra help to find the next job.",
+    "a": {
+      "q": "Which of these is an example of transition support for a departing employee?",
+      "opts": [
+        "A business pays a career coach to help a worker find a job",
+        "A business pays out annual leave the worker has not taken",
+        "A business pays the final week of wages that is still owed",
+        "A business pays redundancy pay based on years of service"
+      ],
+      "why": "A career coach helps the person find new work, which is outplacement, a form of transition support. The other three are payments the person is owed, so they are entitlements. Redundancy pay is tempting, but it is money owed, not help with moving on.",
+      "clue": "Which option helps the person find work rather than paying money owed?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya resigns from her job at a Geelong bakery to start her own business. She has two weeks of unpaid wages and some unused annual leave. What is the business required to pay her?",
+      "opts": [
+        "The unpaid wages and the accrued annual leave",
+        "The unpaid wages only, as leave is lost on resigning",
+        "The unpaid wages and leave, plus redundancy pay",
+        "Nothing, because she chose to leave the business"
+      ],
+      "why": "Unpaid wages and accrued annual leave are owed whenever an employee leaves, including when they resign. Redundancy pay is only owed when the job no longer exists, and Priya's job still does. The idea that leaving by choice cancels what is owed is the tempting mistake.",
+      "clue": "Redundancy pay depends on the job ending. Wages and leave do not."
+    }
+  },
+  "bus-roles-workplace-relations": {
+    "title": "Roles in workplace relations",
+    "card": [
+      [
+        "Employees",
+        "They do the work and can raise concerns about pay and conditions. They may join a union to have a stronger voice."
+      ],
+      [
+        "HR managers",
+        "They work for the business. They apply the pay and conditions the business must follow and handle day-to-day staff matters."
+      ],
+      [
+        "Unions and employer associations",
+        "A union represents employees. An employer association represents businesses. Each speaks for its members when pay and conditions are discussed."
+      ],
+      [
+        "Fair Work Commission",
+        "It is the national workplace tribunal, which is independent of both sides. It sets minimum pay and conditions in awards, and it approves enterprise agreements."
+      ]
+    ],
+    "remember": "Employees and unions speak for staff. HR managers and employer associations work for business. The Fair Work Commission is independent.",
+    "a": {
+      "q": "Which body represents the interests of employees when pay and conditions are discussed?",
+      "opts": ["A union", "An employer association", "The human resource manager", "The Fair Work Commission"],
+      "why": "A union speaks for its employee members. The Fair Work Commission is independent of both sides, so it does not represent employees or businesses. The HR manager works for the business.",
+      "clue": "Which body do employees join to have a stronger voice?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Bakers in Ballarat want higher pay. Which body is independent of both the bakers and their employers and sets minimum pay in an award?",
+      "opts": [
+        "The Fair Work Commission",
+        "A union for bakery workers",
+        "An association of bakery owners",
+        "The bakery's human resource manager"
+      ],
+      "why": "The Fair Work Commission is the independent tribunal that sets minimum pay and conditions in awards. A union and an employer association each speak for one side. The HR manager works for the business, so none of them is independent.",
+      "clue": "Three of these options speak for one side of the workplace."
+    }
+  },
+  "bus-awards-agreements": {
+    "title": "Awards and enterprise agreements",
+    "card": [
+      [
+        "Modern award",
+        "a legal document that sets minimum pay and conditions for workers in a particular industry or occupation, such as retail or hospitality."
+      ],
+      [
+        "Enterprise agreement",
+        "a set of pay and conditions negotiated by an employer and its employees at one workplace or business. It is approved by the Fair Work Commission."
+      ],
+      "An enterprise agreement must pass the better off overall test. Taken as a whole, each worker must be better off than under the award that would otherwise cover them.",
+      "An agreement can trade one entitlement for another, such as flexible hours for a different loading. It cannot leave workers worse off overall."
+    ],
+    "remember": "An award is the industry minimum. An agreement is made at one workplace and must beat that minimum overall.",
+    "a": {
+      "q": "Which statement best separates a modern award from an enterprise agreement?",
+      "opts": [
+        "An award covers an industry, an agreement one workplace",
+        "An award covers one workplace, an agreement an industry",
+        "An award is negotiated by staff, an agreement is set by law",
+        "An award binds employers, an agreement binds workers"
+      ],
+      "why": "A modern award sets minimum pay and conditions across an industry. An enterprise agreement is negotiated by the employer and employees at one workplace. The reversed option is tempting, but it swaps the two.",
+      "clue": "Think about how many workplaces each one covers."
+    },
+    "b": {
+      "d": 3,
+      "q": "Kiran runs a café group in Geelong and offers staff an enterprise agreement. It lifts base pay but cuts weekend loadings below the award. Which test decides if it can be approved?",
+      "opts": [
+        "Whether the package as a whole beats the award",
+        "Whether each condition on its own beats the award",
+        "Whether most of the owners agree to the package",
+        "Whether its pay beats that of rival cafés nearby"
+      ],
+      "why": "The better off overall test looks at the whole package, not each item. Lower loadings can be made up for by higher base pay. Requiring each condition to beat the award is tempting, but the test does not demand it.",
+      "clue": "Can a loss in one area be made up by a gain in another?"
+    }
+  },
+  "bus-operations-manufacturing-services": {
+    "title": "Operations in manufacturing and services",
+    "card": [
+      [
+        "Manufacturing",
+        "Manufacturing makes tangible goods, which are physical items you can touch, such as a bicycle or a loaf of bread. Goods can be made in a factory away from customers and stored until they are sold."
+      ],
+      [
+        "Services",
+        "Services are intangible, which means they are actions or experiences you cannot touch or hold, such as a haircut or a dental check-up. They are usually made and used at the same time, so they cannot be stored for later."
+      ],
+      "Many services need the customer to be present, or to take part. This means the business often has to provide the service where the customer is, or when they arrive.",
+      "Because goods can be stored, a manufacturer can make them ahead of demand. A service business cannot, so it needs to plan its staff and opening hours to match when customers come."
+    ],
+    "remember": "Tangible goods can be made ahead and stored. Intangible services are usually made as they are used.",
+    "a": {
+      "q": "In operations, which feature most clearly separates a service from a good?",
+      "opts": [
+        "It is usually made and used at the same time",
+        "It is usually made in a factory away from customers",
+        "It can usually be stored until a customer wants it",
+        "It is usually a tangible item that is handed over"
+      ],
+      "why": "A service is intangible and is usually made as the customer uses it, so it cannot be stored for later. Being tangible, made away from customers and stored are all features of manufactured goods.",
+      "clue": "Think about whether a haircut can be made and kept on a shelf."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq runs a bakery in Geelong that sells bread, and a cleaning business that cleans offices at night. Which statement about his operations is correct?",
+      "opts": [
+        "The bread can be baked early and stored for sale",
+        "The office cleaning can be done early and stored for later",
+        "Both can be stored because both are made by staff",
+        "Neither can be stored because both involve labour"
+      ],
+      "why": "Bread is a tangible good, so it can be made ahead and stored until it is sold. Office cleaning is an intangible service: it has to be done at the office when it is needed, so it cannot be stored, even if no one is there at night. Both use staff labour, but that does not decide whether something can be stored.",
+      "clue": "Using staff to make something does not tell you whether it can be stored."
+    }
+  },
+  "bus-inputs-processes-outputs": {
+    "title": "Inputs, processes and outputs",
+    "card": [
+      "Operations is the part of a business that makes its goods or delivers its services. It turns inputs into outputs.",
+      ["Inputs", "the resources put into operations, such as materials, labour, equipment, energy and money."],
+      [
+        "Processes",
+        "the activities that change the inputs into outputs, such as cutting, assembling, cooking or advising a client. Good processes add value."
+      ],
+      [
+        "Outputs",
+        "the finished goods or services that go to customers. Value is added when the output is worth more to the customer than the inputs that went into it."
+      ]
+    ],
+    "remember": "Inputs go in, processes change them, outputs come out, and good processes add value.",
+    "a": {
+      "q": "Which of these is a process in a furniture workshop?",
+      "opts": [
+        "Sanding and assembling timber into chairs",
+        "Timber bought from a timber supplier",
+        "Finished chairs sent to a furniture shop",
+        "The wages paid to the workshop's workers"
+      ],
+      "why": "Sanding and assembling are activities that change inputs into outputs. Timber and wages are resources put in, so they are inputs. The finished chairs are outputs.",
+      "clue": "Look for the activity that changes one thing into another."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Ballarat. She buys flour and butter, and her staff mix and bake them into loaves sold to customers. Which option correctly sorts these items?",
+      "opts": [
+        "Flour is an input, baking is a process, loaves are outputs",
+        "Flour is a process, baking is an input, loaves are outputs",
+        "Flour is an input, baking is an output, loaves are a process",
+        "Flour and loaves are both inputs, baking is an output"
+      ],
+      "why": "Flour is a resource put in, so it is an input, and baking changes it, so it is a process. The loaves are what customers receive, so they are outputs. Baking may seem like an output because it is the last step, but it is an activity, not the finished product.",
+      "clue": "Ask what is put in, what is done to it, and what comes out."
+    }
+  },
+  "bus-efficiency-effectiveness": {
+    "title": "Efficiency and effectiveness",
+    "card": [
+      [
+        "Efficiency",
+        "making the most output from the fewest inputs. It is about how well resources are used, such as less waste, time or cost for each unit made."
+      ],
+      [
+        "Effectiveness",
+        "how well a business meets its objectives. It is about whether the business achieves what it set out to do, such as a sales target or a quality standard."
+      ],
+      "A business can be efficient but not effective. It might make goods cheaply and quickly, but if making them does not meet its objective, such as a quality standard, it is not effective.",
+      "A business can also be effective but not efficient. It might meet its objective, but use more inputs than it needs to."
+    ],
+    "remember": "Efficiency is about using inputs well. Effectiveness is about reaching objectives.",
+    "a": {
+      "q": "A factory cuts the electricity and labour hours it uses for each kettle it makes. Output stays the same. What has improved?",
+      "opts": [
+        "Efficiency, as inputs per kettle fell",
+        "Effectiveness, as an objective was met",
+        "Both, as they mean the same thing",
+        "Neither, as output has not changed"
+      ],
+      "why": "The same output now needs fewer inputs, so efficiency has improved. Effectiveness is about meeting objectives, and nothing here says an objective was set or met.",
+      "clue": "Look at what happened to the inputs for each kettle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tomas's Melbourne print shop set an objective of delivering every order on time. It now runs its machines with little waste, but a third of orders arrive late. How is the shop best described?",
+      "opts": [
+        "Efficient but not effective",
+        "Effective but not efficient",
+        "Both efficient and effective",
+        "Neither efficient nor effective"
+      ],
+      "why": "Little waste suggests inputs are used well, so it is efficient. Late orders mean it is missing its objective, so it is not effective. Calling it effective would confuse low waste with meeting the on-time objective.",
+      "clue": "Compare the shop's use of inputs with its on-time objective."
+    }
+  },
+  "bus-technology-operations-2": {
+    "title": "Technology in operations",
+    "card": [
+      [
+        "Automation and robotics",
+        "An automated production line uses machines to do repeated tasks with little human input. Robots can lift, weld or pack with the same result each time, so there are fewer errors and less waste."
+      ],
+      [
+        "Computer-aided design",
+        "Computer-aided design (CAD) is software used to draw and test a product on screen. Faults can be found and fixed before anything is made, which saves materials and time."
+      ],
+      [
+        "Artificial intelligence",
+        "Artificial intelligence (AI) is software that learns from data to make decisions or spot patterns. A business can use it to detect faulty products or predict when a machine needs repair."
+      ],
+      [
+        "Online services",
+        "Online services let customers order, book or get help over the internet. This can cut staffing and premises costs, and it cuts the errors that come from taking orders by hand."
+      ]
+    ],
+    "remember": "Technology can cut costs and errors, but each type suits a different job.",
+    "a": {
+      "q": "Zara's furniture business in Geelong tests a new chair design on screen and finds a weak leg before any timber is cut. Which technology is this?",
+      "opts": [
+        "Computer-aided design",
+        "An automated production line",
+        "Robotics on the factory floor",
+        "An online ordering service"
+      ],
+      "why": "Drawing and testing a product on screen before it is made is computer-aided design. An automated line or robots would be used when making the chair, not when testing the design on screen.",
+      "clue": "Think about what happens before anything is made."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tom runs a bakery in Ballarat. He wants to cut errors caused by staff writing down phone orders wrongly. Which change would best fix this problem?",
+      "opts": [
+        "An online ordering service for customers",
+        "A robot arm to pack the loaves",
+        "Computer-aided design of new loaf shapes",
+        "An automated oven line for baking bread"
+      ],
+      "why": "Customers enter their own orders online, so the order is not copied down by hand and the errors from writing it wrongly are cut. A robot arm or an automated oven line works on making and packing, and CAD works on design, so none of them touches how orders are taken.",
+      "clue": "Where in the process do the errors happen?"
+    }
+  },
+  "bus-materials-management": {
+    "title": "Materials management",
+    "card": [
+      "Materials management aims to have the right materials in the right amount at the right time, without waste or running short.",
+      ["Forecasting demand", "predicting how much customers will buy. It guides how much the business plans to make."],
+      [
+        "Master production schedule",
+        "a plan of what will be made, how many, and when, based on the forecast. Materials requirement planning (MRP) then works out which materials are needed and when to order them."
+      ],
+      [
+        "Just-in-time",
+        "ordering materials to arrive just as they are needed. It cuts the cost of storing stock, but delays from suppliers can stop production."
+      ]
+    ],
+    "remember": "Forecast, schedule, plan materials, and order them to arrive when needed.",
+    "a": {
+      "q": "What does a master production schedule set out?",
+      "opts": [
+        "What will be made, how many, and when",
+        "How much customers are predicted to buy",
+        "Which suppliers offer the lowest prices",
+        "Materials delivered only as they are used"
+      ],
+      "why": "The schedule is the plan for what to make, how many and when. Predicting what customers will buy is forecasting, which the schedule is based on, so it is the tempting wrong choice.",
+      "clue": "It is a plan for production, made after the forecast."
+    },
+    "b": {
+      "d": 2,
+      "q": "Leila's Geelong bike shop assembles bikes from parts it orders to arrive on the day each batch is built. What is the main risk of this approach?",
+      "opts": [
+        "A late supplier delivery could stop assembly",
+        "Large amounts of money are tied up in stored parts",
+        "Customer demand can no longer be forecast",
+        "Bikes must be made before any orders are planned"
+      ],
+      "why": "Ordering parts to arrive as needed is just-in-time. With little stock held, a late delivery can stop production. High storage costs are the problem just-in-time reduces, not one it creates.",
+      "clue": "Think about what happens when there is no spare stock."
+    }
+  },
+  "bus-quality-strategies": {
+    "title": "Quality management",
+    "card": [
+      [
+        "Quality control",
+        "checking finished products, or outputs, and removing those that fall short of the standard. It finds faults after the work is done."
+      ],
+      [
+        "Quality assurance",
+        "setting standards for each stage of the process, so faults are less likely to happen. It focuses on how the work is done, not only the end result."
+      ],
+      [
+        "Total quality management",
+        "an approach where every worker, in every area of the business, is responsible for quality. It is a whole-of-business culture, not one team's job."
+      ],
+      "A business may use all three together. Quality control checks the product, quality assurance guides the process, and total quality management spreads the responsibility."
+    ],
+    "remember": "Control checks the output, assurance sets process standards, and total quality management involves everyone.",
+    "a": {
+      "q": "A furniture maker wants fewer faults in its chairs. Which action is an example of quality assurance?",
+      "opts": [
+        "Writing standards that every step of production must meet",
+        "Inspecting finished chairs and discarding the faulty ones",
+        "Returning a faulty batch to the supplier after delivery",
+        "Asking only the manager to review customer complaints"
+      ],
+      "why": "Quality assurance sets standards for the process so faults are less likely. Inspecting finished chairs is quality control, because it checks outputs after they are made.",
+      "clue": "Look for the option about the process, not the finished product."
+    },
+    "b": {
+      "d": 3,
+      "q": "At Ravi's bakery in Bendigo, every worker, from the baker to the cashier, must fix quality problems they notice and suggest ways to prevent them. Which approach is this?",
+      "opts": ["Total quality management", "Quality control", "Quality assurance", "Stock valuation"],
+      "why": "Quality is treated as everyone's job across the whole business, which is total quality management. Quality assurance sets process standards, but it does not on its own make every worker responsible for quality.",
+      "clue": "Who is responsible for quality in this bakery?"
+    }
+  },
+  "bus-waste-minimisation": {
+    "title": "Waste minimisation",
+    "card": [
+      "Waste minimisation means cutting the material a business throws away when it makes goods. It lowers costs, because less is paid for material that is never sold, and it harms the environment less, because less waste goes to landfill.",
+      [
+        "Reduce",
+        "use fewer materials in the first place, for example by cutting shapes more carefully from a sheet of fabric."
+      ],
+      [
+        "Reuse",
+        "use a material or item again for the same job or a new one, for example by refilling the same crate or container."
+      ],
+      [
+        "Recycle",
+        "turn waste into new material, for example by melting scrap metal to make new metal parts. Less new material is bought, and less is thrown out."
+      ]
+    ],
+    "remember": "Reduce, reuse or recycle: each saves money and spares the environment.",
+    "a": {
+      "q": "A juice maker in Mildura collects the glass bottles it sells, washes them and fills them again with new juice. Which waste minimisation method is this?",
+      "opts": [
+        "Reuse, as the same bottles do the same job again",
+        "Reduce, as fewer bottles are used in each batch",
+        "Recycle, as the glass is turned into new material",
+        "Reduce, as the bottles are washed before filling"
+      ],
+      "why": "The bottles are not broken down or made into anything new. The same item goes back into use for the same job, which is reusing. Recycling is the tempting choice, but it means turning waste into new material, and the glass here stays as it is.",
+      "clue": "Does the bottle stay a bottle, or is it made into something new?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a Geelong furniture workshop. She melts leftover aluminium offcuts and casts them into new table legs. What are the main effects of this?",
+      "opts": [
+        "It cuts material costs and sends less waste to landfill",
+        "It raises material costs but sends less waste to landfill",
+        "It cuts material costs but sends more waste to landfill",
+        "It has no effect on costs but sends less waste to landfill"
+      ],
+      "why": "This is recycling, because waste is turned into new material. Priya buys less new aluminium, so costs fall, and the offcuts are no longer thrown out, so less goes to landfill. It is tempting to see recycling as only an environmental gain, but buying less new metal saves money too.",
+      "clue": "Think about what Priya no longer has to buy or throw out."
+    }
+  },
+  "bus-waste-minimisation-lean-management": {
+    "title": "Lean management",
+    "card": [
+      "Lean management cuts any step in operations that adds no value for the customer, such as waiting, extra movement or unused stock. It aims for zero defects: every item right first time.",
+      [
+        "Pull production",
+        "work starts only when a customer order or demand signals it. Goods are not made in advance on a guess."
+      ],
+      [
+        "One-piece flow",
+        "each item moves through the steps one at a time, not in large batches. Faults show up sooner."
+      ],
+      [
+        "Takt time",
+        "the pace that customer demand sets: available time ÷ units demanded. If 240 units are wanted in a 480-minute shift, takt time is two minutes per unit."
+      ]
+    ],
+    "remember": "Lean asks of every step: does it add value for the customer? If not, cut it.",
+    "a": {
+      "q": "Which feature of lean management means a bakery bakes loaves only after orders arrive from its café customers?",
+      "opts": ["Pull production", "One-piece flow", "Takt time", "Zero defects"],
+      "why": "Pull production starts work only when demand signals it, so the bakery does not make loaves on a guess. One-piece flow is about moving items singly through steps, not about when work starts.",
+      "clue": "Think about what triggers the work to begin."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dev's workshop in Ballarat builds bikes. He changes from making frames in batches of 50 to passing each frame to the next step as soon as it is done. A faulty weld is now found within minutes. Which lean feature does this show?",
+      "opts": ["One-piece flow", "Pull production", "Takt time", "Zero defects"],
+      "why": "Moving each item through the steps singly, not in batches, is one-piece flow, and it shows faults quickly. Zero defects is the goal of no faults, but the change described is how items move, not the goal.",
+      "clue": "Look at how the frames move, not at the goal."
+    }
+  },
+  "bus-corporate-social-responsibility-operations": {
+    "title": "Corporate social responsibility in operations",
+    "card": [
+      "Corporate social responsibility (CSR) means a business chooses to act ethically and considers its effect on society and the environment. In operations, this shows in how it sources, makes and delivers its goods or services.",
+      [
+        "Sustainable materials",
+        "choosing inputs that can be replenished or have a lower impact on the environment, such as timber from certified, managed forests."
+      ],
+      [
+        "Cutting emissions",
+        "reducing the greenhouse gases that production and transport release, for example by running a factory on renewable energy."
+      ],
+      [
+        "Fair treatment of suppliers",
+        "paying on time, offering fair prices and giving notice of changes. These count as CSR when they go beyond what the law and contracts require, because the law sets only the minimum."
+      ]
+    ],
+    "remember": "CSR in operations means choosing to do more than the law requires.",
+    "a": {
+      "q": "Which action by a manufacturer is an example of CSR in operations?",
+      "opts": [
+        "Switching its factory to renewable energy to cut emissions",
+        "Paying its staff the award wage set by law",
+        "Keeping a safety guard on a machine as the law requires",
+        "Filing its tax return by the due date"
+      ],
+      "why": "Cutting emissions by choice goes beyond what the law asks, so it is CSR. The other options only meet legal duties, which is the minimum and not CSR on its own.",
+      "clue": "Which action is a choice rather than a legal duty?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena runs a furniture maker in Geelong. Her contracts let her pay suppliers in 90 days. She now pays small suppliers within 14 days. Why is this CSR in operations?",
+      "opts": [
+        "She treats suppliers fairly, beyond what contracts require",
+        "She lowers her own costs by paying suppliers faster",
+        "She meets a legal payment deadline set for all suppliers",
+        "She cuts emissions from the delivery of her timber"
+      ],
+      "why": "The contracts allow 90 days, so paying in 14 is a choice that goes beyond the minimum and treats suppliers fairly. No law is described as forcing it, and nothing suggests the faster payment lowers her costs.",
+      "clue": "Compare what the contract allows with what Lena does."
+    }
+  },
+  "bus-global-considerations-operations": {
+    "title": "Global considerations in operations",
+    "card": [
+      [
+        "Global sourcing",
+        "buying inputs, such as materials or parts, from suppliers in other countries. It is often done to find lower prices."
+      ],
+      [
+        "Overseas production",
+        "making goods in another country, often where labour costs are lower. A business may do this itself or through another firm."
+      ],
+      ["Benefits", "these choices can lower costs, which may allow lower prices or higher profit."],
+      [
+        "Risks",
+        "quality may be harder to control from a distance. Poor conditions in a supplier's factory can harm the business's reputation. Supply can be delayed by distance, shipping problems or events overseas."
+      ]
+    ],
+    "remember": "Going global can cut costs, but it can also put quality, reputation and supply at risk.",
+    "a": {
+      "q": "Which is a risk of making goods overseas?",
+      "opts": [
+        "Quality is harder to control from a distance",
+        "Labour costs tend to be higher than in Australia",
+        "Goods made overseas cannot be sold in Australia",
+        "Supply tends to become faster and more reliable"
+      ],
+      "why": "A business far from its factory finds it harder to check quality. Labour costs overseas are often lower, which is a possible benefit rather than a risk, and distance tends to add supply delays, not remove them.",
+      "clue": "Think about what distance does to checking."
+    },
+    "b": {
+      "d": 3,
+      "q": "Grace's Melbourne company buys its fabric from a mill in another country. A news report shows the mill has unsafe working conditions. Which risk does this most directly create for Grace's company?",
+      "opts": ["Damage to its reputation", "A delay in supply", "A fall in product quality", "A rise in shipping costs"],
+      "why": "Customers may blame the company for the conditions at its supplier, which harms its reputation. Supply and quality could be affected later, but the report itself is about conditions, not delays or faults.",
+      "clue": "Consider how customers may react to the news."
+    }
+  },
+  "bus-forms-business-change": {
+    "title": "Forms of business change",
+    "card": [
+      "Business change is any shift in how a business works. It might alter its products, processes, structure, people or technology.",
+      [
+        "Proactive change",
+        "change made before a problem arises, because managers expect or want something to happen. An example is updating a system before it starts to fail."
+      ],
+      [
+        "Reactive change",
+        "change made in response to a problem or event that has already happened. An example is replacing a system after it has failed."
+      ],
+      "The difference is timing. Proactive change comes before the trouble. Reactive change comes after it. Both are forms of change."
+    ],
+    "remember": "Proactive change acts before a problem. Reactive change responds to one.",
+    "a": {
+      "q": "Which situation is an example of proactive change?",
+      "opts": [
+        "A busy bakery upgrades its ageing oven while it still works",
+        "A bakery buys a new oven once its old one has broken down",
+        "A bakery rewrites its recipes following a wave of complaints",
+        "A bakery cuts its prices as a new rival draws its customers"
+      ],
+      "why": "The oven still works and the bakery is busy, so no problem has arisen yet. The change is proactive. The other three each respond to something that has already gone wrong, a breakdown, complaints or lost customers, so they are reactive.",
+      "clue": "In which case has nothing gone wrong yet?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's gym in Geelong has steady profits. She adds a new app for bookings after a rival's app draws away many members. How is this change best described?",
+      "opts": [
+        "Reactive, because it responds to the rival's app",
+        "Proactive, because the gym's profits are still steady",
+        "Proactive, because it adds new technology to the gym",
+        "Reactive, because it changes how the gym takes bookings"
+      ],
+      "why": "The change follows the rival's app and the loss of members, so it is a response to an event and is reactive. Steady profits do not make it proactive, because timing is judged against the event that prompted the change.",
+      "clue": "Ask what happened first: the change or the loss of members."
+    }
+  },
+  "bus-performance-indicators-kpis": {
+    "title": "Performance indicators (KPIs)",
+    "card": [
+      "A performance indicator, or KPI, measures how well a business is going. It tracks results the business has achieved, which managers compare with a target or with earlier results.",
+      [
+        "Financial and sales",
+        "net profit, sales and market share. Market share is the part of total sales in a market that the business wins."
+      ],
+      [
+        "Operations",
+        "productivity growth and wastage. Productivity is the output made from the inputs used. Wastage is material or stock lost or thrown away."
+      ],
+      [
+        "People and customers",
+        "staff absenteeism, staff turnover, workplace accidents and complaints. Turnover here means the rate at which staff leave and need replacing."
+      ]
+    ],
+    "remember": "A KPI turns how a business is going into a figure that can be checked against a target.",
+    "a": {
+      "q": "Which of these is a performance indicator for a business?",
+      "opts": [
+        "The number of workplace accidents this year",
+        "A new competitor opening in the same street",
+        "A change in the law on workplace safety",
+        "A plan to open a second store next year"
+      ],
+      "why": "The number of workplace accidents is a measured result that managers can compare with a target or last year. A new competitor and a law change are outside events, not measures of the business. A plan is an intention for the future, not a measure of results achieved.",
+      "clue": "Look for a result that has been measured."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs a bakery in Geelong. Her sales and prices are steady, but each month she buys more flour and gets fewer loaves from it. Which KPI should she check first?",
+      "opts": ["Productivity growth", "Market share", "Staff absenteeism", "Sales"],
+      "why": "More flour going in for fewer loaves coming out means output per input has dropped, which productivity growth measures. Sales is the tempting option, but it is steady, so it would not show the problem.",
+      "clue": "Compare what goes in with what comes out."
+    }
+  },
+  "bus-lewin-s-force-field": {
+    "title": "Lewin's force field analysis",
+    "card": [
+      "Kurt Lewin said a business is held in balance by two sets of forces. Driving forces push for change. Restraining forces push against it.",
+      "Change happens when the driving forces outweigh the restraining forces. If the restraining forces are stronger, the business stays as it is.",
+      "Managers list the forces on each side. They weigh each one and rank it by how strong it is, since one strong force can outweigh several weak ones.",
+      "Managers then act, usually by strengthening a driving force or weakening a restraining force, such as training staff to ease their resistance. After that they check the result to see if the change worked."
+    ],
+    "remember": "Change happens when driving forces outweigh restraining forces. Weigh, act, then check.",
+    "a": {
+      "q": "According to Lewin, when does a business change?",
+      "opts": [
+        "When driving forces outweigh restraining forces",
+        "When restraining forces outweigh driving forces",
+        "When driving and restraining forces are removed",
+        "When managers list the forces on each side"
+      ],
+      "why": "Lewin said change happens when the forces pushing for it are stronger than the forces pushing against it. If restraining forces are stronger, the business stays as it is. Listing forces is only a step managers take and does not cause change.",
+      "clue": "Think about which side has to be stronger."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a bakery in Geelong. She has weighed and ranked the forces, and staff resistance to a new ordering system is the strongest force against it. What should she do next?",
+      "opts": [
+        "Weaken staff resistance, such as by training staff",
+        "Drop the system, as the strongest force opposes it",
+        "Follow whichever side has the longer list of forces",
+        "Wait for the driving forces to grow stronger on their own"
+      ],
+      "why": "After weighing and ranking, managers act by strengthening a driving force or weakening a restraining force, so Priya can work to ease staff resistance. Dropping the system is tempting, but a strong restraining force can be weakened rather than accepted. Counting forces misses the point, because strength matters more than number.",
+      "clue": "Managers can change how strong a force is."
+    }
+  },
+  "bus-driving-forces-change": {
+    "title": "Driving forces for change",
+    "card": [
+      "A driving force is a pressure that pushes a business to change. Some come from inside the business and some from outside it.",
+      [
+        "Inside forces",
+        "owners who want a new direction, managers with new plans, employees who suggest better ways to work, and the aim of earning more profit or cutting costs."
+      ],
+      [
+        "Outside forces",
+        "competitors that win customers, new laws, globalisation (the growing links between countries), new technology and changing social attitudes, such as concern for the environment."
+      ],
+      "Innovation, which is turning a new idea into a new product or process, can also push a business to change. Any of these forces can lead to change, but none of them forces it to happen."
+    ],
+    "remember": "Driving forces are pressures from inside or outside a business that can push it to change.",
+    "a": {
+      "q": "Several customers of a Geelong bakery now ask for plant-based food, so the owner adds it to the menu. Which driving force is this?",
+      "opts": ["Changing social attitudes", "A new law", "A competitor's price cut", "Pressure from employees"],
+      "why": "Customers' changing views and tastes are a shift in social attitudes, which is an outside force. The owner is not responding to a law, a rival or staff, so those options are wrong.",
+      "clue": "Who is asking for the change, and what has shifted?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq runs a Ballarat firm that makes bike parts. A rival starts selling similar parts at lower prices, so Tariq buys new machines to cut his costs. Which is the best description of the driving force?",
+      "opts": [
+        "A competitor, an outside force that pushed him to act",
+        "Technology, an inside force that he chose to adopt",
+        "Profit, an outside force that was set by his rival",
+        "Owners, an inside force that the rival created"
+      ],
+      "why": "The rival's lower prices are what pushed Tariq to act, and a competitor is an outside force. The new machines are how he responded, so technology is the change he made, not the pressure behind it.",
+      "clue": "Ask what happened first to make him act, not what he bought."
+    }
+  },
+  "bus-restraining-forces-against-change": {
+    "title": "Restraining forces against change",
+    "card": [
+      "A restraining force is anything that holds a change back or slows it down. A business can face several at once.",
+      [
+        "People",
+        "managers and employees may resist a change. They may fear losing their jobs, dislike new routines or doubt that the change is needed."
+      ],
+      [
+        "Time and inertia",
+        "a lack of time can delay a change when staff are busy with daily work. Organisational inertia is the tendency of a business to keep doing things the way it always has."
+      ],
+      [
+        "Laws and cost",
+        "laws can limit what a business is allowed to do, so a change may need to be altered or dropped. A change can also cost too much in money, training or lost output."
+      ]
+    ],
+    "remember": "Restraining forces are the people, time, habit, legal and money barriers that can slow or block a change.",
+    "a": {
+      "q": "A bakery bought new ovens a year ago. Staff agree they are better and have been trained, yet most batches still go into the old ovens. Which restraining force is most clearly shown?",
+      "opts": [
+        "Organisational inertia",
+        "A legal limit on the change",
+        "A lack of money for the change",
+        "A competitor forcing the change"
+      ],
+      "why": "No one objects, and the ovens are paid for, so the old way carries on simply because it is what the bakery is used to. That is organisational inertia. A competitor would be a force pushing for change, not holding it back.",
+      "clue": "Nobody objects, so what keeps the old method going?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a Geelong clothing chain. She plans a new online ordering system. Staff support it, but the system's price is more than the budget allows. What is the restraining force?",
+      "opts": ["The cost of the change", "Resistance from employees", "Organisational inertia", "A lack of time"],
+      "why": "The only thing holding the change back is that it costs more than the business can afford. Staff support it, so resistance is ruled out. Inertia is also unlikely, because nothing suggests a habit of keeping old methods.",
+      "clue": "Check who supports the change, then find what still blocks it."
+    }
+  },
+  "bus-porter-s-generic-strategies": {
+    "title": "Porter's generic strategies",
+    "card": [
+      "Michael Porter said a business gains a competitive advantage by following one of two main strategies. A competitive advantage is an edge over rivals, such as winning more customers or earning higher profits.",
+      [
+        "Cost leadership",
+        "the business aims to have lower costs than its rivals, so it can charge lower prices or earn a higher profit at the same price. It looks for savings, such as buying in bulk or cutting waste."
+      ],
+      [
+        "Differentiation",
+        "the business offers something different that customers value, such as higher quality, unique design or better service. Customers may pay a higher price for it."
+      ],
+      "In both cases the business is trying to outperform rivals. One does it through low cost. The other does it through being different in a way customers want."
+    ],
+    "remember": "Cost leadership gains an edge through lower cost. Differentiation gains it by being different in a way customers value.",
+    "a": {
+      "q": "Which action best shows a business using a differentiation strategy?",
+      "opts": [
+        "Offering a unique product with features customers value",
+        "Cutting its costs by buying supplies in large amounts",
+        "Lowering its prices to match the cheapest rival",
+        "Reducing waste so each unit costs less to make"
+      ],
+      "why": "Differentiation means being different in a way customers value, and a unique product with valued features does this. Buying in bulk and cutting waste lower costs, which is cost leadership. Matching a rival's low price is about price, not about being different.",
+      "clue": "Which option makes the product stand out, not cost less?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq runs a bakery in Geelong. He buys flour in bulk, uses one simple recipe range and keeps staff numbers low, so his loaves cost less to make than rivals' loaves. Which strategy is he following, and why?",
+      "opts": [
+        "Cost leadership, because he keeps his costs below rivals",
+        "Cost leadership, because he sells bread, a basic product",
+        "Differentiation, because he uses a simple recipe range",
+        "Differentiation, because he buys flour in large amounts"
+      ],
+      "why": "Tariq's actions all lower his cost per loaf, so he is following cost leadership. Selling a basic product is not what makes it cost leadership: the strategy is about having lower costs than rivals. A simple recipe range is a way to cut costs, not a way to be different that customers value, so the differentiation options are wrong.",
+      "clue": "Look at what each action does to the cost of making a loaf."
+    }
+  },
+  "bus-importance-leadership-change": {
+    "title": "The importance of leadership in change",
+    "card": [
+      "Leadership is guiding and influencing people towards a goal. In change, leaders set the direction: they decide what the business is moving towards.",
+      "Leaders explain why the change is needed. When staff understand the reason, such as falling sales or a new competitor, they are more likely to accept it.",
+      "Leaders keep staff on board through the change. They listen to concerns, give support and keep talking with staff until the change is settled.",
+      "Without this leadership, staff may feel unsure or left out. They may then resist the change, which can slow it down or cause it to fail."
+    ],
+    "remember": "Good leaders point the way, give the reason and bring staff along.",
+    "a": {
+      "q": "A manager tells staff that a new ordering system is coming because the old one keeps losing orders. Which leadership role is this?",
+      "opts": [
+        "Explaining why the change is needed",
+        "Setting the direction of the change",
+        "Keeping staff on board by giving support",
+        "Reducing the costs of the change"
+      ],
+      "why": "The manager gives the reason for the change, which is the faulty system. This is different from setting the direction, which would be deciding where the business is heading. It is also not support, because no help or listening is described.",
+      "clue": "What does the word 'because' add to the message?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq owns a bakery in Geelong and is moving it to online orders only. He announces the date and says nothing more. Staff become anxious and some start to resist. Which leadership step was missing?",
+      "opts": [
+        "Explaining why and listening to staff concerns",
+        "Choosing a clear direction for the business",
+        "Setting a date for when the change begins",
+        "Making sure the change is a popular one"
+      ],
+      "why": "Tariq set a direction and a date, but did not give the reason or hear staff concerns. This left staff unsure, so they resisted. Direction was not missing, because online orders only is a clear aim.",
+      "clue": "Tariq already chose where the business is heading."
+    }
+  },
+  "bus-management-strategies-improve-performance": {
+    "title": "Strategies to improve performance",
+    "card": [
+      "Managers use strategies to lift a business's performance, such as sales, profit, quality or productivity. The right choice depends on the problem the business faces.",
+      [
+        "People strategies",
+        "staff training builds skills, staff motivation lifts effort, and a change of management style alters how managers lead and make decisions."
+      ],
+      [
+        "Resource and product strategies",
+        "redeploying resources moves them to better uses. Innovation brings new products or methods. New technology can speed up work or cut errors."
+      ],
+      [
+        "Cost strategies",
+        "cost cutting lowers expenses. Lean production reduces waste, such as extra stock or idle time, while keeping quality."
+      ]
+    ],
+    "remember": "Match the strategy to the problem: people, resources and products, or costs.",
+    "a": {
+      "q": "A bakery bakes far more loaves than it sells each day, and the leftover bread is thrown out each night. Which strategy targets this problem most directly?",
+      "opts": ["Lean production", "Staff motivation", "Innovation", "A change of management style"],
+      "why": "Baking more than it sells leaves extra stock, and lean production aims to cut that kind of excess while keeping quality. Innovation might bring new sales, but it does not stop the bakery from making bread it never sells.",
+      "clue": "Think about what the bakery makes but never sells."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a call centre in Geelong. Staff make many errors because they were never shown how to use the new billing system. Which strategy fits best?",
+      "opts": [
+        "Staff training for the customer service team",
+        "Cost cutting by reducing staff hours",
+        "Innovation by creating a new service",
+        "Redeploying staff to another business area"
+      ],
+      "why": "The errors come from missing skills, so training fixes the cause. Cost cutting might lower expenses, but it does nothing about the skills gap and could make errors worse.",
+      "clue": "What is missing: skills, money or new products?"
+    }
+  },
+  "bus-redeployment-resources": {
+    "title": "Redeployment of resources",
+    "card": [
+      "Redeployment means moving a resource from one use to another inside the same business. The aim is to put it where it adds more value.",
+      [
+        "Natural",
+        "resources taken from the earth, such as land, timber or water. A farm might shift land from a falling crop to a more profitable one."
+      ],
+      [
+        "Labour",
+        "the skills and effort of staff. A retailer might move staff from a shrinking store to its growing online team."
+      ],
+      [
+        "Capital",
+        "made items used to produce, such as machines, vehicles and buildings. A bakery might move an oven from a quiet shop to a busy one."
+      ]
+    ],
+    "remember": "Redeployment keeps resources in the business but moves them to where they add more value.",
+    "a": {
+      "q": "A bank closes a quiet branch and moves its tellers to its busy online help team. What is this an example of?",
+      "opts": [
+        "Redeployment of labour resources",
+        "Redeployment of capital resources",
+        "Redeployment of natural resources",
+        "Cutting costs by reducing staff numbers"
+      ],
+      "why": "Staff are labour, and they stay with the bank but do a new job where more work is needed. Cost cutting is tempting, but nobody has left the business, so this is redeployment.",
+      "clue": "Who is being moved, people or equipment?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam's gym in Ballarat has a storage room it rarely uses. He turns it into a studio for paid spin classes, using bikes it already owns. What has he done?",
+      "opts": [
+        "Redeployed capital resources to a higher value use",
+        "Redeployed natural resources to a higher value use",
+        "Redeployed labour resources to a higher value use",
+        "Bought new capital resources to expand the gym"
+      ],
+      "why": "The room is part of a building and the bikes are made items, so both are capital. They stay in the business and move to a use that earns more. Natural is tempting because the room is space, but a building is made, not taken from the earth.",
+      "clue": "Was the room made by people or taken from the earth?"
+    }
+  },
+  "bus-developing-corporate-culture": {
+    "title": "Developing corporate culture",
+    "card": [
+      "Corporate culture is the shared values, beliefs and ways of behaving in a business. It shapes how staff act when no one is watching, including how they react to change.",
+      [
+        "Shared values",
+        "Managers can state values such as openness to new ideas and use them in hiring, meetings and decisions, so staff know what the business cares about."
+      ],
+      [
+        "Rewards and stories",
+        "Managers can reward staff who suggest or adopt new ways of working. They can retell stories of past changes that went well, which shows others what is valued."
+      ],
+      [
+        "Own example",
+        "Staff watch what managers do. When managers follow the values themselves, such as trying a new system first, staff are more likely to follow."
+      ]
+    ],
+    "remember": "Culture is built by what managers say, reward, retell and do themselves.",
+    "a": {
+      "q": "At each staff meeting, a Ballarat hotel manager recounts how a past switch to online check-in won new guests. Which way of building culture is she using?",
+      "opts": [
+        "Retelling stories of past changes that went well",
+        "Rewarding staff who adopt new ways of working",
+        "Setting an example by trying a new system first",
+        "Using stated values to guide hiring decisions"
+      ],
+      "why": "Recounting a past change that worked is a story, which shows staff what the business values. It is not a reward, because no staff member receives anything for adopting a new method.",
+      "clue": "Is she giving something, doing something, or telling something?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya manages a Geelong bakery chain that has bought new ordering software. She tells staff that learning new methods matters, but she keeps using paper orders herself. Why is her approach unlikely to build a culture that welcomes change?",
+      "opts": [
+        "Her own behaviour does not match the values she states",
+        "She stated a value instead of retelling a past success",
+        "Culture is shaped by systems rather than by managers",
+        "Stating values tends to make staff resist new methods"
+      ],
+      "why": "Staff watch what managers do, so Priya's paper orders send a stronger message than her words. Stories are one way to build culture, but they are not required, and her stated value fails because her own example contradicts it.",
+      "clue": "Compare what Priya says with what she does."
+    }
+  },
+  "bus-senge-s-learning-organisation": {
+    "title": "Senge's learning organisation",
+    "card": [
+      "Peter Senge described a learning organisation as a business that keeps learning and adapts as conditions change. He named five disciplines that help it do this.",
+      [
+        "Systems thinking",
+        "seeing the business as a whole, where each part affects the others. Personal mastery is each person's commitment to keep building their own skills."
+      ],
+      [
+        "Mental models",
+        "the assumptions people hold about how the business and its market work. A learning organisation questions these assumptions instead of taking them for granted."
+      ],
+      [
+        "Shared vision and team learning",
+        "a shared vision is a future that everyone in the business wants to work towards. Team learning is when groups share ideas and learn together, not only as individuals."
+      ]
+    ],
+    "remember": "A learning organisation keeps learning through five disciplines, so it can adapt as conditions change.",
+    "a": {
+      "q": "Managers at a bakery in Geelong ask staff to test their belief that customers only want cheap bread. Which of Senge's disciplines is this?",
+      "opts": ["Mental models", "Systems thinking", "Personal mastery", "Team learning"],
+      "why": "The belief about customers is an assumption about how the market works, so questioning it is mental models. Systems thinking is tempting, but it is about seeing how the parts of the whole business affect each other, not testing an assumption.",
+      "clue": "Which discipline is about assumptions people hold?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam runs a Ballarat building firm. The sales, design and site teams meet to find how a late design change affects costs on site and in the office. Which discipline is mainly at work?",
+      "opts": ["Systems thinking", "Shared vision", "Personal mastery", "Mental models"],
+      "why": "The teams are looking at how one change affects other parts of the whole business, which is systems thinking. Mental models is tempting, but nothing here questions an assumption. The focus is on links between parts.",
+      "clue": "The focus is on how the parts of the business affect each other."
+    }
+  },
+  "bus-overcoming-resistance-with-low": {
+    "title": "Overcoming resistance with low-risk strategies",
+    "card": [
+      "Staff may resist change because they fear losing their job, doubt the reason for it, or dislike new routines. Low-risk strategies try to win staff over and keep their trust.",
+      [
+        "Communication and empowerment",
+        "Communication is explaining what is changing, why and when, and listening to concerns. Empowerment is giving staff a say, such as joining a planning team."
+      ],
+      ["Support", "giving staff training, time and help to learn new ways."],
+      ["Incentives", "rewards, such as a bonus or recognition, for taking part in the change."]
+    ],
+    "remember": "Low-risk strategies work with staff: explain, involve, help and reward.",
+    "a": {
+      "q": "A manager sets up a team of staff from each section to help plan a new ordering system. Which strategy is this?",
+      "opts": [
+        "Empowerment, as staff have a say in the change",
+        "Communication, as staff are told about the change",
+        "Support, as staff are given training for the change",
+        "Incentives, as staff are paid more for the change"
+      ],
+      "why": "Staff are helping to plan the change, so they have a say in it. That is empowerment. Communication would only be telling staff or listening to them, and nothing here says they are paid or trained.",
+      "clue": "Look at what the staff are being asked to do."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya owns a bakery chain in Geelong and is bringing in new ovens. Staff worry they will not cope. She runs hands-on lessons on the ovens and gives staff extra practice time. Which strategy is this?",
+      "opts": [
+        "Support, as it helps staff learn to use the new ovens",
+        "Incentives, as staff are rewarded for using the ovens",
+        "Communication, as staff are told why the ovens changed",
+        "Empowerment, as staff get a say in choosing the ovens"
+      ],
+      "why": "Lessons and practice time help staff learn new ways, which answers their worry about coping. That is support. Empowerment is tempting because staff gain skills, but empowerment means giving staff a say in the change, and here Priya made the choices.",
+      "clue": "Match the strategy to the staff worry."
+    }
+  },
+  "bus-high-risk-strategies-against": {
+    "title": "High-risk strategies against resistance",
+    "card": [
+      "Resistance is when staff push back against a change. Managers may respond with high-risk strategies, which can bring quick compliance but carry serious costs.",
+      [
+        "Manipulation",
+        "managers twist or hide information, or shape the story, to steer staff into accepting the change. Staff are not told the full truth."
+      ],
+      ["Threat", "managers warn of punishment if staff do not go along, such as job loss, fewer hours or a transfer."],
+      "These strategies may force change through fast. They can damage trust and morale, and the business's reputation, and staff may leave or resist more."
+    ],
+    "remember": "High-risk strategies may get fast change, but can cost trust, morale and reputation.",
+    "a": {
+      "q": "A manager tells staff that a new roster will be introduced, and that anyone who objects may lose shifts. Which strategy is this?",
+      "opts": ["Threat", "Manipulation", "Empowerment", "Incentive"],
+      "why": "The manager is warning of punishment if staff object, which is a threat. Manipulation is the tempting wrong answer, but it involves twisting or hiding information, and nothing was hidden here.",
+      "clue": "Look for a warning of punishment."
+    },
+    "b": {
+      "d": 3,
+      "q": "Harbour Print plans to move staff to a new site. The owner hides that jobs will be cut and says the move is only about space. Staff comply, then find out. What is the most likely result?",
+      "opts": [
+        "Lost trust and lower morale among staff",
+        "Staff gain confidence in the owner's honesty",
+        "Staff become more willing to accept future change",
+        "The business's reputation as an employer improves"
+      ],
+      "why": "Hiding the job cuts is manipulation. It may get quick compliance, but when staff find out it can damage trust and morale. Quick compliance does not mean the strategy worked well.",
+      "clue": "Think about how staff feel once they learn the truth."
+    }
+  },
+  "bus-lewin-s-three-step": {
+    "title": "Lewin's three-step change model",
+    "card": [
+      [
+        "Unfreeze",
+        "prepare staff to let go of old ways. Managers explain why change is needed so people see the old way no longer works."
+      ],
+      [
+        "Change",
+        "the new ways are put in place, such as new systems, roles or processes. Staff learn and begin to use them."
+      ],
+      [
+        "Refreeze",
+        "the new ways are made the normal way of working, so they stick. This can be done with policies, training and rewards."
+      ],
+      "The steps happen in that order. Without refreezing, staff may drift back to old habits."
+    ],
+    "remember": "Unfreeze the old, make the change, then refreeze so the new ways stick.",
+    "a": {
+      "q": "Which step is a manager taking when she updates job descriptions and training so a new system becomes standard practice?",
+      "opts": ["Refreeze", "Unfreeze", "Change", "Resistance"],
+      "why": "Making the new way the normal way of working is refreezing. Change is the tempting wrong answer, but that step is when the new system is first put in place and learnt.",
+      "clue": "The new way is already in use. Now it must last."
+    },
+    "b": {
+      "d": 3,
+      "q": "Bayside Dental trains staff in digital booking, and they use it for a month. The manager then moves to another project, the paper diary stays at reception, and by month three staff are back on paper. Which step was weakest?",
+      "opts": ["Refreeze", "Unfreeze", "Change", "Unfreeze and change together"],
+      "why": "Staff were trained and used the system for a month, so the unfreeze and change steps worked. No policy, follow-up or reward made it the normal way of working, so staff drifted back. That is a weak refreeze step.",
+      "clue": "Staff did use the new system for a whole month."
+    }
+  },
+  "bus-effects-change-stakeholders": {
+    "title": "Effects of change on stakeholders",
+    "card": [
+      "A stakeholder is any person or group affected by what a business does. When a business changes, each stakeholder group can be affected in a different way.",
+      [
+        "Managers and employees",
+        "Managers may gain new responsibilities or face more pressure to deliver results. Employees may gain new skills, or face job loss, new tasks or changed hours."
+      ],
+      [
+        "Customers and suppliers",
+        "Customers may get lower prices or better products, or find the service has got worse. Suppliers may win bigger orders, or lose a contract if the business changes what it buys."
+      ],
+      [
+        "Community",
+        "The community can gain local jobs or lose them if a site closes. One change can help one group and harm another at the same time."
+      ]
+    ],
+    "remember": "One change can help some stakeholders and harm others, so managers should weigh each group's effects.",
+    "a": {
+      "q": "A café chain in Ballarat stops buying milk from a local dairy and switches to a cheaper national company. How is the local dairy best described?",
+      "opts": [
+        "A supplier, which loses the chain's orders",
+        "A supplier, which wins bigger orders",
+        "A customer, which pays higher prices",
+        "The community, which gains local jobs"
+      ],
+      "why": "The dairy sold milk to the café chain, so it is a supplier, and the change means it loses that contract. The supplier that wins bigger orders is the national company, not the local dairy.",
+      "clue": "What did the dairy do for the café chain before the change?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's bakery chain in Geelong closes two small shops and opens one large automated bakery. Which pairing of a likely benefit and a likely cost fits this change?",
+      "opts": [
+        "Customers get cheaper bread, some shop staff lose jobs",
+        "Shop staff gain more jobs, customers pay more for bread",
+        "Customers get cheaper bread, managers have fewer duties",
+        "Shop staff gain more hours, customers get worse bread"
+      ],
+      "why": "Automation can cut costs, so customers may pay less, while closing shops can cost staff their jobs. The option about managers is tempting because cheaper bread is right, but running a large new site is more likely to give managers new responsibilities, not fewer.",
+      "clue": "Think about what automation and closing shops do to costs and jobs."
+    }
+  },
+  "bus-corporate-social-responsibility-change": {
+    "title": "Corporate social responsibility in change",
+    "card": [
+      "Corporate social responsibility (CSR) is a business's duty to act ethically and consider the effects of its decisions on people and the environment, not only on profit.",
+      "When a business makes a change, such as closing a site or adopting new technology, CSR asks who is affected and how.",
+      [
+        "Staff",
+        "a socially responsible change treats employees fairly, for example by giving early notice, offering retraining or helping those who lose their jobs."
+      ],
+      [
+        "Community and environment",
+        "the business also considers local people and nature, for example by limiting pollution or waste and by supporting a town that relied on its jobs."
+      ]
+    ],
+    "remember": "A responsible change counts the effects on staff, the community and the environment, as well as profit.",
+    "a": {
+      "q": "Which action shows a business applying CSR when it makes a change?",
+      "opts": [
+        "Retraining staff whose jobs are replaced by new machines",
+        "Choosing the cheapest change, whatever its effects on others",
+        "Telling staff about the change only after it has started",
+        "Making the change only where it lifts profit the most"
+      ],
+      "why": "Retraining staff weighs the effect of the change on the people it affects, not just the cost. Telling staff only after the change has started denies them the early notice that fair treatment needs, and the other two options look at cost or profit alone.",
+      "clue": "Which option cares about the people affected, not only the money?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Harlow Foods in Ballarat plans to move its packing to a cheaper site in another state. Which plan is the most socially responsible?",
+      "opts": [
+        "Give 6 months notice, offer job help, fund town training",
+        "Keep the move secret, pay out staff, fund town training",
+        "Give 2 weeks notice, pay the legal minimum, sell the site",
+        "Give 1 week notice, landfill old machines, close at once"
+      ],
+      "why": "Early notice, job help and town training consider both staff and the community as well as cost. Keeping the move secret is tempting because it still helps the town, but it denies staff early notice, so it does not treat them fairly. The other two plans give little notice, and one also creates waste.",
+      "clue": "Check each plan for fair treatment of staff and care for the town."
+    }
+  },
+  "bus-reviewing-performance-indicators-after": {
+    "title": "Reviewing performance indicators after change",
+    "card": [
+      "A performance indicator is a measure of how a business is doing, such as sales, costs, staff turnover or customer complaints.",
+      "Before a change, managers record the indicators they hope the change will improve. This gives them a starting point to compare against.",
+      "After the change, managers measure the same indicators again and compare the results with the starting point. If the numbers have moved the way the managers wanted, the strategy is likely to have worked.",
+      "If the numbers have not moved as hoped, managers can adjust the change or try a different strategy. Other events, such as a rival's price cut, can also affect results."
+    ],
+    "remember": "Measure the same indicators before and after, then compare to judge the change.",
+    "a": {
+      "q": "Why do managers measure the same indicators after a change that they measured before it?",
+      "opts": [
+        "To compare the results and judge whether the change worked",
+        "To show staff that the change has now been completed",
+        "To choose which indicators to use for the next change",
+        "To prove that the original strategy was the right choice"
+      ],
+      "why": "Using the same indicators lets managers compare the new results with the starting point. Proving the strategy right is tempting, but a review may show it did not work, and managers then adjust it.",
+      "clue": "Think about what a fair comparison needs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Hana owns a bakery in Geelong. She introduces online ordering to reduce customer complaints about long queues. Before the change there were 40 complaints a month. Which review is the best way to judge the change?",
+      "opts": [
+        "Compare next month's complaints with the 40 before",
+        "Compare next month's online orders with last month's sales",
+        "Survey staff and check that 80% like the new system",
+        "Check the system was installed within four weeks"
+      ],
+      "why": "The aim was to cut complaints, and the starting point was 40 a month. Measuring complaints again compares the same indicator before and after. Comparing online orders with sales is tempting, but it uses two different measures and does not show whether complaints fell.",
+      "clue": "Match the review to the indicator Hana set out to improve."
+    }
   }
 };

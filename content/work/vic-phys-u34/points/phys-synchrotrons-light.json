@@ -1,0 +1,247 @@
+{
+ "id": "phys-synchrotrons-light",
+ "title": "Particle accelerators",
+ "brief": "cceb06785735",
+ "shortlist": [
+  [
+   "phys-charges-magnetic-fields",
+   0.451
+  ],
+  [
+   "phys-magnetic-flux",
+   0.343
+  ],
+  [
+   "phys-thomson-electron",
+   0.309
+  ],
+  [
+   "phys-charges-electric-fields",
+   0.296
+  ],
+  [
+   "phys-gravitational-field-strength",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.0073,
+  "check": 0.01478,
+  "fix": 0.03043,
+  "recheck": 0.01354
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point combines accelerating charges with electric fields and bending them with magnetic fields, but the closest bank points cover only the magnetic bending (phys-charges-magnetic-fields) or only the electric field force between plates (phys-charges-electric-fields), so no single point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Particle accelerators",
+  "card": [
+   "A charged particle gains speed when it moves through an electric field. The field does work on it, so its kinetic energy rises by qΔV for a potential difference ΔV.",
+   "A magnetic field cannot speed a particle up. The force F = qvB acts at right angles to the velocity, so it changes the direction of motion and not the speed.",
+   "A synchrotron uses both. Electric fields give the particles energy, and magnetic fields bend them round a circular path so they pass through the electric fields again and again.",
+   "As the particles gain speed, the radius r = mv/(qB) would grow. To keep the radius fixed, the magnetic field strength is increased as the speed rises."
+  ],
+  "remember": "Electric fields speed charges up. Magnetic fields bend their path.",
+  "a": {
+   "q": "In a synchrotron, which part of the machine increases the speed of the particles?",
+   "opts": [
+    "The electric fields",
+    "The magnetic fields",
+    "Both fields equally",
+    "The circular path itself"
+   ],
+   "why": "Only an electric field does work on the charge along its motion, so it raises the speed. The magnetic force is at right angles to the velocity, so it only turns the particles. The circular path comes from the magnetic field.",
+   "clue": "Which force acts at right angles to the motion?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Protons in a synchrotron ring keep gaining speed on a path of fixed radius. What must happen to the magnetic field strength?",
+   "opts": [
+    "It must be increased",
+    "It must be decreased",
+    "It must stay constant",
+    "It must be switched off"
+   ],
+   "why": "The radius is r = mv/(qB). If v rises and r must stay fixed, B must rise in proportion. Keeping B constant would make the protons spiral outwards, which is the tempting error.",
+   "clue": "Rearrange r = mv/(qB) for B with r fixed."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The electric fields",
+   "also_right": []
+  },
+  "b": {
+   "best": "It must be increased",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The second bullet explains F = qvB acting at right angles and changing only direction. That is point 2's idea (charged particles in fields), explained here instead of only mentioned. r = mv/(qB) is also point 2's formula."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Which force acts at right angles to the motion?' points to the magnetic field, which is a wrong option. It only works as an elimination hint, and a student could read it as pointing to the answer and pick 'The magnetic fields'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says B must rise 'in proportion' to v. That holds only at non-relativistic speeds. Protons in real synchrotrons travel close to c, so B rises with momentum (γmv) while v barely changes. The why should say B must rise as the speed (momentum) rises, or note that it assumes low speeds."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. The card re-explains point 2's magnetic force idea, and the clue for (a) points toward the wrong option. Why (b) claims B rises 'in proportion' to v, which is untrue for real near-light-speed synchrotron protons."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The second bullet explains F = qvB acting at right angles and changing only direction. That is point 2's idea (charged particles in fields), explained here instead of only mentioned. r = mv/(qB) is also point 2's formula.",
+  "Question a, wording: The clue 'Which force acts at right angles to the motion?' points to the magnetic field, which is a wrong option. It only works as an elimination hint, and a student could read it as pointing to the answer and pick 'The magnetic fields'.",
+  "Question b, fact: Why (b) says B must rise 'in proportion' to v. That holds only at non-relativistic speeds. Protons in real synchrotrons travel close to c, so B rises with momentum (γmv) while v barely changes. The why should say B must rise as the speed (momentum) rises, or note that it assumes low speeds."
+ ],
+ "proposal": {
+  "title": "Particle accelerators",
+  "card": [
+   "A charged particle gains speed when it moves through an electric field. The field does work on it, so its kinetic energy rises by qΔV for a potential difference ΔV.",
+   "The magnetic fields in an accelerator do not add energy to the particles. Their job is to steer them, bending their path into a curve.",
+   "A synchrotron uses both. Electric fields at points around a ring give the particles energy, and magnets bend them round so they pass through those electric fields again and again.",
+   "A faster particle is harder to bend, so in the same field it would swing out to a wider path. To keep the ring's radius fixed, the magnetic field is made stronger as the particles gain speed."
+  ],
+  "remember": "Electric fields speed charges up. Magnetic fields steer them round the ring.",
+  "a": {
+   "q": "In a synchrotron, which part of the machine increases the speed of the particles?",
+   "opts": [
+    "The electric fields",
+    "The magnetic fields",
+    "Both fields equally",
+    "The circular path itself"
+   ],
+   "why": "The electric fields do work on the charges and add kinetic energy, so they raise the speed. The magnetic fields steer the particles round the ring but add no energy, so they cannot speed them up. The circular path is only the result of that steering.",
+   "clue": "Steering a particle is not the same as speeding it up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Protons in a synchrotron ring keep gaining speed on a path of fixed radius. What happens to the magnetic field strength?",
+   "opts": [
+    "It is increased",
+    "It is decreased",
+    "It stays constant",
+    "It is switched off"
+   ],
+   "why": "A faster proton is harder to bend, so the same field would let it swing out to a wider path. To hold the radius fixed, the field is made stronger as the protons' speed, or more exactly their momentum, rises. Keeping the field constant is the tempting error, but then the protons would drift outwards.",
+   "clue": "Is a faster particle easier or harder to bend?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The electric fields",
+    "also_right": []
+   },
+   "b": {
+    "best": "It is increased",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card is accurate: electric fields add qΔV of kinetic energy, magnetic fields only steer, and the field is raised as momentum grows to hold the radius fixed. Both questions have one clear right answer, and the explanations match the card."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The second bullet explains F = qvB acting at right angles and changing only direction. That is point 2's idea (charged particles in fields), explained here instead of only mentioned. r = mv/(qB) is also point 2's formula."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue 'Which force acts at right angles to the motion?' points to the magnetic field, which is a wrong option. It only works as an elimination hint, and a student could read it as pointing to the answer and pick 'The magnetic fields'."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says B must rise 'in proportion' to v. That holds only at non-relativistic speeds. Protons in real synchrotrons travel close to c, so B rises with momentum (γmv) while v barely changes. The why should say B must rise as the speed (momentum) rises, or note that it assumes low speeds."
+   }
+  ],
+  "flags": [
+   "Card, other: The second bullet explains F = qvB acting at right angles and changing only direction. That is point 2's idea (charged particles in fields), explained here instead of only mentioned. r = mv/(qB) is also point 2's formula.",
+   "Question a, wording: The clue 'Which force acts at right angles to the motion?' points to the magnetic field, which is a wrong option. It only works as an elimination hint, and a student could read it as pointing to the answer and pick 'The magnetic fields'.",
+   "Question b, fact: Why (b) says B must rise 'in proportion' to v. That holds only at non-relativistic speeds. Protons in real synchrotrons travel close to c, so B rises with momentum (γmv) while v barely changes. The why should say B must rise as the speed (momentum) rises, or note that it assumes low speeds."
+  ]
+ },
+ "final": {
+  "title": "Particle accelerators",
+  "card": [
+   "A charged particle gains speed when it moves through an electric field. The field does work on it, so its kinetic energy rises by qΔV for a potential difference ΔV.",
+   "The magnetic fields in an accelerator do not add energy to the particles. Their job is to steer them, bending their path into a curve.",
+   "A synchrotron uses both. Electric fields at points around a ring give the particles energy, and magnets bend them round so they pass through those electric fields again and again.",
+   "A faster particle is harder to bend, so in the same field it would swing out to a wider path. To keep the ring's radius fixed, the magnetic field is made stronger as the particles gain speed."
+  ],
+  "remember": "Electric fields speed charges up. Magnetic fields steer them round the ring.",
+  "a": {
+   "q": "In a synchrotron, which part of the machine increases the speed of the particles?",
+   "opts": [
+    "The electric fields",
+    "The magnetic fields",
+    "Both fields equally",
+    "The circular path itself"
+   ],
+   "why": "The electric fields do work on the charges and add kinetic energy, so they raise the speed. The magnetic fields steer the particles round the ring but add no energy, so they cannot speed them up. The circular path is only the result of that steering.",
+   "clue": "Steering a particle is not the same as speeding it up."
+  },
+  "b": {
+   "d": 3,
+   "q": "Protons in a synchrotron ring keep gaining speed on a path of fixed radius. What happens to the magnetic field strength?",
+   "opts": [
+    "It is increased",
+    "It is decreased",
+    "It stays constant",
+    "It is switched off"
+   ],
+   "why": "A faster proton is harder to bend, so the same field would let it swing out to a wider path. To hold the radius fixed, the field is made stronger as the protons' speed, or more exactly their momentum, rises. Keeping the field constant is the tempting error, but then the protons would drift outwards.",
+   "clue": "Is a faster particle easier or harder to bend?"
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "hhd-australia-s-health-status",
+ "title": "Australia's health status",
+ "brief": "c34a8287f6de",
+ "shortlist": [
+  [
+   "hms-australia-s-health-status",
+   0.54
+  ],
+  [
+   "hms-mental-health-as-priority",
+   0.355
+  ],
+  [
+   "hms-measures-health-status",
+   0.303
+  ],
+  [
+   "hms-chronic-disease-australia",
+   0.29
+  ],
+  [
+   "hms-world-health-organization",
+   0.266
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 may adapt hms-australia-s-health-status, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:01Z confirm: Claude Opus 5.5 may adapt hms-australia-s-health-status, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:20:28Z review: reusing hms-australia-s-health-status"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.01485
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "hms-australia-s-health-status",
+  "changes": [
+   "Add mental health conditions, such as anxiety and depression, alongside heart disease and cancer as leading causes of the burden of disease in Australia.",
+   "Introduce the term burden of disease, which the VCE Health and Human Development study design uses.",
+   "Adjust the wording that says chronic disease causes most deaths and illness, because the brief groups mental health conditions with the leading causes and the card does not classify them as chronic disease."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of Australia's high life expectancy alongside a major burden of disease, but it omits mental health conditions and uses different framing, so it needs small content changes for this course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "hms-australia-s-health-status",
+  "changes": [
+   "Use the VCE term 'burden of disease' when describing what chronic conditions cause, instead of only 'deaths and illness'.",
+   "Change the leading examples to cancers, heart disease (cardiovascular disease) and mental health conditions, matching the brief, rather than heart disease, cancer and diabetes.",
+   "Soften the line that many of these conditions are linked to lifestyle factors such as diet and activity, since mental health conditions do not fit that framing well.",
+   "Update the remember line and the right answer in question a so they refer to the burden of disease led by these conditions."
+  ],
+  "sure": "medium",
+  "reason": "The NSW card teaches the same idea at the same depth, long life expectancy alongside a heavy chronic disease load, but it needs the VCE 'burden of disease' term and the brief's leading conditions, including mental health.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "hms-australia-s-health-status",
+ "matched": {
+  "verdict": "reuse",
+  "from": "hms-australia-s-health-status",
+  "by": "owner",
+  "at": "2026-11-02T06:20:28Z"
+ }
+}

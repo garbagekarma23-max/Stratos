@@ -1,0 +1,251 @@
+{
+ "id": "chem-measurement-quality-unit-4",
+ "title": "Measurement quality in Unit 4",
+ "brief": "76ecddf51fe8",
+ "shortlist": [
+  [
+   "chem-accuracy-precision-validity",
+   0.292
+  ],
+  [
+   "chem-repeatability-reproducibility",
+   0.282
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:24Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00482,
+  "check": 0.01417,
+  "fix": 0.02703,
+  "recheck": 0.01349
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers six ideas, including resolution, which no bank point teaches, and each bank point covers only part of the brief (accuracy, precision and validity in one; repeatability and reproducibility in the other), so neither is the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Measurement quality",
+  "card": [
+   [
+    "Accuracy",
+    "How close a measurement is to the true value. Precision is how close repeated measurements are to each other."
+   ],
+   [
+    "Repeatability",
+    "the same person, using the same method and equipment, gets close results again. Reproducibility is when a different person or lab gets close results."
+   ],
+   [
+    "Resolution",
+    "the smallest change an instrument can show, such as 0.01 g on a balance. A smaller step means a finer resolution."
+   ],
+   [
+    "Validity",
+    "an investigation is valid when it measures what it claims to and controls other variables. Good results can still be invalid if the method tests the wrong thing."
+   ]
+  ],
+  "remember": "Accuracy is closeness to the true value. Precision is closeness of repeats. Validity is whether the method tests the question.",
+  "a": {
+   "q": "Four titration results for a hydrochloric acid sample are 20.12, 20.14, 20.13 and 20.12 mL. The true value is 21.50 mL. How can the results be described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The results are close to each other, so they are precise. They are all well away from 21.50 mL, so they are not accurate. Closeness of repeats does not show closeness to the true value.",
+   "clue": "Compare the results to each other, then to the true value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the enthalpy of combustion of ethanol with a spirit burner and gets close results in three trials. Her teacher, using Priya's method, also gets close results to hers. Which quality does this show?",
+   "opts": [
+    "Reproducibility of the results",
+    "Repeatability of the results",
+    "Accuracy of the results",
+    "Resolution of the thermometer"
+   ],
+   "why": "A different person using the same method gets close results, which is reproducibility. Repeatability is the same person repeating the work, which Priya did in her three trials. Close agreement alone does not show accuracy, because both could be far from the true value.",
+   "clue": "Who obtained the second set of results?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Precise but not accurate",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reproducibility of the results",
+   "also_right": [
+    "Repeatability of the results"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem describes two things: Priya's three close trials, which show repeatability, and her teacher's matching results, which show reproducibility. 'Which quality does this show?' does not say which one is meant, so 'Repeatability of the results' is also defensible. Only the clue points to the teacher. The stem should ask what the teacher's results show."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is ambiguous. Priya's three close trials also show repeatability, so two options can be defended unless the stem asks only about the teacher's results. The card and question a are fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Repeatability of the results” could also be right.",
+  "Question b, wording: The stem describes two things: Priya's three close trials, which show repeatability, and her teacher's matching results, which show reproducibility. 'Which quality does this show?' does not say which one is meant, so 'Repeatability of the results' is also defensible. Only the clue points to the teacher. The stem should ask what the teacher's results show."
+ ],
+ "proposal": {
+  "title": "Measurement quality",
+  "card": [
+   [
+    "Accuracy and precision",
+    "accuracy is how close a measurement is to the true value. Precision is how close repeated measurements are to each other."
+   ],
+   [
+    "Repeatability and reproducibility",
+    "repeatability is when the same person, using the same method and equipment, gets close results again. Reproducibility is when a different person or lab gets close results."
+   ],
+   [
+    "Resolution",
+    "the smallest change an instrument can show, such as 0.01 g on a balance. A smaller step means a finer resolution."
+   ],
+   [
+    "Validity",
+    "an investigation is valid when it measures what it claims to and controls other variables. Good results can still be invalid if the method tests the wrong thing."
+   ]
+  ],
+  "remember": "Close to the true value is accuracy. Close to each other is precision. Same person is repeatable, different person is reproducible.",
+  "a": {
+   "q": "Four titration results for a hydrochloric acid sample are 20.12, 20.14, 20.13 and 20.12 mL. The true value is 21.50 mL. How can the results be described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The results are close to each other, so they are precise. They are all well away from 21.50 mL, so they are not accurate. Closeness of repeats does not show closeness to the true value.",
+   "clue": "Compare the results to each other, then to the true value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the enthalpy of combustion of ethanol with a spirit burner. Her teacher then follows Priya's method and gets results close to hers. What does the teacher's agreement with Priya show?",
+   "opts": [
+    "Reproducibility of the results",
+    "Repeatability of the results",
+    "Accuracy of the results",
+    "Resolution of the thermometer"
+   ],
+   "why": "A different person using the method gets close results, which is reproducibility. Repeatability would need the same person to repeat the work, but here the results come from two people. Close agreement alone does not show accuracy, because both could be far from the true value.",
+   "clue": "Are the two sets of results from the same person?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Precise but not accurate",
+    "also_right": []
+   },
+   "b": {
+    "best": "Reproducibility of the results",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem describes two things: Priya's three close trials, which show repeatability, and her teacher's matching results, which show reproducibility. 'Which quality does this show?' does not say which one is meant, so 'Repeatability of the results' is also defensible. Only the clue points to the teacher. The stem should ask what the teacher's results show."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Repeatability of the results” could also be right.",
+   "Question b, wording: The stem describes two things: Priya's three close trials, which show repeatability, and her teacher's matching results, which show reproducibility. 'Which quality does this show?' does not say which one is meant, so 'Repeatability of the results' is also defensible. Only the clue points to the teacher. The stem should ask what the teacher's results show."
+  ]
+ },
+ "final": {
+  "title": "Measurement quality",
+  "card": [
+   [
+    "Accuracy and precision",
+    "accuracy is how close a measurement is to the true value. Precision is how close repeated measurements are to each other."
+   ],
+   [
+    "Repeatability and reproducibility",
+    "repeatability is when the same person, using the same method and equipment, gets close results again. Reproducibility is when a different person or lab gets close results."
+   ],
+   [
+    "Resolution",
+    "the smallest change an instrument can show, such as 0.01 g on a balance. A smaller step means a finer resolution."
+   ],
+   [
+    "Validity",
+    "an investigation is valid when it measures what it claims to and controls other variables. Good results can still be invalid if the method tests the wrong thing."
+   ]
+  ],
+  "remember": "Close to the true value is accuracy. Close to each other is precision. Same person is repeatable, different person is reproducible.",
+  "a": {
+   "q": "Four titration results for a hydrochloric acid sample are 20.12, 20.14, 20.13 and 20.12 mL. The true value is 21.50 mL. How can the results be described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The results are close to each other, so they are precise. They are all well away from 21.50 mL, so they are not accurate. Closeness of repeats does not show closeness to the true value.",
+   "clue": "Compare the results to each other, then to the true value."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya measures the enthalpy of combustion of ethanol with a spirit burner. Her teacher then follows Priya's method and gets results close to hers. What does the teacher's agreement with Priya show?",
+   "opts": [
+    "Reproducibility of the results",
+    "Repeatability of the results",
+    "Accuracy of the results",
+    "Resolution of the thermometer"
+   ],
+   "why": "A different person using the method gets close results, which is reproducibility. Repeatability would need the same person to repeat the work, but here the results come from two people. Close agreement alone does not show accuracy, because both could be far from the true value.",
+   "clue": "Are the two sets of results from the same person?"
+  }
+ },
+ "cleared_by": "recheck"
+}

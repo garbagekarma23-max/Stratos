@@ -1,0 +1,243 @@
+{
+ "id": "acc-allowance-doubtful-debts",
+ "title": "Allowance for doubtful debts",
+ "brief": "e21177d5b509",
+ "shortlist": [
+  [
+   "eco-government-debt",
+   0.278
+  ],
+  [
+   "acc-returns-bad-debts-discounts",
+   0.223
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.01221,
+  "check": 0.0157,
+  "fix": 0.03063,
+  "recheck": 0.01269
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the end-of-period estimate of doubtful debts recorded as an allowance; the returns, bad debts and discounts card only covers actual write-offs, and the government debt card is unrelated.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Allowance for doubtful debts",
+  "card": [
+   "Some customers who buy on credit will not pay. At the end of the period, the business estimates how much of its accounts receivable will not be collected.",
+   "The estimate is recorded as an expense, called doubtful debts expense. This matches the cost to the period in which the credit sales were made.",
+   "The other side of the entry is a credit to the allowance for doubtful debts. This is a contra asset account, which reduces accounts receivable.",
+   "On the balance sheet, accounts receivable less the allowance shows the amount the business expects to collect. No named customer's account is changed at this stage."
+  ],
+  "remember": "Estimate bad debts at balance date: expense up, receivables down by the allowance.",
+  "a": {
+   "q": "At balance date, Ravi's Hardware in Geelong estimates that $2 000 of its accounts receivable will not be collected. How is this recorded?",
+   "opts": [
+    "Debit expense, credit allowance for doubtful debts",
+    "Debit allowance for doubtful debts, credit receivables",
+    "Debit expense, credit accounts receivable",
+    "Debit accounts receivable, credit expense"
+   ],
+   "why": "The estimate is an expense, so doubtful debts expense is debited. The credit goes to the allowance, which reduces accounts receivable on the balance sheet. Crediting accounts receivable directly is tempting, but no particular customer's debt has been written off yet.",
+   "clue": "The estimate is an expense, and the credit goes to a contra asset."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Bendigo has accounts receivable of $30 000. At balance date it records an allowance for doubtful debts of $1 500. What does the balance sheet report for accounts receivable?",
+   "opts": [
+    "$28 500, the amount expected to be collected",
+    "$30 000, the total owed by customers",
+    "$31 500, the total plus the allowance",
+    "$1 500, the amount of the estimated bad debts"
+   ],
+   "why": "The allowance is deducted from accounts receivable, so the balance sheet shows $30 000 less $1 500, which is $28 500. The $30 000 is tempting because no customer account has been changed, but the allowance still reduces the reported amount.",
+   "clue": "The allowance is a contra asset account."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit expense, credit allowance for doubtful debts",
+   "also_right": []
+  },
+  "b": {
+   "best": "$28 500, the amount expected to be collected",
+   "also_right": [
+    "$30 000, the total owed by customers"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'What does the balance sheet report for accounts receivable?' is ambiguous. A VCE balance sheet shows accounts receivable at $30 000, then deducts the allowance to give $28 500 net. A careful student could defend $30 000. Ask for the net amount, or the amount the business expects to collect."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'Receivables down by the allowance' could suggest accounts receivable itself is credited, which question a treats as the wrong entry. 'Estimate bad debts' also uses the next point's term where the card says doubtful debts. Say the allowance reduces net receivables, and no customer account is changed."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'the credit goes to a contra asset' nearly gives the answer away. Only one option credits the allowance, so a student can match the clue without knowing the entry."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and keyed answers are right. Question b is ambiguous, because a balance sheet shows accounts receivable at $30 000 less the allowance, so $30 000 is also defensible. The remember line's 'receivables down' could suggest crediting accounts receivable directly, and question a's clue nearly gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “$30 000, the total owed by customers” could also be right.",
+  "Question b, wording: 'What does the balance sheet report for accounts receivable?' is ambiguous. A VCE balance sheet shows accounts receivable at $30 000, then deducts the allowance to give $28 500 net. A careful student could defend $30 000. Ask for the net amount, or the amount the business expects to collect.",
+  "Remember, wording: 'Receivables down by the allowance' could suggest accounts receivable itself is credited, which question a treats as the wrong entry. 'Estimate bad debts' also uses the next point's term where the card says doubtful debts. Say the allowance reduces net receivables, and no customer account is changed.",
+  "Question a, other: The clue 'the credit goes to a contra asset' nearly gives the answer away. Only one option credits the allowance, so a student can match the clue without knowing the entry."
+ ],
+ "proposal": {
+  "title": "Allowance for doubtful debts",
+  "card": [
+   "Some customers who buy on credit will not pay. At the end of the period, the business estimates how much of its accounts receivable will not be collected.",
+   "The estimate is recorded as an expense, called doubtful debts expense. This matches the cost to the period in which the credit sales were made.",
+   "The other side of the entry is a credit to the allowance for doubtful debts. This is a contra asset account: it sits against accounts receivable instead of changing it.",
+   "The balance sheet shows accounts receivable in full, then deducts the allowance. The result, net accounts receivable, is the amount expected to be collected. No named customer's account is changed."
+  ],
+  "remember": "Doubtful debts are an expense now. The allowance lowers net receivables, and no customer's account is changed.",
+  "a": {
+   "q": "At balance date, Ravi's Hardware in Geelong estimates that $2 000 of its accounts receivable will not be collected. How is this recorded?",
+   "opts": [
+    "Debit doubtful debts expense, credit allowance",
+    "Debit allowance, credit accounts receivable",
+    "Debit doubtful debts expense, credit accounts receivable",
+    "Debit accounts receivable, credit doubtful debts expense"
+   ],
+   "why": "The estimate is an expense, so doubtful debts expense is debited, and the allowance for doubtful debts is credited. Crediting accounts receivable is tempting, but that would change customers' accounts, and no particular customer's debt has been dealt with yet.",
+   "clue": "Has Ravi worked out which customer will not pay?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Bendigo has accounts receivable of $30 000. At balance date it records an allowance for doubtful debts of $1 500. What net accounts receivable does the balance sheet report?",
+   "opts": [
+    "$28 500, receivables less the allowance",
+    "$30 000, the total owed by customers",
+    "$31 500, receivables plus the allowance",
+    "$1 500, the estimate of doubtful debts"
+   ],
+   "why": "Net accounts receivable is $30 000 less the $1 500 allowance, which is $28 500, the amount Priya expects to collect. The $30 000 is tempting because it does appear on the balance sheet, but it is the gross figure before the allowance is deducted.",
+   "clue": "Net means after the contra account is taken off."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Debit doubtful debts expense, credit allowance",
+    "also_right": []
+   },
+   "b": {
+    "best": "$28 500, receivables less the allowance",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'What does the balance sheet report for accounts receivable?' is ambiguous. A VCE balance sheet shows accounts receivable at $30 000, then deducts the allowance to give $28 500 net. A careful student could defend $30 000. Ask for the net amount, or the amount the business expects to collect."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'Receivables down by the allowance' could suggest accounts receivable itself is credited, which question a treats as the wrong entry. 'Estimate bad debts' also uses the next point's term where the card says doubtful debts. Say the allowance reduces net receivables, and no customer account is changed."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'the credit goes to a contra asset' nearly gives the answer away. Only one option credits the allowance, so a student can match the clue without knowing the entry."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “$30 000, the total owed by customers” could also be right.",
+   "Question b, wording: 'What does the balance sheet report for accounts receivable?' is ambiguous. A VCE balance sheet shows accounts receivable at $30 000, then deducts the allowance to give $28 500 net. A careful student could defend $30 000. Ask for the net amount, or the amount the business expects to collect.",
+   "Remember, wording: 'Receivables down by the allowance' could suggest accounts receivable itself is credited, which question a treats as the wrong entry. 'Estimate bad debts' also uses the next point's term where the card says doubtful debts. Say the allowance reduces net receivables, and no customer account is changed.",
+   "Question a, other: The clue 'the credit goes to a contra asset' nearly gives the answer away. Only one option credits the allowance, so a student can match the clue without knowing the entry."
+  ]
+ },
+ "final": {
+  "title": "Allowance for doubtful debts",
+  "card": [
+   "Some customers who buy on credit will not pay. At the end of the period, the business estimates how much of its accounts receivable will not be collected.",
+   "The estimate is recorded as an expense, called doubtful debts expense. This matches the cost to the period in which the credit sales were made.",
+   "The other side of the entry is a credit to the allowance for doubtful debts. This is a contra asset account: it sits against accounts receivable instead of changing it.",
+   "The balance sheet shows accounts receivable in full, then deducts the allowance. The result, net accounts receivable, is the amount expected to be collected. No named customer's account is changed."
+  ],
+  "remember": "Doubtful debts are an expense now. The allowance lowers net receivables, and no customer's account is changed.",
+  "a": {
+   "q": "At balance date, Ravi's Hardware in Geelong estimates that $2 000 of its accounts receivable will not be collected. How is this recorded?",
+   "opts": [
+    "Debit doubtful debts expense, credit allowance",
+    "Debit allowance, credit accounts receivable",
+    "Debit doubtful debts expense, credit accounts receivable",
+    "Debit accounts receivable, credit doubtful debts expense"
+   ],
+   "why": "The estimate is an expense, so doubtful debts expense is debited, and the allowance for doubtful debts is credited. Crediting accounts receivable is tempting, but that would change customers' accounts, and no particular customer's debt has been dealt with yet.",
+   "clue": "Has Ravi worked out which customer will not pay?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Bendigo has accounts receivable of $30 000. At balance date it records an allowance for doubtful debts of $1 500. What net accounts receivable does the balance sheet report?",
+   "opts": [
+    "$28 500, receivables less the allowance",
+    "$30 000, the total owed by customers",
+    "$31 500, receivables plus the allowance",
+    "$1 500, the estimate of doubtful debts"
+   ],
+   "why": "Net accounts receivable is $30 000 less the $1 500 allowance, which is $28 500, the amount Priya expects to collect. The $30 000 is tempting because it does appear on the balance sheet, but it is the gross figure before the allowance is deducted.",
+   "clue": "Net means after the contra account is taken off."
+  }
+ },
+ "cleared_by": "recheck"
+}

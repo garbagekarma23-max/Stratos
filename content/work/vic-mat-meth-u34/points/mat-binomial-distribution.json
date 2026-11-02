@@ -1,0 +1,106 @@
+{
+ "id": "mat-binomial-distribution",
+ "title": "The binomial distribution",
+ "brief": "8b4dfa979324",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, write",
+  "2026-11-01T14:46:40Z write: failed the content check, writing again",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:29Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "write": 0.02129,
+  "check": 0.00898
+ },
+ "draft": {
+  "title": "The binomial distribution",
+  "card": [
+   "A Bernoulli trial has two outcomes, success or failure. The chance of success is p, and the chance of failure is 1 − p.",
+   "Let X be the number of successes in n trials. X is binomial if n is fixed, the trials are independent and p is the same every time. We write X ~ Bin(n, p).",
+   "The chance of exactly x successes is Pr(X = x) = nCx × p^x × (1 − p)^(n − x). Here nCx counts the ways to place x successes among n trials.",
+   "Example: a fair coin is tossed 3 times and X is the number of heads. X ~ Bin(3, 0.5). Pr(X = 2) = 3 × 0.5² × 0.5 = 0.375."
+  ],
+  "remember": "Fixed n, independent trials, same p each time: count the successes and you have a binomial.",
+  "a": {
+   "q": "A fair coin is tossed 4 times. X is the number of heads. What is Pr(X = 3)?",
+   "opts": [
+    "0.25",
+    "0.0625",
+    "0.5",
+    "0.125"
+   ],
+   "why": "X ~ Bin(4, 0.5), so Pr(X = 3) = 4 × 0.5³ × 0.5 = 4 × 0.0625 = 0.25. The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
+   "clue": "Count the ways to place 3 heads among 4 tosses."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which situation is best modelled by a binomial distribution?",
+   "opts": [
+    "Number of sixes in 10 rolls of a fair die",
+    "Number of rolls of a fair die until the first six",
+    "Number of red cards in 5 cards dealt, no replacing",
+    "Number of rolls of a die until 3 sixes appear"
+   ],
+   "why": "Ten rolls give a fixed n, independent trials and the same p of 1/6 each time. Dealing cards without replacement changes the chance of red after each card, so the trials are not independent and p does not stay the same.",
+   "clue": "Check for a fixed number of trials and a constant p."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.25",
+   "also_right": []
+  },
+  "b": {
+   "best": "Number of sixes in 10 rolls of a fair die",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The binomial distribution",
+  "card": [
+   "A Bernoulli trial has two outcomes, success or failure. The chance of success is p, and the chance of failure is 1 − p.",
+   "Let X be the number of successes in n trials. X is binomial if n is fixed, the trials are independent and p is the same every time. We write X ~ Bin(n, p).",
+   "The chance of exactly x successes is Pr(X = x) = nCx × p^x × (1 − p)^(n − x). Here nCx counts the ways to place x successes among n trials.",
+   "Example: a fair coin is tossed 3 times and X is the number of heads. X ~ Bin(3, 0.5). Pr(X = 2) = 3 × 0.5² × 0.5 = 0.375."
+  ],
+  "remember": "Fixed n, independent trials, same p each time: count the successes and you have a binomial.",
+  "a": {
+   "q": "A fair coin is tossed 4 times. X is the number of heads. What is Pr(X = 3)?",
+   "opts": [
+    "0.25",
+    "0.0625",
+    "0.5",
+    "0.125"
+   ],
+   "why": "X ~ Bin(4, 0.5), so Pr(X = 3) = 4 × 0.5³ × 0.5 = 4 × 0.0625 = 0.25. The option 0.0625 leaves out the factor 4 for the ways to place the 3 heads.",
+   "clue": "Count the ways to place 3 heads among 4 tosses."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which situation is best modelled by a binomial distribution?",
+   "opts": [
+    "Number of sixes in 10 rolls of a fair die",
+    "Number of rolls of a fair die until the first six",
+    "Number of red cards in 5 cards dealt, no replacing",
+    "Number of rolls of a die until 3 sixes appear"
+   ],
+   "why": "Ten rolls give a fixed n, independent trials and the same p of 1/6 each time. Dealing cards without replacement changes the chance of red after each card, so the trials are not independent and p does not stay the same.",
+   "clue": "Check for a fixed number of trials and a constant p."
+  }
+ },
+ "cleared_by": "checker"
+}

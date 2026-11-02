@@ -3,14 +3,15 @@
  "title": "Matrices in context",
  "brief": "16728fea2c4a",
  "shortlist": [],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:34Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:06Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:51Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:22:53Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "write": 2,
@@ -168,6 +169,41 @@
    "Question b: the checker picked “$100”, not the writer’s answer “$110”.",
    "Question b, fact: The why's arithmetic is wrong. Revenue is $220 and cost is 20 × 3 + 30 × 2 = $120, so profit is 220 − 120 = $100, not $110. The intended answer, $110, is incorrect, and the correct answer, $100, appears as a distractor.",
    "Question b, level: The card teaches totalling costs or revenue, but not profit as revenue minus cost. Students must bring in that idea from outside the card, though the clue does hint at it."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Matrices in context",
+  "card": [
+   "A matrix can store data in a table. Each row and each column stands for something, such as a shop and a month. Each element is one value, such as the number of items sold.",
+   "To total costs or revenue, put the quantities in one matrix and the prices in another. Multiply them so each row of the first meets the column of prices.",
+   "Each element of the answer is a sum of quantity × price. The answer has one row for each row of quantities, so each row gives one total, such as one shop's revenue.",
+   "Example: a shop sells 10 hats and 4 scarves. Hats cost $8 and scarves cost $5. Revenue = [10 4] × (column with 8 above 5) = 10 × 8 + 4 × 5 = 80 + 20 = $100."
+  ],
+  "remember": "Quantities times prices, row by column, give one total for each row.",
+  "a": {
+   "q": "Cara sells 6 mugs and 3 plates. Mugs cost $7 each and plates cost $10 each. Her quantities are in a row matrix and the prices in a column matrix. What is the product?",
+   "opts": [
+    "[72]",
+    "[81]",
+    "[26]",
+    "[42]"
+   ],
+   "why": "Multiply each quantity by its own price and add: 6 × 7 + 3 × 10 = 42 + 30 = 72, so the product is [72] dollars. The answer 81 comes from pairing mugs with the plate price, 6 × 10 + 3 × 7, and 42 leaves out the plates.",
+   "clue": "Pair each quantity with its own price, then add."
+  },
+  "b": {
+   "d": 3,
+   "q": "Two shops sell hats and scarves. Their sales matrix has rows [5 2] for Shop A and [3 6] for Shop B. Prices are in the column with $10 above $4. What is each shop's revenue?",
+   "opts": [
+    "Shop A $58, Shop B $54",
+    "Shop A $40, Shop B $72",
+    "Shop A $50, Shop B $30",
+    "Shop A $98, Shop B $126"
+   ],
+   "why": "Each row meets the price column: Shop A is 5 × 10 + 2 × 4 = 50 + 8 = $58, and Shop B is 3 × 10 + 6 × 4 = 30 + 24 = $54. The answer $40 and $72 pairs hats with the scarf price, and $50 and $30 leaves out the scarves.",
+   "clue": "Each shop's row meets the price column. Add both products."
+  }
+ },
+ "cleared_by": "owner"
 }

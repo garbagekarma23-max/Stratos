@@ -1,0 +1,225 @@
+{
+ "id": "acc-budgeted-balance-sheet",
+ "title": "The budgeted balance sheet",
+ "brief": "dc9e2ca9542c",
+ "shortlist": [
+  [
+   "bus-balance-sheet",
+   0.486
+  ],
+  [
+   "acc-assets-liabilities-owner-s",
+   0.36
+  ],
+  [
+   "bus-budgets",
+   0.328
+  ],
+  [
+   "acc-accounting-equation",
+   0.282
+  ],
+  [
+   "bus-unlimited-limited-liability",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00488,
+  "check": 0.01518,
+  "fix": 0.02501,
+  "recheck": 0.01377
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches a forecast balance sheet: the balance sheet card covers only actual positions on one date, and the budgets card covers budgets of income and spending without any balance sheet, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The budgeted balance sheet",
+  "card": [
+   "A budgeted balance sheet estimates the assets, liabilities and owner's equity a business expects to have on one date, the end of the coming period.",
+   "It starts from the closing balances of the last actual balance sheet. The budgeted cash flow statement and budgeted income statement then show the changes to each item.",
+   "Cash comes from the closing balance in the budgeted cash flow statement. Owner's equity is the opening equity, plus budgeted profit and capital contributed, less drawings.",
+   "The accounting equation must still hold: assets = liabilities + owner's equity. If the totals differ, there is an error in the budget."
+  ],
+  "remember": "A budgeted balance sheet is a forecast of the business's position on one future date, and it must balance.",
+  "a": {
+   "q": "What does a budgeted balance sheet estimate?",
+   "opts": [
+    "The assets, liabilities and equity at the end of the period",
+    "The revenue and expenses earned over the coming period",
+    "The cash received and paid out during the coming period",
+    "The difference between budgeted and actual results"
+   ],
+   "why": "A balance sheet shows the position on one date, so the budgeted version estimates the position at the end of the coming period. Revenue and expenses belong to the income statement, and cash receipts and payments belong to the cash flow statement.",
+   "clue": "A balance sheet is a snapshot on one date, not a record over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies has opening equity of $80 000. For the coming year, it budgets a profit of $30 000 and drawings of $12 000, with no new capital. What is the budgeted closing equity?",
+   "opts": [
+    "$98 000",
+    "$110 000",
+    "$62 000",
+    "$92 000"
+   ],
+   "why": "Closing equity = opening equity + profit - drawings = $80 000 + $30 000 - $12 000 = $98 000. Adding the drawings instead of taking them away gives $110 000, but drawings reduce the owner's equity.",
+   "clue": "Profit adds to equity and drawings take away from it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The assets, liabilities and equity at the end of the period",
+   "also_right": []
+  },
+  "b": {
+   "best": "$98 000",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says adding the drawings instead of taking them away gives $110 000. That is wrong: $80 000 + $30 000 + $12 000 = $122 000. The $110 000 distractor comes from ignoring drawings ($80 000 + $30 000), so the explanation misdescribes the mistake."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct. The explanation for (b) gets its arithmetic wrong: $110 000 comes from ignoring drawings, not from adding them, which would give $122 000."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says adding the drawings instead of taking them away gives $110 000. That is wrong: $80 000 + $30 000 + $12 000 = $122 000. The $110 000 distractor comes from ignoring drawings ($80 000 + $30 000), so the explanation misdescribes the mistake."
+ ],
+ "proposal": {
+  "title": "The budgeted balance sheet",
+  "card": [
+   "A budgeted balance sheet estimates the assets, liabilities and owner's equity a business expects to have on one date, the end of the coming period.",
+   "It starts from the closing balances of the last actual balance sheet. The budgeted cash flow statement and budgeted income statement then show the changes to each item.",
+   "Cash comes from the closing balance in the budgeted cash flow statement. Owner's equity is the opening equity, plus budgeted profit and capital contributed, less drawings.",
+   "The accounting equation must still hold: assets = liabilities + owner's equity. If the totals differ, there is an error in the budget."
+  ],
+  "remember": "A budgeted balance sheet is a forecast of the business's position on one future date, and it must balance.",
+  "a": {
+   "q": "What does a budgeted balance sheet estimate?",
+   "opts": [
+    "The assets, liabilities and equity at the end of the period",
+    "The revenue and expenses expected over the coming period",
+    "The cash received and paid out during the coming period",
+    "The difference between budgeted and actual results"
+   ],
+   "why": "A balance sheet shows the position on one date, so the budgeted version estimates the position at the end of the coming period. Revenue and expenses belong to the income statement, and cash receipts and payments belong to the cash flow statement.",
+   "clue": "A balance sheet is a snapshot on one date, not a record over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies has opening equity of $80 000. For the coming year, it budgets a profit of $30 000 and drawings of $12 000, with no new capital. What is the budgeted closing equity?",
+   "opts": [
+    "$98 000",
+    "$110 000",
+    "$62 000",
+    "$92 000"
+   ],
+   "why": "Closing equity = opening equity + profit - drawings = $80 000 + $30 000 - $12 000 = $98 000. The $110 000 option ignores the drawings altogether, but drawings take value out of the business and reduce owner's equity.",
+   "clue": "Profit adds to equity and drawings take away from it."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The assets, liabilities and equity at the end of the period",
+    "also_right": []
+   },
+   "b": {
+    "best": "$98 000",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says adding the drawings instead of taking them away gives $110 000. That is wrong: $80 000 + $30 000 + $12 000 = $122 000. The $110 000 distractor comes from ignoring drawings ($80 000 + $30 000), so the explanation misdescribes the mistake."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says adding the drawings instead of taking them away gives $110 000. That is wrong: $80 000 + $30 000 + $12 000 = $122 000. The $110 000 distractor comes from ignoring drawings ($80 000 + $30 000), so the explanation misdescribes the mistake."
+  ]
+ },
+ "final": {
+  "title": "The budgeted balance sheet",
+  "card": [
+   "A budgeted balance sheet estimates the assets, liabilities and owner's equity a business expects to have on one date, the end of the coming period.",
+   "It starts from the closing balances of the last actual balance sheet. The budgeted cash flow statement and budgeted income statement then show the changes to each item.",
+   "Cash comes from the closing balance in the budgeted cash flow statement. Owner's equity is the opening equity, plus budgeted profit and capital contributed, less drawings.",
+   "The accounting equation must still hold: assets = liabilities + owner's equity. If the totals differ, there is an error in the budget."
+  ],
+  "remember": "A budgeted balance sheet is a forecast of the business's position on one future date, and it must balance.",
+  "a": {
+   "q": "What does a budgeted balance sheet estimate?",
+   "opts": [
+    "The assets, liabilities and equity at the end of the period",
+    "The revenue and expenses expected over the coming period",
+    "The cash received and paid out during the coming period",
+    "The difference between budgeted and actual results"
+   ],
+   "why": "A balance sheet shows the position on one date, so the budgeted version estimates the position at the end of the coming period. Revenue and expenses belong to the income statement, and cash receipts and payments belong to the cash flow statement.",
+   "clue": "A balance sheet is a snapshot on one date, not a record over time."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies has opening equity of $80 000. For the coming year, it budgets a profit of $30 000 and drawings of $12 000, with no new capital. What is the budgeted closing equity?",
+   "opts": [
+    "$98 000",
+    "$110 000",
+    "$62 000",
+    "$92 000"
+   ],
+   "why": "Closing equity = opening equity + profit - drawings = $80 000 + $30 000 - $12 000 = $98 000. The $110 000 option ignores the drawings altogether, but drawings take value out of the business and reduce owner's equity.",
+   "clue": "Profit adds to equity and drawings take away from it."
+  }
+ },
+ "cleared_by": "recheck"
+}

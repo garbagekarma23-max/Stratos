@@ -1,0 +1,282 @@
+{
+ "id": "acc-trial-balance",
+ "title": "The trial balance",
+ "brief": "8716f10c2229",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, write",
+  "2026-11-01T14:46:35Z write: done",
+  "2026-11-01T14:55:56Z check: flagged",
+  "2026-11-01T15:05:23Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01581,
+  "check": 0.02912,
+  "fix": 0.0239,
+  "recheck": 0.01517
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option is the only one with a qualifier ('but some errors may remain'). The three distractors are all flat, absolute claims, so a test-wise student could pick the hedged option without knowing the idea.",
+ "rejected": {
+  "title": "The trial balance",
+  "card": [
+   "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+   "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+   "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+   "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+  ],
+  "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+  "a": {
+   "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What can the accountant conclude?",
+   "opts": [
+    "Debits equal credits, but some errors may remain",
+    "Every account in the ledger has the correct balance",
+    "No transaction has been left out of the ledger",
+    "Each entry was posted to the correct account"
+   ],
+   "why": "Equal totals show only that debits and credits balance. Errors such as a missing transaction or a wrong account can still be present, so the other options claim too much.",
+   "clue": "Equal totals test one thing only."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+   "opts": [
+    "Equal totals, so the error is not detected",
+    "Debits higher than credits by $300",
+    "Credits higher than debits by $300",
+    "Debits higher than credits by $600"
+   ],
+   "why": "The debit and credit were both $300, so the totals still agree. The debit went to the wrong expense account, and a trial balance cannot detect that. A $300 difference would need an error such as a debit posted with no matching credit.",
+   "clue": "Were the debit and credit amounts equal?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option is the only one with a qualifier ('but some errors may remain'). The three distractors are all flat, absolute claims, so a test-wise student could pick the hedged option without knowing the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The trial balance",
+     "card": [
+      "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+      "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+      "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+      "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+     ],
+     "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+     "a": {
+      "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What can the accountant conclude?",
+      "opts": [
+       "Debits equal credits, but some errors may remain",
+       "Every account in the ledger has the correct balance",
+       "No transaction has been left out of the ledger",
+       "Each entry was posted to the correct account"
+      ],
+      "why": "Equal totals show only that debits and credits balance. Errors such as a missing transaction or a wrong account can still be present, so the other options claim too much.",
+      "clue": "Equal totals test one thing only."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+      "opts": [
+       "Equal totals, so the error is not detected",
+       "Debits higher than credits by $300",
+       "Credits higher than debits by $300",
+       "Debits higher than credits by $600"
+      ],
+      "why": "The bookkeeper debited and credited the same amount, so the totals still agree. The debit went to the wrong expense account, and the trial balance cannot show that. It would only show a difference if one side had been recorded alone or with a different amount.",
+      "clue": "Were the debit and credit amounts equal?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Debits equal credits, but some errors may remain",
+      "also_right": []
+     },
+     "b": {
+      "best": "Equal totals, so the error is not detected",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The why says the trial balance would 'only' show a difference if one side was recorded alone or with a different amount. Other errors also unbalance it, such as recording both entries on the debit side, adding a ledger balance wrongly, or putting a balance in the wrong column. The 'only' claims too much."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card and both questions are accurate, and each question has one clear right answer. The only issue is that the why for question b says 'only' and leaves out other errors that unbalance a trial balance, such as two debits or a balance in the wrong column."
+    },
+    "flags": [
+     "Question b, wording: The why says the trial balance would 'only' show a difference if one side was recorded alone or with a different amount. Other errors also unbalance it, such as recording both entries on the debit side, adding a ledger balance wrongly, or putting a balance in the wrong column. The 'only' claims too much."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The trial balance",
+     "card": [
+      "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+      "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+      "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+      "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+     ],
+     "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+     "a": {
+      "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What can the accountant conclude?",
+      "opts": [
+       "Debits equal credits, but some errors may remain",
+       "Every account in the ledger has the correct balance",
+       "No transaction has been left out of the ledger",
+       "Each entry was posted to the correct account"
+      ],
+      "why": "Equal totals show only that debits and credits balance. Errors such as a missing transaction or a wrong account can still be present, so the other options claim too much.",
+      "clue": "Equal totals test one thing only."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+      "opts": [
+       "Equal totals, so the error is not detected",
+       "Debits higher than credits by $300",
+       "Credits higher than debits by $300",
+       "Debits higher than credits by $600"
+      ],
+      "why": "The debit and credit were both $300, so the totals still agree. The debit went to the wrong expense account, and a trial balance cannot detect that. A $300 difference would need an error such as a debit posted with no matching credit.",
+      "clue": "Were the debit and credit amounts equal?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:49Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Debits equal credits, but some errors may remain",
+       "also_right": []
+      },
+      "b": {
+       "best": "Equal totals, so the error is not detected",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option is the only one with a qualifier ('but some errors may remain'). The three distractors are all flat, absolute claims, so a test-wise student could pick the hedged option without knowing the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and both answers are accurate. The one problem is in question a: the right option is the only hedged one ('may remain'), which gives it away against three absolute distractors."
+     },
+     "flags": [
+      "Question a, wording: The right option is the only one with a qualifier ('but some errors may remain'). The three distractors are all flat, absolute claims, so a test-wise student could pick the hedged option without knowing the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "The trial balance",
+  "card": [
+   "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+   "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+   "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+   "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+  ],
+  "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+  "a": {
+   "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What does this show?",
+   "opts": [
+    "The debit and credit totals are equal",
+    "Every account in the ledger has the correct balance",
+    "No transaction has been left out of the ledger",
+    "Each entry was posted to the correct account"
+   ],
+   "why": "Equal totals show only that the debit and credit totals agree. A transaction left out or posted to a wrong account can still be present, so the other options claim more than the trial balance can prove.",
+   "clue": "Equal totals test one thing only."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+   "opts": [
+    "Equal totals, so the error is not detected",
+    "Debits higher than credits by $300",
+    "Credits higher than debits by $300",
+    "Debits higher than credits by $600"
+   ],
+   "why": "The debit and credit were both $300, so the totals still agree. The debit went to the wrong expense account, and a trial balance cannot detect that. A $300 difference would need an error such as a debit posted with no matching credit.",
+   "clue": "Were the debit and credit amounts equal?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The debit and credit totals are equal",
+   "also_right": []
+  },
+  "b": {
+   "best": "Equal totals, so the error is not detected",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The trial balance",
+  "card": [
+   "A trial balance is a list of every ledger account and its balance, taken at one date. Debit balances go in one column and credit balances in the other.",
+   "Each column is added up. If every transaction was recorded with equal debits and credits, the two totals are the same.",
+   "If the totals differ, there is an error to find. Examples are a debit posted with no matching credit, or an amount copied wrongly into one account.",
+   "Equal totals do not prove the books are right. An error can leave debits and credits equal, such as a transaction left out completely, or a debit and credit made to the wrong accounts for the right amount."
+  ],
+  "remember": "A trial balance checks that debits equal credits, but it cannot show that every entry is correct.",
+  "a": {
+   "q": "A trial balance has total debits of $84 500 and total credits of $84 500. What does this show?",
+   "opts": [
+    "The debit and credit totals are equal",
+    "Every account in the ledger has the correct balance",
+    "No transaction has been left out of the ledger",
+    "Each entry was posted to the correct account"
+   ],
+   "why": "Equal totals show only that the debit and credit totals agree. A transaction left out or posted to a wrong account can still be present, so the other options claim more than the trial balance can prove.",
+   "clue": "Equal totals test one thing only."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pet Supplies pays $300 for electricity. The bookkeeper debits Rent Expense $300 and credits Cash at Bank $300. What will the trial balance show?",
+   "opts": [
+    "Equal totals, so the error is not detected",
+    "Debits higher than credits by $300",
+    "Credits higher than debits by $300",
+    "Debits higher than credits by $600"
+   ],
+   "why": "The debit and credit were both $300, so the totals still agree. The debit went to the wrong expense account, and a trial balance cannot detect that. A $300 difference would need an error such as a debit posted with no matching credit.",
+   "clue": "Were the debit and credit amounts equal?"
+  }
+ }
+}

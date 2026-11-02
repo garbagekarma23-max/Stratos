@@ -1,0 +1,236 @@
+{
+ "id": "mat-linear-combinations-random-variables",
+ "title": "Linear combinations of random variables",
+ "brief": "8681d031d2c5",
+ "shortlist": [
+  [
+   "mat-variance-standard-deviation-random",
+   0.526
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00523,
+  "check": 0.01385,
+  "fix": 0.02909,
+  "recheck": 0.01207
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only covers the variance and standard deviation of a single random variable, not the expectation or variance of a linear combination aX + bY or the independence condition, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Linear combinations of random variables",
+  "card": [
+   "A linear combination of X and Y is aX + bY, where a and b are constants. For example, 2X + 3Y or X − Y.",
+   [
+    "Mean",
+    "E(aX + bY) = aE(X) + bE(Y). This holds whether or not X and Y are independent."
+   ],
+   [
+    "Variance",
+    "If X and Y are independent, Var(aX + bY) = a²Var(X) + b²Var(Y). The constants are squared, so a minus sign becomes plus: Var(X − Y) = Var(X) + Var(Y)."
+   ],
+   [
+    "Example",
+    "E(X) = 10, Var(X) = 4, E(Y) = 6, Var(Y) = 9, X and Y independent. Then E(2X − Y) = 20 − 6 = 14 and Var(2X − Y) = 4×4 + 1×9 = 25."
+   ]
+  ],
+  "remember": "Means combine with a and b. For independent variables, variances combine with a² and b².",
+  "a": {
+   "q": "X and Y are independent, with Var(X) = 5 and Var(Y) = 3. What is Var(X − Y)?",
+   "opts": [
+    "8",
+    "2",
+    "−2",
+    "16"
+   ],
+   "why": "For independent variables, Var(X − Y) = (1)²×5 + (−1)²×3 = 8. The tempting answer 2 comes from subtracting the variances, but the constant −1 is squared, so it becomes +1.",
+   "clue": "Square each constant before you use it."
+  },
+  "b": {
+   "d": 3,
+   "q": "X and Y are independent, with E(X) = 4, Var(X) = 2, E(Y) = 5 and Var(Y) = 6. What is Var(3X − 2Y)?",
+   "opts": [
+    "42",
+    "−6",
+    "18",
+    "12"
+   ],
+   "why": "Var(3X − 2Y) = 3²×2 + (−2)²×6 = 18 + 24 = 42. The answer 12 comes from using 3×2 and 2×6 without squaring, and the means are not needed for variance. The answer −6 comes from subtracting and not squaring.",
+   "clue": "Square 3 and −2, then add the two parts."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8",
+   "also_right": []
+  },
+  "b": {
+   "best": "42",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 12 comes from using 3×2 and 2×6 without squaring. That actually gives 6 + 12 = 18, not 12. The explanation does not match its distractor, so 18 goes unexplained and 12 is misattributed."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, example and both answers (8 and 42) are correct. Why (b) wrongly says 12 comes from 3×2 + 2×6 without squaring, but that sum is 18, so the distractor explanation needs fixing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: Why (b) says 12 comes from using 3×2 and 2×6 without squaring. That actually gives 6 + 12 = 18, not 12. The explanation does not match its distractor, so 18 goes unexplained and 12 is misattributed."
+ ],
+ "proposal": {
+  "title": "Linear combinations of random variables",
+  "card": [
+   "A linear combination of X and Y is aX + bY, where a and b are constants. For example, 2X + 3Y or X − Y.",
+   [
+    "Mean",
+    "E(aX + bY) = aE(X) + bE(Y). This holds whether or not X and Y are independent."
+   ],
+   [
+    "Variance",
+    "If X and Y are independent, Var(aX + bY) = a²Var(X) + b²Var(Y). The constants are squared, so a minus sign becomes plus: Var(X − Y) = Var(X) + Var(Y)."
+   ],
+   [
+    "Example",
+    "E(X) = 10, Var(X) = 4, E(Y) = 6, Var(Y) = 9, X and Y independent. Then E(2X − Y) = 20 − 6 = 14 and Var(2X − Y) = 4×4 + 1×9 = 25."
+   ]
+  ],
+  "remember": "Means combine with a and b. For independent variables, variances combine with a² and b².",
+  "a": {
+   "q": "X and Y are independent, with Var(X) = 5 and Var(Y) = 3. What is Var(X − Y)?",
+   "opts": [
+    "8",
+    "2",
+    "−2",
+    "16"
+   ],
+   "why": "For independent variables, Var(X − Y) = (1)²×5 + (−1)²×3 = 8. The tempting answer 2 comes from subtracting the variances, but the constant −1 is squared, so it becomes +1.",
+   "clue": "Square each constant before you use it."
+  },
+  "b": {
+   "d": 3,
+   "q": "X and Y are independent, with E(X) = 4, Var(X) = 2, E(Y) = 5 and Var(Y) = 6. What is Var(3X − 2Y)?",
+   "opts": [
+    "42",
+    "−6",
+    "18",
+    "2"
+   ],
+   "why": "Var(3X − 2Y) = 3²×2 + (−2)²×6 = 18 + 24 = 42. The answer 18 comes from not squaring the constants (3×2 + 2×6), and −6 comes from squaring but then subtracting (18 − 24). The answer 2 is E(3X − 2Y) = 12 − 10, the mean, not the variance.",
+   "clue": "Square 3 and −2, then add the two parts."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "8",
+    "also_right": []
+   },
+   "b": {
+    "best": "42",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card example and both answers (8 and 42) are correct, and the explanations correctly account for each distractor."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "Why (b) says 12 comes from using 3×2 and 2×6 without squaring. That actually gives 6 + 12 = 18, not 12. The explanation does not match its distractor, so 18 goes unexplained and 12 is misattributed."
+   }
+  ],
+  "flags": [
+   "Question b, fact: Why (b) says 12 comes from using 3×2 and 2×6 without squaring. That actually gives 6 + 12 = 18, not 12. The explanation does not match its distractor, so 18 goes unexplained and 12 is misattributed."
+  ]
+ },
+ "final": {
+  "title": "Linear combinations of random variables",
+  "card": [
+   "A linear combination of X and Y is aX + bY, where a and b are constants. For example, 2X + 3Y or X − Y.",
+   [
+    "Mean",
+    "E(aX + bY) = aE(X) + bE(Y). This holds whether or not X and Y are independent."
+   ],
+   [
+    "Variance",
+    "If X and Y are independent, Var(aX + bY) = a²Var(X) + b²Var(Y). The constants are squared, so a minus sign becomes plus: Var(X − Y) = Var(X) + Var(Y)."
+   ],
+   [
+    "Example",
+    "E(X) = 10, Var(X) = 4, E(Y) = 6, Var(Y) = 9, X and Y independent. Then E(2X − Y) = 20 − 6 = 14 and Var(2X − Y) = 4×4 + 1×9 = 25."
+   ]
+  ],
+  "remember": "Means combine with a and b. For independent variables, variances combine with a² and b².",
+  "a": {
+   "q": "X and Y are independent, with Var(X) = 5 and Var(Y) = 3. What is Var(X − Y)?",
+   "opts": [
+    "8",
+    "2",
+    "−2",
+    "16"
+   ],
+   "why": "For independent variables, Var(X − Y) = (1)²×5 + (−1)²×3 = 8. The tempting answer 2 comes from subtracting the variances, but the constant −1 is squared, so it becomes +1.",
+   "clue": "Square each constant before you use it."
+  },
+  "b": {
+   "d": 3,
+   "q": "X and Y are independent, with E(X) = 4, Var(X) = 2, E(Y) = 5 and Var(Y) = 6. What is Var(3X − 2Y)?",
+   "opts": [
+    "42",
+    "−6",
+    "18",
+    "2"
+   ],
+   "why": "Var(3X − 2Y) = 3²×2 + (−2)²×6 = 18 + 24 = 42. The answer 18 comes from not squaring the constants (3×2 + 2×6), and −6 comes from squaring but then subtracting (18 − 24). The answer 2 is E(3X − 2Y) = 12 − 10, the mean, not the variance.",
+   "clue": "Square 3 and −2, then add the two parts."
+  }
+ },
+ "cleared_by": "recheck"
+}

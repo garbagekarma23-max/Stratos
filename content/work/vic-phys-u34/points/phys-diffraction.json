@@ -1,0 +1,261 @@
+{
+ "id": "phys-diffraction",
+ "title": "Diffraction",
+ "brief": "4e15418212aa",
+ "shortlist": [
+  [
+   "phys-matter-waves",
+   0.514
+  ],
+  [
+   "phys-diffraction-gratings",
+   0.3
+  ],
+  [
+   "phys-electromagnetic-spectrum",
+   0.263
+  ],
+  [
+   "phys-maxwell-electromagnetic-waves",
+   0.228
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00438,
+  "check": 0.0188,
+  "fix": 0.03312,
+  "recheck": 0.01228
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches diffraction itself, the spreading of a wave through a gap or around an edge when the gap is close to the wavelength; the diffraction grating point is about multi-slit interference and d sin θ = mλ, and the matter waves point only mentions electron diffraction as evidence for de Broglie wavelengths.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or around the edge of an obstacle. The wave bends into the region behind the barrier.",
+   "The wavelength does not change during diffraction. The wave only spreads out.",
+   "The spreading is greatest when the gap width is close to the wavelength. If the gap is much wider than the wavelength, there is very little spreading.",
+   "If the gap is much narrower than the wavelength, very little wave gets through. What does pass spreads out widely."
+  ],
+  "remember": "A wave spreads most when the gap is close to its wavelength.",
+  "a": {
+   "q": "Water waves pass through a gap in a barrier and spread into the region behind it. What is this effect called?",
+   "opts": [
+    "Diffraction",
+    "Reflection",
+    "Standing wave formation",
+    "Interference"
+   ],
+   "why": "Diffraction is the spreading of a wave through a gap or around an edge. Reflection is different because the wave bounces back from the barrier instead of spreading past it.",
+   "clue": "The wave bends into the region behind the barrier."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sound waves of wavelength 0.50 m reach a doorway in a wall. Which doorway width would make the sound spread out the most?",
+   "opts": [
+    "0.60 m",
+    "0.01 m",
+    "3.0 m",
+    "30 m"
+   ],
+   "why": "Spreading is greatest when the gap is close to the wavelength, and 0.60 m is closest to 0.50 m. The 3.0 m and 30 m gaps are much wider than the wavelength, so there is little spreading. The 0.01 m gap is much narrower, so very little sound gets through.",
+   "clue": "Compare each gap width with the wavelength of 0.50 m."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Diffraction",
+   "also_right": []
+  },
+  "b": {
+   "best": "0.60 m",
+   "also_right": [
+    "0.01 m"
+   ]
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Saying spreading is 'greatest when the gap width is close to the wavelength' is a simplification. The extent of diffraction grows as λ/w increases, and the Study Design frames it through the λ/w ratio. A gap narrower than the wavelength gives the widest spreading (nearly circular wavefronts), just with less energy passing through. The card's last bullet says this itself ('What does pass spreads out widely'), so the card contradicts its own 'greatest' claim."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'A wave spreads most when the gap is close to its wavelength' repeats the misleading claim. Spreading is noticeable when the gap is about the wavelength or smaller, and the widest spreading happens for gaps narrower than the wavelength."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which width makes the sound 'spread out the most'. By the card's own last bullet and by physics, the 0.01 m gap gives the widest spreading, so 0.01 m is defensible. The why dismisses it only because little sound gets through, which answers a different question. Reword the question, for example 'spread out noticeably while still letting most sound through', or fix the card."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) treats 'very little sound gets through' as meaning little spreading. This conflicts with the card, which says the wave that passes a narrow gap spreads widely."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and remember line say spreading is greatest when the gap is close to the wavelength, but spreading actually keeps increasing as the gap narrows, and the card's own last bullet says so. Question b's intended answer (0.60 m) is therefore contestable, because the 0.01 m gap gives the widest spreading. Question a is fine."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “0.01 m” could also be right.",
+  "Card, fact: Saying spreading is 'greatest when the gap width is close to the wavelength' is a simplification. The extent of diffraction grows as λ/w increases, and the Study Design frames it through the λ/w ratio. A gap narrower than the wavelength gives the widest spreading (nearly circular wavefronts), just with less energy passing through. The card's last bullet says this itself ('What does pass spreads out widely'), so the card contradicts its own 'greatest' claim.",
+  "Remember, fact: 'A wave spreads most when the gap is close to its wavelength' repeats the misleading claim. Spreading is noticeable when the gap is about the wavelength or smaller, and the widest spreading happens for gaps narrower than the wavelength.",
+  "Question b, wording: The question asks which width makes the sound 'spread out the most'. By the card's own last bullet and by physics, the 0.01 m gap gives the widest spreading, so 0.01 m is defensible. The why dismisses it only because little sound gets through, which answers a different question. Reword the question, for example 'spread out noticeably while still letting most sound through', or fix the card.",
+  "Question b, other: The why for (b) treats 'very little sound gets through' as meaning little spreading. This conflicts with the card, which says the wave that passes a narrow gap spreads widely."
+ ],
+ "proposal": {
+  "title": "Diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or around the edge of an obstacle. The wave bends into the region behind the barrier.",
+   "The wavelength does not change during diffraction. The wave only spreads out.",
+   "The amount of spreading depends on the ratio λ/w, the wavelength divided by the gap width. The larger this ratio, the more the wave spreads.",
+   "Spreading is small when the gap is much wider than the wavelength. It is noticeable when the gap is about the wavelength or smaller. A gap narrower than the wavelength gives the widest spreading, though less of the wave gets through."
+  ],
+  "remember": "More diffraction comes from a larger λ/w: a longer wavelength or a narrower gap.",
+  "a": {
+   "q": "Water waves pass through a gap in a barrier and spread into the region behind it. What is this effect called?",
+   "opts": [
+    "Diffraction",
+    "Reflection",
+    "Standing wave formation",
+    "Interference"
+   ],
+   "why": "Diffraction is the spreading of a wave through a gap or around an edge. Reflection is different because the wave bounces back from the barrier instead of spreading past it.",
+   "clue": "The wave bends into the region behind the barrier."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a ripple tank, water waves pass through a gap. Which setup makes the waves diffract the most?",
+   "opts": [
+    "Wavelength 2.0 cm, gap width 1.5 cm",
+    "Wavelength 1.0 cm, gap width 1.5 cm",
+    "Wavelength 2.0 cm, gap width 6.0 cm",
+    "Wavelength 1.0 cm, gap width 6.0 cm"
+   ],
+   "why": "The spreading depends on λ/w. The ratios are about 1.3, 0.67, 0.33 and 0.17, so the 2.0 cm waves through the 1.5 cm gap spread the most. The 1.0 cm waves through the same 1.5 cm gap spread less, because their shorter wavelength gives a smaller ratio.",
+   "clue": "Work out the wavelength divided by the gap width for each setup."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Diffraction",
+    "also_right": []
+   },
+   "b": {
+    "best": "Wavelength 2.0 cm, gap width 1.5 cm",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Saying spreading is 'greatest when the gap width is close to the wavelength' is a simplification. The extent of diffraction grows as λ/w increases, and the Study Design frames it through the λ/w ratio. A gap narrower than the wavelength gives the widest spreading (nearly circular wavefronts), just with less energy passing through. The card's last bullet says this itself ('What does pass spreads out widely'), so the card contradicts its own 'greatest' claim."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'A wave spreads most when the gap is close to its wavelength' repeats the misleading claim. Spreading is noticeable when the gap is about the wavelength or smaller, and the widest spreading happens for gaps narrower than the wavelength."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks which width makes the sound 'spread out the most'. By the card's own last bullet and by physics, the 0.01 m gap gives the widest spreading, so 0.01 m is defensible. The why dismisses it only because little sound gets through, which answers a different question. Reword the question, for example 'spread out noticeably while still letting most sound through', or fix the card."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why for (b) treats 'very little sound gets through' as meaning little spreading. This conflicts with the card, which says the wave that passes a narrow gap spreads widely."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “0.01 m” could also be right.",
+   "Card, fact: Saying spreading is 'greatest when the gap width is close to the wavelength' is a simplification. The extent of diffraction grows as λ/w increases, and the Study Design frames it through the λ/w ratio. A gap narrower than the wavelength gives the widest spreading (nearly circular wavefronts), just with less energy passing through. The card's last bullet says this itself ('What does pass spreads out widely'), so the card contradicts its own 'greatest' claim.",
+   "Remember, fact: 'A wave spreads most when the gap is close to its wavelength' repeats the misleading claim. Spreading is noticeable when the gap is about the wavelength or smaller, and the widest spreading happens for gaps narrower than the wavelength.",
+   "Question b, wording: The question asks which width makes the sound 'spread out the most'. By the card's own last bullet and by physics, the 0.01 m gap gives the widest spreading, so 0.01 m is defensible. The why dismisses it only because little sound gets through, which answers a different question. Reword the question, for example 'spread out noticeably while still letting most sound through', or fix the card.",
+   "Question b, other: The why for (b) treats 'very little sound gets through' as meaning little spreading. This conflicts with the card, which says the wave that passes a narrow gap spreads widely."
+  ]
+ },
+ "final": {
+  "title": "Diffraction",
+  "card": [
+   "Diffraction is the spreading of a wave as it passes through a gap or around the edge of an obstacle. The wave bends into the region behind the barrier.",
+   "The wavelength does not change during diffraction. The wave only spreads out.",
+   "The amount of spreading depends on the ratio λ/w, the wavelength divided by the gap width. The larger this ratio, the more the wave spreads.",
+   "Spreading is small when the gap is much wider than the wavelength. It is noticeable when the gap is about the wavelength or smaller. A gap narrower than the wavelength gives the widest spreading, though less of the wave gets through."
+  ],
+  "remember": "More diffraction comes from a larger λ/w: a longer wavelength or a narrower gap.",
+  "a": {
+   "q": "Water waves pass through a gap in a barrier and spread into the region behind it. What is this effect called?",
+   "opts": [
+    "Diffraction",
+    "Reflection",
+    "Standing wave formation",
+    "Interference"
+   ],
+   "why": "Diffraction is the spreading of a wave through a gap or around an edge. Reflection is different because the wave bounces back from the barrier instead of spreading past it.",
+   "clue": "The wave bends into the region behind the barrier."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a ripple tank, water waves pass through a gap. Which setup makes the waves diffract the most?",
+   "opts": [
+    "Wavelength 2.0 cm, gap width 1.5 cm",
+    "Wavelength 1.0 cm, gap width 1.5 cm",
+    "Wavelength 2.0 cm, gap width 6.0 cm",
+    "Wavelength 1.0 cm, gap width 6.0 cm"
+   ],
+   "why": "The spreading depends on λ/w. The ratios are about 1.3, 0.67, 0.33 and 0.17, so the 2.0 cm waves through the 1.5 cm gap spread the most. The 1.0 cm waves through the same 1.5 cm gap spread less, because their shorter wavelength gives a smaller ratio.",
+   "clue": "Work out the wavelength divided by the gap width for each setup."
+  }
+ },
+ "cleared_by": "recheck"
+}

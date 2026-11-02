@@ -1,0 +1,138 @@
+{
+ "id": "chem-rechargeable-cells",
+ "title": "Rechargeable cells",
+ "brief": "bcb6d20c63e7",
+ "shortlist": [
+  [
+   "chem-galvanic-cells",
+   0.321
+  ],
+  [
+   "bio-cell-theory-2",
+   0.314
+  ],
+  [
+   "bio-mitosis",
+   0.295
+  ],
+  [
+   "bio-stem-cells",
+   0.281
+  ],
+  [
+   "bio-eukaryotic-cell-cycle",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: failed the content check, writing again",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01645,
+  "check": 0.0129
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's galvanic cell card covers only cells that produce current, while the new point also needs the charging behaviour, where the same cell runs as an electrolytic cell, and no bank point teaches that.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Rechargeable cells",
+  "card": [
+   "A rechargeable cell works in two modes. When it powers a device, it is a galvanic cell: a spontaneous redox reaction releases electrical energy.",
+   "When it is charged, an external power supply is connected. The cell becomes an electrolytic cell, and the reaction is forced to run in reverse.",
+   "Recharging can work when the products of discharge stay in contact with the electrodes. The reverse reaction can then rebuild the original reactants.",
+   "The positive and negative terminals keep their signs in both modes. During discharge the negative electrode is the anode and the positive electrode is the cathode. During charging these roles swap, because oxidation always happens at the anode and the reaction is reversed."
+  ],
+  "remember": "Discharge is galvanic and spontaneous. Charging is electrolytic and forced by a power supply.",
+  "a": {
+   "q": "A rechargeable cell is connected to a power supply to charge it. How does the cell behave?",
+   "opts": [
+    "Electrolytic cell, and the discharge reaction is reversed",
+    "Galvanic cell, and the discharge reaction is sped up",
+    "Electrolytic cell, and the discharge reaction continues",
+    "Galvanic cell, and the discharge reaction is reversed"
+   ],
+   "why": "Charging uses an external power supply to force the discharge reaction to run backwards, which is the job of an electrolytic cell. A galvanic cell releases energy from a spontaneous reaction, so it cannot describe charging, even if the reaction is reversed.",
+   "clue": "Is the reaction spontaneous when a power supply drives it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya charges a rechargeable battery. At the electrode that is negative during discharge, what type of reaction happens during charging?",
+   "opts": [
+    "Reduction, because it becomes the cathode",
+    "Oxidation, because it stays the anode",
+    "Reduction, because it stays the anode",
+    "Oxidation, because it becomes the cathode"
+   ],
+   "why": "Charging reverses the discharge reaction. Oxidation happened at this electrode during discharge, so reduction happens there during charging, which makes it the cathode. Oxidation always happens at the anode, so the electrode cannot stay the anode and be reduced.",
+   "clue": "Charging runs the discharge reaction backwards."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Electrolytic cell, and the discharge reaction is reversed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reduction, because it becomes the cathode",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Rechargeable cells",
+  "card": [
+   "A rechargeable cell works in two modes. When it powers a device, it is a galvanic cell: a spontaneous redox reaction releases electrical energy.",
+   "When it is charged, an external power supply is connected. The cell becomes an electrolytic cell, and the reaction is forced to run in reverse.",
+   "Recharging can work when the products of discharge stay in contact with the electrodes. The reverse reaction can then rebuild the original reactants.",
+   "The positive and negative terminals keep their signs in both modes. During discharge the negative electrode is the anode and the positive electrode is the cathode. During charging these roles swap, because oxidation always happens at the anode and the reaction is reversed."
+  ],
+  "remember": "Discharge is galvanic and spontaneous. Charging is electrolytic and forced by a power supply.",
+  "a": {
+   "q": "A rechargeable cell is connected to a power supply to charge it. How does the cell behave?",
+   "opts": [
+    "Electrolytic cell, and the discharge reaction is reversed",
+    "Galvanic cell, and the discharge reaction is sped up",
+    "Electrolytic cell, and the discharge reaction continues",
+    "Galvanic cell, and the discharge reaction is reversed"
+   ],
+   "why": "Charging uses an external power supply to force the discharge reaction to run backwards, which is the job of an electrolytic cell. A galvanic cell releases energy from a spontaneous reaction, so it cannot describe charging, even if the reaction is reversed.",
+   "clue": "Is the reaction spontaneous when a power supply drives it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya charges a rechargeable battery. At the electrode that is negative during discharge, what type of reaction happens during charging?",
+   "opts": [
+    "Reduction, because it becomes the cathode",
+    "Oxidation, because it stays the anode",
+    "Reduction, because it stays the anode",
+    "Oxidation, because it becomes the cathode"
+   ],
+   "why": "Charging reverses the discharge reaction. Oxidation happened at this electrode during discharge, so reduction happens there during charging, which makes it the cathode. Oxidation always happens at the anode, so the electrode cannot stay the anode and be reduced.",
+   "clue": "Charging runs the discharge reaction backwards."
+  }
+ },
+ "cleared_by": "checker"
+}

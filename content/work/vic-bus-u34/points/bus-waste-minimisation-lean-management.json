@@ -1,0 +1,236 @@
+{
+ "id": "bus-waste-minimisation-lean-management",
+ "title": "Lean management",
+ "brief": "16271f9dfaa8",
+ "shortlist": [
+  [
+   "bus-operations-management",
+   0.231
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: failed the content check, writing again",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.01233,
+  "check": 0.01323,
+  "fix": 0.02718,
+  "recheck": 0.01033
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only introduces operations management in general terms and does not teach lean management, its tools such as pull production, one-piece flow, takt time and zero defects, or the idea of cutting non-value-adding steps.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Lean management",
+  "card": [
+   "Lean management cuts any step in operations that adds no value for the customer. Waste can be time, materials, movement or stock that sits unused.",
+   [
+    "Pull production",
+    "work starts only when a customer order or demand signals it. Goods are not made in advance on a guess."
+   ],
+   [
+    "One-piece flow",
+    "each item moves through the steps one at a time, not in large batches. Faults show up sooner."
+   ],
+   [
+    "Takt time and zero defects",
+    "takt time is the pace needed to meet demand, so one unit every two minutes means a takt time of two minutes. Zero defects is the goal of getting every item right first time."
+   ]
+  ],
+  "remember": "Lean asks of every step: does it add value for the customer? If not, cut it.",
+  "a": {
+   "q": "Which feature of lean management means a bakery bakes loaves only after orders arrive from its cafe customers?",
+   "opts": [
+    "Pull production",
+    "One-piece flow",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Pull production starts work only when demand signals it, so the bakery does not make loaves on a guess. One-piece flow is about moving items singly through steps, not about when work starts.",
+   "clue": "Think about what triggers the work to begin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's workshop in Ballarat builds bikes. He changes from making frames in batches of 50 to passing each frame to the next step as soon as it is done. A faulty weld is now found within minutes. Which lean feature does this show?",
+   "opts": [
+    "One-piece flow",
+    "Pull production",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Moving each item through the steps singly, not in batches, is one-piece flow, and it shows faults quickly. Zero defects is the goal of no faults, but the change described is how items move, not the goal.",
+   "clue": "Look at how the frames move, not at the goal."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Pull production",
+   "also_right": []
+  },
+  "b": {
+   "best": "One-piece flow",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The takt time example ('one unit every two minutes means a takt time of two minutes') does not show where the pace comes from: available time divided by customer demand. Students could mistake takt time for the rate a line actually produces at (cycle time). A worked example would fix this, such as 240 units demanded in a 480-minute shift giving a takt time of two minutes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clear right answer each (pull production, one-piece flow). The only issue is that the card's takt time example does not link the pace to demand and available time, so students could confuse it with cycle time."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The takt time example ('one unit every two minutes means a takt time of two minutes') does not show where the pace comes from: available time divided by customer demand. Students could mistake takt time for the rate a line actually produces at (cycle time). A worked example would fix this, such as 240 units demanded in a 480-minute shift giving a takt time of two minutes."
+ ],
+ "proposal": {
+  "title": "Lean management",
+  "card": [
+   "Lean management cuts any step in operations that adds no value for the customer, such as waiting, extra movement or unused stock. It aims for zero defects: every item right first time.",
+   [
+    "Pull production",
+    "work starts only when a customer order or demand signals it. Goods are not made in advance on a guess."
+   ],
+   [
+    "One-piece flow",
+    "each item moves through the steps one at a time, not in large batches. Faults show up sooner."
+   ],
+   [
+    "Takt time",
+    "the pace that customer demand sets: available time ÷ units demanded. If 240 units are wanted in a 480-minute shift, takt time is two minutes per unit."
+   ]
+  ],
+  "remember": "Lean asks of every step: does it add value for the customer? If not, cut it.",
+  "a": {
+   "q": "Which feature of lean management means a bakery bakes loaves only after orders arrive from its café customers?",
+   "opts": [
+    "Pull production",
+    "One-piece flow",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Pull production starts work only when demand signals it, so the bakery does not make loaves on a guess. One-piece flow is about moving items singly through steps, not about when work starts.",
+   "clue": "Think about what triggers the work to begin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's workshop in Ballarat builds bikes. He changes from making frames in batches of 50 to passing each frame to the next step as soon as it is done. A faulty weld is now found within minutes. Which lean feature does this show?",
+   "opts": [
+    "One-piece flow",
+    "Pull production",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Moving each item through the steps singly, not in batches, is one-piece flow, and it shows faults quickly. Zero defects is the goal of no faults, but the change described is how items move, not the goal.",
+   "clue": "Look at how the frames move, not at the goal."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Pull production",
+    "also_right": []
+   },
+   "b": {
+    "best": "One-piece flow",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The takt time example ('one unit every two minutes means a takt time of two minutes') does not show where the pace comes from: available time divided by customer demand. Students could mistake takt time for the rate a line actually produces at (cycle time). A worked example would fix this, such as 240 units demanded in a 480-minute shift giving a takt time of two minutes."
+   }
+  ],
+  "flags": [
+   "Card, wording: The takt time example ('one unit every two minutes means a takt time of two minutes') does not show where the pace comes from: available time divided by customer demand. Students could mistake takt time for the rate a line actually produces at (cycle time). A worked example would fix this, such as 240 units demanded in a 480-minute shift giving a takt time of two minutes."
+  ]
+ },
+ "final": {
+  "title": "Lean management",
+  "card": [
+   "Lean management cuts any step in operations that adds no value for the customer, such as waiting, extra movement or unused stock. It aims for zero defects: every item right first time.",
+   [
+    "Pull production",
+    "work starts only when a customer order or demand signals it. Goods are not made in advance on a guess."
+   ],
+   [
+    "One-piece flow",
+    "each item moves through the steps one at a time, not in large batches. Faults show up sooner."
+   ],
+   [
+    "Takt time",
+    "the pace that customer demand sets: available time ÷ units demanded. If 240 units are wanted in a 480-minute shift, takt time is two minutes per unit."
+   ]
+  ],
+  "remember": "Lean asks of every step: does it add value for the customer? If not, cut it.",
+  "a": {
+   "q": "Which feature of lean management means a bakery bakes loaves only after orders arrive from its café customers?",
+   "opts": [
+    "Pull production",
+    "One-piece flow",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Pull production starts work only when demand signals it, so the bakery does not make loaves on a guess. One-piece flow is about moving items singly through steps, not about when work starts.",
+   "clue": "Think about what triggers the work to begin."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's workshop in Ballarat builds bikes. He changes from making frames in batches of 50 to passing each frame to the next step as soon as it is done. A faulty weld is now found within minutes. Which lean feature does this show?",
+   "opts": [
+    "One-piece flow",
+    "Pull production",
+    "Takt time",
+    "Zero defects"
+   ],
+   "why": "Moving each item through the steps singly, not in batches, is one-piece flow, and it shows faults quickly. Zero defects is the goal of no faults, but the change described is how items move, not the goal.",
+   "clue": "Look at how the frames move, not at the goal."
+  }
+ },
+ "cleared_by": "recheck"
+}

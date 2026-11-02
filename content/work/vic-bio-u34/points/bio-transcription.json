@@ -1,0 +1,225 @@
+{
+ "id": "bio-transcription",
+ "title": "Transcription",
+ "brief": "b44601970dbf",
+ "shortlist": [
+  [
+   "bio-making-proteins",
+   0.389
+  ],
+  [
+   "bio-dna-replication",
+   0.28
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.0052,
+  "check": 0.01714,
+  "fix": 0.02537,
+  "recheck": 0.01441
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Making proteins, covers transcription only as one of two stages alongside translation and tRNA, so it is broader than this point and does not mention RNA polymerase, the template strand, or pre-mRNA.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transcription",
+  "card": [
+   "Transcription is the first step in making a protein from a gene. It copies the gene's DNA message into RNA. In eukaryotic cells it happens in the nucleus.",
+   "The enzyme RNA polymerase binds to the start of the gene. It unwinds the DNA and reads one strand, called the template strand.",
+   "RNA polymerase adds RNA nucleotides that pair with the template strand: A pairs with U, T with A, C with G and G with C. This builds a single strand of RNA.",
+   "The new strand is pre-mRNA. Its base sequence matches the other DNA strand, except that it has uracil in place of thymine. The DNA itself is not changed."
+  ],
+  "remember": "RNA polymerase reads the template strand and builds pre-mRNA with matching bases.",
+  "a": {
+   "q": "What does RNA polymerase do during transcription?",
+   "opts": [
+    "Builds pre-mRNA by pairing bases to the template strand",
+    "Joins amino acids together to build a polypeptide",
+    "Copies both DNA strands to make new double-stranded DNA",
+    "Removes the template strand from the nucleus"
+   ],
+   "why": "RNA polymerase adds RNA nucleotides that pair with the template strand, making pre-mRNA. Joining amino acids is a different step, which happens later, and the DNA is not copied or removed.",
+   "clue": "The enzyme's name tells you what it builds."
+  },
+  "b": {
+   "d": 3,
+   "q": "A section of template strand reads TACGGA. Which pre-mRNA sequence is made from it?",
+   "opts": [
+    "AUGCCU",
+    "ATGCCT",
+    "AUGGCU",
+    "UACGGA"
+   ],
+   "why": "Each template base pairs with an RNA base: T with A, A with U, C with G, G with C, G with C, A with U. This gives AUGCCU. ATGCCT is wrong because RNA has uracil, not thymine. UACGGA copies the template instead of pairing with it.",
+   "clue": "Pair each base, and remember RNA has no thymine."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Builds pre-mRNA by pairing bases to the template strand",
+   "also_right": []
+  },
+  "b": {
+   "best": "AUGCCU",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Builds pre-mRNA with matching bases\" is ambiguous. The pre-mRNA pairs with (is complementary to) the template strand and matches the other strand. A student could read \"matching\" as the same bases as the template, which is the UACGGA error."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"the DNA is not copied\", but the card says transcription \"copies the gene's DNA message into RNA\". It should say the DNA is not copied into new DNA."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The remember line's \"matching bases\" is ambiguous about which strand the RNA matches, and why (a) says the DNA is \"not copied\", which clashes with the card's wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"Builds pre-mRNA with matching bases\" is ambiguous. The pre-mRNA pairs with (is complementary to) the template strand and matches the other strand. A student could read \"matching\" as the same bases as the template, which is the UACGGA error.",
+  "Question a, wording: The why says \"the DNA is not copied\", but the card says transcription \"copies the gene's DNA message into RNA\". It should say the DNA is not copied into new DNA."
+ ],
+ "proposal": {
+  "title": "Transcription",
+  "card": [
+   "Transcription is the first step in making a protein from a gene. It copies the gene's DNA message into RNA. In eukaryotic cells it happens in the nucleus.",
+   "The enzyme RNA polymerase binds to the start of the gene. It unwinds the DNA and reads one strand, called the template strand.",
+   "RNA polymerase adds RNA nucleotides that pair with the template strand: A pairs with U, T with A, C with G and G with C. This builds a single strand of RNA.",
+   "The new strand is pre-mRNA. Its base sequence matches the other DNA strand, except that it has uracil in place of thymine. The DNA itself is not changed."
+  ],
+  "remember": "RNA polymerase reads the template strand and builds pre-mRNA whose bases pair with it.",
+  "a": {
+   "q": "What does RNA polymerase do during transcription?",
+   "opts": [
+    "Builds pre-mRNA by pairing bases to the template strand",
+    "Joins amino acids together to build a polypeptide",
+    "Copies both DNA strands to make new double-stranded DNA",
+    "Removes the template strand from the nucleus"
+   ],
+   "why": "RNA polymerase adds RNA nucleotides that pair with the template strand, making pre-mRNA. Joining amino acids is a different step, which happens later. The DNA is not copied into new DNA, and it is not removed from the nucleus.",
+   "clue": "The enzyme's name tells you what it builds."
+  },
+  "b": {
+   "d": 3,
+   "q": "A section of template strand reads TACGGA. Which pre-mRNA sequence is made from it?",
+   "opts": [
+    "AUGCCU",
+    "ATGCCT",
+    "AUGGCU",
+    "UACGGA"
+   ],
+   "why": "Each template base pairs with an RNA base: T with A, A with U, C with G, G with C, G with C, A with U. This gives AUGCCU. ATGCCT is wrong because RNA has uracil, not thymine. UACGGA copies the template instead of pairing with it.",
+   "clue": "Pair each base, and remember RNA has no thymine."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Builds pre-mRNA by pairing bases to the template strand",
+    "also_right": []
+   },
+   "b": {
+    "best": "AUGCCU",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Builds pre-mRNA with matching bases\" is ambiguous. The pre-mRNA pairs with (is complementary to) the template strand and matches the other strand. A student could read \"matching\" as the same bases as the template, which is the UACGGA error."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says \"the DNA is not copied\", but the card says transcription \"copies the gene's DNA message into RNA\". It should say the DNA is not copied into new DNA."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"Builds pre-mRNA with matching bases\" is ambiguous. The pre-mRNA pairs with (is complementary to) the template strand and matches the other strand. A student could read \"matching\" as the same bases as the template, which is the UACGGA error.",
+   "Question a, wording: The why says \"the DNA is not copied\", but the card says transcription \"copies the gene's DNA message into RNA\". It should say the DNA is not copied into new DNA."
+  ]
+ },
+ "final": {
+  "title": "Transcription",
+  "card": [
+   "Transcription is the first step in making a protein from a gene. It copies the gene's DNA message into RNA. In eukaryotic cells it happens in the nucleus.",
+   "The enzyme RNA polymerase binds to the start of the gene. It unwinds the DNA and reads one strand, called the template strand.",
+   "RNA polymerase adds RNA nucleotides that pair with the template strand: A pairs with U, T with A, C with G and G with C. This builds a single strand of RNA.",
+   "The new strand is pre-mRNA. Its base sequence matches the other DNA strand, except that it has uracil in place of thymine. The DNA itself is not changed."
+  ],
+  "remember": "RNA polymerase reads the template strand and builds pre-mRNA whose bases pair with it.",
+  "a": {
+   "q": "What does RNA polymerase do during transcription?",
+   "opts": [
+    "Builds pre-mRNA by pairing bases to the template strand",
+    "Joins amino acids together to build a polypeptide",
+    "Copies both DNA strands to make new double-stranded DNA",
+    "Removes the template strand from the nucleus"
+   ],
+   "why": "RNA polymerase adds RNA nucleotides that pair with the template strand, making pre-mRNA. Joining amino acids is a different step, which happens later. The DNA is not copied into new DNA, and it is not removed from the nucleus.",
+   "clue": "The enzyme's name tells you what it builds."
+  },
+  "b": {
+   "d": 3,
+   "q": "A section of template strand reads TACGGA. Which pre-mRNA sequence is made from it?",
+   "opts": [
+    "AUGCCU",
+    "ATGCCT",
+    "AUGGCU",
+    "UACGGA"
+   ],
+   "why": "Each template base pairs with an RNA base: T with A, A with U, C with G, G with C, G with C, A with U. This gives AUGCCU. ATGCCT is wrong because RNA has uracil, not thymine. UACGGA copies the template instead of pairing with it.",
+   "clue": "Pair each base, and remember RNA has no thymine."
+  }
+ },
+ "cleared_by": "recheck"
+}

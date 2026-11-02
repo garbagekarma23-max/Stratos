@@ -1,0 +1,262 @@
+{
+ "id": "eco-factors-moving-exchange-rate",
+ "title": "Factors moving the exchange rate",
+ "brief": "a6c7df80d5cd",
+ "shortlist": [
+  [
+   "eco-floating-fixed-exchange-rates",
+   0.398
+  ],
+  [
+   "bus-exchange-rates-international-business",
+   0.385
+  ],
+  [
+   "eco-vulnerability-terms-trade",
+   0.361
+  ],
+  [
+   "eco-monetary-policy-works",
+   0.36
+  ],
+  [
+   "eco-australian-dollar-set",
+   0.339
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:45Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00709,
+  "check": 0.02008,
+  "fix": 0.03014,
+  "recheck": 0.01331
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point teaches the full set of factors that shift demand for the Australian dollar; the closest points cover only one or two of them (commodity prices, interest rates, or the basic supply-and-demand mechanism), so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Factors moving the exchange rate",
+  "card": [
+   "The Australian dollar is priced by demand and supply in the foreign exchange market. Anything that raises demand for the dollar, or cuts its supply, tends to push it up. Anything that does the opposite pushes it down.",
+   [
+    "Interest rates",
+    "If Australian interest rates rise relative to those overseas, foreign investors want more Australian assets. They must buy dollars to do so, so demand for the dollar rises."
+   ],
+   [
+    "Exports and commodities",
+    "Higher world prices for Australian commodities, or stronger overseas demand for our exports, mean buyers need more dollars. Demand for the dollar rises. Stronger demand for imports means Australians sell dollars to buy foreign currency, so the dollar tends to fall."
+   ],
+   [
+    "Inflation and investment",
+    "Higher inflation in Australia than in partner countries makes our goods dearer, which cuts export demand and tends to lower the dollar. More foreign investment in Australia raises demand for the dollar."
+   ]
+  ],
+  "remember": "Anything that makes foreigners want more Australian dollars lifts the exchange rate. Anything that makes Australians sell more dollars lowers it.",
+  "a": {
+   "q": "The Reserve Bank raises interest rates while rates in other major economies stay the same. What is the likely effect on the Australian dollar?",
+   "opts": [
+    "Demand for it rises, so the dollar tends to appreciate",
+    "Demand for it falls, so the dollar tends to depreciate",
+    "Supply of it falls, so the dollar tends to depreciate",
+    "Nothing changes, as interest rates affect only borrowing"
+   ],
+   "why": "Higher Australian rates make Australian assets more attractive to foreign investors. They buy dollars to invest, so demand rises and the dollar tends to appreciate. The depreciation options reverse the cause and effect.",
+   "clue": "Who needs to buy dollars when Australian returns look better?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Iron ore prices fall sharply, and overseas buyers order less from Perth miners. At the same time, Australian inflation runs above that of its trading partners. What is the likely effect on the dollar?",
+   "opts": [
+    "It tends to fall, as both changes cut demand for it",
+    "It tends to rise, as lower prices make exports cheaper",
+    "It tends to rise, as higher inflation lifts demand for it",
+    "It stays steady, as the two changes cancel each other out"
+   ],
+   "why": "Lower commodity prices and weaker export orders mean buyers need fewer dollars. Higher relative inflation makes Australian goods dearer, which also cuts export demand. Both push the dollar down, so they do not cancel out.",
+   "clue": "Check which way each change moves demand for dollars."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Demand for it rises, so the dollar tends to appreciate",
+   "also_right": []
+  },
+  "b": {
+   "best": "It tends to fall, as both changes cut demand for it",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line splits the factors more neatly than the card does: foreigners buying dollars push it up, Australians selling dollars push it down. That misses cases the card teaches, such as higher Australian inflation, where foreigners want fewer dollars rather than Australians selling more. It also drops the card's 'tends to'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the depreciation options 'reverse the cause and effect'. That is not accurate. One gets the direction of demand wrong, and the other pairs a fall in supply with depreciation when a fall in supply would push the dollar up."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, with one clear answer each. The remember line sorts the factors more neatly than the card and leaves out cases like relative inflation, and why (a) describes the wrong options inaccurately."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line splits the factors more neatly than the card does: foreigners buying dollars push it up, Australians selling dollars push it down. That misses cases the card teaches, such as higher Australian inflation, where foreigners want fewer dollars rather than Australians selling more. It also drops the card's 'tends to'.",
+  "Question a, other: The why says the depreciation options 'reverse the cause and effect'. That is not accurate. One gets the direction of demand wrong, and the other pairs a fall in supply with depreciation when a fall in supply would push the dollar up."
+ ],
+ "proposal": {
+  "title": "Factors moving the exchange rate",
+  "card": [
+   "The Australian dollar is priced by demand and supply in the foreign exchange market. Anything that raises demand for the dollar, or cuts its supply, tends to push it up. Anything that does the opposite tends to push it down.",
+   [
+    "Interest rates",
+    "If Australian interest rates rise relative to those overseas, foreign investors want more Australian assets. They must buy dollars to do so, so demand for the dollar rises."
+   ],
+   [
+    "Exports and commodities",
+    "Higher world prices for Australian commodities, or stronger overseas demand for our exports, mean buyers need more dollars. Demand for the dollar rises. Stronger demand for imports means Australians sell dollars to buy foreign currency, so the dollar tends to fall."
+   ],
+   [
+    "Inflation and investment",
+    "Higher inflation in Australia than in partner countries makes our goods dearer, which cuts export demand and tends to lower the dollar. More foreign investment in Australia raises demand for the dollar."
+   ]
+  ],
+  "remember": "Higher relative interest rates, commodity prices, export demand and foreign investment tend to lift the dollar. More import demand and higher relative inflation tend to lower it.",
+  "a": {
+   "q": "The Reserve Bank raises interest rates while rates in other major economies stay the same. What is the likely effect on the Australian dollar?",
+   "opts": [
+    "Demand for it rises, so the dollar tends to appreciate",
+    "Demand for it falls, so the dollar tends to depreciate",
+    "Supply of it falls, so the dollar tends to depreciate",
+    "Nothing changes, as interest rates affect only borrowing"
+   ],
+   "why": "Higher Australian rates make Australian assets more attractive, so foreign investors buy dollars and the dollar tends to appreciate. The option saying demand falls gets the direction of demand wrong. A fall in supply would push the dollar up, not down, so the supply option pairs the wrong movement with depreciation.",
+   "clue": "Who needs to buy dollars when Australian returns look better?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Iron ore prices fall sharply, and overseas buyers order less from Perth miners. At the same time, Australian inflation runs above that of its trading partners. What is the likely effect on the dollar?",
+   "opts": [
+    "It tends to fall, as both changes cut demand for it",
+    "It tends to rise, as lower prices make exports cheaper",
+    "It tends to rise, as higher inflation lifts demand for it",
+    "It stays steady, as the two changes cancel each other out"
+   ],
+   "why": "Lower commodity prices and weaker export orders mean buyers need fewer dollars. Higher relative inflation makes Australian goods dearer, which also cuts export demand. Both push the dollar down, so they do not cancel out.",
+   "clue": "Check which way each change moves demand for dollars."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Demand for it rises, so the dollar tends to appreciate",
+    "also_right": []
+   },
+   "b": {
+    "best": "It tends to fall, as both changes cut demand for it",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line splits the factors more neatly than the card does: foreigners buying dollars push it up, Australians selling dollars push it down. That misses cases the card teaches, such as higher Australian inflation, where foreigners want fewer dollars rather than Australians selling more. It also drops the card's 'tends to'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says the depreciation options 'reverse the cause and effect'. That is not accurate. One gets the direction of demand wrong, and the other pairs a fall in supply with depreciation when a fall in supply would push the dollar up."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line splits the factors more neatly than the card does: foreigners buying dollars push it up, Australians selling dollars push it down. That misses cases the card teaches, such as higher Australian inflation, where foreigners want fewer dollars rather than Australians selling more. It also drops the card's 'tends to'.",
+   "Question a, other: The why says the depreciation options 'reverse the cause and effect'. That is not accurate. One gets the direction of demand wrong, and the other pairs a fall in supply with depreciation when a fall in supply would push the dollar up."
+  ]
+ },
+ "final": {
+  "title": "Factors moving the exchange rate",
+  "card": [
+   "The Australian dollar is priced by demand and supply in the foreign exchange market. Anything that raises demand for the dollar, or cuts its supply, tends to push it up. Anything that does the opposite tends to push it down.",
+   [
+    "Interest rates",
+    "If Australian interest rates rise relative to those overseas, foreign investors want more Australian assets. They must buy dollars to do so, so demand for the dollar rises."
+   ],
+   [
+    "Exports and commodities",
+    "Higher world prices for Australian commodities, or stronger overseas demand for our exports, mean buyers need more dollars. Demand for the dollar rises. Stronger demand for imports means Australians sell dollars to buy foreign currency, so the dollar tends to fall."
+   ],
+   [
+    "Inflation and investment",
+    "Higher inflation in Australia than in partner countries makes our goods dearer, which cuts export demand and tends to lower the dollar. More foreign investment in Australia raises demand for the dollar."
+   ]
+  ],
+  "remember": "Higher relative interest rates, commodity prices, export demand and foreign investment tend to lift the dollar. More import demand and higher relative inflation tend to lower it.",
+  "a": {
+   "q": "The Reserve Bank raises interest rates while rates in other major economies stay the same. What is the likely effect on the Australian dollar?",
+   "opts": [
+    "Demand for it rises, so the dollar tends to appreciate",
+    "Demand for it falls, so the dollar tends to depreciate",
+    "Supply of it falls, so the dollar tends to depreciate",
+    "Nothing changes, as interest rates affect only borrowing"
+   ],
+   "why": "Higher Australian rates make Australian assets more attractive, so foreign investors buy dollars and the dollar tends to appreciate. The option saying demand falls gets the direction of demand wrong. A fall in supply would push the dollar up, not down, so the supply option pairs the wrong movement with depreciation.",
+   "clue": "Who needs to buy dollars when Australian returns look better?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Iron ore prices fall sharply, and overseas buyers order less from Perth miners. At the same time, Australian inflation runs above that of its trading partners. What is the likely effect on the dollar?",
+   "opts": [
+    "It tends to fall, as both changes cut demand for it",
+    "It tends to rise, as lower prices make exports cheaper",
+    "It tends to rise, as higher inflation lifts demand for it",
+    "It stays steady, as the two changes cancel each other out"
+   ],
+   "why": "Lower commodity prices and weaker export orders mean buyers need fewer dollars. Higher relative inflation makes Australian goods dearer, which also cuts export demand. Both push the dollar down, so they do not cancel out.",
+   "clue": "Check which way each change moves demand for dollars."
+  }
+ },
+ "cleared_by": "recheck"
+}

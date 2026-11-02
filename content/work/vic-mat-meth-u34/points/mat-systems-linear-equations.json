@@ -1,0 +1,246 @@
+{
+ "id": "mat-systems-linear-equations",
+ "title": "Systems of linear equations",
+ "brief": "b0e3e7eb68db",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations",
+   0.579
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.519
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.374
+  ],
+  [
+   "mat-solving-linear-equations",
+   0.307
+  ],
+  [
+   "mat-linear-models",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.0053,
+  "check": 0.01653,
+  "fix": 0.03181,
+  "recheck": 0.01456
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank points only teach finding the single point where two lines cross, and none covers systems with no solution or infinitely many solutions, or how a parameter decides which case applies, so the new point is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Systems of linear equations",
+  "card": [
+   "A system of two linear equations in x and y is a pair of straight lines. A solution is a point that lies on both lines.",
+   [
+    "One solution",
+    "the lines cross at a single point, because their gradients are different."
+   ],
+   [
+    "None",
+    "the lines are parallel and never meet. The gradients are equal but the y-intercepts differ, such as y = 2x + 1 and y = 2x + 5."
+   ],
+   [
+    "Infinitely many",
+    "both equations describe the same line, so every point on it is a solution. With a parameter k, find the value of k that makes the gradients equal, then compare the y-intercepts. Example: kx + y = 3 and 2x + y = 5. Gradients are −k and −2, so k = 2 gives parallel lines. The intercepts 3 and 5 differ, so there is no solution when k = 2."
+   ]
+  ],
+  "remember": "Different gradients give one solution. Equal gradients give none or infinitely many, depending on the intercepts.",
+  "a": {
+   "q": "Which pair of equations has no solution?",
+   "opts": [
+    "y = 3x + 2 and y = 3x − 4",
+    "y = 3x + 2 and y = −3x + 2",
+    "y = 3x + 2 and 2y = 6x + 4",
+    "y = 3x + 2 and y = 2x + 3"
+   ],
+   "why": "Both lines have gradient 3 but different y-intercepts, so they are parallel and never meet. The pair with 2y = 6x + 4 is the same line as y = 3x + 2, so it has infinitely many solutions, not none.",
+   "clue": "Rewrite each pair as y = mx + c and compare m, then c."
+  },
+  "b": {
+   "d": 3,
+   "q": "For the system 3x + ky = 6 and x + 2y = 4, which value of k gives no solution?",
+   "opts": [
+    "k = 6",
+    "k = 3",
+    "k = 2/3",
+    "k = −6"
+   ],
+   "why": "Parallel lines need equal gradients: −3/k = −1/2, so k = 6. Then 3x + 6y = 6 is x + 2y = 2, which differs from x + 2y = 4, so the lines never meet. For k = 6 the right side being 4 and not 2 is what rules out infinitely many solutions.",
+   "clue": "Make the gradients equal, then check the intercepts differ."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "y = 3x + 2 and y = 3x − 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "k = 6",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The parameter method and the k example sit inside the 'Infinitely many' bullet, but the example ends in no solution. A student could link the example to the wrong case. The method also deserves its own bullet."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct, with one clear answer each. The only issue is that the card places its parameter example, which shows no solution, under the 'Infinitely many' bullet, which could confuse students."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The parameter method and the k example sit inside the 'Infinitely many' bullet, but the example ends in no solution. A student could link the example to the wrong case. The method also deserves its own bullet."
+ ],
+ "proposal": {
+  "title": "Systems of linear equations",
+  "card": [
+   "A system of two linear equations in x and y is a pair of straight lines. A solution is a point on both lines, so if the gradients differ, the lines cross at exactly one point.",
+   [
+    "No solution",
+    "the lines are parallel and never meet. The gradients are equal but the y-intercepts differ, such as y = 2x + 1 and y = 2x + 5."
+   ],
+   [
+    "Infinitely many",
+    "both equations describe the same line, so every point on it is a solution. For example, 2y = 4x + 2 is the same line as y = 2x + 1."
+   ],
+   "With a parameter k, find the k that makes the gradients equal, then compare the y-intercepts. For kx + y = 3 and 2x + y = 5, the gradients are −k and −2, so k = 2. The intercepts 3 and 5 differ, so k = 2 gives no solution."
+  ],
+  "remember": "Different gradients give one solution. Equal gradients give none or infinitely many, depending on the intercepts.",
+  "a": {
+   "q": "Which pair of equations has no solution?",
+   "opts": [
+    "y = 3x + 2 and y = 3x − 4",
+    "y = 3x + 2 and y = −3x + 2",
+    "y = 3x + 2 and 2y = 6x + 4",
+    "y = 3x + 2 and y = 2x + 3"
+   ],
+   "why": "Both lines have gradient 3 but different y-intercepts, so they are parallel and never meet. The pair with 2y = 6x + 4 is the same line as y = 3x + 2, so it has infinitely many solutions, not none.",
+   "clue": "Rewrite each pair as y = mx + c and compare m, then c."
+  },
+  "b": {
+   "d": 3,
+   "q": "For the system 3x + ky = 6 and x + 2y = 4, which value of k gives no solution?",
+   "opts": [
+    "k = 6",
+    "k = 3",
+    "k = 2/3",
+    "k = −6"
+   ],
+   "why": "Parallel lines need equal gradients: −3/k = −1/2, so k = 6. Then 3x + 6y = 6 becomes x + 2y = 2, which has a different intercept from x + 2y = 4, so the lines never meet. The other values of k give different gradients, so those lines cross once.",
+   "clue": "Make the gradients equal, then check the intercepts differ."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "y = 3x + 2 and y = 3x − 4",
+    "also_right": []
+   },
+   "b": {
+    "best": "k = 6",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: parallel lines y = 3x + 2 and y = 3x − 4 for (a), and k = 6 for (b), which gives x + 2y = 2 against x + 2y = 4."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The parameter method and the k example sit inside the 'Infinitely many' bullet, but the example ends in no solution. A student could link the example to the wrong case. The method also deserves its own bullet."
+   }
+  ],
+  "flags": [
+   "Card, wording: The parameter method and the k example sit inside the 'Infinitely many' bullet, but the example ends in no solution. A student could link the example to the wrong case. The method also deserves its own bullet."
+  ]
+ },
+ "final": {
+  "title": "Systems of linear equations",
+  "card": [
+   "A system of two linear equations in x and y is a pair of straight lines. A solution is a point on both lines, so if the gradients differ, the lines cross at exactly one point.",
+   [
+    "No solution",
+    "the lines are parallel and never meet. The gradients are equal but the y-intercepts differ, such as y = 2x + 1 and y = 2x + 5."
+   ],
+   [
+    "Infinitely many",
+    "both equations describe the same line, so every point on it is a solution. For example, 2y = 4x + 2 is the same line as y = 2x + 1."
+   ],
+   "With a parameter k, find the k that makes the gradients equal, then compare the y-intercepts. For kx + y = 3 and 2x + y = 5, the gradients are −k and −2, so k = 2. The intercepts 3 and 5 differ, so k = 2 gives no solution."
+  ],
+  "remember": "Different gradients give one solution. Equal gradients give none or infinitely many, depending on the intercepts.",
+  "a": {
+   "q": "Which pair of equations has no solution?",
+   "opts": [
+    "y = 3x + 2 and y = 3x − 4",
+    "y = 3x + 2 and y = −3x + 2",
+    "y = 3x + 2 and 2y = 6x + 4",
+    "y = 3x + 2 and y = 2x + 3"
+   ],
+   "why": "Both lines have gradient 3 but different y-intercepts, so they are parallel and never meet. The pair with 2y = 6x + 4 is the same line as y = 3x + 2, so it has infinitely many solutions, not none.",
+   "clue": "Rewrite each pair as y = mx + c and compare m, then c."
+  },
+  "b": {
+   "d": 3,
+   "q": "For the system 3x + ky = 6 and x + 2y = 4, which value of k gives no solution?",
+   "opts": [
+    "k = 6",
+    "k = 3",
+    "k = 2/3",
+    "k = −6"
+   ],
+   "why": "Parallel lines need equal gradients: −3/k = −1/2, so k = 6. Then 3x + 6y = 6 becomes x + 2y = 2, which has a different intercept from x + 2y = 4, so the lines never meet. The other values of k give different gradients, so those lines cross once.",
+   "clue": "Make the gradients equal, then check the intercepts differ."
+  }
+ },
+ "cleared_by": "recheck"
+}

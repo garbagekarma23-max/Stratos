@@ -76,15 +76,50 @@ MADE_COURSES.push({
             "bus-global-factors"
           ]
         },
-        {"id": "vic-bus-u12-1-6", "title": "The operating environment", "check": "checked", "points": []}
+        {
+          "id": "vic-bus-u12-1-6",
+          "title": "The operating environment",
+          "check": "checked",
+          "points": [
+            "bus-customers-suppliers-competitors",
+            "bus-customers",
+            "bus-competitors",
+            "bus-suppliers-supply-chain",
+            "bus-special-interest-groups",
+            "bus-corporate-social-responsibility"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Establishing a business",
       "chapters": [
-        {"id": "vic-bus-u12-2-1", "title": "Legal requirements", "check": "checked", "points": []},
+        {
+          "id": "vic-bus-u12-2-1",
+          "title": "Legal requirements",
+          "check": "checked",
+          "points": [
+            "bus-registering-business",
+            "leg-australian-consumer-law",
+            "bus-taxation-business",
+            "bus-worksafe-insurance",
+            "bus-external-professionals"
+          ]
+        },
         {"id": "vic-bus-u12-2-2-2", "title": "Setting up systems", "check": "checked", "points": []},
-        {"id": "vic-bus-u12-2-2", "title": "Building a customer base", "check": "checked", "points": []},
+        {
+          "id": "vic-bus-u12-2-2",
+          "title": "Building a customer base",
+          "check": "checked",
+          "points": [
+            "bus-marketing-business-objectives",
+            "bus-market-research-practices",
+            "bus-target-market",
+            "bus-branding",
+            "bus-marketing-mix",
+            "bus-product-life-cycle"
+          ]
+        },
         {
           "id": "vic-bus-u12-2-4",
           "title": "Customer relations and public relations",
@@ -96,7 +131,19 @@ MADE_COURSES.push({
             "bus-social-responsibility-marketing"
           ]
         },
-        {"id": "vic-bus-u12-2-3", "title": "Staffing a business", "check": "checked", "points": []},
+        {
+          "id": "vic-bus-u12-2-3",
+          "title": "Staffing a business",
+          "check": "checked",
+          "points": [
+            "bus-staff-business-objectives",
+            "bus-staffing-needs",
+            "bus-job-analysis",
+            "bus-recruitment-2",
+            "bus-selection",
+            "bus-induction"
+          ]
+        },
         {
           "id": "vic-bus-u12-2-6",
           "title": "Employment rules and expectations",

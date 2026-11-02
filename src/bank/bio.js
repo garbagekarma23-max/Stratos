@@ -3662,5 +3662,1584 @@ MADE_BANKS.bio = {
       "why": "Leaving out results to change the picture is dishonest reporting, which breaks integrity. Beneficence is the tempting option, but the main fault is not about the aim of doing good. It is about being truthful with data.",
       "clue": "Focus on what was done with the results, not the vaccine itself."
     }
+  },
+  "bio-enzymes-that-manipulate-dna": {
+    "title": "Enzymes that manipulate DNA",
+    "card": [
+      [
+        "Endonuclease",
+        "cuts DNA by breaking the bonds in the sugar-phosphate backbone. A restriction endonuclease cuts at a specific base sequence."
+      ],
+      [
+        "Ligase",
+        "joins DNA pieces together by forming bonds in the sugar-phosphate backbone. It seals the gap between two fragments."
+      ],
+      ["Polymerase", "builds a new DNA strand by adding nucleotides, using an existing strand as a template."],
+      "Cutting, joining and building are three different jobs. Together these enzymes let scientists cut out a piece of DNA, join it to other DNA and make copies."
+    ],
+    "remember": "Endonucleases cut, ligases join and polymerases build.",
+    "a": {
+      "q": "Two DNA fragments have been cut from different sources. Which enzyme is used to join them into one molecule?",
+      "opts": ["DNA ligase", "DNA polymerase", "A restriction endonuclease", "A DNA template"],
+      "why": "Ligase forms bonds in the sugar-phosphate backbone, which seals fragments together. Polymerase is tempting, but it adds new nucleotides to build a strand rather than joining two existing pieces.",
+      "clue": "Which enzyme seals gaps in the backbone?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A technician in Geelong mixes a long DNA sample with an enzyme. Tests show the DNA is now in several shorter pieces. What did the enzyme do?",
+      "opts": [
+        "It cut the DNA by breaking backbone bonds",
+        "It joined the DNA by forming backbone bonds",
+        "It built new strands from free nucleotides",
+        "It added nucleotides using a template strand"
+      ],
+      "why": "One long molecule became several shorter ones, so bonds in the backbone were broken. That is the job of an endonuclease. Forming backbone bonds is tempting because it also involves the backbone, but that is ligase, which would join pieces into longer DNA.",
+      "clue": "Did the DNA get longer or shorter?"
+    }
+  },
+  "bio-crispr-cas9": {
+    "title": "CRISPR-Cas9",
+    "card": [
+      "Bacteria use CRISPR as a defence against viruses. They store short pieces of viral DNA and use them to recognise and cut that virus if it returns.",
+      [
+        "Guide RNA",
+        "a short RNA made to match the target DNA sequence. It pairs with the target and leads Cas9 to the chosen place."
+      ],
+      ["Cas9", "an enzyme that cuts both strands of DNA at the place the guide RNA has found."],
+      "Scientists change the guide RNA to aim Cas9 at a chosen gene. The cell then repairs the cut, which can disable the gene or let a new sequence be added."
+    ],
+    "remember": "Guide RNA finds the place. Cas9 makes the cut.",
+    "a": {
+      "q": "In CRISPR-Cas9 gene editing, what is the job of the guide RNA?",
+      "opts": [
+        "It leads Cas9 to the matching target DNA sequence",
+        "It cuts both strands of DNA at the target",
+        "It repairs the DNA after the cut is made",
+        "It copies the target gene into new cells"
+      ],
+      "why": "The guide RNA has a sequence that pairs with the target DNA, so it leads Cas9 to the right place. Cas9 is the enzyme that cuts, so the guide RNA does not do the cutting.",
+      "clue": "Which part matches the target sequence?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A team wants Cas9 to cut a different gene in a mouse cell, using the same Cas9 enzyme. What must they change?",
+      "opts": [
+        "The sequence of the guide RNA",
+        "The type of enzyme that cuts the DNA",
+        "The bacterial virus that supplies Cas9",
+        "The number of DNA strands the cut goes through"
+      ],
+      "why": "The guide RNA decides where Cas9 cuts, so a new target needs a new guide RNA that matches it. Cas9 can stay the same because it cuts wherever it is led.",
+      "clue": "Which part decides the place of the cut?"
+    }
+  },
+  "bio-polymerase-chain-reaction": {
+    "title": "The polymerase chain reaction",
+    "card": [
+      "PCR makes millions of copies of a chosen section of DNA from a very small sample. It is done in a machine that repeats a cycle of three steps.",
+      [
+        "Denaturing",
+        "the mixture is heated to about 95 °C. The hydrogen bonds between the two strands break, so the DNA becomes single strands."
+      ],
+      [
+        "Annealing",
+        "the mixture is cooled. Short primers bind to the single strands at the start of the target section."
+      ],
+      [
+        "Extending",
+        "the mixture is warmed to about 72 °C. A heat-stable DNA polymerase adds nucleotides to each primer and builds new strands. Each cycle doubles the number of copies."
+      ]
+    ],
+    "remember": "Heat to separate, cool to attach primers, warm to build. Each cycle doubles the DNA.",
+    "a": {
+      "q": "What happens to the DNA in the denaturing step of PCR?",
+      "opts": [
+        "The two strands separate as hydrogen bonds break",
+        "Primers attach to the start of the target section",
+        "Polymerase adds nucleotides to build new strands",
+        "The DNA is cut into fragments of different sizes"
+      ],
+      "why": "Heating breaks the hydrogen bonds between the strands, leaving single strands. Primers attach in the annealing step, and building new strands is the extending step.",
+      "clue": "Think about what high heat does to the bonds between strands."
+    },
+    "b": {
+      "d": 3,
+      "q": "A forensic lab starts a PCR with one copy of a target section. Assuming every cycle works fully, about how many copies exist after 5 cycles?",
+      "opts": ["32", "10", "25", "64"],
+      "why": "Each cycle doubles the number of copies, so 5 cycles gives 2 × 2 × 2 × 2 × 2 = 32. Adding 5 copies per cycle would give a much smaller number, because copying is doubling, not adding.",
+      "clue": "Each cycle doubles the amount."
+    }
+  },
+  "bio-gel-electrophoresis": {
+    "title": "Gel electrophoresis",
+    "card": [
+      "DNA fragments are loaded into wells at one end of a gel. An electric field is then applied across the gel.",
+      "DNA is negatively charged because of its phosphate groups, so the fragments move toward the positive electrode.",
+      "The gel slows large fragments more than small ones. Small fragments travel further, so the fragments end up sorted by size.",
+      "The fragments show as bands. Comparing the band patterns of different samples is used in DNA profiling, such as matching crime scene DNA to a suspect."
+    ],
+    "remember": "Negative DNA runs to the positive end. Smaller fragments go further.",
+    "a": {
+      "q": "After electrophoresis, which DNA fragment will be closest to the positive electrode?",
+      "opts": [
+        "The smallest fragment",
+        "The largest fragment",
+        "The fragment that was loaded first",
+        "The fragment with the most bands"
+      ],
+      "why": "The gel slows large fragments more, so the smallest fragment travels furthest toward the positive electrode. The order of loading does not decide how far a fragment moves.",
+      "clue": "Which fragments move through the gel most easily?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A detective compares DNA bands from a crime scene with bands from two suspects. How can the gel show that one suspect's DNA matches?",
+      "opts": [
+        "That suspect's bands line up with the scene's bands",
+        "That suspect's bands sit nearest the wells",
+        "That suspect has more bands than the scene sample",
+        "That suspect's bands are darker than the others"
+      ],
+      "why": "Matching fragment sizes travel the same distance, so the bands line up. Position in the gel shows size, so being near the wells or having more bands does not show a match.",
+      "clue": "Same size fragments travel the same distance."
+    }
+  },
+  "bio-recombinant-plasmids": {
+    "title": "Recombinant plasmids",
+    "card": [
+      "A plasmid is a small, circular piece of DNA in bacteria, separate from the main chromosome. Scientists use plasmids as vectors, which carry a gene into a host cell.",
+      "The gene and the plasmid are cut with the same restriction enzyme, so their ends match. DNA ligase joins the gene into the plasmid. The result is a recombinant plasmid.",
+      "Plasmids are put into bacteria by transformation, which is the uptake of DNA by a cell. Only some cells take up a plasmid, and some plasmids close up again without the gene.",
+      "Plasmids often carry an antibiotic resistance gene as a marker, so only bacteria with a plasmid survive on that antibiotic. Of these, the ones whose plasmid holds the inserted gene can make the protein it codes for."
+    ],
+    "remember": "Cut the gene and plasmid to match, join them, transform bacteria, then select the bacteria that took up a plasmid.",
+    "a": {
+      "q": "Why are the gene and the plasmid cut with the same restriction enzyme?",
+      "opts": [
+        "So that their cut ends match and can be joined",
+        "So that the plasmid can copy itself inside bacteria",
+        "So that the bacteria can take up the DNA faster",
+        "So that the gene can be switched on in the plasmid"
+      ],
+      "why": "The same enzyme leaves matching ends on the gene and the plasmid, so ligase can join them. The enzyme does not make the plasmid copy itself or help bacteria take up DNA. Transformation is a separate step.",
+      "clue": "Think about what ligase needs to join two pieces."
+    },
+    "b": {
+      "d": 3,
+      "q": "Dr Nguyen inserts a human gene into plasmids that carry an antibiotic resistance gene. She adds the plasmids to bacteria, then spreads the bacteria on agar containing that antibiotic. Why do only some bacteria grow?",
+      "opts": [
+        "Only those that took up a plasmid are resistant",
+        "Only those that made the human protein are resistant",
+        "Only those with a cut chromosome are resistant",
+        "Only those that were not transformed are resistant"
+      ],
+      "why": "The resistance gene is on the plasmid, so bacteria that took it up can survive the antibiotic. The plasmid in a surviving cell may be recombinant or not, but resistance comes from having the plasmid. Making the human protein is not what protects the cell.",
+      "clue": "Where is the resistance gene found?"
+    }
+  },
+  "bio-genetically-modified-transgenic-organisms": {
+    "title": "GMOs and transgenic organisms",
+    "card": [
+      [
+        "GMO",
+        "a genetically modified organism. Its DNA has been altered by scientists, for example by adding, removing or changing a gene."
+      ],
+      [
+        "Transgenic organism",
+        "an organism that carries a gene from another species. The added gene is called a transgene."
+      ],
+      "All transgenic organisms are GMOs, because adding a gene alters their DNA. Not every GMO is transgenic: a gene can be changed or switched off without adding DNA from another species.",
+      "An example is a crop given a gene from a bacterium that makes a protein harmful to pest insects. The crop is then resistant to those pests."
+    ],
+    "remember": "A GMO has altered DNA. A transgenic organism also carries a gene from another species.",
+    "a": {
+      "q": "Which statement correctly links the terms GMO and transgenic organism?",
+      "opts": [
+        "Every transgenic organism is a GMO",
+        "Every GMO is a transgenic organism",
+        "They mean exactly the same thing",
+        "Transgenic organisms have unaltered DNA"
+      ],
+      "why": "Adding a gene from another species alters the DNA, so a transgenic organism is always a GMO. The reverse is not true, because a GMO can have its own gene changed or removed without any foreign gene.",
+      "clue": "Does adding a foreign gene alter the DNA?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Scientists in Queensland switch off one of a tomato plant's own genes. No DNA from another species is added. How is the plant best described?",
+      "opts": [
+        "A GMO but not transgenic",
+        "Transgenic but not a GMO",
+        "Both a GMO and transgenic",
+        "Neither a GMO nor transgenic"
+      ],
+      "why": "The plant's DNA was altered, so it is a GMO. No gene from another species was added, so it is not transgenic. Calling it transgenic is tempting, but that needs a foreign gene.",
+      "clue": "Was a gene from another species added?"
+    }
+  },
+  "bio-enzymes-as-catalysts": {
+    "title": "Enzymes as catalysts",
+    "card": [
+      "Enzymes are proteins that speed up chemical reactions in cells. They are catalysts, so they are not used up and can work again and again.",
+      "Every reaction needs a push to get started, called the activation energy. An enzyme lowers the activation energy, so the reaction happens faster at body temperature.",
+      "The substrate is the molecule an enzyme acts on. It binds to the active site, a small region of the enzyme with a particular shape and chemistry.",
+      "In the induced fit model, the active site changes shape slightly as the substrate binds, so it grips the substrate more closely. The enzyme then releases the products."
+    ],
+    "remember": "Enzymes speed up reactions by lowering activation energy, and each binds its own substrate at its active site.",
+    "a": {
+      "q": "How does an enzyme make a reaction in a cell go faster?",
+      "opts": [
+        "It lowers the activation energy of the reaction",
+        "It raises the energy of the substrate molecules",
+        "It is used up as it supplies energy to the reaction",
+        "It changes the products into different molecules"
+      ],
+      "why": "A catalyst works by lowering the activation energy, so more collisions lead to a reaction. The enzyme is not used up, so the option saying it is consumed is wrong.",
+      "clue": "Think about the push needed to start a reaction."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq studies an enzyme that breaks down a sugar. When the sugar binds, the active site shifts slightly and closes around it. Which statement best fits this observation?",
+      "opts": [
+        "It fits the induced fit model, as the active site adjusts",
+        "It shows the enzyme is used up as the sugar binds",
+        "It shows the active site is a rigid shape that never changes",
+        "It shows the enzyme raises the activation energy"
+      ],
+      "why": "In the induced fit model, the active site changes shape as the substrate binds. A rigid, unchanging active site would contradict what Tariq saw. Enzymes lower activation energy and are not used up.",
+      "clue": "Look at what the active site does when the sugar binds."
+    }
+  },
+  "bio-factors-affecting-enzymes": {
+    "title": "Factors affecting enzymes",
+    "card": [
+      "Temperature changes the rate of an enzyme reaction. As it rises towards the optimum, particles collide more often and with more energy, so the rate rises.",
+      "Above the optimum temperature, the enzyme's shape starts to change. The active site no longer fits the substrate, and the enzyme is denatured. Denaturation is usually permanent.",
+      "pH also affects the shape of the active site. Each enzyme has an optimum pH. Away from it, the rate falls, and an extreme pH can denature the enzyme.",
+      "More substrate raises the rate until all active sites are busy, then the rate levels off. More enzyme raises the rate if there is enough substrate to use it."
+    ],
+    "remember": "Rate rises towards the optimum, then falls once shape is lost. Concentration raises the rate until something runs out.",
+    "a": {
+      "q": "A student heats an enzyme solution well above its optimum temperature, then cools it back to the optimum. Why does the reaction stay slow?",
+      "opts": [
+        "The enzyme was denatured, so the active site no longer fits",
+        "The substrate was used up while the solution was hot",
+        "The cooling made particles collide less often than before",
+        "The enzyme was made smaller, so it binds less substrate"
+      ],
+      "why": "High temperature changed the enzyme's shape, and denaturation is usually permanent. Cooling does not restore the active site. Fewer collisions at lower temperature would only slow the rate, not keep it low at the optimum.",
+      "clue": "Think about what happens to the active site's shape."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mei adds more substrate to an enzyme reaction that is already at its optimum temperature and pH. The rate stops rising. What is the most likely reason?",
+      "opts": [
+        "All the enzyme's active sites are already occupied",
+        "The extra substrate has denatured the enzyme",
+        "The pH has moved away from the optimum",
+        "The enzyme has been used up and cannot work again"
+      ],
+      "why": "Once every active site is busy, extra substrate cannot be processed any faster, so the rate levels off. Substrate does not denature an enzyme, and the question says temperature and pH were already at the optimum.",
+      "clue": "Count the active sites, not the substrate."
+    }
+  },
+  "bio-enzyme-inhibition": {
+    "title": "Enzyme inhibition",
+    "card": [
+      "An inhibitor is a molecule that slows down or stops an enzyme. It does this by binding to the enzyme.",
+      [
+        "Competitive",
+        "A competitive inhibitor has a shape similar to the substrate. It binds to the active site and blocks the substrate from entering."
+      ],
+      [
+        "Non-competitive",
+        "A non-competitive inhibitor binds to a different part of the enzyme. This changes the shape of the active site, so the substrate no longer fits well."
+      ],
+      "In both types, the enzyme works more slowly while the inhibitor is bound. Many inhibitors can be released, so the effect may be reversed."
+    ],
+    "remember": "Competitive inhibitors block the active site. Non-competitive inhibitors bind elsewhere and change its shape.",
+    "a": {
+      "q": "An inhibitor binds to a site away from the active site and changes the active site's shape. What type of inhibitor is it?",
+      "opts": ["Non-competitive", "Competitive", "A coenzyme", "A substrate"],
+      "why": "Binding away from the active site and changing its shape is non-competitive inhibition. A competitive inhibitor would sit in the active site itself.",
+      "clue": "Where on the enzyme does the inhibitor bind?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A drug molecule closely resembles an enzyme's substrate. It enters the active site and stays there, so less substrate can bind. How does the drug act?",
+      "opts": [
+        "As a competitive inhibitor, by blocking the active site",
+        "As a non-competitive inhibitor, by changing the active site",
+        "As a substrate, by speeding up the reaction",
+        "As a catalyst, by lowering the activation energy"
+      ],
+      "why": "The drug looks like the substrate and occupies the active site, so it is a competitive inhibitor. A non-competitive inhibitor would bind elsewhere, which this drug does not.",
+      "clue": "Look at where the drug sits and what it resembles."
+    }
+  },
+  "bio-coenzymes": {
+    "title": "Coenzymes",
+    "card": [
+      "A coenzyme is a small organic molecule that is not a protein. It helps an enzyme by carrying energy, electrons or hydrogen from one reaction to another.",
+      [
+        "ATP",
+        "carries energy. When ATP loses a phosphate it becomes ADP, and the energy released powers other reactions. ADP is later recharged to ATP."
+      ],
+      [
+        "NADH",
+        "the loaded form of NAD+. NAD+ picks up electrons and hydrogen in reactions that break down food, such as cellular respiration, and becomes NADH. NADH later unloads back to NAD+."
+      ],
+      [
+        "NADPH",
+        "the loaded form of NADP+. It delivers electrons and hydrogen to reactions that build molecules, such as making sugar in photosynthesis, and becomes NADP+ again."
+      ]
+    ],
+    "remember": "Coenzymes cycle between loaded and unloaded forms. NADH works in breakdown reactions, NADPH in building ones.",
+    "a": {
+      "q": "Which coenzyme mainly carries energy for use in other cell reactions?",
+      "opts": ["ATP", "NADH", "NADPH", "ADP"],
+      "why": "ATP carries energy, which is released when it loses a phosphate and becomes ADP. ADP is tempting, but it is the unloaded form that must be recharged before it can carry energy again.",
+      "clue": "Which form still has its energy to give?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A chloroplast is building sugar. Which coenzyme supplies the electrons and hydrogen, and what form does it end up as?",
+      "opts": [
+        "NADPH, which ends up as NADP+",
+        "NADH, which ends up as NAD+",
+        "ATP, which ends up as ADP",
+        "NADP+, which ends up as NADPH"
+      ],
+      "why": "NADPH delivers electrons and hydrogen to building reactions such as making sugar, and unloads to NADP+. NADH is tempting, but it works in breakdown reactions like respiration. NADP+ is the unloaded form, so it has nothing to supply.",
+      "clue": "Is this reaction building or breaking down, and which form is loaded?"
+    }
+  },
+  "bio-photosynthesis-overview": {
+    "title": "Photosynthesis overview",
+    "card": [
+      "Photosynthesis is the process in which cells use light energy to make glucose from carbon dioxide and water. It is an anabolic reaction, as it builds a larger molecule from smaller ones.",
+      "In plant cells it happens in chloroplasts, which contain the green pigment chlorophyll. Chlorophyll absorbs light energy.",
+      "The overall equation is 6CO2 + 6H2O + light energy → C6H12O6 + 6O2. Oxygen is a product, released as a gas.",
+      "Light energy is converted to chemical energy stored in the bonds of glucose. Glucose can then be used in cellular respiration or built into other molecules."
+    ],
+    "remember": "Photosynthesis stores light energy in glucose, using carbon dioxide and water, and releases oxygen.",
+    "a": {
+      "q": "Which row correctly gives the reactants and the products of photosynthesis?",
+      "opts": [
+        "Reactants: CO2 and H2O. Products: glucose and O2",
+        "Reactants: glucose and O2. Products: CO2 and H2O",
+        "Reactants: CO2 and O2. Products: glucose and H2O",
+        "Reactants: H2O and glucose. Products: CO2 and O2"
+      ],
+      "why": "Photosynthesis builds glucose from carbon dioxide and water, and releases oxygen. The row with glucose and oxygen as reactants is tempting, but it is the reverse, which is the overall pattern of cellular respiration.",
+      "clue": "Photosynthesis builds glucose rather than breaking it down."
+    },
+    "b": {
+      "d": 2,
+      "q": "Tariq grows a leafy plant in a sealed, lit glass jar. Which change in the jar's air is expected as photosynthesis occurs?",
+      "opts": [
+        "Oxygen rises as carbon dioxide is used",
+        "Oxygen falls as carbon dioxide is released",
+        "Both gases stay at the same level",
+        "Carbon dioxide rises as glucose is made"
+      ],
+      "why": "The plant takes in carbon dioxide to make glucose and releases oxygen as a product. The option where oxygen falls as carbon dioxide is released describes the opposite process, so it does not fit photosynthesis.",
+      "clue": "Think about which gas is a reactant and which is a product."
+    }
+  },
+  "bio-light-dependent-light-independent": {
+    "title": "Light-dependent and light-independent stages",
+    "card": [
+      [
+        "Light-dependent",
+        "happens in the thylakoid membranes of the chloroplast. Chlorophyll absorbs light energy, which splits water and releases oxygen."
+      ],
+      [
+        "Products",
+        "The light energy is stored in ATP and NADPH. These are energy carriers that move to the next stage."
+      ],
+      [
+        "Light-independent",
+        "is the Calvin cycle, in the stroma. It uses ATP and NADPH to fix carbon: carbon dioxide is built into sugar, with the enzyme Rubisco starting the process."
+      ],
+      "The Calvin cycle does not use light directly. It still depends on the ATP and NADPH made using light, so it slows when light-dependent supply stops."
+    ],
+    "remember": "Thylakoids capture light as ATP and NADPH. The stroma spends them to build sugar.",
+    "a": {
+      "q": "Which pair of products of the light-dependent stage is used by the Calvin cycle?",
+      "opts": ["ATP and NADPH", "Glucose and oxygen", "Carbon dioxide and water", "ADP and NADP+"],
+      "why": "The light-dependent stage stores light energy in ATP and NADPH, and the Calvin cycle spends them. Glucose is made by the Calvin cycle, not passed to it. Oxygen is released and is not used by the cycle.",
+      "clue": "Think of the energy carriers passed from thylakoid to stroma."
+    },
+    "b": {
+      "d": 3,
+      "q": "Researchers move a leaf into darkness. The Calvin cycle in its chloroplasts soon stops making sugar. What is the best explanation?",
+      "opts": [
+        "No new ATP and NADPH are being made in the thylakoids",
+        "Rubisco cannot work once chlorophyll is in the dark",
+        "Carbon dioxide cannot enter the stroma without light",
+        "Water is no longer split to supply carbon for sugar"
+      ],
+      "why": "Without light, the thylakoids stop making ATP and NADPH, so the Calvin cycle runs out of energy supply. The Calvin cycle is called light-independent because it uses no light directly, but it still needs these products. Chlorophyll does not act on Rubisco.",
+      "clue": "The Calvin cycle needs what the thylakoids supply."
+    }
+  },
+  "bio-c3-c4-cam-plants": {
+    "title": "C3, C4 and CAM plants",
+    "card": [
+      [
+        "The problem",
+        "Rubisco normally fixes carbon dioxide, but in hot, dry conditions plants close their stomata to save water. Carbon dioxide in the leaf falls, oxygen builds up, and Rubisco reacts with oxygen instead, which wastes energy and lowers sugar production."
+      ],
+      [
+        "C3",
+        "plants fix carbon dioxide with Rubisco directly in the leaf cells. They have no extra way to avoid the wasteful reaction."
+      ],
+      [
+        "C4",
+        "plants, such as sugarcane, separate steps in space. Carbon dioxide is captured in outer leaf cells, then passed to inner cells, so it stays high around Rubisco."
+      ],
+      [
+        "CAM",
+        "plants, such as many cacti, separate steps in time. Stomata open at night to take in and store carbon dioxide, which is released by day while the stomata stay shut, so it stays high around Rubisco."
+      ]
+    ],
+    "remember": "C4 separates the steps in space and CAM separates them in time. Both keep carbon dioxide high around Rubisco.",
+    "a": {
+      "q": "How do CAM plants reduce the wasteful reaction of Rubisco with oxygen?",
+      "opts": [
+        "They take in carbon dioxide at night and use it by day",
+        "They take in carbon dioxide by day and use it at night",
+        "They pass carbon dioxide between two cell types in the leaf",
+        "They keep stomata open by day to take in more carbon dioxide"
+      ],
+      "why": "CAM plants separate the steps in time. They store carbon dioxide taken in at night, so the stomata can stay shut by day while carbon dioxide stays high around Rubisco. Passing carbon dioxide between cell types is the C4 method, which separates steps in space.",
+      "clue": "CAM separates steps by time of day."
+    },
+    "b": {
+      "d": 3,
+      "q": "A grass in a hot, dry region captures carbon dioxide in outer leaf cells, then passes it to inner cells where Rubisco works. What is the best description of this grass?",
+      "opts": [
+        "A C4 plant, because it separates steps in space",
+        "A C3 plant, because Rubisco fixes the carbon dioxide",
+        "A CAM plant, because it saves water in dry conditions",
+        "A C4 plant, because it separates steps in time"
+      ],
+      "why": "Capture in one cell type and Rubisco use in another is separation in space, which is the C4 method. CAM plants also save water, but they separate steps in time using night and day. C3 plants have no such separation.",
+      "clue": "Look at where the steps happen, not when."
+    }
+  },
+  "bio-factors-affecting-photosynthesis": {
+    "title": "Factors affecting photosynthesis",
+    "card": [
+      "The rate of photosynthesis is how fast a plant makes glucose. It can be measured by oxygen released or carbon dioxide taken up. Four factors set it: light intensity, carbon dioxide concentration, temperature and water availability.",
+      "As light intensity or carbon dioxide concentration rises, the rate rises at first. It then levels off, because another factor, such as enzyme amount or the other input, is now in shortest supply. That factor is the limiting factor.",
+      "Temperature affects the enzymes involved, such as Rubisco. The rate rises with warmth up to an optimum, then falls as the enzymes lose their shape (denature).",
+      "Water is a reactant. When water is short, plants close their stomata to save it, which also limits carbon dioxide entering the leaf and so slows photosynthesis."
+    ],
+    "remember": "The rate is set by whichever factor is in shortest supply.",
+    "a": {
+      "q": "A graph shows the rate of photosynthesis rising with light intensity, then flattening out. What does the flat part show?",
+      "opts": [
+        "Another factor is now limiting the rate",
+        "Light has stopped being needed at all",
+        "The enzymes have denatured from the light",
+        "The plant has run out of water to use"
+      ],
+      "why": "Once light is no longer the factor in shortest supply, more light cannot raise the rate, as something else such as carbon dioxide or temperature limits it. Denaturing would make the rate fall, not level off.",
+      "clue": "A flat line means the rate holds steady. It does not drop."
+    },
+    "b": {
+      "d": 3,
+      "q": "During a dry spell, Lena's tomato plants wilt and photosynthesise more slowly, even though the sun is bright and the air has plenty of carbon dioxide. What best explains this?",
+      "opts": [
+        "Stomata close, so less carbon dioxide enters the leaves",
+        "Stomata open wider, so more water is lost from the leaves",
+        "Carbon dioxide in the air falls too low for the leaves",
+        "Bright light denatures the enzymes inside the leaves"
+      ],
+      "why": "Water shortage makes the plant close its stomata to save water, so carbon dioxide cannot enter easily even though the air has plenty. The option about low carbon dioxide in the air is wrong, because the question says the air has plenty.",
+      "clue": "How does a wilting plant cut its water loss?"
+    }
+  },
+  "bio-biofuels-improving-crop-yields": {
+    "title": "Improving crop yields",
+    "card": [
+      "Crop yield is the amount of useful plant material grown on an area of land. Yield depends partly on how efficiently a crop photosynthesises.",
+      "CRISPR-Cas9 is a gene-editing tool. It uses a guide RNA to lead the Cas9 enzyme to a chosen DNA sequence, where it cuts the DNA so the gene can be changed.",
+      "Rubisco is the enzyme that fixes carbon. It is slow and also reacts with oxygen, which wastes energy. The genes coding for Rubisco are a target for editing, so an improved Rubisco could fix carbon more efficiently.",
+      "Scientists could edit crop genes this way to make photosynthesis more efficient and so raise yields. Much of this work is still being researched and tested."
+    ],
+    "remember": "CRISPR-Cas9 could edit genes, such as those coding for Rubisco, to make photosynthesis more efficient and raise yields.",
+    "a": {
+      "q": "What is the role of the guide RNA in CRISPR-Cas9 editing of a crop?",
+      "opts": [
+        "It leads Cas9 to the chosen DNA sequence",
+        "It cuts the DNA at the chosen sequence",
+        "It carries the new Rubisco protein into cells",
+        "It makes the plant take in more light"
+      ],
+      "why": "The guide RNA matches the target sequence and leads the Cas9 enzyme to it. Cas9 is the enzyme that cuts the DNA, so cutting is not the guide's job.",
+      "clue": "The guide RNA works like an address."
+    },
+    "b": {
+      "d": 2,
+      "q": "A research team wants a wheat crop to photosynthesise more efficiently using CRISPR-Cas9. Which target fits the aim best?",
+      "opts": [
+        "The gene for a Rubisco that wastes less energy",
+        "The gene for a protein that stores wheat grain",
+        "The gene for an enzyme that digests starch in flour",
+        "The gene for a pigment that colours the grain"
+      ],
+      "why": "Rubisco fixes carbon and also reacts wastefully with oxygen. Editing the gene coding for it could make photosynthesis more efficient and raise yield. The other genes act in grain storage, digestion or colour, not in photosynthetic efficiency.",
+      "clue": "Which enzyme fixes carbon?"
+    }
+  },
+  "bio-aerobic-cellular-respiration": {
+    "title": "Aerobic cellular respiration",
+    "card": [
+      "Aerobic cellular respiration releases energy from glucose and stores it in ATP, using oxygen. Overall: glucose + oxygen → carbon dioxide + water + ATP.",
+      [
+        "Glycolysis",
+        "happens in the cytosol. Glucose is split into two pyruvate molecules, making a small net gain of 2 ATP. It does not need oxygen."
+      ],
+      [
+        "Krebs cycle",
+        "happens in the mitochondrial matrix. Pyruvate is broken down, releasing carbon dioxide and loading carriers (NADH and FADH2) with energy, with 2 ATP made."
+      ],
+      [
+        "Electron transport chain",
+        "on the inner mitochondrial membrane, where the carriers deliver electrons and oxygen accepts them at the end to form water. It makes most of the ATP, for a total of about 30 to 32 per glucose."
+      ]
+    ],
+    "remember": "Three stages, one goal: glucose energy into ATP, with most ATP made at the electron transport chain.",
+    "a": {
+      "q": "Which statement about ATP made in aerobic respiration is correct?",
+      "opts": [
+        "Most is made on the inner mitochondrial membrane",
+        "Most is made in the cytosol, where glucose is split",
+        "Most is made in the matrix, where CO2 is released",
+        "Each of the three stages makes about the same amount"
+      ],
+      "why": "The electron transport chain, on the inner mitochondrial membrane, uses energy from the loaded carriers to make most of the ATP, about 26 to 28 of the total. The cytosol is tempting because glycolysis comes first, but it gains only a net 2 ATP. The Krebs cycle in the matrix also makes only 2 ATP.",
+      "clue": "Think about where the loaded carriers deliver their electrons."
+    },
+    "b": {
+      "d": 3,
+      "q": "A drug stops oxygen from accepting electrons at the end of the electron transport chain in a muscle cell's mitochondria. Why would ATP production by aerobic respiration fall sharply?",
+      "opts": [
+        "The chain stops, so the carriers cannot be unloaded",
+        "Glucose can no longer be split into pyruvate in the cytosol",
+        "Carbon dioxide can no longer be released by the cell",
+        "Water is needed to start the Krebs cycle in the matrix"
+      ],
+      "why": "If oxygen cannot accept electrons, the chain backs up and the carriers stay loaded. Most ATP is made at this stage, so output falls sharply. Glycolysis is not the problem, because it does not need oxygen.",
+      "clue": "Which stage uses oxygen, and what must the carriers do there?"
+    }
+  },
+  "bio-anaerobic-respiration": {
+    "title": "Anaerobic respiration",
+    "card": [
+      "Anaerobic respiration happens without oxygen. Glucose is broken down only by glycolysis in the cytosol, which makes a net 2 ATP per glucose.",
+      [
+        "Animals",
+        "pyruvate is changed to lactic acid. No carbon dioxide is made in this step, and the lactic acid can build up in muscle during hard exercise."
+      ],
+      [
+        "Yeast",
+        "pyruvate is changed to ethanol and carbon dioxide. Yeast does this when it ferments sugar without oxygen."
+      ],
+      "Aerobic respiration makes about 30 to 32 ATP per glucose. The anaerobic pathways make far less, because the energy in the products is not released."
+    ],
+    "remember": "No oxygen means glycolysis only: 2 ATP, with lactic acid in animals or ethanol and carbon dioxide in yeast.",
+    "a": {
+      "q": "A yeast culture in a sealed jar has run out of oxygen. Which products does it now make from glucose?",
+      "opts": ["Ethanol and carbon dioxide", "Lactic acid only", "Lactic acid and carbon dioxide", "Ethanol and water"],
+      "why": "Yeast without oxygen changes pyruvate to ethanol and carbon dioxide. Lactic acid is the animal pathway, so it is the tempting wrong choice, and the animal pathway makes no carbon dioxide.",
+      "clue": "Yeast and animals use different anaerobic products."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam sprints hard and his muscle cells run short of oxygen. Which statement correctly describes what happens in his muscle cells?",
+      "opts": [
+        "Glucose gives a net 2 ATP and lactic acid forms",
+        "Glucose gives a net 2 ATP and ethanol forms",
+        "Glucose gives 30 ATP and lactic acid forms",
+        "Glucose gives 30 ATP and ethanol forms"
+      ],
+      "why": "Without enough oxygen, only glycolysis runs, so the net gain is 2 ATP per glucose. Animal cells make lactic acid, not ethanol. The figure of about 30 ATP needs oxygen, so it does not fit here.",
+      "clue": "Check both the ATP amount and which organism the cells belong to."
+    }
+  },
+  "bio-factors-affecting-respiration": {
+    "title": "Factors affecting respiration",
+    "card": [
+      "The rate of cellular respiration is how fast a cell uses glucose and makes ATP. Temperature, glucose supply and oxygen supply all change it.",
+      [
+        "Temperature",
+        "respiration is controlled by enzymes. A rise in temperature speeds up the reactions until the optimum, and past it the enzymes denature and the rate drops sharply."
+      ],
+      [
+        "Glucose",
+        "more glucose gives the enzymes more substrate, so the rate rises. It levels off once the enzymes are working at their maximum rate."
+      ],
+      [
+        "Oxygen",
+        "oxygen is the final electron acceptor in the electron transport chain. With less oxygen the chain slows, so less ATP is made, and the cell relies more on anaerobic pathways."
+      ]
+    ],
+    "remember": "Warmth speeds respiration up to the optimum, then enzymes denature. Glucose and oxygen supply also set the rate.",
+    "a": {
+      "q": "A student warms yeast in glucose solution from 10 °C to 25 °C and the rate of respiration rises. What is the best explanation?",
+      "opts": [
+        "Enzyme reactions speed up as temperature rises",
+        "Glucose is made faster at higher temperature",
+        "Oxygen is no longer needed by the cell",
+        "Enzymes begin to denature as temperature rises"
+      ],
+      "why": "Respiration depends on enzymes, and warmth makes enzyme reactions happen faster up to the optimum. Denaturing happens past the optimum and makes the rate drop, so it cannot explain a rise.",
+      "clue": "Think about what controls each step of respiration."
+    },
+    "b": {
+      "d": 3,
+      "q": "Researchers raise the glucose concentration around muscle cells in a dish with plenty of oxygen. At first the rate of respiration rises, then it stops rising. What is the most likely reason?",
+      "opts": [
+        "The enzymes are working at their maximum rate",
+        "The cells have run out of glucose to use",
+        "The extra glucose has denatured the enzymes",
+        "The electron transport chain no longer needs oxygen"
+      ],
+      "why": "Once all the enzymes are busy, extra glucose cannot speed things up, so the rate levels off. The cells have not run out of glucose, because the supply was raised, so that option is wrong.",
+      "clue": "The glucose supply is high, so what else could limit the rate?"
+    }
+  },
+  "bio-biofuels-from-fermentation": {
+    "title": "Biofuels from fermentation",
+    "card": [
+      "A biofuel is a fuel made from living material, such as plants. Plant material contains sugars, or starch and cellulose that can be broken down into sugars.",
+      "In fermentation, microbes such as yeast break down sugars without oxygen. Yeast makes ethanol and carbon dioxide, and releases a small amount of energy for its own use.",
+      "The ethanol is separated from the mixture, often by distillation, and used as a fuel. It can be blended with petrol.",
+      "Sugar cane, corn and wheat are common sources. Fermentation needs anaerobic conditions, so the vessel is sealed from air. With oxygen, yeast would respire aerobically and make little ethanol."
+    ],
+    "remember": "Biofuel ethanol comes from microbes fermenting plant sugars without oxygen.",
+    "a": {
+      "q": "Why is the vessel used to ferment sugar cane juice into ethanol kept sealed from air?",
+      "opts": [
+        "Yeast makes much more ethanol when oxygen is absent",
+        "Yeast needs oxygen to make ethanol from sugars",
+        "Oxygen would turn the ethanol into plant starch",
+        "Air would stop the sugar cane juice from dissolving"
+      ],
+      "why": "Ethanol comes from anaerobic fermentation, so keeping air out gives a much higher yield. With oxygen, yeast would respire aerobically and make little ethanol. Yeast does not need oxygen to make ethanol, which is the most tempting mistake.",
+      "clue": "Think about which type of respiration makes ethanol."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ben's company in Queensland ferments waste sugar cane juice in open tanks that let in plenty of air. The ethanol yield is low. What is the best explanation?",
+      "opts": [
+        "Yeast respires aerobically, so less ethanol is made",
+        "Yeast stops using sugar once air reaches the tanks",
+        "Air makes the yeast produce lactic acid, not ethanol",
+        "Oxygen in the tanks is turned into carbon dioxide only"
+      ],
+      "why": "With oxygen present, yeast uses aerobic respiration, which releases more energy and makes little ethanol. Yeast ferments sugar into ethanol and carbon dioxide, not lactic acid, so air does not switch it to making lactic acid.",
+      "clue": "Which type of respiration does yeast use when oxygen is available?"
+    }
+  },
+  "bio-lymphatic-system": {
+    "title": "The lymphatic system",
+    "card": [
+      "The lymphatic system is a network of vessels and organs. Vessels carry lymph, a clear fluid that drains from tissues, and return it to the blood.",
+      "Antigens are molecules that can trigger an immune response. Lymph carries free antigens, and dendritic cells that have taken up antigens, from infected tissues to lymph nodes.",
+      "Lymph nodes are small organs along the vessels. They trap antigens from the lymph, and many B cells and T cells wait inside them.",
+      "A B cell can bind a matching antigen directly. A T cell recognises an antigen only when an antigen-presenting cell, such as a dendritic cell, shows it on MHC markers (proteins on the cell surface). These meetings in the node start the adaptive response."
+    ],
+    "remember": "Lymph brings antigens to the nodes. B cells can bind them directly, but T cells need them presented.",
+    "a": {
+      "q": "Why are lymph nodes important for starting an adaptive immune response?",
+      "opts": [
+        "They trap antigens where B and T cells can meet them",
+        "They make antigens that train B and T cells",
+        "They carry blood to infected tissues to destroy antigens",
+        "They store antibodies until an infection occurs"
+      ],
+      "why": "Lymph brings antigens and dendritic cells into the nodes, where many B and T cells wait. A cell with a matching receptor can meet its antigen there. Nodes do not make antigens, which come from pathogens or other material.",
+      "clue": "Think about what meets what inside a node."
+    },
+    "b": {
+      "d": 3,
+      "q": "Leon cuts his foot and bacteria enter it. How does a T cell in a lymph node in his leg first recognise a bacterial antigen?",
+      "opts": [
+        "A dendritic cell presents the antigen to it on MHC",
+        "It binds free antigen that the node trapped from lymph",
+        "It leaves the node and binds the bacteria in the cut",
+        "It binds antigen carried to the node in the blood"
+      ],
+      "why": "A T cell recognises antigen only when it is shown on MHC by an antigen-presenting cell. Dendritic cells take up antigen in the foot and carry it to the node. Free antigen trapped in the node can be bound by B cells, but not by T cells.",
+      "clue": "Can a T cell recognise an antigen on its own?"
+    }
+  },
+  "bio-humoral-immunity": {
+    "title": "Humoral immunity",
+    "card": [
+      "Humoral immunity is the part of the adaptive response that works through antibodies in body fluids such as blood and lymph. It targets antigens that are outside cells.",
+      "An antibody is a Y-shaped protein made by B cells. Each antibody has two identical binding sites that fit one specific antigen, the way a lock fits only one shape.",
+      "When a B cell meets its matching antigen, it is activated and divides. Many of its daughter cells become plasma cells, which release large amounts of antibody.",
+      "Antibodies bind the antigen. This can neutralise it, for example by blocking a toxin or stopping a virus from attaching to a cell. It can also mark the pathogen so that phagocytes destroy it."
+    ],
+    "remember": "B cells make antibodies that bind antigens outside cells, to block them or tag them for destruction.",
+    "a": {
+      "q": "Which cells release large amounts of antibody into the blood during a humoral response?",
+      "opts": [
+        "Plasma cells that formed from activated B cells",
+        "Phagocytes that have engulfed the pathogen",
+        "Antigens that have bound to a B cell",
+        "Infected body cells that display the antigen"
+      ],
+      "why": "Activated B cells divide, and many daughter cells become plasma cells that release antibody. Phagocytes destroy pathogens that antibodies have marked, but they do not make the antibodies.",
+      "clue": "Think about which cells come from a dividing B cell."
+    },
+    "b": {
+      "d": 3,
+      "q": "Bacteria in Ravi's blood release a toxin. Antibodies bind the toxin, so it cannot attach to his cells. Which describes this action?",
+      "opts": [
+        "Neutralisation of the antigen by antibodies",
+        "Marking of the toxin for destruction by phagocytes",
+        "Destruction of infected cells by antibodies",
+        "Production of antibodies by the toxin"
+      ],
+      "why": "The antibodies block the toxin from attaching to cells, which is neutralisation. Marking would mean the antibody tags the antigen so a phagocyte destroys it, but the case describes the toxin being blocked.",
+      "clue": "What stops the toxin from reaching his cells?"
+    }
+  },
+  "bio-cell-mediated-immunity": {
+    "title": "Cell-mediated immunity",
+    "card": [
+      "Cell-mediated immunity is an adaptive response carried out by T cells. It deals with body cells that are infected by a pathogen or that have become abnormal, such as cancer cells.",
+      [
+        "Helper T cell",
+        "coordinates the response. When it binds an antigen shown on an antigen-presenting cell, it becomes active and releases chemical signals called cytokines that stimulate other immune cells."
+      ],
+      [
+        "Cytotoxic T cell",
+        "destroys infected or abnormal body cells. It binds the antigen displayed on the surface of the target cell, then releases substances that kill that cell."
+      ],
+      "Antibodies cannot reach pathogens hiding inside body cells. Killing the infected cell removes the place where the pathogen is hiding and making copies of itself."
+    ],
+    "remember": "Helper T cells direct the response. Cytotoxic T cells kill infected or abnormal body cells.",
+    "a": {
+      "q": "Which statement best describes the role of a helper T cell?",
+      "opts": [
+        "It releases cytokines that stimulate other immune cells",
+        "It kills body cells infected with a virus",
+        "It releases antibodies that bind free antigens",
+        "It engulfs pathogens and breaks them down"
+      ],
+      "why": "A helper T cell coordinates the response by releasing cytokines that stimulate other immune cells. Killing infected cells is the job of cytotoxic T cells, which is the most tempting wrong option, because helper T cells direct the attack but do not carry it out.",
+      "clue": "Think of the cell that directs the response, not the one that attacks."
+    },
+    "b": {
+      "d": 3,
+      "q": "Some cells in Priya's lung are infected by a virus that is now multiplying inside them. Which immune cell most directly removes this threat?",
+      "opts": [
+        "A cytotoxic T cell that binds the viral antigen on the cell",
+        "A helper T cell that binds the viral antigen on the cell",
+        "A B cell that releases antibodies into the lung",
+        "A cytotoxic T cell that makes antibodies against the virus"
+      ],
+      "why": "The virus is inside body cells, so a cytotoxic T cell that binds the antigen on the infected cell's surface can kill that cell. Helper T cells are the tempting wrong option: they bind antigen too, but they coordinate the response and do not kill the infected cell. Antibodies cannot reach a virus hiding inside cells.",
+      "clue": "Which cell kills, and where is the virus hiding?"
+    }
+  },
+  "bio-natural-artificial-immunity": {
+    "title": "Natural and artificial immunity",
+    "card": [
+      [
+        "Active immunity",
+        "The body makes its own antibodies and memory cells after meeting an antigen. It takes days to start, but it can last for years."
+      ],
+      [
+        "Passive immunity",
+        "The body receives antibodies made by another person or animal. It works straight away, but the antibodies break down, so protection fades. No memory cells form."
+      ],
+      [
+        "Natural",
+        "Immunity gained in everyday life. Catching an infection gives active immunity. Antibodies passed from mother to baby, across the placenta or in breast milk, give passive immunity."
+      ],
+      [
+        "Artificial",
+        "Immunity gained through medical treatment. A vaccine gives active immunity. An injection of antibodies made elsewhere gives passive immunity."
+      ]
+    ],
+    "remember": "Active: you make the antibodies and memory cells. Passive: you are given the antibodies.",
+    "a": {
+      "q": "Which person has gained active immunity?",
+      "opts": [
+        "A child who made antibodies after a measles vaccine",
+        "A baby who received antibodies in breast milk",
+        "A patient given antibodies made by another person",
+        "A baby who received antibodies across the placenta"
+      ],
+      "why": "After a vaccine, the child's own B cells make antibodies and memory cells, so the immunity is active. In the other three cases the antibodies were made by someone else, so the immunity is passive. Breast milk is natural, but it is still passive.",
+      "clue": "Who made the antibodies?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom is bitten by a snake in Gippsland. He is given antibodies that were made in another animal. Which type of immunity does this give him?",
+      "opts": [
+        "Artificial passive immunity",
+        "Artificial active immunity",
+        "Natural passive immunity",
+        "Natural active immunity"
+      ],
+      "why": "Tom is given antibodies he did not make, so the immunity is passive. It comes from medical treatment, so it is artificial. Artificial active immunity is tempting, but it needs the body to make its own antibodies, as a vaccine does.",
+      "clue": "Decide who made the antibodies, then whether it was medical treatment."
+    }
+  },
+  "bio-emerging-re-emerging-diseases": {
+    "title": "Emerging and re-emerging diseases",
+    "card": [
+      [
+        "Emerging disease",
+        "a disease that is new to a human population, or that has spread into a new area. It can come from a new pathogen, or from a known pathogen that has moved to a new host, such as from animals to humans."
+      ],
+      [
+        "Re-emerging disease",
+        "a disease that was once under control and has become common again. Measles and tuberculosis are examples."
+      ],
+      "Air travel, trade, growing cities and closer contact with wild animals help pathogens reach new people. Falling vaccination rates and drug resistance can let old diseases return.",
+      "A population with no previous exposure has no immunity to a new pathogen. After Europeans arrived in Australia, diseases such as smallpox, influenza and measles spread among Aboriginal and Torres Strait Islander peoples and caused many deaths."
+    ],
+    "remember": "A disease emerges when a population meets it for the first time, and re-emerges when an old one returns.",
+    "a": {
+      "q": "Why did diseases brought by Europeans cause so many deaths among Aboriginal and Torres Strait Islander peoples?",
+      "opts": [
+        "The population had not been exposed to them before",
+        "The pathogens were new types that evolved in Australia",
+        "The population had been vaccinated against other diseases",
+        "The diseases could not infect any other population"
+      ],
+      "why": "The pathogens were new to the population, so people had no immunity to them and the diseases spread widely. The pathogens did not evolve in Australia. They were carried here by people arriving from elsewhere.",
+      "clue": "Think about whether people had met these pathogens before."
+    },
+    "b": {
+      "d": 3,
+      "q": "Measles was once rare in a region because most children were vaccinated. After vaccination rates fell, cases rose sharply. How is this disease best described?",
+      "opts": [
+        "Re-emerging, as a controlled disease became common again",
+        "Emerging, as it is a new pathogen in the region",
+        "Emerging, as it passed from animals to humans",
+        "Re-emerging, as the pathogen has become a new species"
+      ],
+      "why": "The disease was already known and under control, then became common again, so it is re-emerging. It is not emerging, because the pathogen was not new to the region and had not moved to a new host.",
+      "clue": "Was the disease new, or had it come back?"
+    }
+  },
+  "bio-controlling-spread-disease": {
+    "title": "Controlling the spread of disease",
+    "card": [
+      "To control a disease, scientists first identify the pathogen that causes it. They then find its host, the organism it lives in, and how it passes from one host to another.",
+      "Knowing how it spreads shows where to break the chain. Some pathogens spread by direct contact, by droplets in the air, in contaminated water or food, or by a vector such as a mosquito.",
+      [
+        "Quarantine",
+        "keeping people or animals that may be infected apart from others, so they cannot pass the pathogen on."
+      ],
+      [
+        "Hygiene",
+        "actions such as handwashing, clean water and safe food handling, which stop a pathogen reaching a new host. Treatment, such as antibiotics for bacteria, can cure infected hosts and so reduce spread."
+      ]
+    ],
+    "remember": "Find the pathogen, host and route of spread, then block the route.",
+    "a": {
+      "q": "Why does a health team work out how a pathogen spreads before choosing a control measure?",
+      "opts": [
+        "So the measure can block the route the pathogen takes",
+        "So the pathogen can be grown in the laboratory",
+        "So every host can be given the same treatment",
+        "So the pathogen's host can be named correctly"
+      ],
+      "why": "A control measure works by breaking the chain between hosts, so the team must know where that chain can be broken. Naming the host matters too, but it does not show which measure will stop transmission.",
+      "clue": "Think about what each measure is trying to interrupt."
+    },
+    "b": {
+      "d": 3,
+      "q": "An outbreak of a stomach illness in a town in Gippsland is traced to a pathogen in a shared water supply. Which action targets how it spreads?",
+      "opts": [
+        "Supplying treated drinking water to households",
+        "Giving antibiotics to everyone living in the town",
+        "Keeping people who are ill home from school and work",
+        "Testing food in every café for the pathogen"
+      ],
+      "why": "The pathogen spreads through contaminated water, so clean water stops it reaching new hosts. Keeping ill people at home may cut spread between people a little, but it does not deal with the water source that is still infecting others.",
+      "clue": "Which action deals with the route the pathogen takes?"
+    }
+  },
+  "bio-monoclonal-antibodies": {
+    "title": "Monoclonal antibodies",
+    "card": [
+      "An antibody is a protein that binds to one specific antigen. Monoclonal antibodies are antibodies made in the lab that are all identical and all target the same antigen.",
+      "They are made by a clone of one B cell. A B cell that makes the wanted antibody is joined with a cancerous cell that divides without limit. The joined cell makes large amounts of one antibody.",
+      "For cancer, a monoclonal antibody can bind to an antigen on the surface of cancer cells. This can mark the cells for destruction or block signals that make them divide.",
+      "For autoimmune diseases, the immune system attacks the body's own cells. A monoclonal antibody can bind to a signalling molecule involved in that attack and reduce the damage."
+    ],
+    "remember": "One antigen, one antibody type, made in bulk to treat disease.",
+    "a": {
+      "q": "Why are monoclonal antibodies useful as a targeted treatment?",
+      "opts": [
+        "Each one binds to a single specific antigen",
+        "Each one binds to many different antigens",
+        "Each one is made by many different B cells",
+        "Each one destroys any cell it meets"
+      ],
+      "why": "All the antibodies in a batch are identical, so they bind to the same antigen and not to other molecules. Antibodies that bind many antigens, or destroy any cell, would not be targeted.",
+      "clue": "Think about what monoclonal tells you about the antibodies."
+    },
+    "b": {
+      "d": 3,
+      "q": "A drug company wants a treatment that acts only on cells carrying antigen X, found on a patient's cancer cells. What should it make?",
+      "opts": [
+        "Monoclonal antibodies that bind antigen X",
+        "Monoclonal antibodies that bind any surface antigen",
+        "Antibodies from many B cells that bind antigen Y",
+        "Cancerous cells that divide without limit"
+      ],
+      "why": "Antibodies that bind antigen X will attach to the cancer cells carrying it. Antibodies for any antigen, or for antigen Y, would not be matched to those cells. The dividing cells are only part of how the antibodies are made.",
+      "clue": "Match the antibody to the antigen on the target cells."
+    }
+  },
+  "bio-mutations": {
+    "title": "Mutations",
+    "card": [
+      "A mutation is a change in the DNA sequence of a cell. In animals, only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring.",
+      [
+        "Point mutation",
+        "a change to a single nucleotide in a gene, such as a base being swapped for another. It can produce a new allele of that gene."
+      ],
+      [
+        "Chromosome change",
+        "a change to the structure or number of chromosomes, such as a piece being lost, flipped or moved, or a whole chromosome being gained or lost."
+      ],
+      "Mutations are random. They do not happen because an organism needs them. A new allele can add variation to a population, so mutation is the original source of new alleles."
+    ],
+    "remember": "Mutations are random changes to DNA. Those passed on add new alleles to a population.",
+    "a": {
+      "q": "Why are mutations described as the raw material for evolution?",
+      "opts": [
+        "They create new alleles, which add variation to a population",
+        "They appear when an organism needs to adapt to its habitat",
+        "They change every gamete a population makes in the same way",
+        "They remove harmful alleles so offspring are better suited"
+      ],
+      "why": "Mutations are random changes that can produce new alleles, and new alleles add variation that evolution can act on. They do not appear because an organism needs them, so the option about adapting to a habitat reverses cause and effect.",
+      "clue": "Think about where new alleles first come from."
+    },
+    "b": {
+      "d": 3,
+      "q": "A skin cell of a kangaroo in Victoria gains a point mutation from sun damage. The mutation is not in any cell that makes gametes. What is the most likely outcome for the kangaroo's offspring?",
+      "opts": [
+        "They do not inherit it, as it is not in a gamete",
+        "They inherit it, as all mutations are passed on",
+        "They inherit it, as skin cells copy it into gametes",
+        "They do not inherit it, as point mutations are harmless"
+      ],
+      "why": "A kangaroo is an animal, and in animals only a mutation in a gamete, or in a cell that makes gametes, can be passed to offspring. A skin cell mutation stays in that body cell line. Whether a point mutation is harmful does not decide if it is inherited.",
+      "clue": "In an animal, which cells pass DNA on to the next generation?"
+    }
+  },
+  "bio-gene-pool": {
+    "title": "The gene pool",
+    "card": [
+      "A population is a group of the same species living in the same area. Its gene pool is all the alleles of all its genes, carried by every individual in it.",
+      "Allele frequency is how common one allele is in the gene pool. It is the number of copies of that allele divided by the total copies of that gene, often given as a fraction or percentage.",
+      "Evolution is a change in allele frequencies in a population's gene pool over generations. One individual's alleles stay the same during its life, so a single individual does not evolve.",
+      "If the allele frequencies stay the same from one generation to the next, the gene pool has not changed and no evolution has happened."
+    ],
+    "remember": "Evolution is a change in allele frequencies in a population over generations.",
+    "a": {
+      "q": "Which observation shows that a population has evolved?",
+      "opts": [
+        "The frequency of an allele has changed over generations",
+        "One animal has grown larger during its life",
+        "The population has more individuals than before",
+        "Each individual still carries the same alleles"
+      ],
+      "why": "Evolution is a change in allele frequencies in the gene pool over generations. A bigger population does not by itself mean allele frequencies changed, and an animal growing is not a change in the gene pool.",
+      "clue": "Look for a change in the gene pool, not in one body or in numbers."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a population of 50 beetles, each carries two copies of a colour gene. There are 40 copies of the allele G and 60 copies of the allele g. What is the frequency of g in the gene pool?",
+      "opts": [
+        "0.6, as 60 of the 100 gene copies are g",
+        "0.4, as 40 of the 100 gene copies are G",
+        "0.3, as 60 of the 200 gene copies are g",
+        "0.5, as both alleles are present in the population"
+      ],
+      "why": "The gene pool has 50 × 2 = 100 copies of the gene. The allele g makes up 60 of them, so its frequency is 60 ÷ 100 = 0.6. The value 0.4 is the frequency of G, the other allele, and 0.3 comes from wrongly counting four copies per beetle.",
+      "clue": "Count gene copies, not beetles. Each beetle has two."
+    }
+  },
+  "bio-natural-selection-2": {
+    "title": "Natural selection",
+    "card": [
+      "Individuals in a population differ in their traits. Many of these differences are inherited, because they come from different alleles.",
+      "Some traits suit the environment better than others. Individuals with these traits are more likely to survive and reproduce.",
+      "They pass their alleles to more offspring than other individuals do. Over generations, those alleles become more common in the population.",
+      "Selection acts on traits that already exist. It does not make new alleles, and an individual does not change its alleles to suit the environment."
+    ],
+    "remember": "Suited individuals leave more offspring, so their alleles become more common.",
+    "a": {
+      "q": "Which statement best describes natural selection in a population?",
+      "opts": [
+        "Individuals with suited traits leave more offspring",
+        "Individuals gain alleles that they need to survive",
+        "Suited individuals live longer but have no more offspring",
+        "Individuals pass on traits gained during their lifetime"
+      ],
+      "why": "Natural selection works because suited individuals reproduce more, so their alleles spread. Gaining alleles on demand is wrong, because selection acts on variation that already exists. Living longer without having more offspring does not change allele frequencies.",
+      "clue": "What do suited individuals pass on, and how much?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Some beetles on a Victorian farm have an allele for dark green bodies. Birds find them harder to see on the dark leaves. Over many generations, what is most likely to happen?",
+      "opts": [
+        "The dark green allele becomes more common",
+        "Each beetle changes colour to match the leaves",
+        "The dark green allele becomes less common",
+        "Birds cause new dark green alleles to appear"
+      ],
+      "why": "Dark green beetles are eaten less, so more of them survive and breed. Their allele becomes more common in the population. Individual beetles do not change colour to suit the leaves, and birds do not create new alleles, because selection acts on alleles that are already present.",
+      "clue": "Which beetles are more likely to have offspring?"
+    }
+  },
+  "bio-genetic-drift": {
+    "title": "Genetic drift",
+    "card": [
+      "Genetic drift is a change in allele frequencies from one generation to the next that happens by chance. It is not caused by an allele helping an organism survive.",
+      "Drift is strongest in small populations. With few individuals, chance events can easily make an allele more or less common, or remove it entirely. In a large population, chance averages out and has little effect.",
+      [
+        "Bottleneck effect",
+        "a disaster such as a fire or flood kills many individuals at random. The few survivors carry only some of the alleles, so the population has different allele frequencies and less variation."
+      ],
+      [
+        "Founder effect",
+        "a few individuals leave a population and start a new one. The new population has only the alleles those founders carried, so its allele frequencies can differ from the original."
+      ]
+    ],
+    "remember": "Drift is change by chance, and it has the biggest effect when a population is small.",
+    "a": {
+      "q": "Which statement best describes genetic drift?",
+      "opts": [
+        "A chance change in allele frequencies between generations",
+        "A rise in alleles that give a survival advantage",
+        "A shift in allele frequencies caused by migrating adults",
+        "A new allele appearing when DNA is copied incorrectly"
+      ],
+      "why": "Drift is a change in allele frequencies that happens by chance. The option about a survival advantage describes natural selection, where the change is not random with respect to the environment.",
+      "clue": "Think about what causes the change: chance or advantage?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A storm kills most of an island's lizards at random. The survivors happen to carry mostly the allele for brown skin, which was rare before. Why did brown skin become common?",
+      "opts": [
+        "Chance left mostly brown carriers in a small population",
+        "Brown skin gave the lizards an advantage in the storm",
+        "The storm caused a mutation that created brown skin",
+        "Brown lizards arrived from another island and bred"
+      ],
+      "why": "The storm killed at random, so survival did not depend on skin colour. The survivors were few, and chance made brown alleles common, which is the bottleneck effect. Natural selection is the tempting answer, but the deaths were random.",
+      "clue": "Did skin colour decide who survived the storm?"
+    }
+  },
+  "bio-gene-flow": {
+    "title": "Gene flow",
+    "card": [
+      "Gene flow is the movement of alleles from one population to another. It happens when individuals migrate and breed there, or when gametes such as pollen are carried across.",
+      "Moving is not enough. If a migrant does not breed, no alleles pass into the new gene pool and there is no gene flow.",
+      "Gene flow can add alleles that were missing from a population. It can also change the frequency of alleles that were already there.",
+      "Gene flow tends to make two populations more alike. Where it is blocked, such as by a barrier, the populations can become more different over time."
+    ],
+    "remember": "Alleles must enter a new gene pool, and gene flow tends to make populations more alike.",
+    "a": {
+      "q": "Which event is an example of gene flow?",
+      "opts": [
+        "A bird flies to a new island and breeds with local birds",
+        "A bird flies to a new island and dies without breeding",
+        "A storm kills most of the birds on an island",
+        "A bird on an island gains a new allele by mutation"
+      ],
+      "why": "Gene flow needs alleles to enter another population's gene pool, which happens only if the migrant breeds there. A migrant that dies without breeding adds no alleles, so that option is the tempting wrong one.",
+      "clue": "Alleles must pass into the new gene pool."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two populations of wildflowers grow on either side of a farm. Bees carry pollen between them each spring. What is the likely effect on the two populations over time?",
+      "opts": [
+        "They become more alike in allele frequencies",
+        "They become more different in allele frequencies",
+        "They each lose all of their existing alleles",
+        "They stop changing in allele frequencies altogether"
+      ],
+      "why": "Pollen is a gamete, so bees carrying it moves alleles between the populations, and this is gene flow. Gene flow tends to make populations more alike. Populations can become more different when gene flow is blocked, not when it happens.",
+      "clue": "Think about what moving alleles between populations does to the differences between them."
+    }
+  },
+  "bio-selective-breeding": {
+    "title": "Selective breeding",
+    "card": [
+      "In selective breeding, humans choose which organisms breed, based on traits they want. Examples are milk yield in cows and sweetness in fruit.",
+      "Only the chosen individuals pass on their alleles. Breeding does not create new alleles, but over many generations the alleles for wanted traits become more common, so allele frequencies change.",
+      "Humans, not the environment, decide which individuals reproduce most. This is the difference from natural selection.",
+      "Breeders often use a small number of parents, so many alleles are lost and genetic diversity falls. If conditions change, such as a new disease, the population may lack alleles that help it survive."
+    ],
+    "remember": "Selective breeding: humans pick the parents, wanted alleles rise, and diversity falls.",
+    "a": {
+      "q": "A farmer breeds only the sheep with the softest wool for many generations. What happens to the sheep population?",
+      "opts": [
+        "Alleles for soft wool become more common",
+        "Alleles for soft wool become less common",
+        "Allele frequencies stay the same",
+        "New alleles for soft wool appear because it is needed"
+      ],
+      "why": "Only the softest-wool sheep pass on their alleles, so alleles linked to soft wool become more common. It is wrong to say the need for soft wool creates new alleles, because breeding changes the frequency of alleles that already exist.",
+      "clue": "Which sheep get to pass on their alleles?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia breeds show dogs using only a few champion males for many generations. A new disease then spreads through the breed. Why is the breed at greater risk than a mixed-breed dog population?",
+      "opts": [
+        "It has lower diversity, so protective alleles may be absent",
+        "It has higher diversity, so harmful alleles may be common",
+        "It has lower diversity, so new alleles may arise too often",
+        "It has higher diversity, so natural selection may be blocked"
+      ],
+      "why": "Using few parents lowers genetic diversity, so the breed may lack alleles that help dogs resist the disease. The mixed population has more variation to draw on. Selective breeding does not raise diversity, and it does not create new alleles to meet a need.",
+      "clue": "Think about what variation a population can draw on when conditions change."
+    }
+  },
+  "bio-antibiotic-resistance": {
+    "title": "Antibiotic resistance",
+    "card": [
+      "Antibiotics are drugs that kill bacteria or stop them growing. They do not work on viruses.",
+      "In a large bacterial population, a random mutation may give a few cells a resistant allele. The mutation is not caused by the antibiotic.",
+      "When the antibiotic is used, it kills susceptible bacteria. Resistant bacteria survive, reproduce and pass on the resistant allele.",
+      "Over generations, the resistant allele becomes more common in the population. This is natural selection, with the antibiotic as the selection pressure."
+    ],
+    "remember": "The antibiotic does not create resistance. It selects for resistant bacteria that already exist.",
+    "a": {
+      "q": "A patient takes an antibiotic and most of the bacteria die. A few survive and multiply. Why are the survivors resistant?",
+      "opts": [
+        "They already carried an allele that gave resistance",
+        "They changed their DNA to cope with the antibiotic",
+        "They were exposed to the drug and learned to resist it",
+        "They took in the drug and became stronger over time"
+      ],
+      "why": "The resistant allele was already present in a few cells, from a random mutation. The antibiotic killed the susceptible cells, so the resistant ones survived and reproduced. It did not make the bacteria change on purpose.",
+      "clue": "Did the resistant allele appear before or after the drug was used?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A hospital ward uses the same antibiotic on many patients for a year. The share of resistant bacteria on the ward rises. Which explanation is best?",
+      "opts": [
+        "Resistant bacteria survived and reproduced more than others",
+        "Each bacterium slowly became resistant during its own life",
+        "The drug caused new resistant alleles to form in bacteria",
+        "Susceptible bacteria chose to become resistant to the drug"
+      ],
+      "why": "Resistant bacteria lived through each course of the drug and left more offspring, so the resistant allele became more common. This is natural selection. The tempting option about the drug causing new alleles is wrong, because mutations arise at random and the drug only selects among them.",
+      "clue": "Think about which bacteria are left to reproduce after each course."
+    }
+  },
+  "bio-antigenic-drift-shift": {
+    "title": "Antigenic drift and shift",
+    "card": [
+      "Antigens are molecules on a virus that the immune system recognises. Memory cells made after an infection or vaccine only match antigens they have met before.",
+      [
+        "Antigenic drift",
+        "small changes in viral antigens, caused by point mutations as the virus copies its genetic material. Over time, these build up and the antigens no longer match what the immune system remembers."
+      ],
+      [
+        "Antigenic shift",
+        "a sudden, large change in viral antigens. It happens when two different influenza viruses infect the same cell and swap whole segments of genetic material, producing a new antigen combination."
+      ],
+      "Both changes make older immunity less effective. This is why the influenza vaccine is updated regularly to match the viruses that are circulating."
+    ],
+    "remember": "Drift is small, gradual change from mutation. Shift is sudden, large change from swapped genetic material.",
+    "a": {
+      "q": "Which description fits antigenic drift in an influenza virus?",
+      "opts": [
+        "Point mutations slowly change the viral antigens",
+        "Two viruses swap segments to make a new antigen set",
+        "The host's memory cells change the viral antigens",
+        "Vaccination changes the antigens on the virus"
+      ],
+      "why": "Drift is a gradual build-up of small changes from point mutations. Swapping segments between two viruses describes shift, which is sudden and large. Memory cells and vaccines do not change the virus's antigens.",
+      "clue": "Think small changes that build up over time."
+    },
+    "b": {
+      "d": 3,
+      "q": "A flu season in Geelong is caused by a virus with a very different antigen set. It formed when two flu viruses infected one cell and swapped segments. Why does most of the population have little protection?",
+      "opts": [
+        "Memory cells do not match the new antigens",
+        "Memory cells were destroyed by the earlier viruses",
+        "The new virus does not trigger any immune response",
+        "Point mutations in the host cells removed memory"
+      ],
+      "why": "A sudden big change in antigens is antigenic shift. Memory cells only match antigens they have met, so they do not recognise the new set. The virus can still trigger a new response, but it takes time to build.",
+      "clue": "Memory cells only recognise antigens they have met before."
+    }
+  },
+  "bio-fossil-record": {
+    "title": "The fossil record",
+    "card": [
+      "Fossils are the preserved remains or traces of past organisms. Together they form the fossil record, which shows how life has changed over time.",
+      [
+        "Faunal succession",
+        "fossils appear in the rock layers in a regular order. Different groups of organisms are found in different layers, and the same order is seen in many places."
+      ],
+      [
+        "Index fossils",
+        "fossils of species that were widespread and lived for a short time. Finding one in a rock layer shows the layer formed in that short period."
+      ],
+      [
+        "Transitional fossils",
+        "fossils with features of two groups, such as a fish-like animal with limb bones. They show how one group could give rise to another."
+      ]
+    ],
+    "remember": "The fossil record shows change over time: order of layers, fossils that mark a period, and fossils that link groups.",
+    "a": {
+      "q": "A fossil has features of both an older group and a younger group of animals. What is it called?",
+      "opts": ["A transitional fossil", "An index fossil", "A faunal succession", "A trace fossil"],
+      "why": "A fossil that combines features of two groups is transitional, as it shows a link between them. An index fossil is tempting, but it is used to match the age of rock layers, not to show links between groups.",
+      "clue": "Think about a fossil that sits between two groups."
+    },
+    "b": {
+      "d": 3,
+      "q": "Geologists in Queensland find the same short-lived marine species in rock at two distant sites. What can they conclude?",
+      "opts": [
+        "The two rock layers formed in the same period",
+        "The two sites had the same climate throughout",
+        "The species gave rise to all later marine animals",
+        "The species was rare and lived in one small area"
+      ],
+      "why": "An index fossil lived for a short time and was widespread, so finding it in two layers suggests they formed in the same period. It does not show the climate or that the species was ancestral, and a rare local species would not work as an index fossil.",
+      "clue": "Which features make a fossil useful for matching layers?"
+    }
+  },
+  "bio-relative-absolute-dating": {
+    "title": "Relative and absolute dating",
+    "card": [
+      [
+        "Relative dating",
+        "puts fossils or rock layers in order of age without giving a number of years. It says one is older or younger than another."
+      ],
+      "In undisturbed layers, lower layers are older than upper layers. A matching index fossil also shows that layers in different places are of similar age.",
+      [
+        "Absolute dating",
+        "gives an age in years. It uses radioactive decay, where an unstable isotope changes into another isotope at a steady rate."
+      ],
+      "The time taken for half of an isotope to decay is its half-life. Measuring how much of it remains in a sample shows how old the sample is."
+    ],
+    "remember": "Relative dating gives an order. Absolute dating gives an age in years from decay.",
+    "a": {
+      "q": "A scientist states that fossil X is older than fossil Y because X lies in a lower, undisturbed layer. What type of dating is this?",
+      "opts": ["Relative dating", "Absolute dating", "Radiometric dating", "Half-life dating"],
+      "why": "The scientist gave an order of age from the position of the layers, with no age in years. That is relative dating. Absolute dating would need a measurement of radioactive decay to give an age in years.",
+      "clue": "Is an age in years given?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A volcanic rock beside a fossil in Victoria has one quarter of its original isotope left. The half-life is 10 million years. What is the age of the rock?",
+      "opts": ["20 million years", "10 million years", "30 million years", "40 million years"],
+      "why": "One half-life leaves half of the isotope and two half-lives leave one quarter. Two half-lives of 10 million years is 20 million years. 10 million years is tempting but would leave half remaining.",
+      "clue": "Count how many times the amount has halved."
+    }
+  },
+  "bio-allopatric-speciation": {
+    "title": "Speciation",
+    "card": [
+      "Speciation is the formation of new species. It happens when populations of one species are isolated, so they stop interbreeding and their gene pools diverge.",
+      "Each population faces different selection pressures and different chance changes in alleles. Over time they become so different that they can no longer interbreed to produce fertile offspring.",
+      [
+        "Allopatric",
+        "populations are separated by a physical barrier or distance. Finches on different Galapagos islands diverged this way."
+      ],
+      [
+        "Sympatric",
+        "a new species forms in the same place, with no physical barrier. Two palm species on Lord Howe Island formed this way, in part by growing in different soils."
+      ]
+    ],
+    "remember": "Isolation stops gene flow, so populations diverge. Allopatric: separated by a barrier or distance. Sympatric: in the same place.",
+    "a": {
+      "q": "What must happen between two populations for them to become separate species?",
+      "opts": [
+        "They stop interbreeding and diverge genetically",
+        "They move to separate islands and stay there",
+        "They grow larger than the original species",
+        "They gain new alleles from each other"
+      ],
+      "why": "Speciation needs gene flow to stop so the gene pools diverge. Separate islands are tempting, but that is only one way of isolating populations, as sympatric speciation occurs in one place.",
+      "clue": "Think about what happens to the gene pools."
+    },
+    "b": {
+      "d": 2,
+      "q": "A drought dries the river joining two parts of a lake in Tasmania, leaving its fish in two separate ponds. Over time, the two groups can no longer interbreed to produce fertile offspring. What type of speciation is this?",
+      "opts": [
+        "Allopatric, as dry land became a barrier between them",
+        "Sympatric, as the fish all began in the same lake",
+        "Sympatric, as no fish swam away to a new area",
+        "Not speciation, as the fish were never moved apart"
+      ],
+      "why": "The dry land between the ponds is a physical barrier that stopped gene flow, which is allopatric speciation. Starting in one lake does not make it sympatric, because sympatric speciation happens with no physical barrier at all.",
+      "clue": "Could fish cross from one pond to the other?"
+    }
+  },
+  "bio-comparative-anatomy": {
+    "title": "Comparative anatomy",
+    "card": [
+      "Comparative anatomy compares the body structures of different species. Similar structures can be evidence that species are related.",
+      [
+        "Homologous structure",
+        "a structure with the same basic design and origin in different species, but which may do different jobs. The forelimbs of a human, a bat and a whale are an example."
+      ],
+      [
+        "Vestigial structure",
+        "a structure that has lost most or all of its original use. The tiny hip bones in a whale are an example. It may now have a minor new use, or none."
+      ],
+      "Homologous structures suggest the species inherited the structure from a common ancestor. Vestigial structures suggest the ancestor used the structure and its descendants no longer need it for that original job."
+    ],
+    "remember": "Homologous means shared origin, even if the job differs. Vestigial means the original use has been lost.",
+    "a": {
+      "q": "A bat's wing and a horse's foreleg have the same bone layout but are used for flying and running. What are these structures?",
+      "opts": [
+        "Homologous structures, showing a common ancestor",
+        "Vestigial structures, showing a lost function",
+        "Homologous structures, showing the same function",
+        "Vestigial structures, showing a common ancestor"
+      ],
+      "why": "The bones share the same basic design despite different jobs, so they are homologous and point to a common ancestor. They are not vestigial, because both limbs are still used.",
+      "clue": "Look at the bone layout, not at the job each limb does."
+    },
+    "b": {
+      "d": 3,
+      "q": "Pythons have tiny hip and thigh bones under the skin, ending in small claw-like spurs used in courtship. Lizards have full hip and leg bones used for walking. What do the python's bones best suggest?",
+      "opts": [
+        "Pythons and lizards share an ancestor that had working legs",
+        "Pythons are slowly evolving working legs to walk again",
+        "The bones are not vestigial, as the spurs still have a use",
+        "Pythons and lizards use these leg bones for the same job"
+      ],
+      "why": "The python's leg bones have lost their original use in walking, so they are vestigial, and they match the leg bones of lizards. This suggests both groups descend from an ancestor with working legs. The courtship spurs are a minor new use, not the original job, so they do not stop the bones being vestigial.",
+      "clue": "Ask whether the bones still do their original job of walking."
+    }
+  },
+  "bio-molecular-evidence": {
+    "title": "Molecular evidence",
+    "card": [
+      "DNA is a sequence of bases. Proteins are chains of amino acids, and their order is set by the DNA sequence.",
+      "Mutations add differences to a sequence over time. Two species that share a recent common ancestor have had less time to collect differences.",
+      "So the fewer differences between the DNA or amino acid sequences of two species, the more closely related they are likely to be.",
+      "Scientists line up the same gene or protein in each species and count the differences. For example, human and chimpanzee sequences differ at far fewer sites than human and mouse sequences."
+    ],
+    "remember": "Fewer sequence differences usually means a more recent common ancestor.",
+    "a": {
+      "q": "A protein is compared in species P, Q and R. P and Q differ by 2 amino acids. P and R differ by 14. What does this suggest?",
+      "opts": [
+        "P is more closely related to Q than to R",
+        "P is more closely related to R than to Q",
+        "P and Q share a more distant ancestor than P and R",
+        "P and R have the same DNA sequence"
+      ],
+      "why": "Fewer differences suggest less time since the shared ancestor, so P and Q are more closely related. A larger count, as between P and R, points to a more distant ancestor, not a closer one.",
+      "clue": "Which pair has had less time to collect differences?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A gene is compared across four species. Each count is the number of base differences from the same gene in a koala. Which species is likely the koala's closest relative?",
+      "opts": [
+        "Wombat, with 40 differences",
+        "Kangaroo, with 85 differences",
+        "Platypus, with 190 differences",
+        "Mouse, with 230 differences"
+      ],
+      "why": "The wombat has the fewest differences from the koala, so it likely shares the most recent common ancestor with it. The mouse is tempting only if a student reads a bigger count as closer, but more differences suggest a more distant relationship.",
+      "clue": "Look for the smallest number of differences."
+    }
+  },
+  "bio-phylogenetic-trees": {
+    "title": "Phylogenetic trees",
+    "card": [
+      "A phylogenetic tree is a branching diagram that shows the evolutionary relationships between species or groups.",
+      "Each branch point (node) represents a common ancestor that the groups after it share. The tips of the branches show the species being compared.",
+      "Species that split from a node more recently share a more recent common ancestor. They are more closely related than species whose shared node is further back.",
+      "Closeness of relationship is read from how recent the shared node is, not from how near the tips sit on the page."
+    ],
+    "remember": "Read relatedness from the most recent shared branch point, not from how close the tips look.",
+    "a": {
+      "q": "On a phylogenetic tree, what does a branch point represent?",
+      "opts": [
+        "A common ancestor of the groups that branch from it",
+        "A species that died out before the others",
+        "The species with the most advanced features",
+        "The point where two species became identical"
+      ],
+      "why": "A node is where a common ancestor split into separate lines. It is not a feature of any one species, and it does not mean species became identical.",
+      "clue": "Think about what lies behind the split."
+    },
+    "b": {
+      "d": 3,
+      "q": "On a tree, species P and Q branch from a node. That node and species R branch from an older node. Which statement is correct?",
+      "opts": [
+        "P is more closely related to Q than to R",
+        "P is more closely related to R than to Q",
+        "Q is more closely related to R than to P",
+        "P, Q and R are equally related to each other"
+      ],
+      "why": "P and Q share a more recent common ancestor with each other than either does with R. R only joins them at the older node, so R is more distantly related to both.",
+      "clue": "Find which pair shares the most recent node."
+    }
+  },
+  "bio-mammals-primates-hominins": {
+    "title": "Mammals, primates and hominins",
+    "card": [
+      [
+        "Mammals",
+        "Mammals have hair or fur, mammary glands that make milk, and three middle ear bones. They are warm-blooded."
+      ],
+      [
+        "Primates",
+        "Primates are mammals with grasping hands and feet, nails instead of claws, and forward-facing eyes that give good depth perception. Most also have large brains for their body size."
+      ],
+      [
+        "Hominoids",
+        "Hominoids are primates with no tail and a broad chest. They include gibbons, orangutans, gorillas, chimpanzees and humans."
+      ],
+      [
+        "Hominins",
+        "Hominins are hominoids on the human line after it split from the chimpanzee line. They walked upright on two legs, and modern humans are the only living hominin."
+      ]
+    ],
+    "remember": "Each group sits inside the one before it, so humans are mammals, primates, hominoids and hominins.",
+    "a": {
+      "q": "Which feature do humans share with all primates but NOT with all mammals?",
+      "opts": [
+        "Forward-facing eyes with depth perception",
+        "Mammary glands that make milk",
+        "Three bones in the middle ear",
+        "Hair covering at least part of the body"
+      ],
+      "why": "Forward-facing eyes are a primate feature. Milk, middle ear bones and hair are shared by all mammals, so they do not separate primates from other mammals.",
+      "clue": "Look for the feature that the mammal line does not list."
+    },
+    "b": {
+      "d": 3,
+      "q": "A primate has no tail and a broad chest. It climbs trees, walks on all fours and is not on the human line. Which group does it belong to?",
+      "opts": [
+        "Hominoids, but not hominins",
+        "Hominins, but not hominoids",
+        "Both hominoids and hominins",
+        "Primates, but not hominoids"
+      ],
+      "why": "No tail and a broad chest make this primate a hominoid, like an orangutan. It is not on the human line and does not walk upright, so it is not a hominin. Every hominin is also a hominoid, so no animal can be a hominin without being a hominoid.",
+      "clue": "Check the tail and chest first, then ask if it is on the human line."
+    }
+  },
+  "bio-human-evolution": {
+    "title": "Human evolution",
+    "card": [
+      "Early hominins such as Australopithecus lived in Africa. They walked upright on two legs but had small brains, about the size of a chimpanzee's. Their arms were long compared with their legs.",
+      "Walking upright shows in the bones. The pelvis is short and bowl-shaped, and the spine curves in an S-shape. The foramen magnum, where the spinal cord leaves the skull, sits underneath the skull.",
+      "Members of the genus Homo had larger brains than Australopithecus, and brain size increased over time. Their legs were longer than their arms, and their teeth and jaws became smaller.",
+      "Hominins did not change in one straight line. Several species lived at the same time, and scientists compare their bones to see how their features differ."
+    ],
+    "remember": "Upright walking came before large brains: Australopithecus walked upright with a small brain, and Homo later had larger ones.",
+    "a": {
+      "q": "Which pair of features best shows that a fossil hominin walked upright?",
+      "opts": [
+        "A bowl-shaped pelvis and a foramen magnum under the skull",
+        "Long arms and a foramen magnum at the back of the skull",
+        "A large brain case and long legs compared with the arms",
+        "Small teeth and a large, rounded brain case"
+      ],
+      "why": "A short, bowl-shaped pelvis and a foramen magnum underneath the skull both show the body was held upright. Long arms do not rule out upright walking, and a foramen magnum at the back of the skull does not show it. A large brain is not needed, since Australopithecus walked upright with a small brain.",
+      "clue": "Which bones carry and balance the body's weight?"
+    },
+    "b": {
+      "d": 2,
+      "q": "A fossil hominin from Africa has a small brain, close to a chimpanzee's, but its pelvis and spine show it walked upright. Which genus is it most likely to belong to?",
+      "opts": ["Australopithecus", "Homo", "Neither, as it has a small brain", "Both, as it walked upright"],
+      "why": "Australopithecus walked upright but kept a small brain. Homo had a larger brain, so the small brain points away from Homo. Upright walking alone does not place a fossil in both genera.",
+      "clue": "Which genus walked upright before brains grew large?"
+    }
+  },
+  "bio-contested-fossil-record": {
+    "title": "A contested fossil record",
+    "card": [
+      "Hominin fossils are rare and often broken. Scientists compare bone features to decide which species a fossil belongs to and how it is related to others.",
+      "A new find can change that picture. It may show that a feature appeared earlier or later than thought, or that a fossil sits in a different group.",
+      "Experts can disagree about the same bones. One may see a new species, while another sees a variation within a known one.",
+      "When evidence changes, the human family tree is refined or replaced. This is how science works: ideas are revised when better evidence appears."
+    ],
+    "remember": "A family tree is the best explanation for the evidence so far, and new fossils can change it.",
+    "a": {
+      "q": "What leads scientists to revise the hominin family tree?",
+      "opts": [
+        "New finds give evidence that does not fit the current tree",
+        "Each new fossil is given its own new branch on the tree",
+        "A disagreement between two experts replaces the tree",
+        "Living humans keep evolving, so the old branches move"
+      ],
+      "why": "The tree is built from fossil evidence, so new finds that do not fit it lead to changes. A new fossil does not always need a new branch: it may fit a known species or move a fossil to a different group.",
+      "clue": "Think about what the tree is built from."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two experts study the same partial skull. One says it is a new species. The other says it is an unusual member of a known species. What does this show?",
+      "opts": [
+        "Experts read the same bones in different ways",
+        "One expert has made an error in measuring the skull",
+        "Fossils give no evidence about how species are related",
+        "The skull belongs outside the hominin family tree"
+      ],
+      "why": "Bones are often incomplete, so careful experts can read the same features differently. This does not mean anyone measured wrongly, and it does not make fossils useless as evidence. More finds can later help settle the question.",
+      "clue": "Both experts could be using the evidence carefully."
+    }
+  },
+  "bio-arrival-people-australia": {
+    "title": "Human migration",
+    "card": [
+      "Modern humans (Homo sapiens) first appeared in Africa. Later, groups moved out and spread across the world. Scientists trace these movements using fossils and DNA.",
+      [
+        "Fossils",
+        "The age and location of fossils show when and where people lived. The earliest dates in a region show roughly when people arrived there."
+      ],
+      [
+        "Mitochondrial DNA",
+        "Mitochondrial DNA (mtDNA) is passed on by the mother, with no mixing from the father. It has a relatively high mutation rate, so differences build up between separated groups fairly quickly."
+      ],
+      "Fewer mtDNA differences mean a more recent shared female ancestor, but mtDNA alone does not give dates. With fossil dates, this evidence shows people reached Sahul, the landmass that joined Australia and New Guinea, at least 50,000 years ago. Their descendants include Aboriginal and Torres Strait Islander peoples, part of one of the oldest continuing cultures in the world."
+    ],
+    "remember": "Fossils show when and where people lived. mtDNA shows how closely groups are related.",
+    "a": {
+      "q": "Why is mitochondrial DNA useful for tracing how populations are related?",
+      "opts": [
+        "It comes from the mother, so lineages stay unmixed",
+        "It comes from both parents, so it mixes each generation",
+        "It never mutates, so every population has the same mtDNA",
+        "It is found only in fossils, so it shows their exact age"
+      ],
+      "why": "mtDNA is passed on by the mother without mixing, so mutations build up along female lines and can be compared between groups. If it came from both parents, it would mix every generation and blur those lines.",
+      "clue": "Think about who passes mtDNA on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Population X and population Y have very similar mtDNA, while population Z has many differences from both. What is the best conclusion?",
+      "opts": [
+        "X and Y are more closely related through the female line",
+        "X and Y are more closely related through the male line",
+        "Z has lived in the area for a shorter time than X and Y",
+        "X and Y left Africa earlier than the ancestors of Z did"
+      ],
+      "why": "Fewer mtDNA differences mean a more recent shared ancestor, and mtDNA follows the female line, not the male line. mtDNA alone does not give dates, so it cannot show how long a group lived somewhere or when it left Africa.",
+      "clue": "mtDNA follows one parent only, and it shows relatedness, not timing."
+    }
   }
 };

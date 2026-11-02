@@ -1,0 +1,243 @@
+{
+ "id": "bio-structure-dna-rna",
+ "title": "The structure of DNA and RNA",
+ "brief": "cafe155308e1",
+ "shortlist": [
+  [
+   "bio-dna-structure",
+   0.441
+  ],
+  [
+   "bio-dna-replication",
+   0.389
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00518,
+  "check": 0.01285,
+  "fix": 0.03018,
+  "recheck": 0.0133
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point DNA structure covers only DNA and never mentions RNA or uracil, which the new point requires, so no bank point teaches the full idea and adding RNA would be a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The structure of DNA and RNA",
+  "card": [
+   "Nucleic acids are long chains of small units called nucleotides. Each nucleotide has a sugar, a phosphate group and a nitrogenous base.",
+   [
+    "DNA",
+    "has two strands twisted into a double helix. Its sugar is deoxyribose, and its bases are adenine (A), thymine (T), cytosine (C) and guanine (G)."
+   ],
+   [
+    "RNA",
+    "has one strand. Its sugar is ribose, and it has uracil (U) in place of thymine. Its other bases are A, C and G."
+   ],
+   "In DNA the two strands are held together by hydrogen bonds between bases. A pairs with T, and C pairs with G."
+  ],
+  "remember": "DNA: two strands, deoxyribose, thymine. RNA: one strand, ribose, uracil.",
+  "a": {
+   "q": "A molecule is found to contain uracil. Which conclusion is correct?",
+   "opts": [
+    "It is RNA, because uracil is found only in RNA",
+    "It is DNA, because uracil pairs with adenine in DNA",
+    "It is RNA, because uracil is the sugar in RNA",
+    "It is DNA, because uracil replaces cytosine in DNA"
+   ],
+   "why": "Uracil takes the place of thymine in RNA, so a molecule with uracil is RNA. Uracil does pair with adenine, but that happens in RNA, not DNA.",
+   "clue": "Which base does RNA use in place of thymine?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of nucleic acid is a single strand and has ribose as its sugar. Which base could it contain?",
+   "opts": [
+    "Uracil",
+    "Thymine",
+    "Deoxyribose",
+    "Phosphate"
+   ],
+   "why": "A single strand with ribose is RNA, and RNA contains uracil. Thymine is a base found in DNA, not RNA. Deoxyribose and phosphate are parts of a nucleotide, not bases.",
+   "clue": "Decide if the sample is DNA or RNA first, then pick a base."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is RNA, because uracil is found only in RNA",
+   "also_right": []
+  },
+  "b": {
+   "best": "Uracil",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option says uracil is found 'only' in RNA, but the card says only that RNA has uracil 'in place of' thymine. Uracil can also occur in DNA, through cytosine damage and in some phage genomes. Reword it, for example 'It is RNA, because RNA has uracil in place of thymine'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says uracil pairing with adenine 'happens in RNA, not DNA'. The card does not teach U–A pairing, and RNA uracil also pairs with DNA adenine during transcription, so this line could mislead. Simplify it so it only says DNA has thymine where RNA has uracil."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. Question a's right option uses the absolute 'only in RNA', which goes beyond the card and is not strictly true, and its why makes an oversimplified claim about U–A pairing."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option says uracil is found 'only' in RNA, but the card says only that RNA has uracil 'in place of' thymine. Uracil can also occur in DNA, through cytosine damage and in some phage genomes. Reword it, for example 'It is RNA, because RNA has uracil in place of thymine'.",
+  "Question a, other: The why says uracil pairing with adenine 'happens in RNA, not DNA'. The card does not teach U–A pairing, and RNA uracil also pairs with DNA adenine during transcription, so this line could mislead. Simplify it so it only says DNA has thymine where RNA has uracil."
+ ],
+ "proposal": {
+  "title": "The structure of DNA and RNA",
+  "card": [
+   "Nucleic acids are long chains of small units called nucleotides. Each nucleotide has a sugar, a phosphate group and a nitrogenous base.",
+   [
+    "DNA",
+    "has two strands twisted into a double helix. Its sugar is deoxyribose, and its bases are adenine (A), thymine (T), cytosine (C) and guanine (G)."
+   ],
+   [
+    "RNA",
+    "has one strand. Its sugar is ribose, and it has uracil (U) in place of thymine. Its other bases are A, C and G."
+   ],
+   "In DNA the two strands are held together by hydrogen bonds between bases. A pairs with T, and C pairs with G."
+  ],
+  "remember": "DNA: two strands, deoxyribose, thymine. RNA: one strand, ribose, uracil.",
+  "a": {
+   "q": "A molecule is found to contain uracil. Which conclusion is best supported?",
+   "opts": [
+    "It is RNA, because RNA has uracil in place of thymine",
+    "It is DNA, because DNA has uracil in place of thymine",
+    "It is RNA, because uracil is the sugar in RNA",
+    "It is DNA, because DNA has uracil in place of cytosine"
+   ],
+   "why": "DNA has thymine where RNA has uracil, so uracil points to RNA. Uracil is a base, not a sugar: the sugar in RNA is ribose.",
+   "clue": "Which base does RNA use in place of thymine?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of nucleic acid is a single strand and has ribose as its sugar. Which set of bases would you expect it to contain?",
+   "opts": [
+    "A, U, C and G",
+    "A, T, C and G",
+    "A, T, U and G",
+    "A, U, C and T"
+   ],
+   "why": "A single strand with ribose is RNA, and RNA has A, U, C and G. The set A, T, C and G belongs to DNA, which uses thymine rather than uracil. The other sets drop cytosine or guanine, which RNA also has.",
+   "clue": "Decide if the sample is DNA or RNA first, then check each base."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is RNA, because RNA has uracil in place of thymine",
+    "also_right": []
+   },
+   "b": {
+    "best": "A, U, C and G",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option says uracil is found 'only' in RNA, but the card says only that RNA has uracil 'in place of' thymine. Uracil can also occur in DNA, through cytosine damage and in some phage genomes. Reword it, for example 'It is RNA, because RNA has uracil in place of thymine'."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says uracil pairing with adenine 'happens in RNA, not DNA'. The card does not teach U–A pairing, and RNA uracil also pairs with DNA adenine during transcription, so this line could mislead. Simplify it so it only says DNA has thymine where RNA has uracil."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option says uracil is found 'only' in RNA, but the card says only that RNA has uracil 'in place of' thymine. Uracil can also occur in DNA, through cytosine damage and in some phage genomes. Reword it, for example 'It is RNA, because RNA has uracil in place of thymine'.",
+   "Question a, other: The why says uracil pairing with adenine 'happens in RNA, not DNA'. The card does not teach U–A pairing, and RNA uracil also pairs with DNA adenine during transcription, so this line could mislead. Simplify it so it only says DNA has thymine where RNA has uracil."
+  ]
+ },
+ "final": {
+  "title": "The structure of DNA and RNA",
+  "card": [
+   "Nucleic acids are long chains of small units called nucleotides. Each nucleotide has a sugar, a phosphate group and a nitrogenous base.",
+   [
+    "DNA",
+    "has two strands twisted into a double helix. Its sugar is deoxyribose, and its bases are adenine (A), thymine (T), cytosine (C) and guanine (G)."
+   ],
+   [
+    "RNA",
+    "has one strand. Its sugar is ribose, and it has uracil (U) in place of thymine. Its other bases are A, C and G."
+   ],
+   "In DNA the two strands are held together by hydrogen bonds between bases. A pairs with T, and C pairs with G."
+  ],
+  "remember": "DNA: two strands, deoxyribose, thymine. RNA: one strand, ribose, uracil.",
+  "a": {
+   "q": "A molecule is found to contain uracil. Which conclusion is best supported?",
+   "opts": [
+    "It is RNA, because RNA has uracil in place of thymine",
+    "It is DNA, because DNA has uracil in place of thymine",
+    "It is RNA, because uracil is the sugar in RNA",
+    "It is DNA, because DNA has uracil in place of cytosine"
+   ],
+   "why": "DNA has thymine where RNA has uracil, so uracil points to RNA. Uracil is a base, not a sugar: the sugar in RNA is ribose.",
+   "clue": "Which base does RNA use in place of thymine?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A sample of nucleic acid is a single strand and has ribose as its sugar. Which set of bases would you expect it to contain?",
+   "opts": [
+    "A, U, C and G",
+    "A, T, C and G",
+    "A, T, U and G",
+    "A, U, C and T"
+   ],
+   "why": "A single strand with ribose is RNA, and RNA has A, U, C and G. The set A, T, C and G belongs to DNA, which uses thymine rather than uracil. The other sets drop cytosine or guanine, which RNA also has.",
+   "clue": "Decide if the sample is DNA or RNA first, then check each base."
+  }
+ },
+ "cleared_by": "recheck"
+}

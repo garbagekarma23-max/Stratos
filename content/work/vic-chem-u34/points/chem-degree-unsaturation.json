@@ -1,0 +1,211 @@
+{
+ "id": "chem-degree-unsaturation",
+ "title": "Degree of unsaturation",
+ "brief": "176080a6dbff",
+ "shortlist": [
+  [
+   "chem-carbon-13-nmr",
+   0.3
+  ],
+  [
+   "chem-alkanes-alkenes-alkynes",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.0066,
+  "check": 0.01353,
+  "fix": 0.02694,
+  "recheck": 0.011
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches how iodine absorption measures the number of carbon-carbon double bonds in a fat or oil: the carbon-13 NMR card is about counting carbon environments, and the alkanes, alkenes and alkynes card only introduces unsaturation as a family definition, which is related but not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Degree of unsaturation",
+  "card": [
+   "Fats and oils are made of long hydrocarbon chains. Some chains have C=C double bonds. The more double bonds, the more unsaturated the fat or oil.",
+   "Iodine adds across a C=C double bond. One iodine molecule (I2) reacts with each double bond.",
+   "The iodine number is the mass of iodine, in grams, absorbed by 100 g of fat or oil. A higher iodine number means more double bonds.",
+   "To compare samples, use the same mass of each. The sample that absorbs more iodine has more C=C bonds."
+  ],
+  "remember": "More iodine absorbed means more C=C double bonds, so a higher degree of unsaturation.",
+  "a": {
+   "q": "Which fat or oil is the most unsaturated?",
+   "opts": [
+    "The one with an iodine number of 130",
+    "The one with an iodine number of 90",
+    "The one with an iodine number of 50",
+    "The one with an iodine number of 10"
+   ],
+   "why": "A higher iodine number means more iodine was absorbed, so there are more C=C double bonds. A low number such as 10 shows few double bonds, so that fat is more saturated.",
+   "clue": "Iodine reacts with double bonds."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom tests 100 g samples of oil P, Q and R. They absorb 15 g, 85 g and 60 g of iodine. Which statement is correct?",
+   "opts": [
+    "Q has more C=C bonds than R",
+    "P has more C=C bonds than Q",
+    "R has more C=C bonds than Q",
+    "P has more C=C bonds than R"
+   ],
+   "why": "Equal masses were used, so the sample that absorbed more iodine has more double bonds. Q absorbed 85 g and R absorbed 60 g, so Q has more C=C bonds than R.",
+   "clue": "Rank the samples by iodine absorbed."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The one with an iodine number of 130",
+   "also_right": []
+  },
+  "b": {
+   "best": "Q has more C=C bonds than R",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Fats and oils are made of long hydrocarbon chains\" oversimplifies. Fats and oils are triglycerides: esters of glycerol with fatty acids, which contain long hydrocarbon chains. Year 12 students should not come away thinking fats are hydrocarbons."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer (130; Q has more C=C bonds than R), and the explanations match. One small issue: the card describes fats and oils as made of hydrocarbon chains when they are triglycerides (esters) containing hydrocarbon chains."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Fats and oils are made of long hydrocarbon chains\" oversimplifies. Fats and oils are triglycerides: esters of glycerol with fatty acids, which contain long hydrocarbon chains. Year 12 students should not come away thinking fats are hydrocarbons."
+ ],
+ "proposal": {
+  "title": "Degree of unsaturation",
+  "card": [
+   "Fats and oils are triglycerides: esters of glycerol and three fatty acids. Each fatty acid has a long hydrocarbon chain.",
+   "Some of these chains contain C=C double bonds. The more double bonds, the more unsaturated the fat or oil.",
+   "Iodine (I2) adds across a C=C double bond, one I2 molecule for each double bond. So the amount of iodine absorbed shows how many double bonds there are.",
+   "The iodine number is the mass of iodine, in grams, absorbed by 100 g of fat or oil. With equal masses, the sample that absorbs more iodine has more C=C bonds."
+  ],
+  "remember": "More iodine absorbed means more C=C double bonds, so a higher degree of unsaturation.",
+  "a": {
+   "q": "Which fat or oil is the most unsaturated?",
+   "opts": [
+    "The one with an iodine number of 130",
+    "The one with an iodine number of 90",
+    "The one with an iodine number of 50",
+    "The one with an iodine number of 10"
+   ],
+   "why": "A higher iodine number means more iodine was absorbed, so there are more C=C double bonds. A low number such as 10 shows few double bonds, so that fat is more saturated.",
+   "clue": "Iodine reacts with double bonds."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom tests 100 g samples of oil P, Q and R. They absorb 15 g, 85 g and 60 g of iodine. Which statement is correct?",
+   "opts": [
+    "Q has more C=C bonds than R",
+    "P has more C=C bonds than Q",
+    "R has more C=C bonds than Q",
+    "P has more C=C bonds than R"
+   ],
+   "why": "Equal masses were used, so the sample that absorbed more iodine has more double bonds. Q absorbed 85 g and R absorbed 60 g, so Q has more C=C bonds than R. P absorbed the least, so it has the fewest.",
+   "clue": "Rank the samples by iodine absorbed."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The one with an iodine number of 130",
+    "also_right": []
+   },
+   "b": {
+    "best": "Q has more C=C bonds than R",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Fats and oils are made of long hydrocarbon chains\" oversimplifies. Fats and oils are triglycerides: esters of glycerol with fatty acids, which contain long hydrocarbon chains. Year 12 students should not come away thinking fats are hydrocarbons."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Fats and oils are made of long hydrocarbon chains\" oversimplifies. Fats and oils are triglycerides: esters of glycerol with fatty acids, which contain long hydrocarbon chains. Year 12 students should not come away thinking fats are hydrocarbons."
+  ]
+ },
+ "final": {
+  "title": "Degree of unsaturation",
+  "card": [
+   "Fats and oils are triglycerides: esters of glycerol and three fatty acids. Each fatty acid has a long hydrocarbon chain.",
+   "Some of these chains contain C=C double bonds. The more double bonds, the more unsaturated the fat or oil.",
+   "Iodine (I2) adds across a C=C double bond, one I2 molecule for each double bond. So the amount of iodine absorbed shows how many double bonds there are.",
+   "The iodine number is the mass of iodine, in grams, absorbed by 100 g of fat or oil. With equal masses, the sample that absorbs more iodine has more C=C bonds."
+  ],
+  "remember": "More iodine absorbed means more C=C double bonds, so a higher degree of unsaturation.",
+  "a": {
+   "q": "Which fat or oil is the most unsaturated?",
+   "opts": [
+    "The one with an iodine number of 130",
+    "The one with an iodine number of 90",
+    "The one with an iodine number of 50",
+    "The one with an iodine number of 10"
+   ],
+   "why": "A higher iodine number means more iodine was absorbed, so there are more C=C double bonds. A low number such as 10 shows few double bonds, so that fat is more saturated.",
+   "clue": "Iodine reacts with double bonds."
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom tests 100 g samples of oil P, Q and R. They absorb 15 g, 85 g and 60 g of iodine. Which statement is correct?",
+   "opts": [
+    "Q has more C=C bonds than R",
+    "P has more C=C bonds than Q",
+    "R has more C=C bonds than Q",
+    "P has more C=C bonds than R"
+   ],
+   "why": "Equal masses were used, so the sample that absorbed more iodine has more double bonds. Q absorbed 85 g and R absorbed 60 g, so Q has more C=C bonds than R. P absorbed the least, so it has the fewest.",
+   "clue": "Rank the samples by iodine absorbed."
+  }
+ },
+ "cleared_by": "recheck"
+}

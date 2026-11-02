@@ -1,0 +1,126 @@
+{
+ "id": "mat-vector-product",
+ "title": "The vector product",
+ "brief": "ca1baadc3e91",
+ "shortlist": [
+  [
+   "phys-scalars-vectors-2",
+   0.226
+  ],
+  [
+   "phys-forces-as-vectors",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00528,
+  "check": 0.01256
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the vector (cross) product: one introduces scalars and vectors generally, and the other covers adding forces and resolving them into components, so no existing point teaches a perpendicular vector whose size is the parallelogram area.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The vector product",
+  "card": [
+   "The vector product a × b is a vector, not a number. It is perpendicular to both a and b, and its direction follows the right-hand rule.",
+   "For a = (a1, a2, a3) and b = (b1, b2, b3): a × b = (a2b3 − a3b2, a3b1 − a1b3, a1b2 − a2b1).",
+   "The size |a × b| equals the area of the parallelogram with sides a and b. The area of the triangle they form is half of that. If a × b = 0, the vectors are parallel.",
+   "Example: a = (1, 2, 0) and b = (0, 3, 4). a × b = (2×4 − 0×3, 0×0 − 1×4, 1×3 − 2×0) = (8, −4, 3)."
+  ],
+  "remember": "a × b is a vector perpendicular to a and b. Its size is the parallelogram's area.",
+  "a": {
+   "q": "What is a × b for a = (1, 0, 2) and b = (3, 1, 0)?",
+   "opts": [
+    "(−2, 6, 1)",
+    "(2, −6, −1)",
+    "(−2, 6, −1)",
+    "(2, 6, 1)"
+   ],
+   "why": "First: 0×0 − 2×1 = −2. Second: 2×3 − 1×0 = 6. Third: 1×1 − 0×3 = 1. So a × b = (−2, 6, 1). The option (2, −6, −1) is b × a, which has the order reversed.",
+   "clue": "Work out each component using the pattern on the card, in the order a then b."
+  },
+  "b": {
+   "d": 3,
+   "q": "Vectors p = (2, 0, 0) and q = (0, 3, 0) are two sides of a triangle. What is the area of the triangle?",
+   "opts": [
+    "3 square units",
+    "6 square units",
+    "9 square units",
+    "12 square units"
+   ],
+   "why": "p × q = (0×0 − 0×3, 0×0 − 2×0, 2×3 − 0×0) = (0, 0, 6), so |p × q| = 6, the parallelogram's area. The triangle is half of that, which is 3. The option 6 is the parallelogram's area, not the triangle's.",
+   "clue": "The size of the product gives a parallelogram. A triangle is a fraction of it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(−2, 6, 1)",
+   "also_right": []
+  },
+  "b": {
+   "best": "3 square units",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card's formula, its worked example and both questions' answers check out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The vector product",
+  "card": [
+   "The vector product a × b is a vector, not a number. It is perpendicular to both a and b, and its direction follows the right-hand rule.",
+   "For a = (a1, a2, a3) and b = (b1, b2, b3): a × b = (a2b3 − a3b2, a3b1 − a1b3, a1b2 − a2b1).",
+   "The size |a × b| equals the area of the parallelogram with sides a and b. The area of the triangle they form is half of that. If a × b = 0, the vectors are parallel.",
+   "Example: a = (1, 2, 0) and b = (0, 3, 4). a × b = (2×4 − 0×3, 0×0 − 1×4, 1×3 − 2×0) = (8, −4, 3)."
+  ],
+  "remember": "a × b is a vector perpendicular to a and b. Its size is the parallelogram's area.",
+  "a": {
+   "q": "What is a × b for a = (1, 0, 2) and b = (3, 1, 0)?",
+   "opts": [
+    "(−2, 6, 1)",
+    "(2, −6, −1)",
+    "(−2, 6, −1)",
+    "(2, 6, 1)"
+   ],
+   "why": "First: 0×0 − 2×1 = −2. Second: 2×3 − 1×0 = 6. Third: 1×1 − 0×3 = 1. So a × b = (−2, 6, 1). The option (2, −6, −1) is b × a, which has the order reversed.",
+   "clue": "Work out each component using the pattern on the card, in the order a then b."
+  },
+  "b": {
+   "d": 3,
+   "q": "Vectors p = (2, 0, 0) and q = (0, 3, 0) are two sides of a triangle. What is the area of the triangle?",
+   "opts": [
+    "3 square units",
+    "6 square units",
+    "9 square units",
+    "12 square units"
+   ],
+   "why": "p × q = (0×0 − 0×3, 0×0 − 2×0, 2×3 − 0×0) = (0, 0, 6), so |p × q| = 6, the parallelogram's area. The triangle is half of that, which is 3. The option 6 is the parallelogram's area, not the triangle's.",
+   "clue": "The size of the product gives a parallelogram. A triangle is a fraction of it."
+  }
+ },
+ "cleared_by": "checker"
+}

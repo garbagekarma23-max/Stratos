@@ -1,0 +1,233 @@
+{
+ "id": "acc-accrued-revenue",
+ "title": "Accrued revenue",
+ "brief": "587e764d34b6",
+ "shortlist": [
+  [
+   "acc-revenue-expenses",
+   0.339
+  ],
+  [
+   "acc-profit-cash-basis",
+   0.284
+  ],
+  [
+   "acc-cash-profit",
+   0.247
+  ],
+  [
+   "bus-profitability-management",
+   0.223
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00527,
+  "check": 0.0192,
+  "fix": 0.02753,
+  "recheck": 0.01157
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank points teach that revenue is earned when delivered, but none covers recording accrued revenue as an asset at balance day and clearing it when cash arrives, which is a new step at a deeper Units 3 and 4 level.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Accrued revenue",
+  "card": [
+   "Accrued revenue is revenue a business has earned by balance day but has not yet received in cash. The service has been done, but the money has not arrived.",
+   "On balance day, record the revenue in the period it was earned. Debit an asset account such as Accrued revenue (or Accounts receivable), and credit the revenue account.",
+   "The asset shows that the business is owed money. Revenue is higher in the period it was earned, even though no cash has come in.",
+   "In the next period, when the cash arrives, debit Cash at bank and credit the asset account. This clears the asset. No revenue is recorded again, as it was already counted."
+  ],
+  "remember": "Earned but not received: record revenue and an asset now, then clear the asset when the cash arrives.",
+  "a": {
+   "q": "On 30 June, Priya's Tutoring has earned $600 in fees that the client will pay in July. How is this recorded on 30 June?",
+   "opts": [
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Fee revenue, credit Accrued revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The fees are earned in June, so revenue is credited. The business is owed $600, so an asset is debited. Cash at bank is wrong because no cash has been received yet.",
+   "clue": "Money is owed to the business, and no cash has come in."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon's Landscaping mowed a client's lawns in June and will be paid $900 in July. In July the cash arrives. What is recorded in July?",
+   "opts": [
+    "Debit Cash at bank, credit Accrued revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The revenue was recorded in June, so in July the cash clears the asset: debit Cash at bank and credit Accrued revenue. Crediting Fee revenue is tempting, but it would count the same revenue twice.",
+   "clue": "The revenue was already recorded in June."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit Accrued revenue, credit Fee revenue",
+   "also_right": []
+  },
+  "b": {
+   "best": "Debit Cash at bank, credit Accrued revenue",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card offers 'Accrued revenue (or Accounts receivable)' as interchangeable for the balance day entry. In VCE Accounting, Accrued revenue is its own current asset account for revenue earned but not yet received. Accounts receivable is recorded at the time of an invoiced credit sale, not as a balance day adjustment. Offering it as an alternative may confuse students in exams."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem never says that a balance day adjustment was recorded on 30 June, or that June is the end of the reporting period. Without the clue, 'Debit Cash at bank, credit Fee revenue' is defensible. The stem should state that accrued revenue of $900 was recorded on 30 June."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers are correct. The card wrongly suggests Accounts receivable can replace Accrued revenue in the balance day entry. Question b's stem should say the accrued revenue was recorded on 30 June, rather than leaving that to the clue."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card offers 'Accrued revenue (or Accounts receivable)' as interchangeable for the balance day entry. In VCE Accounting, Accrued revenue is its own current asset account for revenue earned but not yet received. Accounts receivable is recorded at the time of an invoiced credit sale, not as a balance day adjustment. Offering it as an alternative may confuse students in exams.",
+  "Question b, wording: The stem never says that a balance day adjustment was recorded on 30 June, or that June is the end of the reporting period. Without the clue, 'Debit Cash at bank, credit Fee revenue' is defensible. The stem should state that accrued revenue of $900 was recorded on 30 June."
+ ],
+ "proposal": {
+  "title": "Accrued revenue",
+  "card": [
+   "Accrued revenue is revenue a business has earned by balance day but has not yet received in cash. The service has been done, but the money has not arrived.",
+   "On balance day, record the revenue in the period it was earned. Debit Accrued revenue, a current asset account, and credit the revenue account.",
+   "The asset shows that the business is owed money. Revenue is higher in the period it was earned, even though no cash has come in.",
+   "In the next period, when the cash arrives, debit Cash at bank and credit Accrued revenue. This clears the asset. No revenue is recorded again, as it was already counted."
+  ],
+  "remember": "Earned but not received: record revenue and an asset now, then clear the asset when the cash arrives.",
+  "a": {
+   "q": "On 30 June, Priya's Tutoring has earned $600 in fees that the client will pay in July. How is this recorded on 30 June?",
+   "opts": [
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Fee revenue, credit Accrued revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The fees are earned in June, so revenue is credited. The business is owed $600, so the Accrued revenue asset is debited. Cash at bank is wrong because no cash has been received yet.",
+   "clue": "Money is owed to the business, and no cash has come in."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon's Lawn Care has a 30 June balance day. On 30 June it recorded accrued revenue of $900 for lawns mowed in June. The client pays the $900 in July. What is recorded in July?",
+   "opts": [
+    "Debit Cash at bank, credit Accrued revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The revenue was recorded on 30 June, so in July the cash clears the asset: debit Cash at bank and credit Accrued revenue. Crediting Fee revenue is tempting, but it would count the same revenue twice.",
+   "clue": "What happens to the amount owed once the client pays?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Debit Accrued revenue, credit Fee revenue",
+    "also_right": []
+   },
+   "b": {
+    "best": "Debit Cash at bank, credit Accrued revenue",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card offers 'Accrued revenue (or Accounts receivable)' as interchangeable for the balance day entry. In VCE Accounting, Accrued revenue is its own current asset account for revenue earned but not yet received. Accounts receivable is recorded at the time of an invoiced credit sale, not as a balance day adjustment. Offering it as an alternative may confuse students in exams."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem never says that a balance day adjustment was recorded on 30 June, or that June is the end of the reporting period. Without the clue, 'Debit Cash at bank, credit Fee revenue' is defensible. The stem should state that accrued revenue of $900 was recorded on 30 June."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card offers 'Accrued revenue (or Accounts receivable)' as interchangeable for the balance day entry. In VCE Accounting, Accrued revenue is its own current asset account for revenue earned but not yet received. Accounts receivable is recorded at the time of an invoiced credit sale, not as a balance day adjustment. Offering it as an alternative may confuse students in exams.",
+   "Question b, wording: The stem never says that a balance day adjustment was recorded on 30 June, or that June is the end of the reporting period. Without the clue, 'Debit Cash at bank, credit Fee revenue' is defensible. The stem should state that accrued revenue of $900 was recorded on 30 June."
+  ]
+ },
+ "final": {
+  "title": "Accrued revenue",
+  "card": [
+   "Accrued revenue is revenue a business has earned by balance day but has not yet received in cash. The service has been done, but the money has not arrived.",
+   "On balance day, record the revenue in the period it was earned. Debit Accrued revenue, a current asset account, and credit the revenue account.",
+   "The asset shows that the business is owed money. Revenue is higher in the period it was earned, even though no cash has come in.",
+   "In the next period, when the cash arrives, debit Cash at bank and credit Accrued revenue. This clears the asset. No revenue is recorded again, as it was already counted."
+  ],
+  "remember": "Earned but not received: record revenue and an asset now, then clear the asset when the cash arrives.",
+  "a": {
+   "q": "On 30 June, Priya's Tutoring has earned $600 in fees that the client will pay in July. How is this recorded on 30 June?",
+   "opts": [
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Fee revenue, credit Accrued revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The fees are earned in June, so revenue is credited. The business is owed $600, so the Accrued revenue asset is debited. Cash at bank is wrong because no cash has been received yet.",
+   "clue": "Money is owed to the business, and no cash has come in."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon's Lawn Care has a 30 June balance day. On 30 June it recorded accrued revenue of $900 for lawns mowed in June. The client pays the $900 in July. What is recorded in July?",
+   "opts": [
+    "Debit Cash at bank, credit Accrued revenue",
+    "Debit Cash at bank, credit Fee revenue",
+    "Debit Accrued revenue, credit Fee revenue",
+    "Debit Accrued revenue, credit Cash at bank"
+   ],
+   "why": "The revenue was recorded on 30 June, so in July the cash clears the asset: debit Cash at bank and credit Accrued revenue. Crediting Fee revenue is tempting, but it would count the same revenue twice.",
+   "clue": "What happens to the amount owed once the client pays?"
+  }
+ },
+ "cleared_by": "recheck"
+}

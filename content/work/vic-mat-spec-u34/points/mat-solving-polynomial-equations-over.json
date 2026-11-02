@@ -1,0 +1,214 @@
+{
+ "id": "mat-solving-polynomial-equations-over",
+ "title": "Solving polynomial equations over C",
+ "brief": "1201a781868d",
+ "shortlist": [
+  [
+   "mat-solving-quadratics-over-complex",
+   0.323
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.239
+  ],
+  [
+   "mat-cubic-polynomial-graphs",
+   0.222
+  ],
+  [
+   "mat-simultaneous-linear-equations",
+   0.216
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b wording, a other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.0053,
+  "check": 0.01499,
+  "fix": 0.01772
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank card only solves quadratics over C at Units 1 and 2 depth, while the new point needs the conjugate root theorem for general polynomials with real coefficients, including factorising into quadratic factors, which is a broader idea at Specialist Unit 3 depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Solving polynomial equations over C",
+  "card": [
+   "A quadratic with real coefficients and a negative discriminant has complex roots. Complete the square or use the formula, and write √(−k) as i√k.",
+   "Conjugate root theorem: if a polynomial has real coefficients and a + bi is a root, then a − bi is also a root. Non-real roots come in pairs.",
+   "A conjugate pair a ± bi gives the real quadratic factor x² − 2ax + (a² + b²). Divide the polynomial by this factor to find the remaining roots.",
+   "Example: x³ − 2x² + 4x − 8 = 0. Try x = 2: 8 − 8 + 8 − 8 = 0, so (x − 2) is a factor. Dividing gives x² + 4 = 0, so x = ±2i. The roots are 2, 2i and −2i."
+  ],
+  "remember": "Real coefficients mean non-real roots come in conjugate pairs, and each pair gives a real quadratic factor.",
+  "a": {
+   "q": "A cubic with real coefficients has roots 3 and 1 + 2i. What is the third root?",
+   "opts": [
+    "1 − 2i",
+    "−1 + 2i",
+    "−1 − 2i",
+    "−3"
+   ],
+   "why": "The coefficients are real, so the conjugate of 1 + 2i must also be a root. The conjugate changes only the sign of the imaginary part, giving 1 − 2i. Option −1 − 2i is the negative, not the conjugate.",
+   "clue": "Change only the sign of the imaginary part."
+  },
+  "b": {
+   "d": 3,
+   "q": "A quartic with real coefficients has roots 2 + i and −3i. What is the smallest possible degree of its real quadratic factor from the first root, and what is that factor?",
+   "opts": [
+    "x² − 4x + 5",
+    "x² + 4x + 5",
+    "x² − 4x + 3",
+    "x² − 2x + 5"
+   ],
+   "why": "The roots are 2 ± i, so the sum is 4 and the product is 2² + 1² = 5. The factor is x² − 4x + 5. Option x² + 4x + 5 has the wrong sign on the middle term, since the sum of roots is subtracted.",
+   "clue": "Factor is x² − (sum of roots)x + (product of roots)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1 − 2i",
+   "also_right": []
+  },
+  "b": {
+   "best": "x² − 4x + 5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks for 'the smallest possible degree of its real quadratic factor' and the factor itself. A quadratic factor always has degree 2, so the first part makes no sense, and the options only give factors. Ask simply: 'What is the real quadratic factor from the root 2 + i?'"
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Change only the sign of the imaginary part' tells students exactly how to get the answer from 1 + 2i. A student could pick 1 − 2i without knowing the conjugate root theorem."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths on the card and both answers are correct. Question b's wording about 'smallest possible degree' is confusing and should be cut, and question a's clue gives away the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks for 'the smallest possible degree of its real quadratic factor' and the factor itself. A quadratic factor always has degree 2, so the first part makes no sense, and the options only give factors. Ask simply: 'What is the real quadratic factor from the root 2 + i?'",
+  "Question a, other: The clue 'Change only the sign of the imaginary part' tells students exactly how to get the answer from 1 + 2i. A student could pick 1 − 2i without knowing the conjugate root theorem."
+ ],
+ "proposal": {
+  "title": "Solving polynomial equations over C",
+  "card": [
+   "A quadratic with real coefficients and a negative discriminant has complex roots. Complete the square or use the formula, and write √(−k) as i√k.",
+   "Conjugate root theorem: if a polynomial has real coefficients and a + bi is a root, then a − bi is also a root. Non-real roots come in pairs.",
+   "A conjugate pair a ± bi gives the real quadratic factor x² − 2ax + (a² + b²). Divide the polynomial by this factor to find the remaining roots.",
+   "Example: x³ − 2x² + 4x − 8 = 0. Try x = 2: 8 − 8 + 8 − 8 = 0, so (x − 2) is a factor. Dividing gives x² + 4 = 0, so x = ±2i. The roots are 2, 2i and −2i."
+  ],
+  "remember": "Real coefficients mean non-real roots come in conjugate pairs, and each pair gives a real quadratic factor.",
+  "a": {
+   "q": "A cubic with real coefficients has roots 3 and 1 + 2i. What is the third root?",
+   "opts": [
+    "1 − 2i",
+    "−1 + 2i",
+    "−1 − 2i",
+    "−3"
+   ],
+   "why": "The coefficients are real, so the conjugate of 1 + 2i must also be a root. The conjugate changes only the sign of the imaginary part, giving 1 − 2i. Option −1 − 2i is the negative, not the conjugate.",
+   "clue": "What does the conjugate root theorem say about a non-real root?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A quartic with real coefficients has roots 2 + i and −3i. What is the real quadratic factor from the root 2 + i?",
+   "opts": [
+    "x² − 4x + 5",
+    "x² + 4x + 5",
+    "x² − 4x + 3",
+    "x² − 2x + 5"
+   ],
+   "why": "The roots 2 ± i form a conjugate pair with a = 2 and b = 1. Then x² − 2ax + (a² + b²) gives x² − 4x + 5. Option x² − 4x + 3 uses a² − b², but (2 + i)(2 − i) = 4 + 1 = 5.",
+   "clue": "Pair 2 + i with its conjugate, then find a and b."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks for 'the smallest possible degree of its real quadratic factor' and the factor itself. A quadratic factor always has degree 2, so the first part makes no sense, and the options only give factors. Ask simply: 'What is the real quadratic factor from the root 2 + i?'"
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Change only the sign of the imaginary part' tells students exactly how to get the answer from 1 + 2i. A student could pick 1 − 2i without knowing the conjugate root theorem."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks for 'the smallest possible degree of its real quadratic factor' and the factor itself. A quadratic factor always has degree 2, so the first part makes no sense, and the options only give factors. Ask simply: 'What is the real quadratic factor from the root 2 + i?'",
+   "Question a, other: The clue 'Change only the sign of the imaginary part' tells students exactly how to get the answer from 1 + 2i. A student could pick 1 − 2i without knowing the conjugate root theorem."
+  ]
+ },
+ "final": {
+  "title": "Solving polynomial equations over C",
+  "card": [
+   "A quadratic with real coefficients and a negative discriminant has complex roots. Complete the square or use the formula, and write √(−k) as i√k.",
+   "Conjugate root theorem: if a polynomial has real coefficients and a + bi is a root, then a − bi is also a root. Non-real roots come in pairs.",
+   "A conjugate pair a ± bi gives the real quadratic factor x² − 2ax + (a² + b²). Divide the polynomial by this factor to find the remaining roots.",
+   "Example: x³ − 2x² + 4x − 8 = 0. Try x = 2: 8 − 8 + 8 − 8 = 0, so (x − 2) is a factor. Dividing gives x² + 4 = 0, so x = ±2i. The roots are 2, 2i and −2i."
+  ],
+  "remember": "Real coefficients mean non-real roots come in conjugate pairs, and each pair gives a real quadratic factor.",
+  "a": {
+   "q": "A cubic with real coefficients has roots 3 and 1 + 2i. What is the third root?",
+   "opts": [
+    "1 − 2i",
+    "−1 + 2i",
+    "−1 − 2i",
+    "−3"
+   ],
+   "why": "The coefficients are real, so the conjugate of 1 + 2i must also be a root. The conjugate changes only the sign of the imaginary part, giving 1 − 2i. Option −1 − 2i is the negative, not the conjugate.",
+   "clue": "What does the conjugate root theorem say about a non-real root?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A quartic with real coefficients has roots 2 + i and −3i. What is the real quadratic factor from the root 2 + i?",
+   "opts": [
+    "x² − 4x + 5",
+    "x² + 4x + 5",
+    "x² − 4x + 3",
+    "x² − 2x + 5"
+   ],
+   "why": "The roots 2 ± i form a conjugate pair with a = 2 and b = 1. Then x² − 2ax + (a² + b²) gives x² − 4x + 5. Option x² − 4x + 3 uses a² − b², but (2 + i)(2 − i) = 4 + 1 = 5.",
+   "clue": "Pair 2 + i with its conjugate, then find a and b."
+  }
+ },
+ "cleared_by": "auto"
+}

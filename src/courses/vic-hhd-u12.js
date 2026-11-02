@@ -21,8 +21,25 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Understanding health and wellbeing",
       "chapters": [
-        {"id": "vic-hhd-u12-1-1", "title": "Concepts of health", "check": "checked", "points": []},
-        {"id": "vic-hhd-u12-1-2-2", "title": "Measuring youth health", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u12-1-1",
+          "title": "Concepts of health",
+          "check": "checked",
+          "points": [
+            "hhd-who-definition-health",
+            "hms-dimensions-health",
+            "hms-health-as-dynamic-subjective",
+            "hhd-prerequisites-health",
+            "hhd-youth-perspectives-health",
+            "hhd-aboriginal-torres-strait-islander"
+          ]
+        },
+        {
+          "id": "vic-hhd-u12-1-2-2",
+          "title": "Measuring youth health",
+          "check": "checked",
+          "points": ["hhd-indicators-youth-health", "hhd-health-status-australia-s", "hhd-factors-affecting-youth-health"]
+        },
         {"id": "vic-hhd-u12-1-3", "title": "Youth health and wellbeing", "check": "checked", "points": []},
         {
           "id": "vic-hhd-u12-1-2",
@@ -30,17 +47,53 @@ MADE_COURSES.push({
           "check": "checked",
           "points": ["hhd-carbohydrates", "hhd-fats", "hhd-protein", "hhd-water", "hhd-vitamins", "hhd-minerals"]
         },
-        {"id": "vic-hhd-u12-1-5", "title": "Healthy eating", "check": "checked", "points": []}
+        {
+          "id": "vic-hhd-u12-1-5",
+          "title": "Healthy eating",
+          "check": "checked",
+          "points": [
+            "hhd-australian-dietary-guidelines",
+            "hhd-australian-guide-healthy-eating",
+            "hhd-healthy-eating-pyramid-health",
+            "hhd-judging-nutrition-information",
+            "hhd-influences-food-choices",
+            "hhd-marketing-food-young-people"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Managing health and development",
       "chapters": [
-        {"id": "vic-hhd-u12-2-1", "title": "The lifespan", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u12-2-1",
+          "title": "The lifespan",
+          "check": "checked",
+          "points": [
+            "hhd-growth-development-compared",
+            "hhd-stages-lifespan",
+            "hhd-perceptions-youth-adulthood",
+            "hhd-physical-development",
+            "hhd-social-emotional-development",
+            "hhd-intellectual-development",
+            "hhd-move-from-youth-adulthood"
+          ]
+        },
         {"id": "vic-hhd-u12-2-2-2", "title": "Relationships and parenting", "check": "checked", "points": []},
         {"id": "vic-hhd-u12-2-3", "title": "Early life", "check": "checked", "points": []},
         {"id": "vic-hhd-u12-2-2", "title": "Australia's health system", "check": "checked", "points": []},
-        {"id": "vic-hhd-u12-2-5", "title": "Youth health literacy", "check": "checked", "points": []}
+        {
+          "id": "vic-hhd-u12-2-5",
+          "title": "Youth health literacy",
+          "check": "checked",
+          "points": [
+            "hhd-local-services-young-people",
+            "hhd-young-people-health-services",
+            "hhd-rights-responsibilities-health-care",
+            "hhd-digital-health",
+            "hhd-complaints-redress"
+          ]
+        }
       ]
     }
   ]

@@ -1,0 +1,124 @@
+{
+ "id": "mat-boxplots-outliers",
+ "title": "Boxplots and outliers",
+ "brief": "1bcef76d8038",
+ "shortlist": [
+  [
+   "mat-shape-distribution",
+   0.407
+  ],
+  [
+   "mat-spread-box-plots",
+   0.299
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00896,
+  "check": 0.01149
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The outlier rule appears in mat-shape-distribution, but that card is mainly about distribution shape, and mat-spread-box-plots says whiskers reach the lowest and highest scores, which conflicts with drawing outliers as separate points, so neither card teaches this point as briefed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Boxplots and outliers",
+  "card": [
+   "The IQR is Q3 − Q1. An outlier is a value below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR. These two numbers are the fences.",
+   "Example: Q1 = 20 and Q3 = 32. The IQR is 12 and 1.5 × 12 = 18. The fences are 20 − 18 = 2 and 32 + 18 = 50.",
+   "A value exactly on a fence is not an outlier. It must be beyond the fence, so 50 is not an outlier but 51 is.",
+   "On a boxplot, outliers are drawn as separate points. The whiskers stop at the smallest and largest values that are not outliers."
+  ],
+  "remember": "Find the IQR, build the fences with 1.5 × IQR, and plot anything beyond them as a point.",
+  "a": {
+   "q": "A data set has Q1 = 40 and Q3 = 52. What is the upper fence for outliers?",
+   "opts": [
+    "70",
+    "64",
+    "88",
+    "18"
+   ],
+   "why": "IQR = 52 − 40 = 12, and 1.5 × 12 = 18. The upper fence is 52 + 18 = 70. Adding only the IQR gives 64, which skips the 1.5.",
+   "clue": "Add 1.5 × IQR to Q3."
+  },
+  "b": {
+   "d": 3,
+   "q": "A boxplot of daily bike hires has Q1 = 15 and Q3 = 27. Which value would be drawn as a separate point?",
+   "opts": [
+    "46",
+    "45",
+    "44",
+    "42"
+   ],
+   "why": "IQR = 12, so the upper fence is 27 + 18 = 45. Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
+   "clue": "A value on the fence is not beyond it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "70",
+   "also_right": []
+  },
+  "b": {
+   "best": "46",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The fences, the strict 'beyond the fence' rule and the whisker convention match the VCE General Mathematics treatment, and both answers (70 and 46) check out."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Boxplots and outliers",
+  "card": [
+   "The IQR is Q3 − Q1. An outlier is a value below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR. These two numbers are the fences.",
+   "Example: Q1 = 20 and Q3 = 32. The IQR is 12 and 1.5 × 12 = 18. The fences are 20 − 18 = 2 and 32 + 18 = 50.",
+   "A value exactly on a fence is not an outlier. It must be beyond the fence, so 50 is not an outlier but 51 is.",
+   "On a boxplot, outliers are drawn as separate points. The whiskers stop at the smallest and largest values that are not outliers."
+  ],
+  "remember": "Find the IQR, build the fences with 1.5 × IQR, and plot anything beyond them as a point.",
+  "a": {
+   "q": "A data set has Q1 = 40 and Q3 = 52. What is the upper fence for outliers?",
+   "opts": [
+    "70",
+    "64",
+    "88",
+    "18"
+   ],
+   "why": "IQR = 52 − 40 = 12, and 1.5 × 12 = 18. The upper fence is 52 + 18 = 70. Adding only the IQR gives 64, which skips the 1.5.",
+   "clue": "Add 1.5 × IQR to Q3."
+  },
+  "b": {
+   "d": 3,
+   "q": "A boxplot of daily bike hires has Q1 = 15 and Q3 = 27. Which value would be drawn as a separate point?",
+   "opts": [
+    "46",
+    "45",
+    "44",
+    "42"
+   ],
+   "why": "IQR = 12, so the upper fence is 27 + 18 = 45. Only 46 is above it. The value 45 is on the fence, so it is not an outlier.",
+   "clue": "A value on the fence is not beyond it."
+  }
+ },
+ "cleared_by": "checker"
+}

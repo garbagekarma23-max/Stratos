@@ -1,0 +1,144 @@
+{
+ "id": "mat-quick-estimates",
+ "title": "Quick estimates",
+ "brief": "1193c756a4b6",
+ "shortlist": [
+  [
+   "mat-estimating-rounding",
+   0.372
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00559,
+  "check": 0.00758
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers rounding to the nearest place and quick checking with one-digit estimates, but it does not teach interval estimates or rounding up and down (ceiling and floor), which the new point requires, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Quick estimates",
+  "card": [
+   [
+    "Leading digit",
+    "round each number to its first digit, then work with those. For 6.8 × 31, think 7 × 30 = 210."
+   ],
+   [
+    "Interval",
+    "give a low and a high value that the answer must sit between. Round the numbers down for the low value and up for the high value."
+   ],
+   [
+    "Ceiling",
+    "round up to the next whole unit. Use it when a part unit still needs a whole one, such as buses or boxes."
+   ],
+   [
+    "Floor",
+    "round down to the whole unit. Use it when only complete units count, such as full packs you can fill."
+   ]
+  ],
+  "remember": "Round simply to estimate. Round up when you need enough, down when only whole ones count.",
+  "a": {
+   "q": "Which is the best leading-digit estimate of 48 × 21?",
+   "opts": [
+    "1000",
+    "800",
+    "1200",
+    "500"
+   ],
+   "why": "Round 48 to 50 and 21 to 20. Then 50 × 20 = 1000. The answer 800 would come from rounding 48 down to 40, which is too rough.",
+   "clue": "Round each number to one digit followed by zeros."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia needs to move 130 students in vans that each hold 12. How many vans does she need?",
+   "opts": [
+    "11",
+    "10",
+    "12",
+    "130"
+   ],
+   "why": "130 ÷ 12 is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
+   "clue": "Would a part-full van still be needed?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1000",
+   "also_right": []
+  },
+  "b": {
+   "best": "11",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Quick estimates",
+  "card": [
+   [
+    "Leading digit",
+    "round each number to its first digit, then work with those. For 6.8 × 31, think 7 × 30 = 210."
+   ],
+   [
+    "Interval",
+    "give a low and a high value that the answer must sit between. Round the numbers down for the low value and up for the high value."
+   ],
+   [
+    "Ceiling",
+    "round up to the next whole unit. Use it when a part unit still needs a whole one, such as buses or boxes."
+   ],
+   [
+    "Floor",
+    "round down to the whole unit. Use it when only complete units count, such as full packs you can fill."
+   ]
+  ],
+  "remember": "Round simply to estimate. Round up when you need enough, down when only whole ones count.",
+  "a": {
+   "q": "Which is the best leading-digit estimate of 48 × 21?",
+   "opts": [
+    "1000",
+    "800",
+    "1200",
+    "500"
+   ],
+   "why": "Round 48 to 50 and 21 to 20. Then 50 × 20 = 1000. The answer 800 would come from rounding 48 down to 40, which is too rough.",
+   "clue": "Round each number to one digit followed by zeros."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia needs to move 130 students in vans that each hold 12. How many vans does she need?",
+   "opts": [
+    "11",
+    "10",
+    "12",
+    "130"
+   ],
+   "why": "130 ÷ 12 is about 10.83. Ten vans seat only 120, so 10 students would be left behind. Round up to 11, as the ceiling gives. The answer 10 rounds down.",
+   "clue": "Would a part-full van still be needed?"
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -1,0 +1,291 @@
+{
+ "id": "pe-training-methods",
+ "title": "Training methods",
+ "brief": "1cc702c583d5",
+ "shortlist": [
+  [
+   "pe-health-related-fitness",
+   0.213
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:05Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card fact)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01176,
+  "check": 0.03043,
+  "fix": 0.03863,
+  "recheck": 0.01591
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point defines the health-related fitness components and does not teach the training methods (continuous, interval, fartlek, circuit, resistance, plyometric, flexibility) or which fitness components each one builds, so it is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: 'Circuit training ... mainly builds muscular endurance' is too narrow. In VCE, a circuit can be designed to target different components, such as aerobic power, strength or muscular endurance, depending on the stations and the work and rest times. Saying it 'can be designed to build' these components would be more accurate.",
+ "rejected": {
+  "title": "Training methods",
+  "card": [
+   "Continuous training is steady work without rest, such as a 30 minute jog, and builds aerobic fitness. Fartlek adds changes of speed, building aerobic fitness and some anaerobic capacity.",
+   "Interval training alternates hard work periods with rest or easier periods. It can build aerobic or anaerobic fitness, depending on the work and rest times.",
+   "Circuit training moves through stations and mainly builds muscular endurance. Resistance training builds strength, the most force a muscle can produce.",
+   "Plyometric training uses fast jumps and bounds to build power, which is producing force quickly. Flexibility training, such as stretching, builds how far a joint can move."
+  ],
+  "remember": "Match the method to the fitness component the activity needs.",
+  "a": {
+   "q": "Priya plays volleyball and wants to get off the ground faster and higher to block spikes. Which method targets this most directly?",
+   "opts": [
+    "Plyometric training",
+    "Resistance training",
+    "Circuit training",
+    "Continuous training"
+   ],
+   "why": "Getting off the ground fast and high needs power, which is producing force quickly, and plyometric training builds power. Resistance training is tempting, but it mainly builds strength, the most force a muscle can produce, not how fast that force is produced.",
+   "clue": "Does she need the most force, or force produced quickly?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ella, a hurdler, keeps clipping hurdles because tight hamstrings stop her lifting her lead leg high enough. Which method suits her best?",
+   "opts": [
+    "Flexibility training",
+    "Resistance training",
+    "Plyometric training",
+    "Circuit training"
+   ],
+   "why": "Her problem is that her hip cannot move far enough, and flexibility training such as stretching builds how far a joint can move. Resistance training is tempting because it works the muscles, but it builds strength, not flexibility.",
+   "clue": "Is her leg limited by a lack of force or by tight muscles?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, fact: 'Circuit training ... mainly builds muscular endurance' is too narrow. In VCE, a circuit can be designed to target different components, such as aerobic power, strength or muscular endurance, depending on the stations and the work and rest times. Saying it 'can be designed to build' these components would be more accurate."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Training methods",
+     "card": [
+      [
+       "Continuous",
+       "steady work without rest, such as a 30 minute jog. It builds aerobic fitness."
+      ],
+      [
+       "Interval",
+       "hard work periods followed by rest or easier periods. It can build aerobic or anaerobic fitness, depending on the work and rest times."
+      ],
+      [
+       "Fartlek",
+       "continuous activity with changes of speed, often over varied ground. It builds aerobic fitness and some anaerobic capacity."
+      ],
+      [
+       "Others",
+       "Circuit training moves through stations and builds muscular endurance. Resistance training builds strength. Plyometrics use jumps and bounds to build power. Flexibility training builds range of movement."
+      ]
+     ],
+     "remember": "Choose the method that builds the fitness component the sport needs.",
+     "a": {
+      "q": "Which training method mainly builds muscular power through jumps and bounds?",
+      "opts": [
+       "Plyometric training",
+       "Resistance training",
+       "Circuit training",
+       "Flexibility training"
+      ],
+      "why": "Plyometrics use fast jumps and bounds to build power. Resistance training mainly builds strength, so it is the tempting choice, but it is not based on jumping.",
+      "clue": "Think of box jumps and bounding."
+     },
+     "b": {
+      "d": 2,
+      "q": "Tom plays basketball and wants to improve his range of movement in his hips and hamstrings. Which method suits this best?",
+      "opts": [
+       "Flexibility training",
+       "Continuous training",
+       "Interval training",
+       "Fartlek training"
+      ],
+      "why": "Flexibility training such as stretching builds range of movement. The other methods mainly build aerobic or anaerobic fitness, so they do not target joint movement.",
+      "clue": "Which fitness component is about movement at the joints?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Plyometric training",
+      "also_right": []
+     },
+     "b": {
+      "best": "Flexibility training",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The stem uses the card's exact phrase 'range of movement', which the card ties only to flexibility training. The question is a word match rather than an application suited to Year 12."
+      },
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "The stem repeats the card's definition 'jumps and bounds', and the clue 'box jumps and bounding' adds the same hint. A student can match words without understanding power training."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and intended answers are correct. Both questions are very easy for Year 12 because their stems repeat the card's own wording, so students can match words instead of applying the idea."
+    },
+    "flags": [
+     "Question b, level: The stem uses the card's exact phrase 'range of movement', which the card ties only to flexibility training. The question is a word match rather than an application suited to Year 12.",
+     "Question a, level: The stem repeats the card's definition 'jumps and bounds', and the clue 'box jumps and bounding' adds the same hint. A student can match words without understanding power training."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Training methods",
+     "card": [
+      "Continuous training is steady work without rest, such as a 30 minute jog, and builds aerobic fitness. Fartlek adds changes of speed, building aerobic fitness and some anaerobic capacity.",
+      "Interval training alternates hard work periods with rest or easier periods. It can build aerobic or anaerobic fitness, depending on the work and rest times.",
+      "Circuit training moves through stations and mainly builds muscular endurance. Resistance training builds strength, the most force a muscle can produce.",
+      "Plyometric training uses fast jumps and bounds to build power, which is producing force quickly. Flexibility training, such as stretching, builds how far a joint can move."
+     ],
+     "remember": "Match the method to the fitness component the activity needs.",
+     "a": {
+      "q": "Priya plays volleyball and wants to get off the ground faster and higher to block spikes. Which method targets this most directly?",
+      "opts": [
+       "Plyometric training",
+       "Resistance training",
+       "Circuit training",
+       "Continuous training"
+      ],
+      "why": "Getting off the ground fast and high needs power, which is producing force quickly, and plyometric training builds power. Resistance training is tempting, but it mainly builds strength, the most force a muscle can produce, not how fast that force is produced.",
+      "clue": "Does she need the most force, or force produced quickly?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Ella, a hurdler, keeps clipping hurdles because tight hamstrings stop her lifting her lead leg high enough. Which method suits her best?",
+      "opts": [
+       "Flexibility training",
+       "Resistance training",
+       "Plyometric training",
+       "Circuit training"
+      ],
+      "why": "Her problem is that her hip cannot move far enough, and flexibility training such as stretching builds how far a joint can move. Resistance training is tempting because it works the muscles, but it builds strength, not flexibility.",
+      "clue": "Is her leg limited by a lack of force or by tight muscles?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Plyometric training",
+       "also_right": []
+      },
+      "b": {
+       "best": "Flexibility training",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "fact",
+        "detail": "'Circuit training ... mainly builds muscular endurance' is too narrow. In VCE, a circuit can be designed to target different components, such as aerobic power, strength or muscular endurance, depending on the stations and the work and rest times. Saying it 'can be designed to build' these components would be more accurate."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clearly right answer, and the explanations match the card. The card's claim that circuit training mainly builds muscular endurance is an oversimplification, because circuits can be designed to target other components too."
+     },
+     "flags": [
+      "Card, fact: 'Circuit training ... mainly builds muscular endurance' is too narrow. In VCE, a circuit can be designed to target different components, such as aerobic power, strength or muscular endurance, depending on the stations and the work and rest times. Saying it 'can be designed to build' these components would be more accurate."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Training methods",
+  "card": [
+   "Continuous training is steady work without rest, such as a 30 minute jog, and builds aerobic fitness. Fartlek adds changes of speed, building aerobic fitness and some anaerobic capacity.",
+   "Interval training alternates hard work periods with rest or easier periods. It can build aerobic or anaerobic fitness, depending on the work and rest times.",
+   "Circuit training moves through stations. It can be designed to build aerobic fitness, strength or muscular endurance, depending on the stations and the work and rest times. Resistance training builds strength, the most force a muscle can produce.",
+   "Plyometric training uses fast jumps and bounds to build power, which is producing force quickly. Flexibility training, such as stretching, builds how far a joint can move."
+  ],
+  "remember": "Match the method to the fitness component the activity needs.",
+  "a": {
+   "q": "Priya plays volleyball and wants to get off the ground faster and higher to block spikes. Which method targets this most directly?",
+   "opts": [
+    "Plyometric training",
+    "Resistance training",
+    "Continuous training",
+    "Flexibility training"
+   ],
+   "why": "Getting off the ground fast and high needs power, which is producing force quickly, and plyometric training builds power. Resistance training is tempting, but it mainly builds strength, the most force a muscle can produce, not how fast that force is produced.",
+   "clue": "Does she need the most force, or force produced quickly?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ella, a hurdler, keeps clipping hurdles because tight hamstrings stop her lifting her lead leg high enough. Which method suits her best?",
+   "opts": [
+    "Flexibility training",
+    "Resistance training",
+    "Plyometric training",
+    "Continuous training"
+   ],
+   "why": "Her problem is that her hip cannot move far enough, and flexibility training such as stretching builds how far a joint can move. Resistance training is tempting because it works the muscles, but it builds strength, not flexibility.",
+   "clue": "Is her leg limited by a lack of force or by tight muscles?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Plyometric training",
+   "also_right": []
+  },
+  "b": {
+   "best": "Flexibility training",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says resistance training simply 'builds strength'. In VCE PE, resistance training can also be designed to develop power and muscular endurance, depending on load, reps and speed. Students may learn that resistance training only builds strength. Consider 'mainly builds strength' or noting that it can be adapted."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and the answers are clear. One minor issue: the card presents resistance training as building only strength, when it can also be designed for power and muscular endurance."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says resistance training simply 'builds strength'. In VCE PE, resistance training can also be designed to develop power and muscular endurance, depending on load, reps and speed. Students may learn that resistance training only builds strength. Consider 'mainly builds strength' or noting that it can be adapted."
+ ]
+}

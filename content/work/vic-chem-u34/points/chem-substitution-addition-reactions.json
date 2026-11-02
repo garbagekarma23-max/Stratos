@@ -1,0 +1,272 @@
+{
+ "id": "chem-substitution-addition-reactions",
+ "title": "Substitution and addition reactions",
+ "brief": "a0a112be9301",
+ "shortlist": [
+  [
+   "chem-reactions-alkenes",
+   0.512
+  ],
+  [
+   "chem-alkanes-alkenes-alkynes",
+   0.332
+  ],
+  [
+   "chem-addition-polymers",
+   0.327
+  ],
+  [
+   "chem-reaction-quotient",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: failed the content check, writing again",
+  "2026-11-01T15:14:44Z write: done (still fails the content check)",
+  "2026-11-01T15:19:03Z check: flagged",
+  "2026-11-01T15:21:20Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T06:18:41Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.01309,
+  "check": 0.01855,
+  "fix": 0.02722,
+  "recheck": 0.0196
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, chem-reactions-alkenes, covers only addition across C=C bonds, while the new point also requires substitution of a hydrogen by a halogen in alkanes, which no bank point teaches, so it is narrower than the new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Substitution and addition reactions",
+  "card": [
+   [
+    "Substitution",
+    "A saturated alkane has only single C-C bonds. In a substitution reaction, a halogen atom replaces a hydrogen atom on the alkane. A hydrogen halide is also made."
+   ],
+   [
+    "Conditions",
+    "Alkanes react with chlorine or bromine only when UV light is present. For example, CH4 + Cl2 gives CH3Cl + HCl. The products are a haloalkane and a hydrogen halide."
+   ],
+   [
+    "Addition",
+    "An unsaturated alkene has a C=C double bond. In an addition reaction, one bond of the double bond opens and a new atom bonds to each carbon. Only one product is made."
+   ],
+   [
+    "Reagents",
+    "Alkenes add H2 to give an alkane, Cl2 or Br2 to give a dihaloalkane, HCl or HBr to give a haloalkane, and H2O to give an alcohol."
+   ]
+  ],
+  "remember": "Alkanes substitute and make two products. Alkenes add and make one product.",
+  "a": {
+   "q": "Which description fits the reaction of ethene with bromine to make 1,2-dibromoethane?",
+   "opts": [
+    "Addition, because the C=C bond opens and one product forms",
+    "Substitution, because bromine replaces hydrogen atoms",
+    "Addition, because HBr forms as a second product",
+    "Substitution, because the C=C bond opens and gives one product"
+   ],
+   "why": "Ethene has a C=C double bond. One bond opens and a bromine atom joins each carbon, giving a single product, which is addition. Substitution would replace hydrogen and also make a hydrogen halide.",
+   "clue": "Count the products and check what happens to the double bond."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethane reacts with chlorine in UV light. Ethene reacts with chlorine in the same flask. Which statement is correct?",
+   "opts": [
+    "Ethane gives chloroethane and HCl; ethene gives C2H4Cl2",
+    "Ethane gives C2H4Cl2; ethene gives chloroethane and HCl",
+    "Both give chloroethane and HCl as the two products",
+    "Both give a dichloro product as the only product"
+   ],
+   "why": "Ethane is saturated, so chlorine substitutes for a hydrogen and HCl forms. Ethene is unsaturated, so chlorine adds across the C=C bond to give one product, 1,2-dichloroethane (C2H4Cl2). The reverse option swaps the two reaction types.",
+   "clue": "Ask which molecule has a double bond and which reaction gives two products."
+  }
+ },
+ "redone": true,
+ "local": [
+  "chem-substitution-addition-reactionsa option is 62 characters: Substitution, because the C=C bond opens and gives one product"
+ ],
+ "check": {
+  "a": {
+   "best": "Addition, because the C=C bond opens and one product forms",
+   "also_right": []
+  },
+  "b": {
+   "best": "Ethane gives chloroethane and HCl; ethene gives C2H4Cl2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Alkanes react with chlorine or bromine only when UV light is present\" is too absolute. Alkane halogenation can also be started by high temperature. Better: \"need UV light (or heat) to react\"."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Only one product is made\" in addition is not always true. HCl, HBr or H2O adding to an unsymmetrical alkene such as propene can give two isomeric products. Better: \"one product (for a symmetrical alkene such as ethene)\" or \"can make one product\"."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"Alkanes substitute and make two products\" oversimplifies. Further substitution can give a mixture of haloalkanes. A softer wording, such as \"a haloalkane and a hydrogen halide\", would avoid teaching an absolute rule."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Ethene reacts with chlorine in the same flask\" is confusing. It suggests both hydrocarbons are mixed together and competing for chlorine. \"Separately, under the same conditions\" would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations agree with it. The card overstates two rules: halogenation can be started by heat as well as UV light, and addition to an unsymmetrical alkene can give two products. The phrase \"in the same flask\" in question b is ambiguous."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Alkanes react with chlorine or bromine only when UV light is present\" is too absolute. Alkane halogenation can also be started by high temperature. Better: \"need UV light (or heat) to react\".",
+  "Card, fact: \"Only one product is made\" in addition is not always true. HCl, HBr or H2O adding to an unsymmetrical alkene such as propene can give two isomeric products. Better: \"one product (for a symmetrical alkene such as ethene)\" or \"can make one product\".",
+  "Remember, wording: \"Alkanes substitute and make two products\" oversimplifies. Further substitution can give a mixture of haloalkanes. A softer wording, such as \"a haloalkane and a hydrogen halide\", would avoid teaching an absolute rule.",
+  "Question b, wording: \"Ethene reacts with chlorine in the same flask\" is confusing. It suggests both hydrocarbons are mixed together and competing for chlorine. \"Separately, under the same conditions\" would be clearer.",
+  "Content check: chem-substitution-addition-reactionsa option is 62 characters: Substitution, because the C=C bond opens and gives one product"
+ ],
+ "proposal": {
+  "title": "Substitution and addition reactions",
+  "card": [
+   [
+    "Substitution",
+    "A saturated alkane has only single C-C bonds. In a substitution reaction, a halogen atom replaces a hydrogen atom on the alkane, and a hydrogen halide is also made."
+   ],
+   [
+    "Conditions",
+    "Alkanes need UV light or heat to react with chlorine or bromine. For example, CH4 + Cl2 gives CH3Cl + HCl. Further substitution can give a mix of haloalkanes."
+   ],
+   [
+    "Addition",
+    "An unsaturated alkene has a C=C double bond. In an addition reaction, one bond of the double bond breaks and a new atom bonds to each carbon. No hydrogen halide is left over, and a symmetrical alkene such as ethene gives one product."
+   ],
+   [
+    "Reagents",
+    "Alkenes add H2 to give an alkane, Cl2 or Br2 to give a dihaloalkane, HCl or HBr to give a haloalkane, and H2O to give an alcohol."
+   ]
+  ],
+  "remember": "Alkanes swap H for a halogen and also make a hydrogen halide. Alkenes add atoms across the C=C bond.",
+  "a": {
+   "q": "Which description fits the reaction of ethene with bromine to make 1,2-dibromoethane?",
+   "opts": [
+    "Addition, because the C=C bond opens and one product forms",
+    "Substitution, because bromine replaces hydrogen atoms",
+    "Addition, because HBr forms as a second product",
+    "Substitution, because the C=C bond opens to one product"
+   ],
+   "why": "Ethene has a C=C double bond. One bond breaks and a bromine atom joins each carbon, giving a single product, which is addition. Substitution would replace a hydrogen and also make a hydrogen halide, and no HBr forms here.",
+   "clue": "Check what happens to the double bond and count the products."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethane reacts with chlorine in UV light. Separately, under the same conditions, ethene reacts with chlorine. Which statement is correct?",
+   "opts": [
+    "Ethane gives chloroethane and HCl; ethene gives C2H4Cl2",
+    "Ethane gives C2H4Cl2; ethene gives chloroethane and HCl",
+    "Both give chloroethane and HCl as the two products",
+    "Both give a dichloro product as the only product"
+   ],
+   "why": "Ethane is saturated, so a chlorine atom replaces a hydrogen and HCl also forms. Ethene is unsaturated, so chlorine adds across the C=C bond to give 1,2-dichloroethane (C2H4Cl2) with no HCl. The tempting second option swaps the two reaction types.",
+   "clue": "Which molecule has a double bond, and which reaction also makes HCl?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "Addition, because the C=C bond opens and one product forms",
+    "also_right": []
+   },
+   "b": {
+    "best": "Ethane gives chloroethane and HCl; ethene gives C2H4Cl2",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "Why (b) calls the swapped-reaction option 'the tempting second option', but options appear in random order. Here the swapped option ('Ethane gives C2H4Cl2; ethene gives chloroethane and HCl') is third, and the second option is 'Both give chloroethane and HCl'. The why should name the option by its content, not its position."
+    }
+   ],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "The card and both questions are chemically correct, with one clear answer each. The only problem is that why (b) refers to 'the second option' by position, which will point to the wrong option because option order is randomised."
+  },
+  "flags": [
+   "Question b, other: Why (b) calls the swapped-reaction option 'the tempting second option', but options appear in random order. Here the swapped option ('Ethane gives C2H4Cl2; ethene gives chloroethane and HCl') is third, and the second option is 'Both give chloroethane and HCl'. The why should name the option by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "Substitution and addition reactions",
+  "card": [
+   [
+    "Substitution",
+    "A saturated alkane has only single C-C bonds. In a substitution reaction, a halogen atom replaces a hydrogen atom on the alkane, and a hydrogen halide is also made."
+   ],
+   [
+    "Conditions",
+    "Alkanes need UV light or heat to react with chlorine or bromine. For example, CH4 + Cl2 gives CH3Cl + HCl. Further substitution can give a mix of haloalkanes."
+   ],
+   [
+    "Addition",
+    "An unsaturated alkene has a C=C double bond. In an addition reaction, one bond of the double bond breaks and a new atom bonds to each carbon. No hydrogen halide is left over, and a symmetrical alkene such as ethene gives one product."
+   ],
+   [
+    "Reagents",
+    "Alkenes add H2 to give an alkane, Cl2 or Br2 to give a dihaloalkane, HCl or HBr to give a haloalkane, and H2O to give an alcohol."
+   ]
+  ],
+  "remember": "Alkanes swap H for a halogen and also make a hydrogen halide. Alkenes add atoms across the C=C bond.",
+  "a": {
+   "q": "Which description fits the reaction of ethene with bromine to make 1,2-dibromoethane?",
+   "opts": [
+    "Addition, because the C=C bond opens and one product forms",
+    "Substitution, because bromine replaces hydrogen atoms",
+    "Addition, because HBr forms as a second product",
+    "Substitution, because the C=C bond opens to one product"
+   ],
+   "why": "Ethene has a C=C double bond. One bond breaks and a bromine atom joins each carbon, giving a single product, which is addition. Substitution would replace a hydrogen and also make a hydrogen halide, and no HBr forms here.",
+   "clue": "Check what happens to the double bond and count the products."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ethane reacts with chlorine in UV light. Separately, under the same conditions, ethene reacts with chlorine. Which statement is correct?",
+   "opts": [
+    "Ethane gives chloroethane and HCl; ethene gives C2H4Cl2",
+    "Ethane gives C2H4Cl2; ethene gives chloroethane and HCl",
+    "Both give chloroethane and HCl as the two products",
+    "Both give a dichloro product as the only product"
+   ],
+   "why": "Ethane is saturated, so a chlorine atom replaces a hydrogen and HCl also forms. Ethene is unsaturated, so chlorine adds across the C=C bond to give 1,2-dichloroethane (C2H4Cl2) with no HCl. The tempting second option swaps the two reaction types.",
+   "clue": "Which molecule has a double bond, and which reaction also makes HCl?"
+  }
+ },
+ "cleared_by": "owner"
+}

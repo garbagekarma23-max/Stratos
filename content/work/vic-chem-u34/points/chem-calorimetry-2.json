@@ -1,0 +1,302 @@
+{
+ "id": "chem-calorimetry-2",
+ "title": "Calorimetry",
+ "brief": "51b98d42d0ce",
+ "shortlist": [
+  [
+   "chem-calorimetry",
+   0.398
+  ],
+  [
+   "chem-temperature-equilibrium-constant",
+   0.241
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01304,
+  "check": 0.03001,
+  "fix": 0.01784,
+  "recheck": 0.01338
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's chem-calorimetry card teaches only q = mcΔT for a known mass of water, while the new point needs a calibration factor and temperature-time graphs to correct for heat loss, which is a new step and a deeper level than that card covers.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue ('Think about heat moving between the mixture and the room') nearly restates the right option, so a student can pick it without understanding why the graph is extrapolated.",
+ "rejected": {
+  "title": "Calorimetry",
+  "card": [
+   "A solution calorimeter is an insulated container used to measure the energy change of a reaction in solution. The energy change shows up as a temperature change of the solution.",
+   "A calibration factor is the energy needed to change the temperature of the calorimeter and its contents by 1 °C, in J °C⁻¹. It is found by supplying a known amount of electrical energy and measuring the temperature rise.",
+   "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
+   "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
+  ],
+  "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
+  "a": {
+   "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
+   "opts": [
+    "1350 J",
+    "150 J",
+    "453 J",
+    "1.35 J"
+   ],
+   "why": "Energy = 450 × 3.0 = 1350 J, which is 1.35 kJ, not 1.35 J. Dividing 450 by 3.0 gives 150, which is the wrong operation.",
+   "clue": "Multiply the calibration factor by the temperature change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya mixes two solutions in a calorimeter and records the temperature every 30 seconds. Why does she extend the graph lines back to the time of mixing?",
+   "opts": [
+    "To allow for heat exchanged with the surroundings",
+    "To find the calibration factor of the calorimeter",
+    "To show whether the reaction is endothermic",
+    "To remove the energy supplied by stirring"
+   ],
+   "why": "While the reaction happens, heat moves between the mixture and the room, so the recorded temperature change is smaller than the true one. Extending the lines gives the change if no heat had been exchanged. The calibration factor is found separately, using a known amount of electrical energy.",
+   "clue": "Think about heat moving between the mixture and the room."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue ('Think about heat moving between the mixture and the room') nearly restates the right option, so a student can pick it without understanding why the graph is extrapolated."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Calorimetry",
+     "card": [
+      "A solution calorimeter is an insulated container used to measure the energy change of a reaction in solution. The energy change shows up as a temperature change of the solution.",
+      "A calibration factor is the energy needed to raise the temperature of the calorimeter and its contents by 1 °C, in J °C⁻¹. It is found by supplying a known amount of electrical energy and measuring the temperature rise.",
+      "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
+      "Some heat is lost to the surroundings while the reaction happens. A temperature-time graph is drawn, and the lines before and after the reaction are extended back to the time of mixing to find the temperature change without heat loss."
+     ],
+     "remember": "Energy = calibration factor × temperature change, and graph extrapolation corrects for heat loss.",
+     "a": {
+      "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
+      "opts": [
+       "1350 J",
+       "150 J",
+       "453 J",
+       "1350 J absorbed"
+      ],
+      "why": "Energy = 450 × 3.0 = 1350 J. The temperature rose, so the reaction released energy and was exothermic. It was not absorbed.",
+      "clue": "Multiply the calibration factor by the temperature change."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya mixes two solutions in a calorimeter and records the temperature every 30 seconds. Why does she extend the graph lines back to the time of mixing?",
+      "opts": [
+       "To allow for heat lost while the reaction occurred",
+       "To find the calibration factor of the calorimeter",
+       "To show that the reaction is endothermic",
+       "To remove the energy supplied by stirring"
+      ],
+      "why": "Heat escapes during and after mixing, so the highest temperature reading is too low. Extending the lines gives the temperature change if no heat had been lost. The calibration factor is found separately using a known amount of electrical energy.",
+      "clue": "Think about what happens to the temperature reading as the mixture cools."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "1350 J",
+      "also_right": []
+     },
+     "b": {
+      "best": "To allow for heat lost while the reaction occurred",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "The card says heat is always lost to the surroundings during the reaction. That only holds for exothermic reactions. In an endothermic reaction the cold mixture gains heat from the surroundings, so extrapolation corrects for heat exchange, not just heat loss. The why for (b) also assumes the reaction is exothermic ('the highest temperature reading is too low')."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are correct and have one clear answer each. The card treats heat transfer as always a loss, which is only true for exothermic reactions; for endothermic reactions heat is gained from the surroundings."
+    },
+    "flags": [
+     "Card, wording: The card says heat is always lost to the surroundings during the reaction. That only holds for exothermic reactions. In an endothermic reaction the cold mixture gains heat from the surroundings, so extrapolation corrects for heat exchange, not just heat loss. The why for (b) also assumes the reaction is exothermic ('the highest temperature reading is too low')."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Calorimetry",
+     "card": [
+      "A solution calorimeter is an insulated container used to measure the energy change of a reaction in solution. The energy change shows up as a temperature change of the solution.",
+      "A calibration factor is the energy needed to change the temperature of the calorimeter and its contents by 1 °C, in J °C⁻¹. It is found by supplying a known amount of electrical energy and measuring the temperature rise.",
+      "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
+      "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
+     ],
+     "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
+     "a": {
+      "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
+      "opts": [
+       "1350 J",
+       "150 J",
+       "453 J",
+       "1.35 J"
+      ],
+      "why": "Energy = 450 × 3.0 = 1350 J, which is 1.35 kJ, not 1.35 J. Dividing 450 by 3.0 gives 150, which is the wrong operation.",
+      "clue": "Multiply the calibration factor by the temperature change."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya mixes two solutions in a calorimeter and records the temperature every 30 seconds. Why does she extend the graph lines back to the time of mixing?",
+      "opts": [
+       "To allow for heat exchanged with the surroundings",
+       "To find the calibration factor of the calorimeter",
+       "To show whether the reaction is endothermic",
+       "To remove the energy supplied by stirring"
+      ],
+      "why": "While the reaction happens, heat moves between the mixture and the room, so the recorded temperature change is smaller than the true one. Extending the lines gives the change if no heat had been exchanged. The calibration factor is found separately, using a known amount of electrical energy.",
+      "clue": "Think about heat moving between the mixture and the room."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "1350 J",
+       "also_right": []
+      },
+      "b": {
+       "best": "To allow for heat exchanged with the surroundings",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue ('Think about heat moving between the mixture and the room') nearly restates the right option, so a student can pick it without understanding why the graph is extrapolated."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear right answer. The clue for question b nearly gives away its answer and should be reworded."
+     },
+     "flags": [
+      "Question b, other: The clue ('Think about heat moving between the mixture and the room') nearly restates the right option, so a student can pick it without understanding why the graph is extrapolated."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Calorimetry",
+  "card": [
+   "A solution calorimeter is an insulated container used to measure the energy change of a reaction in solution. The energy change shows up as a temperature change of the solution.",
+   "A calibration factor is the energy needed to change the temperature of the calorimeter and its contents by 1 °C, in J °C⁻¹. It is found by supplying a known amount of electrical energy and measuring the temperature rise.",
+   "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
+   "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
+  ],
+  "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
+  "a": {
+   "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
+   "opts": [
+    "1350 J",
+    "150 J",
+    "453 J",
+    "1.35 J"
+   ],
+   "why": "Energy = 450 × 3.0 = 1350 J, which is 1.35 kJ, not 1.35 J. Dividing 450 by 3.0 gives 150, which is the wrong operation.",
+   "clue": "Multiply the calibration factor by the temperature change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya mixes two solutions in a calorimeter and records the temperature every 30 seconds. Why does she extend the graph lines back to the time of mixing?",
+   "opts": [
+    "To allow for heat exchanged with the surroundings",
+    "To find the calibration factor of the calorimeter",
+    "To show whether the reaction is endothermic",
+    "To remove the energy supplied by stirring"
+   ],
+   "why": "While the reaction happens, heat moves between the mixture and the room, so the recorded temperature change is smaller than the true one. Extending the lines gives the change if no heat had been exchanged. The calibration factor is found separately, using a known amount of electrical energy.",
+   "clue": "Ask what the thermometer reading at the moment of mixing would be if the insulation were perfect."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "1350 J",
+   "also_right": []
+  },
+  "b": {
+   "best": "To allow for heat exchanged with the surroundings",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Calorimetry",
+  "card": [
+   "A solution calorimeter is an insulated container used to measure the energy change of a reaction in solution. The energy change shows up as a temperature change of the solution.",
+   "A calibration factor is the energy needed to change the temperature of the calorimeter and its contents by 1 °C, in J °C⁻¹. It is found by supplying a known amount of electrical energy and measuring the temperature rise.",
+   "Energy change = calibration factor × temperature change. A rise in temperature means the reaction is exothermic, and a fall means it is endothermic.",
+   "Even with insulation, some heat moves between the mixture and the surroundings. A warm mixture loses heat and a cold one gains it. Extending the temperature-time graph lines back to the time of mixing gives the temperature change with no heat exchange."
+  ],
+  "remember": "Energy = calibration factor × temperature change. Extrapolating the graph corrects for heat exchange with the surroundings.",
+  "a": {
+   "q": "A calorimeter has a calibration factor of 450 J °C⁻¹. A reaction in it raises the temperature by 3.0 °C. How much energy was released?",
+   "opts": [
+    "1350 J",
+    "150 J",
+    "453 J",
+    "1.35 J"
+   ],
+   "why": "Energy = 450 × 3.0 = 1350 J, which is 1.35 kJ, not 1.35 J. Dividing 450 by 3.0 gives 150, which is the wrong operation.",
+   "clue": "Multiply the calibration factor by the temperature change."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya mixes two solutions in a calorimeter and records the temperature every 30 seconds. Why does she extend the graph lines back to the time of mixing?",
+   "opts": [
+    "To allow for heat exchanged with the surroundings",
+    "To find the calibration factor of the calorimeter",
+    "To show whether the reaction is endothermic",
+    "To remove the energy supplied by stirring"
+   ],
+   "why": "While the reaction happens, heat moves between the mixture and the room, so the recorded temperature change is smaller than the true one. Extending the lines gives the change if no heat had been exchanged. The calibration factor is found separately, using a known amount of electrical energy.",
+   "clue": "Ask what the thermometer reading at the moment of mixing would be if the insulation were perfect."
+  }
+ }
+}

@@ -2509,5 +2509,1721 @@ MADE_BANKS.phys = {
       "why": "Mass is the independent variable, so it goes on the horizontal axis, and stretch is the dependent variable on the vertical axis. Swapping them is tempting, but the variable Priya controls goes on the horizontal axis. Axes also need labels with units, and a line of best fit is drawn, not a line joining every point.",
       "clue": "Which quantity did Priya choose, and which did she measure?"
     }
+  },
+  "phys-waves-their-properties": {
+    "title": "Waves and their properties",
+    "card": [
+      "Amplitude is the maximum displacement from the rest position. Wavelength (λ) is the distance between two matching points on neighbouring waves, such as crest to crest.",
+      "Frequency (f) is the number of waves passing a point each second, in hertz. Period (T) is the time for one wave to pass, so T = 1 ÷ f.",
+      "Wave speed, frequency and wavelength are linked by v = fλ. If the speed stays the same, a higher frequency means a shorter wavelength.",
+      "In a transverse wave, the vibration is at right angles to the direction the wave travels. Light is transverse and can travel through a vacuum. Sound is a different type of wave and needs a medium such as air."
+    ],
+    "remember": "v = fλ, and T = 1 ÷ f. Light needs no medium, but sound does.",
+    "a": {
+      "q": "A wave has a frequency of 4.0 Hz. What is its period?",
+      "opts": ["0.25 s", "4.0 s", "0.40 s", "16 s"],
+      "why": "Period is the time for one wave, so T = 1 ÷ 4.0 = 0.25 s. Giving 4.0 s mixes up frequency and period, which are inverses of each other.",
+      "clue": "Period and frequency are inverses."
+    },
+    "b": {
+      "d": 3,
+      "q": "A wave on a lake has a wavelength of 2.0 m and a frequency of 0.50 Hz. A wave of the same type then travels at the same speed with a frequency of 1.0 Hz. What is its wavelength?",
+      "opts": ["1.0 m", "2.0 m", "4.0 m", "0.50 m"],
+      "why": "The speed is v = fλ = 0.50 × 2.0 = 1.0 m/s. At 1.0 Hz, λ = 1.0 ÷ 1.0 = 1.0 m. Doubling the frequency at the same speed halves the wavelength, so 2.0 m is wrong.",
+      "clue": "Find the speed first, then keep it fixed."
+    }
+  },
+  "phys-electromagnetic-spectrum-2": {
+    "title": "The electromagnetic spectrum",
+    "card": [
+      "The electromagnetic spectrum is the family of electromagnetic waves. In order of increasing frequency: radio, microwave, infrared, visible, ultraviolet, x-rays and gamma rays.",
+      "All of them travel at the same speed, c, in a vacuum. This is about 3.0 × 10^8 m/s.",
+      "Because the speed is fixed at c in a vacuum, a higher frequency means a shorter wavelength. Radio waves have the longest wavelengths and gamma rays the shortest.",
+      "The Sun gives out mostly ultraviolet, visible and infrared. The waves differ in frequency and wavelength, not in speed."
+    ],
+    "remember": "One speed in a vacuum, so higher frequency means shorter wavelength.",
+    "a": {
+      "q": "Which statement about radio waves and x-rays travelling through a vacuum is correct?",
+      "opts": [
+        "Same speed, and x-rays have the higher frequency",
+        "Same speed, and x-rays have the longer wavelength",
+        "X-rays travel faster because their frequency is higher",
+        "Radio waves travel faster because their wavelength is longer"
+      ],
+      "why": "In the spectrum order, x-rays come well after radio waves, so x-rays have the higher frequency. All electromagnetic waves travel at c in a vacuum, so that higher frequency gives x-rays the shorter wavelength, not the longer one. Frequency does not change the speed.",
+      "clue": "Speed is fixed, so what must happen to wavelength when frequency rises?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia compares infrared and ultraviolet waves from the Sun reaching Earth through space. Which comparison is correct?",
+      "opts": [
+        "Ultraviolet has the shorter wavelength, and both travel at c",
+        "Ultraviolet has the shorter wavelength and travels faster",
+        "Infrared has the shorter wavelength, and both travel at c",
+        "Infrared has the shorter wavelength and travels faster"
+      ],
+      "why": "Ultraviolet has a higher frequency than infrared, so with the same speed c its wavelength is shorter. The tempting idea that higher frequency means faster is wrong, because both travel at c in a vacuum.",
+      "clue": "Place both in the spectrum order, then recall that the speed is the same."
+    }
+  },
+  "phys-refraction-snell-s-law": {
+    "title": "Refraction and Snell's law",
+    "card": [
+      "Refraction is the bending of light when it passes from one material into another. It happens because light changes speed in the new material.",
+      "The refractive index n of a material is c ÷ v, where c is the speed of light in a vacuum and v is the speed in the material. A higher n means slower light.",
+      "Angles are measured from the normal, a line at right angles to the surface. Snell's law is n1 sin θ1 = n2 sin θ2.",
+      "Light entering a material with a higher n slows down and bends towards the normal. Light entering a material with a lower n speeds up and bends away from the normal."
+    ],
+    "remember": "Slower light bends towards the normal. Faster light bends away from it.",
+    "a": {
+      "q": "A ray of light passes from air into glass. How does it bend at the surface?",
+      "opts": [
+        "Towards the normal, because it slows down",
+        "Away from the normal, because it slows down",
+        "Towards the normal, because it speeds up",
+        "Away from the normal, because it speeds up"
+      ],
+      "why": "Glass has a higher refractive index than air, so light slows down in it and bends towards the normal. Bending away from the normal goes with light speeding up, not slowing down.",
+      "clue": "Compare the refractive index of glass with that of air."
+    },
+    "b": {
+      "d": 3,
+      "q": "A ray in air hits a flat pool of water at 40° to the normal. Water has n = 1.33 and air has n = 1.00. Which describes the angle in the water?",
+      "opts": [
+        "Smaller than 40°, because the light slows down",
+        "Larger than 40°, because the light slows down",
+        "Larger than 40°, because the light speeds up",
+        "Exactly 40°, because the ray stays straight"
+      ],
+      "why": "Water has the higher n, so light slows down and bends towards the normal. By Snell's law, sin θ2 = sin 40° ÷ 1.33 ≈ 0.48, so the angle is about 29°, which is smaller than 40°. Slowing down does not make the angle larger.",
+      "clue": "Use Snell's law to find sin θ2, then compare it with sin 40°."
+    }
+  },
+  "phys-total-internal-reflection-optical": {
+    "title": "Total internal reflection and optical fibres",
+    "card": [
+      "When light goes from a material with a higher refractive index to one with a lower index, such as glass to air, it bends away from the normal.",
+      "The critical angle is the angle of incidence at which the refracted ray runs along the boundary. Beyond it, no light escapes and all of it reflects back inside.",
+      "Total internal reflection needs two things: light travelling in the higher index material, and an angle of incidence greater than the critical angle. Angles of incidence are measured from the normal.",
+      "An optical fibre is a thin glass core with a lower index coating around it. Light signals hit the wall beyond the critical angle, so they reflect again and again along the fibre with very little loss."
+    ],
+    "remember": "Beyond the critical angle, light inside the higher index material reflects completely, so fibres can guide it.",
+    "a": {
+      "q": "Which situation can produce total internal reflection?",
+      "opts": [
+        "Glass to air, angle of incidence above the critical angle",
+        "Air to glass, angle of incidence above the critical angle",
+        "Glass to air, angle of incidence below the critical angle",
+        "Air to water, angle of incidence below the critical angle"
+      ],
+      "why": "Total internal reflection needs light in the higher index material and an angle of incidence beyond the critical angle. Air to glass fails the first need. An angle of incidence below the critical angle fails the second, so some light escapes.",
+      "clue": "Check both conditions: which material, and which angle of incidence."
+    },
+    "b": {
+      "d": 2,
+      "q": "Why does a light signal stay inside an optical fibre instead of leaking out through the side?",
+      "opts": [
+        "It hits the wall beyond the critical angle and reflects",
+        "It hits the wall below the critical angle and is absorbed",
+        "The coating has a higher index than the core and traps it",
+        "The signal is a sound wave that cannot leave the glass"
+      ],
+      "why": "The core has a higher index than the coating, and the light meets the wall beyond the critical angle, so all of it reflects. A higher index coating would let light escape instead.",
+      "clue": "Think about the angle of incidence at the wall of the core."
+    }
+  },
+  "phys-dispersion-rainbows-mirages": {
+    "title": "Dispersion, rainbows and mirages",
+    "card": [
+      "Dispersion is the splitting of white light into its colours. It happens because a material has a slightly different refractive index for each colour.",
+      "In glass, violet light slows more than red light, so violet bends more. A prism shows this as a band of colours from red to violet.",
+      "In a rainbow, light refracts as it enters a raindrop, reflects off the back inside the drop, then refracts again as it leaves. Each colour leaves at a slightly different angle.",
+      "A mirage forms when air near the ground is much warmer than the air above. The refractive index changes with height, so light bends gradually and can seem to come from a pool of water."
+    ],
+    "remember": "Colours bend by different amounts. Warm air also bends light.",
+    "a": {
+      "q": "Why does a glass prism split white light into colours?",
+      "opts": [
+        "Each colour has a different refractive index in glass",
+        "Each colour travels at a different speed in a vacuum",
+        "The prism adds colour to the light as it passes",
+        "Red light reflects off the prism and violet light does not"
+      ],
+      "why": "Each colour has a slightly different refractive index in glass, so each bends by a different amount. In a vacuum all colours travel at the same speed c, so that option is wrong.",
+      "clue": "Think about how much each colour bends at the surface."
+    },
+    "b": {
+      "d": 2,
+      "q": "On a hot day, Sam sees a shimmering patch that looks like water on a highway ahead. What causes it?",
+      "opts": [
+        "Light bends in the warm air just above the road",
+        "Light reflects off a thin layer of real water",
+        "Raindrops split the light into its colours",
+        "The road surface gives out its own blue light"
+      ],
+      "why": "Air just above the hot road has a different refractive index from the cooler air above it, so light bends and seems to come from the ground. Raindrops cause rainbows, not mirages.",
+      "clue": "Think about what is different about the air near the road."
+    }
+  },
+  "phys-nuclear-stability": {
+    "title": "Nuclear stability",
+    "card": [
+      "A nucleus contains protons and neutrons. Protons are positively charged, so they repel each other with an electric force.",
+      "The strong nuclear force attracts protons and neutrons to each other. It is stronger than the electric force, but acts only over very short distances, about the size of a nucleus.",
+      "Neutrons add to the strong force without adding to the repulsion, so they help hold protons together. Light stable nuclei have about equal numbers of each. Heavier ones need more neutrons than protons.",
+      "Stability depends on the balance of neutrons to protons. A nucleus with too few or too many neutrons for its protons is unstable. It decays by emitting radiation, which changes it towards a more stable form."
+    ],
+    "remember": "A stable nucleus has the right balance of neutrons to protons. Too few or too many, and it decays.",
+    "a": {
+      "q": "What does the strong nuclear force do inside a nucleus?",
+      "opts": [
+        "Holds protons and neutrons together",
+        "Pushes protons apart from each other",
+        "Pulls electrons into the nucleus",
+        "Makes neutrons repel one another"
+      ],
+      "why": "The strong force attracts protons and neutrons to each other and works against the electric repulsion between protons. The electric force is what pushes protons apart, so that is not the strong force.",
+      "clue": "It acts against the repulsion between protons."
+    },
+    "b": {
+      "d": 3,
+      "q": "Carbon-12 has 6 protons and 6 neutrons and is stable. Carbon-14 has 6 protons and 8 neutrons and decays. Why is carbon-14 unstable?",
+      "opts": [
+        "It has too many neutrons for its number of protons",
+        "Its protons repel too strongly for the strong force",
+        "Its extra neutrons repel each other electrically",
+        "The strong force cannot act on its extra neutrons"
+      ],
+      "why": "Carbon-14 has the same 6 protons as stable carbon-12, so the proton repulsion is no greater. The difference is its two extra neutrons, which upset the neutron to proton balance. Neutrons have no charge, so they do not repel each other electrically.",
+      "clue": "Compare what changes between the two isotopes."
+    }
+  },
+  "phys-nuclear-equations": {
+    "title": "Nuclear equations",
+    "card": [
+      "A nuclear equation shows a nucleus changing in a decay. Each nuclide is written as its symbol with mass number A at the top and atomic number Z at the bottom.",
+      "The mass number A is the number of protons and neutrons. The atomic number Z is the number of protons, and it decides which element the atom is.",
+      "In every nuclear equation, the total A is the same on both sides. The total Z is also the same on both sides.",
+      "An alpha particle is written as He with A = 4 and Z = 2. A beta-minus particle is an electron with A = 0 and Z = -1. Use these to find the missing nuclide."
+    ],
+    "remember": "Add up the top numbers and the bottom numbers: each total must match on both sides.",
+    "a": {
+      "q": "In a decay, a nucleus with A = 20 and Z = 9 emits a beta-minus particle. What are A and Z of the new nucleus?",
+      "opts": ["A = 20, Z = 10", "A = 20, Z = 8", "A = 19, Z = 9", "A = 16, Z = 7"],
+      "why": "The beta-minus particle has A = 0 and Z = -1. A stays at 20, and Z must balance: 9 = Z + (-1), so Z = 10. Z = 8 comes from subtracting 1 instead of balancing the equation.",
+      "clue": "Z on the right must add up to 9, including the electron's Z."
+    },
+    "b": {
+      "d": 3,
+      "q": "Radium-226 (A = 226, Z = 88) decays by emitting an alpha particle. Which nuclide is formed?",
+      "opts": [
+        "Radon-222 (A = 222, Z = 86)",
+        "Radium-222 (A = 222, Z = 88)",
+        "Polonium-222 (A = 222, Z = 84)",
+        "Thorium-230 (A = 230, Z = 90)"
+      ],
+      "why": "An alpha particle has A = 4 and Z = 2. Subtracting gives A = 222 and Z = 86, which is radon. Radium-222 is tempting, but keeping Z at 88 means the Z totals would not balance, and the element would not have changed.",
+      "clue": "Take the alpha particle's A and Z away from both radium numbers."
+    }
+  },
+  "phys-decay-series": {
+    "title": "Decay series",
+    "card": [
+      "Some unstable isotopes do not reach a stable nucleus in one decay. The product may also be unstable, so it decays again.",
+      "A decay series is this chain of decays, one step after another. It ends when a stable isotope is formed.",
+      "A decay series diagram plots mass number A against atomic number Z. Each isotope is a point, and each decay is an arrow to the next.",
+      "An alpha decay lowers A by 4 and Z by 2. A beta-minus decay keeps A the same and raises Z by 1. This shows which decay each arrow stands for."
+    ],
+    "remember": "A decay series is a chain of decays that stops only at a stable isotope.",
+    "a": {
+      "q": "What happens at the end of a decay series?",
+      "opts": [
+        "A stable isotope is formed and decay stops",
+        "The nucleus breaks into single protons",
+        "All the radiation stops after one decay",
+        "The atomic number returns to its first value"
+      ],
+      "why": "The chain continues while each product is unstable, and stops at a stable isotope. One decay is not always enough, so it is wrong to say the series ends after one step.",
+      "clue": "Think about when a nucleus has no reason to decay again."
+    },
+    "b": {
+      "d": 2,
+      "q": "On a decay series diagram, an arrow goes from A = 214, Z = 84 to A = 210, Z = 82. Which decay does the arrow show?",
+      "opts": ["Alpha decay", "Beta-minus decay", "Beta-plus decay", "Gamma emission"],
+      "why": "A falls by 4 and Z falls by 2, which matches an alpha particle. Beta-minus would leave A unchanged and raise Z by 1.",
+      "clue": "Compare the change in A and the change in Z with each decay."
+    }
+  },
+  "phys-effects-ionising-radiation": {
+    "title": "Effects of ionising radiation",
+    "card": [
+      "Ionising radiation carries enough energy to knock electrons from atoms. In living tissue it can damage cells, including their DNA.",
+      [
+        "Absorbed dose",
+        "the energy absorbed per kilogram of tissue. It is measured in grays (Gy), where 1 Gy is 1 joule per kilogram."
+      ],
+      [
+        "Equivalent dose",
+        "absorbed dose adjusted for the type of radiation, as some types do more harm for the same energy absorbed. It is measured in sieverts (Sv)."
+      ],
+      [
+        "Effective dose",
+        "equivalent dose adjusted for the tissue, as some tissues are more sensitive than others. It is also measured in sieverts (Sv)."
+      ]
+    ],
+    "remember": "Grays measure energy absorbed per kilogram. Sieverts allow for radiation type and tissue.",
+    "a": {
+      "q": "Which dose is measured in grays?",
+      "opts": ["Absorbed dose", "Equivalent dose", "Effective dose", "Radiation type"],
+      "why": "Absorbed dose is the energy absorbed per kilogram, and its unit is the gray. Equivalent and effective dose are adjusted for harm, so they use sieverts.",
+      "clue": "Think of energy per kilogram."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two workers each absorb 2 mGy, one from one type of radiation and one from another that does more harm per unit of energy. How do their equivalent doses compare?",
+      "opts": [
+        "The second worker's is larger",
+        "The first worker's is larger",
+        "They are the same, as absorbed doses match",
+        "They cannot be compared, as sieverts are not used"
+      ],
+      "why": "Equivalent dose allows for the type of radiation, so the type that does more harm gives a larger value. The matching absorbed doses are tempting, but they ignore the type.",
+      "clue": "Which dose allows for the type of radiation?"
+    }
+  },
+  "phys-medical-radioisotopes": {
+    "title": "Medical radioisotopes",
+    "card": [
+      "A radioisotope is an unstable isotope that emits radiation. Doctors use some of them to find cancers and some to treat them.",
+      [
+        "Finding",
+        "a radioisotope is given to the patient, and a detector outside the body picks up the radiation it emits. This can show where a tumour is."
+      ],
+      [
+        "Treating",
+        "a radioisotope is placed in or near a tumour, or given so that it gathers there. Its radiation damages the cancer cells."
+      ],
+      "Radiation also harms healthy tissue. Doctors weigh the damage to diseased cells against the harm to healthy tissue when they choose an isotope and dose."
+    ],
+    "remember": "Radioisotopes help to find and treat cancers, but healthy tissue can be harmed, so the risk is weighed.",
+    "a": {
+      "q": "Why do doctors weigh the benefits and risks when using a radioisotope to treat a tumour?",
+      "opts": [
+        "Its radiation damages healthy tissue as well as cancer cells",
+        "Its radiation damages cancer cells but spares healthy tissue",
+        "Its radiation is too weak to damage the cancer cells",
+        "Its radiation damages healthy tissue but not cancer cells"
+      ],
+      "why": "Treatment works because the radiation damages cancer cells, but it also harms healthy tissue, so doctors weigh one against the other. The option saying it spares healthy tissue is wrong: if it did, there would be no harm to weigh.",
+      "clue": "Radiation does not choose which cells it hits."
+    },
+    "b": {
+      "d": 2,
+      "q": "Sam has a radioisotope injected, and a detector outside his body records where it gathers. What is this use of the radioisotope for?",
+      "opts": ["Finding a tumour", "Treating a tumour", "Removing healthy tissue", "Making his body stable"],
+      "why": "A detector outside the body picks up the emitted radiation, which shows where the isotope has gathered. That is for finding a tumour. Treating relies on radiation damaging the cancer cells, not on recording where it goes.",
+      "clue": "A detector records radiation, it does not damage cells."
+    }
+  },
+  "phys-charge-current": {
+    "title": "Charge and current",
+    "card": [
+      "Electric charge is measured in coulombs (C). In a metal wire, the moving charges are electrons.",
+      "Current is the rate at which charge flows past a point. I = q/t, where q is charge in coulombs and t is time in seconds.",
+      "Current is measured in amperes (A). One ampere is one coulomb passing a point each second.",
+      "A larger current means more charge passes each second. The same current for a longer time moves more charge in total."
+    ],
+    "remember": "Current is charge per second: I = q/t, and 1 A is 1 C each second.",
+    "a": {
+      "q": "A phone charger cable carries a steady 2 A. How much charge passes a point in the cable each second?",
+      "opts": ["2 C", "0.5 C", "2 J", "4 C"],
+      "why": "One ampere is one coulomb per second, so 2 A means 2 C passes each second. 0.5 C comes from dividing the wrong way round.",
+      "clue": "Think of an ampere as coulombs each second."
+    },
+    "b": {
+      "d": 3,
+      "q": "A torch in Bendigo has a steady current of 0.50 A. How much charge passes through the bulb in 2.0 minutes?",
+      "opts": ["60 C", "0.25 C", "1.0 C", "240 C"],
+      "why": "Time must be in seconds: 2.0 min = 120 s. Then q = It = 0.50 × 120 = 60 C. Using 2.0 for the time gives 1.0 C, which is the tempting mistake.",
+      "clue": "Change minutes to seconds first."
+    }
+  },
+  "phys-potential-difference-2": {
+    "title": "Potential difference",
+    "card": [
+      "Potential difference (p.d.), also called voltage, is the energy each coulomb of charge gains or loses between two points in a circuit. It is measured in volts (V).",
+      "V = E/q, where E is energy in joules and q is charge in coulombs. So 1 volt means 1 joule of energy for each coulomb.",
+      "A battery or power supply gives energy to the charge. A component such as a lamp or resistor changes that energy into other forms, such as heat and light, so the charge loses energy there.",
+      "A bigger p.d. means more energy for every coulomb. For a given charge, E = qV."
+    ],
+    "remember": "Voltage is energy per coulomb: 1 V is 1 J for each 1 C.",
+    "a": {
+      "q": "A lamp has a potential difference of 6 V across it. What does this tell you about the charge passing through it?",
+      "opts": [
+        "Each coulomb transfers 6 J of energy in the lamp",
+        "Each second, 6 C of charge passes through the lamp",
+        "The lamp transfers 6 J of energy every second",
+        "The lamp holds 6 C of charge stored inside it"
+      ],
+      "why": "6 V means 6 joules for each coulomb, so each coulomb loses 6 J as it passes through the lamp. The option about 6 J every second mixes up energy per coulomb with energy per second, which is not what a volt measures.",
+      "clue": "A volt is a measure of energy for each coulomb."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia's phone charger supplies charge at 5 V. How much energy is given to 20 C of charge by the charger?",
+      "opts": ["100 J", "4 J", "25 J", "0.25 J"],
+      "why": "E = qV = 20 C × 5 V = 100 J. The answer 4 J comes from dividing charge by voltage, which turns the relationship upside down.",
+      "clue": "Multiply the charge by the energy given to each coulomb."
+    }
+  },
+  "phys-models-meters": {
+    "title": "Models and meters",
+    "card": [
+      "In the water-in-pipes model, wires are pipes, charge is the water and a battery is a pump that pushes it round. Current is like the flow rate, and voltage is like the pressure that drives the flow.",
+      "Every model has limits. Charge does not leak out of a wire in a complete circuit the way water can leak from a pipe, and the model does not show why a lamp glows.",
+      [
+        "Ammeter",
+        "measures current. It is placed in series, so the current passes through it. A good ammeter has very low resistance so it barely changes the current."
+      ],
+      [
+        "Voltmeter",
+        "measures potential difference. It is placed in parallel across the part being tested, so it compares the two ends. A good voltmeter has very high resistance so it draws almost no current."
+      ]
+    ],
+    "remember": "Ammeter in series to measure current. Voltmeter in parallel to measure voltage.",
+    "a": {
+      "q": "In the water-in-pipes model of a simple circuit, what does the battery correspond to?",
+      "opts": [
+        "A pump that pushes the water round",
+        "A narrow section that slows the flow",
+        "A tap that controls how much flows",
+        "A tank that stores water for later use"
+      ],
+      "why": "The battery gives charge the energy to move round the circuit, as a pump does for water. A tap or narrow pipe would act more like something that restricts flow, not something that drives it.",
+      "clue": "Think about where the water gets the energy to keep moving."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya wants to measure the current through a lamp and the voltage across it. How should she connect the meters?",
+      "opts": [
+        "Ammeter in series, voltmeter across the lamp",
+        "Ammeter across the lamp, voltmeter in series",
+        "Both meters in series with the lamp",
+        "Both meters in parallel across the lamp"
+      ],
+      "why": "Current must pass through the ammeter, so it goes in series. A voltmeter compares the two ends of the lamp, so it goes in parallel. Putting the ammeter across the lamp is tempting because both meters touch the lamp, but it would not measure the current through the lamp.",
+      "clue": "One meter must let the current pass through it. The other compares two points."
+    }
+  },
+  "phys-resistance-ohm-s-law": {
+    "title": "Resistance and Ohm's law",
+    "card": [
+      "Resistance is how much a component opposes current. It is measured in ohms (Ω). A higher resistance means less current for the same voltage.",
+      "Ohm's law links the three quantities: V = IR. Voltage V is in volts, current I is in amperes and resistance R is in ohms.",
+      [
+        "Ohmic",
+        "a device whose resistance stays constant as the voltage changes. Its graph of current against voltage is a straight line through the origin."
+      ],
+      [
+        "Non-ohmic",
+        "a device whose resistance changes as the voltage changes, such as a diode. Its current against voltage graph is not a straight line."
+      ]
+    ],
+    "remember": "V = IR. In an ohmic device, R stays constant, so current is proportional to voltage.",
+    "a": {
+      "q": "A resistor has 12 V across it and a current of 3.0 A through it. What is its resistance?",
+      "opts": ["4.0 Ω", "36 Ω", "0.25 Ω", "9.0 Ω"],
+      "why": "Rearranging V = IR gives R = V ÷ I = 12 ÷ 3.0 = 4.0 Ω. Multiplying the two numbers to get 36 Ω would find V × I, which is not the resistance.",
+      "clue": "Rearrange V = IR to make R the subject."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student raises the voltage across a component and finds that the current rises, but the current against voltage graph curves and is not a straight line. What can be concluded?",
+      "opts": [
+        "Its resistance changes, so it is non-ohmic",
+        "Its resistance is constant, so it is ohmic",
+        "Its resistance is zero, so it is ohmic",
+        "Its current is constant, so it is non-ohmic"
+      ],
+      "why": "A curved graph means the ratio V ÷ I is not constant, so the resistance changes and the device is non-ohmic. The fact that current rises with voltage does not make it ohmic, because an ohmic device needs a straight line through the origin.",
+      "clue": "What shape of graph does a constant resistance give?"
+    }
+  },
+  "phys-series-circuits": {
+    "title": "Series circuits",
+    "card": [
+      "In a series circuit, the components are connected one after another in a single loop. The charge has only one path to follow.",
+      [
+        "Current",
+        "is the same at every point in the loop, because charge is not used up and has nowhere else to go. I is the same through every component."
+      ],
+      [
+        "Voltage",
+        "is shared between the components. The voltages across them add up to the supply voltage: V = V1 + V2 + ..."
+      ],
+      [
+        "Resistance",
+        "adds up. The total is R = R1 + R2 + ... and it is larger than any single resistor. Current then follows from I = V ÷ R."
+      ]
+    ],
+    "remember": "In series, current is the same everywhere. Voltages add up to the supply, and resistances add.",
+    "a": {
+      "q": "Two resistors are connected in series to a 12 V supply. The voltage across one is 5 V. What is the voltage across the other?",
+      "opts": ["7 V", "5 V", "12 V", "17 V"],
+      "why": "In series the voltages across the components add up to the supply voltage, so the other resistor has 12 - 5 = 7 V. It cannot be 5 V, because 5 + 5 is only 10 V, not the 12 V supply.",
+      "clue": "The voltages must add up to the supply."
+    },
+    "b": {
+      "d": 3,
+      "q": "A 4 ohm resistor and an 8 ohm resistor are in series with a 6 V supply. What is the current through the 4 ohm resistor?",
+      "opts": ["0.5 A", "1.5 A", "0.75 A", "2.25 A"],
+      "why": "The total resistance is 4 + 8 = 12 ohms, so I = 6 ÷ 12 = 0.5 A. The same current flows through every component in series. 1.5 A comes from dividing the supply by the 4 ohm resistor alone, which ignores the other resistor.",
+      "clue": "Add the resistances first, then use I = V ÷ R."
+    }
+  },
+  "phys-parallel-circuits": {
+    "title": "Parallel circuits",
+    "card": [
+      "In a parallel circuit, the current has more than one path. Each path is called a branch, and every branch connects across the same two points of the supply.",
+      ["Voltage", "the potential difference is the same across each branch, and equals the supply voltage."],
+      [
+        "Current",
+        "the current from the supply splits between the branches and joins up again. The branch currents add to give the supply current. A branch with a smaller resistance carries more current."
+      ],
+      [
+        "Resistance",
+        "the total resistance is less than the smallest branch resistance, because extra branches give the current more paths. Use 1/R(total) = 1/R1 + 1/R2 + ..."
+      ]
+    ],
+    "remember": "Parallel: same voltage on every branch, branch currents add, and total resistance falls as branches are added.",
+    "a": {
+      "q": "A 12 V battery is connected across two resistors in parallel, 4 ohms and 12 ohms. What is the voltage across the 12 ohm resistor?",
+      "opts": ["12 V", "9 V", "3 V", "4 V"],
+      "why": "Each branch connects directly across the battery, so each has the full 12 V. The voltage would only be shared out if the resistors were in series, which is not the case here.",
+      "clue": "Each branch connects straight across the supply."
+    },
+    "b": {
+      "d": 3,
+      "q": "A 6 V supply is connected across a 6 ohm resistor and a 3 ohm resistor in parallel. What is the current drawn from the supply?",
+      "opts": ["3 A", "1 A", "2 A", "0.67 A"],
+      "why": "Each branch has 6 V. The 6 ohm branch carries 6 ÷ 6 = 1 A and the 3 ohm branch carries 6 ÷ 3 = 2 A. The branch currents add to 3 A. Adding the resistances to get 9 ohms would give 0.67 A, but that is the series method.",
+      "clue": "Find the current in each branch using V = IR, then combine them."
+    }
+  },
+  "phys-voltage-dividers": {
+    "title": "Voltage dividers",
+    "card": [
+      "A voltage divider is two resistors in series across a supply. The supply voltage is shared between them.",
+      "The same current flows through both resistors. A larger resistance has a larger share of the voltage, since V = IR.",
+      "The voltages split in the same ratio as the resistances. If R2 is twice R1, then R2 has twice the voltage of R1. The two voltages add up to the supply.",
+      "A sensor such as a thermistor or light-dependent resistor can be one of the two resistors. If its resistance rises, its share of the total resistance grows, so its share of the voltage grows too."
+    ],
+    "remember": "Each resistor's share of the supply voltage matches its share of the total resistance.",
+    "a": {
+      "q": "A 12 V supply is connected across a 1 kΩ resistor and a 3 kΩ resistor in series. What is the voltage across the 3 kΩ resistor?",
+      "opts": ["9 V", "4 V", "6 V", "3 V"],
+      "why": "The resistances are in the ratio 1 to 3, so the 3 kΩ resistor gets 3 parts out of 4, which is 9 V. 3 V is the share of the 1 kΩ resistor, and 4 V comes from wrongly dividing 12 V by 3.",
+      "clue": "Split the supply in the same ratio as the resistances."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's garden light circuit has a 6 V supply, a fixed resistor and a light-dependent resistor (LDR) in series. At dusk the LDR's resistance rises. What happens to the voltage across the LDR?",
+      "opts": [
+        "It rises, as the LDR takes a larger share",
+        "It falls, as less current flows through the LDR",
+        "It stays at 6 V, as the supply is fixed",
+        "It stays the same, as the current is the same"
+      ],
+      "why": "The LDR's share of the total resistance grows, so its share of the 6 V grows too, whichever resistor is larger. The current does fall, but the voltages still split in the ratio of the resistances. The fixed resistor's voltage falls as the LDR's rises.",
+      "clue": "How does the LDR's share of the total resistance change?"
+    }
+  },
+  "phys-forces-two-dimensions": {
+    "title": "Forces in two dimensions",
+    "card": [
+      "Force is a vector, so it has size and direction. Newton's second law, net force = mass × acceleration, applies to the net force, which is the vector sum of all forces on the object.",
+      "To add forces at angles, split each force into components along two perpendicular axes, such as horizontal and vertical. For a force F at angle θ above the horizontal, the horizontal part is F cos θ and the vertical part is F sin θ.",
+      "Add the components along each axis separately. Then apply the second law to each axis on its own. If the object is not accelerating along an axis, the components along it add to zero.",
+      "For a box pulled along level ground by a rope at an angle above the horizontal, only the horizontal component of the pull drives the box forward. The vertical component lifts partly against the weight, so the normal force is smaller than the weight."
+    ],
+    "remember": "Split forces into perpendicular components, add each direction separately, then apply F = ma to each.",
+    "a": {
+      "q": "A 100 N force acts at 30° above the horizontal on a crate. Which expression gives the horizontal component of the force?",
+      "opts": ["100 × cos 30°", "100 × sin 30°", "100 ÷ cos 30°", "100 + 30"],
+      "why": "The horizontal part of a force at angle θ above the horizontal is F cos θ, so it is 100 × cos 30°. Sin 30° gives the vertical part, which is the most tempting mistake.",
+      "clue": "The angle is measured from the horizontal."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya pulls a sled at constant velocity along level snow in Falls Creek. The rope is angled upwards. The sled has weight W and she pulls with force F at angle θ above the horizontal. Which statement about the vertical forces is correct?",
+      "opts": [
+        "The normal force plus F sin θ equals W",
+        "The normal force equals W",
+        "The normal force plus F cos θ equals W",
+        "The normal force equals W plus F sin θ"
+      ],
+      "why": "The sled has no vertical acceleration, so upward forces equal downward force. The upward forces are the normal force and F sin θ, and they balance W. The normal force does not equal W, because the rope lifts part of the load.",
+      "clue": "Which forces act upwards, and which component of the pull is vertical?"
+    }
+  },
+  "phys-projectile-motion-physics": {
+    "title": "Projectile motion in physics",
+    "card": [
+      "A projectile is an object launched through the air. In the simple model only gravity acts on it, so its horizontal and vertical motions are independent and we treat them separately.",
+      [
+        "Horizontal",
+        "No horizontal force acts, so the horizontal velocity stays steady. The object covers equal horizontal distances in equal times."
+      ],
+      [
+        "Vertical",
+        "Gravity gives a constant downward acceleration of about 9.8 m/s², so the vertical velocity changes by the same amount each second. Ignoring air resistance, the time in the air depends only on the vertical motion."
+      ],
+      "Air resistance is a force that opposes the motion. It slows the object, so the real path is shorter than the path with no air resistance."
+    ],
+    "remember": "With no air resistance, horizontal velocity stays steady, vertical velocity changes steadily, and the two share only the time.",
+    "a": {
+      "q": "A ball is kicked off a cliff in a horizontal direction. Ignoring air resistance, what is true of its horizontal velocity as it falls?",
+      "opts": [
+        "It stays the same, as no horizontal force acts on it",
+        "It increases, because the ball is falling faster",
+        "It decreases, because gravity pulls the ball down",
+        "It increases, because the ball keeps being pushed forward"
+      ],
+      "why": "With no air resistance, no horizontal force acts, so the horizontal velocity stays steady. Gravity acts only downwards, so it changes the vertical velocity, not the horizontal one.",
+      "clue": "Which direction does gravity act, and is there any force sideways?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia drops a stone from a bridge. At the same instant, Tom throws an identical stone horizontally from the same height. Ignoring air resistance, which stone lands first?",
+      "opts": [
+        "They land at the same time",
+        "Mia's stone lands first",
+        "Tom's stone lands first",
+        "It depends on how fast Tom throws his"
+      ],
+      "why": "Both stones start with zero vertical velocity and fall with the same downward acceleration from the same height, so they take the same time. Tom's stone has extra horizontal velocity, but however fast he throws it, that does not change its vertical motion.",
+      "clue": "Compare how each stone starts moving up or down."
+    }
+  },
+  "phys-banked-tracks": {
+    "title": "Banked curves",
+    "card": [
+      "On a flat road, friction between the tyres and the road supplies the force that turns a car. If the road is wet or icy, this friction can be too small.",
+      "On a banked curve, the road is tilted towards the centre of the curve. The normal force is at right angles to the road, so it tilts towards the centre too.",
+      "The horizontal part of the normal force points to the centre of the circle. It supplies the centripetal force. The vertical part balances the car's weight.",
+      "For a given radius and bank angle, there is one design speed where the normal force alone supplies the centripetal force. At that speed the car does not rely on friction to take the curve."
+    ],
+    "remember": "A banked road turns part of the normal force towards the centre, so the car can corner without relying on friction.",
+    "a": {
+      "q": "A car takes a banked curve at its design speed. Which force supplies the centripetal force?",
+      "opts": [
+        "The horizontal part of the normal force",
+        "The car's weight acting down the slope",
+        "The friction between the tyres and the road",
+        "The engine force pushing the car forward"
+      ],
+      "why": "The normal force is at right angles to the tilted road, so part of it points towards the centre of the curve. At the design speed this part alone supplies the centripetal force. Friction is the tempting answer, but a banked curve is designed so that the car does not rely on it.",
+      "clue": "The road is tilted, so which force tilts with it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A banked curve on a road near Mount Buller in Victoria is designed for 80 km/h. A car takes it at exactly 80 km/h on an icy road. What happens?",
+      "opts": [
+        "The car can still turn, as the normal force is enough",
+        "The car slides outwards, as friction is needed at any speed",
+        "The car slides inwards, as the normal force is too large",
+        "The car cannot turn, as the vertical force is too small"
+      ],
+      "why": "At the design speed the horizontal part of the normal force alone gives the required centripetal force, so the car does not need friction. Ice removes friction, but it is not needed here. The tempting answer is that friction is always needed, which is true on a flat road but not at the design speed of a banked curve.",
+      "clue": "At the design speed, is friction part of the force that turns the car?"
+    }
+  },
+  "phys-vertical-circular-motion": {
+    "title": "Vertical circular motion",
+    "card": [
+      "An object moving in a vertical circle needs a net force towards the centre at every point. This net force is the centripetal force, and it equals mv² ÷ r.",
+      [
+        "Bottom",
+        "the centre is above the object. The normal force points up and weight points down, so the net force towards the centre is N - mg = mv² ÷ r."
+      ],
+      [
+        "Top",
+        "for an object on the inside of the loop, the centre is below it. The track or seat pushes down, and weight points down too, so N + mg = mv² ÷ r."
+      ],
+      "The normal force is a real force from a surface or seat. Centripetal force is just the name for the net force towards the centre, not an extra force. At the bottom N is larger than mg, so a rider feels heavier."
+    ],
+    "remember": "Take the centre as positive: the net force towards it equals mv² ÷ r, and the forces differ at the top and bottom.",
+    "a": {
+      "q": "A cart moves at steady speed through the bottom of a vertical loop, on the inside of the track. How does the normal force on the cart compare with its weight?",
+      "opts": [
+        "The normal force is greater than the weight",
+        "The normal force is equal to the weight",
+        "The normal force is less than the weight",
+        "The normal force is zero"
+      ],
+      "why": "At the bottom the centre is above the cart, so the net force must point up. This needs the normal force to be greater than the weight. Equal forces would give no net force, so the cart could not turn.",
+      "clue": "Which way must the net force point at the bottom?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A 50 kg rider in Geelong passes through the top of a vertical loop, inside the loop, at 14 m/s. The radius is 10 m. Which equation gives the normal force N from the seat? Take g as 10 m/s².",
+      "opts": ["N + 500 = 50 × 14² ÷ 10", "N - 500 = 50 × 14² ÷ 10", "N = 500 + 50 × 14", "N + 500 = 50 × 14 ÷ 10"],
+      "why": "Inside the loop at the top, the seat pushes down and weight points down, both towards the centre. So N + mg = mv² ÷ r, which is N + 500 = 50 × 14² ÷ 10. Subtracting 500 would be right for the bottom of the loop, where the normal force points up.",
+      "clue": "At the top, inside the loop, where is the centre?"
+    }
+  },
+  "phys-work-done-by-force": {
+    "title": "Work done by a force",
+    "card": [
+      "Work is the energy transferred when a force moves an object. For a force along the direction of motion, W = Fs, where F is the force in newtons and s is the displacement in metres. Work is measured in joules.",
+      "If the force is at an angle to the motion, only the part of the force along the displacement does work. That part is F cos θ, so W = Fs cos θ.",
+      "On a force-distance graph, the work done is the area under the line. This works even when the force changes.",
+      "A force at right angles to the motion does no work. Work is positive if the force acts along the motion and negative if it acts against it."
+    ],
+    "remember": "Work is the force along the motion times the distance moved, or the area under a force-distance graph.",
+    "a": {
+      "q": "Which force does no work on the object?",
+      "opts": [
+        "A satellite's weight while it moves in a circular orbit",
+        "A person's push on a trolley moving away from them",
+        "A rope pulling a sled forwards along flat snow",
+        "A brake pad's friction on a spinning wheel"
+      ],
+      "why": "In a circular orbit the weight acts towards the centre, at right angles to the motion, so it does no work. The other forces act along or against the motion, so they do work.",
+      "clue": "Look for the force at right angles to the motion."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya pulls a suitcase 20 m along a flat floor. She pulls with a force of 50 N on a handle at 60° above the horizontal. How much work does she do on the suitcase?",
+      "opts": ["500 J", "1000 J", "866 J", "25 J"],
+      "why": "Only the part of the force along the floor does work: W = 50 × 20 × cos 60° = 500 J. Using the full 50 N gives 1000 J, which wrongly counts the upward part of the pull.",
+      "clue": "Find the part of the force that points along the motion."
+    }
+  },
+  "phys-elastic-inelastic-collisions-2": {
+    "title": "Elastic and inelastic collisions",
+    "card": [
+      "In every collision in an isolated system, total momentum is conserved. This is true whether or not kinetic energy is kept.",
+      [
+        "Elastic",
+        "total kinetic energy is the same before and after the collision. The objects bounce apart with no energy turned into other forms."
+      ],
+      [
+        "Inelastic",
+        "some kinetic energy is lost from the motion. It becomes other forms, such as heat, sound or the energy of deforming the objects."
+      ],
+      "To classify a collision, compare total kinetic energy (½mv² for each object, added up) before and after. Equal means elastic. Less after means inelastic."
+    ],
+    "remember": "Momentum is conserved in both types. Only an elastic collision keeps all the kinetic energy.",
+    "a": {
+      "q": "Two trolleys collide and stick together. Total momentum is the same before and after, but kinetic energy falls. What kind of collision is this?",
+      "opts": [
+        "Inelastic, because kinetic energy was lost",
+        "Elastic, because momentum was conserved",
+        "Elastic, because the trolleys moved together",
+        "Inelastic, because momentum was not conserved"
+      ],
+      "why": "Kinetic energy fell, so the collision is inelastic. Momentum is conserved in both types, so conserved momentum cannot show that a collision is elastic.",
+      "clue": "Which quantity tells the two types apart?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A 2.0 kg trolley moving at 3.0 m/s hits a stationary 1.0 kg trolley. Afterwards they move apart at 1.0 m/s and 4.0 m/s respectively. What type of collision is this?",
+      "opts": [
+        "Elastic, as kinetic energy stays at 9.0 J",
+        "Inelastic, as kinetic energy falls from 9.0 J",
+        "Inelastic, as momentum falls from 6.0 kg m/s",
+        "Elastic, as the trolleys move apart afterwards"
+      ],
+      "why": "Before: ½ × 2.0 × 3.0² = 9.0 J. After: ½ × 2.0 × 1.0² + ½ × 1.0 × 4.0² = 1.0 + 8.0 = 9.0 J. Kinetic energy is kept, so it is elastic. Momentum is 6.0 kg m/s before and after (2.0 + 4.0), so it is conserved.",
+      "clue": "Add up the kinetic energy of both trolleys before and after."
+    }
+  },
+  "phys-springs-energy": {
+    "title": "Springs and energy",
+    "card": [
+      "A spring that obeys Hooke's law has force F = kx, where k is the spring constant and x is the extension or compression from its natural length.",
+      "The energy stored in a stretched or compressed spring is elastic potential energy. It equals the area under the force-extension graph: E = ½kx².",
+      "Near Earth's surface, gravitational potential energy changes by mgΔh when an object's height changes by Δh.",
+      "If no energy is lost, the total of kinetic, elastic and gravitational energy stays the same. Energy moves between these forms, so a released spring can give an object kinetic energy or lift it."
+    ],
+    "remember": "Spring energy is ½kx², the area under the force-extension graph, and it can change into kinetic or gravitational energy.",
+    "a": {
+      "q": "A spring has a spring constant of 200 N/m. How much energy is stored when it is stretched by 0.10 m?",
+      "opts": ["1.0 J", "20 J", "2.0 J", "0.10 J"],
+      "why": "E = ½kx² = ½ × 200 × 0.10² = 1.0 J. Using kx² gives 2.0 J, which forgets the half. Using F × x with F = kx has the same mistake.",
+      "clue": "Use the area under the force-extension graph, which is a triangle."
+    },
+    "b": {
+      "d": 3,
+      "q": "A spring with k = 400 N/m is compressed 0.20 m and launches a 0.10 kg ball straight up. Ignoring energy losses, how high does the ball rise above its starting, compressed position? Use g = 10 m/s².",
+      "opts": ["8.0 m", "16 m", "40 m", "0.80 m"],
+      "why": "Stored energy is ½ × 400 × 0.20² = 8.0 J. All of it becomes gravitational potential energy: mgh = 0.10 × 10 × h = 8.0, so h = 8.0 m. Leaving out the half gives 16 J and 16 m, and leaving out the square gives 40 J and 40 m.",
+      "clue": "Find the spring energy first, then set it equal to mgh."
+    }
+  },
+  "phys-fields-field-lines": {
+    "title": "Fields and field lines",
+    "card": [
+      "A field is a region of space where an object feels a force without touching anything. Gravity, electric charge and magnets each have a field.",
+      "An arrow on a field line shows the direction of the force on a test object at that point: a small test mass for gravity, a positive test charge for electric fields and a north pole for magnetic fields.",
+      "Where field lines are closer together, the field is stronger. Where they are further apart, the field is weaker.",
+      "Field lines never cross. If two lines crossed, the field would point in two directions at one point, which is not possible."
+    ],
+    "remember": "Line arrows give the direction of the force. Line spacing gives the strength.",
+    "a": {
+      "q": "What does it tell you if field lines are drawn closer together in one region than in another?",
+      "opts": [
+        "The field is stronger in the closer region",
+        "The field is weaker in the closer region",
+        "The force points toward the closer region",
+        "The field in the closer region is uniform"
+      ],
+      "why": "Closer lines mean a stronger field, so a test object placed there would feel a larger force. The spacing does not show direction, which is given by the arrows on the lines.",
+      "clue": "Think of spacing as a measure of strength, not direction."
+    },
+    "b": {
+      "d": 2,
+      "q": "Field lines around a planet are drawn twice as close together at point P as at point Q. What can be said about P and Q?",
+      "opts": [
+        "The field is stronger at P than at Q",
+        "The field is stronger at Q than at P",
+        "The force at P points toward Q",
+        "The field has the same strength at P and Q"
+      ],
+      "why": "Lines that are closer together show a stronger field, so a test mass at P would feel a larger force than at Q. The same strength would need the same spacing, and the spacing does not show which way the force points.",
+      "clue": "Compare how tightly the lines are packed at each point."
+    }
+  },
+  "phys-electric-fields-2": {
+    "title": "Electric fields",
+    "card": [
+      "A charge creates an electric field around it. The field strength E is the force per unit of positive charge, so F = qE. The force on a positive charge is along the field, and on a negative charge it is opposite.",
+      [
+        "Point charge",
+        "The field of a point charge Q is E = kQ/r². It weakens with the inverse square of distance, so doubling the distance cuts E to a quarter. Field lines point away from a positive charge and towards a negative one."
+      ],
+      [
+        "Uniform field",
+        "Two parallel plates with a potential difference V and separation d make a uniform field between them, E = V/d. It points from the positive plate to the negative plate. A charge between the plates feels a constant force, so it accelerates steadily."
+      ],
+      "Moving a charge q through a potential difference V changes its energy by W = qV. If only the field acts, a charge moving with the force gains this as kinetic energy, and one moving against it loses kinetic energy."
+    ],
+    "remember": "Force on a charge is F = qE. A point charge's field follows 1/r², and crossing a potential difference V changes a charge's energy by qV.",
+    "a": {
+      "q": "The distance from a point charge is tripled. What happens to the strength of its electric field?",
+      "opts": ["It falls to one ninth", "It falls to one third", "It falls to one sixth", "It rises to nine times"],
+      "why": "E = kQ/r², so tripling r divides E by 3², which is 9. One third is the tempting answer, but it treats the field as falling in direct proportion to distance, and the card says it follows the inverse square.",
+      "clue": "Field strength depends on r squared."
+    },
+    "b": {
+      "d": 3,
+      "q": "An electron (charge 1.6 × 10⁻¹⁹ C) starts at rest at the negative plate and crosses to the positive plate. The potential difference is 500 V. What happens to its kinetic energy and speed?",
+      "opts": [
+        "It gains 8.0 × 10⁻¹⁷ J, and its speed increases steadily",
+        "It gains 8.0 × 10⁻¹⁷ J, and its speed stays constant",
+        "It loses 8.0 × 10⁻¹⁷ J, and its speed decreases",
+        "It gains 3.2 × 10⁻²² J, and its speed increases steadily"
+      ],
+      "why": "The force on the electron points opposite the field, towards the positive plate, so it moves with the force and gains W = qV = 1.6 × 10⁻¹⁹ × 500 = 8.0 × 10⁻¹⁷ J of kinetic energy. The tempting constant speed option confuses a constant force with a constant speed: in a uniform field the constant force gives a steady acceleration. Dividing q by V gives 3.2 × 10⁻²² J, which is the wrong operation.",
+      "clue": "Which way does the force on a negative charge point?"
+    }
+  },
+  "phys-magnetic-fields": {
+    "title": "Magnetic fields",
+    "card": [
+      "A magnetic field is a region where a magnetic force acts on magnets, moving charges and current-carrying wires. It is created by magnets and by electric currents.",
+      "Outside a magnet, field lines curve from the north pole round to the south pole. Inside the magnet they run from south to north, so each line is a closed loop.",
+      "A compass needle lines up with the field, and its north end points in the field direction.",
+      "A current in a straight wire makes circular field lines around the wire. Use the right-hand grip rule: thumb along the current, and the curled fingers show the field direction."
+    ],
+    "remember": "Magnets and currents make magnetic fields, and outside a magnet the lines run north to south.",
+    "a": {
+      "q": "A compass sits beside the middle of a bar magnet, level with its centre. Which way does the compass's north end point?",
+      "opts": [
+        "Parallel to the magnet, towards its south pole",
+        "Parallel to the magnet, towards its north pole",
+        "At right angles to the magnet, away from it",
+        "At right angles to the magnet, towards it"
+      ],
+      "why": "Outside the magnet, field lines curve from north round to south, so beside the middle they run parallel to the magnet towards the south pole. The north end of the needle points in the field direction. Pointing towards the north pole reverses the direction of the lines.",
+      "clue": "Which way do field lines run outside a magnet?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Dani holds a straight wire carrying a current upwards. Looking down from above, which describes the magnetic field around the wire?",
+      "opts": [
+        "Circular lines around the wire, anticlockwise from above",
+        "Circular lines around the wire, clockwise from above",
+        "Straight lines pointing away from the wire",
+        "Straight lines running parallel to the current"
+      ],
+      "why": "Thumb up along the current, and the fingers curl anticlockwise when viewed from above. A current makes circular field lines around the wire, not straight lines. Clockwise is tempting but reverses the direction given by the grip rule.",
+      "clue": "Point your right thumb up and see which way your fingers curl."
+    }
+  },
+  "phys-comparing-fields": {
+    "title": "Comparing fields",
+    "card": [
+      "Gravity, electric and magnetic fields each exert a force on a suitable object placed in them. Gravity acts on mass, electric fields act on charge, and magnetic fields act on moving charges and on magnets.",
+      [
+        "Attract or repel",
+        "Gravity only attracts, as there is no negative mass. Electric forces can attract or repel, depending on the signs of the charges. Magnetic forces can also attract or repel, such as between like and unlike poles."
+      ],
+      [
+        "Static or changing",
+        "A static field does not change with time, such as the field around a fixed mass. A changing field varies with time, such as the field near a moving magnet or a changing current."
+      ],
+      [
+        "Uniform or not",
+        "In a uniform field the strength and direction are the same at every point, so field lines are parallel and evenly spaced. In a non-uniform field they vary, so the lines bend or change spacing."
+      ]
+    ],
+    "remember": "Gravity only attracts. Electric and magnetic forces can attract or repel. Any field can be static or changing, uniform or not.",
+    "a": {
+      "q": "Which statement correctly compares gravitational and electric forces?",
+      "opts": [
+        "Electric forces can repel, but gravity only attracts",
+        "Gravity can repel, but electric forces only attract",
+        "Both only attract, but they act on different things",
+        "Both can attract or repel, depending on the objects"
+      ],
+      "why": "Electric forces repel when charges have the same sign. Gravity acts on mass, and there is no negative mass, so it only attracts. The option saying both only attract is tempting, but it ignores like charges repelling.",
+      "clue": "Think about two charges with the same sign."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two students compare fields. Which statement about field lines is correct?",
+      "opts": [
+        "Parallel, evenly spaced lines show a uniform field",
+        "Parallel lines show a field that is changing with time",
+        "Lines that bend apart show a field that is uniform",
+        "Evenly spaced lines show a field that only attracts"
+      ],
+      "why": "In a uniform field, strength and direction are the same everywhere, so lines are parallel and evenly spaced. Whether a field changes with time is a different question from whether it is uniform, so parallel lines do not show a changing field.",
+      "clue": "Uniform describes position, not time or attraction."
+    }
+  },
+  "phys-satellites-orbits": {
+    "title": "Satellites and orbits",
+    "card": [
+      "A satellite in a circular orbit is pulled towards the centre of the planet by gravity. This gravitational force is the centripetal force that keeps it moving in a circle.",
+      "Set the two forces equal: GMm/r² = mv²/r. The satellite's mass m cancels, so the orbital speed is v = √(GM/r). M is the mass of the planet and r is the distance from the planet's centre.",
+      "A larger orbit radius means a smaller speed. The period is T = 2πr/v, so a larger radius also means a longer period.",
+      "Speed and period depend on the orbit radius and the planet's mass, not on the satellite's mass. A heavy satellite and a light one at the same radius move the same way."
+    ],
+    "remember": "Gravity is the centripetal force, so each radius has one speed and one period.",
+    "a": {
+      "q": "A 500 kg communications satellite and a 1000 kg one are placed in the same circular orbit around Earth. What can be said about their orbital periods?",
+      "opts": [
+        "They are equal",
+        "The 1000 kg one is longer",
+        "The 1000 kg one is shorter",
+        "The 1000 kg one is twice as long"
+      ],
+      "why": "The satellite's mass cancels when gravity is set equal to the centripetal force, so speed depends only on Earth's mass and the radius. The same speed over the same path gives the same period. The heavier satellite feels a bigger pull, but it also needs a bigger force to curve.",
+      "clue": "Does the satellite's mass survive when you equate the two forces?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A weather satellite orbits a planet at radius r. A second satellite of the same planet orbits at a larger radius. Which statement is correct?",
+      "opts": [
+        "The second has a lower speed and a longer period",
+        "The second has a lower speed and a shorter period",
+        "The second has a higher speed and a longer period",
+        "The second has a higher speed and a shorter period"
+      ],
+      "why": "Since v = √(GM/r), a larger radius gives a lower speed. The satellite also has a longer path and moves slower along it, so its period is longer. A higher speed at a larger radius is a tempting error, but gravity is weaker there.",
+      "clue": "Gravity gets weaker with distance, so think about the speed first."
+    }
+  },
+  "phys-synchrotrons-light": {
+    "title": "Particle accelerators",
+    "card": [
+      "A charged particle gains speed when it moves through an electric field. The field does work on it, so its kinetic energy rises by qΔV for a potential difference ΔV.",
+      "The magnetic fields in an accelerator do not add energy to the particles. Their job is to steer them, bending their path into a curve.",
+      "A synchrotron uses both. Electric fields at points around a ring give the particles energy, and magnets bend them round so they pass through those electric fields again and again.",
+      "A faster particle is harder to bend, so in the same field it would swing out to a wider path. To keep the ring's radius fixed, the magnetic field is made stronger as the particles gain speed."
+    ],
+    "remember": "Electric fields speed charges up. Magnetic fields steer them round the ring.",
+    "a": {
+      "q": "In a synchrotron, which part of the machine increases the speed of the particles?",
+      "opts": ["The electric fields", "The magnetic fields", "Both fields equally", "The circular path itself"],
+      "why": "The electric fields do work on the charges and add kinetic energy, so they raise the speed. The magnetic fields steer the particles round the ring but add no energy, so they cannot speed them up. The circular path is only the result of that steering.",
+      "clue": "Steering a particle is not the same as speeding it up."
+    },
+    "b": {
+      "d": 3,
+      "q": "Protons in a synchrotron ring keep gaining speed on a path of fixed radius. What happens to the magnetic field strength?",
+      "opts": ["It is increased", "It is decreased", "It stays constant", "It is switched off"],
+      "why": "A faster proton is harder to bend, so the same field would let it swing out to a wider path. To hold the radius fixed, the field is made stronger as the protons' speed, or more exactly their momentum, rises. Keeping the field constant is the tempting error, but then the protons would drift outwards.",
+      "clue": "Is a faster particle easier or harder to bend?"
+    }
+  },
+  "phys-dc-motors-2": {
+    "title": "DC motors",
+    "card": [
+      "A coil of wire sits between the poles of a magnet and carries a current. The two sides of the coil carry current in opposite directions, so the forces on them are opposite. This turns the coil.",
+      "A split ring commutator is a ring cut into two halves, joined to the ends of the coil. Each half touches a fixed brush. Every half turn it swaps which end of the coil connects to which brush, so the current in the coil reverses.",
+      "Without the commutator, the coil would swing to the vertical position, where the forces no longer turn it, and stop. With it, the forces keep turning the coil in the same direction.",
+      "The torque (turning effect) on the coil rises with more current, a stronger magnetic field or more loops of wire in the coil."
+    ],
+    "remember": "The commutator reverses the current each half turn so the coil keeps turning. Torque rises with current, field and loops.",
+    "a": {
+      "q": "What does the split ring commutator do in a DC motor?",
+      "opts": [
+        "Reverses the coil's current every half turn",
+        "Changes the supply from DC to AC",
+        "Makes the magnetic field reverse each half turn",
+        "Stops the coil from moving past the vertical"
+      ],
+      "why": "Reversing the current every half turn keeps the forces on each side of the coil turning it the same way. The commutator does not change the magnet. Without the reversal, the coil would stop at the vertical position, not turn past it.",
+      "clue": "Think about what must swap each half turn to keep the forces pushing the same way."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi builds a simple DC motor in his school workshop. He wants the coil to turn with more torque, and he changes only one thing. Which change does this?",
+      "opts": [
+        "Winding more loops of wire into the coil",
+        "Fitting a commutator with more brushes",
+        "Turning the magnets so the poles are swapped",
+        "Making the coil spin faster by hand at the start"
+      ],
+      "why": "More loops means the force acts on more lengths of wire, so torque rises. Swapping the poles only reverses the direction of turning. It does not change the size of the torque.",
+      "clue": "Torque depends on current, field strength and number of loops."
+    }
+  },
+  "phys-magnetic-flux-2": {
+    "title": "Magnetic flux",
+    "card": [
+      "Magnetic flux measures how much magnetic field passes through a surface. For a field at right angles to the surface, Φ = BA.",
+      "B is the magnetic field strength in tesla (T) and A is the area in square metres (m²). Flux is measured in weber (Wb), where 1 Wb = 1 T m².",
+      "Only the part of the field at right angles to the surface counts. If the field runs along the surface, no field lines pass through it and the flux is zero.",
+      "Flux rises if the field gets stronger or the area gets larger. Tilting a coil changes how much field passes through it, so the flux changes too."
+    ],
+    "remember": "Flux is field times area, counted at right angles to the surface.",
+    "a": {
+      "q": "A square coil of area 0.020 m² sits at right angles to a uniform field of 0.50 T. What is the magnetic flux through it?",
+      "opts": ["0.010 Wb", "0.040 Wb", "25 Wb", "0.52 Wb"],
+      "why": "Φ = BA = 0.50 × 0.020 = 0.010 Wb. Dividing B by A gives 25, which is the wrong operation, because flux is the product of the two.",
+      "clue": "Multiply field strength by area."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya holds a flat loop in a steady magnetic field so that the field lines pass straight through it. She then turns the loop until its flat face is parallel to the field lines. What happens to the flux through the loop?",
+      "opts": ["It falls to zero", "It stays the same", "It doubles", "It becomes negative and large"],
+      "why": "Only the part of the field at right angles to the surface counts. When the face is parallel to the field, no field lines pass through it, so the flux is zero. The field and the area have not changed, but that does not keep the flux the same.",
+      "clue": "Do any field lines pass through the loop once it lies along them?"
+    }
+  },
+  "phys-solar-cells-inverters": {
+    "title": "Solar cells and inverters",
+    "card": [
+      "A photovoltaic (solar) cell uses light to push electrons through a circuit. The current always flows in one direction, so a solar cell produces DC.",
+      "Many cells are joined in a solar panel. Panels in series add their voltages, so the DC output is larger.",
+      "Mains electricity in an Australian home is AC, which reverses direction many times each second. Most home appliances and the grid are built for AC.",
+      "An inverter is a device that changes DC into AC. A rooftop solar system needs one so its electricity can be used in the home or sent to the grid."
+    ],
+    "remember": "Solar cells give DC. An inverter turns it into AC for the home.",
+    "a": {
+      "q": "Mia installs solar panels on her house in Bendigo. What does the inverter do in her system?",
+      "opts": [
+        "Changes the DC from the panels into AC",
+        "Changes the AC from the panels into DC",
+        "Makes the panels produce more voltage from light",
+        "Stores the panels' electricity for use at night"
+      ],
+      "why": "The panels give DC, but the home runs on AC, so the inverter changes DC into AC. It changes the type of current. It does not make the cells produce more voltage or store energy.",
+      "clue": "Think about which type of current the panels make and which the home uses."
+    },
+    "b": {
+      "d": 2,
+      "q": "A farm in Mildura wants its solar panels to run a pump designed to run only on AC. What must be added between them?",
+      "opts": [
+        "An inverter, to change the panels' DC into AC",
+        "An inverter, to change the panels' AC into DC",
+        "More panels in series, to raise the DC voltage",
+        "A battery, to store the panels' DC output"
+      ],
+      "why": "Solar panels produce DC, and the pump runs only on AC, so an inverter is needed to change DC into AC. Adding panels in series gives a larger voltage, but the output is still DC.",
+      "clue": "Compare the type of current the panels make with the type the pump needs."
+    }
+  },
+  "phys-peak-rms-values": {
+    "title": "Peak and RMS values",
+    "card": [
+      "An AC voltage swings between a positive and a negative peak. The peak voltage, Vpeak, is the largest value it reaches.",
+      "The RMS voltage is the DC voltage that would give the same power in a resistor. For a sinusoidal supply, Vrms = Vpeak ÷ √2, which is about 0.71 × Vpeak.",
+      "The RMS value is smaller than the peak, because the AC voltage is at its peak only for an instant in each cycle.",
+      "The same rule works for current: Irms = Ipeak ÷ √2. Mains voltage is quoted as an RMS value."
+    ],
+    "remember": "RMS is the DC equivalent for power: peak divided by √2.",
+    "a": {
+      "q": "An AC supply has a peak voltage of 20 V. About what DC voltage would give the same power in a resistor?",
+      "opts": ["14 V", "28 V", "10 V", "20 V"],
+      "why": "The equal-power DC voltage is the RMS value: 20 ÷ √2 ≈ 14 V. Multiplying by √2 gives 28 V, which reverses the relationship, as the RMS value is below the peak.",
+      "clue": "Find the RMS value."
+    },
+    "b": {
+      "d": 3,
+      "q": "A workshop in Ballarat has an AC supply with an RMS voltage of 230 V. What is the peak voltage of this supply, to the nearest volt?",
+      "opts": ["325 V", "163 V", "230 V", "460 V"],
+      "why": "Vpeak = Vrms × √2 = 230 × 1.414 ≈ 325 V. Dividing by √2 gives 163 V, but the quoted 230 V is already the RMS value, so the peak must be larger.",
+      "clue": "The quoted mains value is RMS, and the peak is higher."
+    }
+  },
+  "phys-transmission-losses": {
+    "title": "Transmission losses",
+    "card": [
+      "Wires have resistance, so some electrical energy is lost as heat when current flows. The power lost is P = I²R, where I is the current and R is the resistance of the wires.",
+      "The loss depends on the square of the current. Halving the current cuts the power lost to a quarter.",
+      "Power sent is P = VI. For the same power, a higher voltage means a lower current. The resistance of the wires does not change with the voltage.",
+      "So electricity is sent over long distances at high voltage and low current. This keeps the heat loss in the wires small."
+    ],
+    "remember": "For the same power, high voltage means low current, and low current means less heat lost.",
+    "a": {
+      "q": "Why is electricity sent along power lines at high voltage?",
+      "opts": [
+        "It lowers the current, so less power is lost as heat",
+        "It lowers the resistance, so the wires heat up less",
+        "It raises the current, so more power reaches homes",
+        "It raises the generator's output, so homes get more power"
+      ],
+      "why": "For the same power, a higher voltage means a lower current, and the loss is I²R. The resistance of the wires does not change with the voltage, so lowering the resistance is not the reason.",
+      "clue": "Think about what happens to current when voltage rises."
+    },
+    "b": {
+      "d": 3,
+      "q": "A power line carries 100 A and loses 40 kW as heat. The same power is sent at ten times the voltage, so the current is 10 A. How much power is lost in the same line?",
+      "opts": ["0.4 kW", "4 kW", "40 kW", "0.04 kW"],
+      "why": "The current falls to one tenth, and the loss depends on I², so it falls to one hundredth: 40 kW ÷ 100 = 0.4 kW. A fall to 4 kW would treat the loss as proportional to I, but it depends on the square.",
+      "clue": "The loss depends on the square of the current."
+    }
+  },
+  "phys-wave-properties": {
+    "title": "Wave properties",
+    "card": [
+      "Light is an electromagnetic wave. It is made of electric and magnetic fields that oscillate together and carry energy through space.",
+      "Electromagnetic waves are made by accelerating charges. A charge moving at constant velocity does not make them, but a charge that speeds up, slows down or changes direction does.",
+      "Light is a transverse wave. The fields oscillate at right angles to the direction the wave travels.",
+      "All electromagnetic waves, from radio waves to X-rays, travel at c in a vacuum, about 3.00 × 10^8 m s^-1, whatever their frequency. Since c = fλ, a lower frequency means a longer wavelength, so radio waves are far longer than visible light."
+    ],
+    "remember": "Accelerating charges make transverse electromagnetic waves, and in a vacuum all of them travel at c.",
+    "a": {
+      "q": "Which charge motion would produce an electromagnetic wave?",
+      "opts": [
+        "An electron oscillating back and forth in an aerial",
+        "An electron moving at constant speed in a straight line",
+        "A proton at rest on a metal plate",
+        "A proton moving at constant velocity in a vacuum"
+      ],
+      "why": "An oscillating electron keeps changing its velocity, so it is accelerating and radiates an electromagnetic wave. A charge moving at constant speed in a straight line is not accelerating, so it does not. A fast charge is not enough: it must accelerate.",
+      "clue": "Look for the charge whose velocity keeps changing."
+    },
+    "b": {
+      "d": 3,
+      "q": "A radio wave of frequency 100 MHz and a beam of red light both travel through a vacuum. How do their speeds and wavelengths compare?",
+      "opts": [
+        "Equal speeds, and the radio wave has the longer wavelength",
+        "Equal speeds, and the radio wave has the shorter wavelength",
+        "The radio wave is faster because its wavelength is longer",
+        "The red light is faster because its frequency is higher"
+      ],
+      "why": "All electromagnetic waves travel at c in a vacuum, so the speeds are equal. Since c = fλ, the radio wave's much lower frequency means a much longer wavelength. Frequency and wavelength do not change the speed in a vacuum.",
+      "clue": "Speed is fixed in a vacuum, so use c = fλ to compare wavelengths."
+    }
+  },
+  "phys-standing-waves": {
+    "title": "Standing waves",
+    "card": [
+      "A wave that meets a boundary is reflected. The incoming wave and the reflected wave travel in opposite directions and add together as they overlap.",
+      [
+        "Node",
+        "a point that stays still, because the two waves always arrive opposite and cancel there. Nodes are fixed in place."
+      ],
+      [
+        "Antinode",
+        "a point where the two waves always arrive together and add, so the medium moves with the largest amplitude. Antinodes are also fixed in place."
+      ],
+      "The pattern does not travel along the medium, which is why it is called a standing wave. Neighbouring nodes are half a wavelength apart, and a node and the next antinode are a quarter of a wavelength apart."
+    ],
+    "remember": "A wave plus its reflection gives a standing wave: fixed nodes of no movement and fixed antinodes of largest movement.",
+    "a": {
+      "q": "A guitar string is plucked and a standing wave forms on it. What is true of a node on the string?",
+      "opts": [
+        "It stays still because the two waves cancel there",
+        "It moves most because the two waves add there",
+        "It moves along the string at the wave speed",
+        "It stays still because no wave reaches it"
+      ],
+      "why": "At a node the incoming and reflected waves always arrive opposite, so they cancel and the string does not move. The option saying it stays still because no wave reaches it is wrong: both waves do reach the node, and it is their cancelling that keeps it still.",
+      "clue": "Think about what the two waves do when they arrive opposite."
+    },
+    "b": {
+      "d": 3,
+      "q": "A standing wave forms on a rope with a wavelength of 1.2 m. What is the distance from one node to the next antinode?",
+      "opts": ["0.30 m", "0.60 m", "1.2 m", "2.4 m"],
+      "why": "Neighbouring nodes are half a wavelength apart, which is 0.60 m. An antinode sits midway between two nodes, so a node and the next antinode are a quarter of a wavelength apart: 1.2 ÷ 4 = 0.30 m. The tempting 0.60 m is the distance from node to node.",
+      "clue": "An antinode lies halfway between two neighbouring nodes."
+    }
+  },
+  "phys-diffraction": {
+    "title": "Diffraction",
+    "card": [
+      "Diffraction is the spreading of a wave as it passes through a gap or around the edge of an obstacle. The wave bends into the region behind the barrier.",
+      "The wavelength does not change during diffraction. The wave only spreads out.",
+      "The amount of spreading depends on the ratio λ/w, the wavelength divided by the gap width. The larger this ratio, the more the wave spreads.",
+      "Spreading is small when the gap is much wider than the wavelength. It is noticeable when the gap is about the wavelength or smaller. A gap narrower than the wavelength gives the widest spreading, though less of the wave gets through."
+    ],
+    "remember": "More diffraction comes from a larger λ/w: a longer wavelength or a narrower gap.",
+    "a": {
+      "q": "Water waves pass through a gap in a barrier and spread into the region behind it. What is this effect called?",
+      "opts": ["Diffraction", "Reflection", "Standing wave formation", "Interference"],
+      "why": "Diffraction is the spreading of a wave through a gap or around an edge. Reflection is different because the wave bounces back from the barrier instead of spreading past it.",
+      "clue": "The wave bends into the region behind the barrier."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a ripple tank, water waves pass through a gap. Which setup makes the waves diffract the most?",
+      "opts": [
+        "Wavelength 2.0 cm, gap width 1.5 cm",
+        "Wavelength 1.0 cm, gap width 1.5 cm",
+        "Wavelength 2.0 cm, gap width 6.0 cm",
+        "Wavelength 1.0 cm, gap width 6.0 cm"
+      ],
+      "why": "The spreading depends on λ/w. The ratios are about 1.3, 0.67, 0.33 and 0.17, so the 2.0 cm waves through the 1.5 cm gap spread the most. The 1.0 cm waves through the same 1.5 cm gap spread less, because their shorter wavelength gives a smaller ratio.",
+      "clue": "Work out the wavelength divided by the gap width for each setup."
+    }
+  },
+  "phys-path-difference-interference": {
+    "title": "Path difference and interference",
+    "card": [
+      "Path difference is the difference in the distances travelled by two waves from their sources to the same point. It is a distance in metres, often written as a multiple of the wavelength (λ).",
+      [
+        "Constructive",
+        "if the path difference is 0, λ, 2λ and so on (nλ), the waves arrive in phase. Crests meet crests, so the light is bright."
+      ],
+      [
+        "Destructive",
+        "if the path difference is ½λ, 1½λ, 2½λ and so on ((n + ½)λ), the waves arrive out of phase. Crests meet troughs, so the light is dark."
+      ],
+      "These rules hold when the two sources are coherent and in phase, as in a double slit lit by one source. The centre of the screen is equally far from both slits, so its path difference is 0 and it is bright."
+    ],
+    "remember": "Path difference of a whole number of wavelengths gives bright. A half-wavelength offset gives dark.",
+    "a": {
+      "q": "Light from two coherent, in-phase sources reaches a point on a screen. One path is 3.0 wavelengths longer than the other. What is seen there?",
+      "opts": [
+        "A bright band, as the waves arrive in phase",
+        "A dark band, as the waves arrive out of phase",
+        "A dark band, as the path difference is an odd number",
+        "A bright band, as the waves cancel each other out"
+      ],
+      "why": "A path difference of 3λ is a whole number of wavelengths, so crests meet crests and the light is bright. A dark band needs a half-wavelength offset such as 2.5λ or 3.5λ. Being an odd whole number does not matter.",
+      "clue": "Is 3.0 a whole number of wavelengths or a half-way value?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a double slit setup, a point P on the screen is 2.5 wavelengths further from slit 1 than from slit 2. A point Q is 2.0 wavelengths further from slit 1 than from slit 2. What is seen at P and Q?",
+      "opts": ["P is dark and Q is bright", "P is bright and Q is dark", "P and Q are both bright", "P and Q are both dark"],
+      "why": "At P the path difference is 2.5λ, a half-wavelength offset, so the waves arrive out of phase and P is dark. At Q it is 2.0λ, a whole number, so Q is bright. Choosing P bright and Q dark swaps the two rules.",
+      "clue": "Check which path difference is a whole number and which ends in a half."
+    }
+  },
+  "phys-photoelectric-effect-2": {
+    "title": "The photoelectric effect",
+    "card": [
+      "When light shines on a metal surface, it can eject electrons from the metal. These electrons are called photoelectrons.",
+      "Electrons are ejected only if the light's frequency is above a threshold frequency, f0, which depends on the metal. Below f0, no electrons are ejected, however bright the light is.",
+      "Above f0, even very dim light ejects electrons with no measurable delay. Brighter light ejects more electrons per second. A higher frequency, not brighter light, raises the electrons' maximum kinetic energy.",
+      "The wave model said light energy spreads out and builds up over time. So bright enough light of any frequency should eject electrons, after a delay if the light is dim. Experiments showed neither, and Einstein explained the results with photons, a particle model of light."
+    ],
+    "remember": "Frequency decides whether electrons are ejected. Brightness decides how many.",
+    "a": {
+      "q": "A metal is lit with red light and no electrons are ejected, even when the lamp is made much brighter. What does this show?",
+      "opts": [
+        "The red light is below the metal's threshold frequency",
+        "The red light is above the metal's threshold frequency",
+        "The metal needs longer to absorb enough red light",
+        "The red light is too bright to eject any electrons"
+      ],
+      "why": "Below the threshold frequency, no electrons are ejected, however bright the light is. The wave model suggested that waiting longer would let energy build up, but experiments show no electrons at any brightness or time below the threshold.",
+      "clue": "Brightness did not help, so what property of the light matters?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ultraviolet light ejects electrons from a zinc plate. The lamp is then dimmed a lot, with the frequency kept the same. What happens?",
+      "opts": [
+        "Electrons are still ejected, but fewer each second",
+        "Electrons stop being ejected until the light is brighter",
+        "Electrons are ejected, but with a lower maximum energy",
+        "Electrons are ejected only after a long delay"
+      ],
+      "why": "The frequency is unchanged and still above the threshold, so electrons are still ejected straight away. Dimmer light ejects fewer electrons per second. The maximum kinetic energy depends on frequency, not brightness, and the delay the wave model predicted is not seen.",
+      "clue": "Which property of the light was kept the same?"
+    }
+  },
+  "phys-photons-energy": {
+    "title": "Photons and energy",
+    "card": [
+      "Light comes in packets of energy called photons. One photon carries energy E = hf, where h is Planck's constant and f is the frequency of the light.",
+      "A higher frequency means more energy per photon. The intensity of a beam sets how many photons arrive each second, not the energy of each one.",
+      "In the photoelectric effect, one photon gives all its energy to one electron. Part of that energy frees the electron from the metal.",
+      "The rest of the energy becomes the electron's kinetic energy. So photon energy = energy to free the electron + kinetic energy."
+    ],
+    "remember": "One photon has energy hf. It goes into freeing one electron and the rest into its motion.",
+    "a": {
+      "q": "Light of frequency f is replaced by light of a higher frequency. The number of photons per second stays the same. What changes for each photon?",
+      "opts": ["Its energy is larger", "Its energy is smaller", "Its energy is the same", "Its speed in a vacuum is larger"],
+      "why": "Photon energy is E = hf, so a higher frequency gives each photon more energy. The number of photons per second is the intensity, and it has not changed. Light in a vacuum keeps the same speed whatever its frequency.",
+      "clue": "Look at what E = hf depends on."
+    },
+    "b": {
+      "d": 3,
+      "q": "Violet light shines on a metal and ejects electrons. Only the number of photons per second is then doubled, and the frequency is unchanged. What happens to the kinetic energy of each ejected electron?",
+      "opts": [
+        "It stays the same, but more electrons are ejected",
+        "It doubles, because the beam carries twice the energy",
+        "It halves, because the photons share their energy",
+        "It falls, because the electrons must share the energy"
+      ],
+      "why": "Each photon still has energy hf, and each gives all of it to one electron. Doubling the photons ejects more electrons but does not change the energy each one gets. The beam carries more energy in total, but no single electron receives it.",
+      "clue": "One photon gives its energy to one electron."
+    }
+  },
+  "phys-work-function-stopping-voltage": {
+    "title": "Work function and stopping voltage",
+    "card": [
+      [
+        "Work function",
+        "the least energy needed to free an electron from a metal's surface. It is written as φ and depends on the metal."
+      ],
+      [
+        "Maximum kinetic energy",
+        "an electron freed with the least energy loss leaves with the most kinetic energy. This is Kmax = hf - φ."
+      ],
+      [
+        "Stopping voltage",
+        "the voltage that just stops the fastest electrons from reaching the other plate. Kmax = eV₀, where e is the size of an electron's charge."
+      ],
+      "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
+    ],
+    "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
+    "a": {
+      "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
+      "opts": ["3.0 V", "2.0 V", "5.0 V", "7.0 V"],
+      "why": "Kmax = 5.0 eV - 2.0 eV = 3.0 eV, so the stopping voltage is 3.0 V. A student who gives 5.0 V forgets that some of the photon's energy was used to free the electron.",
+      "clue": "Take the work function away from the photon energy first."
+    },
+    "b": {
+      "d": 3,
+      "q": "Light of one frequency ejects electrons from metal X, which has a stopping voltage of 1.5 V. The same light is used on metal Y, which has a larger work function. Electrons are still ejected from Y. What is the stopping voltage for Y?",
+      "opts": ["Less than 1.5 V", "More than 1.5 V", "Exactly 1.5 V", "Zero, as Y's work function is larger"],
+      "why": "The photon energy is the same, so a larger work function leaves less energy for motion. Kmax is lower, so V₀ is lower. It is not zero: electrons are still ejected from Y, so the photon energy is above Y's work function and some energy is left over.",
+      "clue": "Same photon energy: if more is spent freeing the electron, how much is left?"
+    }
+  },
+  "phys-electron-diffraction": {
+    "title": "Electron diffraction",
+    "card": [
+      "Diffraction is the spreading of a wave as it passes through a gap or past an edge. Waves from neighbouring gaps overlap and make a pattern of bright and dark regions.",
+      "A crystal has atoms in regular rows. The rows act like a grating that can diffract electrons whose wavelength is close to the atom spacing.",
+      "The amount of spreading depends on the wavelength, not on how many electrons arrive. If the wavelength is much smaller than the spacing, the spread is too small to see.",
+      "When electrons pass through a thin crystal, they land on a screen in rings or spots, not one blob. Only waves make this pattern, which confirmed de Broglie's idea that electrons have a wavelength."
+    ],
+    "remember": "A diffraction pattern from electrons shows they behave as waves.",
+    "a": {
+      "q": "A beam of electrons passes through a thin crystal and forms rings on a screen. What does this show?",
+      "opts": [
+        "Electrons behave as waves",
+        "Electrons behave as tiny particles",
+        "Electrons turn into photons in the crystal",
+        "The crystal's atoms are not in regular rows"
+      ],
+      "why": "Rings come from waves spreading and overlapping, so the electrons behave as waves. Particles alone would not make rings, and it is the electrons, not light, that land in the pattern. The regular rows of atoms are what make the pattern possible.",
+      "clue": "Which kind of model makes bright and dark patterns?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Nina fires electrons at a thin crystal and sees only a single bright spot straight ahead, with no rings. Which change would most likely bring the rings back?",
+      "opts": [
+        "Slowing the electrons so each has a longer wavelength",
+        "Speeding the electrons up so each has a shorter wavelength",
+        "Sending more electrons at the crystal each second",
+        "Sending fewer electrons at the crystal each second"
+      ],
+      "why": "The spot means the spread is too small to see, so the wavelength is much smaller than the atom spacing. Slower electrons have a longer wavelength, which spreads more and can bring the rings back. A shorter wavelength spreads even less, and the number of electrons does not change the spread.",
+      "clue": "What does the amount of spreading depend on, and which way must it change?"
+    }
+  },
+  "phys-momentum-photons-matter": {
+    "title": "Momentum of photons and matter",
+    "card": [
+      "A photon has momentum even though it has no mass. Its momentum is p = h/λ, where λ is its wavelength and h is Planck's constant.",
+      "De Broglie proposed that a particle with momentum p has a wavelength λ = h/p. This is the same relation, written the other way round.",
+      "So a photon and a particle with the same wavelength have the same momentum. A shorter wavelength means a larger momentum.",
+      "Equal momentum does not mean equal speed. For example, an electron with a wavelength of 0.20 nm moves at only about 1% of the speed of light."
+    ],
+    "remember": "Same wavelength means same momentum, p = h/λ, for photons and for particles.",
+    "a": {
+      "q": "An electron and a photon both have a wavelength of 0.20 nm. How do their momenta compare?",
+      "opts": [
+        "They are equal",
+        "The electron's is larger",
+        "The photon's is larger",
+        "The photon's is zero, as it has no mass"
+      ],
+      "why": "Both follow p = h/λ, and λ and h are the same, so the momenta are equal. A photon has no mass, but it still has momentum.",
+      "clue": "Use the same equation for both and compare the wavelengths."
+    },
+    "b": {
+      "d": 2,
+      "q": "A proton has the same momentum as an X-ray photon. Which statement about their wavelengths is correct?",
+      "opts": [
+        "They are equal, since λ = h/p for both",
+        "The proton's is longer, since it has mass",
+        "The photon's is longer, since it moves faster",
+        "The proton's is shorter, since it is heavier"
+      ],
+      "why": "Wavelength is h divided by momentum, and the momentum is the same, so the wavelengths are equal. The proton is heavier and slower, but those differences are already accounted for in its momentum.",
+      "clue": "Check which quantities appear in the relation for wavelength."
+    }
+  },
+  "phys-idea-quantisation": {
+    "title": "The idea of quantisation",
+    "card": [
+      "A quantity is quantised when it comes only in set amounts, like steps on a staircase. It cannot take any value in between.",
+      "Planck proposed that energy is quantised, and Einstein showed that light energy comes in packets, later called photons.",
+      "One photon of frequency f has energy E = hf, where h is Planck's constant. Brighter light of the same frequency means more photons, not more energy in each one.",
+      "The same idea explained atoms. Electrons in an atom can have only certain set amounts of energy, not any amount."
+    ],
+    "remember": "Energy comes in set packets, and E = hf gives the size of one photon.",
+    "a": {
+      "q": "What does it mean to say the energy of light is quantised?",
+      "opts": [
+        "It comes in packets, each of a set size for a frequency",
+        "It can take any value, but only in very bright light",
+        "It travels as a wave that has no smallest amount",
+        "Each packet's size depends on brightness, not frequency"
+      ],
+      "why": "Quantised means energy comes in set amounts. For light, each photon of a given frequency carries E = hf. The option about any value is wrong because it describes energy without steps, and brightness changes the number of photons, not their size.",
+      "clue": "Think of steps on a staircase, not a ramp."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two beams of light of the same frequency fall on a surface. Beam X is twice as bright as beam Y. How do the photons in the beams compare?",
+      "opts": [
+        "X has more photons each second, with the same energy each",
+        "X has the same number of photons, each with twice the energy",
+        "X has more photons each second, each with twice the energy",
+        "X has the same number of photons, each with the same energy"
+      ],
+      "why": "Photon energy depends only on frequency, E = hf, and the frequencies are equal. A brighter beam has more photons each second. Doubling the energy of each photon would need a higher frequency, not more brightness.",
+      "clue": "What does the energy of one photon depend on?"
+    }
+  },
+  "phys-wave-particle-duality": {
+    "title": "Wave-particle duality",
+    "card": [
+      "Light shows wave behaviour when it passes through two narrow slits. The waves overlap and make a pattern of bright and dark bands, called an interference pattern.",
+      "Light also shows particle behaviour. A detector can record a single photon arriving at one spot, not spread across the screen.",
+      "Send photons through the slits one at a time. Each one lands at a single point, but after many arrive the points build up the same bands as the wave pattern.",
+      "Electrons do the same. Single electrons build up a double slit pattern, so matter acts as both a particle and a wave. This is wave-particle duality."
+    ],
+    "remember": "Single photons and electrons land as points but build up a wave pattern, so both act as waves and particles.",
+    "a": {
+      "q": "Single electrons are fired at a double slit, one at a time. After thousands have landed, bright and dark bands appear. What does this show?",
+      "opts": [
+        "Electrons act as both particles and waves",
+        "Electrons act only as particles, as each lands at a point",
+        "Electrons act only as waves, as bands form",
+        "Electrons must be interacting with each other"
+      ],
+      "why": "Each electron is detected at one point, which is particle behaviour, and the bands that build up are an interference pattern, which is wave behaviour. Electrons arriving one at a time cannot be interfering with each other, so that option is wrong.",
+      "clue": "Think about both how each electron lands and what pattern forms."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a double slit experiment, photons are sent through one at a time. A student watches the screen early on, when only a few photons have landed. What would the student see?",
+      "opts": [
+        "A few separate points that do not yet show bands",
+        "A faint, smooth set of bands across the whole screen",
+        "One bright band at the centre of the screen",
+        "Nothing, as one photon cannot reach a screen"
+      ],
+      "why": "Each photon is detected at a single point, so early on there are just scattered dots. The bands only appear as many points build up. A smooth faint pattern would mean each photon spreads out when detected, which is not what happens.",
+      "clue": "Each photon is detected at one spot, and the pattern takes time to build."
+    }
+  },
+  "phys-limits-classical-mechanics": {
+    "title": "Limits of classical mechanics",
+    "card": [
+      "Classical mechanics is the physics of Newton. It predicts the motion of everyday objects very well, such as cars, balls and planets.",
+      "Classical mechanics assumes speeds simply add. A ball thrown forward at 10 m/s from a train moving at 30 m/s moves at 40 m/s relative to the ground.",
+      "At speeds close to the speed of light, this fails. Experiments show that fast particles do not behave as Newton's laws predict.",
+      "At everyday speeds, which are tiny compared with the speed of light, the error is negligible. So classical mechanics still works well there, and it is not wrong for cars or planets."
+    ],
+    "remember": "Newton's mechanics works at everyday speeds but fails for objects moving close to the speed of light.",
+    "a": {
+      "q": "Which situation is one where classical mechanics gives results that fail experimental tests?",
+      "opts": [
+        "An electron moving at 99% of the speed of light",
+        "A cyclist riding at 15 m/s along a straight road",
+        "A spacecraft coasting at a few km/s past a planet",
+        "A footballer kicking a ball at 25 m/s across a field"
+      ],
+      "why": "Only the electron is moving close to the speed of light, where Newton's predictions fail. The other speeds are tiny compared with the speed of light. A spacecraft is fast by human standards, but Newton's laws still predict its path very well at a few km/s.",
+      "clue": "Look for the speed that is close to the speed of light."
+    },
+    "b": {
+      "d": 2,
+      "q": "An engineer in Geelong designs a conveyor belt that carries boxes at 2 m/s. Why is classical mechanics suitable for this design?",
+      "opts": [
+        "The speed is tiny compared with the speed of light",
+        "The boxes are heavy enough to avoid any error",
+        "Classical mechanics works for anything made of matter",
+        "The belt is on Earth, where relativity does not apply"
+      ],
+      "why": "At 2 m/s, the speed is far below the speed of light, so the error in Newton's predictions is too small to matter. Mass and location do not decide this. Relativity still applies on Earth, but its effects are tiny at low speeds.",
+      "clue": "Compare the belt's speed with the speed of light."
+    }
+  },
+  "phys-michelson-morley-experiment": {
+    "title": "The Michelson-Morley experiment",
+    "card": [
+      "Before 1900, many physicists thought light was a wave that travelled through a medium called the aether. They thought the aether filled all of space and sat at rest.",
+      "If the aether existed, Earth would move through it. Light travelling along Earth's motion would then have a different measured speed from light travelling across it.",
+      "In 1887, Michelson and Morley split a light beam into two beams at right angles and compared them. They looked for a shift in the pattern made when the beams recombined. They found no shift that matched Earth's motion.",
+      "So the measured speed of light did not change with Earth's motion, and no aether was detected. This result fits special relativity, which says light has the same speed for all observers."
+    ],
+    "remember": "No change in the speed of light was found, so no aether was detected.",
+    "a": {
+      "q": "What did Michelson and Morley's experiment find?",
+      "opts": [
+        "The speed of light did not depend on Earth's motion",
+        "The speed of light was greater along Earth's motion",
+        "The speed of light was less along Earth's motion",
+        "The speed of light changed with the time of year"
+      ],
+      "why": "They looked for a difference in light's speed along and across Earth's motion and found none. The aether idea predicted a different speed along the motion, so the greater and less options both describe a prediction that was not seen.",
+      "clue": "Think about what the aether idea predicted, then what was actually seen."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student says the experiment supports special relativity. Which finding backs this up?",
+      "opts": [
+        "Light had the same measured speed in every direction",
+        "Light needed the aether as a medium to travel through",
+        "Light was faster when it travelled along Earth's motion",
+        "Light was slower when it travelled across Earth's motion"
+      ],
+      "why": "The experiment found no change in light's speed with direction or Earth's motion, which fits special relativity's claim that light has the same speed for all observers. The aether option is tempting because the experiment was built to find the aether, but no aether was detected.",
+      "clue": "Which option matches a null result, with no aether found?"
+    }
+  },
+  "phys-time-dilation-length-contraction": {
+    "title": "Time dilation and length contraction",
+    "card": [
+      [
+        "Proper time",
+        "the time between two events measured in a frame where both events happen at the same place. A clock moving with the events measures it."
+      ],
+      ["Proper length", "the length of an object measured in the frame where the object is at rest."],
+      "An observer moving relative to these measures a longer time and a shorter length. The time is t = γt₀ and the length is L = L₀/γ, where γ = 1/√(1 − v²/c²) and γ is always 1 or more.",
+      "The length shortens only along the direction of motion. The effects are tiny at everyday speeds and large close to the speed of light."
+    ],
+    "remember": "Own frame gives the shortest time and the longest length. Moving observers see time stretched and length shrunk.",
+    "a": {
+      "q": "A rocket passes Earth at 0.8c. Which measurement is a proper time?",
+      "opts": [
+        "A rocket clock timing two events at one spot on the rocket",
+        "An Earth clock timing two events at one spot on the rocket",
+        "A rocket clock timing two events at one spot on Earth",
+        "Two Earth clocks timing the rocket between two planets"
+      ],
+      "why": "The rocket clock sits at that spot on the rocket, so it is present at both events and measures proper time. An Earth clock sees that spot move, so the two events happen at different places in its frame. In the same way, a spot on Earth moves past the rocket, and two separate clocks mean the events are at different places.",
+      "clue": "In which frame do both events happen at the same place?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A spacecraft is 120 m long when at rest. It passes a station at 0.6c, where γ = 1.25. What length does the station crew measure, and what do the spacecraft crew measure?",
+      "opts": [
+        "96 m by the station crew, 120 m by the spacecraft crew",
+        "120 m by the station crew, 96 m by the spacecraft crew",
+        "150 m by the station crew, 120 m by the spacecraft crew",
+        "96 m by the station crew, 96 m by the spacecraft crew"
+      ],
+      "why": "The 120 m is the proper length, measured by the spacecraft crew in the frame where it is at rest. The station crew see it moving, so L = 120 ÷ 1.25 = 96 m. Multiplying by γ gives 150 m, but moving observers measure a shorter length, not a longer one.",
+      "clue": "Whose frame is the spacecraft at rest in?"
+    }
+  },
+  "phys-relativity-action": {
+    "title": "Relativity in action",
+    "card": [
+      [
+        "Muons",
+        "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. In that time they could not travel far enough to reach the ground, yet many do. In Earth's frame the muon's clock runs slowly, and in the muon's frame the trip is shorter."
+      ],
+      [
+        "Accelerators",
+        "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+      ],
+      [
+        "GPS",
+        "GPS satellite clocks tick at a different rate from clocks on the ground. Their speed slows them by about 7 microseconds a day, while weaker gravity at their height, an effect of general relativity, speeds them up by about 45. Without corrections, timing and position errors would build up each day."
+      ],
+      "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+    ],
+    "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+    "a": {
+      "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+      "opts": [
+        "Their short lifetime is stretched in Earth's frame",
+        "Their lifetime is longer in the muon's own frame",
+        "Their speed is greater than the speed of light",
+        "Earth's atmosphere slows them so they last longer"
+      ],
+      "why": "Measured from Earth, the muon's clock runs slowly, so it lasts long enough to reach the ground. In its own frame its lifetime is still only about 2.2 microseconds, so the option about the muon's own frame is wrong.",
+      "clue": "The 2.2 microsecond lifetime is measured with the muon at rest."
+    },
+    "b": {
+      "d": 3,
+      "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+      "opts": [
+        "Without corrections, satellite timing errors would build up",
+        "Satellites travel faster than light relative to Earth",
+        "Satellites are too small for Newton's mechanics to apply",
+        "Radio signals from satellites travel at varying speeds"
+      ],
+      "why": "Satellite clocks tick at a different rate from clocks on the ground, because of both their speed and the weaker gravity at their height. Uncorrected, the timing errors would grow and cause position errors. The signals are not the problem, so the option about varying signal speeds is wrong.",
+      "clue": "Think about what differs between a satellite and the ground, and what that does over a day."
+    }
+  },
+  "phys-mass-energy-relativity": {
+    "title": "Mass and energy in relativity",
+    "card": [
+      "An object's total energy is E = γmc². Here m is its rest mass, c is the speed of light, and γ is the Lorentz factor, which is 1 at rest and grows as speed rises.",
+      "At rest, γ = 1 and the energy is the rest energy, E = mc². Total energy = rest energy + kinetic energy, so kinetic energy = (γ - 1)mc².",
+      "Mass and energy can be converted. In the Sun, hydrogen nuclei fuse into helium, and the products have slightly less mass than the starting nuclei. The lost mass is released as energy.",
+      "In annihilation, a particle and its antiparticle meet and their whole rest mass becomes energy, usually as photons. The energy released is the rest energy of both particles."
+    ],
+    "remember": "Total energy is γmc²: rest energy mc² plus kinetic energy. Lost mass becomes released energy.",
+    "a": {
+      "q": "An electron is moving at high speed. Which expression gives its kinetic energy?",
+      "opts": ["(γ - 1)mc²", "γmc²", "mc²", "(γ + 1)mc²"],
+      "why": "Kinetic energy is total energy minus rest energy, so γmc² - mc² = (γ - 1)mc². The total energy γmc² is tempting, but it also includes the rest energy.",
+      "clue": "Take the rest energy away from the total energy."
+    },
+    "b": {
+      "d": 3,
+      "q": "In a lab, an electron and its antiparticle meet at rest and annihilate. What is the total energy released?",
+      "opts": [
+        "The rest energy of both particles, 2mc²",
+        "The rest energy of one particle, mc²",
+        "Only the kinetic energy of both particles",
+        "Nothing, because mass is always conserved separately"
+      ],
+      "why": "All the rest mass of both particles becomes energy, so the energy is mc² + mc² = 2mc². Counting only one particle is tempting, but both particles lose their mass.",
+      "clue": "Count the rest energy of each particle that disappears."
+    }
+  },
+  "phys-variables-controlled-experiments-physics": {
+    "title": "Variables and controlled experiments",
+    "card": [
+      [
+        "Independent variable",
+        "the quantity the experimenter deliberately changes. There should be only one in a test."
+      ],
+      ["Dependent variable", "the quantity that is measured to see how it responds to the change."],
+      [
+        "Controlled variables",
+        "all other quantities that could affect the result. They are kept the same, so they cannot explain any change in the dependent variable."
+      ],
+      "If only the independent variable changes and the dependent variable changes with it, the investigation supports a cause and effect link. If a second quantity also changes, the cause cannot be pinned down."
+    ],
+    "remember": "Change one thing, measure the response, and hold everything else the same.",
+    "a": {
+      "q": "Why must the controlled variables be kept constant in an investigation?",
+      "opts": [
+        "So they cannot explain a change in the dependent variable",
+        "So the independent variable stays the same in every trial",
+        "So the dependent variable does not change at all",
+        "So the measurements need no repeats"
+      ],
+      "why": "If a controlled variable also changed, it could be the real cause of the change in the dependent variable. Keeping them constant removes that doubt. The independent variable is the one that is deliberately changed, so it does not stay the same.",
+      "clue": "Think about what else could cause the change you see."
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya rolls a trolley down a ramp and times it. She raises the ramp to different heights to see how ramp height affects the trolley's final speed. Which quantity is a controlled variable?",
+      "opts": [
+        "The mass of the trolley",
+        "The height of the ramp",
+        "The final speed of the trolley",
+        "The cause of the speed change"
+      ],
+      "why": "The trolley's mass could affect the result, so it must be kept the same in every run. Ramp height is the independent variable because Priya changes it. Final speed is the dependent variable because she measures it.",
+      "clue": "Which quantity is neither changed on purpose nor measured as the result?"
+    }
+  },
+  "phys-linearising-data": {
+    "title": "Linearising data",
+    "card": [
+      "A straight line is the easiest graph to judge. If a relationship is not linear, we can transform one variable so the graph becomes a straight line.",
+      "For a pendulum, the period T depends on length L by T = 2π√(L/g). Plotting T² against L gives a straight line through the origin.",
+      "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
+      "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
+    ],
+    "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
+    "a": {
+      "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",
+      "opts": [
+        "The value of g, using g = 4π² ÷ gradient",
+        "The value of L, using L = 4π² ÷ gradient",
+        "The mass of the bob, using the gradient",
+        "The amplitude of the swing, using the gradient"
+      ],
+      "why": "Squaring both sides gives T² = (4π²/g)L, so the gradient equals 4π²/g and g can be found by rearranging. L is plotted on the x-axis, so it varies along the line and is not a single value from the gradient. Mass and amplitude do not appear in the relationship at all.",
+      "clue": "Square both sides of T = 2π√(L/g) and compare it with y = mx."
+    },
+    "b": {
+      "d": 3,
+      "q": "A student measures the period T of a pendulum at several lengths L and plots T against L. The points form a curve. Which change would be expected to give a straight line?",
+      "opts": [
+        "Plot T² on the vertical axis against L",
+        "Plot L on the vertical axis against T",
+        "Plot T against L with a larger scale",
+        "Draw a line of best fit through the curve"
+      ],
+      "why": "Since T² = (4π²/g)L, plotting T² against L gives a straight line. Swapping the axes leaves the curve, as L is proportional to T², not T. A bigger scale or a straight line drawn through curved data does not change the relationship.",
+      "clue": "Which transformed quantity is proportional to L?"
+    }
+  },
+  "phys-presenting-scientific-poster": {
+    "title": "Presenting a scientific poster",
+    "card": [
+      "A poster communicates an investigation briefly. It has clear sections, such as the aim, method, results, discussion and conclusion, so a reader can follow it quickly.",
+      "Use short sentences and labelled graphs, tables and diagrams. Axes and columns need the correct quantity symbols and units, such as v (m s⁻¹).",
+      "Report values to a suitable number of significant figures. This should match the precision of the measurements, not every digit on a calculator.",
+      "Acknowledge sources, such as books, websites and data from others, in a reference list. This shows which ideas and data are not your own."
+    ],
+    "remember": "A poster is brief, uses correct symbols, units and significant figures, and credits its sources.",
+    "a": {
+      "q": "A student reads a length of 23.5 cm from a ruler marked in millimetres, then converts it to metres on a calculator, which shows 0.2350000 m. What should the poster show?",
+      "opts": ["0.235 m", "0.2350000 m", "0.2 m", "0.23500 m"],
+      "why": "The ruler reading has three significant figures, so the poster should show 0.235 m. The full calculator display, 0.2350000 m, suggests a precision the ruler does not have. Rounding to 0.2 m throws away precision the ruler does give.",
+      "clue": "The converted value cannot be more precise than the ruler reading."
+    },
+    "b": {
+      "d": 2,
+      "q": "Leila's poster uses a graph from a website and a formula from a textbook. What should she do?",
+      "opts": [
+        "List both sources in a reference list",
+        "Leave them out, as they are not her own work",
+        "Mention only the textbook, as it is printed",
+        "Add the source only if the teacher asks"
+      ],
+      "why": "Any data, graph or formula that is not her own should be acknowledged. The website and the textbook both count as sources. Leaving them out of the reference list would present others' work as hers.",
+      "clue": "Which of these ideas did Leila not come up with herself?"
+    }
   }
 };

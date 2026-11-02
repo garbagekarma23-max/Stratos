@@ -1,0 +1,126 @@
+{
+ "id": "acc-unearned-revenue",
+ "title": "Unearned revenue",
+ "brief": "28687e1b8028",
+ "shortlist": [
+  [
+   "acc-revenue-expenses",
+   0.298
+  ],
+  [
+   "acc-profit-cash-basis",
+   0.217
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00532,
+  "check": 0.0123
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches a deposit received in advance as a liability until the revenue is earned; they cover revenue recognition and the income statement, not unearned revenue on the balance sheet.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Unearned revenue",
+  "card": [
+   "Unearned revenue is money received before the business has provided the goods or services. The business has the cash, but it has not yet earned the revenue.",
+   "The business owes the customer the goods or services, or a refund. So the amount is recorded as a liability, not as revenue.",
+   "On balance day, the business works out how much has now been earned. It debits Unearned Revenue (reducing the liability) and credits Revenue for that amount.",
+   "Any part not yet earned stays as a liability. It moves to revenue in a later period, when the goods or services are provided."
+  ],
+  "remember": "Cash received early is a liability until the work is done, then it becomes revenue.",
+  "a": {
+   "q": "Ben's Tutoring in Geelong receives $900 in December for lessons to be given next year. How is the $900 recorded on 31 December?",
+   "opts": [
+    "As a liability, because the lessons are still owed",
+    "As revenue, because the cash has been received",
+    "As an asset, because the lessons will earn money",
+    "As an expense, because the lessons will cost time"
+   ],
+   "why": "The lessons have not been given, so the revenue is not earned and Ben's Tutoring owes the service. That makes it a liability. It is not revenue just because the cash has arrived.",
+   "clue": "Has Ben done the lessons yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "On 1 May, Kara's Pool Care in Bendigo receives $1 200 for 12 months of weekly cleaning. Her balance day is 30 June. What is the adjustment on 30 June, assuming the service is given evenly?",
+   "opts": [
+    "Debit Unearned Revenue $200, credit Revenue $200",
+    "Debit Unearned Revenue $1 000, credit Revenue $1 000",
+    "Debit Revenue $200, credit Unearned Revenue $200",
+    "Debit Cash $200, credit Revenue $200"
+   ],
+   "why": "Two months of the 12 have been earned, so $1 200 ÷ 12 × 2 = $200. Debiting Unearned Revenue reduces the liability and crediting Revenue records the amount earned. The $1 000 is the part still owed, so it stays as a liability.",
+   "clue": "Count how many months of service have been given by balance day."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "As a liability, because the lessons are still owed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Debit Unearned Revenue $200, credit Revenue $200",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Unearned revenue",
+  "card": [
+   "Unearned revenue is money received before the business has provided the goods or services. The business has the cash, but it has not yet earned the revenue.",
+   "The business owes the customer the goods or services, or a refund. So the amount is recorded as a liability, not as revenue.",
+   "On balance day, the business works out how much has now been earned. It debits Unearned Revenue (reducing the liability) and credits Revenue for that amount.",
+   "Any part not yet earned stays as a liability. It moves to revenue in a later period, when the goods or services are provided."
+  ],
+  "remember": "Cash received early is a liability until the work is done, then it becomes revenue.",
+  "a": {
+   "q": "Ben's Tutoring in Geelong receives $900 in December for lessons to be given next year. How is the $900 recorded on 31 December?",
+   "opts": [
+    "As a liability, because the lessons are still owed",
+    "As revenue, because the cash has been received",
+    "As an asset, because the lessons will earn money",
+    "As an expense, because the lessons will cost time"
+   ],
+   "why": "The lessons have not been given, so the revenue is not earned and Ben's Tutoring owes the service. That makes it a liability. It is not revenue just because the cash has arrived.",
+   "clue": "Has Ben done the lessons yet?"
+  },
+  "b": {
+   "d": 3,
+   "q": "On 1 May, Kara's Pool Care in Bendigo receives $1 200 for 12 months of weekly cleaning. Her balance day is 30 June. What is the adjustment on 30 June, assuming the service is given evenly?",
+   "opts": [
+    "Debit Unearned Revenue $200, credit Revenue $200",
+    "Debit Unearned Revenue $1 000, credit Revenue $1 000",
+    "Debit Revenue $200, credit Unearned Revenue $200",
+    "Debit Cash $200, credit Revenue $200"
+   ],
+   "why": "Two months of the 12 have been earned, so $1 200 ÷ 12 × 2 = $200. Debiting Unearned Revenue reduces the liability and crediting Revenue records the amount earned. The $1 000 is the part still owed, so it stays as a liability.",
+   "clue": "Count how many months of service have been given by balance day."
+  }
+ },
+ "cleared_by": "checker"
+}

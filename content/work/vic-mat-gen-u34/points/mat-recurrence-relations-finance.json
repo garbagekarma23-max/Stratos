@@ -1,0 +1,217 @@
+{
+ "id": "mat-recurrence-relations-finance",
+ "title": "Recurrence relations for finance",
+ "brief": "1eb31a03c9b4",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, write",
+  "2026-11-01T14:46:40Z write: done",
+  "2026-11-01T14:56:03Z check: flagged",
+  "2026-11-01T15:05:28Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01021,
+  "check": 0.01647,
+  "fix": 0.02794,
+  "recheck": 0.0109
+ },
+ "draft": {
+  "title": "Recurrence relations for finance",
+  "card": [
+   "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
+   "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
+   "If R is more than 1, the balance grows. If R is between 0 and 1, it shrinks. For example, R = 1.02 means a 2% rise each period, and R = 0.95 means a 5% fall.",
+   "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Then V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+  ],
+  "remember": "Next balance = R × this balance + d. Work one period at a time.",
+  "a": {
+   "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+   "opts": [
+    "290",
+    "260",
+    "330",
+    "340"
+   ],
+   "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 350 − 40... check: 1.5 × 260 = 390, and 390 − 40 = 350. So V(2) = 350.",
+   "clue": "Find V(1) first, then use it to find V(2)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's savings in Dubbo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+   "opts": [
+    "1110",
+    "1100",
+    "1010",
+    "1111"
+   ],
+   "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding only 100 gives 1100 and ignores the growth from R. Adding only the 1% gives 1010 and leaves out d.",
+   "clue": "Multiply by R first, then add d."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "",
+   "also_right": []
+  },
+  "b": {
+   "best": "1110",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "No option is correct. V(1) = 1.5 × 200 − 40 = 260 and V(2) = 1.5 × 260 − 40 = 390 − 40 = 350, but 350 is not among the options (340, 290, 260, 330). The option 260 is V(1), a trap rather than the answer."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why is garbled and corrects itself mid-line ('= 350 − 40... check: ...'). It names 350, which is not an option, so it contradicts the option list."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'If R is more than 1, the balance grows. If R is between 0 and 1, it shrinks' ignores d. With R > 1 and a negative d, such as loan repayments, the balance can shrink. With 0 < R < 1 and a positive d, it can grow. The statement should be limited to the effect of R alone, or to d = 0."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a has no correct option: V(2) = 350, which is not listed, and its why is garbled. The card also wrongly says R > 1 always means growth and 0 < R < 1 always means shrinking, ignoring the effect of d."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker picked “”, not the writer’s answer “290”.",
+  "Question a, fact: No option is correct. V(1) = 1.5 × 200 − 40 = 260 and V(2) = 1.5 × 260 − 40 = 390 − 40 = 350, but 350 is not among the options (340, 290, 260, 330). The option 260 is V(1), a trap rather than the answer.",
+  "Question a, other: The why is garbled and corrects itself mid-line ('= 350 − 40... check: ...'). It names 350, which is not an option, so it contradicts the option list.",
+  "Card, fact: 'If R is more than 1, the balance grows. If R is between 0 and 1, it shrinks' ignores d. With R > 1 and a negative d, such as loan repayments, the balance can shrink. With 0 < R < 1 and a positive d, it can grow. The statement should be limited to the effect of R alone, or to d = 0."
+ ],
+ "proposal": {
+  "title": "Recurrence relations for finance",
+  "card": [
+   "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
+   "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
+   "On its own, R above 1 makes the balance grow and R between 0 and 1 makes it shrink. For example, R = 1.02 is a 2% rise each period. The d term can change whether the balance grows or shrinks overall.",
+   "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Multiply first, then add d. V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+  ],
+  "remember": "Next balance = R × this balance + d. Work one period at a time.",
+  "a": {
+   "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+   "opts": [
+    "350",
+    "260",
+    "300",
+    "550"
+   ],
+   "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 390 − 40 = 350. The option 260 is only V(1), one period too early.",
+   "clue": "Find V(1) first, then use it to find V(2)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's savings in Bendigo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+   "opts": [
+    "1110",
+    "1100",
+    "1010",
+    "1111"
+   ],
+   "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding 100 first and then multiplying gives 1.01 × 1100 = 1111, which uses the wrong order. Stopping at 1010 leaves out d.",
+   "clue": "Multiply by R first, then add d."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "350",
+    "also_right": []
+   },
+   "b": {
+    "best": "1110",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: V(2) = 350 and V(1) = 1110, and the worked example and explanations are correct."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "No option is correct. V(1) = 1.5 × 200 − 40 = 260 and V(2) = 1.5 × 260 − 40 = 390 − 40 = 350, but 350 is not among the options (340, 290, 260, 330). The option 260 is V(1), a trap rather than the answer."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why is garbled and corrects itself mid-line ('= 350 − 40... check: ...'). It names 350, which is not an option, so it contradicts the option list."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'If R is more than 1, the balance grows. If R is between 0 and 1, it shrinks' ignores d. With R > 1 and a negative d, such as loan repayments, the balance can shrink. With 0 < R < 1 and a positive d, it can grow. The statement should be limited to the effect of R alone, or to d = 0."
+   }
+  ],
+  "flags": [
+   "Question a: the checker picked “”, not the writer’s answer “290”.",
+   "Question a, fact: No option is correct. V(1) = 1.5 × 200 − 40 = 260 and V(2) = 1.5 × 260 − 40 = 390 − 40 = 350, but 350 is not among the options (340, 290, 260, 330). The option 260 is V(1), a trap rather than the answer.",
+   "Question a, other: The why is garbled and corrects itself mid-line ('= 350 − 40... check: ...'). It names 350, which is not an option, so it contradicts the option list.",
+   "Card, fact: 'If R is more than 1, the balance grows. If R is between 0 and 1, it shrinks' ignores d. With R > 1 and a negative d, such as loan repayments, the balance can shrink. With 0 < R < 1 and a positive d, it can grow. The statement should be limited to the effect of R alone, or to d = 0."
+  ]
+ },
+ "final": {
+  "title": "Recurrence relations for finance",
+  "card": [
+   "A recurrence relation gives the next value from the one before it. In finance, V(n) is the balance after n periods, and V(0) is the starting balance.",
+   "A first-order linear recurrence has the form V(n+1) = R × V(n) + d. R is the number that multiplies the balance each period. d is the amount added each period, or taken off if d is negative.",
+   "On its own, R above 1 makes the balance grow and R between 0 and 1 makes it shrink. For example, R = 1.02 is a 2% rise each period. The d term can change whether the balance grows or shrinks overall.",
+   "Worked example: V(0) = 500, V(n+1) = 1.1 × V(n) + 50. Multiply first, then add d. V(1) = 1.1 × 500 + 50 = 600. Then V(2) = 1.1 × 600 + 50 = 710."
+  ],
+  "remember": "Next balance = R × this balance + d. Work one period at a time.",
+  "a": {
+   "q": "A balance starts at 200 and V(n+1) = 1.5 × V(n) − 40. What is V(2)?",
+   "opts": [
+    "350",
+    "260",
+    "300",
+    "550"
+   ],
+   "why": "V(1) = 1.5 × 200 − 40 = 260. Then V(2) = 1.5 × 260 − 40 = 390 − 40 = 350. The option 260 is only V(1), one period too early.",
+   "clue": "Find V(1) first, then use it to find V(2)."
+  },
+  "b": {
+   "d": 2,
+   "q": "Mia's savings in Bendigo follow V(n+1) = 1.01 × V(n) + 100, with V(0) = 1000. What is V(1)?",
+   "opts": [
+    "1110",
+    "1100",
+    "1010",
+    "1111"
+   ],
+   "why": "V(1) = 1.01 × 1000 + 100 = 1010 + 100 = 1110. Adding 100 first and then multiplying gives 1.01 × 1100 = 1111, which uses the wrong order. Stopping at 1010 leaves out d.",
+   "clue": "Multiply by R first, then add d."
+  }
+ },
+ "cleared_by": "recheck"
+}

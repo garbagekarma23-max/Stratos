@@ -1,0 +1,198 @@
+{
+ "id": "mat-integration-by-parts",
+ "title": "Integration by parts",
+ "brief": "660beaed3c52",
+ "shortlist": [
+  [
+   "mat-definite-integral",
+   0.447
+  ],
+  [
+   "mat-integrals-giving-logarithms",
+   0.395
+  ],
+  [
+   "mat-areas-under-curves",
+   0.247
+  ],
+  [
+   "mat-displacement-velocity-acceleration",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00524,
+  "check": 0.01591,
+  "fix": 0.02689
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches integration by parts; they cover definite integrals, logarithmic integrals, areas under curves and displacement or velocity, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Integration by parts",
+  "card": [
+   "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is ∫u dv = uv − ∫v du, where du is the derivative of u times dx, and v is the integral of dv.",
+   "Split the integrand into two parts. Call one part u, which you differentiate, and the other dv, which you integrate. Choose u so that du is simpler than u.",
+   "Example: ∫x e^x dx. Let u = x and dv = e^x dx. Then du = dx and v = e^x.",
+   "Put these in the rule: ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + c."
+  ],
+  "remember": "∫u dv = uv − ∫v du. Pick u so that differentiating it makes it simpler.",
+  "a": {
+   "q": "For ∫x e^x dx, we set u = x and dv = e^x dx. What is the integral ∫v du that must be subtracted from uv?",
+   "opts": [
+    "∫e^x dx",
+    "∫x e^x dx",
+    "∫x² e^x dx",
+    "∫e^x x² dx"
+   ],
+   "why": "Here du = dx and v = e^x, so v du = e^x dx. Using ∫x e^x dx again would just repeat the original problem. The rule subtracts the integral of v du, not of u dv.",
+   "clue": "Find v and du first, then multiply them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Using integration by parts with u = x and dv = cos x dx, what is ∫x cos x dx?",
+   "opts": [
+    "x sin x + cos x + c",
+    "x sin x − cos x + c",
+    "x sin x + sin x + c",
+    "−x sin x + cos x + c"
+   ],
+   "why": "Here du = dx and v = sin x, so ∫x cos x dx = x sin x − ∫sin x dx. Since ∫sin x dx = −cos x, this gives x sin x + cos x + c. The option with −cos x comes from forgetting that the integral of sin x is negative. Check: the derivative of x sin x + cos x is sin x + x cos x − sin x = x cos x.",
+   "clue": "The integral of sin x is −cos x, and the rule subtracts it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "∫e^x dx",
+   "also_right": []
+  },
+  "b": {
+   "best": "x sin x + cos x + c",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the −cos x option comes from 'forgetting that the integral of sin x is negative'. This is loosely worded: the integral of sin x is −cos x, not 'negative'. Better: 'forgetting that subtracting −cos x gives +cos x'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct, and each question has exactly one right answer. One minor point: the why for (b) loosely describes the sign error as the integral of sin x being 'negative'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why says the −cos x option comes from 'forgetting that the integral of sin x is negative'. This is loosely worded: the integral of sin x is −cos x, not 'negative'. Better: 'forgetting that subtracting −cos x gives +cos x'."
+ ],
+ "proposal": {
+  "title": "Integration by parts",
+  "card": [
+   "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is ∫u dv = uv − ∫v du, where du is the derivative of u times dx, and v is the integral of dv.",
+   "Split the integrand into two parts. Call one part u, which you differentiate, and the other dv, which you integrate. Choose u so that du is simpler than u.",
+   "Example: ∫x e^x dx. Let u = x and dv = e^x dx. Then du = dx and v = e^x.",
+   "Put these in the rule: ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + c."
+  ],
+  "remember": "∫u dv = uv − ∫v du. Pick u so that differentiating it makes it simpler.",
+  "a": {
+   "q": "For ∫x e^x dx, we set u = x and dv = e^x dx. What is the integral ∫v du that must be subtracted from uv?",
+   "opts": [
+    "∫e^x dx",
+    "∫x e^x dx",
+    "∫x dx",
+    "∫(x²/2) e^x dx"
+   ],
+   "why": "Here du = dx and v = e^x, so v du = e^x dx. Using ∫x e^x dx again would just repeat the original problem, because the rule subtracts the integral of v du, not of u dv.",
+   "clue": "Find v and du first, then multiply them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Using integration by parts with u = x and dv = cos x dx, what is ∫x cos x dx?",
+   "opts": [
+    "x sin x + cos x + c",
+    "x sin x − cos x + c",
+    "x sin x + sin x + c",
+    "−x sin x + cos x + c"
+   ],
+   "why": "Here du = dx and v = sin x, so ∫x cos x dx = x sin x − ∫sin x dx. Since ∫sin x dx = −cos x, this gives x sin x + cos x + c. The option with −cos x comes from forgetting that subtracting −cos x gives +cos x. Check: the derivative of x sin x + cos x is sin x + x cos x − sin x = x cos x.",
+   "clue": "The integral of sin x is −cos x, and the rule subtracts it."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why says the −cos x option comes from 'forgetting that the integral of sin x is negative'. This is loosely worded: the integral of sin x is −cos x, not 'negative'. Better: 'forgetting that subtracting −cos x gives +cos x'."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why says the −cos x option comes from 'forgetting that the integral of sin x is negative'. This is loosely worded: the integral of sin x is −cos x, not 'negative'. Better: 'forgetting that subtracting −cos x gives +cos x'."
+  ]
+ },
+ "final": {
+  "title": "Integration by parts",
+  "card": [
+   "Integration by parts is used when the integrand is a product that substitution cannot simplify. The rule is ∫u dv = uv − ∫v du, where du is the derivative of u times dx, and v is the integral of dv.",
+   "Split the integrand into two parts. Call one part u, which you differentiate, and the other dv, which you integrate. Choose u so that du is simpler than u.",
+   "Example: ∫x e^x dx. Let u = x and dv = e^x dx. Then du = dx and v = e^x.",
+   "Put these in the rule: ∫x e^x dx = x e^x − ∫e^x dx = x e^x − e^x + c."
+  ],
+  "remember": "∫u dv = uv − ∫v du. Pick u so that differentiating it makes it simpler.",
+  "a": {
+   "q": "For ∫x e^x dx, we set u = x and dv = e^x dx. What is the integral ∫v du that must be subtracted from uv?",
+   "opts": [
+    "∫e^x dx",
+    "∫x e^x dx",
+    "∫x dx",
+    "∫(x²/2) e^x dx"
+   ],
+   "why": "Here du = dx and v = e^x, so v du = e^x dx. Using ∫x e^x dx again would just repeat the original problem, because the rule subtracts the integral of v du, not of u dv.",
+   "clue": "Find v and du first, then multiply them."
+  },
+  "b": {
+   "d": 3,
+   "q": "Using integration by parts with u = x and dv = cos x dx, what is ∫x cos x dx?",
+   "opts": [
+    "x sin x + cos x + c",
+    "x sin x − cos x + c",
+    "x sin x + sin x + c",
+    "−x sin x + cos x + c"
+   ],
+   "why": "Here du = dx and v = sin x, so ∫x cos x dx = x sin x − ∫sin x dx. Since ∫sin x dx = −cos x, this gives x sin x + cos x + c. The option with −cos x comes from forgetting that subtracting −cos x gives +cos x. Check: the derivative of x sin x + cos x is sin x + x cos x − sin x = x cos x.",
+   "clue": "The integral of sin x is −cos x, and the rule subtracts it."
+  }
+ },
+ "cleared_by": "auto"
+}
