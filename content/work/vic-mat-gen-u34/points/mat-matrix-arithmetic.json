@@ -1,0 +1,65 @@
+{
+ "id": "mat-matrix-arithmetic",
+ "title": "Matrix arithmetic",
+ "brief": "99dae0c781ca",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.292
+  ],
+  [
+   "mat-arithmetic-sequences",
+   0.236
+  ],
+  [
+   "mat-matrix-operations-specialist",
+   0.218
+  ],
+  [
+   "mat-arithmetic-series",
+   0.217
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 may adapt mat-matrix-operations-specialist, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 may adapt mat-matrix-operations-specialist, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:23:13Z review: reusing mat-matrix-operations-specialist"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.01124
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-matrix-operations-specialist",
+  "changes": [
+   "Add a short note that subtraction works like addition: subtract the entries in matching positions, and the matrices must have the same order."
+  ],
+  "sure": "medium",
+  "reason": "The bank point covers matrix orders, addition, scalar multiplication and multiplication at a suitable depth, but it does not mention subtraction, which the brief requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-matrix-operations-specialist",
+  "changes": [
+   "Mention subtraction alongside addition: matrices must have the same order, and you subtract the entries in matching positions."
+  ],
+  "sure": "medium",
+  "reason": "The bank point already teaches matrix order, addition, scalar multiplication and multiplication with order checks at a level that suits General Mathematics Units 3 and 4, but it should also cover subtraction, which the brief names.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-matrix-operations-specialist",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-matrix-operations-specialist",
+  "by": "owner",
+  "at": "2026-11-02T06:23:13Z"
+ }
+}

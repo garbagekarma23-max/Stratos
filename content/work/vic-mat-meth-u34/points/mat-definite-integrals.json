@@ -1,0 +1,235 @@
+{
+ "id": "mat-definite-integrals",
+ "title": "Definite integrals",
+ "brief": "262415f1c3a7",
+ "shortlist": [
+  [
+   "mat-definite-integral",
+   0.694
+  ],
+  [
+   "mat-trapezoidal-rule",
+   0.305
+  ],
+  [
+   "mat-integrals-giving-logarithms",
+   0.289
+  ],
+  [
+   "mat-areas-under-curves",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "write": 0.00557,
+  "check": 0.01565,
+  "fix": 0.03028,
+  "recheck": 0.01171
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-definite-integral, covers evaluating a definite integral with the fundamental theorem, but it does not teach the new point's idea of the integral as a limit of a sum of thin strips or the splitting-across-an-interval property, so it is related rather than the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Definite integrals",
+  "card": [
+   "Split the area under a curve from x = a to x = b into thin strips. Each strip has height f(x) and width Δx. Adding their areas gives a sum, and the definite integral is the limit of that sum as the strips get thinner.",
+   "We write it ∫ from a to b of f(x) dx. It gives a number, not a function. Area above the x-axis counts as positive and area below the axis counts as negative.",
+   "Splitting: for any c between a and b, ∫ from a to b of f(x) dx = ∫ from a to c of f(x) dx + ∫ from c to b of f(x) dx.",
+   "Swapping the limits reverses the sign: ∫ from b to a of f(x) dx = −∫ from a to b of f(x) dx. Example: if ∫ from 0 to 2 of f(x) dx = 5 and ∫ from 2 to 6 of f(x) dx = 3, then ∫ from 0 to 6 of f(x) dx = 8."
+  ],
+  "remember": "A definite integral is a number found as a limit of thin strips. It can be split at a point between the limits, and swapping the limits changes the sign.",
+  "a": {
+   "q": "Given ∫ from 1 to 4 of f(x) dx = 7 and ∫ from 4 to 9 of f(x) dx = −2, what is ∫ from 1 to 9 of f(x) dx?",
+   "opts": [
+    "5",
+    "9",
+    "−5",
+    "14"
+   ],
+   "why": "Splitting at x = 4 gives 7 + (−2) = 5. The answer 9 comes from ignoring the negative sign, which wrongly treats the area below the axis as positive.",
+   "clue": "Add the two pieces, keeping their signs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given ∫ from 2 to 8 of f(x) dx = 10 and ∫ from 2 to 5 of f(x) dx = 6, what is ∫ from 8 to 5 of f(x) dx?",
+   "opts": [
+    "4",
+    "−4",
+    "16",
+    "−16"
+   ],
+   "why": "Splitting at 5 gives ∫ from 5 to 8 = 10 − 6 = 4. The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to −4. The answer 4 forgets this swap.",
+   "clue": "Find the piece from 5 to 8 first, then check the direction of the limits."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5",
+   "also_right": []
+  },
+  "b": {
+   "best": "−4",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example (0 to 2 and 2 to 6 giving 0 to 6 = 8) shows splitting, but it sits in the bullet about swapping limits. A student may think it illustrates the sign change. It should move to the splitting bullet, or a swapping example should be added."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says the −2 comes from 'the area below the axis'. An integral of −2 only means the net signed area is negative; f need not lie wholly below the axis on [4, 9]. Better wording would be 'treats the negative integral as positive'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both intended answers (5 and −4) are correct. The card's splitting example is placed under the swapping-limits bullet, and the why for (a) loosely equates a negative integral with area below the axis."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “−4”, not the writer’s answer “4”.",
+  "Card, wording: The worked example (0 to 2 and 2 to 6 giving 0 to 6 = 8) shows splitting, but it sits in the bullet about swapping limits. A student may think it illustrates the sign change. It should move to the splitting bullet, or a swapping example should be added.",
+  "Question a, wording: The why says the −2 comes from 'the area below the axis'. An integral of −2 only means the net signed area is negative; f need not lie wholly below the axis on [4, 9]. Better wording would be 'treats the negative integral as positive'."
+ ],
+ "proposal": {
+  "title": "Definite integrals",
+  "card": [
+   "Split the area under y = f(x) from x = a to x = b into thin strips of height f(x) and width Δx. The definite integral is the limit of the sum of their areas as the strips get thinner.",
+   "It is written ∫ from a to b of f(x) dx and gives a number, not a function. Area above the x-axis counts as positive, and area below the axis counts as negative.",
+   "Splitting: for c between a and b, ∫ from a to b of f(x) dx = ∫ from a to c of f(x) dx + ∫ from c to b of f(x) dx. Example: if ∫ from 0 to 2 of f(x) dx = 5 and ∫ from 2 to 6 of f(x) dx = 3, then ∫ from 0 to 6 of f(x) dx = 8.",
+   "Swapping the limits reverses the sign: ∫ from b to a of f(x) dx = −∫ from a to b of f(x) dx. Example: if ∫ from 0 to 6 of f(x) dx = 8, then ∫ from 6 to 0 of f(x) dx = −8."
+  ],
+  "remember": "Join pieces across an interval by adding them with their signs. Swap the limits and the sign flips.",
+  "a": {
+   "q": "Given ∫ from 1 to 4 of f(x) dx = 7 and ∫ from 4 to 9 of f(x) dx = −2, what is ∫ from 1 to 9 of f(x) dx?",
+   "opts": [
+    "5",
+    "9",
+    "−5",
+    "14"
+   ],
+   "why": "Splitting at x = 4 gives 7 + (−2) = 5. The answer 9 comes from ignoring the negative sign, which treats the negative integral as positive.",
+   "clue": "Add the two pieces, keeping their signs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given ∫ from 2 to 8 of f(x) dx = 10 and ∫ from 2 to 5 of f(x) dx = 6, what is ∫ from 8 to 5 of f(x) dx?",
+   "opts": [
+    "−4",
+    "4",
+    "16",
+    "−16"
+   ],
+   "why": "Splitting at 5 gives 10 = 6 + ∫ from 5 to 8, so ∫ from 5 to 8 of f(x) dx = 4. The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to −4. The answer 4 forgets this swap.",
+   "clue": "Find the piece from 5 to 8 first, then check the direction of the limits."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "5",
+    "also_right": []
+   },
+   "b": {
+    "best": "−4",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: 7 + (−2) = 5, and the integral from 5 to 8 is 4, so the integral from 8 to 5 is −4."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The worked example (0 to 2 and 2 to 6 giving 0 to 6 = 8) shows splitting, but it sits in the bullet about swapping limits. A student may think it illustrates the sign change. It should move to the splitting bullet, or a swapping example should be added."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says the −2 comes from 'the area below the axis'. An integral of −2 only means the net signed area is negative; f need not lie wholly below the axis on [4, 9]. Better wording would be 'treats the negative integral as positive'."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “−4”, not the writer’s answer “4”.",
+   "Card, wording: The worked example (0 to 2 and 2 to 6 giving 0 to 6 = 8) shows splitting, but it sits in the bullet about swapping limits. A student may think it illustrates the sign change. It should move to the splitting bullet, or a swapping example should be added.",
+   "Question a, wording: The why says the −2 comes from 'the area below the axis'. An integral of −2 only means the net signed area is negative; f need not lie wholly below the axis on [4, 9]. Better wording would be 'treats the negative integral as positive'."
+  ]
+ },
+ "final": {
+  "title": "Definite integrals",
+  "card": [
+   "Split the area under y = f(x) from x = a to x = b into thin strips of height f(x) and width Δx. The definite integral is the limit of the sum of their areas as the strips get thinner.",
+   "It is written ∫ from a to b of f(x) dx and gives a number, not a function. Area above the x-axis counts as positive, and area below the axis counts as negative.",
+   "Splitting: for c between a and b, ∫ from a to b of f(x) dx = ∫ from a to c of f(x) dx + ∫ from c to b of f(x) dx. Example: if ∫ from 0 to 2 of f(x) dx = 5 and ∫ from 2 to 6 of f(x) dx = 3, then ∫ from 0 to 6 of f(x) dx = 8.",
+   "Swapping the limits reverses the sign: ∫ from b to a of f(x) dx = −∫ from a to b of f(x) dx. Example: if ∫ from 0 to 6 of f(x) dx = 8, then ∫ from 6 to 0 of f(x) dx = −8."
+  ],
+  "remember": "Join pieces across an interval by adding them with their signs. Swap the limits and the sign flips.",
+  "a": {
+   "q": "Given ∫ from 1 to 4 of f(x) dx = 7 and ∫ from 4 to 9 of f(x) dx = −2, what is ∫ from 1 to 9 of f(x) dx?",
+   "opts": [
+    "5",
+    "9",
+    "−5",
+    "14"
+   ],
+   "why": "Splitting at x = 4 gives 7 + (−2) = 5. The answer 9 comes from ignoring the negative sign, which treats the negative integral as positive.",
+   "clue": "Add the two pieces, keeping their signs."
+  },
+  "b": {
+   "d": 3,
+   "q": "Given ∫ from 2 to 8 of f(x) dx = 10 and ∫ from 2 to 5 of f(x) dx = 6, what is ∫ from 8 to 5 of f(x) dx?",
+   "opts": [
+    "−4",
+    "4",
+    "16",
+    "−16"
+   ],
+   "why": "Splitting at 5 gives 10 = 6 + ∫ from 5 to 8, so ∫ from 5 to 8 of f(x) dx = 4. The required integral runs from 8 to 5, so the limits are swapped and the sign reverses to −4. The answer 4 forgets this swap.",
+   "clue": "Find the piece from 5 to 8 first, then check the direction of the limits."
+  }
+ },
+ "cleared_by": "recheck"
+}

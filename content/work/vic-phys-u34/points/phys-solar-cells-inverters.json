@@ -1,0 +1,191 @@
+{
+ "id": "phys-solar-cells-inverters",
+ "title": "Solar cells and inverters",
+ "brief": "1eb78790dd7b",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, write",
+  "2026-11-01T14:46:42Z write: done",
+  "2026-11-01T14:56:06Z check: flagged",
+  "2026-11-01T15:05:30Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.00481,
+  "check": 0.01575,
+  "fix": 0.02691,
+  "recheck": 0.01266
+ },
+ "draft": {
+  "title": "Solar cells and inverters",
+  "card": [
+   "A photovoltaic (solar) cell uses light to push electrons through a circuit. The current always flows in one direction, so a solar cell produces DC.",
+   "Many cells are joined in a solar panel. Panels in series add their voltages, so the DC output is larger.",
+   "Mains electricity in an Australian home is AC, which reverses direction many times each second. Most home appliances and the grid are built for AC.",
+   "An inverter is a device that changes DC into AC. A rooftop solar system needs one so its electricity can be used in the home or sent to the grid."
+  ],
+  "remember": "Solar cells give DC. An inverter turns it into AC for the home.",
+  "a": {
+   "q": "Mia installs solar panels on her house in Bendigo. What does the inverter do in her system?",
+   "opts": [
+    "Changes the DC from the panels into AC",
+    "Changes the AC from the panels into DC",
+    "Makes the panels produce more voltage from light",
+    "Stores the panels' electricity for use at night"
+   ],
+   "why": "The panels give DC, but the home runs on AC. The inverter changes DC into AC. It does not make the cells produce more voltage, and the card gives it no job of storing energy.",
+   "clue": "Think about which type of current the panels make and which the home uses."
+  },
+  "b": {
+   "d": 2,
+   "q": "A farm in Mildura has solar panels joined directly to a lamp built for mains supply, with no other device. Why will the lamp not work properly?",
+   "opts": [
+    "The panels give DC but the lamp needs AC",
+    "The panels give AC but the lamp needs DC",
+    "The panels give too little current to flow at all",
+    "The lamp needs an inverter to make its own light"
+   ],
+   "why": "Solar cells produce DC, while a lamp built for mains supply expects AC. An inverter between them would fix this. The panels can still push current, so low current is not the reason.",
+   "clue": "Compare the type of current made with the type the lamp is built for."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Changes the DC from the panels into AC",
+   "also_right": []
+  },
+  "b": {
+   "best": "The panels give DC but the lamp needs AC",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question implies a mains lamp cannot work on DC. A simple resistive (incandescent) lamp works on DC of the right voltage, and point 6 itself says an RMS value gives the same power as that DC voltage. The real mismatch for panels joined directly to a mains lamp is mostly voltage (a panel gives tens of volts, not 230 V RMS). Reword it to something like 'an appliance designed to run only on AC', or ask what device is missing."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are accurate. Question b's premise, that a mains lamp will not work on DC, is physically misleading: a resistive lamp runs on DC of the right voltage, and this clashes with the RMS point. It should be reworded to an AC-only appliance."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The question implies a mains lamp cannot work on DC. A simple resistive (incandescent) lamp works on DC of the right voltage, and point 6 itself says an RMS value gives the same power as that DC voltage. The real mismatch for panels joined directly to a mains lamp is mostly voltage (a panel gives tens of volts, not 230 V RMS). Reword it to something like 'an appliance designed to run only on AC', or ask what device is missing."
+ ],
+ "proposal": {
+  "title": "Solar cells and inverters",
+  "card": [
+   "A photovoltaic (solar) cell uses light to push electrons through a circuit. The current always flows in one direction, so a solar cell produces DC.",
+   "Many cells are joined in a solar panel. Panels in series add their voltages, so the DC output is larger.",
+   "Mains electricity in an Australian home is AC, which reverses direction many times each second. Most home appliances and the grid are built for AC.",
+   "An inverter is a device that changes DC into AC. A rooftop solar system needs one so its electricity can be used in the home or sent to the grid."
+  ],
+  "remember": "Solar cells give DC. An inverter turns it into AC for the home.",
+  "a": {
+   "q": "Mia installs solar panels on her house in Bendigo. What does the inverter do in her system?",
+   "opts": [
+    "Changes the DC from the panels into AC",
+    "Changes the AC from the panels into DC",
+    "Makes the panels produce more voltage from light",
+    "Stores the panels' electricity for use at night"
+   ],
+   "why": "The panels give DC, but the home runs on AC, so the inverter changes DC into AC. It changes the type of current. It does not make the cells produce more voltage or store energy.",
+   "clue": "Think about which type of current the panels make and which the home uses."
+  },
+  "b": {
+   "d": 2,
+   "q": "A farm in Mildura wants its solar panels to run a pump designed to run only on AC. What must be added between them?",
+   "opts": [
+    "An inverter, to change the panels' DC into AC",
+    "An inverter, to change the panels' AC into DC",
+    "More panels in series, to raise the DC voltage",
+    "A battery, to store the panels' DC output"
+   ],
+   "why": "Solar panels produce DC, and the pump runs only on AC, so an inverter is needed to change DC into AC. Adding panels in series gives a larger voltage, but the output is still DC.",
+   "clue": "Compare the type of current the panels make with the type the pump needs."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Changes the DC from the panels into AC",
+    "also_right": []
+   },
+   "b": {
+    "best": "An inverter, to change the panels' DC into AC",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The question implies a mains lamp cannot work on DC. A simple resistive (incandescent) lamp works on DC of the right voltage, and point 6 itself says an RMS value gives the same power as that DC voltage. The real mismatch for panels joined directly to a mains lamp is mostly voltage (a panel gives tens of volts, not 230 V RMS). Reword it to something like 'an appliance designed to run only on AC', or ask what device is missing."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The question implies a mains lamp cannot work on DC. A simple resistive (incandescent) lamp works on DC of the right voltage, and point 6 itself says an RMS value gives the same power as that DC voltage. The real mismatch for panels joined directly to a mains lamp is mostly voltage (a panel gives tens of volts, not 230 V RMS). Reword it to something like 'an appliance designed to run only on AC', or ask what device is missing."
+  ]
+ },
+ "final": {
+  "title": "Solar cells and inverters",
+  "card": [
+   "A photovoltaic (solar) cell uses light to push electrons through a circuit. The current always flows in one direction, so a solar cell produces DC.",
+   "Many cells are joined in a solar panel. Panels in series add their voltages, so the DC output is larger.",
+   "Mains electricity in an Australian home is AC, which reverses direction many times each second. Most home appliances and the grid are built for AC.",
+   "An inverter is a device that changes DC into AC. A rooftop solar system needs one so its electricity can be used in the home or sent to the grid."
+  ],
+  "remember": "Solar cells give DC. An inverter turns it into AC for the home.",
+  "a": {
+   "q": "Mia installs solar panels on her house in Bendigo. What does the inverter do in her system?",
+   "opts": [
+    "Changes the DC from the panels into AC",
+    "Changes the AC from the panels into DC",
+    "Makes the panels produce more voltage from light",
+    "Stores the panels' electricity for use at night"
+   ],
+   "why": "The panels give DC, but the home runs on AC, so the inverter changes DC into AC. It changes the type of current. It does not make the cells produce more voltage or store energy.",
+   "clue": "Think about which type of current the panels make and which the home uses."
+  },
+  "b": {
+   "d": 2,
+   "q": "A farm in Mildura wants its solar panels to run a pump designed to run only on AC. What must be added between them?",
+   "opts": [
+    "An inverter, to change the panels' DC into AC",
+    "An inverter, to change the panels' AC into DC",
+    "More panels in series, to raise the DC voltage",
+    "A battery, to store the panels' DC output"
+   ],
+   "why": "Solar panels produce DC, and the pump runs only on AC, so an inverter is needed to change DC into AC. Adding panels in series gives a larger voltage, but the output is still DC.",
+   "clue": "Compare the type of current the panels make with the type the pump needs."
+  }
+ },
+ "cleared_by": "recheck"
+}

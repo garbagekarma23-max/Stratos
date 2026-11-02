@@ -1,0 +1,352 @@
+{
+ "id": "leg-courts-civil-disputes-2",
+ "title": "Courts in civil disputes",
+ "brief": "d967d75b068c",
+ "shortlist": [
+  [
+   "leg-impact-civil-wrong",
+   0.293
+  ],
+  [
+   "leg-appeals",
+   0.273
+  ],
+  [
+   "leg-courts-ngos-protecting-environment",
+   0.258
+  ],
+  [
+   "leg-international-courts",
+   0.247
+  ],
+  [
+   "leg-children-s-court",
+   0.245
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a fact)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01179,
+  "check": 0.02984,
+  "fix": 0.02235,
+  "recheck": 0.01674
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point covers how the civil court hierarchy divides cases by size and complexity; leg-appeals is about criminal appeals in NSW and does not teach the civil court structure.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, fact: The why says parties do not pick a court because 'jurisdiction decides where a case is heard'. This is overstated. The County and Supreme Courts both have unlimited civil jurisdiction, so a plaintiff can choose between them for large claims. The distractor is still wrong, because choosing a favourable court is not a reason for the hierarchy, but the explanation should be softened.",
+ "rejected": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has a hierarchy of courts, ranked from lowest to highest. Each court's jurisdiction, its power to hear a case, depends on the size and complexity of the civil claim.",
+   [
+    "Magistrates' Court",
+    "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and has a limit on the amount it can deal with."
+   ],
+   [
+    "County and Supreme Courts",
+    "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount claimed."
+   ],
+   "One reason for the hierarchy is administrative convenience: spreading cases lets each court's judges, time and money be used well. Another is that it allows appeals, where a higher court reviews a lower court's decision."
+  ],
+  "remember": "The hierarchy spreads cases so courts run efficiently, and lets higher courts review decisions on appeal.",
+  "a": {
+   "q": "What is one reason Victoria has a hierarchy of civil courts?",
+   "opts": [
+    "It spreads cases so each court's resources are used well",
+    "It lets parties pick the court most likely to favour them",
+    "It means the Supreme Court hears every claim first",
+    "It stops any court decision from being reviewed later"
+   ],
+   "why": "Spreading cases by size and complexity is administrative convenience: each court's judges, time and money are used well. Parties do not pick a court to suit themselves, because jurisdiction decides where a case is heard.",
+   "clue": "One of the card's reasons is about running the courts."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+   "opts": [
+    "Appeal to a higher court to review the decision",
+    "Appeal to the Magistrates' Court to review the decision",
+    "Appeal to the same judge to rehear the whole case",
+    "Appeal to any court she chooses, higher or lower"
+   ],
+   "why": "The hierarchy allows a higher court to review a lower court's decision, so Priya may appeal upwards. The Magistrates' Court sits below the County Court, so it cannot review a County Court decision.",
+   "clue": "Think about which way an appeal travels in the hierarchy."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, fact: The why says parties do not pick a court because 'jurisdiction decides where a case is heard'. This is overstated. The County and Supreme Courts both have unlimited civil jurisdiction, so a plaintiff can choose between them for large claims. The distractor is still wrong, because choosing a favourable court is not a reason for the hierarchy, but the explanation should be softened."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Courts in civil disputes",
+     "card": [
+      "Victoria has a hierarchy of courts. Civil cases are sent to different courts depending on their size and complexity. This is called jurisdiction.",
+      [
+       "Magistrates' Court",
+       "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and it has a limit on the amount of money it can deal with."
+      ],
+      [
+       "County and Supreme Courts",
+       "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount in a claim."
+      ],
+      "Sorting cases this way is for administrative convenience: more serious cases go to courts with more experienced judges and more time. The hierarchy also allows appeals, where a higher court reviews a decision of a lower court."
+     ],
+     "remember": "Cases go to the court that suits their size and complexity, and a higher court can hear an appeal.",
+     "a": {
+      "q": "Why does Victoria sort civil cases among a hierarchy of courts?",
+      "opts": [
+       "Cases are matched to a court by size and complexity",
+       "Every case is heard first in the Supreme Court",
+       "Parties pick the court they think will favour them",
+       "Lower courts only hear cases that have been appealed"
+      ],
+      "why": "The hierarchy sends smaller, simpler cases to lower courts and larger, complex ones to higher courts, which is more efficient to run. Parties do not choose a court to suit themselves: jurisdiction decides where a case is heard.",
+      "clue": "Think about what decides which court a case is heard in."
+     },
+     "b": {
+      "d": 2,
+      "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+      "opts": [
+       "Appeal to a higher court to review the decision",
+       "Ask the Magistrates' Court to review the decision",
+       "Have the same judge hear the case again for free",
+       "Choose a jury of six to replace the judge's decision"
+      ],
+      "why": "The hierarchy allows a decision to be reviewed by a higher court, so Priya may appeal upwards. The Magistrates' Court is lower, so it cannot review a County Court decision.",
+      "clue": "Appeals are reviewed by a court above the one that decided the case."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Cases are matched to a court by size and complexity",
+      "also_right": []
+     },
+     "b": {
+      "best": "Appeal to a higher court to review the decision",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The question asks why Victoria sorts cases, but the right option only restates how they are sorted (by size and complexity). The card's reasons, administrative convenience and allowing appeals, appear in no option. The clue ('what decides which court a case is heard in') also asks about how, not why."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue ('Appeals are reviewed by a court above the one that decided the case') gives the answer away. The right option is also the only one that uses the word 'appeal'."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. Question a asks 'why' but its answer only says how cases are sorted, and question b's clue gives its answer away."
+    },
+    "flags": [
+     "Question a, wording: The question asks why Victoria sorts cases, but the right option only restates how they are sorted (by size and complexity). The card's reasons, administrative convenience and allowing appeals, appear in no option. The clue ('what decides which court a case is heard in') also asks about how, not why.",
+     "Question b, other: The clue ('Appeals are reviewed by a court above the one that decided the case') gives the answer away. The right option is also the only one that uses the word 'appeal'."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Courts in civil disputes",
+     "card": [
+      "Victoria has a hierarchy of courts, ranked from lowest to highest. Each court's jurisdiction, its power to hear a case, depends on the size and complexity of the civil claim.",
+      [
+       "Magistrates' Court",
+       "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and has a limit on the amount it can deal with."
+      ],
+      [
+       "County and Supreme Courts",
+       "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount claimed."
+      ],
+      "One reason for the hierarchy is administrative convenience: spreading cases lets each court's judges, time and money be used well. Another is that it allows appeals, where a higher court reviews a lower court's decision."
+     ],
+     "remember": "The hierarchy spreads cases so courts run efficiently, and lets higher courts review decisions on appeal.",
+     "a": {
+      "q": "What is one reason Victoria has a hierarchy of civil courts?",
+      "opts": [
+       "It spreads cases so each court's resources are used well",
+       "It lets parties pick the court most likely to favour them",
+       "It means the Supreme Court hears every claim first",
+       "It stops any court decision from being reviewed later"
+      ],
+      "why": "Spreading cases by size and complexity is administrative convenience: each court's judges, time and money are used well. Parties do not pick a court to suit themselves, because jurisdiction decides where a case is heard.",
+      "clue": "One of the card's reasons is about running the courts."
+     },
+     "b": {
+      "d": 2,
+      "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+      "opts": [
+       "Appeal to a higher court to review the decision",
+       "Appeal to the Magistrates' Court to review the decision",
+       "Appeal to the same judge to rehear the whole case",
+       "Appeal to any court she chooses, higher or lower"
+      ],
+      "why": "The hierarchy allows a higher court to review a lower court's decision, so Priya may appeal upwards. The Magistrates' Court sits below the County Court, so it cannot review a County Court decision.",
+      "clue": "Think about which way an appeal travels in the hierarchy."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It spreads cases so each court's resources are used well",
+       "also_right": []
+      },
+      "b": {
+       "best": "Appeal to a higher court to review the decision",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "fact",
+        "detail": "The why says parties do not pick a court because 'jurisdiction decides where a case is heard'. This is overstated. The County and Supreme Courts both have unlimited civil jurisdiction, so a plaintiff can choose between them for large claims. The distractor is still wrong, because choosing a favourable court is not a reason for the hierarchy, but the explanation should be softened."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate, and each question has one clear right answer. One small fix: the why for (a) overstates that parties never choose a court, since jurisdiction can overlap between the County and Supreme Courts."
+     },
+     "flags": [
+      "Question a, fact: The why says parties do not pick a court because 'jurisdiction decides where a case is heard'. This is overstated. The County and Supreme Courts both have unlimited civil jurisdiction, so a plaintiff can choose between them for large claims. The distractor is still wrong, because choosing a favourable court is not a reason for the hierarchy, but the explanation should be softened."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has a hierarchy of courts, ranked from lowest to highest. Each court's jurisdiction, its power to hear a case, depends on the size and complexity of the civil claim.",
+   [
+    "Magistrates' Court",
+    "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and has a limit on the amount it can deal with."
+   ],
+   [
+    "County and Supreme Courts",
+    "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount claimed."
+   ],
+   "One reason for the hierarchy is administrative convenience: spreading cases lets each court's judges, time and money be used well. Another is that it allows appeals, where a higher court reviews a lower court's decision."
+  ],
+  "remember": "The hierarchy spreads cases so courts run efficiently, and lets higher courts review decisions on appeal.",
+  "a": {
+   "q": "What is one reason Victoria has a hierarchy of civil courts?",
+   "opts": [
+    "It spreads cases so each court's resources are used well",
+    "It lets parties pick the court most likely to favour them",
+    "It means the Supreme Court hears every claim first",
+    "It stops any court decision from being reviewed later"
+   ],
+   "why": "Spreading cases by size and complexity is administrative convenience: each court's judges, time and money are used well. Letting parties pick a court that favours them is not a reason for the hierarchy. Courts are ranked by the size and complexity of claims, not to suit the parties.",
+   "clue": "One of the card's reasons is about running the courts."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+   "opts": [
+    "Appeal to a higher court to review the decision",
+    "Appeal to the Magistrates' Court to review the decision",
+    "Appeal to the same judge to rehear the whole case",
+    "Appeal to any court she chooses, higher or lower"
+   ],
+   "why": "The hierarchy allows a higher court to review a lower court's decision, so Priya may appeal upwards. The Magistrates' Court sits below the County Court, so it cannot review a County Court decision.",
+   "clue": "Think about which way an appeal travels in the hierarchy."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It spreads cases so each court's resources are used well",
+   "also_right": []
+  },
+  "b": {
+   "best": "Appeal to a higher court to review the decision",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Courts in civil disputes",
+  "card": [
+   "Victoria has a hierarchy of courts, ranked from lowest to highest. Each court's jurisdiction, its power to hear a case, depends on the size and complexity of the civil claim.",
+   [
+    "Magistrates' Court",
+    "the lowest court in the hierarchy. It hears smaller and simpler civil claims, such as a modest debt, and has a limit on the amount it can deal with."
+   ],
+   [
+    "County and Supreme Courts",
+    "higher courts. The County Court hears larger claims and the Supreme Court hears the largest and most complex ones. Neither has an upper limit on the amount claimed."
+   ],
+   "One reason for the hierarchy is administrative convenience: spreading cases lets each court's judges, time and money be used well. Another is that it allows appeals, where a higher court reviews a lower court's decision."
+  ],
+  "remember": "The hierarchy spreads cases so courts run efficiently, and lets higher courts review decisions on appeal.",
+  "a": {
+   "q": "What is one reason Victoria has a hierarchy of civil courts?",
+   "opts": [
+    "It spreads cases so each court's resources are used well",
+    "It lets parties pick the court most likely to favour them",
+    "It means the Supreme Court hears every claim first",
+    "It stops any court decision from being reviewed later"
+   ],
+   "why": "Spreading cases by size and complexity is administrative convenience: each court's judges, time and money are used well. Letting parties pick a court that favours them is not a reason for the hierarchy. Courts are ranked by the size and complexity of claims, not to suit the parties.",
+   "clue": "One of the card's reasons is about running the courts."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya loses a civil case in the County Court and believes the judge made an error of law. What does the court hierarchy allow her to do?",
+   "opts": [
+    "Appeal to a higher court to review the decision",
+    "Appeal to the Magistrates' Court to review the decision",
+    "Appeal to the same judge to rehear the whole case",
+    "Appeal to any court she chooses, higher or lower"
+   ],
+   "why": "The hierarchy allows a higher court to review a lower court's decision, so Priya may appeal upwards. The Magistrates' Court sits below the County Court, so it cannot review a County Court decision.",
+   "clue": "Think about which way an appeal travels in the hierarchy."
+  }
+ }
+}

@@ -1,0 +1,241 @@
+{
+ "id": "mat-simulating-samples",
+ "title": "Simulating samples",
+ "brief": "3a18e7014f1b",
+ "shortlist": [
+  [
+   "mat-sample-means-vary",
+   0.569
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.469
+  ],
+  [
+   "mat-sampling-methods",
+   0.363
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 may adapt mat-distributions-sample-means, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.00858,
+  "write": 0.00514,
+  "check": 0.01631,
+  "fix": 0.01667,
+  "recheck": 0.01289
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-distributions-sample-means",
+  "changes": [
+   "Describe each sample being generated with technology, such as a calculator or CAS random number function, instead of drawing values by hand.",
+   "Extend the example to sample proportions as well as sample means, since Units 3 and 4 use both statistics."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea of taking many random samples and plotting their statistic to see how it varies, but it does not mention simulation with technology and only covers sample means.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank points teach how sample means vary at a Units 1 and 2 level, but Mathematical Methods Units 3 and 4 uses technology simulation mainly to show how the sample proportion varies, so switching the statistic and adding the simulation step would go beyond a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Simulating samples",
+  "card": [
+   "A simulation uses technology to draw many random samples of the same size from a population with a known proportion p. Doing this by hand would take too long.",
+   "For each sample, record the sample proportion. Each trial gives a slightly different value, because each random sample has different members.",
+   "Example: set p = 0.4 and n = 50. Ten simulated samples might give 0.36, 0.42, 0.46, 0.38, 0.40, 0.34, 0.44, 0.40, 0.48 and 0.38. The values spread around 0.4 but few equal it.",
+   "Plot all the results on a dot plot or histogram. The shape shows how much the statistic varies. Running more trials gives a clearer picture of that variation."
+  ],
+  "remember": "Simulation repeats random sampling many times to show how much a statistic varies.",
+  "a": {
+   "q": "A simulation draws 200 random samples, each of size 50, from a population with p = 0.4. Why do the 200 sample proportions differ?",
+   "opts": [
+    "Each random sample contains different members",
+    "The simulation has made a calculation error",
+    "The population proportion changes each trial",
+    "Each sample has a different size"
+   ],
+   "why": "Each trial picks a different random set of members, so the sample proportion changes from trial to trial. The population proportion p stays fixed at 0.4, so it cannot be the cause.",
+   "clue": "What is different about each sample, and what stays fixed?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya simulates 1000 random samples of size 80 from a population with p = 0.25 and plots the 1000 sample proportions. What does the plot show?",
+   "opts": [
+    "How much the sample proportion varies between samples",
+    "The exact value of p in the population",
+    "How the population proportion varies between samples",
+    "The proportion in the first sample she drew"
+   ],
+   "why": "Each dot is one sample proportion, so the plot shows how that statistic varies from sample to sample. The value p was set by Priya and does not vary, so the plot is not showing a changing population proportion.",
+   "clue": "Each dot on the plot comes from one sample."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Each random sample contains different members",
+   "also_right": []
+  },
+  "b": {
+   "best": "How much the sample proportion varies between samples",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Each trial gives a slightly different value\" is contradicted by the card's own example, where 0.40 and 0.38 each appear twice. It should say each trial can give a different value."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem \"Why do the 200 sample proportions differ?\" implies every one is different. With n = 50 there are only about 51 possible values, so many of the 200 proportions will repeat. \"Why do the sample proportions vary?\" would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are clear and the example values are consistent with n = 50. The card and question a slightly overstate that every sample proportion differs, when the card's own example shows repeated values."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"Each trial gives a slightly different value\" is contradicted by the card's own example, where 0.40 and 0.38 each appear twice. It should say each trial can give a different value.",
+  "Question a, wording: The stem \"Why do the 200 sample proportions differ?\" implies every one is different. With n = 50 there are only about 51 possible values, so many of the 200 proportions will repeat. \"Why do the sample proportions vary?\" would be accurate."
+ ],
+ "proposal": {
+  "title": "Simulating samples",
+  "card": [
+   "A simulation uses technology to draw many random samples of the same size from a population with a known proportion p. Doing this by hand would take too long.",
+   "For each sample, record the sample proportion. Each trial can give a different value, because each random sample can include different members.",
+   "Example: set p = 0.4 and n = 50. Ten simulated samples might give 0.36, 0.42, 0.46, 0.38, 0.40, 0.34, 0.44, 0.40, 0.48 and 0.38. The values spread around 0.4 but few equal it.",
+   "Plot all the results on a dot plot or histogram. The shape shows how much the statistic varies. Running more trials gives a clearer picture of that variation."
+  ],
+  "remember": "Simulation repeats random sampling many times to show how much a statistic varies.",
+  "a": {
+   "q": "A simulation draws 200 random samples, each of size 50, from a population with p = 0.4. Why do the sample proportions vary?",
+   "opts": [
+    "Random samples differ in which members they include",
+    "The simulation has made a calculation error",
+    "The population proportion changes each trial",
+    "Each sample has a different number of members"
+   ],
+   "why": "Each trial picks a random set of members, so the sample proportion can change from trial to trial. The population proportion p stays fixed at 0.4, and every sample has 50 members, so neither of those can be the cause.",
+   "clue": "What can differ between samples, and what stays fixed?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya simulates 1000 random samples of size 80 from a population with p = 0.25 and plots the 1000 sample proportions. What does the plot show?",
+   "opts": [
+    "How much the sample proportion varies between samples",
+    "The exact value of p in the population",
+    "How the population proportion varies between samples",
+    "The proportion in the first sample she drew"
+   ],
+   "why": "Each dot is one sample proportion, so the plot shows how that statistic varies from sample to sample. The value p was set by Priya and does not vary, so the plot is not showing a changing population proportion.",
+   "clue": "Each dot on the plot comes from one sample."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Random samples differ in which members they include",
+    "also_right": []
+   },
+   "b": {
+    "best": "How much the sample proportion varies between samples",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"Each trial gives a slightly different value\" is contradicted by the card's own example, where 0.40 and 0.38 each appear twice. It should say each trial can give a different value."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem \"Why do the 200 sample proportions differ?\" implies every one is different. With n = 50 there are only about 51 possible values, so many of the 200 proportions will repeat. \"Why do the sample proportions vary?\" would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"Each trial gives a slightly different value\" is contradicted by the card's own example, where 0.40 and 0.38 each appear twice. It should say each trial can give a different value.",
+   "Question a, wording: The stem \"Why do the 200 sample proportions differ?\" implies every one is different. With n = 50 there are only about 51 possible values, so many of the 200 proportions will repeat. \"Why do the sample proportions vary?\" would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Simulating samples",
+  "card": [
+   "A simulation uses technology to draw many random samples of the same size from a population with a known proportion p. Doing this by hand would take too long.",
+   "For each sample, record the sample proportion. Each trial can give a different value, because each random sample can include different members.",
+   "Example: set p = 0.4 and n = 50. Ten simulated samples might give 0.36, 0.42, 0.46, 0.38, 0.40, 0.34, 0.44, 0.40, 0.48 and 0.38. The values spread around 0.4 but few equal it.",
+   "Plot all the results on a dot plot or histogram. The shape shows how much the statistic varies. Running more trials gives a clearer picture of that variation."
+  ],
+  "remember": "Simulation repeats random sampling many times to show how much a statistic varies.",
+  "a": {
+   "q": "A simulation draws 200 random samples, each of size 50, from a population with p = 0.4. Why do the sample proportions vary?",
+   "opts": [
+    "Random samples differ in which members they include",
+    "The simulation has made a calculation error",
+    "The population proportion changes each trial",
+    "Each sample has a different number of members"
+   ],
+   "why": "Each trial picks a random set of members, so the sample proportion can change from trial to trial. The population proportion p stays fixed at 0.4, and every sample has 50 members, so neither of those can be the cause.",
+   "clue": "What can differ between samples, and what stays fixed?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya simulates 1000 random samples of size 80 from a population with p = 0.25 and plots the 1000 sample proportions. What does the plot show?",
+   "opts": [
+    "How much the sample proportion varies between samples",
+    "The exact value of p in the population",
+    "How the population proportion varies between samples",
+    "The proportion in the first sample she drew"
+   ],
+   "why": "Each dot is one sample proportion, so the plot shows how that statistic varies from sample to sample. The value p was set by Priya and does not vary, so the plot is not showing a changing population proportion.",
+   "clue": "Each dot on the plot comes from one sample."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,220 @@
+{
+ "id": "acc-buying-non-current-asset",
+ "title": "Buying a non-current asset",
+ "brief": "e80f7674ed8d",
+ "shortlist": [
+  [
+   "acc-cost-non-current-asset",
+   0.532
+  ],
+  [
+   "acc-accounting-decisions-assets",
+   0.525
+  ],
+  [
+   "acc-current-non-current-items",
+   0.513
+  ],
+  [
+   "bus-working-capital-management",
+   0.31
+  ],
+  [
+   "bus-liquidity-ratio",
+   0.303
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00487,
+  "check": 0.01074,
+  "fix": 0.02627
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers recording an asset at cost, but it does not teach the loan side of the brief, which adds a liability repaid over time, so that is a new step and no bank point matches the whole idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Buying a non-current asset",
+  "card": [
+   "A non-current asset is something a business owns and expects to use for more than one year, such as a van or a machine.",
+   "It is recorded at cost. Cost is the price paid plus any amount needed to get the asset ready for use, such as delivery and installation.",
+   [
+    "Cash purchase",
+    "the asset account is debited and the bank account is credited. Total assets stay the same, because one asset rises and another falls."
+   ],
+   [
+    "Loan purchase",
+    "the asset account is debited at cost and a loan account is credited. The loan is a liability, and each repayment reduces it over time."
+   ]
+  ],
+  "remember": "Record the asset at cost. Cash lowers the bank account, while a loan adds a liability.",
+  "a": {
+   "q": "Ravi's Bakery in Ballarat buys an oven for $9,000 cash. How is the purchase recorded?",
+   "opts": [
+    "Debit Oven, credit Bank",
+    "Debit Bank, credit Oven",
+    "Debit Oven, credit Loan",
+    "Debit Expense, credit Bank"
+   ],
+   "why": "The oven is an asset the bakery will use for years, so the asset account is debited at cost. Cash leaves the bank account, so it is credited. An expense entry is wrong because the oven will be used for more than one year.",
+   "clue": "The oven comes in and cash goes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess's Landscaping in Geelong buys a trailer for $12,000 using a bank loan. What is the effect of the purchase?",
+   "opts": [
+    "Assets and liabilities both rise by $12,000",
+    "Assets rise by $12,000 and liabilities stay the same",
+    "Assets fall by $12,000 and liabilities rise",
+    "Assets and liabilities both stay the same"
+   ],
+   "why": "The trailer is recorded at cost, so assets rise by $12,000. The loan is owed to the bank, so liabilities rise by $12,000 too. Liabilities do not stay the same, because no cash was paid out to cancel the debt.",
+   "clue": "Ask who is owed the money after the purchase."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit Oven, credit Bank",
+   "also_right": []
+  },
+  "b": {
+   "best": "Assets and liabilities both rise by $12,000",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's last sentence gives a muddled reason: liabilities rise because a new loan is owed to the bank, not because 'no cash was paid out to cancel the debt'. This could confuse students about why the liability changes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the card is accurate. The only issue is a confusing final sentence in the explanation for question b."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The why's last sentence gives a muddled reason: liabilities rise because a new loan is owed to the bank, not because 'no cash was paid out to cancel the debt'. This could confuse students about why the liability changes."
+ ],
+ "proposal": {
+  "title": "Buying a non-current asset",
+  "card": [
+   "A non-current asset is something a business owns and expects to use for more than one year, such as a van or a machine.",
+   "It is recorded at cost. Cost is the price paid plus any amount needed to get the asset ready for use, such as delivery and installation.",
+   [
+    "Cash purchase",
+    "the asset account is debited and the bank account is credited. Total assets stay the same, because one asset rises and another falls."
+   ],
+   [
+    "Loan purchase",
+    "the asset account is debited at cost and a loan account is credited. The loan is a liability, and each repayment reduces it over time."
+   ]
+  ],
+  "remember": "Record the asset at cost. Cash lowers the bank account, while a loan adds a liability.",
+  "a": {
+   "q": "Ravi's Bakery in Ballarat buys an oven for $9,000 cash. How is the purchase recorded?",
+   "opts": [
+    "Debit Oven, credit Bank",
+    "Debit Bank, credit Oven",
+    "Debit Oven, credit Loan",
+    "Debit Expense, credit Bank"
+   ],
+   "why": "The oven is an asset the bakery will use for years, so the asset account is debited at cost. Cash leaves the bank account, so it is credited. An expense entry is wrong because the oven will be used for more than one year.",
+   "clue": "The oven comes in and cash goes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess's Garden Care in Geelong buys a trailer for $12,000 using a bank loan. What is the effect of the purchase?",
+   "opts": [
+    "Assets and liabilities both rise by $12,000",
+    "Assets rise by $12,000 and liabilities stay the same",
+    "Assets fall by $12,000 and liabilities rise",
+    "Assets and liabilities both stay the same"
+   ],
+   "why": "The trailer is recorded at cost, so assets rise by $12,000. The business borrowed the money, so it now owes a new $12,000 loan to the bank and liabilities rise by the same amount. Liabilities would not change if the trailer were paid for in cash, but here the money is borrowed.",
+   "clue": "Ask who is owed the money after the purchase."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The why's last sentence gives a muddled reason: liabilities rise because a new loan is owed to the bank, not because 'no cash was paid out to cancel the debt'. This could confuse students about why the liability changes."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The why's last sentence gives a muddled reason: liabilities rise because a new loan is owed to the bank, not because 'no cash was paid out to cancel the debt'. This could confuse students about why the liability changes."
+  ]
+ },
+ "final": {
+  "title": "Buying a non-current asset",
+  "card": [
+   "A non-current asset is something a business owns and expects to use for more than one year, such as a van or a machine.",
+   "It is recorded at cost. Cost is the price paid plus any amount needed to get the asset ready for use, such as delivery and installation.",
+   [
+    "Cash purchase",
+    "the asset account is debited and the bank account is credited. Total assets stay the same, because one asset rises and another falls."
+   ],
+   [
+    "Loan purchase",
+    "the asset account is debited at cost and a loan account is credited. The loan is a liability, and each repayment reduces it over time."
+   ]
+  ],
+  "remember": "Record the asset at cost. Cash lowers the bank account, while a loan adds a liability.",
+  "a": {
+   "q": "Ravi's Bakery in Ballarat buys an oven for $9,000 cash. How is the purchase recorded?",
+   "opts": [
+    "Debit Oven, credit Bank",
+    "Debit Bank, credit Oven",
+    "Debit Oven, credit Loan",
+    "Debit Expense, credit Bank"
+   ],
+   "why": "The oven is an asset the bakery will use for years, so the asset account is debited at cost. Cash leaves the bank account, so it is credited. An expense entry is wrong because the oven will be used for more than one year.",
+   "clue": "The oven comes in and cash goes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tess's Garden Care in Geelong buys a trailer for $12,000 using a bank loan. What is the effect of the purchase?",
+   "opts": [
+    "Assets and liabilities both rise by $12,000",
+    "Assets rise by $12,000 and liabilities stay the same",
+    "Assets fall by $12,000 and liabilities rise",
+    "Assets and liabilities both stay the same"
+   ],
+   "why": "The trailer is recorded at cost, so assets rise by $12,000. The business borrowed the money, so it now owes a new $12,000 loan to the bank and liabilities rise by the same amount. Liabilities would not change if the trailer were paid for in cash, but here the money is borrowed.",
+   "clue": "Ask who is owed the money after the purchase."
+  }
+ },
+ "cleared_by": "auto"
+}

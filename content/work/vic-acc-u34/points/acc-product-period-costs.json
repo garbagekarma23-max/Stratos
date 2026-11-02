@@ -1,0 +1,162 @@
+{
+ "id": "acc-product-period-costs",
+ "title": "Product and period costs",
+ "brief": "0ee764c57dc0",
+ "shortlist": [
+  [
+   "acc-cost-price-inventory",
+   0.508
+  ],
+  [
+   "acc-identified-cost-method",
+   0.307
+  ],
+  [
+   "acc-cost-sales-gross-profit",
+   0.296
+  ],
+  [
+   "acc-setting-price",
+   0.265
+  ],
+  [
+   "acc-other-inventory-movements",
+   0.246
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 may adapt acc-cost-price-inventory, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:56Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.01062,
+  "write": 0.00466,
+  "check": 0.01088
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "acc-cost-price-inventory",
+  "changes": [
+   "Name the costs as product costs (added to inventory) and period costs (expensed as they occur), using the Units 3 and 4 terminology.",
+   "State explicitly that period costs are expensed as they occur rather than only saying they are not added to the cost price of inventory."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea at the right depth, but it does not use the product and period cost terms or say that period costs are expensed as they occur, so it needs those small additions.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, on the cost price of inventory, is related but centres on GST and the cost price figure. It does not teach sorting costs into product costs and period costs, or that period costs are expensed as they occur, so that would be a new step.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Product and period costs",
+  "card": [
+   [
+    "Product cost",
+    "a cost of getting goods to the business and ready for sale, such as the purchase price and freight in. It is added to the cost of inventory."
+   ],
+   [
+    "Period cost",
+    "any other cost of running the business, such as rent, wages and advertising. It is expensed in the period it occurs."
+   ],
+   "A product cost sits in inventory, an asset, until the goods are sold. Then it becomes cost of sales, an expense.",
+   "Freight in is the cost of delivering goods to the business. Freight out is the cost of delivering goods to customers, so it is a period cost."
+  ],
+  "remember": "Costs to get goods ready for sale go into inventory. All other costs are expensed as they occur.",
+  "a": {
+   "q": "Which cost is a product cost for a trading business?",
+   "opts": [
+    "Freight paid to bring goods from the supplier",
+    "Wages paid to the shop assistants",
+    "Advertising for the end of year sale",
+    "Delivery of goods to a customer's home"
+   ],
+   "why": "Freight in is a cost of getting goods to the business ready for sale, so it is added to inventory. Delivery to a customer happens after the goods are ready for sale, so it is a period cost, like the wages and advertising.",
+   "clue": "Which cost happens before the goods are ready to sell?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat buys goods for $8000 and pays $600 freight in and $400 freight out. At what cost is the inventory recorded?",
+   "opts": [
+    "$8600",
+    "$8000",
+    "$9000",
+    "$8400"
+   ],
+   "why": "Freight in is a product cost, so inventory is $8000 + $600 = $8600. Freight out is a period cost and is expensed, so adding it to give $9000 is wrong.",
+   "clue": "Only costs to get the goods ready for sale are added."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Freight paid to bring goods from the supplier",
+   "also_right": []
+  },
+  "b": {
+   "best": "$8600",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Product and period costs",
+  "card": [
+   [
+    "Product cost",
+    "a cost of getting goods to the business and ready for sale, such as the purchase price and freight in. It is added to the cost of inventory."
+   ],
+   [
+    "Period cost",
+    "any other cost of running the business, such as rent, wages and advertising. It is expensed in the period it occurs."
+   ],
+   "A product cost sits in inventory, an asset, until the goods are sold. Then it becomes cost of sales, an expense.",
+   "Freight in is the cost of delivering goods to the business. Freight out is the cost of delivering goods to customers, so it is a period cost."
+  ],
+  "remember": "Costs to get goods ready for sale go into inventory. All other costs are expensed as they occur.",
+  "a": {
+   "q": "Which cost is a product cost for a trading business?",
+   "opts": [
+    "Freight paid to bring goods from the supplier",
+    "Wages paid to the shop assistants",
+    "Advertising for the end of year sale",
+    "Delivery of goods to a customer's home"
+   ],
+   "why": "Freight in is a cost of getting goods to the business ready for sale, so it is added to inventory. Delivery to a customer happens after the goods are ready for sale, so it is a period cost, like the wages and advertising.",
+   "clue": "Which cost happens before the goods are ready to sell?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Pantry in Ballarat buys goods for $8000 and pays $600 freight in and $400 freight out. At what cost is the inventory recorded?",
+   "opts": [
+    "$8600",
+    "$8000",
+    "$9000",
+    "$8400"
+   ],
+   "why": "Freight in is a product cost, so inventory is $8000 + $600 = $8600. Freight out is a period cost and is expensed, so adding it to give $9000 is wrong.",
+   "clue": "Only costs to get the goods ready for sale are added."
+  }
+ },
+ "cleared_by": "checker"
+}

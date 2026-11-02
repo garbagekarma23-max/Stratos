@@ -1,0 +1,225 @@
+{
+ "id": "mat-adjacency-matrices",
+ "title": "Adjacency matrices",
+ "brief": "76d495c340b5",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.301
+  ],
+  [
+   "mat-network-terms",
+   0.26
+  ],
+  [
+   "mat-types-graphs",
+   0.244
+  ],
+  [
+   "mat-trees",
+   0.208
+  ],
+  [
+   "mat-trees-algorithms",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00496,
+  "check": 0.0155,
+  "fix": 0.02692,
+  "recheck": 0.01147
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches representing a network as an adjacency matrix; the closest, Network terms, covers vertices, edges and degree but not the matrix form, and the matrix-transformation card is a different topic.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Adjacency matrices",
+  "card": [
+   "An adjacency matrix shows how many edges join each pair of vertices. Each row and each column is one vertex, in the same order.",
+   "The number in row A and column B is the number of edges between A and B. If no edge joins them, the entry is 0.",
+   "For an undirected graph, the matrix is symmetric: the entry for A to B equals the entry for B to A. A loop on a vertex is counted in that vertex's diagonal entry.",
+   "Example: vertices A, B, C with two edges between A and B, one edge between B and C, and none between A and C. The rows are A: 0 2 0, B: 2 0 1, C: 0 1 0. Adding a row gives the number of edges meeting that vertex, so row B adds to 3."
+  ],
+  "remember": "Row and column show the pair of vertices. The entry counts the edges between them.",
+  "a": {
+   "q": "In an adjacency matrix for an undirected graph, the entry in row P and column Q is 3. What does this mean?",
+   "opts": [
+    "Three edges join P and Q",
+    "Vertex P has three edges in total",
+    "Vertex Q is the third vertex in the graph",
+    "P and Q are three edges apart"
+   ],
+   "why": "Each entry counts the edges joining the pair of vertices named by its row and column. The entry 3 does not give the total edges at P, which would need the whole row added up.",
+   "clue": "The entry is about one pair of vertices only."
+  },
+  "b": {
+   "d": 2,
+   "q": "A graph has vertices A, B, C. There is one edge between A and B, two edges between A and C, and none between B and C. What is row A of its adjacency matrix, in the order A, B, C?",
+   "opts": [
+    "0 1 2",
+    "1 0 2",
+    "0 2 1",
+    "1 2 0"
+   ],
+   "why": "Row A lists the edges from A to A, B and C in that order: none, one and two. The option 0 2 1 swaps the counts for B and C, which is a common slip.",
+   "clue": "Read the entries in the order A, B, C, starting with A to A."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Three edges join P and Q",
+   "also_right": []
+  },
+  "b": {
+   "best": "0 1 2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says adding a row gives the number of edges meeting that vertex, right after saying a loop goes in the diagonal entry. Under the VCE convention a loop counts as 1 on the diagonal but adds 2 to the degree. So a student may take the row sum to be the degree, which is wrong when there are loops. The claim should be limited to graphs without loops, or the loop case explained."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, and the explanations match them. The card's line that a row sum gives the edges at a vertex could mislead once loops are involved, because the row sum is not the degree then."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The card says adding a row gives the number of edges meeting that vertex, right after saying a loop goes in the diagonal entry. Under the VCE convention a loop counts as 1 on the diagonal but adds 2 to the degree. So a student may take the row sum to be the degree, which is wrong when there are loops. The claim should be limited to graphs without loops, or the loop case explained."
+ ],
+ "proposal": {
+  "title": "Adjacency matrices",
+  "card": [
+   "An adjacency matrix shows how many edges join each pair of vertices. Each row and each column is one vertex, in the same order.",
+   "The number in row A and column B is the number of edges between A and B. If no edge joins them, the entry is 0.",
+   "For an undirected graph, the matrix is symmetric: the entry for A to B equals the entry for B to A. A loop on a vertex counts as 1 in that vertex's diagonal entry.",
+   "Example: vertices A, B, C with two edges between A and B, one edge between B and C, and none between A and C. The rows are A: 0 2 0, B: 2 0 1, C: 0 1 0. When a graph has no loops, adding a row gives the number of edges meeting that vertex, so row B adds to 3."
+  ],
+  "remember": "Row and column show the pair of vertices. The entry counts the edges between them.",
+  "a": {
+   "q": "In an adjacency matrix for an undirected graph, the entry in row P and column Q is 3. What does this mean?",
+   "opts": [
+    "Three edges join P and Q",
+    "Vertex P has three edges in total",
+    "Vertex Q is the third vertex in the graph",
+    "P and Q are three edges apart"
+   ],
+   "why": "Each entry counts the edges joining the pair of vertices named by its row and column. The entry 3 is not the total number of edges at P, since P may also have edges to other vertices.",
+   "clue": "The entry is about one pair of vertices only."
+  },
+  "b": {
+   "d": 2,
+   "q": "A graph has vertices A, B, C and no loops. There is one edge between A and B, two edges between A and C, and none between B and C. What is row A of its adjacency matrix, in the order A, B, C?",
+   "opts": [
+    "0 1 2",
+    "1 0 2",
+    "0 2 1",
+    "1 2 0"
+   ],
+   "why": "Row A lists the edges from A to A, B and C in that order: none, one and two. The option 0 2 1 swaps the counts for B and C, which is a common slip.",
+   "clue": "Read the entries in the order A, B, C, starting with A to A."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Three edges join P and Q",
+    "also_right": []
+   },
+   "b": {
+    "best": "0 1 2",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The card says adding a row gives the number of edges meeting that vertex, right after saying a loop goes in the diagonal entry. Under the VCE convention a loop counts as 1 on the diagonal but adds 2 to the degree. So a student may take the row sum to be the degree, which is wrong when there are loops. The claim should be limited to graphs without loops, or the loop case explained."
+   }
+  ],
+  "flags": [
+   "Card, wording: The card says adding a row gives the number of edges meeting that vertex, right after saying a loop goes in the diagonal entry. Under the VCE convention a loop counts as 1 on the diagonal but adds 2 to the degree. So a student may take the row sum to be the degree, which is wrong when there are loops. The claim should be limited to graphs without loops, or the loop case explained."
+  ]
+ },
+ "final": {
+  "title": "Adjacency matrices",
+  "card": [
+   "An adjacency matrix shows how many edges join each pair of vertices. Each row and each column is one vertex, in the same order.",
+   "The number in row A and column B is the number of edges between A and B. If no edge joins them, the entry is 0.",
+   "For an undirected graph, the matrix is symmetric: the entry for A to B equals the entry for B to A. A loop on a vertex counts as 1 in that vertex's diagonal entry.",
+   "Example: vertices A, B, C with two edges between A and B, one edge between B and C, and none between A and C. The rows are A: 0 2 0, B: 2 0 1, C: 0 1 0. When a graph has no loops, adding a row gives the number of edges meeting that vertex, so row B adds to 3."
+  ],
+  "remember": "Row and column show the pair of vertices. The entry counts the edges between them.",
+  "a": {
+   "q": "In an adjacency matrix for an undirected graph, the entry in row P and column Q is 3. What does this mean?",
+   "opts": [
+    "Three edges join P and Q",
+    "Vertex P has three edges in total",
+    "Vertex Q is the third vertex in the graph",
+    "P and Q are three edges apart"
+   ],
+   "why": "Each entry counts the edges joining the pair of vertices named by its row and column. The entry 3 is not the total number of edges at P, since P may also have edges to other vertices.",
+   "clue": "The entry is about one pair of vertices only."
+  },
+  "b": {
+   "d": 2,
+   "q": "A graph has vertices A, B, C and no loops. There is one edge between A and B, two edges between A and C, and none between B and C. What is row A of its adjacency matrix, in the order A, B, C?",
+   "opts": [
+    "0 1 2",
+    "1 0 2",
+    "0 2 1",
+    "1 2 0"
+   ],
+   "why": "Row A lists the edges from A to A, B and C in that order: none, one and two. The option 0 2 1 swaps the counts for B and C, which is a common slip.",
+   "clue": "Read the entries in the order A, B, C, starting with A to A."
+  }
+ },
+ "cleared_by": "recheck"
+}

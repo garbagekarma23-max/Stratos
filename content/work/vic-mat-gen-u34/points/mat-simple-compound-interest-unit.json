@@ -1,0 +1,243 @@
+{
+ "id": "mat-simple-compound-interest-unit",
+ "title": "Simple and compound interest in Unit 3",
+ "brief": "13978ef7a7c8",
+ "shortlist": [
+  [
+   "mat-compound-interest-by-repeated",
+   0.537
+  ],
+  [
+   "mat-compound-interest",
+   0.531
+  ],
+  [
+   "mat-simple-interest",
+   0.455
+  ],
+  [
+   "mat-comparing-investments",
+   0.389
+  ],
+  [
+   "mat-annuity",
+   0.256
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00517,
+  "check": 0.01357,
+  "fix": 0.0252,
+  "recheck": 0.01027
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-compound-interest-by-repeated, covers compound interest by repeated calculation but not the recurrence relation model that the new Unit 3 point requires, and that missing step is more than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Simple and compound interest",
+  "card": [
+   [
+    "Simple interest",
+    "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+   ],
+   [
+    "Compound interest",
+    "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+   ],
+   "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+   "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
+  ],
+  "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
+  "a": {
+   "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
+   "opts": [
+    "V(n+1) = 1.04 × V(n)",
+    "V(n+1) = V(n) + 0.04",
+    "V(n+1) = V(n) + 32",
+    "V(n+1) = 0.04 × V(n)"
+   ],
+   "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+   "clue": "The balance is multiplied each year, and the old balance is kept."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya invests $5000 at 6% per year simple interest. What is the balance after 3 years?",
+   "opts": [
+    "$5900",
+    "$5954.08",
+    "$5300",
+    "$5600"
+   ],
+   "why": "Simple interest is 5000 × 0.06 = $300 each year. Over 3 years that is $900, so the balance is $5900. $5954.08 is the compound answer, because 5000 × 1.06³ is about 5955.08 and not the same sum added each year. $5300 is only one year of interest.",
+   "clue": "Add the same dollar amount every year, found from the starting $5000."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "V(n+1) = 1.04 × V(n)",
+   "also_right": []
+  },
+  "b": {
+   "best": "$5900",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The distractor $5954.08 is meant to be the compound-interest answer, but 5000 × 1.06³ = $5955.08. The why gives 5955.08 while naming the $5954.08 option, so it contradicts itself. Change the option to $5955.08 so the why holds."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both intended answers are correct. In question b, the compound-interest distractor ($5954.08) is $1 off the true value ($5955.08), and the why names one figure but calculates the other."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The distractor $5954.08 is meant to be the compound-interest answer, but 5000 × 1.06³ = $5955.08. The why gives 5955.08 while naming the $5954.08 option, so it contradicts itself. Change the option to $5955.08 so the why holds."
+ ],
+ "proposal": {
+  "title": "Simple and compound interest",
+  "card": [
+   [
+    "Simple interest",
+    "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+   ],
+   [
+    "Compound interest",
+    "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+   ],
+   "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+   "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
+  ],
+  "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
+  "a": {
+   "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
+   "opts": [
+    "V(n+1) = 1.04 × V(n)",
+    "V(n+1) = V(n) + 0.04",
+    "V(n+1) = V(n) + 32",
+    "V(n+1) = 0.04 × V(n)"
+   ],
+   "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+   "clue": "The balance is multiplied each year, and the old balance is kept."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya invests $5000 at 6% per year simple interest. What is the balance after 3 years?",
+   "opts": [
+    "$5900",
+    "$5955.08",
+    "$5300",
+    "$5600"
+   ],
+   "why": "Simple interest is 5000 × 0.06 = $300 each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, 5000 × 1.06³, which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
+   "clue": "Add the same dollar amount every year, found from the starting $5000."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "V(n+1) = 1.04 × V(n)",
+    "also_right": []
+   },
+   "b": {
+    "best": "$5900",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The distractor $5954.08 is meant to be the compound-interest answer, but 5000 × 1.06³ = $5955.08. The why gives 5955.08 while naming the $5954.08 option, so it contradicts itself. Change the option to $5955.08 so the why holds."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The distractor $5954.08 is meant to be the compound-interest answer, but 5000 × 1.06³ = $5955.08. The why gives 5955.08 while naming the $5954.08 option, so it contradicts itself. Change the option to $5955.08 so the why holds."
+  ]
+ },
+ "final": {
+  "title": "Simple and compound interest",
+  "card": [
+   [
+    "Simple interest",
+    "The same dollar amount is added each period, found from the starting amount only. Interest per period = P × r, where P is the principal and r is the rate per period as a decimal."
+   ],
+   [
+    "Compound interest",
+    "Interest is a percentage of the current balance, so it grows as the balance grows. Each period the balance is multiplied by 1 + r."
+   ],
+   "Recurrence rules: simple interest is V(n+1) = V(n) + P × r. Compound interest is V(n+1) = (1 + r) × V(n).",
+   "Example: $2000 at 5% per year. Simple: $2000, $2100, $2200. Compound: $2000, $2100, $2205."
+  ],
+  "remember": "Simple adds the same dollars each period. Compound multiplies the balance each period.",
+  "a": {
+   "q": "Which recurrence rule models $800 invested at 4% per year compound interest?",
+   "opts": [
+    "V(n+1) = 1.04 × V(n)",
+    "V(n+1) = V(n) + 0.04",
+    "V(n+1) = V(n) + 32",
+    "V(n+1) = 0.04 × V(n)"
+   ],
+   "why": "Compound interest multiplies the balance by 1 + 0.04 = 1.04 each year. V(n) + 32 is the rule for simple interest, because it adds the same amount each year. 0.04 × V(n) would leave only the interest, not the whole balance.",
+   "clue": "The balance is multiplied each year, and the old balance is kept."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya invests $5000 at 6% per year simple interest. What is the balance after 3 years?",
+   "opts": [
+    "$5900",
+    "$5955.08",
+    "$5300",
+    "$5600"
+   ],
+   "why": "Simple interest is 5000 × 0.06 = $300 each year, so 3 years adds $900 and the balance is $5900. $5955.08 is the compound answer, 5000 × 1.06³, which multiplies the balance instead of adding the same sum each year. $5300 and $5600 are only one and two years of interest.",
+   "clue": "Add the same dollar amount every year, found from the starting $5000."
+  }
+ },
+ "cleared_by": "recheck"
+}

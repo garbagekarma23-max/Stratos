@@ -18,9 +18,48 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Data, sequences and finance, linear relations and matrices",
       "chapters": [
-        {"id": "vic-mat-gen-u12-1-1", "title": "Investigating data distributions", "check": "checked", "points": []},
-        {"id": "vic-mat-gen-u12-2-1", "title": "Sequences and recursion", "check": "checked", "points": []},
-        {"id": "vic-mat-gen-u12-2-2", "title": "Financial arithmetic", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-gen-u12-1-1",
+          "title": "Investigating data distributions",
+          "check": "checked",
+          "points": [
+            "mat-types-data-2",
+            "mat-displaying-categorical-data",
+            "mat-histograms-dot-plots",
+            "mat-measures-centre",
+            "mat-measures-spread",
+            "mat-five-number-summary-boxplots",
+            "mat-shapes-distributions",
+            "mat-comparing-distributions"
+          ]
+        },
+        {
+          "id": "vic-mat-gen-u12-2-1",
+          "title": "Sequences and recursion",
+          "check": "checked",
+          "points": [
+            "mat-arithmetic-sequences",
+            "mat-geometric-sequences",
+            "mat-first-order-recurrence-relations",
+            "mat-explicit-rules-sequences",
+            "mat-linear-growth-decay",
+            "mat-geometric-growth-decay"
+          ]
+        },
+        {
+          "id": "vic-mat-gen-u12-2-2",
+          "title": "Financial arithmetic",
+          "check": "checked",
+          "points": [
+            "mat-percentage-increase-decrease",
+            "mat-gst-price",
+            "mat-unitary-method",
+            "mat-simple-interest-2",
+            "mat-compound-interest-2",
+            "mat-comparing-purchase-options",
+            "mat-inflation-purchasing-power"
+          ]
+        },
         {
           "id": "vic-mat-gen-u12-3-1",
           "title": "Linear relations and modelling",
@@ -33,13 +72,36 @@ MADE_COURSES.push({
             "mat-piecewise-step-graphs"
           ]
         },
-        {"id": "vic-mat-gen-u12-4-1", "title": "Matrices", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-gen-u12-4-1",
+          "title": "Matrices",
+          "check": "checked",
+          "points": [
+            "mat-matrix",
+            "mat-adding-scaling-matrices",
+            "mat-multiplying-matrices",
+            "mat-identity-inverse-matrices",
+            "mat-matrices-context",
+            "mat-transition-matrices"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Associations, networks, variation and measurement",
       "chapters": [
-        {"id": "vic-mat-gen-u12-1-2", "title": "Investigating associations", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-gen-u12-1-2",
+          "title": "Investigating associations",
+          "check": "checked",
+          "points": [
+            "mat-response-explanatory-variables",
+            "mat-scatterplots",
+            "mat-describing-association",
+            "mat-lines-good-fit",
+            "mat-interpolation-extrapolation-2"
+          ]
+        },
         {"id": "vic-mat-gen-u12-4-2", "title": "Graphs and networks", "check": "checked", "points": []},
         {
           "id": "vic-mat-gen-u12-2-3",
@@ -59,7 +121,18 @@ MADE_COURSES.push({
             "mat-scaling-area-volume"
           ]
         },
-        {"id": "vic-mat-gen-u12-2-5", "title": "Trigonometry", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-gen-u12-2-5",
+          "title": "Trigonometry",
+          "check": "checked",
+          "points": [
+            "mat-pythagoras-theorem",
+            "mat-sine-cosine-tangent-ratios",
+            "mat-sine-cosine-rules",
+            "mat-area-any-triangle",
+            "mat-bearings-angles-elevation"
+          ]
+        }
       ]
     }
   ]

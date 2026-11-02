@@ -1,0 +1,363 @@
+{
+ "id": "phys-relativity-action",
+ "title": "Relativity in action",
+ "brief": "2e36c7bab75d",
+ "shortlist": [
+  [
+   "phys-postulates-special-relativity",
+   0.22
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:49Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.01204,
+  "check": 0.03722,
+  "fix": 0.02232,
+  "recheck": 0.01592
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the two postulates of special relativity, while the new point is about applications (muon lifetimes, accelerators, GPS corrections) that rely on time dilation and related effects the bank point does not cover.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'The corrections are about the clocks' points straight to the only option that mentions clocks, so a student can pick it without understanding why GPS needs relativity.",
+ "rejected": {
+  "title": "Relativity in action",
+  "card": [
+   [
+    "Muons",
+    "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. In that time they could not travel far enough to reach the ground, yet many do. In Earth's frame the muon's clock runs slowly, and in the muon's frame the trip is shorter."
+   ],
+   [
+    "Accelerators",
+    "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+   ],
+   [
+    "GPS",
+    "GPS satellite clocks tick at a different rate from clocks on the ground. Their speed slows them by about 7 microseconds a day, while weaker gravity at their height, an effect of general relativity, speeds them up by about 45. Without corrections, timing and position errors would build up each day."
+   ],
+   "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+  ],
+  "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+  "a": {
+   "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+   "opts": [
+    "Their short lifetime is stretched in Earth's frame",
+    "Their lifetime is longer in the muon's own frame",
+    "Their speed is greater than the speed of light",
+    "Earth's atmosphere slows them so they last longer"
+   ],
+   "why": "Measured from Earth, the muon's clock runs slowly, so it lasts long enough to reach the ground. In its own frame its lifetime is still only about 2.2 microseconds, so the option about the muon's own frame is wrong.",
+   "clue": "The 2.2 microsecond lifetime is measured with the muon at rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+   "opts": [
+    "Without corrections, satellite clock errors would build up",
+    "Satellites travel faster than light relative to Earth",
+    "Satellites are too small for Newton's mechanics to apply",
+    "Radio signals from satellites travel at varying speeds"
+   ],
+   "why": "Satellite clocks tick at a different rate from clocks on the ground, because of both their speed and the weaker gravity at their height. Uncorrected, the timing errors would grow and cause position errors. The corrections are made to the clocks, not to the speed of the radio signals, so the option about varying signal speeds is wrong.",
+   "clue": "The corrections are about the clocks."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue 'The corrections are about the clocks' points straight to the only option that mentions clocks, so a student can pick it without understanding why GPS needs relativity."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Relativity in action",
+     "card": [
+      [
+       "Muons",
+       "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. At that lifetime they would travel too far to survive the trip, yet many reach the ground. In the muon's frame its journey is short in length, and in Earth's frame its clock runs slowly."
+      ],
+      [
+       "Accelerators",
+       "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+      ],
+      [
+       "GPS",
+       "GPS satellites carry atomic clocks moving fast relative to Earth, and these clocks need relativistic corrections. Without them the position errors would grow over time."
+      ],
+      "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+     ],
+     "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+     "a": {
+      "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+      "opts": [
+       "Their short lifetime is stretched in Earth's frame",
+       "Their lifetime is longer in the muon's own frame",
+       "Their speed is greater than the speed of light",
+       "Earth's atmosphere slows them so they last longer"
+      ],
+      "why": "In Earth's frame the muon's clock runs slowly, so it lasts long enough to reach the ground. Its lifetime in its own frame is still only about 2.2 microseconds, so that option is wrong.",
+      "clue": "Think about whose clock runs slowly in Earth's frame."
+     },
+     "b": {
+      "d": 3,
+      "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+      "opts": [
+       "Without corrections, satellite clock errors would build up",
+       "Satellites travel faster than light relative to Earth",
+       "Satellites are too small for Newton's mechanics to apply",
+       "Radio signals from satellites travel at varying speeds"
+      ],
+      "why": "The satellite atomic clocks run at a different rate from clocks on Earth, so uncorrected timing errors would grow and produce position errors. The signal speed is not what is corrected, so the last option is wrong.",
+      "clue": "The corrections are about the clocks."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Their short lifetime is stretched in Earth's frame",
+      "also_right": []
+     },
+     "b": {
+      "best": "Without corrections, satellite clock errors would build up",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "wording",
+       "detail": "\"At that lifetime they would travel too far to survive the trip\" says the opposite of what is meant. At 2.2 microseconds they would not travel far enough: the trip is too long for them to survive."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The GPS line puts the need for corrections down only to the clocks moving fast. The larger GPS correction is the gravitational (general relativity) effect, about +45 microseconds a day, and it is opposite in sign to the speed effect of about -7 microseconds a day. The card should not imply that motion alone is the cause."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says \"the last option is wrong\" about signal speed. In the order shown, the last option is the correct answer and the signal-speed option is second, so the why contradicts the question as students see it."
+      },
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The clue \"whose clock runs slowly in Earth's frame\" repeats \"Earth's frame\" from the correct option and sets it apart from the muon's-own-frame distractor, which nearly gives the answer away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. The card's muon line says the reverse of what is meant (\"travel too far\"), and the GPS line gives motion as the only cause when the gravitational effect is larger. Why (b) calls the correct option \"the last option\" and wrong, and the clue for (a) nearly gives its answer away."
+    },
+    "flags": [
+     "Card, wording: \"At that lifetime they would travel too far to survive the trip\" says the opposite of what is meant. At 2.2 microseconds they would not travel far enough: the trip is too long for them to survive.",
+     "Card, fact: The GPS line puts the need for corrections down only to the clocks moving fast. The larger GPS correction is the gravitational (general relativity) effect, about +45 microseconds a day, and it is opposite in sign to the speed effect of about -7 microseconds a day. The card should not imply that motion alone is the cause.",
+     "Question b, other: Why (b) says \"the last option is wrong\" about signal speed. In the order shown, the last option is the correct answer and the signal-speed option is second, so the why contradicts the question as students see it.",
+     "Question a, other: The clue \"whose clock runs slowly in Earth's frame\" repeats \"Earth's frame\" from the correct option and sets it apart from the muon's-own-frame distractor, which nearly gives the answer away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Relativity in action",
+     "card": [
+      [
+       "Muons",
+       "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. In that time they could not travel far enough to reach the ground, yet many do. In Earth's frame the muon's clock runs slowly, and in the muon's frame the trip is shorter."
+      ],
+      [
+       "Accelerators",
+       "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+      ],
+      [
+       "GPS",
+       "GPS satellite clocks tick at a different rate from clocks on the ground. Their speed slows them by about 7 microseconds a day, while weaker gravity at their height, an effect of general relativity, speeds them up by about 45. Without corrections, timing and position errors would build up each day."
+      ],
+      "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+     ],
+     "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+     "a": {
+      "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+      "opts": [
+       "Their short lifetime is stretched in Earth's frame",
+       "Their lifetime is longer in the muon's own frame",
+       "Their speed is greater than the speed of light",
+       "Earth's atmosphere slows them so they last longer"
+      ],
+      "why": "Measured from Earth, the muon's clock runs slowly, so it lasts long enough to reach the ground. In its own frame its lifetime is still only about 2.2 microseconds, so the option about the muon's own frame is wrong.",
+      "clue": "The 2.2 microsecond lifetime is measured with the muon at rest."
+     },
+     "b": {
+      "d": 3,
+      "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+      "opts": [
+       "Without corrections, satellite clock errors would build up",
+       "Satellites travel faster than light relative to Earth",
+       "Satellites are too small for Newton's mechanics to apply",
+       "Radio signals from satellites travel at varying speeds"
+      ],
+      "why": "Satellite clocks tick at a different rate from clocks on the ground, because of both their speed and the weaker gravity at their height. Uncorrected, the timing errors would grow and cause position errors. The corrections are made to the clocks, not to the speed of the radio signals, so the option about varying signal speeds is wrong.",
+      "clue": "The corrections are about the clocks."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:52Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Their short lifetime is stretched in Earth's frame",
+       "also_right": []
+      },
+      "b": {
+       "best": "Without corrections, satellite clock errors would build up",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'The corrections are about the clocks' points straight to the only option that mentions clocks, so a student can pick it without understanding why GPS needs relativity."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts check out: the 2.2 microsecond muon lifetime and the GPS figures of about 7 and 45 microseconds a day are right. One problem: question b's clue gives the answer away, because the right option is the only one that mentions clocks."
+     },
+     "flags": [
+      "Question b, other: The clue 'The corrections are about the clocks' points straight to the only option that mentions clocks, so a student can pick it without understanding why GPS needs relativity."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Relativity in action",
+  "card": [
+   [
+    "Muons",
+    "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. In that time they could not travel far enough to reach the ground, yet many do. In Earth's frame the muon's clock runs slowly, and in the muon's frame the trip is shorter."
+   ],
+   [
+    "Accelerators",
+    "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+   ],
+   [
+    "GPS",
+    "GPS satellite clocks tick at a different rate from clocks on the ground. Their speed slows them by about 7 microseconds a day, while weaker gravity at their height, an effect of general relativity, speeds them up by about 45. Without corrections, timing and position errors would build up each day."
+   ],
+   "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+  ],
+  "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+  "a": {
+   "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+   "opts": [
+    "Their short lifetime is stretched in Earth's frame",
+    "Their lifetime is longer in the muon's own frame",
+    "Their speed is greater than the speed of light",
+    "Earth's atmosphere slows them so they last longer"
+   ],
+   "why": "Measured from Earth, the muon's clock runs slowly, so it lasts long enough to reach the ground. In its own frame its lifetime is still only about 2.2 microseconds, so the option about the muon's own frame is wrong.",
+   "clue": "The 2.2 microsecond lifetime is measured with the muon at rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+   "opts": [
+    "Without corrections, satellite timing errors would build up",
+    "Satellites travel faster than light relative to Earth",
+    "Satellites are too small for Newton's mechanics to apply",
+    "Radio signals from satellites travel at varying speeds"
+   ],
+   "why": "Satellite clocks tick at a different rate from clocks on the ground, because of both their speed and the weaker gravity at their height. Uncorrected, the timing errors would grow and cause position errors. The signals are not the problem, so the option about varying signal speeds is wrong.",
+   "clue": "Think about what differs between a satellite and the ground, and what that does over a day."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their short lifetime is stretched in Earth's frame",
+   "also_right": []
+  },
+  "b": {
+   "best": "Without corrections, satellite timing errors would build up",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The muon lifetime and GPS figures (about 7 microseconds a day slower from speed, about 45 faster from gravity) are correct, and both questions have one clear right answer."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Relativity in action",
+  "card": [
+   [
+    "Muons",
+    "Muons are made high in the atmosphere and last only about 2.2 microseconds at rest. In that time they could not travel far enough to reach the ground, yet many do. In Earth's frame the muon's clock runs slowly, and in the muon's frame the trip is shorter."
+   ],
+   [
+    "Accelerators",
+    "Particles in accelerators move very close to the speed of light. Their design must use relativity, or the predicted behaviour of the particles would not match what is measured."
+   ],
+   [
+    "GPS",
+    "GPS satellite clocks tick at a different rate from clocks on the ground. Their speed slows them by about 7 microseconds a day, while weaker gravity at their height, an effect of general relativity, speeds them up by about 45. Without corrections, timing and position errors would build up each day."
+   ],
+   "In each case, measurements match relativity and do not match the predictions of Newton's mechanics."
+  ],
+  "remember": "Muon survival, accelerator design and GPS timing all match relativity, not Newton.",
+  "a": {
+   "q": "Many muons made high in the atmosphere reach the ground. What is the best explanation?",
+   "opts": [
+    "Their short lifetime is stretched in Earth's frame",
+    "Their lifetime is longer in the muon's own frame",
+    "Their speed is greater than the speed of light",
+    "Earth's atmosphere slows them so they last longer"
+   ],
+   "why": "Measured from Earth, the muon's clock runs slowly, so it lasts long enough to reach the ground. In its own frame its lifetime is still only about 2.2 microseconds, so the option about the muon's own frame is wrong.",
+   "clue": "The 2.2 microsecond lifetime is measured with the muon at rest."
+  },
+  "b": {
+   "d": 3,
+   "q": "An engineer says GPS needs relativistic corrections. Which statement best supports this?",
+   "opts": [
+    "Without corrections, satellite timing errors would build up",
+    "Satellites travel faster than light relative to Earth",
+    "Satellites are too small for Newton's mechanics to apply",
+    "Radio signals from satellites travel at varying speeds"
+   ],
+   "why": "Satellite clocks tick at a different rate from clocks on the ground, because of both their speed and the weaker gravity at their height. Uncorrected, the timing errors would grow and cause position errors. The signals are not the problem, so the option about varying signal speeds is wrong.",
+   "clue": "Think about what differs between a satellite and the ground, and what that does over a day."
+  }
+ }
+}

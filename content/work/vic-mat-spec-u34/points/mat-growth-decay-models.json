@@ -1,0 +1,212 @@
+{
+ "id": "mat-growth-decay-models",
+ "title": "Growth and decay models",
+ "brief": "5975996863dc",
+ "shortlist": [
+  [
+   "mat-exponential-growth-decay",
+   0.589
+  ],
+  [
+   "mat-exponential-models",
+   0.499
+  ],
+  [
+   "mat-linear-models",
+   0.237
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00561,
+  "check": 0.01473,
+  "fix": 0.02712
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point also covers the logistic model that levels off at a limit, which none of the bank points teach, and the closest bank point covers only exponential growth and decay, so it is too narrow to match.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Growth and decay models",
+  "card": [
+   "If the rate of change of y is proportional to y, then dy/dt = ky, where k is a constant. The solution is y = Ae^(kt), where A is the value of y at t = 0.",
+   [
+    "Growth",
+    "k > 0. The rate rises as y rises, so y grows exponentially. Example: dy/dt = 0.03y gives y = Ae^(0.03t)."
+   ],
+   [
+    "Decay",
+    "k < 0. The rate falls as y falls, so y shrinks towards 0. Example: dy/dt = −0.2y gives y = Ae^(−0.2t)."
+   ],
+   "Worked example: a drug has dy/dt = −0.2y and y = 50 mg at t = 0. Then y = 50e^(−0.2t). At t = 5, y = 50e^(−1) ≈ 18.4 mg."
+  ],
+  "remember": "dy/dt = ky gives y = Ae^(kt): growth if k is positive, decay if k is negative.",
+  "a": {
+   "q": "A quantity satisfies dy/dt = −0.4y, and y = 10 when t = 0. Which equation gives y in terms of t?",
+   "opts": [
+    "y = 10e^(−0.4t)",
+    "y = 10e^(0.4t)",
+    "y = −0.4e^(10t)",
+    "y = 10 − 0.4t"
+   ],
+   "why": "For dy/dt = ky the solution is y = Ae^(kt), and A = 10 because y = 10 at t = 0. Here k = −0.4, so y = 10e^(−0.4t). The option with 0.4 instead of −0.4 loses the sign, which would give growth rather than decay.",
+   "clue": "Match the form y = Ae^(kt) and keep the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A culture of bacteria in a lab in Geelong has dy/dt = 0.5y, with y in thousands and t in hours. At t = 0, y = 4. What is y at t = 2, to one decimal place?",
+   "opts": [
+    "10.9 thousand",
+    "8.0 thousand",
+    "5.0 thousand",
+    "29.6 thousand"
+   ],
+   "why": "The solution is y = 4e^(0.5t). At t = 2, y = 4e^1 = 4 × 2.718 ≈ 10.9. Using 4 × 2 = 8.0 treats the rate as a plain multiple instead of using the exponential.",
+   "clue": "Find A first, then put t = 2 into Ae^(kt)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "y = 10e^(−0.4t)",
+   "also_right": []
+  },
+  "b": {
+   "best": "10.9 thousand",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Decay: k < 0. The rate falls as y falls' is imprecise. With k < 0, dy/dt = ky is negative, and as y falls it rises towards 0. What falls is the size of the rate, the speed of decay. Better: 'The rate of decrease slows as y falls.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths and both answers check out: a is y = 10e^(−0.4t), and b is 4e ≈ 10.9 thousand. One card line, 'the rate falls as y falls' for decay, should say the size of the rate falls, since the negative rate actually rises towards 0."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Decay: k < 0. The rate falls as y falls' is imprecise. With k < 0, dy/dt = ky is negative, and as y falls it rises towards 0. What falls is the size of the rate, the speed of decay. Better: 'The rate of decrease slows as y falls.'"
+ ],
+ "proposal": {
+  "title": "Growth and decay models",
+  "card": [
+   "If the rate of change of y is proportional to y, then dy/dt = ky, where k is a constant. The solution is y = Ae^(kt), where A is the value of y at t = 0.",
+   [
+    "Growth",
+    "k > 0. The rate rises as y rises, so y grows exponentially. Example: dy/dt = 0.03y gives y = Ae^(0.03t)."
+   ],
+   [
+    "Decay",
+    "k < 0. The rate of decrease slows as y falls, so y shrinks towards 0. Example: dy/dt = −0.2y gives y = Ae^(−0.2t)."
+   ],
+   "Worked example: a drug has dy/dt = −0.2y and y = 50 mg at t = 0. Then y = 50e^(−0.2t). At t = 5, y = 50e^(−1) ≈ 18.4 mg."
+  ],
+  "remember": "dy/dt = ky gives y = Ae^(kt): growth if k is positive, decay if k is negative.",
+  "a": {
+   "q": "A quantity satisfies dy/dt = −0.4y, and y = 10 when t = 0. Which equation gives y in terms of t?",
+   "opts": [
+    "y = 10e^(−0.4t)",
+    "y = 10e^(0.4t)",
+    "y = −0.4e^(10t)",
+    "y = 10 − 0.4t"
+   ],
+   "why": "For dy/dt = ky the solution is y = Ae^(kt), and A = 10 because y = 10 at t = 0. Here k = −0.4, so y = 10e^(−0.4t). The option with 0.4 instead of −0.4 loses the sign, which would give growth rather than decay.",
+   "clue": "Match the form y = Ae^(kt) and keep the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A culture of bacteria in a lab in Geelong has dy/dt = 0.5y, with y in thousands and t in hours. At t = 0, y = 4. What is y at t = 2, to one decimal place?",
+   "opts": [
+    "10.9 thousand",
+    "8.0 thousand",
+    "5.0 thousand",
+    "29.6 thousand"
+   ],
+   "why": "The solution is y = 4e^(0.5t). At t = 2, y = 4e^1 = 4 × 2.718 ≈ 10.9. Using 4 × 2 = 8.0 treats the rate as a plain multiple instead of using the exponential.",
+   "clue": "Find A first, then put t = 2 into Ae^(kt)."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Decay: k < 0. The rate falls as y falls' is imprecise. With k < 0, dy/dt = ky is negative, and as y falls it rises towards 0. What falls is the size of the rate, the speed of decay. Better: 'The rate of decrease slows as y falls.'"
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Decay: k < 0. The rate falls as y falls' is imprecise. With k < 0, dy/dt = ky is negative, and as y falls it rises towards 0. What falls is the size of the rate, the speed of decay. Better: 'The rate of decrease slows as y falls.'"
+  ]
+ },
+ "final": {
+  "title": "Growth and decay models",
+  "card": [
+   "If the rate of change of y is proportional to y, then dy/dt = ky, where k is a constant. The solution is y = Ae^(kt), where A is the value of y at t = 0.",
+   [
+    "Growth",
+    "k > 0. The rate rises as y rises, so y grows exponentially. Example: dy/dt = 0.03y gives y = Ae^(0.03t)."
+   ],
+   [
+    "Decay",
+    "k < 0. The rate of decrease slows as y falls, so y shrinks towards 0. Example: dy/dt = −0.2y gives y = Ae^(−0.2t)."
+   ],
+   "Worked example: a drug has dy/dt = −0.2y and y = 50 mg at t = 0. Then y = 50e^(−0.2t). At t = 5, y = 50e^(−1) ≈ 18.4 mg."
+  ],
+  "remember": "dy/dt = ky gives y = Ae^(kt): growth if k is positive, decay if k is negative.",
+  "a": {
+   "q": "A quantity satisfies dy/dt = −0.4y, and y = 10 when t = 0. Which equation gives y in terms of t?",
+   "opts": [
+    "y = 10e^(−0.4t)",
+    "y = 10e^(0.4t)",
+    "y = −0.4e^(10t)",
+    "y = 10 − 0.4t"
+   ],
+   "why": "For dy/dt = ky the solution is y = Ae^(kt), and A = 10 because y = 10 at t = 0. Here k = −0.4, so y = 10e^(−0.4t). The option with 0.4 instead of −0.4 loses the sign, which would give growth rather than decay.",
+   "clue": "Match the form y = Ae^(kt) and keep the sign of k."
+  },
+  "b": {
+   "d": 3,
+   "q": "A culture of bacteria in a lab in Geelong has dy/dt = 0.5y, with y in thousands and t in hours. At t = 0, y = 4. What is y at t = 2, to one decimal place?",
+   "opts": [
+    "10.9 thousand",
+    "8.0 thousand",
+    "5.0 thousand",
+    "29.6 thousand"
+   ],
+   "why": "The solution is y = 4e^(0.5t). At t = 2, y = 4e^1 = 4 × 2.718 ≈ 10.9. Using 4 × 2 = 8.0 treats the rate as a plain multiple instead of using the exponential.",
+   "clue": "Find A first, then put t = 2 into Ae^(kt)."
+  }
+ },
+ "cleared_by": "auto"
+}

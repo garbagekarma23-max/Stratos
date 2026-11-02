@@ -1,0 +1,243 @@
+{
+ "id": "chem-fuel-cells",
+ "title": "Fuel cells",
+ "brief": "53b6b01ae104",
+ "shortlist": [
+  [
+   "bio-cell-theory-2",
+   0.225
+  ],
+  [
+   "mat-fuel-consumption",
+   0.215
+  ],
+  [
+   "bio-mitosis",
+   0.211
+  ],
+  [
+   "chem-galvanic-cells",
+   0.206
+  ],
+  [
+   "bio-stem-cells",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: failed the content check, writing again",
+  "2026-11-01T15:14:44Z write: done (still fails the content check)",
+  "2026-11-01T15:19:03Z check: flagged",
+  "2026-11-01T15:21:20Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.01287,
+  "check": 0.01436,
+  "fix": 0.01906,
+  "recheck": 0.01386
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches fuel cells: the closest, the NSW Year 11 galvanic cells card, covers a different idea (a cell with reactants already inside, not continuous feeding of fuel and oxygen), so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Fuel cells",
+  "card": [
+   "A fuel cell is a galvanic cell that is fed reactants from outside, so it keeps running as long as the supply lasts. A fuel such as hydrogen goes to one electrode and oxygen goes to the other.",
+   "In an acidic hydrogen fuel cell, hydrogen is oxidised at the anode: H2(g) → 2H+(aq) + 2e-. Oxygen is reduced at the cathode: O2(g) + 4H+(aq) + 4e- → 2H2O(l).",
+   "The electrons travel through the external circuit and make the electric current. The overall reaction is 2H2(g) + O2(g) → 2H2O(l), so the only product is water.",
+   "A battery has a fixed amount of reactants inside it and goes flat when they run out. A fuel cell does not go flat while fuel and oxygen keep being supplied."
+  ],
+  "remember": "A fuel cell makes electricity from a continuous supply of fuel and oxygen. A hydrogen fuel cell makes only water.",
+  "a": {
+   "q": "Which feature makes a fuel cell different from a standard battery?",
+   "opts": [
+    "Its reactants are supplied continuously from outside",
+    "Its electrodes are not involved in any redox reaction",
+    "Its reaction runs without any electrons being transferred",
+    "Its anode is where reduction takes place"
+   ],
+   "why": "A fuel cell is fed fuel and oxygen from outside, so it can keep producing electricity. It still relies on redox reactions, with oxidation at the anode, so the other options are wrong.",
+   "clue": "Think about what happens when a battery's reactants run out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's hydrogen fuel cell runs an acidic cell for a long trip. Hydrogen and oxygen are fed in the whole time. Which statement about the cell is correct?",
+   "opts": [
+    "Hydrogen is oxidised at the anode and water is the product",
+    "Hydrogen is reduced at the cathode and water is the product",
+    "Oxygen is oxidised at the anode and hydrogen is the product",
+    "Hydrogen is oxidised at the anode and the cell soon goes flat"
+   ],
+   "why": "Hydrogen loses electrons, so it is oxidised at the anode, and oxygen is reduced to water at the cathode. The last option is tempting because it has the right electrode, but a fuel cell keeps running while it is fed.",
+   "clue": "Which reactant loses electrons, and what does the supply do to the cell?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "chem-fuel-cellsb option is 61 characters: Hydrogen is oxidised at the anode and the cell soon goes flat"
+ ],
+ "check": {
+  "a": {
+   "best": "Its reactants are supplied continuously from outside",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hydrogen is oxidised at the anode and water is the product",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'Mia's hydrogen fuel cell runs an acidic cell for a long trip' is garbled: a fuel cell does not 'run an acidic cell'. Reword to something like 'Mia uses an acidic hydrogen fuel cell on a long trip.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Its electrodes are not involved in any redox reaction' is slightly ambiguous. Fuel cell electrodes are usually inert and not consumed, unlike many battery electrodes, so a student could read 'involved' as 'reacting'. Redox does happen at the electrodes, so the option is still wrong, but clearer wording would help, for example 'No redox reaction takes place at its electrodes.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The chemistry is correct, and both questions have one clear right answer. Question b's stem is awkwardly worded ('runs an acidic cell'), and one distractor in question a could be read as describing inert electrodes."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem 'Mia's hydrogen fuel cell runs an acidic cell for a long trip' is garbled: a fuel cell does not 'run an acidic cell'. Reword to something like 'Mia uses an acidic hydrogen fuel cell on a long trip.'",
+  "Question a, wording: The distractor 'Its electrodes are not involved in any redox reaction' is slightly ambiguous. Fuel cell electrodes are usually inert and not consumed, unlike many battery electrodes, so a student could read 'involved' as 'reacting'. Redox does happen at the electrodes, so the option is still wrong, but clearer wording would help, for example 'No redox reaction takes place at its electrodes.'",
+  "Content check: chem-fuel-cellsb option is 61 characters: Hydrogen is oxidised at the anode and the cell soon goes flat"
+ ],
+ "proposal": {
+  "title": "Fuel cells",
+  "card": [
+   "A fuel cell is a galvanic cell that is fed reactants from outside, so it keeps running as long as the supply lasts. A fuel such as hydrogen goes to one electrode and oxygen goes to the other.",
+   "In an acidic hydrogen fuel cell, hydrogen is oxidised at the anode: H2(g) → 2H+(aq) + 2e-. Oxygen is reduced at the cathode: O2(g) + 4H+(aq) + 4e- → 2H2O(l).",
+   "The electrons travel through the external circuit and make the electric current. The overall reaction is 2H2(g) + O2(g) → 2H2O(l), so the only product is water.",
+   "A battery has a fixed amount of reactants inside it and goes flat when they run out. A fuel cell does not go flat while fuel and oxygen keep being supplied."
+  ],
+  "remember": "A fuel cell makes electricity from a continuous supply of fuel and oxygen. A hydrogen fuel cell makes only water.",
+  "a": {
+   "q": "Which feature makes a fuel cell different from a standard battery?",
+   "opts": [
+    "Its reactants are supplied continuously from outside",
+    "No redox reaction takes place at its electrodes",
+    "Its reaction runs without any electrons being transferred",
+    "Its anode is where reduction takes place"
+   ],
+   "why": "A fuel cell is fed fuel and oxygen from outside, so it can keep producing electricity. It still relies on redox reactions at its electrodes, with oxidation at the anode, so the other options are wrong.",
+   "clue": "Think about what happens when a battery's reactants run out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses an acidic hydrogen fuel cell on a long trip. Hydrogen and oxygen are fed in the whole time. Which statement about the cell is correct?",
+   "opts": [
+    "Hydrogen is oxidised at the anode and water is the product",
+    "Hydrogen is reduced at the cathode and water is the product",
+    "Oxygen is oxidised at the anode and hydrogen is the product",
+    "Hydrogen is oxidised at the anode and the cell goes flat"
+   ],
+   "why": "Hydrogen loses electrons, so it is oxidised at the anode, and oxygen is reduced to water at the cathode. The last option is tempting because it has the right electrode, but a fuel cell keeps running while it is fed.",
+   "clue": "Which reactant loses electrons, and what does the supply do to the cell?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Its reactants are supplied continuously from outside",
+    "also_right": []
+   },
+   "b": {
+    "best": "Hydrogen is oxidised at the anode and water is the product",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem 'Mia's hydrogen fuel cell runs an acidic cell for a long trip' is garbled: a fuel cell does not 'run an acidic cell'. Reword to something like 'Mia uses an acidic hydrogen fuel cell on a long trip.'"
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The distractor 'Its electrodes are not involved in any redox reaction' is slightly ambiguous. Fuel cell electrodes are usually inert and not consumed, unlike many battery electrodes, so a student could read 'involved' as 'reacting'. Redox does happen at the electrodes, so the option is still wrong, but clearer wording would help, for example 'No redox reaction takes place at its electrodes.'"
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem 'Mia's hydrogen fuel cell runs an acidic cell for a long trip' is garbled: a fuel cell does not 'run an acidic cell'. Reword to something like 'Mia uses an acidic hydrogen fuel cell on a long trip.'",
+   "Question a, wording: The distractor 'Its electrodes are not involved in any redox reaction' is slightly ambiguous. Fuel cell electrodes are usually inert and not consumed, unlike many battery electrodes, so a student could read 'involved' as 'reacting'. Redox does happen at the electrodes, so the option is still wrong, but clearer wording would help, for example 'No redox reaction takes place at its electrodes.'",
+   "Content check: chem-fuel-cellsb option is 61 characters: Hydrogen is oxidised at the anode and the cell soon goes flat"
+  ]
+ },
+ "final": {
+  "title": "Fuel cells",
+  "card": [
+   "A fuel cell is a galvanic cell that is fed reactants from outside, so it keeps running as long as the supply lasts. A fuel such as hydrogen goes to one electrode and oxygen goes to the other.",
+   "In an acidic hydrogen fuel cell, hydrogen is oxidised at the anode: H2(g) → 2H+(aq) + 2e-. Oxygen is reduced at the cathode: O2(g) + 4H+(aq) + 4e- → 2H2O(l).",
+   "The electrons travel through the external circuit and make the electric current. The overall reaction is 2H2(g) + O2(g) → 2H2O(l), so the only product is water.",
+   "A battery has a fixed amount of reactants inside it and goes flat when they run out. A fuel cell does not go flat while fuel and oxygen keep being supplied."
+  ],
+  "remember": "A fuel cell makes electricity from a continuous supply of fuel and oxygen. A hydrogen fuel cell makes only water.",
+  "a": {
+   "q": "Which feature makes a fuel cell different from a standard battery?",
+   "opts": [
+    "Its reactants are supplied continuously from outside",
+    "No redox reaction takes place at its electrodes",
+    "Its reaction runs without any electrons being transferred",
+    "Its anode is where reduction takes place"
+   ],
+   "why": "A fuel cell is fed fuel and oxygen from outside, so it can keep producing electricity. It still relies on redox reactions at its electrodes, with oxidation at the anode, so the other options are wrong.",
+   "clue": "Think about what happens when a battery's reactants run out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia uses an acidic hydrogen fuel cell on a long trip. Hydrogen and oxygen are fed in the whole time. Which statement about the cell is correct?",
+   "opts": [
+    "Hydrogen is oxidised at the anode and water is the product",
+    "Hydrogen is reduced at the cathode and water is the product",
+    "Oxygen is oxidised at the anode and hydrogen is the product",
+    "Hydrogen is oxidised at the anode and the cell goes flat"
+   ],
+   "why": "Hydrogen loses electrons, so it is oxidised at the anode, and oxygen is reduced to water at the cathode. The last option is tempting because it has the right electrode, but a fuel cell keeps running while it is fed.",
+   "clue": "Which reactant loses electrons, and what does the supply do to the cell?"
+  }
+ },
+ "cleared_by": "recheck"
+}

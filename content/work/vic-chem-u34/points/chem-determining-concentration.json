@@ -1,0 +1,233 @@
+{
+ "id": "chem-determining-concentration",
+ "title": "Redox titrations",
+ "brief": "a7942acd3f16",
+ "shortlist": [
+  [
+   "chem-titration",
+   0.336
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.0066,
+  "check": 0.01867,
+  "fix": 0.02841,
+  "recheck": 0.01518
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches a general titration with a mole ratio and an indicator, but not redox reactions, electron transfer or working out which reactant is in excess, which the new point is about.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Redox titrations",
+  "card": [
+   "A redox titration adds a solution of known concentration from a burette to a measured volume of another solution. The reaction is a redox reaction, with electrons transferred.",
+   "Acidified potassium permanganate, KMnO4, is a strong oxidising agent. It is purple and turns almost colourless when it reacts. The first lasting pale pink shows the end point, so no indicator is needed.",
+   "To find a concentration, use the balanced equation. Find moles of the known solution from n = c × V, then use the mole ratio to find moles of the other reactant, then c = n ÷ V.",
+   "If amounts of both reactants are given, work out the moles of each and compare them with the mole ratio. The reactant with more than the ratio needs is in excess. The other is the limiting reactant."
+  ],
+  "remember": "Use n = c × V, then the mole ratio from the equation. Compare moles with the ratio to find the excess.",
+  "a": {
+   "q": "Why is no indicator needed when titrating iron(II) ions with acidified potassium permanganate?",
+   "opts": [
+    "The permanganate itself changes colour at the end point",
+    "The iron(II) ions change colour at the end point",
+    "The acid added changes colour at the end point",
+    "A redox reaction never needs an end point"
+   ],
+   "why": "Permanganate is purple and turns almost colourless as it reacts. When the iron(II) ions run out, the first extra drop leaves a lasting pale pink. The end point is still needed, so the last option is wrong.",
+   "clue": "Look at the colour of the solution in the burette."
+  },
+  "b": {
+   "d": 3,
+   "q": "0.020 mol of MnO4- is mixed with 0.080 mol of Fe2+. The equation is MnO4- + 5Fe2+ + 8H+ → Mn2+ + 5Fe3+ + 4H2O. Which reactant is in excess?",
+   "opts": [
+    "Fe2+, with 0.020 mol left over",
+    "MnO4-, with 0.060 mol left over",
+    "Fe2+, with 0.060 mol left over",
+    "MnO4-, with 0.020 mol left over"
+   ],
+   "why": "0.020 mol of MnO4- needs 5 × 0.020 = 0.10 mol of Fe2+. Only 0.080 mol is present, so Fe2+ is limiting and MnO4- is in excess. Fe2+ reacts with 0.016 mol of MnO4-, leaving 0.004 mol.",
+   "clue": "Find how much Fe2+ the MnO4- needs using the 1 to 5 ratio."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The permanganate itself changes colour at the end point",
+   "also_right": []
+  },
+  "b": {
+   "best": "MnO4-, with 0.020 mol left over",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. 0.080 mol Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol MnO4-, leaving 0.004 mol MnO4- in excess, as the writer's own why says. Every option gives a wrong amount: 0.020 or 0.060 mol left over, or Fe2+ in excess. An option such as 'MnO4-, with 0.004 mol left over' is needed."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why gives 0.004 mol MnO4- left over, which contradicts every option offered, so a student checking the explanation would be confused."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'the last option is wrong' to mean 'A redox reaction never needs an end point'. Options appear in a random order, so 'the last option' may point to the correct answer (the permanganate one) and seem to call it wrong. The why should name the option, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has no correct option: MnO4- is in excess by 0.004 mol, but the options offer only 0.020 or 0.060 mol, and the why contradicts them. The why for question a refers to 'the last option', which is unreliable because the options are shuffled."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “MnO4-, with 0.020 mol left over”, not the writer’s answer “Fe2+, with 0.020 mol left over”.",
+  "Question b, fact: No option is correct. 0.080 mol Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol MnO4-, leaving 0.004 mol MnO4- in excess, as the writer's own why says. Every option gives a wrong amount: 0.020 or 0.060 mol left over, or Fe2+ in excess. An option such as 'MnO4-, with 0.004 mol left over' is needed.",
+  "Question b, other: The why gives 0.004 mol MnO4- left over, which contradicts every option offered, so a student checking the explanation would be confused.",
+  "Question a, wording: The why says 'the last option is wrong' to mean 'A redox reaction never needs an end point'. Options appear in a random order, so 'the last option' may point to the correct answer (the permanganate one) and seem to call it wrong. The why should name the option, not its position."
+ ],
+ "proposal": {
+  "title": "Redox titrations",
+  "card": [
+   "A redox titration adds a solution of known concentration from a burette to a measured volume of another solution. The reaction is a redox reaction, with electrons transferred.",
+   "Acidified potassium permanganate, KMnO4, is a strong oxidising agent. It is purple and turns almost colourless when it reacts. The first lasting pale pink shows the end point, so no indicator is needed.",
+   "To find a concentration, use the balanced equation. Find moles of the known solution from n = c × V, then use the mole ratio to find moles of the other reactant, then c = n ÷ V.",
+   "If amounts of both reactants are given, work out the moles of each and compare them with the mole ratio. The reactant with more than the ratio needs is in excess. The other is the limiting reactant."
+  ],
+  "remember": "Use n = c × V, then the mole ratio from the equation. Compare moles with the ratio to find the excess.",
+  "a": {
+   "q": "Why is no indicator needed when titrating iron(II) ions with acidified potassium permanganate?",
+   "opts": [
+    "The permanganate itself changes colour at the end point",
+    "The iron(II) ions change colour at the end point",
+    "The acid added changes colour at the end point",
+    "A redox reaction never needs an end point"
+   ],
+   "why": "Permanganate is purple and turns almost colourless as it reacts. When the iron(II) ions run out, the first extra drop leaves a lasting pale pink. The titration still needs an end point, so the option saying a redox reaction never needs one is wrong.",
+   "clue": "Look at the colour of the solution in the burette."
+  },
+  "b": {
+   "d": 3,
+   "q": "0.020 mol of MnO4- is mixed with 0.080 mol of Fe2+. The equation is MnO4- + 5Fe2+ + 8H+ → Mn2+ + 5Fe3+ + 4H2O. Which reactant is in excess?",
+   "opts": [
+    "MnO4-, with 0.004 mol left over",
+    "MnO4-, with 0.016 mol left over",
+    "Fe2+, with 0.020 mol left over",
+    "Fe2+, with 0.060 mol left over"
+   ],
+   "why": "0.020 mol of MnO4- needs 5 × 0.020 = 0.10 mol of Fe2+, but only 0.080 mol is present, so Fe2+ is limiting and MnO4- is in excess. The Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol of MnO4-, leaving 0.020 − 0.016 = 0.004 mol. The 0.016 mol is the amount that reacts, not the amount left over.",
+   "clue": "Find how much Fe2+ the MnO4- needs using the 1 to 5 ratio."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The permanganate itself changes colour at the end point",
+    "also_right": []
+   },
+   "b": {
+    "best": "MnO4-, with 0.004 mol left over",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both questions have one correct answer, and the stoichiometry in question b checks out: Fe2+ is limiting and 0.004 mol of MnO4- is left over."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. 0.080 mol Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol MnO4-, leaving 0.004 mol MnO4- in excess, as the writer's own why says. Every option gives a wrong amount: 0.020 or 0.060 mol left over, or Fe2+ in excess. An option such as 'MnO4-, with 0.004 mol left over' is needed."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why gives 0.004 mol MnO4- left over, which contradicts every option offered, so a student checking the explanation would be confused."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The why says 'the last option is wrong' to mean 'A redox reaction never needs an end point'. Options appear in a random order, so 'the last option' may point to the correct answer (the permanganate one) and seem to call it wrong. The why should name the option, not its position."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “MnO4-, with 0.020 mol left over”, not the writer’s answer “Fe2+, with 0.020 mol left over”.",
+   "Question b, fact: No option is correct. 0.080 mol Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol MnO4-, leaving 0.004 mol MnO4- in excess, as the writer's own why says. Every option gives a wrong amount: 0.020 or 0.060 mol left over, or Fe2+ in excess. An option such as 'MnO4-, with 0.004 mol left over' is needed.",
+   "Question b, other: The why gives 0.004 mol MnO4- left over, which contradicts every option offered, so a student checking the explanation would be confused.",
+   "Question a, wording: The why says 'the last option is wrong' to mean 'A redox reaction never needs an end point'. Options appear in a random order, so 'the last option' may point to the correct answer (the permanganate one) and seem to call it wrong. The why should name the option, not its position."
+  ]
+ },
+ "final": {
+  "title": "Redox titrations",
+  "card": [
+   "A redox titration adds a solution of known concentration from a burette to a measured volume of another solution. The reaction is a redox reaction, with electrons transferred.",
+   "Acidified potassium permanganate, KMnO4, is a strong oxidising agent. It is purple and turns almost colourless when it reacts. The first lasting pale pink shows the end point, so no indicator is needed.",
+   "To find a concentration, use the balanced equation. Find moles of the known solution from n = c × V, then use the mole ratio to find moles of the other reactant, then c = n ÷ V.",
+   "If amounts of both reactants are given, work out the moles of each and compare them with the mole ratio. The reactant with more than the ratio needs is in excess. The other is the limiting reactant."
+  ],
+  "remember": "Use n = c × V, then the mole ratio from the equation. Compare moles with the ratio to find the excess.",
+  "a": {
+   "q": "Why is no indicator needed when titrating iron(II) ions with acidified potassium permanganate?",
+   "opts": [
+    "The permanganate itself changes colour at the end point",
+    "The iron(II) ions change colour at the end point",
+    "The acid added changes colour at the end point",
+    "A redox reaction never needs an end point"
+   ],
+   "why": "Permanganate is purple and turns almost colourless as it reacts. When the iron(II) ions run out, the first extra drop leaves a lasting pale pink. The titration still needs an end point, so the option saying a redox reaction never needs one is wrong.",
+   "clue": "Look at the colour of the solution in the burette."
+  },
+  "b": {
+   "d": 3,
+   "q": "0.020 mol of MnO4- is mixed with 0.080 mol of Fe2+. The equation is MnO4- + 5Fe2+ + 8H+ → Mn2+ + 5Fe3+ + 4H2O. Which reactant is in excess?",
+   "opts": [
+    "MnO4-, with 0.004 mol left over",
+    "MnO4-, with 0.016 mol left over",
+    "Fe2+, with 0.020 mol left over",
+    "Fe2+, with 0.060 mol left over"
+   ],
+   "why": "0.020 mol of MnO4- needs 5 × 0.020 = 0.10 mol of Fe2+, but only 0.080 mol is present, so Fe2+ is limiting and MnO4- is in excess. The Fe2+ reacts with 0.080 ÷ 5 = 0.016 mol of MnO4-, leaving 0.020 − 0.016 = 0.004 mol. The 0.016 mol is the amount that reacts, not the amount left over.",
+   "clue": "Find how much Fe2+ the MnO4- needs using the 1 to 5 ratio."
+  }
+ },
+ "cleared_by": "recheck"
+}

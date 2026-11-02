@@ -1,0 +1,315 @@
+{
+ "id": "eco-common-access-resources",
+ "title": "Common access resources",
+ "brief": "d263b316cae5",
+ "shortlist": [
+  [
+   "e-govfail",
+   0.271
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:00Z write: failed the content check, writing again",
+  "2026-11-01T15:05:26Z write: done (still fails the content check)",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.01917,
+  "check": 0.02632,
+  "fix": 0.03128,
+  "recheck": 0.01347
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank has no point on common access resources; the closest card, Government failure, covers a different idea (intervention going wrong), not the rivalrous but non-excludable nature of resources and their tendency to be overused.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'Think about who gets the gain and who shares the cost' repeats the key words of the right option ('full gain', 'shares the depletion cost'). A student can match the words without understanding the idea.",
+ "rejected": {
+  "title": "Common access resources",
+  "card": [
+   "A common access resource is rival and non-excludable. Rival means one person's use leaves less for others. Non-excludable means it is hard to stop people using it.",
+   "Examples are ocean fish stocks, groundwater in a shared aquifer and open grazing land. Where there are no enforced limits or property rights, users do not pay for what they take.",
+   "Each user gains the full benefit of taking more, but shares the cost of a smaller stock with everyone else. So each has little reason to hold back.",
+   "The result is overuse. The resource can run down or be depleted, and this is a market failure. The market output is above the social optimum."
+  ],
+  "remember": "Rival but hard to exclude: users take too much and the resource runs down.",
+  "a": {
+   "q": "Which resource is a common access resource?",
+   "opts": [
+    "Fish in an unregulated ocean fishery",
+    "Street lighting in a country town",
+    "Grapes grown in a private vineyard",
+    "A cinema seat booked and paid online"
+   ],
+   "why": "Fish are rival, as each fish caught is gone, and it is hard to stop boats fishing in open waters with no limits. Street lighting is non-rival, as one person's use leaves the same for others, so it is not a common access resource.",
+   "clue": "Look for a resource that runs down when used and has no gate."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a region with no limits on pumping, dozens of farmers draw water from one shared aquifer. Why is the aquifer likely to be overused?",
+   "opts": [
+    "Each farmer gets the full gain but shares the depletion cost",
+    "Each farmer pays the full social cost of the water they pump",
+    "Water is non-rival, so pumping leaves the same for others",
+    "Farmers can easily be excluded, so they rush to pump more"
+   ],
+   "why": "Each farmer keeps the full benefit of extra water, while the cost of a falling water level is spread across all users. So each pumps more than the social optimum. The non-rival option is wrong because water one farmer pumps is gone for the others.",
+   "clue": "Think about who gets the gain and who shares the cost."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: The clue 'Think about who gets the gain and who shares the cost' repeats the key words of the right option ('full gain', 'shares the depletion cost'). A student can match the words without understanding the idea."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Common access resources",
+     "card": [
+      "A common access resource is rival and non-excludable. Rival means one person's use leaves less for others. Non-excludable means it is hard to stop people using it.",
+      "Examples are ocean fish stocks, groundwater in a shared aquifer and open grazing land. Nobody owns them, so users do not pay for what they take.",
+      "Each user gains the full benefit of taking more, but shares the cost of a smaller stock with everyone else. So each has little reason to hold back.",
+      "The result is overuse. The resource can run down or be depleted, and this is a market failure. The market output is above the social optimum."
+     ],
+     "remember": "Rival but hard to exclude: users take too much and the resource runs down.",
+     "a": {
+      "q": "Which resource is a common access resource?",
+      "opts": [
+       "Fish in an open ocean fishery",
+       "Street lighting in a town",
+       "A private vineyard's grapes",
+       "A cinema seat booked online"
+      ],
+      "why": "Fish are rival, as each fish caught is gone, and it is hard to stop boats fishing in open waters. Street lighting is non-rival, so it is not a common access resource.",
+      "clue": "Look for a resource that runs down when used and has no gate."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dozens of farmers near Mildura pump water from one shared underground aquifer. Nobody can be stopped from pumping. Why is the aquifer likely to be overused?",
+      "opts": [
+       "Each farmer gets the full gain but shares the depletion cost",
+       "Each farmer pays the full social cost of the water they pump",
+       "Water is non-rival, so one farmer's use leaves enough for all",
+       "Farmers can easily be excluded, so they use too much"
+      ],
+      "why": "Each farmer keeps the full benefit of extra water, while the cost of a falling water level is spread across all users. So each pumps more than the social optimum. Water in the aquifer is rival, so the third option is wrong.",
+      "clue": "Think about who gets the gain and who shares the cost."
+     }
+    },
+    "redone": true,
+    "local": [
+     "eco-common-access-resourcesb option is 61 characters: Water is non-rival, so one farmer's use leaves enough for all"
+    ],
+    "check": {
+     "a": {
+      "best": "Fish in an open ocean fishery",
+      "also_right": []
+     },
+     "b": {
+      "best": "Each farmer gets the full gain but shares the depletion cost",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Why (b) says 'Water in the aquifer is rival, so the third option is wrong.' The third option is the intended right answer. The non-rival option it means to rule out is listed first, so the why contradicts the answer it explains."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The stem puts the scenario near Mildura and says 'Nobody can be stopped from pumping.' In Victoria, groundwater is vested in the Crown and extraction needs a licence under the Water Act 1989, so this is not true of a real Australian aquifer. The question should use a hypothetical setting or say it is unregulated."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "'Nobody owns them' is loose for the Australian context. Groundwater is Crown-owned and regulated, and Australian ocean fisheries are managed with licences and quotas. The point being taught is the lack of enforceable property rights or limits on use, not literal ownership."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The questions and their intended answers are correct, but Why (b) wrongly calls the right answer 'the third option is wrong' when it means the non-rival option, which is listed first. The Mildura aquifer scenario and the card's 'nobody owns them' also misstate Australian water and fishery arrangements, which are licensed and regulated."
+    },
+    "flags": [
+     "Question b, other: Why (b) says 'Water in the aquifer is rival, so the third option is wrong.' The third option is the intended right answer. The non-rival option it means to rule out is listed first, so the why contradicts the answer it explains.",
+     "Question b, fact: The stem puts the scenario near Mildura and says 'Nobody can be stopped from pumping.' In Victoria, groundwater is vested in the Crown and extraction needs a licence under the Water Act 1989, so this is not true of a real Australian aquifer. The question should use a hypothetical setting or say it is unregulated.",
+     "Card, fact: 'Nobody owns them' is loose for the Australian context. Groundwater is Crown-owned and regulated, and Australian ocean fisheries are managed with licences and quotas. The point being taught is the lack of enforceable property rights or limits on use, not literal ownership.",
+     "Content check: eco-common-access-resourcesb option is 61 characters: Water is non-rival, so one farmer's use leaves enough for all"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Common access resources",
+     "card": [
+      "A common access resource is rival and non-excludable. Rival means one person's use leaves less for others. Non-excludable means it is hard to stop people using it.",
+      "Examples are ocean fish stocks, groundwater in a shared aquifer and open grazing land. Where there are no enforced limits or property rights, users do not pay for what they take.",
+      "Each user gains the full benefit of taking more, but shares the cost of a smaller stock with everyone else. So each has little reason to hold back.",
+      "The result is overuse. The resource can run down or be depleted, and this is a market failure. The market output is above the social optimum."
+     ],
+     "remember": "Rival but hard to exclude: users take too much and the resource runs down.",
+     "a": {
+      "q": "Which resource is a common access resource?",
+      "opts": [
+       "Fish in an unregulated ocean fishery",
+       "Street lighting in a country town",
+       "Grapes grown in a private vineyard",
+       "A cinema seat booked and paid online"
+      ],
+      "why": "Fish are rival, as each fish caught is gone, and it is hard to stop boats fishing in open waters with no limits. Street lighting is non-rival, as one person's use leaves the same for others, so it is not a common access resource.",
+      "clue": "Look for a resource that runs down when used and has no gate."
+     },
+     "b": {
+      "d": 3,
+      "q": "In a region with no limits on pumping, dozens of farmers draw water from one shared aquifer. Why is the aquifer likely to be overused?",
+      "opts": [
+       "Each farmer gets the full gain but shares the depletion cost",
+       "Each farmer pays the full social cost of the water they pump",
+       "Water is non-rival, so pumping leaves the same for others",
+       "Farmers can easily be excluded, so they rush to pump more"
+      ],
+      "why": "Each farmer keeps the full benefit of extra water, while the cost of a falling water level is spread across all users. So each pumps more than the social optimum. The non-rival option is wrong because water one farmer pumps is gone for the others.",
+      "clue": "Think about who gets the gain and who shares the cost."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Fish in an unregulated ocean fishery",
+       "also_right": []
+      },
+      "b": {
+       "best": "Each farmer gets the full gain but shares the depletion cost",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "The clue 'Think about who gets the gain and who shares the cost' repeats the key words of the right option ('full gain', 'shares the depletion cost'). A student can match the words without understanding the idea."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and both questions are accurate. The only problem is that the clue for question b echoes the wording of the right option, which gives the answer away."
+     },
+     "flags": [
+      "Question b, other: The clue 'Think about who gets the gain and who shares the cost' repeats the key words of the right option ('full gain', 'shares the depletion cost'). A student can match the words without understanding the idea."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Common access resources",
+  "card": [
+   "A common access resource is rival and non-excludable. Rival means one person's use leaves less for others. Non-excludable means it is hard to stop people using it.",
+   "Examples are ocean fish stocks, groundwater in a shared aquifer and open grazing land. Where there are no enforced limits or property rights, users do not pay for what they take.",
+   "Each user gains the full benefit of taking more, but shares the cost of a smaller stock with everyone else. So each has little reason to hold back.",
+   "The result is overuse. The resource can run down or be depleted, and this is a market failure. The market output is above the social optimum."
+  ],
+  "remember": "Rival but hard to exclude: users take too much and the resource runs down.",
+  "a": {
+   "q": "Which resource is a common access resource?",
+   "opts": [
+    "Fish in an unregulated ocean fishery",
+    "Street lighting in a country town",
+    "Grapes grown in a private vineyard",
+    "A cinema seat booked and paid online"
+   ],
+   "why": "Fish are rival, as each fish caught is gone, and it is hard to stop boats fishing in open waters with no limits. Street lighting is non-rival, as one person's use leaves the same for others, so it is not a common access resource.",
+   "clue": "Look for a resource that runs down when used and has no gate."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a region with no limits on pumping, dozens of farmers draw water from one shared aquifer. Why is the aquifer likely to be overused?",
+   "opts": [
+    "Each farmer gets the full gain but shares the depletion cost",
+    "Each farmer pays the full social cost of the water they pump",
+    "Water is non-rival, so pumping leaves the same for others",
+    "Farmers can easily be excluded, so they rush to pump more"
+   ],
+   "why": "Each farmer keeps the full benefit of extra water, while the cost of a falling water level is spread across all users. So each pumps more than the social optimum. The non-rival option is wrong because water one farmer pumps is gone for the others.",
+   "clue": "Ask what each farmer personally pays when the water level drops, compared with what all users pay together."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Fish in an unregulated ocean fishery",
+   "also_right": []
+  },
+  "b": {
+   "best": "Each farmer gets the full gain but shares the depletion cost",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Common access resources",
+  "card": [
+   "A common access resource is rival and non-excludable. Rival means one person's use leaves less for others. Non-excludable means it is hard to stop people using it.",
+   "Examples are ocean fish stocks, groundwater in a shared aquifer and open grazing land. Where there are no enforced limits or property rights, users do not pay for what they take.",
+   "Each user gains the full benefit of taking more, but shares the cost of a smaller stock with everyone else. So each has little reason to hold back.",
+   "The result is overuse. The resource can run down or be depleted, and this is a market failure. The market output is above the social optimum."
+  ],
+  "remember": "Rival but hard to exclude: users take too much and the resource runs down.",
+  "a": {
+   "q": "Which resource is a common access resource?",
+   "opts": [
+    "Fish in an unregulated ocean fishery",
+    "Street lighting in a country town",
+    "Grapes grown in a private vineyard",
+    "A cinema seat booked and paid online"
+   ],
+   "why": "Fish are rival, as each fish caught is gone, and it is hard to stop boats fishing in open waters with no limits. Street lighting is non-rival, as one person's use leaves the same for others, so it is not a common access resource.",
+   "clue": "Look for a resource that runs down when used and has no gate."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a region with no limits on pumping, dozens of farmers draw water from one shared aquifer. Why is the aquifer likely to be overused?",
+   "opts": [
+    "Each farmer gets the full gain but shares the depletion cost",
+    "Each farmer pays the full social cost of the water they pump",
+    "Water is non-rival, so pumping leaves the same for others",
+    "Farmers can easily be excluded, so they rush to pump more"
+   ],
+   "why": "Each farmer keeps the full benefit of extra water, while the cost of a falling water level is spread across all users. So each pumps more than the social optimum. The non-rival option is wrong because water one farmer pumps is gone for the others.",
+   "clue": "Ask what each farmer personally pays when the water level drops, compared with what all users pay together."
+  }
+ }
+}

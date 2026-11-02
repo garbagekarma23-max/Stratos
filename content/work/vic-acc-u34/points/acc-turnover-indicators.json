@@ -1,0 +1,268 @@
+{
+ "id": "acc-turnover-indicators",
+ "title": "Turnover indicators",
+ "brief": "03dcc1362fac",
+ "shortlist": [
+  [
+   "bus-efficiency-ratios",
+   0.398
+  ],
+  [
+   "acc-credit-sales-accounts-receivable",
+   0.212
+  ],
+  [
+   "acc-credit-purchases-accounts-payable",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00526,
+  "check": 0.0168,
+  "fix": 0.02583,
+  "recheck": 0.01362
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches all three turnover indicators (inventory, receivables and payables turnover in days); the closest card, Efficiency ratios, covers only receivable turnover alongside an expense ratio and is a broader Business Studies card, while the two credit-sales and credit-purchases cards teach the balances but not turnover.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Turnover indicators",
+  "card": [
+   [
+    "Inventory turnover",
+    "shows how many days, on average, stock sits before it is sold. It compares average inventory with cost of sales, then converts the result to days."
+   ],
+   [
+    "Receivables turnover",
+    "shows how many days, on average, customers take to pay what they owe. It compares average accounts receivable with credit sales, then converts the result to days."
+   ],
+   [
+    "Payables turnover",
+    "shows how many days, on average, the business takes to pay its suppliers. It compares average accounts payable with credit purchases, then converts the result to days."
+   ],
+   "Each result is in days. A business wants stock sold and customers paying quickly. Taking longer to pay suppliers keeps cash in the business for longer, but a very long time may harm supplier relationships."
+  ],
+  "remember": "Each turnover indicator counts days: stock held, customers paying and the business paying.",
+  "a": {
+   "q": "A business reports that its accounts receivable turnover rose from 30 days to 45 days. What does this show?",
+   "opts": [
+    "Customers are taking longer to pay the business",
+    "Customers are paying the business more quickly",
+    "The business is taking longer to pay its suppliers",
+    "Stock is sitting in the store for longer before sale"
+   ],
+   "why": "Accounts receivable turnover counts the days customers take to pay. A rise from 30 to 45 days means customers are slower. Stock days belong to inventory turnover, and the days the business takes to pay belong to payables turnover.",
+   "clue": "Receivables are money owed by customers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Harbour Hardware in Geelong has an inventory turnover of 40 days last year and 55 days this year. What is the most likely meaning?",
+   "opts": [
+    "Stock is taking longer to sell than it did last year",
+    "Stock is selling faster than it did last year",
+    "The business is paying its suppliers more slowly",
+    "Customers are taking longer to pay their accounts"
+   ],
+   "why": "Inventory turnover in days shows how long stock sits before it is sold. A rise from 40 to 55 days means stock is sitting longer, so it sells more slowly. Fewer days would mean faster sales, so the second option reverses the change.",
+   "clue": "A higher number of days means stock waits longer."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Customers are taking longer to pay the business",
+   "also_right": []
+  },
+  "b": {
+   "best": "Stock is taking longer to sell than it did last year",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the second option reverses the change', but options are shuffled. In this order the second option is the correct answer, so the explanation points at the wrong option. Name the option by its wording ('Stock is selling faster'), not its position."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'A higher number of days means stock waits longer' all but states the correct option, so a student can answer without understanding the indicator."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Tense mismatch: 'has an inventory turnover of 40 days last year'. Should be 'had ... last year and has ... this year'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and answers are correct. Why (b) refers to 'the second option' by position, which after shuffling is the correct answer, so it contradicts the question. Question b's clue nearly gives the answer away, and its stem has a tense error."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'the second option reverses the change', but options are shuffled. In this order the second option is the correct answer, so the explanation points at the wrong option. Name the option by its wording ('Stock is selling faster'), not its position.",
+  "Question b, wording: The clue 'A higher number of days means stock waits longer' all but states the correct option, so a student can answer without understanding the indicator.",
+  "Question b, wording: Tense mismatch: 'has an inventory turnover of 40 days last year'. Should be 'had ... last year and has ... this year'."
+ ],
+ "proposal": {
+  "title": "Turnover indicators",
+  "card": [
+   [
+    "Inventory turnover",
+    "shows how many days, on average, stock sits before it is sold. It compares average inventory with cost of sales, then converts the result to days."
+   ],
+   [
+    "Receivables turnover",
+    "shows how many days, on average, customers take to pay what they owe. It compares average accounts receivable with credit sales, then converts the result to days."
+   ],
+   [
+    "Payables turnover",
+    "shows how many days, on average, the business takes to pay its suppliers. It compares average accounts payable with credit purchases, then converts the result to days."
+   ],
+   "Each result is in days. A business wants stock sold and customers paying quickly. Taking longer to pay suppliers keeps cash in the business for longer, but a very long time may harm supplier relationships."
+  ],
+  "remember": "Each turnover indicator counts days: stock held, customers paying and the business paying.",
+  "a": {
+   "q": "A business reports that its accounts receivable turnover rose from 30 days to 45 days. What does this show?",
+   "opts": [
+    "Customers are taking longer to pay the business",
+    "Customers are paying the business more quickly",
+    "The business is taking longer to pay its suppliers",
+    "Stock is sitting in the store for longer before sale"
+   ],
+   "why": "Accounts receivable turnover counts the days customers take to pay. A rise from 30 to 45 days means customers are slower. Stock days belong to inventory turnover, and the days the business takes to pay belong to payables turnover.",
+   "clue": "Receivables are money owed by customers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Harbour Hardware in Geelong had an inventory turnover of 40 days last year and has one of 55 days this year. What is the most likely meaning?",
+   "opts": [
+    "Stock is taking longer to sell than it did last year",
+    "Stock is selling faster than it did last year",
+    "The business is paying its suppliers more slowly",
+    "Customers are taking longer to pay their accounts"
+   ],
+   "why": "Inventory turnover in days shows how long stock sits before it is sold. A rise from 40 to 55 days means stock is sitting longer, so it sells more slowly. The option 'Stock is selling faster' reverses the change, as faster sales would mean fewer days.",
+   "clue": "Think about what the days in this indicator are counting."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Customers are taking longer to pay the business",
+    "also_right": []
+   },
+   "b": {
+    "best": "Stock is taking longer to sell than it did last year",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's turnover formulas match the VCE versions, and both questions have exactly one correct answer, which matches the writer's explanations."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the second option reverses the change', but options are shuffled. In this order the second option is the correct answer, so the explanation points at the wrong option. Name the option by its wording ('Stock is selling faster'), not its position."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'A higher number of days means stock waits longer' all but states the correct option, so a student can answer without understanding the indicator."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "Tense mismatch: 'has an inventory turnover of 40 days last year'. Should be 'had ... last year and has ... this year'."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'the second option reverses the change', but options are shuffled. In this order the second option is the correct answer, so the explanation points at the wrong option. Name the option by its wording ('Stock is selling faster'), not its position.",
+   "Question b, wording: The clue 'A higher number of days means stock waits longer' all but states the correct option, so a student can answer without understanding the indicator.",
+   "Question b, wording: Tense mismatch: 'has an inventory turnover of 40 days last year'. Should be 'had ... last year and has ... this year'."
+  ]
+ },
+ "final": {
+  "title": "Turnover indicators",
+  "card": [
+   [
+    "Inventory turnover",
+    "shows how many days, on average, stock sits before it is sold. It compares average inventory with cost of sales, then converts the result to days."
+   ],
+   [
+    "Receivables turnover",
+    "shows how many days, on average, customers take to pay what they owe. It compares average accounts receivable with credit sales, then converts the result to days."
+   ],
+   [
+    "Payables turnover",
+    "shows how many days, on average, the business takes to pay its suppliers. It compares average accounts payable with credit purchases, then converts the result to days."
+   ],
+   "Each result is in days. A business wants stock sold and customers paying quickly. Taking longer to pay suppliers keeps cash in the business for longer, but a very long time may harm supplier relationships."
+  ],
+  "remember": "Each turnover indicator counts days: stock held, customers paying and the business paying.",
+  "a": {
+   "q": "A business reports that its accounts receivable turnover rose from 30 days to 45 days. What does this show?",
+   "opts": [
+    "Customers are taking longer to pay the business",
+    "Customers are paying the business more quickly",
+    "The business is taking longer to pay its suppliers",
+    "Stock is sitting in the store for longer before sale"
+   ],
+   "why": "Accounts receivable turnover counts the days customers take to pay. A rise from 30 to 45 days means customers are slower. Stock days belong to inventory turnover, and the days the business takes to pay belong to payables turnover.",
+   "clue": "Receivables are money owed by customers."
+  },
+  "b": {
+   "d": 3,
+   "q": "Harbour Hardware in Geelong had an inventory turnover of 40 days last year and has one of 55 days this year. What is the most likely meaning?",
+   "opts": [
+    "Stock is taking longer to sell than it did last year",
+    "Stock is selling faster than it did last year",
+    "The business is paying its suppliers more slowly",
+    "Customers are taking longer to pay their accounts"
+   ],
+   "why": "Inventory turnover in days shows how long stock sits before it is sold. A rise from 40 to 55 days means stock is sitting longer, so it sells more slowly. The option 'Stock is selling faster' reverses the change, as faster sales would mean fewer days.",
+   "clue": "Think about what the days in this indicator are counting."
+  }
+ },
+ "cleared_by": "recheck"
+}

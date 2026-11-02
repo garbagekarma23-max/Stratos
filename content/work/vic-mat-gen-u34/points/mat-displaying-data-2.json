@@ -1,0 +1,376 @@
+{
+ "id": "mat-displaying-data-2",
+ "title": "Displaying data",
+ "brief": "23c84bce2a43",
+ "shortlist": [
+  [
+   "mat-types-data",
+   0.389
+  ],
+  [
+   "mat-displaying-data",
+   0.333
+  ],
+  [
+   "mat-change-base",
+   0.205
+  ],
+  [
+   "mat-modelling-non-linear-data",
+   0.2
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.02008,
+  "check": 0.02794,
+  "fix": 0.02031,
+  "recheck": 0.01482
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Displaying data, covers column graphs, dot plots, histograms and stem-and-leaf plots, but not two-way tables, segmented bar charts or log base 10 scales, which the new point requires, so no bank point fits as it is or with small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Which one splits each value into two parts?' restates the card's description of a stem plot almost word for word. A student can match it to the answer without understanding why a stem plot keeps every value.",
+ "rejected": {
+  "title": "Displaying data",
+  "card": [
+   [
+    "Categorical data",
+    "A two-way table counts how many people fall in each pair of categories. A segmented bar chart shows the same counts as percentages, so groups of different sizes can be compared."
+   ],
+   [
+    "Numerical data",
+    "A dot plot puts one dot per value and suits small sets. A histogram groups values into equal intervals and suits large sets."
+   ],
+   [
+    "Stem plot",
+    "A stem plot is also for numerical data. It splits each value into a stem and a leaf, so every value stays visible. If the stem is tens, then 3 | 4 means 34."
+   ],
+   [
+    "Log scale",
+    "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+   ]
+  ],
+  "remember": "Categories: two-way tables and segmented bar charts. Numbers: dot plots, stem plots and histograms.",
+  "a": {
+   "q": "Which display lets you read back every original value in a data set?",
+   "opts": [
+    "A stem plot",
+    "A histogram",
+    "A segmented bar chart",
+    "A two-way table"
+   ],
+   "why": "A stem plot shows each value as a stem and a leaf. A histogram groups values into intervals, so the exact values are lost.",
+   "clue": "Which one splits each value into two parts?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava asks 40 Year 11 and 120 Year 12 students if they work part-time. Which display best compares the percentage who work in each year?",
+   "opts": [
+    "A segmented bar chart",
+    "A histogram",
+    "A dot plot",
+    "A stem plot"
+   ],
+   "why": "Year group and working or not are categories, and the groups differ in size, so percentages give a fair comparison. A segmented bar chart shows percentages. A histogram, dot plot and stem plot are for numerical data, not categories.",
+   "clue": "Is the answer to Ava's question a number or a category?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Which one splits each value into two parts?' restates the card's description of a stem plot almost word for word. A student can match it to the answer without understanding why a stem plot keeps every value."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Displaying data",
+     "card": [
+      [
+       "Categorical data",
+       "A two-way table counts how many people fall in each pair of categories. A segmented bar chart shows the same counts as percentages, so groups of different sizes can be compared."
+      ],
+      [
+       "Numerical data",
+       "A dot plot puts one dot per value and suits small sets. A histogram groups values into equal intervals and suits large sets."
+      ],
+      [
+       "Stem plot",
+       "A stem plot splits each value into a stem and a leaf, so every value stays visible. If the stem is tens, then 3 | 4 means 34."
+      ],
+      [
+       "Log scale",
+       "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+      ]
+     ],
+     "remember": "Match the display to the data: counts or percentages for categories, plots for numbers.",
+     "a": {
+      "q": "Which display lets you read back every original value in a data set?",
+      "opts": [
+       "A stem plot",
+       "A histogram",
+       "A segmented bar chart",
+       "A two-way table"
+      ],
+      "why": "A stem plot shows each value as a stem and a leaf. A histogram groups values into intervals, so the exact values are lost.",
+      "clue": "Which one splits each value into two parts?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Ava asks 40 Year 11 and 120 Year 12 students if they work part-time. Which display best compares the percentage who work in each year?",
+      "opts": [
+       "A segmented bar chart",
+       "A dot plot of the counts",
+       "A histogram of the counts",
+       "A stem plot of the counts"
+      ],
+      "why": "The year groups differ in size, so percentages give a fair comparison. A segmented bar chart shows percentages, while counts alone would favour the larger group.",
+      "clue": "The groups are different sizes, so use percentages."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A stem plot",
+      "also_right": []
+     },
+     "b": {
+      "best": "A segmented bar chart",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option stands out. The three wrong options all end in 'of the counts', and the clue says 'use percentages', so a student can pick the segmented bar chart without knowing the idea."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "'Plots for numbers' is loose, because a histogram is not called a plot. Students may not see that histograms belong with the numerical displays."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. In question b the right option is the only one not labelled 'of the counts', and the clue points straight to percentages, so the answer is given away. The remember line's 'plots for numbers' leaves out histograms."
+    },
+    "flags": [
+     "Question b, wording: The right option stands out. The three wrong options all end in 'of the counts', and the clue says 'use percentages', so a student can pick the segmented bar chart without knowing the idea.",
+     "Remember, wording: 'Plots for numbers' is loose, because a histogram is not called a plot. Students may not see that histograms belong with the numerical displays."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Displaying data",
+     "card": [
+      [
+       "Categorical data",
+       "A two-way table counts how many people fall in each pair of categories. A segmented bar chart shows the same counts as percentages, so groups of different sizes can be compared."
+      ],
+      [
+       "Numerical data",
+       "A dot plot puts one dot per value and suits small sets. A histogram groups values into equal intervals and suits large sets."
+      ],
+      [
+       "Stem plot",
+       "A stem plot is also for numerical data. It splits each value into a stem and a leaf, so every value stays visible. If the stem is tens, then 3 | 4 means 34."
+      ],
+      [
+       "Log scale",
+       "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+      ]
+     ],
+     "remember": "Categories: two-way tables and segmented bar charts. Numbers: dot plots, stem plots and histograms.",
+     "a": {
+      "q": "Which display lets you read back every original value in a data set?",
+      "opts": [
+       "A stem plot",
+       "A histogram",
+       "A segmented bar chart",
+       "A two-way table"
+      ],
+      "why": "A stem plot shows each value as a stem and a leaf. A histogram groups values into intervals, so the exact values are lost.",
+      "clue": "Which one splits each value into two parts?"
+     },
+     "b": {
+      "d": 2,
+      "q": "Ava asks 40 Year 11 and 120 Year 12 students if they work part-time. Which display best compares the percentage who work in each year?",
+      "opts": [
+       "A segmented bar chart",
+       "A histogram",
+       "A dot plot",
+       "A stem plot"
+      ],
+      "why": "Year group and working or not are categories, and the groups differ in size, so percentages give a fair comparison. A segmented bar chart shows percentages. A histogram, dot plot and stem plot are for numerical data, not categories.",
+      "clue": "Is the answer to Ava's question a number or a category?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "A stem plot",
+       "also_right": []
+      },
+      "b": {
+       "best": "A segmented bar chart",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Which one splits each value into two parts?' restates the card's description of a stem plot almost word for word. A student can match it to the answer without understanding why a stem plot keeps every value."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and both questions are accurate and fit the chapter. The only issue is that the clue for question a nearly gives the answer away by echoing the card's stem plot description."
+     },
+     "flags": [
+      "Question a, other: The clue 'Which one splits each value into two parts?' restates the card's description of a stem plot almost word for word. A student can match it to the answer without understanding why a stem plot keeps every value."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Displaying data",
+  "card": [
+   [
+    "Categorical data",
+    "A two-way table counts how many people fall in each pair of categories. A segmented bar chart shows the same counts as percentages, so groups of different sizes can be compared."
+   ],
+   [
+    "Numerical data",
+    "A dot plot puts one dot per value and suits small sets. A histogram groups values into equal intervals and suits large sets."
+   ],
+   [
+    "Stem plot",
+    "A stem plot is also for numerical data. It splits each value into a stem and a leaf, so every value stays visible. If the stem is tens, then 3 | 4 means 34."
+   ],
+   [
+    "Log scale",
+    "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+   ]
+  ],
+  "remember": "Categories: two-way tables and segmented bar charts. Numbers: dot plots, stem plots and histograms.",
+  "a": {
+   "q": "A teacher wants a numerical display where every original value can still be read back. Which display should she use?",
+   "opts": [
+    "A stem plot",
+    "A histogram",
+    "A segmented bar chart",
+    "A two-way table"
+   ],
+   "why": "A stem plot keeps each value, because the stem and leaf together give the whole number. A histogram only counts values in each interval, so the exact values are lost. The other two displays are for categories, not numerical values.",
+   "clue": "Think about what a histogram bar tells you about the values inside it."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava asks 40 Year 11 and 120 Year 12 students if they work part-time. Which display best compares the percentage who work in each year?",
+   "opts": [
+    "A segmented bar chart",
+    "A histogram",
+    "A dot plot",
+    "A stem plot"
+   ],
+   "why": "Year group and working or not are categories, and the groups differ in size, so percentages give a fair comparison. A segmented bar chart shows percentages. A histogram, dot plot and stem plot are for numerical data, not categories.",
+   "clue": "Is the answer to Ava's question a number or a category?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A stem plot",
+   "also_right": []
+  },
+  "b": {
+   "best": "A segmented bar chart",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Displaying data",
+  "card": [
+   [
+    "Categorical data",
+    "A two-way table counts how many people fall in each pair of categories. A segmented bar chart shows the same counts as percentages, so groups of different sizes can be compared."
+   ],
+   [
+    "Numerical data",
+    "A dot plot puts one dot per value and suits small sets. A histogram groups values into equal intervals and suits large sets."
+   ],
+   [
+    "Stem plot",
+    "A stem plot is also for numerical data. It splits each value into a stem and a leaf, so every value stays visible. If the stem is tens, then 3 | 4 means 34."
+   ],
+   [
+    "Log scale",
+    "On a log base 10 scale, 1, 10, 100 and 1000 are equally spaced. Each step is ×10. It suits data spread over several powers of ten."
+   ]
+  ],
+  "remember": "Categories: two-way tables and segmented bar charts. Numbers: dot plots, stem plots and histograms.",
+  "a": {
+   "q": "A teacher wants a numerical display where every original value can still be read back. Which display should she use?",
+   "opts": [
+    "A stem plot",
+    "A histogram",
+    "A segmented bar chart",
+    "A two-way table"
+   ],
+   "why": "A stem plot keeps each value, because the stem and leaf together give the whole number. A histogram only counts values in each interval, so the exact values are lost. The other two displays are for categories, not numerical values.",
+   "clue": "Think about what a histogram bar tells you about the values inside it."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava asks 40 Year 11 and 120 Year 12 students if they work part-time. Which display best compares the percentage who work in each year?",
+   "opts": [
+    "A segmented bar chart",
+    "A histogram",
+    "A dot plot",
+    "A stem plot"
+   ],
+   "why": "Year group and working or not are categories, and the groups differ in size, so percentages give a fair comparison. A segmented bar chart shows percentages. A histogram, dot plot and stem plot are for numerical data, not categories.",
+   "clue": "Is the answer to Ava's question a number or a category?"
+  }
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "id": "acc-income-statement",
+ "title": "The income statement",
+ "brief": "f7aa028deebc",
+ "shortlist": [
+  [
+   "bus-income-statement",
+   0.722
+  ],
+  [
+   "acc-profit-cash-basis",
+   0.621
+  ],
+  [
+   "bus-profitability-ratios",
+   0.366
+  ],
+  [
+   "bus-limits-financial-reports",
+   0.359
+  ],
+  [
+   "acc-cost-sales-gross-profit",
+   0.358
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 may adapt bus-income-statement, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:56Z confirm: Claude Opus 5.5 may adapt bus-income-statement, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:17:32Z review: reusing bus-income-statement"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00039,
+  "confirm": 0.01456
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-income-statement",
+  "changes": [
+   "Replace the term cost of goods sold with cost of sales, which is the term the VCE Accounting study design uses.",
+   "Move the Priya's shop example from Orange, New South Wales, to a Victorian town so the example is local to the course."
+  ],
+  "sure": "medium",
+  "reason": "The bank's income statement card covers the full gross-to-net profit structure at the right depth, but it uses New South Wales Business Studies terms and an Orange example that need small local changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "bus-income-statement",
+  "changes": [
+   "Replace 'cost of goods sold' with 'cost of sales', the term the VCE Accounting Study Design uses, and refer to stock as 'inventory'.",
+   "Move Priya's shop from Orange (NSW) to a Victorian town such as Bendigo or Ballarat.",
+   "Describe expenses as costs incurred in the period, so the card fits the accrual basis used in VCE Units 3 and 4."
+  ],
+  "sure": "medium",
+  "reason": "The NSW Business Studies card already teaches revenue less expenses over a period, from gross profit to net profit, but it needs VCE terms such as 'cost of sales' and a Victorian example.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "bus-income-statement",
+ "matched": {
+  "verdict": "reuse",
+  "from": "bus-income-statement",
+  "by": "owner",
+  "at": "2026-11-02T06:17:32Z"
+ }
+}

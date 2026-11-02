@@ -1,0 +1,239 @@
+{
+ "id": "hhd-australia-s-health-system",
+ "title": "Australia's health system and equity",
+ "brief": "b11f45768ae0",
+ "shortlist": [
+  [
+   "hms-australia-s-health-care",
+   0.454
+  ],
+  [
+   "hms-equity-access-health-care",
+   0.336
+  ],
+  [
+   "hms-global-health-inequities",
+   0.254
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.245
+  ],
+  [
+   "hms-health-promotion",
+   0.239
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: done",
+  "2026-11-01T15:05:26Z check: flagged",
+  "2026-11-01T15:14:46Z fix: suggested",
+  "2026-11-02T04:35:40Z autoreview: cleared with the fix (a wording, b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "write": 0.00595,
+  "check": 0.01703,
+  "fix": 0.02559
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, hms-australia-s-health-care, covers Medicare, the PBS and private insurance but not the NDIS or the access gaps the brief names, and adding those would mean new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Australia's health system and equity",
+  "card": [
+   [
+    "Medicare",
+    "Australia's public health insurance. It pays all or part of the cost of many doctor visits, tests and public hospital care."
+   ],
+   [
+    "PBS",
+    "The Pharmaceutical Benefits Scheme lowers the price of many prescription medicines."
+   ],
+   [
+    "Private insurance",
+    "People pay to cover costs such as private hospital care and some extras. The government encourages it, but it is a choice."
+   ],
+   "Equity means fair access to care based on need. The NDIS also funds disability support. These schemes aim for equity, but gaps remain, such as out-of-pocket costs and fewer services in remote areas."
+  ],
+  "remember": "Australia's schemes aim to share access to care fairly, but some people still miss out.",
+  "a": {
+   "q": "Which scheme lowers the price of many prescription medicines?",
+   "opts": [
+    "The PBS",
+    "Medicare",
+    "Private health insurance",
+    "The NDIS"
+   ],
+   "why": "The PBS is the scheme that subsidises prescription medicines. Medicare is the tempting answer, but it covers things like doctor visits, tests and public hospital care.",
+   "clue": "Look for the scheme with medicines in its name."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess lives in a remote town and must travel hours to see a specialist, even though she has Medicare. What does this show?",
+   "opts": [
+    "A gap in equity remains despite the schemes",
+    "Medicare does not cover specialist care at all",
+    "Private insurance is compulsory for rural people",
+    "The PBS has failed to lower medicine prices"
+   ],
+   "why": "Having Medicare does not guarantee easy access, as distance and fewer services in remote areas can leave gaps. Medicare does help pay for many services, so saying it covers none is wrong.",
+   "clue": "Having a card is not the same as being able to get care."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The PBS",
+   "also_right": []
+  },
+  "b": {
+   "best": "A gap in equity remains despite the schemes",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue says to look for the scheme with 'medicines' in its name, but the name is the Pharmaceutical Benefits Scheme. 'Medicines' is not in it, and the clue nearly gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) rejects the option by saying Medicare does not 'cover none'. The option actually claims Medicare does not cover specialist care at all. The why should say Medicare does pay towards specialist visits (with a referral), so it answers the option as written."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and the intended answers are correct. Question a's clue misstates the PBS's name and nearly gives the answer away, and Why (b) does not quite match the distractor it rebuts."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The clue says to look for the scheme with 'medicines' in its name, but the name is the Pharmaceutical Benefits Scheme. 'Medicines' is not in it, and the clue nearly gives the answer away.",
+  "Question b, other: Why (b) rejects the option by saying Medicare does not 'cover none'. The option actually claims Medicare does not cover specialist care at all. The why should say Medicare does pay towards specialist visits (with a referral), so it answers the option as written."
+ ],
+ "proposal": {
+  "title": "Australia's health system and equity",
+  "card": [
+   [
+    "Medicare",
+    "Australia's public health insurance. It pays all or part of the cost of many GP visits, specialist visits with a referral, tests and public hospital care."
+   ],
+   [
+    "PBS",
+    "The Pharmaceutical Benefits Scheme lowers the price people pay at the chemist for many prescription medicines."
+   ],
+   [
+    "Private insurance",
+    "People pay to cover costs such as private hospital care and some extras, like dental. The government encourages it, but it is a choice."
+   ],
+   "Equity means fair access to care based on need. The NDIS also funds disability support. These schemes aim for equity, but gaps remain, such as out-of-pocket costs and fewer services in remote areas."
+  ],
+  "remember": "Australia's schemes aim to share access to care fairly, but some people still miss out.",
+  "a": {
+   "q": "Ravi's GP prescribes a medicine, and he pays far less than its full price at the chemist. Which scheme explains this?",
+   "opts": [
+    "The PBS",
+    "Medicare",
+    "Private health insurance",
+    "The NDIS"
+   ],
+   "why": "The PBS lowers the price of many prescription medicines bought at the chemist. Medicare is the tempting answer, but it pays towards things like doctor visits, tests and public hospital care, not the medicine itself.",
+   "clue": "Think about where Ravi saved money: the clinic or the chemist."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess lives in a remote town and must travel hours to see a specialist, even though she has Medicare. What does this show?",
+   "opts": [
+    "A gap in equity remains despite the schemes",
+    "Medicare does not cover specialist care at all",
+    "Private insurance is compulsory for rural people",
+    "The PBS has failed to lower medicine prices"
+   ],
+   "why": "Having Medicare does not guarantee easy access, as distance and fewer services in remote areas can leave gaps. Medicare does pay towards specialist visits when a person has a referral, so the problem is getting to the care, not a lack of cover.",
+   "clue": "Having a card is not the same as being able to get care."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:40Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The clue says to look for the scheme with 'medicines' in its name, but the name is the Pharmaceutical Benefits Scheme. 'Medicines' is not in it, and the clue nearly gives the answer away."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) rejects the option by saying Medicare does not 'cover none'. The option actually claims Medicare does not cover specialist care at all. The why should say Medicare does pay towards specialist visits (with a referral), so it answers the option as written."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The clue says to look for the scheme with 'medicines' in its name, but the name is the Pharmaceutical Benefits Scheme. 'Medicines' is not in it, and the clue nearly gives the answer away.",
+   "Question b, other: Why (b) rejects the option by saying Medicare does not 'cover none'. The option actually claims Medicare does not cover specialist care at all. The why should say Medicare does pay towards specialist visits (with a referral), so it answers the option as written."
+  ]
+ },
+ "final": {
+  "title": "Australia's health system and equity",
+  "card": [
+   [
+    "Medicare",
+    "Australia's public health insurance. It pays all or part of the cost of many GP visits, specialist visits with a referral, tests and public hospital care."
+   ],
+   [
+    "PBS",
+    "The Pharmaceutical Benefits Scheme lowers the price people pay at the chemist for many prescription medicines."
+   ],
+   [
+    "Private insurance",
+    "People pay to cover costs such as private hospital care and some extras, like dental. The government encourages it, but it is a choice."
+   ],
+   "Equity means fair access to care based on need. The NDIS also funds disability support. These schemes aim for equity, but gaps remain, such as out-of-pocket costs and fewer services in remote areas."
+  ],
+  "remember": "Australia's schemes aim to share access to care fairly, but some people still miss out.",
+  "a": {
+   "q": "Ravi's GP prescribes a medicine, and he pays far less than its full price at the chemist. Which scheme explains this?",
+   "opts": [
+    "The PBS",
+    "Medicare",
+    "Private health insurance",
+    "The NDIS"
+   ],
+   "why": "The PBS lowers the price of many prescription medicines bought at the chemist. Medicare is the tempting answer, but it pays towards things like doctor visits, tests and public hospital care, not the medicine itself.",
+   "clue": "Think about where Ravi saved money: the clinic or the chemist."
+  },
+  "b": {
+   "d": 3,
+   "q": "Jess lives in a remote town and must travel hours to see a specialist, even though she has Medicare. What does this show?",
+   "opts": [
+    "A gap in equity remains despite the schemes",
+    "Medicare does not cover specialist care at all",
+    "Private insurance is compulsory for rural people",
+    "The PBS has failed to lower medicine prices"
+   ],
+   "why": "Having Medicare does not guarantee easy access, as distance and fewer services in remote areas can leave gaps. Medicare does pay towards specialist visits when a person has a referral, so the problem is getting to the care, not a lack of cover.",
+   "clue": "Having a card is not the same as being able to get care."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,220 @@
+{
+ "id": "eco-net-foreign-debt-equity",
+ "title": "Net foreign debt and equity",
+ "brief": "7c4accef3ebc",
+ "shortlist": [
+  [
+   "eco-foreign-debt-foreign-equity",
+   0.789
+  ],
+  [
+   "eco-foreign-investment-australia",
+   0.414
+  ],
+  [
+   "eco-capital-financial-account",
+   0.31
+  ],
+  [
+   "bus-debt-equity-compared",
+   0.308
+  ],
+  [
+   "eco-sustainability-current-account",
+   0.284
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00047,
+  "write": 0.00508,
+  "check": 0.01729,
+  "fix": 0.03192
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point defines foreign debt, foreign equity and net foreign liabilities but never explains that both fund investment with foreign saving, which is the main idea of the new point, so adding that link would be a new idea rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Net foreign debt and equity",
+  "card": [
+   "When a country invests more than it saves, it needs foreign saving to fill the gap. Australia has long done this, because its saving has been lower than its investment.",
+   [
+    "Net foreign debt",
+    "the amount Australia owes overseas lenders, minus what Australians are owed abroad. It grows when Australian banks and firms borrow from overseas. Debt must be repaid with interest."
+   ],
+   [
+    "Net foreign equity",
+    "the value of Australian shares, property and businesses owned by foreigners, minus the overseas assets Australians own. It grows when foreigners buy Australian shares and assets. Owners are paid through profits and dividends."
+   ],
+   "Both are built up by using foreign saving to fund investment. The payments on them, interest and dividends, flow overseas and appear in the current account as income paid abroad."
+  ],
+  "remember": "Foreign saving funds investment as debt, which is borrowed, or as equity, which is ownership.",
+  "a": {
+   "q": "A Japanese pension fund buys shares in an Australian mining company. What does this add to?",
+   "opts": [
+    "Net foreign equity",
+    "Net foreign debt",
+    "Australia's saving",
+    "Australia's export income"
+   ],
+   "why": "The fund now owns part of an Australian company, so foreign ownership rises. That is net foreign equity. It is not debt, because the company has not borrowed money that must be repaid with interest.",
+   "clue": "Did the buyer lend money or take ownership?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An Australian bank borrows $2 billion from US lenders to fund home loans. What is the effect, and what is later paid overseas?",
+   "opts": [
+    "Net foreign debt rises, and interest is paid overseas",
+    "Net foreign equity rises, and interest is paid overseas",
+    "Net foreign debt rises, and dividends are paid overseas",
+    "Net foreign equity rises, and dividends are paid overseas"
+   ],
+   "why": "The bank has borrowed, so it owes money overseas and net foreign debt rises. Borrowing is repaid with interest. Dividends are paid to owners of shares, which would come from selling equity instead.",
+   "clue": "Borrowing is repaid with interest, not shared profits."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Net foreign equity",
+   "also_right": []
+  },
+  "b": {
+   "best": "Net foreign debt rises, and interest is paid overseas",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The stem already says the bank 'borrows', so debt is given. The clue then states outright that borrowing is repaid with interest. Together they hand the student the answer without testing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, remember line and both answers are accurate. Question b's clue says borrowing is repaid with interest, and the stem already says the bank borrows, so together they give the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The stem already says the bank 'borrows', so debt is given. The clue then states outright that borrowing is repaid with interest. Together they hand the student the answer without testing the idea."
+ ],
+ "proposal": {
+  "title": "Net foreign debt and equity",
+  "card": [
+   "When a country invests more than it saves, it needs foreign saving to fill the gap. Australia has long done this, because its saving has been lower than its investment.",
+   [
+    "Net foreign debt",
+    "the amount Australia owes overseas lenders, minus what Australians are owed abroad. It grows when Australians borrow overseas, including by selling bonds, which are loans repaid with interest."
+   ],
+   [
+    "Net foreign equity",
+    "foreign ownership of Australian shares, property and businesses, minus the overseas assets Australians own. Its owners are paid through profits and dividends, not interest."
+   ],
+   "Both are built up by using foreign saving to fund investment. The payments on them, interest and dividends, flow overseas and appear in the current account as income paid abroad."
+  ],
+  "remember": "Foreign saving funds investment as debt, which is borrowed, or as equity, which is ownership.",
+  "a": {
+   "q": "A Japanese pension fund buys shares in an Australian mining company. What does this add to?",
+   "opts": [
+    "Net foreign equity",
+    "Net foreign debt",
+    "Australia's saving",
+    "Australia's export income"
+   ],
+   "why": "The fund now owns part of an Australian company, so foreign ownership rises. That is net foreign equity. It is not debt, because the company has not borrowed money that must be repaid with interest.",
+   "clue": "Did the buyer lend money or take ownership?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An Australian bank sells $2 billion of bonds to US investors to fund home loans. What changes, and what is later paid overseas?",
+   "opts": [
+    "Net foreign debt rises, and interest is paid overseas",
+    "Net foreign equity rises, and interest is paid overseas",
+    "Net foreign debt rises, and dividends are paid overseas",
+    "Net foreign equity rises, and dividends are paid overseas"
+   ],
+   "why": "A bond is a loan, so the bank now owes the US investors and net foreign debt rises. The investors are paid interest. The word sells can tempt you towards equity, but a bond gives no ownership, so it adds no equity and pays no dividends.",
+   "clue": "Does a bond make the buyer an owner or a lender?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The stem already says the bank 'borrows', so debt is given. The clue then states outright that borrowing is repaid with interest. Together they hand the student the answer without testing the idea."
+   }
+  ],
+  "flags": [
+   "Question b, other: The stem already says the bank 'borrows', so debt is given. The clue then states outright that borrowing is repaid with interest. Together they hand the student the answer without testing the idea."
+  ]
+ },
+ "final": {
+  "title": "Net foreign debt and equity",
+  "card": [
+   "When a country invests more than it saves, it needs foreign saving to fill the gap. Australia has long done this, because its saving has been lower than its investment.",
+   [
+    "Net foreign debt",
+    "the amount Australia owes overseas lenders, minus what Australians are owed abroad. It grows when Australians borrow overseas, including by selling bonds, which are loans repaid with interest."
+   ],
+   [
+    "Net foreign equity",
+    "foreign ownership of Australian shares, property and businesses, minus the overseas assets Australians own. Its owners are paid through profits and dividends, not interest."
+   ],
+   "Both are built up by using foreign saving to fund investment. The payments on them, interest and dividends, flow overseas and appear in the current account as income paid abroad."
+  ],
+  "remember": "Foreign saving funds investment as debt, which is borrowed, or as equity, which is ownership.",
+  "a": {
+   "q": "A Japanese pension fund buys shares in an Australian mining company. What does this add to?",
+   "opts": [
+    "Net foreign equity",
+    "Net foreign debt",
+    "Australia's saving",
+    "Australia's export income"
+   ],
+   "why": "The fund now owns part of an Australian company, so foreign ownership rises. That is net foreign equity. It is not debt, because the company has not borrowed money that must be repaid with interest.",
+   "clue": "Did the buyer lend money or take ownership?"
+  },
+  "b": {
+   "d": 3,
+   "q": "An Australian bank sells $2 billion of bonds to US investors to fund home loans. What changes, and what is later paid overseas?",
+   "opts": [
+    "Net foreign debt rises, and interest is paid overseas",
+    "Net foreign equity rises, and interest is paid overseas",
+    "Net foreign debt rises, and dividends are paid overseas",
+    "Net foreign equity rises, and dividends are paid overseas"
+   ],
+   "why": "A bond is a loan, so the bank now owes the US investors and net foreign debt rises. The investors are paid interest. The word sells can tempt you towards equity, but a bond gives no ownership, so it adds no equity and pays no dividends.",
+   "clue": "Does a bond make the buyer an owner or a lender?"
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,218 @@
+{
+ "id": "phys-vertical-circular-motion",
+ "title": "Vertical circular motion",
+ "brief": "579a58ae65dc",
+ "shortlist": [
+  [
+   "phys-uniform-circular-motion",
+   0.455
+  ],
+  [
+   "phys-orbital-motion",
+   0.271
+  ],
+  [
+   "phys-projectile-motion",
+   0.229
+  ],
+  [
+   "phys-forces-as-vectors",
+   0.217
+  ],
+  [
+   "phys-banked-curves",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.00767,
+  "check": 0.01732,
+  "fix": 0.02648
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Uniform circular motion, teaches only the general idea of net force towards the centre at constant speed, not a vertical loop where weight and normal force combine and the speed varies, so the new point is a narrower application and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Vertical circular motion",
+  "card": [
+   "An object moving in a vertical circle needs a net force towards the centre at every point. This net force is the centripetal force, and it equals mv² ÷ r.",
+   [
+    "Bottom",
+    "the centre is above the object. The normal force points up and weight points down, so the net force towards the centre is N - mg = mv² ÷ r."
+   ],
+   [
+    "Top",
+    "the centre is below the object. The normal force and weight both point down, towards the centre, so N + mg = mv² ÷ r."
+   ],
+   "The normal force is a real force from a surface or seat. Centripetal force is just the name for the net force towards the centre, not an extra force. At the bottom N is larger than mg, so a rider feels heavier."
+  ],
+  "remember": "Take the centre as positive: the net force towards it equals mv² ÷ r, and the forces differ at the top and bottom.",
+  "a": {
+   "q": "A cart moves at steady speed through the bottom of a vertical loop. How does the normal force on the cart compare with its weight?",
+   "opts": [
+    "The normal force is greater than the weight",
+    "The normal force is equal to the weight",
+    "The normal force is less than the weight",
+    "The normal force is zero"
+   ],
+   "why": "At the bottom the centre is above the cart, so the net force must point up. This needs the normal force to be greater than the weight. Equal forces would give no net force, so the cart could not turn.",
+   "clue": "Which way must the net force point at the bottom?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A 50 kg rider in Geelong goes over the top of a vertical loop of radius 10 m at 14 m/s. Which equation gives the normal force N on the rider from the seat? Take g as 10 m/s².",
+   "opts": [
+    "N + 500 = 50 × 14² ÷ 10",
+    "N - 500 = 50 × 14² ÷ 10",
+    "N = 500 + 50 × 14",
+    "N + 500 = 50 × 14 ÷ 10"
+   ],
+   "why": "At the top, the normal force and weight both point down, towards the centre. So N + mg = mv² ÷ r, which is N + 500 = 50 × 14² ÷ 10. Subtracting 500 would be right for the bottom of the loop, where the normal force points up.",
+   "clue": "At the top, which way does the normal force point, and where is the centre?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The normal force is greater than the weight",
+   "also_right": []
+  },
+  "b": {
+   "best": "N + 500 = 50 × 14² ÷ 10",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Goes over the top of a vertical loop\" could be read as a car going over a hump, where the normal force points up. The card's top-of-loop rule assumes the rider is on the inside of the loop, and neither the card nor the question says so. Saying \"through the top, inside the loop\" would remove the doubt."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct: N is greater than mg at the bottom, and N + 500 = 980 at the top gives N = 480 N. One minor wording issue: \"goes over the top\" could suggest the outside of a hump, and nothing states the rider is inside the loop."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"Goes over the top of a vertical loop\" could be read as a car going over a hump, where the normal force points up. The card's top-of-loop rule assumes the rider is on the inside of the loop, and neither the card nor the question says so. Saying \"through the top, inside the loop\" would remove the doubt."
+ ],
+ "proposal": {
+  "title": "Vertical circular motion",
+  "card": [
+   "An object moving in a vertical circle needs a net force towards the centre at every point. This net force is the centripetal force, and it equals mv² ÷ r.",
+   [
+    "Bottom",
+    "the centre is above the object. The normal force points up and weight points down, so the net force towards the centre is N - mg = mv² ÷ r."
+   ],
+   [
+    "Top",
+    "for an object on the inside of the loop, the centre is below it. The track or seat pushes down, and weight points down too, so N + mg = mv² ÷ r."
+   ],
+   "The normal force is a real force from a surface or seat. Centripetal force is just the name for the net force towards the centre, not an extra force. At the bottom N is larger than mg, so a rider feels heavier."
+  ],
+  "remember": "Take the centre as positive: the net force towards it equals mv² ÷ r, and the forces differ at the top and bottom.",
+  "a": {
+   "q": "A cart moves at steady speed through the bottom of a vertical loop, on the inside of the track. How does the normal force on the cart compare with its weight?",
+   "opts": [
+    "The normal force is greater than the weight",
+    "The normal force is equal to the weight",
+    "The normal force is less than the weight",
+    "The normal force is zero"
+   ],
+   "why": "At the bottom the centre is above the cart, so the net force must point up. This needs the normal force to be greater than the weight. Equal forces would give no net force, so the cart could not turn.",
+   "clue": "Which way must the net force point at the bottom?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A 50 kg rider in Geelong passes through the top of a vertical loop, inside the loop, at 14 m/s. The radius is 10 m. Which equation gives the normal force N from the seat? Take g as 10 m/s².",
+   "opts": [
+    "N + 500 = 50 × 14² ÷ 10",
+    "N - 500 = 50 × 14² ÷ 10",
+    "N = 500 + 50 × 14",
+    "N + 500 = 50 × 14 ÷ 10"
+   ],
+   "why": "Inside the loop at the top, the seat pushes down and weight points down, both towards the centre. So N + mg = mv² ÷ r, which is N + 500 = 50 × 14² ÷ 10. Subtracting 500 would be right for the bottom of the loop, where the normal force points up.",
+   "clue": "At the top, inside the loop, where is the centre?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"Goes over the top of a vertical loop\" could be read as a car going over a hump, where the normal force points up. The card's top-of-loop rule assumes the rider is on the inside of the loop, and neither the card nor the question says so. Saying \"through the top, inside the loop\" would remove the doubt."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"Goes over the top of a vertical loop\" could be read as a car going over a hump, where the normal force points up. The card's top-of-loop rule assumes the rider is on the inside of the loop, and neither the card nor the question says so. Saying \"through the top, inside the loop\" would remove the doubt."
+  ]
+ },
+ "final": {
+  "title": "Vertical circular motion",
+  "card": [
+   "An object moving in a vertical circle needs a net force towards the centre at every point. This net force is the centripetal force, and it equals mv² ÷ r.",
+   [
+    "Bottom",
+    "the centre is above the object. The normal force points up and weight points down, so the net force towards the centre is N - mg = mv² ÷ r."
+   ],
+   [
+    "Top",
+    "for an object on the inside of the loop, the centre is below it. The track or seat pushes down, and weight points down too, so N + mg = mv² ÷ r."
+   ],
+   "The normal force is a real force from a surface or seat. Centripetal force is just the name for the net force towards the centre, not an extra force. At the bottom N is larger than mg, so a rider feels heavier."
+  ],
+  "remember": "Take the centre as positive: the net force towards it equals mv² ÷ r, and the forces differ at the top and bottom.",
+  "a": {
+   "q": "A cart moves at steady speed through the bottom of a vertical loop, on the inside of the track. How does the normal force on the cart compare with its weight?",
+   "opts": [
+    "The normal force is greater than the weight",
+    "The normal force is equal to the weight",
+    "The normal force is less than the weight",
+    "The normal force is zero"
+   ],
+   "why": "At the bottom the centre is above the cart, so the net force must point up. This needs the normal force to be greater than the weight. Equal forces would give no net force, so the cart could not turn.",
+   "clue": "Which way must the net force point at the bottom?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A 50 kg rider in Geelong passes through the top of a vertical loop, inside the loop, at 14 m/s. The radius is 10 m. Which equation gives the normal force N from the seat? Take g as 10 m/s².",
+   "opts": [
+    "N + 500 = 50 × 14² ÷ 10",
+    "N - 500 = 50 × 14² ÷ 10",
+    "N = 500 + 50 × 14",
+    "N + 500 = 50 × 14 ÷ 10"
+   ],
+   "why": "Inside the loop at the top, the seat pushes down and weight points down, both towards the centre. So N + mg = mv² ÷ r, which is N + 500 = 50 × 14² ÷ 10. Subtracting 500 would be right for the bottom of the loop, where the normal force points up.",
+   "clue": "At the top, inside the loop, where is the centre?"
+  }
+ },
+ "cleared_by": "auto"
+}

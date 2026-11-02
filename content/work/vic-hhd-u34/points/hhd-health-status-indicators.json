@@ -1,0 +1,156 @@
+{
+ "id": "hhd-health-status-indicators",
+ "title": "Health status indicators",
+ "brief": "811543ca5c74",
+ "shortlist": [
+  [
+   "hms-measures-health-status",
+   0.598
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.292
+  ],
+  [
+   "hms-australia-s-health-status",
+   0.286
+  ],
+  [
+   "hms-health-promotion",
+   0.262
+  ],
+  [
+   "hms-community-health-resources",
+   0.257
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00433,
+  "check": 0.0134
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers life expectancy, mortality and morbidity well, but it does not teach self-assessed health status, which the brief requires, so it is too narrow to reuse or adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Health status indicators",
+  "card": [
+   "A health status indicator is a measure that describes how healthy a population is. Governments use indicators to see how health is changing and where help is needed.",
+   [
+    "Life expectancy",
+    "the average number of years a person born in a given period could expect to live, if current death rates stayed the same."
+   ],
+   [
+    "Mortality",
+    "deaths in a population. It is often given as a rate, such as deaths per 1000 people, so groups of different sizes can be compared."
+   ],
+   [
+    "Morbidity",
+    "the amount of illness, disease or injury in a population. Self-assessed health status is how people rate their own health, for example as excellent, good or poor."
+   ]
+  ],
+  "remember": "Indicators measure a population's health by length of life, deaths, illness and how people rate their own health.",
+  "a": {
+   "q": "Which health status indicator describes how much illness, disease or injury is in a population?",
+   "opts": [
+    "Morbidity",
+    "Mortality",
+    "Life expectancy",
+    "Self-assessed health status"
+   ],
+   "why": "Morbidity is the amount of illness, disease or injury. Mortality is the tempting wrong answer, because it also describes poor health, but it counts deaths and not illness.",
+   "clue": "Think about illness, not death."
+  },
+  "b": {
+   "d": 3,
+   "q": "A health report in Victoria says that 70% of adults in a town rate their own health as good or better. Which indicator does this show?",
+   "opts": [
+    "Self-assessed health status",
+    "Life expectancy",
+    "Mortality rate",
+    "Morbidity"
+   ],
+   "why": "The adults are rating their own health, which is self-assessed health status. Morbidity is tempting because the report is about health, but morbidity counts illness, disease or injury and does not come from people's own ratings.",
+   "clue": "Who is judging the health in this report?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Morbidity",
+   "also_right": []
+  },
+  "b": {
+   "best": "Self-assessed health status",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Health status indicators",
+  "card": [
+   "A health status indicator is a measure that describes how healthy a population is. Governments use indicators to see how health is changing and where help is needed.",
+   [
+    "Life expectancy",
+    "the average number of years a person born in a given period could expect to live, if current death rates stayed the same."
+   ],
+   [
+    "Mortality",
+    "deaths in a population. It is often given as a rate, such as deaths per 1000 people, so groups of different sizes can be compared."
+   ],
+   [
+    "Morbidity",
+    "the amount of illness, disease or injury in a population. Self-assessed health status is how people rate their own health, for example as excellent, good or poor."
+   ]
+  ],
+  "remember": "Indicators measure a population's health by length of life, deaths, illness and how people rate their own health.",
+  "a": {
+   "q": "Which health status indicator describes how much illness, disease or injury is in a population?",
+   "opts": [
+    "Morbidity",
+    "Mortality",
+    "Life expectancy",
+    "Self-assessed health status"
+   ],
+   "why": "Morbidity is the amount of illness, disease or injury. Mortality is the tempting wrong answer, because it also describes poor health, but it counts deaths and not illness.",
+   "clue": "Think about illness, not death."
+  },
+  "b": {
+   "d": 3,
+   "q": "A health report in Victoria says that 70% of adults in a town rate their own health as good or better. Which indicator does this show?",
+   "opts": [
+    "Self-assessed health status",
+    "Life expectancy",
+    "Mortality rate",
+    "Morbidity"
+   ],
+   "why": "The adults are rating their own health, which is self-assessed health status. Morbidity is tempting because the report is about health, but morbidity counts illness, disease or injury and does not come from people's own ratings.",
+   "clue": "Who is judging the health in this report?"
+  }
+ },
+ "cleared_by": "checker"
+}

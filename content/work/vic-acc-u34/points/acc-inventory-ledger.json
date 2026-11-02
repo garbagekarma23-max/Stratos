@@ -1,0 +1,237 @@
+{
+ "id": "acc-inventory-ledger",
+ "title": "Inventory in the ledger",
+ "brief": "51ca95a6e912",
+ "shortlist": [
+  [
+   "acc-other-inventory-movements",
+   0.393
+  ],
+  [
+   "acc-perpetual-inventory-records",
+   0.375
+  ],
+  [
+   "acc-inventory",
+   0.302
+  ],
+  [
+   "bus-inventory-management",
+   0.294
+  ],
+  [
+   "acc-inventory-management",
+   0.265
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00503,
+  "check": 0.01731,
+  "fix": 0.02911,
+  "recheck": 0.0117
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points covers the ledger control account backed by FIFO or identified-cost inventory cards, or the recording of write-downs and stock losses in both; the closest, the perpetual inventory records point, only introduces perpetual cards and is not the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Inventory in the ledger",
+  "card": [
+   "With a perpetual system, the Inventory account in the ledger is updated with every purchase and sale. The balance always shows the cost of stock on hand.",
+   "An inventory card backs up the ledger. There is one card for each item, showing units and cost in, out and on hand. FIFO or identified cost is used to value each sale.",
+   "The total of all the inventory cards must equal the balance of the Inventory account. This is how the business checks that its records agree.",
+   "A write-down or a stock loss, such as theft or damage found in a stocktake, is recorded in both places. The ledger account is reduced and the inventory card is adjusted."
+  ],
+  "remember": "Cards and ledger must agree, so any change to stock is recorded in both.",
+  "a": {
+   "q": "Under a perpetual system, what should the total of all the inventory cards equal?",
+   "opts": [
+    "The balance of the Inventory account in the ledger",
+    "The balance of the Cost of sales account",
+    "The total sales revenue for the period",
+    "The balance of the Accounts receivable account"
+   ],
+   "why": "The cards are the detailed record behind the Inventory account, so their total must match its balance. Cost of sales is only the cost of goods already sold, not the stock still on hand.",
+   "clue": "The cards back up one ledger account."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's gift shop in Bendigo uses a perpetual system. A stocktake finds that 5 vases on hand have been stolen. How should the loss be recorded?",
+   "opts": [
+    "Reduce both the Inventory account and the inventory card",
+    "Reduce the Inventory account only, as cards are not changed",
+    "Reduce the inventory card only, as the ledger is not changed",
+    "Record nothing until the next sale of vases takes place"
+   ],
+   "why": "A stock loss changes the stock on hand, so it is recorded in both the ledger and the card. If only one is changed, the cards and the ledger no longer agree. Waiting for a sale would leave both overstated.",
+   "clue": "The two records must still agree afterwards."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The balance of the Inventory account in the ledger",
+   "also_right": []
+  },
+  "b": {
+   "best": "Reduce both the Inventory account and the inventory card",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"The balance always shows the cost of stock on hand\" overstates it. A perpetual Inventory account shows the recorded cost of stock that should be on hand. The card's own fourth point shows that theft or damage can make actual stock differ until a stocktake finds it. Better: \"shows the cost of stock that should be on hand\"."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks about \"inventory cards\", and only the right option repeats \"Inventory\" and adds the detail \"in the ledger\". A student could match the words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The card says the perpetual Inventory balance \"always\" shows stock on hand, which its own stocktake point contradicts. In question a, the right option echoes the word \"inventory\" from the question, which gives it away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"The balance always shows the cost of stock on hand\" overstates it. A perpetual Inventory account shows the recorded cost of stock that should be on hand. The card's own fourth point shows that theft or damage can make actual stock differ until a stocktake finds it. Better: \"shows the cost of stock that should be on hand\".",
+  "Question a, wording: The question asks about \"inventory cards\", and only the right option repeats \"Inventory\" and adds the detail \"in the ledger\". A student could match the words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Inventory in the ledger",
+  "card": [
+   "With a perpetual system, the Inventory account in the ledger is updated with every purchase and sale. The balance shows the cost of stock that should be on hand.",
+   "An inventory card backs up the ledger. There is one card for each item, showing units and cost in, out and on hand. FIFO or identified cost is used to value each sale.",
+   "The total value on hand across all the inventory cards must equal the balance of the Inventory account. This is how the business checks that its records agree.",
+   "A write-down or a stock loss, such as theft or damage found in a stocktake, is recorded in both places. The ledger account is reduced and the inventory card is adjusted."
+  ],
+  "remember": "Cards and ledger must agree, so any change to stock is recorded in both.",
+  "a": {
+   "q": "Under a perpetual system, a business totals the value of stock on hand from every item's card. Which ledger balance should this match?",
+   "opts": [
+    "The Inventory account balance",
+    "The Cost of sales account balance",
+    "The Sales revenue account balance",
+    "The Accounts payable account balance"
+   ],
+   "why": "The cards are the detailed record behind the Inventory account, so the total on hand must match its balance. Cost of sales is the cost of goods already sold, not the stock still on hand.",
+   "clue": "Is the total about stock sold or stock still held?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's gift shop in Bendigo uses a perpetual system. A stocktake finds that 5 vases on hand have been stolen. How should the loss be recorded?",
+   "opts": [
+    "Reduce both the Inventory account and the inventory card",
+    "Reduce the Inventory account only, as cards are not changed",
+    "Reduce the inventory card only, as the ledger is not changed",
+    "Record nothing until the next sale of vases takes place"
+   ],
+   "why": "A stock loss changes the stock on hand, so it is recorded in both the ledger and the card. If only one is changed, the cards and the ledger no longer agree. Waiting for a sale would leave both overstated.",
+   "clue": "The two records must still agree afterwards."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The Inventory account balance",
+    "also_right": []
+   },
+   "b": {
+    "best": "Reduce both the Inventory account and the inventory card",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"The balance always shows the cost of stock on hand\" overstates it. A perpetual Inventory account shows the recorded cost of stock that should be on hand. The card's own fourth point shows that theft or damage can make actual stock differ until a stocktake finds it. Better: \"shows the cost of stock that should be on hand\"."
+   },
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The question asks about \"inventory cards\", and only the right option repeats \"Inventory\" and adds the detail \"in the ledger\". A student could match the words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"The balance always shows the cost of stock on hand\" overstates it. A perpetual Inventory account shows the recorded cost of stock that should be on hand. The card's own fourth point shows that theft or damage can make actual stock differ until a stocktake finds it. Better: \"shows the cost of stock that should be on hand\".",
+   "Question a, wording: The question asks about \"inventory cards\", and only the right option repeats \"Inventory\" and adds the detail \"in the ledger\". A student could match the words without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Inventory in the ledger",
+  "card": [
+   "With a perpetual system, the Inventory account in the ledger is updated with every purchase and sale. The balance shows the cost of stock that should be on hand.",
+   "An inventory card backs up the ledger. There is one card for each item, showing units and cost in, out and on hand. FIFO or identified cost is used to value each sale.",
+   "The total value on hand across all the inventory cards must equal the balance of the Inventory account. This is how the business checks that its records agree.",
+   "A write-down or a stock loss, such as theft or damage found in a stocktake, is recorded in both places. The ledger account is reduced and the inventory card is adjusted."
+  ],
+  "remember": "Cards and ledger must agree, so any change to stock is recorded in both.",
+  "a": {
+   "q": "Under a perpetual system, a business totals the value of stock on hand from every item's card. Which ledger balance should this match?",
+   "opts": [
+    "The Inventory account balance",
+    "The Cost of sales account balance",
+    "The Sales revenue account balance",
+    "The Accounts payable account balance"
+   ],
+   "why": "The cards are the detailed record behind the Inventory account, so the total on hand must match its balance. Cost of sales is the cost of goods already sold, not the stock still on hand.",
+   "clue": "Is the total about stock sold or stock still held?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's gift shop in Bendigo uses a perpetual system. A stocktake finds that 5 vases on hand have been stolen. How should the loss be recorded?",
+   "opts": [
+    "Reduce both the Inventory account and the inventory card",
+    "Reduce the Inventory account only, as cards are not changed",
+    "Reduce the inventory card only, as the ledger is not changed",
+    "Record nothing until the next sale of vases takes place"
+   ],
+   "why": "A stock loss changes the stock on hand, so it is recorded in both the ledger and the card. If only one is changed, the cards and the ledger no longer agree. Waiting for a sale would leave both overstated.",
+   "clue": "The two records must still agree afterwards."
+  }
+ },
+ "cleared_by": "recheck"
+}

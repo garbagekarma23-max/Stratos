@@ -1,0 +1,168 @@
+{
+ "id": "phys-linearising-data",
+ "title": "Linearising data",
+ "brief": "3a2ff3ef0c92",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, write",
+  "2026-11-01T14:46:42Z write: done",
+  "2026-11-01T14:56:06Z check: flagged",
+  "2026-11-01T15:05:31Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (a other)"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "write": 0.0073,
+  "check": 0.01384,
+  "fix": 0.02658
+ },
+ "draft": {
+  "title": "Linearising data",
+  "card": [
+   "A straight line is the easiest graph to judge. If a relationship is not linear, we can transform one variable so the graph becomes a straight line.",
+   "For a pendulum, the period T depends on length L by T = 2π√(L/g). Plotting T² against L gives a straight line through the origin.",
+   "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
+   "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
+  ],
+  "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
+  "a": {
+   "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",
+   "opts": [
+    "The value of g, using g = 4π² ÷ gradient",
+    "The value of L, using L = 4π² ÷ gradient",
+    "The mass of the bob, using the gradient",
+    "The amplitude of the swing, using the gradient"
+   ],
+   "why": "For T² against L, the gradient equals 4π²/g, so g can be found by rearranging. Mass and amplitude do not appear in this relationship, so the gradient does not give them.",
+   "clue": "Which quantity is in the gradient formula 4π²/g?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A student measures the period T of a pendulum at several lengths L and plots T against L. The points form a curve. Which change would be expected to give a straight line?",
+   "opts": [
+    "Plot T² on the vertical axis against L",
+    "Plot L on the vertical axis against T",
+    "Plot T against L with a larger scale",
+    "Draw a line of best fit through the curve"
+   ],
+   "why": "Since T² = (4π²/g)L, plotting T² against L gives a straight line. Swapping the axes leaves the curve, as L is proportional to T², not T. A bigger scale or a straight line drawn through curved data does not change the relationship.",
+   "clue": "Which transformed quantity is proportional to L?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The value of g, using g = 4π² ÷ gradient",
+   "also_right": []
+  },
+  "b": {
+   "best": "Plot T² on the vertical axis against L",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which quantity is in the gradient formula 4π²/g?' points straight at g, so a student can pick the answer without understanding linearisation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The physics is correct (T² = 4π²L/g, so g = 4π² ÷ gradient) and both questions have a single right answer. The only problem is that question a's clue names the gradient formula containing g, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue 'Which quantity is in the gradient formula 4π²/g?' points straight at g, so a student can pick the answer without understanding linearisation."
+ ],
+ "proposal": {
+  "title": "Linearising data",
+  "card": [
+   "A straight line is the easiest graph to judge. If a relationship is not linear, we can transform one variable so the graph becomes a straight line.",
+   "For a pendulum, the period T depends on length L by T = 2π√(L/g). Plotting T² against L gives a straight line through the origin.",
+   "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
+   "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
+  ],
+  "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
+  "a": {
+   "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",
+   "opts": [
+    "The value of g, using g = 4π² ÷ gradient",
+    "The value of L, using L = 4π² ÷ gradient",
+    "The mass of the bob, using the gradient",
+    "The amplitude of the swing, using the gradient"
+   ],
+   "why": "Squaring both sides gives T² = (4π²/g)L, so the gradient equals 4π²/g and g can be found by rearranging. L is plotted on the x-axis, so it varies along the line and is not a single value from the gradient. Mass and amplitude do not appear in the relationship at all.",
+   "clue": "Square both sides of T = 2π√(L/g) and compare it with y = mx."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student measures the period T of a pendulum at several lengths L and plots T against L. The points form a curve. Which change would be expected to give a straight line?",
+   "opts": [
+    "Plot T² on the vertical axis against L",
+    "Plot L on the vertical axis against T",
+    "Plot T against L with a larger scale",
+    "Draw a line of best fit through the curve"
+   ],
+   "why": "Since T² = (4π²/g)L, plotting T² against L gives a straight line. Swapping the axes leaves the curve, as L is proportional to T², not T. A bigger scale or a straight line drawn through curved data does not change the relationship.",
+   "clue": "Which transformed quantity is proportional to L?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Which quantity is in the gradient formula 4π²/g?' points straight at g, so a student can pick the answer without understanding linearisation."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue 'Which quantity is in the gradient formula 4π²/g?' points straight at g, so a student can pick the answer without understanding linearisation."
+  ]
+ },
+ "final": {
+  "title": "Linearising data",
+  "card": [
+   "A straight line is the easiest graph to judge. If a relationship is not linear, we can transform one variable so the graph becomes a straight line.",
+   "For a pendulum, the period T depends on length L by T = 2π√(L/g). Plotting T² against L gives a straight line through the origin.",
+   "A straight line through the origin means the plotted quantities are directly proportional. A curve on the first graph shows the relationship is not linear.",
+   "The gradient of the line has a physical meaning. For T² against L, gradient = 4π²/g, so g = 4π² ÷ gradient. The gradient has units too: the units of the y-axis divided by the units of the x-axis."
+  ],
+  "remember": "Plot the transformed quantity so the points form a straight line, then read the physics from the gradient.",
+  "a": {
+   "q": "Students plot T² (s²) against L (m) for a pendulum and get a straight line through the origin. What does the gradient allow them to find?",
+   "opts": [
+    "The value of g, using g = 4π² ÷ gradient",
+    "The value of L, using L = 4π² ÷ gradient",
+    "The mass of the bob, using the gradient",
+    "The amplitude of the swing, using the gradient"
+   ],
+   "why": "Squaring both sides gives T² = (4π²/g)L, so the gradient equals 4π²/g and g can be found by rearranging. L is plotted on the x-axis, so it varies along the line and is not a single value from the gradient. Mass and amplitude do not appear in the relationship at all.",
+   "clue": "Square both sides of T = 2π√(L/g) and compare it with y = mx."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student measures the period T of a pendulum at several lengths L and plots T against L. The points form a curve. Which change would be expected to give a straight line?",
+   "opts": [
+    "Plot T² on the vertical axis against L",
+    "Plot L on the vertical axis against T",
+    "Plot T against L with a larger scale",
+    "Draw a line of best fit through the curve"
+   ],
+   "why": "Since T² = (4π²/g)L, plotting T² against L gives a straight line. Swapping the axes leaves the curve, as L is proportional to T², not T. A bigger scale or a straight line drawn through curved data does not change the relationship.",
+   "clue": "Which transformed quantity is proportional to L?"
+  }
+ },
+ "cleared_by": "auto"
+}

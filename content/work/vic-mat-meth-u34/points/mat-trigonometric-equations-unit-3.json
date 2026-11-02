@@ -1,0 +1,204 @@
+{
+ "id": "mat-trigonometric-equations-unit-3",
+ "title": "Trigonometric equations in Unit 3",
+ "brief": "83f5ad3d3022",
+ "shortlist": [
+  [
+   "mat-solving-trigonometric-equations",
+   0.477
+  ],
+  [
+   "mat-simultaneous-linear-equations",
+   0.233
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.232
+  ],
+  [
+   "mat-angles-any-size",
+   0.228
+  ],
+  [
+   "mat-transforming-trigonometric-graphs",
+   0.225
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-02T06:23:28Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.00557,
+  "check": 0.01662,
+  "fix": 0.03299
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card solves only plain sin x, cos x and tan x equations in degrees, while the new point needs solving with transformed arguments such as sin(2x − π/3) over a domain that must first be adjusted for the inner function, which is a new step, and the Victoria course works mainly in radians.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Trigonometric equations",
+  "card": [
+   "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle: the acute angle with the same positive value of k. Ignore the sign of k at this step.",
+   "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the other two quadrants where the function is negative.",
+   "Add the period to find more solutions: 2π for sin and cos, π for tan. Keep every solution that lies in the given domain.",
+   "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. The reference angle is π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+  ],
+  "remember": "Reference angle, then quadrants, then add the period, and stretch the domain first if x is transformed.",
+  "a": {
+   "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
+   "opts": [
+    "π/3 and 5π/3",
+    "π/3 and 2π/3",
+    "π/6 and 11π/6",
+    "π/3 and 4π/3"
+   ],
+   "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+   "clue": "Cos is positive in which two quadrants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 2π for x, which is too wide here.",
+   "clue": "Change the domain for 2x before you solve."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "π/3 and 5π/3",
+   "also_right": []
+  },
+  "b": {
+   "best": "2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The reference angle is defined as 'the acute angle with the same positive value of k', which is awkward: it should be the acute angle whose sin, cos or tan equals |k|. It is also not acute when k = 0 or |k| = 1 for sin and cos, where the angle is 0 or π/2."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's maths and both questions check out: a has π/3 and 5π/3, b has 2 solutions. The only issue is the clumsy definition of the reference angle on the card, which is also not acute when k = 0 or |k| = 1."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The reference angle is defined as 'the acute angle with the same positive value of k', which is awkward: it should be the acute angle whose sin, cos or tan equals |k|. It is also not acute when k = 0 or |k| = 1 for sin and cos, where the angle is 0 or π/2."
+ ],
+ "proposal": {
+  "title": "Trigonometric equations",
+  "card": [
+   "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle α. It is the angle from 0 to π/2 whose sin, cos or tan equals |k|, so ignore the sign of k at this step.",
+   "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the two quadrants where the function is negative.",
+   "Quadrant 1 gives α, quadrant 2 gives π − α, quadrant 3 gives π + α and quadrant 4 gives 2π − α. Add the period for more solutions: 2π for sin and cos, π for tan. Keep every solution in the domain.",
+   "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. Here α = π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+  ],
+  "remember": "Reference angle, then quadrants, then add the period, and change the domain first if x is transformed.",
+  "a": {
+   "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
+   "opts": [
+    "π/3 and 5π/3",
+    "π/3 and 2π/3",
+    "π/6 and 11π/6",
+    "π/3 and 4π/3"
+   ],
+   "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+   "clue": "Cos is positive in which two quadrants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 4π for 2x, which is too wide here.",
+   "clue": "Change the domain for 2x before you solve."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The reference angle is defined as 'the acute angle with the same positive value of k', which is awkward: it should be the acute angle whose sin, cos or tan equals |k|. It is also not acute when k = 0 or |k| = 1 for sin and cos, where the angle is 0 or π/2."
+   }
+  ],
+  "flags": [
+   "Card, wording: The reference angle is defined as 'the acute angle with the same positive value of k', which is awkward: it should be the acute angle whose sin, cos or tan equals |k|. It is also not acute when k = 0 or |k| = 1 for sin and cos, where the angle is 0 or π/2."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Trigonometric equations",
+  "card": [
+   "To solve sin(x) = k, cos(x) = k or tan(x) = k, first find the reference angle α. It is the angle from 0 to π/2 whose sin, cos or tan equals |k|, so ignore the sign of k at this step.",
+   "Use the signs in the quadrants to place the solutions. Sin is positive in quadrants 1 and 2, cos in 1 and 4, tan in 1 and 3. For a negative k, use the two quadrants where the function is negative.",
+   "Quadrant 1 gives α, quadrant 2 gives π − α, quadrant 3 gives π + α and quadrant 4 gives 2π − α. Add the period for more solutions: 2π for sin and cos, π for tan. Keep every solution in the domain.",
+   "For sin(2x) = 1/2 on 0 ≤ x ≤ 2π, solve for 2x on 0 ≤ 2x ≤ 4π. Here α = π/6, so 2x = π/6, 5π/6, 13π/6, 17π/6. Divide by 2: x = π/12, 5π/12, 13π/12, 17π/12."
+  ],
+  "remember": "Reference angle, then quadrants, then add the period, and change the domain first if x is transformed.",
+  "a": {
+   "q": "Solve 2cos(x) = 1 for 0 ≤ x ≤ 2π. What are the solutions?",
+   "opts": [
+    "π/3 and 5π/3",
+    "π/3 and 2π/3",
+    "π/6 and 11π/6",
+    "π/3 and 4π/3"
+   ],
+   "why": "cos(x) = 1/2, so the reference angle is π/3. Cos is positive in quadrants 1 and 4, giving π/3 and 2π − π/3 = 5π/3. Using π/3 and 2π/3 is tempting, but that is the pair for sin, where quadrants 1 and 2 are positive.",
+   "clue": "Cos is positive in which two quadrants?"
+  },
+  "b": {
+   "d": 3,
+   "q": "How many solutions does sin(2x) = 1/2 have for 0 ≤ x ≤ π?",
+   "opts": [
+    "2",
+    "1",
+    "4",
+    "3"
+   ],
+   "why": "Let u = 2x, so 0 ≤ u ≤ 2π. Then sin(u) = 1/2 gives u = π/6 and 5π/6, so x = π/12 and 5π/12. Giving 4 solutions comes from using the domain 0 to 4π for 2x, which is too wide here.",
+   "clue": "Change the domain for 2x before you solve."
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -3,7 +3,7 @@
  "title": "Measuring physical activity",
  "brief": "099f4ff7b8a1",
  "shortlist": [],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -11,7 +11,8 @@
   "2026-11-01T08:24:34Z write: done",
   "2026-11-01T08:33:52Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:24:20Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "write": 3,
@@ -204,6 +205,53 @@
    "Question a, wording: The question asks which method suits and what its limit is, but the options join the method to the limit with 'because', as if the limit were the reason the method suits. 'Questionnaire, because students may overstate their activity' reads illogically. Separate the two parts, for example 'Questionnaire; limit: students may overstate their activity'.",
    "Question b, wording: Same problem as question a. 'Heart rate monitor, as heart rate can rise from heat' presents the limit as the reason for the choice. Separate the method from the limit in each option.",
    "Card, other: The chapter point lists accelerometers as a measurement method, but the card covers only questionnaires, diaries, pedometers and heart rate monitors. Students will not learn this method from the point."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Measuring physical activity",
+  "card": [
+   [
+    "Self-report",
+    "questionnaires ask about past activity and are a cheap way to survey large groups, while diaries record activity as it happens but take effort to keep. Both rely on memory and honesty, so people may overstate how active they were."
+   ],
+   [
+    "Pedometer",
+    "a cheap, simple device, often worn at the hip, that counts steps. It does not show intensity and misses activities such as cycling or swimming."
+   ],
+   [
+    "Accelerometer",
+    "a small device that measures movement in several directions, so it can show both the amount and the intensity of movement. It is more accurate than a pedometer but costs more."
+   ],
+   [
+    "Heart rate monitor",
+    "a device that records heart rate, which shows how hard the body is working. It is useful for intensity, but heart rate can also rise from stress, heat or caffeine."
+   ]
+  ],
+  "remember": "Self-reports are cheap but rely on memory and honesty. Devices record data directly, but each has its own limits.",
+  "a": {
+   "q": "A researcher wants to measure the activity of 2000 students cheaply. Which method suits this best, and what is its main limit?",
+   "opts": [
+    "Questionnaire; limit: students may overstate activity",
+    "Accelerometer; limit: students may overstate activity",
+    "Questionnaire; limit: it cannot be used with large groups",
+    "Heart rate monitor; limit: it only counts steps taken"
+   ],
+   "why": "A questionnaire is cheap and suits large groups, but it relies on what students remember and choose to report. An accelerometer records movement directly, so overstating is not its limit, and its higher cost makes it a poor fit for 2000 students.",
+   "clue": "Think about cost and group size, then about who supplies the data."
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam wants to know how hard his body worked during a netball game, not just how much he moved. Which method best shows this, and what limit applies?",
+   "opts": [
+    "Heart rate monitor; limit: heat can also raise heart rate",
+    "Pedometer; limit: it misses cycling and swimming",
+    "Diary; limit: it takes effort to keep up each day",
+    "Heart rate monitor; limit: it only counts steps taken"
+   ],
+   "why": "A heart rate monitor shows how hard the body is working, and its limit is that heart rate can also rise from heat, stress or caffeine. The pedometer limit is real, but a pedometer only counts steps and cannot show how hard Sam worked.",
+   "clue": "Which device tracks the body's effort, and what else can change its reading?"
+  }
+ },
+ "cleared_by": "owner"
 }

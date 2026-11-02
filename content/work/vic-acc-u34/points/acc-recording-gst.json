@@ -1,0 +1,138 @@
+{
+ "id": "acc-recording-gst",
+ "title": "Recording GST",
+ "brief": "7083c04e4f41",
+ "shortlist": [
+  [
+   "mat-gst",
+   0.341
+  ],
+  [
+   "acc-cost-price-inventory",
+   0.252
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00534,
+  "check": 0.01265
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches recording GST collected and paid through a GST Clearing account; the maths point covers calculating GST and the inventory point covers cost price, so both are related but different ideas.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Recording GST",
+  "card": [
+   "GST is a 10% tax added to most goods and services in Australia. A business collects it from customers and pays it on its own purchases.",
+   [
+    "GST collected",
+    "GST charged on sales. It is owed to the tax office, so it is recorded as a credit in the GST Clearing account."
+   ],
+   [
+    "GST paid",
+    "GST paid on purchases. The business can claim it back, so it is recorded as a debit in the GST Clearing account."
+   ],
+   "If the credits (GST collected) are larger than the debits (GST paid), the account has a credit balance. The business owes that amount to the tax office. If the debits are larger, the tax office owes the business a refund."
+  ],
+  "remember": "GST Clearing: credit for GST collected, debit for GST paid. The balance shows who owes whom.",
+  "a": {
+   "q": "Priya's Cycles sells a bike for $1100 including $100 GST. How is the $100 GST recorded in the GST Clearing account?",
+   "opts": [
+    "Credit, because it is owed to the tax office",
+    "Debit, because it is owed to the tax office",
+    "Credit, because it can be claimed back",
+    "Debit, because it can be claimed back"
+   ],
+   "why": "The $100 was collected from the customer on a sale, and the business must pass it on to the tax office. Money owed is recorded as a credit. A debit is for GST paid on purchases, which can be claimed back.",
+   "clue": "Was the GST charged on a sale or paid on a purchase?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In one quarter, Tom's Timber has $6000 in GST collected and $7500 in GST paid. What does the GST Clearing account show?",
+   "opts": [
+    "A debit balance of $1500, so a refund is due to Tom",
+    "A credit balance of $1500, so Tom owes the tax office",
+    "A debit balance of $6000, so a refund is due to Tom",
+    "A credit balance of $7500, so Tom owes the tax office"
+   ],
+   "why": "GST paid ($7500) is debited and GST collected ($6000) is credited. The debits are larger by $1500, so the account has a debit balance and the tax office owes Tom a refund. A credit balance would mean Tom had collected more than he paid.",
+   "clue": "Subtract the smaller total from the larger, then see which side is larger."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Credit, because it is owed to the tax office",
+   "also_right": []
+  },
+  "b": {
+   "best": "A debit balance of $1500, so a refund is due to Tom",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Recording GST",
+  "card": [
+   "GST is a 10% tax added to most goods and services in Australia. A business collects it from customers and pays it on its own purchases.",
+   [
+    "GST collected",
+    "GST charged on sales. It is owed to the tax office, so it is recorded as a credit in the GST Clearing account."
+   ],
+   [
+    "GST paid",
+    "GST paid on purchases. The business can claim it back, so it is recorded as a debit in the GST Clearing account."
+   ],
+   "If the credits (GST collected) are larger than the debits (GST paid), the account has a credit balance. The business owes that amount to the tax office. If the debits are larger, the tax office owes the business a refund."
+  ],
+  "remember": "GST Clearing: credit for GST collected, debit for GST paid. The balance shows who owes whom.",
+  "a": {
+   "q": "Priya's Cycles sells a bike for $1100 including $100 GST. How is the $100 GST recorded in the GST Clearing account?",
+   "opts": [
+    "Credit, because it is owed to the tax office",
+    "Debit, because it is owed to the tax office",
+    "Credit, because it can be claimed back",
+    "Debit, because it can be claimed back"
+   ],
+   "why": "The $100 was collected from the customer on a sale, and the business must pass it on to the tax office. Money owed is recorded as a credit. A debit is for GST paid on purchases, which can be claimed back.",
+   "clue": "Was the GST charged on a sale or paid on a purchase?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In one quarter, Tom's Timber has $6000 in GST collected and $7500 in GST paid. What does the GST Clearing account show?",
+   "opts": [
+    "A debit balance of $1500, so a refund is due to Tom",
+    "A credit balance of $1500, so Tom owes the tax office",
+    "A debit balance of $6000, so a refund is due to Tom",
+    "A credit balance of $7500, so Tom owes the tax office"
+   ],
+   "why": "GST paid ($7500) is debited and GST collected ($6000) is credited. The debits are larger by $1500, so the account has a debit balance and the tax office owes Tom a refund. A credit balance would mean Tom had collected more than he paid.",
+   "clue": "Subtract the smaller total from the larger, then see which side is larger."
+  }
+ },
+ "cleared_by": "checker"
+}

@@ -18,7 +18,19 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: The human body in motion",
       "chapters": [
-        {"id": "vic-pe-u12-1-1", "title": "Bones, joints and muscles", "check": "checked", "points": []},
+        {
+          "id": "vic-pe-u12-1-1",
+          "title": "Bones, joints and muscles",
+          "check": "checked",
+          "points": [
+            "pe-functions-skeleton",
+            "pe-types-bones",
+            "pe-types-joints",
+            "pe-synovial-joints",
+            "pe-movement-terms",
+            "pe-major-muscles"
+          ]
+        },
         {
           "id": "vic-pe-u12-1-2-2",
           "title": "How muscles produce movement",
@@ -37,15 +49,53 @@ MADE_COURSES.push({
           "check": "checked",
           "points": ["pe-musculoskeletal-injuries", "pe-preventing-injury", "pe-physical-aids"]
         },
-        {"id": "vic-pe-u12-1-2", "title": "The cardiovascular system", "check": "checked", "points": []},
-        {"id": "vic-pe-u12-1-5", "title": "The respiratory system", "check": "checked", "points": []},
-        {"id": "vic-pe-u12-1-6", "title": "Boosting performance", "check": "checked", "points": []}
+        {
+          "id": "vic-pe-u12-1-2",
+          "title": "The cardiovascular system",
+          "check": "checked",
+          "points": [
+            "pe-structure-heart",
+            "hms-cardiovascular-system",
+            "pe-components-blood",
+            "pe-heart-rate-stroke-volume",
+            "pe-acute-responses-exercise",
+            "pe-thermoregulation"
+          ]
+        },
+        {
+          "id": "vic-pe-u12-1-5",
+          "title": "The respiratory system",
+          "check": "checked",
+          "points": ["hms-respiratory-system", "pe-ventilation", "pe-gas-exchange", "pe-benefits-regular-aerobic-exercise"]
+        },
+        {
+          "id": "vic-pe-u12-1-6",
+          "title": "Boosting performance",
+          "check": "checked",
+          "points": [
+            "pe-substances-boost-performance",
+            "pe-boosting-cardiorespiratory-system",
+            "pe-ethics-boosting-performance"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Physical activity, sport, exercise and society",
       "chapters": [
-        {"id": "vic-pe-u12-2-1", "title": "Physical activity and health", "check": "checked", "points": []},
+        {
+          "id": "vic-pe-u12-2-1",
+          "title": "Physical activity and health",
+          "check": "checked",
+          "points": [
+            "pe-physical-activity-exercise-sport",
+            "pe-sedentary-behaviour",
+            "pe-physical-activity-guidelines",
+            "pe-benefits-physical-activity",
+            "pe-activity-levels-trends",
+            "pe-measuring-physical-activity"
+          ]
+        },
         {
           "id": "vic-pe-u12-2-2-2",
           "title": "Promoting physical activity",
@@ -73,7 +123,14 @@ MADE_COURSES.push({
           "id": "vic-pe-u12-2-5",
           "title": "Interpersonal and structural issues in sport",
           "check": "checked",
-          "points": []
+          "points": [
+            "pe-living-city-or-country",
+            "pe-coaching",
+            "pe-technology-sport",
+            "pe-media-sport",
+            "pe-inclusion-sport",
+            "pe-women-sport"
+          ]
         }
       ]
     }

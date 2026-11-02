@@ -1,0 +1,280 @@
+{
+ "id": "bus-government-business-enterprises",
+ "title": "Government business enterprises",
+ "brief": "96514614c21c",
+ "shortlist": [
+  [
+   "bus-government-enterprises",
+   0.625
+  ],
+  [
+   "bus-legal-business-structures",
+   0.41
+  ],
+  [
+   "eco-traditional-view-business-government",
+   0.292
+  ],
+  [
+   "bus-business",
+   0.255
+  ],
+  [
+   "bus-stakeholders-workplace",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 may adapt bus-government-enterprises, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:58Z match: Claude Opus 5.5 says adapt bus-government-enterprises (2 changes)",
+  "2026-11-01T15:05:24Z adapt: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check was not highly sure; the fresh check found a problem)",
+  "2026-11-02T06:18:17Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "confirm": 0.01144,
+  "adapt": 0.00684,
+  "check": 0.017,
+  "fix": 0.03206,
+  "recheck": 0.02301
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-government-enterprises",
+  "changes": [
+   "Use the term 'government business enterprise' (GBE), which the VCE Business Management syllabus uses, in place of 'government enterprise' throughout the card and its questions."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea at a suitable depth, but it uses the term 'government enterprise' where the VCE syllabus says 'government business enterprise', and its profit wording is softer than the brief's.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "bus-government-enterprises",
+  "changes": [
+   "Use the VCE term 'government business enterprise' (GBE) instead of 'government enterprise' throughout the card, remember line and questions.",
+   "Optionally make the water example in question b Victorian, for example a business owned by the Victorian Government, to suit the local course."
+  ],
+  "sure": "high",
+  "reason": "The NSW point teaches the same idea at a suitable depth, including Australia Post and the role of profit, but the VCE Study Design calls these 'government business enterprises', so the term needs changing.",
+  "model": "claude-opus-5-5"
+ },
+ "adapt": {
+  "from": "bus-government-enterprises",
+  "changes": [
+   "Use the VCE term 'government business enterprise' (GBE) instead of 'government enterprise' throughout the card, remember line and questions.",
+   "Optionally make the water example in question b Victorian, for example a business owned by the Victorian Government, to suit the local course."
+  ],
+  "by": "Claude Opus 5.5",
+  "parts": [
+   "title",
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "a.opt1",
+   "a.opt2",
+   "a.opt3",
+   "a.opt4",
+   "a.why",
+   "a.clue",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Government business enterprises",
+  "card": [
+   "A government business enterprise (GBE) is a business owned by a government. This can be the federal, a state or a local government. Australia Post, owned by the Australian Government, is one example.",
+   "A GBE exists to provide a service the government wants provided, such as mail, water or public transport. It often serves everyone, even places where a private business might not make money.",
+   "Many GBEs also aim to make a profit. Making a profit does not stop a business being a GBE. The profit can be paid back to the government as owner.",
+   "Ownership is the test. A public company is owned by shareholders, not the government, even though its name says public."
+  ],
+  "remember": "Who owns it decides it: a GBE belongs to a government, even when it makes a profit.",
+  "a": {
+   "q": "What is the main feature that makes a business a GBE?",
+   "opts": [
+    "It is owned by a government",
+    "Its shares are sold to the public",
+    "It never aims to make a profit",
+    "It serves customers across the whole country"
+   ],
+   "why": "A GBE is defined by who owns it: a government. Selling shares to the public describes a public company, which is owned by shareholders, not the government.",
+   "clue": "Think about who the owner is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Riverlands Water is owned by the Victorian Government. It supplies water to every town in its region and pays a profit to the government each year. How is it best described?",
+   "opts": [
+    "A GBE that also aims to make a profit",
+    "A public company, because it serves the public",
+    "Not a GBE, because it makes a profit",
+    "A charity, because it serves every town in the region"
+   ],
+   "why": "The Victorian Government owns it, so it is a GBE. It provides a service the government wants provided and also makes a profit, which many GBEs do. Earning a profit does not change who owns it.",
+   "clue": "Does making a profit change who owns the business?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is owned by a government",
+   "also_right": []
+  },
+  "b": {
+   "best": "A GBE that also aims to make a profit",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The last bullet explains what a public company is ('owned by shareholders'). That term belongs to point 1 (Types of business). It should only be mentioned here, not defined, and the why for (a) repeats the explanation."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about who the owner is' points straight at the only option about ownership, so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. The card defines public companies, which belong to the Types of business point, and the clue for question a gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The last bullet explains what a public company is ('owned by shareholders'). That term belongs to point 1 (Types of business). It should only be mentioned here, not defined, and the why for (a) repeats the explanation.",
+  "Question a, other: The clue 'Think about who the owner is' points straight at the only option about ownership, so a student can pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Government business enterprises",
+  "card": [
+   "A government business enterprise (GBE) is a business owned by a government. This can be the federal, a state or a local government. Australia Post, owned by the Australian Government, is one example.",
+   "A GBE exists to provide a service the government wants provided, such as mail, water or public transport. It often serves everyone, even places where a private business might not make money.",
+   "Many GBEs also aim to make a profit. Making a profit does not stop a business being a GBE. The profit can be paid back to the government as owner.",
+   "Ownership is the test. Serving every town or earning a profit does not decide it. A business is a GBE because a government owns it."
+  ],
+  "remember": "Government ownership makes a GBE. Profit and who it serves do not decide it.",
+  "a": {
+   "q": "Which statement about GBEs is correct?",
+   "opts": [
+    "A GBE can make a profit and still be a GBE",
+    "A GBE must not aim to make any profit at all",
+    "A GBE is owned by the customers it serves",
+    "A GBE can only be owned by the federal government"
+   ],
+   "why": "Many GBEs aim to make a profit, and the profit can be paid to the government that owns them. A GBE can be owned by the federal, a state or a local government, so it is not limited to the federal level.",
+   "clue": "Check what the card says about profit and about levels of government."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ashby Valley Water supplies water to every town in its region and pays a profit each year. Which fact shows that it is a GBE?",
+   "opts": [
+    "The Victorian Government owns the business",
+    "It supplies water to every town in its region",
+    "It pays a profit to its owner each year",
+    "It provides an essential service to the public"
+   ],
+   "why": "Ownership is the test, so the business is a GBE because the Victorian Government owns it. Serving every town is common for GBEs, but it does not decide what the business is. Making a profit does not decide it either.",
+   "clue": "Which fact is the test, rather than something GBEs often do?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "kept",
+  "why": [
+   "the fresh check was not highly sure",
+   "the fresh check found a problem"
+  ],
+  "check": {
+   "a": {
+    "best": "A GBE can make a profit and still be a GBE",
+    "also_right": []
+   },
+   "b": {
+    "best": "The Victorian Government owns the business",
+    "also_right": []
+   },
+   "problems": [
+    {
+     "part": "card",
+     "kind": "fact",
+     "detail": "The card says only 'many' GBEs aim to make a profit and that government ownership alone is the test. This contradicts the chapter's definition (point 3) and the VCE definition, under which a GBE is government-owned, sells goods or services, and aims to make a profit while serving the public. Ownership alone would make a government department a GBE."
+    },
+    {
+     "part": "remember",
+     "kind": "fact",
+     "detail": "'Profit and who it serves do not decide it' contradicts the chapter definition, which makes the profit aim and public service part of what a GBE is. Students could wrongly treat any government-owned body as a GBE."
+    },
+    {
+     "part": "b",
+     "kind": "other",
+     "detail": "The why says making a profit 'does not decide' GBE status. This repeats the card's departure from the VCE definition, where the profit aim helps separate a GBE from a non-trading government body."
+    }
+   ],
+   "sure": "medium",
+   "sensitive": "none",
+   "summary": "Both questions have a clear, correct answer. However, the card and remember line say ownership alone makes a GBE and that profit does not decide it, which contradicts the chapter and VCE definition of a GBE as a government-owned business that aims to make a profit while serving the public."
+  },
+  "flags": [
+   "Card, fact: The card says only 'many' GBEs aim to make a profit and that government ownership alone is the test. This contradicts the chapter's definition (point 3) and the VCE definition, under which a GBE is government-owned, sells goods or services, and aims to make a profit while serving the public. Ownership alone would make a government department a GBE.",
+   "Remember, fact: 'Profit and who it serves do not decide it' contradicts the chapter definition, which makes the profit aim and public service part of what a GBE is. Students could wrongly treat any government-owned body as a GBE.",
+   "Question b, other: The why says making a profit 'does not decide' GBE status. This repeats the card's departure from the VCE definition, where the profit aim helps separate a GBE from a non-trading government body."
+  ]
+ },
+ "final": {
+  "title": "Government business enterprises",
+  "card": [
+   "A government business enterprise (GBE) is a business owned by a government. This can be the federal, a state or a local government. Australia Post, owned by the Australian Government, is one example.",
+   "A GBE exists to provide a service the government wants provided, such as mail, water or public transport. It often serves everyone, even places where a private business might not make money.",
+   "Many GBEs also aim to make a profit. Making a profit does not stop a business being a GBE. The profit can be paid back to the government as owner.",
+   "Ownership is the test. Serving every town or earning a profit does not decide it. A business is a GBE because a government owns it."
+  ],
+  "remember": "Government ownership makes a GBE. Profit and who it serves do not decide it.",
+  "a": {
+   "q": "Which statement about GBEs is correct?",
+   "opts": [
+    "A GBE can make a profit and still be a GBE",
+    "A GBE must not aim to make any profit at all",
+    "A GBE is owned by the customers it serves",
+    "A GBE can only be owned by the federal government"
+   ],
+   "why": "Many GBEs aim to make a profit, and the profit can be paid to the government that owns them. A GBE can be owned by the federal, a state or a local government, so it is not limited to the federal level.",
+   "clue": "Check what the card says about profit and about levels of government."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ashby Valley Water supplies water to every town in its region and pays a profit each year. Which fact shows that it is a GBE?",
+   "opts": [
+    "The Victorian Government owns the business",
+    "It supplies water to every town in its region",
+    "It pays a profit to its owner each year",
+    "It provides an essential service to the public"
+   ],
+   "why": "Ownership is the test, so the business is a GBE because the Victorian Government owns it. Serving every town is common for GBEs, but it does not decide what the business is. Making a profit does not decide it either.",
+   "clue": "Which fact is the test, rather than something GBEs often do?"
+  }
+ },
+ "cleared_by": "owner"
+}

@@ -1,0 +1,225 @@
+{
+ "id": "chem-esters-amides",
+ "title": "Esters and amides",
+ "brief": "bdda36e4ffba",
+ "shortlist": [
+  [
+   "chem-esterification",
+   0.533
+  ],
+  [
+   "chem-amines-amides",
+   0.397
+  ],
+  [
+   "chem-aldehydes-ketones-carboxylic-acids",
+   0.215
+  ],
+  [
+   "chem-strong-weak-acids",
+   0.201
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00513,
+  "check": 0.01634,
+  "fix": 0.02853
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point also requires ester hydrolysis, which none of the bank cards teach, and the esterification and amide cards each cover only one half of the brief, so adapting them would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Esters and amides",
+  "card": [
+   [
+    "Ester",
+    "An alcohol reacts with a carboxylic acid to form an ester and water. This is a condensation reaction, as two molecules join and lose water. The ester link is -COO-."
+   ],
+   [
+    "Hydrolysis",
+    "An ester can be split by water back into an alcohol and a carboxylic acid. This reaction is called hydrolysis, and it is the reverse of ester formation. An acid catalyst is often used."
+   ],
+   [
+    "Amide",
+    "An amine reacts with a carboxylic acid to form an amide and water. The amide link is -CONH-, where the nitrogen comes from the amine."
+   ],
+   "Both reactions join two molecules and release water. The alcohol or amine supplies the -OH or -NH group, and the carboxylic acid supplies the C=O part of the new link."
+  ],
+  "remember": "Alcohol + carboxylic acid gives an ester. Amine + carboxylic acid gives an amide. Each also gives water.",
+  "a": {
+   "q": "Ethanol reacts with propanoic acid with an acid catalyst. What are the products?",
+   "opts": [
+    "An ester and water",
+    "An amide and water",
+    "An ester and hydrogen",
+    "An amide and ammonia"
+   ],
+   "why": "An alcohol and a carboxylic acid form an ester and water. An amide needs an amine, and ethanol is an alcohol with no nitrogen, so no amide can form.",
+   "clue": "Look at what type of compound ethanol is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methylamine, CH3NH2, reacts with ethanoic acid. Which statement about the organic product is correct?",
+   "opts": [
+    "It has a -CONH- link and water is also made",
+    "It has a -COO- link and water is also made",
+    "It has a -CONH- link and water is used up",
+    "It has a -COO- link and an alcohol is also made"
+   ],
+   "why": "An amine and a carboxylic acid form an amide, which has the -CONH- link, and water is released. The -COO- link is tempting but belongs to esters, which need an alcohol rather than an amine.",
+   "clue": "Which functional group does the nitrogen end up in?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An ester and water",
+   "also_right": []
+  },
+  "b": {
+   "best": "It has a -CONH- link and water is also made",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"The alcohol or amine supplies the -OH or -NH group\" can be read as the alcohol losing its -OH. In esterification the carboxylic acid loses the -OH and the alcohol loses only its H. The alcohol's O becomes part of the -COO- link. The line should say the alcohol supplies the O (and the amine the N) of the new link, and the acid supplies the C=O and loses -OH."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The questions and answers are sound. One card line is misleading: it suggests the alcohol supplies the -OH lost as water, when the -OH lost comes from the carboxylic acid and the alcohol's O stays in the ester link."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"The alcohol or amine supplies the -OH or -NH group\" can be read as the alcohol losing its -OH. In esterification the carboxylic acid loses the -OH and the alcohol loses only its H. The alcohol's O becomes part of the -COO- link. The line should say the alcohol supplies the O (and the amine the N) of the new link, and the acid supplies the C=O and loses -OH."
+ ],
+ "proposal": {
+  "title": "Esters and amides",
+  "card": [
+   [
+    "Ester",
+    "An alcohol and a carboxylic acid join to form an ester and water, usually with an acid catalyst. Joining two molecules with the loss of water is called a condensation reaction. The ester link is -COO-."
+   ],
+   [
+    "Hydrolysis",
+    "Water can split an ester back into an alcohol and a carboxylic acid. This reaction is called hydrolysis, and it is the reverse of ester formation. An acid catalyst is often used."
+   ],
+   [
+    "Amide",
+    "An amine and a carboxylic acid join to form an amide and water. The amide link is -CONH-, where the nitrogen comes from the amine."
+   ],
+   "In both reactions, the carboxylic acid loses its -OH and supplies the C=O of the new link. The alcohol or amine loses an H, and supplies the O or the N of the link."
+  ],
+  "remember": "Alcohol + carboxylic acid gives an ester. Amine + carboxylic acid gives an amide. Each also gives water.",
+  "a": {
+   "q": "Ethanol reacts with propanoic acid with an acid catalyst. What are the products?",
+   "opts": [
+    "An ester and water",
+    "An amide and water",
+    "An ester and hydrogen",
+    "An amide and ammonia"
+   ],
+   "why": "An alcohol and a carboxylic acid form an ester and water. An amide needs an amine, and ethanol is an alcohol with no nitrogen, so no amide can form.",
+   "clue": "Look at what type of compound ethanol is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methylamine, CH3NH2, reacts with ethanoic acid. Which statement about the organic product is correct?",
+   "opts": [
+    "It has a -CONH- link and water is also made",
+    "It has a -COO- link and water is also made",
+    "It has a -CONH- link and water is used up",
+    "It has a -COO- link and an alcohol is also made"
+   ],
+   "why": "An amine and a carboxylic acid form an amide, which has the -CONH- link, and water is released. The -COO- link is tempting but belongs to esters, which need an alcohol rather than an amine.",
+   "clue": "Which functional group does the nitrogen end up in?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"The alcohol or amine supplies the -OH or -NH group\" can be read as the alcohol losing its -OH. In esterification the carboxylic acid loses the -OH and the alcohol loses only its H. The alcohol's O becomes part of the -COO- link. The line should say the alcohol supplies the O (and the amine the N) of the new link, and the acid supplies the C=O and loses -OH."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"The alcohol or amine supplies the -OH or -NH group\" can be read as the alcohol losing its -OH. In esterification the carboxylic acid loses the -OH and the alcohol loses only its H. The alcohol's O becomes part of the -COO- link. The line should say the alcohol supplies the O (and the amine the N) of the new link, and the acid supplies the C=O and loses -OH."
+  ]
+ },
+ "final": {
+  "title": "Esters and amides",
+  "card": [
+   [
+    "Ester",
+    "An alcohol and a carboxylic acid join to form an ester and water, usually with an acid catalyst. Joining two molecules with the loss of water is called a condensation reaction. The ester link is -COO-."
+   ],
+   [
+    "Hydrolysis",
+    "Water can split an ester back into an alcohol and a carboxylic acid. This reaction is called hydrolysis, and it is the reverse of ester formation. An acid catalyst is often used."
+   ],
+   [
+    "Amide",
+    "An amine and a carboxylic acid join to form an amide and water. The amide link is -CONH-, where the nitrogen comes from the amine."
+   ],
+   "In both reactions, the carboxylic acid loses its -OH and supplies the C=O of the new link. The alcohol or amine loses an H, and supplies the O or the N of the link."
+  ],
+  "remember": "Alcohol + carboxylic acid gives an ester. Amine + carboxylic acid gives an amide. Each also gives water.",
+  "a": {
+   "q": "Ethanol reacts with propanoic acid with an acid catalyst. What are the products?",
+   "opts": [
+    "An ester and water",
+    "An amide and water",
+    "An ester and hydrogen",
+    "An amide and ammonia"
+   ],
+   "why": "An alcohol and a carboxylic acid form an ester and water. An amide needs an amine, and ethanol is an alcohol with no nitrogen, so no amide can form.",
+   "clue": "Look at what type of compound ethanol is."
+  },
+  "b": {
+   "d": 3,
+   "q": "Methylamine, CH3NH2, reacts with ethanoic acid. Which statement about the organic product is correct?",
+   "opts": [
+    "It has a -CONH- link and water is also made",
+    "It has a -COO- link and water is also made",
+    "It has a -CONH- link and water is used up",
+    "It has a -COO- link and an alcohol is also made"
+   ],
+   "why": "An amine and a carboxylic acid form an amide, which has the -CONH- link, and water is released. The -COO- link is tempting but belongs to esters, which need an alcohol rather than an amine.",
+   "clue": "Which functional group does the nitrogen end up in?"
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,124 @@
+{
+ "id": "phys-peak-rms-values",
+ "title": "Peak and RMS values",
+ "brief": "a797afc49041",
+ "shortlist": [
+  [
+   "phys-transformers",
+   0.334
+  ],
+  [
+   "phys-back-emf-motors",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00597,
+  "check": 0.00953
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches peak or RMS values of an AC supply; the transformer and back emf cards only mention AC in passing, so no bank point covers the idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Peak and RMS values",
+  "card": [
+   "An AC voltage swings between a positive and a negative peak. The peak voltage, Vpeak, is the largest value it reaches.",
+   "The RMS voltage is the DC voltage that would give the same power in a resistor. For a sinusoidal supply, Vrms = Vpeak ÷ √2, which is about 0.71 × Vpeak.",
+   "The RMS value is smaller than the peak, because the AC voltage is at its peak only for an instant in each cycle.",
+   "The same rule works for current: Irms = Ipeak ÷ √2. Mains voltage is quoted as an RMS value."
+  ],
+  "remember": "RMS is the DC equivalent for power: peak divided by √2.",
+  "a": {
+   "q": "An AC supply has a peak voltage of 20 V. About what DC voltage would give the same power in a resistor?",
+   "opts": [
+    "14 V",
+    "28 V",
+    "10 V",
+    "20 V"
+   ],
+   "why": "The equal-power DC voltage is the RMS value: 20 ÷ √2 ≈ 14 V. Multiplying by √2 gives 28 V, which reverses the relationship, as the RMS value is below the peak.",
+   "clue": "Find the RMS value."
+  },
+  "b": {
+   "d": 3,
+   "q": "A workshop in Ballarat has an AC supply with an RMS voltage of 230 V. What is the peak voltage of this supply, to the nearest volt?",
+   "opts": [
+    "325 V",
+    "163 V",
+    "230 V",
+    "460 V"
+   ],
+   "why": "Vpeak = Vrms × √2 = 230 × 1.414 ≈ 325 V. Dividing by √2 gives 163 V, but the quoted 230 V is already the RMS value, so the peak must be larger.",
+   "clue": "The quoted mains value is RMS, and the peak is higher."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "14 V",
+   "also_right": []
+  },
+  "b": {
+   "best": "325 V",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card, the remember line and both answers check out: 20 ÷ √2 ≈ 14 V, 230 × √2 ≈ 325 V, and Australian mains is quoted as an RMS value."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Peak and RMS values",
+  "card": [
+   "An AC voltage swings between a positive and a negative peak. The peak voltage, Vpeak, is the largest value it reaches.",
+   "The RMS voltage is the DC voltage that would give the same power in a resistor. For a sinusoidal supply, Vrms = Vpeak ÷ √2, which is about 0.71 × Vpeak.",
+   "The RMS value is smaller than the peak, because the AC voltage is at its peak only for an instant in each cycle.",
+   "The same rule works for current: Irms = Ipeak ÷ √2. Mains voltage is quoted as an RMS value."
+  ],
+  "remember": "RMS is the DC equivalent for power: peak divided by √2.",
+  "a": {
+   "q": "An AC supply has a peak voltage of 20 V. About what DC voltage would give the same power in a resistor?",
+   "opts": [
+    "14 V",
+    "28 V",
+    "10 V",
+    "20 V"
+   ],
+   "why": "The equal-power DC voltage is the RMS value: 20 ÷ √2 ≈ 14 V. Multiplying by √2 gives 28 V, which reverses the relationship, as the RMS value is below the peak.",
+   "clue": "Find the RMS value."
+  },
+  "b": {
+   "d": 3,
+   "q": "A workshop in Ballarat has an AC supply with an RMS voltage of 230 V. What is the peak voltage of this supply, to the nearest volt?",
+   "opts": [
+    "325 V",
+    "163 V",
+    "230 V",
+    "460 V"
+   ],
+   "why": "Vpeak = Vrms × √2 = 230 × 1.414 ≈ 325 V. Dividing by √2 gives 163 V, but the quoted 230 V is already the RMS value, so the peak must be larger.",
+   "clue": "The quoted mains value is RMS, and the peak is higher."
+  }
+ },
+ "cleared_by": "checker"
+}

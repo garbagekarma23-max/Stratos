@@ -1,0 +1,229 @@
+{
+ "id": "leg-judges-magistrates-criminal-cases",
+ "title": "Judges and magistrates in criminal cases",
+ "brief": "7b61fbf58b75",
+ "shortlist": [
+  [
+   "leg-juries",
+   0.408
+  ],
+  [
+   "leg-summary-indictable-offences",
+   0.244
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:27Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00727,
+  "check": 0.01341,
+  "fix": 0.02876,
+  "recheck": 0.01254
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the roles of judges and magistrates in managing the hearing, deciding questions of law, directing the jury and passing sentence; leg-juries covers who decides guilt and leg-summary-indictable-offences covers offence types.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Judges and magistrates in criminal cases",
+  "card": [
+   "In a criminal case, the judge or magistrate acts as an impartial umpire. They manage the hearing and make sure it runs fairly and follows the rules.",
+   [
+    "Law",
+    "They decide questions of law, such as whether a piece of evidence can be used. In a jury trial, they also direct the jury on the law it must apply."
+   ],
+   [
+    "Sentence",
+    "If the accused is found guilty or pleads guilty, the judge or magistrate passes sentence."
+   ],
+   "The parties, the prosecution and the defence, present their own cases. The judge or magistrate does not run either side's case."
+  ],
+  "remember": "The judge or magistrate manages, rules on law and sentences. The parties argue their cases.",
+  "a": {
+   "q": "Which task is done by the judge in a criminal jury trial?",
+   "opts": [
+    "Explaining to the jury the law it must apply",
+    "Calling the witnesses for the prosecution",
+    "Planning the defence for the accused",
+    "Deciding the facts and giving the verdict"
+   ],
+   "why": "The judge directs the jury on the law. The prosecution calls its own witnesses and the defence plans its own case, as the parties present their cases. Deciding the facts and giving the verdict is the jury's job, so it is not the judge's task here.",
+   "clue": "The judge is an umpire, not one of the parties."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a County Court trial, the defence asks to use a document, and the prosecution objects. Who decides whether it can be used?",
+   "opts": [
+    "The judge, as it is a question of law",
+    "The jury, as it decides all disputes",
+    "The prosecution, as it made the objection",
+    "The defence, as it asked to use the document"
+   ],
+   "why": "Whether evidence can be used is a question of law, which the judge decides. The jury is not the one to rule on it. The parties argue their sides, but neither one decides the issue.",
+   "clue": "Ruling on whether evidence is allowed is a question of law."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Explaining to the jury the law it must apply",
+   "also_right": []
+  },
+  "b": {
+   "best": "The judge, as it is a question of law",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says ruling on evidence is 'a question of law', and only the right option ends 'as it is a question of law'. A student can match the phrase without knowing who decides."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both answers are correct. Question b's clue repeats the phrase 'question of law' from the right option, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue says ruling on evidence is 'a question of law', and only the right option ends 'as it is a question of law'. A student can match the phrase without knowing who decides."
+ ],
+ "proposal": {
+  "title": "Judges and magistrates in criminal cases",
+  "card": [
+   "In a criminal case, the judge or magistrate acts as an impartial umpire. They manage the hearing and make sure it runs fairly and follows the rules.",
+   [
+    "Law",
+    "They decide questions of law, such as whether a piece of evidence can be used. In a jury trial, the jury decides the facts, and the judge directs it on the law it must apply."
+   ],
+   [
+    "Sentence",
+    "If the accused is found guilty or pleads guilty, the judge or magistrate passes sentence."
+   ],
+   "The parties, the prosecution and the defence, present their own cases. The judge or magistrate does not run either side's case."
+  ],
+  "remember": "The judge or magistrate manages, rules on law and sentences. The parties argue their cases.",
+  "a": {
+   "q": "Which task is done by the judge in a criminal jury trial?",
+   "opts": [
+    "Explaining to the jury the law it must apply",
+    "Calling the witnesses for the prosecution",
+    "Planning the defence for the accused",
+    "Deciding the facts and giving the verdict"
+   ],
+   "why": "The judge directs the jury on the law. The prosecution calls its own witnesses and the defence plans its own case, as the parties present their cases. Deciding the facts is the jury's job in a jury trial, so it is not the judge's task here.",
+   "clue": "The judge is an umpire, not one of the parties."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a County Court trial, the defence asks to use a document, and the prosecution objects. Who decides whether it can be used?",
+   "opts": [
+    "The judge, as the umpire of the hearing",
+    "The jury, as it decides the facts of the case",
+    "The prosecution, as it raised the objection",
+    "The defence, as it wants to use the document"
+   ],
+   "why": "Whether a document can be used as evidence is a question of law, and the judge decides questions of law. The jury decides the facts, not whether evidence is allowed. The parties argue their sides, but neither one decides the issue.",
+   "clue": "Is this about what happened, or about the rules of the trial?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Explaining to the jury the law it must apply",
+    "also_right": []
+   },
+   "b": {
+    "best": "The judge, as the umpire of the hearing",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue says ruling on evidence is 'a question of law', and only the right option ends 'as it is a question of law'. A student can match the phrase without knowing who decides."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue says ruling on evidence is 'a question of law', and only the right option ends 'as it is a question of law'. A student can match the phrase without knowing who decides."
+  ]
+ },
+ "final": {
+  "title": "Judges and magistrates in criminal cases",
+  "card": [
+   "In a criminal case, the judge or magistrate acts as an impartial umpire. They manage the hearing and make sure it runs fairly and follows the rules.",
+   [
+    "Law",
+    "They decide questions of law, such as whether a piece of evidence can be used. In a jury trial, the jury decides the facts, and the judge directs it on the law it must apply."
+   ],
+   [
+    "Sentence",
+    "If the accused is found guilty or pleads guilty, the judge or magistrate passes sentence."
+   ],
+   "The parties, the prosecution and the defence, present their own cases. The judge or magistrate does not run either side's case."
+  ],
+  "remember": "The judge or magistrate manages, rules on law and sentences. The parties argue their cases.",
+  "a": {
+   "q": "Which task is done by the judge in a criminal jury trial?",
+   "opts": [
+    "Explaining to the jury the law it must apply",
+    "Calling the witnesses for the prosecution",
+    "Planning the defence for the accused",
+    "Deciding the facts and giving the verdict"
+   ],
+   "why": "The judge directs the jury on the law. The prosecution calls its own witnesses and the defence plans its own case, as the parties present their cases. Deciding the facts is the jury's job in a jury trial, so it is not the judge's task here.",
+   "clue": "The judge is an umpire, not one of the parties."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a County Court trial, the defence asks to use a document, and the prosecution objects. Who decides whether it can be used?",
+   "opts": [
+    "The judge, as the umpire of the hearing",
+    "The jury, as it decides the facts of the case",
+    "The prosecution, as it raised the objection",
+    "The defence, as it wants to use the document"
+   ],
+   "why": "Whether a document can be used as evidence is a question of law, and the judge decides questions of law. The jury decides the facts, not whether evidence is allowed. The parties argue their sides, but neither one decides the issue.",
+   "clue": "Is this about what happened, or about the rules of the trial?"
+  }
+ },
+ "cleared_by": "recheck"
+}

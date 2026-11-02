@@ -1,0 +1,122 @@
+{
+ "id": "mat-linear-dependence",
+ "title": "Linear dependence",
+ "brief": "c983c6d363ab",
+ "shortlist": [
+  [
+   "mat-linear-models-context",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00512,
+  "check": 0.01154
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card teaches linear models y = mx + c in context, while the new point teaches linear dependence of 3D vectors, which is a different idea at a different level.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Linear dependence",
+  "card": [
+   "Vectors are linearly dependent if one of them can be built from the others by scaling and adding. Otherwise they are linearly independent.",
+   "Two vectors are dependent when one is a scalar multiple of the other, so they are parallel. For example, (1, 2, 3) and (2, 4, 6) are dependent, because the second is 2 times the first.",
+   "Three vectors are dependent if one is a combination of the other two, so all three lie in the same plane. Check by trying to write one as a combination of the other two.",
+   "In 3D, three independent vectors point in genuinely different directions and do not share a plane. A set of four or more vectors in 3D is always dependent."
+  ],
+  "remember": "Dependent means one vector is made from the others. Independent vectors each add a new direction.",
+  "a": {
+   "q": "Which pair of vectors is linearly dependent?",
+   "opts": [
+    "(1, −2, 3) and (−2, 4, −6)",
+    "(1, −2, 3) and (2, 4, 6)",
+    "(1, −2, 3) and (−1, −2, 3)",
+    "(1, −2, 3) and (3, −2, 1)"
+   ],
+   "why": "(−2, 4, −6) is −2 times (1, −2, 3), so the two are parallel. In (2, 4, 6) the signs do not match a single multiple, so it is not a multiple of (1, −2, 3), even though the numbers look related.",
+   "clue": "Look for one number that scales every component of the first vector."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let a = (1, 0, 0), b = (0, 1, 0) and c = (2, 3, 0). Which statement is correct?",
+   "opts": [
+    "The three are dependent, as c = 2a + 3b",
+    "The three are independent, as no two are parallel",
+    "The three are independent, as they have three components",
+    "The three are dependent, as c is a multiple of a"
+   ],
+   "why": "c = 2a + 3b, so c is built from a and b and the set is dependent. No two vectors are parallel, but that alone does not make three vectors independent: all three lie in the plane z = 0.",
+   "clue": "Try to build c from a and b by scaling and adding."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(1, −2, 3) and (−2, 4, −6)",
+   "also_right": []
+  },
+  "b": {
+   "best": "The three are dependent, as c = 2a + 3b",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Linear dependence",
+  "card": [
+   "Vectors are linearly dependent if one of them can be built from the others by scaling and adding. Otherwise they are linearly independent.",
+   "Two vectors are dependent when one is a scalar multiple of the other, so they are parallel. For example, (1, 2, 3) and (2, 4, 6) are dependent, because the second is 2 times the first.",
+   "Three vectors are dependent if one is a combination of the other two, so all three lie in the same plane. Check by trying to write one as a combination of the other two.",
+   "In 3D, three independent vectors point in genuinely different directions and do not share a plane. A set of four or more vectors in 3D is always dependent."
+  ],
+  "remember": "Dependent means one vector is made from the others. Independent vectors each add a new direction.",
+  "a": {
+   "q": "Which pair of vectors is linearly dependent?",
+   "opts": [
+    "(1, −2, 3) and (−2, 4, −6)",
+    "(1, −2, 3) and (2, 4, 6)",
+    "(1, −2, 3) and (−1, −2, 3)",
+    "(1, −2, 3) and (3, −2, 1)"
+   ],
+   "why": "(−2, 4, −6) is −2 times (1, −2, 3), so the two are parallel. In (2, 4, 6) the signs do not match a single multiple, so it is not a multiple of (1, −2, 3), even though the numbers look related.",
+   "clue": "Look for one number that scales every component of the first vector."
+  },
+  "b": {
+   "d": 3,
+   "q": "Let a = (1, 0, 0), b = (0, 1, 0) and c = (2, 3, 0). Which statement is correct?",
+   "opts": [
+    "The three are dependent, as c = 2a + 3b",
+    "The three are independent, as no two are parallel",
+    "The three are independent, as they have three components",
+    "The three are dependent, as c is a multiple of a"
+   ],
+   "why": "c = 2a + 3b, so c is built from a and b and the set is dependent. No two vectors are parallel, but that alone does not make three vectors independent: all three lie in the plane z = 0.",
+   "clue": "Try to build c from a and b by scaling and adding."
+  }
+ },
+ "cleared_by": "checker"
+}

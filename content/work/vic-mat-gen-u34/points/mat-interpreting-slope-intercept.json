@@ -1,0 +1,151 @@
+{
+ "id": "mat-interpreting-slope-intercept",
+ "title": "Interpreting slope and intercept",
+ "brief": "68ebf0a63269",
+ "shortlist": [
+  [
+   "mat-y-intercept-context",
+   0.283
+  ],
+  [
+   "mat-least-squares-regression-line",
+   0.209
+  ],
+  [
+   "mat-vertical-dilations",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 says reuse mat-least-squares-regression-line, so to the Opus match check, as every reuse is",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.00902,
+  "write": 0.00742,
+  "check": 0.01245
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "mat-least-squares-regression-line",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card teaches the gradient as the change in y per unit increase in x and the intercept as the value of y at x = 0, which is the same idea at the right depth for Year 12 General Mathematics; its prediction content goes beyond the brief but does not conflict with it.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, the least-squares regression line, mainly teaches finding the line and predicting with it, and only briefly interprets slope and intercept, while the y-intercept point covers only the intercept for linear functions, so neither teaches this exact idea.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Interpreting slope and intercept",
+  "card": [
+   "In a fitted line y = a + bx, y is the response variable and x is the explanatory variable. The slope is b and the intercept is a.",
+   [
+    "Slope",
+    "the predicted change in y for each increase of 1 unit in x. If b is negative, y is predicted to fall as x rises."
+   ],
+   [
+    "Intercept",
+    "the predicted value of y when x = 0. It only makes sense if x = 0 is a realistic value for the situation."
+   ],
+   "Example: cost = 40 + 6 × hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
+  ],
+  "remember": "Slope: change in y per 1 unit of x. Intercept: predicted y when x is 0.",
+  "a": {
+   "q": "A line predicts a plant's height (cm) from days of growth: height = 12 + 3 × days. What does the slope of 3 mean?",
+   "opts": [
+    "Height is predicted to rise by 3 cm each day",
+    "Height is predicted to be 3 cm after 12 days",
+    "The plant is predicted to be 3 cm tall at the start",
+    "Height is predicted to rise by 12 cm every 3 days"
+   ],
+   "why": "The slope is the change in height for each extra day, so 3 cm per day. The 12 is the intercept, which is the predicted height at 0 days, so the option about the start is the intercept's meaning wrongly given to the slope.",
+   "clue": "The slope is the change in y for each 1 unit of x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's data give: phone battery left (%) = 95 − 8 × hours of use. Which statement is correct?",
+   "opts": [
+    "Battery is predicted to fall 8 percentage points per hour",
+    "Battery is predicted to be 8% after 95 hours of use",
+    "Battery is predicted to rise 8 percentage points per hour",
+    "Battery is predicted to fall 95 percentage points per hour"
+   ],
+   "why": "The slope is −8, so each extra hour of use is predicted to lower the battery by 8 percentage points. The option saying it rises ignores the negative sign. The 95 is the intercept, the predicted battery at 0 hours.",
+   "clue": "Check the sign of the slope, then ask what 1 unit of x is."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Height is predicted to rise by 3 cm each day",
+   "also_right": []
+  },
+  "b": {
+   "best": "Battery is predicted to fall 8 percentage points per hour",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Interpreting slope and intercept",
+  "card": [
+   "In a fitted line y = a + bx, y is the response variable and x is the explanatory variable. The slope is b and the intercept is a.",
+   [
+    "Slope",
+    "the predicted change in y for each increase of 1 unit in x. If b is negative, y is predicted to fall as x rises."
+   ],
+   [
+    "Intercept",
+    "the predicted value of y when x = 0. It only makes sense if x = 0 is a realistic value for the situation."
+   ],
+   "Example: cost = 40 + 6 × hours, with cost in dollars and time in hours. Each extra hour adds $6 to the predicted cost. At 0 hours the predicted cost is $40."
+  ],
+  "remember": "Slope: change in y per 1 unit of x. Intercept: predicted y when x is 0.",
+  "a": {
+   "q": "A line predicts a plant's height (cm) from days of growth: height = 12 + 3 × days. What does the slope of 3 mean?",
+   "opts": [
+    "Height is predicted to rise by 3 cm each day",
+    "Height is predicted to be 3 cm after 12 days",
+    "The plant is predicted to be 3 cm tall at the start",
+    "Height is predicted to rise by 12 cm every 3 days"
+   ],
+   "why": "The slope is the change in height for each extra day, so 3 cm per day. The 12 is the intercept, which is the predicted height at 0 days, so the option about the start is the intercept's meaning wrongly given to the slope.",
+   "clue": "The slope is the change in y for each 1 unit of x."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo's data give: phone battery left (%) = 95 − 8 × hours of use. Which statement is correct?",
+   "opts": [
+    "Battery is predicted to fall 8 percentage points per hour",
+    "Battery is predicted to be 8% after 95 hours of use",
+    "Battery is predicted to rise 8 percentage points per hour",
+    "Battery is predicted to fall 95 percentage points per hour"
+   ],
+   "why": "The slope is −8, so each extra hour of use is predicted to lower the battery by 8 percentage points. The option saying it rises ignores the negative sign. The 95 is the intercept, the predicted battery at 0 hours.",
+   "clue": "Check the sign of the slope, then ask what 1 unit of x is."
+  }
+ },
+ "cleared_by": "checker"
+}

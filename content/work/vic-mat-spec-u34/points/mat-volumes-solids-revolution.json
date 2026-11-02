@@ -1,0 +1,138 @@
+{
+ "id": "mat-volumes-solids-revolution",
+ "title": "Volumes of solids of revolution",
+ "brief": "fdce58d8852f",
+ "shortlist": [
+  [
+   "mat-volume-capacity",
+   0.267
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.258
+  ],
+  [
+   "mat-definite-integral",
+   0.229
+  ],
+  [
+   "mat-areas-under-curves",
+   0.221
+  ],
+  [
+   "mat-surface-area-volume",
+   0.206
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00507,
+  "check": 0.01316
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches volume of revolution by π∫y² dx; the closest, the definite integral card, covers only the evaluation tool and not the rotation idea, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Volumes of solids of revolution",
+  "card": [
+   "Rotate the region under a curve y = f(x), from x = a to x = b, once around the x-axis. This makes a solid. Each slice of it is a thin disc with radius y.",
+   "A disc has area πy², so the volume is V = π ∫ y² dx, from x = a to x = b. Square y first, then integrate.",
+   "For a rotation about the y-axis, swap the roles of x and y: V = π ∫ x² dy, from y = c to y = d. Write x in terms of y first.",
+   "Example: y = x from x = 0 to x = 3 gives a cone. V = π ∫ x² dx = π[x³/3] from 0 to 3 = π(9 − 0) = 9π."
+  ],
+  "remember": "Square the radius, multiply by π, then integrate along the axis of rotation.",
+  "a": {
+   "q": "The curve y = √x, from x = 0 to x = 4, is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "8π",
+    "16π/3",
+    "4π",
+    "2π"
+   ],
+   "why": "V = π ∫ (√x)² dx = π ∫ x dx = π[x²/2] from 0 to 4 = π × 8 = 8π. Writing π ∫ √x dx gives 16π/3, which is wrong because y was not squared first.",
+   "clue": "Square y before you integrate, and (√x)² is simple."
+  },
+  "b": {
+   "d": 3,
+   "q": "The region under y = 2x from x = 1 to x = 2 is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "28π/3",
+    "14π/3",
+    "28/3",
+    "56π/3"
+   ],
+   "why": "V = π ∫ (2x)² dx = π ∫ 4x² dx = π[4x³/3] from 1 to 2 = π(32/3 − 4/3) = 28π/3. Forgetting to square the 2 gives 14π/3, which is wrong because the radius is 2x, so the 2 is squared too.",
+   "clue": "The radius is 2x, so square the whole of it, including the 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "8π",
+   "also_right": []
+  },
+  "b": {
+   "best": "28π/3",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out (8π and 28π/3), the cone example is correct (9π), and the distractors reflect realistic errors."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Volumes of solids of revolution",
+  "card": [
+   "Rotate the region under a curve y = f(x), from x = a to x = b, once around the x-axis. This makes a solid. Each slice of it is a thin disc with radius y.",
+   "A disc has area πy², so the volume is V = π ∫ y² dx, from x = a to x = b. Square y first, then integrate.",
+   "For a rotation about the y-axis, swap the roles of x and y: V = π ∫ x² dy, from y = c to y = d. Write x in terms of y first.",
+   "Example: y = x from x = 0 to x = 3 gives a cone. V = π ∫ x² dx = π[x³/3] from 0 to 3 = π(9 − 0) = 9π."
+  ],
+  "remember": "Square the radius, multiply by π, then integrate along the axis of rotation.",
+  "a": {
+   "q": "The curve y = √x, from x = 0 to x = 4, is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "8π",
+    "16π/3",
+    "4π",
+    "2π"
+   ],
+   "why": "V = π ∫ (√x)² dx = π ∫ x dx = π[x²/2] from 0 to 4 = π × 8 = 8π. Writing π ∫ √x dx gives 16π/3, which is wrong because y was not squared first.",
+   "clue": "Square y before you integrate, and (√x)² is simple."
+  },
+  "b": {
+   "d": 3,
+   "q": "The region under y = 2x from x = 1 to x = 2 is rotated about the x-axis. What is the volume of the solid?",
+   "opts": [
+    "28π/3",
+    "14π/3",
+    "28/3",
+    "56π/3"
+   ],
+   "why": "V = π ∫ (2x)² dx = π ∫ 4x² dx = π[4x³/3] from 1 to 2 = π(32/3 − 4/3) = 28π/3. Forgetting to square the 2 gives 14π/3, which is wrong because the radius is 2x, so the 2 is squared too.",
+   "clue": "The radius is 2x, so square the whole of it, including the 2."
+  }
+ },
+ "cleared_by": "checker"
+}

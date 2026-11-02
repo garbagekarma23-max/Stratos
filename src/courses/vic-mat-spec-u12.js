@@ -21,9 +21,43 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Proof, logic, graphs, sequences and combinatorics",
       "chapters": [
-        {"id": "vic-mat-spec-u12-1-1", "title": "Number and proof", "check": "checked", "points": []},
-        {"id": "vic-mat-spec-u12-1-2-2", "title": "Methods of proof", "check": "checked", "points": []},
-        {"id": "vic-mat-spec-u12-1-3-2", "title": "Logic and algorithms", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-spec-u12-1-1",
+          "title": "Number and proof",
+          "check": "checked",
+          "points": [
+            "mat-number-systems-sets",
+            "mat-primes-fundamental-theorem-arithmetic",
+            "mat-quantifiers",
+            "mat-direct-proof",
+            "mat-examples-counterexamples"
+          ]
+        },
+        {
+          "id": "vic-mat-spec-u12-1-2-2",
+          "title": "Methods of proof",
+          "check": "checked",
+          "points": [
+            "mat-proof-by-contrapositive",
+            "mat-proof-by-contradiction",
+            "mat-mathematical-induction",
+            "mat-proofs-about-numbers"
+          ]
+        },
+        {
+          "id": "vic-mat-spec-u12-1-3-2",
+          "title": "Logic and algorithms",
+          "check": "checked",
+          "points": [
+            "mat-statements-connectives",
+            "mat-conditional-statements",
+            "mat-converse-equivalence",
+            "mat-boolean-algebra",
+            "mat-logic-gates-circuits",
+            "mat-binary-numbers",
+            "mat-algorithms-pseudocode"
+          ]
+        },
         {
           "id": "vic-mat-spec-u12-1-3",
           "title": "Graphs and matrices",
@@ -42,7 +76,15 @@ MADE_COURSES.push({
           "id": "vic-mat-spec-u12-1-2",
           "title": "Sequences, series and combinatorics",
           "check": "checked",
-          "points": []
+          "points": [
+            "mat-arithmetic-geometric-series",
+            "mat-limiting-sums",
+            "mat-recurrence-relations-specialist",
+            "mat-pigeonhole-principle",
+            "mat-inclusion-exclusion-principle",
+            "mat-arrangements-with-restrictions",
+            "mat-combinatorial-identities"
+          ]
         }
       ]
     },
@@ -68,7 +110,20 @@ MADE_COURSES.push({
             "mat-determinants-area"
           ]
         },
-        {"id": "vic-mat-spec-u12-2-3", "title": "Vectors in the plane", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-spec-u12-2-3",
+          "title": "Vectors in the plane",
+          "check": "checked",
+          "points": [
+            "mat-vectors-plane",
+            "mat-adding-scaling-vectors",
+            "mat-magnitude-unit-vectors",
+            "mat-scalar-product",
+            "mat-vector-projections",
+            "mat-proof-with-vectors",
+            "mat-vectors-motion"
+          ]
+        },
         {
           "id": "vic-mat-spec-u12-4-1",
           "title": "Complex numbers",
@@ -97,7 +152,12 @@ MADE_COURSES.push({
             "mat-absolute-value-function"
           ]
         },
-        {"id": "vic-mat-spec-u12-2-1", "title": "Curves and loci", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-spec-u12-2-1",
+          "title": "Curves and loci",
+          "check": "checked",
+          "points": ["mat-circles-ellipses", "mat-hyperbolas", "mat-parametric-equations", "mat-polar-coordinates"]
+        }
       ]
     }
   ]

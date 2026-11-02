@@ -8,14 +8,15 @@
    0.202
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:18Z new, match",
   "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:02Z write: done",
   "2026-11-01T08:24:29Z check: flagged",
   "2026-11-01T08:33:48Z fix: suggested",
-  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)"
+  "2026-11-01T09:32:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T06:17:44Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
@@ -190,5 +191,51 @@
    "Remember, other: The remember line says to register 'a name' as if every business must. The card says only a name other than the owner's own must be registered with ASIC.",
    "Question b, level: The question gives $30,000 of sales but the card never states the GST limit ($75,000), so students cannot tell whether Tom is under it. The right answer still works without the figure, but it would be clearer if the card stated the limit."
   ]
- }
+ },
+ "final": {
+  "title": "Registering a business",
+  "card": [
+   [
+    "ABN",
+    "An Australian Business Number is an 11-digit number that identifies a business to the government and other businesses. A new business applies for one."
+   ],
+   [
+    "Business name",
+    "A name other than the owner's own must be registered with ASIC, the Australian Securities and Investments Commission. Many businesses also register a website domain that matches the name."
+   ],
+   [
+    "GST",
+    "A business must register for GST once its yearly turnover reaches the government's set limit. Turnover is the total sales before costs are taken out."
+   ],
+   [
+    "Licences",
+    "Some activities need a licence or permit before trading, such as serving food or selling alcohol. Which ones depend on what the business does."
+   ]
+  ],
+  "remember": "Register what the business needs: an ABN, a name, GST once turnover reaches the limit, and any licences for its activity.",
+  "a": {
+   "q": "Priya starts a bakery called Crust Co. She wants to trade under that name, not her own. What must she do about the name?",
+   "opts": [
+    "Register it as a business name with ASIC",
+    "Apply for it as a GST registration",
+    "Ask the council for a food licence for it",
+    "Use it only after turnover reaches the limit"
+   ],
+   "why": "A trading name that is not the owner's own name must be registered with ASIC. GST registration is about turnover, not names, so it does not cover the name.",
+   "clue": "Which body does the card link to business names?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's new dog-walking business in Geelong sold $30,000 of services in its first year. A friend says he must register for GST straight away because he is a new business. Why is the friend's reason wrong?",
+   "opts": [
+    "GST registration depends on turnover reaching the limit",
+    "GST registration is only needed by businesses with a licence",
+    "GST registration is only needed once a name is registered",
+    "GST registration is done by getting an ABN"
+   ],
+   "why": "GST registration is needed once turnover reaches the set limit, not simply because a business is new. A new business with turnover below the limit does not have to register on that basis. Getting an ABN is a separate step, so it is not the same as registering for GST.",
+   "clue": "What does the card say triggers GST registration?"
+  }
+ },
+ "cleared_by": "owner"
 }

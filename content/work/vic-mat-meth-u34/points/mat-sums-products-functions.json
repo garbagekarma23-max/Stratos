@@ -1,0 +1,138 @@
+{
+ "id": "mat-sums-products-functions",
+ "title": "Sums and products of functions",
+ "brief": "e739c5a5b286",
+ "shortlist": [
+  [
+   "mat-limiting-sums",
+   0.275
+  ],
+  [
+   "mat-power-functions",
+   0.227
+  ],
+  [
+   "mat-domain-range",
+   0.226
+  ],
+  [
+   "mat-functions-relations",
+   0.222
+  ],
+  [
+   "mat-modelling-with-functions",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00476,
+  "check": 0.01122
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches adding or multiplying functions or sketching their graphs by combining heights; they cover limiting sums, power functions, domain and range, relations, and modelling, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Sums and products of functions",
+  "card": [
+   "(f + g)(x) = f(x) + g(x) and (f × g)(x) = f(x) × g(x). Each is built by working with the two outputs at the same x value.",
+   "The new function exists only where both f and g exist. Its domain is the overlap of the two domains.",
+   "To sketch f + g, add the heights of the two graphs at each x. To sketch f × g, multiply the heights. Where one height is 0, the product is 0.",
+   "Example: f(x) = x² with domain R, and g(x) = √x with domain [0, ∞). Then (f + g)(4) = 16 + 2 = 18, and the domain of f + g is [0, ∞)."
+  ],
+  "remember": "Combine the outputs at the same x, and only use x values that both functions allow.",
+  "a": {
+   "q": "f(x) = 2x + 1 and g(x) = x². What is (f × g)(3)?",
+   "opts": [
+    "63",
+    "30",
+    "16",
+    "28"
+   ],
+   "why": "f(3) = 7 and g(3) = 9, so the product is 7 × 9 = 63. The answer 16 comes from adding the outputs, which gives f + g, not f × g.",
+   "clue": "Find each output at x = 3, then multiply them."
+  },
+  "b": {
+   "d": 3,
+   "q": "f(x) = √(x − 2) and g(x) = 1/(x − 5). What is the domain of f + g?",
+   "opts": [
+    "[2, ∞) except x = 5",
+    "[2, ∞)",
+    "R except x = 5",
+    "(2, ∞) except x = 5"
+   ],
+   "why": "f needs x ≥ 2, and g needs x ≠ 5. The shared domain keeps x ≥ 2 and removes 5. R except x = 5 ignores the limit from f.",
+   "clue": "Check what each function rules out, then keep only what both allow."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "63",
+   "also_right": []
+  },
+  "b": {
+   "best": "[2, ∞) except x = 5",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Sums and products of functions",
+  "card": [
+   "(f + g)(x) = f(x) + g(x) and (f × g)(x) = f(x) × g(x). Each is built by working with the two outputs at the same x value.",
+   "The new function exists only where both f and g exist. Its domain is the overlap of the two domains.",
+   "To sketch f + g, add the heights of the two graphs at each x. To sketch f × g, multiply the heights. Where one height is 0, the product is 0.",
+   "Example: f(x) = x² with domain R, and g(x) = √x with domain [0, ∞). Then (f + g)(4) = 16 + 2 = 18, and the domain of f + g is [0, ∞)."
+  ],
+  "remember": "Combine the outputs at the same x, and only use x values that both functions allow.",
+  "a": {
+   "q": "f(x) = 2x + 1 and g(x) = x². What is (f × g)(3)?",
+   "opts": [
+    "63",
+    "30",
+    "16",
+    "28"
+   ],
+   "why": "f(3) = 7 and g(3) = 9, so the product is 7 × 9 = 63. The answer 16 comes from adding the outputs, which gives f + g, not f × g.",
+   "clue": "Find each output at x = 3, then multiply them."
+  },
+  "b": {
+   "d": 3,
+   "q": "f(x) = √(x − 2) and g(x) = 1/(x − 5). What is the domain of f + g?",
+   "opts": [
+    "[2, ∞) except x = 5",
+    "[2, ∞)",
+    "R except x = 5",
+    "(2, ∞) except x = 5"
+   ],
+   "why": "f needs x ≥ 2, and g needs x ≠ 5. The shared domain keeps x ≥ 2 and removes 5. R except x = 5 ignores the limit from f.",
+   "clue": "Check what each function rules out, then keep only what both allow."
+  }
+ },
+ "cleared_by": "checker"
+}

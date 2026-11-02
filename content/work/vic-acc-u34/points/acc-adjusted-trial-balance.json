@@ -1,0 +1,213 @@
+{
+ "id": "acc-adjusted-trial-balance",
+ "title": "The adjusted trial balance",
+ "brief": "7d6594b73d65",
+ "shortlist": [
+  [
+   "mat-reducing-balance-loans",
+   0.266
+  ],
+  [
+   "bus-balance-sheet",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00518,
+  "check": 0.01702,
+  "fix": 0.02784,
+  "recheck": 0.0127
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the adjusted trial balance: the reducing balance loans card is a mathematics topic, and the balance sheet card covers a financial statement at one date, not a trial balance prepared after balance day adjustments.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The adjusted trial balance",
+  "card": [
+   "A trial balance lists every ledger account balance in a debit column and a credit column. If the records are correct, the two columns have the same total.",
+   "An adjusted trial balance is prepared after the balance day adjustments have been posted to the ledger. It shows each account's balance once the adjustments are included.",
+   "The columns should still be equal. If they are not, an error has been made, such as posting only one side of an adjusting entry.",
+   "The adjusted balances are used to prepare the end-of-period reports: the income statement and the balance sheet. Revenue and expense accounts feed the income statement. Asset, liability and equity accounts feed the balance sheet."
+  ],
+  "remember": "The adjusted trial balance has the final balances for the reports, and its columns must still be equal.",
+  "a": {
+   "q": "Why is an adjusted trial balance prepared before the end-of-period reports?",
+   "opts": [
+    "It shows account balances that include the adjustments",
+    "It replaces the need to post adjustments to the ledger",
+    "It proves that no errors are in the accounts",
+    "It lists only the accounts that were adjusted"
+   ],
+   "why": "The reports need balances that include the adjustments, and the adjusted trial balance gives them. It does not replace posting the adjustments. Equal columns also do not prove there are no errors, because some mistakes keep the totals equal.",
+   "clue": "Think about which balances the reports should use."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's adjusted trial balance for her bakery in Ballarat has debits of $58,400 and credits of $57,900. What is the most likely cause?",
+   "opts": [
+    "One side of an adjusting entry was not posted",
+    "The reports were prepared before the trial balance",
+    "The adjustments were made in the wrong period",
+    "Some accounts were left out of the income statement"
+   ],
+   "why": "The columns should be equal, so a $500 gap points to an error such as posting only one side of an adjusting entry. The timing of adjustments would not on its own make the columns unequal. The income statement is prepared after the trial balance, so it cannot cause the gap.",
+   "clue": "Each adjusting entry has a debit and a credit."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It shows account balances that include the adjustments",
+   "also_right": []
+  },
+  "b": {
+   "best": "One side of an adjusting entry was not posted",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says the columns 'must' still be equal, but the card says they 'should' still be equal. The card also notes they may not be equal if an error was made. Using 'should' would match the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts are correct. The only issue is that the remember line says 'must' where the card says 'should'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: The remember line says the columns 'must' still be equal, but the card says they 'should' still be equal. The card also notes they may not be equal if an error was made. Using 'should' would match the card."
+ ],
+ "proposal": {
+  "title": "The adjusted trial balance",
+  "card": [
+   "A trial balance lists every ledger account balance in a debit column and a credit column. If the records are correct, the totals are equal, but equal totals do not prove there are no errors.",
+   "An adjusted trial balance is prepared after the balance day adjustments have been posted to the ledger. It shows each account's balance once the adjustments are included.",
+   "Each adjusting entry has an equal debit and credit, so the columns should still be equal. If they are not, an error has been made, such as posting only one side of an adjusting entry.",
+   "Its balances are used to prepare the end-of-period reports. Revenue and expenses go to the income statement, and assets, liabilities and equity go to the balance sheet."
+  ],
+  "remember": "The adjusted trial balance gives the final balances for the reports, and its columns should still be equal.",
+  "a": {
+   "q": "Why is an adjusted trial balance prepared before the end-of-period reports?",
+   "opts": [
+    "It shows account balances that include the adjustments",
+    "It replaces the need to post adjustments to the ledger",
+    "It proves that no errors are in the accounts",
+    "It lists only the accounts that were adjusted"
+   ],
+   "why": "The reports need balances that include the adjustments, and the adjusted trial balance gives them. It does not replace posting the adjustments, as it is prepared after they are posted. Equal columns also do not prove there are no errors.",
+   "clue": "Think about which balances the reports should use."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's adjusted trial balance for her bakery in Ballarat has debits of $58,400 and credits of $57,900. What is the most likely cause?",
+   "opts": [
+    "One side of an adjusting entry was not posted",
+    "The reports were prepared before the trial balance",
+    "The adjustments were made in the wrong period",
+    "Some accounts were left out of the income statement"
+   ],
+   "why": "Each adjusting entry has an equal debit and credit, so a $500 gap points to an error such as posting only one side of an entry. An entry made in the wrong period would still have equal debits and credits, so it would not make the columns unequal. The income statement is prepared from the trial balance, so it cannot cause the gap.",
+   "clue": "Each adjusting entry has a debit and a credit."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It shows account balances that include the adjustments",
+    "also_right": []
+   },
+   "b": {
+    "best": "One side of an adjusting entry was not posted",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "The remember line says the columns 'must' still be equal, but the card says they 'should' still be equal. The card also notes they may not be equal if an error was made. Using 'should' would match the card."
+   }
+  ],
+  "flags": [
+   "Remember, wording: The remember line says the columns 'must' still be equal, but the card says they 'should' still be equal. The card also notes they may not be equal if an error was made. Using 'should' would match the card."
+  ]
+ },
+ "final": {
+  "title": "The adjusted trial balance",
+  "card": [
+   "A trial balance lists every ledger account balance in a debit column and a credit column. If the records are correct, the totals are equal, but equal totals do not prove there are no errors.",
+   "An adjusted trial balance is prepared after the balance day adjustments have been posted to the ledger. It shows each account's balance once the adjustments are included.",
+   "Each adjusting entry has an equal debit and credit, so the columns should still be equal. If they are not, an error has been made, such as posting only one side of an adjusting entry.",
+   "Its balances are used to prepare the end-of-period reports. Revenue and expenses go to the income statement, and assets, liabilities and equity go to the balance sheet."
+  ],
+  "remember": "The adjusted trial balance gives the final balances for the reports, and its columns should still be equal.",
+  "a": {
+   "q": "Why is an adjusted trial balance prepared before the end-of-period reports?",
+   "opts": [
+    "It shows account balances that include the adjustments",
+    "It replaces the need to post adjustments to the ledger",
+    "It proves that no errors are in the accounts",
+    "It lists only the accounts that were adjusted"
+   ],
+   "why": "The reports need balances that include the adjustments, and the adjusted trial balance gives them. It does not replace posting the adjustments, as it is prepared after they are posted. Equal columns also do not prove there are no errors.",
+   "clue": "Think about which balances the reports should use."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's adjusted trial balance for her bakery in Ballarat has debits of $58,400 and credits of $57,900. What is the most likely cause?",
+   "opts": [
+    "One side of an adjusting entry was not posted",
+    "The reports were prepared before the trial balance",
+    "The adjustments were made in the wrong period",
+    "Some accounts were left out of the income statement"
+   ],
+   "why": "Each adjusting entry has an equal debit and credit, so a $500 gap points to an error such as posting only one side of an entry. An entry made in the wrong period would still have equal debits and credits, so it would not make the columns unequal. The income statement is prepared from the trial balance, so it cannot cause the gap.",
+   "clue": "Each adjusting entry has a debit and a credit."
+  }
+ },
+ "cleared_by": "recheck"
+}

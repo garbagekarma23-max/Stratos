@@ -1,0 +1,236 @@
+{
+ "id": "leg-before-starting-civil-claim",
+ "title": "Before starting a civil claim",
+ "brief": "b348075445ee",
+ "shortlist": [
+  [
+   "leg-impact-civil-wrong",
+   0.209
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00515,
+  "check": 0.01859,
+  "fix": 0.0158,
+  "recheck": 0.01404
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point explains the effects of a civil wrong on each side, while the new point asks a plaintiff to weigh costs, the limitation period and enforceability before starting a claim, which is a different idea at a different stage of the process.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Before starting a civil claim",
+  "card": [
+   "A plaintiff is the person who starts a civil claim. Before filing, a plaintiff should weigh up whether the claim is worth pursuing.",
+   [
+    "Costs",
+    "Court cases can cost a lot in legal fees, court fees and time. A plaintiff may also have to pay the defendant's costs if the claim fails."
+   ],
+   [
+    "Time limit",
+    "Each type of claim has a limitation period set by law. If the plaintiff starts the claim after it ends, the defendant can ask the court to stop the claim."
+   ],
+   [
+    "Enforcement",
+    "A court order is only useful if it can be carried out. If the defendant has no money or assets, the plaintiff may win but never be paid."
+   ]
+  ],
+  "remember": "Before suing, ask: what will it cost, is there still time, and can a win be enforced?",
+  "a": {
+   "q": "Which of these is a reason a plaintiff might decide not to start a civil claim?",
+   "opts": [
+    "The likely legal costs are close to the amount claimed",
+    "The defendant has said they disagree with the claim",
+    "The plaintiff has never been to court before",
+    "The defendant is likely to hire a lawyer"
+   ],
+   "why": "If costs are close to what the plaintiff could win, the claim may leave them no better off, and they may even pay the defendant's costs if they lose. A defendant disagreeing is normal in a dispute and is not one of the factors on the card.",
+   "clue": "Think about whether winning would leave the plaintiff better off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wins a court order that Dan pay her $20,000 for a faulty renovation. Dan has no job, no savings and owns no property. Which factor did Priya fail to weigh before starting her claim?",
+   "opts": [
+    "Whether a win could be enforced against Dan",
+    "Whether the limitation period had passed",
+    "Whether she had proved her claim",
+    "Whether the court fees were affordable"
+   ],
+   "why": "Priya won, so the problem is not proof. Dan has no money or assets, so the order may not be carried out and she may not be paid. That is the enforcement issue. The time limit is not the issue because the court made the order.",
+   "clue": "She won the case. What could still stop her getting paid?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The likely legal costs are close to the amount claimed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Whether a win could be enforced against Dan",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem assumes Priya 'failed to weigh' enforcement. The scenario only shows that enforcement is a problem. She may have weighed it and sued anyway. Wording such as 'Which factor should Priya have weighed more carefully' would avoid this assumption."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate and match the VCE factors of costs, limitation periods and enforcement. The only issue is minor: question b assumes Priya failed to weigh enforcement, when the scenario only shows it became a problem."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The stem assumes Priya 'failed to weigh' enforcement. The scenario only shows that enforcement is a problem. She may have weighed it and sued anyway. Wording such as 'Which factor should Priya have weighed more carefully' would avoid this assumption."
+ ],
+ "proposal": {
+  "title": "Before starting a civil claim",
+  "card": [
+   "A plaintiff is the person who starts a civil claim. Before filing, a plaintiff should weigh up whether the claim is worth pursuing.",
+   [
+    "Costs",
+    "Court cases can cost a lot in legal fees, court fees and time. A plaintiff may also have to pay the defendant's costs if the claim fails."
+   ],
+   [
+    "Time limit",
+    "Each type of claim has a limitation period set by law. If the plaintiff starts the claim after it ends, the defendant can ask the court to stop the claim."
+   ],
+   [
+    "Enforcement",
+    "A court order is only useful if it can be carried out. If the defendant has no money or assets, the plaintiff may win but never be paid."
+   ]
+  ],
+  "remember": "Before suing, ask: what will it cost, is there still time, and can a win be enforced?",
+  "a": {
+   "q": "Which of these is a reason a plaintiff might decide not to start a civil claim?",
+   "opts": [
+    "The likely legal costs are close to the amount claimed",
+    "The defendant has said they disagree with the claim",
+    "The plaintiff has never been to court before",
+    "The defendant is likely to hire a lawyer"
+   ],
+   "why": "If costs are close to what the plaintiff could win, the claim may leave them no better off, and they may even pay the defendant's costs if they lose. A defendant disagreeing is normal in a dispute and is not one of the factors on the card.",
+   "clue": "Think about whether winning would leave the plaintiff better off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wins a court order that Dan pay her $20,000 for a faulty renovation. Dan has no job, no savings and owns no property. Which factor should Priya have weighed more carefully before starting her claim?",
+   "opts": [
+    "Whether a win could be enforced",
+    "Whether the limitation period had passed",
+    "Whether the defendant disagreed with her",
+    "Whether the court fees were affordable"
+   ],
+   "why": "Dan has no money or assets, so the order may never be carried out and Priya may not be paid. That is the enforcement factor. The time limit was not a problem, since her claim went ahead and she won, and nothing in the case suggests the fees were the issue.",
+   "clue": "She won the case. What could still stop her getting paid?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The likely legal costs are close to the amount claimed",
+    "also_right": []
+   },
+   "b": {
+    "best": "Whether a win could be enforced",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem assumes Priya 'failed to weigh' enforcement. The scenario only shows that enforcement is a problem. She may have weighed it and sued anyway. Wording such as 'Which factor should Priya have weighed more carefully' would avoid this assumption."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The stem assumes Priya 'failed to weigh' enforcement. The scenario only shows that enforcement is a problem. She may have weighed it and sued anyway. Wording such as 'Which factor should Priya have weighed more carefully' would avoid this assumption."
+  ]
+ },
+ "final": {
+  "title": "Before starting a civil claim",
+  "card": [
+   "A plaintiff is the person who starts a civil claim. Before filing, a plaintiff should weigh up whether the claim is worth pursuing.",
+   [
+    "Costs",
+    "Court cases can cost a lot in legal fees, court fees and time. A plaintiff may also have to pay the defendant's costs if the claim fails."
+   ],
+   [
+    "Time limit",
+    "Each type of claim has a limitation period set by law. If the plaintiff starts the claim after it ends, the defendant can ask the court to stop the claim."
+   ],
+   [
+    "Enforcement",
+    "A court order is only useful if it can be carried out. If the defendant has no money or assets, the plaintiff may win but never be paid."
+   ]
+  ],
+  "remember": "Before suing, ask: what will it cost, is there still time, and can a win be enforced?",
+  "a": {
+   "q": "Which of these is a reason a plaintiff might decide not to start a civil claim?",
+   "opts": [
+    "The likely legal costs are close to the amount claimed",
+    "The defendant has said they disagree with the claim",
+    "The plaintiff has never been to court before",
+    "The defendant is likely to hire a lawyer"
+   ],
+   "why": "If costs are close to what the plaintiff could win, the claim may leave them no better off, and they may even pay the defendant's costs if they lose. A defendant disagreeing is normal in a dispute and is not one of the factors on the card.",
+   "clue": "Think about whether winning would leave the plaintiff better off."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wins a court order that Dan pay her $20,000 for a faulty renovation. Dan has no job, no savings and owns no property. Which factor should Priya have weighed more carefully before starting her claim?",
+   "opts": [
+    "Whether a win could be enforced",
+    "Whether the limitation period had passed",
+    "Whether the defendant disagreed with her",
+    "Whether the court fees were affordable"
+   ],
+   "why": "Dan has no money or assets, so the order may never be carried out and Priya may not be paid. That is the enforcement factor. The time limit was not a problem, since her claim went ahead and she won, and nothing in the case suggests the fees were the issue.",
+   "clue": "She won the case. What could still stop her getting paid?"
+  }
+ },
+ "cleared_by": "recheck"
+}

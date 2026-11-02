@@ -1,0 +1,210 @@
+{
+ "id": "acc-writing-off-bad-debts",
+ "title": "Writing off bad debts",
+ "brief": "4b78577496c7",
+ "shortlist": [
+  [
+   "eco-government-debt",
+   0.34
+  ],
+  [
+   "acc-returns-bad-debts-discounts",
+   0.329
+  ],
+  [
+   "bus-debt-equity-compared",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: picked as a spot check. It would have been cleared with the fix (remember wording, card other)",
+  "2026-11-02T06:17:05Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.01209,
+  "check": 0.01411,
+  "fix": 0.01668
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches writing off debts against an allowance for doubtful debts; the closest accounting card (Returns, bad debts and discounts) treats a bad debt as a direct expense, which is a different method.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Writing off bad debts",
+  "card": [
+   "At the end of a period, the business records an allowance for doubtful debts. This is an estimate of debts it expects not to collect, and the expense is recorded then.",
+   "In the next period, a customer may be known to be unable to pay. The business then writes off that debt as a bad debt.",
+   "The write-off debits Allowance for doubtful debts and credits Accounts receivable (and the customer's account). It is not a new expense, because the expense was recorded when the allowance was set up.",
+   "The write-off lowers both accounts receivable and the allowance by the same amount. The net amount expected to be collected stays the same."
+  ],
+  "remember": "The expense is recorded when the allowance is made. A write-off only uses up the allowance.",
+  "a": {
+   "q": "In the next period, Tran Traders writes off a customer's debt of $400 against its allowance. Which entry is made?",
+   "opts": [
+    "Dr Allowance for doubtful debts, Cr Accounts receivable",
+    "Dr Bad debts expense, Cr Accounts receivable",
+    "Dr Accounts receivable, Cr Allowance for doubtful debts",
+    "Dr Bad debts expense, Cr Allowance for doubtful debts"
+   ],
+   "why": "The write-off removes the debt from accounts receivable and uses up part of the allowance. The expense was already recorded when the allowance was created, so debiting Bad debts expense again would count it twice.",
+   "clue": "The expense was recorded in the previous period."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiah's Cycles has accounts receivable of $20,000 and an allowance of $1,500. It writes off a $600 debt against the allowance. What is the net amount expected to be collected afterwards?",
+   "opts": [
+    "$18,500, the same as before the write-off",
+    "$17,900, which is $600 lower than before",
+    "$19,400, which is $600 higher than before",
+    "$18,500, which is $600 lower than before"
+   ],
+   "why": "Before, net receivables are $20,000 less $1,500, which is $18,500. After the write-off, receivables are $19,400 and the allowance is $900, so net is still $18,500. Option $17,900 wrongly treats the write-off as a new expense that lowers net receivables.",
+   "clue": "Both accounts fall by the same amount."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Dr Allowance for doubtful debts, Cr Accounts receivable",
+   "also_right": []
+  },
+  "b": {
+   "best": "$18,500, the same as before the write-off",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"A write-off only uses up the allowance\" uses \"only\" and leaves out that the write-off also lowers accounts receivable, which the card states. A student could read it as affecting the allowance alone."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains what the allowance for doubtful debts is and when its expense is recorded. That belongs to point 4 (Allowance for doubtful debts). It should be briefly mentioned as context rather than explained again here."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Facts and both questions are correct (Dr Allowance, Cr Accounts receivable; net stays $18,500). Minor issues: the remember line's \"only\" ignores the drop in accounts receivable, and the card re-explains the allowance from point 4."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, wording: \"A write-off only uses up the allowance\" uses \"only\" and leaves out that the write-off also lowers accounts receivable, which the card states. A student could read it as affecting the allowance alone.",
+  "Card, other: The first bullet explains what the allowance for doubtful debts is and when its expense is recorded. That belongs to point 4 (Allowance for doubtful debts). It should be briefly mentioned as context rather than explained again here."
+ ],
+ "proposal": {
+  "title": "Writing off bad debts",
+  "card": [
+   "In the next period, a customer may be known to be unable to pay. The business then writes off that debt as a bad debt, using the allowance for doubtful debts made at the end of the last period.",
+   "The write-off debits Allowance for doubtful debts and credits Accounts receivable (and the customer's account).",
+   "It is not a new expense. The expense was recorded when the allowance was set up, so recording it again would count it twice.",
+   "The write-off lowers both accounts receivable and the allowance by the same amount. The net amount expected to be collected stays the same."
+  ],
+  "remember": "A write-off lowers accounts receivable and the allowance by the same amount, with no new expense.",
+  "a": {
+   "q": "In the next period, Tran Traders writes off a customer's debt of $400 against its allowance. Which entry is made?",
+   "opts": [
+    "Dr Allowance for doubtful debts, Cr Accounts receivable",
+    "Dr Bad debts expense, Cr Accounts receivable",
+    "Dr Accounts receivable, Cr Allowance for doubtful debts",
+    "Dr Bad debts expense, Cr Allowance for doubtful debts"
+   ],
+   "why": "The write-off removes the debt from accounts receivable and uses up part of the allowance. The expense was already recorded when the allowance was created, so debiting Bad debts expense again would count it twice.",
+   "clue": "The expense was recorded in the previous period."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiah's Cycles has accounts receivable of $20,000 and an allowance of $1,500. It writes off a $600 debt against the allowance. What is the net amount expected to be collected afterwards?",
+   "opts": [
+    "$18,500, the same as before the write-off",
+    "$17,900, which is $600 lower than before",
+    "$19,400, which is $600 higher than before",
+    "$18,500, which is $600 lower than before"
+   ],
+   "why": "Before, net receivables are $20,000 less $1,500, which is $18,500. After the write-off, receivables are $19,400 and the allowance is $900, so net is still $18,500. The $17,900 option wrongly treats the write-off as a new expense that lowers net receivables.",
+   "clue": "Both accounts fall by the same amount."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"A write-off only uses up the allowance\" uses \"only\" and leaves out that the write-off also lowers accounts receivable, which the card states. A student could read it as affecting the allowance alone."
+   },
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains what the allowance for doubtful debts is and when its expense is recorded. That belongs to point 4 (Allowance for doubtful debts). It should be briefly mentioned as context rather than explained again here."
+   }
+  ],
+  "flags": [
+   "Remember, wording: \"A write-off only uses up the allowance\" uses \"only\" and leaves out that the write-off also lowers accounts receivable, which the card states. A student could read it as affecting the allowance alone.",
+   "Card, other: The first bullet explains what the allowance for doubtful debts is and when its expense is recorded. That belongs to point 4 (Allowance for doubtful debts). It should be briefly mentioned as context rather than explained again here."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Writing off bad debts",
+  "card": [
+   "In the next period, a customer may be known to be unable to pay. The business then writes off that debt as a bad debt, using the allowance for doubtful debts made at the end of the last period.",
+   "The write-off debits Allowance for doubtful debts and credits Accounts receivable (and the customer's account).",
+   "It is not a new expense. The expense was recorded when the allowance was set up, so recording it again would count it twice.",
+   "The write-off lowers both accounts receivable and the allowance by the same amount. The net amount expected to be collected stays the same."
+  ],
+  "remember": "A write-off lowers accounts receivable and the allowance by the same amount, with no new expense.",
+  "a": {
+   "q": "In the next period, Tran Traders writes off a customer's debt of $400 against its allowance. Which entry is made?",
+   "opts": [
+    "Dr Allowance for doubtful debts, Cr Accounts receivable",
+    "Dr Bad debts expense, Cr Accounts receivable",
+    "Dr Accounts receivable, Cr Allowance for doubtful debts",
+    "Dr Bad debts expense, Cr Allowance for doubtful debts"
+   ],
+   "why": "The write-off removes the debt from accounts receivable and uses up part of the allowance. The expense was already recorded when the allowance was created, so debiting Bad debts expense again would count it twice.",
+   "clue": "The expense was recorded in the previous period."
+  },
+  "b": {
+   "d": 3,
+   "q": "Kiah's Cycles has accounts receivable of $20,000 and an allowance of $1,500. It writes off a $600 debt against the allowance. What is the net amount expected to be collected afterwards?",
+   "opts": [
+    "$18,500, the same as before the write-off",
+    "$17,900, which is $600 lower than before",
+    "$19,400, which is $600 higher than before",
+    "$18,500, which is $600 lower than before"
+   ],
+   "why": "Before, net receivables are $20,000 less $1,500, which is $18,500. After the write-off, receivables are $19,400 and the allowance is $900, so net is still $18,500. The $17,900 option wrongly treats the write-off as a new expense that lowers net receivables.",
+   "clue": "Both accounts fall by the same amount."
+  }
+ },
+ "cleared_by": "owner"
+}

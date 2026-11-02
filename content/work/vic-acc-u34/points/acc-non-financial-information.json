@@ -1,0 +1,259 @@
+{
+ "id": "acc-non-financial-information",
+ "title": "Non-financial information",
+ "brief": "305971946ae3",
+ "shortlist": [
+  [
+   "acc-non-financial-factors-credit",
+   0.357
+  ],
+  [
+   "acc-measuring-performance",
+   0.322
+  ],
+  [
+   "acc-accounting",
+   0.218
+  ],
+  [
+   "bus-product-decisions",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 may adapt acc-measuring-performance, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:56Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00032,
+  "confirm": 0.01032,
+  "write": 0.01197,
+  "check": 0.01219,
+  "fix": 0.0206,
+  "recheck": 0.01225
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "acc-measuring-performance",
+  "changes": [
+   "Add customer satisfaction, product quality and reputation as non-financial indicators, since the card currently lists only complaints, staff turnover and new clients.",
+   "Add a sentence that links non-financial information to explaining the numbers and guiding decisions in Units 3 and 4 analysis."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same idea of using non-financial indicators alongside profit, but it needs a few extra examples and a link to Units 3 and 4 decision-making.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, 'Measuring performance', is a broader Units 1 and 2 overview of financial and non-financial indicators and graphs, and 'Non-financial factors in credit' covers only credit decisions, so neither teaches how customer satisfaction, staff turnover, product quality and reputation explain the results and guide decisions at Year 12 depth.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Non-financial information",
+  "card": [
+   "Non-financial information is information that is not measured in dollars in the financial reports. Four common examples are customer satisfaction, staff turnover, product quality and reputation.",
+   "Customer satisfaction can be found from surveys, reviews and complaints. Staff turnover is the share of employees who leave in a period. Product quality can be tracked by the rate of returns or faults. Reputation is how the public views the business.",
+   "This information helps explain the numbers. For example, a rise in product returns may help explain a fall in sales or in the gross profit margin.",
+   "It also guides decisions. A business with high staff turnover may review its pay or training, because replacing staff costs money. The numbers alone may not show these causes."
+  ],
+  "remember": "Non-financial information helps explain why the financial results changed and what to do next.",
+  "a": {
+   "q": "Why would an accountant look at non-financial information as well as the financial reports?",
+   "opts": [
+    "It can help explain the causes behind the financial results",
+    "It replaces the need to calculate any financial ratios",
+    "It is audited to the same standard as the financial reports",
+    "It shows the exact dollar value of the business's reputation"
+   ],
+   "why": "Non-financial information can help explain why the numbers changed, such as why sales fell. It does not replace ratios, because both kinds of information are used together. Reputation is not measured as an exact dollar value in the reports.",
+   "clue": "Think about what the dollar figures cannot show by themselves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's bakery in Ballarat has seen its sales fall for two years. Customer surveys show that satisfaction with freshness has dropped, and several bakers have left. Which conclusion best uses this information?",
+   "opts": [
+    "Lower freshness and lost bakers may explain the sales fall",
+    "The sales fall proves that the bakery's prices are too high",
+    "The bakery should set aside the surveys and use sales only",
+    "Staff leaving shows that the bakery pays too much in wages"
+   ],
+   "why": "The surveys and staff departures point to possible causes of the sales fall, which the sales figures alone do not show. The price conclusion is tempting, but the information given says nothing about prices. It says freshness has dropped.",
+   "clue": "Look for the answer that links the survey results to the sales."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It can help explain the causes behind the financial results",
+   "also_right": []
+  },
+  "b": {
+   "best": "Lower freshness and lost bakers may explain the sales fall",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('can help'). The wrong options all make absolute claims ('exact', 'same standard', 'replaces... any'), so a student could pick the right one without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may explain'). The others use 'shows', 'should' and 'proves', so the cautious wording points to the answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look for the answer that links the survey results to the sales' practically names the right option, since it is the only one that links both the survey and the staff departures to the sales fall."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and the answers are accurate. In both questions the right option is the only hedged one ('can', 'may'), which gives it away, and the clue for question b points straight at the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with a hedge ('can help'). The wrong options all make absolute claims ('exact', 'same standard', 'replaces... any'), so a student could pick the right one without knowing the idea.",
+  "Question b, wording: The right option is the only hedged one ('may explain'). The others use 'shows', 'should' and 'proves', so the cautious wording points to the answer.",
+  "Question b, other: The clue 'Look for the answer that links the survey results to the sales' practically names the right option, since it is the only one that links both the survey and the staff departures to the sales fall."
+ ],
+ "proposal": {
+  "title": "Non-financial information",
+  "card": [
+   "Non-financial information is information that is not measured in dollars in the financial reports. Four common examples are customer satisfaction, staff turnover, product quality and reputation.",
+   "Customer satisfaction can be found from surveys, reviews and complaints. Staff turnover is the share of employees who leave in a period. Product quality can be tracked by the rate of returns or faults. Reputation is how the public views the business.",
+   "This information helps explain the numbers. For example, a rise in product returns may help explain a fall in sales or in the gross profit margin.",
+   "It also guides decisions. A business with high staff turnover may review its pay or training, because replacing staff costs money. The numbers alone may not show these causes."
+  ],
+  "remember": "Non-financial information helps explain why the financial results changed and what to do next.",
+  "a": {
+   "q": "Why would an accountant look at non-financial information as well as the financial reports?",
+   "opts": [
+    "It helps explain the causes behind the financial results",
+    "It removes the need to calculate financial ratios",
+    "It is audited to the same standard as the financial reports",
+    "It records reputation as a dollar figure in the reports"
+   ],
+   "why": "Non-financial information helps explain why the numbers changed, such as why sales fell. It does not remove the need for ratios, because both kinds of information are used together. Reputation is not measured in dollars in the reports.",
+   "clue": "Think about what the dollar figures cannot show by themselves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's bakery in Ballarat has seen its sales fall for two years. Customer surveys show that satisfaction with freshness has dropped, and several bakers have left. Which conclusion best uses this information?",
+   "opts": [
+    "Lower freshness and lost bakers may explain the sales fall",
+    "Higher prices may explain the sales fall at the bakery",
+    "Bakers leaving may mean the bakery pays too much in wages",
+    "The surveys may be set aside, as sales figures say enough"
+   ],
+   "why": "The surveys and staff departures point to possible causes of the sales fall, which the sales figures alone do not show. The price conclusion is tempting, but nothing in the information is about prices. It says freshness has dropped.",
+   "clue": "Rely only on the facts the question gives you."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It helps explain the causes behind the financial results",
+    "also_right": []
+   },
+   "b": {
+    "best": "Lower freshness and lost bakers may explain the sales fall",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with a hedge ('can help'). The wrong options all make absolute claims ('exact', 'same standard', 'replaces... any'), so a student could pick the right one without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may explain'). The others use 'shows', 'should' and 'proves', so the cautious wording points to the answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Look for the answer that links the survey results to the sales' practically names the right option, since it is the only one that links both the survey and the staff departures to the sales fall."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only one with a hedge ('can help'). The wrong options all make absolute claims ('exact', 'same standard', 'replaces... any'), so a student could pick the right one without knowing the idea.",
+   "Question b, wording: The right option is the only hedged one ('may explain'). The others use 'shows', 'should' and 'proves', so the cautious wording points to the answer.",
+   "Question b, other: The clue 'Look for the answer that links the survey results to the sales' practically names the right option, since it is the only one that links both the survey and the staff departures to the sales fall."
+  ]
+ },
+ "final": {
+  "title": "Non-financial information",
+  "card": [
+   "Non-financial information is information that is not measured in dollars in the financial reports. Four common examples are customer satisfaction, staff turnover, product quality and reputation.",
+   "Customer satisfaction can be found from surveys, reviews and complaints. Staff turnover is the share of employees who leave in a period. Product quality can be tracked by the rate of returns or faults. Reputation is how the public views the business.",
+   "This information helps explain the numbers. For example, a rise in product returns may help explain a fall in sales or in the gross profit margin.",
+   "It also guides decisions. A business with high staff turnover may review its pay or training, because replacing staff costs money. The numbers alone may not show these causes."
+  ],
+  "remember": "Non-financial information helps explain why the financial results changed and what to do next.",
+  "a": {
+   "q": "Why would an accountant look at non-financial information as well as the financial reports?",
+   "opts": [
+    "It helps explain the causes behind the financial results",
+    "It removes the need to calculate financial ratios",
+    "It is audited to the same standard as the financial reports",
+    "It records reputation as a dollar figure in the reports"
+   ],
+   "why": "Non-financial information helps explain why the numbers changed, such as why sales fell. It does not remove the need for ratios, because both kinds of information are used together. Reputation is not measured in dollars in the reports.",
+   "clue": "Think about what the dollar figures cannot show by themselves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's bakery in Ballarat has seen its sales fall for two years. Customer surveys show that satisfaction with freshness has dropped, and several bakers have left. Which conclusion best uses this information?",
+   "opts": [
+    "Lower freshness and lost bakers may explain the sales fall",
+    "Higher prices may explain the sales fall at the bakery",
+    "Bakers leaving may mean the bakery pays too much in wages",
+    "The surveys may be set aside, as sales figures say enough"
+   ],
+   "why": "The surveys and staff departures point to possible causes of the sales fall, which the sales figures alone do not show. The price conclusion is tempting, but nothing in the information is about prices. It says freshness has dropped.",
+   "clue": "Rely only on the facts the question gives you."
+  }
+ },
+ "cleared_by": "recheck"
+}

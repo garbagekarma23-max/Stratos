@@ -1,0 +1,231 @@
+{
+ "id": "mat-matrix-recurrence-relations",
+ "title": "Matrix recurrence relations",
+ "brief": "324edeff819b",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.397
+  ],
+  [
+   "mat-matrix-operations-specialist",
+   0.378
+  ],
+  [
+   "mat-determinants-matrix-equations",
+   0.299
+  ],
+  [
+   "mat-composition-inverse-transformations",
+   0.243
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.00943,
+  "check": 0.01956,
+  "fix": 0.02678,
+  "recheck": 0.01575
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches state-matrix recurrence S(n+1) = T × S(n) for transition matrices; they cover transformations, matrix operations, determinants and inverses, and composition, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Matrix recurrence relations",
+  "card": [
+   "A matrix recurrence relation builds each state matrix from the one before it. S(n+1) = T × S(n), where S(0) is the starting state matrix.",
+   "To find S(1), work out T × S(0). To find S(2), work out T × S(1). The matrix T always comes first in the product.",
+   "A column matrix B can be added at each step: S(n+1) = T × S(n) + B. Work out the product first, then add B.",
+   "Example: T = [0.5 0.5; 0.5 0.5], S(0) = [40; 20]. S(1) = T × S(0) = [30; 30]. S(2) = T × S(1) = [30; 30]."
+  ],
+  "remember": "Each state matrix comes from the one just before it: multiply by T, then add any column.",
+  "a": {
+   "q": "A recurrence relation is S(n+1) = T × S(n). Which calculation gives S(2)?",
+   "opts": [
+    "T × S(1)",
+    "T × S(0)",
+    "S(1) × T",
+    "T × T × S(1)"
+   ],
+   "why": "Each state matrix comes from the one before it, so S(2) comes from S(1), with T written first. T × S(0) would give S(1) instead.",
+   "clue": "S(2) is built from the state matrix just before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A fish pond has S(n+1) = T × S(n) + B, with T = [0.8 0.3; 0.2 0.7], B = [10; 0] and S(0) = [200; 100]. What is S(1)?",
+   "opts": [
+    "[200; 110]",
+    "[190; 110]",
+    "[210; 110]",
+    "[200; 120]"
+   ],
+   "why": "T × S(0) = [0.8×200 + 0.3×100; 0.2×200 + 0.7×100] = [190; 110]. Adding B gives [200; 110]. The option [190; 110] leaves out B, and [200; 120] adds it to the wrong row.",
+   "clue": "Multiply by T first, then add B to the first row only."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "T × S(1)",
+   "also_right": []
+  },
+  "b": {
+   "best": "[200; 110]",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says [200; 120] 'adds it to the wrong row'. Adding 10 to the second row instead would give [190; 120]. The option [200; 120] actually adds 10 to both rows."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'add B to the first row only' suggests B is added to one row. In fact the whole column B = [10; 0] is added; the second row just gains 0. This could mislead students about how matrix addition works."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both intended answers are correct. The why for (b) misdescribes the [200; 120] distractor, which adds 10 to both rows, not the wrong row. The clue for (b) wrongly suggests B is added to the first row only, when the whole column is added."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, fact: The why says [200; 120] 'adds it to the wrong row'. Adding 10 to the second row instead would give [190; 120]. The option [200; 120] actually adds 10 to both rows.",
+  "Question b, wording: The clue 'add B to the first row only' suggests B is added to one row. In fact the whole column B = [10; 0] is added; the second row just gains 0. This could mislead students about how matrix addition works."
+ ],
+ "proposal": {
+  "title": "Matrix recurrence relations",
+  "card": [
+   "A matrix recurrence relation builds each state matrix from the one before it. S(n+1) = T × S(n), where S(0) is the starting state matrix.",
+   "To find S(1), work out T × S(0). To find S(2), work out T × S(1). The matrix T always comes first in the product.",
+   "A column matrix B can be added at each step: S(n+1) = T × S(n) + B. Work out the product first, then add B. Add matching entries, so each row gains its own entry of B.",
+   "Example: T = [0.5 0.5; 0.5 0.5], S(0) = [40; 20]. S(1) = T × S(0) = [30; 30]. S(2) = T × S(1) = [30; 30]."
+  ],
+  "remember": "Each state matrix comes from the one just before it: multiply by T, then add any column.",
+  "a": {
+   "q": "A recurrence relation is S(n+1) = T × S(n). Which calculation gives S(2)?",
+   "opts": [
+    "T × S(1)",
+    "T × S(0)",
+    "S(1) × T",
+    "T × T × S(1)"
+   ],
+   "why": "Each state matrix comes from the one before it, so S(2) comes from S(1), with T written first. T × S(0) would give S(1) instead.",
+   "clue": "S(2) is built from the state matrix just before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A fish pond has S(n+1) = T × S(n) + B, with T = [0.8 0.3; 0.2 0.7], B = [10; 0] and S(0) = [200; 100]. What is S(1)?",
+   "opts": [
+    "[200; 110]",
+    "[190; 110]",
+    "[198; 112]",
+    "[200; 120]"
+   ],
+   "why": "T × S(0) = [0.8×200 + 0.3×100; 0.2×200 + 0.7×100] = [190; 110]. Adding B = [10; 0] entry by entry gives [200; 110]. The option [190; 110] leaves out B, [198; 112] adds B before multiplying, and [200; 120] adds 10 to both rows instead of 10 and 0.",
+   "clue": "Multiply by T first, then add each entry of B to its matching row."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "T × S(1)",
+    "also_right": []
+   },
+   "b": {
+    "best": "[200; 110]",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card example and both answers are correct: T × S(0) = [190; 110], plus B gives [200; 110]."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says [200; 120] 'adds it to the wrong row'. Adding 10 to the second row instead would give [190; 120]. The option [200; 120] actually adds 10 to both rows."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'add B to the first row only' suggests B is added to one row. In fact the whole column B = [10; 0] is added; the second row just gains 0. This could mislead students about how matrix addition works."
+   }
+  ],
+  "flags": [
+   "Question b, fact: The why says [200; 120] 'adds it to the wrong row'. Adding 10 to the second row instead would give [190; 120]. The option [200; 120] actually adds 10 to both rows.",
+   "Question b, wording: The clue 'add B to the first row only' suggests B is added to one row. In fact the whole column B = [10; 0] is added; the second row just gains 0. This could mislead students about how matrix addition works."
+  ]
+ },
+ "final": {
+  "title": "Matrix recurrence relations",
+  "card": [
+   "A matrix recurrence relation builds each state matrix from the one before it. S(n+1) = T × S(n), where S(0) is the starting state matrix.",
+   "To find S(1), work out T × S(0). To find S(2), work out T × S(1). The matrix T always comes first in the product.",
+   "A column matrix B can be added at each step: S(n+1) = T × S(n) + B. Work out the product first, then add B. Add matching entries, so each row gains its own entry of B.",
+   "Example: T = [0.5 0.5; 0.5 0.5], S(0) = [40; 20]. S(1) = T × S(0) = [30; 30]. S(2) = T × S(1) = [30; 30]."
+  ],
+  "remember": "Each state matrix comes from the one just before it: multiply by T, then add any column.",
+  "a": {
+   "q": "A recurrence relation is S(n+1) = T × S(n). Which calculation gives S(2)?",
+   "opts": [
+    "T × S(1)",
+    "T × S(0)",
+    "S(1) × T",
+    "T × T × S(1)"
+   ],
+   "why": "Each state matrix comes from the one before it, so S(2) comes from S(1), with T written first. T × S(0) would give S(1) instead.",
+   "clue": "S(2) is built from the state matrix just before it."
+  },
+  "b": {
+   "d": 3,
+   "q": "A fish pond has S(n+1) = T × S(n) + B, with T = [0.8 0.3; 0.2 0.7], B = [10; 0] and S(0) = [200; 100]. What is S(1)?",
+   "opts": [
+    "[200; 110]",
+    "[190; 110]",
+    "[198; 112]",
+    "[200; 120]"
+   ],
+   "why": "T × S(0) = [0.8×200 + 0.3×100; 0.2×200 + 0.7×100] = [190; 110]. Adding B = [10; 0] entry by entry gives [200; 110]. The option [190; 110] leaves out B, [198; 112] adds B before multiplying, and [200; 120] adds 10 to both rows instead of 10 and 0.",
+   "clue": "Multiply by T first, then add each entry of B to its matching row."
+  }
+ },
+ "cleared_by": "recheck"
+}

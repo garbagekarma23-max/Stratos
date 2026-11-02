@@ -1,0 +1,291 @@
+{
+ "id": "mod-old-regime",
+ "title": "The Old Regime",
+ "brief": "1c87394c06e9",
+ "shortlist": [
+  [
+   "mod-end-french-rule",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:29Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:08Z write: failed the content check, writing again",
+  "2026-11-01T15:05:32Z write: done (still fails the content check)",
+  "2026-11-01T17:33:08Z check: flagged",
+  "2026-11-02T04:27:52Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.01162,
+  "check": 0.01997,
+  "fix": 0.02276,
+  "recheck": 0.01456
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The only candidate, on the end of French rule in Vietnam, teaches a different idea from the social structure of the three estates in pre-revolutionary France, so no bank point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The Old Regime",
+  "card": [
+   "The Old Regime is the name given to France's system of rule and society before 1789. The king held absolute power, and people were born into one of three orders called estates.",
+   [
+    "First and Second Estates",
+    "the clergy and the nobles. They held privileges, which were special rights and exemptions, and they paid little of the main direct tax, the taille."
+   ],
+   [
+    "Third Estate",
+    "everyone else, from peasants and city workers to lawyers and merchants. It was by far the largest estate, and it paid most of the taxes."
+   ],
+   "Birth, not wealth or talent, decided a person's estate. Some Third Estate members were rich, but they still lacked the privileges of the first two estates."
+  ],
+  "remember": "Privilege went with birth into the first two estates, and the tax burden fell mainly on the Third.",
+  "a": {
+   "q": "What mainly set the First and Second Estates apart from the Third Estate under the Old Regime?",
+   "opts": [
+    "They held privileges and paid little of the main direct tax",
+    "They were richer than every member of the Third Estate",
+    "They made up most of the French population",
+    "They chose the king's ministers by vote"
+   ],
+   "why": "The clergy and nobles held special rights and exemptions, including from most direct tax. The option about wealth is tempting, but the card says some Third Estate members were rich, so wealth was not what divided the estates.",
+   "clue": "Think about rights and taxes, not wealth."
+  },
+  "b": {
+   "d": 3,
+   "q": "Antoine is a wealthy merchant in Lyon in 1788. He owns several ships and a large house. Which estate is he in, and why?",
+   "opts": [
+    "Third Estate, because he was not born to the clergy or nobles",
+    "Second Estate, because his wealth gives him noble rights",
+    "First Estate, because merchants served the church",
+    "Third Estate, because merchants were all poor"
+   ],
+   "why": "Estate depended on birth, not wealth, so a rich merchant still belonged to the Third Estate and lacked the privileges of the first two. The Second Estate option is tempting, but the card says wealth alone did not bring those privileges.",
+   "clue": "What decided a person's estate: money or birth?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "mod-old-regimeb option is 61 characters: Third Estate, because he was not born to the clergy or nobles"
+ ],
+ "check": {
+  "a": {
+   "best": "They held privileges and paid little of the main direct tax",
+   "also_right": []
+  },
+  "b": {
+   "best": "Third Estate, because he was not born to the clergy or nobles",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Birth, not wealth or talent, decided a person's estate' is false for the First Estate. People entered the clergy by ordination, not birth, and many parish priests came from Third Estate families. It also oversimplifies the Second Estate, since wealthy commoners could gain noble status by buying venal offices."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Privilege went with birth into the first two estates' repeats the card's error. Nobody was born into the clergy."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option says Antoine 'was not born to the clergy or nobles'. Being 'born to the clergy' makes no sense, because clergy status was not inherited, so the option teaches the same mistaken idea."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says wealth alone did not bring noble privileges. In fact rich merchants could and did buy ennobling offices, so the claim needs qualifying (for example, 'his wealth did not by itself make him noble')."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about rights and taxes, not wealth' points straight at the right option, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'money or birth?' all but names the answer. Only one option mentions birth."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and remember line wrongly say every estate, including the clergy, was decided by birth. Clergy entered by ordination, and nobility could be bought, and question b's right option repeats the error. Both clues also give away the answers."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'Birth, not wealth or talent, decided a person's estate' is false for the First Estate. People entered the clergy by ordination, not birth, and many parish priests came from Third Estate families. It also oversimplifies the Second Estate, since wealthy commoners could gain noble status by buying venal offices.",
+  "Remember, fact: 'Privilege went with birth into the first two estates' repeats the card's error. Nobody was born into the clergy.",
+  "Question b, wording: The right option says Antoine 'was not born to the clergy or nobles'. Being 'born to the clergy' makes no sense, because clergy status was not inherited, so the option teaches the same mistaken idea.",
+  "Question b, fact: The why says wealth alone did not bring noble privileges. In fact rich merchants could and did buy ennobling offices, so the claim needs qualifying (for example, 'his wealth did not by itself make him noble').",
+  "Question a, other: The clue 'Think about rights and taxes, not wealth' points straight at the right option, so a student can pick it without knowing the idea.",
+  "Question b, other: The clue 'money or birth?' all but names the answer. Only one option mentions birth.",
+  "Content check: mod-old-regimeb option is 61 characters: Third Estate, because he was not born to the clergy or nobles"
+ ],
+ "proposal": {
+  "title": "The Old Regime",
+  "card": [
+   "The Old Regime is the name given to France's system of rule and society before 1789. The king held absolute power, and society was divided into three orders called estates.",
+   [
+    "First and Second Estates",
+    "the clergy and the nobles. They held privileges, which were special rights and exemptions, and they paid little of the main direct tax, the taille."
+   ],
+   [
+    "Third Estate",
+    "everyone else, from peasants and city workers to lawyers and merchants. It was by far the largest estate and paid most of the taxes, and even its rich members lacked privileges."
+   ],
+   "People joined the clergy by becoming priests, monks or nuns. Most nobles inherited their rank, but some rich commoners bought offices that made them noble."
+  ],
+  "remember": "The clergy and nobles held privileges, while the tax burden fell mainly on the Third Estate.",
+  "a": {
+   "q": "What mainly set the First and Second Estates apart from the Third Estate under the Old Regime?",
+   "opts": [
+    "They held privileges and paid little of the main direct tax",
+    "They were richer than every member of the Third Estate",
+    "They made up most of the French population",
+    "They chose the king's ministers by vote"
+   ],
+   "why": "The clergy and nobles held special rights and exemptions, including from most direct tax. The option about wealth is tempting, but some Third Estate members were rich, so wealth was not what divided the estates.",
+   "clue": "Which difference held for every member, not just some?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Antoine is a wealthy merchant in Lyon in 1788. He owns several ships and a large house. He is not a priest and holds no noble rank or office. Which estate is he in, and why?",
+   "opts": [
+    "Third Estate, as he is neither a cleric nor a noble",
+    "Second Estate, as his wealth gives him noble rights",
+    "First Estate, as merchants paid taxes to the church",
+    "Second Estate, as merchants were exempt from the taille"
+   ],
+   "why": "Antoine is not a member of the clergy and has no noble rank, so he belongs to the Third Estate and lacks the privileges of the first two. The wealth option is tempting, but his money did not by itself make him noble. He would first need to gain noble status, for example by buying an office that made him noble.",
+   "clue": "Look at how people joined the first two estates."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They held privileges and paid little of the main direct tax",
+    "also_right": []
+   },
+   "b": {
+    "best": "Third Estate, as he is neither a cleric nor a noble",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Birth, not wealth or talent, decided a person's estate' is false for the First Estate. People entered the clergy by ordination, not birth, and many parish priests came from Third Estate families. It also oversimplifies the Second Estate, since wealthy commoners could gain noble status by buying venal offices."
+   },
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "'Privilege went with birth into the first two estates' repeats the card's error. Nobody was born into the clergy."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option says Antoine 'was not born to the clergy or nobles'. Being 'born to the clergy' makes no sense, because clergy status was not inherited, so the option teaches the same mistaken idea."
+   },
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "The why says wealth alone did not bring noble privileges. In fact rich merchants could and did buy ennobling offices, so the claim needs qualifying (for example, 'his wealth did not by itself make him noble')."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue 'Think about rights and taxes, not wealth' points straight at the right option, so a student can pick it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'money or birth?' all but names the answer. Only one option mentions birth."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'Birth, not wealth or talent, decided a person's estate' is false for the First Estate. People entered the clergy by ordination, not birth, and many parish priests came from Third Estate families. It also oversimplifies the Second Estate, since wealthy commoners could gain noble status by buying venal offices.",
+   "Remember, fact: 'Privilege went with birth into the first two estates' repeats the card's error. Nobody was born into the clergy.",
+   "Question b, wording: The right option says Antoine 'was not born to the clergy or nobles'. Being 'born to the clergy' makes no sense, because clergy status was not inherited, so the option teaches the same mistaken idea.",
+   "Question b, fact: The why says wealth alone did not bring noble privileges. In fact rich merchants could and did buy ennobling offices, so the claim needs qualifying (for example, 'his wealth did not by itself make him noble').",
+   "Question a, other: The clue 'Think about rights and taxes, not wealth' points straight at the right option, so a student can pick it without knowing the idea.",
+   "Question b, other: The clue 'money or birth?' all but names the answer. Only one option mentions birth.",
+   "Content check: mod-old-regimeb option is 61 characters: Third Estate, because he was not born to the clergy or nobles"
+  ]
+ },
+ "final": {
+  "title": "The Old Regime",
+  "card": [
+   "The Old Regime is the name given to France's system of rule and society before 1789. The king held absolute power, and society was divided into three orders called estates.",
+   [
+    "First and Second Estates",
+    "the clergy and the nobles. They held privileges, which were special rights and exemptions, and they paid little of the main direct tax, the taille."
+   ],
+   [
+    "Third Estate",
+    "everyone else, from peasants and city workers to lawyers and merchants. It was by far the largest estate and paid most of the taxes, and even its rich members lacked privileges."
+   ],
+   "People joined the clergy by becoming priests, monks or nuns. Most nobles inherited their rank, but some rich commoners bought offices that made them noble."
+  ],
+  "remember": "The clergy and nobles held privileges, while the tax burden fell mainly on the Third Estate.",
+  "a": {
+   "q": "What mainly set the First and Second Estates apart from the Third Estate under the Old Regime?",
+   "opts": [
+    "They held privileges and paid little of the main direct tax",
+    "They were richer than every member of the Third Estate",
+    "They made up most of the French population",
+    "They chose the king's ministers by vote"
+   ],
+   "why": "The clergy and nobles held special rights and exemptions, including from most direct tax. The option about wealth is tempting, but some Third Estate members were rich, so wealth was not what divided the estates.",
+   "clue": "Which difference held for every member, not just some?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Antoine is a wealthy merchant in Lyon in 1788. He owns several ships and a large house. He is not a priest and holds no noble rank or office. Which estate is he in, and why?",
+   "opts": [
+    "Third Estate, as he is neither a cleric nor a noble",
+    "Second Estate, as his wealth gives him noble rights",
+    "First Estate, as merchants paid taxes to the church",
+    "Second Estate, as merchants were exempt from the taille"
+   ],
+   "why": "Antoine is not a member of the clergy and has no noble rank, so he belongs to the Third Estate and lacks the privileges of the first two. The wealth option is tempting, but his money did not by itself make him noble. He would first need to gain noble status, for example by buying an office that made him noble.",
+   "clue": "Look at how people joined the first two estates."
+  }
+ },
+ "cleared_by": "recheck"
+}

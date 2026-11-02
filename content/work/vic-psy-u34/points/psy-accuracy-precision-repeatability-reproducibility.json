@@ -1,0 +1,243 @@
+{
+ "id": "psy-accuracy-precision-repeatability-reproducibility",
+ "title": "Accuracy, precision, repeatability and reproducibility",
+ "brief": "cf1e45485eba",
+ "shortlist": [
+  [
+   "chem-repeatability-reproducibility",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:29Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:07Z write: done",
+  "2026-11-01T15:05:31Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0001,
+  "write": 0.00613,
+  "check": 0.01119,
+  "fix": 0.02606,
+  "recheck": 0.01091
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only repeatability and reproducibility, while the new point also requires accuracy and precision, so no bank point teaches the same full idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Accuracy, precision, repeatability and reproducibility",
+  "card": [
+   [
+    "Accuracy",
+    "How close a measurement is to the true value. A reaction timer that reads 0.50 seconds when the true time is 0.30 seconds is not accurate."
+   ],
+   [
+    "Precision",
+    "How close repeated measurements are to each other. Results of 0.50, 0.51 and 0.50 seconds are precise, even if they are all wrong."
+   ],
+   [
+    "Repeatability",
+    "Whether the same researcher, using the same method and equipment, gets the same results again."
+   ],
+   [
+    "Reproducibility",
+    "Whether different researchers, often in other places or with other equipment, get the same results using the same method."
+   ]
+  ],
+  "remember": "Accuracy is close to the truth. Precision is close together. Repeat is same team, reproduce is different team.",
+  "a": {
+   "q": "A scale in a lab reads 62.0 kg, 62.1 kg and 62.0 kg for a 70 kg test weight. How is this best described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The readings are very close to each other, so they are precise. They are far from the true value of 70 kg, so they are not accurate. Closeness together does not show closeness to the truth.",
+   "clue": "Compare the readings with each other, then with the true value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A team in Perth finds a breathing exercise lowers stress scores. A different team in Hobart follows the same method and gets the same finding. What does this show?",
+   "opts": [
+    "The finding is reproducible",
+    "The finding is repeatable",
+    "The measurements are accurate",
+    "The measurements are precise"
+   ],
+   "why": "A different team getting the same result with the same method shows reproducibility. Repeatability would need the same team to get the same result again. The result alone says nothing about closeness to a true value.",
+   "clue": "Look at who carried out the second study."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Precise but not accurate",
+   "also_right": []
+  },
+  "b": {
+   "best": "The finding is reproducible",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines reproducibility as getting the same results 'using the same method'. The VCE Study Design definition covers agreement under changed conditions, which can include a different method as well as different observers, instruments, locations or times. Requiring the same method narrows the definition students are assessed on."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are sound and the intended answers are correct. The card's definition of reproducibility wrongly requires 'the same method', which is narrower than the VCE definition (changed conditions, which can include a different method)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines reproducibility as getting the same results 'using the same method'. The VCE Study Design definition covers agreement under changed conditions, which can include a different method as well as different observers, instruments, locations or times. Requiring the same method narrows the definition students are assessed on."
+ ],
+ "proposal": {
+  "title": "Accuracy, precision, repeatability and reproducibility",
+  "card": [
+   [
+    "Accuracy",
+    "How close a measurement is to the true value. A reaction timer that reads 0.50 seconds when the true time is 0.30 seconds is not accurate."
+   ],
+   [
+    "Precision",
+    "How close repeated measurements are to each other. Results of 0.50, 0.51 and 0.50 seconds are precise, even if they are all wrong."
+   ],
+   [
+    "Repeatability",
+    "Whether results agree when the conditions stay the same: the same researcher, method, equipment and place, over a short time."
+   ],
+   [
+    "Reproducibility",
+    "Whether results agree when the conditions change. The change can be a different researcher, method, equipment, place or time."
+   ]
+  ],
+  "remember": "Accuracy is close to the truth. Precision is close together. Repeatable is same conditions, reproducible is changed conditions.",
+  "a": {
+   "q": "A scale in a lab reads 62.0 kg, 62.1 kg and 62.0 kg for a 70 kg test weight. How is this best described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The readings are very close to each other, so they are precise. They are far from the true value of 70 kg, so they are not accurate. Closeness together does not show closeness to the truth.",
+   "clue": "Compare the readings with each other, then with the true value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A team in Perth finds a breathing exercise lowers stress scores. A different team in Hobart follows the same method and gets the same finding. What does this show?",
+   "opts": [
+    "The finding is reproducible",
+    "The finding is repeatable",
+    "The measurements are accurate",
+    "The measurements are precise"
+   ],
+   "why": "A different team in a different place is a change in conditions, so getting the same finding shows reproducibility. Repeatability would need the same conditions, including the same researcher. The result alone says nothing about closeness to a true value.",
+   "clue": "Look at who carried out the second study, and where."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Precise but not accurate",
+    "also_right": []
+   },
+   "b": {
+    "best": "The finding is reproducible",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The definitions match the VCE Study Design, and both questions have a single clear right answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 12,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines reproducibility as getting the same results 'using the same method'. The VCE Study Design definition covers agreement under changed conditions, which can include a different method as well as different observers, instruments, locations or times. Requiring the same method narrows the definition students are assessed on."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines reproducibility as getting the same results 'using the same method'. The VCE Study Design definition covers agreement under changed conditions, which can include a different method as well as different observers, instruments, locations or times. Requiring the same method narrows the definition students are assessed on."
+  ]
+ },
+ "final": {
+  "title": "Accuracy, precision, repeatability and reproducibility",
+  "card": [
+   [
+    "Accuracy",
+    "How close a measurement is to the true value. A reaction timer that reads 0.50 seconds when the true time is 0.30 seconds is not accurate."
+   ],
+   [
+    "Precision",
+    "How close repeated measurements are to each other. Results of 0.50, 0.51 and 0.50 seconds are precise, even if they are all wrong."
+   ],
+   [
+    "Repeatability",
+    "Whether results agree when the conditions stay the same: the same researcher, method, equipment and place, over a short time."
+   ],
+   [
+    "Reproducibility",
+    "Whether results agree when the conditions change. The change can be a different researcher, method, equipment, place or time."
+   ]
+  ],
+  "remember": "Accuracy is close to the truth. Precision is close together. Repeatable is same conditions, reproducible is changed conditions.",
+  "a": {
+   "q": "A scale in a lab reads 62.0 kg, 62.1 kg and 62.0 kg for a 70 kg test weight. How is this best described?",
+   "opts": [
+    "Precise but not accurate",
+    "Accurate but not precise",
+    "Both accurate and precise",
+    "Neither accurate nor precise"
+   ],
+   "why": "The readings are very close to each other, so they are precise. They are far from the true value of 70 kg, so they are not accurate. Closeness together does not show closeness to the truth.",
+   "clue": "Compare the readings with each other, then with the true value."
+  },
+  "b": {
+   "d": 2,
+   "q": "A team in Perth finds a breathing exercise lowers stress scores. A different team in Hobart follows the same method and gets the same finding. What does this show?",
+   "opts": [
+    "The finding is reproducible",
+    "The finding is repeatable",
+    "The measurements are accurate",
+    "The measurements are precise"
+   ],
+   "why": "A different team in a different place is a change in conditions, so getting the same finding shows reproducibility. Repeatability would need the same conditions, including the same researcher. The result alone says nothing about closeness to a true value.",
+   "clue": "Look at who carried out the second study, and where."
+  }
+ },
+ "cleared_by": "recheck"
+}

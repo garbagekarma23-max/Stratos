@@ -1,0 +1,128 @@
+{
+ "id": "acc-balancing-ledger",
+ "title": "Balancing the ledger",
+ "brief": "f696ccc70eb3",
+ "shortlist": [
+  [
+   "acc-assets-liabilities-owner-s",
+   0.321
+  ],
+  [
+   "acc-accounting-equation",
+   0.288
+  ],
+  [
+   "acc-accounting",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: done",
+  "2026-11-01T15:05:23Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.0062,
+  "check": 0.01232
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches balancing ledger accounts and carrying forward their balances at period end; they only cover the accounting equation, definitions and the accounting process, so the new point teaches a different step.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Balancing the ledger",
+  "card": [
+   "At the end of the period, each asset, liability and owner's equity account in the general ledger is balanced. This means finding the difference between the debit side and the credit side.",
+   "Add up both sides. Put the difference on the smaller side as the balancing figure, so both totals are equal. Label it Balance c/d (carried down).",
+   "Write the same amount on the opposite side below the totals as Balance b/d (brought down). This is the opening balance of the next period.",
+   "Assets normally have a debit balance. Liabilities and owner's equity normally have a credit balance."
+  ],
+  "remember": "Balance c/d closes the old period. Balance b/d opens the new one on the opposite side.",
+  "a": {
+   "q": "An account has debits totalling $9,000 and credits totalling $6,500 at the end of the period. What is the balancing entry?",
+   "opts": [
+    "Credit side: Balance c/d $2,500",
+    "Debit side: Balance c/d $2,500",
+    "Credit side: Balance c/d $15,500",
+    "Debit side: Balance c/d $6,500"
+   ],
+   "why": "The debit side is larger, so the difference of $2,500 goes on the credit side as Balance c/d. Both sides then total $9,000. Putting it on the debit side would make the totals unequal.",
+   "clue": "The balancing figure goes on the smaller side."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Plumbing Supplies balances its Equipment account. After the balancing figure is added, both sides total $24,000, with Balance c/d on the credit side. Where is Balance b/d recorded?",
+   "opts": [
+    "Debit side, below the totals",
+    "Credit side, below the totals",
+    "Debit side, above the totals",
+    "Credit side, above the totals"
+   ],
+   "why": "Balance b/d is written on the opposite side to Balance c/d, below the totals. Balance c/d is on the credit side, so Balance b/d is a debit, which suits an asset. Writing it on the credit side would repeat the same side.",
+   "clue": "Brought down goes on the opposite side to carried down."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Credit side: Balance c/d $2,500",
+   "also_right": []
+  },
+  "b": {
+   "best": "Debit side, below the totals",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Balancing the ledger",
+  "card": [
+   "At the end of the period, each asset, liability and owner's equity account in the general ledger is balanced. This means finding the difference between the debit side and the credit side.",
+   "Add up both sides. Put the difference on the smaller side as the balancing figure, so both totals are equal. Label it Balance c/d (carried down).",
+   "Write the same amount on the opposite side below the totals as Balance b/d (brought down). This is the opening balance of the next period.",
+   "Assets normally have a debit balance. Liabilities and owner's equity normally have a credit balance."
+  ],
+  "remember": "Balance c/d closes the old period. Balance b/d opens the new one on the opposite side.",
+  "a": {
+   "q": "An account has debits totalling $9,000 and credits totalling $6,500 at the end of the period. What is the balancing entry?",
+   "opts": [
+    "Credit side: Balance c/d $2,500",
+    "Debit side: Balance c/d $2,500",
+    "Credit side: Balance c/d $15,500",
+    "Debit side: Balance c/d $6,500"
+   ],
+   "why": "The debit side is larger, so the difference of $2,500 goes on the credit side as Balance c/d. Both sides then total $9,000. Putting it on the debit side would make the totals unequal.",
+   "clue": "The balancing figure goes on the smaller side."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya's Plumbing Supplies balances its Equipment account. After the balancing figure is added, both sides total $24,000, with Balance c/d on the credit side. Where is Balance b/d recorded?",
+   "opts": [
+    "Debit side, below the totals",
+    "Credit side, below the totals",
+    "Debit side, above the totals",
+    "Credit side, above the totals"
+   ],
+   "why": "Balance b/d is written on the opposite side to Balance c/d, below the totals. Balance c/d is on the credit side, so Balance b/d is a debit, which suits an asset. Writing it on the credit side would repeat the same side.",
+   "clue": "Brought down goes on the opposite side to carried down."
+  }
+ },
+ "cleared_by": "checker"
+}

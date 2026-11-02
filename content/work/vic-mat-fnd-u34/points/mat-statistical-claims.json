@@ -1,0 +1,315 @@
+{
+ "id": "mat-statistical-claims",
+ "title": "Statistical claims",
+ "brief": "49d7a0573b91",
+ "shortlist": [
+  [
+   "mat-statistical-investigation-process",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01694,
+  "check": 0.02997,
+  "fix": 0.03512,
+  "recheck": 0.0148
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the steps of a statistical investigation, while the new point is about critically checking a claim (who collected the data, how, from how many, and misleading uses), which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue ('Think about how many people were asked and who they were') maps directly onto the only option that mentions how many people were asked and who they were. A student could pick it without understanding sampling bias.",
+ "rejected": {
+  "title": "Statistical claims",
+  "card": [
+   "A statistical claim is only as good as the data behind it. Ask who collected the data, how they collected it and how many people or items it covers.",
+   "Check who is in the sample. If it leaves out part of the group the claim is about, or only includes people who chose to reply, the result may be biased. A very small sample can also give a result that does not hold for the whole group.",
+   "Look for errors and misleading uses. If a graph's vertical axis does not start at zero, each bar shows only the part above the starting value, so a small gap can look huge. A percentage with no sample size, or a claim that one thing caused another when the data only shows they happen together, is also misleading.",
+   "For example, a gym says 90% of members love its classes, but it asked only 10 members, all leaving a class. The sample is small and the people were not chosen fairly, so the claim is weak."
+  ],
+  "remember": "Before trusting a claim, check the sample, the numbers and how the graph is drawn.",
+  "a": {
+   "q": "A shop claims 80% of customers prefer its brand. It asked 5 people standing at its own checkout. What is the main problem?",
+   "opts": [
+    "Only 5 people, all at its own checkout, were asked",
+    "80% of 5 people is not a whole number of people",
+    "A result as high as 80% is too high to be believed",
+    "The result needs to be shown on a graph to count"
+   ],
+   "why": "Five people who are already buying at the checkout is a tiny sample that is likely to favour the brand. The arithmetic is fine, since 80% of 5 is 4 people, so the problem is who was asked and how many.",
+   "clue": "Think about how many people were asked and who they were."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph shows a town's bike sales rising from 520 to 540, yet the second bar looks twice as tall as the first. What is the most likely cause?",
+   "opts": [
+    "The vertical axis starts at 500, not at zero",
+    "Sales doubled, so the bars are drawn correctly",
+    "The axis starts at zero but uses steps of 20",
+    "Bars always exaggerate change compared with lines"
+   ],
+   "why": "Measured from 500, the bars are 20 and 40 units tall, so the second looks twice as tall. Sales did not double: 540 is only about 4% more than 520. An axis from zero would make the bars almost the same height.",
+   "clue": "Bar height shows the distance above the axis's starting value."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue ('Think about how many people were asked and who they were') maps directly onto the only option that mentions how many people were asked and who they were. A student could pick it without understanding sampling bias."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Statistical claims",
+     "card": [
+      "A statistical claim is only as good as the data behind it. Ask who collected the data, how they collected it and how many people or items it covers.",
+      "Check who is in the sample. If it leaves out part of the group the claim is about, or only people who chose to reply, the result may be biased. A very small sample can also give a result that does not hold for the whole group.",
+      "Look for errors and misleading uses. A graph axis that does not start at zero can make a small gap look huge. A percentage with no sample size, or a claim that one thing caused another when the data only shows they happen together, is also misleading.",
+      [
+       "Example",
+       "A gym says 90% of members love its classes, but it asked only 10 members, all leaving a class. The sample is small and the people were not chosen fairly, so the claim is weak."
+      ]
+     ],
+     "remember": "Ask who collected the data, how, and from how many, before trusting a claim.",
+     "a": {
+      "q": "A shop claims 80% of customers prefer its brand. It asked 5 people standing at its own checkout. What is the main problem?",
+      "opts": [
+       "The sample is tiny and taken only from its own customers",
+       "The percentage was worked out by dividing wrongly",
+       "The shop should have asked more than one question",
+       "The result is too high to be believed"
+      ],
+      "why": "Five people from the shop's own checkout is a very small sample and is likely to favour the brand. The percentage itself may be correct, so the problem is the data, not the arithmetic.",
+      "clue": "Look at how many people were asked and where."
+     },
+     "b": {
+      "d": 3,
+      "q": "A graph shows a town's bike sales rising from 520 to 540. Its vertical axis starts at 500, so the second bar looks twice as tall. What is misleading?",
+      "opts": [
+       "The axis does not start at zero, so a small rise looks large",
+       "The sales rose, so the graph should not be used",
+       "The graph uses bars rather than a line",
+       "The numbers 520 and 540 are too close together"
+      ],
+      "why": "Starting the axis at 500 cuts off most of each bar, so a rise of 20 looks huge. Rising sales are not misleading, and the type of graph is not the problem.",
+      "clue": "Check where the vertical axis begins."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "The sample is tiny and taken only from its own customers",
+      "also_right": []
+     },
+     "b": {
+      "best": "The axis does not start at zero, so a small rise looks large",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The claim is about 'customers', which most naturally means the shop's own customers, so 'taken only from its own customers' is not in itself a flaw. The real bias is that only people already buying at the checkout were asked. The right option should say 'only people at its own checkout'."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "The right option is clearly the longest and the only one with precise detail (tiny sample, where it was taken). A student could pick it without knowing the idea."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the longest and the only one that gives a reason ('so a small rise looks large'). The stem also already says the axis starts at 500 and the bar looks twice as tall, so the answer is given away."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and answers are correct. In question a, the right option wrongly treats sampling the shop's own customers as a flaw, when the real bias is surveying people at the checkout. In both questions the right option stands out as the longest and most detailed, and question b's stem gives the answer away."
+    },
+    "flags": [
+     "Question a, wording: The claim is about 'customers', which most naturally means the shop's own customers, so 'taken only from its own customers' is not in itself a flaw. The real bias is that only people already buying at the checkout were asked. The right option should say 'only people at its own checkout'.",
+     "Question a, wording: The right option is clearly the longest and the only one with precise detail (tiny sample, where it was taken). A student could pick it without knowing the idea.",
+     "Question b, wording: The right option is the longest and the only one that gives a reason ('so a small rise looks large'). The stem also already says the axis starts at 500 and the bar looks twice as tall, so the answer is given away."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Statistical claims",
+     "card": [
+      "A statistical claim is only as good as the data behind it. Ask who collected the data, how they collected it and how many people or items it covers.",
+      "Check who is in the sample. If it leaves out part of the group the claim is about, or only includes people who chose to reply, the result may be biased. A very small sample can also give a result that does not hold for the whole group.",
+      "Look for errors and misleading uses. If a graph's vertical axis does not start at zero, each bar shows only the part above the starting value, so a small gap can look huge. A percentage with no sample size, or a claim that one thing caused another when the data only shows they happen together, is also misleading.",
+      "For example, a gym says 90% of members love its classes, but it asked only 10 members, all leaving a class. The sample is small and the people were not chosen fairly, so the claim is weak."
+     ],
+     "remember": "Before trusting a claim, check the sample, the numbers and how the graph is drawn.",
+     "a": {
+      "q": "A shop claims 80% of customers prefer its brand. It asked 5 people standing at its own checkout. What is the main problem?",
+      "opts": [
+       "Only 5 people, all at its own checkout, were asked",
+       "80% of 5 people is not a whole number of people",
+       "A result as high as 80% is too high to be believed",
+       "The result needs to be shown on a graph to count"
+      ],
+      "why": "Five people who are already buying at the checkout is a tiny sample that is likely to favour the brand. The arithmetic is fine, since 80% of 5 is 4 people, so the problem is who was asked and how many.",
+      "clue": "Think about how many people were asked and who they were."
+     },
+     "b": {
+      "d": 3,
+      "q": "A graph shows a town's bike sales rising from 520 to 540, yet the second bar looks twice as tall as the first. What is the most likely cause?",
+      "opts": [
+       "The vertical axis starts at 500, not at zero",
+       "Sales doubled, so the bars are drawn correctly",
+       "The axis starts at zero but uses steps of 20",
+       "Bars always exaggerate change compared with lines"
+      ],
+      "why": "Measured from 500, the bars are 20 and 40 units tall, so the second looks twice as tall. Sales did not double: 540 is only about 4% more than 520. An axis from zero would make the bars almost the same height.",
+      "clue": "Bar height shows the distance above the axis's starting value."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Only 5 people, all at its own checkout, were asked",
+       "also_right": []
+      },
+      "b": {
+       "best": "The vertical axis starts at 500, not at zero",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue ('Think about how many people were asked and who they were') maps directly onto the only option that mentions how many people were asked and who they were. A student could pick it without understanding sampling bias."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and arithmetic check out: 80% of 5 is 4, and from a 500 baseline the bars are 20 and 40 units tall, a rise of about 4%. The one issue is question a's clue, which practically names the right option."
+     },
+     "flags": [
+      "Question a, other: The clue ('Think about how many people were asked and who they were') maps directly onto the only option that mentions how many people were asked and who they were. A student could pick it without understanding sampling bias."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Statistical claims",
+  "card": [
+   "A statistical claim is only as good as the data behind it. Ask who collected the data, how they collected it and how many people or items it covers.",
+   "Check who is in the sample. If it leaves out part of the group the claim is about, or only includes people who chose to reply, the result may be biased. A very small sample can also give a result that does not hold for the whole group.",
+   "Look for errors and misleading uses. If a graph's vertical axis does not start at zero, each bar shows only the part above the starting value, so a small gap can look huge. A percentage with no sample size, or a claim that one thing caused another when the data only shows they happen together, is also misleading.",
+   "For example, a gym says 90% of members love its classes, but it asked only 10 members, all leaving a class. The sample is small and the people were not chosen fairly, so the claim is weak."
+  ],
+  "remember": "Before trusting a claim, check the sample, the numbers and how the graph is drawn.",
+  "a": {
+   "q": "A shop claims 80% of customers prefer its brand. It asked 5 people standing at its own checkout. Why is the claim weak?",
+   "opts": [
+    "The sample is tiny and likely to favour the shop's brand",
+    "The sample is tiny, but 80% of 5 people is not possible",
+    "The sample is fair, but 80% is too high a result to trust",
+    "The sample is fair, but the result needs a graph to count"
+   ],
+   "why": "Five people already buying at the checkout is a tiny sample that is likely to favour the brand. The arithmetic is fine, since 80% of 5 is 4 people. A high percentage is not a fault by itself, and a claim does not need a graph to count.",
+   "clue": "Ask whether the sample is large enough and whether it was chosen fairly."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph shows a town's bike sales rising from 520 to 540, yet the second bar looks twice as tall as the first. What is the most likely cause?",
+   "opts": [
+    "The vertical axis starts at 500, not at zero",
+    "Sales doubled, so the bars are drawn correctly",
+    "The axis starts at zero but uses steps of 20",
+    "Bars always exaggerate change compared with lines"
+   ],
+   "why": "Measured from 500, the bars are 20 and 40 units tall, so the second looks twice as tall. Sales did not double: 540 is only about 4% more than 520. An axis from zero would make the bars almost the same height.",
+   "clue": "Bar height shows the distance above the axis's starting value."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The sample is tiny and likely to favour the shop's brand",
+   "also_right": []
+  },
+  "b": {
+   "best": "The vertical axis starts at 500, not at zero",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Statistical claims",
+  "card": [
+   "A statistical claim is only as good as the data behind it. Ask who collected the data, how they collected it and how many people or items it covers.",
+   "Check who is in the sample. If it leaves out part of the group the claim is about, or only includes people who chose to reply, the result may be biased. A very small sample can also give a result that does not hold for the whole group.",
+   "Look for errors and misleading uses. If a graph's vertical axis does not start at zero, each bar shows only the part above the starting value, so a small gap can look huge. A percentage with no sample size, or a claim that one thing caused another when the data only shows they happen together, is also misleading.",
+   "For example, a gym says 90% of members love its classes, but it asked only 10 members, all leaving a class. The sample is small and the people were not chosen fairly, so the claim is weak."
+  ],
+  "remember": "Before trusting a claim, check the sample, the numbers and how the graph is drawn.",
+  "a": {
+   "q": "A shop claims 80% of customers prefer its brand. It asked 5 people standing at its own checkout. Why is the claim weak?",
+   "opts": [
+    "The sample is tiny and likely to favour the shop's brand",
+    "The sample is tiny, but 80% of 5 people is not possible",
+    "The sample is fair, but 80% is too high a result to trust",
+    "The sample is fair, but the result needs a graph to count"
+   ],
+   "why": "Five people already buying at the checkout is a tiny sample that is likely to favour the brand. The arithmetic is fine, since 80% of 5 is 4 people. A high percentage is not a fault by itself, and a claim does not need a graph to count.",
+   "clue": "Ask whether the sample is large enough and whether it was chosen fairly."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph shows a town's bike sales rising from 520 to 540, yet the second bar looks twice as tall as the first. What is the most likely cause?",
+   "opts": [
+    "The vertical axis starts at 500, not at zero",
+    "Sales doubled, so the bars are drawn correctly",
+    "The axis starts at zero but uses steps of 20",
+    "Bars always exaggerate change compared with lines"
+   ],
+   "why": "Measured from 500, the bars are 20 and 40 units tall, so the second looks twice as tall. Sales did not double: 540 is only about 4% more than 520. An axis from zero would make the bars almost the same height.",
+   "clue": "Bar height shows the distance above the axis's starting value."
+  }
+ }
+}

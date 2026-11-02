@@ -8,7 +8,7 @@
    0.527
   ]
  ],
- "stage": "review",
+ "stage": "write",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -16,7 +16,8 @@
   "2026-11-01T08:24:32Z write: done",
   "2026-11-01T08:33:50Z check: flagged",
   "2026-11-01T08:42:06Z fix: suggested",
-  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:20:23Z review: rejected, to be written again (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -40,8 +41,8 @@
   "reason": "The bank card covers Medicare together with the PBS, private insurance and subsidies, so it is broader than the single Medicare point this course needs, and it is written for a different state's Year 12 course.",
   "model": "claude-haiku-5-5"
  },
- "alone": true,
- "draft": {
+ "note": "",
+ "rejected": {
   "title": "Medicare",
   "card": [
    "Medicare is Australia's public health insurance scheme. It is run by the Australian Government and is open to eligible residents.",
@@ -74,126 +75,5 @@
    "clue": "A subsidy pays some of the fee, not always all of it."
   }
  },
- "local": [],
- "check": {
-  "a": {
-   "best": "Mostly from taxes, including the Medicare levy",
-   "also_right": []
-  },
-  "b": {
-   "best": "Medicare pays its part and Tom may pay the gap",
-   "also_right": []
-  },
-  "problems": [
-   {
-    "part": "b",
-    "kind": "fact",
-    "detail": "Why (b) says 'Medicare does not pay any fee in full'. This is false and contradicts the card, which says Medicare pays 'some or all of the fee'. Bulk-billed services and public hospital care as a public patient are fully covered."
-   },
-   {
-    "part": "b",
-    "kind": "wording",
-    "detail": "The right option is the only one with a hedged qualifier ('may'). The distractors all use absolutes ('full fee, however high', 'nothing', 'only'), so a student could pick the right answer by elimination without knowing the idea."
-   },
-   {
-    "part": "a",
-    "kind": "wording",
-    "detail": "The right option is the only one that repeats 'Medicare' from the stem ('the Medicare levy'). Together with the clue about income, this points to the answer without testing understanding."
-   }
-  ],
-  "sure": "high",
-  "sensitive": "none",
-  "summary": "The card and answers are correct. However, Why (b) wrongly says Medicare never pays a fee in full, which contradicts the card. Both questions also have right options that stand out: a echoes 'Medicare' from the stem, and b is the only hedged option."
- },
- "sensitive": "none",
- "flags": [
-  "Question b, fact: Why (b) says 'Medicare does not pay any fee in full'. This is false and contradicts the card, which says Medicare pays 'some or all of the fee'. Bulk-billed services and public hospital care as a public patient are fully covered.",
-  "Question b, wording: The right option is the only one with a hedged qualifier ('may'). The distractors all use absolutes ('full fee, however high', 'nothing', 'only'), so a student could pick the right answer by elimination without knowing the idea.",
-  "Question a, wording: The right option is the only one that repeats 'Medicare' from the stem ('the Medicare levy'). Together with the clue about income, this points to the answer without testing understanding."
- ],
- "proposal": {
-  "title": "Medicare",
-  "card": [
-   "Medicare is Australia's public health insurance scheme. It is run by the Australian Government and is open to eligible residents.",
-   "It is funded mainly from general taxes, including the Medicare levy, which is a small part of a person's taxable income.",
-   "Medicare covers or subsidises the cost of many services, such as visits to doctors, tests like blood tests and X-rays, and care as a public patient in a public hospital.",
-   "A subsidy means Medicare pays a set amount towards the fee. If the provider bulk bills, that amount is the full fee. If the provider charges more, the patient pays the difference, called a gap."
-  ],
-  "remember": "Medicare is tax-funded public insurance that helps pay for doctors, tests and public hospital care.",
-  "a": {
-   "q": "Which statement best describes how Medicare is paid for?",
-   "opts": [
-    "Mostly from taxes, including a levy on taxable income",
-    "Mostly from fees patients pay each time they see a doctor",
-    "Mostly from premiums people pay to private health insurers",
-    "Mostly from donations people give to public hospitals"
-   ],
-   "why": "Medicare is funded mainly from general taxes, and the Medicare levy on taxable income is part of that. Premiums go to private health insurers, which is a separate scheme, so that option is wrong.",
-   "clue": "Who collects the money that pays for the whole scheme?"
-  },
-  "b": {
-   "d": 3,
-   "q": "Tom has a blood test ordered by his GP in Bendigo. The provider charges more than the Medicare amount. What happens to the fee?",
-   "opts": [
-    "Medicare pays its set amount and Tom pays the rest",
-    "Medicare pays nothing and Tom pays the whole fee",
-    "Medicare pays the whole fee and Tom pays nothing",
-    "Medicare pays its set amount if Tom has private cover"
-   ],
-   "why": "Medicare subsidises tests, so it pays its set amount towards the fee. Because the provider charges more than that amount, Tom pays the difference, called the gap. Medicare would cover the full fee if the provider bulk billed, but here the charge is higher.",
-   "clue": "What does the patient pay when the charge is above the Medicare amount?"
-  }
- },
- "proposal_problems": [],
- "recheck": {
-  "at": "2026-11-01T09:32:51Z",
-  "result": "spot check",
-  "why": [],
-  "check": {
-   "a": {
-    "best": "Mostly from taxes, including a levy on taxable income",
-    "also_right": []
-   },
-   "b": {
-    "best": "Medicare pays its set amount and Tom pays the rest",
-    "also_right": []
-   },
-   "problems": [],
-   "sure": "high",
-   "sensitive": "none",
-   "summary": "No problems found."
-  },
-  "flags": []
- },
- "auto": {
-  "at": "2026-11-01T09:32:51Z",
-  "rules": 1,
-  "by": "recheck",
-  "n": 11,
-  "decision": "used the fix",
-  "spot": true,
-  "sure": "high",
-  "problems": [
-   {
-    "part": "b",
-    "kind": "fact",
-    "detail": "Why (b) says 'Medicare does not pay any fee in full'. This is false and contradicts the card, which says Medicare pays 'some or all of the fee'. Bulk-billed services and public hospital care as a public patient are fully covered."
-   },
-   {
-    "part": "b",
-    "kind": "wording",
-    "detail": "The right option is the only one with a hedged qualifier ('may'). The distractors all use absolutes ('full fee, however high', 'nothing', 'only'), so a student could pick the right answer by elimination without knowing the idea."
-   },
-   {
-    "part": "a",
-    "kind": "wording",
-    "detail": "The right option is the only one that repeats 'Medicare' from the stem ('the Medicare levy'). Together with the clue about income, this points to the answer without testing understanding."
-   }
-  ],
-  "flags": [
-   "Question b, fact: Why (b) says 'Medicare does not pay any fee in full'. This is false and contradicts the card, which says Medicare pays 'some or all of the fee'. Bulk-billed services and public hospital care as a public patient are fully covered.",
-   "Question b, wording: The right option is the only one with a hedged qualifier ('may'). The distractors all use absolutes ('full fee, however high', 'nothing', 'only'), so a student could pick the right answer by elimination without knowing the idea.",
-   "Question a, wording: The right option is the only one that repeats 'Medicare' from the stem ('the Medicare levy'). Together with the clue about income, this points to the answer without testing understanding."
-  ]
- }
+ "rewrites": 1
 }

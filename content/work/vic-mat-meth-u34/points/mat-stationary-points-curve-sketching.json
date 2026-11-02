@@ -1,0 +1,247 @@
+{
+ "id": "mat-stationary-points-curve-sketching",
+ "title": "Stationary points and curve sketching",
+ "brief": "fa2d21210616",
+ "shortlist": [
+  [
+   "mat-curve-sketching-with-calculus",
+   0.544
+  ],
+  [
+   "mat-stationary-points",
+   0.378
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.0063,
+  "check": 0.0173,
+  "fix": 0.03276,
+  "recheck": 0.01285
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "Neither bank point matches the brief: the curve-sketching card adds intercepts and end behaviour beyond it, and the stationary-points card omits general points of inflection and the increasing/decreasing intervals, so the new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Stationary points and curve sketching",
+  "card": [
+   [
+    "Stationary point",
+    "A stationary point is where f′(x) = 0. Solve this equation to find the x-values."
+   ],
+   [
+    "Nature",
+    "Check the sign of f′ on each side. Positive then negative is a local maximum. Negative then positive is a local minimum. The same sign on both sides is a stationary point of inflection."
+   ],
+   [
+    "Increasing",
+    "A function is strictly increasing where f′(x) > 0 and strictly decreasing where f′(x) < 0."
+   ],
+   [
+    "Example",
+    "For f(x) = x³ − 3x, f′(x) = 3x² − 3 = 0 gives x = −1 or x = 1. The function is decreasing for −1 < x < 1."
+   ]
+  ],
+  "remember": "Set f′(x) = 0 to find stationary points, then use the sign of f′ to decide their nature.",
+  "a": {
+   "q": "What are the x-values of the stationary points of f(x) = x² − 6x + 5?",
+   "opts": [
+    "x = 3 only",
+    "x = 1 and x = 5",
+    "x = −3 only",
+    "x = 6 only"
+   ],
+   "why": "f′(x) = 2x − 6 = 0 gives x = 3. The values 1 and 5 are the x-intercepts, where f(x) = 0, not where f′(x) = 0.",
+   "clue": "Differentiate first, then set the derivative to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, on which interval is f strictly decreasing?",
+   "opts": [
+    "−2 < x < 2",
+    "x < −2 or x > 2",
+    "x < 2",
+    "x > −2"
+   ],
+   "why": "f′(x) = 3x² − 12 = 3(x − 2)(x + 2). This is negative between −2 and 2, so f is strictly decreasing there. It is positive outside, where f is increasing, which is the tempting reversed answer.",
+   "clue": "Factorise f′ and decide where it is negative."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x = 3 only",
+   "also_right": []
+  },
+  "b": {
+   "best": "−2 < x < 2",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says a function is strictly increasing 'where f′(x) > 0', which reads as the whole set where it increases. Under the VCE convention, a function can be strictly increasing at an isolated point where f′ = 0 (e.g. x³ at x = 0), and VCAA usually gives intervals with the endpoints included (e.g. [−1, 1] in the example). f′ > 0 is a sufficient condition, not the definition, so the card could mislead students on exam conventions."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions are correct and their explanations agree with the card. One minor issue: the card treats f′(x) > 0 as the definition of strictly increasing, which conflicts with the VCE convention of including endpoints where f′ = 0."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says a function is strictly increasing 'where f′(x) > 0', which reads as the whole set where it increases. Under the VCE convention, a function can be strictly increasing at an isolated point where f′ = 0 (e.g. x³ at x = 0), and VCAA usually gives intervals with the endpoints included (e.g. [−1, 1] in the example). f′ > 0 is a sufficient condition, not the definition, so the card could mislead students on exam conventions."
+ ],
+ "proposal": {
+  "title": "Stationary points and curve sketching",
+  "card": [
+   [
+    "Stationary point",
+    "A stationary point is where f′(x) = 0. Solve this equation to find the x-values."
+   ],
+   [
+    "Nature",
+    "Check the sign of f′ on each side. Positive then negative is a local maximum. Negative then positive is a local minimum. The same sign on both sides is a stationary point of inflection."
+   ],
+   [
+    "Increasing",
+    "If f′(x) > 0 across an interval, except at isolated points where f′(x) = 0, f is strictly increasing there. So x³ is strictly increasing for all x, even though f′(0) = 0. With f′(x) < 0, f is strictly decreasing. Endpoints where f′ = 0 are usually included."
+   ],
+   [
+    "Example",
+    "For f(x) = x³ − 3x, f′(x) = 3x² − 3 = 0 gives x = −1 or x = 1. f′ < 0 between them, so f is strictly decreasing on [−1, 1], endpoints included."
+   ]
+  ],
+  "remember": "Set f′(x) = 0 to find stationary points, then use the sign of f′ to decide their nature.",
+  "a": {
+   "q": "What are the x-values of the stationary points of f(x) = x² − 6x + 5?",
+   "opts": [
+    "x = 3 only",
+    "x = 1 and x = 5",
+    "x = −3 only",
+    "x = 6 only"
+   ],
+   "why": "f′(x) = 2x − 6 = 0 gives x = 3. The values 1 and 5 are the x-intercepts, where f(x) = 0, not where f′(x) = 0.",
+   "clue": "Differentiate first, then set the derivative to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, what is the largest interval on which f is strictly decreasing?",
+   "opts": [
+    "[−2, 2]",
+    "(−∞, −2] ∪ [2, ∞)",
+    "(−∞, 2]",
+    "[−2, ∞)"
+   ],
+   "why": "f′(x) = 3x² − 12 = 3(x − 2)(x + 2). This is negative between −2 and 2 and zero only at the endpoints, so f is strictly decreasing on [−2, 2]. Outside this interval f′ is positive, so the reversed answer is where f is increasing.",
+   "clue": "Factorise f′ and decide where it is negative."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "x = 3 only",
+    "also_right": []
+   },
+   "b": {
+    "best": "[−2, 2]",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says a function is strictly increasing 'where f′(x) > 0', which reads as the whole set where it increases. Under the VCE convention, a function can be strictly increasing at an isolated point where f′ = 0 (e.g. x³ at x = 0), and VCAA usually gives intervals with the endpoints included (e.g. [−1, 1] in the example). f′ > 0 is a sufficient condition, not the definition, so the card could mislead students on exam conventions."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says a function is strictly increasing 'where f′(x) > 0', which reads as the whole set where it increases. Under the VCE convention, a function can be strictly increasing at an isolated point where f′ = 0 (e.g. x³ at x = 0), and VCAA usually gives intervals with the endpoints included (e.g. [−1, 1] in the example). f′ > 0 is a sufficient condition, not the definition, so the card could mislead students on exam conventions."
+  ]
+ },
+ "final": {
+  "title": "Stationary points and curve sketching",
+  "card": [
+   [
+    "Stationary point",
+    "A stationary point is where f′(x) = 0. Solve this equation to find the x-values."
+   ],
+   [
+    "Nature",
+    "Check the sign of f′ on each side. Positive then negative is a local maximum. Negative then positive is a local minimum. The same sign on both sides is a stationary point of inflection."
+   ],
+   [
+    "Increasing",
+    "If f′(x) > 0 across an interval, except at isolated points where f′(x) = 0, f is strictly increasing there. So x³ is strictly increasing for all x, even though f′(0) = 0. With f′(x) < 0, f is strictly decreasing. Endpoints where f′ = 0 are usually included."
+   ],
+   [
+    "Example",
+    "For f(x) = x³ − 3x, f′(x) = 3x² − 3 = 0 gives x = −1 or x = 1. f′ < 0 between them, so f is strictly decreasing on [−1, 1], endpoints included."
+   ]
+  ],
+  "remember": "Set f′(x) = 0 to find stationary points, then use the sign of f′ to decide their nature.",
+  "a": {
+   "q": "What are the x-values of the stationary points of f(x) = x² − 6x + 5?",
+   "opts": [
+    "x = 3 only",
+    "x = 1 and x = 5",
+    "x = −3 only",
+    "x = 6 only"
+   ],
+   "why": "f′(x) = 2x − 6 = 0 gives x = 3. The values 1 and 5 are the x-intercepts, where f(x) = 0, not where f′(x) = 0.",
+   "clue": "Differentiate first, then set the derivative to zero."
+  },
+  "b": {
+   "d": 3,
+   "q": "For f(x) = x³ − 12x, what is the largest interval on which f is strictly decreasing?",
+   "opts": [
+    "[−2, 2]",
+    "(−∞, −2] ∪ [2, ∞)",
+    "(−∞, 2]",
+    "[−2, ∞)"
+   ],
+   "why": "f′(x) = 3x² − 12 = 3(x − 2)(x + 2). This is negative between −2 and 2 and zero only at the endpoints, so f is strictly decreasing on [−2, 2]. Outside this interval f′ is positive, so the reversed answer is where f is increasing.",
+   "clue": "Factorise f′ and decide where it is negative."
+  }
+ },
+ "cleared_by": "recheck"
+}

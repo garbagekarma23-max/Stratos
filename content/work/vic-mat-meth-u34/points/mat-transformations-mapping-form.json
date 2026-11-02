@@ -1,0 +1,213 @@
+{
+ "id": "mat-transformations-mapping-form",
+ "title": "Transformations in mapping form",
+ "brief": "728884073ae8",
+ "shortlist": [
+  [
+   "mat-composition-inverse-transformations",
+   0.28
+  ],
+  [
+   "mat-combining-transformations",
+   0.247
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00046,
+  "write": 0.0058,
+  "check": 0.01584,
+  "fix": 0.03167,
+  "recheck": 0.01288
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, mat-combining-transformations, teaches combined transformations through function equations with a point mapping that inverts the factors, whereas this point teaches the forward mapping rule (x,y) to (ax+h, by+k), so adapting it would need a new conversion step, and the matrix point teaches a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Transformations in mapping form",
+  "card": [
+   "A mapping rule such as (x, y) → (2x + 1, 3y) says where each point (x, y) on a graph moves to. The first part gives the new x-value. The second part gives the new y-value.",
+   "A number multiplying x or y is a dilation. A negative sign is a reflection. A number added or subtracted is a translation. A factor of 2 on x dilates from the y-axis by a factor of 2 (parallel to the x-axis).",
+   "The y-part changes the y-coordinate. A factor of 3 on y dilates from the x-axis by a factor of 3. A y-part of −y reflects in the x-axis. An x-part of −x reflects in the y-axis.",
+   "Worked example: apply (x, y) → (2x + 1, 3y) to the point (4, 5). New x = 2 × 4 + 1 = 9. New y = 3 × 5 = 15. The point moves to (9, 15)."
+  ],
+  "remember": "Read a mapping rule as new x, then new y, and apply it to each point.",
+  "a": {
+   "q": "The rule (x, y) → (2x + 1, 3y) is applied to the point (3, −2). Where does the point move to?",
+   "opts": [
+    "(7, −6)",
+    "(8, −6)",
+    "(7, 6)",
+    "(7, −5)"
+   ],
+   "why": "New x = 2 × 3 + 1 = 7. New y = 3 × (−2) = −6. The point moves to (7, −6). (8, −6) comes from adding 1 before doubling, which is the wrong order, since the rule doubles x and then adds 1.",
+   "clue": "Double x first, then add 1, and multiply y by 3."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which mapping rule reflects a graph in the x-axis and then translates it 4 units to the left? (Apply the reflection first.)",
+   "opts": [
+    "(x, y) → (x − 4, −y)",
+    "(x, y) → (x + 4, −y)",
+    "(x, y) → (−x − 4, y)",
+    "(x, y) → (−x + 4, y)"
+   ],
+   "why": "Reflecting in the x-axis changes y to −y and leaves x alone. Moving 4 units left subtracts 4 from x, so the rule is (x − 4, −y). (x + 4, −y) moves the graph to the right, which is the tempting sign mistake.",
+   "clue": "Reflection in the x-axis changes the y-part only. Left means x gets smaller."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(7, −6)",
+   "also_right": []
+  },
+  "b": {
+   "best": "(x, y) → (x − 4, −y)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card says only that an added or subtracted number is a translation. It never says which direction it moves the graph (subtracting from x moves it left), so question b needs more than the card teaches. Only the clue supplies it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct. The only gap is that the card never says which way an added or subtracted number moves the graph, which question b relies on."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The card says only that an added or subtracted number is a translation. It never says which direction it moves the graph (subtracting from x moves it left), so question b needs more than the card teaches. Only the clue supplies it."
+ ],
+ "proposal": {
+  "title": "Transformations in mapping form",
+  "card": [
+   "A mapping rule such as (x, y) → (2x + 1, 3y) says where each point (x, y) on a graph moves to. The first part gives the new x-value. The second part gives the new y-value.",
+   "A number multiplying a part is a dilation: 2x dilates from the y-axis by a factor of 2, and 3y dilates from the x-axis by a factor of 3. A negative sign is a reflection: −y reflects in the x-axis and −x reflects in the y-axis.",
+   "A number added or subtracted is a translation. In the x-part, x + 1 moves the graph 1 unit right and x − 4 moves it 4 units left. In the y-part, y + 2 moves it 2 units up and y − 2 moves it 2 units down.",
+   "Worked example: apply (x, y) → (2x + 1, 3y) to the point (4, 5). New x = 2 × 4 + 1 = 9. New y = 3 × 5 = 15. The point moves to (9, 15)."
+  ],
+  "remember": "Read a mapping rule as new x, then new y, and apply it to each point.",
+  "a": {
+   "q": "The rule (x, y) → (2x + 1, 3y) is applied to the point (3, −2). Where does the point move to?",
+   "opts": [
+    "(7, −6)",
+    "(8, −6)",
+    "(7, 6)",
+    "(7, −5)"
+   ],
+   "why": "New x = 2 × 3 + 1 = 7. New y = 3 × (−2) = −6. The point moves to (7, −6). (8, −6) comes from adding 1 before doubling, which is the wrong order, since the rule doubles x and then adds 1.",
+   "clue": "Double x first, then add 1, and multiply y by 3."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which mapping rule reflects a graph in the x-axis and then translates it 4 units to the left? (Apply the reflection first.)",
+   "opts": [
+    "(x, y) → (x − 4, −y)",
+    "(x, y) → (x + 4, −y)",
+    "(x, y) → (−x − 4, y)",
+    "(x, y) → (−x + 4, y)"
+   ],
+   "why": "Reflecting in the x-axis changes y to −y and leaves x alone. Moving 4 units left subtracts 4 from x, so the rule is (x − 4, −y). (x + 4, −y) moves the graph 4 units right, which is the tempting sign mistake.",
+   "clue": "Reflection in the x-axis changes the y-part only."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "(7, −6)",
+    "also_right": []
+   },
+   "b": {
+    "best": "(x, y) → (x − 4, −y)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The card says only that an added or subtracted number is a translation. It never says which direction it moves the graph (subtracting from x moves it left), so question b needs more than the card teaches. Only the clue supplies it."
+   }
+  ],
+  "flags": [
+   "Question b, level: The card says only that an added or subtracted number is a translation. It never says which direction it moves the graph (subtracting from x moves it left), so question b needs more than the card teaches. Only the clue supplies it."
+  ]
+ },
+ "final": {
+  "title": "Transformations in mapping form",
+  "card": [
+   "A mapping rule such as (x, y) → (2x + 1, 3y) says where each point (x, y) on a graph moves to. The first part gives the new x-value. The second part gives the new y-value.",
+   "A number multiplying a part is a dilation: 2x dilates from the y-axis by a factor of 2, and 3y dilates from the x-axis by a factor of 3. A negative sign is a reflection: −y reflects in the x-axis and −x reflects in the y-axis.",
+   "A number added or subtracted is a translation. In the x-part, x + 1 moves the graph 1 unit right and x − 4 moves it 4 units left. In the y-part, y + 2 moves it 2 units up and y − 2 moves it 2 units down.",
+   "Worked example: apply (x, y) → (2x + 1, 3y) to the point (4, 5). New x = 2 × 4 + 1 = 9. New y = 3 × 5 = 15. The point moves to (9, 15)."
+  ],
+  "remember": "Read a mapping rule as new x, then new y, and apply it to each point.",
+  "a": {
+   "q": "The rule (x, y) → (2x + 1, 3y) is applied to the point (3, −2). Where does the point move to?",
+   "opts": [
+    "(7, −6)",
+    "(8, −6)",
+    "(7, 6)",
+    "(7, −5)"
+   ],
+   "why": "New x = 2 × 3 + 1 = 7. New y = 3 × (−2) = −6. The point moves to (7, −6). (8, −6) comes from adding 1 before doubling, which is the wrong order, since the rule doubles x and then adds 1.",
+   "clue": "Double x first, then add 1, and multiply y by 3."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which mapping rule reflects a graph in the x-axis and then translates it 4 units to the left? (Apply the reflection first.)",
+   "opts": [
+    "(x, y) → (x − 4, −y)",
+    "(x, y) → (x + 4, −y)",
+    "(x, y) → (−x − 4, y)",
+    "(x, y) → (−x + 4, y)"
+   ],
+   "why": "Reflecting in the x-axis changes y to −y and leaves x alone. Moving 4 units left subtracts 4 from x, so the rule is (x − 4, −y). (x + 4, −y) moves the graph 4 units right, which is the tempting sign mistake.",
+   "clue": "Reflection in the x-axis changes the y-part only."
+  }
+ },
+ "cleared_by": "recheck"
+}

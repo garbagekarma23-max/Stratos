@@ -1,0 +1,225 @@
+{
+ "id": "acc-budgeted-cash-flow-statement",
+ "title": "The budgeted cash flow statement",
+ "brief": "193483954109",
+ "shortlist": [
+  [
+   "bus-cash-flow-statement",
+   0.702
+  ],
+  [
+   "bus-cash-flow-management",
+   0.514
+  ],
+  [
+   "bus-budgets",
+   0.401
+  ],
+  [
+   "acc-cash-profit",
+   0.374
+  ],
+  [
+   "acc-receivables-payables-reports",
+   0.367
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00524,
+  "check": 0.01655,
+  "fix": 0.03473,
+  "recheck": 0.01176
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, bus-cash-flow-statement, teaches a record of actual past cash movements, while the new point is a forward-looking budgeted estimate of cash by activity used to test whether the business will have enough cash, so it is a related but different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The budgeted cash flow statement",
+  "card": [
+   "A budgeted cash flow statement estimates the cash a business will receive and pay out in a future period. It counts cash only, so it records money when it moves, not when a sale or expense is earned or incurred.",
+   "Cash flows are grouped by activity. Operating activities are day-to-day trading, such as cash from customers and payments to suppliers and for wages.",
+   "Investing activities are buying or selling non-current assets, such as equipment. Financing activities are changes in cash from owners and lenders, such as a new loan, capital contributed or drawings.",
+   "The statement ends with the estimated closing cash balance. If it is low or negative, the business can plan ahead, for example by arranging a loan, before the shortfall happens."
+  ],
+  "remember": "A budgeted cash flow statement shows when cash will move, so the owner can see if cash will run short.",
+  "a": {
+   "q": "Why might a business with a budgeted profit still need a budgeted cash flow statement?",
+   "opts": [
+    "Customers may pay late, leaving the bank balance too low",
+    "Profit is only counted once the business has paid tax",
+    "Cash flows are grouped by activity but profit is not",
+    "Expenses are never included in a budgeted profit figure"
+   ],
+   "why": "The statement tracks when cash moves, so it can show a shortfall even when sales are expected to be profitable. Sales made on credit count as revenue, but no cash arrives until customers pay.",
+   "clue": "Think about when cash arrives compared with when a sale is made."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Geelong. Her budget shows she will buy a new delivery van for cash in March. In which section of the budgeted cash flow statement is the payment shown?",
+   "opts": [
+    "Investing activities, as a payment for a non-current asset",
+    "Operating activities, as a payment for a day-to-day cost",
+    "Financing activities, as a payment to a lender or owner",
+    "Operating activities, as the van is used to deliver stock"
+   ],
+   "why": "A van is a non-current asset, so buying it is an investing activity. The tempting answer is operating, because the van helps trading, but operating activities are day-to-day trading flows, not asset purchases.",
+   "clue": "Ask what kind of item the cash is being spent on."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Customers may pay late, leaving the bank balance too low",
+   "also_right": []
+  },
+  "b": {
+   "best": "Investing activities, as a payment for a non-current asset",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may'), while two distractors use absolutes ('only', 'never'). A test-wise student can rule those out and pick the answer without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts on the card and both answers are correct. In question a, the right option is the only hedged one while the distractors use absolutes like 'only' and 'never', which hints at the answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only hedged one ('may'), while two distractors use absolutes ('only', 'never'). A test-wise student can rule those out and pick the answer without knowing the idea."
+ ],
+ "proposal": {
+  "title": "The budgeted cash flow statement",
+  "card": [
+   "A budgeted cash flow statement estimates the cash a business will receive and pay out in a future period. It counts cash only, so a credit sale appears when the customer pays, even though it counts towards profit when the sale is made.",
+   "Cash flows are grouped by activity. Operating activities are day-to-day trading, such as cash from customers and payments to suppliers and for wages.",
+   "Investing activities are buying or selling non-current assets, such as equipment. Financing activities are changes in cash from owners and lenders, such as a new loan, capital contributed or drawings.",
+   "The statement ends with the estimated closing cash balance. If it is low or negative, the business can plan ahead, for example by arranging a loan, before the shortfall happens."
+  ],
+  "remember": "A budgeted cash flow statement shows when cash will move, so the owner can see if cash will run short.",
+  "a": {
+   "q": "Why might a business with a budgeted profit still need a budgeted cash flow statement?",
+   "opts": [
+    "Credit sales count in profit before customers pay the cash",
+    "Profit counts sales when customers pay the cash for them",
+    "A budgeted profit already shows the closing cash balance",
+    "Profit is grouped into operating, investing and financing"
+   ],
+   "why": "A credit sale adds to profit when it is made, but no cash arrives until the customer pays, so the bank balance can run low. Saying profit counts sales when the cash is paid reverses this: that timing belongs to the cash flow statement.",
+   "clue": "Think about when cash arrives compared with when a sale is made."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Geelong. Her budget shows she will buy a new delivery van for cash in March. In which section of the budgeted cash flow statement is the payment shown?",
+   "opts": [
+    "Investing activities, as a payment for a non-current asset",
+    "Operating activities, as a payment for a day-to-day cost",
+    "Financing activities, as a payment to a lender or owner",
+    "Operating activities, as the van is used to deliver stock"
+   ],
+   "why": "A van is a non-current asset, so buying it is an investing activity. The tempting answer is operating, because the van helps trading, but operating activities are day-to-day trading flows, not asset purchases.",
+   "clue": "Ask what kind of item the cash is being spent on."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Credit sales count in profit before customers pay the cash",
+    "also_right": []
+   },
+   "b": {
+    "best": "Investing activities, as a payment for a non-current asset",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only hedged one ('may'), while two distractors use absolutes ('only', 'never'). A test-wise student can rule those out and pick the answer without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The right option is the only hedged one ('may'), while two distractors use absolutes ('only', 'never'). A test-wise student can rule those out and pick the answer without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "The budgeted cash flow statement",
+  "card": [
+   "A budgeted cash flow statement estimates the cash a business will receive and pay out in a future period. It counts cash only, so a credit sale appears when the customer pays, even though it counts towards profit when the sale is made.",
+   "Cash flows are grouped by activity. Operating activities are day-to-day trading, such as cash from customers and payments to suppliers and for wages.",
+   "Investing activities are buying or selling non-current assets, such as equipment. Financing activities are changes in cash from owners and lenders, such as a new loan, capital contributed or drawings.",
+   "The statement ends with the estimated closing cash balance. If it is low or negative, the business can plan ahead, for example by arranging a loan, before the shortfall happens."
+  ],
+  "remember": "A budgeted cash flow statement shows when cash will move, so the owner can see if cash will run short.",
+  "a": {
+   "q": "Why might a business with a budgeted profit still need a budgeted cash flow statement?",
+   "opts": [
+    "Credit sales count in profit before customers pay the cash",
+    "Profit counts sales when customers pay the cash for them",
+    "A budgeted profit already shows the closing cash balance",
+    "Profit is grouped into operating, investing and financing"
+   ],
+   "why": "A credit sale adds to profit when it is made, but no cash arrives until the customer pays, so the bank balance can run low. Saying profit counts sales when the cash is paid reverses this: that timing belongs to the cash flow statement.",
+   "clue": "Think about when cash arrives compared with when a sale is made."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya runs a bike shop in Geelong. Her budget shows she will buy a new delivery van for cash in March. In which section of the budgeted cash flow statement is the payment shown?",
+   "opts": [
+    "Investing activities, as a payment for a non-current asset",
+    "Operating activities, as a payment for a day-to-day cost",
+    "Financing activities, as a payment to a lender or owner",
+    "Operating activities, as the van is used to deliver stock"
+   ],
+   "why": "A van is a non-current asset, so buying it is an investing activity. The tempting answer is operating, because the van helps trading, but operating activities are day-to-day trading flows, not asset purchases.",
+   "clue": "Ask what kind of item the cash is being spent on."
+  }
+ },
+ "cleared_by": "recheck"
+}

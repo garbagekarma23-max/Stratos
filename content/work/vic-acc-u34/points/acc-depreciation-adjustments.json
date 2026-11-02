@@ -1,0 +1,150 @@
+{
+ "id": "acc-depreciation-adjustments",
+ "title": "Depreciation adjustments",
+ "brief": "1b7a0b7cfb4b",
+ "shortlist": [
+  [
+   "acc-carrying-amount",
+   0.497
+  ],
+  [
+   "acc-depreciation",
+   0.465
+  ],
+  [
+   "acc-straight-line-depreciation",
+   0.419
+  ],
+  [
+   "acc-choosing-depreciation-method",
+   0.409
+  ],
+  [
+   "acc-reducing-balance-depreciation",
+   0.39
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.0052,
+  "check": 0.01228
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the ledger adjustment itself (debit depreciation expense, credit accumulated depreciation each period); the carrying amount point is related but only explains what the balances mean, and the depreciation and method points cover the concept and calculation rather than the entry.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Depreciation adjustments",
+  "card": [
+   "Depreciation spreads the cost of a non-current asset over its useful life. At the end of each period, an adjusting entry records that period's share.",
+   [
+    "Straight-line",
+    "the same amount each year. Annual depreciation = (cost - residual value) ÷ useful life in years."
+   ],
+   [
+    "Reducing balance",
+    "a fixed percentage of the carrying amount at the start of the year, so the amount falls each year. Carrying amount = cost - accumulated depreciation."
+   ],
+   "The entry is debit Depreciation expense and credit Accumulated depreciation. Accumulated depreciation is a contra asset account. It is shown against the asset, and the asset account itself stays at cost."
+  ],
+  "remember": "Each year: debit Depreciation expense, credit Accumulated depreciation. The asset stays at cost.",
+  "a": {
+   "q": "At 30 June, Lena's bakery records a year's depreciation on its oven. Which entry is correct?",
+   "opts": [
+    "Dr Depreciation expense, Cr Accumulated depreciation",
+    "Dr Accumulated depreciation, Cr Depreciation expense",
+    "Dr Depreciation expense, Cr Oven",
+    "Dr Oven, Cr Accumulated depreciation"
+   ],
+   "why": "The period's share of cost is an expense, so it is debited. The credit goes to Accumulated depreciation, which sits against the asset. Crediting the Oven account is tempting, but the asset account stays at cost.",
+   "clue": "Where does the credit go, if the asset stays at cost?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar's courier firm buys a van for $50 000 with a residual value of $10 000 and a useful life of 5 years. It uses reducing balance at 30% a year. What is the depreciation expense for Year 2?",
+   "opts": [
+    "$10 500",
+    "$12 000",
+    "$15 000",
+    "$8 000"
+   ],
+   "why": "Year 1 depreciation is 30% of $50 000 = $15 000, so the carrying amount is $35 000. Year 2 is 30% of $35 000 = $10 500. $15 000 wrongly applies the rate to the original cost again.",
+   "clue": "Apply the rate to the carrying amount at the start of Year 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Dr Depreciation expense, Cr Accumulated depreciation",
+   "also_right": []
+  },
+  "b": {
+   "best": "$10 500",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card, entries and reducing-balance calculation ($10 500 in Year 2) are correct, and the distractors reflect common errors."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Depreciation adjustments",
+  "card": [
+   "Depreciation spreads the cost of a non-current asset over its useful life. At the end of each period, an adjusting entry records that period's share.",
+   [
+    "Straight-line",
+    "the same amount each year. Annual depreciation = (cost - residual value) ÷ useful life in years."
+   ],
+   [
+    "Reducing balance",
+    "a fixed percentage of the carrying amount at the start of the year, so the amount falls each year. Carrying amount = cost - accumulated depreciation."
+   ],
+   "The entry is debit Depreciation expense and credit Accumulated depreciation. Accumulated depreciation is a contra asset account. It is shown against the asset, and the asset account itself stays at cost."
+  ],
+  "remember": "Each year: debit Depreciation expense, credit Accumulated depreciation. The asset stays at cost.",
+  "a": {
+   "q": "At 30 June, Lena's bakery records a year's depreciation on its oven. Which entry is correct?",
+   "opts": [
+    "Dr Depreciation expense, Cr Accumulated depreciation",
+    "Dr Accumulated depreciation, Cr Depreciation expense",
+    "Dr Depreciation expense, Cr Oven",
+    "Dr Oven, Cr Accumulated depreciation"
+   ],
+   "why": "The period's share of cost is an expense, so it is debited. The credit goes to Accumulated depreciation, which sits against the asset. Crediting the Oven account is tempting, but the asset account stays at cost.",
+   "clue": "Where does the credit go, if the asset stays at cost?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Omar's courier firm buys a van for $50 000 with a residual value of $10 000 and a useful life of 5 years. It uses reducing balance at 30% a year. What is the depreciation expense for Year 2?",
+   "opts": [
+    "$10 500",
+    "$12 000",
+    "$15 000",
+    "$8 000"
+   ],
+   "why": "Year 1 depreciation is 30% of $50 000 = $15 000, so the carrying amount is $35 000. Year 2 is 30% of $35 000 = $10 500. $15 000 wrongly applies the rate to the original cost again.",
+   "clue": "Apply the rate to the carrying amount at the start of Year 2."
+  }
+ },
+ "cleared_by": "checker"
+}

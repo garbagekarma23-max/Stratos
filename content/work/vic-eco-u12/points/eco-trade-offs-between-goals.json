@@ -8,7 +8,7 @@
    0.24
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:32Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -17,7 +17,8 @@
   "2026-11-01T08:33:49Z write: done",
   "2026-11-01T08:42:05Z check: flagged",
   "2026-11-01T08:44:26Z fix: suggested",
-  "2026-11-01T09:24:23Z autoreview: picked as a spot check. It would have been cleared with the fix (a other, remember other)"
+  "2026-11-01T09:24:23Z autoreview: picked as a spot check. It would have been cleared with the fix (a other, remember other)",
+  "2026-11-02T06:18:58Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -161,6 +162,41 @@
   "flags": [
    "Question a, other: Why (a) says the second option is the one where both goals improve together. Because options are shuffled, the second option shown is 'A government publishes emissions data each year'. The both-goals-improve case is 'Emissions fall and incomes also rise for all households'. The why should name that option instead of a position.",
    "Remember, other: The remember line says policy means 'choosing and accepting an opportunity cost', which implies every policy involves a trade-off. The card says not every goal conflicts and some policies can help two goals at once, so the line overstates the card."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Trade-offs between goals",
+  "card": [
+   "Governments have several economic goals, such as strong growth, a healthy environment and a fair spread of income (equity). Resources are limited, so they cannot always pursue every goal fully at once.",
+   "A trade-off happens when pursuing one goal means giving up some of another. The cost of the goal given up is the opportunity cost of the choice.",
+   "For example, allowing more mining can raise growth and jobs, but it may add emissions and harm land and water. A carbon price can cut emissions, but it may raise energy bills, which can hit low-income households hardest.",
+   "Not every goal conflicts with every other. Some policies can help two goals at once. Where goals do clash, policy makers must choose how much weight to give each one, and that choice is a value judgement."
+  ],
+  "remember": "Where goals clash, gaining more of one means giving up some of another, so policy makers must choose.",
+  "a": {
+   "q": "Which situation is the best example of a trade-off between economic goals?",
+   "opts": [
+    "A new coal mine adds jobs but also adds emissions",
+    "Emissions fall and incomes also rise for all households",
+    "Tax revenue rises as the economy grows",
+    "A government publishes emissions data each year"
+   ],
+   "why": "Allowing the mine gains growth and jobs but gives up some of the environmental goal, so one aim is traded for another. In the case where emissions fall and incomes also rise for all households, both goals improve together, so nothing is given up.",
+   "clue": "Look for the case where gaining one thing means losing another."
+  },
+  "b": {
+   "d": 3,
+   "q": "A national government adds a carbon price. Emissions fall, but energy bills rise and low-income households are hit hardest. Which goal is traded for which?",
+   "opts": [
+    "Some equity is given up to gain a better environment",
+    "Some environmental gain is given up to improve equity",
+    "Some growth is given up to gain a better environment",
+    "No goal is given up, because emissions fell"
+   ],
+   "why": "Emissions fell, so the environment improved. Bills rose most for low-income households, so equity was worsened. A fall in emissions does not remove the cost, because the opportunity cost is the fairness given up.",
+   "clue": "Ask who bears the higher bills, and which goal that touches."
+  }
+ },
+ "cleared_by": "owner"
 }

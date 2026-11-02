@@ -1,0 +1,344 @@
+{
+ "id": "acc-balance-sheet",
+ "title": "The balance sheet",
+ "brief": "db80562f0455",
+ "shortlist": [
+  [
+   "bus-balance-sheet",
+   0.489
+  ],
+  [
+   "acc-current-non-current-items",
+   0.437
+  ],
+  [
+   "acc-assets-liabilities-owner-s",
+   0.338
+  ],
+  [
+   "acc-accounting-decisions-assets",
+   0.325
+  ],
+  [
+   "acc-cost-non-current-asset",
+   0.303
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: done",
+  "2026-11-01T15:05:22Z check: flagged",
+  "2026-11-01T15:14:43Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (remember wording)",
+  "2026-11-02T04:50:13Z write: done",
+  "2026-11-02T04:56:44Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.01207,
+  "check": 0.02772,
+  "fix": 0.02147,
+  "recheck": 0.01517
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-balance-sheet, covers the balance sheet as a snapshot of assets, liabilities and equity but does not teach the current and non-current split that this point requires, and adding that split would be a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Remember, wording: 'Sort each item by whether it is used or due within 12 months' reads as applying to every balance sheet item, including owner's equity. The card correctly splits only assets and liabilities into current and non-current. Saying 'Sort each asset and liability' would match the card.",
+ "rejected": {
+  "title": "The balance sheet",
+  "card": [
+   "The balance sheet reports assets, liabilities and owner's equity at one date, not over a period. Assets equal liabilities plus owner's equity.",
+   [
+    "Current",
+    "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."
+   ],
+   [
+    "Non-current",
+    "held or due after more than 12 months, such as vehicles and buildings."
+   ],
+   "Assets and liabilities are each split into current and non-current. A loan repaid in instalments is split too: the part due in the next 12 months is current, and the rest is non-current."
+  ],
+  "remember": "A balance sheet is a snapshot at one date. Sort each item by whether it is used or due within 12 months.",
+  "a": {
+   "q": "Which item would be reported as a non-current asset of a trading business?",
+   "opts": [
+    "Delivery van used for several years",
+    "Inventory held for sale next month",
+    "Cash at bank used to pay wages this week",
+    "Accounts receivable due in 30 days"
+   ],
+   "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+   "clue": "Ask how long the business will keep the asset."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 30 June, Mia's Bikes owes $30,000 on a bank loan repaid at $10,000 a year over the next three years. How is the loan reported?",
+   "opts": [
+    "$10,000 current and $20,000 non-current",
+    "$20,000 current and $10,000 non-current",
+    "$30,000 non-current, as it runs for three years",
+    "$30,000 current, as repayments start this year"
+   ],
+   "why": "Only the $10,000 due in the next 12 months is current. The remaining $20,000 is due later, so it is non-current. Reporting the whole loan as non-current is tempting, but an instalment loan is split by when each part is due.",
+   "clue": "How much must be repaid in the next 12 months?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Remember, wording: 'Sort each item by whether it is used or due within 12 months' reads as applying to every balance sheet item, including owner's equity. The card correctly splits only assets and liabilities into current and non-current. Saying 'Sort each asset and liability' would match the card."
+   ],
+   "saved": {
+    "draft": {
+     "title": "The balance sheet",
+     "card": [
+      "The balance sheet reports assets, liabilities and owner's equity at one date. It is a snapshot, not a report over a period.",
+      [
+       "Current",
+       "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."
+      ],
+      [
+       "Non-current",
+       "held or due for longer than 12 months, such as vehicles, buildings and a five-year loan."
+      ],
+      "Assets equal liabilities plus owner's equity. Assets and liabilities are each split into current and non-current."
+     ],
+     "remember": "A balance sheet is a snapshot at a date. Assets = liabilities + owner's equity.",
+     "a": {
+      "q": "Which item would be reported as a non-current asset of a trading business?",
+      "opts": [
+       "Delivery van used for several years",
+       "Inventory held for sale next month",
+       "Cash at bank",
+       "Accounts receivable due in 30 days"
+      ],
+      "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+      "clue": "Ask how long the business will keep the asset."
+     },
+     "b": {
+      "d": 3,
+      "q": "On 30 June, Mia's Bikes owes $20,000 on a bank loan due in three years and $4,000 to a supplier due in 30 days. How are these reported?",
+      "opts": [
+       "Loan non-current, supplier current",
+       "Loan current, supplier non-current",
+       "Both current, as they are both debts",
+       "Both non-current, as they are both owed"
+      ],
+      "why": "The loan is due after more than 12 months, so it is a non-current liability. The supplier debt is due within 30 days, so it is current. Size of the debt does not decide the class.",
+      "clue": "Check when each amount must be paid."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Delivery van used for several years",
+      "also_right": []
+     },
+     "b": {
+      "best": "Loan non-current, supplier current",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card gives 'a five-year loan' as a non-current example without qualification. In VCE Accounting, a loan repaid in instalments is split: the part due within 12 months is a current liability and only the rest is non-current. As written, students may learn that a whole term loan is always non-current."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound and have one clear answer. One fix is needed: the card calls 'a five-year loan' non-current without noting that any portion due within 12 months is current, which VCE expects students to know."
+    },
+    "flags": [
+     "Card, fact: The card gives 'a five-year loan' as a non-current example without qualification. In VCE Accounting, a loan repaid in instalments is split: the part due within 12 months is a current liability and only the rest is non-current. As written, students may learn that a whole term loan is always non-current."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "The balance sheet",
+     "card": [
+      "The balance sheet reports assets, liabilities and owner's equity at one date, not over a period. Assets equal liabilities plus owner's equity.",
+      [
+       "Current",
+       "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."
+      ],
+      [
+       "Non-current",
+       "held or due after more than 12 months, such as vehicles and buildings."
+      ],
+      "Assets and liabilities are each split into current and non-current. A loan repaid in instalments is split too: the part due in the next 12 months is current, and the rest is non-current."
+     ],
+     "remember": "A balance sheet is a snapshot at one date. Sort each item by whether it is used or due within 12 months.",
+     "a": {
+      "q": "Which item would be reported as a non-current asset of a trading business?",
+      "opts": [
+       "Delivery van used for several years",
+       "Inventory held for sale next month",
+       "Cash at bank used to pay wages this week",
+       "Accounts receivable due in 30 days"
+      ],
+      "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+      "clue": "Ask how long the business will keep the asset."
+     },
+     "b": {
+      "d": 3,
+      "q": "On 30 June, Mia's Bikes owes $30,000 on a bank loan repaid at $10,000 a year over the next three years. How is the loan reported?",
+      "opts": [
+       "$10,000 current and $20,000 non-current",
+       "$20,000 current and $10,000 non-current",
+       "$30,000 non-current, as it runs for three years",
+       "$30,000 current, as repayments start this year"
+      ],
+      "why": "Only the $10,000 due in the next 12 months is current. The remaining $20,000 is due later, so it is non-current. Reporting the whole loan as non-current is tempting, but an instalment loan is split by when each part is due.",
+      "clue": "How much must be repaid in the next 12 months?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:49Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Delivery van used for several years",
+       "also_right": []
+      },
+      "b": {
+       "best": "$10,000 current and $20,000 non-current",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "remember",
+        "kind": "wording",
+        "detail": "'Sort each item by whether it is used or due within 12 months' reads as applying to every balance sheet item, including owner's equity. The card correctly splits only assets and liabilities into current and non-current. Saying 'Sort each asset and liability' would match the card."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions are correct and have one clear answer. The only issue is minor: the remember line says 'each item', which could suggest owner's equity is also split into current and non-current, when the card limits this to assets and liabilities."
+     },
+     "flags": [
+      "Remember, wording: 'Sort each item by whether it is used or due within 12 months' reads as applying to every balance sheet item, including owner's equity. The card correctly splits only assets and liabilities into current and non-current. Saying 'Sort each asset and liability' would match the card."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "The balance sheet",
+  "card": [
+   "The balance sheet reports assets, liabilities and owner's equity at one date, not over a period. Assets equal liabilities plus owner's equity.",
+   [
+    "Current",
+    "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."
+   ],
+   [
+    "Non-current",
+    "held or due after more than 12 months, such as vehicles and buildings."
+   ],
+   "Assets and liabilities are each split into current and non-current. A loan repaid in instalments is split too: the part due in the next 12 months is current, and the rest is non-current."
+  ],
+  "remember": "A balance sheet is a snapshot at one date. Sort each asset and liability by whether it is used or due within 12 months.",
+  "a": {
+   "q": "Which item would be reported as a non-current asset of a trading business?",
+   "opts": [
+    "Delivery van used for several years",
+    "Inventory held for sale next month",
+    "Cash at bank used to pay wages this week",
+    "Accounts receivable due in 30 days"
+   ],
+   "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+   "clue": "Ask how long the business will keep the asset."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 30 June, Mia's Bikes owes $30,000 on a bank loan repaid at $10,000 a year over the next three years. How is the loan reported?",
+   "opts": [
+    "$10,000 current and $20,000 non-current",
+    "$20,000 current and $10,000 non-current",
+    "$30,000 non-current, as it runs for three years",
+    "$30,000 current, as repayments start this year"
+   ],
+   "why": "Only the $10,000 due in the next 12 months is current. The remaining $20,000 is due later, so it is non-current. Reporting the whole loan as non-current is tempting, but an instalment loan is split by when each part is due.",
+   "clue": "How much must be repaid in the next 12 months?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Delivery van used for several years",
+   "also_right": []
+  },
+  "b": {
+   "best": "$10,000 current and $20,000 non-current",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The balance sheet",
+  "card": [
+   "The balance sheet reports assets, liabilities and owner's equity at one date, not over a period. Assets equal liabilities plus owner's equity.",
+   [
+    "Current",
+    "expected to be used, sold or paid within 12 months, such as cash, inventory and accounts payable."
+   ],
+   [
+    "Non-current",
+    "held or due after more than 12 months, such as vehicles and buildings."
+   ],
+   "Assets and liabilities are each split into current and non-current. A loan repaid in instalments is split too: the part due in the next 12 months is current, and the rest is non-current."
+  ],
+  "remember": "A balance sheet is a snapshot at one date. Sort each asset and liability by whether it is used or due within 12 months.",
+  "a": {
+   "q": "Which item would be reported as a non-current asset of a trading business?",
+   "opts": [
+    "Delivery van used for several years",
+    "Inventory held for sale next month",
+    "Cash at bank used to pay wages this week",
+    "Accounts receivable due in 30 days"
+   ],
+   "why": "A van is used for longer than 12 months, so it is non-current. Inventory is a tempting choice, but it is expected to be sold within 12 months, so it is current.",
+   "clue": "Ask how long the business will keep the asset."
+  },
+  "b": {
+   "d": 3,
+   "q": "On 30 June, Mia's Bikes owes $30,000 on a bank loan repaid at $10,000 a year over the next three years. How is the loan reported?",
+   "opts": [
+    "$10,000 current and $20,000 non-current",
+    "$20,000 current and $10,000 non-current",
+    "$30,000 non-current, as it runs for three years",
+    "$30,000 current, as repayments start this year"
+   ],
+   "why": "Only the $10,000 due in the next 12 months is current. The remaining $20,000 is due later, so it is non-current. Reporting the whole loan as non-current is tempting, but an instalment loan is split by when each part is due.",
+   "clue": "How much must be repaid in the next 12 months?"
+  }
+ }
+}

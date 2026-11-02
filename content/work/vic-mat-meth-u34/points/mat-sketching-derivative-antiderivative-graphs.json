@@ -1,0 +1,200 @@
+{
+ "id": "mat-sketching-derivative-antiderivative-graphs",
+ "title": "Sketching derivative and antiderivative graphs",
+ "brief": "379c8dcd1d12",
+ "shortlist": [
+  [
+   "mat-antiderivatives",
+   0.5
+  ],
+  [
+   "mat-derivatives-exponentials-logarithms",
+   0.401
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.245
+  ],
+  [
+   "mat-chain-rule",
+   0.212
+  ],
+  [
+   "mat-finding-rule-from-graph",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:29Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.0063,
+  "check": 0.01468,
+  "fix": 0.017
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches reading derivative or antiderivative shapes from a graph without a rule; they all teach differentiation or antidifferentiation by formula, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Sketching derivative and antiderivative graphs",
+  "card": [
+   "The derivative graph shows the gradient of the original graph. Where the original rises, the derivative is above the x-axis. Where it falls, the derivative is below.",
+   "Where the original has a turning point, the derivative graph crosses the x-axis, because the gradient is zero.",
+   "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
+   "Example: a parabola that opens upward has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's lowest point."
+  ],
+  "remember": "The original's gradient is the derivative's height.",
+  "a": {
+   "q": "A graph rises, reaches a peak, then falls. What does its derivative graph do around the peak?",
+   "opts": [
+    "Goes from above the x-axis to below it",
+    "Goes from below the x-axis to above it",
+    "Stays above the x-axis the whole time",
+    "Has a peak at the same x-value"
+   ],
+   "why": "Before the peak the gradient is positive, at the peak it is zero, and after it the gradient is negative. So the derivative crosses the x-axis from above to below. A peak in the original does not give a peak in the derivative.",
+   "clue": "Think about the sign of the gradient before and after the peak."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph y = f(x) is below the x-axis for x < 2 and above it for x > 2. What is true of an antiderivative of f?",
+   "opts": [
+    "It falls until x = 2, then rises",
+    "It rises until x = 2, then falls",
+    "It is below the x-axis for x < 2",
+    "It is above the x-axis for x > 2"
+   ],
+   "why": "The antiderivative has gradient f(x). Where f is negative it falls, and where f is positive it rises, so it has a lowest point at x = 2. Its own height is not set by the sign of f, so the last two options mix up height and gradient.",
+   "clue": "The sign of f gives the gradient of the antiderivative, not its height."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Goes from above the x-axis to below it",
+   "also_right": []
+  },
+  "b": {
+   "best": "It falls until x = 2, then rises",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the last two options mix up height and gradient', but the options are shuffled. In the order shown, the height options are the second and third, and the last option is the correct one. The why should name the height options by their content, not their position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are correct and each has one clear answer. The only problem is that why (b) refers to 'the last two options', which does not match the shuffled order and points at the correct answer."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: Why (b) says 'the last two options mix up height and gradient', but the options are shuffled. In the order shown, the height options are the second and third, and the last option is the correct one. The why should name the height options by their content, not their position."
+ ],
+ "proposal": {
+  "title": "Sketching derivative and antiderivative graphs",
+  "card": [
+   "The derivative graph shows the gradient of the original graph. Where the original rises, the derivative is above the x-axis. Where it falls, the derivative is below.",
+   "Where the original has a turning point, the derivative graph crosses the x-axis, because the gradient is zero.",
+   "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
+   "Example: a parabola that opens upward has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's lowest point."
+  ],
+  "remember": "The original's gradient is the derivative's height.",
+  "a": {
+   "q": "A graph rises, reaches a peak, then falls. What does its derivative graph do around the peak?",
+   "opts": [
+    "Goes from above the x-axis to below it",
+    "Goes from below the x-axis to above it",
+    "Stays above the x-axis the whole time",
+    "Has a peak at the same x-value"
+   ],
+   "why": "Before the peak the gradient is positive, at the peak it is zero, and after it the gradient is negative. So the derivative crosses the x-axis from above to below. A peak in the original does not give a peak in the derivative.",
+   "clue": "Think about the sign of the gradient before and after the peak."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph y = f(x) is below the x-axis for x < 2 and above it for x > 2. What is true of an antiderivative of f?",
+   "opts": [
+    "It falls until x = 2, then rises",
+    "It rises until x = 2, then falls",
+    "It is below the x-axis for x < 2",
+    "It is above the x-axis for x > 2"
+   ],
+   "why": "The antiderivative has gradient f(x). Where f is negative it falls, and where f is positive it rises, so it has a lowest point at x = 2. The options saying it is below the x-axis for x < 2 or above it for x > 2 mix up height and gradient: the sign of f sets the antiderivative's gradient, not its height.",
+   "clue": "The sign of f gives the gradient of the antiderivative, not its height."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) says 'the last two options mix up height and gradient', but the options are shuffled. In the order shown, the height options are the second and third, and the last option is the correct one. The why should name the height options by their content, not their position."
+   }
+  ],
+  "flags": [
+   "Question b, other: Why (b) says 'the last two options mix up height and gradient', but the options are shuffled. In the order shown, the height options are the second and third, and the last option is the correct one. The why should name the height options by their content, not their position."
+  ]
+ },
+ "final": {
+  "title": "Sketching derivative and antiderivative graphs",
+  "card": [
+   "The derivative graph shows the gradient of the original graph. Where the original rises, the derivative is above the x-axis. Where it falls, the derivative is below.",
+   "Where the original has a turning point, the derivative graph crosses the x-axis, because the gradient is zero.",
+   "Going the other way, an antiderivative has the given graph as its gradient. Where the given graph is positive, the antiderivative rises. Where it is negative, it falls.",
+   "Example: a parabola that opens upward has a derivative that is a straight line with positive gradient, crossing the x-axis at the parabola's lowest point."
+  ],
+  "remember": "The original's gradient is the derivative's height.",
+  "a": {
+   "q": "A graph rises, reaches a peak, then falls. What does its derivative graph do around the peak?",
+   "opts": [
+    "Goes from above the x-axis to below it",
+    "Goes from below the x-axis to above it",
+    "Stays above the x-axis the whole time",
+    "Has a peak at the same x-value"
+   ],
+   "why": "Before the peak the gradient is positive, at the peak it is zero, and after it the gradient is negative. So the derivative crosses the x-axis from above to below. A peak in the original does not give a peak in the derivative.",
+   "clue": "Think about the sign of the gradient before and after the peak."
+  },
+  "b": {
+   "d": 3,
+   "q": "A graph y = f(x) is below the x-axis for x < 2 and above it for x > 2. What is true of an antiderivative of f?",
+   "opts": [
+    "It falls until x = 2, then rises",
+    "It rises until x = 2, then falls",
+    "It is below the x-axis for x < 2",
+    "It is above the x-axis for x > 2"
+   ],
+   "why": "The antiderivative has gradient f(x). Where f is negative it falls, and where f is positive it rises, so it has a lowest point at x = 2. The options saying it is below the x-axis for x < 2 or above it for x > 2 mix up height and gradient: the sign of f sets the antiderivative's gradient, not its height.",
+   "clue": "The sign of f gives the gradient of the antiderivative, not its height."
+  }
+ },
+ "cleared_by": "auto"
+}

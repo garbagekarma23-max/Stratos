@@ -1,0 +1,254 @@
+{
+ "id": "mat-vector-equation-line",
+ "title": "Vector equation of a line",
+ "brief": "393e3d529a38",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations",
+   0.34
+  ],
+  [
+   "mat-equation-y-mx-c",
+   0.288
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.276
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.246
+  ],
+  [
+   "phys-scalars-vectors-2",
+   0.234
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: failed the content check, writing again",
+  "2026-11-01T15:14:48Z write: done",
+  "2026-11-01T15:19:05Z check: flagged",
+  "2026-11-01T15:21:21Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.01083,
+  "check": 0.01236,
+  "fix": 0.01667,
+  "recheck": 0.01109
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the vector equation of a line r = a + tb; the closest, the scalar and vector card and the y = mx + c card, cover related ideas but not this one, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Vector equation of a line",
+  "card": [
+   "A line in space is set by one point on it and a direction. The vector equation is r = a + tb.",
+   [
+    "a",
+    "the position vector of a known point on the line."
+   ],
+   [
+    "b",
+    "a direction vector, which is parallel to the line. Any non-zero multiple of b gives the same direction."
+   ],
+   [
+    "t",
+    "a real number that can be positive, negative or zero. Each value of t gives one point on the line."
+   ]
+  ],
+  "remember": "Start at a, then move any number t of steps along b.",
+  "a": {
+   "q": "A line has the equation r = (3i − j + 2k) + t(i + 4j − k). Which point is on the line when t = 2?",
+   "opts": [
+    "(5, 7, 0)",
+    "(4, 3, 1)",
+    "(5, 8, −2)",
+    "(6, −2, 4)"
+   ],
+   "why": "When t = 2, r = (3i − j + 2k) + 2(i + 4j − k) = 5i + 7j + 0k. The point (5, 8, −2) comes from adding 2 to a instead of adding 2b, so it is wrong.",
+   "clue": "Multiply every part of b by 2, then add a."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is a vector equation of the line through A(1, 2, 0) and B(4, 6, 12)?",
+   "opts": [
+    "r = (i + 2j) + t(3i + 4j + 12k)",
+    "r = (i + 2j) + t(4i + 6j + 12k)",
+    "r = (4i + 6j + 12k) + t(i + 2j)",
+    "r = (i + 2j) + t(5i + 8j + 12k)"
+   ],
+   "why": "The direction is B − A = (3, 4, 12), and A is a point on the line. Using the position vector of B as the direction is tempting, but that vector is not parallel to the line, since the line does not pass through the origin.",
+   "clue": "Find the direction by subtracting one point from the other."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "(5, 7, 0)",
+   "also_right": []
+  },
+  "b": {
+   "best": "r = (i + 2j) + t(3i + 4j + 12k)",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says (5, 8, −2) comes from adding 2 to a instead of adding 2b. Adding 2 to each part of a gives (5, 1, 4), not (5, 8, −2). The explanation of this distractor is wrong and would confuse a student checking their error."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have exactly one correct answer: (5, 7, 0) and r = (i + 2j) + t(3i + 4j + 12k). Why (a) wrongly says the distractor (5, 8, −2) comes from adding 2 to a, which actually gives (5, 1, 4)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, fact: Why (a) says (5, 8, −2) comes from adding 2 to a instead of adding 2b. Adding 2 to each part of a gives (5, 1, 4), not (5, 8, −2). The explanation of this distractor is wrong and would confuse a student checking their error."
+ ],
+ "proposal": {
+  "title": "Vector equation of a line",
+  "card": [
+   "A line in space is set by one point on it and a direction. The vector equation is r = a + tb.",
+   [
+    "a",
+    "the position vector of a known point on the line."
+   ],
+   [
+    "b",
+    "a direction vector, parallel to the line. For points A and B on the line, b = B − A works. Any non-zero multiple of b gives the same direction."
+   ],
+   [
+    "t",
+    "a real number that can be positive, negative or zero. Each value of t gives one point on the line."
+   ]
+  ],
+  "remember": "Start at a, then move any number t of steps along b.",
+  "a": {
+   "q": "A line has the equation r = (3i − j + 2k) + t(i + 4j − k). Which point is on the line when t = 2?",
+   "opts": [
+    "(5, 7, 0)",
+    "(4, 3, 1)",
+    "(5, 9, 0)",
+    "(6, −2, 4)"
+   ],
+   "why": "When t = 2, r = (3i − j + 2k) + 2(i + 4j − k) = 5i + 7j + 0k, so the point is (5, 7, 0). The point (4, 3, 1) is where t = 1, and (5, 9, 0) comes from reading −j in a as +j.",
+   "clue": "Multiply every part of b by 2, then add a."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is a vector equation of the line through A(1, 2, 0) and B(4, 6, 12)?",
+   "opts": [
+    "r = (i + 2j) + t(3i + 4j + 12k)",
+    "r = (i + 2j) + t(4i + 6j + 12k)",
+    "r = (4i + 6j + 12k) + t(i + 2j)",
+    "r = (i + 2j) + t(5i + 8j + 12k)"
+   ],
+   "why": "The direction is B − A = (3, 4, 12), and A is a point on the line. Using the position vector of B as the direction is tempting, but (4, 6, 12) is not a multiple of (3, 4, 12), so it is not parallel to the line.",
+   "clue": "Find the direction by subtracting one point from the other."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "(5, 7, 0)",
+    "also_right": []
+   },
+   "b": {
+    "best": "r = (i + 2j) + t(3i + 4j + 12k)",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "Why (a) says (5, 8, −2) comes from adding 2 to a instead of adding 2b. Adding 2 to each part of a gives (5, 1, 4), not (5, 8, −2). The explanation of this distractor is wrong and would confuse a student checking their error."
+   }
+  ],
+  "flags": [
+   "Question a, fact: Why (a) says (5, 8, −2) comes from adding 2 to a instead of adding 2b. Adding 2 to each part of a gives (5, 1, 4), not (5, 8, −2). The explanation of this distractor is wrong and would confuse a student checking their error."
+  ]
+ },
+ "final": {
+  "title": "Vector equation of a line",
+  "card": [
+   "A line in space is set by one point on it and a direction. The vector equation is r = a + tb.",
+   [
+    "a",
+    "the position vector of a known point on the line."
+   ],
+   [
+    "b",
+    "a direction vector, parallel to the line. For points A and B on the line, b = B − A works. Any non-zero multiple of b gives the same direction."
+   ],
+   [
+    "t",
+    "a real number that can be positive, negative or zero. Each value of t gives one point on the line."
+   ]
+  ],
+  "remember": "Start at a, then move any number t of steps along b.",
+  "a": {
+   "q": "A line has the equation r = (3i − j + 2k) + t(i + 4j − k). Which point is on the line when t = 2?",
+   "opts": [
+    "(5, 7, 0)",
+    "(4, 3, 1)",
+    "(5, 9, 0)",
+    "(6, −2, 4)"
+   ],
+   "why": "When t = 2, r = (3i − j + 2k) + 2(i + 4j − k) = 5i + 7j + 0k, so the point is (5, 7, 0). The point (4, 3, 1) is where t = 1, and (5, 9, 0) comes from reading −j in a as +j.",
+   "clue": "Multiply every part of b by 2, then add a."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which is a vector equation of the line through A(1, 2, 0) and B(4, 6, 12)?",
+   "opts": [
+    "r = (i + 2j) + t(3i + 4j + 12k)",
+    "r = (i + 2j) + t(4i + 6j + 12k)",
+    "r = (4i + 6j + 12k) + t(i + 2j)",
+    "r = (i + 2j) + t(5i + 8j + 12k)"
+   ],
+   "why": "The direction is B − A = (3, 4, 12), and A is a point on the line. Using the position vector of B as the direction is tempting, but (4, 6, 12) is not a multiple of (3, 4, 12), so it is not parallel to the line.",
+   "clue": "Find the direction by subtracting one point from the other."
+  }
+ },
+ "cleared_by": "recheck"
+}

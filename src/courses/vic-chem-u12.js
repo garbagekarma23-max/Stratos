@@ -18,10 +18,52 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: How can the diversity of materials be explained?",
       "chapters": [
-        {"id": "vic-chem-u12-1-1", "title": "Atoms and the periodic table", "check": "checked", "points": []},
-        {"id": "vic-chem-u12-1-2", "title": "Covalent substances", "check": "checked", "points": []},
-        {"id": "vic-chem-u12-1-3-2", "title": "Metals and ionic compounds", "check": "checked", "points": []},
-        {"id": "vic-chem-u12-1-4", "title": "Separating mixtures", "check": "checked", "points": []},
+        {
+          "id": "vic-chem-u12-1-1",
+          "title": "Atoms and the periodic table",
+          "check": "checked",
+          "points": [
+            "chem-atomic-structure-2",
+            "chem-electron-configuration",
+            "chem-periodic-table-s-layout",
+            "chem-periodic-table-trends",
+            "chem-critical-elements"
+          ]
+        },
+        {
+          "id": "vic-chem-u12-1-2",
+          "title": "Covalent substances",
+          "check": "checked",
+          "points": [
+            "chem-covalent-bonding",
+            "chem-lewis-structures",
+            "chem-molecular-shapes",
+            "chem-polarity-bonds-molecules",
+            "chem-intermolecular-forces",
+            "chem-properties-molecular-substances",
+            "chem-covalent-network-lattices"
+          ]
+        },
+        {
+          "id": "vic-chem-u12-1-3-2",
+          "title": "Metals and ionic compounds",
+          "check": "checked",
+          "points": [
+            "chem-metallic-bonding-2",
+            "chem-reactivity-metals",
+            "chem-metal-recycling",
+            "chem-ionic-bonding",
+            "chem-properties-ionic-compounds",
+            "chem-writing-ionic-formulas",
+            "chem-precipitation-reactions"
+          ]
+        },
+        {
+          "id": "vic-chem-u12-1-4",
+          "title": "Separating mixtures",
+          "check": "checked",
+          "points": ["chem-like-dissolves-like", "chem-chromatography", "chem-rf-values"]
+        },
         {
           "id": "vic-chem-u12-1-5",
           "title": "Quantifying atoms and compounds",
@@ -33,13 +75,41 @@ MADE_COURSES.push({
             "chem-empirical-molecular-formulas"
           ]
         },
-        {"id": "vic-chem-u12-1-3", "title": "Organic compounds", "check": "checked", "points": []},
-        {"id": "vic-chem-u12-1-7", "title": "Polymers and society", "check": "checked", "points": []},
+        {
+          "id": "vic-chem-u12-1-3",
+          "title": "Organic compounds",
+          "check": "checked",
+          "points": [
+            "chem-hydrocarbons",
+            "chem-functional-groups",
+            "chem-naming-simple-organic-compounds",
+            "chem-organic-chemicals-from-plants",
+            "chem-organic-materials-everyday-life"
+          ]
+        },
+        {
+          "id": "vic-chem-u12-1-7",
+          "title": "Polymers and society",
+          "check": "checked",
+          "points": [
+            "chem-addition-condensation-polymers",
+            "chem-addition-polymers",
+            "chem-thermoplastics-thermosets",
+            "chem-designing-polymers",
+            "chem-fossil-plastics-bioplastics",
+            "chem-linear-circular-economies-plastics"
+          ]
+        },
         {
           "id": "vic-chem-u12-1-8",
           "title": "Science skills: evidence and sustainability",
           "check": "checked",
-          "points": []
+          "points": [
+            "chem-primary-secondary-data",
+            "chem-evidence-opinion-anecdote",
+            "chem-quality-evidence",
+            "chem-sustainability-industry"
+          ]
         }
       ]
     },
@@ -57,7 +127,20 @@ MADE_COURSES.push({
             "chem-latent-heat-vaporisation"
           ]
         },
-        {"id": "vic-chem-u12-2-2", "title": "Acids and bases", "check": "checked", "points": []},
+        {
+          "id": "vic-chem-u12-2-2",
+          "title": "Acids and bases",
+          "check": "checked",
+          "points": [
+            "chem-br-nsted-lowry-acids",
+            "chem-strong-weak-acids-2",
+            "chem-amphiprotic-substances",
+            "chem-neutralisation",
+            "chem-ph-scale",
+            "chem-indicators-ph-meters",
+            "chem-acidification-oceans"
+          ]
+        },
         {
           "id": "vic-chem-u12-2-3-2",
           "title": "Redox reactions",
@@ -75,7 +158,17 @@ MADE_COURSES.push({
             "chem-volumetric-analysis"
           ]
         },
-        {"id": "vic-chem-u12-2-5", "title": "Gases", "check": "checked", "points": []},
+        {
+          "id": "vic-chem-u12-2-5",
+          "title": "Gases",
+          "check": "checked",
+          "points": [
+            "chem-greenhouse-gases",
+            "chem-gas-pressure-standard-conditions",
+            "chem-ideal-gas-law",
+            "chem-stoichiometry-with-gases"
+          ]
+        },
         {
           "id": "vic-chem-u12-2-6",
           "title": "Analysing salts",

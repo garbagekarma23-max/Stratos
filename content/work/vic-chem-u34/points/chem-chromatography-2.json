@@ -1,0 +1,233 @@
+{
+ "id": "chem-chromatography-2",
+ "title": "Chromatography",
+ "brief": "4b81e983dae0",
+ "shortlist": [
+  [
+   "chem-pure-substances-mixtures",
+   0.23
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:18:45Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00746,
+  "check": 0.01986,
+  "fix": 0.03295,
+  "recheck": 0.01152
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point is a Year 11 introduction to separating mixtures by physical means, while the new point teaches HPLC with retention times and calibration curves for quantitative analysis, which is a different idea at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Chromatography",
+  "card": [
+   "High performance liquid chromatography (HPLC) separates a mixture. A liquid carries the sample through a column packed with a solid. Each component sticks to the solid to a different extent, so the components move at different speeds.",
+   "The time a component takes to travel through the column and reach the detector is its retention time. Under the same conditions, a component always has the same retention time, so comparing with known standards identifies it.",
+   "The area under each peak on the chromatogram increases with the amount of that component in the sample.",
+   "To find a concentration, run standards of known concentration and plot peak area against concentration. This is a calibration curve. Then read the unknown sample's concentration from its peak area."
+  ],
+  "remember": "Retention time says what a component is. Peak area, read off a calibration curve, says how much.",
+  "a": {
+   "q": "An HPLC run of a soft drink shows a peak at the same retention time as a caffeine standard. What can you conclude?",
+   "opts": [
+    "The peak is likely caffeine",
+    "The drink contains a known amount of caffeine",
+    "The peak is the largest component",
+    "The peak is not caffeine unless its area matches"
+   ],
+   "why": "Under the same conditions, the same compound has the same retention time, so the peak is likely caffeine. The amount needs peak area and a calibration curve, so the second option is wrong.",
+   "clue": "Retention time is about identity, not amount."
+  },
+  "b": {
+   "d": 2,
+   "q": "Dev runs four standards of a dye through HPLC and plots peak area against concentration. His unknown sample has a peak area between two standards. How does he find its concentration?",
+   "opts": [
+    "Read it from the calibration curve at that peak area",
+    "Match its retention time to the nearest standard",
+    "Divide its retention time by the peak area",
+    "Use the standard with the longest retention time"
+   ],
+   "why": "The calibration curve links peak area to concentration, so he reads the concentration at the unknown's area. Retention time identifies the dye but does not give its concentration.",
+   "clue": "Which graph links area to concentration?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The peak is likely caffeine",
+   "also_right": []
+  },
+  "b": {
+   "best": "Read it from the calibration curve at that peak area",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'so the second option is wrong', but options are shown in random order. Here the second option is the correct answer ('The peak is likely caffeine'). The why should name the wrong option by its content ('known amount of caffeine'), not its position."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says matching retention time with standards 'identifies' a component, and the remember line says retention time 'says what a component is'. Different compounds can share a retention time, so a match only suggests identity. Question a correctly says 'likely', which sits awkwardly against the card's certainty."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that mentions peak area or a calibration curve, which are the terms used in the stem; the other three all rely on retention time. The clue 'Which graph links area to concentration?' then points straight to it, so a student can answer without understanding."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The chemistry is sound, but Why (a) calls the 'second option' wrong when, in the shown order, that is the correct answer. The card also overstates retention time as a definite identification, and question b's right answer stands out by matching the stem's terms and clue."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) says 'so the second option is wrong', but options are shown in random order. Here the second option is the correct answer ('The peak is likely caffeine'). The why should name the wrong option by its content ('known amount of caffeine'), not its position.",
+  "Card, fact: The card says matching retention time with standards 'identifies' a component, and the remember line says retention time 'says what a component is'. Different compounds can share a retention time, so a match only suggests identity. Question a correctly says 'likely', which sits awkwardly against the card's certainty.",
+  "Question b, wording: The right option is the only one that mentions peak area or a calibration curve, which are the terms used in the stem; the other three all rely on retention time. The clue 'Which graph links area to concentration?' then points straight to it, so a student can answer without understanding."
+ ],
+ "proposal": {
+  "title": "Chromatography",
+  "card": [
+   "High performance liquid chromatography (HPLC) separates a mixture. A liquid carries the sample through a column packed with a solid. Each component sticks to the solid to a different extent, so the components move at different speeds.",
+   "Retention time is the time a component takes to pass through the column and reach the detector. Under the same conditions, a component has the same retention time each run.",
+   "A peak that matches a known standard's retention time is likely that compound. It is not proof, because different compounds can share a retention time.",
+   "Peak area grows with the amount of a component. Run standards of known concentration and plot peak area against concentration to make a calibration curve. Then read the unknown's concentration at its peak area."
+  ],
+  "remember": "Retention time suggests what a component is. Peak area, read off a calibration curve, shows how much.",
+  "a": {
+   "q": "An HPLC run of a soft drink shows a peak at the same retention time as a caffeine standard. What can you conclude?",
+   "opts": [
+    "The peak is likely caffeine",
+    "The peak is certainly caffeine and no other compound",
+    "The drink contains a known amount of caffeine",
+    "The peak is not caffeine unless its area matches"
+   ],
+   "why": "Under the same conditions a compound has the same retention time, so the peak is likely caffeine. It is not certain, because another compound could share that retention time. The amount needs peak area and a calibration curve, so a matching retention time does not give a known amount.",
+   "clue": "Can two compounds have the same retention time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev runs four standards of a dye through HPLC and plots peak area against concentration. His unknown sample's peak area falls between two standards. How does he find its concentration?",
+   "opts": [
+    "Read the concentration at his sample's peak area",
+    "Read the concentration at his sample's retention time",
+    "Divide his sample's peak area by its retention time",
+    "Average the peak areas of the two nearest standards"
+   ],
+   "why": "Dev's graph links peak area to concentration, so he reads the concentration at his sample's peak area. Retention time is not on the graph, and it suggests which compound a peak is, not how much is present.",
+   "clue": "What did Dev put on each axis?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The peak is likely caffeine",
+    "also_right": []
+   },
+   "b": {
+    "best": "Read the concentration at his sample's peak area",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) says 'so the second option is wrong', but options are shown in random order. Here the second option is the correct answer ('The peak is likely caffeine'). The why should name the wrong option by its content ('known amount of caffeine'), not its position."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says matching retention time with standards 'identifies' a component, and the remember line says retention time 'says what a component is'. Different compounds can share a retention time, so a match only suggests identity. Question a correctly says 'likely', which sits awkwardly against the card's certainty."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the only one that mentions peak area or a calibration curve, which are the terms used in the stem; the other three all rely on retention time. The clue 'Which graph links area to concentration?' then points straight to it, so a student can answer without understanding."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) says 'so the second option is wrong', but options are shown in random order. Here the second option is the correct answer ('The peak is likely caffeine'). The why should name the wrong option by its content ('known amount of caffeine'), not its position.",
+   "Card, fact: The card says matching retention time with standards 'identifies' a component, and the remember line says retention time 'says what a component is'. Different compounds can share a retention time, so a match only suggests identity. Question a correctly says 'likely', which sits awkwardly against the card's certainty.",
+   "Question b, wording: The right option is the only one that mentions peak area or a calibration curve, which are the terms used in the stem; the other three all rely on retention time. The clue 'Which graph links area to concentration?' then points straight to it, so a student can answer without understanding."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Chromatography",
+  "card": [
+   "High performance liquid chromatography (HPLC) separates a mixture. A liquid carries the sample through a column packed with a solid. Each component sticks to the solid to a different extent, so the components move at different speeds.",
+   "Retention time is the time a component takes to pass through the column and reach the detector. Under the same conditions, a component has the same retention time each run.",
+   "A peak that matches a known standard's retention time is likely that compound. It is not proof, because different compounds can share a retention time.",
+   "Peak area grows with the amount of a component. Run standards of known concentration and plot peak area against concentration to make a calibration curve. Then read the unknown's concentration at its peak area."
+  ],
+  "remember": "Retention time suggests what a component is. Peak area, read off a calibration curve, shows how much.",
+  "a": {
+   "q": "An HPLC run of a soft drink shows a peak at the same retention time as a caffeine standard. What can you conclude?",
+   "opts": [
+    "The peak is likely caffeine",
+    "The peak is certainly caffeine and no other compound",
+    "The drink contains a known amount of caffeine",
+    "The peak is not caffeine unless its area matches"
+   ],
+   "why": "Under the same conditions a compound has the same retention time, so the peak is likely caffeine. It is not certain, because another compound could share that retention time. The amount needs peak area and a calibration curve, so a matching retention time does not give a known amount.",
+   "clue": "Can two compounds have the same retention time?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev runs four standards of a dye through HPLC and plots peak area against concentration. His unknown sample's peak area falls between two standards. How does he find its concentration?",
+   "opts": [
+    "Read the concentration at his sample's peak area",
+    "Read the concentration at his sample's retention time",
+    "Divide his sample's peak area by its retention time",
+    "Average the peak areas of the two nearest standards"
+   ],
+   "why": "Dev's graph links peak area to concentration, so he reads the concentration at his sample's peak area. Retention time is not on the graph, and it suggests which compound a peak is, not how much is present.",
+   "clue": "What did Dev put on each axis?"
+  }
+ },
+ "cleared_by": "owner"
+}

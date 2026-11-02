@@ -1,0 +1,104 @@
+{
+ "id": "mat-hungarian-algorithm",
+ "title": "The Hungarian algorithm",
+ "brief": "fe5201d00baf",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, write",
+  "2026-11-01T14:46:40Z write: done",
+  "2026-11-01T14:56:02Z check: passed, cleared"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "write": 0.01596,
+  "check": 0.01609
+ },
+ "draft": {
+  "title": "The Hungarian algorithm",
+  "card": [
+   "A bipartite graph has two groups, such as workers and tasks, with edges only between the groups. A cost table shows the same thing. Each worker gets exactly one task, and the aim is the least total cost.",
+   "Subtract the smallest number in each row from every number in that row. Then subtract the smallest number in each column from every number in that column. This makes zeros.",
+   "Cover all the zeros with as few lines as possible. If the number of lines equals the number of rows, assign using the zeros. If there are fewer lines, subtract the smallest uncovered number from every uncovered number, add it to numbers covered twice, and cover again.",
+   "Example: workers A, B, C cost 9, 7, 8 / 6, 5, 9 / 8, 4, 6 for tasks 1, 2, 3. Both steps give 1, 0, 0 / 0, 0, 3 / 3, 0, 1, which needs 3 lines. C has one zero, so C does task 2, B does 1 and A does 3. Add the original costs: 8 + 6 + 4 = 18."
+  ],
+  "remember": "Reduce rows then columns, cover the zeros, and assign only when the lines equal the rows.",
+  "a": {
+   "q": "The first row of a cost table is 12, 9, 15. What does this row become after the row step?",
+   "opts": [
+    "3, 0, 6",
+    "-3, -6, 0",
+    "0, -3, 3",
+    "12, 0, 15"
+   ],
+   "why": "The smallest number in the row is 9, so subtract 9 from every number: 3, 0, 6. Changing only the smallest number to zero is tempting, but every number in the row must change.",
+   "clue": "Find the smallest number in the row, then subtract it from all three."
+  },
+  "b": {
+   "d": 3,
+   "q": "After reducing rows and columns, a 3×3 table has all its zeros covered by 2 lines. What happens next?",
+   "opts": [
+    "Adjust the table using the smallest uncovered number",
+    "Assign using the zeros, as the table is now optimal",
+    "Add a dummy row of zeros and cover again",
+    "Reduce the rows again and then stop"
+   ],
+   "why": "A 3×3 table needs 3 lines before an assignment can be made. With only 2 lines, subtract the smallest uncovered number from the uncovered numbers, add it to those covered twice, then cover again. Assigning now is tempting because zeros exist, but there are not enough of them in the right places.",
+   "clue": "Compare the number of lines with the number of rows."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3, 0, 6",
+   "also_right": []
+  },
+  "b": {
+   "best": "Adjust the table using the smallest uncovered number",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The worked example checks out: the reduced table, the 3 lines, the assignment C→2, B→1, A→3 and the total of 18 are all correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The Hungarian algorithm",
+  "card": [
+   "A bipartite graph has two groups, such as workers and tasks, with edges only between the groups. A cost table shows the same thing. Each worker gets exactly one task, and the aim is the least total cost.",
+   "Subtract the smallest number in each row from every number in that row. Then subtract the smallest number in each column from every number in that column. This makes zeros.",
+   "Cover all the zeros with as few lines as possible. If the number of lines equals the number of rows, assign using the zeros. If there are fewer lines, subtract the smallest uncovered number from every uncovered number, add it to numbers covered twice, and cover again.",
+   "Example: workers A, B, C cost 9, 7, 8 / 6, 5, 9 / 8, 4, 6 for tasks 1, 2, 3. Both steps give 1, 0, 0 / 0, 0, 3 / 3, 0, 1, which needs 3 lines. C has one zero, so C does task 2, B does 1 and A does 3. Add the original costs: 8 + 6 + 4 = 18."
+  ],
+  "remember": "Reduce rows then columns, cover the zeros, and assign only when the lines equal the rows.",
+  "a": {
+   "q": "The first row of a cost table is 12, 9, 15. What does this row become after the row step?",
+   "opts": [
+    "3, 0, 6",
+    "-3, -6, 0",
+    "0, -3, 3",
+    "12, 0, 15"
+   ],
+   "why": "The smallest number in the row is 9, so subtract 9 from every number: 3, 0, 6. Changing only the smallest number to zero is tempting, but every number in the row must change.",
+   "clue": "Find the smallest number in the row, then subtract it from all three."
+  },
+  "b": {
+   "d": 3,
+   "q": "After reducing rows and columns, a 3×3 table has all its zeros covered by 2 lines. What happens next?",
+   "opts": [
+    "Adjust the table using the smallest uncovered number",
+    "Assign using the zeros, as the table is now optimal",
+    "Add a dummy row of zeros and cover again",
+    "Reduce the rows again and then stop"
+   ],
+   "why": "A 3×3 table needs 3 lines before an assignment can be made. With only 2 lines, subtract the smallest uncovered number from the uncovered numbers, add it to those covered twice, then cover again. Assigning now is tempting because zeros exist, but there are not enough of them in the right places.",
+   "clue": "Compare the number of lines with the number of rows."
+  }
+ },
+ "cleared_by": "checker"
+}

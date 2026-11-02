@@ -1,0 +1,225 @@
+{
+ "id": "mat-finding-function-from-rate",
+ "title": "Finding a function from its rate of change",
+ "brief": "a143e1cfca2c",
+ "shortlist": [
+  [
+   "mat-functions-relations",
+   0.263
+  ],
+  [
+   "mat-rates-change-context",
+   0.237
+  ],
+  [
+   "mat-average-rate-change",
+   0.235
+  ],
+  [
+   "mat-power-functions",
+   0.232
+  ],
+  [
+   "mat-cumulative-distribution-functions",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00507,
+  "check": 0.01524,
+  "fix": 0.02927,
+  "recheck": 0.01298
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches recovering a function by antidifferentiating a rate and fixing the constant with a known point; the closest, the CDF card, integrates a density from a fixed lower limit in a statistics context, and the rates card only differentiates.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Finding a function from its rate of change",
+  "card": [
+   "If you know f'(x), the rate of change, you can find f(x) by antidifferentiating. The answer has a constant: f(x) = ∫f'(x) dx + c.",
+   "One rate fits many functions, because each value of c gives a different curve. A known point on the curve, called a boundary condition, fixes c.",
+   "Substitute the point into f(x) and solve for c. Then write the full function with c in place.",
+   "Example: f'(x) = 6x² − 2 and f(1) = 5. Then f(x) = 2x³ − 2x + c. Putting in x = 1: 2 − 2 + c = 5, so c = 5 and f(x) = 2x³ − 2x + 5."
+  ],
+  "remember": "Antidifferentiate the rate, then use the known point to find c.",
+  "a": {
+   "q": "f'(x) = 4x − 3 and f(2) = 1. What is f(x)?",
+   "opts": [
+    "2x² − 3x − 1",
+    "2x² − 3x + 1",
+    "2x² − 3x + 3",
+    "4x² − 3x − 7"
+   ],
+   "why": "Antidifferentiating gives f(x) = 2x² − 3x + c. Then f(2) = 8 − 6 + c = 1, so c = −1. The option with +1 uses the value of f(2) as c without working it out.",
+   "clue": "Find c by putting x = 2 into 2x² − 3x + c."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank's volume V litres changes at dV/dt = 6t − 12 litres per minute. At t = 0 the tank holds 20 litres. What is V at t = 4?",
+   "opts": [
+    "20 litres",
+    "8 litres",
+    "12 litres",
+    "32 litres"
+   ],
+   "why": "V = 3t² − 12t + c. At t = 0, V = 20, so c = 20. Then V(4) = 48 − 48 + 20 = 20 litres. The 8 litres option leaves out c, and the 12 litres option gets c wrong.",
+   "clue": "Use t = 0 to find c before you put in t = 4."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2x² − 3x − 1",
+   "also_right": []
+  },
+  "b": {
+   "best": "20 litres",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the 8 litres option comes from leaving out c, but without c, V(4) = 48 − 48 = 0, not 8. The 8 litres value is actually V(2), the volume at t = 2. The explanation of this distractor is wrong."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and the card example are correct (f(x) = 2x² − 3x − 1 and V(4) = 20 litres). The why for (b) wrongly says the 8 litres option comes from leaving out c; leaving out c gives 0, and 8 is V(2)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why says the 8 litres option comes from leaving out c, but without c, V(4) = 48 − 48 = 0, not 8. The 8 litres value is actually V(2), the volume at t = 2. The explanation of this distractor is wrong."
+ ],
+ "proposal": {
+  "title": "Finding a function from its rate of change",
+  "card": [
+   "If you know f'(x), the rate of change, you can find f(x) by antidifferentiating. The answer has a constant: f(x) = ∫f'(x) dx + c.",
+   "One rate fits many functions, because each value of c gives a different curve. A known point on the curve, called a boundary condition, fixes c.",
+   "Substitute the point into f(x) and solve for c. Then write the full function with c in place.",
+   "Example: f'(x) = 6x² − 2 and f(1) = 5. Then f(x) = 2x³ − 2x + c. Putting in x = 1: 2 − 2 + c = 5, so c = 5 and f(x) = 2x³ − 2x + 5."
+  ],
+  "remember": "Antidifferentiate the rate, then use the known point to find c.",
+  "a": {
+   "q": "f'(x) = 4x − 3 and f(2) = 1. What is f(x)?",
+   "opts": [
+    "2x² − 3x − 1",
+    "2x² − 3x + 1",
+    "2x² − 3x + 3",
+    "4x² − 3x − 9"
+   ],
+   "why": "Antidifferentiating gives f(x) = 2x² − 3x + c. Then f(2) = 8 − 6 + c = 1, so c = −1. The option with +1 uses the value of f(2) as c without working it out.",
+   "clue": "Find c by putting x = 2 into 2x² − 3x + c."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank's volume V litres changes at dV/dt = 6t − 12 litres per minute. At t = 0 the tank holds 20 litres. What is V at t = 4?",
+   "opts": [
+    "20 litres",
+    "0 litres",
+    "12 litres",
+    "32 litres"
+   ],
+   "why": "V = 3t² − 12t + c. At t = 0, V = 20, so c = 20, and V(4) = 48 − 48 + 20 = 20 litres. The 12 litres option is the rate dV/dt at t = 4, not the volume, and 0 litres leaves out c.",
+   "clue": "Antidifferentiate first, then use t = 0 to find c."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2x² − 3x − 1",
+    "also_right": []
+   },
+   "b": {
+    "best": "20 litres",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's example and both answers check out: c = −1 in question a, and V(4) = 20 litres in question b."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why says the 8 litres option comes from leaving out c, but without c, V(4) = 48 − 48 = 0, not 8. The 8 litres value is actually V(2), the volume at t = 2. The explanation of this distractor is wrong."
+   }
+  ],
+  "flags": [
+   "Question b, other: The why says the 8 litres option comes from leaving out c, but without c, V(4) = 48 − 48 = 0, not 8. The 8 litres value is actually V(2), the volume at t = 2. The explanation of this distractor is wrong."
+  ]
+ },
+ "final": {
+  "title": "Finding a function from its rate of change",
+  "card": [
+   "If you know f'(x), the rate of change, you can find f(x) by antidifferentiating. The answer has a constant: f(x) = ∫f'(x) dx + c.",
+   "One rate fits many functions, because each value of c gives a different curve. A known point on the curve, called a boundary condition, fixes c.",
+   "Substitute the point into f(x) and solve for c. Then write the full function with c in place.",
+   "Example: f'(x) = 6x² − 2 and f(1) = 5. Then f(x) = 2x³ − 2x + c. Putting in x = 1: 2 − 2 + c = 5, so c = 5 and f(x) = 2x³ − 2x + 5."
+  ],
+  "remember": "Antidifferentiate the rate, then use the known point to find c.",
+  "a": {
+   "q": "f'(x) = 4x − 3 and f(2) = 1. What is f(x)?",
+   "opts": [
+    "2x² − 3x − 1",
+    "2x² − 3x + 1",
+    "2x² − 3x + 3",
+    "4x² − 3x − 9"
+   ],
+   "why": "Antidifferentiating gives f(x) = 2x² − 3x + c. Then f(2) = 8 − 6 + c = 1, so c = −1. The option with +1 uses the value of f(2) as c without working it out.",
+   "clue": "Find c by putting x = 2 into 2x² − 3x + c."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tank's volume V litres changes at dV/dt = 6t − 12 litres per minute. At t = 0 the tank holds 20 litres. What is V at t = 4?",
+   "opts": [
+    "20 litres",
+    "0 litres",
+    "12 litres",
+    "32 litres"
+   ],
+   "why": "V = 3t² − 12t + c. At t = 0, V = 20, so c = 20, and V(4) = 48 − 48 + 20 = 20 litres. The 12 litres option is the rate dV/dt at t = 4, not the volume, and 0 litres leaves out c.",
+   "clue": "Antidifferentiate first, then use t = 0 to find c."
+  }
+ },
+ "cleared_by": "recheck"
+}

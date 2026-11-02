@@ -1,0 +1,308 @@
+{
+ "id": "mat-prim-s-algorithm",
+ "title": "Prim's algorithm",
+ "brief": "580b64613a77",
+ "shortlist": [
+  [
+   "mat-minimum-spanning-trees",
+   0.441
+  ],
+  [
+   "mat-trees",
+   0.278
+  ],
+  [
+   "mat-trees-algorithms",
+   0.278
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "write": 0.01234,
+  "check": 0.03179,
+  "fix": 0.02835,
+  "recheck": 0.0164
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank card covers both Kruskal's and Prim's methods together, and its questions test the minimum weight rather than Prim's procedure, so it is broader than the single Prim's point the course needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The why says \"AC is not an option\", but AC is listed as one of the options. It should say AC cannot be chosen because both A and C are already in the tree.",
+ "rejected": {
+  "title": "Prim's algorithm",
+  "card": [
+   "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
+   "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
+   "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
+   "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+  ],
+  "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+  "a": {
+   "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+   "opts": [
+    "CB, weight 3",
+    "AB, weight 4",
+    "CD, weight 6",
+    "AC, weight 2"
+   ],
+   "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC is not an option because both A and C are already in the tree.",
+   "clue": "The edge must reach a vertex that is not yet in the tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+   "opts": [
+    "12",
+    "15",
+    "16",
+    "17"
+   ],
+   "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
+   "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The why says \"AC is not an option\", but AC is listed as one of the options. It should say AC cannot be chosen because both A and C are already in the tree."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Prim's algorithm",
+     "card": [
+      "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
+      "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
+      "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
+      "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+     ],
+     "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+     "a": {
+      "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+      "opts": [
+       "CB, weight 3",
+       "AB, weight 4",
+       "CD, weight 6",
+       "AC, weight 2"
+      ],
+      "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC is not an option because both A and C are already in the tree.",
+      "clue": "The edge must reach a vertex that is not yet in the tree."
+     },
+     "b": {
+      "d": 3,
+      "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+      "opts": [
+       "12",
+       "14",
+       "15",
+       "17"
+      ],
+      "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 14 comes from taking PQ (5) instead of QR, which is not the cheapest edge.",
+      "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "CB, weight 3",
+      "also_right": []
+     },
+     "b": {
+      "best": "12",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says a total of 14 comes from taking PQ (5) instead of QR. But PR + PQ + RS + ST = 3 + 5 + 4 + 3 = 15, not 14. The explanation of the distractor is wrong and could confuse students."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The card, its example and both questions are correct (CB and 12). The why for question b miscalculates the common error: swapping QR for PQ gives 15, not 14."
+    },
+    "flags": [
+     "Question b, fact: The why says a total of 14 comes from taking PQ (5) instead of QR. But PR + PQ + RS + ST = 3 + 5 + 4 + 3 = 15, not 14. The explanation of the distractor is wrong and could confuse students."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Prim's algorithm",
+     "card": [
+      "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
+      "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
+      "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
+      "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+     ],
+     "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+     "a": {
+      "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+      "opts": [
+       "CB, weight 3",
+       "AB, weight 4",
+       "CD, weight 6",
+       "AC, weight 2"
+      ],
+      "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC is not an option because both A and C are already in the tree.",
+      "clue": "The edge must reach a vertex that is not yet in the tree."
+     },
+     "b": {
+      "d": 3,
+      "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+      "opts": [
+       "12",
+       "15",
+       "16",
+       "17"
+      ],
+      "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
+      "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "CB, weight 3",
+       "also_right": []
+      },
+      "b": {
+       "best": "12",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The why says \"AC is not an option\", but AC is listed as one of the options. It should say AC cannot be chosen because both A and C are already in the tree."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card example and both answers check out (card total 10; CB is next in a; 12 in b). The only issue is that why (a) says AC \"is not an option\" when it is listed as one; it should say AC cannot be chosen."
+     },
+     "flags": [
+      "Question a, wording: The why says \"AC is not an option\", but AC is listed as one of the options. It should say AC cannot be chosen because both A and C are already in the tree."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Prim's algorithm",
+  "card": [
+   "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
+   "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
+   "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
+   "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+  ],
+  "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+  "a": {
+   "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+   "opts": [
+    "CB, weight 3",
+    "AB, weight 4",
+    "CD, weight 6",
+    "AC, weight 2"
+   ],
+   "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC cannot be chosen, even though its weight is 2, because both A and C are already in the tree.",
+   "clue": "The edge must reach a vertex that is not yet in the tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+   "opts": [
+    "12",
+    "15",
+    "16",
+    "17"
+   ],
+   "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
+   "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "CB, weight 3",
+   "also_right": []
+  },
+  "b": {
+   "best": "12",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The card example (total 10) and both answers (CB, and a total of 12) check out under Prim's algorithm, and the explanations match the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Prim's algorithm",
+  "card": [
+   "A minimum spanning tree joins every vertex of a weighted graph using the smallest possible total weight. Prim's algorithm builds one step by step.",
+   "Start at any vertex. Look at all the edges that join a vertex in the tree to a vertex not yet in the tree. Add the cheapest one.",
+   "Repeat until every vertex is in the tree. A graph with n vertices needs n − 1 edges. If two edges tie, either can be chosen, and the total weight is the same.",
+   "Example: edges AB = 4, AC = 2, BC = 3, BD = 5, CD = 6. Start at A and add AC (2). Then add BC (3), which brings in B. Then add BD (5), which brings in D. Total = 2 + 3 + 5 = 10."
+  ],
+  "remember": "Always add the cheapest edge that reaches a new vertex, and stop at n − 1 edges.",
+  "a": {
+   "q": "A tree has A and C so far. Edges from the tree to new vertices are AB = 4, CB = 3, CD = 6. Which edge does Prim's algorithm add next?",
+   "opts": [
+    "CB, weight 3",
+    "AB, weight 4",
+    "CD, weight 6",
+    "AC, weight 2"
+   ],
+   "why": "Prim's algorithm adds the cheapest edge that joins a new vertex to the tree. Of the edges that reach B or D, CB at 3 is the smallest. AC cannot be chosen, even though its weight is 2, because both A and C are already in the tree.",
+   "clue": "The edge must reach a vertex that is not yet in the tree."
+  },
+  "b": {
+   "d": 3,
+   "q": "A network has edges PQ = 5, PR = 3, QR = 2, QS = 6, RS = 4, RT = 7, ST = 3. Using Prim's algorithm from P, what is the total weight of the minimum spanning tree?",
+   "opts": [
+    "12",
+    "15",
+    "16",
+    "17"
+   ],
+   "why": "From P add PR (3). Then QR (2), then RS (4), then ST (3). That is 4 edges for 5 vertices, and 3 + 2 + 4 + 3 = 12. A total of 15 comes from taking PQ (5) instead of QR (2) at the second step, but QR is cheaper and also brings in Q.",
+   "clue": "At each step, list only the edges that reach a new vertex, then pick the smallest."
+  }
+ }
+}

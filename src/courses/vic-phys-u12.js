@@ -18,7 +18,18 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: How is energy useful to society?",
       "chapters": [
-        {"id": "vic-phys-u12-1-1", "title": "Light", "check": "checked", "points": []},
+        {
+          "id": "vic-phys-u12-1-1",
+          "title": "Light",
+          "check": "checked",
+          "points": [
+            "phys-waves-their-properties",
+            "phys-electromagnetic-spectrum-2",
+            "phys-refraction-snell-s-law",
+            "phys-total-internal-reflection-optical",
+            "phys-dispersion-rainbows-mirages"
+          ]
+        },
         {
           "id": "vic-phys-u12-1-2-2",
           "title": "Heat",
@@ -33,9 +44,35 @@ MADE_COURSES.push({
             "phys-greenhouse-effect-climate"
           ]
         },
-        {"id": "vic-phys-u12-1-2", "title": "Radiation from the nucleus", "check": "checked", "points": []},
+        {
+          "id": "vic-phys-u12-1-2",
+          "title": "Radiation from the nucleus",
+          "check": "checked",
+          "points": [
+            "phys-nuclear-stability",
+            "phys-radioactive-decay",
+            "phys-nuclear-equations",
+            "phys-decay-series",
+            "phys-half-life",
+            "phys-effects-ionising-radiation",
+            "phys-medical-radioisotopes"
+          ]
+        },
         {"id": "vic-phys-u12-1-4", "title": "Nuclear energy", "check": "checked", "points": []},
-        {"id": "vic-phys-u12-1-3", "title": "Circuits", "check": "checked", "points": []},
+        {
+          "id": "vic-phys-u12-1-3",
+          "title": "Circuits",
+          "check": "checked",
+          "points": [
+            "phys-charge-current",
+            "phys-potential-difference-2",
+            "phys-models-meters",
+            "phys-resistance-ohm-s-law",
+            "phys-series-circuits",
+            "phys-parallel-circuits",
+            "phys-voltage-dividers"
+          ]
+        },
         {
           "id": "vic-phys-u12-1-6",
           "title": "Using electricity",

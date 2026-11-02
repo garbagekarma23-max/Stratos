@@ -1,0 +1,122 @@
+{
+ "id": "mat-vector-proofs-unit-3",
+ "title": "Vector proofs in Unit 3",
+ "brief": "04f490c65adc",
+ "shortlist": [
+  [
+   "phys-scalars-vectors-2",
+   0.207
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00521,
+  "check": 0.01616
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches the basic physics distinction between scalars and vectors, while the new point is about using vector methods to prove geometric results, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Vector proofs",
+  "card": [
+   "To prove a geometry result, write the sides as vectors. Name two sides from one corner, such as a and b, then write every other side or diagonal using a and b.",
+   "Two non-zero vectors are perpendicular when their scalar product is 0. So to prove two lines are perpendicular, show that the scalar product of their vectors is 0.",
+   "Worked example: a rhombus OABC has OA = a and OC = b, with |a| = |b| because all sides are equal. The diagonals are OB = a + b and AC = b − a.",
+   "Then (a + b)·(b − a) = b·b − a·a = |b|² − |a|² = 0. So the diagonals are perpendicular."
+  ],
+  "remember": "Write the shape in terms of a and b, then show the scalar product is 0.",
+  "a": {
+   "q": "To prove that two diagonals of a shape are perpendicular, what must you show about their vectors?",
+   "opts": [
+    "Their scalar product is 0",
+    "Their scalar product is 1",
+    "Their vector sum is the zero vector",
+    "They have equal magnitudes"
+   ],
+   "why": "Non-zero vectors are perpendicular exactly when their scalar product is 0. Equal magnitudes do not make lines perpendicular: the diagonals of a rectangle are equal in length but are not usually perpendicular.",
+   "clue": "Think of the test for perpendicular vectors."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a rhombus, OA = a, OC = b and |a| = |b|. Which step gives (a + b)·(b − a) = 0?",
+   "opts": [
+    "It expands to |b|² − |a|², and the sides are equal",
+    "It expands to |a|² − |b|², and the sides are equal",
+    "It expands to |a|² + |b|², and the sides are equal",
+    "It expands to a·b − a·b, and the sides are parallel"
+   ],
+   "why": "Expanding gives a·b − a·a + b·b − b·a. The a·b terms cancel, leaving |b|² − |a|². Equal side lengths make this 0. The option with a plus sign is wrong because the a·a term is subtracted, not added.",
+   "clue": "The two a·b terms cancel, so check which squares are left and their signs."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Their scalar product is 0",
+   "also_right": []
+  },
+  "b": {
+   "best": "It expands to |b|² − |a|², and the sides are equal",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Vector proofs",
+  "card": [
+   "To prove a geometry result, write the sides as vectors. Name two sides from one corner, such as a and b, then write every other side or diagonal using a and b.",
+   "Two non-zero vectors are perpendicular when their scalar product is 0. So to prove two lines are perpendicular, show that the scalar product of their vectors is 0.",
+   "Worked example: a rhombus OABC has OA = a and OC = b, with |a| = |b| because all sides are equal. The diagonals are OB = a + b and AC = b − a.",
+   "Then (a + b)·(b − a) = b·b − a·a = |b|² − |a|² = 0. So the diagonals are perpendicular."
+  ],
+  "remember": "Write the shape in terms of a and b, then show the scalar product is 0.",
+  "a": {
+   "q": "To prove that two diagonals of a shape are perpendicular, what must you show about their vectors?",
+   "opts": [
+    "Their scalar product is 0",
+    "Their scalar product is 1",
+    "Their vector sum is the zero vector",
+    "They have equal magnitudes"
+   ],
+   "why": "Non-zero vectors are perpendicular exactly when their scalar product is 0. Equal magnitudes do not make lines perpendicular: the diagonals of a rectangle are equal in length but are not usually perpendicular.",
+   "clue": "Think of the test for perpendicular vectors."
+  },
+  "b": {
+   "d": 3,
+   "q": "In a rhombus, OA = a, OC = b and |a| = |b|. Which step gives (a + b)·(b − a) = 0?",
+   "opts": [
+    "It expands to |b|² − |a|², and the sides are equal",
+    "It expands to |a|² − |b|², and the sides are equal",
+    "It expands to |a|² + |b|², and the sides are equal",
+    "It expands to a·b − a·b, and the sides are parallel"
+   ],
+   "why": "Expanding gives a·b − a·a + b·b − b·a. The a·b terms cancel, leaving |b|² − |a|². Equal side lengths make this 0. The option with a plus sign is wrong because the a·a term is subtracted, not added.",
+   "clue": "The two a·b terms cancel, so check which squares are left and their signs."
+  }
+ },
+ "cleared_by": "checker"
+}

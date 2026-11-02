@@ -1,0 +1,213 @@
+{
+ "id": "acc-profitability",
+ "title": "Profitability",
+ "brief": "9ecb32809fcd",
+ "shortlist": [
+  [
+   "bus-profitability-ratios",
+   0.492
+  ],
+  [
+   "bus-profitability-management",
+   0.367
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00476,
+  "check": 0.0168,
+  "fix": 0.02672,
+  "recheck": 0.0147
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers gross profit, net profit and return on owner's equity, but the new point's brief also names profit compared with assets, which that point does not teach, so it is narrower than the new point and would need a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Profitability",
+  "card": [
+   "Profit is a dollar amount. Profitability asks how good that profit is, by comparing it with something else the business has or earns.",
+   "Profit can be compared with sales, with the assets the business uses, and with the money the owner has put in.",
+   "A larger profit does not always mean higher profitability. If sales, assets or the owner's investment grew by more than profit did, the business is making less profit for each dollar.",
+   "Profitability is used to judge whether a business is using its sales, assets and the owner's money well."
+  ],
+  "remember": "Profitability is profit measured against something else, not profit alone.",
+  "a": {
+   "q": "Why is profitability a better guide to performance than the profit figure alone?",
+   "opts": [
+    "It compares profit with sales, assets or owner's investment",
+    "It shows how much cash the business has in the bank",
+    "It shows only the profit earned from selling inventory",
+    "It shows whether the business can pay its debts on time"
+   ],
+   "why": "Profitability sets profit against something else, so the size of the business is taken into account. Cash held and paying debts are about other ideas, so they do not describe profitability.",
+   "clue": "Think about what profit is being set against."
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year Ava's bakery in Ballarat made a profit of $40,000 on assets of $200,000. This year profit rose to $44,000, but assets grew to $320,000. What has happened to profitability?",
+   "opts": [
+    "It fell, because profit grew by less than assets",
+    "It rose, because the profit figure is higher",
+    "It stayed the same, because the business is still profitable",
+    "It rose, because the business now owns more assets"
+   ],
+   "why": "Profit rose by 10%, but assets rose by 60%. Each dollar of assets now earns less profit, so profitability fell. A higher dollar profit is the tempting answer, but it ignores what the profit is compared with.",
+   "clue": "Compare how fast profit grew with how fast assets grew."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It compares profit with sales, assets or owner's investment",
+   "also_right": []
+  },
+  "b": {
+   "best": "It fell, because profit grew by less than assets",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"If sales, assets or the owner's investment grew by more than profit did\" can be read as dollar growth, and then it is false. For example, profit rising from $10 to $20 while assets rise from $100 to $115 still lifts profitability. It should say grew faster, or by a larger percentage, than profit."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card line about profitability falling when sales, assets or investment grow \"by more than profit\" should say faster or by a larger percentage, because dollar growth alone does not decide it. Both questions have one clearly right answer, and the facts check out."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"If sales, assets or the owner's investment grew by more than profit did\" can be read as dollar growth, and then it is false. For example, profit rising from $10 to $20 while assets rise from $100 to $115 still lifts profitability. It should say grew faster, or by a larger percentage, than profit."
+ ],
+ "proposal": {
+  "title": "Profitability",
+  "card": [
+   "Profit is a dollar amount. Profitability asks how good that profit is, by comparing it with something else the business has or earns.",
+   "Profit can be compared with sales, with the assets the business uses, and with the money the owner has put in.",
+   "A larger profit does not always mean higher profitability. If sales, assets or the owner's investment grew by a larger percentage than profit, the business is making less profit for each dollar.",
+   "Profitability is used to judge whether a business is using its sales, assets and the owner's money well."
+  ],
+  "remember": "Profitability is profit measured against something else, not profit alone.",
+  "a": {
+   "q": "Why is profitability a better guide to performance than the profit figure alone?",
+   "opts": [
+    "It compares profit with sales, assets or owner's investment",
+    "It shows how much cash the business has in the bank",
+    "It shows only the profit earned from selling inventory",
+    "It shows whether the business can pay its debts on time"
+   ],
+   "why": "Profitability sets profit against something else, so the size of the business is taken into account. Cash held and paying debts are about other ideas, so they do not describe profitability.",
+   "clue": "Think about what profit is being set against."
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year Ava's bakery in Ballarat made a profit of $40,000 on assets of $200,000. This year profit rose to $44,000, but assets grew to $320,000. What has happened to profitability?",
+   "opts": [
+    "It fell, because profit grew more slowly than assets",
+    "It rose, because the profit figure is now higher",
+    "It stayed the same, as the business still makes a profit",
+    "It rose, because the business now has more assets"
+   ],
+   "why": "Profit rose by 10%, but assets rose by 60%. Each dollar of assets now earns less profit, so profitability fell. A higher dollar profit is the tempting answer, but it ignores what the profit is compared with.",
+   "clue": "Compare the percentage growth in profit with that in assets."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It compares profit with sales, assets or owner's investment",
+    "also_right": []
+   },
+   "b": {
+    "best": "It fell, because profit grew more slowly than assets",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both questions have one clearly right answer. The figures in (b) work out: profit rose 10% but assets rose 60%, so profit on assets fell from 20% to 13.75%."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 13,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"If sales, assets or the owner's investment grew by more than profit did\" can be read as dollar growth, and then it is false. For example, profit rising from $10 to $20 while assets rise from $100 to $115 still lifts profitability. It should say grew faster, or by a larger percentage, than profit."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"If sales, assets or the owner's investment grew by more than profit did\" can be read as dollar growth, and then it is false. For example, profit rising from $10 to $20 while assets rise from $100 to $115 still lifts profitability. It should say grew faster, or by a larger percentage, than profit."
+  ]
+ },
+ "final": {
+  "title": "Profitability",
+  "card": [
+   "Profit is a dollar amount. Profitability asks how good that profit is, by comparing it with something else the business has or earns.",
+   "Profit can be compared with sales, with the assets the business uses, and with the money the owner has put in.",
+   "A larger profit does not always mean higher profitability. If sales, assets or the owner's investment grew by a larger percentage than profit, the business is making less profit for each dollar.",
+   "Profitability is used to judge whether a business is using its sales, assets and the owner's money well."
+  ],
+  "remember": "Profitability is profit measured against something else, not profit alone.",
+  "a": {
+   "q": "Why is profitability a better guide to performance than the profit figure alone?",
+   "opts": [
+    "It compares profit with sales, assets or owner's investment",
+    "It shows how much cash the business has in the bank",
+    "It shows only the profit earned from selling inventory",
+    "It shows whether the business can pay its debts on time"
+   ],
+   "why": "Profitability sets profit against something else, so the size of the business is taken into account. Cash held and paying debts are about other ideas, so they do not describe profitability.",
+   "clue": "Think about what profit is being set against."
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year Ava's bakery in Ballarat made a profit of $40,000 on assets of $200,000. This year profit rose to $44,000, but assets grew to $320,000. What has happened to profitability?",
+   "opts": [
+    "It fell, because profit grew more slowly than assets",
+    "It rose, because the profit figure is now higher",
+    "It stayed the same, as the business still makes a profit",
+    "It rose, because the business now has more assets"
+   ],
+   "why": "Profit rose by 10%, but assets rose by 60%. Each dollar of assets now earns less profit, so profitability fell. A higher dollar profit is the tempting answer, but it ignores what the profit is compared with.",
+   "clue": "Compare the percentage growth in profit with that in assets."
+  }
+ },
+ "cleared_by": "recheck"
+}

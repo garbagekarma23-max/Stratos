@@ -1,0 +1,235 @@
+{
+ "id": "acc-cash-profit-compared",
+ "title": "Cash and profit compared",
+ "brief": "8813195a864c",
+ "shortlist": [
+  [
+   "acc-cash-profit",
+   0.632
+  ],
+  [
+   "bus-cash-flow-statement",
+   0.501
+  ],
+  [
+   "bus-cash-flow-management",
+   0.468
+  ],
+  [
+   "acc-small-businesses-succeed-or",
+   0.343
+  ],
+  [
+   "bus-profit",
+   0.338
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 says reuse acc-cash-profit, so to the Opus match check, as every reuse is",
+  "2026-11-01T14:55:56Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done (still fails the content check)",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "confirm": 0.01257,
+  "write": 0.01199,
+  "check": 0.0108,
+  "fix": 0.01898
+ },
+ "match": {
+  "verdict": "reuse",
+  "same": "acc-cash-profit",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea that profit can rise before cash arrives, its terms and examples suit Victorian Accounting, and both questions are fair, though its depth is set for Units 1 and 2 rather than Units 3 and 4.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card acc-cash-profit teaches the same idea at Units 1 and 2 depth and covers only revenue timing, while this Year 12 point also needs expense timing (such as prepaid and accrued expenses and depreciation) and the link between the Income Statement and the Cash Flow Statement, which is a deeper treatment.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Cash and profit compared",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses. Under accrual accounting, revenue is recorded when it is earned and expenses when they are incurred, whether or not cash has moved."
+   ],
+   [
+    "Cash",
+    "the money actually received and paid in the period. The cash flow statement reports it."
+   ],
+   "The two differ because of timing. A credit sale adds revenue now but brings in cash later. Buying inventory uses cash, but inventory is not an expense until it is sold.",
+   "Depreciation is an expense that uses no cash in the period. So a business can report a profit and still have too little cash to pay its bills on time."
+  ],
+  "remember": "Profit follows when revenue and expenses are recorded. Cash follows when money moves.",
+  "a": {
+   "q": "Why can a business report a profit for the year and still run short of cash?",
+   "opts": [
+    "Revenue is recorded when earned, but cash may arrive later",
+    "Profit is worked out from cash received, so it matches cash",
+    "Expenses are recorded only when they are paid in cash",
+    "Profit is always paid out to the owner as drawings"
+   ],
+   "why": "Under accrual accounting, a credit sale is revenue now, but the cash comes in later. Profit is not worked out from cash received, so it can be well above the cash on hand.",
+   "clue": "Think about a sale made on credit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Ballarat made a profit this year. It sold many bikes on credit, and it also bought a large amount of inventory that is still unsold. Which statement best explains why its bank balance fell?",
+   "opts": [
+    "Credit sales are not yet cash, and unsold stock used cash",
+    "Credit sales are not yet cash, and unsold stock is an expense",
+    "Credit sales cut profit, and unsold stock used cash",
+    "Credit sales are not revenue, and unsold stock is an expense"
+   ],
+   "why": "Credit sales are recorded as revenue, so profit rises, but the cash has not arrived. Buying inventory pays out cash, yet it is not an expense until the bikes are sold. The tempting option treats unsold stock as an expense, which would also lower profit.",
+   "clue": "Is inventory an expense before it is sold?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "acc-cash-profit-comparedb option is 61 characters: Credit sales are not yet cash, and unsold stock is an expense"
+ ],
+ "check": {
+  "a": {
+   "best": "Revenue is recorded when earned, but cash may arrive later",
+   "also_right": []
+  },
+  "b": {
+   "best": "Credit sales are not yet cash, and unsold stock used cash",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Buying inventory uses cash' is stated without qualification. Inventory bought on credit uses no cash until the supplier is paid. It would be clearer as 'Buying inventory for cash uses cash' or 'Paying for inventory uses cash'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clearly right answer, and the card, remember line and explanations agree with accrual accounting. One minor wording issue: the card says buying inventory uses cash without noting that this applies only when the inventory is paid for in cash."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'Buying inventory uses cash' is stated without qualification. Inventory bought on credit uses no cash until the supplier is paid. It would be clearer as 'Buying inventory for cash uses cash' or 'Paying for inventory uses cash'.",
+  "Content check: acc-cash-profit-comparedb option is 61 characters: Credit sales are not yet cash, and unsold stock is an expense"
+ ],
+ "proposal": {
+  "title": "Cash and profit compared",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses. Under accrual accounting, revenue is recorded when it is earned and expenses when they are incurred, whether or not cash has moved."
+   ],
+   [
+    "Cash",
+    "the money actually received and paid in the period. The cash flow statement reports it."
+   ],
+   "The two differ because of timing. A credit sale adds revenue now but brings in cash later. Paying for inventory uses cash, but inventory is not an expense until it is sold.",
+   "Depreciation is an expense that uses no cash in the period. So a business can report a profit and still have too little cash to pay its bills on time."
+  ],
+  "remember": "Profit follows when revenue and expenses are recorded. Cash follows when money moves.",
+  "a": {
+   "q": "Why can a business report a profit for the year and still run short of cash?",
+   "opts": [
+    "Revenue is recorded when earned, but cash may arrive later",
+    "Profit is worked out from cash received, so it matches cash",
+    "Expenses are recorded only when they are paid in cash",
+    "Profit is always paid out to the owner as drawings"
+   ],
+   "why": "Under accrual accounting, a credit sale is revenue now, but the cash comes in later. Profit is not worked out from cash received, so it can be well above the cash on hand.",
+   "clue": "Think about a sale made on credit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Ballarat made a profit this year. It sold many bikes on credit, and it paid cash for a large amount of inventory that is still unsold. Which statement best explains why its bank balance fell?",
+   "opts": [
+    "Credit sales are not yet cash, and unsold stock used cash",
+    "Credit sales are not yet cash, and unsold stock is expensed",
+    "Credit sales cut profit, and unsold stock used cash",
+    "Credit sales are not revenue, and unsold stock is expensed"
+   ],
+   "why": "Credit sales are recorded as revenue, so profit rises, but the cash has not arrived. Paying for inventory sends cash out, yet it is not an expense until the bikes are sold. The tempting option treats unsold stock as an expense, but inventory only becomes an expense when it is sold.",
+   "clue": "Is inventory an expense before it is sold?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'Buying inventory uses cash' is stated without qualification. Inventory bought on credit uses no cash until the supplier is paid. It would be clearer as 'Buying inventory for cash uses cash' or 'Paying for inventory uses cash'."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'Buying inventory uses cash' is stated without qualification. Inventory bought on credit uses no cash until the supplier is paid. It would be clearer as 'Buying inventory for cash uses cash' or 'Paying for inventory uses cash'.",
+   "Content check: acc-cash-profit-comparedb option is 61 characters: Credit sales are not yet cash, and unsold stock is an expense"
+  ]
+ },
+ "final": {
+  "title": "Cash and profit compared",
+  "card": [
+   [
+    "Profit",
+    "revenue less expenses. Under accrual accounting, revenue is recorded when it is earned and expenses when they are incurred, whether or not cash has moved."
+   ],
+   [
+    "Cash",
+    "the money actually received and paid in the period. The cash flow statement reports it."
+   ],
+   "The two differ because of timing. A credit sale adds revenue now but brings in cash later. Paying for inventory uses cash, but inventory is not an expense until it is sold.",
+   "Depreciation is an expense that uses no cash in the period. So a business can report a profit and still have too little cash to pay its bills on time."
+  ],
+  "remember": "Profit follows when revenue and expenses are recorded. Cash follows when money moves.",
+  "a": {
+   "q": "Why can a business report a profit for the year and still run short of cash?",
+   "opts": [
+    "Revenue is recorded when earned, but cash may arrive later",
+    "Profit is worked out from cash received, so it matches cash",
+    "Expenses are recorded only when they are paid in cash",
+    "Profit is always paid out to the owner as drawings"
+   ],
+   "why": "Under accrual accounting, a credit sale is revenue now, but the cash comes in later. Profit is not worked out from cash received, so it can be well above the cash on hand.",
+   "clue": "Think about a sale made on credit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Cycles in Ballarat made a profit this year. It sold many bikes on credit, and it paid cash for a large amount of inventory that is still unsold. Which statement best explains why its bank balance fell?",
+   "opts": [
+    "Credit sales are not yet cash, and unsold stock used cash",
+    "Credit sales are not yet cash, and unsold stock is expensed",
+    "Credit sales cut profit, and unsold stock used cash",
+    "Credit sales are not revenue, and unsold stock is expensed"
+   ],
+   "why": "Credit sales are recorded as revenue, so profit rises, but the cash has not arrived. Paying for inventory sends cash out, yet it is not an expense until the bikes are sold. The tempting option treats unsold stock as an expense, but inventory only becomes an expense when it is sold.",
+   "clue": "Is inventory an expense before it is sold?"
+  }
+ },
+ "cleared_by": "auto"
+}

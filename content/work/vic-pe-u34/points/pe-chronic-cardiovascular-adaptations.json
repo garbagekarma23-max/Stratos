@@ -1,0 +1,202 @@
+{
+ "id": "pe-chronic-cardiovascular-adaptations",
+ "title": "Chronic cardiovascular adaptations",
+ "brief": "eb8a2f009cd7",
+ "shortlist": [
+  [
+   "hms-physiological-adaptations-training",
+   0.28
+  ],
+  [
+   "hms-chronic-disease-australia",
+   0.21
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 may adapt hms-physiological-adaptations-training, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:05Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "confirm": 0.00779,
+  "write": 0.00539,
+  "check": 0.01544,
+  "fix": 0.02619
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "hms-physiological-adaptations-training",
+  "changes": [
+   "The card uses the NSW Health and Movement Science framing with a formula and stroke volume explanation; the Victorian Units 3 and 4 Physical Education study design treats chronic cardiovascular adaptations with its own terms and should be checked, so the wording should be aligned to the study design's terms for cardiac adaptations.",
+   "The card's example of resting heart rate falling from 72 to 60 and the Sam running example should be replaced with a scenario fitting the Victorian PE course context if local examples are used."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same idea (months of aerobic training raise stroke volume and lower resting heart rate) at a suitable depth, but it comes from a NSW Health and Movement Science course and needs small wording and example changes for the Victorian PE study design.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point covers training adaptations in general, including VO₂ max and muscle changes, and leaves out heart enlargement, so it is broader than this cardiovascular-only point for the VCE chronic adaptations chapter.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Chronic cardiovascular adaptations",
+  "card": [
+   "A chronic adaptation is a lasting change in the body after weeks or months of regular training. It is different from the short-term changes that happen during one session.",
+   "Aerobic training makes the heart bigger and stronger, mainly the left ventricle. This is called cardiac hypertrophy.",
+   "A stronger left ventricle can fill with more blood and push out more blood with each beat. Stroke volume is the amount of blood pumped out by the heart in one beat, so it rises.",
+   "Each beat now moves more blood, so the heart needs fewer beats to deliver the blood the body needs at rest. Resting heart rate falls. Cardiac output is heart rate × stroke volume."
+  ],
+  "remember": "A bigger, stronger heart pumps more blood per beat, so it needs fewer beats at rest.",
+  "a": {
+   "q": "After six months of distance running, Tom's resting heart rate has dropped from 70 to 58 beats per minute. What best explains this?",
+   "opts": [
+    "His heart pumps more blood with each beat",
+    "His heart now pumps less blood each minute at rest",
+    "His heart muscle has become smaller and more efficient",
+    "His body now needs less blood to stay alive at rest"
+   ],
+   "why": "Training raises stroke volume, so the heart can meet the body's needs at rest with fewer beats. The tempting option about less blood each minute is wrong: the body's resting needs are much the same, so the heart still delivers that blood using fewer beats.",
+   "clue": "Think about how much blood each single beat moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's resting cardiac output is the same before and after a year of swim training, but her resting heart rate is now lower. Which change must have happened?",
+   "opts": [
+    "Her stroke volume at rest has risen",
+    "Her stroke volume at rest has fallen",
+    "Her left ventricle has become weaker",
+    "Her body's resting need for blood has fallen"
+   ],
+   "why": "Cardiac output is heart rate × stroke volume. If output stays the same while heart rate falls, stroke volume must have risen. A weaker ventricle would pump less per beat, so it would not keep output the same with fewer beats.",
+   "clue": "If one part of a product falls and the total stays the same, what must the other part do?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "His heart pumps more blood with each beat",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her stroke volume at rest has risen",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A stronger left ventricle can fill with more blood' credits filling to strength. Greater filling comes from the larger chamber volume, while the stronger wall ejects more blood. Saying 'a bigger, stronger left ventricle' would be clearer."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, with one right answer each. One minor wording issue: the card ties the extra filling of the left ventricle to strength rather than to its larger size."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: 'A stronger left ventricle can fill with more blood' credits filling to strength. Greater filling comes from the larger chamber volume, while the stronger wall ejects more blood. Saying 'a bigger, stronger left ventricle' would be clearer."
+ ],
+ "proposal": {
+  "title": "Chronic cardiovascular adaptations",
+  "card": [
+   "A chronic adaptation is a lasting change in the body after weeks or months of regular training. It is different from the short-term changes that happen during one session.",
+   "Aerobic training makes the heart bigger and stronger, mainly the left ventricle. This is called cardiac hypertrophy.",
+   "A bigger left ventricle can fill with more blood, and its stronger wall can push more of that blood out. Stroke volume, the amount of blood pumped out by the heart in one beat, rises.",
+   "Cardiac output is heart rate × stroke volume. At rest the body needs much the same blood as before, so with more blood in each beat, fewer beats are needed. Resting heart rate falls."
+  ],
+  "remember": "A bigger, stronger heart pumps more blood per beat, so it needs fewer beats at rest.",
+  "a": {
+   "q": "After six months of distance running, Tom's resting heart rate has dropped from 70 to 58 beats per minute. What best explains this?",
+   "opts": [
+    "His heart pumps more blood with each beat",
+    "His heart now pumps less blood each minute at rest",
+    "His heart muscle has become smaller and more efficient",
+    "His body now needs less blood to stay alive at rest"
+   ],
+   "why": "Training raises stroke volume, so the heart can meet the body's needs at rest with fewer beats. The tempting option about less blood each minute is wrong: the body's resting needs are much the same, so the heart still delivers that blood using fewer beats.",
+   "clue": "Think about how much blood each single beat moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's resting cardiac output is the same before and after a year of swim training, but her resting heart rate is now lower. Which change must have happened?",
+   "opts": [
+    "Her stroke volume at rest has risen",
+    "Her stroke volume at rest has fallen",
+    "Her left ventricle has become weaker",
+    "Her body's resting need for blood has fallen"
+   ],
+   "why": "Cardiac output is heart rate × stroke volume. If output stays the same while heart rate falls, stroke volume must have risen. A weaker ventricle would pump less per beat, so it could not keep output the same with fewer beats.",
+   "clue": "If one part of a product falls and the total stays the same, what must the other part do?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "'A stronger left ventricle can fill with more blood' credits filling to strength. Greater filling comes from the larger chamber volume, while the stronger wall ejects more blood. Saying 'a bigger, stronger left ventricle' would be clearer."
+   }
+  ],
+  "flags": [
+   "Card, wording: 'A stronger left ventricle can fill with more blood' credits filling to strength. Greater filling comes from the larger chamber volume, while the stronger wall ejects more blood. Saying 'a bigger, stronger left ventricle' would be clearer."
+  ]
+ },
+ "final": {
+  "title": "Chronic cardiovascular adaptations",
+  "card": [
+   "A chronic adaptation is a lasting change in the body after weeks or months of regular training. It is different from the short-term changes that happen during one session.",
+   "Aerobic training makes the heart bigger and stronger, mainly the left ventricle. This is called cardiac hypertrophy.",
+   "A bigger left ventricle can fill with more blood, and its stronger wall can push more of that blood out. Stroke volume, the amount of blood pumped out by the heart in one beat, rises.",
+   "Cardiac output is heart rate × stroke volume. At rest the body needs much the same blood as before, so with more blood in each beat, fewer beats are needed. Resting heart rate falls."
+  ],
+  "remember": "A bigger, stronger heart pumps more blood per beat, so it needs fewer beats at rest.",
+  "a": {
+   "q": "After six months of distance running, Tom's resting heart rate has dropped from 70 to 58 beats per minute. What best explains this?",
+   "opts": [
+    "His heart pumps more blood with each beat",
+    "His heart now pumps less blood each minute at rest",
+    "His heart muscle has become smaller and more efficient",
+    "His body now needs less blood to stay alive at rest"
+   ],
+   "why": "Training raises stroke volume, so the heart can meet the body's needs at rest with fewer beats. The tempting option about less blood each minute is wrong: the body's resting needs are much the same, so the heart still delivers that blood using fewer beats.",
+   "clue": "Think about how much blood each single beat moves."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's resting cardiac output is the same before and after a year of swim training, but her resting heart rate is now lower. Which change must have happened?",
+   "opts": [
+    "Her stroke volume at rest has risen",
+    "Her stroke volume at rest has fallen",
+    "Her left ventricle has become weaker",
+    "Her body's resting need for blood has fallen"
+   ],
+   "why": "Cardiac output is heart rate × stroke volume. If output stays the same while heart rate falls, stroke volume must have risen. A weaker ventricle would pump less per beat, so it could not keep output the same with fewer beats.",
+   "clue": "If one part of a product falls and the total stays the same, what must the other part do?"
+  }
+ },
+ "cleared_by": "auto"
+}

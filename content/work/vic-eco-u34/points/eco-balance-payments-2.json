@@ -1,0 +1,243 @@
+{
+ "id": "eco-balance-payments-2",
+ "title": "The balance of payments",
+ "brief": "364e0e896a1c",
+ "shortlist": [
+  [
+   "eco-capital-financial-account",
+   0.479
+  ],
+  [
+   "e-bop",
+   0.474
+  ],
+  [
+   "eco-australia-runs-current-account",
+   0.263
+  ],
+  [
+   "acc-accounting",
+   0.259
+  ],
+  [
+   "eco-sustainability-current-account",
+   0.212
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "write": 0.00496,
+  "check": 0.01466,
+  "fix": 0.02731,
+  "recheck": 0.0114
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, e-bop, teaches the current account well but does not cover the capital and financial account that the new point also needs, so it is narrower and no existing point matches the whole idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The balance of payments",
+  "card": [
+   "The balance of payments is a record of all of a country's economic transactions with the rest of the world over a period, usually a year.",
+   [
+    "Current account",
+    "records trade in goods and services, and income flows, such as interest and dividends paid to or earned from overseas."
+   ],
+   [
+    "Capital and financial account",
+    "records the flow of funds for investment, such as buying shares, property and businesses, or lending and borrowing across borders."
+   ],
+   "Money going out for imports or income payments is a debit. Money coming in for exports or income received is a credit. Each account is a separate part of the record."
+  ],
+  "remember": "The balance of payments records a country's dealings with the world: trade and income in the current account, investment in the other account.",
+  "a": {
+   "q": "Which transaction is recorded in the current account?",
+   "opts": [
+    "An Australian firm sells wheat to Indonesia",
+    "A Japanese fund buys a Sydney office tower",
+    "An Australian bank borrows funds from a US bank",
+    "A Chinese company buys shares in an Australian miner"
+   ],
+   "why": "Selling wheat is an export of goods, and trade in goods sits in the current account. The other three are flows of funds for investment or lending, which belong in the capital and financial account. The office tower is tempting because it involves a foreign buyer, but it is an asset purchase, not trade.",
+   "clue": "Which one is a sale of goods, not a purchase of an asset or a loan?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia owns shares in a Dutch company and receives a dividend payment from it in Melbourne. How is this recorded in Australia's balance of payments?",
+   "opts": [
+    "As a credit in the current account, as income received",
+    "As a debit in the current account, as income paid",
+    "As a credit in the capital and financial account",
+    "As a debit in the capital and financial account"
+   ],
+   "why": "A dividend is income earned from overseas, and income flows are part of the current account. Money comes in to Australia, so it is a credit. It is tempting to place it in the capital and financial account because shares are investments, but the dividend is the income, not the purchase of the shares.",
+   "clue": "Is the dividend the buying of shares, or the income they earn?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An Australian firm sells wheat to Indonesia",
+   "also_right": []
+  },
+  "b": {
+   "best": "As a credit in the current account, as income received",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue asks 'Which one is a sale of goods, not a purchase of an asset or a loan?'. Only one option is a sale of goods, so the clue gives the answer away without the student needing to know which account records what."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate. The only issue is that question a's clue names the answer outright by asking for the sale of goods."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue asks 'Which one is a sale of goods, not a purchase of an asset or a loan?'. Only one option is a sale of goods, so the clue gives the answer away without the student needing to know which account records what."
+ ],
+ "proposal": {
+  "title": "The balance of payments",
+  "card": [
+   "The balance of payments is a record of all of a country's economic transactions with the rest of the world over a period, usually a year.",
+   [
+    "Current account",
+    "records trade in goods and services, and income flows, such as interest and dividends paid to or earned from overseas."
+   ],
+   [
+    "Capital and financial account",
+    "records the flow of funds for investment, such as buying shares, property and businesses, or lending and borrowing across borders."
+   ],
+   "Money coming in, such as for exports or income received, is a credit. Money going out, such as for imports or income paid, is a debit."
+  ],
+  "remember": "Trade and income go in the current account. Investment and cross-border lending go in the capital and financial account.",
+  "a": {
+   "q": "Which transaction is recorded in the current account?",
+   "opts": [
+    "An Australian firm sells wheat to Indonesia",
+    "A Japanese fund buys a Sydney office tower",
+    "An Australian bank borrows funds from a US bank",
+    "A Chinese company buys shares in an Australian miner"
+   ],
+   "why": "Selling wheat is an export of goods, and trade in goods sits in the current account. The other three are flows of funds for investment or lending, which belong in the capital and financial account. The office tower is tempting because it involves a foreign buyer, but it is an asset purchase, not trade.",
+   "clue": "Recall what each of the two accounts records."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia owns shares in a Dutch company and receives a dividend payment from it in Melbourne. How is this recorded in Australia's balance of payments?",
+   "opts": [
+    "As a credit in the current account",
+    "As a debit in the current account",
+    "As a credit in the capital and financial account",
+    "As a debit in the capital and financial account"
+   ],
+   "why": "A dividend is income earned from overseas, and income flows are part of the current account. Money comes in to Australia, so it is a credit. It is tempting to place it in the capital and financial account because shares are investments, but the dividend is the income, not the purchase of the shares.",
+   "clue": "Is the dividend the buying of shares, or the income they earn?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An Australian firm sells wheat to Indonesia",
+    "also_right": []
+   },
+   "b": {
+    "best": "As a credit in the current account",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue asks 'Which one is a sale of goods, not a purchase of an asset or a loan?'. Only one option is a sale of goods, so the clue gives the answer away without the student needing to know which account records what."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue asks 'Which one is a sale of goods, not a purchase of an asset or a loan?'. Only one option is a sale of goods, so the clue gives the answer away without the student needing to know which account records what."
+  ]
+ },
+ "final": {
+  "title": "The balance of payments",
+  "card": [
+   "The balance of payments is a record of all of a country's economic transactions with the rest of the world over a period, usually a year.",
+   [
+    "Current account",
+    "records trade in goods and services, and income flows, such as interest and dividends paid to or earned from overseas."
+   ],
+   [
+    "Capital and financial account",
+    "records the flow of funds for investment, such as buying shares, property and businesses, or lending and borrowing across borders."
+   ],
+   "Money coming in, such as for exports or income received, is a credit. Money going out, such as for imports or income paid, is a debit."
+  ],
+  "remember": "Trade and income go in the current account. Investment and cross-border lending go in the capital and financial account.",
+  "a": {
+   "q": "Which transaction is recorded in the current account?",
+   "opts": [
+    "An Australian firm sells wheat to Indonesia",
+    "A Japanese fund buys a Sydney office tower",
+    "An Australian bank borrows funds from a US bank",
+    "A Chinese company buys shares in an Australian miner"
+   ],
+   "why": "Selling wheat is an export of goods, and trade in goods sits in the current account. The other three are flows of funds for investment or lending, which belong in the capital and financial account. The office tower is tempting because it involves a foreign buyer, but it is an asset purchase, not trade.",
+   "clue": "Recall what each of the two accounts records."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia owns shares in a Dutch company and receives a dividend payment from it in Melbourne. How is this recorded in Australia's balance of payments?",
+   "opts": [
+    "As a credit in the current account",
+    "As a debit in the current account",
+    "As a credit in the capital and financial account",
+    "As a debit in the capital and financial account"
+   ],
+   "why": "A dividend is income earned from overseas, and income flows are part of the current account. Money comes in to Australia, so it is a credit. It is tempting to place it in the capital and financial account because shares are investments, but the dividend is the income, not the purchase of the shares.",
+   "clue": "Is the dividend the buying of shares, or the income they earn?"
+  }
+ },
+ "cleared_by": "recheck"
+}

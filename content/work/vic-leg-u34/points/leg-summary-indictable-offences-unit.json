@@ -1,0 +1,258 @@
+{
+ "id": "leg-summary-indictable-offences-unit",
+ "title": "Summary and indictable offences in Unit 3",
+ "brief": "cb07b2d3d648",
+ "shortlist": [
+  [
+   "leg-summary-indictable-offences",
+   0.823
+  ],
+  [
+   "leg-juries",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 says adapt leg-summary-indictable-offences (4 changes)",
+  "2026-11-01T14:56:02Z adapt: failed the content check, writing again",
+  "2026-11-01T15:05:27Z adapt: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:22:30Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.0003,
+  "adapt": 0.01046,
+  "check": 0.01121,
+  "fix": 0.0155,
+  "recheck": 0.01481
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "leg-summary-indictable-offences",
+  "changes": [
+   "Replace the NSW Local Court with the Magistrates' Court of Victoria wherever the card names the court that hears summary offences and early steps in indictable cases.",
+   "Replace the NSW higher court reference with the County Court or Supreme Court of Victoria as the courts that try indictable offences before a judge and jury.",
+   "Use Victorian examples of summary and indictable offences in place of NSW-specific ones where needed.",
+   "Adjust question b so Dev's first appearance is in the Magistrates' Court of Victoria, not the Local Court."
+  ],
+  "sure": "high",
+  "reason": "The bank point teaches the same summary versus indictable distinction at the right depth, but it uses NSW court names and needs Victorian court names and examples for this Victorian course.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "leg-summary-indictable-offences",
+  "changes": [
+   "Replace the NSW Local Court with the Magistrates' Court of Victoria wherever the card names the court that hears summary offences and early steps in indictable cases.",
+   "Replace the NSW higher court reference with the County Court or Supreme Court of Victoria as the courts that try indictable offences before a judge and jury.",
+   "Use Victorian examples of summary and indictable offences in place of NSW-specific ones where needed.",
+   "Adjust question b so Dev's first appearance is in the Magistrates' Court of Victoria, not the Local Court."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "a.q",
+   "a.opt3",
+   "b.q",
+   "b.opt2",
+   "b.why"
+  ]
+ },
+ "draft": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as a minor traffic offence or being drunk in a public place. It is heard by a magistrate in the Magistrates' Court of Victoria, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug trafficking. It can be tried by a judge and jury in the County Court or the Supreme Court of Victoria."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to the County Court or Supreme Court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature usually applies to a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court of Victoria",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the second option is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first appearance is in the Magistrates' Court of Victoria. How is the offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is heard by a magistrate without a jury",
+   "also_right": []
+  },
+  "b": {
+   "best": "Indictable, because it is serious and can go before a jury",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Being drunk in a public place' is out of date as an example of a summary offence in Victoria. Public drunkenness was decriminalised on 7 November 2023, and the related provisions of the Summary Offences Act 1966 (Vic) were repealed. Use a current example instead, such as offensive behaviour in public or minor theft."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card gives 'being drunk in a public place' as an example of a summary offence, but public drunkenness was decriminalised in Victoria in November 2023. Replace it with a current summary offence. Both questions and their explanations are otherwise correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'Being drunk in a public place' is out of date as an example of a summary offence in Victoria. Public drunkenness was decriminalised on 7 November 2023, and the related provisions of the Summary Offences Act 1966 (Vic) were repealed. Use a current example instead, such as offensive behaviour in public or minor theft."
+ ],
+ "proposal": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as a minor traffic offence or offensive behaviour in a public place. It is heard by a magistrate in the Magistrates' Court of Victoria, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug trafficking. It can be tried by a judge and jury in the County Court or the Supreme Court of Victoria."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to the County Court or Supreme Court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature usually applies to a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court of Victoria",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the second option is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first appearance is in the Magistrates' Court of Victoria. How is the offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It is heard by a magistrate without a jury",
+    "also_right": []
+   },
+   "b": {
+    "best": "Indictable, because it is serious and can go before a jury",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Being drunk in a public place' is out of date as an example of a summary offence in Victoria. Public drunkenness was decriminalised on 7 November 2023, and the related provisions of the Summary Offences Act 1966 (Vic) were repealed. Use a current example instead, such as offensive behaviour in public or minor theft."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'Being drunk in a public place' is out of date as an example of a summary offence in Victoria. Public drunkenness was decriminalised on 7 November 2023, and the related provisions of the Summary Offences Act 1966 (Vic) were repealed. Use a current example instead, such as offensive behaviour in public or minor theft."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Summary and indictable offences",
+  "card": [
+   [
+    "Summary offence",
+    "a minor offence, such as a minor traffic offence or offensive behaviour in a public place. It is heard by a magistrate in the Magistrates' Court of Victoria, with no jury."
+   ],
+   [
+    "Indictable offence",
+    "a serious offence, such as murder, armed robbery or large-scale drug trafficking. It can be tried by a judge and jury in the County Court or the Supreme Court of Victoria."
+   ],
+   "Many indictable offences start in the Magistrates' Court, where a magistrate handles early steps. The most serious ones then go to the County Court or Supreme Court for trial.",
+   "The type of offence depends on how serious the law treats it. It does not depend on how the accused pleads or how long the case takes."
+  ],
+  "remember": "Minor offences go to a magistrate. Serious offences can go to a judge and jury.",
+  "a": {
+   "q": "Which feature usually applies to a summary offence in Victoria?",
+   "opts": [
+    "It is heard by a magistrate without a jury",
+    "It is tried by a judge and jury",
+    "It is heard in the Supreme Court of Victoria",
+    "It is decided by the police, not a court"
+   ],
+   "why": "Summary offences are minor and are heard by a magistrate alone. A jury is linked to indictable offences, so the second option is the tempting mistake.",
+   "clue": "Think about who hears minor matters and whether a jury is used."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is charged with armed robbery. His first appearance is in the Magistrates' Court of Victoria. How is the offence best classed, and why?",
+   "opts": [
+    "Indictable, because it is serious and can go before a jury",
+    "Summary, because it first appears in the Magistrates' Court",
+    "Summary, because Dev may plead guilty to the charge",
+    "Indictable, because a magistrate hears it without a jury"
+   ],
+   "why": "The law treats armed robbery as serious, so it is indictable and can be tried by a judge and jury. Appearing first in the Magistrates' Court does not make an offence summary, because many indictable offences begin there.",
+   "clue": "Where a case first appears may not tell you its type."
+  }
+ },
+ "cleared_by": "owner"
+}

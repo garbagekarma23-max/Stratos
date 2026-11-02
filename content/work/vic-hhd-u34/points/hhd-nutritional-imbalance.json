@@ -1,0 +1,336 @@
+{
+ "id": "hhd-nutritional-imbalance",
+ "title": "Nutritional imbalance",
+ "brief": "de7d9562cf7e",
+ "shortlist": [
+  [
+   "hhd-fats",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01152,
+  "check": 0.03009,
+  "fix": 0.03101,
+  "recheck": 0.01511
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point only explains the types of fat at an introductory Units 1 and 2 level, while the new point covers the population-level health harms of an unbalanced diet in Australia, which is a different idea at a different depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, wording: The question asks which change would 'fix' both parts, but the best option leaves the daily hot chips, which supply too much fat and salt. The why also says the fix cuts 'sugar and fat' and that the swap 'does both', yet it only cuts sugar. 'Address both parts' or 'help with both parts' would be accurate.",
+ "rejected": {
+  "title": "Nutritional imbalance",
+  "card": [
+   "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+   [
+    "Too little",
+    "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+   ],
+   [
+    "Too much",
+    "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+   ],
+   "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+  ],
+  "remember": "Too little, too much or both: any mismatch with the body's needs can raise the risk of disease over time.",
+  "a": {
+   "q": "Which description is an example of nutritional imbalance?",
+   "opts": [
+    "Eating few vegetables and often eating salty takeaway",
+    "Eating a wide range of foods in sensible amounts",
+    "Eating plenty of fibre and drinking mostly water",
+    "Eating dairy foods and fruit every day"
+   ],
+   "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+   "clue": "Which option has a mismatch with what the body needs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which change would fix both parts of his imbalance?",
+   "opts": [
+    "Swap sugary drinks for water and eat fruit each day",
+    "Keep sugary drinks but take a daily fibre supplement",
+    "Cut out dairy foods so that he eats less fat each day",
+    "Swap hot chips for salty crisps from a packet each day"
+   ],
+   "why": "Sam eats too little fruit and fibre and too much sugar and fat, so a fix must add the first and cut the second. Swapping sugary drinks for water and adding fruit does both. A fibre supplement helps only the too little part and leaves the sugar. Cutting dairy removes a food many Australians already eat too little of.",
+   "clue": "Sam has a too little part and a too much part."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, wording: The question asks which change would 'fix' both parts, but the best option leaves the daily hot chips, which supply too much fat and salt. The why also says the fix cuts 'sugar and fat' and that the swap 'does both', yet it only cuts sugar. 'Address both parts' or 'help with both parts' would be accurate."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Nutritional imbalance",
+     "card": [
+      "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+      [
+       "Too little",
+       "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+      ],
+      [
+       "Too much",
+       "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+      ],
+      "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+     ],
+     "remember": "Nutritional imbalance is too little of some foods and too much of others, and it can raise the risk of long-term disease.",
+     "a": {
+      "q": "Which description is an example of nutritional imbalance?",
+      "opts": [
+       "Eating few vegetables and often eating salty takeaway",
+       "Eating a wide range of foods in sensible amounts",
+       "Eating plenty of fibre and drinking mostly water",
+       "Eating dairy foods and fruit every day"
+      ],
+      "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+      "clue": "Look for the option with too little of one thing and too much of another."
+     },
+     "b": {
+      "d": 2,
+      "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which long-term health risk is most directly linked to his eating?",
+      "opts": [
+       "Type 2 diabetes",
+       "Seasonal hay fever",
+       "Broken bones from falls",
+       "Hearing loss from loud noise"
+      ],
+      "why": "Eating too much sugar and fat and too little fibre can raise the risk of type 2 diabetes. Hay fever, broken bones and hearing loss are not linked to nutritional imbalance in this way.",
+      "clue": "Think of the diseases the card links to eating patterns."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Eating few vegetables and often eating salty takeaway",
+      "also_right": []
+     },
+     "b": {
+      "best": "Type 2 diabetes",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "other",
+       "detail": "The card says nutritional imbalance can be too little of some foods, too much of others, 'or both'. The remember line says 'too little of some foods and too much of others', which suggests both must be present. This contradicts the card's definition."
+      },
+      {
+       "part": "b",
+       "kind": "level",
+       "detail": "The distractors (hearing loss from loud noise, seasonal hay fever, broken bones from falls) are plainly unrelated to diet. A Year 12 student can answer without understanding nutritional imbalance."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts and the intended answers are correct. The remember line narrows the card's 'too little, too much, or both' definition to require both. Question b's distractors are too obviously wrong for Year 12."
+    },
+    "flags": [
+     "Remember, other: The card says nutritional imbalance can be too little of some foods, too much of others, 'or both'. The remember line says 'too little of some foods and too much of others', which suggests both must be present. This contradicts the card's definition.",
+     "Question b, level: The distractors (hearing loss from loud noise, seasonal hay fever, broken bones from falls) are plainly unrelated to diet. A Year 12 student can answer without understanding nutritional imbalance."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Nutritional imbalance",
+     "card": [
+      "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+      [
+       "Too little",
+       "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+      ],
+      [
+       "Too much",
+       "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+      ],
+      "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+     ],
+     "remember": "Too little, too much or both: any mismatch with the body's needs can raise the risk of disease over time.",
+     "a": {
+      "q": "Which description is an example of nutritional imbalance?",
+      "opts": [
+       "Eating few vegetables and often eating salty takeaway",
+       "Eating a wide range of foods in sensible amounts",
+       "Eating plenty of fibre and drinking mostly water",
+       "Eating dairy foods and fruit every day"
+      ],
+      "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+      "clue": "Which option has a mismatch with what the body needs?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which change would fix both parts of his imbalance?",
+      "opts": [
+       "Swap sugary drinks for water and eat fruit each day",
+       "Keep sugary drinks but take a daily fibre supplement",
+       "Cut out dairy foods so that he eats less fat each day",
+       "Swap hot chips for salty crisps from a packet each day"
+      ],
+      "why": "Sam eats too little fruit and fibre and too much sugar and fat, so a fix must add the first and cut the second. Swapping sugary drinks for water and adding fruit does both. A fibre supplement helps only the too little part and leaves the sugar. Cutting dairy removes a food many Australians already eat too little of.",
+      "clue": "Sam has a too little part and a too much part."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Eating few vegetables and often eating salty takeaway",
+       "also_right": []
+      },
+      "b": {
+       "best": "Swap sugary drinks for water and eat fruit each day",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "wording",
+        "detail": "The question asks which change would 'fix' both parts, but the best option leaves the daily hot chips, which supply too much fat and salt. The why also says the fix cuts 'sugar and fat' and that the swap 'does both', yet it only cuts sugar. 'Address both parts' or 'help with both parts' would be accurate."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer and the card is accurate. Question b and its why overstate that the best option 'fixes' Sam's imbalance and cuts fat, when the hot chips remain."
+     },
+     "flags": [
+      "Question b, wording: The question asks which change would 'fix' both parts, but the best option leaves the daily hot chips, which supply too much fat and salt. The why also says the fix cuts 'sugar and fat' and that the swap 'does both', yet it only cuts sugar. 'Address both parts' or 'help with both parts' would be accurate."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Nutritional imbalance",
+  "card": [
+   "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+   [
+    "Too little",
+    "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+   ],
+   [
+    "Too much",
+    "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+   ],
+   "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+  ],
+  "remember": "Too little, too much or both: any mismatch with the body's needs can raise the risk of disease over time.",
+  "a": {
+   "q": "Which description is an example of nutritional imbalance?",
+   "opts": [
+    "Eating few vegetables and often eating salty takeaway",
+    "Eating a wide range of foods in sensible amounts",
+    "Eating plenty of fibre and drinking mostly water",
+    "Eating dairy foods and fruit every day"
+   ],
+   "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+   "clue": "Which option has a mismatch with what the body needs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which change would help with both parts of his imbalance?",
+   "opts": [
+    "Swap sugary drinks for water and eat fruit each day",
+    "Keep sugary drinks but take a daily fibre supplement",
+    "Cut out dairy foods so that he eats less fat each day",
+    "Swap hot chips for salty crisps from a packet each day"
+   ],
+   "why": "Sam eats too little fruit and fibre and too much sugar, fat and salt. A helpful change adds a food he lacks and cuts something he has too much of. Swapping sugary drinks for water and adding fruit does both, though his chips would still need attention. A fibre supplement helps only the too little part and leaves the sugar. Cutting dairy removes a food many Australians already eat too little of.",
+   "clue": "Sam has a too little part and a too much part."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Eating few vegetables and often eating salty takeaway",
+   "also_right": []
+  },
+  "b": {
+   "best": "Swap sugary drinks for water and eat fruit each day",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Nutritional imbalance",
+  "card": [
+   "Nutritional imbalance means the foods a person eats do not match what the body needs. It can be too little of some foods, too much of others, or both.",
+   [
+    "Too little",
+    "Many Australians eat too little fruit, vegetables, dairy foods and fibre. These foods supply vitamins, minerals, calcium and fibre."
+   ],
+   [
+    "Too much",
+    "Many Australians eat too much fat, salt and sugar. These are often found in processed foods, takeaway meals and sugary drinks."
+   ],
+   "Over time, nutritional imbalance can raise the risk of heart disease, type 2 diabetes, some cancers and tooth decay. It can also contribute to excess body weight."
+  ],
+  "remember": "Too little, too much or both: any mismatch with the body's needs can raise the risk of disease over time.",
+  "a": {
+   "q": "Which description is an example of nutritional imbalance?",
+   "opts": [
+    "Eating few vegetables and often eating salty takeaway",
+    "Eating a wide range of foods in sensible amounts",
+    "Eating plenty of fibre and drinking mostly water",
+    "Eating dairy foods and fruit every day"
+   ],
+   "why": "Eating few vegetables means too little of a needed food, and salty takeaway means too much salt. The foods do not match what the body needs. The other options describe eating that meets the body's needs.",
+   "clue": "Which option has a mismatch with what the body needs?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sam is 17 and eats little fruit or fibre. Most days he has sugary drinks and hot chips. Which change would help with both parts of his imbalance?",
+   "opts": [
+    "Swap sugary drinks for water and eat fruit each day",
+    "Keep sugary drinks but take a daily fibre supplement",
+    "Cut out dairy foods so that he eats less fat each day",
+    "Swap hot chips for salty crisps from a packet each day"
+   ],
+   "why": "Sam eats too little fruit and fibre and too much sugar, fat and salt. A helpful change adds a food he lacks and cuts something he has too much of. Swapping sugary drinks for water and adding fruit does both, though his chips would still need attention. A fibre supplement helps only the too little part and leaves the sugar. Cutting dairy removes a food many Australians already eat too little of.",
+   "clue": "Sam has a too little part and a too much part."
+  }
+ }
+}

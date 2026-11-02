@@ -1,0 +1,345 @@
+{
+ "id": "hhd-mortality-self-assessed-health",
+ "title": "Mortality and self-assessed health",
+ "brief": "5c50370ccfce",
+ "shortlist": [
+  [
+   "hms-measures-health-status",
+   0.496
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.255
+  ],
+  [
+   "hms-health-promotion",
+   0.238
+  ],
+  [
+   "hms-community-health-resources",
+   0.237
+  ],
+  [
+   "hms-health-literacy",
+   0.2
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.01074,
+  "check": 0.03031,
+  "fix": 0.02009,
+  "recheck": 0.0156
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point hms-measures-health-status covers general mortality, infant mortality, morbidity and life expectancy, but not maternal or under-five mortality or self-assessed health, so the new point is broader and needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The stem's 'die before their fifth birthday', backed by the clue 'runs up to age five', matches the option name 'Under-five mortality rate' almost word for word. A student can pick it without knowing what the measure counts, which is very easy for Year 12.",
+ "rejected": {
+  "title": "Mortality and self-assessed health",
+  "card": [
+   [
+    "Maternal mortality",
+    "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday, shown per 1,000 live births."
+   ],
+   [
+    "Under-five mortality",
+    "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+   ],
+   [
+    "Self-assessed health",
+    "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+   ]
+  ],
+  "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+  "a": {
+   "q": "Which measure counts children who die before their fifth birthday, including babies who die in their first year?",
+   "opts": [
+    "Under-five mortality rate",
+    "Infant mortality rate",
+    "Maternal mortality rate",
+    "Self-assessed health status"
+   ],
+   "why": "Under-five mortality covers deaths from birth up to the fifth birthday, so it includes infant deaths. Infant mortality is the tempting option, but it stops at the first birthday.",
+   "clue": "Look for the measure that runs up to age five."
+  },
+  "b": {
+   "d": 3,
+   "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+   "opts": [
+    "It shows how people feel about their own health",
+    "It gives a more objective measure than death rates",
+    "It counts the deaths that infant mortality misses",
+    "It shows how many children die before age five"
+   ],
+   "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+   "clue": "Think about what a count of deaths cannot tell you."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The stem's 'die before their fifth birthday', backed by the clue 'runs up to age five', matches the option name 'Under-five mortality rate' almost word for word. A student can pick it without knowing what the measure counts, which is very easy for Year 12."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Mortality and self-assessed health",
+     "card": [
+      [
+       "Maternal mortality",
+       "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+      ],
+      [
+       "Infant mortality",
+       "the number of babies who die before their first birthday, shown per 1,000 live births."
+      ],
+      [
+       "Under-five mortality",
+       "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+      ],
+      [
+       "Self-assessed health",
+       "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+      ]
+     ],
+     "remember": "Mortality rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+     "a": {
+      "q": "Which measure counts children who die before their fifth birthday, including babies who die in their first year?",
+      "opts": [
+       "Under-five mortality rate",
+       "Infant mortality rate",
+       "Maternal mortality rate",
+       "Self-assessed health status"
+      ],
+      "why": "Under-five mortality covers deaths from birth up to the fifth birthday, so it includes infant deaths. Infant mortality is the tempting option, but it stops at the first birthday.",
+      "clue": "Look for the measure that runs up to age five."
+     },
+     "b": {
+      "d": 3,
+      "q": "A survey in Bendigo finds that most adults rate their health as good or excellent. What does this result describe?",
+      "opts": [
+       "How people see their own health",
+       "How many new cases of illness occurred",
+       "How many adults died in the past year",
+       "How many mothers died in childbirth"
+      ],
+      "why": "Self-assessed health is a person's own rating of their health, gathered in a survey. The death option is tempting, but mortality rates count deaths, not opinions. The result gives a personal view of health.",
+      "clue": "The adults were asked to rate themselves."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Under-five mortality rate",
+      "also_right": []
+     },
+     "b": {
+      "best": "How people see their own health",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "'Mortality rates count deaths in mothers and young children' overgeneralises. Mortality rates in general (point 3) count deaths across a whole population. Only the maternal, infant and under-five rates on this card are limited to mothers and young children."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "The right option is the only one that does not begin 'How many', and it echoes the stem's 'rate their health'. The clue ('asked to rate themselves') then hands over the answer, so the question is very easy for Year 12."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct. The remember line wrongly implies that all mortality rates count only mothers and young children, and question b's right option stands out from the others, so it is too easy."
+    },
+    "flags": [
+     "Remember, wording: 'Mortality rates count deaths in mothers and young children' overgeneralises. Mortality rates in general (point 3) count deaths across a whole population. Only the maternal, infant and under-five rates on this card are limited to mothers and young children.",
+     "Question b, wording: The right option is the only one that does not begin 'How many', and it echoes the stem's 'rate their health'. The clue ('asked to rate themselves') then hands over the answer, so the question is very easy for Year 12."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Mortality and self-assessed health",
+     "card": [
+      [
+       "Maternal mortality",
+       "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+      ],
+      [
+       "Infant mortality",
+       "the number of babies who die before their first birthday, shown per 1,000 live births."
+      ],
+      [
+       "Under-five mortality",
+       "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+      ],
+      [
+       "Self-assessed health",
+       "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+      ]
+     ],
+     "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+     "a": {
+      "q": "Which measure counts children who die before their fifth birthday, including babies who die in their first year?",
+      "opts": [
+       "Under-five mortality rate",
+       "Infant mortality rate",
+       "Maternal mortality rate",
+       "Self-assessed health status"
+      ],
+      "why": "Under-five mortality covers deaths from birth up to the fifth birthday, so it includes infant deaths. Infant mortality is the tempting option, but it stops at the first birthday.",
+      "clue": "Look for the measure that runs up to age five."
+     },
+     "b": {
+      "d": 3,
+      "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+      "opts": [
+       "It shows how people feel about their own health",
+       "It gives a more objective measure than death rates",
+       "It counts the deaths that infant mortality misses",
+       "It shows how many children die before age five"
+      ],
+      "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+      "clue": "Think about what a count of deaths cannot tell you."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Under-five mortality rate",
+       "also_right": []
+      },
+      "b": {
+       "best": "It shows how people feel about their own health",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The stem's 'die before their fifth birthday', backed by the clue 'runs up to age five', matches the option name 'Under-five mortality rate' almost word for word. A student can pick it without knowing what the measure counts, which is very easy for Year 12."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts and both answers are correct. Question a gives itself away, because its stem and clue repeat 'fifth birthday' and 'age five', which match the option 'Under-five mortality rate'."
+     },
+     "flags": [
+      "Question a, wording: The stem's 'die before their fifth birthday', backed by the clue 'runs up to age five', matches the option name 'Under-five mortality rate' almost word for word. A student can pick it without knowing what the measure counts, which is very easy for Year 12."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Mortality and self-assessed health",
+  "card": [
+   [
+    "Maternal mortality",
+    "the number of women who die from causes linked to pregnancy or childbirth, compared with the number of live births. It is usually shown per 100,000 live births."
+   ],
+   [
+    "Infant mortality",
+    "the number of babies who die before their first birthday, shown per 1,000 live births."
+   ],
+   [
+    "Under-five mortality",
+    "the number of children who die before their fifth birthday, shown per 1,000 live births. It includes infant deaths."
+   ],
+   [
+    "Self-assessed health",
+    "how people rate their own health, often from excellent to poor, in a survey. It is a personal view, so it can show how people feel about their health when death rates cannot."
+   ]
+  ],
+  "remember": "Maternal, infant and under-five rates count deaths in mothers and young children. Self-assessed health shows how people rate their own health.",
+  "a": {
+   "q": "In a region, 30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months. A health report wants one rate that includes both deaths. Which rate should it use?",
+   "opts": [
+    "Under-five mortality rate",
+    "Infant mortality rate",
+    "Maternal mortality rate",
+    "Self-assessed health status"
+   ],
+   "why": "The under-five rate covers deaths from birth to the fifth birthday, so it includes both the death at 4 months and the death at age 3. Infant mortality is the tempting option, but it stops at the first birthday and would miss the death at age 3.",
+   "clue": "Check the age of each child who died, then see which rate covers both."
+  },
+  "b": {
+   "d": 3,
+   "q": "A researcher studying a Bendigo community has its infant mortality data. Why might she also collect self-assessed health data?",
+   "opts": [
+    "It shows how people feel about their own health",
+    "It gives a more objective measure than death rates",
+    "It counts the deaths that infant mortality misses",
+    "It shows how many children die before age five"
+   ],
+   "why": "Self-assessed health is a personal rating from a survey, so it can show how people feel about their health, which death rates cannot. The objective option is tempting, but a personal view is not more objective than a count of deaths. It also counts no deaths at all.",
+   "clue": "Think about what a count of deaths cannot tell you."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Under-five mortality rate",
+   "also_right": []
+  },
+  "b": {
+   "best": "It shows how people feel about their own health",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem is hard to parse: '30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months' reads oddly, and the why then speaks of 'the death at 4 months and the death at age 3' as if there were single deaths. Clearer: 'In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old.'"
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are sound, but question a's stem is awkwardly worded and does not match its explanation, which treats the figures as single deaths. Rewording the stem would fix it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem is hard to parse: '30 of every 1,000 live births end in a death at age 3 and 20 at age 4 months' reads oddly, and the why then speaks of 'the death at 4 months and the death at age 3' as if there were single deaths. Clearer: 'In a region, for every 1,000 live births, 30 children die at age 3 and 20 babies die at 4 months old.'"
+ ]
+}

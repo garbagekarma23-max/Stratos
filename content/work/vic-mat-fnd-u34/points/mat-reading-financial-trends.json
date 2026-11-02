@@ -1,0 +1,220 @@
+{
+ "id": "mat-reading-financial-trends",
+ "title": "Reading financial trends",
+ "brief": "02944b8e7b6a",
+ "shortlist": [
+  [
+   "mat-financial-trends",
+   0.308
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00593,
+  "check": 0.01507,
+  "fix": 0.01292
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point teaches CPI, wages and buying power at Units 1 and 2 depth, while the new point is about reading trends in gender pay gap, exchange rate, share price and recession data, so it is related but not the same idea at the same depth.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Reading financial trends",
+  "card": [
+   [
+    "Line graphs",
+    "Financial data such as share prices and exchange rates is often shown on a line graph. Time is on the horizontal axis and the value is on the vertical axis."
+   ],
+   [
+    "Trend",
+    "A line that rises over time shows an increase. A line that falls shows a decrease. The size of the change is the later value minus the earlier value."
+   ],
+   [
+    "Percentage change",
+    "Percentage change = change ÷ starting value × 100. Example: a share price goes from $20 to $25. The change is 5, and 5 ÷ 20 × 100 = 25%."
+   ],
+   [
+    "Exchange rate",
+    "An exchange rate says how much of one currency buys another. If A$1 = US$0.60, then A$100 buys 100 × 0.60 = US$60."
+   ]
+  ],
+  "remember": "Read the change from the graph, then divide by the starting value for a percentage.",
+  "a": {
+   "q": "A share price rises from $40 to $50. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "10%",
+    "50%"
+   ],
+   "why": "The change is 50 − 40 = 10. Then 10 ÷ 40 × 100 = 25%. 20% is wrong because it divides by the new price instead of the starting price.",
+   "clue": "Divide the change by the starting value."
+  },
+  "b": {
+   "d": 3,
+   "q": "The exchange rate is A$1 = 0.65 euros. Sam changes A$200 into euros. How many euros does he get?",
+   "opts": [
+    "130 euros",
+    "307.69 euros",
+    "200.65 euros",
+    "65 euros"
+   ],
+   "why": "Each Australian dollar buys 0.65 euros, so 200 × 0.65 = 130 euros. Dividing 200 by 0.65 gives 307.69, which uses the rate the wrong way round.",
+   "clue": "Multiply the dollars by the euros bought per dollar."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "25%",
+   "also_right": []
+  },
+  "b": {
+   "best": "130 euros",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The exchange rate definition, 'how much of one currency buys another', is vague. It could be read as the reverse of the example's direction. Clearer: 'how much of one currency you get for one unit of another'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their explanations are correct: 25% and 130 euros. The only issue is a slightly vague exchange-rate definition on the card, which the example clarifies."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The exchange rate definition, 'how much of one currency buys another', is vague. It could be read as the reverse of the example's direction. Clearer: 'how much of one currency you get for one unit of another'."
+ ],
+ "proposal": {
+  "title": "Reading financial trends",
+  "card": [
+   [
+    "Line graphs",
+    "Financial data such as share prices and exchange rates is often shown on a line graph. Time is on the horizontal axis and the value is on the vertical axis."
+   ],
+   [
+    "Trend",
+    "A line that rises over time shows an increase. A line that falls shows a decrease. The size of the change is the later value minus the earlier value."
+   ],
+   [
+    "Percentage change",
+    "Percentage change = change ÷ starting value × 100. Example: a share price goes from $20 to $25. The change is 5, and 5 ÷ 20 × 100 = 25%."
+   ],
+   [
+    "Exchange rate",
+    "An exchange rate says how much of one currency you get for one unit of another. If A$1 = US$0.60, you get US$0.60 for each Australian dollar, so A$100 buys 100 × 0.60 = US$60."
+   ]
+  ],
+  "remember": "Read the change from the graph, then divide by the starting value for a percentage.",
+  "a": {
+   "q": "A share price rises from $40 to $50. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "10%",
+    "50%"
+   ],
+   "why": "The change is 50 − 40 = 10. Then 10 ÷ 40 × 100 = 25%. 20% is wrong because it divides by the new price instead of the starting price.",
+   "clue": "Divide the change by the starting value."
+  },
+  "b": {
+   "d": 3,
+   "q": "The exchange rate is A$1 = 0.65 euros. Sam changes A$200 into euros. How many euros does he get?",
+   "opts": [
+    "130 euros",
+    "307.69 euros",
+    "200.65 euros",
+    "65 euros"
+   ],
+   "why": "Sam gets 0.65 euros for each Australian dollar, so 200 × 0.65 = 130 euros. Dividing 200 by 0.65 gives 307.69, which uses the rate the wrong way round.",
+   "clue": "Multiply the dollars by the euros you get per dollar."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The exchange rate definition, 'how much of one currency buys another', is vague. It could be read as the reverse of the example's direction. Clearer: 'how much of one currency you get for one unit of another'."
+   }
+  ],
+  "flags": [
+   "Card, wording: The exchange rate definition, 'how much of one currency buys another', is vague. It could be read as the reverse of the example's direction. Clearer: 'how much of one currency you get for one unit of another'."
+  ]
+ },
+ "final": {
+  "title": "Reading financial trends",
+  "card": [
+   [
+    "Line graphs",
+    "Financial data such as share prices and exchange rates is often shown on a line graph. Time is on the horizontal axis and the value is on the vertical axis."
+   ],
+   [
+    "Trend",
+    "A line that rises over time shows an increase. A line that falls shows a decrease. The size of the change is the later value minus the earlier value."
+   ],
+   [
+    "Percentage change",
+    "Percentage change = change ÷ starting value × 100. Example: a share price goes from $20 to $25. The change is 5, and 5 ÷ 20 × 100 = 25%."
+   ],
+   [
+    "Exchange rate",
+    "An exchange rate says how much of one currency you get for one unit of another. If A$1 = US$0.60, you get US$0.60 for each Australian dollar, so A$100 buys 100 × 0.60 = US$60."
+   ]
+  ],
+  "remember": "Read the change from the graph, then divide by the starting value for a percentage.",
+  "a": {
+   "q": "A share price rises from $40 to $50. What is the percentage increase?",
+   "opts": [
+    "25%",
+    "20%",
+    "10%",
+    "50%"
+   ],
+   "why": "The change is 50 − 40 = 10. Then 10 ÷ 40 × 100 = 25%. 20% is wrong because it divides by the new price instead of the starting price.",
+   "clue": "Divide the change by the starting value."
+  },
+  "b": {
+   "d": 3,
+   "q": "The exchange rate is A$1 = 0.65 euros. Sam changes A$200 into euros. How many euros does he get?",
+   "opts": [
+    "130 euros",
+    "307.69 euros",
+    "200.65 euros",
+    "65 euros"
+   ],
+   "why": "Sam gets 0.65 euros for each Australian dollar, so 200 × 0.65 = 130 euros. Dividing 200 by 0.65 gives 307.69, which uses the rate the wrong way round.",
+   "clue": "Multiply the dollars by the euros you get per dollar."
+  }
+ },
+ "cleared_by": "auto"
+}

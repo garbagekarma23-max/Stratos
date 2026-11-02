@@ -1,0 +1,227 @@
+{
+ "id": "acc-strategies-improve-performance",
+ "title": "Strategies to improve performance",
+ "brief": "89d9499a51ee",
+ "shortlist": [
+  [
+   "bus-profitability-management",
+   0.24
+  ],
+  [
+   "acc-inventory",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:17:35Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00526,
+  "check": 0.01683,
+  "fix": 0.02941,
+  "recheck": 0.01395
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, bus-profitability-management, covers only cost control and revenue lifting for profit, while the new point also covers inventory, debt collection, selling idle assets and cash, so it is broader and no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Strategies to improve performance",
+  "card": [
+   "A business can lift profit by raising prices or cutting costs. Higher prices raise revenue per sale, but customers may buy less. Lower costs raise profit if quality and sales hold up.",
+   "Managing inventory means holding enough stock to meet sales and no more. Less stock ties up less cash and cuts storage costs and the risk of stock going out of date.",
+   "Collecting debts faster means getting cash from accounts receivable sooner, for example by asking customers to pay within a shorter time. This lifts cash. It does not change profit.",
+   "Selling idle assets, such as equipment the business no longer uses, brings in cash and can cut running costs. Each strategy has a trade-off, so a business weighs the gain against the risk."
+  ],
+  "remember": "Some strategies lift profit, some lift cash, and each has a trade-off to weigh.",
+  "a": {
+   "q": "A business asks its credit customers to pay in 20 days instead of 45. What is the most direct effect?",
+   "opts": [
+    "Cash comes in sooner from accounts receivable",
+    "Sales revenue rises because customers buy more",
+    "Cost of sales falls because less stock is held",
+    "Profit rises because expenses are lower"
+   ],
+   "why": "A shorter payment time means the business receives cash from customers sooner, so cash improves. The sale was already counted as revenue, so profit does not change by this step alone. That is why the profit option is wrong.",
+   "clue": "Think about when the money arrives, not how much is earned."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's hardware store in Ballarat has a lot of cash tied up in slow-selling stock. Which strategy best frees up cash without changing the prices customers pay?",
+   "opts": [
+    "Order less of the slow-selling stock",
+    "Raise prices on all stock by 10%",
+    "Cut staff hours on busy days",
+    "Allow customers longer to pay accounts"
+   ],
+   "why": "Ordering less slow-selling stock means less cash is tied up in inventory, and prices stay the same. Raising prices would change what customers pay and may cut sales. Allowing longer payment would slow cash coming in, which works against the aim.",
+   "clue": "Which option deals with the stock itself?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cash comes in sooner from accounts receivable",
+   "also_right": []
+  },
+  "b": {
+   "best": "Order less of the slow-selling stock",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'It does not change profit' is too absolute. Collecting debts faster can change profit: a discount offered for early payment is an expense, and faster collection can cut bad debts. Better to say it does not by itself change profit, as the why for (a) does."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option repeats the stem's phrase 'slow-selling stock', and the clue ('Which option deals with the stock itself?') points straight at it. A student can pick it by matching words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have clear, correct answers. The card says flatly that faster debt collection does not change profit, which ignores early-payment discounts and bad debts. In question b, the right option echoes the stem and the clue points straight to it."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: 'It does not change profit' is too absolute. Collecting debts faster can change profit: a discount offered for early payment is an expense, and faster collection can cut bad debts. Better to say it does not by itself change profit, as the why for (a) does.",
+  "Question b, wording: The right option repeats the stem's phrase 'slow-selling stock', and the clue ('Which option deals with the stock itself?') points straight at it. A student can pick it by matching words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Strategies to improve performance",
+  "card": [
+   "A business can lift profit by raising prices or cutting costs. Higher prices raise revenue per sale, but customers may buy less. Lower costs raise profit if quality and sales hold up.",
+   "Managing inventory means holding enough stock to meet sales and no more. Less stock ties up less cash and cuts storage costs and the risk of stock going out of date.",
+   "Collecting debts faster means getting cash from accounts receivable sooner, for example by asking customers to pay within a shorter time. This lifts cash. By itself it does not change profit, though a discount for early payment or fewer bad debts can.",
+   "Selling idle assets, such as equipment the business no longer uses, brings in cash and can cut running costs. Each strategy has a trade-off, so a business weighs the gain against the risk."
+  ],
+  "remember": "Some strategies lift profit, some lift cash, and each has a trade-off to weigh.",
+  "a": {
+   "q": "A business asks its credit customers to pay in 20 days instead of 45. What is the most direct effect?",
+   "opts": [
+    "Cash comes in sooner from accounts receivable",
+    "Sales revenue rises because customers buy more",
+    "Cost of sales falls because less stock is held",
+    "Profit rises because revenue is earned sooner"
+   ],
+   "why": "A shorter payment time means the business receives cash from customers sooner, so cash improves. The sale was already counted as revenue when it was made, so this step alone does not raise profit. That is why the profit option is wrong.",
+   "clue": "Think about when the money arrives, not how much is earned."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's hardware store in Ballarat has a lot of cash tied up in items that sit on its shelves for months. Which strategy best frees that cash without changing prices?",
+   "opts": [
+    "Reorder smaller amounts of those lines",
+    "Raise prices on all items by 10%",
+    "Cut staff hours on the busiest days",
+    "Give customers longer to pay accounts"
+   ],
+   "why": "Reordering smaller amounts means less cash is spent on inventory that sits unsold, and prices stay the same. Raising prices changes what customers pay and may cut sales. Giving customers longer to pay slows cash coming in, which works against the aim.",
+   "clue": "How did the cash get tied up in the first place?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Cash comes in sooner from accounts receivable",
+    "also_right": []
+   },
+   "b": {
+    "best": "Reorder smaller amounts of those lines",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'It does not change profit' is too absolute. Collecting debts faster can change profit: a discount offered for early payment is an expense, and faster collection can cut bad debts. Better to say it does not by itself change profit, as the why for (a) does."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option repeats the stem's phrase 'slow-selling stock', and the clue ('Which option deals with the stock itself?') points straight at it. A student can pick it by matching words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Card, fact: 'It does not change profit' is too absolute. Collecting debts faster can change profit: a discount offered for early payment is an expense, and faster collection can cut bad debts. Better to say it does not by itself change profit, as the why for (a) does.",
+   "Question b, wording: The right option repeats the stem's phrase 'slow-selling stock', and the clue ('Which option deals with the stock itself?') points straight at it. A student can pick it by matching words without knowing the idea."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Strategies to improve performance",
+  "card": [
+   "A business can lift profit by raising prices or cutting costs. Higher prices raise revenue per sale, but customers may buy less. Lower costs raise profit if quality and sales hold up.",
+   "Managing inventory means holding enough stock to meet sales and no more. Less stock ties up less cash and cuts storage costs and the risk of stock going out of date.",
+   "Collecting debts faster means getting cash from accounts receivable sooner, for example by asking customers to pay within a shorter time. This lifts cash. By itself it does not change profit, though a discount for early payment or fewer bad debts can.",
+   "Selling idle assets, such as equipment the business no longer uses, brings in cash and can cut running costs. Each strategy has a trade-off, so a business weighs the gain against the risk."
+  ],
+  "remember": "Some strategies lift profit, some lift cash, and each has a trade-off to weigh.",
+  "a": {
+   "q": "A business asks its credit customers to pay in 20 days instead of 45. What is the most direct effect?",
+   "opts": [
+    "Cash comes in sooner from accounts receivable",
+    "Sales revenue rises because customers buy more",
+    "Cost of sales falls because less stock is held",
+    "Profit rises because revenue is earned sooner"
+   ],
+   "why": "A shorter payment time means the business receives cash from customers sooner, so cash improves. The sale was already counted as revenue when it was made, so this step alone does not raise profit. That is why the profit option is wrong.",
+   "clue": "Think about when the money arrives, not how much is earned."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's hardware store in Ballarat has a lot of cash tied up in items that sit on its shelves for months. Which strategy best frees that cash without changing prices?",
+   "opts": [
+    "Reorder smaller amounts of those lines",
+    "Raise prices on all items by 10%",
+    "Cut staff hours on the busiest days",
+    "Give customers longer to pay accounts"
+   ],
+   "why": "Reordering smaller amounts means less cash is spent on inventory that sits unsold, and prices stay the same. Raising prices changes what customers pay and may cut sales. Giving customers longer to pay slows cash coming in, which works against the aim.",
+   "clue": "How did the cash get tied up in the first place?"
+  }
+ },
+ "cleared_by": "owner"
+}

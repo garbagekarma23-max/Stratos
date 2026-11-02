@@ -1,0 +1,223 @@
+{
+ "id": "phys-work-function-stopping-voltage",
+ "title": "Work function and stopping voltage",
+ "brief": "92426d59c96f",
+ "shortlist": [
+  [
+   "phys-transformers",
+   0.298
+  ],
+  [
+   "phys-temperature-internal-energy",
+   0.22
+  ],
+  [
+   "phys-photoelectric-effect",
+   0.218
+  ],
+  [
+   "phys-work-energy",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: flagged",
+  "2026-11-01T15:14:49Z fix: suggested",
+  "2026-11-02T04:35:43Z autoreview: cleared with the fix (b wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.0062,
+  "check": 0.01481,
+  "fix": 0.02849
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, the photoelectric effect, covers threshold frequency and photons but never defines the work function or the stopping voltage, so the new point teaches a narrower idea that needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Work function and stopping voltage",
+  "card": [
+   [
+    "Work function",
+    "the least energy needed to free an electron from a metal's surface. It is written as φ and depends on the metal."
+   ],
+   [
+    "Maximum kinetic energy",
+    "an electron freed with the least energy loss leaves with the most kinetic energy. This is Kmax = hf - φ."
+   ],
+   [
+    "Stopping voltage",
+    "the voltage that just stops the fastest electrons from reaching the other plate. Kmax = eV₀, where e is the charge of an electron."
+   ],
+   "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
+  ],
+  "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
+  "a": {
+   "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
+   "opts": [
+    "3.0 V",
+    "2.0 V",
+    "5.0 V",
+    "7.0 V"
+   ],
+   "why": "Kmax = 5.0 eV - 2.0 eV = 3.0 eV, so the stopping voltage is 3.0 V. A student who gives 5.0 V forgets that some of the photon's energy was used to free the electron.",
+   "clue": "Take the work function away from the photon energy first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Light of one frequency ejects electrons from metal X, which has a stopping voltage of 1.5 V. The same light is used on metal Y, which has a larger work function. What is the stopping voltage for Y?",
+   "opts": [
+    "Less than 1.5 V",
+    "More than 1.5 V",
+    "Exactly 1.5 V",
+    "Zero, because no electrons are ejected"
+   ],
+   "why": "The photon energy is the same, so a larger work function leaves less energy for motion. Kmax is lower, so V₀ is lower. We cannot say that no electrons are ejected, because Y may still have a work function below the photon energy.",
+   "clue": "Same photon energy: if more is spent freeing the electron, how much is left?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "3.0 V",
+   "also_right": []
+  },
+  "b": {
+   "best": "Less than 1.5 V",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question does not say whether Y's work function is still below the photon energy. If it is not, no electrons are ejected, so a careful student may hesitate over the 'Zero' option. 'Less than 1.5 V' still covers both cases, but adding 'electrons are still ejected from Y' would remove the doubt."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The physics and both answers are correct. Question b would be clearer if it stated that Y still emits electrons, so the 'Zero' option is plainly wrong."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question does not say whether Y's work function is still below the photon energy. If it is not, no electrons are ejected, so a careful student may hesitate over the 'Zero' option. 'Less than 1.5 V' still covers both cases, but adding 'electrons are still ejected from Y' would remove the doubt."
+ ],
+ "proposal": {
+  "title": "Work function and stopping voltage",
+  "card": [
+   [
+    "Work function",
+    "the least energy needed to free an electron from a metal's surface. It is written as φ and depends on the metal."
+   ],
+   [
+    "Maximum kinetic energy",
+    "an electron freed with the least energy loss leaves with the most kinetic energy. This is Kmax = hf - φ."
+   ],
+   [
+    "Stopping voltage",
+    "the voltage that just stops the fastest electrons from reaching the other plate. Kmax = eV₀, where e is the size of an electron's charge."
+   ],
+   "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
+  ],
+  "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
+  "a": {
+   "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
+   "opts": [
+    "3.0 V",
+    "2.0 V",
+    "5.0 V",
+    "7.0 V"
+   ],
+   "why": "Kmax = 5.0 eV - 2.0 eV = 3.0 eV, so the stopping voltage is 3.0 V. A student who gives 5.0 V forgets that some of the photon's energy was used to free the electron.",
+   "clue": "Take the work function away from the photon energy first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Light of one frequency ejects electrons from metal X, which has a stopping voltage of 1.5 V. The same light is used on metal Y, which has a larger work function. Electrons are still ejected from Y. What is the stopping voltage for Y?",
+   "opts": [
+    "Less than 1.5 V",
+    "More than 1.5 V",
+    "Exactly 1.5 V",
+    "Zero, as Y's work function is larger"
+   ],
+   "why": "The photon energy is the same, so a larger work function leaves less energy for motion. Kmax is lower, so V₀ is lower. It is not zero: electrons are still ejected from Y, so the photon energy is above Y's work function and some energy is left over.",
+   "clue": "Same photon energy: if more is spent freeing the electron, how much is left?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:43Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question does not say whether Y's work function is still below the photon energy. If it is not, no electrons are ejected, so a careful student may hesitate over the 'Zero' option. 'Less than 1.5 V' still covers both cases, but adding 'electrons are still ejected from Y' would remove the doubt."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question does not say whether Y's work function is still below the photon energy. If it is not, no electrons are ejected, so a careful student may hesitate over the 'Zero' option. 'Less than 1.5 V' still covers both cases, but adding 'electrons are still ejected from Y' would remove the doubt."
+  ]
+ },
+ "final": {
+  "title": "Work function and stopping voltage",
+  "card": [
+   [
+    "Work function",
+    "the least energy needed to free an electron from a metal's surface. It is written as φ and depends on the metal."
+   ],
+   [
+    "Maximum kinetic energy",
+    "an electron freed with the least energy loss leaves with the most kinetic energy. This is Kmax = hf - φ."
+   ],
+   [
+    "Stopping voltage",
+    "the voltage that just stops the fastest electrons from reaching the other plate. Kmax = eV₀, where e is the size of an electron's charge."
+   ],
+   "Measuring V₀ gives Kmax in electron volts. If V₀ is 2.0 V, then Kmax is 2.0 eV."
+  ],
+  "remember": "Kmax = hf - φ, and the stopping voltage V₀ measures Kmax through Kmax = eV₀.",
+  "a": {
+   "q": "A metal has a work function of 2.0 eV. A photon of energy 5.0 eV frees an electron with the most kinetic energy possible. What stopping voltage is needed?",
+   "opts": [
+    "3.0 V",
+    "2.0 V",
+    "5.0 V",
+    "7.0 V"
+   ],
+   "why": "Kmax = 5.0 eV - 2.0 eV = 3.0 eV, so the stopping voltage is 3.0 V. A student who gives 5.0 V forgets that some of the photon's energy was used to free the electron.",
+   "clue": "Take the work function away from the photon energy first."
+  },
+  "b": {
+   "d": 3,
+   "q": "Light of one frequency ejects electrons from metal X, which has a stopping voltage of 1.5 V. The same light is used on metal Y, which has a larger work function. Electrons are still ejected from Y. What is the stopping voltage for Y?",
+   "opts": [
+    "Less than 1.5 V",
+    "More than 1.5 V",
+    "Exactly 1.5 V",
+    "Zero, as Y's work function is larger"
+   ],
+   "why": "The photon energy is the same, so a larger work function leaves less energy for motion. Kmax is lower, so V₀ is lower. It is not zero: electrons are still ejected from Y, so the photon energy is above Y's work function and some energy is left over.",
+   "clue": "Same photon energy: if more is spent freeing the electron, how much is left?"
+  }
+ },
+ "cleared_by": "auto"
+}

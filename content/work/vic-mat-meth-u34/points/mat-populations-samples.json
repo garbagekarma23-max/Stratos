@@ -1,0 +1,230 @@
+{
+ "id": "mat-populations-samples",
+ "title": "Populations and samples",
+ "brief": "493d24ceca0c",
+ "shortlist": [
+  [
+   "mat-sample-means-vary",
+   0.635
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.536
+  ],
+  [
+   "mat-sampling-methods",
+   0.442
+  ],
+  [
+   "psy-sampling",
+   0.267
+  ],
+  [
+   "mat-sample-spaces-probability",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (card wording, remember wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00732,
+  "check": 0.01519,
+  "fix": 0.0288
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Sample means vary, only shows that sample means differ from sample to sample; it does not teach that a sample statistic estimates a population parameter, and it does not cover sample proportions as the brief requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Populations and samples",
+  "card": [
+   [
+    "Population",
+    "the whole group we want to know about, such as every Year 12 student in Victoria. A number that describes the population is a parameter, such as the population proportion p."
+   ],
+   [
+    "Sample",
+    "a smaller group taken from the population. A number worked out from the sample is a statistic, such as the sample proportion p̂ = number with the feature ÷ sample size."
+   ],
+   "We use a statistic to estimate a parameter. Example: in a random sample of 50 students, 30 own a bike. Then p̂ = 30/50 = 0.6.",
+   "A different random sample would give a different statistic. The parameter p is fixed, but p̂ varies from sample to sample."
+  ],
+  "remember": "A sample statistic estimates a population parameter, and the statistic changes with each sample.",
+  "a": {
+   "q": "In a random sample of 200 Geelong voters, 90 back a new bike path. What is the value of p̂ and what does it estimate?",
+   "opts": [
+    "0.45, the proportion of all Geelong voters who back it",
+    "0.45, the proportion of the 200 who back it",
+    "0.9, the proportion of all Geelong voters who back it",
+    "0.55, the proportion of all Geelong voters who back it"
+   ],
+   "why": "p̂ = 90/200 = 0.45. This is a statistic from the sample, and it estimates the population parameter p, the proportion of all Geelong voters. The sample already has exactly 0.45, so it is not what is being estimated.",
+   "clue": "Divide the count by the sample size, then ask which group is being estimated."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya takes a random sample of 40 students from a school of 900. She finds p̂ = 0.35. A friend takes another random sample of 40 and finds p̂ = 0.30. What is the best explanation?",
+   "opts": [
+    "Sample statistics vary from sample to sample",
+    "The population proportion p has changed",
+    "One of the two samples must have been counted wrongly",
+    "The school should have a different population size"
+   ],
+   "why": "Different random samples usually give different values of p̂, even when the population proportion p stays the same. The parameter p is fixed, so it has not changed. Nothing suggests a counting error.",
+   "clue": "Is it the sample or the population that changes between draws?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "0.45, the proportion of all Geelong voters who back it",
+   "also_right": []
+  },
+  "b": {
+   "best": "Sample statistics vary from sample to sample",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"A different random sample would give a different statistic\" overstates the idea. A different sample can give the same p̂ by chance. It should say \"usually\" or \"can\", as Why (b) does."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"The statistic changes with each sample\" implies it always changes. It can vary, but it may come out the same. \"can change\" or \"varies\" would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct and their answers are clear. The card and the remember line overstate variation by saying a new sample would or does give a different statistic, when it usually or can."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"A different random sample would give a different statistic\" overstates the idea. A different sample can give the same p̂ by chance. It should say \"usually\" or \"can\", as Why (b) does.",
+  "Remember, wording: \"The statistic changes with each sample\" implies it always changes. It can vary, but it may come out the same. \"can change\" or \"varies\" would be accurate."
+ ],
+ "proposal": {
+  "title": "Populations and samples",
+  "card": [
+   [
+    "Population",
+    "the whole group we want to know about, such as every Year 12 student in Victoria. A number that describes the population is a parameter, such as the population proportion p."
+   ],
+   [
+    "Sample",
+    "a smaller group taken from the population. A number worked out from the sample is a statistic, such as the sample proportion p̂ = number with the feature ÷ sample size."
+   ],
+   "We use a statistic to estimate a parameter. Example: in a random sample of 50 students, 30 own a bike. Then p̂ = 30/50 = 0.6.",
+   "A different random sample can give a different statistic. The parameter p is fixed, but p̂ varies from sample to sample."
+  ],
+  "remember": "A sample statistic estimates a population parameter. The parameter is fixed, but the statistic varies between samples.",
+  "a": {
+   "q": "In a random sample of 200 Geelong voters, 90 back a new bike path. What is the value of p̂ and what does it estimate?",
+   "opts": [
+    "0.45, the proportion of all Geelong voters who back it",
+    "0.45, the proportion of the 200 who back it",
+    "0.9, the proportion of all Geelong voters who back it",
+    "0.55, the proportion of all Geelong voters who back it"
+   ],
+   "why": "p̂ = 90/200 = 0.45. This is a statistic from the sample, and it estimates the population parameter p, the proportion of all Geelong voters. The proportion in the sample is already known to be exactly 0.45, so it is not what is being estimated.",
+   "clue": "Divide the count by the sample size, then ask which group is being estimated."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya takes a random sample of 40 students from a school of 900. She finds p̂ = 0.35. A friend takes another random sample of 40 and finds p̂ = 0.30. What is the best explanation?",
+   "opts": [
+    "Sample statistics vary from sample to sample",
+    "The population proportion p has changed",
+    "One of the two samples must have been counted wrongly",
+    "The samples came from two different populations"
+   ],
+   "why": "Different random samples usually give different values of p̂, even when the population proportion p stays the same. The parameter p is fixed, so it has not changed, and both samples come from the same school. Nothing suggests a counting error.",
+   "clue": "Is it the sample or the population that changes between draws?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"A different random sample would give a different statistic\" overstates the idea. A different sample can give the same p̂ by chance. It should say \"usually\" or \"can\", as Why (b) does."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "\"The statistic changes with each sample\" implies it always changes. It can vary, but it may come out the same. \"can change\" or \"varies\" would be accurate."
+   }
+  ],
+  "flags": [
+   "Card, wording: \"A different random sample would give a different statistic\" overstates the idea. A different sample can give the same p̂ by chance. It should say \"usually\" or \"can\", as Why (b) does.",
+   "Remember, wording: \"The statistic changes with each sample\" implies it always changes. It can vary, but it may come out the same. \"can change\" or \"varies\" would be accurate."
+  ]
+ },
+ "final": {
+  "title": "Populations and samples",
+  "card": [
+   [
+    "Population",
+    "the whole group we want to know about, such as every Year 12 student in Victoria. A number that describes the population is a parameter, such as the population proportion p."
+   ],
+   [
+    "Sample",
+    "a smaller group taken from the population. A number worked out from the sample is a statistic, such as the sample proportion p̂ = number with the feature ÷ sample size."
+   ],
+   "We use a statistic to estimate a parameter. Example: in a random sample of 50 students, 30 own a bike. Then p̂ = 30/50 = 0.6.",
+   "A different random sample can give a different statistic. The parameter p is fixed, but p̂ varies from sample to sample."
+  ],
+  "remember": "A sample statistic estimates a population parameter. The parameter is fixed, but the statistic varies between samples.",
+  "a": {
+   "q": "In a random sample of 200 Geelong voters, 90 back a new bike path. What is the value of p̂ and what does it estimate?",
+   "opts": [
+    "0.45, the proportion of all Geelong voters who back it",
+    "0.45, the proportion of the 200 who back it",
+    "0.9, the proportion of all Geelong voters who back it",
+    "0.55, the proportion of all Geelong voters who back it"
+   ],
+   "why": "p̂ = 90/200 = 0.45. This is a statistic from the sample, and it estimates the population parameter p, the proportion of all Geelong voters. The proportion in the sample is already known to be exactly 0.45, so it is not what is being estimated.",
+   "clue": "Divide the count by the sample size, then ask which group is being estimated."
+  },
+  "b": {
+   "d": 2,
+   "q": "Priya takes a random sample of 40 students from a school of 900. She finds p̂ = 0.35. A friend takes another random sample of 40 and finds p̂ = 0.30. What is the best explanation?",
+   "opts": [
+    "Sample statistics vary from sample to sample",
+    "The population proportion p has changed",
+    "One of the two samples must have been counted wrongly",
+    "The samples came from two different populations"
+   ],
+   "why": "Different random samples usually give different values of p̂, even when the population proportion p stays the same. The parameter p is fixed, so it has not changed, and both samples come from the same school. Nothing suggests a counting error.",
+   "clue": "Is it the sample or the population that changes between draws?"
+  }
+ },
+ "cleared_by": "auto"
+}

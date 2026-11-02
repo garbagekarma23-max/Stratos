@@ -1,0 +1,311 @@
+{
+ "id": "mat-activity-networks-2",
+ "title": "Activity networks",
+ "brief": "bccf45a4b02d",
+ "shortlist": [
+  [
+   "mat-activity-networks",
+   0.609
+  ],
+  [
+   "mat-flow-networks",
+   0.279
+  ],
+  [
+   "mat-network-terms",
+   0.231
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.02113,
+  "check": 0.03424,
+  "fix": 0.03157,
+  "recheck": 0.01491
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point covers reading an activity network but not turning a precedence table into one or using dummy activities, which is a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Without a dummy, where do Q and R begin and end?' points straight at the wording of the right option (start and end nodes), so a student could pick it without understanding why the dummy is needed.",
+ "rejected": {
+  "title": "Activity networks",
+  "card": [
+   "In an activity network, each activity is an arrow labelled with its letter and time, and each node is an event. A precedence table lists the activities that must finish right before each one can start.",
+   "A dummy activity is a dotted arrow with zero time. It shows that one activity must wait for another, without adding any time.",
+   [
+    "Some, not all",
+    "use a dummy when an activity needs only some of another's predecessors. If C needs A, and D needs A and B, a dummy runs from the end of A to the start of D."
+   ],
+   [
+    "Same two nodes",
+    "two activities must not both start and end at the same pair of nodes, or they cannot be told apart. End one at a new node, then add a dummy from there."
+   ]
+  ],
+  "remember": "A dummy adds a link without adding time: use it for a partial overlap of predecessors, or to keep two activities off the same pair of nodes.",
+  "a": {
+   "q": "In a precedence table, Q and R both need only P, and S needs both Q and R. Why is a dummy activity needed?",
+   "opts": [
+    "Q and R would share the same start and end nodes",
+    "S could start before both Q and R are finished",
+    "R would have to wait until Q is finished",
+    "The project would take longer to complete"
+   ],
+   "why": "Q and R both start at the end of P and both end at the start of S, so without a dummy they would run between the same pair of nodes. S already waits for both, because both arrows end at its start node, so S starting early is not the problem.",
+   "clue": "Without a dummy, where do Q and R begin and end?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Wen builds a deck. A clear site and B order timber have no predecessors. C dig holes needs A. D lay frame needs A and B. E fix boards needs C and D. How many dummy activities are needed?",
+   "opts": [
+    "One",
+    "None",
+    "Two",
+    "Three"
+   ],
+   "why": "D needs A and B but C needs only A, so one dummy runs from the end of A to the start of D. C and D both end at the start of E, but they start at different nodes, so they do not share a pair of nodes and no second dummy is needed.",
+   "clue": "Check both reasons for a dummy, one at a time."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The clue 'Without a dummy, where do Q and R begin and end?' points straight at the wording of the right option (start and end nodes), so a student could pick it without understanding why the dummy is needed."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Activity networks",
+     "card": [
+      "In an activity network, each activity is an arrow and each node is an event. Each arrow is labelled with its activity and its time.",
+      "A precedence table lists the activities that must be finished before each one can start. Read the table and draw the arrows in that order.",
+      "A dummy activity is a dotted arrow with zero time. It is used when an activity needs some, but not all, of the activities that another activity needs.",
+      "Example: A and B have no predecessors, C needs A, and D needs A and B. Draw a dummy from the end of A to the start of D, so that D waits for both A and B but C waits only for A."
+     ],
+     "remember": "The table says what must come first. A dummy adds a link without adding time.",
+     "a": {
+      "q": "P and Q have no predecessors, R needs P, and S needs P and Q. Where is a dummy activity needed?",
+      "opts": [
+       "From the end of P to the start of S",
+       "From the end of Q to the start of R",
+       "From the end of R to the start of S",
+       "From the end of S to the start of R"
+      ],
+      "why": "S needs P and Q, but R needs only P. A dummy from the end of P to the start of S links them. A dummy from Q to R would wrongly make R wait for Q.",
+      "clue": "Which activity needs more than its neighbour does?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Wen builds a deck. A clear site and B order timber have no predecessors. C dig holes needs A. D lay frame needs A and B. E fix boards needs C and D. How many dummy activities are needed?",
+      "opts": [
+       "One",
+       "None",
+       "Two",
+       "Three"
+      ],
+      "why": "D needs A and B but C needs only A, so one dummy is needed from A to D. E needs both C and D, so C and D can end at the same event. No second dummy is needed.",
+      "clue": "Check each activity: does it need only some of another's predecessors?"
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "From the end of P to the start of S",
+      "also_right": []
+     },
+     "b": {
+      "best": "One",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Question a is the card's worked example with the letters changed (A, B, C, D become P, Q, R, S), so students can answer by matching the pattern rather than understanding when a dummy is needed."
+      },
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says a dummy 'is used when' an activity needs some but not all of another's predecessors, as if that were its only use. In VCE networks, dummies are also used so that two activities do not share the same start and end nodes."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both intended answers are correct. Question a copies the card's example almost exactly, and the card presents only one of the two uses of a dummy activity."
+    },
+    "flags": [
+     "Question a, level: Question a is the card's worked example with the letters changed (A, B, C, D become P, Q, R, S), so students can answer by matching the pattern rather than understanding when a dummy is needed.",
+     "Card, fact: The card says a dummy 'is used when' an activity needs some but not all of another's predecessors, as if that were its only use. In VCE networks, dummies are also used so that two activities do not share the same start and end nodes."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Activity networks",
+     "card": [
+      "In an activity network, each activity is an arrow labelled with its letter and time, and each node is an event. A precedence table lists the activities that must finish right before each one can start.",
+      "A dummy activity is a dotted arrow with zero time. It shows that one activity must wait for another, without adding any time.",
+      [
+       "Some, not all",
+       "use a dummy when an activity needs only some of another's predecessors. If C needs A, and D needs A and B, a dummy runs from the end of A to the start of D."
+      ],
+      [
+       "Same two nodes",
+       "two activities must not both start and end at the same pair of nodes, or they cannot be told apart. End one at a new node, then add a dummy from there."
+      ]
+     ],
+     "remember": "A dummy adds a link without adding time: use it for a partial overlap of predecessors, or to keep two activities off the same pair of nodes.",
+     "a": {
+      "q": "In a precedence table, Q and R both need only P, and S needs both Q and R. Why is a dummy activity needed?",
+      "opts": [
+       "Q and R would share the same start and end nodes",
+       "S could start before both Q and R are finished",
+       "R would have to wait until Q is finished",
+       "The project would take longer to complete"
+      ],
+      "why": "Q and R both start at the end of P and both end at the start of S, so without a dummy they would run between the same pair of nodes. S already waits for both, because both arrows end at its start node, so S starting early is not the problem.",
+      "clue": "Without a dummy, where do Q and R begin and end?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Wen builds a deck. A clear site and B order timber have no predecessors. C dig holes needs A. D lay frame needs A and B. E fix boards needs C and D. How many dummy activities are needed?",
+      "opts": [
+       "One",
+       "None",
+       "Two",
+       "Three"
+      ],
+      "why": "D needs A and B but C needs only A, so one dummy runs from the end of A to the start of D. C and D both end at the start of E, but they start at different nodes, so they do not share a pair of nodes and no second dummy is needed.",
+      "clue": "Check both reasons for a dummy, one at a time."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Q and R would share the same start and end nodes",
+       "also_right": []
+      },
+      "b": {
+       "best": "One",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Without a dummy, where do Q and R begin and end?' points straight at the wording of the right option (start and end nodes), so a student could pick it without understanding why the dummy is needed."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card, remember line and both answers are correct: Q and R would share a pair of nodes, and the deck network needs one dummy. The only issue is that question a's clue nearly gives away the answer."
+     },
+     "flags": [
+      "Question a, other: The clue 'Without a dummy, where do Q and R begin and end?' points straight at the wording of the right option (start and end nodes), so a student could pick it without understanding why the dummy is needed."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Activity networks",
+  "card": [
+   "In an activity network, each activity is an arrow labelled with its letter and time, and each node is an event. A precedence table lists the activities that must finish right before each one can start.",
+   "A dummy activity is a dotted arrow with zero time. It shows that one activity must wait for another, without adding any time.",
+   [
+    "Some, not all",
+    "use a dummy when an activity needs only some of another's predecessors. If C needs A, and D needs A and B, a dummy runs from the end of A to the start of D."
+   ],
+   [
+    "Same two nodes",
+    "two activities must not both start and end at the same pair of nodes, or they cannot be told apart. End one at a new node, then add a dummy from there."
+   ]
+  ],
+  "remember": "A dummy adds a link without adding time: use it for a partial overlap of predecessors, or to keep two activities off the same pair of nodes.",
+  "a": {
+   "q": "In a precedence table, Q and R both need only P, and S needs both Q and R. Why is a dummy activity needed?",
+   "opts": [
+    "Q and R would share the same start and end nodes",
+    "S could start before both Q and R are finished",
+    "R would have to wait until Q is finished",
+    "The project would take longer to complete"
+   ],
+   "why": "Q and R both start at the end of P and both end at the start of S, so without a dummy they would run between the same pair of nodes. S already waits for both, because both arrows end at its start node, so S starting early is not the problem.",
+   "clue": "Draw Q and R as arrows and see whether the two arrows can be told apart."
+  },
+  "b": {
+   "d": 3,
+   "q": "Wen builds a deck. A clear site and B order timber have no predecessors. C dig holes needs A. D lay frame needs A and B. E fix boards needs C and D. How many dummy activities are needed?",
+   "opts": [
+    "One",
+    "None",
+    "Two",
+    "Three"
+   ],
+   "why": "D needs A and B but C needs only A, so one dummy runs from the end of A to the start of D. C and D both end at the start of E, but they start at different nodes, so they do not share a pair of nodes and no second dummy is needed.",
+   "clue": "Check both reasons for a dummy, one at a time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Q and R would share the same start and end nodes",
+   "also_right": []
+  },
+  "b": {
+   "best": "One",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('see whether the two arrows can be told apart') repeats the card's wording for the same-two-nodes rule ('or they cannot be told apart'). It points straight to the right option, so a student can match the words without understanding the idea."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The question uses the card's own worked example (C needs A, D needs A and B, with the same letters). A student can recall that one dummy runs from A to D rather than apply the idea, so the question is easier than it looks for Year 12."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and intended answers are correct: a needs a dummy because Q and R share a pair of nodes, and b needs one dummy. Question a's clue echoes the card's wording and gives the answer away, and question b copies the card's own example, so it tests recall more than application."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('see whether the two arrows can be told apart') repeats the card's wording for the same-two-nodes rule ('or they cannot be told apart'). It points straight to the right option, so a student can match the words without understanding the idea.",
+  "Question b, level: The question uses the card's own worked example (C needs A, D needs A and B, with the same letters). A student can recall that one dummy runs from A to D rather than apply the idea, so the question is easier than it looks for Year 12."
+ ]
+}

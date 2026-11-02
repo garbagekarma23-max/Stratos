@@ -1,0 +1,132 @@
+{
+ "id": "acc-closing-entries",
+ "title": "Closing entries",
+ "brief": "aa8d63e1ec51",
+ "shortlist": [
+  [
+   "eco-capital-financial-account",
+   0.267
+  ],
+  [
+   "acc-accounting",
+   0.259
+  ],
+  [
+   "bus-profit",
+   0.225
+  ],
+  [
+   "bus-profitability-ratios",
+   0.204
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: done",
+  "2026-11-01T15:05:23Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.0062,
+  "check": 0.00973
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches closing entries; they cover the capital account in economics, what accounting is, profit, and profitability ratios, so the closing of revenue and expense accounts to a Profit and Loss Summary needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Closing entries",
+  "card": [
+   "Revenue and expense accounts are temporary. At the end of the period they are closed, so each starts the next period at zero.",
+   "Each revenue account is debited and each expense account is credited, for its balance. The matching entries go to the Profit and Loss Summary account.",
+   "Credits in the Profit and Loss Summary (revenue) less debits (expenses) give the profit. A profit is transferred by debiting Profit and Loss Summary and crediting Capital.",
+   "Drawings, which are the owner's withdrawals, are closed by debiting Capital and crediting Drawings."
+  ],
+  "remember": "Revenue and expenses close to Profit and Loss Summary. Profit and drawings then go to Capital.",
+  "a": {
+   "q": "At the end of the year, Sales revenue has a credit balance of $80,000. What is the closing entry for this account?",
+   "opts": [
+    "Debit Sales, credit Profit and Loss Summary",
+    "Debit Profit and Loss Summary, credit Sales",
+    "Debit Sales, credit Capital",
+    "Debit Capital, credit Sales"
+   ],
+   "why": "A credit balance is cleared by a debit, so Sales is debited. The credit goes to Profit and Loss Summary. Revenue is not sent straight to Capital, because profit is worked out first.",
+   "clue": "To clear a credit balance, do the opposite."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Tiles has a profit of $30,000 in Profit and Loss Summary. Tom took $12,000 in drawings. How are these closed to Capital?",
+   "opts": [
+    "Credit Capital $30,000, debit Capital $12,000",
+    "Debit Capital $30,000, credit Capital $12,000",
+    "Credit Capital $30,000, credit Capital $12,000",
+    "Credit Capital $18,000, debit Drawings $12,000"
+   ],
+   "why": "Profit increases the owner's equity, so Capital is credited $30,000. Drawings reduce it, so Capital is debited $12,000. The net effect is a $18,000 rise, but each is still closed with its own entry.",
+   "clue": "Profit adds to Capital and drawings take away from it."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit Sales, credit Profit and Loss Summary",
+   "also_right": []
+  },
+  "b": {
+   "best": "Credit Capital $30,000, debit Capital $12,000",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Closing entries",
+  "card": [
+   "Revenue and expense accounts are temporary. At the end of the period they are closed, so each starts the next period at zero.",
+   "Each revenue account is debited and each expense account is credited, for its balance. The matching entries go to the Profit and Loss Summary account.",
+   "Credits in the Profit and Loss Summary (revenue) less debits (expenses) give the profit. A profit is transferred by debiting Profit and Loss Summary and crediting Capital.",
+   "Drawings, which are the owner's withdrawals, are closed by debiting Capital and crediting Drawings."
+  ],
+  "remember": "Revenue and expenses close to Profit and Loss Summary. Profit and drawings then go to Capital.",
+  "a": {
+   "q": "At the end of the year, Sales revenue has a credit balance of $80,000. What is the closing entry for this account?",
+   "opts": [
+    "Debit Sales, credit Profit and Loss Summary",
+    "Debit Profit and Loss Summary, credit Sales",
+    "Debit Sales, credit Capital",
+    "Debit Capital, credit Sales"
+   ],
+   "why": "A credit balance is cleared by a debit, so Sales is debited. The credit goes to Profit and Loss Summary. Revenue is not sent straight to Capital, because profit is worked out first.",
+   "clue": "To clear a credit balance, do the opposite."
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom's Tiles has a profit of $30,000 in Profit and Loss Summary. Tom took $12,000 in drawings. How are these closed to Capital?",
+   "opts": [
+    "Credit Capital $30,000, debit Capital $12,000",
+    "Debit Capital $30,000, credit Capital $12,000",
+    "Credit Capital $30,000, credit Capital $12,000",
+    "Credit Capital $18,000, debit Drawings $12,000"
+   ],
+   "why": "Profit increases the owner's equity, so Capital is credited $30,000. Drawings reduce it, so Capital is debited $12,000. The net effect is a $18,000 rise, but each is still closed with its own entry.",
+   "clue": "Profit adds to Capital and drawings take away from it."
+  }
+ },
+ "cleared_by": "checker"
+}

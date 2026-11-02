@@ -1,0 +1,235 @@
+{
+ "id": "eco-budget-outcomes-2",
+ "title": "Budget outcomes",
+ "brief": "b3fb47c2d0fd",
+ "shortlist": [
+  [
+   "eco-budget-outcomes",
+   0.548
+  ],
+  [
+   "bus-budgets",
+   0.383
+  ],
+  [
+   "eco-structural-cyclical-budget-parts",
+   0.246
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00463,
+  "check": 0.01424,
+  "fix": 0.03106,
+  "recheck": 0.01191
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, eco-budget-outcomes, covers deficit and surplus but adds the expansionary and contractionary reading of changes and omits the balanced budget and the underlying cash balance as a share of GDP, so it is broader than the new point and would need a new step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Budget outcomes",
+  "card": [
+   "A budget outcome compares what the government raises in revenue with what it spends in a year. There are three outcomes.",
+   [
+    "Balanced",
+    "revenue equals spending."
+   ],
+   [
+    "Deficit",
+    "spending is greater than revenue. Surplus: revenue is greater than spending."
+   ],
+   "The usual measure is the underlying cash balance, which is revenue minus spending in cash terms. It is often shown as a share of GDP, so the size of the budget can be compared with the size of the economy."
+  ],
+  "remember": "Revenue minus spending gives the outcome: below zero is a deficit, above zero is a surplus.",
+  "a": {
+   "q": "In one year, a government raises $480 billion in revenue and spends $500 billion. What is the budget outcome?",
+   "opts": [
+    "A deficit of $20 billion",
+    "A surplus of $20 billion",
+    "A balanced budget",
+    "A deficit of $980 billion"
+   ],
+   "why": "Spending is greater than revenue, so the outcome is a deficit. The gap is $500 billion minus $480 billion, which is $20 billion. A surplus would need revenue to be the larger figure.",
+   "clue": "Which is larger, revenue or spending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A budget shows an underlying cash balance of -1.5% of GDP. What does this tell us?",
+   "opts": [
+    "Spending was greater than revenue, equal to 1.5% of GDP",
+    "Revenue was greater than spending, equal to 1.5% of GDP",
+    "Revenue equalled spending, so the budget was balanced",
+    "Spending was 1.5% of GDP, and revenue was zero"
+   ],
+   "why": "A negative cash balance means revenue minus spending is below zero, so the budget is in deficit. The gap is measured as a share of GDP. The minus sign does not mean a surplus.",
+   "clue": "A negative result for revenue minus spending means what?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A deficit of $20 billion",
+   "also_right": []
+  },
+  "b": {
+   "best": "Spending was greater than revenue, equal to 1.5% of GDP",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"So the size of the budget can be compared with the size of the economy\" is loose. Showing the cash balance as a share of GDP compares the size of the deficit or surplus with the economy, not the size of the whole budget. A student could read it as total spending relative to GDP. Suggest \"so the size of the deficit or surplus can be compared with the size of the economy.\""
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and explanations are correct, each with one right answer. One minor wording fix on the card: the share of GDP compares the deficit or surplus with the economy, not the size of the whole budget."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: \"So the size of the budget can be compared with the size of the economy\" is loose. Showing the cash balance as a share of GDP compares the size of the deficit or surplus with the economy, not the size of the whole budget. A student could read it as total spending relative to GDP. Suggest \"so the size of the deficit or surplus can be compared with the size of the economy.\""
+ ],
+ "proposal": {
+  "title": "Budget outcomes",
+  "card": [
+   "A budget outcome compares what the government raises in revenue with what it spends in a year. There are three outcomes.",
+   [
+    "Balanced",
+    "revenue equals spending."
+   ],
+   [
+    "Deficit",
+    "spending is greater than revenue. Surplus: revenue is greater than spending."
+   ],
+   "The usual measure is the underlying cash balance, which is revenue minus spending in cash terms. It is often shown as a share of GDP, so the size of the deficit or surplus can be compared with the size of the economy."
+  ],
+  "remember": "Revenue minus spending gives the outcome: below zero is a deficit, above zero is a surplus.",
+  "a": {
+   "q": "In one year, a government raises $480 billion in revenue and spends $500 billion. What is the budget outcome?",
+   "opts": [
+    "A deficit of $20 billion",
+    "A surplus of $20 billion",
+    "A balanced budget",
+    "A deficit of $980 billion"
+   ],
+   "why": "Spending is greater than revenue, so the outcome is a deficit. The gap is $500 billion minus $480 billion, which is $20 billion. A surplus would need revenue to be the larger figure.",
+   "clue": "Which is larger, revenue or spending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A budget shows an underlying cash balance of -1.5% of GDP. What does this tell us?",
+   "opts": [
+    "Spending was greater than revenue by 1.5% of GDP",
+    "Revenue was greater than spending by 1.5% of GDP",
+    "Revenue equalled spending, so the budget was balanced",
+    "Spending was 1.5% of GDP, while revenue was zero"
+   ],
+   "why": "A negative cash balance means revenue minus spending is below zero, so the budget is in deficit. The gap is measured as a share of GDP. The minus sign does not mean a surplus.",
+   "clue": "A negative result for revenue minus spending means what?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A deficit of $20 billion",
+    "also_right": []
+   },
+   "b": {
+    "best": "Spending was greater than revenue by 1.5% of GDP",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "\"So the size of the budget can be compared with the size of the economy\" is loose. Showing the cash balance as a share of GDP compares the size of the deficit or surplus with the economy, not the size of the whole budget. A student could read it as total spending relative to GDP. Suggest \"so the size of the deficit or surplus can be compared with the size of the economy.\""
+   }
+  ],
+  "flags": [
+   "Card, wording: \"So the size of the budget can be compared with the size of the economy\" is loose. Showing the cash balance as a share of GDP compares the size of the deficit or surplus with the economy, not the size of the whole budget. A student could read it as total spending relative to GDP. Suggest \"so the size of the deficit or surplus can be compared with the size of the economy.\""
+  ]
+ },
+ "final": {
+  "title": "Budget outcomes",
+  "card": [
+   "A budget outcome compares what the government raises in revenue with what it spends in a year. There are three outcomes.",
+   [
+    "Balanced",
+    "revenue equals spending."
+   ],
+   [
+    "Deficit",
+    "spending is greater than revenue. Surplus: revenue is greater than spending."
+   ],
+   "The usual measure is the underlying cash balance, which is revenue minus spending in cash terms. It is often shown as a share of GDP, so the size of the deficit or surplus can be compared with the size of the economy."
+  ],
+  "remember": "Revenue minus spending gives the outcome: below zero is a deficit, above zero is a surplus.",
+  "a": {
+   "q": "In one year, a government raises $480 billion in revenue and spends $500 billion. What is the budget outcome?",
+   "opts": [
+    "A deficit of $20 billion",
+    "A surplus of $20 billion",
+    "A balanced budget",
+    "A deficit of $980 billion"
+   ],
+   "why": "Spending is greater than revenue, so the outcome is a deficit. The gap is $500 billion minus $480 billion, which is $20 billion. A surplus would need revenue to be the larger figure.",
+   "clue": "Which is larger, revenue or spending?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A budget shows an underlying cash balance of -1.5% of GDP. What does this tell us?",
+   "opts": [
+    "Spending was greater than revenue by 1.5% of GDP",
+    "Revenue was greater than spending by 1.5% of GDP",
+    "Revenue equalled spending, so the budget was balanced",
+    "Spending was 1.5% of GDP, while revenue was zero"
+   ],
+   "why": "A negative cash balance means revenue minus spending is below zero, so the budget is in deficit. The gap is measured as a share of GDP. The minus sign does not mean a surplus.",
+   "clue": "A negative result for revenue minus spending means what?"
+  }
+ },
+ "cleared_by": "recheck"
+}

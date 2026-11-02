@@ -1,0 +1,195 @@
+{
+ "id": "hhd-smoking-vaping-alcohol",
+ "title": "Smoking, vaping and alcohol",
+ "brief": "a7e105d2d989",
+ "shortlist": [
+  [
+   "hms-chronic-disease-australia",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T06:22:00Z review: approved with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00538,
+  "check": 0.01516,
+  "fix": 0.02919
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers shared risk factors for chronic disease in general, not the specific burden of tobacco, vaping and alcohol on Australian cancers, heart disease and injury that the new point needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Smoking, vaping and alcohol",
+  "card": [
+   "Burden of disease is the total harm a health problem causes, through both early death and years lived with illness or disability. Tobacco, vaping and alcohol each add to it in Australia.",
+   [
+    "Tobacco",
+    "Smoking is a major cause of many cancers, especially lung cancer. It also damages blood vessels and the heart, so it raises the risk of heart disease."
+   ],
+   [
+    "Vaping",
+    "Vapes deliver nicotine, which is addictive, and other chemicals into the lungs. Young people who vape are more likely to go on to smoke."
+   ],
+   [
+    "Alcohol",
+    "Alcohol raises the risk of some cancers and heart disease. It also causes injury, because it slows reactions and judgement, for example in road crashes and falls."
+   ]
+  ],
+  "remember": "Tobacco, vaping and alcohol add to the burden of disease, and alcohol adds injury as well as illness.",
+  "a": {
+   "q": "Which pair of health effects is linked to both tobacco use and alcohol use?",
+   "opts": [
+    "Cancers and heart disease",
+    "Injury and lung cancer",
+    "Heart disease and road crashes",
+    "Cancers and addiction to nicotine"
+   ],
+   "why": "The card links both tobacco and alcohol to cancers and heart disease. Injury is linked to alcohol because it slows reactions and judgement, not to tobacco. Nicotine addiction comes from tobacco and vapes, not alcohol.",
+   "clue": "Find the harms the card names under both Tobacco and Alcohol."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam, 19, has a few drinks at a party in Geelong and then falls down the stairs and breaks his arm. Which part of alcohol's effect on the burden of disease does this show?",
+   "opts": [
+    "Injury, as alcohol slows reactions and judgement",
+    "Cancer, as alcohol damages cells over many years",
+    "Heart disease, as alcohol damages blood vessels",
+    "Addiction, as alcohol delivers nicotine to the body"
+   ],
+   "why": "A fall soon after drinking is an injury, and alcohol causes injury by slowing reactions and judgement. Cancer and heart disease are also linked to alcohol, but they are illnesses that build up over time, so they do not fit a single fall.",
+   "clue": "Think about what happened straight after the drinks, not years later."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cancers and heart disease",
+   "also_right": []
+  },
+  "b": {
+   "best": "Injury, as alcohol slows reactions and judgement",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines 'burden of disease', a term that belongs to point 1 (Australia's health status, where cancers, heart disease and mental health conditions lead the burden of disease). This point should only mention it, not define it."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "drugs",
+  "summary": "The facts and both questions are sound, with one clearly right option each. The only issue is that the card defines 'burden of disease', which belongs to point 1, instead of just mentioning it."
+ },
+ "sensitive": "drugs",
+ "flags": [
+  "Card, other: The card defines 'burden of disease', a term that belongs to point 1 (Australia's health status, where cancers, heart disease and mental health conditions lead the burden of disease). This point should only mention it, not define it."
+ ],
+ "proposal": {
+  "title": "Smoking, vaping and alcohol",
+  "card": [
+   "Tobacco, vaping and alcohol are behavioural risk factors: things people do that raise their risk of poor health. Each adds to Australia's burden of disease.",
+   [
+    "Tobacco",
+    "Smoking is a major cause of many cancers, especially lung cancer. It also damages blood vessels and the heart, so it raises the risk of heart disease."
+   ],
+   [
+    "Vaping",
+    "Vapes deliver nicotine, which is addictive, and other chemicals into the lungs. Young people who vape are more likely to go on to smoke."
+   ],
+   [
+    "Alcohol",
+    "Over many years, alcohol raises the risk of some cancers and heart disease. It can also cause injury straight away, because it slows reactions and judgement, for example in road crashes and falls."
+   ]
+  ],
+  "remember": "Tobacco and alcohol both raise the risk of cancers and heart disease. Alcohol can also cause injury, and vapes add nicotine addiction.",
+  "a": {
+   "q": "Which pair of health effects is linked to both tobacco use and alcohol use?",
+   "opts": [
+    "Cancers and heart disease",
+    "Injury and lung cancer",
+    "Heart disease and road crashes",
+    "Cancers and addiction to nicotine"
+   ],
+   "why": "Both tobacco and alcohol raise the risk of cancers and heart disease. Injury, such as road crashes, comes from alcohol slowing reactions and judgement, not from tobacco. Nicotine addiction comes from tobacco and vapes, not alcohol.",
+   "clue": "Look for harms shared by smoking and drinking."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam, 19, has a few drinks at a party in Geelong and then falls down the stairs and breaks his arm. Which harm from alcohol does this show?",
+   "opts": [
+    "Injury, as alcohol slows reactions and judgement",
+    "Cancer, as alcohol damages cells over many years",
+    "Heart disease, as alcohol damages blood vessels",
+    "Addiction, as alcohol delivers nicotine to the body"
+   ],
+   "why": "A fall soon after drinking is an injury, and alcohol can cause injury by slowing reactions and judgement. Cancer and heart disease are also linked to alcohol, but their risk builds up over many years, so they do not fit a single fall.",
+   "clue": "Think about what happened straight after the drinks, not years later."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Smoking, vaping and alcohol",
+  "card": [
+   "Tobacco, vaping and alcohol are behavioural risk factors: things people do that raise their risk of poor health. Each adds to Australia's burden of disease.",
+   [
+    "Tobacco",
+    "Smoking is a major cause of many cancers, especially lung cancer. It also damages blood vessels and the heart, so it raises the risk of heart disease."
+   ],
+   [
+    "Vaping",
+    "Vapes deliver nicotine, which is addictive, and other chemicals into the lungs. Young people who vape are more likely to go on to smoke."
+   ],
+   [
+    "Alcohol",
+    "Over many years, alcohol raises the risk of some cancers and heart disease. It can also cause injury straight away, because it slows reactions and judgement, for example in road crashes and falls."
+   ]
+  ],
+  "remember": "Tobacco and alcohol both raise the risk of cancers and heart disease. Alcohol can also cause injury, and vapes add nicotine addiction.",
+  "a": {
+   "q": "Which pair of health effects is linked to both tobacco use and alcohol use?",
+   "opts": [
+    "Cancers and heart disease",
+    "Injury and lung cancer",
+    "Heart disease and road crashes",
+    "Cancers and addiction to nicotine"
+   ],
+   "why": "Both tobacco and alcohol raise the risk of cancers and heart disease. Injury, such as road crashes, comes from alcohol slowing reactions and judgement, not from tobacco. Nicotine addiction comes from tobacco and vapes, not alcohol.",
+   "clue": "Look for harms shared by smoking and drinking."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam, 19, has a few drinks at a party in Geelong and then falls down the stairs and breaks his arm. Which harm from alcohol does this show?",
+   "opts": [
+    "Injury, as alcohol slows reactions and judgement",
+    "Cancer, as alcohol damages cells over many years",
+    "Heart disease, as alcohol damages blood vessels",
+    "Addiction, as alcohol delivers nicotine to the body"
+   ],
+   "why": "A fall soon after drinking is an injury, and alcohol can cause injury by slowing reactions and judgement. Cancer and heart disease are also linked to alcohol, but their risk builds up over many years, so they do not fit a single fall.",
+   "clue": "Think about what happened straight after the drinks, not years later."
+  }
+ },
+ "cleared_by": "owner"
+}

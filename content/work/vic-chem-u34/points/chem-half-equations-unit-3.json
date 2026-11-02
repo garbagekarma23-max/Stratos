@@ -1,0 +1,233 @@
+{
+ "id": "chem-half-equations-unit-3",
+ "title": "Half-equations in Unit 3",
+ "brief": "c2d1a6e4e786",
+ "shortlist": [
+  [
+   "chem-half-equations",
+   0.525
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:25Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00736,
+  "check": 0.01977,
+  "fix": 0.04004,
+  "recheck": 0.01772
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only simple half-equations with electrons, not balancing in acidic or basic conditions using H⁺, H₂O or OH⁻ or including states, so it teaches a narrower idea at a lower depth than the Unit 3 brief needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Half-equations in Unit 3",
+  "card": [
+   "A half-equation shows only one half of a redox reaction: either the loss of electrons (oxidation) or the gain of electrons (reduction). Electrons appear as e⁻ and states such as (aq), (s), (l) and (g) are included.",
+   "To balance one in acidic solution, balance the atoms other than O and H first. Then add H₂O(l) to balance O, add H⁺(aq) to balance H, and add e⁻ to balance charge.",
+   "In basic solution, start the same way. Then add OH⁻(aq) to each side to match the H⁺(aq), so that H⁺(aq) and OH⁻(aq) combine to form H₂O(l). Cancel any water that appears on both sides.",
+   "A balanced half-equation has the same atoms and the same total charge on both sides. Example in acid: MnO₄⁻(aq) + 8H⁺(aq) + 5e⁻ → Mn²⁺(aq) + 4H₂O(l). Both sides have a charge of 2+."
+  ],
+  "remember": "Balance atoms, then add H₂O, H⁺ and e⁻ in that order, so atoms and charge match on both sides.",
+  "a": {
+   "q": "Which half-equation is correctly balanced for atoms and charge in acidic solution?",
+   "opts": [
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 14H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 7H⁺(aq) + 3e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) → 2Cr³⁺(aq) + 7H₂O(l)"
+   ],
+   "why": "Both sides of the first have 2 Cr, 7 O and 14 H, and a charge of 6+. The second has too many H and O in the water. The fourth has no electrons, so the charge is 12+ on the left and 6+ on the right.",
+   "clue": "Check that the atoms and the total charge match on both sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In basic solution, oxygen gas is made from hydroxide ions. Which balanced half-equation shows this?",
+   "opts": [
+    "4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻",
+    "4OH⁻(aq) + 4e⁻ → O₂(g) + 2H₂O(l)",
+    "2H₂O(l) → O₂(g) + 4H⁺(aq) + 4e⁻",
+    "4OH⁻(aq) → O₂(g) + 4H₂O(l) + 4e⁻"
+   ],
+   "why": "On the left, 4OH⁻ gives 4 O, 4 H and a charge of 4-. On the right, O₂ and 2H₂O give 4 O and 4 H, and 4e⁻ gives a charge of 4-. The second has electrons on the wrong side, so the charge does not balance. The third uses H⁺(aq), which is for acidic solution, not basic.",
+   "clue": "Count the charge on each side, then check which condition uses OH⁻."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+   "also_right": []
+  },
+  "b": {
+   "best": "4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position, and the positions do not match the order shown. It calls the second option the one with too much water, but that is the third (14H₂O). It calls the fourth the one with no electrons, but that is the second. It never explains the 7H⁺/3e⁻ option, whose H does not balance (7 vs 14). Name options by content, not position."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position, and the positions do not match the order shown. 'The second has electrons on the wrong side' is the first option. 'The third uses H⁺(aq)' is the fourth option. It never explains the 4H₂O option, which has 4 H on the left and 8 H on the right. Name options by content, not position."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'Balance atoms, then add H₂O, H⁺ and e⁻' leaves out that the card balances atoms other than O and H first. A student could read it as balancing every atom first, which makes the later steps pointless."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The chemistry and the right answers are correct. Both explanations refer to options by position ('the second', 'the fourth'), which no longer match the order shown, and each skips one wrong option. The remember line should say to balance atoms other than O and H first."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) names options by position, and the positions do not match the order shown. It calls the second option the one with too much water, but that is the third (14H₂O). It calls the fourth the one with no electrons, but that is the second. It never explains the 7H⁺/3e⁻ option, whose H does not balance (7 vs 14). Name options by content, not position.",
+  "Question b, other: Why (b) names options by position, and the positions do not match the order shown. 'The second has electrons on the wrong side' is the first option. 'The third uses H⁺(aq)' is the fourth option. It never explains the 4H₂O option, which has 4 H on the left and 8 H on the right. Name options by content, not position.",
+  "Remember, wording: 'Balance atoms, then add H₂O, H⁺ and e⁻' leaves out that the card balances atoms other than O and H first. A student could read it as balancing every atom first, which makes the later steps pointless."
+ ],
+ "proposal": {
+  "title": "Half-equations in Unit 3",
+  "card": [
+   "A half-equation shows only one half of a redox reaction: either the loss of electrons (oxidation) or the gain of electrons (reduction). Electrons appear as e⁻ and states such as (aq), (s), (l) and (g) are included.",
+   "To balance one in acidic solution, balance the atoms other than O and H first. Then add H₂O(l) to balance O, add H⁺(aq) to balance H, and add e⁻ to balance charge.",
+   "In basic solution, start the same way. Then add OH⁻(aq) to each side to match the H⁺(aq), so that H⁺(aq) and OH⁻(aq) combine to form H₂O(l). Cancel any water that appears on both sides.",
+   "A balanced half-equation has the same atoms and the same total charge on both sides. Example in acid: MnO₄⁻(aq) + 8H⁺(aq) + 5e⁻ → Mn²⁺(aq) + 4H₂O(l). Both sides have a charge of 2+."
+  ],
+  "remember": "Balance atoms other than O and H first, then O with H₂O, H with H⁺ and charge with e⁻. In base, add OH⁻ to turn the H⁺ into water.",
+  "a": {
+   "q": "Which half-equation is correctly balanced for atoms and charge in acidic solution?",
+   "opts": [
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 14H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 7H⁺(aq) + 3e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) → 2Cr³⁺(aq) + 7H₂O(l)"
+   ],
+   "why": "The version with 14H⁺, 6e⁻ and 7H₂O has 2 Cr, 7 O and 14 H on each side, and a charge of 6+ on each side. The version with 14H₂O has 14 O and 28 H on the right, and the version with 7H⁺ and 3e⁻ has 7 H on the left but 14 H on the right. The version with no electrons has a charge of 12+ on the left but 6+ on the right.",
+   "clue": "Check that the atoms and the total charge match on both sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In basic solution, oxygen gas is made from hydroxide ions. Which balanced half-equation shows this?",
+   "opts": [
+    "4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻",
+    "4OH⁻(aq) + 4e⁻ → O₂(g) + 2H₂O(l)",
+    "2H₂O(l) → O₂(g) + 4H⁺(aq) + 4e⁻",
+    "4OH⁻(aq) → O₂(g) + 4H₂O(l) + 4e⁻"
+   ],
+   "why": "With 4OH⁻ on the left and O₂ + 2H₂O + 4e⁻ on the right, both sides have 4 O, 4 H and a charge of 4-. Putting 4e⁻ on the left makes the charge 8- on the left and 0 on the right, and using 4H₂O gives 8 H on the right but only 4 on the left. The version with H⁺(aq) does balance, but H⁺ is used in acidic solution, not basic.",
+   "clue": "Count the atoms and charge on each side, then check which condition uses OH⁻."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "also_right": []
+   },
+   "b": {
+    "best": "4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) names options by position, and the positions do not match the order shown. It calls the second option the one with too much water, but that is the third (14H₂O). It calls the fourth the one with no electrons, but that is the second. It never explains the 7H⁺/3e⁻ option, whose H does not balance (7 vs 14). Name options by content, not position."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "Why (b) names options by position, and the positions do not match the order shown. 'The second has electrons on the wrong side' is the first option. 'The third uses H⁺(aq)' is the fourth option. It never explains the 4H₂O option, which has 4 H on the left and 8 H on the right. Name options by content, not position."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'Balance atoms, then add H₂O, H⁺ and e⁻' leaves out that the card balances atoms other than O and H first. A student could read it as balancing every atom first, which makes the later steps pointless."
+   }
+  ],
+  "flags": [
+   "Question a, other: Why (a) names options by position, and the positions do not match the order shown. It calls the second option the one with too much water, but that is the third (14H₂O). It calls the fourth the one with no electrons, but that is the second. It never explains the 7H⁺/3e⁻ option, whose H does not balance (7 vs 14). Name options by content, not position.",
+   "Question b, other: Why (b) names options by position, and the positions do not match the order shown. 'The second has electrons on the wrong side' is the first option. 'The third uses H⁺(aq)' is the fourth option. It never explains the 4H₂O option, which has 4 H on the left and 8 H on the right. Name options by content, not position.",
+   "Remember, wording: 'Balance atoms, then add H₂O, H⁺ and e⁻' leaves out that the card balances atoms other than O and H first. A student could read it as balancing every atom first, which makes the later steps pointless."
+  ]
+ },
+ "final": {
+  "title": "Half-equations in Unit 3",
+  "card": [
+   "A half-equation shows only one half of a redox reaction: either the loss of electrons (oxidation) or the gain of electrons (reduction). Electrons appear as e⁻ and states such as (aq), (s), (l) and (g) are included.",
+   "To balance one in acidic solution, balance the atoms other than O and H first. Then add H₂O(l) to balance O, add H⁺(aq) to balance H, and add e⁻ to balance charge.",
+   "In basic solution, start the same way. Then add OH⁻(aq) to each side to match the H⁺(aq), so that H⁺(aq) and OH⁻(aq) combine to form H₂O(l). Cancel any water that appears on both sides.",
+   "A balanced half-equation has the same atoms and the same total charge on both sides. Example in acid: MnO₄⁻(aq) + 8H⁺(aq) + 5e⁻ → Mn²⁺(aq) + 4H₂O(l). Both sides have a charge of 2+."
+  ],
+  "remember": "Balance atoms other than O and H first, then O with H₂O, H with H⁺ and charge with e⁻. In base, add OH⁻ to turn the H⁺ into water.",
+  "a": {
+   "q": "Which half-equation is correctly balanced for atoms and charge in acidic solution?",
+   "opts": [
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) + 6e⁻ → 2Cr³⁺(aq) + 14H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 7H⁺(aq) + 3e⁻ → 2Cr³⁺(aq) + 7H₂O(l)",
+    "Cr₂O₇²⁻(aq) + 14H⁺(aq) → 2Cr³⁺(aq) + 7H₂O(l)"
+   ],
+   "why": "The version with 14H⁺, 6e⁻ and 7H₂O has 2 Cr, 7 O and 14 H on each side, and a charge of 6+ on each side. The version with 14H₂O has 14 O and 28 H on the right, and the version with 7H⁺ and 3e⁻ has 7 H on the left but 14 H on the right. The version with no electrons has a charge of 12+ on the left but 6+ on the right.",
+   "clue": "Check that the atoms and the total charge match on both sides."
+  },
+  "b": {
+   "d": 3,
+   "q": "In basic solution, oxygen gas is made from hydroxide ions. Which balanced half-equation shows this?",
+   "opts": [
+    "4OH⁻(aq) → O₂(g) + 2H₂O(l) + 4e⁻",
+    "4OH⁻(aq) + 4e⁻ → O₂(g) + 2H₂O(l)",
+    "2H₂O(l) → O₂(g) + 4H⁺(aq) + 4e⁻",
+    "4OH⁻(aq) → O₂(g) + 4H₂O(l) + 4e⁻"
+   ],
+   "why": "With 4OH⁻ on the left and O₂ + 2H₂O + 4e⁻ on the right, both sides have 4 O, 4 H and a charge of 4-. Putting 4e⁻ on the left makes the charge 8- on the left and 0 on the right, and using 4H₂O gives 8 H on the right but only 4 on the left. The version with H⁺(aq) does balance, but H⁺ is used in acidic solution, not basic.",
+   "clue": "Count the atoms and charge on each side, then check which condition uses OH⁻."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,263 @@
+{
+ "id": "acc-classifying-cash-flows",
+ "title": "Classifying cash flows",
+ "brief": "d57a88aaa4ec",
+ "shortlist": [
+  [
+   "bus-cash-flow-statement",
+   0.472
+  ],
+  [
+   "bus-cash-flow-management",
+   0.289
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 says adapt bus-cash-flow-statement (1 change)",
+  "2026-11-01T14:55:56Z adapt: done",
+  "2026-11-01T15:05:23Z check: flagged",
+  "2026-11-01T15:14:43Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "adapt": 0.00366,
+  "check": 0.01511,
+  "fix": 0.03264,
+  "recheck": 0.01237
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-cash-flow-statement",
+  "changes": [
+   "Change the example in question b from Priya's bakery in Orange, New South Wales, to a business in a Victorian town."
+  ],
+  "sure": "high",
+  "reason": "The bank card already teaches the operating, investing and financing classification at the right depth, and only its New South Wales example needs to become local to Victoria.",
+  "model": "claude-haiku-5-5"
+ },
+ "adapt": {
+  "from": "bus-cash-flow-statement",
+  "changes": [
+   "Change the example in question b from Priya's bakery in Orange, New South Wales, to a business in a Victorian town."
+  ],
+  "by": "Claude Haiku 5.5",
+  "parts": [
+   "a.q",
+   "b.q"
+  ]
+ },
+ "draft": {
+  "title": "The cash flow statement",
+  "card": [
+   "A cash flow statement shows the cash that came into a business and went out of it over a period, such as a year. It records actual cash movements, not sales made on credit that have not yet been paid.",
+   [
+    "Operating",
+    "cash from the day-to-day running of the business, such as cash received from customers and cash paid to suppliers and employees."
+   ],
+   [
+    "Investing",
+    "cash spent on or received from buying and selling long-term assets, such as equipment or property."
+   ],
+   [
+    "Financing",
+    "cash from owners and lenders, such as money raised by a loan or owner contributions, and cash paid back as loan repayments or drawings."
+   ]
+  ],
+  "remember": "The cash flow statement tracks real cash in and out, sorted into operating, investing and financing.",
+  "a": {
+   "q": "Which of these cash flows is classed as investing?",
+   "opts": [
+    "Buying a delivery van with cash",
+    "Paying staff their weekly wages",
+    "Receiving cash from customers",
+    "Repaying part of a bank loan"
+   ],
+   "why": "A delivery van is a long-term asset, so buying it is an investing activity. Paying wages is tempting, but wages are part of the day-to-day running of the business, so they are operating.",
+   "clue": "Think about long-term assets."
+  },
+  "b": {
+   "d": 3,
+   "q": "Meera's bakery in Bendigo, Victoria, borrows $20,000 from a bank. It also sells $5,000 of bread on credit, and the customers have not yet paid. What does the cash flow statement show for the period?",
+   "opts": [
+    "Loan as financing cash in, and no cash from credit sales",
+    "Loan as financing cash in, and $5,000 as operating cash in",
+    "Loan as investing cash in, and no cash from credit sales",
+    "Loan as operating cash in, and $5,000 as operating cash in"
+   ],
+   "why": "A loan from a lender is a financing activity, and the cash arrived. The credit sales are not cash until customers pay, so they are not recorded yet. Recording the $5,000 as operating cash is tempting, but the statement records only actual cash movements.",
+   "clue": "Has the cash from the credit sales arrived yet?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Buying a delivery van with cash",
+   "also_right": []
+  },
+  "b": {
+   "best": "Loan as financing cash in, and no cash from credit sales",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card's examples sort specific cash flows into categories (paying employees is operating, buying equipment is investing, loans and owner contributions are financing). That is the content of point 6, Classifying cash flows, which this point should only mention."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a asks the student to classify a cash flow as investing. That tests point 6, Classifying cash flows, rather than what a cash flow statement is and how it is grouped."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and answers are correct. However, the card's classification examples and question a overlap with point 6 (Classifying cash flows), so this point should focus on what the statement is and its three groupings."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card's examples sort specific cash flows into categories (paying employees is operating, buying equipment is investing, loans and owner contributions are financing). That is the content of point 6, Classifying cash flows, which this point should only mention.",
+  "Question a, other: Question a asks the student to classify a cash flow as investing. That tests point 6, Classifying cash flows, rather than what a cash flow statement is and how it is grouped."
+ ],
+ "proposal": {
+  "title": "Classifying cash flows",
+  "card": [
+   [
+    "Operating",
+    "cash from day-to-day trading, such as cash from customers and cash paid to suppliers, for wages, rent and GST. Interest paid on a loan is also operating."
+   ],
+   [
+    "Investing",
+    "cash spent on or received from buying or selling non-current assets, such as equipment, vehicles or premises."
+   ],
+   [
+    "Financing",
+    "cash that changes how the business is funded: capital contributions and loans coming in, and drawings and loan repayments going out."
+   ],
+   "To classify a cash flow, ask what the cash was for, not how large it was. Interest on a loan is operating, but repaying the loan itself is financing."
+  ],
+  "remember": "Sort by purpose: trading is operating, non-current assets are investing, funding is financing.",
+  "a": {
+   "q": "A business pays $3,000 cash for a new office computer it will use for years. How is this cash flow classified?",
+   "opts": [
+    "An investing outflow",
+    "An operating outflow",
+    "A financing outflow",
+    "An investing inflow"
+   ],
+   "why": "The computer is a non-current asset, so paying for it is an investing outflow. Operating is tempting because the computer is used in the office, but cash for non-current assets is investing.",
+   "clue": "Is the computer used up in a year, or kept for years?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lachlan's surf shop in Torquay pays $500 interest on its bank loan and repays $4,000 of the loan itself. How are these classified?",
+   "opts": [
+    "Interest operating, loan repayment financing",
+    "Interest financing, loan repayment financing",
+    "Interest operating, loan repayment operating",
+    "Interest investing, loan repayment financing"
+   ],
+   "why": "Interest paid is classed as operating, while repaying the amount borrowed changes how the business is funded, so it is financing. Classing both as financing is tempting because both relate to the loan, but interest is treated as operating.",
+   "clue": "The interest and the repayment go to the same bank, but are they for the same thing?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "An investing outflow",
+    "also_right": []
+   },
+   "b": {
+    "best": "Interest operating, loan repayment financing",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card follows the VCE convention that interest paid is operating, and drawings and loan repayments are financing. Both questions have one clearly correct answer."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card's examples sort specific cash flows into categories (paying employees is operating, buying equipment is investing, loans and owner contributions are financing). That is the content of point 6, Classifying cash flows, which this point should only mention."
+   },
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Question a asks the student to classify a cash flow as investing. That tests point 6, Classifying cash flows, rather than what a cash flow statement is and how it is grouped."
+   }
+  ],
+  "flags": [
+   "Card, other: The card's examples sort specific cash flows into categories (paying employees is operating, buying equipment is investing, loans and owner contributions are financing). That is the content of point 6, Classifying cash flows, which this point should only mention.",
+   "Question a, other: Question a asks the student to classify a cash flow as investing. That tests point 6, Classifying cash flows, rather than what a cash flow statement is and how it is grouped."
+  ]
+ },
+ "final": {
+  "title": "Classifying cash flows",
+  "card": [
+   [
+    "Operating",
+    "cash from day-to-day trading, such as cash from customers and cash paid to suppliers, for wages, rent and GST. Interest paid on a loan is also operating."
+   ],
+   [
+    "Investing",
+    "cash spent on or received from buying or selling non-current assets, such as equipment, vehicles or premises."
+   ],
+   [
+    "Financing",
+    "cash that changes how the business is funded: capital contributions and loans coming in, and drawings and loan repayments going out."
+   ],
+   "To classify a cash flow, ask what the cash was for, not how large it was. Interest on a loan is operating, but repaying the loan itself is financing."
+  ],
+  "remember": "Sort by purpose: trading is operating, non-current assets are investing, funding is financing.",
+  "a": {
+   "q": "A business pays $3,000 cash for a new office computer it will use for years. How is this cash flow classified?",
+   "opts": [
+    "An investing outflow",
+    "An operating outflow",
+    "A financing outflow",
+    "An investing inflow"
+   ],
+   "why": "The computer is a non-current asset, so paying for it is an investing outflow. Operating is tempting because the computer is used in the office, but cash for non-current assets is investing.",
+   "clue": "Is the computer used up in a year, or kept for years?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lachlan's surf shop in Torquay pays $500 interest on its bank loan and repays $4,000 of the loan itself. How are these classified?",
+   "opts": [
+    "Interest operating, loan repayment financing",
+    "Interest financing, loan repayment financing",
+    "Interest operating, loan repayment operating",
+    "Interest investing, loan repayment financing"
+   ],
+   "why": "Interest paid is classed as operating, while repaying the amount borrowed changes how the business is funded, so it is financing. Classing both as financing is tempting because both relate to the loan, but interest is treated as operating.",
+   "clue": "The interest and the repayment go to the same bank, but are they for the same thing?"
+  }
+ },
+ "cleared_by": "recheck"
+}

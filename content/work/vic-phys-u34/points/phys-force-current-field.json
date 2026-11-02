@@ -1,0 +1,74 @@
+{
+ "id": "phys-force-current-field",
+ "title": "Force on a current in a field",
+ "brief": "10f006ecbd56",
+ "shortlist": [
+  [
+   "phys-force-current-carrying-wire",
+   0.74
+  ],
+  [
+   "phys-charges-magnetic-fields",
+   0.516
+  ],
+  [
+   "phys-force-between-parallel-wires",
+   0.472
+  ],
+  [
+   "phys-ac-induction-motors",
+   0.422
+  ],
+  [
+   "phys-magnetic-flux",
+   0.421
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 may adapt phys-force-current-carrying-wire, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:06Z confirm: Claude Opus 5.5 may adapt phys-force-current-carrying-wire, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:24:59Z review: reusing phys-force-current-carrying-wire"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00034,
+  "confirm": 0.01379
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "phys-force-current-carrying-wire",
+  "changes": [
+   "Use the VCE form of the formula, F = nIlB, where n is the number of turns in the coil, and add the turns factor to the card and its worked question.",
+   "Present the force at right angles to the field as the main case, and check whether sin θ should appear in the card's formula for this course.",
+   "Keep the right-hand rule and the motor context, since they match the new point's brief."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same force on a current in a magnetic field at the right depth, but it needs the turns factor n and a formula adjusted to the VCE study design.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "phys-force-current-carrying-wire",
+  "changes": [
+   "Write the formula as in the VCE Study Design, F = nIlB, with n the number of turns and lowercase l for the length of conductor in the field.",
+   "Replace the general sin θ form with the two cases VCE covers: the current at right angles to the field (maximum force, F = nIlB) and the current parallel to the field (zero force). Drop the intermediate-angle wording.",
+   "Update the remember line to match F = nIlB and the perpendicular or parallel cases.",
+   "Add a brief link to motors, where the force on the coil sides makes the coil turn, as the brief mentions."
+  ],
+  "sure": "medium",
+  "reason": "The NSW card teaches the same idea at the same depth and both its questions suit VCE, but it needs VCE's F = nIlB notation, including n turns, and should limit itself to the perpendicular and parallel cases VCE uses.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "phys-force-current-carrying-wire",
+ "matched": {
+  "verdict": "reuse",
+  "from": "phys-force-current-carrying-wire",
+  "by": "owner",
+  "at": "2026-11-02T06:24:59Z"
+ }
+}

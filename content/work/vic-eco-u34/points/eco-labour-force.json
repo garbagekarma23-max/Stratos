@@ -1,0 +1,234 @@
+{
+ "id": "eco-labour-force",
+ "title": "The labour force",
+ "brief": "469159731ea7",
+ "shortlist": [
+  [
+   "e-labour",
+   0.64
+  ],
+  [
+   "eco-measuring-unemployment-australia",
+   0.488
+  ],
+  [
+   "eco-hidden-long-term-unemployment",
+   0.253
+  ],
+  [
+   "eco-underemployment",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.00475,
+  "check": 0.01707,
+  "fix": 0.02923
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No single bank point covers all five labour force categories (employed, unemployed, underemployed, hidden and long-term unemployed) together; the closest cards each cover only part of this, so a new point is the safer fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The labour force",
+  "card": [
+   [
+    "Employed",
+    "a person aged 15 or over who worked at least one hour for pay in the survey week. Part-time and casual workers count as employed."
+   ],
+   [
+    "Unemployed",
+    "a person without a job who is actively looking for work and is available to start. The labour force is the employed plus the unemployed."
+   ],
+   [
+    "Underemployed",
+    "a person who has a job but wants more hours and is available to work them. They are counted as employed."
+   ],
+   [
+    "Hidden unemployed",
+    "a person who wants a job but is not looking, often because they believe none is available. Long-term unemployed means looking for work for 12 months or more."
+   ]
+  ],
+  "remember": "Each group shows a different gap between the jobs people have and the jobs they want.",
+  "a": {
+   "q": "Priya works eight hours a week at a shop in Geelong. She wants 25 hours a week and could start them now. How is she counted?",
+   "opts": [
+    "Employed and underemployed",
+    "Unemployed and underemployed",
+    "Hidden unemployed",
+    "Long-term unemployed"
+   ],
+   "why": "Priya has a job, so she is employed. She wants more hours and could work them, so she is also underemployed. She is not unemployed, because the unemployed have no job at all.",
+   "clue": "Does Priya have a job at all?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom lost his job in Ballarat and gave up looking after many failed applications. He believes no work is available, but he would take a job. How is Tom best described?",
+   "opts": [
+    "Hidden unemployed, outside the labour force",
+    "Unemployed, inside the labour force",
+    "Underemployed, inside the labour force",
+    "Long-term unemployed, inside the labour force"
+   ],
+   "why": "Tom wants work but is not looking, so he is not counted as unemployed. This makes him hidden unemployed and outside the labour force. Long-term unemployed applies only to people still actively looking for work.",
+   "clue": "Is Tom still actively looking for work?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Employed and underemployed",
+   "also_right": []
+  },
+  "b": {
+   "best": "Hidden unemployed, outside the labour force",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says each group shows a gap between the jobs people have and the jobs they want. The employed group as the card defines it shows no such gap, since a fully employed person wants nothing more. The line claims more than the card supports and could mislead students into thinking being employed implies an unmet want."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clear answer each, and the card's definitions match ABS and VCE usage. The only issue is that the remember line wrongly implies every group, including the employed, shows a jobs gap."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line says each group shows a gap between the jobs people have and the jobs they want. The employed group as the card defines it shows no such gap, since a fully employed person wants nothing more. The line claims more than the card supports and could mislead students into thinking being employed implies an unmet want."
+ ],
+ "proposal": {
+  "title": "The labour force",
+  "card": [
+   [
+    "Employed",
+    "a person aged 15 or over who worked at least one hour for pay in the survey week. Part-time and casual workers count as employed."
+   ],
+   [
+    "Unemployed",
+    "a person without a job who is actively looking for work and is available to start. Those unemployed for 12 months or more are long-term unemployed."
+   ],
+   [
+    "Underemployed",
+    "a person who has a job but wants more hours and is available to work them. They are counted as employed."
+   ],
+   [
+    "Hidden unemployed",
+    "a person who wants a job but has stopped looking, often because they believe none is available. They sit outside the labour force, which is the employed plus the unemployed."
+   ]
+  ],
+  "remember": "The headline count misses some slack: the underemployed count as employed, and the hidden unemployed are left out.",
+  "a": {
+   "q": "Priya works eight hours a week at a shop in Geelong. She wants 25 hours a week and could start them now. How is she counted?",
+   "opts": [
+    "Employed and underemployed",
+    "Unemployed and underemployed",
+    "Hidden unemployed",
+    "Long-term unemployed"
+   ],
+   "why": "Priya has a job, so she is employed. She wants more hours and could work them, so she is also underemployed. She is not unemployed, because the unemployed have no job at all.",
+   "clue": "Does Priya have a job at all?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom lost his job in Ballarat and gave up looking after many failed applications. He believes no work is available, but he would take a job. How is Tom best described?",
+   "opts": [
+    "Hidden unemployed, outside the labour force",
+    "Unemployed, inside the labour force",
+    "Underemployed, inside the labour force",
+    "Long-term unemployed, inside the labour force"
+   ],
+   "why": "Tom wants work but is not looking, so he is not counted as unemployed. This makes him hidden unemployed and outside the labour force. Long-term unemployed is a group within the unemployed, so it covers only people still actively looking.",
+   "clue": "Is Tom still actively looking for work?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says each group shows a gap between the jobs people have and the jobs they want. The employed group as the card defines it shows no such gap, since a fully employed person wants nothing more. The line claims more than the card supports and could mislead students into thinking being employed implies an unmet want."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says each group shows a gap between the jobs people have and the jobs they want. The employed group as the card defines it shows no such gap, since a fully employed person wants nothing more. The line claims more than the card supports and could mislead students into thinking being employed implies an unmet want."
+  ]
+ },
+ "final": {
+  "title": "The labour force",
+  "card": [
+   [
+    "Employed",
+    "a person aged 15 or over who worked at least one hour for pay in the survey week. Part-time and casual workers count as employed."
+   ],
+   [
+    "Unemployed",
+    "a person without a job who is actively looking for work and is available to start. Those unemployed for 12 months or more are long-term unemployed."
+   ],
+   [
+    "Underemployed",
+    "a person who has a job but wants more hours and is available to work them. They are counted as employed."
+   ],
+   [
+    "Hidden unemployed",
+    "a person who wants a job but has stopped looking, often because they believe none is available. They sit outside the labour force, which is the employed plus the unemployed."
+   ]
+  ],
+  "remember": "The headline count misses some slack: the underemployed count as employed, and the hidden unemployed are left out.",
+  "a": {
+   "q": "Priya works eight hours a week at a shop in Geelong. She wants 25 hours a week and could start them now. How is she counted?",
+   "opts": [
+    "Employed and underemployed",
+    "Unemployed and underemployed",
+    "Hidden unemployed",
+    "Long-term unemployed"
+   ],
+   "why": "Priya has a job, so she is employed. She wants more hours and could work them, so she is also underemployed. She is not unemployed, because the unemployed have no job at all.",
+   "clue": "Does Priya have a job at all?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Tom lost his job in Ballarat and gave up looking after many failed applications. He believes no work is available, but he would take a job. How is Tom best described?",
+   "opts": [
+    "Hidden unemployed, outside the labour force",
+    "Unemployed, inside the labour force",
+    "Underemployed, inside the labour force",
+    "Long-term unemployed, inside the labour force"
+   ],
+   "why": "Tom wants work but is not looking, so he is not counted as unemployed. This makes him hidden unemployed and outside the labour force. Long-term unemployed is a group within the unemployed, so it covers only people still actively looking.",
+   "clue": "Is Tom still actively looking for work?"
+  }
+ },
+ "cleared_by": "auto"
+}

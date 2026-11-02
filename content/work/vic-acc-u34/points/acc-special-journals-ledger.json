@@ -1,0 +1,209 @@
+{
+ "id": "acc-special-journals-ledger",
+ "title": "The general ledger",
+ "brief": "569926f42286",
+ "shortlist": [
+  [
+   "eco-capital-financial-account",
+   0.205
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 6e-05,
+  "write": 0.00498,
+  "check": 0.01573,
+  "fix": 0.03075,
+  "recheck": 0.01358
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the national balance of payments in Economics, not the ledger as a double-entry record of accounts, so it does not teach the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The general ledger",
+  "card": [
+   "The general ledger is the book that holds a separate account for each item, such as Cash at Bank, Inventory, Sales or Rent Expense. Each account is drawn as a T, with debits on the left and credits on the right.",
+   "Posting means copying each line of a journal entry into the ledger. The debit goes to the left side of one account and the credit goes to the right side of another. The journal is where the entry is first recorded.",
+   "Each account records the date, the other account involved and the amount. A new entry is added to an account without changing the earlier ones.",
+   "The running balance is the difference between the two sides after each entry. If an asset account has more debits than credits, it has a debit balance."
+  ],
+  "remember": "The ledger has one T account per item. Posting moves journal entries into it, and each account shows its balance.",
+  "a": {
+   "q": "Zara's Pet Supplies pays $400 cash for shop rent. The journal entry is complete. What is posting this entry to the ledger?",
+   "opts": [
+    "Copying the debit and credit into their own accounts",
+    "Adding up all the accounts to check they balance",
+    "Writing the entry in the journal for the first time",
+    "Closing the Rent Expense account at the end of the year"
+   ],
+   "why": "Posting means copying each part of a journal entry into the ledger account it belongs to. Writing the entry in the journal is the step before posting, so it is not posting.",
+   "clue": "Posting happens after the journal entry is written."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ben's Bikes has a Cash at Bank account with debits of $5,000 and credits of $3,200. What is its running balance?",
+   "opts": [
+    "$1,800 debit",
+    "$1,800 credit",
+    "$8,200 debit",
+    "$8,200 credit"
+   ],
+   "why": "The balance is the difference between the two sides: $5,000 minus $3,200 is $1,800. The debit side is larger, so it is a debit balance. Adding the two sides gives $8,200, which is not a balance.",
+   "clue": "Find the difference between the two sides, then see which side is larger."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Copying the debit and credit into their own accounts",
+   "also_right": []
+  },
+  "b": {
+   "best": "$1,800 debit",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says each T account shows a 'running balance' after each entry. In VCE, T-form accounts are usually balanced at the end of the period (Balance c/d and b/d). A balance shown after every entry belongs to the separate running-balance (three-column) ledger format, so mixing the two may confuse students. This follows the chapter's own wording, but the card could say T accounts are balanced to find the difference between the sides."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer and the facts check out. The only concern is that the card describes a 'running balance after each entry' for T-form accounts, which mixes T-form with the running-balance ledger format used in VCE."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card says each T account shows a 'running balance' after each entry. In VCE, T-form accounts are usually balanced at the end of the period (Balance c/d and b/d). A balance shown after every entry belongs to the separate running-balance (three-column) ledger format, so mixing the two may confuse students. This follows the chapter's own wording, but the card could say T accounts are balanced to find the difference between the sides."
+ ],
+ "proposal": {
+  "title": "The general ledger",
+  "card": [
+   "The general ledger is the book that holds a separate account for each item, such as Cash at Bank, Inventory, Sales or Rent Expense. Each account is drawn as a T, with debits on the left and credits on the right.",
+   "Posting means copying each line of a journal entry into the ledger. The debit goes to the left side of one account and the credit goes to the right side of another. The journal is where the entry is first recorded.",
+   "Each posted entry shows the date, the name of the other account involved and the amount. New entries are added without changing earlier ones.",
+   "At the end of the period, each T account is balanced. The balance is the difference between the two sides, and the larger side tells you if it is a debit or credit balance. It is carried down (c/d) and brought down (b/d) to open the next period."
+  ],
+  "remember": "One T account per item. Posting moves journal entries in, and balancing finds each account's balance.",
+  "a": {
+   "q": "Zara's Pet Supplies pays $400 cash for shop rent. The journal entry is complete. What is posting this entry to the ledger?",
+   "opts": [
+    "Copying the debit and credit into their own accounts",
+    "Adding up all the accounts to check they balance",
+    "Writing the entry in the journal for the first time",
+    "Closing the Rent Expense account at the end of the year"
+   ],
+   "why": "Posting means copying each part of a journal entry into the ledger account it belongs to. Writing the entry in the journal is the step before posting, so it is not posting.",
+   "clue": "Posting happens after the journal entry is written."
+  },
+  "b": {
+   "d": 2,
+   "q": "At the end of the month, Ben's Bikes balances its Cash at Bank account. It has debits of $5,000 and credits of $3,200. What is its balance?",
+   "opts": [
+    "$1,800 debit",
+    "$1,800 credit",
+    "$8,200 debit",
+    "$8,200 credit"
+   ],
+   "why": "The balance is the difference between the two sides: $5,000 minus $3,200 is $1,800. The debit side is larger, so it is a debit balance. Adding the two sides gives $8,200, which is not a balance.",
+   "clue": "Find the difference between the two sides, then see which side is larger."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Copying the debit and credit into their own accounts",
+    "also_right": []
+   },
+   "b": {
+    "best": "$1,800 debit",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 18,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card says each T account shows a 'running balance' after each entry. In VCE, T-form accounts are usually balanced at the end of the period (Balance c/d and b/d). A balance shown after every entry belongs to the separate running-balance (three-column) ledger format, so mixing the two may confuse students. This follows the chapter's own wording, but the card could say T accounts are balanced to find the difference between the sides."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card says each T account shows a 'running balance' after each entry. In VCE, T-form accounts are usually balanced at the end of the period (Balance c/d and b/d). A balance shown after every entry belongs to the separate running-balance (three-column) ledger format, so mixing the two may confuse students. This follows the chapter's own wording, but the card could say T accounts are balanced to find the difference between the sides."
+  ]
+ },
+ "final": {
+  "title": "The general ledger",
+  "card": [
+   "The general ledger is the book that holds a separate account for each item, such as Cash at Bank, Inventory, Sales or Rent Expense. Each account is drawn as a T, with debits on the left and credits on the right.",
+   "Posting means copying each line of a journal entry into the ledger. The debit goes to the left side of one account and the credit goes to the right side of another. The journal is where the entry is first recorded.",
+   "Each posted entry shows the date, the name of the other account involved and the amount. New entries are added without changing earlier ones.",
+   "At the end of the period, each T account is balanced. The balance is the difference between the two sides, and the larger side tells you if it is a debit or credit balance. It is carried down (c/d) and brought down (b/d) to open the next period."
+  ],
+  "remember": "One T account per item. Posting moves journal entries in, and balancing finds each account's balance.",
+  "a": {
+   "q": "Zara's Pet Supplies pays $400 cash for shop rent. The journal entry is complete. What is posting this entry to the ledger?",
+   "opts": [
+    "Copying the debit and credit into their own accounts",
+    "Adding up all the accounts to check they balance",
+    "Writing the entry in the journal for the first time",
+    "Closing the Rent Expense account at the end of the year"
+   ],
+   "why": "Posting means copying each part of a journal entry into the ledger account it belongs to. Writing the entry in the journal is the step before posting, so it is not posting.",
+   "clue": "Posting happens after the journal entry is written."
+  },
+  "b": {
+   "d": 2,
+   "q": "At the end of the month, Ben's Bikes balances its Cash at Bank account. It has debits of $5,000 and credits of $3,200. What is its balance?",
+   "opts": [
+    "$1,800 debit",
+    "$1,800 credit",
+    "$8,200 debit",
+    "$8,200 credit"
+   ],
+   "why": "The balance is the difference between the two sides: $5,000 minus $3,200 is $1,800. The debit side is larger, so it is a debit balance. Adding the two sides gives $8,200, which is not a balance.",
+   "clue": "Find the difference between the two sides, then see which side is larger."
+  }
+ },
+ "cleared_by": "recheck"
+}

@@ -1,0 +1,150 @@
+{
+ "id": "mat-integrating-with-trigonometric-identities",
+ "title": "Integrating with trigonometric identities",
+ "brief": "b3dd97cfda23",
+ "shortlist": [
+  [
+   "mat-pythagorean-identity",
+   0.318
+  ],
+  [
+   "mat-integrals-exponential-trigonometric-functions",
+   0.263
+  ],
+  [
+   "mat-definite-integral",
+   0.231
+  ],
+  [
+   "mat-derivatives-trigonometric-functions",
+   0.219
+  ],
+  [
+   "mat-trigonometric-identities",
+   0.215
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00473,
+  "check": 0.01028
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, Compound and double angle formulas, teaches the identities themselves but not how to use them to integrate, and no bank point covers integration by trigonometric identities, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Integrating with trigonometric identities",
+  "card": [
+   "We have no direct rule for ∫ sin²x dx. A trigonometric identity can rewrite the function as one we can integrate.",
+   [
+    "sin²x",
+    "sin²x = (1 − cos 2x)/2"
+   ],
+   [
+    "cos²x",
+    "cos²x = (1 + cos 2x)/2"
+   ],
+   "Example: ∫ sin²x dx = ∫ (1 − cos 2x)/2 dx = x/2 − (sin 2x)/4 + c. The 4 appears because ∫ cos 2x dx = (sin 2x)/2, and this is then halved."
+  ],
+  "remember": "Rewrite sin²x or cos²x using cos 2x, then integrate each term.",
+  "a": {
+   "q": "Which expression equals ∫ cos²x dx?",
+   "opts": [
+    "x/2 + (sin 2x)/4 + c",
+    "x/2 − (sin 2x)/4 + c",
+    "x/2 + (sin 2x)/2 + c",
+    "(cos³x)/3 + c"
+   ],
+   "why": "cos²x = (1 + cos 2x)/2. Integrating gives x/2 + (sin 2x)/4 + c. The option with a minus sign is the answer for sin²x, so it uses the wrong identity.",
+   "clue": "Use the identity that has a plus sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of ∫ from 0 to π/2 of sin²x dx?",
+   "opts": [
+    "π/4",
+    "π/2",
+    "1/2",
+    "1"
+   ],
+   "why": "The antiderivative is x/2 − (sin 2x)/4. At π/2 it equals π/4 − 0, and at 0 it equals 0, so the value is π/4. The value π/2 comes from forgetting the factor 1/2 in the identity.",
+   "clue": "Write sin²x as (1 − cos 2x)/2 before you integrate."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "x/2 + (sin 2x)/4 + c",
+   "also_right": []
+  },
+  "b": {
+   "best": "π/4",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Integrating with trigonometric identities",
+  "card": [
+   "We have no direct rule for ∫ sin²x dx. A trigonometric identity can rewrite the function as one we can integrate.",
+   [
+    "sin²x",
+    "sin²x = (1 − cos 2x)/2"
+   ],
+   [
+    "cos²x",
+    "cos²x = (1 + cos 2x)/2"
+   ],
+   "Example: ∫ sin²x dx = ∫ (1 − cos 2x)/2 dx = x/2 − (sin 2x)/4 + c. The 4 appears because ∫ cos 2x dx = (sin 2x)/2, and this is then halved."
+  ],
+  "remember": "Rewrite sin²x or cos²x using cos 2x, then integrate each term.",
+  "a": {
+   "q": "Which expression equals ∫ cos²x dx?",
+   "opts": [
+    "x/2 + (sin 2x)/4 + c",
+    "x/2 − (sin 2x)/4 + c",
+    "x/2 + (sin 2x)/2 + c",
+    "(cos³x)/3 + c"
+   ],
+   "why": "cos²x = (1 + cos 2x)/2. Integrating gives x/2 + (sin 2x)/4 + c. The option with a minus sign is the answer for sin²x, so it uses the wrong identity.",
+   "clue": "Use the identity that has a plus sign."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the value of ∫ from 0 to π/2 of sin²x dx?",
+   "opts": [
+    "π/4",
+    "π/2",
+    "1/2",
+    "1"
+   ],
+   "why": "The antiderivative is x/2 − (sin 2x)/4. At π/2 it equals π/4 − 0, and at 0 it equals 0, so the value is π/4. The value π/2 comes from forgetting the factor 1/2 in the identity.",
+   "clue": "Write sin²x as (1 − cos 2x)/2 before you integrate."
+  }
+ },
+ "cleared_by": "checker"
+}

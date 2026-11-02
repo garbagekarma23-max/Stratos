@@ -1,0 +1,138 @@
+{
+ "id": "mat-arc-length-surface-area",
+ "title": "Arc length and surface area",
+ "brief": "1538947cfb7d",
+ "shortlist": [
+  [
+   "mat-areas-under-curves",
+   0.41
+  ],
+  [
+   "mat-area-between-two-curves",
+   0.407
+  ],
+  [
+   "mat-scaling-area-volume",
+   0.316
+  ],
+  [
+   "mat-arcs-sectors",
+   0.314
+  ],
+  [
+   "mat-surface-area-volume",
+   0.274
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00578,
+  "check": 0.01504
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teach arc length of a parametric curve or the surface area of a solid of revolution by integration; the closest, arcs and sectors, covers only circular arc length with rθ at Year 11 depth, and the others cover signed area, area between curves, scaling, and prism surface area.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Arc length and surface area",
+  "card": [
+   "A curve given by x = x(t) and y = y(t), for a ≤ t ≤ b, has length L = ∫ √((dx/dt)² + (dy/dt)²) dt, from t = a to t = b. The root comes from Pythagoras on a tiny piece of the curve.",
+   "If the curve is y = f(x), use L = ∫ √(1 + (dy/dx)²) dx, from x = a to x = b.",
+   "Rotating the curve y = f(x) about the x-axis makes a surface. Its area is S = 2π ∫ y √(1 + (dy/dx)²) dx. Each tiny piece of length is spun around a circle of circumference 2πy.",
+   "Example: x = t², y = 2t for 0 ≤ t ≤ 1 gives dx/dt = 2t and dy/dt = 2. So L = ∫ √(4t² + 4) dt = 2∫ √(t² + 1) dt, from t = 0 to t = 1."
+  ],
+  "remember": "Length adds up tiny pieces √(dx² + dy²). Surface area multiplies each piece by 2πy.",
+  "a": {
+   "q": "A curve has x = 3t and y = 4t for 0 ≤ t ≤ 2. Using the arc length formula, what is its length?",
+   "opts": [
+    "10",
+    "14",
+    "5",
+    "50"
+   ],
+   "why": "dx/dt = 3 and dy/dt = 4, so the integrand is √(9 + 16) = 5. Then L = 5 × 2 = 10. Answer 5 forgets to integrate over the interval of length 2.",
+   "clue": "The integrand is constant, so multiply it by the length of the t interval."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = 2x for 0 ≤ x ≤ 1 is rotated about the x-axis. What is the surface area, using S = 2π ∫ y √(1 + (dy/dx)²) dx?",
+   "opts": [
+    "2π√5",
+    "4π√5",
+    "2π",
+    "4π"
+   ],
+   "why": "dy/dx = 2, so √(1 + 4) = √5. Then S = 2π ∫ 2x√5 dx = 2π√5 × [x²] from 0 to 1 = 2π√5. Answer 4π√5 forgets that the integral of 2x is x², not 2x². Answer 4π leaves out the √5 factor.",
+   "clue": "Put y = 2x into the integrand, and keep the factor √(1 + (dy/dx)²)."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "10",
+   "also_right": []
+  },
+  "b": {
+   "best": "2π√5",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The formulas, the worked example and both intended answers (10 and 2π√5, which matches the cone lateral area πrl = π·2·√5) are correct."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Arc length and surface area",
+  "card": [
+   "A curve given by x = x(t) and y = y(t), for a ≤ t ≤ b, has length L = ∫ √((dx/dt)² + (dy/dt)²) dt, from t = a to t = b. The root comes from Pythagoras on a tiny piece of the curve.",
+   "If the curve is y = f(x), use L = ∫ √(1 + (dy/dx)²) dx, from x = a to x = b.",
+   "Rotating the curve y = f(x) about the x-axis makes a surface. Its area is S = 2π ∫ y √(1 + (dy/dx)²) dx. Each tiny piece of length is spun around a circle of circumference 2πy.",
+   "Example: x = t², y = 2t for 0 ≤ t ≤ 1 gives dx/dt = 2t and dy/dt = 2. So L = ∫ √(4t² + 4) dt = 2∫ √(t² + 1) dt, from t = 0 to t = 1."
+  ],
+  "remember": "Length adds up tiny pieces √(dx² + dy²). Surface area multiplies each piece by 2πy.",
+  "a": {
+   "q": "A curve has x = 3t and y = 4t for 0 ≤ t ≤ 2. Using the arc length formula, what is its length?",
+   "opts": [
+    "10",
+    "14",
+    "5",
+    "50"
+   ],
+   "why": "dx/dt = 3 and dy/dt = 4, so the integrand is √(9 + 16) = 5. Then L = 5 × 2 = 10. Answer 5 forgets to integrate over the interval of length 2.",
+   "clue": "The integrand is constant, so multiply it by the length of the t interval."
+  },
+  "b": {
+   "d": 3,
+   "q": "The line y = 2x for 0 ≤ x ≤ 1 is rotated about the x-axis. What is the surface area, using S = 2π ∫ y √(1 + (dy/dx)²) dx?",
+   "opts": [
+    "2π√5",
+    "4π√5",
+    "2π",
+    "4π"
+   ],
+   "why": "dy/dx = 2, so √(1 + 4) = √5. Then S = 2π ∫ 2x√5 dx = 2π√5 × [x²] from 0 to 1 = 2π√5. Answer 4π√5 forgets that the integral of 2x is x², not 2x². Answer 4π leaves out the √5 factor.",
+   "clue": "Put y = 2x into the integrand, and keep the factor √(1 + (dy/dx)²)."
+  }
+ },
+ "cleared_by": "checker"
+}

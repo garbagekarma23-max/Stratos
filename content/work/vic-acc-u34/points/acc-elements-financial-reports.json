@@ -1,0 +1,256 @@
+{
+ "id": "acc-elements-financial-reports",
+ "title": "Elements of financial reports",
+ "brief": "a95c5f528c96",
+ "shortlist": [
+  [
+   "acc-assets-liabilities-owner-s",
+   0.417
+  ],
+  [
+   "acc-current-non-current-items",
+   0.412
+  ],
+  [
+   "acc-accounting-equation",
+   0.341
+  ],
+  [
+   "acc-accounting-decisions-assets",
+   0.332
+  ],
+  [
+   "acc-cost-non-current-asset",
+   0.314
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: done",
+  "2026-11-01T15:05:23Z check: flagged",
+  "2026-11-01T15:14:43Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00022,
+  "write": 0.00573,
+  "check": 0.01614,
+  "fix": 0.03429,
+  "recheck": 0.01348
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers the whole brief: the closest, acc-assets-liabilities-owner-s, defines assets, liabilities and equity but not revenue and expenses, and acc-current-non-current-items covers only the current/non-current split, so adding the missing parts would be a new teaching step rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Elements of financial reports",
+  "card": [
+   [
+    "Asset",
+    "a resource the business controls that is expected to bring future benefits, such as cash, inventory or equipment."
+   ],
+   [
+    "Liability",
+    "an amount the business owes to others as a result of past events, such as a loan or accounts payable."
+   ],
+   [
+    "Owner's equity",
+    "what is left for the owner after liabilities are taken from assets. Revenue is income earned from trading. Expenses are costs of earning it."
+   ],
+   "Assets and liabilities are split into current (expected to be used, sold or paid within 12 months) and non-current (longer than 12 months)."
+  ],
+  "remember": "Assets minus liabilities is owner's equity. Current means within 12 months, non-current means longer.",
+  "a": {
+   "q": "A business owes a supplier $4,000, due in 30 days. How is this classified?",
+   "opts": [
+    "Current liability",
+    "Non-current liability",
+    "Current asset",
+    "Expense"
+   ],
+   "why": "It is an amount owed, so it is a liability. It is due within 12 months, so it is current. A non-current liability would be due after more than 12 months.",
+   "clue": "Does the business owe it or own it, and when is it due?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Tom's Cycles in Ballarat buys a delivery van it expects to use for five years. How is the van classified?",
+   "opts": [
+    "Non-current asset",
+    "Current asset",
+    "Non-current liability",
+    "Expense"
+   ],
+   "why": "The van is a resource that will bring benefits over several years, so it is a non-current asset. It is not a current asset because it will not be used up or sold within 12 months.",
+   "clue": "How long will the business keep using the van?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Current liability",
+   "also_right": []
+  },
+  "b": {
+   "best": "Non-current asset",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Revenue is defined as 'income earned from trading', which is too narrow for the VCE definition. Revenue is an inflow of economic benefits (an increase in assets or decrease in liabilities) that increases owner's equity, other than capital contributions, and it includes non-trading items such as interest or rent received. Students could wrongly treat interest revenue as not revenue."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Expenses are defined only as 'costs of earning it'. The VCE definition is an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. The card's wording is too vague for students to classify items, which this point says it should allow, and it does not separate expenses from assets bought to earn revenue."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, with one clear answer each: a current liability, and a non-current asset. The card's definitions of revenue ('income earned from trading') and expenses ('costs of earning it') are looser than the VCE Study Design definitions, and the revenue one leaves out non-trading revenue, so they should be tightened."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: Revenue is defined as 'income earned from trading', which is too narrow for the VCE definition. Revenue is an inflow of economic benefits (an increase in assets or decrease in liabilities) that increases owner's equity, other than capital contributions, and it includes non-trading items such as interest or rent received. Students could wrongly treat interest revenue as not revenue.",
+  "Card, fact: Expenses are defined only as 'costs of earning it'. The VCE definition is an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. The card's wording is too vague for students to classify items, which this point says it should allow, and it does not separate expenses from assets bought to earn revenue."
+ ],
+ "proposal": {
+  "title": "Elements of financial reports",
+  "card": [
+   "An asset is a resource the business controls that is expected to bring future economic benefits, such as cash or equipment. A liability is a present obligation to give up economic benefits, such as a loan or accounts payable.",
+   "Assets and liabilities are current if expected to be used, sold or paid within 12 months, and non-current if longer. Owner's equity is the owner's claim: assets minus liabilities.",
+   [
+    "Revenue",
+    "an inflow of economic benefits, as an increase in assets or a decrease in liabilities, that increases owner's equity, other than capital contributions. It includes non-trading items such as interest or rent received."
+   ],
+   [
+    "Expense",
+    "an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. Buying equipment is not an expense: cash becomes another asset, so equity does not change."
+   ]
+  ],
+  "remember": "Revenue raises owner's equity and expenses lower it. Current means within 12 months, non-current means longer.",
+  "a": {
+   "q": "A business owes a supplier $4,000, due in 30 days. How is this classified?",
+   "opts": [
+    "Current liability",
+    "Non-current liability",
+    "Current asset",
+    "Expense"
+   ],
+   "why": "It is an amount owed, so it is a liability. It is due within 12 months, so it is current. A non-current liability would be due after more than 12 months.",
+   "clue": "Does the business owe it or own it, and when is it due?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's Florist in Geelong earns $300 interest on its business bank account. How should the interest be classified?",
+   "opts": [
+    "Revenue, as it increases owner's equity",
+    "Not revenue, as it does not come from sales",
+    "A capital contribution, as it adds to equity",
+    "A current liability owed to the bank"
+   ],
+   "why": "The interest is an inflow of economic benefits that increases owner's equity, and it did not come from the owner, so it is revenue. Revenue is not limited to sales, so the claim that it is not revenue is wrong.",
+   "clue": "Revenue is not only income from selling goods."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Current liability",
+    "also_right": []
+   },
+   "b": {
+    "best": "Revenue, as it increases owner's equity",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The definitions match the VCE study design, and both questions have one clear right answer that the card supports."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 17,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Revenue is defined as 'income earned from trading', which is too narrow for the VCE definition. Revenue is an inflow of economic benefits (an increase in assets or decrease in liabilities) that increases owner's equity, other than capital contributions, and it includes non-trading items such as interest or rent received. Students could wrongly treat interest revenue as not revenue."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "Expenses are defined only as 'costs of earning it'. The VCE definition is an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. The card's wording is too vague for students to classify items, which this point says it should allow, and it does not separate expenses from assets bought to earn revenue."
+   }
+  ],
+  "flags": [
+   "Card, fact: Revenue is defined as 'income earned from trading', which is too narrow for the VCE definition. Revenue is an inflow of economic benefits (an increase in assets or decrease in liabilities) that increases owner's equity, other than capital contributions, and it includes non-trading items such as interest or rent received. Students could wrongly treat interest revenue as not revenue.",
+   "Card, fact: Expenses are defined only as 'costs of earning it'. The VCE definition is an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. The card's wording is too vague for students to classify items, which this point says it should allow, and it does not separate expenses from assets bought to earn revenue."
+  ]
+ },
+ "final": {
+  "title": "Elements of financial reports",
+  "card": [
+   "An asset is a resource the business controls that is expected to bring future economic benefits, such as cash or equipment. A liability is a present obligation to give up economic benefits, such as a loan or accounts payable.",
+   "Assets and liabilities are current if expected to be used, sold or paid within 12 months, and non-current if longer. Owner's equity is the owner's claim: assets minus liabilities.",
+   [
+    "Revenue",
+    "an inflow of economic benefits, as an increase in assets or a decrease in liabilities, that increases owner's equity, other than capital contributions. It includes non-trading items such as interest or rent received."
+   ],
+   [
+    "Expense",
+    "an outflow or using up of assets, or an increase in liabilities, that decreases owner's equity, other than drawings. Buying equipment is not an expense: cash becomes another asset, so equity does not change."
+   ]
+  ],
+  "remember": "Revenue raises owner's equity and expenses lower it. Current means within 12 months, non-current means longer.",
+  "a": {
+   "q": "A business owes a supplier $4,000, due in 30 days. How is this classified?",
+   "opts": [
+    "Current liability",
+    "Non-current liability",
+    "Current asset",
+    "Expense"
+   ],
+   "why": "It is an amount owed, so it is a liability. It is due within 12 months, so it is current. A non-current liability would be due after more than 12 months.",
+   "clue": "Does the business owe it or own it, and when is it due?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena's Florist in Geelong earns $300 interest on its business bank account. How should the interest be classified?",
+   "opts": [
+    "Revenue, as it increases owner's equity",
+    "Not revenue, as it does not come from sales",
+    "A capital contribution, as it adds to equity",
+    "A current liability owed to the bank"
+   ],
+   "why": "The interest is an inflow of economic benefits that increases owner's equity, and it did not come from the owner, so it is revenue. Revenue is not limited to sales, so the claim that it is not revenue is wrong.",
+   "clue": "Revenue is not only income from selling goods."
+  }
+ },
+ "cleared_by": "recheck"
+}

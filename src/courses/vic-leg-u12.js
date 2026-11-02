@@ -18,32 +18,126 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: The presumption of innocence",
       "chapters": [
-        {"id": "vic-leg-u12-1-1", "title": "Legal foundations", "check": "checked", "points": []},
-        {"id": "vic-leg-u12-1-2", "title": "Criminal law concepts", "check": "checked", "points": []},
-        {"id": "vic-leg-u12-1-3-2", "title": "Crimes and defences", "check": "checked", "points": []},
+        {
+          "id": "vic-leg-u12-1-1",
+          "title": "Legal foundations",
+          "check": "checked",
+          "points": [
+            "leg-role-laws",
+            "leg-principles-justice",
+            "leg-characteristics-effective-law",
+            "leg-parliament-courts",
+            "leg-sources-law",
+            "leg-victorian-court-hierarchy",
+            "leg-criminal-civil-law-2"
+          ]
+        },
+        {
+          "id": "vic-leg-u12-1-2",
+          "title": "Criminal law concepts",
+          "check": "checked",
+          "points": [
+            "leg-purposes-criminal-law",
+            "leg-presumption-innocence",
+            "leg-burden-standard-proof-criminal",
+            "leg-actus-reus-mens-rea",
+            "leg-strict-liability-offences",
+            "leg-age-criminal-responsibility"
+          ]
+        },
+        {
+          "id": "vic-leg-u12-1-3-2",
+          "title": "Crimes and defences",
+          "check": "checked",
+          "points": [
+            "leg-summary-indictable-offences-2",
+            "leg-participants-crime",
+            "leg-offence-against-person",
+            "leg-offence-against-property",
+            "leg-defences-criminal-charges",
+            "leg-trends-impact-offence"
+          ]
+        },
         {"id": "vic-leg-u12-1-4", "title": "The criminal justice system", "check": "checked", "points": []},
-        {"id": "vic-leg-u12-1-3", "title": "Sentencing", "check": "checked", "points": []}
+        {
+          "id": "vic-leg-u12-1-3",
+          "title": "Sentencing",
+          "check": "checked",
+          "points": [
+            "leg-purposes-sanctions",
+            "leg-fines",
+            "leg-community-correction-orders",
+            "leg-imprisonment",
+            "leg-aggravating-mitigating-factors",
+            "leg-alternative-approaches-sentencing",
+            "leg-sentencing-another-state"
+          ]
+        }
       ]
     },
     {
       "title": "Unit 2: Wrongs and rights",
       "chapters": [
-        {"id": "vic-leg-u12-2-1", "title": "Civil law concepts", "check": "checked", "points": []},
+        {
+          "id": "vic-leg-u12-2-1",
+          "title": "Civil law concepts",
+          "check": "checked",
+          "points": [
+            "leg-purposes-civil-law",
+            "leg-breach-causation-loss",
+            "leg-burden-standard-proof-civil",
+            "leg-parties-civil-dispute",
+            "leg-limitation-actions"
+          ]
+        },
         {
           "id": "vic-leg-u12-2-2-2",
           "title": "Two areas of civil law",
           "check": "checked",
           "points": ["leg-negligence", "leg-defences-negligence", "leg-defamation", "leg-impact-civil-wrong"]
         },
-        {"id": "vic-leg-u12-2-3-2", "title": "Resolving civil disputes", "check": "checked", "points": []},
+        {
+          "id": "vic-leg-u12-2-3-2",
+          "title": "Resolving civil disputes",
+          "check": "checked",
+          "points": [
+            "leg-justice-civil-disputes",
+            "leg-ways-settling-civil-disputes",
+            "leg-bodies-that-settle-disputes",
+            "leg-courts-civil-disputes",
+            "leg-jury-civil-trial",
+            "leg-groups-facing-difficulties-civil"
+          ]
+        },
         {
           "id": "vic-leg-u12-2-2",
           "title": "Remedies",
           "check": "checked",
           "points": ["leg-purposes-remedies", "leg-compensatory-damages", "leg-other-kinds-damages", "leg-injunctions"]
         },
-        {"id": "vic-leg-u12-2-3", "title": "Human rights", "check": "checked", "points": []},
-        {"id": "vic-leg-u12-2-6", "title": "A human rights issue", "check": "checked", "points": []}
+        {
+          "id": "vic-leg-u12-2-3",
+          "title": "Human rights",
+          "check": "checked",
+          "points": [
+            "leg-human-rights-are-2",
+            "leg-rights-australian-constitution",
+            "leg-rights-statute-common-law",
+            "leg-victorian-charter-human-rights",
+            "leg-australia-international-rights"
+          ]
+        },
+        {
+          "id": "vic-leg-u12-2-6",
+          "title": "A human rights issue",
+          "check": "checked",
+          "points": [
+            "leg-studying-human-rights-issue",
+            "leg-conflicting-attitudes-right",
+            "leg-reforming-rights-protection",
+            "leg-people-who-changed-rights"
+          ]
+        }
       ]
     }
   ]

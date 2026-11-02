@@ -1,0 +1,72 @@
+{
+ "id": "mat-reducing-balance-depreciation",
+ "title": "Reducing balance depreciation",
+ "brief": "e392fda19ebc",
+ "shortlist": [
+  [
+   "mat-declining-balance-depreciation",
+   0.425
+  ],
+  [
+   "mat-reducing-balance-loans",
+   0.373
+  ],
+  [
+   "mat-exponential-models",
+   0.258
+  ],
+  [
+   "acc-depreciation",
+   0.232
+  ],
+  [
+   "acc-reducing-balance-depreciation",
+   0.23
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 may adapt mat-declining-balance-depreciation, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 may adapt mat-declining-balance-depreciation, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:23:10Z review: reusing mat-declining-balance-depreciation"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00043,
+  "confirm": 0.01313
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-declining-balance-depreciation",
+  "changes": [
+   "Replace the term 'salvage value' with the asset's value after n years, the term the VCE General Mathematics study design uses for this idea.",
+   "Add the recurrence form V(n) = V(n-1) × (1 − r), since VCE General Mathematics expects students to model depreciation with recurrence relations as well as the closed form."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same reducing balance decay idea at a suitable depth and its questions are correct, but its terms and notation should be adjusted to match the VCE General Mathematics study design.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-declining-balance-depreciation",
+  "changes": [
+   "Rename 'declining balance depreciation' to 'reducing balance depreciation' throughout, including in Question b, since that is the VCE term.",
+   "Write the rule in VCE notation, V_n = R^n × V_0 with R = 1 − r/100, in place of S = V₀(1 − r)ⁿ, and describe V_n as the value after n periods rather than the salvage value.",
+   "Note that the rule matches the VCE recurrence relation V_0 = starting value, V_{n+1} = R × V_n, so students can link it to their syllabus."
+  ],
+  "sure": "medium",
+  "reason": "The NSW card teaches the same fixed-percentage depreciation at Year 12 depth, but it needs VCE's term 'reducing balance' and its V_n = R^n V_0 and recurrence notation.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-declining-balance-depreciation",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-declining-balance-depreciation",
+  "by": "owner",
+  "at": "2026-11-02T06:23:10Z"
+ }
+}

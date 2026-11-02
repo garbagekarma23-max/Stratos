@@ -1,0 +1,221 @@
+{
+ "id": "bio-recombinant-plasmids",
+ "title": "Recombinant plasmids",
+ "brief": "26b2e3c6ff2b",
+ "shortlist": [
+  [
+   "bio-recombinant-dna-transgenic-organisms",
+   0.379
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 may adapt bio-recombinant-dna-transgenic-organisms, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00031,
+  "confirm": 0.0065,
+  "write": 0.00575,
+  "check": 0.01724,
+  "fix": 0.02978,
+  "recheck": 0.01292
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bio-recombinant-dna-transgenic-organisms",
+  "changes": [
+   "Use the term transformation for the step where the plasmid is taken up by the bacteria, since the brief and the VCE use that term, instead of the general phrase carries the gene into the host cell.",
+   "Check whether question a, about transgenic organisms, suits this point, since it tests the transgenic definition rather than making a recombinant plasmid and transforming bacteria."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same cut, join, plasmid and bacteria idea at a suitable depth, but it needs the transformation term and its transgenic question may not match the brief.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point is broader, covering recombinant DNA and transgenic organisms in general, and it never teaches transformation, the step that puts the plasmid into bacteria; adding that step would go beyond a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Recombinant plasmids",
+  "card": [
+   "A plasmid is a small, circular piece of DNA in bacteria, separate from the main chromosome. Scientists use plasmids as vectors, which carry a gene into a host cell.",
+   "The gene and the plasmid are cut with the same restriction enzyme, so their ends match. DNA ligase joins the gene into the plasmid. The result is a recombinant plasmid.",
+   "The recombinant plasmid is put into bacteria by transformation, which is the uptake of DNA by a cell. Only some cells take it up.",
+   "Plasmids often carry an antibiotic resistance gene as a marker. Bacteria grown on that antibiotic survive only if they took up the plasmid. These bacteria can then make the protein the inserted gene codes for."
+  ],
+  "remember": "Cut the gene and plasmid to match, join them, transform bacteria, then select the bacteria that took it up.",
+  "a": {
+   "q": "Why are the gene and the plasmid cut with the same restriction enzyme?",
+   "opts": [
+    "So that their cut ends match and can be joined",
+    "So that the plasmid can copy itself inside bacteria",
+    "So that the bacteria can take up the DNA faster",
+    "So that the gene can be switched on in the plasmid"
+   ],
+   "why": "The same enzyme leaves matching ends on the gene and the plasmid, so ligase can join them. The enzyme does not make the plasmid copy itself or help bacteria take up DNA. Transformation is a separate step.",
+   "clue": "Think about what ligase needs to join two pieces."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen inserts a human gene into plasmids that carry an antibiotic resistance gene. She adds the plasmids to bacteria, then spreads the bacteria on agar containing that antibiotic. Why do only some bacteria grow?",
+   "opts": [
+    "Only those that took up a plasmid are resistant",
+    "Only those that made the human protein are resistant",
+    "Only those with a cut chromosome are resistant",
+    "Only those that were not transformed are resistant"
+   ],
+   "why": "The resistance gene is on the plasmid, so bacteria that took it up can survive the antibiotic. The plasmid in a surviving cell may be recombinant or not, but resistance comes from having the plasmid. Making the human protein is not what protects the cell.",
+   "clue": "Where is the resistance gene found?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "So that their cut ends match and can be joined",
+   "also_right": []
+  },
+  "b": {
+   "best": "Only those that took up a plasmid are resistant",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"These bacteria can then make the protein the inserted gene codes for\" implies every bacterium that survives the antibiotic carries the inserted gene. Some survivors take up a plasmid that closed without the gene and cannot make the protein. Why (b) says this correctly, so the card and the why disagree."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and each has one clear answer. The card's last sentence suggests every surviving bacterium has the inserted gene, when some may carry a plasmid without it. Reword it to match why (b)."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"These bacteria can then make the protein the inserted gene codes for\" implies every bacterium that survives the antibiotic carries the inserted gene. Some survivors take up a plasmid that closed without the gene and cannot make the protein. Why (b) says this correctly, so the card and the why disagree."
+ ],
+ "proposal": {
+  "title": "Recombinant plasmids",
+  "card": [
+   "A plasmid is a small, circular piece of DNA in bacteria, separate from the main chromosome. Scientists use plasmids as vectors, which carry a gene into a host cell.",
+   "The gene and the plasmid are cut with the same restriction enzyme, so their ends match. DNA ligase joins the gene into the plasmid. The result is a recombinant plasmid.",
+   "Plasmids are put into bacteria by transformation, which is the uptake of DNA by a cell. Only some cells take up a plasmid, and some plasmids close up again without the gene.",
+   "Plasmids often carry an antibiotic resistance gene as a marker, so only bacteria with a plasmid survive on that antibiotic. Of these, the ones whose plasmid holds the inserted gene can make the protein it codes for."
+  ],
+  "remember": "Cut the gene and plasmid to match, join them, transform bacteria, then select the bacteria that took up a plasmid.",
+  "a": {
+   "q": "Why are the gene and the plasmid cut with the same restriction enzyme?",
+   "opts": [
+    "So that their cut ends match and can be joined",
+    "So that the plasmid can copy itself inside bacteria",
+    "So that the bacteria can take up the DNA faster",
+    "So that the gene can be switched on in the plasmid"
+   ],
+   "why": "The same enzyme leaves matching ends on the gene and the plasmid, so ligase can join them. The enzyme does not make the plasmid copy itself or help bacteria take up DNA. Transformation is a separate step.",
+   "clue": "Think about what ligase needs to join two pieces."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen inserts a human gene into plasmids that carry an antibiotic resistance gene. She adds the plasmids to bacteria, then spreads the bacteria on agar containing that antibiotic. Why do only some bacteria grow?",
+   "opts": [
+    "Only those that took up a plasmid are resistant",
+    "Only those that made the human protein are resistant",
+    "Only those with a cut chromosome are resistant",
+    "Only those that were not transformed are resistant"
+   ],
+   "why": "The resistance gene is on the plasmid, so bacteria that took it up can survive the antibiotic. The plasmid in a surviving cell may be recombinant or not, but resistance comes from having the plasmid. Making the human protein is not what protects the cell.",
+   "clue": "Where is the resistance gene found?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "So that their cut ends match and can be joined",
+    "also_right": []
+   },
+   "b": {
+    "best": "Only those that took up a plasmid are resistant",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 9,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"These bacteria can then make the protein the inserted gene codes for\" implies every bacterium that survives the antibiotic carries the inserted gene. Some survivors take up a plasmid that closed without the gene and cannot make the protein. Why (b) says this correctly, so the card and the why disagree."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"These bacteria can then make the protein the inserted gene codes for\" implies every bacterium that survives the antibiotic carries the inserted gene. Some survivors take up a plasmid that closed without the gene and cannot make the protein. Why (b) says this correctly, so the card and the why disagree."
+  ]
+ },
+ "final": {
+  "title": "Recombinant plasmids",
+  "card": [
+   "A plasmid is a small, circular piece of DNA in bacteria, separate from the main chromosome. Scientists use plasmids as vectors, which carry a gene into a host cell.",
+   "The gene and the plasmid are cut with the same restriction enzyme, so their ends match. DNA ligase joins the gene into the plasmid. The result is a recombinant plasmid.",
+   "Plasmids are put into bacteria by transformation, which is the uptake of DNA by a cell. Only some cells take up a plasmid, and some plasmids close up again without the gene.",
+   "Plasmids often carry an antibiotic resistance gene as a marker, so only bacteria with a plasmid survive on that antibiotic. Of these, the ones whose plasmid holds the inserted gene can make the protein it codes for."
+  ],
+  "remember": "Cut the gene and plasmid to match, join them, transform bacteria, then select the bacteria that took up a plasmid.",
+  "a": {
+   "q": "Why are the gene and the plasmid cut with the same restriction enzyme?",
+   "opts": [
+    "So that their cut ends match and can be joined",
+    "So that the plasmid can copy itself inside bacteria",
+    "So that the bacteria can take up the DNA faster",
+    "So that the gene can be switched on in the plasmid"
+   ],
+   "why": "The same enzyme leaves matching ends on the gene and the plasmid, so ligase can join them. The enzyme does not make the plasmid copy itself or help bacteria take up DNA. Transformation is a separate step.",
+   "clue": "Think about what ligase needs to join two pieces."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dr Nguyen inserts a human gene into plasmids that carry an antibiotic resistance gene. She adds the plasmids to bacteria, then spreads the bacteria on agar containing that antibiotic. Why do only some bacteria grow?",
+   "opts": [
+    "Only those that took up a plasmid are resistant",
+    "Only those that made the human protein are resistant",
+    "Only those with a cut chromosome are resistant",
+    "Only those that were not transformed are resistant"
+   ],
+   "why": "The resistance gene is on the plasmid, so bacteria that took it up can survive the antibiotic. The plasmid in a surviving cell may be recombinant or not, but resistance comes from having the plasmid. Making the human protein is not what protects the cell.",
+   "clue": "Where is the resistance gene found?"
+  }
+ },
+ "cleared_by": "recheck"
+}

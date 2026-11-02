@@ -1,0 +1,146 @@
+{
+ "id": "mat-features-time-series",
+ "title": "Features of a time series",
+ "brief": "adb5f8b34e32",
+ "shortlist": [
+  [
+   "mat-geometric-series",
+   0.285
+  ],
+  [
+   "mat-annuities-as-geometric-series",
+   0.28
+  ],
+  [
+   "mat-arithmetic-series",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00578,
+  "check": 0.0111
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points covers describing the features of a time series plot (trend, seasonality, cycles, irregular fluctuations, structural change, outliers); all three are about summing series and annuities, which is a different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Features of a time series",
+  "card": [
+   "A time series is data recorded over time, plotted with time on the horizontal axis. We look at the plot for patterns.",
+   [
+    "Trend",
+    "a long-term rise or fall in the values. Seasonality is a pattern that repeats at a fixed, known period, such as every year or every week."
+   ],
+   [
+    "Cycles",
+    "rises and falls that repeat, but not at a fixed period, so their timing cannot be predicted exactly. Irregular fluctuations are random ups and downs with no pattern."
+   ],
+   [
+    "Other features",
+    "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
+   ]
+  ],
+  "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
+  "a": {
+   "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
+   "opts": [
+    "Seasonality",
+    "A cycle",
+    "Structural change",
+    "An outlier"
+   ],
+   "why": "The peaks come at the same time each year, which is a fixed period, so this is seasonality. It is not a cycle, because a cycle has no fixed period.",
+   "clue": "Look at whether the pattern repeats on a fixed schedule."
+  },
+  "b": {
+   "d": 3,
+   "q": "Monthly visitors to a Bendigo museum were steady for years. After a new wing opened, they jumped by about 30% and stayed there. Which feature is this?",
+   "opts": [
+    "Structural change",
+    "An outlier",
+    "Seasonality",
+    "Irregular fluctuation"
+   ],
+   "why": "The values shifted suddenly and stayed at the new level, which is structural change. An outlier is a single value far from the rest, so it is the tempting wrong answer, but here the shift lasted.",
+   "clue": "Does the change last, or is it only one point?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Seasonality",
+   "also_right": []
+  },
+  "b": {
+   "best": "Structural change",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Features of a time series",
+  "card": [
+   "A time series is data recorded over time, plotted with time on the horizontal axis. We look at the plot for patterns.",
+   [
+    "Trend",
+    "a long-term rise or fall in the values. Seasonality is a pattern that repeats at a fixed, known period, such as every year or every week."
+   ],
+   [
+    "Cycles",
+    "rises and falls that repeat, but not at a fixed period, so their timing cannot be predicted exactly. Irregular fluctuations are random ups and downs with no pattern."
+   ],
+   [
+    "Other features",
+    "Structural change is a sudden, lasting shift, such as a new road changing visitor numbers for good. An outlier is a single value far from the rest."
+   ]
+  ],
+  "remember": "Trend is long-term, seasonality repeats on a fixed period, and a cycle repeats without one.",
+  "a": {
+   "q": "Ice cream sales at a kiosk in Geelong peak every summer and drop every winter, year after year. Which feature is this?",
+   "opts": [
+    "Seasonality",
+    "A cycle",
+    "Structural change",
+    "An outlier"
+   ],
+   "why": "The peaks come at the same time each year, which is a fixed period, so this is seasonality. It is not a cycle, because a cycle has no fixed period.",
+   "clue": "Look at whether the pattern repeats on a fixed schedule."
+  },
+  "b": {
+   "d": 3,
+   "q": "Monthly visitors to a Bendigo museum were steady for years. After a new wing opened, they jumped by about 30% and stayed there. Which feature is this?",
+   "opts": [
+    "Structural change",
+    "An outlier",
+    "Seasonality",
+    "Irregular fluctuation"
+   ],
+   "why": "The values shifted suddenly and stayed at the new level, which is structural change. An outlier is a single value far from the rest, so it is the tempting wrong answer, but here the shift lasted.",
+   "clue": "Does the change last, or is it only one point?"
+  }
+ },
+ "cleared_by": "checker"
+}

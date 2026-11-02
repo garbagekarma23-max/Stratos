@@ -1,0 +1,267 @@
+{
+ "id": "phys-electric-fields-2",
+ "title": "Electric fields",
+ "brief": "54ae5ccf599b",
+ "shortlist": [
+  [
+   "phys-charges-electric-fields",
+   0.637
+  ],
+  [
+   "phys-charges-magnetic-fields",
+   0.531
+  ],
+  [
+   "phys-gravitational-field-strength",
+   0.461
+  ],
+  [
+   "phys-magnetic-flux",
+   0.42
+  ],
+  [
+   "phys-force-current-carrying-wire",
+   0.378
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:49Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.00542,
+  "check": 0.01361,
+  "fix": 0.02256,
+  "recheck": 0.0144
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest card, phys-charges-electric-fields, covers only the uniform field between plates and F=qE, but the new point also needs the inverse-square field of a point charge and the W=qV work relation, which no bank card teaches, so it is broader and needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Electric fields",
+  "card": [
+   "A charge creates an electric field around it. The field strength E is the force per unit of positive charge, so F = qE. The force on a positive charge is along the field, and on a negative charge it is opposite.",
+   [
+    "Point charge",
+    "The field of a point charge Q is E = kQ/r². It weakens with the inverse square of distance, so doubling the distance cuts E to a quarter. Field lines point away from a positive charge and towards a negative one."
+   ],
+   [
+    "Uniform field",
+    "Two parallel plates with a potential difference V and separation d make a uniform field between them, E = V/d. The field has the same strength and direction everywhere between the plates, so a charge feels a constant force and accelerates steadily."
+   ],
+   "Moving a charge q through a potential difference V changes its energy by W = qV. If only the field acts on it, this work becomes kinetic energy."
+  ],
+  "remember": "Force on a charge is F = qE. A point charge's field follows 1/r², and a charge crossing a potential difference V gains qV of energy.",
+  "a": {
+   "q": "The distance from a point charge is tripled. What happens to the strength of its electric field?",
+   "opts": [
+    "It falls to one ninth",
+    "It falls to one third",
+    "It falls to one sixth",
+    "It rises to nine times"
+   ],
+   "why": "E = kQ/r², so tripling r divides E by 3², which is 9. One third is the tempting answer, but it treats the field as falling in direct proportion to distance, and the card says it follows the inverse square.",
+   "clue": "Field strength depends on r squared."
+  },
+  "b": {
+   "d": 3,
+   "q": "An electron starts at rest at the negative plate of a uniform field and moves across to the positive plate. The potential difference is 500 V. How is the electron's energy change found, and what happens to its speed?",
+   "opts": [
+    "It gains 500 e of energy, so its speed increases",
+    "It gains 500 e of energy, so its speed stays constant",
+    "It loses 500 e of energy, so its speed decreases",
+    "It gains energy only if the plates are close together"
+   ],
+   "why": "W = qV, so the electron gains energy equal to its charge times 500 V. This becomes kinetic energy, so it speeds up. The field is uniform, so the force is constant, and the electron accelerates steadily. The gain depends on V, not on how far apart the plates are.",
+   "clue": "Work done by the field becomes kinetic energy."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It falls to one ninth",
+   "also_right": []
+  },
+  "b": {
+   "best": "It gains 500 e of energy, so its speed increases",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"500 e of energy\" is not a proper energy unit. It should be 500 eV (or 8.0 × 10⁻¹⁷ J), and Year 12 students may be confused by e written as if it were a unit."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks how the energy change is found, but no option says how it is found (W = qV). The options only state the result and the effect on speed."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says a charge crossing a potential difference V always \"gains\" qV of energy. The card says its energy \"changes\" by qV. A charge moving against the field loses kinetic energy, so the remember line overstates the card."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers are correct: one ninth for a, and gains energy and speeds up for b. Question b uses the odd unit \"500 e\" where 500 eV is meant, and its stem asks how the change is found when no option says. The remember line says the charge always gains qV, where the card says the energy changes by qV."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: \"500 e of energy\" is not a proper energy unit. It should be 500 eV (or 8.0 × 10⁻¹⁷ J), and Year 12 students may be confused by e written as if it were a unit.",
+  "Question b, wording: The stem asks how the energy change is found, but no option says how it is found (W = qV). The options only state the result and the effect on speed.",
+  "Remember, other: The remember line says a charge crossing a potential difference V always \"gains\" qV of energy. The card says its energy \"changes\" by qV. A charge moving against the field loses kinetic energy, so the remember line overstates the card."
+ ],
+ "proposal": {
+  "title": "Electric fields",
+  "card": [
+   "A charge creates an electric field around it. The field strength E is the force per unit of positive charge, so F = qE. The force on a positive charge is along the field, and on a negative charge it is opposite.",
+   [
+    "Point charge",
+    "The field of a point charge Q is E = kQ/r². It weakens with the inverse square of distance, so doubling the distance cuts E to a quarter. Field lines point away from a positive charge and towards a negative one."
+   ],
+   [
+    "Uniform field",
+    "Two parallel plates with a potential difference V and separation d make a uniform field between them, E = V/d. It points from the positive plate to the negative plate. A charge between the plates feels a constant force, so it accelerates steadily."
+   ],
+   "Moving a charge q through a potential difference V changes its energy by W = qV. If only the field acts, a charge moving with the force gains this as kinetic energy, and one moving against it loses kinetic energy."
+  ],
+  "remember": "Force on a charge is F = qE. A point charge's field follows 1/r², and crossing a potential difference V changes a charge's energy by qV.",
+  "a": {
+   "q": "The distance from a point charge is tripled. What happens to the strength of its electric field?",
+   "opts": [
+    "It falls to one ninth",
+    "It falls to one third",
+    "It falls to one sixth",
+    "It rises to nine times"
+   ],
+   "why": "E = kQ/r², so tripling r divides E by 3², which is 9. One third is the tempting answer, but it treats the field as falling in direct proportion to distance, and the card says it follows the inverse square.",
+   "clue": "Field strength depends on r squared."
+  },
+  "b": {
+   "d": 3,
+   "q": "An electron (charge 1.6 × 10⁻¹⁹ C) starts at rest at the negative plate and crosses to the positive plate. The potential difference is 500 V. What happens to its kinetic energy and speed?",
+   "opts": [
+    "It gains 8.0 × 10⁻¹⁷ J, and its speed increases steadily",
+    "It gains 8.0 × 10⁻¹⁷ J, and its speed stays constant",
+    "It loses 8.0 × 10⁻¹⁷ J, and its speed decreases",
+    "It gains 3.2 × 10⁻²² J, and its speed increases steadily"
+   ],
+   "why": "The force on the electron points opposite the field, towards the positive plate, so it moves with the force and gains W = qV = 1.6 × 10⁻¹⁹ × 500 = 8.0 × 10⁻¹⁷ J of kinetic energy. The tempting constant speed option confuses a constant force with a constant speed: in a uniform field the constant force gives a steady acceleration. Dividing q by V gives 3.2 × 10⁻²² J, which is the wrong operation.",
+   "clue": "Which way does the force on a negative charge point?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "It falls to one ninth",
+    "also_right": []
+   },
+   "b": {
+    "best": "It gains 8.0 × 10⁻¹⁷ J, and its speed increases steadily",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 15,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "\"500 e of energy\" is not a proper energy unit. It should be 500 eV (or 8.0 × 10⁻¹⁷ J), and Year 12 students may be confused by e written as if it were a unit."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The stem asks how the energy change is found, but no option says how it is found (W = qV). The options only state the result and the effect on speed."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says a charge crossing a potential difference V always \"gains\" qV of energy. The card says its energy \"changes\" by qV. A charge moving against the field loses kinetic energy, so the remember line overstates the card."
+   }
+  ],
+  "flags": [
+   "Question b, wording: \"500 e of energy\" is not a proper energy unit. It should be 500 eV (or 8.0 × 10⁻¹⁷ J), and Year 12 students may be confused by e written as if it were a unit.",
+   "Question b, wording: The stem asks how the energy change is found, but no option says how it is found (W = qV). The options only state the result and the effect on speed.",
+   "Remember, other: The remember line says a charge crossing a potential difference V always \"gains\" qV of energy. The card says its energy \"changes\" by qV. A charge moving against the field loses kinetic energy, so the remember line overstates the card."
+  ]
+ },
+ "final": {
+  "title": "Electric fields",
+  "card": [
+   "A charge creates an electric field around it. The field strength E is the force per unit of positive charge, so F = qE. The force on a positive charge is along the field, and on a negative charge it is opposite.",
+   [
+    "Point charge",
+    "The field of a point charge Q is E = kQ/r². It weakens with the inverse square of distance, so doubling the distance cuts E to a quarter. Field lines point away from a positive charge and towards a negative one."
+   ],
+   [
+    "Uniform field",
+    "Two parallel plates with a potential difference V and separation d make a uniform field between them, E = V/d. It points from the positive plate to the negative plate. A charge between the plates feels a constant force, so it accelerates steadily."
+   ],
+   "Moving a charge q through a potential difference V changes its energy by W = qV. If only the field acts, a charge moving with the force gains this as kinetic energy, and one moving against it loses kinetic energy."
+  ],
+  "remember": "Force on a charge is F = qE. A point charge's field follows 1/r², and crossing a potential difference V changes a charge's energy by qV.",
+  "a": {
+   "q": "The distance from a point charge is tripled. What happens to the strength of its electric field?",
+   "opts": [
+    "It falls to one ninth",
+    "It falls to one third",
+    "It falls to one sixth",
+    "It rises to nine times"
+   ],
+   "why": "E = kQ/r², so tripling r divides E by 3², which is 9. One third is the tempting answer, but it treats the field as falling in direct proportion to distance, and the card says it follows the inverse square.",
+   "clue": "Field strength depends on r squared."
+  },
+  "b": {
+   "d": 3,
+   "q": "An electron (charge 1.6 × 10⁻¹⁹ C) starts at rest at the negative plate and crosses to the positive plate. The potential difference is 500 V. What happens to its kinetic energy and speed?",
+   "opts": [
+    "It gains 8.0 × 10⁻¹⁷ J, and its speed increases steadily",
+    "It gains 8.0 × 10⁻¹⁷ J, and its speed stays constant",
+    "It loses 8.0 × 10⁻¹⁷ J, and its speed decreases",
+    "It gains 3.2 × 10⁻²² J, and its speed increases steadily"
+   ],
+   "why": "The force on the electron points opposite the field, towards the positive plate, so it moves with the force and gains W = qV = 1.6 × 10⁻¹⁹ × 500 = 8.0 × 10⁻¹⁷ J of kinetic energy. The tempting constant speed option confuses a constant force with a constant speed: in a uniform field the constant force gives a steady acceleration. Dividing q by V gives 3.2 × 10⁻²² J, which is the wrong operation.",
+   "clue": "Which way does the force on a negative charge point?"
+  }
+ },
+ "cleared_by": "recheck"
+}

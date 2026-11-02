@@ -1,0 +1,225 @@
+{
+ "id": "mat-types-matrices",
+ "title": "Types of matrices",
+ "brief": "b0b3c7d5108b",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.346
+  ],
+  [
+   "mat-matrix-operations-specialist",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.0054,
+  "check": 0.01443,
+  "fix": 0.02926,
+  "recheck": 0.00803
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches the types of matrices (row, column, square, diagonal, symmetric, triangular, zero, binary, identity, transpose); one covers matrices as transformations and the other covers order and matrix operations, so no existing point fits.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Types of matrices",
+  "card": [
+   "The order of a matrix is rows × columns. A 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, and a column matrix has one column.",
+   "A square matrix has the same number of rows and columns. A diagonal matrix is square, with 0 everywhere off the main diagonal (top left to bottom right). A symmetric matrix is square, and each element equals the element in the mirror position across that diagonal.",
+   "A zero matrix has every element 0. A binary matrix has only 0s and 1s. The identity matrix I is square, with 1s on the main diagonal and 0s elsewhere.",
+   "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is the column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+  ],
+  "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+  "a": {
+   "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
+   "opts": [
+    "2 × 4",
+    "4 × 2",
+    "2 × 2",
+    "4 × 4"
+   ],
+   "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which is the tempting mistake of forgetting to swap.",
+   "clue": "Swap the number of rows and the number of columns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
+   "opts": [
+    "[2 5; 5 3]",
+    "[2 5; 3 5]",
+    "[2 0; 5 3]",
+    "[2 5 3; 5 3 1]"
+   ],
+   "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+   "clue": "A symmetric matrix must be square, and its mirror positions must match."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "2 × 4",
+   "also_right": []
+  },
+  "b": {
+   "best": "[2 5; 5 3]",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The point lists triangular matrices, but the card never defines them (upper or lower triangular), so one listed type is not taught."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Why (b) calls [2 0; 5 3] 'triangular', a term the card does not teach. Students may be confused by an unexplained term in the explanation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with one right answer each. The card leaves out triangular matrices, which this point is meant to cover, yet the explanation for (b) uses the term without it being taught."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The point lists triangular matrices, but the card never defines them (upper or lower triangular), so one listed type is not taught.",
+  "Question b, level: Why (b) calls [2 0; 5 3] 'triangular', a term the card does not teach. Students may be confused by an unexplained term in the explanation."
+ ],
+ "proposal": {
+  "title": "Types of matrices",
+  "card": [
+   "The order of a matrix is rows × columns, so a 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
+   "The main diagonal of a square matrix runs from top left to bottom right. A diagonal matrix has 0s everywhere off it. An upper triangular matrix has 0s everywhere below it, and a lower triangular matrix has 0s everywhere above it.",
+   "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix I has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
+   "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is a column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+  ],
+  "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+  "a": {
+   "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
+   "opts": [
+    "2 × 4",
+    "4 × 2",
+    "2 × 2",
+    "4 × 4"
+   ],
+   "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which comes from forgetting to swap.",
+   "clue": "Swap the number of rows and the number of columns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
+   "opts": [
+    "[2 5; 5 3]",
+    "[2 5; 3 5]",
+    "[2 0; 5 3]",
+    "[2 5 3; 5 3 1]"
+   ],
+   "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is lower triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+   "clue": "A symmetric matrix must be square, and its mirror positions must match."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "2 × 4",
+    "also_right": []
+   },
+   "b": {
+    "best": "[2 5; 5 3]",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The point lists triangular matrices, but the card never defines them (upper or lower triangular), so one listed type is not taught."
+   },
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "Why (b) calls [2 0; 5 3] 'triangular', a term the card does not teach. Students may be confused by an unexplained term in the explanation."
+   }
+  ],
+  "flags": [
+   "Card, other: The point lists triangular matrices, but the card never defines them (upper or lower triangular), so one listed type is not taught.",
+   "Question b, level: Why (b) calls [2 0; 5 3] 'triangular', a term the card does not teach. Students may be confused by an unexplained term in the explanation."
+  ]
+ },
+ "final": {
+  "title": "Types of matrices",
+  "card": [
+   "The order of a matrix is rows × columns, so a 2 × 3 matrix has 2 rows and 3 columns. A row matrix has one row, a column matrix has one column, and a square matrix has equal numbers of rows and columns.",
+   "The main diagonal of a square matrix runs from top left to bottom right. A diagonal matrix has 0s everywhere off it. An upper triangular matrix has 0s everywhere below it, and a lower triangular matrix has 0s everywhere above it.",
+   "A symmetric matrix is square, and each element equals the one in its mirror position across the main diagonal. The identity matrix I has 1s on the main diagonal and 0s elsewhere. A zero matrix has every element 0, and a binary matrix has only 0s and 1s.",
+   "The transpose swaps rows and columns, so row 1 becomes column 1. For example, the transpose of [1 2 3] is a column matrix with 1, 2, 3 going down. A 2 × 3 matrix has a 3 × 2 transpose."
+  ],
+  "remember": "Order is rows × columns. The transpose swaps rows and columns, so the order flips.",
+  "a": {
+   "q": "Matrix M has 4 rows and 2 columns. What is the order of the transpose of M?",
+   "opts": [
+    "2 × 4",
+    "4 × 2",
+    "2 × 2",
+    "4 × 4"
+   ],
+   "why": "The transpose swaps rows and columns, so 4 rows and 2 columns become 2 rows and 4 columns. The order is 2 × 4. The order 4 × 2 is the original matrix, which comes from forgetting to swap.",
+   "clue": "Swap the number of rows and the number of columns."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which matrix is symmetric? Rows are separated by a semicolon.",
+   "opts": [
+    "[2 5; 5 3]",
+    "[2 5; 3 5]",
+    "[2 0; 5 3]",
+    "[2 5 3; 5 3 1]"
+   ],
+   "why": "In [2 5; 5 3] the elements in row 1, column 2 and row 2, column 1 are both 5, so it matches its mirror image. [2 0; 5 3] is lower triangular, not symmetric, because 0 and 5 differ. [2 5 3; 5 3 1] is not square, so it cannot be symmetric.",
+   "clue": "A symmetric matrix must be square, and its mirror positions must match."
+  }
+ },
+ "cleared_by": "recheck"
+}

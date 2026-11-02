@@ -1,0 +1,184 @@
+{
+ "id": "mat-forecasting-from-trend",
+ "title": "Forecasting from a trend",
+ "brief": "ea8705a26176",
+ "shortlist": [
+  [
+   "mat-least-squares-regression-line",
+   0.254
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 7e-05,
+  "write": 0.00578,
+  "check": 0.01369,
+  "fix": 0.02621
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches a general least-squares regression line for predicting from a scatterplot, while the new point needs a trend line fitted to deseasonalised data followed by reseasonalising with seasonal indices, which is a different idea and procedure.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Forecasting from a trend",
+  "card": [
+   "Seasonal data has a repeating pattern that hides the trend. To forecast, first deseasonalise the data by dividing each value by its seasonal index.",
+   "Next, fit a least squares line to the deseasonalised data. Use it to predict a deseasonalised value for the future time period.",
+   "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
+   "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+  ],
+  "remember": "Predict from the line, then multiply by the seasonal index.",
+  "a": {
+   "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
+   "opts": [
+    "120",
+    "187.5",
+    "150",
+    "149.2"
+   ],
+   "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which is the mistake of repeating the deseasonalising step.",
+   "clue": "Putting the season back means multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+   "opts": [
+    "650",
+    "416",
+    "520",
+    "650.5"
+   ],
+   "why": "The line gives 400 + 12 × 10 = 520. Multiply by the index: 520 × 1.25 = 650. Stopping at 520 skips the reseasonalising step.",
+   "clue": "Find the line's value first, then adjust for the season."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "120",
+   "also_right": []
+  },
+  "b": {
+   "best": "650",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains how to deseasonalise (divide each value by its seasonal index), which is the idea of point 5. This point should only mention deseasonalised data and focus on fitting the line and reseasonalising."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, with single clear answers (120 and 650). The only issue is minor: the card re-explains deseasonalising, which belongs to point 5."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The first bullet explains how to deseasonalise (divide each value by its seasonal index), which is the idea of point 5. This point should only mention deseasonalised data and focus on fitting the line and reseasonalising."
+ ],
+ "proposal": {
+  "title": "Forecasting from a trend",
+  "card": [
+   "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
+   "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
+   "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
+   "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+  ],
+  "remember": "Predict from the line, then multiply by the seasonal index.",
+  "a": {
+   "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
+   "opts": [
+    "120",
+    "187.5",
+    "150",
+    "149.2"
+   ],
+   "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+   "clue": "Putting the season back means multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+   "opts": [
+    "650",
+    "416",
+    "520",
+    "550"
+   ],
+   "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+   "clue": "Find the line's full value first, then adjust for the season."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The first bullet explains how to deseasonalise (divide each value by its seasonal index), which is the idea of point 5. This point should only mention deseasonalised data and focus on fitting the line and reseasonalising."
+   }
+  ],
+  "flags": [
+   "Card, other: The first bullet explains how to deseasonalise (divide each value by its seasonal index), which is the idea of point 5. This point should only mention deseasonalised data and focus on fitting the line and reseasonalising."
+  ]
+ },
+ "final": {
+  "title": "Forecasting from a trend",
+  "card": [
+   "Seasonal data has a repeating pattern that can hide the trend. To forecast, start with the deseasonalised data, where the seasonal effect has been taken out.",
+   "Fit a least squares line to the deseasonalised data, with time as the explanatory variable. Substitute the future time period to predict a deseasonalised value.",
+   "Then reseasonalise by multiplying the prediction by the seasonal index for that season. This puts the seasonal pattern back.",
+   "Example: the line gives 200 for a quarter with index 1.2. The forecast is 200 × 1.2 = 240."
+  ],
+  "remember": "Predict from the line, then multiply by the seasonal index.",
+  "a": {
+   "q": "A least squares line fitted to deseasonalised data predicts 150 for a season with seasonal index 0.8. What is the forecast?",
+   "opts": [
+    "120",
+    "187.5",
+    "150",
+    "149.2"
+   ],
+   "why": "Reseasonalising means multiplying: 150 × 0.8 = 120. Dividing gives 187.5, which does the reverse of putting the season back. Leaving 150 skips the reseasonalising step.",
+   "clue": "Putting the season back means multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "A café in Mildura has the deseasonalised line sales = 400 + 12t. For t = 10, the seasonal index is 1.25. What is the forecast?",
+   "opts": [
+    "650",
+    "416",
+    "520",
+    "550"
+   ],
+   "why": "The line gives 400 + 12 × 10 = 520. Multiply the whole prediction by the index: 520 × 1.25 = 650. Stopping at 520 skips reseasonalising, and 550 comes from multiplying only the 12t part by the index.",
+   "clue": "Find the line's full value first, then adjust for the season."
+  }
+ },
+ "cleared_by": "auto"
+}

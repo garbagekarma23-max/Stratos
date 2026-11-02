@@ -30,9 +30,37 @@ MADE_COURSES.push({
             "mat-estimating-rounding"
           ]
         },
-        {"id": "vic-mat-fnd-u12-3-1", "title": "Collecting and showing data", "check": "checked", "points": []},
-        {"id": "vic-mat-fnd-u12-2-1", "title": "Earning and paying", "check": "checked", "points": []},
-        {"id": "vic-mat-fnd-u12-4-1", "title": "Measurement and time", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-fnd-u12-3-1",
+          "title": "Collecting and showing data",
+          "check": "checked",
+          "points": ["mat-collecting-data", "mat-reading-tables-graphs", "mat-drawing-charts-graphs", "mat-misleading-graphs"]
+        },
+        {
+          "id": "vic-mat-fnd-u12-2-1",
+          "title": "Earning and paying",
+          "check": "checked",
+          "points": [
+            "mat-wages-salaries-2",
+            "mat-banking-bills-borrowing",
+            "mat-tax-superannuation",
+            "mat-tax-community",
+            "mat-simple-interest-everyday-life",
+            "mat-discounts-mark-ups"
+          ]
+        },
+        {
+          "id": "vic-mat-fnd-u12-4-1",
+          "title": "Measurement and time",
+          "check": "checked",
+          "points": [
+            "mat-units-converting",
+            "mat-reading-scales",
+            "mat-perimeter-area",
+            "mat-volume-capacity",
+            "mat-time-timetables"
+          ]
+        }
       ]
     },
     {

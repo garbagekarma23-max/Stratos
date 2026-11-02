@@ -1,0 +1,220 @@
+{
+ "id": "mat-integration-by-substitution",
+ "title": "Integration by substitution",
+ "brief": "1494d89ee4a6",
+ "shortlist": [
+  [
+   "mat-definite-integral",
+   0.391
+  ],
+  [
+   "mat-integrals-giving-logarithms",
+   0.345
+  ],
+  [
+   "mat-areas-under-curves",
+   0.202
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00014,
+  "write": 0.00527,
+  "check": 0.01419,
+  "fix": 0.01739,
+  "recheck": 0.01176
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the three bank points teaches changing the variable with u = g(x); they cover the definite integral, integrals giving logarithms, and areas under curves, so the substitution method needs a new point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Integration by substitution",
+  "card": [
+   "Use substitution when the integrand has an inner function g(x) and also its derivative g′(x) as a factor. Let u = g(x).",
+   "Then du/dx = g′(x), so g′(x) dx becomes du. The integral of f(g(x))g′(x) dx becomes the integral of f(u) du.",
+   "Integrate in u, then put g(x) back in place of u. For a definite integral, you can instead change the limits to u-values.",
+   [
+    "Example",
+    "For the integral of 2x(x² + 1)³ dx, let u = x² + 1. Then du = 2x dx, so the integral is u³ du = u⁴/4 + c = (x² + 1)⁴/4 + c."
+   ]
+  ],
+  "remember": "Let u be the inner function, swap g′(x) dx for du, integrate, then change back.",
+  "a": {
+   "q": "To find the integral of 6x²(x³ + 5)⁴ dx, which substitution works best?",
+   "opts": [
+    "u = x³ + 5, so du = 3x² dx",
+    "u = x³ + 5, so du = 6x² dx",
+    "u = x², so du = 2x dx",
+    "u = 6x², so du = 12x dx"
+   ],
+   "why": "The inner function is x³ + 5, and its derivative 3x² is a factor of 6x², so 6x² dx = 2 du. The second option gets du wrong, because the derivative of x³ + 5 is 3x², not 6x².",
+   "clue": "Pick the inner function whose derivative appears as a factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the integral of 4x(x² + 3)³ dx?",
+   "opts": [
+    "(x² + 3)⁴/2 + c",
+    "(x² + 3)⁴/4 + c",
+    "2(x² + 3)⁴ + c",
+    "(x² + 3)⁴ + c"
+   ],
+   "why": "Let u = x² + 3, so du = 2x dx and 4x dx = 2 du. The integral is 2 × u³ du = 2 × u⁴/4 = u⁴/2. The tempting option (x² + 3)⁴/4 forgets the factor of 2 from 4x dx.",
+   "clue": "Write 4x dx as a multiple of du."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "u = x³ + 5, so du = 3x² dx",
+   "also_right": []
+  },
+  "b": {
+   "best": "(x² + 3)⁴/2 + c",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'The second option gets du wrong, because the derivative of x³ + 5 is 3x², not 6x²'. The options are shuffled, so the second option here is u = x², and the one that gets du wrong is 'u = x³ + 5, so du = 6x² dx'. The why should name the option by its content, not its position."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The maths in the card and both questions is correct. The only problem is that the why for question (a) points to the 'second option' by position, which does not match the shuffled order. It should name the du = 6x² dx option directly."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The why says 'The second option gets du wrong, because the derivative of x³ + 5 is 3x², not 6x²'. The options are shuffled, so the second option here is u = x², and the one that gets du wrong is 'u = x³ + 5, so du = 6x² dx'. The why should name the option by its content, not its position."
+ ],
+ "proposal": {
+  "title": "Integration by substitution",
+  "card": [
+   "Use substitution when the integrand has an inner function g(x) and also its derivative g′(x) as a factor. Let u = g(x).",
+   "Then du/dx = g′(x), so g′(x) dx becomes du. If the factor is a constant multiple of g′(x), such as 6x² when g′(x) = 3x², write it as that multiple of du.",
+   "The integral of f(g(x))g′(x) dx becomes the integral of f(u) du. Integrate in u, then put g(x) back in place of u. For a definite integral, you can instead change the limits to u-values.",
+   "For example, for the integral of 2x(x² + 1)³ dx, let u = x² + 1. Then du = 2x dx, so the integral is u³ du = u⁴/4 + c = (x² + 1)⁴/4 + c."
+  ],
+  "remember": "Let u be the inner function, swap g′(x) dx for du, integrate, then change back.",
+  "a": {
+   "q": "To find the integral of 6x²(x³ + 5)⁴ dx, which substitution works best?",
+   "opts": [
+    "u = x³ + 5, so du = 3x² dx",
+    "u = x³ + 5, so du = 6x² dx",
+    "u = x², so du = 2x dx",
+    "u = 6x², so du = 12x dx"
+   ],
+   "why": "The inner function is x³ + 5, and its derivative 3x² is a factor of 6x², so 6x² dx = 2 du. The option with du = 6x² dx gets du wrong: the derivative of x³ + 5 is 3x², and the extra factor of 2 is handled separately.",
+   "clue": "Pick the inner function whose derivative appears as a factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the integral of 4x(x² + 3)³ dx?",
+   "opts": [
+    "(x² + 3)⁴/2 + c",
+    "(x² + 3)⁴/4 + c",
+    "2(x² + 3)⁴ + c",
+    "(x² + 3)⁴ + c"
+   ],
+   "why": "Let u = x² + 3, so du = 2x dx and 4x dx = 2 du. The integral is 2 × u³ du = 2 × u⁴/4 = u⁴/2. The tempting option (x² + 3)⁴/4 forgets the factor of 2 from 4x dx.",
+   "clue": "Write 4x dx as a multiple of du."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "u = x³ + 5, so du = 3x² dx",
+    "also_right": []
+   },
+   "b": {
+    "best": "(x² + 3)⁴/2 + c",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 8,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The why says 'The second option gets du wrong, because the derivative of x³ + 5 is 3x², not 6x²'. The options are shuffled, so the second option here is u = x², and the one that gets du wrong is 'u = x³ + 5, so du = 6x² dx'. The why should name the option by its content, not its position."
+   }
+  ],
+  "flags": [
+   "Question a, other: The why says 'The second option gets du wrong, because the derivative of x³ + 5 is 3x², not 6x²'. The options are shuffled, so the second option here is u = x², and the one that gets du wrong is 'u = x³ + 5, so du = 6x² dx'. The why should name the option by its content, not its position."
+  ]
+ },
+ "final": {
+  "title": "Integration by substitution",
+  "card": [
+   "Use substitution when the integrand has an inner function g(x) and also its derivative g′(x) as a factor. Let u = g(x).",
+   "Then du/dx = g′(x), so g′(x) dx becomes du. If the factor is a constant multiple of g′(x), such as 6x² when g′(x) = 3x², write it as that multiple of du.",
+   "The integral of f(g(x))g′(x) dx becomes the integral of f(u) du. Integrate in u, then put g(x) back in place of u. For a definite integral, you can instead change the limits to u-values.",
+   "For example, for the integral of 2x(x² + 1)³ dx, let u = x² + 1. Then du = 2x dx, so the integral is u³ du = u⁴/4 + c = (x² + 1)⁴/4 + c."
+  ],
+  "remember": "Let u be the inner function, swap g′(x) dx for du, integrate, then change back.",
+  "a": {
+   "q": "To find the integral of 6x²(x³ + 5)⁴ dx, which substitution works best?",
+   "opts": [
+    "u = x³ + 5, so du = 3x² dx",
+    "u = x³ + 5, so du = 6x² dx",
+    "u = x², so du = 2x dx",
+    "u = 6x², so du = 12x dx"
+   ],
+   "why": "The inner function is x³ + 5, and its derivative 3x² is a factor of 6x², so 6x² dx = 2 du. The option with du = 6x² dx gets du wrong: the derivative of x³ + 5 is 3x², and the extra factor of 2 is handled separately.",
+   "clue": "Pick the inner function whose derivative appears as a factor."
+  },
+  "b": {
+   "d": 3,
+   "q": "What is the integral of 4x(x² + 3)³ dx?",
+   "opts": [
+    "(x² + 3)⁴/2 + c",
+    "(x² + 3)⁴/4 + c",
+    "2(x² + 3)⁴ + c",
+    "(x² + 3)⁴ + c"
+   ],
+   "why": "Let u = x² + 3, so du = 2x dx and 4x dx = 2 du. The integral is 2 × u³ du = 2 × u⁴/4 = u⁴/2. The tempting option (x² + 3)⁴/4 forgets the factor of 2 from 4x dx.",
+   "clue": "Write 4x dx as a multiple of du."
+  }
+ },
+ "cleared_by": "recheck"
+}

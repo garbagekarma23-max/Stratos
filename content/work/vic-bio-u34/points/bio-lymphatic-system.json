@@ -1,0 +1,233 @@
+{
+ "id": "bio-lymphatic-system",
+ "title": "The lymphatic system",
+ "brief": "8c5454076d58",
+ "shortlist": [
+  [
+   "bio-adaptive-immune-response",
+   0.415
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00011,
+  "write": 0.00489,
+  "check": 0.02266,
+  "fix": 0.03378,
+  "recheck": 0.0118
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers the adaptive immune response and the roles of B and T cells but never mentions lymph nodes, lymphatic trapping of antigens, or where the cells meet antigens, so it does not teach the new point's idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The lymphatic system",
+  "card": [
+   "The lymphatic system is a network of vessels and organs. Vessels carry lymph, a clear fluid that drains from tissues, and return it to the blood.",
+   "Lymph carries antigens from infected tissues to lymph nodes. Antigens are molecules that the immune system recognises as foreign.",
+   "Lymph nodes are small organs along the vessels. They trap antigens from the lymph, and many B cells and T cells wait inside them.",
+   "A B cell or T cell that has a receptor matching an antigen meets it in the node. This meeting starts the adaptive immune response."
+  ],
+  "remember": "Lymph carries antigens to the nodes, where B and T cells meet them.",
+  "a": {
+   "q": "Why are lymph nodes important for starting an adaptive immune response?",
+   "opts": [
+    "They trap antigens where B and T cells can meet them",
+    "They make antigens that train B and T cells",
+    "They carry blood to infected tissues to destroy antigens",
+    "They store antibodies until an infection occurs"
+   ],
+   "why": "Lymph carries antigens into the nodes, which trap them. Many B and T cells are inside, so a cell with a matching receptor can meet its antigen. Nodes do not make antigens, which come from pathogens or foreign material.",
+   "clue": "Think about what meets what inside a node."
+  },
+  "b": {
+   "d": 2,
+   "q": "Leon cuts his foot and bacteria enter the tissue. Which path would carry the bacterial antigens to the cells that start the adaptive response?",
+   "opts": [
+    "Lymph vessels carry them to lymph nodes in the leg",
+    "Blood vessels carry them straight to the skin",
+    "Lymph vessels carry them back to the cut",
+    "Lymph nodes send them out to the bacteria"
+   ],
+   "why": "Lymph drains from the tissue and carries antigens along lymph vessels to nearby nodes. There, B and T cells can meet them. Lymph moves away from the tissue, not back to the cut.",
+   "clue": "Lymph drains from tissues towards the nodes."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They trap antigens where B and T cells can meet them",
+   "also_right": []
+  },
+  "b": {
+   "best": "Lymph vessels carry them to lymph nodes in the leg",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines antigens as molecules 'recognised as foreign'. The VCE Study Design teaches self-antigens as well as non-self antigens, so this definition conflicts with that distinction. A better definition is a molecule that can trigger an immune response."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card implies T cells meet antigens trapped from the lymph directly. T cells recognise antigen only when it is presented on MHC, usually by antigen-presenting cells such as dendritic cells that travel to the node. At Year 12 VCE level this could mislead students."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Lymph drains from tissues towards the nodes' practically states the right option. It is the only option where lymph vessels carry antigens to nodes."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions have one clear right answer, but question b's clue gives the answer away. The card's antigen definition ('recognised as foreign') clashes with VCE self-antigens. The card also implies T cells meet free antigen without antigen presentation."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card defines antigens as molecules 'recognised as foreign'. The VCE Study Design teaches self-antigens as well as non-self antigens, so this definition conflicts with that distinction. A better definition is a molecule that can trigger an immune response.",
+  "Card, fact: The card implies T cells meet antigens trapped from the lymph directly. T cells recognise antigen only when it is presented on MHC, usually by antigen-presenting cells such as dendritic cells that travel to the node. At Year 12 VCE level this could mislead students.",
+  "Question b, other: The clue 'Lymph drains from tissues towards the nodes' practically states the right option. It is the only option where lymph vessels carry antigens to nodes."
+ ],
+ "proposal": {
+  "title": "The lymphatic system",
+  "card": [
+   "The lymphatic system is a network of vessels and organs. Vessels carry lymph, a clear fluid that drains from tissues, and return it to the blood.",
+   "Antigens are molecules that can trigger an immune response. Lymph carries free antigens, and dendritic cells that have taken up antigens, from infected tissues to lymph nodes.",
+   "Lymph nodes are small organs along the vessels. They trap antigens from the lymph, and many B cells and T cells wait inside them.",
+   "A B cell can bind a matching antigen directly. A T cell recognises an antigen only when an antigen-presenting cell, such as a dendritic cell, shows it on MHC markers (proteins on the cell surface). These meetings in the node start the adaptive response."
+  ],
+  "remember": "Lymph brings antigens to the nodes. B cells can bind them directly, but T cells need them presented.",
+  "a": {
+   "q": "Why are lymph nodes important for starting an adaptive immune response?",
+   "opts": [
+    "They trap antigens where B and T cells can meet them",
+    "They make antigens that train B and T cells",
+    "They carry blood to infected tissues to destroy antigens",
+    "They store antibodies until an infection occurs"
+   ],
+   "why": "Lymph brings antigens and dendritic cells into the nodes, where many B and T cells wait. A cell with a matching receptor can meet its antigen there. Nodes do not make antigens, which come from pathogens or other material.",
+   "clue": "Think about what meets what inside a node."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon cuts his foot and bacteria enter it. How does a T cell in a lymph node in his leg first recognise a bacterial antigen?",
+   "opts": [
+    "A dendritic cell presents the antigen to it on MHC",
+    "It binds free antigen that the node trapped from lymph",
+    "It leaves the node and binds the bacteria in the cut",
+    "It binds antigen carried to the node in the blood"
+   ],
+   "why": "A T cell recognises antigen only when it is shown on MHC by an antigen-presenting cell. Dendritic cells take up antigen in the foot and carry it to the node. Free antigen trapped in the node can be bound by B cells, but not by T cells.",
+   "clue": "Can a T cell recognise an antigen on its own?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They trap antigens where B and T cells can meet them",
+    "also_right": []
+   },
+   "b": {
+    "best": "A dendritic cell presents the antigen to it on MHC",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 4,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card defines antigens as molecules 'recognised as foreign'. The VCE Study Design teaches self-antigens as well as non-self antigens, so this definition conflicts with that distinction. A better definition is a molecule that can trigger an immune response."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card implies T cells meet antigens trapped from the lymph directly. T cells recognise antigen only when it is presented on MHC, usually by antigen-presenting cells such as dendritic cells that travel to the node. At Year 12 VCE level this could mislead students."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Lymph drains from tissues towards the nodes' practically states the right option. It is the only option where lymph vessels carry antigens to nodes."
+   }
+  ],
+  "flags": [
+   "Card, fact: The card defines antigens as molecules 'recognised as foreign'. The VCE Study Design teaches self-antigens as well as non-self antigens, so this definition conflicts with that distinction. A better definition is a molecule that can trigger an immune response.",
+   "Card, fact: The card implies T cells meet antigens trapped from the lymph directly. T cells recognise antigen only when it is presented on MHC, usually by antigen-presenting cells such as dendritic cells that travel to the node. At Year 12 VCE level this could mislead students.",
+   "Question b, other: The clue 'Lymph drains from tissues towards the nodes' practically states the right option. It is the only option where lymph vessels carry antigens to nodes."
+  ]
+ },
+ "final": {
+  "title": "The lymphatic system",
+  "card": [
+   "The lymphatic system is a network of vessels and organs. Vessels carry lymph, a clear fluid that drains from tissues, and return it to the blood.",
+   "Antigens are molecules that can trigger an immune response. Lymph carries free antigens, and dendritic cells that have taken up antigens, from infected tissues to lymph nodes.",
+   "Lymph nodes are small organs along the vessels. They trap antigens from the lymph, and many B cells and T cells wait inside them.",
+   "A B cell can bind a matching antigen directly. A T cell recognises an antigen only when an antigen-presenting cell, such as a dendritic cell, shows it on MHC markers (proteins on the cell surface). These meetings in the node start the adaptive response."
+  ],
+  "remember": "Lymph brings antigens to the nodes. B cells can bind them directly, but T cells need them presented.",
+  "a": {
+   "q": "Why are lymph nodes important for starting an adaptive immune response?",
+   "opts": [
+    "They trap antigens where B and T cells can meet them",
+    "They make antigens that train B and T cells",
+    "They carry blood to infected tissues to destroy antigens",
+    "They store antibodies until an infection occurs"
+   ],
+   "why": "Lymph brings antigens and dendritic cells into the nodes, where many B and T cells wait. A cell with a matching receptor can meet its antigen there. Nodes do not make antigens, which come from pathogens or other material.",
+   "clue": "Think about what meets what inside a node."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leon cuts his foot and bacteria enter it. How does a T cell in a lymph node in his leg first recognise a bacterial antigen?",
+   "opts": [
+    "A dendritic cell presents the antigen to it on MHC",
+    "It binds free antigen that the node trapped from lymph",
+    "It leaves the node and binds the bacteria in the cut",
+    "It binds antigen carried to the node in the blood"
+   ],
+   "why": "A T cell recognises antigen only when it is shown on MHC by an antigen-presenting cell. Dendritic cells take up antigen in the foot and carry it to the node. Free antigen trapped in the node can be bound by B cells, but not by T cells.",
+   "clue": "Can a T cell recognise an antigen on its own?"
+  }
+ },
+ "cleared_by": "recheck"
+}

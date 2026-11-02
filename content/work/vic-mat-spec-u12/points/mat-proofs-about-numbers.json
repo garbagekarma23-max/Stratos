@@ -3,13 +3,14 @@
  "title": "Proofs about numbers",
  "brief": "25e7cff2b7a2",
  "shortlist": [],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: done",
   "2026-11-01T08:14:07Z check: flagged",
   "2026-11-01T08:24:34Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)"
+  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (card wording)",
+  "2026-11-02T06:23:36Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "write": 1,
@@ -129,6 +130,41 @@
   ],
   "flags": [
    "Card, wording: The √2 proof jumps from p² = 2q² to 'p and q are both even'. The missing steps are that p² is even so p is even, then p = 2k gives q² = 2k², so q is even. As written, it looks as if both follow at once, which could confuse students."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Proofs about numbers",
+  "card": [
+   "Divisibility proofs use algebra. Write an even number as 2m and an odd number as 2m + 1, where m is a whole number. Of two consecutive numbers, n and n + 1, one is even and one is odd.",
+   "Example: the sum of two odd numbers is even. (2a + 1) + (2b + 1) = 2a + 2b + 2 = 2(a + b + 1), which is a multiple of 2.",
+   "Inequalities can be proved by rearranging. To show a² + b² ≥ 2ab, note that a² + b² − 2ab = (a − b)², which is never negative.",
+   "To show √2 is irrational, assume √2 = p/q in lowest terms. Then p² = 2q² is even, so p is even. Putting p = 2k gives 4k² = 2q², so q² = 2k² and q is even too, which breaks lowest terms."
+  ],
+  "remember": "Write numbers in algebraic form, then rearrange to show the property.",
+  "a": {
+   "q": "Which expression shows the product of two consecutive whole numbers is always even?",
+   "opts": [
+    "n(n + 1), because one of n and n + 1 is even",
+    "n(n + 2), because n + 2 is always even",
+    "n(n + 1), because n and n + 1 are both odd",
+    "2n, because it is a multiple of 2"
+   ],
+   "why": "Of two consecutive whole numbers, one is even, so the product has a factor of 2. In n(n + 2), n and n + 2 are both odd when n is odd, so that product is not always even.",
+   "clue": "Consecutive numbers alternate between even and odd."
+  },
+  "b": {
+   "d": 3,
+   "q": "Which line correctly completes a proof that a² + b² ≥ 2ab for all real a and b?",
+   "opts": [
+    "a² + b² − 2ab = (a − b)² ≥ 0",
+    "a² + b² − 2ab = (a + b)² ≥ 0",
+    "a² + b² − 2ab = a² − b² ≥ 0",
+    "a² + b² − 2ab = 2(a − b) ≥ 0"
+   ],
+   "why": "Expanding (a − b)² gives a² − 2ab + b², which matches. A square is never negative, so the inequality holds. (a + b)² expands to a² + 2ab + b², which has the wrong sign on 2ab.",
+   "clue": "Expand each bracket and compare with a² − 2ab + b²."
+  }
+ },
+ "cleared_by": "owner"
 }

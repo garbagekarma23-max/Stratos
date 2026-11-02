@@ -1,0 +1,302 @@
+{
+ "id": "eng-embedding-evidence-2",
+ "title": "Embedding evidence",
+ "brief": "bf7fc7a7c350",
+ "shortlist": [
+  [
+   "eng-embedding-evidence",
+   0.536
+  ],
+  [
+   "eng-supporting-reading-with-evidence",
+   0.381
+  ],
+  [
+   "eng-personal-informed-reading",
+   0.236
+  ]
+ ],
+ "stage": "fix",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:00Z write: failed the content check, writing again",
+  "2026-11-01T15:05:26Z write: done (still fails the content check)",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: flagged"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.01756,
+  "check": 0.03139,
+  "fix": 0.03287,
+  "recheck": 0.01489
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Embedding evidence, covers only weaving short quotations into sentences, while the new point also requires analysis of the quoted language, and the bank's analysis card does not cover embedding, so no single point matches.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The explanation mixes up the second and third options. It says the second leaves the quotation as a loose fragment and the third paraphrases. In fact the second ('a rusty river') paraphrases, and the third ('The street is shown. \"A river of rust\".') is the loose fragment.",
+ "rejected": {
+  "title": "Embedding evidence",
+  "card": [
+   "Embedding means building a short quotation into your own sentence, so your sentence still reads smoothly. Quote only the few words you need.",
+   [
+    "Example",
+    "The narrator calls the harbour \"a grey mouth\", which makes the water seem hungry."
+   ],
+   "Do not drop a long quotation in on its own line or leave it unexplained. Do not let the quotation do the work that your analysis should do.",
+   "After the quotation, analyse its language. Name a word or technique, such as a metaphor, and explain the effect on the reader."
+  ],
+  "remember": "Quote a few words inside your sentence, then analyse the language.",
+  "a": {
+   "q": "Using an invented poem, which sentence embeds evidence best?",
+   "opts": [
+    "The street becomes \"a river of rust\", implying decay",
+    "The street is shown. \"A river of rust\". It implies decay",
+    "The street becomes a rusty river, implying decay",
+    "The poem implies decay, as the street is a river of rust"
+   ],
+   "why": "The first option builds the poet's exact words, in quotation marks, into a smooth sentence and then names the effect. The second leaves the quotation loose as a fragment on its own. The third paraphrases and the fourth drops the quotation marks, so neither shows which words are the poet's.",
+   "clue": "Look for the poet's marked words inside one smooth sentence."
+  },
+  "b": {
+   "d": 2,
+   "q": "A student quotes \"the clock ticked like a warning\" from an invented story. What should come next?",
+   "opts": [
+    "Analysis of the simile and how it creates a sense of threat",
+    "Another quotation from a different scene about the clock",
+    "A retelling of the whole scene in which the clock appears",
+    "A statement that the quotation proves the story is good"
+   ],
+   "why": "Close reading needs analysis of the language right after the quotation, here the simile and its effect. Adding another quotation or retelling the scene does not explain how the words work.",
+   "clue": "What must follow a quotation to show close reading?"
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "autoreject",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The explanation mixes up the second and third options. It says the second leaves the quotation as a loose fragment and the third paraphrases. In fact the second ('a rusty river') paraphrases, and the third ('The street is shown. \"A river of rust\".') is the loose fragment."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Embedding evidence",
+     "card": [
+      "Embedding means building a short quotation into your own sentence, so your sentence still reads smoothly. Quote only the few words you need.",
+      [
+       "Example",
+       "The narrator calls the harbour \"a grey mouth\", which makes the water seem hungry."
+      ],
+      "Do not drop a long quotation in on its own line or leave it unexplained. Do not let the quotation do the work that your analysis should do.",
+      "After the quotation, analyse its language. Name a word or technique, such as a metaphor, and explain the effect on the reader."
+     ],
+     "remember": "Quote a few words inside your sentence, then analyse the language.",
+     "a": {
+      "q": "Which sentence embeds evidence best, using an invented poem?",
+      "opts": [
+       "The poet calls the street \"a river of rust\", suggesting decay",
+       "The poet describes the street. \"A river of rust\". It shows decay",
+       "The poet calls the street a rusty river, which suggests decay",
+       "The poet writes of decay, as the street is a river of rust"
+      ],
+      "why": "The first option builds the poet's exact words into the sentence and then names the effect. The second leaves the quotation loose on its own. The third and fourth paraphrase without quoting, so they show no close reading of the words.",
+      "clue": "Which one uses the poet's own words inside a smooth sentence?"
+     },
+     "b": {
+      "d": 2,
+      "q": "A student quotes \"the clock ticked like a warning\" from an invented story. What should come next?",
+      "opts": [
+       "Analysis of the simile and how it creates a sense of threat",
+       "Another quotation from a different scene about the clock",
+       "A retelling of the whole scene in which the clock appears",
+       "A statement that the quotation proves the story is good"
+      ],
+      "why": "Close reading needs analysis of the language right after the quotation, here the simile and its effect. Adding another quotation or retelling the scene does not explain how the words work.",
+      "clue": "What must follow a quotation to show close reading?"
+     }
+    },
+    "redone": true,
+    "local": [
+     "eng-embedding-evidence-2a option is 61 characters: The poet calls the street \"a river of rust\", suggesting decay",
+     "eng-embedding-evidence-2a option is 64 characters: The poet describes the street. \"A river of rust\". It shows decay",
+     "eng-embedding-evidence-2a option is 61 characters: The poet calls the street a rusty river, which suggests decay"
+    ],
+    "check": {
+     "a": {
+      "best": "The poet calls the street \"a river of rust\", suggesting decay",
+      "also_right": []
+     },
+     "b": {
+      "best": "Analysis of the simile and how it creates a sense of threat",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "a",
+       "kind": "other",
+       "detail": "The why misdescribes the wrong options. The second option ('a rusty river') paraphrases without quoting, and the third ('\"A river of rust\". It shows decay') is the one that leaves the quotation loose on its own. The why swaps these, so its explanation contradicts the options a student sees."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer that matches the card. The explanation for question a mixes up the second and third options: it says the second leaves the quotation loose, but the second actually paraphrases and the third is the loose quotation."
+    },
+    "flags": [
+     "Question a, other: The why misdescribes the wrong options. The second option ('a rusty river') paraphrases without quoting, and the third ('\"A river of rust\". It shows decay') is the one that leaves the quotation loose on its own. The why swaps these, so its explanation contradicts the options a student sees.",
+     "Content check: eng-embedding-evidence-2a option is 61 characters: The poet calls the street \"a river of rust\", suggesting decay",
+     "Content check: eng-embedding-evidence-2a option is 64 characters: The poet describes the street. \"A river of rust\". It shows decay",
+     "Content check: eng-embedding-evidence-2a option is 61 characters: The poet calls the street a rusty river, which suggests decay"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Embedding evidence",
+     "card": [
+      "Embedding means building a short quotation into your own sentence, so your sentence still reads smoothly. Quote only the few words you need.",
+      [
+       "Example",
+       "The narrator calls the harbour \"a grey mouth\", which makes the water seem hungry."
+      ],
+      "Do not drop a long quotation in on its own line or leave it unexplained. Do not let the quotation do the work that your analysis should do.",
+      "After the quotation, analyse its language. Name a word or technique, such as a metaphor, and explain the effect on the reader."
+     ],
+     "remember": "Quote a few words inside your sentence, then analyse the language.",
+     "a": {
+      "q": "Using an invented poem, which sentence embeds evidence best?",
+      "opts": [
+       "The street becomes \"a river of rust\", implying decay",
+       "The street is shown. \"A river of rust\". It implies decay",
+       "The street becomes a rusty river, implying decay",
+       "The poem implies decay, as the street is a river of rust"
+      ],
+      "why": "The first option builds the poet's exact words, in quotation marks, into a smooth sentence and then names the effect. The second leaves the quotation loose as a fragment on its own. The third paraphrases and the fourth drops the quotation marks, so neither shows which words are the poet's.",
+      "clue": "Look for the poet's marked words inside one smooth sentence."
+     },
+     "b": {
+      "d": 2,
+      "q": "A student quotes \"the clock ticked like a warning\" from an invented story. What should come next?",
+      "opts": [
+       "Analysis of the simile and how it creates a sense of threat",
+       "Another quotation from a different scene about the clock",
+       "A retelling of the whole scene in which the clock appears",
+       "A statement that the quotation proves the story is good"
+      ],
+      "why": "Close reading needs analysis of the language right after the quotation, here the simile and its effect. Adding another quotation or retelling the scene does not explain how the words work.",
+      "clue": "What must follow a quotation to show close reading?"
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The street becomes \"a river of rust\", implying decay",
+       "also_right": []
+      },
+      "b": {
+       "best": "Analysis of the simile and how it creates a sense of threat",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The explanation mixes up the second and third options. It says the second leaves the quotation as a loose fragment and the third paraphrases. In fact the second ('a rusty river') paraphrases, and the third ('The street is shown. \"A river of rust\".') is the loose fragment."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Card and questions are sound and each question has one clear answer. The explanation for question a swaps its descriptions of the second and third options, calling the paraphrase a fragment and the fragment a paraphrase, so it needs correcting."
+     },
+     "flags": [
+      "Question a, other: The explanation mixes up the second and third options. It says the second leaves the quotation as a loose fragment and the third paraphrases. In fact the second ('a rusty river') paraphrases, and the third ('The street is shown. \"A river of rust\".') is the loose fragment."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Embedding evidence",
+  "card": [
+   "Embedding means building a short quotation into your own sentence, so your sentence still reads smoothly. Quote only the few words you need.",
+   [
+    "Example",
+    "The narrator calls the harbour \"a grey mouth\", which makes the water seem hungry."
+   ],
+   "Do not drop a long quotation in on its own line or leave it unexplained. Do not let the quotation do the work that your analysis should do.",
+   "After the quotation, analyse its language. Name a word or technique, such as a metaphor, and explain the effect on the reader."
+  ],
+  "remember": "Quote a few words inside your sentence, then analyse the language.",
+  "a": {
+   "q": "Using an invented poem, which sentence embeds evidence best?",
+   "opts": [
+    "The street becomes \"a river of rust\", implying decay",
+    "The street is shown. \"A river of rust\". It implies decay",
+    "The street becomes a rusty river, implying decay",
+    "The poem implies decay, as the street is a river of rust"
+   ],
+   "why": "The first option builds the poet's exact words, in quotation marks, into one smooth sentence and then names the effect. The second leaves the quotation as a loose fragment on its own. The third paraphrases the words and the fourth drops the quotation marks, so neither shows which words are the poet's.",
+   "clue": "Look for the poet's marked words inside one smooth sentence."
+  },
+  "b": {
+   "d": 2,
+   "q": "A student quotes \"the clock ticked like a warning\" from an invented story. What should come next?",
+   "opts": [
+    "Analysis of the simile and how it creates a sense of threat",
+    "Another quotation from a different scene about the clock",
+    "A retelling of the whole scene in which the clock appears",
+    "A statement that the quotation proves the story is good"
+   ],
+   "why": "Close reading needs analysis of the language right after the quotation, here the simile and its effect. Adding another quotation or retelling the scene does not explain how the words work.",
+   "clue": "What must follow a quotation to show close reading?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The street becomes \"a river of rust\", implying decay",
+   "also_right": []
+  },
+  "b": {
+   "best": "Analysis of the simile and how it creates a sense of threat",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "Why (a) refers to options by position ('first', 'second', 'third', 'fourth'), but options are shown in random order. Its descriptions also do not match the options shown: the option it calls a loose fragment ('The street is shown. \"A river of rust\".') is not second, and the paraphrase ('a rusty river') is not third. A student reading it would be told the wrong option is the fragment or the paraphrase. Describe each option by its content instead."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are sound and have one clear right answer each. Why (a) names options by position, which breaks under random ordering and already mismatches the options shown."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: Why (a) refers to options by position ('first', 'second', 'third', 'fourth'), but options are shown in random order. Its descriptions also do not match the options shown: the option it calls a loose fragment ('The street is shown. \"A river of rust\".') is not second, and the paraphrase ('a rusty river') is not third. A student reading it would be told the wrong option is the fragment or the paraphrase. Describe each option by its content instead."
+ ]
+}

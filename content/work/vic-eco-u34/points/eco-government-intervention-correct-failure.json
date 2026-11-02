@@ -1,0 +1,244 @@
+{
+ "id": "eco-government-intervention-correct-failure",
+ "title": "Government intervention to correct failure",
+ "brief": "fa4491f21e53",
+ "shortlist": [
+  [
+   "e-govfail",
+   0.492
+  ],
+  [
+   "e-failure",
+   0.381
+  ],
+  [
+   "e-correct",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:00Z write: failed the content check, writing again",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01302,
+  "check": 0.01799,
+  "fix": 0.03129,
+  "recheck": 0.01439
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point covers five intervention tools (indirect taxes, subsidies, regulation, advertising campaigns and direct provision), but the closest bank point, e-correct, only covers taxes and subsidies for externalities, so it is narrower, and the other two points cover market failure and government failure rather than how to correct a failure.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Government intervention to correct failure",
+  "card": [
+   "A market failure leaves output away from the social optimum. A government can step in to move it closer.",
+   [
+    "Indirect tax",
+    "a tax on a good, such as a tax on cigarettes. It raises the price and cuts output of goods with external costs."
+   ],
+   [
+    "Subsidy",
+    "a payment to producers or buyers, such as for rooftop solar panels. It lowers the price and raises output of goods with external benefits."
+   ],
+   [
+    "Other tools",
+    "Regulation is a rule that limits harm, such as a cap on factory emissions. Advertising campaigns inform people, such as on sun safety. Direct provision means the government supplies the good itself."
+   ]
+  ],
+  "remember": "Each tool targets a failure: taxes cut over-production, subsidies lift under-production.",
+  "a": {
+   "q": "Which action is a subsidy?",
+   "opts": [
+    "A payment to farmers who plant trees on their land",
+    "A fee added to the price of each packet of cigarettes",
+    "A rule limiting the noise a factory can make",
+    "A television ad warning people about sunburn"
+   ],
+   "why": "A subsidy is a payment that lowers the cost of producing or buying a good. The fee on cigarettes is an indirect tax. The noise limit is regulation, and the television ad is an advertising campaign.",
+   "clue": "Which one gives money out rather than taking it or setting a rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sparkling drinks made by a firm in Geelong cause external costs through litter and health harm. Which intervention best cuts how much is made and bought?",
+   "opts": [
+    "An indirect tax on each bottle sold",
+    "A subsidy on each bottle sold",
+    "Direct provision of the drinks by the government",
+    "A campaign urging firms to make more drinks"
+   ],
+   "why": "An indirect tax raises the price, so less is bought and made, which moves output towards the social optimum. A subsidy does the reverse and would increase the over-production.",
+   "clue": "The aim is less of the good. Which tool raises its price?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A payment to farmers who plant trees on their land",
+   "also_right": []
+  },
+  "b": {
+   "best": "An indirect tax on each bottle sold",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The distractor 'A campaign urging firms to make more drinks' is implausible, and direct provision clearly would not cut output. That leaves the question too easy for Year 12, since only the subsidy option is a real alternative to the tax."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and the intended answers are the only right options. One minor issue: question b has weak distractors, which makes it very easy for Year 12."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, level: The distractor 'A campaign urging firms to make more drinks' is implausible, and direct provision clearly would not cut output. That leaves the question too easy for Year 12, since only the subsidy option is a real alternative to the tax."
+ ],
+ "proposal": {
+  "title": "Government intervention to correct failure",
+  "card": [
+   "A market failure leaves output away from the social optimum. A government can step in to move it closer.",
+   [
+    "Indirect tax",
+    "a tax on a good, such as a tax on cigarettes. It raises the price and cuts output of goods with external costs."
+   ],
+   [
+    "Subsidy",
+    "a payment to producers or buyers, such as for rooftop solar panels. It lowers the price and raises output of goods with external benefits."
+   ],
+   [
+    "Other tools",
+    "Regulation is a rule that limits harm, such as a cap on factory emissions. Advertising campaigns inform people, such as on sun safety. Direct provision means the government supplies the good itself."
+   ]
+  ],
+  "remember": "Each tool targets a failure: taxes cut over-production, subsidies lift under-production.",
+  "a": {
+   "q": "Which action is a subsidy?",
+   "opts": [
+    "A payment to farmers who plant trees on their land",
+    "A fee added to the price of each packet of cigarettes",
+    "A rule limiting the noise a factory can make",
+    "A television ad warning people about sunburn"
+   ],
+   "why": "A subsidy is a payment that lowers the cost of producing or buying a good. The fee on cigarettes is an indirect tax. The noise limit is regulation, and the television ad is an advertising campaign.",
+   "clue": "Which one gives money out rather than taking it or setting a rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sparkling drinks made by a firm in Geelong cause external costs through litter and health harm. Which tool, and reason, would move output towards the social optimum?",
+   "opts": [
+    "An indirect tax, as a higher price cuts output",
+    "A subsidy, as a lower price cuts output",
+    "An indirect tax, as a higher price lifts output",
+    "A subsidy, as a lower price lifts output"
+   ],
+   "why": "The drinks have external costs, so the market over-produces them and output needs to fall. An indirect tax raises the price, so less is bought and made. A subsidy does lower the price and lift output, but more output would add to the over-production.",
+   "clue": "First decide whether output needs to rise or fall."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A payment to farmers who plant trees on their land",
+    "also_right": []
+   },
+   "b": {
+    "best": "An indirect tax, as a higher price cuts output",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "level",
+    "detail": "The distractor 'A campaign urging firms to make more drinks' is implausible, and direct provision clearly would not cut output. That leaves the question too easy for Year 12, since only the subsidy option is a real alternative to the tax."
+   }
+  ],
+  "flags": [
+   "Question b, level: The distractor 'A campaign urging firms to make more drinks' is implausible, and direct provision clearly would not cut output. That leaves the question too easy for Year 12, since only the subsidy option is a real alternative to the tax."
+  ]
+ },
+ "final": {
+  "title": "Government intervention to correct failure",
+  "card": [
+   "A market failure leaves output away from the social optimum. A government can step in to move it closer.",
+   [
+    "Indirect tax",
+    "a tax on a good, such as a tax on cigarettes. It raises the price and cuts output of goods with external costs."
+   ],
+   [
+    "Subsidy",
+    "a payment to producers or buyers, such as for rooftop solar panels. It lowers the price and raises output of goods with external benefits."
+   ],
+   [
+    "Other tools",
+    "Regulation is a rule that limits harm, such as a cap on factory emissions. Advertising campaigns inform people, such as on sun safety. Direct provision means the government supplies the good itself."
+   ]
+  ],
+  "remember": "Each tool targets a failure: taxes cut over-production, subsidies lift under-production.",
+  "a": {
+   "q": "Which action is a subsidy?",
+   "opts": [
+    "A payment to farmers who plant trees on their land",
+    "A fee added to the price of each packet of cigarettes",
+    "A rule limiting the noise a factory can make",
+    "A television ad warning people about sunburn"
+   ],
+   "why": "A subsidy is a payment that lowers the cost of producing or buying a good. The fee on cigarettes is an indirect tax. The noise limit is regulation, and the television ad is an advertising campaign.",
+   "clue": "Which one gives money out rather than taking it or setting a rule?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Sparkling drinks made by a firm in Geelong cause external costs through litter and health harm. Which tool, and reason, would move output towards the social optimum?",
+   "opts": [
+    "An indirect tax, as a higher price cuts output",
+    "A subsidy, as a lower price cuts output",
+    "An indirect tax, as a higher price lifts output",
+    "A subsidy, as a lower price lifts output"
+   ],
+   "why": "The drinks have external costs, so the market over-produces them and output needs to fall. An indirect tax raises the price, so less is bought and made. A subsidy does lower the price and lift output, but more output would add to the over-production.",
+   "clue": "First decide whether output needs to rise or fall."
+  }
+ },
+ "cleared_by": "recheck"
+}

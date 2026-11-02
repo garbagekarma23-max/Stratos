@@ -1,0 +1,138 @@
+{
+ "id": "acc-budgeted-income-statement",
+ "title": "The budgeted income statement",
+ "brief": "2b75f12170eb",
+ "shortlist": [
+  [
+   "acc-profit-cash-basis",
+   0.46
+  ],
+  [
+   "bus-income-statement",
+   0.413
+  ],
+  [
+   "bus-budgets",
+   0.371
+  ],
+  [
+   "mat-budgeting",
+   0.224
+  ],
+  [
+   "acc-receivables-payables-reports",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:43Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.00507,
+  "check": 0.01221
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, acc-profit-cash-basis, teaches the income statement for actual results and never mentions budgeting or the accrual basis, which the new point is built on, so it is a related idea rather than the same one.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The budgeted income statement",
+  "card": [
+   "A budgeted income statement estimates a business's revenue and expenses for the coming period. The difference is the budgeted profit or loss.",
+   "It is built on the accrual basis. Revenue is counted in the period it is earned, and expenses in the period they are incurred, whether or not cash changes hands.",
+   "So a credit sale made in the period is budgeted revenue, even if the customer pays next period. Expenses are budgeted when used, such as wages for work done in the period.",
+   "Some cash items are not income statement items. Buying equipment or repaying a loan is not an expense. Depreciation is an expense, even though it uses no cash."
+  ],
+  "remember": "A budgeted income statement estimates profit by matching revenue earned with expenses incurred, not cash received and paid.",
+  "a": {
+   "q": "Mia's café in Geelong expects to sell $6000 of catering on credit in June. Customers will pay in July. How is this treated in the June budgeted income statement?",
+   "opts": [
+    "It is budgeted as June revenue",
+    "It is budgeted as July revenue",
+    "It is left out until the cash arrives",
+    "It is budgeted as a June expense"
+   ],
+   "why": "On the accrual basis, revenue is counted when it is earned, so the credit sale is June revenue. Counting it in July would follow the cash received, which is not the basis used for an income statement.",
+   "clue": "Revenue is counted when it is earned, not when it is paid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's gym in Bendigo budgets to buy $20000 of new equipment in March, paid in cash. It will use $2000 of the equipment's value in the year. What goes in the budgeted income statement?",
+   "opts": [
+    "$2000 depreciation expense only",
+    "$20000 equipment expense only",
+    "Both $20000 and $2000 as expenses",
+    "Neither, because no expense is incurred"
+   ],
+   "why": "Buying equipment is not an expense, so the $20000 is left out. The $2000 of value used up is depreciation, which is an expense even though it uses no cash. Counting the $20000 would follow the cash paid.",
+   "clue": "Which part of the equipment is used up in the period?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It is budgeted as June revenue",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2000 depreciation expense only",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The budgeted income statement",
+  "card": [
+   "A budgeted income statement estimates a business's revenue and expenses for the coming period. The difference is the budgeted profit or loss.",
+   "It is built on the accrual basis. Revenue is counted in the period it is earned, and expenses in the period they are incurred, whether or not cash changes hands.",
+   "So a credit sale made in the period is budgeted revenue, even if the customer pays next period. Expenses are budgeted when used, such as wages for work done in the period.",
+   "Some cash items are not income statement items. Buying equipment or repaying a loan is not an expense. Depreciation is an expense, even though it uses no cash."
+  ],
+  "remember": "A budgeted income statement estimates profit by matching revenue earned with expenses incurred, not cash received and paid.",
+  "a": {
+   "q": "Mia's café in Geelong expects to sell $6000 of catering on credit in June. Customers will pay in July. How is this treated in the June budgeted income statement?",
+   "opts": [
+    "It is budgeted as June revenue",
+    "It is budgeted as July revenue",
+    "It is left out until the cash arrives",
+    "It is budgeted as a June expense"
+   ],
+   "why": "On the accrual basis, revenue is counted when it is earned, so the credit sale is June revenue. Counting it in July would follow the cash received, which is not the basis used for an income statement.",
+   "clue": "Revenue is counted when it is earned, not when it is paid."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev's gym in Bendigo budgets to buy $20000 of new equipment in March, paid in cash. It will use $2000 of the equipment's value in the year. What goes in the budgeted income statement?",
+   "opts": [
+    "$2000 depreciation expense only",
+    "$20000 equipment expense only",
+    "Both $20000 and $2000 as expenses",
+    "Neither, because no expense is incurred"
+   ],
+   "why": "Buying equipment is not an expense, so the $20000 is left out. The $2000 of value used up is depreciation, which is an expense even though it uses no cash. Counting the $20000 would follow the cash paid.",
+   "clue": "Which part of the equipment is used up in the period?"
+  }
+ },
+ "cleared_by": "checker"
+}

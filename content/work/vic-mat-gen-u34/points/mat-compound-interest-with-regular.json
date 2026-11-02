@@ -1,0 +1,251 @@
+{
+ "id": "mat-compound-interest-with-regular",
+ "title": "Compound interest with regular additions",
+ "brief": "2a6122792b2c",
+ "shortlist": [
+  [
+   "mat-compound-interest",
+   0.5
+  ],
+  [
+   "mat-annuity",
+   0.491
+  ],
+  [
+   "mat-compound-interest-by-repeated",
+   0.411
+  ],
+  [
+   "mat-comparing-investments",
+   0.372
+  ],
+  [
+   "mat-simple-interest",
+   0.264
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00487,
+  "check": 0.01581,
+  "fix": 0.02956,
+  "recheck": 0.00726
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point adds regular contributions to compound growth, which needs a new step beyond the bank's lump-sum compound interest point (mat-compound-interest) and its definitional annuity point (mat-annuity), so no existing card teaches it.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Compound interest with regular additions",
+  "card": [
+   "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
+   "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+   "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
+   "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+  ],
+  "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+  "a": {
+   "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
+   "opts": [
+    "$2600",
+    "$2500",
+    "$2100",
+    "$2625"
+   ],
+   "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2500 is wrong because it adds the deposit but skips the interest. $2100 is the balance with interest only, with the deposit left out.",
+   "clue": "Add the interest first, then the deposit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya opens a savings account with $1000. It earns 6% per year, and she adds $100 at the end of each year. What is the balance after year 2?",
+   "opts": [
+    "$1282.60",
+    "$1272.00",
+    "$1262.00",
+    "$1182.00"
+   ],
+   "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60 is the balance, so check: 1160 × 1.06 = 1229.60, giving $1329.60. None of the options match, so this question needs to be redone.",
+   "clue": "Work out year 1 first, then use that balance for year 2."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$2600",
+   "also_right": []
+  },
+  "b": {
+   "best": "",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = $1329.60. None of $1272.00, $1262.00, $1282.60 or $1182.00 matches, so a student who works it out correctly cannot pick a right answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why is a writer's working note, not an explanation. It ends 'None of the options match, so this question needs to be redone' and names no intended answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The distractors do not match recognisable mistakes, such as compound interest only, deposit before interest, or simple interest, so they give no useful feedback even once the right answer is added."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b is broken: the correct balance after year 2 is $1329.60, none of the options matches, and the why says the question needs to be redone. The card, the remember line and question a ($2600) are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “”, not the writer’s answer “$1282.60”.",
+  "Question b, fact: No option is correct. Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = $1329.60. None of $1272.00, $1262.00, $1282.60 or $1182.00 matches, so a student who works it out correctly cannot pick a right answer.",
+  "Question b, other: The why is a writer's working note, not an explanation. It ends 'None of the options match, so this question needs to be redone' and names no intended answer.",
+  "Question b, other: The distractors do not match recognisable mistakes, such as compound interest only, deposit before interest, or simple interest, so they give no useful feedback even once the right answer is added."
+ ],
+ "proposal": {
+  "title": "Compound interest with regular additions",
+  "card": [
+   "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
+   "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+   "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
+   "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+  ],
+  "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+  "a": {
+   "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
+   "opts": [
+    "$2600",
+    "$2500",
+    "$2100",
+    "$2625"
+   ],
+   "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
+   "clue": "Add the interest first, then the deposit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya opens a savings account with $1000. It earns 6% per year, and she adds $100 at the end of each year. What is the balance after year 2?",
+   "opts": [
+    "$1329.60",
+    "$1341.96",
+    "$1320.00",
+    "$1123.60"
+   ],
+   "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60. $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
+   "clue": "Work out year 1 first, then use that balance for year 2."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$2600",
+    "also_right": []
+   },
+   "b": {
+    "best": "$1329.60",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 16,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "No option is correct. Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = $1329.60. None of $1272.00, $1262.00, $1282.60 or $1182.00 matches, so a student who works it out correctly cannot pick a right answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why is a writer's working note, not an explanation. It ends 'None of the options match, so this question needs to be redone' and names no intended answer."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The distractors do not match recognisable mistakes, such as compound interest only, deposit before interest, or simple interest, so they give no useful feedback even once the right answer is added."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “”, not the writer’s answer “$1282.60”.",
+   "Question b, fact: No option is correct. Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = $1329.60. None of $1272.00, $1262.00, $1282.60 or $1182.00 matches, so a student who works it out correctly cannot pick a right answer.",
+   "Question b, other: The why is a writer's working note, not an explanation. It ends 'None of the options match, so this question needs to be redone' and names no intended answer.",
+   "Question b, other: The distractors do not match recognisable mistakes, such as compound interest only, deposit before interest, or simple interest, so they give no useful feedback even once the right answer is added."
+  ]
+ },
+ "final": {
+  "title": "Compound interest with regular additions",
+  "card": [
+   "This investment earns compound interest, and the same amount is also added at the end of every period. The balance grows from both.",
+   "Each period: new balance = old balance × (1 + r) + deposit, where r is the interest rate for one period as a decimal. Divide an annual rate by the number of periods in a year.",
+   "Example: start with $1000, interest 10% per year, add $200 at the end of each year. After year 1: 1000 × 1.10 + 200 = $1300.",
+   "After year 2: 1300 × 1.10 + 200 = $1630. The interest is worked out on the whole balance, including earlier deposits and earlier interest."
+  ],
+  "remember": "Multiply the balance by (1 + r), then add the deposit, and repeat.",
+  "a": {
+   "q": "An account has $2000, earns 5% per year, and $500 is added at the end of each year. What is the balance after year 1?",
+   "opts": [
+    "$2600",
+    "$2500",
+    "$2100",
+    "$2625"
+   ],
+   "why": "New balance = 2000 × 1.05 + 500 = 2100 + 500 = $2600. $2625 adds the deposit before the interest, but the deposit comes at the end of the year. $2500 skips the interest, and $2100 leaves out the deposit.",
+   "clue": "Add the interest first, then the deposit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya opens a savings account with $1000. It earns 6% per year, and she adds $100 at the end of each year. What is the balance after year 2?",
+   "opts": [
+    "$1329.60",
+    "$1341.96",
+    "$1320.00",
+    "$1123.60"
+   ],
+   "why": "Year 1: 1000 × 1.06 + 100 = $1160. Year 2: 1160 × 1.06 + 100 = 1229.60 + 100 = $1329.60. $1341.96 adds each deposit before the interest, $1320.00 pays interest only on the first $1000, and $1123.60 leaves out the deposits.",
+   "clue": "Work out year 1 first, then use that balance for year 2."
+  }
+ },
+ "cleared_by": "recheck"
+}

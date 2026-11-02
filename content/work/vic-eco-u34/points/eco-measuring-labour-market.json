@@ -1,0 +1,379 @@
+{
+ "id": "eco-measuring-labour-market",
+ "title": "Measuring the labour market",
+ "brief": "733b0e6ad17c",
+ "shortlist": [
+  [
+   "e-labour",
+   0.492
+  ],
+  [
+   "eco-measuring-unemployment-australia",
+   0.41
+  ],
+  [
+   "eco-underemployment",
+   0.357
+  ],
+  [
+   "eco-labour-market-reform",
+   0.336
+  ],
+  [
+   "eco-natural-rate-unemployment",
+   0.263
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card other)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00029,
+  "write": 0.0112,
+  "check": 0.03615,
+  "fix": 0.03502,
+  "recheck": 0.01721
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank points cover unemployment and underemployment separately, but none teaches the participation rate or the combined under-utilisation rate that adds the underemployed to the unemployed, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, other: The card defines 'the unemployed' (no job, actively looking and available) and 'underemployed' (has a job but wants more hours). These terms belong to point 4 (The labour force) and are explained here, not just mentioned. The definitions are brief and help with the calculations, but strictly they cross into another point.",
+ "rejected": {
+  "title": "Measuring the labour market",
+  "card": [
+   [
+    "Unemployment rate",
+    "the unemployed as a share of the labour force. The unemployed have no job and are actively looking and available for work. The labour force is everyone aged 15 and over who is employed or unemployed."
+   ],
+   [
+    "Participation rate",
+    "the labour force as a share of the civilian population aged 15 and over. It shows how many people are working or seeking work."
+   ],
+   [
+    "Under-utilisation rate",
+    "the unemployed plus the underemployed, as a share of the labour force. Underemployed people have a job but want more hours."
+   ],
+   "The bases differ. The unemployment and under-utilisation rates divide by the labour force. The participation rate divides by the population aged 15 and over."
+  ],
+  "remember": "The unemployment rate counts jobless people actively looking for work. Under-utilisation also adds people who want more hours.",
+  "a": {
+   "q": "Ana's hours are cut from full-time to 10 hours a week, and she wants more work. Which measure rises?",
+   "opts": [
+    "The under-utilisation rate only",
+    "The unemployment rate only",
+    "The unemployment and under-utilisation rates",
+    "The participation and under-utilisation rates"
+   ],
+   "why": "Ana still has a job, so she is not unemployed and stays in the labour force. She is now underemployed, which the under-utilisation rate adds in. The unemployment rate does not change, because she is still employed.",
+   "clue": "Does Ana still have a job?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A region's labour force is 200,000. Of these, 10,000 are unemployed and 14,000 are underemployed. What are the two rates?",
+   "opts": [
+    "5% unemployment, 12% under-utilisation",
+    "5% unemployment, 7% under-utilisation",
+    "12% unemployment, 5% under-utilisation",
+    "7% unemployment, 12% under-utilisation"
+   ],
+   "why": "Unemployment is 10,000 ÷ 200,000 = 5%. Under-utilisation adds the two groups: 24,000 ÷ 200,000 = 12%. The 7% option uses only the underemployed, but under-utilisation counts the unemployed too.",
+   "clue": "Under-utilisation adds two groups together."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Card, other: The card defines 'the unemployed' (no job, actively looking and available) and 'underemployed' (has a job but wants more hours). These terms belong to point 4 (The labour force) and are explained here, not just mentioned. The definitions are brief and help with the calculations, but strictly they cross into another point."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Measuring the labour market",
+     "card": [
+      [
+       "Unemployment rate",
+       "the unemployed as a share of the labour force. The labour force is everyone aged 15 and over who is employed or actively looking for work."
+      ],
+      [
+       "Participation rate",
+       "the labour force as a share of the civilian population aged 15 and over. It shows how many people are working or seeking work."
+      ],
+      [
+       "Under-utilisation rate",
+       "the unemployed plus the underemployed, as a share of the labour force. Underemployed people have a job but want more hours."
+      ],
+      "A person who wants work but has stopped looking is not in the labour force. They leave the unemployment rate, so it can understate the lack of jobs."
+     ],
+     "remember": "Unemployment rate counts the jobless. Under-utilisation also counts people wanting more hours.",
+     "a": {
+      "q": "Which measure counts people who have a job but want more hours?",
+      "opts": [
+       "Labour force under-utilisation rate",
+       "Unemployment rate",
+       "Participation rate",
+       "Employment rate of the population"
+      ],
+      "why": "The under-utilisation rate adds the underemployed to the unemployed. The unemployment rate counts only people with no job who are looking for work, so it leaves out the underemployed.",
+      "clue": "Which measure adds the underemployed to the unemployed?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In a town, many jobseekers give up looking and leave the labour force, while no one gains or loses a job. What happens to the measured rates?",
+      "opts": [
+       "Unemployment and participation rates both fall",
+       "Unemployment rate falls and participation rate rises",
+       "Unemployment rate rises and participation rate falls",
+       "Unemployment and participation rates both rise"
+      ],
+      "why": "Discouraged people are no longer in the labour force, so the labour force shrinks. This lowers the participation rate, and the unemployed count falls, so the unemployment rate falls even though no new jobs exist.",
+      "clue": "Someone who stops looking is no longer counted in the labour force."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Labour force under-utilisation rate",
+      "also_right": []
+     },
+     "b": {
+      "best": "Unemployment and participation rates both fall",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The last bullet explains hidden (discouraged) unemployment, people who want work but have stopped looking. That term belongs to point 4 (The labour force) and is explained here rather than only mentioned."
+      },
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "Question b rests on hidden unemployment, which is point 4's idea, and its why names 'discouraged' people. It tests another point's concept, although the effect on the measured rates is a fair measurement question."
+      },
+      {
+       "part": "remember",
+       "kind": "wording",
+       "detail": "'Unemployment rate counts the jobless' is looser than the card. The card says jobless people who have stopped looking are not counted, so the line implies all jobless people are included. Better: 'counts jobless people actively looking for work'."
+      },
+      {
+       "part": "a",
+       "kind": "wording",
+       "detail": "'Counts people who have a job but want more hours' is slightly loose. The participation rate and employment rate also include underemployed people among those they count, just not separately. Wording such as 'adds in' or 'specifically counts' would be tighter."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both answers are correct: under-utilisation for a, and both rates fall for b. The card and question b explain hidden unemployment, which belongs to point 4, and the remember line glosses over the fact that only active jobseekers count as unemployed."
+    },
+    "flags": [
+     "Card, other: The last bullet explains hidden (discouraged) unemployment, people who want work but have stopped looking. That term belongs to point 4 (The labour force) and is explained here rather than only mentioned.",
+     "Question b, other: Question b rests on hidden unemployment, which is point 4's idea, and its why names 'discouraged' people. It tests another point's concept, although the effect on the measured rates is a fair measurement question.",
+     "Remember, wording: 'Unemployment rate counts the jobless' is looser than the card. The card says jobless people who have stopped looking are not counted, so the line implies all jobless people are included. Better: 'counts jobless people actively looking for work'.",
+     "Question a, wording: 'Counts people who have a job but want more hours' is slightly loose. The participation rate and employment rate also include underemployed people among those they count, just not separately. Wording such as 'adds in' or 'specifically counts' would be tighter."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Measuring the labour market",
+     "card": [
+      [
+       "Unemployment rate",
+       "the unemployed as a share of the labour force. The unemployed have no job and are actively looking and available for work. The labour force is everyone aged 15 and over who is employed or unemployed."
+      ],
+      [
+       "Participation rate",
+       "the labour force as a share of the civilian population aged 15 and over. It shows how many people are working or seeking work."
+      ],
+      [
+       "Under-utilisation rate",
+       "the unemployed plus the underemployed, as a share of the labour force. Underemployed people have a job but want more hours."
+      ],
+      "The bases differ. The unemployment and under-utilisation rates divide by the labour force. The participation rate divides by the population aged 15 and over."
+     ],
+     "remember": "The unemployment rate counts jobless people actively looking for work. Under-utilisation also adds people who want more hours.",
+     "a": {
+      "q": "Ana's hours are cut from full-time to 10 hours a week, and she wants more work. Which measure rises?",
+      "opts": [
+       "The under-utilisation rate only",
+       "The unemployment rate only",
+       "The unemployment and under-utilisation rates",
+       "The participation and under-utilisation rates"
+      ],
+      "why": "Ana still has a job, so she is not unemployed and stays in the labour force. She is now underemployed, which the under-utilisation rate adds in. The unemployment rate does not change, because she is still employed.",
+      "clue": "Does Ana still have a job?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A region's labour force is 200,000. Of these, 10,000 are unemployed and 14,000 are underemployed. What are the two rates?",
+      "opts": [
+       "5% unemployment, 12% under-utilisation",
+       "5% unemployment, 7% under-utilisation",
+       "12% unemployment, 5% under-utilisation",
+       "7% unemployment, 12% under-utilisation"
+      ],
+      "why": "Unemployment is 10,000 ÷ 200,000 = 5%. Under-utilisation adds the two groups: 24,000 ÷ 200,000 = 12%. The 7% option uses only the underemployed, but under-utilisation counts the unemployed too.",
+      "clue": "Under-utilisation adds two groups together."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:50Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "The under-utilisation rate only",
+       "also_right": []
+      },
+      "b": {
+       "best": "5% unemployment, 12% under-utilisation",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "card",
+        "kind": "other",
+        "detail": "The card defines 'the unemployed' (no job, actively looking and available) and 'underemployed' (has a job but wants more hours). These terms belong to point 4 (The labour force) and are explained here, not just mentioned. The definitions are brief and help with the calculations, but strictly they cross into another point."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Facts and both answers check out: Ana's case raises only the under-utilisation rate, and the region has 5% unemployment and 12% under-utilisation. The only issue is minor: the card briefly defines 'unemployed' and 'underemployed', which belong to point 4 (The labour force)."
+     },
+     "flags": [
+      "Card, other: The card defines 'the unemployed' (no job, actively looking and available) and 'underemployed' (has a job but wants more hours). These terms belong to point 4 (The labour force) and are explained here, not just mentioned. The definitions are brief and help with the calculations, but strictly they cross into another point."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Measuring the labour market",
+  "card": [
+   [
+    "Unemployment rate",
+    "the number of unemployed people as a share of the labour force. It is the most quoted measure of how many people want work and cannot find it."
+   ],
+   [
+    "Participation rate",
+    "the labour force as a share of the civilian population aged 15 and over. It shows how many people are working or seeking work."
+   ],
+   [
+    "Under-utilisation rate",
+    "the unemployed plus the underemployed, as a share of the labour force. It is wider than the unemployment rate because it adds the underemployed."
+   ],
+   "The bases differ. The unemployment and under-utilisation rates divide by the labour force. The participation rate divides by the population aged 15 and over."
+  ],
+  "remember": "The unemployment rate counts only the unemployed. Under-utilisation adds the underemployed to them.",
+  "a": {
+   "q": "A region has 10,000 unemployed and 14,000 underemployed people in a labour force of 200,000. What are its two rates?",
+   "opts": [
+    "5% unemployment, 12% under-utilisation",
+    "5% unemployment, 7% under-utilisation",
+    "12% unemployment, 5% under-utilisation",
+    "7% unemployment, 12% under-utilisation"
+   ],
+   "why": "Unemployment is 10,000 ÷ 200,000 = 5%. Under-utilisation adds the two groups: 24,000 ÷ 200,000 = 12%. The 7% option uses only the underemployed, but under-utilisation counts the unemployed too.",
+   "clue": "Under-utilisation adds two groups together."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has a civilian population aged 15 and over of 50,000 and a labour force of 32,000. What is its participation rate?",
+   "opts": [
+    "64%, found by dividing by the population aged 15 and over",
+    "64%, found by dividing by the labour force",
+    "36%, found by dividing by the population aged 15 and over",
+    "36%, found by dividing by the labour force"
+   ],
+   "why": "Participation = 32,000 ÷ 50,000 = 64%. The base is the population aged 15 and over, not the labour force. The labour force is the part being counted, so dividing by it would not make sense.",
+   "clue": "Which group is the base for the participation rate?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "5% unemployment, 12% under-utilisation",
+   "also_right": []
+  },
+  "b": {
+   "best": "64%, found by dividing by the population aged 15 and over",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. The definitions match ABS measures, both calculations are correct, and the explanations agree with the card."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Measuring the labour market",
+  "card": [
+   [
+    "Unemployment rate",
+    "the number of unemployed people as a share of the labour force. It is the most quoted measure of how many people want work and cannot find it."
+   ],
+   [
+    "Participation rate",
+    "the labour force as a share of the civilian population aged 15 and over. It shows how many people are working or seeking work."
+   ],
+   [
+    "Under-utilisation rate",
+    "the unemployed plus the underemployed, as a share of the labour force. It is wider than the unemployment rate because it adds the underemployed."
+   ],
+   "The bases differ. The unemployment and under-utilisation rates divide by the labour force. The participation rate divides by the population aged 15 and over."
+  ],
+  "remember": "The unemployment rate counts only the unemployed. Under-utilisation adds the underemployed to them.",
+  "a": {
+   "q": "A region has 10,000 unemployed and 14,000 underemployed people in a labour force of 200,000. What are its two rates?",
+   "opts": [
+    "5% unemployment, 12% under-utilisation",
+    "5% unemployment, 7% under-utilisation",
+    "12% unemployment, 5% under-utilisation",
+    "7% unemployment, 12% under-utilisation"
+   ],
+   "why": "Unemployment is 10,000 ÷ 200,000 = 5%. Under-utilisation adds the two groups: 24,000 ÷ 200,000 = 12%. The 7% option uses only the underemployed, but under-utilisation counts the unemployed too.",
+   "clue": "Under-utilisation adds two groups together."
+  },
+  "b": {
+   "d": 3,
+   "q": "A town has a civilian population aged 15 and over of 50,000 and a labour force of 32,000. What is its participation rate?",
+   "opts": [
+    "64%, found by dividing by the population aged 15 and over",
+    "64%, found by dividing by the labour force",
+    "36%, found by dividing by the population aged 15 and over",
+    "36%, found by dividing by the labour force"
+   ],
+   "why": "Participation = 32,000 ÷ 50,000 = 64%. The base is the population aged 15 and over, not the labour force. The labour force is the part being counted, so dividing by it would not make sense.",
+   "clue": "Which group is the base for the participation rate?"
+  }
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "id": "mat-random-variables",
+ "title": "Random variables",
+ "brief": "4f80709b0396",
+ "shortlist": [
+  [
+   "mat-sums-random-variables",
+   0.428
+  ],
+  [
+   "mat-expected-value",
+   0.279
+  ],
+  [
+   "mat-discrete-probability-distributions",
+   0.26
+  ],
+  [
+   "mat-variance-standard-deviation-random",
+   0.23
+  ],
+  [
+   "mat-scatterplots",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: done",
+  "2026-11-01T15:05:29Z check: flagged",
+  "2026-11-01T15:14:48Z fix: suggested",
+  "2026-11-02T04:35:42Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.0002,
+  "write": 0.00608,
+  "check": 0.00857,
+  "fix": 0.02325
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches what a random variable is or the discrete versus continuous distinction; they all assume random variables already and cover sums, expected value, distributions, variance or scatterplots.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Random variables",
+  "card": [
+   "A random variable gives a number to each outcome of an experiment. It is written with a capital letter, such as X.",
+   "Example: toss a coin 3 times. Let X be the number of heads. The outcome HTH gives X = 2.",
+   [
+    "Discrete",
+    "it takes separate values that can be counted, such as 0, 1, 2, 3. Counting things usually gives a discrete variable."
+   ],
+   [
+    "Continuous",
+    "it can take any value in a range, such as 1.5 or 1.52. Measuring things such as time, mass or height usually gives a continuous variable."
+   ]
+  ],
+  "remember": "A random variable turns outcomes into numbers. Counted values are discrete, measured values are continuous.",
+  "a": {
+   "q": "Which of these random variables is discrete?",
+   "opts": [
+    "The number of goals scored in a netball match",
+    "The time a runner takes to finish 100 m",
+    "The mass of a watermelon at a market",
+    "The height of a tree in a park"
+   ],
+   "why": "Goals are counted and take separate values such as 0, 1, 2. Time, mass and height are measured and can take any value in a range, so they are continuous.",
+   "clue": "Which one is counted rather than measured?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya records the number of red cars among the next 20 cars to pass her school. She also records the time between two cars passing. Which describes these two random variables?",
+   "opts": [
+    "The count is discrete and the time is continuous",
+    "The count is continuous and the time is discrete",
+    "Both are discrete because they are recorded as numbers",
+    "Both are continuous because they are random"
+   ],
+   "why": "The number of red cars is counted: it can only be 0, 1, 2, up to 20. The time between cars can be any value in a range. Being recorded as a number does not make a variable discrete.",
+   "clue": "Ask whether each value is counted or measured."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The number of goals scored in a netball match",
+   "also_right": []
+  },
+  "b": {
+   "best": "The count is discrete and the time is continuous",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says counting 'usually' gives a discrete variable and measuring 'usually' gives a continuous one. The remember line drops 'usually' and states the split as an absolute rule, so it sorts the ideas more neatly than the card does."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct, and each has a single right answer. The only issue is that the remember line drops the card's 'usually' and turns counted/measured into an absolute rule."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The card says counting 'usually' gives a discrete variable and measuring 'usually' gives a continuous one. The remember line drops 'usually' and states the split as an absolute rule, so it sorts the ideas more neatly than the card does."
+ ],
+ "proposal": {
+  "title": "Random variables",
+  "card": [
+   "A random variable gives a number to each outcome of an experiment. It is written with a capital letter, such as X.",
+   "Example: toss a coin 3 times. Let X be the number of heads. The outcome HTH gives X = 2.",
+   [
+    "Discrete",
+    "it takes separate values that can be counted, such as 0, 1, 2, 3. Counting things usually gives a discrete variable."
+   ],
+   [
+    "Continuous",
+    "it can take any value in a range, such as 1.5 or 1.52. Measuring things such as time, mass or height usually gives a continuous variable."
+   ]
+  ],
+  "remember": "A random variable turns outcomes into numbers. Separate values make it discrete. Any value in a range makes it continuous.",
+  "a": {
+   "q": "Which of these random variables is discrete?",
+   "opts": [
+    "The number of goals scored in a netball match",
+    "The time a runner takes to finish 100 m",
+    "The mass of a watermelon at a market",
+    "The height of a tree in a park"
+   ],
+   "why": "Goals are counted and take separate values such as 0, 1, 2. Time, mass and height are measured and can take any value in a range, so they are continuous.",
+   "clue": "Which one is counted rather than measured?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya records the number of red cars among the next 20 cars to pass her school. She also records the time between two cars passing. Which describes these two random variables?",
+   "opts": [
+    "The count is discrete and the time is continuous",
+    "The count is continuous and the time is discrete",
+    "Both are discrete because they are recorded as numbers",
+    "Both are continuous because they are random"
+   ],
+   "why": "The number of red cars takes separate values: it can only be 0, 1, 2, up to 20. The time between cars can be any value in a range. Being recorded as a number does not make a variable discrete.",
+   "clue": "Ask whether each value is counted or measured."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:42Z",
+  "rules": 1,
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The card says counting 'usually' gives a discrete variable and measuring 'usually' gives a continuous one. The remember line drops 'usually' and states the split as an absolute rule, so it sorts the ideas more neatly than the card does."
+   }
+  ],
+  "flags": [
+   "Remember, other: The card says counting 'usually' gives a discrete variable and measuring 'usually' gives a continuous one. The remember line drops 'usually' and states the split as an absolute rule, so it sorts the ideas more neatly than the card does."
+  ]
+ },
+ "final": {
+  "title": "Random variables",
+  "card": [
+   "A random variable gives a number to each outcome of an experiment. It is written with a capital letter, such as X.",
+   "Example: toss a coin 3 times. Let X be the number of heads. The outcome HTH gives X = 2.",
+   [
+    "Discrete",
+    "it takes separate values that can be counted, such as 0, 1, 2, 3. Counting things usually gives a discrete variable."
+   ],
+   [
+    "Continuous",
+    "it can take any value in a range, such as 1.5 or 1.52. Measuring things such as time, mass or height usually gives a continuous variable."
+   ]
+  ],
+  "remember": "A random variable turns outcomes into numbers. Separate values make it discrete. Any value in a range makes it continuous.",
+  "a": {
+   "q": "Which of these random variables is discrete?",
+   "opts": [
+    "The number of goals scored in a netball match",
+    "The time a runner takes to finish 100 m",
+    "The mass of a watermelon at a market",
+    "The height of a tree in a park"
+   ],
+   "why": "Goals are counted and take separate values such as 0, 1, 2. Time, mass and height are measured and can take any value in a range, so they are continuous.",
+   "clue": "Which one is counted rather than measured?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya records the number of red cars among the next 20 cars to pass her school. She also records the time between two cars passing. Which describes these two random variables?",
+   "opts": [
+    "The count is discrete and the time is continuous",
+    "The count is continuous and the time is discrete",
+    "Both are discrete because they are recorded as numbers",
+    "Both are continuous because they are random"
+   ],
+   "why": "The number of red cars takes separate values: it can only be 0, 1, 2, up to 20. The time between cars can be any value in a range. Being recorded as a number does not make a variable discrete.",
+   "clue": "Ask whether each value is counted or measured."
+  }
+ },
+ "cleared_by": "auto"
+}

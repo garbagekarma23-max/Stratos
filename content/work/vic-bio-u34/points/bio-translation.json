@@ -1,0 +1,188 @@
+{
+ "id": "bio-translation",
+ "title": "Translation",
+ "brief": "a4eeb72c9df7",
+ "shortlist": [
+  [
+   "bio-making-proteins",
+   0.763
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:43Z check: flagged",
+  "2026-11-01T17:33:06Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: picked as a spot check. It would have been cleared with the fix (a other)",
+  "2026-11-02T06:17:36Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00552,
+  "check": 0.0183,
+  "fix": 0.02994
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point 'Making proteins' covers the whole process, both transcription and translation, so it is broader than the single idea of translation that this point needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Translation",
+  "card": [
+   "Translation is the making of a polypeptide using the information in mature mRNA. It happens at a ribosome, in the cytoplasm or on the rough ER.",
+   "The ribosome reads the mRNA one codon at a time. A codon is a set of three bases that stands for one amino acid or a stop signal.",
+   "Each tRNA carries one amino acid. Its anticodon is three bases that pair with a matching mRNA codon, so the right amino acid is placed at each step.",
+   "The ribosome joins the amino acids with peptide bonds and moves along the mRNA. The chain grows until a stop codon is reached, then the polypeptide is released."
+  ],
+  "remember": "The mRNA codon sets the order. tRNA anticodons match each codon to its amino acid.",
+  "a": {
+   "q": "What is the job of a tRNA molecule during translation?",
+   "opts": [
+    "It carries an amino acid and pairs with a codon",
+    "It copies the gene into pre-mRNA in the nucleus",
+    "It joins amino acids together with peptide bonds",
+    "It carries the gene's code from the nucleus to the ribosome"
+   ],
+   "why": "A tRNA carries one amino acid and its anticodon pairs with the matching mRNA codon. The ribosome, not tRNA, joins the amino acids with peptide bonds.",
+   "clue": "Think about what each tRNA carries and what it pairs with."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tRNA has the anticodon UAC. Which mRNA codon will it pair with, and what does it deliver to the ribosome?",
+   "opts": [
+    "The codon AUG, and the amino acid it carries",
+    "The codon UAC, and the amino acid it carries",
+    "The codon AUG, and a stop signal to end the chain",
+    "The codon UAC, and a copy of the gene's DNA"
+   ],
+   "why": "The anticodon pairs with the mRNA codon by matching bases: U with A, A with U and C with G. So UAC pairs with AUG, and the tRNA delivers its amino acid. The codon UAC is tempting, but a codon is never identical to the anticodon that pairs with it.",
+   "clue": "Pair each anticodon base with its partner, and remember what tRNA carries."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It carries an amino acid and pairs with a codon",
+   "also_right": []
+  },
+  "b": {
+   "best": "The codon AUG, and the amino acid it carries",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about what each tRNA carries and what it pairs with') echoes the right option's wording ('carries an amino acid and pairs with a codon'), so a student can pick it without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, answers and explanations are accurate. The clue for question a mirrors the wording of the right option and gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('Think about what each tRNA carries and what it pairs with') echoes the right option's wording ('carries an amino acid and pairs with a codon'), so a student can pick it without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Translation",
+  "card": [
+   "Translation is the making of a polypeptide using the information in mature mRNA. It happens at a ribosome, in the cytoplasm or on the rough ER.",
+   "The ribosome reads the mRNA one codon at a time. A codon is a set of three bases that stands for one amino acid or a stop signal.",
+   "Each tRNA carries one amino acid. Its anticodon is three bases that pair with a matching mRNA codon, so the right amino acid is placed at each step.",
+   "The ribosome joins the amino acids with peptide bonds and moves along the mRNA. The chain grows until a stop codon is reached, then the polypeptide is released."
+  ],
+  "remember": "The mRNA codon sets the order. tRNA anticodons match each codon to its amino acid.",
+  "a": {
+   "q": "What is the job of a tRNA molecule during translation?",
+   "opts": [
+    "It carries an amino acid and pairs with a codon",
+    "It copies the gene into pre-mRNA in the nucleus",
+    "It joins amino acids together with peptide bonds",
+    "It carries the gene's code from the nucleus to the ribosome"
+   ],
+   "why": "A tRNA carries one amino acid and its anticodon pairs with the matching mRNA codon. The ribosome, not tRNA, joins the amino acids with peptide bonds, and mRNA is what carries the gene's code to the ribosome.",
+   "clue": "Each wrong option is the job of a different molecule."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tRNA has the anticodon UAC. Which mRNA codon will it pair with, and what does it deliver to the ribosome?",
+   "opts": [
+    "The codon AUG, and the amino acid it carries",
+    "The codon UAC, and the amino acid it carries",
+    "The codon AUG, and a stop signal to end the chain",
+    "The codon UAC, and a copy of the gene's DNA"
+   ],
+   "why": "The anticodon pairs with the mRNA codon by matching bases: U with A, A with U and C with G. So UAC pairs with AUG, and the tRNA delivers its amino acid. The codon UAC is tempting, but an anticodon pairs with a complementary codon, not an identical one.",
+   "clue": "Pair each anticodon base with its partner base."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about what each tRNA carries and what it pairs with') echoes the right option's wording ('carries an amino acid and pairs with a codon'), so a student can pick it without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('Think about what each tRNA carries and what it pairs with') echoes the right option's wording ('carries an amino acid and pairs with a codon'), so a student can pick it without knowing the idea."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Translation",
+  "card": [
+   "Translation is the making of a polypeptide using the information in mature mRNA. It happens at a ribosome, in the cytoplasm or on the rough ER.",
+   "The ribosome reads the mRNA one codon at a time. A codon is a set of three bases that stands for one amino acid or a stop signal.",
+   "Each tRNA carries one amino acid. Its anticodon is three bases that pair with a matching mRNA codon, so the right amino acid is placed at each step.",
+   "The ribosome joins the amino acids with peptide bonds and moves along the mRNA. The chain grows until a stop codon is reached, then the polypeptide is released."
+  ],
+  "remember": "The mRNA codon sets the order. tRNA anticodons match each codon to its amino acid.",
+  "a": {
+   "q": "What is the job of a tRNA molecule during translation?",
+   "opts": [
+    "It carries an amino acid and pairs with a codon",
+    "It copies the gene into pre-mRNA in the nucleus",
+    "It joins amino acids together with peptide bonds",
+    "It carries the gene's code from the nucleus to the ribosome"
+   ],
+   "why": "A tRNA carries one amino acid and its anticodon pairs with the matching mRNA codon. The ribosome, not tRNA, joins the amino acids with peptide bonds, and mRNA is what carries the gene's code to the ribosome.",
+   "clue": "Each wrong option is the job of a different molecule."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tRNA has the anticodon UAC. Which mRNA codon will it pair with, and what does it deliver to the ribosome?",
+   "opts": [
+    "The codon AUG, and the amino acid it carries",
+    "The codon UAC, and the amino acid it carries",
+    "The codon AUG, and a stop signal to end the chain",
+    "The codon UAC, and a copy of the gene's DNA"
+   ],
+   "why": "The anticodon pairs with the mRNA codon by matching bases: U with A, A with U and C with G. So UAC pairs with AUG, and the tRNA delivers its amino acid. The codon UAC is tempting, but an anticodon pairs with a complementary codon, not an identical one.",
+   "clue": "Pair each anticodon base with its partner base."
+  }
+ },
+ "cleared_by": "owner"
+}

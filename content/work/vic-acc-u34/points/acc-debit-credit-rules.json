@@ -1,0 +1,146 @@
+{
+ "id": "acc-debit-credit-rules",
+ "title": "Debit and credit rules",
+ "brief": "d57a2d823cf2",
+ "shortlist": [
+  [
+   "acc-assets-liabilities-owner-s",
+   0.245
+  ],
+  [
+   "acc-revenue-expenses",
+   0.224
+  ],
+  [
+   "acc-credit-purchases-accounts-payable",
+   0.217
+  ],
+  [
+   "acc-non-financial-factors-credit",
+   0.213
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00017,
+  "write": 0.00484,
+  "check": 0.01171
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the debit and credit rules; the closest, on assets, liabilities and owner's equity, covers the accounting equation but not which side of the ledger increases each account.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Debit and credit rules",
+  "card": [
+   "Every account has a debit side (left) and a credit side (right). Whether a debit raises or lowers an account depends on the type of account.",
+   [
+    "Debit increases",
+    "assets and expenses. A credit decreases them."
+   ],
+   [
+    "Credit increases",
+    "liabilities, owner's equity and revenue. A debit decreases them."
+   ],
+   "Cash received from a customer for a sale: debit Cash (an asset rises) and credit Sales (revenue rises). Paying wages: debit Wages (an expense rises) and credit Cash (an asset falls)."
+  ],
+  "remember": "Debit raises assets and expenses. Credit raises liabilities, owner's equity and revenue.",
+  "a": {
+   "q": "Which entry correctly records a business paying its electricity bill in cash?",
+   "opts": [
+    "Debit Electricity expense, credit Cash",
+    "Debit Cash, credit Electricity expense",
+    "Credit Electricity expense, credit Cash",
+    "Debit Electricity expense, debit Cash"
+   ],
+   "why": "Electricity is an expense, so it rises with a debit. Cash is an asset and falls, so it is credited. Debiting Cash would wrongly increase the cash held.",
+   "clue": "An expense rises on the debit side, and cash goes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Bikes borrows $5,000 from a bank and the money is paid into its bank account. Which entry records this?",
+   "opts": [
+    "Debit Bank, credit Loan payable",
+    "Debit Loan payable, credit Bank",
+    "Debit Bank, credit Owner's equity",
+    "Credit Bank, credit Loan payable"
+   ],
+   "why": "The bank account is an asset and rises, so it is debited. The loan is a liability and rises, so it is credited. Crediting Owner's equity is tempting because it also rises with a credit, but the money is borrowed and not put in by the owner.",
+   "clue": "Is the money owed back to someone outside the business?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Debit Electricity expense, credit Cash",
+   "also_right": []
+  },
+  "b": {
+   "best": "Debit Bank, credit Loan payable",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Debit and credit rules",
+  "card": [
+   "Every account has a debit side (left) and a credit side (right). Whether a debit raises or lowers an account depends on the type of account.",
+   [
+    "Debit increases",
+    "assets and expenses. A credit decreases them."
+   ],
+   [
+    "Credit increases",
+    "liabilities, owner's equity and revenue. A debit decreases them."
+   ],
+   "Cash received from a customer for a sale: debit Cash (an asset rises) and credit Sales (revenue rises). Paying wages: debit Wages (an expense rises) and credit Cash (an asset falls)."
+  ],
+  "remember": "Debit raises assets and expenses. Credit raises liabilities, owner's equity and revenue.",
+  "a": {
+   "q": "Which entry correctly records a business paying its electricity bill in cash?",
+   "opts": [
+    "Debit Electricity expense, credit Cash",
+    "Debit Cash, credit Electricity expense",
+    "Credit Electricity expense, credit Cash",
+    "Debit Electricity expense, debit Cash"
+   ],
+   "why": "Electricity is an expense, so it rises with a debit. Cash is an asset and falls, so it is credited. Debiting Cash would wrongly increase the cash held.",
+   "clue": "An expense rises on the debit side, and cash goes out."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's Bikes borrows $5,000 from a bank and the money is paid into its bank account. Which entry records this?",
+   "opts": [
+    "Debit Bank, credit Loan payable",
+    "Debit Loan payable, credit Bank",
+    "Debit Bank, credit Owner's equity",
+    "Credit Bank, credit Loan payable"
+   ],
+   "why": "The bank account is an asset and rises, so it is debited. The loan is a liability and rises, so it is credited. Crediting Owner's equity is tempting because it also rises with a credit, but the money is borrowed and not put in by the owner.",
+   "clue": "Is the money owed back to someone outside the business?"
+  }
+ },
+ "cleared_by": "checker"
+}

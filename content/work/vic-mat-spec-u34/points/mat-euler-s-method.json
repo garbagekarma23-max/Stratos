@@ -1,0 +1,225 @@
+{
+ "id": "mat-euler-s-method",
+ "title": "Euler's method",
+ "brief": "49231715b310",
+ "shortlist": [
+  [
+   "mat-euler-hamilton",
+   0.269
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:46Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 8e-05,
+  "write": 0.00539,
+  "check": 0.01633,
+  "fix": 0.0287,
+  "recheck": 0.01025
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank card covers Euler trails and Hamiltonian paths in graph theory, which is a different idea from stepping along a differential equation's solution with Euler's method, so no bank point teaches the same thing.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Euler's method",
+  "card": [
+   "Euler's method approximates a solution of dy/dx = f(x, y) when you know a starting point. It moves in small steps of size h along the tangent line.",
+   "Each step uses the gradient at the current point. x(n+1) = x(n) + h and y(n+1) = y(n) + h × f(x(n), y(n)).",
+   "Example: dy/dx = x + y, y(0) = 1, h = 0.1. The gradient at (0, 1) is 0 + 1 = 1. So y1 = 1 + 0.1 × 1 = 1.1 at x = 0.1.",
+   "For the next step, use the new point (0.1, 1.1). The gradient is 0.1 + 1.1 = 1.2, so y2 = 1.1 + 0.1 × 1.2 = 1.22 at x = 0.2."
+  ],
+  "remember": "Each new y is the old y plus step size times the gradient at the old point.",
+  "a": {
+   "q": "dy/dx = 2x + y with y(0) = 3. Use Euler's method with h = 0.5 to find y1 at x = 0.5.",
+   "opts": [
+    "4.5",
+    "3.5",
+    "6",
+    "4"
+   ],
+   "why": "The gradient at (0, 3) is 2 × 0 + 3 = 3. So y1 = 3 + 0.5 × 3 = 4.5. The answer 6 comes from forgetting to multiply the gradient by h, which gives 3 + 3.",
+   "clue": "Find the gradient at the starting point first."
+  },
+  "b": {
+   "d": 3,
+   "q": "dy/dx = y − x with y(0) = 2. Using Euler's method with h = 0.2, what is the approximate value of y at x = 0.4?",
+   "opts": [
+    "2.76",
+    "2.8",
+    "2.4",
+    "2.72"
+   ],
+   "why": "At (0, 2) the gradient is 2, so y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2. At (0.2, 2.4) the gradient is 2.2, so y2 = 2.4 + 0.2 × 2.2 = 2.84. Check: 2.4 + 0.44 = 2.84. The option 2.8 uses the old gradient of 2 again, and 2.4 stops after one step.",
+   "clue": "The second step uses the new x and the new y."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4.5",
+   "also_right": []
+  },
+  "b": {
+   "best": "2.8",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "None of the options is correct. Euler's method gives y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2, then gradient 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.44 = 2.84. The why also reaches 2.84, but 2.84 is not among the options (2.4, 2.8, 2.76, 2.72). '2.8' is entered as best only because the field needs an option. It is the nearest value but is wrong, and the why itself calls it the result of reusing the old gradient."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why names 2.84 as the answer, which does not match any option, so a student who works it correctly finds no matching choice. Add 2.84 as an option, replacing one of the distractors."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question b has no correct option: the right answer, 2.84, is missing from the choices, though the why computes it. The card, the remember line and question a are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “2.8”, not the writer’s answer “2.76”.",
+  "Question b, fact: None of the options is correct. Euler's method gives y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2, then gradient 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.44 = 2.84. The why also reaches 2.84, but 2.84 is not among the options (2.4, 2.8, 2.76, 2.72). '2.8' is entered as best only because the field needs an option. It is the nearest value but is wrong, and the why itself calls it the result of reusing the old gradient.",
+  "Question b, other: The why names 2.84 as the answer, which does not match any option, so a student who works it correctly finds no matching choice. Add 2.84 as an option, replacing one of the distractors."
+ ],
+ "proposal": {
+  "title": "Euler's method",
+  "card": [
+   "Euler's method approximates a solution of dy/dx = f(x, y) when you know a starting point. It moves in small steps of size h along the tangent line.",
+   "Each step uses the gradient at the current point. x(n+1) = x(n) + h and y(n+1) = y(n) + h × f(x(n), y(n)).",
+   "Example: dy/dx = x + y, y(0) = 1, h = 0.1. The gradient at (0, 1) is 0 + 1 = 1. So y1 = 1 + 0.1 × 1 = 1.1 at x = 0.1.",
+   "For the next step, use the new point (0.1, 1.1). The gradient is 0.1 + 1.1 = 1.2, so y2 = 1.1 + 0.1 × 1.2 = 1.22 at x = 0.2."
+  ],
+  "remember": "Each new y is the old y plus step size times the gradient at the old point.",
+  "a": {
+   "q": "dy/dx = 2x + y with y(0) = 3. Use Euler's method with h = 0.5 to find y1 at x = 0.5.",
+   "opts": [
+    "4.5",
+    "3.5",
+    "6",
+    "4"
+   ],
+   "why": "The gradient at (0, 3) is 2 × 0 + 3 = 3. So y1 = 3 + 0.5 × 3 = 4.5. The answer 6 comes from forgetting to multiply the gradient by h, which gives 3 + 3.",
+   "clue": "Find the gradient at the starting point first."
+  },
+  "b": {
+   "d": 3,
+   "q": "dy/dx = y − x with y(0) = 2. Using Euler's method with h = 0.2, what is the approximate value of y at x = 0.4?",
+   "opts": [
+    "2.84",
+    "2.8",
+    "2.88",
+    "2.4"
+   ],
+   "why": "At (0, 2) the gradient is 2 − 0 = 2, so y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2. At (0.2, 2.4) the gradient is 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.2 × 2.2 = 2.84. The option 2.8 reuses the old gradient of 2, and 2.88 uses the new y but the old x.",
+   "clue": "The second step uses the new x and the new y."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "4.5",
+    "also_right": []
+   },
+   "b": {
+    "best": "2.84",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example and both answers (4.5 and 2.84) check out, and the explanations match the distractors."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "fact",
+    "detail": "None of the options is correct. Euler's method gives y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2, then gradient 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.44 = 2.84. The why also reaches 2.84, but 2.84 is not among the options (2.4, 2.8, 2.76, 2.72). '2.8' is entered as best only because the field needs an option. It is the nearest value but is wrong, and the why itself calls it the result of reusing the old gradient."
+   },
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why names 2.84 as the answer, which does not match any option, so a student who works it correctly finds no matching choice. Add 2.84 as an option, replacing one of the distractors."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “2.8”, not the writer’s answer “2.76”.",
+   "Question b, fact: None of the options is correct. Euler's method gives y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2, then gradient 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.44 = 2.84. The why also reaches 2.84, but 2.84 is not among the options (2.4, 2.8, 2.76, 2.72). '2.8' is entered as best only because the field needs an option. It is the nearest value but is wrong, and the why itself calls it the result of reusing the old gradient.",
+   "Question b, other: The why names 2.84 as the answer, which does not match any option, so a student who works it correctly finds no matching choice. Add 2.84 as an option, replacing one of the distractors."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Euler's method",
+  "card": [
+   "Euler's method approximates a solution of dy/dx = f(x, y) when you know a starting point. It moves in small steps of size h along the tangent line.",
+   "Each step uses the gradient at the current point. x(n+1) = x(n) + h and y(n+1) = y(n) + h × f(x(n), y(n)).",
+   "Example: dy/dx = x + y, y(0) = 1, h = 0.1. The gradient at (0, 1) is 0 + 1 = 1. So y1 = 1 + 0.1 × 1 = 1.1 at x = 0.1.",
+   "For the next step, use the new point (0.1, 1.1). The gradient is 0.1 + 1.1 = 1.2, so y2 = 1.1 + 0.1 × 1.2 = 1.22 at x = 0.2."
+  ],
+  "remember": "Each new y is the old y plus step size times the gradient at the old point.",
+  "a": {
+   "q": "dy/dx = 2x + y with y(0) = 3. Use Euler's method with h = 0.5 to find y1 at x = 0.5.",
+   "opts": [
+    "4.5",
+    "3.5",
+    "6",
+    "4"
+   ],
+   "why": "The gradient at (0, 3) is 2 × 0 + 3 = 3. So y1 = 3 + 0.5 × 3 = 4.5. The answer 6 comes from forgetting to multiply the gradient by h, which gives 3 + 3.",
+   "clue": "Find the gradient at the starting point first."
+  },
+  "b": {
+   "d": 3,
+   "q": "dy/dx = y − x with y(0) = 2. Using Euler's method with h = 0.2, what is the approximate value of y at x = 0.4?",
+   "opts": [
+    "2.84",
+    "2.8",
+    "2.88",
+    "2.4"
+   ],
+   "why": "At (0, 2) the gradient is 2 − 0 = 2, so y1 = 2 + 0.2 × 2 = 2.4 at x = 0.2. At (0.2, 2.4) the gradient is 2.4 − 0.2 = 2.2, so y2 = 2.4 + 0.2 × 2.2 = 2.84. The option 2.8 reuses the old gradient of 2, and 2.88 uses the new y but the old x.",
+   "clue": "The second step uses the new x and the new y."
+  }
+ },
+ "cleared_by": "owner"
+}

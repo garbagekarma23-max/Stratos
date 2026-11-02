@@ -1,0 +1,62 @@
+{
+ "id": "chem-rate-yield-industry",
+ "title": "Rate and yield in industry",
+ "brief": "9949a9f1e3a6",
+ "shortlist": [
+  [
+   "chem-industrial-process",
+   0.44
+  ],
+  [
+   "chem-yield-purity",
+   0.418
+  ],
+  [
+   "chem-designing-chemical-synthesis",
+   0.277
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 may adapt chem-industrial-process, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:58Z confirm: Claude Opus 5.5 may adapt chem-industrial-process, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:18:37Z review: reusing chem-industrial-process"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.0004,
+  "confirm": 0.01202
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "chem-industrial-process",
+  "changes": [
+   "Check the Haber process temperature and pressure values against those used in the VCE Chemistry Units 3 and 4 study design and Victorian textbooks, and adjust the figures on the card if they differ.",
+   "Align the wording of the rate, yield and cost trade-off with the VCE study design's terminology where it differs from the NSW card."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rate, yield and cost compromise in industry through the Haber process at a suitable depth, but its specific conditions and wording are NSW-based and may need small local adjustments for VCE.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "chem-industrial-process",
+  "changes": [
+   "Give the pressure in Question b in kPa (for example 20 000 kPa rather than 200 atm), since VCE Chemistry works mainly in kPa."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same rate, yield and cost compromise through the Haber process at a Year 12 depth that suits VCE Units 3 and 4, so only the pressure unit in Question b needs changing to suit VCE.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "chem-industrial-process",
+ "matched": {
+  "verdict": "reuse",
+  "from": "chem-industrial-process",
+  "by": "owner",
+  "at": "2026-11-02T06:18:37Z"
+ }
+}

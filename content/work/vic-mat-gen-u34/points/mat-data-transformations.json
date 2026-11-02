@@ -1,0 +1,202 @@
+{
+ "id": "mat-data-transformations",
+ "title": "Data transformations",
+ "brief": "f367c827c992",
+ "shortlist": [
+  [
+   "mat-transforming-data-linearity",
+   0.245
+  ],
+  [
+   "mat-scatterplots",
+   0.222
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 may adapt mat-transforming-data-linearity, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:02Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: cleared with the fix (card wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00041,
+  "confirm": 0.00907,
+  "write": 0.00742,
+  "check": 0.00939,
+  "fix": 0.02471
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-transforming-data-linearity",
+  "changes": [
+   "Add a sentence that after the transformation, a least-squares line is fitted to the transformed values, so the regression equation uses the transformed variable.",
+   "Note that the transformed variable is used as the explanatory variable in the Units 3 and 4 linear regression work."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches the same transformations for straightening data, but it stops before fitting a line, which the Units 3 and 4 regression work needs.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank point only transforms x, while VCE General Mathematics Units 3 and 4 expects students to choose squared, log or reciprocal transformations of either x or y (the circle of transformations) before fitting a line, so this course needs a broader, deeper point.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Data transformations",
+  "card": [
+   "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
+   "Three common transformations are squaring x (x²), taking the logarithm of x or y (log x), and taking the reciprocal of x (1/x).",
+   "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
+   "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+  ],
+  "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
+  "a": {
+   "q": "Why would a student transform x before fitting a line to a curved scatterplot?",
+   "opts": [
+    "To make the relationship closer to a straight line",
+    "To make every data point sit exactly on the line",
+    "To change the response variable into the explanatory one",
+    "To remove the data points that are far from the others"
+   ],
+   "why": "A transformation reshapes the scale of a variable so a curved plot becomes closer to linear. It does not guarantee that points lie exactly on a line, and it does not remove any points.",
+   "clue": "Think about what shape a line fits well."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+   "opts": [
+    "Fit a least squares line to y against x²",
+    "Fit a least squares line to the original y against x",
+    "Delete the points that look furthest from the line",
+    "Swap the variables and plot x² against y"
+   ],
+   "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+   "clue": "Fit the line to the plot that looks straight."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To make the relationship closer to a straight line",
+   "also_right": []
+  },
+  "b": {
+   "best": "Fit a least squares line to y against x²",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet says 'taking the logarithm of x or y (log x)'. The label shows only log x, though the text says x or y, which could confuse students about whether log y is also an option."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The content is accurate and both questions have one clear right answer. One small wording issue: the card says 'logarithm of x or y' but labels it only '(log x)'."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The second bullet says 'taking the logarithm of x or y (log x)'. The label shows only log x, though the text says x or y, which could confuse students about whether log y is also an option."
+ ],
+ "proposal": {
+  "title": "Data transformations",
+  "card": [
+   "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
+   "You can transform either variable. Common choices are squaring (x² or y²), taking the logarithm (log x or log y) and taking the reciprocal (1/x or 1/y).",
+   "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
+   "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+  ],
+  "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
+  "a": {
+   "q": "Why would a student transform a variable before fitting a line to a curved scatterplot?",
+   "opts": [
+    "To make the relationship closer to a straight line",
+    "To make every data point sit exactly on the line",
+    "To change the response variable into the explanatory one",
+    "To remove the data points that are far from the others"
+   ],
+   "why": "A transformation changes the scale of one variable so a curved plot becomes closer to linear. It does not make every point lie exactly on a line, and it does not remove any points.",
+   "clue": "Think about what shape a line fits well."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+   "opts": [
+    "Fit a least squares line to y against x²",
+    "Fit a least squares line to the original y against x",
+    "Delete the points that look furthest from the line",
+    "Swap the variables and plot x² against y"
+   ],
+   "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+   "clue": "Fit the line to the plot that looks straight."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The second bullet says 'taking the logarithm of x or y (log x)'. The label shows only log x, though the text says x or y, which could confuse students about whether log y is also an option."
+   }
+  ],
+  "flags": [
+   "Card, wording: The second bullet says 'taking the logarithm of x or y (log x)'. The label shows only log x, though the text says x or y, which could confuse students about whether log y is also an option."
+  ]
+ },
+ "final": {
+  "title": "Data transformations",
+  "card": [
+   "A straight line fits poorly when a scatterplot is curved. A transformation changes one variable so the plot becomes closer to a straight line.",
+   "You can transform either variable. Common choices are squaring (x² or y²), taking the logarithm (log x or log y) and taking the reciprocal (1/x or 1/y).",
+   "Choose the transformation by the shape of the curve. After transforming, plot the new variable against the other one and check that the plot looks straighter.",
+   "Then fit the least squares line to the transformed data. Example: if y rises more and more steeply as x increases, try y against x², which can straighten the plot."
+  ],
+  "remember": "Transform a variable to straighten a curve, then fit a line to the straighter plot.",
+  "a": {
+   "q": "Why would a student transform a variable before fitting a line to a curved scatterplot?",
+   "opts": [
+    "To make the relationship closer to a straight line",
+    "To make every data point sit exactly on the line",
+    "To change the response variable into the explanatory one",
+    "To remove the data points that are far from the others"
+   ],
+   "why": "A transformation changes the scale of one variable so a curved plot becomes closer to linear. It does not make every point lie exactly on a line, and it does not remove any points.",
+   "clue": "Think about what shape a line fits well."
+  },
+  "b": {
+   "d": 2,
+   "q": "Ava's scatterplot of y against x curves upward, getting steeper. She plots y against x² and the points now look roughly straight. What should she do next?",
+   "opts": [
+    "Fit a least squares line to y against x²",
+    "Fit a least squares line to the original y against x",
+    "Delete the points that look furthest from the line",
+    "Swap the variables and plot x² against y"
+   ],
+   "why": "The straighter plot is y against x², so the line should be fitted to those transformed data. Fitting to the original data would use the curved plot, which a line fits poorly.",
+   "clue": "Fit the line to the plot that looks straight."
+  }
+ },
+ "cleared_by": "auto"
+}

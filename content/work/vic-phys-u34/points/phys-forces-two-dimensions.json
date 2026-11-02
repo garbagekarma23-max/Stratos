@@ -1,0 +1,136 @@
+{
+ "id": "phys-forces-two-dimensions",
+ "title": "Forces in two dimensions",
+ "brief": "4f2fe4a813e8",
+ "shortlist": [
+  [
+   "phys-forces-as-vectors",
+   0.489
+  ],
+  [
+   "phys-newton-s-second-law-2",
+   0.382
+  ],
+  [
+   "phys-newton-s-first-law-2",
+   0.325
+  ],
+  [
+   "phys-newton-s-third-law-2",
+   0.31
+  ],
+  [
+   "phys-torque",
+   0.27
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:42Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: done",
+  "2026-11-01T15:05:30Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00037,
+  "write": 0.00767,
+  "check": 0.01059
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Forces as vectors, teaches adding forces and splitting them into components but not applying Newton's laws to forces at angles, which is the Units 3 and 4 idea, so no bank point matches it closely enough to reuse or adapt.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Forces in two dimensions",
+  "card": [
+   "Force is a vector, so it has size and direction. Newton's second law, net force = mass × acceleration, applies to the net force, which is the vector sum of all forces on the object.",
+   "To add forces at angles, split each force into components along two perpendicular axes, such as horizontal and vertical. For a force F at angle θ above the horizontal, the horizontal part is F cos θ and the vertical part is F sin θ.",
+   "Add the components along each axis separately. Then apply the second law to each axis on its own. If the object is not accelerating along an axis, the components along it add to zero.",
+   "For a box pulled along level ground by a rope at an angle above the horizontal, only the horizontal component of the pull drives the box forward. The vertical component lifts partly against the weight, so the normal force is smaller than the weight."
+  ],
+  "remember": "Split forces into perpendicular components, add each direction separately, then apply F = ma to each.",
+  "a": {
+   "q": "A 100 N force acts at 30° above the horizontal on a crate. Which expression gives the horizontal component of the force?",
+   "opts": [
+    "100 × cos 30°",
+    "100 × sin 30°",
+    "100 ÷ cos 30°",
+    "100 + 30"
+   ],
+   "why": "The horizontal part of a force at angle θ above the horizontal is F cos θ, so it is 100 × cos 30°. Sin 30° gives the vertical part, which is the most tempting mistake.",
+   "clue": "The angle is measured from the horizontal."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya pulls a sled at constant velocity along level snow in Falls Creek. The rope is angled upwards. The sled has weight W and she pulls with force F at angle θ above the horizontal. Which statement about the vertical forces is correct?",
+   "opts": [
+    "The normal force plus F sin θ equals W",
+    "The normal force equals W",
+    "The normal force plus F cos θ equals W",
+    "The normal force equals W plus F sin θ"
+   ],
+   "why": "The sled has no vertical acceleration, so upward forces equal downward force. The upward forces are the normal force and F sin θ, and they balance W. The normal force does not equal W, because the rope lifts part of the load.",
+   "clue": "Which forces act upwards, and which component of the pull is vertical?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "100 × cos 30°",
+   "also_right": []
+  },
+  "b": {
+   "best": "The normal force plus F sin θ equals W",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Forces in two dimensions",
+  "card": [
+   "Force is a vector, so it has size and direction. Newton's second law, net force = mass × acceleration, applies to the net force, which is the vector sum of all forces on the object.",
+   "To add forces at angles, split each force into components along two perpendicular axes, such as horizontal and vertical. For a force F at angle θ above the horizontal, the horizontal part is F cos θ and the vertical part is F sin θ.",
+   "Add the components along each axis separately. Then apply the second law to each axis on its own. If the object is not accelerating along an axis, the components along it add to zero.",
+   "For a box pulled along level ground by a rope at an angle above the horizontal, only the horizontal component of the pull drives the box forward. The vertical component lifts partly against the weight, so the normal force is smaller than the weight."
+  ],
+  "remember": "Split forces into perpendicular components, add each direction separately, then apply F = ma to each.",
+  "a": {
+   "q": "A 100 N force acts at 30° above the horizontal on a crate. Which expression gives the horizontal component of the force?",
+   "opts": [
+    "100 × cos 30°",
+    "100 × sin 30°",
+    "100 ÷ cos 30°",
+    "100 + 30"
+   ],
+   "why": "The horizontal part of a force at angle θ above the horizontal is F cos θ, so it is 100 × cos 30°. Sin 30° gives the vertical part, which is the most tempting mistake.",
+   "clue": "The angle is measured from the horizontal."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya pulls a sled at constant velocity along level snow in Falls Creek. The rope is angled upwards. The sled has weight W and she pulls with force F at angle θ above the horizontal. Which statement about the vertical forces is correct?",
+   "opts": [
+    "The normal force plus F sin θ equals W",
+    "The normal force equals W",
+    "The normal force plus F cos θ equals W",
+    "The normal force equals W plus F sin θ"
+   ],
+   "why": "The sled has no vertical acceleration, so upward forces equal downward force. The upward forces are the normal force and F sin θ, and they balance W. The normal force does not equal W, because the rope lifts part of the load.",
+   "clue": "Which forces act upwards, and which component of the pull is vertical?"
+  }
+ },
+ "cleared_by": "checker"
+}

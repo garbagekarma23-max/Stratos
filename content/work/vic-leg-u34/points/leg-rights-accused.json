@@ -1,0 +1,295 @@
+{
+ "id": "leg-rights-accused",
+ "title": "Rights of the accused",
+ "brief": "df3770b369fb",
+ "shortlist": [
+  [
+   "leg-summary-indictable-offences",
+   0.334
+  ],
+  [
+   "leg-juries",
+   0.322
+  ],
+  [
+   "leg-types-rights",
+   0.253
+  ],
+  [
+   "leg-rights-suspects",
+   0.231
+  ],
+  [
+   "leg-bill-rights-debate",
+   0.229
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:27Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00569,
+  "check": 0.01966,
+  "fix": 0.02216,
+  "recheck": 0.01246
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No bank point teaches the accused's right to be presumed innocent, the right to a trial without unreasonable delay, and the right to a jury trial for indictable offences together; the closest, the suspect rights and juries cards, cover only part of the idea and are NSW-specific.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Rights of the accused",
+  "card": [
+   [
+    "Presumed innocent",
+    "The accused is treated as not guilty until the prosecution proves guilt in court."
+   ],
+   [
+    "Silence",
+    "The accused does not have to answer police questions or give evidence at trial. Staying silent is not an admission of guilt."
+   ],
+   [
+    "No unreasonable delay",
+    "The accused has a right to a trial without unreasonable delay, so they are not left waiting for years."
+   ],
+   [
+    "Jury",
+    "For an indictable offence, the accused has the right to a trial by jury, which is a group of citizens who decide the verdict."
+   ]
+  ],
+  "remember": "The accused is protected from the start of the case to the verdict.",
+  "a": {
+   "q": "Police question Priya about a theft, and she chooses to say nothing. Which right is she using?",
+   "opts": [
+    "The right to silence",
+    "The right to be presumed innocent",
+    "The right to trial by jury",
+    "The right to a speedy trial"
+   ],
+   "why": "Priya is choosing not to answer questions, which is the right to silence. Presumed innocence is about how the court treats her guilt, not whether she answers police questions.",
+   "clue": "What is she choosing not to do?"
+  },
+  "b": {
+   "d": 2,
+   "q": "Liam is charged with an indictable offence. He asks for a jury to decide his case. What is the right he is relying on?",
+   "opts": [
+    "Trial by jury for indictable offences",
+    "Trial without unreasonable delay",
+    "The right to silence at trial",
+    "Trial in the Magistrates' Court"
+   ],
+   "why": "A jury trial is a right for the accused charged with an indictable offence. The delay right is about timing, not who decides the verdict.",
+   "clue": "Who does Liam want to decide the verdict?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The right to silence",
+   "also_right": []
+  },
+  "b": {
+   "best": "Trial by jury for indictable offences",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one that repeats 'indictable offences' from the stem, so a student can match it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'He asks for a jury' suggests a jury trial is granted on request. In Victoria, a jury normally decides an indictable offence tried in the County or Supreme Court on a not guilty plea. The accused does not ask for it."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The jury line implies every indictable offence goes to a jury. A jury is only used when the accused pleads not guilty and the case is tried in a higher court. Indictable offences heard summarily, and guilty pleas, have no jury."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Does not have to answer police questions' leaves out that in some circumstances in Victoria a person must give their name and address to police. This is a minor simplification."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Question b gives its answer away, because the right option is the only one repeating 'indictable offences' from the stem, and 'asks for a jury' misstates how jury trials work in Victoria. The card also overstates the jury right, which applies only on a not guilty plea in a higher court."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The right option is the longest and the only one that repeats 'indictable offences' from the stem, so a student can match it without knowing the idea.",
+  "Question b, wording: 'He asks for a jury' suggests a jury trial is granted on request. In Victoria, a jury normally decides an indictable offence tried in the County or Supreme Court on a not guilty plea. The accused does not ask for it.",
+  "Card, fact: The jury line implies every indictable offence goes to a jury. A jury is only used when the accused pleads not guilty and the case is tried in a higher court. Indictable offences heard summarily, and guilty pleas, have no jury.",
+  "Card, fact: 'Does not have to answer police questions' leaves out that in some circumstances in Victoria a person must give their name and address to police. This is a minor simplification."
+ ],
+ "proposal": {
+  "title": "Rights of the accused",
+  "card": [
+   [
+    "Presumed innocent",
+    "The accused is treated as not guilty until the prosecution proves guilt in court."
+   ],
+   [
+    "Silence",
+    "In general, the accused does not have to answer police questions or give evidence at trial, though in some situations they must give police their name and address. Staying silent is not an admission of guilt."
+   ],
+   [
+    "No unreasonable delay",
+    "The accused has a right to be tried without unreasonable delay, so they are not left waiting years for a verdict."
+   ],
+   [
+    "Jury",
+    "If the accused pleads not guilty to an indictable offence and is tried in the County or Supreme Court, a jury of citizens decides the verdict. A guilty plea, or an indictable offence heard summarily in the Magistrates' Court, has no jury."
+   ]
+  ],
+  "remember": "Four rights protect the accused: innocence until proven guilty, silence, a timely trial and, in some trials, a jury.",
+  "a": {
+   "q": "Police question Priya about a theft, and she chooses to say nothing. Which right is she using?",
+   "opts": [
+    "The right to silence",
+    "The right to be presumed innocent",
+    "The right to trial by jury",
+    "The right to trial without delay"
+   ],
+   "why": "Priya is choosing not to answer questions, which is the right to silence. Presumed innocence is about how her guilt is treated until it is proven, not whether she answers police questions.",
+   "clue": "What is she choosing not to do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In which of these cases would a jury decide the verdict?",
+   "opts": [
+    "Not guilty plea to an indictable offence, County Court",
+    "Guilty plea to an indictable offence, County Court",
+    "Not guilty plea to a summary offence, Magistrates' Court",
+    "Indictable offence heard summarily, Magistrates' Court"
+   ],
+   "why": "A jury is used when the accused pleads not guilty to an indictable offence tried in a higher court such as the County Court. A guilty plea in the County Court is tempting, but with no dispute about guilt there is no verdict for a jury to reach.",
+   "clue": "Does the accused deny the charge, and which court hears it?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "The right to silence",
+    "also_right": []
+   },
+   "b": {
+    "best": "Not guilty plea to an indictable offence, County Court",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 3,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The right option is the longest and the only one that repeats 'indictable offences' from the stem, so a student can match it without knowing the idea."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "'He asks for a jury' suggests a jury trial is granted on request. In Victoria, a jury normally decides an indictable offence tried in the County or Supreme Court on a not guilty plea. The accused does not ask for it."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The jury line implies every indictable offence goes to a jury. A jury is only used when the accused pleads not guilty and the case is tried in a higher court. Indictable offences heard summarily, and guilty pleas, have no jury."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Does not have to answer police questions' leaves out that in some circumstances in Victoria a person must give their name and address to police. This is a minor simplification."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The right option is the longest and the only one that repeats 'indictable offences' from the stem, so a student can match it without knowing the idea.",
+   "Question b, wording: 'He asks for a jury' suggests a jury trial is granted on request. In Victoria, a jury normally decides an indictable offence tried in the County or Supreme Court on a not guilty plea. The accused does not ask for it.",
+   "Card, fact: The jury line implies every indictable offence goes to a jury. A jury is only used when the accused pleads not guilty and the case is tried in a higher court. Indictable offences heard summarily, and guilty pleas, have no jury.",
+   "Card, fact: 'Does not have to answer police questions' leaves out that in some circumstances in Victoria a person must give their name and address to police. This is a minor simplification."
+  ]
+ },
+ "final": {
+  "title": "Rights of the accused",
+  "card": [
+   [
+    "Presumed innocent",
+    "The accused is treated as not guilty until the prosecution proves guilt in court."
+   ],
+   [
+    "Silence",
+    "In general, the accused does not have to answer police questions or give evidence at trial, though in some situations they must give police their name and address. Staying silent is not an admission of guilt."
+   ],
+   [
+    "No unreasonable delay",
+    "The accused has a right to be tried without unreasonable delay, so they are not left waiting years for a verdict."
+   ],
+   [
+    "Jury",
+    "If the accused pleads not guilty to an indictable offence and is tried in the County or Supreme Court, a jury of citizens decides the verdict. A guilty plea, or an indictable offence heard summarily in the Magistrates' Court, has no jury."
+   ]
+  ],
+  "remember": "Four rights protect the accused: innocence until proven guilty, silence, a timely trial and, in some trials, a jury.",
+  "a": {
+   "q": "Police question Priya about a theft, and she chooses to say nothing. Which right is she using?",
+   "opts": [
+    "The right to silence",
+    "The right to be presumed innocent",
+    "The right to trial by jury",
+    "The right to trial without delay"
+   ],
+   "why": "Priya is choosing not to answer questions, which is the right to silence. Presumed innocence is about how her guilt is treated until it is proven, not whether she answers police questions.",
+   "clue": "What is she choosing not to do?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In which of these cases would a jury decide the verdict?",
+   "opts": [
+    "Not guilty plea to an indictable offence, County Court",
+    "Guilty plea to an indictable offence, County Court",
+    "Not guilty plea to a summary offence, Magistrates' Court",
+    "Indictable offence heard summarily, Magistrates' Court"
+   ],
+   "why": "A jury is used when the accused pleads not guilty to an indictable offence tried in a higher court such as the County Court. A guilty plea in the County Court is tempting, but with no dispute about guilt there is no verdict for a jury to reach.",
+   "clue": "Does the accused deny the charge, and which court hears it?"
+  }
+ },
+ "cleared_by": "recheck"
+}

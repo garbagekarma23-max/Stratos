@@ -1,0 +1,191 @@
+{
+ "id": "mat-steady-state",
+ "title": "Steady state",
+ "brief": "fb32fcfe3385",
+ "shortlist": [],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, write",
+  "2026-11-01T14:46:40Z write: done",
+  "2026-11-01T14:56:03Z check: flagged",
+  "2026-11-01T15:05:28Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "write": 0.01241,
+  "check": 0.01595,
+  "fix": 0.02731,
+  "recheck": 0.01292
+ },
+ "draft": {
+  "title": "Steady state",
+  "card": [
+   "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting numbers were.",
+   "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
+   "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
+   "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+  ],
+  "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
+  "a": {
+   "q": "Which statement describes a steady state?",
+   "opts": [
+    "Applying the matrix again leaves the state matrix unchanged",
+    "Every state ends up with the same number in it",
+    "Nobody moves between states any more",
+    "One state ends up with nothing left in it"
+   ],
+   "why": "In a steady state, the numbers leaving each state equal the numbers joining it, so another step changes nothing. People still move, so the idea that movement stops is wrong.",
+   "clue": "Think about what happens to the numbers when the matrix is applied once more."
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 20% of train users in a town switch to the bus, and 30% of bus users switch to the train. The others stay. Of 1000 commuters, 100 use the train and 900 use the bus at the start. In the long run, how many use the train?",
+   "opts": [
+    "600",
+    "400",
+    "500",
+    "800"
+   ],
+   "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+   "clue": "Balance the numbers switching each way. The starting split does not matter."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Applying the matrix again leaves the state matrix unchanged",
+   "also_right": []
+  },
+  "b": {
+   "best": "600",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about what happens to the numbers when the matrix is applied once more') nearly repeats the right option, 'Applying the matrix again leaves the state matrix unchanged', so a student can match the words without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card's worked example and both answers are correct (A = 600, B = 300; train = 600). The only issue is that question a's clue nearly repeats the wording of the right option, which gives the answer away."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, other: The clue ('Think about what happens to the numbers when the matrix is applied once more') nearly repeats the right option, 'Applying the matrix again leaves the state matrix unchanged', so a student can match the words without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Steady state",
+  "card": [
+   "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting split was.",
+   "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
+   "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
+   "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+  ],
+  "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
+  "a": {
+   "q": "Which statement describes a steady state?",
+   "opts": [
+    "Another step leaves the numbers in each state the same",
+    "Every state ends up holding the same number of people",
+    "Nobody moves from one state to another any more",
+    "One state slowly loses everyone until it is empty"
+   ],
+   "why": "In a steady state, the numbers leaving each state equal the numbers joining it, so another step changes nothing. People still move between states, so the idea that movement stops is wrong.",
+   "clue": "Do people stop moving, or do the totals stop changing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 20% of train users in a town switch to the bus, and 30% of bus users switch to the train. The others stay. Of 1000 commuters, 100 use the train and 900 use the bus at the start. In the long run, how many use the train?",
+   "opts": [
+    "600",
+    "400",
+    "500",
+    "800"
+   ],
+   "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+   "clue": "Balance the numbers switching each way. The starting split does not matter."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Another step leaves the numbers in each state the same",
+    "also_right": []
+   },
+   "b": {
+    "best": "600",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card's worked example and question b both check out: 0.2T = 0.3B with T + B = 1000 gives 600 train users."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "other",
+    "detail": "The clue ('Think about what happens to the numbers when the matrix is applied once more') nearly repeats the right option, 'Applying the matrix again leaves the state matrix unchanged', so a student can match the words without knowing the idea."
+   }
+  ],
+  "flags": [
+   "Question a, other: The clue ('Think about what happens to the numbers when the matrix is applied once more') nearly repeats the right option, 'Applying the matrix again leaves the state matrix unchanged', so a student can match the words without knowing the idea."
+  ]
+ },
+ "final": {
+  "title": "Steady state",
+  "card": [
+   "After many steps, a regular transition matrix gives a steady state. The number in each state stops changing, whatever the starting split was.",
+   "People or items still move between states in a steady state. The numbers moving out of each state equal the numbers moving in, so the totals stay put.",
+   "To find it, write that balance for one state and keep the total fixed. Example: each month 10% of A move to B and 20% of B move to A, with 900 in total.",
+   "Balance: 10% of A = 20% of B, so A = 2 × B. With A + B = 900, B = 300 and A = 600. Check: 60 leave A and 60 join it."
+  ],
+  "remember": "In a steady state the numbers stop changing because movement out equals movement in.",
+  "a": {
+   "q": "Which statement describes a steady state?",
+   "opts": [
+    "Another step leaves the numbers in each state the same",
+    "Every state ends up holding the same number of people",
+    "Nobody moves from one state to another any more",
+    "One state slowly loses everyone until it is empty"
+   ],
+   "why": "In a steady state, the numbers leaving each state equal the numbers joining it, so another step changes nothing. People still move between states, so the idea that movement stops is wrong.",
+   "clue": "Do people stop moving, or do the totals stop changing?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Each month, 20% of train users in a town switch to the bus, and 30% of bus users switch to the train. The others stay. Of 1000 commuters, 100 use the train and 900 use the bus at the start. In the long run, how many use the train?",
+   "opts": [
+    "600",
+    "400",
+    "500",
+    "800"
+   ],
+   "why": "At the steady state, 20% of train users = 30% of bus users, so train : bus = 3 : 2. Of 1000 commuters, that is 600 train and 400 bus. The starting split does not change the steady state, and 400 is the bus figure.",
+   "clue": "Balance the numbers switching each way. The starting split does not matter."
+  }
+ },
+ "cleared_by": "recheck"
+}

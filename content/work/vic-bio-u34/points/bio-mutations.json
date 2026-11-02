@@ -1,0 +1,245 @@
+{
+ "id": "bio-mutations",
+ "title": "Mutations",
+ "brief": "89dfbde75cf2",
+ "shortlist": [
+  [
+   "bio-causes-mutation",
+   0.562
+  ],
+  [
+   "bio-point-chromosomal-mutations",
+   0.555
+  ],
+  [
+   "bio-somatic-germline-mutations",
+   0.475
+  ],
+  [
+   "bio-genetic-diversity-matters",
+   0.206
+  ],
+  [
+   "bio-variation-populations",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:57Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:24Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T17:33:06Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00028,
+  "write": 0.01157,
+  "check": 0.01721,
+  "fix": 0.01859,
+  "recheck": 0.01335
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bio-point-chromosomal-mutations, classifies point and chromosomal mutations but never says they create new alleles or serve as raw material for evolution, so the new point's central idea would need a new card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a cell. Only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring.",
+   [
+    "Point mutation",
+    "a change to a single nucleotide in a gene, such as a base being swapped for another. It can produce a new allele of that gene."
+   ],
+   [
+    "Chromosome change",
+    "a change to the structure or number of chromosomes, such as a piece being lost, flipped or moved, or a whole chromosome being gained or lost."
+   ],
+   "Mutations are random. They do not happen because an organism needs them. A new allele can add variation to a population, so mutation is the original source of new alleles."
+  ],
+  "remember": "Mutations are random changes to DNA. Those passed on add new alleles to a population.",
+  "a": {
+   "q": "Why are mutations described as the raw material for evolution?",
+   "opts": [
+    "They create new alleles, which add variation to a population",
+    "They appear when an organism needs to adapt to its habitat",
+    "They change every gamete a population makes in the same way",
+    "They remove harmful alleles so offspring are better suited"
+   ],
+   "why": "Mutations are random changes that can produce new alleles, and new alleles add variation that evolution can act on. They do not appear because an organism needs them, so the option about adapting to a habitat reverses cause and effect.",
+   "clue": "Think about where new alleles first come from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A skin cell of a kangaroo in Victoria gains a point mutation from sun damage. The mutation is not in any cell that makes gametes. What is the most likely outcome for the kangaroo's offspring?",
+   "opts": [
+    "They do not inherit it, as it is not in a gamete",
+    "They inherit it, as all mutations are passed on",
+    "They inherit it, as skin cells copy it into gametes",
+    "They do not inherit it, as point mutations are harmless"
+   ],
+   "why": "Only a mutation in a gamete, or in a cell that makes gametes, can be passed to offspring. A skin cell mutation stays in that body cell line. Whether a point mutation is harmful does not decide if it is inherited.",
+   "clue": "Which cells pass DNA on to the next generation?"
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "They create new alleles, which add variation to a population",
+   "also_right": []
+  },
+  "b": {
+   "best": "They do not inherit it, as it is not in a gamete",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring\" is true only for sexually reproducing organisms. In bacteria (point 7) and in organisms that reproduce asexually, including plants grown from cuttings, mutations in ordinary cells are passed on. It should be limited to sexually reproducing organisms, e.g. animals."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound with one clear right answer. The card's claim that only gamete-line mutations can be inherited needs limiting to sexually reproducing organisms, because it is false for bacteria, which the chapter covers in point 7."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring\" is true only for sexually reproducing organisms. In bacteria (point 7) and in organisms that reproduce asexually, including plants grown from cuttings, mutations in ordinary cells are passed on. It should be limited to sexually reproducing organisms, e.g. animals."
+ ],
+ "proposal": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a cell. In animals, only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring.",
+   [
+    "Point mutation",
+    "a change to a single nucleotide in a gene, such as a base being swapped for another. It can produce a new allele of that gene."
+   ],
+   [
+    "Chromosome change",
+    "a change to the structure or number of chromosomes, such as a piece being lost, flipped or moved, or a whole chromosome being gained or lost."
+   ],
+   "Mutations are random. They do not happen because an organism needs them. A new allele can add variation to a population, so mutation is the original source of new alleles."
+  ],
+  "remember": "Mutations are random changes to DNA. Those passed on add new alleles to a population.",
+  "a": {
+   "q": "Why are mutations described as the raw material for evolution?",
+   "opts": [
+    "They create new alleles, which add variation to a population",
+    "They appear when an organism needs to adapt to its habitat",
+    "They change every gamete a population makes in the same way",
+    "They remove harmful alleles so offspring are better suited"
+   ],
+   "why": "Mutations are random changes that can produce new alleles, and new alleles add variation that evolution can act on. They do not appear because an organism needs them, so the option about adapting to a habitat reverses cause and effect.",
+   "clue": "Think about where new alleles first come from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A skin cell of a kangaroo in Victoria gains a point mutation from sun damage. The mutation is not in any cell that makes gametes. What is the most likely outcome for the kangaroo's offspring?",
+   "opts": [
+    "They do not inherit it, as it is not in a gamete",
+    "They inherit it, as all mutations are passed on",
+    "They inherit it, as skin cells copy it into gametes",
+    "They do not inherit it, as point mutations are harmless"
+   ],
+   "why": "A kangaroo is an animal, and in animals only a mutation in a gamete, or in a cell that makes gametes, can be passed to offspring. A skin cell mutation stays in that body cell line. Whether a point mutation is harmful does not decide if it is inherited.",
+   "clue": "In an animal, which cells pass DNA on to the next generation?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "They create new alleles, which add variation to a population",
+    "also_right": []
+   },
+   "b": {
+    "best": "They do not inherit it, as it is not in a gamete",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring\" is true only for sexually reproducing organisms. In bacteria (point 7) and in organisms that reproduce asexually, including plants grown from cuttings, mutations in ordinary cells are passed on. It should be limited to sexually reproducing organisms, e.g. animals."
+   }
+  ],
+  "flags": [
+   "Card, fact: \"Only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring\" is true only for sexually reproducing organisms. In bacteria (point 7) and in organisms that reproduce asexually, including plants grown from cuttings, mutations in ordinary cells are passed on. It should be limited to sexually reproducing organisms, e.g. animals."
+  ]
+ },
+ "final": {
+  "title": "Mutations",
+  "card": [
+   "A mutation is a change in the DNA sequence of a cell. In animals, only a mutation in a gamete, or in a cell that makes gametes, can be passed on to offspring.",
+   [
+    "Point mutation",
+    "a change to a single nucleotide in a gene, such as a base being swapped for another. It can produce a new allele of that gene."
+   ],
+   [
+    "Chromosome change",
+    "a change to the structure or number of chromosomes, such as a piece being lost, flipped or moved, or a whole chromosome being gained or lost."
+   ],
+   "Mutations are random. They do not happen because an organism needs them. A new allele can add variation to a population, so mutation is the original source of new alleles."
+  ],
+  "remember": "Mutations are random changes to DNA. Those passed on add new alleles to a population.",
+  "a": {
+   "q": "Why are mutations described as the raw material for evolution?",
+   "opts": [
+    "They create new alleles, which add variation to a population",
+    "They appear when an organism needs to adapt to its habitat",
+    "They change every gamete a population makes in the same way",
+    "They remove harmful alleles so offspring are better suited"
+   ],
+   "why": "Mutations are random changes that can produce new alleles, and new alleles add variation that evolution can act on. They do not appear because an organism needs them, so the option about adapting to a habitat reverses cause and effect.",
+   "clue": "Think about where new alleles first come from."
+  },
+  "b": {
+   "d": 3,
+   "q": "A skin cell of a kangaroo in Victoria gains a point mutation from sun damage. The mutation is not in any cell that makes gametes. What is the most likely outcome for the kangaroo's offspring?",
+   "opts": [
+    "They do not inherit it, as it is not in a gamete",
+    "They inherit it, as all mutations are passed on",
+    "They inherit it, as skin cells copy it into gametes",
+    "They do not inherit it, as point mutations are harmless"
+   ],
+   "why": "A kangaroo is an animal, and in animals only a mutation in a gamete, or in a cell that makes gametes, can be passed to offspring. A skin cell mutation stays in that body cell line. Whether a point mutation is harmful does not decide if it is inherited.",
+   "clue": "In an animal, which cells pass DNA on to the next generation?"
+  }
+ },
+ "cleared_by": "recheck"
+}

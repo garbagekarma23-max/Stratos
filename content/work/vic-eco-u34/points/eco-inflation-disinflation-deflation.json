@@ -1,0 +1,250 @@
+{
+ "id": "eco-inflation-disinflation-deflation",
+ "title": "Inflation, disinflation and deflation",
+ "brief": "703e00f5f426",
+ "shortlist": [
+  [
+   "e-cpi",
+   0.606
+  ],
+  [
+   "eco-inflation-target",
+   0.305
+  ],
+  [
+   "e-inflation",
+   0.266
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:59Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:26Z write: done",
+  "2026-11-01T15:14:45Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:19:15Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00021,
+  "write": 0.00966,
+  "check": 0.01331,
+  "fix": 0.02621,
+  "recheck": 0.01161
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Measuring inflation (e-cpi), does define inflation, disinflation and deflation, but its main subject is how CPI is measured, weighted and limited, which is broader than the brief's three definitions, so a new point is the better fit.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Inflation, disinflation and deflation",
+  "card": [
+   [
+    "Inflation",
+    "a sustained rise in the general price level. Prices on average are higher than before."
+   ],
+   [
+    "Disinflation",
+    "a fall in the rate of inflation. Prices are still rising, but more slowly than before."
+   ],
+   [
+    "Deflation",
+    "a sustained fall in the general price level. Prices on average are lower than before, so the inflation rate is negative."
+   ],
+   "Look at the direction of the price level first. If it is rising, it is inflation or disinflation. If it is falling, it is deflation."
+  ],
+  "remember": "Inflation is prices rising. Disinflation is prices still rising, but more slowly. Deflation is prices falling.",
+  "a": {
+   "q": "Annual inflation in a country falls from 6% to 4%. What has happened?",
+   "opts": [
+    "Disinflation, as prices still rise but more slowly",
+    "Deflation, as the inflation rate has fallen",
+    "Disinflation, as the general price level has fallen",
+    "Inflation, as the rate of price rises has slowed"
+   ],
+   "why": "The rate fell, but it is still above zero, so prices are still rising. That is disinflation. Deflation is tempting because the rate fell, but it needs the price level itself to fall.",
+   "clue": "Is the price level still going up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the price index in Country X rose by 3%. This year it fell by 1%. What does this show?",
+   "opts": [
+    "Deflation, as the general price level fell",
+    "Disinflation, as the inflation rate fell",
+    "Inflation, as the price index changed",
+    "Disinflation, as price rises have slowed to zero"
+   ],
+   "why": "A fall of 1% means prices on average are lower, which is deflation. Disinflation is tempting because the rate dropped from 3% to -1%, but disinflation means prices are still rising, just more slowly.",
+   "clue": "Check whether the price level is rising or falling this year."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Disinflation, as prices still rise but more slowly",
+   "also_right": []
+  },
+  "b": {
+   "best": "Deflation, as the general price level fell",
+   "also_right": [
+    "Disinflation, as the inflation rate fell"
+   ]
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card first defines disinflation as 'a fall in the rate of inflation', and the rate did fall from 3% to -1%. So 'Disinflation, as the inflation rate fell' fits that first clause literally. The card's later bullets settle it as deflation, but the question would be firmer if the distractor's reason were plainly false, or if the card's definition said 'while the rate stays positive'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and Question a are accurate. In Question b, the distractor 'Disinflation, as the inflation rate fell' literally matches the card's first-clause definition of disinflation, so a careful student could defend it; consider rewording that option or tightening the definition."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker says “Disinflation, as the inflation rate fell” could also be right.",
+  "Question b, wording: The card first defines disinflation as 'a fall in the rate of inflation', and the rate did fall from 3% to -1%. So 'Disinflation, as the inflation rate fell' fits that first clause literally. The card's later bullets settle it as deflation, but the question would be firmer if the distractor's reason were plainly false, or if the card's definition said 'while the rate stays positive'."
+ ],
+ "proposal": {
+  "title": "Inflation, disinflation and deflation",
+  "card": [
+   [
+    "Inflation",
+    "a sustained rise in the general price level. Prices on average are higher than before."
+   ],
+   [
+    "Disinflation",
+    "a fall in the rate of inflation while the rate stays above zero. Prices are still rising, but more slowly than before."
+   ],
+   [
+    "Deflation",
+    "a sustained fall in the general price level. Prices on average are lower than before, so the inflation rate is negative."
+   ],
+   "Look at the direction of the price level first. If it is rising, it is inflation or disinflation. If it is falling, it is deflation."
+  ],
+  "remember": "Inflation is prices rising. Disinflation is prices still rising, but more slowly. Deflation is prices falling.",
+  "a": {
+   "q": "Annual inflation in a country falls from 6% to 4%. What has happened?",
+   "opts": [
+    "Disinflation, as prices still rise but more slowly",
+    "Deflation, as the inflation rate has fallen",
+    "Disinflation, as the general price level has fallen",
+    "Inflation, as the rate of price rises has sped up"
+   ],
+   "why": "The rate fell, but it is still above zero, so prices are still rising. That is disinflation. Deflation is tempting because the rate fell, but it needs the price level itself to fall.",
+   "clue": "Is the price level still going up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the price index in Country X rose by 3%. This year it fell by 1%. What does this show?",
+   "opts": [
+    "Deflation, as the general price level fell",
+    "Disinflation, as prices still rose but more slowly",
+    "Inflation, as prices rose faster than last year",
+    "Disinflation, as price rises slowed to exactly zero"
+   ],
+   "why": "A fall of 1% means prices on average are lower, so the inflation rate is negative. That is deflation. Disinflation is tempting because the rate dropped, but disinflation needs the rate to stay above zero, with prices still rising.",
+   "clue": "Check whether the price level is rising or falling this year."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Disinflation, as prices still rise but more slowly",
+    "also_right": []
+   },
+   "b": {
+    "best": "Deflation, as the general price level fell",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The card first defines disinflation as 'a fall in the rate of inflation', and the rate did fall from 3% to -1%. So 'Disinflation, as the inflation rate fell' fits that first clause literally. The card's later bullets settle it as deflation, but the question would be firmer if the distractor's reason were plainly false, or if the card's definition said 'while the rate stays positive'."
+   }
+  ],
+  "flags": [
+   "Question b: the checker says “Disinflation, as the inflation rate fell” could also be right.",
+   "Question b, wording: The card first defines disinflation as 'a fall in the rate of inflation', and the rate did fall from 3% to -1%. So 'Disinflation, as the inflation rate fell' fits that first clause literally. The card's later bullets settle it as deflation, but the question would be firmer if the distractor's reason were plainly false, or if the card's definition said 'while the rate stays positive'."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Inflation, disinflation and deflation",
+  "card": [
+   [
+    "Inflation",
+    "a sustained rise in the general price level. Prices on average are higher than before."
+   ],
+   [
+    "Disinflation",
+    "a fall in the rate of inflation while the rate stays above zero. Prices are still rising, but more slowly than before."
+   ],
+   [
+    "Deflation",
+    "a sustained fall in the general price level. Prices on average are lower than before, so the inflation rate is negative."
+   ],
+   "Look at the direction of the price level first. If it is rising, it is inflation or disinflation. If it is falling, it is deflation."
+  ],
+  "remember": "Inflation is prices rising. Disinflation is prices still rising, but more slowly. Deflation is prices falling.",
+  "a": {
+   "q": "Annual inflation in a country falls from 6% to 4%. What has happened?",
+   "opts": [
+    "Disinflation, as prices still rise but more slowly",
+    "Deflation, as the inflation rate has fallen",
+    "Disinflation, as the general price level has fallen",
+    "Inflation, as the rate of price rises has sped up"
+   ],
+   "why": "The rate fell, but it is still above zero, so prices are still rising. That is disinflation. Deflation is tempting because the rate fell, but it needs the price level itself to fall.",
+   "clue": "Is the price level still going up?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Last year the price index in Country X rose by 3%. This year it fell by 1%. What does this show?",
+   "opts": [
+    "Deflation, as the general price level fell",
+    "Disinflation, as prices still rose but more slowly",
+    "Inflation, as prices rose faster than last year",
+    "Disinflation, as price rises slowed to exactly zero"
+   ],
+   "why": "A fall of 1% means prices on average are lower, so the inflation rate is negative. That is deflation. Disinflation is tempting because the rate dropped, but disinflation needs the rate to stay above zero, with prices still rising.",
+   "clue": "Check whether the price level is rising or falling this year."
+  }
+ },
+ "cleared_by": "owner"
+}

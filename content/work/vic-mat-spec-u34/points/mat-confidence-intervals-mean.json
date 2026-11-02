@@ -1,0 +1,126 @@
+{
+ "id": "mat-confidence-intervals-mean",
+ "title": "Confidence intervals for a mean",
+ "brief": "21302146e1fc",
+ "shortlist": [
+  [
+   "mat-sample-means-vary",
+   0.216
+  ],
+  [
+   "mat-distributions-sample-means",
+   0.216
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.01042,
+  "check": 0.00799
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches building a confidence interval for a mean; both cover only sample-mean variation and the spread of sample means at the Units 1 and 2 level, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Confidence intervals for a mean",
+  "card": [
+   "An approximate 95% confidence interval for the population mean μ is x̄ ± 1.96 × σ/√n. Here x̄ is the sample mean, σ is the population standard deviation and n is the sample size.",
+   "Example: x̄ = 50, σ = 10, n = 100. Then σ/√n = 10/10 = 1, so the margin is 1.96 × 1 = 1.96. The interval is 48.04 to 51.96.",
+   "The 95% describes the method. If we took many samples and built an interval from each, about 95% of those intervals would contain μ.",
+   "A larger n gives a smaller margin, because n is under a square root. Four times the sample size halves the margin."
+  ],
+  "remember": "Interval = sample mean ± 1.96 × σ/√n. A bigger sample gives a narrower interval.",
+  "a": {
+   "q": "Mia weighs 64 packets of rice and finds a mean of 200 g. The population standard deviation is 16 g. What is the approximate 95% interval for μ?",
+   "opts": [
+    "196.08 g to 203.92 g",
+    "168.64 g to 231.36 g",
+    "199.51 g to 200.49 g",
+    "198.00 g to 202.00 g"
+   ],
+   "why": "σ/√n = 16/8 = 2, so the margin is 1.96 × 2 = 3.92. The interval is 200 ± 3.92. The wide interval 168.64 to 231.36 comes from forgetting to divide by √n.",
+   "clue": "Divide σ by the square root of 64 before multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 95% interval for a mean has a margin of 4.0 from a sample of 25. A new sample of 100 is taken from the same population, with the same σ. What is the approximate new margin?",
+   "opts": [
+    "About 2.0",
+    "About 1.0",
+    "About 4.0",
+    "About 8.0"
+   ],
+   "why": "The sample size is four times larger and √4 = 2, so the margin is halved to about 2.0. A margin of 1.0 comes from dividing by 4 instead of by √4.",
+   "clue": "The margin changes with √n, not with n."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "196.08 g to 203.92 g",
+   "also_right": []
+  },
+  "b": {
+   "best": "About 2.0",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found. Both answers check out: the interval is 200 ± 3.92, and quadrupling n halves the margin to about 2.0."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Confidence intervals for a mean",
+  "card": [
+   "An approximate 95% confidence interval for the population mean μ is x̄ ± 1.96 × σ/√n. Here x̄ is the sample mean, σ is the population standard deviation and n is the sample size.",
+   "Example: x̄ = 50, σ = 10, n = 100. Then σ/√n = 10/10 = 1, so the margin is 1.96 × 1 = 1.96. The interval is 48.04 to 51.96.",
+   "The 95% describes the method. If we took many samples and built an interval from each, about 95% of those intervals would contain μ.",
+   "A larger n gives a smaller margin, because n is under a square root. Four times the sample size halves the margin."
+  ],
+  "remember": "Interval = sample mean ± 1.96 × σ/√n. A bigger sample gives a narrower interval.",
+  "a": {
+   "q": "Mia weighs 64 packets of rice and finds a mean of 200 g. The population standard deviation is 16 g. What is the approximate 95% interval for μ?",
+   "opts": [
+    "196.08 g to 203.92 g",
+    "168.64 g to 231.36 g",
+    "199.51 g to 200.49 g",
+    "198.00 g to 202.00 g"
+   ],
+   "why": "σ/√n = 16/8 = 2, so the margin is 1.96 × 2 = 3.92. The interval is 200 ± 3.92. The wide interval 168.64 to 231.36 comes from forgetting to divide by √n.",
+   "clue": "Divide σ by the square root of 64 before multiplying."
+  },
+  "b": {
+   "d": 3,
+   "q": "A 95% interval for a mean has a margin of 4.0 from a sample of 25. A new sample of 100 is taken from the same population, with the same σ. What is the approximate new margin?",
+   "opts": [
+    "About 2.0",
+    "About 1.0",
+    "About 4.0",
+    "About 8.0"
+   ],
+   "why": "The sample size is four times larger and √4 = 2, so the margin is halved to about 2.0. A margin of 1.0 comes from dividing by 4 instead of by √4.",
+   "clue": "The margin changes with √n, not with n."
+  }
+ },
+ "cleared_by": "checker"
+}

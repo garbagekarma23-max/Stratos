@@ -1,0 +1,267 @@
+{
+ "id": "mat-tax-payslips",
+ "title": "Personal and business tax",
+ "brief": "edec5d030baa",
+ "shortlist": [
+  [
+   "mat-income-tax-net-pay",
+   0.433
+  ],
+  [
+   "e-taxsub",
+   0.246
+  ],
+  [
+   "eco-tax-reform",
+   0.23
+  ],
+  [
+   "bus-government-influences-finance",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:02Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00023,
+  "write": 0.00593,
+  "check": 0.01149,
+  "fix": 0.02853,
+  "recheck": 0.01321
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Income tax and net pay, covers only income tax brackets and the Medicare levy, while the new point also needs superannuation, council rates and company tax, so it is broader and no bank point matches it.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Personal and business tax",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is charged on taxable income in steps called tax brackets. Each bracket has its own rate, and only the income inside a bracket is taxed at that rate."
+   ],
+   [
+    "Medicare levy",
+    "The Medicare levy is a set percentage of taxable income that helps pay for public health care. It is paid on top of income tax."
+   ],
+   [
+    "Super and rates",
+    "Superannuation is money an employer pays into a worker's retirement fund. Council rates are a yearly charge paid by property owners to their local council."
+   ],
+   [
+    "Company tax",
+    "Companies pay company tax as a percentage of their profit. Example: a 2% levy on taxable income of $50 000 is 0.02 × 50 000 = $1000."
+   ]
+  ],
+  "remember": "Tax is worked out on taxable income, bracket by bracket, and the levy is added on top.",
+  "a": {
+   "q": "Ben has taxable income of $40 000. The Medicare levy is 2%. How much levy does he pay?",
+   "opts": [
+    "$800",
+    "$80",
+    "$8000",
+    "$2000"
+   ],
+   "why": "Levy = 2% × 40 000 = 0.02 × 40 000 = $800. $80 comes from moving the decimal point one place too far.",
+   "clue": "Change 2% to a decimal, then multiply by taxable income."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tax scale taxes the first $18 000 at 0% and every dollar above that at 20%. Priya's taxable income is $30 000. How much income tax does she pay?",
+   "opts": [
+    "$2400",
+    "$6000",
+    "$3600",
+    "$600"
+   ],
+   "why": "Only the income above $18 000 is taxed at 20%. That is 30 000 − 18 000 = $12 000, and 0.2 × 12 000 = $2400. $6000 is wrong because it taxes all $30 000 at 20%.",
+   "clue": "Only the income inside the 20% bracket is taxed at 20%."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "$800",
+   "also_right": []
+  },
+  "b": {
+   "best": "$2400",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Company tax example is not company tax. It works out 'a 2% levy on taxable income of $50 000', which is a Medicare levy calculation, while the card's own definition says company tax is a percentage of profit. Replace it with a company tax example, such as a flat rate applied to a company's profit."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says tax is worked out on taxable income, bracket by bracket. The card says company tax is a percentage of profit, not taxable income in brackets. The line also leaves out superannuation and council rates, so it does not match what the card teaches."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are correct ($800 and $2400). The Company tax example on the card is a Medicare levy calculation, and the remember line wrongly suggests all tax, including company tax, is worked out bracket by bracket on taxable income."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The Company tax example is not company tax. It works out 'a 2% levy on taxable income of $50 000', which is a Medicare levy calculation, while the card's own definition says company tax is a percentage of profit. Replace it with a company tax example, such as a flat rate applied to a company's profit.",
+  "Remember, other: The remember line says tax is worked out on taxable income, bracket by bracket. The card says company tax is a percentage of profit, not taxable income in brackets. The line also leaves out superannuation and council rates, so it does not match what the card teaches."
+ ],
+ "proposal": {
+  "title": "Personal and business tax",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is charged on taxable income in steps called tax brackets. Each bracket has its own rate, and only the income inside a bracket is taxed at that rate."
+   ],
+   [
+    "Medicare levy",
+    "The Medicare levy is a set percentage of taxable income that helps pay for public health care. It is paid on top of income tax."
+   ],
+   [
+    "Super and rates",
+    "Superannuation is money an employer pays into a worker's retirement fund. Council rates are a yearly charge paid by property owners to their local council."
+   ],
+   [
+    "Company tax",
+    "Companies pay company tax as a flat percentage of their profit. Example: at a rate of 30%, a profit of $200 000 gives 0.3 × 200 000 = $60 000."
+   ]
+  ],
+  "remember": "Income tax goes bracket by bracket with the levy on top, super funds retirement, rates go to councils, and companies are taxed on profit.",
+  "a": {
+   "q": "Ben has taxable income of $40 000. The Medicare levy is 2%. How much levy does he pay?",
+   "opts": [
+    "$800",
+    "$80",
+    "$8000",
+    "$2000"
+   ],
+   "why": "Levy = 2% × 40 000 = 0.02 × 40 000 = $800. $80 comes from moving the decimal point one place too far.",
+   "clue": "Change 2% to a decimal, then multiply by taxable income."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tax scale taxes the first $18 000 at 0% and every dollar above that at 20%. Priya's taxable income is $30 000. How much income tax does she pay?",
+   "opts": [
+    "$2400",
+    "$6000",
+    "$3600",
+    "$600"
+   ],
+   "why": "Only the income above $18 000 is taxed at 20%. That is 30 000 − 18 000 = $12 000, and 0.2 × 12 000 = $2400. $6000 is wrong because it taxes all $30 000 at 20%.",
+   "clue": "Only the income inside the 20% bracket is taxed at 20%."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "$800",
+    "also_right": []
+   },
+   "b": {
+    "best": "$2400",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both answers check out: the levy is 0.02 × 40 000 = $800, and the tax is 0.2 × 12 000 = $2400. The card's simplifications are reasonable for Foundation Mathematics."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The Company tax example is not company tax. It works out 'a 2% levy on taxable income of $50 000', which is a Medicare levy calculation, while the card's own definition says company tax is a percentage of profit. Replace it with a company tax example, such as a flat rate applied to a company's profit."
+   },
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says tax is worked out on taxable income, bracket by bracket. The card says company tax is a percentage of profit, not taxable income in brackets. The line also leaves out superannuation and council rates, so it does not match what the card teaches."
+   }
+  ],
+  "flags": [
+   "Card, fact: The Company tax example is not company tax. It works out 'a 2% levy on taxable income of $50 000', which is a Medicare levy calculation, while the card's own definition says company tax is a percentage of profit. Replace it with a company tax example, such as a flat rate applied to a company's profit.",
+   "Remember, other: The remember line says tax is worked out on taxable income, bracket by bracket. The card says company tax is a percentage of profit, not taxable income in brackets. The line also leaves out superannuation and council rates, so it does not match what the card teaches."
+  ]
+ },
+ "final": {
+  "title": "Personal and business tax",
+  "card": [
+   [
+    "Income tax",
+    "Income tax is charged on taxable income in steps called tax brackets. Each bracket has its own rate, and only the income inside a bracket is taxed at that rate."
+   ],
+   [
+    "Medicare levy",
+    "The Medicare levy is a set percentage of taxable income that helps pay for public health care. It is paid on top of income tax."
+   ],
+   [
+    "Super and rates",
+    "Superannuation is money an employer pays into a worker's retirement fund. Council rates are a yearly charge paid by property owners to their local council."
+   ],
+   [
+    "Company tax",
+    "Companies pay company tax as a flat percentage of their profit. Example: at a rate of 30%, a profit of $200 000 gives 0.3 × 200 000 = $60 000."
+   ]
+  ],
+  "remember": "Income tax goes bracket by bracket with the levy on top, super funds retirement, rates go to councils, and companies are taxed on profit.",
+  "a": {
+   "q": "Ben has taxable income of $40 000. The Medicare levy is 2%. How much levy does he pay?",
+   "opts": [
+    "$800",
+    "$80",
+    "$8000",
+    "$2000"
+   ],
+   "why": "Levy = 2% × 40 000 = 0.02 × 40 000 = $800. $80 comes from moving the decimal point one place too far.",
+   "clue": "Change 2% to a decimal, then multiply by taxable income."
+  },
+  "b": {
+   "d": 3,
+   "q": "A tax scale taxes the first $18 000 at 0% and every dollar above that at 20%. Priya's taxable income is $30 000. How much income tax does she pay?",
+   "opts": [
+    "$2400",
+    "$6000",
+    "$3600",
+    "$600"
+   ],
+   "why": "Only the income above $18 000 is taxed at 20%. That is 30 000 − 18 000 = $12 000, and 0.2 × 12 000 = $2400. $6000 is wrong because it taxes all $30 000 at 20%.",
+   "clue": "Only the income inside the 20% bracket is taxed at 20%."
+  }
+ },
+ "cleared_by": "recheck"
+}

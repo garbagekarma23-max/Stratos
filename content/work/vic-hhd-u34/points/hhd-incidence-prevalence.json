@@ -1,0 +1,152 @@
+{
+ "id": "hhd-incidence-prevalence",
+ "title": "Incidence and prevalence",
+ "brief": "41cdb3a0b7a5",
+ "shortlist": [
+  [
+   "bio-epidemiology",
+   0.296
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 may adapt bio-epidemiology, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:01Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "confirm": 0.00634,
+  "write": 0.00485,
+  "check": 0.01252
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bio-epidemiology",
+  "changes": [
+   "Add a definition of morbidity as how much illness there is in a population, since the card covers incidence, prevalence and mortality but not morbidity.",
+   "Reframe the opening lines from a biology study of disease patterns to the Health and Human Development focus on population health, to suit the VCE syllabus."
+  ],
+  "sure": "medium",
+  "reason": "The bank card teaches incidence and prevalence at about the right depth, but it lacks the morbidity definition and is framed for Biology rather than Health and Human Development.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The bank card covers incidence and prevalence, but it is framed as a broader epidemiology card built around mortality and does not teach morbidity, which this brief needs, so matching it would take more than a small change.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Incidence and prevalence",
+  "card": [
+   [
+    "Morbidity",
+    "how much illness there is in a population. Incidence and prevalence are two ways to measure it."
+   ],
+   [
+    "Incidence",
+    "the number of new cases of a condition that start in a set period, such as one year. A person is counted when they first get the condition."
+   ],
+   [
+    "Prevalence",
+    "the number of all existing cases, new and old, at one point in time or over a period. A person is counted for as long as they have the condition."
+   ],
+   "Incidence shows how fast a condition is spreading. Prevalence shows how many people are living with it and how much care they may need."
+  ],
+  "remember": "Incidence is new cases in a period. Prevalence is all cases, new and old.",
+  "a": {
+   "q": "A report says 8000 Victorians were newly diagnosed with type 2 diabetes last year. Which measure is this?",
+   "opts": [
+    "Incidence, because it counts only new cases in a year",
+    "Prevalence, because it counts only new cases in a year",
+    "Incidence, because it counts all cases in the population",
+    "Prevalence, because it counts all cases in the population"
+   ],
+   "why": "Only people newly diagnosed in a set period are counted, so this is incidence. Prevalence would also include people diagnosed in earlier years who still have the condition.",
+   "clue": "Are people diagnosed in earlier years counted here?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Bendigo, a new treatment lets people with a long-term lung condition live many more years. The number of new cases each year stays the same. What happens to prevalence?",
+   "opts": [
+    "It rises, because people stay in the count for longer",
+    "It stays the same, because new cases have not changed",
+    "It falls, because the treatment improves people's health",
+    "It falls, because prevalence counts only new cases"
+   ],
+   "why": "Prevalence counts all existing cases, so people who live longer with the condition stay in the count while new cases keep being added. Incidence stays the same, but prevalence rises. Better treatment does not remove people from the count unless they no longer have the condition.",
+   "clue": "Think about how long each person stays in the count."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Incidence, because it counts only new cases in a year",
+   "also_right": []
+  },
+  "b": {
+   "best": "It rises, because people stay in the count for longer",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Incidence and prevalence",
+  "card": [
+   [
+    "Morbidity",
+    "how much illness there is in a population. Incidence and prevalence are two ways to measure it."
+   ],
+   [
+    "Incidence",
+    "the number of new cases of a condition that start in a set period, such as one year. A person is counted when they first get the condition."
+   ],
+   [
+    "Prevalence",
+    "the number of all existing cases, new and old, at one point in time or over a period. A person is counted for as long as they have the condition."
+   ],
+   "Incidence shows how fast a condition is spreading. Prevalence shows how many people are living with it and how much care they may need."
+  ],
+  "remember": "Incidence is new cases in a period. Prevalence is all cases, new and old.",
+  "a": {
+   "q": "A report says 8000 Victorians were newly diagnosed with type 2 diabetes last year. Which measure is this?",
+   "opts": [
+    "Incidence, because it counts only new cases in a year",
+    "Prevalence, because it counts only new cases in a year",
+    "Incidence, because it counts all cases in the population",
+    "Prevalence, because it counts all cases in the population"
+   ],
+   "why": "Only people newly diagnosed in a set period are counted, so this is incidence. Prevalence would also include people diagnosed in earlier years who still have the condition.",
+   "clue": "Are people diagnosed in earlier years counted here?"
+  },
+  "b": {
+   "d": 3,
+   "q": "In Bendigo, a new treatment lets people with a long-term lung condition live many more years. The number of new cases each year stays the same. What happens to prevalence?",
+   "opts": [
+    "It rises, because people stay in the count for longer",
+    "It stays the same, because new cases have not changed",
+    "It falls, because the treatment improves people's health",
+    "It falls, because prevalence counts only new cases"
+   ],
+   "why": "Prevalence counts all existing cases, so people who live longer with the condition stay in the count while new cases keep being added. Incidence stays the same, but prevalence rises. Better treatment does not remove people from the count unless they no longer have the condition.",
+   "clue": "Think about how long each person stays in the count."
+  }
+ },
+ "cleared_by": "checker"
+}

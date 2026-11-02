@@ -1,0 +1,235 @@
+{
+ "id": "chem-thermochemical-equations",
+ "title": "Thermochemical equations",
+ "brief": "661c1bbfcf37",
+ "shortlist": [
+  [
+   "chem-balanced-equations",
+   0.302
+  ],
+  [
+   "chem-hess-s-law",
+   0.245
+  ],
+  [
+   "mat-simultaneous-linear-equations",
+   0.242
+  ],
+  [
+   "chem-stoichiometry",
+   0.211
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.208
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:24Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:41:50Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00026,
+  "write": 0.00653,
+  "check": 0.01674,
+  "fix": 0.03159,
+  "recheck": 0.01234
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Hess's law, covers combining reactions and scaling ΔH, but it does not teach writing a balanced thermochemical equation with ΔH in kJ per mole, so the idea is related rather than the same.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Thermochemical equations",
+  "card": [
+   "A thermochemical equation is a balanced equation that also gives ΔH, the energy change, in kJ. It includes state symbols, such as (g) or (l), because the state affects the energy.",
+   "The ΔH value is for the amounts shown by the coefficients. For C(s) + O2(g) → CO2(g), ΔH = -394 kJ mol⁻¹ means 394 kJ is released when 1 mol of carbon reacts.",
+   "If you multiply the coefficients, you multiply ΔH by the same factor. Twice the amounts give twice the energy change.",
+   "If the equation is reversed, ΔH keeps its size but changes sign. A reaction that releases 394 kJ one way absorbs 394 kJ the other way."
+  ],
+  "remember": "ΔH goes with the equation as written: scale the amounts and ΔH scales, reverse it and the sign flips.",
+  "a": {
+   "q": "2H2(g) + O2(g) → 2H2O(l) has ΔH = -572 kJ. What is ΔH for H2(g) + ½O2(g) → H2O(l)?",
+   "opts": [
+    "-286 kJ",
+    "-572 kJ",
+    "-1144 kJ",
+    "+286 kJ"
+   ],
+   "why": "The coefficients are halved, so ΔH is halved to -286 kJ. Keeping -572 kJ is tempting, but it is the value for twice the amounts.",
+   "clue": "Compare the amounts in the two equations."
+  },
+  "b": {
+   "d": 3,
+   "q": "CH4(g) + 2O2(g) → CO2(g) + 2H2O(l) has ΔH = -890 kJ. How much energy is absorbed when 2 mol of CO2(g) and 4 mol of H2O(l) react to form CH4(g) and O2(g)?",
+   "opts": [
+    "1780 kJ",
+    "890 kJ",
+    "1780 kJ released",
+    "890 kJ released"
+   ],
+   "why": "The reaction is the reverse of the given one, so the sign changes and the energy is absorbed. The amounts are double those in the equation, so the energy is 2 × 890 = 1780 kJ. The 890 kJ options forget to scale it.",
+   "clue": "Check both the direction and the amounts compared with the equation."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "-286 kJ",
+   "also_right": []
+  },
+  "b": {
+   "best": "1780 kJ",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks 'How much energy is absorbed', which already tells students the direction. The two 'released' options can be ruled out from the wording alone, so the direction check that the clue and the why point to is not actually tested."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet gives the unit of ΔH as kJ, but the example uses kJ mol⁻¹ (the VCE convention), and the questions use plain kJ. Mixing units without saying how they relate may confuse students about which unit belongs with a thermochemical equation."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The chemistry and the intended answers (-286 kJ; 1780 kJ absorbed) are correct. Question b's wording ('absorbed') gives away the direction, and the card mixes kJ and kJ mol⁻¹ for ΔH without explaining the link."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, wording: The question asks 'How much energy is absorbed', which already tells students the direction. The two 'released' options can be ruled out from the wording alone, so the direction check that the clue and the why point to is not actually tested.",
+  "Card, wording: The first bullet gives the unit of ΔH as kJ, but the example uses kJ mol⁻¹ (the VCE convention), and the questions use plain kJ. Mixing units without saying how they relate may confuse students about which unit belongs with a thermochemical equation."
+ ],
+ "proposal": {
+  "title": "Thermochemical equations",
+  "card": [
+   "A thermochemical equation is a balanced equation that also gives ΔH, the enthalpy change, in kJ mol⁻¹. It includes state symbols, such as (g) or (l), because the state affects the energy.",
+   "Here kJ mol⁻¹ means per mole of reaction as written, with the amounts shown by the coefficients. For C(s) + O2(g) → CO2(g), ΔH = -394 kJ mol⁻¹, so 394 kJ is released when 1 mol of carbon reacts.",
+   "If you multiply the coefficients, you multiply ΔH by the same factor. An actual amount of energy, such as 788 kJ for 2 mol of carbon, is given in kJ.",
+   "If the equation is reversed, ΔH keeps its size but changes sign. A reaction that releases 394 kJ one way absorbs 394 kJ the other way."
+  ],
+  "remember": "ΔH belongs to the equation as written: scale the amounts and ΔH scales, reverse it and the sign flips.",
+  "a": {
+   "q": "2H2(g) + O2(g) → 2H2O(l) has ΔH = -572 kJ mol⁻¹. What is ΔH for H2(g) + ½O2(g) → H2O(l)?",
+   "opts": [
+    "-286 kJ mol⁻¹",
+    "-572 kJ mol⁻¹",
+    "-1144 kJ mol⁻¹",
+    "+286 kJ mol⁻¹"
+   ],
+   "why": "The coefficients are halved, so ΔH is halved to -286 kJ mol⁻¹. Keeping -572 kJ mol⁻¹ is tempting, but that value belongs to the equation with twice the amounts.",
+   "clue": "Compare the amounts in the two equations."
+  },
+  "b": {
+   "d": 3,
+   "q": "CH4(g) + 2O2(g) → CO2(g) + 2H2O(l) has ΔH = -890 kJ mol⁻¹. What energy change occurs when 2 mol of CO2(g) and 4 mol of H2O(l) react to form CH4(g) and O2(g)?",
+   "opts": [
+    "1780 kJ absorbed",
+    "1780 kJ released",
+    "890 kJ absorbed",
+    "890 kJ released"
+   ],
+   "why": "This is the reverse of the given reaction, so the sign flips and energy is absorbed. The amounts are double those in the equation, so the energy is 2 × 890 = 1780 kJ. 1780 kJ released scales correctly but forgets that reversing changes the sign.",
+   "clue": "Check both the direction and the amounts compared with the equation."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:50Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "-286 kJ mol⁻¹",
+    "also_right": []
+   },
+   "b": {
+    "best": "1780 kJ absorbed",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:50Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 10,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The question asks 'How much energy is absorbed', which already tells students the direction. The two 'released' options can be ruled out from the wording alone, so the direction check that the clue and the why point to is not actually tested."
+   },
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The first bullet gives the unit of ΔH as kJ, but the example uses kJ mol⁻¹ (the VCE convention), and the questions use plain kJ. Mixing units without saying how they relate may confuse students about which unit belongs with a thermochemical equation."
+   }
+  ],
+  "flags": [
+   "Question b, wording: The question asks 'How much energy is absorbed', which already tells students the direction. The two 'released' options can be ruled out from the wording alone, so the direction check that the clue and the why point to is not actually tested.",
+   "Card, wording: The first bullet gives the unit of ΔH as kJ, but the example uses kJ mol⁻¹ (the VCE convention), and the questions use plain kJ. Mixing units without saying how they relate may confuse students about which unit belongs with a thermochemical equation."
+  ]
+ },
+ "final": {
+  "title": "Thermochemical equations",
+  "card": [
+   "A thermochemical equation is a balanced equation that also gives ΔH, the enthalpy change, in kJ mol⁻¹. It includes state symbols, such as (g) or (l), because the state affects the energy.",
+   "Here kJ mol⁻¹ means per mole of reaction as written, with the amounts shown by the coefficients. For C(s) + O2(g) → CO2(g), ΔH = -394 kJ mol⁻¹, so 394 kJ is released when 1 mol of carbon reacts.",
+   "If you multiply the coefficients, you multiply ΔH by the same factor. An actual amount of energy, such as 788 kJ for 2 mol of carbon, is given in kJ.",
+   "If the equation is reversed, ΔH keeps its size but changes sign. A reaction that releases 394 kJ one way absorbs 394 kJ the other way."
+  ],
+  "remember": "ΔH belongs to the equation as written: scale the amounts and ΔH scales, reverse it and the sign flips.",
+  "a": {
+   "q": "2H2(g) + O2(g) → 2H2O(l) has ΔH = -572 kJ mol⁻¹. What is ΔH for H2(g) + ½O2(g) → H2O(l)?",
+   "opts": [
+    "-286 kJ mol⁻¹",
+    "-572 kJ mol⁻¹",
+    "-1144 kJ mol⁻¹",
+    "+286 kJ mol⁻¹"
+   ],
+   "why": "The coefficients are halved, so ΔH is halved to -286 kJ mol⁻¹. Keeping -572 kJ mol⁻¹ is tempting, but that value belongs to the equation with twice the amounts.",
+   "clue": "Compare the amounts in the two equations."
+  },
+  "b": {
+   "d": 3,
+   "q": "CH4(g) + 2O2(g) → CO2(g) + 2H2O(l) has ΔH = -890 kJ mol⁻¹. What energy change occurs when 2 mol of CO2(g) and 4 mol of H2O(l) react to form CH4(g) and O2(g)?",
+   "opts": [
+    "1780 kJ absorbed",
+    "1780 kJ released",
+    "890 kJ absorbed",
+    "890 kJ released"
+   ],
+   "why": "This is the reverse of the given reaction, so the sign flips and energy is absorbed. The amounts are double those in the equation, so the energy is 2 × 890 = 1780 kJ. 1780 kJ released scales correctly but forgets that reversing changes the sign.",
+   "clue": "Check both the direction and the amounts compared with the equation."
+  }
+ },
+ "cleared_by": "recheck"
+}

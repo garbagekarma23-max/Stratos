@@ -1,0 +1,202 @@
+{
+ "id": "acc-managing-inventory-credit",
+ "title": "Managing inventory and credit",
+ "brief": "72f1a21c0b20",
+ "shortlist": [
+  [
+   "acc-non-financial-factors-credit",
+   0.359
+  ],
+  [
+   "acc-inventory",
+   0.313
+  ],
+  [
+   "acc-credit-purchases-accounts-payable",
+   0.282
+  ],
+  [
+   "acc-managing-accounts-payable",
+   0.281
+  ],
+  [
+   "acc-other-inventory-movements",
+   0.277
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: done",
+  "2026-11-01T15:14:42Z check: flagged",
+  "2026-11-01T15:19:03Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (remember other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00025,
+  "write": 0.00539,
+  "check": 0.01875,
+  "fix": 0.02954
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "No bank point teaches internal controls or strategies such as tighter credit terms and better stock control; the closest, acc-non-financial-factors-credit, covers only Units 1 and 2 non-financial factors in credit decisions, which is a narrower and different idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Managing inventory and credit",
+  "card": [
+   "Internal controls are checks that protect assets and keep records reliable. Examples are regular stocktakes, separate people for ordering and receiving stock, and credit checks on new customers.",
+   "Non-financial information is not measured in dollars. Examples are customer complaints, late deliveries, stock damaged in storage and how long customers wait for service. It can show problems that the financial reports do not.",
+   "To manage credit, a business can tighten its credit terms. For example, it can shorten the time customers have to pay or offer a discount for early payment. Customers then pay sooner, which can lower the days they take to pay.",
+   "To manage inventory, a business can improve stock control. For example, it can order smaller amounts more often or stop buying slow-moving lines. Less stock sits unsold, which can lower the days stock is held."
+  ],
+  "remember": "Controls and non-financial information reveal problems. Tighter credit and better stock control can fix them.",
+  "a": {
+   "q": "Which action is an example of tightening credit terms?",
+   "opts": [
+    "Cutting the time customers have to pay an invoice",
+    "Holding more stock so that popular items never run out",
+    "Counting stock on shelves each month against the records",
+    "Recording customer complaints about late deliveries"
+   ],
+   "why": "Giving customers less time to pay is a tighter credit term, so cash is collected sooner. Counting stock is an internal control, not a credit term, so it is the tempting wrong option.",
+   "clue": "Which one changes what customers must do to pay?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's hardware store in Geelong sells on credit. Her records show customers are taking longer and longer to pay. Which step is most likely to fix this?",
+   "opts": [
+    "Offer a small discount to customers who pay early",
+    "Order smaller amounts of stock more often",
+    "Record stock write-downs in the inventory cards",
+    "Ask staff to log late deliveries from suppliers"
+   ],
+   "why": "A discount for early payment is a tighter credit term, and it encourages customers to pay sooner. Ordering smaller amounts more often is tempting, but it is stock control, so it affects how long stock is held and not how long customers take to pay.",
+   "clue": "The problem is customers paying slowly, not stock sitting unsold."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cutting the time customers have to pay an invoice",
+   "also_right": []
+  },
+  "b": {
+   "best": "Offer a small discount to customers who pay early",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the ideas more neatly than the card does. It says controls 'reveal problems' while tighter credit and stock control 'fix them'. The card defines internal controls as checks that protect assets and keep records reliable, and its examples, such as separating ordering from receiving and credit checks on new customers, prevent problems rather than only revealing them."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound, each with one clearly right answer. The only issue is that the remember line casts internal controls as just revealing problems, which is a neater split than the card, since the card presents them as protecting assets and keeping records reliable."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, other: The remember line sorts the ideas more neatly than the card does. It says controls 'reveal problems' while tighter credit and stock control 'fix them'. The card defines internal controls as checks that protect assets and keep records reliable, and its examples, such as separating ordering from receiving and credit checks on new customers, prevent problems rather than only revealing them."
+ ],
+ "proposal": {
+  "title": "Managing inventory and credit",
+  "card": [
+   "Internal controls are checks that protect assets and keep records reliable. Examples are regular stocktakes, separate people for ordering and receiving stock, and credit checks on new customers.",
+   "Non-financial information is not measured in dollars. Examples are customer complaints, late deliveries, stock damaged in storage and how long customers wait for service. It can show problems that the financial reports do not.",
+   "To manage credit, a business can tighten its credit terms, such as shortening the time customers have to pay. It can also offer a discount for early payment. Customers then pay sooner, which can lower the days they take to pay.",
+   "To manage inventory, a business can improve stock control. For example, it can order smaller amounts more often or stop buying slow-moving lines. Less stock sits unsold, which can lower the days stock is held."
+  ],
+  "remember": "Controls protect assets and records, non-financial information shows what reports miss, and credit and stock strategies can cut days.",
+  "a": {
+   "q": "Which action is an example of tightening credit terms?",
+   "opts": [
+    "Cutting the time customers have to pay an invoice",
+    "Holding more stock so that popular items never run out",
+    "Counting stock on shelves each month against the records",
+    "Recording customer complaints about late deliveries"
+   ],
+   "why": "Giving customers less time to pay is a tighter credit term, so cash is collected sooner. Counting stock is tempting, but it is an internal control that checks records, not a change to how customers pay.",
+   "clue": "Which one changes what customers must do to pay?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's hardware store in Geelong sells on credit. Her records show customers are taking longer and longer to pay. Which step is most likely to fix this?",
+   "opts": [
+    "Offer a small discount to customers who pay early",
+    "Order smaller amounts of stock more often",
+    "Hold a full stocktake at the end of each month",
+    "Ask staff to log late deliveries from suppliers"
+   ],
+   "why": "A discount for early payment gives customers a reason to pay sooner, which can lower the days they take to pay. Ordering smaller amounts more often is tempting, but it is stock control, so it affects how long stock is held, not how long customers take to pay.",
+   "clue": "The problem is customers paying slowly, not stock sitting unsold."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line sorts the ideas more neatly than the card does. It says controls 'reveal problems' while tighter credit and stock control 'fix them'. The card defines internal controls as checks that protect assets and keep records reliable, and its examples, such as separating ordering from receiving and credit checks on new customers, prevent problems rather than only revealing them."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line sorts the ideas more neatly than the card does. It says controls 'reveal problems' while tighter credit and stock control 'fix them'. The card defines internal controls as checks that protect assets and keep records reliable, and its examples, such as separating ordering from receiving and credit checks on new customers, prevent problems rather than only revealing them."
+  ]
+ },
+ "final": {
+  "title": "Managing inventory and credit",
+  "card": [
+   "Internal controls are checks that protect assets and keep records reliable. Examples are regular stocktakes, separate people for ordering and receiving stock, and credit checks on new customers.",
+   "Non-financial information is not measured in dollars. Examples are customer complaints, late deliveries, stock damaged in storage and how long customers wait for service. It can show problems that the financial reports do not.",
+   "To manage credit, a business can tighten its credit terms, such as shortening the time customers have to pay. It can also offer a discount for early payment. Customers then pay sooner, which can lower the days they take to pay.",
+   "To manage inventory, a business can improve stock control. For example, it can order smaller amounts more often or stop buying slow-moving lines. Less stock sits unsold, which can lower the days stock is held."
+  ],
+  "remember": "Controls protect assets and records, non-financial information shows what reports miss, and credit and stock strategies can cut days.",
+  "a": {
+   "q": "Which action is an example of tightening credit terms?",
+   "opts": [
+    "Cutting the time customers have to pay an invoice",
+    "Holding more stock so that popular items never run out",
+    "Counting stock on shelves each month against the records",
+    "Recording customer complaints about late deliveries"
+   ],
+   "why": "Giving customers less time to pay is a tighter credit term, so cash is collected sooner. Counting stock is tempting, but it is an internal control that checks records, not a change to how customers pay.",
+   "clue": "Which one changes what customers must do to pay?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's hardware store in Geelong sells on credit. Her records show customers are taking longer and longer to pay. Which step is most likely to fix this?",
+   "opts": [
+    "Offer a small discount to customers who pay early",
+    "Order smaller amounts of stock more often",
+    "Hold a full stocktake at the end of each month",
+    "Ask staff to log late deliveries from suppliers"
+   ],
+   "why": "A discount for early payment gives customers a reason to pay sooner, which can lower the days they take to pay. Ordering smaller amounts more often is tempting, but it is stock control, so it affects how long stock is held, not how long customers take to pay.",
+   "clue": "The problem is customers paying slowly, not stock sitting unsold."
+  }
+ },
+ "cleared_by": "auto"
+}

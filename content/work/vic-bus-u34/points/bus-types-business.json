@@ -1,0 +1,246 @@
+{
+ "id": "bus-types-business",
+ "title": "Types of business",
+ "brief": "056b61054ed3",
+ "shortlist": [
+  [
+   "bus-government-enterprises",
+   0.401
+  ],
+  [
+   "bus-legal-business-structures",
+   0.389
+  ],
+  [
+   "bus-sole-traders-partnerships",
+   0.382
+  ],
+  [
+   "bus-unlimited-limited-liability",
+   0.267
+  ],
+  [
+   "acc-types-business-ownership",
+   0.236
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:35Z match: Claude Haiku 5.5 may adapt bus-legal-business-structures, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:55:57Z confirm: Claude Opus 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T15:05:24Z write: done",
+  "2026-11-01T15:14:44Z check: flagged",
+  "2026-11-01T17:33:07Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: picked as a spot check. It would have been cleared with the fix (card other)",
+  "2026-11-02T06:18:16Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00038,
+  "confirm": 0.01189,
+  "write": 0.00493,
+  "check": 0.01095,
+  "fix": 0.02916
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "bus-legal-business-structures",
+  "changes": [
+   "Add the liability of each structure: sole traders and partners have unlimited liability for business debts, while shareholders of a company are liable only for the money invested in its shares.",
+   "State the liability difference for each type, since the brief names liability alongside owners and aims."
+  ],
+  "sure": "medium",
+  "reason": "The bank card already covers the same five business types from the same Victorian Business Management course, but it does not explain liability, which the brief requires, so a small addition is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, from the Victorian Units 1 and 2 course, covers the same business types by owner and aim, but it never mentions liability, which this brief requires. Adding liability would mean new content rather than a small change, so a new point fits better.",
+  "model": "claude-opus-5-5"
+ },
+ "draft": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns the business. The owner has unlimited liability, so personal assets can be used to pay the business's debts."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business and share its profits and risks. In a general partnership, each partner has unlimited liability."
+   ],
+   [
+    "Company",
+    "a separate legal entity owned by shareholders, who have limited liability. A private company's shares are not sold on the stock exchange. A public listed company's shares are traded on the Australian Securities Exchange (ASX)."
+   ],
+   [
+    "Social enterprise and GBE",
+    "a social enterprise is run for a social or environmental purpose. A government business enterprise (GBE) is owned by government and sells goods or services."
+   ]
+  ],
+  "remember": "Types of business differ in who owns them, who is liable for debts, and what they aim to do.",
+  "a": {
+   "q": "Jai runs a gardening business alone. It cannot pay a large debt. What is his position as a sole trader?",
+   "opts": [
+    "His personal assets can be used to pay the debt",
+    "His liability is limited to the money he put in",
+    "The business is a separate entity that alone owes the debt",
+    "Shareholders must share the debt with him"
+   ],
+   "why": "A sole trader has unlimited liability, so personal assets can be used to pay business debts. Limited liability applies to company shareholders, not sole traders.",
+   "clue": "Is a sole trader separate from the business in law?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena and Tom want to open a bakery in Geelong. They want the owners' personal assets protected from business debts, and they want shares kept out of the stock exchange. Which type of business suits them?",
+   "opts": [
+    "A private company",
+    "A public listed company",
+    "A general partnership",
+    "A sole trader"
+   ],
+   "why": "A private company gives shareholders limited liability, and its shares are not traded on the stock exchange. A public listed company also has limited liability, but its shares are traded on the ASX. A general partnership leaves partners with unlimited liability.",
+   "clue": "Which type has limited liability and no stock exchange listing?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "His personal assets can be used to pay the debt",
+   "also_right": []
+  },
+  "b": {
+   "best": "A private company",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines social enterprises ('run for a social or environmental purpose') and GBEs ('owned by government and sells goods or services'), which are the ideas of points 2 and 3. They should only be named here, with the focus kept on how they differ in owners, liability and aims."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts and both questions are sound, and each question has one clear right answer. The only issue is that the card defines social enterprises and GBEs, which belong to points 2 and 3."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, other: The card defines social enterprises ('run for a social or environmental purpose') and GBEs ('owned by government and sells goods or services'), which are the ideas of points 2 and 3. They should only be named here, with the focus kept on how they differ in owners, liability and aims."
+ ],
+ "proposal": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns the business, and in law the owner and business are not separate. The owner has unlimited liability, so personal assets can be used to pay the business's debts."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business and share its profits and risks. In a general partnership, each partner has unlimited liability."
+   ],
+   [
+    "Company",
+    "a separate legal entity owned by shareholders, who have limited liability. A private company's shares are not traded on the stock exchange. A public listed company's shares are traded on the Australian Securities Exchange (ASX)."
+   ],
+   "Aims also differ. Sole traders, partnerships and most companies aim to make a profit for their owners. Social enterprises and government business enterprises (GBEs) have other aims as well."
+  ],
+  "remember": "Types of business differ in who owns them, who is liable for debts, and what they aim to do.",
+  "a": {
+   "q": "Jai runs a gardening business alone. It cannot pay a large debt. What is his position as a sole trader?",
+   "opts": [
+    "His personal assets can be used to pay the debt",
+    "His liability is limited to the money he put in",
+    "The business is a separate entity that alone owes the debt",
+    "Shareholders must share the debt with him"
+   ],
+   "why": "A sole trader has unlimited liability, so personal assets can be used to pay business debts. Limited liability applies to company shareholders, not sole traders.",
+   "clue": "Is a sole trader separate from the business in law?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena and Tom want to open a bakery in Geelong. They want the owners' personal assets protected from business debts, and they want shares kept out of the stock exchange. Which type of business suits them?",
+   "opts": [
+    "A private company",
+    "A public listed company",
+    "A general partnership",
+    "A sole trader"
+   ],
+   "why": "A private company gives shareholders limited liability, and its shares are not traded on the stock exchange. A public listed company also has limited liability, but its shares are traded on the ASX. A general partnership leaves partners with unlimited liability.",
+   "clue": "Which type has limited liability and no stock exchange listing?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "other",
+    "detail": "The card defines social enterprises ('run for a social or environmental purpose') and GBEs ('owned by government and sells goods or services'), which are the ideas of points 2 and 3. They should only be named here, with the focus kept on how they differ in owners, liability and aims."
+   }
+  ],
+  "flags": [
+   "Card, other: The card defines social enterprises ('run for a social or environmental purpose') and GBEs ('owned by government and sells goods or services'), which are the ideas of points 2 and 3. They should only be named here, with the focus kept on how they differ in owners, liability and aims."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Types of business",
+  "card": [
+   [
+    "Sole trader",
+    "one person owns the business, and in law the owner and business are not separate. The owner has unlimited liability, so personal assets can be used to pay the business's debts."
+   ],
+   [
+    "Partnership",
+    "two or more people own the business and share its profits and risks. In a general partnership, each partner has unlimited liability."
+   ],
+   [
+    "Company",
+    "a separate legal entity owned by shareholders, who have limited liability. A private company's shares are not traded on the stock exchange. A public listed company's shares are traded on the Australian Securities Exchange (ASX)."
+   ],
+   "Aims also differ. Sole traders, partnerships and most companies aim to make a profit for their owners. Social enterprises and government business enterprises (GBEs) have other aims as well."
+  ],
+  "remember": "Types of business differ in who owns them, who is liable for debts, and what they aim to do.",
+  "a": {
+   "q": "Jai runs a gardening business alone. It cannot pay a large debt. What is his position as a sole trader?",
+   "opts": [
+    "His personal assets can be used to pay the debt",
+    "His liability is limited to the money he put in",
+    "The business is a separate entity that alone owes the debt",
+    "Shareholders must share the debt with him"
+   ],
+   "why": "A sole trader has unlimited liability, so personal assets can be used to pay business debts. Limited liability applies to company shareholders, not sole traders.",
+   "clue": "Is a sole trader separate from the business in law?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Lena and Tom want to open a bakery in Geelong. They want the owners' personal assets protected from business debts, and they want shares kept out of the stock exchange. Which type of business suits them?",
+   "opts": [
+    "A private company",
+    "A public listed company",
+    "A general partnership",
+    "A sole trader"
+   ],
+   "why": "A private company gives shareholders limited liability, and its shares are not traded on the stock exchange. A public listed company also has limited liability, but its shares are traded on the ASX. A general partnership leaves partners with unlimited liability.",
+   "clue": "Which type has limited liability and no stock exchange listing?"
+  }
+ },
+ "cleared_by": "owner"
+}

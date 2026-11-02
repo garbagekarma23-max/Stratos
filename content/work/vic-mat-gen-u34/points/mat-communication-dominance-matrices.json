@@ -1,0 +1,239 @@
+{
+ "id": "mat-communication-dominance-matrices",
+ "title": "Communication and dominance matrices",
+ "brief": "f50e00c2baba",
+ "shortlist": [
+  [
+   "mat-matrices-as-transformations",
+   0.266
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:28Z write: done",
+  "2026-11-01T15:14:47Z check: flagged",
+  "2026-11-01T15:19:04Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.00511,
+  "check": 0.01488,
+  "fix": 0.03834,
+  "recheck": 0.01666
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point teaches matrices as geometric transformations of points in the plane, while the new point needs matrices as adjacency counts for communication or dominance, where powers count multi-step links, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Communication and dominance matrices",
+  "card": [
+   [
+    "Communication matrix",
+    "A binary matrix where 1 means the row person can send a message directly to the column person, and 0 means they cannot. A message may go one way only."
+   ],
+   [
+    "Dominance matrix",
+    "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
+   ],
+   "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
+   "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win and 1 two-step win over C. Ranking uses row sums of M + M²."
+  ],
+  "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+  "a": {
+   "q": "In a dominance matrix, the row sums of M are P: 2, Q: 1, R: 1, S: 0. Which player has the most direct wins?",
+   "opts": [
+    "P, with 2 wins",
+    "Q, with 1 win",
+    "S, with 0 wins",
+    "R, with 2 wins"
+   ],
+   "why": "Each row sum counts the direct wins of that player, so the largest row sum is P with 2. S has the smallest row sum, so S has no direct wins, not the most.",
+   "clue": "A row sum counts the 1s in that player's row."
+  },
+  "b": {
+   "d": 3,
+   "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: row A is 0 1 1, row B is 0 0 1, row C is 1 0 0. How many two-step ways are there to send a message from A to C?",
+   "opts": [
+    "1",
+    "2",
+    "0",
+    "3"
+   ],
+   "why": "A two-step path from A to C goes through B or C. A to B then B to C works. A to C then C to C does not, as C has a 0 for C to C. So there is 1 way. Counting the direct link A to C as well would give 2, but that is a one-step link.",
+   "clue": "Check each middle person: can A reach them, and can they reach C?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "P, with 2 wins",
+   "also_right": []
+  },
+  "b": {
+   "best": "1",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example 'A has 1 direct win and 1 two-step win over C' can be read as A having a direct win over C. In fact the direct win is over B and only the two-step win is over C. Say this clearly, e.g. '1 direct win (over B) and 1 two-step win (over C)'."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The stem gives the row sums directly, so the student only has to pick the largest number from a list. This is far too easy for Year 12 and does not test reading a dominance matrix."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both answers check out: P has the most direct wins, and there is 1 two-step path from A to C. The card's example of a two-step win is worded ambiguously, and question a is too easy because it hands the student the row sums."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, wording: The example 'A has 1 direct win and 1 two-step win over C' can be read as A having a direct win over C. In fact the direct win is over B and only the two-step win is over C. Say this clearly, e.g. '1 direct win (over B) and 1 two-step win (over C)'.",
+  "Question a, level: The stem gives the row sums directly, so the student only has to pick the largest number from a list. This is far too easy for Year 12 and does not test reading a dominance matrix."
+ ],
+ "proposal": {
+  "title": "Communication and dominance matrices",
+  "card": [
+   [
+    "Communication matrix",
+    "A binary matrix where 1 means the row person can send a message directly to the column person, and 0 means they cannot. A message may go one way only."
+   ],
+   [
+    "Dominance matrix",
+    "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
+   ],
+   "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
+   "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of M + M²."
+  ],
+  "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+  "a": {
+   "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in M + M²?",
+   "opts": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "why": "P beat Q and S directly, so 2 direct wins. Two-step wins go through those players: P to Q to R, P to Q to S, and P to S to R, so 3 more. The total is 5, while 2 counts only the direct wins.",
+   "clue": "Find who P beat, then who those players beat."
+  },
+  "b": {
+   "d": 3,
+   "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: row A is 0 1 1, row B is 0 0 1, row C is 1 0 0. How many two-step ways are there to send a message from A to C?",
+   "opts": [
+    "1",
+    "2",
+    "0",
+    "3"
+   ],
+   "why": "A two-step path from A to C goes through a middle person. A to B then B to C works. A to C then C to C does not, as C has a 0 for C to C. So there is 1 way. Counting the direct link A to C as well would give 2, but that is a one-step link.",
+   "clue": "Check each middle person: can A reach them, and can they reach C?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "5",
+    "also_right": []
+   },
+   "b": {
+    "best": "1",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The dominance matrix is consistent: P's row sum in M + M² is 5, and there is exactly 1 two-step path from A to C."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 5,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "card",
+    "kind": "wording",
+    "detail": "The example 'A has 1 direct win and 1 two-step win over C' can be read as A having a direct win over C. In fact the direct win is over B and only the two-step win is over C. Say this clearly, e.g. '1 direct win (over B) and 1 two-step win (over C)'."
+   },
+   {
+    "part": "a",
+    "kind": "level",
+    "detail": "The stem gives the row sums directly, so the student only has to pick the largest number from a list. This is far too easy for Year 12 and does not test reading a dominance matrix."
+   }
+  ],
+  "flags": [
+   "Card, wording: The example 'A has 1 direct win and 1 two-step win over C' can be read as A having a direct win over C. In fact the direct win is over B and only the two-step win is over C. Say this clearly, e.g. '1 direct win (over B) and 1 two-step win (over C)'.",
+   "Question a, level: The stem gives the row sums directly, so the student only has to pick the largest number from a list. This is far too easy for Year 12 and does not test reading a dominance matrix."
+  ]
+ },
+ "final": {
+  "title": "Communication and dominance matrices",
+  "card": [
+   [
+    "Communication matrix",
+    "A binary matrix where 1 means the row person can send a message directly to the column person, and 0 means they cannot. A message may go one way only."
+   ],
+   [
+    "Dominance matrix",
+    "A binary matrix where 1 means the row player beat the column player. Each pair plays once, so a 1 in one place means a 0 in the matching place across the diagonal."
+   ],
+   "Row sums count direct links or wins. The matrix squared, M², counts two-step links: the entry in row i and column j is the number of ways to go from i to j through one other person.",
+   "M + M² counts all one-step and two-step links. Example: if A beat B and B beat C, then A has 1 direct win (over B) and 1 two-step win (over C). Ranking uses row sums of M + M²."
+  ],
+  "remember": "Row sums of M count direct links. Row sums of M + M² count direct and two-step links.",
+  "a": {
+   "q": "A dominance matrix M has rows and columns in the order P, Q, R, S: row P is 0 1 0 1, row Q is 0 0 1 1, row R is 1 0 0 0, row S is 0 0 1 0. What is P's row sum in M + M²?",
+   "opts": [
+    "5",
+    "2",
+    "3",
+    "4"
+   ],
+   "why": "P beat Q and S directly, so 2 direct wins. Two-step wins go through those players: P to Q to R, P to Q to S, and P to S to R, so 3 more. The total is 5, while 2 counts only the direct wins.",
+   "clue": "Find who P beat, then who those players beat."
+  },
+  "b": {
+   "d": 3,
+   "q": "Messages in a team are shown by this communication matrix, with rows and columns in the order A, B, C: row A is 0 1 1, row B is 0 0 1, row C is 1 0 0. How many two-step ways are there to send a message from A to C?",
+   "opts": [
+    "1",
+    "2",
+    "0",
+    "3"
+   ],
+   "why": "A two-step path from A to C goes through a middle person. A to B then B to C works. A to C then C to C does not, as C has a 0 for C to C. So there is 1 way. Counting the direct link A to C as well would give 2, but that is a one-step link.",
+   "clue": "Check each middle person: can A reach them, and can they reach C?"
+  }
+ },
+ "cleared_by": "recheck"
+}

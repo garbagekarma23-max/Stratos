@@ -1,0 +1,231 @@
+{
+ "id": "mat-logistic-equation",
+ "title": "The logistic equation",
+ "brief": "c68297148a13",
+ "shortlist": [
+  [
+   "mat-simultaneous-linear-equations",
+   0.253
+  ],
+  [
+   "mat-simultaneous-linear-equations-2",
+   0.217
+  ],
+  [
+   "mat-simultaneous-equations",
+   0.211
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: done",
+  "2026-11-01T15:14:48Z check: flagged",
+  "2026-11-01T15:19:05Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00019,
+  "write": 0.00481,
+  "check": 0.01501,
+  "fix": 0.03133,
+  "recheck": 0.01121
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches the logistic growth model or its differential equation; they all cover simultaneous equations, so no existing point matches this idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The logistic equation",
+  "card": [
+   "The logistic equation models a population P that grows quickly at first, then slows as it nears a limit. The limit is the carrying capacity, N, the largest population the environment can support.",
+   "The equation is dP/dt = kP(1 − P/N), where k > 0 and N > 0. The factor (1 − P/N) is close to 1 when P is small and close to 0 when P is near N.",
+   "If 0 < P < N, then dP/dt > 0 and the population rises towards N. If P > N, then dP/dt < 0 and it falls towards N. If P = N or P = 0, then dP/dt = 0 and the population does not change.",
+   "Example: dP/dt = 0.2P(1 − P/500). When P = 100, dP/dt = 0.2 × 100 × (1 − 0.2) = 16. The population is growing at 16 per unit of time."
+  ],
+  "remember": "Logistic growth is fastest when P is small, then slows to zero rate as P reaches N.",
+  "a": {
+   "q": "A population follows dP/dt = 0.3P(1 − P/800). What is the carrying capacity?",
+   "opts": [
+    "800",
+    "0.3",
+    "2400",
+    "266"
+   ],
+   "why": "The equation has the form dP/dt = kP(1 − P/N), so N = 800. The number 0.3 is the growth constant k, which is not a population limit.",
+   "clue": "Match the equation to the form with N inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond population follows dP/dt = 0.1P(1 − P/200). At P = 100, what is dP/dt?",
+   "opts": [
+    "2.5",
+    "5",
+    "10",
+    "0"
+   ],
+   "why": "dP/dt = 0.1 × 100 × (1 − 100/200) = 10 × 0.5 = 5. The value 10 comes from forgetting the bracket, and 2.5 comes from halving the bracket twice.",
+   "clue": "Work out the bracket first, then multiply by 0.1P."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "800",
+   "also_right": []
+  },
+  "b": {
+   "best": "5",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "Logistic growth is not fastest when P is small. dP/dt = kP(1 − P/N) is largest at P = N/2. When P is small the rate is close to 0 (only the relative rate, the factor (1 − P/N), is near its largest). The line teaches a wrong idea about the S-shaped curve."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Grows quickly at first' is misleading. From a small starting population, logistic growth starts slowly, speeds up until P = N/2, then slows as P nears N. The card should say the rate is greatest at P = N/2, or say plainly that the relative growth rate is what is largest at first."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions and their answers are correct. The remember line wrongly says logistic growth is fastest when P is small (it is fastest at P = N/2), and the card's 'grows quickly at first' backs up the same misconception."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b: the checker picked “5”, not the writer’s answer “2.5”.",
+  "Remember, fact: Logistic growth is not fastest when P is small. dP/dt = kP(1 − P/N) is largest at P = N/2. When P is small the rate is close to 0 (only the relative rate, the factor (1 − P/N), is near its largest). The line teaches a wrong idea about the S-shaped curve.",
+  "Card, fact: 'Grows quickly at first' is misleading. From a small starting population, logistic growth starts slowly, speeds up until P = N/2, then slows as P nears N. The card should say the rate is greatest at P = N/2, or say plainly that the relative growth rate is what is largest at first."
+ ],
+ "proposal": {
+  "title": "The logistic equation",
+  "card": [
+   "The logistic equation models a population P with a limit N, the carrying capacity: the largest population the environment can support. From a small start, P grows slowly, speeds up until P = N/2, then slows as it nears N.",
+   "The equation is dP/dt = kP(1 − P/N), where k > 0 and N > 0. The factor (1 − P/N) is close to 1 when P is small and close to 0 when P is near N.",
+   "If 0 < P < N, then dP/dt > 0 and the population rises towards N. If P > N, then dP/dt < 0 and it falls towards N. If P = N or P = 0, then dP/dt = 0 and the population does not change.",
+   "Example: dP/dt = 0.2P(1 − P/500). When P = 100, dP/dt = 0.2 × 100 × (1 − 100/500) = 20 × 0.8 = 16. The population is growing at 16 per unit of time."
+  ],
+  "remember": "The rate kP(1 − P/N) peaks at P = N/2 and falls to 0 as P reaches N.",
+  "a": {
+   "q": "A population follows dP/dt = 0.3P(1 − P/800). What is the carrying capacity?",
+   "opts": [
+    "800",
+    "0.3",
+    "2400",
+    "400"
+   ],
+   "why": "The equation has the form dP/dt = kP(1 − P/N), so N = 800. The number 0.3 is the growth constant k, not a population limit, and 400 is N/2, where growth is fastest.",
+   "clue": "Match the equation to the form with N inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond population follows dP/dt = 0.1P(1 − P/200). At P = 100, what is dP/dt?",
+   "opts": [
+    "5",
+    "10",
+    "2.5",
+    "0"
+   ],
+   "why": "dP/dt = 0.1 × 100 × (1 − 100/200) = 10 × 0.5 = 5. The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, P = N/2, with a rate of zero.",
+   "clue": "Work out the bracket first, then multiply by 0.1P."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:51Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "800",
+    "also_right": []
+   },
+   "b": {
+    "best": "5",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. The card, the remember line, both answers (N = 800 and dP/dt = 5) and the explanations are correct and consistent."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:51Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "Logistic growth is not fastest when P is small. dP/dt = kP(1 − P/N) is largest at P = N/2. When P is small the rate is close to 0 (only the relative rate, the factor (1 − P/N), is near its largest). The line teaches a wrong idea about the S-shaped curve."
+   },
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "'Grows quickly at first' is misleading. From a small starting population, logistic growth starts slowly, speeds up until P = N/2, then slows as P nears N. The card should say the rate is greatest at P = N/2, or say plainly that the relative growth rate is what is largest at first."
+   }
+  ],
+  "flags": [
+   "Question b: the checker picked “5”, not the writer’s answer “2.5”.",
+   "Remember, fact: Logistic growth is not fastest when P is small. dP/dt = kP(1 − P/N) is largest at P = N/2. When P is small the rate is close to 0 (only the relative rate, the factor (1 − P/N), is near its largest). The line teaches a wrong idea about the S-shaped curve.",
+   "Card, fact: 'Grows quickly at first' is misleading. From a small starting population, logistic growth starts slowly, speeds up until P = N/2, then slows as P nears N. The card should say the rate is greatest at P = N/2, or say plainly that the relative growth rate is what is largest at first."
+  ]
+ },
+ "final": {
+  "title": "The logistic equation",
+  "card": [
+   "The logistic equation models a population P with a limit N, the carrying capacity: the largest population the environment can support. From a small start, P grows slowly, speeds up until P = N/2, then slows as it nears N.",
+   "The equation is dP/dt = kP(1 − P/N), where k > 0 and N > 0. The factor (1 − P/N) is close to 1 when P is small and close to 0 when P is near N.",
+   "If 0 < P < N, then dP/dt > 0 and the population rises towards N. If P > N, then dP/dt < 0 and it falls towards N. If P = N or P = 0, then dP/dt = 0 and the population does not change.",
+   "Example: dP/dt = 0.2P(1 − P/500). When P = 100, dP/dt = 0.2 × 100 × (1 − 100/500) = 20 × 0.8 = 16. The population is growing at 16 per unit of time."
+  ],
+  "remember": "The rate kP(1 − P/N) peaks at P = N/2 and falls to 0 as P reaches N.",
+  "a": {
+   "q": "A population follows dP/dt = 0.3P(1 − P/800). What is the carrying capacity?",
+   "opts": [
+    "800",
+    "0.3",
+    "2400",
+    "400"
+   ],
+   "why": "The equation has the form dP/dt = kP(1 − P/N), so N = 800. The number 0.3 is the growth constant k, not a population limit, and 400 is N/2, where growth is fastest.",
+   "clue": "Match the equation to the form with N inside the bracket."
+  },
+  "b": {
+   "d": 3,
+   "q": "A pond population follows dP/dt = 0.1P(1 − P/200). At P = 100, what is dP/dt?",
+   "opts": [
+    "5",
+    "10",
+    "2.5",
+    "0"
+   ],
+   "why": "dP/dt = 0.1 × 100 × (1 − 100/200) = 10 × 0.5 = 5. The value 10 comes from leaving out the bracket. The value 0 mixes up the point where the rate is largest, P = N/2, with a rate of zero.",
+   "clue": "Work out the bracket first, then multiply by 0.1P."
+  }
+ },
+ "cleared_by": "recheck"
+}

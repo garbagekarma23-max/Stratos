@@ -1,0 +1,71 @@
+{
+ "id": "mat-reducing-balance-loans-2",
+ "title": "Reducing balance loans",
+ "brief": "7af4786b255e",
+ "shortlist": [
+  [
+   "mat-reducing-balance-loans",
+   0.702
+  ],
+  [
+   "mat-loan-repayments",
+   0.464
+  ],
+  [
+   "mat-total-interest-loan",
+   0.304
+  ],
+  [
+   "mat-compound-interest-by-repeated",
+   0.292
+  ],
+  [
+   "mat-annuity",
+   0.239
+  ]
+ ],
+ "stage": "reuse",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 may adapt mat-reducing-balance-loans, but is not highly sure, so to the Opus match check",
+  "2026-11-01T14:56:03Z confirm: Claude Opus 5.5 may adapt mat-reducing-balance-loans, but is not highly sure, so it is for you to review",
+  "2026-11-02T06:23:11Z review: reusing mat-reducing-balance-loans"
+ ],
+ "sent": {
+  "match": 1,
+  "confirm": 1
+ },
+ "usd": {
+  "match": 0.00054,
+  "confirm": 0.01257
+ },
+ "match": {
+  "verdict": "adapt",
+  "same": "mat-reducing-balance-loans",
+  "changes": [
+   "Rewrite the symbols in VCE recurrence notation (V_n for the balance after n periods, R for the repayment) in place of B and M, to match the Study Design.",
+   "Add that the repayment can be found with a financial solver or CAS, as VCE students are expected to use technology for loan calculations."
+  ],
+  "sure": "medium",
+  "reason": "The bank point teaches the same reducing balance idea at a suitable depth and its worked examples are correct, but it needs notation and technology changes to fit the VCE General Mathematics course.",
+  "model": "claude-haiku-5-5"
+ },
+ "confirm": {
+  "verdict": "adapt",
+  "same": "mat-reducing-balance-loans",
+  "changes": [
+   "Write the balance step in the VCE recurrence relation notation, A0 = principal and A(n+1) = R × An − D with R = 1 + r/100, instead of B × (1 + r) − M.",
+   "Note that VCE students would usually find the repayment with a CAS finance solver, while setting the final balance to zero by hand remains a valid check."
+  ],
+  "sure": "medium",
+  "reason": "The NSW card teaches the same reducing balance loan idea at a Year 12 level, but VCE General Mathematics models it as a first-order recurrence relation with its own notation, so the card needs small notation changes.",
+  "model": "claude-opus-5-5"
+ },
+ "reuse": "mat-reducing-balance-loans",
+ "matched": {
+  "verdict": "reuse",
+  "from": "mat-reducing-balance-loans",
+  "by": "owner",
+  "at": "2026-11-02T06:23:11Z"
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "id": "acc-variance-reports",
+ "title": "Variance reports",
+ "brief": "d3924a8ca940",
+ "shortlist": [
+  [
+   "bus-monitoring-performance",
+   0.328
+  ],
+  [
+   "bus-budgets",
+   0.26
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:41:49Z recheck: the fresh check agreed with the fix, cleared with the fix"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01147,
+  "check": 0.01424,
+  "fix": 0.01843,
+  "recheck": 0.01012
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, Monitoring performance, introduces variances at a Year 11 Business Studies level, but it does not cover comparing budgeted and actual figures across several periods or explaining variances in a report, which the new Year 12 Accounting point requires.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Variance reports",
+  "card": [
+   "A variance report compares budgeted figures with actual figures. The variance is the difference between them, shown in dollars and often as a percentage of the budget.",
+   [
+    "Favourable",
+    "a variance that raises profit. Actual revenue is higher than budget, or an actual expense is lower than budget."
+   ],
+   [
+    "Unfavourable",
+    "a variance that lowers profit. Actual revenue is lower than budget, or an actual expense is higher than budget."
+   ],
+   "Variances are compared over several periods to spot trends. A manager then looks for the cause of each large variance and decides what action to take."
+  ],
+  "remember": "Judge a variance by its effect on profit, not by whether the actual figure is higher or lower.",
+  "a": {
+   "q": "A business budgeted $18,000 for wages but actually paid $20,500. How is this variance described?",
+   "opts": [
+    "Unfavourable, because the expense was above budget",
+    "Favourable, because more wages were paid than planned",
+    "Unfavourable, because the actual figure was a higher number",
+    "Favourable, because wages are a larger cost than budgeted"
+   ],
+   "why": "Wages were $2,500 above budget, so the expense is higher and profit is lower. That makes the variance unfavourable because of its effect on profit. Higher is not always favourable: it is only favourable for revenue.",
+   "clue": "Ask what the extra $2,500 does to profit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Bendigo budgeted sales of $40,000 for each of three months. Actual sales were $39,000, $37,000 and $34,000. What do these variances show?",
+   "opts": [
+    "Unfavourable and growing, so the causes need review",
+    "Unfavourable and shrinking, so no action is needed",
+    "Favourable and growing, so sales are improving",
+    "Favourable and shrinking, so sales are recovering"
+   ],
+   "why": "Actual sales were below budget each month, by $1,000, $3,000 and $6,000. Lower revenue lowers profit, so the variances are unfavourable, and the gap is widening. A manager should look for the cause, such as lost customers.",
+   "clue": "Compare each month's actual sales with $40,000, then see how the gap changes."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Unfavourable, because the expense was above budget",
+   "also_right": []
+  },
+  "b": {
+   "best": "Unfavourable and growing, so the causes need review",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The card and remember line judge every variance only by its effect on profit. VCE Unit 4 variance reports also cover the budgeted cash flow statement, where a variance is judged by its effect on cash. For example, higher-than-budgeted loan receipts are favourable for cash but do not affect profit. As a general rule, 'judge a variance by its effect on profit' could mislead students on cash budget variances. Consider limiting it to income statement items or mentioning cash."
+   }
+  ],
+  "sure": "medium",
+  "sensitive": "none",
+  "summary": "Both questions have one clear correct answer and the explanations match the card. The only issue is that the card and remember line present 'effect on profit' as the test for every variance, which does not fit cash budget variance reports that VCE students also prepare."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Remember, fact: The card and remember line judge every variance only by its effect on profit. VCE Unit 4 variance reports also cover the budgeted cash flow statement, where a variance is judged by its effect on cash. For example, higher-than-budgeted loan receipts are favourable for cash but do not affect profit. As a general rule, 'judge a variance by its effect on profit' could mislead students on cash budget variances. Consider limiting it to income statement items or mentioning cash."
+ ],
+ "proposal": {
+  "title": "Variance reports",
+  "card": [
+   "A variance report compares budgeted figures with actual figures. The variance is the difference between them, shown in dollars and often as a percentage of the budget.",
+   [
+    "Favourable",
+    "the business ends up better off than planned: more profit for income statement items, or more cash for cash flow items. Revenue or cash received above budget is favourable, as is an expense or cash payment below budget."
+   ],
+   [
+    "Unfavourable",
+    "the business ends up worse off than planned: less profit for income statement items, or less cash for cash flow items. Revenue or cash received below budget is unfavourable, as is an expense or cash payment above budget."
+   ],
+   "Variances are compared over several periods to spot trends. A manager then looks for the cause of each large variance and decides what action to take."
+  ],
+  "remember": "Judge a variance by its effect on profit or cash, not by whether the actual figure is higher or lower.",
+  "a": {
+   "q": "A business budgeted $18,000 for wages but actually paid $20,500. How is this variance described in the income statement report?",
+   "opts": [
+    "Unfavourable, because it lowers profit",
+    "Favourable, because the actual figure is higher",
+    "Favourable, because it raises profit",
+    "Unfavourable, because it raises profit"
+   ],
+   "why": "Wages were $2,500 above budget. A higher expense lowers profit, so the variance is unfavourable. A higher actual figure is not favourable in itself: it depends on whether the item is revenue or an expense.",
+   "clue": "Ask what the extra $2,500 of wages does to profit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Bendigo budgeted sales of $40,000 for each of three months. Actual sales were $39,000, $37,000 and $34,000. What do these variances show?",
+   "opts": [
+    "Unfavourable and growing, so the causes need review",
+    "Unfavourable and shrinking, so no action is needed",
+    "Favourable and growing, so sales are improving",
+    "Favourable and shrinking, so sales are recovering"
+   ],
+   "why": "Actual sales were below budget each month, by $1,000, $3,000 and $6,000. Lower revenue lowers profit, so the variances are unfavourable, and the gap is widening. A manager should look for the cause, such as lost customers.",
+   "clue": "Compare each month's actual sales with $40,000, then see how the gap changes."
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:49Z",
+  "result": "cleared",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "Unfavourable, because it lowers profit",
+    "also_right": []
+   },
+   "b": {
+    "best": "Unfavourable and growing, so the causes need review",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:49Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 7,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "fact",
+    "detail": "The card and remember line judge every variance only by its effect on profit. VCE Unit 4 variance reports also cover the budgeted cash flow statement, where a variance is judged by its effect on cash. For example, higher-than-budgeted loan receipts are favourable for cash but do not affect profit. As a general rule, 'judge a variance by its effect on profit' could mislead students on cash budget variances. Consider limiting it to income statement items or mentioning cash."
+   }
+  ],
+  "flags": [
+   "Remember, fact: The card and remember line judge every variance only by its effect on profit. VCE Unit 4 variance reports also cover the budgeted cash flow statement, where a variance is judged by its effect on cash. For example, higher-than-budgeted loan receipts are favourable for cash but do not affect profit. As a general rule, 'judge a variance by its effect on profit' could mislead students on cash budget variances. Consider limiting it to income statement items or mentioning cash."
+  ]
+ },
+ "final": {
+  "title": "Variance reports",
+  "card": [
+   "A variance report compares budgeted figures with actual figures. The variance is the difference between them, shown in dollars and often as a percentage of the budget.",
+   [
+    "Favourable",
+    "the business ends up better off than planned: more profit for income statement items, or more cash for cash flow items. Revenue or cash received above budget is favourable, as is an expense or cash payment below budget."
+   ],
+   [
+    "Unfavourable",
+    "the business ends up worse off than planned: less profit for income statement items, or less cash for cash flow items. Revenue or cash received below budget is unfavourable, as is an expense or cash payment above budget."
+   ],
+   "Variances are compared over several periods to spot trends. A manager then looks for the cause of each large variance and decides what action to take."
+  ],
+  "remember": "Judge a variance by its effect on profit or cash, not by whether the actual figure is higher or lower.",
+  "a": {
+   "q": "A business budgeted $18,000 for wages but actually paid $20,500. How is this variance described in the income statement report?",
+   "opts": [
+    "Unfavourable, because it lowers profit",
+    "Favourable, because the actual figure is higher",
+    "Favourable, because it raises profit",
+    "Unfavourable, because it raises profit"
+   ],
+   "why": "Wages were $2,500 above budget. A higher expense lowers profit, so the variance is unfavourable. A higher actual figure is not favourable in itself: it depends on whether the item is revenue or an expense.",
+   "clue": "Ask what the extra $2,500 of wages does to profit."
+  },
+  "b": {
+   "d": 3,
+   "q": "Mia's café in Bendigo budgeted sales of $40,000 for each of three months. Actual sales were $39,000, $37,000 and $34,000. What do these variances show?",
+   "opts": [
+    "Unfavourable and growing, so the causes need review",
+    "Unfavourable and shrinking, so no action is needed",
+    "Favourable and growing, so sales are improving",
+    "Favourable and shrinking, so sales are recovering"
+   ],
+   "why": "Actual sales were below budget each month, by $1,000, $3,000 and $6,000. Lower revenue lowers profit, so the variances are unfavourable, and the gap is widening. A manager should look for the cause, such as lost customers.",
+   "clue": "Compare each month's actual sales with $40,000, then see how the gap changes."
+  }
+ },
+ "cleared_by": "recheck"
+}

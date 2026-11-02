@@ -1,0 +1,247 @@
+{
+ "id": "phys-time-dilation-length-contraction",
+ "title": "Time dilation and length contraction",
+ "brief": "5c497569667f",
+ "shortlist": [
+  [
+   "phys-length-contraction",
+   0.703
+  ],
+  [
+   "phys-time-dilation",
+   0.429
+  ],
+  [
+   "phys-postulates-special-relativity",
+   0.269
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:06Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:30Z write: failed the content check, writing again",
+  "2026-11-01T15:14:49Z write: done (still fails the content check)",
+  "2026-11-01T15:19:05Z check: flagged",
+  "2026-11-01T15:21:21Z fix: suggested",
+  "2026-11-02T04:41:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:25:04Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00018,
+  "write": 0.01195,
+  "check": 0.01163,
+  "fix": 0.02453,
+  "recheck": 0.0154
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The new point combines time dilation and length contraction under proper time and proper length, but neither bank point covers both: phys-time-dilation covers only time and phys-length-contraction covers only length, so a single matching card would need new content rather than small changes.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Time dilation and length contraction",
+  "card": [
+   [
+    "Proper time",
+    "the time between two events measured in a frame where both events happen at the same place. A clock moving with the events measures it."
+   ],
+   [
+    "Proper length",
+    "the length of an object measured in the frame where the object is at rest."
+   ],
+   "An observer moving relative to these measures a longer time and a shorter length. The time is t = γt₀ and the length is L = L₀/γ, where γ = 1/√(1 − v²/c²) and γ is always 1 or more.",
+   "The length shortens only along the direction of motion. The effects are tiny at everyday speeds and large close to the speed of light."
+  ],
+  "remember": "Own frame gives the shortest time and the longest length. Moving observers see time stretched and length shrunk.",
+  "a": {
+   "q": "A rocket passes Earth at 0.8c. Which measurement is a proper time?",
+   "opts": [
+    "A rocket clock timing two events on the rocket",
+    "An Earth clock timing two events on the rocket",
+    "An Earth clock timing two events on Earth, viewed from the rocket",
+    "A rocket clock timing two events on Earth"
+   ],
+   "why": "Proper time is measured by one clock present at both events, so the rocket clock timing rocket events gives it. The Earth clock timing rocket events sees them at different places, so it is not proper time.",
+   "clue": "Which clock is at the same place as both events?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A spacecraft is 120 m long when at rest. It passes a station at 0.6c, where γ = 1.25. What length does the station crew measure, and what do the spacecraft crew measure?",
+   "opts": [
+    "96 m by the station crew, 120 m by the spacecraft crew",
+    "120 m by the station crew, 96 m by the spacecraft crew",
+    "150 m by the station crew, 120 m by the spacecraft crew",
+    "96 m by the station crew, 96 m by the spacecraft crew"
+   ],
+   "why": "The 120 m is the proper length, measured by the spacecraft crew in the frame where it is at rest. The station crew see it moving, so L = 120 ÷ 1.25 = 96 m. Multiplying by γ gives 150 m, but moving observers measure a shorter length, not a longer one.",
+   "clue": "Whose frame is the spacecraft at rest in?"
+  }
+ },
+ "redone": true,
+ "local": [
+  "phys-time-dilation-length-contractiona option is 65 characters: An Earth clock timing two events on Earth, viewed from the rocket"
+ ],
+ "check": {
+  "a": {
+   "best": "A rocket clock timing two events on the rocket",
+   "also_right": [
+    "An Earth clock timing two events on Earth, viewed from the rocket"
+   ]
+  },
+  "b": {
+   "best": "96 m by the station crew, 120 m by the spacecraft crew",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The option 'An Earth clock timing two events on Earth, viewed from the rocket' is also a proper time. The Earth clock is present at both Earth events (taking them at the same place, as the rocket option also assumes), so its reading is proper time whoever views it. The 'viewed from the rocket' wording blurs whose measurement is meant, and the why does not address this option. Two options are defensible."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Question a has two defensible answers: an Earth clock timing Earth events is also a proper time, and 'viewed from the rocket' does not change that. Reword or replace that distractor, for example with an Earth clock timing events at two different places on Earth. The card and question b are correct."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a: the checker says “An Earth clock timing two events on Earth, viewed from the rocket” could also be right.",
+  "Question a, wording: The option 'An Earth clock timing two events on Earth, viewed from the rocket' is also a proper time. The Earth clock is present at both Earth events (taking them at the same place, as the rocket option also assumes), so its reading is proper time whoever views it. The 'viewed from the rocket' wording blurs whose measurement is meant, and the why does not address this option. Two options are defensible.",
+  "Content check: phys-time-dilation-length-contractiona option is 65 characters: An Earth clock timing two events on Earth, viewed from the rocket"
+ ],
+ "proposal": {
+  "title": "Time dilation and length contraction",
+  "card": [
+   [
+    "Proper time",
+    "the time between two events measured in a frame where both events happen at the same place. A clock moving with the events measures it."
+   ],
+   [
+    "Proper length",
+    "the length of an object measured in the frame where the object is at rest."
+   ],
+   "An observer moving relative to these measures a longer time and a shorter length. The time is t = γt₀ and the length is L = L₀/γ, where γ = 1/√(1 − v²/c²) and γ is always 1 or more.",
+   "The length shortens only along the direction of motion. The effects are tiny at everyday speeds and large close to the speed of light."
+  ],
+  "remember": "Own frame gives the shortest time and the longest length. Moving observers see time stretched and length shrunk.",
+  "a": {
+   "q": "A rocket passes Earth at 0.8c. Which measurement is a proper time?",
+   "opts": [
+    "A rocket clock timing two events at one spot on the rocket",
+    "An Earth clock timing two events at one spot on the rocket",
+    "A rocket clock timing two events at one spot on Earth",
+    "Two Earth clocks timing the rocket between two planets"
+   ],
+   "why": "The rocket clock sits at that spot on the rocket, so it is present at both events and measures proper time. An Earth clock sees that spot move, so the two events happen at different places in its frame. In the same way, a spot on Earth moves past the rocket, and two separate clocks mean the events are at different places.",
+   "clue": "In which frame do both events happen at the same place?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A spacecraft is 120 m long when at rest. It passes a station at 0.6c, where γ = 1.25. What length does the station crew measure, and what do the spacecraft crew measure?",
+   "opts": [
+    "96 m by the station crew, 120 m by the spacecraft crew",
+    "120 m by the station crew, 96 m by the spacecraft crew",
+    "150 m by the station crew, 120 m by the spacecraft crew",
+    "96 m by the station crew, 96 m by the spacecraft crew"
+   ],
+   "why": "The 120 m is the proper length, measured by the spacecraft crew in the frame where it is at rest. The station crew see it moving, so L = 120 ÷ 1.25 = 96 m. Multiplying by γ gives 150 m, but moving observers measure a shorter length, not a longer one.",
+   "clue": "Whose frame is the spacecraft at rest in?"
+  }
+ },
+ "proposal_problems": [],
+ "recheck": {
+  "at": "2026-11-02T04:41:52Z",
+  "result": "spot check",
+  "why": [],
+  "check": {
+   "a": {
+    "best": "A rocket clock timing two events at one spot on the rocket",
+    "also_right": []
+   },
+   "b": {
+    "best": "96 m by the station crew, 120 m by the spacecraft crew",
+    "also_right": []
+   },
+   "problems": [],
+   "sure": "high",
+   "sensitive": "none",
+   "summary": "No problems found. Both questions have one correct answer that matches the card, and the explanations agree with it."
+  },
+  "flags": []
+ },
+ "auto": {
+  "at": "2026-11-02T04:41:52Z",
+  "rules": 1,
+  "by": "recheck",
+  "n": 11,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The option 'An Earth clock timing two events on Earth, viewed from the rocket' is also a proper time. The Earth clock is present at both Earth events (taking them at the same place, as the rocket option also assumes), so its reading is proper time whoever views it. The 'viewed from the rocket' wording blurs whose measurement is meant, and the why does not address this option. Two options are defensible."
+   }
+  ],
+  "flags": [
+   "Question a: the checker says “An Earth clock timing two events on Earth, viewed from the rocket” could also be right.",
+   "Question a, wording: The option 'An Earth clock timing two events on Earth, viewed from the rocket' is also a proper time. The Earth clock is present at both Earth events (taking them at the same place, as the rocket option also assumes), so its reading is proper time whoever views it. The 'viewed from the rocket' wording blurs whose measurement is meant, and the why does not address this option. Two options are defensible.",
+   "Content check: phys-time-dilation-length-contractiona option is 65 characters: An Earth clock timing two events on Earth, viewed from the rocket"
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Time dilation and length contraction",
+  "card": [
+   [
+    "Proper time",
+    "the time between two events measured in a frame where both events happen at the same place. A clock moving with the events measures it."
+   ],
+   [
+    "Proper length",
+    "the length of an object measured in the frame where the object is at rest."
+   ],
+   "An observer moving relative to these measures a longer time and a shorter length. The time is t = γt₀ and the length is L = L₀/γ, where γ = 1/√(1 − v²/c²) and γ is always 1 or more.",
+   "The length shortens only along the direction of motion. The effects are tiny at everyday speeds and large close to the speed of light."
+  ],
+  "remember": "Own frame gives the shortest time and the longest length. Moving observers see time stretched and length shrunk.",
+  "a": {
+   "q": "A rocket passes Earth at 0.8c. Which measurement is a proper time?",
+   "opts": [
+    "A rocket clock timing two events at one spot on the rocket",
+    "An Earth clock timing two events at one spot on the rocket",
+    "A rocket clock timing two events at one spot on Earth",
+    "Two Earth clocks timing the rocket between two planets"
+   ],
+   "why": "The rocket clock sits at that spot on the rocket, so it is present at both events and measures proper time. An Earth clock sees that spot move, so the two events happen at different places in its frame. In the same way, a spot on Earth moves past the rocket, and two separate clocks mean the events are at different places.",
+   "clue": "In which frame do both events happen at the same place?"
+  },
+  "b": {
+   "d": 3,
+   "q": "A spacecraft is 120 m long when at rest. It passes a station at 0.6c, where γ = 1.25. What length does the station crew measure, and what do the spacecraft crew measure?",
+   "opts": [
+    "96 m by the station crew, 120 m by the spacecraft crew",
+    "120 m by the station crew, 96 m by the spacecraft crew",
+    "150 m by the station crew, 120 m by the spacecraft crew",
+    "96 m by the station crew, 96 m by the spacecraft crew"
+   ],
+   "why": "The 120 m is the proper length, measured by the spacecraft crew in the frame where it is at rest. The station crew see it moving, so L = 120 ÷ 1.25 = 96 m. Multiplying by γ gives 150 m, but moving observers measure a shorter length, not a longer one.",
+   "clue": "Whose frame is the spacecraft at rest in?"
+  }
+ },
+ "cleared_by": "owner"
+}

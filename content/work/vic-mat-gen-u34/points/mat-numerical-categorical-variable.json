@@ -1,0 +1,298 @@
+{
+ "id": "mat-numerical-categorical-variable",
+ "title": "A numerical and a categorical variable",
+ "brief": "daa8b9446415",
+ "shortlist": [
+  [
+   "mat-scatterplots",
+   0.252
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
+  "2026-11-02T04:50:15Z write: done",
+  "2026-11-02T04:56:46Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 9e-05,
+  "write": 0.01378,
+  "check": 0.02945,
+  "fix": 0.02585,
+  "recheck": 0.01675
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank's scatterplot point teaches plotting two numerical variables against each other, whereas the new point teaches comparing one numerical variable across categorical groups with stem plots, dot plots and boxplots, so no bank point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The card says an association exists when medians are 'clearly different'. The question gives no spread information, so a student cannot judge whether 0.7 minutes is a clear difference. The why also says the medians 'differ, so … run time is associated', which treats any difference as an association and contradicts the card's 'clearly different' condition.",
+ "rejected": {
+  "title": "A numerical and a categorical variable",
+  "card": [
+   "To see if a numerical variable differs across groups, compare its values for each group of a categorical variable. Use back-to-back stem plots, parallel dot plots or parallel boxplots.",
+   "Compare three things: centre (median), spread (range or IQR) and shape. Say which group is higher, which is more spread out, and by how much.",
+   "If the medians are clearly different, there is an association between the two variables. Medians are the main guide, but similar medians alone do not rule out an association, as spread or shape may still differ.",
+   "Example: Group A has a median of 40 and Group B has a median of 55. The groups differ in centre, so the numerical variable is associated with the group."
+  ],
+  "remember": "Compare the centre, spread and shape of each group. Clearly different medians suggest an association.",
+  "a": {
+   "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes) and Year 12 students (median 4.8 minutes). What does this suggest?",
+   "opts": [
+    "Run time is associated with year level",
+    "Run time is not associated with year level",
+    "Year 12 students have a larger spread",
+    "Year 9 students have a lower median"
+   ],
+   "why": "The medians differ by 0.7 minutes, so the centres differ and run time is associated with year level. The medians say nothing about spread, so the spread option cannot be drawn from them.",
+   "clue": "Compare the two medians."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel boxplots show the daily steps of two groups. Group X has a median of 8000 and an IQR of 1000. Group Y has a median of 8000 and an IQR of 4000. Which statement is best?",
+   "opts": [
+    "The centres are the same, but Y is more spread out",
+    "The centres are the same, but X is more spread out",
+    "Y has a higher median than X, with the same spread",
+    "X and Y are the same in centre and spread"
+   ],
+   "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
+   "clue": "A larger IQR means a wider middle half."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, other: The card says an association exists when medians are 'clearly different'. The question gives no spread information, so a student cannot judge whether 0.7 minutes is a clear difference. The why also says the medians 'differ, so … run time is associated', which treats any difference as an association and contradicts the card's 'clearly different' condition."
+   ],
+   "saved": {
+    "draft": {
+     "title": "A numerical and a categorical variable",
+     "card": [
+      "To see if a numerical variable differs across groups, compare its values for each group of a categorical variable. Use back-to-back stem plots, parallel dot plots or parallel boxplots.",
+      "Compare three things: centre (median), spread (range or IQR) and shape. Say which group is higher, which is more spread out, and by how much.",
+      "If the medians are clearly different, there is an association between the two variables. If the medians are about the same, there is no sign of one.",
+      "Example: Group A has a median of 40 and Group B has a median of 55. The groups differ in centre, so the numerical variable is associated with the group."
+     ],
+     "remember": "Compare the centre, spread and shape of each group. Different centres suggest an association.",
+     "a": {
+      "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes) and Year 12 students (median 4.8 minutes). What does this suggest?",
+      "opts": [
+       "Run time is associated with year level",
+       "Run time is not associated with year level",
+       "Year 12 students have a larger spread",
+       "Year 9 students have a lower median"
+      ],
+      "why": "The medians differ by 0.7 minutes, so the centres differ and run time is associated with year level. The medians say nothing about spread, so the spread option cannot be drawn from them.",
+      "clue": "Compare the two medians."
+     },
+     "b": {
+      "d": 3,
+      "q": "Parallel boxplots show the daily steps of two groups. Group X has a median of 8000 and an IQR of 1000. Group Y has a median of 8000 and an IQR of 4000. Which statement is best?",
+      "opts": [
+       "The centres are the same, but Y is more spread out",
+       "The centres are the same, but X is more spread out",
+       "Y has a higher median than X, with the same spread",
+       "X and Y are the same in centre and spread"
+      ],
+      "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
+      "clue": "A larger IQR means a wider middle half."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Run time is associated with year level",
+      "also_right": []
+     },
+     "b": {
+      "best": "The centres are the same, but Y is more spread out",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "\"If the medians are about the same, there is no sign of one\" overstates the rule. Clearly different spreads or shapes can also show an association, and the card's own second bullet asks students to compare spread and shape. Soften it, for example: \"medians are the main guide; similar medians alone do not rule out an association.\""
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions are sound, each with one clearly right answer. The card says equal medians mean \"no sign\" of an association, which ignores differences in spread or shape and clashes with its own advice to compare all three."
+    },
+    "flags": [
+     "Card, fact: \"If the medians are about the same, there is no sign of one\" overstates the rule. Clearly different spreads or shapes can also show an association, and the card's own second bullet asks students to compare spread and shape. Soften it, for example: \"medians are the main guide; similar medians alone do not rule out an association.\""
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "A numerical and a categorical variable",
+     "card": [
+      "To see if a numerical variable differs across groups, compare its values for each group of a categorical variable. Use back-to-back stem plots, parallel dot plots or parallel boxplots.",
+      "Compare three things: centre (median), spread (range or IQR) and shape. Say which group is higher, which is more spread out, and by how much.",
+      "If the medians are clearly different, there is an association between the two variables. Medians are the main guide, but similar medians alone do not rule out an association, as spread or shape may still differ.",
+      "Example: Group A has a median of 40 and Group B has a median of 55. The groups differ in centre, so the numerical variable is associated with the group."
+     ],
+     "remember": "Compare the centre, spread and shape of each group. Clearly different medians suggest an association.",
+     "a": {
+      "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes) and Year 12 students (median 4.8 minutes). What does this suggest?",
+      "opts": [
+       "Run time is associated with year level",
+       "Run time is not associated with year level",
+       "Year 12 students have a larger spread",
+       "Year 9 students have a lower median"
+      ],
+      "why": "The medians differ by 0.7 minutes, so the centres differ and run time is associated with year level. The medians say nothing about spread, so the spread option cannot be drawn from them.",
+      "clue": "Compare the two medians."
+     },
+     "b": {
+      "d": 3,
+      "q": "Parallel boxplots show the daily steps of two groups. Group X has a median of 8000 and an IQR of 1000. Group Y has a median of 8000 and an IQR of 4000. Which statement is best?",
+      "opts": [
+       "The centres are the same, but Y is more spread out",
+       "The centres are the same, but X is more spread out",
+       "Y has a higher median than X, with the same spread",
+       "X and Y are the same in centre and spread"
+      ],
+      "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
+      "clue": "A larger IQR means a wider middle half."
+     }
+    },
+    "proposal_problems": [],
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "Run time is associated with year level",
+       "also_right": []
+      },
+      "b": {
+       "best": "The centres are the same, but Y is more spread out",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The card says an association exists when medians are 'clearly different'. The question gives no spread information, so a student cannot judge whether 0.7 minutes is a clear difference. The why also says the medians 'differ, so … run time is associated', which treats any difference as an association and contradicts the card's 'clearly different' condition."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "Both questions have one clear right answer, and the card and remember line are accurate. One minor issue: question a's why treats any difference in medians as an association, while the card requires 'clearly different' medians and the question gives no spread to judge by."
+     },
+     "flags": [
+      "Question a, other: The card says an association exists when medians are 'clearly different'. The question gives no spread information, so a student cannot judge whether 0.7 minutes is a clear difference. The why also says the medians 'differ, so … run time is associated', which treats any difference as an association and contradicts the card's 'clearly different' condition."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "A numerical and a categorical variable",
+  "card": [
+   "To see if a numerical variable differs across groups, compare its values for each group of a categorical variable. Use back-to-back stem plots, parallel dot plots or parallel boxplots.",
+   "Compare three things: centre (median), spread (range or IQR) and shape. Say which group is higher, which is more spread out, and by how much.",
+   "If the medians are clearly different, there is an association between the two variables. A difference is clear when it is large compared with the spread of the data. Similar medians alone do not rule out an association, as spread or shape may still differ.",
+   "Example: Group A has a median of 40 and Group B has a median of 55, and both have an IQR of about 5. The medians are far apart compared with the spread, so the numerical variable is associated with the group."
+  ],
+  "remember": "Compare the centre, spread and shape of each group. Medians that are far apart compared with the spread suggest an association.",
+  "a": {
+   "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes, IQR 0.2) and Year 12 students (median 4.5 minutes, IQR 0.2). What does this suggest?",
+   "opts": [
+    "Run time is associated with year level",
+    "Run time is not associated with year level",
+    "Year 12 students have a larger spread",
+    "Year 9 students have a lower median"
+   ],
+   "why": "The medians differ by 1 minute, which is large compared with an IQR of 0.2 for each group. So the difference is clear and run time is associated with year level. The spread is the same in both groups, so the spread option is wrong.",
+   "clue": "Compare the gap between medians with the IQR."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel boxplots show the daily steps of two groups. Group X has a median of 8000 and an IQR of 1000. Group Y has a median of 8000 and an IQR of 4000. Which statement is best?",
+   "opts": [
+    "The centres are the same, but Y is more spread out",
+    "The centres are the same, but X is more spread out",
+    "Y has a higher median than X, with the same spread",
+    "X and Y are the same in centre and spread"
+   ],
+   "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
+   "clue": "A larger IQR means a wider middle half."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Run time is associated with year level",
+   "also_right": []
+  },
+  "b": {
+   "best": "The centres are the same, but Y is more spread out",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "A numerical and a categorical variable",
+  "card": [
+   "To see if a numerical variable differs across groups, compare its values for each group of a categorical variable. Use back-to-back stem plots, parallel dot plots or parallel boxplots.",
+   "Compare three things: centre (median), spread (range or IQR) and shape. Say which group is higher, which is more spread out, and by how much.",
+   "If the medians are clearly different, there is an association between the two variables. A difference is clear when it is large compared with the spread of the data. Similar medians alone do not rule out an association, as spread or shape may still differ.",
+   "Example: Group A has a median of 40 and Group B has a median of 55, and both have an IQR of about 5. The medians are far apart compared with the spread, so the numerical variable is associated with the group."
+  ],
+  "remember": "Compare the centre, spread and shape of each group. Medians that are far apart compared with the spread suggest an association.",
+  "a": {
+   "q": "Parallel boxplots show the times to run 1 km for Year 9 students (median 5.5 minutes, IQR 0.2) and Year 12 students (median 4.5 minutes, IQR 0.2). What does this suggest?",
+   "opts": [
+    "Run time is associated with year level",
+    "Run time is not associated with year level",
+    "Year 12 students have a larger spread",
+    "Year 9 students have a lower median"
+   ],
+   "why": "The medians differ by 1 minute, which is large compared with an IQR of 0.2 for each group. So the difference is clear and run time is associated with year level. The spread is the same in both groups, so the spread option is wrong.",
+   "clue": "Compare the gap between medians with the IQR."
+  },
+  "b": {
+   "d": 3,
+   "q": "Parallel boxplots show the daily steps of two groups. Group X has a median of 8000 and an IQR of 1000. Group Y has a median of 8000 and an IQR of 4000. Which statement is best?",
+   "opts": [
+    "The centres are the same, but Y is more spread out",
+    "The centres are the same, but X is more spread out",
+    "Y has a higher median than X, with the same spread",
+    "X and Y are the same in centre and spread"
+   ],
+   "why": "Both medians are 8000, so the centres match. Y has the larger IQR, so its steps vary more from person to person. Equal medians do not mean the groups are alike in spread.",
+   "clue": "A larger IQR means a wider middle half."
+  }
+ }
+}

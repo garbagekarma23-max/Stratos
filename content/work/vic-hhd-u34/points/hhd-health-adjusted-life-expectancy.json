@@ -1,0 +1,132 @@
+{
+ "id": "hhd-health-adjusted-life-expectancy",
+ "title": "Health-adjusted life expectancy",
+ "brief": "86f3707744da",
+ "shortlist": [
+  [
+   "hms-global-health-inequities",
+   0.321
+  ],
+  [
+   "hms-australia-s-health-status",
+   0.297
+  ],
+  [
+   "hms-measures-health-status",
+   0.293
+  ],
+  [
+   "hms-health-as-dynamic-subjective",
+   0.233
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: done",
+  "2026-11-01T15:05:26Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00016,
+  "write": 0.00674,
+  "check": 0.01294
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "None of the bank points teaches health-adjusted life expectancy; the closest, Measures of health status, covers life expectancy but not a healthy-years measure, so a new point is needed.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Health-adjusted life expectancy",
+  "card": [
+   "Life expectancy is the average number of years a person can expect to live from birth, whether in good health or not.",
+   "Health-adjusted life expectancy (HALE) is the number of years a person can expect to live in full health.",
+   "HALE is lower than life expectancy because most people spend some years with illness or disability. The gap shows the years lived in less than full health.",
+   "If HALE rises, people can expect more years in full health. It can rise even when life expectancy stays the same."
+  ],
+  "remember": "HALE counts only the years expected in full health, so it is lower than life expectancy.",
+  "a": {
+   "q": "Why is HALE lower than life expectancy for a population?",
+   "opts": [
+    "It leaves out years lived with illness or disability",
+    "It only counts years lived after the age of 65",
+    "It subtracts the years of life lost to early death",
+    "It is measured only for people who have a disease"
+   ],
+   "why": "HALE counts only years in full health, so years spent with illness or disability are taken out. Years lost to early death are not what creates this gap, which is the tempting mistake.",
+   "clue": "Life expectancy counts all years. HALE counts only some."
+  },
+  "b": {
+   "d": 3,
+   "q": "In country P, life expectancy is 82 years and HALE is 70 years. What does the 12-year gap show?",
+   "opts": [
+    "Years a person can expect to live with illness or disability",
+    "Years a person can expect to lose to early death",
+    "Years a person can expect to live after retiring",
+    "Years in which a person is unlikely to see a doctor"
+   ],
+   "why": "HALE is the years in full health and life expectancy is all years lived. The difference is the years expected in less than full health. It is not years lost to early death, because life expectancy already averages the age people die.",
+   "clue": "Subtract full-health years from total years lived."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "It leaves out years lived with illness or disability",
+   "also_right": []
+  },
+  "b": {
+   "best": "Years a person can expect to live with illness or disability",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Health-adjusted life expectancy",
+  "card": [
+   "Life expectancy is the average number of years a person can expect to live from birth, whether in good health or not.",
+   "Health-adjusted life expectancy (HALE) is the number of years a person can expect to live in full health.",
+   "HALE is lower than life expectancy because most people spend some years with illness or disability. The gap shows the years lived in less than full health.",
+   "If HALE rises, people can expect more years in full health. It can rise even when life expectancy stays the same."
+  ],
+  "remember": "HALE counts only the years expected in full health, so it is lower than life expectancy.",
+  "a": {
+   "q": "Why is HALE lower than life expectancy for a population?",
+   "opts": [
+    "It leaves out years lived with illness or disability",
+    "It only counts years lived after the age of 65",
+    "It subtracts the years of life lost to early death",
+    "It is measured only for people who have a disease"
+   ],
+   "why": "HALE counts only years in full health, so years spent with illness or disability are taken out. Years lost to early death are not what creates this gap, which is the tempting mistake.",
+   "clue": "Life expectancy counts all years. HALE counts only some."
+  },
+  "b": {
+   "d": 3,
+   "q": "In country P, life expectancy is 82 years and HALE is 70 years. What does the 12-year gap show?",
+   "opts": [
+    "Years a person can expect to live with illness or disability",
+    "Years a person can expect to lose to early death",
+    "Years a person can expect to live after retiring",
+    "Years in which a person is unlikely to see a doctor"
+   ],
+   "why": "HALE is the years in full health and life expectancy is all years lived. The difference is the years expected in less than full health. It is not years lost to early death, because life expectancy already averages the age people die.",
+   "clue": "Subtract full-health years from total years lived."
+  }
+ },
+ "cleared_by": "checker"
+}

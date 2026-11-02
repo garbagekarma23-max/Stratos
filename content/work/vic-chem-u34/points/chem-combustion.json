@@ -1,0 +1,202 @@
+{
+ "id": "chem-combustion",
+ "title": "Combustion",
+ "brief": "bc6be99b0c81",
+ "shortlist": [
+  [
+   "chem-synthesis-decomposition-combustion",
+   0.425
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:25Z new, match",
+  "2026-11-01T14:46:36Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:58Z write: done",
+  "2026-11-01T15:05:25Z check: flagged",
+  "2026-11-01T15:14:44Z fix: suggested",
+  "2026-11-02T04:35:39Z autoreview: cleared with the fix (b other)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00013,
+  "write": 0.00631,
+  "check": 0.01511,
+  "fix": 0.02548
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers only complete combustion and the reaction-type classification, with no mention of incomplete combustion producing carbon monoxide or soot, so adding that idea is a new teaching step rather than a small adaptation.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "Combustion",
+  "card": [
+   "Combustion is a fuel reacting with oxygen and releasing energy as heat and light.",
+   [
+    "Complete combustion",
+    "happens with plenty of oxygen. A hydrocarbon gives carbon dioxide and water only."
+   ],
+   [
+    "Incomplete combustion",
+    "happens when oxygen is limited. It makes water and also carbon monoxide (CO) or soot (carbon, C), often with some carbon dioxide."
+   ],
+   "Incomplete combustion releases less energy than complete combustion of the same fuel. A yellow, smoky flame suggests soot, and carbon monoxide is a toxic gas."
+  ],
+  "remember": "Plenty of oxygen gives CO2 and H2O. Limited oxygen can also give CO or soot.",
+  "a": {
+   "q": "A gas heater in a small, poorly ventilated room burns methane. Which products suggest incomplete combustion?",
+   "opts": [
+    "Carbon monoxide and water",
+    "Carbon dioxide and water",
+    "Carbon dioxide and hydrogen",
+    "Oxygen and water"
+   ],
+   "why": "Carbon monoxide forms when oxygen is limited, so it signals incomplete combustion. Carbon dioxide and water are the products of complete combustion, which is the tempting wrong choice.",
+   "clue": "Poor ventilation means limited oxygen."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam's camp stove burns butane with a bright yellow flame and leaves black marks on the pot. What is the best explanation?",
+   "opts": [
+    "Oxygen is limited, so soot forms",
+    "Oxygen is plentiful, so soot forms",
+    "Combustion is complete, so carbon forms",
+    "The stove releases more energy than it should"
+   ],
+   "why": "Black marks are soot, which is carbon from incomplete combustion, caused by limited oxygen. Complete combustion gives only carbon dioxide and water. Incomplete combustion releases less energy, not more.",
+   "clue": "Soot is one product of burning with too little oxygen."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Carbon monoxide and water",
+   "also_right": []
+  },
+  "b": {
+   "best": "Oxygen is limited, so soot forms",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Soot is one product of burning with too little oxygen' nearly restates the right option 'Oxygen is limited, so soot forms', so a student can match the clue to the option without linking the yellow flame and black marks to soot."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and both questions are accurate, and each question has one right answer. The only issue is that the clue for question b nearly gives the answer away, so it should hint at what the black marks are instead."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue 'Soot is one product of burning with too little oxygen' nearly restates the right option 'Oxygen is limited, so soot forms', so a student can match the clue to the option without linking the yellow flame and black marks to soot."
+ ],
+ "proposal": {
+  "title": "Combustion",
+  "card": [
+   "Combustion is a fuel reacting with oxygen and releasing energy as heat and light.",
+   [
+    "Complete combustion",
+    "happens with plenty of oxygen. A hydrocarbon gives carbon dioxide and water only."
+   ],
+   [
+    "Incomplete combustion",
+    "happens when oxygen is limited. It makes water and also carbon monoxide (CO) or soot (carbon, C), often with some carbon dioxide."
+   ],
+   "Incomplete combustion releases less energy than complete combustion of the same fuel. A yellow, smoky flame suggests soot, and carbon monoxide is a toxic gas."
+  ],
+  "remember": "Plenty of oxygen gives CO2 and H2O. Limited oxygen can also give CO or soot.",
+  "a": {
+   "q": "A gas heater in a small, poorly ventilated room burns methane. Which products suggest incomplete combustion?",
+   "opts": [
+    "Carbon monoxide and water",
+    "Carbon dioxide and water",
+    "Carbon dioxide and hydrogen",
+    "Oxygen and water"
+   ],
+   "why": "Carbon monoxide forms when oxygen is limited, so it signals incomplete combustion. Carbon dioxide and water are the products of complete combustion, which is the tempting wrong choice.",
+   "clue": "Poor ventilation means limited oxygen."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam's camp stove burns butane with a bright yellow flame and leaves black marks on the pot. What is the best explanation?",
+   "opts": [
+    "Oxygen is limited, so soot forms",
+    "Oxygen is plentiful, so soot forms",
+    "Combustion is complete, so carbon forms",
+    "Oxygen is limited, so more energy is released"
+   ],
+   "why": "The yellow flame and black marks point to soot, which is carbon from incomplete combustion when oxygen is limited. Complete combustion with plenty of oxygen gives only carbon dioxide and water. Incomplete combustion releases less energy, not more.",
+   "clue": "Think about what the black marks on the pot are made of."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:39Z",
+  "rules": 1,
+  "n": 2,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue 'Soot is one product of burning with too little oxygen' nearly restates the right option 'Oxygen is limited, so soot forms', so a student can match the clue to the option without linking the yellow flame and black marks to soot."
+   }
+  ],
+  "flags": [
+   "Question b, other: The clue 'Soot is one product of burning with too little oxygen' nearly restates the right option 'Oxygen is limited, so soot forms', so a student can match the clue to the option without linking the yellow flame and black marks to soot."
+  ]
+ },
+ "final": {
+  "title": "Combustion",
+  "card": [
+   "Combustion is a fuel reacting with oxygen and releasing energy as heat and light.",
+   [
+    "Complete combustion",
+    "happens with plenty of oxygen. A hydrocarbon gives carbon dioxide and water only."
+   ],
+   [
+    "Incomplete combustion",
+    "happens when oxygen is limited. It makes water and also carbon monoxide (CO) or soot (carbon, C), often with some carbon dioxide."
+   ],
+   "Incomplete combustion releases less energy than complete combustion of the same fuel. A yellow, smoky flame suggests soot, and carbon monoxide is a toxic gas."
+  ],
+  "remember": "Plenty of oxygen gives CO2 and H2O. Limited oxygen can also give CO or soot.",
+  "a": {
+   "q": "A gas heater in a small, poorly ventilated room burns methane. Which products suggest incomplete combustion?",
+   "opts": [
+    "Carbon monoxide and water",
+    "Carbon dioxide and water",
+    "Carbon dioxide and hydrogen",
+    "Oxygen and water"
+   ],
+   "why": "Carbon monoxide forms when oxygen is limited, so it signals incomplete combustion. Carbon dioxide and water are the products of complete combustion, which is the tempting wrong choice.",
+   "clue": "Poor ventilation means limited oxygen."
+  },
+  "b": {
+   "d": 3,
+   "q": "Liam's camp stove burns butane with a bright yellow flame and leaves black marks on the pot. What is the best explanation?",
+   "opts": [
+    "Oxygen is limited, so soot forms",
+    "Oxygen is plentiful, so soot forms",
+    "Combustion is complete, so carbon forms",
+    "Oxygen is limited, so more energy is released"
+   ],
+   "why": "The yellow flame and black marks point to soot, which is carbon from incomplete combustion when oxygen is limited. Complete combustion with plenty of oxygen gives only carbon dioxide and water. Incomplete combustion releases less energy, not more.",
+   "clue": "Think about what the black marks on the pot are made of."
+  }
+ },
+ "cleared_by": "auto"
+}

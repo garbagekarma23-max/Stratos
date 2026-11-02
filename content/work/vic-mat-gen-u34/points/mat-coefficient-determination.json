@@ -1,0 +1,190 @@
+{
+ "id": "mat-coefficient-determination",
+ "title": "The coefficient of determination",
+ "brief": "a6f545e60ed2",
+ "shortlist": [
+  [
+   "mat-scatterplots",
+   0.219
+  ],
+  [
+   "mat-pearson-s-correlation-coefficient",
+   0.218
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:27Z new, match",
+  "2026-11-01T14:46:39Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:03Z write: done",
+  "2026-11-01T15:05:28Z check: flagged",
+  "2026-11-01T15:14:47Z fix: suggested",
+  "2026-11-02T04:35:41Z autoreview: picked as a spot check. It would have been cleared with the fix (b other)",
+  "2026-11-02T06:23:08Z review: approved with the fix (a spot check)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 1,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00012,
+  "write": 0.00603,
+  "check": 0.0143,
+  "fix": 0.02686
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "Neither bank point teaches r² as the percentage of variation in the response explained by the explanatory variable; the scatterplot point covers plotting and axis choice, and the Pearson's r point covers the sign and strength of r, so no existing point teaches the same idea.",
+  "model": "claude-haiku-5-5"
+ },
+ "draft": {
+  "title": "The coefficient of determination",
+  "card": [
+   "The coefficient of determination is r². It is found by squaring the correlation coefficient r.",
+   "r² tells us the proportion of the variation in the response variable that is explained by the variation in the explanatory variable. Write it as a percentage by multiplying by 100.",
+   "The rest, 1 − r², is not explained by the explanatory variable. It is due to other factors and chance.",
+   "Worked example: r = 0.7. Then r² = 0.49, so 49% of the variation in y is explained by x. The other 51% is not."
+  ],
+  "remember": "r² is the percentage of variation in y explained by x.",
+  "a": {
+   "q": "A data set has r = 0.9. What percentage of the variation in y is explained by x?",
+   "opts": [
+    "81%",
+    "90%",
+    "9%",
+    "19%"
+   ],
+   "why": "r² = 0.9 × 0.9 = 0.81, so 81% is explained. Giving 90% mistakes r for r². The value 19% is the part not explained.",
+   "clue": "Square r before turning it into a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a sample of cafés, r² = 0.36 between daily visitors and sales, and the trend is negative. What is r, and what percentage is not explained by visitors?",
+   "opts": [
+    "r = −0.6, and 64% is not explained",
+    "r = −0.6, and 36% is not explained",
+    "r = −0.36, and 64% is not explained",
+    "r = 0.6, and 36% is not explained"
+   ],
+   "why": "r = −√0.36 = −0.6, with the sign matching the negative trend. The unexplained part is 1 − 0.36 = 0.64, or 64%. The 36% is the explained part.",
+   "clue": "Take the square root, then check the direction of the trend."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "81%",
+   "also_right": []
+  },
+  "b": {
+   "best": "r = −0.6, and 64% is not explained",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "A negative trend between daily café visitors and sales is implausible, since more visitors would normally mean more sales. This could confuse students. A context where a negative association makes sense would be better, such as price and number sold."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card, both answers and the explanations are correct. The only issue is that question b uses an implausible negative link between café visitors and sales, which should be swapped for a context where a negative trend makes sense."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: A negative trend between daily café visitors and sales is implausible, since more visitors would normally mean more sales. This could confuse students. A context where a negative association makes sense would be better, such as price and number sold."
+ ],
+ "proposal": {
+  "title": "The coefficient of determination",
+  "card": [
+   "The coefficient of determination is r². It is found by squaring the correlation coefficient r, so it is always between 0 and 1.",
+   "r² is the proportion of the variation in the response variable explained by the variation in the explanatory variable. Multiply by 100 to write it as a percentage. The rest, 1 − r², is due to other factors.",
+   "To go back from r² to r, take the square root. Give r the sign of the association: negative if y tends to fall as x rises.",
+   "Worked example: r = −0.7. Then r² = 0.49, so 49% of the variation in y is explained by x. The other 51% is not."
+  ],
+  "remember": "Square r to find the share of variation in y explained by x. The rest is not explained.",
+  "a": {
+   "q": "A data set has r = 0.9. What percentage of the variation in y is explained by x?",
+   "opts": [
+    "81%",
+    "90%",
+    "9%",
+    "19%"
+   ],
+   "why": "r² = 0.9 × 0.9 = 0.81, so 81% is explained. Giving 90% mistakes r for r². The value 19% is the part not explained.",
+   "clue": "Square r before turning it into a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a sample of bakeries, r² = 0.36 between the price of a loaf and loaves sold each day. The association is negative. What is r, and what percentage is not explained by price?",
+   "opts": [
+    "r = −0.6, and 64% is not explained",
+    "r = −0.6, and 36% is not explained",
+    "r = −0.36, and 64% is not explained",
+    "r = 0.6, and 64% is not explained"
+   ],
+   "why": "r = −√0.36 = −0.6, negative because sales fall as price rises. The unexplained part is 1 − 0.36 = 0.64, or 64%. The 36% is the explained part, not the unexplained part.",
+   "clue": "Take the square root, then check the direction of the association."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:41Z",
+  "rules": 1,
+  "n": 1,
+  "decision": "used the fix",
+  "spot": true,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "A negative trend between daily café visitors and sales is implausible, since more visitors would normally mean more sales. This could confuse students. A context where a negative association makes sense would be better, such as price and number sold."
+   }
+  ],
+  "flags": [
+   "Question b, other: A negative trend between daily café visitors and sales is implausible, since more visitors would normally mean more sales. This could confuse students. A context where a negative association makes sense would be better, such as price and number sold."
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "The coefficient of determination",
+  "card": [
+   "The coefficient of determination is r². It is found by squaring the correlation coefficient r, so it is always between 0 and 1.",
+   "r² is the proportion of the variation in the response variable explained by the variation in the explanatory variable. Multiply by 100 to write it as a percentage. The rest, 1 − r², is due to other factors.",
+   "To go back from r² to r, take the square root. Give r the sign of the association: negative if y tends to fall as x rises.",
+   "Worked example: r = −0.7. Then r² = 0.49, so 49% of the variation in y is explained by x. The other 51% is not."
+  ],
+  "remember": "Square r to find the share of variation in y explained by x. The rest is not explained.",
+  "a": {
+   "q": "A data set has r = 0.9. What percentage of the variation in y is explained by x?",
+   "opts": [
+    "81%",
+    "90%",
+    "9%",
+    "19%"
+   ],
+   "why": "r² = 0.9 × 0.9 = 0.81, so 81% is explained. Giving 90% mistakes r for r². The value 19% is the part not explained.",
+   "clue": "Square r before turning it into a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a sample of bakeries, r² = 0.36 between the price of a loaf and loaves sold each day. The association is negative. What is r, and what percentage is not explained by price?",
+   "opts": [
+    "r = −0.6, and 64% is not explained",
+    "r = −0.6, and 36% is not explained",
+    "r = −0.36, and 64% is not explained",
+    "r = 0.6, and 64% is not explained"
+   ],
+   "why": "r = −√0.36 = −0.6, negative because sales fall as price rises. The unexplained part is 1 − 0.36 = 0.64, or 64%. The 36% is the explained part, not the unexplained part.",
+   "clue": "Take the square root, then check the direction of the association."
+  }
+ },
+ "cleared_by": "owner"
+}

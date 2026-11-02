@@ -1,0 +1,364 @@
+{
+ "id": "leg-remedies-civil-cases",
+ "title": "Remedies in civil cases",
+ "brief": "67193038a71d",
+ "shortlist": [
+  [
+   "leg-injunctions",
+   0.365
+  ],
+  [
+   "leg-purposes-remedies",
+   0.337
+  ],
+  [
+   "leg-impact-civil-wrong",
+   0.256
+  ],
+  [
+   "leg-remedies-consumers",
+   0.214
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: done",
+  "2026-11-01T15:14:46Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other, a other, b fact)",
+  "2026-11-02T04:50:14Z write: failed the content check, writing again",
+  "2026-11-02T04:56:46Z write: done",
+  "2026-11-02T04:58:59Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00024,
+  "write": 0.02447,
+  "check": 0.03303,
+  "fix": 0.01991,
+  "recheck": 0.01955
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "No single bank point covers both damages and injunctions: leg-injunctions covers only injunctions, and leg-purposes-remedies covers only the general purposes of remedies, so the new point needs its own card.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: Why (b) says 'The last option swaps the two', but options are shown in random order and here the swapped option ('Damages to stop the wall, and an injunction for the rent') is second. The why should name the option, not its position.\n- Question a, other: The clue 'Look for the order about conduct, not a payment' gives the answer away. Only one option is not a payment, so a student can pick it without knowing what an injunction is.\n- Question b, fact: The scenario rests on a wall that blocks a neighbour's light. In Victoria there is generally no right to light without an easement, so this is a shaky example of an actionable wrong. 'She sues and wins' covers it, but a clearer wrong would be better, such as building over the boundary or ongoing nuisance like noise or flooding.",
+ "rejected": {
+  "title": "Remedies in civil cases",
+  "card": [
+   "A remedy is what a court orders when the plaintiff wins a civil case. Most remedies aim to restore the plaintiff, as far as possible, to the position they were in before the wrong.",
+   [
+    "Damages",
+    "a sum of money paid to the plaintiff. Most damages compensate for loss, such as lost income, medical bills or damage to property. Exemplary damages are rarer and can punish very serious misconduct."
+   ],
+   [
+    "Injunction",
+    "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+   ],
+   "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+  ],
+  "remember": "Damages are money, mostly to compensate for loss. An injunction orders a party to stop or to act.",
+  "a": {
+   "q": "Which of these is an injunction?",
+   "opts": [
+    "An order that a factory stop running machines at night",
+    "An order that a driver pay $8000 for a damaged fence",
+    "An order that a landlord pay a tenant's lost income",
+    "An order that a company pay for a customer's medical bills"
+   ],
+   "why": "An injunction is an order to stop doing something or to do something, and a night-time ban on machines is a direct order to stop. The other three orders are payments of money for loss, which are damages.",
+   "clue": "Look for the order about conduct, not a payment."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya's neighbour Tom keeps building a wall that blocks her light, and she has lost rent from a tenant who left. She sues and wins. Which remedies fit her case?",
+   "opts": [
+    "An injunction to stop the wall, and damages for the rent",
+    "Damages only, because rent loss is the only harm",
+    "An injunction only, because the wall is still going up",
+    "Damages to stop the wall, and an injunction for the rent"
+   ],
+   "why": "The wall is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. The last option swaps the two: damages are money, and an injunction deals with conduct, not with paying for a loss.",
+   "clue": "One harm is still happening and one is a past money loss."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question b, other: Why (b) says 'The last option swaps the two', but options are shown in random order and here the swapped option ('Damages to stop the wall, and an injunction for the rent') is second. The why should name the option, not its position.",
+    "Question a, other: The clue 'Look for the order about conduct, not a payment' gives the answer away. Only one option is not a payment, so a student can pick it without knowing what an injunction is.",
+    "Question b, fact: The scenario rests on a wall that blocks a neighbour's light. In Victoria there is generally no right to light without an easement, so this is a shaky example of an actionable wrong. 'She sues and wins' covers it, but a clearer wrong would be better, such as building over the boundary or ongoing nuisance like noise or flooding."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Remedies in civil cases",
+     "card": [
+      "A remedy is what a court orders to put right a wrong when the plaintiff wins a civil case. The aim is to fix the harm, not to punish the defendant.",
+      [
+       "Damages",
+       "a sum of money paid to the plaintiff to compensate for loss, such as lost income, medical bills or damage to property."
+      ],
+      [
+       "Injunction",
+       "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+      ],
+      "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+     ],
+     "remember": "Damages pay for loss. An injunction orders a party to stop or to act.",
+     "a": {
+      "q": "Which of these is an injunction?",
+      "opts": [
+       "An order that a factory stop running machines at night",
+       "An order that a driver pay $8000 for a damaged fence",
+       "An order that a landlord refund a tenant's lost income",
+       "An order that a company pay for a customer's medical bills"
+      ],
+      "why": "An injunction is an order to stop doing something or to do something, and a night-time ban on machines is a direct order to stop. The other three orders are payments of money for loss, which are damages.",
+      "clue": "Look for the order about conduct, not a payment."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's neighbour Tom keeps building a wall that blocks her light, and she has lost rent from a tenant who left. She sues and wins. Which remedies fit her case?",
+      "opts": [
+       "An injunction to stop the wall, and damages for the rent",
+       "Damages only, because rent loss is the only harm",
+       "An injunction only, because the wall is still going up",
+       "Damages to punish Tom, and an injunction to pay her costs"
+      ],
+      "why": "The wall is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. Damages only would leave the wall in place, and damages do not aim to punish.",
+      "clue": "One harm is still happening and one is a past money loss."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "An order that a factory stop running machines at night",
+      "also_right": []
+     },
+     "b": {
+      "best": "An injunction to stop the wall, and damages for the rent",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card says the aim of a remedy is 'to fix the harm, not to punish the defendant', and defines damages only as compensation. Exemplary (punitive) damages exist in Victoria and are meant to punish, and the VCE study design covers the types of damages. This overgeneralisation is false as stated."
+      },
+      {
+       "part": "b",
+       "kind": "fact",
+       "detail": "The why says 'damages do not aim to punish'. That is false for exemplary (punitive) damages. The option 'Damages to punish Tom...' is still wrong, but only because an injunction does not order costs to be paid. The explanation should not deny that damages can ever punish."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions have one clear right answer. The card and the why for question b wrongly say remedies and damages never aim to punish, which ignores exemplary (punitive) damages. That line should be qualified, for example 'damages mainly aim to compensate'."
+    },
+    "flags": [
+     "Card, fact: The card says the aim of a remedy is 'to fix the harm, not to punish the defendant', and defines damages only as compensation. Exemplary (punitive) damages exist in Victoria and are meant to punish, and the VCE study design covers the types of damages. This overgeneralisation is false as stated.",
+     "Question b, fact: The why says 'damages do not aim to punish'. That is false for exemplary (punitive) damages. The option 'Damages to punish Tom...' is still wrong, but only because an injunction does not order costs to be paid. The explanation should not deny that damages can ever punish."
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Remedies in civil cases",
+     "card": [
+      "A remedy is what a court orders when the plaintiff wins a civil case. Most remedies aim to restore the plaintiff, as far as possible, to the position they were in before the wrong.",
+      [
+       "Damages",
+       "a sum of money paid to the plaintiff. Most damages compensate for loss, such as lost income, medical bills or damage to property. Exemplary damages are rarer and can punish very serious misconduct."
+      ],
+      [
+       "Injunction",
+       "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+      ],
+      "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+     ],
+     "remember": "Damages are money, mostly to compensate for loss. An injunction orders a party to stop or to act.",
+     "a": {
+      "q": "Which of these is an injunction?",
+      "opts": [
+       "An order that a factory stop running machines at night",
+       "An order that a driver pay $8000 for a damaged fence",
+       "An order that a landlord pay a tenant's lost income",
+       "An order that a company pay for a customer's medical bills"
+      ],
+      "why": "An injunction is an order to stop doing something or to do something, and a night-time ban on machines is a direct order to stop. The other three orders are payments of money for loss, which are damages.",
+      "clue": "Look for the order about conduct, not a payment."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya's neighbour Tom keeps building a wall that blocks her light, and she has lost rent from a tenant who left. She sues and wins. Which remedies fit her case?",
+      "opts": [
+       "An injunction to stop the wall, and damages for the rent",
+       "Damages only, because rent loss is the only harm",
+       "An injunction only, because the wall is still going up",
+       "Damages to stop the wall, and an injunction for the rent"
+      ],
+      "why": "The wall is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. The last option swaps the two: damages are money, and an injunction deals with conduct, not with paying for a loss.",
+      "clue": "One harm is still happening and one is a past money loss."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "An order that a factory stop running machines at night",
+       "also_right": []
+      },
+      "b": {
+       "best": "An injunction to stop the wall, and damages for the rent",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "b",
+        "kind": "other",
+        "detail": "Why (b) says 'The last option swaps the two', but options are shown in random order and here the swapped option ('Damages to stop the wall, and an injunction for the rent') is second. The why should name the option, not its position."
+       },
+       {
+        "part": "a",
+        "kind": "other",
+        "detail": "The clue 'Look for the order about conduct, not a payment' gives the answer away. Only one option is not a payment, so a student can pick it without knowing what an injunction is."
+       },
+       {
+        "part": "b",
+        "kind": "fact",
+        "detail": "The scenario rests on a wall that blocks a neighbour's light. In Victoria there is generally no right to light without an easement, so this is a shaky example of an actionable wrong. 'She sues and wins' covers it, but a clearer wrong would be better, such as building over the boundary or ongoing nuisance like noise or flooding."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The card and answers are correct. Why (b) names the swapped option by position ('the last option'), which is wrong when options are shuffled. Question a's clue gives the answer away. The blocked-light scenario in b is a weak example under Australian law."
+     },
+     "flags": [
+      "Question b, other: Why (b) says 'The last option swaps the two', but options are shown in random order and here the swapped option ('Damages to stop the wall, and an injunction for the rent') is second. The why should name the option, not its position.",
+      "Question a, other: The clue 'Look for the order about conduct, not a payment' gives the answer away. Only one option is not a payment, so a student can pick it without knowing what an injunction is.",
+      "Question b, fact: The scenario rests on a wall that blocks a neighbour's light. In Victoria there is generally no right to light without an easement, so this is a shaky example of an actionable wrong. 'She sues and wins' covers it, but a clearer wrong would be better, such as building over the boundary or ongoing nuisance like noise or flooding."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Remedies in civil cases",
+  "card": [
+   "A remedy is what a court orders when the plaintiff wins a civil case. Most remedies aim to restore the plaintiff, as far as possible, to the position they were in before the wrong.",
+   [
+    "Damages",
+    "a sum of money paid to the plaintiff. Most damages compensate for loss, such as lost income, medical bills or damage to property. Exemplary damages are rarer and can punish very serious misconduct."
+   ],
+   [
+    "Injunction",
+    "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+   ],
+   "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+  ],
+  "remember": "Damages are money, mostly to compensate for loss. An injunction orders a party to stop or to act.",
+  "a": {
+   "q": "A court orders a party to stop running loud machines at night. Which remedy is this, and why?",
+   "opts": [
+    "An injunction, because it orders a party to stop conduct",
+    "Damages, because it compensates for the harm of the noise",
+    "An injunction, because it orders a payment to the plaintiff",
+    "Damages, because it punishes a party for serious misconduct"
+   ],
+   "why": "An order to stop conduct is an injunction, because it deals with the problem itself and not with money. Damages are a payment, so an order to stop running machines is not damages, even though it responds to harm.",
+   "clue": "Think about what the order actually requires the party to do."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wins a case against her neighbour Tom. His loud workshop keeps running every night, and she lost rent when a tenant left because of the noise. Which remedies fit her case?",
+   "opts": [
+    "An injunction to stop the noise, and damages for the rent",
+    "Damages only, because the lost rent is the only harm",
+    "An injunction only, because the noise is still going on",
+    "Damages to stop the noise, and an injunction for the rent"
+   ],
+   "why": "The noise is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. The option with damages to stop the noise and an injunction for the rent swaps the two: damages are money, and an injunction deals with conduct, not with paying for a loss.",
+   "clue": "One harm is still happening and one is a past money loss."
+  }
+ },
+ "redone": true,
+ "local": [],
+ "check": {
+  "a": {
+   "best": "An injunction, because it orders a party to stop conduct",
+   "also_right": []
+  },
+  "b": {
+   "best": "An injunction to stop the noise, and damages for the rent",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Remedies in civil cases",
+  "card": [
+   "A remedy is what a court orders when the plaintiff wins a civil case. Most remedies aim to restore the plaintiff, as far as possible, to the position they were in before the wrong.",
+   [
+    "Damages",
+    "a sum of money paid to the plaintiff. Most damages compensate for loss, such as lost income, medical bills or damage to property. Exemplary damages are rarer and can punish very serious misconduct."
+   ],
+   [
+    "Injunction",
+    "a court order that tells a party to stop doing something, or to do something. It deals with the problem itself, not with money."
+   ],
+   "A court picks the remedy that suits the harm. Money cannot always fix a wrong, such as ongoing noise, so an injunction may be ordered instead of damages, or together with them."
+  ],
+  "remember": "Damages are money, mostly to compensate for loss. An injunction orders a party to stop or to act.",
+  "a": {
+   "q": "A court orders a party to stop running loud machines at night. Which remedy is this, and why?",
+   "opts": [
+    "An injunction, because it orders a party to stop conduct",
+    "Damages, because it compensates for the harm of the noise",
+    "An injunction, because it orders a payment to the plaintiff",
+    "Damages, because it punishes a party for serious misconduct"
+   ],
+   "why": "An order to stop conduct is an injunction, because it deals with the problem itself and not with money. Damages are a payment, so an order to stop running machines is not damages, even though it responds to harm.",
+   "clue": "Think about what the order actually requires the party to do."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya wins a case against her neighbour Tom. His loud workshop keeps running every night, and she lost rent when a tenant left because of the noise. Which remedies fit her case?",
+   "opts": [
+    "An injunction to stop the noise, and damages for the rent",
+    "Damages only, because the lost rent is the only harm",
+    "An injunction only, because the noise is still going on",
+    "Damages to stop the noise, and an injunction for the rent"
+   ],
+   "why": "The noise is an ongoing problem, so an injunction can order Tom to stop. The lost rent is a money loss, so damages can compensate for it. The option with damages to stop the noise and an injunction for the rent swaps the two: damages are money, and an injunction deals with conduct, not with paying for a loss.",
+   "clue": "One harm is still happening and one is a past money loss."
+  }
+ }
+}

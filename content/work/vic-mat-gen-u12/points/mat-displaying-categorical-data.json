@@ -12,7 +12,7 @@
    0.416
   ]
  ],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -20,7 +20,8 @@
   "2026-11-01T08:24:33Z write: done",
   "2026-11-01T08:33:51Z check: flagged",
   "2026-11-01T08:42:07Z fix: suggested",
-  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)"
+  "2026-11-01T09:24:24Z autoreview: picked as a spot check. It would have been cleared with the fix (a wording)",
+  "2026-11-02T06:22:47Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "match": 1,
@@ -169,6 +170,50 @@
   ],
   "flags": [
    "Question a, wording: The question asks for the 'percentage frequency', but the card only names 'relative frequency' (as a fraction or percentage). The term is standard in VCE and easy to infer, but a student reading only the card may hesitate. Consider saying 'percentage frequency' on the card or 'relative frequency, as a percentage' in the question."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Displaying categorical data",
+  "card": [
+   [
+    "Frequency table",
+    "lists each category with its frequency, the number of times it occurs. A relative frequency is the frequency as a fraction of the total. Written as a percentage, it is called the percentage frequency."
+   ],
+   [
+    "Bar chart",
+    "shows one bar for each category, and the bar's height is its frequency. The bars do not touch, because the categories are separate groups."
+   ],
+   [
+    "Segmented bar chart",
+    "splits each bar into parts to compare groups. It is often drawn with percentages, so groups of different sizes can be compared fairly."
+   ],
+   "Example: a class of 25 students has 10 who walk to school. The relative frequency of walking is 10 ÷ 25 = 0.4, so the percentage frequency is 0.4 × 100 = 40%."
+  ],
+  "remember": "Frequency counts each category. Percentages let groups of different sizes be compared.",
+  "a": {
+   "q": "In a survey of 40 students, 14 chose pizza as their favourite lunch. What is the percentage frequency of pizza?",
+   "opts": [
+    "35%",
+    "14%",
+    "28%",
+    "40%"
+   ],
+   "why": "Percentage frequency = 14 ÷ 40 × 100 = 35%. The number 14 is the frequency, not the percentage, and it only equals a percentage when the total is 100.",
+   "clue": "Divide the frequency by the total, then change to a percentage."
+  },
+  "b": {
+   "d": 3,
+   "q": "Class A has 20 students and Class B has 50. In each class, 10 students ride a bike to school. Which statement is correct?",
+   "opts": [
+    "A higher percentage of Class A ride a bike",
+    "A higher percentage of Class B ride a bike",
+    "The same percentage of each class ride a bike",
+    "Class B has a higher frequency of bike riders"
+   ],
+   "why": "Class A: 10 ÷ 20 = 50%. Class B: 10 ÷ 50 = 20%. The frequencies are equal at 10, which is tempting, but the class sizes differ, so the percentages differ.",
+   "clue": "Work out each class's percentage, not just its count."
+  }
+ },
+ "cleared_by": "owner"
 }

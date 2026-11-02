@@ -1,0 +1,245 @@
+{
+ "id": "acc-profitability-ratios",
+ "title": "Profitability ratios",
+ "brief": "ee07cf4314ae",
+ "shortlist": [
+  [
+   "bus-profitability-ratios",
+   0.587
+  ],
+  [
+   "bus-comparing-ratios",
+   0.285
+  ],
+  [
+   "bus-profitability-management",
+   0.232
+  ],
+  [
+   "bus-income-statement",
+   0.23
+  ],
+  [
+   "acc-cost-sales-gross-profit",
+   0.203
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:24Z new, match",
+  "2026-11-01T14:46:34Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:55:56Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:23Z write: failed the content check, writing again",
+  "2026-11-01T15:14:43Z write: done (still fails the content check)",
+  "2026-11-01T15:19:02Z check: flagged",
+  "2026-11-02T04:27:50Z fix: suggested",
+  "2026-11-02T04:35:38Z autoreview: cleared with the fix (a wording)"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 3,
+  "check": 1,
+  "fix": 1
+ },
+ "usd": {
+  "match": 0.00033,
+  "write": 0.01567,
+  "check": 0.00977,
+  "fix": 0.01926
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "medium",
+  "reason": "The closest bank point, bus-profitability-ratios, covers only three of the four ratios in the new point and lacks return on assets, so it is narrower than the new point and would need a new idea added rather than a small change.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "Profitability ratios",
+  "card": [
+   "A profitability ratio compares a profit figure with something else, as a percentage. Each ratio shows profit from a different angle.",
+   [
+    "Gross profit margin",
+    "gross profit ÷ sales × 100. It shows how much of each sales dollar is left after the cost of the goods sold."
+   ],
+   [
+    "Net profit margin",
+    "net profit ÷ sales × 100. It shows how much of each sales dollar is left after all expenses."
+   ],
+   [
+    "Return on assets",
+    "net profit ÷ average total assets × 100. It shows the profit earned from each dollar of assets the business uses."
+   ],
+   [
+    "Return on owner's investment",
+    "net profit ÷ average owner's equity × 100. It shows the profit earned on the money the owner has put in."
+   ]
+  ],
+  "remember": "Each profitability ratio is profit divided by something: sales, assets or the owner's equity.",
+  "a": {
+   "q": "Which ratio shows the profit earned on each dollar of the owner's equity?",
+   "opts": [
+    "Return on owner's investment",
+    "Return on assets",
+    "Net profit margin",
+    "Gross profit margin"
+   ],
+   "why": "Return on owner's investment divides net profit by average owner's equity. Return on assets looks tempting, but it divides by total assets, which include assets funded by more than the owner's equity.",
+   "clue": "Look at what each ratio divides the profit by."
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's bike shop in Ballarat had sales of $200,000, gross profit of $80,000 and net profit of $20,000. What is its net profit margin?",
+   "opts": [
+    "10%",
+    "40%",
+    "25%",
+    "50%"
+   ],
+   "why": "Net profit margin = net profit ÷ sales × 100 = 20,000 ÷ 200,000 × 100 = 10%. The 40% result is the gross profit margin, which uses gross profit instead of net profit.",
+   "clue": "Use net profit, not gross profit, and divide by sales."
+  }
+ },
+ "redone": true,
+ "local": [
+  "acc-profitability-ratios card has 5 lines"
+ ],
+ "check": {
+  "a": {
+   "best": "Return on owner's investment",
+   "also_right": []
+  },
+  "b": {
+   "best": "10%",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem asks about 'the owner's equity', and 'Return on owner's investment' is the only option containing the word 'owner's'. A student can match the words and pick it without knowing what each ratio divides by."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The formulas and answers are correct: return on owner's investment for (a) and 10% for (b). In question a, the word 'owner's' in the stem matches only the right option, so students can guess it from the wording."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The stem asks about 'the owner's equity', and 'Return on owner's investment' is the only option containing the word 'owner's'. A student can match the words and pick it without knowing what each ratio divides by.",
+  "Content check: acc-profitability-ratios card has 5 lines"
+ ],
+ "proposal": {
+  "title": "Profitability ratios",
+  "card": [
+   [
+    "Gross profit margin",
+    "gross profit ÷ sales × 100. It shows how much of each sales dollar is left after the cost of the goods sold."
+   ],
+   [
+    "Net profit margin",
+    "net profit ÷ sales × 100. It shows how much of each sales dollar is left after all expenses."
+   ],
+   [
+    "Return on assets",
+    "net profit ÷ average total assets × 100. It shows the profit earned from each dollar of assets the business uses, however they were funded."
+   ],
+   [
+    "Return on owner's investment",
+    "net profit ÷ average owner's equity × 100. Owner's equity is the capital the owner has in the business, so this shows the return on the owner's own money."
+   ]
+  ],
+  "remember": "Each profitability ratio is profit divided by something: sales, assets or the owner's equity.",
+  "a": {
+   "q": "Jo wants to know if the capital she has in her business earns more than a term deposit would. Which ratio should she use?",
+   "opts": [
+    "Return on owner's investment",
+    "Return on assets",
+    "Net profit margin",
+    "Gross profit margin"
+   ],
+   "why": "Jo's capital is her owner's equity, and return on owner's investment divides net profit by average owner's equity. Return on assets is tempting, but it divides by total assets, which include assets funded by liabilities as well as by Jo.",
+   "clue": "Which ratio divides profit by the money Jo herself has put in?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's bike shop in Ballarat had sales of $200,000, gross profit of $80,000 and net profit of $20,000. What is its net profit margin?",
+   "opts": [
+    "10%",
+    "40%",
+    "25%",
+    "50%"
+   ],
+   "why": "Net profit margin = net profit ÷ sales × 100 = 20,000 ÷ 200,000 × 100 = 10%. The 40% result is the gross profit margin, which uses gross profit instead of net profit.",
+   "clue": "Use net profit, not gross profit, and divide by sales."
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-02T04:35:38Z",
+  "rules": 1,
+  "n": 6,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The stem asks about 'the owner's equity', and 'Return on owner's investment' is the only option containing the word 'owner's'. A student can match the words and pick it without knowing what each ratio divides by."
+   }
+  ],
+  "flags": [
+   "Question a, wording: The stem asks about 'the owner's equity', and 'Return on owner's investment' is the only option containing the word 'owner's'. A student can match the words and pick it without knowing what each ratio divides by.",
+   "Content check: acc-profitability-ratios card has 5 lines"
+  ]
+ },
+ "final": {
+  "title": "Profitability ratios",
+  "card": [
+   [
+    "Gross profit margin",
+    "gross profit ÷ sales × 100. It shows how much of each sales dollar is left after the cost of the goods sold."
+   ],
+   [
+    "Net profit margin",
+    "net profit ÷ sales × 100. It shows how much of each sales dollar is left after all expenses."
+   ],
+   [
+    "Return on assets",
+    "net profit ÷ average total assets × 100. It shows the profit earned from each dollar of assets the business uses, however they were funded."
+   ],
+   [
+    "Return on owner's investment",
+    "net profit ÷ average owner's equity × 100. Owner's equity is the capital the owner has in the business, so this shows the return on the owner's own money."
+   ]
+  ],
+  "remember": "Each profitability ratio is profit divided by something: sales, assets or the owner's equity.",
+  "a": {
+   "q": "Jo wants to know if the capital she has in her business earns more than a term deposit would. Which ratio should she use?",
+   "opts": [
+    "Return on owner's investment",
+    "Return on assets",
+    "Net profit margin",
+    "Gross profit margin"
+   ],
+   "why": "Jo's capital is her owner's equity, and return on owner's investment divides net profit by average owner's equity. Return on assets is tempting, but it divides by total assets, which include assets funded by liabilities as well as by Jo.",
+   "clue": "Which ratio divides profit by the money Jo herself has put in?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Ravi's bike shop in Ballarat had sales of $200,000, gross profit of $80,000 and net profit of $20,000. What is its net profit margin?",
+   "opts": [
+    "10%",
+    "40%",
+    "25%",
+    "50%"
+   ],
+   "why": "Net profit margin = net profit ÷ sales × 100 = 20,000 ÷ 200,000 × 100 = 10%. The 40% result is the gross profit margin, which uses gross profit instead of net profit.",
+   "clue": "Use net profit, not gross profit, and divide by sales."
+  }
+ },
+ "cleared_by": "auto"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "mat-distribution-sample-means",
+ "title": "The distribution of sample means",
+ "brief": "e705d07fdf03",
+ "shortlist": [
+  [
+   "mat-distributions-sample-means",
+   0.586
+  ],
+  [
+   "mat-sample-means-vary",
+   0.575
+  ],
+  [
+   "mat-normal-distribution",
+   0.375
+  ],
+  [
+   "mat-empirical-rule",
+   0.331
+  ],
+  [
+   "mat-sampling-methods",
+   0.306
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:28Z new, match",
+  "2026-11-01T14:46:40Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:04Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:29Z write: done",
+  "2026-11-01T15:14:48Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 2,
+  "check": 1
+ },
+ "usd": {
+  "match": 0.00027,
+  "write": 0.00531,
+  "check": 0.01163
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The closest bank point, mat-distributions-sample-means, only describes sample means narrowing as sample size grows, with no normal approximation and no σ/√n formula, so it is a different and shallower idea than the Specialist Unit 3/4 point.",
+  "model": "claude-haiku-5-5"
+ },
+ "alone": true,
+ "draft": {
+  "title": "The distribution of sample means",
+  "card": [
+   "Take many random samples of size n from a population with mean μ and standard deviation σ. Each sample has its own mean, written x̄. These sample means form a distribution.",
+   "The mean of the sample means is μ. Their standard deviation is σ/√n. A bigger sample gives a smaller spread, because √n is larger.",
+   "If the population is normal, x̄ is normal for any n. If not, x̄ is roughly normal when n is large. This is the central limit theorem.",
+   "Example: σ = 12 and n = 36. Then σ/√n = 12 ÷ 6 = 2. The sample means have a standard deviation of 2."
+  ],
+  "remember": "Sample means centre on μ, with spread σ/√n. Larger samples spread less.",
+  "a": {
+   "q": "A population has mean 50 and standard deviation 20. Samples of size 25 are taken. What is the standard deviation of the sample means?",
+   "opts": [
+    "4",
+    "20",
+    "0.8",
+    "100"
+   ],
+   "why": "The standard deviation is σ/√n = 20 ÷ √25 = 20 ÷ 5 = 4. Using 20 ignores the sample size, which is a common mistake. That is the spread of single values, not of sample means.",
+   "clue": "Divide σ by the square root of n, not by n."
+  },
+  "b": {
+   "d": 3,
+   "q": "Machine parts have a mean length of 80 mm and a standard deviation of 6 mm. Sample size is increased from 9 to 36. What happens to the standard deviation of the sample means?",
+   "opts": [
+    "It halves, from 2 mm to 1 mm",
+    "It falls to a quarter, from 2 mm to 0.5 mm",
+    "It stays at 6 mm, as σ does not change",
+    "It halves, from 6 mm to 3 mm"
+   ],
+   "why": "For n = 9, 6/√9 = 2. For n = 36, 6/√36 = 1. Sample size rose by a factor of 4, so the spread falls by a factor of √4 = 2, not 4. The population σ stays at 6, but it is not the spread of sample means.",
+   "clue": "Work out σ/√n for both sample sizes and compare."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "4",
+   "also_right": []
+  },
+  "b": {
+   "best": "It halves, from 2 mm to 1 mm",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "The distribution of sample means",
+  "card": [
+   "Take many random samples of size n from a population with mean μ and standard deviation σ. Each sample has its own mean, written x̄. These sample means form a distribution.",
+   "The mean of the sample means is μ. Their standard deviation is σ/√n. A bigger sample gives a smaller spread, because √n is larger.",
+   "If the population is normal, x̄ is normal for any n. If not, x̄ is roughly normal when n is large. This is the central limit theorem.",
+   "Example: σ = 12 and n = 36. Then σ/√n = 12 ÷ 6 = 2. The sample means have a standard deviation of 2."
+  ],
+  "remember": "Sample means centre on μ, with spread σ/√n. Larger samples spread less.",
+  "a": {
+   "q": "A population has mean 50 and standard deviation 20. Samples of size 25 are taken. What is the standard deviation of the sample means?",
+   "opts": [
+    "4",
+    "20",
+    "0.8",
+    "100"
+   ],
+   "why": "The standard deviation is σ/√n = 20 ÷ √25 = 20 ÷ 5 = 4. Using 20 ignores the sample size, which is a common mistake. That is the spread of single values, not of sample means.",
+   "clue": "Divide σ by the square root of n, not by n."
+  },
+  "b": {
+   "d": 3,
+   "q": "Machine parts have a mean length of 80 mm and a standard deviation of 6 mm. Sample size is increased from 9 to 36. What happens to the standard deviation of the sample means?",
+   "opts": [
+    "It halves, from 2 mm to 1 mm",
+    "It falls to a quarter, from 2 mm to 0.5 mm",
+    "It stays at 6 mm, as σ does not change",
+    "It halves, from 6 mm to 3 mm"
+   ],
+   "why": "For n = 9, 6/√9 = 2. For n = 36, 6/√36 = 1. Sample size rose by a factor of 4, so the spread falls by a factor of √4 = 2, not 4. The population σ stays at 6, but it is not the spread of sample means.",
+   "clue": "Work out σ/√n for both sample sizes and compare."
+  }
+ },
+ "cleared_by": "checker"
+}

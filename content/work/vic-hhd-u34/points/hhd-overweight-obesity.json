@@ -1,0 +1,317 @@
+{
+ "id": "hhd-overweight-obesity",
+ "title": "Overweight and obesity",
+ "brief": "a242518a3917",
+ "shortlist": [
+  [
+   "hms-chronic-disease-australia",
+   0.263
+  ]
+ ],
+ "stage": "cleared",
+ "log": [
+  "2026-11-01T14:36:26Z new, match",
+  "2026-11-01T14:46:38Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
+  "2026-11-01T14:56:01Z write: the API refused it in the chapter request, so it is written on its own next",
+  "2026-11-01T15:05:27Z write: failed the content check, writing again",
+  "2026-11-01T15:14:46Z write: done (still fails the content check)",
+  "2026-11-01T15:19:04Z check: flagged",
+  "2026-11-02T04:27:51Z fix: suggested",
+  "2026-11-02T04:41:51Z recheck: kept for you (the fresh check found a problem)",
+  "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
+  "2026-11-02T04:50:14Z write: done",
+  "2026-11-02T04:56:45Z check: passed, cleared"
+ ],
+ "sent": {
+  "match": 1,
+  "write": 4,
+  "check": 2,
+  "fix": 1,
+  "recheck": 1
+ },
+ "usd": {
+  "match": 0.00015,
+  "write": 0.02029,
+  "check": 0.02751,
+  "fix": 0.03542,
+  "recheck": 0.01366
+ },
+ "match": {
+  "verdict": "new",
+  "same": "",
+  "changes": [],
+  "sure": "high",
+  "reason": "The bank point covers chronic disease in general and shared risk factors, while the new point teaches excess body weight as a specific risk factor for type 2 diabetes, heart disease and some cancers, so it is a related but different idea and needs its own point.",
+  "model": "claude-haiku-5-5"
+ },
+ "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The right option is the only one with a qualifier ('can'). The other three are flat statements, so a student could pick it without knowing how insulin resistance works.",
+ "rejected": {
+  "title": "Overweight and obesity",
+  "card": [
+   "Overweight and obesity mean having more body fat than is healthy. Body mass index (BMI) compares weight with height. For adults, 25 to under 30 is overweight and 30 or more is obese.",
+   "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. A higher risk does not mean a person will get these conditions.",
+   "Excess fat can make the body respond less to insulin, the hormone that moves sugar out of the blood and into cells, so sugar builds up in the blood. Type 1 diabetes is different: the immune system destroys the cells that make insulin.",
+   "Because these conditions are common in Australia, excess body weight adds to Australia's burden of disease."
+  ],
+  "remember": "Excess weight makes type 2 diabetes, heart disease and some cancers more likely, not certain.",
+  "a": {
+   "q": "How can excess body fat raise the risk of type 2 diabetes?",
+   "opts": [
+    "It can make the body respond less to insulin",
+    "It destroys the cells that make insulin",
+    "It lowers the level of sugar in the blood",
+    "It makes cells take in sugar too quickly"
+   ],
+   "why": "Excess fat can make the body respond less to insulin, so sugar is not moved into cells and builds up in the blood. The immune system destroying insulin-making cells describes type 1 diabetes, which is not caused by body weight.",
+   "clue": "Type 2 and type 1 diabetes go wrong in different ways."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+   "opts": [
+    "He is in the obese range, so heart disease is more likely",
+    "He is in the overweight range, so he will get heart disease",
+    "He is in the obese range, so he will get type 2 diabetes",
+    "He is in the overweight range, so cancer is more likely"
+   ],
+   "why": "A BMI of 30 or more is classed as obese, and excess weight raises the risk of heart disease. The options saying he will get heart disease or type 2 diabetes treat a raised risk as a certainty. The options placing him in the overweight range are wrong, as that range ends below 30.",
+   "clue": "Check which range 31 falls in, then check whether a condition is said to be certain."
+  }
+ },
+ "rewrites": 1,
+ "cleared_by": "checker",
+ "autoreject": [
+  {
+   "at": "2026-11-02T04:43:11Z",
+   "rules": 1,
+   "rewrites": 1,
+   "flags": [
+    "Question a, wording: The right option is the only one with a qualifier ('can'). The other three are flat statements, so a student could pick it without knowing how insulin resistance works."
+   ],
+   "saved": {
+    "draft": {
+     "title": "Overweight and obesity",
+     "card": [
+      "Overweight and obesity mean having more body fat than is healthy. Health workers often screen for them using body mass index (BMI), which compares weight with height.",
+      "For adults, a BMI of 25 to under 30 is classed as overweight. A BMI of 30 or more is classed as obese.",
+      "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. It does not mean a person will get these conditions.",
+      "Because these conditions are common, excess body weight adds to Australia's burden of disease, which is the total harm that illness and early death cause."
+     ],
+     "remember": "Excess body weight raises the risk of several major conditions, so it adds to the burden of disease.",
+     "a": {
+      "q": "Which of these is a health risk linked to excess body weight?",
+      "opts": [
+       "Type 2 diabetes",
+       "Scurvy",
+       "Measles",
+       "Hearing loss from noise"
+      ],
+      "why": "Excess body weight raises the risk of type 2 diabetes, along with heart disease and some cancers. Scurvy comes from too little vitamin C, measles is an infection and noise damage is an injury, so none of them is linked to body weight in this way.",
+      "clue": "Think of a long-term condition that affects how the body handles sugar."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+      "opts": [
+       "He is in the obese range, so his heart disease risk is higher",
+       "He is in the overweight range, so he will get heart disease",
+       "He is in the obese range, so he will get type 2 diabetes",
+       "He is in the overweight range, so his cancer risk is higher"
+      ],
+      "why": "A BMI of 30 or more is classed as obese, and excess body weight raises the risk of heart disease. The second and third options wrongly say he will get a condition, but the card says only that risk rises. The fourth names the wrong range.",
+      "clue": "Check which range 31 falls in, and watch for wording that says a condition is certain."
+     }
+    },
+    "redone": true,
+    "local": [
+     "hhd-overweight-obesityb option is 61 characters: He is in the obese range, so his heart disease risk is higher"
+    ],
+    "check": {
+     "a": {
+      "best": "Type 2 diabetes",
+      "also_right": []
+     },
+     "b": {
+      "best": "He is in the obese range, so his heart disease risk is higher",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The why refers to options by position ('the second and third options', 'the fourth'), but the options are shown in random order. In the order shown, the options saying he 'will get' a condition are the first and third, and the ones naming the wrong range are the first and fourth, so the why misleads students. Name the options by content instead."
+      },
+      {
+       "part": "card",
+       "kind": "other",
+       "detail": "The card defines burden of disease ('the total harm that illness and early death cause'). That term belongs to point 1 (Australia's health status) and should only be mentioned here, not explained."
+      },
+      {
+       "part": "a",
+       "kind": "level",
+       "detail": "Too easy for Year 12. The distractors (measles, scurvy, noise-induced hearing loss) have no plausible link to body weight, and the clue about how the body handles sugar points straight to the answer."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts are correct: the BMI ranges are right and the card links weight to risk, not certainty. However, why (b) refers to options by position, which does not match the shuffled order, and the card defines burden of disease, which belongs to point 1. Question a is also very easy for Year 12."
+    },
+    "flags": [
+     "Question b, other: The why refers to options by position ('the second and third options', 'the fourth'), but the options are shown in random order. In the order shown, the options saying he 'will get' a condition are the first and third, and the ones naming the wrong range are the first and fourth, so the why misleads students. Name the options by content instead.",
+     "Card, other: The card defines burden of disease ('the total harm that illness and early death cause'). That term belongs to point 1 (Australia's health status) and should only be mentioned here, not explained.",
+     "Question a, level: Too easy for Year 12. The distractors (measles, scurvy, noise-induced hearing loss) have no plausible link to body weight, and the clue about how the body handles sugar points straight to the answer.",
+     "Content check: hhd-overweight-obesityb option is 61 characters: He is in the obese range, so his heart disease risk is higher"
+    ],
+    "sensitive": "none",
+    "proposal": {
+     "title": "Overweight and obesity",
+     "card": [
+      "Overweight and obesity mean having more body fat than is healthy. Body mass index (BMI) compares weight with height. For adults, 25 to under 30 is overweight and 30 or more is obese.",
+      "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. A higher risk does not mean a person will get these conditions.",
+      "Excess fat can make the body respond less to insulin, the hormone that moves sugar out of the blood and into cells, so sugar builds up in the blood. Type 1 diabetes is different: the immune system destroys the cells that make insulin.",
+      "Because these conditions are common in Australia, excess body weight adds to Australia's burden of disease."
+     ],
+     "remember": "Excess weight makes type 2 diabetes, heart disease and some cancers more likely, not certain.",
+     "a": {
+      "q": "How can excess body fat raise the risk of type 2 diabetes?",
+      "opts": [
+       "It can make the body respond less to insulin",
+       "It destroys the cells that make insulin",
+       "It lowers the level of sugar in the blood",
+       "It makes cells take in sugar too quickly"
+      ],
+      "why": "Excess fat can make the body respond less to insulin, so sugar is not moved into cells and builds up in the blood. The immune system destroying insulin-making cells describes type 1 diabetes, which is not caused by body weight.",
+      "clue": "Type 2 and type 1 diabetes go wrong in different ways."
+     },
+     "b": {
+      "d": 3,
+      "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+      "opts": [
+       "He is in the obese range, so heart disease is more likely",
+       "He is in the overweight range, so he will get heart disease",
+       "He is in the obese range, so he will get type 2 diabetes",
+       "He is in the overweight range, so cancer is more likely"
+      ],
+      "why": "A BMI of 30 or more is classed as obese, and excess weight raises the risk of heart disease. The options saying he will get heart disease or type 2 diabetes treat a raised risk as a certainty. The options placing him in the overweight range are wrong, as that range ends below 30.",
+      "clue": "Check which range 31 falls in, then check whether a condition is said to be certain."
+     }
+    },
+    "proposal_problems": [],
+    "alone": true,
+    "recheck": {
+     "at": "2026-11-02T04:41:51Z",
+     "result": "kept",
+     "why": [
+      "the fresh check found a problem"
+     ],
+     "check": {
+      "a": {
+       "best": "It can make the body respond less to insulin",
+       "also_right": []
+      },
+      "b": {
+       "best": "He is in the obese range, so heart disease is more likely",
+       "also_right": []
+      },
+      "problems": [
+       {
+        "part": "a",
+        "kind": "wording",
+        "detail": "The right option is the only one with a qualifier ('can'). The other three are flat statements, so a student could pick it without knowing how insulin resistance works."
+       }
+      ],
+      "sure": "high",
+      "sensitive": "none",
+      "summary": "The facts are correct: BMI cut-offs, insulin resistance and type 1 as an autoimmune condition all check out. Question a's right answer stands out because it is the only option with the qualifier 'can'. Reword the distractors to match, for example 'It can lower the level of sugar in the blood'."
+     },
+     "flags": [
+      "Question a, wording: The right option is the only one with a qualifier ('can'). The other three are flat statements, so a student could pick it without knowing how insulin resistance works."
+     ]
+    }
+   }
+  }
+ ],
+ "draft": {
+  "title": "Overweight and obesity",
+  "card": [
+   "Overweight and obesity mean having more body fat than is healthy. Body mass index (BMI) compares weight with height. For adults, 25 to under 30 is overweight and 30 or more is obese.",
+   "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. A higher risk does not mean a person will get these conditions.",
+   "Excess fat can make the body respond less to insulin, the hormone that moves sugar out of the blood and into cells, so sugar builds up in the blood. Type 1 diabetes is different: the immune system destroys the cells that make insulin.",
+   "Because these conditions are common in Australia, excess body weight adds to Australia's burden of disease."
+  ],
+  "remember": "Excess weight makes type 2 diabetes, heart disease and some cancers more likely, not certain.",
+  "a": {
+   "q": "Which change in the body links excess body fat to a higher risk of type 2 diabetes?",
+   "opts": [
+    "Cells become less responsive to insulin",
+    "The immune system destroys insulin-making cells",
+    "Blood sugar falls too low after eating",
+    "Cells take in too much sugar from the blood"
+   ],
+   "why": "Cells that respond less to insulin do not take in sugar well, so sugar builds up in the blood. The immune system destroying insulin-making cells describes type 1 diabetes, which is not the link with body weight.",
+   "clue": "Type 2 and type 1 diabetes go wrong in different ways."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+   "opts": [
+    "He is in the obese range, so heart disease is more likely",
+    "He is in the overweight range, so he will get heart disease",
+    "He is in the obese range, so he will get type 2 diabetes",
+    "He is in the overweight range, so cancer is more likely"
+   ],
+   "why": "A BMI of 30 or more is classed as obese, and excess weight raises the risk of heart disease. The options saying he will get heart disease or type 2 diabetes treat a raised risk as a certainty. The options placing him in the overweight range are wrong, as that range ends below 30.",
+   "clue": "Check which range 31 falls in, then check whether a condition is said to be certain."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Cells become less responsive to insulin",
+   "also_right": []
+  },
+  "b": {
+   "best": "He is in the obese range, so heart disease is more likely",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Overweight and obesity",
+  "card": [
+   "Overweight and obesity mean having more body fat than is healthy. Body mass index (BMI) compares weight with height. For adults, 25 to under 30 is overweight and 30 or more is obese.",
+   "Excess body weight raises the risk of type 2 diabetes, heart disease and some cancers. A higher risk does not mean a person will get these conditions.",
+   "Excess fat can make the body respond less to insulin, the hormone that moves sugar out of the blood and into cells, so sugar builds up in the blood. Type 1 diabetes is different: the immune system destroys the cells that make insulin.",
+   "Because these conditions are common in Australia, excess body weight adds to Australia's burden of disease."
+  ],
+  "remember": "Excess weight makes type 2 diabetes, heart disease and some cancers more likely, not certain.",
+  "a": {
+   "q": "Which change in the body links excess body fat to a higher risk of type 2 diabetes?",
+   "opts": [
+    "Cells become less responsive to insulin",
+    "The immune system destroys insulin-making cells",
+    "Blood sugar falls too low after eating",
+    "Cells take in too much sugar from the blood"
+   ],
+   "why": "Cells that respond less to insulin do not take in sugar well, so sugar builds up in the blood. The immune system destroying insulin-making cells describes type 1 diabetes, which is not the link with body weight.",
+   "clue": "Type 2 and type 1 diabetes go wrong in different ways."
+  },
+  "b": {
+   "d": 3,
+   "q": "Dev is an adult with a BMI of 31. Which statement about his health is most accurate?",
+   "opts": [
+    "He is in the obese range, so heart disease is more likely",
+    "He is in the overweight range, so he will get heart disease",
+    "He is in the obese range, so he will get type 2 diabetes",
+    "He is in the overweight range, so cancer is more likely"
+   ],
+   "why": "A BMI of 30 or more is classed as obese, and excess weight raises the risk of heart disease. The options saying he will get heart disease or type 2 diabetes treat a raised risk as a certainty. The options placing him in the overweight range are wrong, as that range ends below 30.",
+   "clue": "Check which range 31 falls in, then check whether a condition is said to be certain."
+  }
+ }
+}

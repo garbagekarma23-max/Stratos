@@ -3,14 +3,15 @@
  "title": "Primes and the fundamental theorem of arithmetic",
  "brief": "adec4138a62b",
  "shortlist": [],
- "stage": "review",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, write",
   "2026-11-01T08:04:35Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:33Z check: flagged",
   "2026-11-01T08:33:52Z fix: suggested",
-  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check"
+  "2026-11-01T09:32:52Z recheck: the fresh check agreed with the fix, and it was picked as a spot check",
+  "2026-11-02T06:23:35Z review: approved with the fix (a spot check)"
  ],
  "sent": {
   "write": 2,
@@ -178,6 +179,53 @@
   ],
   "flags": [
    "Question b, other: The why says the number 'need not be prime, because it may have larger prime factors'. That holds in general, but this number, 2311, is itself prime. A student who checks could be confused. The why should say that such numbers are not always prime (for example 2×3×5×7×11×13 + 1 = 30031 = 59 × 509), while noting that 2311 happens to be prime."
-  ]
- }
+  ],
+  "owner": "fix"
+ },
+ "final": {
+  "title": "Primes and the fundamental theorem of arithmetic",
+  "card": [
+   [
+    "Prime",
+    "a whole number greater than 1 with exactly two factors, 1 and itself. So 2, 3, 5, 7 and 11 are prime. 1 is not prime, and 2 is the only even prime."
+   ],
+   [
+    "Composite",
+    "a whole number greater than 1 that is not prime. It has a factor other than 1 and itself, so it can be broken into smaller factors."
+   ],
+   [
+    "Fundamental theorem",
+    "every whole number above 1 is a product of primes in exactly one way, apart from the order of the factors. For example, 60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5, which is 2² × 3 × 5."
+   ],
+   [
+    "Infinitely many",
+    "the list of primes never ends. Suppose there were a last prime. Multiply all the primes together and add 1. This number leaves remainder 1 when divided by any prime on the list, so it has a prime factor that is not on the list. This contradicts the supposed last prime."
+   ]
+  ],
+  "remember": "Every whole number above 1 is built from primes in one way only, and the primes never run out.",
+  "a": {
+   "q": "What is the prime factorisation of 84?",
+   "opts": [
+    "2² × 3 × 7",
+    "2 × 6 × 7",
+    "2 × 3 × 14",
+    "2² × 21"
+   ],
+   "why": "84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7, which is 2² × 3 × 7. The option 2 × 6 × 7 also multiplies to 84, but 6 is composite, so it is not a product of primes.",
+   "clue": "Every factor in the answer must itself be prime."
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya says the number 2 × 3 × 5 × 7 × 11 + 1 must be divisible by one of 2, 3, 5, 7 or 11. Which statement is correct?",
+   "opts": [
+    "No, it leaves remainder 1 when divided by each of them",
+    "Yes, because it is built from those primes",
+    "No, because it is odd, so no prime can divide it",
+    "Yes, because adding 1 keeps every factor of the product"
+   ],
+   "why": "The product 2 × 3 × 5 × 7 × 11 = 2310 is divisible by each of these primes, so 2311 leaves remainder 1 each time. Adding 1 breaks those factors rather than keeping them, and being odd only rules out 2. Numbers made this way are not always prime, since 2 × 3 × 5 × 7 × 11 × 13 + 1 = 30031 = 59 × 509, though 2311 happens to be prime.",
+   "clue": "Divide the product part by each prime, then think about the extra 1."
+  }
+ },
+ "cleared_by": "owner"
 }
