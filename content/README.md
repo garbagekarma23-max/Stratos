@@ -9,8 +9,9 @@ The commands below are for PowerShell on Windows. They also work in Git Bash, so
 If you are Claude Code helping the owner with these steps:
 
 - Never ask for the API key, and never read, set, print or save it. The owner sets it in a PowerShell window of their own (step 5), and runs `run`, `run-many`, `recheck`, `rebalance` and the exact `estimate` there, with or without `--now`. When it is time, give them the command to paste.
-- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), `review`, `publish`, the build, the checks and git.
+- You can run every other step: `status`, `estimate` (a rough one, with no key), `autoreview` and `autoreject` (they make no API calls), `recheck --dry-run` and `rebalance --dry-run` (rough estimates, with no key), the Claude Code steps, `review`, `publish`, the build, the checks and git.
 - `py content/pipeline.py review` keeps running until it is stopped: start it in the background, then tell the owner the address.
+- The Claude Code steps (`cc-write`, `cc-check` and `cc-review`, step 11) make no API calls. Run them when the owner pastes their prompt. Never check a point yourself: each check goes to a new subagent that sees only its task file.
 - Never edit `src/bank/` or `src/courses/` by hand. A change to a point goes through the review page, then `publish`.
 - Follow CLAUDE.md in the repository folder, as in any session.
 
@@ -293,7 +294,7 @@ The dry run changes nothing. For each course it prints which points it would rej
 py content/pipeline.py autoreject
 ```
 
-Then run each course it rejected points in again (step 7), in the key window. After that run, use autoreview, recheck and autoreject again, as for a new point.
+Then run each course it rejected points in again (step 7), in the key window, or have Claude Code write them instead (step 11). After that, use autoreview, recheck and autoreject again, as for a new point.
 
 - **The record**: each point it rejects gets `cleared_by: "autoreject"`, a `rewrites` count, a line in its log and an `autoreject` entry in its file, with when, the problems and a copy of the point as it was. `cleared_by` changes once the rewrite is decided. The `autoreject` entry stays.
 - **The summary**: `autoreject`, `status` and the end of a run print how many points it has rejected, how many are waiting to be rewritten, and how many are left for you after two rewrites.
@@ -420,6 +421,103 @@ Twenty points is a small sample, and two runs on the same settings also differ. 
 
 You can commit the trial's folder with the course, so the comparison is kept, or delete it.
 
+## 11. Claude Code instead of the API
+
+With a Claude plan such as Max, a Claude Code session can do some steps instead of the API. They use your plan, not the API key, and send nothing to the API. Start Claude Code in a window without the key (step 5): with the key set, Claude Code bills its own work to it.
+
+Each step has two commands. `export` writes a task file for each point into `content/work/_claude-code/<step>/`. The session answers each task with a JSON file next to it. `import` reads the answers, checks them and puts each point back into the usual flow, then empties the folder. Nothing in `_claude-code` needs committing.
+
+### Which steps use what
+
+| Step | Runs on |
+| --- | --- |
+| Shortlist, autoreview, autoreject, publish | Your computer: no API, no Claude Code |
+| Match, match check, adapt, first writing, the Haiku screen, fix | The API (`run`, in the key window) |
+| Rewrite: a point you, autoreject or the Claude Code reviewer rejected, or one that failed the content check | Claude Code (`cc-write`). `run` writes any rewrite still waiting with the API, so run `cc-write` first |
+| Check of a point the API wrote | The API (`run`) |
+| Check of a point Claude Code wrote | Claude Code (`cc-check`), a separate subagent for each point. `run` never sends these to the API |
+| Recheck, rebalance | The API |
+| Review | You on the review page, and Claude Code (`cc-review`) for spot checks, possible matches and flagged points with a clear fix |
+
+A round with rewrites: autoreject (or your own rejections), then the rewrite prompt, then the check prompt, then `run` in the key window for the fixes of any points the check flagged, then `autoreview`, then the review prompt, then the review page for what is left, then publish (step 9).
+
+### Rewrites: `cc-write`
+
+- `py content/pipeline.py cc-write export` writes a task for each point waiting for a rewrite. The task holds the request the API writer would get, word for word: the course, the chapter's points, the brief, the version that was rejected, your note, and, after a content check failure, the problems. Each course folder also has `_writer.md`, the writer's rules and examples (`prompts/writer.md` and the course's kind).
+- `py content/pipeline.py cc-write import` checks each answer is in the point's shape, then runs the content check. A version that fails is written once more (export again), as the API writer's is. Each version goes in the point's file under `claude_code`, the point is marked `written_by: "claude-code"`, and it waits for the Claude Code check (`status` says "waiting for the Claude Code check").
+- An answer not in the right shape stays in the folder, with what is wrong. An answer for a point that changed since the export (you rejected it again, or `run` wrote it) is dropped.
+- A course with a run's batch still open is left until the run collects it.
+
+### Checks: `cc-check`
+
+- `py content/pipeline.py cc-check export` writes a task for each point Claude Code wrote. Each task holds only what the API checker gets: `prompts/checker.md`, then the course, the chapter and the point, with the options in a random order and the writer's explanations last. Never the rejected version, your note, the content check's problems, or that the point was rewritten or who wrote it.
+- The session gives each task to a new subagent that sees only that file. It never checks a point itself, so the check never sees the writer's reasoning.
+- `py content/pipeline.py cc-check import` records each answer as the Opus checker's is recorded: `check` in the point's file, with `checked_by: "claude-code"`. A point that passes is cleared. A flagged point waits for a fix, which the API writes on your next `run`. A sensitive topic, or a point the check is not sure of, comes to you. Autoreview, recheck and autoreject treat these points like any other.
+- A check whose picks are not the point's options, copied exactly, stays in the folder, and the session asks a fresh subagent again.
+- The summaries (`status`, the end of a run, `autoreview`) say how many versions Claude Code wrote and how many points it checked. "Sent to the Opus checker" counts only the API's checks.
+
+### The review list: `cc-review`
+
+The Claude Code reviewer decides some of the points waiting for you, by the rules in `content/prompts/reviewer.md`, which follow this README.
+
+- It may decide: spot checks, possible matches, and flagged points with a fix that passes the content check.
+- It never sees, so they stay yours: a sensitive topic (named by any checker, or a word from `SENSITIVE` in the title, brief, draft, fix or bank point), every point of an English course, a point that could not be written, a flagged point with no fix or with a fix that fails the content check, a point you sent back with `--undo` (autoreview's, recheck's, autoreject's or this one's), and a point it already left for you, until that point changes.
+- Its answers: fix, approve or reject (with a note for the writer) for a flagged point or spot check; reuse, adapt (with the changes) or new for a possible match; or leave.
+- Import applies only answers it is highly sure of, through the same code as the review page's buttons, so each one does what your button would. Anything else stays in the review list, and the review page says what it would have done and why.
+- **The record**: each decision has `cleared_by: "claude-code"` and a `claude_code` entry in the point's file, with the decision, how sure it was, its reason and a copy of the point as it was, and a line in the point's log. A rejection counts as a rewrite, as yours does. A spot check it decides is saved in `autoreview.json` as Claude Code's answer, and if it rejects one, every summary shows a warning, as it does for yours.
+- `py content/pipeline.py cc-review import --dry-run` shows what it would decide, and changes nothing.
+- **Undo**: `py content/pipeline.py cc-review --undo` sends every point it decided back to the review list, as it was. Add `--dry-run` to see what would go back first. For one point, name its outline and add `--point bus-business`. A point it rejected, or sent to be adapted or written new, goes back only until it is written again: after that the new version stands, and comes to the review list in the usual way. A point sent back is never decided automatically again. If the course was published, run `publish` again.
+
+### The prompts to paste
+
+Open Claude Code in the Stratos folder, in a window without the API key, and paste one prompt. Start a new session for each prompt, so the check and the review never share a session with the writing. Then commit the work folders, as in step 9.
+
+**Rewrite** the points waiting for a rewrite:
+
+```text
+Do the Claude Code rewrite step of the Stratos content pipeline (content/README.md, step 11).
+
+1. Run: py content/pipeline.py cc-write export
+2. It lists task files under content/work/_claude-code/write/. In each course folder, read _writer.md first: it is the writer's rules and examples. Then, for each task file in that folder, write the point it asks for, following _writer.md exactly, and save it as JSON only to the answer file the task names. Don't open the points' own files in content/work.
+3. Run: py content/pipeline.py cc-write import
+4. If import lists answers with a problem, fix each one and import again. If it says points failed the content check, run export again, write those once more, and import again.
+5. Stop when export says "Nothing to rewrite with Claude Code." Don't check the points yourself, don't change any other file, and don't commit. Tell me how many points you wrote.
+```
+
+**Check** what Claude Code wrote, in a new session:
+
+```text
+Do the Claude Code check step of the Stratos content pipeline (content/README.md, step 11).
+
+1. Run: py content/pipeline.py cc-check export
+2. For each task file it lists, start a new general-purpose subagent with the Agent tool, on the Opus model. Never use a fork, and never check a point yourself. Give each subagent this prompt and nothing else, with the two paths from the list filled in:
+   Read <task file> and do exactly what it says. Read no other file and run no command. Write your answer, JSON only, to <answer file>.
+   Don't tell a subagent anything about the point, who wrote it, or that it was rewritten. Run up to 5 at a time.
+3. Don't read or change the answer files yourself. Run: py content/pipeline.py cc-check import
+4. If import lists an answer with a problem, delete that answer file, give the task to a fresh subagent as in step 2, and import again.
+5. Tell me what import said: how many were cleared, how many wait for a fix, and how many came to me. Don't commit.
+```
+
+**Review** the review list, in a new session:
+
+```text
+Do the Claude Code review step of the Stratos content pipeline (content/README.md, step 11).
+
+1. Run: py content/pipeline.py autoreview
+2. Run: py content/pipeline.py cc-review export
+3. Read content/work/_claude-code/review/_reviewer.md: these are your rules. Then read each task file it lists, decide it as the rules say, and save your answer as JSON only to the answer file the task names. Leave anything you are not highly sure of.
+4. Run: py content/pipeline.py cc-review import --dry-run, and check it says what you meant. Then run: py content/pipeline.py cc-review import
+5. If import lists answers with a problem, fix each one and import again.
+6. Tell me, in a short list, what you decided for each point and why, and what you left for me. Don't commit.
+```
+
+If you disagree with what the reviewer did, undo it:
+
+```powershell
+py content/pipeline.py cc-review --undo --dry-run
+py content/pipeline.py cc-review --undo
+```
+
 ## Writing an outline
 
 Copy `content/outlines/nsw-bus-11.yaml` and change it. Each line:
@@ -455,9 +553,9 @@ Rules:
 | File | What it holds |
 | --- | --- |
 | `pipeline.py` | The pipeline: the commands, the requests, saving, the review page's server, and publishing. The settings at the top set the model and how hard it thinks at each step, the prices, and the limits for `--now` and batches. |
-| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), and the extra rules for each kind in `kinds/`. |
+| `prompts/` | What Claude is told: `writer.md` (with three points from the Economics bank as examples, and the rules from your review of the first course), `checker.md` (which looks for the same things), `matcher.md` (reuse, adapt or new), `adapter.md` (only the changes an adapted point needs), `rebalance.md` (rewriting wrong options to match the right one), `reviewer.md` (the Claude Code reviewer's rules, step 11), and the extra rules for each kind in `kinds/`. |
 | `review/index.html` | The review page, and its Compare tab. |
 | `outlines/` | One outline per course. `outlines/later/` holds outlines that are not ready to run: `run-many content/outlines` reads only the files directly in `outlines/`, so it skips them, and the README there says why each one waits. |
-| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's, recheck's or autoreject's decision and yours, and the old options rebalance replaced). Commit it with the content. |
+| `work/` | What each run saved: `state.json` (the batches and the money spent), `autoreview.json` (how many decisions autoreview and recheck have made, and your spot check answers) and a file per point (each version, the checker's answer, the fresh check of the fix, autoreview's, recheck's or autoreject's decision and yours, the old options rebalance replaced, and what Claude Code wrote, checked and decided). Commit it with the content. `work/_claude-code/` holds the Claude Code steps' tasks and answers until they are imported: never commit it. |
 | `load.mjs`, `dump.mjs` | Read the content in `src/` the way the build does, for the pipeline, the content check and the tests. |
 | `test_pipeline.py` | The pipeline's tests, with a stand-in for the API. No key needed. `tests/pipeline-old-run/` is a run saved by the pipeline from before settings, which the tests finish with this one. `tests/made/` and `tests/units/` are courses it publishes, which the browser tests open. |
