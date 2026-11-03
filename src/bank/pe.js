@@ -1945,5 +1945,1044 @@ MADE_BANKS.pe = {
       "why": "A standard, recognised jump test measures leg power, which matches what the activity needs. A long run is standard but tests a component the activity hardly uses, so it tells the coach little. An invented test is not standard, so scores cannot be compared.",
       "clue": "The test should be both standard and matched to the activity."
     }
+  },
+  "pe-hormones-physical-activity": {
+    "title": "Hormones and physical activity",
+    "card": [
+      "Hormones are chemical messengers made in the body. Their levels change over time, and the menstrual cycle is one example of a regular change.",
+      "During the menstrual cycle, levels of hormones such as oestrogen and progesterone rise and fall. Some people notice changes in energy, mood, sleep or how hard exercise feels at different times.",
+      "These effects differ a great deal from person to person. Many people can train well in every phase of the cycle.",
+      "An athlete or coach can track the cycle and notice patterns. They can then consider adjusting training, such as its intensity or recovery time, to suit how the athlete feels."
+    ],
+    "remember": "Hormone levels change, and each athlete can use their own patterns to help plan training.",
+    "a": {
+      "q": "Why might an athlete track her menstrual cycle when planning training?",
+      "opts": [
+        "To notice her own patterns and adjust sessions to suit",
+        "To find the phase in which she should stop training",
+        "To prove that her performance is lower in some phases",
+        "To make her training the same as every other athlete's"
+      ],
+      "why": "Tracking shows an athlete's own patterns, so she and her coach can consider changes to intensity or recovery. Finding a phase to stop training is wrong because the card says many people can train well in every phase.",
+      "clue": "What does the card say a coach can do once patterns are noticed?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tess, a netballer in Geelong, notices that her energy is often low and training feels harder in the days before her period. Her coach wants a sensible response. What should they do?",
+      "opts": [
+        "Consider lighter sessions or extra recovery in those days",
+        "Remove her from training in that part of every cycle",
+        "Assume every player on the team has the same pattern",
+        "Push her harder in those days to build mental toughness"
+      ],
+      "why": "Tess's pattern is her own, so the coach can consider adjusting intensity or recovery to suit how she feels. Removing her from training every cycle goes too far, because many athletes can train well in every phase and small changes may be enough.",
+      "clue": "Use Tess's own pattern, and do not assume it applies to everyone."
+    }
+  },
+  "pe-injury-concussion-safety": {
+    "title": "Injury, concussion and safety",
+    "card": [
+      "Concussion and knee injuries are common in sport. Concussion is a brain injury from a knock to the head or a jolt to the body. A common knee injury is a tear of the anterior cruciate ligament (ACL).",
+      [
+        "Rules and equipment",
+        "rules such as bans on high tackles, and gear such as mouthguards and padding, lower the risk of injury. Neither removes it."
+      ],
+      "A player with a suspected concussion should leave the game at once and not return that day, even if they feel fine.",
+      [
+        "Return-to-play protocol",
+        "a set of steps back to sport: rest, then a gradual increase in activity, moving on only without symptoms, and a doctor's clearance before full contact."
+      ]
+    ],
+    "remember": "Rules and gear lower the risk, and a step-by-step protocol guides a safe return after an injury.",
+    "a": {
+      "q": "Why does a return-to-play protocol build activity up in stages after a concussion?",
+      "opts": [
+        "To check the athlete copes before the next step",
+        "To stop other players in the team being concussed",
+        "To keep the athlete fit enough to be picked again",
+        "To replace rules and protective gear in the sport"
+      ],
+      "why": "Each stage adds a little more activity, and the athlete moves on only without symptoms, with a doctor's clearance before full contact. Protecting other players is the job of rules and equipment, not the protocol.",
+      "clue": "Think about what happens after the injury has occurred."
+    },
+    "b": {
+      "d": 2,
+      "q": "Kirra, a footballer in Ballarat, takes a hard knock to the head in the second quarter and feels dizzy. What should her coach do?",
+      "opts": [
+        "Take her off and keep her out for the day",
+        "Rest her for a quarter, then let her play on",
+        "Fit a mouthguard and send her straight back",
+        "Move her to a spot with less body contact"
+      ],
+      "why": "A player with a suspected concussion should leave the game at once and not return that day. A short rest is tempting, but feeling fine later does not make it safe to go back on.",
+      "clue": "Does feeling better soon mean the brain has recovered?"
+    }
+  },
+  "pe-psychological-skills-sleep": {
+    "title": "Psychological skills and sleep",
+    "card": [
+      "Psychological skills are strategies an athlete can learn and practise, in the same way as a physical skill. They support performance and enjoyment of sport.",
+      [
+        "Confidence",
+        "belief in your ability to do a task. Positive self-talk, such as telling yourself \"I have trained for this\", and picturing a skill done well (imagery) can build it."
+      ],
+      [
+        "Focus",
+        "keeping attention on what matters now and ignoring distractions. A short routine, such as the same steps before a free throw, or a cue word can help bring attention back."
+      ],
+      [
+        "Sleep",
+        "the body recovers and the brain rests during sleep. Regular sleep and wake times, a dark and quiet room, and less screen use before bed can improve sleep quality."
+      ]
+    ],
+    "remember": "Confidence, focus and sleep can all be improved with strategies that are practised.",
+    "a": {
+      "q": "When the crowd gets loud before a penalty kick, Ravi takes a deep breath and says the cue word \"target\". What is the cue word mainly doing?",
+      "opts": [
+        "Bringing his attention back to the kick",
+        "Building his belief that he can score",
+        "Reminding him of the training he has done",
+        "Picturing the ball hitting the back of the net"
+      ],
+      "why": "A cue word helps an athlete bring attention back to the task and ignore distractions such as crowd noise, which is focus. Building belief is tempting, but that is confidence, built by self-talk such as \"I have trained for this\". The word \"target\" points his attention at the kick rather than stating belief in his ability.",
+      "clue": "Think about what the crowd noise is pulling away from Ravi."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya, a netballer in Geelong, scrolls on her phone in bed until midnight before morning games and feels flat. Which change would best improve her sleep?",
+      "opts": [
+        "Put the phone away before bed and keep a set bedtime",
+        "Use positive self-talk during the warm-up on game day",
+        "Picture a perfect shooting routine while in bed",
+        "Use a cue word to stay focused during the third quarter"
+      ],
+      "why": "Less screen use before bed and regular sleep times are strategies for better sleep. Self-talk, imagery and cue words are psychological skills for confidence and focus, and they do not fix a late bedtime.",
+      "clue": "Which option changes what happens before and during sleep?"
+    }
+  },
+  "pe-mental-fitness-sport": {
+    "title": "Mental fitness in sport",
+    "card": [
+      "Mental fitness is the ability to cope with stress, manage emotions and keep a balanced outlook. Like physical fitness, it can be built up and kept.",
+      "Regular physical activity can support mental fitness. It can lift mood, ease stress and build a sense of belonging when done with others.",
+      "Elite sport adds pressures, such as selection, public criticism, injury and the end of a career. These can harm an athlete's mental health.",
+      "Elite sport pathways, such as academies and professional clubs, have a duty of care for athletes' mental health. This can include access to psychologists, wellbeing education and a culture where asking for help is safe."
+    ],
+    "remember": "Activity can build mental fitness. Elite pathways have a duty to care for athletes' mental health under pressure.",
+    "a": {
+      "q": "Sienna joins a weekend netball team and finds she feels calmer and more connected after games. What does this show?",
+      "opts": [
+        "Physical activity can support mental fitness",
+        "Elite sport pressures can harm mental health",
+        "Mental fitness means never feeling stress",
+        "Only elite athletes gain mental benefits"
+      ],
+      "why": "Regular activity can lift mood, ease stress and build belonging, which supports mental fitness. Sienna plays for fun on weekends, so elite sport pressures do not apply here.",
+      "clue": "Think about what regular activity can do for mood and belonging."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi, 17, has joined a state talent academy and is anxious about an upcoming selection. Which action by the academy best meets its duty of care?",
+      "opts": [
+        "Link him with its psychologist and check in often",
+        "Tell him to push through it and keep it to himself",
+        "Drop him from the squad until he feels less anxious",
+        "Ask him to stop talking about it with his team"
+      ],
+      "why": "A duty of care means actively supporting the athlete's mental health, such as access to a psychologist and a culture where asking for help is safe. Dropping him adds to the selection pressure rather than supporting him.",
+      "clue": "Recall what a pathway can provide to protect athletes' mental health."
+    }
+  },
+  "pe-classifying-movement-skills": {
+    "title": "Classifying movement skills",
+    "card": [
+      [
+        "Basis",
+        "Fundamental skills are basic movements such as running, jumping and catching. Sport-specific skills are built from them for one sport, such as a netball shoulder pass."
+      ],
+      [
+        "Muscles",
+        "Gross skills use large muscle groups, such as a long jump. Fine skills use small muscles for precise control, such as a dart throw."
+      ],
+      [
+        "Environment",
+        "Open skills are done in a changing setting, so the performer must react, such as a tackle. Closed skills are done in a stable, predictable setting, such as a free throw."
+      ],
+      [
+        "Timing",
+        "Discrete skills have a clear start and end, such as a golf putt. Serial skills link several discrete skills in order, such as a gymnastics routine, while continuous skills repeat with no clear start or end, such as swimming laps."
+      ]
+    ],
+    "remember": "Each skill can be described in several ways: by its basis, muscle size, environment and timing.",
+    "a": {
+      "q": "A tennis player returns a serve that bounces differently each time, so she must adjust her swing. How is this skill classed by its environment, and why?",
+      "opts": [
+        "Open, because the setting keeps changing",
+        "Closed, because every serve follows set rules",
+        "Open, because it uses large muscle groups",
+        "Closed, because it has a clear start and end"
+      ],
+      "why": "Each serve lands differently, so the player must react to a changing setting. That makes the skill open. A clear start and end describes timing, not environment, so it does not make a skill closed.",
+      "clue": "Does the setting stay the same from one serve to the next?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ravi performs a triple jump: a hop, a step and then a jump, done one straight after another. How is this skill best classed by its timing?",
+      "opts": ["Serial", "Discrete", "Continuous", "Fine"],
+      "why": "The triple jump links three separate movements in a set order, so it is serial. It is not discrete, because it is not a single movement. It is not continuous, because it has a clear start and end and does not repeat.",
+      "clue": "Count the separate movements and check whether they repeat."
+    }
+  },
+  "pe-skills-participation-performance": {
+    "title": "Skills, participation and performance",
+    "card": [
+      "A motor skill is a movement that is learned and controlled to reach a goal, such as catching a ball or swimming freestyle.",
+      "People who have the skills for an activity often feel more able to do it. They are more likely to join in and to keep playing.",
+      "Taking part gives more practice. More practice can improve skills further, which can lift performance.",
+      "The link works in both directions. Skills can support participation, and participation can build skills. Without skills, people may drop out or avoid the activity."
+    ],
+    "remember": "Skills can raise participation, and participation gives practice that can raise skills and performance.",
+    "a": {
+      "q": "Which statement best describes the link between motor skills and participation?",
+      "opts": [
+        "Skills boost taking part, and taking part adds practice",
+        "Skills boost taking part, but taking part adds no practice",
+        "Taking part adds practice, but skills don't affect it",
+        "Skills matter only for people who already play every week"
+      ],
+      "why": "Skills can make a person feel more able, so they are more likely to take part. Taking part then gives practice that can build skills. The option saying skills don't affect taking part ignores that low skill can lead people to drop out, which is the tempting mistake.",
+      "clue": "Think about which way the link runs."
+    },
+    "b": {
+      "d": 3,
+      "q": "Aisha, 13, struggled to kick a football, so she stopped joining lunchtime games. Her teacher runs weekly kicking sessions and she attends. Which outcome is the most likely over time?",
+      "opts": [
+        "Her skills improve, so she joins in and gets more practice",
+        "Her skills stay the same, but she joins games for fun",
+        "Her skills improve, but she has no reason to join games",
+        "Her skills improve only if she avoids games and trains alone"
+      ],
+      "why": "The sessions give practice, so her kicking is likely to improve. Better skills can make Aisha feel more able, so she is more likely to join games, which give more practice. Joining games for fun without better skills ignores why she stopped: low skill led her to avoid them.",
+      "clue": "What did low skill lead her to do at first?"
+    }
+  },
+  "pe-influences-skill-learning": {
+    "title": "Sociocultural factors in skill learning",
+    "card": [
+      "Skills develop through the people and places around a learner, not only through talent. These are called sociocultural factors.",
+      [
+        "Family and peers",
+        "Family can give time, money, transport and encouragement. Peers can give friendly competition, people to practise with and pressure to join in or stay out."
+      ],
+      [
+        "Culture",
+        "The sports a community values shape which skills children see, try and practise. Cultural beliefs about who should play a sport can open or limit chances."
+      ],
+      [
+        "Facilities and coaching",
+        "Access to fields, courts, pools and equipment decides how often a learner can practise. Quality coaching gives instruction and feedback that help skills improve."
+      ]
+    ],
+    "remember": "Skills grow where a learner has people, opportunity and good instruction around them.",
+    "a": {
+      "q": "Which situation shows access to facilities affecting skill development?",
+      "opts": [
+        "A teen in a remote town has no pool, so rarely swims",
+        "A teen's friends tease her for joining a netball team",
+        "A teen's parents drive him to training and pay fees",
+        "A teen's town holds a yearly festival based on footy"
+      ],
+      "why": "With no pool nearby, the teenager cannot practise swimming often, so access to facilities limits skill growth. The friends' teasing is a peer factor, not a facility one.",
+      "clue": "Look for the option about a place or equipment to practise in."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's parents work late, so she cannot get to training. Her coach is highly qualified and her club has good courts. Which factor is limiting her skill development most?",
+      "opts": [
+        "Family support, because she lacks transport to training",
+        "Coaching, because her coach gives poor instruction",
+        "Facilities, because the club courts are not good enough",
+        "Peers, because her teammates put pressure on her"
+      ],
+      "why": "Her coach and courts are described as good, so they are not the problem. Her family cannot get her to training, so family support limits how often she can practise. Facilities are tempting, but the courts exist and are good.",
+      "clue": "Check which factors the scenario describes as good, then find the one that is not."
+    }
+  },
+  "pe-stages-learning": {
+    "title": "Stages of learning",
+    "card": [
+      [
+        "Cognitive",
+        "the learner thinks through each step of the skill. Movements are jerky, errors are large and frequent, and the learner needs clear instructions."
+      ],
+      [
+        "Associative",
+        "the learner practises and refines the skill. Errors become smaller and fewer, movements are smoother, and the learner starts to spot and fix their own mistakes."
+      ],
+      [
+        "Autonomous",
+        "the skill is automatic. The learner can perform it smoothly and consistently without thinking about each step, so attention is free for other things such as tactics."
+      ],
+      "Learners move through the stages in order, at different speeds. Moving on depends on how much quality practice they have had."
+    ],
+    "remember": "Think it through, then refine it, then do it without thinking.",
+    "a": {
+      "q": "Which description fits a learner in the associative stage?",
+      "opts": [
+        "Movements are smoother and some errors are self-corrected",
+        "Movements are jerky and each step is thought through",
+        "The skill is automatic and the learner can focus on tactics",
+        "The learner cannot yet tell when an error has been made"
+      ],
+      "why": "In the associative stage the learner refines the skill, with smaller errors and some ability to spot and fix them. Thinking through each step is the cognitive stage, and automatic performance is the autonomous stage.",
+      "clue": "This is the middle stage, between thinking and automatic."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ayesha has played netball for years. In a match she passes smoothly without thinking about her hands, and instead reads where her teammates are moving. Which stage is she in, and why?",
+      "opts": [
+        "Autonomous, because her pass now needs no conscious thought",
+        "Associative, because she is still refining how she passes",
+        "Cognitive, because she has to think about where players move",
+        "Autonomous, because she makes no errors at all when passing"
+      ],
+      "why": "Her pass needs no conscious thought, so her attention is free for tactics. That is the autonomous stage. Thinking about teammates is a tactical choice, not thinking through the steps of the pass, and the autonomous stage does not mean the learner never makes an error.",
+      "clue": "Where is her attention while she passes?"
+    }
+  },
+  "pe-direct-constraints-led-coaching": {
+    "title": "Direct and constraints-led coaching",
+    "card": [
+      [
+        "Linear theories",
+        "These see skill learning as a set path. The learner copies a correct technique and improves it step by step."
+      ],
+      [
+        "Direct coaching",
+        "This approach suits linear theories. The coach shows the ideal technique, breaks the skill into parts, gives instructions and corrects errors."
+      ],
+      [
+        "Non-linear theories",
+        "These see skill learning as unique to each person. Each learner finds their own way to move, shaped by the task, the environment and their own body."
+      ],
+      [
+        "Constraints-led coaching",
+        "This approach suits non-linear theories. The coach changes the task, the environment or the rules, such as a smaller court or a lighter ball, so the learner finds their own solution."
+      ]
+    ],
+    "remember": "Direct coaching tells the learner how to move. Constraints-led coaching shapes the setting so the learner finds how to move.",
+    "a": {
+      "q": "Which coaching method best fits a non-linear view of skill learning?",
+      "opts": [
+        "Changing the court size so players find their own solutions",
+        "Showing one ideal technique for players to copy",
+        "Splitting the skill into parts and drilling each in turn",
+        "Correcting each error with a spoken instruction"
+      ],
+      "why": "A non-linear view says each learner finds their own way to move. Changing the task or environment lets that happen. The other options are direct coaching, where the coach sets the technique.",
+      "clue": "Which option changes the setting rather than telling the player what to do?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya coaches junior netball. To help players learn to pass under pressure, she plays games with an extra defender and a shorter time limit, and gives no instructions on technique. Which approach is she using, and why?",
+      "opts": [
+        "Constraints-led, because she changes the task and setting",
+        "Direct, because she controls the game and sets the rules",
+        "Constraints-led, because she gives no feedback to players",
+        "Direct, because she is working on one skill in a drill"
+      ],
+      "why": "Priya changes the task with an extra defender and a time limit, and leaves players to find their own solutions. That is constraints-led coaching. Setting rules does not make it direct, as direct coaching instructs the technique.",
+      "clue": "Who decides how the pass is made: the coach or the players?"
+    }
+  },
+  "pe-psychological-skills": {
+    "title": "Psychological skills",
+    "card": [
+      "Psychological skills are mental skills that help an athlete perform. Four are confidence, motivation, arousal and concentration.",
+      [
+        "Confidence",
+        "belief in your own ability to do the task. Motivation is the drive to start, keep going and put in effort."
+      ],
+      [
+        "Arousal",
+        "how alert and activated the body and mind are. Each task suits a best level, and too low or too high can hurt performance."
+      ],
+      [
+        "Concentration",
+        "keeping attention on the cues that matter and ignoring distractions. Imagery (picturing a skill in the mind) and self-talk (words an athlete says to themselves) are two strategies that can build these skills."
+      ]
+    ],
+    "remember": "Mental skills can be trained, and strategies like imagery and self-talk can help performance.",
+    "a": {
+      "q": "Before a penalty kick, Leila pictures the ball going into the corner of the goal. Which strategy is she using?",
+      "opts": ["Imagery", "Self-talk", "Arousal control", "Motivation"],
+      "why": "Leila is creating a picture of the skill in her mind, which is imagery. Self-talk is tempting, but it uses words said to oneself, not a mental picture.",
+      "clue": "She is seeing the kick, not saying words."
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is a netballer who tenses up and fumbles passes in finals. A coach teaches her to repeat \"smooth and steady\" before each pass. What does this strategy mainly aim to do?",
+      "opts": [
+        "Use self-talk to settle her arousal and steady her focus",
+        "Use imagery to raise her arousal before each pass",
+        "Build her motivation by giving her a reward for passing",
+        "Remove all arousal so that she stays completely calm"
+      ],
+      "why": "Repeating a phrase is self-talk, and here it helps settle arousal that is too high and keep attention on the pass. Removing all arousal is wrong, because the card says each task has a best level, not zero.",
+      "clue": "The coach uses words, and Sam is too tense."
+    }
+  },
+  "pe-practice-schedules": {
+    "title": "Practice schedules",
+    "card": [
+      [
+        "Massed",
+        "long practice blocks with short or no rests. Fatigue can build up, so it suits simple skills and fit, motivated learners."
+      ],
+      [
+        "Distributed",
+        "shorter practice blocks with rests or breaks between them. It suits complex or tiring skills and beginners, as rests allow recovery and thinking."
+      ],
+      [
+        "Blocked",
+        "one skill is practised over and over before moving to the next, such as 20 free throws in a row. It helps beginners get the basic movement."
+      ],
+      [
+        "Random",
+        "several skills are mixed in an unpredictable order, such as a free throw, then a pass, then a lay-up. It is harder at first but suits learners who are more advanced, as it builds skills for a game."
+      ]
+    ],
+    "remember": "Massed or distributed is about rest. Blocked or random is about the order of skills.",
+    "a": {
+      "q": "Which practice schedule is a coach using when a netball squad repeats shooting 30 times, then moves to passing 30 times?",
+      "opts": ["Blocked practice", "Random practice", "Massed practice", "Distributed practice"],
+      "why": "Each skill is repeated in a row before the next one starts, which is blocked practice. Massed and distributed describe how much rest is taken, not the order of the skills.",
+      "clue": "Look at the order of the skills, not the rests."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya has played tennis for years and is already skilled at her serve and volley. Her coach wants her to be ready for the changing demands of a match. Which schedule suits her best?",
+      "opts": [
+        "Random practice, mixing serves, volleys and returns",
+        "Blocked practice, repeating only serves for the session",
+        "Blocked practice, as she needs the basic movement first",
+        "Massed practice, as it is best for every advanced player"
+      ],
+      "why": "Priya is already skilled, so mixing skills in an unpredictable order prepares her for a match. Blocked practice suits beginners learning the basic movement, which is the tempting wrong answer because it sounds like focused work. Massed practice is about rests, not the order of skills.",
+      "clue": "Match games mix skills in an unpredictable order."
+    }
+  },
+  "pe-feedback": {
+    "title": "Feedback",
+    "card": [
+      [
+        "Internal",
+        "information the learner senses from their own body during or after a movement, such as the feel of a ball leaving the hand."
+      ],
+      [
+        "External",
+        "information from a source outside the learner, such as a coach's comment, a video replay or a scoreboard."
+      ],
+      "Feedback can be about the result of the action, such as the distance a throw travelled. It can also be about the movement itself, such as the position of the elbow during the throw.",
+      "Feedback helps a learner improve. Too much can make a learner depend on it, so they struggle to judge their own movement when it is not given."
+    ],
+    "remember": "Feedback guides learning, but too much can leave the learner leaning on it.",
+    "a": {
+      "q": "A swimmer watches a video replay of her freestyle stroke with her coach. What type of feedback is the replay?",
+      "opts": [
+        "External feedback about the movement",
+        "Internal feedback about the movement",
+        "External feedback about the result",
+        "Internal feedback about the result"
+      ],
+      "why": "A video comes from outside the swimmer, so it is external. It shows how the stroke looks, so it is about the movement. It is not about the result, which would be her time or place.",
+      "clue": "Ask where the information comes from, then what it describes."
+    },
+    "b": {
+      "d": 3,
+      "q": "Coach Dan tells a junior golfer what to fix after every swing, and the golfer now looks to him before each shot. What is the most likely problem?",
+      "opts": [
+        "Depends on feedback and struggles to judge their own swing",
+        "Gets too little external feedback to improve their swing",
+        "Ignores internal feedback because it tends to be wrong",
+        "Only gets feedback about the result, not their swing"
+      ],
+      "why": "Constant feedback can make a learner rely on the coach. The golfer then struggles to sense and fix their own swing. Too little feedback is not the issue here, since Dan gives it after every swing.",
+      "clue": "Think about what happens when the coach is not there."
+    }
+  },
+  "pe-momentum-impulse": {
+    "title": "Linear and angular motion",
+    "card": [
+      [
+        "Linear motion",
+        "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+      ],
+      [
+        "Angular motion",
+        "Rotation about an axis, a fixed point or line. Torque, the turning effect of a force applied away from the axis, starts or changes it. Torque = force × moment arm, the distance from the axis to the line of the force."
+      ],
+      [
+        "Speed and velocity",
+        "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+      ],
+      [
+        "Momentum and impulse",
+        "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+      ]
+    ],
+    "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+    "a": {
+      "q": "Which description fits a torque acting on a gymnast swinging around a high bar?",
+      "opts": [
+        "The turning effect of a force applied away from the axis",
+        "A force applied through the body that moves it in a line",
+        "Her mass multiplied by her velocity around the bar",
+        "The force applied multiplied by the time it acts"
+      ],
+      "why": "Torque is the turning effect of a force applied away from the axis, so it causes rotation. A force acting through the body is linked to linear motion, so it is the most tempting wrong option. Mass × velocity is momentum and force × time is impulse.",
+      "clue": "Which type of motion does a torque start or change?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+      "opts": [
+        "Her change in momentum is larger, as impulse is larger",
+        "Her change in momentum is the same, as force is the same",
+        "Her change in momentum is smaller, as contact is longer",
+        "Her change in momentum is larger, as her mass is greater"
+      ],
+      "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+      "clue": "Impulse depends on force and on time."
+    }
+  },
+  "pe-newton-s-laws-motion": {
+    "title": "Newton's laws of motion",
+    "card": [
+      [
+        "First law",
+        "A body stays still or keeps moving at a steady speed in a straight line unless an unbalanced force acts on it. This resistance to a change in motion is called inertia."
+      ],
+      [
+        "Second law",
+        "Acceleration is in proportion to the net force and happens in the direction of that force. For the same force, a body with more mass accelerates less. F = m × a."
+      ],
+      [
+        "Third law",
+        "When one body applies a force to another, the second body applies an equal force back in the opposite direction. The two forces act on different bodies."
+      ],
+      "A heavier body has more inertia, so it takes more force to start it, stop it or change its direction."
+    ],
+    "remember": "No net force, no change in motion. More force means more acceleration. Every force has an equal and opposite reaction.",
+    "a": {
+      "q": "A netballer and a rugby forward are each pushed with the same net force from rest. The forward has more mass. What happens?",
+      "opts": [
+        "The netballer accelerates more than the forward",
+        "The forward accelerates more than the netballer",
+        "Both accelerate by the same amount",
+        "The forward does not accelerate at all"
+      ],
+      "why": "With the same net force, acceleration is smaller for the body with more mass (a = F ÷ m). The forward has more inertia, so the netballer accelerates more. The forward still accelerates, because the net force is not zero.",
+      "clue": "Same force, different mass: who changes speed more easily?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A swimmer pushes backwards on the water with her hands and feet and moves forwards. Which law best explains this, and why?",
+      "opts": [
+        "Third law: the water pushes back on her with equal force",
+        "First law: she keeps moving until a force stops her",
+        "Second law: her mass decides how far the water moves",
+        "Third law: her push on the water moves her forwards"
+      ],
+      "why": "The swimmer pushes on the water, and the water pushes back on her with an equal and opposite force. That reaction force acts on her, so it moves her forwards. The option saying her push on the water moves her forwards is tempting, but her push acts on the water, not on her.",
+      "clue": "Which body does the reaction force act on?"
+    }
+  },
+  "pe-projectile-motion": {
+    "title": "Projectile motion",
+    "card": [
+      "A projectile is any object or body moving through the air with only gravity and air resistance acting on it. Examples are a thrown javelin or a long jumper in flight.",
+      "Three factors set the flight: release speed, release angle and release height. They are fixed at the moment of release or take-off.",
+      "A greater release speed gives a longer flight distance. A greater release height also adds distance, because the object has further to fall before it lands.",
+      "A release angle near 45° gives the greatest distance when release and landing heights are equal. A steeper angle gives more height but less distance, and a lower angle gives less of both."
+    ],
+    "remember": "Speed, angle and height at release decide the flight. Nothing the athlete does in the air changes the path much.",
+    "a": {
+      "q": "A shot putter keeps the same release speed and height but changes the release angle from 40° to 70°. What is the most likely result?",
+      "opts": [
+        "The shot goes higher but travels a shorter distance",
+        "The shot goes higher and travels a greater distance",
+        "The shot goes lower and travels a shorter distance",
+        "The shot goes lower but travels a greater distance"
+      ],
+      "why": "A steeper angle sends more of the speed upwards, so the shot rises higher. Less is left for forward motion, so the distance falls. A steeper angle does not always give more distance, because 45° is near the best for equal heights.",
+      "clue": "Steeper means more upward and less forward."
+    },
+    "b": {
+      "d": 3,
+      "q": "Two basketball players release shots at the same speed and angle. Ana shoots from a standing position and Ben shoots in a jump with a higher release point. Which statement about the flight is correct?",
+      "opts": [
+        "Ben's shot can travel further, as it falls from higher",
+        "Ana's shot can travel further, as it is released lower",
+        "Both shots travel equally far, as speed and angle match",
+        "Ben's shot can travel less far, as it spends longer rising"
+      ],
+      "why": "Release height is one of the three factors. A higher release point means the ball has further to fall, so it stays in the air longer and can travel further. Matching speed and angle does not make the flights equal when the heights differ.",
+      "clue": "Which of the three release factors is different here?"
+    }
+  },
+  "pe-levers-body-2": {
+    "title": "Levers in the body",
+    "card": [
+      "A lever is a rigid bar that turns around a fixed point. In the body, a bone is the bar, a joint is the axis, and a muscle pulls to apply the force against a resistance, such as a weight or the limb itself.",
+      [
+        "First class",
+        "the axis sits between the force and the resistance, like a seesaw. Nodding the head is an example."
+      ],
+      [
+        "Second class",
+        "the resistance sits between the axis and the force, like a wheelbarrow. Rising onto the toes is an example. The force arm (axis to force) is longer than the resistance arm (axis to resistance), so less force is needed."
+      ],
+      [
+        "Third class",
+        "the force sits between the axis and the resistance. Bending the elbow to lift a weight is an example. The force arm is shorter than the resistance arm, so more force is needed, but the load moves faster through a larger range. Most body movements use this type."
+      ]
+    ],
+    "remember": "Most body levers are third class: a short force arm needs more muscle force but gives speed.",
+    "a": {
+      "q": "In a bicep curl, the biceps pulls on the forearm between the elbow and the hand holding the weight. Which class of lever is this?",
+      "opts": [
+        "Third class: the force is in the middle",
+        "Second class: the resistance is in the middle",
+        "First class: the axis is in the middle",
+        "Second class: the force is in the middle"
+      ],
+      "why": "The elbow is the axis, the biceps pull is the force, and the weight in the hand is the resistance. The force lies between the other two, so it is third class. Second class has the resistance in the middle, which is not the case here.",
+      "clue": "Find which of the three parts sits in the middle."
+    },
+    "b": {
+      "d": 3,
+      "q": "Mia, a rower, bends her elbows to pull the oar handle to her chest, a third-class lever action. Compared with a lever whose force arm is longer than its resistance arm, what does her lever give her?",
+      "opts": [
+        "Faster hand movement, but more muscle force needed",
+        "Greater force at the hand, but a slower movement",
+        "Less muscle force needed, and a faster movement",
+        "More muscle force needed, and a slower movement"
+      ],
+      "why": "In a third-class lever the biceps acts close to the elbow, so the force arm is short and the resistance arm is long. The muscle must pull harder to move the load, but the hand moves quickly through a large range. Greater force with less speed describes a lever with a longer force arm.",
+      "clue": "The force acts close to the joint, while the load is far away."
+    }
+  },
+  "pe-qualitative-movement-analysis": {
+    "title": "Qualitative movement analysis",
+    "card": [
+      [
+        "Prepare",
+        "before watching, decide which skill to analyse, learn what good technique looks like, and plan where to stand and what to record."
+      ],
+      [
+        "Observe",
+        "watch the movement by eye, without measuring it with numbers. Watch it several times and from different angles. Video can be used to replay it."
+      ],
+      ["Evaluate", "compare what was seen with the ideal technique. Find the main error and its likely cause."],
+      [
+        "Correct",
+        "give feedback or a drill that fixes the cause of the error. Then watch the movement again to check it has improved."
+      ]
+    ],
+    "remember": "Four steps: prepare what to look for, observe closely, evaluate against good technique, then correct the cause and check again.",
+    "a": {
+      "q": "After filming a netball shot, a coach holds the clip up against a model of good technique to work out what went wrong. Which step is this?",
+      "opts": ["Evaluate", "Prepare", "Observe", "Correct"],
+      "why": "Comparing what was seen with good technique to find the error and its cause is the evaluate step. Observe is tempting, but it is only the watching, from several angles or on video. The comparison with the ideal technique is what makes this evaluate.",
+      "clue": "The coach has already watched. Now they are comparing with a model."
+    },
+    "b": {
+      "d": 3,
+      "q": "Coach Priya films Sam bowling from the front and side. Against good technique, she finds he rushes his run-up, so his arm drops. She says 'good effort' and ends the session. Which step was weak?",
+      "opts": ["Correct", "Evaluate", "Observe", "Prepare"],
+      "why": "Priya found the error and its cause, so she evaluated well. She then gave no feedback or drill to fix it and did not watch again, so the correct step was weak. Evaluate is tempting, but working out the cause is exactly what she did well.",
+      "clue": "What should happen after the cause of an error is found?"
+    }
+  },
+  "pe-monitoring-training": {
+    "title": "Monitoring training",
+    "card": [
+      [
+        "Training diary",
+        "a written or digital record of each session: what was done, how long, how it felt and the results. Comparing entries over weeks shows whether performance is improving."
+      ],
+      [
+        "Heart rate",
+        "beats per minute, measured with a monitor or by finding a pulse. It shows how hard the body is working. Maximum heart rate is estimated as 220 minus age."
+      ],
+      [
+        "RPE",
+        "rating of perceived exertion. The athlete scores how hard a session feels, often on a scale of 6 to 20 or 0 to 10. It is a personal judgement, so it needs no equipment."
+      ],
+      "A coach uses these together. If the same workout gets easier, with a lower heart rate or a lower RPE, training is probably working."
+    ],
+    "remember": "Used together, diaries, heart rate and RPE show how hard training is and whether it is working.",
+    "a": {
+      "q": "Which method gives a score based on how hard an athlete feels they are working?",
+      "opts": ["Rating of perceived exertion", "Heart rate monitoring", "A training diary", "Estimating maximum heart rate"],
+      "why": "RPE is the athlete's own judgement of effort. Heart rate is a measurement of beats per minute, so it is not a feeling, even though it also shows how hard the body is working.",
+      "clue": "Which method relies on the athlete's own judgement?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya runs the same 5 km route each week. After six weeks her average heart rate on it has dropped and her RPE is lower, while her time is unchanged. What does this most likely show?",
+      "opts": [
+        "Her training is working, as the same run is now easier",
+        "Her training is not working, as her time has not improved",
+        "Her fitness has dropped, as her heart rate is now lower",
+        "She needs a diary, as heart rate and RPE cannot show this"
+      ],
+      "why": "The same run at the same pace now gives a lower heart rate and feels easier, so she has probably improved. An unchanged time does not mean failure, because the effort needed for that time has dropped.",
+      "clue": "Look at how hard the same run is for her now."
+    }
+  },
+  "pe-training-session": {
+    "title": "A training session",
+    "card": [
+      [
+        "Warm up",
+        "the first phase, using light activity that slowly raises heart rate and muscle temperature. It often includes dynamic stretches and drills like those in the sport to come."
+      ],
+      [
+        "Conditioning",
+        "the main phase, where the training goal is worked on. This is where the fitness component is trained, such as endurance, speed or strength."
+      ],
+      [
+        "Cool down",
+        "the last phase, using light activity that slowly lowers heart rate and breathing. It helps the body return towards its resting state."
+      ],
+      "Each phase has its own job. A session that leaves out the warm up or cool down misses what that phase offers."
+    ],
+    "remember": "Warm up prepares the body, conditioning trains it, cool down brings it back to rest.",
+    "a": {
+      "q": "Which activity belongs in the conditioning phase of a session?",
+      "opts": [
+        "Work aimed at the fitness goal of the session",
+        "Light jogging to raise muscle temperature",
+        "Slow walking to bring heart rate down",
+        "Dynamic drills that copy the movements of the sport"
+      ],
+      "why": "The conditioning phase is the main part, where the training goal is worked on. Light jogging and dynamic drills prepare the body, so they belong in the warm up. Slow walking belongs in the cool down.",
+      "clue": "Which phase is the main one, where the goal is trained?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Priya, a netballer in Geelong, warms up, does a hard sprint session, then sits down straight away. Which phase has she left out?",
+      "opts": [
+        "The cool down, which lowers heart rate gradually",
+        "The warm up, which raises muscle temperature",
+        "The conditioning phase, which trains the goal",
+        "The warm up, which lowers heart rate gradually"
+      ],
+      "why": "Priya warmed up and did the sprints, which were her conditioning. She then went straight from hard work to sitting, so she skipped the cool down, which uses light activity to bring heart rate down slowly. The warm up is not missing, and it raises heart rate rather than lowering it.",
+      "clue": "Look at what happened after the sprints ended."
+    }
+  },
+  "pe-principles-training": {
+    "title": "Principles of training",
+    "card": [
+      [
+        "FITT",
+        "Frequency is how often a person trains. Intensity is how hard. Time is how long each session lasts. Type is the kind of training chosen."
+      ],
+      [
+        "Specificity",
+        "training should match the demands of the sport, such as its energy system, muscles and movements. A sprinter needs sprint work, not only long jogs."
+      ],
+      [
+        "Progressive overload",
+        "gradually raising the training load, such as more weight, time or intensity, so the body keeps adapting."
+      ],
+      [
+        "Variety and individuality",
+        "variety changes activities to keep a program fresh and avoid boredom. Individuality means a program suits the person's fitness, goals, age and needs."
+      ]
+    ],
+    "remember": "Match training to the sport and the person, then raise the load gradually.",
+    "a": {
+      "q": "A swimmer lifts 40 kg in the gym, then adds 2.5 kg each fortnight as she gets stronger. Which principle is this?",
+      "opts": ["Progressive overload", "Specificity", "Variety", "Individuality"],
+      "why": "She gradually raises the load so her muscles keep adapting. Specificity is about matching the sport, which is not what is changing here.",
+      "clue": "What is happening to the weight over time?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A coach gives every player in a netball squad the same running program, though some are returning from injury and some are very fit. Which principle is the coach ignoring?",
+      "opts": ["Individuality", "Progressive overload", "Frequency", "Specificity"],
+      "why": "Individuality says a program should suit each person's fitness and needs. Specificity is a tempting answer, but the issue is differences between players, not how well training matches netball.",
+      "clue": "Is the program wrong for netball, or wrong for some players?"
+    }
+  },
+  "pe-detraining-plateaus": {
+    "title": "Detraining and plateaus",
+    "card": [
+      [
+        "Detraining",
+        "the loss of fitness gains when training is reduced or stops. It can happen after injury, illness or a long break."
+      ],
+      [
+        "Plateau",
+        "a stage where progress stalls even though training carries on. The body has adapted to the same program and no longer gets a new challenge."
+      ],
+      "A plateau can be broken by changing the program. For example, the intensity, time or type of training can be changed.",
+      "Detraining is reversed by returning to training. A plateau is different: the athlete is still training, but the program needs to change."
+    ],
+    "remember": "Detraining is fitness lost when training is reduced or stops. A plateau is progress stalling while training goes on.",
+    "a": {
+      "q": "Which situation is an example of a plateau?",
+      "opts": [
+        "A runner trains the same way for months and stops improving",
+        "A runner breaks a leg and loses fitness during recovery",
+        "A runner stops training for the summer and slows down",
+        "A runner takes a week off and feels less fit on return"
+      ],
+      "why": "A plateau is when progress stalls while training continues. The runner who trains the same way for months is still training, so the stall is a plateau. The other three involve training stopping, which is detraining.",
+      "clue": "In which case is the athlete still training?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom, a rower in Ballarat, has done the same weekly program for four months. His 2000 m time has not changed for six weeks. What is the best response?",
+      "opts": [
+        "Change the intensity or type of training in his program",
+        "Stop training for a few weeks so he can recover fully",
+        "Repeat the same program, as it has worked before",
+        "Treat it as detraining and start training again"
+      ],
+      "why": "Tom is still training, so this is a plateau, not detraining. His body has adapted to the same program, so it needs a change such as new intensity or type. Stopping training for weeks risks detraining, which would cost him fitness.",
+      "clue": "Is Tom still training, or has he stopped?"
+    }
+  },
+  "pe-training-methods": {
+    "title": "Training methods",
+    "card": [
+      "Continuous training is steady work without rest, such as a 30 minute jog, and builds aerobic fitness. Fartlek adds changes of speed, building aerobic fitness and some anaerobic capacity.",
+      "Interval training alternates hard work with rest or easier periods, building aerobic or anaerobic fitness depending on the work and rest times. Circuit training moves through stations and can build aerobic fitness, strength or muscular endurance.",
+      "Resistance training uses weights or other loads and mainly builds strength, the most force a muscle can produce. Changing the load, reps and speed can aim it at power or muscular endurance instead.",
+      "Plyometric training uses fast jumps and bounds to build power, which is producing force quickly. Flexibility training, such as stretching, builds how far a joint can move."
+    ],
+    "remember": "Match the method to the fitness component the activity needs.",
+    "a": {
+      "q": "Priya plays volleyball and wants to get off the ground faster and higher to block spikes. Which method targets this most directly?",
+      "opts": ["Plyometric training", "Circuit training", "Continuous training", "Flexibility training"],
+      "why": "Getting off the ground fast and high needs power, which is producing force quickly, and plyometric training uses fast jumps to build power. Circuit training is tempting because it works the muscles, but it builds aerobic fitness, strength or muscular endurance, not power.",
+      "clue": "Which fitness component is about producing force quickly?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Ella, a hurdler, keeps clipping hurdles because tight hamstrings stop her lifting her lead leg high enough. Which method suits her best?",
+      "opts": ["Flexibility training", "Resistance training", "Plyometric training", "Continuous training"],
+      "why": "Her problem is that her hip cannot move far enough, and flexibility training such as stretching builds how far a joint can move. Resistance training is tempting because it works the muscles, but it mainly builds strength, and it can be aimed at power or muscular endurance, not flexibility.",
+      "clue": "Is her leg limited by a lack of force or by tight muscles?"
+    }
+  },
+  "pe-chronic-cardiovascular-adaptations": {
+    "title": "Chronic cardiovascular adaptations",
+    "card": [
+      "A chronic adaptation is a lasting change in the body after weeks or months of regular training. It is different from the short-term changes that happen during one session.",
+      "Aerobic training makes the heart bigger and stronger, mainly the left ventricle. This is called cardiac hypertrophy.",
+      "A bigger left ventricle can fill with more blood, and its stronger wall can push more of that blood out. Stroke volume, the amount of blood pumped out by the heart in one beat, rises.",
+      "Cardiac output is heart rate × stroke volume. At rest the body needs much the same blood as before, so with more blood in each beat, fewer beats are needed. Resting heart rate falls."
+    ],
+    "remember": "A bigger, stronger heart pumps more blood per beat, so it needs fewer beats at rest.",
+    "a": {
+      "q": "After six months of distance running, Tom's resting heart rate has dropped from 70 to 58 beats per minute. What best explains this?",
+      "opts": [
+        "His heart pumps more blood with each beat",
+        "His heart now pumps less blood each minute at rest",
+        "His heart muscle has become smaller and more efficient",
+        "His body now needs less blood to stay alive at rest"
+      ],
+      "why": "Training raises stroke volume, so the heart can meet the body's needs at rest with fewer beats. The tempting option about less blood each minute is wrong: the body's resting needs are much the same, so the heart still delivers that blood using fewer beats.",
+      "clue": "Think about how much blood each single beat moves."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya's resting cardiac output is the same before and after a year of swim training, but her resting heart rate is now lower. Which change must have happened?",
+      "opts": [
+        "Her stroke volume at rest has risen",
+        "Her stroke volume at rest has fallen",
+        "Her left ventricle has become weaker",
+        "Her body's resting need for blood has fallen"
+      ],
+      "why": "Cardiac output is heart rate × stroke volume. If output stays the same while heart rate falls, stroke volume must have risen. A weaker ventricle would pump less per beat, so it could not keep output the same with fewer beats.",
+      "clue": "If one part of a product falls and the total stays the same, what must the other part do?"
+    }
+  },
+  "pe-chronic-respiratory-adaptations": {
+    "title": "Chronic respiratory adaptations",
+    "card": [
+      "Chronic adaptations are lasting changes from weeks to months of regular aerobic training. The breathing muscles, such as the diaphragm, get stronger and tire less easily.",
+      "At maximal exercise, tidal volume (air moved in one breath) and ventilation (air moved per minute) rise. More air reaches the alveoli each minute.",
+      "At rest and at submaximal intensities, respiratory frequency (breaths per minute) falls and ventilation can fall. Each breath is deeper and more oxygen is taken from it, so breathing costs less energy.",
+      "More capillaries form around the alveoli, so pulmonary diffusion (gas exchange) improves. With heart and muscle changes, this helps raise VO2 max, the most oxygen the body can use per minute. A higher VO2 max raises the ceiling, not the oxygen a set pace needs."
+    ],
+    "remember": "Trained breathing is slower and deeper at rest, bigger at maximum, and better at moving oxygen into the blood.",
+    "a": {
+      "q": "Compared with before months of aerobic training, which pattern would you expect in a trained athlete?",
+      "opts": [
+        "Lower breathing rate at rest, more ventilation at maximum",
+        "Higher breathing rate at rest, more ventilation at maximum",
+        "Lower breathing rate at rest, less ventilation at maximum",
+        "Same breathing rate at rest, lower tidal volume at maximum"
+      ],
+      "why": "At rest, deeper breaths and better oxygen extraction mean fewer breaths are needed. At maximal effort, tidal volume and ventilation rise so more air reaches the alveoli. Less ventilation at maximum is tempting, but any fall in ventilation happens at rest and submaximal effort, not at maximum.",
+      "clue": "Think about rest and maximum one at a time."
+    },
+    "b": {
+      "d": 3,
+      "q": "After six months of aerobic training, Tariq rows at the same submaximal pace as before but takes fewer breaths per minute. What best explains this?",
+      "opts": [
+        "His breaths are deeper, so more oxygen comes from each one",
+        "His VO2 max rose, so he needs less oxygen at that pace",
+        "His tidal volume fell, so each breath takes less effort",
+        "His diffusion fell, so less air is needed per minute"
+      ],
+      "why": "Training makes each breath deeper and improves how much oxygen is taken from it, so fewer breaths can meet the same need. The VO2 max option is tempting, but VO2 max is the ceiling at maximal effort and does not lower the oxygen a set pace needs.",
+      "clue": "Look at what changes within each breath, not the maximum."
+    }
+  },
+  "pe-chronic-muscular-adaptations": {
+    "title": "Chronic muscular adaptations",
+    "card": [
+      "Chronic adaptations are lasting changes from weeks and months of regular training. Resistance training, such as lifting weights, changes the muscles and the nerves that control them.",
+      [
+        "Hypertrophy",
+        "an increase in the size of muscle fibres. Larger fibres can produce more force, so the muscle becomes stronger."
+      ],
+      [
+        "Neural adaptation",
+        "better control of muscle by the nerves. More fibres are recruited at once and they fire in a more coordinated way."
+      ],
+      "Early strength gains in a new program often come mostly from neural adaptation. Hypertrophy takes longer to build up."
+    ],
+    "remember": "Resistance training grows the fibres and trains the nerves to use them better.",
+    "a": {
+      "q": "Which change is hypertrophy?",
+      "opts": [
+        "Muscle fibres grow larger",
+        "Nerves recruit more fibres at once",
+        "Muscles use oxygen faster",
+        "Muscle fibres split into new fibres"
+      ],
+      "why": "Hypertrophy is an increase in the size of muscle fibres. Recruiting more fibres is a neural adaptation, which is the tempting wrong option because it also raises strength.",
+      "clue": "Hypertrophy is about size, not nerve control."
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya starts a weights program in Geelong. After three weeks she can lift more, but her muscles look no bigger. What best explains this?",
+      "opts": [
+        "Neural adaptation, as her nerves recruit fibres better",
+        "Hypertrophy, as her fibres have grown larger",
+        "A fall in force from her muscles",
+        "Her muscles have lost fibres to gain strength"
+      ],
+      "why": "Early strength gains often come mostly from neural adaptation, where the nerves recruit and coordinate more fibres. Hypertrophy is tempting because it also raises strength, but it takes longer and would show as bigger muscles.",
+      "clue": "Strength rose but size did not."
+    }
+  },
+  "pe-adaptations-improve": {
+    "title": "What adaptations improve",
+    "card": [
+      "Chronic adaptations change what the body can do in performance. Several measures improve together.",
+      "VO2 max, the highest rate of oxygen use, rises. The lactate inflection point, the intensity where lactate starts to build up fast, moves to a higher intensity. An athlete can then work harder before tiring.",
+      "Muscle contractions become faster and stronger, which helps with speed and power.",
+      "Lactate tolerance improves. The athlete can keep going at a high intensity even with more lactate in the muscles and blood."
+    ],
+    "remember": "Adaptations let an athlete work harder, for longer, with more speed, force and tolerance of lactate.",
+    "a": {
+      "q": "After training, an athlete's lactate inflection point rises. What does this change allow?",
+      "opts": [
+        "Working harder before lactate starts to build up fast",
+        "Keeping going once lactate in the blood is already high",
+        "Using oxygen at a higher rate at maximum effort",
+        "Making muscle contractions faster and more forceful"
+      ],
+      "why": "A higher inflection point means the athlete reaches a higher intensity before lactate rises quickly. Keeping going once lactate is already high is lactate tolerance, a separate improvement and the tempting wrong option.",
+      "clue": "Think about when lactate starts to build up fast."
+    },
+    "b": {
+      "d": 3,
+      "q": "Jo, a Ballarat 800 m runner, trains for a season. Which result shows improved lactate tolerance, not a higher inflection point?",
+      "opts": [
+        "She holds her pace in the last 200 m despite high lactate",
+        "She runs at a faster pace before lactate starts to build",
+        "Her oxygen use at maximum effort rises over the season",
+        "Her leg muscles contract with more force in her sprint"
+      ],
+      "why": "Lactate tolerance is keeping going at high intensity while lactate is already high. Running faster before lactate builds describes a higher inflection point, which is the tempting wrong option.",
+      "clue": "Tolerance is about coping once lactate is already high."
+    }
+  },
+  "pe-skill-biomechanics-energy-together": {
+    "title": "Skill, biomechanics and energy together",
+    "card": [
+      "A skill is learned through practice and feedback. Technique is how the skill is performed, and biomechanics analyses it using ideas such as force, balance and levers. Energy systems and fitness supply the fuel and capacity for the movement.",
+      "These three parts depend on each other. Inefficient technique, such as a poor body position, wastes force and limits the result. Good technique that cannot be repeated when tired breaks down.",
+      "Fatigue is a common link. It can come from fuel running low, a build-up of by-products such as hydrogen ions (H+), or the body overheating. As muscles tire, movement becomes less accurate and technique can change, even though the skill is still learned.",
+      "To improve performance, a coach looks at all three. Skill practice can be done in a game-like, tiring setting, and fitness training can be matched to the movements of the sport."
+    ],
+    "remember": "Performance depends on skill, technique and energy working together, so improving one can mean checking the others.",
+    "a": {
+      "q": "Late in a match, a netballer's passes become less accurate and her footwork changes. Which explanation best links the three parts?",
+      "opts": [
+        "Fatigue has reduced her control and changed her technique",
+        "Her skill has been unlearned since the start of the match",
+        "Her technique has improved because she is moving less",
+        "Her fitness plays no part, as accuracy comes from skill"
+      ],
+      "why": "As muscles tire, movement becomes less accurate and technique can change, which matches what happens to her passes and footwork. Skill is not unlearned during a single match, so the idea that she has lost the skill is the tempting wrong answer.",
+      "clue": "What happens to movement when muscles tire?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Sam is a swimmer whose stroke technique is sound, but his stroke length shortens in the last 50 m of a 200 m race. Which plan best links skill, technique and energy?",
+      "opts": [
+        "Practise his stroke when tired and train to delay fatigue",
+        "Train to delay fatigue, with stroke drills done when fresh",
+        "Rebuild his stroke when fresh and keep fitness the same",
+        "Add fitness work and drop his technique sessions for now"
+      ],
+      "why": "His technique is sound when fresh but changes late in the race, which points to fatigue. Fitness work can delay fatigue, and practising the stroke in a tiring setting links skill to that fatigue. Drilling only when fresh is tempting, but it does not link his stroke to the tired state where it changes.",
+      "clue": "His technique is fine early in the race."
+    }
+  },
+  "pe-designing-program-athlete": {
+    "title": "Designing a program for an athlete",
+    "card": [
+      "A program starts with an activity analysis. This lists the energy systems, fitness components and movements the sport demands, so training matches the sport.",
+      "Fitness test results show the athlete's strengths and weaknesses. Training time goes to the areas that most limit performance in that sport.",
+      "The training principles shape the plan. Specificity matches training to the sport and progressive overload raises the load over time. Variety keeps training interesting, and enough rest helps avoid overtraining.",
+      "A program is not fixed. Retesting shows how the athlete has improved, and the program is changed to suit the new results."
+    ],
+    "remember": "Analyse the sport, test the athlete, apply the principles, then retest and adjust.",
+    "a": {
+      "q": "Why does a coach retest an athlete part way through a program?",
+      "opts": [
+        "To see what has changed and adjust the program",
+        "To check the activity analysis was written correctly",
+        "To show the athlete the principles no longer apply",
+        "To keep the same program for the whole season"
+      ],
+      "why": "Retesting shows how the athlete has improved, so the coach can change the program to suit the new results. It does not replace the activity analysis or remove the training principles, and the program is not meant to stay fixed.",
+      "clue": "Think about what the results show after weeks of training."
+    },
+    "b": {
+      "d": 3,
+      "q": "Ayesha plays netball in Geelong. Her tests show good aerobic fitness but slow repeated sprints, and her sport needs short, fast efforts. What is the best way to build her program?",
+      "opts": [
+        "Add repeated sprint work, then increase the load over time",
+        "Add long steady runs, as her results show aerobic fitness",
+        "Copy the program of a marathon runner of the same age",
+        "Train all fitness components equally for the whole season"
+      ],
+      "why": "The activity analysis shows netball needs short, fast efforts, and her tests show repeated sprints are the weakness. Training time goes there, with progressive overload as she improves. Long steady runs build a strength she already has and do not match the sport.",
+      "clue": "Match the weak result to what the sport demands."
+    }
   }
 };

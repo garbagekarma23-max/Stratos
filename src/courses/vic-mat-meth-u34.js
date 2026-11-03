@@ -71,7 +71,20 @@ MADE_COURSES.push({
             "mat-derivatives-as-rates-context"
           ]
         },
-        {"id": "vic-mat-meth-u34-2-2", "title": "Integration", "check": "checked", "points": []}
+        {
+          "id": "vic-mat-meth-u34-2-2",
+          "title": "Integration",
+          "check": "checked",
+          "points": [
+            "mat-antiderivatives-unit-3",
+            "mat-definite-integrals",
+            "mat-fundamental-theorem-calculus",
+            "mat-finding-function-from-rate",
+            "mat-area-under-between-curves",
+            "mat-trapezoidal-rule",
+            "mat-average-value-function"
+          ]
+        }
       ]
     },
     {

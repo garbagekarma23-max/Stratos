@@ -106,7 +106,17 @@ MADE_COURSES.push({
             "bus-external-professionals"
           ]
         },
-        {"id": "vic-bus-u12-2-2-2", "title": "Setting up systems", "check": "checked", "points": []},
+        {
+          "id": "vic-bus-u12-2-2-2",
+          "title": "Setting up systems",
+          "check": "checked",
+          "points": [
+            "bus-keeping-financial-records",
+            "bus-choosing-suppliers",
+            "bus-policies-procedures",
+            "bus-technology-global-issues-setting"
+          ]
+        },
         {
           "id": "vic-bus-u12-2-2",
           "title": "Building a customer base",

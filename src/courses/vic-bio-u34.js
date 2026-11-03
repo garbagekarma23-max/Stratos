@@ -18,7 +18,22 @@ MADE_COURSES.push({
     {
       "title": "Unit 3: How do cells maintain life?",
       "chapters": [
-        {"id": "vic-bio-u34-1-1", "title": "Nucleic acids and proteins", "check": "checked", "points": []},
+        {
+          "id": "vic-bio-u34-1-1",
+          "title": "Nucleic acids and proteins",
+          "check": "checked",
+          "points": [
+            "bio-structure-dna-rna",
+            "bio-genetic-code",
+            "bio-gene-structure",
+            "bio-transcription",
+            "bio-rna-processing",
+            "bio-translation",
+            "bio-gene-regulation-trp-operon",
+            "bio-protein-structure",
+            "bio-protein-secretory-pathway"
+          ]
+        },
         {
           "id": "vic-bio-u34-1-2",
           "title": "DNA manipulation",
@@ -66,7 +81,17 @@ MADE_COURSES.push({
     {
       "title": "Unit 4: How does life change and respond to challenges?",
       "chapters": [
-        {"id": "vic-bio-u34-2-1", "title": "Innate immunity", "check": "checked", "points": []},
+        {
+          "id": "vic-bio-u34-2-1",
+          "title": "Innate immunity",
+          "check": "checked",
+          "points": [
+            "bio-pathogens-antigens",
+            "bio-physical-chemical-microbiological-barriers",
+            "bio-barriers-plants",
+            "bio-innate-immune-response-2"
+          ]
+        },
         {
           "id": "vic-bio-u34-2-2-2",
           "title": "Adaptive immunity",
@@ -128,7 +153,16 @@ MADE_COURSES.push({
             "bio-arrival-people-australia"
           ]
         },
-        {"id": "vic-bio-u34-2-8", "title": "Science skills: the investigation", "check": "checked", "points": []}
+        {
+          "id": "vic-bio-u34-2-8",
+          "title": "Science skills: the investigation",
+          "check": "checked",
+          "points": [
+            "bio-variables-controlled-experiments-biology",
+            "bio-evidence-against-hypothesis",
+            "bio-presenting-biology-poster"
+          ]
+        }
       ]
     }
   ]

@@ -3,7 +3,7 @@
  "title": "Leaders of the new nation",
  "brief": "1b2935f88b23",
  "shortlist": [],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:43Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -13,21 +13,26 @@
   "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b other)",
   "2026-11-02T04:50:16Z write: done",
-  "2026-11-02T04:56:46Z check: flagged"
+  "2026-11-02T04:56:46Z check: flagged",
+  "2026-11-03T11:40:51Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: rejected, to be written again with a note",
+  "2026-11-03T12:13:26Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T12:15:29Z claude-code check: answered by a separate subagent",
+  "2026-11-03T12:15:29Z check: passed, cleared"
  ],
  "sent": {
   "write": 3,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.01071,
   "check": 0.03599,
-  "fix": 0.03134,
+  "fix": 0.05496,
   "recheck": 0.01637
  },
- "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'Look for a difference in views on power, not in jobs' rules out the two job options outright, and the Virginia option is also not about views. That leaves only one option matching the clue, so it gives the answer away without testing understanding.",
+ "note": "Question a: keep every option about the same length. The right option, 'He feared it would threaten the liberty of the states', is clearly longer than the wrong ones. Question b: tie any question about who disagreed to the 1787 to 1788 debate over ratifying the Constitution, since Madison and Hamilton later split over federal power in the 1790s. Do not write a clue that names the only leader who opposed the Constitution, because only one option holds him.",
  "rejected": {
   "title": "Leaders of the new nation",
   "card": [
@@ -62,19 +67,18 @@
   },
   "b": {
    "d": 3,
-   "q": "A student says the new nation's leaders all wanted the same government. Which fact from the card shows this is wrong?",
+   "q": "Two leaders disagreed about the Constitution. Which pair held opposing views on how much power the national government should have?",
    "opts": [
-    "Henry feared national power, while Hamilton backed it",
-    "Washington led the army, Madison planned the Constitution",
-    "Henry and Madison both came from the state of Virginia",
-    "Washington became president, while Hamilton ran the Treasury"
+    "Henry and Madison",
+    "Madison and Hamilton",
+    "Hamilton and Washington",
+    "Washington and Madison"
    ],
-   "why": "Henry feared a strong national government, while Hamilton wanted strong national power. That is a real disagreement over power. The other options are true, but they describe jobs or home states, which do not show leaders disagreeing.",
-   "clue": "Look for a difference in views on power, not in jobs."
+   "why": "Henry feared a strong national government, while Madison wanted one with powers split between branches. Madison, Hamilton and Washington all backed a stronger national government, so any pair made only of them does not show a disagreement over power. Henry and Madison both came from Virginia, but that does not mean they agreed.",
+   "clue": "Only one leader on the card opposed the Constitution."
   }
  },
- "rewrites": 1,
- "cleared_by": "autoreject",
+ "rewrites": 2,
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -234,80 +238,543 @@
    }
   }
  ],
+ "cleared_by": "checker",
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "reject",
+   "sure": "high",
+   "reason": "The fix deals with the checker's flags, but its new question a has a right option that is clearly the longest (54 characters against 52, 43 and 43). The point as written has a clue that gives question b away, and Madison and Hamilton could be defended as a pair that disagreed.",
+   "item": "887a0f8f03b08ca3",
+   "note": "Question a: keep every option about the same length. The right option, 'He feared it would threaten the liberty of the states', is clearly longer than the wrong ones. Question b: tie any question about who disagreed to the 1787 to 1788 debate over ratifying the Constitution, since Madison and Hamilton later split over federal power in the 1790s. Do not write a clue that names the only leader who opposed the Constitution, because only one option holds him.",
+   "result": "decided",
+   "saved": {
+    "id": "mod-leaders-new-nation",
+    "title": "Leaders of the new nation",
+    "brief": "1b2935f88b23",
+    "shortlist": [],
+    "stage": "review",
+    "sent": {
+     "write": 3,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "write": 0.01071,
+     "check": 0.03599,
+     "fix": 0.05496,
+     "recheck": 0.01637
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question b, other: The clue 'Look for a difference in views on power, not in jobs' rules out the two job options outright, and the Virginia option is also not about views. That leaves only one option matching the clue, so it gives the answer away without testing understanding.",
+    "rejected": {
+     "title": "Leaders of the new nation",
+     "card": [
+      [
+       "George Washington",
+       "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+      ],
+      [
+       "James Madison",
+       "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+      ],
+      [
+       "Alexander Hamilton",
+       "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+      ],
+      [
+       "Patrick Henry",
+       "A Virginian who opposed the Constitution. He feared a strong national government would threaten the liberty of the states and their people."
+      ]
+     ],
+     "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+     "a": {
+      "q": "Which leader opposed the Constitution because he feared a strong national government?",
+      "opts": [
+       "Patrick Henry",
+       "James Madison",
+       "Alexander Hamilton",
+       "George Washington"
+      ],
+      "why": "Patrick Henry feared that a strong national government would threaten liberty. Madison, Hamilton and Washington all backed a stronger national government, so choosing one of them means mixing up their roles.",
+      "clue": "Which leader on the card argued against the new plan?"
+     },
+     "b": {
+      "d": 3,
+      "q": "A student says the new nation's leaders all wanted the same government. Which fact from the card shows this is wrong?",
+      "opts": [
+       "Henry feared national power, while Hamilton backed it",
+       "Washington led the army, Madison planned the Constitution",
+       "Henry and Madison both came from the state of Virginia",
+       "Washington became president, while Hamilton ran the Treasury"
+      ],
+      "why": "Henry feared a strong national government, while Hamilton wanted strong national power. That is a real disagreement over power. The other options are true, but they describe jobs or home states, which do not show leaders disagreeing.",
+      "clue": "Look for a difference in views on power, not in jobs."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question b, other: The clue 'Look for a difference in views on power, not in jobs' rules out the two job options outright, and the Virginia option is also not about views. That leaves only one option matching the clue, so it gives the answer away without testing understanding."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Leaders of the new nation",
+        "card": [
+         [
+          "George Washington",
+          "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+         ],
+         [
+          "James Madison",
+          "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+         ],
+         [
+          "Alexander Hamilton",
+          "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+         ],
+         [
+          "Patrick Henry",
+          "A Virginian who opposed the Constitution. He feared a strong national government would threaten the liberty of the states and their people."
+         ]
+        ],
+        "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+        "a": {
+         "q": "Which leader opposed the Constitution because he feared a strong national government?",
+         "opts": [
+          "Patrick Henry",
+          "James Madison",
+          "Alexander Hamilton",
+          "George Washington"
+         ],
+         "why": "Patrick Henry feared that a strong national government would threaten liberty. Madison, Hamilton and Washington all backed a stronger national government, so they are the tempting wrong answers only if their roles are mixed up.",
+         "clue": "Which leader on the card argued against the new plan?"
+        },
+        "b": {
+         "d": 3,
+         "q": "A student says the new nation's leaders all wanted the same government. Which fact from the card shows this is wrong?",
+         "opts": [
+          "Henry feared national power, while Hamilton backed it",
+          "Washington led the army, while Madison planned the laws",
+          "Madison came from Virginia, while Hamilton did not",
+          "Washington became president, while Henry never held office"
+         ],
+         "why": "Henry feared a strong national government, while Hamilton wanted strong national power. That is a real disagreement over power. The other options describe different roles or backgrounds, which do not show leaders disagreeing.",
+         "clue": "Look for a difference in views on power, not in jobs."
+        }
+       },
+       "local": [],
+       "check": {
+        "a": {
+         "best": "Patrick Henry",
+         "also_right": []
+        },
+        "b": {
+         "best": "Henry feared national power, while Hamilton backed it",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "b",
+          "kind": "fact",
+          "detail": "The distractor 'Washington became president, while Henry never held office' is false: Patrick Henry was Governor of Virginia several times. A student who rejects it only as irrelevant may come away believing Henry never held office. It should be replaced with a true but irrelevant difference."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "The card and both answers are accurate. One distractor in question b falsely says Patrick Henry never held office (he was Governor of Virginia) and should be replaced with a true but irrelevant difference."
+       },
+       "flags": [
+        "Question b, fact: The distractor 'Washington became president, while Henry never held office' is false: Patrick Henry was Governor of Virginia several times. A student who rejects it only as irrelevant may come away believing Henry never held office. It should be replaced with a true but irrelevant difference."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Leaders of the new nation",
+        "card": [
+         [
+          "George Washington",
+          "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+         ],
+         [
+          "James Madison",
+          "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+         ],
+         [
+          "Alexander Hamilton",
+          "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+         ],
+         [
+          "Patrick Henry",
+          "A Virginian who opposed the Constitution. He feared a strong national government would threaten the liberty of the states and their people."
+         ]
+        ],
+        "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+        "a": {
+         "q": "Which leader opposed the Constitution because he feared a strong national government?",
+         "opts": [
+          "Patrick Henry",
+          "James Madison",
+          "Alexander Hamilton",
+          "George Washington"
+         ],
+         "why": "Patrick Henry feared that a strong national government would threaten liberty. Madison, Hamilton and Washington all backed a stronger national government, so choosing one of them means mixing up their roles.",
+         "clue": "Which leader on the card argued against the new plan?"
+        },
+        "b": {
+         "d": 3,
+         "q": "A student says the new nation's leaders all wanted the same government. Which fact from the card shows this is wrong?",
+         "opts": [
+          "Henry feared national power, while Hamilton backed it",
+          "Washington led the army, Madison planned the Constitution",
+          "Henry and Madison both came from the state of Virginia",
+          "Washington became president, while Hamilton ran the Treasury"
+         ],
+         "why": "Henry feared a strong national government, while Hamilton wanted strong national power. That is a real disagreement over power. The other options are true, but they describe jobs or home states, which do not show leaders disagreeing.",
+         "clue": "Look for a difference in views on power, not in jobs."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-02T04:41:52Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "Patrick Henry",
+          "also_right": []
+         },
+         "b": {
+          "best": "Henry feared national power, while Hamilton backed it",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "b",
+           "kind": "other",
+           "detail": "The clue 'Look for a difference in views on power, not in jobs' rules out the two job options outright, and the Virginia option is also not about views. That leaves only one option matching the clue, so it gives the answer away without testing understanding."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The facts on Washington, Madison, Hamilton and Henry are accurate, and both questions have one clear right answer. The only issue is that question b's clue effectively gives away the answer."
+        },
+        "flags": [
+         "Question b, other: The clue 'Look for a difference in views on power, not in jobs' rules out the two job options outright, and the Virginia option is also not about views. That leaves only one option matching the clue, so it gives the answer away without testing understanding."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "Leaders of the new nation",
+     "card": [
+      [
+       "George Washington",
+       "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+      ],
+      [
+       "James Madison",
+       "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+      ],
+      [
+       "Alexander Hamilton",
+       "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+      ],
+      [
+       "Patrick Henry",
+       "A Virginian who opposed the Constitution. He feared a strong national government would threaten the liberty of the states and their people."
+      ]
+     ],
+     "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+     "a": {
+      "q": "Which leader opposed the Constitution because he feared a strong national government?",
+      "opts": [
+       "Patrick Henry",
+       "James Madison",
+       "Alexander Hamilton",
+       "George Washington"
+      ],
+      "why": "Patrick Henry feared that a strong national government would threaten liberty. Madison, Hamilton and Washington all backed a stronger national government, so choosing one of them means mixing up their roles.",
+      "clue": "Which leader on the card argued against the new plan?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Two leaders disagreed about the Constitution. Which pair held opposing views on how much power the national government should have?",
+      "opts": [
+       "Henry and Madison",
+       "Madison and Hamilton",
+       "Hamilton and Washington",
+       "Washington and Madison"
+      ],
+      "why": "Henry feared a strong national government, while Madison wanted one with powers split between branches. Madison, Hamilton and Washington all backed a stronger national government, so any pair made only of them does not show a disagreement over power. Henry and Madison both came from Virginia, but that does not mean they agreed.",
+      "clue": "Only one leader on the card opposed the Constitution."
+     }
+    },
+    "local": [],
+    "check": {
+     "a": {
+      "best": "Patrick Henry",
+      "also_right": []
+     },
+     "b": {
+      "best": "Henry and Madison",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "b",
+       "kind": "other",
+       "detail": "The clue 'Only one leader on the card opposed the Constitution' points straight to Henry, and only one option includes Henry. Combined with question a, a student can pick the answer without understanding the disagreement over power."
+      },
+      {
+       "part": "b",
+       "kind": "wording",
+       "detail": "'Held opposing views on how much power the national government should have' is not tied to the ratification debate. Madison and Hamilton famously split in the 1790s over the national bank and how broadly to read federal power. A well-read Year 12 student could defend 'Madison and Hamilton'. The stem should say 'during the debate over ratifying the Constitution' or similar."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "The facts check out and both questions have one clear answer. However, question b's clue gives the answer away, and its stem should be tied to the ratification debate, because Madison and Hamilton later disagreed over federal power."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Question b, other: The clue 'Only one leader on the card opposed the Constitution' points straight to Henry, and only one option includes Henry. Combined with question a, a student can pick the answer without understanding the disagreement over power.",
+     "Question b, wording: 'Held opposing views on how much power the national government should have' is not tied to the ratification debate. Madison and Hamilton famously split in the 1790s over the national bank and how broadly to read federal power. A well-read Year 12 student could defend 'Madison and Hamilton'. The stem should say 'during the debate over ratifying the Constitution' or similar."
+    ],
+    "proposal": {
+     "title": "Leaders of the new nation",
+     "card": [
+      [
+       "George Washington",
+       "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+      ],
+      [
+       "James Madison",
+       "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+      ],
+      [
+       "Alexander Hamilton",
+       "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+      ],
+      [
+       "Patrick Henry",
+       "A Virginian who opposed the Constitution during the debate over ratifying it. He feared a strong national government would threaten the liberty of the states and their people."
+      ]
+     ],
+     "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+     "a": {
+      "q": "Why did Patrick Henry oppose the new Constitution?",
+      "opts": [
+       "He feared it would threaten the liberty of the states",
+       "He thought it left the national government too weak",
+       "He wanted the president to have more power",
+       "He objected to Washington leading the army"
+      ],
+      "why": "Henry feared a strong national government would take liberty away from the states and their people. Thinking he found the government too weak reverses his view: that was the complaint about the old system, not about the Constitution.",
+      "clue": "Did Henry want the national government to hold more power or less?"
+     },
+     "b": {
+      "d": 3,
+      "q": "In 1790, a plan had the national government take over the debts the states ran up in the war. Who backed it, and why?",
+      "opts": [
+       "Hamilton, as he wanted strong national power",
+       "Henry, as he wanted strong national power",
+       "Hamilton, as he wanted the states to keep power",
+       "Madison, as he wanted the states to keep power"
+      ],
+      "why": "Hamilton, as Treasury secretary, wanted the national government to take on the states' war debts, which fitted his support for strong national power. Henry is the tempting wrong choice, but he feared a strong national government, so this plan did not match his views.",
+      "clue": "Which leader ran the nation's money, and what did he want for the national government?"
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "28b793434c494915"
+  },
+  {
+   "at": "2026-11-03T12:13:26Z",
+   "step": "write",
+   "version": {
+    "title": "Leaders of the new nation",
+    "card": [
+     [
+      "George Washington",
+      "Presided over the Constitutional Convention in 1787 and became the first president in 1789. He usually sided with Hamilton, and set examples for the office, such as serving only two terms."
+     ],
+     [
+      "James Madison",
+      "Did much to plan the Constitution, then wrote essays with Hamilton and John Jay urging the states to ratify it. In the 1790s he opposed Hamilton's plans as giving the national government too much power."
+     ],
+     [
+      "Alexander Hamilton",
+      "Wanted a strong national government and urged ratification. As Washington's first Treasury secretary, he got it to take on the states' war debts and to set up a national bank."
+     ],
+     [
+      "Patrick Henry",
+      "A Virginian who led the fight against ratification in his state in 1788. He feared a strong national government would threaten the liberty of the states and their people."
+     ]
+    ],
+    "remember": "The leaders argued over the national government's power, first over ratifying the Constitution, then over Hamilton's plans.",
+    "a": {
+     "q": "In the 1788 debate over ratifying the Constitution, what was Patrick Henry's main objection to it?",
+     "opts": [
+      "He feared it gave the national government too much power",
+      "He feared it gave the national government too little power",
+      "He thought it gave the state governments too much power",
+      "He thought it gave the president too little power to act"
+     ],
+     "why": "Henry feared that a strong national government would threaten the liberty of the states and their people. The opposite worry, that the national government was too weak, is what led Madison and Hamilton to back the Constitution.",
+     "clue": "Think about what he wanted to protect."
+    },
+    "b": {
+     "d": 3,
+     "q": "A student writes that Madison and Hamilton were on opposite sides from the start. Which fact from 1787 and 1788 shows this is wrong?",
+     "opts": [
+      "Both wrote essays that urged ratifying the Constitution",
+      "Both feared a strong national government, as Henry did",
+      "Both refused to take part in the Constitutional Convention",
+      "Both called for keeping the Articles of Confederation"
+     ],
+     "why": "In 1787 and 1788 Madison and Hamilton were allies who wrote essays urging the states to ratify the Constitution. Their split came later, in the 1790s, over Hamilton's plans as Treasury secretary. It was Henry, not they, who feared a strong national government.",
+     "clue": "Their split came in the 1790s. What were they doing before it?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T12:15:29Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "He feared it gave the national government too much power",
+     "also_right": []
+    },
+    "b": {
+     "best": "Both wrote essays that urged ratifying the Constitution",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
  "draft": {
   "title": "Leaders of the new nation",
   "card": [
    [
     "George Washington",
-    "Led the Continental Army, then presided over the Constitutional Convention in 1787. He became the first president in 1789 and set early examples for the office."
+    "Presided over the Constitutional Convention in 1787 and became the first president in 1789. He usually sided with Hamilton, and set examples for the office, such as serving only two terms."
    ],
    [
     "James Madison",
-    "A Virginian who did much to plan the Constitution. He wanted a strong national government with powers split between its branches."
+    "Did much to plan the Constitution, then wrote essays with Hamilton and John Jay urging the states to ratify it. In the 1790s he opposed Hamilton's plans as giving the national government too much power."
    ],
    [
     "Alexander Hamilton",
-    "Washington's first Treasury secretary. He backed strong national power and wanted the national government to take on the states' war debts."
+    "Wanted a strong national government and urged ratification. As Washington's first Treasury secretary, he got it to take on the states' war debts and to set up a national bank."
    ],
    [
     "Patrick Henry",
-    "A Virginian who opposed the Constitution. He feared a strong national government would threaten the liberty of the states and their people."
+    "A Virginian who led the fight against ratification in his state in 1788. He feared a strong national government would threaten the liberty of the states and their people."
    ]
   ],
-  "remember": "The new nation's leaders agreed on needing a government, but argued over how much power it should hold.",
+  "remember": "The leaders argued over the national government's power, first over ratifying the Constitution, then over Hamilton's plans.",
   "a": {
-   "q": "Which leader opposed the Constitution because he feared a strong national government?",
+   "q": "In the 1788 debate over ratifying the Constitution, what was Patrick Henry's main objection to it?",
    "opts": [
-    "Patrick Henry",
-    "James Madison",
-    "Alexander Hamilton",
-    "George Washington"
+    "He feared it gave the national government too much power",
+    "He feared it gave the national government too little power",
+    "He thought it gave the state governments too much power",
+    "He thought it gave the president too little power to act"
    ],
-   "why": "Patrick Henry feared that a strong national government would threaten liberty. Madison, Hamilton and Washington all backed a stronger national government, so choosing one of them means mixing up their roles.",
-   "clue": "Which leader on the card argued against the new plan?"
+   "why": "Henry feared that a strong national government would threaten the liberty of the states and their people. The opposite worry, that the national government was too weak, is what led Madison and Hamilton to back the Constitution.",
+   "clue": "Think about what he wanted to protect."
   },
   "b": {
    "d": 3,
-   "q": "Two leaders disagreed about the Constitution. Which pair held opposing views on how much power the national government should have?",
+   "q": "A student writes that Madison and Hamilton were on opposite sides from the start. Which fact from 1787 and 1788 shows this is wrong?",
    "opts": [
-    "Henry and Madison",
-    "Madison and Hamilton",
-    "Hamilton and Washington",
-    "Washington and Madison"
+    "Both wrote essays that urged ratifying the Constitution",
+    "Both feared a strong national government, as Henry did",
+    "Both refused to take part in the Constitutional Convention",
+    "Both called for keeping the Articles of Confederation"
    ],
-   "why": "Henry feared a strong national government, while Madison wanted one with powers split between branches. Madison, Hamilton and Washington all backed a stronger national government, so any pair made only of them does not show a disagreement over power. Henry and Madison both came from Virginia, but that does not mean they agreed.",
-   "clue": "Only one leader on the card opposed the Constitution."
+   "why": "In 1787 and 1788 Madison and Hamilton were allies who wrote essays urging the states to ratify the Constitution. Their split came later, in the 1790s, over Hamilton's plans as Treasury secretary. It was Henry, not they, who feared a strong national government.",
+   "clue": "Their split came in the 1790s. What were they doing before it?"
   }
  },
  "local": [],
  "check": {
   "a": {
-   "best": "Patrick Henry",
+   "best": "He feared it gave the national government too much power",
    "also_right": []
   },
   "b": {
-   "best": "Henry and Madison",
+   "best": "Both wrote essays that urged ratifying the Constitution",
    "also_right": []
   },
-  "problems": [
-   {
-    "part": "b",
-    "kind": "other",
-    "detail": "The clue 'Only one leader on the card opposed the Constitution' points straight to Henry, and only one option includes Henry. Combined with question a, a student can pick the answer without understanding the disagreement over power."
-   },
-   {
-    "part": "b",
-    "kind": "wording",
-    "detail": "'Held opposing views on how much power the national government should have' is not tied to the ratification debate. Madison and Hamilton famously split in the 1790s over the national bank and how broadly to read federal power. A well-read Year 12 student could defend 'Madison and Hamilton'. The stem should say 'during the debate over ratifying the Constitution' or similar."
-   }
-  ],
+  "problems": [],
   "sure": "high",
   "sensitive": "none",
-  "summary": "The facts check out and both questions have one clear answer. However, question b's clue gives the answer away, and its stem should be tied to the ratification debate, because Madison and Hamilton later disagreed over federal power."
+  "summary": "No problems found."
  },
  "sensitive": "none",
- "flags": [
-  "Question b, other: The clue 'Only one leader on the card opposed the Constitution' points straight to Henry, and only one option includes Henry. Combined with question a, a student can pick the answer without understanding the disagreement over power.",
-  "Question b, wording: 'Held opposing views on how much power the national government should have' is not tied to the ratification debate. Madison and Hamilton famously split in the 1790s over the national bank and how broadly to read federal power. A well-read Year 12 student could defend 'Madison and Hamilton'. The stem should say 'during the debate over ratifying the Constitution' or similar."
- ]
+ "flags": [],
+ "final": {
+  "title": "Leaders of the new nation",
+  "card": [
+   [
+    "George Washington",
+    "Presided over the Constitutional Convention in 1787 and became the first president in 1789. He usually sided with Hamilton, and set examples for the office, such as serving only two terms."
+   ],
+   [
+    "James Madison",
+    "Did much to plan the Constitution, then wrote essays with Hamilton and John Jay urging the states to ratify it. In the 1790s he opposed Hamilton's plans as giving the national government too much power."
+   ],
+   [
+    "Alexander Hamilton",
+    "Wanted a strong national government and urged ratification. As Washington's first Treasury secretary, he got it to take on the states' war debts and to set up a national bank."
+   ],
+   [
+    "Patrick Henry",
+    "A Virginian who led the fight against ratification in his state in 1788. He feared a strong national government would threaten the liberty of the states and their people."
+   ]
+  ],
+  "remember": "The leaders argued over the national government's power, first over ratifying the Constitution, then over Hamilton's plans.",
+  "a": {
+   "q": "In the 1788 debate over ratifying the Constitution, what was Patrick Henry's main objection to it?",
+   "opts": [
+    "He feared it gave the national government too much power",
+    "He feared it gave the national government too little power",
+    "He thought it gave the state governments too much power",
+    "He thought it gave the president too little power to act"
+   ],
+   "why": "Henry feared that a strong national government would threaten the liberty of the states and their people. The opposite worry, that the national government was too weak, is what led Madison and Hamilton to back the Constitution.",
+   "clue": "Think about what he wanted to protect."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes that Madison and Hamilton were on opposite sides from the start. Which fact from 1787 and 1788 shows this is wrong?",
+   "opts": [
+    "Both wrote essays that urged ratifying the Constitution",
+    "Both feared a strong national government, as Henry did",
+    "Both refused to take part in the Constitutional Convention",
+    "Both called for keeping the Articles of Confederation"
+   ],
+   "why": "In 1787 and 1788 Madison and Hamilton were allies who wrote essays urging the states to ratify the Constitution. Their split came later, in the 1790s, over Hamilton's plans as Treasury secretary. It was Henry, not they, who feared a strong national government.",
+   "clue": "Their split came in the 1790s. What were they doing before it?"
+  }
+ },
+ "checked_by": "claude-code"
 }

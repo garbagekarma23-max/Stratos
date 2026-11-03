@@ -41,7 +41,19 @@ MADE_COURSES.push({
             "bus-corporate-culture-unit-3"
           ]
         },
-        {"id": "vic-bus-u34-1-2", "title": "Motivating employees", "check": "checked", "points": []},
+        {
+          "id": "vic-bus-u34-1-2",
+          "title": "Motivating employees",
+          "check": "checked",
+          "points": [
+            "bus-maslow-s-hierarchy-needs",
+            "bus-locke-latham-s-goal",
+            "bus-lawrence-nohria-s-four",
+            "bus-performance-related-pay",
+            "bus-career-advancement-training-as",
+            "bus-support-sanction-strategies"
+          ]
+        },
         {
           "id": "vic-bus-u34-1-3",
           "title": "Managing employees",

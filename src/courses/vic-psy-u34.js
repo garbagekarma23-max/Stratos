@@ -33,7 +33,21 @@ MADE_COURSES.push({
             "psy-synaptic-plasticity"
           ]
         },
-        {"id": "vic-psy-u34-1-2", "title": "Stress", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u34-1-2",
+          "title": "Stress",
+          "check": "checked",
+          "points": [
+            "psy-stress-stressors",
+            "psy-fight-flight-or-freeze",
+            "psy-cortisol",
+            "psy-general-adaptation-syndrome",
+            "psy-transactional-model-stress",
+            "psy-gut-brain-axis",
+            "psy-approach-avoidance-coping",
+            "psy-coping-flexibility-exercise"
+          ]
+        },
         {
           "id": "vic-psy-u34-1-3",
           "title": "Approaches to learning",
@@ -57,7 +71,18 @@ MADE_COURSES.push({
             "psy-brain-areas-memory"
           ]
         },
-        {"id": "vic-psy-u34-1-5", "title": "Memory in everyday life", "check": "checked", "points": []}
+        {
+          "id": "vic-psy-u34-1-5",
+          "title": "Memory in everyday life",
+          "check": "checked",
+          "points": [
+            "psy-autobiographical-memory-imagining-future",
+            "psy-alzheimer-s-disease-memory",
+            "psy-aphantasia",
+            "psy-mnemonics",
+            "psy-sung-narratives-songlines"
+          ]
+        }
       ]
     },
     {
@@ -82,8 +107,30 @@ MADE_COURSES.push({
           "check": "checked",
           "points": ["psy-partial-sleep-deprivation", "psy-circadian-rhythm-sleep-disorders", "psy-improving-sleep"]
         },
-        {"id": "vic-psy-u34-2-2", "title": "Mental wellbeing", "check": "checked", "points": []},
-        {"id": "vic-psy-u34-2-4", "title": "Specific phobia", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u34-2-2",
+          "title": "Mental wellbeing",
+          "check": "checked",
+          "points": [
+            "psy-mental-wellbeing-continuum",
+            "psy-ways-describing-mental-wellbeing",
+            "psy-social-emotional-wellbeing",
+            "psy-stress-anxiety-phobia-compared",
+            "psy-protective-factors-wellbeing",
+            "psy-cultural-determinants-wellbeing"
+          ]
+        },
+        {
+          "id": "vic-psy-u34-2-4",
+          "title": "Specific phobia",
+          "check": "checked",
+          "points": [
+            "psy-biological-factors-specific-phobia",
+            "psy-psychological-factors-specific-phobia",
+            "psy-social-factors-specific-phobia",
+            "psy-evidence-based-treatments-phobia"
+          ]
+        },
         {
           "id": "vic-psy-u34-2-3",
           "title": "Research methods and evidence",

@@ -24,14 +24,18 @@
    0.334
   ]
  ],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:33Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:04Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T08:24:32Z write: done",
   "2026-11-01T08:33:50Z check: for review (mental-health)",
-  "2026-11-02T06:20:06Z review: rejected, to be written again"
+  "2026-11-02T06:20:06Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: for review (mental-health)",
+  "2026-11-03T11:27:46Z review: approved as written"
  ],
  "sent": {
   "match": 1,
@@ -85,5 +89,149 @@
    "clue": "Which word describes a pattern over time?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "A youth health focus",
+    "card": [
+     "A youth health focus means studying one issue in depth, such as mental health or body image, rather than youth health in general.",
+     "One issue can affect each dimension of health: physical, social, emotional, mental and spiritual. Poor mental health, for example, can affect sleep (physical) and time with friends (social).",
+     "Data show trends, which are patterns over time. A trend shows whether an issue is becoming more common, less common or staying about the same.",
+     "Together, the dimensions show how the issue affects young people's lives, and the trends show whether it is growing or easing."
+    ],
+    "remember": "Pick one issue: trace its effects on each dimension, then check its trend in the data.",
+    "a": {
+     "q": "A student studying body image notes it can lead to skipping meals, avoiding friends and feeling ashamed. What is the student describing?",
+     "opts": [
+      "The issue's effects across dimensions of health",
+      "The issue's trend in the data over many years",
+      "The causes of the issue in young people's lives",
+      "The issue's effect on one dimension of health"
+     ],
+     "why": "Skipping meals is physical, avoiding friends is social and feeling ashamed is emotional, so the student is describing effects across several dimensions. Nothing here is measured over time, so it is not a trend.",
+     "clue": "Sort each effect into a dimension of health."
+    },
+    "b": {
+     "d": 2,
+     "q": "Survey figures show the share of young Victorians with high psychological distress has risen over ten years. What does this tell a student about the issue?",
+     "opts": [
+      "How common it is becoming over time",
+      "How it affects each dimension of health",
+      "What protects young people from it",
+      "How much it costs to treat each year"
+     ],
+     "why": "A change in a figure over ten years is a trend: it shows whether the issue is becoming more or less common. The figures say nothing about its effect on each dimension or its cost.",
+     "clue": "Ten years of figures show a pattern over time."
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "The issue's effects across dimensions of health",
+     "also_right": []
+    },
+    "b": {
+     "best": "How common it is becoming over time",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "mental-health",
+    "summary": "No problems found. Marked mental-health because the examples and question b are about psychological distress, and question a mentions skipping meals over body image."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "A youth health focus",
+  "card": [
+   "A youth health focus means studying one issue in depth, such as mental health or body image, rather than youth health in general.",
+   "One issue can affect each dimension of health: physical, social, emotional, mental and spiritual. Poor mental health, for example, can affect sleep (physical) and time with friends (social).",
+   "Data show trends, which are patterns over time. A trend shows whether an issue is becoming more common, less common or staying about the same.",
+   "Together, the dimensions show how the issue affects young people's lives, and the trends show whether it is growing or easing."
+  ],
+  "remember": "Pick one issue: trace its effects on each dimension, then check its trend in the data.",
+  "a": {
+   "q": "A student studying body image notes it can lead to skipping meals, avoiding friends and feeling ashamed. What is the student describing?",
+   "opts": [
+    "The issue's effects across dimensions of health",
+    "The issue's trend in the data over many years",
+    "The causes of the issue in young people's lives",
+    "The issue's effect on one dimension of health"
+   ],
+   "why": "Skipping meals is physical, avoiding friends is social and feeling ashamed is emotional, so the student is describing effects across several dimensions. Nothing here is measured over time, so it is not a trend.",
+   "clue": "Sort each effect into a dimension of health."
+  },
+  "b": {
+   "d": 2,
+   "q": "Survey figures show the share of young Victorians with high psychological distress has risen over ten years. What does this tell a student about the issue?",
+   "opts": [
+    "How common it is becoming over time",
+    "How it affects each dimension of health",
+    "What protects young people from it",
+    "How much it costs to treat each year"
+   ],
+   "why": "A change in a figure over ten years is a trend: it shows whether the issue is becoming more or less common. The figures say nothing about its effect on each dimension or its cost.",
+   "clue": "Ten years of figures show a pattern over time."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The issue's effects across dimensions of health",
+   "also_right": []
+  },
+  "b": {
+   "best": "How common it is becoming over time",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "No problems found. Marked mental-health because the examples and question b are about psychological distress, and question a mentions skipping meals over body image."
+ },
+ "sensitive": "mental-health",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "A youth health focus",
+  "card": [
+   "A youth health focus means studying one issue in depth, such as mental health or body image, rather than youth health in general.",
+   "One issue can affect each dimension of health: physical, social, emotional, mental and spiritual. Poor mental health, for example, can affect sleep (physical) and time with friends (social).",
+   "Data show trends, which are patterns over time. A trend shows whether an issue is becoming more common, less common or staying about the same.",
+   "Together, the dimensions show how the issue affects young people's lives, and the trends show whether it is growing or easing."
+  ],
+  "remember": "Pick one issue: trace its effects on each dimension, then check its trend in the data.",
+  "a": {
+   "q": "A student studying body image notes it can lead to skipping meals, avoiding friends and feeling ashamed. What is the student describing?",
+   "opts": [
+    "The issue's effects across dimensions of health",
+    "The issue's trend in the data over many years",
+    "The causes of the issue in young people's lives",
+    "The issue's effect on one dimension of health"
+   ],
+   "why": "Skipping meals is physical, avoiding friends is social and feeling ashamed is emotional, so the student is describing effects across several dimensions. Nothing here is measured over time, so it is not a trend.",
+   "clue": "Sort each effect into a dimension of health."
+  },
+  "b": {
+   "d": 2,
+   "q": "Survey figures show the share of young Victorians with high psychological distress has risen over ten years. What does this tell a student about the issue?",
+   "opts": [
+    "How common it is becoming over time",
+    "How it affects each dimension of health",
+    "What protects young people from it",
+    "How much it costs to treat each year"
+   ],
+   "why": "A change in a figure over ten years is a trend: it shows whether the issue is becoming more or less common. The figures say nothing about its effect on each dimension or its cost.",
+   "clue": "Ten years of figures show a pattern over time."
+  }
+ },
+ "cleared_by": "owner"
 }

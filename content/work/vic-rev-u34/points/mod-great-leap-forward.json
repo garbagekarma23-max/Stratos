@@ -3,14 +3,18 @@
  "title": "The Great Leap Forward",
  "brief": "e39df5e29f19",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:43Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:08Z write: failed the content check, writing again",
   "2026-11-01T15:05:32Z write: done",
   "2026-11-01T17:33:08Z check: for review (other-sensitive)",
-  "2026-11-02T06:26:10Z review: rejected, to be written again"
+  "2026-11-02T06:26:10Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: for review (other-sensitive)",
+  "2026-11-03T11:27:54Z review: approved as written"
  ],
  "sent": {
   "write": 3,
@@ -54,5 +58,149 @@
    "clue": "What did the state use to decide how much grain to take?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "The Great Leap Forward",
+    "card": [
+     "The Great Leap Forward began in 1958. Mao Zedong wanted China to industrialise and raise farm output fast, using mass labour instead of costly machines.",
+     "Villages were merged into huge people's communes, which ran farming, local industry, communal kitchens and schools. Private plots were taken away.",
+     "Millions of peasants were sent to make steel in backyard furnaces or work on big projects, leaving fewer to farm, and much of the steel was useless. Officials, afraid to admit failure, claimed false record harvests.",
+     "The state took grain based on those false figures, leaving villages short. A famine followed from 1959 to 1961 in which millions died. Estimates vary widely, mostly from about 15 to 45 million."
+    ],
+    "remember": "A rush to industrialise pulled labour off farms, false harvest reports hid the shortfall, and millions died in famine.",
+    "a": {
+     "q": "What turned the Great Leap Forward into a famine?",
+     "opts": [
+      "Less farm labour and grain taken on false figures",
+      "Landlords taking back land and hoarding grain",
+      "Foreign countries blocking all grain imports",
+      "Communes closing and peasants leaving the land"
+     ],
+     "why": "Peasants were pulled off the fields for steel and other projects, and officials overstated harvests, so the state took too much grain. Landlords had already lost their land and power in land reform, so they played no part.",
+     "clue": "Think about where workers went and what officials reported."
+    },
+    "b": {
+     "d": 3,
+     "q": "In 1959 a commune leader in Henan, fearing punishment, reports a record harvest that never happened. What is the most likely result for the villagers?",
+     "opts": [
+      "The state takes more grain than they can spare",
+      "The state sends extra grain to help the village",
+      "The commune is let off its grain quota that year",
+      "The leader is punished for reporting a failure"
+     ],
+     "why": "The state set its grain demands from reported harvests. An inflated figure meant it took grain the village could not spare, leaving too little to eat. Extra help would follow a bad report, not a record one.",
+     "clue": "What did the state use to decide how much grain to take?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Less farm labour and grain taken on false figures",
+     "also_right": []
+    },
+    "b": {
+     "best": "The state takes more grain than they can spare",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "other-sensitive",
+    "summary": "No problems found. The point is about a famine in which millions died, so it is marked other-sensitive."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The Great Leap Forward",
+  "card": [
+   "The Great Leap Forward began in 1958. Mao Zedong wanted China to industrialise and raise farm output fast, using mass labour instead of costly machines.",
+   "Villages were merged into huge people's communes, which ran farming, local industry, communal kitchens and schools. Private plots were taken away.",
+   "Millions of peasants were sent to make steel in backyard furnaces or work on big projects, leaving fewer to farm, and much of the steel was useless. Officials, afraid to admit failure, claimed false record harvests.",
+   "The state took grain based on those false figures, leaving villages short. A famine followed from 1959 to 1961 in which millions died. Estimates vary widely, mostly from about 15 to 45 million."
+  ],
+  "remember": "A rush to industrialise pulled labour off farms, false harvest reports hid the shortfall, and millions died in famine.",
+  "a": {
+   "q": "What turned the Great Leap Forward into a famine?",
+   "opts": [
+    "Less farm labour and grain taken on false figures",
+    "Landlords taking back land and hoarding grain",
+    "Foreign countries blocking all grain imports",
+    "Communes closing and peasants leaving the land"
+   ],
+   "why": "Peasants were pulled off the fields for steel and other projects, and officials overstated harvests, so the state took too much grain. Landlords had already lost their land and power in land reform, so they played no part.",
+   "clue": "Think about where workers went and what officials reported."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1959 a commune leader in Henan, fearing punishment, reports a record harvest that never happened. What is the most likely result for the villagers?",
+   "opts": [
+    "The state takes more grain than they can spare",
+    "The state sends extra grain to help the village",
+    "The commune is let off its grain quota that year",
+    "The leader is punished for reporting a failure"
+   ],
+   "why": "The state set its grain demands from reported harvests. An inflated figure meant it took grain the village could not spare, leaving too little to eat. Extra help would follow a bad report, not a record one.",
+   "clue": "What did the state use to decide how much grain to take?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Less farm labour and grain taken on false figures",
+   "also_right": []
+  },
+  "b": {
+   "best": "The state takes more grain than they can spare",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "other-sensitive",
+  "summary": "No problems found. The point is about a famine in which millions died, so it is marked other-sensitive."
+ },
+ "sensitive": "other-sensitive",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "The Great Leap Forward",
+  "card": [
+   "The Great Leap Forward began in 1958. Mao Zedong wanted China to industrialise and raise farm output fast, using mass labour instead of costly machines.",
+   "Villages were merged into huge people's communes, which ran farming, local industry, communal kitchens and schools. Private plots were taken away.",
+   "Millions of peasants were sent to make steel in backyard furnaces or work on big projects, leaving fewer to farm, and much of the steel was useless. Officials, afraid to admit failure, claimed false record harvests.",
+   "The state took grain based on those false figures, leaving villages short. A famine followed from 1959 to 1961 in which millions died. Estimates vary widely, mostly from about 15 to 45 million."
+  ],
+  "remember": "A rush to industrialise pulled labour off farms, false harvest reports hid the shortfall, and millions died in famine.",
+  "a": {
+   "q": "What turned the Great Leap Forward into a famine?",
+   "opts": [
+    "Less farm labour and grain taken on false figures",
+    "Landlords taking back land and hoarding grain",
+    "Foreign countries blocking all grain imports",
+    "Communes closing and peasants leaving the land"
+   ],
+   "why": "Peasants were pulled off the fields for steel and other projects, and officials overstated harvests, so the state took too much grain. Landlords had already lost their land and power in land reform, so they played no part.",
+   "clue": "Think about where workers went and what officials reported."
+  },
+  "b": {
+   "d": 3,
+   "q": "In 1959 a commune leader in Henan, fearing punishment, reports a record harvest that never happened. What is the most likely result for the villagers?",
+   "opts": [
+    "The state takes more grain than they can spare",
+    "The state sends extra grain to help the village",
+    "The commune is let off its grain quota that year",
+    "The leader is punished for reporting a failure"
+   ],
+   "why": "The state set its grain demands from reported harvests. An inflated figure meant it took grain the village could not spare, leaving too little to eat. Extra help would follow a bad report, not a record one.",
+   "clue": "What did the state use to decide how much grain to take?"
+  }
+ },
+ "cleared_by": "owner"
 }

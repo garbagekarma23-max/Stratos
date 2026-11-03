@@ -3,7 +3,7 @@
  "title": "The Declaration of Independence",
  "brief": "5905b0604c08",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:43Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -11,17 +11,22 @@
   "2026-11-01T15:05:32Z write: done",
   "2026-11-01T17:33:08Z check: flagged",
   "2026-11-02T04:27:52Z fix: suggested",
-  "2026-11-02T06:25:57Z review: rejected, to be written again"
+  "2026-11-02T06:25:57Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: flagged",
+  "2026-11-03T11:40:51Z fix: suggested",
+  "2026-11-03T12:06:48Z review: approved with the fix"
  ],
  "sent": {
   "write": 3,
   "check": 1,
-  "fix": 1
+  "fix": 2
  },
  "usd": {
   "write": 0.01137,
   "check": 0.01773,
-  "fix": 0.0216
+  "fix": 0.03644
  },
  "note": "",
  "rejected": {
@@ -57,5 +62,197 @@
    "clue": "Ask what a statement of reasons can and cannot do on a battlefield."
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "The Declaration of Independence",
+    "card": [
+     "On 4 July 1776 the Continental Congress, made up of delegates from the thirteen colonies, adopted the Declaration of Independence. It stated that the colonies were now free and independent states.",
+     "Drafted mainly by Thomas Jefferson, it opens with ideas of rights and consent. It then argues that a people may break from a government that abuses its power.",
+     "Most of the document is a list of grievances, or complaints, against King George III, such as keeping soldiers in the colonies in peacetime and taxing colonists without their consent.",
+     "The grievances blamed the king, presenting the break as a response to tyranny. The Declaration did not end the war: fighting went on until 1781, and Britain recognised independence in 1783."
+    ],
+    "remember": "The Declaration announced the break and used a list of the king's wrongs to justify it.",
+    "a": {
+     "q": "What was the main purpose of the long list of grievances in the Declaration?",
+     "opts": [
+      "To justify breaking away from British rule",
+      "To ask Parliament to repeal the colonial taxes",
+      "To set out the laws of the new United States",
+      "To offer peace terms the king could accept"
+     ],
+     "why": "The grievances were the reasons for independence: they argued the king had abused his power, so the colonists were right to break away. It was not a request for repeal, because the document already declared the colonies independent.",
+     "clue": "Think about what the colonists needed to show the world."
+    },
+    "b": {
+     "d": 3,
+     "q": "A student says the Declaration of Independence won the colonies their freedom in 1776. Which reply best corrects the student?",
+     "opts": [
+      "It declared independence, but war decided it later",
+      "It ended the war, as Britain accepted it at once",
+      "It was a petition asking the king for more rights",
+      "It was signed by Britain as a peace treaty in 1776"
+     ],
+     "why": "The Declaration stated that the colonies were independent and gave reasons, but Britain did not accept it. Fighting went on until 1781, and Britain recognised independence only in 1783.",
+     "clue": "Did Britain accept the Declaration?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "To justify breaking away from British rule",
+     "also_right": []
+    },
+    "b": {
+     "best": "It declared independence, but war decided it later",
+     "also_right": []
+    },
+    "problems": [
+     {
+      "part": "card",
+      "kind": "fact",
+      "detail": "\"Fighting went on until 1781\" suggests all fighting stopped in 1781. The last major battle, Yorktown, was in 1781, but smaller fighting on land and at sea went on into 1782 and 1783. Saying \"major fighting ended at Yorktown in 1781\" would be accurate. The why for b repeats the same wording."
+     }
+    ],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "Both questions are sound and have one right answer. One small fact to tighten: the card says fighting went on until 1781, when only major fighting ended then (Yorktown), and smaller fighting continued until the 1783 peace."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "The Declaration of Independence",
+  "card": [
+   "On 4 July 1776 the Continental Congress, made up of delegates from the thirteen colonies, adopted the Declaration of Independence. It stated that the colonies were now free and independent states.",
+   "Drafted mainly by Thomas Jefferson, it opens with ideas of rights and consent. It then argues that a people may break from a government that abuses its power.",
+   "Most of the document is a list of grievances, or complaints, against King George III, such as keeping soldiers in the colonies in peacetime and taxing colonists without their consent.",
+   "The grievances blamed the king, presenting the break as a response to tyranny. The Declaration did not end the war: fighting went on until 1781, and Britain recognised independence in 1783."
+  ],
+  "remember": "The Declaration announced the break and used a list of the king's wrongs to justify it.",
+  "a": {
+   "q": "What was the main purpose of the long list of grievances in the Declaration?",
+   "opts": [
+    "To justify breaking away from British rule",
+    "To ask Parliament to repeal the colonial taxes",
+    "To set out the laws of the new United States",
+    "To offer peace terms the king could accept"
+   ],
+   "why": "The grievances were the reasons for independence: they argued the king had abused his power, so the colonists were right to break away. It was not a request for repeal, because the document already declared the colonies independent.",
+   "clue": "Think about what the colonists needed to show the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says the Declaration of Independence won the colonies their freedom in 1776. Which reply best corrects the student?",
+   "opts": [
+    "It declared independence, but war decided it later",
+    "It ended the war, as Britain accepted it at once",
+    "It was a petition asking the king for more rights",
+    "It was signed by Britain as a peace treaty in 1776"
+   ],
+   "why": "The Declaration stated that the colonies were independent and gave reasons, but Britain did not accept it. Fighting went on until 1781, and Britain recognised independence only in 1783.",
+   "clue": "Did Britain accept the Declaration?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To justify breaking away from British rule",
+   "also_right": []
+  },
+  "b": {
+   "best": "It declared independence, but war decided it later",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "\"Fighting went on until 1781\" suggests all fighting stopped in 1781. The last major battle, Yorktown, was in 1781, but smaller fighting on land and at sea went on into 1782 and 1783. Saying \"major fighting ended at Yorktown in 1781\" would be accurate. The why for b repeats the same wording."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions are sound and have one right answer. One small fact to tighten: the card says fighting went on until 1781, when only major fighting ended then (Yorktown), and smaller fighting continued until the 1783 peace."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: \"Fighting went on until 1781\" suggests all fighting stopped in 1781. The last major battle, Yorktown, was in 1781, but smaller fighting on land and at sea went on into 1782 and 1783. Saying \"major fighting ended at Yorktown in 1781\" would be accurate. The why for b repeats the same wording."
+ ],
+ "checked_by": "claude-code",
+ "proposal": {
+  "title": "The Declaration of Independence",
+  "card": [
+   "On 4 July 1776 the Continental Congress, made up of delegates from the thirteen colonies, adopted the Declaration of Independence. It stated that the colonies were now free and independent states.",
+   "Drafted mainly by Thomas Jefferson, it opens with ideas of rights and consent. It then argues that a people may break from a government that abuses its power.",
+   "Most of the document is a list of grievances, or complaints, against King George III, such as keeping soldiers in the colonies in peacetime and taxing colonists without their consent.",
+   "The grievances blamed the king, presenting the break as a response to tyranny. The Declaration did not end the war: major fighting ended at Yorktown in 1781, and Britain recognised independence in 1783."
+  ],
+  "remember": "The Declaration announced the break and used a list of the king's wrongs to justify it.",
+  "a": {
+   "q": "What was the main purpose of the long list of grievances in the Declaration?",
+   "opts": [
+    "To justify breaking away from British rule",
+    "To ask Parliament to repeal the colonial taxes",
+    "To set out the laws of the new United States",
+    "To offer peace terms the king could accept"
+   ],
+   "why": "The grievances were the reasons for independence: they argued the king had abused his power, so the colonists were right to break away. It was not a request for repeal, because the document already declared the colonies independent.",
+   "clue": "Think about what the colonists needed to show the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says the Declaration of Independence won the colonies their freedom in 1776. Which reply best corrects the student?",
+   "opts": [
+    "It declared independence, but war decided it later",
+    "It ended the war, as Britain accepted it at once",
+    "It was a petition asking the king for more rights",
+    "It was signed by Britain as a peace treaty in 1776"
+   ],
+   "why": "The Declaration stated that the colonies were independent and gave reasons, but Britain did not accept it. Major fighting ended at Yorktown in 1781, and Britain recognised independence only in 1783.",
+   "clue": "Did Britain accept the Declaration?"
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Declaration of Independence",
+  "card": [
+   "On 4 July 1776 the Continental Congress, made up of delegates from the thirteen colonies, adopted the Declaration of Independence. It stated that the colonies were now free and independent states.",
+   "Drafted mainly by Thomas Jefferson, it opens with ideas of rights and consent. It then argues that a people may break from a government that abuses its power.",
+   "Most of the document is a list of grievances, or complaints, against King George III, such as keeping soldiers in the colonies in peacetime and taxing colonists without their consent.",
+   "The grievances blamed the king, presenting the break as a response to tyranny. The Declaration did not end the war: major fighting ended at Yorktown in 1781, and Britain recognised independence in 1783."
+  ],
+  "remember": "The Declaration announced the break and used a list of the king's wrongs to justify it.",
+  "a": {
+   "q": "What was the main purpose of the long list of grievances in the Declaration?",
+   "opts": [
+    "To justify breaking away from British rule",
+    "To ask Parliament to repeal the colonial taxes",
+    "To set out the laws of the new United States",
+    "To offer peace terms the king could accept"
+   ],
+   "why": "The grievances were the reasons for independence: they argued the king had abused his power, so the colonists were right to break away. It was not a request for repeal, because the document already declared the colonies independent.",
+   "clue": "Think about what the colonists needed to show the world."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student says the Declaration of Independence won the colonies their freedom in 1776. Which reply best corrects the student?",
+   "opts": [
+    "It declared independence, but war decided it later",
+    "It ended the war, as Britain accepted it at once",
+    "It was a petition asking the king for more rights",
+    "It was signed by Britain as a peace treaty in 1776"
+   ],
+   "why": "The Declaration stated that the colonies were independent and gave reasons, but Britain did not accept it. Major fighting ended at Yorktown in 1781, and Britain recognised independence only in 1783.",
+   "clue": "Did Britain accept the Declaration?"
+  }
+ },
+ "cleared_by": "owner"
 }

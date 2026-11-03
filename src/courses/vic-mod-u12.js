@@ -30,7 +30,12 @@ MADE_COURSES.push({
             "mod-league-nations"
           ]
         },
-        {"id": "vic-mod-u12-1-2-2", "title": "Ideologies", "check": "checked", "points": []},
+        {
+          "id": "vic-mod-u12-1-2-2",
+          "title": "Ideologies",
+          "check": "checked",
+          "points": ["mod-liberal-democracy", "mod-communism-soviet-union", "mod-fascism-italy-2", "mod-nazism-germany"]
+        },
         {
           "id": "vic-mod-u12-1-3",
           "title": "Changing political systems",

@@ -20,13 +20,16 @@
    0.206
   ]
  ],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:20Z new, match",
   "2026-11-01T08:04:35Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
   "2026-11-01T08:14:08Z write: done",
   "2026-11-01T08:24:34Z check: for review (other-sensitive)",
-  "2026-11-02T06:23:55Z review: rejected, to be written again"
+  "2026-11-02T06:23:55Z review: rejected, to be written again",
+  "2026-11-03T10:25:23Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: passed, cleared"
  ],
  "sent": {
   "match": 1,
@@ -92,5 +95,185 @@
    "clue": "Was the trial a real test of guilt?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:23Z",
+   "step": "write",
+   "version": {
+    "title": "Communism in the Soviet Union",
+    "card": [
+     [
+      "One-party rule",
+      "after the Bolsheviks seized power in 1917, Lenin's Communist Party ruled alone. Other parties were banned, and elections offered no real choice."
+     ],
+     [
+      "Stalin",
+      "after Lenin died in 1924, Stalin outmanoeuvred his rivals in the party. By the late 1920s he held supreme power."
+     ],
+     [
+      "State control",
+      "the state took over large industry, and from 1928 Stalin's five-year plans set what factories made. Collectivisation forced peasants onto collective farms run under state control."
+     ],
+     [
+      "Terror",
+      "the secret police, show trials and labour camps known as the Gulag were used against opponents. In the Great Terror of 1936 to 1938, hundreds of thousands were executed."
+     ]
+    ],
+    "remember": "Soviet communism meant one party, state control of the economy and terror against opponents.",
+    "a": {
+     "q": "What did collectivisation change about farming in the Soviet Union?",
+     "opts": [
+      "Private farms were merged into state-controlled farms",
+      "Peasants were given bigger plots to farm for profit",
+      "Farms were handed to councils chosen in free votes",
+      "Landowners were paid a fair price to sell to the state"
+     ],
+     "why": "Collectivisation took farmland out of private hands and forced peasants onto collective farms under state control. Farming for private profit was the opposite of what Stalin wanted.",
+     "clue": "Who controlled the land afterwards?"
+    },
+    "b": {
+     "d": 2,
+     "q": "In 1937 a factory manager in Leningrad is arrested by the secret police, confesses at a staged trial and is sent to a labour camp. What does this show about Stalin's rule?",
+     "opts": [
+      "Terror was used to remove possible opponents",
+      "Courts were free to rule against the state",
+      "Rival parties could still compete for power",
+      "Managers were chosen through free elections"
+     ],
+     "why": "Arrests by the secret police, staged trials and labour camps were tools of terror. A trial with its result decided beforehand shows that courts were not free to rule against the state.",
+     "clue": "Was the trial a real test of guilt?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Private farms were merged into state-controlled farms",
+     "also_right": []
+    },
+    "b": {
+     "best": "Terror was used to remove possible opponents",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "none",
+    "summary": "No problems found."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Communism in the Soviet Union",
+  "card": [
+   [
+    "One-party rule",
+    "after the Bolsheviks seized power in 1917, Lenin's Communist Party ruled alone. Other parties were banned, and elections offered no real choice."
+   ],
+   [
+    "Stalin",
+    "after Lenin died in 1924, Stalin outmanoeuvred his rivals in the party. By the late 1920s he held supreme power."
+   ],
+   [
+    "State control",
+    "the state took over large industry, and from 1928 Stalin's five-year plans set what factories made. Collectivisation forced peasants onto collective farms run under state control."
+   ],
+   [
+    "Terror",
+    "the secret police, show trials and labour camps known as the Gulag were used against opponents. In the Great Terror of 1936 to 1938, hundreds of thousands were executed."
+   ]
+  ],
+  "remember": "Soviet communism meant one party, state control of the economy and terror against opponents.",
+  "a": {
+   "q": "What did collectivisation change about farming in the Soviet Union?",
+   "opts": [
+    "Private farms were merged into state-controlled farms",
+    "Peasants were given bigger plots to farm for profit",
+    "Farms were handed to councils chosen in free votes",
+    "Landowners were paid a fair price to sell to the state"
+   ],
+   "why": "Collectivisation took farmland out of private hands and forced peasants onto collective farms under state control. Farming for private profit was the opposite of what Stalin wanted.",
+   "clue": "Who controlled the land afterwards?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1937 a factory manager in Leningrad is arrested by the secret police, confesses at a staged trial and is sent to a labour camp. What does this show about Stalin's rule?",
+   "opts": [
+    "Terror was used to remove possible opponents",
+    "Courts were free to rule against the state",
+    "Rival parties could still compete for power",
+    "Managers were chosen through free elections"
+   ],
+   "why": "Arrests by the secret police, staged trials and labour camps were tools of terror. A trial with its result decided beforehand shows that courts were not free to rule against the state.",
+   "clue": "Was the trial a real test of guilt?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Private farms were merged into state-controlled farms",
+   "also_right": []
+  },
+  "b": {
+   "best": "Terror was used to remove possible opponents",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "No problems found."
+ },
+ "sensitive": "none",
+ "flags": [],
+ "final": {
+  "title": "Communism in the Soviet Union",
+  "card": [
+   [
+    "One-party rule",
+    "after the Bolsheviks seized power in 1917, Lenin's Communist Party ruled alone. Other parties were banned, and elections offered no real choice."
+   ],
+   [
+    "Stalin",
+    "after Lenin died in 1924, Stalin outmanoeuvred his rivals in the party. By the late 1920s he held supreme power."
+   ],
+   [
+    "State control",
+    "the state took over large industry, and from 1928 Stalin's five-year plans set what factories made. Collectivisation forced peasants onto collective farms run under state control."
+   ],
+   [
+    "Terror",
+    "the secret police, show trials and labour camps known as the Gulag were used against opponents. In the Great Terror of 1936 to 1938, hundreds of thousands were executed."
+   ]
+  ],
+  "remember": "Soviet communism meant one party, state control of the economy and terror against opponents.",
+  "a": {
+   "q": "What did collectivisation change about farming in the Soviet Union?",
+   "opts": [
+    "Private farms were merged into state-controlled farms",
+    "Peasants were given bigger plots to farm for profit",
+    "Farms were handed to councils chosen in free votes",
+    "Landowners were paid a fair price to sell to the state"
+   ],
+   "why": "Collectivisation took farmland out of private hands and forced peasants onto collective farms under state control. Farming for private profit was the opposite of what Stalin wanted.",
+   "clue": "Who controlled the land afterwards?"
+  },
+  "b": {
+   "d": 2,
+   "q": "In 1937 a factory manager in Leningrad is arrested by the secret police, confesses at a staged trial and is sent to a labour camp. What does this show about Stalin's rule?",
+   "opts": [
+    "Terror was used to remove possible opponents",
+    "Courts were free to rule against the state",
+    "Rival parties could still compete for power",
+    "Managers were chosen through free elections"
+   ],
+   "why": "Arrests by the secret police, staged trials and labour camps were tools of terror. A trial with its result decided beforehand shows that courts were not free to rule against the state.",
+   "clue": "Was the trial a real test of guilt?"
+  }
+ },
+ "cleared_by": "checker",
+ "checked_by": "claude-code"
 }

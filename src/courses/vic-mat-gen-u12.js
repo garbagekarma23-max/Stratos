@@ -102,7 +102,19 @@ MADE_COURSES.push({
             "mat-interpolation-extrapolation-2"
           ]
         },
-        {"id": "vic-mat-gen-u12-4-2", "title": "Graphs and networks", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-gen-u12-4-2",
+          "title": "Graphs and networks",
+          "check": "checked",
+          "points": [
+            "mat-vertices-edges-degree",
+            "mat-types-graphs-adjacency-matrix",
+            "mat-planar-graphs-euler-s",
+            "mat-walks-trails-paths-circuits",
+            "mat-shortest-paths",
+            "mat-trees-minimum-spanning-trees"
+          ]
+        },
         {
           "id": "vic-mat-gen-u12-2-3",
           "title": "Variation",

@@ -3,14 +3,18 @@
  "title": "Biological factors in specific phobia",
  "brief": "d11f054bca0a",
  "shortlist": [],
- "stage": "write",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:42Z write: the API refused it in the chapter request, so it is written on its own next",
   "2026-11-01T14:56:07Z write: failed the content check, writing again",
   "2026-11-01T15:05:31Z write: done",
   "2026-11-01T17:33:07Z check: for review (mental-health)",
-  "2026-11-02T06:25:44Z review: rejected, to be written again"
+  "2026-11-02T06:25:44Z review: rejected, to be written again",
+  "2026-11-03T10:25:24Z claude-code write: done, waiting for the Claude Code check",
+  "2026-11-03T10:44:36Z claude-code check: answered by a separate subagent",
+  "2026-11-03T10:44:36Z check: for review (mental-health)",
+  "2026-11-03T11:27:52Z review: approved as written"
  ],
  "sent": {
   "write": 3,
@@ -60,5 +64,167 @@
    "clue": "Which option is a change in the connections between neurons?"
   }
  },
- "rewrites": 1
+ "rewrites": 1,
+ "claude_code": [
+  {
+   "at": "2026-11-03T10:25:24Z",
+   "step": "write",
+   "version": {
+    "title": "Biological factors in specific phobia",
+    "card": [
+     "A specific phobia is an intense, irrational fear of one object or situation, such as heights. Biological factors can help it develop and keep it going.",
+     [
+      "GABA",
+      "the brain's main inhibitory neurotransmitter, which calms neural activity. Low GABA activity means fear circuits are calmed less, so fear responses can be stronger."
+     ],
+     [
+      "Long-term potentiation",
+      "LTP is the lasting strengthening of a connection between neurons that fire together often. When a fear is learned, LTP can strengthen the fear pathway."
+     ],
+     "Each time the feared thing is met and the fear pathway fires, it can grow stronger. The fear is then triggered more easily, and the phobia stays."
+    ],
+    "remember": "Weak calming from GABA and a fear pathway strengthened by LTP can build a phobia and hold it in place.",
+    "a": {
+     "q": "Which change in the brain could make a fear response stronger?",
+     "opts": [
+      "Lower GABA activity in fear circuits",
+      "Higher GABA activity in fear circuits",
+      "Weaker links in the fear pathway through LTP",
+      "Less firing between neurons in fear circuits"
+     ],
+     "why": "GABA calms neural activity, so lower GABA activity means fear circuits are calmed less and fear can be stronger. Higher GABA would calm them more, and LTP strengthens a pathway rather than weakening it.",
+     "clue": "GABA calms the brain, so think about what less of it does."
+    },
+    "b": {
+     "d": 3,
+     "q": "Leo fell from a ladder as a child. Now he fears heights, and his fear comes faster each time he is up high. Which biological process best explains the fear becoming easier to trigger?",
+     "opts": [
+      "LTP strengthening the neural fear pathway",
+      "Rising GABA activity calming fear circuits",
+      "Avoidance of heights bringing him relief",
+      "Stigma stopping him from seeking help"
+     ],
+     "why": "Each time the fear pathway fires, LTP can strengthen the connections between its neurons, so the fear is triggered more easily. Relief from avoidance is a psychological factor, not a change in the brain's connections.",
+     "clue": "Which option is a change in the links between neurons?"
+    }
+   },
+   "problems": []
+  },
+  {
+   "at": "2026-11-03T10:44:36Z",
+   "step": "check",
+   "check": {
+    "a": {
+     "best": "Lower GABA activity in fear circuits",
+     "also_right": []
+    },
+    "b": {
+     "best": "LTP strengthening the neural fear pathway",
+     "also_right": []
+    },
+    "problems": [],
+    "sure": "high",
+    "sensitive": "mental-health",
+    "summary": "No problems found. The point is about specific phobia, a mental health topic, so it needs the owner's review."
+   }
+  }
+ ],
+ "written_by": "claude-code",
+ "draft": {
+  "title": "Biological factors in specific phobia",
+  "card": [
+   "A specific phobia is an intense, irrational fear of one object or situation, such as heights. Biological factors can help it develop and keep it going.",
+   [
+    "GABA",
+    "the brain's main inhibitory neurotransmitter, which calms neural activity. Low GABA activity means fear circuits are calmed less, so fear responses can be stronger."
+   ],
+   [
+    "Long-term potentiation",
+    "LTP is the lasting strengthening of a connection between neurons that fire together often. When a fear is learned, LTP can strengthen the fear pathway."
+   ],
+   "Each time the feared thing is met and the fear pathway fires, it can grow stronger. The fear is then triggered more easily, and the phobia stays."
+  ],
+  "remember": "Weak calming from GABA and a fear pathway strengthened by LTP can build a phobia and hold it in place.",
+  "a": {
+   "q": "Which change in the brain could make a fear response stronger?",
+   "opts": [
+    "Lower GABA activity in fear circuits",
+    "Higher GABA activity in fear circuits",
+    "Weaker links in the fear pathway through LTP",
+    "Less firing between neurons in fear circuits"
+   ],
+   "why": "GABA calms neural activity, so lower GABA activity means fear circuits are calmed less and fear can be stronger. Higher GABA would calm them more, and LTP strengthens a pathway rather than weakening it.",
+   "clue": "GABA calms the brain, so think about what less of it does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo fell from a ladder as a child. Now he fears heights, and his fear comes faster each time he is up high. Which biological process best explains the fear becoming easier to trigger?",
+   "opts": [
+    "LTP strengthening the neural fear pathway",
+    "Rising GABA activity calming fear circuits",
+    "Avoidance of heights bringing him relief",
+    "Stigma stopping him from seeking help"
+   ],
+   "why": "Each time the fear pathway fires, LTP can strengthen the connections between its neurons, so the fear is triggered more easily. Relief from avoidance is a psychological factor, not a change in the brain's connections.",
+   "clue": "Which option is a change in the links between neurons?"
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Lower GABA activity in fear circuits",
+   "also_right": []
+  },
+  "b": {
+   "best": "LTP strengthening the neural fear pathway",
+   "also_right": []
+  },
+  "problems": [],
+  "sure": "high",
+  "sensitive": "mental-health",
+  "summary": "No problems found. The point is about specific phobia, a mental health topic, so it needs the owner's review."
+ },
+ "sensitive": "mental-health",
+ "flags": [],
+ "checked_by": "claude-code",
+ "final": {
+  "title": "Biological factors in specific phobia",
+  "card": [
+   "A specific phobia is an intense, irrational fear of one object or situation, such as heights. Biological factors can help it develop and keep it going.",
+   [
+    "GABA",
+    "the brain's main inhibitory neurotransmitter, which calms neural activity. Low GABA activity means fear circuits are calmed less, so fear responses can be stronger."
+   ],
+   [
+    "Long-term potentiation",
+    "LTP is the lasting strengthening of a connection between neurons that fire together often. When a fear is learned, LTP can strengthen the fear pathway."
+   ],
+   "Each time the feared thing is met and the fear pathway fires, it can grow stronger. The fear is then triggered more easily, and the phobia stays."
+  ],
+  "remember": "Weak calming from GABA and a fear pathway strengthened by LTP can build a phobia and hold it in place.",
+  "a": {
+   "q": "Which change in the brain could make a fear response stronger?",
+   "opts": [
+    "Lower GABA activity in fear circuits",
+    "Higher GABA activity in fear circuits",
+    "Weaker links in the fear pathway through LTP",
+    "Less firing between neurons in fear circuits"
+   ],
+   "why": "GABA calms neural activity, so lower GABA activity means fear circuits are calmed less and fear can be stronger. Higher GABA would calm them more, and LTP strengthens a pathway rather than weakening it.",
+   "clue": "GABA calms the brain, so think about what less of it does."
+  },
+  "b": {
+   "d": 3,
+   "q": "Leo fell from a ladder as a child. Now he fears heights, and his fear comes faster each time he is up high. Which biological process best explains the fear becoming easier to trigger?",
+   "opts": [
+    "LTP strengthening the neural fear pathway",
+    "Rising GABA activity calming fear circuits",
+    "Avoidance of heights bringing him relief",
+    "Stigma stopping him from seeking help"
+   ],
+   "why": "Each time the fear pathway fires, LTP can strengthen the connections between its neurons, so the fear is triggered more easily. Relief from avoidance is a psychological factor, not a change in the brain's connections.",
+   "clue": "Which option is a change in the links between neurons?"
+  }
+ },
+ "cleared_by": "owner"
 }

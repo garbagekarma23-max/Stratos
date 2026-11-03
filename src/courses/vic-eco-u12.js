@@ -18,7 +18,21 @@ MADE_COURSES.push({
     {
       "title": "Unit 1: Economic decision-making",
       "chapters": [
-        {"id": "vic-eco-u12-1-1", "title": "Thinking like an economist", "check": "checked", "points": []},
+        {
+          "id": "vic-eco-u12-1-1",
+          "title": "Thinking like an economist",
+          "check": "checked",
+          "points": [
+            "eco-microeconomics-macroeconomics",
+            "eco-positive-normative-statements",
+            "eco-factors-production",
+            "eco-basic-economic-problem",
+            "eco-opportunity-cost",
+            "eco-production-possibility-frontier",
+            "eco-economic-systems",
+            "eco-circular-flow-income"
+          ]
+        },
         {
           "id": "vic-eco-u12-1-2-2",
           "title": "Economic agents",

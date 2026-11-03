@@ -40,7 +40,19 @@ MADE_COURSES.push({
           "check": "checked",
           "points": ["hhd-indicators-youth-health", "hhd-health-status-australia-s", "hhd-factors-affecting-youth-health"]
         },
-        {"id": "vic-hhd-u12-1-3", "title": "Youth health and wellbeing", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u12-1-3",
+          "title": "Youth health and wellbeing",
+          "check": "checked",
+          "points": [
+            "hhd-areas-needing-action",
+            "hhd-health-promotion-young-people",
+            "hhd-youth-health-focus",
+            "hhd-risk-protective-factors",
+            "hhd-costs-health-issue",
+            "hhd-youth-advocacy"
+          ]
+        },
         {
           "id": "vic-hhd-u12-1-2",
           "title": "Nutrients",
@@ -79,9 +91,35 @@ MADE_COURSES.push({
             "hhd-move-from-youth-adulthood"
           ]
         },
-        {"id": "vic-hhd-u12-2-2-2", "title": "Relationships and parenting", "check": "checked", "points": []},
-        {"id": "vic-hhd-u12-2-3", "title": "Early life", "check": "checked", "points": []},
-        {"id": "vic-hhd-u12-2-2", "title": "Australia's health system", "check": "checked", "points": []},
+        {
+          "id": "vic-hhd-u12-2-2-2",
+          "title": "Relationships and parenting",
+          "check": "checked",
+          "points": ["hhd-healthy-respectful-relationships", "hhd-becoming-parent", "hhd-support-parents"]
+        },
+        {
+          "id": "vic-hhd-u12-2-3",
+          "title": "Early life",
+          "check": "checked",
+          "points": [
+            "hhd-prenatal-development",
+            "hhd-risks-before-birth",
+            "hhd-development-infancy-early-childhood",
+            "hhd-early-life-experiences",
+            "hhd-health-across-generations"
+          ]
+        },
+        {
+          "id": "vic-hhd-u12-2-2",
+          "title": "Australia's health system",
+          "check": "checked",
+          "points": [
+            "hhd-gps-allied-alternative-health",
+            "hhd-medicare",
+            "hhd-pharmaceutical-benefits-scheme",
+            "hhd-private-health-insurance"
+          ]
+        },
         {
           "id": "vic-hhd-u12-2-5",
           "title": "Youth health literacy",

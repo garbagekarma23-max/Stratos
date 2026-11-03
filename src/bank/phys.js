@@ -4225,5 +4225,113 @@ MADE_BANKS.phys = {
       "why": "Any data, graph or formula that is not her own should be acknowledged. The website and the textbook both count as sources. Leaving them out of the reference list would present others' work as hers.",
       "clue": "Which of these ideas did Leila not come up with herself?"
     }
+  },
+  "phys-nuclear-fission": {
+    "title": "Nuclear fission",
+    "card": [
+      "Fission is when a heavy nucleus, such as uranium-235, splits into two smaller nuclei. It releases energy and two or three neutrons.",
+      "Fission is usually started when a nucleus absorbs a neutron. The neutrons released can then be absorbed by other nuclei and split them too. This is a chain reaction.",
+      "A chain reaction needs enough fissile material in a suitable shape. If too many neutrons escape through the surface, the reaction dies out. This is why a minimum mass, the critical mass, is needed.",
+      "Neutrons from fission move fast, and slow neutrons are more likely to be absorbed by uranium-235. A moderator, such as water or graphite, slows the neutrons down so the chain reaction can continue in a reactor."
+    ],
+    "remember": "Fission splits a heavy nucleus and frees neutrons. Those neutrons keep a chain reaction going if enough are absorbed.",
+    "a": {
+      "q": "What makes fission a chain reaction?",
+      "opts": [
+        "Neutrons released by one fission trigger further fissions",
+        "Energy released by one fission heats the whole reactor",
+        "The two smaller nuclei split again into lighter nuclei",
+        "A moderator keeps adding new uranium to the reactor"
+      ],
+      "why": "Each fission releases neutrons, and these can be absorbed by other nuclei and split them. If enough neutrons are absorbed, the reaction can sustain itself. Heat is released, but heat alone does not cause the next fission.",
+      "clue": "What particles come out of each fission?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A small sphere of uranium-235 does not sustain a chain reaction, but a larger one does. What is the best explanation?",
+      "opts": [
+        "In the small sphere too many neutrons escape the surface",
+        "In the small sphere the neutrons are moving too slowly",
+        "In the larger sphere each fission releases more neutrons",
+        "In the larger sphere the nuclei are less likely to split"
+      ],
+      "why": "A small sphere has a large surface compared with its volume, so many neutrons leave before they hit another nucleus. A larger mass lets enough neutrons be absorbed to keep going. The number of neutrons per fission does not depend on the size of the sphere.",
+      "clue": "What must happen to a neutron before it can cause another fission?"
+    }
+  },
+  "phys-nuclear-fusion": {
+    "title": "Nuclear fusion",
+    "card": [
+      "Fusion is when two light nuclei join to form a heavier nucleus. It releases energy. An example is hydrogen nuclei fusing to form helium.",
+      "Fusion powers the Sun and other stars. In the Sun, hydrogen is fused into helium in the core.",
+      "Nuclei are positively charged, so they repel each other. To fuse, they must be moving very fast and get very close. This needs extremely high temperatures and pressures, as in the core of the Sun.",
+      "Fusion is a different process from fission, which is a separate idea. Scientists are testing fusion reactors on Earth, but none yet supplies power to homes."
+    ],
+    "remember": "Fusion joins light nuclei, but only extreme heat and pressure push them close enough.",
+    "a": {
+      "q": "Why does fusion need extremely high temperatures?",
+      "opts": [
+        "Nuclei must move fast enough to overcome their repulsion",
+        "Nuclei must be heavy enough to split into smaller ones",
+        "Heat makes the nuclei attract each other more strongly",
+        "Nuclei must be melted so they can be joined together"
+      ],
+      "why": "Nuclei are positively charged and repel each other. High temperature gives them enough speed to get close and fuse. Heat does not make nuclei attract: they still repel, and speed is what lets them get close anyway.",
+      "clue": "What do two positive charges do when they approach?"
+    },
+    "b": {
+      "d": 2,
+      "q": "Which process happens in the core of the Sun?",
+      "opts": [
+        "Hydrogen nuclei fuse to form helium",
+        "Uranium nuclei split into smaller nuclei",
+        "Helium nuclei split into hydrogen nuclei",
+        "Hydrogen burns with oxygen to form water"
+      ],
+      "why": "The Sun gets its energy from fusion, where light hydrogen nuclei join to form helium. Splitting nuclei is not fusion, so the uranium and helium options are wrong. Burning hydrogen is a chemical reaction, not a nuclear one.",
+      "clue": "Light nuclei join to form a heavier one."
+    }
+  },
+  "phys-nuclear-power-australia": {
+    "title": "Nuclear power for Australia",
+    "card": [
+      "A nuclear power station uses fission to heat water into steam, which turns turbines. It gives off very little carbon dioxide while running, and it can supply steady power day and night.",
+      [
+        "Costs",
+        "nuclear stations cost a lot and take many years to build. Australian law bans nuclear power stations now, so Australia would also need law changes, trained staff and regulators."
+      ],
+      [
+        "Risks",
+        "used fuel stays dangerously radioactive for thousands of years and needs secure long-term storage. Rare accidents can release radioactive material."
+      ],
+      [
+        "Weighing up",
+        "physics can measure costs, risks and benefits. Whether Australia should build nuclear power also depends on values, such as how much risk people accept."
+      ]
+    ],
+    "remember": "Steady, low-carbon power on one side; high cost, long build times, waste and accident risk on the other.",
+    "a": {
+      "q": "Compared with a coal power station, what is a benefit of a nuclear power station while it runs?",
+      "opts": [
+        "It gives off very little carbon dioxide",
+        "It produces no radioactive waste at all",
+        "It needs no fuel once it starts running",
+        "It can only supply power in the daytime"
+      ],
+      "why": "Fission heats the water without burning fuel, so very little carbon dioxide is released while it runs. It still makes used fuel that stays radioactive for a very long time.",
+      "clue": "What does burning coal release that fission does not?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Ming says nuclear waste would be left for future Australians to deal with. Which statement rests on a value judgement rather than physics?",
+      "opts": [
+        "Leaving waste to future Australians is unfair",
+        "Used fuel stays radioactive for a very long time",
+        "Nuclear stations release little carbon dioxide",
+        "Fission in a reactor heats water into steam"
+      ],
+      "why": "Unfair is a value word: people can agree on every fact and still disagree about what is fair. The other three are facts about how nuclear power works, which can be tested by measurement.",
+      "clue": "Which statement could measurement never settle?"
+    }
   }
 };

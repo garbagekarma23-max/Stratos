@@ -20,7 +20,7 @@
    0.252
   ]
  ],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:28Z new, match",
   "2026-11-01T14:46:41Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -32,20 +32,23 @@
   "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a other)",
   "2026-11-02T04:50:15Z write: failed the content check, writing again",
-  "2026-11-02T04:56:46Z write: done"
+  "2026-11-02T04:56:46Z write: done",
+  "2026-11-03T11:40:50Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: approved with the fix"
  ],
  "sent": {
   "match": 1,
   "write": 5,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00027,
   "write": 0.02943,
-  "check": 0.01462,
-  "fix": 0.01617,
+  "check": 0.03268,
+  "fix": 0.04435,
   "recheck": 0.01573
  },
  "match": {
@@ -103,7 +106,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "claude-code",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -313,5 +316,518 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "A force applied away from a fixed point that turns the body",
+   "also_right": []
+  },
+  "b": {
+   "best": "Her change in momentum is larger, as impulse is larger",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "card",
+    "kind": "fact",
+    "detail": "The card calls torque 'a force applied away from the axis'. Torque is not itself a force. It is the turning effect of an eccentric force, equal to force × moment arm, and VCE texts describe it this way. Treating torque as a force can leave students with a misconception."
+   },
+   {
+    "part": "a",
+    "kind": "fact",
+    "detail": "The intended answer repeats the card's imprecise wording, describing torque as 'a force applied away from a fixed point'. It is the turning effect of that force. Wording such as 'the turning effect of a force applied away from a fixed point' would be accurate."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "Both questions work and have one clear right answer each. The card and question a describe torque as a force rather than the turning effect of an eccentric force (force × moment arm), and this should be corrected."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Card, fact: The card calls torque 'a force applied away from the axis'. Torque is not itself a force. It is the turning effect of an eccentric force, equal to force × moment arm, and VCE texts describe it this way. Treating torque as a force can leave students with a misconception.",
+  "Question a, fact: The intended answer repeats the card's imprecise wording, describing torque as 'a force applied away from a fixed point'. It is the turning effect of that force. Wording such as 'the turning effect of a force applied away from a fixed point' would be accurate."
+ ],
+ "proposal": {
+  "title": "Linear and angular motion",
+  "card": [
+   [
+    "Linear motion",
+    "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+   ],
+   [
+    "Angular motion",
+    "Rotation about an axis, a fixed point or line. Torque, the turning effect of a force applied away from the axis, starts or changes it. Torque = force × moment arm, the distance from the axis to the line of the force."
+   ],
+   [
+    "Speed and velocity",
+    "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+   ],
+   [
+    "Momentum and impulse",
+    "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+   ]
+  ],
+  "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+  "a": {
+   "q": "Which description fits a torque acting on a gymnast swinging around a high bar?",
+   "opts": [
+    "The turning effect of a force applied away from the axis",
+    "A force applied through the body that moves it in a line",
+    "Her mass multiplied by her velocity around the bar",
+    "The force applied multiplied by the time it acts"
+   ],
+   "why": "Torque is the turning effect of a force applied away from the axis, so it causes rotation. A force acting through the body is linked to linear motion, so it is the most tempting wrong option. Mass × velocity is momentum and force × time is impulse.",
+   "clue": "Which type of motion does a torque start or change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+   "opts": [
+    "Her change in momentum is larger, as impulse is larger",
+    "Her change in momentum is the same, as force is the same",
+    "Her change in momentum is smaller, as contact is longer",
+    "Her change in momentum is larger, as her mass is greater"
+   ],
+   "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+   "clue": "Impulse depends on force and on time."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Linear and angular motion",
+  "card": [
+   [
+    "Linear motion",
+    "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+   ],
+   [
+    "Angular motion",
+    "Rotation about an axis, a fixed point or line. Torque, the turning effect of a force applied away from the axis, starts or changes it. Torque = force × moment arm, the distance from the axis to the line of the force."
+   ],
+   [
+    "Speed and velocity",
+    "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+   ],
+   [
+    "Momentum and impulse",
+    "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+   ]
+  ],
+  "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+  "a": {
+   "q": "Which description fits a torque acting on a gymnast swinging around a high bar?",
+   "opts": [
+    "The turning effect of a force applied away from the axis",
+    "A force applied through the body that moves it in a line",
+    "Her mass multiplied by her velocity around the bar",
+    "The force applied multiplied by the time it acts"
+   ],
+   "why": "Torque is the turning effect of a force applied away from the axis, so it causes rotation. A force acting through the body is linked to linear motion, so it is the most tempting wrong option. Mass × velocity is momentum and force × time is impulse.",
+   "clue": "Which type of motion does a torque start or change?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+   "opts": [
+    "Her change in momentum is larger, as impulse is larger",
+    "Her change in momentum is the same, as force is the same",
+    "Her change in momentum is smaller, as contact is longer",
+    "Her change in momentum is larger, as her mass is greater"
+   ],
+   "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+   "clue": "Impulse depends on force and on time."
+  }
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The checker was right that torque is the turning effect of a force, not a force. The fix says so on the card and in question a, adds torque = force x moment arm as VCE PE teaches it, and keeps one clear right answer to each question.",
+   "item": "bace4f6464735e46",
+   "result": "decided",
+   "saved": {
+    "id": "pe-momentum-impulse",
+    "title": "Linear and angular motion",
+    "brief": "a34c7ec83b83",
+    "shortlist": [
+     [
+      "phys-momentum-impulse-physics",
+      0.35
+     ],
+     [
+      "phys-torque",
+      0.265
+     ],
+     [
+      "phys-torque-2",
+      0.254
+     ],
+     [
+      "phys-uniform-circular-motion",
+      0.252
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 5,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00027,
+     "write": 0.02943,
+     "check": 0.03268,
+     "fix": 0.04435,
+     "recheck": 0.01573
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "The new point covers linear and angular motion together (force, torque, momentum, impulse, speed and velocity), which is broader than any single bank point, and the bank cards are Year 12 physics at a more mathematical depth than the VCE PE biomechanics point.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, other: The clue 'Torque needs an axis to turn around' points straight to the only option that mentions an axis. A student can match the word without knowing what torque is.",
+    "rejected": {
+     "title": "Linear and angular motion",
+     "card": [
+      [
+       "Linear motion",
+       "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+      ],
+      [
+       "Angular motion",
+       "Rotation about an axis, a fixed point or line. A torque, which is a force applied away from the axis, starts or changes it."
+      ],
+      [
+       "Speed and velocity",
+       "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+      ],
+      [
+       "Momentum and impulse",
+       "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+      ]
+     ],
+     "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+     "a": {
+      "q": "Which description fits a torque acting on a gymnast on a high bar?",
+      "opts": [
+       "A force applied away from the axis that causes rotation",
+       "A force through the body that causes linear motion",
+       "The product of the gymnast's mass and velocity",
+       "The distance travelled divided by the time taken"
+      ],
+      "why": "Torque is a force applied away from an axis, so it causes rotation. A force that does not act away from an axis is linked to linear motion, not rotation, and mass × velocity is momentum, not torque.",
+      "clue": "Torque needs an axis to turn around."
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+      "opts": [
+       "Her change in momentum is larger, as impulse is larger",
+       "Her change in momentum is the same, as force is the same",
+       "Her change in momentum is smaller, as contact is longer",
+       "Her change in momentum is larger, as her mass is greater"
+      ],
+      "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+      "clue": "Impulse depends on force and on time."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question a, other: The clue 'Torque needs an axis to turn around' points straight to the only option that mentions an axis. A student can match the word without knowing what torque is."
+      ],
+      "saved": {
+       "draft": {
+        "title": "Linear and angular motion",
+        "card": [
+         [
+          "Linear motion",
+          "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+         ],
+         [
+          "Angular motion",
+          "Rotation about an axis, a fixed point or line. A torque, which is a force applied away from the axis, starts or changes it."
+         ],
+         [
+          "Speed and velocity",
+          "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+         ],
+         [
+          "Momentum and impulse",
+          "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+         ]
+        ],
+        "remember": "Force drives straight-line motion and torque drives rotation. Impulse changes momentum.",
+        "a": {
+         "q": "Which description fits a torque acting on a gymnast on a high bar?",
+         "opts": [
+          "A force applied away from the axis that causes rotation",
+          "A force through the body that causes a straight path",
+          "The product of the gymnast's mass and velocity",
+          "The distance travelled divided by the time taken"
+         ],
+         "why": "Torque is a force applied away from an axis, so it causes rotation. A force alone is linked to straight-line motion, and mass × velocity is momentum, not torque.",
+         "clue": "Torque needs an axis to turn around."
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+         "opts": [
+          "Her change in momentum is larger, because impulse is larger",
+          "Her change in momentum is the same, because force is the same",
+          "Her change in momentum is smaller, because contact is longer",
+          "Her change in momentum is larger, because mass is greater"
+         ],
+         "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. Her mass has not changed, so the mass option is wrong.",
+         "clue": "Impulse depends on force and on time."
+        }
+       },
+       "redone": true,
+       "local": [
+        "pe-momentum-impulseb option is 61 characters: Her change in momentum is the same, because force is the same"
+       ],
+       "check": {
+        "a": {
+         "best": "A force applied away from the axis that causes rotation",
+         "also_right": []
+        },
+        "b": {
+         "best": "Her change in momentum is larger, because impulse is larger",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "remember",
+          "kind": "other",
+          "detail": "The remember line says force drives 'straight-line motion', but the card defines linear motion as movement in a straight line or a curved path. This narrows the card's definition and could lead students to think curvilinear motion is not linear. Why (a) repeats this by linking force to 'straight-line motion'."
+         }
+        ],
+        "sure": "high",
+        "sensitive": "none",
+        "summary": "The facts and both questions are sound, and each has one clear answer. The only issue is minor: the remember line and why (a) call linear motion 'straight-line', but the card includes curved paths."
+       },
+       "flags": [
+        "Remember, other: The remember line says force drives 'straight-line motion', but the card defines linear motion as movement in a straight line or a curved path. This narrows the card's definition and could lead students to think curvilinear motion is not linear. Why (a) repeats this by linking force to 'straight-line motion'.",
+        "Content check: pe-momentum-impulseb option is 61 characters: Her change in momentum is the same, because force is the same"
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "Linear and angular motion",
+        "card": [
+         [
+          "Linear motion",
+          "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+         ],
+         [
+          "Angular motion",
+          "Rotation about an axis, a fixed point or line. A torque, which is a force applied away from the axis, starts or changes it."
+         ],
+         [
+          "Speed and velocity",
+          "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+         ],
+         [
+          "Momentum and impulse",
+          "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+         ]
+        ],
+        "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+        "a": {
+         "q": "Which description fits a torque acting on a gymnast on a high bar?",
+         "opts": [
+          "A force applied away from the axis that causes rotation",
+          "A force through the body that causes linear motion",
+          "The product of the gymnast's mass and velocity",
+          "The distance travelled divided by the time taken"
+         ],
+         "why": "Torque is a force applied away from an axis, so it causes rotation. A force that does not act away from an axis is linked to linear motion, not rotation, and mass × velocity is momentum, not torque.",
+         "clue": "Torque needs an axis to turn around."
+        },
+        "b": {
+         "d": 3,
+         "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+         "opts": [
+          "Her change in momentum is larger, as impulse is larger",
+          "Her change in momentum is the same, as force is the same",
+          "Her change in momentum is smaller, as contact is longer",
+          "Her change in momentum is larger, as her mass is greater"
+         ],
+         "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+         "clue": "Impulse depends on force and on time."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-02T04:41:52Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "A force applied away from the axis that causes rotation",
+          "also_right": []
+         },
+         "b": {
+          "best": "Her change in momentum is larger, as impulse is larger",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "a",
+           "kind": "other",
+           "detail": "The clue 'Torque needs an axis to turn around' points straight to the only option that mentions an axis. A student can match the word without knowing what torque is."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The card, remember line and both questions are accurate. The clue for question a gives the answer away, because only the right option mentions an axis."
+        },
+        "flags": [
+         "Question a, other: The clue 'Torque needs an axis to turn around' points straight to the only option that mentions an axis. A student can match the word without knowing what torque is."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "Linear and angular motion",
+     "card": [
+      [
+       "Linear motion",
+       "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+      ],
+      [
+       "Angular motion",
+       "Rotation about an axis, a fixed point or line. A torque, which is a force applied away from the axis, starts or changes it."
+      ],
+      [
+       "Speed and velocity",
+       "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+      ],
+      [
+       "Momentum and impulse",
+       "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+      ]
+     ],
+     "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+     "a": {
+      "q": "Which description fits a torque acting on a gymnast swinging around a high bar?",
+      "opts": [
+       "A force applied away from a fixed point that turns the body",
+       "A force applied through the body that moves it in a line",
+       "Her mass multiplied by her velocity",
+       "The force applied multiplied by the time it acts"
+      ],
+      "why": "Torque is a force applied away from a fixed point, so it causes rotation. Mass × velocity is momentum and force × time is impulse, so neither describes torque. A force acting through the body is linked to linear motion, so it is the most tempting wrong option.",
+      "clue": "Which type of motion does a torque start or change?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+      "opts": [
+       "Her change in momentum is larger, as impulse is larger",
+       "Her change in momentum is the same, as force is the same",
+       "Her change in momentum is smaller, as contact is longer",
+       "Her change in momentum is larger, as her mass is greater"
+      ],
+      "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+      "clue": "Impulse depends on force and on time."
+     }
+    },
+    "redone": true,
+    "local": [],
+    "check": {
+     "a": {
+      "best": "A force applied away from a fixed point that turns the body",
+      "also_right": []
+     },
+     "b": {
+      "best": "Her change in momentum is larger, as impulse is larger",
+      "also_right": []
+     },
+     "problems": [
+      {
+       "part": "card",
+       "kind": "fact",
+       "detail": "The card calls torque 'a force applied away from the axis'. Torque is not itself a force. It is the turning effect of an eccentric force, equal to force × moment arm, and VCE texts describe it this way. Treating torque as a force can leave students with a misconception."
+      },
+      {
+       "part": "a",
+       "kind": "fact",
+       "detail": "The intended answer repeats the card's imprecise wording, describing torque as 'a force applied away from a fixed point'. It is the turning effect of that force. Wording such as 'the turning effect of a force applied away from a fixed point' would be accurate."
+      }
+     ],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "Both questions work and have one clear right answer each. The card and question a describe torque as a force rather than the turning effect of an eccentric force (force × moment arm), and this should be corrected."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Card, fact: The card calls torque 'a force applied away from the axis'. Torque is not itself a force. It is the turning effect of an eccentric force, equal to force × moment arm, and VCE texts describe it this way. Treating torque as a force can leave students with a misconception.",
+     "Question a, fact: The intended answer repeats the card's imprecise wording, describing torque as 'a force applied away from a fixed point'. It is the turning effect of that force. Wording such as 'the turning effect of a force applied away from a fixed point' would be accurate."
+    ],
+    "proposal": {
+     "title": "Linear and angular motion",
+     "card": [
+      [
+       "Linear motion",
+       "Movement in a straight line or a curved path, where every part of the body moves the same distance in the same direction. A force (a push or pull) starts or changes it."
+      ],
+      [
+       "Angular motion",
+       "Rotation about an axis, a fixed point or line. Torque, the turning effect of a force applied away from the axis, starts or changes it. Torque = force × moment arm, the distance from the axis to the line of the force."
+      ],
+      [
+       "Speed and velocity",
+       "Speed = distance ÷ time and has no direction. Velocity = displacement ÷ time and has a direction. Displacement is the straight-line change in position."
+      ],
+      [
+       "Momentum and impulse",
+       "Momentum = mass × velocity. Impulse = force × time. A larger impulse causes a larger change in momentum."
+      ]
+     ],
+     "remember": "Force changes linear motion and torque changes angular motion. Impulse changes momentum.",
+     "a": {
+      "q": "Which description fits a torque acting on a gymnast swinging around a high bar?",
+      "opts": [
+       "The turning effect of a force applied away from the axis",
+       "A force applied through the body that moves it in a line",
+       "Her mass multiplied by her velocity around the bar",
+       "The force applied multiplied by the time it acts"
+      ],
+      "why": "Torque is the turning effect of a force applied away from the axis, so it causes rotation. A force acting through the body is linked to linear motion, so it is the most tempting wrong option. Mass × velocity is momentum and force × time is impulse.",
+      "clue": "Which type of motion does a torque start or change?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Priya, a netballer, pushes on the ground for a longer time with the same force when she jumps. What is the effect on her momentum as she leaves the ground?",
+      "opts": [
+       "Her change in momentum is larger, as impulse is larger",
+       "Her change in momentum is the same, as force is the same",
+       "Her change in momentum is smaller, as contact is longer",
+       "Her change in momentum is larger, as her mass is greater"
+      ],
+      "why": "Impulse = force × time, so the same force over a longer time gives a larger impulse and a larger change in momentum. The same force does not mean the same change, because time also counts, and her mass has not changed.",
+      "clue": "Impulse depends on force and on time."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "39574e302cc13830"
+  }
+ ]
 }

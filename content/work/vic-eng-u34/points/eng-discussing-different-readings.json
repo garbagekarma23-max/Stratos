@@ -20,7 +20,7 @@
    0.217
   ]
  ],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -31,20 +31,23 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
   "2026-11-02T04:50:14Z write: failed the content check, writing again",
-  "2026-11-02T04:56:45Z write: done"
+  "2026-11-02T04:56:45Z write: done",
+  "2026-11-03T11:40:49Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:06:07Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
   "write": 4,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00029,
   "write": 0.02285,
-  "check": 0.01509,
-  "fix": 0.013,
+  "check": 0.02378,
+  "fix": 0.02797,
   "recheck": 0.01445
  },
  "match": {
@@ -90,7 +93,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "owner",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -266,5 +269,96 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "Set out two readings fairly, then defend one with evidence",
+   "also_right": []
+  },
+  "b": {
+   "best": "A reason from the text for preferring one reading",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "a",
+    "kind": "wording",
+    "detail": "The right option is the only one with qualifiers that echo the card (\"fairly\", \"with evidence\"), so a student could pick it from those cues without knowing the idea."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and questions are accurate and match the point. One minor issue: in question a, the right option stands out because it is the only one with the qualifiers \"fairly\" and \"with evidence\"."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question a, wording: The right option is the only one with qualifiers that echo the card (\"fairly\", \"with evidence\"), so a student could pick it from those cues without knowing the idea."
+ ],
+ "proposal": {
+  "title": "Discussing different readings",
+  "card": [
+   "A moment in a text can often be read in more than one way. Writers may leave room for different responses.",
+   "Show you see this with phrases such as \"on one reading\" or \"alternatively\". Then explain the other reading fairly.",
+   "Next, argue for the reading you find more convincing. Give a reason based on the text, such as its language or its context.",
+   "Do not just list readings and stop, or call them all equally valid. Do not invent a reading that the text cannot support."
+  ],
+  "remember": "Show that a moment can be read in more than one way, then argue for the reading you find stronger.",
+  "a": {
+   "q": "In an invented story, a girl leaves her home town at night without a word. Which paragraph plan shows the most depth?",
+   "opts": [
+    "Set out two readings, then back one using the text's words",
+    "Set out two readings, then call both of them just as valid",
+    "Set out one reading, then call it the only possible one",
+    "Set out three readings, then stop without choosing one"
+   ],
+   "why": "Naming two readings and then backing one with the text's words shows depth and makes a clear argument. Calling both readings just as valid is tempting, but it avoids taking a position.",
+   "clue": "Noticing other readings is not the whole task."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes that the ending can be read as hopeful, and that another reader might find it bleak. What should the student add to show depth?",
+   "opts": [
+    "A reason from the text for preferring one reading",
+    "A third reading that has no support in the text",
+    "A claim that both readings are equally correct",
+    "A summary of the plot before the ending"
+   ],
+   "why": "The student has named two readings but has not argued for either. A reason from the text turns a list into an argument. Saying both are equally correct avoids taking a position.",
+   "clue": "Naming readings is only half the task."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Discussing different readings",
+  "card": [
+   "A moment in a text can often be read in more than one way. Writers may leave room for different responses.",
+   "Show you see this with phrases such as \"on one reading\" or \"alternatively\". Then explain the other reading fairly.",
+   "Next, argue for the reading you find more convincing. Give a reason based on the text, such as its language or its context.",
+   "Do not just list readings and stop, or call them all equally valid. Do not invent a reading that the text cannot support."
+  ],
+  "remember": "Show that a moment can be read in more than one way, then argue for the reading you find stronger.",
+  "a": {
+   "q": "In an invented story, a girl leaves her home town at night without a word. Which paragraph plan shows the most depth?",
+   "opts": [
+    "Set out two readings, then back one using the text's words",
+    "Set out two readings, then call both of them just as valid",
+    "Set out one reading, then call it the only possible one",
+    "Set out three readings, then stop without choosing one"
+   ],
+   "why": "Naming two readings and then backing one with the text's words shows depth and makes a clear argument. Calling both readings just as valid is tempting, but it avoids taking a position.",
+   "clue": "Noticing other readings is not the whole task."
+  },
+  "b": {
+   "d": 3,
+   "q": "A student writes that the ending can be read as hopeful, and that another reader might find it bleak. What should the student add to show depth?",
+   "opts": [
+    "A reason from the text for preferring one reading",
+    "A third reading that has no support in the text",
+    "A claim that both readings are equally correct",
+    "A summary of the plot before the ending"
+   ],
+   "why": "The student has named two readings but has not argued for either. A reason from the text turns a list into an argument. Saying both are equally correct avoids taking a position.",
+   "clue": "Naming readings is only half the task."
+  }
+ }
 }

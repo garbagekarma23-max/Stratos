@@ -3,7 +3,7 @@
  "title": "Leaders of the American cause",
  "brief": "af70e365a7f4",
  "shortlist": [],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:29Z new, write",
   "2026-11-01T14:46:43Z write: the API refused it in the chapter request, so it is written on its own next",
@@ -13,18 +13,20 @@
   "2026-11-02T04:41:52Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (card fact, b fact)",
   "2026-11-02T04:50:16Z write: done",
-  "2026-11-02T04:56:46Z check: flagged"
+  "2026-11-02T04:56:46Z check: flagged",
+  "2026-11-03T11:40:51Z fix: suggested",
+  "2026-11-03T11:56:01Z autoreview: cleared with the fix (remember other)"
  ],
  "sent": {
   "write": 3,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "write": 0.01241,
   "check": 0.03722,
-  "fix": 0.0346,
+  "fix": 0.05252,
   "recheck": 0.01863
  },
  "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Card, fact: The card says Jefferson drafted the Declaration in July 1776, after Congress had chosen to break away. He drafted it in June 1776, after the committee was appointed on 11 June. Congress voted for independence on 2 July and adopted the Declaration on 4 July, so the draft came before the vote, not after it.\n- Question b, fact: The why repeats the error that Jefferson drafted the Declaration in July, after Congress had decided. The clue 'Check which writing came before Congress made its choice' relies on the same wrong timeline, since Jefferson's draft also came before the 2 July vote. The intended answer, Paine, still stands because Common Sense came out in January 1776.",
@@ -74,7 +76,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "auto",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -322,5 +324,114 @@
  "sensitive": "none",
  "flags": [
   "Remember, other: The remember line says George III shaped independence 'by opposing it', but the card never says he opposed independence. It only says he backed Parliament's right to tax and was blamed in the Declaration. Question a depends on this label, so the card should state his opposition outright."
- ]
+ ],
+ "proposal": {
+  "title": "Leaders of the American cause",
+  "card": [
+   [
+    "George III",
+    "King of Britain from 1760, he backed Parliament's right to tax the colonies and declared them in rebellion in 1775. He opposed independence, and the Declaration of Independence blamed him for the colonists' grievances."
+   ],
+   [
+    "Samuel Adams and John Hancock",
+    "Adams was a Boston organiser who led protests against British rule from the 1760s. Hancock was a wealthy Boston merchant who funded the cause and became president of the Continental Congress in 1775."
+   ],
+   [
+    "Thomas Paine and Thomas Jefferson",
+    "Paine's pamphlet Common Sense, published in January 1776, attacked monarchy itself and sold widely, turning many colonists toward independence. Jefferson wrote the first draft of the Declaration of Independence in June 1776, before Congress adopted it on 4 July."
+   ],
+   [
+    "George Washington",
+    "A Virginian chosen by the Continental Congress in 1775 to command the Continental Army against British forces."
+   ]
+  ],
+  "remember": "Each figure shaped independence differently: by opposing it, organising, funding, persuading, drafting or commanding.",
+  "a": {
+   "q": "Which figure shaped the road to independence by opposing it?",
+   "opts": [
+    "George III",
+    "John Hancock",
+    "Samuel Adams",
+    "George Washington"
+   ],
+   "why": "George III opposed independence and declared the colonies in rebellion in 1775, and the Declaration blamed him for their grievances, so his stance pushed colonists toward a break. Hancock is tempting as a wealthy, established figure, but he funded the cause and led the Continental Congress.",
+   "clue": "Think about who the colonists blamed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A historian argues one figure did most to win public opinion over to independence in early 1776. Which figure best fits this argument?",
+   "opts": [
+    "Thomas Paine, through Common Sense",
+    "Thomas Jefferson, through the Declaration",
+    "Samuel Adams, through protests in Boston",
+    "George Washington, through his army command"
+   ],
+   "why": "Common Sense came out in January 1776, attacked monarchy and sold widely, so it shifted many colonists toward independence. Jefferson is tempting, but his draft was written in June and adopted by Congress on 4 July, so it was a formal statement from Congress, not a widely sold pamphlet that changed opinion in early 1776.",
+   "clue": "Which work was published in January 1776 and sold widely?"
+  }
+ },
+ "proposal_problems": [],
+ "auto": {
+  "at": "2026-11-03T11:56:01Z",
+  "rules": 1,
+  "n": 14,
+  "decision": "used the fix",
+  "spot": false,
+  "sure": "high",
+  "problems": [
+   {
+    "part": "remember",
+    "kind": "other",
+    "detail": "The remember line says George III shaped independence 'by opposing it', but the card never says he opposed independence. It only says he backed Parliament's right to tax and was blamed in the Declaration. Question a depends on this label, so the card should state his opposition outright."
+   }
+  ],
+  "flags": [
+   "Remember, other: The remember line says George III shaped independence 'by opposing it', but the card never says he opposed independence. It only says he backed Parliament's right to tax and was blamed in the Declaration. Question a depends on this label, so the card should state his opposition outright."
+  ]
+ },
+ "final": {
+  "title": "Leaders of the American cause",
+  "card": [
+   [
+    "George III",
+    "King of Britain from 1760, he backed Parliament's right to tax the colonies and declared them in rebellion in 1775. He opposed independence, and the Declaration of Independence blamed him for the colonists' grievances."
+   ],
+   [
+    "Samuel Adams and John Hancock",
+    "Adams was a Boston organiser who led protests against British rule from the 1760s. Hancock was a wealthy Boston merchant who funded the cause and became president of the Continental Congress in 1775."
+   ],
+   [
+    "Thomas Paine and Thomas Jefferson",
+    "Paine's pamphlet Common Sense, published in January 1776, attacked monarchy itself and sold widely, turning many colonists toward independence. Jefferson wrote the first draft of the Declaration of Independence in June 1776, before Congress adopted it on 4 July."
+   ],
+   [
+    "George Washington",
+    "A Virginian chosen by the Continental Congress in 1775 to command the Continental Army against British forces."
+   ]
+  ],
+  "remember": "Each figure shaped independence differently: by opposing it, organising, funding, persuading, drafting or commanding.",
+  "a": {
+   "q": "Which figure shaped the road to independence by opposing it?",
+   "opts": [
+    "George III",
+    "John Hancock",
+    "Samuel Adams",
+    "George Washington"
+   ],
+   "why": "George III opposed independence and declared the colonies in rebellion in 1775, and the Declaration blamed him for their grievances, so his stance pushed colonists toward a break. Hancock is tempting as a wealthy, established figure, but he funded the cause and led the Continental Congress.",
+   "clue": "Think about who the colonists blamed."
+  },
+  "b": {
+   "d": 3,
+   "q": "A historian argues one figure did most to win public opinion over to independence in early 1776. Which figure best fits this argument?",
+   "opts": [
+    "Thomas Paine, through Common Sense",
+    "Thomas Jefferson, through the Declaration",
+    "Samuel Adams, through protests in Boston",
+    "George Washington, through his army command"
+   ],
+   "why": "Common Sense came out in January 1776, attacked monarchy and sold widely, so it shifted many colonists toward independence. Jefferson is tempting, but his draft was written in June and adopted by Congress on 4 July, so it was a formal statement from Congress, not a widely sold pamphlet that changed opinion in early 1776.",
+   "clue": "Which work was published in January 1776 and sold widely?"
+  }
+ }
 }

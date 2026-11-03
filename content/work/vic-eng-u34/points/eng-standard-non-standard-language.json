@@ -12,7 +12,7 @@
    0.241
   ]
  ],
- "stage": "check",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -22,20 +22,23 @@
   "2026-11-02T04:41:50Z recheck: kept for you (the fresh check found a problem)",
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (b wording)",
   "2026-11-02T04:50:14Z write: failed the content check, writing again",
-  "2026-11-02T04:56:45Z write: done"
+  "2026-11-02T04:56:45Z write: done",
+  "2026-11-03T11:40:49Z check: flagged",
+  "2026-11-03T11:44:03Z fix: suggested",
+  "2026-11-03T12:06:02Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
   "write": 3,
-  "check": 1,
-  "fix": 1,
+  "check": 2,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00012,
   "write": 0.03075,
-  "check": 0.01595,
-  "fix": 0.03358,
+  "check": 0.03069,
+  "fix": 0.06033,
   "recheck": 0.01481
  },
  "match": {
@@ -87,7 +90,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "owner",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -274,5 +277,114 @@
   }
  },
  "redone": true,
- "local": []
+ "local": [],
+ "check": {
+  "a": {
+   "best": "To build a casual, believable voice for the narrator",
+   "also_right": []
+  },
+  "b": {
+   "best": "It may not suit the audience and context of the assembly",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The why rules out 'It may be an error' because 'Dan chose it on purpose', but the stem never says he chose it on purpose. It says only that he fills the speech with slang and broken grammar. Add to the stem that Dan chose this deliberately, or reword the why."
+   },
+   {
+    "part": "b",
+    "kind": "wording",
+    "detail": "The clue 'what any choice of language has to suit' states a firm rule, where the card only says a writer picks language to suit voice, audience and context. 'Has to' works like 'must'. Soften it, for example to 'what a writer chooses language to suit'."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The card and question a are sound. In question b, the why dismisses the 'error' option by saying Dan chose the slang on purpose, which the stem never states, and the clue's 'has to suit' is firmer than the card."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The why rules out 'It may be an error' because 'Dan chose it on purpose', but the stem never says he chose it on purpose. It says only that he fills the speech with slang and broken grammar. Add to the stem that Dan chose this deliberately, or reword the why.",
+  "Question b, wording: The clue 'what any choice of language has to suit' states a firm rule, where the card only says a writer picks language to suit voice, audience and context. 'Has to' works like 'must'. Soften it, for example to 'what a writer chooses language to suit'."
+ ],
+ "proposal": {
+  "title": "Standard and non-standard language",
+  "card": [
+   [
+    "Standard",
+    "language that follows accepted grammar and spelling, and is common in formal writing, such as \"We are going to the beach.\""
+   ],
+   [
+    "Non-standard",
+    "language that departs from this, such as slang (\"arvo\"), dialect (\"we was going\") or deliberately broken rules, such as a sentence fragment."
+   ],
+   "Non-standard language is not a mistake when a writer chooses it. It can build a voice, show a character's background or fit an audience.",
+   "In any form, from a story to a speech, a writer picks standard or non-standard language to suit the voice, audience and context of the piece."
+  ],
+  "remember": "Non-standard language works when it is chosen on purpose to suit voice, audience and context.",
+  "a": {
+   "q": "A writer has a teenage narrator say \"Nah, we was just hanging at the servo.\" What is the most likely purpose of this language?",
+   "opts": [
+    "To build a casual, believable voice for the narrator",
+    "To show the writer does not know the grammar rules",
+    "To make the piece sound formal and academic",
+    "To explain a process to the reader step by step"
+   ],
+   "why": "Slang and non-standard grammar can make a narrator sound real and casual. It is not a mistake when chosen on purpose, and it does not make writing formal.",
+   "clue": "Think about who is speaking and how they would talk."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a school assembly, with the principal and visiting parents listening, Dan deliberately fills his speech with slang and broken grammar. What is the best criticism of this choice?",
+   "opts": [
+    "It may not suit the audience and context of the assembly",
+    "It may be an error, because he did not check the grammar",
+    "It may weaken the voice, because slang rarely sounds natural",
+    "It may blur the topic, because speeches need a clear thesis"
+   ],
+   "why": "Writers choose language to suit audience and context, and heavy slang may not fit an assembly with the principal and parents. It is not an error, because Dan chose it deliberately. Slang can also build a natural voice, so voice is not the problem here.",
+   "clue": "Recall what a writer chooses language to suit."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "Standard and non-standard language",
+  "card": [
+   [
+    "Standard",
+    "language that follows accepted grammar and spelling, and is common in formal writing, such as \"We are going to the beach.\""
+   ],
+   [
+    "Non-standard",
+    "language that departs from this, such as slang (\"arvo\"), dialect (\"we was going\") or deliberately broken rules, such as a sentence fragment."
+   ],
+   "Non-standard language is not a mistake when a writer chooses it. It can build a voice, show a character's background or fit an audience.",
+   "In any form, from a story to a speech, a writer picks standard or non-standard language to suit the voice, audience and context of the piece."
+  ],
+  "remember": "Non-standard language works when it is chosen on purpose to suit voice, audience and context.",
+  "a": {
+   "q": "A writer has a teenage narrator say \"Nah, we was just hanging at the servo.\" What is the most likely purpose of this language?",
+   "opts": [
+    "To build a casual, believable voice for the narrator",
+    "To show the writer does not know the grammar rules",
+    "To make the piece sound formal and academic",
+    "To explain a process to the reader step by step"
+   ],
+   "why": "Slang and non-standard grammar can make a narrator sound real and casual. It is not a mistake when chosen on purpose, and it does not make writing formal.",
+   "clue": "Think about who is speaking and how they would talk."
+  },
+  "b": {
+   "d": 3,
+   "q": "For a school assembly, with the principal and visiting parents listening, Dan deliberately fills his speech with slang and broken grammar. What is the best criticism of this choice?",
+   "opts": [
+    "It may not suit the audience and context of the assembly",
+    "It may be an error, because he did not check the grammar",
+    "It may weaken the voice, because slang rarely sounds natural",
+    "It may blur the topic, because speeches need a clear thesis"
+   ],
+   "why": "Writers choose language to suit audience and context, and heavy slang may not fit an assembly with the principal and parents. It is not an error, because Dan chose it deliberately. Slang can also build a natural voice, so voice is not the problem here.",
+   "clue": "Recall what a writer chooses language to suit."
+  }
+ }
 }

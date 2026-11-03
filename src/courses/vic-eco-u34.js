@@ -123,7 +123,19 @@ MADE_COURSES.push({
     {
       "title": "Unit 4: Managing the economy",
       "chapters": [
-        {"id": "vic-eco-u34-2-2", "title": "Monetary policy", "check": "checked", "points": []},
+        {
+          "id": "vic-eco-u34-2-2",
+          "title": "Monetary policy",
+          "check": "checked",
+          "points": [
+            "eco-reserve-bank-goals",
+            "eco-rba-cash-rate",
+            "eco-unconventional-monetary-policy",
+            "eco-transmission-mechanism",
+            "eco-stance-monetary-policy",
+            "eco-strengths-limits-monetary-policy"
+          ]
+        },
         {
           "id": "vic-eco-u34-2-1",
           "title": "The budget",
@@ -159,7 +171,17 @@ MADE_COURSES.push({
             "eco-tax-reform-2"
           ]
         },
-        {"id": "vic-eco-u34-2-5", "title": "Other aggregate supply policies", "check": "checked", "points": []}
+        {
+          "id": "vic-eco-u34-2-5",
+          "title": "Other aggregate supply policies",
+          "check": "checked",
+          "points": [
+            "eco-skilled-immigration",
+            "eco-trade-liberalisation-australia",
+            "eco-environmental-energy-policy",
+            "eco-strengths-limits-supply-side"
+          ]
+        }
       ]
     }
   ]

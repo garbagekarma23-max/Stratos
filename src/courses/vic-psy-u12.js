@@ -31,7 +31,18 @@ MADE_COURSES.push({
             "psy-sensitive-critical-periods"
           ]
         },
-        {"id": "vic-psy-u12-1-2", "title": "Typical and atypical behaviour", "check": "checked", "points": []},
+        {
+          "id": "vic-psy-u12-1-2",
+          "title": "Typical and atypical behaviour",
+          "check": "checked",
+          "points": [
+            "psy-criteria-typical-behaviour",
+            "psy-limits-each-criterion",
+            "psy-neurotypical-neurodivergent",
+            "psy-neurodiversity",
+            "psy-who-supports-mental-wellbeing"
+          ]
+        },
         {
           "id": "vic-psy-u12-1-3",
           "title": "How we came to understand the brain",

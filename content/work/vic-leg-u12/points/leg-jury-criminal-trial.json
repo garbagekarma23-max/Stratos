@@ -12,21 +12,31 @@
    0.266
   ]
  ],
- "stage": "adapt",
+ "stage": "cleared",
  "log": [
   "2026-11-01T07:54:19Z new, match",
   "2026-11-01T08:04:33Z match: Claude Haiku 5.5 may adapt leg-juries, but is not highly sure, so to the Opus match check",
   "2026-11-01T08:14:05Z confirm: Claude Opus 5.5 may adapt leg-juries, but is not highly sure, so it is for you to review",
   "2026-11-02T06:22:20Z match: owner says adapt leg-juries (4 changes)",
-  "2026-11-02T06:22:20Z review: adapting leg-juries on the next run"
+  "2026-11-02T06:22:20Z review: adapting leg-juries on the next run",
+  "2026-11-03T11:40:50Z adapt: done",
+  "2026-11-03T11:44:03Z check: flagged",
+  "2026-11-03T11:48:30Z fix: suggested",
+  "2026-11-03T12:06:40Z review: approved with the fix"
  ],
  "sent": {
   "match": 1,
-  "confirm": 1
+  "confirm": 1,
+  "adapt": 1,
+  "check": 1,
+  "fix": 1
  },
  "usd": {
   "match": 0.00034,
-  "confirm": 0.00983
+  "confirm": 0.00983,
+  "adapt": 0.00684,
+  "check": 0.02108,
+  "fix": 0.01963
  },
  "match": {
   "verdict": "adapt",
@@ -61,6 +71,153 @@
    "Rewrite question b so it is not a murder trial, because murder needs a unanimous verdict in Victoria. Use an offence such as armed robbery or burglary, and state that the jury has deliberated for at least six hours.",
    "Add a line to the card that the jury decides guilt beyond reasonable doubt, to match the brief."
   ],
-  "by": "owner"
- }
+  "by": "owner",
+  "parts": [
+   "card1",
+   "card2",
+   "card3",
+   "card4",
+   "remember",
+   "a.q",
+   "b.q",
+   "b.opt1",
+   "b.opt2",
+   "b.opt3",
+   "b.opt4",
+   "b.why",
+   "b.clue"
+  ]
+ },
+ "draft": {
+  "title": "Juries",
+  "card": [
+   "A jury is a group of ordinary citizens who decide the facts in a criminal trial. In Victoria, a jury of 12 is used in indictable trials in the County Court and the Supreme Court.",
+   "The jury decides whether the accused is guilty or not guilty. The judge directs the jury on the law and runs the trial, but the jury decides guilt.",
+   "The jury must decide guilt beyond reasonable doubt. This is the standard of proof the prosecution must meet. A jury is first asked to reach a unanimous verdict, where all 12 agree.",
+   "Under the Juries Act 2000 (Vic), a majority verdict of 11 to 1 may be accepted only after at least six hours of deliberation. It is not allowed for murder, treason or certain serious drug offences."
+  ],
+  "remember": "The jury of 12 decides guilt beyond reasonable doubt. After six hours, 11 to 1 may be accepted, but not for murder.",
+  "a": {
+   "q": "A person is on trial for an indictable offence in the County Court of Victoria. Who decides whether the accused is guilty?",
+   "opts": [
+    "The jury of 12 citizens",
+    "The judge who runs the trial",
+    "The prosecutor for the state",
+    "The defence lawyer for the accused"
+   ],
+   "why": "The jury decides the facts and reaches the verdict. The judge runs the trial and directs the jury on the law, which is why the judge is the most tempting wrong answer, but the judge does not decide guilt.",
+   "clue": "Think about who weighs the evidence, not who runs the court."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Victorian jury in an armed robbery trial has deliberated for at least six hours. It is split 11 to 1 for guilty. What can the court do?",
+   "opts": [
+    "Accept the 11 to 1 majority verdict",
+    "Order a retrial before a new jury",
+    "Enter a verdict of guilty without the jury",
+    "Direct the jury to stay until all 12 agree"
+   ],
+   "why": "The Juries Act 2000 (Vic) allows an 11 to 1 majority verdict after at least six hours of deliberation. Armed robbery is not an excluded offence, so the majority verdict can stand. A retrial is not needed.",
+   "clue": "Six hours have passed and the offence is not murder or treason."
+  }
+ },
+ "local": [],
+ "check": {
+  "a": {
+   "best": "The jury of 12 citizens",
+   "also_right": []
+  },
+  "b": {
+   "best": "Accept the 11 to 1 majority verdict",
+   "also_right": []
+  },
+  "problems": [
+   {
+    "part": "b",
+    "kind": "other",
+    "detail": "The clue ('Six hours have passed and the offence is not murder or treason') walks the student straight through both conditions for a majority verdict, so it all but gives the answer away rather than prompting recall."
+   },
+   {
+    "part": "remember",
+    "kind": "wording",
+    "detail": "'but not for murder' names only one exclusion. A student could read murder as the sole exception, though the card also excludes treason and certain serious drug offences."
+   }
+  ],
+  "sure": "high",
+  "sensitive": "none",
+  "summary": "The facts check out against the Juries Act 2000 (Vic), and both questions have one clear right answer. Minor issues: the clue for (b) nearly gives the answer away, and the remember line lists only murder as an exclusion."
+ },
+ "sensitive": "none",
+ "flags": [
+  "Question b, other: The clue ('Six hours have passed and the offence is not murder or treason') walks the student straight through both conditions for a majority verdict, so it all but gives the answer away rather than prompting recall.",
+  "Remember, wording: 'but not for murder' names only one exclusion. A student could read murder as the sole exception, though the card also excludes treason and certain serious drug offences."
+ ],
+ "proposal": {
+  "title": "The jury in a criminal trial",
+  "card": [
+   "A jury is a group of ordinary citizens who decide the facts in a criminal trial. In Victoria, a jury of 12 is used in indictable trials in the County Court and the Supreme Court.",
+   "The jury decides whether the accused is guilty or not guilty. The judge runs the trial and directs the jury on the law, but the jury decides guilt.",
+   "The jury can find the accused guilty only if the prosecution proves guilt beyond reasonable doubt. A jury is first asked to reach a unanimous verdict, where all 12 agree.",
+   "Under the Juries Act 2000 (Vic), a majority verdict of 11 to 1 may be accepted after at least six hours of deliberation (the jury's private discussion). It is not allowed for murder, treason or certain serious drug offences."
+  ],
+  "remember": "The jury of 12 decides guilt beyond reasonable doubt. After six hours, 11 to 1 may be accepted, except for some of the most serious offences.",
+  "a": {
+   "q": "A person is on trial for an indictable offence in the County Court of Victoria. Who decides whether the accused is guilty?",
+   "opts": [
+    "The jury of 12 citizens",
+    "The judge who runs the trial",
+    "The prosecutor for the state",
+    "The defence lawyer for the accused"
+   ],
+   "why": "The jury decides the facts and reaches the verdict. The judge is the most tempting wrong answer because the judge runs the trial and directs the jury on the law, but the judge does not decide guilt.",
+   "clue": "Think about who weighs the evidence, not who runs the court."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Victorian jury in an armed robbery trial has deliberated for seven hours. It is split 11 to 1 for guilty. Which verdict may the court accept?",
+   "opts": [
+    "An 11 to 1 verdict of guilty",
+    "Only a unanimous verdict of guilty",
+    "A guilty verdict given by the judge alone",
+    "No verdict, since a retrial is required"
+   ],
+   "why": "The Juries Act 2000 (Vic) allows an 11 to 1 majority verdict after at least six hours of deliberation, and armed robbery is not one of the excluded offences. Requiring a unanimous verdict is tempting, but that applies only to offences such as murder and treason.",
+   "clue": "Check how long the jury has talked and which offences are excluded."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The jury in a criminal trial",
+  "card": [
+   "A jury is a group of ordinary citizens who decide the facts in a criminal trial. In Victoria, a jury of 12 is used in indictable trials in the County Court and the Supreme Court.",
+   "The jury decides whether the accused is guilty or not guilty. The judge runs the trial and directs the jury on the law, but the jury decides guilt.",
+   "The jury can find the accused guilty only if the prosecution proves guilt beyond reasonable doubt. A jury is first asked to reach a unanimous verdict, where all 12 agree.",
+   "Under the Juries Act 2000 (Vic), a majority verdict of 11 to 1 may be accepted after at least six hours of deliberation (the jury's private discussion). It is not allowed for murder, treason or certain serious drug offences."
+  ],
+  "remember": "The jury of 12 decides guilt beyond reasonable doubt. After six hours, 11 to 1 may be accepted, except for some of the most serious offences.",
+  "a": {
+   "q": "A person is on trial for an indictable offence in the County Court of Victoria. Who decides whether the accused is guilty?",
+   "opts": [
+    "The jury of 12 citizens",
+    "The judge who runs the trial",
+    "The prosecutor for the state",
+    "The defence lawyer for the accused"
+   ],
+   "why": "The jury decides the facts and reaches the verdict. The judge is the most tempting wrong answer because the judge runs the trial and directs the jury on the law, but the judge does not decide guilt.",
+   "clue": "Think about who weighs the evidence, not who runs the court."
+  },
+  "b": {
+   "d": 3,
+   "q": "A Victorian jury in an armed robbery trial has deliberated for seven hours. It is split 11 to 1 for guilty. Which verdict may the court accept?",
+   "opts": [
+    "An 11 to 1 verdict of guilty",
+    "Only a unanimous verdict of guilty",
+    "A guilty verdict given by the judge alone",
+    "No verdict, since a retrial is required"
+   ],
+   "why": "The Juries Act 2000 (Vic) allows an 11 to 1 majority verdict after at least six hours of deliberation, and armed robbery is not one of the excluded offences. Requiring a unanimous verdict is tempting, but that applies only to offences such as murder and treason.",
+   "clue": "Check how long the jury has talked and which offences are excluded."
+  }
+ },
+ "cleared_by": "owner"
 }

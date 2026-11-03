@@ -5057,5 +5057,542 @@ MADE_BANKS.eco = {
       "why": "A higher tax-free threshold raises the reward for working, so it may encourage more labour to be supplied. The effect on machinery comes from investment tax breaks, not from income tax on workers. Skills and roads belong to other policies, not to tax reform.",
       "clue": "Look at what the change does to take-home pay for work."
     }
+  },
+  "eco-microeconomics-macroeconomics": {
+    "title": "Microeconomics and macroeconomics",
+    "card": [
+      [
+        "Microeconomics",
+        "the study of single markets and the choices of individual consumers and businesses. It asks why one price changes or how one firm decides what to make."
+      ],
+      [
+        "Macroeconomics",
+        "the study of the whole economy. It looks at totals and averages, such as economic growth, the unemployment rate and the general level of prices."
+      ],
+      "The same event can be studied both ways. A rise in petrol prices can be studied for its effect on one household's choices, or on the whole economy's price level.",
+      "A good test is to ask what is being studied. One market, one buyer or one firm is micro. The economy as a whole is macro."
+    ],
+    "remember": "Micro looks at the parts of the economy. Macro looks at the whole economy.",
+    "a": {
+      "q": "Which topic would a macroeconomist most likely study?",
+      "opts": [
+        "Why Australia's unemployment rate changed over a year",
+        "Why a bakery in Ballarat changed its bread prices",
+        "How one family chooses what to buy each week",
+        "Why the price of avocados rose in one local market"
+      ],
+      "why": "The unemployment rate measures jobs across the whole economy, so it is macroeconomics. The other three each focus on one business, one household or one market, which is microeconomics.",
+      "clue": "Which topic covers the whole economy, not one buyer, seller or market?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Priya studies why Melbourne's rental market has fewer rentals available this year. Her teacher then asks how rising rents might affect the general price level across Australia. Which describes the two parts of the work?",
+      "opts": [
+        "The first is microeconomics and the second is macroeconomics",
+        "The first is macroeconomics and the second is microeconomics",
+        "Both are microeconomics because they are about rents",
+        "Both are macroeconomics because they involve many people"
+      ],
+      "why": "Melbourne's rental market is a single market, so the first part is microeconomics. The general price level across Australia is a whole-economy measure, so the second part is macroeconomics. Many people being involved does not make a topic macro, since a single market can have many buyers.",
+      "clue": "Ask what is being studied in each part: one market or the whole economy?"
+    }
+  },
+  "eco-positive-normative-statements": {
+    "title": "Positive and normative statements",
+    "card": [
+      "A positive statement is about what is, was or will be. It can be tested against evidence, even if it turns out to be false.",
+      "A normative statement is about what should be. It rests on a value judgement, so evidence alone cannot settle it.",
+      "Words such as should, ought, fair and too much are signs of a normative statement. But a statement that reports what people believe, such as a survey result, is positive, because it can be checked.",
+      "Economists use positive analysis to show the likely effects of a policy. Deciding whether to adopt it is a normative choice."
+    ],
+    "remember": "Positive can be checked against evidence. Normative needs a value judgement.",
+    "a": {
+      "q": "Which of these statements is positive?",
+      "opts": [
+        "Unemployment in Australia fell over the last year",
+        "Australia ought to spend more on public schools",
+        "Petrol taxes in Australia are far too high",
+        "It is unfair that rents rose so fast in Melbourne"
+      ],
+      "why": "Whether unemployment fell can be checked against the data. The other three use ought, too high and unfair, which are value judgements.",
+      "clue": "Which one could you prove right or wrong with data?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Which of these statements is normative?",
+      "opts": [
+        "Australia should raise its tobacco excise",
+        "A higher tobacco excise would cut smoking in Australia",
+        "Most Australians think tobacco excise is fair",
+        "Tobacco excise raises money for the Australian government"
+      ],
+      "why": "Should signals a value judgement about what ought to happen. The survey option uses the word fair, but it only reports what people believe, and a survey can check that, so it is positive. The other two are a testable prediction and a checkable fact.",
+      "clue": "A statement about what people believe can still be checked."
+    }
+  },
+  "eco-factors-production": {
+    "title": "Factors of production",
+    "card": [
+      [
+        "Natural resources",
+        "gifts of nature used to make goods and services, such as land, water, minerals and forests. Their reward is rent."
+      ],
+      ["Labour", "the physical and mental work people do in production. Its reward is wages."],
+      [
+        "Capital",
+        "human-made goods used to make other goods, such as machines, tools and buildings. It is not money, and its reward is interest."
+      ],
+      [
+        "Enterprise",
+        "the skill of organising the other three factors, taking risks and starting a business. Its reward is profit."
+      ]
+    ],
+    "remember": "The four factors of production are the inputs for making goods and services. Capital is made goods, not money.",
+    "a": {
+      "q": "Mia buys an oven for her new bakery in Ballarat. Which factor of production is the oven?",
+      "opts": ["Capital", "Labour", "Enterprise", "Natural resources"],
+      "why": "An oven is a human-made good used to make other goods, so it is capital. It is not enterprise, which is the skill of organising and risk-taking, and it is not a natural resource because people made it.",
+      "clue": "Was it made by people to help make other goods?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Tom borrows $50,000 from a bank, buys a tractor and starts a market garden near Shepparton. Which part of this case is enterprise?",
+      "opts": [
+        "Tom organising the farm and taking the risk",
+        "The $50,000 Tom borrows from the bank",
+        "The soil and water on Tom's land",
+        "The tractor Tom buys for the farm"
+      ],
+      "why": "Enterprise is organising the other factors and taking the risk of starting a business, which is what Tom does. The loan is tempting, but it is money, and money is not capital or enterprise. The soil and water are natural resources and the tractor is capital.",
+      "clue": "Which option is about a person's role in starting and running the business?"
+    }
+  },
+  "eco-basic-economic-problem": {
+    "title": "The basic economic problem",
+    "card": [
+      "Wants are unlimited. People always want more goods and services than they have. Resources are limited, so they are scarce.",
+      "Scarcity is the gap between unlimited wants and limited resources. Every society faces it, rich or poor, so choices must be made.",
+      "Scarcity forces three questions. What and how much should be made? How should it be made? Who gets what is made?",
+      "The how question is about methods, such as using more workers or more machines. The who question is about how output is shared among people."
+    ],
+    "remember": "Unlimited wants meet limited resources, so every society must answer what, how and who.",
+    "a": {
+      "q": "Why does every society face the basic economic problem?",
+      "opts": [
+        "Wants are unlimited but resources are limited",
+        "Resources are unlimited but wants are limited",
+        "Poor societies have too few goods to share",
+        "Governments choose to make some goods rare"
+      ],
+      "why": "Scarcity comes from unlimited wants meeting limited resources. It is not only a problem of poor societies, because rich societies still cannot meet every want.",
+      "clue": "Think about the gap between wants and resources."
+    },
+    "b": {
+      "d": 3,
+      "q": "The Victorian town of Marlow has one vacant block of land. Its council debates whether to build a library or a sports centre on it. Which economic question is the council answering?",
+      "opts": [
+        "What to make, given limited resources",
+        "How to make it, given limited resources",
+        "Who gets it, given limited resources",
+        "How to remove scarcity in the town"
+      ],
+      "why": "The council is choosing which good to make, so it is answering the what question. It is not choosing a method of production or who receives the output, and choosing between two uses of the land does not remove scarcity.",
+      "clue": "Is the council choosing a good, a method or a group of people?"
+    }
+  },
+  "eco-opportunity-cost": {
+    "title": "Opportunity cost",
+    "card": [
+      "Resources are scarce, so choosing one option means giving up others. Opportunity cost is the value of the next best option given up.",
+      "It is only the single next best option, not every option left behind. It is not always money: time, land or effort can be what is given up.",
+      "A trade-off is the act of giving up one thing to get another. Weighing the opportunity cost shows what each choice really costs.",
+      "In a cost-benefit analysis, a person or government compares the costs and benefits of a choice. A choice is worth making when its benefits outweigh its costs, including the opportunity cost."
+    ],
+    "remember": "Every choice has a cost: the next best option you gave up.",
+    "a": {
+      "q": "Ravi has a free Saturday. He could work a shift for $120, go to a football match, or study. He picks the match and would have studied second. What is his opportunity cost?",
+      "opts": [
+        "The study time he gave up",
+        "The $120 he would have earned",
+        "The study time and the $120 together",
+        "The cost of the match ticket"
+      ],
+      "why": "Opportunity cost is the next best option given up, and for Ravi that is studying. The $120 shift was a third choice, so it is not counted. Adding it would count more than the single next best option.",
+      "clue": "Which option came second in his ranking?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A council in Ballarat has land for one project. It could build a library, which it ranks first, or a car park, which it ranks second, or a skate park, which it ranks third. What is the opportunity cost of choosing the library?",
+      "opts": [
+        "The car park",
+        "The skate park",
+        "The car park and the skate park",
+        "Nothing, as the library was its first choice"
+      ],
+      "why": "The opportunity cost is the next best option given up, which is the car park. The skate park is also given up but ranks lower, so it is not counted. Choosing the best option still has an opportunity cost, because something is given up.",
+      "clue": "Does making the best choice mean nothing at all is given up?"
+    }
+  },
+  "eco-production-possibility-frontier": {
+    "title": "The production possibility frontier",
+    "card": [
+      "A production possibility frontier (PPF) is a curve showing the most of two goods an economy can make with all its resources. It assumes the resources and technology stay the same.",
+      [
+        "On the curve",
+        "the economy is using its resources fully and well. It cannot make more of one good without making less of the other."
+      ],
+      [
+        "Inside the curve",
+        "some resources are unused or poorly used, such as workers without jobs. The economy could make more of one good, or both, with no loss."
+      ],
+      "Moving along the curve shows opportunity cost. To make more of one good, the economy gives up some of the other. A point outside the curve cannot be reached with current resources."
+    ],
+    "remember": "On the PPF, more of one good means less of the other. Inside it, resources are wasted.",
+    "a": {
+      "q": "An economy is at a point inside its PPF. What does this show?",
+      "opts": [
+        "Some resources are unused or poorly used",
+        "Resources are fully used and well used",
+        "The economy has more resources than before",
+        "The economy is making as much as it possibly can"
+      ],
+      "why": "Inside the curve, the economy makes less than its resources allow, so some are wasted. Points on the curve, not inside it, show full and efficient use of resources.",
+      "clue": "Compare the point with the most the economy could make."
+    },
+    "b": {
+      "d": 3,
+      "q": "Bella's Island can make only coconuts and fish. It moves along its PPF to catch more fish and now makes fewer coconuts. What does this show?",
+      "opts": [
+        "The opportunity cost of more fish is fewer coconuts",
+        "Island resources have been wasted by the change",
+        "The island has gained more resources and technology",
+        "The island can now make more of both goods"
+      ],
+      "why": "On the PPF, resources are fully used, so more fish means moving workers away from coconuts. The coconuts given up are the opportunity cost. Since the island is already on its curve, making more of both would mean reaching a point outside it, which its current resources cannot do.",
+      "clue": "On the curve, nothing is idle, so where do extra fish come from?"
+    }
+  },
+  "eco-economic-systems": {
+    "title": "Economic systems",
+    "card": [
+      "An economic system is the way a society answers what to make, how to make it and who gets it. Systems differ in who decides.",
+      ["Market", "prices and private choices decide. Most resources are privately owned."],
+      ["Planned", "the government decides what is made, how and who gets it. Most resources are owned by the state."],
+      [
+        "Traditional",
+        "custom and habit decide, with roles passed down through families and communities. Mixed economies combine prices and government decisions, as Australia's does."
+      ]
+    ],
+    "remember": "The systems differ in who decides: prices, the state, custom, or a mix.",
+    "a": {
+      "q": "In one country, a central government sets what each factory makes and who receives the goods. What type of system is this?",
+      "opts": ["A planned economy", "A market economy", "A traditional economy", "A mixed economy"],
+      "why": "In a planned economy the government answers the three economic questions, instead of prices doing so. A mixed economy is tempting, but here the government sets output and distribution, so prices play no real part.",
+      "clue": "Who is making the decisions about output?"
+    },
+    "b": {
+      "d": 3,
+      "q": "In a remote village, families farm and share the harvest the way their elders always have. Prices and government orders play almost no part. Which system does this best describe?",
+      "opts": [
+        "Traditional, because custom decides what is made",
+        "Market, because families choose what to grow",
+        "Planned, because the harvest is shared out",
+        "Mixed, because families and elders both decide"
+      ],
+      "why": "Custom and habit passed down through generations decide what is made and who gets it, so the system is traditional. Families do choose what to grow, but they follow custom rather than prices, so it is not a market. Elders are not a government, so it is not mixed.",
+      "clue": "Look for what guides the decisions: prices, the state or custom."
+    }
+  },
+  "eco-circular-flow-income": {
+    "title": "The three-sector circular flow",
+    "card": [
+      "The circular flow is a simple model of how money, resources, goods and services move around an economy. It has three sectors: households, businesses and government.",
+      [
+        "Households and businesses",
+        "Households supply labour and other resources to businesses. Businesses pay them income, such as wages. Households spend that income on goods and services from businesses."
+      ],
+      [
+        "Government",
+        "Households and businesses pay taxes to the government. The government spends this money on services such as schools, on goods from businesses, and on wages for public servants."
+      ],
+      "The government also makes transfer payments to households, such as the pension. These are payments with no good or service given in return. Each sector's spending becomes another sector's income, so money keeps moving in a loop."
+    ],
+    "remember": "Money moves in a loop: what one sector spends, another sector receives as income.",
+    "a": {
+      "q": "In the three-sector circular flow, which of these is a flow of money from the government to households?",
+      "opts": [
+        "A pension payment to a retired person",
+        "A wage paid by a café to its worker",
+        "Income tax paid by a nurse",
+        "A public school buying new textbooks"
+      ],
+      "why": "The pension is a transfer payment from the government to a household. The textbook purchase is government spending, but it goes to a business, not a household. Income tax runs the other way, from a household to the government.",
+      "clue": "Look for money that leaves the government and arrives at a household."
+    },
+    "b": {
+      "d": 3,
+      "q": "Lena works at a bakery in Geelong and spends her wages at a local shop. The shop owner pays tax on profits. Which sector receives the money Lena spends at the shop?",
+      "opts": [
+        "Businesses, as income from sales",
+        "Households, as wages for her labour",
+        "Government, as a transfer payment",
+        "Government, as tax on the shop's profit"
+      ],
+      "why": "Lena buys goods from the shop, so her spending goes to a business as income from sales. Her wages came from a business, so the money has moved from business to household and back to business. The tax on profit is a later, separate flow from the shop to the government.",
+      "clue": "Who sells the goods Lena buys?"
+    }
+  },
+  "eco-reserve-bank-goals": {
+    "title": "The Reserve Bank and its goals",
+    "card": [
+      "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+      "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+      "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+      "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+    ],
+    "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+    "a": {
+      "q": "Which statement best describes the role of the RBA in monetary policy?",
+      "opts": [
+        "It influences interest rates itself to meet charter goals",
+        "It influences interest rates as directed by the Treasurer",
+        "It influences the federal budget to meet government plans",
+        "It influences interest rates to keep unemployment at zero"
+      ],
+      "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+      "clue": "Who makes the decision, and what guides it?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+      "opts": [
+        "The Treasurer can no longer overrule its rate decisions",
+        "The Treasurer can overrule it only after an election",
+        "Its charter puts full employment ahead of stable prices",
+        "Its only charter goal is keeping inflation in its target"
+      ],
+      "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+      "clue": "Check each option against the current charter."
+    }
+  },
+  "eco-transmission-mechanism": {
+    "title": "The transmission mechanism",
+    "card": [
+      [
+        "Saving and investment",
+        "higher rates reward saving and raise the cost of new borrowing, so households and firms tend to spend and invest less. Lower rates tend to do the reverse."
+      ],
+      [
+        "Cash flow",
+        "many borrowers have variable rate loans, so a rate rise lifts their repayments and leaves less income to spend. A rate cut frees up income."
+      ],
+      [
+        "Exchange rate",
+        "higher Australian rates can attract foreign funds and lift the dollar, making exports dearer and imports cheaper. Lower rates can lower the dollar, making exports cheaper and imports dearer."
+      ],
+      [
+        "Asset prices and wealth",
+        "lower rates tend to lift house and share prices, and higher rates tend to lower them. Owners who feel wealthier tend to spend more."
+      ]
+    ],
+    "remember": "The transmission mechanism carries a cash rate change to spending through four channels, each changing what people and firms can or will spend.",
+    "a": {
+      "q": "The RBA raises the cash rate, and banks lift variable home loan rates. Households pay more each month and have less left to spend. Which channel is this?",
+      "opts": ["Cash flow", "Saving and investment", "The exchange rate", "Asset prices and wealth"],
+      "why": "The higher repayments cut the income households have left to spend, which is the cash flow channel. Saving and investment is about the reward for saving and the cost of new borrowing, not the squeeze on repayments of existing loans.",
+      "clue": "Think about what is left of income after the loan repayment."
+    },
+    "b": {
+      "d": 3,
+      "q": "The RBA cuts the cash rate. Foreign investors move funds out of Australia, and the dollar falls. What is the likely effect through the exchange rate channel?",
+      "opts": [
+        "Exports get cheaper abroad, so demand tends to rise",
+        "Exports get dearer abroad, so demand tends to rise",
+        "Exports get cheaper abroad, so demand tends to fall",
+        "Imports get cheaper, so demand for local goods tends to rise"
+      ],
+      "why": "A lower dollar makes Australian goods cheaper for overseas buyers, so export demand tends to rise. This adds to the effect of the rate cut. Imports become dearer, not cheaper, when the dollar falls.",
+      "clue": "A weaker dollar buys less foreign money for each Australian dollar."
+    }
+  },
+  "eco-stance-monetary-policy": {
+    "title": "The stance of monetary policy",
+    "card": [
+      "The neutral rate is the cash rate that neither speeds up nor slows down the economy. It cannot be seen directly, so it is estimated.",
+      "The stance of monetary policy depends on the level of the cash rate compared with neutral. Below neutral is expansionary, above is contractionary, and close to neutral is neutral.",
+      "Expansionary policy makes borrowing cheaper, so spending and activity tend to rise. Contractionary policy makes borrowing dearer, so spending and activity tend to slow.",
+      "Recent changes in the cash rate show which way the RBA is leaning. Raising rates while they are still well below neutral tightens policy, but it stays expansionary."
+    ],
+    "remember": "The level against neutral gives the stance. Recent changes give the direction.",
+    "a": {
+      "q": "The RBA estimates the neutral rate at 3%. The cash rate is 1.5%. What is the stance of monetary policy?",
+      "opts": [
+        "Expansionary, as rates are below neutral",
+        "Contractionary, as rates are below neutral",
+        "Expansionary, as rates are above neutral",
+        "Neutral, as rates are low by past standards"
+      ],
+      "why": "The cash rate is well below the neutral rate, so borrowing is cheaper and policy is expansionary. Rates being low by past standards does not make policy neutral. Neutral means the cash rate is close to the neutral rate.",
+      "clue": "Compare the cash rate with the neutral rate, not with the past."
+    },
+    "b": {
+      "d": 3,
+      "q": "Over a year, the RBA raises the cash rate from 0.1% to 2.1%. Neutral is estimated at about 3.5%. Which statement is best supported?",
+      "opts": [
+        "Policy is still expansionary, but less so than before",
+        "Policy has become contractionary, as rates have risen",
+        "Policy is now neutral, as rates have reached neutral",
+        "Policy is more expansionary than it was a year ago"
+      ],
+      "why": "The rises show the RBA leaning towards tighter policy, but at 2.1% the cash rate is still well below the neutral estimate, so policy stays expansionary, only less so. The tempting answer is contractionary, which confuses rising rates with rates above neutral.",
+      "clue": "Rising rates are not the same as rates above neutral."
+    }
+  },
+  "eco-strengths-limits-monetary-policy": {
+    "title": "Strengths and limits of monetary policy",
+    "card": [
+      "Monetary policy can be changed quickly. The RBA's Monetary Policy Board meets eight times a year and can alter the cash rate target at any of those meetings.",
+      "It is run by the RBA, which is independent of the government. This means decisions can be made on economic grounds, without pressure from election timing.",
+      "It takes time to work fully. Changes in the cash rate pass through to spending and prices slowly, so the full effect can take a year or more.",
+      "It acts on the whole country at once. The RBA cannot aim it at one region or industry, so it may suit some areas and strain others."
+    ],
+    "remember": "Monetary policy is quick to change and independent, but slow to take full effect and not targeted.",
+    "a": {
+      "q": "Which is a limit of monetary policy rather than a strength?",
+      "opts": [
+        "Its full effect on spending can take a year or more",
+        "The RBA can change the cash rate target at a meeting",
+        "The RBA makes decisions independently of the government",
+        "Decisions can be made without pressure from election timing"
+      ],
+      "why": "Changes in the cash rate pass through to spending and prices slowly, so the full effect arrives late. That makes the RBA's job harder. The other three are strengths: the policy can be changed quickly, and decisions are free of government and election pressure.",
+      "clue": "Which feature makes the RBA's job harder, not easier?"
+    },
+    "b": {
+      "d": 3,
+      "q": "Mining in Western Australia is booming and prices there are rising fast, while Tasmania's economy is weak. The RBA raises the cash rate to slow inflation. Which limit of monetary policy does this show?",
+      "opts": [
+        "It acts on the whole country, so it hits weak regions too",
+        "It takes time to work, so the rise will arrive late",
+        "It is not independent, so the rise reflects government aims",
+        "It cannot be changed quickly, so the RBA must wait months"
+      ],
+      "why": "A single cash rate applies across Australia, so a rise aimed at a booming region also affects Tasmania, where the economy is weak. The delay is a real limit, but this case is about different regions, not timing.",
+      "clue": "Think about the two regions being treated the same way."
+    }
+  },
+  "eco-skilled-immigration": {
+    "title": "Skilled immigration",
+    "card": [
+      "Skilled immigration lets in migrants with skills the economy needs, such as nurses, engineers or electricians. It is an aggregate supply policy because it aims to raise the economy's productive capacity.",
+      "Migrants add to the population and the labour force. A larger labour force means more workers are available to produce goods and services.",
+      "Skilled migrants can fill skill gaps, where employers cannot find enough local workers for a job. Filling these gaps can ease labour shortages and let businesses keep producing.",
+      "Migrants are often of working age, which can lift the participation rate. Their skills and training can lift productivity, the output produced per hour worked."
+    ],
+    "remember": "Skilled immigration can grow the workforce, fill skill gaps and raise what the economy can produce over time.",
+    "a": {
+      "q": "A regional Victorian hospital cannot hire enough local radiographers, so it recruits some from overseas. Which supply-side effect does this show?",
+      "opts": [
+        "It fills a skill gap and adds to the labour force",
+        "It lifts productivity because the staff are of working age",
+        "It adds to demand but leaves productive capacity unchanged",
+        "It eases the shortage but shrinks the population"
+      ],
+      "why": "The hospital could not find local workers for a role, and the migrants fill that gap while adding to the labour force. Being of working age explains a rise in participation, not productivity, which comes from skills.",
+      "clue": "Think about what the hospital lacked."
+    },
+    "b": {
+      "d": 3,
+      "q": "Tariq runs a building firm in Geelong. Electricians are scarce, so his projects are delayed. How could a rise in skilled immigration help the wider economy?",
+      "opts": [
+        "More electricians could ease the shortage and lift output",
+        "Migrants could lift productivity by being of working age",
+        "Migrants could lift spending but not what the economy makes",
+        "Electricians could lift participation through their skills"
+      ],
+      "why": "More electricians fill the skill gap, so delayed projects can go ahead and output can rise. Being of working age can lift participation, but productivity gains come from migrants' skills, so the age option mixes up the two effects.",
+      "clue": "Which effect comes from age, and which from skills?"
+    }
+  },
+  "eco-environmental-energy-policy": {
+    "title": "Market-based environmental policy",
+    "card": [
+      "Pollution is often a cost that firms do not pay. Market-based policies put a price on it, so firms must count it in their costs.",
+      [
+        "Emissions trading",
+        "the government sets a limit on total emissions and issues permits. Firms that emit more must buy permits, and those that cut emissions can sell spare ones."
+      ],
+      [
+        "Carbon price",
+        "a charge on each tonne of greenhouse gas a firm emits. It raises the cost of polluting, so firms have a reason to cut emissions."
+      ],
+      "These policies change costs now, such as higher production costs for heavy polluters. The aim is to protect resources and the environment for future generations."
+    ],
+    "remember": "Pricing pollution raises costs today to protect the environment for later generations.",
+    "a": {
+      "q": "A government limits total emissions and lets firms trade permits. Which effect on a coal-fired power company is most likely?",
+      "opts": [
+        "Its costs rise unless it cuts its emissions",
+        "Its costs fall because it receives free output",
+        "Its output is fixed by the government each year",
+        "Its costs stay the same whatever it emits"
+      ],
+      "why": "Under a permit system, emitting more means buying permits, so costs rise unless the firm cuts emissions. The fixed output option is wrong because firms choose how to respond to the price.",
+      "clue": "What must a firm do to emit more?"
+    },
+    "b": {
+      "d": 3,
+      "q": "A cement maker in Ballarat faces a new price on each tonne of emissions. Why do economists say the policy shifts costs from the future to now?",
+      "opts": [
+        "Firms pay today to protect resources for later generations",
+        "Firms avoid all costs now and pay them in the future",
+        "Consumers gain a benefit now and nothing in the future",
+        "The government bans emissions so costs stop for good"
+      ],
+      "why": "The price raises the firm's costs today. The benefit is a healthier environment and more resources for later generations. The ban option is wrong because the policy prices emissions rather than banning them.",
+      "clue": "Who pays first, and who benefits later?"
+    }
+  },
+  "eco-strengths-limits-supply-side": {
+    "title": "Strengths and limits of supply-side policies",
+    "card": [
+      "Supply-side policies aim to raise productive capacity, the most the economy can produce with its resources. They work on costs, skills, efficiency and investment.",
+      [
+        "Strength",
+        "they can raise productivity, so the economy can grow faster without adding to inflation. Over the long run this can lift living standards."
+      ],
+      [
+        "Time lag",
+        "most take years to work, because skills, investment and reform build slowly. They do little to fix a sudden fall in spending."
+      ],
+      [
+        "Up-front cost",
+        "many cost money first, such as funding for roads or schools, and some can hurt certain workers or firms before the gains arrive."
+      ]
+    ],
+    "remember": "Supply-side policies can pay off in the long run, but the gains are slow and the costs often come first.",
+    "a": {
+      "q": "The government spends heavily on faster freight rail to cut business costs. What pattern of costs and gains is most likely?",
+      "opts": [
+        "Costs now, with gains in productivity years later",
+        "Gains in productivity now, with costs years later",
+        "Gains in productivity now, with no costs at all",
+        "Costs now, with lower productivity years later"
+      ],
+      "why": "Building rail costs money up front, and the gains come slowly as firms use the faster network. Gains now with costs later reverses the usual timing of a supply-side policy.",
+      "clue": "Think about when the money is spent and when firms benefit."
+    },
+    "b": {
+      "d": 3,
+      "q": "Unemployment jumps after a sudden fall in spending, and the government wants jobs back within months. Why would a supply-side policy be a weak main response?",
+      "opts": [
+        "Its effects build over years, not months",
+        "It works by cutting the economy's capacity",
+        "It mainly works by raising inflation fast",
+        "It lowers living standards in the long run"
+      ],
+      "why": "Supply-side policies build capacity slowly, so they do little for a sudden fall in spending. They aim to raise capacity and living standards over the long run, not cut them.",
+      "clue": "Compare how fast the policy works with how soon jobs are needed."
+    }
   }
 };

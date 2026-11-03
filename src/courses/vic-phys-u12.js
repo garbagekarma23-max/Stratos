@@ -58,7 +58,12 @@ MADE_COURSES.push({
             "phys-medical-radioisotopes"
           ]
         },
-        {"id": "vic-phys-u12-1-4", "title": "Nuclear energy", "check": "checked", "points": []},
+        {
+          "id": "vic-phys-u12-1-4",
+          "title": "Nuclear energy",
+          "check": "checked",
+          "points": ["phys-nuclear-fission", "phys-nuclear-fusion", "phys-fission-fusion", "phys-nuclear-power-australia"]
+        },
         {
           "id": "vic-phys-u12-1-3",
           "title": "Circuits",

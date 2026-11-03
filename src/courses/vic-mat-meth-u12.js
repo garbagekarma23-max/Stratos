@@ -76,7 +76,12 @@ MADE_COURSES.push({
     {
       "title": "Unit 2: Circular, exponential and logarithmic functions, calculus and probability",
       "chapters": [
-        {"id": "vic-mat-meth-u12-1-3", "title": "Circular functions", "check": "checked", "points": []},
+        {
+          "id": "vic-mat-meth-u12-1-3",
+          "title": "Circular functions",
+          "check": "checked",
+          "points": ["mat-radians-2", "mat-unit-circle", "mat-exact-values-2", "mat-symmetry-periodicity"]
+        },
         {
           "id": "vic-mat-meth-u12-2-2",
           "title": "Circular graphs and equations",

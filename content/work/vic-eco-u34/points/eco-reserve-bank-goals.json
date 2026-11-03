@@ -24,7 +24,7 @@
    0.283
   ]
  ],
- "stage": "fix",
+ "stage": "cleared",
  "log": [
   "2026-11-01T14:36:26Z new, match",
   "2026-11-01T14:46:37Z match: Claude Haiku 5.5 found no bank point the same, so it is written new",
@@ -37,20 +37,22 @@
   "2026-11-02T04:43:11Z autoreject: rejected, to be written again (a wording)",
   "2026-11-02T04:50:14Z write: failed the content check, writing again",
   "2026-11-02T04:56:45Z write: done (still fails the content check)",
-  "2026-11-02T04:58:59Z check: flagged"
+  "2026-11-02T04:58:59Z check: flagged",
+  "2026-11-03T11:40:49Z fix: suggested",
+  "2026-11-03T12:02:57Z claude-code review: approved with the fix"
  ],
  "sent": {
   "match": 1,
   "write": 5,
   "check": 2,
-  "fix": 1,
+  "fix": 2,
   "recheck": 1
  },
  "usd": {
   "match": 0.00028,
   "write": 0.02886,
   "check": 0.03237,
-  "fix": 0.02654,
+  "fix": 0.04595,
   "recheck": 0.01932
  },
  "match": {
@@ -96,7 +98,7 @@
   }
  },
  "rewrites": 1,
- "cleared_by": "autoreject",
+ "cleared_by": "claude-code",
  "autoreject": [
   {
    "at": "2026-11-02T04:43:11Z",
@@ -293,5 +295,401 @@
  "sensitive": "none",
  "flags": [
   "Content check: eco-reserve-bank-goalsa option is 61 characters: It influences interest rates on its own to meet charter goals"
+ ],
+ "proposal": {
+  "title": "The Reserve Bank and its goals",
+  "card": [
+   "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+   "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+   "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+   "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+  ],
+  "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+  "a": {
+   "q": "Which statement best describes the role of the RBA in monetary policy?",
+   "opts": [
+    "It influences interest rates itself to meet charter goals",
+    "It influences interest rates as directed by the Treasurer",
+    "It influences the federal budget to meet government plans",
+    "It influences interest rates to keep unemployment at zero"
+   ],
+   "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+   "clue": "Who makes the decision, and what guides it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+   "opts": [
+    "The Treasurer can no longer overrule its rate decisions",
+    "The Treasurer can overrule it only after an election",
+    "Its charter puts full employment ahead of stable prices",
+    "Its only charter goal is keeping inflation in its target"
+   ],
+   "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+   "clue": "Check each option against the current charter."
+  }
+ },
+ "proposal_problems": [],
+ "final": {
+  "title": "The Reserve Bank and its goals",
+  "card": [
+   "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+   "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+   "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+   "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+  ],
+  "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+  "a": {
+   "q": "Which statement best describes the role of the RBA in monetary policy?",
+   "opts": [
+    "It influences interest rates itself to meet charter goals",
+    "It influences interest rates as directed by the Treasurer",
+    "It influences the federal budget to meet government plans",
+    "It influences interest rates to keep unemployment at zero"
+   ],
+   "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+   "clue": "Who makes the decision, and what guides it?"
+  },
+  "b": {
+   "d": 3,
+   "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+   "opts": [
+    "The Treasurer can no longer overrule its rate decisions",
+    "The Treasurer can overrule it only after an election",
+    "Its charter puts full employment ahead of stable prices",
+    "Its only charter goal is keeping inflation in its target"
+   ],
+   "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+   "clue": "Check each option against the current charter."
+  }
+ },
+ "claude_code": [
+  {
+   "at": "2026-11-03T12:02:57Z",
+   "step": "review",
+   "decision": "fix",
+   "sure": "high",
+   "reason": "The only problem was question a's right option being one character too long. The fix swaps 'on its own' for 'itself', which keeps the meaning. The facts match the RBA changes in force from March 2025: two goals, the Monetary Policy Board, and no Treasurer override.",
+   "item": "505841dc261be7fc",
+   "result": "decided",
+   "saved": {
+    "id": "eco-reserve-bank-goals",
+    "title": "The Reserve Bank and its goals",
+    "brief": "9201a22d305a",
+    "shortlist": [
+     [
+      "eco-limits-monetary-policy",
+      0.427
+     ],
+     [
+      "eco-policy-mix",
+      0.371
+     ],
+     [
+      "e-monetary",
+      0.322
+     ],
+     [
+      "eco-macroeconomic-microeconomic-policy",
+      0.295
+     ],
+     [
+      "e-objectives",
+      0.283
+     ]
+    ],
+    "stage": "review",
+    "sent": {
+     "match": 1,
+     "write": 5,
+     "check": 2,
+     "fix": 2,
+     "recheck": 1
+    },
+    "usd": {
+     "match": 0.00028,
+     "write": 0.02886,
+     "check": 0.03237,
+     "fix": 0.04595,
+     "recheck": 0.01932
+    },
+    "match": {
+     "verdict": "new",
+     "same": "",
+     "changes": [],
+     "sure": "medium",
+     "reason": "No bank point explains the RBA's charter, its role running monetary policy, or its independence from government; the closest, Macroeconomic objectives, covers general government aims and only mentions the RBA's inflation target in passing, so it is broader and would need a new card.",
+     "model": "claude-haiku-5-5"
+    },
+    "note": "A fresh check found these problems in this version. Fix each one, and keep everything that is right:\n- Question a, wording: The options say the RBA 'sets interest rates', but the card says it 'influences interest rates'. Strictly, the RBA sets only a target for the cash rate, and other rates follow. 'Sets the cash rate target' or 'influences interest rates' would match the card and the chapter more closely.",
+    "rejected": {
+     "title": "The Reserve Bank and its goals",
+     "card": [
+      "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+      "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+      "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+      "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+     ],
+     "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+     "a": {
+      "q": "Which statement best describes the role of the RBA in monetary policy?",
+      "opts": [
+       "It sets interest rates itself to meet its charter goals",
+       "It sets interest rates as directed by the Treasurer",
+       "It sets the federal budget to meet the government's plans",
+       "It sets interest rates to keep unemployment at zero"
+      ],
+      "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+      "clue": "Who makes the decision, and what guides it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+      "opts": [
+       "The Treasurer can no longer overrule its rate decisions",
+       "The Treasurer can overrule it only after an election",
+       "Its charter puts full employment ahead of stable prices",
+       "Its only charter goal is keeping inflation in its target"
+      ],
+      "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+      "clue": "Check each option against the current charter."
+     }
+    },
+    "rewrites": 1,
+    "cleared_by": "autoreject",
+    "autoreject": [
+     {
+      "at": "2026-11-02T04:43:11Z",
+      "rules": 1,
+      "rewrites": 1,
+      "flags": [
+       "Question a, wording: The options say the RBA 'sets interest rates', but the card says it 'influences interest rates'. Strictly, the RBA sets only a target for the cash rate, and other rates follow. 'Sets the cash rate target' or 'influences interest rates' would match the card and the chapter more closely."
+      ],
+      "saved": {
+       "draft": {
+        "title": "The Reserve Bank and its goals",
+        "card": [
+         "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+         "The RBA works under a charter set out in law. It has three aims: the stability of the currency, full employment, and the economic prosperity and welfare of Australians.",
+         "In practice, stability of the currency means keeping inflation low and steady. The RBA's inflation target is 2 to 3 per cent a year, on average over time.",
+         "The RBA makes its monetary policy decisions independently of the government. The government cannot tell it where to set policy, so decisions are less likely to be shaped by election timing."
+        ],
+        "remember": "The RBA aims for stable prices and full employment, and it decides on its own.",
+        "a": {
+         "q": "Which statement best describes the role of the RBA in monetary policy?",
+         "opts": [
+          "It sets monetary policy to meet its charter goals itself",
+          "It sets monetary policy as directed by the government",
+          "It sets the budget to match the government's spending plans",
+          "It sets monetary policy to keep unemployment at zero"
+         ],
+         "why": "The RBA works under a charter that includes stable prices and full employment, and it makes its own decisions. Taking directions from the government is wrong because the RBA is independent of it.",
+         "clue": "Who decides, and what guides the decision?"
+        },
+        "b": {
+         "d": 3,
+         "q": "Inflation has risen above the RBA's target before an election. A minister asks the RBA to hold off any action until after the vote. Why is the RBA able to ignore this request?",
+         "opts": [
+          "It decides monetary policy independently of the government",
+          "It must follow its charter, which bans talks with ministers",
+          "It is owned by the banks, so it answers to them",
+          "It aims only for jobs, so inflation is not its concern"
+         ],
+         "why": "The government cannot direct the RBA's policy decisions, so it can act on its charter aims even when this is unpopular before an election. The last option is wrong because stable prices is also one of the RBA's aims.",
+         "clue": "Think about who can tell the RBA what to do."
+        }
+       },
+       "redone": true,
+       "local": [],
+       "check": {
+        "a": {
+         "best": "It sets monetary policy to meet its charter goals itself",
+         "also_right": []
+        },
+        "b": {
+         "best": "It decides monetary policy independently of the government",
+         "also_right": []
+        },
+        "problems": [
+         {
+          "part": "card",
+          "kind": "fact",
+          "detail": "The card lists the RBA's charter aims as stability of the currency, full employment, and prosperity and welfare. That wording is from the old Reserve Bank Act. The 2024 amendments, in force from 1 March 2025, set price stability and full employment as the monetary policy objectives, with prosperity and welfare as the overall purpose. The same amendments removed the Treasurer's power to overrule the Board, which is what now makes 'the government cannot tell it' strictly true. The card should note the current law or say which version it describes."
+         },
+         {
+          "part": "b",
+          "kind": "level",
+          "detail": "The distractors are weak for Year 12: owned by the banks, bans talks with ministers, aims only for jobs. Together with the clue 'who can tell the RBA what to do', the right option is close to given away."
+         }
+        ],
+        "sure": "medium",
+        "sensitive": "none",
+        "summary": "The card's three charter aims follow the pre-2025 Reserve Bank Act and may be out of date after the 2024 amendments, which set price stability and full employment as the policy objectives and removed the government's override power. Question b is very easy, with weak distractors and a leading clue."
+       },
+       "flags": [
+        "Card, fact: The card lists the RBA's charter aims as stability of the currency, full employment, and prosperity and welfare. That wording is from the old Reserve Bank Act. The 2024 amendments, in force from 1 March 2025, set price stability and full employment as the monetary policy objectives, with prosperity and welfare as the overall purpose. The same amendments removed the Treasurer's power to overrule the Board, which is what now makes 'the government cannot tell it' strictly true. The card should note the current law or say which version it describes.",
+        "Question b, level: The distractors are weak for Year 12: owned by the banks, bans talks with ministers, aims only for jobs. Together with the clue 'who can tell the RBA what to do', the right option is close to given away."
+       ],
+       "sensitive": "none",
+       "proposal": {
+        "title": "The Reserve Bank and its goals",
+        "card": [
+         "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+         "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+         "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+         "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+        ],
+        "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+        "a": {
+         "q": "Which statement best describes the role of the RBA in monetary policy?",
+         "opts": [
+          "It sets interest rates itself to meet its charter goals",
+          "It sets interest rates as directed by the Treasurer",
+          "It sets the federal budget to meet the government's plans",
+          "It sets interest rates to keep unemployment at zero"
+         ],
+         "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+         "clue": "Who makes the decision, and what guides it?"
+        },
+        "b": {
+         "d": 3,
+         "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+         "opts": [
+          "The Treasurer can no longer overrule its rate decisions",
+          "The Treasurer can overrule it only after an election",
+          "Its charter puts full employment ahead of stable prices",
+          "Its only charter goal is keeping inflation in its target"
+         ],
+         "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+         "clue": "Check each option against the current charter."
+        }
+       },
+       "proposal_problems": [],
+       "alone": true,
+       "recheck": {
+        "at": "2026-11-02T04:41:50Z",
+        "result": "kept",
+        "why": [
+         "the fresh check found a problem"
+        ],
+        "check": {
+         "a": {
+          "best": "It sets interest rates itself to meet its charter goals",
+          "also_right": []
+         },
+         "b": {
+          "best": "The Treasurer can no longer overrule its rate decisions",
+          "also_right": []
+         },
+         "problems": [
+          {
+           "part": "a",
+           "kind": "wording",
+           "detail": "The options say the RBA 'sets interest rates', but the card says it 'influences interest rates'. Strictly, the RBA sets only a target for the cash rate, and other rates follow. 'Sets the cash rate target' or 'influences interest rates' would match the card and the chapter more closely."
+          }
+         ],
+         "sure": "high",
+         "sensitive": "none",
+         "summary": "The facts check out: the dual mandate and the removal of the Treasurer's override from March 2025 are both right, and each question has one clear answer. The only issue is minor: question a's options say the RBA 'sets interest rates' where the card says it 'influences' them."
+        },
+        "flags": [
+         "Question a, wording: The options say the RBA 'sets interest rates', but the card says it 'influences interest rates'. Strictly, the RBA sets only a target for the cash rate, and other rates follow. 'Sets the cash rate target' or 'influences interest rates' would match the card and the chapter more closely."
+        ]
+       }
+      }
+     }
+    ],
+    "draft": {
+     "title": "The Reserve Bank and its goals",
+     "card": [
+      "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+      "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+      "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+      "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+     ],
+     "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+     "a": {
+      "q": "Which statement best describes the role of the RBA in monetary policy?",
+      "opts": [
+       "It influences interest rates on its own to meet charter goals",
+       "It influences interest rates as directed by the Treasurer",
+       "It influences the federal budget to meet government plans",
+       "It influences interest rates to keep unemployment at zero"
+      ],
+      "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+      "clue": "Who makes the decision, and what guides it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+      "opts": [
+       "The Treasurer can no longer overrule its rate decisions",
+       "The Treasurer can overrule it only after an election",
+       "Its charter puts full employment ahead of stable prices",
+       "Its only charter goal is keeping inflation in its target"
+      ],
+      "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+      "clue": "Check each option against the current charter."
+     }
+    },
+    "redone": true,
+    "local": [
+     "eco-reserve-bank-goalsa option is 61 characters: It influences interest rates on its own to meet charter goals"
+    ],
+    "check": {
+     "a": {
+      "best": "It influences interest rates on its own to meet charter goals",
+      "also_right": []
+     },
+     "b": {
+      "best": "The Treasurer can no longer overrule its rate decisions",
+      "also_right": []
+     },
+     "problems": [],
+     "sure": "high",
+     "sensitive": "none",
+     "summary": "No problems found."
+    },
+    "sensitive": "none",
+    "flags": [
+     "Content check: eco-reserve-bank-goalsa option is 61 characters: It influences interest rates on its own to meet charter goals"
+    ],
+    "proposal": {
+     "title": "The Reserve Bank and its goals",
+     "card": [
+      "The Reserve Bank of Australia (RBA) is the country's central bank. It runs monetary policy, which means it influences interest rates to affect spending and economic activity.",
+      "The RBA works under a charter set out in the Reserve Bank Act. Under changes in force from March 2025, its monetary policy goals are price stability and full employment. Both serve an overall purpose: the economic prosperity and welfare of Australians.",
+      "Price stability means low and steady inflation, with a target of 2 to 3 per cent a year on average over time. Full employment means as many jobs as the economy can sustain without pushing inflation up.",
+      "The RBA's Monetary Policy Board makes its decisions independently of the government. Since 2025 the Treasurer can no longer overrule the Board, so decisions are less likely to be shaped by election timing."
+     ],
+     "remember": "The RBA aims for stable prices and full employment, and the government cannot overrule its decisions.",
+     "a": {
+      "q": "Which statement best describes the role of the RBA in monetary policy?",
+      "opts": [
+       "It influences interest rates itself to meet charter goals",
+       "It influences interest rates as directed by the Treasurer",
+       "It influences the federal budget to meet government plans",
+       "It influences interest rates to keep unemployment at zero"
+      ],
+      "why": "The RBA influences interest rates to meet its charter goals of price stability and full employment, and it makes these decisions itself. Acting as directed by the Treasurer is wrong because the government can no longer overrule the Board.",
+      "clue": "Who makes the decision, and what guides it?"
+     },
+     "b": {
+      "d": 3,
+      "q": "Inflation is above the RBA's target before an election. The Treasurer asks the RBA to delay any rate rise until after the vote. Why can the RBA go ahead anyway?",
+      "opts": [
+       "The Treasurer can no longer overrule its rate decisions",
+       "The Treasurer can overrule it only after an election",
+       "Its charter puts full employment ahead of stable prices",
+       "Its only charter goal is keeping inflation in its target"
+      ],
+      "why": "Under the current law, the Monetary Policy Board decides and the Treasurer has no power to overrule it, at any time. The idea that the Treasurer can overrule it after an election is wrong because that power was removed altogether, and the charter gives the RBA two goals, not one.",
+      "clue": "Check each option against the current charter."
+     }
+    },
+    "proposal_problems": []
+   },
+   "after": "4888abe473591954"
+  }
  ]
 }
