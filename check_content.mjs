@@ -139,7 +139,7 @@ for (const c of COURSES) {
   courseIds.add(c.id);
   if (isMade) {
     if (!c.row || !c.row.name || !c.row.about) problems.push(c.id + ' has no row name and line for the subject sheet');
-    if (c.place !== 'international' && !C.CURRICULA[c.place]) problems.push(c.id + ' names a place with no curriculum: ' + c.place);
+    for (const p of [].concat(c.place)) if (p !== 'international' && !C.CURRICULA[p]) problems.push(c.id + ' names a place with no curriculum: ' + p);
     if (!Array.isArray(c.years) || !c.years.length || c.years.some(y => !(y >= 7 && y <= 12))) problems.push(c.id + ' must be for Years 7 to 12, not ' + c.years);
     if (!['standard', 'english', 'maths', 'theory'].includes(c.kind)) problems.push(c.id + ' has no kind: standard, english, maths or theory');
     if (!c.units.some(u => u.chapters.some(ch => ch.points.length))) problems.push(c.id + ' has no chapter with points');

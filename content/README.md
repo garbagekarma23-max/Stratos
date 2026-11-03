@@ -183,6 +183,7 @@ The estimate counts a point still to be matched both ways: its low end as if it 
 ### Courses from other states
 
 - Name the state in `place`: `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt` (or `nsw`, or `international`). A state's courses show on the subject sheet once its first course is published. Until then it says Courses coming, as now.
+- Several states teach the Australian Curriculum (Version 9.0) for Years 7 to 10 instead of a curriculum of their own. One outline covers all of them: name them as a list, `place: [qld, sa, wa, tas, act, nt]`. The course is published once and listed under each state, and the writer and matcher are told every state named. The `ac-` outlines do this.
 - Victoria and Queensland name their years by units, and South Australia and the Northern Territory by stages (Stage 1 and Stage 2). Give the outline a `level` line, such as `level: Units 1 and 2` or `level: Stage 1`, and keep `years` (`[11]` for Units 1 and 2 or Stage 1, `[12]` for Units 3 and 4 or Stage 2), which matching uses. The subject sheet lists the course under its level, as it lists NSW courses under Year 11 and Year 12, and Home names it "Economics, Units 1 and 2".
 - Publish the courses you want reused first. Matching only sees published points, so two courses in the same `run-many` can't reuse each other's points.
 - Haiku's matching has not been measured against Opus yet. For the first run of another state's courses, look over a few reuses and adapts before publishing: each point's file says which bank point it came from.
@@ -531,7 +532,7 @@ Copy `content/outlines/nsw-bus-11.yaml` and change it. Each line:
 | `short` | A short name for Search ("Search Business Studies"). |
 | `years` | The years it is for, from 7 to 12, such as `[11]` or `[7, 8]`. Matching uses them, so keep them for a course named by units too. |
 | `level` | Optional. The heading the course is listed under, for a state that names its years another way, such as `Units 1 and 2`. Short, in sentence case. Without it, the course is listed under its year. |
-| `place` | `nsw`, `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt`, or `international`. |
+| `place` | `nsw`, `vic`, `qld`, `sa`, `wa`, `tas`, `act` or `nt`, or `international`. Or a list of two or more states that teach the same curriculum, such as `[qld, sa, wa, tas, act, nt]` for the Australian Curriculum: the course shows under each of them. |
 | `kind` | `standard`; `english` (techniques, text types, modules, context and themes of set texts, essay structure, and never more than 10 words quoted); `maths` (cards and multiple choice until the keypad comes to the course); or `theory` (for practical subjects such as Visual Arts, Music, Drama and practical PDHPE: theory and history only). |
 | `syllabus` | Which syllabus and part, in a few words, so Claude pitches it right. |
 | `note` | The line under the course name on Home and the subject sheet. |

@@ -44,8 +44,9 @@ const CURRICULA = {
   nt: {name: 'Northern Territory', about: 'NTCET', courses: [], more: 'More Northern Territory subjects are coming.'}
 };
 const INTERNATIONAL = {name: 'International courses', courses: ['edexcel'], more: 'Taught in schools around the world.'};
-/* A made course (made.js) names where it is taught: a curriculum here, or international. */
-MADE_COURSES.forEach(c => (c.place === 'international' ? INTERNATIONAL : CURRICULA[c.place]).courses.push(c.id));
+/* A made course (made.js) names where it is taught: a curriculum here, or international. A course for several states
+   that teach the same curriculum (the Australian Curriculum) names a list of them, and shows under each. */
+MADE_COURSES.forEach(c => [].concat(c.place).forEach(p => (p === 'international' ? INTERNATIONAL : CURRICULA[p]).courses.push(c.id)));
 const COUNTRY_CODES = ('AD AE AF AG AI AL AM AO AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT ' +
   'BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM ' +
   'FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE JM JO JP ' +

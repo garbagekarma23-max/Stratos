@@ -1,0 +1,236 @@
+# Australian Curriculum Mathematics, Year 10: the Number, Algebra, Measurement, Space, Statistics and Probability
+# strands, 38 points.
+# Follows ACARA's Australian Curriculum: Mathematics, Version 9.0, Year 10, checked on the official site
+# (australiancurriculum.edu.au) in November 2026. Ministers approved Version 9.0 in April 2022 and ACARA published it in
+# May 2022. Each state sets its own start: the ACT from 2024, Tasmania from 2023, the NT from 2025, WA (its own Western
+# Australian Curriculum, adapted from it) from 2026, Queensland by the end of 2026, and South Australia's public schools
+# (their own adapted version) by about 2027. ACARA has announced no new version for Years 7 to 10: the next full
+# version is scheduled for approval in 2032 (an iterative review covers Foundation to Year 2 mathematics only).
+# Each strand is a unit, and its content descriptions are grouped into chapters in the curriculum's order. Number has
+# only one content description in Year 10, so measurement errors (AC9M10M04, Measurement) are taught with it. The
+# codes are ACARA's content description codes. Modelling content descriptions (AC9M10A04, AC9M10M05) are taught
+# through the methods they use, such as compound interest and scale factors. Digital tools, investigations and the
+# algorithm design in AC9M10SP03 are left out, except for the ideas behind them.
+# Left out on purpose: ACARA's optional Year 10 content ("Optional content for post-Year 10 mathematics pathways",
+# surds and fractional indices, the quadratic formula, sine and cosine graphs, logarithms, rates of change, circle
+# geometry, standard deviation and counting principles). It is advice for students heading to Mathematical Methods,
+# not part of the Year 10 content descriptions, and can be added later as its own course.
+# Composite solids are made of right prisms and cylinders, as in the curriculum; pyramids, cones and spheres are left
+# out for the same reason.
+# Cards and multiple choice for now (kind: maths). Every brief is in our own words.
+# content/README.md explains every line. The pipeline adds an id line under each chapter and point title the first
+# time it runs. Never change an id after the course is published: progress is saved by id.
+
+id: ac-mat-10
+subject: Mathematics
+bank: mat
+name: Mathematics, Year 10
+about: Australian Curriculum, Year 10
+short: Mathematics
+years: [10]
+place: [qld, sa, wa, tas, act, nt]
+kind: maths
+syllabus: "Australian Curriculum: Mathematics, Version 9.0, Year 10"
+note: Follows the Australian Curriculum, Version 9.0. Not made or endorsed by ACARA.
+chips: [simultaneous equations, exponential growth, bearings, box plot, scatterplot, conditional probability]
+
+units:
+  - title: Number
+    chapters:
+      - title: Approximation and error
+        id: ac-mat-10-1-1
+        points:
+          - title: Exact values and approximations
+            id: mat-exact-values-approximations
+            codes: [AC9M10N01]
+            brief: An exact value, such as √2 or π, is kept as it is, while a decimal such as 1.414 is only an approximation of it.
+          - title: Rounding errors in repeated calculations
+            id: mat-rounding-errors-repeated-calculations
+            codes: [AC9M10N01]
+            brief: Rounding early and then using the rounded value again and again lets small errors build up, so round only at the end.
+          - title: How measurement errors affect results
+            id: mat-measurement-errors-affect-results
+            codes: [AC9M10M04]
+            brief: An error in a measured length grows when it is used in a calculation, so a small error in a side length makes a larger error in an area or volume.
+
+  - title: Algebra
+    chapters:
+      - title: Expressions and equations
+        id: ac-mat-10-2-1
+        points:
+          - title: Simplifying with the index laws
+            id: mat-simplifying-with-index-laws
+            codes: [AC9M10A01]
+            brief: Simplifying expressions that combine products, quotients and powers of variables, with positive and negative indices, such as (2x³y)² ÷ 4xy = x⁵y.
+          - title: Expanding and factorising as reverse processes
+            id: mat-expanding-factorising-as-reverse
+            codes: [AC9M10A01]
+            brief: Factorising undoes expanding, so a factorised answer can be checked by expanding it, as with x² − 9 = (x − 3)(x + 3).
+          - title: Completing the square
+            id: mat-completing-square
+            codes: [AC9M10A01]
+            brief: A monic quadratic can be written in completed square form by adding and taking away the square of half the coefficient of x, so x² + 6x + 2 = (x + 3)² − 7.
+          - title: Equations with algebraic fractions
+            id: mat-equations-with-algebraic-fractions
+            codes: [AC9M10A01]
+            brief: Multiply every term by the lowest common denominator to clear the fractions, then solve, so x/3 + x/4 = 7 gives x = 12.
+
+      - title: Inequalities and simultaneous equations
+        id: ac-mat-10-2-2
+        points:
+          - title: Solving linear inequalities
+            id: mat-solving-linear-inequalities
+            codes: [AC9M10A02]
+            brief: Inequalities are solved like equations, except the sign flips when both sides are multiplied or divided by a negative number, so −2x < 6 gives x > −3.
+          - title: Inequalities on the Cartesian plane
+            id: mat-inequalities-cartesian-plane
+            codes: [AC9M10A02]
+            brief: An inequality such as y > 2x + 1 is a region on one side of a line, and a test point such as (0, 0) shows which side to shade.
+          - title: Simultaneous equations by graphing
+            id: mat-simultaneous-equations-by-graphing
+            codes: [AC9M10A02]
+            brief: The solution of two linear equations is the point where their lines cross, which makes both equations true.
+          - title: Simultaneous equations by substitution
+            id: mat-simultaneous-equations-by-substitution
+            codes: [AC9M10A02]
+            brief: Rearrange one equation for one variable, substitute it into the other, solve, then substitute back to find the second variable.
+          - title: Simultaneous equations by elimination
+            id: mat-simultaneous-equations-by-elimination
+            codes: [AC9M10A02]
+            brief: Add or subtract the equations, after multiplying if needed, so that one variable cancels out, then solve for the other.
+
+      - title: Exponential relations and models
+        id: ac-mat-10-2-3
+        points:
+          - title: Exponential growth and decay graphs
+            id: mat-exponential-growth-decay-graphs
+            codes: [AC9M10A03]
+            brief: A graph of y = aˣ curves upward ever faster when a is above 1 (growth) and falls towards zero when a is between 0 and 1 (decay).
+          - title: Solving simple exponential equations
+            id: mat-solving-simple-exponential-equations
+            codes: [AC9M10A03]
+            brief: Write both sides as powers of the same base, then set the indices equal, so 2ˣ = 32 = 2⁵ gives x = 5.
+          - title: Compound interest
+            id: mat-compound-interest-3
+            codes: [AC9M10A04]
+            brief: Compound interest earns interest on interest, so an amount grows by the same factor each period, A = P(1 + r)ⁿ.
+          - title: Depreciation
+            id: mat-depreciation
+            codes: [AC9M10A04]
+            brief: An item that loses a fixed percentage of its value each year shrinks by the same factor each year, such as 0.85 for 15% depreciation.
+          - title: Choosing a linear, quadratic or exponential model
+            id: mat-choosing-linear-quadratic-or
+            codes: [AC9M10A04, AC9M10A05]
+            brief: Equal differences each step suggest a linear model, equal ratios each step suggest an exponential model, and a rise then fall suggests a quadratic.
+
+  - title: Measurement
+    chapters:
+      - title: Composite solids, scales and scaling
+        id: ac-mat-10-3-1
+        points:
+          - title: Volume of composite solids
+            id: mat-volume-composite-solids
+            codes: [AC9M10M01]
+            brief: A composite solid built from prisms and cylinders has a volume found by adding, or subtracting, the volumes of its parts.
+          - title: Surface area of composite solids
+            id: mat-surface-area-composite-solids
+            codes: [AC9M10M01]
+            brief: The surface area of a composite solid counts only the faces on the outside, leaving out any faces where parts join.
+          - title: Logarithmic scales
+            id: mat-logarithmic-scales
+            codes: [AC9M10M02]
+            brief: On a logarithmic scale each equal step multiplies the quantity, often by 10, as on the Richter and decibel scales.
+          - title: Scaling length, area and volume
+            id: mat-scaling-length-area-volume
+            codes: [AC9M10M05]
+            brief: If lengths are multiplied by a scale factor k, area is multiplied by k² and volume by k³.
+
+      - title: Trigonometry in practice
+        id: ac-mat-10-3-2
+        points:
+          - title: Angles of elevation and depression
+            id: mat-angles-elevation-depression
+            codes: [AC9M10M03]
+            brief: The angle of elevation is measured up from the horizontal to an object, and the angle of depression down from the horizontal, and both are used with trigonometry.
+          - title: True bearings
+            id: mat-true-bearings
+            codes: [AC9M10M03]
+            brief: A true bearing gives a direction as a three-figure angle measured clockwise from north, such as 045° for north-east.
+          - title: Problems with two right-angled triangles
+            id: mat-problems-with-two-right
+            codes: [AC9M10M03]
+            brief: Some problems need two right-angled triangles, using a side found in the first to solve the second, such as the height of a building seen from two points.
+
+  - title: Space
+    chapters:
+      - title: Proof and networks
+        id: ac-mat-10-4-1
+        points:
+          - title: Demonstration and proof
+            id: mat-demonstration-proof
+            codes: [AC9M10SP01]
+            brief: A demonstration shows something is true in one case, while a proof uses logical steps from known facts to show it is always true.
+          - title: Proving triangles congruent
+            id: mat-proving-triangles-congruent
+            codes: [AC9M10SP01]
+            brief: A congruence proof names the matching sides and angles with reasons, then states the test used, such as SAS.
+          - title: Proofs with angle properties
+            id: mat-proofs-with-angle-properties
+            codes: [AC9M10SP01]
+            brief: Known angle facts, such as angles in a triangle and angles on parallel lines, are chained with reasons to prove a new result.
+          - title: Networks, vertices and edges
+            id: mat-networks-vertices-edges
+            codes: [AC9M10SP02]
+            brief: A network uses vertices (points) and edges (lines) to show connections, such as towns joined by roads, and a vertex's degree is the number of edges it meets.
+          - title: Connected networks and paths
+            id: mat-connected-networks-paths
+            codes: [AC9M10SP02]
+            brief: A network is connected if every vertex can be reached from every other, and the degrees of the vertices decide whether a path can use every edge exactly once.
+
+  - title: Statistics
+    chapters:
+      - title: Distributions and bivariate data
+        id: ac-mat-10-5-1
+        points:
+          - title: Questioning statistical claims
+            id: mat-questioning-statistical-claims
+            codes: [AC9M10ST01]
+            brief: A media claim needs checking for who collected the data, how big and how fair the sample was, and whether the conclusion goes further than the data.
+          - title: Five-number summary and interquartile range
+            id: mat-five-number-summary-interquartile
+            codes: [AC9M10ST02]
+            brief: The five-number summary is the minimum, lower quartile, median, upper quartile and maximum, and the interquartile range is upper quartile minus lower quartile.
+          - title: Box plots
+            id: mat-box-plots
+            codes: [AC9M10ST02]
+            brief: A box plot draws the five-number summary, and placing two box plots on one scale compares the centre, spread and shape of two data sets.
+          - title: Scatterplots and association
+            id: mat-scatterplots-association
+            codes: [AC9M10ST03]
+            brief: A scatterplot shows two numerical variables, and its pattern shows whether their association is positive or negative, strong or weak, and linear or not.
+          - title: Two-way tables for categorical data
+            id: mat-two-way-tables-categorical
+            codes: [AC9M10ST04]
+            brief: A two-way table counts two categorical variables together, and comparing row or column percentages shows whether they may be related.
+
+  - title: Probability
+    chapters:
+      - title: Conditional probability
+        id: ac-mat-10-6-1
+        points:
+          - title: The language of conditional probability
+            id: mat-language-conditional-probability
+            codes: [AC9M10P01]
+            brief: Words such as given, if, then and knowing that signal conditional probability, the chance of one event when another is known to have happened.
+          - title: Conditional probability from a two-way table
+            id: mat-conditional-probability-from-two
+            codes: [AC9M10P01]
+            brief: To find a probability given a condition, use only the row or column for that condition as the total.
+          - title: Conditional probability from a tree diagram
+            id: mat-conditional-probability-from-tree
+            codes: [AC9M10P01, AC9M10P02]
+            brief: In a tree diagram without replacement, the second branches show probabilities given the first outcome, and multiplying along a path gives the combined probability.
+          - title: Independent and dependent events
+            id: mat-independent-dependent-events
+            codes: [AC9M10P01]
+            brief: Events are independent if one does not change the chance of the other, such as two coin tosses, and dependent if it does, such as drawing cards without replacement.
